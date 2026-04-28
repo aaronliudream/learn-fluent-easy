@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   BookOpen,
   CheckCircle2,
@@ -14,6 +14,12 @@ import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
 import { speak } from "@/lib/speak";
+import { toast } from "sonner";
+import {
+  isMasteredSlang,
+  recordSlangResult,
+  sortByMastery,
+} from "@/lib/slangMastery";
 
 type Mode = "browse" | "quiz";
 // quiz direction: en2cn = show English idiom, choose Chinese meaning;
@@ -33,6 +39,8 @@ type QuizQuestion = {
 
 const PER_PAGE = 12;
 const QUIZ_LEN = 10;
+// After the user has browsed this many pages, prompt them to test what they reviewed.
+const PAGES_BEFORE_QUIZ = 2;
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -43,12 +51,13 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function buildQuiz(): QuizQuestion[] {
-  const picked = shuffle(IDIOMS).slice(0, QUIZ_LEN);
+function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
+  const sourceForDistractors = IDIOMS;
+  const picked = shuffle(pool).slice(0, Math.min(len, pool.length));
   const kinds: QuizKind[] = ["en2cn", "cn2en", "fill"];
   return picked.map((idiom, i) => {
     const kind = kinds[i % kinds.length];
-    const distractorPool = IDIOMS.filter((x) => x.id !== idiom.id);
+    const distractorPool = sourceForDistractors.filter((x) => x.id !== idiom.id);
     const distractors = shuffle(distractorPool).slice(0, 3);
 
     if (kind === "en2cn") {
@@ -97,27 +106,63 @@ const Slang = () => {
   const [mode, setMode] = useState<Mode>("browse");
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState("");
+  // Bumped whenever mastery changes so the browse list re-sorts.
+  const [masteryVersion, setMasteryVersion] = useState(0);
+  // Idioms the user has seen since the last quiz prompt.
+  const reviewedIdsRef = useRef<Set<number>>(new Set());
+  const [pagesBrowsed, setPagesBrowsed] = useState(0);
+  const promptedRef = useRef(false);
 
   const filtered = useMemo(() => {
-    if (!search.trim()) return IDIOMS;
+    const base = sortByMastery(IDIOMS);
+    if (!search.trim()) return base;
     const k = search.trim().toLowerCase();
-    return IDIOMS.filter(
+    return base.filter(
       (x) =>
         x.phrase.toLowerCase().includes(k) ||
         x.meaning_cn.includes(search) ||
         x.meaning_en.toLowerCase().includes(k),
     );
-  }, [search]);
+    // re-evaluate when masteryVersion changes
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search, masteryVersion]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const safePage = Math.min(page, totalPages - 1);
   const pageItems = filtered.slice(safePage * PER_PAGE, safePage * PER_PAGE + PER_PAGE);
+
+  // Track reviewed idioms + offer a quiz once the user has browsed enough pages.
+  useEffect(() => {
+    if (mode !== "browse") return;
+    pageItems.forEach((it) => reviewedIdsRef.current.add(it.id));
+    setPagesBrowsed((n) => n + 1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [safePage, mode]);
+
+  useEffect(() => {
+    if (mode !== "browse") return;
+    if (promptedRef.current) return;
+    if (pagesBrowsed < PAGES_BEFORE_QUIZ) return;
+    if (reviewedIdsRef.current.size < 4) return; // need enough material
+    promptedRef.current = true;
+    toast("📝 想测一下刚才学过的俚语吗？", {
+      description: `已浏览 ${reviewedIdsRef.current.size} 条 — 立刻小测，答对的会"沉底"，未掌握的优先复习。`,
+      duration: 12000,
+      action: {
+        label: "开始小测",
+        onClick: () => startReviewQuiz(),
+      },
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pagesBrowsed, mode]);
 
   // Quiz state
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [qIdx, setQIdx] = useState(0);
   const [picks, setPicks] = useState<Record<number, number>>({});
   const [revealed, setRevealed] = useState(false);
+  // Tracks which question ids we've already counted toward mastery to avoid double-counting.
+  const recordedRef = useRef<Set<number>>(new Set());
 
   useEffect(() => {
     if (mode === "quiz" && questions.length === 0) {
@@ -125,6 +170,7 @@ const Slang = () => {
       setQIdx(0);
       setPicks({});
       setRevealed(false);
+      recordedRef.current = new Set();
     }
   }, [mode, questions.length]);
 
@@ -133,6 +179,7 @@ const Slang = () => {
     setQIdx(0);
     setPicks({});
     setRevealed(false);
+    recordedRef.current = new Set();
     setMode("quiz");
     window.scrollTo({ top: 0 });
   };
@@ -142,7 +189,49 @@ const Slang = () => {
     setQIdx(0);
     setPicks({});
     setRevealed(false);
+    recordedRef.current = new Set();
   };
+
+  // Quiz that focuses on idioms the user just reviewed in browse mode.
+  const startReviewQuiz = () => {
+    const reviewed = IDIOMS.filter((x) => reviewedIdsRef.current.has(x.id));
+    // Prioritise the not-yet-mastered ones; if too few, top up with mastered.
+    const unmastered = reviewed.filter((x) => !isMasteredSlang(x.id));
+    const pool = unmastered.length >= 6 ? unmastered : reviewed;
+    const len = Math.min(QUIZ_LEN, pool.length);
+    setQuestions(buildQuiz(pool, len));
+    setQIdx(0);
+    setPicks({});
+    setRevealed(false);
+    recordedRef.current = new Set();
+    setMode("quiz");
+    window.scrollTo({ top: 0 });
+  };
+
+  // When an answer is revealed, record mastery once per question.
+  useEffect(() => {
+    if (!revealed) return;
+    const q = questions[qIdx];
+    if (!q) return;
+    if (recordedRef.current.has(q.id)) return;
+    recordedRef.current.add(q.id);
+    const correct = picks[q.id] === q.answer;
+    recordSlangResult(q.idiom.id, correct);
+    setMasteryVersion((v) => v + 1);
+  }, [revealed, qIdx, questions, picks]);
+
+  // When returning to browse mode after a quiz, reset the review counter so the
+  // user gets another prompt after browsing two more fresh pages.
+  useEffect(() => {
+    if (mode === "browse") {
+      // Don't reset reviewed set on every browse mount — only when leaving quiz.
+      return;
+    }
+    // entering quiz: clear reviewed so next browse session is fresh
+    reviewedIdsRef.current = new Set();
+    setPagesBrowsed(0);
+    promptedRef.current = false;
+  }, [mode]);
 
   const correctCount = questions.filter((q) => picks[q.id] === q.answer).length;
 
@@ -218,6 +307,11 @@ const Slang = () => {
                       >
                         <Volume2 className="size-3.5" />
                       </button>
+                      {isMasteredSlang(it.id) && (
+                        <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">
+                          <CheckCircle2 className="size-3" /> 已掌握
+                        </span>
+                      )}
                     </div>
                     <div className="mt-0.5 text-sm font-semibold text-primary">
                       {it.meaning_cn}

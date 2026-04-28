@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      generated_lessons: {
+        Row: {
+          content: Json
+          created_at: string
+          id: string
+          lesson: number
+          level: number
+          unit: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          content: Json
+          created_at?: string
+          id?: string
+          lesson: number
+          level: number
+          unit: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          content?: Json
+          created_at?: string
+          id?: string
+          lesson?: number
+          level?: number
+          unit?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

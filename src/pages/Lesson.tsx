@@ -33,7 +33,12 @@ import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { findNextLesson, isMastered, setLastVisited, setMastered } from "@/lib/mastery";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { clearCachedLesson, getCachedLesson, setCachedLesson } from "@/lib/lessonCache";
+import {
+  clearCachedLesson,
+  getCachedLesson,
+  getLocalCachedLesson,
+  setCachedLesson,
+} from "@/lib/lessonCache";
 import {
   addStudyMinutes,
   getStreak,
@@ -204,13 +209,13 @@ const Lesson = () => {
     const un = Number(unitId);
     const ls = Number(lessonId);
     if (!force) {
-      const cached = getCachedLesson(lv, un, ls);
+      const cached = await getCachedLesson(lv, un, ls);
       if (cached) {
         setAiContent(cached);
         return;
       }
     } else {
-      clearCachedLesson(lv, un, ls);
+      await clearCachedLesson(lv, un, ls);
       setAiContent(null);
     }
     setGenerating(true);
@@ -223,7 +228,7 @@ const Lesson = () => {
       if (error) throw error;
       if ((data as any)?.error) throw new Error((data as any).error);
       setAiContent(data as LessonContent);
-      setCachedLesson(lv, un, ls, data as LessonContent);
+      void setCachedLesson(lv, un, ls, data as LessonContent);
       if (force) toast.success("✨ 已重新生成本课内容");
     } catch (e: any) {
       toast.error("生成失败", { description: e?.message ?? "请稍后再试" });
@@ -242,12 +247,22 @@ const Lesson = () => {
     const lv = Number(levelId);
     const un = Number(unitId);
     const ls = Number(lessonId);
-    const cached = getCachedLesson(lv, un, ls);
-    if (cached) {
-      setAiContent(cached);
-    } else {
-      generateLesson(false);
-    }
+    // Show local copy instantly (if any), then sync from cloud in background.
+    const local = getLocalCachedLesson(lv, un, ls);
+    if (local) setAiContent(local);
+    let cancelled = false;
+    (async () => {
+      const cached = await getCachedLesson(lv, un, ls);
+      if (cancelled) return;
+      if (cached) {
+        setAiContent(cached);
+      } else {
+        generateLesson(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [levelId, unitId, lessonId, isAiLesson]);
 

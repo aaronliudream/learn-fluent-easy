@@ -1,19 +1,36 @@
-import { LEVELS, LESSON_CONTENT } from "@/data/course";
+// =====================================================================
+// Adaptive CEFR placement engine.
+// Pulls questions from src/data/placementBank.ts (an independent,
+// hand-authored bank that is NOT derived from the lesson content),
+// runs an adaptive 24-question test, and produces a CEFR rating
+// (A1..C2 → LEVEL 1..6) plus targeted study recommendations.
+// =====================================================================
+
+import { LEVELS } from "@/data/course";
+import {
+  PLACEMENT_BANK,
+  TIER_TO_LEVEL,
+  LEVEL_TO_TIER,
+  type BankQuestion,
+  type CEFRTier,
+} from "@/data/placementBank";
 
 export type Section = "vocab" | "grammar" | "reading" | "listening";
 
 export type PlacementQuestion = {
   id: string;
   section: Section;
-  level: number; // 1..4 — source level (difficulty weight)
+  level: number; // 1..6 (mapped from CEFR tier)
   prompt: string;
-  context?: string; // optional reading/listening passage
+  context?: string;
   options: string[];
-  answer: number; // index into options
+  answer: number;
   explain?: string;
 };
 
-/** Deterministic seeded RNG so the same browser sees the same test on retake. */
+// ---------------------------------------------------------------------
+// RNG + array utilities
+// ---------------------------------------------------------------------
 function mulberry32(seed: number) {
   return function () {
     let t = (seed += 0x6d2b79f5);
@@ -22,128 +39,65 @@ function mulberry32(seed: number) {
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 }
-
-function pickN<T>(arr: T[], n: number, rng: () => number): T[] {
+function shuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
   }
-  return a.slice(0, n);
+  return a;
 }
 
-/**
- * Walk through LEVELS 1..4 and collect candidate questions per section.
- * Each lesson contributes vocab quizzes, fill-blanks (grammar), reading quiz,
- * and listening cloze.
- */
-function collectCandidates() {
-  const vocab: PlacementQuestion[] = [];
-  const grammar: PlacementQuestion[] = [];
-  const reading: PlacementQuestion[] = [];
-  const listening: PlacementQuestion[] = [];
-
-  for (const lv of LEVELS) {
-    if (lv.id < 1 || lv.id > 4) continue;
-    for (const unit of lv.units) {
-      for (const lesson of unit.lessons) {
-        const c = LESSON_CONTENT[lesson.title];
-        if (!c) continue;
-        const tag = `L${lv.id}-U${unit.id}-${lesson.id}`;
-
-        // VOCAB — word → meaning
-        c.vocab.forEach((v, i) => {
-          const distractors = c.vocab.filter((x) => x.word !== v.word).slice(0, 3);
-          if (distractors.length < 3) return;
-          const opts = [...distractors.map((d) => d.meaning), v.meaning];
-          vocab.push({
-            id: `${tag}-v${i}`,
-            section: "vocab",
-            level: lv.id,
-            prompt: `单词 “${v.word}” 的含义是？`,
-            options: opts,
-            answer: opts.indexOf(v.meaning),
-          });
-        });
-
-        // GRAMMAR — fill-in-blanks
-        c.fillBlanks.forEach((f, i) => {
-          if (f.options.length < 2) return;
-          grammar.push({
-            id: `${tag}-g${i}`,
-            section: "grammar",
-            level: lv.id,
-            prompt: f.sentence,
-            context: f.cn,
-            options: f.options,
-            answer: f.options.indexOf(f.answer),
-          });
-        });
-
-        // READING — pair short passage with one quiz question
-        const passage = c.reading.map((p) => p.en).join(" ");
-        c.quiz.forEach((q, i) => {
-          reading.push({
-            id: `${tag}-r${i}`,
-            section: "reading",
-            level: lv.id,
-            context: passage,
-            prompt: q.q,
-            options: q.options,
-            answer: q.answer,
-            explain: q.explain,
-          });
-        });
-
-        // LISTENING — use listening blanks (audio is the cloze sentence)
-        c.listening.blanks.forEach((b, i) => {
-          // Build distractors from vocab pool
-          const pool = c.vocab.map((v) => v.word).filter((w) => w !== b.answer);
-          const distractors = pool.slice(0, 3);
-          if (distractors.length < 3) return;
-          const opts = [...distractors, b.answer];
-          listening.push({
-            id: `${tag}-l${i}`,
-            section: "listening",
-            level: lv.id,
-            context: c.listening.audio, // plays via TTS
-            prompt: `${b.before} _____ ${b.after}`,
-            options: opts,
-            answer: opts.indexOf(b.answer),
-          });
-        });
-      }
-    }
-  }
-
-  return { vocab, grammar, reading, listening };
+// Convert a bank entry into the engine's question format,
+// shuffling the answer options so they don't always appear in the same order.
+function fromBank(b: BankQuestion, rng: () => number): PlacementQuestion {
+  const indices = shuffle(b.options.map((_, i) => i), rng);
+  const newOptions = indices.map((i) => b.options[i]);
+  const newAnswer = indices.indexOf(b.answer);
+  return {
+    id: b.id,
+    section: b.section,
+    level: TIER_TO_LEVEL[b.tier],
+    prompt: b.prompt,
+    context: b.context,
+    options: newOptions,
+    answer: newAnswer,
+    explain: b.explain,
+  };
 }
 
+// ---------------------------------------------------------------------
+// Section pool: section → level (1..6) → questions[]
+// Guaranteed unique by question id (the bank itself has no duplicates).
+// ---------------------------------------------------------------------
 export type SectionPool = Record<Section, Record<number, PlacementQuestion[]>>;
 
-/** Build a pool keyed by section → level → questions, randomly shuffled. */
 export function buildSectionPool(seed = Date.now()): SectionPool {
   const rng = mulberry32(seed);
-  const pools = collectCandidates();
   const out: SectionPool = {
-    vocab: { 1: [], 2: [], 3: [], 4: [] },
-    grammar: { 1: [], 2: [], 3: [], 4: [] },
-    reading: { 1: [], 2: [], 3: [], 4: [] },
-    listening: { 1: [], 2: [], 3: [], 4: [] },
+    vocab: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [] },
+    grammar: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [] },
+    reading: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [] },
+    listening: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [] },
   };
-  (Object.keys(pools) as Section[]).forEach((sec) => {
-    const shuffled = pickN(pools[sec], pools[sec].length, rng);
-    for (const q of shuffled) {
-      if (out[sec][q.level]) out[sec][q.level].push(q);
-    }
-  });
+  // De-dup by id just in case
+  const seen = new Set<string>();
+  const items = shuffle(PLACEMENT_BANK, rng);
+  for (const b of items) {
+    if (seen.has(b.id)) continue;
+    seen.add(b.id);
+    const q = fromBank(b, rng);
+    out[q.section][q.level]?.push(q);
+  }
   return out;
 }
 
 /**
- * Pick the next adaptive question for a section.
- *  - Tries the requested level first; falls back to nearest available level.
- *  - Skips already-used IDs.
+ * Adaptive picker.
+ *  - Tries the requested level first; falls back to nearest available level
+ *    (alternates +1 / -1 / +2 / -2 ...) until it finds an unused question.
+ *  - `used` MUST be the set of all question ids already shown so we never
+ *    serve the same question twice in a single test session.
  */
 export function pickAdaptive(
   pool: SectionPool,
@@ -151,11 +105,10 @@ export function pickAdaptive(
   desiredLevel: number,
   used: Set<string>,
 ): PlacementQuestion | null {
-  const tryOrder: number[] = [];
-  const clamped = Math.max(1, Math.min(4, desiredLevel));
-  tryOrder.push(clamped);
-  for (let d = 1; d <= 3; d++) {
-    if (clamped + d <= 4) tryOrder.push(clamped + d);
+  const clamped = Math.max(1, Math.min(6, desiredLevel));
+  const tryOrder: number[] = [clamped];
+  for (let d = 1; d <= 5; d++) {
+    if (clamped + d <= 6) tryOrder.push(clamped + d);
     if (clamped - d >= 1) tryOrder.push(clamped - d);
   }
   for (const lv of tryOrder) {
@@ -166,53 +119,36 @@ export function pickAdaptive(
   return null;
 }
 
-/**
- * Build a 40-question placement test (10 per section), with even spread
- * across LEVELS 1..4 (2-3 per level per section).
- * (Legacy non-adaptive builder — still used as a fallback.)
- */
-export function buildPlacementTest(seed = Date.now()): PlacementQuestion[] {
-  const rng = mulberry32(seed);
-  const pools = collectCandidates();
-  const sections: Section[] = ["vocab", "grammar", "reading", "listening"];
-  const PER_SECTION = 10;
-  const PER_LEVEL = [2, 3, 3, 2]; // L1, L2, L3, L4
-
-  const out: PlacementQuestion[] = [];
-  for (const sec of sections) {
-    const all = pools[sec];
-    const buckets: Record<number, PlacementQuestion[]> = { 1: [], 2: [], 3: [], 4: [] };
-    for (const q of all) buckets[q.level]?.push(q);
-
-    const sectionQs: PlacementQuestion[] = [];
-    for (let lv = 1; lv <= 4; lv++) {
-      const want = PER_LEVEL[lv - 1];
-      sectionQs.push(...pickN(buckets[lv] ?? [], want, rng));
-    }
-    // Top up if any level lacked questions
-    while (sectionQs.length < PER_SECTION && all.length) {
-      const extra = pickN(
-        all.filter((q) => !sectionQs.find((x) => x.id === q.id)),
-        PER_SECTION - sectionQs.length,
-        rng,
-      );
-      if (!extra.length) break;
-      sectionQs.push(...extra);
-    }
-    out.push(...sectionQs.slice(0, PER_SECTION));
-  }
-  return out;
-}
-
+// ---------------------------------------------------------------------
+// Scoring + recommendation
+// ---------------------------------------------------------------------
 export type PlacementResult = {
   total: number;
   correct: number;
   weighted: number; // 0..100
-  cefr: "A1" | "A2" | "B1" | "B2" | "C1";
+  cefr: CEFRTier;
   recommendedLevel: number; // 1..6
-  bySection: Record<Section, { correct: number; total: number }>;
+  bySection: Record<Section, { correct: number; total: number; level: number }>;
   byLevel: Record<number, { correct: number; total: number }>;
-  ability: number; // estimated CEFR-aligned ability, 1.0 .. 4.5
+  ability: number; // 1.0 .. 6.5
+  weakest: Section[]; // sections that scored worst
+  recommendations: StudyRecommendation[];
+};
+
+export type StudyRecommendation = {
+  section: Section;
+  cnSection: string;
+  pct: number;
+  level: number; // recommended level for this section
+  unitTitle: string; // e.g. "LEVEL 2 · Unit 4 · 食物、问路与假设"
+  advice: string;
+};
+
+const SECTION_CN: Record<Section, string> = {
+  vocab: "词汇",
+  grammar: "语法",
+  reading: "阅读",
+  listening: "听力",
 };
 
 export function scoreTest(
@@ -220,59 +156,96 @@ export function scoreTest(
   picks: Record<string, number>,
 ): PlacementResult {
   const bySection: PlacementResult["bySection"] = {
-    vocab: { correct: 0, total: 0 },
-    grammar: { correct: 0, total: 0 },
-    reading: { correct: 0, total: 0 },
-    listening: { correct: 0, total: 0 },
+    vocab: { correct: 0, total: 0, level: 0 },
+    grammar: { correct: 0, total: 0, level: 0 },
+    reading: { correct: 0, total: 0, level: 0 },
+    listening: { correct: 0, total: 0, level: 0 },
   };
   const byLevel: PlacementResult["byLevel"] = {
     1: { correct: 0, total: 0 },
     2: { correct: 0, total: 0 },
     3: { correct: 0, total: 0 },
     4: { correct: 0, total: 0 },
+    5: { correct: 0, total: 0 },
+    6: { correct: 0, total: 0 },
   };
 
   let weightedScore = 0;
   let weightedMax = 0;
   let correct = 0;
 
+  // Per-section ability accumulators
+  const secAbilitySum: Record<Section, number> = { vocab: 0, grammar: 0, reading: 0, listening: 0 };
+  const secAbilityN: Record<Section, number> = { vocab: 0, grammar: 0, reading: 0, listening: 0 };
+
   for (const q of questions) {
-    const w = q.level; // L1=1pt, L2=2pt, L3=3pt, L4=4pt
+    const w = q.level; // 1..6
     weightedMax += w;
     bySection[q.section].total++;
     byLevel[q.level].total++;
-    if (picks[q.id] === q.answer) {
+    const isRight = picks[q.id] === q.answer;
+    if (isRight) {
       correct++;
       weightedScore += w;
       bySection[q.section].correct++;
       byLevel[q.level].correct++;
     }
+    if (picks[q.id] !== undefined) {
+      secAbilityN[q.section]++;
+      secAbilitySum[q.section] += isRight ? q.level + 0.5 : q.level - 0.5;
+    }
   }
 
   const weighted = weightedMax > 0 ? Math.round((weightedScore / weightedMax) * 100) : 0;
 
-  // Adaptive ability estimate:
-  // For every answered question, contribute (level + 0.5) on a correct pick,
-  // (level - 0.5) on a wrong pick. Average across answered items.
-  let abilitySum = 0;
-  let abilityN = 0;
-  for (const q of questions) {
-    const pick = picks[q.id];
-    if (pick === undefined) continue;
-    abilityN++;
-    abilitySum += pick === q.answer ? q.level + 0.5 : q.level - 0.5;
-  }
-  const ability = abilityN > 0 ? abilitySum / abilityN : 1;
+  // Overall ability = average of per-section averages (so each skill weighs equally).
+  let overallSum = 0;
+  let overallN = 0;
+  (Object.keys(bySection) as Section[]).forEach((s) => {
+    if (secAbilityN[s] > 0) {
+      const avg = secAbilitySum[s] / secAbilityN[s];
+      bySection[s].level = Math.max(1, Math.min(6, Math.round(avg)));
+      overallSum += avg;
+      overallN++;
+    }
+  });
+  const ability = overallN > 0 ? overallSum / overallN : 1;
 
   // Map ability → CEFR & recommended starting level.
-  // ability ranges roughly 0.5 .. 4.5
-  let cefr: PlacementResult["cefr"] = "A1";
+  // Cutoffs are calibrated for an adaptive 24-q test starting at L2.
+  let cefr: CEFRTier = "A1";
   let recommendedLevel = 1;
-  if (ability >= 4.0) { cefr = "C1"; recommendedLevel = 5; }
-  else if (ability >= 3.2) { cefr = "B2"; recommendedLevel = 4; }
-  else if (ability >= 2.4) { cefr = "B1"; recommendedLevel = 3; }
-  else if (ability >= 1.6) { cefr = "A2"; recommendedLevel = 2; }
+  if (ability >= 5.5) { cefr = "C2"; recommendedLevel = 6; }
+  else if (ability >= 4.5) { cefr = "C1"; recommendedLevel = 5; }
+  else if (ability >= 3.6) { cefr = "B2"; recommendedLevel = 4; }
+  else if (ability >= 2.7) { cefr = "B1"; recommendedLevel = 3; }
+  else if (ability >= 1.8) { cefr = "A2"; recommendedLevel = 2; }
   else { cefr = "A1"; recommendedLevel = 1; }
+
+  // Identify weakest sections (lowest accuracy)
+  const sectionPcts = (Object.keys(bySection) as Section[]).map((s) => {
+    const r = bySection[s];
+    return { s, pct: r.total > 0 ? r.correct / r.total : 0 };
+  });
+  const minPct = Math.min(...sectionPcts.map((x) => x.pct));
+  const weakest = sectionPcts.filter((x) => x.pct === minPct).map((x) => x.s);
+
+  // Build per-section study recommendations
+  const recommendations: StudyRecommendation[] = (Object.keys(bySection) as Section[]).map((s) => {
+    const r = bySection[s];
+    const pct = r.total > 0 ? Math.round((r.correct / r.total) * 100) : 0;
+    const lv = Math.max(1, Math.min(6, r.level || recommendedLevel));
+    const unit = pickRecommendedUnit(lv, s);
+    const advice = buildAdvice(s, pct, lv);
+    return {
+      section: s,
+      cnSection: SECTION_CN[s],
+      pct,
+      level: lv,
+      unitTitle: unit,
+      advice,
+    };
+  });
 
   return {
     total: questions.length,
@@ -283,13 +256,51 @@ export function scoreTest(
     bySection,
     byLevel,
     ability: Math.round(ability * 10) / 10,
+    weakest,
+    recommendations,
   };
 }
 
-export const CEFR_DESC: Record<PlacementResult["cefr"], { name: string; tag: string }> = {
-  A1: { name: "入门 (Beginner)", tag: "可以理解和使用最基本的日常表达" },
+// ---------------------------------------------------------------------
+// Recommendation helpers
+// ---------------------------------------------------------------------
+function pickRecommendedUnit(level: number, section: Section): string {
+  const lv = LEVELS.find((l) => l.id === level);
+  if (!lv) return `LEVEL ${level}`;
+  if (!lv.units || lv.units.length === 0) {
+    return `LEVEL ${level} (即将上线)`;
+  }
+  // Heuristic: vocab → unit 1, grammar → middle unit, reading → 2/3 of the way, listening → unit 2
+  const n = lv.units.length;
+  let idx = 0;
+  if (section === "vocab") idx = 0;
+  else if (section === "grammar") idx = Math.floor(n / 2);
+  else if (section === "reading") idx = Math.min(n - 1, Math.floor((n * 2) / 3));
+  else idx = Math.min(n - 1, 1);
+  const u = lv.units[idx];
+  return `LEVEL ${level} · Unit ${u.id} · ${u.title}`;
+}
+
+function buildAdvice(section: Section, pct: number, level: number): string {
+  const tier = LEVEL_TO_TIER[level] || "A1";
+  const strength = pct >= 80 ? "扎实" : pct >= 60 ? "基本掌握" : pct >= 40 ? "薄弱" : "明显不足";
+  const focus: Record<Section, string> = {
+    vocab: "建议每日背 15–20 个 " + tier + " 级核心词，重点掌握常用搭配（collocation）。",
+    grammar: "建议系统复习 " + tier + " 级语法点（时态、条件句、语态、虚拟语气），多做填空训练。",
+    reading: "建议每天精读一篇 " + tier + " 级短文，做 3 题理解题，并总结生词与连接词。",
+    listening: "建议每天精听 5 分钟 " + tier + " 级音频，先盲听 → 看原文 → 跟读，重点训练连读与弱读。",
+  };
+  return `当前${strength}（${pct}%）。${focus[section]}`;
+}
+
+// ---------------------------------------------------------------------
+// Public CEFR labels
+// ---------------------------------------------------------------------
+export const CEFR_DESC: Record<CEFRTier, { name: string; tag: string }> = {
+  A1: { name: "入门 (Beginner)", tag: "可以理解并使用最基本的日常表达" },
   A2: { name: "初级 (Elementary)", tag: "可以进行简单的日常交流" },
   B1: { name: "中级 (Intermediate)", tag: "可以应对工作、旅行中的常见情境" },
   B2: { name: "中高级 (Upper-Intermediate)", tag: "可以流利地与母语者讨论复杂话题" },
   C1: { name: "高级 (Advanced)", tag: "可以在学术与专业场合熟练表达" },
+  C2: { name: "精通 (Proficiency)", tag: "几乎接近母语者的理解与表达水平" },
 };

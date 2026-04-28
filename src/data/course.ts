@@ -692,10 +692,48 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
   },
 };
 
-// Auto-generate placeholder content for any lesson without manually authored content.
+// Hydrate every lesson with the authoritative content extracted from the source HTML.
+// Falls back to the auto-generated placeholder only if the lesson has no source entry.
+import { SOURCE_LESSONS } from "./sourceLessons";
+
+const POS_MAP: Record<string, string> = {
+  "n.": "n.",
+  "v.": "v.",
+  "adj.": "adj.",
+  "adv.": "adv.",
+  "prep.": "prep.",
+  "pron.": "pron.",
+  "conj.": "conj.",
+  "interj.": "int.",
+  "abbr.": "abbr.",
+};
+
+const formatMeaning = (pos: string, cn: string) => {
+  const p = POS_MAP[pos] || pos;
+  return p ? `${p} ${cn}` : cn;
+};
+
 LEVELS.flatMap((level) => level.units.flatMap((unit) => unit.lessons))
   .forEach((lesson) => {
-    LESSON_CONTENT[lesson.title] ??= buildLessonContent(lesson.title);
+    const src = SOURCE_LESSONS[lesson.title];
+    const base = LESSON_CONTENT[lesson.title] ?? buildLessonContent(lesson.title);
+    if (src) {
+      const reading = src.passage.length
+        ? src.passage.map((p) => ({ en: p.en, cn: p.cn }))
+        : base.reading;
+      const vocab = src.vocab.length
+        ? src.vocab.map((v) => ({
+            word: v.word,
+            pron: v.pron,
+            meaning: formatMeaning(v.pos, v.cn),
+            example: v.ex,
+            example_cn: v.ex_cn,
+          }))
+        : base.vocab;
+      LESSON_CONTENT[lesson.title] = { ...base, reading, vocab };
+    } else {
+      LESSON_CONTENT[lesson.title] ??= base;
+    }
   });
 
 // Backward compatibility

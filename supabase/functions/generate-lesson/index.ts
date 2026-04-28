@@ -177,9 +177,33 @@ Deno.serve(async (req) => {
       });
     }
 
-    const system = `你是一位资深英语教材作者, 专为中文母语成人学习者设计课程。\n根据课程标题, 生成完整的一节英语课内容: 词汇、阅读、语法、实用表达、选词填空、阅读测验、听力填空、写作任务。\n要求:\n- 所有英文必须真实自然 (美式英语)\n- 词汇、阅读、表达、测验之间要紧密围绕课程主题, 互相呼应\n- 难度匹配 LEVEL (Level 1=A1, Level 2=A2, Level 3=B1, 以此类推)\n- 中文翻译/释义准确口语化\n- fillBlanks 中 answer 必须是 options 之一; quiz 的 answer 必须是 0-3 的索引\n- listening.audio 应能直接朗读, blanks 的 answer 是单个英文单词且必须出现在 audio 中\n严格按照 tool 的 JSON schema 输出, 不要输出额外文字。`;
+    const system = `你是一位资深英语教材作者, 专为中文母语成人学习者设计课程。
+根据课程标题, 生成完整的一节英语课内容: 词汇、阅读、语法、实用表达、选词填空、阅读测验、听力填空、写作任务。
 
-    const user = `课程标题: ${title}\n级别: ${levelName ?? "(未提供)"}\n单元: ${unitTitle ?? "(未提供)"}\n\n请生成这节课的完整教学内容。`;
+【极其重要 — 主题一致性】
+- 课程标题通常包含一个英文主句 (例如 "I'd like a coffee.") 和一个中文场景说明 (例如 "梅在寄宿家庭的第一个早晨")。
+- 你必须先识别出这节课的【核心场景】 (咖啡店点单 / 机场求助 / 看医生 / 打电话 等) 和【核心句型】 (即标题里的那句英文)。
+- 全部 8 个板块 (vocab / reading / grammar / expressions / fillBlanks / quiz / listening / output) 都必须紧紧围绕这个场景和句型展开:
+  * vocab: 选取这个场景下最常用的 6-8 个词
+  * reading: 写一段发生在这个场景里的小故事或对话, 主人公就是中文说明里出现的人物 (如"梅")
+  * grammar: 必须包含标题里那个核心句型 (如 "I'd like ..."), 给出讲解和例句
+  * expressions: 全部是这个场景里会用到的实用句, 不要出现"Can I ask a question?"这种泛课堂用语 (除非课程本身就是关于课堂)
+  * fillBlanks / quiz / listening / output: 全部围绕本课词汇与场景, 例句、问题、听力短文都要发生在这个场景里
+- 严禁生成与场景无关的通用学英语内容。如果标题是"我想要一杯咖啡", 那 8 个板块全都应该发生在咖啡店 / 早餐 / 点单的语境里。
+
+其他要求:
+- 所有英文必须真实自然 (美式英语)
+- 难度匹配 LEVEL (Level 1=A1, Level 2=A2, Level 3=B1, 以此类推)
+- 中文翻译/释义准确口语化
+- fillBlanks 中 answer 必须是 options 之一; quiz 的 answer 必须是 0-3 的索引
+- listening.audio 应能直接朗读, blanks 的 answer 是单个英文单词且必须出现在 audio 中
+严格按照 tool 的 JSON schema 输出, 不要输出额外文字。`;
+
+    const user = `课程标题: ${title}
+级别: ${levelName ?? "(未提供)"}
+单元: ${unitTitle ?? "(未提供)"}
+
+请先在心里确认本课的核心场景与核心句型, 然后让 8 个板块全部围绕它展开, 生成完整教学内容。`;
 
     const resp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",

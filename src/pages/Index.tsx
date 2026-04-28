@@ -1,4 +1,4 @@
-import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3 } from "lucide-react";
+import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, ShieldCheck, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -58,6 +58,30 @@ const Index = () => {
       </div>
 
       <PageHeader title="选择学习级别" subtitle="选择适合你的级别，开始学习之旅" />
+
+      {/* Placement test CTA */}
+      <Link
+        to="/placement"
+        className="group relative mb-6 flex flex-wrap items-center gap-5 overflow-hidden rounded-2xl bg-grad-title p-6 text-white shadow-tile transition-transform hover:-translate-y-0.5"
+      >
+        <span className="pointer-events-none absolute -right-10 -top-12 size-40 rounded-full bg-white/15 blur-xl" />
+        <span className="pointer-events-none absolute -bottom-12 right-32 size-24 rounded-full bg-white/10 blur-lg" />
+        <div className="relative grid size-14 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+          <Award className="size-7" />
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <div className="mb-1 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-0.5 text-[11px] font-semibold backdrop-blur-sm">
+            <ShieldCheck className="size-3" /> CEFR 欧盟权威标准
+          </div>
+          <div className="text-lg font-extrabold md:text-xl">不知道从哪里开始？做个水平测试</div>
+          <div className="mt-0.5 flex flex-wrap items-center gap-3 text-xs opacity-90">
+            <span className="inline-flex items-center gap-1"><Clock className="size-3" /> 25 分钟</span>
+            <span>· 听力 / 语法 / 词汇 / 阅读</span>
+            <span>· A1–C1 评级</span>
+          </div>
+        </div>
+        <ChevronRight className="relative size-6 opacity-80 transition-transform group-hover:translate-x-1" />
+      </Link>
 
       {/* Guest progress sunk-cost banner */}
       {!user && hasProgress && (

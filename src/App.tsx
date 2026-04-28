@@ -10,6 +10,7 @@ import Unit from "./pages/Unit.tsx";
 import Lesson from "./pages/Lesson.tsx";
 import Auth from "./pages/Auth.tsx";
 import Stats from "./pages/Stats.tsx";
+import Placement from "./pages/Placement.tsx";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/stats" element={<Stats />} />
+          <Route path="/placement" element={<Placement />} />
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />

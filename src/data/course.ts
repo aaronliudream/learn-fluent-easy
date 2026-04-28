@@ -653,6 +653,12 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
   },
 };
 
+LEVELS[0].units
+  .flatMap((unit) => unit.lessons)
+  .forEach((lesson) => {
+    LESSON_CONTENT[lesson.title] ??= buildLessonContent(lesson.title);
+  });
+
 // Backward compatibility
 export const SAMPLE_VOCAB: Record<string, VocabItem[]> = Object.fromEntries(
   Object.entries(LESSON_CONTENT).map(([k, v]) => [k, v.vocab]),

@@ -315,6 +315,23 @@ const Lesson = () => {
         back={`/level/${levelId}/unit/${unitId}`}
       />
 
+      {isAiLesson && (
+        <div className="mb-4 flex items-center justify-between gap-3 rounded-2xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm">
+          <div className="flex items-center gap-2 text-foreground/80">
+            <Sparkles className="size-4 text-primary" />
+            <span>本课内容由 AI 为你定制</span>
+          </div>
+          <button
+            onClick={() => generateLesson(true)}
+            disabled={generating}
+            className="flex items-center gap-1.5 rounded-full border border-primary/30 bg-card px-3 py-1.5 text-xs font-semibold text-primary transition hover:bg-primary/10 disabled:opacity-60"
+          >
+            <RefreshCw className={`size-3.5 ${generating ? "animate-spin" : ""}`} />
+            {generating ? "生成中…" : "重新生成"}
+          </button>
+        </div>
+      )}
+
       {/* Steps */}
       <section className="mb-8 rounded-3xl bg-card p-5 shadow-card md:p-7">
         <div className="mb-5 flex items-baseline gap-2">

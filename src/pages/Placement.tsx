@@ -136,10 +136,10 @@ const Placement = () => {
     const pick = picks[cur.id];
     const correct = pick === cur.answer;
 
-    // Adapt section level: ±1 step, clamped to 1..4
+    // Adapt section level: ±1 step, clamped to 1..6 (A1..C2)
     const sec = cur.section;
     const prev = sectionLevelRef.current[sec];
-    const nextLv = Math.max(1, Math.min(4, prev + (correct ? 1 : -1)));
+    const nextLv = Math.max(1, Math.min(6, prev + (correct ? 1 : -1)));
     sectionLevelRef.current[sec] = nextLv;
 
     // Count answered per section

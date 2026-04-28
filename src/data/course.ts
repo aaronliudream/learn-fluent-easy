@@ -424,10 +424,10 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
       { sentence: "I'd like you to ___ my brother.", cn: "我想给你介绍我哥哥。", options: ["meet", "see", "know", "look"], answer: "meet" },
     ],
     quiz: [
-      { q: "Tom 的职业是？", options: ["老师", "学生", "软件工程师", "医生"], answer: 2 },
-      { q: "Tom 来自哪里？", options: ["巴黎", "伦敦", "纽约", "东京"], answer: 1 },
-      { q: "Lisa 和说话人是什么关系？", options: ["姐妹", "同事", "大学同学", "邻居"], answer: 2 },
-      { q: "正式介绍他人最礼貌的说法是？", options: ["This is …", "I'd like you to meet …", "Hey, look!", "That's …"], answer: 1 },
+      { q: "What is Tom's job?", options: ["Teacher", "Student", "Software engineer", "Doctor"], answer: 2 },
+      { q: "Where is Tom from?", options: ["Paris", "London", "New York", "Tokyo"], answer: 1 },
+      { q: "How does the speaker know Lisa?", options: ["Sister", "Colleague", "University classmate", "Neighbor"], answer: 2 },
+      { q: "Which is the most polite way to formally introduce someone?", options: ["This is …", "I'd like you to meet …", "Hey, look!", "That's …"], answer: 1 },
     ],
     listening: {
       audio: "This is my friend Tom. He is from London. Nice to meet you.",

@@ -221,6 +221,75 @@ export type LessonContent = {
   output: { prompt: string; cn: string; sample: string };
 };
 
+const buildLessonContent = (title: string): LessonContent => ({
+  vocab: [
+    { word: "topic", pron: "/ˈtɑːpɪk/", meaning: "n. 主题", example: `Today's topic is ${title}.`, example_cn: `今天的主题是${title}。` },
+    { word: "practice", pron: "/ˈpræktɪs/", meaning: "v./n. 练习", example: "I practice English every day.", example_cn: "我每天练习英语。" },
+    { word: "question", pron: "/ˈkwestʃən/", meaning: "n. 问题", example: "Can I ask a question?", example_cn: "我可以问一个问题吗？" },
+    { word: "answer", pron: "/ˈænsər/", meaning: "v./n. 回答", example: "Please answer in English.", example_cn: "请用英语回答。" },
+    { word: "need", pron: "/niːd/", meaning: "v. 需要", example: "I need some help.", example_cn: "我需要一些帮助。" },
+    { word: "want", pron: "/wɑːnt/", meaning: "v. 想要", example: "I want to learn more.", example_cn: "我想学更多。" },
+    { word: "easy", pron: "/ˈiːzi/", meaning: "adj. 容易的", example: "This sentence is easy.", example_cn: "这个句子很简单。" },
+    { word: "useful", pron: "/ˈjuːsfəl/", meaning: "adj. 有用的", example: "These words are useful.", example_cn: "这些单词很有用。" },
+  ],
+  reading: [
+    { en: "Emma is learning English for everyday life.", cn: "艾玛正在为日常生活学习英语。" },
+    { en: "Today, she practices a short conversation with her teacher.", cn: "今天，她和老师练习一段简短对话。" },
+    { en: "She asks questions, gives answers, and writes down useful words.", cn: "她提问、回答，并记下有用的单词。" },
+    { en: "After class, she can use the new sentences with her friends.", cn: "课后，她可以和朋友使用这些新句子。" },
+  ],
+  grammar: [
+    {
+      title: "Can I …? 礼貌提问",
+      explain: "Can I + 动词原形 用来礼貌地询问自己是否可以做某事。",
+      examples: [
+        { en: "Can I ask a question?", cn: "我可以问一个问题吗？" },
+        { en: "Can I practice with you?", cn: "我可以和你练习吗？" },
+      ],
+    },
+    {
+      title: "I need / I want",
+      explain: "I need 表示需要；I want 表示想要，后面可以接名词或 to + 动词。",
+      examples: [
+        { en: "I need some help.", cn: "我需要一些帮助。" },
+        { en: "I want to speak English.", cn: "我想说英语。" },
+      ],
+    },
+  ],
+  expressions: [
+    { en: "Can I ask a question?", cn: "我可以问一个问题吗？", scene: "课堂提问" },
+    { en: "Could you say that again?", cn: "你能再说一遍吗？", scene: "请求重复" },
+    { en: "I need some help.", cn: "我需要一些帮助。", scene: "寻求帮助" },
+    { en: "Let me try again.", cn: "让我再试一次。", scene: "继续练习" },
+    { en: "That is useful.", cn: "那很有用。", scene: "表达评价" },
+  ],
+  fillBlanks: [
+    { sentence: "Can I ask a ___?", cn: "我可以问一个问题吗？", options: ["question", "topic", "practice", "answer"], answer: "question" },
+    { sentence: "I ___ some help.", cn: "我需要一些帮助。", options: ["need", "want", "easy", "useful"], answer: "need" },
+    { sentence: "Please ___ in English.", cn: "请用英语回答。", options: ["answer", "topic", "need", "easy"], answer: "answer" },
+    { sentence: "These words are ___.", cn: "这些单词很有用。", options: ["useful", "question", "want", "practice"], answer: "useful" },
+  ],
+  quiz: [
+    { q: "Why is Emma learning English?", options: ["For everyday life", "For cooking", "For a movie", "For shopping only"], answer: 0 },
+    { q: "Who does Emma practice with?", options: ["Her doctor", "Her teacher", "Her neighbor", "Her brother"], answer: 1 },
+    { q: "What does Emma write down?", options: ["Useful words", "Phone numbers", "Prices", "Addresses"], answer: 0 },
+    { q: "When can she use the new sentences?", options: ["After class", "Next year", "Only at home", "Never"], answer: 0 },
+  ],
+  listening: {
+    audio: "Can I ask a question? I need some help. These words are useful.",
+    blanks: [
+      { before: "Can I ask a", answer: "question", after: "?" },
+      { before: "I need some", answer: "help", after: "." },
+      { before: "These words are", answer: "useful", after: "." },
+    ],
+  },
+  output: {
+    prompt: `Write 3–5 sentences about ${title}. Use at least two sentences from this lesson.`,
+    cn: `请围绕“${title}”写 3–5 句话，并至少使用本课两个句型。`,
+    sample: "Can I ask a question? I need some help with this topic. These words are useful, and I want to practice again.",
+  },
+});
+
 export const LESSON_CONTENT: Record<string, LessonContent> = {
   自我介绍: {
     vocab: [

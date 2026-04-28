@@ -213,8 +213,8 @@ const Placement = () => {
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <Award className="mb-1 size-5" />
-              <div className="text-lg font-bold">A1–C1</div>
-              <div className="text-[11px] text-white/80">CEFR 评级</div>
+              <div className="text-lg font-bold">A1–C2</div>
+              <div className="text-[11px] text-white/80">CEFR 全六级</div>
             </div>
           </div>
         </div>
@@ -240,9 +240,9 @@ const Placement = () => {
           </div>
 
           <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> 题目从 LEVEL 1–4 真实课程库（共 330 节课）中抽取</li>
+            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> 独立题库 · 覆盖 A1 → C2 全六级，全部题目唯一不重复</li>
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> 自适应难度：答对升一级，答错降一级，快速锁定真实水平</li>
-            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> 完成后给出 CEFR 等级 + 推荐学习起点</li>
+            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> 完成后给出 CEFR 等级 + 推荐 LEVEL 1–6 的具体学习起点</li>
           </ul>
 
           <div className="mt-5 flex gap-3 rounded-2xl border border-border bg-secondary/40 p-4 text-xs leading-relaxed text-muted-foreground">

@@ -20,6 +20,14 @@ import { LESSON_CONTENT, LESSON_STEPS, findLesson } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
+import {
+  addStudyMinutes,
+  getStreak,
+  loadProgress,
+  markLessonComplete,
+  recordQuiz,
+  touchActive,
+} from "@/lib/guestProgress";
 
 const STEP_ICONS = {
   BookOpen,
@@ -59,15 +67,30 @@ const Lesson = () => {
   const [activeStep, setActiveStep] = useState(1);
   const contentRef = useRef<HTMLDivElement>(null);
   const nudge = useGuestNudge();
+  const enteredAtRef = useRef<number>(Date.now());
+  const recordedQuizRef = useRef(false);
+
+  // Track active day + accumulate study minutes when leaving the page.
+  useEffect(() => {
+    touchActive();
+    enteredAtRef.current = Date.now();
+    return () => {
+      const mins = Math.round((Date.now() - enteredAtRef.current) / 60000);
+      addStudyMinutes(mins);
+    };
+  }, []);
 
   const goToStep = (id: number) => {
     setActiveStep(id);
     if (id === LESSON_STEPS.length) {
-      nudge(
-        "lesson-finish",
-        "已学到最后一步啦！",
-        "登录即可保存这节课的进度，并在其它设备继续学习。",
-      );
+      // Mark lesson complete and show progress-aware nudge
+      markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
+      const p = loadProgress();
+      const streak = getStreak(p);
+      const desc = streak >= 2
+        ? `🔥 已连续学习 ${streak} 天，登录后保住你的连胜，并解锁学习数据面板。`
+        : `已完成 ${p.completedLessons.length} 节课${p.studyMinutes > 0 ? `、累计学习 ${p.studyMinutes} 分钟` : ""}，登录后这些进度永久保留。`;
+      nudge("lesson-finish", "🎉 完成一节课！", desc);
     }
     // Wait for the new section to render, then smooth-scroll it into view.
     requestAnimationFrame(() => {
@@ -96,7 +119,21 @@ const Lesson = () => {
     const total = content.quiz.length;
     const answered = Object.keys(quizPicks).length;
     if (total > 0 && answered === total) {
-      nudge("quiz-done", "🎉 测验完成！", "登录后可保存得分记录，回顾学习成果。");
+      if (!recordedQuizRef.current) {
+        recordedQuizRef.current = true;
+        const correct = content.quiz.reduce(
+          (acc, q, i) => acc + (quizPicks[i] === q.answer ? 1 : 0),
+          0,
+        );
+        recordQuiz(correct, total);
+        const p = loadProgress();
+        const acc = p.quizTotal > 0 ? Math.round((p.quizCorrect / p.quizTotal) * 100) : 0;
+        nudge(
+          "quiz-done",
+          `🎯 本次答对 ${correct}/${total}`,
+          `累计正确率 ${acc}%（共答 ${p.quizTotal} 题），登录后查看完整学习数据面板。`,
+        );
+      }
     }
   }, [quizPicks, content, nudge]);
 

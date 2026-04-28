@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -22,18 +22,22 @@ export function useGuestNudge() {
     return () => subscription.unsubscribe();
   }, []);
 
-  return (key: string, message: string, description?: string) => {
-    if (loggedInRef.current) return;
-    const sk = `nudge:${key}`;
-    if (sessionStorage.getItem(sk)) return;
-    sessionStorage.setItem(sk, "1");
-    toast(message, {
-      description: description ?? "登录后可保存学习进度，并在手机、电脑等设备间同步。",
-      duration: 6000,
-      action: {
-        label: "登录",
-        onClick: () => navigate("/auth"),
-      },
-    });
-  };
+  return useCallback(
+    (key: string, message: string, description?: string) => {
+      if (loggedInRef.current) return;
+      const sk = `nudge:${key}`;
+      if (sessionStorage.getItem(sk)) return;
+      sessionStorage.setItem(sk, "1");
+      toast(message, {
+        description:
+          description ?? "登录后可保存学习进度，并在手机、电脑等设备间同步。",
+        duration: 7000,
+        action: {
+          label: "立即登录",
+          onClick: () => navigate("/auth"),
+        },
+      });
+    },
+    [navigate],
+  );
 }

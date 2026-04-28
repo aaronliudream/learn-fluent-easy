@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound.tsx";
 import Level from "./pages/Level.tsx";
 import Unit from "./pages/Unit.tsx";
 import Lesson from "./pages/Lesson.tsx";
+import Auth from "./pages/Auth.tsx";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/auth" element={<Auth />} />
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />

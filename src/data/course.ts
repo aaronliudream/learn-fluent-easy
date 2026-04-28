@@ -38,6 +38,14 @@ const mkLessons = (titles: string[], doneCount: number, lockFromIdx?: number): L
             : "locked",
   }));
 
+const mkOpenLessons = (titles: string[], doneCount = 0): Lesson[] =>
+  titles.map((t, i) => ({
+    id: i + 1,
+    title: t,
+    duration: `${12 + ((i * 3) % 12)}分钟`,
+    status: i < doneCount ? "done" : "current",
+  }));
+
 export const LEVELS: Level[] = [
   {
     id: 1,
@@ -64,37 +72,100 @@ export const LEVELS: Level[] = [
         icon: "book",
         iconBg: "bg-violet-500",
         hours: "2.5小时",
-        lessons: mkLessons(
+        lessons: mkOpenLessons(
           ["早晨问候", "在咖啡馆", "约朋友见面", "打电话", "问时间", "聊天气", "聊周末", "聊家人", "聊工作", "告别用语"],
           3,
-          5,
         ),
       },
       {
         id: 3,
         title: "购物与消费",
         desc: "学习购物场景下的英语交流技巧",
-        icon: "book",
-        iconBg: "bg-violet-400",
+        icon: "shop",
+        iconBg: "bg-amber-500",
         hours: "3小时",
-        lessons: mkLessons(
-          ["进店招呼", "询问价格", "试穿衣服", "颜色与尺码", "讨价还价", "结账付款", "退换货", "在超市", "买水果", "买电子产品", "找洗手间", "离店道谢"],
-          0,
-          0,
-        ),
+        lessons: mkOpenLessons(["进店招呼", "询问价格", "试穿衣服", "颜色与尺码", "讨价还价", "结账付款", "退换货", "在超市", "买水果", "买电子产品", "找洗手间", "离店道谢"]),
       },
       {
         id: 4,
         title: "旅行与交通",
         desc: "出行场景下的实用英语表达",
-        icon: "book",
-        iconBg: "bg-violet-400",
+        icon: "map",
+        iconBg: "bg-sky-500",
         hours: "3小时",
-        lessons: mkLessons(
-          ["问路", "打车", "搭地铁", "买火车票", "在机场", "酒店入住", "景点游览", "餐厅点餐", "纪念品", "退房"],
-          0,
-          0,
-        ),
+        lessons: mkOpenLessons(["问路", "打车", "搭地铁", "买火车票", "在机场", "酒店入住", "景点游览", "餐厅点餐", "纪念品", "退房"]),
+      },
+      {
+        id: 5,
+        title: "家庭与朋友",
+        desc: "介绍家人朋友，描述人物和表达关心",
+        icon: "star",
+        iconBg: "bg-rose-500",
+        hours: "2.5小时",
+        lessons: mkOpenLessons(["家庭成员", "描述人物", "朋友相处", "邀请做客", "生日聚会", "日常作息", "家庭活动", "表达关心"]),
+      },
+      {
+        id: 6,
+        title: "时间与日期",
+        desc: "学习时间、日期、预约和计划安排",
+        icon: "cloud",
+        iconBg: "bg-cyan-500",
+        hours: "2.5小时",
+        lessons: mkOpenLessons(["星期与月份", "预约时间", "日程安排", "频率副词", "今天明天昨天", "节假日", "准时迟到", "制定计划"]),
+      },
+      {
+        id: 7,
+        title: "餐饮与点餐",
+        desc: "掌握餐厅、外卖和食物偏好的表达",
+        icon: "shop",
+        iconBg: "bg-orange-500",
+        hours: "3小时",
+        lessons: mkOpenLessons(["预订餐位", "看菜单", "点饮料", "点主菜", "特殊要求", "结账小费", "外卖订餐", "食物喜好"]),
+      },
+      {
+        id: 8,
+        title: "居家生活",
+        desc: "围绕房间、家具、家务和租房的生活英语",
+        icon: "book",
+        iconBg: "bg-lime-600",
+        hours: "2.5小时",
+        lessons: mkOpenLessons(["房间家具", "租房看房", "家务分工", "修理问题", "邻里问候", "生活用品", "描述位置", "搬家安排"]),
+      },
+      {
+        id: 9,
+        title: "健康与运动",
+        desc: "描述身体、症状、运动和健康习惯",
+        icon: "star",
+        iconBg: "bg-emerald-600",
+        hours: "3小时",
+        lessons: mkOpenLessons(["身体部位", "看医生", "描述症状", "买药", "健身计划", "运动爱好", "健康习惯", "紧急求助"]),
+      },
+      {
+        id: 10,
+        title: "学校与学习",
+        desc: "覆盖课堂、作业、考试和学习目标",
+        icon: "book",
+        iconBg: "bg-indigo-500",
+        hours: "3小时",
+        lessons: mkOpenLessons(["课堂用语", "询问作业", "图书馆", "考试复习", "小组讨论", "在线学习", "学习目标", "请求解释"]),
+      },
+      {
+        id: 11,
+        title: "城市服务",
+        desc: "银行、邮局、公共服务和求助场景",
+        icon: "briefcase",
+        iconBg: "bg-slate-600",
+        hours: "2.5小时",
+        lessons: mkOpenLessons(["银行业务", "邮局寄件", "问警察", "公共设施", "预约服务", "填写表格", "投诉问题", "寻求帮助"]),
+      },
+      {
+        id: 12,
+        title: "综合复习",
+        desc: "复习 Level 1 的核心生活英语能力",
+        icon: "star",
+        iconBg: "bg-fuchsia-500",
+        hours: "3小时",
+        lessons: mkOpenLessons(["自我介绍复习", "日常对话复习", "购物旅行复习", "餐饮健康复习", "时间计划复习", "家庭朋友复习", "学校城市复习", "Level 1 总测"]),
       },
     ],
   },
@@ -149,6 +220,75 @@ export type LessonContent = {
   listening: { audio: string; blanks: { before: string; answer: string; after: string }[] };
   output: { prompt: string; cn: string; sample: string };
 };
+
+const buildLessonContent = (title: string): LessonContent => ({
+  vocab: [
+    { word: "topic", pron: "/ˈtɑːpɪk/", meaning: "n. 主题", example: `Today's topic is ${title}.`, example_cn: `今天的主题是${title}。` },
+    { word: "practice", pron: "/ˈpræktɪs/", meaning: "v./n. 练习", example: "I practice English every day.", example_cn: "我每天练习英语。" },
+    { word: "question", pron: "/ˈkwestʃən/", meaning: "n. 问题", example: "Can I ask a question?", example_cn: "我可以问一个问题吗？" },
+    { word: "answer", pron: "/ˈænsər/", meaning: "v./n. 回答", example: "Please answer in English.", example_cn: "请用英语回答。" },
+    { word: "need", pron: "/niːd/", meaning: "v. 需要", example: "I need some help.", example_cn: "我需要一些帮助。" },
+    { word: "want", pron: "/wɑːnt/", meaning: "v. 想要", example: "I want to learn more.", example_cn: "我想学更多。" },
+    { word: "easy", pron: "/ˈiːzi/", meaning: "adj. 容易的", example: "This sentence is easy.", example_cn: "这个句子很简单。" },
+    { word: "useful", pron: "/ˈjuːsfəl/", meaning: "adj. 有用的", example: "These words are useful.", example_cn: "这些单词很有用。" },
+  ],
+  reading: [
+    { en: "Emma is learning English for everyday life.", cn: "艾玛正在为日常生活学习英语。" },
+    { en: "Today, she practices a short conversation with her teacher.", cn: "今天，她和老师练习一段简短对话。" },
+    { en: "She asks questions, gives answers, and writes down useful words.", cn: "她提问、回答，并记下有用的单词。" },
+    { en: "After class, she can use the new sentences with her friends.", cn: "课后，她可以和朋友使用这些新句子。" },
+  ],
+  grammar: [
+    {
+      title: "Can I …? 礼貌提问",
+      explain: "Can I + 动词原形 用来礼貌地询问自己是否可以做某事。",
+      examples: [
+        { en: "Can I ask a question?", cn: "我可以问一个问题吗？" },
+        { en: "Can I practice with you?", cn: "我可以和你练习吗？" },
+      ],
+    },
+    {
+      title: "I need / I want",
+      explain: "I need 表示需要；I want 表示想要，后面可以接名词或 to + 动词。",
+      examples: [
+        { en: "I need some help.", cn: "我需要一些帮助。" },
+        { en: "I want to speak English.", cn: "我想说英语。" },
+      ],
+    },
+  ],
+  expressions: [
+    { en: "Can I ask a question?", cn: "我可以问一个问题吗？", scene: "课堂提问" },
+    { en: "Could you say that again?", cn: "你能再说一遍吗？", scene: "请求重复" },
+    { en: "I need some help.", cn: "我需要一些帮助。", scene: "寻求帮助" },
+    { en: "Let me try again.", cn: "让我再试一次。", scene: "继续练习" },
+    { en: "That is useful.", cn: "那很有用。", scene: "表达评价" },
+  ],
+  fillBlanks: [
+    { sentence: "Can I ask a ___?", cn: "我可以问一个问题吗？", options: ["question", "topic", "practice", "answer"], answer: "question" },
+    { sentence: "I ___ some help.", cn: "我需要一些帮助。", options: ["need", "want", "easy", "useful"], answer: "need" },
+    { sentence: "Please ___ in English.", cn: "请用英语回答。", options: ["answer", "topic", "need", "easy"], answer: "answer" },
+    { sentence: "These words are ___.", cn: "这些单词很有用。", options: ["useful", "question", "want", "practice"], answer: "useful" },
+  ],
+  quiz: [
+    { q: "Why is Emma learning English?", options: ["For everyday life", "For cooking", "For a movie", "For shopping only"], answer: 0 },
+    { q: "Who does Emma practice with?", options: ["Her doctor", "Her teacher", "Her neighbor", "Her brother"], answer: 1 },
+    { q: "What does Emma write down?", options: ["Useful words", "Phone numbers", "Prices", "Addresses"], answer: 0 },
+    { q: "When can she use the new sentences?", options: ["After class", "Next year", "Only at home", "Never"], answer: 0 },
+  ],
+  listening: {
+    audio: "Can I ask a question? I need some help. These words are useful.",
+    blanks: [
+      { before: "Can I ask a", answer: "question", after: "?" },
+      { before: "I need some", answer: "help", after: "." },
+      { before: "These words are", answer: "useful", after: "." },
+    ],
+  },
+  output: {
+    prompt: `Write 3–5 sentences about ${title}. Use at least two sentences from this lesson.`,
+    cn: `请围绕“${title}”写 3–5 句话，并至少使用本课两个句型。`,
+    sample: "Can I ask a question? I need some help with this topic. These words are useful, and I want to practice again.",
+  },
+});
 
 export const LESSON_CONTENT: Record<string, LessonContent> = {
   自我介绍: {
@@ -512,6 +652,12 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
     },
   },
 };
+
+LEVELS[0].units
+  .flatMap((unit) => unit.lessons)
+  .forEach((lesson) => {
+    LESSON_CONTENT[lesson.title] ??= buildLessonContent(lesson.title);
+  });
 
 // Backward compatibility
 export const SAMPLE_VOCAB: Record<string, VocabItem[]> = Object.fromEntries(

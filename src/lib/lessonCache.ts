@@ -1,7 +1,7 @@
 import type { LessonContent } from "@/data/course";
 import { supabase } from "@/integrations/supabase/client";
 
-const KEY_PREFIX = "lesson_ai_v1:";
+const KEY_PREFIX = "lesson_ai_v2:";
 
 const k = (level: number, unit: number, lesson: number) =>
   `${KEY_PREFIX}${level}-${unit}-${lesson}`;

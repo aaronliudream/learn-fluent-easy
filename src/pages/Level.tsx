@@ -1,0 +1,138 @@
+import { Link, useParams } from "react-router-dom";
+import { Award, BookOpen, Flame, Star, TrendingUp } from "lucide-react";
+import { LEVELS } from "@/data/course";
+import { PageHeader } from "@/components/PageHeader";
+
+const ICONS = { star: Star, book: BookOpen } as const;
+
+const Level = () => {
+  const { levelId } = useParams();
+  const level = LEVELS.find((l) => l.id === Number(levelId));
+  if (!level) return <div className="p-10">级别不存在</div>;
+
+  const allLessons = level.units.flatMap((u) => u.lessons);
+  const done = allLessons.filter((l) => l.status === "done").length;
+  const pct = allLessons.length ? Math.round((done / allLessons.length) * 100) : 0;
+
+  return (
+    <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
+      <PageHeader title={level.name} subtitle="选择一个单元开始学习" back="/" />
+
+      {/* Hero stat card */}
+      <section className="relative mb-8 overflow-hidden rounded-3xl bg-grad-hero p-7 text-white shadow-tile md:p-9">
+        <span className="pointer-events-none absolute -right-16 -top-20 size-72 rounded-full bg-white/10 blur-2xl" />
+        <div className="relative flex items-start justify-between gap-6">
+          <div>
+            <div className="text-2xl font-extrabold tracking-wider md:text-3xl">{level.name}</div>
+            <p className="mt-2 text-sm opacity-90">继续你的学习之旅</p>
+          </div>
+          {/* progress ring */}
+          <div
+            className="relative grid size-24 place-items-center rounded-full"
+            style={{
+              background: `conic-gradient(white ${pct}%, rgba(255,255,255,0.25) ${pct}%)`,
+            }}
+          >
+            <div className="absolute inset-1.5 grid place-items-center rounded-full bg-grad-hero">
+              <div className="text-center leading-none">
+                <div className="text-xl font-extrabold">{pct}%</div>
+                <div className="mt-1 text-[10px] opacity-80">已完成</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mt-7 grid grid-cols-3 gap-3 md:gap-4">
+          {[
+            { icon: Flame, value: 7, label: "连续天数", color: "text-orange-200" },
+            { icon: Award, value: done, label: "已完成", color: "text-amber-200" },
+            { icon: TrendingUp, value: "8.5", label: "小时学习", color: "text-emerald-200" },
+          ].map((s) => (
+            <div
+              key={s.label}
+              className="flex flex-col items-center rounded-2xl bg-white/15 py-4 backdrop-blur-sm"
+            >
+              <s.icon className={`size-5 ${s.color}`} />
+              <div className="mt-1.5 text-2xl font-extrabold">{s.value}</div>
+              <div className="text-xs opacity-85">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Units */}
+      <section className="space-y-4">
+        {level.units.length === 0 && (
+          <div className="rounded-2xl border-2 border-dashed border-border bg-card p-10 text-center text-muted-foreground">
+            该级别正在准备中…
+          </div>
+        )}
+        {level.units.map((u) => {
+          const doneU = u.lessons.filter((l) => l.status === "done").length;
+          const pctU = Math.round((doneU / u.lessons.length) * 100);
+          const Icon = ICONS[u.icon as keyof typeof ICONS] ?? BookOpen;
+          return (
+            <Link
+              key={u.id}
+              to={`/level/${level.id}/unit/${u.id}`}
+              className="block rounded-2xl bg-card p-5 shadow-card transition hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-8px_hsl(250_40%_50%/0.25)] md:p-6"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex min-w-0 items-start gap-4">
+                  <div className={`grid size-12 shrink-0 place-items-center rounded-2xl ${u.iconBg} text-white shadow-md`}>
+                    <Icon className="size-6" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-xs font-medium text-muted-foreground">Unit {u.id}</div>
+                    <h3 className="truncate text-lg font-bold text-foreground md:text-xl">{u.title}</h3>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className={`text-2xl font-extrabold ${pctU === 100 ? "text-success" : "text-primary"}`}>
+                    {pctU}%
+                  </div>
+                  <div className="text-xs text-muted-foreground">已完成</div>
+                </div>
+              </div>
+
+              <p className="mt-3 text-sm text-muted-foreground">{u.desc}</p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {u.lessons.map((l) => {
+                  const cls =
+                    l.status === "done"
+                      ? "bg-success text-success-foreground"
+                      : l.status === "current"
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-secondary text-muted-foreground";
+                  return (
+                    <span
+                      key={l.id}
+                      className={`grid size-8 place-items-center rounded-lg text-xs font-bold ${cls}`}
+                    >
+                      {l.id}
+                    </span>
+                  );
+                })}
+              </div>
+
+              <div className="mt-4 flex items-center justify-between border-t border-border pt-3 text-xs text-muted-foreground">
+                <span className="flex items-center gap-1.5">
+                  <span className="grid size-4 place-items-center rounded-full border border-current">
+                    <span className="block size-1 rounded-full bg-current" />
+                  </span>
+                  {u.hours}
+                </span>
+                <span className="font-semibold text-foreground/70">
+                  {doneU}/{u.lessons.length} 课程
+                </span>
+              </div>
+            </Link>
+          );
+        })}
+      </section>
+    </main>
+  );
+};
+
+export default Level;

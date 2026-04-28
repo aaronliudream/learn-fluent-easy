@@ -1,4 +1,4 @@
-import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud } from "lucide-react";
+import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -34,6 +34,11 @@ const Index = () => {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
       <div className="mb-4 flex justify-end">
+        <Button asChild variant="ghost" size="sm" className="mr-2">
+          <Link to="/stats">
+            <BarChart3 className="size-4" /> 我的数据
+          </Link>
+        </Button>
         {user ? (
           <div className="flex items-center gap-3">
             <span className="text-sm text-muted-foreground">

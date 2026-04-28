@@ -1,6 +1,7 @@
 import { loadSettings } from "@/lib/voice";
 
 let lastSpoken = "";
+let voicesPrimed = false;
 
 export const clearAudioCache = () => {
   /* no-op: browser TTS has no cache to clear */
@@ -8,23 +9,45 @@ export const clearAudioCache = () => {
 
 export const getLastSpoken = () => lastSpoken;
 
-// Quality scoring: prefer high-naturalness voices (Siri / Neural / Enhanced / Premium).
-// On iOS these names map to the downloadable "Enhanced" / "Siri" voices that sound near-human.
+// Eagerly load voices so that on the first user click we can synchronously pick one.
+// iOS Safari requires the speak() call to happen *inside* the user-gesture stack —
+// any awaited delay after the click drops the gesture and the OS falls back to the
+// previously cached voice (which is why a freshly downloaded Siri/Enhanced voice
+// appears to "not take effect").
+const primeVoices = () => {
+  if (voicesPrimed) return;
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  // Trigger the lazy voice list load.
+  speechSynthesis.getVoices();
+  speechSynthesis.onvoiceschanged = () => {
+    voicesPrimed = true;
+  };
+  if (speechSynthesis.getVoices().length > 0) voicesPrimed = true;
+};
+primeVoices();
+
+// Quality score — prefer high-naturalness voices.
+// iOS Siri / Enhanced voice names vary across iOS versions:
+//   iOS 16:  "Ava (Enhanced)" / "Samantha (Enhanced)"
+//   iOS 17+: "Ava"             (Enhanced flag not in the name; only voiceURI hints at it)
+//   Some builds expose:        "com.apple.voice.premium.en-US.Ava"  in voiceURI
 const qualityScore = (v: SpeechSynthesisVoice): number => {
   const n = v.name.toLowerCase();
+  const uri = (v.voiceURI || "").toLowerCase();
   let s = 0;
-  if (/siri/.test(n)) s += 100;                 // iOS Siri voices (best)
-  if (/\(premium\)|premium/.test(n)) s += 60;   // iOS / macOS Premium
-  if (/\(enhanced\)|enhanced/.test(n)) s += 50; // iOS / macOS Enhanced
-  if (/neural|natural|online/.test(n)) s += 40; // Edge / Chrome cloud voices
-  if (/google/.test(n)) s += 20;                // Android Google voices (decent)
-  if (v.localService) s += 5;                   // Slight bonus for offline
-  // Known top-tier iOS voice names
-  if (/(ava|zoe|evan|nathan|samantha|allison|susan|joelle|noelle|aaron)/.test(n)) s += 15;
+  if (/siri/.test(n) || /siri/.test(uri)) s += 120;
+  if (/premium/.test(n) || /premium/.test(uri)) s += 80;
+  if (/enhanced/.test(n) || /enhanced/.test(uri)) s += 70;
+  if (/neural|natural|online/.test(n)) s += 40;
+  if (/google/.test(n)) s += 25;
+  // Apple's top-tier "personal voices" — high quality even without an Enhanced tag.
+  if (/(ava|zoe|evan|nathan|samantha|allison|susan|joelle|noelle|aaron|serena|kate|arthur|oliver)/.test(n)) {
+    s += 30;
+  }
+  if (v.localService) s += 5;
   return s;
 };
 
-// Pick a matching English voice based on user preference (male / female / accent).
 const pickVoice = (voiceId: string): SpeechSynthesisVoice | null => {
   const voices = speechSynthesis.getVoices().filter((v) => v.lang.startsWith("en"));
   if (voices.length === 0) return null;
@@ -45,7 +68,6 @@ const pickVoice = (voiceId: string): SpeechSynthesisVoice | null => {
     );
   const matchGender = (v: SpeechSynthesisVoice) => (wantMale ? isMaleName(v) : isFemaleName(v));
 
-  // Rank candidates: language + gender match first, then quality score.
   const ranked = [...voices].sort((a, b) => {
     const score = (v: SpeechSynthesisVoice) =>
       (matchLang(v) ? 1000 : 0) + (matchGender(v) ? 300 : 0) + qualityScore(v);
@@ -54,40 +76,55 @@ const pickVoice = (voiceId: string): SpeechSynthesisVoice | null => {
   return ranked[0] ?? null;
 };
 
-export const speak = async (text: string) => {
+// IMPORTANT: this must be called synchronously inside a user-gesture handler
+// (e.g. the onClick of a button). No awaits before speak() — otherwise iOS
+// drops the user-gesture context and the new voice will not be applied.
+export const speak = (text: string): void => {
   if (!text) return;
   lastSpoken = text;
-  const { voiceId, speed } = loadSettings();
-  try {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-      console.warn("SpeechSynthesis is not available in this browser.");
-      return;
-    }
-    speechSynthesis.cancel();
-
-    // On some browsers (Chrome) voices load asynchronously.
-    if (speechSynthesis.getVoices().length === 0) {
-      await new Promise<void>((resolve) => {
-        const t = setTimeout(resolve, 400);
-        speechSynthesis.onvoiceschanged = () => {
-          clearTimeout(t);
-          resolve();
-        };
-      });
-    }
-
-    const u = new SpeechSynthesisUtterance(text);
-    const v = pickVoice(voiceId);
-    if (v) {
-      u.voice = v;
-      u.lang = v.lang;
-    } else {
-      u.lang = "en-US";
-    }
-    u.rate = Math.min(1.5, Math.max(0.6, Number(speed) || 1.0));
-    u.pitch = 1;
-    speechSynthesis.speak(u);
-  } catch (e) {
-    console.warn("Browser TTS failed:", e);
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+    console.warn("SpeechSynthesis is not available in this browser.");
+    return;
   }
+
+  const { voiceId, speed } = loadSettings();
+
+  // Cancel any in-flight utterance so the new voice takes over immediately.
+  speechSynthesis.cancel();
+
+  // Build the utterance in the user-gesture stack (synchronous!).
+  const u = new SpeechSynthesisUtterance(text);
+  const v = pickVoice(voiceId);
+  if (v) {
+    u.voice = v;
+    u.lang = v.lang;
+  } else {
+    u.lang = "en-US";
+  }
+  u.rate = Math.min(1.5, Math.max(0.6, Number(speed) || 1.0));
+  u.pitch = 1;
+
+  // Helpful one-time debug for users wondering "why didn't my Siri voice work?"
+  if (v) {
+    console.info(
+      `[speak] using voice="${v.name}" lang=${v.lang} local=${v.localService} uri=${v.voiceURI}`,
+    );
+  } else {
+    console.warn("[speak] no English voice found — falling back to system default");
+  }
+
+  speechSynthesis.speak(u);
 };
+
+// List all available English voices in the console — useful for debugging on iPhone.
+// Type `__listVoices()` in the dev console to see what Safari is offering.
+if (typeof window !== "undefined") {
+  (window as unknown as { __listVoices?: () => void }).__listVoices = () => {
+    const list = speechSynthesis
+      .getVoices()
+      .filter((v) => v.lang.startsWith("en"))
+      .map((v) => `${v.name}  [${v.lang}]  local=${v.localService}  uri=${v.voiceURI}`);
+    console.log(list.join("\n"));
+    return list;
+  };
+}

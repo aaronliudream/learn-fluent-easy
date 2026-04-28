@@ -85,10 +85,7 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
       };
     }
     // fill
-    const blanked = idiom.example.replace(
-      new RegExp(idiom.phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"),
-      "_____",
-    );
+    const blanked = blankOutPhrase(idiom.example, idiom.phrase);
     const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
     return {
       id: idiom.id,

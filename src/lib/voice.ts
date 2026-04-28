@@ -8,14 +8,12 @@ export type VoiceOption = {
 };
 
 export const VOICES: VoiceOption[] = [
-  { id: "EXAVITQu4vr4xnSDxMaL", name: "Sarah", desc: "温柔自然女声", accent: "🇺🇸 美音" },
-  { id: "FGY2WhTYpPnrIDTdsKH5", name: "Laura", desc: "明亮活力女声", accent: "🇺🇸 美音" },
-  { id: "Xb7hH8MSUJpSbSDYk0k2", name: "Alice", desc: "优雅清晰女声", accent: "🇬🇧 英音" },
-  { id: "XrExE9yKIg1WjnnlVkGX", name: "Matilda", desc: "亲切温暖女声", accent: "🇺🇸 美音" },
-  { id: "JBFqnCBsd6RMkjVDRZzb", name: "George", desc: "沉稳磁性男声", accent: "🇬🇧 英音" },
-  { id: "TX3LPaxmHKxFdv7VOQHJ", name: "Liam", desc: "年轻清朗男声", accent: "🇺🇸 美音" },
-  { id: "onwK4e9ZLuTAKqWW03F9", name: "Daniel", desc: "标准播音男声", accent: "🇬🇧 英音" },
-  { id: "iP95p4xoKVk53GoZ742B", name: "Chris", desc: "随和自然男声", accent: "🇺🇸 美音" },
+  { id: "alloy",   name: "Alloy",   desc: "温和清晰女声", accent: "🇺🇸 中性" },
+  { id: "shimmer", name: "Shimmer", desc: "明亮柔和女声", accent: "🇺🇸 美音" },
+  { id: "nova",    name: "Nova",    desc: "活力年轻女声", accent: "🇺🇸 美音" },
+  { id: "echo",    name: "Echo",    desc: "沉稳磁性男声", accent: "🇺🇸 美音" },
+  { id: "onyx",    name: "Onyx",    desc: "低沉成熟男声", accent: "🇺🇸 美音" },
+  { id: "fable",   name: "Fable",   desc: "优雅叙述男声", accent: "🇬🇧 英音" },
 ];
 
 export const SPEED_PRESETS = [
@@ -32,7 +30,7 @@ export type VoiceSettings = { voiceId: string; speed: number };
 
 export const DEFAULT_SETTINGS: VoiceSettings = {
   voiceId: VOICES[0].id,
-  speed: 0.95,
+  speed: 1.0,
 };
 
 export const loadSettings = (): VoiceSettings => {

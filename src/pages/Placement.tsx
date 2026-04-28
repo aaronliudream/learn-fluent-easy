@@ -390,7 +390,7 @@ const Placement = () => {
           <div className="mt-6 grid grid-cols-3 gap-3">
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <div className="text-2xl font-extrabold">{result.ability.toFixed(1)}</div>
-              <div className="text-[11px] text-white/80">能力估值 (1.0–4.5)</div>
+              <div className="text-[11px] text-white/80">能力估值 (1.0–6.5)</div>
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <div className="text-2xl font-extrabold">{result.weighted}</div>

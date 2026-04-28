@@ -1,6 +1,5 @@
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { encode as base64Encode } from "https://deno.land/std@0.168.0/encoding/base64.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -21,44 +20,71 @@ serve(async (req) => {
       });
     }
 
-    const apiKey = Deno.env.get("ELEVENLABS_API_KEY");
-    if (!apiKey) throw new Error("ELEVENLABS_API_KEY is not configured");
+    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
 
-    // Default: Sarah (warm, natural female voice, good for English learning)
-    const vId = voiceId || "EXAVITQu4vr4xnSDxMaL";
-    const safeSpeed = Math.min(1.2, Math.max(0.7, Number(speed) || 0.95));
+    const safeSpeed = Math.min(1.2, Math.max(0.7, Number(speed) || 1.0));
+    const voice = voiceId || "alloy";
+
+    // Add a light pacing instruction so the model adapts speed naturally.
+    const speedHint =
+      safeSpeed < 0.95
+        ? "Speak slowly and clearly, like an English teacher for learners."
+        : safeSpeed > 1.05
+        ? "Speak at a brisk, lively pace."
+        : "Speak at a natural, clear conversational pace.";
 
     const response = await fetch(
-      `https://api.elevenlabs.io/v1/text-to-speech/${vId}?output_format=mp3_44100_128`,
+      "https://ai.gateway.lovable.dev/v1/chat/completions",
       {
         method: "POST",
         headers: {
-          "xi-api-key": apiKey,
+          Authorization: `Bearer ${LOVABLE_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          text,
-          model_id: "eleven_multilingual_v2",
-          voice_settings: {
-            stability: 0.5,
-            similarity_boost: 0.75,
-            style: 0.3,
-            use_speaker_boost: true,
-            speed: safeSpeed,
-          },
+          model: "google/gemini-2.5-flash-preview-tts",
+          modalities: ["audio"],
+          audio: { voice, format: "mp3" },
+          messages: [
+            {
+              role: "user",
+              content: `${speedHint}\n\n${text}`,
+            },
+          ],
         }),
       }
     );
 
     if (!response.ok) {
       const err = await response.text();
+      if (response.status === 429) {
+        return new Response(
+          JSON.stringify({ error: "Rate limit exceeded, please try again later." }),
+          { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+      if (response.status === 402) {
+        return new Response(
+          JSON.stringify({ error: "AI credits exhausted. Please add credits in Settings > Workspace > Usage." }),
+          { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
       throw new Error(`TTS failed ${response.status}: ${err}`);
     }
 
-    const audioBuffer = await response.arrayBuffer();
-    const base64 = base64Encode(new Uint8Array(audioBuffer));
+    const data = await response.json();
+    const audioContent =
+      data?.choices?.[0]?.message?.audio?.data ||
+      data?.choices?.[0]?.message?.audio?.audio ||
+      null;
 
-    return new Response(JSON.stringify({ audioContent: base64 }), {
+    if (!audioContent) {
+      console.error("Unexpected TTS response shape:", JSON.stringify(data).slice(0, 500));
+      throw new Error("No audio returned from AI gateway");
+    }
+
+    return new Response(JSON.stringify({ audioContent }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (e) {

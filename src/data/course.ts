@@ -357,10 +357,10 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
       { sentence: "I'm ___ for being late.", cn: "抱歉我迟到了。", options: ["sorry", "thank", "kind", "fine"], answer: "sorry" },
     ],
     quiz: [
-      { q: "对话中说话人请求帮忙拿什么？", options: ["书", "包", "杯子", "雨伞"], answer: 1 },
-      { q: "对方回应 'Of course!' 表示？", options: ["拒绝", "答应", "犹豫", "不明白"], answer: 1 },
-      { q: "'You're welcome.' 用在哪种场景？", options: ["道歉之后", "感谢之后", "问路时", "告别时"], answer: 1 },
-      { q: "想礼貌地引起陌生人注意，应说？", options: ["Hello!", "Excuse me.", "How are you?", "Goodbye."], answer: 1 },
+      { q: "What does the speaker ask for help with?", options: ["A book", "A bag", "A cup", "An umbrella"], answer: 1 },
+      { q: "What does 'Of course!' mean as a reply?", options: ["Refusal", "Agreement", "Hesitation", "Confusion"], answer: 1 },
+      { q: "When do you say 'You're welcome.'?", options: ["After apologizing", "After being thanked", "When asking directions", "When saying goodbye"], answer: 1 },
+      { q: "How do you politely get a stranger's attention?", options: ["Hello!", "Excuse me.", "How are you?", "Goodbye."], answer: 1 },
     ],
     listening: {
       audio: "Excuse me, could you help me? Thank you so much. You are welcome.",

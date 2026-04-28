@@ -433,7 +433,7 @@ const Placement = () => {
           </div>
         </section>
 
-        {/* Recommendation */}
+        {/* Overall recommendation */}
         <Link
           to={`/level/${result.recommendedLevel}`}
           className="mt-6 flex items-center gap-4 rounded-3xl border-2 border-primary/30 bg-primary/5 p-6 transition hover:bg-primary/10"
@@ -442,12 +442,60 @@ const Placement = () => {
             <Sparkles className="size-7" />
           </div>
           <div className="flex-1">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary">为你推荐</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary">综合推荐起点</div>
             <div className="mt-1 text-lg font-extrabold">从 LEVEL {result.recommendedLevel} 开始学习</div>
-            <div className="text-sm text-muted-foreground">最适合你当前水平的起点</div>
+            <div className="text-sm text-muted-foreground">基于四模块平均能力 · 点击进入该等级</div>
           </div>
           <Ear className="size-5 text-primary" />
         </Link>
+
+        {/* Per-section study plan */}
+        <section className="mt-6 rounded-3xl bg-card p-6 shadow-card md:p-8">
+          <h3 className="text-lg font-bold">个性化学习建议</h3>
+          <p className="mt-1 text-xs text-muted-foreground">
+            根据你在 4 个模块的真实表现，分别推荐适合的 LEVEL 与单元起点。
+          </p>
+          <div className="mt-4 space-y-3">
+            {result.recommendations.map((rec) => {
+              const m = SECTION_META[rec.section];
+              const Icon = m.icon;
+              const isWeak = result.weakest.includes(rec.section);
+              return (
+                <Link
+                  key={rec.section}
+                  to={`/level/${rec.level}`}
+                  className={`block rounded-2xl border p-4 transition hover:border-primary/50 ${
+                    isWeak ? "border-amber-500/40 bg-amber-500/5" : "border-border bg-secondary/30"
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className={`grid size-10 place-items-center rounded-xl ${m.color}`}>
+                      <Icon className="size-4" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="font-bold">{rec.cnSection}</span>
+                        {isWeak && (
+                          <span className="rounded-full bg-amber-500/20 px-2 py-0.5 text-[10px] font-semibold text-amber-700">
+                            最薄弱 · 优先强化
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        正确率 {rec.pct}% · 推荐难度 LEVEL {rec.level}
+                      </div>
+                    </div>
+                    <div className="text-2xl font-black text-primary">L{rec.level}</div>
+                  </div>
+                  <div className="mt-3 rounded-xl bg-card p-3 text-sm">
+                    <div className="font-semibold text-foreground">📚 推荐起点：{rec.unitTitle}</div>
+                    <div className="mt-1 text-xs leading-relaxed text-muted-foreground">{rec.advice}</div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
 
         <div className="mt-6 flex gap-3">
           <Button variant="outline" className="flex-1" onClick={() => setStage("intro")}>

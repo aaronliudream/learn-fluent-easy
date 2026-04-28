@@ -205,7 +205,6 @@ const Lesson = () => {
   }, [lesson, aiContent]);
 
   const isAiLesson = lesson ? !hasAuthoredContent(lesson.title) : false;
-  const hasPregen = lesson ? Boolean(PREGEN_MAP[lesson.title]) : false;
 
   const generateLesson = async (force = false) => {
     if (!lesson) return;

@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, ArrowRight } from "lucide-react";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -133,6 +133,17 @@ const Auth = () => {
             </form>
           </TabsContent>
         </Tabs>
+
+        <div className="mt-6 border-t pt-4 text-center">
+          <button
+            type="button"
+            onClick={() => navigate("/", { replace: true })}
+            className="inline-flex items-center gap-1 text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+          >
+            以访客身份继续浏览 <ArrowRight className="size-3.5" />
+          </button>
+          <p className="mt-1 text-xs text-muted-foreground">无需注册即可试用所有课程</p>
+        </div>
       </div>
     </main>
   );

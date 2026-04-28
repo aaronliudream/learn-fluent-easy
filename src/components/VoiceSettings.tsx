@@ -18,19 +18,16 @@ export const VoiceSettingsButton = () => {
     clearAudioCache();
   };
 
-  const preview = async () => {
+  const preview = () => {
     setPreviewing(true);
-    try {
-      await speak("Hello, this is how I sound. Let's start learning English together.");
-    } finally {
-      setPreviewing(false);
-    }
+    speak("Hello, this is how I sound. Let's start learning English together.");
+    setPreviewing(false);
   };
 
-  const replayLast = async () => {
+  const replayLast = () => {
     const last = getLastSpoken();
-    if (last) await speak(last);
-    else await preview();
+    if (last) speak(last);
+    else preview();
   };
 
   return (

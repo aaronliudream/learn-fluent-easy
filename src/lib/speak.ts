@@ -48,6 +48,16 @@ const qualityScore = (v: SpeechSynthesisVoice): number => {
   return s;
 };
 
+const isAppleMobile = () =>
+  typeof navigator !== "undefined" &&
+  (/iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1));
+
+const isPremiumAppleVoice = (v: SpeechSynthesisVoice) => {
+  const text = `${v.name} ${v.voiceURI}`.toLowerCase();
+  return /enhanced|premium|siri/.test(text);
+};
+
 const pickVoice = (voiceId: string): SpeechSynthesisVoice | null => {
   const voices = speechSynthesis.getVoices().filter((v) => v.lang.startsWith("en"));
   if (voices.length === 0) return null;
@@ -84,7 +94,15 @@ const pickVoice = (voiceId: string): SpeechSynthesisVoice | null => {
       qualityScore(v);
     return score(b) - score(a);
   });
-  return ranked[0] ?? null;
+  const best = ranked[0] ?? null;
+
+  // On iPhone/iPad Safari, downloaded Enhanced voices often do not appear in
+  // getVoices(). If we force a listed compact voice, Safari ignores the user's
+  // selected Allison/Samantha Enhanced system voice. In that case leave
+  // utterance.voice unset so iOS can use the selected English system voice.
+  if (best && isAppleMobile() && !isPremiumAppleVoice(best)) return null;
+
+  return best;
 };
 
 // IMPORTANT: this must be called synchronously inside a user-gesture handler
@@ -121,7 +139,7 @@ export const speak = (text: string): void => {
       `[speak] using voice="${v.name}" lang=${v.lang} local=${v.localService} uri=${v.voiceURI}`,
     );
   } else {
-    console.warn("[speak] no English voice found — falling back to system default");
+    console.warn("[speak] using iOS/browser system default English voice");
   }
 
   speechSynthesis.speak(u);

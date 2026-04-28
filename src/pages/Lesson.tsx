@@ -4,6 +4,7 @@ import {
   Book,
   BookOpen,
   Check,
+  CheckCircle2,
   FileText,
   Headphones,
   HelpCircle,
@@ -20,6 +21,8 @@ import { LESSON_CONTENT, LESSON_STEPS, findLesson } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
+import { findNextLesson, isMastered, setMastered } from "@/lib/mastery";
+import { toast } from "sonner";
 import {
   addStudyMinutes,
   getStreak,
@@ -69,6 +72,28 @@ const Lesson = () => {
   const nudge = useGuestNudge();
   const enteredAtRef = useRef<number>(Date.now());
   const recordedQuizRef = useRef(false);
+  const [mastered, setMasteredState] = useState(false);
+
+  useEffect(() => {
+    setMasteredState(isMastered(Number(levelId), Number(unitId), Number(lessonId)));
+  }, [levelId, unitId, lessonId]);
+
+  const toggleMastered = () => {
+    const next = !mastered;
+    setMastered(Number(levelId), Number(unitId), Number(lessonId), next);
+    setMasteredState(next);
+    if (next) {
+      markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
+      const nextLesson = findNextLesson(Number(levelId), Number(unitId), Number(lessonId));
+      toast.success("🎓 已标记为掌握", {
+        description: nextLesson
+          ? `下次打开 App 时会提醒你继续：${nextLesson.title}`
+          : "你已完成全部课程，太棒啦！",
+      });
+    } else {
+      toast("已取消「掌握」标记");
+    }
+  };
 
   // Track active day + accumulate study minutes when leaving the page.
   useEffect(() => {
@@ -615,6 +640,33 @@ const Lesson = () => {
         >
           下一步 →
         </button>
+      </div>
+
+      {/* Mastery toggle */}
+      <div className="mt-6 rounded-3xl border border-border bg-card p-5 shadow-card md:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 text-base font-bold">
+              <CheckCircle2 className={`size-5 ${mastered ? "text-emerald-500" : "text-muted-foreground"}`} />
+              {mastered ? "你已掌握本课" : "感觉已经掌握了？"}
+            </div>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {mastered
+                ? "下次打开 App，我们会建议你继续学习下一课。"
+                : "标记为「已掌握」后，下次打开 App 会提醒你继续下一课。"}
+            </p>
+          </div>
+          <button
+            onClick={toggleMastered}
+            className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${
+              mastered
+                ? "border border-emerald-500/40 bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500/15"
+                : "bg-grad-title text-white shadow-tile hover:opacity-95"
+            }`}
+          >
+            {mastered ? "✓ 已掌握 · 点击取消" : "🎯 标记为已掌握"}
+          </button>
+        </div>
       </div>
     </main>
   );

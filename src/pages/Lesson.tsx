@@ -219,10 +219,12 @@ const Lesson = () => {
     return topical ?? authored;
   }, [lesson, aiContent]);
 
-  // Every lesson benefits from AI generation now: even authored lessons need
-  // topic-aligned grammar/expressions/quiz/etc. So always run the AI flow
-  // unless the title already exists in the pre-generated bundle.
-  const isAiLesson = lesson ? !PREGEN_MAP[lesson.title] : false;
+  // Every lesson benefits from AI generation now — even hand-authored lessons
+  // need topic-aligned grammar / expressions / quiz / listening / output
+  // (the LESSON_CONTENT entries for those sections are a generic shared
+  // template). The auto-load effect short-circuits to PREGEN_MAP when the
+  // lesson is already in the pre-generated bundle.
+  const isAiLesson = !!lesson;
 
   const generateLesson = async (force = false) => {
     if (!lesson) return;

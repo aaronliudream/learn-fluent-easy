@@ -1,9 +1,9 @@
 import { Link, useParams } from "react-router-dom";
-import { Award, BookOpen, Flame, Star, TrendingUp } from "lucide-react";
+import { Award, BookOpen, Briefcase, Cloud, Flame, Map, ShoppingBag, Star, TrendingUp } from "lucide-react";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 
-const ICONS = { star: Star, book: BookOpen } as const;
+const ICONS = { star: Star, book: BookOpen, map: Map, shop: ShoppingBag, cloud: Cloud, briefcase: Briefcase } as const;
 
 const Level = () => {
   const { levelId } = useParams();

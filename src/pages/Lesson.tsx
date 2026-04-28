@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
   Book,
@@ -19,6 +19,7 @@ import {
 import { LESSON_CONTENT, LESSON_STEPS, findLesson } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
+import { useGuestNudge } from "@/hooks/useGuestNudge";
 
 const STEP_ICONS = {
   BookOpen,
@@ -57,9 +58,17 @@ const Lesson = () => {
   const lesson = findLesson(Number(levelId), Number(unitId), Number(lessonId));
   const [activeStep, setActiveStep] = useState(1);
   const contentRef = useRef<HTMLDivElement>(null);
+  const nudge = useGuestNudge();
 
   const goToStep = (id: number) => {
     setActiveStep(id);
+    if (id === LESSON_STEPS.length) {
+      nudge(
+        "lesson-finish",
+        "已学到最后一步啦！",
+        "登录即可保存这节课的进度，并在其它设备继续学习。",
+      );
+    }
     // Wait for the new section to render, then smooth-scroll it into view.
     requestAnimationFrame(() => {
       const el = contentRef.current;
@@ -75,6 +84,16 @@ const Lesson = () => {
   const [quizPicks, setQuizPicks] = useState<Record<number, number>>({});
   const [listenInputs, setListenInputs] = useState<Record<number, string>>({});
   const [output, setOutput] = useState("");
+
+  // Trigger when the user completes the quiz (all answered correctly enough)
+  useEffect(() => {
+    if (!content) return;
+    const total = content.quiz.length;
+    const answered = Object.keys(quizPicks).length;
+    if (total > 0 && answered === total) {
+      nudge("quiz-done", "🎉 测验完成！", "登录后可保存得分记录，回顾学习成果。");
+    }
+  }, [quizPicks, content, nudge]);
 
   const content = useMemo(() => {
     if (!lesson) return null;

@@ -365,7 +365,6 @@ const Lesson = () => {
                     </span>
                     {f.sentence.split("___")[1]}
                   </p>
-                  <p className="mt-1 text-sm text-muted-foreground">{f.cn}</p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {f.options.map((o) => (
                       <button

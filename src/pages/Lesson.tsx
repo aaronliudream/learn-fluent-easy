@@ -18,6 +18,23 @@ import {
 } from "lucide-react";
 import { LESSON_CONTENT, LESSON_STEPS, findLesson } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
+import { supabase } from "@/integrations/supabase/client";
+
+// Cache audio per text to avoid re-fetching
+const audioCache = new Map<string, string>();
+let currentAudio: HTMLAudioElement | null = null;
+
+const fallbackSpeak = (text: string) => {
+  try {
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "en-US";
+    u.rate = 0.95;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+  } catch {
+    /* ignore */
+  }
+};
 
 const STEP_ICONS = {
   BookOpen,
@@ -31,15 +48,28 @@ const STEP_ICONS = {
   Mic,
 } as const;
 
-const speak = (text: string) => {
+const speak = async (text: string) => {
+  if (!text) return;
   try {
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US";
-    u.rate = 0.95;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(u);
-  } catch {
-    /* ignore */
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio = null;
+    }
+    let url = audioCache.get(text);
+    if (!url) {
+      const { data, error } = await supabase.functions.invoke("tts", {
+        body: { text },
+      });
+      if (error || !data?.audioContent) throw error || new Error("no audio");
+      url = `data:audio/mpeg;base64,${data.audioContent}`;
+      audioCache.set(text, url);
+    }
+    const audio = new Audio(url);
+    currentAudio = audio;
+    await audio.play();
+  } catch (e) {
+    console.warn("ElevenLabs TTS failed, falling back:", e);
+    fallbackSpeak(text);
   }
 };
 

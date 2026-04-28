@@ -27,6 +27,9 @@ import {
   LEVELS,
   type LessonContent,
 } from "@/data/course";
+import PREGENERATED_LESSONS from "@/data/aiLessons.json";
+
+const PREGEN_MAP = PREGENERATED_LESSONS as Record<string, LessonContent>;
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
@@ -197,11 +200,12 @@ const Lesson = () => {
     if (hasAuthoredContent(lesson.title)) {
       return LESSON_CONTENT[lesson.title] ?? null;
     }
-    // AI-generated lesson: prefer freshly loaded one, else fall back to template
-    return aiContent ?? LESSON_CONTENT[lesson.title] ?? null;
+    // AI-generated lesson: prefer freshly loaded one, then pre-generated bundle, else template
+    return aiContent ?? PREGEN_MAP[lesson.title] ?? LESSON_CONTENT[lesson.title] ?? null;
   }, [lesson, aiContent]);
 
   const isAiLesson = lesson ? !hasAuthoredContent(lesson.title) : false;
+  const hasPregen = lesson ? Boolean(PREGEN_MAP[lesson.title]) : false;
 
   const generateLesson = async (force = false) => {
     if (!lesson) return;
@@ -242,6 +246,11 @@ const Lesson = () => {
     if (!lesson) return;
     if (!isAiLesson) {
       setAiContent(null);
+      return;
+    }
+    // If we already shipped a pre-generated version, use it instantly and skip AI calls.
+    if (PREGEN_MAP[lesson.title]) {
+      setAiContent(PREGEN_MAP[lesson.title]);
       return;
     }
     const lv = Number(levelId);

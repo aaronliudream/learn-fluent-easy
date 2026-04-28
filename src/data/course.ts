@@ -492,10 +492,10 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
       { sentence: "I love my ___.", cn: "我热爱我的工作。", options: ["job", "name", "office", "company"], answer: "job" },
     ],
     quiz: [
-      { q: "对话中那位女士的职业是？", options: ["医生", "护士", "老师", "工程师"], answer: 1 },
-      { q: "David 的工作是？", options: ["软件工程师", "经理", "学生", "医生"], answer: 0 },
-      { q: "对方对自己的工作感觉如何？", options: ["讨厌", "无所谓", "热爱", "想换工作"], answer: 2 },
-      { q: "下列哪个职业前应该用 'an'？", options: ["doctor", "nurse", "engineer", "teacher"], answer: 2, explain: "engineer 以元音音开头。" },
+      { q: "What is the woman's job in the dialogue?", options: ["Doctor", "Nurse", "Teacher", "Engineer"], answer: 1 },
+      { q: "What is David's job?", options: ["Software engineer", "Manager", "Student", "Doctor"], answer: 0 },
+      { q: "How does the other person feel about their job?", options: ["Hates it", "Doesn't care", "Loves it", "Wants to switch"], answer: 2 },
+      { q: "Which job should be preceded by 'an'?", options: ["doctor", "nurse", "engineer", "teacher"], answer: 2, explain: "'engineer' starts with a vowel sound." },
     ],
     listening: {
       audio: "I am a software engineer. I work for a tech company. I love my job.",

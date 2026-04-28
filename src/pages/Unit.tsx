@@ -4,6 +4,7 @@ import { CheckCircle2, Lock, PlayCircle } from "lucide-react";
 import { findUnit } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
+import { loadProgress, touchActive } from "@/lib/guestProgress";
 
 const Unit = () => {
   const { levelId, unitId } = useParams();
@@ -11,13 +12,15 @@ const Unit = () => {
   const nudge = useGuestNudge();
 
   useEffect(() => {
+    touchActive();
     // Triggered when a guest opens the 2nd or later unit — a sign of real engagement.
     if (Number(unitId) >= 2) {
-      nudge(
-        "browse-deeper",
-        "看来你很喜欢学习 ✨",
-        "登录即可保存进度，并在手机、电脑等设备间无缝同步。",
-      );
+      const p = loadProgress();
+      const done = p.completedLessons.length;
+      const desc = done > 0
+        ? `你已完成 ${done} 节课${p.studyMinutes > 0 ? `、学习 ${p.studyMinutes} 分钟` : ""}。登录后这些进度永久保留，3 秒同步到手机。`
+        : "登录后学习进度永久保留，可以在手机、电脑间无缝同步。";
+      nudge("browse-deeper", "看来你很喜欢学习 ✨", desc);
     }
   }, [unitId, nudge]);
 

@@ -660,18 +660,53 @@ const Lesson = () => {
                       <button
                         key={o}
                         onClick={() => setFills({ ...fills, [i]: o })}
-                        className={`rounded-full border px-4 py-1.5 text-sm transition ${
+                        disabled={!!picked}
+                        className={`flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-medium transition ${
                           picked === o
                             ? correct
-                              ? "border-emerald-400 bg-emerald-50 text-emerald-700"
-                              : "border-rose-400 bg-rose-50 text-rose-700"
-                            : "border-border bg-card hover:border-primary/40"
+                              ? "border-emerald-500 bg-emerald-500 text-white shadow-sm"
+                              : "border-rose-500 bg-rose-500 text-white shadow-sm"
+                            : picked && o === f.answer
+                              ? "border-emerald-500 bg-emerald-50 text-emerald-700"
+                              : picked
+                                ? "border-border bg-card text-muted-foreground opacity-60"
+                                : "border-border bg-card hover:border-primary/40"
                         }`}
                       >
-                        {o}
+                        <span>{o}</span>
+                        {picked === o && correct && <Check className="size-3.5" />}
+                        {picked === o && !correct && <X className="size-3.5" />}
+                        {picked && picked !== o && o === f.answer && (
+                          <Check className="size-3.5 text-emerald-600" />
+                        )}
                       </button>
                     ))}
                   </div>
+                  {picked && (
+                    <div
+                      className={`mt-3 flex items-start gap-2 rounded-lg p-3 text-sm ${
+                        correct
+                          ? "bg-emerald-50 text-emerald-700"
+                          : "bg-rose-50 text-rose-700"
+                      }`}
+                    >
+                      {correct ? (
+                        <>
+                          <Check className="mt-0.5 size-4 shrink-0" />
+                          <span>
+                            <strong>正确！</strong> {f.cn}
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <X className="mt-0.5 size-4 shrink-0" />
+                          <span>
+                            <strong>不对，正确答案是 “{f.answer}”。</strong> {f.cn}
+                          </span>
+                        </>
+                      )}
+                    </div>
+                  )}
                 </div>
               );
             })}

@@ -751,3 +751,12 @@ export const findUnit = (levelId: number, unitId: number) =>
 
 export const findLesson = (levelId: number, unitId: number, lessonId: number) =>
   findUnit(levelId, unitId)?.lessons.find((l) => l.id === lessonId);
+
+/**
+ * Returns true when the lesson has hand-authored content (custom vocab/passage)
+ * rather than just the generic template fallback.
+ */
+export const hasAuthoredContent = (title: string) => {
+  const src = SOURCE_LESSONS[title];
+  return Boolean(src && (src.vocab?.length || src.passage?.length));
+};

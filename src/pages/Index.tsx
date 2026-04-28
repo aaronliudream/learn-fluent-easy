@@ -167,10 +167,10 @@ const Index = () => {
         </AlertDialogContent>
       </AlertDialog>
 
-      {/* Placement test CTA */}
+      {/* Hero: Placement test (primary) */}
       <Link
         to="/placement"
-        className="group relative mb-6 flex flex-wrap items-center gap-5 overflow-hidden rounded-2xl bg-grad-title p-6 text-white shadow-tile transition-transform hover:-translate-y-0.5"
+        className="group relative mb-4 flex flex-wrap items-center gap-5 overflow-hidden rounded-2xl bg-grad-title p-5 text-white shadow-tile transition-transform hover:-translate-y-0.5"
       >
         <span className="pointer-events-none absolute -right-10 -top-12 size-40 rounded-full bg-white/15 blur-xl" />
         <span className="pointer-events-none absolute -bottom-12 right-32 size-24 rounded-full bg-white/10 blur-lg" />
@@ -179,89 +179,86 @@ const Index = () => {
         </div>
         <div className="relative flex-1 min-w-0">
           <div className="mb-1 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-0.5 text-[11px] font-semibold backdrop-blur-sm">
-            <TrendingUp className="size-3" /> 自适应难度 · 参照 CEFR
+            <TrendingUp className="size-3" /> 自适应 · 参照 CEFR
           </div>
-          <div className="text-lg font-extrabold md:text-xl">Take a test to know which level to begin with</div>
+          <div className="text-lg font-extrabold md:text-xl">不知道从哪里开始？做个水平测试</div>
           <div className="mt-0.5 flex flex-wrap items-center gap-3 text-xs opacity-90">
-            <span className="inline-flex items-center gap-1"><Clock className="size-3" /> ≤ 25 分钟</span>
-            <span>· 听力 / 语法 / 词汇 / 阅读</span>
+            <span className="inline-flex items-center gap-1"><Clock className="size-3" /> 约 25 分钟</span>
+            <span>· 听 / 说 / 读 / 写</span>
             <span>· A1–C1 评级</span>
           </div>
         </div>
         <ChevronRight className="relative size-6 opacity-80 transition-transform group-hover:translate-x-1" />
       </Link>
 
-      {/* Slang module CTA */}
-      <Link
-        to="/slang"
-        className="group relative mb-6 flex flex-wrap items-center gap-5 overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-500 via-rose-500 to-orange-500 p-6 text-white shadow-tile transition-transform hover:-translate-y-0.5"
-      >
-        <span className="pointer-events-none absolute -right-12 -top-10 size-40 rounded-full bg-white/20 blur-xl" />
-        <span className="pointer-events-none absolute -bottom-10 left-32 size-24 rounded-full bg-white/10 blur-lg" />
-        <div className="relative grid size-14 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
-          <Zap className="size-7" />
-        </div>
-        <div className="relative flex-1 min-w-0">
-          <div className="mb-1 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-0.5 text-[11px] font-semibold backdrop-blur-sm">
-            <Sparkles className="size-3" /> 全新模块
-          </div>
-          <div className="text-lg font-extrabold md:text-xl">美国流行俚语 · 346 条</div>
-          <div className="mt-0.5 flex flex-wrap items-center gap-3 text-xs opacity-90">
-            <span>读懂 TikTok、Z 世代、社交媒体</span>
-            <span>· 中英混合测试</span>
-            <span>· 每条带例句</span>
-          </div>
-        </div>
-        <ChevronRight className="relative size-6 opacity-80 transition-transform group-hover:translate-x-1" />
-      </Link>
-
-      {/* Guest progress sunk-cost banner */}
-      {!user && hasProgress && (
+      {/* Secondary row: Slang + (optional) Progress */}
+      <div className={`mb-8 grid gap-4 ${!user && hasProgress ? "md:grid-cols-2" : ""}`}>
         <Link
-          to="/auth"
-          className="mb-6 flex flex-wrap items-center gap-4 rounded-2xl border border-primary/20 bg-primary/5 p-5 transition hover:bg-primary/10"
+          to="/slang"
+          className="group relative flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-500 via-rose-500 to-orange-500 p-4 text-white shadow-tile transition-transform hover:-translate-y-0.5"
         >
-          <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-primary text-primary-foreground">
-            <Sparkles className="size-6" />
+          <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/15 blur-xl" />
+          <div className="relative grid size-11 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
+            <Zap className="size-5" />
           </div>
-          <div className="flex-1 min-w-0">
-            <div className="font-bold">
-              你已完成 {progress.completedLessons.length} 节课
-              {progress.studyMinutes > 0 && ` · 学习 ${progress.studyMinutes} 分钟`}
-              {streak >= 2 && ` · 🔥 连续 ${streak} 天`}
-            </div>
-            <div className="mt-0.5 text-sm text-muted-foreground">
-              登录后这些进度永久保留，3 秒同步到手机
-            </div>
+          <div className="relative flex-1 min-w-0">
+            <div className="text-sm font-extrabold md:text-base">美国流行俚语 · 346 条</div>
+            <div className="mt-0.5 truncate text-xs opacity-90">TikTok / Z 世代 / 社交媒体 · 每条带例句</div>
           </div>
-          <div className="flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
-            <Cloud className="size-4" /> 立即保存
-          </div>
+          <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
         </Link>
-      )}
 
-      <section className="grid gap-5 md:grid-cols-2 md:gap-6">
+        {!user && hasProgress && (
+          <Link
+            to="/auth"
+            className="group flex items-center gap-4 rounded-2xl border border-primary/20 bg-primary/5 p-4 transition hover:bg-primary/10"
+          >
+            <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground">
+              <Sparkles className="size-5" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-sm font-bold">
+                已学 {progress.completedLessons.length} 节
+                {progress.studyMinutes > 0 && ` · ${progress.studyMinutes} 分钟`}
+                {streak >= 2 && ` · 🔥${streak}天`}
+              </div>
+              <div className="mt-0.5 truncate text-xs text-muted-foreground">登录保存进度，3 秒同步到手机</div>
+            </div>
+            <div className="flex items-center gap-1 rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground">
+              <Cloud className="size-3.5" /> 保存
+            </div>
+          </Link>
+        )}
+      </div>
+
+      {/* Section label */}
+      <div className="mb-3 flex items-baseline justify-between">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">学习路径 · Levels</h2>
+        <span className="text-xs text-muted-foreground">{LEVELS.length} 级 · A1 → C2</span>
+      </div>
+
+      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {LEVELS.map((lv) => (
           <Link
             key={lv.id}
             to={`/level/${lv.id}`}
-            className={`group relative flex items-center justify-between overflow-hidden rounded-2xl ${lv.gradient} px-6 py-7 text-white shadow-tile transition-transform hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-12px_hsl(250_50%_30%/0.45)]`}
+            className={`group relative flex items-center justify-between overflow-hidden rounded-2xl ${lv.gradient} px-5 py-5 text-white shadow-tile transition-transform hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-12px_hsl(250_50%_30%/0.45)]`}
           >
             {/* Decorative bubbles */}
             <span className="pointer-events-none absolute -right-10 -top-12 size-40 rounded-full bg-white/15 blur-xl" />
             <span className="pointer-events-none absolute -bottom-16 right-20 size-28 rounded-full bg-white/10 blur-lg" />
 
-            <div className="relative flex items-center gap-5">
-              <div className="grid size-14 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
-                <GraduationCap className="size-7" />
+            <div className="relative flex items-center gap-4">
+              <div className="grid size-12 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+                <GraduationCap className="size-6" />
               </div>
               <div>
-                <div className="text-xl font-extrabold tracking-wider md:text-2xl">{lv.name}</div>
-                <div className="mt-1 text-sm font-medium opacity-90">{lv.unitsCount} 单元</div>
+                <div className="text-lg font-extrabold tracking-wider md:text-xl">{lv.name}</div>
+                <div className="mt-0.5 text-xs font-medium opacity-90">{lv.unitsCount} 单元</div>
               </div>
             </div>
 
-            <ChevronRight className="relative size-6 opacity-80 transition-transform group-hover:translate-x-1" />
+            <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
           </Link>
         ))}
       </section>

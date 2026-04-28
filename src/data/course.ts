@@ -695,6 +695,7 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
 // Hydrate every lesson with the authoritative content extracted from the source HTML.
 // Falls back to the auto-generated placeholder only if the lesson has no source entry.
 import { SOURCE_LESSONS } from "./sourceLessons";
+import { LESSON_OUTPUT_SAMPLES } from "./lessonSamples";
 
 const POS_MAP: Record<string, string> = {
   "n.": "n.",
@@ -717,6 +718,10 @@ LEVELS.flatMap((level) => level.units.flatMap((unit) => unit.lessons))
   .forEach((lesson) => {
     const src = SOURCE_LESSONS[lesson.title];
     const base = LESSON_CONTENT[lesson.title] ?? buildLessonContent(lesson.title);
+    const customSample = LESSON_OUTPUT_SAMPLES[lesson.title];
+    const output = customSample
+      ? { ...base.output, sample: customSample }
+      : base.output;
     if (src) {
       const reading = src.passage.length
         ? src.passage.map((p) => ({ en: p.en, cn: p.cn }))
@@ -730,9 +735,9 @@ LEVELS.flatMap((level) => level.units.flatMap((unit) => unit.lessons))
             example_cn: v.ex_cn,
           }))
         : base.vocab;
-      LESSON_CONTENT[lesson.title] = { ...base, reading, vocab };
+      LESSON_CONTENT[lesson.title] = { ...base, reading, vocab, output };
     } else {
-      LESSON_CONTENT[lesson.title] ??= base;
+      LESSON_CONTENT[lesson.title] ??= { ...base, output };
     }
   });
 

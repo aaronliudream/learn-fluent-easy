@@ -125,38 +125,126 @@ export type VocabItem = {
   example_cn: string;
 };
 
-export const SAMPLE_VOCAB: Record<string, VocabItem[]> = {
-  自我介绍: [
-    {
-      word: "introduce",
-      pron: "/ˌɪntrəˈdjuːs/",
-      meaning: "介绍；引进",
-      example: "Let me introduce myself.",
-      example_cn: "让我自我介绍一下。",
-    },
-    {
-      word: "hello",
-      pron: "/həˈloʊ/",
-      meaning: "你好",
-      example: "Hello, I'm Mei.",
-      example_cn: "你好，我叫梅。",
-    },
-    {
-      word: "name",
-      pron: "/neɪm/",
-      meaning: "名字",
-      example: "My name is Mei.",
-      example_cn: "我的名字叫梅。",
-    },
-    {
-      word: "from",
-      pron: "/frʌm/",
-      meaning: "来自",
-      example: "I'm from Beijing.",
-      example_cn: "我来自北京。",
-    },
-  ],
+export type Quiz = {
+  q: string;
+  options: string[];
+  answer: number; // index
+  explain?: string;
 };
+
+export type FillBlank = {
+  sentence: string; // use ___ as blank
+  cn: string;
+  options: string[];
+  answer: string;
+};
+
+export type LessonContent = {
+  vocab: VocabItem[];
+  reading: { en: string; cn: string }[]; // paragraphs
+  grammar: { title: string; explain: string; examples: { en: string; cn: string }[] }[];
+  expressions: { en: string; cn: string; scene: string }[];
+  fillBlanks: FillBlank[];
+  quiz: Quiz[];
+  listening: { audio: string; blanks: { before: string; answer: string; after: string }[] };
+  output: { prompt: string; cn: string; sample: string };
+};
+
+export const LESSON_CONTENT: Record<string, LessonContent> = {
+  自我介绍: {
+    vocab: [
+      { word: "introduce", pron: "/ˌɪntrəˈdjuːs/", meaning: "v. 介绍；引进", example: "Let me introduce myself.", example_cn: "让我自我介绍一下。" },
+      { word: "hello", pron: "/həˈloʊ/", meaning: "int. 你好", example: "Hello, I'm Mei.", example_cn: "你好，我叫梅。" },
+      { word: "name", pron: "/neɪm/", meaning: "n. 名字", example: "My name is Mei.", example_cn: "我的名字叫梅。" },
+      { word: "from", pron: "/frʌm/", meaning: "prep. 来自", example: "I'm from Beijing.", example_cn: "我来自北京。" },
+      { word: "nice", pron: "/naɪs/", meaning: "adj. 美好的", example: "Nice to meet you.", example_cn: "很高兴认识你。" },
+      { word: "meet", pron: "/miːt/", meaning: "v. 遇见，见面", example: "I meet new friends every day.", example_cn: "我每天都认识新朋友。" },
+      { word: "student", pron: "/ˈstuːdənt/", meaning: "n. 学生", example: "I am a student.", example_cn: "我是一名学生。" },
+      { word: "year", pron: "/jɪr/", meaning: "n. 年；岁", example: "I am twenty years old.", example_cn: "我二十岁。" },
+    ],
+    reading: [
+      { en: "Hello, everyone! My name is Mei. I'm from Beijing, China.", cn: "大家好！我叫梅。我来自中国北京。" },
+      { en: "I am twenty years old, and I am a college student.", cn: "我今年二十岁，是一名大学生。" },
+      { en: "I love music, reading, and traveling. In my free time, I often listen to pop songs and read English books.", cn: "我喜欢音乐、阅读和旅行。空闲时我常常听流行歌、读英语书。" },
+      { en: "I'm learning English because I want to make friends from all over the world. Nice to meet you!", cn: "我正在学英语，因为我想结识来自世界各地的朋友。很高兴认识你！" },
+    ],
+    grammar: [
+      {
+        title: "Be 动词：am / is / are",
+        explain: "用于介绍身份、年龄、来源。第一人称单数（I）用 am；他/她/它用 is；你/我们/他们用 are。",
+        examples: [
+          { en: "I am a student.", cn: "我是学生。" },
+          { en: "She is from Japan.", cn: "她来自日本。" },
+          { en: "They are my friends.", cn: "他们是我的朋友。" },
+        ],
+      },
+      {
+        title: "My name is … / I'm …",
+        explain: "两种最常见的介绍姓名结构，均可使用，I'm 更口语化。",
+        examples: [
+          { en: "My name is Lucas.", cn: "我叫卢卡斯。" },
+          { en: "I'm Lucas.", cn: "我是卢卡斯。" },
+        ],
+      },
+    ],
+    expressions: [
+      { en: "Nice to meet you.", cn: "很高兴认识你。", scene: "初次见面" },
+      { en: "How do you do?", cn: "你好（正式）。", scene: "正式场合" },
+      { en: "What's your name?", cn: "你叫什么名字？", scene: "询问姓名" },
+      { en: "Where are you from?", cn: "你来自哪里？", scene: "询问来源" },
+      { en: "I'm a student / engineer.", cn: "我是学生 / 工程师。", scene: "介绍身份" },
+    ],
+    fillBlanks: [
+      { sentence: "Hello, my ___ is Mei.", cn: "你好，我的名字叫梅。", options: ["name", "from", "nice", "meet"], answer: "name" },
+      { sentence: "I'm ___ Beijing.", cn: "我来自北京。", options: ["in", "at", "from", "on"], answer: "from" },
+      { sentence: "___ to meet you.", cn: "很高兴认识你。", options: ["Nice", "Name", "Hello", "Year"], answer: "Nice" },
+      { sentence: "I ___ a student.", cn: "我是一名学生。", options: ["am", "is", "are", "be"], answer: "am" },
+    ],
+    quiz: [
+      {
+        q: "梅来自哪里？",
+        options: ["上海", "北京", "东京", "纽约"],
+        answer: 1,
+        explain: "文中提到 'I'm from Beijing, China.'",
+      },
+      {
+        q: "梅多大了？",
+        options: ["18 岁", "19 岁", "20 岁", "21 岁"],
+        answer: 2,
+        explain: "I am twenty years old.",
+      },
+      {
+        q: "梅的爱好不包括下面哪一项？",
+        options: ["音乐", "阅读", "旅行", "运动"],
+        answer: 3,
+        explain: "文中提到 music, reading, traveling，没有 sports。",
+      },
+      {
+        q: "梅学英语的目的是？",
+        options: ["考试", "工作", "结识世界各地的朋友", "去留学"],
+        answer: 2,
+      },
+    ],
+    listening: {
+      audio: "Hello, my name is Mei. I am from Beijing. I am a student.",
+      blanks: [
+        { before: "Hello, my name is", answer: "Mei", after: "." },
+        { before: "I am from", answer: "Beijing", after: "." },
+        { before: "I am a", answer: "student", after: "." },
+      ],
+    },
+    output: {
+      prompt: "Please introduce yourself in 3–5 sentences. Include your name, where you are from, your age, and your hobbies.",
+      cn: "请用 3–5 句话介绍自己，包括姓名、来源、年龄和爱好。",
+      sample: "Hello! My name is Alex. I'm from Shanghai. I'm twenty-two years old and I am a student. I love movies and basketball. Nice to meet you!",
+    },
+  },
+};
+
+// Backward compatibility
+export const SAMPLE_VOCAB: Record<string, VocabItem[]> = Object.fromEntries(
+  Object.entries(LESSON_CONTENT).map(([k, v]) => [k, v.vocab]),
+);
 
 export const findUnit = (levelId: number, unitId: number) =>
   LEVELS.find((l) => l.id === levelId)?.units.find((u) => u.id === unitId);

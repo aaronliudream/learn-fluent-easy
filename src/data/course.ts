@@ -289,10 +289,10 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
       { sentence: "___ are you today?", cn: "你今天怎么样？", options: ["What", "How", "Where", "Who"], answer: "How" },
     ],
     quiz: [
-      { q: "Lily 现在要去做什么？", options: ["回家", "去上课", "去吃饭", "去运动"], answer: 1, explain: "I'm on my way to class." },
-      { q: "对方先说 'How are you?'，最自然的回应是？", options: ["Goodbye.", "I'm fine, thanks.", "My name is Lily.", "Nice day."], answer: 1 },
-      { q: "晚上和别人见面应该说？", options: ["Good morning", "Good afternoon", "Good evening", "Good night"], answer: 2 },
-      { q: "'See you later.' 表达的意思是？", options: ["很高兴认识你", "回头见", "晚安", "保重"], answer: 1 },
+      { q: "Where is Lily going right now?", options: ["Home", "To class", "To eat", "To exercise"], answer: 1, explain: "I'm on my way to class." },
+      { q: "Someone says 'How are you?' — what is the most natural reply?", options: ["Goodbye.", "I'm fine, thanks.", "My name is Lily.", "Nice day."], answer: 1 },
+      { q: "What do you say when meeting someone in the evening?", options: ["Good morning", "Good afternoon", "Good evening", "Good night"], answer: 2 },
+      { q: "What does 'See you later.' mean?", options: ["Nice to meet you", "See you again soon", "Good night", "Take care"], answer: 1 },
     ],
     listening: {
       audio: "Good morning, Lily. How are you? I am fine, thank you. See you later.",

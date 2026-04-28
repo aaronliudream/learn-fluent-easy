@@ -1,5 +1,6 @@
 import { ArrowLeft, Home } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { VoiceSettingsButton } from "@/components/VoiceSettings";
 
 type Props = {
   title: string;
@@ -26,13 +27,16 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
             {title}
           </h1>
         </div>
-        <Link
-          to="/"
-          className="grid size-10 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary hover:text-foreground"
-          aria-label="Home"
-        >
-          <Home className="size-5" />
-        </Link>
+        <div className="flex items-center gap-1">
+          <VoiceSettingsButton />
+          <Link
+            to="/"
+            className="grid size-10 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary hover:text-foreground"
+            aria-label="Home"
+          >
+            <Home className="size-5" />
+          </Link>
+        </div>
       </div>
       {subtitle && (
         <p className="ml-1 mt-2 text-sm text-muted-foreground md:ml-[52px]">{subtitle}</p>

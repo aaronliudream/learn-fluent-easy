@@ -13,7 +13,7 @@ serve(async (req) => {
   }
 
   try {
-    const { text, voiceId } = await req.json();
+    const { text, voiceId, speed } = await req.json();
     if (!text) {
       return new Response(JSON.stringify({ error: "text is required" }), {
         status: 400,
@@ -26,6 +26,7 @@ serve(async (req) => {
 
     // Default: Sarah (warm, natural female voice, good for English learning)
     const vId = voiceId || "EXAVITQu4vr4xnSDxMaL";
+    const safeSpeed = Math.min(1.2, Math.max(0.7, Number(speed) || 0.95));
 
     const response = await fetch(
       `https://api.elevenlabs.io/v1/text-to-speech/${vId}?output_format=mp3_44100_128`,
@@ -43,7 +44,7 @@ serve(async (req) => {
             similarity_boost: 0.75,
             style: 0.3,
             use_speaker_boost: true,
-            speed: 0.95,
+            speed: safeSpeed,
           },
         }),
       }

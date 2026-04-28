@@ -1,53 +1,73 @@
-import { supabase } from "@/integrations/supabase/client";
 import { loadSettings } from "@/lib/voice";
 
-// Cache audio per (voiceId|speed|text). Cleared when settings change.
-const audioCache = new Map<string, string>();
-let currentAudio: HTMLAudioElement | null = null;
 let lastSpoken = "";
 
 export const clearAudioCache = () => {
-  audioCache.clear();
+  /* no-op: browser TTS has no cache to clear */
 };
 
 export const getLastSpoken = () => lastSpoken;
 
-const fallbackSpeak = (text: string, rate: number) => {
-  try {
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US";
-    u.rate = rate;
-    speechSynthesis.cancel();
-    speechSynthesis.speak(u);
-  } catch {
-    /* ignore */
-  }
+// Pick a matching English voice based on user preference (male / female / accent).
+const pickVoice = (voiceId: string): SpeechSynthesisVoice | null => {
+  const voices = speechSynthesis.getVoices().filter((v) => v.lang.startsWith("en"));
+  if (voices.length === 0) return null;
+
+  const id = voiceId.toLowerCase();
+  const wantUK = id.includes("uk") || id.includes("british") || id === "fable";
+  const wantMale = ["onyx", "echo", "fable"].includes(id);
+
+  const matchLang = (v: SpeechSynthesisVoice) =>
+    wantUK ? v.lang.toLowerCase().includes("en-gb") : v.lang.toLowerCase().includes("en-us");
+  const matchGender = (v: SpeechSynthesisVoice) => {
+    const n = v.name.toLowerCase();
+    return wantMale
+      ? /(male|david|alex|daniel|fred|tom|onyx|echo)/.test(n) && !/female/.test(n)
+      : /(female|samantha|victoria|karen|moira|tessa|nova|shimmer|alloy)/.test(n);
+  };
+
+  return (
+    voices.find((v) => matchLang(v) && matchGender(v)) ||
+    voices.find(matchLang) ||
+    voices.find(matchGender) ||
+    voices[0]
+  );
 };
 
 export const speak = async (text: string) => {
   if (!text) return;
   lastSpoken = text;
   const { voiceId, speed } = loadSettings();
-  const key = `${voiceId}|${speed}|${text}`;
   try {
-    if (currentAudio) {
-      currentAudio.pause();
-      currentAudio = null;
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      console.warn("SpeechSynthesis is not available in this browser.");
+      return;
     }
-    let url = audioCache.get(key);
-    if (!url) {
-      const { data, error } = await supabase.functions.invoke("tts", {
-        body: { text, voiceId, speed },
+    speechSynthesis.cancel();
+
+    // On some browsers (Chrome) voices load asynchronously.
+    if (speechSynthesis.getVoices().length === 0) {
+      await new Promise<void>((resolve) => {
+        const t = setTimeout(resolve, 400);
+        speechSynthesis.onvoiceschanged = () => {
+          clearTimeout(t);
+          resolve();
+        };
       });
-      if (error || !data?.audioContent) throw error || new Error("no audio");
-      url = `data:audio/mpeg;base64,${data.audioContent}`;
-      audioCache.set(key, url);
     }
-    const audio = new Audio(url);
-    currentAudio = audio;
-    await audio.play();
+
+    const u = new SpeechSynthesisUtterance(text);
+    const v = pickVoice(voiceId);
+    if (v) {
+      u.voice = v;
+      u.lang = v.lang;
+    } else {
+      u.lang = "en-US";
+    }
+    u.rate = Math.min(1.5, Math.max(0.6, Number(speed) || 1.0));
+    u.pitch = 1;
+    speechSynthesis.speak(u);
   } catch (e) {
-    console.warn("ElevenLabs TTS failed, falling back:", e);
-    fallbackSpeak(text, speed);
+    console.warn("Browser TTS failed:", e);
   }
 };

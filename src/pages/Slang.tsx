@@ -51,6 +51,46 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+const STOP_WORDS = new Set([
+  "a","an","the","to","of","in","on","at","is","it","be","and","or","my","your","you","i","we","he","she","they","up","out","off","for","with","this","that",
+]);
+
+function escapeRe(s: string) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/**
+ * Replace the idiom phrase inside the example with "_____", even when the
+ * sentence inserts pronouns/articles between the words (e.g. phrase
+ * "caught in 4K" inside "caught him in 4K").
+ * Falls back to blanking the meaningful keywords individually so the answer
+ * never appears verbatim in the prompt.
+ */
+function blankOutPhrase(example: string, phrase: string): string {
+  // 1) Try exact match first.
+  const exact = new RegExp(escapeRe(phrase), "i");
+  if (exact.test(example)) return example.replace(exact, "_____");
+
+  // 2) Try a flexible match: allow up to 3 words between each phrase word.
+  const words = phrase.split(/\s+/).filter(Boolean).map(escapeRe);
+  if (words.length > 1) {
+    const flexible = new RegExp(words.join("(?:\\s+\\S+){0,3}\\s+"), "i");
+    if (flexible.test(example)) return example.replace(flexible, "_____");
+  }
+
+  // 3) Fallback: blank each meaningful keyword from the phrase individually.
+  let result = example;
+  const keywords = phrase
+    .split(/\s+/)
+    .map((w) => w.replace(/[^\w'-]/g, ""))
+    .filter((w) => w && !STOP_WORDS.has(w.toLowerCase()));
+  for (const kw of keywords) {
+    const re = new RegExp(`\\b${escapeRe(kw)}\\b`, "ig");
+    result = result.replace(re, "_____");
+  }
+  return result;
+}
+
 function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
   const sourceForDistractors = IDIOMS;
   const picked = shuffle(pool).slice(0, Math.min(len, pool.length));
@@ -85,10 +125,7 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
       };
     }
     // fill
-    const blanked = idiom.example.replace(
-      new RegExp(idiom.phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"),
-      "_____",
-    );
+    const blanked = blankOutPhrase(idiom.example, idiom.phrase);
     const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
     return {
       id: idiom.id,

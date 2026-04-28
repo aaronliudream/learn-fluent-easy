@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -30,6 +31,10 @@ export default {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -62,6 +67,22 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "calc(var(--radius) + 4px)",
+        "2xl": "calc(var(--radius) + 8px)",
+      },
+      backgroundImage: {
+        "grad-1": "var(--grad-1)",
+        "grad-2": "var(--grad-2)",
+        "grad-3": "var(--grad-3)",
+        "grad-4": "var(--grad-4)",
+        "grad-5": "var(--grad-5)",
+        "grad-6": "var(--grad-6)",
+        "grad-hero": "var(--grad-hero)",
+        "grad-title": "var(--grad-title)",
+      },
+      boxShadow: {
+        card: "var(--shadow-card)",
+        tile: "var(--shadow-tile)",
       },
       keyframes: {
         "accordion-down": {

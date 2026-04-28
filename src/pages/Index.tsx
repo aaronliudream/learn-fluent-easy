@@ -1,4 +1,4 @@
-import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, ShieldCheck, Clock } from "lucide-react";
+import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -71,13 +71,37 @@ const Index = () => {
         </div>
         <div className="relative flex-1 min-w-0">
           <div className="mb-1 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-0.5 text-[11px] font-semibold backdrop-blur-sm">
-            <ShieldCheck className="size-3" /> CEFR 欧盟权威标准
+            <TrendingUp className="size-3" /> 自适应难度 · 参照 CEFR
           </div>
           <div className="text-lg font-extrabold md:text-xl">不知道从哪里开始？做个水平测试</div>
           <div className="mt-0.5 flex flex-wrap items-center gap-3 text-xs opacity-90">
-            <span className="inline-flex items-center gap-1"><Clock className="size-3" /> 25 分钟</span>
+            <span className="inline-flex items-center gap-1"><Clock className="size-3" /> ≤ 25 分钟</span>
             <span>· 听力 / 语法 / 词汇 / 阅读</span>
             <span>· A1–C1 评级</span>
+          </div>
+        </div>
+        <ChevronRight className="relative size-6 opacity-80 transition-transform group-hover:translate-x-1" />
+      </Link>
+
+      {/* Slang module CTA */}
+      <Link
+        to="/slang"
+        className="group relative mb-6 flex flex-wrap items-center gap-5 overflow-hidden rounded-2xl bg-gradient-to-br from-fuchsia-500 via-rose-500 to-orange-500 p-6 text-white shadow-tile transition-transform hover:-translate-y-0.5"
+      >
+        <span className="pointer-events-none absolute -right-12 -top-10 size-40 rounded-full bg-white/20 blur-xl" />
+        <span className="pointer-events-none absolute -bottom-10 left-32 size-24 rounded-full bg-white/10 blur-lg" />
+        <div className="relative grid size-14 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+          <Zap className="size-7" />
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <div className="mb-1 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-0.5 text-[11px] font-semibold backdrop-blur-sm">
+            <Sparkles className="size-3" /> 全新模块
+          </div>
+          <div className="text-lg font-extrabold md:text-xl">美国流行俚语 · 346 条</div>
+          <div className="mt-0.5 flex flex-wrap items-center gap-3 text-xs opacity-90">
+            <span>读懂 TikTok、Z 世代、社交媒体</span>
+            <span>· 中英混合测试</span>
+            <span>· 每条带例句</span>
           </div>
         </div>
         <ChevronRight className="relative size-6 opacity-80 transition-transform group-hover:translate-x-1" />

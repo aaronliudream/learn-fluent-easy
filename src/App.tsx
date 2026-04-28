@@ -11,6 +11,7 @@ import Lesson from "./pages/Lesson.tsx";
 import Auth from "./pages/Auth.tsx";
 import Stats from "./pages/Stats.tsx";
 import Placement from "./pages/Placement.tsx";
+import Slang from "./pages/Slang.tsx";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/auth" element={<Auth />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/placement" element={<Placement />} />
+          <Route path="/slang" element={<Slang />} />
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />

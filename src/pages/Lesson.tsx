@@ -85,7 +85,12 @@ const Lesson = () => {
   const [listenInputs, setListenInputs] = useState<Record<number, string>>({});
   const [output, setOutput] = useState("");
 
-  // Trigger when the user completes the quiz (all answered correctly enough)
+  const content = useMemo(() => {
+    if (!lesson) return null;
+    return LESSON_CONTENT[lesson.title] ?? LESSON_CONTENT["自我介绍"];
+  }, [lesson]);
+
+  // Trigger nudge when the user completes all quiz questions
   useEffect(() => {
     if (!content) return;
     const total = content.quiz.length;
@@ -94,11 +99,6 @@ const Lesson = () => {
       nudge("quiz-done", "🎉 测验完成！", "登录后可保存得分记录，回顾学习成果。");
     }
   }, [quizPicks, content, nudge]);
-
-  const content = useMemo(() => {
-    if (!lesson) return null;
-    return LESSON_CONTENT[lesson.title] ?? LESSON_CONTENT["自我介绍"];
-  }, [lesson]);
 
   if (!lesson || !content) return <div className="p-10">课程不存在</div>;
 

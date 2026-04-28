@@ -780,8 +780,8 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
   },
 };
 
-LEVELS[0].units
-  .flatMap((unit) => unit.lessons)
+// Auto-generate placeholder content for any lesson without manually authored content.
+LEVELS.flatMap((level) => level.units.flatMap((unit) => unit.lessons))
   .forEach((lesson) => {
     LESSON_CONTENT[lesson.title] ??= buildLessonContent(lesson.title);
   });

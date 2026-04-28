@@ -1,11 +1,26 @@
 import { Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { CheckCircle2, Lock, PlayCircle } from "lucide-react";
 import { findUnit } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
+import { useGuestNudge } from "@/hooks/useGuestNudge";
 
 const Unit = () => {
   const { levelId, unitId } = useParams();
   const unit = findUnit(Number(levelId), Number(unitId));
+  const nudge = useGuestNudge();
+
+  useEffect(() => {
+    // Triggered when a guest opens the 2nd or later unit — a sign of real engagement.
+    if (Number(unitId) >= 2) {
+      nudge(
+        "browse-deeper",
+        "看来你很喜欢学习 ✨",
+        "登录即可保存进度，并在手机、电脑等设备间无缝同步。",
+      );
+    }
+  }, [unitId, nudge]);
+
   if (!unit) return <div className="p-10">单元不存在</div>;
 
   return (

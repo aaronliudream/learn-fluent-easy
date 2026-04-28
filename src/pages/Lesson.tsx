@@ -148,6 +148,7 @@ const Lesson = () => {
         </ul>
       </section>
 
+      <div ref={contentRef}>
       {/* Step 1 — Vocabulary */}
       {activeStep === 1 && (
         <section className="rounded-3xl bg-card p-6 shadow-card md:p-8">
@@ -539,9 +540,10 @@ const Lesson = () => {
       )}
 
       {/* Step nav */}
+      </div>
       <div className="mt-8 flex items-center justify-between">
         <button
-          onClick={() => setActiveStep(Math.max(1, activeStep - 1))}
+          onClick={() => goToStep(Math.max(1, activeStep - 1))}
           disabled={activeStep === 1}
           className="rounded-full border border-border bg-card px-5 py-2 text-sm font-semibold disabled:opacity-40"
         >
@@ -551,7 +553,7 @@ const Lesson = () => {
           {activeStep} / {LESSON_STEPS.length}
         </span>
         <button
-          onClick={() => setActiveStep(Math.min(LESSON_STEPS.length, activeStep + 1))}
+          onClick={() => goToStep(Math.min(LESSON_STEPS.length, activeStep + 1))}
           disabled={activeStep === LESSON_STEPS.length}
           className="rounded-full bg-grad-title px-5 py-2 text-sm font-semibold text-white shadow-tile disabled:opacity-40"
         >

@@ -29,7 +29,7 @@ import {
 } from "@/data/course";
 import PREGENERATED_LESSONS from "@/data/aiLessons.json";
 
-const PREGEN_MAP = PREGENERATED_LESSONS as Record<string, LessonContent>;
+const PREGEN_MAP = PREGENERATED_LESSONS as unknown as Record<string, LessonContent>;
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";

@@ -1,4 +1,4 @@
-import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap } from "lucide-react";
+import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap, BookOpen, ArrowRight, Layers } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -8,7 +8,23 @@ import { toast } from "sonner";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
-import { findNextLesson, getLastMastered, NEXT_NUDGE_KEY } from "@/lib/mastery";
+import {
+  findNextLesson,
+  getLastMastered,
+  getLastVisited,
+  isUnfinished,
+  type LessonRef,
+  RESUME_DIALOG_KEY,
+} from "@/lib/mastery";
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 
 const Index = () => {
   const [user, setUser] = useState<User | null>(null);

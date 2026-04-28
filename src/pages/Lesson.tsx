@@ -206,11 +206,17 @@ const Lesson = () => {
       // output) in LESSON_CONTENT are a generic template that is the same
       // for every lesson — so prefer topical AI content for those when
       // available, while keeping the authored vocab + reading.
+      //
+      // IMPORTANT: quiz / fillBlanks / listening reference the *reading*
+      // passage. If we mix authored reading with topical quiz, the quiz
+      // will ask about a story the user never saw. So when we use the
+      // topical quiz/fill/listening, we MUST also use the topical reading.
       if (topical && authored) {
         return {
           ...topical,
           vocab: authored.vocab,
-          reading: authored.reading,
+          // reading stays from `topical` so that quiz questions match
+          // the passage shown in step 4.
         };
       }
       return authored;

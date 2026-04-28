@@ -23,6 +23,7 @@ import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { findNextLesson, isMastered, setLastVisited, setMastered } from "@/lib/mastery";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import {
   addStudyMinutes,
   getStreak,
@@ -133,6 +134,46 @@ const Lesson = () => {
   const [quizPicks, setQuizPicks] = useState<Record<number, number>>({});
   const [listenInputs, setListenInputs] = useState<Record<number, string>>({});
   const [output, setOutput] = useState("");
+  const [checking, setChecking] = useState(false);
+  type Feedback = {
+    score: number;
+    overall: string;
+    mistakes: { original: string; corrected: string; explanation: string }[];
+    suggestions: string[];
+    improved: string;
+  };
+  const [feedback, setFeedback] = useState<Feedback | null>(null);
+
+  const checkWriting = async () => {
+    if (!output.trim()) {
+      toast("请先在上方写下你的英文回答");
+      return;
+    }
+    if (!content || !lesson) return;
+    setChecking(true);
+    setFeedback(null);
+    try {
+      const { data, error } = await supabase.functions.invoke("check-writing", {
+        body: {
+          prompt: content.output.prompt,
+          promptCn: content.output.cn,
+          sample: content.output.sample,
+          text: output,
+          lessonTitle: lesson.title,
+        },
+      });
+      if (error) throw error;
+      if ((data as any)?.error) throw new Error((data as any).error);
+      setFeedback(data as Feedback);
+      toast.success("✅ 已完成本课写作 · 查看下方点评");
+      // Mark lesson as completed in progress
+      markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
+    } catch (e: any) {
+      toast.error("检查失败", { description: e?.message ?? "请稍后再试" });
+    } finally {
+      setChecking(false);
+    }
+  };
 
   const content = useMemo(() => {
     if (!lesson) return null;
@@ -618,6 +659,83 @@ const Lesson = () => {
           >
             <Volume2 className="size-5" /> 朗读范文
           </button>
+
+          {/* Finish & AI check */}
+          <button
+            onClick={checkWriting}
+            disabled={checking}
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-emerald-500 bg-emerald-500/10 py-3 font-semibold text-emerald-700 transition hover:bg-emerald-500/20 disabled:opacity-60"
+          >
+            {checking ? (
+              <>
+                <Sparkles className="size-5 animate-pulse" /> AI 正在批改…
+              </>
+            ) : (
+              <>
+                <CheckCircle2 className="size-5" /> 完成 · AI 检查并讲解
+              </>
+            )}
+          </button>
+
+          {feedback && (
+            <div className="mt-5 space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-5">
+              <div className="flex items-center justify-between">
+                <h4 className="text-lg font-bold text-emerald-700">📝 AI 写作点评</h4>
+                <span className="rounded-full bg-emerald-600 px-3 py-1 text-sm font-bold text-white">
+                  {feedback.score} 分
+                </span>
+              </div>
+              <p className="text-sm leading-relaxed text-foreground/85">{feedback.overall}</p>
+
+              {feedback.mistakes.length > 0 ? (
+                <div>
+                  <div className="mb-2 text-sm font-semibold text-rose-600">🔍 需要修改的地方</div>
+                  <ul className="space-y-3">
+                    {feedback.mistakes.map((m, i) => (
+                      <li key={i} className="rounded-xl border border-rose-200 bg-white p-3 text-sm">
+                        <div className="text-rose-600 line-through">{m.original}</div>
+                        <div className="mt-1 font-semibold text-emerald-600">✓ {m.corrected}</div>
+                        <div className="mt-2 text-foreground/75">{m.explanation}</div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <div className="rounded-xl bg-white p-3 text-sm text-emerald-700">
+                  🎉 没有发现明显错误，写得很棒！
+                </div>
+              )}
+
+              {feedback.suggestions.length > 0 && (
+                <div>
+                  <div className="mb-2 text-sm font-semibold text-primary">💡 改进建议</div>
+                  <ul className="list-disc space-y-1 pl-5 text-sm text-foreground/80">
+                    {feedback.suggestions.map((s, i) => (
+                      <li key={i}>{s}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {feedback.improved && (
+                <div>
+                  <div className="mb-2 flex items-center justify-between">
+                    <div className="text-sm font-semibold text-primary">✨ 润色后版本</div>
+                    <button
+                      onClick={() => speak(feedback.improved)}
+                      className="text-primary hover:opacity-70"
+                      aria-label="Play improved version"
+                    >
+                      <Volume2 className="size-4" />
+                    </button>
+                  </div>
+                  <p className="rounded-xl bg-white p-3 text-sm leading-relaxed text-foreground/85">
+                    {feedback.improved}
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
         </section>
       )}
 

@@ -2,3 +2,6 @@ project_id = "fottntyhwolbsdvkwriq"
 
 [functions.tts]
 verify_jwt = false
+
+[functions.check-writing]
+verify_jwt = false

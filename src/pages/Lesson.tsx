@@ -21,7 +21,7 @@ import { LESSON_CONTENT, LESSON_STEPS, findLesson } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
-import { findNextLesson, isMastered, setMastered } from "@/lib/mastery";
+import { findNextLesson, isMastered, setLastVisited, setMastered } from "@/lib/mastery";
 import { toast } from "sonner";
 import {
   addStudyMinutes,
@@ -76,6 +76,7 @@ const Lesson = () => {
 
   useEffect(() => {
     setMasteredState(isMastered(Number(levelId), Number(unitId), Number(lessonId)));
+    setLastVisited(Number(levelId), Number(unitId), Number(lessonId));
   }, [levelId, unitId, lessonId]);
 
   const toggleMastered = () => {

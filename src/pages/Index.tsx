@@ -1,4 +1,4 @@
-import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap } from "lucide-react";
+import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap, BookOpen, ArrowRight, Layers } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -8,13 +8,32 @@ import { toast } from "sonner";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
-import { findNextLesson, getLastMastered, NEXT_NUDGE_KEY } from "@/lib/mastery";
+import {
+  findNextLesson,
+  getLastMastered,
+  getLastVisited,
+  isUnfinished,
+  type LessonRef,
+  RESUME_DIALOG_KEY,
+} from "@/lib/mastery";
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 
 const Index = () => {
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
   const navigate = useNavigate();
+  const [resumeOpen, setResumeOpen] = useState(false);
+  const [unfinished, setUnfinished] = useState<LessonRef | null>(null);
+  const [nextLesson, setNextLesson] = useState<LessonRef | null>(null);
 
   useEffect(() => {
     touchActive();
@@ -26,27 +45,30 @@ const Index = () => {
     return () => subscription.unsubscribe();
   }, []);
 
-  // App-open suggestion: if the user marked a lesson as mastered, offer the next one.
+  // App-open suggestion: offer to resume an unfinished lesson, jump to the
+  // next lesson, or let the user browse freely.
   useEffect(() => {
-    if (sessionStorage.getItem(NEXT_NUDGE_KEY)) return;
-    const last = getLastMastered();
-    if (!last) return;
-    const next = findNextLesson(last.levelId, last.unitId, last.lessonId);
-    if (!next) return;
-    sessionStorage.setItem(NEXT_NUDGE_KEY, "1");
-    const t = setTimeout(() => {
-      toast("🎯 继续学习下一课？", {
-        description: `你刚掌握了《${last.title}》，下一课：${next.title}`,
-        duration: 10000,
-        action: {
-          label: "开始下一课",
-          onClick: () =>
-            navigate(`/level/${next.levelId}/unit/${next.unitId}/lesson/${next.lessonId}`),
-        },
-      });
-    }, 600);
+    if (sessionStorage.getItem(RESUME_DIALOG_KEY)) return;
+    const visited = getLastVisited();
+    const lastMastered = getLastMastered();
+    const unfinishedRef = visited && isUnfinished(visited) ? visited : null;
+    const nextRef = lastMastered
+      ? findNextLesson(lastMastered.levelId, lastMastered.unitId, lastMastered.lessonId)
+      : visited
+        ? findNextLesson(visited.levelId, visited.unitId, visited.lessonId)
+        : null;
+    if (!unfinishedRef && !nextRef) return;
+    sessionStorage.setItem(RESUME_DIALOG_KEY, "1");
+    setUnfinished(unfinishedRef);
+    setNextLesson(nextRef);
+    const t = setTimeout(() => setResumeOpen(true), 500);
     return () => clearTimeout(t);
-  }, [navigate]);
+  }, []);
+
+  const goTo = (ref: LessonRef) => {
+    setResumeOpen(false);
+    navigate(`/level/${ref.levelId}/unit/${ref.unitId}/lesson/${ref.lessonId}`);
+  };
 
   const signOut = async () => {
     await supabase.auth.signOut();
@@ -82,6 +104,68 @@ const Index = () => {
       </div>
 
       <PageHeader title="选择学习级别" subtitle="选择适合你的级别，开始学习之旅" />
+
+      <AlertDialog open={resumeOpen} onOpenChange={setResumeOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>👋 欢迎回来！接下来想做什么？</AlertDialogTitle>
+            <AlertDialogDescription>
+              你可以继续上次未完成的学习，开始下一课，或者自由浏览全部课程。
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <div className="space-y-2">
+            {unfinished && (
+              <button
+                type="button"
+                onClick={() => goTo(unfinished)}
+                className="flex w-full items-center gap-3 rounded-xl border border-primary/30 bg-primary/5 p-4 text-left transition hover:bg-primary/10"
+              >
+                <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground">
+                  <BookOpen className="size-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-semibold">继续上次的学习</div>
+                  <div className="truncate text-xs text-muted-foreground">{unfinished.title}</div>
+                </div>
+                <ChevronRight className="size-5 text-muted-foreground" />
+              </button>
+            )}
+            {nextLesson && (
+              <button
+                type="button"
+                onClick={() => goTo(nextLesson)}
+                className="flex w-full items-center gap-3 rounded-xl border bg-card p-4 text-left transition hover:bg-accent"
+              >
+                <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-emerald-500 text-white">
+                  <ArrowRight className="size-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-semibold">学习下一课</div>
+                  <div className="truncate text-xs text-muted-foreground">{nextLesson.title}</div>
+                </div>
+                <ChevronRight className="size-5 text-muted-foreground" />
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={() => setResumeOpen(false)}
+              className="flex w-full items-center gap-3 rounded-xl border bg-card p-4 text-left transition hover:bg-accent"
+            >
+              <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-muted text-foreground">
+                <Layers className="size-5" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="text-sm font-semibold">自由浏览课程</div>
+                <div className="truncate text-xs text-muted-foreground">从下方选择任意级别 / 单元</div>
+              </div>
+              <ChevronRight className="size-5 text-muted-foreground" />
+            </button>
+          </div>
+          <AlertDialogFooter>
+            <AlertDialogCancel>稍后再说</AlertDialogCancel>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
       {/* Placement test CTA */}
       <Link

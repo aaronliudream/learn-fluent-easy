@@ -3,6 +3,8 @@ import { LEVELS } from "@/data/course";
 const KEY = "mastered_lessons_v1";
 const LAST_KEY = "last_mastered_v1";
 const NUDGE_KEY = "next-lesson-nudge-shown";
+const VISITED_KEY = "last_visited_lesson_v1";
+const RESUME_NUDGE_KEY = "resume-nudge-shown";
 
 export type LessonRef = { levelId: number; unitId: number; lessonId: number; title: string };
 
@@ -82,4 +84,35 @@ export function getLastMastered(): LessonRef | null {
   }
 }
 
+/** Record the lesson the user is currently / was last viewing (in-progress). */
+export function setLastVisited(levelId: number, unitId: number, lessonId: number) {
+  try {
+    localStorage.setItem(
+      VISITED_KEY,
+      JSON.stringify({ levelId, unitId, lessonId, at: Date.now() }),
+    );
+    // allow the resume nudge to fire again on the next app open
+    sessionStorage.removeItem(RESUME_NUDGE_KEY);
+  } catch { /* noop */ }
+}
+
+/** Most recently visited lesson — used to offer "continue where you left off". */
+export function getLastVisited(): LessonRef | null {
+  try {
+    const raw = localStorage.getItem(VISITED_KEY);
+    if (!raw) return null;
+    const { levelId, unitId, lessonId } = JSON.parse(raw);
+    const all = flatLessons();
+    return all.find((l) => l.levelId === levelId && l.unitId === unitId && l.lessonId === lessonId) ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/** Is the given lesson considered unfinished (visited but not mastered)? */
+export function isUnfinished(ref: LessonRef): boolean {
+  return !isMastered(ref.levelId, ref.unitId, ref.lessonId);
+}
+
 export const NEXT_NUDGE_KEY = NUDGE_KEY;
+export const RESUME_DIALOG_KEY = RESUME_NUDGE_KEY;

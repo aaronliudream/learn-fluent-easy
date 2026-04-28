@@ -31,6 +31,9 @@ const Index = () => {
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
   const navigate = useNavigate();
+  const [resumeOpen, setResumeOpen] = useState(false);
+  const [unfinished, setUnfinished] = useState<LessonRef | null>(null);
+  const [nextLesson, setNextLesson] = useState<LessonRef | null>(null);
 
   useEffect(() => {
     touchActive();
@@ -42,27 +45,30 @@ const Index = () => {
     return () => subscription.unsubscribe();
   }, []);
 
-  // App-open suggestion: if the user marked a lesson as mastered, offer the next one.
+  // App-open suggestion: offer to resume an unfinished lesson, jump to the
+  // next lesson, or let the user browse freely.
   useEffect(() => {
-    if (sessionStorage.getItem(NEXT_NUDGE_KEY)) return;
-    const last = getLastMastered();
-    if (!last) return;
-    const next = findNextLesson(last.levelId, last.unitId, last.lessonId);
-    if (!next) return;
-    sessionStorage.setItem(NEXT_NUDGE_KEY, "1");
-    const t = setTimeout(() => {
-      toast("🎯 继续学习下一课？", {
-        description: `你刚掌握了《${last.title}》，下一课：${next.title}`,
-        duration: 10000,
-        action: {
-          label: "开始下一课",
-          onClick: () =>
-            navigate(`/level/${next.levelId}/unit/${next.unitId}/lesson/${next.lessonId}`),
-        },
-      });
-    }, 600);
+    if (sessionStorage.getItem(RESUME_DIALOG_KEY)) return;
+    const visited = getLastVisited();
+    const lastMastered = getLastMastered();
+    const unfinishedRef = visited && isUnfinished(visited) ? visited : null;
+    const nextRef = lastMastered
+      ? findNextLesson(lastMastered.levelId, lastMastered.unitId, lastMastered.lessonId)
+      : visited
+        ? findNextLesson(visited.levelId, visited.unitId, visited.lessonId)
+        : null;
+    if (!unfinishedRef && !nextRef) return;
+    sessionStorage.setItem(RESUME_DIALOG_KEY, "1");
+    setUnfinished(unfinishedRef);
+    setNextLesson(nextRef);
+    const t = setTimeout(() => setResumeOpen(true), 500);
     return () => clearTimeout(t);
-  }, [navigate]);
+  }, []);
+
+  const goTo = (ref: LessonRef) => {
+    setResumeOpen(false);
+    navigate(`/level/${ref.levelId}/unit/${ref.unitId}/lesson/${ref.lessonId}`);
+  };
 
   const signOut = async () => {
     await supabase.auth.signOut();

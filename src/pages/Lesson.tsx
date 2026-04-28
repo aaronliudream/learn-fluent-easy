@@ -239,7 +239,7 @@ const Lesson = () => {
             icon={<Book className="size-6" />}
             color="bg-violet-500/15 text-violet-500"
             title="课文阅读 Reading"
-            subtitle="对照中英文阅读，点击播放朗读"
+            subtitle="点击右侧喇叭收听任意一句"
           />
           <div className="space-y-5">
             {content.reading.map((p, i) => (
@@ -253,7 +253,6 @@ const Lesson = () => {
                     <Volume2 className="size-5" />
                   </button>
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground">{p.cn}</p>
               </div>
             ))}
             <button

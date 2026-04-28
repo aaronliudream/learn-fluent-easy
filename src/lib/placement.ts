@@ -119,9 +119,57 @@ function collectCandidates() {
   return { vocab, grammar, reading, listening };
 }
 
+export type SectionPool = Record<Section, Record<number, PlacementQuestion[]>>;
+
+/** Build a pool keyed by section → level → questions, randomly shuffled. */
+export function buildSectionPool(seed = Date.now()): SectionPool {
+  const rng = mulberry32(seed);
+  const pools = collectCandidates();
+  const out: SectionPool = {
+    vocab: { 1: [], 2: [], 3: [], 4: [] },
+    grammar: { 1: [], 2: [], 3: [], 4: [] },
+    reading: { 1: [], 2: [], 3: [], 4: [] },
+    listening: { 1: [], 2: [], 3: [], 4: [] },
+  };
+  (Object.keys(pools) as Section[]).forEach((sec) => {
+    const shuffled = pickN(pools[sec], pools[sec].length, rng);
+    for (const q of shuffled) {
+      if (out[sec][q.level]) out[sec][q.level].push(q);
+    }
+  });
+  return out;
+}
+
+/**
+ * Pick the next adaptive question for a section.
+ *  - Tries the requested level first; falls back to nearest available level.
+ *  - Skips already-used IDs.
+ */
+export function pickAdaptive(
+  pool: SectionPool,
+  section: Section,
+  desiredLevel: number,
+  used: Set<string>,
+): PlacementQuestion | null {
+  const tryOrder: number[] = [];
+  const clamped = Math.max(1, Math.min(4, desiredLevel));
+  tryOrder.push(clamped);
+  for (let d = 1; d <= 3; d++) {
+    if (clamped + d <= 4) tryOrder.push(clamped + d);
+    if (clamped - d >= 1) tryOrder.push(clamped - d);
+  }
+  for (const lv of tryOrder) {
+    const bucket = pool[section][lv] || [];
+    const next = bucket.find((q) => !used.has(q.id));
+    if (next) return next;
+  }
+  return null;
+}
+
 /**
  * Build a 40-question placement test (10 per section), with even spread
  * across LEVELS 1..4 (2-3 per level per section).
+ * (Legacy non-adaptive builder — still used as a fallback.)
  */
 export function buildPlacementTest(seed = Date.now()): PlacementQuestion[] {
   const rng = mulberry32(seed);
@@ -164,6 +212,7 @@ export type PlacementResult = {
   recommendedLevel: number; // 1..6
   bySection: Record<Section, { correct: number; total: number }>;
   byLevel: Record<number, { correct: number; total: number }>;
+  ability: number; // estimated CEFR-aligned ability, 1.0 .. 4.5
 };
 
 export function scoreTest(
@@ -202,12 +251,27 @@ export function scoreTest(
 
   const weighted = weightedMax > 0 ? Math.round((weightedScore / weightedMax) * 100) : 0;
 
+  // Adaptive ability estimate:
+  // For every answered question, contribute (level + 0.5) on a correct pick,
+  // (level - 0.5) on a wrong pick. Average across answered items.
+  let abilitySum = 0;
+  let abilityN = 0;
+  for (const q of questions) {
+    const pick = picks[q.id];
+    if (pick === undefined) continue;
+    abilityN++;
+    abilitySum += pick === q.answer ? q.level + 0.5 : q.level - 0.5;
+  }
+  const ability = abilityN > 0 ? abilitySum / abilityN : 1;
+
+  // Map ability → CEFR & recommended starting level.
+  // ability ranges roughly 0.5 .. 4.5
   let cefr: PlacementResult["cefr"] = "A1";
   let recommendedLevel = 1;
-  if (weighted >= 85) { cefr = "C1"; recommendedLevel = 5; }
-  else if (weighted >= 70) { cefr = "B2"; recommendedLevel = 4; }
-  else if (weighted >= 55) { cefr = "B1"; recommendedLevel = 3; }
-  else if (weighted >= 35) { cefr = "A2"; recommendedLevel = 2; }
+  if (ability >= 4.0) { cefr = "C1"; recommendedLevel = 5; }
+  else if (ability >= 3.2) { cefr = "B2"; recommendedLevel = 4; }
+  else if (ability >= 2.4) { cefr = "B1"; recommendedLevel = 3; }
+  else if (ability >= 1.6) { cefr = "A2"; recommendedLevel = 2; }
   else { cefr = "A1"; recommendedLevel = 1; }
 
   return {
@@ -218,6 +282,7 @@ export function scoreTest(
     recommendedLevel,
     bySection,
     byLevel,
+    ability: Math.round(ability * 10) / 10,
   };
 }
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Settings2, Volume2, X, Check, Play } from "lucide-react";
+import { Settings2, Volume2, X, Check, Play, Sparkles } from "lucide-react";
 import { VOICES, SPEED_PRESETS, loadSettings, saveSettings, type VoiceSettings as VS } from "@/lib/voice";
 import { speak, clearAudioCache, getLastSpoken } from "@/lib/speak";
 
@@ -148,6 +148,22 @@ export const VoiceSettingsButton = () => {
                 <Volume2 className="size-4" />
                 重播当前
               </button>
+            </div>
+
+            <div className="mt-4 rounded-2xl border border-primary/20 bg-primary/5 p-3 text-xs leading-relaxed text-foreground/80">
+              <div className="mb-1 flex items-center gap-1.5 font-semibold text-primary">
+                <Sparkles className="size-3.5" />
+                让发音更自然（强烈推荐）
+              </div>
+              <p className="mb-1">
+                <span className="font-medium">iPhone：</span>设置 → 辅助功能 → 朗读内容 → 声音 → 英语 →
+                选 <span className="font-semibold">Ava / Zoe / Evan</span> 等标有
+                <span className="font-semibold">「增强」或「Siri」</span>的版本，点云朵图标下载（约 100MB）。之后朗读接近真人。
+              </p>
+              <p>
+                <span className="font-medium">Android：</span>设置 → 系统 → 语言和输入法 → 文字转语音 →
+                选 Google 引擎并下载高质量英语语音包。
+              </p>
             </div>
           </div>
         </div>

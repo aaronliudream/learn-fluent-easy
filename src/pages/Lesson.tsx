@@ -197,14 +197,34 @@ const Lesson = () => {
 
   const content = useMemo(() => {
     if (!lesson) return null;
+    const authored = LESSON_CONTENT[lesson.title] ?? null;
+    // Topic-specific content from AI (live) or the pre-generated bundle.
+    const topical = aiContent ?? PREGEN_MAP[lesson.title] ?? null;
     if (hasAuthoredContent(lesson.title)) {
-      return LESSON_CONTENT[lesson.title] ?? null;
+      // Authored lessons have hand-crafted vocab + reading. The remaining
+      // sections (grammar / expressions / fillBlanks / quiz / listening /
+      // output) in LESSON_CONTENT are a generic template that is the same
+      // for every lesson — so prefer topical AI content for those when
+      // available, while keeping the authored vocab + reading.
+      if (topical && authored) {
+        return {
+          ...topical,
+          vocab: authored.vocab,
+          reading: authored.reading,
+        };
+      }
+      return authored;
     }
-    // AI-generated lesson: prefer freshly loaded one, then pre-generated bundle, else template
-    return aiContent ?? PREGEN_MAP[lesson.title] ?? LESSON_CONTENT[lesson.title] ?? null;
+    // AI-only lesson: prefer freshly loaded → pre-gen bundle → fallback template.
+    return topical ?? authored;
   }, [lesson, aiContent]);
 
-  const isAiLesson = lesson ? !hasAuthoredContent(lesson.title) : false;
+  // Every lesson benefits from AI generation now — even hand-authored lessons
+  // need topic-aligned grammar / expressions / quiz / listening / output
+  // (the LESSON_CONTENT entries for those sections are a generic shared
+  // template). The auto-load effect short-circuits to PREGEN_MAP when the
+  // lesson is already in the pre-generated bundle.
+  const isAiLesson = !!lesson;
 
   const generateLesson = async (force = false) => {
     if (!lesson) return;

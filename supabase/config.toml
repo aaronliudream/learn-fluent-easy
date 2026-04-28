@@ -5,3 +5,6 @@ verify_jwt = false
 
 [functions.check-writing]
 verify_jwt = false
+
+[functions.generate-lesson]
+verify_jwt = false

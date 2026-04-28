@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
   Book,
@@ -56,6 +56,18 @@ const Lesson = () => {
   const { levelId, unitId, lessonId } = useParams();
   const lesson = findLesson(Number(levelId), Number(unitId), Number(lessonId));
   const [activeStep, setActiveStep] = useState(1);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const goToStep = (id: number) => {
+    setActiveStep(id);
+    // Wait for the new section to render, then smooth-scroll it into view.
+    requestAnimationFrame(() => {
+      const el = contentRef.current;
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.scrollY - 16;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  };
 
   // per-step interactive state
   const [vocabQuiz, setVocabQuiz] = useState<Record<number, number>>({});
@@ -106,7 +118,7 @@ const Lesson = () => {
             return (
               <li key={s.id}>
                 <button
-                  onClick={() => setActiveStep(s.id)}
+                  onClick={() => goToStep(s.id)}
                   className={`flex w-full items-center gap-3 rounded-2xl px-3 py-3 text-left transition ${
                     active
                       ? "bg-grad-title text-white shadow-tile"

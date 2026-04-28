@@ -239,6 +239,278 @@ export const LESSON_CONTENT: Record<string, LessonContent> = {
       sample: "Hello! My name is Alex. I'm from Shanghai. I'm twenty-two years old and I am a student. I love movies and basketball. Nice to meet you!",
     },
   },
+  问候与告别: {
+    vocab: [
+      { word: "morning", pron: "/ˈmɔːrnɪŋ/", meaning: "n. 早晨", example: "Good morning, Tom!", example_cn: "早上好，汤姆！" },
+      { word: "afternoon", pron: "/ˌæftərˈnuːn/", meaning: "n. 下午", example: "Good afternoon, class.", example_cn: "下午好，同学们。" },
+      { word: "evening", pron: "/ˈiːvnɪŋ/", meaning: "n. 傍晚", example: "Good evening, sir.", example_cn: "晚上好，先生。" },
+      { word: "goodbye", pron: "/ɡʊdˈbaɪ/", meaning: "int. 再见", example: "Goodbye, see you tomorrow.", example_cn: "再见，明天见。" },
+      { word: "see", pron: "/siː/", meaning: "v. 看见", example: "See you later!", example_cn: "回头见！" },
+      { word: "later", pron: "/ˈleɪtər/", meaning: "adv. 稍后", example: "Talk to you later.", example_cn: "稍后聊。" },
+      { word: "how", pron: "/haʊ/", meaning: "adv. 怎么样", example: "How are you?", example_cn: "你好吗？" },
+      { word: "fine", pron: "/faɪn/", meaning: "adj. 不错的", example: "I'm fine, thanks.", example_cn: "我很好，谢谢。" },
+    ],
+    reading: [
+      { en: "Good morning, Lily! How are you today?", cn: "早上好，莉莉！你今天怎么样？" },
+      { en: "I'm fine, thank you. And you?", cn: "我很好，谢谢。你呢？" },
+      { en: "Pretty good. I'm on my way to class. See you later!", cn: "挺好的。我正要去上课。回头见！" },
+      { en: "Okay, goodbye! Have a nice day.", cn: "好的，再见！祝你有美好的一天。" },
+    ],
+    grammar: [
+      {
+        title: "Good + 时间段",
+        explain: "用于不同时段的问候：morning（早）、afternoon（午）、evening（晚）。睡前道别用 Good night。",
+        examples: [
+          { en: "Good morning!", cn: "早上好！" },
+          { en: "Good evening, everyone.", cn: "大家晚上好。" },
+          { en: "Good night, sleep well.", cn: "晚安，好梦。" },
+        ],
+      },
+      {
+        title: "How are you? 的回应",
+        explain: "常见回答：I'm fine / Pretty good / Not bad，再加上 thanks 更礼貌，并可反问 And you?",
+        examples: [
+          { en: "I'm fine, thanks. And you?", cn: "我很好，谢谢。你呢？" },
+          { en: "Pretty good!", cn: "挺好的！" },
+        ],
+      },
+    ],
+    expressions: [
+      { en: "Good morning!", cn: "早上好！", scene: "上午问候" },
+      { en: "How's it going?", cn: "最近怎么样？", scene: "朋友之间" },
+      { en: "See you later.", cn: "回头见。", scene: "短暂告别" },
+      { en: "Have a nice day!", cn: "祝你愉快！", scene: "礼貌告别" },
+      { en: "Take care.", cn: "保重。", scene: "关心告别" },
+    ],
+    fillBlanks: [
+      { sentence: "Good ___, everyone!", cn: "大家早上好！", options: ["morning", "night", "bye", "later"], answer: "morning" },
+      { sentence: "I'm ___, thanks.", cn: "我很好，谢谢。", options: ["fine", "from", "name", "see"], answer: "fine" },
+      { sentence: "See you ___!", cn: "回头见！", options: ["later", "morning", "fine", "nice"], answer: "later" },
+      { sentence: "___ are you today?", cn: "你今天怎么样？", options: ["What", "How", "Where", "Who"], answer: "How" },
+    ],
+    quiz: [
+      { q: "Lily 现在要去做什么？", options: ["回家", "去上课", "去吃饭", "去运动"], answer: 1, explain: "I'm on my way to class." },
+      { q: "对方先说 'How are you?'，最自然的回应是？", options: ["Goodbye.", "I'm fine, thanks.", "My name is Lily.", "Nice day."], answer: 1 },
+      { q: "晚上和别人见面应该说？", options: ["Good morning", "Good afternoon", "Good evening", "Good night"], answer: 2 },
+      { q: "'See you later.' 表达的意思是？", options: ["很高兴认识你", "回头见", "晚安", "保重"], answer: 1 },
+    ],
+    listening: {
+      audio: "Good morning, Lily. How are you? I am fine, thank you. See you later.",
+      blanks: [
+        { before: "Good", answer: "morning", after: ", Lily." },
+        { before: "I am", answer: "fine", after: ", thank you." },
+        { before: "See you", answer: "later", after: "." },
+      ],
+    },
+    output: {
+      prompt: "Greet a friend in the morning, ask how they are, and say goodbye politely (3–4 sentences).",
+      cn: "请用 3–4 句话向朋友问早安、询问近况，并礼貌道别。",
+      sample: "Good morning, Anna! How are you today? I'm doing great, thanks. See you later, have a nice day!",
+    },
+  },
+  基本礼貌用语: {
+    vocab: [
+      { word: "please", pron: "/pliːz/", meaning: "adv. 请", example: "Please sit down.", example_cn: "请坐。" },
+      { word: "thank", pron: "/θæŋk/", meaning: "v. 感谢", example: "Thank you very much.", example_cn: "非常感谢。" },
+      { word: "sorry", pron: "/ˈsɒri/", meaning: "adj. 抱歉的", example: "I'm sorry for being late.", example_cn: "抱歉我迟到了。" },
+      { word: "excuse", pron: "/ɪkˈskjuːz/", meaning: "v. 原谅", example: "Excuse me, where is the bank?", example_cn: "打扰一下，银行在哪里？" },
+      { word: "welcome", pron: "/ˈwelkəm/", meaning: "int. 不客气", example: "You're welcome.", example_cn: "不客气。" },
+      { word: "help", pron: "/help/", meaning: "v. 帮助", example: "Can you help me?", example_cn: "你能帮我吗？" },
+      { word: "problem", pron: "/ˈprɒbləm/", meaning: "n. 问题", example: "No problem.", example_cn: "没问题。" },
+      { word: "kind", pron: "/kaɪnd/", meaning: "adj. 友好的", example: "You are very kind.", example_cn: "你真好。" },
+    ],
+    reading: [
+      { en: "Excuse me, could you help me with this bag?", cn: "打扰一下，你能帮我拿一下这个包吗？" },
+      { en: "Of course! Here you go.", cn: "当然！给你。" },
+      { en: "Thank you so much. That's very kind of you.", cn: "非常感谢，你真是太好了。" },
+      { en: "You're welcome. No problem at all.", cn: "不客气，完全没问题。" },
+    ],
+    grammar: [
+      {
+        title: "请求句型 Could you …?",
+        explain: "Could you + 动词原形 是比 Can you 更礼貌的请求方式，常加 please。",
+        examples: [
+          { en: "Could you help me, please?", cn: "请问你能帮我吗？" },
+          { en: "Could you say that again?", cn: "你能再说一遍吗？" },
+        ],
+      },
+      {
+        title: "感谢与回应",
+        explain: "Thank you / Thanks 表示感谢；常见回应：You're welcome / No problem / My pleasure。",
+        examples: [
+          { en: "Thanks a lot. — You're welcome.", cn: "非常感谢。— 不客气。" },
+          { en: "Thank you. — My pleasure.", cn: "谢谢。— 我的荣幸。" },
+        ],
+      },
+    ],
+    expressions: [
+      { en: "Excuse me.", cn: "打扰一下。", scene: "引起注意" },
+      { en: "I'm sorry.", cn: "对不起。", scene: "道歉" },
+      { en: "No problem.", cn: "没问题。", scene: "回应感谢/道歉" },
+      { en: "After you.", cn: "您先请。", scene: "礼让" },
+      { en: "That's very kind of you.", cn: "你真好。", scene: "表达感激" },
+    ],
+    fillBlanks: [
+      { sentence: "___ me, where is the toilet?", cn: "打扰一下，洗手间在哪里？", options: ["Excuse", "Sorry", "Please", "Thank"], answer: "Excuse" },
+      { sentence: "Thank you. — You're ___.", cn: "谢谢。— 不客气。", options: ["welcome", "sorry", "fine", "kind"], answer: "welcome" },
+      { sentence: "Could you ___ me, please?", cn: "请问你能帮我吗？", options: ["help", "thank", "sorry", "name"], answer: "help" },
+      { sentence: "I'm ___ for being late.", cn: "抱歉我迟到了。", options: ["sorry", "thank", "kind", "fine"], answer: "sorry" },
+    ],
+    quiz: [
+      { q: "对话中说话人请求帮忙拿什么？", options: ["书", "包", "杯子", "雨伞"], answer: 1 },
+      { q: "对方回应 'Of course!' 表示？", options: ["拒绝", "答应", "犹豫", "不明白"], answer: 1 },
+      { q: "'You're welcome.' 用在哪种场景？", options: ["道歉之后", "感谢之后", "问路时", "告别时"], answer: 1 },
+      { q: "想礼貌地引起陌生人注意，应说？", options: ["Hello!", "Excuse me.", "How are you?", "Goodbye."], answer: 1 },
+    ],
+    listening: {
+      audio: "Excuse me, could you help me? Thank you so much. You are welcome.",
+      blanks: [
+        { before: "", answer: "Excuse", after: " me, could you help me?" },
+        { before: "Thank you so", answer: "much", after: "." },
+        { before: "You are", answer: "welcome", after: "." },
+      ],
+    },
+    output: {
+      prompt: "Politely ask a stranger for help, thank them, and respond when they say 'You're welcome.' (3–4 sentences).",
+      cn: "请用 3–4 句话礼貌地向陌生人请求帮助、表达感谢，并对回应进行回礼。",
+      sample: "Excuse me, could you help me carry this box, please? Thank you so much, that's very kind of you. — You're welcome. — Have a nice day!",
+    },
+  },
+  介绍他人: {
+    vocab: [
+      { word: "this", pron: "/ðɪs/", meaning: "pron. 这个", example: "This is my friend, Tom.", example_cn: "这是我的朋友，汤姆。" },
+      { word: "friend", pron: "/frend/", meaning: "n. 朋友", example: "She is my best friend.", example_cn: "她是我最好的朋友。" },
+      { word: "colleague", pron: "/ˈkɒliːɡ/", meaning: "n. 同事", example: "He is my colleague.", example_cn: "他是我的同事。" },
+      { word: "classmate", pron: "/ˈklɑːsmeɪt/", meaning: "n. 同学", example: "We are classmates.", example_cn: "我们是同学。" },
+      { word: "brother", pron: "/ˈbrʌðər/", meaning: "n. 兄弟", example: "This is my brother, Jack.", example_cn: "这是我哥哥杰克。" },
+      { word: "sister", pron: "/ˈsɪstər/", meaning: "n. 姐妹", example: "Meet my little sister.", example_cn: "见见我的妹妹。" },
+      { word: "everyone", pron: "/ˈevriwʌn/", meaning: "pron. 大家", example: "Everyone, this is Lisa.", example_cn: "各位，这是丽莎。" },
+      { word: "pleasure", pron: "/ˈpleʒər/", meaning: "n. 荣幸", example: "It's a pleasure to meet you.", example_cn: "很荣幸认识你。" },
+    ],
+    reading: [
+      { en: "Hi everyone, I'd like you to meet my friend, Tom.", cn: "大家好，我想给你们介绍我的朋友汤姆。" },
+      { en: "Tom is from London, and he is a software engineer.", cn: "汤姆来自伦敦，他是一名软件工程师。" },
+      { en: "Tom, this is Lisa. She is my classmate at the university.", cn: "汤姆，这是丽莎。她是我大学的同学。" },
+      { en: "Nice to meet you, Lisa! It's a pleasure.", cn: "很高兴认识你，丽莎！很荣幸。" },
+    ],
+    grammar: [
+      {
+        title: "This is … 介绍句型",
+        explain: "用 This is + 姓名/称呼 来介绍身边的人；介绍多人用 These are …。",
+        examples: [
+          { en: "This is my brother, Jack.", cn: "这是我哥哥杰克。" },
+          { en: "These are my friends, Mia and Leo.", cn: "这是我的朋友米娅和里奥。" },
+        ],
+      },
+      {
+        title: "I'd like you to meet …",
+        explain: "更正式、礼貌的介绍方式，常用于工作或社交场合。",
+        examples: [
+          { en: "I'd like you to meet my colleague, Anna.", cn: "我想给你介绍我的同事安娜。" },
+        ],
+      },
+    ],
+    expressions: [
+      { en: "This is my friend, …", cn: "这是我的朋友……", scene: "朋友间介绍" },
+      { en: "Have you met …?", cn: "你见过……吗？", scene: "询问是否相识" },
+      { en: "It's a pleasure to meet you.", cn: "很荣幸认识你。", scene: "正式场合" },
+      { en: "I've heard a lot about you.", cn: "久仰大名。", scene: "见到熟人朋友" },
+      { en: "Likewise.", cn: "我也是。", scene: "回应称赞/问候" },
+    ],
+    fillBlanks: [
+      { sentence: "___ is my friend, Tom.", cn: "这是我朋友汤姆。", options: ["This", "He", "It", "That"], answer: "This" },
+      { sentence: "It's a ___ to meet you.", cn: "很荣幸认识你。", options: ["pleasure", "friend", "name", "kind"], answer: "pleasure" },
+      { sentence: "She is my ___ at school.", cn: "她是我学校的同学。", options: ["classmate", "colleague", "brother", "sister"], answer: "classmate" },
+      { sentence: "I'd like you to ___ my brother.", cn: "我想给你介绍我哥哥。", options: ["meet", "see", "know", "look"], answer: "meet" },
+    ],
+    quiz: [
+      { q: "Tom 的职业是？", options: ["老师", "学生", "软件工程师", "医生"], answer: 2 },
+      { q: "Tom 来自哪里？", options: ["巴黎", "伦敦", "纽约", "东京"], answer: 1 },
+      { q: "Lisa 和说话人是什么关系？", options: ["姐妹", "同事", "大学同学", "邻居"], answer: 2 },
+      { q: "正式介绍他人最礼貌的说法是？", options: ["This is …", "I'd like you to meet …", "Hey, look!", "That's …"], answer: 1 },
+    ],
+    listening: {
+      audio: "This is my friend Tom. He is from London. Nice to meet you.",
+      blanks: [
+        { before: "This is my", answer: "friend", after: " Tom." },
+        { before: "He is from", answer: "London", after: "." },
+        { before: "Nice to", answer: "meet", after: " you." },
+      ],
+    },
+    output: {
+      prompt: "Introduce a friend or family member to someone new. Mention name, relationship, and one extra detail (3–5 sentences).",
+      cn: "请用 3–5 句话向新朋友介绍你的一位朋友或家人，包括姓名、关系和一个其他细节。",
+      sample: "Hi Anna, I'd like you to meet my brother, Kevin. He is a college student in Shanghai and he loves basketball. Kevin, this is Anna, my classmate. — Nice to meet you!",
+    },
+  },
+  谈论职业: {
+    vocab: [
+      { word: "job", pron: "/dʒɒb/", meaning: "n. 工作", example: "What's your job?", example_cn: "你做什么工作？" },
+      { word: "work", pron: "/wɜːrk/", meaning: "v./n. 工作", example: "I work in a hospital.", example_cn: "我在医院工作。" },
+      { word: "teacher", pron: "/ˈtiːtʃər/", meaning: "n. 老师", example: "She is an English teacher.", example_cn: "她是英语老师。" },
+      { word: "doctor", pron: "/ˈdɒktər/", meaning: "n. 医生", example: "My father is a doctor.", example_cn: "我父亲是医生。" },
+      { word: "engineer", pron: "/ˌendʒɪˈnɪər/", meaning: "n. 工程师", example: "I am a software engineer.", example_cn: "我是软件工程师。" },
+      { word: "company", pron: "/ˈkʌmpəni/", meaning: "n. 公司", example: "I work for a big company.", example_cn: "我在一家大公司工作。" },
+      { word: "office", pron: "/ˈɒfɪs/", meaning: "n. 办公室", example: "My office is downtown.", example_cn: "我的办公室在市中心。" },
+      { word: "love", pron: "/lʌv/", meaning: "v. 热爱", example: "I love my job.", example_cn: "我热爱我的工作。" },
+    ],
+    reading: [
+      { en: "Hi, I'm David. What do you do for a living?", cn: "你好，我叫大卫。你是做什么工作的？" },
+      { en: "I'm a nurse. I work at City Hospital.", cn: "我是护士，在城市医院工作。" },
+      { en: "That sounds great! I'm a software engineer at a tech company.", cn: "听起来很棒！我在一家科技公司做软件工程师。" },
+      { en: "Do you like your job? — Yes, I love it. It's challenging but fun.", cn: "你喜欢你的工作吗？— 是的，我很喜欢。有挑战但很有趣。" },
+    ],
+    grammar: [
+      {
+        title: "询问职业的两种问法",
+        explain: "What do you do? = What's your job? 都是问职业；回答用 I'm a/an + 职业 或 I work + 介词短语。",
+        examples: [
+          { en: "What do you do? — I'm a teacher.", cn: "你做什么工作？— 我是老师。" },
+          { en: "I work in a bank.", cn: "我在银行工作。" },
+        ],
+      },
+      {
+        title: "a 与 an 的区别",
+        explain: "职业前要加冠词。辅音音开头用 a（a doctor），元音音开头用 an（an engineer, an artist）。",
+        examples: [
+          { en: "She is a nurse.", cn: "她是一名护士。" },
+          { en: "He is an engineer.", cn: "他是一名工程师。" },
+        ],
+      },
+    ],
+    expressions: [
+      { en: "What do you do?", cn: "你做什么工作？", scene: "初识询问" },
+      { en: "I work for …", cn: "我在……公司工作", scene: "介绍雇主" },
+      { en: "I'm in marketing / sales.", cn: "我做市场 / 销售。", scene: "介绍领域" },
+      { en: "I love what I do.", cn: "我热爱我的工作。", scene: "表达态度" },
+      { en: "It's a 9-to-5 job.", cn: "是朝九晚五的工作。", scene: "描述节奏" },
+    ],
+    fillBlanks: [
+      { sentence: "I am ___ engineer.", cn: "我是工程师。", options: ["a", "an", "the", "—"], answer: "an" },
+      { sentence: "She ___ in a hospital.", cn: "她在医院工作。", options: ["work", "works", "working", "is work"], answer: "works" },
+      { sentence: "What do you ___?", cn: "你做什么工作？", options: ["do", "are", "work", "job"], answer: "do" },
+      { sentence: "I love my ___.", cn: "我热爱我的工作。", options: ["job", "name", "office", "company"], answer: "job" },
+    ],
+    quiz: [
+      { q: "对话中那位女士的职业是？", options: ["医生", "护士", "老师", "工程师"], answer: 1 },
+      { q: "David 的工作是？", options: ["软件工程师", "经理", "学生", "医生"], answer: 0 },
+      { q: "对方对自己的工作感觉如何？", options: ["讨厌", "无所谓", "热爱", "想换工作"], answer: 2 },
+      { q: "下列哪个职业前应该用 'an'？", options: ["doctor", "nurse", "engineer", "teacher"], answer: 2, explain: "engineer 以元音音开头。" },
+    ],
+    listening: {
+      audio: "I am a software engineer. I work for a tech company. I love my job.",
+      blanks: [
+        { before: "I am a software", answer: "engineer", after: "." },
+        { before: "I work for a tech", answer: "company", after: "." },
+        { before: "I love my", answer: "job", after: "." },
+      ],
+    },
+    output: {
+      prompt: "Talk about your job: what you do, where you work, and how you feel about it (3–5 sentences).",
+      cn: "请用 3–5 句话谈论你的职业：做什么、在哪工作、对工作的感受。",
+      sample: "I'm a graphic designer. I work for a small studio in Shanghai. My job is creative and busy, but I really love it because every day is different.",
+    },
+  },
 };
 
 // Backward compatibility

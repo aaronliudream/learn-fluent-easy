@@ -307,6 +307,11 @@ const Slang = () => {
                       >
                         <Volume2 className="size-3.5" />
                       </button>
+                      {isMasteredSlang(it.id) && (
+                        <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">
+                          <CheckCircle2 className="size-3" /> 已掌握
+                        </span>
+                      )}
                     </div>
                     <div className="mt-0.5 text-sm font-semibold text-primary">
                       {it.meaning_cn}

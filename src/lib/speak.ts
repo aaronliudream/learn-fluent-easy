@@ -53,6 +53,14 @@ const pickVoice = (voiceId: string): SpeechSynthesisVoice | null => {
   if (voices.length === 0) return null;
 
   const id = voiceId.toLowerCase();
+  const preferredNames: Record<string, RegExp> = {
+    alloy: /allison|samantha|ava|susan|noelle/,
+    shimmer: /samantha|susan|noelle|joelle|allison/,
+    nova: /ava|zoe|victoria|allison|samantha/,
+    echo: /evan|nathan|alex|daniel/,
+    onyx: /aaron|arthur|oliver|reed|rocko|fred/,
+    fable: /serena|kate|martha|arthur|oliver/,
+  };
   const wantUK = id.includes("uk") || id.includes("british") || id === "fable";
   const wantMale = ["onyx", "echo", "fable"].includes(id);
 
@@ -70,7 +78,10 @@ const pickVoice = (voiceId: string): SpeechSynthesisVoice | null => {
 
   const ranked = [...voices].sort((a, b) => {
     const score = (v: SpeechSynthesisVoice) =>
-      (matchLang(v) ? 1000 : 0) + (matchGender(v) ? 300 : 0) + qualityScore(v);
+      (matchLang(v) ? 1000 : 0) +
+      (preferredNames[id]?.test(v.name.toLowerCase()) ? 650 : 0) +
+      (matchGender(v) ? 300 : 0) +
+      qualityScore(v);
     return score(b) - score(a);
   });
   return ranked[0] ?? null;

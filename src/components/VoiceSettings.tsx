@@ -157,8 +157,8 @@ export const VoiceSettingsButton = () => {
               </div>
               <p className="mb-1">
                 <span className="font-medium">iPhone：</span>设置 → 辅助功能 → 朗读内容 → 声音 → 英语 →
-                选 <span className="font-semibold">Ava / Zoe / Evan</span> 等标有
-                <span className="font-semibold">「增强」或「Siri」</span>的版本，点云朵图标下载（约 100MB）。之后朗读接近真人。
+                选 <span className="font-semibold">Allison / Samantha / Ava / Susan</span> 等标有
+                <span className="font-semibold">「增强」</span>的版本，点云朵图标下载（约 100MB）。不要选 Voice 1 / Voice 2，它们是 Siri 专用声音。
               </p>
               <p>
                 <span className="font-medium">Android：</span>设置 → 系统 → 语言和输入法 → 文字转语音 →

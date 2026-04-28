@@ -1,5 +1,5 @@
 import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -8,11 +8,13 @@ import { toast } from "sonner";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
+import { findNextLesson, getLastMastered, NEXT_NUDGE_KEY } from "@/lib/mastery";
 
 const Index = () => {
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
+  const navigate = useNavigate();
 
   useEffect(() => {
     touchActive();
@@ -23,6 +25,28 @@ const Index = () => {
     supabase.auth.getSession().then(({ data: { session } }) => setUser(session?.user ?? null));
     return () => subscription.unsubscribe();
   }, []);
+
+  // App-open suggestion: if the user marked a lesson as mastered, offer the next one.
+  useEffect(() => {
+    if (sessionStorage.getItem(NEXT_NUDGE_KEY)) return;
+    const last = getLastMastered();
+    if (!last) return;
+    const next = findNextLesson(last.levelId, last.unitId, last.lessonId);
+    if (!next) return;
+    sessionStorage.setItem(NEXT_NUDGE_KEY, "1");
+    const t = setTimeout(() => {
+      toast("🎯 继续学习下一课？", {
+        description: `你刚掌握了《${last.title}》，下一课：${next.title}`,
+        duration: 10000,
+        action: {
+          label: "开始下一课",
+          onClick: () =>
+            navigate(`/level/${next.levelId}/unit/${next.unitId}/lesson/${next.lessonId}`),
+        },
+      });
+    }, 600);
+    return () => clearTimeout(t);
+  }, [navigate]);
 
   const signOut = async () => {
     await supabase.auth.signOut();

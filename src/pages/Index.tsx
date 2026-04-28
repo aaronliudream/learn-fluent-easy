@@ -181,7 +181,7 @@ const Index = () => {
           <div className="mb-1 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-0.5 text-[11px] font-semibold backdrop-blur-sm">
             <TrendingUp className="size-3" /> 自适应难度 · 参照 CEFR
           </div>
-          <div className="text-lg font-extrabold md:text-xl">不知道从哪里开始？做个水平测试</div>
+          <div className="text-lg font-extrabold md:text-xl">Take a test to know which level to begin with</div>
           <div className="mt-0.5 flex flex-wrap items-center gap-3 text-xs opacity-90">
             <span className="inline-flex items-center gap-1"><Clock className="size-3" /> ≤ 25 分钟</span>
             <span>· 听力 / 语法 / 词汇 / 阅读</span>

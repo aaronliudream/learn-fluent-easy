@@ -11,19 +11,29 @@ import {
   MessageCircle,
   Mic,
   Pencil,
+  RefreshCw,
   Sparkles,
   Star,
   Target,
   Volume2,
   X,
 } from "lucide-react";
-import { LESSON_CONTENT, LESSON_STEPS, findLesson } from "@/data/course";
+import {
+  LESSON_CONTENT,
+  LESSON_STEPS,
+  findLesson,
+  findUnit,
+  hasAuthoredContent,
+  LEVELS,
+  type LessonContent,
+} from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { findNextLesson, isMastered, setLastVisited, setMastered } from "@/lib/mastery";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { clearCachedLesson, getCachedLesson, setCachedLesson } from "@/lib/lessonCache";
 import {
   addStudyMinutes,
   getStreak,
@@ -74,6 +84,8 @@ const Lesson = () => {
   const enteredAtRef = useRef<number>(Date.now());
   const recordedQuizRef = useRef(false);
   const [mastered, setMasteredState] = useState(false);
+  const [aiContent, setAiContent] = useState<LessonContent | null>(null);
+  const [generating, setGenerating] = useState(false);
 
   useEffect(() => {
     setMasteredState(isMastered(Number(levelId), Number(unitId), Number(lessonId)));
@@ -177,8 +189,67 @@ const Lesson = () => {
 
   const content = useMemo(() => {
     if (!lesson) return null;
-    return LESSON_CONTENT[lesson.title] ?? LESSON_CONTENT["自我介绍"];
-  }, [lesson]);
+    if (hasAuthoredContent(lesson.title)) {
+      return LESSON_CONTENT[lesson.title] ?? null;
+    }
+    // AI-generated lesson: prefer freshly loaded one, else fall back to template
+    return aiContent ?? LESSON_CONTENT[lesson.title] ?? null;
+  }, [lesson, aiContent]);
+
+  const isAiLesson = lesson ? !hasAuthoredContent(lesson.title) : false;
+
+  const generateLesson = async (force = false) => {
+    if (!lesson) return;
+    const lv = Number(levelId);
+    const un = Number(unitId);
+    const ls = Number(lessonId);
+    if (!force) {
+      const cached = getCachedLesson(lv, un, ls);
+      if (cached) {
+        setAiContent(cached);
+        return;
+      }
+    } else {
+      clearCachedLesson(lv, un, ls);
+      setAiContent(null);
+    }
+    setGenerating(true);
+    try {
+      const levelName = LEVELS.find((l) => l.id === lv)?.name;
+      const unitTitle = findUnit(lv, un)?.title;
+      const { data, error } = await supabase.functions.invoke("generate-lesson", {
+        body: { title: lesson.title, levelName, unitTitle },
+      });
+      if (error) throw error;
+      if ((data as any)?.error) throw new Error((data as any).error);
+      setAiContent(data as LessonContent);
+      setCachedLesson(lv, un, ls, data as LessonContent);
+      if (force) toast.success("✨ 已重新生成本课内容");
+    } catch (e: any) {
+      toast.error("生成失败", { description: e?.message ?? "请稍后再试" });
+    } finally {
+      setGenerating(false);
+    }
+  };
+
+  // Auto-load or generate AI content when entering an AI lesson
+  useEffect(() => {
+    if (!lesson) return;
+    if (!isAiLesson) {
+      setAiContent(null);
+      return;
+    }
+    const lv = Number(levelId);
+    const un = Number(unitId);
+    const ls = Number(lessonId);
+    const cached = getCachedLesson(lv, un, ls);
+    if (cached) {
+      setAiContent(cached);
+    } else {
+      generateLesson(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [levelId, unitId, lessonId, isAiLesson]);
 
   // Trigger nudge when the user completes all quiz questions
   useEffect(() => {
@@ -204,7 +275,24 @@ const Lesson = () => {
     }
   }, [quizPicks, content, nudge]);
 
-  if (!lesson || !content) return <div className="p-10">课程不存在</div>;
+  if (!lesson) return <div className="p-10">课程不存在</div>;
+
+  if (!content) {
+    return (
+      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+        <PageHeader
+          title={`Lesson ${lesson.id} · ${lesson.title}`}
+          subtitle="正在为你生成本课内容…"
+          back={`/level/${levelId}/unit/${unitId}`}
+        />
+        <div className="grid place-items-center rounded-3xl bg-card p-10 shadow-card">
+          <Sparkles className="mb-3 size-8 animate-pulse text-primary" />
+          <p className="text-base font-semibold">AI 正在为你定制本课…</p>
+          <p className="mt-1 text-sm text-muted-foreground">通常需要 5–15 秒</p>
+        </div>
+      </main>
+    );
+  }
 
   // build vocab quiz: word -> meaning matching
   const vocabQuizItems = content.vocab.slice(0, 4).map((v, idx) => {

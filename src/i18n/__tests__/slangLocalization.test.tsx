@@ -132,9 +132,14 @@ describe("<T> runtime translation across languages", () => {
         await new Promise((r) => setTimeout(r, 320));
       });
       expect(invokeMock).toHaveBeenCalled();
-      const body = invokeMock.mock.calls[0][1].body;
-      expect(body.targetLanguage).toBe(lang.englishName);
-      expect(body.items.some((i: any) => i.text === source)).toBe(true);
+      // The provider may issue two batches: one for the static UI catalog
+      // and another for dynamic content. Find the call that carried our
+      // source string.
+      const dynCall = invokeMock.mock.calls.find((c) =>
+        (c[1].body.items as any[]).some((i) => i.text === source),
+      );
+      expect(dynCall).toBeTruthy();
+      expect(dynCall![1].body.targetLanguage).toBe(lang.englishName);
       expect(screen.getByTestId("probe")).toHaveTextContent(
         `[${lang.englishName}] ${source}`,
       );

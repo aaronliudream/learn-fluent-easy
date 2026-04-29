@@ -40,6 +40,8 @@ const stopCurrent = () => {
   }
 };
 
+export const stopSpeaking = () => stopCurrent();
+
 // ---- Browser TTS fallback (used if AI fails or quota exhausted) ----
 const speakBrowser = (text: string, speed: number) => {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;

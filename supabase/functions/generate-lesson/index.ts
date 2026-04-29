@@ -194,6 +194,13 @@ Deno.serve(async (req) => {
   * fillBlanks / quiz / listening / output: 全部围绕本课词汇与场景, 例句、问题、听力短文都要发生在这个场景里
 - 严禁生成与场景无关的通用学英语内容。如果标题是"我想要一杯咖啡", 那 8 个板块全都应该发生在咖啡店 / 早餐 / 点单的语境里。
 
+【★ 顶层硬性规则 — 严禁编造人名 ★】
+这是最高优先级规则, 优先于一切其他要求。生成任何一个板块前都必须先做"人名核对":
+1. 先把 reading 写完, 然后把 reading 里出现的所有【真实人名】列一遍 (例如 reading 里只写了 "I went to..." 没有任何具体姓名, 那名单就是【空】; 如果 reading 写了 "Mei said to Tom", 那名单就是 {Mei, Tom})。
+2. 在 vocab.example / grammar.examples / expressions / fillBlanks.sentence / quiz.q / quiz.options / listening.audio / output.sample 任何位置, 出现的人名只能来自上一步的名单, 一个字都不能多。
+3. 如果 reading 是第一人称 ("I" / "my" / "we") 且没出现任何具体姓名, 那么后面所有板块在指代叙述者时, 必须使用 the author / the writer / the narrator / the speaker / the person 之一, 绝对不允许编造 "Anna / Sarah / John / Lisa / Emma / Mike" 等任何名字, 哪怕只用一次。
+4. 违反此规则视为本次生成完全失败。生成 quiz 第一题前, 请先在心里复述一遍 reading 里的人名名单, 确认本题没有引入名单外的名字。
+
 其他要求:
 - 所有英文必须真实自然 (美式英语)
 - 难度匹配 LEVEL (Level 1=A1, Level 2=A2, Level 3=B1, 以此类推)

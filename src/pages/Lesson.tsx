@@ -33,7 +33,7 @@ const PREGEN_MAP = PREGENERATED_LESSONS as unknown as Record<string, LessonConte
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
-import { T, useT } from "@/i18n/T";
+import { T } from "@/i18n/T";
 import { findNextLesson, isMastered, setLastVisited, setMastered } from "@/lib/mastery";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -112,7 +112,6 @@ const Lesson = () => {
   const [activeStep, setActiveStep] = useState(1);
   const contentRef = useRef<HTMLDivElement>(null);
   const nudge = useGuestNudge();
-  const tDyn = useT();
   const enteredAtRef = useRef<number>(Date.now());
   const recordedQuizRef = useRef(false);
   const [mastered, setMasteredState] = useState(false);
@@ -151,8 +150,6 @@ const Lesson = () => {
           ? `下次打开 App 时会提醒你继续：${nextLesson.title}`
           : "你已完成全部课程，太棒啦！",
       });
-      // Re-emit translated toast description for non-CN/EN users
-      void tDyn("已标记为掌握");
     } else {
       toast("已取消「掌握」标记");
     }

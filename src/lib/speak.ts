@@ -5,6 +5,8 @@ let lastSpoken = "";
 let currentAudio: HTMLAudioElement | null = null;
 const audioCache = new Map<string, string>(); // key -> object URL
 let aiDisabled = false; // becomes true if AI quota/credits exhausted; falls back to browser TTS
+// Incremented every time we stop. Any in-flight speak() whose token < this must abort.
+let speakToken = 0;
 
 export const clearAudioCache = () => {
   audioCache.forEach((url) => URL.revokeObjectURL(url));
@@ -26,6 +28,7 @@ const base64ToBlobUrl = (b64: string): string => {
 };
 
 const stopCurrent = () => {
+  speakToken += 1;
   if (currentAudio) {
     try {
       currentAudio.pause();
@@ -65,6 +68,7 @@ export const speak = async (text: string): Promise<void> => {
   if (!text) return;
   lastSpoken = text;
   stopCurrent();
+  const myToken = speakToken;
 
   const { voiceId, speed } = loadSettings();
   const key = cacheKey(text, voiceId, speed);
@@ -72,12 +76,14 @@ export const speak = async (text: string): Promise<void> => {
   // 1. Cached AI audio?
   const cached = audioCache.get(key);
   if (cached) {
+    if (myToken !== speakToken) return;
     await playUrl(cached);
     return;
   }
 
   // 2. AI disabled -> browser fallback
   if (aiDisabled) {
+    if (myToken !== speakToken) return;
     speakBrowser(text, speed);
     return;
   }
@@ -87,6 +93,9 @@ export const speak = async (text: string): Promise<void> => {
     const { data, error } = await supabase.functions.invoke("tts", {
       body: { text, voiceId, speed },
     });
+
+    // Aborted by a stop (e.g. page navigation) while we were waiting.
+    if (myToken !== speakToken) return;
 
     if (error) {
       const status = (error as { context?: { status?: number } }).context?.status;
@@ -109,8 +118,10 @@ export const speak = async (text: string): Promise<void> => {
 
     const url = base64ToBlobUrl(audioContent);
     audioCache.set(key, url);
+    if (myToken !== speakToken) return;
     await playUrl(url);
   } catch (e) {
+    if (myToken !== speakToken) return;
     console.warn("[speak] AI TTS failed, falling back to browser voice:", e);
     speakBrowser(text, speed);
   }

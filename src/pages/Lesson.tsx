@@ -405,6 +405,56 @@ const Lesson = () => {
     };
   });
 
+  // ─── Mastery scoring ────────────────────────────────────────────────
+  // The lesson is auto-marked as 已掌握 only when the learner has
+  // answered every test question correctly across all four quizzes:
+  // reading quiz · vocab quiz · fill-in-the-blanks · listening blanks.
+  const quizScore = {
+    correct: content.quiz.reduce(
+      (acc, q, i) => acc + (quizPicks[i] === q.answer ? 1 : 0),
+      0,
+    ),
+    total: content.quiz.length,
+  };
+  const vocabScore = {
+    correct: vocabQuizItems.reduce(
+      (acc, q) => acc + (vocabQuiz[q.idx] === q.answer ? 1 : 0),
+      0,
+    ),
+    total: vocabQuizItems.length,
+  };
+  const fillScore = {
+    correct: content.fillBlanks.reduce(
+      (acc, b, i) => acc + ((fills[i] ?? "").trim().toLowerCase() === b.answer.toLowerCase() ? 1 : 0),
+      0,
+    ),
+    total: content.fillBlanks.length,
+  };
+  const listenScore = {
+    correct: content.listening.blanks.reduce(
+      (acc, b, i) => acc + ((listenInputs[i] ?? "").trim().toLowerCase() === b.answer.toLowerCase() ? 1 : 0),
+      0,
+    ),
+    total: content.listening.blanks.length,
+  };
+  const totalCorrect = quizScore.correct + vocabScore.correct + fillScore.correct + listenScore.correct;
+  const totalQuestions = quizScore.total + vocabScore.total + fillScore.total + listenScore.total;
+  const allPerfect = totalQuestions > 0 && totalCorrect === totalQuestions;
+
+  // Auto-mark as mastered the first time the learner hits 100% on every quiz.
+  useEffect(() => {
+    if (!lesson) return;
+    if (allPerfect && !mastered) {
+      setMastered(Number(levelId), Number(unitId), Number(lessonId), true);
+      setMasteredState(true);
+      markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
+      toast.success("🏆 全部答对 · 已自动标记为掌握", {
+        description: "下次打开 App 会建议你继续学习下一课。",
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allPerfect]);
+
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader

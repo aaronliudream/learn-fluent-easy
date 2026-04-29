@@ -358,7 +358,9 @@ ${priorList}
       });
     }
 
-    return new Response(JSON.stringify(parsed), {
+    const sanitized = sanitizeUnsupportedNarratorNames(parsed);
+
+    return new Response(JSON.stringify(sanitized), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (e) {

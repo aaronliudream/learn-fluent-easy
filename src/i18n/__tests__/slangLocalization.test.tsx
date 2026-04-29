@@ -124,13 +124,13 @@ describe("<T> runtime translation across languages", () => {
     it(`translates idiom meaning into ${lang.englishName}`, async () => {
       setLang(lang.code);
       const source = "他被现场抓个正着";
-      await act(async () => {
-        render(<Probe source={source} />);
-      });
+      const { rerender } = render(<Probe source={source} />);
       // Provider debounces dyn queue 250ms then resolves; flush.
       await act(async () => {
         await new Promise((r) => setTimeout(r, 320));
       });
+      // Force a consumer re-render so it picks up the now-cached translation.
+      rerender(<Probe source={source} />);
       expect(invokeMock).toHaveBeenCalled();
       // The provider may issue two batches: one for the static UI catalog
       // and another for dynamic content. Find the call that carried our
@@ -165,10 +165,9 @@ describe("Quiz options localization pathway", () => {
 
   it("en2cn option (Chinese meaning) gets translated for German users", async () => {
     setLang("de");
-    await act(async () => {
-      render(<OptionRow kind="en2cn" opt="被当场抓获" />);
-    });
+    const { rerender } = render(<OptionRow kind="en2cn" opt="被当场抓获" />);
     await act(async () => { await new Promise((r) => setTimeout(r, 320)); });
+    rerender(<OptionRow kind="en2cn" opt="被当场抓获" />);
     expect(screen.getByTestId("opt").textContent).toBe("[German] 被当场抓获");
   });
 

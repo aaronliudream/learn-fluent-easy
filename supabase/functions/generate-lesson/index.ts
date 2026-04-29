@@ -197,6 +197,11 @@ Deno.serve(async (req) => {
 - 中文翻译/释义准确口语化
 - fillBlanks 中 answer 必须是 options 之一; quiz 的 answer 必须是 0-3 的索引
 - listening.audio 应能直接朗读 (2-4 句, 围绕本课场景)
+- 【阅读测验 quiz — 极其重要】quiz 的 4 道题必须严格基于本课 reading 数组的内容来出, 每道题都要满足:
+  * 问题 (q) 问的事实、人物、动作、原因、细节, 必须能在 reading 的某一句里直接找到答案, 不得引入 reading 中没有的人名、地点或情节 (例如 reading 里没有 Sarah, 就不能问 "What did Sarah ...")
+  * 4 个 options 中只有 answer 索引对应的那一个是 reading 真正支持的, 其余 3 个干扰项必须是合理但与 reading 不符的内容
+  * 严禁出现 reading 中从未提到的专有名词、数字、地点
+  * 出题前先在心里逐句回看 reading, 确保每题都能指向 reading 里具体的一句
 - 【听力填空 — 极其重要】blanks 的 3 个 answer 必须是【本课 vocab 列表里的核心新词】, 每个 answer 都要满足:
   * 是 vocab 数组里出现过的单词 (大小写不敏感, 可以是其单复数 / 时态变化)
   * 必须真实出现在 listening.audio 文本中

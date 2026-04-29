@@ -463,6 +463,46 @@ const Lesson = () => {
         back={`/level/${levelId}/unit/${unitId}`}
       />
 
+      {/* Mastery status — visible across every step */}
+      <div
+        className={`mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border p-4 ${
+          mastered
+            ? "border-emerald-500/30 bg-emerald-500/10"
+            : totalCorrect > 0
+              ? "border-amber-500/30 bg-amber-500/10"
+              : "border-border bg-secondary/40"
+        }`}
+      >
+        <div className="flex items-center gap-3">
+          <div
+            className={`grid size-9 place-items-center rounded-full text-base ${
+              mastered
+                ? "bg-emerald-500 text-white"
+                : totalCorrect > 0
+                  ? "bg-amber-500 text-white"
+                  : "bg-muted text-muted-foreground"
+            }`}
+          >
+            {mastered ? "🏆" : totalCorrect > 0 ? "⚡" : "○"}
+          </div>
+          <div>
+            <div className="text-sm font-bold">
+              {mastered
+                ? "已掌握 Mastered"
+                : totalCorrect > 0
+                  ? "学习中 In progress"
+                  : "未掌握 Not started"}
+            </div>
+            <div className="text-xs text-muted-foreground">
+              测试得分 {totalCorrect} / {totalQuestions} · 全部答对自动标记为掌握
+            </div>
+          </div>
+        </div>
+        <div className="text-xs text-muted-foreground">
+          阅读 {quizScore.correct}/{quizScore.total} · 词汇 {vocabScore.correct}/{vocabScore.total} · 选词 {fillScore.correct}/{fillScore.total} · 听力 {listenScore.correct}/{listenScore.total}
+        </div>
+      </div>
+
       {/* Steps */}
       <section className="mb-8 rounded-3xl bg-card p-5 shadow-card md:p-7">
         <div className="mb-5 flex items-baseline gap-2">

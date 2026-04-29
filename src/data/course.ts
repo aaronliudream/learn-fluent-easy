@@ -251,7 +251,7 @@ export type FillBlank = {
 
 export type LessonContent = {
   vocab: VocabItem[];
-  reading: { en: string; cn: string }[]; // paragraphs
+  reading: { en: string; cn: string; note?: string }[]; // sentences with optional hint
   grammar: { title: string; explain: string; examples: { en: string; cn: string }[] }[];
   expressions: { en: string; cn: string; scene: string }[];
   fillBlanks: FillBlank[];

@@ -724,7 +724,11 @@ LEVELS.flatMap((level) => level.units.flatMap((unit) => unit.lessons))
       : base.output;
     if (src) {
       const reading = src.passage.length
-        ? src.passage.map((p) => ({ en: p.en, cn: p.cn }))
+        ? src.passage.map((p) => ({
+            en: p.en,
+            cn: p.cn,
+            ...(p.note ? { note: p.note } : {}),
+          }))
         : base.reading;
       const vocab = src.vocab.length
         ? src.vocab.map((v) => ({

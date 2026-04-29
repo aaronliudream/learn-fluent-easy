@@ -428,6 +428,66 @@ const Slang = () => {
               <Target className="mr-2 size-4" /> 开始测试 (10 题)
             </Button>
           </div>
+
+          {/* ───── Floating invite (centered card) ───── */}
+          {showInvite && !dockedInvite && (
+            <div className="fixed inset-x-0 bottom-6 z-40 flex justify-center px-4 animate-fade-in">
+              <div className="flex w-full max-w-md items-start gap-3 rounded-2xl border border-primary/30 bg-card p-4 shadow-[0_20px_50px_-15px_hsl(250_40%_30%/0.45)]">
+                <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-grad-title text-white">
+                  <Target className="size-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-bold">测一下刚才浏览的俚语？</div>
+                  <div className="mt-0.5 text-xs text-muted-foreground">
+                    已浏览 <span className="font-semibold text-foreground">{reviewedIdsRef.current.size}</span> 条 · 答对的会沉到列表底部
+                  </div>
+                  <div className="mt-3 flex gap-2">
+                    <Button size="sm" onClick={startReviewQuiz}>
+                      开始小测
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      onClick={() => {
+                        setShowInvite(false);
+                        setDockedInvite(true);
+                      }}
+                    >
+                      稍后再说
+                    </Button>
+                  </div>
+                </div>
+                <button
+                  aria-label="关闭"
+                  onClick={() => {
+                    setShowInvite(false);
+                    setDockedInvite(true);
+                  }}
+                  className="grid size-7 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:bg-secondary"
+                >
+                  <X className="size-4" />
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* ───── Docked left-side button after dismissal ───── */}
+          {dockedInvite && reviewedIdsRef.current.size >= MIN_REVIEWED && (
+            <button
+              onClick={startReviewQuiz}
+              className="fixed left-3 top-1/2 z-40 flex -translate-y-1/2 items-center gap-2 rounded-r-2xl bg-grad-title px-3 py-3 text-white shadow-[0_10px_30px_-8px_hsl(250_40%_30%/0.5)] transition-all duration-700 ease-out hover:pl-4"
+              style={{ animation: "fade-in 0.4s ease-out, slide-in-left 0.7s ease-out" }}
+              aria-label={`测试 ${reviewedIdsRef.current.size} 条已浏览俚语`}
+            >
+              <Target className="size-5" />
+              <span className="flex flex-col items-start leading-tight">
+                <span className="text-[10px] font-medium opacity-90">待测</span>
+                <span className="text-base font-extrabold">{reviewedIdsRef.current.size}</span>
+              </span>
+              {/* hidden tick to ensure re-render when reviewedTick changes */}
+              <span className="sr-only">{reviewedTick}</span>
+            </button>
+          )}
         </>
       )}
 

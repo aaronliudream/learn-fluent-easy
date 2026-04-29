@@ -21,6 +21,7 @@ export type Level = {
   unitsCount: number;
   gradient: string; // tailwind bg-grad-N
   units: Unit[];
+  locked?: boolean;
 };
 
 const mkLessons = (titles: string[], doneCount: number, lockFromIdx?: number): Lesson[] =>
@@ -211,51 +212,8 @@ export const LEVELS: Level[] = [
         lessons: mkOpenLessons(["The Open Boat · B2 第86课：救生船（词序与信息焦点）", "Babylon Revisited · B2 第87课：重返巴比伦（词汇升级 B2→C1）", "The Standard of Living · Unit 19 review · B2 第88课：生活水平 · 单元19回顾", "In Another Country · B2 第89课：在异国他乡（弱化与反讽）", "The Death of the Moth · Capstone · B2 第90课：飞蛾之死 · 收官（B2→C1 过渡）"]) },
     ],
   },
-  {
-    id: 5,
-    name: "LEVEL 5",
-    unitsCount: 18,
-    gradient: "bg-grad-5",
-    units: [
-      { id: 1, title: "职场谈判与沟通", desc: "Workplace negotiation & communication", icon: "briefcase", iconBg: "bg-slate-700", hours: "2.5小时",
-        lessons: mkOpenLessons(["The raise I almost didn't ask for · C1 第1课：那次我差点没开口的加薪谈判（虚拟语气进阶 · had it not been for） · 主旨：女性在职场更难开口要价，但准备好数据后开口反而比想象容易", "The email I rewrote seven times · C1 第2课：我改了七遍的那封邮件（hedging 与委婉表达） · 主旨：高语境职场里，\"软化语气\"不是怯懦而是专业", "What the silence in the meeting meant · C1 第3课：会议里的那段沉默到底意味着什么（推断与言外之意） · 主旨：跨文化会议中沉默常被误读为同意", "Why the junior consultant got promoted · C1 第4课：为什么那个初级顾问被提拔了（it-cleft 强调句） · 主旨：能把功劳归给团队的人，反而被记住", "The performance review I gave my own boss · C1 第5课：我给自己老板写的那份绩效评价（正式建议语气）· 主旨：360 度反馈写得越具体越有用"]) },
-      { id: 2, title: "学术阅读与思辨", desc: "Academic reading & critical thinking", icon: "book", iconBg: "bg-indigo-700", hours: "3小时",
-        lessons: mkOpenLessons(["The footnote that changed my thesis · C1 第6课：那条改变了我论文的脚注（名词化结构） · 主旨：真正的研究突破常藏在别人懒得读的注释里", "Reading a paper you don't agree with · C1 第7课：读一篇你不同意的论文（让步连接词 albeit / whereas） · 主旨：先复述对方论点再反驳，是学术礼仪也是说服力", "The professor who said \"I don't know\" · C1 第8课：那位说\"我不知道\"的教授（认知情态 may / might / could 进阶） · 主旨：承认知识边界本身就是一种 C1 级表达", "The flaw in the famous study · C1 第9课：那项著名研究里的漏洞（被动与因果链） · 主旨：相关不等于因果，C1 学习者要会指出这一点", "Writing an abstract in 150 words · C1 第10课：用 150 词写完一篇摘要（信息压缩与名词化） · 主旨：摘要是浓缩，不是缩写"]) },
-      { id: 3, title: "新闻媒体与言论", desc: "News media & public discourse", icon: "map", iconBg: "bg-cyan-700", hours: "2.5小时",
-        lessons: mkOpenLessons(["The headline that left out one word · C1 第11课：那个少了一个词的标题（部分否定与限定语） · 主旨：新闻里删一个词就能改写事实", "How the same protest became two stories · C1 第12课：同一场抗议如何变成了两种报道（语域与立场） · 主旨：选词即立场", "The op-ed I disagreed with but admired · C1 第13课：那篇我不同意却佩服的评论（让步从句与对比连接词） · 主旨：好评论让你想反驳，烂评论让你想关掉", "Fact-checking the viral chart · C1 第14课：核查那张爆款图表（量化表达与限定） · 主旨：百分比之外，看分母", "The interview that asked one too many questions · Unit 3 review · C1 第15课：那场多问了一题的采访 · 单元3回顾"]) },
-      { id: 4, title: "跨文化沟通", desc: "Cross-cultural communication", icon: "shop", iconBg: "bg-emerald-700", hours: "3小时",
-        lessons: mkOpenLessons(["The joke that didn't translate · C1 第16课：那个没翻过去的笑话（习语与文化负载词） · 主旨：跨文化幽默里，解释笑话不丢人", "When \"yes\" doesn't mean yes · C1 第17课：当\"yes\"并不意味着同意（高语境 vs 低语境表达） · 主旨：先确认理解，再推进决定", "The apology that worked in Tokyo · C1 第18课：那个在东京奏效的道歉（正式致歉句式） · 主旨：道歉的形式也是内容", "How my American colleague learned to wait · C1 第19课：我的美国同事怎么学会了等（话轮与停顿） · 主旨：发言不抢，反而更有分量", "The translator who knew when to interrupt · Unit 4 review · C1 第20课：知道何时打断的翻译 · 单元4回顾"]) },
-      { id: 5, title: "科技与社会影响", desc: "Technology & its social impact", icon: "cloud", iconBg: "bg-violet-700", hours: "3小时",
-        lessons: mkOpenLessons(["The algorithm that knew her before she did · C1 第21课：比她更早\"懂\"她的算法（缩减关系从句） · 主旨：推荐系统给的不是你想看的，是它训练出来的你", "The town that voted to slow down 5G · C1 第22课：投票要求\"放慢 5G\"的小镇（情态完成式 should/could have） · 主旨：科技推进不是越快越好", "What the chatbot refused to say · C1 第23课：聊天机器人拒绝回答的那个问题（条件句进阶） · 主旨：AI 的沉默也是产品决策", "The engineer who quit on principle · C1 第24课：那位为了原则离职的工程师（独立分词结构） · 主旨：技术伦理上的\"不\"，往往要个人买单", "Privacy in three generations · Unit 5 review · C1 第25课：三代人眼里的隐私 · 单元5回顾"]) },
-      { id: 6, title: "气候与可持续", desc: "Climate & sustainability", icon: "star", iconBg: "bg-emerald-800", hours: "2.5小时",
-        lessons: mkOpenLessons(["The carbon column on the supermarket receipt · C1 第26课：超市小票上的那一栏碳排放（量化与对比） · 主旨：把抽象的气候变成日常账单，行为才会变", "What the insurance company knew first · C1 第27课：保险公司最先知道的事（现在完成进行时） · 主旨：价格信号比新闻更早讲出气候真相", "The activist who learned to talk to oil workers · C1 第28课：学会和石油工人对话的环保活动家（让步与共识） · 主旨：要赢人心，先承认对方的损失", "Why the recycling bin lied to us · C1 第29课：回收箱骗了我们什么（被动与责任归属） · 主旨：\"个人责任\"框架转移了系统责任", "A village that bought back its river · Unit 6 review · C1 第30课：把河买回来的村庄 · 单元6回顾"]) },
-      { id: 7, title: "金融与决策", desc: "Finance & decision-making", icon: "briefcase", iconBg: "bg-rose-700", hours: "3小时",
-        lessons: mkOpenLessons(["The retirement plan I stopped reading · C1 第31课：那份我中途读不下去的退休方案（金融术语与同位语简介） · 主旨：复杂条款的设计本身就是一种行为操控", "What my sister did with her first bonus · C1 第32课：我妹妹拿到第一笔奖金做了什么（习惯过去时与对比） · 主旨：消费习惯比收入更决定财务健康", "The fund manager who underperformed the index · C1 第33课：跑输大盘的那位基金经理（强调句 it was ... that ...） · 主旨：长期看，主动投资很难赢被动指数", "How a small clinic survived inflation · C1 第34课：一家小诊所如何熬过通胀（条件句与因果） · 主旨：现金流，不是利润，是小生意的氧气", "The price of \"free\" · Unit 7 review · C1 第35课：\"免费\"的代价 · 单元7回顾"]) },
-      { id: 8, title: "心理学与行为", desc: "Psychology & behavior", icon: "book", iconBg: "bg-fuchsia-700", hours: "2.5小时",
-        lessons: mkOpenLessons(["The habit I tracked for one hundred days · C1 第36课：我跟踪了一百天的那个习惯（现在完成时进阶） · 主旨：行为改变靠系统而不是意志力", "Why we trust the confident expert more · C1 第37课：为什么我们更信那个自信的专家（推测情态 must / can't have） · 主旨：自信度并不等于准确度", "The argument we kept having · C1 第38课：我们一吵再吵的那场架（间接引语 + 报告动词的细分） · 主旨：重复的争吵其实是在替彼此完成未说完的事", "What the therapist asked instead · C1 第39课：那位治疗师反过来问我的问题（间接疑问 + wh-cleft） · 主旨：好问题比好答案更治愈", "The friend I needed to lose · Unit 8 review · C1 第40课：我必须失去的那位朋友 · 单元8回顾"]) },
-      { id: 9, title: "教育与学习方式", desc: "Education & how we learn", icon: "map", iconBg: "bg-amber-700", hours: "3小时",
-        lessons: mkOpenLessons(["The school that abolished homework · C1 第41课：取消家庭作业的那所学校（让步状语从句） · 主旨：作业量与学习成果没有线性关系", "Mr. Adeyemi's retirement speech · C1 第42课：阿德耶米先生的退休致辞（修辞疑问 + 强调） · 主旨：好教师留下的是\"看世界的角度\"", "Learning a language at fifty · C1 第43课：五十岁开始学一门语言（混合条件句） · 主旨：成年人学语言慢，但更稳", "The student who corrected the textbook · C1 第44课：那个纠正了课本的学生（被动语态 + 责任表达） · 主旨：质疑权威是 C1 学术能力的一部分", "Why the dropout came back · Unit 9 review · C1 第45课：那位辍学生为什么又回来了 · 单元9回顾"]) },
-      { id: 10, title: "健康与医疗系统", desc: "Health & healthcare systems", icon: "shop", iconBg: "bg-pink-700", hours: "2.5小时",
-        lessons: mkOpenLessons(["The bill the hospital sent twice · C1 第46课：医院寄了两次的那张账单（被动与流程描述） · 主旨：医疗账单的复杂常常不是技术问题，是商业模型", "The doctor who took fifteen minutes · C1 第47课：那位花了十五分钟的医生（程度副词与对比） · 主旨：被听见，本身就是一种治疗", "What the nurse noticed at 3 a.m. · C1 第48课：护士凌晨三点注意到的事（缩减关系从句） · 主旨：临床直觉来自上千次的微观对比", "Why my mother refused the surgery · C1 第49课：我母亲为什么拒绝那场手术（虚拟语气 · were it not for） · 主旨：知情同意里的\"知情\"比\"同意\"更难", "Three weeks on the waiting list · Unit 10 review · C1 第50课：候诊名单上的三周 · 单元10回顾"]) },
-      { id: 11, title: "城市与公共空间", desc: "Cities & public space", icon: "cloud", iconBg: "bg-sky-700", hours: "3小时",
-        lessons: mkOpenLessons(["The bench they removed at midnight · C1 第51课：他们半夜搬走的那张长椅（被动 + 隐含主语） · 主旨：\"敌意建筑\"是城市排斥的设计语言", "Why the new park stayed empty · C1 第52课：新公园为什么一直没人去（现在完成进行时） · 主旨：公共空间需要活动而不是雕塑", "The neighborhood that translated its signs · C1 第53课：把路牌翻译过的那个社区（同位语 + 简介） · 主旨：语言可见度就是归属感", "Renting a room in someone's last home · C1 第54课：在别人最后一个家里租一间房（委婉与情感语域） · 主旨：城市流动让\"家\"成为短期合约", "Saturday morning at the library · Unit 11 review · C1 第55课：周六早晨的图书馆 · 单元11回顾"]) },
-      { id: 12, title: "伦理与道德困境", desc: "Ethics & moral dilemmas", icon: "briefcase", iconBg: "bg-violet-800", hours: "3小时",
-        lessons: mkOpenLessons(["The whistle no one wanted to blow · C1 第56课：没人想吹的那个哨子（情态完成式 + 后悔语气） · 主旨：举报的代价常常落在最先开口的人身上", "What the trolley problem leaves out · C1 第57课：电车难题没说的那部分（条件句进阶 + 反例） · 主旨：现实里的道德选择没有干净的两个选项", "The photographer who put the camera down · C1 第58课：那位放下相机的摄影记者（虚拟语气 + 良知表达） · 主旨：报道伦理的边界不靠规则，靠在场的判断", "Promises we couldn't keep · C1 第59课：我们守不住的那些承诺（混合条件句） · 主旨：成年人之间的诚实，是按时承认承诺已经无效", "The juror who changed her mind · Unit 12 review · C1 第60课：改变了主意的陪审员 · 单元12回顾"]) },
-      { id: 13, title: "全球化与移民叙事", desc: "Globalization & migration", icon: "star", iconBg: "bg-indigo-800", hours: "2.5小时",
-        lessons: mkOpenLessons(["The passport with three countries' stamps · C1 第61课：盖了三个国家章的护照（独立分词结构） · 主旨：身份证件追不上身份本身的变化", "What my father couldn't translate · C1 第62课：父亲翻不过去的那些词（文化负载词 + 同位语） · 主旨：第二代移民同时是孩子和翻译", "The factory that moved overseas, twice · C1 第63课：搬去海外两次的那家工厂（现在完成进行时） · 主旨：全球化的代价是地方记忆", "Why she sent her children back · C1 第64课：她为什么把孩子送了回去（让步从句 + 隐含原因） · 主旨：跨国家庭的算术不只是钱", "A wedding in two languages, one silence · Unit 13 review · C1 第65课：两种语言、一段沉默的婚礼 · 单元13回顾"]) },
-      { id: 14, title: "文学与叙事手法", desc: "Literature & narrative craft", icon: "book", iconBg: "bg-emerald-900", hours: "3小时",
-        lessons: mkOpenLessons(["The narrator I stopped trusting on page 40 · C1 第66课：读到第 40 页我不再相信的叙述者（不可靠叙述者 + 时态切换） · 主旨：第一人称不等于真相", "Show, don't tell, until you should · C1 第67课：要展示而不是讲述，直到你必须讲述为止（自由间接引语） · 主旨：叙事规则只是工具，不是教条", "The chapter that was just dialogue · C1 第68课：整章只有对话的那一章（话轮与潜台词） · 主旨：真正的张力藏在没说的那一句", "Endings that refuse to resolve · C1 第69课：拒绝收束的结局（开放结局 + 含义转折） · 主旨：不解决也是一种艺术选择", "Why I reread the first chapter last · Unit 14 review · C1 第70课：为什么我最后才重读第一章 · 单元14回顾"]) },
-      { id: 15, title: "领导力与影响力", desc: "Leadership & influence", icon: "map", iconBg: "bg-slate-800", hours: "2.5小时",
-        lessons: mkOpenLessons(["The CEO who said \"we got it wrong\" · C1 第71课：那位说\"我们错了\"的 CEO（正式致歉与责任表达） · 主旨：公开承认错误比沉默更能稳住公司", "Leading a team you didn't hire · C1 第72课：带一支不是你招进来的团队（假设比较 as if / as though） · 主旨：先听三十天，再改一件事", "The meeting that ended ten minutes early · C1 第73课：那场提前十分钟结束的会议（弱化与含蓄） · 主旨：高效会议的标志是没有废话", "Why the founder stepped aside · C1 第74课：那位创始人为什么主动退居二线（推测情态 + 让步） · 主旨：成熟的领导者懂得交接也是一种领导", "Quiet authority on the night shift · Unit 15 review · C1 第75课：夜班里安静的权威 · 单元15回顾"]) },
-      { id: 16, title: "科学与不确定性", desc: "Science & uncertainty", icon: "shop", iconBg: "bg-cyan-800", hours: "3小时",
-        lessons: mkOpenLessons(["The forecast that hedged on purpose · C1 第76课：故意打折扣的天气预报（hedging 与谨慎表达） · 主旨：科学传播里的\"可能\"不是软弱，是诚实", "What the lab notebook never recorded · C1 第77课：实验记录里从没写过的事（省略与替代） · 主旨：失败实验也是数据", "Why the vaccine took two decades · C1 第78课：那支疫苗为什么花了二十年（被动 + 长流程） · 主旨：科学进度不是直线", "The dataset that excluded half the world · C1 第79课：把半个世界排除在外的那个数据集（量化 + 范围限定） · 主旨：样本偏差决定结论偏差", "When peer review failed · Unit 16 review · C1 第80课：同行评审失灵的那一次 · 单元16回顾"]) },
-      { id: 17, title: "进阶语法精修 (C1)", desc: "Advanced grammar mastery (C1)", icon: "cloud", iconBg: "bg-pink-800", hours: "2.5小时",
-        lessons: mkOpenLessons(["Inversion after negative adverbs · C1 第81课：否定副词前置的倒装（专项 · little did I know / not until） · 主旨：用倒装让叙事节奏更有张力", "Cleft sentences in argument · C1 第82课：论证中的分裂句（it-cleft 与 wh-cleft 专项） · 主旨：分裂句是\"句子里的高亮笔\"", "Subjunctive after formal verbs · C1 第83课：正式动词后的虚拟语气（demand / insist / propose 后的原型动词） · 主旨：建议与要求的法律级表达", "Reduced relative clauses for density · C1 第84课：用缩减关系从句压缩信息（V-ing / V-ed 修饰 · 专项） · 主旨：长句也可以读起来轻盈", "Nominalisation in formal writing · Unit 17 review · C1 第85课：正式写作中的名词化 · 单元17回顾"]) },
-      { id: 18, title: "毕业课与 C1 收官", desc: "Capstone & C1 send-off", icon: "briefcase", iconBg: "bg-emerald-700", hours: "3小时",
-        lessons: mkOpenLessons(["A speech I'd never give in my own language · C1 第86课：一篇我用母语永远不会发表的演讲（修辞与语域） · 主旨：第二语言反而能让我们说出更勇敢的话", "The cover letter that got me the second interview · C1 第87课：让我拿到二面的那封求职信（信息焦点与正式语气） · 主旨：用三段话讲清\"我为什么是合适人选\"", "A summary of the year in 200 words · C1 第88课：用 200 词总结这一年（信息压缩与名词化） · 主旨：精炼是 C1 的核心能力", "The conversation I'd been avoiding · C1 第89课：那场我一直在回避的对话（委婉 + 直率的平衡） · 主旨：成熟的沟通不是无攻击，而是无怨气", "Reading the world in English · Capstone · C1 第90课：用英语读这个世界 · 收官（C1→C2 过渡） · 主旨：C1 不是学完了，是从此可以独立学下去"]) },
-    ],
-  },
-  { id: 6, name: "LEVEL 6", unitsCount: 25, gradient: "bg-grad-6", units: [] },
+  { id: 5, name: "LEVEL 5", unitsCount: 18, gradient: "bg-grad-5", locked: true, units: [] },
+  { id: 6, name: "LEVEL 6", unitsCount: 25, gradient: "bg-grad-6", locked: true, units: [] },
 ];
 
 export const LESSON_STEPS = [

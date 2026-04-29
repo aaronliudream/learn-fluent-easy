@@ -1,4 +1,4 @@
-import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap, UserCog } from "lucide-react";
+import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap, UserCog, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -135,29 +135,55 @@ const Index = () => {
       </div>
 
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {LEVELS.map((lv) => (
-          <Link
-            key={lv.id}
-            to={`/level/${lv.id}`}
-            className={`group relative flex items-center justify-between overflow-hidden rounded-2xl ${lv.gradient} px-5 py-5 text-white shadow-tile transition-transform hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-12px_hsl(250_50%_30%/0.45)]`}
-          >
-            {/* Decorative bubbles */}
-            <span className="pointer-events-none absolute -right-10 -top-12 size-40 rounded-full bg-white/15 blur-xl" />
-            <span className="pointer-events-none absolute -bottom-16 right-20 size-28 rounded-full bg-white/10 blur-lg" />
-
-            <div className="relative flex items-center gap-4">
-              <div className="grid size-12 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
-                <GraduationCap className="size-6" />
+        {LEVELS.map((lv) => {
+          const cardClass = `group relative flex items-center justify-between overflow-hidden rounded-2xl ${lv.gradient} px-5 py-5 text-white shadow-tile transition-transform`;
+          const inner = (
+            <>
+              <span className="pointer-events-none absolute -right-10 -top-12 size-40 rounded-full bg-white/15 blur-xl" />
+              <span className="pointer-events-none absolute -bottom-16 right-20 size-28 rounded-full bg-white/10 blur-lg" />
+              <div className="relative flex items-center gap-4">
+                <div className="grid size-12 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+                  {lv.locked ? <Lock className="size-6" /> : <GraduationCap className="size-6" />}
+                </div>
+                <div>
+                  <div className="text-lg font-extrabold tracking-wider md:text-xl">{lv.name}</div>
+                  <div className="mt-0.5 text-xs font-medium opacity-90">
+                    {lv.locked ? "内容更新中…" : `${lv.unitsCount} 单元`}
+                  </div>
+                </div>
               </div>
-              <div>
-                <div className="text-lg font-extrabold tracking-wider md:text-xl">{lv.name}</div>
-                <div className="mt-0.5 text-xs font-medium opacity-90">{lv.unitsCount} 单元</div>
-              </div>
-            </div>
-
-            <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
-          </Link>
-        ))}
+              {lv.locked ? (
+                <span className="relative inline-flex items-center gap-1 rounded-full bg-white/25 px-2.5 py-1 text-[10px] font-bold backdrop-blur-sm">
+                  <Lock className="size-3" /> 即将推出
+                </span>
+              ) : (
+                <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
+              )}
+            </>
+          );
+          if (lv.locked) {
+            return (
+              <button
+                key={lv.id}
+                type="button"
+                onClick={() => toast("该级别内容正在更新中，敬请期待 ✨")}
+                aria-disabled="true"
+                className={`${cardClass} cursor-not-allowed text-left opacity-70 grayscale-[0.2]`}
+              >
+                {inner}
+              </button>
+            );
+          }
+          return (
+            <Link
+              key={lv.id}
+              to={`/level/${lv.id}`}
+              className={`${cardClass} hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-12px_hsl(250_50%_30%/0.45)]`}
+            >
+              {inner}
+            </Link>
+          );
+        })}
       </section>
     </main>
   );

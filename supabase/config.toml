@@ -13,3 +13,5 @@ project_id = "fottntyhwolbsdvkwriq"
     verify_jwt = false
   [functions.tts]
     verify_jwt = false
+  [functions.translate]
+    verify_jwt = false

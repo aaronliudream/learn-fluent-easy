@@ -66,68 +66,6 @@ const Index = () => {
 
       <PageHeader title="选择学习级别" subtitle="选择适合你的级别，开始学习之旅" />
 
-      <AlertDialog open={resumeOpen} onOpenChange={setResumeOpen}>
-        <AlertDialogContent className="max-h-[90vh] w-[calc(100%-2rem)] max-w-md overflow-y-auto p-4 sm:p-6">
-          <AlertDialogHeader>
-            <AlertDialogTitle className="text-base sm:text-lg">👋 欢迎回来！接下来想做什么？</AlertDialogTitle>
-            <AlertDialogDescription className="text-xs sm:text-sm">
-              你可以继续上次未完成的学习，开始下一课，或者自由浏览全部课程。
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <div className="space-y-2">
-            {unfinished && (
-              <button
-                type="button"
-                onClick={() => goTo(unfinished)}
-                className="flex w-full items-center gap-3 rounded-xl border border-primary/30 bg-primary/5 p-3 text-left transition hover:bg-primary/10 sm:p-4"
-              >
-                <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground sm:size-10">
-                  <BookOpen className="size-4 sm:size-5" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold">继续上次的学习</div>
-                  <div className="truncate text-xs text-muted-foreground">{unfinished.title}</div>
-                </div>
-                <ChevronRight className="size-4 shrink-0 text-muted-foreground sm:size-5" />
-              </button>
-            )}
-            {nextLesson && (
-              <button
-                type="button"
-                onClick={() => goTo(nextLesson)}
-                className="flex w-full items-center gap-3 rounded-xl border bg-card p-3 text-left transition hover:bg-accent sm:p-4"
-              >
-                <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-emerald-500 text-white sm:size-10">
-                  <ArrowRight className="size-4 sm:size-5" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold">学习下一课</div>
-                  <div className="truncate text-xs text-muted-foreground">{nextLesson.title}</div>
-                </div>
-                <ChevronRight className="size-4 shrink-0 text-muted-foreground sm:size-5" />
-              </button>
-            )}
-            <button
-              type="button"
-              onClick={() => setResumeOpen(false)}
-              className="flex w-full items-center gap-3 rounded-xl border bg-card p-3 text-left transition hover:bg-accent sm:p-4"
-            >
-              <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-muted text-foreground sm:size-10">
-                <Layers className="size-4 sm:size-5" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-sm font-semibold">自由浏览课程</div>
-                <div className="truncate text-xs text-muted-foreground">从下方选择任意级别 / 单元</div>
-              </div>
-              <ChevronRight className="size-4 shrink-0 text-muted-foreground sm:size-5" />
-            </button>
-          </div>
-          <AlertDialogFooter>
-            <AlertDialogCancel>稍后再说</AlertDialogCancel>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-
       {/* Hero: Placement test (primary) */}
       <Link
         to="/placement"

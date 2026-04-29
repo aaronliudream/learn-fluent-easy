@@ -14,6 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
+      daily_slang: {
+        Row: {
+          created_at: string
+          example: string
+          example_cn: string
+          fetch_date: string
+          id: string
+          meaning_cn: string
+          meaning_en: string
+          phrase: string
+          source_hint: string | null
+        }
+        Insert: {
+          created_at?: string
+          example: string
+          example_cn: string
+          fetch_date?: string
+          id?: string
+          meaning_cn: string
+          meaning_en: string
+          phrase: string
+          source_hint?: string | null
+        }
+        Update: {
+          created_at?: string
+          example?: string
+          example_cn?: string
+          fetch_date?: string
+          id?: string
+          meaning_cn?: string
+          meaning_en?: string
+          phrase?: string
+          source_hint?: string | null
+        }
+        Relationships: []
+      }
       generated_lessons: {
         Row: {
           content: Json

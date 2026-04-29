@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { getStreak, loadProgress, type GuestProgress } from "@/lib/guestProgress";
+import { T, useT } from "@/i18n/T";
 
 const StatCard = ({
   icon,
@@ -28,6 +29,7 @@ const StatCard = ({
 );
 
 const Stats = () => {
+  const t = useT();
   const [user, setUser] = useState<User | null>(null);
   const [p, setP] = useState<GuestProgress>(() => loadProgress());
 
@@ -53,20 +55,20 @@ const Stats = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title="我的学习数据" subtitle="追踪你的学习成果" back="/" />
+      <PageHeader title={t("我的学习数据")} subtitle={t("追踪你的学习成果")} back="/" />
 
       {!hasAny ? (
         <div className="rounded-3xl bg-card p-10 text-center shadow-card">
           <div className="mx-auto mb-4 grid size-16 place-items-center rounded-2xl bg-primary/10 text-primary">
             <BookCheck className="size-8" />
           </div>
-          <h3 className="text-lg font-bold">还没有学习记录</h3>
+          <h3 className="text-lg font-bold"><T>还没有学习记录</T></h3>
           <p className="mt-2 text-sm text-muted-foreground">
-            开始一节课程后，这里会显示你的学习数据
+            <T>开始一节课程后，这里会显示你的学习数据</T>
           </p>
           <Button asChild className="mt-5">
             <Link to="/">
-              <ArrowLeft className="size-4" /> 去选择课程
+              <ArrowLeft className="size-4" /> <T>去选择课程</T>
             </Link>
           </Button>
         </div>
@@ -76,45 +78,45 @@ const Stats = () => {
             <StatCard
               icon={<BookCheck className="size-6" />}
               value={p.completedLessons.length}
-              label="完成课程数"
+              label={t("完成课程数")}
               color="bg-emerald-500/15 text-emerald-600"
             />
             <StatCard
               icon={<Clock className="size-6" />}
               value={p.studyMinutes}
-              label="累计学习分钟"
+              label={t("累计学习分钟")}
               color="bg-sky-500/15 text-sky-600"
             />
             <StatCard
               icon={<Target className="size-6" />}
               value={`${accuracy}%`}
-              label={`答题正确率（${p.quizTotal} 题）`}
+              label={t(`答题正确率（${p.quizTotal} 题）`)}
               color="bg-fuchsia-500/15 text-fuchsia-600"
             />
             <StatCard
               icon={<Flame className="size-6" />}
               value={streak}
-              label="连续学习天数 🔥"
+              label={t("连续学习天数 🔥")}
               color="bg-orange-500/15 text-orange-600"
             />
           </section>
 
           <section className="mt-6 rounded-3xl bg-card p-6 shadow-card md:p-8">
-            <h3 className="text-lg font-bold">学习历程</h3>
+            <h3 className="text-lg font-bold"><T>学习历程</T></h3>
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               <div className="rounded-2xl bg-secondary/40 p-4">
-                <div className="text-xs text-muted-foreground">首次学习</div>
+                <div className="text-xs text-muted-foreground"><T>首次学习</T></div>
                 <div className="mt-1 font-semibold">
                   {firstSeen.toLocaleDateString("zh-CN")}
                 </div>
               </div>
               <div className="rounded-2xl bg-secondary/40 p-4">
-                <div className="text-xs text-muted-foreground">坚持天数</div>
-                <div className="mt-1 font-semibold">{daysSinceStart} 天</div>
+                <div className="text-xs text-muted-foreground"><T>坚持天数</T></div>
+                <div className="mt-1 font-semibold">{t(`${daysSinceStart} 天`)}</div>
               </div>
               <div className="rounded-2xl bg-secondary/40 p-4">
-                <div className="text-xs text-muted-foreground">活跃天数</div>
-                <div className="mt-1 font-semibold">{p.daysActive.length} 天</div>
+                <div className="text-xs text-muted-foreground"><T>活跃天数</T></div>
+                <div className="mt-1 font-semibold">{t(`${p.daysActive.length} 天`)}</div>
               </div>
             </div>
           </section>
@@ -128,13 +130,13 @@ const Stats = () => {
                 <Cloud className="size-6" />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="font-bold">这些数据只保存在当前浏览器</div>
+                <div className="font-bold"><T>这些数据只保存在当前浏览器</T></div>
                 <div className="mt-0.5 text-sm text-muted-foreground">
-                  登录后永久保留，并在手机、电脑等设备间同步
+                  <T>登录后永久保留，并在手机、电脑等设备间同步</T>
                 </div>
               </div>
               <div className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
-                立即登录保存
+                <T>立即登录保存</T>
               </div>
             </Link>
           )}

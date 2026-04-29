@@ -98,6 +98,12 @@ const Lesson = () => {
   useEffect(() => {
     setMasteredState(isMastered(Number(levelId), Number(unitId), Number(lessonId)));
     setLastVisited(Number(levelId), Number(unitId), Number(lessonId));
+    // When navigating to a new lesson, always start from step 1 (词汇学习)
+    // and scroll back to the top of the page.
+    setActiveStep(1);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
   }, [levelId, unitId, lessonId]);
 
   const toggleMastered = () => {

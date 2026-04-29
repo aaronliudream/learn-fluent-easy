@@ -17,6 +17,9 @@ import Slang from "./pages/Slang.tsx";
 import Account from "./pages/Account.tsx";
 import Privacy from "./pages/Privacy.tsx";
 import Terms from "./pages/Terms.tsx";
+import Scenes from "./pages/Scenes.tsx";
+import ScenesCategory from "./pages/ScenesCategory.tsx";
+import ScenesPlay from "./pages/ScenesPlay.tsx";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +47,9 @@ const App = () => (
           <Route path="/account" element={<Account />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/scenes" element={<Scenes />} />
+          <Route path="/scenes/:catKey" element={<ScenesCategory />} />
+          <Route path="/scenes/:catKey/:dialogueId" element={<ScenesPlay />} />
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />

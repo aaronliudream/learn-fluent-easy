@@ -383,9 +383,9 @@ const Lesson = () => {
       if ((data as any)?.error) throw new Error((data as any).error);
       setAiContent(data as LessonContent);
       void setCachedLesson(lv, un, ls, data as LessonContent);
-      if (force) toast.success("✨ 已重新生成本课内容");
+      if (force) toast.success(tt("✨ 已重新生成本课内容"));
     } catch (e: any) {
-      toast.error("生成失败", { description: e?.message ?? "请稍后再试" });
+      toast.error(tt("生成失败"), { description: e?.message ?? tt("请稍后再试") });
     } finally {
       setGenerating(false);
     }
@@ -442,14 +442,14 @@ const Lesson = () => {
         const acc = p.quizTotal > 0 ? Math.round((p.quizCorrect / p.quizTotal) * 100) : 0;
         nudge(
           "quiz-done",
-          `🎯 本次答对 ${correct}/${total}`,
-          `累计正确率 ${acc}%（共答 ${p.quizTotal} 题），登录后查看完整学习数据面板。`,
+          `🎯 ${tt("本次答对")} ${correct}/${total}`,
+          `${tt("累计正确率")} ${acc}%（${tt("共答")} ${p.quizTotal} ${tt("题），登录后查看完整学习数据面板。")}`,
         );
       }
     }
   }, [quizPicks, content, nudge]);
 
-  if (!lesson) return <div className="p-10">课程不存在</div>;
+  if (!lesson) return <div className="p-10">{tt("课程不存在")}</div>;
 
   if (!content) {
     return (
@@ -531,8 +531,8 @@ const Lesson = () => {
       setMastered(Number(levelId), Number(unitId), Number(lessonId), true);
       setMasteredState(true);
       markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
-      toast.success("🏆 全部答对 · 已自动标记为掌握", {
-        description: "下次打开 App 会建议你继续学习下一课。",
+      toast.success(tt("🏆 全部答对 · 已自动标记为掌握"), {
+        description: tt("下次打开 App 会建议你继续学习下一课。"),
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

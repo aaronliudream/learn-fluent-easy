@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
 import { speak } from "@/lib/speak";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import {
   isMasteredSlang,
   loadSlangMastery,
@@ -149,6 +150,8 @@ const Slang = () => {
   const [mode, setMode] = useState<Mode>("browse");
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState("");
+  // Daily AI-fetched trending slang prepended to the list.
+  const [dailySlang, setDailySlang] = useState<Idiom[]>([]);
   // Bumped whenever mastery changes so the browse list re-sorts.
   const [masteryVersion, setMasteryVersion] = useState(0);
   // Idioms the user has *dwelled long enough* on since the last quiz.
@@ -164,8 +167,46 @@ const Slang = () => {
     loadSlangMastery().then(() => setMasteryVersion((v) => v + 1));
   }, []);
 
+  // Load daily AI slang (newest first) and map to Idiom shape with stable negative IDs.
+  useEffect(() => {
+    (async () => {
+      const { data, error } = await supabase
+        .from("daily_slang")
+        .select("id, phrase, meaning_cn, meaning_en, example, example_cn, fetch_date, created_at")
+        .order("fetch_date", { ascending: false })
+        .order("created_at", { ascending: false })
+        .limit(500);
+      if (error || !data) return;
+      // Use a deterministic negative numeric id derived from uuid hash so it doesn't collide with IDIOMS ids.
+      const mapped: Idiom[] = data.map((r: any, idx: number) => ({
+        id: -(idx + 1) - 1000,
+        phrase: r.phrase,
+        meaning_cn: r.meaning_cn,
+        meaning_en: r.meaning_en,
+        example: r.example,
+        example_cn: r.example_cn,
+      }));
+      setDailySlang(mapped);
+    })();
+  }, []);
+
   const filtered = useMemo(() => {
-    const base = sortByMastery(IDIOMS);
+    // Merge daily slang at the top, dedupe by phrase (case-insensitive).
+    const seen = new Set<string>();
+    const merged: Idiom[] = [];
+    for (const it of dailySlang) {
+      const k = it.phrase.toLowerCase();
+      if (seen.has(k)) continue;
+      seen.add(k);
+      merged.push(it);
+    }
+    const sortedRest = sortByMastery(IDIOMS).filter((it) => {
+      const k = it.phrase.toLowerCase();
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+    const base = [...merged, ...sortedRest];
     if (!search.trim()) return base;
     const k = search.trim().toLowerCase();
     return base.filter(
@@ -176,7 +217,7 @@ const Slang = () => {
     );
     // re-evaluate when masteryVersion changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search, masteryVersion]);
+  }, [search, masteryVersion, dailySlang]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const safePage = Math.min(page, totalPages - 1);

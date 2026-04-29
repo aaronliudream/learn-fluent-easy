@@ -69,7 +69,7 @@ const sanitizeUnsupportedNarratorNames = (content: LessonContent): LessonContent
   if (/\bAnna\b/.test(readingText)) return content;
 
   const hasFirstPersonNarrator = /\b(I|me|my|mine|we|us|our|ours)\b/i.test(readingText);
-  const replacement = hasFirstPersonNarrator ? "the writer" : "the text";
+  const replacement = hasFirstPersonNarrator ? "the author" : "the text";
   const sanitizeString = (value: string) => value.replace(/\bAnna\b/g, replacement);
   const sanitizeValue = (value: unknown): unknown => {
     if (typeof value === "string") return sanitizeString(value);

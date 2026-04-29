@@ -22,6 +22,7 @@ import {
   loadSlangMastery,
   recordSlangResult,
   sortByMastery,
+  pickQuizPool,
 } from "@/lib/slangMastery";
 
 type Mode = "browse" | "quiz";
@@ -100,7 +101,9 @@ function blankOutPhrase(example: string, phrase: string): string {
 
 function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
   const sourceForDistractors = IDIOMS;
-  const picked = shuffle(pool).slice(0, Math.min(len, pool.length));
+  // Spaced-repetition pick: prioritise struggling > unseen > due-review,
+  // and skip mastered items still in cooldown.
+  const picked = pickQuizPool(pool, Math.min(len, pool.length));
   const kinds: QuizKind[] = ["en2cn", "cn2en", "fill"];
   return picked.map((idiom, i) => {
     const kind = kinds[i % kinds.length];

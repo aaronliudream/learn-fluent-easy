@@ -205,6 +205,11 @@ Deno.serve(async (req) => {
   * 4 个 options 中只有 answer 索引对应的那一个是 reading 真正支持的, 其余 3 个干扰项必须是合理但与 reading 不符的内容
   * 严禁出现 reading 中从未提到的专有名词、数字、地点
   * 出题前先在心里逐句回看 reading, 确保每题都能指向 reading 里具体的一句
+- 【语法重点 grammar — 极其重要】grammar 数组里每一个语法点的 examples 句子必须满足:
+  * 每一句 en 都必须【一字不差地、原样出现】在本课 reading 数组的某一句中 (允许是 reading 段落里的一个完整句子, 不允许改写或拼接)
+  * 严禁自己另外造句作为 examples; 若某个语法点在 reading 里找不到至少 2 个对应例句, 请换一个能在 reading 中找到例句的语法点 (如核心句型 / 时态 / 从句结构)
+  * cn 翻译要与 reading 同一句的中文意思一致
+  * 在生成 grammar 之前, 请先把 reading 全文在心里过一遍, 挑出最具有教学价值的句子, 然后围绕这些句子归纳语法点
 - 【听力填空 — 极其重要】blanks 的 3 个 answer 必须是【本课 vocab 列表里的核心新词】, 每个 answer 都要满足:
   * 是 vocab 数组里出现过的单词 (大小写不敏感, 可以是其单复数 / 时态变化)
   * 必须真实出现在 listening.audio 文本中

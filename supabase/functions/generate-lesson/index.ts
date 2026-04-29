@@ -160,6 +160,28 @@ const lessonSchema = {
   additionalProperties: false,
 };
 
+const sanitizeUnsupportedNarratorNames = (content: unknown) => {
+  const lesson = content as { reading?: { en?: string }[] };
+  const readingText = Array.isArray(lesson.reading)
+    ? lesson.reading.map((r) => r?.en ?? "").join(" ")
+    : "";
+  if (/\bAnna\b/.test(readingText)) return content;
+
+  const replacement = /\b(I|me|my|mine|we|us|our|ours)\b/i.test(readingText) ? "the author" : "the text";
+  const walk = (value: unknown): unknown => {
+    if (typeof value === "string") return value.replace(/\bAnna\b/g, replacement);
+    if (Array.isArray(value)) return value.map(walk);
+    if (value && typeof value === "object") {
+      return Object.fromEntries(
+        Object.entries(value as Record<string, unknown>).map(([key, item]) => [key, walk(item)]),
+      );
+    }
+    return value;
+  };
+
+  return walk(content);
+};
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
@@ -336,7 +358,9 @@ ${priorList}
       });
     }
 
-    return new Response(JSON.stringify(parsed), {
+    const sanitized = sanitizeUnsupportedNarratorNames(parsed);
+
+    return new Response(JSON.stringify(sanitized), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (e) {

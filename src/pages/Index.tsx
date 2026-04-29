@@ -1,4 +1,4 @@
-import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap, UserCog, Lock, Clapperboard } from "lucide-react";
+import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap, UserCog, Lock, Clapperboard, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -10,6 +10,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
 import { IDIOMS } from "@/data/idioms";
 import { SCENE_DIALOGUES } from "@/data/scenes";
+import { WORK_CATEGORIES } from "@/data/workplace";
 
 const Index = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -161,6 +162,22 @@ const Index = () => {
         <div className="relative flex-1 min-w-0">
           <div className="text-sm font-extrabold md:text-base">🎬 场景对话 · {SCENE_DIALOGUES.length} 组</div>
           <div className="mt-0.5 truncate text-xs opacity-90">14 个生活场景 · 1900 句地道表达</div>
+        </div>
+        <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
+      </Link>
+
+      {/* Workplace English entry */}
+      <Link
+        to="/workplace"
+        className="group relative mb-8 flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 via-slate-700 to-amber-600 p-4 text-white shadow-tile transition-transform hover:-translate-y-0.5"
+      >
+        <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/15 blur-xl" />
+        <div className="relative grid size-11 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
+          <Briefcase className="size-5" />
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <div className="text-sm font-extrabold md:text-base">💼 职场英语 · {WORK_CATEGORIES.length} 个场景</div>
+          <div className="mt-0.5 truncate text-xs opacity-90">湾区职场真实对话 · 高频表达 · 每月更新</div>
         </div>
         <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
       </Link>

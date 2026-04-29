@@ -99,24 +99,33 @@ const Level = () => {
 
               <Link to={`/level/${level.id}/unit/${u.id}`} className="mt-3 block text-sm text-muted-foreground">{u.desc}</Link>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                {u.lessons.map((l) => {
+              <div className="mt-4 flex items-center gap-0">
+                {u.lessons.map((l, idx) => {
                   const cls =
                     l.status === "done"
                       ? "bg-success text-success-foreground"
                       : l.status === "current"
-                        ? "bg-primary text-primary-foreground"
+                        ? "bg-primary text-primary-foreground ring-2 ring-primary/30 ring-offset-2 ring-offset-card scale-110"
                         : "bg-secondary text-muted-foreground";
+                  const prev = idx > 0 ? u.lessons[idx - 1] : null;
+                  const connectorDone = prev && prev.status === "done";
                   return (
-                    <Link
-                      key={l.id}
-                      to={`/level/${level.id}/unit/${u.id}/lesson/${l.id}`}
-                      onClick={(e) => e.stopPropagation()}
-                      className={`grid size-8 place-items-center rounded-lg text-xs font-bold transition hover:scale-110 ${cls}`}
-                      aria-label={`课程 ${l.id}`}
-                    >
-                      {l.id}
-                    </Link>
+                    <div key={l.id} className="flex items-center">
+                      {idx > 0 && (
+                        <span
+                          aria-hidden
+                          className={`mx-1 block h-0.5 w-4 rounded-full transition-colors ${connectorDone ? "bg-success" : "bg-border"}`}
+                        />
+                      )}
+                      <Link
+                        to={`/level/${level.id}/unit/${u.id}/lesson/${l.id}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className={`grid size-8 place-items-center rounded-lg text-xs font-bold transition hover:scale-110 ${cls}`}
+                        aria-label={`课程 ${l.id}${l.status === "done" ? "（已完成）" : l.status === "current" ? "（进行中）" : ""}`}
+                      >
+                        {l.status === "done" ? <Check className="size-4" strokeWidth={3} /> : l.id}
+                      </Link>
+                    </div>
                   );
                 })}
               </div>

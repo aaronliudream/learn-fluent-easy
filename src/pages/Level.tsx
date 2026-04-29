@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { Award, BookOpen, Briefcase, Check, Cloud, Flame, Map, ShoppingBag, Star, TrendingUp } from "lucide-react";
+import { Award, BookOpen, Briefcase, Check, Cloud, Flame, Lock, Map, ShoppingBag, Star, TrendingUp } from "lucide-react";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 
@@ -9,6 +9,30 @@ const Level = () => {
   const { levelId } = useParams();
   const level = LEVELS.find((l) => l.id === Number(levelId));
   if (!level) return <div className="p-10">级别不存在</div>;
+
+  if (level.locked) {
+    return (
+      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+        <PageHeader title={level.name} subtitle="内容更新中" back="/" />
+        <section className={`relative overflow-hidden rounded-3xl ${level.gradient} p-10 text-center text-white shadow-tile`}>
+          <span className="pointer-events-none absolute -right-16 -top-20 size-72 rounded-full bg-white/15 blur-2xl" />
+          <div className="relative mx-auto grid size-16 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+            <Lock className="size-8" />
+          </div>
+          <h2 className="relative mt-5 text-2xl font-extrabold">{level.name} · 内容更新中</h2>
+          <p className="relative mx-auto mt-2 max-w-md text-sm opacity-90">
+            我们正在精心打磨这个级别的课程内容，敬请期待。先去其他已开放的级别继续学习吧 ✨
+          </p>
+          <Link
+            to="/"
+            className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-white/25 px-5 py-2.5 text-sm font-semibold backdrop-blur-sm transition hover:bg-white/35"
+          >
+            ← 返回首页
+          </Link>
+        </section>
+      </main>
+    );
+  }
 
   const allLessons = level.units.flatMap((u) => u.lessons);
   const done = allLessons.filter((l) => l.status === "done").length;

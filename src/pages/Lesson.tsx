@@ -385,9 +385,16 @@ const Lesson = () => {
     );
   }
 
-  // build vocab quiz: word -> meaning matching
-  const vocabQuizItems = content.vocab.slice(0, 4).map((v, idx) => {
-    const distractors = content.vocab.filter((x) => x.word !== v.word).slice(0, 3);
+  // Build vocab quiz: word -> meaning matching for EVERY vocab item.
+  // Distractors are picked from the other vocab in this lesson (rotated by
+  // index so each question gets a different set), with a stable order.
+  const vocabQuizItems = content.vocab.map((v, idx) => {
+    const others = content.vocab.filter((x) => x.word !== v.word);
+    // rotate so each question has a different distractor mix
+    const rotated = others.length > 0
+      ? [...others.slice(idx % others.length), ...others.slice(0, idx % others.length)]
+      : [];
+    const distractors = rotated.slice(0, 3);
     const opts = [...distractors.map((d) => d.meaning), v.meaning].sort();
     return {
       idx,

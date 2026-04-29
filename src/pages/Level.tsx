@@ -2,32 +2,34 @@ import { Link, useParams } from "react-router-dom";
 import { Award, BookOpen, Briefcase, Check, Cloud, Flame, Lock, Map, ShoppingBag, Star, TrendingUp } from "lucide-react";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
+import { T, useT } from "@/i18n/T";
 
 const ICONS = { star: Star, book: BookOpen, map: Map, shop: ShoppingBag, cloud: Cloud, briefcase: Briefcase } as const;
 
 const Level = () => {
+  const t = useT();
   const { levelId } = useParams();
   const level = LEVELS.find((l) => l.id === Number(levelId));
-  if (!level) return <div className="p-10">级别不存在</div>;
+  if (!level) return <div className="p-10">{t("级别不存在")}</div>;
 
   if (level.locked) {
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
-        <PageHeader title={level.name} subtitle="内容更新中" back="/" />
+        <PageHeader title={level.name} subtitle={t("内容更新中")} back="/" />
         <section className={`relative overflow-hidden rounded-3xl ${level.gradient} p-10 text-center text-white shadow-tile`}>
           <span className="pointer-events-none absolute -right-16 -top-20 size-72 rounded-full bg-white/15 blur-2xl" />
           <div className="relative mx-auto grid size-16 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
             <Lock className="size-8" />
           </div>
-          <h2 className="relative mt-5 text-2xl font-extrabold">{level.name} · 内容更新中</h2>
+          <h2 className="relative mt-5 text-2xl font-extrabold">{level.name} · <T>内容更新中</T></h2>
           <p className="relative mx-auto mt-2 max-w-md text-sm opacity-90">
-            我们正在精心打磨这个级别的课程内容，敬请期待。先去其他已开放的级别继续学习吧 ✨
+            <T>我们正在精心打磨这个级别的课程内容，敬请期待。先去其他已开放的级别继续学习吧 ✨</T>
           </p>
           <Link
             to="/"
             className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-white/25 px-5 py-2.5 text-sm font-semibold backdrop-blur-sm transition hover:bg-white/35"
           >
-            ← 返回首页
+            ← <T>返回首页</T>
           </Link>
         </section>
       </main>
@@ -40,7 +42,7 @@ const Level = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title={level.name} subtitle="选择一个单元开始学习" back="/" />
+      <PageHeader title={level.name} subtitle={t("选择一个单元开始学习")} back="/" />
 
       {/* Hero stat card */}
       <section className="relative mb-8 overflow-hidden rounded-3xl bg-grad-hero p-7 text-white shadow-tile md:p-9">
@@ -48,7 +50,7 @@ const Level = () => {
         <div className="relative flex items-start justify-between gap-6">
           <div>
             <div className="text-2xl font-extrabold tracking-wider md:text-3xl">{level.name}</div>
-            <p className="mt-2 text-sm opacity-90">继续你的学习之旅</p>
+            <p className="mt-2 text-sm opacity-90"><T>继续你的学习之旅</T></p>
           </div>
           {/* progress ring */}
           <div
@@ -60,7 +62,7 @@ const Level = () => {
             <div className="absolute inset-1.5 grid place-items-center rounded-full bg-grad-hero">
               <div className="text-center leading-none">
                 <div className="text-xl font-extrabold">{pct}%</div>
-                <div className="mt-1 text-[10px] opacity-80">已完成</div>
+                <div className="mt-1 text-[10px] opacity-80"><T>已完成</T></div>
               </div>
             </div>
           </div>
@@ -68,9 +70,9 @@ const Level = () => {
 
         <div className="relative mt-7 grid grid-cols-3 gap-3 md:gap-4">
           {[
-            { icon: Flame, value: 7, label: "连续天数", color: "text-orange-200" },
-            { icon: Award, value: done, label: "已完成", color: "text-amber-200" },
-            { icon: TrendingUp, value: "8.5", label: "小时学习", color: "text-emerald-200" },
+            { icon: Flame, value: 7, label: t("连续天数"), color: "text-orange-200" },
+            { icon: Award, value: done, label: t("已完成"), color: "text-amber-200" },
+            { icon: TrendingUp, value: "8.5", label: t("小时学习"), color: "text-emerald-200" },
           ].map((s) => (
             <div
               key={s.label}
@@ -88,7 +90,7 @@ const Level = () => {
       <section className="space-y-4">
         {level.units.length === 0 && (
           <div className="rounded-2xl border-2 border-dashed border-border bg-card p-10 text-center text-muted-foreground">
-            该级别正在准备中…
+            <T>该级别正在准备中…</T>
           </div>
         )}
         {level.units.map((u) => {
@@ -110,18 +112,18 @@ const Level = () => {
                   </div>
                   <div className="min-w-0">
                     <div className="text-xs font-medium text-muted-foreground">Unit {u.id}</div>
-                    <h3 className="truncate text-lg font-bold text-foreground md:text-xl">{u.title}</h3>
+                    <h3 className="truncate text-lg font-bold text-foreground md:text-xl"><T>{u.title}</T></h3>
                   </div>
                 </div>
                 <div className="text-right">
                   <div className={`text-2xl font-extrabold ${pctU === 100 ? "text-success" : "text-primary"}`}>
                     {pctU}%
                   </div>
-                  <div className="text-xs text-muted-foreground">已完成</div>
+                  <div className="text-xs text-muted-foreground"><T>已完成</T></div>
                 </div>
               </Link>
 
-              <Link to={`/level/${level.id}/unit/${u.id}`} className="mt-3 block text-sm text-muted-foreground">{u.desc}</Link>
+              <Link to={`/level/${level.id}/unit/${u.id}`} className="mt-3 block text-sm text-muted-foreground"><T>{u.desc}</T></Link>
 
               <div className="mt-4 flex items-center gap-0">
                 {u.lessons.map((l, idx) => {
@@ -145,7 +147,7 @@ const Level = () => {
                         to={`/level/${level.id}/unit/${u.id}/lesson/${l.id}`}
                         onClick={(e) => e.stopPropagation()}
                         className={`grid size-8 place-items-center rounded-lg text-xs font-bold transition hover:scale-110 ${cls}`}
-                        aria-label={`课程 ${l.id}${l.status === "done" ? "（已完成）" : l.status === "current" ? "（进行中）" : ""}`}
+                        aria-label={t(`课程 ${l.id}${l.status === "done" ? "（已完成）" : l.status === "current" ? "（进行中）" : ""}`)}
                       >
                         {l.status === "done" ? <Check className="size-4" strokeWidth={3} /> : l.id}
                       </Link>
@@ -162,7 +164,7 @@ const Level = () => {
                   {u.hours}
                 </span>
                 <span className="font-semibold text-foreground/70">
-                  {doneU}/{u.lessons.length} 课程
+                  {doneU}/{u.lessons.length} <T>课程</T>
                 </span>
               </Link>
             </div>

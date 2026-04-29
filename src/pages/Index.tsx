@@ -8,11 +8,13 @@ import { toast } from "sonner";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
+import { IDIOMS } from "@/data/idioms";
 
 const Index = () => {
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
+  const [slangCount, setSlangCount] = useState<number>(IDIOMS.length);
 
   useEffect(() => {
     touchActive();
@@ -22,6 +24,24 @@ const Index = () => {
     });
     supabase.auth.getSession().then(({ data: { session } }) => setUser(session?.user ?? null));
     return () => subscription.unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const { data, error } = await supabase
+        .from("daily_slang")
+        .select("phrase");
+      if (cancelled || error || !data) return;
+      const staticPhrases = new Set(IDIOMS.map((i) => i.phrase.toLowerCase()));
+      const extra = new Set<string>();
+      for (const row of data) {
+        const p = (row.phrase || "").toLowerCase();
+        if (p && !staticPhrases.has(p)) extra.add(p);
+      }
+      setSlangCount(IDIOMS.length + extra.size);
+    })();
+    return () => { cancelled = true; };
   }, []);
 
   const signOut = async () => {
@@ -99,7 +119,7 @@ const Index = () => {
             <Zap className="size-5" />
           </div>
           <div className="relative flex-1 min-w-0">
-            <div className="text-sm font-extrabold md:text-base">美国流行俚语 · 346 条</div>
+            <div className="text-sm font-extrabold md:text-base">美国流行俚语 · {slangCount} 条</div>
             <div className="mt-0.5 truncate text-xs opacity-90">TikTok / Z 世代 / 社交媒体 · 每条带例句</div>
           </div>
           <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />

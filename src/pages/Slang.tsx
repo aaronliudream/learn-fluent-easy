@@ -282,6 +282,18 @@ const Slang = () => {
     setMasteryVersion((v) => v + 1);
   }, [revealed, qIdx, questions, picks]);
 
+  // After revealing the answer, always read aloud the correct English example
+  // sentence — "ear training" reinforces audio memory regardless of correctness.
+  useEffect(() => {
+    if (!revealed) return;
+    const q = questions[qIdx];
+    if (!q) return;
+    const t = window.setTimeout(() => {
+      speak(q.idiom.example);
+    }, 350);
+    return () => window.clearTimeout(t);
+  }, [revealed, qIdx, questions]);
+
   // Reset the review counter when entering quiz so a fresh browse session starts after.
   useEffect(() => {
     if (mode === "browse") {
@@ -360,7 +372,7 @@ const Slang = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <h3 className="text-lg font-extrabold">{it.phrase}</h3>
+                      <h3 className="text-xl font-extrabold md:text-lg">{it.phrase}</h3>
                       <button
                         onClick={() => speak(it.phrase)}
                         className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
@@ -374,14 +386,14 @@ const Slang = () => {
                         </span>
                       )}
                     </div>
-                    <div className="mt-0.5 text-sm font-semibold text-primary">
+                    <div className="mt-0.5 text-base font-semibold text-primary md:text-sm">
                       {it.meaning_cn}
                     </div>
-                    <div className="mt-1 text-xs text-muted-foreground">{it.meaning_en}</div>
+                    <div className="mt-1 text-sm text-muted-foreground md:text-xs">{it.meaning_en}</div>
 
-                    <div className="mt-3 rounded-xl border border-border bg-secondary/30 p-3 text-sm">
+                    <div className="mt-3 rounded-xl border border-border bg-secondary/30 p-3 text-base md:text-sm">
                       <div className="flex items-start gap-2">
-                        <span className="mt-0.5 text-[10px] font-bold text-muted-foreground">EN</span>
+                        <span className="mt-1 text-[11px] font-bold text-muted-foreground md:text-[10px]">EN</span>
                         <span className="flex-1">{it.example}</span>
                         <button
                           onClick={() => speak(it.example)}
@@ -392,7 +404,7 @@ const Slang = () => {
                         </button>
                       </div>
                       <div className="mt-1.5 flex items-start gap-2">
-                        <span className="mt-0.5 text-[10px] font-bold text-muted-foreground">CN</span>
+                        <span className="mt-1 text-[11px] font-bold text-muted-foreground md:text-[10px]">CN</span>
                         <span className="flex-1 text-muted-foreground">{it.example_cn}</span>
                       </div>
                     </div>

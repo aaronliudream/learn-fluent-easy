@@ -18,6 +18,7 @@ import {
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { speak } from "@/lib/speak";
+import { T } from "@/i18n/T";
 import {
   buildSectionPool,
   pickAdaptive,
@@ -34,10 +35,10 @@ const SECTIONS: Section[] = ["vocab", "grammar", "reading", "listening"];
 const QS_PER_SECTION = 6; // adaptive: shorter but more accurate
 const TOTAL_QS = SECTIONS.length * QS_PER_SECTION; // 24
 const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
-  vocab: { cn: "词汇", icon: BookOpen, color: "bg-pink-500/15 text-pink-500" },
-  grammar: { cn: "语法", icon: FileText, color: "bg-sky-500/15 text-sky-500" },
-  reading: { cn: "阅读", icon: Languages, color: "bg-violet-500/15 text-violet-500" },
-  listening: { cn: "听力", icon: Headphones, color: "bg-indigo-500/15 text-indigo-500" },
+  vocab: { cn: "Vocabulary", icon: BookOpen, color: "bg-pink-500/15 text-pink-500" },
+  grammar: { cn: "Grammar", icon: FileText, color: "bg-sky-500/15 text-sky-500" },
+  reading: { cn: "Reading", icon: Languages, color: "bg-violet-500/15 text-violet-500" },
+  listening: { cn: "Listening", icon: Headphones, color: "bg-indigo-500/15 text-indigo-500" },
 };
 
 type Stage = "intro" | "test" | "result";
@@ -187,40 +188,38 @@ const Placement = () => {
   if (stage === "intro") {
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
-        <PageHeader title="英语水平测试" subtitle="自适应难度 · 找到你真正的等级" back="/" />
+        <PageHeader title="English Placement Test" subtitle="Adaptive · find your real level" back="/" />
 
         <div className="overflow-hidden rounded-3xl bg-grad-title p-7 text-white shadow-tile md:p-9">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold backdrop-blur-sm">
-            <TrendingUp className="size-3.5" /> 自适应难度 · 参照 CEFR 标准
+            <TrendingUp className="size-3.5" /> <T>自适应难度 · 参照 CEFR 标准</T>
           </div>
-          <h2 className="text-2xl font-extrabold md:text-3xl">英语水平定级测试</h2>
+          <h2 className="text-2xl font-extrabold md:text-3xl"><T>英语水平定级测试</T></h2>
           <p className="mt-2 text-sm text-white/90 md:text-base">
-            参照欧洲共同语言参考框架 (CEFR) 的 A1–C1 等级标准，
-            通过自适应算法判断你的真实水平：答对升级，答错降级，
-            用最少的题目得到最准确的结果。
+            <T>参照欧洲共同语言参考框架 (CEFR) 的 A1–C1 等级标准，通过自适应算法判断你的真实水平：答对升级，答错降级，用最少的题目得到最准确的结果。</T>
           </p>
 
           <div className="mt-6 grid grid-cols-3 gap-3">
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <Clock className="mb-1 size-5" />
-              <div className="text-lg font-bold">≤ 25 分钟</div>
-              <div className="text-[11px] text-white/80">限时</div>
+              <div className="text-lg font-bold">≤ 25 min</div>
+              <div className="text-[11px] text-white/80"><T>限时</T></div>
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <Target className="mb-1 size-5" />
-              <div className="text-lg font-bold">{TOTAL_QS} 题</div>
-              <div className="text-[11px] text-white/80">四模块自适应</div>
+              <div className="text-lg font-bold">{TOTAL_QS} Q</div>
+              <div className="text-[11px] text-white/80"><T>四模块自适应</T></div>
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <Award className="mb-1 size-5" />
               <div className="text-lg font-bold">A1–C2</div>
-              <div className="text-[11px] text-white/80">CEFR 全六级</div>
+              <div className="text-[11px] text-white/80"><T>CEFR 全六级</T></div>
             </div>
           </div>
         </div>
 
         <section className="mt-6 rounded-3xl bg-card p-6 shadow-card md:p-8">
-          <h3 className="text-lg font-bold">测试包含 4 个模块</h3>
+          <h3 className="text-lg font-bold"><T>测试包含 4 个模块</T></h3>
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {(["vocab", "grammar", "reading", "listening"] as Section[]).map((s) => {
               const m = SECTION_META[s];
@@ -231,8 +230,8 @@ const Placement = () => {
                     <Icon className="size-5" />
                   </div>
                   <div>
-                    <div className="font-bold">{m.cn}</div>
-                    <div className="text-xs text-muted-foreground">{QS_PER_SECTION} 题 · 难度自动调节</div>
+                    <div className="font-bold"><T>{m.cn}</T></div>
+                    <div className="text-xs text-muted-foreground">{QS_PER_SECTION} · <T>难度自动调节</T></div>
                   </div>
                 </div>
               );
@@ -240,26 +239,23 @@ const Placement = () => {
           </div>
 
           <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> 独立题库 · 覆盖 A1 → C2 全六级，全部题目唯一不重复</li>
-            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> 自适应难度：答对升一级，答错降一级，快速锁定真实水平</li>
-            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> 完成后给出 CEFR 等级 + 推荐 LEVEL 1–6 的具体学习起点</li>
+            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>独立题库 · 覆盖 A1 → C2 全六级，全部题目唯一不重复</T></li>
+            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>自适应难度：答对升一级，答错降一级，快速锁定真实水平</T></li>
+            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>完成后给出 CEFR 等级 + 推荐 LEVEL 1–6 的具体学习起点</T></li>
           </ul>
 
           <div className="mt-5 flex gap-3 rounded-2xl border border-border bg-secondary/40 p-4 text-xs leading-relaxed text-muted-foreground">
             <Info className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
             <div>
-              <strong className="text-foreground">关于"权威性"的说明：</strong>
-              本测试为本平台的<strong>内部水平评估</strong>，依据 CEFR 公开等级描述设计，
-              用于推荐合适的学习起点。它<strong>不是</strong>剑桥、雅思、托福、CEFR 官方认证考试，
-              结果仅供学习参考，不可作为留学/求职的官方证明。
+              <T>关于"权威性"的说明：本测试为本平台的内部水平评估，依据 CEFR 公开等级描述设计，用于推荐合适的学习起点。它不是剑桥、雅思、托福、CEFR 官方认证考试，结果仅供学习参考，不可作为留学/求职的官方证明。</T>
             </div>
           </div>
 
           <Button size="lg" className="mt-6 w-full" onClick={start}>
-            开始测试 →
+            <T>开始测试</T> →
           </Button>
           <p className="mt-3 text-center text-xs text-muted-foreground">
-            建议在安静环境中一次性完成，途中关闭页面会丢失进度
+            <T>建议在安静环境中一次性完成，途中关闭页面会丢失进度</T>
           </p>
         </section>
       </main>
@@ -286,8 +282,8 @@ const Placement = () => {
               <Icon className="size-4" />
             </div>
             <div>
-              <div className="text-sm font-bold">{meta.cn} <span className="ml-1 rounded bg-secondary px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground">L{q.level}</span></div>
-              <div className="text-[11px] text-muted-foreground">第 {idx + 1} / {TOTAL_QS} 题</div>
+              <div className="text-sm font-bold"><T>{meta.cn}</T> <span className="ml-1 rounded bg-secondary px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground">L{q.level}</span></div>
+              <div className="text-[11px] text-muted-foreground">{idx + 1} / {TOTAL_QS}</div>
             </div>
           </div>
           <div className={`flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-sm font-bold ${lowTime ? "bg-rose-500/15 text-rose-600" : "bg-secondary text-foreground"}`}>
@@ -310,7 +306,7 @@ const Placement = () => {
               onClick={() => speak(q.context!)}
               className="mb-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-grad-title py-3 font-semibold text-white shadow-tile"
             >
-              <Volume2 className="size-5" /> 播放音频
+              <Volume2 className="size-5" /> <T>播放音频</T>
             </button>
           )}
           {q.section === "reading" && q.context && (
@@ -350,20 +346,20 @@ const Placement = () => {
         {/* Nav */}
         <div className="mt-6 flex items-center justify-between gap-3">
           <span className="text-xs text-muted-foreground">
-            {picked === undefined ? "请选择一个答案" : "已记录答案，点击下方按钮继续"}
+            {picked === undefined ? <T>请选择一个答案</T> : <T>已记录答案，点击下方按钮继续</T>}
           </span>
-          <span className="text-sm text-muted-foreground">已答 {answered} / {TOTAL_QS}</span>
+          <span className="text-sm text-muted-foreground"><T>已答</T> {answered} / {TOTAL_QS}</span>
           {isLast ? (
             <Button
               onClick={finish}
               disabled={picked === undefined}
               className="bg-emerald-600 hover:bg-emerald-600/90"
             >
-              提交测试
+              <T>提交测试</T>
             </Button>
           ) : (
             <Button onClick={goNext} disabled={picked === undefined}>
-              下一题 →
+              <T>下一题</T> →
             </Button>
           )}
         </div>
@@ -376,36 +372,36 @@ const Placement = () => {
     const desc = CEFR_DESC[result.cefr];
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
-        <PageHeader title="测试结果" subtitle="基于 CEFR 标准评估" back="/" />
+        <PageHeader title="Test Result" subtitle="Based on CEFR" back="/" />
 
         <div className="overflow-hidden rounded-3xl bg-grad-title p-8 text-center text-white shadow-tile md:p-10">
           <div className="mx-auto mb-3 grid size-16 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
             <Award className="size-8" />
           </div>
-          <div className="text-sm opacity-90">你的 CEFR 等级</div>
+          <div className="text-sm opacity-90"><T>你的 CEFR 等级</T></div>
           <div className="mt-1 text-6xl font-black tracking-tight md:text-7xl">{result.cefr}</div>
-          <div className="mt-2 text-base font-semibold">{desc.name}</div>
-          <p className="mx-auto mt-2 max-w-md text-sm text-white/90">{desc.tag}</p>
+          <div className="mt-2 text-base font-semibold"><T>{desc.name}</T></div>
+          <p className="mx-auto mt-2 max-w-md text-sm text-white/90"><T>{desc.tag}</T></p>
 
           <div className="mt-6 grid grid-cols-3 gap-3">
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <div className="text-2xl font-extrabold">{result.ability.toFixed(1)}</div>
-              <div className="text-[11px] text-white/80">能力估值 (1.0–6.5)</div>
+              <div className="text-[11px] text-white/80"><T>能力估值 (1.0–6.5)</T></div>
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <div className="text-2xl font-extrabold">{result.weighted}</div>
-              <div className="text-[11px] text-white/80">加权得分</div>
+              <div className="text-[11px] text-white/80"><T>加权得分</T></div>
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <div className="text-2xl font-extrabold">{result.correct}/{result.total}</div>
-              <div className="text-[11px] text-white/80">答对题数</div>
+              <div className="text-[11px] text-white/80"><T>答对题数</T></div>
             </div>
           </div>
         </div>
 
         {/* Section breakdown */}
         <section className="mt-6 rounded-3xl bg-card p-6 shadow-card md:p-8">
-          <h3 className="text-lg font-bold">分模块表现</h3>
+          <h3 className="text-lg font-bold"><T>分模块表现</T></h3>
           <div className="mt-4 space-y-3">
             {(Object.keys(SECTION_META) as Section[]).map((s) => {
               const m = SECTION_META[s];
@@ -419,8 +415,8 @@ const Placement = () => {
                       <Icon className="size-4" />
                     </div>
                     <div className="flex-1">
-                      <div className="font-bold">{m.cn}</div>
-                      <div className="text-xs text-muted-foreground">{r.correct}/{r.total} 答对</div>
+                      <div className="font-bold"><T>{m.cn}</T></div>
+                      <div className="text-xs text-muted-foreground">{r.correct}/{r.total}</div>
                     </div>
                     <div className="text-lg font-extrabold">{pct}%</div>
                   </div>
@@ -442,18 +438,18 @@ const Placement = () => {
             <Sparkles className="size-7" />
           </div>
           <div className="flex-1">
-            <div className="text-xs font-semibold uppercase tracking-wider text-primary">综合推荐起点</div>
-            <div className="mt-1 text-lg font-extrabold">从 LEVEL {result.recommendedLevel} 开始学习</div>
-            <div className="text-sm text-muted-foreground">基于四模块平均能力 · 点击进入该等级</div>
+            <div className="text-xs font-semibold uppercase tracking-wider text-primary"><T>综合推荐起点</T></div>
+            <div className="mt-1 text-lg font-extrabold"><T>从 LEVEL</T> {result.recommendedLevel} <T>开始学习</T></div>
+            <div className="text-sm text-muted-foreground"><T>基于四模块平均能力 · 点击进入该等级</T></div>
           </div>
           <Ear className="size-5 text-primary" />
         </Link>
 
         {/* Per-section study plan */}
         <section className="mt-6 rounded-3xl bg-card p-6 shadow-card md:p-8">
-          <h3 className="text-lg font-bold">个性化学习建议</h3>
+          <h3 className="text-lg font-bold"><T>个性化学习建议</T></h3>
           <p className="mt-1 text-xs text-muted-foreground">
-            根据你在 4 个模块的真实表现，分别推荐适合的 LEVEL 与单元起点。
+            <T>根据你在 4 个模块的真实表现，分别推荐适合的 LEVEL 与单元起点。</T>
           </p>
           <div className="mt-4 space-y-3">
             {result.recommendations.map((rec) => {
@@ -474,22 +470,22 @@ const Placement = () => {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
-                        <span className="font-bold">{rec.cnSection}</span>
+                        <span className="font-bold"><T>{rec.cnSection}</T></span>
                         {isWeak && (
                           <span className="rounded-full bg-amber-500/20 px-2 py-0.5 text-[10px] font-semibold text-amber-700">
-                            最薄弱 · 优先强化
+                            <T>最薄弱 · 优先强化</T>
                           </span>
                         )}
                       </div>
                       <div className="text-xs text-muted-foreground">
-                        正确率 {rec.pct}% · 推荐难度 LEVEL {rec.level}
+                        <T>正确率</T> {rec.pct}% · <T>推荐难度</T> LEVEL {rec.level}
                       </div>
                     </div>
                     <div className="text-2xl font-black text-primary">L{rec.level}</div>
                   </div>
                   <div className="mt-3 rounded-xl bg-card p-3 text-sm">
-                    <div className="font-semibold text-foreground">📚 推荐起点：{rec.unitTitle}</div>
-                    <div className="mt-1 text-xs leading-relaxed text-muted-foreground">{rec.advice}</div>
+                    <div className="font-semibold text-foreground">📚 <T>推荐起点</T>：<T>{rec.unitTitle}</T></div>
+                    <div className="mt-1 text-xs leading-relaxed text-muted-foreground"><T>{rec.advice}</T></div>
                   </div>
                 </Link>
               );
@@ -499,10 +495,10 @@ const Placement = () => {
 
         <div className="mt-6 flex gap-3">
           <Button variant="outline" className="flex-1" onClick={() => setStage("intro")}>
-            重新测试
+            <T>重新测试</T>
           </Button>
           <Button className="flex-1" onClick={() => navigate("/")}>
-            返回首页
+            <T>返回首页</T>
           </Button>
         </div>
 

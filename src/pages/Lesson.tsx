@@ -33,6 +33,7 @@ const PREGEN_MAP = PREGENERATED_LESSONS as unknown as Record<string, LessonConte
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
+import { T } from "@/i18n/T";
 import { findNextLesson, isMastered, setLastVisited, setMastered } from "@/lib/mastery";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -454,13 +455,13 @@ const Lesson = () => {
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
         <PageHeader
           title={`Lesson ${lesson.id} · ${lesson.title}`}
-          subtitle="正在为你生成本课内容…"
+          subtitle={""}
           back={`/level/${levelId}/unit/${unitId}`}
         />
         <div className="grid place-items-center rounded-3xl bg-card p-10 shadow-card">
           <Sparkles className="mb-3 size-8 animate-pulse text-primary" />
-          <p className="text-base font-semibold">AI 正在为你定制本课…</p>
-          <p className="mt-1 text-sm text-muted-foreground">通常需要 5–15 秒</p>
+          <p className="text-base font-semibold"><T>AI 正在为你定制本课…</T></p>
+          <p className="mt-1 text-sm text-muted-foreground"><T>通常需要 5–15 秒</T></p>
         </div>
       </main>
     );
@@ -540,7 +541,7 @@ const Lesson = () => {
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
         title={`Lesson ${lesson.id} · ${lesson.title}`}
-        subtitle="跟随步骤完成本课学习"
+        subtitle=""
         back={`/level/${levelId}/unit/${unitId}`}
       />
 
@@ -552,7 +553,7 @@ const Lesson = () => {
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/20"
         >
           <Volume2 className="size-4" />
-          播放整篇朗读 Listen to article
+          <T>播放整篇朗读</T> · Listen to article
         </button>
       </div>
 
@@ -580,26 +581,28 @@ const Lesson = () => {
           </div>
           <div>
             <div className="text-sm font-bold">
-              {mastered
-                ? "已掌握 Mastered"
-                : totalCorrect > 0
-                  ? "学习中 In progress"
-                  : "未掌握 Not started"}
+              {mastered ? (
+                <><T>已掌握</T> · Mastered</>
+              ) : totalCorrect > 0 ? (
+                <><T>学习中</T> · In progress</>
+              ) : (
+                <><T>未掌握</T> · Not started</>
+              )}
             </div>
             <div className="text-xs text-muted-foreground">
-              测试得分 {totalCorrect} / {totalQuestions} · 全部答对自动标记为掌握
+              <T>测试得分</T> {totalCorrect} / {totalQuestions} · <T>全部答对自动标记为掌握</T>
             </div>
           </div>
         </div>
         <div className="text-xs text-muted-foreground">
-          阅读 {quizScore.correct}/{quizScore.total} · 词汇 {vocabScore.correct}/{vocabScore.total} · 选词 {fillScore.correct}/{fillScore.total} · 听力 {listenScore.correct}/{listenScore.total}
+          <T>阅读</T> {quizScore.correct}/{quizScore.total} · <T>词汇</T> {vocabScore.correct}/{vocabScore.total} · <T>选词</T> {fillScore.correct}/{fillScore.total} · <T>听力</T> {listenScore.correct}/{listenScore.total}
         </div>
       </div>
 
       {/* Steps */}
       <section className="mb-8 rounded-3xl bg-card p-5 shadow-card md:p-7">
         <div className="mb-5 flex items-baseline gap-2">
-          <h2 className="text-lg font-bold">学习步骤</h2>
+          <h2 className="text-lg font-bold"><T>学习步骤</T></h2>
           <span className="text-sm text-muted-foreground">· STEPS</span>
           <div className="ml-2 h-0.5 w-10 rounded bg-grad-title" />
         </div>
@@ -647,8 +650,8 @@ const Lesson = () => {
           <SectionHeader
             icon={<Star className="size-6" fill="currentColor" />}
             color="bg-pink-500/15 text-pink-500"
-            title="词汇学习 Vocabulary"
-            subtitle="学习本课的核心词汇"
+            title="Vocabulary"
+            subtitle=""
           />
           <div className="space-y-4">
             {content.vocab.map((v, i) => (
@@ -687,8 +690,8 @@ const Lesson = () => {
           <SectionHeader
             icon={<Target className="size-6" />}
             color="bg-orange-500/15 text-orange-500"
-            title="词汇测试 Vocab Quiz"
-            subtitle="选出每个单词正确的含义"
+            title="Vocab Quiz"
+            subtitle=""
           />
           <div className="space-y-5">
             {vocabQuizItems.map((q) => {
@@ -743,8 +746,8 @@ const Lesson = () => {
           <SectionHeader
             icon={<Book className="size-6" />}
             color="bg-violet-500/15 text-violet-500"
-            title="课文阅读 Reading"
-            subtitle="点击右侧喇叭收听任意一句"
+            title="Reading"
+            subtitle=""
           />
           <div className="space-y-5">
             {content.reading.map((p, i) => (
@@ -786,7 +789,7 @@ const Lesson = () => {
               onClick={() => speak(content.reading.map((r) => r.en).join(" "))}
               className="w-full rounded-2xl bg-grad-title py-3 font-semibold text-white shadow-tile"
             >
-              ▶ 播放整篇朗读
+              ▶ <T>播放整篇朗读</T>
             </button>
           </div>
         </section>
@@ -798,8 +801,8 @@ const Lesson = () => {
           <SectionHeader
             icon={<FileText className="size-6" />}
             color="bg-sky-500/15 text-sky-500"
-            title="语法重点 Grammar"
-            subtitle="掌握本课关键句型"
+            title="Grammar"
+            subtitle=""
           />
           <div className="space-y-5">
             {content.grammar.map((g, i) => (
@@ -834,8 +837,8 @@ const Lesson = () => {
           <SectionHeader
             icon={<MessageCircle className="size-6" />}
             color="bg-teal-500/15 text-teal-500"
-            title="实用表达 Expressions"
-            subtitle="日常场景常用句型"
+            title="Expressions"
+            subtitle=""
           />
           <div className="grid gap-3 md:grid-cols-2">
             {content.expressions.map((e, i) => (
@@ -868,8 +871,8 @@ const Lesson = () => {
           <SectionHeader
             icon={<Pencil className="size-6" />}
             color="bg-amber-500/15 text-amber-500"
-            title="选词填空 Fill-in"
-            subtitle="选择最合适的单词填入空格"
+            title="Fill-in"
+            subtitle=""
           />
           <div className="space-y-5">
             {content.fillBlanks.map((f, i) => {
@@ -957,8 +960,8 @@ const Lesson = () => {
           <SectionHeader
             icon={<HelpCircle className="size-6" />}
             color="bg-fuchsia-500/15 text-fuchsia-500"
-            title="阅读测验 Quiz"
-            subtitle="检验对课文的理解"
+            title="Quiz"
+            subtitle=""
           />
           <div className="space-y-5">
             {content.quiz.map((q, i) => {
@@ -1011,8 +1014,8 @@ const Lesson = () => {
           <SectionHeader
             icon={<Headphones className="size-6" />}
             color="bg-indigo-500/15 text-indigo-500"
-            title="听力填空 Listening"
-            subtitle="逐题点击播放，听完一题再做下一题"
+            title="Listening"
+            subtitle=""
           />
           <div className="space-y-3">
             {content.listening.blanks.map((b, i) => {
@@ -1085,8 +1088,8 @@ const Lesson = () => {
           <SectionHeader
             icon={<Mic className="size-6" />}
             color="bg-rose-500/15 text-rose-500"
-            title="实战产出 Output"
-            subtitle="把所学应用到真实表达"
+            title="Output"
+            subtitle=""
           />
           <div className="rounded-2xl border border-border bg-secondary/30 p-5">
             <p className="font-semibold">{content.output.prompt}</p>
@@ -1101,7 +1104,7 @@ const Lesson = () => {
           />
           <details className="mt-4 rounded-2xl border border-border bg-secondary/30 p-5">
             <summary className="cursor-pointer font-semibold text-primary">
-              <Sparkles className="mr-1 inline size-4" /> 查看范文
+              <Sparkles className="mr-1 inline size-4" /> <T>查看范文</T>
             </summary>
             <p className="mt-3 text-sm leading-relaxed text-foreground/85">
               {content.output.sample}
@@ -1111,7 +1114,7 @@ const Lesson = () => {
             onClick={() => speak(content.output.sample)}
             className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-grad-title py-3 font-semibold text-white shadow-tile"
           >
-            <Volume2 className="size-5" /> 朗读范文
+            <Volume2 className="size-5" /> <T>朗读范文</T>
           </button>
 
           {/* Finish & AI check */}
@@ -1122,11 +1125,11 @@ const Lesson = () => {
           >
             {checking ? (
               <>
-                <Sparkles className="size-5 animate-pulse" /> AI 正在批改…
+                <Sparkles className="size-5 animate-pulse" /> <T>AI 正在批改…</T>
               </>
             ) : (
               <>
-                <CheckCircle2 className="size-5" /> 完成 · AI 检查并讲解
+                <CheckCircle2 className="size-5" /> <T>完成 · AI 检查并讲解</T>
               </>
             )}
           </button>
@@ -1201,7 +1204,7 @@ const Lesson = () => {
           disabled={activeStep === 1}
           className="rounded-full border border-border bg-card px-5 py-2 text-sm font-semibold disabled:opacity-40"
         >
-          ← 上一步
+          ← <T>上一步</T>
         </button>
         <span className="text-sm text-muted-foreground">
           {activeStep} / {LESSON_STEPS.length}
@@ -1211,7 +1214,7 @@ const Lesson = () => {
           disabled={activeStep === LESSON_STEPS.length}
           className="rounded-full bg-grad-title px-5 py-2 text-sm font-semibold text-white shadow-tile disabled:opacity-40"
         >
-          下一步 →
+          <T>下一步</T> →
         </button>
       </div>
 
@@ -1221,12 +1224,14 @@ const Lesson = () => {
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 text-base font-bold">
               <CheckCircle2 className={`size-5 ${mastered ? "text-emerald-500" : "text-muted-foreground"}`} />
-              {mastered ? "你已掌握本课" : "感觉已经掌握了？"}
+              {mastered ? <T>你已掌握本课</T> : <T>感觉已经掌握了？</T>}
             </div>
             <p className="mt-1 text-sm text-muted-foreground">
-              {mastered
-                ? "下次打开 App，我们会建议你继续学习下一课。"
-                : "标记为「已掌握」后，下次打开 App 会提醒你继续下一课。"}
+              {mastered ? (
+                <T>下次打开 App，我们会建议你继续学习下一课。</T>
+              ) : (
+                <T>标记为「已掌握」后，下次打开 App 会提醒你继续下一课。</T>
+              )}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3">
@@ -1238,14 +1243,14 @@ const Lesson = () => {
                   : "bg-grad-title text-white shadow-tile hover:opacity-95"
               }`}
             >
-              {mastered ? "✓ 已掌握 · 点击取消" : "🎯 标记为已掌握"}
+              {mastered ? <>✓ <T>已掌握 · 点击取消</T></> : <>🎯 <T>标记为已掌握</T></>}
             </button>
             {(() => {
               const next = findNextLesson(Number(levelId), Number(unitId), Number(lessonId));
               if (!next) {
                 return (
                   <span className="rounded-full border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-muted-foreground">
-                    🎉 全部课程已完成
+                    🎉 <T>全部课程已完成</T>
                   </span>
                 );
               }
@@ -1254,7 +1259,7 @@ const Lesson = () => {
                   to={`/level/${next.levelId}/unit/${next.unitId}/lesson/${next.lessonId}`}
                   className="rounded-full bg-grad-title px-5 py-2.5 text-sm font-semibold text-white shadow-tile transition hover:opacity-95"
                 >
-                  下一课 →
+                  <T>下一课</T> →
                 </Link>
               );
             })()}

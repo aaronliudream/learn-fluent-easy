@@ -123,6 +123,15 @@ const Lesson = () => {
     // When navigating to a new lesson, always start from step 1 (词汇学习)
     // and scroll back to the top of the page.
     setActiveStep(1);
+    // Reset all per-lesson interactive state so answers from a previous
+    // lesson don't leak into the next one.
+    setVocabQuiz({});
+    setFills({});
+    setQuizPicks({});
+    setListenInputs({});
+    setOutput("");
+    setFeedback(null);
+    recordedQuizRef.current = false;
     if (typeof window !== "undefined") {
       window.scrollTo({ top: 0, behavior: "auto" });
     }

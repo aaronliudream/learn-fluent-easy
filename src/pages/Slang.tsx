@@ -9,6 +9,7 @@ import {
   Volume2,
   XCircle,
   Zap,
+  X,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,7 @@ import { speak } from "@/lib/speak";
 import { toast } from "sonner";
 import {
   isMasteredSlang,
+  loadSlangMastery,
   recordSlangResult,
   sortByMastery,
 } from "@/lib/slangMastery";
@@ -39,8 +41,12 @@ type QuizQuestion = {
 
 const PER_PAGE = 12;
 const QUIZ_LEN = 10;
-// After the user has browsed this many pages, prompt them to test what they reviewed.
-const PAGES_BEFORE_QUIZ = 2;
+// A page counts as "browsed" once the user dwells on it for this long (ms).
+const DWELL_MS = 60_000;
+// After landing on a new page, wait this long before offering a quiz.
+const PROMPT_DELAY_MS = 10_000;
+// Need at least this many reviewed idioms before offering a quiz.
+const MIN_REVIEWED = 4;
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -145,10 +151,18 @@ const Slang = () => {
   const [search, setSearch] = useState("");
   // Bumped whenever mastery changes so the browse list re-sorts.
   const [masteryVersion, setMasteryVersion] = useState(0);
-  // Idioms the user has seen since the last quiz prompt.
+  // Idioms the user has *dwelled long enough* on since the last quiz.
   const reviewedIdsRef = useRef<Set<number>>(new Set());
-  const [pagesBrowsed, setPagesBrowsed] = useState(0);
-  const promptedRef = useRef(false);
+  // Re-render trigger for the floating "test N items" badge.
+  const [reviewedTick, setReviewedTick] = useState(0);
+  const [showInvite, setShowInvite] = useState(false);
+  // After the user dismisses the invite once, switch to the docked button.
+  const [dockedInvite, setDockedInvite] = useState(false);
+
+  // Load mastery from cloud once.
+  useEffect(() => {
+    loadSlangMastery().then(() => setMasteryVersion((v) => v + 1));
+  }, []);
 
   const filtered = useMemo(() => {
     const base = sortByMastery(IDIOMS);
@@ -168,30 +182,39 @@ const Slang = () => {
   const safePage = Math.min(page, totalPages - 1);
   const pageItems = filtered.slice(safePage * PER_PAGE, safePage * PER_PAGE + PER_PAGE);
 
-  // Track reviewed idioms + offer a quiz once the user has browsed enough pages.
+  // Per-page dwell + invite logic.
+  // After DWELL_MS on a page, mark its idioms as "reviewed".
+  // After PAGES change, wait PROMPT_DELAY_MS then show the invite (if not docked
+  // and there are enough reviewed items to test).
   useEffect(() => {
     if (mode !== "browse") return;
-    pageItems.forEach((it) => reviewedIdsRef.current.add(it.id));
-    setPagesBrowsed((n) => n + 1);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [safePage, mode]);
+    const itemsOnPage = pageItems.map((it) => it.id);
 
-  useEffect(() => {
-    if (mode !== "browse") return;
-    if (promptedRef.current) return;
-    if (pagesBrowsed < PAGES_BEFORE_QUIZ) return;
-    if (reviewedIdsRef.current.size < 4) return; // need enough material
-    promptedRef.current = true;
-    toast("📝 想测一下刚才学过的俚语吗？", {
-      description: `已浏览 ${reviewedIdsRef.current.size} 条 — 立刻小测，答对的会"沉底"，未掌握的优先复习。`,
-      duration: 12000,
-      action: {
-        label: "开始小测",
-        onClick: () => startReviewQuiz(),
-      },
-    });
+    // Mark this page as reviewed after dwell.
+    const dwellTimer = window.setTimeout(() => {
+      let added = false;
+      itemsOnPage.forEach((id) => {
+        if (!reviewedIdsRef.current.has(id)) {
+          reviewedIdsRef.current.add(id);
+          added = true;
+        }
+      });
+      if (added) setReviewedTick((n) => n + 1);
+    }, DWELL_MS);
+
+    // Offer to quiz the reviewed material 10s after arriving on this page.
+    const inviteTimer = window.setTimeout(() => {
+      if (dockedInvite) return;
+      if (reviewedIdsRef.current.size < MIN_REVIEWED) return;
+      setShowInvite(true);
+    }, PROMPT_DELAY_MS);
+
+    return () => {
+      window.clearTimeout(dwellTimer);
+      window.clearTimeout(inviteTimer);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pagesBrowsed, mode]);
+  }, [safePage, mode, dockedInvite]);
 
   // Quiz state
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
@@ -242,6 +265,8 @@ const Slang = () => {
     setRevealed(false);
     recordedRef.current = new Set();
     setMode("quiz");
+    setShowInvite(false);
+    setDockedInvite(false);
     window.scrollTo({ top: 0 });
   };
 
@@ -257,17 +282,15 @@ const Slang = () => {
     setMasteryVersion((v) => v + 1);
   }, [revealed, qIdx, questions, picks]);
 
-  // When returning to browse mode after a quiz, reset the review counter so the
-  // user gets another prompt after browsing two more fresh pages.
+  // Reset the review counter when entering quiz so a fresh browse session starts after.
   useEffect(() => {
     if (mode === "browse") {
-      // Don't reset reviewed set on every browse mount — only when leaving quiz.
       return;
     }
-    // entering quiz: clear reviewed so next browse session is fresh
     reviewedIdsRef.current = new Set();
-    setPagesBrowsed(0);
-    promptedRef.current = false;
+    setReviewedTick((n) => n + 1);
+    setShowInvite(false);
+    setDockedInvite(false);
   }, [mode]);
 
   const correctCount = questions.filter((q) => picks[q.id] === q.answer).length;

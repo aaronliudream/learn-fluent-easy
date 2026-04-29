@@ -405,6 +405,56 @@ const Lesson = () => {
     };
   });
 
+  // ─── Mastery scoring ────────────────────────────────────────────────
+  // The lesson is auto-marked as 已掌握 only when the learner has
+  // answered every test question correctly across all four quizzes:
+  // reading quiz · vocab quiz · fill-in-the-blanks · listening blanks.
+  const quizScore = {
+    correct: content.quiz.reduce(
+      (acc, q, i) => acc + (quizPicks[i] === q.answer ? 1 : 0),
+      0,
+    ),
+    total: content.quiz.length,
+  };
+  const vocabScore = {
+    correct: vocabQuizItems.reduce(
+      (acc, q) => acc + (vocabQuiz[q.idx] === q.answer ? 1 : 0),
+      0,
+    ),
+    total: vocabQuizItems.length,
+  };
+  const fillScore = {
+    correct: content.fillBlanks.reduce(
+      (acc, b, i) => acc + ((fills[i] ?? "").trim().toLowerCase() === b.answer.toLowerCase() ? 1 : 0),
+      0,
+    ),
+    total: content.fillBlanks.length,
+  };
+  const listenScore = {
+    correct: content.listening.blanks.reduce(
+      (acc, b, i) => acc + ((listenInputs[i] ?? "").trim().toLowerCase() === b.answer.toLowerCase() ? 1 : 0),
+      0,
+    ),
+    total: content.listening.blanks.length,
+  };
+  const totalCorrect = quizScore.correct + vocabScore.correct + fillScore.correct + listenScore.correct;
+  const totalQuestions = quizScore.total + vocabScore.total + fillScore.total + listenScore.total;
+  const allPerfect = totalQuestions > 0 && totalCorrect === totalQuestions;
+
+  // Auto-mark as mastered the first time the learner hits 100% on every quiz.
+  useEffect(() => {
+    if (!lesson) return;
+    if (allPerfect && !mastered) {
+      setMastered(Number(levelId), Number(unitId), Number(lessonId), true);
+      setMasteredState(true);
+      markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
+      toast.success("🏆 全部答对 · 已自动标记为掌握", {
+        description: "下次打开 App 会建议你继续学习下一课。",
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allPerfect]);
+
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
@@ -412,6 +462,46 @@ const Lesson = () => {
         subtitle="跟随步骤完成本课学习"
         back={`/level/${levelId}/unit/${unitId}`}
       />
+
+      {/* Mastery status — visible across every step */}
+      <div
+        className={`mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl border p-4 ${
+          mastered
+            ? "border-emerald-500/30 bg-emerald-500/10"
+            : totalCorrect > 0
+              ? "border-amber-500/30 bg-amber-500/10"
+              : "border-border bg-secondary/40"
+        }`}
+      >
+        <div className="flex items-center gap-3">
+          <div
+            className={`grid size-9 place-items-center rounded-full text-base ${
+              mastered
+                ? "bg-emerald-500 text-white"
+                : totalCorrect > 0
+                  ? "bg-amber-500 text-white"
+                  : "bg-muted text-muted-foreground"
+            }`}
+          >
+            {mastered ? "🏆" : totalCorrect > 0 ? "⚡" : "○"}
+          </div>
+          <div>
+            <div className="text-sm font-bold">
+              {mastered
+                ? "已掌握 Mastered"
+                : totalCorrect > 0
+                  ? "学习中 In progress"
+                  : "未掌握 Not started"}
+            </div>
+            <div className="text-xs text-muted-foreground">
+              测试得分 {totalCorrect} / {totalQuestions} · 全部答对自动标记为掌握
+            </div>
+          </div>
+        </div>
+        <div className="text-xs text-muted-foreground">
+          阅读 {quizScore.correct}/{quizScore.total} · 词汇 {vocabScore.correct}/{vocabScore.total} · 选词 {fillScore.correct}/{fillScore.total} · 听力 {listenScore.correct}/{listenScore.total}
+        </div>
+      </div>
 
       {/* Steps */}
       <section className="mb-8 rounded-3xl bg-card p-5 shadow-card md:p-7">

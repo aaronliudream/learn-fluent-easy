@@ -21,6 +21,7 @@ export type Level = {
   unitsCount: number;
   gradient: string; // tailwind bg-grad-N
   units: Unit[];
+  locked?: boolean;
 };
 
 const mkLessons = (titles: string[], doneCount: number, lockFromIdx?: number): Lesson[] =>

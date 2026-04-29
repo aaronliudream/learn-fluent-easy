@@ -9,6 +9,9 @@ interface ReqBody {
   title: string;
   levelName?: string;
   unitTitle?: string;
+  /** Lower-case English words that already appeared in earlier lessons.
+   *  The AI must avoid reusing these as new vocab entries. */
+  priorWords?: string[];
 }
 
 const lessonSchema = {
@@ -161,7 +164,7 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { title, levelName, unitTitle }: ReqBody = await req.json();
+    const { title, levelName, unitTitle, priorWords }: ReqBody = await req.json();
     if (!title) {
       return new Response(JSON.stringify({ error: "Missing title" }), {
         status: 400,
@@ -210,11 +213,24 @@ Deno.serve(async (req) => {
 - fillBlanks 同理: answer 也必须来自本课 vocab, 不要挖空人名或功能词
 严格按照 tool 的 JSON schema 输出, 不要输出额外文字。`;
 
+    const priorList = Array.isArray(priorWords) && priorWords.length > 0
+      ? priorWords.slice(0, 600).join(", ")
+      : "(无)";
+
     const user = `课程标题: ${title}
 级别: ${levelName ?? "(未提供)"}
 单元: ${unitTitle ?? "(未提供)"}
 
-请先在心里确认本课的核心场景与核心句型, 然后让 8 个板块全部围绕它展开, 生成完整教学内容。`;
+【已经学过的单词列表 — 请勿再放进 vocab】
+${priorList}
+
+请先在心里确认本课的核心场景与核心句型, 然后让 8 个板块全部围绕它展开, 生成完整教学内容。
+
+【vocab 选词规则 — 极其重要】
+- vocab 数组里 6-8 个词, 必须全部是上面"已经学过的单词列表"中【没有出现过】的新词 (大小写、单复数、时态变化都视作同一个词)。
+- 优先选取 reading 段落里出现的、对学习者来说是【真正陌生】的核心实词 (名词 / 动词 / 形容词 / 短语)。
+- 如果某个本来很想收的词已经在 priorWords 中, 请换成 reading 里另一个新词, 而不是再收一遍。
+- 严禁把 I, you, the, is, can, go 等基础功能词或已学过的词当作"新词"再收一次。`;
 
     const resp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",

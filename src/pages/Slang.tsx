@@ -628,7 +628,7 @@ const Slang = () => {
                               : "border-border bg-card hover:border-primary/40"
                       }`}
                     >
-                      <span>{opt}</span>
+                      <span>{q.kind === "en2cn" ? <T>{opt}</T> : opt}</span>
                       {correctOpt && <CheckCircle2 className="size-4 text-emerald-500" />}
                       {wrongOpt && <XCircle className="size-4 text-rose-500" />}
                       {!revealed && active && <CheckCircle2 className="size-4 text-primary" />}

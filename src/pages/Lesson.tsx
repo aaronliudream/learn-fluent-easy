@@ -42,6 +42,7 @@ import {
   getLocalCachedLesson,
   setCachedLesson,
 } from "@/lib/lessonCache";
+import { getPriorLessonWords, isWordNew } from "@/lib/priorWords";
 import {
   addStudyMinutes,
   getStreak,
@@ -201,7 +202,7 @@ const Lesson = () => {
     }
   };
 
-  const content = useMemo(() => {
+  const rawContent = useMemo(() => {
     if (!lesson) return null;
     const authored = LESSON_CONTENT[lesson.title] ?? null;
     // Topic-specific content from AI (live) or the pre-generated bundle.
@@ -245,6 +246,23 @@ const Lesson = () => {
     }
     return topical ?? authored;
   }, [lesson, aiContent]);
+
+  // Vocabulary section rule: only show words that have NOT appeared in any
+  // earlier lesson's vocab or reading. This keeps each lesson focused on
+  // genuinely new vocabulary for the learner.
+  const content = useMemo(() => {
+    if (!rawContent || !lesson) return rawContent;
+    const seen = getPriorLessonWords(
+      Number(levelId),
+      Number(unitId),
+      Number(lessonId),
+    );
+    const filtered = (rawContent.vocab ?? []).filter((v) => isWordNew(v.word, seen));
+    // Fall back to the original list if filtering wiped everything out — better
+    // to show repeated words than an empty vocabulary section.
+    const vocab = filtered.length > 0 ? filtered : rawContent.vocab;
+    return { ...rawContent, vocab };
+  }, [rawContent, lesson, levelId, unitId, lessonId]);
 
   // Every lesson benefits from AI generation now — even hand-authored lessons
   // need topic-aligned grammar / expressions / quiz / listening / output

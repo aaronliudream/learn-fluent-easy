@@ -384,9 +384,16 @@ const Slang = () => {
               <Sparkles className="size-5" />
             </div>
             <div className="flex-1 min-w-[180px]">
-              <div className="font-bold">{IDIOMS.length} 条美式俚语</div>
+              <div className="font-bold">
+                {IDIOMS.length + dailySlang.length} 条美式俚语
+                {dailySlang.length > 0 && (
+                  <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-bold text-orange-600">
+                    🔥 +{dailySlang.length} 每日新词
+                  </span>
+                )}
+              </div>
               <div className="text-xs text-muted-foreground">
-                来自社交媒体、Z世代、变装文化、TikTok 等真实语料
+                每日 AI 抓取最新流行词 · 来自 TikTok / 电台 / 报纸
               </div>
             </div>
             <input
@@ -421,6 +428,11 @@ const Slang = () => {
                       >
                         <Volume2 className="size-3.5" />
                       </button>
+                      {it.id < 0 && (
+                        <span className="inline-flex items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-bold text-orange-600">
+                          🔥 新
+                        </span>
+                      )}
                       {isMasteredSlang(it.id) && (
                         <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">
                           <CheckCircle2 className="size-3" /> 已掌握

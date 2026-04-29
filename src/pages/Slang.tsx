@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
 import { speak } from "@/lib/speak";
 import { toast } from "sonner";
-import { T } from "@/i18n/T";
+import { T, useT } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import {
   isMasteredSlang,
@@ -151,6 +151,7 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
 }
 
 const Slang = () => {
+  const tt = useT();
   const [mode, setMode] = useState<Mode>("browse");
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState("");
@@ -282,11 +283,11 @@ const Slang = () => {
   const startQuiz = () => {
     const qs = buildQuiz();
     if (qs.length === 0) {
-      toast.success("🎉 太棒了！现有俚语都已掌握，先去浏览新词吧。");
+      toast.success(tt("🎉 太棒了！现有俚语都已掌握，先去浏览新词吧。"));
       return;
     }
     if (qs.length < QUIZ_LEN) {
-      toast(`本轮只测 ${qs.length} 题：其余俚语正在复习冷却期 ✨`);
+      toast(`${tt("本轮只测")} ${qs.length} ${tt("题：其余俚语正在复习冷却期 ✨")}`);
     }
     setQuestions(qs);
     setQIdx(0);
@@ -300,7 +301,7 @@ const Slang = () => {
   const restartQuiz = () => {
     const qs = buildQuiz();
     if (qs.length === 0) {
-      toast.success("🎉 已经全部掌握，无需再测！");
+      toast.success(tt("🎉 已经全部掌握，无需再测！"));
       setMode("browse");
       return;
     }
@@ -418,7 +419,7 @@ const Slang = () => {
                       <button
                         onClick={() => speak(it.phrase)}
                         className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
-                        aria-label="朗读"
+                        aria-label={tt("朗读")}
                       >
                         <Volume2 className="size-3.5" />
                       </button>
@@ -445,7 +446,7 @@ const Slang = () => {
                         <button
                           onClick={() => speak(it.example)}
                           className="grid size-6 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:text-primary"
-                          aria-label="朗读例句"
+                          aria-label={tt("朗读例句")}
                         >
                           <Volume2 className="size-3" />
                         </button>

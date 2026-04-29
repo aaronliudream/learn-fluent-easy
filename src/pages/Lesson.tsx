@@ -984,16 +984,36 @@ const Lesson = () => {
                 : "标记为「已掌握」后，下次打开 App 会提醒你继续下一课。"}
             </p>
           </div>
-          <button
-            onClick={toggleMastered}
-            className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${
-              mastered
-                ? "border border-emerald-500/40 bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500/15"
-                : "bg-grad-title text-white shadow-tile hover:opacity-95"
-            }`}
-          >
-            {mastered ? "✓ 已掌握 · 点击取消" : "🎯 标记为已掌握"}
-          </button>
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              onClick={toggleMastered}
+              className={`rounded-full px-5 py-2.5 text-sm font-semibold transition ${
+                mastered
+                  ? "border border-emerald-500/40 bg-emerald-500/10 text-emerald-600 hover:bg-emerald-500/15"
+                  : "bg-grad-title text-white shadow-tile hover:opacity-95"
+              }`}
+            >
+              {mastered ? "✓ 已掌握 · 点击取消" : "🎯 标记为已掌握"}
+            </button>
+            {(() => {
+              const next = findNextLesson(Number(levelId), Number(unitId), Number(lessonId));
+              if (!next) {
+                return (
+                  <span className="rounded-full border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-muted-foreground">
+                    🎉 全部课程已完成
+                  </span>
+                );
+              }
+              return (
+                <Link
+                  to={`/level/${next.levelId}/unit/${next.unitId}/lesson/${next.lessonId}`}
+                  className="rounded-full bg-grad-title px-5 py-2.5 text-sm font-semibold text-white shadow-tile transition hover:opacity-95"
+                >
+                  下一课 →
+                </Link>
+              );
+            })()}
+          </div>
         </div>
       </div>
     </main>

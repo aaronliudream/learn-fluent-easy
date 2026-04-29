@@ -11,8 +11,11 @@ import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
 import { IDIOMS } from "@/data/idioms";
 import { SCENE_DIALOGUES } from "@/data/scenes";
 import { WORK_CATEGORIES } from "@/data/workplace";
+import { useI18n } from "@/i18n/I18nProvider";
+import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 
 const Index = () => {
+  const { t } = useI18n();
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
@@ -48,7 +51,7 @@ const Index = () => {
 
   const signOut = async () => {
     await supabase.auth.signOut();
-    toast.success("已退出登录");
+    toast.success(t("auth.signedOut"));
   };
 
   const hasProgress = progress.completedLessons.length > 0 || progress.studyMinutes > 0;
@@ -56,14 +59,15 @@ const Index = () => {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
       <div className="mb-4 flex justify-end">
+        <LanguageSwitcher />
         <Button asChild variant="ghost" size="sm" className="mr-2">
           <Link to="/stats">
-            <BarChart3 className="size-4" /> 我的数据
+            <BarChart3 className="size-4" /> {t("nav.myStats")}
           </Link>
         </Button>
         <Button asChild variant="ghost" size="sm" className="mr-2">
           <Link to="/account">
-            <UserCog className="size-4" /> 账户
+            <UserCog className="size-4" /> {t("nav.account")}
           </Link>
         </Button>
         {user ? (
@@ -72,19 +76,19 @@ const Index = () => {
               {user.user_metadata?.display_name || user.email}
             </span>
             <Button variant="outline" size="sm" onClick={signOut}>
-              <LogOut className="size-4" /> 退出
+              <LogOut className="size-4" /> {t("nav.signOut")}
             </Button>
           </div>
         ) : (
           <Button asChild variant="outline" size="sm">
             <Link to="/auth">
-              <LogIn className="size-4" /> 登录 / 注册
+              <LogIn className="size-4" /> {t("nav.signIn")}
             </Link>
           </Button>
         )}
       </div>
 
-      <PageHeader title="选择学习级别" subtitle="选择适合你的级别，开始学习之旅" />
+      <PageHeader title={t("index.title")} subtitle={t("index.subtitle")} />
 
       {/* Hero: Placement test (primary) */}
       <Link
@@ -98,13 +102,13 @@ const Index = () => {
         </div>
         <div className="relative flex-1 min-w-0">
           <div className="mb-1 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-2.5 py-0.5 text-[11px] font-semibold backdrop-blur-sm">
-            <TrendingUp className="size-3" /> 自适应 · 参照 CEFR
+            <TrendingUp className="size-3" /> {t("index.placement.badge")}
           </div>
-          <div className="text-lg font-extrabold md:text-xl">不知道从哪里开始？做个水平测试</div>
+          <div className="text-lg font-extrabold md:text-xl">{t("index.placement.title")}</div>
           <div className="mt-0.5 flex flex-wrap items-center gap-3 text-xs opacity-90">
-            <span className="inline-flex items-center gap-1"><Clock className="size-3" /> 约 25 分钟</span>
-            <span>· 听 / 说 / 读 / 写</span>
-            <span>· A1–C1 评级</span>
+            <span className="inline-flex items-center gap-1"><Clock className="size-3" /> {t("index.placement.duration")}</span>
+            <span>· {t("index.placement.skills")}</span>
+            <span>· {t("index.placement.rating")}</span>
           </div>
         </div>
         <ChevronRight className="relative size-6 opacity-80 transition-transform group-hover:translate-x-1" />
@@ -121,8 +125,8 @@ const Index = () => {
             <Zap className="size-5" />
           </div>
           <div className="relative flex-1 min-w-0">
-            <div className="text-sm font-extrabold md:text-base">美国流行俚语 · {slangCount} 条</div>
-            <div className="mt-0.5 truncate text-xs opacity-90">TikTok / Z 世代 / 社交媒体 · 每条带例句</div>
+            <div className="text-sm font-extrabold md:text-base">{t("index.slang.title", { count: slangCount })}</div>
+            <div className="mt-0.5 truncate text-xs opacity-90">{t("index.slang.subtitle")}</div>
           </div>
           <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
         </Link>
@@ -137,14 +141,14 @@ const Index = () => {
             </div>
             <div className="flex-1 min-w-0">
               <div className="text-sm font-bold">
-                已学 {progress.completedLessons.length} 节
-                {progress.studyMinutes > 0 && ` · ${progress.studyMinutes} 分钟`}
-                {streak >= 2 && ` · 🔥${streak}天`}
+                {t("index.progress.savedLessons", { n: progress.completedLessons.length })}
+                {progress.studyMinutes > 0 && ` · ${t("index.progress.minutes", { n: progress.studyMinutes })}`}
+                {streak >= 2 && ` · ${t("index.progress.streak", { n: streak })}`}
               </div>
-              <div className="mt-0.5 truncate text-xs text-muted-foreground">登录保存进度，3 秒同步到手机</div>
+              <div className="mt-0.5 truncate text-xs text-muted-foreground">{t("index.progress.cta")}</div>
             </div>
             <div className="flex items-center gap-1 rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground">
-              <Cloud className="size-3.5" /> 保存
+              <Cloud className="size-3.5" /> {t("index.progress.save")}
             </div>
           </Link>
         )}
@@ -160,8 +164,8 @@ const Index = () => {
           <Clapperboard className="size-5" />
         </div>
         <div className="relative flex-1 min-w-0">
-          <div className="text-sm font-extrabold md:text-base">🎬 场景对话 · {SCENE_DIALOGUES.length} 组</div>
-          <div className="mt-0.5 truncate text-xs opacity-90">14 个生活场景 · 1900 句地道表达</div>
+          <div className="text-sm font-extrabold md:text-base">{t("index.scenes.title", { count: SCENE_DIALOGUES.length })}</div>
+          <div className="mt-0.5 truncate text-xs opacity-90">{t("index.scenes.subtitle")}</div>
         </div>
         <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
       </Link>
@@ -176,8 +180,8 @@ const Index = () => {
           <Briefcase className="size-5" />
         </div>
         <div className="relative flex-1 min-w-0">
-          <div className="text-sm font-extrabold md:text-base">💼 职场英语 · {WORK_CATEGORIES.length} 个场景</div>
-          <div className="mt-0.5 truncate text-xs opacity-90">湾区职场真实对话 · 高频表达 · 每月更新</div>
+          <div className="text-sm font-extrabold md:text-base">{t("index.workplace.title", { count: WORK_CATEGORIES.length })}</div>
+          <div className="mt-0.5 truncate text-xs opacity-90">{t("index.workplace.subtitle")}</div>
         </div>
         <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
       </Link>
@@ -185,8 +189,8 @@ const Index = () => {
 
       {/* Section label */}
       <div className="mb-3 flex items-baseline justify-between">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">学习路径 · Levels</h2>
-        <span className="text-xs text-muted-foreground">{LEVELS.length} 级 · A1 → C2</span>
+        <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t("index.levels.label")}</h2>
+        <span className="text-xs text-muted-foreground">{t("index.levels.count", { n: LEVELS.length })}</span>
       </div>
 
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -203,13 +207,13 @@ const Index = () => {
                 <div>
                   <div className="text-lg font-extrabold tracking-wider md:text-xl">{lv.name}</div>
                   <div className="mt-0.5 text-xs font-medium opacity-90">
-                    {lv.locked ? "内容更新中…" : `${lv.unitsCount} 单元`}
+                    {lv.locked ? t("index.levels.locked") : t("index.levels.units", { n: lv.unitsCount })}
                   </div>
                 </div>
               </div>
               {lv.locked ? (
                 <span className="relative inline-flex items-center gap-1 rounded-full bg-white/25 px-2.5 py-1 text-[10px] font-bold backdrop-blur-sm">
-                  <Lock className="size-3" /> 即将推出
+                  <Lock className="size-3" /> {t("index.levels.comingSoon")}
                 </span>
               ) : (
                 <ChevronRight className="relative size-5 opacity-80 transition-transform group-hover:translate-x-1" />
@@ -221,7 +225,7 @@ const Index = () => {
               <button
                 key={lv.id}
                 type="button"
-                onClick={() => toast("该级别内容正在更新中，敬请期待 ✨")}
+                onClick={() => toast(t("index.levels.lockedToast"))}
                 aria-disabled="true"
                 className={`${cardClass} cursor-not-allowed text-left opacity-70 grayscale-[0.2]`}
               >

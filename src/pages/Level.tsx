@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { Award, BookOpen, Briefcase, Cloud, Flame, Map, ShoppingBag, Star, TrendingUp } from "lucide-react";
+import { Award, BookOpen, Briefcase, Check, Cloud, Flame, Map, ShoppingBag, Star, TrendingUp } from "lucide-react";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 

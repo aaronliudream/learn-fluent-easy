@@ -4,6 +4,7 @@ import { loadSettings } from "@/lib/voice";
 let lastSpoken = "";
 let currentAudio: HTMLAudioElement | null = null;
 const audioCache = new Map<string, string>(); // key -> object URL
+let naturalTtsUnavailable = false;
 // Incremented every time we stop. Any in-flight speak() whose token < this must abort.
 let speakToken = 0;
 
@@ -44,6 +45,30 @@ const stopCurrent = () => {
 
 export const stopSpeaking = () => stopCurrent();
 
+const preferredVoiceNames = [
+  "Samantha",
+  "Google US English",
+  "Microsoft Aria",
+  "Microsoft Jenny",
+  "Google UK English Female",
+  "Microsoft Libby",
+];
+
+const speakBrowser = (text: string, speed: number) => {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  const utterance = new SpeechSynthesisUtterance(text);
+  const voices = speechSynthesis.getVoices();
+  utterance.voice =
+    preferredVoiceNames.map((name) => voices.find((voice) => voice.name.includes(name))).find(Boolean) ||
+    voices.find((voice) => voice.lang.startsWith("en") && voice.localService) ||
+    voices.find((voice) => voice.lang.startsWith("en")) ||
+    null;
+  utterance.lang = utterance.voice?.lang || "en-US";
+  utterance.rate = Math.min(1.08, Math.max(0.78, Number(speed) || 0.92));
+  utterance.pitch = 0.95;
+  speechSynthesis.speak(utterance);
+};
+
 const playUrl = (url: string): Promise<void> =>
   new Promise((resolve) => {
     const audio = new Audio(url);
@@ -70,7 +95,13 @@ export const speak = async (text: string): Promise<void> => {
     return;
   }
 
-  // 2. Call natural TTS backend. Do not fall back to browser speech, because it sounds robotic.
+  if (naturalTtsUnavailable) {
+    if (myToken !== speakToken) return;
+    speakBrowser(text, speed);
+    return;
+  }
+
+  // 2. Call natural TTS backend. If unavailable, keep the button working with the best browser voice.
   try {
     const { data, error } = await supabase.functions.invoke("tts", {
       body: { text, voiceId, speed },
@@ -82,16 +113,19 @@ export const speak = async (text: string): Promise<void> => {
     if (error) {
       const status = (error as { context?: { status?: number } }).context?.status;
       if (status === 402 || status === 429) {
-        console.warn("[speak] Natural TTS unavailable (quota/rate). Not using robotic browser voice.");
+        console.warn("[speak] Natural TTS unavailable (quota/rate). Using browser voice fallback.");
+        naturalTtsUnavailable = true;
       } else {
         console.warn("[speak] Natural TTS error:", error);
       }
+      speakBrowser(text, speed);
       return;
     }
 
     const audioContent = (data as { audioContent?: string })?.audioContent;
     if (!audioContent) {
       console.warn("[speak] No natural audio returned.");
+      speakBrowser(text, speed);
       return;
     }
 
@@ -102,5 +136,6 @@ export const speak = async (text: string): Promise<void> => {
   } catch (e) {
     if (myToken !== speakToken) return;
     console.warn("[speak] Natural TTS failed:", e);
+    speakBrowser(text, speed);
   }
 };

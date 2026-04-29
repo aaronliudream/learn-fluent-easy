@@ -251,7 +251,7 @@ export type FillBlank = {
 
 export type LessonContent = {
   vocab: VocabItem[];
-  reading: { en: string; cn: string }[]; // paragraphs
+  reading: { en: string; cn: string; note?: string }[]; // sentences with optional hint
   grammar: { title: string; explain: string; examples: { en: string; cn: string }[] }[];
   expressions: { en: string; cn: string; scene: string }[];
   fillBlanks: FillBlank[];
@@ -724,7 +724,11 @@ LEVELS.flatMap((level) => level.units.flatMap((unit) => unit.lessons))
       : base.output;
     if (src) {
       const reading = src.passage.length
-        ? src.passage.map((p) => ({ en: p.en, cn: p.cn }))
+        ? src.passage.map((p) => ({
+            en: p.en,
+            cn: p.cn,
+            ...(p.note ? { note: p.note } : {}),
+          }))
         : base.reading;
       const vocab = src.vocab.length
         ? src.vocab.map((v) => ({

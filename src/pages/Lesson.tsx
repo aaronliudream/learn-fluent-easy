@@ -222,6 +222,24 @@ const Lesson = () => {
       return authored;
     }
     // AI-only lesson: prefer freshly loaded → pre-gen bundle → fallback template.
+    // Merge: keep non-empty topical fields, fall back to template for empty ones
+    // (e.g. lessons whose reading/vocab came from the source HTML but listening/
+    // output haven't been generated yet).
+    if (topical && authored) {
+      const isEmpty = (v: unknown) =>
+        v == null ||
+        (Array.isArray(v) && v.length === 0) ||
+        (typeof v === "object" && v !== null && "audio" in (v as Record<string, unknown>) &&
+          !(v as { audio?: string }).audio) ||
+        (typeof v === "object" && v !== null && "prompt" in (v as Record<string, unknown>) &&
+          !(v as { prompt?: string }).prompt);
+      const merged = { ...authored } as LessonContent;
+      (Object.keys(topical) as (keyof LessonContent)[]).forEach((k) => {
+        const tv = (topical as LessonContent)[k];
+        if (!isEmpty(tv)) (merged as Record<string, unknown>)[k] = tv as unknown;
+      });
+      return merged;
+    }
     return topical ?? authored;
   }, [lesson, aiContent]);
 
@@ -533,15 +551,37 @@ const Lesson = () => {
           />
           <div className="space-y-5">
             {content.reading.map((p, i) => (
-              <div key={i} className="rounded-2xl border border-border bg-secondary/30 p-5">
-                <div className="flex items-start gap-3">
+              <div
+                key={i}
+                className="grid grid-cols-[28px_1fr] gap-x-4 rounded-2xl border border-border bg-secondary/30 p-5 md:grid-cols-[36px_1fr_1fr] md:gap-x-6"
+              >
+                <div className="pt-1 text-sm font-medium text-muted-foreground">{i + 1}</div>
+                <div className="flex items-start gap-2">
                   <p className="flex-1 text-base leading-relaxed">{p.en}</p>
                   <button
                     onClick={() => speak(p.en)}
-                    className="grid size-9 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10"
+                    className="grid size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:hidden"
+                    aria-label="朗读"
                   >
-                    <Volume2 className="size-5" />
+                    <Volume2 className="size-4" />
                   </button>
+                </div>
+                <div className="col-start-2 mt-2 md:col-start-3 md:mt-0">
+                  <div className="flex items-start gap-2">
+                    <p className="flex-1 text-base leading-relaxed text-foreground/90">{p.cn}</p>
+                    <button
+                      onClick={() => speak(p.en)}
+                      className="hidden size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:grid"
+                      aria-label="朗读"
+                    >
+                      <Volume2 className="size-4" />
+                    </button>
+                  </div>
+                  {p.note && (
+                    <div className="mt-2 rounded-lg border-l-2 border-amber-400 bg-amber-50 px-3 py-1.5 text-xs italic text-amber-900 dark:bg-amber-500/10 dark:text-amber-200">
+                      💡 {p.note}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

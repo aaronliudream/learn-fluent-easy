@@ -351,8 +351,8 @@ const Slang = () => {
             {pageItems.map((it, i) => (
               <article
                 key={it.id}
-                style={{ animationDelay: `${Math.min(i * 30, 300)}ms` }}
-                className="rounded-2xl bg-card p-5 shadow-card transition animate-fade-in hover:-translate-y-0.5"
+                style={{ animationDelay: `${Math.min(i * 35, 350)}ms`, animationFillMode: "both" }}
+                className="rounded-2xl bg-card p-5 shadow-card transition animate-in fade-in slide-in-from-top-2 duration-500 hover:-translate-y-0.5"
               >
                 <div className="flex items-start gap-3">
                   <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-grad-title text-white">
@@ -431,7 +431,7 @@ const Slang = () => {
 
           {/* ───── Floating invite (centered card) ───── */}
           {showInvite && !dockedInvite && (
-            <div className="fixed inset-x-0 bottom-6 z-40 flex justify-center px-4 animate-fade-in">
+            <div className="fixed inset-x-0 bottom-6 z-40 flex justify-center px-4 animate-in fade-in slide-in-from-bottom-4 duration-300">
               <div className="flex w-full max-w-md items-start gap-3 rounded-2xl border border-primary/30 bg-card p-4 shadow-[0_20px_50px_-15px_hsl(250_40%_30%/0.45)]">
                 <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-grad-title text-white">
                   <Target className="size-5" />
@@ -475,8 +475,7 @@ const Slang = () => {
           {dockedInvite && reviewedIdsRef.current.size >= MIN_REVIEWED && (
             <button
               onClick={startReviewQuiz}
-              className="fixed left-3 top-1/2 z-40 flex -translate-y-1/2 items-center gap-2 rounded-r-2xl bg-grad-title px-3 py-3 text-white shadow-[0_10px_30px_-8px_hsl(250_40%_30%/0.5)] transition-all duration-700 ease-out hover:pl-4"
-              style={{ animation: "fade-in 0.4s ease-out, slide-in-left 0.7s ease-out" }}
+              className="fixed left-0 top-1/2 z-40 flex -translate-y-1/2 items-center gap-2 rounded-r-2xl bg-grad-title px-3 py-3 text-white shadow-[0_10px_30px_-8px_hsl(250_40%_30%/0.5)] transition-all duration-300 ease-out hover:pl-4 animate-in fade-in slide-in-from-left-12 duration-700"
               aria-label={`测试 ${reviewedIdsRef.current.size} 条已浏览俚语`}
             >
               <Target className="size-5" />

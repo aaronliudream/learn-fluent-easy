@@ -829,38 +829,47 @@ const Lesson = () => {
             icon={<Headphones className="size-6" />}
             color="bg-indigo-500/15 text-indigo-500"
             title="听力填空 Listening"
-            subtitle="点击播放音频，根据听到的内容填空"
+            subtitle="逐题点击播放，听完一题再做下一题"
           />
-          <button
-            onClick={() => speak(content.listening.audio)}
-            className="mb-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-grad-title py-4 font-semibold text-white shadow-tile"
-          >
-            <Volume2 className="size-5" /> 播放音频
-          </button>
           <div className="space-y-3">
             {content.listening.blanks.map((b, i) => {
               const v = listenInputs[i] ?? "";
               const correct = v.trim().toLowerCase() === b.answer.toLowerCase();
+              const sentence = `${b.before} ${b.answer} ${b.after}`.replace(/\s+/g, " ").trim();
               return (
                 <div
                   key={i}
-                  className="flex flex-wrap items-center gap-2 rounded-2xl border border-border bg-secondary/30 p-4 text-base"
+                  className="rounded-2xl border border-border bg-secondary/30 p-4 text-base"
                 >
-                  <span>{b.before}</span>
-                  <input
-                    value={v}
-                    onChange={(e) => setListenInputs({ ...listenInputs, [i]: e.target.value })}
-                    className={`min-w-28 rounded-md border-b-2 bg-transparent px-2 py-1 text-center font-bold outline-none ${
-                      v
-                        ? correct
-                          ? "border-emerald-400 text-emerald-600"
-                          : "border-rose-400 text-rose-600"
-                        : "border-muted-foreground/40"
-                    }`}
-                    placeholder="输入"
-                  />
-                  <span>{b.after}</span>
-                  {v && correct && <Check className="size-4 text-emerald-500" />}
+                  <div className="mb-3 flex items-center gap-3">
+                    <span className="grid size-7 place-items-center rounded-full bg-primary/10 text-xs font-bold text-primary">
+                      {i + 1}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => speak(sentence)}
+                      className="flex items-center gap-2 rounded-full bg-grad-title px-4 py-2 text-sm font-semibold text-white shadow-tile"
+                    >
+                      <Volume2 className="size-4" /> 播放第 {i + 1} 题
+                    </button>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span>{b.before}</span>
+                    <input
+                      value={v}
+                      onChange={(e) => setListenInputs({ ...listenInputs, [i]: e.target.value })}
+                      className={`min-w-28 rounded-md border-b-2 bg-transparent px-2 py-1 text-center font-bold outline-none ${
+                        v
+                          ? correct
+                            ? "border-emerald-400 text-emerald-600"
+                            : "border-rose-400 text-rose-600"
+                          : "border-muted-foreground/40"
+                      }`}
+                      placeholder="输入"
+                    />
+                    <span>{b.after}</span>
+                    {v && correct && <Check className="size-4 text-emerald-500" />}
+                  </div>
                 </div>
               );
             })}

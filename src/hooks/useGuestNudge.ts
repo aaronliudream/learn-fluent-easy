@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { useT } from "@/i18n/T";
 
 /**
  * Lightweight nudge to invite guest users to sign in.
@@ -10,6 +11,7 @@ import { toast } from "sonner";
  */
 export function useGuestNudge() {
   const navigate = useNavigate();
+  const t = useT();
   const loggedInRef = useRef<boolean | null>(null);
 
   useEffect(() => {
@@ -30,14 +32,14 @@ export function useGuestNudge() {
       sessionStorage.setItem(sk, "1");
       toast(message, {
         description:
-          description ?? "登录后可保存学习进度，并在手机、电脑等设备间同步。",
+          description ?? t("登录后可保存学习进度，并在手机、电脑等设备间同步。"),
         duration: 7000,
         action: {
-          label: "立即登录",
+          label: t("立即登录"),
           onClick: () => navigate("/auth"),
         },
       });
     },
-    [navigate],
+    [navigate, t],
   );
 }

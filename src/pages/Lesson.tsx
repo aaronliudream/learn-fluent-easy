@@ -33,7 +33,7 @@ const PREGEN_MAP = PREGENERATED_LESSONS as unknown as Record<string, LessonConte
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
-import { T } from "@/i18n/T";
+import { T, useT } from "@/i18n/T";
 import { findNextLesson, isMastered, setLastVisited, setMastered } from "@/lib/mastery";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -107,6 +107,7 @@ const SectionHeader = ({
 );
 
 const Lesson = () => {
+  const tt = useT();
   const { levelId, unitId, lessonId } = useParams();
   const lesson = findLesson(Number(levelId), Number(unitId), Number(lessonId));
   const [activeStep, setActiveStep] = useState(1);
@@ -145,13 +146,13 @@ const Lesson = () => {
     if (next) {
       markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
       const nextLesson = findNextLesson(Number(levelId), Number(unitId), Number(lessonId));
-      toast.success("🎓 已标记为掌握", {
+      toast.success(tt("🎓 已标记为掌握"), {
         description: nextLesson
-          ? `下次打开 App 时会提醒你继续：${nextLesson.title}`
-          : "你已完成全部课程，太棒啦！",
+          ? `${tt("下次打开 App 时会提醒你继续：")}${nextLesson.title}`
+          : tt("你已完成全部课程，太棒啦！"),
       });
     } else {
-      toast("已取消「掌握」标记");
+      toast(tt("已取消「掌握」标记"));
     }
   };
 
@@ -173,9 +174,9 @@ const Lesson = () => {
       const p = loadProgress();
       const streak = getStreak(p);
       const desc = streak >= 2
-        ? `🔥 已连续学习 ${streak} 天，登录后保住你的连胜，并解锁学习数据面板。`
-        : `已完成 ${p.completedLessons.length} 节课${p.studyMinutes > 0 ? `、累计学习 ${p.studyMinutes} 分钟` : ""}，登录后这些进度永久保留。`;
-      nudge("lesson-finish", "🎉 完成一节课！", desc);
+        ? `🔥 ${tt("已连续学习")} ${streak} ${tt("天，登录后保住你的连胜，并解锁学习数据面板。")}`
+        : `${tt("已完成")} ${p.completedLessons.length} ${tt("节课")}${p.studyMinutes > 0 ? `${tt("、累计学习")} ${p.studyMinutes} ${tt("分钟")}` : ""}${tt("，登录后这些进度永久保留。")}`;
+      nudge("lesson-finish", tt("🎉 完成一节课！"), desc);
     }
     // Wait for the new section to render, then smooth-scroll it into view.
     requestAnimationFrame(() => {
@@ -204,7 +205,7 @@ const Lesson = () => {
 
   const checkWriting = async () => {
     if (!output.trim()) {
-      toast("请先在上方写下你的英文回答");
+      toast(tt("请先在上方写下你的英文回答"));
       return;
     }
     if (!content || !lesson) return;
@@ -223,11 +224,11 @@ const Lesson = () => {
       if (error) throw error;
       if ((data as any)?.error) throw new Error((data as any).error);
       setFeedback(data as Feedback);
-      toast.success("✅ 已完成本课写作 · 查看下方点评");
+      toast.success(tt("✅ 已完成本课写作 · 查看下方点评"));
       // Mark lesson as completed in progress
       markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
     } catch (e: any) {
-      toast.error("检查失败", { description: e?.message ?? "请稍后再试" });
+      toast.error(tt("检查失败"), { description: e?.message ?? tt("请稍后再试") });
     } finally {
       setChecking(false);
     }
@@ -382,9 +383,9 @@ const Lesson = () => {
       if ((data as any)?.error) throw new Error((data as any).error);
       setAiContent(data as LessonContent);
       void setCachedLesson(lv, un, ls, data as LessonContent);
-      if (force) toast.success("✨ 已重新生成本课内容");
+      if (force) toast.success(tt("✨ 已重新生成本课内容"));
     } catch (e: any) {
-      toast.error("生成失败", { description: e?.message ?? "请稍后再试" });
+      toast.error(tt("生成失败"), { description: e?.message ?? tt("请稍后再试") });
     } finally {
       setGenerating(false);
     }
@@ -441,14 +442,14 @@ const Lesson = () => {
         const acc = p.quizTotal > 0 ? Math.round((p.quizCorrect / p.quizTotal) * 100) : 0;
         nudge(
           "quiz-done",
-          `🎯 本次答对 ${correct}/${total}`,
-          `累计正确率 ${acc}%（共答 ${p.quizTotal} 题），登录后查看完整学习数据面板。`,
+          `🎯 ${tt("本次答对")} ${correct}/${total}`,
+          `${tt("累计正确率")} ${acc}%（${tt("共答")} ${p.quizTotal} ${tt("题），登录后查看完整学习数据面板。")}`,
         );
       }
     }
   }, [quizPicks, content, nudge]);
 
-  if (!lesson) return <div className="p-10">课程不存在</div>;
+  if (!lesson) return <div className="p-10">{tt("课程不存在")}</div>;
 
   if (!content) {
     return (
@@ -530,8 +531,8 @@ const Lesson = () => {
       setMastered(Number(levelId), Number(unitId), Number(lessonId), true);
       setMasteredState(true);
       markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
-      toast.success("🏆 全部答对 · 已自动标记为掌握", {
-        description: "下次打开 App 会建议你继续学习下一课。",
+      toast.success(tt("🏆 全部答对 · 已自动标记为掌握"), {
+        description: tt("下次打开 App 会建议你继续学习下一课。"),
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -761,7 +762,7 @@ const Lesson = () => {
                   <button
                     onClick={() => speak(p.en)}
                     className="grid size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:hidden"
-                    aria-label="朗读"
+                    aria-label={tt("朗读")}
                   >
                     <Volume2 className="size-4" />
                   </button>
@@ -772,7 +773,7 @@ const Lesson = () => {
                     <button
                       onClick={() => speak(p.en)}
                       className="hidden size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:grid"
-                      aria-label="朗读"
+                      aria-label={tt("朗读")}
                     >
                       <Volume2 className="size-4" />
                     </button>
@@ -934,14 +935,14 @@ const Lesson = () => {
                         <>
                           <Check className="mt-0.5 size-4 shrink-0" />
                           <span>
-                            <strong>正确！</strong> {f.cn}
+                            <strong><T>正确！</T></strong> <T>{f.cn}</T>
                           </span>
                         </>
                       ) : (
                         <>
                           <X className="mt-0.5 size-4 shrink-0" />
                           <span>
-                            <strong>不对，正确答案是 “{f.answer}”。</strong> {f.cn}
+                            <strong><T>不对，正确答案是</T> "{f.answer}"。</strong> <T>{f.cn}</T>
                           </span>
                         </>
                       )}
@@ -1038,7 +1039,7 @@ const Lesson = () => {
                       onClick={() => speak(sentence)}
                       className="flex items-center gap-2 rounded-full bg-grad-title px-4 py-2 text-sm font-semibold text-white shadow-tile"
                     >
-                      <Volume2 className="size-4" /> 播放第 {i + 1} 题
+                      <Volume2 className="size-4" /> <T>播放第</T> {i + 1} <T>题</T>
                     </button>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
@@ -1053,7 +1054,7 @@ const Lesson = () => {
                             : "border-rose-400 text-rose-600"
                           : "border-muted-foreground/40"
                       }`}
-                      placeholder="输入"
+                      placeholder={tt("输入")}
                     />
                     <span>{b.after}</span>
                     {v && correct && <Check className="size-4 text-emerald-500" />}
@@ -1061,15 +1062,15 @@ const Lesson = () => {
                   {v && showFeedback && (
                     correct ? (
                       <div className="mt-3 flex items-center gap-2 rounded-xl bg-emerald-500/10 px-3 py-2 text-sm font-semibold text-emerald-600">
-                        <Check className="size-4" /> 回答正确
+                        <Check className="size-4" /> <T>回答正确</T>
                       </div>
                     ) : (
                       <div className="mt-3 flex items-center gap-2 rounded-xl bg-rose-500/10 px-3 py-2 text-sm text-rose-600">
                         <X className="size-4 shrink-0" />
                         <span>
-                          <span className="font-semibold">回答错误</span>
+                          <span className="font-semibold"><T>回答错误</T></span>
                           <span className="mx-1">·</span>
-                          正确答案：
+                          <T>正确答案：</T>
                           <span className="font-bold">{b.answer}</span>
                         </span>
                       </div>
@@ -1137,16 +1138,16 @@ const Lesson = () => {
           {feedback && (
             <div className="mt-5 space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-5">
               <div className="flex items-center justify-between">
-                <h4 className="text-lg font-bold text-emerald-700">📝 AI 写作点评</h4>
+                <h4 className="text-lg font-bold text-emerald-700">📝 <T>AI 写作点评</T></h4>
                 <span className="rounded-full bg-emerald-600 px-3 py-1 text-sm font-bold text-white">
-                  {feedback.score} 分
+                  {feedback.score} <T>分</T>
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-foreground/85">{feedback.overall}</p>
 
               {feedback.mistakes.length > 0 ? (
                 <div>
-                  <div className="mb-2 text-sm font-semibold text-rose-600">🔍 需要修改的地方</div>
+                  <div className="mb-2 text-sm font-semibold text-rose-600">🔍 <T>需要修改的地方</T></div>
                   <ul className="space-y-3">
                     {feedback.mistakes.map((m, i) => (
                       <li key={i} className="rounded-xl border border-rose-200 bg-white p-3 text-sm">
@@ -1159,13 +1160,13 @@ const Lesson = () => {
                 </div>
               ) : (
                 <div className="rounded-xl bg-white p-3 text-sm text-emerald-700">
-                  🎉 没有发现明显错误，写得很棒！
+                  🎉 <T>没有发现明显错误，写得很棒！</T>
                 </div>
               )}
 
               {feedback.suggestions.length > 0 && (
                 <div>
-                  <div className="mb-2 text-sm font-semibold text-primary">💡 改进建议</div>
+                  <div className="mb-2 text-sm font-semibold text-primary">💡 <T>改进建议</T></div>
                   <ul className="list-disc space-y-1 pl-5 text-sm text-foreground/80">
                     {feedback.suggestions.map((s, i) => (
                       <li key={i}>{s}</li>
@@ -1177,7 +1178,7 @@ const Lesson = () => {
               {feedback.improved && (
                 <div>
                   <div className="mb-2 flex items-center justify-between">
-                    <div className="text-sm font-semibold text-primary">✨ 润色后版本</div>
+                    <div className="text-sm font-semibold text-primary">✨ <T>润色后版本</T></div>
                     <button
                       onClick={() => speak(feedback.improved)}
                       className="text-primary hover:opacity-70"

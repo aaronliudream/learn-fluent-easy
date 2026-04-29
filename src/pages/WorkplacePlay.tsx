@@ -4,8 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { WORK_CATEGORIES, WORK_DIALOGUES } from "@/data/workplace";
 import { speak, stopSpeaking } from "@/lib/speak";
+import { T, useT } from "@/i18n/T";
 
 const WorkplacePlay = () => {
+  const t = useT();
   const { catKey, dialogueId } = useParams<{ catKey: string; dialogueId: string }>();
   const cat = WORK_CATEGORIES.find((c) => c.key === catKey);
   const dlg = WORK_DIALOGUES.find((d) => d.id === dialogueId);
@@ -42,7 +44,7 @@ const WorkplacePlay = () => {
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
         title={`${dlg.emoji} ${dlg.title}`}
-        subtitle={`${dlg.titleCn} · ${dlg.lines.length} 句`}
+        subtitle={`${t(dlg.titleCn)} · ${dlg.lines.length} ${t("句")}`}
         back={`/workplace/${cat.key}`}
       />
 
@@ -51,7 +53,7 @@ const WorkplacePlay = () => {
           onClick={playAll}
           className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/20"
         >
-          <PlayCircle className="size-4" /> 播放整段对话
+          <PlayCircle className="size-4" /> <T>播放整段对话</T>
         </button>
       </div>
 
@@ -75,7 +77,7 @@ const WorkplacePlay = () => {
               </div>
               <button
                 onClick={() => playOne(i)}
-                aria-label="播放"
+                aria-label={t("播放")}
                 className={`grid size-9 shrink-0 place-items-center rounded-full transition ${
                   isActive
                     ? "bg-primary text-primary-foreground"

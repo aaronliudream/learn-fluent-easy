@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
 import { speak } from "@/lib/speak";
 import { toast } from "sonner";
-import { T } from "@/i18n/T";
+import { T, useT } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import {
   isMasteredSlang,
@@ -151,6 +151,7 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
 }
 
 const Slang = () => {
+  const tt = useT();
   const [mode, setMode] = useState<Mode>("browse");
   const [page, setPage] = useState(0);
   const [search, setSearch] = useState("");
@@ -282,11 +283,11 @@ const Slang = () => {
   const startQuiz = () => {
     const qs = buildQuiz();
     if (qs.length === 0) {
-      toast.success("🎉 太棒了！现有俚语都已掌握，先去浏览新词吧。");
+      toast.success(tt("🎉 太棒了！现有俚语都已掌握，先去浏览新词吧。"));
       return;
     }
     if (qs.length < QUIZ_LEN) {
-      toast(`本轮只测 ${qs.length} 题：其余俚语正在复习冷却期 ✨`);
+      toast(`${tt("本轮只测")} ${qs.length} ${tt("题：其余俚语正在复习冷却期 ✨")}`);
     }
     setQuestions(qs);
     setQIdx(0);
@@ -300,7 +301,7 @@ const Slang = () => {
   const restartQuiz = () => {
     const qs = buildQuiz();
     if (qs.length === 0) {
-      toast.success("🎉 已经全部掌握，无需再测！");
+      toast.success(tt("🎉 已经全部掌握，无需再测！"));
       setMode("browse");
       return;
     }
@@ -418,7 +419,7 @@ const Slang = () => {
                       <button
                         onClick={() => speak(it.phrase)}
                         className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
-                        aria-label="朗读"
+                        aria-label={tt("朗读")}
                       >
                         <Volume2 className="size-3.5" />
                       </button>
@@ -445,7 +446,7 @@ const Slang = () => {
                         <button
                           onClick={() => speak(it.example)}
                           className="grid size-6 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:text-primary"
-                          aria-label="朗读例句"
+                          aria-label={tt("朗读例句")}
                         >
                           <Volume2 className="size-3" />
                         </button>
@@ -517,7 +518,7 @@ const Slang = () => {
                   </div>
                 </div>
                 <button
-                  aria-label="关闭"
+                  aria-label={tt("关闭")}
                   onClick={() => {
                     setShowInvite(false);
                     setDockedInvite(true);
@@ -535,7 +536,7 @@ const Slang = () => {
             <button
               onClick={startReviewQuiz}
               className="fixed left-0 top-1/2 z-40 flex -translate-y-1/2 items-center gap-2 rounded-r-2xl bg-grad-title px-3 py-3 text-white shadow-[0_10px_30px_-8px_hsl(250_40%_30%/0.5)] transition-all duration-300 ease-out hover:pl-4 animate-in fade-in slide-in-from-left-12 duration-700"
-              aria-label={`测试 ${reviewedIdsRef.current.size} 条已浏览俚语`}
+              aria-label={`${tt("测试")} ${reviewedIdsRef.current.size} ${tt("条已浏览俚语")}`}
             >
               <Target className="size-5" />
               <span className="flex flex-col items-start leading-tight">
@@ -555,9 +556,9 @@ const Slang = () => {
         const picked = picks[q.id];
         const isCorrect = picked === q.answer;
         const KIND_LABEL: Record<QuizKind, string> = {
-          en2cn: "英 → 中：选出正确含义",
-          cn2en: "中 → 英：选出对应俚语",
-          fill: "填空：选出适合的俚语",
+          en2cn: tt("英 → 中：选出正确含义"),
+          cn2en: tt("中 → 英：选出对应俚语"),
+          fill: tt("填空：选出适合的俚语"),
         };
         return (
           <>
@@ -565,7 +566,7 @@ const Slang = () => {
               <div className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-muted-foreground">
                 {qIdx + 1} / {questions.length}
               </div>
-              <div className="text-xs font-semibold text-muted-foreground"><T>{KIND_LABEL[q.kind]}</T></div>
+              <div className="text-xs font-semibold text-muted-foreground">{KIND_LABEL[q.kind]}</div>
             </div>
 
             <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">

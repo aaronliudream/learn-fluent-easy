@@ -566,7 +566,7 @@ const Slang = () => {
               <div className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-muted-foreground">
                 {qIdx + 1} / {questions.length}
               </div>
-              <div className="text-xs font-semibold text-muted-foreground"><T>{KIND_LABEL[q.kind]}</T></div>
+              <div className="text-xs font-semibold text-muted-foreground">{KIND_LABEL[q.kind]}</div>
             </div>
 
             <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">

@@ -62,10 +62,6 @@ const Auth = () => {
   };
 
   const handleGoogle = async () => {
-    if (!agreed) {
-      toast.error("请先勾选同意隐私政策与服务条款");
-      return;
-    }
     setLoading(true);
     const result = await lovable.auth.signInWithOAuth("google", {
       redirect_uri: window.location.origin,
@@ -140,12 +136,36 @@ const Auth = () => {
                 <Label htmlFor="su-pw">密码（至少 6 位）</Label>
                 <Input id="su-pw" type="password" required minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} />
               </div>
-              <Button type="submit" className="w-full" disabled={loading}>注册</Button>
+              <div className="flex items-start gap-2 pt-1">
+                <Checkbox
+                  id="agree"
+                  checked={agreed}
+                  onCheckedChange={(v) => setAgreed(v === true)}
+                  className="mt-0.5"
+                />
+                <Label htmlFor="agree" className="text-xs font-normal leading-relaxed text-muted-foreground">
+                  我已阅读并同意{" "}
+                  <Link to="/privacy" className="text-primary underline-offset-4 hover:underline">
+                    《隐私政策》
+                  </Link>{" "}
+                  与{" "}
+                  <Link to="/terms" className="text-primary underline-offset-4 hover:underline">
+                    《服务条款》
+                  </Link>
+                </Label>
+              </div>
+              <Button type="submit" className="w-full" disabled={loading || !agreed}>注册</Button>
             </form>
           </TabsContent>
         </Tabs>
 
         <div className="mt-6 border-t pt-4 text-center">
+          <p className="mb-3 text-xs text-muted-foreground">
+            登录或注册即视为同意{" "}
+            <Link to="/privacy" className="underline underline-offset-2 hover:text-foreground">隐私政策</Link>{" "}
+            和{" "}
+            <Link to="/terms" className="underline underline-offset-2 hover:text-foreground">服务条款</Link>
+          </p>
           <button
             type="button"
             onClick={() => navigate("/", { replace: true })}

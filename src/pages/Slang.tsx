@@ -434,7 +434,7 @@ const Slang = () => {
                       )}
                     </div>
                     <div className="mt-0.5 text-base font-semibold text-primary md:text-sm">
-                      {it.meaning_cn}
+                      <T>{it.meaning_cn}</T>
                     </div>
                     <div className="mt-1 text-sm text-muted-foreground md:text-xs">{it.meaning_en}</div>
 
@@ -452,7 +452,7 @@ const Slang = () => {
                       </div>
                       <div className="mt-1.5 flex items-start gap-2">
                         <span className="mt-1 text-[11px] font-bold text-muted-foreground md:text-[10px]">CN</span>
-                        <span className="flex-1 text-muted-foreground">{it.example_cn}</span>
+                        <span className="flex-1 text-muted-foreground"><T>{it.example_cn}</T></span>
                       </div>
                     </div>
                   </div>
@@ -589,13 +589,13 @@ const Slang = () => {
                   </div>
                 )}
                 {q.kind === "cn2en" && (
-                  <h3 className="text-2xl font-extrabold">{q.prompt}</h3>
+                  <h3 className="text-2xl font-extrabold"><T>{q.prompt}</T></h3>
                 )}
                 {q.kind === "fill" && (
                   <div>
                     <p className="text-base font-semibold leading-relaxed">{q.prompt}</p>
                     {q.context && (
-                      <p className="mt-1.5 text-xs text-muted-foreground">{q.context}</p>
+                      <p className="mt-1.5 text-xs text-muted-foreground"><T>{q.context}</T></p>
                     )}
                   </div>
                 )}
@@ -628,7 +628,7 @@ const Slang = () => {
                               : "border-border bg-card hover:border-primary/40"
                       }`}
                     >
-                      <span>{opt}</span>
+                      <span>{q.kind === "en2cn" ? <T>{opt}</T> : opt}</span>
                       {correctOpt && <CheckCircle2 className="size-4 text-emerald-500" />}
                       {wrongOpt && <XCircle className="size-4 text-rose-500" />}
                       {!revealed && active && <CheckCircle2 className="size-4 text-primary" />}
@@ -645,10 +645,10 @@ const Slang = () => {
                   </div>
                   <div className="mt-2 space-y-1 text-foreground/90">
                     <div>
-                      <strong>{q.idiom.phrase}</strong> — {q.idiom.meaning_cn}
+                      <strong>{q.idiom.phrase}</strong> — <T>{q.idiom.meaning_cn}</T>
                     </div>
                     <div className="text-xs italic">"{q.idiom.example}"</div>
-                    <div className="text-xs text-muted-foreground">{q.idiom.example_cn}</div>
+                    <div className="text-xs text-muted-foreground"><T>{q.idiom.example_cn}</T></div>
                   </div>
                 </div>
               )}
@@ -707,7 +707,7 @@ const Slang = () => {
                     <XCircle className="size-4 shrink-0 text-rose-500" />
                   )}
                   <span className="flex-1 truncate font-semibold">{q.idiom.phrase}</span>
-                  <span className="truncate text-xs text-muted-foreground">{q.idiom.meaning_cn}</span>
+                  <span className="truncate text-xs text-muted-foreground"><T>{q.idiom.meaning_cn}</T></span>
                 </div>
               );
             })}

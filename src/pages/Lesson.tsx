@@ -201,22 +201,16 @@ const Lesson = () => {
     // Topic-specific content from AI (live) or the pre-generated bundle.
     const topical = aiContent ?? PREGEN_MAP[lesson.title] ?? null;
     if (hasAuthoredContent(lesson.title)) {
-      // Authored lessons have hand-crafted vocab + reading. The remaining
-      // sections (grammar / expressions / fillBlanks / quiz / listening /
-      // output) in LESSON_CONTENT are a generic template that is the same
-      // for every lesson — so prefer topical AI content for those when
-      // available, while keeping the authored vocab + reading.
-      //
-      // IMPORTANT: quiz / fillBlanks / listening reference the *reading*
-      // passage. If we mix authored reading with topical quiz, the quiz
-      // will ask about a story the user never saw. So when we use the
-      // topical quiz/fill/listening, we MUST also use the topical reading.
+      // Authored lessons have hand-crafted vocab + reading sourced from the
+      // HTML curriculum. The 课文阅读 (reading) MUST always come from the
+      // authored source — never from AI. Other sections (grammar /
+      // expressions / fillBlanks / quiz / listening / output) can be merged
+      // in from topical AI content when available.
       if (topical && authored) {
         return {
           ...topical,
+          reading: authored.reading,
           vocab: authored.vocab,
-          // reading stays from `topical` so that quiz questions match
-          // the passage shown in step 4.
         };
       }
       return authored;
@@ -235,6 +229,9 @@ const Lesson = () => {
           !(v as { prompt?: string }).prompt);
       const merged = { ...authored } as LessonContent;
       (Object.keys(topical) as (keyof LessonContent)[]).forEach((k) => {
+        // Reading + vocab are sourced from the HTML curriculum and must
+        // never be overwritten by AI-generated content.
+        if (k === "reading" || k === "vocab") return;
         const tv = (topical as LessonContent)[k];
         if (!isEmpty(tv)) (merged as Record<string, unknown>)[k] = tv as unknown;
       });

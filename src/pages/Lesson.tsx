@@ -33,7 +33,7 @@ const PREGEN_MAP = PREGENERATED_LESSONS as unknown as Record<string, LessonConte
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
-import { T } from "@/i18n/T";
+import { T, useT } from "@/i18n/T";
 import { findNextLesson, isMastered, setLastVisited, setMastered } from "@/lib/mastery";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -107,6 +107,7 @@ const SectionHeader = ({
 );
 
 const Lesson = () => {
+  const tt = useT();
   const { levelId, unitId, lessonId } = useParams();
   const lesson = findLesson(Number(levelId), Number(unitId), Number(lessonId));
   const [activeStep, setActiveStep] = useState(1);
@@ -145,13 +146,13 @@ const Lesson = () => {
     if (next) {
       markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
       const nextLesson = findNextLesson(Number(levelId), Number(unitId), Number(lessonId));
-      toast.success("🎓 已标记为掌握", {
+      toast.success(tt("🎓 已标记为掌握"), {
         description: nextLesson
-          ? `下次打开 App 时会提醒你继续：${nextLesson.title}`
-          : "你已完成全部课程，太棒啦！",
+          ? `${tt("下次打开 App 时会提醒你继续：")}${nextLesson.title}`
+          : tt("你已完成全部课程，太棒啦！"),
       });
     } else {
-      toast("已取消「掌握」标记");
+      toast(tt("已取消「掌握」标记"));
     }
   };
 
@@ -173,9 +174,9 @@ const Lesson = () => {
       const p = loadProgress();
       const streak = getStreak(p);
       const desc = streak >= 2
-        ? `🔥 已连续学习 ${streak} 天，登录后保住你的连胜，并解锁学习数据面板。`
-        : `已完成 ${p.completedLessons.length} 节课${p.studyMinutes > 0 ? `、累计学习 ${p.studyMinutes} 分钟` : ""}，登录后这些进度永久保留。`;
-      nudge("lesson-finish", "🎉 完成一节课！", desc);
+        ? `🔥 ${tt("已连续学习")} ${streak} ${tt("天，登录后保住你的连胜，并解锁学习数据面板。")}`
+        : `${tt("已完成")} ${p.completedLessons.length} ${tt("节课")}${p.studyMinutes > 0 ? `${tt("、累计学习")} ${p.studyMinutes} ${tt("分钟")}` : ""}${tt("，登录后这些进度永久保留。")}`;
+      nudge("lesson-finish", tt("🎉 完成一节课！"), desc);
     }
     // Wait for the new section to render, then smooth-scroll it into view.
     requestAnimationFrame(() => {
@@ -204,7 +205,7 @@ const Lesson = () => {
 
   const checkWriting = async () => {
     if (!output.trim()) {
-      toast("请先在上方写下你的英文回答");
+      toast(tt("请先在上方写下你的英文回答"));
       return;
     }
     if (!content || !lesson) return;
@@ -223,11 +224,11 @@ const Lesson = () => {
       if (error) throw error;
       if ((data as any)?.error) throw new Error((data as any).error);
       setFeedback(data as Feedback);
-      toast.success("✅ 已完成本课写作 · 查看下方点评");
+      toast.success(tt("✅ 已完成本课写作 · 查看下方点评"));
       // Mark lesson as completed in progress
       markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
     } catch (e: any) {
-      toast.error("检查失败", { description: e?.message ?? "请稍后再试" });
+      toast.error(tt("检查失败"), { description: e?.message ?? tt("请稍后再试") });
     } finally {
       setChecking(false);
     }

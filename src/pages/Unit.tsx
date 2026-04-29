@@ -1,10 +1,11 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
-import { CheckCircle2, Lock, PlayCircle } from "lucide-react";
+import { CheckCircle2, Lock, PlayCircle, Trophy } from "lucide-react";
 import { findUnit } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { loadProgress, touchActive } from "@/lib/guestProgress";
+import { isMastered } from "@/lib/mastery";
 
 const Unit = () => {
   const { levelId, unitId } = useParams();
@@ -34,12 +35,15 @@ const Unit = () => {
         {unit.lessons.map((l) => {
           const locked = l.status === "locked";
           const done = l.status === "done";
-          const Icon = done ? CheckCircle2 : locked ? Lock : PlayCircle;
-          const iconWrap = done
-            ? "bg-success/15 text-success"
-            : locked
-              ? "bg-secondary text-muted-foreground"
-              : "bg-primary/15 text-primary";
+          const mastered = isMastered(Number(levelId), Number(unitId), l.id);
+          const Icon = mastered ? Trophy : done ? CheckCircle2 : locked ? Lock : PlayCircle;
+          const iconWrap = mastered
+            ? "bg-emerald-500/15 text-emerald-500"
+            : done
+              ? "bg-success/15 text-success"
+              : locked
+                ? "bg-secondary text-muted-foreground"
+                : "bg-primary/15 text-primary";
 
           const Tag = locked ? "div" : Link;
           return (
@@ -56,9 +60,17 @@ const Unit = () => {
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-medium text-muted-foreground">课程 {l.id}</span>
-                  {done && (
+                  {mastered ? (
+                    <span className="rounded-md bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">
+                      🏆 已掌握
+                    </span>
+                  ) : done ? (
                     <span className="rounded-md bg-success/15 px-2 py-0.5 text-[10px] font-bold text-success">
                       已完成
+                    </span>
+                  ) : (
+                    <span className="rounded-md border border-border px-2 py-0.5 text-[10px] font-bold text-muted-foreground">
+                      未掌握
                     </span>
                   )}
                 </div>

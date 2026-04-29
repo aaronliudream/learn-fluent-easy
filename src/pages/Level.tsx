@@ -106,12 +106,15 @@ const Level = () => {
                         ? "bg-primary text-primary-foreground"
                         : "bg-secondary text-muted-foreground";
                   return (
-                    <span
+                    <Link
                       key={l.id}
-                      className={`grid size-8 place-items-center rounded-lg text-xs font-bold ${cls}`}
+                      to={`/level/${level.id}/unit/${u.id}/lesson/${l.id}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className={`grid size-8 place-items-center rounded-lg text-xs font-bold transition hover:scale-110 ${cls}`}
+                      aria-label={`课程 ${l.id}`}
                     >
                       {l.id}
-                    </span>
+                    </Link>
                   );
                 })}
               </div>

@@ -22,6 +22,7 @@ import {
   loadSlangMastery,
   recordSlangResult,
   sortByMastery,
+  pickQuizPool,
 } from "@/lib/slangMastery";
 
 type Mode = "browse" | "quiz";
@@ -100,7 +101,9 @@ function blankOutPhrase(example: string, phrase: string): string {
 
 function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
   const sourceForDistractors = IDIOMS;
-  const picked = shuffle(pool).slice(0, Math.min(len, pool.length));
+  // Spaced-repetition pick: prioritise struggling > unseen > due-review,
+  // and skip mastered items still in cooldown.
+  const picked = pickQuizPool(pool, Math.min(len, pool.length));
   const kinds: QuizKind[] = ["en2cn", "cn2en", "fill"];
   return picked.map((idiom, i) => {
     const kind = kinds[i % kinds.length];
@@ -276,7 +279,15 @@ const Slang = () => {
   }, [mode, questions.length]);
 
   const startQuiz = () => {
-    setQuestions(buildQuiz());
+    const qs = buildQuiz();
+    if (qs.length === 0) {
+      toast.success("🎉 太棒了！现有俚语都已掌握，先去浏览新词吧。");
+      return;
+    }
+    if (qs.length < QUIZ_LEN) {
+      toast(`本轮只测 ${qs.length} 题：其余俚语正在复习冷却期 ✨`);
+    }
+    setQuestions(qs);
     setQIdx(0);
     setPicks({});
     setRevealed(false);
@@ -286,7 +297,13 @@ const Slang = () => {
   };
 
   const restartQuiz = () => {
-    setQuestions(buildQuiz());
+    const qs = buildQuiz();
+    if (qs.length === 0) {
+      toast.success("🎉 已经全部掌握，无需再测！");
+      setMode("browse");
+      return;
+    }
+    setQuestions(qs);
     setQIdx(0);
     setPicks({});
     setRevealed(false);

@@ -215,6 +215,8 @@ Deno.serve(async (req) => {
   * 4 个 options 中只有 answer 索引对应的那一个是 reading 真正支持的, 其余 3 个干扰项必须是合理但与 reading 不符的内容
   * 严禁出现 reading 中从未提到的专有名词、数字、地点
   * 出题前先在心里逐句回看 reading, 确保每题都能指向 reading 里具体的一句
+  * 【严禁编造人名 — 极其重要】不得在 quiz 的 q 或 options 里凭空给出 reading 中不存在的人名 (例如 reading 是第一人称 "I" 叙述, 没出现任何具体姓名, 那就绝对不能写 "What does Anna say...", "According to Sarah..." 之类)。在引用叙述者时, 一律使用 the author / the writer / the narrator / the speaker; 只有当 reading 里明确出现了某个人名 (如 Tom, Mei) 时, quiz 才可以使用那个名字
+  * 同理, fillBlanks.sentence、listening.audio、output.sample、expressions 中也严禁引入 reading 中没有出现过的人名
 - 【语法重点 grammar — 极其重要】grammar 数组里每一个语法点的 examples 句子必须满足:
   * 每一句 en 都必须【一字不差地、原样出现】在本课 reading 数组的某一句中 (允许是 reading 段落里的一个完整句子, 不允许改写或拼接)
   * 严禁自己另外造句作为 examples; 若某个语法点在 reading 里找不到至少 2 个对应例句, 请换一个能在 reading 中找到例句的语法点 (如核心句型 / 时态 / 从句结构)

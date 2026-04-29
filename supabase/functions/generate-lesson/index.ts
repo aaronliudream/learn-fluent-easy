@@ -197,6 +197,16 @@ Deno.serve(async (req) => {
 其他要求:
 - 所有英文必须真实自然 (美式英语)
 - 难度匹配 LEVEL (Level 1=A1, Level 2=A2, Level 3=B1, 以此类推)
+- 难度匹配 LEVEL: Level 1=CEFR A1, Level 2=A2, Level 3=B1, Level 4=B2, Level 5=C1, Level 6=C2
+- 【Level 5 = C1 高级】生成 Level 5 课程时, 必须遵守:
+  * reading 长度 5 句, 每句更长更复杂 (平均 18-28 词), 大量使用从句、分词结构、名词化、衔接副词 (nevertheless / consequently / albeit / whereas / insofar as ...)
+  * 话题为成人 C1 级别: 职场策略、谈判、跨文化沟通、学术阅读、新闻评论、社会议题、伦理思辨、科技与社会, 不要再用"梅在咖啡店"这种 A1 生活场景
+  * 主人公可以是新设定的成年人物 (职场人士、记者、学者、咨询师等), 不必延续 Level 1-4 的"梅"故事线
+  * vocab 选取 C1 级别的低频实词 / 学术词 / 地道搭配 (例如 ramifications, inadvertent, nuanced, scrutinize, untenable, in tandem with), 避免再收 B2 以下词
+  * grammar 必须聚焦 C1 高阶结构: 倒装、分裂句 (cleft / it-cleft / wh-cleft)、虚拟语气进阶 (had it not been for / were it not for)、名词化、缩减关系从句、独立分词结构、混合条件、模糊与让步副词、报告动词的细分
+  * expressions 必须是 C1 级别的地道句式 (hedging / 委婉断言 / 学术表达 / 商业谈判常用句), 而非寒暄
+  * quiz 4 题中至少 1 题考"作者态度 / 推断 / 言外之意", 不只考事实
+  * output.sample 范文应是连贯的小议论 / 评述 / 邮件 / 摘要, 不是简单叙述
 - 中文翻译/释义准确口语化
 - fillBlanks 中 answer 必须是 options 之一; quiz 的 answer 必须是 0-3 的索引
 - listening.audio 应能直接朗读 (2-4 句, 围绕本课场景)

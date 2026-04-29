@@ -6,8 +6,10 @@ import { PageHeader } from "@/components/PageHeader";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { loadProgress, touchActive } from "@/lib/guestProgress";
 import { isMastered } from "@/lib/mastery";
+import { T, useT } from "@/i18n/T";
 
 const Unit = () => {
+  const t = useT();
   const { levelId, unitId } = useParams();
   const unit = findUnit(Number(levelId), Number(unitId));
   const nudge = useGuestNudge();
@@ -19,17 +21,17 @@ const Unit = () => {
       const p = loadProgress();
       const done = p.completedLessons.length;
       const desc = done > 0
-        ? `你已完成 ${done} 节课${p.studyMinutes > 0 ? `、学习 ${p.studyMinutes} 分钟` : ""}。登录后这些进度永久保留，3 秒同步到手机。`
-        : "登录后学习进度永久保留，可以在手机、电脑间无缝同步。";
-      nudge("browse-deeper", "看来你很喜欢学习 ✨", desc);
+        ? t(`你已完成 ${done} 节课${p.studyMinutes > 0 ? `、学习 ${p.studyMinutes} 分钟` : ""}。登录后这些进度永久保留，3 秒同步到手机。`)
+        : t("登录后学习进度永久保留，可以在手机、电脑间无缝同步。");
+      nudge("browse-deeper", t("看来你很喜欢学习 ✨"), desc);
     }
   }, [unitId, nudge]);
 
-  if (!unit) return <div className="p-10">单元不存在</div>;
+  if (!unit) return <div className="p-10">{t("单元不存在")}</div>;
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title="课程列表" subtitle="完成每个课程来提升你的英语水平" back={`/level/${levelId}`} />
+      <PageHeader title={t("课程列表")} subtitle={t("完成每个课程来提升你的英语水平")} back={`/level/${levelId}`} />
 
       <section className="space-y-3">
         {unit.lessons.map((l) => {
@@ -59,23 +61,23 @@ const Unit = () => {
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-medium text-muted-foreground">课程 {l.id}</span>
+                  <span className="text-xs font-medium text-muted-foreground"><T>课程</T> {l.id}</span>
                   {mastered ? (
                     <span className="rounded-md bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">
-                      🏆 已掌握
+                      🏆 <T>已掌握</T>
                     </span>
                   ) : done ? (
                     <span className="rounded-md bg-success/15 px-2 py-0.5 text-[10px] font-bold text-success">
-                      已完成
+                      <T>已完成</T>
                     </span>
                   ) : (
                     <span className="rounded-md border border-border px-2 py-0.5 text-[10px] font-bold text-muted-foreground">
-                      未掌握
+                      <T>未掌握</T>
                     </span>
                   )}
                 </div>
                 <h3 className={`mt-0.5 truncate text-base font-bold md:text-lg ${locked ? "text-muted-foreground" : "text-foreground"}`}>
-                  {l.title}
+                  <T>{l.title}</T>
                 </h3>
                 <div className="mt-0.5 text-xs text-muted-foreground">{l.duration}</div>
               </div>

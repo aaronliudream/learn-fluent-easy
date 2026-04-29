@@ -227,7 +227,8 @@ const Lesson = () => {
     if (!lesson) return null;
     const authored = LESSON_CONTENT[lesson.title] ?? null;
     // Topic-specific content from AI (live) or the pre-generated bundle.
-    const topical = aiContent ?? PREGEN_MAP[lesson.title] ?? null;
+      const topicalRaw = aiContent ?? PREGEN_MAP[lesson.title] ?? null;
+      const topical = topicalRaw ? sanitizeUnsupportedNarratorNames(topicalRaw) : null;
     if (hasAuthoredContent(lesson.title)) {
       // Authored lessons have hand-crafted vocab + reading sourced from the
       // HTML curriculum. The 课文阅读 (reading) MUST always come from the

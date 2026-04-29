@@ -20,9 +20,11 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Download, Trash2, Shield, FileText, LogIn } from "lucide-react";
 import { loadProgress } from "@/lib/guestProgress";
+import { T, useT } from "@/i18n/T";
 
 const Account = () => {
   const navigate = useNavigate();
+  const t = useT();
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(false);
   const [confirmText, setConfirmText] = useState("");
@@ -71,9 +73,9 @@ const Account = () => {
       a.download = `my-data-${new Date().toISOString().slice(0, 10)}.json`;
       a.click();
       URL.revokeObjectURL(url);
-      toast.success("数据已导出");
+      toast.success(t("数据已导出"));
     } catch (e) {
-      toast.error("导出失败：" + (e as Error).message);
+      toast.error(t("导出失败：") + (e as Error).message);
     } finally {
       setLoading(false);
     }
@@ -82,7 +84,7 @@ const Account = () => {
   const handleDelete = async () => {
     if (!user) return;
     if (confirmText !== "DELETE") {
-      toast.error("请输入 DELETE 以确认");
+      toast.error(t("请输入 DELETE 以确认"));
       return;
     }
     setLoading(true);
@@ -94,10 +96,10 @@ const Account = () => {
       });
       if (error) throw error;
       await supabase.auth.signOut();
-      toast.success("账户已删除");
+      toast.success(t("账户已删除"));
       navigate("/", { replace: true });
     } catch (e) {
-      toast.error("删除失败：" + (e as Error).message);
+      toast.error(t("删除失败：") + (e as Error).message);
     } finally {
       setLoading(false);
     }
@@ -105,29 +107,29 @@ const Account = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader title="账户与隐私" subtitle="管理你的账户、数据与隐私设置" back="/" />
+      <PageHeader title={t("账户与隐私")} subtitle={t("管理你的账户、数据与隐私设置")} back="/" />
 
       {/* Account info */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
         <h3 className="mb-3 text-sm font-bold uppercase tracking-widest text-muted-foreground">
-          账户信息
+          <T>账户信息</T>
         </h3>
         {user ? (
           <div className="space-y-1 text-sm">
             <div>
-              <span className="text-muted-foreground">昵称：</span>
+              <span className="text-muted-foreground"><T>昵称：</T></span>
               {user.user_metadata?.display_name || "—"}
             </div>
             <div>
-              <span className="text-muted-foreground">邮箱：</span>
+              <span className="text-muted-foreground"><T>邮箱：</T></span>
               {user.email}
             </div>
           </div>
         ) : (
           <div className="flex items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground">未登录 · 仅可导出本机数据</p>
+            <p className="text-sm text-muted-foreground"><T>未登录 · 仅可导出本机数据</T></p>
             <Button asChild size="sm">
-              <Link to="/auth"><LogIn className="size-4" /> 登录</Link>
+              <Link to="/auth"><LogIn className="size-4" /> <T>登录</T></Link>
             </Button>
           </div>
         )}
@@ -135,24 +137,24 @@ const Account = () => {
 
       {/* Export */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
-        <h3 className="text-base font-bold">导出我的数据</h3>
+        <h3 className="text-base font-bold"><T>导出我的数据</T></h3>
         <p className="mt-1 text-sm text-muted-foreground">
-          下载一份你的所有学习数据（JSON 格式），包括账户信息、学习进度和俚语掌握度。
+          <T>下载一份你的所有学习数据（JSON 格式），包括账户信息、学习进度和俚语掌握度。</T>
         </p>
         <Button onClick={handleExport} disabled={loading} className="mt-4">
-          <Download className="size-4" /> 导出 JSON
+          <Download className="size-4" /> <T>导出 JSON</T>
         </Button>
       </section>
 
       {/* Legal */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
-        <h3 className="text-base font-bold">隐私与协议</h3>
+        <h3 className="text-base font-bold"><T>隐私与协议</T></h3>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           <Button asChild variant="outline">
-            <Link to="/privacy"><Shield className="size-4" /> 隐私政策</Link>
+            <Link to="/privacy"><Shield className="size-4" /> <T>隐私政策</T></Link>
           </Button>
           <Button asChild variant="outline">
-            <Link to="/terms"><FileText className="size-4" /> 服务条款</Link>
+            <Link to="/terms"><FileText className="size-4" /> <T>服务条款</T></Link>
           </Button>
         </div>
       </section>
@@ -160,26 +162,26 @@ const Account = () => {
       {/* Danger zone */}
       {user && (
         <section className="rounded-2xl border border-destructive/30 bg-destructive/5 p-6">
-          <h3 className="text-base font-bold text-destructive">危险区域</h3>
+          <h3 className="text-base font-bold text-destructive"><T>危险区域</T></h3>
           <p className="mt-1 text-sm text-muted-foreground">
-            删除账户后，你的所有学习记录、俚语掌握度和账号信息将被永久删除，无法恢复。
+            <T>删除账户后，你的所有学习记录、俚语掌握度和账号信息将被永久删除，无法恢复。</T>
           </p>
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <Button variant="destructive" className="mt-4">
-                <Trash2 className="size-4" /> 删除我的账户
+                <Trash2 className="size-4" /> <T>删除我的账户</T>
               </Button>
             </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>确认永久删除账户？</AlertDialogTitle>
+                <AlertDialogTitle><T>确认永久删除账户？</T></AlertDialogTitle>
                 <AlertDialogDescription>
-                  此操作不可撤销。我们将立即删除你的账号、所有学习进度、俚语掌握度记录和生成的课程。
-                  请在下方输入 <strong>DELETE</strong> 以确认。
+                  <T>此操作不可撤销。我们将立即删除你的账号、所有学习进度、俚语掌握度记录和生成的课程。</T>
+                  {" "}<T>请在下方输入</T> <strong>DELETE</strong> <T>以确认。</T>
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <div className="space-y-2">
-                <Label htmlFor="confirm">输入 DELETE 确认</Label>
+                <Label htmlFor="confirm"><T>输入 DELETE 确认</T></Label>
                 <Input
                   id="confirm"
                   value={confirmText}
@@ -189,13 +191,13 @@ const Account = () => {
                 />
               </div>
               <AlertDialogFooter>
-                <AlertDialogCancel onClick={() => setConfirmText("")}>取消</AlertDialogCancel>
+                <AlertDialogCancel onClick={() => setConfirmText("")}><T>取消</T></AlertDialogCancel>
                 <AlertDialogAction
                   onClick={handleDelete}
                   disabled={loading || confirmText !== "DELETE"}
                   className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                 >
-                  永久删除
+                  <T>永久删除</T>
                 </AlertDialogAction>
               </AlertDialogFooter>
             </AlertDialogContent>

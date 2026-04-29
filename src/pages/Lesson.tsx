@@ -290,8 +290,11 @@ const Lesson = () => {
     try {
       const levelName = LEVELS.find((l) => l.id === lv)?.name;
       const unitTitle = findUnit(lv, un)?.title;
+      // Pass the words already covered by earlier lessons so the AI
+      // can pick genuinely new vocabulary for this lesson.
+      const priorWords = Array.from(getPriorLessonWords(lv, un, ls));
       const { data, error } = await supabase.functions.invoke("generate-lesson", {
-        body: { title: lesson.title, levelName, unitTitle },
+        body: { title: lesson.title, levelName, unitTitle, priorWords },
       });
       if (error) throw error;
       if ((data as any)?.error) throw new Error((data as any).error);

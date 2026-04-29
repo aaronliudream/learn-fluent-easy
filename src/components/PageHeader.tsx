@@ -1,6 +1,7 @@
 import { ArrowLeft, Home } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { VoiceSettingsButton } from "@/components/VoiceSettings";
+import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 
 type Props = {
   title: string;
@@ -28,6 +29,7 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
           </h1>
         </div>
         <div className="flex items-center gap-1">
+          <LanguageSwitcher />
           <VoiceSettingsButton />
           <Link
             to="/"

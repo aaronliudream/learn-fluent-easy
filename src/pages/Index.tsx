@@ -1,4 +1,4 @@
-import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap, BookOpen, ArrowRight, Layers } from "lucide-react";
+import { ChevronRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Clock, TrendingUp, Zap, BookOpen, ArrowRight, Layers, UserCog } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -83,6 +83,11 @@ const Index = () => {
         <Button asChild variant="ghost" size="sm" className="mr-2">
           <Link to="/stats">
             <BarChart3 className="size-4" /> 我的数据
+          </Link>
+        </Button>
+        <Button asChild variant="ghost" size="sm" className="mr-2">
+          <Link to="/account">
+            <UserCog className="size-4" /> 账户
           </Link>
         </Button>
         {user ? (

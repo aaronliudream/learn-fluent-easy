@@ -72,12 +72,14 @@ const Level = () => {
           const pctU = Math.round((doneU / u.lessons.length) * 100);
           const Icon = ICONS[u.icon as keyof typeof ICONS] ?? BookOpen;
           return (
-            <Link
+            <div
               key={u.id}
-              to={`/level/${level.id}/unit/${u.id}`}
-              className="block rounded-2xl bg-card p-5 shadow-card transition hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-8px_hsl(250_40%_50%/0.25)] md:p-6"
+              className="rounded-2xl bg-card p-5 shadow-card transition hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-8px_hsl(250_40%_50%/0.25)] md:p-6"
             >
-              <div className="flex items-start justify-between gap-4">
+              <Link
+                to={`/level/${level.id}/unit/${u.id}`}
+                className="flex items-start justify-between gap-4"
+              >
                 <div className="flex min-w-0 items-start gap-4">
                   <div className={`grid size-12 shrink-0 place-items-center rounded-2xl ${u.iconBg} text-white shadow-md`}>
                     <Icon className="size-6" />
@@ -93,9 +95,9 @@ const Level = () => {
                   </div>
                   <div className="text-xs text-muted-foreground">已完成</div>
                 </div>
-              </div>
+              </Link>
 
-              <p className="mt-3 text-sm text-muted-foreground">{u.desc}</p>
+              <Link to={`/level/${level.id}/unit/${u.id}`} className="mt-3 block text-sm text-muted-foreground">{u.desc}</Link>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {u.lessons.map((l) => {
@@ -119,7 +121,7 @@ const Level = () => {
                 })}
               </div>
 
-              <div className="mt-4 flex items-center justify-between border-t border-border pt-3 text-xs text-muted-foreground">
+              <Link to={`/level/${level.id}/unit/${u.id}`} className="mt-4 flex items-center justify-between border-t border-border pt-3 text-xs text-muted-foreground">
                 <span className="flex items-center gap-1.5">
                   <span className="grid size-4 place-items-center rounded-full border border-current">
                     <span className="block size-1 rounded-full bg-current" />
@@ -129,8 +131,8 @@ const Level = () => {
                 <span className="font-semibold text-foreground/70">
                   {doneU}/{u.lessons.length} 课程
                 </span>
-              </div>
-            </Link>
+              </Link>
+            </div>
           );
         })}
       </section>

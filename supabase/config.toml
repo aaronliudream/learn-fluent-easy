@@ -1,16 +1,15 @@
 project_id = "fottntyhwolbsdvkwriq"
 
-[functions.tts]
-verify_jwt = false
-
-[functions.check-writing]
-verify_jwt = false
-
-[functions.generate-lesson]
-verify_jwt = false
-
-[functions.delete-account]
-verify_jwt = true
-
-[functions.generate-daily-slang]
-verify_jwt = false
+[functions]
+  [functions.auth-email-hook]
+    verify_jwt = false
+  [functions.check-writing]
+    verify_jwt = false
+  [functions.delete-account]
+    verify_jwt = true
+  [functions.generate-daily-slang]
+    verify_jwt = false
+  [functions.generate-lesson]
+    verify_jwt = false
+  [functions.tts]
+    verify_jwt = false

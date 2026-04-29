@@ -762,7 +762,7 @@ const Lesson = () => {
                   <button
                     onClick={() => speak(p.en)}
                     className="grid size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:hidden"
-                    aria-label="朗读"
+                    aria-label={tt("朗读")}
                   >
                     <Volume2 className="size-4" />
                   </button>
@@ -773,7 +773,7 @@ const Lesson = () => {
                     <button
                       onClick={() => speak(p.en)}
                       className="hidden size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:grid"
-                      aria-label="朗读"
+                      aria-label={tt("朗读")}
                     >
                       <Volume2 className="size-4" />
                     </button>
@@ -935,14 +935,14 @@ const Lesson = () => {
                         <>
                           <Check className="mt-0.5 size-4 shrink-0" />
                           <span>
-                            <strong>正确！</strong> {f.cn}
+                            <strong><T>正确！</T></strong> <T>{f.cn}</T>
                           </span>
                         </>
                       ) : (
                         <>
                           <X className="mt-0.5 size-4 shrink-0" />
                           <span>
-                            <strong>不对，正确答案是 “{f.answer}”。</strong> {f.cn}
+                            <strong><T>不对，正确答案是</T> "{f.answer}"。</strong> <T>{f.cn}</T>
                           </span>
                         </>
                       )}
@@ -1039,7 +1039,7 @@ const Lesson = () => {
                       onClick={() => speak(sentence)}
                       className="flex items-center gap-2 rounded-full bg-grad-title px-4 py-2 text-sm font-semibold text-white shadow-tile"
                     >
-                      <Volume2 className="size-4" /> 播放第 {i + 1} 题
+                      <Volume2 className="size-4" /> <T>播放第</T> {i + 1} <T>题</T>
                     </button>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
@@ -1054,7 +1054,7 @@ const Lesson = () => {
                             : "border-rose-400 text-rose-600"
                           : "border-muted-foreground/40"
                       }`}
-                      placeholder="输入"
+                      placeholder={tt("输入")}
                     />
                     <span>{b.after}</span>
                     {v && correct && <Check className="size-4 text-emerald-500" />}
@@ -1062,15 +1062,15 @@ const Lesson = () => {
                   {v && showFeedback && (
                     correct ? (
                       <div className="mt-3 flex items-center gap-2 rounded-xl bg-emerald-500/10 px-3 py-2 text-sm font-semibold text-emerald-600">
-                        <Check className="size-4" /> 回答正确
+                        <Check className="size-4" /> <T>回答正确</T>
                       </div>
                     ) : (
                       <div className="mt-3 flex items-center gap-2 rounded-xl bg-rose-500/10 px-3 py-2 text-sm text-rose-600">
                         <X className="size-4 shrink-0" />
                         <span>
-                          <span className="font-semibold">回答错误</span>
+                          <span className="font-semibold"><T>回答错误</T></span>
                           <span className="mx-1">·</span>
-                          正确答案：
+                          <T>正确答案：</T>
                           <span className="font-bold">{b.answer}</span>
                         </span>
                       </div>
@@ -1138,16 +1138,16 @@ const Lesson = () => {
           {feedback && (
             <div className="mt-5 space-y-4 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-5">
               <div className="flex items-center justify-between">
-                <h4 className="text-lg font-bold text-emerald-700">📝 AI 写作点评</h4>
+                <h4 className="text-lg font-bold text-emerald-700">📝 <T>AI 写作点评</T></h4>
                 <span className="rounded-full bg-emerald-600 px-3 py-1 text-sm font-bold text-white">
-                  {feedback.score} 分
+                  {feedback.score} <T>分</T>
                 </span>
               </div>
               <p className="text-sm leading-relaxed text-foreground/85">{feedback.overall}</p>
 
               {feedback.mistakes.length > 0 ? (
                 <div>
-                  <div className="mb-2 text-sm font-semibold text-rose-600">🔍 需要修改的地方</div>
+                  <div className="mb-2 text-sm font-semibold text-rose-600">🔍 <T>需要修改的地方</T></div>
                   <ul className="space-y-3">
                     {feedback.mistakes.map((m, i) => (
                       <li key={i} className="rounded-xl border border-rose-200 bg-white p-3 text-sm">
@@ -1160,13 +1160,13 @@ const Lesson = () => {
                 </div>
               ) : (
                 <div className="rounded-xl bg-white p-3 text-sm text-emerald-700">
-                  🎉 没有发现明显错误，写得很棒！
+                  🎉 <T>没有发现明显错误，写得很棒！</T>
                 </div>
               )}
 
               {feedback.suggestions.length > 0 && (
                 <div>
-                  <div className="mb-2 text-sm font-semibold text-primary">💡 改进建议</div>
+                  <div className="mb-2 text-sm font-semibold text-primary">💡 <T>改进建议</T></div>
                   <ul className="list-disc space-y-1 pl-5 text-sm text-foreground/80">
                     {feedback.suggestions.map((s, i) => (
                       <li key={i}>{s}</li>
@@ -1178,7 +1178,7 @@ const Lesson = () => {
               {feedback.improved && (
                 <div>
                   <div className="mb-2 flex items-center justify-between">
-                    <div className="text-sm font-semibold text-primary">✨ 润色后版本</div>
+                    <div className="text-sm font-semibold text-primary">✨ <T>润色后版本</T></div>
                     <button
                       onClick={() => speak(feedback.improved)}
                       className="text-primary hover:opacity-70"

@@ -279,7 +279,15 @@ const Slang = () => {
   }, [mode, questions.length]);
 
   const startQuiz = () => {
-    setQuestions(buildQuiz());
+    const qs = buildQuiz();
+    if (qs.length === 0) {
+      toast.success("🎉 太棒了！现有俚语都已掌握，先去浏览新词吧。");
+      return;
+    }
+    if (qs.length < QUIZ_LEN) {
+      toast(`本轮只测 ${qs.length} 题：其余俚语正在复习冷却期 ✨`);
+    }
+    setQuestions(qs);
     setQIdx(0);
     setPicks({});
     setRevealed(false);
@@ -289,7 +297,13 @@ const Slang = () => {
   };
 
   const restartQuiz = () => {
-    setQuestions(buildQuiz());
+    const qs = buildQuiz();
+    if (qs.length === 0) {
+      toast.success("🎉 已经全部掌握，无需再测！");
+      setMode("browse");
+      return;
+    }
+    setQuestions(qs);
     setQIdx(0);
     setPicks({});
     setRevealed(false);

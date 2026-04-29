@@ -1,9 +1,20 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { encode as base64Encode } from "https://deno.land/std@0.168.0/encoding/base64.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+};
+
+// Map our existing voice IDs to high-quality ElevenLabs voices.
+// These IDs come from the ElevenLabs default voice library.
+const VOICE_MAP: Record<string, string> = {
+  alloy:   "EXAVITQu4vr4xnSDxMaL", // Sarah  - warm clear female
+  shimmer: "Xb7hH8MSUJpSbSDYk0k2", // Alice  - bright soft female
+  nova:    "cgSgspJ2msm6clMCkdW9", // Jessica - youthful energetic female
+  echo:    "JBFqnCBsd6RMkjVDRZzb", // George - warm magnetic male
+  onyx:    "nPczCjzI2devNBz1zQrb", // Brian  - deep mature male
+  fable:   "onwK4e9ZLuTAKqWW03F9", // Daniel - elegant british male
 };
 
 serve(async (req) => {
@@ -20,38 +31,30 @@ serve(async (req) => {
       });
     }
 
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
+    const ELEVENLABS_API_KEY = Deno.env.get("ELEVENLABS_API_KEY");
+    if (!ELEVENLABS_API_KEY) throw new Error("ELEVENLABS_API_KEY is not configured");
 
     const safeSpeed = Math.min(1.2, Math.max(0.7, Number(speed) || 1.0));
-    const voice = voiceId || "alloy";
-
-    // Add a light pacing instruction so the model adapts speed naturally.
-    const speedHint =
-      safeSpeed < 0.95
-        ? "Speak slowly and clearly, like an English teacher for learners."
-        : safeSpeed > 1.05
-        ? "Speak at a brisk, lively pace."
-        : "Speak at a natural, clear conversational pace.";
+    const elevenVoice = VOICE_MAP[voiceId] || VOICE_MAP.alloy;
 
     const response = await fetch(
-      "https://ai.gateway.lovable.dev/v1/chat/completions",
+      `https://api.elevenlabs.io/v1/text-to-speech/${elevenVoice}?output_format=mp3_44100_128`,
       {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${LOVABLE_API_KEY}`,
+          "xi-api-key": ELEVENLABS_API_KEY,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "google/gemini-2.5-flash-preview-tts",
-          modalities: ["audio"],
-          audio: { voice, format: "mp3" },
-          messages: [
-            {
-              role: "user",
-              content: `${speedHint}\n\n${text}`,
-            },
-          ],
+          text,
+          model_id: "eleven_multilingual_v2",
+          voice_settings: {
+            stability: 0.5,
+            similarity_boost: 0.75,
+            style: 0.3,
+            use_speaker_boost: true,
+            speed: safeSpeed,
+          },
         }),
       }
     );
@@ -64,25 +67,17 @@ serve(async (req) => {
           { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
-      if (response.status === 402) {
+      if (response.status === 401 || response.status === 402) {
         return new Response(
-          JSON.stringify({ error: "AI credits exhausted. Please add credits in Settings > Workspace > Usage." }),
+          JSON.stringify({ error: "TTS credits exhausted or unauthorized." }),
           { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
       throw new Error(`TTS failed ${response.status}: ${err}`);
     }
 
-    const data = await response.json();
-    const audioContent =
-      data?.choices?.[0]?.message?.audio?.data ||
-      data?.choices?.[0]?.message?.audio?.audio ||
-      null;
-
-    if (!audioContent) {
-      console.error("Unexpected TTS response shape:", JSON.stringify(data).slice(0, 500));
-      throw new Error("No audio returned from AI gateway");
-    }
+    const audioBuffer = await response.arrayBuffer();
+    const audioContent = base64Encode(new Uint8Array(audioBuffer));
 
     return new Response(JSON.stringify({ audioContent }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },

@@ -396,34 +396,6 @@ const Slang = () => {
       {/* ───────────── BROWSE MODE ───────────── */}
       {mode === "browse" && (
         <>
-          <div className="mb-5 flex flex-wrap items-center gap-3 rounded-2xl bg-card p-4 shadow-card">
-            <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-cyan-500/15 text-cyan-500">
-              <Sparkles className="size-5" />
-            </div>
-            <div className="flex-1 min-w-[180px]">
-              <div className="font-bold">
-                {IDIOMS.length + dailySlang.length} 条美式俚语
-                {dailySlang.length > 0 && (
-                  <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-bold text-orange-600">
-                    🔥 +{dailySlang.length} 每日新词
-                  </span>
-                )}
-              </div>
-              <div className="text-xs text-muted-foreground">
-                每日 AI 抓取最新流行词 · 来自 TikTok / 电台 / 报纸
-              </div>
-            </div>
-            <input
-              value={search}
-              onChange={(e) => {
-                setSearch(e.target.value);
-                setPage(0);
-              }}
-              placeholder="搜索 idiom 或中文..."
-              className="rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
-            />
-          </div>
-
           <div key={`reorder-${masteryVersion}`} className="space-y-3">
             {pageItems.map((it, i) => (
               <article

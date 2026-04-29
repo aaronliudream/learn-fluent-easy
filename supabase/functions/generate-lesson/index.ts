@@ -196,7 +196,13 @@ Deno.serve(async (req) => {
 - 难度匹配 LEVEL (Level 1=A1, Level 2=A2, Level 3=B1, 以此类推)
 - 中文翻译/释义准确口语化
 - fillBlanks 中 answer 必须是 options 之一; quiz 的 answer 必须是 0-3 的索引
-- listening.audio 应能直接朗读, blanks 的 answer 是单个英文单词且必须出现在 audio 中
+- listening.audio 应能直接朗读 (2-4 句, 围绕本课场景)
+- 【听力填空 — 极其重要】blanks 的 3 个 answer 必须是【本课 vocab 列表里的核心新词】, 每个 answer 都要满足:
+  * 是 vocab 数组里出现过的单词 (大小写不敏感, 可以是其单复数 / 时态变化)
+  * 必须真实出现在 listening.audio 文本中
+  * 严禁挖空人名 (Tom, Mei, Sarah ...)、代词 (I, you, my ...)、be 动词 / 冠词 / 介词等功能词
+  * 必须是学习者本课要掌握的实词 (名词 / 动词 / 形容词)
+- fillBlanks 同理: answer 也必须来自本课 vocab, 不要挖空人名或功能词
 严格按照 tool 的 JSON schema 输出, 不要输出额外文字。`;
 
     const user = `课程标题: ${title}

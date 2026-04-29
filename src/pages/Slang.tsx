@@ -518,7 +518,7 @@ const Slang = () => {
                   </div>
                 </div>
                 <button
-                  aria-label="关闭"
+                  aria-label={tt("关闭")}
                   onClick={() => {
                     setShowInvite(false);
                     setDockedInvite(true);
@@ -536,7 +536,7 @@ const Slang = () => {
             <button
               onClick={startReviewQuiz}
               className="fixed left-0 top-1/2 z-40 flex -translate-y-1/2 items-center gap-2 rounded-r-2xl bg-grad-title px-3 py-3 text-white shadow-[0_10px_30px_-8px_hsl(250_40%_30%/0.5)] transition-all duration-300 ease-out hover:pl-4 animate-in fade-in slide-in-from-left-12 duration-700"
-              aria-label={`测试 ${reviewedIdsRef.current.size} 条已浏览俚语`}
+              aria-label={`${tt("测试")} ${reviewedIdsRef.current.size} ${tt("条已浏览俚语")}`}
             >
               <Target className="size-5" />
               <span className="flex flex-col items-start leading-tight">
@@ -556,9 +556,9 @@ const Slang = () => {
         const picked = picks[q.id];
         const isCorrect = picked === q.answer;
         const KIND_LABEL: Record<QuizKind, string> = {
-          en2cn: "英 → 中：选出正确含义",
-          cn2en: "中 → 英：选出对应俚语",
-          fill: "填空：选出适合的俚语",
+          en2cn: tt("英 → 中：选出正确含义"),
+          cn2en: tt("中 → 英：选出对应俚语"),
+          fill: tt("填空：选出适合的俚语"),
         };
         return (
           <>

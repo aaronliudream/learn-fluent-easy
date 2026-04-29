@@ -71362,7 +71362,7 @@
     "listening": {
       "blanks": [
         {
-          "before": "Anna, a travel writer, believes the lie is often in the ",
+          "before": "The writer believes the lie is often in the ",
           "after": ". When recalling her first week, every detail felt authentic.",
           "answer": "date"
         },
@@ -71377,7 +71377,7 @@
           "before": "It's hard to capture the true essence of a place without some "
         }
       ],
-      "audio": "Anna, a travel writer, believes the lie is often in the date. When recalling her first week, every detail felt authentic. Later, she found herself embellishing past events. It's hard to capture the true essence of a place without some discrepancies. Only the first week truly represents the raw reality."
+      "audio": "The writer believes the lie is often in the date. When recalling her first week, every detail felt authentic. Later, she found herself embellishing past events. It's hard to capture the true essence of a place without some discrepancies. Only the first week truly represents the raw reality."
     },
     "output": {
       "prompt": "You are a travel writer reflecting on a six-month stay in a foreign city. Write a journal entry discussing how your perceptions and experiences changed from the first week to the sixth month. Focus on how the 'date' influenced your narrative, using at least three vocabulary words and one participial phrase from the lesson. (100-120 words)",
@@ -71655,7 +71655,7 @@
         "q": "According to the reading, where does the 'lie' often exist in travel writing?"
       },
       {
-        "q": "What happens to the 'raw, unfiltered reality' of arrival over time, according to Anna?",
+        "q": "What happens to the 'raw, unfiltered reality' of arrival over time, according to the writer?",
         "answer": 1,
         "options": [
           "It remains consistent and unchanged.",
@@ -71672,10 +71672,10 @@
           "It is difficult to capture in writing."
         ],
         "answer": 1,
-        "q": "What does Anna suggest about the 'first week' of a travel experience?"
+        "q": "What does the writer suggest about the 'first week' of a travel experience?"
       },
       {
-        "q": "What is the challenge for travel writers, as Anna perceives it?",
+        "q": "What is the challenge for travel writers, as the writer perceives it?",
         "answer": 2,
         "options": [
           "To create entirely fictional stories for entertainment.",

@@ -113,6 +113,7 @@ export type Database = {
           created_at: string
           id: string
           idiom_id: number
+          last_correct_at: string | null
           last_result: string | null
           updated_at: string
           user_id: string
@@ -123,6 +124,7 @@ export type Database = {
           created_at?: string
           id?: string
           idiom_id: number
+          last_correct_at?: string | null
           last_result?: string | null
           updated_at?: string
           user_id: string
@@ -133,6 +135,7 @@ export type Database = {
           created_at?: string
           id?: string
           idiom_id?: number
+          last_correct_at?: string | null
           last_result?: string | null
           updated_at?: string
           user_id?: string

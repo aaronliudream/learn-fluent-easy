@@ -207,6 +207,14 @@ Deno.serve(async (req) => {
   * expressions 必须是 C1 级别的地道句式 (hedging / 委婉断言 / 学术表达 / 商业谈判常用句), 而非寒暄
   * quiz 4 题中至少 1 题考"作者态度 / 推断 / 言外之意", 不只考事实
   * output.sample 范文应是连贯的小议论 / 评述 / 邮件 / 摘要, 不是简单叙述
+- 【Level 6 = C2 精通】生成 Level 6 课程时, 必须遵守:
+  * reading 长度 5 句, 平均每句 22-35 词, 句间衔接靠语义而不只是连接词; 大量使用名词化、抽象概念、隐喻、典故、反讽、双关、句末焦点
+  * 话题为 C2 级别: 学术专著节选式论述、长篇评论、文学批评、政策分析、哲学思辨、艺术评论、跨学科议题; 严禁出现日常生活场景
+  * vocab 选取 C2 级别的低频学术词 / 文学词 / 罕见搭配 (例如 quintessential, ineffable, inveterate, prevaricate, bowdlerize, in extremis, sub rosa), 并包含 1-2 个 collocation 或习语化表达
+  * grammar 必须聚焦 C2 顶层结构: 复杂分裂句、进阶倒装、双重否定、it 形式主语 / 形式宾语的细分用法、anaphoric reference、ellipsis 与 substitution 的高阶用法、subjunctive 在虚拟与让步中的细分、long-distance dependencies、stance markers
+  * expressions 必须是 C2 级别的修辞性表达 (litotes / understatement / irony markers / hedged claims / academic stance), 而非日常套句
+  * quiz 4 题中至少 2 题考"作者立场 / 反讽 / 言外之意 / 修辞效果", 不只考事实
+  * output.sample 范文应是文学评论 / 学术摘要 / 政策建议 / 评论性书信 等 C2 文体, 体现 register 控制与立场标记
 - 中文翻译/释义准确口语化
 - fillBlanks 中 answer 必须是 options 之一; quiz 的 answer 必须是 0-3 的索引
 - listening.audio 应能直接朗读 (2-4 句, 围绕本课场景)

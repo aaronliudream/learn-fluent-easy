@@ -4,7 +4,6 @@ import { loadSettings } from "@/lib/voice";
 let lastSpoken = "";
 let currentAudio: HTMLAudioElement | null = null;
 const audioCache = new Map<string, string>(); // key -> object URL
-let aiDisabled = false; // becomes true if AI quota/credits exhausted; falls back to browser TTS
 // Incremented every time we stop. Any in-flight speak() whose token < this must abort.
 let speakToken = 0;
 
@@ -45,16 +44,6 @@ const stopCurrent = () => {
 
 export const stopSpeaking = () => stopCurrent();
 
-// ---- Browser TTS fallback (used if AI fails or quota exhausted) ----
-const speakBrowser = (text: string, speed: number) => {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = "en-US";
-  u.rate = Math.min(1.5, Math.max(0.6, Number(speed) || 1.0));
-  u.pitch = 1;
-  speechSynthesis.speak(u);
-};
-
 const playUrl = (url: string): Promise<void> =>
   new Promise((resolve) => {
     const audio = new Audio(url);
@@ -81,14 +70,7 @@ export const speak = async (text: string): Promise<void> => {
     return;
   }
 
-  // 2. AI disabled -> browser fallback
-  if (aiDisabled) {
-    if (myToken !== speakToken) return;
-    speakBrowser(text, speed);
-    return;
-  }
-
-  // 3. Call AI TTS edge function
+  // 2. Call natural TTS backend. Do not fall back to browser speech, because it sounds robotic.
   try {
     const { data, error } = await supabase.functions.invoke("tts", {
       body: { text, voiceId, speed },
@@ -100,19 +82,16 @@ export const speak = async (text: string): Promise<void> => {
     if (error) {
       const status = (error as { context?: { status?: number } }).context?.status;
       if (status === 402 || status === 429) {
-        console.warn("[speak] AI TTS unavailable (quota/rate). Falling back to browser voice.");
-        aiDisabled = true;
+        console.warn("[speak] Natural TTS unavailable (quota/rate). Not using robotic browser voice.");
       } else {
-        console.warn("[speak] AI TTS error, falling back:", error);
+        console.warn("[speak] Natural TTS error:", error);
       }
-      speakBrowser(text, speed);
       return;
     }
 
     const audioContent = (data as { audioContent?: string })?.audioContent;
     if (!audioContent) {
-      console.warn("[speak] No audio returned, falling back to browser voice.");
-      speakBrowser(text, speed);
+      console.warn("[speak] No natural audio returned.");
       return;
     }
 
@@ -122,7 +101,6 @@ export const speak = async (text: string): Promise<void> => {
     await playUrl(url);
   } catch (e) {
     if (myToken !== speakToken) return;
-    console.warn("[speak] AI TTS failed, falling back to browser voice:", e);
-    speakBrowser(text, speed);
+    console.warn("[speak] Natural TTS failed:", e);
   }
 };

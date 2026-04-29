@@ -71362,8 +71362,8 @@
     "listening": {
       "blanks": [
         {
-          "before": "The writer believes the lie is often in the ",
-          "after": ". When recalling her first week, every detail felt authentic.",
+          "before": "The author argues the lie is often in the ",
+          "after": ". When recalling the first week, every detail felt authentic.",
           "answer": "date"
         },
         {
@@ -71377,7 +71377,7 @@
           "before": "It's hard to capture the true essence of a place without some "
         }
       ],
-      "audio": "The writer believes the lie is often in the date. When recalling her first week, every detail felt authentic. Later, she found herself embellishing past events. It's hard to capture the true essence of a place without some discrepancies. Only the first week truly represents the raw reality."
+      "audio": "The author argues the lie is often in the date. When recalling the first week, every detail felt authentic. Later, the writer found the account embellishing past events. It's hard to capture the true essence of a place without some discrepancies. Only the first week truly represents the raw reality."
     },
     "output": {
       "prompt": "You are a travel writer reflecting on a six-month stay in a foreign city. Write a journal entry discussing how your perceptions and experiences changed from the first week to the sixth month. Focus on how the 'date' influenced your narrative, using at least three vocabulary words and one participial phrase from the lesson. (100-120 words)",
@@ -71607,7 +71607,7 @@
           "perceiving",
           "embellishing"
         ],
-        "sentence": "The writer began ___ on the discrepancy between her early and later observations."
+        "sentence": "The writer began ___ on the discrepancy between early and later observations."
       },
       {
         "answer": "embellishing",
@@ -71618,7 +71618,7 @@
           "residing",
           "perceiving"
         ],
-        "sentence": "Her narratives were vivid, often ___ details to make them more exciting."
+        "sentence": "The narratives were vivid, often ___ details to make them more exciting."
       },
       {
         "answer": "lie",
@@ -71629,7 +71629,7 @@
           "lie",
           "essence"
         ],
-        "sentence": "She realized that the ___ was often in the implied immediacy of the experience, not the words."
+        "sentence": "The writer realized that the ___ was often in the implied immediacy of the experience, not the words."
       },
       {
         "options": [
@@ -71638,7 +71638,7 @@
           "embellished",
           "captured"
         ],
-        "sentence": "Only the first week of her journey felt truly ___, before she began to curate reality.",
+        "sentence": "Only the first week of the journey felt truly ___, before memory began to curate reality.",
         "answer": "authentic",
         "cn": "她旅程的第一周才真正真实，之后她开始策划现实。"
       }
@@ -71655,7 +71655,7 @@
         "q": "According to the reading, where does the 'lie' often exist in travel writing?"
       },
       {
-        "q": "What happens to the 'raw, unfiltered reality' of arrival over time, according to the writer?",
+        "q": "What happens to the 'raw, unfiltered reality' of arrival over time, according to the author?",
         "answer": 1,
         "options": [
           "It remains consistent and unchanged.",
@@ -71672,10 +71672,10 @@
           "It is difficult to capture in writing."
         ],
         "answer": 1,
-        "q": "What does the writer suggest about the 'first week' of a travel experience?"
+        "q": "What does the author suggest about the 'first week' of a travel experience?"
       },
       {
-        "q": "What is the challenge for travel writers, as the writer perceives it?",
+        "q": "What is the challenge for travel writers, as the author perceives it?",
         "answer": 2,
         "options": [
           "To create entirely fictional stories for entertainment.",

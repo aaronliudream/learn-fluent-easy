@@ -347,11 +347,12 @@ const Slang = () => {
             />
           </div>
 
-          <div className="space-y-3">
-            {pageItems.map((it) => (
+          <div key={`reorder-${masteryVersion}`} className="space-y-3">
+            {pageItems.map((it, i) => (
               <article
                 key={it.id}
-                className="rounded-2xl bg-card p-5 shadow-card transition hover:-translate-y-0.5"
+                style={{ animationDelay: `${Math.min(i * 30, 300)}ms` }}
+                className="rounded-2xl bg-card p-5 shadow-card transition animate-fade-in hover:-translate-y-0.5"
               >
                 <div className="flex items-start gap-3">
                   <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-grad-title text-white">

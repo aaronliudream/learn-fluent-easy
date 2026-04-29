@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { SCENE_CATEGORIES, SCENE_DIALOGUES } from "@/data/scenes";
+import { T, useT } from "@/i18n/T";
 
 const Scenes = () => {
+  const t = useT();
   const counts = SCENE_DIALOGUES.reduce<Record<string, number>>((acc, d) => {
     acc[d.cat] = (acc[d.cat] || 0) + 1;
     return acc;
@@ -12,8 +14,8 @@ const Scenes = () => {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
-        title="🎬 场景对话"
-        subtitle="14 个生活场景 · 95 组实战对话 · 1900 句地道表达"
+        title={t("🎬 场景对话")}
+        subtitle={t("14 个生活场景 · 95 组实战对话 · 1900 句地道表达")}
         back="/"
       />
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -29,10 +31,10 @@ const Scenes = () => {
                 {c.emoji}
               </div>
               <div className="flex-1 min-w-0">
-                <div className="truncate text-base font-bold">{c.name}</div>
+                <div className="truncate text-base font-bold"><T>{c.name}</T></div>
                 <div className="truncate text-xs text-muted-foreground">{c.nameEn}</div>
                 <div className="mt-1 truncate text-[11px] text-muted-foreground">
-                  {c.desc} · {n} 组对话
+                  <T>{c.desc}</T> · {n} <T>组对话</T>
                 </div>
               </div>
               <ChevronRight className="size-4 text-muted-foreground transition-transform group-hover:translate-x-1" />

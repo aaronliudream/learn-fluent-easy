@@ -18,12 +18,12 @@ export const getLastSpoken = () => lastSpoken;
 const cacheKey = (text: string, voiceId: string, speed: number) =>
   `${voiceId}::${speed}::${text}`;
 
-const base64ToBlobUrl = (b64: string): string => {
+const base64ToBlobUrl = (b64: string, mimeType = "audio/wav"): string => {
   const byteChars = atob(b64);
   const byteNumbers = new Array(byteChars.length);
   for (let i = 0; i < byteChars.length; i++) byteNumbers[i] = byteChars.charCodeAt(i);
   const byteArray = new Uint8Array(byteNumbers);
-  const blob = new Blob([byteArray], { type: "audio/mpeg" });
+  const blob = new Blob([byteArray], { type: mimeType });
   return URL.createObjectURL(blob);
 };
 
@@ -123,13 +123,14 @@ export const speak = async (text: string): Promise<void> => {
     }
 
     const audioContent = (data as { audioContent?: string })?.audioContent;
+    const mimeType = (data as { mimeType?: string })?.mimeType || "audio/wav";
     if (!audioContent) {
       console.warn("[speak] No natural audio returned.");
       speakBrowser(text, speed);
       return;
     }
 
-    const url = base64ToBlobUrl(audioContent);
+    const url = base64ToBlobUrl(audioContent, mimeType);
     audioCache.set(key, url);
     if (myToken !== speakToken) return;
     await playUrl(url);

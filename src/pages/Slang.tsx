@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
 import { speak } from "@/lib/speak";
 import { toast } from "sonner";
+import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import {
   isMasteredSlang,
@@ -368,12 +369,12 @@ const Slang = () => {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
-        title="美国流行俚语"
+        title="American Slang"
         subtitle={`${(() => {
           const seen = new Set(IDIOMS.map((i) => i.phrase.toLowerCase()));
           const extra = dailySlang.filter((d) => !seen.has(d.phrase.toLowerCase())).length;
           return IDIOMS.length + extra;
-        })()} 条地道 idioms`}
+        })()} idioms`}
         back="/"
       />
 
@@ -385,7 +386,7 @@ const Slang = () => {
             mode === "browse" ? "bg-card shadow-card text-foreground" : "text-muted-foreground"
           }`}
         >
-          <BookOpen className="size-4" /> 学习浏览
+          <BookOpen className="size-4" /> <T>学习浏览</T>
         </button>
         <button
           onClick={() => (mode === "quiz" ? restartQuiz() : startQuiz())}
@@ -393,7 +394,7 @@ const Slang = () => {
             mode === "quiz" ? "bg-card shadow-card text-foreground" : "text-muted-foreground"
           }`}
         >
-          <Target className="size-4" /> 开始测试
+          <Target className="size-4" /> <T>开始测试</T>
         </button>
       </div>
 
@@ -423,12 +424,12 @@ const Slang = () => {
                       </button>
                       {it.id < 0 && (
                         <span className="inline-flex items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-bold text-orange-600">
-                          🔥 新
+                          🔥 <T>新</T>
                         </span>
                       )}
                       {isMasteredSlang(it.id) && (
                         <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">
-                          <CheckCircle2 className="size-3" /> 已掌握
+                          <CheckCircle2 className="size-3" /> <T>已掌握</T>
                         </span>
                       )}
                     </div>
@@ -467,23 +468,23 @@ const Slang = () => {
               disabled={safePage === 0}
               onClick={() => setPage(safePage - 1)}
             >
-              ← 上一页
+              ← <T>上一页</T>
             </Button>
             <span className="text-sm text-muted-foreground">
-              第 {safePage + 1} / {totalPages} 页 · 共 {filtered.length} 条
+              {safePage + 1} / {totalPages} · {filtered.length}
             </span>
             <Button
               disabled={safePage >= totalPages - 1}
               onClick={() => setPage(safePage + 1)}
             >
-              下一页 →
+              <T>下一页</T> →
             </Button>
           </div>
 
           <div className="mt-6 rounded-2xl border border-primary/30 bg-primary/5 p-5 text-center">
-            <div className="text-sm font-semibold">想检验记住了多少？</div>
+            <div className="text-sm font-semibold"><T>想检验记住了多少？</T></div>
             <Button className="mt-3" onClick={startQuiz}>
-              <Target className="mr-2 size-4" /> 开始测试 (10 题)
+              <Target className="mr-2 size-4" /> <T>开始测试 (10 题)</T>
             </Button>
           </div>
 
@@ -495,13 +496,13 @@ const Slang = () => {
                   <Target className="size-5" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm font-bold">测一下刚才浏览的俚语？</div>
+                  <div className="text-sm font-bold"><T>测一下刚才浏览的俚语？</T></div>
                   <div className="mt-0.5 text-xs text-muted-foreground">
-                    已浏览 <span className="font-semibold text-foreground">{reviewedIdsRef.current.size}</span> 条 · 答对的会沉到列表底部
+                    <T>已浏览</T> <span className="font-semibold text-foreground">{reviewedIdsRef.current.size}</span> · <T>答对的会沉到列表底部</T>
                   </div>
                   <div className="mt-3 flex gap-2">
                     <Button size="sm" onClick={startReviewQuiz}>
-                      开始小测
+                      <T>开始小测</T>
                     </Button>
                     <Button
                       size="sm"
@@ -511,7 +512,7 @@ const Slang = () => {
                         setDockedInvite(true);
                       }}
                     >
-                      稍后再说
+                      <T>稍后再说</T>
                     </Button>
                   </div>
                 </div>
@@ -538,7 +539,7 @@ const Slang = () => {
             >
               <Target className="size-5" />
               <span className="flex flex-col items-start leading-tight">
-                <span className="text-[10px] font-medium opacity-90">待测</span>
+                <span className="text-[10px] font-medium opacity-90"><T>待测</T></span>
                 <span className="text-base font-extrabold">{reviewedIdsRef.current.size}</span>
               </span>
               {/* hidden tick to ensure re-render when reviewedTick changes */}
@@ -562,9 +563,9 @@ const Slang = () => {
           <>
             <div className="mb-4 flex items-center justify-between">
               <div className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-muted-foreground">
-                第 {qIdx + 1} / {questions.length} 题
+                {qIdx + 1} / {questions.length}
               </div>
-              <div className="text-xs font-semibold text-muted-foreground">{KIND_LABEL[q.kind]}</div>
+              <div className="text-xs font-semibold text-muted-foreground"><T>{KIND_LABEL[q.kind]}</T></div>
             </div>
 
             <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
@@ -640,7 +641,7 @@ const Slang = () => {
               {revealed && (
                 <div className={`mt-5 rounded-2xl p-4 text-sm ${isCorrect ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300" : "bg-rose-500/10 text-rose-700 dark:text-rose-300"}`}>
                   <div className="font-bold">
-                    {isCorrect ? "✅ 答对了！" : "❌ 答错了"}
+                    {isCorrect ? <>✅ <T>答对了！</T></> : <>❌ <T>答错了</T></>}
                   </div>
                   <div className="mt-2 space-y-1 text-foreground/90">
                     <div>
@@ -655,22 +656,22 @@ const Slang = () => {
 
             <div className="mt-6 flex items-center justify-between gap-3">
               <Button variant="outline" onClick={() => setMode("browse")}>
-                返回浏览
+                <T>返回浏览</T>
               </Button>
               {!revealed ? (
                 <Button
                   disabled={picked === undefined}
                   onClick={() => setRevealed(true)}
                 >
-                  确认答案
+                  <T>确认答案</T>
                 </Button>
               ) : qIdx < questions.length - 1 ? (
                 <Button onClick={() => { setQIdx(qIdx + 1); setRevealed(false); }}>
-                  下一题 <ChevronRight className="ml-1 size-4" />
+                  <T>下一题</T> <ChevronRight className="ml-1 size-4" />
                 </Button>
               ) : (
                 <Button onClick={() => setQIdx(qIdx + 1)} className="bg-emerald-600 hover:bg-emerald-600/90">
-                  查看成绩
+                  <T>查看成绩</T>
                 </Button>
               )}
             </div>
@@ -684,12 +685,12 @@ const Slang = () => {
           <div className="mx-auto mb-3 grid size-16 place-items-center rounded-2xl bg-grad-title text-white">
             <Target className="size-8" />
           </div>
-          <div className="text-sm text-muted-foreground">本轮测试完成</div>
+          <div className="text-sm text-muted-foreground"><T>本轮测试完成</T></div>
           <div className="mt-1 text-5xl font-black">
             {correctCount} <span className="text-2xl text-muted-foreground">/ {questions.length}</span>
           </div>
           <div className="mt-2 text-base font-semibold">
-            正确率 {Math.round((correctCount / questions.length) * 100)}%
+            <T>正确率</T> {Math.round((correctCount / questions.length) * 100)}%
           </div>
 
           <div className="mt-6 grid gap-2">
@@ -714,10 +715,10 @@ const Slang = () => {
 
           <div className="mt-6 flex gap-3">
             <Button variant="outline" className="flex-1" onClick={() => setMode("browse")}>
-              返回浏览
+              <T>返回浏览</T>
             </Button>
             <Button className="flex-1" onClick={restartQuiz}>
-              <RefreshCw className="mr-2 size-4" /> 再来一轮
+              <RefreshCw className="mr-2 size-4" /> <T>再来一轮</T>
             </Button>
           </div>
         </section>

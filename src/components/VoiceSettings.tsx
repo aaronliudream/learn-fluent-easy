@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Settings2, Volume2, X, Check, Play, Sparkles } from "lucide-react";
 import { VOICES, SPEED_PRESETS, loadSettings, saveSettings, type VoiceSettings as VS } from "@/lib/voice";
 import { speak, clearAudioCache, getLastSpoken } from "@/lib/speak";
+import { T } from "@/i18n/T";
 
 export const VoiceSettingsButton = () => {
   const [open, setOpen] = useState(false);
@@ -55,8 +56,8 @@ export const VoiceSettingsButton = () => {
                   <Volume2 className="size-5" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-bold">语音设置</h2>
-                  <p className="text-xs text-muted-foreground">选择你喜欢的发音角色和语速</p>
+                  <h2 className="text-lg font-bold"><T>语音设置</T></h2>
+                  <p className="text-xs text-muted-foreground"><T>选择你喜欢的发音角色和语速</T></p>
                 </div>
               </div>
               <button
@@ -70,7 +71,7 @@ export const VoiceSettingsButton = () => {
 
             <div className="mb-5">
               <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                角色 Voice
+                <T>角色</T> Voice
               </p>
               <div className="grid max-h-64 grid-cols-1 gap-2 overflow-y-auto pr-1 sm:grid-cols-2">
                 {VOICES.map((v) => {
@@ -107,7 +108,7 @@ export const VoiceSettingsButton = () => {
 
             <div className="mb-5">
               <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                语速 Speed · {draft.speed.toFixed(2)}x
+                <T>语速</T> Speed · {draft.speed.toFixed(2)}x
               </p>
               <div className="flex flex-wrap gap-2">
                 {SPEED_PRESETS.map((s) => {
@@ -136,30 +137,29 @@ export const VoiceSettingsButton = () => {
                 className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-secondary px-4 py-3 text-sm font-semibold text-foreground transition hover:bg-secondary/70 disabled:opacity-60"
               >
                 <Play className="size-4" />
-                试听示例
+                <T>试听示例</T>
               </button>
               <button
                 onClick={replayLast}
                 className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-primary/80 px-4 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:opacity-95"
               >
                 <Volume2 className="size-4" />
-                重播当前
+                <T>重播当前</T>
               </button>
             </div>
 
             <div className="mt-4 rounded-2xl border border-primary/20 bg-primary/5 p-3 text-xs leading-relaxed text-foreground/80">
               <div className="mb-1 flex items-center gap-1.5 font-semibold text-primary">
                 <Sparkles className="size-3.5" />
-                让发音更自然（强烈推荐）
+                <T>让发音更自然（强烈推荐）</T>
               </div>
               <p className="mb-1">
-                <span className="font-medium">iPhone：</span>设置 → 辅助功能 → 朗读内容 → 声音 → 英语 →
-                选 <span className="font-semibold">Allison / Samantha / Ava / Susan</span> 等标有
-                <span className="font-semibold">「增强」</span>的版本，点云朵图标下载（约 100MB）。不要选 Voice 1 / Voice 2，它们是 Siri 专用声音。
+                <span className="font-medium">iPhone：</span>
+                <T>设置 → 辅助功能 → 朗读内容 → 声音 → 英语 → 选 Allison / Samantha / Ava / Susan 等标有「增强」的版本，点云朵图标下载（约 100MB）。不要选 Voice 1 / Voice 2，它们是 Siri 专用声音。</T>
               </p>
               <p>
-                <span className="font-medium">Android：</span>设置 → 系统 → 语言和输入法 → 文字转语音 →
-                选 Google 引擎并下载高质量英语语音包。
+                <span className="font-medium">Android：</span>
+                <T>设置 → 系统 → 语言和输入法 → 文字转语音 → 选 Google 引擎并下载高质量英语语音包。</T>
               </p>
             </div>
           </div>

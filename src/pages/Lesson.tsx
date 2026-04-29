@@ -1006,6 +1006,8 @@ const Lesson = () => {
             {content.listening.blanks.map((b, i) => {
               const v = listenInputs[i] ?? "";
               const correct = v.trim().toLowerCase() === b.answer.toLowerCase();
+              const finished = v.trim().length >= b.answer.trim().length;
+              const showFeedback = correct || finished;
               const sentence = `${b.before} ${b.answer} ${b.after}`.replace(/\s+/g, " ").trim();
               return (
                 <div
@@ -1030,7 +1032,7 @@ const Lesson = () => {
                       value={v}
                       onChange={(e) => setListenInputs({ ...listenInputs, [i]: e.target.value })}
                       className={`min-w-28 rounded-md border-b-2 bg-transparent px-2 py-1 text-center font-bold outline-none ${
-                        v
+                        v && showFeedback
                           ? correct
                             ? "border-emerald-400 text-emerald-600"
                             : "border-rose-400 text-rose-600"
@@ -1041,7 +1043,7 @@ const Lesson = () => {
                     <span>{b.after}</span>
                     {v && correct && <Check className="size-4 text-emerald-500" />}
                   </div>
-                  {v && (
+                  {v && showFeedback && (
                     correct ? (
                       <div className="mt-3 flex items-center gap-2 rounded-xl bg-emerald-500/10 px-3 py-2 text-sm font-semibold text-emerald-600">
                         <Check className="size-4" /> 回答正确

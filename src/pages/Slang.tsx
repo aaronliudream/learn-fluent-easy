@@ -9,6 +9,7 @@ import {
   Volume2,
   XCircle,
   Zap,
+  X,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,7 @@ import { speak } from "@/lib/speak";
 import { toast } from "sonner";
 import {
   isMasteredSlang,
+  loadSlangMastery,
   recordSlangResult,
   sortByMastery,
 } from "@/lib/slangMastery";
@@ -39,8 +41,12 @@ type QuizQuestion = {
 
 const PER_PAGE = 12;
 const QUIZ_LEN = 10;
-// After the user has browsed this many pages, prompt them to test what they reviewed.
-const PAGES_BEFORE_QUIZ = 2;
+// A page counts as "browsed" once the user dwells on it for this long (ms).
+const DWELL_MS = 60_000;
+// After landing on a new page, wait this long before offering a quiz.
+const PROMPT_DELAY_MS = 10_000;
+// Need at least this many reviewed idioms before offering a quiz.
+const MIN_REVIEWED = 4;
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -145,10 +151,18 @@ const Slang = () => {
   const [search, setSearch] = useState("");
   // Bumped whenever mastery changes so the browse list re-sorts.
   const [masteryVersion, setMasteryVersion] = useState(0);
-  // Idioms the user has seen since the last quiz prompt.
+  // Idioms the user has *dwelled long enough* on since the last quiz.
   const reviewedIdsRef = useRef<Set<number>>(new Set());
-  const [pagesBrowsed, setPagesBrowsed] = useState(0);
-  const promptedRef = useRef(false);
+  // Re-render trigger for the floating "test N items" badge.
+  const [reviewedTick, setReviewedTick] = useState(0);
+  const [showInvite, setShowInvite] = useState(false);
+  // After the user dismisses the invite once, switch to the docked button.
+  const [dockedInvite, setDockedInvite] = useState(false);
+
+  // Load mastery from cloud once.
+  useEffect(() => {
+    loadSlangMastery().then(() => setMasteryVersion((v) => v + 1));
+  }, []);
 
   const filtered = useMemo(() => {
     const base = sortByMastery(IDIOMS);
@@ -168,30 +182,39 @@ const Slang = () => {
   const safePage = Math.min(page, totalPages - 1);
   const pageItems = filtered.slice(safePage * PER_PAGE, safePage * PER_PAGE + PER_PAGE);
 
-  // Track reviewed idioms + offer a quiz once the user has browsed enough pages.
+  // Per-page dwell + invite logic.
+  // After DWELL_MS on a page, mark its idioms as "reviewed".
+  // After PAGES change, wait PROMPT_DELAY_MS then show the invite (if not docked
+  // and there are enough reviewed items to test).
   useEffect(() => {
     if (mode !== "browse") return;
-    pageItems.forEach((it) => reviewedIdsRef.current.add(it.id));
-    setPagesBrowsed((n) => n + 1);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [safePage, mode]);
+    const itemsOnPage = pageItems.map((it) => it.id);
 
-  useEffect(() => {
-    if (mode !== "browse") return;
-    if (promptedRef.current) return;
-    if (pagesBrowsed < PAGES_BEFORE_QUIZ) return;
-    if (reviewedIdsRef.current.size < 4) return; // need enough material
-    promptedRef.current = true;
-    toast("📝 想测一下刚才学过的俚语吗？", {
-      description: `已浏览 ${reviewedIdsRef.current.size} 条 — 立刻小测，答对的会"沉底"，未掌握的优先复习。`,
-      duration: 12000,
-      action: {
-        label: "开始小测",
-        onClick: () => startReviewQuiz(),
-      },
-    });
+    // Mark this page as reviewed after dwell.
+    const dwellTimer = window.setTimeout(() => {
+      let added = false;
+      itemsOnPage.forEach((id) => {
+        if (!reviewedIdsRef.current.has(id)) {
+          reviewedIdsRef.current.add(id);
+          added = true;
+        }
+      });
+      if (added) setReviewedTick((n) => n + 1);
+    }, DWELL_MS);
+
+    // Offer to quiz the reviewed material 10s after arriving on this page.
+    const inviteTimer = window.setTimeout(() => {
+      if (dockedInvite) return;
+      if (reviewedIdsRef.current.size < MIN_REVIEWED) return;
+      setShowInvite(true);
+    }, PROMPT_DELAY_MS);
+
+    return () => {
+      window.clearTimeout(dwellTimer);
+      window.clearTimeout(inviteTimer);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pagesBrowsed, mode]);
+  }, [safePage, mode, dockedInvite]);
 
   // Quiz state
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
@@ -242,6 +265,8 @@ const Slang = () => {
     setRevealed(false);
     recordedRef.current = new Set();
     setMode("quiz");
+    setShowInvite(false);
+    setDockedInvite(false);
     window.scrollTo({ top: 0 });
   };
 
@@ -257,17 +282,15 @@ const Slang = () => {
     setMasteryVersion((v) => v + 1);
   }, [revealed, qIdx, questions, picks]);
 
-  // When returning to browse mode after a quiz, reset the review counter so the
-  // user gets another prompt after browsing two more fresh pages.
+  // Reset the review counter when entering quiz so a fresh browse session starts after.
   useEffect(() => {
     if (mode === "browse") {
-      // Don't reset reviewed set on every browse mount — only when leaving quiz.
       return;
     }
-    // entering quiz: clear reviewed so next browse session is fresh
     reviewedIdsRef.current = new Set();
-    setPagesBrowsed(0);
-    promptedRef.current = false;
+    setReviewedTick((n) => n + 1);
+    setShowInvite(false);
+    setDockedInvite(false);
   }, [mode]);
 
   const correctCount = questions.filter((q) => picks[q.id] === q.answer).length;
@@ -324,11 +347,12 @@ const Slang = () => {
             />
           </div>
 
-          <div className="space-y-3">
-            {pageItems.map((it) => (
+          <div key={`reorder-${masteryVersion}`} className="space-y-3">
+            {pageItems.map((it, i) => (
               <article
                 key={it.id}
-                className="rounded-2xl bg-card p-5 shadow-card transition hover:-translate-y-0.5"
+                style={{ animationDelay: `${Math.min(i * 35, 350)}ms`, animationFillMode: "both" }}
+                className="rounded-2xl bg-card p-5 shadow-card transition animate-in fade-in slide-in-from-top-2 duration-500 hover:-translate-y-0.5"
               >
                 <div className="flex items-start gap-3">
                   <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-grad-title text-white">
@@ -404,6 +428,65 @@ const Slang = () => {
               <Target className="mr-2 size-4" /> 开始测试 (10 题)
             </Button>
           </div>
+
+          {/* ───── Floating invite (centered card) ───── */}
+          {showInvite && !dockedInvite && (
+            <div className="fixed inset-x-0 bottom-6 z-40 flex justify-center px-4 animate-in fade-in slide-in-from-bottom-4 duration-300">
+              <div className="flex w-full max-w-md items-start gap-3 rounded-2xl border border-primary/30 bg-card p-4 shadow-[0_20px_50px_-15px_hsl(250_40%_30%/0.45)]">
+                <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-grad-title text-white">
+                  <Target className="size-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm font-bold">测一下刚才浏览的俚语？</div>
+                  <div className="mt-0.5 text-xs text-muted-foreground">
+                    已浏览 <span className="font-semibold text-foreground">{reviewedIdsRef.current.size}</span> 条 · 答对的会沉到列表底部
+                  </div>
+                  <div className="mt-3 flex gap-2">
+                    <Button size="sm" onClick={startReviewQuiz}>
+                      开始小测
+                    </Button>
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      onClick={() => {
+                        setShowInvite(false);
+                        setDockedInvite(true);
+                      }}
+                    >
+                      稍后再说
+                    </Button>
+                  </div>
+                </div>
+                <button
+                  aria-label="关闭"
+                  onClick={() => {
+                    setShowInvite(false);
+                    setDockedInvite(true);
+                  }}
+                  className="grid size-7 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:bg-secondary"
+                >
+                  <X className="size-4" />
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* ───── Docked left-side button after dismissal ───── */}
+          {dockedInvite && reviewedIdsRef.current.size >= MIN_REVIEWED && (
+            <button
+              onClick={startReviewQuiz}
+              className="fixed left-0 top-1/2 z-40 flex -translate-y-1/2 items-center gap-2 rounded-r-2xl bg-grad-title px-3 py-3 text-white shadow-[0_10px_30px_-8px_hsl(250_40%_30%/0.5)] transition-all duration-300 ease-out hover:pl-4 animate-in fade-in slide-in-from-left-12 duration-700"
+              aria-label={`测试 ${reviewedIdsRef.current.size} 条已浏览俚语`}
+            >
+              <Target className="size-5" />
+              <span className="flex flex-col items-start leading-tight">
+                <span className="text-[10px] font-medium opacity-90">待测</span>
+                <span className="text-base font-extrabold">{reviewedIdsRef.current.size}</span>
+              </span>
+              {/* hidden tick to ensure re-render when reviewedTick changes */}
+              <span className="sr-only">{reviewedTick}</span>
+            </button>
+          )}
         </>
       )}
 

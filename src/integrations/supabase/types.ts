@@ -71,6 +71,39 @@ export type Database = {
         }
         Relationships: []
       }
+      slang_mastery: {
+        Row: {
+          correct_count: number
+          created_at: string
+          id: string
+          idiom_id: number
+          last_result: string | null
+          updated_at: string
+          user_id: string
+          wrong_count: number
+        }
+        Insert: {
+          correct_count?: number
+          created_at?: string
+          id?: string
+          idiom_id: number
+          last_result?: string | null
+          updated_at?: string
+          user_id: string
+          wrong_count?: number
+        }
+        Update: {
+          correct_count?: number
+          created_at?: string
+          id?: string
+          idiom_id?: number
+          last_result?: string | null
+          updated_at?: string
+          user_id?: string
+          wrong_count?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

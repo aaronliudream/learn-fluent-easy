@@ -373,7 +373,7 @@ const Slang = () => {
           const seen = new Set(IDIOMS.map((i) => i.phrase.toLowerCase()));
           const extra = dailySlang.filter((d) => !seen.has(d.phrase.toLowerCase())).length;
           return IDIOMS.length + extra;
-        })()} 条地道 idioms · 每日 AI 自动更新`}
+        })()} 条地道 idioms`}
         back="/"
       />
 

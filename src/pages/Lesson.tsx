@@ -64,6 +64,27 @@ const STEP_ICONS = {
   Mic,
 } as const;
 
+const sanitizeUnsupportedNarratorNames = (content: LessonContent): LessonContent => {
+  const readingText = (content.reading ?? []).map((r) => r.en).join(" ");
+  if (/\bAnna\b/.test(readingText)) return content;
+
+  const hasFirstPersonNarrator = /\b(I|me|my|mine|we|us|our|ours)\b/i.test(readingText);
+  const replacement = hasFirstPersonNarrator ? "the writer" : "the text";
+  const sanitizeString = (value: string) => value.replace(/\bAnna\b/g, replacement);
+  const sanitizeValue = (value: unknown): unknown => {
+    if (typeof value === "string") return sanitizeString(value);
+    if (Array.isArray(value)) return value.map(sanitizeValue);
+    if (value && typeof value === "object") {
+      return Object.fromEntries(
+        Object.entries(value as Record<string, unknown>).map(([key, item]) => [key, sanitizeValue(item)]),
+      );
+    }
+    return value;
+  };
+
+  return sanitizeValue(content) as LessonContent;
+};
+
 const SectionHeader = ({
   icon,
   color,

@@ -222,6 +222,24 @@ const Lesson = () => {
       return authored;
     }
     // AI-only lesson: prefer freshly loaded → pre-gen bundle → fallback template.
+    // Merge: keep non-empty topical fields, fall back to template for empty ones
+    // (e.g. lessons whose reading/vocab came from the source HTML but listening/
+    // output haven't been generated yet).
+    if (topical && authored) {
+      const isEmpty = (v: unknown) =>
+        v == null ||
+        (Array.isArray(v) && v.length === 0) ||
+        (typeof v === "object" && v !== null && "audio" in (v as Record<string, unknown>) &&
+          !(v as { audio?: string }).audio) ||
+        (typeof v === "object" && v !== null && "prompt" in (v as Record<string, unknown>) &&
+          !(v as { prompt?: string }).prompt);
+      const merged = { ...authored } as LessonContent;
+      (Object.keys(topical) as (keyof LessonContent)[]).forEach((k) => {
+        const tv = (topical as LessonContent)[k];
+        if (!isEmpty(tv)) (merged as Record<string, unknown>)[k] = tv as unknown;
+      });
+      return merged;
+    }
     return topical ?? authored;
   }, [lesson, aiContent]);
 

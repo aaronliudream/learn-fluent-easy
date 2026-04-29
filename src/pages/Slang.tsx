@@ -369,7 +369,7 @@ const Slang = () => {
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
         title="美国流行俚语"
-        subtitle="346 条地道 idioms · 中英文混合测试"
+        subtitle={`${merged.length} 条地道 idioms · 每日 AI 自动更新`}
         back="/"
       />
 

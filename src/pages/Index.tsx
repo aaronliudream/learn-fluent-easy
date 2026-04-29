@@ -8,32 +8,13 @@ import { toast } from "sonner";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
-import {
-  findNextLesson,
-  getLastMastered,
-  getLastVisited,
-  isUnfinished,
-  type LessonRef,
-  RESUME_DIALOG_KEY,
-} from "@/lib/mastery";
-import {
-  AlertDialog,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+import { type LessonRef } from "@/lib/mastery";
 
 const Index = () => {
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
   const navigate = useNavigate();
-  const [resumeOpen, setResumeOpen] = useState(false);
-  const [unfinished, setUnfinished] = useState<LessonRef | null>(null);
-  const [nextLesson, setNextLesson] = useState<LessonRef | null>(null);
 
   useEffect(() => {
     touchActive();
@@ -44,31 +25,6 @@ const Index = () => {
     supabase.auth.getSession().then(({ data: { session } }) => setUser(session?.user ?? null));
     return () => subscription.unsubscribe();
   }, []);
-
-  // App-open suggestion: offer to resume an unfinished lesson, jump to the
-  // next lesson, or let the user browse freely.
-  useEffect(() => {
-    if (sessionStorage.getItem(RESUME_DIALOG_KEY)) return;
-    const visited = getLastVisited();
-    const lastMastered = getLastMastered();
-    const unfinishedRef = visited && isUnfinished(visited) ? visited : null;
-    const nextRef = lastMastered
-      ? findNextLesson(lastMastered.levelId, lastMastered.unitId, lastMastered.lessonId)
-      : visited
-        ? findNextLesson(visited.levelId, visited.unitId, visited.lessonId)
-        : null;
-    if (!unfinishedRef && !nextRef) return;
-    sessionStorage.setItem(RESUME_DIALOG_KEY, "1");
-    setUnfinished(unfinishedRef);
-    setNextLesson(nextRef);
-    const t = setTimeout(() => setResumeOpen(true), 500);
-    return () => clearTimeout(t);
-  }, []);
-
-  const goTo = (ref: LessonRef) => {
-    setResumeOpen(false);
-    navigate(`/level/${ref.levelId}/unit/${ref.unitId}/lesson/${ref.lessonId}`);
-  };
 
   const signOut = async () => {
     await supabase.auth.signOut();

@@ -12,6 +12,9 @@ import Auth from "./pages/Auth.tsx";
 import Stats from "./pages/Stats.tsx";
 import Placement from "./pages/Placement.tsx";
 import Slang from "./pages/Slang.tsx";
+import Account from "./pages/Account.tsx";
+import Privacy from "./pages/Privacy.tsx";
+import Terms from "./pages/Terms.tsx";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +30,9 @@ const App = () => (
           <Route path="/stats" element={<Stats />} />
           <Route path="/placement" element={<Placement />} />
           <Route path="/slang" element={<Slang />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />

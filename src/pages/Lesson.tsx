@@ -1032,6 +1032,23 @@ const Lesson = () => {
                     <span>{b.after}</span>
                     {v && correct && <Check className="size-4 text-emerald-500" />}
                   </div>
+                  {v && (
+                    correct ? (
+                      <div className="mt-3 flex items-center gap-2 rounded-xl bg-emerald-500/10 px-3 py-2 text-sm font-semibold text-emerald-600">
+                        <Check className="size-4" /> 回答正确
+                      </div>
+                    ) : (
+                      <div className="mt-3 flex items-center gap-2 rounded-xl bg-rose-500/10 px-3 py-2 text-sm text-rose-600">
+                        <X className="size-4 shrink-0" />
+                        <span>
+                          <span className="font-semibold">回答错误</span>
+                          <span className="mx-1">·</span>
+                          正确答案：
+                          <span className="font-bold">{b.answer}</span>
+                        </span>
+                      </div>
+                    )
+                  )}
                 </div>
               );
             })}

@@ -216,6 +216,22 @@ Deno.serve(async (req) => {
   * 严禁挖空人名 (Tom, Mei, Sarah ...)、代词 (I, you, my ...)、be 动词 / 冠词 / 介词等功能词
   * 必须是学习者本课要掌握的实词 (名词 / 动词 / 形容词)
 - fillBlanks 同理: answer 也必须来自本课 vocab, 不要挖空人名或功能词
+
+【全局硬性约束 — 词汇封闭性, 极其重要】
+本课所有英文内容 (vocab.example / reading / grammar.examples / expressions / fillBlanks.sentence / quiz.q+options / listening.audio / output.sample) 中出现的每一个英文【实词】 (名词 / 动词 / 形容词 / 副词 / 实义短语), 都必须满足以下二选一:
+  (a) 出自本课 vocab 数组里收录的新词 (含其单复数 / 时态 / 派生形式), 或
+  (b) 出自上面"已经学过的单词列表" priorWords (含其变形)。
+严禁引入任何既不在本课 vocab、也不在 priorWords 里的英文新词。功能词 (the, a, is, of, to, and, I, you 等最基础的虚词) 与人名 / 地名 / 数字不在此限制内, 但人名地名应尽量复用 reading 里已经出现的。
+
+各板块附加要求:
+  * vocab.example: 必须是 reading 数组里出现过的【原句】或其中一个完整句, 用来展示这个词在课文里的真实用法; cn 与 reading 同句中文一致。严禁为了造例句而引入新词。
+  * expressions: 5-6 条实用表达, 每一条 en 都必须是 reading 里出现的【原句】(可以是对话里某一句完整句子)。如果 reading 里完整可用句子不足 5 句, 就把 expressions 减少到与 reading 句数匹配, 但宁缺毋滥, 绝不自己造句。
+  * fillBlanks.sentence: 必须是 reading 里的某句【原句】, 把其中一个本课 vocab 词换成 ___; cn 是这句的中文; options 4 个里 3 个干扰项也必须是本课 vocab 或 priorWords 中的真实单词, 不得自创新词。
+  * quiz.q 与 options: 问题与选项中出现的英文实词都必须来自 reading + vocab + priorWords 范围, 不得引入新词或新人名。
+  * listening.audio: 直接从 reading 数组里挑选 2-4 个连续句子拼接而成, 不得改写、不得新增句子。这样能保证学生听到的就是刚学过的内容。blanks 的 answer 仍必须是本课 vocab 中的实词。
+  * output.sample: 写作范文 3-5 句, 句子里所有英文实词必须来自本课 vocab + priorWords, 严禁引入新词; 鼓励直接复用 reading / expressions 里出现的句型。
+
+生成顺序建议: 先确定 reading → 再据此挑 vocab (reading 里的新实词) → grammar / expressions / fillBlanks 全部从 reading 中"挑句子" → quiz 围绕 reading 出题 → listening 直接从 reading 抽连续句子 → output.sample 仅使用已学词重组。
 严格按照 tool 的 JSON schema 输出, 不要输出额外文字。`;
 
     const priorList = Array.isArray(priorWords) && priorWords.length > 0

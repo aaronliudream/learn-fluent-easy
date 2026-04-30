@@ -49,7 +49,7 @@ export function useStreakStats(userId: string | null | undefined) {
           setStats(null);
         } else {
           // RPC returns a setof row → array of one
-          const row = Array.isArray(data) ? data[0] : data;
+          const row = data ? (Array.isArray(data) ? data[0] : data) : null;
           setStats((row ?? null) as StreakStats | null);
         }
       } finally {

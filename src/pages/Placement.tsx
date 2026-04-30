@@ -770,6 +770,125 @@ const Placement = () => {
   // ---------------- RESULT ----------------
   if (stage === "result" && result) {
     const desc = CEFR_DESC[result.cefr];
+    const wrongList = questions.filter(
+      (q) => picks[q.id] === undefined || picks[q.id] !== q.answer,
+    );
+
+    // ----- Review mode: show wrong questions one-by-one with explanation -----
+    if (reviewStage === "review" && wrongList.length > 0) {
+      const rq = wrongList[reviewIdx];
+      const rmeta = SECTION_META[rq.section];
+      const RIcon = rmeta.icon;
+      const userPick = picks[rq.id];
+      const isLastReview = reviewIdx >= wrongList.length - 1;
+      return (
+        <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+          <div className="mb-5 flex items-center justify-between rounded-2xl bg-card p-4 shadow-card">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setReviewStage("skip")}
+                className="grid size-9 place-items-center rounded-xl text-muted-foreground transition hover:bg-secondary hover:text-foreground"
+                aria-label={tt("退出复习")}
+              >
+                <ArrowLeft className="size-4" />
+              </button>
+              <div className={`grid size-9 place-items-center rounded-xl ${rmeta.color}`}>
+                <RIcon className="size-4" />
+              </div>
+              <div>
+                <div className="text-sm font-bold">
+                  <T>复习错题</T>{" "}
+                  <span className="ml-1 rounded bg-secondary px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground">
+                    L{rq.level}
+                  </span>
+                </div>
+                <div className="text-[11px] text-muted-foreground">
+                  {reviewIdx + 1} / {wrongList.length}
+                </div>
+              </div>
+            </div>
+            <div className="rounded-full bg-violet-500/15 px-3 py-1 text-xs font-bold text-violet-700">
+              <T>{rmeta.cn}</T>
+            </div>
+          </div>
+
+          <section className="rounded-3xl bg-card p-6 shadow-card md:p-8">
+            {rq.section === "listening" && rq.context && (
+              <button
+                onClick={() => speak(rq.context!)}
+                className="mb-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-grad-title py-3 font-semibold text-white shadow-tile"
+              >
+                <Volume2 className="size-5" /> <T>播放音频</T> · <T>复习时不限次数</T>
+              </button>
+            )}
+            {rq.section === "reading" && rq.context && (
+              <div className="mb-5 rounded-2xl border border-border bg-secondary/30 p-4 text-sm leading-relaxed">
+                {nativeText(rq.context)}
+              </div>
+            )}
+
+            <p className="mb-4 text-lg font-semibold">{nativeText(rq.prompt)}</p>
+            {rq.section === "grammar" && rq.context && (
+              <p className="mb-3 text-xs text-muted-foreground">{nativeText(rq.context)}</p>
+            )}
+
+            <div className="grid gap-2 md:grid-cols-2">
+              {rq.options.map((opt, oi) => {
+                const isAns = oi === rq.answer;
+                const wasUserPick = oi === userPick;
+                let cls = "border-border bg-card opacity-60";
+                if (isAns) cls = "border-emerald-500 bg-emerald-500/10";
+                else if (wasUserPick) cls = "border-rose-500 bg-rose-500/10";
+                return (
+                  <div key={oi} className={`flex items-center justify-between rounded-xl border px-4 py-3 text-sm ${cls}`}>
+                    <span>{nativeText(opt)}</span>
+                    {isAns && <CheckCircle2 className="size-4 text-emerald-600" />}
+                    {!isAns && wasUserPick && <XCircle className="size-4 text-rose-600" />}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-5 rounded-2xl border border-violet-500/30 bg-violet-500/5 p-4 text-sm">
+              <div className="mb-1 flex items-center gap-2 font-bold text-violet-700">
+                <Brain className="size-4" /> <T>讲解</T>
+              </div>
+              <div className="text-xs leading-relaxed text-foreground/85">
+                {rq.explain ? <T>{rq.explain}</T> : <T>请记住正确选项，并尝试用同类句型再造一句。</T>}
+              </div>
+              <div className="mt-3 text-xs text-muted-foreground">
+                <T>正确答案</T>：<span className="font-semibold text-foreground">{nativeText(rq.options[rq.answer])}</span>
+                {userPick !== undefined && (
+                  <>
+                    {" · "}
+                    <T>你选择了</T>：<span className="font-semibold text-foreground">{nativeText(rq.options[userPick])}</span>
+                  </>
+                )}
+                {userPick === undefined && (
+                  <>{" · "}<span className="font-semibold text-rose-600"><T>当时未作答</T></span></>
+                )}
+              </div>
+            </div>
+          </section>
+
+          <div className="mt-6 flex items-center justify-between gap-3">
+            <Button variant="outline" onClick={() => setReviewIdx((i) => Math.max(0, i - 1))} disabled={reviewIdx === 0}>
+              ← <T>上一题</T>
+            </Button>
+            {isLastReview ? (
+              <Button className="bg-emerald-600 hover:bg-emerald-600/90" onClick={() => setReviewStage("skip")}>
+                <T>完成复习</T>
+              </Button>
+            ) : (
+              <Button onClick={() => setReviewIdx((i) => i + 1)}>
+                <T>下一题</T> →
+              </Button>
+            )}
+          </div>
+        </main>
+      );
+    }
+
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
         <PageHeader title="Test Result" subtitle="Based on CEFR" back="/" />
@@ -798,6 +917,58 @@ const Placement = () => {
             </div>
           </div>
         </div>
+
+        {/* Review-wrong-answers prompt */}
+        {wrongList.length > 0 && reviewStage === "ask" && (
+          <section className="mt-5 overflow-hidden rounded-3xl border-2 border-amber-500/40 bg-gradient-to-br from-amber-500/10 to-orange-500/5 p-5 shadow-card md:p-6">
+            <div className="flex items-start gap-4">
+              <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-md">
+                <GraduationCap className="size-6" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-base font-extrabold"><T>要不要复习刚才答错的题？</T></h3>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  <T>本次共有</T>{" "}
+                  <span className="font-bold text-amber-700">{wrongList.length}</span>{" "}
+                  <T>题答错或超时未答。逐题复习能直接把弱点变成提升点 —— 既然花了这么久测试，别让它白费。</T>
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <Button
+                    size="sm"
+                    className="bg-amber-600 hover:bg-amber-600/90"
+                    onClick={() => {
+                      setReviewIdx(0);
+                      setReviewStage("review");
+                      window.scrollTo({ top: 0 });
+                    }}
+                  >
+                    <T>开始复习错题</T> ({wrongList.length}) →
+                  </Button>
+                  <Button size="sm" variant="outline" onClick={() => setReviewStage("skip")}>
+                    <T>稍后再说</T>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {wrongList.length > 0 && reviewStage === "skip" && (
+          <button
+            onClick={() => {
+              setReviewIdx(0);
+              setReviewStage("review");
+              window.scrollTo({ top: 0 });
+            }}
+            className="mt-5 flex w-full items-center justify-between rounded-2xl border border-amber-500/40 bg-amber-500/5 px-5 py-3 text-left text-sm transition hover:bg-amber-500/10"
+          >
+            <span className="flex items-center gap-2 font-semibold text-amber-700">
+              <GraduationCap className="size-4" />
+              <T>重新复习错题</T> ({wrongList.length})
+            </span>
+            <span className="text-xs text-muted-foreground">→</span>
+          </button>
+        )}
 
         {/* Previous vs current comparison */}
         {previousResult && (() => {

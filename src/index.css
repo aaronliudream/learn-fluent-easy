@@ -132,3 +132,31 @@ All colors MUST be HSL.
     color: transparent;
   }
 }
+
+/* =====================================================================
+ * Senior-friendly larger typography for the English Placement Test.
+ * Older users reported the default body sizes were hard to read, so we
+ * scale up the most common Tailwind text-size classes inside the test
+ * scope only (does not affect other pages).
+ * ===================================================================== */
+.placement-page {
+  /* Bump body / question / option text */
+  font-size: 17px;
+  line-height: 1.55;
+}
+.placement-page .text-xs       { font-size: 0.95rem; line-height: 1.45; }   /* 12 → ~15 */
+.placement-page .text-sm       { font-size: 1.05rem; line-height: 1.55; }   /* 14 → ~17 */
+.placement-page .text-base     { font-size: 1.15rem; line-height: 1.6;  }   /* 16 → ~18.5 */
+.placement-page .text-lg       { font-size: 1.3rem;  line-height: 1.55; }   /* 18 → ~21 */
+.placement-page .text-xl       { font-size: 1.5rem;  line-height: 1.5;  }   /* 20 → 24 */
+.placement-page .text-2xl      { font-size: 1.85rem; line-height: 1.4;  }
+.placement-page .text-\[10px\] { font-size: 0.85rem; }
+.placement-page .text-\[11px\] { font-size: 0.95rem; }
+
+/* Make answer options & explanation cards a touch roomier so the
+ * larger text doesn't feel cramped. */
+.placement-page button[class*="rounded-xl"][class*="px-4"][class*="py-3"] {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  min-height: 56px;
+}

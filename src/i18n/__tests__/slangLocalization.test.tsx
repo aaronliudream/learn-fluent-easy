@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { render, screen, act } from "@testing-library/react";
+import { render, screen, act, cleanup } from "@testing-library/react";
 import React from "react";
 import { I18nProvider, useI18n } from "@/i18n/I18nProvider";
 import { T } from "@/i18n/T";
@@ -39,12 +39,19 @@ beforeEach(() => {
     const items = (opts?.body?.items ?? []) as { key: string; text: string }[];
     const target = opts?.body?.targetLanguage ?? "Lang";
     const translations: Record<string, string> = {};
-    for (const it of items) translations[it.key] = `[${target}] ${it.text}`;
+    for (const it of items) {
+      translations[it.key] = target === "Korean"
+        ? "[Korean] 번역"
+        : target === "Japanese"
+          ? "[Japanese] 翻訳"
+          : `[${target}] translated`;
+    }
     return { data: { translations }, error: null };
   });
 });
 
 afterEach(() => {
+  cleanup();
   localStorage.clear();
 });
 

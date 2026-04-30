@@ -1,43 +1,15 @@
-import { supabase } from "@/integrations/supabase/client";
 import { loadSettings } from "@/lib/voice";
 
 let lastSpoken = "";
-let currentAudio: HTMLAudioElement | null = null;
-const audioCache = new Map<string, string>(); // key -> object URL
-let naturalTtsUnavailable = false;
 // Incremented every time we stop. Any in-flight speak() whose token < this must abort.
 let speakToken = 0;
 
-export const clearAudioCache = () => {
-  audioCache.forEach((url) => URL.revokeObjectURL(url));
-  audioCache.clear();
-};
+export const clearAudioCache = () => undefined;
 
 export const getLastSpoken = () => lastSpoken;
 
-const cacheKey = (text: string, voiceId: string, speed: number) =>
-  `${voiceId}::${speed}::${text}`;
-
-const base64ToBlobUrl = (b64: string, mimeType = "audio/wav"): string => {
-  const byteChars = atob(b64);
-  const byteNumbers = new Array(byteChars.length);
-  for (let i = 0; i < byteChars.length; i++) byteNumbers[i] = byteChars.charCodeAt(i);
-  const byteArray = new Uint8Array(byteNumbers);
-  const blob = new Blob([byteArray], { type: mimeType });
-  return URL.createObjectURL(blob);
-};
-
 const stopCurrent = () => {
   speakToken += 1;
-  if (currentAudio) {
-    try {
-      currentAudio.pause();
-      currentAudio.currentTime = 0;
-    } catch {
-      /* noop */
-    }
-    currentAudio = null;
-  }
   if (typeof window !== "undefined" && "speechSynthesis" in window) {
     speechSynthesis.cancel();
   }
@@ -45,98 +17,89 @@ const stopCurrent = () => {
 
 export const stopSpeaking = () => stopCurrent();
 
-const preferredVoiceNames = [
-  "Samantha",
-  "Google US English",
-  "Microsoft Aria",
-  "Microsoft Jenny",
-  "Google UK English Female",
-  "Microsoft Libby",
-];
-
-const speakBrowser = (text: string, speed: number) => {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
-  const utterance = new SpeechSynthesisUtterance(text);
-  const voices = speechSynthesis.getVoices();
-  utterance.voice =
-    preferredVoiceNames.map((name) => voices.find((voice) => voice.name.includes(name))).find(Boolean) ||
-    voices.find((voice) => voice.lang.startsWith("en") && voice.localService) ||
-    voices.find((voice) => voice.lang.startsWith("en")) ||
-    null;
-  utterance.lang = utterance.voice?.lang || "en-US";
-  utterance.rate = Math.min(1.08, Math.max(0.78, Number(speed) || 0.92));
-  utterance.pitch = 0.95;
-  speechSynthesis.speak(utterance);
+const VOICE_PREFS: Record<string, string[]> = {
+  alloy: ["Samantha", "Google US English", "Microsoft Aria", "Microsoft Jenny", "Ava"],
+  shimmer: ["Allison", "Ava", "Samantha", "Google US English", "Microsoft Aria"],
+  nova: ["Ava", "Jenny", "Aria", "Google US English", "Samantha"],
+  echo: ["Alex", "Daniel", "Microsoft Guy", "Google UK English Male", "Google US English Male"],
+  onyx: ["Daniel", "Alex", "Microsoft David", "Microsoft Guy", "Google US English Male"],
+  fable: ["Oliver", "Daniel", "Google UK English", "Microsoft Ryan", "Microsoft Libby"],
 };
 
-const playUrl = (url: string): Promise<void> =>
-  new Promise((resolve) => {
-    const audio = new Audio(url);
-    currentAudio = audio;
-    audio.onended = () => resolve();
-    audio.onerror = () => resolve();
-    audio.play().catch(() => resolve());
+const NATURAL_MARKERS = ["enhanced", "premium", "neural", "natural", "google", "microsoft"];
+
+const waitForVoices = (): Promise<SpeechSynthesisVoice[]> => {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return Promise.resolve([]);
+  const ready = speechSynthesis.getVoices();
+  if (ready.length > 0) return Promise.resolve(ready);
+  return new Promise((resolve) => {
+    const done = () => resolve(speechSynthesis.getVoices());
+    speechSynthesis.onvoiceschanged = done;
+    window.setTimeout(done, 600);
   });
+};
+
+const pickVoice = (voices: SpeechSynthesisVoice[], voiceId: string) => {
+  const prefs = VOICE_PREFS[voiceId] ?? VOICE_PREFS.alloy;
+  return voices
+    .filter((voice) => voice.lang.toLowerCase().startsWith("en"))
+    .map((voice) => {
+      const name = voice.name.toLowerCase();
+      let score = 50;
+      const prefIdx = prefs.findIndex((pref) => name.includes(pref.toLowerCase()));
+      if (prefIdx >= 0) score += 120 - prefIdx * 12;
+      if (NATURAL_MARKERS.some((marker) => name.includes(marker))) score += 25;
+      if (voice.localService) score += 8;
+      if (voiceId === "fable" && voice.lang.toLowerCase().startsWith("en-gb")) score += 18;
+      if (voiceId !== "fable" && voice.lang.toLowerCase().startsWith("en-us")) score += 14;
+      if (/compact|default|siri/i.test(voice.name)) score -= 20;
+      return { voice, score };
+    })
+    .sort((a, b) => b.score - a.score)[0]?.voice ?? null;
+};
+
+const splitForSpeech = (text: string) => {
+  const sentences = text.replace(/\s+/g, " ").trim().match(/[^.!?]+[.!?]?/g) ?? [text];
+  const chunks: string[] = [];
+  let current = "";
+  for (const sentence of sentences) {
+    const next = `${current} ${sentence}`.trim();
+    if (next.length > 220 && current) {
+      chunks.push(current);
+      current = sentence.trim();
+    } else {
+      current = next;
+    }
+  }
+  if (current) chunks.push(current);
+  return chunks;
+};
+
+const speakBrowser = async (text: string, voiceId: string, speed: number, token: number): Promise<void> => {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  const voices = await waitForVoices();
+  const voice = pickVoice(voices, voiceId);
+  const rate = Math.min(1.08, Math.max(0.72, Number(speed) || 0.95));
+  for (const chunk of splitForSpeech(text)) {
+    if (token !== speakToken) return;
+    await new Promise<void>((resolve) => {
+      const utterance = new SpeechSynthesisUtterance(chunk);
+      utterance.voice = voice;
+      utterance.lang = voice?.lang || "en-US";
+      utterance.rate = rate;
+      utterance.pitch = voiceId === "onyx" || voiceId === "echo" ? 0.88 : 0.96;
+      utterance.onend = () => resolve();
+      utterance.onerror = () => resolve();
+      speechSynthesis.speak(utterance);
+    });
+  }
+};
 
 export const speak = async (text: string): Promise<void> => {
   if (!text) return;
   lastSpoken = text;
   stopCurrent();
   const myToken = speakToken;
-
   const { voiceId, speed } = loadSettings();
-  const key = cacheKey(text, voiceId, speed);
-
-  // 1. Cached AI audio?
-  const cached = audioCache.get(key);
-  if (cached) {
-    if (myToken !== speakToken) return;
-    await playUrl(cached);
-    return;
-  }
-
-  if (naturalTtsUnavailable) {
-    if (myToken !== speakToken) return;
-    speakBrowser(text, speed);
-    return;
-  }
-
-  // 2. Call natural TTS backend. If unavailable, keep the button working with the best browser voice.
-  try {
-    const { data, error } = await supabase.functions.invoke("tts", {
-      body: { text, voiceId, speed },
-    });
-
-    // Aborted by a stop (e.g. page navigation) while we were waiting.
-    if (myToken !== speakToken) return;
-
-    if (error) {
-      const status = (error as { context?: { status?: number } }).context?.status;
-      if (status === 402 || status === 429) {
-        console.warn("[speak] Natural TTS unavailable (quota/rate). Using browser voice fallback.");
-        naturalTtsUnavailable = true;
-      } else {
-        console.warn("[speak] Natural TTS error:", error);
-      }
-      speakBrowser(text, speed);
-      return;
-    }
-
-    const audioContent = (data as { audioContent?: string })?.audioContent;
-    const mimeType = (data as { mimeType?: string })?.mimeType || "audio/wav";
-    if (!audioContent) {
-      console.warn("[speak] No natural audio returned.");
-      speakBrowser(text, speed);
-      return;
-    }
-
-    const url = base64ToBlobUrl(audioContent, mimeType);
-    audioCache.set(key, url);
-    if (myToken !== speakToken) return;
-    await playUrl(url);
-  } catch (e) {
-    if (myToken !== speakToken) return;
-    console.warn("[speak] Natural TTS failed:", e);
-    speakBrowser(text, speed);
-  }
+  await speakBrowser(text, voiceId, speed, myToken);
 };

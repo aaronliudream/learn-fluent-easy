@@ -2,6 +2,7 @@ import { ArrowLeft, Home } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { VoiceSettingsButton } from "@/components/VoiceSettings";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
+import { T } from "@/i18n/T";
 
 type Props = {
   title: string;
@@ -25,7 +26,7 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
             </button>
           )}
           <h1 className="text-grad-title text-3xl font-extrabold tracking-tight md:text-4xl">
-            {title}
+            <T>{title}</T>
           </h1>
         </div>
         <div className="flex items-center gap-1">
@@ -41,7 +42,7 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
         </div>
       </div>
       {subtitle && (
-        <p className="ml-1 mt-2 text-sm text-muted-foreground md:ml-[52px]">{subtitle}</p>
+        <p className="ml-1 mt-2 text-sm text-muted-foreground md:ml-[52px]"><T>{subtitle}</T></p>
       )}
     </header>
   );

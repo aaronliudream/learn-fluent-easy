@@ -630,7 +630,7 @@ const Lesson = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className={`truncate font-bold ${active ? "text-white" : ""} text-sm`}>
-                      {s.cn}
+                      <T>{s.cn}</T>
                     </div>
                     <div className={`truncate text-[11px] ${active ? "text-white/85" : "text-muted-foreground"}`}>
                       {s.en}
@@ -769,7 +769,7 @@ const Lesson = () => {
                 </div>
                 <div className="col-start-2 mt-2 md:col-start-3 md:mt-0">
                   <div className="flex items-start gap-2">
-                    <p className="flex-1 text-base leading-relaxed text-foreground/90">{p.cn}</p>
+                    <p className="flex-1 text-base leading-relaxed text-foreground/90"><T>{p.cn}</T></p>
                     <button
                       onClick={() => speak(p.en)}
                       className="hidden size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:grid"
@@ -822,7 +822,7 @@ const Lesson = () => {
                           <Volume2 className="size-4" />
                         </button>
                       </div>
-                      <div className="mt-1 text-xs text-muted-foreground">{ex.cn}</div>
+                      <div className="mt-1 text-xs text-muted-foreground"><T>{ex.cn}</T></div>
                     </li>
                   ))}
                 </ul>
@@ -859,7 +859,7 @@ const Lesson = () => {
                     <Volume2 className="size-4" />
                   </button>
                 </div>
-                <p className="mt-1 text-sm text-muted-foreground">{e.cn}</p>
+                <p className="mt-1 text-sm text-muted-foreground"><T>{e.cn}</T></p>
               </div>
             ))}
           </div>
@@ -1094,7 +1094,7 @@ const Lesson = () => {
           />
           <div className="rounded-2xl border border-border bg-secondary/30 p-5">
             <p className="font-semibold">{content.output.prompt}</p>
-            <p className="mt-1 text-sm text-muted-foreground">{content.output.cn}</p>
+            <p className="mt-1 text-sm text-muted-foreground"><T>{content.output.cn}</T></p>
           </div>
           <textarea
             value={output}

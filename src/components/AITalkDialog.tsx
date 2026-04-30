@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, ListChecks, Check, AlertCircle, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
 import { loadSettings } from "@/lib/voice";
+import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
 
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
 
@@ -25,6 +27,7 @@ type Props = {
   unitTitle?: string;
   levelName?: string;
   level?: string; // CEFR like "A1"
+  isGuest?: boolean; // if true, use shorter trial session + show signup CTA
 };
 
 const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
@@ -39,11 +42,12 @@ const REALTIME_VOICE_MAP: Record<string, string> = {
   fable: "verse",
 };
 
-export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level }: Props) {
+export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level, isGuest }: Props) {
   const tt = useT();
+  const sessionLen = isGuest ? GUEST_SESSION_SECONDS : SESSION_DURATION_SEC;
   const [phase, setPhase] = useState<"idle" | "connecting" | "live" | "ending" | "recap">("idle");
   const [transcript, setTranscript] = useState<Turn[]>([]);
-  const [secondsLeft, setSecondsLeft] = useState(SESSION_DURATION_SEC);
+  const [secondsLeft, setSecondsLeft] = useState(sessionLen);
   const [muted, setMuted] = useState(false);
   const [aiSpeaking, setAiSpeaking] = useState(false);
   const [recap, setRecap] = useState<Recap | null>(null);
@@ -87,7 +91,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       cleanup();
       setPhase("idle");
       setTranscript([]);
-      setSecondsLeft(SESSION_DURATION_SEC);
+      setSecondsLeft(sessionLen);
       setMuted(false);
       setRecap(null);
       setRecapLoading(false);
@@ -97,7 +101,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       userTurnByItemId.current.clear();
       assistantTurnByRespId.current.clear();
     }
-  }, [open, cleanup]);
+  }, [open, cleanup, sessionLen]);
 
   const requestRecap = useCallback(async () => {
     const turns = transcriptSnapshot.current.filter(t => t.text && !t.pending);
@@ -301,14 +305,18 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       await pc.setRemoteDescription({ type: "answer", sdp: answerSdp });
 
       setPhase("live");
-      setSecondsLeft(SESSION_DURATION_SEC);
+      setSecondsLeft(sessionLen);
+      // Count this as a used trial for guests (only on successful connect)
+      if (isGuest) {
+        try { incrementGuestTrials(); } catch { /* noop */ }
+      }
     } catch (e: any) {
       console.error("startCall failed", e);
       toast.error(e?.message || "Failed to connect to AI");
       cleanup();
       setPhase("idle");
     }
-  }, [lessonTitle, unitTitle, levelName, level, handleRealtimeEvent, cleanup]);
+  }, [lessonTitle, unitTitle, levelName, level, handleRealtimeEvent, cleanup, sessionLen, isGuest]);
 
   const toggleMute = useCallback(() => {
     const stream = localStreamRef.current;
@@ -371,7 +379,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         {/* Body */}
         <div className="flex-1 overflow-y-auto p-4">
           {phase === "idle" && (
-            <IdleSplash lessonTitle={lessonTitle} levelName={levelName} onStart={startCall} />
+            <IdleSplash lessonTitle={lessonTitle} levelName={levelName} onStart={startCall} isGuest={isGuest} />
           )}
 
           {(phase === "connecting" || phase === "live" || phase === "ending") && (
@@ -379,6 +387,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
           )}
 
           {phase === "recap" && (
+            <>
+            {isGuest && <GuestSignupCTA />}
             <RecapView
               recap={recap}
               loading={recapLoading}
@@ -389,6 +399,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
               setQuizSubmitted={setQuizSubmitted}
               quizScore={quizScore}
             />
+            </>
           )}
         </div>
 

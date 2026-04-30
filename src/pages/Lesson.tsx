@@ -678,7 +678,7 @@ const Lesson = () => {
                 </div>
                 <div className="mt-1 font-mono text-sm text-muted-foreground">{v.pron}</div>
                 <div className="mt-4 rounded-xl bg-card p-4">
-                  <div className="font-semibold"><T>{v.meaning}</T></div>
+                  <div className="font-semibold">{nativeText(v.meaning)}</div>
                   <p className="mt-2 italic text-foreground/80">"{v.example}"</p>
                   <p className="mt-1 text-sm text-muted-foreground"><T>{v.example_cn}</T></p>
                 </div>
@@ -730,7 +730,7 @@ const Lesson = () => {
                                 : "border-border bg-card hover:border-primary/40"
                           }`}
                         >
-                          <span>{opt}</span>
+                          <span>{nativeText(opt)}</span>
                           {reveal && isCorrect && <Check className="size-4" />}
                           {reveal && isPicked && !isCorrect && <X className="size-4" />}
                         </button>
@@ -811,8 +811,8 @@ const Lesson = () => {
           <div className="space-y-5">
             {content.grammar.map((g, i) => (
               <div key={i} className="rounded-2xl border border-border bg-secondary/30 p-5">
-                <h4 className="text-lg font-bold">{g.title}</h4>
-                <p className="mt-2 text-sm text-foreground/80">{g.explain}</p>
+                <h4 className="text-lg font-bold">{nativeText(g.title)}</h4>
+                <p className="mt-2 text-sm text-foreground/80">{nativeText(g.explain)}</p>
                 <ul className="mt-3 space-y-2">
                   {g.examples.map((ex, j) => (
                     <li key={j} className="rounded-xl bg-card p-3">

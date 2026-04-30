@@ -15,6 +15,27 @@ const STORAGE_CACHE_PREFIX = "fluentpath.i18n.";
 
 type Catalog = Partial<Record<StringKey, string>>;
 
+const CJK_TEXT_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
+const CJK_LANGS = new Set<LangCode>(["zh", "ja", "ko"]);
+
+function hasWrongScript(lang: LangCode, value: string | undefined) {
+  return Boolean(value && !CJK_LANGS.has(lang) && CJK_TEXT_RE.test(value));
+}
+
+function sanitizeCachedCatalog(lang: LangCode, cat: Catalog): Catalog {
+  if (CJK_LANGS.has(lang)) return cat;
+  return Object.fromEntries(
+    Object.entries(cat).filter(([, value]) => !hasWrongScript(lang, value)),
+  ) as Catalog;
+}
+
+function sanitizeDynCache(lang: LangCode, cache: Record<string, string>) {
+  if (CJK_LANGS.has(lang)) return cache;
+  return Object.fromEntries(
+    Object.entries(cache).filter(([, value]) => !hasWrongScript(lang, value)),
+  );
+}
+
 type I18nContextValue = {
   lang: LangCode;
   setLang: (l: LangCode) => void;
@@ -29,7 +50,8 @@ const I18nContext = createContext<I18nContextValue | null>(null);
 function loadCachedCatalog(lang: LangCode): Catalog {
   try {
     const raw = localStorage.getItem(STORAGE_CACHE_PREFIX + lang);
-    return raw ? (JSON.parse(raw) as Catalog) : {};
+    const parsed = raw ? (JSON.parse(raw) as Catalog) : {};
+    return sanitizeCachedCatalog(lang, parsed);
   } catch {
     return {};
   }
@@ -48,7 +70,8 @@ function saveCachedCatalog(lang: LangCode, cat: Catalog) {
 function loadDynCache(lang: LangCode): Record<string, string> {
   try {
     const raw = localStorage.getItem(STORAGE_CACHE_PREFIX + lang + ".dyn");
-    return raw ? JSON.parse(raw) : {};
+    const parsed = raw ? JSON.parse(raw) : {};
+    return sanitizeDynCache(lang, parsed);
   } catch { return {}; }
 }
 function saveDynCache(lang: LangCode, c: Record<string, string>) {
@@ -155,7 +178,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       const next = { ...dynCacheRef.current };
       toSend.forEach((src, i) => {
         const tr = translations[String(i)];
-        if (tr) next[src] = tr;
+        if (tr && !hasWrongScript(l, tr)) next[src] = tr;
       });
       dynCacheRef.current = next;
       saveDynCache(l, next);
@@ -171,10 +194,8 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // (We treat zh as the source for dynamic content because lessons/scenes are
     // currently authored with Chinese hints.)
     if (lang === "zh") return text;
-    if (lang === "en") return text; // hint text stays as authored; English-only
-                                    // users still see the English line above it.
     const cached = dynCacheRef.current[text];
-    if (cached) return cached;
+    if (cached && !hasWrongScript(lang, cached)) return cached;
     // Queue and debounce
     dynQueueRef.current.add(text);
     if (dynTimerRef.current) window.clearTimeout(dynTimerRef.current);
@@ -182,8 +203,9 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       dynTimerRef.current = null;
       flushDynQueue(lang);
     }, 250);
-    // Return source for now; will re-render when batch resolves.
-    return text;
+    // Never flash Chinese source text for non-Chinese users; the translated
+    // string will appear as soon as the batch resolves.
+    return "";
   }, [lang, flushDynQueue]);
 
   const value = useMemo<I18nContextValue>(() => ({

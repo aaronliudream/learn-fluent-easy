@@ -73,7 +73,7 @@ const WorkplacePlay = () => {
                   {l.speaker}
                 </div>
                 <div className="text-lg font-medium leading-relaxed md:text-xl">{l.en}</div>
-                <div className="mt-1.5 text-base text-muted-foreground md:text-lg">{l.cn}</div>
+                <div className="mt-1.5 text-base text-muted-foreground md:text-lg"><T>{l.cn}</T></div>
               </div>
               <button
                 onClick={() => playOne(i)}

@@ -59,7 +59,7 @@ async function logEvent(payload: Record<string, unknown>) {
   try {
     const { data: { session } } = await supabase.auth.getSession();
     if (!session?.user) return;
-    await supabase.from("learning_events").insert({ user_id: session.user.id, ...payload });
+    await supabase.from("learning_events").insert({ user_id: session.user.id, ...payload } as never);
   } catch {
     /* offline / network failure: ignore */
   }

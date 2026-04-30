@@ -101,30 +101,14 @@ function blankOutPhrase(example: string, phrase: string): string {
   return result;
 }
 
-/**
- * Choose the right drill type for one idiom, based on the user's mastery
- * level for it. Higher level = deeper / more productive recall.
- *   L1 -> en2cn       (recognise meaning)
- *   L2 -> fill / cn2en alternating (listen + reverse recall)
- *   L3 -> scenario    (situation -> phrase)
- *   L4 -> compose     (write your own — AI graded)
- *   L5 -> compose     (free composition; SRS interval handles spacing)
- */
-function kindForLevel(level: SlangLevel, alt: number): QuizKind {
-  if (level === 1) return "en2cn";
-  if (level === 2) return alt % 2 === 0 ? "fill" : "cn2en";
-  if (level === 3) return "scenario";
-  return "compose";
-}
-
 function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
   const sourceForDistractors = IDIOMS;
   // Spaced-repetition pick: prioritise struggling > unseen > due-review,
   // and skip mastered items still in cooldown.
   const picked = pickQuizPool(pool, Math.min(len, pool.length));
+  const kinds: QuizKind[] = ["en2cn", "cn2en", "fill"];
   return picked.map((idiom, i) => {
-    const level = getSlangLevel(idiom.id);
-    const kind = kindForLevel(level, i);
+    const kind = kinds[i % kinds.length];
     const distractorPool = sourceForDistractors.filter((x) => x.id !== idiom.id);
     const distractors = shuffle(distractorPool).slice(0, 3);
 
@@ -152,37 +136,16 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
         idiom,
       };
     }
-    if (kind === "fill") {
-      const blanked = blankOutPhrase(idiom.example, idiom.phrase);
-      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
-      return {
-        id: idiom.id,
-        kind,
-        prompt: blanked,
-        context: idiom.example_cn,
-        options: opts,
-        answer: opts.indexOf(idiom.phrase),
-        idiom,
-      };
-    }
-    if (kind === "scenario") {
-      // Scenario text is fetched lazily when the question is shown; the
-      // options are still 4 phrases (target + 3 distractors).
-      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
-      return {
-        id: idiom.id,
-        kind,
-        prompt: idiom.example_cn, // fallback while AI scenario loads
-        options: opts,
-        answer: opts.indexOf(idiom.phrase),
-        idiom,
-      };
-    }
-    // compose — no options, learner writes a sentence; AI grades on submit.
+    // fill
+    const blanked = blankOutPhrase(idiom.example, idiom.phrase);
+    const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
     return {
       id: idiom.id,
       kind,
-      prompt: idiom.example_cn,
+      prompt: blanked,
+      context: idiom.example_cn,
+      options: opts,
+      answer: opts.indexOf(idiom.phrase),
       idiom,
     };
   });

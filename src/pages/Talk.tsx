@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Mic, ArrowLeft, Sparkles, Lightbulb, Phone } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -7,6 +7,7 @@ import { AITalkDialog } from "@/components/AITalkDialog";
 import { T } from "@/i18n/T";
 import { LEVELS } from "@/data/course";
 import { toast } from "sonner";
+import { guestTrialsRemaining, GUEST_TRIAL_LIMIT } from "@/lib/guestTrial";
 
 const TOPICS = [
   { key: "free",      label: "随便聊聊",       prompt: "" },
@@ -33,6 +34,11 @@ export default function Talk() {
   const [topic, setTopic] = useState(TOPICS[0]);
   const [level, setLevel] = useState("B1");
   const [open, setOpen] = useState(false);
+  const [trialsLeft, setTrialsLeft] = useState<number>(GUEST_TRIAL_LIMIT);
+
+  useEffect(() => {
+    setTrialsLeft(guestTrialsRemaining());
+  }, [open]);
 
   useEffect(() => {
     let active = true;
@@ -47,9 +53,12 @@ export default function Talk() {
   }, []);
 
   const start = () => {
-    if (!authed) {
-      toast.error("请先登录后使用 AI 语音对话");
-      nav("/auth");
+    if (!authed && guestTrialsRemaining() <= 0) {
+      toast("免费试用已结束 · 登录后可继续畅聊", {
+        description: "登录账号即可解锁 10 分钟完整对话和学习记录",
+        action: { label: "去登录", onClick: () => nav("/auth") },
+        duration: 7000,
+      });
       return;
     }
     setOpen(true);
@@ -123,13 +132,21 @@ export default function Talk() {
         onClick={start}
         className="flex w-full items-center justify-center gap-2 rounded-3xl bg-grad-title py-5 text-lg font-extrabold text-white shadow-tile transition hover:opacity-95"
       >
-        <Mic className="size-6" /> <T>开始 10 分钟对话</T>
+        <Mic className="size-6" />
+        {authed
+          ? <T>开始 10 分钟对话</T>
+          : trialsLeft > 0
+            ? <T>免费试一下 3 分钟</T>
+            : <T>登录解锁完整对话</T>}
       </button>
 
       {!authed && (
         <p className="mt-3 flex items-center justify-center gap-1.5 text-center text-xs text-muted-foreground">
-          <Lightbulb className="size-3.5" /> <T>需要登录后使用</T> ·
-          <Link to="/auth" className="ml-1 text-primary underline">登录</Link>
+          <Lightbulb className="size-3.5" />
+          {trialsLeft > 0
+            ? <T>免费试用，无需注册 · 登录后可享 10 分钟</T>
+            : <T>免费试用已用完 · 登录后继续畅聊</T>}
+          <Link to="/auth" className="ml-1 text-primary underline"><T>登录</T></Link>
         </p>
       )}
 
@@ -139,6 +156,7 @@ export default function Talk() {
         lessonTitle={topic.prompt || undefined}
         levelName={LEVELS_OPT.find((l) => l.id === level)?.name}
         level={level}
+        isGuest={authed === false}
       />
     </main>
   );

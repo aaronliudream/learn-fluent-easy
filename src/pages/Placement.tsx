@@ -509,7 +509,16 @@ const Placement = () => {
           <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>独立题库 · 覆盖 A1 → C2 全六级，全部题目唯一不重复</T></li>
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>自适应难度：答对升一级，答错降一级，快速锁定真实水平</T></li>
-            <li className="flex items-start gap-2"><Clock className="mt-0.5 size-4 shrink-0 text-primary" /> <T>每题独立倒计时，依据题目长度与 CEFR 难度动态计算（词汇 {SECTION_TIME_RANGE.vocab} · 语法 {SECTION_TIME_RANGE.grammar} · 阅读 {SECTION_TIME_RANGE.reading} · 听力 {SECTION_TIME_RANGE.listening}），超时按错处理</T></li>
+            <li className="flex items-start gap-2">
+              <Clock className="mt-0.5 size-4 shrink-0 text-primary" />
+              <span>
+                <T>每题独立倒计时，依据题目长度与 CEFR 难度动态计算</T>
+                <span className="text-foreground/70">
+                  （<T>词汇</T> {SECTION_TIME_RANGE.vocab} · <T>语法</T> {SECTION_TIME_RANGE.grammar} · <T>阅读</T> {SECTION_TIME_RANGE.reading} · <T>听力</T> {SECTION_TIME_RANGE.listening}）
+                </span>
+                ，<T>超时按错处理</T>
+              </span>
+            </li>
             <li className="flex items-start gap-2"><Headphones className="mt-0.5 size-4 shrink-0 text-primary" /> <T>听力题最多播放 2 次（仿真 TOEFL/IELTS 标准），杜绝反复听</T></li>
             <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" /> <T>每题作答后立即显示正确答案与讲解，让你心服口服</T></li>
             <li className="flex items-start gap-2"><GraduationCap className="mt-0.5 size-4 shrink-0 text-primary" /> <T>测试结束可一键复习全部错题，把测试变成真正的学习</T></li>

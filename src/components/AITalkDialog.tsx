@@ -455,16 +455,26 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   );
 }
 
-function IdleSplash({ lessonTitle, levelName, onStart }: { lessonTitle?: string; levelName?: string; onStart: () => void }) {
+function IdleSplash({ lessonTitle, levelName, onStart, isGuest }: { lessonTitle?: string; levelName?: string; onStart: () => void; isGuest?: boolean }) {
+  const minutes = isGuest ? 3 : 10;
   return (
     <div className="flex h-full flex-col items-center justify-center text-center">
       <div className="mb-5 grid size-24 place-items-center rounded-full bg-gradient-to-br from-primary/30 to-primary/5">
         <Phone className="size-10 text-primary" />
       </div>
-      <h3 className="text-xl font-extrabold"><T>和 Alex 来一段 10 分钟美式英语对话</T></h3>
+      <h3 className="text-xl font-extrabold">
+        {isGuest
+          ? <T>免费试用 · 和 Alex 聊 3 分钟</T>
+          : <T>和 Alex 来一段 10 分钟美式英语对话</T>}
+      </h3>
       <p className="mt-2 max-w-md text-sm text-muted-foreground">
         <T>Alex 是一位地道的加州年轻人。他只会用英语和你聊天，结束后会逐句翻译你的回答，给出地道说法和小测验。</T>
       </p>
+      {isGuest && (
+        <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-700">
+          ✨ <T>无需注册即可体验</T> · <T>登录后可享 10 分钟完整对话</T>
+        </div>
+      )}
       {lessonTitle && (
         <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary">
           <BookOpen className="size-3.5" />
@@ -480,7 +490,7 @@ function IdleSplash({ lessonTitle, levelName, onStart }: { lessonTitle?: string;
         onClick={onStart}
         className="mt-7 flex items-center gap-2 rounded-full bg-grad-title px-7 py-3.5 text-base font-bold text-white shadow-tile transition hover:opacity-95"
       >
-        <Mic className="size-5" /> <T>开始对话</T>
+        <Mic className="size-5" /> {isGuest ? <T>免费试一下</T> : <T>开始对话</T>}
       </button>
       <p className="mt-3 text-[11px] text-muted-foreground">
         <T>需要麦克风权限 · 强烈建议戴耳机</T>
@@ -489,6 +499,29 @@ function IdleSplash({ lessonTitle, levelName, onStart }: { lessonTitle?: string;
   );
 }
 
+function GuestSignupCTA() {
+  return (
+    <div className="mb-5 overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/15 via-primary/5 to-transparent p-4">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-1.5 text-sm font-bold">
+            <Sparkles className="size-4 text-primary" />
+            <T>感觉怎么样？</T>
+          </div>
+          <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+            <T>登录账号即可解锁完整 10 分钟对话、保存复盘记录、跨设备同步学习进度。</T>
+          </p>
+        </div>
+        <Link
+          to="/auth"
+          className="rounded-full bg-grad-title px-4 py-2 text-xs font-bold text-white shadow-tile transition hover:opacity-95"
+        >
+          <T>登录解锁完整版</T> →
+        </Link>
+      </div>
+    </div>
+  );
+}
 function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[]; aiSpeaking: boolean; phase: string }) {
   const endRef = useRef<HTMLDivElement>(null);
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [transcript]);

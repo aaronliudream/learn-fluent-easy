@@ -627,7 +627,7 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
     <div className="space-y-3">
       {transcript.map((t, i) => (
         <div key={i} className={`flex ${t.role === "user" ? "justify-end" : "justify-start"}`}>
-          <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-base leading-relaxed shadow-sm ${
+          <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-lg leading-relaxed shadow-sm ${
             t.role === "user"
               ? "bg-primary text-primary-foreground"
               : "bg-secondary text-foreground"
@@ -681,10 +681,10 @@ function RecapView({
     <div className="space-y-6">
       {/* Summary */}
       <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
-        <div className="mb-1 flex items-center gap-1.5 text-sm font-bold text-primary">
+        <div className="mb-1 flex items-center gap-1.5 text-base font-bold text-primary">
           <Sparkles className="size-4" /> <T>整体点评</T>
         </div>
-        <p className="text-sm leading-relaxed">{recap.summary_cn}</p>
+        <p className="text-base leading-relaxed">{recap.summary_cn}</p>
       </div>
 
       {/* Bilingual review */}
@@ -698,18 +698,18 @@ function RecapView({
           <ul className="space-y-3">
             {recap.turns.map((t, i) => (
               <li key={i} className="rounded-2xl border border-border bg-card p-4 shadow-sm">
-                <div className="rounded-xl border-l-4 border-sky-500 bg-sky-50 p-2.5 text-sm font-semibold text-sky-900">
-                  <span className="mr-1 text-[10px] font-bold uppercase tracking-wider text-sky-600">You said</span>
+                <div className="rounded-xl border-l-4 border-sky-500 bg-sky-50 p-2.5 text-base font-semibold text-sky-900">
+                  <span className="mr-1 text-[11px] font-bold uppercase tracking-wider text-sky-600">You said</span>
                   <div className="mt-1">"{t.en}"</div>
                 </div>
-                <div className="mt-2 text-sm text-muted-foreground">{t.cn}</div>
+                <div className="mt-2 text-base text-muted-foreground">{t.cn}</div>
                 {t.better_en && t.better_en.trim() && (
-                  <div className="mt-2 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-2.5 text-sm text-emerald-800">
-                    <span className="mr-1 text-[10px] font-bold uppercase tracking-wider text-emerald-600">✨ <T>更地道</T></span>
+                  <div className="mt-2 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-2.5 text-base text-emerald-800">
+                    <span className="mr-1 text-[11px] font-bold uppercase tracking-wider text-emerald-600">✨ <T>更地道</T></span>
                     <div className="mt-1 font-semibold">{t.better_en}</div>
                   </div>
                 )}
-                <div className="mt-2 text-xs leading-relaxed text-foreground/70">{t.tip_cn}</div>
+                <div className="mt-2 text-sm leading-relaxed text-foreground/70">{t.tip_cn}</div>
               </li>
             ))}
           </ul>
@@ -736,10 +736,10 @@ function RecapView({
                 <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-primary">
                   Q{i + 1} · <span className="font-mono">{q.word}</span>
                 </div>
-                <div className="mb-2 rounded-xl bg-secondary/50 p-2.5 text-sm italic text-foreground/85">
+                <div className="mb-2 rounded-xl bg-secondary/50 p-2.5 text-base italic text-foreground/85">
                   "{q.source_sentence}"
                 </div>
-                <p className="mb-3 text-sm font-semibold">{q.question_cn}</p>
+                <p className="mb-3 text-base font-semibold">{q.question_cn}</p>
                 <div className="space-y-2">
                   {q.options_cn.map((opt, j) => {
                     const chosen = picked === j;
@@ -752,7 +752,7 @@ function RecapView({
                           if (quizSubmitted) return;
                           setQuizAnswers({ ...quizAnswers, [i]: j });
                         }}
-                        className={`flex w-full items-center gap-3 rounded-xl border p-3 text-left text-sm transition ${
+                        className={`flex w-full items-center gap-3 rounded-xl border p-3 text-left text-base transition ${
                           showCorrect
                             ? "border-emerald-500 bg-emerald-50 text-emerald-700"
                             : showWrong
@@ -776,7 +776,7 @@ function RecapView({
                   })}
                 </div>
                 {quizSubmitted && (
-                  <div className={`mt-2 rounded-xl p-2.5 text-xs leading-relaxed ${
+                  <div className={`mt-2 rounded-xl p-2.5 text-sm leading-relaxed ${
                     isCorrect ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700"
                   }`}>
                     💡 {q.explanation_cn}

@@ -40,18 +40,28 @@ export function SupportButton({ variant = "inline", className = "" }: Props) {
   if (variant === "footer") {
     return (
       <>
-        <footer className={`mt-12 flex flex-col items-center gap-2 border-t border-border/50 pt-6 pb-4 text-center text-xs text-muted-foreground ${className}`}>
+        <footer className={`mt-12 pb-6 ${className}`}>
           <a
             href={isChinese ? "#" : DONATION_URL}
             target={isChinese ? undefined : "_blank"}
             rel={isChinese ? undefined : "noopener noreferrer"}
             onClick={handleClick}
-            className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 transition-colors hover:bg-muted hover:text-foreground"
+            className="group relative mx-auto flex max-w-md items-center gap-4 overflow-hidden rounded-2xl border-2 border-amber-300/60 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 px-5 py-4 shadow-md transition-all hover:scale-[1.02] hover:shadow-lg dark:border-amber-500/30 dark:from-amber-950/40 dark:via-orange-950/30 dark:to-amber-900/30"
           >
-            <Coffee className="size-3.5" />
-            {t("support.cta")}
+            <div className="absolute -right-6 -top-6 size-24 rounded-full bg-amber-300/30 blur-2xl transition-all group-hover:bg-amber-400/40" />
+            <div className="relative flex size-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-orange-500 shadow-md ring-2 ring-white/60 transition-transform group-hover:rotate-12 dark:ring-amber-200/20">
+              <Coffee className="size-6 text-white" strokeWidth={2.5} />
+            </div>
+            <div className="relative flex-1 text-left">
+              <p className="text-sm font-bold text-amber-900 dark:text-amber-100">
+                {t("support.cta")}
+              </p>
+              <p className="mt-0.5 text-xs text-amber-800/80 dark:text-amber-200/70">
+                {t("support.thanks")}
+              </p>
+            </div>
+            <span className="relative text-xl transition-transform group-hover:translate-x-1">→</span>
           </a>
-          <p className="opacity-70">{t("support.thanks")}</p>
         </footer>
         <DonateQrDialog open={qrOpen} onOpenChange={setQrOpen} />
       </>

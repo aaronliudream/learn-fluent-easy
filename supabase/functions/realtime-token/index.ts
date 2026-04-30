@@ -101,15 +101,16 @@ CONTEXT: ${lessonHook}${missionBlock}`;
         input_audio_transcription: { model: "whisper-1" },
         turn_detection: {
           type: "server_vad",
-          // Higher threshold = ignores background noise, fan, keyboard, kids, etc.
-          threshold: 0.78,
-          prefix_padding_ms: 400,
-          // Wait longer before deciding the user is done talking. Prevents
-          // Alex from cutting in during natural mid-sentence pauses.
-          silence_duration_ms: 1400,
-          // Don't auto-fire a response the instant VAD ends — we still let
-          // it auto-respond, but the longer silence above gives the user
-          // breathing room. (create_response stays default true.)
+          // Aggressive thresholds to suppress false triggers from background
+          // noise, breathing, keyboard, fans, kids, and (most importantly)
+          // Alex's own voice leaking back in via the speaker. Combined with
+          // client-side mic gating during AI playback, this stops the AI
+          // from getting interrupted when the user isn't actually talking.
+          threshold: 0.9,
+          prefix_padding_ms: 500,
+          // Wait noticeably longer before deciding the user is done talking,
+          // so natural mid-sentence pauses don't trigger Alex to cut in.
+          silence_duration_ms: 1600,
         },
         temperature: 0.8,
       }),

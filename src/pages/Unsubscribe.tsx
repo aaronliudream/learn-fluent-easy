@@ -58,7 +58,7 @@ const Unsubscribe = () => {
         {state === "ready" && (
           <>
             <MailX className="mx-auto size-12 text-primary" />
-            <h1 className="mt-4 text-xl font-bold">Unsubscribe from FluentPath emails?</h1>
+            <h1 className="mt-4 text-xl font-bold">Unsubscribe from Big Moon English emails?</h1>
             <p className="mt-2 text-sm text-muted-foreground">You will no longer receive weekly learning reports.</p>
             <Button className="mt-6 w-full" onClick={confirm} disabled={submitting}>
               {submitting ? "Unsubscribing…" : "Confirm unsubscribe"}

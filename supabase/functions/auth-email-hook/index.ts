@@ -36,7 +36,7 @@ const EMAIL_TEMPLATES: Record<string, React.ComponentType<any>> = {
 }
 
 // Configuration
-const SITE_NAME = "FluentPath"
+const SITE_NAME = "Big Moon English"
 const SENDER_DOMAIN = "notify.fluentpath.tech"
 const ROOT_DOMAIN = "fluentpath.tech"
 const FROM_DOMAIN = "fluentpath.tech" // Domain shown in From address (may be root or sender subdomain)

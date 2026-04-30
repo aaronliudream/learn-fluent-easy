@@ -23,6 +23,7 @@ type QuizQ = {
   answer_index: number;
   explanation_cn: string;
 };
+type Review = { summary_cn: string; turns: RecapTurn[] };
 type Recap = { summary_cn: string; turns: RecapTurn[]; quiz: QuizQ[] };
 
 type Props = {
@@ -99,6 +100,10 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const [recap, setRecap] = useState<Recap | null>(null);
   const [recapLoading, setRecapLoading] = useState(false);
   const [recapError, setRecapError] = useState<string | null>(null);
+  // Quiz arrives a few seconds after the review so it gets its own
+  // loading flag — the review can render immediately while the quiz spins.
+  const [quizLoading, setQuizLoading] = useState(false);
+  const [quizError, setQuizError] = useState<string | null>(null);
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [provider, setProvider] = useState<AIProvider | null>(null);
@@ -146,6 +151,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       setRecap(null);
       setRecapLoading(false);
       setRecapError(null);
+      setQuizLoading(false);
+      setQuizError(null);
       setQuizAnswers({});
       setQuizSubmitted(false);
       userTurnByItemId.current.clear();
@@ -162,20 +169,51 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     }
     setPhase("recap");
     setRecapLoading(true);
+    setQuizLoading(true);
     setRecapError(null);
-    try {
-      const { data, error } = await supabase.functions.invoke("chat-recap", {
-        body: { transcript: turns, lessonTitle },
-      });
-      if (error) throw error;
-      if (data?.error) throw new Error(data.error);
-      setRecap(data.recap as Recap);
-    } catch (e: any) {
-      console.error("recap failed", e);
-      setRecapError(e?.message || "复盘生成失败");
-    } finally {
-      setRecapLoading(false);
-    }
+    setQuizError(null);
+
+    // Fire BOTH calls in parallel. The review (translations + tips) is
+    // small and comes back in ~3-6s — render it immediately so the user
+    // can start reading. The quiz takes longer (~10-20s) and lands later;
+    // by the time the user finishes reading the review, the quiz is ready.
+    const reviewPromise = supabase.functions
+      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "review" } })
+      .then(({ data, error }) => {
+        if (error) throw error;
+        if (data?.error) throw new Error(data.error);
+        const review = data.recap as Review;
+        setRecap((prev) => ({
+          summary_cn: review.summary_cn,
+          turns: review.turns,
+          quiz: prev?.quiz ?? [],
+        }));
+      })
+      .catch((e: any) => {
+        console.error("review failed", e);
+        setRecapError(e?.message || "复盘生成失败");
+      })
+      .finally(() => setRecapLoading(false));
+
+    const quizPromise = supabase.functions
+      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "quiz" } })
+      .then(({ data, error }) => {
+        if (error) throw error;
+        if (data?.error) throw new Error(data.error);
+        const quiz = (data.recap?.quiz ?? []) as QuizQ[];
+        setRecap((prev) => ({
+          summary_cn: prev?.summary_cn ?? "",
+          turns: prev?.turns ?? [],
+          quiz,
+        }));
+      })
+      .catch((e: any) => {
+        console.error("quiz failed", e);
+        setQuizError(e?.message || "测试题生成失败");
+      })
+      .finally(() => setQuizLoading(false));
+
+    await Promise.allSettled([reviewPromise, quizPromise]);
   }, [lessonTitle]);
 
   const endCall = useCallback(async () => {

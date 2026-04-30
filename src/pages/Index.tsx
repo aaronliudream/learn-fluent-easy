@@ -198,10 +198,14 @@ const Index = () => {
           </div>
           <div className="flex-1 min-w-0">
             <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-80">
-              <T>I want to learn</T>
+              <T>Choose your language</T>
             </div>
             <div className="mt-0.5 text-lg font-extrabold leading-tight md:text-xl">
-              {currentTarget.native}
+              {currentTarget.value === "en" ? (
+                <T>I want to learn English</T>
+              ) : (
+                <T>I want to learn Chinese</T>
+              )}
             </div>
           </div>
           <DropdownMenu>

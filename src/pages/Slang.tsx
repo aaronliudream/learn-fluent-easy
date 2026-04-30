@@ -656,7 +656,7 @@ const Slang = () => {
                         className="group flex items-center gap-2 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
                         aria-label={tt("朗读")}
                       >
-                        <h3 className="text-2xl font-extrabold md:text-xl">{it.phrase}</h3>
+                        <span className="text-2xl font-extrabold md:text-xl">{it.phrase}</span>
                         <span className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
                           <Volume2 className="size-3.5" />
                         </span>
@@ -826,7 +826,7 @@ const Slang = () => {
                     className="group flex items-center gap-2 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
                     aria-label={tt("朗读")}
                   >
-                    <h3 className="text-3xl font-extrabold">{q.prompt}</h3>
+                    <span className="text-3xl font-extrabold">{q.prompt}</span>
                     <span className="grid size-8 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
                       <Volume2 className="size-4" />
                     </span>
@@ -874,7 +874,7 @@ const Slang = () => {
                         className="group flex items-center gap-2 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
                         aria-label={tt("朗读")}
                       >
-                        <h3 className="text-2xl font-extrabold">{q.idiom.phrase}</h3>
+                        <span className="text-2xl font-extrabold">{q.idiom.phrase}</span>
                         <span className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
                           <Volume2 className="size-3.5" />
                         </span>

@@ -426,7 +426,7 @@ const Slang = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <h3 className="text-xl font-extrabold md:text-lg">{it.phrase}</h3>
+                      <h3 className="text-2xl font-extrabold md:text-xl">{it.phrase}</h3>
                       <button
                         onClick={() => speak(it.phrase)}
                         className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
@@ -445,14 +445,14 @@ const Slang = () => {
                         </span>
                       )}
                     </div>
-                    <div className="mt-0.5 text-base font-semibold text-primary md:text-sm">
+                    <div className="mt-0.5 text-lg font-semibold text-primary md:text-base">
                       <T>{it.meaning_cn}</T>
                     </div>
-                    <div className="mt-1 text-sm text-muted-foreground md:text-xs">{it.meaning_en}</div>
+                    <div className="mt-1 text-base text-muted-foreground md:text-sm">{it.meaning_en}</div>
 
-                    <div className="mt-3 rounded-xl border border-border bg-secondary/30 p-3 text-base md:text-sm">
+                    <div className="mt-3 rounded-xl border border-border bg-secondary/30 p-3 text-lg md:text-base">
                       <div className="flex items-start gap-2">
-                        <span className="mt-1 text-[11px] font-bold text-muted-foreground md:text-[10px]">EN</span>
+                        <span className="mt-1 text-xs font-bold text-muted-foreground">EN</span>
                         <span className="flex-1">{it.example}</span>
                         <button
                           onClick={() => speak(it.example)}
@@ -463,7 +463,7 @@ const Slang = () => {
                         </button>
                       </div>
                       <div className="mt-1.5 flex items-start gap-2">
-                        <span className="mt-1 text-[11px] font-bold text-muted-foreground md:text-[10px]"><T>释义</T></span>
+                        <span className="mt-1 text-xs font-bold text-muted-foreground"><T>释义</T></span>
                         <span className="flex-1 text-muted-foreground"><T>{it.example_cn}</T></span>
                       </div>
                     </div>
@@ -574,10 +574,10 @@ const Slang = () => {
         return (
           <>
             <div className="mb-4 flex items-center justify-between">
-              <div className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-muted-foreground">
+              <div className="rounded-full bg-secondary px-3 py-1 text-sm font-semibold text-muted-foreground">
                 {qIdx + 1} / {questions.length}
               </div>
-              <div className="text-xs font-semibold text-muted-foreground">{KIND_LABEL[q.kind]}</div>
+              <div className="text-sm font-semibold text-muted-foreground">{KIND_LABEL[q.kind]}</div>
             </div>
 
             <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
@@ -591,7 +591,7 @@ const Slang = () => {
               <div className="mb-5">
                 {q.kind === "en2cn" && (
                   <div className="flex items-center gap-2">
-                    <h3 className="text-2xl font-extrabold">{q.prompt}</h3>
+                    <h3 className="text-3xl font-extrabold">{q.prompt}</h3>
                     <button
                       onClick={() => speak(q.prompt)}
                       className="grid size-8 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
@@ -601,22 +601,22 @@ const Slang = () => {
                   </div>
                 )}
                 {q.kind === "cn2en" && (
-                  <h3 className="text-2xl font-extrabold"><T>{q.prompt}</T></h3>
+                  <h3 className="text-3xl font-extrabold"><T>{q.prompt}</T></h3>
                 )}
                 {q.kind === "fill" && (
                   <div>
-                    <p className="text-base font-semibold leading-relaxed">{q.prompt}</p>
+                    <p className="text-xl font-semibold leading-relaxed">{q.prompt}</p>
                     {q.context && (
-                      <p className="mt-1.5 text-xs text-muted-foreground"><T>{q.context}</T></p>
+                      <p className="mt-1.5 text-sm text-muted-foreground"><T>{q.context}</T></p>
                     )}
                   </div>
                 )}
 
                 {q.kind === "en2cn" && q.context && (
-                  <p className="mt-2 text-sm italic text-muted-foreground">"{q.context}"</p>
+                  <p className="mt-2 text-base italic text-muted-foreground">"{q.context}"</p>
                 )}
                 {q.kind === "cn2en" && q.context && (
-                  <p className="mt-2 text-sm text-muted-foreground"><T>{q.context}</T></p>
+                  <p className="mt-2 text-base text-muted-foreground"><T>{q.context}</T></p>
                 )}
               </div>
 
@@ -633,7 +633,7 @@ const Slang = () => {
                         setPicks({ ...picks, [q.id]: oi });
                         setRevealed(true);
                       }}
-                      className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${
+                      className={`flex items-center justify-between rounded-xl border px-4 py-3.5 text-left text-base transition ${
                         correctOpt
                           ? "border-emerald-500 bg-emerald-500/10 text-foreground"
                           : wrongOpt
@@ -654,7 +654,7 @@ const Slang = () => {
 
               {/* Reveal explanation */}
               {revealed && (
-                <div className={`mt-5 rounded-2xl p-4 text-sm ${isCorrect ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300" : "bg-rose-500/10 text-rose-700 dark:text-rose-300"}`}>
+                <div className={`mt-5 rounded-2xl p-4 text-base ${isCorrect ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300" : "bg-rose-500/10 text-rose-700 dark:text-rose-300"}`}>
                   <div className="font-bold">
                     {isCorrect ? <>✅ <T>答对了！</T></> : <>❌ <T>答错了</T></>}
                   </div>
@@ -662,8 +662,8 @@ const Slang = () => {
                     <div>
                       <strong>{q.idiom.phrase}</strong> — <T>{q.idiom.meaning_cn}</T>
                     </div>
-                    <div className="text-xs italic">"{q.idiom.example}"</div>
-                    <div className="text-xs text-muted-foreground"><T>{q.idiom.example_cn}</T></div>
+                    <div className="text-sm italic">"{q.idiom.example}"</div>
+                    <div className="text-sm text-muted-foreground"><T>{q.idiom.example_cn}</T></div>
                   </div>
                 </div>
               )}

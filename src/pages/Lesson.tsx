@@ -224,6 +224,9 @@ const Lesson = () => {
   };
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [activeReadingIdx, setActiveReadingIdx] = useState<number>(-1);
+  // Auto-scroll the currently-spoken paragraph into the center of the screen
+  // so the user never has to manually scroll while audio is playing.
+  const registerReadingRef = useScrollToActive(activeReadingIdx >= 0 ? activeReadingIdx : null);
 
   const playReadingAll = () => {
     if (!content) return;

@@ -44,6 +44,7 @@ import {
   initSectionState,
   updateSectionState,
   sectionConfidenceHalfWidth,
+  computeQuestionTimeLimit,
 } from "@/lib/placement";
 
 const TEST_MINUTES = 25;
@@ -53,19 +54,20 @@ const QS_MAX_PER_SECTION = 7; // hard cap per section
 const STOP_CONFIDENCE = 0.45; // half-width threshold (in CEFR levels)
 const TOTAL_QS = SECTIONS.length * QS_MAX_PER_SECTION; // 28 (upper bound)
 
-// Per-question time limits (seconds). Calibrated to professional standards
-// (TOEFL/IELTS pacing): listening needs slightly longer to read options
-// after audio; reading is the longest because the user must parse a passage.
-const PER_QUESTION_SECONDS: Record<Section, number> = {
-  vocab: 25,
-  grammar: 35,
-  reading: 75,
-  listening: 45,
-};
 // Listening audio may be replayed at most this many times per question.
 // Real proficiency tests (TOEFL/IELTS) typically allow ONE play. We grant
 // 2 to account for short clips + first-time UI familiarity, but never more.
 const LISTENING_MAX_PLAYS = 2;
+
+// Section-level lower bounds shown in the intro UI (the actual time for any
+// individual question is computed dynamically from its content length and
+// CEFR tier — see computeQuestionTimeLimit in lib/placement.ts).
+const SECTION_TIME_RANGE: Record<Section, string> = {
+  vocab: "12–60s",
+  grammar: "15–70s",
+  reading: "30–180s",
+  listening: "20–120s",
+};
 
 const NEEDS_NATIVE_TRANSLATION_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
@@ -188,7 +190,9 @@ const Placement = () => {
     const q = questions[idx];
     if (!q) return;
     if (revealed[q.id]) return; // already revealed → no countdown
-    setQuestionSecondsLeft(PER_QUESTION_SECONDS[q.section]);
+    setQuestionSecondsLeft(
+      computeQuestionTimeLimit(q, { listeningMaxPlays: LISTENING_MAX_PLAYS }),
+    );
     const t = setInterval(() => {
       setQuestionSecondsLeft((s) => {
         if (s <= 1) {
@@ -505,7 +509,16 @@ const Placement = () => {
           <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>独立题库 · 覆盖 A1 → C2 全六级，全部题目唯一不重复</T></li>
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>自适应难度：答对升一级，答错降一级，快速锁定真实水平</T></li>
-            <li className="flex items-start gap-2"><Clock className="mt-0.5 size-4 shrink-0 text-primary" /> <T>每题独立倒计时（词汇 25s · 语法 35s · 阅读 75s · 听力 45s），超时按错处理</T></li>
+            <li className="flex items-start gap-2">
+              <Clock className="mt-0.5 size-4 shrink-0 text-primary" />
+              <span>
+                <T>每题独立倒计时，依据题目长度与 CEFR 难度动态计算</T>
+                <span className="text-foreground/70">
+                  （<T>词汇</T> {SECTION_TIME_RANGE.vocab} · <T>语法</T> {SECTION_TIME_RANGE.grammar} · <T>阅读</T> {SECTION_TIME_RANGE.reading} · <T>听力</T> {SECTION_TIME_RANGE.listening}）
+                </span>
+                ，<T>超时按错处理</T>
+              </span>
+            </li>
             <li className="flex items-start gap-2"><Headphones className="mt-0.5 size-4 shrink-0 text-primary" /> <T>听力题最多播放 2 次（仿真 TOEFL/IELTS 标准），杜绝反复听</T></li>
             <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" /> <T>每题作答后立即显示正确答案与讲解，让你心服口服</T></li>
             <li className="flex items-start gap-2"><GraduationCap className="mt-0.5 size-4 shrink-0 text-primary" /> <T>测试结束可一键复习全部错题，把测试变成真正的学习</T></li>
@@ -536,7 +549,7 @@ const Placement = () => {
     const isCorrect = isRevealed && picked === q.answer;
     const playsUsed = listeningPlays[q.id] ?? 0;
     const playsLeft = LISTENING_MAX_PLAYS - playsUsed;
-    const perQTotal = PER_QUESTION_SECONDS[q.section];
+    const perQTotal = computeQuestionTimeLimit(q, { listeningMaxPlays: LISTENING_MAX_PLAYS });
     const perQLow = !isRevealed && questionSecondsLeft <= 10;
     // Predict whether answering this one finishes the test:
     // every other section is already done AND this section will be done after the answer.

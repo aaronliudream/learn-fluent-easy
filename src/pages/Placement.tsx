@@ -147,6 +147,17 @@ const Placement = () => {
 
   const finish = () => {
     if (finishedRef.current) return;
+    // Make sure the FINAL answered question's CAT update is applied,
+    // since `isLast` short-circuits goNext().
+    const lastQ = questions[idx];
+    if (lastQ && picks[lastQ.id] !== undefined) {
+      const lastState = sectionStateRef.current[lastQ.section];
+      const correct = picks[lastQ.id] === lastQ.answer;
+      // Only update if not already counted (history length < answered)
+      if (lastState.history.length < lastState.answered + 1) {
+        sectionStateRef.current[lastQ.section] = updateSectionState(lastState, lastQ.level, correct);
+      }
+    }
     finishedRef.current = true;
     const r = scoreTest(questions, picks);
     setResult(r);

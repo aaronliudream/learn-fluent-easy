@@ -47,7 +47,7 @@ const mkOpenLessons = (titles: string[], doneCount = 0): Lesson[] =>
     status: i < doneCount ? "done" : "current",
   }));
 
-export const LEVELS: Level[] = [
+const LEVELS_RAW: Level[] = [
   {
     id: 1,
     name: "LEVEL 1",

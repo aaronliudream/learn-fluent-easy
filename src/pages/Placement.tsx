@@ -30,12 +30,18 @@ import {
   type PlacementResult,
   type Section,
   type SectionPool,
+  type SectionState,
+  initSectionState,
+  updateSectionState,
+  sectionConfidenceHalfWidth,
 } from "@/lib/placement";
 
 const TEST_MINUTES = 25;
 const SECTIONS: Section[] = ["vocab", "grammar", "reading", "listening"];
-const QS_PER_SECTION = 6; // adaptive: shorter but more accurate
-const TOTAL_QS = SECTIONS.length * QS_PER_SECTION; // 24
+const QS_MIN_PER_SECTION = 4; // never stop a section before this many items
+const QS_MAX_PER_SECTION = 7; // hard cap per section
+const STOP_CONFIDENCE = 0.45; // half-width threshold (in CEFR levels)
+const TOTAL_QS = SECTIONS.length * QS_MAX_PER_SECTION; // 28 (upper bound)
 const NEEDS_NATIVE_TRANSLATION_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
   vocab: { cn: "Vocabulary", icon: BookOpen, color: "bg-pink-500/15 text-pink-500" },
@@ -63,10 +69,18 @@ const Placement = () => {
   const [idx, setIdx] = useState(0);
   const poolRef = useRef<SectionPool | null>(null);
   const usedRef = useRef<Set<string>>(new Set());
-  // Track current adaptive level per section. Start everyone at L2 (A2).
-  const sectionLevelRef = useRef<Record<Section, number>>({
-    vocab: 2, grammar: 2, reading: 2, listening: 2,
+  // Per-section adaptive state (CAT). Stable refs avoid stale closures during
+  // the rapid setState chain after each answer.
+  const sectionStateRef = useRef<Record<Section, SectionState>>({
+    vocab: initSectionState(),
+    grammar: initSectionState(),
+    reading: initSectionState(),
+    listening: initSectionState(),
   });
+  const sectionDoneRef = useRef<Record<Section, boolean>>({
+    vocab: false, grammar: false, reading: false, listening: false,
+  });
+  const startedAtRef = useRef<number>(Date.now());
   const [secondsLeft, setSecondsLeft] = useState(TEST_MINUTES * 60);
   const [result, setResult] = useState<PlacementResult | null>(null);
   const finishedRef = useRef(false);
@@ -75,7 +89,14 @@ const Placement = () => {
     const pool = buildSectionPool();
     poolRef.current = pool;
     usedRef.current = new Set();
-    sectionLevelRef.current = { vocab: 2, grammar: 2, reading: 2, listening: 2 };
+    sectionStateRef.current = {
+      vocab: initSectionState(),
+      grammar: initSectionState(),
+      reading: initSectionState(),
+      listening: initSectionState(),
+    };
+    sectionDoneRef.current = { vocab: false, grammar: false, reading: false, listening: false };
+    startedAtRef.current = Date.now();
 
     // Pre-seed: pick the FIRST question of each section at starting level so the
     // header shows progress smoothly. Subsequent questions are picked just-in-time
@@ -144,51 +165,64 @@ const Placement = () => {
     const pick = picks[cur.id];
     const correct = pick === cur.answer;
 
-    // Adapt section level: ±1 step, clamped to 1..6 (A1..C2)
+    // 1) Update CAT state for the section we just answered in
     const sec = cur.section;
-    const prev = sectionLevelRef.current[sec];
-    const nextLv = Math.max(1, Math.min(6, prev + (correct ? 1 : -1)));
-    sectionLevelRef.current[sec] = nextLv;
+    const newState = updateSectionState(sectionStateRef.current[sec], cur.level, correct);
+    sectionStateRef.current[sec] = newState;
 
-    // Count answered per section
-    const answeredInSec = questions.filter(
-      (q) => q.section === sec && picks[q.id] !== undefined,
-    ).length;
+    // 2) Decide if this section is "done" (enough info or hit cap)
+    const halfWidth = sectionConfidenceHalfWidth(newState);
+    const sectionDone =
+      newState.answered >= QS_MAX_PER_SECTION ||
+      (newState.answered >= QS_MIN_PER_SECTION && halfWidth <= STOP_CONFIDENCE);
+    sectionDoneRef.current[sec] = sectionDone;
 
-    // Decide which section the NEXT question belongs to.
-    // Round-robin through sections so all four advance evenly.
-    const sectionCounts: Record<Section, number> = { vocab: 0, grammar: 0, reading: 0, listening: 0 };
-    for (const q of questions) sectionCounts[q.section]++;
-    // Include the just-answered question's section having "answeredInSec" answers.
-    // We want next section to be the one with the FEWEST scheduled questions
-    // that hasn't reached QS_PER_SECTION.
-    let nextSec: Section | null = null;
-    let minCount = Infinity;
-    for (const s of SECTIONS) {
-      if (sectionCounts[s] >= QS_PER_SECTION) continue;
-      if (sectionCounts[s] < minCount) {
-        minCount = sectionCounts[s];
-        nextSec = s;
-      }
-    }
-
-    if (!nextSec) {
-      // All sections full → finish
+    // 3) All sections done → finish
+    if (SECTIONS.every((s) => sectionDoneRef.current[s])) {
       finish();
       return;
     }
 
-    const desiredLv = sectionLevelRef.current[nextSec];
+    // 4) Pick the next section: round-robin across sections that aren't done,
+    //    preferring the one with the fewest answered items so progress feels even.
+    const remaining = SECTIONS.filter((s) => !sectionDoneRef.current[s]);
+    let nextSec: Section = remaining[0];
+    let minAnswered = Infinity;
+    for (const s of remaining) {
+      const a = sectionStateRef.current[s].answered;
+      if (a < minAnswered) {
+        minAnswered = a;
+        nextSec = s;
+      }
+    }
+
+    const desiredLv = sectionStateRef.current[nextSec].level;
     const nextQ = pickAdaptive(pool, nextSec, desiredLv, usedRef.current);
     if (!nextQ) {
+      // Bank exhausted at every level for this section → mark done & try again
+      sectionDoneRef.current[nextSec] = true;
+      if (SECTIONS.every((s) => sectionDoneRef.current[s])) {
+        finish();
+        return;
+      }
+      // Try the remaining sections one more time
+      for (const s of SECTIONS) {
+        if (sectionDoneRef.current[s]) continue;
+        const fallback = pickAdaptive(pool, s, sectionStateRef.current[s].level, usedRef.current);
+        if (fallback) {
+          usedRef.current.add(fallback.id);
+          setQuestions((qs) => [...qs, fallback]);
+          setIdx(idx + 1);
+          return;
+        }
+        sectionDoneRef.current[s] = true;
+      }
       finish();
       return;
     }
     usedRef.current.add(nextQ.id);
     setQuestions((qs) => [...qs, nextQ]);
     setIdx(idx + 1);
-    // Suppress unused warning in dev builds
-    void answeredInSec;
   };
 
   // ---------------- INTRO ----------------

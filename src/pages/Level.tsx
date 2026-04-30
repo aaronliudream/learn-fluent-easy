@@ -3,6 +3,7 @@ import { Award, BookOpen, Briefcase, Check, Cloud, Flame, Lock, Map, ShoppingBag
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { T, useT } from "@/i18n/T";
+import { useUnlockLimit } from "@/hooks/useAuthUser";
 
 const ICONS = { star: Star, book: BookOpen, map: Map, shop: ShoppingBag, cloud: Cloud, briefcase: Briefcase } as const;
 
@@ -10,6 +11,7 @@ const Level = () => {
   const t = useT();
   const { levelId } = useParams();
   const level = LEVELS.find((l) => l.id === Number(levelId));
+  const unlockLimit = useUnlockLimit();
   if (!level) return <div className="p-10">{t("级别不存在")}</div>;
 
   if (level.locked) {
@@ -39,6 +41,18 @@ const Level = () => {
   const allLessons = level.units.flatMap((u) => u.lessons);
   const done = allLessons.filter((l) => l.status === "done").length;
   const pct = allLessons.length ? Math.round((done / allLessons.length) * 100) : 0;
+
+  // Build a set of lesson keys that are unlocked under the current trial limit.
+  // The first `unlockLimit` lessons (in unit + lesson order) of the level are open;
+  // everything beyond is locked until the learner unlocks the full course.
+  const unlockedKeys = new Set<string>();
+  let count = 0;
+  for (const u of level.units) {
+    for (const l of u.lessons) {
+      if (count < unlockLimit) unlockedKeys.add(`${u.id}-${l.id}`);
+      count++;
+    }
+  }
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
@@ -127,15 +141,17 @@ const Level = () => {
 
               <div className="mt-4 flex items-center gap-0">
                 {u.lessons.map((l, idx) => {
+                  const lessonUnlocked = unlockedKeys.has(`${u.id}-${l.id}`);
+                  const effectiveStatus = lessonUnlocked && l.status === "locked" ? "current" : l.status;
                   const cls =
                     l.status === "done"
                       ? "bg-success text-success-foreground"
-                      : l.status === "current"
+                      : effectiveStatus === "current"
                         ? "bg-primary text-primary-foreground ring-2 ring-primary/30 ring-offset-2 ring-offset-card scale-110"
                         : "bg-secondary text-muted-foreground";
                   const prev = idx > 0 ? u.lessons[idx - 1] : null;
                   const connectorDone = prev && prev.status === "done";
-                  const locked = l.status === "locked";
+                  const locked = !lessonUnlocked && l.status === "locked";
                   return (
                     <div key={l.id} className="flex items-center">
                       {idx > 0 && (

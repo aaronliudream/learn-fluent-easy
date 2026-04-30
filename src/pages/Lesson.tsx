@@ -1314,6 +1314,15 @@ const Lesson = () => {
           </div>
         </div>
       </div>
+
+      <AITalkDialog
+        open={talkOpen}
+        onClose={() => setTalkOpen(false)}
+        lessonTitle={lesson?.title}
+        unitTitle={findUnit(Number(levelId), Number(unitId))?.title}
+        levelName={LEVELS.find((l) => l.id === Number(levelId))?.name}
+        level={["A1","A2","B1","B2","C1","C2"][Number(levelId) - 1] || undefined}
+      />
     </main>
   );
 };

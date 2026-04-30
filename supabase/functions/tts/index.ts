@@ -13,15 +13,13 @@ const json = (body: Record<string, unknown>, status = 200) =>
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
 
-// Map our existing app voice IDs to ElevenLabs' natural voices.
-const VOICE_MAP: Record<string, string> = {
-  alloy: "JBFqnCBsd6RMkjVDRZzb",   // George — clear, warm male
-  shimmer: "EXAVITQu4vr4xnSDxMaL", // Sarah — natural female
-  nova: "FGY2WhTYpPnrIDTdsKH5",    // Laura — bright female
-  echo: "TX3LPaxmHKxFdv7VOQHJ",    // Liam — conversational male
-  onyx: "onwK4e9ZLuTAKqWW03F9",    // Daniel — deep male
-  fable: "pFZP5JQG7iQjIQuC4Bku",   // Lily — storyteller female
-};
+// OpenAI TTS voice IDs we expose. Our app already uses these names, so this
+// is a 1:1 mapping — every voice produces highly natural English speech on
+// every browser/device because the audio is synthesized server-side and
+// delivered as MP3.
+const OPENAI_VOICES = new Set([
+  "alloy", "shimmer", "nova", "echo", "onyx", "fable",
+]);
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -34,35 +32,33 @@ serve(async (req) => {
       return json({ error: "text is required" }, 400);
     }
 
-    const ELEVENLABS_API_KEY = Deno.env.get("ELEVENLABS_API_KEY");
-    if (!ELEVENLABS_API_KEY) return json({ error: "TTS provider is not configured" }, 503);
+    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+    if (!LOVABLE_API_KEY) return json({ error: "TTS provider is not configured" }, 503);
 
-    const selectedVoiceId = VOICE_MAP[voiceId] || VOICE_MAP.alloy;
-    const safeSpeed = Math.min(1.15, Math.max(0.82, Number(speed) || 0.95));
-    const safeText = String(text).slice(0, 4800);
+    const requestedVoice = typeof voiceId === "string" ? voiceId : "alloy";
+    const selectedVoice = OPENAI_VOICES.has(requestedVoice) ? requestedVoice : "alloy";
+    // OpenAI TTS supports speed 0.25 – 4.0; we clamp to a friendly learning range.
+    const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
+    const safeText = String(text).slice(0, 4000);
 
-    const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${selectedVoiceId}?output_format=mp3_44100_128`, {
+    const response = await fetch("https://ai.gateway.lovable.dev/v1/audio/speech", {
       method: "POST",
       headers: {
-        "xi-api-key": ELEVENLABS_API_KEY,
+        Authorization: `Bearer ${LOVABLE_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        text: safeText,
-        model_id: "eleven_multilingual_v2",
-        voice_settings: {
-          stability: 0.42,
-          similarity_boost: 0.78,
-          style: 0.35,
-          use_speaker_boost: true,
-          speed: safeSpeed,
-        },
+        model: "openai/tts-1-hd",
+        voice: selectedVoice,
+        input: safeText,
+        speed: safeSpeed,
+        response_format: "mp3",
       }),
     });
 
     if (!response.ok) {
       const err = await response.text();
-      console.error("ElevenLabs TTS error:", response.status, err);
+      console.error("OpenAI TTS via Lovable AI error:", response.status, err);
       if (response.status === 429) {
         return json({ error: "Rate limit exceeded, please try again later.", retryable: true }, 429);
       }

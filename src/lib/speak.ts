@@ -211,3 +211,28 @@ export const speak = (text: string): Promise<void> => {
     await speakBrowserFallback(trimmed, voiceId, speed, myToken);
   })();
 };
+
+// Speak a list of sentences one-by-one with a small pause between them.
+// This sounds far more natural than concatenating an entire paragraph and
+// sending it to TTS as one long string (which OpenAI tends to read very
+// fast and without breath pauses).
+export const speakSequence = async (
+  sentences: string[],
+  opts: { gapMs?: number } = {},
+): Promise<void> => {
+  const gapMs = opts.gapMs ?? 350;
+  const list = sentences.map((s) => (s || "").trim()).filter(Boolean);
+  if (list.length === 0) return;
+  // Capture token at start; if a new speak() happens, abort the loop.
+  const startToken = ++speakToken;
+  for (let i = 0; i < list.length; i++) {
+    if (startToken !== speakToken) return;
+    // Re-use speak() but it will bump the token; so we manage our own token here.
+    speakToken = startToken; // re-assert ownership before each call
+    await speak(list[i]);
+    if (startToken !== speakToken) return;
+    if (i < list.length - 1) {
+      await new Promise((r) => setTimeout(r, gapMs));
+    }
+  }
+};

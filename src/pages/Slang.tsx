@@ -650,13 +650,16 @@ const Slang = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <h3 className="text-2xl font-extrabold md:text-xl">{it.phrase}</h3>
                       <button
+                        type="button"
                         onClick={() => speak(it.phrase)}
-                        className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
+                        className="group flex items-center gap-2 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
                         aria-label={tt("朗读")}
                       >
-                        <Volume2 className="size-3.5" />
+                        <h3 className="text-2xl font-extrabold md:text-xl">{it.phrase}</h3>
+                        <span className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
+                          <Volume2 className="size-3.5" />
+                        </span>
                       </button>
                       {it.id < 0 && (
                         <span className="inline-flex items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-bold text-orange-600">
@@ -675,17 +678,18 @@ const Slang = () => {
                     <div className="mt-1 text-base text-muted-foreground md:text-sm">{it.meaning_en}</div>
 
                     <div className="mt-3 rounded-xl border border-border bg-secondary/30 p-3 text-lg md:text-base">
-                      <div className="flex items-start gap-2">
+                      <button
+                        type="button"
+                        onClick={() => speak(it.example)}
+                        className="group flex w-full items-start gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
+                        aria-label={tt("朗读例句")}
+                      >
                         <span className="mt-1 text-xs font-bold text-muted-foreground">EN</span>
                         <span className="flex-1">{it.example}</span>
-                        <button
-                          onClick={() => speak(it.example)}
-                          className="grid size-6 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:text-primary"
-                          aria-label={tt("朗读例句")}
-                        >
+                        <span className="mt-1 grid size-6 shrink-0 place-items-center rounded-full text-muted-foreground transition group-hover:text-primary">
                           <Volume2 className="size-3" />
-                        </button>
-                      </div>
+                        </span>
+                      </button>
                       <div className="mt-1.5 flex items-start gap-2">
                         <span className="mt-1 text-xs font-bold text-muted-foreground"><T>释义</T></span>
                         <span className="flex-1 text-muted-foreground"><T>{it.example_cn}</T></span>

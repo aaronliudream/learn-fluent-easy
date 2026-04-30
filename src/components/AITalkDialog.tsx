@@ -14,6 +14,13 @@ import { recordAITalk } from "@/lib/guestProgress";
 
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
 
+export type MissionPhrase = { phrase: string; meaning_cn: string; example_en?: string };
+export type Mission = {
+  goal_cn: string;
+  must_use: MissionPhrase[];
+  success_criteria_cn: string;
+};
+
 type RecapTurn = { en: string; cn: string; tip_cn: string; better_en: string };
 type QuizQ = {
   word: string;
@@ -34,6 +41,7 @@ type Props = {
   levelName?: string;
   level?: string; // CEFR like "A1"
   isGuest?: boolean; // if true, use shorter trial session + show signup CTA
+  mission?: Mission | null;
 };
 
 const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap

@@ -230,9 +230,10 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       dynTimerRef.current = null;
       flushDynQueue(lang);
     }, 250);
-    // Never flash Chinese source text for non-Chinese users; the translated
-    // string will appear as soon as the batch resolves.
-    return "";
+    // Show source text while the translation is loading; it will swap to the
+    // translated string as soon as the batch resolves. Returning "" here would
+    // leave the UI blank, which is worse than a brief Chinese flash.
+    return text;
   }, [lang, flushDynQueue]);
 
   const value = useMemo<I18nContextValue>(() => ({

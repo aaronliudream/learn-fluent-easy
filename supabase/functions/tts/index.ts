@@ -27,7 +27,7 @@ serve(async (req) => {
   }
 
   try {
-    const { text, voiceId, speed } = await req.json();
+    const { text, voiceId, speed, language } = await req.json();
     if (!text) {
       return json({ error: "text is required" }, 400);
     }
@@ -36,7 +36,13 @@ serve(async (req) => {
     if (!OPENAI_API_KEY) return json({ error: "TTS provider is not configured" }, 503);
 
     const requestedVoice = typeof voiceId === "string" ? voiceId : "alloy";
-    const selectedVoice = OPENAI_VOICES.has(requestedVoice) ? requestedVoice : "alloy";
+    // For Chinese, "nova" and "shimmer" sound the most natural in our
+    // testing; force one of them when the caller hints zh, regardless of
+    // the user's English voice preference.
+    let selectedVoice = OPENAI_VOICES.has(requestedVoice) ? requestedVoice : "alloy";
+    if (language === "zh") {
+      selectedVoice = "nova";
+    }
     // OpenAI TTS supports speed 0.25 – 4.0; we clamp to a friendly learning range.
     const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
     const safeText = String(text).slice(0, 4000);

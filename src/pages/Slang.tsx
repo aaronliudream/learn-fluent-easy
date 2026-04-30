@@ -10,6 +10,9 @@ import {
   XCircle,
   Zap,
   X,
+  Loader2,
+  Lightbulb,
+  PenLine,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -25,21 +28,35 @@ import {
   sortByMastery,
   pickQuizPool,
   bumpSlangRotation,
+  pickDailyPlan,
+  getSlangProgress,
+  getSlangLevel,
 } from "@/lib/slangMastery";
 
 type Mode = "browse" | "quiz";
 // quiz direction: en2cn = show English idiom, choose Chinese meaning;
 // cn2en = show Chinese meaning, choose English idiom;
 // fill  = show example with blank, choose missing idiom.
-type QuizKind = "en2cn" | "cn2en" | "fill";
+// scenario = read a Chinese real-life scene, pick the right English slang.
+// compose  = write a sentence using the slang in a given scenario (AI graded).
+type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose";
+
+export type ComposeGrade = {
+  usedPhrase: boolean;
+  correct: boolean;
+  naturalness: number;
+  tip: string;
+  improved: string;
+  verdict: "great" | "ok" | "needs_work";
+};
 
 type QuizQuestion = {
   id: number;
   kind: QuizKind;
   prompt: string;       // main question text
   context?: string;     // example sentence (CN translation when shown)
-  options: string[];
-  answer: number;       // index into options
+  options: string[];    // empty for "compose"
+  answer: number;       // index into options; -1 for "compose"
   idiom: Idiom;         // the right idiom (for review card)
 };
 
@@ -106,9 +123,19 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
   // Spaced-repetition pick: prioritise struggling > unseen > due-review,
   // and skip mastered items still in cooldown.
   const picked = pickQuizPool(pool, Math.min(len, pool.length));
-  const kinds: QuizKind[] = ["en2cn", "cn2en", "fill"];
   return picked.map((idiom, i) => {
-    const kind = kinds[i % kinds.length];
+    // Pick a drill kind matched to the user's current level for THIS phrase.
+    //   L1 → en2cn (recognise meaning)
+    //   L2 → cn2en or fill (recall + listening)
+    //   L3 → scenario (situational matching)
+    //   L4+ → compose (active production, AI-graded)
+    const lvl = getSlangLevel(idiom.id);
+    let kind: QuizKind;
+    if (lvl <= 1) kind = "en2cn";
+    else if (lvl === 2) kind = i % 2 === 0 ? "cn2en" : "fill";
+    else if (lvl === 3) kind = "scenario";
+    else kind = "compose";
+
     const distractorPool = sourceForDistractors.filter((x) => x.id !== idiom.id);
     const distractors = shuffle(distractorPool).slice(0, 3);
 
@@ -136,16 +163,41 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
         idiom,
       };
     }
-    // fill
-    const blanked = blankOutPhrase(idiom.example, idiom.phrase);
-    const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+    if (kind === "fill") {
+      const blanked = blankOutPhrase(idiom.example, idiom.phrase);
+      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+      return {
+        id: idiom.id,
+        kind,
+        prompt: blanked,
+        context: idiom.example_cn,
+        options: opts,
+        answer: opts.indexOf(idiom.phrase),
+        idiom,
+      };
+    }
+    if (kind === "scenario") {
+      // Prompt is filled in lazily by the slang-scenario edge fn; show the
+      // canonical Chinese example as a fallback so something is visible.
+      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+      return {
+        id: idiom.id,
+        kind,
+        prompt: "",
+        context: idiom.example_cn,
+        options: opts,
+        answer: opts.indexOf(idiom.phrase),
+        idiom,
+      };
+    }
+    // compose — no MC options
     return {
       id: idiom.id,
       kind,
-      prompt: blanked,
-      context: idiom.example_cn,
-      options: opts,
-      answer: opts.indexOf(idiom.phrase),
+      prompt: idiom.example_cn,
+      context: idiom.meaning_cn,
+      options: [],
+      answer: -1,
       idiom,
     };
   });
@@ -361,10 +413,13 @@ const Slang = () => {
     if (!q) return;
     if (recordedRef.current.has(q.id)) return;
     recordedRef.current.add(q.id);
-    const correct = picks[q.id] === q.answer;
+    const correct =
+      q.kind === "compose"
+        ? composeGrade[q.id]?.verdict !== "needs_work"
+        : picks[q.id] === q.answer;
     recordSlangResult(q.idiom.id, correct);
     setMasteryVersion((v) => v + 1);
-  }, [revealed, qIdx, questions, picks]);
+  }, [revealed, qIdx, questions, picks, composeGrade]);
 
   // After revealing the answer, always read aloud the correct English example
   // sentence — "ear training" reinforces audio memory regardless of correctness.
@@ -396,7 +451,11 @@ const Slang = () => {
     setDockedInvite(false);
   }, [mode]);
 
-  const correctCount = questions.filter((q) => picks[q.id] === q.answer).length;
+  const correctCount = questions.filter((q) =>
+    q.kind === "compose"
+      ? composeGrade[q.id]?.verdict !== undefined && composeGrade[q.id].verdict !== "needs_work"
+      : picks[q.id] === q.answer,
+  ).length;
 
   // For mixed quiz results, "correct" means: either the user picked the
   // right MC option, or (for compose questions) the AI graded their
@@ -547,6 +606,42 @@ const Slang = () => {
       {/* ───────────── BROWSE MODE ───────────── */}
       {mode === "browse" && (
         <>
+          {/* ───── Today's 5-min practice ───── */}
+          {dailyTotal > 0 && (
+            <section className="mb-5 overflow-hidden rounded-2xl border border-primary/30 bg-grad-title p-5 text-white shadow-card">
+              <div className="flex items-start gap-3">
+                <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-white/15 backdrop-blur">
+                  <Sparkles className="size-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-xs font-semibold uppercase tracking-wide opacity-80">
+                    <T>今日 5 分钟练习</T>
+                  </div>
+                  <div className="mt-0.5 text-lg font-extrabold leading-tight">
+                    {dailyPlan.fresh.length > 0 && <><T>新词</T> {dailyPlan.fresh.length} · </>}
+                    {dailyPlan.review.length > 0 && <><T>复习</T> {dailyPlan.review.length} · </>}
+                    {dailyPlan.climbing.length > 0 && <><T>进阶</T> {dailyPlan.climbing.length}</>}
+                  </div>
+                  <div className="mt-1 text-xs opacity-90">
+                    <T>每天一小步：从认识 → 听懂 → 场景 → 自己造句 → 真正会用</T>
+                  </div>
+                  <div className="mt-3 flex items-center gap-2 text-[11px] opacity-90">
+                    <span><T>累计已掌握</T> {overallProgress.mastered}/{overallProgress.total}</span>
+                  </div>
+                  <div className="mt-3">
+                    <Button
+                      onClick={startDailyPlanQuiz}
+                      className="bg-white text-primary hover:bg-white/90"
+                      size="sm"
+                    >
+                      <Target className="mr-2 size-4" /> <T>开始今日练习</T>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+
           <div key={`reorder-${masteryVersion}`} className="space-y-3">
             {pageItems.map((it, i) => (
               <article
@@ -699,11 +794,13 @@ const Slang = () => {
       {mode === "quiz" && questions.length > 0 && qIdx < questions.length && (() => {
         const q = questions[qIdx];
         const picked = picks[q.id];
-        const isCorrect = picked === q.answer;
+        const isCorrect = isQuestionCorrect(q);
         const KIND_LABEL: Record<QuizKind, string> = {
           en2cn: tt("英 → 中：选出正确含义"),
           cn2en: tt("中 → 英：选出对应俚语"),
           fill: tt("填空：选出适合的俚语"),
+          scenario: tt("情境匹配：哪个俚语最合适？"),
+          compose: tt("自己造句：用上这个俚语"),
         };
         return (
           <>
@@ -745,6 +842,49 @@ const Slang = () => {
                     )}
                   </div>
                 )}
+                {q.kind === "scenario" && (
+                  <div>
+                    <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-amber-500/15 px-2.5 py-1 text-[11px] font-bold text-amber-700 dark:text-amber-400">
+                      <Lightbulb className="size-3" /> <T>真实场景</T>
+                    </div>
+                    {scenarioBusy[q.id] && !scenarioText[q.id] ? (
+                      <p className="flex items-center gap-2 text-base text-muted-foreground">
+                        <Loader2 className="size-4 animate-spin" /> <T>AI 正在生成场景…</T>
+                      </p>
+                    ) : (
+                      <p className="text-xl font-semibold leading-relaxed">
+                        <T>{scenarioText[q.id] || q.context || ""}</T>
+                      </p>
+                    )}
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      <T>下面哪个俚语最适合用在这个场景里？</T>
+                    </p>
+                  </div>
+                )}
+                {q.kind === "compose" && (
+                  <div>
+                    <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-violet-500/15 px-2.5 py-1 text-[11px] font-bold text-violet-700 dark:text-violet-400">
+                      <PenLine className="size-3" /> <T>用一下：自己造句</T>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-2xl font-extrabold">{q.idiom.phrase}</h3>
+                      <button
+                        onClick={() => speak(q.idiom.phrase)}
+                        className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
+                      >
+                        <Volume2 className="size-3.5" />
+                      </button>
+                      <span className="text-sm text-muted-foreground"><T>{q.idiom.meaning_cn}</T></span>
+                    </div>
+                    <p className="mt-3 text-base">
+                      <span className="font-semibold"><T>场景：</T></span>
+                      <span className="text-muted-foreground"><T>{q.prompt}</T></span>
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      <T>试着用一句英文用上这个俚语，AI 会给你反馈。</T>
+                    </p>
+                  </div>
+                )}
 
                 {q.kind === "en2cn" && q.context && (
                   <p className="mt-2 text-base italic text-muted-foreground">"{q.context}"</p>
@@ -754,6 +894,7 @@ const Slang = () => {
                 )}
               </div>
 
+              {q.kind !== "compose" && (
               <div className="grid gap-2 md:grid-cols-2">
                 {q.options.map((opt, oi) => {
                   const active = picked === oi;
@@ -785,9 +926,67 @@ const Slang = () => {
                   );
                 })}
               </div>
+              )}
+
+              {q.kind === "compose" && (
+                <div>
+                  <textarea
+                    value={composeText[q.id] ?? ""}
+                    onChange={(e) => setComposeText({ ...composeText, [q.id]: e.target.value })}
+                    disabled={revealed || composeBusy}
+                    placeholder={tt(`例如：用上 "${q.idiom.phrase}" 写一句话…`)}
+                    rows={3}
+                    className="w-full resize-none rounded-xl border border-border bg-secondary/30 p-3 text-base outline-none transition focus:border-primary"
+                  />
+                  {!revealed && (
+                    <div className="mt-3 flex justify-end">
+                      <Button onClick={() => submitCompose(q)} disabled={composeBusy}>
+                        {composeBusy ? (
+                          <><Loader2 className="mr-2 size-4 animate-spin" /> <T>评分中…</T></>
+                        ) : (
+                          <><Sparkles className="mr-2 size-4" /> <T>让 AI 评一下</T></>
+                        )}
+                      </Button>
+                    </div>
+                  )}
+                  {revealed && composeGrade[q.id] && (() => {
+                    const g = composeGrade[q.id];
+                    const tone = g.verdict === "great"
+                      ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+                      : g.verdict === "ok"
+                        ? "bg-amber-500/10 text-amber-700 dark:text-amber-300"
+                        : "bg-rose-500/10 text-rose-700 dark:text-rose-300";
+                    const label = g.verdict === "great" ? tt("地道！") : g.verdict === "ok" ? tt("可以再润色一下") : tt("再改改");
+                    return (
+                      <div className={`mt-4 rounded-2xl p-4 text-base ${tone}`}>
+                        <div className="flex items-center gap-2 font-bold">
+                          <span>{"⭐".repeat(Math.max(1, Math.min(5, g.naturalness)))}</span>
+                          <span>· {label}</span>
+                        </div>
+                        <div className="mt-2 text-sm text-foreground/90"><T>{g.tip}</T></div>
+                        {g.improved && (
+                          <div className="mt-3 rounded-xl bg-card p-3">
+                            <div className="text-xs font-bold text-muted-foreground"><T>更地道的版本</T></div>
+                            <div className="mt-1 flex items-start gap-2">
+                              <span className="flex-1 italic">"{g.improved}"</span>
+                              <button
+                                onClick={() => speak(g.improved)}
+                                className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
+                                aria-label={tt("朗读")}
+                              >
+                                <Volume2 className="size-3.5" />
+                              </button>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })()}
+                </div>
+              )}
 
               {/* Reveal explanation */}
-              {revealed && (
+              {revealed && q.kind !== "compose" && (
                 <div className={`mt-5 rounded-2xl p-4 text-base ${isCorrect ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300" : "bg-rose-500/10 text-rose-700 dark:text-rose-300"}`}>
                   <div className="font-bold">
                     {isCorrect ? <>✅ <T>答对了！</T></> : <>❌ <T>答错了</T></>}
@@ -837,7 +1036,7 @@ const Slang = () => {
 
           <div className="mt-6 grid gap-2">
             {questions.map((q) => {
-              const ok = picks[q.id] === q.answer;
+              const ok = isQuestionCorrect(q);
               return (
                 <div
                   key={q.id}

@@ -79,7 +79,9 @@ const speakBrowser = async (text: string, voiceId: string, speed: number, token:
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   const voices = await waitForVoices();
   const voice = pickVoice(voices, voiceId);
-  const rate = Math.min(1.08, Math.max(0.72, Number(speed) || 0.95));
+  // Browser TTS tends to sound rushed; clamp to a slower, more natural range.
+  const raw = Number(speed) || 0.85;
+  const rate = Math.min(1.0, Math.max(0.65, raw * 0.9));
   for (const chunk of splitForSpeech(text)) {
     if (token !== speakToken) return;
     await new Promise<void>((resolve) => {

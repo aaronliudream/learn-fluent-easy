@@ -528,6 +528,12 @@ const Placement = () => {
     const picked = picks[q.id];
     const answered = Object.keys(picks).length;
     const lowTime = secondsLeft <= 60;
+    const isRevealed = !!revealed[q.id];
+    const isCorrect = isRevealed && picked === q.answer;
+    const playsUsed = listeningPlays[q.id] ?? 0;
+    const playsLeft = LISTENING_MAX_PLAYS - playsUsed;
+    const perQTotal = PER_QUESTION_SECONDS[q.section];
+    const perQLow = !isRevealed && questionSecondsLeft <= 10;
     // Predict whether answering this one finishes the test:
     // every other section is already done AND this section will be done after the answer.
     const stateNow = sectionStateRef.current[q.section];
@@ -579,23 +585,67 @@ const Placement = () => {
           </div>
         </div>
 
-        {/* Progress */}
-        <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+        {/* Overall progress */}
+        <div className="mb-3 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
           <div
             className="h-full bg-grad-title transition-all"
             style={{ width: `${Math.min(100, ((idx + 1) / Math.max(estTotal, idx + 1)) * 100)}%` }}
           />
         </div>
 
+        {/* Per-question timer bar */}
+        <div className="mb-5 flex items-center gap-3">
+          <div className="h-2 flex-1 overflow-hidden rounded-full bg-secondary">
+            <div
+              className={`h-full transition-all duration-1000 ease-linear ${
+                isRevealed
+                  ? "bg-muted-foreground/40"
+                  : perQLow
+                    ? "bg-rose-500"
+                    : "bg-emerald-500"
+              }`}
+              style={{
+                width: `${Math.max(0, (questionSecondsLeft / perQTotal) * 100)}%`,
+              }}
+            />
+          </div>
+          <div
+            className={`min-w-[64px] text-right font-mono text-xs font-bold ${
+              isRevealed ? "text-muted-foreground" : perQLow ? "text-rose-600" : "text-foreground"
+            }`}
+          >
+            {isRevealed ? <T>已作答</T> : `${questionSecondsLeft}s / ${perQTotal}s`}
+          </div>
+        </div>
+
         {/* Question card */}
         <section className="rounded-3xl bg-card p-6 shadow-card md:p-8">
           {q.section === "listening" && q.context && (
-            <button
-              onClick={() => speak(q.context!)}
-              className="mb-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-grad-title py-3 font-semibold text-white shadow-tile"
-            >
-              <Volume2 className="size-5" /> <T>播放音频</T>
-            </button>
+            <div className="mb-5">
+              <button
+                onClick={() => {
+                  if (playsLeft <= 0 || isRevealed) return;
+                  speak(q.context!);
+                  setListeningPlays((p) => ({ ...p, [q.id]: (p[q.id] ?? 0) + 1 }));
+                }}
+                disabled={playsLeft <= 0 || isRevealed}
+                className={`flex w-full items-center justify-center gap-2 rounded-2xl py-3 font-semibold text-white shadow-tile transition ${
+                  playsLeft <= 0 || isRevealed
+                    ? "cursor-not-allowed bg-muted-foreground/40"
+                    : "bg-grad-title hover:opacity-90"
+                }`}
+              >
+                <Volume2 className="size-5" />
+                {playsLeft <= 0 ? <T>已用完播放次数</T> : <T>播放音频</T>}
+              </button>
+              <div className="mt-2 flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground">
+                <Info className="size-3" />
+                <T>仿照真实考试 · 最多可播放</T> {LISTENING_MAX_PLAYS} <T>次</T>
+                <span className="ml-1 font-semibold">
+                  ({playsUsed}/{LISTENING_MAX_PLAYS})
+                </span>
+              </div>
+            </div>
           )}
           {q.section === "reading" && q.context && (
             <div className="mb-5 rounded-2xl border border-border bg-secondary/30 p-4 text-sm leading-relaxed">
@@ -613,40 +663,102 @@ const Placement = () => {
           <div className="grid gap-2 md:grid-cols-2">
             {q.options.map((opt, oi) => {
               const active = picked === oi;
+              const isAnswerOpt = oi === q.answer;
+              let cls = "border-border bg-card hover:border-primary/40";
+              if (isRevealed) {
+                if (isAnswerOpt) {
+                  cls = "border-emerald-500 bg-emerald-500/10 text-foreground";
+                } else if (active) {
+                  cls = "border-rose-500 bg-rose-500/10 text-foreground";
+                } else {
+                  cls = "border-border bg-card opacity-60";
+                }
+              } else if (active) {
+                cls = "border-primary bg-primary/10 text-foreground";
+              }
               return (
                 <button
                   key={oi}
-                  onClick={() => setPicks({ ...picks, [q.id]: oi })}
-                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${
-                    active
-                      ? "border-primary bg-primary/10 text-foreground"
-                      : "border-border bg-card hover:border-primary/40"
-                  }`}
+                  onClick={() => {
+                    if (isRevealed) return;
+                    setPicks({ ...picks, [q.id]: oi });
+                  }}
+                  disabled={isRevealed}
+                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${cls}`}
                 >
                   <span>{nativeText(opt)}</span>
-                  {active && <CheckCircle2 className="size-4 text-primary" />}
+                  {isRevealed && isAnswerOpt && <CheckCircle2 className="size-4 text-emerald-600" />}
+                  {isRevealed && !isAnswerOpt && active && <XCircle className="size-4 text-rose-600" />}
+                  {!isRevealed && active && <CheckCircle2 className="size-4 text-primary" />}
                 </button>
               );
             })}
           </div>
+
+          {/* Instant feedback */}
+          {isRevealed && (
+            <div
+              className={`mt-5 rounded-2xl border p-4 text-sm ${
+                isCorrect
+                  ? "border-emerald-500/40 bg-emerald-500/10"
+                  : "border-rose-500/40 bg-rose-500/10"
+              }`}
+            >
+              <div className="flex items-center gap-2 font-bold">
+                {isCorrect ? (
+                  <>
+                    <CheckCircle2 className="size-5 text-emerald-600" />
+                    <span className="text-emerald-700"><T>回答正确</T></span>
+                  </>
+                ) : (
+                  <>
+                    <XCircle className="size-5 text-rose-600" />
+                    <span className="text-rose-700">
+                      {picked === undefined ? <T>未作答 · 时间到</T> : <T>回答错误</T>}
+                    </span>
+                  </>
+                )}
+              </div>
+              {!isCorrect && (
+                <div className="mt-2 text-xs text-muted-foreground">
+                  <T>正确答案</T>：<span className="font-semibold text-foreground">{nativeText(q.options[q.answer])}</span>
+                </div>
+              )}
+              {q.explain && (
+                <div className="mt-2 text-xs leading-relaxed text-foreground/80">
+                  💡 <T>{q.explain}</T>
+                </div>
+              )}
+            </div>
+          )}
         </section>
 
         {/* Nav */}
         <div className="mt-6 flex items-center justify-between gap-3">
           <span className="text-xs text-muted-foreground">
-            {picked === undefined ? <T>请选择一个答案</T> : <T>已记录答案，点击下方按钮继续</T>}
+            {isRevealed
+              ? <T>查看解析后点击继续</T>
+              : picked === undefined
+                ? <T>请选择一个答案</T>
+                : <T>选定后点击「确认答案」查看解析</T>}
           </span>
           <span className="text-sm text-muted-foreground"><T>已答</T> {answered} / ~{Math.max(estTotal, answered)}</span>
-          {isLast ? (
+          {!isRevealed ? (
+            <Button
+              onClick={() => setRevealed((r) => ({ ...r, [q.id]: true }))}
+              disabled={picked === undefined}
+            >
+              <T>确认答案</T>
+            </Button>
+          ) : isLast ? (
             <Button
               onClick={finish}
-              disabled={picked === undefined}
               className="bg-emerald-600 hover:bg-emerald-600/90"
             >
               <T>提交测试</T>
             </Button>
           ) : (
-            <Button onClick={goNext} disabled={picked === undefined}>
+            <Button onClick={goNext}>
               <T>下一题</T> →
             </Button>
           )}

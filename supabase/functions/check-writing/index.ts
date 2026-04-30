@@ -11,6 +11,7 @@ interface ReqBody {
   sample?: string;
   text: string;
   lessonTitle?: string;
+  targetLanguage?: string;
 }
 
 Deno.serve(async (req) => {
@@ -19,7 +20,7 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { prompt, promptCn, sample, text, lessonTitle }: ReqBody = await req.json();
+    const { prompt, promptCn, sample, text, lessonTitle, targetLanguage }: ReqBody = await req.json();
     if (!text || !text.trim()) {
       return new Response(JSON.stringify({ error: "Empty text" }), {
         status: 400,
@@ -35,9 +36,10 @@ Deno.serve(async (req) => {
       });
     }
 
-    const system = `你是一位耐心、专业的英语老师，擅长帮助中文母语的英语学习者。\n请用中文给出反馈，语气友好鼓励。严格按照下面的 JSON Schema 输出结果，不要输出额外文字。`;
+    const feedbackLanguage = targetLanguage || "Chinese";
+    const system = `You are a patient, professional English teacher. Give feedback in ${feedbackLanguage}, with a friendly and encouraging tone. Keep original/corrected/improved English text in English. Strictly return only the JSON Schema result, with no extra text.`;
 
-    const userMsg = `本课主题: ${lessonTitle ?? "(未提供)"}\n写作题目 (英文): ${prompt}\n写作题目 (中文): ${promptCn ?? ""}\n参考范文: ${sample ?? "(无)"}\n\n学生提交的英文写作:\n"""\n${text}\n"""\n\n请完成以下任务:\n1. 给出 0-100 的总体评分 (score)\n2. 用一句话给出整体评价 (overall, 中文)\n3. 列出具体错误 (mistakes), 每条包含: original (原句/原短语), corrected (修改后), explanation (中文讲解为什么错以及语法点)\n4. 给出 2-3 条改进建议 (suggestions, 中文)\n5. 给出一份润色后的完整版本 (improved, 英文)\n如果学生写得没有明显错误, mistakes 可以是空数组。`;
+    const userMsg = `Lesson topic: ${lessonTitle ?? "(not provided)"}\nWriting prompt (English): ${prompt}\nPrompt helper text: ${promptCn ?? ""}\nReference sample: ${sample ?? "(none)"}\n\nStudent English writing:\n"""\n${text}\n"""\n\nTasks:\n1. Give an overall score from 0-100 (score).\n2. Give one overall comment in ${feedbackLanguage} (overall).\n3. List concrete mistakes (mistakes). Each item includes original and corrected in English, and explanation in ${feedbackLanguage}.\n4. Give 2-3 suggestions in ${feedbackLanguage}.\n5. Provide a polished full version in English (improved).\nIf there are no obvious mistakes, mistakes can be an empty array.`;
 
     const tool = {
       type: "function",

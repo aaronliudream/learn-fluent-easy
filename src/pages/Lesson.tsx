@@ -34,6 +34,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { T, useT } from "@/i18n/T";
+import { useI18n } from "@/i18n/I18nProvider";
 import { findNextLesson, isMastered, setLastVisited, setMastered } from "@/lib/mastery";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
@@ -110,6 +111,7 @@ const SectionHeader = ({
 
 const Lesson = () => {
   const tt = useT();
+  const { lang } = useI18n();
   const nativeText = (text: string) => NATIVE_HELPER_RE.test(text) ? tt(text) : text;
   const { levelId, unitId, lessonId } = useParams();
   const lesson = findLesson(Number(levelId), Number(unitId), Number(lessonId));
@@ -222,6 +224,7 @@ const Lesson = () => {
           sample: content.output.sample,
           text: output,
           lessonTitle: lesson.title,
+          targetLanguage: lang,
         },
       });
       if (error) throw error;

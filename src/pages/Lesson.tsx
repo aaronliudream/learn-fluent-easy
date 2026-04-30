@@ -221,6 +221,15 @@ const Lesson = () => {
     improved: string;
   };
   const [feedback, setFeedback] = useState<Feedback | null>(null);
+  const [activeReadingIdx, setActiveReadingIdx] = useState<number>(-1);
+
+  const playReadingAll = () => {
+    if (!content) return;
+    speakSequence(content.reading.map((r) => r.en), {
+      gapMs: 80,
+      onIndex: (i) => setActiveReadingIdx(i),
+    });
+  };
 
   const checkWriting = async () => {
     if (!output.trim()) {
@@ -570,7 +579,7 @@ const Lesson = () => {
       <div className="mb-4 flex justify-start">
         <button
           type="button"
-          onClick={() => speakSequence(content.reading.map((r) => r.en), { gapMs: 150 })}
+          onClick={playReadingAll}
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/20"
         >
           <Volume2 className="size-4" />

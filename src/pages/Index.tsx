@@ -14,6 +14,7 @@ import { WORK_CATEGORIES } from "@/data/workplace";
 import { useI18n } from "@/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { SupportButton } from "@/components/SupportButton";
+import { CommunityInvite } from "@/components/CommunityInvite";
 
 const Index = () => {
   const { t } = useI18n();
@@ -159,6 +160,8 @@ const Index = () => {
       </div>
 
       <PageHeader title={t("index.title")} subtitle={t("index.subtitle")} />
+
+      <CommunityInvite />
 
       {/* Optional: guest progress save nudge */}
       {!user && hasProgress && (

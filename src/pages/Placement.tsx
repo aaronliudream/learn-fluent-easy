@@ -625,6 +625,44 @@ const Placement = () => {
           </div>
         </div>
 
+        {/* Previous vs current comparison */}
+        {previousResult && (() => {
+          const prevAb = Number(previousResult.ability) || 0;
+          const diff = +(result.ability - prevAb).toFixed(1);
+          const upgraded = result.recommendedLevel > previousResult.recommended_level;
+          const downgraded = result.recommendedLevel < previousResult.recommended_level;
+          const sameDay = false;
+          const Trend = diff > 0 ? ArrowUpRight : diff < 0 ? ArrowDownRight : Minus;
+          const trendCls = diff > 0 ? "text-emerald-600 bg-emerald-500/15" :
+                            diff < 0 ? "text-rose-600 bg-rose-500/15" :
+                                       "text-muted-foreground bg-secondary";
+          const dateStr = new Date(previousResult.created_at).toLocaleDateString();
+          void sameDay;
+          return (
+            <section className="mt-5 rounded-2xl border border-border bg-card p-4 shadow-card">
+              <div className="flex items-center gap-3">
+                <div className={`grid size-10 place-items-center rounded-xl ${trendCls}`}>
+                  <Trend className="size-5" />
+                </div>
+                <div className="flex-1">
+                  <div className="text-xs text-muted-foreground"><T>对比上次测评</T> · {dateStr}</div>
+                  <div className="text-sm font-bold">
+                    {previousResult.cefr} <span className="text-muted-foreground">→</span> {result.cefr}
+                    <span className="ml-2 text-xs font-semibold">
+                      {diff > 0 ? `+${diff}` : diff} <T>能力值</T>
+                    </span>
+                  </div>
+                  <div className="text-[11px] text-muted-foreground">
+                    {upgraded && <span className="text-emerald-600"><T>推荐起步等级提升</T> ↑</span>}
+                    {downgraded && <span className="text-rose-600"><T>推荐起步等级回落</T> ↓</span>}
+                    {!upgraded && !downgraded && <span><T>推荐起步等级持平</T></span>}
+                  </div>
+                </div>
+              </div>
+            </section>
+          );
+        })()}
+
         {/* Section breakdown */}
         <section className="mt-6 rounded-3xl bg-card p-6 shadow-card md:p-8">
           <h3 className="text-lg font-bold"><T>分模块表现</T></h3>

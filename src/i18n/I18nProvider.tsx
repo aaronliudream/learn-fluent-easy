@@ -216,7 +216,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       const next = { ...dynCacheRef.current };
       toSend.forEach((src, i) => {
         const tr = translations[String(i)];
-        if (tr && !hasWrongScript(l, tr)) next[src] = stripHtml(tr);
+        if (isUsableTranslation(l, src, tr)) next[src] = stripHtml(tr);
       });
       dynCacheRef.current = next;
       saveDynCache(l, next);
@@ -233,7 +233,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (lang === "zh") return text;
     if (lang === "en" && !CJK_TEXT_RE.test(text)) return text;
     const cached = dynCacheRef.current[text];
-    if (cached && !hasWrongScript(lang, cached)) return cached;
+    if (isUsableTranslation(lang, text, cached)) return cached;
     // Queue and debounce
     dynQueueRef.current.add(text);
     if (dynTimerRef.current) window.clearTimeout(dynTimerRef.current);

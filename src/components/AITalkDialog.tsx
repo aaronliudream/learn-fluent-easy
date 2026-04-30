@@ -720,9 +720,9 @@ function RecapView({
       <section>
         <h3 className="mb-3 flex items-center gap-2 text-base font-bold">
           <ListChecks className="size-4 text-primary" /> <T>词汇短语测试</T>
-          {quizSubmitted && (
+          {Object.keys(quizAnswers).length > 0 && (
             <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-bold text-emerald-700">
-              <Trophy className="size-3.5" /> {quizScore.correct} / {quizScore.total}
+              <Trophy className="size-3.5" /> {quizScore.correct} / {recap.quiz.length}
             </span>
           )}
         </h3>
@@ -730,6 +730,7 @@ function RecapView({
         <ol className="space-y-4">
           {recap.quiz.map((q, i) => {
             const picked = quizAnswers[i];
+            const answered = picked !== undefined;
             const isCorrect = picked === q.answer_index;
             return (
               <li key={i} className="rounded-2xl border border-border bg-card p-4 shadow-sm">
@@ -743,42 +744,49 @@ function RecapView({
                 <div className="space-y-2">
                   {q.options_cn.map((opt, j) => {
                     const chosen = picked === j;
-                    const showCorrect = quizSubmitted && j === q.answer_index;
-                    const showWrong = quizSubmitted && chosen && j !== q.answer_index;
+                    // Reveal answer as soon as this question is answered
+                    const showCorrect = answered && j === q.answer_index;
+                    const showWrong = answered && chosen && j !== q.answer_index;
                     return (
                       <button
                         key={j}
                         onClick={() => {
-                          if (quizSubmitted) return;
+                          if (answered) return; // lock after first pick
                           setQuizAnswers({ ...quizAnswers, [i]: j });
                         }}
-                        className={`flex w-full items-center gap-3 rounded-xl border p-3 text-left text-base transition ${
+                        disabled={answered}
+                        className={`flex w-full items-center gap-3 rounded-xl border-2 p-3 text-left text-base font-medium transition ${
                           showCorrect
-                            ? "border-emerald-500 bg-emerald-50 text-emerald-700"
+                            ? "border-emerald-600 bg-emerald-600 text-white shadow-md"
                             : showWrong
-                              ? "border-rose-500 bg-rose-50 text-rose-700"
+                              ? "border-rose-600 bg-rose-600 text-white shadow-md"
                               : chosen
                                 ? "border-primary bg-primary/10"
                                 : "border-border hover:border-primary/50 hover:bg-secondary/50"
                         }`}
                       >
-                        <span className={`grid size-6 shrink-0 place-items-center rounded-full border text-xs font-bold ${
-                          showCorrect ? "border-emerald-500 bg-emerald-500 text-white"
-                          : showWrong ? "border-rose-500 bg-rose-500 text-white"
+                        <span className={`grid size-7 shrink-0 place-items-center rounded-full border-2 text-sm font-bold ${
+                          showCorrect ? "border-white bg-white text-emerald-700"
+                          : showWrong ? "border-white bg-white text-rose-700"
                           : chosen ? "border-primary bg-primary text-primary-foreground"
                           : "border-border"
                         }`}>
-                          {showCorrect ? <Check className="size-3.5" /> : String.fromCharCode(65 + j)}
+                          {showCorrect ? <Check className="size-4" /> : showWrong ? "✕" : String.fromCharCode(65 + j)}
                         </span>
                         <span className="flex-1">{opt}</span>
                       </button>
                     );
                   })}
                 </div>
-                {quizSubmitted && (
-                  <div className={`mt-2 rounded-xl p-2.5 text-sm leading-relaxed ${
-                    isCorrect ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700"
+                {answered && (
+                  <div className={`mt-3 rounded-xl border-l-4 p-3 text-sm leading-relaxed ${
+                    isCorrect
+                      ? "border-emerald-600 bg-emerald-50 text-emerald-800"
+                      : "border-rose-600 bg-rose-50 text-rose-800"
                   }`}>
+                    <div className="mb-1 font-bold">
+                      {isCorrect ? <T>✓ 回答正确</T> : <T>✕ 回答错误</T>}
+                    </div>
                     💡 {q.explanation_cn}
                   </div>
                 )}
@@ -787,20 +795,7 @@ function RecapView({
           })}
         </ol>
 
-        {!quizSubmitted ? (
-          <button
-            onClick={() => {
-              if (Object.keys(quizAnswers).length < recap.quiz.length) {
-                toast.error("请先回答所有题目");
-                return;
-              }
-              setQuizSubmitted(true);
-            }}
-            className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-grad-title py-3 font-bold text-white shadow-tile"
-          >
-            <Check className="size-5" /> <T>提交答案</T>
-          </button>
-        ) : (
+        {Object.keys(quizAnswers).length > 0 && (
           <button
             onClick={() => { setQuizSubmitted(false); setQuizAnswers({}); }}
             className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl border border-primary bg-primary/10 py-3 font-semibold text-primary"

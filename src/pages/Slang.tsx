@@ -329,6 +329,16 @@ const Slang = () => {
   const [qIdx, setQIdx] = useState(0);
   const [picks, setPicks] = useState<Record<number, number>>({});
   const [revealed, setRevealed] = useState(false);
+  // Compose (L4) state — keyed by question id so navigating back/forward
+  // doesn't lose the learner's typed sentence.
+  const [composeText, setComposeText] = useState<Record<number, string>>({});
+  const [composeGrade, setComposeGrade] = useState<Record<number, ComposeGrade>>({});
+  const [composeBusy, setComposeBusy] = useState(false);
+  // Scenario (L3) text — generated on demand by `slang-scenario` edge fn,
+  // cached per phrase id in this session.
+  const scenarioCacheRef = useRef<Record<number, string>>({});
+  const [scenarioText, setScenarioText] = useState<Record<number, string>>({});
+  const [scenarioBusy, setScenarioBusy] = useState<Record<number, boolean>>({});
   // Tracks which question ids we've already counted toward mastery to avoid double-counting.
   const recordedRef = useRef<Set<number>>(new Set());
   // Ref to the action bar so we can scroll it into view after the user picks

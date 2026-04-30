@@ -253,11 +253,15 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (isUsableTranslation(lang, text, cached)) return cached;
     // Queue and debounce
     dynQueueRef.current.add(text);
-    if (dynTimerRef.current) window.clearTimeout(dynTimerRef.current);
-    dynTimerRef.current = window.setTimeout(() => {
-      dynTimerRef.current = null;
-      flushDynQueue(lang);
-    }, 250);
+    // Use a non-resetting timer so heavy renders can't postpone the flush
+    // forever. The first call schedules a flush ~120ms out; subsequent calls
+    // simply add to the same batch.
+    if (dynTimerRef.current === null) {
+      dynTimerRef.current = window.setTimeout(() => {
+        dynTimerRef.current = null;
+        flushDynQueue(lang);
+      }, 120);
+    }
     // Show source text while the translation is loading; it will swap to the
     // translated string as soon as the batch resolves. Returning "" here would
     // leave the UI blank, which is worse than a brief Chinese flash.

@@ -68,7 +68,11 @@ const WorkplacePlay = () => {
           return (
             <article
               key={i}
-              className={`flex gap-3 rounded-2xl border p-4 transition ${
+              role="button"
+              tabIndex={0}
+              onClick={() => playOne(i)}
+              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); playOne(i); } }}
+              className={`flex cursor-pointer gap-3 rounded-2xl border p-4 transition hover:border-primary/40 hover:bg-primary/5 active:scale-[0.998] ${
                 isActive ? "border-primary/40 bg-primary/5" : "border-border bg-card"
               } ${isYou ? "ml-6" : "mr-6"}`}
             >
@@ -79,17 +83,16 @@ const WorkplacePlay = () => {
                 <div className={`text-lg leading-relaxed transition md:text-xl ${isActive ? "font-bold text-primary" : "font-medium"}`}>{renderRich(l.en)}</div>
                 <div className={`mt-1.5 text-base transition md:text-lg ${isActive ? "font-semibold text-primary" : "text-muted-foreground"}`}><T>{stripTags(l.cn)}</T></div>
               </div>
-              <button
-                onClick={() => playOne(i)}
-                aria-label={t("播放")}
+              <span
+                aria-hidden
                 className={`grid size-9 shrink-0 place-items-center rounded-full transition ${
                   isActive
                     ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-foreground/70 hover:bg-primary/15 hover:text-primary"
+                    : "bg-secondary text-foreground/70"
                 }`}
               >
                 <Volume2 className="size-4" />
-              </button>
+              </span>
             </article>
           );
         })}

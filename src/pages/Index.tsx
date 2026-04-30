@@ -12,6 +12,7 @@ import { IDIOMS } from "@/data/idioms";
 import { SCENE_DIALOGUES } from "@/data/scenes";
 import { WORK_CATEGORIES } from "@/data/workplace";
 import { useI18n } from "@/i18n/I18nProvider";
+import { T } from "@/i18n/T";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { SupportButton } from "@/components/SupportButton";
 import { TargetLanguagePicker } from "@/components/TargetLanguagePicker";
@@ -176,7 +177,7 @@ const Index = () => {
         </div>
         <div className="flex-1 min-w-0">
           <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary/80">
-            {t("我想学")}
+            <T>我想学</T>
           </div>
           <div className="mt-0.5 text-base font-extrabold leading-tight md:text-lg">
             {currentTarget.flag} {currentTarget.native}
@@ -184,7 +185,7 @@ const Index = () => {
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:opacity-90">
-            {t("Change")} <ChevronDown className="size-4" />
+            <T>Change</T> <ChevronDown className="size-4" />
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56">
             {TARGET_LANGUAGES.map((l) => (

@@ -6,6 +6,7 @@ import { SCENE_CATEGORIES, SCENE_DIALOGUES } from "@/data/scenes";
 import { speak, stopSpeaking } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
 import { renderRich, stripTags } from "@/lib/richText";
+import { recordVisit } from "@/lib/guestProgress";
 
 const ScenesPlay = () => {
   const t = useT();
@@ -16,11 +17,12 @@ const ScenesPlay = () => {
   const cancelledRef = useRef(false);
 
   useEffect(() => {
+    if (dlg) recordVisit(`scene:${dlg.id}`);
     return () => {
       cancelledRef.current = true;
       stopSpeaking();
     };
-  }, []);
+  }, [dlg]);
 
   if (!cat || !dlg) return <Navigate to="/scenes" replace />;
 

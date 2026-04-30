@@ -1000,7 +1000,7 @@ const Slang = () => {
 
           <div className="mt-6 grid gap-2">
             {questions.map((q) => {
-              const ok = picks[q.id] === q.answer;
+              const ok = isQuestionCorrect(q);
               return (
                 <div
                   key={q.id}

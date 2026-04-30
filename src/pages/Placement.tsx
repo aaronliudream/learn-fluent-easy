@@ -21,6 +21,8 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   Minus,
+  XCircle,
+  GraduationCap,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -50,6 +52,21 @@ const QS_MIN_PER_SECTION = 4; // never stop a section before this many items
 const QS_MAX_PER_SECTION = 7; // hard cap per section
 const STOP_CONFIDENCE = 0.45; // half-width threshold (in CEFR levels)
 const TOTAL_QS = SECTIONS.length * QS_MAX_PER_SECTION; // 28 (upper bound)
+
+// Per-question time limits (seconds). Calibrated to professional standards
+// (TOEFL/IELTS pacing): listening needs slightly longer to read options
+// after audio; reading is the longest because the user must parse a passage.
+const PER_QUESTION_SECONDS: Record<Section, number> = {
+  vocab: 25,
+  grammar: 35,
+  reading: 75,
+  listening: 45,
+};
+// Listening audio may be replayed at most this many times per question.
+// Real proficiency tests (TOEFL/IELTS) typically allow ONE play. We grant
+// 2 to account for short clips + first-time UI familiarity, but never more.
+const LISTENING_MAX_PLAYS = 2;
+
 const NEEDS_NATIVE_TRANSLATION_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
   vocab: { cn: "Vocabulary", icon: BookOpen, color: "bg-pink-500/15 text-pink-500" },
@@ -59,6 +76,7 @@ const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ cl
 };
 
 type Stage = "intro" | "test" | "result";
+type ReviewStage = "ask" | "review" | "skip";
 
 const fmtTime = (sec: number) => {
   const m = Math.floor(sec / 60).toString().padStart(2, "0");
@@ -75,6 +93,17 @@ const Placement = () => {
   const [questions, setQuestions] = useState<PlacementQuestion[]>([]);
   const [picks, setPicks] = useState<Record<string, number>>({});
   const [idx, setIdx] = useState(0);
+  // True once the user has confirmed their answer (or time ran out). The
+  // current question is then locked, the correct answer + explanation are
+  // shown, and only "Next" is actionable.
+  const [revealed, setRevealed] = useState<Record<string, boolean>>({});
+  // Per-question seconds remaining. Resets when a new question is shown.
+  const [questionSecondsLeft, setQuestionSecondsLeft] = useState(0);
+  // How many times the user has played the listening audio for the current Q.
+  const [listeningPlays, setListeningPlays] = useState<Record<string, number>>({});
+  // Wrong-answer review flow shown after results.
+  const [reviewStage, setReviewStage] = useState<ReviewStage>("ask");
+  const [reviewIdx, setReviewIdx] = useState(0);
   const poolRef = useRef<SectionPool | null>(null);
   const usedRef = useRef<Set<string>>(new Set());
   // Per-section adaptive state (CAT). Stable refs avoid stale closures during
@@ -120,10 +149,16 @@ const Placement = () => {
     setQuestions(firstQs);
     setPicks({});
     setIdx(0);
+    setRevealed({});
+    setListeningPlays({});
     setSecondsLeft(TEST_MINUTES * 60);
     setResult(null);
     finishedRef.current = false;
     setStage("test");
+    setReviewStage("ask");
+    setReviewIdx(0);
+    // Seed per-question timer for the first question
+    const first = poolRef.current ? null : null; void first;
     window.scrollTo({ top: 0 });
   };
 
@@ -145,12 +180,39 @@ const Placement = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stage]);
 
+  // Per-question timer. Resets whenever the visible question changes.
+  // When it reaches 0 we lock-in whatever pick the user has (or no pick
+  // at all → counted as wrong) and reveal the correct answer.
+  useEffect(() => {
+    if (stage !== "test") return;
+    const q = questions[idx];
+    if (!q) return;
+    if (revealed[q.id]) return; // already revealed → no countdown
+    setQuestionSecondsLeft(PER_QUESTION_SECONDS[q.section]);
+    const t = setInterval(() => {
+      setQuestionSecondsLeft((s) => {
+        if (s <= 1) {
+          clearInterval(t);
+          // Time-up auto-reveal. If user has no pick, it remains undefined,
+          // which scoreTest() already treats as incorrect.
+          setRevealed((prev) => ({ ...prev, [q.id]: true }));
+          return 0;
+        }
+        return s - 1;
+      });
+    }, 1000);
+    return () => clearInterval(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stage, idx, questions.length]);
+
   const finish = () => {
     if (finishedRef.current) return;
     finishedRef.current = true;
     const r = scoreTest(questions, picks);
     setResult(r);
     setStage("result");
+    setReviewStage("ask");
+    setReviewIdx(0);
     window.scrollTo({ top: 0 });
     void persistAndAnalyze(r);
   };
@@ -443,6 +505,10 @@ const Placement = () => {
           <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>独立题库 · 覆盖 A1 → C2 全六级，全部题目唯一不重复</T></li>
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>自适应难度：答对升一级，答错降一级，快速锁定真实水平</T></li>
+            <li className="flex items-start gap-2"><Clock className="mt-0.5 size-4 shrink-0 text-primary" /> <T>每题独立倒计时（词汇 25s · 语法 35s · 阅读 75s · 听力 45s），超时按错处理</T></li>
+            <li className="flex items-start gap-2"><Headphones className="mt-0.5 size-4 shrink-0 text-primary" /> <T>听力题最多播放 2 次（仿真 TOEFL/IELTS 标准），杜绝反复听</T></li>
+            <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" /> <T>每题作答后立即显示正确答案与讲解，让你心服口服</T></li>
+            <li className="flex items-start gap-2"><GraduationCap className="mt-0.5 size-4 shrink-0 text-primary" /> <T>测试结束可一键复习全部错题，把测试变成真正的学习</T></li>
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>完成后给出 CEFR 等级 + 推荐 LEVEL 1–6 的具体学习起点</T></li>
           </ul>
 
@@ -466,6 +532,12 @@ const Placement = () => {
     const picked = picks[q.id];
     const answered = Object.keys(picks).length;
     const lowTime = secondsLeft <= 60;
+    const isRevealed = !!revealed[q.id];
+    const isCorrect = isRevealed && picked === q.answer;
+    const playsUsed = listeningPlays[q.id] ?? 0;
+    const playsLeft = LISTENING_MAX_PLAYS - playsUsed;
+    const perQTotal = PER_QUESTION_SECONDS[q.section];
+    const perQLow = !isRevealed && questionSecondsLeft <= 10;
     // Predict whether answering this one finishes the test:
     // every other section is already done AND this section will be done after the answer.
     const stateNow = sectionStateRef.current[q.section];
@@ -517,23 +589,67 @@ const Placement = () => {
           </div>
         </div>
 
-        {/* Progress */}
-        <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+        {/* Overall progress */}
+        <div className="mb-3 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
           <div
             className="h-full bg-grad-title transition-all"
             style={{ width: `${Math.min(100, ((idx + 1) / Math.max(estTotal, idx + 1)) * 100)}%` }}
           />
         </div>
 
+        {/* Per-question timer bar */}
+        <div className="mb-5 flex items-center gap-3">
+          <div className="h-2 flex-1 overflow-hidden rounded-full bg-secondary">
+            <div
+              className={`h-full transition-all duration-1000 ease-linear ${
+                isRevealed
+                  ? "bg-muted-foreground/40"
+                  : perQLow
+                    ? "bg-rose-500"
+                    : "bg-emerald-500"
+              }`}
+              style={{
+                width: `${Math.max(0, (questionSecondsLeft / perQTotal) * 100)}%`,
+              }}
+            />
+          </div>
+          <div
+            className={`min-w-[64px] text-right font-mono text-xs font-bold ${
+              isRevealed ? "text-muted-foreground" : perQLow ? "text-rose-600" : "text-foreground"
+            }`}
+          >
+            {isRevealed ? <T>已作答</T> : `${questionSecondsLeft}s / ${perQTotal}s`}
+          </div>
+        </div>
+
         {/* Question card */}
         <section className="rounded-3xl bg-card p-6 shadow-card md:p-8">
           {q.section === "listening" && q.context && (
-            <button
-              onClick={() => speak(q.context!)}
-              className="mb-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-grad-title py-3 font-semibold text-white shadow-tile"
-            >
-              <Volume2 className="size-5" /> <T>播放音频</T>
-            </button>
+            <div className="mb-5">
+              <button
+                onClick={() => {
+                  if (playsLeft <= 0 || isRevealed) return;
+                  speak(q.context!);
+                  setListeningPlays((p) => ({ ...p, [q.id]: (p[q.id] ?? 0) + 1 }));
+                }}
+                disabled={playsLeft <= 0 || isRevealed}
+                className={`flex w-full items-center justify-center gap-2 rounded-2xl py-3 font-semibold text-white shadow-tile transition ${
+                  playsLeft <= 0 || isRevealed
+                    ? "cursor-not-allowed bg-muted-foreground/40"
+                    : "bg-grad-title hover:opacity-90"
+                }`}
+              >
+                <Volume2 className="size-5" />
+                {playsLeft <= 0 ? <T>已用完播放次数</T> : <T>播放音频</T>}
+              </button>
+              <div className="mt-2 flex items-center justify-center gap-1.5 text-[11px] text-muted-foreground">
+                <Info className="size-3" />
+                <T>仿照真实考试 · 最多可播放</T> {LISTENING_MAX_PLAYS} <T>次</T>
+                <span className="ml-1 font-semibold">
+                  ({playsUsed}/{LISTENING_MAX_PLAYS})
+                </span>
+              </div>
+            </div>
           )}
           {q.section === "reading" && q.context && (
             <div className="mb-5 rounded-2xl border border-border bg-secondary/30 p-4 text-sm leading-relaxed">
@@ -551,40 +667,102 @@ const Placement = () => {
           <div className="grid gap-2 md:grid-cols-2">
             {q.options.map((opt, oi) => {
               const active = picked === oi;
+              const isAnswerOpt = oi === q.answer;
+              let cls = "border-border bg-card hover:border-primary/40";
+              if (isRevealed) {
+                if (isAnswerOpt) {
+                  cls = "border-emerald-500 bg-emerald-500/10 text-foreground";
+                } else if (active) {
+                  cls = "border-rose-500 bg-rose-500/10 text-foreground";
+                } else {
+                  cls = "border-border bg-card opacity-60";
+                }
+              } else if (active) {
+                cls = "border-primary bg-primary/10 text-foreground";
+              }
               return (
                 <button
                   key={oi}
-                  onClick={() => setPicks({ ...picks, [q.id]: oi })}
-                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${
-                    active
-                      ? "border-primary bg-primary/10 text-foreground"
-                      : "border-border bg-card hover:border-primary/40"
-                  }`}
+                  onClick={() => {
+                    if (isRevealed) return;
+                    setPicks({ ...picks, [q.id]: oi });
+                  }}
+                  disabled={isRevealed}
+                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${cls}`}
                 >
                   <span>{nativeText(opt)}</span>
-                  {active && <CheckCircle2 className="size-4 text-primary" />}
+                  {isRevealed && isAnswerOpt && <CheckCircle2 className="size-4 text-emerald-600" />}
+                  {isRevealed && !isAnswerOpt && active && <XCircle className="size-4 text-rose-600" />}
+                  {!isRevealed && active && <CheckCircle2 className="size-4 text-primary" />}
                 </button>
               );
             })}
           </div>
+
+          {/* Instant feedback */}
+          {isRevealed && (
+            <div
+              className={`mt-5 rounded-2xl border p-4 text-sm ${
+                isCorrect
+                  ? "border-emerald-500/40 bg-emerald-500/10"
+                  : "border-rose-500/40 bg-rose-500/10"
+              }`}
+            >
+              <div className="flex items-center gap-2 font-bold">
+                {isCorrect ? (
+                  <>
+                    <CheckCircle2 className="size-5 text-emerald-600" />
+                    <span className="text-emerald-700"><T>回答正确</T></span>
+                  </>
+                ) : (
+                  <>
+                    <XCircle className="size-5 text-rose-600" />
+                    <span className="text-rose-700">
+                      {picked === undefined ? <T>未作答 · 时间到</T> : <T>回答错误</T>}
+                    </span>
+                  </>
+                )}
+              </div>
+              {!isCorrect && (
+                <div className="mt-2 text-xs text-muted-foreground">
+                  <T>正确答案</T>：<span className="font-semibold text-foreground">{nativeText(q.options[q.answer])}</span>
+                </div>
+              )}
+              {q.explain && (
+                <div className="mt-2 text-xs leading-relaxed text-foreground/80">
+                  💡 <T>{q.explain}</T>
+                </div>
+              )}
+            </div>
+          )}
         </section>
 
         {/* Nav */}
         <div className="mt-6 flex items-center justify-between gap-3">
           <span className="text-xs text-muted-foreground">
-            {picked === undefined ? <T>请选择一个答案</T> : <T>已记录答案，点击下方按钮继续</T>}
+            {isRevealed
+              ? <T>查看解析后点击继续</T>
+              : picked === undefined
+                ? <T>请选择一个答案</T>
+                : <T>选定后点击「确认答案」查看解析</T>}
           </span>
           <span className="text-sm text-muted-foreground"><T>已答</T> {answered} / ~{Math.max(estTotal, answered)}</span>
-          {isLast ? (
+          {!isRevealed ? (
+            <Button
+              onClick={() => setRevealed((r) => ({ ...r, [q.id]: true }))}
+              disabled={picked === undefined}
+            >
+              <T>确认答案</T>
+            </Button>
+          ) : isLast ? (
             <Button
               onClick={finish}
-              disabled={picked === undefined}
               className="bg-emerald-600 hover:bg-emerald-600/90"
             >
               <T>提交测试</T>
             </Button>
           ) : (
-            <Button onClick={goNext} disabled={picked === undefined}>
+            <Button onClick={goNext}>
               <T>下一题</T> →
             </Button>
           )}
@@ -596,6 +774,125 @@ const Placement = () => {
   // ---------------- RESULT ----------------
   if (stage === "result" && result) {
     const desc = CEFR_DESC[result.cefr];
+    const wrongList = questions.filter(
+      (q) => picks[q.id] === undefined || picks[q.id] !== q.answer,
+    );
+
+    // ----- Review mode: show wrong questions one-by-one with explanation -----
+    if (reviewStage === "review" && wrongList.length > 0) {
+      const rq = wrongList[reviewIdx];
+      const rmeta = SECTION_META[rq.section];
+      const RIcon = rmeta.icon;
+      const userPick = picks[rq.id];
+      const isLastReview = reviewIdx >= wrongList.length - 1;
+      return (
+        <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+          <div className="mb-5 flex items-center justify-between rounded-2xl bg-card p-4 shadow-card">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setReviewStage("skip")}
+                className="grid size-9 place-items-center rounded-xl text-muted-foreground transition hover:bg-secondary hover:text-foreground"
+                aria-label={tt("退出复习")}
+              >
+                <ArrowLeft className="size-4" />
+              </button>
+              <div className={`grid size-9 place-items-center rounded-xl ${rmeta.color}`}>
+                <RIcon className="size-4" />
+              </div>
+              <div>
+                <div className="text-sm font-bold">
+                  <T>复习错题</T>{" "}
+                  <span className="ml-1 rounded bg-secondary px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground">
+                    L{rq.level}
+                  </span>
+                </div>
+                <div className="text-[11px] text-muted-foreground">
+                  {reviewIdx + 1} / {wrongList.length}
+                </div>
+              </div>
+            </div>
+            <div className="rounded-full bg-violet-500/15 px-3 py-1 text-xs font-bold text-violet-700">
+              <T>{rmeta.cn}</T>
+            </div>
+          </div>
+
+          <section className="rounded-3xl bg-card p-6 shadow-card md:p-8">
+            {rq.section === "listening" && rq.context && (
+              <button
+                onClick={() => speak(rq.context!)}
+                className="mb-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-grad-title py-3 font-semibold text-white shadow-tile"
+              >
+                <Volume2 className="size-5" /> <T>播放音频</T> · <T>复习时不限次数</T>
+              </button>
+            )}
+            {rq.section === "reading" && rq.context && (
+              <div className="mb-5 rounded-2xl border border-border bg-secondary/30 p-4 text-sm leading-relaxed">
+                {nativeText(rq.context)}
+              </div>
+            )}
+
+            <p className="mb-4 text-lg font-semibold">{nativeText(rq.prompt)}</p>
+            {rq.section === "grammar" && rq.context && (
+              <p className="mb-3 text-xs text-muted-foreground">{nativeText(rq.context)}</p>
+            )}
+
+            <div className="grid gap-2 md:grid-cols-2">
+              {rq.options.map((opt, oi) => {
+                const isAns = oi === rq.answer;
+                const wasUserPick = oi === userPick;
+                let cls = "border-border bg-card opacity-60";
+                if (isAns) cls = "border-emerald-500 bg-emerald-500/10";
+                else if (wasUserPick) cls = "border-rose-500 bg-rose-500/10";
+                return (
+                  <div key={oi} className={`flex items-center justify-between rounded-xl border px-4 py-3 text-sm ${cls}`}>
+                    <span>{nativeText(opt)}</span>
+                    {isAns && <CheckCircle2 className="size-4 text-emerald-600" />}
+                    {!isAns && wasUserPick && <XCircle className="size-4 text-rose-600" />}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-5 rounded-2xl border border-violet-500/30 bg-violet-500/5 p-4 text-sm">
+              <div className="mb-1 flex items-center gap-2 font-bold text-violet-700">
+                <Brain className="size-4" /> <T>讲解</T>
+              </div>
+              <div className="text-xs leading-relaxed text-foreground/85">
+                {rq.explain ? <T>{rq.explain}</T> : <T>请记住正确选项，并尝试用同类句型再造一句。</T>}
+              </div>
+              <div className="mt-3 text-xs text-muted-foreground">
+                <T>正确答案</T>：<span className="font-semibold text-foreground">{nativeText(rq.options[rq.answer])}</span>
+                {userPick !== undefined && (
+                  <>
+                    {" · "}
+                    <T>你选择了</T>：<span className="font-semibold text-foreground">{nativeText(rq.options[userPick])}</span>
+                  </>
+                )}
+                {userPick === undefined && (
+                  <>{" · "}<span className="font-semibold text-rose-600"><T>当时未作答</T></span></>
+                )}
+              </div>
+            </div>
+          </section>
+
+          <div className="mt-6 flex items-center justify-between gap-3">
+            <Button variant="outline" onClick={() => setReviewIdx((i) => Math.max(0, i - 1))} disabled={reviewIdx === 0}>
+              ← <T>上一题</T>
+            </Button>
+            {isLastReview ? (
+              <Button className="bg-emerald-600 hover:bg-emerald-600/90" onClick={() => setReviewStage("skip")}>
+                <T>完成复习</T>
+              </Button>
+            ) : (
+              <Button onClick={() => setReviewIdx((i) => i + 1)}>
+                <T>下一题</T> →
+              </Button>
+            )}
+          </div>
+        </main>
+      );
+    }
+
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
         <PageHeader title="Test Result" subtitle="Based on CEFR" back="/" />
@@ -624,6 +921,58 @@ const Placement = () => {
             </div>
           </div>
         </div>
+
+        {/* Review-wrong-answers prompt */}
+        {wrongList.length > 0 && reviewStage === "ask" && (
+          <section className="mt-5 overflow-hidden rounded-3xl border-2 border-amber-500/40 bg-gradient-to-br from-amber-500/10 to-orange-500/5 p-5 shadow-card md:p-6">
+            <div className="flex items-start gap-4">
+              <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 text-white shadow-md">
+                <GraduationCap className="size-6" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-base font-extrabold"><T>要不要复习刚才答错的题？</T></h3>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  <T>本次共有</T>{" "}
+                  <span className="font-bold text-amber-700">{wrongList.length}</span>{" "}
+                  <T>题答错或超时未答。逐题复习能直接把弱点变成提升点 —— 既然花了这么久测试，别让它白费。</T>
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <Button
+                    size="sm"
+                    className="bg-amber-600 hover:bg-amber-600/90"
+                    onClick={() => {
+                      setReviewIdx(0);
+                      setReviewStage("review");
+                      window.scrollTo({ top: 0 });
+                    }}
+                  >
+                    <T>开始复习错题</T> ({wrongList.length}) →
+                  </Button>
+                  <Button size="sm" variant="outline" onClick={() => setReviewStage("skip")}>
+                    <T>稍后再说</T>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {wrongList.length > 0 && reviewStage === "skip" && (
+          <button
+            onClick={() => {
+              setReviewIdx(0);
+              setReviewStage("review");
+              window.scrollTo({ top: 0 });
+            }}
+            className="mt-5 flex w-full items-center justify-between rounded-2xl border border-amber-500/40 bg-amber-500/5 px-5 py-3 text-left text-sm transition hover:bg-amber-500/10"
+          >
+            <span className="flex items-center gap-2 font-semibold text-amber-700">
+              <GraduationCap className="size-4" />
+              <T>重新复习错题</T> ({wrongList.length})
+            </span>
+            <span className="text-xs text-muted-foreground">→</span>
+          </button>
+        )}
 
         {/* Previous vs current comparison */}
         {previousResult && (() => {

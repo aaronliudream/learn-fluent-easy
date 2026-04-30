@@ -21,6 +21,8 @@ import { Button } from "@/components/ui/button";
 import { speak } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
+import { supabase } from "@/integrations/supabase/client";
+import ReactMarkdown from "react-markdown";
 import {
   buildSectionPool,
   pickAdaptive,
@@ -144,6 +146,159 @@ const Placement = () => {
     setResult(r);
     setStage("result");
     window.scrollTo({ top: 0 });
+    void persistAndAnalyze(r);
+  };
+
+  // ----- Persisted result + AI report -----
+  const [resultRowId, setResultRowId] = useState<string | null>(null);
+  const [aiReport, setAiReport] = useState<string>("");
+  const [aiBusy, setAiBusy] = useState(false);
+  const [aiError, setAiError] = useState<string | null>(null);
+  const [previousResult, setPreviousResult] = useState<{
+    cefr: string; ability: number; recommended_level: number; created_at: string;
+  } | null>(null);
+
+  const persistAndAnalyze = async (r: PlacementResult) => {
+    const { data: auth } = await supabase.auth.getUser();
+    const uid = auth?.user?.id;
+    if (!uid) {
+      // Anonymous user → still try AI report, don't persist
+      void streamReport(r, null);
+      return;
+    }
+    // Fetch previous result BEFORE inserting (so the comparison shows real "last")
+    try {
+      const { data: prev } = await supabase
+        .from("placement_results")
+        .select("cefr,ability,recommended_level,created_at")
+        .order("created_at", { ascending: false })
+        .limit(1)
+        .maybeSingle();
+      if (prev) setPreviousResult(prev as any);
+    } catch (e) {
+      console.warn("prev result fetch", e);
+    }
+    // Build the question log for diagnosis
+    const wrongQuestions = questions
+      .filter((q) => picks[q.id] !== undefined && picks[q.id] !== q.answer)
+      .map((q) => ({
+        id: q.id,
+        section: q.section,
+        level: q.level,
+        prompt: q.prompt,
+        context: q.context,
+        options: q.options,
+        answer: q.answer,
+        picked: picks[q.id],
+        explain: q.explain,
+      }));
+    const fullLog = questions.map((q) => ({
+      id: q.id, section: q.section, level: q.level,
+      picked: picks[q.id] ?? null, correct: picks[q.id] === q.answer,
+    }));
+    const durationSeconds = Math.max(0, Math.round((Date.now() - startedAtRef.current) / 1000));
+    try {
+      const { data: inserted, error } = await supabase
+        .from("placement_results")
+        .insert({
+          user_id: uid,
+          cefr: r.cefr,
+          ability: r.ability,
+          weighted: r.weighted,
+          recommended_level: r.recommendedLevel,
+          by_section: r.bySection,
+          weakest: r.weakest,
+          question_log: fullLog,
+          duration_seconds: durationSeconds,
+        })
+        .select("id")
+        .single();
+      if (error) throw error;
+      setResultRowId(inserted.id);
+    } catch (e) {
+      console.warn("persist placement result", e);
+    }
+    void streamReport(r, wrongQuestions);
+  };
+
+  const streamReport = async (r: PlacementResult, wrongQuestions: any[] | null) => {
+    setAiBusy(true);
+    setAiError(null);
+    setAiReport("");
+    try {
+      const wq = wrongQuestions ?? questions
+        .filter((q) => picks[q.id] !== undefined && picks[q.id] !== q.answer)
+        .map((q) => ({
+          section: q.section, level: q.level, prompt: q.prompt,
+          context: q.context, options: q.options, answer: q.answer,
+          picked: picks[q.id], explain: q.explain,
+        }));
+      const url = `https://${import.meta.env.VITE_SUPABASE_PROJECT_ID}.supabase.co/functions/v1/placement-report`;
+      const resp = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+        },
+        body: JSON.stringify({
+          cefr: r.cefr,
+          ability: r.ability,
+          weighted: r.weighted,
+          recommendedLevel: r.recommendedLevel,
+          bySection: r.bySection,
+          weakest: r.weakest,
+          wrongQuestions: wq,
+        }),
+      });
+      if (!resp.ok || !resp.body) {
+        throw new Error(`HTTP ${resp.status}`);
+      }
+      const reader = resp.body.getReader();
+      const decoder = new TextDecoder();
+      let buf = "";
+      let assembled = "";
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buf += decoder.decode(value, { stream: true });
+        const lines = buf.split("\n");
+        buf = lines.pop() ?? "";
+        for (const line of lines) {
+          const t = line.trim();
+          if (!t.startsWith("data:")) continue;
+          const payload = t.slice(5).trim();
+          if (!payload || payload === "[DONE]") continue;
+          try {
+            const obj = JSON.parse(payload);
+            if (obj.delta) {
+              assembled += obj.delta;
+              setAiReport(assembled);
+            } else if (obj.error) {
+              throw new Error(obj.error);
+            }
+          } catch (e) {
+            // ignore malformed
+          }
+        }
+      }
+      // Persist the AI report on the row (best-effort)
+      if (resultRowId && assembled) {
+        await supabase
+          .from("placement_results")
+          .update({ ai_report: { markdown: assembled, model: "gemini-2.5-flash" } })
+          .eq("id", resultRowId);
+      }
+    } catch (e) {
+      console.error("AI report stream", e);
+      setAiError(e instanceof Error ? e.message : "Failed to load AI report");
+    } finally {
+      setAiBusy(false);
+    }
+  };
+
+  const regenerateReport = () => {
+    if (!result) return;
+    void streamReport(result, null);
   };
 
   const sectionGroups = useMemo(() => {

@@ -15,6 +15,7 @@ import type { LangCode } from "./languages";
 const NAME_BY_LANG: Record<LangCode, { latin: string; native?: string }> = {
   en:  { latin: "Mei" },
   zh:  { latin: "Mei",     native: "梅" },
+  "zh-TW": { latin: "Mei", native: "梅" },
   es:  { latin: "Lucía" },
   hi:  { latin: "Aanya",   native: "आन्या" },
   ar:  { latin: "Layla",   native: "ليلى" },

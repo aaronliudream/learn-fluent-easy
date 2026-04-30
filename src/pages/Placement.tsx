@@ -319,7 +319,7 @@ const Placement = () => {
           )}
           {q.section === "reading" && q.context && (
             <div className="mb-5 rounded-2xl border border-border bg-secondary/30 p-4 text-sm leading-relaxed">
-              {q.context}
+              {tDynamic(q.context)}
             </div>
           )}
 

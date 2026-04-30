@@ -29,7 +29,9 @@ const KEY = "voiceSettings.v1";
 export type VoiceSettings = { voiceId: string; speed: number };
 
 export const DEFAULT_SETTINGS: VoiceSettings = {
-  voiceId: VOICES[0].id,
+  // Default to Nova: bright, young-sounding female voice — much more
+  // approachable than alloy/onyx for English-learning users.
+  voiceId: "nova",
   speed: 0.85,
 };
 

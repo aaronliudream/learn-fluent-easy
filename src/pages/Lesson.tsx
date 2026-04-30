@@ -53,6 +53,8 @@ import {
   recordQuiz,
   touchActive,
 } from "@/lib/guestProgress";
+import { AITalkDialog } from "@/components/AITalkDialog";
+import { Phone } from "lucide-react";
 
 const STEP_ICONS = {
   BookOpen,
@@ -123,6 +125,18 @@ const Lesson = () => {
   const [mastered, setMasteredState] = useState(false);
   const [aiContent, setAiContent] = useState<LessonContent | null>(null);
   const [generating, setGenerating] = useState(false);
+  const [talkOpen, setTalkOpen] = useState(false);
+  const [authedUser, setAuthedUser] = useState<boolean>(false);
+  useEffect(() => {
+    let active = true;
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (active) setAuthedUser(!!session?.user);
+    });
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => {
+      if (active) setAuthedUser(!!s?.user);
+    });
+    return () => { active = false; subscription.unsubscribe(); };
+  }, []);
 
   useEffect(() => {
     setMasteredState(isMastered(Number(levelId), Number(unitId), Number(lessonId)));
@@ -1225,6 +1239,33 @@ const Lesson = () => {
         </button>
       </div>
 
+      {/* AI voice chat (uses this lesson as the topic) */}
+      <div className="mt-6 overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent p-5 shadow-card md:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 text-base font-bold">
+              <Phone className="size-5 text-primary" />
+              <T>用本课和 Alex 聊 10 分钟</T>
+            </div>
+            <p className="mt-1 text-sm text-muted-foreground">
+              <T>地道美式英语真人对话 · 结束自动给出双语讲解和词汇测试</T>
+            </p>
+          </div>
+          <button
+            onClick={() => {
+              if (!authedUser) {
+                toast.error(tt("请先登录后使用 AI 语音对话"));
+                return;
+              }
+              setTalkOpen(true);
+            }}
+            className="rounded-full bg-grad-title px-5 py-2.5 text-sm font-semibold text-white shadow-tile transition hover:opacity-95"
+          >
+            🎙️ <T>开始对话</T>
+          </button>
+        </div>
+      </div>
+
       {/* Mastery toggle */}
       <div className="mt-6 rounded-3xl border border-border bg-card p-5 shadow-card md:p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
@@ -1273,6 +1314,15 @@ const Lesson = () => {
           </div>
         </div>
       </div>
+
+      <AITalkDialog
+        open={talkOpen}
+        onClose={() => setTalkOpen(false)}
+        lessonTitle={lesson?.title}
+        unitTitle={findUnit(Number(levelId), Number(unitId))?.title}
+        levelName={LEVELS.find((l) => l.id === Number(levelId))?.name}
+        level={["A1","A2","B1","B2","C1","C2"][Number(levelId) - 1] || undefined}
+      />
     </main>
   );
 };

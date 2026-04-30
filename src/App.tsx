@@ -28,6 +28,7 @@ import ScenesPlay from "./pages/ScenesPlay.tsx";
 import Workplace from "./pages/Workplace.tsx";
 import WorkplaceCategory from "./pages/WorkplaceCategory.tsx";
 import WorkplacePlay from "./pages/WorkplacePlay.tsx";
+import Talk from "./pages/Talk.tsx";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/workplace" element={<Workplace />} />
           <Route path="/workplace/:catKey" element={<WorkplaceCategory />} />
           <Route path="/workplace/:catKey/:dialogueId" element={<WorkplacePlay />} />
+          <Route path="/talk" element={<Talk />} />
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />

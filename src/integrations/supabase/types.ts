@@ -170,27 +170,78 @@ export type Database = {
         }
         Relationships: []
       }
+      learning_events: {
+        Row: {
+          created_at: string
+          event_type: string
+          id: string
+          lesson_key: string | null
+          metadata: Json | null
+          quiz_correct: number | null
+          quiz_total: number | null
+          study_minutes: number | null
+          user_id: string
+          vocab_count: number | null
+        }
+        Insert: {
+          created_at?: string
+          event_type: string
+          id?: string
+          lesson_key?: string | null
+          metadata?: Json | null
+          quiz_correct?: number | null
+          quiz_total?: number | null
+          study_minutes?: number | null
+          user_id: string
+          vocab_count?: number | null
+        }
+        Update: {
+          created_at?: string
+          event_type?: string
+          id?: string
+          lesson_key?: string | null
+          metadata?: Json | null
+          quiz_correct?: number | null
+          quiz_total?: number | null
+          study_minutes?: number | null
+          user_id?: string
+          vocab_count?: number | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
           display_name: string | null
+          email: string | null
           id: string
+          last_weekly_report_at: string | null
+          preferred_language: string | null
           updated_at: string
           user_id: string
+          weekly_report_enabled: boolean
         }
         Insert: {
           created_at?: string
           display_name?: string | null
+          email?: string | null
           id?: string
+          last_weekly_report_at?: string | null
+          preferred_language?: string | null
           updated_at?: string
           user_id: string
+          weekly_report_enabled?: boolean
         }
         Update: {
           created_at?: string
           display_name?: string | null
+          email?: string | null
           id?: string
+          last_weekly_report_at?: string | null
+          preferred_language?: string | null
           updated_at?: string
           user_id?: string
+          weekly_report_enabled?: boolean
         }
         Relationships: []
       }

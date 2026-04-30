@@ -780,14 +780,20 @@ const Lesson = () => {
             subtitle=""
           />
           <div className="space-y-5">
-            {content.reading.map((p, i) => (
+            {content.reading.map((p, i) => {
+              const isActive = activeReadingIdx === i;
+              return (
               <div
                 key={i}
-                className="grid grid-cols-[28px_1fr] gap-x-4 rounded-2xl border border-border bg-secondary/30 p-5 md:grid-cols-[36px_1fr_1fr] md:gap-x-6"
+                className={`grid grid-cols-[28px_1fr] gap-x-4 rounded-2xl border p-5 transition md:grid-cols-[36px_1fr_1fr] md:gap-x-6 ${
+                  isActive
+                    ? "border-primary/50 bg-primary/10 shadow-sm"
+                    : "border-border bg-secondary/30"
+                }`}
               >
-                <div className="pt-1 text-sm font-medium text-muted-foreground">{i + 1}</div>
+                <div className={`pt-1 text-sm font-medium ${isActive ? "text-primary font-bold" : "text-muted-foreground"}`}>{i + 1}</div>
                 <div className="flex items-start gap-2">
-                  <p className="flex-1 text-base leading-relaxed">{p.en}</p>
+                  <p className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : ""}`}>{p.en}</p>
                   <button
                     onClick={() => speak(p.en)}
                     className="grid size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:hidden"
@@ -798,7 +804,7 @@ const Lesson = () => {
                 </div>
                 <div className="col-start-2 mt-2 md:col-start-3 md:mt-0">
                   <div className="flex items-start gap-2">
-                    <p className="flex-1 text-base leading-relaxed text-foreground/90"><T>{p.cn}</T></p>
+                    <p className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : "text-foreground/90"}`}><T>{p.cn}</T></p>
                     <button
                       onClick={() => speak(p.en)}
                       className="hidden size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:grid"
@@ -814,9 +820,10 @@ const Lesson = () => {
                   )}
                 </div>
               </div>
-            ))}
+              );
+            })}
             <button
-              onClick={() => speakSequence(content.reading.map((r) => r.en), { gapMs: 150 })}
+              onClick={playReadingAll}
               className="w-full rounded-2xl bg-grad-title py-3 font-semibold text-white shadow-tile"
             >
               ▶ <T>播放整篇朗读</T>

@@ -12,12 +12,20 @@ import { IDIOMS } from "@/data/idioms";
 import { SCENE_DIALOGUES } from "@/data/scenes";
 import { WORK_CATEGORIES } from "@/data/workplace";
 import { useI18n } from "@/i18n/I18nProvider";
+import { T } from "@/i18n/T";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { SupportButton } from "@/components/SupportButton";
 import { TargetLanguagePicker } from "@/components/TargetLanguagePicker";
+import { TARGET_LANGUAGES, useTargetLanguage } from "@/hooks/useTargetLanguage";
+import {
+  DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
 
 const Index = () => {
   const { t } = useI18n();
+  const { language: targetLang, setLanguage: setTargetLang } = useTargetLanguage();
+  const currentTarget = TARGET_LANGUAGES.find((l) => l.value === targetLang) ?? TARGET_LANGUAGES[0];
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
@@ -161,6 +169,39 @@ const Index = () => {
       </div>
 
       <PageHeader title={t("index.title")} subtitle={t("index.subtitle")} />
+
+      {/* Fixed "I want to learn" picker — prominent on the homepage */}
+      <div className="mb-6 flex items-center gap-4 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 p-4 md:p-5">
+        <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground">
+          <GraduationCap className="size-5" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary/80">
+            <T>我想学</T>
+          </div>
+          <div className="mt-0.5 text-base font-extrabold leading-tight md:text-lg">
+            {currentTarget.flag} {currentTarget.native}
+          </div>
+        </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:opacity-90">
+            <T>Change</T> <ChevronDown className="size-4" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-56">
+            {TARGET_LANGUAGES.map((l) => (
+              <DropdownMenuItem
+                key={l.value}
+                onClick={() => { if (l.value !== targetLang) void setTargetLang(l.value); }}
+                className={l.value === targetLang ? "font-semibold" : ""}
+              >
+                <span className="mr-2 text-base">{l.flag}</span>
+                <span className="flex-1">{l.native}</span>
+                <span className="text-xs text-muted-foreground">{l.label}</span>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
 
       {/* Optional: guest progress save nudge */}
       {!user && hasProgress && (

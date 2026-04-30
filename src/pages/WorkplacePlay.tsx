@@ -9,6 +9,7 @@ import { T, useT } from "@/i18n/T";
 import { renderRich, stripTags } from "@/lib/richText";
 import { recordVisit } from "@/lib/guestProgress";
 import { useScrollToActive } from "@/lib/useScrollToActive";
+import { WorkplacePractice } from "@/components/WorkplacePractice";
 
 const WorkplacePlay = () => {
   const t = useT();
@@ -103,6 +104,7 @@ const WorkplacePlay = () => {
       </section>
 
       <FloatingBackButton to={`/workplace/${cat.key}`} />
+      <WorkplacePractice dialogue={dlg} catKey={cat.key} />
       {/* Bottom spacer so the floating button doesn't overlap the last line */}
       <div className="h-24" />
     </main>

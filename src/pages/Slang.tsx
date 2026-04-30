@@ -10,6 +10,9 @@ import {
   XCircle,
   Zap,
   X,
+  Loader2,
+  Lightbulb,
+  PenLine,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";

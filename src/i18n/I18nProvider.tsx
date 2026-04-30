@@ -11,13 +11,21 @@ import { BUILTIN, EN, type StringKey, interpolate } from "./strings";
 
 const STORAGE_LANG = "fluentpath.lang";
 const STORAGE_PICKED = "fluentpath.langPicked";
-const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v2.";
+// v3: previous versions wrongly rejected pure-Han Japanese / Korean
+// translations and cached the Chinese source instead. Bumping the prefix
+// forces a fresh fetch so users actually see their selected language.
+const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v3.";
 
 type Catalog = Partial<Record<StringKey, string>>;
 
 const CJK_TEXT_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const HANGUL_TEXT_RE = /[\uac00-\ud7af]/;
 const JAPANESE_TEXT_RE = /[\u3040-\u30ff]/;
+// Han ideographs (shared by zh / ja / ko). A pure-Han string can be valid
+// Japanese (e.g. "単元", "学習") or valid Korean Hanja, so we must NOT reject
+// it just because it lacks kana / hangul. Only reject when the value is
+// identical to the original Chinese source (i.e. translation didn't happen).
+const HAN_RE = /[\u3400-\u9fff]/;
 
 // Strip any HTML tags (e.g. <b>, </b>, <i>) the translator may have added,
 // decode common entities, and collapse whitespace. Translations are rendered
@@ -39,8 +47,13 @@ function stripHtml(value: string): string {
 function hasWrongScript(lang: LangCode, value: string | undefined) {
   if (!value) return false;
   if (lang === "zh") return false;
-  if (lang === "ja") return CJK_TEXT_RE.test(value) && !JAPANESE_TEXT_RE.test(value);
-  if (lang === "ko") return CJK_TEXT_RE.test(value) && !HANGUL_TEXT_RE.test(value);
+  // Japanese and Korean both legitimately use Han characters, so we only
+  // flag values that contain CJK characters that are clearly *not* valid
+  // for the target language. A value made of pure Han (no kana/hangul)
+  // is allowed — the "is it really a translation?" check is handled by
+  // the source-equality test in isUsableTranslation.
+  if (lang === "ja" || lang === "ko") return false;
+  // Other Latin / Cyrillic / etc. languages should never contain CJK at all.
   return CJK_TEXT_RE.test(value);
 }
 
@@ -49,8 +62,11 @@ function isUsableTranslation(lang: LangCode, source: string, value: string | und
   const cleaned = stripHtml(value);
   if (!cleaned) return false;
   if (lang !== "zh" && cleaned.trim() === stripHtml(source).trim()) return false;
-  if (lang === "ja" && CJK_TEXT_RE.test(source) && !JAPANESE_TEXT_RE.test(cleaned)) return false;
-  if (lang === "ko" && CJK_TEXT_RE.test(source) && !HANGUL_TEXT_RE.test(cleaned)) return false;
+  // For Japanese / Korean, a *long* value with no kana/hangul almost
+  // certainly wasn't translated (the model echoed the Chinese back).
+  // Short pure-Han results like "単元" are valid translations.
+  if (lang === "ja" && cleaned.length > 6 && HAN_RE.test(cleaned) && !JAPANESE_TEXT_RE.test(cleaned)) return false;
+  if (lang === "ko" && cleaned.length > 6 && HAN_RE.test(cleaned) && !HANGUL_TEXT_RE.test(cleaned)) return false;
   return !hasWrongScript(lang, cleaned);
 }
 
@@ -240,11 +256,15 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (isUsableTranslation(lang, text, cached)) return cached;
     // Queue and debounce
     dynQueueRef.current.add(text);
-    if (dynTimerRef.current) window.clearTimeout(dynTimerRef.current);
-    dynTimerRef.current = window.setTimeout(() => {
-      dynTimerRef.current = null;
-      flushDynQueue(lang);
-    }, 250);
+    // Use a non-resetting timer so heavy renders can't postpone the flush
+    // forever. The first call schedules a flush ~120ms out; subsequent calls
+    // simply add to the same batch.
+    if (dynTimerRef.current === null) {
+      dynTimerRef.current = window.setTimeout(() => {
+        dynTimerRef.current = null;
+        flushDynQueue(lang);
+      }, 120);
+    }
     // Show source text while the translation is loading; it will swap to the
     // translated string as soon as the batch resolves. Returning "" here would
     // leave the UI blank, which is worse than a brief Chinese flash.

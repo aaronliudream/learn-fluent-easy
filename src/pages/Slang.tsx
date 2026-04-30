@@ -410,10 +410,13 @@ const Slang = () => {
     if (!q) return;
     if (recordedRef.current.has(q.id)) return;
     recordedRef.current.add(q.id);
-    const correct = picks[q.id] === q.answer;
+    const correct =
+      q.kind === "compose"
+        ? composeGrade[q.id]?.verdict !== "needs_work"
+        : picks[q.id] === q.answer;
     recordSlangResult(q.idiom.id, correct);
     setMasteryVersion((v) => v + 1);
-  }, [revealed, qIdx, questions, picks]);
+  }, [revealed, qIdx, questions, picks, composeGrade]);
 
   // After revealing the answer, always read aloud the correct English example
   // sentence — "ear training" reinforces audio memory regardless of correctness.
@@ -445,7 +448,11 @@ const Slang = () => {
     setDockedInvite(false);
   }, [mode]);
 
-  const correctCount = questions.filter((q) => picks[q.id] === q.answer).length;
+  const correctCount = questions.filter((q) =>
+    q.kind === "compose"
+      ? composeGrade[q.id]?.verdict !== undefined && composeGrade[q.id].verdict !== "needs_work"
+      : picks[q.id] === q.answer,
+  ).length;
 
   // For mixed quiz results, "correct" means: either the user picked the
   // right MC option, or (for compose questions) the AI graded their

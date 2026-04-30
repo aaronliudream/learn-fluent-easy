@@ -31,7 +31,7 @@ import PREGENERATED_LESSONS from "@/data/aiLessons.json";
 
 const PREGEN_MAP = PREGENERATED_LESSONS as unknown as Record<string, LessonContent>;
 import { PageHeader } from "@/components/PageHeader";
-import { speak } from "@/lib/speak";
+import { speak, speakSequence } from "@/lib/speak";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";

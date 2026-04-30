@@ -305,7 +305,27 @@ const Placement = () => {
     const picked = picks[q.id];
     const answered = Object.keys(picks).length;
     const lowTime = secondsLeft <= 60;
-    const isLast = questions.length >= TOTAL_QS && idx === questions.length - 1;
+    // Predict whether answering this one finishes the test:
+    // every other section is already done AND this section will be done after the answer.
+    const stateNow = sectionStateRef.current[q.section];
+    const willBeAnswered = stateNow.answered + 1;
+    const otherSectionsDone = SECTIONS.every(
+      (s) => s === q.section || sectionDoneRef.current[s],
+    );
+    const thisWillBeDone =
+      willBeAnswered >= QS_MAX_PER_SECTION ||
+      (willBeAnswered >= QS_MIN_PER_SECTION &&
+        sectionConfidenceHalfWidth({
+          ...stateNow,
+          answered: willBeAnswered,
+        }) <= STOP_CONFIDENCE);
+    const isLast = otherSectionsDone && thisWillBeDone;
+    // Estimated total: sum of (already done = answered, otherwise = max((answered+1), MIN))
+    const estTotal = SECTIONS.reduce((acc, s) => {
+      const st = sectionStateRef.current[s];
+      if (sectionDoneRef.current[s]) return acc + st.answered;
+      return acc + Math.max(QS_MIN_PER_SECTION, st.answered + 1);
+    }, 0);
 
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
@@ -328,7 +348,7 @@ const Placement = () => {
             </div>
             <div>
               <div className="text-sm font-bold"><T>{meta.cn}</T> <span className="ml-1 rounded bg-secondary px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground">L{q.level}</span></div>
-              <div className="text-[11px] text-muted-foreground">{idx + 1} / {TOTAL_QS}</div>
+              <div className="text-[11px] text-muted-foreground">{idx + 1} / ~{Math.max(estTotal, idx + 1)}</div>
             </div>
           </div>
           <div className={`flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-sm font-bold ${lowTime ? "bg-rose-500/15 text-rose-600" : "bg-secondary text-foreground"}`}>
@@ -340,7 +360,7 @@ const Placement = () => {
         <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
           <div
             className="h-full bg-grad-title transition-all"
-            style={{ width: `${((idx + 1) / TOTAL_QS) * 100}%` }}
+            style={{ width: `${Math.min(100, ((idx + 1) / Math.max(estTotal, idx + 1)) * 100)}%` }}
           />
         </div>
 
@@ -393,7 +413,7 @@ const Placement = () => {
           <span className="text-xs text-muted-foreground">
             {picked === undefined ? <T>请选择一个答案</T> : <T>已记录答案，点击下方按钮继续</T>}
           </span>
-          <span className="text-sm text-muted-foreground"><T>已答</T> {answered} / {TOTAL_QS}</span>
+          <span className="text-sm text-muted-foreground"><T>已答</T> {answered} / ~{Math.max(estTotal, answered)}</span>
           {isLast ? (
             <Button
               onClick={finish}

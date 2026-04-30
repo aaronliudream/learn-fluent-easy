@@ -15,6 +15,12 @@ import {
   Target,
   TrendingUp,
   Volume2,
+  Brain,
+  Loader2,
+  RefreshCw,
+  ArrowUpRight,
+  ArrowDownRight,
+  Minus,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";

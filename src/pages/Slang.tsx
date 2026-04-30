@@ -452,7 +452,7 @@ const Slang = () => {
                         </button>
                       </div>
                       <div className="mt-1.5 flex items-start gap-2">
-                        <span className="mt-1 text-[11px] font-bold text-muted-foreground md:text-[10px]">CN</span>
+                        <span className="mt-1 text-[11px] font-bold text-muted-foreground md:text-[10px]"><T>释义</T></span>
                         <span className="flex-1 text-muted-foreground"><T>{it.example_cn}</T></span>
                       </div>
                     </div>
@@ -605,7 +605,7 @@ const Slang = () => {
                   <p className="mt-2 text-sm italic text-muted-foreground">"{q.context}"</p>
                 )}
                 {q.kind === "cn2en" && q.context && (
-                  <p className="mt-2 text-sm text-muted-foreground">{q.context}</p>
+                  <p className="mt-2 text-sm text-muted-foreground"><T>{q.context}</T></p>
                 )}
               </div>
 

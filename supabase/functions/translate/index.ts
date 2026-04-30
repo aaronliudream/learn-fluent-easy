@@ -18,8 +18,9 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { targetLanguage, items } = await req.json() as {
+    const { targetLanguage, sourceLanguage, items } = await req.json() as {
       targetLanguage: string;
+      sourceLanguage?: string;
       items: Item[];
     };
 
@@ -32,16 +33,21 @@ Deno.serve(async (req) => {
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY missing");
 
+    const fromClause = sourceLanguage
+      ? `from ${sourceLanguage} into ${targetLanguage}`
+      : `into ${targetLanguage} (auto-detect the source language, which may be English or Chinese)`;
+
     const systemPrompt =
-      `You are a professional UI translator. Translate the provided UI strings ` +
-      `from English into ${targetLanguage}. ` +
+      `You are a professional UI translator. Translate the provided strings ` +
+      `${fromClause}. ` +
       `Rules: ` +
       `1) Preserve any placeholders like {count}, {n}, {name} EXACTLY. ` +
       `2) Preserve emojis exactly. ` +
-      `3) Keep length similar; this is for buttons and labels. ` +
+      `3) Keep length similar; this is for UI labels and short content. ` +
       `4) Do not add quotes or commentary. ` +
       `5) Use natural, idiomatic ${targetLanguage}. ` +
-      `Return ONLY a JSON object mapping each input key to its translation.`;
+      `6) ALWAYS output in ${targetLanguage}, even if the source is in another language — never return the original text unchanged unless it is a proper noun. ` +
+      `Return ONLY a JSON object mapping each input key to its translation in ${targetLanguage}.`;
 
     const userPayload = JSON.stringify(
       Object.fromEntries(items.map((i) => [i.key, i.text])),

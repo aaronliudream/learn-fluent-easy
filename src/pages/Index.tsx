@@ -157,7 +157,6 @@ const Index = () => {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
       <div className="mb-4 flex flex-wrap items-center justify-end gap-2">
-        <TargetLanguagePicker />
         <LanguageSwitcher />
         <Button asChild variant="ghost" size="sm" className="mr-2">
           <Link to="/stats">

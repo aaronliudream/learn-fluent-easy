@@ -2,7 +2,6 @@ import { ArrowLeft, Home } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { VoiceSettingsButton } from "@/components/VoiceSettings";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
-import { TargetLanguagePicker } from "@/components/TargetLanguagePicker";
 import { T } from "@/i18n/T";
 
 type Props = {
@@ -31,7 +30,6 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
           </h1>
         </div>
         <div className="flex items-center gap-1">
-          <TargetLanguagePicker />
           <LanguageSwitcher />
           <VoiceSettingsButton />
           <Link

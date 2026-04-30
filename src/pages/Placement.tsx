@@ -757,6 +757,56 @@ const Placement = () => {
           </div>
         </section>
 
+        {/* AI Diagnostic Report */}
+        <section className="mt-6 rounded-3xl border-2 border-violet-500/30 bg-gradient-to-br from-violet-500/5 to-fuchsia-500/5 p-6 shadow-card md:p-8">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="grid size-11 place-items-center rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white shadow-md">
+              <Brain className="size-6" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-extrabold"><T>AI 诊断报告</T></h3>
+              <p className="text-xs text-muted-foreground">
+                <T>基于你的答题轨迹，给出考点归因与 4 周提升计划</T>
+              </p>
+            </div>
+            {!aiBusy && aiReport && (
+              <button
+                onClick={regenerateReport}
+                className="grid size-9 place-items-center rounded-xl text-muted-foreground transition hover:bg-secondary hover:text-foreground"
+                aria-label={tt("重新生成")}
+              >
+                <RefreshCw className="size-4" />
+              </button>
+            )}
+          </div>
+
+          {aiBusy && !aiReport && (
+            <div className="flex items-center gap-3 rounded-2xl bg-card p-5 text-sm text-muted-foreground">
+              <Loader2 className="size-5 animate-spin text-violet-500" />
+              <span><T>AI 正在分析你的错题与能力分布… 通常 5–15 秒</T></span>
+            </div>
+          )}
+
+          {aiError && !aiReport && (
+            <div className="rounded-2xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm text-rose-700">
+              <div className="font-semibold"><T>报告生成失败</T></div>
+              <div className="mt-1 text-xs">{aiError}</div>
+              <Button size="sm" variant="outline" className="mt-3" onClick={regenerateReport}>
+                <RefreshCw className="mr-1.5 size-3.5" /> <T>重试</T>
+              </Button>
+            </div>
+          )}
+
+          {aiReport && (
+            <article className="prose prose-sm dark:prose-invert max-w-none rounded-2xl bg-card p-5 leading-relaxed text-foreground/90 [&_h2]:mt-5 [&_h2]:text-base [&_h2]:font-extrabold [&_h2]:text-violet-700 dark:[&_h2]:text-violet-400 [&_h2:first-child]:mt-0 [&_ul]:my-2 [&_li]:my-1 [&_strong]:text-foreground">
+              <ReactMarkdown>{aiReport}</ReactMarkdown>
+              {aiBusy && (
+                <span className="ml-1 inline-block h-4 w-1.5 animate-pulse bg-violet-500 align-middle" />
+              )}
+            </article>
+          )}
+        </section>
+
         <div className="mt-6 flex gap-3">
           <Button variant="outline" className="flex-1" onClick={() => setStage("intro")}>
             <T>重新测试</T>

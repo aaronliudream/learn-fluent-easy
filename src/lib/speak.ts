@@ -29,7 +29,11 @@ const stopCurrent = () => {
   }
 };
 
-export const stopSpeaking = () => stopCurrent();
+export const stopSpeaking = () => {
+  // Also abort any running speakSequence loop.
+  cancelSequence();
+  stopCurrent();
+};
 
 const getSharedAudio = () => {
   if (typeof window === "undefined") return null;

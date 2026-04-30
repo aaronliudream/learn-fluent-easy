@@ -76,7 +76,15 @@ function sanitizeCachedCatalog(lang: LangCode, cat: Catalog): Catalog {
   for (const [k, v] of Object.entries(cat)) {
     if (typeof v !== "string") continue;
     if (hasWrongScript(lang, v)) continue;
-    cleaned[k as StringKey] = stripHtml(v);
+    const stripped = stripHtml(v);
+    // Drop entries that aren't actually translated for the target language.
+    // This catches stale cache entries where the value equals the English
+    // source, or where (for ja/ko) the value is pure Han characters that
+    // are really just the original Chinese leaking through. Dropping them
+    // forces the next load to re-fetch a real translation.
+    const sourceEn = EN[k as StringKey];
+    if (sourceEn && !isUsableTranslation(lang, sourceEn, stripped)) continue;
+    cleaned[k as StringKey] = stripped;
   }
   return cleaned;
 }

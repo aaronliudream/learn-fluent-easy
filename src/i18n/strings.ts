@@ -159,7 +159,7 @@ export const ZH: Record<StringKey, string> = {
   "index.subtitle": "选择适合你的级别，开始学习之旅",
   "index.sectionsLabel": "五种学习方式",
   "index.section.placement.eyebrow": "01 · 水平测试",
-  "index.section.placement.title": "了解你的英语真实水平",
+  "index.section.placement.title": "英语水平测试",
   "index.section.placement.desc": "25 分钟自适应测试 · 听说读写四项 · A1–C1 评级",
   "index.section.aitalk.eyebrow": "AI 语音",
   "index.section.aitalk.title": "和 Alex 聊 10 分钟英语",

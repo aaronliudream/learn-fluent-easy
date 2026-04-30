@@ -21,7 +21,6 @@ const stopCurrent = () => {
   if (currentAudio) {
     try {
       currentAudio.pause();
-      currentAudio.currentTime = 0;
     } catch {}
     currentAudio = null;
   }
@@ -43,30 +42,24 @@ const getSharedAudio = () => {
   return sharedAudio;
 };
 
-const primeMobileAudio = () => {
+// Synchronously start playback inside the user-gesture click handler so
+// mobile browsers (especially iOS Safari) don't block the eventual audio.
+// We immediately call play() on a real <audio> with a short silent clip;
+// once the network fetch resolves we just swap the src on the SAME element
+// and call play() again — the gesture has already been "consumed" by the
+// first play(), so the second call works without a fresh user tap.
+const unlockAudioSync = (): HTMLAudioElement | null => {
   const audio = getSharedAudio();
-  if (!audio) return;
+  if (!audio) return null;
   try {
-    audio.muted = true;
-    audio.volume = 0;
+    audio.muted = false;
+    audio.volume = 1;
     audio.src = SILENT_WAV;
-    const played = audio.play();
-    if (played) {
-      played
-        .then(() => {
-          try {
-            audio.pause();
-            audio.currentTime = 0;
-          } catch {}
-          audio.muted = false;
-          audio.volume = 1;
-        })
-        .catch(() => {
-          audio.muted = false;
-          audio.volume = 1;
-        });
-    }
+    audio.load();
+    const p = audio.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
   } catch {}
+  return audio;
 };
 
 // ---------- Browser TTS fallback ----------
@@ -155,14 +148,15 @@ const fetchTTS = async (text: string, voiceId: string, speed: number): Promise<s
   }
 };
 
-const playUrl = (url: string, token: number): Promise<boolean> =>
+const playUrlOn = (
+  audio: HTMLAudioElement,
+  url: string,
+  token: number,
+): Promise<boolean> =>
   new Promise((resolve) => {
     if (token !== speakToken) return resolve(false);
-    const audio = getSharedAudio();
-    if (!audio) return resolve(false);
     try {
       audio.pause();
-      audio.currentTime = 0;
       audio.muted = false;
       audio.volume = 1;
       audio.src = url;
@@ -173,27 +167,47 @@ const playUrl = (url: string, token: number): Promise<boolean> =>
     currentAudio = audio;
     audio.onended = () => resolve(true);
     audio.onerror = () => resolve(false);
-    audio.play().then(() => undefined).catch(() => resolve(false));
+    const p = audio.play();
+    if (p && typeof p.catch === "function") {
+      p.catch(() => resolve(false));
+    }
   });
 
-export const speak = async (text: string): Promise<void> => {
-  if (!text) return;
+// IMPORTANT: `speak()` must be called *synchronously* inside the click
+// handler. We do the audio-element creation + first `.play()` BEFORE any
+// `await`, so mobile browsers see this as a valid user-initiated playback.
+// The async work continues afterwards and just updates the src.
+export const speak = (text: string): Promise<void> => {
+  if (!text) return Promise.resolve();
   const trimmed = text.trim();
-  if (!trimmed) return;
+  if (!trimmed) return Promise.resolve();
   lastSpoken = trimmed;
   stopCurrent();
-  primeMobileAudio();
+
+  // 1) SYNC: grab/create the <audio> and start play() immediately. This
+  //    keeps us inside the user-gesture window.
+  const audio = unlockAudioSync();
   const myToken = speakToken;
   const { voiceId, speed } = loadSettings();
 
-  const url = await fetchTTS(trimmed, voiceId, speed);
-  if (myToken !== speakToken) return;
-
-  if (url) {
-    const played = await playUrl(url, myToken);
-    if (played) return;
+  // 2) Cache hit → swap src right away, no network wait.
+  const cacheKey = `${voiceId}|${speed}|${trimmed}`;
+  const cached = audioCache.get(cacheKey);
+  if (audio && cached) {
+    return playUrlOn(audio, cached, myToken).then(() => undefined);
   }
 
-  // Fallback to browser TTS so users still hear something if ElevenLabs fails.
-  await speakBrowserFallback(trimmed, voiceId, speed, myToken);
+  // 3) Cache miss → fetch then swap src on the same already-unlocked element.
+  return (async () => {
+    const url = await fetchTTS(trimmed, voiceId, speed);
+    if (myToken !== speakToken) return;
+
+    if (audio && url) {
+      const played = await playUrlOn(audio, url, myToken);
+      if (played) return;
+    }
+
+    // Fallback to browser TTS so users still hear something if remote TTS fails.
+    await speakBrowserFallback(trimmed, voiceId, speed, myToken);
+  })();
 };

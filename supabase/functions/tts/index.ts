@@ -3,8 +3,15 @@ import { encode as base64Encode } from "https://deno.land/std@0.168.0/encoding/b
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
+
+const json = (body: Record<string, unknown>, status = 200) =>
+  new Response(JSON.stringify(body), {
+    status,
+    headers: { ...corsHeaders, "Content-Type": "application/json" },
+  });
 
 // Map our existing app voice IDs to ElevenLabs' natural voices.
 const VOICE_MAP: Record<string, string> = {
@@ -18,20 +25,17 @@ const VOICE_MAP: Record<string, string> = {
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response("ok", { headers: corsHeaders });
   }
 
   try {
     const { text, voiceId, speed } = await req.json();
     if (!text) {
-      return new Response(JSON.stringify({ error: "text is required" }), {
-        status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+      return json({ error: "text is required" }, 400);
     }
 
     const ELEVENLABS_API_KEY = Deno.env.get("ELEVENLABS_API_KEY");
-    if (!ELEVENLABS_API_KEY) throw new Error("ELEVENLABS_API_KEY is not configured");
+    if (!ELEVENLABS_API_KEY) return json({ error: "TTS provider is not configured" }, 503);
 
     const selectedVoiceId = VOICE_MAP[voiceId] || VOICE_MAP.alloy;
     const safeSpeed = Math.min(1.15, Math.max(0.82, Number(speed) || 0.95));
@@ -60,32 +64,24 @@ serve(async (req) => {
       const err = await response.text();
       console.error("ElevenLabs TTS error:", response.status, err);
       if (response.status === 429) {
-        return new Response(
-          JSON.stringify({ error: "Rate limit exceeded, please try again later." }),
-          { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
+        return json({ error: "Rate limit exceeded, please try again later.", retryable: true }, 429);
       }
       if (response.status === 402) {
-        return new Response(
-          JSON.stringify({ error: "AI credits exhausted, please add funds to your Lovable AI workspace." }),
-          { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        );
+        return json({ error: "TTS provider credits are exhausted" }, 402);
       }
-      throw new Error(`TTS failed ${response.status}: ${err}`);
+      if (response.status === 401 || response.status === 403) {
+        return json({ error: "TTS provider rejected the configured key" }, 503);
+      }
+      return json({ error: "TTS provider error", retryable: response.status >= 500 }, 502);
     }
 
     const audioBuffer = await response.arrayBuffer();
     const audioContent = base64Encode(audioBuffer);
 
-    return new Response(JSON.stringify({ audioContent, mimeType: "audio/mpeg" }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    return json({ audioContent, mimeType: "audio/mpeg" });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Unknown error";
     console.error("tts error:", msg);
-    return new Response(JSON.stringify({ error: msg }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    return json({ error: "TTS service error" }, 500);
   }
 });

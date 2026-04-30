@@ -4,6 +4,10 @@ import { loadSettings } from "@/lib/voice";
 let lastSpoken = "";
 let speakToken = 0;
 let currentAudio: HTMLAudioElement | null = null;
+let sharedAudio: HTMLAudioElement | null = null;
+
+const SILENT_WAV =
+  "data:audio/wav;base64,UklGRmQGAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YUAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 
 // Cache: key = `${voiceId}|${speed}|${text}` -> data URI
 const audioCache = new Map<string, string>();
@@ -15,7 +19,10 @@ export const getLastSpoken = () => lastSpoken;
 const stopCurrent = () => {
   speakToken += 1;
   if (currentAudio) {
-    try { currentAudio.pause(); } catch {}
+    try {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    } catch {}
     currentAudio = null;
   }
   if (typeof window !== "undefined" && "speechSynthesis" in window) {
@@ -24,6 +31,43 @@ const stopCurrent = () => {
 };
 
 export const stopSpeaking = () => stopCurrent();
+
+const getSharedAudio = () => {
+  if (typeof window === "undefined") return null;
+  if (!sharedAudio) {
+    sharedAudio = new Audio();
+    sharedAudio.preload = "auto";
+    sharedAudio.setAttribute("playsinline", "true");
+    sharedAudio.setAttribute("webkit-playsinline", "true");
+  }
+  return sharedAudio;
+};
+
+const primeMobileAudio = () => {
+  const audio = getSharedAudio();
+  if (!audio) return;
+  try {
+    audio.muted = true;
+    audio.volume = 0;
+    audio.src = SILENT_WAV;
+    const played = audio.play();
+    if (played) {
+      played
+        .then(() => {
+          try {
+            audio.pause();
+            audio.currentTime = 0;
+          } catch {}
+          audio.muted = false;
+          audio.volume = 1;
+        })
+        .catch(() => {
+          audio.muted = false;
+          audio.volume = 1;
+        });
+    }
+  } catch {}
+};
 
 // ---------- Browser TTS fallback ----------
 const VOICE_PREFS: Record<string, string[]> = {
@@ -111,14 +155,25 @@ const fetchTTS = async (text: string, voiceId: string, speed: number): Promise<s
   }
 };
 
-const playUrl = (url: string, token: number): Promise<void> =>
+const playUrl = (url: string, token: number): Promise<boolean> =>
   new Promise((resolve) => {
-    if (token !== speakToken) return resolve();
-    const audio = new Audio(url);
+    if (token !== speakToken) return resolve(false);
+    const audio = getSharedAudio();
+    if (!audio) return resolve(false);
+    try {
+      audio.pause();
+      audio.currentTime = 0;
+      audio.muted = false;
+      audio.volume = 1;
+      audio.src = url;
+      audio.load();
+    } catch {
+      return resolve(false);
+    }
     currentAudio = audio;
-    audio.onended = () => resolve();
-    audio.onerror = () => resolve();
-    audio.play().catch(() => resolve());
+    audio.onended = () => resolve(true);
+    audio.onerror = () => resolve(false);
+    audio.play().then(() => undefined).catch(() => resolve(false));
   });
 
 export const speak = async (text: string): Promise<void> => {
@@ -127,6 +182,7 @@ export const speak = async (text: string): Promise<void> => {
   if (!trimmed) return;
   lastSpoken = trimmed;
   stopCurrent();
+  primeMobileAudio();
   const myToken = speakToken;
   const { voiceId, speed } = loadSettings();
 
@@ -134,8 +190,8 @@ export const speak = async (text: string): Promise<void> => {
   if (myToken !== speakToken) return;
 
   if (url) {
-    await playUrl(url, myToken);
-    return;
+    const played = await playUrl(url, myToken);
+    if (played) return;
   }
 
   // Fallback to browser TTS so users still hear something if ElevenLabs fails.

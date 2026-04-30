@@ -216,6 +216,7 @@ export const speak = (text: string): Promise<void> => {
 // This sounds far more natural than concatenating an entire paragraph and
 // sending it to TTS as one long string (which OpenAI tends to read very
 // fast and without breath pauses).
+let sequenceId = 0;
 export const speakSequence = async (
   sentences: string[],
   opts: { gapMs?: number } = {},
@@ -223,16 +224,16 @@ export const speakSequence = async (
   const gapMs = opts.gapMs ?? 350;
   const list = sentences.map((s) => (s || "").trim()).filter(Boolean);
   if (list.length === 0) return;
-  // Capture token at start; if a new speak() happens, abort the loop.
-  const startToken = ++speakToken;
+  const mySeq = ++sequenceId;
   for (let i = 0; i < list.length; i++) {
-    if (startToken !== speakToken) return;
-    // Re-use speak() but it will bump the token; so we manage our own token here.
-    speakToken = startToken; // re-assert ownership before each call
+    if (mySeq !== sequenceId) return; // a new sequence (or stop) started
     await speak(list[i]);
-    if (startToken !== speakToken) return;
+    if (mySeq !== sequenceId) return;
     if (i < list.length - 1) {
       await new Promise((r) => setTimeout(r, gapMs));
     }
   }
 };
+
+// Bump the sequence id so any in-flight speakSequence loop bails out.
+const cancelSequence = () => { sequenceId += 1; };

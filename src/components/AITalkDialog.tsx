@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, ListChecks, Check, AlertCircle, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
 import { loadSettings } from "@/lib/voice";
+import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
 
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
 
@@ -25,6 +27,7 @@ type Props = {
   unitTitle?: string;
   levelName?: string;
   level?: string; // CEFR like "A1"
+  isGuest?: boolean; // if true, use shorter trial session + show signup CTA
 };
 
 const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
@@ -39,11 +42,12 @@ const REALTIME_VOICE_MAP: Record<string, string> = {
   fable: "verse",
 };
 
-export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level }: Props) {
+export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level, isGuest }: Props) {
   const tt = useT();
+  const sessionLen = isGuest ? GUEST_SESSION_SECONDS : SESSION_DURATION_SEC;
   const [phase, setPhase] = useState<"idle" | "connecting" | "live" | "ending" | "recap">("idle");
   const [transcript, setTranscript] = useState<Turn[]>([]);
-  const [secondsLeft, setSecondsLeft] = useState(SESSION_DURATION_SEC);
+  const [secondsLeft, setSecondsLeft] = useState(sessionLen);
   const [muted, setMuted] = useState(false);
   const [aiSpeaking, setAiSpeaking] = useState(false);
   const [recap, setRecap] = useState<Recap | null>(null);
@@ -87,7 +91,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       cleanup();
       setPhase("idle");
       setTranscript([]);
-      setSecondsLeft(SESSION_DURATION_SEC);
+      setSecondsLeft(sessionLen);
       setMuted(false);
       setRecap(null);
       setRecapLoading(false);
@@ -97,7 +101,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       userTurnByItemId.current.clear();
       assistantTurnByRespId.current.clear();
     }
-  }, [open, cleanup]);
+  }, [open, cleanup, sessionLen]);
 
   const requestRecap = useCallback(async () => {
     const turns = transcriptSnapshot.current.filter(t => t.text && !t.pending);
@@ -301,14 +305,18 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       await pc.setRemoteDescription({ type: "answer", sdp: answerSdp });
 
       setPhase("live");
-      setSecondsLeft(SESSION_DURATION_SEC);
+      setSecondsLeft(sessionLen);
+      // Count this as a used trial for guests (only on successful connect)
+      if (isGuest) {
+        try { incrementGuestTrials(); } catch { /* noop */ }
+      }
     } catch (e: any) {
       console.error("startCall failed", e);
       toast.error(e?.message || "Failed to connect to AI");
       cleanup();
       setPhase("idle");
     }
-  }, [lessonTitle, unitTitle, levelName, level, handleRealtimeEvent, cleanup]);
+  }, [lessonTitle, unitTitle, levelName, level, handleRealtimeEvent, cleanup, sessionLen, isGuest]);
 
   const toggleMute = useCallback(() => {
     const stream = localStreamRef.current;
@@ -371,7 +379,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         {/* Body */}
         <div className="flex-1 overflow-y-auto p-4">
           {phase === "idle" && (
-            <IdleSplash lessonTitle={lessonTitle} levelName={levelName} onStart={startCall} />
+            <IdleSplash lessonTitle={lessonTitle} levelName={levelName} onStart={startCall} isGuest={isGuest} />
           )}
 
           {(phase === "connecting" || phase === "live" || phase === "ending") && (
@@ -379,6 +387,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
           )}
 
           {phase === "recap" && (
+            <>
+            {isGuest && <GuestSignupCTA />}
             <RecapView
               recap={recap}
               loading={recapLoading}
@@ -389,6 +399,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
               setQuizSubmitted={setQuizSubmitted}
               quizScore={quizScore}
             />
+            </>
           )}
         </div>
 
@@ -444,16 +455,26 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   );
 }
 
-function IdleSplash({ lessonTitle, levelName, onStart }: { lessonTitle?: string; levelName?: string; onStart: () => void }) {
+function IdleSplash({ lessonTitle, levelName, onStart, isGuest }: { lessonTitle?: string; levelName?: string; onStart: () => void; isGuest?: boolean }) {
+  const minutes = isGuest ? 3 : 10;
   return (
     <div className="flex h-full flex-col items-center justify-center text-center">
       <div className="mb-5 grid size-24 place-items-center rounded-full bg-gradient-to-br from-primary/30 to-primary/5">
         <Phone className="size-10 text-primary" />
       </div>
-      <h3 className="text-xl font-extrabold"><T>和 Alex 来一段 10 分钟美式英语对话</T></h3>
+      <h3 className="text-xl font-extrabold">
+        {isGuest
+          ? <T>免费试用 · 和 Alex 聊 3 分钟</T>
+          : <T>和 Alex 来一段 10 分钟美式英语对话</T>}
+      </h3>
       <p className="mt-2 max-w-md text-sm text-muted-foreground">
         <T>Alex 是一位地道的加州年轻人。他只会用英语和你聊天，结束后会逐句翻译你的回答，给出地道说法和小测验。</T>
       </p>
+      {isGuest && (
+        <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-700">
+          ✨ <T>无需注册即可体验</T> · <T>登录后可享 10 分钟完整对话</T>
+        </div>
+      )}
       {lessonTitle && (
         <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary">
           <BookOpen className="size-3.5" />
@@ -469,7 +490,7 @@ function IdleSplash({ lessonTitle, levelName, onStart }: { lessonTitle?: string;
         onClick={onStart}
         className="mt-7 flex items-center gap-2 rounded-full bg-grad-title px-7 py-3.5 text-base font-bold text-white shadow-tile transition hover:opacity-95"
       >
-        <Mic className="size-5" /> <T>开始对话</T>
+        <Mic className="size-5" /> {isGuest ? <T>免费试一下</T> : <T>开始对话</T>}
       </button>
       <p className="mt-3 text-[11px] text-muted-foreground">
         <T>需要麦克风权限 · 强烈建议戴耳机</T>
@@ -478,6 +499,29 @@ function IdleSplash({ lessonTitle, levelName, onStart }: { lessonTitle?: string;
   );
 }
 
+function GuestSignupCTA() {
+  return (
+    <div className="mb-5 overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/15 via-primary/5 to-transparent p-4">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-1.5 text-sm font-bold">
+            <Sparkles className="size-4 text-primary" />
+            <T>感觉怎么样？</T>
+          </div>
+          <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+            <T>登录账号即可解锁完整 10 分钟对话、保存复盘记录、跨设备同步学习进度。</T>
+          </p>
+        </div>
+        <Link
+          to="/auth"
+          className="rounded-full bg-grad-title px-4 py-2 text-xs font-bold text-white shadow-tile transition hover:opacity-95"
+        >
+          <T>登录解锁完整版</T> →
+        </Link>
+      </div>
+    </div>
+  );
+}
 function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[]; aiSpeaking: boolean; phase: string }) {
   const endRef = useRef<HTMLDivElement>(null);
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [transcript]);

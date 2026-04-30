@@ -6,6 +6,8 @@ import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
 import { loadSettings } from "@/lib/voice";
 import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
+import { resolveProvider, type AIProvider } from "@/lib/aiProvider";
+import { QwenRealtimeSession, QWEN_VOICE_MAP } from "@/lib/qwenRealtime";
 
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
 
@@ -32,6 +34,38 @@ type Props = {
 
 const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
 
+// Builds the Qwen instructions prompt (mirror of what the realtime-token
+// edge function does for OpenAI, kept on the client because Qwen receives
+// session.update directly from the browser via the proxy).
+function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string }) {
+  const { lessonTitle, unitTitle, levelName, level } = opts;
+  const levelHint = (() => {
+    switch ((level || "").toUpperCase()) {
+      case "A1": return "Use very simple short sentences (5-8 words), only the most common 1000 English words.";
+      case "A2": return "Use simple sentences with basic past/future tenses, avoid idioms.";
+      case "B1": return "Use natural conversational English, common idioms ok.";
+      case "B2": return "Speak as you would to a native, full vocabulary including slang.";
+      case "C1":
+      case "C2": return "Speak as a native Californian to another native, full pace and slang.";
+      default:   return "Adapt your level to the learner.";
+    }
+  })();
+  const hook = lessonTitle
+    ? `The learner just finished a lesson called "${lessonTitle}"${unitTitle ? ` in the unit "${unitTitle}"` : ""}${levelName ? ` (${levelName})` : ""}. Open by warmly bringing up that topic.`
+    : `Open with a friendly hello and ask what they want to chat about (suggest 2-3 fun options).`;
+  return `You are Alex, a warm twenty-something native English speaker from California chatting with an English learner.
+
+ABSOLUTE RULES:
+- ONLY speak English. Never switch to any other language. If they speak another language, gently say "Let's try that in English — give it a shot!" and wait.
+- Sound like a real American friend, not a teacher. Use contractions and natural rhythm.
+- Keep YOUR turns short (1-3 sentences). Ask one question, then let them talk.
+- Don't correct mistakes mid-conversation; we review at the end.
+
+LEVEL: ${levelHint}
+
+CONTEXT: ${hook}`;
+}
+
 // Map our 6 OpenAI TTS voices onto the 8 Realtime voices (closest match).
 const REALTIME_VOICE_MAP: Record<string, string> = {
   nova: "shimmer",
@@ -55,12 +89,14 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const [recapError, setRecapError] = useState<string | null>(null);
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const [provider, setProvider] = useState<AIProvider | null>(null);
 
   const pcRef = useRef<RTCPeerConnection | null>(null);
   const localStreamRef = useRef<MediaStream | null>(null);
   const dataChannelRef = useRef<RTCDataChannel | null>(null);
   const audioElRef = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<number | null>(null);
+  const qwenSessionRef = useRef<QwenRealtimeSession | null>(null);
   // Stable id buckets so streamed deltas land on the right turn
   const userTurnByItemId = useRef<Map<string, number>>(new Map());
   const assistantTurnByRespId = useRef<Map<string, number>>(new Map());
@@ -79,6 +115,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     if (audioElRef.current) {
       try { audioElRef.current.pause(); audioElRef.current.srcObject = null; } catch { /* noop */ }
     }
+    try { qwenSessionRef.current?.close(); } catch { /* noop */ }
+    qwenSessionRef.current = null;
     pcRef.current = null;
     localStreamRef.current = null;
     dataChannelRef.current = null;
@@ -235,6 +273,11 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const startCall = useCallback(async () => {
     setPhase("connecting");
     try {
+      // 0. Decide which provider works on this network. Cached for 6h.
+      const chosen = await resolveProvider();
+      setProvider(chosen);
+      console.log(`[AITalk] using provider: ${chosen}`);
+
       // 1. Get mic — turn ON browser-side noise suppression, echo cancel,
       // and auto-gain so background noise (fan, traffic, kids) doesn't get
       // sent to OpenAI's VAD and cause Alex to cut in or get triggered.
@@ -246,6 +289,27 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         } as MediaTrackConstraints,
       });
       localStreamRef.current = stream;
+
+      // === Qwen path (mainland China) ===
+      if (chosen === "qwen") {
+        const voicePref = loadSettings().voiceId;
+        const qwenVoice = QWEN_VOICE_MAP[voicePref] || "Cherry";
+        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level });
+        const session = new QwenRealtimeSession({
+          cfg: { instructions, voice: qwenVoice, inputSampleRate: 16000, outputSampleRate: 24000 },
+          onEvent: (evt) => handleRealtimeEvent(evt),
+          onSpeakingChange: (s) => setAiSpeaking(s),
+          onConnected: () => {
+            setPhase("live");
+            setSecondsLeft(sessionLen);
+            if (isGuest) { try { incrementGuestTrials(); } catch { /* noop */ } }
+          },
+          onError: (msg) => toast.error(msg),
+        });
+        qwenSessionRef.current = session;
+        await session.start(stream);
+        return;
+      }
 
       // 2. Mint ephemeral key
       const voicePref = loadSettings().voiceId;
@@ -325,6 +389,11 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       setPhase("idle");
     }
   }, [lessonTitle, unitTitle, levelName, level, handleRealtimeEvent, cleanup, sessionLen, isGuest]);
+
+  // Mute toggle needs to inform the Qwen session too (it gates uploads).
+  useEffect(() => {
+    qwenSessionRef.current?.setMuted(muted);
+  }, [muted]);
 
   const toggleMute = useCallback(() => {
     const stream = localStreamRef.current;

@@ -47,7 +47,7 @@ const mkOpenLessons = (titles: string[], doneCount = 0): Lesson[] =>
     status: i < doneCount ? "done" : "current",
   }));
 
-export const LEVELS: Level[] = [
+const LEVELS_RAW: Level[] = [
   {
     id: 1,
     name: "LEVEL 1",
@@ -215,6 +215,31 @@ export const LEVELS: Level[] = [
   { id: 5, name: "LEVEL 5", unitsCount: 18, gradient: "bg-grad-5", locked: true, units: [] },
   { id: 6, name: "LEVEL 6", unitsCount: 25, gradient: "bg-grad-6", locked: true, units: [] },
 ];
+
+/**
+ * Trial gating: within every unlocked level, only the very first lesson
+ * (Unit 1, Lesson 1) stays open. Every other lesson in that level is locked
+ * until the learner unlocks the full course.
+ */
+const applyTrialLock = (levels: Level[]): Level[] =>
+  levels.map((lv) => {
+    if (lv.locked || lv.units.length === 0) return lv;
+    return {
+      ...lv,
+      units: lv.units.map((u, ui) => ({
+        ...u,
+        lessons: u.lessons.map((l, li) => {
+          const isFirst = ui === 0 && li === 0;
+          return {
+            ...l,
+            status: isFirst ? "current" : "locked",
+          };
+        }),
+      })),
+    };
+  });
+
+export const LEVELS: Level[] = applyTrialLock(LEVELS_RAW);
 
 export const LESSON_STEPS = [
   { id: 1, cn: "词汇学习", en: "Vocabulary", icon: "BookOpen" },

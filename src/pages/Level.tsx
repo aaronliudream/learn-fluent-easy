@@ -135,6 +135,7 @@ const Level = () => {
                         : "bg-secondary text-muted-foreground";
                   const prev = idx > 0 ? u.lessons[idx - 1] : null;
                   const connectorDone = prev && prev.status === "done";
+                  const locked = l.status === "locked";
                   return (
                     <div key={l.id} className="flex items-center">
                       {idx > 0 && (
@@ -144,12 +145,15 @@ const Level = () => {
                         />
                       )}
                       <Link
-                        to={`/level/${level.id}/unit/${u.id}/lesson/${l.id}`}
-                        onClick={(e) => e.stopPropagation()}
-                        className={`grid size-8 place-items-center rounded-lg text-xs font-bold transition hover:scale-110 ${cls}`}
+                        to={locked ? "" : `/level/${level.id}/unit/${u.id}/lesson/${l.id}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (locked) e.preventDefault();
+                        }}
+                        className={`grid size-8 place-items-center rounded-lg text-xs font-bold transition ${locked ? "cursor-not-allowed opacity-60" : "hover:scale-110"} ${cls}`}
                         aria-label={t(`课程 ${l.id}${l.status === "done" ? "（已完成）" : l.status === "current" ? "（进行中）" : ""}`)}
                       >
-                        {l.status === "done" ? <Check className="size-4" strokeWidth={3} /> : l.id}
+                        {l.status === "done" ? <Check className="size-4" strokeWidth={3} /> : locked ? <Lock className="size-3.5" /> : l.id}
                       </Link>
                     </div>
                   );

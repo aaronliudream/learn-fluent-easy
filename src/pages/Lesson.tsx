@@ -65,6 +65,8 @@ const STEP_ICONS = {
   Mic,
 } as const;
 
+const NATIVE_HELPER_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
+
 const sanitizeUnsupportedNarratorNames = (content: LessonContent): LessonContent => {
   const readingText = (content.reading ?? []).map((r) => r.en).join(" ");
   if (/\bAnna\b/.test(readingText)) return content;
@@ -108,6 +110,7 @@ const SectionHeader = ({
 
 const Lesson = () => {
   const tt = useT();
+  const nativeText = (text: string) => NATIVE_HELPER_RE.test(text) ? tt(text) : text;
   const { levelId, unitId, lessonId } = useParams();
   const lesson = findLesson(Number(levelId), Number(unitId), Number(lessonId));
   const [activeStep, setActiveStep] = useState(1);

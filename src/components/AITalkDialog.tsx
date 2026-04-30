@@ -4,7 +4,6 @@ import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, 
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
-import { loadSettings } from "@/lib/voice";
 import { getAlexVoice } from "@/lib/alexVoice";
 import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
 import { resolveProvider, type AIProvider } from "@/lib/aiProvider";

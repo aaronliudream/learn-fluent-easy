@@ -17,7 +17,7 @@ type Catalog = Partial<Record<StringKey, string>>;
 
 const CJK_TEXT_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const HANGUL_TEXT_RE = /[\uac00-\ud7af]/;
-const CJK_LANGS = new Set<LangCode>(["zh", "ja", "ko"]);
+const JAPANESE_TEXT_RE = /[\u3040-\u30ff]/;
 
 // Strip any HTML tags (e.g. <b>, </b>, <i>) the translator may have added,
 // decode common entities, and collapse whitespace. Translations are rendered
@@ -37,8 +37,11 @@ function stripHtml(value: string): string {
 }
 
 function hasWrongScript(lang: LangCode, value: string | undefined) {
-  if (lang === "ko") return Boolean(value && CJK_TEXT_RE.test(value) && !HANGUL_TEXT_RE.test(value));
-  return Boolean(value && !CJK_LANGS.has(lang) && CJK_TEXT_RE.test(value));
+  if (!value) return false;
+  if (lang === "zh") return false;
+  if (lang === "ja") return CJK_TEXT_RE.test(value) && !JAPANESE_TEXT_RE.test(value);
+  if (lang === "ko") return CJK_TEXT_RE.test(value) && !HANGUL_TEXT_RE.test(value);
+  return CJK_TEXT_RE.test(value);
 }
 
 function isUsableTranslation(lang: LangCode, source: string, value: string | undefined) {
@@ -46,6 +49,7 @@ function isUsableTranslation(lang: LangCode, source: string, value: string | und
   const cleaned = stripHtml(value);
   if (!cleaned) return false;
   if (lang !== "zh" && cleaned.trim() === stripHtml(source).trim()) return false;
+  if (lang === "ja" && CJK_TEXT_RE.test(source) && !JAPANESE_TEXT_RE.test(cleaned)) return false;
   if (lang === "ko" && CJK_TEXT_RE.test(source) && !HANGUL_TEXT_RE.test(cleaned)) return false;
   return !hasWrongScript(lang, cleaned);
 }

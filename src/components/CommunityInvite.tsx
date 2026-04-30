@@ -72,7 +72,7 @@ export function CommunityInvite() {
             </h2>
             <p className="mt-1 text-xs leading-relaxed text-muted-foreground md:text-sm">
               {tr(
-                `集满 ${GOAL} 人即开群。¥${PRICE_RMB} 解锁 ${TRIAL_LESSONS} 节体验课，并由我亲自拉你进群一起学英语。`,
+                `集满 ${GOAL} 人即开群。¥${PRICE_RMB} 解锁 ${TRIAL_LESSONS} 节体验课，我们会亲自拉你进群，一起学英语。`,
                 `We open the group when we reach ${GOAL} members. Pay ¥${PRICE_RMB} to unlock ${TRIAL_LESSONS} trial lessons and get personally added by me.`,
               )}
             </p>

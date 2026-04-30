@@ -23,6 +23,7 @@ type QuizQ = {
   answer_index: number;
   explanation_cn: string;
 };
+type Review = { summary_cn: string; turns: RecapTurn[] };
 type Recap = { summary_cn: string; turns: RecapTurn[]; quiz: QuizQ[] };
 
 type Props = {
@@ -99,6 +100,10 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const [recap, setRecap] = useState<Recap | null>(null);
   const [recapLoading, setRecapLoading] = useState(false);
   const [recapError, setRecapError] = useState<string | null>(null);
+  // Quiz arrives a few seconds after the review so it gets its own
+  // loading flag — the review can render immediately while the quiz spins.
+  const [quizLoading, setQuizLoading] = useState(false);
+  const [quizError, setQuizError] = useState<string | null>(null);
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [provider, setProvider] = useState<AIProvider | null>(null);
@@ -146,6 +151,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       setRecap(null);
       setRecapLoading(false);
       setRecapError(null);
+      setQuizLoading(false);
+      setQuizError(null);
       setQuizAnswers({});
       setQuizSubmitted(false);
       userTurnByItemId.current.clear();
@@ -162,20 +169,51 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     }
     setPhase("recap");
     setRecapLoading(true);
+    setQuizLoading(true);
     setRecapError(null);
-    try {
-      const { data, error } = await supabase.functions.invoke("chat-recap", {
-        body: { transcript: turns, lessonTitle },
-      });
-      if (error) throw error;
-      if (data?.error) throw new Error(data.error);
-      setRecap(data.recap as Recap);
-    } catch (e: any) {
-      console.error("recap failed", e);
-      setRecapError(e?.message || "复盘生成失败");
-    } finally {
-      setRecapLoading(false);
-    }
+    setQuizError(null);
+
+    // Fire BOTH calls in parallel. The review (translations + tips) is
+    // small and comes back in ~3-6s — render it immediately so the user
+    // can start reading. The quiz takes longer (~10-20s) and lands later;
+    // by the time the user finishes reading the review, the quiz is ready.
+    const reviewPromise = supabase.functions
+      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "review" } })
+      .then(({ data, error }) => {
+        if (error) throw error;
+        if (data?.error) throw new Error(data.error);
+        const review = data.recap as Review;
+        setRecap((prev) => ({
+          summary_cn: review.summary_cn,
+          turns: review.turns,
+          quiz: prev?.quiz ?? [],
+        }));
+      })
+      .catch((e: any) => {
+        console.error("review failed", e);
+        setRecapError(e?.message || "复盘生成失败");
+      })
+      .finally(() => setRecapLoading(false));
+
+    const quizPromise = supabase.functions
+      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "quiz" } })
+      .then(({ data, error }) => {
+        if (error) throw error;
+        if (data?.error) throw new Error(data.error);
+        const quiz = (data.recap?.quiz ?? []) as QuizQ[];
+        setRecap((prev) => ({
+          summary_cn: prev?.summary_cn ?? "",
+          turns: prev?.turns ?? [],
+          quiz,
+        }));
+      })
+      .catch((e: any) => {
+        console.error("quiz failed", e);
+        setQuizError(e?.message || "测试题生成失败");
+      })
+      .finally(() => setQuizLoading(false));
+
+    await Promise.allSettled([reviewPromise, quizPromise]);
   }, [lessonTitle]);
 
   const endCall = useCallback(async () => {
@@ -457,7 +495,13 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
                 {phase === "live" && (<><T>剩余时间</T> {mmss} · {aiSpeaking ? <T>Alex 在说话</T> : muted ? <T>麦克风已静音</T> : <T>请说英语</T>}</>)}
                 {phase === "connecting" && <T>正在连接 AI…</T>}
                 {phase === "ending" && <T>结束通话…</T>}
-                {phase === "recap" && (recapLoading ? <T>AI 正在生成讲解…</T> : <T>查看每句翻译并完成测试</T>)}
+                {phase === "recap" && (
+                  recapLoading
+                    ? <T>AI 正在生成讲解…</T>
+                    : quizLoading
+                      ? <T>讲解已就绪 · 测试题马上来</T>
+                      : <T>查看每句翻译并完成测试</T>
+                )}
                 {phase === "idle" && <T>10 分钟全英语真人对话练习</T>}
               </p>
             </div>
@@ -493,6 +537,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
               recap={recap}
               loading={recapLoading}
               error={recapError}
+              quizLoading={quizLoading}
+              quizError={quizError}
               quizAnswers={quizAnswers}
               setQuizAnswers={setQuizAnswers}
               quizSubmitted={quizSubmitted}
@@ -668,28 +714,34 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
 }
 
 function RecapView({
-  recap, loading, error, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore,
+  recap, loading, error, quizLoading, quizError, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore,
 }: {
   recap: Recap | null;
   loading: boolean;
   error: string | null;
+  quizLoading: boolean;
+  quizError: string | null;
   quizAnswers: Record<number, number>;
   setQuizAnswers: (v: Record<number, number>) => void;
   quizSubmitted: boolean;
   setQuizSubmitted: (v: boolean) => void;
   quizScore: { correct: number; total: number };
 }) {
-  if (loading) {
+  // Only show the full-screen loader when neither part has arrived yet.
+  // As soon as the (faster) review lands, we render it and the quiz block
+  // gets its own inline loader below.
+  const reviewReady = !!recap && (recap.turns.length > 0 || !!recap.summary_cn);
+  if (loading && !reviewReady) {
     return (
       <div className="flex h-full flex-col items-center justify-center text-center">
         <Loader2 className="mb-3 size-8 animate-spin text-primary" />
         <p className="text-sm font-medium"><T>AI 正在分析你刚才的对话…</T></p>
-        <p className="mt-1 text-xs text-muted-foreground"><T>通常需要 10–20 秒</T></p>
+        <p className="mt-1 text-xs text-muted-foreground"><T>几秒钟就好，先出讲解再出测试</T></p>
       </div>
     );
   }
 
-  if (error) {
+  if (error && !reviewReady) {
     return (
       <div className="flex h-full flex-col items-center justify-center text-center">
         <AlertCircle className="mb-3 size-8 text-rose-500" />
@@ -743,12 +795,28 @@ function RecapView({
       <section>
         <h3 className="mb-3 flex items-center gap-2 text-base font-bold">
           <ListChecks className="size-4 text-primary" /> <T>词汇短语测试</T>
-          {Object.keys(quizAnswers).length > 0 && (
+          {recap.quiz.length > 0 && Object.keys(quizAnswers).length > 0 && (
             <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-bold text-emerald-700">
               <Trophy className="size-3.5" /> {quizScore.correct} / {recap.quiz.length}
             </span>
           )}
         </h3>
+
+        {recap.quiz.length === 0 && quizLoading && (
+          <div className="flex items-center gap-3 rounded-2xl border border-dashed border-primary/30 bg-primary/5 p-4">
+            <Loader2 className="size-5 shrink-0 animate-spin text-primary" />
+            <div>
+              <p className="text-sm font-semibold"><T>正在出 10 道词汇测试题…</T></p>
+              <p className="mt-0.5 text-xs text-muted-foreground"><T>你可以先看上面的讲解，测试很快就好</T></p>
+            </div>
+          </div>
+        )}
+
+        {recap.quiz.length === 0 && !quizLoading && quizError && (
+          <div className="rounded-2xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700">
+            <T>测试题生成失败：</T>{quizError}
+          </div>
+        )}
 
         <ol className="space-y-4">
           {recap.quiz.map((q, i) => {

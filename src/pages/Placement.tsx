@@ -248,7 +248,7 @@ const Placement = () => {
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <Target className="mb-1 size-5" />
-              <div className="text-lg font-bold">{TOTAL_QS} Q</div>
+              <div className="text-lg font-bold">~{QS_MIN_PER_SECTION * 4}–{TOTAL_QS} Q</div>
               <div className="text-[11px] text-white/80"><T>四模块自适应</T></div>
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
@@ -272,7 +272,7 @@ const Placement = () => {
                   </div>
                   <div>
                     <div className="font-bold"><T>{m.cn}</T></div>
-                    <div className="text-xs text-muted-foreground">{QS_PER_SECTION} · <T>难度自动调节</T></div>
+                    <div className="text-xs text-muted-foreground">{QS_MIN_PER_SECTION}–{QS_MAX_PER_SECTION} · <T>难度自动调节</T></div>
                   </div>
                 </div>
               );

@@ -15,6 +15,7 @@ import {
   PenLine,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
+import { FloatingBackButton } from "@/components/FloatingBackButton";
 import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
 import { speak } from "@/lib/speak";

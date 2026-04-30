@@ -55,7 +55,6 @@ import {
 } from "@/lib/guestProgress";
 import { AITalkDialog } from "@/components/AITalkDialog";
 import { Phone } from "lucide-react";
-import { LoginRequiredButton } from "@/components/LoginRequiredButton";
 
 const STEP_ICONS = {
   BookOpen,

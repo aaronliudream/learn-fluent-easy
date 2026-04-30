@@ -570,7 +570,7 @@ const Lesson = () => {
       <div className="mb-4 flex justify-start">
         <button
           type="button"
-          onClick={() => speakSequence(content.reading.map((r) => r.en), { gapMs: 450 })}
+          onClick={() => speakSequence(content.reading.map((r) => r.en), { gapMs: 150 })}
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/20"
         >
           <Volume2 className="size-4" />
@@ -807,7 +807,7 @@ const Lesson = () => {
               </div>
             ))}
             <button
-              onClick={() => speakSequence(content.reading.map((r) => r.en), { gapMs: 450 })}
+              onClick={() => speakSequence(content.reading.map((r) => r.en), { gapMs: 150 })}
               className="w-full rounded-2xl bg-grad-title py-3 font-semibold text-white shadow-tile"
             >
               ▶ <T>播放整篇朗读</T>

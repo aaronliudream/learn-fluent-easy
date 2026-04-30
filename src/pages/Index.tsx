@@ -1,4 +1,4 @@
-import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase } from "lucide-react";
+import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -58,6 +58,14 @@ const Index = () => {
   const hasProgress = progress.completedLessons.length > 0 || progress.studyMinutes > 0;
 
   const sections = [
+    {
+      to: "/talk",
+      icon: Mic,
+      eyebrow: "AI VOICE",
+      title: "和 Alex 聊 10 分钟英语",
+      desc: "地道美国年轻人 · 全英文真人对话 · 结束自动双语讲解 + 词汇测试",
+      gradient: "from-amber-500 via-orange-500 to-rose-500",
+    },
     {
       to: "/placement",
       icon: Award,

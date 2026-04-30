@@ -243,15 +243,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
           echoCancellation: true,
           noiseSuppression: true,
           autoGainControl: true,
-          // @ts-expect-error - chromium-specific hint, harmless elsewhere
-          googHighpassFilter: true,
-          // @ts-expect-error
-          googAutoGainControl: true,
-          // @ts-expect-error
-          googNoiseSuppression: true,
-          // @ts-expect-error
-          googEchoCancellation: true,
-        },
+        } as MediaTrackConstraints,
       });
       localStreamRef.current = stream;
 

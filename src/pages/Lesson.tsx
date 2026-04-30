@@ -31,7 +31,9 @@ import PREGENERATED_LESSONS from "@/data/aiLessons.json";
 
 const PREGEN_MAP = PREGENERATED_LESSONS as unknown as Record<string, LessonContent>;
 import { PageHeader } from "@/components/PageHeader";
+import { FloatingBackButton } from "@/components/FloatingBackButton";
 import { speak, speakSequence } from "@/lib/speak";
+import { useScrollToActive } from "@/lib/useScrollToActive";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -222,6 +224,9 @@ const Lesson = () => {
   };
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [activeReadingIdx, setActiveReadingIdx] = useState<number>(-1);
+  // Auto-scroll the currently-spoken paragraph into the center of the screen
+  // so the user never has to manually scroll while audio is playing.
+  const registerReadingRef = useScrollToActive(activeReadingIdx >= 0 ? activeReadingIdx : null);
 
   const playReadingAll = () => {
     if (!content) return;
@@ -788,6 +793,7 @@ const Lesson = () => {
               return (
               <div
                 key={i}
+                ref={registerReadingRef(i) as any}
                 className={`grid grid-cols-[28px_1fr] gap-x-4 rounded-2xl border p-5 transition md:grid-cols-[36px_1fr_1fr] md:gap-x-6 ${
                   isActive
                     ? "border-primary/50 bg-primary/10 shadow-sm"
@@ -1345,6 +1351,9 @@ const Lesson = () => {
         level={["A1","A2","B1","B2","C1","C2"][Number(levelId) - 1] || undefined}
         isGuest={!authedUser}
       />
+
+      <FloatingBackButton to={`/level/${levelId}/unit/${unitId}`} />
+      <div className="h-24" />
     </main>
   );
 };

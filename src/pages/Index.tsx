@@ -22,6 +22,25 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
 
+/**
+ * Small flag-like badge that renders the 2-letter language code in a pill.
+ * Avoids relying on emoji flags which don't render on many systems
+ * (notably Windows shows "us" / "cn" letters instead of a flag).
+ */
+const LANG_BADGE_STYLES: Record<string, string> = {
+  en: "bg-gradient-to-br from-blue-600 to-red-600 text-white",
+  zh: "bg-gradient-to-br from-red-600 to-yellow-400 text-white",
+};
+const LangBadge = ({ code }: { code: string }) => (
+  <span
+    className={`inline-grid h-7 w-9 place-items-center rounded-md text-[11px] font-black uppercase tracking-tight shadow-sm ring-1 ring-black/10 ${
+      LANG_BADGE_STYLES[code] ?? "bg-secondary text-foreground"
+    }`}
+  >
+    {code === "en" ? "EN" : code === "zh" ? "中" : code.toUpperCase()}
+  </span>
+);
+
 const Index = () => {
   const { t } = useI18n();
   const { language: targetLang, setLanguage: setTargetLang } = useTargetLanguage();

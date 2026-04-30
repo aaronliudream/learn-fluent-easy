@@ -1,6 +1,6 @@
 // Takes the full transcript of a finished AI voice chat and returns:
 //   1. A bilingual breakdown of every user turn (English + Chinese + tips)
-//   2. 5 multiple-choice quiz questions targeting high-school+ level
+//   2. 10 multiple-choice quiz questions targeting high-school+ level
 //      vocabulary / phrases that actually appeared in the conversation
 //
 // Uses GPT-5 via Lovable AI Gateway (no extra API key needed).
@@ -45,7 +45,7 @@ serve(async (req) => {
 
 1) A bilingual review of EVERY learner turn: original English, faithful Chinese translation, and 1-2 sentences of *specific* coaching (grammar fixes, more natural alternatives, pronunciation/word-choice tips). If a learner turn is perfect, say so briefly. Don't pad.
 
-2) Five multiple-choice quiz questions that test useful vocabulary, idioms, or phrasal verbs that ACTUALLY APPEARED in the conversation, at Chinese senior-high-school level or above (think: B1-C1 / CET-4 to CET-6 / TOEFL). Each question must:
+2) TEN (10) multiple-choice quiz questions that test useful vocabulary, idioms, or phrasal verbs that ACTUALLY APPEARED in the conversation, at Chinese senior-high-school level or above (think: B1-C1 / CET-4 to CET-6 / TOEFL). You MUST return exactly 10 questions — if the conversation is short, draw from any non-trivial words or phrases that appeared (including from Alex's lines). Each question must:
    - Quote the source sentence (English) where the word/phrase appeared
    - Ask about the meaning IN CHINESE
    - Have 4 plausible Chinese options where only one is correct

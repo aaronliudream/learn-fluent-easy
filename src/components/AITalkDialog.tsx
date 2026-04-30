@@ -698,11 +698,15 @@ function RecapView({
           <ul className="space-y-3">
             {recap.turns.map((t, i) => (
               <li key={i} className="rounded-2xl border border-border bg-card p-4 shadow-sm">
-                <div className="text-sm font-semibold text-foreground">"{t.en}"</div>
-                <div className="mt-1 text-sm text-muted-foreground">{t.cn}</div>
+                <div className="rounded-xl border-l-4 border-sky-500 bg-sky-50 p-2.5 text-sm font-semibold text-sky-900">
+                  <span className="mr-1 text-[10px] font-bold uppercase tracking-wider text-sky-600">You said</span>
+                  <div className="mt-1">"{t.en}"</div>
+                </div>
+                <div className="mt-2 text-sm text-muted-foreground">{t.cn}</div>
                 {t.better_en && t.better_en.trim() && (
-                  <div className="mt-2 rounded-xl bg-emerald-50 p-2.5 text-sm text-emerald-700">
-                    ✨ <span className="font-semibold"><T>更地道</T>:</span> {t.better_en}
+                  <div className="mt-2 rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-2.5 text-sm text-emerald-800">
+                    <span className="mr-1 text-[10px] font-bold uppercase tracking-wider text-emerald-600">✨ <T>更地道</T></span>
+                    <div className="mt-1 font-semibold">{t.better_en}</div>
                   </div>
                 )}
                 <div className="mt-2 text-xs leading-relaxed text-foreground/70">{t.tip_cn}</div>

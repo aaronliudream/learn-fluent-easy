@@ -6,7 +6,7 @@ import { T } from "@/i18n/T";
  * Low-key "Buy me a coffee" donation button.
  * Update DONATION_URL once you have your real Buy Me a Coffee / Ko-fi link.
  */
-const DONATION_URL = "https://www.buymeacoffee.com/fluentpath";
+const DONATION_URL = "https://buymeacoffee.com/aarondream";
 
 type Props = {
   variant?: "inline" | "footer";

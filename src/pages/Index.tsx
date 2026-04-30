@@ -67,6 +67,14 @@ const Index = () => {
       gradient: "from-amber-500 via-orange-500 to-rose-500",
     },
     {
+      to: `/levels`,
+      icon: GraduationCap,
+      eyebrow: t("index.section.path.eyebrow"),
+      title: t("index.section.path.title"),
+      desc: t("index.section.path.desc", { count: LEVELS.length }),
+      gradient: "from-blue-600 via-indigo-600 to-purple-600",
+    },
+    {
       to: "/placement",
       icon: Award,
       eyebrow: t("index.section.placement.eyebrow"),
@@ -97,14 +105,6 @@ const Index = () => {
       title: t("index.section.workplace.title"),
       desc: t("index.section.workplace.desc", { count: WORK_CATEGORIES.length }),
       gradient: "from-slate-800 via-slate-700 to-amber-600",
-    },
-    {
-      to: `/levels`,
-      icon: GraduationCap,
-      eyebrow: t("index.section.path.eyebrow"),
-      title: t("index.section.path.title"),
-      desc: t("index.section.path.desc", { count: LEVELS.length }),
-      gradient: "from-blue-600 via-indigo-600 to-purple-600",
     },
   ];
 

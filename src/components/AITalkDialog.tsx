@@ -531,6 +531,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
               recap={recap}
               loading={recapLoading}
               error={recapError}
+              quizLoading={quizLoading}
+              quizError={quizError}
               quizAnswers={quizAnswers}
               setQuizAnswers={setQuizAnswers}
               quizSubmitted={quizSubmitted}
@@ -706,28 +708,34 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
 }
 
 function RecapView({
-  recap, loading, error, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore,
+  recap, loading, error, quizLoading, quizError, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore,
 }: {
   recap: Recap | null;
   loading: boolean;
   error: string | null;
+  quizLoading: boolean;
+  quizError: string | null;
   quizAnswers: Record<number, number>;
   setQuizAnswers: (v: Record<number, number>) => void;
   quizSubmitted: boolean;
   setQuizSubmitted: (v: boolean) => void;
   quizScore: { correct: number; total: number };
 }) {
-  if (loading) {
+  // Only show the full-screen loader when neither part has arrived yet.
+  // As soon as the (faster) review lands, we render it and the quiz block
+  // gets its own inline loader below.
+  const reviewReady = !!recap && (recap.turns.length > 0 || !!recap.summary_cn);
+  if (loading && !reviewReady) {
     return (
       <div className="flex h-full flex-col items-center justify-center text-center">
         <Loader2 className="mb-3 size-8 animate-spin text-primary" />
         <p className="text-sm font-medium"><T>AI 正在分析你刚才的对话…</T></p>
-        <p className="mt-1 text-xs text-muted-foreground"><T>通常需要 10–20 秒</T></p>
+        <p className="mt-1 text-xs text-muted-foreground"><T>几秒钟就好，先出讲解再出测试</T></p>
       </div>
     );
   }
 
-  if (error) {
+  if (error && !reviewReady) {
     return (
       <div className="flex h-full flex-col items-center justify-center text-center">
         <AlertCircle className="mb-3 size-8 text-rose-500" />
@@ -781,12 +789,28 @@ function RecapView({
       <section>
         <h3 className="mb-3 flex items-center gap-2 text-base font-bold">
           <ListChecks className="size-4 text-primary" /> <T>词汇短语测试</T>
-          {Object.keys(quizAnswers).length > 0 && (
+          {recap.quiz.length > 0 && Object.keys(quizAnswers).length > 0 && (
             <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-3 py-1 text-sm font-bold text-emerald-700">
               <Trophy className="size-3.5" /> {quizScore.correct} / {recap.quiz.length}
             </span>
           )}
         </h3>
+
+        {recap.quiz.length === 0 && quizLoading && (
+          <div className="flex items-center gap-3 rounded-2xl border border-dashed border-primary/30 bg-primary/5 p-4">
+            <Loader2 className="size-5 shrink-0 animate-spin text-primary" />
+            <div>
+              <p className="text-sm font-semibold"><T>正在出 10 道词汇测试题…</T></p>
+              <p className="mt-0.5 text-xs text-muted-foreground"><T>你可以先看上面的讲解，测试很快就好</T></p>
+            </div>
+          </div>
+        )}
+
+        {recap.quiz.length === 0 && !quizLoading && quizError && (
+          <div className="rounded-2xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700">
+            <T>测试题生成失败：</T>{quizError}
+          </div>
+        )}
 
         <ol className="space-y-4">
           {recap.quiz.map((q, i) => {

@@ -362,10 +362,7 @@ const Slang = () => {
     if (!revealed) return;
     const q = questions[qIdx];
     if (!q) return;
-    const t = window.setTimeout(() => {
-      speak(q.idiom.example);
-    }, 350);
-    return () => window.clearTimeout(t);
+    speak(q.idiom.example);
   }, [revealed, qIdx, questions]);
 
   // Once the answer is revealed, smooth-scroll the action bar (Next button +

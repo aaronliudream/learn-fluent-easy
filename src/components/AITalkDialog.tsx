@@ -4,7 +4,7 @@ import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, 
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
-import { loadSettings } from "@/lib/voice";
+import { getAlexVoice } from "@/lib/alexVoice";
 import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
 import { resolveProvider, type AIProvider } from "@/lib/aiProvider";
 import { QwenRealtimeSession, QWEN_VOICE_MAP } from "@/lib/qwenRealtime";
@@ -296,7 +296,9 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
 
       // === Qwen path (mainland China) ===
       if (chosen === "qwen") {
-        const voicePref = loadSettings().voiceId;
+        // Alex's voice is auto-assigned (random male/female), independent of
+        // the global TTS settings used for lessons. Stable across sessions.
+        const voicePref = getAlexVoice();
         const qwenVoice = QWEN_VOICE_MAP[voicePref] || "Cherry";
         const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level });
         const session = new QwenRealtimeSession({
@@ -315,8 +317,9 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         return;
       }
 
-      // 2. Mint ephemeral key
-      const voicePref = loadSettings().voiceId;
+      // 2. Mint ephemeral key — Alex uses an auto-assigned random voice so
+      // each user gets a distinct buddy without having to pick one.
+      const voicePref = getAlexVoice();
       const mappedVoice = REALTIME_VOICE_MAP[voicePref] || "shimmer";
       const { data, error } = await supabase.functions.invoke("realtime-token", {
         body: { lessonTitle, unitTitle, levelName, level, voice: mappedVoice },

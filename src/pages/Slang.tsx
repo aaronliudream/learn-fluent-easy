@@ -25,21 +25,35 @@ import {
   sortByMastery,
   pickQuizPool,
   bumpSlangRotation,
+  pickDailyPlan,
+  getSlangProgress,
+  getSlangLevel,
 } from "@/lib/slangMastery";
 
 type Mode = "browse" | "quiz";
 // quiz direction: en2cn = show English idiom, choose Chinese meaning;
 // cn2en = show Chinese meaning, choose English idiom;
 // fill  = show example with blank, choose missing idiom.
-type QuizKind = "en2cn" | "cn2en" | "fill";
+// scenario = read a Chinese real-life scene, pick the right English slang.
+// compose  = write a sentence using the slang in a given scenario (AI graded).
+type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose";
+
+export type ComposeGrade = {
+  usedPhrase: boolean;
+  correct: boolean;
+  naturalness: number;
+  tip: string;
+  improved: string;
+  verdict: "great" | "ok" | "needs_work";
+};
 
 type QuizQuestion = {
   id: number;
   kind: QuizKind;
   prompt: string;       // main question text
   context?: string;     // example sentence (CN translation when shown)
-  options: string[];
-  answer: number;       // index into options
+  options: string[];    // empty for "compose"
+  answer: number;       // index into options; -1 for "compose"
   idiom: Idiom;         // the right idiom (for review card)
 };
 

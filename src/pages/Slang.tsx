@@ -120,9 +120,19 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
   // Spaced-repetition pick: prioritise struggling > unseen > due-review,
   // and skip mastered items still in cooldown.
   const picked = pickQuizPool(pool, Math.min(len, pool.length));
-  const kinds: QuizKind[] = ["en2cn", "cn2en", "fill"];
   return picked.map((idiom, i) => {
-    const kind = kinds[i % kinds.length];
+    // Pick a drill kind matched to the user's current level for THIS phrase.
+    //   L1 → en2cn (recognise meaning)
+    //   L2 → cn2en or fill (recall + listening)
+    //   L3 → scenario (situational matching)
+    //   L4+ → compose (active production, AI-graded)
+    const lvl = getSlangLevel(idiom.id);
+    let kind: QuizKind;
+    if (lvl <= 1) kind = "en2cn";
+    else if (lvl === 2) kind = i % 2 === 0 ? "cn2en" : "fill";
+    else if (lvl === 3) kind = "scenario";
+    else kind = "compose";
+
     const distractorPool = sourceForDistractors.filter((x) => x.id !== idiom.id);
     const distractors = shuffle(distractorPool).slice(0, 3);
 
@@ -150,16 +160,41 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
         idiom,
       };
     }
-    // fill
-    const blanked = blankOutPhrase(idiom.example, idiom.phrase);
-    const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+    if (kind === "fill") {
+      const blanked = blankOutPhrase(idiom.example, idiom.phrase);
+      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+      return {
+        id: idiom.id,
+        kind,
+        prompt: blanked,
+        context: idiom.example_cn,
+        options: opts,
+        answer: opts.indexOf(idiom.phrase),
+        idiom,
+      };
+    }
+    if (kind === "scenario") {
+      // Prompt is filled in lazily by the slang-scenario edge fn; show the
+      // canonical Chinese example as a fallback so something is visible.
+      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+      return {
+        id: idiom.id,
+        kind,
+        prompt: "",
+        context: idiom.example_cn,
+        options: opts,
+        answer: opts.indexOf(idiom.phrase),
+        idiom,
+      };
+    }
+    // compose — no MC options
     return {
       id: idiom.id,
       kind,
-      prompt: blanked,
-      context: idiom.example_cn,
-      options: opts,
-      answer: opts.indexOf(idiom.phrase),
+      prompt: idiom.example_cn,
+      context: idiom.meaning_cn,
+      options: [],
+      answer: -1,
       idiom,
     };
   });

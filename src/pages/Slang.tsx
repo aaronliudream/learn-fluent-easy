@@ -606,6 +606,42 @@ const Slang = () => {
       {/* ───────────── BROWSE MODE ───────────── */}
       {mode === "browse" && (
         <>
+          {/* ───── Today's 5-min practice ───── */}
+          {dailyTotal > 0 && (
+            <section className="mb-5 overflow-hidden rounded-2xl border border-primary/30 bg-grad-title p-5 text-white shadow-card">
+              <div className="flex items-start gap-3">
+                <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-white/15 backdrop-blur">
+                  <Sparkles className="size-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-xs font-semibold uppercase tracking-wide opacity-80">
+                    <T>今日 5 分钟练习</T>
+                  </div>
+                  <div className="mt-0.5 text-lg font-extrabold leading-tight">
+                    {dailyPlan.fresh.length > 0 && <><T>新词</T> {dailyPlan.fresh.length} · </>}
+                    {dailyPlan.review.length > 0 && <><T>复习</T> {dailyPlan.review.length} · </>}
+                    {dailyPlan.climbing.length > 0 && <><T>进阶</T> {dailyPlan.climbing.length}</>}
+                  </div>
+                  <div className="mt-1 text-xs opacity-90">
+                    <T>每天一小步：从认识 → 听懂 → 场景 → 自己造句 → 真正会用</T>
+                  </div>
+                  <div className="mt-3 flex items-center gap-2 text-[11px] opacity-90">
+                    <span><T>累计已掌握</T> {overallProgress.mastered}/{overallProgress.total}</span>
+                  </div>
+                  <div className="mt-3">
+                    <Button
+                      onClick={startDailyPlanQuiz}
+                      className="bg-white text-primary hover:bg-white/90"
+                      size="sm"
+                    >
+                      <Target className="mr-2 size-4" /> <T>开始今日练习</T>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+
           <div key={`reorder-${masteryVersion}`} className="space-y-3">
             {pageItems.map((it, i) => (
               <article

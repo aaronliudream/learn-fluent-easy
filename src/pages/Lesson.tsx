@@ -675,9 +675,9 @@ const Lesson = () => {
                 </div>
                 <div className="mt-1 font-mono text-sm text-muted-foreground">{v.pron}</div>
                 <div className="mt-4 rounded-xl bg-card p-4">
-                  <div className="font-semibold">{v.meaning}</div>
+                  <div className="font-semibold"><T>{v.meaning}</T></div>
                   <p className="mt-2 italic text-foreground/80">"{v.example}"</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{v.example_cn}</p>
+                  <p className="mt-1 text-sm text-muted-foreground"><T>{v.example_cn}</T></p>
                 </div>
               </article>
             ))}

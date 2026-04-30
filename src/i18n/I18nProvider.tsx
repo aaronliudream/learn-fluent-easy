@@ -49,7 +49,7 @@ function stripHtml(value: string): string {
 
 function hasWrongScript(lang: LangCode, value: string | undefined) {
   if (!value) return false;
-  if (lang === "zh") return false;
+  if (lang === "zh" || lang === "zh-TW") return false;
   // Japanese and Korean both legitimately use Han characters, so we only
   // flag values that contain CJK characters that are clearly *not* valid
   // for the target language. A value made of pure Han (no kana/hangul)
@@ -64,7 +64,7 @@ function isUsableTranslation(lang: LangCode, source: string, value: string | und
   if (!value) return false;
   const cleaned = stripHtml(value);
   if (!cleaned) return false;
-  if (lang !== "zh" && cleaned.trim() === stripHtml(source).trim()) return false;
+  if (lang !== "zh" && lang !== "zh-TW" && cleaned.trim() === stripHtml(source).trim()) return false;
   // For Japanese / Korean, a *long* value with no kana/hangul almost
   // certainly wasn't translated (the model echoed the Chinese back).
   // Short pure-Han results like "単元" are valid translations.

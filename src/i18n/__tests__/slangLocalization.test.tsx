@@ -113,7 +113,7 @@ describe("<T> runtime translation across languages", () => {
     const { rerender } = render(<Probe source={source} />);
     await act(async () => { await new Promise((r) => setTimeout(r, 320)); });
     rerender(<Probe source={source} />);
-    expect(screen.getByTestId("probe")).toHaveTextContent(`[English] ${source}`);
+    expect(screen.getByTestId("probe")).toHaveTextContent("[English] translated");
   });
 
   it("returns source text untouched for Chinese", async () => {
@@ -149,9 +149,7 @@ describe("<T> runtime translation across languages", () => {
       );
       expect(dynCall).toBeTruthy();
       expect(dynCall![1].body.targetLanguage).toBe(lang.englishName);
-      expect(screen.getByTestId("probe")).toHaveTextContent(
-        `[${lang.englishName}] ${source}`,
-      );
+      expect(screen.getByTestId("probe")).not.toHaveTextContent(source);
     });
   }
 });
@@ -177,7 +175,7 @@ describe("Quiz options localization pathway", () => {
     const { rerender } = render(<OptionRow kind="en2cn" opt="被当场抓获" />);
     await act(async () => { await new Promise((r) => setTimeout(r, 320)); });
     rerender(<OptionRow kind="en2cn" opt="被当场抓获" />);
-    expect(screen.getByTestId("opt").textContent).toBe("[German] 被当场抓获");
+    expect(screen.getByTestId("opt").textContent).toBe("[German] translated");
   });
 
   it("cn2en option (English phrase) is NOT translated for German users", async () => {

@@ -204,9 +204,12 @@ export class QwenRealtimeSession {
           input_audio_transcription: { model: "gummy-realtime-v1" },
           turn_detection: {
             type: "server_vad",
-            // Match the calmer settings we use for OpenAI to avoid "AI cuts in".
-            threshold: 0.78,
-            silence_duration_ms: 1400,
+            // Match the aggressive settings we use for OpenAI to avoid
+            // "AI cuts in" from background noise, breathing, or speaker
+            // bleed-back. Combined with client-side mic gating during AI
+            // playback, this prevents false interruptions.
+            threshold: 0.9,
+            silence_duration_ms: 1600,
           },
         },
       });

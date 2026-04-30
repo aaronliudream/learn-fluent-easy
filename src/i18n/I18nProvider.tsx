@@ -8,6 +8,7 @@ import {
   getLanguageInfo,
 } from "./languages";
 import { BUILTIN, EN, type StringKey, interpolate } from "./strings";
+import { localizeProtagonist } from "./protagonistName";
 
 const STORAGE_LANG = "fluentpath.lang";
 const STORAGE_PICKED = "fluentpath.langPicked";
@@ -254,10 +255,10 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (!text) return text;
     // No translation needed if the user chose Chinese, which is the app's
     // original helper-language for lesson notes and hints.
-    if (lang === "zh") return text;
-    if (lang === "en" && !CJK_TEXT_RE.test(text)) return text;
+    if (lang === "zh") return localizeProtagonist(text, lang);
+    if (lang === "en" && !CJK_TEXT_RE.test(text)) return localizeProtagonist(text, lang);
     const cached = dynCacheRef.current[text];
-    if (isUsableTranslation(lang, text, cached)) return cached;
+    if (isUsableTranslation(lang, text, cached)) return localizeProtagonist(cached, lang);
     // Queue and debounce
     dynQueueRef.current.add(text);
     // Use a non-resetting timer so heavy renders can't postpone the flush
@@ -272,7 +273,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // Show source text while the translation is loading; it will swap to the
     // translated string as soon as the batch resolves. Returning "" here would
     // leave the UI blank, which is worse than a brief Chinese flash.
-    return text;
+    return localizeProtagonist(text, lang);
   // dynVersion is intentionally a dep: when a translation batch resolves
   // we want every memoised consumer to recompute against the new cache.
   }, [lang, flushDynQueue, dynVersion]);

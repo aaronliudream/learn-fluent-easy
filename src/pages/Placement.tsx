@@ -20,6 +20,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { speak } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
+import { useI18n } from "@/i18n/I18nProvider";
 import {
   buildSectionPool,
   pickAdaptive,
@@ -52,6 +53,7 @@ const fmtTime = (sec: number) => {
 
 const Placement = () => {
   const tt = useT();
+  const { tDynamic } = useI18n();
   const navigate = useNavigate();
   const [stage, setStage] = useState<Stage>("intro");
   const [questions, setQuestions] = useState<PlacementQuestion[]>([]);
@@ -322,9 +324,9 @@ const Placement = () => {
           )}
 
           <div className="mb-5">
-            <p className="text-lg font-semibold">{q.prompt}</p>
+              <p className="text-lg font-semibold">{tDynamic(q.prompt)}</p>
             {q.section === "grammar" && q.context && (
-              <p className="mt-1 text-xs text-muted-foreground">{q.context}</p>
+              <p className="mt-1 text-xs text-muted-foreground">{tDynamic(q.context)}</p>
             )}
           </div>
 
@@ -341,7 +343,7 @@ const Placement = () => {
                       : "border-border bg-card hover:border-primary/40"
                   }`}
                 >
-                  <span>{opt}</span>
+                  <span>{tDynamic(opt)}</span>
                   {active && <CheckCircle2 className="size-4 text-primary" />}
                 </button>
               );

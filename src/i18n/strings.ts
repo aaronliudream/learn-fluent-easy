@@ -19,6 +19,9 @@ export type StringKey =
   | "index.section.placement.eyebrow"
   | "index.section.placement.title"
   | "index.section.placement.desc"
+  | "index.section.aitalk.eyebrow"
+  | "index.section.aitalk.title"
+  | "index.section.aitalk.desc"
   | "index.section.slang.eyebrow"
   | "index.section.slang.title"
   | "index.section.slang.desc"
@@ -86,6 +89,9 @@ export const EN: Record<StringKey, string> = {
   "index.section.placement.eyebrow": "01 · Level Check",
   "index.section.placement.title": "Discover your English level",
   "index.section.placement.desc": "Adaptive 25-min test · Listening, speaking, reading, writing · A1–C1 rating",
+  "index.section.aitalk.eyebrow": "AI VOICE",
+  "index.section.aitalk.title": "Chat 10 minutes in English with Alex",
+  "index.section.aitalk.desc": "A real young Californian · all-English live conversation · auto bilingual review + vocabulary quiz at the end",
   "index.section.slang.eyebrow": "02 · Slang Lab",
   "index.section.slang.title": "Sound like a native today",
   "index.section.slang.desc": "TikTok / Gen Z / social media slang · {count} entries with real examples",
@@ -155,6 +161,9 @@ export const ZH: Record<StringKey, string> = {
   "index.section.placement.eyebrow": "01 · 水平测试",
   "index.section.placement.title": "了解你的英语真实水平",
   "index.section.placement.desc": "25 分钟自适应测试 · 听说读写四项 · A1–C1 评级",
+  "index.section.aitalk.eyebrow": "AI 语音",
+  "index.section.aitalk.title": "和 Alex 聊 10 分钟英语",
+  "index.section.aitalk.desc": "地道美国年轻人 · 全英文真人对话 · 结束自动双语讲解 + 词汇测试",
   "index.section.slang.eyebrow": "02 · 流行俚语",
   "index.section.slang.title": "今天就说得像 native",
   "index.section.slang.desc": "TikTok / Z 世代 / 社交媒体俚语 · 共 {count} 条 · 每条带例句",

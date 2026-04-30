@@ -820,15 +820,17 @@ const Slang = () => {
             <section className="rounded-3xl bg-card p-6 shadow-card md:p-8">
               <div className="mb-5">
                 {q.kind === "en2cn" && (
-                  <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => speak(q.prompt)}
+                    className="group flex items-center gap-2 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
+                    aria-label={tt("朗读")}
+                  >
                     <h3 className="text-3xl font-extrabold">{q.prompt}</h3>
-                    <button
-                      onClick={() => speak(q.prompt)}
-                      className="grid size-8 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
-                    >
+                    <span className="grid size-8 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
                       <Volume2 className="size-4" />
-                    </button>
-                  </div>
+                    </span>
+                  </button>
                 )}
                 {q.kind === "cn2en" && (
                   <h3 className="text-3xl font-extrabold"><T>{q.prompt}</T></h3>
@@ -865,13 +867,17 @@ const Slang = () => {
                     <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-violet-500/15 px-2.5 py-1 text-[11px] font-bold text-violet-700 dark:text-violet-400">
                       <PenLine className="size-3" /> <T>用一下：自己造句</T>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-2xl font-extrabold">{q.idiom.phrase}</h3>
+                    <div className="flex items-center gap-2 flex-wrap">
                       <button
+                        type="button"
                         onClick={() => speak(q.idiom.phrase)}
-                        className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
+                        className="group flex items-center gap-2 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
+                        aria-label={tt("朗读")}
                       >
-                        <Volume2 className="size-3.5" />
+                        <h3 className="text-2xl font-extrabold">{q.idiom.phrase}</h3>
+                        <span className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
+                          <Volume2 className="size-3.5" />
+                        </span>
                       </button>
                       <span className="text-sm text-muted-foreground"><T>{q.idiom.meaning_cn}</T></span>
                     </div>
@@ -970,16 +976,17 @@ const Slang = () => {
                         {g.improved && (
                           <div className="mt-3 rounded-xl bg-card p-3">
                             <div className="text-xs font-bold text-muted-foreground"><T>更地道的版本</T></div>
-                            <div className="mt-1 flex items-start gap-2">
+                            <button
+                              type="button"
+                              onClick={() => speak(g.improved)}
+                              className="group mt-1 flex w-full items-start gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
+                              aria-label={tt("朗读")}
+                            >
                               <span className="flex-1 italic">"{g.improved}"</span>
-                              <button
-                                onClick={() => speak(g.improved)}
-                                className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
-                                aria-label={tt("朗读")}
-                              >
+                              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
                                 <Volume2 className="size-3.5" />
-                              </button>
-                            </div>
+                              </span>
+                            </button>
                           </div>
                         )}
                       </div>

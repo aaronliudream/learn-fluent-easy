@@ -83,9 +83,15 @@ CONTEXT: ${lessonHook}`;
         input_audio_transcription: { model: "whisper-1" },
         turn_detection: {
           type: "server_vad",
-          threshold: 0.5,
-          prefix_padding_ms: 300,
-          silence_duration_ms: 700,
+          // Higher threshold = ignores background noise, fan, keyboard, kids, etc.
+          threshold: 0.78,
+          prefix_padding_ms: 400,
+          // Wait longer before deciding the user is done talking. Prevents
+          // Alex from cutting in during natural mid-sentence pauses.
+          silence_duration_ms: 1400,
+          // Don't auto-fire a response the instant VAD ends — we still let
+          // it auto-respond, but the longer silence above gives the user
+          // breathing room. (create_response stays default true.)
         },
         temperature: 0.8,
       }),

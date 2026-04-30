@@ -235,8 +235,16 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const startCall = useCallback(async () => {
     setPhase("connecting");
     try {
-      // 1. Get mic
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      // 1. Get mic — turn ON browser-side noise suppression, echo cancel,
+      // and auto-gain so background noise (fan, traffic, kids) doesn't get
+      // sent to OpenAI's VAD and cause Alex to cut in or get triggered.
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true,
+        } as MediaTrackConstraints,
+      });
       localStreamRef.current = stream;
 
       // 2. Mint ephemeral key

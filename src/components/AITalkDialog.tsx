@@ -489,6 +489,25 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     return { correct, total: recap.quiz.length };
   }, [recap, quizAnswers]);
 
+  // Lightweight detection of which mission phrases the learner has actually
+  // said. We look ONLY at user turns and match the phrase as a loose word
+  // sequence (case-insensitive, trims punctuation). Good enough for chips.
+  const usedPhrases = useMemo(() => {
+    if (!mission?.must_use?.length) return new Set<string>();
+    const userText = transcript
+      .filter((t) => t.role === "user" && t.text)
+      .map((t) => t.text.toLowerCase().replace(/[^a-z0-9\s']/g, " ").replace(/\s+/g, " "))
+      .join(" ");
+    const set = new Set<string>();
+    for (const m of mission.must_use) {
+      const needle = m.phrase.toLowerCase().replace(/[^a-z0-9\s']/g, " ").replace(/\s+/g, " ").trim();
+      if (needle && userText.includes(needle)) set.add(m.phrase);
+    }
+    return set;
+  }, [transcript, mission]);
+
+  const missionComplete = !!mission && mission.must_use.length > 0 && usedPhrases.size === mission.must_use.length;
+
   if (!open) return null;
 
   return (

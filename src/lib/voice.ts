@@ -30,7 +30,7 @@ export type VoiceSettings = { voiceId: string; speed: number };
 
 export const DEFAULT_SETTINGS: VoiceSettings = {
   voiceId: VOICES[0].id,
-  speed: 1.0,
+  speed: 0.85,
 };
 
 export const loadSettings = (): VoiceSettings => {

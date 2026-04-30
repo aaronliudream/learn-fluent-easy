@@ -101,6 +101,7 @@ const Placement = () => {
   // Timer
   useEffect(() => {
     if (stage !== "test") return;
+    import("@/lib/guestProgress").then(m => m.recordVisit("placement"));
     const t = setInterval(() => {
       setSecondsLeft((s) => {
         if (s <= 1) {

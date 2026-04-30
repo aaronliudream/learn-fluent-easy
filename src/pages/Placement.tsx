@@ -36,6 +36,7 @@ const TEST_MINUTES = 25;
 const SECTIONS: Section[] = ["vocab", "grammar", "reading", "listening"];
 const QS_PER_SECTION = 6; // adaptive: shorter but more accurate
 const TOTAL_QS = SECTIONS.length * QS_PER_SECTION; // 24
+const NEEDS_NATIVE_TRANSLATION_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
   vocab: { cn: "Vocabulary", icon: BookOpen, color: "bg-pink-500/15 text-pink-500" },
   grammar: { cn: "Grammar", icon: FileText, color: "bg-sky-500/15 text-sky-500" },
@@ -54,6 +55,7 @@ const fmtTime = (sec: number) => {
 const Placement = () => {
   const tt = useT();
   const { tDynamic } = useI18n();
+  const nativeText = (text: string) => NEEDS_NATIVE_TRANSLATION_RE.test(text) ? tDynamic(text) : text;
   const navigate = useNavigate();
   const [stage, setStage] = useState<Stage>("intro");
   const [questions, setQuestions] = useState<PlacementQuestion[]>([]);
@@ -324,9 +326,9 @@ const Placement = () => {
           )}
 
           <div className="mb-5">
-              <p className="text-lg font-semibold">{tDynamic(q.prompt)}</p>
+              <p className="text-lg font-semibold">{nativeText(q.prompt)}</p>
             {q.section === "grammar" && q.context && (
-              <p className="mt-1 text-xs text-muted-foreground">{tDynamic(q.context)}</p>
+              <p className="mt-1 text-xs text-muted-foreground">{nativeText(q.context)}</p>
             )}
           </div>
 
@@ -343,7 +345,7 @@ const Placement = () => {
                       : "border-border bg-card hover:border-primary/40"
                   }`}
                 >
-                  <span>{tDynamic(opt)}</span>
+                  <span>{nativeText(opt)}</span>
                   {active && <CheckCircle2 className="size-4 text-primary" />}
                 </button>
               );

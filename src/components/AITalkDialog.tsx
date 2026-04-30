@@ -106,7 +106,7 @@ const REALTIME_VOICE_MAP: Record<string, string> = {
   fable: "verse",
 };
 
-export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level, isGuest }: Props) {
+export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level, isGuest, mission }: Props) {
   const tt = useT();
   const sessionLen = isGuest ? GUEST_SESSION_SECONDS : SESSION_DURATION_SEC;
   const [phase, setPhase] = useState<"idle" | "connecting" | "live" | "ending" | "recap">("idle");

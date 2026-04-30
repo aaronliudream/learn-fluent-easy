@@ -108,13 +108,15 @@ const pickBrowserVoice = (voices: SpeechSynthesisVoice[], voiceId: string) => {
 const speakBrowserFallback = async (text: string, voiceId: string, speed: number, token: number) => {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   const voices = await waitForVoices();
-  const voice = pickBrowserVoice(voices, voiceId);
+  const voice = TARGET_LANGUAGE === "zh"
+    ? voices.find((v) => v.lang.toLowerCase().startsWith("zh"))
+    : pickBrowserVoice(voices, voiceId);
   const rate = Math.min(1.0, Math.max(0.65, (Number(speed) || 0.85) * 0.9));
   await new Promise<void>((resolve) => {
     if (token !== speakToken) return resolve();
     const u = new SpeechSynthesisUtterance(text);
     if (voice) u.voice = voice;
-    u.lang = voice?.lang || "en-US";
+    u.lang = voice?.lang || (TARGET_LANGUAGE === "zh" ? "zh-CN" : "en-US");
     u.rate = rate;
     u.pitch = voiceId === "onyx" || voiceId === "echo" ? 0.9 : 0.98;
     u.onend = () => resolve();

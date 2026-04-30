@@ -137,7 +137,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     } else {
       setCatalog(loadCachedCatalog(lang));
     }
-    dynCacheRef.current = lang === "en" || lang === "zh" ? {} : loadDynCache(lang);
+    dynCacheRef.current = lang === "zh" ? {} : loadDynCache(lang);
   }, [lang]);
 
   // Fetch missing static-string translations from edge function.
@@ -198,7 +198,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     const items = toSend.map((text, i) => ({ key: String(i), text }));
     try {
       const { data, error } = await supabase.functions.invoke("translate", {
-        body: { targetLanguage, sourceLanguage: "Chinese", items },
+        body: { targetLanguage, items },
       });
       if (error) return;
       const translations: Record<string, string> = data?.translations || {};
@@ -217,10 +217,10 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const tDynamic = useCallback((text: string) => {
     if (!text) return text;
-    // No translation needed if user reads English or if app authored it in zh.
-    // (We treat zh as the source for dynamic content because lessons/scenes are
-    // currently authored with Chinese hints.)
+    // No translation needed if the user chose Chinese, which is the app's
+    // original helper-language for lesson notes and hints.
     if (lang === "zh") return text;
+    if (lang === "en" && !CJK_TEXT_RE.test(text)) return text;
     const cached = dynCacheRef.current[text];
     if (cached && !hasWrongScript(lang, cached)) return cached;
     // Queue and debounce

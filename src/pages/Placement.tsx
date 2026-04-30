@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Award,
+  ArrowLeft,
   BookOpen,
   CheckCircle2,
   Clock,
@@ -18,7 +19,7 @@ import {
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { speak } from "@/lib/speak";
-import { T } from "@/i18n/T";
+import { T, useT } from "@/i18n/T";
 import {
   buildSectionPool,
   pickAdaptive,
@@ -50,6 +51,7 @@ const fmtTime = (sec: number) => {
 };
 
 const Placement = () => {
+  const tt = useT();
   const navigate = useNavigate();
   const [stage, setStage] = useState<Stage>("intro");
   const [questions, setQuestions] = useState<PlacementQuestion[]>([]);
@@ -271,6 +273,17 @@ const Placement = () => {
         {/* Top bar */}
         <div className="mb-5 flex items-center justify-between rounded-2xl bg-card p-4 shadow-card">
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => {
+                if (window.confirm(tt("确定要退出测试吗？当前进度将丢失。"))) {
+                  navigate("/");
+                }
+              }}
+              className="grid size-9 place-items-center rounded-xl text-muted-foreground transition hover:bg-secondary hover:text-foreground"
+              aria-label={tt("退出测试")}
+            >
+              <ArrowLeft className="size-4" />
+            </button>
             <div className={`grid size-9 place-items-center rounded-xl ${meta.color}`}>
               <Icon className="size-4" />
             </div>

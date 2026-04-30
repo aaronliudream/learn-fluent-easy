@@ -758,7 +758,7 @@ const Slang = () => {
       {mode === "quiz" && questions.length > 0 && qIdx < questions.length && (() => {
         const q = questions[qIdx];
         const picked = picks[q.id];
-        const isCorrect = picked === q.answer;
+        const isCorrect = isQuestionCorrect(q);
         const KIND_LABEL: Record<QuizKind, string> = {
           en2cn: tt("英 → 中：选出正确含义"),
           cn2en: tt("中 → 英：选出对应俚语"),
@@ -806,6 +806,49 @@ const Slang = () => {
                     )}
                   </div>
                 )}
+                {q.kind === "scenario" && (
+                  <div>
+                    <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-amber-500/15 px-2.5 py-1 text-[11px] font-bold text-amber-700 dark:text-amber-400">
+                      <Lightbulb className="size-3" /> <T>真实场景</T>
+                    </div>
+                    {scenarioBusy[q.id] && !scenarioText[q.id] ? (
+                      <p className="flex items-center gap-2 text-base text-muted-foreground">
+                        <Loader2 className="size-4 animate-spin" /> <T>AI 正在生成场景…</T>
+                      </p>
+                    ) : (
+                      <p className="text-xl font-semibold leading-relaxed">
+                        <T>{scenarioText[q.id] || q.context || ""}</T>
+                      </p>
+                    )}
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      <T>下面哪个俚语最适合用在这个场景里？</T>
+                    </p>
+                  </div>
+                )}
+                {q.kind === "compose" && (
+                  <div>
+                    <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-violet-500/15 px-2.5 py-1 text-[11px] font-bold text-violet-700 dark:text-violet-400">
+                      <PenLine className="size-3" /> <T>用一下：自己造句</T>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-2xl font-extrabold">{q.idiom.phrase}</h3>
+                      <button
+                        onClick={() => speak(q.idiom.phrase)}
+                        className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
+                      >
+                        <Volume2 className="size-3.5" />
+                      </button>
+                      <span className="text-sm text-muted-foreground"><T>{q.idiom.meaning_cn}</T></span>
+                    </div>
+                    <p className="mt-3 text-base">
+                      <span className="font-semibold"><T>场景：</T></span>
+                      <span className="text-muted-foreground"><T>{q.prompt}</T></span>
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      <T>试着用一句英文用上这个俚语，AI 会给你反馈。</T>
+                    </p>
+                  </div>
+                )}
 
                 {q.kind === "en2cn" && q.context && (
                   <p className="mt-2 text-base italic text-muted-foreground">"{q.context}"</p>
@@ -815,6 +858,7 @@ const Slang = () => {
                 )}
               </div>
 
+              {q.kind !== "compose" && (
               <div className="grid gap-2 md:grid-cols-2">
                 {q.options.map((opt, oi) => {
                   const active = picked === oi;
@@ -846,9 +890,67 @@ const Slang = () => {
                   );
                 })}
               </div>
+              )}
+
+              {q.kind === "compose" && (
+                <div>
+                  <textarea
+                    value={composeText[q.id] ?? ""}
+                    onChange={(e) => setComposeText({ ...composeText, [q.id]: e.target.value })}
+                    disabled={revealed || composeBusy}
+                    placeholder={tt(`例如：用上 "${q.idiom.phrase}" 写一句话…`)}
+                    rows={3}
+                    className="w-full resize-none rounded-xl border border-border bg-secondary/30 p-3 text-base outline-none transition focus:border-primary"
+                  />
+                  {!revealed && (
+                    <div className="mt-3 flex justify-end">
+                      <Button onClick={() => submitCompose(q)} disabled={composeBusy}>
+                        {composeBusy ? (
+                          <><Loader2 className="mr-2 size-4 animate-spin" /> <T>评分中…</T></>
+                        ) : (
+                          <><Sparkles className="mr-2 size-4" /> <T>让 AI 评一下</T></>
+                        )}
+                      </Button>
+                    </div>
+                  )}
+                  {revealed && composeGrade[q.id] && (() => {
+                    const g = composeGrade[q.id];
+                    const tone = g.verdict === "great"
+                      ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"
+                      : g.verdict === "ok"
+                        ? "bg-amber-500/10 text-amber-700 dark:text-amber-300"
+                        : "bg-rose-500/10 text-rose-700 dark:text-rose-300";
+                    const label = g.verdict === "great" ? tt("地道！") : g.verdict === "ok" ? tt("可以再润色一下") : tt("再改改");
+                    return (
+                      <div className={`mt-4 rounded-2xl p-4 text-base ${tone}`}>
+                        <div className="flex items-center gap-2 font-bold">
+                          <span>{"⭐".repeat(Math.max(1, Math.min(5, g.naturalness)))}</span>
+                          <span>· {label}</span>
+                        </div>
+                        <div className="mt-2 text-sm text-foreground/90"><T>{g.tip}</T></div>
+                        {g.improved && (
+                          <div className="mt-3 rounded-xl bg-card p-3">
+                            <div className="text-xs font-bold text-muted-foreground"><T>更地道的版本</T></div>
+                            <div className="mt-1 flex items-start gap-2">
+                              <span className="flex-1 italic">"{g.improved}"</span>
+                              <button
+                                onClick={() => speak(g.improved)}
+                                className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
+                                aria-label={tt("朗读")}
+                              >
+                                <Volume2 className="size-3.5" />
+                              </button>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })()}
+                </div>
+              )}
 
               {/* Reveal explanation */}
-              {revealed && (
+              {revealed && q.kind !== "compose" && (
                 <div className={`mt-5 rounded-2xl p-4 text-base ${isCorrect ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300" : "bg-rose-500/10 text-rose-700 dark:text-rose-300"}`}>
                   <div className="font-bold">
                     {isCorrect ? <>✅ <T>答对了！</T></> : <>❌ <T>答错了</T></>}

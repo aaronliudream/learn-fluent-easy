@@ -6,6 +6,8 @@ import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
 import { loadSettings } from "@/lib/voice";
 import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
+import { resolveProvider, type AIProvider } from "@/lib/aiProvider";
+import { QwenRealtimeSession, QWEN_VOICE_MAP } from "@/lib/qwenRealtime";
 
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
 
@@ -55,12 +57,14 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const [recapError, setRecapError] = useState<string | null>(null);
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const [provider, setProvider] = useState<AIProvider | null>(null);
 
   const pcRef = useRef<RTCPeerConnection | null>(null);
   const localStreamRef = useRef<MediaStream | null>(null);
   const dataChannelRef = useRef<RTCDataChannel | null>(null);
   const audioElRef = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<number | null>(null);
+  const qwenSessionRef = useRef<QwenRealtimeSession | null>(null);
   // Stable id buckets so streamed deltas land on the right turn
   const userTurnByItemId = useRef<Map<string, number>>(new Map());
   const assistantTurnByRespId = useRef<Map<string, number>>(new Map());
@@ -79,6 +83,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     if (audioElRef.current) {
       try { audioElRef.current.pause(); audioElRef.current.srcObject = null; } catch { /* noop */ }
     }
+    try { qwenSessionRef.current?.close(); } catch { /* noop */ }
+    qwenSessionRef.current = null;
     pcRef.current = null;
     localStreamRef.current = null;
     dataChannelRef.current = null;

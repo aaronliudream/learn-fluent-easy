@@ -11,7 +11,10 @@ import { BUILTIN, EN, type StringKey, interpolate } from "./strings";
 
 const STORAGE_LANG = "fluentpath.lang";
 const STORAGE_PICKED = "fluentpath.langPicked";
-const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v2.";
+// v3: previous versions wrongly rejected pure-Han Japanese / Korean
+// translations and cached the Chinese source instead. Bumping the prefix
+// forces a fresh fetch so users actually see their selected language.
+const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v3.";
 
 type Catalog = Partial<Record<StringKey, string>>;
 

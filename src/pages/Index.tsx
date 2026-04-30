@@ -99,7 +99,6 @@ const Index = () => {
         ? `${t("index.section.placement.lastResult", { cefr: lastPlacement.cefr, level: lastPlacement.recommended_level })}`
         : t("index.section.placement.desc"),
       gradient: "from-emerald-500 via-teal-500 to-cyan-500",
-      badge: lastPlacement?.cefr,
     },
     {
       to: "/slang",

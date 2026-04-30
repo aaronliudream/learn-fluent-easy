@@ -268,13 +268,24 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (lang === "en" && !CJK_TEXT_RE.test(text)) return localizeProtagonist(text, lang);
     const cached = dynCacheRef.current[text];
     if (isUsableTranslation(lang, text, cached)) return localizeProtagonist(cached, lang);
-    // Queue and debounce a translation request.
+    // Queue the request. Use a microtask-style 0ms timer so the *first*
+    // render's strings ship in a single batch within the same tick — the
+    // user perceives this as "instant" (only one network roundtrip per
+    // page load instead of multiple debounced ones).
     dynQueueRef.current.add(text);
     if (dynTimerRef.current === null) {
       dynTimerRef.current = window.setTimeout(() => {
         dynTimerRef.current = null;
         flushDynQueue(lang);
-      }, 60);
+      }, 0);
+    }
+    // If the queue is already big (e.g. a long lesson page just rendered),
+    // flush immediately without waiting for the timer.
+    if (dynQueueRef.current.size >= 24 && dynTimerRef.current !== null) {
+      window.clearTimeout(dynTimerRef.current);
+      dynTimerRef.current = null;
+      // Fire and forget — flushDynQueue handles its own state.
+      void flushDynQueue(lang);
     }
     // STRICT MODE: never show the original Chinese source to a user whose
     // mother-tongue is something else (e.g. Spanish, French). Showing the

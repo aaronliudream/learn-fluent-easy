@@ -201,7 +201,7 @@ const Index = () => {
               <T>I want to learn</T>
             </div>
             <div className="mt-0.5 text-lg font-extrabold leading-tight md:text-xl">
-              {currentTarget.native}
+              {currentTarget.value === "en" ? <T>English</T> : currentTarget.native}
             </div>
           </div>
           <DropdownMenu>

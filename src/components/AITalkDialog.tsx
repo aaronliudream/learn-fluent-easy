@@ -495,7 +495,13 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
                 {phase === "live" && (<><T>剩余时间</T> {mmss} · {aiSpeaking ? <T>Alex 在说话</T> : muted ? <T>麦克风已静音</T> : <T>请说英语</T>}</>)}
                 {phase === "connecting" && <T>正在连接 AI…</T>}
                 {phase === "ending" && <T>结束通话…</T>}
-                {phase === "recap" && (recapLoading ? <T>AI 正在生成讲解…</T> : <T>查看每句翻译并完成测试</T>)}
+                {phase === "recap" && (
+                  recapLoading
+                    ? <T>AI 正在生成讲解…</T>
+                    : quizLoading
+                      ? <T>讲解已就绪 · 测试题马上来</T>
+                      : <T>查看每句翻译并完成测试</T>
+                )}
                 {phase === "idle" && <T>10 分钟全英语真人对话练习</T>}
               </p>
             </div>

@@ -917,7 +917,7 @@ const Lesson = () => {
                                 : "border-border bg-card hover:border-primary/40"
                         }`}
                       >
-                        <span>{o}</span>
+                        <span>{nativeText(o)}</span>
                         {picked === o && correct && <Check className="size-3.5" />}
                         {picked === o && !correct && <X className="size-3.5" />}
                         {picked && picked !== o && o === f.answer && (
@@ -1046,7 +1046,7 @@ const Lesson = () => {
                     </button>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
-                    <span>{b.before}</span>
+                    <span>{nativeText(b.before)}</span>
                     <input
                       value={v}
                       onChange={(e) => setListenInputs({ ...listenInputs, [i]: e.target.value })}
@@ -1059,7 +1059,7 @@ const Lesson = () => {
                       }`}
                       placeholder={tt("输入")}
                     />
-                    <span>{b.after}</span>
+                    <span>{nativeText(b.after)}</span>
                     {v && correct && <Check className="size-4 text-emerald-500" />}
                   </div>
                   {v && showFeedback && (

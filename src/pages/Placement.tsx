@@ -21,6 +21,8 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   Minus,
+  XCircle,
+  GraduationCap,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -50,6 +52,21 @@ const QS_MIN_PER_SECTION = 4; // never stop a section before this many items
 const QS_MAX_PER_SECTION = 7; // hard cap per section
 const STOP_CONFIDENCE = 0.45; // half-width threshold (in CEFR levels)
 const TOTAL_QS = SECTIONS.length * QS_MAX_PER_SECTION; // 28 (upper bound)
+
+// Per-question time limits (seconds). Calibrated to professional standards
+// (TOEFL/IELTS pacing): listening needs slightly longer to read options
+// after audio; reading is the longest because the user must parse a passage.
+const PER_QUESTION_SECONDS: Record<Section, number> = {
+  vocab: 25,
+  grammar: 35,
+  reading: 75,
+  listening: 45,
+};
+// Listening audio may be replayed at most this many times per question.
+// Real proficiency tests (TOEFL/IELTS) typically allow ONE play. We grant
+// 2 to account for short clips + first-time UI familiarity, but never more.
+const LISTENING_MAX_PLAYS = 2;
+
 const NEEDS_NATIVE_TRANSLATION_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
   vocab: { cn: "Vocabulary", icon: BookOpen, color: "bg-pink-500/15 text-pink-500" },
@@ -59,6 +76,7 @@ const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ cl
 };
 
 type Stage = "intro" | "test" | "result";
+type ReviewStage = "ask" | "review" | "skip";
 
 const fmtTime = (sec: number) => {
   const m = Math.floor(sec / 60).toString().padStart(2, "0");
@@ -75,6 +93,17 @@ const Placement = () => {
   const [questions, setQuestions] = useState<PlacementQuestion[]>([]);
   const [picks, setPicks] = useState<Record<string, number>>({});
   const [idx, setIdx] = useState(0);
+  // True once the user has confirmed their answer (or time ran out). The
+  // current question is then locked, the correct answer + explanation are
+  // shown, and only "Next" is actionable.
+  const [revealed, setRevealed] = useState<Record<string, boolean>>({});
+  // Per-question seconds remaining. Resets when a new question is shown.
+  const [questionSecondsLeft, setQuestionSecondsLeft] = useState(0);
+  // How many times the user has played the listening audio for the current Q.
+  const [listeningPlays, setListeningPlays] = useState<Record<string, number>>({});
+  // Wrong-answer review flow shown after results.
+  const [reviewStage, setReviewStage] = useState<ReviewStage>("ask");
+  const [reviewIdx, setReviewIdx] = useState(0);
   const poolRef = useRef<SectionPool | null>(null);
   const usedRef = useRef<Set<string>>(new Set());
   // Per-section adaptive state (CAT). Stable refs avoid stale closures during
@@ -120,10 +149,16 @@ const Placement = () => {
     setQuestions(firstQs);
     setPicks({});
     setIdx(0);
+    setRevealed({});
+    setListeningPlays({});
     setSecondsLeft(TEST_MINUTES * 60);
     setResult(null);
     finishedRef.current = false;
     setStage("test");
+    setReviewStage("ask");
+    setReviewIdx(0);
+    // Seed per-question timer for the first question
+    const first = poolRef.current ? null : null; void first;
     window.scrollTo({ top: 0 });
   };
 
@@ -145,12 +180,39 @@ const Placement = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stage]);
 
+  // Per-question timer. Resets whenever the visible question changes.
+  // When it reaches 0 we lock-in whatever pick the user has (or no pick
+  // at all → counted as wrong) and reveal the correct answer.
+  useEffect(() => {
+    if (stage !== "test") return;
+    const q = questions[idx];
+    if (!q) return;
+    if (revealed[q.id]) return; // already revealed → no countdown
+    setQuestionSecondsLeft(PER_QUESTION_SECONDS[q.section]);
+    const t = setInterval(() => {
+      setQuestionSecondsLeft((s) => {
+        if (s <= 1) {
+          clearInterval(t);
+          // Time-up auto-reveal. If user has no pick, it remains undefined,
+          // which scoreTest() already treats as incorrect.
+          setRevealed((prev) => ({ ...prev, [q.id]: true }));
+          return 0;
+        }
+        return s - 1;
+      });
+    }, 1000);
+    return () => clearInterval(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stage, idx, questions.length]);
+
   const finish = () => {
     if (finishedRef.current) return;
     finishedRef.current = true;
     const r = scoreTest(questions, picks);
     setResult(r);
     setStage("result");
+    setReviewStage("ask");
+    setReviewIdx(0);
     window.scrollTo({ top: 0 });
     void persistAndAnalyze(r);
   };

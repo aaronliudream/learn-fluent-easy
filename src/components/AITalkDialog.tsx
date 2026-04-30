@@ -563,7 +563,12 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
           )}
 
           {(phase === "connecting" || phase === "live" || phase === "ending") && (
-            <LiveTranscript transcript={transcript} aiSpeaking={aiSpeaking} phase={phase} />
+            <>
+              {mission && (phase === "connecting" || phase === "live") && (
+                <MissionCard mission={mission} usedPhrases={usedPhrases} complete={missionComplete} />
+              )}
+              <LiveTranscript transcript={transcript} aiSpeaking={aiSpeaking} phase={phase} />
+            </>
           )}
 
           {phase === "recap" && (

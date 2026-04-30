@@ -421,14 +421,9 @@ const Slang = () => {
     setMasteryVersion((v) => v + 1);
   }, [revealed, qIdx, questions, picks, composeGrade]);
 
-  // After revealing the answer, always read aloud the correct English example
-  // sentence — "ear training" reinforces audio memory regardless of correctness.
-  useEffect(() => {
-    if (!revealed) return;
-    const q = questions[qIdx];
-    if (!q) return;
-    speak(q.idiom.example);
-  }, [revealed, qIdx, questions]);
+  // NOTE: read-aloud on reveal happens SYNCHRONOUSLY in the option onClick
+  // below (inside the user-gesture window), so iOS Safari unlocks audio and
+  // playback starts instantly without the 1-frame React effect delay.
 
   // Once the answer is revealed, smooth-scroll the action bar (Next button +
   // explanation) into view so the user doesn't have to scroll manually.
@@ -907,6 +902,10 @@ const Slang = () => {
                       onClick={() => {
                         setPicks({ ...picks, [q.id]: oi });
                         setRevealed(true);
+                        // Speak the canonical example IMMEDIATELY inside the
+                        // click handler — no useEffect delay, no audio unlock
+                        // gap on mobile.
+                        speak(q.idiom.example);
                       }}
                       className={`flex items-center justify-between rounded-xl border px-4 py-3.5 text-left text-base transition ${
                         correctOpt

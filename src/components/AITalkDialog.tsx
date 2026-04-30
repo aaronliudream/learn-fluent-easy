@@ -450,10 +450,15 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
           </div>
           <button
             onClick={() => { if (phase === "live") endCall(); else onClose(); }}
-            className="grid size-10 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary"
-            aria-label="Close"
+            className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-2 text-sm font-bold shadow-md ring-1 transition ${
+              phase === "live"
+                ? "bg-rose-500 text-white ring-rose-600 hover:bg-rose-600"
+                : "bg-card text-foreground ring-border hover:bg-secondary"
+            }`}
+            aria-label={phase === "live" ? "End call" : "Close"}
           >
-            <X className="size-5" />
+            {phase === "live" ? <PhoneOff className="size-4" /> : <X className="size-4" />}
+            <span>{phase === "live" ? <T>结束</T> : <T>退出</T>}</span>
           </button>
         </header>
 

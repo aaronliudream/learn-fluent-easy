@@ -974,7 +974,7 @@ const Lesson = () => {
               return (
                 <div key={i} className="rounded-2xl border border-border bg-secondary/30 p-5">
                   <div className="font-semibold">
-                    {i + 1}. {q.q}
+                    {i + 1}. {nativeText(q.q)}
                   </div>
                   <div className="mt-3 grid gap-2 md:grid-cols-2">
                     {q.options.map((o, oi) => {
@@ -1002,7 +1002,7 @@ const Lesson = () => {
                   </div>
                   {reveal && q.explain && (
                     <p className="mt-3 rounded-lg bg-primary/5 p-3 text-xs text-primary">
-                      💡 {q.explain}
+                      💡 {nativeText(q.explain)}
                     </p>
                   )}
                 </div>

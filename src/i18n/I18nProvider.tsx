@@ -54,7 +54,7 @@ function sanitizeCachedCatalog(lang: LangCode, cat: Catalog): Catalog {
   const cleaned: Catalog = {};
   for (const [k, v] of Object.entries(cat)) {
     if (typeof v !== "string") continue;
-    if (!CJK_LANGS.has(lang) && hasWrongScript(lang, v)) continue;
+    if (hasWrongScript(lang, v)) continue;
     cleaned[k as StringKey] = stripHtml(v);
   }
   return cleaned;
@@ -64,7 +64,7 @@ function sanitizeDynCache(lang: LangCode, cache: Record<string, string>) {
   const cleaned: Record<string, string> = {};
   for (const [k, v] of Object.entries(cache)) {
     if (typeof v !== "string") continue;
-    if (!CJK_LANGS.has(lang) && hasWrongScript(lang, v)) continue;
+    if (hasWrongScript(lang, v)) continue;
     cleaned[k] = stripHtml(v);
   }
   return cleaned;

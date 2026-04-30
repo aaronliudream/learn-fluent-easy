@@ -113,6 +113,117 @@ export function isMasteredSlang(id: number, store = getSlangStoreSync()): boolea
 }
 
 /**
+ * 5-level learning ladder for a slang phrase. Each level is a different
+ * drill type and difficulty:
+ *   1 (recognise)    — see English, pick Chinese meaning
+ *   2 (listen)       — listen / fill blank
+ *   3 (situate)      — read a Chinese real-life scenario, pick the right slang
+ *   4 (compose)      — given a scenario, write a sentence using the slang (AI graded)
+ *   5 (own)          — you can use it freely; revisited only on long SRS intervals
+ * The ladder is derived from the user's correct/wrong/lastCorrectAt history,
+ * so it auto-progresses as they answer correctly.
+ */
+export type SlangLevel = 1 | 2 | 3 | 4 | 5;
+
+export function getSlangLevel(id: number, store = getSlangStoreSync()): SlangLevel {
+  const c = store.correct[id] ?? 0;
+  const w = store.wrong[id] ?? 0;
+  if (c === 0 && w === 0) return 1;
+  if (c <= w) return 1;        // still struggling — drop back to recognition
+  if (c === 1) return 2;
+  if (c === 2) return 3;
+  if (c === 3) return 4;
+  return 5;
+}
+
+/**
+ * Today's recommended practice mix:
+ *   - 3 brand-new phrases (level 1)
+ *   - 4 due-for-review (any level whose cooldown expired)
+ *   - 2 "in-progress" (level 3-4 that the user is actively climbing)
+ * Returns the chosen ids in display order.
+ */
+export function pickDailyPlan<T extends { id: number }>(items: T[]): {
+  fresh: T[];
+  review: T[];
+  climbing: T[];
+} {
+  const store = getSlangStoreSync();
+  const fresh: T[] = [];
+  const review: T[] = [];
+  const climbing: T[] = [];
+  for (const it of items) {
+    const c = store.correct[it.id] ?? 0;
+    const w = store.wrong[it.id] ?? 0;
+    if (c === 0 && w === 0) {
+      fresh.push(it);
+    } else if (isInCooldown(it.id, store)) {
+      // still cooling down, skip
+      continue;
+    } else {
+      const lvl = getSlangLevel(it.id, store);
+      if (lvl >= 3 && lvl <= 4) climbing.push(it);
+      else review.push(it);
+    }
+  }
+  // Lightweight shuffling (deterministic-per-day so the plan is stable
+  // within the day and the user can come back to the same set).
+  const dayIdx = Math.floor(Date.now() / 86_400_000);
+  const seeded = (id: number) => {
+    let h = (id * 2654435761) ^ (dayIdx * 1000003);
+    h = (h ^ (h >>> 15)) >>> 0;
+    h = Math.imul(h, 2246822507) >>> 0;
+    return ((h ^ (h >>> 13)) >>> 0) / 4294967296;
+  };
+  const sortStable = <X extends { id: number }>(arr: X[]) =>
+    [...arr].sort((a, b) => seeded(a.id) - seeded(b.id));
+  return {
+    fresh: sortStable(fresh).slice(0, 3),
+    review: sortStable(review).slice(0, 4),
+    climbing: sortStable(climbing).slice(0, 2),
+  };
+}
+
+/** Compact stats for the daily-plan badge / progress bar. */
+export function getSlangProgress(items: { id: number }[]): {
+  total: number;
+  unseen: number;
+  learning: number;
+  mastered: number;
+} {
+  const store = getSlangStoreSync();
+  let unseen = 0, learning = 0, mastered = 0;
+  for (const it of items) {
+    const c = store.correct[it.id] ?? 0;
+    const w = store.wrong[it.id] ?? 0;
+    if (c === 0 && w === 0) unseen++;
+    else if (c >= 3 && c > w) mastered++;
+    else learning++;
+  }
+  return { total: items.length, unseen, learning, mastered };
+}
+
+/** Top N slang phrases the user is currently working on (level 3-4). Used
+ *  by AI Talk so Alex can sprinkle them into the conversation. */
+export function getActiveLearningSlangIds(limit = 8): number[] {
+  const store = getSlangStoreSync();
+  const candidates: { id: number; lvl: number; last: number }[] = [];
+  for (const idStr of Object.keys(store.correct)) {
+    const id = Number(idStr);
+    const c = store.correct[id] ?? 0;
+    const w = store.wrong[id] ?? 0;
+    if (c === 0 || c <= w) continue; // not engaged yet, or struggling
+    const lvl = getSlangLevel(id, store);
+    if (lvl >= 3 && lvl <= 4) {
+      candidates.push({ id, lvl, last: store.lastCorrectAt[id] ?? 0 });
+    }
+  }
+  // Most recently engaged first.
+  candidates.sort((a, b) => b.last - a.last);
+  return candidates.slice(0, limit).map((x) => x.id);
+}
+
+/**
  * Spaced-repetition interval (in days) before a mastered idiom is eligible
  * to appear in a quiz again. The more times answered correctly in a row,
  * the longer the gap.

@@ -42,7 +42,7 @@ export function useStreakStats(userId: string | null | undefined) {
     setLoading(true);
     (async () => {
       try {
-        const { data, error } = await supabase.rpc("get_user_streak_stats" as never);
+        const { data, error } = await supabase.rpc("get_user_streak_stats");
         if (cancelled) return;
         if (error) {
           console.warn("streak rpc error", error);

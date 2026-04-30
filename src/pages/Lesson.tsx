@@ -851,7 +851,7 @@ const Lesson = () => {
                 className="rounded-2xl border border-border bg-secondary/30 p-5"
               >
                 <div className="text-xs font-semibold uppercase tracking-wider text-primary">
-                  {e.scene}
+                  {nativeText(e.scene)}
                 </div>
                 <div className="mt-2 flex items-center justify-between gap-2">
                   <p className="text-base font-semibold">{e.en}</p>
@@ -885,7 +885,7 @@ const Lesson = () => {
               return (
                 <div key={i} className="rounded-2xl border border-border bg-secondary/30 p-5">
                   <p className="text-base">
-                    {f.sentence.split("___")[0]}
+                    {nativeText(f.sentence.split("___")[0])}
                     <span
                       className={`mx-1 inline-block min-w-20 rounded-md border-b-2 px-2 text-center font-bold ${
                         picked
@@ -897,7 +897,7 @@ const Lesson = () => {
                     >
                       {picked || "____"}
                     </span>
-                    {f.sentence.split("___")[1]}
+                    {nativeText(f.sentence.split("___")[1] ?? "")}
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {f.options.map((o) => (
@@ -993,7 +993,7 @@ const Lesson = () => {
                                 : "border-border bg-card hover:border-primary/40"
                           }`}
                         >
-                          <span>{o}</span>
+                          <span>{nativeText(o)}</span>
                           {reveal && isCorrect && <Check className="size-4" />}
                           {reveal && isPicked && !isCorrect && <X className="size-4" />}
                         </button>

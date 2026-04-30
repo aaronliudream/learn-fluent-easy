@@ -753,6 +753,8 @@ const Slang = () => {
           en2cn: tt("英 → 中：选出正确含义"),
           cn2en: tt("中 → 英：选出对应俚语"),
           fill: tt("填空：选出适合的俚语"),
+          scenario: tt("情境匹配：哪个俚语最合适？"),
+          compose: tt("自己造句：用上这个俚语"),
         };
         return (
           <>

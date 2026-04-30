@@ -32,7 +32,7 @@ const stopCurrent = () => {
 
 export const stopSpeaking = () => {
   // Also abort any running speakSequence loop.
-  cancelSequence();
+  sequenceId += 1;
   stopCurrent();
 };
 

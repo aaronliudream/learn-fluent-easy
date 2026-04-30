@@ -22,6 +22,25 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
 
+/**
+ * Small flag-like badge that renders the 2-letter language code in a pill.
+ * Avoids relying on emoji flags which don't render on many systems
+ * (notably Windows shows "us" / "cn" letters instead of a flag).
+ */
+const LANG_BADGE_STYLES: Record<string, string> = {
+  en: "bg-gradient-to-br from-blue-600 to-red-600 text-white",
+  zh: "bg-gradient-to-br from-red-600 to-yellow-400 text-white",
+};
+const LangBadge = ({ code }: { code: string }) => (
+  <span
+    className={`inline-grid h-7 w-9 place-items-center rounded-md text-[11px] font-black uppercase tracking-tight shadow-sm ring-1 ring-black/10 ${
+      LANG_BADGE_STYLES[code] ?? "bg-secondary text-foreground"
+    }`}
+  >
+    {code === "en" ? "EN" : code === "zh" ? "中" : code.toUpperCase()}
+  </span>
+);
+
 const Index = () => {
   const { t } = useI18n();
   const { language: targetLang, setLanguage: setTargetLang } = useTargetLanguage();
@@ -170,37 +189,42 @@ const Index = () => {
 
       <PageHeader title={t("index.title")} subtitle={t("index.subtitle")} />
 
-      {/* Fixed "I want to learn" picker — prominent on the homepage */}
-      <div className="mb-6 flex items-center gap-4 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 p-4 md:p-5">
-        <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground">
-          <GraduationCap className="size-5" />
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary/80">
-            <T>我想学</T>
+      {/* "I want to learn" picker — premium card on the homepage */}
+      <div className="relative mb-6 overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 p-5 text-white shadow-tile md:p-6">
+        <span className="pointer-events-none absolute -right-16 -top-20 size-56 rounded-full bg-white/15 blur-3xl" />
+        <span className="pointer-events-none absolute -bottom-20 -left-10 size-44 rounded-full bg-white/10 blur-2xl" />
+        <div className="relative flex flex-wrap items-center gap-4">
+          <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm md:size-14">
+            <GraduationCap className="size-6" />
           </div>
-          <div className="mt-0.5 text-base font-extrabold leading-tight md:text-lg">
-            {currentTarget.flag} {currentTarget.native}
+          <div className="flex-1 min-w-0">
+            <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">
+              <T>I want to learn</T>
+            </div>
+            <div className="mt-1 flex items-center gap-2 text-xl font-extrabold leading-tight md:text-2xl">
+              <LangBadge code={currentTarget.value} />
+              <span>{currentTarget.native}</span>
+            </div>
           </div>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-indigo-700 shadow-md transition hover:scale-[1.03] hover:shadow-lg">
+              <T>Change</T> <ChevronDown className="size-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-60">
+              {TARGET_LANGUAGES.map((l) => (
+                <DropdownMenuItem
+                  key={l.value}
+                  onClick={() => { if (l.value !== targetLang) void setTargetLang(l.value); }}
+                  className={`gap-3 py-2.5 ${l.value === targetLang ? "font-semibold" : ""}`}
+                >
+                  <LangBadge code={l.value} />
+                  <span className="flex-1">{l.native}</span>
+                  <span className="text-xs text-muted-foreground">{l.label}</span>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
-        <DropdownMenu>
-          <DropdownMenuTrigger className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:opacity-90">
-            <T>Change</T> <ChevronDown className="size-4" />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-56">
-            {TARGET_LANGUAGES.map((l) => (
-              <DropdownMenuItem
-                key={l.value}
-                onClick={() => { if (l.value !== targetLang) void setTargetLang(l.value); }}
-                className={l.value === targetLang ? "font-semibold" : ""}
-              >
-                <span className="mr-2 text-base">{l.flag}</span>
-                <span className="flex-1">{l.native}</span>
-                <span className="text-xs text-muted-foreground">{l.label}</span>
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
       </div>
 
       {/* Optional: guest progress save nudge */}

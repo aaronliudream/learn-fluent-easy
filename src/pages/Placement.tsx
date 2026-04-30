@@ -244,13 +244,6 @@ const Placement = () => {
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>完成后给出 CEFR 等级 + 推荐 LEVEL 1–6 的具体学习起点</T></li>
           </ul>
 
-          <div className="mt-5 flex gap-3 rounded-2xl border border-border bg-secondary/40 p-4 text-xs leading-relaxed text-muted-foreground">
-            <Info className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-            <div>
-              <T>关于"权威性"的说明：本测试为本平台的内部水平评估，依据 CEFR 公开等级描述设计，用于推荐合适的学习起点。它不是剑桥、雅思、托福、CEFR 官方认证考试，结果仅供学习参考，不可作为留学/求职的官方证明。</T>
-            </div>
-          </div>
-
           <Button size="lg" className="mt-6 w-full" onClick={start}>
             <T>开始测试</T> →
           </Button>

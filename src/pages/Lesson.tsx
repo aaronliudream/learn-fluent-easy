@@ -1179,7 +1179,7 @@ const Lesson = () => {
                   {feedback.score} <T>分</T>
                 </span>
               </div>
-              <p className="text-sm leading-relaxed text-foreground/85">{feedback.overall}</p>
+              <p className="text-sm leading-relaxed text-foreground/85"><T>{feedback.overall}</T></p>
 
               {feedback.mistakes.length > 0 ? (
                 <div>
@@ -1189,7 +1189,7 @@ const Lesson = () => {
                       <li key={i} className="rounded-xl border border-rose-200 bg-white p-3 text-sm">
                         <div className="text-rose-600 line-through">{m.original}</div>
                         <div className="mt-1 font-semibold text-emerald-600">✓ {m.corrected}</div>
-                        <div className="mt-2 text-foreground/75">{m.explanation}</div>
+                        <div className="mt-2 text-foreground/75"><T>{m.explanation}</T></div>
                       </li>
                     ))}
                   </ul>
@@ -1205,7 +1205,7 @@ const Lesson = () => {
                   <div className="mb-2 text-sm font-semibold text-primary">💡 <T>改进建议</T></div>
                   <ul className="list-disc space-y-1 pl-5 text-sm text-foreground/80">
                     {feedback.suggestions.map((s, i) => (
-                      <li key={i}>{s}</li>
+                      <li key={i}><T>{s}</T></li>
                     ))}
                   </ul>
                 </div>

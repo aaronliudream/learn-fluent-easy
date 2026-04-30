@@ -268,20 +268,24 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (lang === "en" && !CJK_TEXT_RE.test(text)) return localizeProtagonist(text, lang);
     const cached = dynCacheRef.current[text];
     if (isUsableTranslation(lang, text, cached)) return localizeProtagonist(cached, lang);
-    // Queue and debounce
+    // Queue and debounce a translation request.
     dynQueueRef.current.add(text);
-    // Use a non-resetting timer so heavy renders can't postpone the flush
-    // forever. The first call schedules a flush ~120ms out; subsequent calls
-    // simply add to the same batch.
     if (dynTimerRef.current === null) {
       dynTimerRef.current = window.setTimeout(() => {
         dynTimerRef.current = null;
         flushDynQueue(lang);
-      }, 120);
+      }, 60);
     }
-    // Show source text while the translation is loading; it will swap to the
-    // translated string as soon as the batch resolves. Returning "" here would
-    // leave the UI blank, which is worse than a brief Chinese flash.
+    // STRICT MODE: never show the original Chinese source to a user whose
+    // mother-tongue is something else (e.g. Spanish, French). Showing the
+    // raw source text would violate the rule "only English + the chosen
+    // language may appear on screen". Instead we render a short placeholder
+    // (an ellipsis) that will be swapped out the instant the translation
+    // batch resolves a few hundred ms later. For English users with a
+    // CJK source we also redact, since they shouldn't see Chinese either.
+    if (CJK_TEXT_RE.test(text)) return "…";
+    // Source string contains no CJK — safe to show as-is while we wait
+    // (e.g. an English helper string being translated into Spanish).
     return localizeProtagonist(text, lang);
   // dynVersion is intentionally a dep: when a translation batch resolves
   // we want every memoised consumer to recompute against the new cache.

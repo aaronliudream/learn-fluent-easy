@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Award,
+  ArrowLeft,
   BookOpen,
   CheckCircle2,
   Clock,
@@ -18,7 +19,7 @@ import {
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { speak } from "@/lib/speak";
-import { T } from "@/i18n/T";
+import { T, useT } from "@/i18n/T";
 import {
   buildSectionPool,
   pickAdaptive,
@@ -50,6 +51,7 @@ const fmtTime = (sec: number) => {
 };
 
 const Placement = () => {
+  const tt = useT();
   const navigate = useNavigate();
   const [stage, setStage] = useState<Stage>("intro");
   const [questions, setQuestions] = useState<PlacementQuestion[]>([]);

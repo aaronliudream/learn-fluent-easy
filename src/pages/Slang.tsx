@@ -10,12 +10,6 @@ import {
   XCircle,
   Zap,
   X,
-  Pencil,
-  Loader2,
-  Send,
-  Lightbulb,
-  Star,
-  PartyPopper,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -31,39 +25,22 @@ import {
   sortByMastery,
   pickQuizPool,
   bumpSlangRotation,
-  getSlangLevel,
-  pickDailyPlan,
-  getSlangProgress,
-  type SlangLevel,
 } from "@/lib/slangMastery";
 
 type Mode = "browse" | "quiz";
-// 5-stage learning ladder. Each kind targets a deeper layer of memory:
-//   en2cn   (L1) — see phrase, pick CN meaning
-//   fill    (L2) — listen / fill the blank in an example
-//   cn2en   (L2) — see CN, pick the right phrase
-//   scenario(L3) — read a real-life CN situation, pick the right phrase
-//   compose (L4) — write your own sentence using the phrase, AI grades it
-type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose";
+// quiz direction: en2cn = show English idiom, choose Chinese meaning;
+// cn2en = show Chinese meaning, choose English idiom;
+// fill  = show example with blank, choose missing idiom.
+type QuizKind = "en2cn" | "cn2en" | "fill";
 
 type QuizQuestion = {
   id: number;
   kind: QuizKind;
   prompt: string;       // main question text
   context?: string;     // example sentence (CN translation when shown)
-  options?: string[];   // for the 4 multiple-choice kinds
-  answer?: number;      // index into options (mc kinds only)
+  options: string[];
+  answer: number;       // index into options
   idiom: Idiom;         // the right idiom (for review card)
-  scenarioCn?: string;  // for scenario kind: AI-generated situation
-};
-
-type ComposeGrade = {
-  usedPhrase: boolean;
-  correct: boolean;
-  naturalness: number; // 1-5
-  tip: string;
-  improved: string;
-  verdict: "great" | "ok" | "needs_work";
 };
 
 const PER_PAGE = 12;

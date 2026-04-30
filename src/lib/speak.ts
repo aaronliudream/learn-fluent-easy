@@ -3,6 +3,7 @@ import { loadSettings } from "@/lib/voice";
 
 let lastSpoken = "";
 let speakToken = 0;
+let sequenceId = 0;
 let currentAudio: HTMLAudioElement | null = null;
 let sharedAudio: HTMLAudioElement | null = null;
 
@@ -29,7 +30,11 @@ const stopCurrent = () => {
   }
 };
 
-export const stopSpeaking = () => stopCurrent();
+export const stopSpeaking = () => {
+  // Also abort any running speakSequence loop.
+  sequenceId += 1;
+  stopCurrent();
+};
 
 const getSharedAudio = () => {
   if (typeof window === "undefined") return null;
@@ -211,3 +216,27 @@ export const speak = (text: string): Promise<void> => {
     await speakBrowserFallback(trimmed, voiceId, speed, myToken);
   })();
 };
+
+// Speak a list of sentences one-by-one with a small pause between them.
+// This sounds far more natural than concatenating an entire paragraph and
+// sending it to TTS as one long string (which OpenAI tends to read very
+// fast and without breath pauses).
+export const speakSequence = async (
+  sentences: string[],
+  opts: { gapMs?: number } = {},
+): Promise<void> => {
+  const gapMs = opts.gapMs ?? 350;
+  const list = sentences.map((s) => (s || "").trim()).filter(Boolean);
+  if (list.length === 0) return;
+  const mySeq = ++sequenceId;
+  for (let i = 0; i < list.length; i++) {
+    if (mySeq !== sequenceId) return; // a new sequence (or stop) started
+    await speak(list[i]);
+    if (mySeq !== sequenceId) return;
+    if (i < list.length - 1) {
+      await new Promise((r) => setTimeout(r, gapMs));
+    }
+  }
+};
+
+// (cancelSequence defined near top.)

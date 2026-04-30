@@ -366,7 +366,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         // the global TTS settings used for lessons. Stable across sessions.
         const voicePref = getAlexVoice();
         const qwenVoice = QWEN_VOICE_MAP[voicePref] || "Cherry";
-        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level });
+        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level, mission });
         const session = new QwenRealtimeSession({
           cfg: { instructions, voice: qwenVoice, inputSampleRate: 16000, outputSampleRate: 24000 },
           onEvent: (evt) => handleRealtimeEvent(evt),
@@ -388,7 +388,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       const voicePref = getAlexVoice();
       const mappedVoice = REALTIME_VOICE_MAP[voicePref] || "shimmer";
       const { data, error } = await supabase.functions.invoke("realtime-token", {
-        body: { lessonTitle, unitTitle, levelName, level, voice: mappedVoice },
+        body: { lessonTitle, unitTitle, levelName, level, voice: mappedVoice, mission },
       });
       if (error) throw error;
       if (data?.error) throw new Error(data.error);

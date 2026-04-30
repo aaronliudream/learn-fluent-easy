@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
-import { speak } from "@/lib/speak";
+import { speak, stopSpeaking } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
 import { supabase } from "@/integrations/supabase/client";
@@ -189,6 +189,10 @@ const Placement = () => {
     if (stage !== "test") return;
     const q = questions[idx];
     if (!q) return;
+    // When the visible question changes, immediately silence any audio that
+    // was still playing from the previous question. Listening clips can be
+    // several seconds long and would otherwise bleed into the next item.
+    stopSpeaking();
     if (revealed[q.id]) return; // already revealed → no countdown
     setQuestionSecondsLeft(
       computeQuestionTimeLimit(q, { listeningMaxPlays: LISTENING_MAX_PLAYS }),
@@ -208,6 +212,16 @@ const Placement = () => {
     return () => clearInterval(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stage, idx, questions.length]);
+
+  // Hard safety net: silence audio whenever we leave the test stage (results,
+  // review, or unmount). Prevents a previous question's listening clip from
+  // continuing to play after the user navigates away or finishes.
+  useEffect(() => {
+    if (stage !== "test") stopSpeaking();
+  }, [stage]);
+  useEffect(() => {
+    return () => { stopSpeaking(); };
+  }, []);
 
   const finish = () => {
     if (finishedRef.current) return;

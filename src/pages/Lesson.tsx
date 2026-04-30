@@ -125,6 +125,18 @@ const Lesson = () => {
   const [mastered, setMasteredState] = useState(false);
   const [aiContent, setAiContent] = useState<LessonContent | null>(null);
   const [generating, setGenerating] = useState(false);
+  const [talkOpen, setTalkOpen] = useState(false);
+  const [authedUser, setAuthedUser] = useState<boolean>(false);
+  useEffect(() => {
+    let active = true;
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (active) setAuthedUser(!!session?.user);
+    });
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => {
+      if (active) setAuthedUser(!!s?.user);
+    });
+    return () => { active = false; subscription.unsubscribe(); };
+  }, []);
 
   useEffect(() => {
     setMasteredState(isMastered(Number(levelId), Number(unitId), Number(lessonId)));

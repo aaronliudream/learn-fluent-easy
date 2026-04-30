@@ -198,12 +198,11 @@ const Index = () => {
             <GraduationCap className="size-6" />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">
+            <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-80">
               <T>I want to learn</T>
             </div>
-            <div className="mt-1 flex items-center gap-2 text-xl font-extrabold leading-tight md:text-2xl">
-              <LangBadge code={currentTarget.value} />
-              <span>{currentTarget.native}</span>
+            <div className="mt-0.5 text-lg font-extrabold leading-tight md:text-xl">
+              {currentTarget.native}
             </div>
           </div>
           <DropdownMenu>

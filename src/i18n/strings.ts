@@ -63,7 +63,13 @@ export type StringKey =
   | "lang.changeLater"
   // Support / donation
   | "support.cta"
-  | "support.thanks";
+  | "support.thanks"
+  | "support.qrTitle"
+  | "support.qrSubtitle"
+  | "support.qrWechat"
+  | "support.qrAlipay"
+  | "support.qrHowTo"
+  | "support.qrClose";
 
 // English source strings.
 export const EN: Record<StringKey, string> = {
@@ -126,6 +132,12 @@ export const EN: Record<StringKey, string> = {
 
   "support.cta": "If you like this app, buy me a coffee ☕",
   "support.thanks": "Thanks for your support — it helps make FluentPath better.",
+  "support.qrTitle": "Buy me a coffee ☕",
+  "support.qrSubtitle": "Scan with WeChat or Alipay to send a tip directly. Every bit helps keep FluentPath ad-free.",
+  "support.qrWechat": "WeChat Pay",
+  "support.qrAlipay": "Alipay",
+  "support.qrHowTo": "Long-press the image to save, then open WeChat / Alipay → Scan.",
+  "support.qrClose": "Close",
 };
 
 // Hand-authored Chinese (the original copy used throughout the app).
@@ -189,6 +201,12 @@ export const ZH: Record<StringKey, string> = {
 
   "support.cta": "如果喜欢这个 App，请我喝杯咖啡 ☕",
   "support.thanks": "感谢你的支持，让 FluentPath 变得更好。",
+  "support.qrTitle": "请我喝杯咖啡 ☕",
+  "support.qrSubtitle": "微信或支付宝扫一扫，随心打赏。你的支持让 FluentPath 保持无广告、持续更新。",
+  "support.qrWechat": "微信支付",
+  "support.qrAlipay": "支付宝",
+  "support.qrHowTo": "长按图片保存，再打开微信 / 支付宝 → 扫一扫即可。",
+  "support.qrClose": "关闭",
 };
 
 // Built-in catalogs. Other languages are translated on demand.

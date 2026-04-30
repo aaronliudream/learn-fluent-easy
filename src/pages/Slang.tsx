@@ -24,6 +24,7 @@ import {
   recordSlangResult,
   sortByMastery,
   pickQuizPool,
+  bumpSlangRotation,
 } from "@/lib/slangMastery";
 
 type Mode = "browse" | "quiz";
@@ -169,6 +170,14 @@ const Slang = () => {
 
   // Load mastery from cloud once.
   useEffect(() => {
+    // Once per browser session, rotate the unseen-order so users don't always
+    // see "rizz, drip, …" at the top.
+    try {
+      if (!sessionStorage.getItem("slang_rotated_this_session")) {
+        bumpSlangRotation();
+        sessionStorage.setItem("slang_rotated_this_session", "1");
+      }
+    } catch { /* noop */ }
     loadSlangMastery().then(() => setMasteryVersion((v) => v + 1));
     // Streak event
     import("@/lib/guestProgress").then(m => m.recordVisit("slang"));

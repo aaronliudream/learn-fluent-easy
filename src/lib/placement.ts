@@ -144,6 +144,89 @@ export type StudyRecommendation = {
   advice: string;
 };
 
+// =====================================================================
+// CAT (simplified Computerized Adaptive Testing) helpers
+// =====================================================================
+
+/**
+ * Per-section adaptive state. We track the running ability estimate, a
+ * confidence indicator (number of answered items + variance), and a streak
+ * counter so that consecutive correct/wrong answers move difficulty faster.
+ */
+export type SectionState = {
+  ability: number; // current best estimate, 1.0 .. 6.5
+  level: number; // next target difficulty (1..6)
+  answered: number;
+  correctStreak: number;
+  wrongStreak: number;
+  history: { level: number; correct: boolean }[];
+};
+
+export const initSectionState = (): SectionState => ({
+  ability: 2,
+  level: 2,
+  answered: 0,
+  correctStreak: 0,
+  wrongStreak: 0,
+  history: [],
+});
+
+/**
+ * Update a section's adaptive state after one answer.
+ *  - Answered correctly: jump up. Two-in-a-row → +2 levels (skip easy items).
+ *  - Answered incorrectly: drop down. Two-in-a-row wrong → -2 levels.
+ *  - Ability is a running average tilted by the difficulty of items answered
+ *    correctly vs incorrectly, similar to Elo / simplified IRT.
+ */
+export function updateSectionState(
+  state: SectionState,
+  questionLevel: number,
+  correct: boolean,
+): SectionState {
+  const next: SectionState = {
+    ...state,
+    answered: state.answered + 1,
+    history: [...state.history, { level: questionLevel, correct }],
+    correctStreak: correct ? state.correctStreak + 1 : 0,
+    wrongStreak: correct ? 0 : state.wrongStreak + 1,
+  };
+
+  // Difficulty step
+  let step = 0;
+  if (correct) {
+    step = next.correctStreak >= 2 ? 2 : 1;
+  } else {
+    step = next.wrongStreak >= 2 ? -2 : -1;
+  }
+  next.level = Math.max(1, Math.min(6, questionLevel + step));
+
+  // Ability update — weight each item by its difficulty.
+  // Correct on a hard item proves more than correct on an easy one.
+  const target = correct ? questionLevel + 0.5 : questionLevel - 0.5;
+  const learningRate = Math.max(0.18, 0.5 / Math.sqrt(next.answered)); // shrinks
+  next.ability = state.ability + learningRate * (target - state.ability);
+  next.ability = Math.max(1, Math.min(6.5, next.ability));
+
+  return next;
+}
+
+/**
+ * Confidence interval (rough): a standard-error-ish estimate that shrinks as
+ * more items are answered and as the user's answers stabilize at one level.
+ * Returns half-width in CEFR levels.
+ */
+export function sectionConfidenceHalfWidth(state: SectionState): number {
+  if (state.answered === 0) return 3;
+  // Variance of the difficulty levels at which "correct" and "wrong" answers landed.
+  const correctLvls = state.history.filter((h) => h.correct).map((h) => h.level);
+  const wrongLvls = state.history.filter((h) => !h.correct).map((h) => h.level);
+  // Spread between hardest correct and easiest wrong → uncertainty.
+  const maxCorrect = correctLvls.length ? Math.max(...correctLvls) : state.ability - 1;
+  const minWrong = wrongLvls.length ? Math.min(...wrongLvls) : state.ability + 1;
+  const spread = Math.max(0.5, minWrong - maxCorrect);
+  return spread / Math.sqrt(state.answered);
+}
+
 const SECTION_CN: Record<Section, string> = {
   vocab: "词汇",
   grammar: "语法",

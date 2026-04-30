@@ -15,12 +15,20 @@ import {
   Target,
   TrendingUp,
   Volume2,
+  Brain,
+  Loader2,
+  RefreshCw,
+  ArrowUpRight,
+  ArrowDownRight,
+  Minus,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { speak } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
+import { supabase } from "@/integrations/supabase/client";
+import ReactMarkdown from "react-markdown";
 import {
   buildSectionPool,
   pickAdaptive,
@@ -30,12 +38,18 @@ import {
   type PlacementResult,
   type Section,
   type SectionPool,
+  type SectionState,
+  initSectionState,
+  updateSectionState,
+  sectionConfidenceHalfWidth,
 } from "@/lib/placement";
 
 const TEST_MINUTES = 25;
 const SECTIONS: Section[] = ["vocab", "grammar", "reading", "listening"];
-const QS_PER_SECTION = 6; // adaptive: shorter but more accurate
-const TOTAL_QS = SECTIONS.length * QS_PER_SECTION; // 24
+const QS_MIN_PER_SECTION = 4; // never stop a section before this many items
+const QS_MAX_PER_SECTION = 7; // hard cap per section
+const STOP_CONFIDENCE = 0.45; // half-width threshold (in CEFR levels)
+const TOTAL_QS = SECTIONS.length * QS_MAX_PER_SECTION; // 28 (upper bound)
 const NEEDS_NATIVE_TRANSLATION_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
   vocab: { cn: "Vocabulary", icon: BookOpen, color: "bg-pink-500/15 text-pink-500" },
@@ -63,10 +77,18 @@ const Placement = () => {
   const [idx, setIdx] = useState(0);
   const poolRef = useRef<SectionPool | null>(null);
   const usedRef = useRef<Set<string>>(new Set());
-  // Track current adaptive level per section. Start everyone at L2 (A2).
-  const sectionLevelRef = useRef<Record<Section, number>>({
-    vocab: 2, grammar: 2, reading: 2, listening: 2,
+  // Per-section adaptive state (CAT). Stable refs avoid stale closures during
+  // the rapid setState chain after each answer.
+  const sectionStateRef = useRef<Record<Section, SectionState>>({
+    vocab: initSectionState(),
+    grammar: initSectionState(),
+    reading: initSectionState(),
+    listening: initSectionState(),
   });
+  const sectionDoneRef = useRef<Record<Section, boolean>>({
+    vocab: false, grammar: false, reading: false, listening: false,
+  });
+  const startedAtRef = useRef<number>(Date.now());
   const [secondsLeft, setSecondsLeft] = useState(TEST_MINUTES * 60);
   const [result, setResult] = useState<PlacementResult | null>(null);
   const finishedRef = useRef(false);
@@ -75,7 +97,14 @@ const Placement = () => {
     const pool = buildSectionPool();
     poolRef.current = pool;
     usedRef.current = new Set();
-    sectionLevelRef.current = { vocab: 2, grammar: 2, reading: 2, listening: 2 };
+    sectionStateRef.current = {
+      vocab: initSectionState(),
+      grammar: initSectionState(),
+      reading: initSectionState(),
+      listening: initSectionState(),
+    };
+    sectionDoneRef.current = { vocab: false, grammar: false, reading: false, listening: false };
+    startedAtRef.current = Date.now();
 
     // Pre-seed: pick the FIRST question of each section at starting level so the
     // header shows progress smoothly. Subsequent questions are picked just-in-time
@@ -123,6 +152,159 @@ const Placement = () => {
     setResult(r);
     setStage("result");
     window.scrollTo({ top: 0 });
+    void persistAndAnalyze(r);
+  };
+
+  // ----- Persisted result + AI report -----
+  const [resultRowId, setResultRowId] = useState<string | null>(null);
+  const [aiReport, setAiReport] = useState<string>("");
+  const [aiBusy, setAiBusy] = useState(false);
+  const [aiError, setAiError] = useState<string | null>(null);
+  const [previousResult, setPreviousResult] = useState<{
+    cefr: string; ability: number; recommended_level: number; created_at: string;
+  } | null>(null);
+
+  const persistAndAnalyze = async (r: PlacementResult) => {
+    const { data: auth } = await supabase.auth.getUser();
+    const uid = auth?.user?.id;
+    if (!uid) {
+      // Anonymous user → still try AI report, don't persist
+      void streamReport(r, null);
+      return;
+    }
+    // Fetch previous result BEFORE inserting (so the comparison shows real "last")
+    try {
+      const { data: prev } = await supabase
+        .from("placement_results")
+        .select("cefr,ability,recommended_level,created_at")
+        .order("created_at", { ascending: false })
+        .limit(1)
+        .maybeSingle();
+      if (prev) setPreviousResult(prev as any);
+    } catch (e) {
+      console.warn("prev result fetch", e);
+    }
+    // Build the question log for diagnosis
+    const wrongQuestions = questions
+      .filter((q) => picks[q.id] !== undefined && picks[q.id] !== q.answer)
+      .map((q) => ({
+        id: q.id,
+        section: q.section,
+        level: q.level,
+        prompt: q.prompt,
+        context: q.context,
+        options: q.options,
+        answer: q.answer,
+        picked: picks[q.id],
+        explain: q.explain,
+      }));
+    const fullLog = questions.map((q) => ({
+      id: q.id, section: q.section, level: q.level,
+      picked: picks[q.id] ?? null, correct: picks[q.id] === q.answer,
+    }));
+    const durationSeconds = Math.max(0, Math.round((Date.now() - startedAtRef.current) / 1000));
+    try {
+      const { data: inserted, error } = await supabase
+        .from("placement_results")
+        .insert({
+          user_id: uid,
+          cefr: r.cefr,
+          ability: r.ability,
+          weighted: r.weighted,
+          recommended_level: r.recommendedLevel,
+          by_section: r.bySection,
+          weakest: r.weakest,
+          question_log: fullLog,
+          duration_seconds: durationSeconds,
+        })
+        .select("id")
+        .single();
+      if (error) throw error;
+      setResultRowId(inserted.id);
+    } catch (e) {
+      console.warn("persist placement result", e);
+    }
+    void streamReport(r, wrongQuestions);
+  };
+
+  const streamReport = async (r: PlacementResult, wrongQuestions: any[] | null) => {
+    setAiBusy(true);
+    setAiError(null);
+    setAiReport("");
+    try {
+      const wq = wrongQuestions ?? questions
+        .filter((q) => picks[q.id] !== undefined && picks[q.id] !== q.answer)
+        .map((q) => ({
+          section: q.section, level: q.level, prompt: q.prompt,
+          context: q.context, options: q.options, answer: q.answer,
+          picked: picks[q.id], explain: q.explain,
+        }));
+      const url = `https://${import.meta.env.VITE_SUPABASE_PROJECT_ID}.supabase.co/functions/v1/placement-report`;
+      const resp = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
+        },
+        body: JSON.stringify({
+          cefr: r.cefr,
+          ability: r.ability,
+          weighted: r.weighted,
+          recommendedLevel: r.recommendedLevel,
+          bySection: r.bySection,
+          weakest: r.weakest,
+          wrongQuestions: wq,
+        }),
+      });
+      if (!resp.ok || !resp.body) {
+        throw new Error(`HTTP ${resp.status}`);
+      }
+      const reader = resp.body.getReader();
+      const decoder = new TextDecoder();
+      let buf = "";
+      let assembled = "";
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buf += decoder.decode(value, { stream: true });
+        const lines = buf.split("\n");
+        buf = lines.pop() ?? "";
+        for (const line of lines) {
+          const t = line.trim();
+          if (!t.startsWith("data:")) continue;
+          const payload = t.slice(5).trim();
+          if (!payload || payload === "[DONE]") continue;
+          try {
+            const obj = JSON.parse(payload);
+            if (obj.delta) {
+              assembled += obj.delta;
+              setAiReport(assembled);
+            } else if (obj.error) {
+              throw new Error(obj.error);
+            }
+          } catch (e) {
+            // ignore malformed
+          }
+        }
+      }
+      // Persist the AI report on the row (best-effort)
+      if (resultRowId && assembled) {
+        await supabase
+          .from("placement_results")
+          .update({ ai_report: { markdown: assembled, model: "gemini-2.5-flash" } })
+          .eq("id", resultRowId);
+      }
+    } catch (e) {
+      console.error("AI report stream", e);
+      setAiError(e instanceof Error ? e.message : "Failed to load AI report");
+    } finally {
+      setAiBusy(false);
+    }
+  };
+
+  const regenerateReport = () => {
+    if (!result) return;
+    void streamReport(result, null);
   };
 
   const sectionGroups = useMemo(() => {
@@ -144,51 +326,64 @@ const Placement = () => {
     const pick = picks[cur.id];
     const correct = pick === cur.answer;
 
-    // Adapt section level: ±1 step, clamped to 1..6 (A1..C2)
+    // 1) Update CAT state for the section we just answered in
     const sec = cur.section;
-    const prev = sectionLevelRef.current[sec];
-    const nextLv = Math.max(1, Math.min(6, prev + (correct ? 1 : -1)));
-    sectionLevelRef.current[sec] = nextLv;
+    const newState = updateSectionState(sectionStateRef.current[sec], cur.level, correct);
+    sectionStateRef.current[sec] = newState;
 
-    // Count answered per section
-    const answeredInSec = questions.filter(
-      (q) => q.section === sec && picks[q.id] !== undefined,
-    ).length;
+    // 2) Decide if this section is "done" (enough info or hit cap)
+    const halfWidth = sectionConfidenceHalfWidth(newState);
+    const sectionDone =
+      newState.answered >= QS_MAX_PER_SECTION ||
+      (newState.answered >= QS_MIN_PER_SECTION && halfWidth <= STOP_CONFIDENCE);
+    sectionDoneRef.current[sec] = sectionDone;
 
-    // Decide which section the NEXT question belongs to.
-    // Round-robin through sections so all four advance evenly.
-    const sectionCounts: Record<Section, number> = { vocab: 0, grammar: 0, reading: 0, listening: 0 };
-    for (const q of questions) sectionCounts[q.section]++;
-    // Include the just-answered question's section having "answeredInSec" answers.
-    // We want next section to be the one with the FEWEST scheduled questions
-    // that hasn't reached QS_PER_SECTION.
-    let nextSec: Section | null = null;
-    let minCount = Infinity;
-    for (const s of SECTIONS) {
-      if (sectionCounts[s] >= QS_PER_SECTION) continue;
-      if (sectionCounts[s] < minCount) {
-        minCount = sectionCounts[s];
-        nextSec = s;
-      }
-    }
-
-    if (!nextSec) {
-      // All sections full → finish
+    // 3) All sections done → finish
+    if (SECTIONS.every((s) => sectionDoneRef.current[s])) {
       finish();
       return;
     }
 
-    const desiredLv = sectionLevelRef.current[nextSec];
+    // 4) Pick the next section: round-robin across sections that aren't done,
+    //    preferring the one with the fewest answered items so progress feels even.
+    const remaining = SECTIONS.filter((s) => !sectionDoneRef.current[s]);
+    let nextSec: Section = remaining[0];
+    let minAnswered = Infinity;
+    for (const s of remaining) {
+      const a = sectionStateRef.current[s].answered;
+      if (a < minAnswered) {
+        minAnswered = a;
+        nextSec = s;
+      }
+    }
+
+    const desiredLv = sectionStateRef.current[nextSec].level;
     const nextQ = pickAdaptive(pool, nextSec, desiredLv, usedRef.current);
     if (!nextQ) {
+      // Bank exhausted at every level for this section → mark done & try again
+      sectionDoneRef.current[nextSec] = true;
+      if (SECTIONS.every((s) => sectionDoneRef.current[s])) {
+        finish();
+        return;
+      }
+      // Try the remaining sections one more time
+      for (const s of SECTIONS) {
+        if (sectionDoneRef.current[s]) continue;
+        const fallback = pickAdaptive(pool, s, sectionStateRef.current[s].level, usedRef.current);
+        if (fallback) {
+          usedRef.current.add(fallback.id);
+          setQuestions((qs) => [...qs, fallback]);
+          setIdx(idx + 1);
+          return;
+        }
+        sectionDoneRef.current[s] = true;
+      }
       finish();
       return;
     }
     usedRef.current.add(nextQ.id);
     setQuestions((qs) => [...qs, nextQ]);
     setIdx(idx + 1);
-    // Suppress unused warning in dev builds
-    void answeredInSec;
   };
 
   // ---------------- INTRO ----------------
@@ -214,7 +409,7 @@ const Placement = () => {
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <Target className="mb-1 size-5" />
-              <div className="text-lg font-bold">{TOTAL_QS} Q</div>
+              <div className="text-lg font-bold">~{QS_MIN_PER_SECTION * 4}–{TOTAL_QS} Q</div>
               <div className="text-[11px] text-white/80"><T>四模块自适应</T></div>
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
@@ -238,7 +433,7 @@ const Placement = () => {
                   </div>
                   <div>
                     <div className="font-bold"><T>{m.cn}</T></div>
-                    <div className="text-xs text-muted-foreground">{QS_PER_SECTION} · <T>难度自动调节</T></div>
+                    <div className="text-xs text-muted-foreground">{QS_MIN_PER_SECTION}–{QS_MAX_PER_SECTION} · <T>难度自动调节</T></div>
                   </div>
                 </div>
               );
@@ -271,7 +466,27 @@ const Placement = () => {
     const picked = picks[q.id];
     const answered = Object.keys(picks).length;
     const lowTime = secondsLeft <= 60;
-    const isLast = questions.length >= TOTAL_QS && idx === questions.length - 1;
+    // Predict whether answering this one finishes the test:
+    // every other section is already done AND this section will be done after the answer.
+    const stateNow = sectionStateRef.current[q.section];
+    const willBeAnswered = stateNow.answered + 1;
+    const otherSectionsDone = SECTIONS.every(
+      (s) => s === q.section || sectionDoneRef.current[s],
+    );
+    const thisWillBeDone =
+      willBeAnswered >= QS_MAX_PER_SECTION ||
+      (willBeAnswered >= QS_MIN_PER_SECTION &&
+        sectionConfidenceHalfWidth({
+          ...stateNow,
+          answered: willBeAnswered,
+        }) <= STOP_CONFIDENCE);
+    const isLast = otherSectionsDone && thisWillBeDone;
+    // Estimated total: sum of (already done = answered, otherwise = max((answered+1), MIN))
+    const estTotal = SECTIONS.reduce((acc, s) => {
+      const st = sectionStateRef.current[s];
+      if (sectionDoneRef.current[s]) return acc + st.answered;
+      return acc + Math.max(QS_MIN_PER_SECTION, st.answered + 1);
+    }, 0);
 
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
@@ -294,7 +509,7 @@ const Placement = () => {
             </div>
             <div>
               <div className="text-sm font-bold"><T>{meta.cn}</T> <span className="ml-1 rounded bg-secondary px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground">L{q.level}</span></div>
-              <div className="text-[11px] text-muted-foreground">{idx + 1} / {TOTAL_QS}</div>
+              <div className="text-[11px] text-muted-foreground">{idx + 1} / ~{Math.max(estTotal, idx + 1)}</div>
             </div>
           </div>
           <div className={`flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-sm font-bold ${lowTime ? "bg-rose-500/15 text-rose-600" : "bg-secondary text-foreground"}`}>
@@ -306,7 +521,7 @@ const Placement = () => {
         <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
           <div
             className="h-full bg-grad-title transition-all"
-            style={{ width: `${((idx + 1) / TOTAL_QS) * 100}%` }}
+            style={{ width: `${Math.min(100, ((idx + 1) / Math.max(estTotal, idx + 1)) * 100)}%` }}
           />
         </div>
 
@@ -359,7 +574,7 @@ const Placement = () => {
           <span className="text-xs text-muted-foreground">
             {picked === undefined ? <T>请选择一个答案</T> : <T>已记录答案，点击下方按钮继续</T>}
           </span>
-          <span className="text-sm text-muted-foreground"><T>已答</T> {answered} / {TOTAL_QS}</span>
+          <span className="text-sm text-muted-foreground"><T>已答</T> {answered} / ~{Math.max(estTotal, answered)}</span>
           {isLast ? (
             <Button
               onClick={finish}
@@ -409,6 +624,44 @@ const Placement = () => {
             </div>
           </div>
         </div>
+
+        {/* Previous vs current comparison */}
+        {previousResult && (() => {
+          const prevAb = Number(previousResult.ability) || 0;
+          const diff = +(result.ability - prevAb).toFixed(1);
+          const upgraded = result.recommendedLevel > previousResult.recommended_level;
+          const downgraded = result.recommendedLevel < previousResult.recommended_level;
+          const sameDay = false;
+          const Trend = diff > 0 ? ArrowUpRight : diff < 0 ? ArrowDownRight : Minus;
+          const trendCls = diff > 0 ? "text-emerald-600 bg-emerald-500/15" :
+                            diff < 0 ? "text-rose-600 bg-rose-500/15" :
+                                       "text-muted-foreground bg-secondary";
+          const dateStr = new Date(previousResult.created_at).toLocaleDateString();
+          void sameDay;
+          return (
+            <section className="mt-5 rounded-2xl border border-border bg-card p-4 shadow-card">
+              <div className="flex items-center gap-3">
+                <div className={`grid size-10 place-items-center rounded-xl ${trendCls}`}>
+                  <Trend className="size-5" />
+                </div>
+                <div className="flex-1">
+                  <div className="text-xs text-muted-foreground"><T>对比上次测评</T> · {dateStr}</div>
+                  <div className="text-sm font-bold">
+                    {previousResult.cefr} <span className="text-muted-foreground">→</span> {result.cefr}
+                    <span className="ml-2 text-xs font-semibold">
+                      {diff > 0 ? `+${diff}` : diff} <T>能力值</T>
+                    </span>
+                  </div>
+                  <div className="text-[11px] text-muted-foreground">
+                    {upgraded && <span className="text-emerald-600"><T>推荐起步等级提升</T> ↑</span>}
+                    {downgraded && <span className="text-rose-600"><T>推荐起步等级回落</T> ↓</span>}
+                    {!upgraded && !downgraded && <span><T>推荐起步等级持平</T></span>}
+                  </div>
+                </div>
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Section breakdown */}
         <section className="mt-6 rounded-3xl bg-card p-6 shadow-card md:p-8">
@@ -502,6 +755,56 @@ const Placement = () => {
               );
             })}
           </div>
+        </section>
+
+        {/* AI Diagnostic Report */}
+        <section className="mt-6 rounded-3xl border-2 border-violet-500/30 bg-gradient-to-br from-violet-500/5 to-fuchsia-500/5 p-6 shadow-card md:p-8">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="grid size-11 place-items-center rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white shadow-md">
+              <Brain className="size-6" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-extrabold"><T>AI 诊断报告</T></h3>
+              <p className="text-xs text-muted-foreground">
+                <T>基于你的答题轨迹，给出考点归因与 4 周提升计划</T>
+              </p>
+            </div>
+            {!aiBusy && aiReport && (
+              <button
+                onClick={regenerateReport}
+                className="grid size-9 place-items-center rounded-xl text-muted-foreground transition hover:bg-secondary hover:text-foreground"
+                aria-label={tt("重新生成")}
+              >
+                <RefreshCw className="size-4" />
+              </button>
+            )}
+          </div>
+
+          {aiBusy && !aiReport && (
+            <div className="flex items-center gap-3 rounded-2xl bg-card p-5 text-sm text-muted-foreground">
+              <Loader2 className="size-5 animate-spin text-violet-500" />
+              <span><T>AI 正在分析你的错题与能力分布… 通常 5–15 秒</T></span>
+            </div>
+          )}
+
+          {aiError && !aiReport && (
+            <div className="rounded-2xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm text-rose-700">
+              <div className="font-semibold"><T>报告生成失败</T></div>
+              <div className="mt-1 text-xs">{aiError}</div>
+              <Button size="sm" variant="outline" className="mt-3" onClick={regenerateReport}>
+                <RefreshCw className="mr-1.5 size-3.5" /> <T>重试</T>
+              </Button>
+            </div>
+          )}
+
+          {aiReport && (
+            <article className="prose prose-sm dark:prose-invert max-w-none rounded-2xl bg-card p-5 leading-relaxed text-foreground/90 [&_h2]:mt-5 [&_h2]:text-base [&_h2]:font-extrabold [&_h2]:text-violet-700 dark:[&_h2]:text-violet-400 [&_h2:first-child]:mt-0 [&_ul]:my-2 [&_li]:my-1 [&_strong]:text-foreground">
+              <ReactMarkdown>{aiReport}</ReactMarkdown>
+              {aiBusy && (
+                <span className="ml-1 inline-block h-4 w-1.5 animate-pulse bg-violet-500 align-middle" />
+              )}
+            </article>
+          )}
         </section>
 
         <div className="mt-6 flex gap-3">

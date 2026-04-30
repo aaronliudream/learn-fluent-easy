@@ -21,6 +21,7 @@ const Index = () => {
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
   const [slangCount, setSlangCount] = useState<number>(IDIOMS.length);
+  const [lastPlacement, setLastPlacement] = useState<{ cefr: string; recommended_level: number; created_at: string } | null>(null);
 
   useEffect(() => {
     touchActive();
@@ -31,6 +32,21 @@ const Index = () => {
     supabase.auth.getSession().then(({ data: { session } }) => setUser(session?.user ?? null));
     return () => subscription.unsubscribe();
   }, []);
+
+  useEffect(() => {
+    if (!user) { setLastPlacement(null); return; }
+    let cancelled = false;
+    (async () => {
+      const { data } = await supabase
+        .from("placement_results")
+        .select("cefr,recommended_level,created_at")
+        .order("created_at", { ascending: false })
+        .limit(1)
+        .maybeSingle();
+      if (!cancelled && data) setLastPlacement(data as any);
+    })();
+    return () => { cancelled = true; };
+  }, [user]);
 
   useEffect(() => {
     let cancelled = false;
@@ -79,7 +95,9 @@ const Index = () => {
       icon: Award,
       eyebrow: t("index.section.placement.eyebrow"),
       title: t("index.section.placement.title"),
-      desc: t("index.section.placement.desc"),
+      desc: lastPlacement
+        ? `${t("index.section.placement.lastResult", { cefr: lastPlacement.cefr, level: lastPlacement.recommended_level })}`
+        : t("index.section.placement.desc"),
       gradient: "from-emerald-500 via-teal-500 to-cyan-500",
     },
     {

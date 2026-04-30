@@ -209,6 +209,54 @@ export type Database = {
         }
         Relationships: []
       }
+      placement_results: {
+        Row: {
+          ability: number
+          ai_report: Json | null
+          by_section: Json
+          cefr: string
+          created_at: string
+          duration_seconds: number | null
+          id: string
+          question_log: Json
+          recommended_level: number
+          updated_at: string
+          user_id: string
+          weakest: string[]
+          weighted: number
+        }
+        Insert: {
+          ability: number
+          ai_report?: Json | null
+          by_section: Json
+          cefr: string
+          created_at?: string
+          duration_seconds?: number | null
+          id?: string
+          question_log?: Json
+          recommended_level: number
+          updated_at?: string
+          user_id: string
+          weakest?: string[]
+          weighted: number
+        }
+        Update: {
+          ability?: number
+          ai_report?: Json | null
+          by_section?: Json
+          cefr?: string
+          created_at?: string
+          duration_seconds?: number | null
+          id?: string
+          question_log?: Json
+          recommended_level?: number
+          updated_at?: string
+          user_id?: string
+          weakest?: string[]
+          weighted?: number
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

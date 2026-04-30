@@ -278,6 +278,16 @@ const Slang = () => {
   const [qIdx, setQIdx] = useState(0);
   const [picks, setPicks] = useState<Record<number, number>>({});
   const [revealed, setRevealed] = useState(false);
+  // Compose (L4) state — keyed by question id so navigating back/forward
+  // doesn't lose the learner's typed sentence.
+  const [composeText, setComposeText] = useState<Record<number, string>>({});
+  const [composeGrade, setComposeGrade] = useState<Record<number, ComposeGrade>>({});
+  const [composeBusy, setComposeBusy] = useState(false);
+  // Scenario (L3) text — generated on demand by `slang-scenario` edge fn,
+  // cached per phrase id in this session.
+  const scenarioCacheRef = useRef<Record<number, string>>({});
+  const [scenarioText, setScenarioText] = useState<Record<number, string>>({});
+  const [scenarioBusy, setScenarioBusy] = useState<Record<number, boolean>>({});
   // Tracks which question ids we've already counted toward mastery to avoid double-counting.
   const recordedRef = useRef<Set<number>>(new Set());
   // Ref to the action bar so we can scroll it into view after the user picks
@@ -387,6 +397,120 @@ const Slang = () => {
   }, [mode]);
 
   const correctCount = questions.filter((q) => picks[q.id] === q.answer).length;
+
+  // For mixed quiz results, "correct" means: either the user picked the
+  // right MC option, or (for compose questions) the AI graded their
+  // sentence as "great" / "ok".
+  const isQuestionCorrect = (q: QuizQuestion): boolean => {
+    if (q.kind === "compose") {
+      const g = composeGrade[q.id];
+      return !!g && g.verdict !== "needs_work";
+    }
+    return picks[q.id] === q.answer;
+  };
+  const totalCorrect = questions.filter(isQuestionCorrect).length;
+
+  // ─────────── L3 scenario fetcher (lazy, cached per session) ───────────
+  const ensureScenario = async (q: QuizQuestion) => {
+    if (q.kind !== "scenario") return;
+    if (scenarioText[q.id] || scenarioCacheRef.current[q.id]) return;
+    setScenarioBusy((s) => ({ ...s, [q.id]: true }));
+    try {
+      const { data, error } = await supabase.functions.invoke("slang-scenario", {
+        body: {
+          phrase: q.idiom.phrase,
+          meaningCn: q.idiom.meaning_cn,
+          meaningEn: q.idiom.meaning_en,
+          exampleEn: q.idiom.example,
+        },
+      });
+      if (error) throw error;
+      const s: string = data?.scenario;
+      if (s) {
+        scenarioCacheRef.current[q.id] = s;
+        setScenarioText((prev) => ({ ...prev, [q.id]: s }));
+      }
+    } catch (e) {
+      console.error("scenario fetch failed", e);
+    } finally {
+      setScenarioBusy((s) => ({ ...s, [q.id]: false }));
+    }
+  };
+
+  useEffect(() => {
+    if (mode !== "quiz") return;
+    const q = questions[qIdx];
+    if (!q) return;
+    if (q.kind === "scenario") void ensureScenario(q);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode, qIdx, questions]);
+
+  // ─────────── L4 compose grader ───────────
+  const submitCompose = async (q: QuizQuestion) => {
+    const text = (composeText[q.id] || "").trim();
+    if (!text) {
+      toast(tt("写一句话再提交吧 ✍️"));
+      return;
+    }
+    setComposeBusy(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("grade-slang-sentence", {
+        body: {
+          phrase: q.idiom.phrase,
+          meaningCn: q.idiom.meaning_cn,
+          meaningEn: q.idiom.meaning_en,
+          exampleEn: q.idiom.example,
+          scenarioCn: q.idiom.example_cn,
+          userText: text,
+        },
+      });
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+      const grade = data.grade as ComposeGrade;
+      setComposeGrade((prev) => ({ ...prev, [q.id]: grade }));
+      setRevealed(true);
+      // Speak the improved version so the learner internalises a native
+      // model right after producing their own.
+      if (grade?.improved) speak(grade.improved);
+    } catch (e: any) {
+      console.error("compose grade failed", e);
+      toast.error(e?.message || tt("评分失败，请稍后再试"));
+    } finally {
+      setComposeBusy(false);
+    }
+  };
+
+  // ─────────── Daily 5-min plan (top of browse view) ───────────
+  const dailyPlan = useMemo(() => {
+    const all = [...IDIOMS, ...dailySlang];
+    return pickDailyPlan(all);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dailySlang, masteryVersion]);
+
+  const dailyTotal = dailyPlan.fresh.length + dailyPlan.review.length + dailyPlan.climbing.length;
+
+  const startDailyPlanQuiz = () => {
+    const pool = [...dailyPlan.fresh, ...dailyPlan.review, ...dailyPlan.climbing];
+    if (pool.length === 0) {
+      toast.success(tt("🎉 今日练习已完成，明天见！"));
+      return;
+    }
+    setQuestions(buildQuiz(pool, pool.length));
+    setQIdx(0);
+    setPicks({});
+    setRevealed(false);
+    setComposeText({});
+    setComposeGrade({});
+    recordedRef.current = new Set();
+    setMode("quiz");
+    window.scrollTo({ top: 0 });
+  };
+
+  const overallProgress = useMemo(
+    () => getSlangProgress([...IDIOMS, ...dailySlang]),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [dailySlang, masteryVersion],
+  );
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">

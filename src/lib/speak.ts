@@ -223,20 +223,35 @@ export const speak = (text: string): Promise<void> => {
 // fast and without breath pauses).
 export const speakSequence = async (
   sentences: string[],
-  opts: { gapMs?: number } = {},
+  opts: { gapMs?: number; onIndex?: (i: number) => void } = {},
 ): Promise<void> => {
-  const gapMs = opts.gapMs ?? 350;
+  const gapMs = opts.gapMs ?? 80;
   const list = sentences.map((s) => (s || "").trim()).filter(Boolean);
   if (list.length === 0) return;
   const mySeq = ++sequenceId;
+  // Prefetch the first item's audio so playback starts with no dead air.
+  const { voiceId, speed } = loadSettings();
+  const prefetch = (text: string) => {
+    const key = `${voiceId}|${speed}|${text}`;
+    if (!audioCache.has(key)) {
+      // fire-and-forget; result is stored in cache by fetchTTS
+      void fetchTTS(text, voiceId, speed);
+    }
+  };
+  prefetch(list[0]);
   for (let i = 0; i < list.length; i++) {
     if (mySeq !== sequenceId) return; // a new sequence (or stop) started
+    opts.onIndex?.(i);
+    // Kick off prefetch of the NEXT sentence while we play the current one,
+    // so the gap between sentences is just the configured gapMs (not network).
+    if (i + 1 < list.length) prefetch(list[i + 1]);
     await speak(list[i]);
     if (mySeq !== sequenceId) return;
     if (i < list.length - 1) {
       await new Promise((r) => setTimeout(r, gapMs));
     }
   }
+  opts.onIndex?.(-1);
 };
 
 // (cancelSequence defined near top.)

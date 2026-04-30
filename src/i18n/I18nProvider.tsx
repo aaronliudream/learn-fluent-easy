@@ -18,22 +18,45 @@ type Catalog = Partial<Record<StringKey, string>>;
 const CJK_TEXT_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const CJK_LANGS = new Set<LangCode>(["zh", "ja", "ko"]);
 
+// Strip any HTML tags (e.g. <b>, </b>, <i>) the translator may have added,
+// decode common entities, and collapse whitespace. Translations are rendered
+// as plain text, so any tag would otherwise show up literally on screen.
+function stripHtml(value: string): string {
+  if (!value) return value;
+  return value
+    .replace(/<\/?[a-zA-Z][^>]*>/g, "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function hasWrongScript(lang: LangCode, value: string | undefined) {
   return Boolean(value && !CJK_LANGS.has(lang) && CJK_TEXT_RE.test(value));
 }
 
 function sanitizeCachedCatalog(lang: LangCode, cat: Catalog): Catalog {
-  if (CJK_LANGS.has(lang)) return cat;
-  return Object.fromEntries(
-    Object.entries(cat).filter(([, value]) => !hasWrongScript(lang, value)),
-  ) as Catalog;
+  const cleaned: Catalog = {};
+  for (const [k, v] of Object.entries(cat)) {
+    if (typeof v !== "string") continue;
+    if (!CJK_LANGS.has(lang) && hasWrongScript(lang, v)) continue;
+    cleaned[k as StringKey] = stripHtml(v);
+  }
+  return cleaned;
 }
 
 function sanitizeDynCache(lang: LangCode, cache: Record<string, string>) {
-  if (CJK_LANGS.has(lang)) return cache;
-  return Object.fromEntries(
-    Object.entries(cache).filter(([, value]) => !hasWrongScript(lang, value)),
-  );
+  const cleaned: Record<string, string> = {};
+  for (const [k, v] of Object.entries(cache)) {
+    if (typeof v !== "string") continue;
+    if (!CJK_LANGS.has(lang) && hasWrongScript(lang, v)) continue;
+    cleaned[k] = stripHtml(v);
+  }
+  return cleaned;
 }
 
 type I18nContextValue = {
@@ -136,7 +159,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
           return;
         }
         const translations: Record<string, string> = data?.translations || {};
-        const merged: Catalog = { ...catalog, ...translations };
+        const cleaned: Record<string, string> = {};
+        for (const [k, v] of Object.entries(translations)) {
+          if (typeof v === "string") cleaned[k] = stripHtml(v);
+        }
+        const merged: Catalog = { ...catalog, ...(cleaned as Catalog) };
         setCatalog(merged);
         saveCachedCatalog(lang, merged);
       } catch (e) {
@@ -178,7 +205,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       const next = { ...dynCacheRef.current };
       toSend.forEach((src, i) => {
         const tr = translations[String(i)];
-        if (tr && !hasWrongScript(l, tr)) next[src] = tr;
+        if (tr && !hasWrongScript(l, tr)) next[src] = stripHtml(tr);
       });
       dynCacheRef.current = next;
       saveDynCache(l, next);

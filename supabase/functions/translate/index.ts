@@ -47,6 +47,7 @@ Deno.serve(async (req) => {
       `4) Do not add quotes or commentary. ` +
       `5) Use natural, idiomatic ${targetLanguage}. ` +
       `6) ALWAYS output in ${targetLanguage}, even if the source is in another language — never return the original text unchanged unless it is a proper noun. ` +
+      `7) Return PLAIN TEXT only. Do NOT add any HTML or markdown tags such as <b>, </b>, <i>, <strong>, **bold**, etc. If the source contains formatting tags, drop them. ` +
       `Return ONLY a JSON object mapping each input key to its translation in ${targetLanguage}.`;
 
     const userPayload = JSON.stringify(

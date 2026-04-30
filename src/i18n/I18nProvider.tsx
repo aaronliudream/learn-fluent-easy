@@ -153,8 +153,12 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   // Dynamic-text cache (translated content snippets).
   const dynCacheRef = useRef<Record<string, string>>({});
-  // Re-render bump when dynamic translations land.
-  const [, bump] = useState(0);
+  // Bumped whenever a batch of dynamic translations lands. We MUST include
+  // this in the memoised context value so that <T> / useT() consumers
+  // actually re-render and pick up the freshly cached translation —
+  // otherwise translations sit in the cache forever and the user keeps
+  // seeing the original Chinese source.
+  const [dynVersion, bump] = useState(0);
 
   // Pending dynamic-translation queue (debounced batch).
   const dynQueueRef = useRef<Set<string>>(new Set());
@@ -269,11 +273,13 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // translated string as soon as the batch resolves. Returning "" here would
     // leave the UI blank, which is worse than a brief Chinese flash.
     return text;
-  }, [lang, flushDynQueue]);
+  // dynVersion is intentionally a dep: when a translation batch resolves
+  // we want every memoised consumer to recompute against the new cache.
+  }, [lang, flushDynQueue, dynVersion]);
 
   const value = useMemo<I18nContextValue>(() => ({
     lang, setLang, hasPicked, markPicked, t, tDynamic,
-  }), [lang, setLang, hasPicked, markPicked, t, tDynamic]);
+  }), [lang, setLang, hasPicked, markPicked, t, tDynamic, dynVersion]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

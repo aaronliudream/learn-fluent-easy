@@ -387,3 +387,128 @@ export const CEFR_DESC: Record<CEFRTier, { name: string; tag: string }> = {
   C1: { name: "高级 (Advanced)", tag: "可以在学术与专业场合熟练表达" },
   C2: { name: "精通 (Proficiency)", tag: "几乎接近母语者的理解与表达水平" },
 };
+
+// =====================================================================
+// Per-question time-limit calculator
+// ---------------------------------------------------------------------
+// Real proficiency tests (TOEFL / IELTS / Cambridge) do NOT use one
+// blanket time per section. Each item's time budget is derived from:
+//   1. how much text the user must read (prompt + options [+ passage])
+//   2. how much audio they must listen to (× allowed plays)
+//   3. cognitive load: harder CEFR tier → more analysis time
+//   4. section type: grammar items need parsing, reading items need
+//      passage scanning + option matching, etc.
+//
+// Baseline reading speeds (conservative, tuned for non-native test takers
+// under exam pressure):
+//   - English: ~3.0 words/sec (≈180 wpm — slightly below native 250 wpm)
+//   - Chinese: ~4.5 chars/sec (≈270 cpm)
+//   - Listening narration: ~2.3 words/sec (≈140 wpm — TOEFL-like pace)
+//
+// Tier multipliers reflect that harder items also use longer, denser
+// vocabulary, so each word takes more time to process.
+// =====================================================================
+
+const TIER_LOAD: Record<CEFRTier, number> = {
+  A1: 1.0,
+  A2: 1.05,
+  B1: 1.15,
+  B2: 1.25,
+  C1: 1.35,
+  C2: 1.45,
+};
+
+// Count "reading units" in a string. English words count as 1 unit per word
+// at 3 wps; Chinese characters count at 4.5 cps so 1 CN char ≈ 0.67 EN words
+// in time terms. We return seconds-to-read directly.
+function readingSeconds(text: string | undefined): number {
+  if (!text) return 0;
+  const cnChars = (text.match(/[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/g) || []).length;
+  // Count English words as runs of latin letters/digits/apostrophes
+  const enWords = (text.match(/[A-Za-z0-9'’]+/g) || []).length;
+  // Convert to seconds. CN: 4.5 chars/sec → s = chars/4.5
+  // EN: 3.0 words/sec → s = words/3.0
+  return cnChars / 4.5 + enWords / 3.0;
+}
+
+// Estimate spoken duration of a script (assumes English narration).
+// 2.3 words/sec ≈ 140 wpm — matches TOEFL/IELTS narration pace.
+function spokenSeconds(text: string | undefined): number {
+  if (!text) return 0;
+  const enWords = (text.match(/[A-Za-z0-9'’]+/g) || []).length;
+  // Add a small floor for very short clips (loading/intonation overhead)
+  return Math.max(2, enWords / 2.3);
+}
+
+/**
+ * Compute the per-question time budget in seconds, based on the actual
+ * content of the question (prompt + context + all options) and the
+ * cognitive load implied by its CEFR tier and section type.
+ *
+ * Floors and ceilings are applied so the timer never feels absurd:
+ *   - vocab/grammar: 12s ≤ t ≤ 60s
+ *   - reading:       30s ≤ t ≤ 180s
+ *   - listening:     20s ≤ t ≤ 120s
+ */
+export function computeQuestionTimeLimit(
+  q: PlacementQuestion,
+  opts: { listeningMaxPlays?: number } = {},
+): number {
+  const tier = (LEVEL_TO_TIER[q.level] ?? "A1") as CEFRTier;
+  const load = TIER_LOAD[tier];
+
+  // Time to read the prompt + every option (the user has to scan all of them).
+  const promptSec = readingSeconds(q.prompt);
+  const optionsSec = q.options.reduce((acc, o) => acc + readingSeconds(o), 0);
+
+  let total = 0;
+  let lo = 0;
+  let hi = 0;
+
+  switch (q.section) {
+    case "vocab": {
+      // Decide between 4 short options after a short prompt. Mostly recall.
+      // Base "thinking" budget = 4s easy, scaling with tier.
+      const think = 4 * load;
+      total = (promptSec + optionsSec) * load + think;
+      lo = 12;
+      hi = 60;
+      break;
+    }
+    case "grammar": {
+      // Must parse the carrier sentence (context) + decide which form fits.
+      const ctxSec = readingSeconds(q.context);
+      const think = 6 * load;
+      total = (promptSec + ctxSec + optionsSec) * load + think;
+      lo = 15;
+      hi = 70;
+      break;
+    }
+    case "reading": {
+      // Passage scan (with re-reading allowance ×1.4) + question + options
+      // + analysis time that scales strongly with tier.
+      const passageSec = readingSeconds(q.context) * 1.4;
+      const analyse = 10 * load;
+      total = passageSec * load + (promptSec + optionsSec) * load + analyse;
+      lo = 30;
+      hi = 180;
+      break;
+    }
+    case "listening": {
+      // Audio plays (allowed plays × clip duration) + options reading +
+      // post-audio reflection time.
+      const plays = Math.max(1, opts.listeningMaxPlays ?? 2);
+      const audioSec = spokenSeconds(q.context) * plays;
+      // Brief gap between plays (1s) for the user to mentally reset.
+      const interPlayGap = (plays - 1) * 1;
+      const reflect = 6 * load;
+      total = audioSec + interPlayGap + (promptSec + optionsSec) * load + reflect;
+      lo = 20;
+      hi = 120;
+      break;
+    }
+  }
+
+  // Round up to a whole second; clamp to section bounds.
+  return Math.max(lo, Math.min(hi, Math.ceil(total)));
+}

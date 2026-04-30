@@ -280,6 +280,9 @@ const Slang = () => {
   const [revealed, setRevealed] = useState(false);
   // Tracks which question ids we've already counted toward mastery to avoid double-counting.
   const recordedRef = useRef<Set<number>>(new Set());
+  // Ref to the action bar so we can scroll it into view after the user picks
+  // an answer — saves them having to scroll down to hit "下一题".
+  const actionBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (mode === "quiz" && questions.length === 0) {
@@ -364,6 +367,16 @@ const Slang = () => {
     }, 350);
     return () => window.clearTimeout(t);
   }, [revealed, qIdx, questions]);
+
+  // Once the answer is revealed, smooth-scroll the action bar (Next button +
+  // explanation) into view so the user doesn't have to scroll manually.
+  useEffect(() => {
+    if (!revealed) return;
+    const t = window.setTimeout(() => {
+      actionBarRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+    }, 120);
+    return () => window.clearTimeout(t);
+  }, [revealed]);
 
   // Reset the review counter when entering quiz so a fresh browse session starts after.
   useEffect(() => {
@@ -669,7 +682,7 @@ const Slang = () => {
               )}
             </section>
 
-            <div className="mt-6 flex items-center justify-between gap-3">
+            <div ref={actionBarRef} className="mt-6 flex items-center justify-between gap-3">
               <Button variant="outline" onClick={() => setMode("browse")}>
                 <T>返回浏览</T>
               </Button>

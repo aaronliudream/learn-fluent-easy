@@ -793,6 +793,7 @@ const Lesson = () => {
               return (
               <div
                 key={i}
+                ref={registerReadingRef(i) as any}
                 className={`grid grid-cols-[28px_1fr] gap-x-4 rounded-2xl border p-5 transition md:grid-cols-[36px_1fr_1fr] md:gap-x-6 ${
                   isActive
                     ? "border-primary/50 bg-primary/10 shadow-sm"

@@ -2,11 +2,13 @@ import { useParams, Navigate } from "react-router-dom";
 import { Volume2, PlayCircle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
+import { FloatingBackButton } from "@/components/FloatingBackButton";
 import { SCENE_CATEGORIES, SCENE_DIALOGUES } from "@/data/scenes";
 import { speak, speakSequence, stopSpeaking } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
 import { renderRich, stripTags } from "@/lib/richText";
 import { recordVisit } from "@/lib/guestProgress";
+import { useScrollToActive } from "@/lib/useScrollToActive";
 
 const ScenesPlay = () => {
   const t = useT();
@@ -15,6 +17,7 @@ const ScenesPlay = () => {
   const dlg = SCENE_DIALOGUES.find((d) => d.id === dialogueId);
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
   const cancelledRef = useRef(false);
+  const registerRef = useScrollToActive(activeIdx);
 
   useEffect(() => {
     if (dlg) recordVisit(`scene:${dlg.id}`);
@@ -68,6 +71,7 @@ const ScenesPlay = () => {
           return (
             <article
               key={i}
+              ref={registerRef(i) as any}
               role="button"
               tabIndex={0}
               onClick={() => playOne(i)}
@@ -97,6 +101,9 @@ const ScenesPlay = () => {
           );
         })}
       </section>
+
+      <FloatingBackButton to={`/scenes/${cat.key}`} />
+      <div className="h-24" />
     </main>
   );
 };

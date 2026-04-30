@@ -65,6 +65,8 @@ const STEP_ICONS = {
   Mic,
 } as const;
 
+const NATIVE_HELPER_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
+
 const sanitizeUnsupportedNarratorNames = (content: LessonContent): LessonContent => {
   const readingText = (content.reading ?? []).map((r) => r.en).join(" ");
   if (/\bAnna\b/.test(readingText)) return content;
@@ -108,6 +110,7 @@ const SectionHeader = ({
 
 const Lesson = () => {
   const tt = useT();
+  const nativeText = (text: string) => NATIVE_HELPER_RE.test(text) ? tt(text) : text;
   const { levelId, unitId, lessonId } = useParams();
   const lesson = findLesson(Number(levelId), Number(unitId), Number(lessonId));
   const [activeStep, setActiveStep] = useState(1);
@@ -675,7 +678,7 @@ const Lesson = () => {
                 </div>
                 <div className="mt-1 font-mono text-sm text-muted-foreground">{v.pron}</div>
                 <div className="mt-4 rounded-xl bg-card p-4">
-                  <div className="font-semibold"><T>{v.meaning}</T></div>
+                  <div className="font-semibold">{nativeText(v.meaning)}</div>
                   <p className="mt-2 italic text-foreground/80">"{v.example}"</p>
                   <p className="mt-1 text-sm text-muted-foreground"><T>{v.example_cn}</T></p>
                 </div>
@@ -727,7 +730,7 @@ const Lesson = () => {
                                 : "border-border bg-card hover:border-primary/40"
                           }`}
                         >
-                          <span>{opt}</span>
+                          <span>{nativeText(opt)}</span>
                           {reveal && isCorrect && <Check className="size-4" />}
                           {reveal && isPicked && !isCorrect && <X className="size-4" />}
                         </button>
@@ -808,8 +811,8 @@ const Lesson = () => {
           <div className="space-y-5">
             {content.grammar.map((g, i) => (
               <div key={i} className="rounded-2xl border border-border bg-secondary/30 p-5">
-                <h4 className="text-lg font-bold">{g.title}</h4>
-                <p className="mt-2 text-sm text-foreground/80">{g.explain}</p>
+                <h4 className="text-lg font-bold">{nativeText(g.title)}</h4>
+                <p className="mt-2 text-sm text-foreground/80">{nativeText(g.explain)}</p>
                 <ul className="mt-3 space-y-2">
                   {g.examples.map((ex, j) => (
                     <li key={j} className="rounded-xl bg-card p-3">
@@ -848,7 +851,7 @@ const Lesson = () => {
                 className="rounded-2xl border border-border bg-secondary/30 p-5"
               >
                 <div className="text-xs font-semibold uppercase tracking-wider text-primary">
-                  {e.scene}
+                  {nativeText(e.scene)}
                 </div>
                 <div className="mt-2 flex items-center justify-between gap-2">
                   <p className="text-base font-semibold">{e.en}</p>
@@ -882,7 +885,7 @@ const Lesson = () => {
               return (
                 <div key={i} className="rounded-2xl border border-border bg-secondary/30 p-5">
                   <p className="text-base">
-                    {f.sentence.split("___")[0]}
+                    {nativeText(f.sentence.split("___")[0])}
                     <span
                       className={`mx-1 inline-block min-w-20 rounded-md border-b-2 px-2 text-center font-bold ${
                         picked
@@ -894,7 +897,7 @@ const Lesson = () => {
                     >
                       {picked || "____"}
                     </span>
-                    {f.sentence.split("___")[1]}
+                    {nativeText(f.sentence.split("___")[1] ?? "")}
                   </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {f.options.map((o) => (
@@ -914,7 +917,7 @@ const Lesson = () => {
                                 : "border-border bg-card hover:border-primary/40"
                         }`}
                       >
-                        <span>{o}</span>
+                        <span>{nativeText(o)}</span>
                         {picked === o && correct && <Check className="size-3.5" />}
                         {picked === o && !correct && <X className="size-3.5" />}
                         {picked && picked !== o && o === f.answer && (
@@ -971,7 +974,7 @@ const Lesson = () => {
               return (
                 <div key={i} className="rounded-2xl border border-border bg-secondary/30 p-5">
                   <div className="font-semibold">
-                    {i + 1}. {q.q}
+                    {i + 1}. {nativeText(q.q)}
                   </div>
                   <div className="mt-3 grid gap-2 md:grid-cols-2">
                     {q.options.map((o, oi) => {
@@ -990,7 +993,7 @@ const Lesson = () => {
                                 : "border-border bg-card hover:border-primary/40"
                           }`}
                         >
-                          <span>{o}</span>
+                          <span>{nativeText(o)}</span>
                           {reveal && isCorrect && <Check className="size-4" />}
                           {reveal && isPicked && !isCorrect && <X className="size-4" />}
                         </button>
@@ -999,7 +1002,7 @@ const Lesson = () => {
                   </div>
                   {reveal && q.explain && (
                     <p className="mt-3 rounded-lg bg-primary/5 p-3 text-xs text-primary">
-                      💡 {q.explain}
+                      💡 {nativeText(q.explain)}
                     </p>
                   )}
                 </div>
@@ -1043,7 +1046,7 @@ const Lesson = () => {
                     </button>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
-                    <span>{b.before}</span>
+                    <span>{nativeText(b.before)}</span>
                     <input
                       value={v}
                       onChange={(e) => setListenInputs({ ...listenInputs, [i]: e.target.value })}
@@ -1056,7 +1059,7 @@ const Lesson = () => {
                       }`}
                       placeholder={tt("输入")}
                     />
-                    <span>{b.after}</span>
+                    <span>{nativeText(b.after)}</span>
                     {v && correct && <Check className="size-4 text-emerald-500" />}
                   </div>
                   {v && showFeedback && (

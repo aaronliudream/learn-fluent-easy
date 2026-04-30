@@ -46,8 +46,10 @@ Deno.serve(async (req) => {
       `3) Keep length similar; this is for UI labels and short content. ` +
       `4) Do not add quotes or commentary. ` +
       `5) Use natural, idiomatic ${targetLanguage}. ` +
-      `6) ALWAYS output in ${targetLanguage}, even if the source is in another language — never return the original text unchanged unless it is a proper noun. ` +
-      `7) Return PLAIN TEXT only. Do NOT add any HTML or markdown tags such as <b>, </b>, <i>, <strong>, **bold**, etc. If the source contains formatting tags, drop them. ` +
+      `6) ALWAYS output in ${targetLanguage}; never translate Chinese into English unless the targetLanguage is English. ` +
+      `7) If a string mixes English learning content with Chinese helper text, keep the English learning words/sentences as English and translate the Chinese helper text into ${targetLanguage}. ` +
+      `8) Never return the original text unchanged unless it is only a proper noun or already fully in ${targetLanguage}. ` +
+      `9) Return PLAIN TEXT only. Do NOT add any HTML or markdown tags such as <b>, </b>, <i>, <strong>, **bold**, etc. If the source contains formatting tags, drop them. ` +
       `Return ONLY a JSON object mapping each input key to its translation in ${targetLanguage}.`;
 
     const userPayload = JSON.stringify(

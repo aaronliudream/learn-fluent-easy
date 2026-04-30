@@ -11,11 +11,12 @@ import { BUILTIN, EN, type StringKey, interpolate } from "./strings";
 
 const STORAGE_LANG = "fluentpath.lang";
 const STORAGE_PICKED = "fluentpath.langPicked";
-const STORAGE_CACHE_PREFIX = "fluentpath.i18n.";
+const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v2.";
 
 type Catalog = Partial<Record<StringKey, string>>;
 
 const CJK_TEXT_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
+const HANGUL_TEXT_RE = /[\uac00-\ud7af]/;
 const CJK_LANGS = new Set<LangCode>(["zh", "ja", "ko"]);
 
 // Strip any HTML tags (e.g. <b>, </b>, <i>) the translator may have added,
@@ -36,14 +37,24 @@ function stripHtml(value: string): string {
 }
 
 function hasWrongScript(lang: LangCode, value: string | undefined) {
+  if (lang === "ko") return Boolean(value && CJK_TEXT_RE.test(value) && !HANGUL_TEXT_RE.test(value));
   return Boolean(value && !CJK_LANGS.has(lang) && CJK_TEXT_RE.test(value));
+}
+
+function isUsableTranslation(lang: LangCode, source: string, value: string | undefined) {
+  if (!value) return false;
+  const cleaned = stripHtml(value);
+  if (!cleaned) return false;
+  if (lang !== "zh" && cleaned.trim() === stripHtml(source).trim()) return false;
+  if (lang === "ko" && CJK_TEXT_RE.test(source) && !HANGUL_TEXT_RE.test(cleaned)) return false;
+  return !hasWrongScript(lang, cleaned);
 }
 
 function sanitizeCachedCatalog(lang: LangCode, cat: Catalog): Catalog {
   const cleaned: Catalog = {};
   for (const [k, v] of Object.entries(cat)) {
     if (typeof v !== "string") continue;
-    if (!CJK_LANGS.has(lang) && hasWrongScript(lang, v)) continue;
+    if (hasWrongScript(lang, v)) continue;
     cleaned[k as StringKey] = stripHtml(v);
   }
   return cleaned;
@@ -53,7 +64,7 @@ function sanitizeDynCache(lang: LangCode, cache: Record<string, string>) {
   const cleaned: Record<string, string> = {};
   for (const [k, v] of Object.entries(cache)) {
     if (typeof v !== "string") continue;
-    if (!CJK_LANGS.has(lang) && hasWrongScript(lang, v)) continue;
+    if (hasWrongScript(lang, v)) continue;
     cleaned[k] = stripHtml(v);
   }
   return cleaned;
@@ -137,7 +148,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     } else {
       setCatalog(loadCachedCatalog(lang));
     }
-    dynCacheRef.current = lang === "en" || lang === "zh" ? {} : loadDynCache(lang);
+    dynCacheRef.current = lang === "zh" ? {} : loadDynCache(lang);
   }, [lang]);
 
   // Fetch missing static-string translations from edge function.
@@ -198,14 +209,14 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     const items = toSend.map((text, i) => ({ key: String(i), text }));
     try {
       const { data, error } = await supabase.functions.invoke("translate", {
-        body: { targetLanguage, sourceLanguage: "Chinese", items },
+        body: { targetLanguage, items },
       });
       if (error) return;
       const translations: Record<string, string> = data?.translations || {};
       const next = { ...dynCacheRef.current };
       toSend.forEach((src, i) => {
         const tr = translations[String(i)];
-        if (tr && !hasWrongScript(l, tr)) next[src] = stripHtml(tr);
+        if (isUsableTranslation(l, src, tr)) next[src] = stripHtml(tr);
       });
       dynCacheRef.current = next;
       saveDynCache(l, next);
@@ -217,12 +228,12 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const tDynamic = useCallback((text: string) => {
     if (!text) return text;
-    // No translation needed if user reads English or if app authored it in zh.
-    // (We treat zh as the source for dynamic content because lessons/scenes are
-    // currently authored with Chinese hints.)
+    // No translation needed if the user chose Chinese, which is the app's
+    // original helper-language for lesson notes and hints.
     if (lang === "zh") return text;
+    if (lang === "en" && !CJK_TEXT_RE.test(text)) return text;
     const cached = dynCacheRef.current[text];
-    if (cached && !hasWrongScript(lang, cached)) return cached;
+    if (isUsableTranslation(lang, text, cached)) return cached;
     // Queue and debounce
     dynQueueRef.current.add(text);
     if (dynTimerRef.current) window.clearTimeout(dynTimerRef.current);

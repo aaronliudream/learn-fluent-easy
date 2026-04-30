@@ -14,6 +14,8 @@ import Unit from "./pages/Unit.tsx";
 import Lesson from "./pages/Lesson.tsx";
 import Auth from "./pages/Auth.tsx";
 import Stats from "./pages/Stats.tsx";
+import WeeklyReport from "./pages/WeeklyReport.tsx";
+import Unsubscribe from "./pages/Unsubscribe.tsx";
 import Placement from "./pages/Placement.tsx";
 import Slang from "./pages/Slang.tsx";
 import Account from "./pages/Account.tsx";
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/stats" element={<Stats />} />
+          <Route path="/weekly-report" element={<WeeklyReport />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="/placement" element={<Placement />} />
           <Route path="/slang" element={<Slang />} />
           <Route path="/account" element={<Account />} />

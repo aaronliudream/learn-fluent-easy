@@ -57,6 +57,15 @@ type QuizQuestion = {
   scenarioCn?: string;  // for scenario kind: AI-generated situation
 };
 
+type ComposeGrade = {
+  usedPhrase: boolean;
+  correct: boolean;
+  naturalness: number; // 1-5
+  tip: string;
+  improved: string;
+  verdict: "great" | "ok" | "needs_work";
+};
+
 const PER_PAGE = 12;
 const QUIZ_LEN = 10;
 // A page counts as "browsed" once the user dwells on it for this long (ms).

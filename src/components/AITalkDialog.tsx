@@ -258,6 +258,42 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     return () => { if (timerRef.current) { window.clearInterval(timerRef.current); timerRef.current = null; } };
   }, [phase, endCall]);
 
+  // ── Mic gating while Alex is speaking ──────────────────────────────────
+  // The single biggest source of "AI got interrupted but the user wasn't
+  // talking" complaints is Alex's own voice leaking back into the mic from
+  // the speaker (echo cancellation isn't perfect, especially without
+  // headphones). Solution: disable the mic track entirely while Alex is
+  // speaking, then re-enable after a short cooldown so the speaker tail
+  // doesn't trigger VAD either. Honors the user's manual mute.
+  useEffect(() => {
+    if (phase !== "live") return;
+    const stream = localStreamRef.current;
+    if (!stream) return;
+    const tracks = stream.getAudioTracks();
+    if (tracks.length === 0) return;
+
+    let cooldownTimer: number | null = null;
+    const setEnabled = (on: boolean) => {
+      tracks.forEach((t) => { t.enabled = on; });
+      // Qwen path also short-circuits chunk sends on `muted` for extra safety.
+      qwenSessionRef.current?.setMuted(!on);
+    };
+
+    if (muted) {
+      // User explicitly muted — always off, regardless of Alex.
+      setEnabled(false);
+    } else if (aiSpeaking) {
+      // Alex is talking — gate the mic immediately.
+      setEnabled(false);
+    } else {
+      // Alex just stopped — wait briefly so any speaker tail/echo passes
+      // before we listen again.
+      cooldownTimer = window.setTimeout(() => setEnabled(true), 350);
+    }
+
+    return () => { if (cooldownTimer) window.clearTimeout(cooldownTimer); };
+  }, [aiSpeaking, muted, phase]);
+
   const upsertTurn = useCallback((idx: number, patch: Partial<Turn>) => {
     setTranscript((prev) => {
       const next = [...prev];

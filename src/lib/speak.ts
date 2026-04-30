@@ -3,6 +3,7 @@ import { loadSettings } from "@/lib/voice";
 
 let lastSpoken = "";
 let speakToken = 0;
+let sequenceId = 0;
 let currentAudio: HTMLAudioElement | null = null;
 let sharedAudio: HTMLAudioElement | null = null;
 
@@ -220,7 +221,6 @@ export const speak = (text: string): Promise<void> => {
 // This sounds far more natural than concatenating an entire paragraph and
 // sending it to TTS as one long string (which OpenAI tends to read very
 // fast and without breath pauses).
-let sequenceId = 0;
 export const speakSequence = async (
   sentences: string[],
   opts: { gapMs?: number } = {},
@@ -239,5 +239,4 @@ export const speakSequence = async (
   }
 };
 
-// Bump the sequence id so any in-flight speakSequence loop bails out.
-const cancelSequence = () => { sequenceId += 1; };
+// (cancelSequence defined near top.)

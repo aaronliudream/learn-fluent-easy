@@ -195,8 +195,54 @@ export function sortByMastery<T extends { id: number }>(items: T[]): T[] {
     if (c >= 1 && c > w) return 2;
     return 1;
   };
+  // Deterministic per-day seed so the order stays stable within a session
+  // but rotates each day (and across devices/users via a stored salt). This
+  // prevents users from always seeing "rizz, drip" first.
+  const seed = getRotationSeed();
+  const rand = (id: number) => {
+    // Simple hash → [0, 1). Mixes id with daily seed.
+    let h = (id * 2654435761) ^ seed;
+    h = (h ^ (h >>> 15)) >>> 0;
+    h = Math.imul(h, 2246822507) >>> 0;
+    h = (h ^ (h >>> 13)) >>> 0;
+    return (h >>> 0) / 4294967296;
+  };
   return items
-    .map((it, i) => ({ it, i, b: bucket(it.id) }))
-    .sort((a, b) => a.b - b.b || a.i - b.i)
+    .map((it) => ({ it, b: bucket(it.id), r: rand(it.id) }))
+    .sort((a, b) => a.b - b.b || a.r - b.r)
     .map((x) => x.it);
+}
+
+const ROTATION_SALT_KEY = "slang_rotation_salt_v1";
+function getRotationSalt(): number {
+  try {
+    const raw = localStorage.getItem(ROTATION_SALT_KEY);
+    if (raw) {
+      const n = parseInt(raw, 10);
+      if (!Number.isNaN(n)) return n;
+    }
+    const salt = Math.floor(Math.random() * 1_000_000);
+    localStorage.setItem(ROTATION_SALT_KEY, String(salt));
+    return salt;
+  } catch {
+    return 0;
+  }
+}
+function getRotationSeed(): number {
+  // Day index since epoch (UTC) — changes once per day.
+  const dayIdx = Math.floor(Date.now() / 86_400_000);
+  return (dayIdx * 1000003) ^ getRotationSalt();
+}
+
+/**
+ * Force a new rotation order on next render — call this after the user
+ * signs in so each login session gives a fresh first-impression order.
+ */
+export function bumpSlangRotation() {
+  try {
+    const salt = Math.floor(Math.random() * 1_000_000);
+    localStorage.setItem(ROTATION_SALT_KEY, String(salt));
+  } catch {
+    /* noop */
+  }
 }

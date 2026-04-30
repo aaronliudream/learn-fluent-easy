@@ -698,7 +698,7 @@ const Lesson = () => {
                   className="group flex items-center gap-3 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
                   aria-label="Play"
                 >
-                  <h4 className="text-2xl font-extrabold tracking-tight">{v.word}</h4>
+                  <span className="text-2xl font-extrabold tracking-tight">{v.word}</span>
                   <span className="grid size-8 place-items-center rounded-full text-primary transition group-hover:bg-primary/10">
                     <Volume2 className="size-5" />
                   </span>
@@ -735,7 +735,7 @@ const Lesson = () => {
                     className="group flex w-full items-center gap-3 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
                     aria-label="Play"
                   >
-                    <h4 className="text-xl font-extrabold">{q.word}</h4>
+                    <span className="text-xl font-extrabold">{q.word}</span>
                     <span className="font-mono text-xs text-muted-foreground">{q.pron}</span>
                     <span className="ml-auto grid size-8 place-items-center rounded-full text-primary transition group-hover:bg-primary/10">
                       <Volume2 className="size-4" />
@@ -801,7 +801,7 @@ const Lesson = () => {
                   className="group flex w-full items-start gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
                   aria-label={tt("朗读")}
                 >
-                  <p className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : ""}`}>{p.en}</p>
+                  <span className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : ""}`}>{p.en}</span>
                   <span className="grid size-8 shrink-0 place-items-center rounded-full text-primary transition group-hover:bg-primary/10 md:hidden">
                     <Volume2 className="size-4" />
                   </span>
@@ -813,7 +813,7 @@ const Lesson = () => {
                     className="group flex w-full items-start gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
                     aria-label={tt("朗读")}
                   >
-                    <p className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : "text-foreground/90"}`}><T>{p.cn}</T></p>
+                    <span className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : "text-foreground/90"}`}><T>{p.cn}</T></span>
                     <span className="hidden size-8 shrink-0 place-items-center rounded-full text-primary transition group-hover:bg-primary/10 md:grid">
                       <Volume2 className="size-4" />
                     </span>
@@ -899,7 +899,7 @@ const Lesson = () => {
                   className="group mt-2 flex w-full items-center justify-between gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
                   aria-label={tt("朗读")}
                 >
-                  <p className="text-base font-semibold">{e.en}</p>
+                  <span className="text-base font-semibold">{e.en}</span>
                   <span className="text-primary transition group-hover:opacity-70">
                     <Volume2 className="size-4" />
                   </span>

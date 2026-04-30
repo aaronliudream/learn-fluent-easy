@@ -19,6 +19,7 @@ export type StringKey =
   | "index.section.placement.eyebrow"
   | "index.section.placement.title"
   | "index.section.placement.desc"
+  | "index.section.placement.lastResult"
   | "index.section.aitalk.eyebrow"
   | "index.section.aitalk.title"
   | "index.section.aitalk.desc"

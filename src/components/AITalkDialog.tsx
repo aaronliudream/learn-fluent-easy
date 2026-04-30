@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, ListChecks, Check, AlertCircle, Trophy } from "lucide-react";
+import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, ListChecks, Check, AlertCircle, Trophy, Target } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";

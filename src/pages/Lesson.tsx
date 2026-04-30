@@ -1253,15 +1253,11 @@ const Lesson = () => {
           </div>
           <button
             onClick={() => {
-              if (!authedUser) {
-                toast.error(tt("请先登录后使用 AI 语音对话"));
-                return;
-              }
               setTalkOpen(true);
             }}
             className="rounded-full bg-grad-title px-5 py-2.5 text-sm font-semibold text-white shadow-tile transition hover:opacity-95"
           >
-            🎙️ <T>开始对话</T>
+            🎙️ {authedUser ? <T>开始对话</T> : <T>免费试一下 3 分钟</T>}
           </button>
         </div>
       </div>
@@ -1322,6 +1318,7 @@ const Lesson = () => {
         unitTitle={findUnit(Number(levelId), Number(unitId))?.title}
         levelName={LEVELS.find((l) => l.id === Number(levelId))?.name}
         level={["A1","A2","B1","B2","C1","C2"][Number(levelId) - 1] || undefined}
+        isGuest={!authedUser}
       />
     </main>
   );

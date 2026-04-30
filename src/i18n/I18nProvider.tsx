@@ -105,7 +105,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       const targetLanguage = getLanguageInfo(lang).englishName;
       try {
         const { data, error } = await supabase.functions.invoke("translate", {
-          body: { targetLanguage, items },
+          body: { targetLanguage, sourceLanguage: "English", items },
         });
         if (cancelled) return;
         if (error) {
@@ -148,7 +148,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     const items = toSend.map((text, i) => ({ key: String(i), text }));
     try {
       const { data, error } = await supabase.functions.invoke("translate", {
-        body: { targetLanguage, items },
+        body: { targetLanguage, sourceLanguage: "Chinese", items },
       });
       if (error) return;
       const translations: Record<string, string> = data?.translations || {};

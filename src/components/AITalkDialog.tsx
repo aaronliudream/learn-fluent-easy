@@ -241,6 +241,11 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const startCall = useCallback(async () => {
     setPhase("connecting");
     try {
+      // 0. Decide which provider works on this network. Cached for 6h.
+      const chosen = await resolveProvider();
+      setProvider(chosen);
+      console.log(`[AITalk] using provider: ${chosen}`);
+
       // 1. Get mic — turn ON browser-side noise suppression, echo cancel,
       // and auto-gain so background noise (fan, traffic, kids) doesn't get
       // sent to OpenAI's VAD and cause Alex to cut in or get triggered.
@@ -252,6 +257,27 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         } as MediaTrackConstraints,
       });
       localStreamRef.current = stream;
+
+      // === Qwen path (mainland China) ===
+      if (chosen === "qwen") {
+        const voicePref = loadSettings().voiceId;
+        const qwenVoice = QWEN_VOICE_MAP[voicePref] || "Cherry";
+        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level });
+        const session = new QwenRealtimeSession({
+          cfg: { instructions, voice: qwenVoice, inputSampleRate: 16000, outputSampleRate: 24000 },
+          onEvent: (evt) => handleRealtimeEvent(evt),
+          onSpeakingChange: (s) => setAiSpeaking(s),
+          onConnected: () => {
+            setPhase("live");
+            setSecondsLeft(sessionLen);
+            if (isGuest) { try { incrementGuestTrials(); } catch { /* noop */ } }
+          },
+          onError: (msg) => toast.error(msg),
+        });
+        qwenSessionRef.current = session;
+        await session.start(stream);
+        return;
+      }
 
       // 2. Mint ephemeral key
       const voicePref = loadSettings().voiceId;
@@ -331,6 +357,11 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       setPhase("idle");
     }
   }, [lessonTitle, unitTitle, levelName, level, handleRealtimeEvent, cleanup, sessionLen, isGuest]);
+
+  // Mute toggle needs to inform the Qwen session too (it gates uploads).
+  useEffect(() => {
+    qwenSessionRef.current?.setMuted(muted);
+  }, [muted]);
 
   const toggleMute = useCallback(() => {
     const stream = localStreamRef.current;

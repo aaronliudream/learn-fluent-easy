@@ -91,7 +91,7 @@ const Index = () => {
       gradient: "from-slate-800 via-slate-700 to-amber-600",
     },
     {
-      to: `/level/${LEVELS[0]?.id ?? 1}`,
+      to: `/levels`,
       icon: GraduationCap,
       eyebrow: t("index.section.path.eyebrow"),
       title: t("index.section.path.title"),

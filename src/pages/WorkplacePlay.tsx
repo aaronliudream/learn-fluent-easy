@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { WORK_CATEGORIES, WORK_DIALOGUES } from "@/data/workplace";
 import { speak, stopSpeaking } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
+import { renderRich, stripTags } from "@/lib/richText";
 
 const WorkplacePlay = () => {
   const t = useT();
@@ -28,7 +29,7 @@ const WorkplacePlay = () => {
     for (let i = 0; i < dlg.lines.length; i++) {
       if (cancelledRef.current) return;
       setActiveIdx(i);
-      await speak(dlg.lines[i].en);
+      await speak(stripTags(dlg.lines[i].en));
     }
     setActiveIdx(null);
   };
@@ -36,7 +37,7 @@ const WorkplacePlay = () => {
   const playOne = async (i: number) => {
     cancelledRef.current = true;
     setActiveIdx(i);
-    await speak(dlg.lines[i].en);
+    await speak(stripTags(dlg.lines[i].en));
     setActiveIdx((cur) => (cur === i ? null : cur));
   };
 
@@ -72,8 +73,8 @@ const WorkplacePlay = () => {
                 <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                   {l.speaker}
                 </div>
-                <div className="text-lg font-medium leading-relaxed md:text-xl">{l.en}</div>
-                <div className="mt-1.5 text-base text-muted-foreground md:text-lg"><T>{l.cn}</T></div>
+                <div className="text-lg font-medium leading-relaxed md:text-xl">{renderRich(l.en)}</div>
+                <div className="mt-1.5 text-base text-muted-foreground md:text-lg"><T>{stripTags(l.cn)}</T></div>
               </div>
               <button
                 onClick={() => playOne(i)}

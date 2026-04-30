@@ -362,20 +362,16 @@ const Lesson = () => {
       if (!n) return false;
       return readingNormSet.some((r) => r.n === n || r.n.includes(n) || n.includes(r.n));
     };
-    let fallbackIdx = 0;
     const grammar = (rawContent.grammar ?? []).map((g) => {
       const kept = (g.examples ?? []).filter((ex) => isInReading(ex.en));
       if (kept.length > 0) return { ...g, examples: kept };
-      // No example in reading — substitute with sentences from reading so
-      // the rule "examples must come from the article" still holds.
-      const subs: { en: string; cn: string }[] = [];
-      while (subs.length < Math.min(2, readingSentences.length)) {
-        const pick = readingSentences[fallbackIdx % readingSentences.length];
-        fallbackIdx += 1;
-        if (!subs.some((s) => s.en === pick.en)) subs.push({ en: pick.en, cn: pick.cn });
-        if (fallbackIdx > readingSentences.length * 2) break;
-      }
-      return { ...g, examples: subs.length > 0 ? subs : g.examples };
+      // No example in the reading matches this grammar point. Keep the
+      // original authored examples — they are guaranteed to illustrate the
+      // rule. Substituting random reading sentences here would attach
+      // unrelated sentences (e.g. simple past) to the wrong grammar point
+      // (e.g. past perfect negation/questions), which is worse than having
+      // examples that don't appear verbatim in the article.
+      return g;
     });
 
     return { ...rawContent, vocab, grammar };

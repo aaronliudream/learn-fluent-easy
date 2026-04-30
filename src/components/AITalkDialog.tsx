@@ -41,8 +41,8 @@ const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
 // Builds the Qwen instructions prompt (mirror of what the realtime-token
 // edge function does for OpenAI, kept on the client because Qwen receives
 // session.update directly from the browser via the proxy).
-function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string }) {
-  const { lessonTitle, unitTitle, levelName, level } = opts;
+function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string; mission?: Mission | null }) {
+  const { lessonTitle, unitTitle, levelName, level, mission } = opts;
   // Sprinkle in slang the learner is actively practicing so Alex naturally
   // reinforces what they're studying in the Slang module.
   const activeIds = getActiveLearningSlangIds(6);
@@ -51,6 +51,14 @@ function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string;
     .filter(Boolean) as string[];
   const slangHint = activePhrases.length
     ? `\n\nWHEN IT FEELS NATURAL, sprinkle in 1-2 of these slang phrases the learner is studying: ${activePhrases.map((p) => `"${p}"`).join(", ")}. Don't force it — only if it actually fits the conversation.`
+    : "";
+  const missionBlock = (mission && mission.must_use?.length)
+    ? `\n\nTODAY'S MISSION (steer the chat toward this without announcing it):
+- GOAL: ${mission.goal_cn}
+- Within your FIRST 2-3 turns, naturally MODEL each of these 3 target expressions so the learner hears them in context:
+${mission.must_use.map((m, i) => `  ${i + 1}. "${m.phrase}" — ${m.meaning_cn}${m.example_en ? ` (e.g. ${m.example_en})` : ""}`).join("\n")}
+- Then set up moments where it's the learner's turn to use them. If they get it slightly wrong, recast correctly in your reply.
+- When the goal is reached, naturally celebrate ("Sweet, it's a plan!") so they feel they "won".`
     : "";
   const levelHint = (() => {
     switch ((level || "").toUpperCase()) {
@@ -72,11 +80,12 @@ ABSOLUTE RULES:
 - ONLY speak English. Never switch to any other language. If they speak another language, gently say "Let's try that in English — give it a shot!" and wait.
 - Sound like a real American friend, not a teacher. Use contractions and natural rhythm.
 - Keep YOUR turns short (1-3 sentences). Ask one question, then let them talk.
-- Don't correct mistakes mid-conversation; we review at the end.
+- RECAST, don't lecture: if they say something off, naturally echo back the corrected version inside your reply ("Oh, you went to the park yesterday? Which one?") and move on. Never say "the right way is...".
+- PUSH for output: if they give 1-3 word answers, gently nudge them ("Tell me more!", "Why's that?"). Don't let them coast.
 
 LEVEL: ${levelHint}
 
-CONTEXT: ${hook}${slangHint}`;
+CONTEXT: ${hook}${slangHint}${missionBlock}`;
 }
 
 // Map our 6 OpenAI TTS voices onto the 8 Realtime voices (closest match).

@@ -1351,6 +1351,9 @@ const Lesson = () => {
         level={["A1","A2","B1","B2","C1","C2"][Number(levelId) - 1] || undefined}
         isGuest={!authedUser}
       />
+
+      <FloatingBackButton to={`/level/${levelId}/unit/${unitId}`} />
+      <div className="h-24" />
     </main>
   );
 };

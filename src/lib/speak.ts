@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { loadSettings } from "@/lib/voice";
+import { TARGET_LANGUAGE } from "@/data/course";
 
 let lastSpoken = "";
 let speakToken = 0;
@@ -124,13 +125,13 @@ const speakBrowserFallback = async (text: string, voiceId: string, speed: number
 
 // ---------- ElevenLabs via edge function ----------
 const fetchTTS = async (text: string, voiceId: string, speed: number): Promise<string | null> => {
-  const cacheKey = `${voiceId}|${speed}|${text}`;
+  const cacheKey = `${voiceId}|${speed}|${TARGET_LANGUAGE}|${text}`;
   const cached = audioCache.get(cacheKey);
   if (cached) return cached;
 
   try {
     const { data, error } = await supabase.functions.invoke("tts", {
-      body: { text, voiceId, speed },
+      body: { text, voiceId, speed, language: TARGET_LANGUAGE },
     });
     if (error) {
       console.warn("[tts] edge function error:", error.message);

@@ -8,6 +8,7 @@ import { loadSettings } from "@/lib/voice";
 import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
 import { resolveProvider, type AIProvider } from "@/lib/aiProvider";
 import { QwenRealtimeSession, QWEN_VOICE_MAP } from "@/lib/qwenRealtime";
+import { recordAITalk } from "@/lib/guestProgress";
 
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
 
@@ -169,9 +170,12 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const endCall = useCallback(async () => {
     if (phase === "recap" || phase === "ending") return;
     setPhase("ending");
+    // Log session length for streak / progress.
+    const elapsed = Math.max(0, sessionLen - secondsLeft);
+    if (elapsed >= 30) recordAITalk(elapsed); // ignore <30s aborts
     cleanup();
     await requestRecap();
-  }, [phase, cleanup, requestRecap]);
+  }, [phase, cleanup, requestRecap, sessionLen, secondsLeft]);
 
   // Countdown
   useEffect(() => {

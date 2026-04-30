@@ -170,6 +170,8 @@ const Slang = () => {
   // Load mastery from cloud once.
   useEffect(() => {
     loadSlangMastery().then(() => setMasteryVersion((v) => v + 1));
+    // Streak event
+    import("@/lib/guestProgress").then(m => m.recordVisit("slang"));
   }, []);
 
   // Load daily AI slang (newest first) and map to Idiom shape with stable negative IDs.

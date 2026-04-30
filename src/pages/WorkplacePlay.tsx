@@ -6,6 +6,7 @@ import { WORK_CATEGORIES, WORK_DIALOGUES } from "@/data/workplace";
 import { speak, stopSpeaking } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
 import { renderRich, stripTags } from "@/lib/richText";
+import { recordVisit } from "@/lib/guestProgress";
 
 const WorkplacePlay = () => {
   const t = useT();
@@ -16,11 +17,12 @@ const WorkplacePlay = () => {
   const cancelledRef = useRef(false);
 
   useEffect(() => {
+    if (dlg) recordVisit(`workplace:${dlg.id}`);
     return () => {
       cancelledRef.current = true;
       stopSpeaking();
     };
-  }, []);
+  }, [dlg]);
 
   if (!cat || !dlg) return <Navigate to="/workplace" replace />;
 

@@ -353,6 +353,60 @@ export type Database = {
         }
         Relationships: []
       }
+      workplace_practice: {
+        Row: {
+          attempts: number
+          cat_key: string
+          created_at: string
+          dialogue_id: string
+          dictation_score: number
+          dictation_total: number
+          id: string
+          last_payload: Json | null
+          mastery: number
+          roleplay_score: number
+          roleplay_turns: number
+          updated_at: string
+          user_id: string
+          vocab_score: number
+          vocab_total: number
+        }
+        Insert: {
+          attempts?: number
+          cat_key: string
+          created_at?: string
+          dialogue_id: string
+          dictation_score?: number
+          dictation_total?: number
+          id?: string
+          last_payload?: Json | null
+          mastery?: number
+          roleplay_score?: number
+          roleplay_turns?: number
+          updated_at?: string
+          user_id: string
+          vocab_score?: number
+          vocab_total?: number
+        }
+        Update: {
+          attempts?: number
+          cat_key?: string
+          created_at?: string
+          dialogue_id?: string
+          dictation_score?: number
+          dictation_total?: number
+          id?: string
+          last_payload?: Json | null
+          mastery?: number
+          roleplay_score?: number
+          roleplay_turns?: number
+          updated_at?: string
+          user_id?: string
+          vocab_score?: number
+          vocab_total?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

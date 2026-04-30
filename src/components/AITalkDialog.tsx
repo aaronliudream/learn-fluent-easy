@@ -627,12 +627,12 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
     <div className="space-y-3">
       {transcript.map((t, i) => (
         <div key={i} className={`flex ${t.role === "user" ? "justify-end" : "justify-start"}`}>
-          <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed shadow-sm ${
+          <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-base leading-relaxed shadow-sm ${
             t.role === "user"
               ? "bg-primary text-primary-foreground"
               : "bg-secondary text-foreground"
           }`}>
-            <div className="mb-0.5 text-[10px] font-bold uppercase tracking-wider opacity-70">
+            <div className="mb-1 text-[11px] font-bold uppercase tracking-wider opacity-70">
               {t.role === "user" ? "You" : "Alex"}
             </div>
             {t.text || <span className="opacity-60 italic">…</span>}

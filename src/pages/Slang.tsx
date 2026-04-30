@@ -1075,6 +1075,9 @@ const Slang = () => {
           </div>
         </section>
       )}
+
+      <FloatingBackButton to="/" />
+      <div className="h-24" />
     </main>
   );
 };

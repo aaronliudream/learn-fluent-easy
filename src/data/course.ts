@@ -239,7 +239,41 @@ const applyTrialLock = (levels: Level[]): Level[] =>
     };
   });
 
-export const LEVELS: Level[] = applyTrialLock(LEVELS_RAW);
+// ----------------------------------------------------------------
+// Target language switching
+// ----------------------------------------------------------------
+// Most of the app was originally hard-coded for "学英语" (target = English).
+// We now support a second target language: Chinese (HSK 1+). The choice is
+// stored in localStorage so it can be read synchronously here at module
+// load. Switching languages requires a page reload (handled by the picker
+// UI). This keeps the rest of the codebase unchanged — the existing
+// `LEVELS`, `findUnit`, `findLesson`, etc. all still work, they just
+// expose a different course tree.
+
+const readTargetLanguage = (): "en" | "zh" => {
+  if (typeof window === "undefined") return "en";
+  try {
+    const v = window.localStorage.getItem("target_language");
+    return v === "zh" ? "zh" : "en";
+  } catch {
+    return "en";
+  }
+};
+
+export const TARGET_LANGUAGE: "en" | "zh" = readTargetLanguage();
+
+// Lazily resolve the Chinese course tree so the JSON / TS module is only
+// loaded when the user actually picks Chinese.
+let chineseLevels: Level[] | null = null;
+if (TARGET_LANGUAGE === "zh") {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const mod = require("./courseStructure.zh") as { HSK_LEVELS_RAW: Level[] };
+  chineseLevels = mod.HSK_LEVELS_RAW;
+}
+
+export const LEVELS: Level[] = applyTrialLock(
+  TARGET_LANGUAGE === "zh" && chineseLevels ? chineseLevels : LEVELS_RAW,
+);
 
 export const LESSON_STEPS = [
   { id: 1, cn: "词汇学习", en: "Vocabulary", icon: "BookOpen" },

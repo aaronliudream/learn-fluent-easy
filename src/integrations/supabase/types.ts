@@ -265,6 +265,7 @@ export type Database = {
           id: string
           last_weekly_report_at: string | null
           preferred_language: string | null
+          target_language: string
           updated_at: string
           user_id: string
           weekly_report_enabled: boolean
@@ -276,6 +277,7 @@ export type Database = {
           id?: string
           last_weekly_report_at?: string | null
           preferred_language?: string | null
+          target_language?: string
           updated_at?: string
           user_id: string
           weekly_report_enabled?: boolean
@@ -287,6 +289,7 @@ export type Database = {
           id?: string
           last_weekly_report_at?: string | null
           preferred_language?: string | null
+          target_language?: string
           updated_at?: string
           user_id?: string
           weekly_report_enabled?: boolean

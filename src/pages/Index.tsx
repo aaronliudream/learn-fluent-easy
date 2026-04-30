@@ -14,6 +14,7 @@ import { WORK_CATEGORIES } from "@/data/workplace";
 import { useI18n } from "@/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { SupportButton } from "@/components/SupportButton";
+import { TargetLanguagePicker } from "@/components/TargetLanguagePicker";
 
 const Index = () => {
   const { t } = useI18n();
@@ -128,7 +129,8 @@ const Index = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
-      <div className="mb-4 flex justify-end">
+      <div className="mb-4 flex flex-wrap items-center justify-end gap-2">
+        <TargetLanguagePicker />
         <LanguageSwitcher />
         <Button asChild variant="ghost" size="sm" className="mr-2">
           <Link to="/stats">

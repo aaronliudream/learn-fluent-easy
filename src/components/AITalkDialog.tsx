@@ -709,6 +709,66 @@ function GuestSignupCTA() {
     </div>
   );
 }
+function MissionCard({ mission, usedPhrases, complete }: {
+  mission: Mission;
+  usedPhrases: Set<string>;
+  complete: boolean;
+}) {
+  const total = mission.must_use.length;
+  const used = usedPhrases.size;
+  return (
+    <div className={`mb-4 rounded-2xl border p-4 shadow-sm transition ${
+      complete
+        ? "border-emerald-400/60 bg-gradient-to-br from-emerald-50 via-emerald-50/40 to-transparent"
+        : "border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"
+    }`}>
+      <div className="flex items-start gap-2.5">
+        <div className={`grid size-9 shrink-0 place-items-center rounded-xl text-white shadow ${
+          complete ? "bg-emerald-500" : "bg-grad-title"
+        }`}>
+          {complete ? <Trophy className="size-4" /> : <Target className="size-4" />}
+        </div>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center justify-between gap-2">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-primary">
+              {complete ? <T>任务达成 · 漂亮！</T> : <T>今日任务</T>}
+            </p>
+            <span className="rounded-full bg-card px-2 py-0.5 text-[11px] font-bold text-foreground/70 shadow-sm">
+              {used}/{total}
+            </span>
+          </div>
+          <p className="mt-1 text-sm font-semibold leading-snug">{mission.goal_cn}</p>
+          {mission.success_criteria_cn && (
+            <p className="mt-0.5 text-[11px] text-muted-foreground">
+              <T>完成条件</T>：{mission.success_criteria_cn}
+            </p>
+          )}
+        </div>
+      </div>
+      <div className="mt-3 flex flex-wrap gap-1.5">
+        {mission.must_use.map((m) => {
+          const ok = usedPhrases.has(m.phrase);
+          return (
+            <div
+              key={m.phrase}
+              title={m.meaning_cn + (m.example_en ? `\n${m.example_en}` : "")}
+              className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium transition ${
+                ok
+                  ? "border-emerald-500 bg-emerald-500 text-white shadow"
+                  : "border-border bg-card text-foreground/75"
+              }`}
+            >
+              {ok ? <Check className="size-3" /> : <span className="size-1.5 rounded-full bg-primary/50" />}
+              <span className="font-semibold">{m.phrase}</span>
+              <span className={`text-[10px] ${ok ? "text-emerald-50" : "text-muted-foreground"}`}>· {m.meaning_cn}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[]; aiSpeaking: boolean; phase: string }) {
   const endRef = useRef<HTMLDivElement>(null);
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [transcript]);

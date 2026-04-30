@@ -165,14 +165,7 @@ const Index = () => {
         </Link>
       )}
 
-      {/* 5 numbered sections */}
-      <div className="mb-3 mt-2 flex items-center gap-3">
-        <span className="h-px flex-1 bg-border" />
-        <h2 className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-          {t("index.sectionsLabel")}
-        </h2>
-        <span className="h-px flex-1 bg-border" />
-      </div>
+      <div className="mb-3 mt-2" />
 
       <section className="grid gap-4">
         {sections.map((s) => {

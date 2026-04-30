@@ -15,6 +15,23 @@ export type StringKey =
   // Index page
   | "index.title"
   | "index.subtitle"
+  | "index.sectionsLabel"
+  | "index.section.placement.eyebrow"
+  | "index.section.placement.title"
+  | "index.section.placement.desc"
+  | "index.section.slang.eyebrow"
+  | "index.section.slang.title"
+  | "index.section.slang.desc"
+  | "index.section.scenes.eyebrow"
+  | "index.section.scenes.title"
+  | "index.section.scenes.desc"
+  | "index.section.workplace.eyebrow"
+  | "index.section.workplace.title"
+  | "index.section.workplace.desc"
+  | "index.section.path.eyebrow"
+  | "index.section.path.title"
+  | "index.section.path.desc"
+  | "index.section.cta"
   | "index.placement.badge"
   | "index.placement.title"
   | "index.placement.duration"
@@ -59,6 +76,23 @@ export const EN: Record<StringKey, string> = {
 
   "index.title": "Choose your level",
   "index.subtitle": "Pick a level that fits you and start learning",
+  "index.sectionsLabel": "Five ways to learn",
+  "index.section.placement.eyebrow": "01 · Level Check",
+  "index.section.placement.title": "Discover your English level",
+  "index.section.placement.desc": "Adaptive 25-min test · Listening, speaking, reading, writing · A1–C1 rating",
+  "index.section.slang.eyebrow": "02 · Slang Lab",
+  "index.section.slang.title": "Sound like a native today",
+  "index.section.slang.desc": "TikTok / Gen Z / social media slang · {count} entries with real examples",
+  "index.section.scenes.eyebrow": "03 · Everyday Scenes",
+  "index.section.scenes.title": "Real life, real conversations",
+  "index.section.scenes.desc": "14 daily scenes · {count} dialogue sets · 1900 native expressions",
+  "index.section.workplace.eyebrow": "04 · Workplace English",
+  "index.section.workplace.title": "Win at work in English",
+  "index.section.workplace.desc": "Bay Area workplace dialogues · {count} scenes · high-frequency phrases",
+  "index.section.path.eyebrow": "05 · Learning Path",
+  "index.section.path.title": "Systematic courses, A1 → C2",
+  "index.section.path.desc": "{count} levels · structured units · vocabulary, grammar & writing in one flow",
+  "index.section.cta": "Start",
   "index.placement.badge": "Adaptive · Aligned with CEFR",
   "index.placement.title": "Not sure where to start? Take a placement test",
   "index.placement.duration": "About 25 min",
@@ -105,6 +139,23 @@ export const ZH: Record<StringKey, string> = {
 
   "index.title": "选择学习级别",
   "index.subtitle": "选择适合你的级别，开始学习之旅",
+  "index.sectionsLabel": "五种学习方式",
+  "index.section.placement.eyebrow": "01 · 水平测试",
+  "index.section.placement.title": "了解你的英语真实水平",
+  "index.section.placement.desc": "25 分钟自适应测试 · 听说读写四项 · A1–C1 评级",
+  "index.section.slang.eyebrow": "02 · 流行俚语",
+  "index.section.slang.title": "今天就说得像 native",
+  "index.section.slang.desc": "TikTok / Z 世代 / 社交媒体俚语 · 共 {count} 条 · 每条带例句",
+  "index.section.scenes.eyebrow": "03 · 生活场景",
+  "index.section.scenes.title": "真实生活，真实对话",
+  "index.section.scenes.desc": "14 个日常场景 · {count} 组对话 · 1900 句地道表达",
+  "index.section.workplace.eyebrow": "04 · 职场英语",
+  "index.section.workplace.title": "在工作中自信用英文",
+  "index.section.workplace.desc": "湾区职场真实对话 · {count} 个场景 · 高频实战表达",
+  "index.section.path.eyebrow": "05 · 系统课程",
+  "index.section.path.title": "系统化学习路径 A1 → C2",
+  "index.section.path.desc": "{count} 个级别 · 结构化单元 · 词汇、语法、写作一站式",
+  "index.section.cta": "开始",
   "index.placement.badge": "自适应 · 参照 CEFR",
   "index.placement.title": "不知道从哪里开始？做个水平测试",
   "index.placement.duration": "约 25 分钟",

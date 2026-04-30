@@ -2,7 +2,7 @@
 // language's English name (used for prompting the translator); `nativeName` is
 // what we show in the picker.
 export type LangCode =
-  | "en" | "zh" | "es" | "hi" | "ar" | "pt" | "ru" | "ja" | "pa" | "de"
+  | "en" | "zh" | "zh-TW" | "es" | "hi" | "ar" | "pt" | "ru" | "ja" | "pa" | "de"
   | "jv" | "ko" | "fr" | "tr" | "vi" | "it" | "th" | "fa" | "pl" | "nl"
   | "uk" | "id" | "ms" | "ro" | "el" | "cs" | "sv" | "hu" | "he" | "fil" | "bn";
 
@@ -17,7 +17,8 @@ export type LanguageInfo = {
 // mother tongue. The picker hides English (everyone gets it).
 export const LANGUAGES: LanguageInfo[] = [
   { code: "en",  englishName: "English",         nativeName: "English",     flag: "🇺🇸" },
-  { code: "zh",  englishName: "Chinese",         nativeName: "中文",         flag: "🇨🇳" },
+  { code: "zh",  englishName: "Simplified Chinese",  nativeName: "中文（简体）", flag: "🇨🇳" },
+  { code: "zh-TW", englishName: "Traditional Chinese", nativeName: "中文（繁體）", flag: "🇹🇼" },
   { code: "es",  englishName: "Spanish",         nativeName: "Español",     flag: "🇪🇸" },
   { code: "hi",  englishName: "Hindi",           nativeName: "हिन्दी",        flag: "🇮🇳" },
   { code: "ar",  englishName: "Arabic",          nativeName: "العربية",      flag: "🇸🇦" },
@@ -58,7 +59,12 @@ export function detectBrowserLang(): LangCode {
     const lower = raw.toLowerCase();
     const base = lower.split("-")[0];
     // special cases
-    if (lower.startsWith("zh")) return "zh";
+    if (lower.startsWith("zh")) {
+      // Traditional Chinese locales: zh-TW (Taiwan), zh-HK (Hong Kong),
+      // zh-MO (Macau), zh-Hant (script tag).
+      if (/^zh-(tw|hk|mo|hant)/.test(lower)) return "zh-TW";
+      return "zh";
+    }
     if (lower.startsWith("fil") || lower.startsWith("tl")) return "fil";
     const hit = LANGUAGES.find((l) => l.code === base);
     if (hit) return hit.code;

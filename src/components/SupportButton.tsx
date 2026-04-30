@@ -90,9 +90,10 @@ function DonateQrDialog({ open, onOpenChange }: { open: boolean; onOpenChange: (
           </DialogTitle>
           <DialogDescription>{t("support.qrSubtitle")}</DialogDescription>
         </DialogHeader>
-        <div className="grid grid-cols-2 gap-4 pt-2">
-          <QrCard src="/donate/wechat.png" label={t("support.qrWechat")} accent="bg-emerald-500" />
-          <QrCard src="/donate/alipay.png" label={t("support.qrAlipay")} accent="bg-sky-500" />
+        <div className="flex justify-center pt-2">
+          <div className="w-1/2">
+            <QrCard src="/donate/wechat.png" label={t("support.qrWechat")} accent="bg-emerald-500" />
+          </div>
         </div>
         <p className="pt-1 text-center text-xs text-muted-foreground">{t("support.qrHowTo")}</p>
         <p className="text-center text-xs italic text-muted-foreground/80">{t("support.thanks")}</p>

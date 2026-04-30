@@ -318,6 +318,18 @@ export type Database = {
         Args: { payload: Json; queue_name: string }
         Returns: number
       }
+      get_user_streak_stats: {
+        Args: never
+        Returns: {
+          active_days_this_month: number
+          active_today: boolean
+          current_streak: number
+          has_first_ai_talk: boolean
+          longest_streak: number
+          minutes_this_month: number
+          total_quiz_correct: number
+        }[]
+      }
       move_to_dlq: {
         Args: {
           dlq_name: string

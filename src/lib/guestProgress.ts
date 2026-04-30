@@ -1,5 +1,6 @@
 // Lightweight guest learning tracker (no auth required).
 // Stored in localStorage so we can show "sunk cost" in nudges.
+import { supabase } from "@/integrations/supabase/client";
 
 const KEY = "guest_progress_v1";
 
@@ -53,12 +54,24 @@ export function touchActive() {
   save(p);
 }
 
+/** Best-effort server log when user is signed in. Silent on failure. */
+async function logEvent(payload: Record<string, unknown>) {
+  try {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session?.user) return;
+    await supabase.from("learning_events").insert({ user_id: session.user.id, ...payload });
+  } catch {
+    /* offline / network failure: ignore */
+  }
+}
+
 export function markLessonComplete(levelId: number, unitId: number, lessonId: number) {
   const p = loadProgress();
   const key = `${levelId}-${unitId}-${lessonId}`;
   if (!p.completedLessons.includes(key)) {
     p.completedLessons.push(key);
     save(p);
+    void logEvent({ event_type: "lesson_complete", lesson_key: key });
   }
 }
 
@@ -67,6 +80,7 @@ export function recordQuiz(correct: number, total: number) {
   p.quizCorrect += correct;
   p.quizTotal += total;
   save(p);
+  if (total > 0) void logEvent({ event_type: "quiz", quiz_correct: correct, quiz_total: total });
 }
 
 export function addStudyMinutes(mins: number) {
@@ -74,6 +88,12 @@ export function addStudyMinutes(mins: number) {
   const p = loadProgress();
   p.studyMinutes += mins;
   save(p);
+  void logEvent({ event_type: "study_minutes", study_minutes: Math.round(mins) });
+}
+
+export function recordVocabLearned(count: number) {
+  if (count <= 0) return;
+  void logEvent({ event_type: "vocab_learned", vocab_count: count });
 }
 
 /** Consecutive trailing day streak from today. */

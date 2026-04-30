@@ -455,7 +455,7 @@ const Placement = () => {
   // ---------------- INTRO ----------------
   if (stage === "intro") {
     return (
-      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+      <main className="placement-page mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
         <PageHeader title="English Placement Test" subtitle="Adaptive · find your real level" back="/" />
 
         <div className="overflow-hidden rounded-3xl bg-grad-title p-7 text-white shadow-tile md:p-9">
@@ -574,7 +574,7 @@ const Placement = () => {
     }, 0);
 
     return (
-      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+      <main className="placement-page mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
         {/* Top bar */}
         <div className="mb-5 flex items-center justify-between rounded-2xl bg-card p-4 shadow-card">
           <div className="flex items-center gap-2">
@@ -799,7 +799,7 @@ const Placement = () => {
       const userPick = picks[rq.id];
       const isLastReview = reviewIdx >= wrongList.length - 1;
       return (
-        <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+        <main className="placement-page mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
           <div className="mb-5 flex items-center justify-between rounded-2xl bg-card p-4 shadow-card">
             <div className="flex items-center gap-2">
               <button
@@ -907,7 +907,7 @@ const Placement = () => {
     }
 
     return (
-      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+      <main className="placement-page mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
         <PageHeader title="Test Result" subtitle="Based on CEFR" back="/" />
 
         <div className="overflow-hidden rounded-3xl bg-grad-title p-8 text-center text-white shadow-tile md:p-10">

@@ -44,6 +44,7 @@ import {
   initSectionState,
   updateSectionState,
   sectionConfidenceHalfWidth,
+  computeQuestionTimeLimit,
 } from "@/lib/placement";
 
 const TEST_MINUTES = 25;
@@ -53,19 +54,20 @@ const QS_MAX_PER_SECTION = 7; // hard cap per section
 const STOP_CONFIDENCE = 0.45; // half-width threshold (in CEFR levels)
 const TOTAL_QS = SECTIONS.length * QS_MAX_PER_SECTION; // 28 (upper bound)
 
-// Per-question time limits (seconds). Calibrated to professional standards
-// (TOEFL/IELTS pacing): listening needs slightly longer to read options
-// after audio; reading is the longest because the user must parse a passage.
-const PER_QUESTION_SECONDS: Record<Section, number> = {
-  vocab: 25,
-  grammar: 35,
-  reading: 75,
-  listening: 45,
-};
 // Listening audio may be replayed at most this many times per question.
 // Real proficiency tests (TOEFL/IELTS) typically allow ONE play. We grant
 // 2 to account for short clips + first-time UI familiarity, but never more.
 const LISTENING_MAX_PLAYS = 2;
+
+// Section-level lower bounds shown in the intro UI (the actual time for any
+// individual question is computed dynamically from its content length and
+// CEFR tier — see computeQuestionTimeLimit in lib/placement.ts).
+const SECTION_TIME_RANGE: Record<Section, string> = {
+  vocab: "12–60s",
+  grammar: "15–70s",
+  reading: "30–180s",
+  listening: "20–120s",
+};
 
 const NEEDS_NATIVE_TRANSLATION_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const SECTION_META: Record<Section, { cn: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
@@ -188,7 +190,9 @@ const Placement = () => {
     const q = questions[idx];
     if (!q) return;
     if (revealed[q.id]) return; // already revealed → no countdown
-    setQuestionSecondsLeft(PER_QUESTION_SECONDS[q.section]);
+    setQuestionSecondsLeft(
+      computeQuestionTimeLimit(q, { listeningMaxPlays: LISTENING_MAX_PLAYS }),
+    );
     const t = setInterval(() => {
       setQuestionSecondsLeft((s) => {
         if (s <= 1) {

@@ -540,7 +540,7 @@ const Placement = () => {
     const isCorrect = isRevealed && picked === q.answer;
     const playsUsed = listeningPlays[q.id] ?? 0;
     const playsLeft = LISTENING_MAX_PLAYS - playsUsed;
-    const perQTotal = PER_QUESTION_SECONDS[q.section];
+    const perQTotal = computeQuestionTimeLimit(q, { listeningMaxPlays: LISTENING_MAX_PLAYS });
     const perQLow = !isRevealed && questionSecondsLeft <= 10;
     // Predict whether answering this one finishes the test:
     // every other section is already done AND this section will be done after the answer.

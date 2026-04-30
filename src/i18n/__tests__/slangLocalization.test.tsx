@@ -88,8 +88,8 @@ describe("Slang page i18n source guards", () => {
 });
 
 // ─────────────────────────────────────────────────────────────
-// 2) Runtime check: <T> renders the source text for zh/en (no
-//    network), and renders translated text for any other lang.
+// 2) Runtime check: <T> translates native helper text for every
+//    non-Chinese language, including English.
 // ─────────────────────────────────────────────────────────────
 describe("<T> runtime translation across languages", () => {
   function Probe({ source }: { source: string }) {
@@ -100,11 +100,13 @@ describe("<T> runtime translation across languages", () => {
     );
   }
 
-  it("returns source text untouched for English", async () => {
+  it("translates Chinese helper text for English", async () => {
     setLang("en");
-    render(<Probe source="正确率" />);
-    expect(screen.getByTestId("probe")).toHaveTextContent("正确率");
-    expect(invokeMock).not.toHaveBeenCalled();
+    const source = "正确率";
+    const { rerender } = render(<Probe source={source} />);
+    await act(async () => { await new Promise((r) => setTimeout(r, 320)); });
+    rerender(<Probe source={source} />);
+    expect(screen.getByTestId("probe")).toHaveTextContent(`[English] ${source}`);
   });
 
   it("returns source text untouched for Chinese", async () => {

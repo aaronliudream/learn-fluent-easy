@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { useI18n } from "./I18nProvider";
 
 /**
@@ -6,11 +7,16 @@ import { useI18n } from "./I18nProvider";
  * Returns the source text unchanged for Chinese / English users (zero cost).
  * Re-renders automatically when async translations land.
  */
-export function T({ children }: { children: string | undefined | null }) {
-  const { tDynamic } = useI18n();
-  if (!children) return null;
-  return <>{tDynamic(String(children))}</>;
-}
+// forwardRef so parents like <Button asChild>, <Link>, or AITalkDialog can
+// pass a ref through without React warning. The ref is intentionally
+// unused — <T> renders only a text node.
+export const T = forwardRef<unknown, { children: string | undefined | null }>(
+  function T({ children }, _ref) {
+    const { tDynamic } = useI18n();
+    if (!children) return null;
+    return <>{tDynamic(String(children))}</>;
+  },
+);
 
 /** Hook variant for cases where you can't render a JSX child (e.g. attributes,
  *  toast() arguments, document.title). */

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import type { User } from "@supabase/supabase-js";
-import { BookCheck, Clock, Flame, Target, Cloud, ArrowLeft } from "lucide-react";
+import { BookCheck, Clock, Flame, Target, Cloud, ArrowLeft, Mail } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -56,6 +56,12 @@ const Stats = () => {
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader title={t("我的学习数据")} subtitle={t("追踪你的学习成果")} back="/" />
+
+      <div className="mb-6">
+        <Button asChild variant="outline" className="gap-2">
+          <Link to="/weekly-report"><Mail className="size-4" /> <T>每周学习报告</T></Link>
+        </Button>
+      </div>
 
       {!hasAny ? (
         <div className="rounded-3xl bg-card p-10 text-center shadow-card">

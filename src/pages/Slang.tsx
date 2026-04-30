@@ -629,7 +629,10 @@ const Slang = () => {
                     <button
                       key={oi}
                       disabled={revealed}
-                      onClick={() => setPicks({ ...picks, [q.id]: oi })}
+                      onClick={() => {
+                        setPicks({ ...picks, [q.id]: oi });
+                        setRevealed(true);
+                      }}
                       className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${
                         correctOpt
                           ? "border-emerald-500 bg-emerald-500/10 text-foreground"
@@ -670,14 +673,7 @@ const Slang = () => {
               <Button variant="outline" onClick={() => setMode("browse")}>
                 <T>返回浏览</T>
               </Button>
-              {!revealed ? (
-                <Button
-                  disabled={picked === undefined}
-                  onClick={() => setRevealed(true)}
-                >
-                  <T>确认答案</T>
-                </Button>
-              ) : qIdx < questions.length - 1 ? (
+              {!revealed ? null : qIdx < questions.length - 1 ? (
                 <Button onClick={() => { setQIdx(qIdx + 1); setRevealed(false); }}>
                   <T>下一题</T> <ChevronRight className="ml-1 size-4" />
                 </Button>

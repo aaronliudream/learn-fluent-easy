@@ -141,15 +141,17 @@ const Level = () => {
 
               <div className="mt-4 flex items-center gap-0">
                 {u.lessons.map((l, idx) => {
+                  const lessonUnlocked = unlockedKeys.has(`${u.id}-${l.id}`);
+                  const effectiveStatus = lessonUnlocked && l.status === "locked" ? "current" : l.status;
                   const cls =
                     l.status === "done"
                       ? "bg-success text-success-foreground"
-                      : l.status === "current"
+                      : effectiveStatus === "current"
                         ? "bg-primary text-primary-foreground ring-2 ring-primary/30 ring-offset-2 ring-offset-card scale-110"
                         : "bg-secondary text-muted-foreground";
                   const prev = idx > 0 ? u.lessons[idx - 1] : null;
                   const connectorDone = prev && prev.status === "done";
-                  const locked = l.status === "locked";
+                  const locked = !lessonUnlocked && l.status === "locked";
                   return (
                     <div key={l.id} className="flex items-center">
                       {idx > 0 && (

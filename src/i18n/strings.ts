@@ -43,7 +43,10 @@ export type StringKey =
   | "lang.pickerTitle"
   | "lang.pickerSubtitle"
   | "lang.confirm"
-  | "lang.changeLater";
+  | "lang.changeLater"
+  // Support / donation
+  | "support.cta"
+  | "support.thanks";
 
 // English source strings.
 export const EN: Record<StringKey, string> = {
@@ -86,6 +89,9 @@ export const EN: Record<StringKey, string> = {
   "lang.pickerSubtitle": "We'll show the app in your language alongside English so you can learn faster.",
   "lang.confirm": "Continue",
   "lang.changeLater": "You can change this anytime from the header.",
+
+  "support.cta": "If you like this app, buy me a coffee ☕",
+  "support.thanks": "Thanks for your support — it helps make FluentPath better.",
 };
 
 // Hand-authored Chinese (the original copy used throughout the app).
@@ -129,6 +135,9 @@ export const ZH: Record<StringKey, string> = {
   "lang.pickerSubtitle": "我们会用你的母语和英语双语显示，帮助你更快学会。",
   "lang.confirm": "继续",
   "lang.changeLater": "之后可以随时在顶部切换。",
+
+  "support.cta": "如果喜欢这个 App，请我喝杯咖啡 ☕",
+  "support.thanks": "感谢你的支持，让 FluentPath 变得更好。",
 };
 
 // Built-in catalogs. Other languages are translated on demand.

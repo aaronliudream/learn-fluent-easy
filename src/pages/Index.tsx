@@ -62,9 +62,9 @@ const Index = () => {
     {
       to: "/talk",
       icon: Mic,
-      eyebrow: "AI VOICE",
-      title: "和 Alex 聊 10 分钟英语",
-      desc: "地道美国年轻人 · 全英文真人对话 · 结束自动双语讲解 + 词汇测试",
+      eyebrow: t("index.section.aitalk.eyebrow"),
+      title: t("index.section.aitalk.title"),
+      desc: t("index.section.aitalk.desc"),
       gradient: "from-amber-500 via-orange-500 to-rose-500",
     },
     {

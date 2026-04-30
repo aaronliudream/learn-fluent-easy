@@ -10,6 +10,7 @@ import { LanguagePickerModal } from "@/i18n/LanguagePickerModal";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Level from "./pages/Level.tsx";
+import Levels from "./pages/Levels.tsx";
 import Unit from "./pages/Unit.tsx";
 import Lesson from "./pages/Lesson.tsx";
 import Auth from "./pages/Auth.tsx";
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/workplace/:catKey" element={<WorkplaceCategory />} />
           <Route path="/workplace/:catKey/:dialogueId" element={<WorkplacePlay />} />
           <Route path="/level/:levelId" element={<Level />} />
+          <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

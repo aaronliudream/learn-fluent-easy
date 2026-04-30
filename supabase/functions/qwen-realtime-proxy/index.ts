@@ -7,11 +7,14 @@
 //   - Browsers cannot set arbitrary headers on `new WebSocket(url)` calls,
 //     so the page can't connect to DashScope directly without leaking the
 //     API key into client code.
-//   - This function accepts a WebSocket from the browser, opens a second
-//     WebSocket to DashScope with the proper auth header, and pumps frames
-//     in both directions. The API key never leaves this server.
+//   - This function accepts a WebSocket from the browser (via Deno's
+//     upgradeWebSocket), then opens a second WebSocket to DashScope using
+//     the `npm:ws` package, which supports custom request headers. Frames
+//     are pumped in both directions. The API key never leaves this server.
 //
 // Browser ⇄ this function ⇄ wss://dashscope.aliyuncs.com/api-ws/v1/realtime
+
+import WebSocketClient from "npm:ws@8.18.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -48,86 +51,72 @@ Deno.serve((req) => {
   const url = new URL(req.url);
   const model = url.searchParams.get("model") || DEFAULT_MODEL;
 
-  // Upgrade the browser connection.
   const { socket: clientWs, response } = Deno.upgradeWebSocket(req);
 
-  // Open a server-side WebSocket to DashScope. Deno supports passing
-  // headers to the WebSocket constructor via the second argument
-  // (non-standard but supported in Deno's std WebSocket implementation
-  // by way of the `headers` option in `Deno.upgradeWebSocket` consumers).
-  // For outbound connections we use the underlying fetch-based handshake.
-  let upstream: WebSocket | null = null;
+  // Open the upstream connection right away. We don't wait for the client
+  // socket to open first because both handshakes can race; we buffer
+  // anything that arrives early.
+  const upstream = new WebSocketClient(
+    `${DASHSCOPE_WS}?model=${encodeURIComponent(model)}`,
+    {
+      headers: { Authorization: `Bearer ${apiKey}` },
+    },
+  );
 
-  // Buffer client frames that arrive before upstream is open.
+  // Frames from the browser that arrive before either side is fully ready.
   const pendingFromClient: (string | ArrayBuffer)[] = [];
 
-  const connectUpstream = () => {
-    // Deno.upgradeWebSocket is for incoming. For outgoing with headers we
-    // need to use the WebSocketStream API or the WebSocket constructor.
-    // Deno's WebSocket constructor does NOT accept custom headers, so we
-    // use the protocol parameter trick that DashScope supports? It doesn't.
-    // The clean solution in Deno is `new WebSocket(url, { headers })`
-    // which is a Deno-specific extension. Use it.
-    upstream = new WebSocket(`${DASHSCOPE_WS}?model=${encodeURIComponent(model)}`, {
-      // @ts-ignore - Deno extension to the WebSocket constructor that
-      // accepts a `headers` field for the opening handshake.
-      headers: { Authorization: `Bearer ${apiKey}` },
-    });
-
-    upstream.binaryType = "arraybuffer";
-
-    upstream.onopen = () => {
-      console.log(`[qwen-proxy] upstream connected (model=${model})`);
-      // Flush anything the browser sent while we were still connecting.
-      for (const frame of pendingFromClient) {
-        try { upstream!.send(frame); } catch (e) { console.error("flush error", e); }
-      }
-      pendingFromClient.length = 0;
-    };
-
-    upstream.onmessage = (e) => {
-      // Forward verbatim to the browser.
-      if (clientWs.readyState === WebSocket.OPEN) {
-        try { clientWs.send(e.data); } catch (err) { console.error("client send err", err); }
-      }
-    };
-
-    upstream.onerror = (e) => {
-      console.error("[qwen-proxy] upstream error", e);
-      try {
-        clientWs.send(JSON.stringify({
-          type: "error",
-          error: { type: "upstream_error", message: "Lost connection to Qwen" },
-        }));
-      } catch { /* noop */ }
-    };
-
-    upstream.onclose = (e) => {
-      console.log(`[qwen-proxy] upstream closed code=${e.code} reason=${e.reason}`);
-      try { clientWs.close(e.code === 1000 ? 1000 : 1011, e.reason || "upstream closed"); } catch { /* noop */ }
-    };
-  };
-
-  clientWs.onopen = () => {
-    console.log("[qwen-proxy] client connected, opening upstream");
-    try { connectUpstream(); } catch (e) {
-      console.error("upstream connect failed", e);
-      try { clientWs.close(1011, "upstream connect failed"); } catch { /* noop */ }
+  const sendUpstream = (data: string | ArrayBuffer) => {
+    if (upstream.readyState === WebSocketClient.OPEN) {
+      try { upstream.send(data); } catch (err) { console.error("[qwen-proxy] upstream send err", err); }
+    } else {
+      pendingFromClient.push(data);
     }
   };
 
-  clientWs.onmessage = (e) => {
-    if (!upstream || upstream.readyState !== WebSocket.OPEN) {
-      pendingFromClient.push(e.data);
-      return;
+  upstream.on("open", () => {
+    console.log(`[qwen-proxy] upstream connected (model=${model})`);
+    while (pendingFromClient.length) {
+      const f = pendingFromClient.shift()!;
+      try { upstream.send(f); } catch (err) { console.error("flush err", err); }
     }
-    try { upstream.send(e.data); } catch (err) { console.error("upstream send err", err); }
-  };
+  });
 
-  clientWs.onerror = (e) => { console.error("[qwen-proxy] client error", e); };
+  upstream.on("message", (data: any, isBinary: boolean) => {
+    if (clientWs.readyState !== WebSocket.OPEN) return;
+    try {
+      // ws gives us a Buffer when isBinary; otherwise stringify-able text.
+      if (isBinary) {
+        clientWs.send(data instanceof ArrayBuffer ? data : new Uint8Array(data).buffer);
+      } else {
+        clientWs.send(typeof data === "string" ? data : data.toString("utf8"));
+      }
+    } catch (err) {
+      console.error("[qwen-proxy] client send err", err);
+    }
+  });
+
+  upstream.on("error", (err: Error) => {
+    console.error("[qwen-proxy] upstream error", err.message);
+    try {
+      clientWs.send(JSON.stringify({
+        type: "error",
+        error: { type: "upstream_error", message: err.message || "Qwen connection error" },
+      }));
+    } catch { /* noop */ }
+  });
+
+  upstream.on("close", (code: number, reason: Buffer) => {
+    console.log(`[qwen-proxy] upstream closed code=${code} reason=${reason?.toString()}`);
+    try { clientWs.close(code === 1000 ? 1000 : 1011, reason?.toString() || "upstream closed"); } catch { /* noop */ }
+  });
+
+  clientWs.onopen = () => { console.log("[qwen-proxy] client connected"); };
+  clientWs.onmessage = (e) => { sendUpstream(e.data); };
+  clientWs.onerror = (e) => { console.error("[qwen-proxy] client error", (e as ErrorEvent).message || e); };
   clientWs.onclose = () => {
     console.log("[qwen-proxy] client closed, closing upstream");
-    try { upstream?.close(); } catch { /* noop */ }
+    try { upstream.close(); } catch { /* noop */ }
   };
 
   return response;

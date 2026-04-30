@@ -5,6 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
 import { getAlexVoice } from "@/lib/alexVoice";
+import { getActiveLearningSlangIds } from "@/lib/slangMastery";
+import { IDIOMS } from "@/data/idioms";
 import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
 import { resolveProvider, type AIProvider } from "@/lib/aiProvider";
 import { QwenRealtimeSession, QWEN_VOICE_MAP } from "@/lib/qwenRealtime";
@@ -40,6 +42,15 @@ const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
 // session.update directly from the browser via the proxy).
 function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string }) {
   const { lessonTitle, unitTitle, levelName, level } = opts;
+  // Sprinkle in slang the learner is actively practicing so Alex naturally
+  // reinforces what they're studying in the Slang module.
+  const activeIds = getActiveLearningSlangIds(6);
+  const activePhrases = activeIds
+    .map((id) => IDIOMS.find((x) => x.id === id)?.phrase)
+    .filter(Boolean) as string[];
+  const slangHint = activePhrases.length
+    ? `\n\nWHEN IT FEELS NATURAL, sprinkle in 1-2 of these slang phrases the learner is studying: ${activePhrases.map((p) => `"${p}"`).join(", ")}. Don't force it — only if it actually fits the conversation.`
+    : "";
   const levelHint = (() => {
     switch ((level || "").toUpperCase()) {
       case "A1": return "Use very simple short sentences (5-8 words), only the most common 1000 English words.";
@@ -64,7 +75,7 @@ ABSOLUTE RULES:
 
 LEVEL: ${levelHint}
 
-CONTEXT: ${hook}`;
+CONTEXT: ${hook}${slangHint}`;
 }
 
 // Map our 6 OpenAI TTS voices onto the 8 Realtime voices (closest match).

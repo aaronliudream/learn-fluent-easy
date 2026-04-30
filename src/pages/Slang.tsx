@@ -10,6 +10,12 @@ import {
   XCircle,
   Zap,
   X,
+  Pencil,
+  Loader2,
+  Send,
+  Lightbulb,
+  Star,
+  PartyPopper,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -25,22 +31,30 @@ import {
   sortByMastery,
   pickQuizPool,
   bumpSlangRotation,
+  getSlangLevel,
+  pickDailyPlan,
+  getSlangProgress,
+  type SlangLevel,
 } from "@/lib/slangMastery";
 
 type Mode = "browse" | "quiz";
-// quiz direction: en2cn = show English idiom, choose Chinese meaning;
-// cn2en = show Chinese meaning, choose English idiom;
-// fill  = show example with blank, choose missing idiom.
-type QuizKind = "en2cn" | "cn2en" | "fill";
+// 5-stage learning ladder. Each kind targets a deeper layer of memory:
+//   en2cn   (L1) — see phrase, pick CN meaning
+//   fill    (L2) — listen / fill the blank in an example
+//   cn2en   (L2) — see CN, pick the right phrase
+//   scenario(L3) — read a real-life CN situation, pick the right phrase
+//   compose (L4) — write your own sentence using the phrase, AI grades it
+type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose";
 
 type QuizQuestion = {
   id: number;
   kind: QuizKind;
   prompt: string;       // main question text
   context?: string;     // example sentence (CN translation when shown)
-  options: string[];
-  answer: number;       // index into options
+  options?: string[];   // for the 4 multiple-choice kinds
+  answer?: number;      // index into options (mc kinds only)
   idiom: Idiom;         // the right idiom (for review card)
+  scenarioCn?: string;  // for scenario kind: AI-generated situation
 };
 
 const PER_PAGE = 12;
@@ -101,14 +115,30 @@ function blankOutPhrase(example: string, phrase: string): string {
   return result;
 }
 
+/**
+ * Choose the right drill type for one idiom, based on the user's mastery
+ * level for it. Higher level = deeper / more productive recall.
+ *   L1 -> en2cn       (recognise meaning)
+ *   L2 -> fill / cn2en alternating (listen + reverse recall)
+ *   L3 -> scenario    (situation -> phrase)
+ *   L4 -> compose     (write your own — AI graded)
+ *   L5 -> compose     (free composition; SRS interval handles spacing)
+ */
+function kindForLevel(level: SlangLevel, alt: number): QuizKind {
+  if (level === 1) return "en2cn";
+  if (level === 2) return alt % 2 === 0 ? "fill" : "cn2en";
+  if (level === 3) return "scenario";
+  return "compose";
+}
+
 function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
   const sourceForDistractors = IDIOMS;
   // Spaced-repetition pick: prioritise struggling > unseen > due-review,
   // and skip mastered items still in cooldown.
   const picked = pickQuizPool(pool, Math.min(len, pool.length));
-  const kinds: QuizKind[] = ["en2cn", "cn2en", "fill"];
   return picked.map((idiom, i) => {
-    const kind = kinds[i % kinds.length];
+    const level = getSlangLevel(idiom.id);
+    const kind = kindForLevel(level, i);
     const distractorPool = sourceForDistractors.filter((x) => x.id !== idiom.id);
     const distractors = shuffle(distractorPool).slice(0, 3);
 
@@ -136,16 +166,37 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
         idiom,
       };
     }
-    // fill
-    const blanked = blankOutPhrase(idiom.example, idiom.phrase);
-    const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+    if (kind === "fill") {
+      const blanked = blankOutPhrase(idiom.example, idiom.phrase);
+      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+      return {
+        id: idiom.id,
+        kind,
+        prompt: blanked,
+        context: idiom.example_cn,
+        options: opts,
+        answer: opts.indexOf(idiom.phrase),
+        idiom,
+      };
+    }
+    if (kind === "scenario") {
+      // Scenario text is fetched lazily when the question is shown; the
+      // options are still 4 phrases (target + 3 distractors).
+      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+      return {
+        id: idiom.id,
+        kind,
+        prompt: idiom.example_cn, // fallback while AI scenario loads
+        options: opts,
+        answer: opts.indexOf(idiom.phrase),
+        idiom,
+      };
+    }
+    // compose — no options, learner writes a sentence; AI grades on submit.
     return {
       id: idiom.id,
       kind,
-      prompt: blanked,
-      context: idiom.example_cn,
-      options: opts,
-      answer: opts.indexOf(idiom.phrase),
+      prompt: idiom.example_cn,
       idiom,
     };
   });

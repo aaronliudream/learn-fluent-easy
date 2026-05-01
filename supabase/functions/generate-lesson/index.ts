@@ -12,6 +12,12 @@ interface ReqBody {
   /** Lower-case English words that already appeared in earlier lessons.
    *  The AI must avoid reusing these as new vocab entries. */
   priorWords?: string[];
+  /** When the lesson has hand-authored reading/vocab from the curriculum,
+   *  the frontend passes them here so quiz / fillBlanks / listening /
+   *  expressions / output are all generated AGAINST that exact text — not
+   *  AI-invented reading that the learner never sees. */
+  authoredReading?: { en: string; cn: string }[];
+  authoredVocab?: { word: string; pron?: string; meaning: string; example?: string; example_cn?: string }[];
 }
 
 const lessonSchema = {
@@ -186,7 +192,7 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const { title, levelName, unitTitle, priorWords }: ReqBody = await req.json();
+    const { title, levelName, unitTitle, priorWords, authoredReading, authoredVocab }: ReqBody = await req.json();
     if (!title) {
       return new Response(JSON.stringify({ error: "Missing title" }), {
         status: 400,
@@ -279,12 +285,20 @@ Deno.serve(async (req) => {
       ? priorWords.slice(0, 600).join(", ")
       : "(无)";
 
+    const hasAuthored =
+      Array.isArray(authoredReading) && authoredReading.length > 0 &&
+      Array.isArray(authoredVocab) && authoredVocab.length > 0;
+
+    const authoredBlock = hasAuthored
+      ? `\n\n【★ 本课已有【固定的】课文与词汇 — 必须严格使用 ★】\n这节课的【课文 reading】和【词汇 vocab】是教材已经写好的, 学生在 App 里看到的就是下面这两段内容。你生成的 quiz / fillBlanks / listening / expressions / output / grammar.examples 必须 100% 基于下面这段课文和词汇来出, 严禁使用其他课文或编造新课文。\n\n— 固定课文 reading (按顺序的句子) —\n${authoredReading!.map((r, i) => `${i + 1}. ${r.en}\n   中文: ${r.cn}`).join("\n")}\n\n— 固定词汇 vocab (本课要考察的词) —\n${authoredVocab!.map((v, i) => `${i + 1}. ${v.word} — ${v.meaning}`).join("\n")}\n\n你必须照原样把上面的 reading 和 vocab 放回 reading / vocab 字段 (en/cn 或 word/meaning 一字不差), 然后基于它们生成其他板块。重申:\n  * quiz 4 题的答案必须能在上面这段 reading 中直接找到, 问题与选项中的英文实词只能来自 reading + vocab + priorWords; 严禁引入 reading 中没有的人名 / 地点 / 情节。\n  * fillBlanks.sentence 必须是上面 reading 里的【原句】, 把其中一个 vocab 词换成 ___。\n  * expressions 5-6 条全部从上面 reading 里挑【原句】, 不准自己造。\n  * listening.audio 必须直接拼接上面 reading 数组里 2-4 个连续句子, 不得改写。blanks 的 answer 必须是 vocab 里的词且真实出现在 audio 中。\n  * grammar.examples 中每一句 en 都必须一字不差出现在上面 reading 中。\n  * output.sample 范文里的英文实词必须来自上面 vocab + priorWords。\n如有任何一处偏离上面这段固定课文, 视为本次生成失败。`
+      : "";
+
     const user = `课程标题: ${title}
 级别: ${levelName ?? "(未提供)"}
 单元: ${unitTitle ?? "(未提供)"}
 
 【已经学过的单词列表 — 请勿再放进 vocab】
-${priorList}
+${priorList}${authoredBlock}
 
 请先在心里确认本课的核心场景与核心句型, 然后让 8 个板块全部围绕它展开, 生成完整教学内容。
 

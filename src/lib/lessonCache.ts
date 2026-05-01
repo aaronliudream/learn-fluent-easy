@@ -1,7 +1,9 @@
 import type { LessonContent } from "@/data/course";
 import { supabase } from "@/integrations/supabase/client";
 
-const KEY_PREFIX = "lesson_ai_v4:";
+// v5: regenerated to bind quiz / fillBlanks / listening / expressions / output
+// to the authored reading + vocab when available (see generate-lesson edge fn).
+const KEY_PREFIX = "lesson_ai_v5:";
 
 const k = (level: number, unit: number, lesson: number) =>
   `${KEY_PREFIX}${level}-${unit}-${lesson}`;

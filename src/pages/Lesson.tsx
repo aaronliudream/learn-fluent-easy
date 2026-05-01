@@ -366,8 +366,25 @@ const Lesson = () => {
       // Pass the words already covered by earlier lessons so the AI
       // can pick genuinely new vocabulary for this lesson.
       const priorWords = Array.from(getPriorLessonWords(lv, un, ls));
+      // If this lesson has hand-authored reading + vocab from the curriculum,
+      // pass them so all quiz / fillBlanks / listening / expressions / output
+      // are generated AGAINST the actual text the learner reads — not against
+      // an AI-invented passage that the user never sees.
+      const authored = LESSON_CONTENT[lesson.title] ?? null;
+      const useAuthored = hasAuthoredContent(lesson.title) && authored;
       const { data, error } = await supabase.functions.invoke("generate-lesson", {
-        body: { title: lesson.title, levelName, unitTitle, priorWords },
+        body: {
+          title: lesson.title,
+          levelName,
+          unitTitle,
+          priorWords,
+          ...(useAuthored
+            ? {
+                authoredReading: authored.reading,
+                authoredVocab: authored.vocab,
+              }
+            : {}),
+        },
       });
       if (error) throw error;
       if ((data as any)?.error) throw new Error((data as any).error);
@@ -389,7 +406,11 @@ const Lesson = () => {
       return;
     }
     // If we already shipped a pre-generated version, use it instantly and skip AI calls.
-    if (PREGEN_MAP[lesson.title]) {
+    // EXCEPTION: for hand-authored lessons (reading + vocab come from the
+    // curriculum), the pregen bundle's quiz / fillBlanks / listening were
+    // generated against AI-invented reading and won't match the real lesson.
+    // Skip the pregen shortcut so we regenerate against the authored text.
+    if (PREGEN_MAP[lesson.title] && !hasAuthoredContent(lesson.title)) {
       setAiContent(PREGEN_MAP[lesson.title]);
       return;
     }
@@ -403,7 +424,17 @@ const Lesson = () => {
     (async () => {
       const cached = await getCachedLesson(lv, un, ls);
       if (cancelled) return;
-      if (cached) {
+      // For authored lessons, only honor the cache if its reading matches the
+      // authored reading. Otherwise (stale cache from before quizzes were
+      // bound to authored text), regenerate so quiz / fill / listening line up.
+      const authored = LESSON_CONTENT[lesson.title];
+      const matchesAuthored = (() => {
+        if (!hasAuthoredContent(lesson.title) || !authored || !cached) return true;
+        const a = (authored.reading ?? []).map((r) => r.en).join("|");
+        const c = (cached.reading ?? []).map((r) => r.en).join("|");
+        return a === c;
+      })();
+      if (cached && matchesAuthored) {
         setAiContent(cached);
       } else {
         generateLesson(false);

@@ -25,8 +25,8 @@ export const T = forwardRef<unknown, { children: string | undefined | null }>(
  *  toast() arguments, document.title). */
 export function useT() {
   const { tDynamic, lang } = useI18n();
-  return (text: string, params?: Record<string, string | number>) => {
-    const out = tDynamic(text, params);
+  return (text: string) => {
+    const out = tDynamic(text);
     reportRenderedText(out, lang);
     return out;
   };

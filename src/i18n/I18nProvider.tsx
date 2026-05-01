@@ -10,6 +10,7 @@ import {
 import { BUILTIN, EN, type StringKey, interpolate } from "./strings";
 import { localizeProtagonist } from "./protagonistName";
 import { UI_PHRASES } from "./uiPhrases.generated";
+import { startDomLeakScanner } from "./devLeakDetector";
 
 const STORAGE_LANG = "fluentpath.lang";
 const STORAGE_PICKED = "fluentpath.langPicked";

@@ -181,7 +181,7 @@ const Index = () => {
         <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
           更多学习方式
         </h3>
-        <span className="text-[11px] text-muted-foreground">{sections.length} 个入口</span>
+        <span className="text-[11px] text-muted-foreground">{sections.length + 1} 个入口</span>
       </div>
 
       <section className="grid gap-3 sm:grid-cols-2">

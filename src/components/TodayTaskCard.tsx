@@ -173,9 +173,10 @@ export const TodayTaskCard = () => {
             aria-label={collapsed ? t("展开") : t("收起")}
             aria-expanded={!collapsed}
             aria-controls="today-task-list"
-            className="grid size-8 place-items-center rounded-full border border-border bg-background/80 text-muted-foreground transition hover:bg-secondary hover:text-foreground"
+            className="group/toggle inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-primary to-fuchsia-500 px-3 py-1.5 text-xs font-bold text-white shadow-md shadow-primary/30 transition-all hover:scale-105 hover:shadow-lg active:scale-95"
           >
-            <ChevronDown className={`size-4 transition-transform ${collapsed ? "" : "rotate-180"}`} />
+            <span>{collapsed ? <T>展开</T> : <T>收起</T>}</span>
+            <ChevronDown className={`size-4 transition-transform duration-300 ${collapsed ? "" : "rotate-180"}`} />
           </button>
         </div>
       </div>

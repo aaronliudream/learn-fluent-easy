@@ -57,6 +57,8 @@ export type StringKey =
   | "index.progress.minutes"
   | "index.progress.streak"
   | "index.streak.label"
+  | "brand.slogan"
+  | "brand.tagline"
   | "index.progress.cta"
   | "index.progress.save"
   // Auth toasts
@@ -130,6 +132,8 @@ export const EN: Record<StringKey, string> = {
   "index.progress.minutes": "{n} min",
   "index.progress.streak": "🔥 {n}-day streak",
   "index.streak.label": "DAY STREAK",
+  "brand.slogan": "A little better every night.",
+  "brand.tagline": "AI-powered English for Gaokao learners",
   "index.progress.cta": "Sign in to save progress, syncs to your phone in 3s",
   "index.progress.save": "Save",
 
@@ -204,6 +208,8 @@ export const ZH: Record<StringKey, string> = {
   "index.progress.minutes": "{n} 分钟",
   "index.progress.streak": "🔥{n}天",
   "index.streak.label": "天连击",
+  "brand.slogan": "像月亮一样，每天进步一点点。",
+  "brand.tagline": "AI 驱动的高考英语学习",
   "index.progress.cta": "登录保存进度，3 秒同步到手机",
   "index.progress.save": "保存",
 

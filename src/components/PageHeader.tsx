@@ -1,4 +1,4 @@
-import { ArrowLeft, Home } from "lucide-react";
+import { ArrowLeft, Home, Star } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { VoiceSettingsButton } from "@/components/VoiceSettings";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
@@ -32,6 +32,13 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
         <div className="flex items-center gap-1">
           <LanguageSwitcher />
           <VoiceSettingsButton />
+          <Link
+            to="/saved"
+            className="grid size-10 place-items-center rounded-full text-amber-500 transition hover:bg-amber-100 hover:text-amber-600 dark:hover:bg-amber-500/10"
+            aria-label="My saved phrases"
+          >
+            <Star className="size-5" />
+          </Link>
           <Link
             to="/"
             className="grid size-10 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary hover:text-foreground"

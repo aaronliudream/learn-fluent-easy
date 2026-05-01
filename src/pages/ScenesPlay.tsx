@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import { Volume2, PlayCircle, StopCircle } from "lucide-react";
+import { Volume2, PlayCircle, StopCircle, Drama, PencilLine } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { SCENE_CATEGORIES, SCENE_DIALOGUES } from "@/data/scenes";
@@ -7,6 +7,8 @@ import { speak, speakSequence, stopSpeaking } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
 import { stripTags } from "@/lib/richText";
 import { TappableLine } from "@/components/TappableLine";
+import { RewriteDialog } from "@/components/RewriteDialog";
+import { PhraseQuiz } from "@/components/PhraseQuiz";
 import { recordVisit } from "@/lib/guestProgress";
 
 const ScenesPlay = () => {
@@ -18,6 +20,8 @@ const ScenesPlay = () => {
   const cancelledRef = useRef(false);
   const [isPlayingAll, setIsPlayingAll] = useState(false);
   const lineRefs = useRef<Array<HTMLElement | null>>([]);
+  const [rewriteIdx, setRewriteIdx] = useState<number | null>(null);
+  const quizRef = useRef<HTMLDivElement | null>(null);
 
   // Auto-scroll the currently-playing line into the upper portion of the
   // viewport so the user can follow along without manually scrolling.
@@ -69,6 +73,10 @@ const ScenesPlay = () => {
     setActiveIdx(null);
   };
 
+  const scrollToQuiz = () => {
+    quizRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
@@ -77,7 +85,7 @@ const ScenesPlay = () => {
         back={`/scenes/${cat.key}`}
       />
 
-      <div className="mb-5 flex justify-start">
+      <div className="mb-5 flex flex-wrap items-center gap-2">
         {isPlayingAll ? (
           <button
             onClick={stopAll}
@@ -93,6 +101,12 @@ const ScenesPlay = () => {
             <PlayCircle className="size-4" /> <T>播放整段对话</T>
           </button>
         )}
+        <button
+          onClick={scrollToQuiz}
+          className="inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-700 transition hover:bg-amber-200 dark:bg-amber-500/15 dark:text-amber-300 dark:hover:bg-amber-500/25"
+        >
+          <PencilLine className="size-4" /> <T>巩固一下</T>
+        </button>
       </div>
 
       <section className="space-y-3">
@@ -115,6 +129,12 @@ const ScenesPlay = () => {
                   <TappableLine sentence={l.en} />
                 </div>
                 <div className={`mt-1.5 text-base transition md:text-lg ${isActive ? "font-semibold text-primary" : "text-muted-foreground"}`}><T>{stripTags(l.cn)}</T></div>
+                <button
+                  onClick={() => setRewriteIdx(i)}
+                  className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-foreground/70 transition hover:bg-primary/15 hover:text-primary"
+                >
+                  <Drama className="size-3.5" /> <T>换种说法</T>
+                </button>
               </div>
               <button
                 onClick={() => playOne(i)}
@@ -131,6 +151,21 @@ const ScenesPlay = () => {
           );
         })}
       </section>
+
+      <section ref={quizRef} className="mt-10">
+        <PhraseQuiz lines={dlg.lines.map((l) => ({ en: l.en, cn: l.cn }))} />
+      </section>
+
+      {rewriteIdx != null && (
+        <RewriteDialog
+          open={rewriteIdx != null}
+          onOpenChange={(v) => {
+            if (!v) setRewriteIdx(null);
+          }}
+          sentence={dlg.lines[rewriteIdx].en}
+          sceneHint={`${dlg.title} (${t(dlg.titleCn)})`}
+        />
+      )}
     </main>
   );
 };

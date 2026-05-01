@@ -1,18 +1,28 @@
 import React, { useMemo, useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Loader2, Volume2, BookOpen } from "lucide-react";
+import { Loader2, Volume2, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { stripTags } from "@/lib/richText";
 import { T } from "@/i18n/T";
 
-type ExplanationExample = { en: string; cn: string };
+type EnCnPair = { en: string; cn: string };
+type LiteralWord = { word: string; meaning_cn: string; note_cn?: string };
+
 export type Explanation = {
   phrase: string;
   pos?: string;
-  meaning_cn: string;
+  one_line_cn?: string;
+  literal?: LiteralWord[];
+  scene_cn?: string;
+  replies?: EnCnPair[];
+  similar?: EnCnPair[];
+  tip_cn?: string;
+  example?: EnCnPair;
+  // Backwards-compat with the v1 schema (still in cache for some users):
+  meaning_cn?: string;
   usage_cn?: string;
-  examples?: ExplanationExample[];
+  examples?: EnCnPair[];
   synonyms?: string[];
 };
 
@@ -203,7 +213,7 @@ function ExplainPopover({
       <PopoverTrigger asChild>
         <button
           type="button"
-          className="rounded px-0.5 transition hover:bg-primary/15 hover:text-primary focus:bg-primary/15 focus:text-primary focus:outline-none"
+          className="cursor-pointer rounded-sm border-b border-dotted border-transparent transition hover:border-primary/60 hover:text-primary focus:border-primary focus:text-primary focus:outline-none"
         >
           {children}
         </button>
@@ -212,9 +222,9 @@ function ExplainPopover({
         side="top"
         align="center"
         sideOffset={6}
-        className="w-[300px] max-w-[92vw] p-0"
+        className="w-[340px] max-w-[94vw] p-0"
       >
-        <div className="border-b border-border px-4 py-3">
+        <div className="border-b border-border bg-primary/5 px-4 py-3">
           <div className="flex items-center justify-between gap-2">
             <div className="min-w-0">
               <div className="text-base font-bold leading-tight text-foreground">
@@ -239,7 +249,7 @@ function ExplainPopover({
             </button>
           </div>
         </div>
-        <div className="max-h-[55vh] overflow-y-auto px-4 py-3">
+        <div className="max-h-[60vh] overflow-y-auto px-4 py-3">
           {loading && (
             <div className="flex items-center gap-2 py-4 text-sm text-muted-foreground">
               <Loader2 className="size-4 animate-spin" />
@@ -251,85 +261,147 @@ function ExplainPopover({
               <T>暂时讲解不出来,请稍后再试。</T>
             </div>
           )}
-          {data && !loading && (
-            <div className="space-y-3">
-              <div>
-                <div className="mb-1 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-primary">
-                  <BookOpen className="size-3" /> <T>含义</T>
-                </div>
-                <div className="text-sm leading-relaxed text-foreground">
-                  {data.meaning_cn}
-                </div>
-              </div>
-              {data.usage_cn ? (
-                <div>
-                  <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                    <T>用法</T>
-                  </div>
-                  <div className="text-sm leading-relaxed text-foreground/90">
-                    {data.usage_cn}
-                  </div>
-                </div>
-              ) : null}
-              {data.examples && data.examples.length > 0 ? (
-                <div>
-                  <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                    <T>例句</T>
-                  </div>
-                  <ul className="space-y-2">
-                    {data.examples.map((ex, i) => (
-                      <li
-                        key={i}
-                        className="rounded-lg border border-border bg-secondary/40 p-2"
-                      >
-                        <div className="flex items-start gap-2">
-                          <button
-                            onClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              speak(ex.en);
-                            }}
-                            className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-primary/10 text-primary transition hover:bg-primary/20"
-                            aria-label="play example"
-                          >
-                            <Volume2 className="size-3" />
-                          </button>
-                          <div className="min-w-0 flex-1">
-                            <div className="text-sm font-medium text-foreground">
-                              {ex.en}
-                            </div>
-                            <div className="mt-0.5 text-xs text-muted-foreground">
-                              {ex.cn}
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-              {data.synonyms && data.synonyms.length > 0 ? (
-                <div>
-                  <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                    <T>近义表达</T>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {data.synonyms.map((s, i) => (
-                      <span
-                        key={i}
-                        className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary"
-                      >
-                        {s}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-            </div>
-          )}
+          {data && !loading && <LessonBody data={data} />}
         </div>
       </PopoverContent>
     </Popover>
+  );
+}
+
+/** Section header with emoji + label. */
+function SectionHeader({ emoji, label }: { emoji: string; label: string }) {
+  return (
+    <div className="mb-1.5 flex items-center gap-1.5 text-[12px] font-bold text-primary">
+      <span>{emoji}</span>
+      <T>{label}</T>
+    </div>
+  );
+}
+
+/** Renders an English line with a 🔊 button + Chinese translation underneath. */
+function PlayableEnCn({ en, cn }: EnCnPair) {
+  return (
+    <div className="flex items-start gap-2 rounded-lg border border-border bg-secondary/40 p-2">
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          speak(en);
+        }}
+        className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-primary/10 text-primary transition hover:bg-primary/20"
+        aria-label="play"
+      >
+        <Volume2 className="size-3" />
+      </button>
+      <div className="min-w-0 flex-1">
+        <div className="text-sm font-medium text-foreground">{en}</div>
+        <div className="mt-0.5 text-xs text-muted-foreground">{cn}</div>
+      </div>
+    </div>
+  );
+}
+
+function LessonBody({ data }: { data: Explanation }) {
+  // Normalize v1 → v2 shape so old cached entries still render nicely.
+  const oneLine = data.one_line_cn || data.meaning_cn || "";
+  const literal = data.literal || [];
+  const scene = data.scene_cn || data.usage_cn || "";
+  const replies = data.replies || [];
+  const similar =
+    data.similar ||
+    (data.synonyms || []).map((en) => ({ en, cn: "" })).filter((x) => x.en);
+  const example =
+    data.example ||
+    (data.examples && data.examples[0] ? data.examples[0] : undefined);
+  const tip = data.tip_cn || "";
+
+  return (
+    <div className="space-y-3.5">
+      {oneLine ? (
+        <div className="rounded-lg bg-primary/8 p-2.5">
+          <SectionHeader emoji="🧠" label="一句话解释" />
+          <div className="text-sm font-medium leading-relaxed text-foreground">
+            👉 {oneLine}
+          </div>
+        </div>
+      ) : null}
+
+      {literal.length > 0 && (
+        <div>
+          <SectionHeader emoji="🔍" label="逐词理解" />
+          <ul className="space-y-1.5">
+            {literal.map((w, i) => (
+              <li key={i} className="text-sm leading-relaxed">
+                <span className="font-semibold text-foreground">{w.word}</span>
+                <span className="text-muted-foreground"> = </span>
+                <span className="text-foreground/90">{w.meaning_cn}</span>
+                {w.note_cn ? (
+                  <span className="ml-1 text-xs text-destructive/90">
+                    ({w.note_cn})
+                  </span>
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {scene && (
+        <div>
+          <SectionHeader emoji="📍" label="典型场景" />
+          <div className="text-sm leading-relaxed text-foreground/90">
+            {scene}
+          </div>
+        </div>
+      )}
+
+      {replies.length > 0 && (
+        <div>
+          <SectionHeader emoji="✅" label="你可以这样说" />
+          <div className="space-y-1.5">
+            {replies.map((r, i) => (
+              <PlayableEnCn key={i} en={r.en} cn={r.cn} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {similar.length > 0 && (
+        <div>
+          <SectionHeader emoji="🔁" label="同义说法" />
+          <div className="space-y-1.5">
+            {similar.map((r, i) =>
+              r.cn ? (
+                <PlayableEnCn key={i} en={r.en} cn={r.cn} />
+              ) : (
+                <span
+                  key={i}
+                  className="mr-1.5 inline-block rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary"
+                >
+                  {r.en}
+                </span>
+              ),
+            )}
+          </div>
+        </div>
+      )}
+
+      {example && (
+        <div>
+          <SectionHeader emoji="📝" label="例句" />
+          <PlayableEnCn en={example.en} cn={example.cn} />
+        </div>
+      )}
+
+      {tip && (
+        <div className="rounded-lg border border-amber-300/40 bg-amber-50/60 p-2.5 dark:border-amber-500/30 dark:bg-amber-500/10">
+          <div className="mb-1 flex items-center gap-1.5 text-[12px] font-bold text-amber-700 dark:text-amber-300">
+            <Sparkles className="size-3" /> <T>高分小细节</T>
+          </div>
+          <div className="text-sm leading-relaxed text-foreground/90">{tip}</div>
+        </div>
+      )}
+    </div>
   );
 }
 

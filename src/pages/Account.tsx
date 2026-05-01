@@ -238,7 +238,7 @@ const Account = () => {
 
             <Button
               onClick={saveLeaderboardPrefs}
-              disabled={savingPrefs || (!prefsDirty && optIn === optIn)}
+              disabled={savingPrefs}
               size="sm"
             >
               <Save className="size-4" /> <T>保存设置</T>

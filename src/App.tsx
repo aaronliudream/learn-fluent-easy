@@ -36,6 +36,7 @@ import GaokaoReading from "./pages/GaokaoReading.tsx";
 import GaokaoReadingPlay from "./pages/GaokaoReadingPlay.tsx";
 import GaokaoVocab from "./pages/GaokaoVocab.tsx";
 import GaokaoDiagnostic from "./pages/GaokaoDiagnostic.tsx";
+import SavedPhrases from "./pages/SavedPhrases.tsx";
 
 const queryClient = new QueryClient();
 
@@ -68,6 +69,7 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/scenes" element={<Scenes />} />
+          <Route path="/saved" element={<SavedPhrases />} />
           <Route path="/scenes/:catKey" element={<ScenesCategory />} />
           <Route path="/scenes/:catKey/:dialogueId" element={<ScenesPlay />} />
           <Route path="/workplace" element={<Workplace />} />

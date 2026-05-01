@@ -1,4 +1,5 @@
 import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic, BookOpenCheck, Trophy } from "lucide-react";
+import { BrandLockup } from "@/components/brand/BrandLogo";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -160,6 +161,15 @@ const Index = () => {
           </Button>
         )}
       </div>
+
+      {/* Brand hero — lockup + slogan. Sets the editorial tone and gives
+          first-time visitors a clear, branded landing impression. */}
+      <header className="mt-2 mb-6 flex flex-col items-center text-center">
+        <BrandLockup size={56} />
+        <p className="mt-3 max-w-md font-serif text-base italic text-muted-foreground md:text-lg">
+          {t("brand.slogan")}
+        </p>
+      </header>
 
       {/* Optional: guest progress save nudge */}
       {!user && hasProgress && (

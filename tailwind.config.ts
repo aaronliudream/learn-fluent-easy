@@ -83,10 +83,14 @@ export default {
         "grad-6": "var(--grad-6)",
         "grad-hero": "var(--grad-hero)",
         "grad-title": "var(--grad-title)",
+        "grad-brand": "var(--grad-brand)",
+        "grad-brand-soft": "var(--grad-brand-soft)",
+        "grad-brand-text": "var(--grad-brand-text)",
       },
       boxShadow: {
         card: "var(--shadow-card)",
         tile: "var(--shadow-tile)",
+        brand: "var(--shadow-brand)",
       },
       keyframes: {
         "accordion-down": {

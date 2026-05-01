@@ -50,6 +50,30 @@ export type Database = {
         }
         Relationships: []
       }
+      dialogue_key_phrases: {
+        Row: {
+          content_hash: string
+          created_at: string
+          dialogue_key: string
+          id: string
+          phrases: Json
+        }
+        Insert: {
+          content_hash: string
+          created_at?: string
+          dialogue_key: string
+          id?: string
+          phrases: Json
+        }
+        Update: {
+          content_hash?: string
+          created_at?: string
+          dialogue_key?: string
+          id?: string
+          phrases?: Json
+        }
+        Relationships: []
+      }
       email_send_log: {
         Row: {
           created_at: string

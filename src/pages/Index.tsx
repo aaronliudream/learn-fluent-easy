@@ -268,7 +268,7 @@ const Index = () => {
           {placementSection.desc}
         </div>
         <div className="relative mt-2 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-1.5 text-xs font-semibold backdrop-blur-sm transition group-hover:bg-white/30">
-          开始测试 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
+          {t("index.section.placement.cta")} <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
         </div>
       </Link>
 

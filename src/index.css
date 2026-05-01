@@ -8,38 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Lumen Course — Lavender canvas, vivid gradients */
-    --background: 240 33% 98%;
-    --foreground: 250 35% 18%;
+    /* Big Moon — Warm paper canvas, eye-friendly editorial palette */
+    /* Background #FAF7F2 — warm ivory, low blue-light, comfortable for long study */
+    --background: 36 33% 97%;
+    --foreground: 230 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 250 35% 18%;
+    --card-foreground: 230 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 250 35% 18%;
+    --popover-foreground: 230 25% 15%;
 
-    --primary: 258 90% 62%;             /* vivid violet */
+    /* Primary stays in indigo family but slightly desaturated to harmonize with paper bg */
+    --primary: 248 70% 56%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 268 95% 72%;
+    --primary-glow: 262 80% 68%;
 
-    --secondary: 250 40% 96%;
-    --secondary-foreground: 250 35% 18%;
+    --secondary: 36 30% 93%;
+    --secondary-foreground: 230 25% 15%;
 
-    --muted: 240 30% 96%;
-    --muted-foreground: 250 12% 48%;
+    --muted: 36 25% 92%;
+    --muted-foreground: 230 10% 42%;
 
-    --accent: 268 95% 72%;
+    --accent: 32 90% 58%;          /* warm amber accent — the "moon" highlight */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 62%;
+    --destructive: 0 78% 58%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 250 30% 91%;
-    --input: 250 30% 91%;
-    --ring: 258 90% 62%;
+    --border: 36 22% 87%;
+    --input: 36 22% 87%;
+    --ring: 248 70% 56%;
 
     --success: 152 68% 45%;
     --success-foreground: 0 0% 100%;
+
+    /* Game UI tokens */
+    --xp:     32 90% 55%;          /* amber XP fill */
+    --xp-track: 36 25% 88%;
+    --gold:   42 95% 55%;
+    --silver: 220 10% 70%;
+    --bronze: 22 65% 55%;
 
     /* Level gradients — used by tiles in level-select */
     --grad-1: linear-gradient(135deg, hsl(199 95% 55%), hsl(217 92% 60%));

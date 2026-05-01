@@ -1,4 +1,4 @@
-import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic, BookOpenCheck } from "lucide-react";
+import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic, BookOpenCheck, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -16,6 +16,9 @@ import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { T } from "@/i18n/T";
 import { SupportButton } from "@/components/SupportButton";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
+import { XPRing } from "@/components/game/XPRing";
+import { BadgeStrip } from "@/components/game/BadgeStrip";
+import { useStreakStats, computeBadges } from "@/hooks/useStreakStats";
 
 const Index = () => {
   const { t } = useI18n();
@@ -23,6 +26,10 @@ const Index = () => {
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
   const [slangCount, setSlangCount] = useState<number>(IDIOMS.length);
+  const { stats } = useStreakStats(user?.id);
+  const badges = computeBadges(stats);
+  // Use server streak when signed in, fall back to guest local streak
+  const displayStreak = stats?.current_streak ?? streak;
 
   useEffect(() => {
     touchActive();
@@ -179,6 +186,34 @@ const Index = () => {
 
       {/* Primary: Today's Task card — single clear next action */}
       <TodayTaskCard />
+
+      {/* Gamification strip: XP ring + badges + leaderboard CTA */}
+      <section className="mt-4 grid gap-3 sm:grid-cols-[auto,1fr]">
+        <Link
+          to="/leaderboard"
+          className="card-paper group flex items-center gap-3 rounded-2xl p-3 transition hover:-translate-y-0.5 hover:shadow-md sm:flex-col sm:items-center sm:justify-center sm:p-4"
+        >
+          <XPRing value={displayStreak} target={Math.max(7, Math.ceil((displayStreak + 1) / 7) * 7)} label={t("天连击") || "连击"} />
+          <div className="flex flex-col gap-1 sm:items-center">
+            <span className="inline-flex items-center gap-1 rounded-full bg-accent/15 px-2.5 py-1 text-[11px] font-bold text-foreground">
+              <Trophy className="size-3.5 text-accent" /> <T>本周排行榜</T>
+            </span>
+            <span className="text-[10px] text-muted-foreground sm:hidden"><T>查看你的全球排名</T></span>
+          </div>
+        </Link>
+
+        <div className="card-paper rounded-2xl p-3">
+          <div className="mb-2 flex items-center justify-between">
+            <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+              <T>成就徽章</T>
+            </div>
+            <Link to="/stats" className="text-[11px] font-semibold text-primary hover:underline">
+              <T>全部</T> →
+            </Link>
+          </div>
+          <BadgeStrip badges={badges} />
+        </div>
+      </section>
 
       {/* Secondary: all entry points, demoted to a compact grid */}
       <div className="mb-3 mt-8">

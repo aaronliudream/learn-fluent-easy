@@ -15,7 +15,7 @@ const Workplace = () => {
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
         title={t("💼 职场英语")}
-        subtitle={t("湾区职场真实对话 · 高频表达 · 情景对话")}
+        subtitle={t("真实对话 · 高频表达 · 情景对话")}
         back="/"
       />
       <div className="space-y-8">

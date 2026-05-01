@@ -905,6 +905,10 @@ const Slang = () => {
                       onClick={() => {
                         setPicks({ ...picks, [q.id]: oi });
                         setRevealed(true);
+                        if (oi === q.answer) {
+                          setXpTrigger((n) => n + 1);
+                          try { (navigator as any).vibrate?.(20); } catch { /* noop */ }
+                        }
                         // Speak the canonical example IMMEDIATELY inside the
                         // click handler — no useEffect delay, no audio unlock
                         // gap on mobile.

@@ -13,6 +13,7 @@ import { SCENE_DIALOGUES } from "@/data/scenes";
 import { WORK_CATEGORIES } from "@/data/workplace";
 import { useI18n } from "@/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
+import { T } from "@/i18n/T";
 import { SupportButton } from "@/components/SupportButton";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
 
@@ -179,7 +180,7 @@ const Index = () => {
       {/* Secondary: all entry points, demoted to a compact grid */}
       <div className="mb-3 mt-8">
         <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-          更多学习方式
+          <T>更多学习方式</T>
         </h3>
       </div>
 

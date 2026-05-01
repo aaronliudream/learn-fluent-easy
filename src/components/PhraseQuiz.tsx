@@ -478,7 +478,7 @@ export function PhraseQuiz({
     const ratio = Math.round((score / items.length) * 100);
     return (
       <div className="rounded-2xl border border-primary/30 bg-primary/5 p-5 text-center">
-        <div className="text-3xl font-extrabold text-primary">
+        <div className="num text-grad-title text-4xl font-extrabold">
           {score} / {items.length}
         </div>
         <div className="mt-1 text-sm text-muted-foreground">

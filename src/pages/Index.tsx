@@ -14,6 +14,7 @@ import { WORK_CATEGORIES } from "@/data/workplace";
 import { useI18n } from "@/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { SupportButton } from "@/components/SupportButton";
+import { TodayTaskCard } from "@/components/TodayTaskCard";
 
 const Index = () => {
   const { t } = useI18n();
@@ -171,33 +172,38 @@ const Index = () => {
         </Link>
       )}
 
-      <div className="mb-3 mt-2" />
+      {/* Primary: Today's Task card — single clear next action */}
+      <TodayTaskCard />
 
-      <section className="grid gap-4">
+      {/* Secondary: all entry points, demoted to a compact grid */}
+      <div className="mb-3 mt-8 flex items-end justify-between">
+        <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
+          更多学习方式
+        </h3>
+        <span className="text-[11px] text-muted-foreground">{sections.length} 个入口</span>
+      </div>
+
+      <section className="grid gap-3 sm:grid-cols-2">
         {sections.map((s) => {
           const Icon = s.icon;
           return (
             <Link
               key={s.to}
               to={s.to}
-              className={`group relative flex items-center gap-5 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-5 text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(250_50%_30%/0.5)]`}
+              className={`group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(250_50%_30%/0.5)]`}
             >
-              <span className="pointer-events-none absolute -right-12 -top-14 size-44 rounded-full bg-white/15 blur-2xl" />
-              <span className="pointer-events-none absolute -bottom-16 right-24 size-28 rounded-full bg-white/10 blur-xl" />
-              <div className="relative grid size-14 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
-                <Icon className="size-6" />
+              <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/15 blur-2xl" />
+              <div className="relative grid size-11 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
+                <Icon className="size-5" />
               </div>
               <div className="relative flex-1 min-w-0">
-                <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-80">
+                <div className="text-[9px] font-bold uppercase tracking-[0.16em] opacity-80">
                   {s.eyebrow}
                 </div>
-                <div className="mt-0.5 text-lg font-extrabold leading-tight md:text-xl">{s.title}</div>
-                <div className="mt-1 line-clamp-2 text-xs opacity-90 md:text-sm">{s.desc}</div>
+                <div className="mt-0.5 line-clamp-1 text-sm font-extrabold leading-tight md:text-base">{s.title}</div>
+                <div className="mt-0.5 line-clamp-1 text-[11px] opacity-85">{s.desc}</div>
               </div>
-              <div className="relative hidden shrink-0 items-center gap-1.5 rounded-full bg-white/20 px-3 py-1.5 text-xs font-semibold backdrop-blur-sm transition-transform group-hover:translate-x-1 sm:inline-flex">
-                {t("index.section.cta")} <ArrowRight className="size-3.5" />
-              </div>
-              <ArrowRight className="relative size-5 shrink-0 opacity-80 transition-transform group-hover:translate-x-1 sm:hidden" />
+              <ArrowRight className="relative size-4 shrink-0 opacity-80 transition-transform group-hover:translate-x-1" />
             </Link>
           );
         })}

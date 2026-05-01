@@ -356,6 +356,21 @@ export function PhraseQuiz({
             setScore(0);
             setDone(false);
           }
+          // Seed every expression into the spaced-repetition queue so the
+          // learner can drill them later in /review — even without finishing
+          // the quiz right now.
+          void seedReviews(
+            exprs.map((e) => {
+              const line = lines[e.line_index];
+              return {
+                phrase: e.en,
+                phrase_cn: e.cn,
+                source_key: dialogueKey,
+                source_line_en: line ? stripTags(line.en) : undefined,
+                source_line_cn: line ? stripTags(line.cn) : undefined,
+              };
+            }),
+          );
         }
       } catch (e) {
         console.warn("[extract-key-phrases] failed, using local fallback", e);
@@ -395,7 +410,14 @@ export function PhraseQuiz({
   const onPick = (opt: string) => {
     if (picked) return;
     setPicked(opt);
-    if (opt === current.answer) setScore((s) => s + 1);
+    const correct = opt === current.answer;
+    if (correct) setScore((s) => s + 1);
+    if (current.seed && dialogueKey) {
+      void recordQuizAnswer({
+        seed: { ...current.seed, source_key: dialogueKey },
+        correct,
+      });
+    }
   };
 
   const next = () => {

@@ -27,6 +27,71 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 /**
+ * Phrases too trivial to quiz on — common single words, basic greetings,
+ * filler particles. We want the quiz to focus on meaningful, idiomatic,
+ * "feels-native" expressions that learners actually need to drill.
+ */
+const TRIVIAL_PHRASES = new Set<string>([
+  "thank you",
+  "let me",
+  "let's",
+  "i see",
+  "got it",
+  "right now",
+  "right here",
+  "over there",
+  "all right",
+  "going to",
+  "for sure",
+  "of course",
+  "no problem",
+  "hold on",
+  "hang on",
+  "go ahead",
+]);
+
+/**
+ * Score a phrase by how "worth quizzing" it is. Higher = more idiomatic /
+ * expression-like. Multi-word phrases beat single words; idioms beat
+ * grammar fillers.
+ */
+function expressionScore(p: string): number {
+  if (TRIVIAL_PHRASES.has(p)) return -1;
+  const wordCount = p.split(" ").length;
+  if (wordCount === 1) return -1; // single-word "phrases" are usually too easy
+  let score = wordCount * 10 + p.length;
+  // Bonus for clearly idiomatic / fixed expressions worth memorizing.
+  const idiomatic = [
+    "a side of",
+    "on the side",
+    "right this way",
+    "would you mind",
+    "do you mind",
+    "would you like",
+    "looking forward to",
+    "look forward to",
+    "by the way",
+    "in case",
+    "instead of",
+    "as well as",
+    "have you ever",
+    "used to",
+    "supposed to",
+    "make sense",
+    "makes sense",
+    "sounds good",
+    "sounds great",
+    "no worries",
+    "you bet",
+    "check please",
+    "to go",
+    "for here",
+  ];
+  if (idiomatic.includes(p)) score += 30;
+  return score;
+}
+
+/**
  * Build quiz items by scanning each line for the longest known phrase that
  * appears in it. Distractors are pulled from other phrases used elsewhere in
  * KNOWN_PHRASES (preferring ones similar in length).
@@ -35,30 +100,48 @@ function buildQuiz(lines: DialogLine[], maxItems = 5): QuizItem[] {
   const items: QuizItem[] = [];
   const used = new Set<string>();
 
+  // Pool of phrases we consider "worth quizzing" — only meaningful expressions.
+  const quizzable = KNOWN_PHRASES.filter((p) => expressionScore(p) > 0);
+
+  // Collect candidates: for each line, pick the highest-scoring quizzable
+  // phrase present in it. Then sort across the whole dialogue and take the
+  // top N — so a 10-line lesson surfaces its best 5 expressions, not the
+  // first 5 trivial matches.
+  type Cand = { line: DialogLine; phrase: string; score: number };
+  const cands: Cand[] = [];
   for (const line of lines) {
     const en = stripTags(line.en);
     const lower = " " + en.toLowerCase() + " ";
-    // Find the longest matching phrase in this line.
-    let best: string | null = null;
-    for (const p of KNOWN_PHRASES) {
-      if (used.has(p)) continue;
+    let best: { p: string; s: number } | null = null;
+    for (const p of quizzable) {
       if (lower.includes(" " + p + " ")) {
-        if (!best || p.length > best.length) best = p;
+        const s = expressionScore(p);
+        if (!best || s > best.s) best = { p, s };
       }
     }
-    if (!best) continue;
+    if (best) cands.push({ line, phrase: best.p, score: best.s });
+  }
+  cands.sort((a, b) => b.score - a.score);
+
+  for (const { line, phrase: best } of cands) {
+    if (used.has(best)) continue;
     used.add(best);
+    const en = stripTags(line.en);
 
     // Build blanked sentence (case-insensitive replace, first occurrence).
     const re = new RegExp(`\\b${best.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
     const blanked = en.replace(re, "____");
 
-    // Pick 3 distractors close in length and not already used.
-    const candidates = KNOWN_PHRASES.filter(
-      (p) => p !== best && Math.abs(p.length - best!.length) < 14,
+    // Pick 3 distractors from other meaningful expressions, similar in
+    // length so the choice isn't obvious by shape alone.
+    const distractorPool = quizzable.filter(
+      (p) => p !== best && Math.abs(p.length - best.length) < 14,
     );
-    const distractors = shuffle(candidates).slice(0, 3);
-    while (distractors.length < 3) distractors.push(KNOWN_PHRASES[Math.floor(Math.random() * KNOWN_PHRASES.length)]);
+    const distractors = shuffle(distractorPool).slice(0, 3);
+    while (distractors.length < 3) {
+      const fallback = quizzable[Math.floor(Math.random() * quizzable.length)];
+      if (fallback !== best && !distractors.includes(fallback)) distractors.push(fallback);
+    }
 
     items.push({
       blanked,

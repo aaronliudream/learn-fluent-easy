@@ -103,28 +103,62 @@ function buildQuiz(lines: DialogLine[], maxItems = 10): QuizItem[] {
   // Pool of phrases we consider "worth quizzing" — only meaningful expressions.
   const quizzable = KNOWN_PHRASES.filter((p) => expressionScore(p) > 0);
 
-  // Collect candidates: for each line, pick the highest-scoring quizzable
-  // phrase present in it. Then sort across the whole dialogue and take the
-  // top N — so a 10-line lesson surfaces its best 5 expressions, not the
-  // first 5 trivial matches.
-  type Cand = { line: DialogLine; phrase: string; score: number };
+  // Candidates carry an "isMarked" flag so curated <mark> highlights from the
+  // lesson are always tested before generic KNOWN_PHRASES fallbacks.
+  type Cand = {
+    line: DialogLine;
+    phrase: string;
+    score: number;
+    marked: boolean;
+  };
   const cands: Cand[] = [];
+
+  // PRIORITY 1 — extract every <mark>…</mark> highlight from the lesson.
+  // These are the curated "key expressions" the author wants the learner
+  // to retain (the yellow-highlighted phrases shown in the dialogue UI).
+  const markRe = /<mark>([\s\S]*?)<\/mark>/gi;
+  for (const line of lines) {
+    let m: RegExpExecArray | null;
+    const seenInLine = new Set<string>();
+    while ((m = markRe.exec(line.en)) !== null) {
+      const raw = stripTags(m[1]).trim().toLowerCase();
+      // Skip empty / punctuation-only / single-letter highlights.
+      if (!raw || raw.length < 2) continue;
+      if (seenInLine.has(raw)) continue;
+      seenInLine.add(raw);
+      // Score marked phrases very high so they always win over fallbacks.
+      // Multi-word marks score higher than single-word marks.
+      const wc = raw.split(/\s+/).length;
+      cands.push({
+        line,
+        phrase: raw,
+        score: 1000 + wc * 10 + raw.length,
+        marked: true,
+      });
+    }
+  }
+
+  // PRIORITY 2 — fallback: scan plain text for KNOWN_PHRASES so that
+  // lessons without <mark> highlights still produce a quiz.
   for (const line of lines) {
     const en = stripTags(line.en);
     const lower = " " + en.toLowerCase() + " ";
-    // Collect ALL quizzable phrases present in this line (not just the best),
-    // so a rich line can contribute multiple questions.
-    const found: { p: string; s: number }[] = [];
     for (const p of quizzable) {
       if (lower.includes(" " + p + " ")) {
-        found.push({ p, s: expressionScore(p) });
+        cands.push({ line, phrase: p, score: expressionScore(p), marked: false });
       }
     }
-    for (const f of found) cands.push({ line, phrase: f.p, score: f.s });
   }
-  // Sort by score desc, but de-prioritize duplicate phrases by keeping the
-  // first occurrence highest.
+
+  // Sort by score desc — marked phrases naturally rise to the top.
   cands.sort((a, b) => b.score - a.score);
+
+  // Build a distractor pool that includes BOTH KNOWN_PHRASES and other
+  // marked phrases from this lesson, so distractors feel topical.
+  const markedPool = Array.from(
+    new Set(cands.filter((c) => c.marked).map((c) => c.phrase)),
+  );
+  const distractorUniverse = Array.from(new Set([...markedPool, ...quizzable]));
 
   for (const { line, phrase: best } of cands) {
     if (used.has(best)) continue;
@@ -132,18 +166,35 @@ function buildQuiz(lines: DialogLine[], maxItems = 10): QuizItem[] {
     const en = stripTags(line.en);
 
     // Build blanked sentence (case-insensitive replace, first occurrence).
-    const re = new RegExp(`\\b${best.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
-    const blanked = en.replace(re, "____");
+    // Use a flexible boundary so phrases ending in punctuation (e.g. "Sure thing!")
+    // still match cleanly.
+    const escaped = best.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const re = new RegExp(`(^|\\W)${escaped}(?=\\W|$)`, "i");
+    let blanked = en.replace(re, (_m, pre) => `${pre || ""}____`);
+    // If the regex didn't match (rare casing / punctuation edge), fall back
+    // to a simple case-insensitive substring replace.
+    if (!blanked.includes("____")) {
+      const idx = en.toLowerCase().indexOf(best.toLowerCase());
+      if (idx >= 0) {
+        blanked = en.slice(0, idx) + "____" + en.slice(idx + best.length);
+      } else {
+        continue; // can't blank it cleanly — skip
+      }
+    }
 
-    // Pick 3 distractors from other meaningful expressions, similar in
-    // length so the choice isn't obvious by shape alone.
-    const distractorPool = quizzable.filter(
+    // Pick 3 distractors similar in length so the choice isn't obvious by shape.
+    const distractorPool = distractorUniverse.filter(
       (p) => p !== best && Math.abs(p.length - best.length) < 14,
     );
     const distractors = shuffle(distractorPool).slice(0, 3);
     while (distractors.length < 3) {
-      const fallback = quizzable[Math.floor(Math.random() * quizzable.length)];
-      if (fallback !== best && !distractors.includes(fallback)) distractors.push(fallback);
+      const fallback =
+        distractorUniverse[Math.floor(Math.random() * distractorUniverse.length)] ||
+        quizzable[Math.floor(Math.random() * quizzable.length)];
+      if (fallback && fallback !== best && !distractors.includes(fallback)) {
+        distractors.push(fallback);
+      }
+      if (distractors.length >= 3) break;
     }
 
     items.push({

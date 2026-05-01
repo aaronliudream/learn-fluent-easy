@@ -131,8 +131,8 @@ export const EN: Record<StringKey, string> = {
 
   "auth.signedOut": "Signed out",
 
-  "lang.pickerTitle": "Choose your language",
-  "lang.pickerSubtitle": "We'll show the app in your language alongside English so you can learn faster.",
+  "lang.pickerTitle": "Choose your mother language",
+  "lang.pickerSubtitle": "Pick the language you think in — we'll show the app in your native language alongside English so you can learn faster.",
   "lang.confirm": "Continue",
   "lang.changeLater": "You can change this anytime from the header.",
 
@@ -203,8 +203,8 @@ export const ZH: Record<StringKey, string> = {
 
   "auth.signedOut": "已退出登录",
 
-  "lang.pickerTitle": "选择你的母语",
-  "lang.pickerSubtitle": "我们会用你的母语和英语双语显示，帮助你更快学会。",
+  "lang.pickerTitle": "请选择你的母语",
+  "lang.pickerSubtitle": "选择你最熟悉的语言 —— 我们会用你的母语和英语双语显示，帮助你学得更快。",
   "lang.confirm": "继续",
   "lang.changeLater": "之后可以随时在顶部切换。",
 

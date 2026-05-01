@@ -176,6 +176,16 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const dynQueueRef = useRef<Set<string>>(new Set());
   const dynTimerRef = useRef<number | null>(null);
 
+  // Dev-only: start a DOM-wide scanner that warns when text in the wrong
+  // script appears (catches hardcoded JSX strings that bypass <T>).
+  // Uses a ref so the scanner always sees the *current* language even
+  // though it's started exactly once.
+  const langRef = useRef<LangCode>(lang);
+  useEffect(() => { langRef.current = lang; }, [lang]);
+  useEffect(() => {
+    startDomLeakScanner(() => langRef.current);
+  }, []);
+
   // Load catalog + dyn cache when language changes.
   useEffect(() => {
     const builtin = BUILTIN[lang];

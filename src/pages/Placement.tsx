@@ -15,6 +15,8 @@ import {
   Target,
   TrendingUp,
   Volume2,
+  XCircle,
+  Timer,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -32,7 +34,6 @@ import {
   type SectionPool,
 } from "@/lib/placement";
 
-const TEST_MINUTES = 25;
 const SECTIONS: Section[] = ["vocab", "grammar", "reading", "listening"];
 const QS_PER_SECTION = 6; // adaptive: shorter but more accurate
 const TOTAL_QS = SECTIONS.length * QS_PER_SECTION; // 24
@@ -52,6 +53,47 @@ const fmtTime = (sec: number) => {
   return `${m}:${s}`;
 };
 
+/**
+ * Compute a per-question time limit (in seconds), based on:
+ *   - section type (reading > listening > grammar > vocab)
+ *   - CEFR difficulty level (1=A1 .. 6=C2): higher level → more thinking time
+ *   - text length (prompt + context + options): longer → more reading time
+ *
+ * Returns a clamped integer in a reasonable range so easy items don't drag and
+ * hard items don't feel impossible.
+ */
+const computeTimeLimit = (q: PlacementQuestion): number => {
+  // Base seconds by section
+  const sectionBase: Record<Section, number> = {
+    vocab: 20,
+    grammar: 30,
+    listening: 35,
+    reading: 45,
+  };
+  let t = sectionBase[q.section];
+
+  // Level adjustment: +5s per level above A1 (B2 +15s, C2 +25s)
+  t += Math.max(0, (q.level - 1)) * 5;
+
+  // Reading-length adjustment: ~1s per 10 chars of context, ~1s per 5 words of prompt
+  const ctxLen = (q.context ?? "").length;
+  const promptLen = (q.prompt ?? "").length;
+  const optsLen = q.options.reduce((a, o) => a + o.length, 0);
+  if (q.section === "reading" && ctxLen > 0) {
+    t += Math.min(60, Math.floor(ctxLen / 8));
+  } else if (ctxLen > 0) {
+    t += Math.min(20, Math.floor(ctxLen / 12));
+  }
+  t += Math.min(15, Math.floor(promptLen / 25));
+  t += Math.min(10, Math.floor(optsLen / 40));
+
+  // Listening: add buffer for replays
+  if (q.section === "listening") t += 10;
+
+  // Clamp 15s … 120s
+  return Math.max(15, Math.min(120, t));
+};
+
 const Placement = () => {
   const tt = useT();
   const { tDynamic } = useI18n();
@@ -67,7 +109,10 @@ const Placement = () => {
   const sectionLevelRef = useRef<Record<Section, number>>({
     vocab: 2, grammar: 2, reading: 2, listening: 2,
   });
-  const [secondsLeft, setSecondsLeft] = useState(TEST_MINUTES * 60);
+  // Per-question countdown
+  const [qSecondsLeft, setQSecondsLeft] = useState(0);
+  const [qTimeLimit, setQTimeLimit] = useState(0);
+  const [revealed, setRevealed] = useState<Record<string, boolean>>({});
   const [result, setResult] = useState<PlacementResult | null>(null);
   const finishedRef = useRef(false);
 
@@ -90,23 +135,37 @@ const Placement = () => {
     }
     setQuestions(firstQs);
     setPicks({});
+    setRevealed({});
     setIdx(0);
-    setSecondsLeft(TEST_MINUTES * 60);
     setResult(null);
     finishedRef.current = false;
     setStage("test");
     window.scrollTo({ top: 0 });
   };
 
-  // Timer
+  // Record visit once when test starts
   useEffect(() => {
     if (stage !== "test") return;
     import("@/lib/guestProgress").then(m => m.recordVisit("placement"));
+  }, [stage]);
+
+  // Per-question timer: resets whenever the current question changes; stops as
+  // soon as the user picks an answer (revealed). When time runs out without an
+  // answer, the question is auto-revealed (counted as wrong) and frozen until
+  // the user clicks Next.
+  useEffect(() => {
+    if (stage !== "test") return;
+    const q = questions[idx];
+    if (!q) return;
+    const limit = computeTimeLimit(q);
+    setQTimeLimit(limit);
+    setQSecondsLeft(limit);
     const t = setInterval(() => {
-      setSecondsLeft((s) => {
+      setQSecondsLeft((s) => {
         if (s <= 1) {
           clearInterval(t);
-          finish();
+          // Auto-reveal as time-out (no answer recorded)
+          setRevealed((r) => ({ ...r, [q.id]: true }));
           return 0;
         }
         return s - 1;
@@ -114,7 +173,10 @@ const Placement = () => {
     }, 1000);
     return () => clearInterval(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [stage]);
+  }, [idx, stage, questions.length]);
+
+  // Stop the timer immediately when an answer is revealed
+  const isRevealed = (qid: string) => !!revealed[qid];
 
   const finish = () => {
     if (finishedRef.current) return;
@@ -191,6 +253,12 @@ const Placement = () => {
     void answeredInSec;
   };
 
+  const handlePick = (qid: string, optIdx: number) => {
+    if (isRevealed(qid)) return;
+    setPicks((p) => ({ ...p, [qid]: optIdx }));
+    setRevealed((r) => ({ ...r, [qid]: true }));
+  };
+
   // ---------------- INTRO ----------------
   if (stage === "intro") {
     return (
@@ -208,9 +276,9 @@ const Placement = () => {
 
           <div className="mt-6 grid grid-cols-3 gap-3">
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
-              <Clock className="mb-1 size-5" />
-              <div className="text-lg font-bold">≤ 25 min</div>
-              <div className="text-[11px] text-white/80"><T>限时</T></div>
+              <Timer className="mb-1 size-5" />
+              <div className="text-lg font-bold">15–120s</div>
+              <div className="text-[11px] text-white/80"><T>每题限时</T></div>
             </div>
             <div className="rounded-2xl bg-white/15 p-3 backdrop-blur-sm">
               <Target className="mb-1 size-5" />
@@ -248,6 +316,7 @@ const Placement = () => {
           <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>独立题库 · 覆盖 A1 → C2 全六级，全部题目唯一不重复</T></li>
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>自适应难度：答对升一级，答错降一级，快速锁定真实水平</T></li>
+            <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>每题独立限时（按模块、难度、题目长度科学计算），答完立即显示正确答案</T></li>
             <li className="flex items-start gap-2"><Sparkles className="mt-0.5 size-4 shrink-0 text-primary" /> <T>完成后给出 CEFR 等级 + 推荐 LEVEL 1–6 的具体学习起点</T></li>
           </ul>
 
@@ -269,9 +338,13 @@ const Placement = () => {
     const meta = SECTION_META[q.section];
     const Icon = meta.icon;
     const picked = picks[q.id];
+    const revealedNow = isRevealed(q.id);
     const answered = Object.keys(picks).length;
-    const lowTime = secondsLeft <= 60;
+    const lowTime = qSecondsLeft <= 5;
     const isLast = questions.length >= TOTAL_QS && idx === questions.length - 1;
+    const timedOut = revealedNow && picked === undefined;
+    const isCorrect = revealedNow && picked === q.answer;
+    const timePct = qTimeLimit > 0 ? (qSecondsLeft / qTimeLimit) * 100 : 0;
 
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
@@ -297,16 +370,27 @@ const Placement = () => {
               <div className="text-[11px] text-muted-foreground">{idx + 1} / {TOTAL_QS}</div>
             </div>
           </div>
-          <div className={`flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-sm font-bold ${lowTime ? "bg-rose-500/15 text-rose-600" : "bg-secondary text-foreground"}`}>
-            <Clock className="size-4" /> {fmtTime(secondsLeft)}
+          <div className={`flex items-center gap-2 rounded-full px-3 py-1.5 font-mono text-sm font-bold ${
+            revealedNow ? "bg-secondary text-muted-foreground" : lowTime ? "bg-rose-500/15 text-rose-600 animate-pulse" : "bg-secondary text-foreground"
+          }`}>
+            <Clock className="size-4" /> {fmtTime(qSecondsLeft)}
           </div>
         </div>
 
-        {/* Progress */}
-        <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+        {/* Overall progress */}
+        <div className="mb-2 h-1.5 w-full overflow-hidden rounded-full bg-secondary">
           <div
             className="h-full bg-grad-title transition-all"
             style={{ width: `${((idx + 1) / TOTAL_QS) * 100}%` }}
+          />
+        </div>
+        {/* Per-question time bar */}
+        <div className="mb-5 h-1 w-full overflow-hidden rounded-full bg-secondary/60">
+          <div
+            className={`h-full transition-all duration-1000 ease-linear ${
+              revealedNow ? "bg-muted-foreground/30" : lowTime ? "bg-rose-500" : "bg-primary"
+            }`}
+            style={{ width: `${timePct}%` }}
           />
         </div>
 
@@ -336,40 +420,75 @@ const Placement = () => {
           <div className="grid gap-2 md:grid-cols-2">
             {q.options.map((opt, oi) => {
               const active = picked === oi;
+              const isCorrectOpt = oi === q.answer;
+              let cls = "border-border bg-card hover:border-primary/40";
+              if (revealedNow) {
+                if (isCorrectOpt) {
+                  cls = "border-emerald-500 bg-emerald-500/10 text-foreground";
+                } else if (active) {
+                  cls = "border-rose-500 bg-rose-500/10 text-foreground";
+                } else {
+                  cls = "border-border bg-card opacity-60";
+                }
+              } else if (active) {
+                cls = "border-primary bg-primary/10 text-foreground";
+              }
               return (
                 <button
                   key={oi}
-                  onClick={() => setPicks({ ...picks, [q.id]: oi })}
-                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${
-                    active
-                      ? "border-primary bg-primary/10 text-foreground"
-                      : "border-border bg-card hover:border-primary/40"
-                  }`}
+                  onClick={() => handlePick(q.id, oi)}
+                  disabled={revealedNow}
+                  className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${cls} disabled:cursor-default`}
                 >
                   <span>{nativeText(opt)}</span>
-                  {active && <CheckCircle2 className="size-4 text-primary" />}
+                  {revealedNow && isCorrectOpt && <CheckCircle2 className="size-4 text-emerald-600" />}
+                  {revealedNow && active && !isCorrectOpt && <XCircle className="size-4 text-rose-600" />}
+                  {!revealedNow && active && <CheckCircle2 className="size-4 text-primary" />}
                 </button>
               );
             })}
           </div>
+
+          {revealedNow && (
+            <div className={`mt-5 rounded-2xl border p-4 text-sm ${
+              timedOut
+                ? "border-amber-500/40 bg-amber-500/10 text-amber-800 dark:text-amber-200"
+                : isCorrect
+                  ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-800 dark:text-emerald-200"
+                  : "border-rose-500/40 bg-rose-500/10 text-rose-800 dark:text-rose-200"
+            }`}>
+              <div className="flex items-center gap-2 font-bold">
+                {timedOut ? (
+                  <><Clock className="size-4" /> <T>时间到</T></>
+                ) : isCorrect ? (
+                  <><CheckCircle2 className="size-4" /> <T>回答正确</T></>
+                ) : (
+                  <><XCircle className="size-4" /> <T>回答错误</T></>
+                )}
+              </div>
+              <div className="mt-1 text-xs">
+                <T>正确答案</T>：<span className="font-semibold">{nativeText(q.options[q.answer])}</span>
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Nav */}
         <div className="mt-6 flex items-center justify-between gap-3">
           <span className="text-xs text-muted-foreground">
-            {picked === undefined ? <T>请选择一个答案</T> : <T>已记录答案，点击下方按钮继续</T>}
+            {!revealedNow ? <T>请选择一个答案</T> : <T>已记录答案，点击下方按钮继续</T>}
           </span>
           <span className="text-sm text-muted-foreground"><T>已答</T> {answered} / {TOTAL_QS}</span>
           {isLast ? (
             <Button
               onClick={finish}
-              disabled={picked === undefined}
+              disabled={!revealedNow}
               className="bg-emerald-600 hover:bg-emerald-600/90"
             >
               <T>提交测试</T>
             </Button>
           ) : (
-            <Button onClick={goNext} disabled={picked === undefined}>
+            <Button onClick={goNext} disabled={!revealedNow}>
               <T>下一题</T> →
             </Button>
           )}

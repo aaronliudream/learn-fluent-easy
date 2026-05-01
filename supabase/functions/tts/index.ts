@@ -41,6 +41,13 @@ serve(async (req) => {
     const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
     const safeText = String(text).slice(0, 4000);
 
+    // Use the faster `tts-1` model for short utterances (single words / short
+    // phrases) — it returns audio 3–5× faster than `tts-1-hd` and the quality
+    // difference is inaudible at this length. Reserve `tts-1-hd` for longer
+    // sentences/paragraphs where prosody benefits from the HD model.
+    const isShort = safeText.length <= 40;
+    const model = isShort ? "tts-1" : "tts-1-hd";
+
     const response = await fetch("https://api.openai.com/v1/audio/speech", {
       method: "POST",
       headers: {
@@ -48,7 +55,7 @@ serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "tts-1-hd",
+        model,
         voice: selectedVoice,
         input: safeText,
         speed: safeSpeed,

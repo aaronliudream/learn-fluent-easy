@@ -1,4 +1,4 @@
-import { Home, Clapperboard, Brain, User } from "lucide-react";
+import { Home, GraduationCap, MessagesSquare, Brain, User } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { countDueReviews } from "@/lib/srs";
@@ -10,7 +10,27 @@ import { useT } from "@/i18n/T";
  */
 const TABS = [
   { to: "/", label: "首页", icon: Home, match: (p: string) => p === "/" },
-  { to: "/scenes", label: "场景", icon: Clapperboard, match: (p: string) => p.startsWith("/scenes") },
+  {
+    to: "/levels",
+    label: "学",
+    icon: GraduationCap,
+    match: (p: string) =>
+      p.startsWith("/level") ||
+      p.startsWith("/lesson") ||
+      p.startsWith("/unit") ||
+      p.startsWith("/placement") ||
+      p.startsWith("/gaokao") ||
+      p.startsWith("/slang"),
+  },
+  {
+    to: "/scenes",
+    label: "练",
+    icon: MessagesSquare,
+    match: (p: string) =>
+      p.startsWith("/scenes") ||
+      p.startsWith("/workplace") ||
+      p.startsWith("/talk"),
+  },
   { to: "/review", label: "复习", icon: Brain, match: (p: string) => p.startsWith("/review"), badge: true },
   { to: "/account", label: "我的", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
 ];
@@ -36,7 +56,7 @@ export const BottomTabBar = () => {
       className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur-md lg:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0)" }}
     >
-      <ul className="mx-auto grid max-w-3xl grid-cols-4">
+      <ul className="mx-auto grid max-w-3xl grid-cols-5">
         {TABS.map((tab) => {
           const Icon = tab.icon;
           const active = tab.match(pathname);

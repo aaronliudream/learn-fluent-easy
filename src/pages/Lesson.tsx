@@ -424,7 +424,17 @@ const Lesson = () => {
     (async () => {
       const cached = await getCachedLesson(lv, un, ls);
       if (cancelled) return;
-      if (cached) {
+      // For authored lessons, only honor the cache if its reading matches the
+      // authored reading. Otherwise (stale cache from before quizzes were
+      // bound to authored text), regenerate so quiz / fill / listening line up.
+      const authored = LESSON_CONTENT[lesson.title];
+      const matchesAuthored = (() => {
+        if (!hasAuthoredContent(lesson.title) || !authored || !cached) return true;
+        const a = (authored.reading ?? []).map((r) => r.en).join("|");
+        const c = (cached.reading ?? []).map((r) => r.en).join("|");
+        return a === c;
+      })();
+      if (cached && matchesAuthored) {
         setAiContent(cached);
       } else {
         generateLesson(false);

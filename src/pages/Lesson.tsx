@@ -406,7 +406,11 @@ const Lesson = () => {
       return;
     }
     // If we already shipped a pre-generated version, use it instantly and skip AI calls.
-    if (PREGEN_MAP[lesson.title]) {
+    // EXCEPTION: for hand-authored lessons (reading + vocab come from the
+    // curriculum), the pregen bundle's quiz / fillBlanks / listening were
+    // generated against AI-invented reading and won't match the real lesson.
+    // Skip the pregen shortcut so we regenerate against the authored text.
+    if (PREGEN_MAP[lesson.title] && !hasAuthoredContent(lesson.title)) {
       setAiContent(PREGEN_MAP[lesson.title]);
       return;
     }

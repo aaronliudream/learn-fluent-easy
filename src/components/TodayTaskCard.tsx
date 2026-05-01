@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { Brain, Sparkles, GraduationCap, ArrowRight, Flame, CheckCircle2, Zap } from "lucide-react";
+import { Brain, Sparkles, GraduationCap, ArrowRight, Flame, CheckCircle2, Zap, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { countDueReviews } from "@/lib/srs";
 import { LEVELS } from "@/data/course";
@@ -46,6 +46,10 @@ function nextLessonInfo(completed: string[]): { to: string; title: string } {
 export const TodayTaskCard = () => {
   const [dueReviews, setDueReviews] = useState<number | null>(null);
   const [signedIn, setSignedIn] = useState(false);
+  const [collapsed, setCollapsed] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return localStorage.getItem("todayTaskCollapsed") === "1";
+  });
   const t = useT();
   const progress = useMemo(() => loadProgress(), []);
   const streak = getStreak(progress);
@@ -119,6 +123,14 @@ export const TodayTaskCard = () => {
 
   const totalActionable = tasks.filter((t) => !t.done).length;
 
+  const toggle = () => {
+    setCollapsed((prev) => {
+      const next = !prev;
+      try { localStorage.setItem("todayTaskCollapsed", next ? "1" : "0"); } catch {}
+      return next;
+    });
+  };
+
   return (
     <section
       aria-label={t("今日任务")}
@@ -128,7 +140,13 @@ export const TodayTaskCard = () => {
       <span aria-hidden className="pointer-events-none absolute -right-16 -top-16 size-48 rounded-full bg-primary/15 blur-3xl" />
 
       <div className="relative flex items-start justify-between gap-4">
-        <div className="min-w-0">
+        <button
+          type="button"
+          onClick={toggle}
+          aria-expanded={!collapsed}
+          aria-controls="today-task-list"
+          className="min-w-0 flex-1 text-left"
+        >
           <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
             <Sparkles className="size-3.5" /> <T>今日任务</T>
           </div>
@@ -136,19 +154,34 @@ export const TodayTaskCard = () => {
             {studiedToday ? <T>今天已经开练了 👏</T> : <T>今天先做这 3 件小事</T>}
           </h2>
           <p className="mt-0.5 text-xs text-muted-foreground md:text-sm">
-            {totalActionable > 0
-              ? <T>保持节奏,只需 5–10 分钟</T>
-              : <T>全部完成 · 任意点开探索更多</T>}
+            {collapsed
+              ? <T>点击展开今日任务</T>
+              : (totalActionable > 0
+                ? <T>保持节奏,只需 5–10 分钟</T>
+                : <T>全部完成 · 任意点开探索更多</T>)}
           </p>
+        </button>
+        <div className="flex shrink-0 items-center gap-2">
+          {streak > 0 && (
+            <div className="flex items-center gap-1 rounded-full bg-orange-500/10 px-3 py-1.5 text-xs font-bold text-orange-600 dark:text-orange-400">
+              <Flame className="size-3.5" /> <span className="num">{streak}</span> <T>天</T>
+            </div>
+          )}
+          <button
+            type="button"
+            onClick={toggle}
+            aria-label={collapsed ? t("展开") : t("收起")}
+            aria-expanded={!collapsed}
+            aria-controls="today-task-list"
+            className="grid size-8 place-items-center rounded-full border border-border bg-background/80 text-muted-foreground transition hover:bg-secondary hover:text-foreground"
+          >
+            <ChevronDown className={`size-4 transition-transform ${collapsed ? "" : "rotate-180"}`} />
+          </button>
         </div>
-        {streak > 0 && (
-          <div className="flex shrink-0 items-center gap-1 rounded-full bg-orange-500/10 px-3 py-1.5 text-xs font-bold text-orange-600 dark:text-orange-400">
-            <Flame className="size-3.5" /> <span className="num">{streak}</span> <T>天</T>
-          </div>
-        )}
       </div>
 
-      <ul className="relative mt-4 space-y-2">
+      {!collapsed && (
+      <ul id="today-task-list" className="relative mt-4 space-y-2">
         {tasks.map((t) => {
           const Icon = t.icon;
           return (
@@ -175,6 +208,7 @@ export const TodayTaskCard = () => {
           );
         })}
       </ul>
+      )}
     </section>
   );
 };

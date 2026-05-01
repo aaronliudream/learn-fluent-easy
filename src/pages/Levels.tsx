@@ -1,18 +1,21 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Lock, GraduationCap } from "lucide-react";
+import { ArrowLeft, ArrowRight, Lock, GraduationCap } from "lucide-react";
 import { LEVELS } from "@/data/course";
-import { PageHeader } from "@/components/PageHeader";
 import { useT } from "@/i18n/T";
 
 const Levels = () => {
   const t = useT();
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader
-        title={t("选择级别")}
-        subtitle={t("从 A1 到 C2，自由选择你想学的级别")}
-        back="/"
-      />
+      <div className="mb-6">
+        <Link
+          to="/"
+          className="inline-flex size-10 items-center justify-center rounded-full text-foreground/70 transition hover:bg-secondary hover:text-foreground"
+          aria-label="Back"
+        >
+          <ArrowLeft className="size-5" />
+        </Link>
+      </div>
 
       <section className="grid gap-4 sm:grid-cols-2">
         {LEVELS.map((lv) => {

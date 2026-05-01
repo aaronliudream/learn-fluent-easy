@@ -32,7 +32,7 @@ function nextLessonInfo(completed: string[]): { to: string; title: string } {
         const key = `${lv.id}-${u.id}-${l.id}`;
         if (!done.has(key)) {
           return {
-            to: `/lesson/${lv.id}/${u.id}/${l.id}`,
+            to: `/level/${lv.id}/unit/${u.id}/lesson/${l.id}`,
             title: l.title,
           };
         }

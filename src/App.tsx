@@ -38,6 +38,7 @@ import GaokaoVocab from "./pages/GaokaoVocab.tsx";
 import GaokaoDiagnostic from "./pages/GaokaoDiagnostic.tsx";
 import SavedPhrases from "./pages/SavedPhrases.tsx";
 import Review from "./pages/Review.tsx";
+import Leaderboard from "./pages/Leaderboard.tsx";
 import { BottomTabBar } from "@/components/BottomTabBar";
 
 const queryClient = new QueryClient();
@@ -74,6 +75,7 @@ const App = () => (
           <Route path="/scenes" element={<Scenes />} />
           <Route path="/saved" element={<SavedPhrases />} />
           <Route path="/review" element={<Review />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/scenes/:catKey" element={<ScenesCategory />} />
           <Route path="/scenes/:catKey/:dialogueId" element={<ScenesPlay />} />
           <Route path="/workplace" element={<Workplace />} />

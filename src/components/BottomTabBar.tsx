@@ -1,7 +1,5 @@
-import { Home, GraduationCap, MessagesSquare, Brain, User } from "lucide-react";
+import { Home, GraduationCap, MessagesSquare, Trophy, User } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { countDueReviews } from "@/lib/srs";
 import { useT } from "@/i18n/T";
 
 /**
@@ -31,7 +29,7 @@ const TABS = [
       p.startsWith("/workplace") ||
       p.startsWith("/talk"),
   },
-  { to: "/review", label: "复习", icon: Brain, match: (p: string) => p.startsWith("/review"), badge: true },
+  { to: "/leaderboard", label: "排行", icon: Trophy, match: (p: string) => p.startsWith("/leaderboard") || p.startsWith("/review") },
   { to: "/account", label: "我的", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
 ];
 
@@ -39,14 +37,7 @@ const HIDDEN_ROUTES = ["/auth"];
 
 export const BottomTabBar = () => {
   const { pathname } = useLocation();
-  const [due, setDue] = useState(0);
   const t = useT();
-
-  useEffect(() => {
-    let cancelled = false;
-    countDueReviews().then((c) => !cancelled && setDue(c));
-    return () => { cancelled = true; };
-  }, [pathname]);
 
   if (HIDDEN_ROUTES.some((r) => pathname.startsWith(r))) return null;
 
@@ -70,11 +61,6 @@ export const BottomTabBar = () => {
               >
                 <span className="relative">
                   <Icon className={`size-5 transition ${active ? "scale-110" : ""}`} />
-                  {tab.badge && due > 0 && (
-                    <span className="num absolute -right-2 -top-1 grid h-4 min-w-[16px] place-items-center rounded-full bg-rose-500 px-1 text-[10px] font-bold leading-none text-white">
-                      {due > 99 ? "99+" : due}
-                    </span>
-                  )}
                 </span>
                 <span>{t(tab.label)}</span>
                 {active && (

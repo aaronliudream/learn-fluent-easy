@@ -179,7 +179,7 @@ const Index = () => {
       {/* Secondary: all entry points, demoted to a compact grid */}
       <div className="mb-3 mt-8">
         <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-          更多学习方式
+          <T>更多学习方式</T>
         </h3>
       </div>
 

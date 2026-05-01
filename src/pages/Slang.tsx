@@ -571,6 +571,7 @@ const Slang = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+      <XPBurst trigger={xpTrigger} amount={1} />
       <PageHeader
         title="American Slang"
         subtitle={`${(() => {

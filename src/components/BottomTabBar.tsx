@@ -2,6 +2,7 @@ import { Home, Clapperboard, Brain, User } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { countDueReviews } from "@/lib/srs";
+import { useT } from "@/i18n/T";
 
 /**
  * Mobile-only bottom tab bar. Hidden on `md` and up where the page header
@@ -19,6 +20,7 @@ const HIDDEN_ROUTES = ["/auth"];
 export const BottomTabBar = () => {
   const { pathname } = useLocation();
   const [due, setDue] = useState(0);
+  const t = useT();
 
   useEffect(() => {
     let cancelled = false;
@@ -30,8 +32,8 @@ export const BottomTabBar = () => {
 
   return (
     <nav
-      aria-label="主导航"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur-md md:hidden"
+      aria-label={t("主导航")}
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur-md lg:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0)" }}
     >
       <ul className="mx-auto grid max-w-3xl grid-cols-4">
@@ -54,7 +56,7 @@ export const BottomTabBar = () => {
                     </span>
                   )}
                 </span>
-                <span>{t.label}</span>
+                <span>{t(tab.label)}</span>
                 {active && (
                   <span aria-hidden className="absolute top-0 h-0.5 w-8 rounded-full bg-primary" />
                 )}

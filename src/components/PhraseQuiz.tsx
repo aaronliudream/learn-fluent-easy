@@ -4,7 +4,7 @@ import {
   XCircle,
   RefreshCw,
   PencilLine,
-  Loader2,
+  Sparkles,
 } from "lucide-react";
 import { KNOWN_PHRASES } from "@/components/TappableLine";
 import { stripTags } from "@/lib/richText";
@@ -387,9 +387,18 @@ export function PhraseQuiz({
   if (loading && items.length === 0) {
     return (
       <div className="rounded-2xl border border-border bg-card p-5">
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <Loader2 className="size-4 animate-spin" />{" "}
-          <T>正在挑选这节课的重点表达…</T>
+        <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-primary">
+          <Sparkles className="size-4 animate-pulse" />
+          <T>AI 正在帮你圈重点 ✍️</T>
+        </div>
+        {/* Skeleton: question stem + 4 option chips, mirrors real layout. */}
+        <div className="skeleton mb-2 h-5 w-11/12" />
+        <div className="skeleton mb-4 h-5 w-3/4" />
+        <div className="skeleton mb-4 h-3 w-1/2" />
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+          {[0, 1, 2, 3].map((i) => (
+            <div key={i} className="skeleton h-10 w-full" />
+          ))}
         </div>
       </div>
     );
@@ -412,7 +421,13 @@ export function PhraseQuiz({
     if (picked) return;
     setPicked(opt);
     const correct = opt === current.answer;
-    if (correct) setScore((s) => s + 1);
+    if (correct) {
+      setScore((s) => s + 1);
+      // Light haptic on supported devices.
+      try { (navigator as any).vibrate?.(20); } catch { /* noop */ }
+    } else {
+      try { (navigator as any).vibrate?.([30, 40, 30]); } catch { /* noop */ }
+    }
     if (current.seed && dialogueKey) {
       void recordQuizAnswer({
         seed: { ...current.seed, source_key: dialogueKey },
@@ -463,7 +478,7 @@ export function PhraseQuiz({
     const ratio = Math.round((score / items.length) * 100);
     return (
       <div className="rounded-2xl border border-primary/30 bg-primary/5 p-5 text-center">
-        <div className="text-3xl font-extrabold text-primary">
+        <div className="num text-grad-title text-4xl font-extrabold">
           {score} / {items.length}
         </div>
         <div className="mt-1 text-sm text-muted-foreground">
@@ -480,12 +495,37 @@ export function PhraseQuiz({
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-card p-5">
+    <div
+      className={`relative rounded-2xl border border-border bg-card p-5 ${
+        picked && !isCorrect ? "animate-shake-x" : ""
+      }`}
+    >
+      {/* Confetti burst on correct answer */}
+      {picked && isCorrect && (
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-2 flex justify-center">
+          {[
+            { c: "bg-emerald-400", end: "translate(-90px, -40px) rotate(40deg)", d: "0ms" },
+            { c: "bg-amber-400",  end: "translate(-30px, -70px) rotate(-20deg)", d: "60ms" },
+            { c: "bg-rose-400",   end: "translate(30px, -65px)  rotate(25deg)", d: "30ms" },
+            { c: "bg-sky-400",    end: "translate(80px, -45px)  rotate(-35deg)", d: "90ms" },
+            { c: "bg-violet-400", end: "translate(0px, -80px)   rotate(10deg)", d: "120ms" },
+          ].map((p, i) => (
+            <span
+              key={i}
+              className={`absolute size-2 rounded-sm ${p.c}`}
+              style={{
+                ["--confetti-end" as any]: p.end,
+                animation: `confetti-burst 700ms ease-out ${p.d} forwards`,
+              }}
+            />
+          ))}
+        </div>
+      )}
       <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-2 text-sm font-bold text-primary">
           <PencilLine className="size-4" /> <T>巩固一下</T>
         </div>
-        <div className="text-xs text-muted-foreground">
+        <div className="num text-xs text-muted-foreground">
           {idx + 1} / {items.length}
         </div>
       </div>
@@ -513,7 +553,7 @@ export function PhraseQuiz({
           let cls =
             "rounded-xl border border-border bg-secondary/50 px-3 py-2 text-left text-sm font-medium transition hover:bg-primary/10";
           if (picked) {
-            if (isAnswer) cls = "rounded-xl border-2 border-emerald-500 bg-emerald-50 px-3 py-2 text-left text-sm font-bold text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300";
+            if (isAnswer) cls = "rounded-xl border-2 border-emerald-500 bg-emerald-50 px-3 py-2 text-left text-sm font-bold text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300 animate-pop-bounce";
             else if (isPicked) cls = "rounded-xl border-2 border-destructive bg-destructive/10 px-3 py-2 text-left text-sm font-bold text-destructive";
             else cls = "rounded-xl border border-border bg-secondary/30 px-3 py-2 text-left text-sm text-muted-foreground";
           }
@@ -527,9 +567,9 @@ export function PhraseQuiz({
 
       {picked && (
         <div ref={feedbackRef} className="mt-4 flex items-center justify-between gap-3 scroll-mt-24">
-          <div className={`flex items-center gap-1.5 text-sm font-bold ${isCorrect ? "text-emerald-600" : "text-destructive"}`}>
+          <div className={`flex items-center gap-1.5 text-sm font-bold ${isCorrect ? "text-emerald-600 animate-pop-bounce" : "text-destructive"}`}>
             {isCorrect ? <CheckCircle2 className="size-4" /> : <XCircle className="size-4" />}
-            {isCorrect ? <T>答对了!</T> : <T>正确答案如上</T>}
+            {isCorrect ? <T>太棒了!</T> : <T>正确答案如上</T>}
           </div>
           <button
             onClick={next}

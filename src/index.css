@@ -132,3 +132,97 @@ All colors MUST be HSL.
     color: transparent;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────────────
+   Brand typography
+   - Display headings: Fraunces (variable serif) + Noto Serif SC for CJK
+   - Body: system sans (fast, native feel)
+   - Numbers: tabular-nums so streaks/scores don't jitter
+   ───────────────────────────────────────────────────────────────────── */
+@layer base {
+  .font-display {
+    font-family: "Fraunces", "Noto Serif SC", "Songti SC", "STSong",
+      "PingFang SC", Georgia, serif;
+    font-feature-settings: "ss01", "ss02";
+    letter-spacing: -0.01em;
+  }
+  .text-grad-title {
+    /* Promote gradient titles to the display serif by default. */
+    font-family: "Fraunces", "Noto Serif SC", "PingFang SC", Georgia, serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum", "lnum";
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   Custom <mark> — replace harsh browser yellow with brand-tinted chip.
+   ───────────────────────────────────────────────────────────────────── */
+@layer base {
+  mark {
+    background-color: hsl(var(--primary) / 0.14);
+    color: hsl(var(--primary));
+    border-radius: 0.3rem;
+    padding: 0 0.2em;
+    font-weight: 600;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .dark mark {
+    background-color: hsl(var(--primary) / 0.28);
+    color: hsl(var(--primary-foreground));
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   Mobile bottom-tab safe area
+   ───────────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .pb-tabbar {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0));
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   Quiz feedback animations
+   ───────────────────────────────────────────────────────────────────── */
+@keyframes pop-bounce {
+  0%   { transform: scale(1);   }
+  35%  { transform: scale(1.08); }
+  60%  { transform: scale(0.97); }
+  100% { transform: scale(1);   }
+}
+@keyframes shake-x {
+  0%, 100% { transform: translateX(0); }
+  20%      { transform: translateX(-6px); }
+  40%      { transform: translateX(6px); }
+  60%      { transform: translateX(-4px); }
+  80%      { transform: translateX(4px); }
+}
+@keyframes confetti-burst {
+  0%   { transform: translate(0, 0) scale(0.4); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: var(--confetti-end, translate(60px, -60px)) scale(1); opacity: 0; }
+}
+.animate-pop-bounce { animation: pop-bounce 0.5s cubic-bezier(.34,1.56,.64,1); }
+.animate-shake-x    { animation: shake-x 0.45s ease-in-out; }
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 0%,
+    hsl(var(--secondary)) 50%,
+    hsl(var(--muted)) 100%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s linear infinite;
+  border-radius: 0.5rem;
+}

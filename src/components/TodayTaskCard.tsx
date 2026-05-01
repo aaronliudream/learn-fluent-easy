@@ -139,7 +139,7 @@ export const TodayTaskCard = () => {
         </div>
         {streak > 0 && (
           <div className="flex shrink-0 items-center gap-1 rounded-full bg-orange-500/10 px-3 py-1.5 text-xs font-bold text-orange-600 dark:text-orange-400">
-            <Flame className="size-3.5" /> {streak} 天
+            <Flame className="size-3.5" /> <span className="num">{streak}</span> 天
           </div>
         )}
       </div>

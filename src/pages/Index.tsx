@@ -213,23 +213,25 @@ const Index = () => {
       {/* Full-width placement test tile at the bottom */}
       <Link
         to={placementSection.to}
-        className={`group relative mt-3 flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${placementSection.gradient} p-5 text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(160_50%_30%/0.5)]`}
+        className={`group relative mt-3 flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-br ${placementSection.gradient} px-6 py-7 text-center text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(160_50%_30%/0.5)]`}
       >
         <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/15 blur-2xl" />
         <span className="pointer-events-none absolute -left-10 -bottom-10 size-40 rounded-full bg-white/10 blur-2xl" />
-        <div className="relative grid size-14 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+        <div className="relative grid size-12 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
           <placementSection.icon className="size-6" />
         </div>
-        <div className="relative flex-1 min-w-0">
-          <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-85">
-            {placementSection.eyebrow}
-          </div>
-          <div className="mt-1 text-base font-extrabold leading-tight md:text-lg">
-            {placementSection.title}
-          </div>
-          <div className="mt-0.5 text-xs opacity-90 md:text-sm">{placementSection.desc}</div>
+        <div className="relative text-[10px] font-bold uppercase tracking-[0.22em] opacity-85">
+          {placementSection.eyebrow}
         </div>
-        <ArrowRight className="relative size-5 shrink-0 opacity-90 transition-transform group-hover:translate-x-1" />
+        <div className="relative text-lg font-extrabold leading-tight tracking-wide md:text-xl">
+          {placementSection.title}
+        </div>
+        <div className="relative max-w-md text-xs opacity-90 md:text-sm">
+          {placementSection.desc}
+        </div>
+        <div className="relative mt-2 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-1.5 text-xs font-semibold backdrop-blur-sm transition group-hover:bg-white/30">
+          开始测试 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
+        </div>
       </Link>
 
       {/* Locked-level hint (for transparency about coming-soon levels) */}

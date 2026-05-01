@@ -47,8 +47,10 @@ export const TodayTaskCard = () => {
   const [dueReviews, setDueReviews] = useState<number | null>(null);
   const [signedIn, setSignedIn] = useState(false);
   const [collapsed, setCollapsed] = useState<boolean>(() => {
-    if (typeof window === "undefined") return false;
-    return localStorage.getItem("todayTaskCollapsed") === "1";
+    if (typeof window === "undefined") return true;
+    const v = localStorage.getItem("todayTaskCollapsed");
+    // Default to collapsed unless user explicitly expanded ("0").
+    return v !== "0";
   });
   const t = useT();
   const progress = useMemo(() => loadProgress(), []);

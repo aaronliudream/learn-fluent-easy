@@ -581,20 +581,20 @@ const Slang = () => {
       {/* Mode toggle */}
       <div className="mb-5 grid grid-cols-2 gap-2 rounded-2xl bg-secondary p-1.5">
         <button
-          onClick={() => setMode("browse")}
-          className={`flex items-center justify-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold transition ${
-            mode === "browse" ? "bg-card shadow-card text-foreground" : "text-muted-foreground"
-          }`}
-        >
-          <BookOpen className="size-4" /> <T>学习浏览</T>
-        </button>
-        <button
           onClick={() => (mode === "quiz" ? restartQuiz() : startQuiz())}
           className={`flex items-center justify-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold transition ${
             mode === "quiz" ? "bg-card shadow-card text-foreground" : "text-muted-foreground"
           }`}
         >
           <Target className="size-4" /> <T>开始测试</T>
+        </button>
+        <button
+          onClick={() => setMode("browse")}
+          className={`flex items-center justify-center gap-2 rounded-xl px-3 py-2.5 text-sm font-semibold transition ${
+            mode === "browse" ? "bg-card shadow-card text-foreground" : "text-muted-foreground"
+          }`}
+        >
+          <BookOpen className="size-4" /> <T>学习浏览</T>
         </button>
       </div>
 

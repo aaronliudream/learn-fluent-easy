@@ -140,8 +140,6 @@ const Index = () => {
         )}
       </div>
 
-      <PageHeader title={t("index.title")} subtitle={t("index.subtitle")} />
-
       {/* Optional: guest progress save nudge */}
       {!user && hasProgress && (
         <Link

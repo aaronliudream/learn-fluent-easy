@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   CheckCircle2,
   XCircle,
@@ -313,6 +313,7 @@ export function PhraseQuiz({
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
+  const feedbackRef = useRef<HTMLDivElement | null>(null);
 
   // Reset state whenever the source dialogue changes.
   useEffect(() => {
@@ -420,6 +421,23 @@ export function PhraseQuiz({
     }
   };
 
+  // After picking an answer, scroll the feedback row (with the Next button)
+  // into view so the user doesn't have to scroll down on small screens.
+  useEffect(() => {
+    if (!picked) return;
+    const el = feedbackRef.current;
+    if (!el) return;
+    const id = window.setTimeout(() => {
+      const rect = el.getBoundingClientRect();
+      const targetTop = window.innerHeight * 0.55;
+      const delta = rect.top - targetTop;
+      if (Math.abs(delta) > 8) {
+        window.scrollBy({ top: delta, behavior: "smooth" });
+      }
+    }, 60);
+    return () => window.clearTimeout(id);
+  }, [picked, idx]);
+
   const next = () => {
     if (idx + 1 < items.length) {
       setIdx(idx + 1);
@@ -508,7 +526,7 @@ export function PhraseQuiz({
       </div>
 
       {picked && (
-        <div className="mt-4 flex items-center justify-between gap-3">
+        <div ref={feedbackRef} className="mt-4 flex items-center justify-between gap-3 scroll-mt-24">
           <div className={`flex items-center gap-1.5 text-sm font-bold ${isCorrect ? "text-emerald-600" : "text-destructive"}`}>
             {isCorrect ? <CheckCircle2 className="size-4" /> : <XCircle className="size-4" />}
             {isCorrect ? <T>答对了!</T> : <T>正确答案如上</T>}

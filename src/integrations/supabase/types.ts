@@ -506,6 +506,39 @@ export type Database = {
         }
         Relationships: []
       }
+      phrase_explanations: {
+        Row: {
+          created_at: string
+          explanation: Json
+          id: string
+          normalized: string
+          phrase: string
+          source_lang: string
+          target_lang: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          explanation: Json
+          id?: string
+          normalized: string
+          phrase: string
+          source_lang?: string
+          target_lang?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          explanation?: Json
+          id?: string
+          normalized?: string
+          phrase?: string
+          source_lang?: string
+          target_lang?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       placement_results: {
         Row: {
           ability: number

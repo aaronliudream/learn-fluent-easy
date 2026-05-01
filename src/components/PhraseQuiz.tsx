@@ -96,7 +96,7 @@ function expressionScore(p: string): number {
  * appears in it. Distractors are pulled from other phrases used elsewhere in
  * KNOWN_PHRASES (preferring ones similar in length).
  */
-function buildQuiz(lines: DialogLine[], maxItems = 5): QuizItem[] {
+function buildQuiz(lines: DialogLine[], maxItems = 10): QuizItem[] {
   const items: QuizItem[] = [];
   const used = new Set<string>();
 

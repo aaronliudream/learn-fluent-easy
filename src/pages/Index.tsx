@@ -76,14 +76,6 @@ const Index = () => {
       gradient: "from-blue-600 via-indigo-600 to-purple-600",
     },
     {
-      to: "/placement",
-      icon: Award,
-      eyebrow: t("index.section.placement.eyebrow"),
-      title: t("index.section.placement.title"),
-      desc: t("index.section.placement.desc"),
-      gradient: "from-emerald-500 via-teal-500 to-cyan-500",
-    },
-    {
       to: "/slang",
       icon: Zap,
       eyebrow: t("index.section.slang.eyebrow"),
@@ -116,6 +108,15 @@ const Index = () => {
       gradient: "from-red-600 via-rose-600 to-orange-500",
     },
   ];
+
+  const placementSection = {
+    to: "/placement",
+    icon: Award,
+    eyebrow: t("index.section.placement.eyebrow"),
+    title: t("index.section.placement.title"),
+    desc: t("index.section.placement.desc"),
+    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+  };
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
@@ -208,6 +209,28 @@ const Index = () => {
           );
         })}
       </section>
+
+      {/* Full-width placement test tile at the bottom */}
+      <Link
+        to={placementSection.to}
+        className={`group relative mt-3 flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${placementSection.gradient} p-5 text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(160_50%_30%/0.5)]`}
+      >
+        <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/15 blur-2xl" />
+        <span className="pointer-events-none absolute -left-10 -bottom-10 size-40 rounded-full bg-white/10 blur-2xl" />
+        <div className="relative grid size-14 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+          <placementSection.icon className="size-6" />
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-85">
+            {placementSection.eyebrow}
+          </div>
+          <div className="mt-1 text-base font-extrabold leading-tight md:text-lg">
+            {placementSection.title}
+          </div>
+          <div className="mt-0.5 text-xs opacity-90 md:text-sm">{placementSection.desc}</div>
+        </div>
+        <ArrowRight className="relative size-5 shrink-0 opacity-90 transition-transform group-hover:translate-x-1" />
+      </Link>
 
       {/* Locked-level hint (for transparency about coming-soon levels) */}
       {LEVELS.some((lv) => lv.locked) && (

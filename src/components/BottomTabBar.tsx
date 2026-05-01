@@ -1,7 +1,5 @@
 import { Home, GraduationCap, MessagesSquare, Trophy, User } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { countDueReviews } from "@/lib/srs";
 import { useT } from "@/i18n/T";
 
 /**
@@ -39,14 +37,7 @@ const HIDDEN_ROUTES = ["/auth"];
 
 export const BottomTabBar = () => {
   const { pathname } = useLocation();
-  const [due, setDue] = useState(0);
   const t = useT();
-
-  useEffect(() => {
-    let cancelled = false;
-    countDueReviews().then((c) => !cancelled && setDue(c));
-    return () => { cancelled = true; };
-  }, [pathname]);
 
   if (HIDDEN_ROUTES.some((r) => pathname.startsWith(r))) return null;
 

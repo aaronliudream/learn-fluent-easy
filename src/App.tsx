@@ -29,6 +29,13 @@ import Workplace from "./pages/Workplace.tsx";
 import WorkplaceCategory from "./pages/WorkplaceCategory.tsx";
 import WorkplacePlay from "./pages/WorkplacePlay.tsx";
 import Talk from "./pages/Talk.tsx";
+import Gaokao from "./pages/Gaokao.tsx";
+import GaokaoGrammar from "./pages/GaokaoGrammar.tsx";
+import GaokaoGrammarPoint from "./pages/GaokaoGrammarPoint.tsx";
+import GaokaoReading from "./pages/GaokaoReading.tsx";
+import GaokaoReadingPlay from "./pages/GaokaoReadingPlay.tsx";
+import GaokaoVocab from "./pages/GaokaoVocab.tsx";
+import GaokaoDiagnostic from "./pages/GaokaoDiagnostic.tsx";
 
 const queryClient = new QueryClient();
 
@@ -67,6 +74,13 @@ const App = () => (
           <Route path="/workplace/:catKey" element={<WorkplaceCategory />} />
           <Route path="/workplace/:catKey/:dialogueId" element={<WorkplacePlay />} />
           <Route path="/talk" element={<Talk />} />
+          <Route path="/gaokao" element={<Gaokao />} />
+          <Route path="/gaokao/diagnostic" element={<GaokaoDiagnostic />} />
+          <Route path="/gaokao/grammar" element={<GaokaoGrammar />} />
+          <Route path="/gaokao/grammar/:slug" element={<GaokaoGrammarPoint />} />
+          <Route path="/gaokao/reading" element={<GaokaoReading />} />
+          <Route path="/gaokao/reading/:id" element={<GaokaoReadingPlay />} />
+          <Route path="/gaokao/vocab" element={<GaokaoVocab />} />
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />

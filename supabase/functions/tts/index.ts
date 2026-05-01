@@ -21,6 +21,29 @@ const OPENAI_VOICES = new Set([
   "alloy", "shimmer", "nova", "echo", "onyx", "fable",
 ]);
 
+// In-memory cache shared across requests on the same edge instance. Short
+// utterances (single words / phrases) are looked up reliably here, so
+// repeated clicks on the same word return instantly without re-calling
+// OpenAI. Capped to keep memory bounded.
+const audioCache = new Map<string, string>();
+const MAX_CACHE = 500;
+const cacheGet = (k: string) => {
+  const v = audioCache.get(k);
+  if (v !== undefined) {
+    // refresh LRU position
+    audioCache.delete(k);
+    audioCache.set(k, v);
+  }
+  return v;
+};
+const cacheSet = (k: string, v: string) => {
+  if (audioCache.size >= MAX_CACHE) {
+    const firstKey = audioCache.keys().next().value;
+    if (firstKey) audioCache.delete(firstKey);
+  }
+  audioCache.set(k, v);
+};
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
@@ -41,6 +64,24 @@ serve(async (req) => {
     const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
     const safeText = String(text).slice(0, 4000);
 
+    // Use the faster `tts-1` model for short utterances (single words / short
+    // phrases) — it returns audio 3–5× faster than `tts-1-hd` and the quality
+    // difference is inaudible at this length. Reserve `tts-1-hd` for longer
+    // sentences/paragraphs where prosody benefits from the HD model.
+    const isShort = safeText.length <= 40;
+    const model = isShort ? "tts-1" : "tts-1-hd";
+
+    // Check the in-memory cache first for short utterances. We only cache
+    // shorts because long paragraphs would blow the memory budget quickly
+    // and aren't repeated enough to benefit from caching.
+    const cacheKey = isShort ? `${selectedVoice}|${safeSpeed}|${safeText}` : null;
+    if (cacheKey) {
+      const hit = cacheGet(cacheKey);
+      if (hit) {
+        return json({ audioContent: hit, mimeType: "audio/mpeg", cached: true });
+      }
+    }
+
     const response = await fetch("https://api.openai.com/v1/audio/speech", {
       method: "POST",
       headers: {
@@ -48,7 +89,7 @@ serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "tts-1-hd",
+        model,
         voice: selectedVoice,
         input: safeText,
         speed: safeSpeed,
@@ -73,6 +114,8 @@ serve(async (req) => {
 
     const audioBuffer = await response.arrayBuffer();
     const audioContent = base64Encode(audioBuffer);
+
+    if (cacheKey) cacheSet(cacheKey, audioContent);
 
     return json({ audioContent, mimeType: "audio/mpeg" });
   } catch (e) {

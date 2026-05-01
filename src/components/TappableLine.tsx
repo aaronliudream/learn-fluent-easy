@@ -34,7 +34,7 @@ export type Explanation = {
  * sentence. Order matters — longer phrases first so they match before their
  * shorter substrings.
  */
-const KNOWN_PHRASES: string[] = [
+export const KNOWN_PHRASES: string[] = [
   "a side of",
   "a couple of",
   "a piece of",

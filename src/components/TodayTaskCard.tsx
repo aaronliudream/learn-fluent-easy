@@ -6,6 +6,7 @@ import { countDueReviews } from "@/lib/srs";
 import { LEVELS } from "@/data/course";
 import { loadProgress, getStreak } from "@/lib/guestProgress";
 import { IDIOMS } from "@/data/idioms";
+import { T, useT } from "@/i18n/T";
 
 type Task = {
   key: "review" | "lesson" | "slang";
@@ -39,12 +40,13 @@ function nextLessonInfo(completed: string[]): { to: string; title: string } {
       }
     }
   }
-  return { to: "/levels", title: "继续你的学习路径" };
+  return { to: "/levels", title: "继续你的学习路径" }; // translated via t() at render time
 }
 
 export const TodayTaskCard = () => {
   const [dueReviews, setDueReviews] = useState<number | null>(null);
   const [signedIn, setSignedIn] = useState(false);
+  const t = useT();
   const progress = useMemo(() => loadProgress(), []);
   const streak = getStreak(progress);
   const todayKey = new Date().toISOString().slice(0, 10);
@@ -79,35 +81,37 @@ export const TodayTaskCard = () => {
       key: "review",
       icon: Brain,
       label: signedIn
-        ? `复习 ${dueReviews ?? "…"} 个表达`
-        : "登录解锁智能复习",
+        ? t("复习 {n} 个表达").replace("{n}", String(dueReviews ?? "…"))
+        : t("登录解锁智能复习"),
       detail: signedIn
         ? (dueReviews && dueReviews > 0
-            ? "AI 已为你挑选今日到期的关键词"
-            : "今天暂无到期复习,再学一课就会有 ✨")
-        : "登录后,做过的题会按记忆曲线自动安排复习",
+            ? t("AI 已为你挑选今日到期的关键词")
+            : t("今天暂无到期复习,再学一课就会有 ✨"))
+        : t("登录后,做过的题会按记忆曲线自动安排复习"),
       to: signedIn ? "/review" : "/auth",
-      cta: signedIn && dueReviews && dueReviews > 0 ? "去复习" : "查看",
+      cta: signedIn && dueReviews && dueReviews > 0 ? t("去复习") : t("查看"),
       done: signedIn && dueReviews === 0,
       tone: "from-violet-500 to-fuchsia-500",
     },
     {
       key: "lesson",
       icon: GraduationCap,
-      label: progress.completedLessons.length > 0 ? "继续下一课" : "开始第一课",
-      detail: next.title,
+      label: progress.completedLessons.length > 0 ? t("继续下一课") : t("开始第一课"),
+      detail: t(next.title),
       to: next.to,
-      cta: "继续",
+      cta: t("继续"),
       done: false,
       tone: "from-blue-500 to-indigo-500",
     },
     {
       key: "slang",
       icon: Zap,
-      label: "今日一句俚语",
-      detail: todaySlang ? `“${todaySlang.phrase}” · ${todaySlang.meaning_cn}` : "看看今天的流行表达",
+      label: t("今日一句俚语"),
+      detail: todaySlang
+        ? `“${todaySlang.phrase}” · ${t(todaySlang.meaning_cn)}`
+        : t("看看今天的流行表达"),
       to: "/slang",
-      cta: "去看",
+      cta: t("去看"),
       done: false,
       tone: "from-amber-500 to-rose-500",
     },
@@ -117,7 +121,7 @@ export const TodayTaskCard = () => {
 
   return (
     <section
-      aria-label="今日任务"
+      aria-label={t("今日任务")}
       className="relative mb-6 overflow-hidden rounded-3xl border border-border bg-card p-5 shadow-tile md:p-6"
     >
       {/* Decorative glow */}
@@ -126,20 +130,20 @@ export const TodayTaskCard = () => {
       <div className="relative flex items-start justify-between gap-4">
         <div className="min-w-0">
           <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-primary">
-            <Sparkles className="size-3.5" /> 今日任务
+            <Sparkles className="size-3.5" /> <T>今日任务</T>
           </div>
           <h2 className="mt-1 text-xl font-extrabold leading-tight md:text-2xl">
-            {studiedToday ? "今天已经开练了 👏" : "今天先做这 3 件小事"}
+            {studiedToday ? <T>今天已经开练了 👏</T> : <T>今天先做这 3 件小事</T>}
           </h2>
           <p className="mt-0.5 text-xs text-muted-foreground md:text-sm">
             {totalActionable > 0
-              ? `保持节奏,只需 5–10 分钟`
-              : "全部完成 · 任意点开探索更多"}
+              ? <T>保持节奏,只需 5–10 分钟</T>
+              : <T>全部完成 · 任意点开探索更多</T>}
           </p>
         </div>
         {streak > 0 && (
           <div className="flex shrink-0 items-center gap-1 rounded-full bg-orange-500/10 px-3 py-1.5 text-xs font-bold text-orange-600 dark:text-orange-400">
-            <Flame className="size-3.5" /> <span className="num">{streak}</span> 天
+            <Flame className="size-3.5" /> <span className="num">{streak}</span> <T>天</T>
           </div>
         )}
       </div>

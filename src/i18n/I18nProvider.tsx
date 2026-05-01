@@ -10,6 +10,7 @@ import {
 import { BUILTIN, EN, type StringKey, interpolate } from "./strings";
 import { localizeProtagonist } from "./protagonistName";
 import { UI_PHRASES } from "./uiPhrases.generated";
+import { startDomLeakScanner } from "./devLeakDetector";
 
 const STORAGE_LANG = "fluentpath.lang";
 const STORAGE_PICKED = "fluentpath.langPicked";
@@ -174,6 +175,16 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   // Pending dynamic-translation queue (debounced batch).
   const dynQueueRef = useRef<Set<string>>(new Set());
   const dynTimerRef = useRef<number | null>(null);
+
+  // Dev-only: start a DOM-wide scanner that warns when text in the wrong
+  // script appears (catches hardcoded JSX strings that bypass <T>).
+  // Uses a ref so the scanner always sees the *current* language even
+  // though it's started exactly once.
+  const langRef = useRef<LangCode>(lang);
+  useEffect(() => { langRef.current = lang; }, [lang]);
+  useEffect(() => {
+    startDomLeakScanner(() => langRef.current);
+  }, []);
 
   // Load catalog + dyn cache when language changes.
   useEffect(() => {

@@ -385,6 +385,24 @@ export function PhraseQuiz({
     };
   }, [dialogueKey, lines]);
 
+  // After picking an answer, scroll the feedback row (with the Next button)
+  // into view so the user doesn't have to scroll down on small screens.
+  // MUST be declared before any early-return below — React hook order.
+  useEffect(() => {
+    if (!picked) return;
+    const el = feedbackRef.current;
+    if (!el) return;
+    const id = window.setTimeout(() => {
+      const rect = el.getBoundingClientRect();
+      const targetTop = window.innerHeight * 0.55;
+      const delta = rect.top - targetTop;
+      if (Math.abs(delta) > 8) {
+        window.scrollBy({ top: delta, behavior: "smooth" });
+      }
+    }, 60);
+    return () => window.clearTimeout(id);
+  }, [picked, idx]);
+
   if (loading && items.length === 0) {
     return (
       <div className="rounded-2xl border border-border bg-card p-5">
@@ -436,23 +454,6 @@ export function PhraseQuiz({
       });
     }
   };
-
-  // After picking an answer, scroll the feedback row (with the Next button)
-  // into view so the user doesn't have to scroll down on small screens.
-  useEffect(() => {
-    if (!picked) return;
-    const el = feedbackRef.current;
-    if (!el) return;
-    const id = window.setTimeout(() => {
-      const rect = el.getBoundingClientRect();
-      const targetTop = window.innerHeight * 0.55;
-      const delta = rect.top - targetTop;
-      if (Math.abs(delta) > 8) {
-        window.scrollBy({ top: delta, behavior: "smooth" });
-      }
-    }, 60);
-    return () => window.clearTimeout(id);
-  }, [picked, idx]);
 
   const next = () => {
     if (idx + 1 < items.length) {

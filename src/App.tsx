@@ -38,6 +38,7 @@ import GaokaoVocab from "./pages/GaokaoVocab.tsx";
 import GaokaoDiagnostic from "./pages/GaokaoDiagnostic.tsx";
 import SavedPhrases from "./pages/SavedPhrases.tsx";
 import Review from "./pages/Review.tsx";
+import { BottomTabBar } from "@/components/BottomTabBar";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
       <BrowserRouter>
         <StopAudioOnRouteChange />
         <LanguagePickerModal />
+        <div className="pb-tabbar md:pb-0">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
@@ -92,6 +94,8 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </div>
+        <BottomTabBar />
       </BrowserRouter>
     </TooltipProvider>
     </I18nProvider>

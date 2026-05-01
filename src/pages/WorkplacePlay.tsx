@@ -155,7 +155,10 @@ const WorkplacePlay = () => {
       </section>
 
       <section ref={quizRef} className="mt-10">
-        <PhraseQuiz lines={dlg.lines.map((l) => ({ en: l.en, cn: l.cn }))} />
+        <PhraseQuiz
+          lines={dlg.lines.map((l) => ({ en: l.en, cn: l.cn }))}
+          dialogueKey={`workplace:${dlg.id}`}
+        />
       </section>
 
       {rewriteIdx != null && (

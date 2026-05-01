@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { VoiceSettingsButton } from "@/components/VoiceSettings";
+import { VoiceSettingsModal } from "@/components/VoiceSettings";
 import { T } from "@/i18n/T";
 import { countDueReviews } from "@/lib/srs";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -42,7 +42,7 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
 
   return (
     <header className="mb-6">
-      {/* Slim review banner — replaces the brain icon. Only shows when there is something to do. */}
+      {/* Slim review banner — replaces the old brain icon. Only shows when there is something due. */}
       {due > 0 && (
         <Link
           to="/review"
@@ -162,33 +162,7 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
         </p>
       )}
 
-      {/* Voice settings modal — kept outside the dropdown so it survives close. */}
-      {voiceOpen && (
-        <div className="hidden">
-          {/* placeholder, see <VoiceSettingsHost/> below */}
-        </div>
-      )}
-      <VoiceSettingsHost open={voiceOpen} onClose={() => setVoiceOpen(false)} />
+      <VoiceSettingsModal open={voiceOpen} onOpenChange={setVoiceOpen} />
     </header>
   );
 };
-
-/**
- * Tiny wrapper so we can open the existing VoiceSettingsButton's modal
- * from a menu item. It re-uses the original component but auto-clicks
- * its trigger when `open` flips true.
- */
-function VoiceSettingsHost({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const ref = (node: HTMLDivElement | null) => {
-    if (!node || !open) return;
-    const btn = node.querySelector("button");
-    if (btn) (btn as HTMLButtonElement).click();
-    // After triggering, reset state so a future open works again.
-    queueMicrotask(onClose);
-  };
-  return (
-    <div ref={ref} className="hidden">
-      <VoiceSettingsButton />
-    </div>
-  );
-}

@@ -13,6 +13,7 @@ import { SCENE_DIALOGUES } from "@/data/scenes";
 import { WORK_CATEGORIES } from "@/data/workplace";
 import { useI18n } from "@/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
+import { T } from "@/i18n/T";
 import { SupportButton } from "@/components/SupportButton";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
 

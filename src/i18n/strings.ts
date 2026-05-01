@@ -55,6 +55,7 @@ export type StringKey =
   | "index.progress.savedLessons"
   | "index.progress.minutes"
   | "index.progress.streak"
+  | "index.streak.label"
   | "index.progress.cta"
   | "index.progress.save"
   // Auth toasts

@@ -103,6 +103,9 @@ const Index = () => {
     {
       to: "/gaokao",
       icon: BookOpenCheck,
+      // Intentionally Chinese-only: this section targets Chinese high-school
+      // students preparing for Gaokao. Do NOT wrap in <T> or t() — must
+      // always render in Chinese regardless of the user's selected language.
       eyebrow: "高考英语 · GAOKAO",
       title: "中国高中生 · 高考英语专区",
       desc: "诊断你的薄弱点，覆盖语法、阅读、词汇全部考点，错题智能追加同类题",

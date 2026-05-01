@@ -33,3 +33,5 @@ project_id = "fottntyhwolbsdvkwriq"
     verify_jwt = false
   [functions.rewrite-line]
     verify_jwt = false
+  [functions.extract-key-phrases]
+    verify_jwt = false

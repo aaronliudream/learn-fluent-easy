@@ -70,11 +70,6 @@ export const BottomTabBar = () => {
               >
                 <span className="relative">
                   <Icon className={`size-5 transition ${active ? "scale-110" : ""}`} />
-                  {tab.badge && due > 0 && (
-                    <span className="num absolute -right-2 -top-1 grid h-4 min-w-[16px] place-items-center rounded-full bg-rose-500 px-1 text-[10px] font-bold leading-none text-white">
-                      {due > 99 ? "99+" : due}
-                    </span>
-                  )}
                 </span>
                 <span>{t(tab.label)}</span>
                 {active && (

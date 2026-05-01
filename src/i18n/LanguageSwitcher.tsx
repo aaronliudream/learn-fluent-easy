@@ -12,11 +12,12 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className="grid size-10 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary hover:text-foreground"
+        className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-2 text-foreground shadow-sm transition hover:bg-secondary"
         aria-label="Language"
         title={current.nativeName}
       >
-        <Globe className="size-5" />
+        <Globe className="size-4 text-primary" />
+        <span className="text-base leading-none">{current.flag}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="max-h-[60vh] w-56 overflow-y-auto">
         {LANGUAGES.map((l) => (

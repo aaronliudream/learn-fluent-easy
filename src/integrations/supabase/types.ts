@@ -702,6 +702,8 @@ export type Database = {
           email: string | null
           id: string
           last_weekly_report_at: string | null
+          leaderboard_alias: string | null
+          leaderboard_opt_in: boolean
           preferred_language: string | null
           target_language: string
           updated_at: string
@@ -714,6 +716,8 @@ export type Database = {
           email?: string | null
           id?: string
           last_weekly_report_at?: string | null
+          leaderboard_alias?: string | null
+          leaderboard_opt_in?: boolean
           preferred_language?: string | null
           target_language?: string
           updated_at?: string
@@ -726,6 +730,8 @@ export type Database = {
           email?: string | null
           id?: string
           last_weekly_report_at?: string | null
+          leaderboard_alias?: string | null
+          leaderboard_opt_in?: boolean
           preferred_language?: string | null
           target_language?: string
           updated_at?: string
@@ -891,6 +897,15 @@ export type Database = {
         Args: { payload: Json; queue_name: string }
         Returns: number
       }
+      get_my_weekly_rank: {
+        Args: never
+        Returns: {
+          active_days: number
+          rank: number
+          total_players: number
+          weekly_xp: number
+        }[]
+      }
       get_user_streak_stats: {
         Args: never
         Returns: {
@@ -901,6 +916,16 @@ export type Database = {
           longest_streak: number
           minutes_this_month: number
           total_quiz_correct: number
+        }[]
+      }
+      get_weekly_leaderboard: {
+        Args: never
+        Returns: {
+          active_days: number
+          alias: string
+          is_me: boolean
+          rank: number
+          weekly_xp: number
         }[]
       }
       move_to_dlq: {

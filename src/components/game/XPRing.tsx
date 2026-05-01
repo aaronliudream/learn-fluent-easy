@@ -9,7 +9,7 @@ export function XPRing({
   value,
   target = 7,
   size = 88,
-  label = "天连击",
+  label = "DAY STREAK",
 }: {
   value: number;
   target?: number;

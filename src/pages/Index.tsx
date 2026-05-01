@@ -193,7 +193,7 @@ const Index = () => {
           to="/leaderboard"
           className="card-paper group flex items-center gap-3 rounded-2xl p-3 transition hover:-translate-y-0.5 hover:shadow-md sm:flex-col sm:items-center sm:justify-center sm:p-4"
         >
-          <XPRing value={displayStreak} target={Math.max(7, Math.ceil((displayStreak + 1) / 7) * 7)} label="天连击" />
+          <XPRing value={displayStreak} target={Math.max(7, Math.ceil((displayStreak + 1) / 7) * 7)} label={t("index.streak.label")} />
           <div className="flex flex-col gap-1 sm:items-center">
             <span className="inline-flex items-center gap-1 rounded-full bg-accent/15 px-2.5 py-1 text-[11px] font-bold text-foreground">
               <Trophy className="size-3.5 text-accent" /> <T>本周排行榜</T>

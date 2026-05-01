@@ -55,6 +55,7 @@ export type StringKey =
   | "index.progress.savedLessons"
   | "index.progress.minutes"
   | "index.progress.streak"
+  | "index.streak.label"
   | "index.progress.cta"
   | "index.progress.save"
   // Auth toasts
@@ -126,6 +127,7 @@ export const EN: Record<StringKey, string> = {
   "index.progress.savedLessons": "Studied {n} lessons",
   "index.progress.minutes": "{n} min",
   "index.progress.streak": "🔥 {n}-day streak",
+  "index.streak.label": "DAY STREAK",
   "index.progress.cta": "Sign in to save progress, syncs to your phone in 3s",
   "index.progress.save": "Save",
 
@@ -198,6 +200,7 @@ export const ZH: Record<StringKey, string> = {
   "index.progress.savedLessons": "已学 {n} 节",
   "index.progress.minutes": "{n} 分钟",
   "index.progress.streak": "🔥{n}天",
+  "index.streak.label": "天连击",
   "index.progress.cta": "登录保存进度，3 秒同步到手机",
   "index.progress.save": "保存",
 

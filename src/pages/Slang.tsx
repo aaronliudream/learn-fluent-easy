@@ -32,6 +32,7 @@ import {
   getSlangProgress,
   getSlangLevel,
 } from "@/lib/slangMastery";
+import { XPBurst } from "@/components/game/XPBurst";
 
 type Mode = "browse" | "quiz";
 // quiz direction: en2cn = show English idiom, choose Chinese meaning;
@@ -335,6 +336,8 @@ const Slang = () => {
   const [composeText, setComposeText] = useState<Record<number, string>>({});
   const [composeGrade, setComposeGrade] = useState<Record<number, ComposeGrade>>({});
   const [composeBusy, setComposeBusy] = useState(false);
+  // +XP floating burst on correct answers
+  const [xpTrigger, setXpTrigger] = useState(0);
   // Scenario (L3) text — generated on demand by `slang-scenario` edge fn,
   // cached per phrase id in this session.
   const scenarioCacheRef = useRef<Record<number, string>>({});

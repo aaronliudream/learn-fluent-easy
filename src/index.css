@@ -259,8 +259,8 @@ All colors MUST be HSL.
 @keyframes xp-burst {
   0%   { transform: translateY(20px) scale(0.6); opacity: 0; }
   20%  { transform: translateY(0)    scale(1.15); opacity: 1; }
-  60%  { transform: translateY(-30px) scale(1);   opacity: 1; }
-  100% { transform: translateY(-80px) scale(0.95); opacity: 0; }
+  60%  { transform: translateY(calc(var(--xp-drift, -80px) * 0.4)) scale(1);   opacity: 1; }
+  100% { transform: translateY(var(--xp-drift, -80px)) scale(0.95); opacity: 0; }
 }
 .animate-badge-pop  { animation: badge-pop 0.55s cubic-bezier(.34,1.56,.64,1); }
 .animate-flame      { animation: flame-flicker 1.4s ease-in-out infinite; }

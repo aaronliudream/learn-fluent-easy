@@ -55,7 +55,7 @@ import {
 } from "@/lib/guestProgress";
 import { AITalkDialog } from "@/components/AITalkDialog";
 import { Phone } from "lucide-react";
-import { fireConfetti } from "@/lib/confetti";
+import { fireConfetti } from "@/lib/feedback";
 
 const STEP_ICONS = {
   BookOpen,
@@ -553,8 +553,8 @@ const Lesson = () => {
       setMastered(Number(levelId), Number(unitId), Number(lessonId), true);
       setMasteredState(true);
       markLessonComplete(Number(levelId), Number(unitId), Number(lessonId));
-      // Celebrate the milestone — keep it sparing, only on first 100% pass
-      fireConfetti();
+      // Milestone — first time the learner aces every quiz in the lesson.
+      fireConfetti("celebrate");
       toast.success(tt("🏆 全部答对 · 已自动标记为掌握"), {
         description: tt("下次打开 App 会建议你继续学习下一课。"),
       });

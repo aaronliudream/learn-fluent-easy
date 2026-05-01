@@ -506,6 +506,36 @@ export type Database = {
         }
         Relationships: []
       }
+      line_rewrites: {
+        Row: {
+          created_at: string
+          id: string
+          normalized: string
+          original: string
+          rewrites: Json
+          target_lang: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          normalized: string
+          original: string
+          rewrites: Json
+          target_lang?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          normalized?: string
+          original?: string
+          rewrites?: Json
+          target_lang?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       phrase_explanations: {
         Row: {
           created_at: string
@@ -623,6 +653,36 @@ export type Database = {
           updated_at?: string
           user_id?: string
           weekly_report_enabled?: boolean
+        }
+        Relationships: []
+      }
+      saved_phrases: {
+        Row: {
+          context_text: string | null
+          created_at: string
+          id: string
+          normalized: string
+          phrase: string
+          source: string | null
+          user_id: string
+        }
+        Insert: {
+          context_text?: string | null
+          created_at?: string
+          id?: string
+          normalized: string
+          phrase: string
+          source?: string | null
+          user_id: string
+        }
+        Update: {
+          context_text?: string | null
+          created_at?: string
+          id?: string
+          normalized?: string
+          phrase?: string
+          source?: string | null
+          user_id?: string
         }
         Relationships: []
       }

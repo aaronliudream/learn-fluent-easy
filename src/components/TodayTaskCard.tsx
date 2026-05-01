@@ -7,6 +7,7 @@ import { LEVELS } from "@/data/course";
 import { loadProgress, getStreak } from "@/lib/guestProgress";
 import { IDIOMS } from "@/data/idioms";
 import { T, useT } from "@/i18n/T";
+import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
 
 type Task = {
   key: "review" | "lesson" | "slang";
@@ -183,12 +184,23 @@ export const TodayTaskCard = () => {
         </div>
       </div>
 
-      {!collapsed && (
-      <ul id="today-task-list" className="relative mt-4 space-y-2">
-        {tasks.map((t) => {
+      <Collapsible open={!collapsed}>
+        <CollapsibleContent
+          id="today-task-list"
+          className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+        >
+        <ul className="relative mt-4 space-y-2">
+        {tasks.map((t, i) => {
           const Icon = t.icon;
           return (
-            <li key={t.key}>
+            <li
+              key={t.key}
+              className="animate-fade-in opacity-0"
+              style={{
+                animationDelay: `${i * 70}ms`,
+                animationFillMode: "forwards",
+              }}
+            >
               <Link
                 to={t.to}
                 className="group flex items-center gap-3 rounded-2xl border border-border/60 bg-background/60 p-3 transition hover:border-primary/40 hover:bg-secondary/60"
@@ -210,8 +222,9 @@ export const TodayTaskCard = () => {
             </li>
           );
         })}
-      </ul>
-      )}
+        </ul>
+        </CollapsibleContent>
+      </Collapsible>
     </section>
   );
 };

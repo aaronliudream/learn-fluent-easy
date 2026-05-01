@@ -324,54 +324,15 @@ const Lesson = () => {
     // to show repeated words than an empty vocabulary section.
     const vocab = filtered.length > 0 ? filtered : rawContent.vocab;
 
-    // Grammar rule: every example sentence in 语法重点/核心句型 MUST be a
-    // sentence that actually appears in the reading 课文. Filter out any
-    // example whose English text is not found verbatim (case/punctuation
-    // insensitive) in the reading. If a grammar point ends up with no
-    // remaining examples, fall back to pulling one sentence from reading
-    // so the section is never empty.
-    const readingSentences: { en: string; cn: string }[] = [];
-    (rawContent.reading ?? []).forEach((p) => {
-      // Split each reading paragraph into sentences so we can match per
-      // sentence, not just per whole paragraph.
-      const ens = (p.en || "")
-        .split(/(?<=[.!?])\s+/)
-        .map((s) => s.trim())
-        .filter(Boolean);
-      const cns = (p.cn || "")
-        .split(/(?<=[。！？])\s*/)
-        .map((s) => s.trim())
-        .filter(Boolean);
-      ens.forEach((en, idx) => {
-        readingSentences.push({ en, cn: cns[idx] ?? p.cn ?? "" });
-      });
-    });
-    const norm = (s: string) =>
-      (s || "").toLowerCase().replace(/[\s\p{P}]+/gu, " ").trim();
-    const readingNormSet = readingSentences.map((s) => ({
-      ...s,
-      n: norm(s.en),
+    // Grammar examples should DEMONSTRATE the grammar point. Use the
+    // AI-authored examples as-is — never substitute unrelated reading
+    // sentences (the reading rarely contains enough instances of the
+    // target pattern to teach from, and substituting article sentences
+    // produced examples that had nothing to do with the grammar topic).
+    const grammar = (rawContent.grammar ?? []).map((g) => ({
+      ...g,
+      examples: g.examples ?? [],
     }));
-    const isInReading = (en: string) => {
-      const n = norm(en);
-      if (!n) return false;
-      return readingNormSet.some((r) => r.n === n || r.n.includes(n) || n.includes(r.n));
-    };
-    let fallbackIdx = 0;
-    const grammar = (rawContent.grammar ?? []).map((g) => {
-      const kept = (g.examples ?? []).filter((ex) => isInReading(ex.en));
-      if (kept.length > 0) return { ...g, examples: kept };
-      // No example in reading — substitute with sentences from reading so
-      // the rule "examples must come from the article" still holds.
-      const subs: { en: string; cn: string }[] = [];
-      while (subs.length < Math.min(2, readingSentences.length)) {
-        const pick = readingSentences[fallbackIdx % readingSentences.length];
-        fallbackIdx += 1;
-        if (!subs.some((s) => s.en === pick.en)) subs.push({ en: pick.en, cn: pick.cn });
-        if (fallbackIdx > readingSentences.length * 2) break;
-      }
-      return { ...g, examples: subs.length > 0 ? subs : g.examples };
-    });
 
     return { ...rawContent, vocab, grammar };
   }, [rawContent, lesson, levelId, unitId, lessonId]);

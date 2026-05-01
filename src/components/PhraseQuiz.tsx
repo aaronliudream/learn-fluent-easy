@@ -1,8 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
-import { CheckCircle2, XCircle, RefreshCw, PencilLine } from "lucide-react";
+import {
+  CheckCircle2,
+  XCircle,
+  RefreshCw,
+  PencilLine,
+  Loader2,
+} from "lucide-react";
 import { KNOWN_PHRASES } from "@/components/TappableLine";
 import { stripTags } from "@/lib/richText";
 import { T } from "@/i18n/T";
+import { supabase } from "@/integrations/supabase/client";
 
 type DialogLine = { en: string; cn: string };
 
@@ -15,6 +22,14 @@ type QuizItem = {
   answer: string;
   /** 4 options including the correct one, randomized */
   options: string[];
+};
+
+/** One AI-extracted key expression. */
+type KeyExpression = {
+  en: string;
+  line_index: number;
+  cn: string;
+  why?: string;
 };
 
 function shuffle<T>(arr: T[]): T[] {

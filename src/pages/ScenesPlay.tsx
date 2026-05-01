@@ -113,40 +113,85 @@ const ScenesPlay = () => {
         {dlg.lines.map((l, i) => {
           const isYou = l.speaker.toLowerCase() === "you";
           const isActive = activeIdx === i;
+          // Stable emoji avatar per non-"you" speaker name so each character
+          // gets a recognizable face throughout the dialogue.
+          const avatarEmojis = ["👩", "👨", "🧑", "👩‍🍳", "🧑‍💼", "👨‍🦱", "👩‍🦰"];
+          const speakerHash = Array.from(l.speaker).reduce((a, c) => a + c.charCodeAt(0), 0);
+          const avatar = isYou ? "🙋" : avatarEmojis[speakerHash % avatarEmojis.length];
           return (
             <article
               key={i}
               ref={(el) => (lineRefs.current[i] = el)}
-              className={`flex gap-3 rounded-2xl border p-4 transition ${
-                isActive ? "border-primary/40 bg-primary/5" : "border-border bg-card"
-              } ${isYou ? "ml-6" : "mr-6"}`}
+              className={`flex w-full items-end gap-2 ${isYou ? "flex-row-reverse" : "flex-row"}`}
             >
-              <div className="flex-1 min-w-0">
-                <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+              {/* Avatar */}
+              <div
+                className={`grid size-9 shrink-0 place-items-center rounded-full text-lg shadow-sm ${
+                  isYou ? "bg-primary/15" : "bg-secondary"
+                }`}
+                aria-hidden
+              >
+                {avatar}
+              </div>
+
+              {/* Bubble + meta */}
+              <div className={`flex max-w-[78%] flex-col ${isYou ? "items-end" : "items-start"}`}>
+                <div
+                  className={`mb-0.5 px-1 text-[11px] font-semibold tracking-wide text-muted-foreground ${
+                    isYou ? "text-right" : "text-left"
+                  }`}
+                >
                   {l.speaker}
                 </div>
-                <div className={`text-lg leading-relaxed transition md:text-xl ${isActive ? "font-bold text-primary" : "font-medium"}`}>
-                  <TappableLine sentence={l.en} />
-                </div>
-                <div className={`mt-1.5 text-base transition md:text-lg ${isActive ? "font-semibold text-primary" : "text-muted-foreground"}`}><T>{stripTags(l.cn)}</T></div>
-                <button
-                  onClick={() => setRewriteIdx(i)}
-                  className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-foreground/70 transition hover:bg-primary/15 hover:text-primary"
+                <div
+                  className={`relative rounded-2xl px-4 py-2.5 shadow-sm transition ${
+                    isYou
+                      ? "rounded-br-md bg-primary text-primary-foreground"
+                      : "rounded-bl-md border border-border bg-card text-foreground"
+                  } ${isActive ? "ring-2 ring-primary ring-offset-2 ring-offset-background" : ""}`}
                 >
-                  <Drama className="size-3.5" /> <T>换种说法</T>
-                </button>
+                  {/* Tail */}
+                  <span
+                    aria-hidden
+                    className={`absolute bottom-0 size-3 ${
+                      isYou
+                        ? "right-0 translate-x-1 translate-y-0.5 bg-primary [clip-path:polygon(0_0,100%_100%,0_100%)]"
+                        : "left-0 -translate-x-1 translate-y-0.5 border-b border-l border-border bg-card [clip-path:polygon(100%_0,100%_100%,0_100%)]"
+                    }`}
+                  />
+                  <div className="text-base font-medium leading-relaxed md:text-lg">
+                    <TappableLine sentence={l.en} />
+                  </div>
+                  <div
+                    className={`mt-1 text-xs leading-snug ${
+                      isYou ? "text-primary-foreground/80" : "text-muted-foreground"
+                    }`}
+                  >
+                    <T>{stripTags(l.cn)}</T>
+                  </div>
+                </div>
+
+                {/* Actions row */}
+                <div className={`mt-1 flex items-center gap-1.5 ${isYou ? "flex-row-reverse" : ""}`}>
+                  <button
+                    onClick={() => playOne(i)}
+                    aria-label={t("播放")}
+                    className={`grid size-7 place-items-center rounded-full transition ${
+                      isActive
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-secondary text-foreground/60 hover:bg-primary/15 hover:text-primary"
+                    }`}
+                  >
+                    <Volume2 className="size-3.5" />
+                  </button>
+                  <button
+                    onClick={() => setRewriteIdx(i)}
+                    className="inline-flex items-center gap-1 rounded-full bg-secondary px-2 py-1 text-[10px] font-semibold text-foreground/60 transition hover:bg-primary/15 hover:text-primary"
+                  >
+                    <Drama className="size-3" /> <T>换种说法</T>
+                  </button>
+                </div>
               </div>
-              <button
-                onClick={() => playOne(i)}
-                aria-label={t("播放")}
-                className={`grid size-9 shrink-0 place-items-center rounded-full transition ${
-                  isActive
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-foreground/70 hover:bg-primary/15 hover:text-primary"
-                }`}
-              >
-                <Volume2 className="size-4" />
-              </button>
             </article>
           );
         })}

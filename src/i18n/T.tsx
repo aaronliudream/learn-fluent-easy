@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import { useI18n } from "./I18nProvider";
+import { reportRenderedText } from "./devLeakDetector";
 
 /**
  * Wrap any source-language text (Chinese in our case) so it gets translated
@@ -12,15 +13,21 @@ import { useI18n } from "./I18nProvider";
 // unused — <T> renders only a text node.
 export const T = forwardRef<unknown, { children: string | undefined | null }>(
   function T({ children }, _ref) {
-    const { tDynamic } = useI18n();
+    const { tDynamic, lang } = useI18n();
     if (!children) return null;
-    return <>{tDynamic(String(children))}</>;
+    const out = tDynamic(String(children));
+    reportRenderedText(out, lang);
+    return <>{out}</>;
   },
 );
 
 /** Hook variant for cases where you can't render a JSX child (e.g. attributes,
  *  toast() arguments, document.title). */
 export function useT() {
-  const { tDynamic } = useI18n();
-  return tDynamic;
+  const { tDynamic, lang } = useI18n();
+  return (text: string, params?: Record<string, string | number>) => {
+    const out = tDynamic(text, params);
+    reportRenderedText(out, lang);
+    return out;
+  };
 }

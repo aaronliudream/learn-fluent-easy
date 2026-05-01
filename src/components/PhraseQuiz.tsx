@@ -96,7 +96,7 @@ function expressionScore(p: string): number {
  * appears in it. Distractors are pulled from other phrases used elsewhere in
  * KNOWN_PHRASES (preferring ones similar in length).
  */
-function buildQuiz(lines: DialogLine[], maxItems = 5): QuizItem[] {
+function buildQuiz(lines: DialogLine[], maxItems = 10): QuizItem[] {
   const items: QuizItem[] = [];
   const used = new Set<string>();
 
@@ -112,15 +112,18 @@ function buildQuiz(lines: DialogLine[], maxItems = 5): QuizItem[] {
   for (const line of lines) {
     const en = stripTags(line.en);
     const lower = " " + en.toLowerCase() + " ";
-    let best: { p: string; s: number } | null = null;
+    // Collect ALL quizzable phrases present in this line (not just the best),
+    // so a rich line can contribute multiple questions.
+    const found: { p: string; s: number }[] = [];
     for (const p of quizzable) {
       if (lower.includes(" " + p + " ")) {
-        const s = expressionScore(p);
-        if (!best || s > best.s) best = { p, s };
+        found.push({ p, s: expressionScore(p) });
       }
     }
-    if (best) cands.push({ line, phrase: best.p, score: best.s });
+    for (const f of found) cands.push({ line, phrase: f.p, score: f.s });
   }
+  // Sort by score desc, but de-prioritize duplicate phrases by keeping the
+  // first occurrence highest.
   cands.sort((a, b) => b.score - a.score);
 
   for (const { line, phrase: best } of cands) {

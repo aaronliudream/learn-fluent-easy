@@ -137,7 +137,7 @@ export const EN: Record<StringKey, string> = {
   "lang.changeLater": "You can change this anytime from the header.",
 
   "support.cta": "If you like this app, buy me a coffee ☕",
-  "support.thanks": "Thanks for your support — it helps make FluentPath better.",
+  "support.thanks": "Thanks for your support — it helps make Big Moon English better.",
   "support.qrTitle": "Buy me a coffee ☕",
   "support.qrSubtitle": "Scan with WeChat or Alipay to send a tip directly. Every bit helps keep FluentPath ad-free.",
   "support.qrWechat": "WeChat Pay",
@@ -209,7 +209,7 @@ export const ZH: Record<StringKey, string> = {
   "lang.changeLater": "之后可以随时在顶部切换。",
 
   "support.cta": "如果喜欢这个 App，请我喝杯咖啡 ☕",
-  "support.thanks": "感谢你的支持，让 FluentPath 变得更好。",
+  "support.thanks": "感谢你的支持，让 Big Moon English 变得更好。",
   "support.qrTitle": "请我喝杯咖啡 ☕",
   "support.qrSubtitle": "微信或支付宝扫一扫，随心打赏。你的支持让 FluentPath 保持无广告、持续更新。",
   "support.qrWechat": "微信支付",

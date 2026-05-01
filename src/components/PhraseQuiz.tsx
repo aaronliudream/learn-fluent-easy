@@ -11,7 +11,7 @@ import { stripTags } from "@/lib/richText";
 import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import { recordQuizAnswer, seedReviews, type ReviewSeed } from "@/lib/srs";
-import { fireConfetti } from "@/lib/confetti";
+import { fireConfettiIfPassed } from "@/lib/feedback";
 
 type DialogLine = { en: string; cn: string };
 
@@ -460,10 +460,9 @@ export function PhraseQuiz({
       setPicked(null);
     } else {
       setDone(true);
-      // Celebrate strong finishes — only if ≥ 80%
-      if (items.length > 0 && score / items.length >= 0.8) {
-        fireConfetti();
-      }
+      // Celebrate strong finishes — threshold + intensity centrally tuned
+      // in @/lib/feedback so all quiz endings share the same rhythm.
+      fireConfettiIfPassed(score, items.length, "normal");
     }
   };
 

@@ -1,4 +1,4 @@
-import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic } from "lucide-react";
+import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic, BookOpenCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
@@ -105,6 +105,14 @@ const Index = () => {
       title: t("index.section.workplace.title"),
       desc: t("index.section.workplace.desc", { count: WORK_CATEGORIES.length }),
       gradient: "from-slate-800 via-slate-700 to-amber-600",
+    },
+    {
+      to: "/gaokao",
+      icon: BookOpenCheck,
+      eyebrow: "高考英语 · GAOKAO",
+      title: "中国高中生 · 高考英语专区",
+      desc: "诊断你的薄弱点，覆盖语法、阅读、词汇全部考点，错题智能追加同类题",
+      gradient: "from-red-600 via-rose-600 to-orange-500",
     },
   ];
 

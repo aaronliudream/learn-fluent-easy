@@ -1,10 +1,21 @@
-import { ArrowLeft, Home, Star, Brain } from "lucide-react";
+import { ArrowLeft, Home, Star, Brain, MoreVertical, Globe, Settings2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { VoiceSettingsButton } from "@/components/VoiceSettings";
-import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { VoiceSettingsModal } from "@/components/VoiceSettings";
 import { T } from "@/i18n/T";
 import { countDueReviews } from "@/lib/srs";
+import { useI18n } from "@/i18n/I18nProvider";
+import { LANGUAGES } from "@/i18n/languages";
 
 type Props = {
   title: string;
@@ -15,9 +26,10 @@ type Props = {
 export const PageHeader = ({ title, subtitle, back }: Props) => {
   const nav = useNavigate();
   const [due, setDue] = useState(0);
+  const [voiceOpen, setVoiceOpen] = useState(false);
+  const { lang, setLang, markPicked } = useI18n();
 
-  // Light poll: fetch the due count once when the header mounts. We avoid
-  // setting up a heavy realtime channel — the badge is just a nudge.
+  // Light poll: fetch the due review count once when header mounts.
   useEffect(() => {
     let cancelled = false;
     countDueReviews().then((c) => {
@@ -29,56 +41,128 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
   }, []);
 
   return (
-    <header className="mb-8">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          {back && (
+    <header className="mb-6">
+      {/* Slim review banner — replaces the old brain icon. Only shows when there is something due. */}
+      {due > 0 && (
+        <Link
+          to="/review"
+          className="mb-4 flex items-center justify-between gap-3 rounded-xl border border-primary/20 bg-primary/5 px-3 py-2 text-xs transition hover:bg-primary/10"
+        >
+          <div className="flex items-center gap-2 text-primary">
+            <Brain className="size-4" />
+            <span className="font-semibold">
+              今天有 {due > 99 ? "99+" : due} 个表达待复习
+            </span>
+            <span className="hidden text-muted-foreground sm:inline">
+              · 按记忆曲线挑出来的
+            </span>
+          </div>
+          <span className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-bold text-primary-foreground">
+            去复习
+          </span>
+        </Link>
+      )}
+
+      <div className="flex items-center justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-3">
+          {back ? (
             <button
               onClick={() => (back === true ? nav(-1) : nav(back))}
-              className="grid size-10 place-items-center rounded-full text-foreground/70 transition hover:bg-secondary hover:text-foreground"
+              className="grid size-10 shrink-0 place-items-center rounded-full text-foreground/70 transition hover:bg-secondary hover:text-foreground"
               aria-label="Back"
             >
               <ArrowLeft className="size-5" />
             </button>
+          ) : (
+            <Link
+              to="/"
+              className="grid size-10 shrink-0 place-items-center rounded-full text-foreground/70 transition hover:bg-secondary hover:text-foreground"
+              aria-label="Home"
+            >
+              <Home className="size-5" />
+            </Link>
           )}
-          <h1 className="text-grad-title text-3xl font-extrabold tracking-tight md:text-4xl">
+          <h1 className="text-grad-title truncate text-2xl font-extrabold tracking-tight md:text-4xl">
             <T>{title}</T>
           </h1>
         </div>
-        <div className="flex items-center gap-1">
-          <LanguageSwitcher />
-          <VoiceSettingsButton />
-          <Link
-            to="/review"
-            className="relative grid size-10 place-items-center rounded-full text-primary transition hover:bg-primary/10"
-            aria-label="Daily review"
+
+        {/* Single overflow menu collects everything else. */}
+        <DropdownMenu>
+          <DropdownMenuTrigger
+            className="grid size-10 shrink-0 place-items-center rounded-full text-foreground/70 transition hover:bg-secondary hover:text-foreground"
+            aria-label="More"
           >
-            <Brain className="size-5" />
-            {due > 0 && (
-              <span className="absolute right-0.5 top-0.5 grid h-4 min-w-[16px] place-items-center rounded-full bg-rose-500 px-1 text-[10px] font-bold leading-none text-white">
-                {due > 99 ? "99+" : due}
-              </span>
-            )}
-          </Link>
-          <Link
-            to="/saved"
-            className="grid size-10 place-items-center rounded-full text-amber-500 transition hover:bg-amber-100 hover:text-amber-600 dark:hover:bg-amber-500/10"
-            aria-label="My saved phrases"
-          >
-            <Star className="size-5" />
-          </Link>
-          <Link
-            to="/"
-            className="grid size-10 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary hover:text-foreground"
-            aria-label="Home"
-          >
-            <Home className="size-5" />
-          </Link>
-        </div>
+            <MoreVertical className="size-5" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-56">
+            <DropdownMenuItem asChild>
+              <Link to="/" className="flex items-center gap-2">
+                <Home className="size-4" /> 首页
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/review" className="flex items-center justify-between gap-2">
+                <span className="flex items-center gap-2">
+                  <Brain className="size-4" /> 智能复习
+                </span>
+                {due > 0 && (
+                  <span className="rounded-full bg-rose-500 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                    {due > 99 ? "99+" : due}
+                  </span>
+                )}
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link to="/saved" className="flex items-center gap-2">
+                <Star className="size-4 text-amber-500" /> 我的收藏
+              </Link>
+            </DropdownMenuItem>
+
+            <DropdownMenuSeparator />
+
+            <DropdownMenuItem
+              onSelect={(e) => {
+                e.preventDefault();
+                setVoiceOpen(true);
+              }}
+              className="flex items-center gap-2"
+            >
+              <Settings2 className="size-4" /> 语音设置
+            </DropdownMenuItem>
+
+            <DropdownMenuSeparator />
+
+            <DropdownMenuLabel className="flex items-center gap-2 text-xs">
+              <Globe className="size-3.5" /> 显示语言
+            </DropdownMenuLabel>
+            <div className="max-h-56 overflow-y-auto">
+              <DropdownMenuRadioGroup
+                value={lang}
+                onValueChange={(v) => {
+                  setLang(v as typeof lang);
+                  markPicked();
+                }}
+              >
+                {LANGUAGES.map((l) => (
+                  <DropdownMenuRadioItem key={l.code} value={l.code} className="text-sm">
+                    <span className="mr-2 text-base">{l.flag}</span>
+                    <span className="flex-1">{l.nativeName}</span>
+                  </DropdownMenuRadioItem>
+                ))}
+              </DropdownMenuRadioGroup>
+            </div>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
+
       {subtitle && (
-        <p className="ml-1 mt-2 text-sm text-muted-foreground md:ml-[52px]"><T>{subtitle}</T></p>
+        <p className="ml-1 mt-2 text-sm text-muted-foreground md:ml-[52px]">
+          <T>{subtitle}</T>
+        </p>
       )}
+
+      <VoiceSettingsModal open={voiceOpen} onOpenChange={setVoiceOpen} />
     </header>
   );
 };

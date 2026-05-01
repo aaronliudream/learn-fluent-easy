@@ -4,8 +4,17 @@ import { VOICES, SPEED_PRESETS, loadSettings, saveSettings, type VoiceSettings a
 import { speak, clearAudioCache, getLastSpoken } from "@/lib/speak";
 import { T } from "@/i18n/T";
 
-export const VoiceSettingsButton = () => {
-  const [open, setOpen] = useState(false);
+/**
+ * Standalone voice settings modal. When `open` is true, renders the sheet.
+ * Used both by the legacy icon button and by the new PageHeader overflow menu.
+ */
+export const VoiceSettingsModal = ({
+  open,
+  onOpenChange,
+}: {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}) => {
   const [draft, setDraft] = useState<VS>(loadSettings);
   const [previewing, setPreviewing] = useState(false);
 
@@ -31,21 +40,12 @@ export const VoiceSettingsButton = () => {
     else preview();
   };
 
+  if (!open) return null;
   return (
-    <>
-      <button
-        onClick={() => setOpen(true)}
-        className="grid size-10 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary hover:text-foreground"
-        aria-label="Voice settings"
-      >
-        <Settings2 className="size-5" />
-      </button>
-
-      {open && (
-        <div
-          className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-0 backdrop-blur-sm md:items-center md:p-6"
-          onClick={() => setOpen(false)}
-        >
+    <div
+      className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 p-0 backdrop-blur-sm md:items-center md:p-6"
+      onClick={() => onOpenChange(false)}
+    >
           <div
             onClick={(e) => e.stopPropagation()}
             className="w-full max-w-lg rounded-t-3xl bg-card p-6 shadow-2xl md:rounded-3xl"
@@ -61,7 +61,7 @@ export const VoiceSettingsButton = () => {
                 </div>
               </div>
               <button
-                onClick={() => setOpen(false)}
+                onClick={() => onOpenChange(false)}
                 className="grid size-9 place-items-center rounded-full text-foreground/60 hover:bg-secondary"
                 aria-label="Close"
               >
@@ -163,8 +163,23 @@ export const VoiceSettingsButton = () => {
               </p>
             </div>
           </div>
-        </div>
-      )}
+    </div>
+  );
+};
+
+/** Legacy standalone icon button + modal — kept for any caller that still uses it. */
+export const VoiceSettingsButton = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="grid size-10 place-items-center rounded-full text-foreground/60 transition hover:bg-secondary hover:text-foreground"
+        aria-label="Voice settings"
+      >
+        <Settings2 className="size-5" />
+      </button>
+      <VoiceSettingsModal open={open} onOpenChange={setOpen} />
     </>
   );
 };

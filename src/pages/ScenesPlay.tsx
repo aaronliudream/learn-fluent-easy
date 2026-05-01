@@ -5,7 +5,8 @@ import { PageHeader } from "@/components/PageHeader";
 import { SCENE_CATEGORIES, SCENE_DIALOGUES } from "@/data/scenes";
 import { speak, speakSequence, stopSpeaking } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
-import { renderRich, stripTags } from "@/lib/richText";
+import { stripTags } from "@/lib/richText";
+import { TappableLine } from "@/components/TappableLine";
 import { recordVisit } from "@/lib/guestProgress";
 
 const ScenesPlay = () => {
@@ -110,7 +111,9 @@ const ScenesPlay = () => {
                 <div className="mb-1 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                   {l.speaker}
                 </div>
-                <div className={`text-lg leading-relaxed transition md:text-xl ${isActive ? "font-bold text-primary" : "font-medium"}`}>{renderRich(l.en)}</div>
+                <div className={`text-lg leading-relaxed transition md:text-xl ${isActive ? "font-bold text-primary" : "font-medium"}`}>
+                  <TappableLine sentence={l.en} />
+                </div>
                 <div className={`mt-1.5 text-base transition md:text-lg ${isActive ? "font-semibold text-primary" : "text-muted-foreground"}`}><T>{stripTags(l.cn)}</T></div>
               </div>
               <button

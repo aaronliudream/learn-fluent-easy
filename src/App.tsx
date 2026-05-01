@@ -59,7 +59,7 @@ const App = () => (
       <BrowserRouter>
         <StopAudioOnRouteChange />
         <LanguagePickerModal />
-        <div className="pb-tabbar md:pb-0">
+        <div className="pb-tabbar lg:pb-0">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<Auth />} />

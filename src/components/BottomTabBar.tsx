@@ -1,4 +1,4 @@
-import { Home, GraduationCap, MessagesSquare, Brain, User } from "lucide-react";
+import { Home, GraduationCap, MessagesSquare, Trophy, User } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { countDueReviews } from "@/lib/srs";
@@ -31,7 +31,7 @@ const TABS = [
       p.startsWith("/workplace") ||
       p.startsWith("/talk"),
   },
-  { to: "/review", label: "复习", icon: Brain, match: (p: string) => p.startsWith("/review"), badge: true },
+  { to: "/leaderboard", label: "排行", icon: Trophy, match: (p: string) => p.startsWith("/leaderboard") || p.startsWith("/review") },
   { to: "/account", label: "我的", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
 ];
 

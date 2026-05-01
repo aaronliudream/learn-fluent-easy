@@ -37,20 +37,20 @@ export const BottomTabBar = () => {
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0)" }}
     >
       <ul className="mx-auto grid max-w-3xl grid-cols-4">
-        {TABS.map((t) => {
-          const Icon = t.icon;
-          const active = t.match(pathname);
+        {TABS.map((tab) => {
+          const Icon = tab.icon;
+          const active = tab.match(pathname);
           return (
-            <li key={t.to}>
+            <li key={tab.to}>
               <NavLink
-                to={t.to}
+                to={tab.to}
                 className={`relative flex h-16 flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition ${
                   active ? "text-primary" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 <span className="relative">
                   <Icon className={`size-5 transition ${active ? "scale-110" : ""}`} />
-                  {t.badge && due > 0 && (
+                  {tab.badge && due > 0 && (
                     <span className="num absolute -right-2 -top-1 grid h-4 min-w-[16px] place-items-center rounded-full bg-rose-500 px-1 text-[10px] font-bold leading-none text-white">
                       {due > 99 ? "99+" : due}
                     </span>

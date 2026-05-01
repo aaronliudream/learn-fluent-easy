@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Coffee } from "lucide-react";
+import { Coffee, Heart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -40,18 +40,24 @@ export function SupportButton({ variant = "inline", className = "" }: Props) {
   if (variant === "footer") {
     return (
       <>
-        <footer className={`mt-12 flex flex-col items-center gap-2 border-t border-border/50 pt-6 pb-4 text-center text-xs text-muted-foreground ${className}`}>
+        <footer className={`mt-12 flex flex-col items-center gap-3 pt-8 pb-6 text-center ${className}`}>
           <a
             href={isChinese ? "#" : DONATION_URL}
             target={isChinese ? undefined : "_blank"}
             rel={isChinese ? undefined : "noopener noreferrer"}
             onClick={handleClick}
-            className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 transition-colors hover:bg-muted hover:text-foreground"
+            className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-400 via-rose-400 to-amber-400 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-pink-400/30 transition-all hover:scale-[1.04] hover:shadow-xl hover:shadow-pink-400/40 active:scale-95"
           >
-            <Coffee className="size-3.5" />
-            {t("support.cta")}
+            <span className="absolute -left-1 -top-1 grid size-5 place-items-center rounded-full bg-white/95 text-amber-500 shadow-sm transition-transform group-hover:rotate-12">
+              <Sparkles className="size-3" />
+            </span>
+            <Coffee className="size-4 transition-transform group-hover:-rotate-12" />
+            <span>{t("support.cta")}</span>
+            <Heart className="size-3.5 fill-white text-white animate-pulse" />
           </a>
-          <p className="opacity-70">{t("support.thanks")}</p>
+          <p className="text-xs font-medium text-muted-foreground/90">
+            <span className="text-rose-400">♡</span> {t("support.thanks")} <span className="text-rose-400">♡</span>
+          </p>
         </footer>
         <DonateQrDialog open={qrOpen} onOpenChange={setQrOpen} />
       </>

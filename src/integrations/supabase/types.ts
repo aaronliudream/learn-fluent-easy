@@ -137,6 +137,303 @@ export type Database = {
         }
         Relationships: []
       }
+      gaokao_grammar_points: {
+        Row: {
+          created_at: string
+          difficulty: number
+          explanation: string | null
+          id: string
+          parent_id: string | null
+          slug: string
+          sort_order: number
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          difficulty?: number
+          explanation?: string | null
+          id?: string
+          parent_id?: string | null
+          slug: string
+          sort_order?: number
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          difficulty?: number
+          explanation?: string | null
+          id?: string
+          parent_id?: string | null
+          slug?: string
+          sort_order?: number
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_grammar_points_parent_id_fkey"
+            columns: ["parent_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_grammar_points"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gaokao_grammar_questions: {
+        Row: {
+          correct_answer: string
+          created_at: string
+          difficulty: number
+          explanation: string
+          id: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          point_id: string
+          stem: string
+        }
+        Insert: {
+          correct_answer: string
+          created_at?: string
+          difficulty?: number
+          explanation: string
+          id?: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          point_id: string
+          stem: string
+        }
+        Update: {
+          correct_answer?: string
+          created_at?: string
+          difficulty?: number
+          explanation?: string
+          id?: string
+          option_a?: string
+          option_b?: string
+          option_c?: string
+          option_d?: string
+          point_id?: string
+          stem?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_grammar_questions_point_id_fkey"
+            columns: ["point_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_grammar_points"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gaokao_reading_passages: {
+        Row: {
+          body: string
+          created_at: string
+          difficulty: number
+          id: string
+          structure_analysis: string | null
+          title: string
+          topic: string | null
+          word_count: number | null
+        }
+        Insert: {
+          body: string
+          created_at?: string
+          difficulty?: number
+          id?: string
+          structure_analysis?: string | null
+          title: string
+          topic?: string | null
+          word_count?: number | null
+        }
+        Update: {
+          body?: string
+          created_at?: string
+          difficulty?: number
+          id?: string
+          structure_analysis?: string | null
+          title?: string
+          topic?: string | null
+          word_count?: number | null
+        }
+        Relationships: []
+      }
+      gaokao_reading_questions: {
+        Row: {
+          correct_answer: string
+          created_at: string
+          explanation_a: string | null
+          explanation_b: string | null
+          explanation_c: string | null
+          explanation_d: string | null
+          id: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          passage_id: string
+          question_type: string
+          sort_order: number
+          stem: string
+        }
+        Insert: {
+          correct_answer: string
+          created_at?: string
+          explanation_a?: string | null
+          explanation_b?: string | null
+          explanation_c?: string | null
+          explanation_d?: string | null
+          id?: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          passage_id: string
+          question_type?: string
+          sort_order?: number
+          stem: string
+        }
+        Update: {
+          correct_answer?: string
+          created_at?: string
+          explanation_a?: string | null
+          explanation_b?: string | null
+          explanation_c?: string | null
+          explanation_d?: string | null
+          id?: string
+          option_a?: string
+          option_b?: string
+          option_c?: string
+          option_d?: string
+          passage_id?: string
+          question_type?: string
+          sort_order?: number
+          stem?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_reading_questions_passage_id_fkey"
+            columns: ["passage_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_reading_passages"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gaokao_user_attempts: {
+        Row: {
+          created_at: string
+          id: string
+          is_correct: boolean
+          question_id: string
+          question_type: string
+          time_spent_seconds: number | null
+          user_answer: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_correct: boolean
+          question_id: string
+          question_type: string
+          time_spent_seconds?: number | null
+          user_answer?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_correct?: boolean
+          question_id?: string
+          question_type?: string
+          time_spent_seconds?: number | null
+          user_answer?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      gaokao_user_mastery: {
+        Row: {
+          correct_count: number
+          created_at: string
+          id: string
+          item_id: string
+          item_type: string
+          last_result: string | null
+          last_seen_at: string | null
+          next_review_at: string | null
+          updated_at: string
+          user_id: string
+          wrong_count: number
+        }
+        Insert: {
+          correct_count?: number
+          created_at?: string
+          id?: string
+          item_id: string
+          item_type: string
+          last_result?: string | null
+          last_seen_at?: string | null
+          next_review_at?: string | null
+          updated_at?: string
+          user_id: string
+          wrong_count?: number
+        }
+        Update: {
+          correct_count?: number
+          created_at?: string
+          id?: string
+          item_id?: string
+          item_type?: string
+          last_result?: string | null
+          last_seen_at?: string | null
+          next_review_at?: string | null
+          updated_at?: string
+          user_id?: string
+          wrong_count?: number
+        }
+        Relationships: []
+      }
+      gaokao_vocab: {
+        Row: {
+          created_at: string
+          example_cn: string | null
+          example_en: string | null
+          frequency_band: number
+          id: string
+          meaning_cn: string
+          pos: string | null
+          word: string
+        }
+        Insert: {
+          created_at?: string
+          example_cn?: string | null
+          example_en?: string | null
+          frequency_band?: number
+          id?: string
+          meaning_cn: string
+          pos?: string | null
+          word: string
+        }
+        Update: {
+          created_at?: string
+          example_cn?: string | null
+          example_en?: string | null
+          frequency_band?: number
+          id?: string
+          meaning_cn?: string
+          pos?: string | null
+          word?: string
+        }
+        Relationships: []
+      }
       generated_lessons: {
         Row: {
           content: Json

@@ -161,6 +161,60 @@ export type Database = {
         }
         Relationships: []
       }
+      expression_reviews: {
+        Row: {
+          created_at: string
+          due_at: string
+          ease: number
+          id: string
+          interval_days: number
+          lapses: number
+          last_reviewed_at: string | null
+          phrase: string
+          phrase_cn: string | null
+          source_key: string | null
+          source_line_cn: string | null
+          source_line_en: string | null
+          streak: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          due_at?: string
+          ease?: number
+          id?: string
+          interval_days?: number
+          lapses?: number
+          last_reviewed_at?: string | null
+          phrase: string
+          phrase_cn?: string | null
+          source_key?: string | null
+          source_line_cn?: string | null
+          source_line_en?: string | null
+          streak?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          due_at?: string
+          ease?: number
+          id?: string
+          interval_days?: number
+          lapses?: number
+          last_reviewed_at?: string | null
+          phrase?: string
+          phrase_cn?: string | null
+          source_key?: string | null
+          source_line_cn?: string | null
+          source_line_en?: string | null
+          streak?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       gaokao_grammar_points: {
         Row: {
           created_at: string

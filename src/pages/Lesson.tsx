@@ -366,8 +366,25 @@ const Lesson = () => {
       // Pass the words already covered by earlier lessons so the AI
       // can pick genuinely new vocabulary for this lesson.
       const priorWords = Array.from(getPriorLessonWords(lv, un, ls));
+      // If this lesson has hand-authored reading + vocab from the curriculum,
+      // pass them so all quiz / fillBlanks / listening / expressions / output
+      // are generated AGAINST the actual text the learner reads — not against
+      // an AI-invented passage that the user never sees.
+      const authored = LESSON_CONTENT[lesson.title] ?? null;
+      const useAuthored = hasAuthoredContent(lesson.title) && authored;
       const { data, error } = await supabase.functions.invoke("generate-lesson", {
-        body: { title: lesson.title, levelName, unitTitle, priorWords },
+        body: {
+          title: lesson.title,
+          levelName,
+          unitTitle,
+          priorWords,
+          ...(useAuthored
+            ? {
+                authoredReading: authored.reading,
+                authoredVocab: authored.vocab,
+              }
+            : {}),
+        },
       });
       if (error) throw error;
       if ((data as any)?.error) throw new Error((data as any).error);

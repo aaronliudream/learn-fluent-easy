@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import { Volume2, PlayCircle } from "lucide-react";
+import { Volume2, PlayCircle, StopCircle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { SCENE_CATEGORIES, SCENE_DIALOGUES } from "@/data/scenes";
@@ -15,6 +15,7 @@ const ScenesPlay = () => {
   const dlg = SCENE_DIALOGUES.find((d) => d.id === dialogueId);
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
   const cancelledRef = useRef(false);
+  const [isPlayingAll, setIsPlayingAll] = useState(false);
   const lineRefs = useRef<Array<HTMLElement | null>>([]);
 
   // Auto-scroll the currently-playing line into the upper portion of the
@@ -42,6 +43,7 @@ const ScenesPlay = () => {
 
   const playAll = async () => {
     cancelledRef.current = false;
+    setIsPlayingAll(true);
     await speakSequence(
       dlg.lines.map((l) => stripTags(l.en)),
       {
@@ -49,13 +51,21 @@ const ScenesPlay = () => {
         onIndex: (i) => setActiveIdx(i < 0 ? null : i),
       },
     );
+    setIsPlayingAll(false);
   };
 
   const playOne = async (i: number) => {
     cancelledRef.current = true; // stop any in-progress full read
+    setIsPlayingAll(false);
     setActiveIdx(i);
     await speak(stripTags(dlg.lines[i].en));
     setActiveIdx((cur) => (cur === i ? null : cur));
+  };
+
+  const stopAll = () => {
+    stopSpeaking();
+    setIsPlayingAll(false);
+    setActiveIdx(null);
   };
 
   return (
@@ -67,12 +77,21 @@ const ScenesPlay = () => {
       />
 
       <div className="mb-5 flex justify-start">
-        <button
-          onClick={playAll}
-          className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/20"
-        >
-          <PlayCircle className="size-4" /> <T>播放整段对话</T>
-        </button>
+        {isPlayingAll ? (
+          <button
+            onClick={stopAll}
+            className="inline-flex items-center gap-2 rounded-full bg-destructive/10 px-4 py-2 text-sm font-semibold text-destructive transition hover:bg-destructive/20"
+          >
+            <StopCircle className="size-4" /> <T>停止播放</T>
+          </button>
+        ) : (
+          <button
+            onClick={playAll}
+            className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/20"
+          >
+            <PlayCircle className="size-4" /> <T>播放整段对话</T>
+          </button>
+        )}
       </div>
 
       <section className="space-y-3">

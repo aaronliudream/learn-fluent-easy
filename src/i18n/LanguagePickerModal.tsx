@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Globe, Check } from "lucide-react";
+import { Globe, Check, Sparkles } from "lucide-react";
 import { LANGUAGES, type LangCode } from "./languages";
 import { useI18n } from "./I18nProvider";
 
@@ -36,7 +36,30 @@ export function LanguagePickerModal() {
           <DialogDescription>{t("lang.pickerSubtitle")}</DialogDescription>
         </DialogHeader>
 
-        <div className="my-2 grid max-h-[50vh] grid-cols-2 gap-2 overflow-y-auto pr-1">
+        {/* Multilingual hint so non-English speakers immediately understand
+            this is the "pick your mother language" prompt. */}
+        <div className="mt-1 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-3 text-center">
+          <div className="mb-1 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-primary">
+            <Sparkles className="size-3" />
+            <span>Choose your mother language</span>
+            <Sparkles className="size-3" />
+          </div>
+          <div className="text-xs leading-relaxed text-muted-foreground">
+            <span>请选择你的母语</span>
+            <span className="mx-1.5 opacity-40">·</span>
+            <span>母国語を選んでください</span>
+            <span className="mx-1.5 opacity-40">·</span>
+            <span>모국어를 선택하세요</span>
+            <br />
+            <span>Elige tu idioma</span>
+            <span className="mx-1.5 opacity-40">·</span>
+            <span>Choisissez votre langue</span>
+            <span className="mx-1.5 opacity-40">·</span>
+            <span>اختر لغتك</span>
+          </div>
+        </div>
+
+        <div className="my-3 grid max-h-[45vh] grid-cols-2 gap-2 overflow-y-auto pr-1">
           {sorted.map((l) => {
             const isSel = l.code === selected;
             return (

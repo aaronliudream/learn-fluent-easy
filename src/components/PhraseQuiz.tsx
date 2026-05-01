@@ -10,6 +10,7 @@ import { KNOWN_PHRASES } from "@/components/TappableLine";
 import { stripTags } from "@/lib/richText";
 import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
+import { recordQuizAnswer, seedReviews, type ReviewSeed } from "@/lib/srs";
 
 type DialogLine = { en: string; cn: string };
 
@@ -22,6 +23,8 @@ type QuizItem = {
   answer: string;
   /** 4 options including the correct one, randomized */
   options: string[];
+  /** Optional SRS seed so a correct/incorrect answer can update the review queue. */
+  seed?: ReviewSeed;
 };
 
 /** One AI-extracted key expression. */
@@ -277,6 +280,12 @@ function buildQuizFromExpressions(
       hint: stripTags(line.cn) + (e.cn ? `  💡 ${e.cn}` : ""),
       answer,
       options: shuffle([answer, ...distractors.slice(0, 3)]),
+      seed: {
+        phrase: e.en,
+        phrase_cn: e.cn,
+        source_line_en: stripTags(line.en),
+        source_line_cn: stripTags(line.cn),
+      },
     });
     if (items.length >= maxItems) break;
   }

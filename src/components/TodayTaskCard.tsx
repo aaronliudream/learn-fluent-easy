@@ -40,7 +40,7 @@ function nextLessonInfo(completed: string[]): { to: string; title: string } {
       }
     }
   }
-  return { to: "/levels", title: "继续你的学习路径" };
+  return { to: "/levels", title: "继续你的学习路径" }; // translated via t() at render time
 }
 
 export const TodayTaskCard = () => {

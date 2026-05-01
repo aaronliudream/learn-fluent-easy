@@ -19,6 +19,10 @@ function normalize(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9' ]+/g, " ").replace(/\s+/g, " ").trim();
 }
 
+// Bump this when you change the AI prompt/schema so we re-generate explanations
+// instead of returning stale cached versions.
+const SCHEMA_VERSION = "zh-v2";
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
@@ -44,7 +48,7 @@ Deno.serve(async (req) => {
       .from("phrase_explanations")
       .select("explanation")
       .eq("normalized", normalized)
-      .eq("target_lang", "zh")
+      .eq("target_lang", SCHEMA_VERSION)
       .maybeSingle();
 
     if (cached?.explanation) {
@@ -54,20 +58,44 @@ Deno.serve(async (req) => {
     }
 
     // 2) Ask Lovable AI Gateway
-    const systemPrompt = `你是一名为中国英语学习者讲解英文单词与短语的老师。回复 JSON,字段如下:
+    const systemPrompt = `你是一位资深的、最受中国英语学习者欢迎的英文老师。你要把一个英文单词或短语讲成一节精炼的"小课",像下面这样的风格:
+
+- 一句话总结这个短语在地道英语里到底是什么意思 (one_line_cn)
+- 逐词拆解,告诉学生每个组成词的字面意思,以及在这个短语里的真正含义 (literal[]). 提醒易错点,例如 party 不是"派对"
+- 描述这个短语最典型的使用场景,让学生看到画面 (scene_cn)
+- 给出 2-4 个母语人士真正会说的英文回答 / 搭配回应,带中文 (replies[])
+- 列出 1-3 个母语人士也常用的同义说法,带中文 (similar[])
+- 给一个"小细节 / 高分点",学生看完能用上 (tip_cn)
+- 配 1 个英文例句 + 中文翻译 (example)
+
+严格按下面的 JSON 结构返回,不要 markdown 代码块,不要多余文字:
 {
-  "phrase": string,            // 原短语 (清理过的小写形式)
-  "pos": string,               // 词性,例如 "noun", "phrase", "verb"; 没有就空字符串
-  "meaning_cn": string,        // 简明中文释义,1-2 句
-  "usage_cn": string,          // 用法解释/搭配/语气提示,1-2 句
-  "examples": [                // 1-2 个英文例句
+  "phrase": string,                              // 原短语
+  "pos": string,                                 // 词性,例如 "phrase" / "verb" / "noun";没有就空字符串
+  "one_line_cn": string,                         // 一句话翻译/解释
+  "literal": [                                   // 逐词拆解
+    { "word": string, "meaning_cn": string, "note_cn": string }   // note_cn 可以空字符串
+  ],
+  "scene_cn": string,                            // 典型使用场景,1-2 句,生动一点
+  "replies": [                                   // 学生可以这样回答 / 这样接话
     { "en": string, "cn": string }
   ],
-  "synonyms": string[]         // 0-3 个常见近义词或同类表达,可为空
+  "similar": [                                   // 同义/相近说法
+    { "en": string, "cn": string }
+  ],
+  "tip_cn": string,                              // 1 句高分小细节,可空
+  "example": { "en": string, "cn": string }      // 1 个完整例句
 }
-只回 JSON,不要 markdown 包裹,不要解释。`;
 
-    const userPrompt = `请讲解短语: "${phrase}"。${context ? `它出现在这句话: "${context}"` : ""}`;
+要求:
+- 全部解释用中文,例句保持英文 + 中文翻译
+- 内容要"地道、口语、面向中国学生",避免学术腔
+- 如果是普通常见单词 (例如 "the" / "is"),literal 可以只有 1 个元素,replies 可以为空数组
+- one_line_cn 必填,绝不能空`;
+
+    const userPrompt = `请讲解这个英文短语/单词: "${phrase}"。${
+      context ? `它出现在这句对话里: "${context}"。请结合这个上下文讲解。` : ""
+    }`;
 
     const aiResp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
@@ -131,7 +159,7 @@ Deno.serve(async (req) => {
           phrase,
           normalized,
           source_lang: "en",
-          target_lang: "zh",
+          target_lang: SCHEMA_VERSION,
           explanation: parsed,
         },
         { onConflict: "normalized,target_lang" },

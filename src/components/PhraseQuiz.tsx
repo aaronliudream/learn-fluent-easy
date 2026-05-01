@@ -223,21 +223,152 @@ function buildQuiz(lines: DialogLine[], maxItems = 10): QuizItem[] {
   return items;
 }
 
-export function PhraseQuiz({ lines }: { lines: DialogLine[] }) {
-  const initialItems = useMemo(() => buildQuiz(lines), [lines]);
-  const [items, setItems] = useState(initialItems);
+/**
+ * Build a quiz directly from AI-extracted key expressions. Each expression is
+ * blanked out of its source line; distractors are pulled from other key
+ * expressions in the SAME dialogue (so they feel topical), padded by
+ * KNOWN_PHRASES if needed.
+ */
+function buildQuizFromExpressions(
+  lines: DialogLine[],
+  expressions: KeyExpression[],
+  maxItems = 12,
+): QuizItem[] {
+  const items: QuizItem[] = [];
+  const used = new Set<string>();
+
+  // Distractor universe: every expression in this dialogue + safe fallbacks.
+  const exprPool = Array.from(new Set(expressions.map((e) => e.en)));
+  const fallback = KNOWN_PHRASES.filter((p) => p.split(" ").length >= 2);
+  const universe = Array.from(new Set([...exprPool, ...fallback]));
+
+  for (const e of expressions) {
+    if (used.has(e.en)) continue;
+    if (e.line_index < 0 || e.line_index >= lines.length) continue;
+    const line = lines[e.line_index];
+    const en = stripTags(line.en);
+    const lower = en.toLowerCase();
+    const idx = lower.indexOf(e.en.toLowerCase());
+    if (idx < 0) continue;
+    used.add(e.en);
+    const blanked = en.slice(0, idx) + "____" + en.slice(idx + e.en.length);
+    const answer = en.slice(idx, idx + e.en.length);
+
+    const pool = universe.filter(
+      (p) =>
+        p.toLowerCase() !== e.en.toLowerCase() &&
+        Math.abs(p.length - e.en.length) < 16,
+    );
+    const distractors = shuffle(pool).slice(0, 3);
+    while (distractors.length < 3) {
+      const f = universe[Math.floor(Math.random() * universe.length)];
+      if (
+        f &&
+        f.toLowerCase() !== e.en.toLowerCase() &&
+        !distractors.includes(f)
+      ) {
+        distractors.push(f);
+      }
+      if (distractors.length >= 3) break;
+    }
+
+    items.push({
+      blanked,
+      hint: stripTags(line.cn) + (e.cn ? `  💡 ${e.cn}` : ""),
+      answer,
+      options: shuffle([answer, ...distractors.slice(0, 3)]),
+    });
+    if (items.length >= maxItems) break;
+  }
+  return items;
+}
+
+export function PhraseQuiz({
+  lines,
+  dialogueKey,
+}: {
+  lines: DialogLine[];
+  /** Stable id for the dialogue (e.g. "scene:restaurant-chinese-1"). When
+   *  provided, the quiz is built from AI-curated key expressions cached
+   *  per-dialogue, so it tests the truly meaningful expressions rather than
+   *  whatever generic phrases happen to appear. */
+  dialogueKey?: string;
+}) {
+  const fallbackItems = useMemo(() => buildQuiz(lines), [lines]);
+  const [items, setItems] = useState<QuizItem[]>(fallbackItems);
+  const [loading, setLoading] = useState<boolean>(!!dialogueKey);
+  const [aiExpressions, setAiExpressions] = useState<KeyExpression[] | null>(
+    null,
+  );
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
 
+  // Reset state whenever the source dialogue changes.
   useEffect(() => {
-    setItems(initialItems);
+    setItems(fallbackItems);
+    setAiExpressions(null);
     setIdx(0);
     setPicked(null);
     setScore(0);
     setDone(false);
-  }, [initialItems]);
+    setLoading(!!dialogueKey);
+  }, [fallbackItems, dialogueKey]);
+
+  // Fetch AI-curated key expressions once per dialogue (cached server-side).
+  useEffect(() => {
+    if (!dialogueKey || lines.length === 0) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const { data, error } = await supabase.functions.invoke(
+          "extract-key-phrases",
+          {
+            body: {
+              dialogueKey,
+              lines: lines.map((l) => ({
+                en: stripTags(l.en),
+                cn: stripTags(l.cn),
+              })),
+            },
+          },
+        );
+        if (cancelled) return;
+        if (error) throw error;
+        const exprs: KeyExpression[] = data?.phrases?.expressions || [];
+        if (exprs.length > 0) {
+          setAiExpressions(exprs);
+          const aiItems = buildQuizFromExpressions(lines, exprs);
+          if (aiItems.length > 0) {
+            setItems(aiItems);
+            setIdx(0);
+            setPicked(null);
+            setScore(0);
+            setDone(false);
+          }
+        }
+      } catch (e) {
+        console.warn("[extract-key-phrases] failed, using local fallback", e);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [dialogueKey, lines]);
+
+  if (loading && items.length === 0) {
+    return (
+      <div className="rounded-2xl border border-border bg-card p-5">
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <Loader2 className="size-4 animate-spin" />{" "}
+          <T>正在挑选这节课的重点表达…</T>
+        </div>
+      </div>
+    );
+  }
 
   if (items.length === 0) {
     return (
@@ -268,7 +399,11 @@ export function PhraseQuiz({ lines }: { lines: DialogLine[] }) {
   };
 
   const restart = () => {
-    setItems(buildQuiz(lines));
+    if (aiExpressions && aiExpressions.length > 0) {
+      setItems(buildQuizFromExpressions(lines, aiExpressions));
+    } else {
+      setItems(buildQuiz(lines));
+    }
     setIdx(0);
     setPicked(null);
     setScore(0);

@@ -15,6 +15,20 @@ const ScenesPlay = () => {
   const dlg = SCENE_DIALOGUES.find((d) => d.id === dialogueId);
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
   const cancelledRef = useRef(false);
+  const lineRefs = useRef<Array<HTMLElement | null>>([]);
+
+  // Auto-scroll the currently-playing line into the upper portion of the
+  // viewport so the user can follow along without manually scrolling.
+  useEffect(() => {
+    if (activeIdx == null) return;
+    const el = lineRefs.current[activeIdx];
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const targetTop = window.innerHeight * 0.2;
+    const delta = rect.top - targetTop;
+    if (Math.abs(delta) < 8) return;
+    window.scrollBy({ top: delta, behavior: "smooth" });
+  }, [activeIdx]);
 
   useEffect(() => {
     if (dlg) recordVisit(`scene:${dlg.id}`);
@@ -68,6 +82,7 @@ const ScenesPlay = () => {
           return (
             <article
               key={i}
+              ref={(el) => (lineRefs.current[i] = el)}
               className={`flex gap-3 rounded-2xl border p-4 transition ${
                 isActive ? "border-primary/40 bg-primary/5" : "border-border bg-card"
               } ${isYou ? "ml-6" : "mr-6"}`}

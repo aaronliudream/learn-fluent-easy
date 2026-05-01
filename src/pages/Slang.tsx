@@ -15,7 +15,6 @@ import {
   PenLine,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
-import { FloatingBackButton } from "@/components/FloatingBackButton";
 import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
 import { speak } from "@/lib/speak";
@@ -651,16 +650,13 @@ const Slang = () => {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
+                      <h3 className="text-2xl font-extrabold md:text-xl">{it.phrase}</h3>
                       <button
-                        type="button"
                         onClick={() => speak(it.phrase)}
-                        className="group flex items-center gap-2 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
+                        className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
                         aria-label={tt("朗读")}
                       >
-                        <span className="text-2xl font-extrabold md:text-xl">{it.phrase}</span>
-                        <span className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
-                          <Volume2 className="size-3.5" />
-                        </span>
+                        <Volume2 className="size-3.5" />
                       </button>
                       {it.id < 0 && (
                         <span className="inline-flex items-center gap-1 rounded-full bg-orange-500/15 px-2 py-0.5 text-[10px] font-bold text-orange-600">
@@ -679,18 +675,17 @@ const Slang = () => {
                     <div className="mt-1 text-base text-muted-foreground md:text-sm">{it.meaning_en}</div>
 
                     <div className="mt-3 rounded-xl border border-border bg-secondary/30 p-3 text-lg md:text-base">
-                      <button
-                        type="button"
-                        onClick={() => speak(it.example)}
-                        className="group flex w-full items-start gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
-                        aria-label={tt("朗读例句")}
-                      >
+                      <div className="flex items-start gap-2">
                         <span className="mt-1 text-xs font-bold text-muted-foreground">EN</span>
                         <span className="flex-1">{it.example}</span>
-                        <span className="mt-1 grid size-6 shrink-0 place-items-center rounded-full text-muted-foreground transition group-hover:text-primary">
+                        <button
+                          onClick={() => speak(it.example)}
+                          className="grid size-6 shrink-0 place-items-center rounded-full text-muted-foreground transition hover:text-primary"
+                          aria-label={tt("朗读例句")}
+                        >
                           <Volume2 className="size-3" />
-                        </span>
-                      </button>
+                        </button>
+                      </div>
                       <div className="mt-1.5 flex items-start gap-2">
                         <span className="mt-1 text-xs font-bold text-muted-foreground"><T>释义</T></span>
                         <span className="flex-1 text-muted-foreground"><T>{it.example_cn}</T></span>
@@ -821,17 +816,15 @@ const Slang = () => {
             <section className="rounded-3xl bg-card p-6 shadow-card md:p-8">
               <div className="mb-5">
                 {q.kind === "en2cn" && (
-                  <button
-                    type="button"
-                    onClick={() => speak(q.prompt)}
-                    className="group flex items-center gap-2 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
-                    aria-label={tt("朗读")}
-                  >
-                    <span className="text-3xl font-extrabold">{q.prompt}</span>
-                    <span className="grid size-8 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-3xl font-extrabold">{q.prompt}</h3>
+                    <button
+                      onClick={() => speak(q.prompt)}
+                      className="grid size-8 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
+                    >
                       <Volume2 className="size-4" />
-                    </span>
-                  </button>
+                    </button>
+                  </div>
                 )}
                 {q.kind === "cn2en" && (
                   <h3 className="text-3xl font-extrabold"><T>{q.prompt}</T></h3>
@@ -868,17 +861,13 @@ const Slang = () => {
                     <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-violet-500/15 px-2.5 py-1 text-[11px] font-bold text-violet-700 dark:text-violet-400">
                       <PenLine className="size-3" /> <T>用一下：自己造句</T>
                     </div>
-                    <div className="flex items-center gap-2 flex-wrap">
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-2xl font-extrabold">{q.idiom.phrase}</h3>
                       <button
-                        type="button"
                         onClick={() => speak(q.idiom.phrase)}
-                        className="group flex items-center gap-2 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
-                        aria-label={tt("朗读")}
+                        className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
                       >
-                        <span className="text-2xl font-extrabold">{q.idiom.phrase}</span>
-                        <span className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
-                          <Volume2 className="size-3.5" />
-                        </span>
+                        <Volume2 className="size-3.5" />
                       </button>
                       <span className="text-sm text-muted-foreground"><T>{q.idiom.meaning_cn}</T></span>
                     </div>
@@ -977,17 +966,16 @@ const Slang = () => {
                         {g.improved && (
                           <div className="mt-3 rounded-xl bg-card p-3">
                             <div className="text-xs font-bold text-muted-foreground"><T>更地道的版本</T></div>
-                            <button
-                              type="button"
-                              onClick={() => speak(g.improved)}
-                              className="group mt-1 flex w-full items-start gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
-                              aria-label={tt("朗读")}
-                            >
+                            <div className="mt-1 flex items-start gap-2">
                               <span className="flex-1 italic">"{g.improved}"</span>
-                              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-secondary text-muted-foreground transition group-hover:text-primary">
+                              <button
+                                onClick={() => speak(g.improved)}
+                                className="grid size-7 place-items-center rounded-full bg-secondary text-muted-foreground transition hover:text-primary"
+                                aria-label={tt("朗读")}
+                              >
                                 <Volume2 className="size-3.5" />
-                              </span>
-                            </button>
+                              </button>
+                            </div>
                           </div>
                         )}
                       </div>
@@ -1075,9 +1063,6 @@ const Slang = () => {
           </div>
         </section>
       )}
-
-      <FloatingBackButton to="/" />
-      <div className="h-24" />
     </main>
   );
 };

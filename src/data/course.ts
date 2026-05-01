@@ -47,7 +47,7 @@ const mkOpenLessons = (titles: string[], doneCount = 0): Lesson[] =>
     status: i < doneCount ? "done" : "current",
   }));
 
-const LEVELS_RAW: Level[] = [
+export const LEVELS: Level[] = [
   {
     id: 1,
     name: "LEVEL 1",
@@ -215,65 +215,6 @@ const LEVELS_RAW: Level[] = [
   { id: 5, name: "LEVEL 5", unitsCount: 18, gradient: "bg-grad-5", locked: true, units: [] },
   { id: 6, name: "LEVEL 6", unitsCount: 25, gradient: "bg-grad-6", locked: true, units: [] },
 ];
-
-/**
- * Trial gating: within every unlocked level, only the very first lesson
- * (Unit 1, Lesson 1) stays open. Every other lesson in that level is locked
- * until the learner unlocks the full course.
- */
-const applyTrialLock = (levels: Level[]): Level[] =>
-  levels.map((lv) => {
-    if (lv.locked || lv.units.length === 0) return lv;
-    return {
-      ...lv,
-      units: lv.units.map((u, ui) => ({
-        ...u,
-        lessons: u.lessons.map((l, li) => {
-          const isFirst = ui === 0 && li === 0;
-          return {
-            ...l,
-            status: isFirst ? "current" : "locked",
-          };
-        }),
-      })),
-    };
-  });
-
-// ----------------------------------------------------------------
-// Target language switching
-// ----------------------------------------------------------------
-// Most of the app was originally hard-coded for "学英语" (target = English).
-// We now support a second target language: Chinese (HSK 1+). The choice is
-// stored in localStorage so it can be read synchronously here at module
-// load. Switching languages requires a page reload (handled by the picker
-// UI). This keeps the rest of the codebase unchanged — the existing
-// `LEVELS`, `findUnit`, `findLesson`, etc. all still work, they just
-// expose a different course tree.
-
-const readTargetLanguage = (): "en" | "zh" => {
-  if (typeof window === "undefined") return "en";
-  try {
-    const v = window.localStorage.getItem("target_language");
-    return v === "zh" ? "zh" : "en";
-  } catch {
-    return "en";
-  }
-};
-
-export const TARGET_LANGUAGE: "en" | "zh" = readTargetLanguage();
-
-// Lazily resolve the Chinese course tree so the JSON / TS module is only
-// loaded when the user actually picks Chinese.
-let chineseLevels: Level[] | null = null;
-if (TARGET_LANGUAGE === "zh") {
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const mod = require("./courseStructure.zh") as { HSK_LEVELS_RAW: Level[] };
-  chineseLevels = mod.HSK_LEVELS_RAW;
-}
-
-export const LEVELS: Level[] = applyTrialLock(
-  TARGET_LANGUAGE === "zh" && chineseLevels ? chineseLevels : LEVELS_RAW,
-);
 
 export const LESSON_STEPS = [
   { id: 1, cn: "词汇学习", en: "Vocabulary", icon: "BookOpen" },

@@ -19,7 +19,6 @@ export type StringKey =
   | "index.section.placement.eyebrow"
   | "index.section.placement.title"
   | "index.section.placement.desc"
-  | "index.section.placement.lastResult"
   | "index.section.aitalk.eyebrow"
   | "index.section.aitalk.title"
   | "index.section.aitalk.desc"
@@ -90,7 +89,6 @@ export const EN: Record<StringKey, string> = {
   "index.section.placement.eyebrow": "01 · Level Check",
   "index.section.placement.title": "Discover your English level",
   "index.section.placement.desc": "Adaptive 25-min test · Listening, speaking, reading, writing · A1–C1 rating",
-  "index.section.placement.lastResult": "Last result {cefr} · Recommended LEVEL {level} · Tap to retake",
   "index.section.aitalk.eyebrow": "AI VOICE",
   "index.section.aitalk.title": "Chat 10 minutes in English with Alex",
   "index.section.aitalk.desc": "A real young Californian · all-English live conversation · auto bilingual review + vocabulary quiz at the end",
@@ -139,9 +137,9 @@ export const EN: Record<StringKey, string> = {
   "lang.changeLater": "You can change this anytime from the header.",
 
   "support.cta": "If you like this app, buy me a coffee ☕",
-  "support.thanks": "Thanks for your support — it helps make Big Moon English better.",
+  "support.thanks": "Thanks for your support — it helps make FluentPath better.",
   "support.qrTitle": "Buy me a coffee ☕",
-  "support.qrSubtitle": "Scan with WeChat or Alipay to send a tip directly. Every bit helps keep Big Moon English ad-free.",
+  "support.qrSubtitle": "Scan with WeChat or Alipay to send a tip directly. Every bit helps keep FluentPath ad-free.",
   "support.qrWechat": "WeChat Pay",
   "support.qrAlipay": "Alipay",
   "support.qrHowTo": "Long-press the image to save, then open WeChat / Alipay → Scan.",
@@ -163,7 +161,6 @@ export const ZH: Record<StringKey, string> = {
   "index.section.placement.eyebrow": "01 · 水平测试",
   "index.section.placement.title": "英语水平测试",
   "index.section.placement.desc": "25 分钟自适应测试 · 听说读写四项 · A1–C1 评级",
-  "index.section.placement.lastResult": "上次测评 {cefr} · 推荐 LEVEL {level} · 点击重新测评",
   "index.section.aitalk.eyebrow": "AI 语音",
   "index.section.aitalk.title": "和 Alex 聊 10 分钟英语",
   "index.section.aitalk.desc": "地道美国年轻人 · 全英文真人对话 · 结束自动双语讲解 + 词汇测试",
@@ -212,9 +209,9 @@ export const ZH: Record<StringKey, string> = {
   "lang.changeLater": "之后可以随时在顶部切换。",
 
   "support.cta": "如果喜欢这个 App，请我喝杯咖啡 ☕",
-  "support.thanks": "感谢你的支持，让 Big Moon English 变得更好。",
+  "support.thanks": "感谢你的支持，让 FluentPath 变得更好。",
   "support.qrTitle": "请我喝杯咖啡 ☕",
-  "support.qrSubtitle": "微信或支付宝扫一扫，随心打赏。你的支持让 Big Moon English 保持无广告、持续更新。",
+  "support.qrSubtitle": "微信或支付宝扫一扫，随心打赏。你的支持让 FluentPath 保持无广告、持续更新。",
   "support.qrWechat": "微信支付",
   "support.qrAlipay": "支付宝",
   "support.qrHowTo": "长按图片保存，再打开微信 / 支付宝 → 扫一扫即可。",

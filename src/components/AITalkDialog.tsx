@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, ListChecks, Check, AlertCircle, Trophy, Target } from "lucide-react";
+import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, ListChecks, Check, AlertCircle, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
@@ -13,13 +13,6 @@ import { QwenRealtimeSession, QWEN_VOICE_MAP } from "@/lib/qwenRealtime";
 import { recordAITalk } from "@/lib/guestProgress";
 
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
-
-export type MissionPhrase = { phrase: string; meaning_cn: string; example_en?: string };
-export type Mission = {
-  goal_cn: string;
-  must_use: MissionPhrase[];
-  success_criteria_cn: string;
-};
 
 type RecapTurn = { en: string; cn: string; tip_cn: string; better_en: string };
 type QuizQ = {
@@ -41,7 +34,6 @@ type Props = {
   levelName?: string;
   level?: string; // CEFR like "A1"
   isGuest?: boolean; // if true, use shorter trial session + show signup CTA
-  mission?: Mission | null;
 };
 
 const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
@@ -49,8 +41,8 @@ const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
 // Builds the Qwen instructions prompt (mirror of what the realtime-token
 // edge function does for OpenAI, kept on the client because Qwen receives
 // session.update directly from the browser via the proxy).
-function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string; mission?: Mission | null }) {
-  const { lessonTitle, unitTitle, levelName, level, mission } = opts;
+function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string }) {
+  const { lessonTitle, unitTitle, levelName, level } = opts;
   // Sprinkle in slang the learner is actively practicing so Alex naturally
   // reinforces what they're studying in the Slang module.
   const activeIds = getActiveLearningSlangIds(6);
@@ -59,14 +51,6 @@ function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string;
     .filter(Boolean) as string[];
   const slangHint = activePhrases.length
     ? `\n\nWHEN IT FEELS NATURAL, sprinkle in 1-2 of these slang phrases the learner is studying: ${activePhrases.map((p) => `"${p}"`).join(", ")}. Don't force it — only if it actually fits the conversation.`
-    : "";
-  const missionBlock = (mission && mission.must_use?.length)
-    ? `\n\nTODAY'S MISSION (steer the chat toward this without announcing it):
-- GOAL: ${mission.goal_cn}
-- Within your FIRST 2-3 turns, naturally MODEL each of these 3 target expressions so the learner hears them in context:
-${mission.must_use.map((m, i) => `  ${i + 1}. "${m.phrase}" — ${m.meaning_cn}${m.example_en ? ` (e.g. ${m.example_en})` : ""}`).join("\n")}
-- Then set up moments where it's the learner's turn to use them. If they get it slightly wrong, recast correctly in your reply.
-- When the goal is reached, naturally celebrate ("Sweet, it's a plan!") so they feel they "won".`
     : "";
   const levelHint = (() => {
     switch ((level || "").toUpperCase()) {
@@ -88,12 +72,11 @@ ABSOLUTE RULES:
 - ONLY speak English. Never switch to any other language. If they speak another language, gently say "Let's try that in English — give it a shot!" and wait.
 - Sound like a real American friend, not a teacher. Use contractions and natural rhythm.
 - Keep YOUR turns short (1-3 sentences). Ask one question, then let them talk.
-- RECAST, don't lecture: if they say something off, naturally echo back the corrected version inside your reply ("Oh, you went to the park yesterday? Which one?") and move on. Never say "the right way is...".
-- PUSH for output: if they give 1-3 word answers, gently nudge them ("Tell me more!", "Why's that?"). Don't let them coast.
+- Don't correct mistakes mid-conversation; we review at the end.
 
 LEVEL: ${levelHint}
 
-CONTEXT: ${hook}${slangHint}${missionBlock}`;
+CONTEXT: ${hook}${slangHint}`;
 }
 
 // Map our 6 OpenAI TTS voices onto the 8 Realtime voices (closest match).
@@ -106,7 +89,7 @@ const REALTIME_VOICE_MAP: Record<string, string> = {
   fable: "verse",
 };
 
-export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level, isGuest, mission }: Props) {
+export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level, isGuest }: Props) {
   const tt = useT();
   const sessionLen = isGuest ? GUEST_SESSION_SECONDS : SESSION_DURATION_SEC;
   const [phase, setPhase] = useState<"idle" | "connecting" | "live" | "ending" | "recap">("idle");
@@ -258,42 +241,6 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     return () => { if (timerRef.current) { window.clearInterval(timerRef.current); timerRef.current = null; } };
   }, [phase, endCall]);
 
-  // ── Mic gating while Alex is speaking ──────────────────────────────────
-  // The single biggest source of "AI got interrupted but the user wasn't
-  // talking" complaints is Alex's own voice leaking back into the mic from
-  // the speaker (echo cancellation isn't perfect, especially without
-  // headphones). Solution: disable the mic track entirely while Alex is
-  // speaking, then re-enable after a short cooldown so the speaker tail
-  // doesn't trigger VAD either. Honors the user's manual mute.
-  useEffect(() => {
-    if (phase !== "live") return;
-    const stream = localStreamRef.current;
-    if (!stream) return;
-    const tracks = stream.getAudioTracks();
-    if (tracks.length === 0) return;
-
-    let cooldownTimer: number | null = null;
-    const setEnabled = (on: boolean) => {
-      tracks.forEach((t) => { t.enabled = on; });
-      // Qwen path also short-circuits chunk sends on `muted` for extra safety.
-      qwenSessionRef.current?.setMuted(!on);
-    };
-
-    if (muted) {
-      // User explicitly muted — always off, regardless of Alex.
-      setEnabled(false);
-    } else if (aiSpeaking) {
-      // Alex is talking — gate the mic immediately.
-      setEnabled(false);
-    } else {
-      // Alex just stopped — wait briefly so any speaker tail/echo passes
-      // before we listen again.
-      cooldownTimer = window.setTimeout(() => setEnabled(true), 350);
-    }
-
-    return () => { if (cooldownTimer) window.clearTimeout(cooldownTimer); };
-  }, [aiSpeaking, muted, phase]);
-
   const upsertTurn = useCallback((idx: number, patch: Partial<Turn>) => {
     setTranscript((prev) => {
       const next = [...prev];
@@ -402,7 +349,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         // the global TTS settings used for lessons. Stable across sessions.
         const voicePref = getAlexVoice();
         const qwenVoice = QWEN_VOICE_MAP[voicePref] || "Cherry";
-        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level, mission });
+        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level });
         const session = new QwenRealtimeSession({
           cfg: { instructions, voice: qwenVoice, inputSampleRate: 16000, outputSampleRate: 24000 },
           onEvent: (evt) => handleRealtimeEvent(evt),
@@ -424,7 +371,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       const voicePref = getAlexVoice();
       const mappedVoice = REALTIME_VOICE_MAP[voicePref] || "shimmer";
       const { data, error } = await supabase.functions.invoke("realtime-token", {
-        body: { lessonTitle, unitTitle, levelName, level, voice: mappedVoice, mission },
+        body: { lessonTitle, unitTitle, levelName, level, voice: mappedVoice },
       });
       if (error) throw error;
       if (data?.error) throw new Error(data.error);
@@ -525,25 +472,6 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     return { correct, total: recap.quiz.length };
   }, [recap, quizAnswers]);
 
-  // Lightweight detection of which mission phrases the learner has actually
-  // said. We look ONLY at user turns and match the phrase as a loose word
-  // sequence (case-insensitive, trims punctuation). Good enough for chips.
-  const usedPhrases = useMemo(() => {
-    if (!mission?.must_use?.length) return new Set<string>();
-    const userText = transcript
-      .filter((t) => t.role === "user" && t.text)
-      .map((t) => t.text.toLowerCase().replace(/[^a-z0-9\s']/g, " ").replace(/\s+/g, " "))
-      .join(" ");
-    const set = new Set<string>();
-    for (const m of mission.must_use) {
-      const needle = m.phrase.toLowerCase().replace(/[^a-z0-9\s']/g, " ").replace(/\s+/g, " ").trim();
-      if (needle && userText.includes(needle)) set.add(m.phrase);
-    }
-    return set;
-  }, [transcript, mission]);
-
-  const missionComplete = !!mission && mission.must_use.length > 0 && usedPhrases.size === mission.must_use.length;
-
   if (!open) return null;
 
   return (
@@ -599,12 +527,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
           )}
 
           {(phase === "connecting" || phase === "live" || phase === "ending") && (
-            <>
-              {mission && (phase === "connecting" || phase === "live") && (
-                <MissionCard mission={mission} usedPhrases={usedPhrases} complete={missionComplete} />
-              )}
-              <LiveTranscript transcript={transcript} aiSpeaking={aiSpeaking} phase={phase} />
-            </>
+            <LiveTranscript transcript={transcript} aiSpeaking={aiSpeaking} phase={phase} />
           )}
 
           {phase === "recap" && (
@@ -745,66 +668,6 @@ function GuestSignupCTA() {
     </div>
   );
 }
-function MissionCard({ mission, usedPhrases, complete }: {
-  mission: Mission;
-  usedPhrases: Set<string>;
-  complete: boolean;
-}) {
-  const total = mission.must_use.length;
-  const used = usedPhrases.size;
-  return (
-    <div className={`mb-4 rounded-2xl border p-4 shadow-sm transition ${
-      complete
-        ? "border-emerald-400/60 bg-gradient-to-br from-emerald-50 via-emerald-50/40 to-transparent"
-        : "border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"
-    }`}>
-      <div className="flex items-start gap-2.5">
-        <div className={`grid size-9 shrink-0 place-items-center rounded-xl text-white shadow ${
-          complete ? "bg-emerald-500" : "bg-grad-title"
-        }`}>
-          {complete ? <Trophy className="size-4" /> : <Target className="size-4" />}
-        </div>
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center justify-between gap-2">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-primary">
-              {complete ? <T>任务达成 · 漂亮！</T> : <T>今日任务</T>}
-            </p>
-            <span className="rounded-full bg-card px-2 py-0.5 text-[11px] font-bold text-foreground/70 shadow-sm">
-              {used}/{total}
-            </span>
-          </div>
-          <p className="mt-1 text-sm font-semibold leading-snug">{mission.goal_cn}</p>
-          {mission.success_criteria_cn && (
-            <p className="mt-0.5 text-[11px] text-muted-foreground">
-              <T>完成条件</T>：{mission.success_criteria_cn}
-            </p>
-          )}
-        </div>
-      </div>
-      <div className="mt-3 flex flex-wrap gap-1.5">
-        {mission.must_use.map((m) => {
-          const ok = usedPhrases.has(m.phrase);
-          return (
-            <div
-              key={m.phrase}
-              title={m.meaning_cn + (m.example_en ? `\n${m.example_en}` : "")}
-              className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium transition ${
-                ok
-                  ? "border-emerald-500 bg-emerald-500 text-white shadow"
-                  : "border-border bg-card text-foreground/75"
-              }`}
-            >
-              {ok ? <Check className="size-3" /> : <span className="size-1.5 rounded-full bg-primary/50" />}
-              <span className="font-semibold">{m.phrase}</span>
-              <span className={`text-[10px] ${ok ? "text-emerald-50" : "text-muted-foreground"}`}>· {m.meaning_cn}</span>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
 function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[]; aiSpeaking: boolean; phase: string }) {
   const endRef = useRef<HTMLDivElement>(null);
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [transcript]);

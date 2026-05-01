@@ -1,20 +1,18 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { CheckCircle2, Lock, PlayCircle, Trophy } from "lucide-react";
-import { findUnit, LEVELS } from "@/data/course";
+import { findUnit } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { loadProgress, touchActive } from "@/lib/guestProgress";
 import { isMastered } from "@/lib/mastery";
 import { T, useT } from "@/i18n/T";
-import { useUnlockLimit } from "@/hooks/useAuthUser";
 
 const Unit = () => {
   const t = useT();
   const { levelId, unitId } = useParams();
   const unit = findUnit(Number(levelId), Number(unitId));
   const nudge = useGuestNudge();
-  const unlockLimit = useUnlockLimit();
 
   useEffect(() => {
     touchActive();
@@ -31,28 +29,13 @@ const Unit = () => {
 
   if (!unit) return <div className="p-10">{t("单元不存在")}</div>;
 
-  // Compute which lessons in this level are unlocked under the trial limit
-  // (first N lessons across the whole level, in unit + lesson order).
-  const level = LEVELS.find((lv) => lv.id === Number(levelId));
-  const unlockedKeys = new Set<string>();
-  if (level) {
-    let count = 0;
-    for (const u of level.units) {
-      for (const l of u.lessons) {
-        if (count < unlockLimit) unlockedKeys.add(`${u.id}-${l.id}`);
-        count++;
-      }
-    }
-  }
-
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader title={t("课程列表")} subtitle={t("完成每个课程来提升你的英语水平")} back={`/level/${levelId}`} />
 
       <section className="space-y-3">
         {unit.lessons.map((l) => {
-          const lessonUnlocked = unlockedKeys.has(`${unit.id}-${l.id}`);
-          const locked = !lessonUnlocked && l.status === "locked";
+          const locked = l.status === "locked";
           const done = l.status === "done";
           const mastered = isMastered(Number(levelId), Number(unitId), l.id);
           const Icon = mastered ? Trophy : done ? CheckCircle2 : locked ? Lock : PlayCircle;

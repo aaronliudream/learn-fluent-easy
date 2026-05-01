@@ -164,7 +164,7 @@ const Account = () => {
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
         <h3 className="text-base font-bold"><T>支持作者</T></h3>
         <p className="mt-1 text-sm text-muted-foreground">
-          <T>Big Moon English 是一个独立项目。如果它帮到了你，欢迎请我喝杯咖啡，让它持续更新。</T>
+          <T>FluentPath 是一个独立项目。如果它帮到了你，欢迎请我喝杯咖啡，让它持续更新。</T>
         </p>
         <SupportButton className="mt-4" />
       </section>

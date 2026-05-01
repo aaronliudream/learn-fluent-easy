@@ -12,44 +12,15 @@ import { IDIOMS } from "@/data/idioms";
 import { SCENE_DIALOGUES } from "@/data/scenes";
 import { WORK_CATEGORIES } from "@/data/workplace";
 import { useI18n } from "@/i18n/I18nProvider";
-import { T } from "@/i18n/T";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { SupportButton } from "@/components/SupportButton";
-import { TargetLanguagePicker } from "@/components/TargetLanguagePicker";
-import { TARGET_LANGUAGES, useTargetLanguage } from "@/hooks/useTargetLanguage";
-import {
-  DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
-
-/**
- * Small flag-like badge that renders the 2-letter language code in a pill.
- * Avoids relying on emoji flags which don't render on many systems
- * (notably Windows shows "us" / "cn" letters instead of a flag).
- */
-const LANG_BADGE_STYLES: Record<string, string> = {
-  en: "bg-gradient-to-br from-blue-600 to-red-600 text-white",
-  zh: "bg-gradient-to-br from-red-600 to-yellow-400 text-white",
-};
-const LangBadge = ({ code }: { code: string }) => (
-  <span
-    className={`inline-grid h-7 w-9 place-items-center rounded-md text-[11px] font-black uppercase tracking-tight shadow-sm ring-1 ring-black/10 ${
-      LANG_BADGE_STYLES[code] ?? "bg-secondary text-foreground"
-    }`}
-  >
-    {code === "en" ? "EN" : code === "zh" ? "中" : code.toUpperCase()}
-  </span>
-);
 
 const Index = () => {
   const { t } = useI18n();
-  const { language: targetLang, setLanguage: setTargetLang } = useTargetLanguage();
-  const currentTarget = TARGET_LANGUAGES.find((l) => l.value === targetLang) ?? TARGET_LANGUAGES[0];
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
   const [slangCount, setSlangCount] = useState<number>(IDIOMS.length);
-  const [lastPlacement, setLastPlacement] = useState<{ cefr: string; recommended_level: number; created_at: string } | null>(null);
 
   useEffect(() => {
     touchActive();
@@ -60,21 +31,6 @@ const Index = () => {
     supabase.auth.getSession().then(({ data: { session } }) => setUser(session?.user ?? null));
     return () => subscription.unsubscribe();
   }, []);
-
-  useEffect(() => {
-    if (!user) { setLastPlacement(null); return; }
-    let cancelled = false;
-    (async () => {
-      const { data } = await supabase
-        .from("placement_results")
-        .select("cefr,recommended_level,created_at")
-        .order("created_at", { ascending: false })
-        .limit(1)
-        .maybeSingle();
-      if (!cancelled && data) setLastPlacement(data as any);
-    })();
-    return () => { cancelled = true; };
-  }, [user]);
 
   useEffect(() => {
     let cancelled = false;
@@ -123,9 +79,7 @@ const Index = () => {
       icon: Award,
       eyebrow: t("index.section.placement.eyebrow"),
       title: t("index.section.placement.title"),
-      desc: lastPlacement
-        ? `${t("index.section.placement.lastResult", { cefr: lastPlacement.cefr, level: lastPlacement.recommended_level })}`
-        : t("index.section.placement.desc"),
+      desc: t("index.section.placement.desc"),
       gradient: "from-emerald-500 via-teal-500 to-cyan-500",
     },
     {
@@ -156,7 +110,7 @@ const Index = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
-      <div className="mb-4 flex flex-wrap items-center justify-end gap-2">
+      <div className="mb-4 flex justify-end">
         <LanguageSwitcher />
         <Button asChild variant="ghost" size="sm" className="mr-2">
           <Link to="/stats">
@@ -187,40 +141,6 @@ const Index = () => {
       </div>
 
       <PageHeader title={t("index.title")} subtitle={t("index.subtitle")} />
-
-      {/* "I want to learn" picker — premium card on the homepage */}
-      <div className="relative mb-6 overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600 p-5 text-white shadow-tile md:p-6">
-        <span className="pointer-events-none absolute -right-16 -top-20 size-56 rounded-full bg-white/15 blur-3xl" />
-        <span className="pointer-events-none absolute -bottom-20 -left-10 size-44 rounded-full bg-white/10 blur-2xl" />
-        <div className="relative flex flex-wrap items-center gap-4">
-          <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm md:size-14">
-            <GraduationCap className="size-6" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="text-lg font-extrabold leading-tight md:text-xl">
-              <T>I want to learn</T>
-            </div>
-          </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-indigo-700 shadow-md transition hover:scale-[1.03] hover:shadow-lg">
-              <T>Change</T> <ChevronDown className="size-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-60">
-              {TARGET_LANGUAGES.map((l) => (
-                <DropdownMenuItem
-                  key={l.value}
-                  onClick={() => { if (l.value !== targetLang) void setTargetLang(l.value); }}
-                  className={`gap-3 py-2.5 ${l.value === targetLang ? "font-semibold" : ""}`}
-                >
-                  <LangBadge code={l.value} />
-                  <span className="flex-1">{l.native}</span>
-                  <span className="text-xs text-muted-foreground">{l.label}</span>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      </div>
 
       {/* Optional: guest progress save nudge */}
       {!user && hasProgress && (

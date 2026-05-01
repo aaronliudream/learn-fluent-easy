@@ -1,6 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
 import { loadSettings } from "@/lib/voice";
-import { TARGET_LANGUAGE } from "@/data/course";
 
 let lastSpoken = "";
 let speakToken = 0;
@@ -108,15 +107,13 @@ const pickBrowserVoice = (voices: SpeechSynthesisVoice[], voiceId: string) => {
 const speakBrowserFallback = async (text: string, voiceId: string, speed: number, token: number) => {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
   const voices = await waitForVoices();
-  const voice = TARGET_LANGUAGE === "zh"
-    ? voices.find((v) => v.lang.toLowerCase().startsWith("zh"))
-    : pickBrowserVoice(voices, voiceId);
+  const voice = pickBrowserVoice(voices, voiceId);
   const rate = Math.min(1.0, Math.max(0.65, (Number(speed) || 0.85) * 0.9));
   await new Promise<void>((resolve) => {
     if (token !== speakToken) return resolve();
     const u = new SpeechSynthesisUtterance(text);
     if (voice) u.voice = voice;
-    u.lang = voice?.lang || (TARGET_LANGUAGE === "zh" ? "zh-CN" : "en-US");
+    u.lang = voice?.lang || "en-US";
     u.rate = rate;
     u.pitch = voiceId === "onyx" || voiceId === "echo" ? 0.9 : 0.98;
     u.onend = () => resolve();
@@ -127,13 +124,13 @@ const speakBrowserFallback = async (text: string, voiceId: string, speed: number
 
 // ---------- ElevenLabs via edge function ----------
 const fetchTTS = async (text: string, voiceId: string, speed: number): Promise<string | null> => {
-  const cacheKey = `${voiceId}|${speed}|${TARGET_LANGUAGE}|${text}`;
+  const cacheKey = `${voiceId}|${speed}|${text}`;
   const cached = audioCache.get(cacheKey);
   if (cached) return cached;
 
   try {
     const { data, error } = await supabase.functions.invoke("tts", {
-      body: { text, voiceId, speed, language: TARGET_LANGUAGE },
+      body: { text, voiceId, speed },
     });
     if (error) {
       console.warn("[tts] edge function error:", error.message);

@@ -31,9 +31,7 @@ import PREGENERATED_LESSONS from "@/data/aiLessons.json";
 
 const PREGEN_MAP = PREGENERATED_LESSONS as unknown as Record<string, LessonContent>;
 import { PageHeader } from "@/components/PageHeader";
-import { FloatingBackButton } from "@/components/FloatingBackButton";
 import { speak, speakSequence } from "@/lib/speak";
-import { useScrollToActive } from "@/lib/useScrollToActive";
 import { useGuestNudge } from "@/hooks/useGuestNudge";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
@@ -224,9 +222,6 @@ const Lesson = () => {
   };
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [activeReadingIdx, setActiveReadingIdx] = useState<number>(-1);
-  // Auto-scroll the currently-spoken paragraph into the center of the screen
-  // so the user never has to manually scroll while audio is playing.
-  const registerReadingRef = useScrollToActive(activeReadingIdx >= 0 ? activeReadingIdx : null);
 
   const playReadingAll = () => {
     if (!content) return;
@@ -362,16 +357,20 @@ const Lesson = () => {
       if (!n) return false;
       return readingNormSet.some((r) => r.n === n || r.n.includes(n) || n.includes(r.n));
     };
+    let fallbackIdx = 0;
     const grammar = (rawContent.grammar ?? []).map((g) => {
       const kept = (g.examples ?? []).filter((ex) => isInReading(ex.en));
       if (kept.length > 0) return { ...g, examples: kept };
-      // No example in the reading matches this grammar point. Keep the
-      // original authored examples — they are guaranteed to illustrate the
-      // rule. Substituting random reading sentences here would attach
-      // unrelated sentences (e.g. simple past) to the wrong grammar point
-      // (e.g. past perfect negation/questions), which is worse than having
-      // examples that don't appear verbatim in the article.
-      return g;
+      // No example in reading — substitute with sentences from reading so
+      // the rule "examples must come from the article" still holds.
+      const subs: { en: string; cn: string }[] = [];
+      while (subs.length < Math.min(2, readingSentences.length)) {
+        const pick = readingSentences[fallbackIdx % readingSentences.length];
+        fallbackIdx += 1;
+        if (!subs.some((s) => s.en === pick.en)) subs.push({ en: pick.en, cn: pick.cn });
+        if (fallbackIdx > readingSentences.length * 2) break;
+      }
+      return { ...g, examples: subs.length > 0 ? subs : g.examples };
     });
 
     return { ...rawContent, vocab, grammar };
@@ -693,17 +692,16 @@ const Lesson = () => {
                 <span className="absolute right-4 top-3 rounded-md bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">
                   #{i + 1}
                 </span>
-                <button
-                  type="button"
-                  onClick={() => speak(v.word)}
-                  className="group flex items-center gap-3 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
-                  aria-label="Play"
-                >
-                  <span className="text-2xl font-extrabold tracking-tight">{v.word}</span>
-                  <span className="grid size-8 place-items-center rounded-full text-primary transition group-hover:bg-primary/10">
+                <div className="flex items-center gap-3">
+                  <h4 className="text-2xl font-extrabold tracking-tight">{v.word}</h4>
+                  <button
+                    onClick={() => speak(v.word)}
+                    className="grid size-8 place-items-center rounded-full text-primary transition hover:bg-primary/10"
+                    aria-label="Play"
+                  >
                     <Volume2 className="size-5" />
-                  </span>
-                </button>
+                  </button>
+                </div>
                 <div className="mt-1 font-mono text-sm text-muted-foreground">{v.pron}</div>
                 <div className="mt-4 rounded-xl bg-card p-4">
                   <div className="font-semibold">{nativeText(v.meaning)}</div>
@@ -730,18 +728,16 @@ const Lesson = () => {
               const picked = vocabQuiz[q.idx];
               return (
                 <div key={q.idx} className="rounded-2xl border border-border bg-secondary/30 p-5">
-                  <button
-                    type="button"
-                    onClick={() => speak(q.word)}
-                    className="group flex w-full items-center gap-3 rounded-lg -mx-1 px-1 py-0.5 text-left transition hover:bg-secondary/60 active:scale-[0.99]"
-                    aria-label="Play"
-                  >
-                    <span className="text-xl font-extrabold">{q.word}</span>
+                  <div className="flex items-center gap-3">
+                    <h4 className="text-xl font-extrabold">{q.word}</h4>
                     <span className="font-mono text-xs text-muted-foreground">{q.pron}</span>
-                    <span className="ml-auto grid size-8 place-items-center rounded-full text-primary transition group-hover:bg-primary/10">
+                    <button
+                      onClick={() => speak(q.word)}
+                      className="ml-auto grid size-8 place-items-center rounded-full text-primary hover:bg-primary/10"
+                    >
                       <Volume2 className="size-4" />
-                    </span>
-                  </button>
+                    </button>
+                  </div>
                   <div className="mt-3 grid grid-cols-1 gap-2 md:grid-cols-2">
                     {q.options.map((opt, oi) => {
                       const isPicked = picked === oi;
@@ -789,7 +785,6 @@ const Lesson = () => {
               return (
               <div
                 key={i}
-                ref={registerReadingRef(i) as any}
                 className={`grid grid-cols-[28px_1fr] gap-x-4 rounded-2xl border p-5 transition md:grid-cols-[36px_1fr_1fr] md:gap-x-6 ${
                   isActive
                     ? "border-primary/50 bg-primary/10 shadow-sm"
@@ -797,29 +792,27 @@ const Lesson = () => {
                 }`}
               >
                 <div className={`pt-1 text-sm font-medium ${isActive ? "text-primary font-bold" : "text-muted-foreground"}`}>{i + 1}</div>
-                <button
-                  type="button"
-                  onClick={() => speak(p.en)}
-                  className="group flex w-full items-start gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
-                  aria-label={tt("朗读")}
-                >
-                  <span className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : ""}`}>{p.en}</span>
-                  <span className="grid size-8 shrink-0 place-items-center rounded-full text-primary transition group-hover:bg-primary/10 md:hidden">
-                    <Volume2 className="size-4" />
-                  </span>
-                </button>
-                <div className="col-start-2 mt-2 md:col-start-3 md:mt-0">
+                <div className="flex items-start gap-2">
+                  <p className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : ""}`}>{p.en}</p>
                   <button
-                    type="button"
                     onClick={() => speak(p.en)}
-                    className="group flex w-full items-start gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
+                    className="grid size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:hidden"
                     aria-label={tt("朗读")}
                   >
-                    <span className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : "text-foreground/90"}`}><T>{p.cn}</T></span>
-                    <span className="hidden size-8 shrink-0 place-items-center rounded-full text-primary transition group-hover:bg-primary/10 md:grid">
-                      <Volume2 className="size-4" />
-                    </span>
+                    <Volume2 className="size-4" />
                   </button>
+                </div>
+                <div className="col-start-2 mt-2 md:col-start-3 md:mt-0">
+                  <div className="flex items-start gap-2">
+                    <p className={`flex-1 text-base leading-relaxed transition ${isActive ? "font-bold text-primary" : "text-foreground/90"}`}><T>{p.cn}</T></p>
+                    <button
+                      onClick={() => speak(p.en)}
+                      className="hidden size-8 shrink-0 place-items-center rounded-full text-primary hover:bg-primary/10 md:grid"
+                      aria-label={tt("朗读")}
+                    >
+                      <Volume2 className="size-4" />
+                    </button>
+                  </div>
                   {p.note && (
                     <div className="mt-2 rounded-lg border-l-2 border-amber-400 bg-amber-50 px-3 py-1.5 text-xs italic text-amber-900 dark:bg-amber-500/10 dark:text-amber-200">
                       💡 {p.note}
@@ -856,17 +849,15 @@ const Lesson = () => {
                 <ul className="mt-3 space-y-2">
                   {g.examples.map((ex, j) => (
                     <li key={j} className="rounded-xl bg-card p-3">
-                      <button
-                        type="button"
-                        onClick={() => speak(ex.en)}
-                        className="group flex w-full items-center justify-between gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
-                        aria-label={tt("朗读")}
-                      >
+                      <div className="flex items-center justify-between gap-2">
                         <span className="font-semibold">{ex.en}</span>
-                        <span className="text-primary transition group-hover:opacity-70">
+                        <button
+                          onClick={() => speak(ex.en)}
+                          className="text-primary hover:opacity-70"
+                        >
                           <Volume2 className="size-4" />
-                        </span>
-                      </button>
+                        </button>
+                      </div>
                       <div className="mt-1 text-xs text-muted-foreground"><T>{ex.cn}</T></div>
                     </li>
                   ))}
@@ -895,17 +886,15 @@ const Lesson = () => {
                 <div className="text-xs font-semibold uppercase tracking-wider text-primary">
                   {nativeText(e.scene)}
                 </div>
-                <button
-                  type="button"
-                  onClick={() => speak(e.en)}
-                  className="group mt-2 flex w-full items-center justify-between gap-2 text-left transition hover:opacity-90 active:scale-[0.998]"
-                  aria-label={tt("朗读")}
-                >
-                  <span className="text-base font-semibold">{e.en}</span>
-                  <span className="text-primary transition group-hover:opacity-70">
+                <div className="mt-2 flex items-center justify-between gap-2">
+                  <p className="text-base font-semibold">{e.en}</p>
+                  <button
+                    onClick={() => speak(e.en)}
+                    className="text-primary hover:opacity-70"
+                  >
                     <Volume2 className="size-4" />
-                  </span>
-                </button>
+                  </button>
+                </div>
                 <p className="mt-1 text-sm text-muted-foreground"><T>{e.cn}</T></p>
               </div>
             ))}
@@ -1347,9 +1336,6 @@ const Lesson = () => {
         level={["A1","A2","B1","B2","C1","C2"][Number(levelId) - 1] || undefined}
         isGuest={!authedUser}
       />
-
-      <FloatingBackButton to={`/level/${levelId}/unit/${unitId}`} />
-      <div className="h-24" />
     </main>
   );
 };

@@ -5420,16 +5420,12 @@
         "explain": "动词 “open” 在本课中特指“开设”账户，它是一个常用动词，有很多不同的意思，但在这里是关于开设一个银行账户。",
         "examples": [
           {
-            "en": "I want to open a bank account.",
-            "cn": "我想开设一个银行账户。"
+            "cn": "我想开一个银行账户。",
+            "en": "I want to open a bank account."
           },
           {
-            "en": "Can I open an account here?",
-            "cn": "我可以在这里开设账户吗？"
-          },
-          {
-            "en": "She opened a savings account yesterday.",
-            "cn": "她昨天开设了一个储蓄账户。"
+            "en": "This bank opens at 9 AM.",
+            "cn": "这家银行早上9点开门。"
           }
         ]
       }
@@ -10775,15 +10771,15 @@
         "examples": [
           {
             "en": "Thanks! / Thank you!",
-            "cn": "谢谢！/ 谢谢你！"
+            "cn": "谢谢！"
           },
           {
             "en": "You too!",
             "cn": "你也是！"
           },
           {
-            "en": "Thanks, I appreciate it.",
-            "cn": "谢谢，我很感激。"
+            "cn": "你喜欢它吗？",
+            "en": "Do you like it?"
           }
         ]
       }
@@ -13148,16 +13144,16 @@
         "explain": "当你需要询问别人的饮品偏好，例如是否加牛奶或糖时，可以使用以下句型。这些通常在点咖啡或茶时用到。",
         "examples": [
           {
-            "en": "Do you need milk?",
-            "cn": "你需要牛奶吗？"
+            "cn": "你需要牛奶吗？",
+            "en": "Do you need milk?"
           },
           {
-            "en": "Do you want sugar?",
-            "cn": "你要糖吗？"
+            "cn": "你想要糖吗？",
+            "en": "Do you want sugar?"
           },
           {
-            "en": "Would you like milk or sugar?",
-            "cn": "你要加牛奶还是加糖？"
+            "en": "One needs milk, no sugar.",
+            "cn": "一杯需要牛奶不加糖。"
           }
         ],
         "title": "Asking about preferences: Milk and sugar"
@@ -18207,16 +18203,16 @@
         "title": "“It was / It is + 时间 + for + Someone (to do something)” 表达“（某人）做了某事多久了”",
         "examples": [
           {
-            "en": "It is exactly one year since I started working here.",
-            "cn": "我在这里工作恰好满一年了。"
+            "en": "It was her one-year anniversary at her first real job.",
+            "cn": "这是她第一份真正工作的周年纪念日。"
           },
           {
-            "en": "It is already six months since she was promoted.",
-            "cn": "她被提升已经六个月了。"
+            "cn": "我在这里工作刚好一年了。",
+            "en": "It is exactly one year since I started working here."
           },
           {
-            "en": "It was three months since he moved to the city.",
-            "cn": "那时他搬到这个城市已经三个月了。"
+            "en": "It was difficult for me to adjust to the new environment at first.",
+            "cn": "一开始我很难适应新环境。"
           }
         ],
         "explain": "这个句型用来表达“某件事情发生或持续了多长时间”。在这里，“It was / It is”是无人称代词，表示时间。\n“It was”表示过去某个时间点已经持续了多久。\n“It is”表示现在已经持续了多久。"
@@ -32356,16 +32352,16 @@
         "explain": "在英语中，我们经常使用 so, such 和 what a (an) 来表达强烈的感情或强调某事物，形成感叹句。它们通常表示“太……了！”或“多么……啊！”",
         "examples": [
           {
-            "en": "The weather is so beautiful!",
-            "cn": "天气真美！"
+            "cn": "天气太美了！",
+            "en": "The weather is so beautiful!"
           },
           {
-            "en": "It was such an exciting game!",
-            "cn": "那真是一场令人兴奋的比赛！"
+            "cn": "那真是个多么激动人心的比赛啊！",
+            "en": "It was such a exciting game!"
           },
           {
-            "en": "What a great idea!",
-            "cn": "真是个好主意！"
+            "cn": "真是个好主意！",
+            "en": "What a great idea!"
           }
         ]
       },
@@ -41560,15 +41556,15 @@
         "examples": [
           {
             "en": "Wei had hesitated to tell anyone until all the arrangements were firm.",
-            "cn": "薇犹豫着没有告诉任何人，直到所有安排都确定下来为止。"
+            "cn": "在所有安排确定之前，薇一直犹豫着没有告诉任何人。（“犹豫”发生在“告诉”之前，且在故事主线叙述之前）"
           },
           {
             "en": "She had never been so excited.",
-            "cn": "她从未如此兴奋过。"
+            "cn": "她从未如此兴奋过。（“从未如此兴奋”是在那个特定时间点前的状态）"
           },
           {
-            "en": "By the time she spoke to her parents, she had made up her mind.",
-            "cn": "在她跟父母谈之前，她已经下定决心了。"
+            "cn": "我早觉得一切都会顺利的。（“感觉”发生在“事情顺利进行”之前）",
+            "en": "I had a feeling it would all work out."
           }
         ],
         "title": "过去完成时在叙事中的应用",
@@ -43719,15 +43715,15 @@
         "examples": [
           {
             "en": "A: I think we should launch this product next week.",
-            "cn": "A：我认为我们下周应该推出这款产品。"
+            "cn": "甲：我觉得我们下周就应该推出这个产品。"
           },
           {
-            "en": "B: I'm not so sure about that. We still need to test it.",
-            "cn": "B：我不太同意。我们还需要测试。"
+            "cn": "乙：我不太确定。我们还需要测试它。",
+            "en": "B: I'm not so sure about that. We still need to test it."
           },
           {
-            "en": "B: I'm not so sure about that. He has missed meetings before.",
-            "cn": "B：我不太同意。他以前缺席过会议。"
+            "en": "A: It's always best to follow the old rules.",
+            "cn": "甲：遵守老规矩总是最好的。"
           }
         ],
         "explain": "这个句型是表达温和不同意或不确定的方式，尤其在对方提出了一个观点或建议时。它比直接说“I disagree”更礼貌和委婉，给对话留有余地。'that' 指代对方刚刚提到的观点或建议。",
@@ -50798,16 +50794,20 @@
       {
         "examples": [
           {
-            "en": "Having finished my homework, I went out to play.",
-            "cn": "做完作业后，我出去玩了。"
+            "cn": "做完作业后，我出去玩了。",
+            "en": "Having finished my homework, I went out to play."
           },
           {
-            "en": "Having studied hard, she passed the exam easily.",
-            "cn": "努力学习之后，她轻松通过了考试。"
+            "cn": "努力学习后，她轻松通过了考试。",
+            "en": "Having studied hard, she passed the exam easily."
           },
           {
-            "en": "Being tired, he went to bed early.",
-            "cn": "因为累了，他早早就上床睡觉了。"
+            "cn": "因为累了，他早早地睡了。",
+            "en": "Being tired, he went to bed early."
+          },
+          {
+            "cn": "她灿烂地笑着接过了奖项。",
+            "en": "Smiling brightly, she accepted the award."
           }
         ],
         "title": "Using Participle Phrases for Cause and Effect / Time",
@@ -52171,12 +52171,12 @@
             "cn": "我记得以前见过他。"
           },
           {
-            "en": "She enjoys reading in the park.",
-            "cn": "她喜欢在公园里读书。"
+            "cn": "别忘了给我打电话。（记得去打电话）",
+            "en": "Don't forget to call me."
           },
           {
             "en": "I regret telling her the secret.",
-            "cn": "我后悔告诉了她那个秘密。"
+            "cn": "我后悔告诉了她秘密。"
           }
         ],
         "title": "动词 + 动名词 (Verb + Gerund)",
@@ -52471,15 +52471,15 @@
         "examples": [
           {
             "en": "There are so many people from all over the world.",
-            "cn": "来自世界各地的人很多。"
+            "cn": "这里有来自世界各地的人。"
           },
           {
-            "en": "I have some friends in the Bay Area.",
-            "cn": "我在湾区有一些朋友。"
+            "cn": "我遇到了来自不同国家的人。",
+            "en": "I've met people from different countries."
           },
           {
             "en": "Do you have any questions?",
-            "cn": "你有任何问题吗？"
+            "cn": "你有什么问题吗？"
           }
         ]
       }
@@ -52629,16 +52629,16 @@
       {
         "examples": [
           {
-            "en": "It was the enamel box that caught Rosemary's eye.",
-            "cn": "正是那只搪瓷盒吸引了Rosemary的目光。"
+            "cn": "是那个珐琅盒吸引了罗斯玛丽的目光。",
+            "en": "It was the enamel box that caught Rosemary's eye."
           },
           {
             "en": "It was Miss Smith who needed help.",
-            "cn": "正是史密斯小姐需要帮助。"
+            "cn": "是史密斯小姐需要帮助。"
           },
           {
-            "en": "It was her smile that made him stay.",
-            "cn": "正是她的微笑让他留下来。"
+            "cn": "罗斯玛丽邀请她回家是很慷慨的。",
+            "en": "It was generous of Rosemary to invite her home."
           }
         ],
         "title": "强调句 (Cleft Sentences)",
@@ -52648,16 +52648,16 @@
         "explain": "在文学作品和日常叙述中，使用信号词可以帮助读者或听者更好地理解故事的结构和事件的进展。典型的三段式信号词可以是：\n导入 (Introduction): \"One day...\", \"Once upon a time...\", \"It began when...\"\n发展 (Development): \"Suddenly...\", \"Meanwhile...\", \"As a result...\"\n结局 (Conclusion): \"Eventually...\", \"In the end...\", \"Finally...\"",
         "examples": [
           {
-            "en": "One rainy afternoon, Rosemary was shopping...",
-            "cn": "一个雨天的下午，罗斯玛丽在外面购物..."
+            "cn": "一个下雨的下午，罗斯玛丽正在购物...",
+            "en": "One rainy afternoon, Rosemary was shopping..."
           },
           {
             "en": "Just then, a young woman... entered the shop.",
-            "cn": "就在那时，一位年轻女子走进了店里。"
+            "cn": "就在那时，一个年轻女子...走进了商店。"
           },
           {
-            "en": "Eventually, Rosemary smiled and left the shop.",
-            "cn": "最后，罗斯玛丽微笑着离开了店铺。"
+            "cn": "一个突如其来的想法让罗斯玛丽感到高兴。",
+            "en": "A sudden idea delighted Rosemary."
           }
         ],
         "title": "三段式信号词 (Signaling Words for Narrative Structure)"
@@ -55659,16 +55659,16 @@
         "title": "形容词后接不定式 'to do'",
         "examples": [
           {
-            "en": "Many people are reluctant to admit they need help.",
-            "cn": "很多人不愿承认自己需要帮助。"
+            "en": "I'm so sorry you're feeling this way.",
+            "cn": "你这样我很难过。"
+          },
+          {
+            "en": "It's tough when you put in so much effort.",
+            "cn": "当你付出这么多努力时，这确实很难。"
           },
           {
             "en": "She was happy to hear the news.",
-            "cn": "她听到这个消息很高兴。"
-          },
-          {
-            "en": "He is anxious to see a therapist.",
-            "cn": "他很想去看心理医生。"
+            "cn": "她很高兴听到这个消息。"
           }
         ],
         "explain": "有些形容词可以后接不定式（to + 动词原形），用来解释为什么会有某种感受或状态。常用于表达情感或评价。"
@@ -55737,16 +55737,16 @@
         "explain": "这些动词常用于表达科技或其他事物如何“允许”、“使能够”或“帮助”某人做某事。",
         "examples": [
           {
-            "en": "The new software allows doctors to analyze heart data remotely.",
-            "cn": "这款新软件允许医生远程分析心脏数据。"
+            "en": "Technology allows for early detection.",
+            "cn": "科技使得早期检测成为可能。(allow for + 名词)"
           },
           {
-            "en": "This device enables her to track her heart rate.",
-            "cn": "这个设备使她能够追踪心率。"
+            "cn": "这个设备使她能够追踪她的心率。",
+            "en": "This device enables her to track her heart rate."
           },
           {
-            "en": "Wearable technology helps people manage their health better.",
-            "cn": "可穿戴技术帮助人们更好地管理健康。"
+            "cn": "可穿戴科技帮助人们更好地管理他们的健康。",
+            "en": "Wearable technology helps people manage their health better."
           }
         ]
       }
@@ -57416,16 +57416,16 @@
         "explain": "“that”在这里被用作引导词，引入一个宾语从句。这个从句充当动词或形容词的宾语，说明具体的内容。在这个语境下，它常用来表达一个想法、事实或观点。",
         "examples": [
           {
-            "en": "She thinks that five minutes of reading every day is enough.",
-            "cn": "她认为每天读五分钟就够了。"
+            "cn": "你有没有想过小习惯的魔力？（这里的about the magic of small habits是介词宾语，但如果后面直接接that从句，则that引导的是动词的宾语从句）",
+            "en": "Have you ever thought about the magic of small habits?"
           },
           {
-            "en": "I'm sure that tiny habits will lead to long-term success.",
-            "cn": "我确信微小的习惯会带来长期的成功。"
+            "cn": "那么，今天你可以开始养成什么样的小习惯，让它在明天积累成巨大的成就呢？(that从句修饰small habit)",
+            "en": "So, what small habit can you start today that will compound into something great tomorrow?"
           },
           {
-            "en": "I believe that small changes can make a big difference.",
-            "cn": "我相信小的改变可以产生巨大的影响。"
+            "cn": "我相信微小的改变能带来巨大的不同。（that引导宾语从句）",
+            "en": "I believe that small changes can make a big difference."
           }
         ]
       }
@@ -58234,16 +58234,16 @@
         "explain": "混合条件句用于表达与过去事实相反的假设，其结果却影响到现在。通常用于表达后悔或设想。",
         "examples": [
           {
-            "en": "I wish I'd visited her last summer. (Implies: I didn't visit her, and now I regret it.)",
-            "cn": "我真希望去年夏天去看过她。（意思：我没有去，现在很后悔。）"
+            "cn": "我真希望去年夏天回来看过她。(言下之意：我没去看，现在很后悔。)",
+            "en": "I wish I'd visited her last summer. (Implies: I didn't visit her, and now I regret it.)"
           },
           {
-            "en": "If I had visited her last summer, I wouldn't be wondering what she needed now.",
-            "cn": "如果我去年夏天去看过她，我现在就不会还在想她当时需要什么。"
+            "en": "If I had known she would get so sick, I would have made time. (Past condition, past result)",
+            "cn": "如果我早知道她会病得这么重，我早就抽出时间了。(过去条件，过去结果)"
           },
           {
-            "en": "If I had spent more time with her back then, maybe I wouldn't feel this heavy sense of guilt now.",
-            "cn": "如果我当时多陪陪她，也许我现在就不会有这么沉重的内疚感了。"
+            "cn": "如果我那时花更多的时间陪她，也许我现在就不会有这种沉重的负罪感了。(过去条件，现在结果)",
+            "en": "If I had spent more time with her back then, maybe I wouldn't feel this heavy sense of guilt now. (Past condition, present result)"
           }
         ],
         "title": "混合条件句 (Mixed Conditionals)"
@@ -58774,16 +58774,16 @@
         "explain": "这种混合条件句结构是：If + 主语 + had + 过去分词 (表示与过去事实相反的假设)，主语 + would/could/might + 动词原形 (表示对现在情况的假设)。",
         "examples": [
           {
-            "en": "If I had learned Spanish, I could speak with the neighbors.",
-            "cn": "如果我学过西班牙语，我现在就能和邻居说话。"
+            "cn": "如果乔治多待一会儿，她可能又会看到那只猫了。",
+            "en": "If George had stayed longer, she might have seen the cat again."
           },
           {
-            "en": "If the innkeeper hadn't been so kind, George wouldn't have the cat now.",
-            "cn": "如果旅店老板没那么好心，乔治现在就不会有那只猫了。"
+            "cn": "如果旅店老板没有那么好心，乔治现在就不会有那只猫了。",
+            "en": "If the innkeeper hadn't been so kind, George wouldn't have the cat now."
           },
           {
-            "en": "If he had taken the bus, he would be here now.",
-            "cn": "如果他当时坐了公交车，他现在就会在这里。"
+            "cn": "如果女仆没有帮忙，乔治就不能轻易地去找猫了。",
+            "en": "If the maid hadn't helped, George wouldn't have been able to look for the cat easily."
           }
         ]
       }
@@ -61333,16 +61333,16 @@
         "explain": "在某些口语或非正式的书面语中，表示目的的介词“for”有时可以省略，尤其是当目的非常明确时。但这并非所有情况都适用，通常限于表示“为了（做某事）”的结构，后面跟着动名词。",
         "examples": [
           {
-            "en": "She went to the cellar to get a leg of lamb for dinner.",
-            "cn": "她下到地窖去拿一只羊腿作为晚餐。"
+            "cn": "她去地窖拿羊腿做晚餐。（原始句）",
+            "en": "She went to the cellar to get a leg of lamb for dinner."
           },
           {
-            "en": "She called the police asking for help.",
-            "cn": "她打电话给警察寻求帮助。"
+            "cn": "她去地窖拿羊腿晚餐。（省略 for，但此处 for 引导的是目的状语，省略后意思略有变化，变成 lamb dinner 这个词组）",
+            "en": "She went to the cellar to get a leg of lamb dinner."
           },
           {
-            "en": "He emailed the teacher asking for an extension.",
-            "cn": "他给老师发邮件，请求延期。"
+            "cn": "她去商店假装正常。（这里 for 并未省略，也不是 for dinner）",
+            "en": "She went to the store pretending to be normal."
           }
         ]
       },
@@ -63495,16 +63495,16 @@
       {
         "examples": [
           {
-            "en": "I saw a sleeping baby.",
-            "cn": "我看见了一个正在睡觉的婴儿。"
+            "cn": "我看到一个熟睡的婴儿。（说明性质）",
+            "en": "I saw a sleeping baby."
           },
           {
-            "en": "The girl living next door is my friend.",
-            "cn": "住在隔壁的那个女孩是我的朋友。"
+            "cn": "住在隔壁的女孩是我的朋友。（正在进行的状态）",
+            "en": "The girl living next door is my friend."
           },
           {
-            "en": "The barking dog woke me up.",
-            "cn": "那只吠叫的狗把我吵醒了。"
+            "cn": "梅正在考虑用叙述来开篇她的论文。（-ing 形式作 with 的宾语，说明起始方式）",
+            "en": "Mei is thinking of starting her thesis with a narrative."
           }
         ],
         "title": "动词 -ing 形式作定语",
@@ -63877,16 +63877,16 @@
       {
         "examples": [
           {
-            "en": "We are meeting Dr. Miller tomorrow morning.",
-            "cn": "我们明天早上要见米勒博士。"
+            "cn": "我正在考虑（将来）写全球健康问题。（我的计划是写这一主题）",
+            "en": "I'm thinking about writing about global health issues."
           },
           {
-            "en": "She is presenting her paper next week.",
-            "cn": "她下周要做论文报告。"
+            "cn": "我们明天早上要和米勒博士见面。（已经安排好的计划）",
+            "en": "We are meeting Dr. Miller tomorrow morning."
           },
           {
-            "en": "I'm traveling to Geneva next month.",
-            "cn": "我下个月要去日内瓦。"
+            "cn": "她下周要展示她的论文。（已经安排好的事情）",
+            "en": "She is presenting her paper next week."
           }
         ],
         "title": "现在进行时表示未来计划 (Present Continuous for Future Plans)",
@@ -68437,16 +68437,16 @@
         "title": "现在完成时：强调过去对现在的影响",
         "examples": [
           {
-            "en": "Lencho has lost all his corn.",
-            "cn": "伦乔已经失去了他所有的玉米。"
+            "en": "A plague of locusts would have left more than this.",
+            "cn": "“蝗灾都会留下更多的东西。” (意指冰雹造成的破坏比蝗灾还彻底)"
           },
           {
             "en": "The hail has left nothing.",
-            "cn": "冰雹什么都没留下。"
+            "cn": "“冰雹什么也没留下。”"
           },
           {
-            "en": "The roof has been damaged by the hail.",
-            "cn": "屋顶已被冰雹损坏。"
+            "en": "The corn was completely destroyed. Not a single leaf remained on the trees.",
+            "cn": "玉米完全被毁了。树上没有一片叶子留下。 (虽然不是标准的现在完成时，但“remained”强调了破坏后的结果，与现在完成时的“影响”概念契合)"
           }
         ]
       }
@@ -68725,16 +68725,16 @@
       {
         "examples": [
           {
-            "en": "Never have I told a child to 'just do your best'.",
-            "cn": "我从未对孩子说过“做到你最好”。"
+            "cn": "从不 (再也不会，以前从未)",
+            "en": "Never (never again, never before)"
           },
           {
-            "en": "Hardly ever do I tell children not to try new things.",
-            "cn": "我几乎从不告诉孩子们不要尝试新事物。"
+            "cn": "几乎不 (几乎从不，几乎没有)",
+            "en": "Hardly (hardly ever, hardly any)"
           },
           {
-            "en": "Under no circumstances should you say that failing is unacceptable to a child.",
-            "cn": "在任何情况下你都不应对孩子说失败是不能接受的。"
+            "cn": "几乎不 (几乎从不，几乎没有)",
+            "en": "Scarcely (scarcely ever, scarcely any)"
           }
         ],
         "title": "常见的否定副词和短语",
@@ -72936,16 +72936,20 @@
       {
         "examples": [
           {
-            "en": "It was made hard for independent shops to survive by Amazon's massive online presence.",
-            "cn": "亚马逊庞大的线上影响使独立书店很难生存。"
+            "cn": "亚马逊庞大的在线影响力使得独立商店难以生存。",
+            "en": "Amazon's massive online presence was making it hard for independent shops to survive."
           },
           {
-            "en": "The books are sorted by genre.",
-            "cn": "这些书按类别分类。"
+            "cn": "独立商店很难通过亚马逊庞大的在线影响力生存下来。",
+            "en": "It was made hard for independent shops to survive by Amazon's massive online presence."
           },
           {
-            "en": "New release books are displayed near the entrance.",
-            "cn": "新书被陈列在入口附近。"
+            "cn": "书是按类型分类的。",
+            "en": "The books are sorted by genre."
+          },
+          {
+            "cn": "新书被展示在入口附近。",
+            "en": "New release books are displayed near the entrance."
           }
         ],
         "title": "被动语态 (Passive Voice)",
@@ -74357,16 +74361,16 @@
       {
         "examples": [
           {
-            "en": "The biggest challenge was how to make more people understand.",
-            "cn": "最大的挑战是如何让更多人理解。"
+            "cn": "这是我们面临的*最具挑战性*的问题之一。",
+            "en": "This is one of the *most challenging* issues we face."
           },
           {
-            "en": "It was the single most important sample he had ever collected.",
-            "cn": "那是他有生以来采集到的最重要（也是最具唯一性的）样本。"
+            "cn": "她感到一种*深刻的紧迫感*，深知她的工作*比以往任何时候都更关键*。（“more crucial than ever”强调当前情境下的重要性）",
+            "en": "She felt a *profound sense of urgency*, knowing her work was *more crucial than ever*."
           },
           {
-            "en": "This was the most accurate reading of the entire expedition.",
-            "cn": "这是整个考察队中最精确的读数。"
+            "en": "The *biggest challenge* was how to make more people understand.",
+            "cn": "最大的挑战是如何让更多人理解。（“the biggest challenge”强调唯一且最主要的挑战）"
           }
         ],
         "title": "强调唯一性的最高级",
@@ -79119,16 +79123,16 @@
         "title": "理解缩减关系从句 (Reduced Relative Clauses)",
         "examples": [
           {
-            "en": "The information gathered by these apps compiles a detailed profile.",
-            "cn": "这些应用收集的信息汇总成了详细的用户画像。"
+            "cn": "你动态中看到的广告是根据你的兴趣量身定制的。\n（原句：The ads *that you see on your feed*...）",
+            "en": "The ads *you see on your feed* are tailored to your interests."
           },
           {
-            "en": "The privacy policies, written in complex legal jargon, are rarely read.",
-            "cn": "隐私政策用复杂的法律术语写成，鲜少有人阅读。"
+            "cn": "这些应用程序收集的信息汇编成一个详细的资料。\n（原句：The information *which is gathered by these apps*...）",
+            "en": "The information *gathered by these apps* compiles a detailed profile."
           },
           {
-            "en": "Phones syncing data in the background drain the battery faster.",
-            "cn": "在后台同步数据的手机会更快耗电。"
+            "cn": "那些用复杂法律术语写成的隐私政策，很少被阅读。\n（原句：The privacy policies, *which are written in complex legal jargon*...）",
+            "en": "The privacy policies, *written in complex legal jargon*, are rarely read."
           }
         ],
         "explain": "缩减关系从句是将一个包含关系代词和be动词的从句简化的一种语法结构。这种简化可以使句子更简洁、更自然，尤其是在描述名词的特征或状态时。通常有两种主要的形式：\n\n1.  **使用现在分词 (V-ing)**：当原关系从句中的动词是主动语态时，我们可以省略关系代词和be动词，将动词变成现在分词。\n    *   **原句：** The algorithm *which was designed* to predict her needs seemed to be getting eerily accurate.\n    *   **缩减：** The algorithm *designed* to predict her needs seemed to be getting eerily accurate.\n    *   **解释：** \"designed\" 是 \"which was designed\" 的缩减。\n\n2.  **使用过去分词 (V-ed)**：当原关系从句中的动词是被动语态时，我们可以省略关系代词和be动词，保留过去分词。\n    *   **原句：** Devices *that identify us* have become commonplace.\n    *   **缩减：** Devices *identifying us* have become commonplace.\n    *   **解释：** \"identifying\" 是 \"that identify\" 的缩减。"
@@ -79961,16 +79965,16 @@
         "title": "复合形容词 (Compound Adjectives)",
         "examples": [
           {
-            "en": "Grandma's old house was a hard-to-manage house.",
-            "cn": "奶奶的旧房子是个难以打理的房子。"
+            "cn": "奶奶的老房子不好打理。",
+            "en": "Grandma's old house was not easy to manage."
           },
           {
-            "en": "She is a well-meaning woman.",
-            "cn": "她是个好心的女人。"
+            "cn": "奶奶的老房子是一间难以打理的房子。",
+            "en": "Grandma's old house was a hard-to-manage house."
           },
           {
-            "en": "We converted the spare room into a light-filled study for Grandma.",
-            "cn": "我们把闲置的房间改造成了一个明亮的书房给奶奶。"
+            "cn": "她是一个好心的女人。",
+            "en": "She is a woman who means well."
           }
         ]
       },
@@ -85545,16 +85549,16 @@
       {
         "examples": [
           {
-            "en": "Although Soapy tried to break the law, the police didn't notice him.",
-            "cn": "尽管索比试图违法，警察并没有注意到他。"
+            "cn": "尽管索比试图违法，警察却没注意到他。",
+            "en": "Although Soapy tried to break the law, the police didn't notice him."
           },
           {
-            "en": "Although he pleaded with the officer, Soapy was taken to the station.",
-            "cn": "尽管他向警官求情，索比还是被带到了警察局。"
+            "cn": "他渴望一个温暖的地方；然而，他的恶作剧行为却遭到了漠视。",
+            "en": "He was desperate for a warm place; however, his mischievous acts were met with indifference."
           },
           {
-            "en": "Even though he threw a stone through a window, people thought it was an accident.",
-            "cn": "尽管他把石头扔进窗户，人们还是认为那是个意外。"
+            "cn": "即使他打破了一扇窗户，人们也以为那是个意外。",
+            "en": "Even though he threw a stone through a window, people thought it was an accident."
           }
         ],
         "title": "让步状语从句 (Adverbial Clauses of Concession)",

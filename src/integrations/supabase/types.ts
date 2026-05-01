@@ -209,54 +209,6 @@ export type Database = {
         }
         Relationships: []
       }
-      placement_results: {
-        Row: {
-          ability: number
-          ai_report: Json | null
-          by_section: Json
-          cefr: string
-          created_at: string
-          duration_seconds: number | null
-          id: string
-          question_log: Json
-          recommended_level: number
-          updated_at: string
-          user_id: string
-          weakest: string[]
-          weighted: number
-        }
-        Insert: {
-          ability: number
-          ai_report?: Json | null
-          by_section: Json
-          cefr: string
-          created_at?: string
-          duration_seconds?: number | null
-          id?: string
-          question_log?: Json
-          recommended_level: number
-          updated_at?: string
-          user_id: string
-          weakest?: string[]
-          weighted: number
-        }
-        Update: {
-          ability?: number
-          ai_report?: Json | null
-          by_section?: Json
-          cefr?: string
-          created_at?: string
-          duration_seconds?: number | null
-          id?: string
-          question_log?: Json
-          recommended_level?: number
-          updated_at?: string
-          user_id?: string
-          weakest?: string[]
-          weighted?: number
-        }
-        Relationships: []
-      }
       profiles: {
         Row: {
           created_at: string
@@ -265,7 +217,6 @@ export type Database = {
           id: string
           last_weekly_report_at: string | null
           preferred_language: string | null
-          target_language: string
           updated_at: string
           user_id: string
           weekly_report_enabled: boolean
@@ -277,7 +228,6 @@ export type Database = {
           id?: string
           last_weekly_report_at?: string | null
           preferred_language?: string | null
-          target_language?: string
           updated_at?: string
           user_id: string
           weekly_report_enabled?: boolean
@@ -289,7 +239,6 @@ export type Database = {
           id?: string
           last_weekly_report_at?: string | null
           preferred_language?: string | null
-          target_language?: string
           updated_at?: string
           user_id?: string
           weekly_report_enabled?: boolean
@@ -353,60 +302,6 @@ export type Database = {
           id?: string
           metadata?: Json | null
           reason?: string
-        }
-        Relationships: []
-      }
-      workplace_practice: {
-        Row: {
-          attempts: number
-          cat_key: string
-          created_at: string
-          dialogue_id: string
-          dictation_score: number
-          dictation_total: number
-          id: string
-          last_payload: Json | null
-          mastery: number
-          roleplay_score: number
-          roleplay_turns: number
-          updated_at: string
-          user_id: string
-          vocab_score: number
-          vocab_total: number
-        }
-        Insert: {
-          attempts?: number
-          cat_key: string
-          created_at?: string
-          dialogue_id: string
-          dictation_score?: number
-          dictation_total?: number
-          id?: string
-          last_payload?: Json | null
-          mastery?: number
-          roleplay_score?: number
-          roleplay_turns?: number
-          updated_at?: string
-          user_id: string
-          vocab_score?: number
-          vocab_total?: number
-        }
-        Update: {
-          attempts?: number
-          cat_key?: string
-          created_at?: string
-          dialogue_id?: string
-          dictation_score?: number
-          dictation_total?: number
-          id?: string
-          last_payload?: Json | null
-          mastery?: number
-          roleplay_score?: number
-          roleplay_turns?: number
-          updated_at?: string
-          user_id?: string
-          vocab_score?: number
-          vocab_total?: number
         }
         Relationships: []
       }

@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Mic, ArrowLeft, Sparkles, Lightbulb, Phone, Loader2 } from "lucide-react";
+import { Mic, ArrowLeft, Sparkles, Lightbulb, Phone } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
-import { AITalkDialog, type Mission } from "@/components/AITalkDialog";
+import { AITalkDialog } from "@/components/AITalkDialog";
 import { T } from "@/i18n/T";
 import { LEVELS } from "@/data/course";
 import { toast } from "sonner";
@@ -35,8 +35,6 @@ export default function Talk() {
   const [level, setLevel] = useState("B1");
   const [open, setOpen] = useState(false);
   const [trialsLeft, setTrialsLeft] = useState<number>(GUEST_TRIAL_LIMIT);
-  const [mission, setMission] = useState<Mission | null>(null);
-  const [missionLoading, setMissionLoading] = useState(false);
 
   useEffect(() => {
     setTrialsLeft(guestTrialsRemaining());
@@ -54,7 +52,7 @@ export default function Talk() {
     return () => { active = false; subscription.unsubscribe(); };
   }, []);
 
-  const start = async () => {
+  const start = () => {
     if (!authed && guestTrialsRemaining() <= 0) {
       toast("免费试用已结束 · 登录后可继续畅聊", {
         description: "登录账号即可解锁 10 分钟完整对话和学习记录",
@@ -63,27 +61,7 @@ export default function Talk() {
       });
       return;
     }
-    // Generate the mission first so Alex's prompt already includes it when
-    // the realtime session opens. If it fails, we just open without one.
-    setMissionLoading(true);
-    setMission(null);
-    const lvlName = LEVELS_OPT.find((l) => l.id === level)?.name;
-    try {
-      const { data, error } = await supabase.functions.invoke("talk-mission", {
-        body: {
-          topicLabel: topic.label,
-          topicPrompt: topic.prompt,
-          level,
-          levelName: lvlName,
-        },
-      });
-      if (!error && data?.mission) setMission(data.mission as Mission);
-    } catch (e) {
-      console.warn("mission gen failed, opening without one", e);
-    } finally {
-      setMissionLoading(false);
-      setOpen(true);
-    }
+    setOpen(true);
   };
 
   return (
@@ -152,13 +130,10 @@ export default function Talk() {
 
       <button
         onClick={start}
-        disabled={missionLoading}
-        className="flex w-full items-center justify-center gap-2 rounded-3xl bg-grad-title py-5 text-lg font-extrabold text-white shadow-tile transition hover:opacity-95 disabled:opacity-70"
+        className="flex w-full items-center justify-center gap-2 rounded-3xl bg-grad-title py-5 text-lg font-extrabold text-white shadow-tile transition hover:opacity-95"
       >
-        {missionLoading ? <Loader2 className="size-6 animate-spin" /> : <Mic className="size-6" />}
-        {missionLoading
-          ? <T>正在为你设计今日任务…</T>
-          : authed
+        <Mic className="size-6" />
+        {authed
           ? <T>开始 10 分钟对话</T>
           : trialsLeft > 0
             ? <T>免费试一下 3 分钟</T>
@@ -182,7 +157,6 @@ export default function Talk() {
         levelName={LEVELS_OPT.find((l) => l.id === level)?.name}
         level={level}
         isGuest={authed === false}
-        mission={mission}
       />
     </main>
   );

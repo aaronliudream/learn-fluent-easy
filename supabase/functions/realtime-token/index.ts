@@ -39,7 +39,7 @@ serve(async (req) => {
     const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
     if (!OPENAI_API_KEY) return json({ error: "OPENAI_API_KEY not configured" }, 503);
 
-    const { lessonTitle, levelName, unitTitle, level, voice, mission } = await req.json().catch(() => ({}));
+    const { lessonTitle, levelName, unitTitle, level, voice } = await req.json().catch(() => ({}));
 
     const safeVoice = ["alloy","ash","ballad","coral","echo","sage","shimmer","verse"]
       .includes(String(voice)) ? String(voice) : "shimmer";
@@ -55,37 +55,19 @@ serve(async (req) => {
       ? `The learner just finished a lesson called "${lessonTitle}"${unitTitle ? ` in the unit "${unitTitle}"` : ""}${levelName ? ` (${levelName})` : ""}. Open the conversation by warmly bringing up that topic in a natural way ("Oh nice, I heard you were just learning about...") and steer the chat to give them practice with that topic. Don't lecture — chat like a friend would.`
       : `Open with a friendly, casual hello and ask them what they want to chat about today (suggest 2-3 fun options like weekend plans, food, movies).`;
 
-    // Mission card (optional) — if present, this turns the chat into a
-    // task-based exercise. Alex steers toward the goal, models the target
-    // phrases early, and re-uses them so the learner picks them up.
-    let missionBlock = "";
-    if (mission && Array.isArray(mission?.must_use) && mission.must_use.length) {
-      const phraseList = mission.must_use
-        .map((m: any, i: number) => `  ${i + 1}. "${m.phrase}" — ${m.meaning_cn || ""}${m.example_en ? ` (e.g. ${m.example_en})` : ""}`)
-        .join("\n");
-      missionBlock = `\n\nTODAY'S MISSION (steer the chat toward this without ever announcing it as a "task"):
-- GOAL: ${mission.goal_cn || ""}
-- The learner is trying to actively USE these 3 target expressions:
-${phraseList}
-- Within your FIRST 2-3 turns, naturally MODEL each target expression yourself at least once so the learner hears it in context (e.g. "I'm so down for that — what time works for you?"). Never say "today's target phrase is...".
-- After modeling, set up situations where it's the learner's turn to use them. If they reach for one and get it slightly wrong, recast it correctly in your reply.
-- When the goal is accomplished, naturally celebrate ("Sweet, it's a plan!") so the learner feels they "won".`;
-    }
-
     const systemPrompt = `You are Alex, a warm, witty, twenty-something native English speaker from California. You're chatting with someone who is learning American English and wants real conversation practice.
 
 ABSOLUTE RULES:
 - You ONLY speak English. Never switch to any other language, even if the user does. If they speak another language, gently say in English "Let's try that in English — give it a shot!" and wait.
 - Sound like a real American friend, not a teacher. Use natural rhythm, contractions ("I'm", "y'know", "kinda", "gonna"), filler words occasionally ("right?", "for real?", "totally"), and California-style warmth.
 - Keep YOUR turns short (1-3 sentences usually). Ask one question, then let them talk. The whole point is for THEM to practice speaking.
-- RECAST, don't lecture: when they say something off (wrong tense, awkward phrasing, missing article), naturally echo back the corrected version once inside your reply, then move on. Never say "actually it's..." or "the right way is...". Example — Learner: "Yesterday I go to park." You: "Oh nice, you went to the park yesterday? Which one?"
-- PUSH for output: if they answer in 1-3 words, gently nudge them to elaborate ("Tell me more — what was that like?", "Why's that?"). Don't accept short answers as a finished thought unless they're at A1.
+- If they make a small mistake, do NOT correct in the moment — keep the flow going. We'll review at the end.
 - If they're stuck for >3 seconds, offer a gentle prompt or rephrase the question simpler.
 - Never read out lists or long monologues. This is voice chat.
 
 LEVEL CALIBRATION: ${levelGuidance(level)}
 
-CONTEXT: ${lessonHook}${missionBlock}`;
+CONTEXT: ${lessonHook}`;
 
     const r = await fetch("https://api.openai.com/v1/realtime/sessions", {
       method: "POST",
@@ -101,16 +83,15 @@ CONTEXT: ${lessonHook}${missionBlock}`;
         input_audio_transcription: { model: "whisper-1" },
         turn_detection: {
           type: "server_vad",
-          // Aggressive thresholds to suppress false triggers from background
-          // noise, breathing, keyboard, fans, kids, and (most importantly)
-          // Alex's own voice leaking back in via the speaker. Combined with
-          // client-side mic gating during AI playback, this stops the AI
-          // from getting interrupted when the user isn't actually talking.
-          threshold: 0.9,
-          prefix_padding_ms: 500,
-          // Wait noticeably longer before deciding the user is done talking,
-          // so natural mid-sentence pauses don't trigger Alex to cut in.
-          silence_duration_ms: 1600,
+          // Higher threshold = ignores background noise, fan, keyboard, kids, etc.
+          threshold: 0.78,
+          prefix_padding_ms: 400,
+          // Wait longer before deciding the user is done talking. Prevents
+          // Alex from cutting in during natural mid-sentence pauses.
+          silence_duration_ms: 1400,
+          // Don't auto-fire a response the instant VAD ends — we still let
+          // it auto-respond, but the longer silence above gives the user
+          // breathing room. (create_response stays default true.)
         },
         temperature: 0.8,
       }),

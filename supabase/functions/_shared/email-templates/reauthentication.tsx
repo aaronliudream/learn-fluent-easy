@@ -22,7 +22,7 @@ export const ReauthenticationEmail = ({ token }: ReauthenticationEmailProps) => 
     <Preview>你的验证码</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Text style={brand}>Big Moon English</Text>
+        <Text style={brand}>FluentPath</Text>
         <Heading style={h1}>身份验证码 🔑</Heading>
         <Text style={text}>请使用以下验证码确认你的身份：</Text>
         <Text style={codeStyle}>{token}</Text>

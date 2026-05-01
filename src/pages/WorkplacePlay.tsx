@@ -2,14 +2,11 @@ import { useParams, Navigate } from "react-router-dom";
 import { Volume2, PlayCircle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
-import { FloatingBackButton } from "@/components/FloatingBackButton";
 import { WORK_CATEGORIES, WORK_DIALOGUES } from "@/data/workplace";
 import { speak, speakSequence, stopSpeaking } from "@/lib/speak";
 import { T, useT } from "@/i18n/T";
 import { renderRich, stripTags } from "@/lib/richText";
 import { recordVisit } from "@/lib/guestProgress";
-import { useScrollToActive } from "@/lib/useScrollToActive";
-import { WorkplacePractice } from "@/components/WorkplacePractice";
 
 const WorkplacePlay = () => {
   const t = useT();
@@ -18,7 +15,6 @@ const WorkplacePlay = () => {
   const dlg = WORK_DIALOGUES.find((d) => d.id === dialogueId);
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
   const cancelledRef = useRef(false);
-  const registerRef = useScrollToActive(activeIdx);
 
   useEffect(() => {
     if (dlg) recordVisit(`workplace:${dlg.id}`);
@@ -72,12 +68,7 @@ const WorkplacePlay = () => {
           return (
             <article
               key={i}
-              ref={registerRef(i) as any}
-              role="button"
-              tabIndex={0}
-              onClick={() => playOne(i)}
-              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); playOne(i); } }}
-              className={`flex cursor-pointer gap-3 rounded-2xl border p-4 transition hover:border-primary/40 hover:bg-primary/5 active:scale-[0.998] ${
+              className={`flex gap-3 rounded-2xl border p-4 transition ${
                 isActive ? "border-primary/40 bg-primary/5" : "border-border bg-card"
               } ${isYou ? "ml-6" : "mr-6"}`}
             >
@@ -88,25 +79,21 @@ const WorkplacePlay = () => {
                 <div className={`text-lg leading-relaxed transition md:text-xl ${isActive ? "font-bold text-primary" : "font-medium"}`}>{renderRich(l.en)}</div>
                 <div className={`mt-1.5 text-base transition md:text-lg ${isActive ? "font-semibold text-primary" : "text-muted-foreground"}`}><T>{stripTags(l.cn)}</T></div>
               </div>
-              <span
-                aria-hidden
+              <button
+                onClick={() => playOne(i)}
+                aria-label={t("播放")}
                 className={`grid size-9 shrink-0 place-items-center rounded-full transition ${
                   isActive
                     ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-foreground/70"
+                    : "bg-secondary text-foreground/70 hover:bg-primary/15 hover:text-primary"
                 }`}
               >
                 <Volume2 className="size-4" />
-              </span>
+              </button>
             </article>
           );
         })}
       </section>
-
-      <FloatingBackButton to={`/workplace/${cat.key}`} />
-      <WorkplacePractice dialogue={dlg} catKey={cat.key} />
-      {/* Bottom spacer so the floating button doesn't overlap the last line */}
-      <div className="h-24" />
     </main>
   );
 };

@@ -36,12 +36,14 @@ const EMAIL_TEMPLATES: Record<string, React.ComponentType<any>> = {
 }
 
 // Configuration
-const SITE_NAME = "Big Moon English"
+const SITE_NAME = "FluentPath"
 const SENDER_DOMAIN = "notify.fluentpath.tech"
 const ROOT_DOMAIN = "fluentpath.tech"
 const FROM_DOMAIN = "fluentpath.tech" // Domain shown in From address (may be root or sender subdomain)
-// Mailbox shown in the From: header.
-const FROM_MAILBOX = "noreply"
+// Mailbox shown in the From: header. Using "support@" rather than the
+// usual "noreply@" so users can reply directly to the same address that
+// human support replies come from — keeps the conversation in one thread.
+const FROM_MAILBOX = "support"
 
 // Sample data for preview mode ONLY (not used in actual email sending).
 // URLs are baked in at scaffold time from the project's real data.

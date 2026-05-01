@@ -30,7 +30,7 @@ export const UI_PHRASES: readonly string[] = [
   "Alex 是一位加州年轻人，只用英语和你聊天。10 分钟到点自动结束。结束后 AI 会逐句翻译你说的话、给出更地道的说法，并出 5 道选择题让你巩固刚学到的词汇短语。",
   "Alex 是一位地道的加州年轻人。他只会用英语和你聊天，结束后会逐句翻译你的回答，给出地道说法和小测验。",
   "CEFR 全六级",
-  "Big Moon English 是一个独立项目。如果它帮到了你，欢迎请我喝杯咖啡，让它持续更新。",
+  "FluentPath 是一个独立项目。如果它帮到了你，欢迎请我喝杯咖啡，让它持续更新。",
   "Google Gemini TTS（通过 Lovable AI Gateway）：文本转语音（朗读单词与例句）。",
   "Google OAuth：可选的第三方登录。",
   "Lovable AI Gateway：调用大型语言模型进行内容生成与批改。",

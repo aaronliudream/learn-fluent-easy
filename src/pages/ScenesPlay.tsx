@@ -153,7 +153,10 @@ const ScenesPlay = () => {
       </section>
 
       <section ref={quizRef} className="mt-10">
-        <PhraseQuiz lines={dlg.lines.map((l) => ({ en: l.en, cn: l.cn }))} />
+        <PhraseQuiz
+          lines={dlg.lines.map((l) => ({ en: l.en, cn: l.cn }))}
+          dialogueKey={`scene:${dlg.id}`}
+        />
       </section>
 
       {rewriteIdx != null && (

@@ -939,6 +939,97 @@ function RecapView({
           </button>
         )}
       </section>
+
+      {/* 错句重练 — bilingual rehearsal of every line that had a "better_en" rewrite */}
+      <RehearseSection turns={recap.turns} />
     </div>
+  );
+}
+
+function RehearseSection({ turns }: { turns: RecapTurn[] }) {
+  // Only include turns where Alex offered a more idiomatic rewrite — those
+  // are the ones the learner actually said wrong / awkwardly.
+  const items = useMemo(
+    () => turns.filter((t) => t.better_en && t.better_en.trim() && t.better_en.trim() !== t.en.trim()),
+    [turns],
+  );
+  const [playingIdx, setPlayingIdx] = useState<number | null>(null);
+  const [playingAll, setPlayingAll] = useState(false);
+  const cancelRef = useRef(false);
+
+  useEffect(() => () => { cancelRef.current = true; stopSpeaking(); }, []);
+
+  if (items.length === 0) return null;
+
+  const alexVoice = getAlexVoice();
+
+  const playOne = async (idx: number, text: string) => {
+    cancelRef.current = false;
+    setPlayingIdx(idx);
+    try { await speakTTS(text, { voiceId: alexVoice }); } catch { /* noop */ }
+    setPlayingIdx((cur) => (cur === idx ? null : cur));
+  };
+
+  const playAll = async () => {
+    if (playingAll) {
+      cancelRef.current = true;
+      stopSpeaking();
+      setPlayingAll(false);
+      setPlayingIdx(null);
+      return;
+    }
+    cancelRef.current = false;
+    setPlayingAll(true);
+    for (let i = 0; i < items.length; i++) {
+      if (cancelRef.current) break;
+      setPlayingIdx(i);
+      try { await speakTTS(items[i].better_en, { voiceId: alexVoice }); } catch { /* noop */ }
+      if (cancelRef.current) break;
+      await new Promise((r) => setTimeout(r, 220));
+    }
+    setPlayingAll(false);
+    setPlayingIdx(null);
+  };
+
+  return (
+    <section>
+      <h3 className="mb-3 flex items-center gap-2 text-base font-bold">
+        <Repeat2 className="size-4 text-primary" /> <T>错句重练 · 跟着 Alex 念</T>
+        <button
+          onClick={playAll}
+          className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-bold text-primary-foreground shadow hover:opacity-90"
+        >
+          {playingAll ? <><Volume2 className="size-3.5 animate-pulse" /> <T>停止</T></> : <><Play className="size-3.5" /> <T>全部朗读</T></>}
+        </button>
+      </h3>
+      <p className="mb-3 text-xs text-muted-foreground">
+        <T>下面是你刚才说得不太地道的句子。Alex 已经帮你改成更地道的说法，点 🔊 跟读，把这些句子刻进肌肉记忆。</T>
+      </p>
+      <ol className="space-y-2.5">
+        {items.map((t, i) => {
+          const active = playingIdx === i;
+          return (
+            <li key={i} className={`rounded-2xl border p-3 shadow-sm transition ${active ? "border-primary bg-primary/5" : "border-border bg-card"}`}>
+              <div className="flex items-start gap-2">
+                <button
+                  onClick={() => playOne(i, t.better_en)}
+                  className={`grid size-9 shrink-0 place-items-center rounded-full shadow transition ${active ? "bg-primary text-primary-foreground" : "bg-secondary hover:bg-primary/20"}`}
+                  aria-label="朗读"
+                >
+                  {active ? <Volume2 className="size-4 animate-pulse" /> : <Play className="size-4" />}
+                </button>
+                <div className="min-w-0 flex-1">
+                  <div className="text-base font-semibold leading-snug">{t.better_en}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{t.cn}</div>
+                  <div className="mt-1 text-[11px] text-muted-foreground/80 italic">
+                    <T>你原来说</T>: "{t.en}"
+                  </div>
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
   );
 }

@@ -342,6 +342,21 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       setProvider(chosen);
       console.log(`[AITalk] using provider: ${chosen}`);
 
+      // 0.5 Pre-generate the 5 hidden target expressions. Don't block the
+      // call if it fails — Alex can chat just fine without them.
+      let pickedTargets: TalkTarget[] = [];
+      try {
+        const { data: tg } = await supabase.functions.invoke("generate-talk-targets", {
+          body: { lessonTitle, level },
+        });
+        if (Array.isArray(tg?.targets)) {
+          pickedTargets = tg.targets.slice(0, 5);
+          setTargets(pickedTargets);
+        }
+      } catch (e) {
+        console.warn("[AITalk] target generation failed, continuing without", e);
+      }
+
       // 1. Get mic — turn ON browser-side noise suppression, echo cancel,
       // and auto-gain so background noise (fan, traffic, kids) doesn't get
       // sent to OpenAI's VAD and cause Alex to cut in or get triggered.
@@ -360,7 +375,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         // the global TTS settings used for lessons. Stable across sessions.
         const voicePref = getAlexVoice();
         const qwenVoice = QWEN_VOICE_MAP[voicePref] || "Cherry";
-        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level });
+        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level, targets: pickedTargets });
         const session = new QwenRealtimeSession({
           cfg: { instructions, voice: qwenVoice, inputSampleRate: 16000, outputSampleRate: 24000 },
           onEvent: (evt) => handleRealtimeEvent(evt),
@@ -382,7 +397,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       const voicePref = getAlexVoice();
       const mappedVoice = REALTIME_VOICE_MAP[voicePref] || "shimmer";
       const { data, error } = await supabase.functions.invoke("realtime-token", {
-        body: { lessonTitle, unitTitle, levelName, level, voice: mappedVoice },
+        body: { lessonTitle, unitTitle, levelName, level, voice: mappedVoice, targets: pickedTargets },
       });
       if (error) throw error;
       if (data?.error) throw new Error(data.error);

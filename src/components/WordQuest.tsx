@@ -126,8 +126,8 @@ export default function WordQuest({
   onExit: () => void;
 }) {
   const [phase, setPhase] = useState<"loading" | "intro" | "playing" | "done" | "already">("loading");
-  const [target, setTarget] = useState<Vocab | null>(null);
-  const [stage, setStage] = useState(0); // 0..5 (=>6 关)
+  const [targets, setTargets] = useState<Vocab[]>([]);
+  const [stage, setStage] = useState(0); // 0..17 (=>18 关 = 3 词 × 6 关)
   const [results, setResults] = useState<StageResult[]>([]);
   const [stageStartedAt, setStageStartedAt] = useState(0);
   const [questStartedAt, setQuestStartedAt] = useState(0);
@@ -138,11 +138,16 @@ export default function WordQuest({
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [shareCopied, setShareCopied] = useState(false);
 
+  // 当前关的 word index 和 sub-stage
+  const wordIdx = Math.floor(stage / STAGES_PER_WORD);
+  const subStage = stage % STAGES_PER_WORD;
+  const target = targets[wordIdx] ?? null;
+
   // --- Bootstrap: pick daily, check today's status ---
   useEffect(() => {
     (async () => {
-      const v = pickDailyVocab(pool);
-      setTarget(v);
+      const vs = pickDailyVocabs(pool, WORDS_PER_QUEST);
+      setTargets(vs);
       // streak
       const { data } = await supabase.rpc("get_word_quest_streak");
       const s = (data?.[0] ?? null) as StreakStats | null;
@@ -158,7 +163,7 @@ export default function WordQuest({
   }, [pool.length]);
 
   function start() {
-    if (!target) return;
+    if (!targets.length) return;
     setPhase("playing");
     setStage(0);
     setResults([]);
@@ -176,7 +181,7 @@ export default function WordQuest({
 
     // brief pause then advance
     setTimeout(() => {
-      if (stage + 1 >= 6) {
+      if (stage + 1 >= TOTAL_STAGES) {
         finish(nextResults);
       } else {
         setStage(stage + 1);
@@ -186,15 +191,15 @@ export default function WordQuest({
   }
 
   async function finish(finalResults: StageResult[]) {
-    if (!target) return;
+    if (!targets.length) return;
     const totalDuration = Date.now() - questStartedAt;
     const passed = finalResults.filter((r) => r.correct).length;
-    const perfect = passed === 6 && hintsUsed === 0;
+    const perfect = passed === TOTAL_STAGES && hintsUsed === 0;
 
     // Score: 100 base/stage * combo bonus, minus hint penalty
     let score = passed * 100;
-    if (perfect) score += 200;
-    if (totalDuration < 90_000) score += 100;
+    if (perfect) score += 500;
+    if (totalDuration < 240_000) score += 200;
     score -= hintsUsed * 30;
     score = Math.max(0, score);
 
@@ -206,8 +211,8 @@ export default function WordQuest({
         await supabase.from("word_quest_attempts").insert({
           user_id: u.user.id,
           quest_date: todayKey(),
-          target_word: target.word,
-          target_vocab_id: target.id,
+          target_word: targets.map((t) => t.word).join(", "),
+          target_vocab_id: targets[0].id,
           stages_passed: passed,
           stage_results: finalResults,
           total_duration_ms: totalDuration,
@@ -224,8 +229,8 @@ export default function WordQuest({
           best_combo: passed,
           duration_ms: totalDuration,
           hits: passed,
-          misses: 6 - passed,
-          metadata: { perfect, hints_used: hintsUsed },
+          misses: TOTAL_STAGES - passed,
+          metadata: { perfect, hints_used: hintsUsed, words: targets.map((t) => t.word) },
         });
       }
     } catch (e) {

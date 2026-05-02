@@ -93,7 +93,7 @@ async function synthesizeWithCosyVoice(opts: {
           voice: opts.voice,
           format: "mp3",
           sample_rate: 22050,
-          volume: 50,
+          volume: 100,
           rate: opts.speed, // 0.5 – 2.0
           pitch: 1.0,
         },

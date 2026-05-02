@@ -7,6 +7,45 @@ let sequenceId = 0;
 let currentAudio: HTMLAudioElement | null = null;
 let sharedAudio: HTMLAudioElement | null = null;
 
+// ---------- Loudness boost via Web Audio GainNode ----------
+// Browsers cap <audio>.volume at 1.0, but a GainNode can amplify above
+// unity. We route the shared <audio> element through a 1.7× gain so the
+// whole site sounds noticeably louder without re-encoding any MP3.
+const LOUDNESS_GAIN = 1.7;
+let audioCtx: AudioContext | null = null;
+let gainNode: GainNode | null = null;
+let mediaSource: MediaElementAudioSourceNode | null = null;
+let routedAudio: HTMLAudioElement | null = null;
+
+const ensureLoudnessRouting = (audio: HTMLAudioElement) => {
+  if (typeof window === "undefined") return;
+  // Route once per <audio> element. The shared audio element is reused
+  // for the lifetime of the page, so this runs at most once.
+  if (routedAudio === audio && gainNode && audioCtx) {
+    if (audioCtx.state === "suspended") audioCtx.resume().catch(() => {});
+    return;
+  }
+  try {
+    const Ctx: typeof AudioContext | undefined =
+      window.AudioContext || (window as any).webkitAudioContext;
+    if (!Ctx) return;
+    if (!audioCtx) audioCtx = new Ctx();
+    if (audioCtx.state === "suspended") audioCtx.resume().catch(() => {});
+    if (mediaSource) {
+      try { mediaSource.disconnect(); } catch {}
+      mediaSource = null;
+    }
+    mediaSource = audioCtx.createMediaElementSource(audio);
+    if (!gainNode) gainNode = audioCtx.createGain();
+    gainNode.gain.value = LOUDNESS_GAIN;
+    mediaSource.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    routedAudio = audio;
+  } catch {
+    /* AudioContext may be unavailable or audio already routed — fall back to raw playback */
+  }
+};
+
 const SILENT_WAV =
   "data:audio/wav;base64,UklGRmQGAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YUAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 
@@ -43,6 +82,7 @@ const getSharedAudio = () => {
     sharedAudio.preload = "auto";
     sharedAudio.setAttribute("playsinline", "true");
     sharedAudio.setAttribute("webkit-playsinline", "true");
+    sharedAudio.crossOrigin = "anonymous";
   }
   return sharedAudio;
 };
@@ -63,6 +103,9 @@ const unlockAudioSync = (): HTMLAudioElement | null => {
     audio.load();
     const p = audio.play();
     if (p && typeof p.catch === "function") p.catch(() => {});
+    // Route through GainNode for loudness boost. Must run inside the
+    // user-gesture window so the AudioContext can start unsuspended.
+    ensureLoudnessRouting(audio);
   } catch {}
   return audio;
 };

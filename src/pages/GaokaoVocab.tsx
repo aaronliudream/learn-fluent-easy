@@ -854,6 +854,8 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       const words = pool.filter((v) => idSet.has(v.id));
       const shuffled = shuffle(words);
       setDueWords(shuffled);
+      // Prefetch English meanings for SRS queue
+      ensureMeaningsEn(shuffled);
       setQueue(
         shuffled.map((v) => ({
           vocab: v,

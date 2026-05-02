@@ -1903,6 +1903,42 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 }
 
 /* ---------- Combo & scoring UI ---------- */
+/** Play a short ascending chime synced to combo tier. No assets needed — uses Web Audio. */
+function playComboChime(streak: number) {
+  try {
+    const Ctx = (window.AudioContext || (window as any).webkitAudioContext) as typeof AudioContext;
+    if (!Ctx) return;
+    const ctx = new Ctx();
+    const tier = streak >= 10 ? 3 : streak >= 5 ? 2 : streak >= 2 ? 1 : 0;
+    if (tier === 0) return;
+    // Each tier: more notes, brighter
+    const baseFreqs = [
+      [659.25, 880],                       // E5 → A5  (×2)
+      [659.25, 880, 1108.73],              // E5 → A5 → C#6 (×3)
+      [659.25, 880, 1108.73, 1318.51],     // ... → E6 (×5 ON FIRE)
+    ];
+    const notes = baseFreqs[tier - 1];
+    const stepDur = 0.09;
+    notes.forEach((f, i) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "triangle";
+      osc.frequency.value = f;
+      const start = ctx.currentTime + i * stepDur;
+      const end = start + stepDur + 0.05;
+      gain.gain.setValueAtTime(0, start);
+      gain.gain.linearRampToValueAtTime(0.18, start + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001, end);
+      osc.connect(gain).connect(ctx.destination);
+      osc.start(start);
+      osc.stop(end);
+    });
+    setTimeout(() => ctx.close().catch(() => {}), 1000);
+  } catch {
+    /* ignore — audio is best-effort */
+  }
+}
+
 function ComboHeader({
   pos,
   total,
@@ -1921,23 +1957,44 @@ function ComboHeader({
   score: number;
 }) {
   const mult = comboMultiplier(streak);
-  const onFire = streak >= 5;
+  const tier = streak >= 10 ? 3 : streak >= 5 ? 2 : streak >= 2 ? 1 : 0;
+  const onFire = tier >= 2;
+  // Bump animation + chime each time streak crosses a threshold (2/5/10).
+  const [bump, setBump] = useState(0);
+  const lastTierRef = useRef(0);
+  useEffect(() => {
+    if (tier > lastTierRef.current) {
+      setBump((n) => n + 1);
+      playComboChime(streak);
+    }
+    lastTierRef.current = tier;
+  }, [tier, streak]);
   return (
-    <div className="mb-3 flex items-center justify-between gap-2">
+    <div
+      className={cn(
+        "mb-3 flex items-center justify-between gap-2 rounded-xl px-2 py-1 transition-all duration-300",
+        tier >= 1 && "bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-fuchsia-500/10 ring-1 ring-amber-500/30",
+        tier >= 2 && "ring-2 ring-rose-500/60 shadow-[0_0_24px_rgba(244,63,94,0.45)]",
+        tier >= 3 && "ring-2 ring-fuchsia-500 shadow-[0_0_36px_rgba(217,70,239,0.7)] animate-pulse"
+      )}
+    >
       <div className="text-xs text-muted-foreground">
         {pos} / {total} <span className="mx-1">·</span> ✓ {correct}/{attempted}
       </div>
       <div className="flex items-center gap-2">
         {streak >= 2 && (
           <span
+            key={`combo-${bump}`}
             className={cn(
-              "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold transition",
-              onFire
-                ? "bg-gradient-to-r from-amber-500 to-rose-500 text-white animate-pulse"
-                : "bg-primary text-primary-foreground"
+              "inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-extrabold transition origin-center animate-scale-in",
+              tier === 1 && "bg-gradient-to-r from-amber-400 to-orange-500 text-white shadow-md",
+              tier === 2 && "bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500 text-white shadow-lg animate-pulse",
+              tier === 3 && "bg-gradient-to-r from-fuchsia-500 via-rose-500 to-amber-400 text-white shadow-2xl animate-pulse"
             )}
           >
-            <Flame className="size-3" /> {streak} ×{mult}
+            <Flame className={cn("size-4", tier >= 2 && "drop-shadow-[0_0_6px_rgba(255,200,0,0.9)]")} />
+            <span className="tabular-nums">{streak}</span>
+            <span className="opacity-90">×{mult}</span>
           </span>
         )}
         <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-bold">
@@ -1954,11 +2011,42 @@ function ComboHeader({
 }
 
 function FloatingComboBadge({ label }: { label: string }) {
+  // Burst sparkles arranged radially around the badge.
+  const sparks = Array.from({ length: 10 });
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-2 z-10 flex justify-center">
-      <div className="animate-fade-in rounded-full bg-gradient-to-r from-amber-500 via-rose-500 to-fuchsia-500 px-4 py-1.5 text-sm font-extrabold text-white shadow-lg">
-        🔥 {label}
+    <div className="pointer-events-none absolute inset-x-0 top-1/3 z-30 flex justify-center">
+      <div className="relative">
+        {/* Halo */}
+        <div className="absolute inset-0 -m-6 animate-ping rounded-full bg-rose-500/30" />
+        {/* Sparks */}
+        {sparks.map((_, i) => {
+          const angle = (i / sparks.length) * Math.PI * 2;
+          const dx = Math.cos(angle) * 80;
+          const dy = Math.sin(angle) * 80;
+          return (
+            <span
+              key={i}
+              className="absolute left-1/2 top-1/2 size-2 rounded-full bg-amber-300 opacity-0"
+              style={{
+                animation: `combo-spark 700ms ease-out forwards`,
+                animationDelay: `${i * 20}ms`,
+                ["--dx" as any]: `${dx}px`,
+                ["--dy" as any]: `${dy}px`,
+              }}
+            />
+          );
+        })}
+        {/* Main badge */}
+        <div className="relative animate-scale-in rounded-2xl bg-gradient-to-r from-amber-400 via-rose-500 to-fuchsia-600 px-6 py-3 text-2xl font-black uppercase tracking-wider text-white shadow-[0_10px_40px_rgba(244,63,94,0.6)] ring-2 ring-white/40">
+          🔥 {label}
+        </div>
       </div>
+      <style>{`
+        @keyframes combo-spark {
+          0%   { opacity: 1; transform: translate(-50%, -50%) translate(0, 0) scale(1); }
+          100% { opacity: 0; transform: translate(-50%, -50%) translate(var(--dx), var(--dy)) scale(0.3); }
+        }
+      `}</style>
     </div>
   );
 }

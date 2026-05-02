@@ -53,6 +53,21 @@ function AccentBadge({ accent }: { accent: Vocab["accent"] }) {
 }
 
 const GROUP_SIZE = 20;
+const QUESTION_TIMEOUT_SEC = 10; // for choice-type questions
+
+/* ---------- Scoring helpers ---------- */
+function comboMultiplier(streak: number): number {
+  if (streak >= 10) return 5;
+  if (streak >= 5) return 3;
+  if (streak >= 2) return 2;
+  return 1;
+}
+function comboLabel(streak: number): string | null {
+  if (streak >= 10) return "ON FIRE ×5";
+  if (streak >= 5) return "COMBO ×3";
+  if (streak >= 2) return "COMBO ×2";
+  return null;
+}
 
 type Phase = "flashcard" | "quiz" | "done";
 type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze" | "en2en" | "en2word" | "spell";
@@ -496,6 +511,10 @@ function QuizPhase({
   const [queue, setQueue] = useState<QuizItem[]>(() => buildInitialQueue(group, pool));
   const [pos, setPos] = useState(0);
   const [stats, setStats] = useState({ correct: 0, total: 0 });
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(0);
+  const [score, setScore] = useState(0);
+  const [floatBadge, setFloatBadge] = useState<string | null>(null);
 
   // Prefetch English meanings so en2en/en2word questions render instantly
   useEffect(() => {
@@ -515,6 +534,23 @@ function QuizPhase({
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+
+    // Combo + score
+    if (isCorrect) {
+      const newStreak = streak + 1;
+      const mult = comboMultiplier(newStreak);
+      const gained = 10 * mult;
+      setStreak(newStreak);
+      setBestStreak((b) => Math.max(b, newStreak));
+      setScore((s) => s + gained);
+      const label = comboLabel(newStreak);
+      if (label) {
+        setFloatBadge(label);
+        setTimeout(() => setFloatBadge(null), 900);
+      }
+    } else {
+      setStreak(0);
+    }
 
     let nextQueue = queue;
     if (!isCorrect) {
@@ -542,11 +578,23 @@ function QuizPhase({
 
   return (
     <div>
-      <div className="mb-3 flex items-center justify-between text-xs text-muted-foreground">
-        <span>{pos + 1} / {queue.length}</span>
-        <span>✓ {stats.correct} / {stats.total}</span>
+      <ComboHeader
+        pos={pos + 1}
+        total={queue.length}
+        correct={stats.correct}
+        attempted={stats.total}
+        streak={streak}
+        bestStreak={bestStreak}
+        score={score}
+      />
+      <div className="relative">
+        <QuizQuestion
+          key={`${item.vocab.id}-${pos}`}
+          item={item}
+          onResult={handleResult}
+        />
+        {floatBadge && <FloatingComboBadge label={floatBadge} />}
       </div>
-      <QuizQuestion key={`${item.vocab.id}-${pos}`} item={item} onResult={handleResult} />
     </div>
   );
 }
@@ -570,6 +618,28 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
   const [clozeInput, setClozeInput] = useState("");
   const [clozeChecked, setClozeChecked] = useState<null | boolean>(null);
   const v = item.vocab;
+
+  // Per-question countdown timer for choice-type questions.
+  // Cloze and Spell are input-based and not timed (less stress, more accuracy).
+  const isTimedKind =
+    item.kind === "en2cn" ||
+    item.kind === "cn2en" ||
+    item.kind === "listen" ||
+    item.kind === "en2en" ||
+    item.kind === "en2word";
+  const [secondsLeft, setSecondsLeft] = useState(QUESTION_TIMEOUT_SEC);
+  useEffect(() => {
+    if (!isTimedKind) return;
+    if (picked !== null) return;
+    if (secondsLeft <= 0) {
+      // Time out — auto mark wrong
+      setPicked("__timeout__");
+      setTimeout(() => onResult(false), 700);
+      return;
+    }
+    const t = setTimeout(() => setSecondsLeft((s) => s - 1), 1000);
+    return () => clearTimeout(t);
+  }, [secondsLeft, picked, isTimedKind, onResult]);
 
   // For en2en / en2word: ensure the target's English meaning is loaded;
   // and gather English meanings for distractor choices too.
@@ -772,6 +842,21 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
 
   return (
     <div className="rounded-3xl border bg-card p-6 text-center shadow-tile">
+      {isTimedKind && (
+        <div className="mb-4 -mx-6 -mt-6 h-1.5 overflow-hidden rounded-t-3xl bg-muted">
+          <div
+            className={cn(
+              "h-full transition-all duration-1000 ease-linear",
+              secondsLeft > 5
+                ? "bg-primary"
+                : secondsLeft > 2
+                ? "bg-amber-500"
+                : "bg-red-500 animate-pulse"
+            )}
+            style={{ width: `${(secondsLeft / QUESTION_TIMEOUT_SEC) * 100}%` }}
+          />
+        </div>
+      )}
       {renderPrompt()}
       <div className="mt-6 grid grid-cols-1 gap-2">
         {item.choices.map((c) => {
@@ -1076,6 +1161,10 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   const [pos, setPos] = useState(0);
   const [stats, setStats] = useState({ correct: 0, total: 0 });
   const [done, setDone] = useState(false);
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(0);
+  const [score, setScore] = useState(0);
+  const [floatBadge, setFloatBadge] = useState<string | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -1161,6 +1250,21 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
 
+    if (isCorrect) {
+      const newStreak = streak + 1;
+      const mult = comboMultiplier(newStreak);
+      setStreak(newStreak);
+      setBestStreak((b) => Math.max(b, newStreak));
+      setScore((s) => s + 10 * mult);
+      const label = comboLabel(newStreak);
+      if (label) {
+        setFloatBadge(label);
+        setTimeout(() => setFloatBadge(null), 900);
+      }
+    } else {
+      setStreak(0);
+    }
+
     let nextQueue = queue;
     if (!isCorrect) {
       const newKind = pickKind(item.vocab);
@@ -1193,11 +1297,86 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
         <div className="text-xs text-muted-foreground">SM-2 间隔重复</div>
       </div>
       <PageHeader title="今日复习队列" subtitle="答对延后下次复习，答错明天再来" />
-      <div className="mb-3 mt-4 flex items-center justify-between text-xs text-muted-foreground">
-        <span>{pos + 1} / {queue.length}</span>
-        <span>✓ {stats.correct} / {stats.total}</span>
+      <div className="mt-4">
+        <ComboHeader
+          pos={pos + 1}
+          total={queue.length}
+          correct={stats.correct}
+          attempted={stats.total}
+          streak={streak}
+          bestStreak={bestStreak}
+          score={score}
+        />
+        <div className="relative">
+          <QuizQuestion
+            key={`${item.vocab.id}-${pos}`}
+            item={item}
+            onResult={handleResult}
+          />
+          {floatBadge && <FloatingComboBadge label={floatBadge} />}
+        </div>
       </div>
-      <QuizQuestion key={`${item.vocab.id}-${pos}`} item={item} onResult={handleResult} />
     </main>
+  );
+}
+
+/* ---------- Combo & scoring UI ---------- */
+function ComboHeader({
+  pos,
+  total,
+  correct,
+  attempted,
+  streak,
+  bestStreak,
+  score,
+}: {
+  pos: number;
+  total: number;
+  correct: number;
+  attempted: number;
+  streak: number;
+  bestStreak: number;
+  score: number;
+}) {
+  const mult = comboMultiplier(streak);
+  const onFire = streak >= 5;
+  return (
+    <div className="mb-3 flex items-center justify-between gap-2">
+      <div className="text-xs text-muted-foreground">
+        {pos} / {total} <span className="mx-1">·</span> ✓ {correct}/{attempted}
+      </div>
+      <div className="flex items-center gap-2">
+        {streak >= 2 && (
+          <span
+            className={cn(
+              "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold transition",
+              onFire
+                ? "bg-gradient-to-r from-amber-500 to-rose-500 text-white animate-pulse"
+                : "bg-primary text-primary-foreground"
+            )}
+          >
+            <Flame className="size-3" /> {streak} ×{mult}
+          </span>
+        )}
+        <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-bold">
+          <Zap className="size-3 text-amber-500" /> {score}
+        </span>
+        {bestStreak >= 3 && (
+          <span className="hidden text-[10px] text-muted-foreground sm:inline">
+            最佳 {bestStreak}
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function FloatingComboBadge({ label }: { label: string }) {
+  return (
+    <div className="pointer-events-none absolute inset-x-0 top-2 z-10 flex justify-center">
+      <div className="animate-fade-in rounded-full bg-gradient-to-r from-amber-500 via-rose-500 to-fuchsia-500 px-4 py-1.5 text-sm font-extrabold text-white shadow-lg">
+        🔥 {label}
+      </div>
+    </div>
   );
 }

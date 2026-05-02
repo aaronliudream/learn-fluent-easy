@@ -7,7 +7,7 @@ import {
   detectBrowserLang,
   getLanguageInfo,
 } from "./languages";
-import { BUILTIN, EN, type StringKey, interpolate } from "./strings";
+import { BUILTIN, EN, ZH, type StringKey, interpolate } from "./strings";
 import { localizeProtagonist } from "./protagonistName";
 import { UI_PHRASES } from "./uiPhrases.generated";
 import { startDomLeakScanner } from "./devLeakDetector";
@@ -204,11 +204,18 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (missingKeys.length === 0) return;
     let cancelled = false;
     (async () => {
-      const items = missingKeys.map((k) => ({ key: k, text: EN[k] }));
+      // Prefer the Chinese source when available: the AI is much less likely
+      // to echo a Chinese string back unchanged when asked to translate into
+      // (say) Punjabi or Spanish, which means our isUsableTranslation filter
+      // doesn't end up discarding the result and falling back to raw English.
+      const items = missingKeys.map((k) => ({
+        key: k,
+        text: (ZH as Record<string, string>)[k] || EN[k],
+      }));
       const targetLanguage = getLanguageInfo(lang).englishName;
       try {
         const { data, error } = await supabase.functions.invoke("translate", {
-          body: { targetLanguage, sourceLanguage: "English", items },
+          body: { targetLanguage, items },
         });
         if (cancelled) return;
         if (error) {

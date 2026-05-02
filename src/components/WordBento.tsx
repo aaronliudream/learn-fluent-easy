@@ -121,6 +121,18 @@ export default function WordBento({
   function start() {
     const usable = pool.filter((v) => v.word && v.meaning_cn);
     if (usable.length < VISIBLE_PAIRS + 1) return;
+    // 预热语音引擎：在用户手势内说一段空白，解锁 iOS/Safari，预加载 voice 列表
+    try {
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        const synth = window.speechSynthesis;
+        // 触发 voice 列表加载
+        synth.getVoices();
+        const warm = new SpeechSynthesisUtterance(" ");
+        warm.volume = 0;
+        warm.rate = 1;
+        synth.speak(warm);
+      }
+    } catch { /* ignore */ }
     const sequence = shuffle(usable).slice(0, TOTAL_PAIRS);
     const initialPairs = sequence.slice(0, VISIBLE_PAIRS);
     const remainder = sequence.slice(VISIBLE_PAIRS);

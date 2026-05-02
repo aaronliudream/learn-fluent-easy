@@ -403,6 +403,21 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH" }): P
     return playUrlOn(audio, cached, myToken).then(() => undefined);
   }
 
+  // 2b) localStorage hit — survives page reloads. Promote to in-memory
+  //     cache and play immediately.
+  const persistedUrl = loadPersist().get(cacheKey);
+  if (audio && persistedUrl) {
+    audioCache.set(cacheKey, persistedUrl);
+    return playUrlOn(audio, persistedUrl, myToken).then((played) => {
+      // If the persisted URL 404'd (e.g. bucket cleared), drop it and
+      // fall back to a fresh fetch on next tap.
+      if (!played) {
+        audioCache.delete(cacheKey);
+        loadPersist().delete(cacheKey);
+      }
+    });
+  }
+
   // 3) Cache miss → fetch then swap src on the same already-unlocked element.
   return (async () => {
     const url = await fetchTTS(trimmed, voiceId, speed, accent);

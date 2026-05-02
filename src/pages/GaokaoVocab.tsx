@@ -547,6 +547,7 @@ function GroupSession({
   const [coinsRefreshKey, setCoinsRefreshKey] = useState(0);
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [coinsAwarded, setCoinsAwarded] = useState(0);
+  const [groupLevelUps, setGroupLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
@@ -580,6 +581,7 @@ function GroupSession({
           onDone={async (s) => {
             setStats({ correct: s.correct, total: s.total });
             setCoinsAwarded(s.score);
+            setGroupLevelUps(s.levelUps ?? []);
             setPhase("done");
             // Award coins and check milestone badges
             const totals = await awardCoins(s.score);
@@ -602,6 +604,7 @@ function GroupSession({
           coinsAwarded={coinsAwarded}
           onExit={onExit}
           onRetry={() => setPhase("flashcard")}
+          levelUps={groupLevelUps}
         />
       )}
       {unlockedBadges.length > 0 && (

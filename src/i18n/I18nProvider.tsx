@@ -7,7 +7,7 @@ import {
   detectBrowserLang,
   getLanguageInfo,
 } from "./languages";
-import { BUILTIN, EN, type StringKey, interpolate } from "./strings";
+import { BUILTIN, EN, ZH, type StringKey, interpolate } from "./strings";
 import { localizeProtagonist } from "./protagonistName";
 import { UI_PHRASES } from "./uiPhrases.generated";
 import { startDomLeakScanner } from "./devLeakDetector";
@@ -18,7 +18,12 @@ const STORAGE_PICKED = "fluentpath.langPicked";
 // catalogs (ja/ko/etc.), so even after adding new keys the provider would
 // "find" a cached value and skip re-translating. Bump the prefix and add a
 // stricter sanitiser (see sanitizeCachedCatalog) to evict stale entries.
-const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v4.";
+// v5: previously we sent English as the translation source, which made the
+// model occasionally echo the English back unchanged for less-common target
+// languages (Punjabi, Bengali, etc.). Those fallbacks then poisoned the
+// catalog. Bump the prefix so every client re-fetches once with the new
+// Chinese-source pipeline.
+const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v5.";
 
 type Catalog = Partial<Record<StringKey, string>>;
 
@@ -204,11 +209,18 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (missingKeys.length === 0) return;
     let cancelled = false;
     (async () => {
-      const items = missingKeys.map((k) => ({ key: k, text: EN[k] }));
+      // Prefer the Chinese source when available: the AI is much less likely
+      // to echo a Chinese string back unchanged when asked to translate into
+      // (say) Punjabi or Spanish, which means our isUsableTranslation filter
+      // doesn't end up discarding the result and falling back to raw English.
+      const items = missingKeys.map((k) => ({
+        key: k,
+        text: (ZH as Record<string, string>)[k] || EN[k],
+      }));
       const targetLanguage = getLanguageInfo(lang).englishName;
       try {
         const { data, error } = await supabase.functions.invoke("translate", {
-          body: { targetLanguage, sourceLanguage: "English", items },
+          body: { targetLanguage, items },
         });
         if (cancelled) return;
         if (error) {

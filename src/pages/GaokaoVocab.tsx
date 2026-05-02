@@ -713,6 +713,30 @@ const THEME_META: Record<string, { emoji: string; cn: string; color: string }> =
   chinese:      { emoji: "🐉", cn: "中国文化", color: "red" },
 };
 
+/* 安全静态颜色映射（避免 Tailwind purge 动态 class） */
+const COLOR_CLASSES: Record<string, { border: string; bg: string; text: string; chip: string }> = {
+  amber:   { border: "border-amber-500/40",   bg: "bg-amber-500/15",   text: "text-amber-600 dark:text-amber-400",   chip: "bg-amber-500/15 text-amber-700 dark:text-amber-300" },
+  sky:     { border: "border-sky-500/40",     bg: "bg-sky-500/15",     text: "text-sky-600 dark:text-sky-400",       chip: "bg-sky-500/15 text-sky-700 dark:text-sky-300" },
+  emerald: { border: "border-emerald-500/40", bg: "bg-emerald-500/15", text: "text-emerald-600 dark:text-emerald-400", chip: "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300" },
+  violet:  { border: "border-violet-500/40",  bg: "bg-violet-500/15",  text: "text-violet-600 dark:text-violet-400", chip: "bg-violet-500/15 text-violet-700 dark:text-violet-300" },
+  rose:    { border: "border-rose-500/40",    bg: "bg-rose-500/15",    text: "text-rose-600 dark:text-rose-400",     chip: "bg-rose-500/15 text-rose-700 dark:text-rose-300" },
+  blue:    { border: "border-blue-500/40",    bg: "bg-blue-500/15",    text: "text-blue-600 dark:text-blue-400",     chip: "bg-blue-500/15 text-blue-700 dark:text-blue-300" },
+  indigo:  { border: "border-indigo-500/40",  bg: "bg-indigo-500/15",  text: "text-indigo-600 dark:text-indigo-400", chip: "bg-indigo-500/15 text-indigo-700 dark:text-indigo-300" },
+  orange:  { border: "border-orange-500/40",  bg: "bg-orange-500/15",  text: "text-orange-600 dark:text-orange-400", chip: "bg-orange-500/15 text-orange-700 dark:text-orange-300" },
+  teal:    { border: "border-teal-500/40",    bg: "bg-teal-500/15",    text: "text-teal-600 dark:text-teal-400",     chip: "bg-teal-500/15 text-teal-700 dark:text-teal-300" },
+  cyan:    { border: "border-cyan-500/40",    bg: "bg-cyan-500/15",    text: "text-cyan-600 dark:text-cyan-400",     chip: "bg-cyan-500/15 text-cyan-700 dark:text-cyan-300" },
+  fuchsia: { border: "border-fuchsia-500/40", bg: "bg-fuchsia-500/15", text: "text-fuchsia-600 dark:text-fuchsia-400", chip: "bg-fuchsia-500/15 text-fuchsia-700 dark:text-fuchsia-300" },
+  pink:    { border: "border-pink-500/40",    bg: "bg-pink-500/15",    text: "text-pink-600 dark:text-pink-400",     chip: "bg-pink-500/15 text-pink-700 dark:text-pink-300" },
+  purple:  { border: "border-purple-500/40",  bg: "bg-purple-500/15",  text: "text-purple-600 dark:text-purple-400", chip: "bg-purple-500/15 text-purple-700 dark:text-purple-300" },
+  zinc:    { border: "border-zinc-500/40",    bg: "bg-zinc-500/15",    text: "text-zinc-600 dark:text-zinc-400",     chip: "bg-zinc-500/15 text-zinc-700 dark:text-zinc-300" },
+  lime:    { border: "border-lime-500/40",    bg: "bg-lime-500/15",    text: "text-lime-600 dark:text-lime-400",     chip: "bg-lime-500/15 text-lime-700 dark:text-lime-300" },
+  stone:   { border: "border-stone-500/40",   bg: "bg-stone-500/15",   text: "text-stone-600 dark:text-stone-400",   chip: "bg-stone-500/15 text-stone-700 dark:text-stone-300" },
+  green:   { border: "border-green-500/40",   bg: "bg-green-500/15",   text: "text-green-600 dark:text-green-400",   chip: "bg-green-500/15 text-green-700 dark:text-green-300" },
+  red:     { border: "border-red-500/40",     bg: "bg-red-500/15",     text: "text-red-600 dark:text-red-400",       chip: "bg-red-500/15 text-red-700 dark:text-red-300" },
+  slate:   { border: "border-slate-500/40",   bg: "bg-slate-500/15",   text: "text-slate-600 dark:text-slate-400",   chip: "bg-slate-500/15 text-slate-700 dark:text-slate-300" },
+};
+const cc = (c: string) => COLOR_CLASSES[c] || COLOR_CLASSES.slate;
+
 type BrowseMode = "freq" | "cefr" | "theme" | "exam";
 
 function CurriculumBrowser({
@@ -953,19 +977,20 @@ function BandPanel({
 
   if (words.length === 0) return null;
 
+  const c = cc(color);
   return (
-    <div className={cn("rounded-2xl border-2 bg-card", `border-${color}-500/40`)}>
+    <div className={cn("rounded-2xl border-2 bg-card", c.border)}>
       <button
         onClick={() => setOpen((o) => !o)}
         className="flex w-full items-center gap-3 p-4 text-left"
       >
-        <div className={cn("flex size-12 shrink-0 items-center justify-center rounded-xl text-2xl", `bg-${color}-500/15`)}>
+        <div className={cn("flex size-12 shrink-0 items-center justify-center rounded-xl text-2xl", c.bg)}>
           {emoji}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
             <span className="text-sm font-extrabold">{title}</span>
-            <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-bold", `bg-${color}-500/15 text-${color}-700 dark:text-${color}-300`)}>
+            <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-bold", c.chip)}>
               {words.length} 词
             </span>
           </div>
@@ -984,7 +1009,7 @@ function BandPanel({
               >
                 <div className="flex items-center justify-between text-[10px] text-muted-foreground">
                   <span>第 {h.idx + 1} 组</span>
-                  <span className={cn("font-bold", `text-${color}-600 dark:text-${color}-400`)}>
+                  <span className={cn("font-bold", c.text)}>
                     {h.matched}/{h.total}
                   </span>
                 </div>

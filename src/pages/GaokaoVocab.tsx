@@ -1968,11 +1968,11 @@ function FloatingComboBadge({ label }: { label: string }) {
 /* ====================================================================== */
 
 const RUSH_DURATION_SEC = 60;
-const RUSH_FALL_BASE_MS = 6000;   // initial fall duration
-const RUSH_FALL_MIN_MS = 2200;    // fastest fall duration
-const RUSH_SPAWN_BASE_MS = 1800;  // initial spawn interval
-const RUSH_SPAWN_MIN_MS = 700;    // fastest spawn interval
-const RUSH_MAX_ACTIVE = 4;        // max simultaneous falling tiles
+const RUSH_FALL_BASE_MS = 10000;  // initial fall duration (slower start)
+const RUSH_FALL_MIN_MS = 4500;    // fastest fall duration (still readable)
+const RUSH_SPAWN_BASE_MS = 2800;  // initial spawn interval
+const RUSH_SPAWN_MIN_MS = 1300;   // fastest spawn interval
+const RUSH_MAX_ACTIVE = 3;        // max simultaneous falling tiles
 
 type RushTile = {
   id: number;

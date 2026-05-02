@@ -265,7 +265,7 @@ export default function GaokaoReading() {
         <ArrowLeft className="size-4" /> 返回高考英语
       </Link>
 
-      <PageHeader hideReviewBanner title="阅读理解训练" subtitle="个人化追踪 · Lexile 自适应 · 三阶段答题流程" />
+      <PageHeader hideReviewBanner title="阅读理解训练" subtitle="按你的水平推荐文章 · 答题 → 评分 → 精读复盘" />
 
       {/* ============= 继续阅读 Hero ============= */}
       {continueCard && (
@@ -380,8 +380,8 @@ export default function GaokaoReading() {
           <div className="relative mt-5 pt-5 border-t border-border/60">
             <div className="flex items-center gap-1.5 mb-2">
               <Wand2 className="size-4 text-violet-500" />
-              <h3 className="font-bold text-sm">为你定制 · 自适应推荐</h3>
-              <span className="text-[10px] text-muted-foreground">±50L 最佳学习区</span>
+              <h3 className="font-bold text-sm">挑给你的 · 难度刚好</h3>
+              <span className="text-[10px] text-muted-foreground">不太难也不太简单</span>
             </div>
             <div className="grid sm:grid-cols-3 gap-2">
               {recs.slice(0, 3).map((r) => (
@@ -411,20 +411,20 @@ export default function GaokaoReading() {
         )}
       </section>
 
-      {/* 三阶段法 + 知识点入口 */}
+      {/* 答题流程 + 知识点入口 */}
       <div className="mb-5 grid sm:grid-cols-2 gap-3">
         <div className="rounded-2xl border bg-gradient-to-br from-card to-muted/30 p-4">
           <div className="flex items-center gap-1.5 text-sm font-bold">
-            <GraduationCap className="size-4 text-primary" /> 三阶段答题流程
+            <GraduationCap className="size-4 text-primary" /> 每篇文章怎么练
           </div>
           <div className="mt-2 grid grid-cols-3 gap-1.5 text-[10px]">
             {[
-              { n: "①", t: "限时答题", d: "⏱ 锁死答案" },
-              { n: "②", t: "即时成绩", d: "📊 题型诊断" },
-              { n: "③", t: "精读复盘", d: "🔍 ABCD 逐项" },
+              { n: "1", t: "限时答题", d: "⏱ 模拟考场" },
+              { n: "2", t: "查看得分", d: "📊 错在哪类题" },
+              { n: "3", t: "逐题精读", d: "🔍 ABCD 全解析" },
             ].map((s) => (
               <div key={s.n} className="rounded-lg bg-background/60 border p-2">
-                <div className="font-bold text-foreground">{s.n} {s.t}</div>
+                <div className="font-bold text-foreground"><span className="inline-grid place-items-center size-4 rounded-full bg-primary text-primary-foreground text-[9px] mr-1">{s.n}</span>{s.t}</div>
                 <div className="text-muted-foreground mt-0.5">{s.d}</div>
               </div>
             ))}
@@ -436,8 +436,8 @@ export default function GaokaoReading() {
             <Library className="size-6" />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="font-bold text-sm">📚 知识点速查</div>
-            <div className="text-[11px] text-muted-foreground mt-0.5">题型 · 文体 · 策略 · 信号词 · 话题</div>
+            <div className="font-bold text-sm">📚 阅读知识手册</div>
+            <div className="text-[11px] text-muted-foreground mt-0.5">看不懂题型？这里查 · 7 大题型 + 解题套路</div>
           </div>
           <ChevronRight className="size-4 text-muted-foreground" />
         </Link>

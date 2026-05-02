@@ -1025,6 +1025,51 @@ export type Database = {
         }
         Relationships: []
       }
+      word_quest_attempts: {
+        Row: {
+          completed_at: string
+          hints_used: number
+          id: string
+          perfect: boolean
+          quest_date: string
+          score: number
+          stage_results: Json
+          stages_passed: number
+          target_vocab_id: string | null
+          target_word: string
+          total_duration_ms: number
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string
+          hints_used?: number
+          id?: string
+          perfect?: boolean
+          quest_date: string
+          score?: number
+          stage_results?: Json
+          stages_passed?: number
+          target_vocab_id?: string | null
+          target_word: string
+          total_duration_ms?: number
+          user_id: string
+        }
+        Update: {
+          completed_at?: string
+          hints_used?: number
+          id?: string
+          perfect?: boolean
+          quest_date?: string
+          score?: number
+          stage_results?: Json
+          stages_passed?: number
+          target_vocab_id?: string | null
+          target_word?: string
+          total_duration_ms?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       workplace_practice: {
         Row: {
           attempts: number
@@ -1147,6 +1192,26 @@ export type Database = {
           is_me: boolean
           rank: number
           weekly_xp: number
+        }[]
+      }
+      get_word_quest_daily_leaderboard: {
+        Args: never
+        Returns: {
+          alias: string
+          duration_ms: number
+          is_me: boolean
+          perfect: boolean
+          rank: number
+        }[]
+      }
+      get_word_quest_streak: {
+        Args: never
+        Returns: {
+          current_streak: number
+          longest_streak: number
+          this_month_days: number
+          today_done: boolean
+          total_perfect: number
         }[]
       }
       move_to_dlq: {

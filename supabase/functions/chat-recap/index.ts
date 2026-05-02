@@ -53,6 +53,18 @@ const REVIEW_TOOL = {
             required: ["en", "cn", "tip_cn", "better_en"],
           },
         },
+        targets_used: {
+          type: "array",
+          description: "如果用户传入了 target expressions, 这里返回 Alex 实际在对话中用到的目标表达 + Alex 当时的原句。没用到的不要列。",
+          items: {
+            type: "object",
+            properties: {
+              phrase: { type: "string", description: "目标表达 (与传入的 phrase 完全一致)." },
+              sentence: { type: "string", description: "Alex 用到该表达的那句原话 (verbatim from transcript)." },
+            },
+            required: ["phrase", "sentence"],
+          },
+        },
       },
       required: ["summary_cn", "turns"],
     },
@@ -154,7 +166,7 @@ serve(async (req) => {
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) return json({ error: "AI gateway not configured" }, 503);
 
-    const { transcript, lessonTitle, part: partFromBody } = await req.json();
+    const { transcript, lessonTitle, part: partFromBody, targets } = await req.json();
     const part: Part =
       partFromBody === "review" || partFromBody === "quiz" ? partFromBody : "all";
 
@@ -171,6 +183,10 @@ serve(async (req) => {
       .map((t, i) => `${i + 1}. ${t.role === "user" ? "Learner" : "Alex (AI)"}: ${t.text}`)
       .join("\n");
 
+    const targetsBlock = Array.isArray(targets) && targets.length
+      ? `\n\nTARGET EXPRESSIONS that Alex was secretly trying to teach (check which ones he actually used in the transcript above and return them via targets_used):\n${targets.map((t: any, i: number) => `${i + 1}. "${t.phrase}"`).join("\n")}`
+      : "";
+
     const tool = part === "review" ? REVIEW_TOOL : part === "quiz" ? QUIZ_TOOL : COMBINED_TOOL;
     const toolName = tool.function.name;
 
@@ -183,7 +199,7 @@ serve(async (req) => {
         { role: "system", content: buildSystemPrompt(part) },
         {
           role: "user",
-          content: `Lesson context: ${lessonTitle || "(general free chat)"}\n\nTRANSCRIPT:\n${transcriptText}`,
+          content: `Lesson context: ${lessonTitle || "(general free chat)"}\n\nTRANSCRIPT:\n${transcriptText}${targetsBlock}`,
         },
       ],
       tools: [tool],

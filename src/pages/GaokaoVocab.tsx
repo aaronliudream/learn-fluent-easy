@@ -921,6 +921,19 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
         </>
       );
     }
+    if (item.kind === "pos") {
+      return (
+        <>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">
+            选择匹配此<span className="text-primary">词性</span>的单词
+          </div>
+          <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary">
+            词性：{v.pos}
+          </div>
+          <div className="mt-3 text-2xl font-bold">{v.meaning_cn}</div>
+        </>
+      );
+    }
     // listen
     return (
       <>

@@ -374,9 +374,15 @@ function GroupList({
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-      <Link to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回高考英语
-      </Link>
+      <div className="mb-4 flex items-center justify-between">
+        <Link
+          to="/gaokao"
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="size-4" /> 返回高考英语
+        </Link>
+        <CoinPill />
+      </div>
       <PageHeader
         title="高考词汇 3500"
         subtitle={`共 ${groups.length} 组 · 每组 ${GROUP_SIZE} 词 · 闪卡 + 测试 + SRS 复习`}

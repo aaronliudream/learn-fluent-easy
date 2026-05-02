@@ -1503,6 +1503,11 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   const [bestStreak, setBestStreak] = useState(0);
   const [score, setScore] = useState(0);
   const [floatBadge, setFloatBadge] = useState<string | null>(null);
+  const [spellCorrect, setSpellCorrect] = useState(0);
+  const [coinsRefreshKey, setCoinsRefreshKey] = useState(0);
+  const [coinsAwarded, setCoinsAwarded] = useState(0);
+  const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
+  const [milestonesEvaluated, setMilestonesEvaluated] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -1559,21 +1564,60 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   const item = queue[pos];
 
   if (done || !item) {
+    // Award coins + evaluate milestones once when the session ends.
+    if (!milestonesEvaluated) {
+      setMilestonesEvaluated(true);
+      (async () => {
+        const totals = await awardCoins(score);
+        setCoinsAwarded(score);
+        setCoinsRefreshKey((k) => k + 1);
+        const pctNum =
+          stats.total === 0
+            ? 0
+            : Math.round((stats.correct / stats.total) * 100);
+        const newly = await evaluateMilestones({
+          bestStreak,
+          spellCorrect,
+          perfectGroup: stats.total > 0 && stats.correct === stats.total,
+          srsAccuracyPct: pctNum,
+          totalEarned: totals?.total_earned ?? 0,
+          attempted: stats.total,
+        });
+        if (newly.length > 0) setUnlockedBadges(newly);
+      })();
+    }
     const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
-        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回
-        </button>
+        <div className="mb-4 flex items-center justify-between">
+          <button
+            onClick={onExit}
+            className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="size-4" /> 返回
+          </button>
+          <CoinPill refreshKey={coinsRefreshKey} />
+        </div>
         <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
           <Brain className="mx-auto size-10 text-primary" />
           <div className="mt-3 text-xl font-extrabold">复习完成 🧠✨</div>
           <div className="mt-2 text-sm text-muted-foreground">
             正确率 <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
           </div>
+          {coinsAwarded > 0 && (
+            <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
+              🪙 +{coinsAwarded} 金币
+            </div>
+          )}
           <div className="mt-1 text-xs text-muted-foreground">下次复习时间已自动调整</div>
           <Button className="mt-6 w-full" onClick={onExit}>返回</Button>
         </div>
+        {unlockedBadges.length > 0 && (
+          <BadgeUnlockOverlay
+            badges={unlockedBadges}
+            onDismiss={() => setUnlockedBadges([])}
+          />
+        )}
       </main>
     );
   }
@@ -1582,6 +1626,10 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+
+    if (isCorrect && item.kind === "spell") {
+      setSpellCorrect((n) => n + 1);
+    }
 
     if (isCorrect) {
       const newStreak = streak + 1;
@@ -1615,9 +1663,15 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
-      <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 退出复习
-      </button>
+      <div className="mb-4 flex items-center justify-between">
+        <button
+          onClick={onExit}
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="size-4" /> 退出复习
+        </button>
+        <CoinPill refreshKey={coinsRefreshKey} />
+      </div>
       <div className="mb-4 flex items-center gap-2">
         <div className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
           <Brain className="size-3" /> 智能复习

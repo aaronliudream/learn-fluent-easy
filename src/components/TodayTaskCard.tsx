@@ -46,12 +46,10 @@ function nextLessonInfo(completed: string[]): { to: string; title: string } {
 export const TodayTaskCard = () => {
   const [dueReviews, setDueReviews] = useState<number | null>(null);
   const [signedIn, setSignedIn] = useState(false);
-  const [collapsed, setCollapsed] = useState<boolean>(() => {
-    if (typeof window === "undefined") return true;
-    const v = localStorage.getItem("todayTaskCollapsed");
-    // Default to collapsed unless user explicitly expanded ("0").
-    return v !== "0";
-  });
+  // Always start collapsed on page load. The user can expand it manually;
+  // we don't persist the expanded state across reloads so the home page
+  // stays compact by default.
+  const [collapsed, setCollapsed] = useState<boolean>(true);
   const t = useT();
   const progress = useMemo(() => loadProgress(), []);
   const streak = getStreak(progress);
@@ -126,11 +124,7 @@ export const TodayTaskCard = () => {
   const totalActionable = tasks.filter((t) => !t.done).length;
 
   const toggle = () => {
-    setCollapsed((prev) => {
-      const next = !prev;
-      try { localStorage.setItem("todayTaskCollapsed", next ? "1" : "0"); } catch {}
-      return next;
-    });
+    setCollapsed((prev) => !prev);
   };
 
   return (

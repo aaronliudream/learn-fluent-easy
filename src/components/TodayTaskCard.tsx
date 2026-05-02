@@ -7,7 +7,6 @@ import { LEVELS } from "@/data/course";
 import { loadProgress, getStreak } from "@/lib/guestProgress";
 import { IDIOMS } from "@/data/idioms";
 import { T, useT } from "@/i18n/T";
-import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
 
 type Task = {
   key: "review" | "lesson" | "slang";

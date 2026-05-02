@@ -14,6 +14,7 @@ type Vocab = {
   phonetic: string | null;
   pos: string | null;
   meaning_cn: string;
+  meaning_en: string | null;
   example_en: string | null;
   example_cn: string | null;
   star_level: number | null;
@@ -54,7 +55,7 @@ function AccentBadge({ accent }: { accent: Vocab["accent"] }) {
 const GROUP_SIZE = 20;
 
 type Phase = "flashcard" | "quiz" | "done";
-type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze";
+type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze" | "en2en" | "en2word";
 type QuizItem = { vocab: Vocab; kind: QuizKind; choices: Vocab[] };
 
 function shuffle<T>(arr: T[]): T[] {
@@ -69,6 +70,7 @@ function shuffle<T>(arr: T[]): T[] {
 function pickKind(v: Vocab): QuizKind {
   const kinds: QuizKind[] = ["en2cn", "cn2en"];
   if (v.example_en) kinds.push("listen", "cloze");
+  if (v.meaning_en) kinds.push("en2en", "en2word");
   return kinds[Math.floor(Math.random() * kinds.length)];
 }
 
@@ -79,6 +81,77 @@ function buildClozeBlank(sentence: string, word: string): { masked: string; answ
   const answer = m ? m[1] : word;
   const masked = sentence.replace(re, "_____");
   return { masked, answer };
+}
+
+/* ---------- English meaning fetcher (with cache) ---------- */
+const meaningEnCache = new Map<string, string>();
+const meaningEnInflight = new Map<string, Promise<void>>();
+
+async function ensureMeaningsEn(vocabs: Vocab[]): Promise<Record<string, string>> {
+  // Seed cache from already-loaded vocab rows
+  for (const v of vocabs) {
+    if (v.meaning_en && !meaningEnCache.has(v.id)) {
+      meaningEnCache.set(v.id, v.meaning_en);
+    }
+  }
+  const missing = vocabs.filter((v) => !meaningEnCache.has(v.id));
+  if (missing.length > 0) {
+    const ids = missing.map((v) => v.id);
+    const key = ids.sort().join(",");
+    if (!meaningEnInflight.has(key)) {
+      const p = (async () => {
+        try {
+          const { data, error } = await supabase.functions.invoke(
+            "vocab-meaning-en",
+            { body: { ids } },
+          );
+          if (error) throw error;
+          const results = (data?.results ?? {}) as Record<string, string>;
+          for (const [id, def] of Object.entries(results)) {
+            meaningEnCache.set(id, def);
+          }
+        } catch (e) {
+          console.error("ensureMeaningsEn failed", e);
+        }
+      })();
+      meaningEnInflight.set(key, p);
+    }
+    await meaningEnInflight.get(key);
+  }
+  const out: Record<string, string> = {};
+  for (const v of vocabs) {
+    const def = meaningEnCache.get(v.id);
+    if (def) out[v.id] = def;
+  }
+  return out;
+}
+
+function useMeaningEn(v: Vocab | null | undefined): string | null {
+  const [val, setVal] = useState<string | null>(
+    v ? meaningEnCache.get(v.id) ?? v.meaning_en ?? null : null,
+  );
+  useEffect(() => {
+    if (!v) {
+      setVal(null);
+      return;
+    }
+    const cached = meaningEnCache.get(v.id) ?? v.meaning_en ?? null;
+    if (cached) {
+      setVal(cached);
+      if (v.meaning_en && !meaningEnCache.has(v.id))
+        meaningEnCache.set(v.id, v.meaning_en);
+      return;
+    }
+    setVal(null);
+    let cancelled = false;
+    ensureMeaningsEn([v]).then((res) => {
+      if (!cancelled) setVal(res[v.id] ?? null);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [v?.id]);
+  return val;
 }
 
 export default function GaokaoVocab() {
@@ -332,6 +405,13 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
     setFlipped(false);
   }, [idx, v?.id]);
 
+  // Prefetch English meanings for the whole group once
+  useEffect(() => {
+    if (group.length > 0) ensureMeaningsEn(group);
+  }, [group]);
+
+  const meaningEn = useMeaningEn(v);
+
   if (!v) return null;
 
   const next = () => {
@@ -366,6 +446,16 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
         {flipped ? (
           <div className="mt-6 space-y-3 text-left">
             <div className="rounded-xl bg-muted/50 p-3 text-base font-medium">{v.meaning_cn}</div>
+            <div className="rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm">
+              <div className="mb-1 text-[10px] font-bold uppercase tracking-wider text-primary">
+                English definition
+              </div>
+              {meaningEn ? (
+                <div className="italic">{meaningEn}</div>
+              ) : (
+                <div className="text-muted-foreground">Loading…</div>
+              )}
+            </div>
             {v.example_en && (
               <button
                 onClick={(e) => { e.stopPropagation(); speakExample(v); }}
@@ -406,6 +496,12 @@ function QuizPhase({
   const [queue, setQueue] = useState<QuizItem[]>(() => buildInitialQueue(group, pool));
   const [pos, setPos] = useState(0);
   const [stats, setStats] = useState({ correct: 0, total: 0 });
+
+  // Prefetch English meanings so en2en/en2word questions render instantly
+  useEffect(() => {
+    if (group.length > 0) ensureMeaningsEn(group);
+    if (pool.length > 0) ensureMeaningsEn(pool.slice(0, 60));
+  }, [group, pool]);
 
   const item = queue[pos];
 
@@ -475,6 +571,23 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
   const [clozeChecked, setClozeChecked] = useState<null | boolean>(null);
   const v = item.vocab;
 
+  // For en2en / en2word: ensure the target's English meaning is loaded;
+  // and gather English meanings for distractor choices too.
+  const targetMeaningEn = useMeaningEn(
+    item.kind === "en2en" || item.kind === "en2word" ? v : null,
+  );
+  const [choiceMeaningsEn, setChoiceMeaningsEn] = useState<Record<string, string>>({});
+  useEffect(() => {
+    if (item.kind !== "en2en" && item.kind !== "en2word") return;
+    let cancelled = false;
+    ensureMeaningsEn(item.choices).then((res) => {
+      if (!cancelled) setChoiceMeaningsEn(res);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [item.kind, item.choices]);
+
   // Auto-play audio for "listen" type
   useEffect(() => {
     if (item.kind === "listen" && v.example_en) {
@@ -483,7 +596,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     }
     // Auto-play the word for English→Chinese & cloze questions so the
     // student hears the pronunciation as soon as the question appears.
-    if (item.kind === "en2cn" || item.kind === "cloze") {
+    if (item.kind === "en2cn" || item.kind === "cloze" || item.kind === "en2en") {
       const t = setTimeout(() => speakWord(v), 200);
       return () => clearTimeout(t);
     }
@@ -583,6 +696,40 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
         </>
       );
     }
+    if (item.kind === "en2en") {
+      return (
+        <>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">
+            Choose the English definition
+          </div>
+          <button
+            onClick={() => speakWord(v)}
+            className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
+          >
+            {v.word} <Volume2 className="size-5 text-primary" />
+          </button>
+          {v.phonetic && (
+            <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
+              {v.phonetic}
+              <AccentBadge accent={v.accent} />
+            </div>
+          )}
+        </>
+      );
+    }
+    if (item.kind === "en2word") {
+      return (
+        <>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">
+            Choose the word that matches
+          </div>
+          <div className="mt-3 min-h-[3rem] text-lg font-semibold italic">
+            {targetMeaningEn ? `“${targetMeaningEn}”` : "Loading…"}
+          </div>
+          {v.pos && <div className="mt-1 text-xs text-muted-foreground">{v.pos}</div>}
+        </>
+      );
+    }
     // listen
     return (
       <>
@@ -600,6 +747,9 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
 
   const renderChoiceLabel = (c: Vocab) => {
     if (item.kind === "en2cn") return c.meaning_cn;
+    if (item.kind === "en2en") {
+      return choiceMeaningsEn[c.id] ?? c.meaning_en ?? "…";
+    }
     return c.word;
   };
 
@@ -607,7 +757,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     if (picked) return;
     setPicked(c.id);
     const ok = c.id === v.id;
-    if (ok && item.kind === "cn2en") speakWord(v);
+    if (ok && (item.kind === "cn2en" || item.kind === "en2word")) speakWord(v);
     setTimeout(() => onResult(ok), 900);
   };
 
@@ -704,6 +854,8 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       const words = pool.filter((v) => idSet.has(v.id));
       const shuffled = shuffle(words);
       setDueWords(shuffled);
+      // Prefetch English meanings for SRS queue
+      ensureMeaningsEn(shuffled);
       setQueue(
         shuffled.map((v) => ({
           vocab: v,

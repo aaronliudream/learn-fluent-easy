@@ -489,6 +489,7 @@ export type Database = {
           frequency_band: number
           id: string
           meaning_cn: string
+          meaning_en: string | null
           phonetic: string | null
           pos: string | null
           sort_order: number
@@ -504,6 +505,7 @@ export type Database = {
           frequency_band?: number
           id?: string
           meaning_cn: string
+          meaning_en?: string | null
           phonetic?: string | null
           pos?: string | null
           sort_order?: number
@@ -519,6 +521,7 @@ export type Database = {
           frequency_band?: number
           id?: string
           meaning_cn?: string
+          meaning_en?: string | null
           phonetic?: string | null
           pos?: string | null
           sort_order?: number

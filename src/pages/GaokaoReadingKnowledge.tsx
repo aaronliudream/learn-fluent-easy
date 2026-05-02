@@ -231,7 +231,7 @@ export default function GaokaoReadingKnowledge() {
         <ArrowLeft className="size-4" /> 返回阅读训练
       </Link>
 
-      <PageHeader hideReviewBanner title="阅读知识体系" subtitle="科学路径 · 个人化追踪 · 高频优先" />
+      <PageHeader hideReviewBanner title="阅读知识手册" subtitle="题型怎么辨 · 套路怎么用 · 易错点在哪" />
 
       {/* ============= 顶部仪表盘 ============= */}
       <section className="mb-6 rounded-3xl border bg-gradient-to-br from-primary/10 via-primary/5 to-transparent p-5 sm:p-6 relative overflow-hidden">

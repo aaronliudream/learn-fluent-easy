@@ -27,7 +27,7 @@ export function LanguagePickerModal() {
 
   return (
     <Dialog open onOpenChange={() => { /* lock */ }}>
-      <DialogContent className="max-w-lg" onInteractOutside={(e) => e.preventDefault()}>
+      <DialogContent className="max-w-lg w-[calc(100vw-1rem)] p-4 sm:p-6" onInteractOutside={(e) => e.preventDefault()}>
         <DialogHeader>
           <div className="mb-2 inline-flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
             <Globe className="size-6" />
@@ -38,11 +38,11 @@ export function LanguagePickerModal() {
 
         {/* Multilingual hint so non-English speakers immediately understand
             this is the "pick your mother language" prompt. */}
-        <div className="mt-1 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-3 text-center">
-          <div className="mb-1 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-primary">
-            <Sparkles className="size-3" />
-            <span>Choose your mother language</span>
-            <Sparkles className="size-3" />
+        <div className="mt-1 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-3 text-left sm:text-center">
+          <div className="mb-1 flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wide text-primary sm:justify-center">
+            <Sparkles className="size-3 shrink-0" />
+            <span className="break-words">Choose your mother language</span>
+            <Sparkles className="size-3 shrink-0 hidden sm:inline-block" />
           </div>
           <div className="text-xs leading-relaxed text-muted-foreground">
             <span>请选择你的母语</span>

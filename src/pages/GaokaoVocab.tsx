@@ -14,6 +14,7 @@ type Vocab = {
   phonetic: string | null;
   pos: string | null;
   meaning_cn: string;
+  meaning_en: string | null;
   example_en: string | null;
   example_cn: string | null;
   star_level: number | null;
@@ -54,7 +55,7 @@ function AccentBadge({ accent }: { accent: Vocab["accent"] }) {
 const GROUP_SIZE = 20;
 
 type Phase = "flashcard" | "quiz" | "done";
-type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze";
+type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze" | "en2en" | "en2word";
 type QuizItem = { vocab: Vocab; kind: QuizKind; choices: Vocab[] };
 
 function shuffle<T>(arr: T[]): T[] {
@@ -69,6 +70,7 @@ function shuffle<T>(arr: T[]): T[] {
 function pickKind(v: Vocab): QuizKind {
   const kinds: QuizKind[] = ["en2cn", "cn2en"];
   if (v.example_en) kinds.push("listen", "cloze");
+  if (v.meaning_en) kinds.push("en2en", "en2word");
   return kinds[Math.floor(Math.random() * kinds.length)];
 }
 

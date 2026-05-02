@@ -659,14 +659,9 @@ function QuizPhase({
     let nextQueue = queue;
     if (!isCorrect) {
       // re-insert a different kind of the same word ~3 ahead
-      const newKind = pickKind(item.vocab);
       const reinsertIdx = Math.min(queue.length, pos + 3);
       nextQueue = [...queue];
-      nextQueue.splice(reinsertIdx, 0, {
-        vocab: item.vocab,
-        kind: newKind,
-        choices: buildChoices(item.vocab, pool),
-      });
+      nextQueue.splice(reinsertIdx, 0, buildItem(item.vocab, pool));
       setQueue(nextQueue);
     }
 

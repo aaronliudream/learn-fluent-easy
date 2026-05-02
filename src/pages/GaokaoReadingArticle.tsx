@@ -73,13 +73,21 @@ const TYPE_COLOR: Record<string, string> = {
 
 function cleanArticleBody(body: string) {
   const normalized = body.replace(/\r\n/g, "\n").trim();
-  const sectionMarkers = [
-    /(?:^|\n)\s*(测试题目|答案与解析|文章分析|生词与重点表达)\s*[:：]?/i,
-    /(?:^|\n)\s*(Questions?|Answers?\s*(and|&)\s*Analysis|Article\s*Analysis|Vocabulary)\s*[:：]?/i,
+  const lower = normalized.toLowerCase();
+  const markers = [
+    "测试题目",
+    "答案与解析",
+    "文章分析",
+    "生词与重点表达",
+    "questions",
+    "answers and analysis",
+    "answer analysis",
+    "article analysis",
+    "vocabulary",
   ];
-  const cutAt = sectionMarkers.reduce((min, marker) => {
-    const match = marker.exec(normalized);
-    return match && match.index > 0 ? Math.min(min, match.index) : min;
+  const cutAt = markers.reduce((min, marker) => {
+    const idx = lower.indexOf(marker);
+    return idx > 0 ? Math.min(min, idx) : min;
   }, normalized.length);
   return normalized.slice(0, cutAt).trim();
 }

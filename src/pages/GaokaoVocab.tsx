@@ -344,11 +344,13 @@ function GroupList({
   pool,
   onPick,
   onStartSrs,
+  onStartRush,
 }: {
   groups: Vocab[][];
   pool: Vocab[];
   onPick: (i: number) => void;
   onStartSrs: () => void;
+  onStartRush: () => void;
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);
@@ -433,6 +435,36 @@ function GroupList({
           {dueCount && dueCount > 0 ? (
             <ChevronRight className="size-5 text-primary" />
           ) : null}
+        </div>
+      </button>
+
+      {/* Word Rush — fast-paced rhythm matching */}
+      <button
+        onClick={onStartRush}
+        disabled={pool.length < 4}
+        className={cn(
+          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
+          pool.length >= 4
+            ? "border-fuchsia-500/60 bg-gradient-to-br from-fuchsia-500/15 via-purple-500/10 to-transparent hover:border-fuchsia-500 hover:shadow-md"
+            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}
+      >
+        <div className="flex items-center gap-4">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-fuchsia-500/20 text-fuchsia-600 dark:text-fuchsia-400">
+            <Music className="size-7" />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-base font-extrabold">⚡ Word Rush 节奏消除</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-fuchsia-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                NEW
+              </span>
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              中文从天而降 · 60 秒内点对越多越快 · Combo 加倍 + 金币奖励
+            </div>
+          </div>
+          <ChevronRight className="size-5 text-fuchsia-500" />
         </div>
       </button>
 

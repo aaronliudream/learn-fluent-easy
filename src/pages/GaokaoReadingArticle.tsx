@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Clock, Send, AlertTriangle, CheckCircle2, XCircle, Sparkles, BookOpen, FileText, Target, ChevronDown, ChevronUp, Eye, EyeOff, Gauge, Brain, HelpCircle, ThumbsUp, Zap } from "lucide-react";
+import { ArrowLeft, Clock, Send, CheckCircle2, XCircle, Sparkles, BookOpen, FileText, Target, ChevronDown, ChevronUp, Eye, Gauge, Brain, HelpCircle, ThumbsUp, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -58,7 +58,7 @@ type VocabItem = {
   importance: number;
 };
 
-type Stage = "test" | "result" | "review";
+type Stage = "read" | "test" | "result" | "review";
 
 const TYPE_COLOR: Record<string, string> = {
   main_idea: "bg-rose-500/10 text-rose-600 border-rose-500/20",
@@ -71,6 +71,27 @@ const TYPE_COLOR: Record<string, string> = {
   viewpoint: "bg-indigo-500/10 text-indigo-600 border-indigo-500/20",
 };
 
+function cleanArticleBody(body: string) {
+  const normalized = body.replace(/\r\n/g, "\n").trim();
+  const lower = normalized.toLowerCase();
+  const markers = [
+    "测试题目",
+    "答案与解析",
+    "文章分析",
+    "生词与重点表达",
+    "questions",
+    "answers and analysis",
+    "answer analysis",
+    "article analysis",
+    "vocabulary",
+  ];
+  const cutAt = markers.reduce((min, marker) => {
+    const idx = lower.indexOf(marker);
+    return idx > 0 ? Math.min(min, idx) : min;
+  }, normalized.length);
+  return normalized.slice(0, cutAt).trim();
+}
+
 export default function GaokaoReadingArticle() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -79,7 +100,7 @@ export default function GaokaoReadingArticle() {
   const [vocab, setVocab] = useState<VocabItem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const [stage, setStage] = useState<Stage>("test");
+  const [stage, setStage] = useState<Stage>("read");
   const [answers, setAnswers] = useState<Record<string, "A" | "B" | "C" | "D">>({});
   // 信心度: 1=猜的, 2=比较确定, 3=非常确定 (PISA 元认知金标准)
   const [confidences, setConfidences] = useState<Record<string, 1 | 2 | 3>>({});
@@ -89,7 +110,6 @@ export default function GaokaoReadingArticle() {
   const [submittedAt, setSubmittedAt] = useState<number | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [fontScale, setFontScale] = useState(1);
-  const [showConfirm, setShowConfirm] = useState(false);
 
   // Load
   useEffect(() => {
@@ -128,6 +148,7 @@ export default function GaokaoReadingArticle() {
 
   const answeredCount = Object.keys(answers).length;
   const totalQ = questions.length;
+  const displayBody = useMemo(() => cleanArticleBody(article?.body ?? ""), [article?.body]);
 
   const correctCount = useMemo(() => {
     return questions.filter((q) => answers[q.id] === q.correct_answer).length;
@@ -145,11 +166,10 @@ export default function GaokaoReadingArticle() {
 
   async function handleSubmit(timeUp = false) {
     if (!article) return;
-    if (!timeUp && answeredCount < totalQ) {
-      setShowConfirm(true);
+    if (answeredCount < totalQ) {
+      toast.warning(timeUp ? "时间到，请补完所有题目后再查看答案和解析" : "请先完成所有题目，再查看答案和解析");
       return;
     }
-    setShowConfirm(false);
 
     const now = Date.now();
     setSubmittedAt(now);
@@ -206,7 +226,7 @@ export default function GaokaoReadingArticle() {
     }
 
     if (timeUp) toast.warning("时间到，已自动交卷");
-    setStage("result");
+    setStage("review");
   }
 
   if (loading) {
@@ -228,7 +248,52 @@ export default function GaokaoReadingArticle() {
     );
   }
 
-  // ============ STAGE 1: TEST ============
+  // ============ STAGE 1: READ ============
+  if (stage === "read") {
+    return (
+      <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+        <Link to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> 返回阅读列表
+        </Link>
+
+        <article className="rounded-2xl border bg-card p-6 lg:p-8">
+          <div className="mb-4 flex items-center justify-between border-b pb-3">
+            <div className="text-xs text-muted-foreground">
+              {article.word_count} 词 · 建议 {article.recommended_minutes} 分钟 · {article.sub_band} · {article.genre_label}
+            </div>
+            <div className="flex items-center gap-1">
+              <button
+                onClick={() => setFontScale((s) => Math.max(0.85, s - 0.1))}
+                className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted"
+              >A-</button>
+              <button
+                onClick={() => setFontScale((s) => Math.min(1.4, s + 0.1))}
+                className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted"
+              >A+</button>
+            </div>
+          </div>
+          <h1 className="mb-4 text-xl font-bold leading-snug">{article.title}</h1>
+          <div
+            className="prose prose-slate max-w-none space-y-4 leading-[1.85] text-foreground select-text"
+            style={{ fontSize: `${fontScale}rem` }}
+          >
+            {displayBody.split("\n\n").map((p, i) => (
+              <p key={i} className="text-justify">
+                <span className="mr-2 font-mono text-xs text-muted-foreground/40 select-none">{i + 1}</span>
+                {p}
+              </p>
+            ))}
+          </div>
+        </article>
+
+        <Button size="lg" className="mt-6 h-12 w-full gap-2" onClick={() => setStage("test")}>
+          <Target className="size-4" /> 开始测试选择题
+        </Button>
+      </main>
+    );
+  }
+
+  // ============ STAGE 2: TEST ============
   if (stage === "test") {
     const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
     const ss = String(secondsLeft % 60).padStart(2, "0");
@@ -269,46 +334,14 @@ export default function GaokaoReadingArticle() {
           </div>
         </header>
 
-        {/* Two-column: passage + questions */}
-        <div className="mx-auto max-w-7xl px-4 py-6 grid lg:grid-cols-[1.3fr_1fr] gap-6">
-          {/* LEFT: Passage */}
-          <article className="rounded-2xl border bg-card p-6 lg:p-8 lg:sticky lg:top-[72px] lg:self-start lg:max-h-[calc(100vh-96px)] lg:overflow-y-auto">
-            <div className="flex items-center justify-between mb-4 pb-3 border-b">
-              <div className="text-xs text-muted-foreground">
-                {article.word_count} 词 · 建议 {article.recommended_minutes} 分钟
-              </div>
-              <div className="flex items-center gap-1">
-                <button
-                  onClick={() => setFontScale((s) => Math.max(0.85, s - 0.1))}
-                  className="size-7 rounded-md border bg-background hover:bg-muted text-xs font-bold"
-                >A-</button>
-                <button
-                  onClick={() => setFontScale((s) => Math.min(1.4, s + 0.1))}
-                  className="size-7 rounded-md border bg-background hover:bg-muted text-xs font-bold"
-                >A+</button>
-              </div>
-            </div>
-            <h1 className="text-xl font-bold mb-4 leading-snug">{article.title}</h1>
-            <div
-              className="prose prose-slate max-w-none leading-[1.85] text-foreground space-y-4 select-text"
-              style={{ fontSize: `${fontScale}rem` }}
-            >
-              {article.body.split("\n\n").map((p, i) => (
-                <p key={i} className="text-justify">
-                  <span className="text-muted-foreground/40 mr-2 font-mono text-xs select-none">{i + 1}</span>
-                  {p}
-                </p>
-              ))}
-            </div>
-          </article>
-
-          {/* RIGHT: Questions */}
+        {/* Questions only */}
+        <div className="mx-auto max-w-3xl px-4 py-6">
           <section className="space-y-4">
-            <div className="rounded-xl border bg-amber-500/5 border-amber-500/20 p-3 flex gap-2 text-xs text-amber-700 dark:text-amber-400">
-              <EyeOff className="size-4 shrink-0 mt-0.5" />
+            <div className="rounded-xl border bg-primary/5 border-primary/20 p-3 flex gap-2 text-xs text-primary">
+              <Target className="size-4 shrink-0 mt-0.5" />
               <div>
-                <div className="font-semibold">答题阶段·答案与解析已锁死</div>
-                <div className="opacity-80 mt-0.5">交卷后才会显示对错、解析与文章分析。请像考试一样独立完成。</div>
+                <div className="font-semibold">测试阶段</div>
+                <div className="opacity-80 mt-0.5">完成所有选择题并交卷后，才会显示正确答案和解析。</div>
               </div>
             </div>
 
@@ -408,29 +441,6 @@ export default function GaokaoReadingArticle() {
             </Button>
           </section>
         </div>
-
-        {/* Confirm dialog */}
-        {showConfirm && (
-          <div className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-4" onClick={() => setShowConfirm(false)}>
-            <div className="rounded-2xl bg-card p-6 max-w-sm w-full shadow-xl" onClick={(e) => e.stopPropagation()}>
-              <div className="flex items-center gap-2 mb-2">
-                <AlertTriangle className="size-5 text-amber-500" />
-                <h3 className="font-bold">还有题目未作答</h3>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                你已完成 {answeredCount}/{totalQ} 题，未作答的题目将记为错误。确认提交？
-              </p>
-              <div className="flex gap-2">
-                <Button variant="outline" className="flex-1" onClick={() => setShowConfirm(false)}>
-                  继续答题
-                </Button>
-                <Button className="flex-1" onClick={() => handleSubmit(true)}>
-                  确认提交
-                </Button>
-              </div>
-            </div>
-          </div>
-        )}
       </main>
     );
   }

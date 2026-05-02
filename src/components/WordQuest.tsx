@@ -9,8 +9,8 @@ import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 
 /* ============================================================
    Word Quest 单词奇旅
-   - 每天系统从词池里基于日期 hash 选 1 个"今日单词"（全平台同款）
-   - 玩家打 6 关：听音/释义/例句/同义/拼写/BOSS
+   - 每天系统从词池里基于日期 hash 选 3 个"今日单词"（全平台同款）
+   - 每词打 6 关：听音/释义/例句/同义/拼写/BOSS（共 18 关）
    - 每天每位用户只能挑战 1 次
    - 通关后展示分享卡（emoji 战绩）+ streak / 排行榜
    ============================================================ */
@@ -57,14 +57,30 @@ function hashStr(s: string) {
   for (let i = 0; i < s.length; i++) h = ((h << 5) + h) ^ s.charCodeAt(i);
   return Math.abs(h);
 }
-function pickDailyVocab(pool: Vocab[]): Vocab | null {
-  if (!pool.length) return null;
-  // Prefer words with example_en + meaning_cn, with at least 4 chars (避免 a/an 等)
+function pickDailyVocabs(pool: Vocab[], n = 3): Vocab[] {
+  if (!pool.length) return [];
   const eligible = pool.filter(
     (v) => v.example_en && v.example_en.length > 12 && v.word.length >= 4 && /^[a-zA-Z]+$/.test(v.word)
   );
   const candidates = eligible.length > 50 ? eligible : pool;
-  return candidates[hashStr(todayKey()) % candidates.length];
+  if (!candidates.length) return [];
+  const baseHash = hashStr(todayKey());
+  const picked: Vocab[] = [];
+  const used = new Set<string>();
+  // Spread the 3 picks across the candidate space using prime offsets to avoid duplicates
+  const offsets = [0, 7919, 15485];
+  for (let i = 0; i < n; i++) {
+    for (let attempt = 0; attempt < candidates.length; attempt++) {
+      const idx = (baseHash + offsets[i % offsets.length] + attempt * 101) % candidates.length;
+      const v = candidates[idx];
+      if (!used.has(v.id)) {
+        used.add(v.id);
+        picked.push(v);
+        break;
+      }
+    }
+  }
+  return picked;
 }
 
 function speakWord(v: Vocab) {
@@ -82,6 +98,9 @@ const STAGES = [
   { n: 5, emoji: "🔤", name: "字母重排", hint: "将打乱的字母拼成正确单词" },
   { n: 6, emoji: "⏱", name: "BOSS 战", hint: "30 秒内综合作答" },
 ];
+const STAGES_PER_WORD = STAGES.length;
+const WORDS_PER_QUEST = 3;
+const TOTAL_STAGES = STAGES_PER_WORD * WORDS_PER_QUEST; // 18
 
 function shuffleStr(s: string) {
   const a = s.split("");

@@ -56,6 +56,21 @@ const MAX_CACHE = 80;
 export const clearAudioCache = () => audioCache.clear();
 export const getLastSpoken = () => lastSpoken;
 
+// Silently warm the audio cache for a phrase so that when the user later
+// taps "play", the MP3 is already in memory and playback starts instantly.
+// This does NOT touch any <audio> element, so it never triggers the iOS
+// "now playing" indicator (Dynamic Island heart icon) — it's pure network.
+export const prefetchTTS = (text: string, opts?: { accent?: "UK" | "US" | "BOTH" }) => {
+  const trimmed = (text || "").trim();
+  if (!trimmed) return;
+  const { voiceId, speed } = loadSettings();
+  const accent = opts?.accent;
+  const cacheKey = `${voiceId}|${speed}|${accent || ''}|${trimmed}`;
+  if (audioCache.has(cacheKey)) return;
+  // Fire-and-forget; fetchTTS stores the resulting URL in audioCache.
+  void fetchTTS(trimmed, voiceId, speed, accent);
+};
+
 const stopCurrent = () => {
   speakToken += 1;
   if (currentAudio) {

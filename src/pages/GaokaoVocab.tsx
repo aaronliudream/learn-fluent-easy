@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap, Music, Trophy, Headphones, Loader2 } from "lucide-react";
+import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap, Music, Trophy, Headphones, Loader2, BarChart3 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
@@ -14,6 +14,7 @@ import {
   type BadgeDef,
 } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
+import MasteryDashboard from "@/components/MasteryDashboard";
 
 type Vocab = {
   id: string;
@@ -321,6 +322,10 @@ export default function GaokaoVocab() {
     return <DictationSession pool={allVocab} onExit={() => setParams({})} />;
   }
 
+  if (mode === "dash") {
+    return <MasteryDashboard onExit={() => setParams({})} />;
+  }
+
   if (groupIdx < 0 || groupIdx >= groups.length) {
     return (
       <GroupList
@@ -330,6 +335,7 @@ export default function GaokaoVocab() {
         onStartSrs={() => setParams({ mode: "srs" })}
         onStartRush={() => setParams({ mode: "rush" })}
         onStartDict={() => setParams({ mode: "dict" })}
+        onOpenDash={() => setParams({ mode: "dash" })}
       />
     );
   }
@@ -352,6 +358,7 @@ function GroupList({
   onStartSrs,
   onStartRush,
   onStartDict,
+  onOpenDash,
 }: {
   groups: Vocab[][];
   pool: Vocab[];
@@ -359,6 +366,7 @@ function GroupList({
   onStartSrs: () => void;
   onStartRush: () => void;
   onStartDict: () => void;
+  onOpenDash: () => void;
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);
@@ -503,6 +511,30 @@ function GroupList({
             </div>
           </div>
           <ChevronRight className="size-5 text-emerald-500" />
+        </div>
+      </button>
+
+      {/* Mastery Dashboard entry */}
+      <button
+        onClick={onOpenDash}
+        className="mt-3 group block w-full rounded-3xl border-2 border-indigo-500/60 bg-gradient-to-br from-indigo-500/15 via-sky-500/10 to-transparent p-5 text-left shadow-tile transition hover:border-indigo-500 hover:shadow-md"
+      >
+        <div className="flex items-center gap-4">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400">
+            <BarChart3 className="size-7" />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-base font-extrabold">📊 掌握度仪表盘</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-indigo-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                NEW
+              </span>
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              5 级分布 · 三维能力 · 易错词热区 · 大师词汇
+            </div>
+          </div>
+          <ChevronRight className="size-5 text-indigo-500" />
         </div>
       </button>
 

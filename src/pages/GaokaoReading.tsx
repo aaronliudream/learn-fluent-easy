@@ -55,6 +55,12 @@ type SessionStat = {
   attempts: number;
   last_at: string;
 };
+
+type ContinueCard = {
+  article: Article;
+  kind: "resume" | "next" | "first";
+  stat?: SessionStat;
+};
 // 状态: mastered ≥ 85% | passed ≥ 60% | tried < 60% | new
 
 type ArticleStatus = "mastered" | "passed" | "tried" | "new";
@@ -103,6 +109,7 @@ export default function GaokaoReading() {
   const [sessions, setSessions] = useState<Record<string, SessionStat>>({});
   const [statusFilter, setStatusFilter] = useState<ArticleStatus | "all">("all");
   const [search, setSearch] = useState("");
+  const [lastReadId, setLastReadId] = useState<string | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -122,16 +129,18 @@ export default function GaokaoReading() {
           supabase.rpc("get_lexile_recommendations"),
           supabase
             .from("gaokao_reading_sessions")
-            .select("article_id, score_pct, submitted_at")
+            .select("article_id, score_pct, submitted_at, status")
             .eq("user_id", u.user.id)
-            .eq("status", "submitted")
             .order("submitted_at", { ascending: false }),
         ]);
         if (p && p[0]) setProfile(p[0] as LexileProfile);
         if (r) setRecs(r as Recommendation[]);
         if (ss) {
           const map: Record<string, SessionStat> = {};
-          for (const s of ss as { article_id: string; score_pct: number; submitted_at: string }[]) {
+          let latestId: string | null = null;
+          for (const s of ss as { article_id: string; score_pct: number; submitted_at: string; status: string }[]) {
+            if (!latestId) latestId = s.article_id;
+            if (s.status !== "submitted") continue;
             const ex = map[s.article_id];
             if (!ex) {
               map[s.article_id] = { best_pct: s.score_pct ?? 0, attempts: 1, last_at: s.submitted_at };
@@ -141,6 +150,7 @@ export default function GaokaoReading() {
             }
           }
           setSessions(map);
+          setLastReadId(latestId);
         }
       }
     })();
@@ -209,6 +219,29 @@ export default function GaokaoReading() {
 
   const currentBand = tab ? BANDS.find((b) => b.id === tab)! : null;
 
+  // ====== 「继续阅读」hero 卡 ======
+  const continueCard = useMemo<ContinueCard | null>(() => {
+    if (!articles.length) return null;
+    // 1. 有最近访问的文章 → 继续 / 复盘
+    if (lastReadId) {
+      const article = articles.find((a) => a.id === lastReadId);
+      if (article) {
+        const stat = sessions[lastReadId];
+        return { article, kind: stat ? "next" : "resume", stat };
+      }
+    }
+    // 2. 推荐里挑一篇没做过的
+    const firstRec = recs.find((r) => !r.done_before);
+    if (firstRec) {
+      const article = articles.find((a) => a.id === firstRec.article_id);
+      if (article) return { article, kind: "first" };
+    }
+    // 3. 兜底：第一篇未读
+    const firstNew = articles.find((a) => !sessions[a.id]);
+    if (firstNew) return { article: firstNew, kind: "first" };
+    return null;
+  }, [articles, recs, sessions, lastReadId]);
+
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-8">
       <Link to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
@@ -216,6 +249,43 @@ export default function GaokaoReading() {
       </Link>
 
       <PageHeader hideReviewBanner title="阅读理解训练" subtitle="个人化追踪 · Lexile 自适应 · 三阶段答题流程" />
+
+      {/* ============= 继续阅读 Hero ============= */}
+      {continueCard && (
+        <Link
+          to={`/gaokao/reading/article/${continueCard.article.id}`}
+          className="group mb-5 block rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-primary via-violet-600 to-fuchsia-600 p-5 sm:p-6 text-white shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition relative overflow-hidden"
+        >
+          <div className="absolute -right-10 -top-10 size-40 rounded-full bg-white/10 blur-3xl pointer-events-none" />
+          <div className="absolute -left-6 -bottom-10 size-32 rounded-full bg-white/10 blur-2xl pointer-events-none" />
+          <div className="relative flex items-center gap-4">
+            <div className="grid size-14 sm:size-16 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+              {continueCard.kind === "resume" ? <Zap className="size-7" /> : continueCard.kind === "next" ? <RefreshCw className="size-7" /> : <Sparkles className="size-7" />}
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-white/85 mb-1">
+                {continueCard.kind === "resume" ? "继续上次未完成" : continueCard.kind === "next" ? "上次读完了，再来一篇" : "今日推荐 · 立即开始"}
+                {continueCard.stat && (
+                  <span className="rounded-full bg-white/20 px-2 py-0.5 text-[10px] tabular-nums">上次 {Math.round(continueCard.stat.best_pct)}%</span>
+                )}
+              </div>
+              <div className="text-base sm:text-lg font-extrabold leading-tight line-clamp-2 pr-8">
+                {continueCard.article.title}
+              </div>
+              <div className="mt-2 flex items-center gap-3 text-[11px] text-white/85 flex-wrap">
+                <span className="inline-flex items-center gap-1"><Clock className="size-3" />{continueCard.article.recommended_minutes} 分钟</span>
+                <span>· {continueCard.article.word_count} 词</span>
+                {continueCard.article.lexile_score && <span className="font-mono font-bold">· {continueCard.article.lexile_score}L</span>}
+                {continueCard.article.genre_label && <span>· {continueCard.article.genre_label}</span>}
+              </div>
+            </div>
+            <div className="hidden sm:flex shrink-0 items-center gap-1.5 rounded-full bg-white text-primary px-4 py-2 text-sm font-bold shadow-lg group-hover:translate-x-1 transition">
+              开始 <ChevronRight className="size-4" />
+            </div>
+            <ChevronRight className="size-6 sm:hidden shrink-0" />
+          </div>
+        </Link>
+      )}
 
       {/* ============= 顶部学习仪表盘 ============= */}
       <section className="mb-5 rounded-3xl border bg-gradient-to-br from-primary/10 via-violet-500/5 to-transparent p-5 sm:p-6 relative overflow-hidden">

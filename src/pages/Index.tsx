@@ -1,4 +1,4 @@
-import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic, BookOpenCheck, Trophy } from "lucide-react";
+import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic, BookOpenCheck } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -17,9 +17,6 @@ import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { T } from "@/i18n/T";
 import { SupportButton } from "@/components/SupportButton";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
-import { XPRing } from "@/components/game/XPRing";
-import { BadgeStrip } from "@/components/game/BadgeStrip";
-import { useStreakStats, computeBadges } from "@/hooks/useStreakStats";
 
 const Index = () => {
   const { t } = useI18n();
@@ -27,10 +24,6 @@ const Index = () => {
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
   const [slangCount, setSlangCount] = useState<number>(IDIOMS.length);
-  const { stats } = useStreakStats(user?.id);
-  const badges = computeBadges(stats);
-  // Use server streak when signed in, fall back to guest local streak
-  const displayStreak = stats?.current_streak ?? streak;
 
   useEffect(() => {
     touchActive();

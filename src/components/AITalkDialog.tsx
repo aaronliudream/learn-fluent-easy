@@ -289,16 +289,22 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         break;
       case "conversation.item.input_audio_transcription.completed": {
         // Final user transcript
-        const itemId: string = evt.item_id;
-        const text: string = evt.transcript || "";
-        if (!text.trim()) return;
-        const existing = userTurnByItemId.current.get(itemId);
+        const itemId: string | undefined = evt.item_id;
+        const text: string = (evt.transcript || "").trim();
+        if (!text) return;
+        const existing = itemId ? userTurnByItemId.current.get(itemId) : undefined;
         if (existing !== undefined) {
           upsertTurn(existing, { text, pending: false });
         } else {
           setTranscript((prev) => {
+            // Dedupe: if last user turn already has this exact text, skip.
+            for (let i = prev.length - 1; i >= 0; i--) {
+              if (prev[i].role !== "user") continue;
+              if ((prev[i].text || "").trim() === text) return prev;
+              break;
+            }
             const next = [...prev, { role: "user" as const, text, pending: false }];
-            userTurnByItemId.current.set(itemId, next.length - 1);
+            if (itemId) userTurnByItemId.current.set(itemId, next.length - 1);
             return next;
           });
         }
@@ -740,7 +746,7 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
 
   return (
     <div className="space-y-3">
-      {transcript.filter((t) => t.role !== "user").map((t, i) => (
+      {transcript.map((t, i) => (
         <div key={i} className={`flex ${t.role === "user" ? "justify-end" : "justify-start"}`}>
           <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-lg leading-relaxed shadow-sm ${
             t.role === "user"

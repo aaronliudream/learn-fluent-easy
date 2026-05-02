@@ -1358,6 +1358,22 @@ export type Database = {
           total_quiz_correct: number
         }[]
       }
+      get_vocab_mastery_overview: {
+        Args: never
+        Returns: {
+          avg_stability_days: number
+          due_today: number
+          due_within_7d: number
+          encountered: number
+          familiar: number
+          mastered: number
+          mastered_due_within_7d: number
+          proficient: number
+          total_lapses: number
+          total_words: number
+          untouched: number
+        }[]
+      }
       get_weekly_leaderboard: {
         Args: never
         Returns: {

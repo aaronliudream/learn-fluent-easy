@@ -259,7 +259,12 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
         >
           {v.word} <Volume2 className="size-5 text-primary" />
         </button>
-        {v.phonetic && <div className="mt-1 text-sm text-muted-foreground">{v.phonetic}</div>}
+        {v.phonetic && (
+          <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
+            {v.phonetic}
+            <AccentBadge accent={v.accent} />
+          </div>
+        )}
         {v.pos && <div className="mt-1 text-xs text-muted-foreground">{v.pos}</div>}
 
         {flipped ? (
@@ -380,6 +385,12 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
       const t = setTimeout(() => speakExample(v), 200);
       return () => clearTimeout(t);
     }
+    // Auto-play the word for English→Chinese & cloze questions so the
+    // student hears the pronunciation as soon as the question appears.
+    if (item.kind === "en2cn" || item.kind === "cloze") {
+      const t = setTimeout(() => speakWord(v), 200);
+      return () => clearTimeout(t);
+    }
   }, [item.kind, v.id]);
 
   if (item.kind === "cloze" && v.example_en) {
@@ -394,7 +405,13 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     };
     return (
       <div className="rounded-3xl border bg-card p-6 shadow-tile">
-        <div className="text-xs uppercase tracking-wider text-muted-foreground">例句填空</div>
+        <div className="flex items-center justify-between">
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">例句填空</div>
+          <button onClick={() => speakWord(v)} className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs text-primary">
+            <Volume2 className="size-3" /> 听单词
+            <AccentBadge accent={v.accent} />
+          </button>
+        </div>
         <div className="mt-2 text-sm text-muted-foreground">{v.meaning_cn} · {v.pos}</div>
         <div className="mt-4 rounded-xl bg-muted/40 p-4 text-base leading-relaxed">{masked}</div>
         <input
@@ -452,7 +469,12 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
           >
             {v.word} <Volume2 className="size-5 text-primary" />
           </button>
-          {v.phonetic && <div className="mt-1 text-sm text-muted-foreground">{v.phonetic}</div>}
+          {v.phonetic && (
+            <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
+              {v.phonetic}
+              <AccentBadge accent={v.accent} />
+            </div>
+          )}
         </>
       );
     }

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Volume2, Eye, Sparkles, Loader2, CheckCircle2 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
+import { prefetchTTS } from "@/lib/speak";
 import { T } from "@/i18n/T";
 import {
   fetchDueReviews,

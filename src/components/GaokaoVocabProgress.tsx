@@ -2,6 +2,22 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Crown, Sparkles, Clock, Flame, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import {
+  computeMasteryScore,
+  levelFromScore,
+  type MasteryLevel,
+  type MasteryMatrix,
+} from "@/lib/masteryScore";
+
+const TOTAL_VOCAB = 3500;
+
+type MasteryRow = {
+  mastery_matrix: MasteryMatrix | null;
+  reached_master_at: string | null;
+  lapses: number | null;
+  stability: number | null;
+  due_at: string | null;
+};
 
 interface Overview {
   total_words: number;
@@ -24,9 +40,86 @@ export function GaokaoVocabProgress() {
   useEffect(() => {
     let cancel = false;
     (async () => {
-      const { data: rows, error } = await supabase.rpc("get_vocab_mastery_overview");
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        if (!cancel) {
+          setData({
+            total_words: TOTAL_VOCAB,
+            mastered: 0,
+            proficient: 0,
+            familiar: 0,
+            encountered: 0,
+            untouched: TOTAL_VOCAB,
+            due_today: 0,
+            due_within_7d: 0,
+            mastered_due_within_7d: 0,
+            avg_stability_days: 0,
+            total_lapses: 0,
+          });
+          setLoading(false);
+        }
+        return;
+      }
+
+      // Use the SAME source + algorithm as MasteryDashboard, so numbers match exactly.
+      const { data: rows } = await supabase
+        .from("gaokao_user_mastery")
+        .select("mastery_matrix, reached_master_at, lapses, stability, due_at")
+        .eq("user_id", user.id)
+        .eq("item_type", "vocab")
+        .limit(5000);
+
       if (cancel) return;
-      if (!error && rows && rows.length > 0) setData(rows[0] as Overview);
+      const list = (rows ?? []) as MasteryRow[];
+
+      const levelCounts: Record<MasteryLevel, number> = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0 };
+      let lapsesSum = 0;
+      let stabilitySum = 0;
+      let stabilityCount = 0;
+      let dueToday = 0;
+      let due7d = 0;
+      let masteredDue7d = 0;
+      const now = Date.now();
+      const in7d = now + 7 * 24 * 3600 * 1000;
+
+      list.forEach((r) => {
+        const matrix = r.mastery_matrix ?? {};
+        const score = computeMasteryScore(matrix);
+        const lvl = levelFromScore(score, !!r.reached_master_at);
+        levelCounts[lvl] += 1;
+        lapsesSum += r.lapses ?? 0;
+        if (r.stability != null && r.stability > 0) {
+          stabilitySum += r.stability;
+          stabilityCount += 1;
+        }
+        if (r.due_at) {
+          const t = new Date(r.due_at).getTime();
+          if (t <= now) dueToday += 1;
+          if (t <= in7d) {
+            due7d += 1;
+            if (lvl === 4) masteredDue7d += 1;
+          }
+        }
+      });
+
+      const studied = list.length;
+      const untouched = Math.max(0, TOTAL_VOCAB - studied);
+      // Align with dashboard: untouched fills L0 if no rows fall there.
+      levelCounts[0] = untouched > 0 ? untouched : levelCounts[0];
+
+      setData({
+        total_words: TOTAL_VOCAB,
+        mastered: levelCounts[4],
+        proficient: levelCounts[3],
+        familiar: levelCounts[2],
+        encountered: levelCounts[1],
+        untouched,
+        due_today: dueToday,
+        due_within_7d: due7d,
+        mastered_due_within_7d: masteredDue7d,
+        avg_stability_days: stabilityCount > 0 ? stabilitySum / stabilityCount : 0,
+        total_lapses: lapsesSum,
+      });
       setLoading(false);
     })();
     return () => {

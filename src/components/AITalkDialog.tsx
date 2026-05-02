@@ -836,6 +836,9 @@ function RecapView({
 
   return (
     <div className="space-y-6">
+      {/* ✨ Hidden curriculum surface: Alex 今天教了你 */}
+      <TargetsTaughtCard targets={targets ?? []} isGuest={isGuest} lessonTitle={lessonTitle} />
+
       {/* Summary */}
       <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
         <div className="mb-1 flex items-center gap-1.5 text-base font-bold text-primary">

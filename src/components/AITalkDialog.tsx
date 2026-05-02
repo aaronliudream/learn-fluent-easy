@@ -16,6 +16,7 @@ import { recordAITalk } from "@/lib/guestProgress";
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
 
 type RecapTurn = { en: string; cn: string; tip_cn: string; better_en: string };
+type TalkTarget = { phrase: string; meaning_cn: string; example_en: string; alex_used_sentence?: string };
 type QuizQ = {
   word: string;
   source_sentence: string;

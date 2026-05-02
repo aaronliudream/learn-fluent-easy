@@ -1607,6 +1607,13 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   const [coinsAwarded, setCoinsAwarded] = useState(0);
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [milestonesEvaluated, setMilestonesEvaluated] = useState(false);
+  const [srsLevelUps, setSrsLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+  const srsQuestionShownAtRef = useRef<number>(Date.now());
+
+  // reset stopwatch each question
+  useEffect(() => {
+    srsQuestionShownAtRef.current = Date.now();
+  }, [pos]);
 
   useEffect(() => {
     (async () => {
@@ -1723,8 +1730,17 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
   const handleResult = async (isCorrect: boolean) => {
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
+    const latencyMs = Date.now() - srsQuestionShownAtRef.current;
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
-    await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+    const update = await bumpVocabMastery({
+      vocabId: item.vocab.id,
+      kind: item.kind,
+      isCorrect,
+      latencyMs,
+    });
+    if (update && update.newLevel > update.prevLevel) {
+      setSrsLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);
+    }
 
     if (isCorrect && item.kind === "spell") {
       setSpellCorrect((n) => n + 1);

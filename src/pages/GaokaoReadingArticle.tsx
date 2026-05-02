@@ -347,11 +347,11 @@ export default function GaokaoReadingArticle() {
 
           {/* RIGHT: Questions */}
           <section className="space-y-4">
-            <div className="rounded-xl border bg-amber-500/5 border-amber-500/20 p-3 flex gap-2 text-xs text-amber-700 dark:text-amber-400">
-              <EyeOff className="size-4 shrink-0 mt-0.5" />
+            <div className="rounded-xl border bg-primary/5 border-primary/20 p-3 flex gap-2 text-xs text-primary">
+              <Target className="size-4 shrink-0 mt-0.5" />
               <div>
-                <div className="font-semibold">答题阶段·答案与解析已锁死</div>
-                <div className="opacity-80 mt-0.5">交卷后才会显示对错、解析与文章分析。请像考试一样独立完成。</div>
+                <div className="font-semibold">测试阶段</div>
+                <div className="opacity-80 mt-0.5">完成所有选择题并交卷后，才会显示正确答案和解析。</div>
               </div>
             </div>
 
@@ -451,29 +451,6 @@ export default function GaokaoReadingArticle() {
             </Button>
           </section>
         </div>
-
-        {/* Confirm dialog */}
-        {showConfirm && (
-          <div className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-4" onClick={() => setShowConfirm(false)}>
-            <div className="rounded-2xl bg-card p-6 max-w-sm w-full shadow-xl" onClick={(e) => e.stopPropagation()}>
-              <div className="flex items-center gap-2 mb-2">
-                <AlertTriangle className="size-5 text-amber-500" />
-                <h3 className="font-bold">还有题目未作答</h3>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                你已完成 {answeredCount}/{totalQ} 题，未作答的题目将记为错误。确认提交？
-              </p>
-              <div className="flex gap-2">
-                <Button variant="outline" className="flex-1" onClick={() => setShowConfirm(false)}>
-                  继续答题
-                </Button>
-                <Button className="flex-1" onClick={() => handleSubmit(true)}>
-                  确认提交
-                </Button>
-              </div>
-            </div>
-          </div>
-        )}
       </main>
     );
   }

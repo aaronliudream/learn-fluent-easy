@@ -189,7 +189,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     // can start reading. The quiz takes longer (~10-20s) and lands later;
     // by the time the user finishes reading the review, the quiz is ready.
     const reviewPromise = supabase.functions
-      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "review" } })
+      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "review", targets: targetsRef.current } })
       .then(({ data, error }) => {
         if (error) throw error;
         if (data?.error) throw new Error(data.error);
@@ -199,6 +199,17 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
           turns: review.turns,
           quiz: prev?.quiz ?? [],
         }));
+        // If the review function returned which targets Alex actually used,
+        // merge that back so the recap card can show real source sentences.
+        const used = (data.recap as any)?.targets_used as Array<{ phrase: string; sentence: string }> | undefined;
+        if (used && used.length) {
+          setTargets((prev) =>
+            prev.map((t) => {
+              const m = used.find((u) => u.phrase.toLowerCase().trim() === t.phrase.toLowerCase().trim());
+              return m ? { ...t, alex_used_sentence: m.sentence } : t;
+            }),
+          );
+        }
       })
       .catch((e: any) => {
         console.error("review failed", e);

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, Clock, ChevronRight, GraduationCap, Sparkles, Target, Trophy } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, ChevronRight, GraduationCap, Sparkles, Target, Trophy, Library } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { cn } from "@/lib/utils";
@@ -97,6 +97,21 @@ export default function GaokaoReading() {
           </div>
         </div>
       </div>
+
+      {/* 知识体系速查入口 */}
+      <Link
+        to="/gaokao/reading/knowledge"
+        className="mb-5 flex items-center gap-3 rounded-2xl border bg-gradient-to-r from-violet-500/10 via-card to-card p-4 hover:border-violet-500/40 transition"
+      >
+        <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-violet-500/15 text-violet-600">
+          <Library className="size-6" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="font-bold text-sm">阅读知识点速查 · 体系化训练</div>
+          <div className="text-xs text-muted-foreground mt-0.5">题型 116 · 文体 40 · 策略 71 · 信号词 113 · 话题 88 · 长难句 32...</div>
+        </div>
+        <ChevronRight className="size-4 text-muted-foreground" />
+      </Link>
 
       {/* 年级 Tab */}
       <div className="grid grid-cols-4 gap-2 mb-5">

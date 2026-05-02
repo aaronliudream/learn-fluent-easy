@@ -842,6 +842,63 @@ export type Database = {
         }
         Relationships: []
       }
+      gaokao_reading_knowledge_points: {
+        Row: {
+          category_code: string
+          category_name: string
+          created_at: string
+          difficulty: number | null
+          exam_frequency: string | null
+          example: string | null
+          extra: Json | null
+          grade_band: string
+          id: string
+          level1: string | null
+          level2: string | null
+          level3: string
+          pitfall: string | null
+          prerequisite: string | null
+          source_id: string
+          strategy: string | null
+        }
+        Insert: {
+          category_code: string
+          category_name: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          example?: string | null
+          extra?: Json | null
+          grade_band?: string
+          id?: string
+          level1?: string | null
+          level2?: string | null
+          level3: string
+          pitfall?: string | null
+          prerequisite?: string | null
+          source_id: string
+          strategy?: string | null
+        }
+        Update: {
+          category_code?: string
+          category_name?: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          example?: string | null
+          extra?: Json | null
+          grade_band?: string
+          id?: string
+          level1?: string | null
+          level2?: string | null
+          level3?: string
+          pitfall?: string | null
+          prerequisite?: string | null
+          source_id?: string
+          strategy?: string | null
+        }
+        Relationships: []
+      }
       gaokao_reading_passages: {
         Row: {
           body: string
@@ -937,6 +994,57 @@ export type Database = {
           },
         ]
       }
+      gaokao_reading_seed_questions: {
+        Row: {
+          correct_answer: string
+          created_at: string
+          distractor_analysis: string | null
+          explanation: string | null
+          grade_band: string
+          id: string
+          irt_difficulty: number | null
+          options: Json
+          passage: string
+          question_type: string
+          related_kp: string | null
+          source: string | null
+          source_id: string
+          stem: string
+        }
+        Insert: {
+          correct_answer: string
+          created_at?: string
+          distractor_analysis?: string | null
+          explanation?: string | null
+          grade_band?: string
+          id?: string
+          irt_difficulty?: number | null
+          options: Json
+          passage: string
+          question_type: string
+          related_kp?: string | null
+          source?: string | null
+          source_id: string
+          stem: string
+        }
+        Update: {
+          correct_answer?: string
+          created_at?: string
+          distractor_analysis?: string | null
+          explanation?: string | null
+          grade_band?: string
+          id?: string
+          irt_difficulty?: number | null
+          options?: Json
+          passage?: string
+          question_type?: string
+          related_kp?: string | null
+          source?: string | null
+          source_id?: string
+          stem?: string
+        }
+        Relationships: []
+      }
       gaokao_reading_sessions: {
         Row: {
           annotations: Json | null
@@ -998,6 +1106,84 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      gaokao_reading_signal_words: {
+        Row: {
+          category: string
+          created_at: string
+          difficulty: number | null
+          exam_frequency: string | null
+          id: string
+          remark: string | null
+          semantic: string | null
+          source_id: string
+          usage_note: string | null
+          word: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          id?: string
+          remark?: string | null
+          semantic?: string | null
+          source_id: string
+          usage_note?: string | null
+          word: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          id?: string
+          remark?: string | null
+          semantic?: string | null
+          source_id?: string
+          usage_note?: string | null
+          word?: string
+        }
+        Relationships: []
+      }
+      gaokao_reading_topics: {
+        Row: {
+          big_topic: string
+          created_at: string
+          difficulty: number | null
+          exam_angle: string | null
+          exam_frequency: string | null
+          high_freq_words: string | null
+          id: string
+          remark: string | null
+          source_id: string
+          sub_topic: string | null
+        }
+        Insert: {
+          big_topic: string
+          created_at?: string
+          difficulty?: number | null
+          exam_angle?: string | null
+          exam_frequency?: string | null
+          high_freq_words?: string | null
+          id?: string
+          remark?: string | null
+          source_id: string
+          sub_topic?: string | null
+        }
+        Update: {
+          big_topic?: string
+          created_at?: string
+          difficulty?: number | null
+          exam_angle?: string | null
+          exam_frequency?: string | null
+          high_freq_words?: string | null
+          id?: string
+          remark?: string | null
+          source_id?: string
+          sub_topic?: string | null
+        }
+        Relationships: []
       }
       gaokao_user_attempts: {
         Row: {

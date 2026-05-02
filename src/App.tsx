@@ -38,6 +38,7 @@ const GaokaoGrammarPoint = lazy(() => import("./pages/GaokaoGrammarPoint.tsx"));
 const GaokaoReading = lazy(() => import("./pages/GaokaoReading.tsx"));
 const GaokaoReadingPlay = lazy(() => import("./pages/GaokaoReadingPlay.tsx"));
 const GaokaoReadingArticle = lazy(() => import("./pages/GaokaoReadingArticle.tsx"));
+const GaokaoReadingKnowledge = lazy(() => import("./pages/GaokaoReadingKnowledge.tsx"));
 const GaokaoVocab = lazy(() => import("./pages/GaokaoVocab.tsx"));
 const GaokaoDiagnostic = lazy(() => import("./pages/GaokaoDiagnostic.tsx"));
 const SavedPhrases = lazy(() => import("./pages/SavedPhrases.tsx"));
@@ -104,6 +105,7 @@ const App = () => (
           <Route path="/gaokao/grammar" element={<GaokaoGrammar />} />
           <Route path="/gaokao/grammar/:slug" element={<GaokaoGrammarPoint />} />
           <Route path="/gaokao/reading" element={<GaokaoReading />} />
+          <Route path="/gaokao/reading/knowledge" element={<GaokaoReadingKnowledge />} />
           <Route path="/gaokao/reading/article/:id" element={<GaokaoReadingArticle />} />
           <Route path="/gaokao/reading/:id" element={<GaokaoReadingPlay />} />
           <Route path="/gaokao/vocab" element={<GaokaoVocab />} />

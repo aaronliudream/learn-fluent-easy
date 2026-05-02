@@ -800,6 +800,7 @@ export type Database = {
       gaokao_reading_diagnostics: {
         Row: {
           article_id: string
+          confidence: number | null
           correct_answer: string
           created_at: string
           error_tags: Json
@@ -807,6 +808,8 @@ export type Database = {
           is_correct: boolean
           question_id: string
           question_type: string
+          reading_seconds: number | null
+          reading_wpm: number | null
           skill_focus: string | null
           time_spent_seconds: number | null
           user_answer: string | null
@@ -814,6 +817,7 @@ export type Database = {
         }
         Insert: {
           article_id: string
+          confidence?: number | null
           correct_answer: string
           created_at?: string
           error_tags?: Json
@@ -821,6 +825,8 @@ export type Database = {
           is_correct: boolean
           question_id: string
           question_type: string
+          reading_seconds?: number | null
+          reading_wpm?: number | null
           skill_focus?: string | null
           time_spent_seconds?: number | null
           user_answer?: string | null
@@ -828,6 +834,7 @@ export type Database = {
         }
         Update: {
           article_id?: string
+          confidence?: number | null
           correct_answer?: string
           created_at?: string
           error_tags?: Json
@@ -835,6 +842,8 @@ export type Database = {
           is_correct?: boolean
           question_id?: string
           question_type?: string
+          reading_seconds?: number | null
+          reading_wpm?: number | null
           skill_focus?: string | null
           time_spent_seconds?: number | null
           user_answer?: string | null
@@ -2141,6 +2150,30 @@ export type Database = {
           top_error_count: number
           top_error_tag: string
           total_attempts: number
+        }[]
+      }
+      get_reading_diagnostic_radar_v2: {
+        Args: never
+        Returns: {
+          accuracy: number
+          avg_confidence: number
+          correct_count: number
+          high_conf_wrong: number
+          metacog_accuracy: number
+          question_type: string
+          top_error_count: number
+          top_error_tag: string
+          total_attempts: number
+        }[]
+      }
+      get_reading_efficiency: {
+        Args: never
+        Returns: {
+          articles_done: number
+          avg_accuracy: number
+          avg_wpm: number
+          benchmark_label: string
+          efficiency_index: number
         }[]
       }
       get_user_streak_stats: {

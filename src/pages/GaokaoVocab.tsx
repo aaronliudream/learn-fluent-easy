@@ -15,6 +15,7 @@ import {
 } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 import MasteryDashboard from "@/components/MasteryDashboard";
+import MemoryMatch from "@/components/MemoryMatch";
 
 type Vocab = {
   id: string;
@@ -637,6 +638,7 @@ function GroupSession({
           onExit={onExit}
           onRetry={() => setPhase("flashcard")}
           levelUps={groupLevelUps}
+          group={group}
         />
       )}
       {unlockedBadges.length > 0 && (
@@ -1232,14 +1234,17 @@ function DonePanel({
   onExit,
   onRetry,
   levelUps,
+  group,
 }: {
   stats: { correct: number; total: number };
   coinsAwarded?: number;
   onExit: () => void;
   onRetry: () => void;
   levelUps?: { word: string; level: MasteryLevel }[];
+  group?: Vocab[];
 }) {
   const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
+  const [showGame, setShowGame] = useState(false);
   return (
     <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
       <Sparkles className="mx-auto size-10 text-primary" />
@@ -1277,6 +1282,22 @@ function DonePanel({
         </div>
       )}
       <div className="mt-2 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>
+      {group && group.length >= 6 && !showGame && (
+        <div className="mt-5">
+          <button
+            onClick={() => setShowGame(true)}
+            className="group inline-flex items-center gap-2 rounded-full border-2 border-fuchsia-500/60 bg-gradient-to-r from-fuchsia-500/15 via-rose-500/10 to-amber-400/15 px-5 py-2.5 text-sm font-extrabold text-fuchsia-700 shadow-md transition hover:scale-105 hover:shadow-lg dark:text-fuchsia-300"
+          >
+            🎮 玩个配对消消乐放松一下 →
+          </button>
+          <div className="mt-1 text-[11px] text-muted-foreground">12 张卡 · 配对越快金币越多</div>
+        </div>
+      )}
+      {group && showGame && (
+        <div className="mt-5 text-left">
+          <MemoryMatch pool={group} onClose={() => setShowGame(false)} />
+        </div>
+      )}
       <div className="mt-6 grid grid-cols-2 gap-3">
         <Button variant="outline" onClick={onRetry}>
           <RotateCw className="mr-1 size-4" /> 再练一遍

@@ -43,6 +43,7 @@ const SavedPhrases = lazy(() => import("./pages/SavedPhrases.tsx"));
 const Review = lazy(() => import("./pages/Review.tsx"));
 const Leaderboard = lazy(() => import("./pages/Leaderboard.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
+import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +74,7 @@ const App = () => (
       <BrowserRouter>
         <StopAudioOnRouteChange />
         <LanguagePickerModal />
+        <GaokaoBreakReminder />
         <div className="pb-tabbar lg:pb-0">
         <Suspense fallback={<RouteFallback />}>
         <Routes>

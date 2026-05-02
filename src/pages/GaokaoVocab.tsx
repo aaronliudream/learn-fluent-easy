@@ -1,19 +1,60 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowLeft, Check, X, Volume2 } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { cn } from "@/lib/utils";
 
-type Vocab = { id: string; word: string; pos: string | null; meaning_cn: string; example_en: string | null; example_cn: string | null };
+type Vocab = {
+  id: string;
+  word: string;
+  phonetic: string | null;
+  pos: string | null;
+  meaning_cn: string;
+  example_en: string | null;
+  example_cn: string | null;
+  star_level: number | null;
+};
+
+const GROUP_SIZE = 20;
+
+type Phase = "flashcard" | "quiz" | "done";
+type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze";
+type QuizItem = { vocab: Vocab; kind: QuizKind; choices: Vocab[] };
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function pickKind(v: Vocab): QuizKind {
+  const kinds: QuizKind[] = ["en2cn", "cn2en"];
+  if (v.example_en) kinds.push("listen", "cloze");
+  return kinds[Math.floor(Math.random() * kinds.length)];
+}
+
+function buildClozeBlank(sentence: string, word: string): { masked: string; answer: string } {
+  // Match the word ignoring case, prefer whole word
+  const re = new RegExp(`\\b(${word.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}\\w*)\\b`, "i");
+  const m = sentence.match(re);
+  const answer = m ? m[1] : word;
+  const masked = sentence.replace(re, "_____");
+  return { masked, answer };
+}
 
 export default function GaokaoVocab() {
-  const [list, setList] = useState<Vocab[]>([]);
-  const [idx, setIdx] = useState(0);
-  const [revealed, setRevealed] = useState(false);
-  const [stats, setStats] = useState({ known: 0, unknown: 0 });
+  const [params, setParams] = useSearchParams();
+  const groupParam = params.get("group");
+  const groupIdx = groupParam ? parseInt(groupParam, 10) - 1 : -1;
+
+  const [allVocab, setAllVocab] = useState<Vocab[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,82 +62,465 @@ export default function GaokaoVocab() {
       const { data } = await supabase
         .from("gaokao_vocab")
         .select("*")
-        .order("frequency_band")
-        .order("word")
-        .limit(50);
-      setList((data ?? []) as Vocab[]);
+        .order("sort_order", { ascending: true })
+        .order("word", { ascending: true });
+      setAllVocab((data ?? []) as Vocab[]);
       setLoading(false);
     })();
   }, []);
 
-  const v = list[idx];
-
-  const mark = async (known: boolean) => {
-    if (!v) return;
-    setStats((s) => ({ known: s.known + (known ? 1 : 0), unknown: s.unknown + (known ? 0 : 1) }));
-    await recordAttempt({ questionType: "vocab", questionId: v.id, isCorrect: known });
-    await bumpMastery({ itemType: "vocab", itemId: v.id, isCorrect: known });
-    setRevealed(false);
-    setIdx((i) => i + 1);
-  };
+  const groups = useMemo(() => {
+    const out: Vocab[][] = [];
+    for (let i = 0; i < allVocab.length; i += GROUP_SIZE) out.push(allVocab.slice(i, i + GROUP_SIZE));
+    return out;
+  }, [allVocab]);
 
   if (loading) return <p className="p-8 text-sm text-muted-foreground">加载中...</p>;
 
-  const finished = idx >= list.length;
+  if (groupIdx < 0 || groupIdx >= groups.length) {
+    return <GroupList groups={groups} onPick={(i) => setParams({ group: String(i + 1) })} />;
+  }
 
   return (
-    <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
+    <GroupSession
+      group={groups[groupIdx]}
+      groupNumber={groupIdx + 1}
+      pool={allVocab}
+      onExit={() => setParams({})}
+    />
+  );
+}
+
+/* ---------- Group list ---------- */
+function GroupList({ groups, onPick }: { groups: Vocab[][]; onPick: (i: number) => void }) {
+  return (
+    <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <Link to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回高考英语
       </Link>
-      <PageHeader title="高考词汇" subtitle="左滑/右滑标记，已掌握的不再重复推送" />
+      <PageHeader
+        title="高考词汇 3500"
+        subtitle={`共 ${groups.length} 组 · 每组 ${GROUP_SIZE} 词 · 闪卡 + 测试 + SRS 复习`}
+      />
+      <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+        {groups.map((g, i) => (
+          <button
+            key={i}
+            onClick={() => onPick(i)}
+            className="group rounded-2xl border bg-card p-4 text-left shadow-sm transition hover:border-primary hover:shadow-md"
+          >
+            <div className="flex items-center justify-between">
+              <div className="text-xs text-muted-foreground">第 {i + 1} 组</div>
+              <ChevronRight className="size-4 text-muted-foreground group-hover:text-primary" />
+            </div>
+            <div className="mt-2 truncate text-sm font-bold">{g[0]?.word}</div>
+            <div className="truncate text-xs text-muted-foreground">→ {g[g.length - 1]?.word}</div>
+            <div className="mt-2 text-[11px] text-muted-foreground">{g.length} 词</div>
+          </button>
+        ))}
+      </div>
+    </main>
+  );
+}
 
-      <div className="mb-3 flex items-center justify-between text-xs text-muted-foreground">
-        <span>第 {Math.min(idx + 1, list.length)} / {list.length} 词</span>
-        <span>✓ {stats.known} · ✗ {stats.unknown}</span>
+/* ---------- Single group session ---------- */
+function GroupSession({
+  group,
+  groupNumber,
+  pool,
+  onExit,
+}: {
+  group: Vocab[];
+  groupNumber: number;
+  pool: Vocab[];
+  onExit: () => void;
+}) {
+  const [phase, setPhase] = useState<Phase>("flashcard");
+  const [stats, setStats] = useState({ correct: 0, total: 0 });
+
+  return (
+    <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
+      <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> 返回组列表
+      </button>
+
+      <div className="mb-4 flex items-center gap-2 text-xs">
+        <PhaseChip active={phase === "flashcard"} icon={<BookOpen className="size-3" />} label="闪卡" />
+        <ChevronRight className="size-3 text-muted-foreground" />
+        <PhaseChip active={phase === "quiz"} icon={<Target className="size-3" />} label="测试" />
+        <ChevronRight className="size-3 text-muted-foreground" />
+        <PhaseChip active={phase === "done"} icon={<Sparkles className="size-3" />} label="复习" />
       </div>
 
-      {finished ? (
-        <div className="rounded-2xl border bg-card p-8 text-center">
-          <div className="text-lg font-bold">本轮完成 🎉</div>
-          <div className="mt-2 text-sm text-muted-foreground">
-            掌握 {stats.known} / 不熟 {stats.unknown}
+      <PageHeader title={`第 ${groupNumber} 组 · ${group.length} 词`} subtitle={phaseSubtitle(phase)} />
+
+      {phase === "flashcard" && (
+        <FlashcardPhase group={group} onDone={() => setPhase("quiz")} />
+      )}
+      {phase === "quiz" && (
+        <QuizPhase
+          group={group}
+          pool={pool}
+          onDone={(s) => {
+            setStats(s);
+            setPhase("done");
+          }}
+        />
+      )}
+      {phase === "done" && (
+        <DonePanel stats={stats} onExit={onExit} onRetry={() => setPhase("flashcard")} />
+      )}
+    </main>
+  );
+}
+
+function phaseSubtitle(p: Phase) {
+  if (p === "flashcard") return "阶段 1：先认识单词，点单词可朗读";
+  if (p === "quiz") return "阶段 2：多种题型测试，答错的会重复出现";
+  return "阶段 3：本组完成，已加入 SRS 复习队列";
+}
+
+function PhaseChip({ active, icon, label }: { active: boolean; icon: React.ReactNode; label: string }) {
+  return (
+    <span
+      className={cn(
+        "inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs",
+        active ? "border-primary bg-primary/10 text-primary font-semibold" : "border-border text-muted-foreground"
+      )}
+    >
+      {icon} {label}
+    </span>
+  );
+}
+
+/* ---------- Phase 1: Flashcards ---------- */
+function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void }) {
+  const [idx, setIdx] = useState(0);
+  const [flipped, setFlipped] = useState(false);
+  const v = group[idx];
+
+  useEffect(() => {
+    if (v) speak(v.word);
+    setFlipped(false);
+  }, [idx, v?.id]);
+
+  if (!v) return null;
+
+  const next = () => {
+    if (idx + 1 >= group.length) onDone();
+    else setIdx(idx + 1);
+  };
+
+  return (
+    <div>
+      <div className="mb-3 flex items-center justify-between text-xs text-muted-foreground">
+        <span>{idx + 1} / {group.length}</span>
+        <button onClick={onDone} className="hover:text-foreground">跳过 →</button>
+      </div>
+      <div
+        className="min-h-[280px] cursor-pointer rounded-3xl border bg-card p-8 text-center shadow-tile transition hover:shadow-md"
+        onClick={() => setFlipped((f) => !f)}
+      >
+        <button
+          onClick={(e) => { e.stopPropagation(); speak(v.word); }}
+          className="mx-auto inline-flex items-center gap-2 text-3xl font-extrabold tracking-tight"
+        >
+          {v.word} <Volume2 className="size-5 text-primary" />
+        </button>
+        {v.phonetic && <div className="mt-1 text-sm text-muted-foreground">{v.phonetic}</div>}
+        {v.pos && <div className="mt-1 text-xs text-muted-foreground">{v.pos}</div>}
+
+        {flipped ? (
+          <div className="mt-6 space-y-3 text-left">
+            <div className="rounded-xl bg-muted/50 p-3 text-base font-medium">{v.meaning_cn}</div>
+            {v.example_en && (
+              <button
+                onClick={(e) => { e.stopPropagation(); speak(v.example_en!); }}
+                className="block w-full rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
+              >
+                <div className="flex items-start gap-2">
+                  <Volume2 className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <div>
+                    <div>{v.example_en}</div>
+                    <div className="mt-1 text-xs text-muted-foreground">{v.example_cn}</div>
+                  </div>
+                </div>
+              </button>
+            )}
           </div>
-          <Button asChild className="mt-4"><Link to="/gaokao">返回</Link></Button>
-        </div>
-      ) : v ? (
-        <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
+        ) : (
+          <div className="mt-10 text-xs text-muted-foreground">点卡片翻面查看释义和例句</div>
+        )}
+      </div>
+      <Button className="mt-4 w-full" size="lg" onClick={next}>
+        {idx + 1 >= group.length ? "开始测试 →" : "下一个 →"}
+      </Button>
+    </div>
+  );
+}
+
+/* ---------- Phase 2: Quiz ---------- */
+function QuizPhase({
+  group,
+  pool,
+  onDone,
+}: {
+  group: Vocab[];
+  pool: Vocab[];
+  onDone: (s: { correct: number; total: number }) => void;
+}) {
+  // Build initial queue: each word once, random kind
+  const [queue, setQueue] = useState<QuizItem[]>(() => buildInitialQueue(group, pool));
+  const [pos, setPos] = useState(0);
+  const [stats, setStats] = useState({ correct: 0, total: 0 });
+
+  const item = queue[pos];
+
+  if (!item) {
+    // shouldn't happen mid-flight; finish
+    onDone(stats);
+    return null;
+  }
+
+  const handleResult = async (isCorrect: boolean) => {
+    setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
+    await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
+    await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+
+    let nextQueue = queue;
+    if (!isCorrect) {
+      // re-insert a different kind of the same word ~3 ahead
+      const newKind = pickKind(item.vocab);
+      const reinsertIdx = Math.min(queue.length, pos + 3);
+      nextQueue = [...queue];
+      nextQueue.splice(reinsertIdx, 0, {
+        vocab: item.vocab,
+        kind: newKind,
+        choices: buildChoices(item.vocab, pool),
+      });
+      setQueue(nextQueue);
+    }
+
+    if (pos + 1 >= nextQueue.length) {
+      onDone({
+        correct: stats.correct + (isCorrect ? 1 : 0),
+        total: stats.total + 1,
+      });
+    } else {
+      setPos(pos + 1);
+    }
+  };
+
+  return (
+    <div>
+      <div className="mb-3 flex items-center justify-between text-xs text-muted-foreground">
+        <span>{pos + 1} / {queue.length}</span>
+        <span>✓ {stats.correct} / {stats.total}</span>
+      </div>
+      <QuizQuestion key={`${item.vocab.id}-${pos}`} item={item} onResult={handleResult} />
+    </div>
+  );
+}
+
+function buildChoices(target: Vocab, pool: Vocab[]): Vocab[] {
+  const distractors = shuffle(pool.filter((p) => p.id !== target.id)).slice(0, 3);
+  return shuffle([target, ...distractors]);
+}
+
+function buildInitialQueue(group: Vocab[], pool: Vocab[]): QuizItem[] {
+  return shuffle(group).map((v) => ({
+    vocab: v,
+    kind: pickKind(v),
+    choices: buildChoices(v, pool),
+  }));
+}
+
+/* ---------- Quiz question renderer ---------- */
+function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boolean) => void }) {
+  const [picked, setPicked] = useState<string | null>(null);
+  const [clozeInput, setClozeInput] = useState("");
+  const [clozeChecked, setClozeChecked] = useState<null | boolean>(null);
+  const v = item.vocab;
+
+  // Auto-play audio for "listen" type
+  useEffect(() => {
+    if (item.kind === "listen" && v.example_en) {
+      const t = setTimeout(() => speak(v.example_en!), 200);
+      return () => clearTimeout(t);
+    }
+  }, [item.kind, v.id]);
+
+  if (item.kind === "cloze" && v.example_en) {
+    const { masked, answer } = buildClozeBlank(v.example_en, v.word);
+    const onCheck = () => {
+      const ok = clozeInput.trim().toLowerCase() === answer.toLowerCase();
+      setClozeChecked(ok);
+      if (ok) {
+        // ✅ User-required: speak full sentence on correct
+        speak(v.example_en!);
+      }
+    };
+    return (
+      <div className="rounded-3xl border bg-card p-6 shadow-tile">
+        <div className="text-xs uppercase tracking-wider text-muted-foreground">例句填空</div>
+        <div className="mt-2 text-sm text-muted-foreground">{v.meaning_cn} · {v.pos}</div>
+        <div className="mt-4 rounded-xl bg-muted/40 p-4 text-base leading-relaxed">{masked}</div>
+        <input
+          type="text"
+          autoFocus
+          value={clozeInput}
+          onChange={(e) => setClozeInput(e.target.value)}
+          onKeyDown={(e) => { if (e.key === "Enter" && clozeChecked === null) onCheck(); }}
+          disabled={clozeChecked !== null}
+          placeholder="输入单词"
+          className="mt-4 w-full rounded-xl border bg-background px-4 py-3 text-base focus:border-primary focus:outline-none disabled:opacity-70"
+        />
+        {clozeChecked === null ? (
+          <Button className="mt-4 w-full" size="lg" onClick={onCheck} disabled={!clozeInput.trim()}>
+            检查
+          </Button>
+        ) : (
+          <div className="mt-4 space-y-3">
+            <div
+              className={cn(
+                "rounded-xl p-3 text-sm",
+                clozeChecked ? "bg-green-500/10 text-green-700 dark:text-green-400" : "bg-red-500/10 text-red-700 dark:text-red-400"
+              )}
+            >
+              {clozeChecked ? "✓ 正确！正在朗读完整例句…" : `✗ 正确答案：${answer}`}
+            </div>
+            <button
+              onClick={() => speak(v.example_en!)}
+              className="flex w-full items-start gap-2 rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
+            >
+              <Volume2 className="mt-0.5 size-4 shrink-0 text-primary" />
+              <div>
+                <div>{v.example_en}</div>
+                <div className="mt-1 text-xs text-muted-foreground">{v.example_cn}</div>
+              </div>
+            </button>
+            <Button className="w-full" size="lg" onClick={() => onResult(clozeChecked)}>
+              继续 →
+            </Button>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Choice-based questions
+  const renderPrompt = () => {
+    if (item.kind === "en2cn") {
+      return (
+        <>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">选择中文释义</div>
           <button
             onClick={() => speak(v.word)}
-            className="mx-auto mb-2 inline-flex items-center gap-2 text-3xl font-extrabold tracking-tight"
+            className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
           >
             {v.word} <Volume2 className="size-5 text-primary" />
           </button>
-          {v.pos && <div className="text-xs text-muted-foreground">{v.pos}</div>}
+          {v.phonetic && <div className="mt-1 text-sm text-muted-foreground">{v.phonetic}</div>}
+        </>
+      );
+    }
+    if (item.kind === "cn2en") {
+      return (
+        <>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">选择英文单词</div>
+          <div className="mt-3 text-2xl font-bold">{v.meaning_cn}</div>
+          {v.pos && <div className="mt-1 text-xs text-muted-foreground">{v.pos}</div>}
+        </>
+      );
+    }
+    // listen
+    return (
+      <>
+        <div className="text-xs uppercase tracking-wider text-muted-foreground">听例句选单词</div>
+        <button
+          onClick={() => speak(v.example_en!)}
+          className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-3 text-primary"
+        >
+          <Volume2 className="size-5" /> 再听一次
+        </button>
+        <div className="mt-3 text-xs text-muted-foreground">{v.meaning_cn}</div>
+      </>
+    );
+  };
 
-          {revealed ? (
-            <div className="mt-6 space-y-3 text-left">
-              <div className="rounded-xl bg-muted/50 p-3 text-sm font-medium">{v.meaning_cn}</div>
-              {v.example_en && (
-                <div className="rounded-xl border p-3 text-sm">
-                  <div>{v.example_en}</div>
-                  <div className="mt-1 text-xs text-muted-foreground">{v.example_cn}</div>
-                </div>
+  const renderChoiceLabel = (c: Vocab) => {
+    if (item.kind === "en2cn") return c.meaning_cn;
+    return c.word;
+  };
+
+  const onPick = (c: Vocab) => {
+    if (picked) return;
+    setPicked(c.id);
+    const ok = c.id === v.id;
+    if (ok && item.kind === "cn2en") speak(v.word);
+    setTimeout(() => onResult(ok), 900);
+  };
+
+  return (
+    <div className="rounded-3xl border bg-card p-6 text-center shadow-tile">
+      {renderPrompt()}
+      <div className="mt-6 grid grid-cols-1 gap-2">
+        {item.choices.map((c) => {
+          const isPicked = picked === c.id;
+          const isCorrect = c.id === v.id;
+          const showState = picked !== null;
+          return (
+            <button
+              key={c.id}
+              onClick={() => onPick(c)}
+              disabled={picked !== null}
+              className={cn(
+                "rounded-xl border bg-background px-4 py-3 text-left text-sm transition",
+                !showState && "hover:border-primary hover:bg-accent/30",
+                showState && isCorrect && "border-green-500 bg-green-500/10",
+                showState && isPicked && !isCorrect && "border-red-500 bg-red-500/10",
+                showState && !isPicked && !isCorrect && "opacity-60"
               )}
-              <div className="flex gap-3 pt-2">
-                <Button variant="outline" className="flex-1" onClick={() => mark(false)}>
-                  <X className="mr-1 size-4" /> 还不熟
-                </Button>
-                <Button className="flex-1" onClick={() => mark(true)}>
-                  <Check className="mr-1 size-4" /> 已掌握
-                </Button>
-              </div>
-            </div>
-          ) : (
-            <Button className="mt-6" onClick={() => setRevealed(true)}>显示释义</Button>
-          )}
-        </div>
-      ) : null}
-    </main>
+            >
+              <span className="mr-2 inline-flex size-6 items-center justify-center rounded-full bg-muted text-xs font-bold">
+                {String.fromCharCode(65 + item.choices.indexOf(c))}
+              </span>
+              {renderChoiceLabel(c)}
+              {showState && isCorrect && <Check className="ml-2 inline size-4 text-green-600" />}
+              {showState && isPicked && !isCorrect && <X className="ml-2 inline size-4 text-red-600" />}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/* ---------- Done panel ---------- */
+function DonePanel({
+  stats,
+  onExit,
+  onRetry,
+}: {
+  stats: { correct: number; total: number };
+  onExit: () => void;
+  onRetry: () => void;
+}) {
+  const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
+  return (
+    <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
+      <Sparkles className="mx-auto size-10 text-primary" />
+      <div className="mt-3 text-xl font-extrabold">本组完成 🎉</div>
+      <div className="mt-2 text-sm text-muted-foreground">
+        正确率 <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
+      </div>
+      <div className="mt-1 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>
+      <div className="mt-6 grid grid-cols-2 gap-3">
+        <Button variant="outline" onClick={onRetry}>
+          <RotateCw className="mr-1 size-4" /> 再练一遍
+        </Button>
+        <Button onClick={onExit}>选下一组 →</Button>
+      </div>
+    </div>
   );
 }

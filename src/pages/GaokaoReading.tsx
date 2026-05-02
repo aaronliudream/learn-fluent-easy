@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {
   ArrowLeft, BookOpen, Clock, ChevronRight, GraduationCap, Sparkles, Target, Trophy,
   Library, Gauge, Wand2, CheckCircle2, Circle, RefreshCw, Flame, TrendingUp, Award,
-  Zap, Search,
+  Zap, Search, ChevronDown,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
@@ -110,6 +110,7 @@ export default function GaokaoReading() {
   const [statusFilter, setStatusFilter] = useState<ArticleStatus | "all">("all");
   const [search, setSearch] = useState("");
   const [lastReadId, setLastReadId] = useState<string | null>(null);
+  const [dashOpen, setDashOpen] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -305,8 +306,51 @@ export default function GaokaoReading() {
       )}
 
       {/* ============= 顶部学习仪表盘 ============= */}
-      <section className="mb-5 rounded-3xl border bg-gradient-to-br from-primary/10 via-violet-500/5 to-transparent p-5 sm:p-6 relative overflow-hidden">
+      <section className="mb-5 rounded-2xl border bg-gradient-to-br from-primary/10 via-violet-500/5 to-transparent relative overflow-hidden">
         <div className="absolute -right-12 -top-12 size-44 rounded-full bg-primary/15 blur-3xl pointer-events-none" />
+
+        {/* —— 收起态：紧凑一行 —— */}
+        <button
+          onClick={() => setDashOpen((v) => !v)}
+          className="relative w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-foreground/[0.02] transition"
+        >
+          {/* mini 进度环 */}
+          <div className="relative shrink-0">
+            <svg viewBox="0 0 36 36" className="size-10 -rotate-90">
+              <circle cx="18" cy="18" r="15" fill="none" stroke="hsl(var(--muted))" strokeWidth="3.5" />
+              <circle cx="18" cy="18" r="15" fill="none" stroke="hsl(var(--primary))" strokeWidth="3.5" strokeLinecap="round"
+                strokeDasharray={`${(overall.pct / 100) * 94.2} 94.2`} className="transition-all duration-700" />
+            </svg>
+            <div className="absolute inset-0 grid place-items-center text-[10px] font-extrabold tabular-nums">{overall.pct}%</div>
+          </div>
+          {/* 关键数字 */}
+          <div className="flex-1 min-w-0 flex items-center gap-2 flex-wrap">
+            {profile ? (
+              <span className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-primary to-violet-500 text-primary-foreground px-2 py-0.5 text-[11px] font-bold">
+                <Gauge className="size-3" /> {profile.estimated_lexile}L · {profile.cefr_estimate}
+              </span>
+            ) : (
+              <span className="text-[11px] text-muted-foreground font-semibold">先做 3 篇校准能力</span>
+            )}
+            <span className="text-[11px] text-muted-foreground">
+              <b className="text-foreground tabular-nums">{overall.mastered}</b>/{overall.total} 完美
+            </span>
+            {overall.tried > 0 && (
+              <span className="text-[11px] text-orange-600 dark:text-orange-400 font-semibold">· {overall.tried} 需重做</span>
+            )}
+            {overall.attempts > 0 && (
+              <span className="text-[11px] text-muted-foreground hidden sm:inline">· 平均 {overall.avgScore}%</span>
+            )}
+          </div>
+          <span className="text-[11px] text-muted-foreground inline-flex items-center gap-0.5">
+            {dashOpen ? "收起" : "详情"}
+            <ChevronDown className={cn("size-4 transition", dashOpen && "rotate-180")} />
+          </span>
+        </button>
+
+        {/* —— 展开态 —— */}
+        {dashOpen && (
+        <div className="relative px-5 pb-5 pt-1 border-t border-border/40">
         <div className="relative grid sm:grid-cols-[auto_1fr] gap-5 items-center">
           {/* 左：进度环 */}
           <div className="relative shrink-0 mx-auto sm:mx-0">
@@ -408,6 +452,8 @@ export default function GaokaoReading() {
               ))}
             </div>
           </div>
+        )}
+        </div>
         )}
       </section>
 

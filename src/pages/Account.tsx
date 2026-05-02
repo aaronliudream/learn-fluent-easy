@@ -247,6 +247,25 @@ const Account = () => {
         </section>
       )}
 
+      {/* My learning shortcuts */}
+      {user && (
+        <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
+          <h3 className="text-base font-bold"><T>我的学习</T></h3>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+            <Button asChild variant="outline" className="justify-start">
+              <Link to="/mistakes">
+                <BookMarked className="size-4" /> <T>错题本</T>
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="justify-start">
+              <Link to="/saved">
+                <Bookmark className="size-4" /> <T>收藏的表达</T>
+              </Link>
+            </Button>
+          </div>
+        </section>
+      )}
+
       {/* Legal */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
         <h3 className="text-base font-bold"><T>隐私与协议</T></h3>

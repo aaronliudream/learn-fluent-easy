@@ -15,7 +15,7 @@ import {
 } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 import MasteryDashboard from "@/components/MasteryDashboard";
-import GaokaoVocabProgress from "@/components/GaokaoVocabProgress";
+import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";

@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
+import { encode as base64Encode } from "https://deno.land/std@0.168.0/encoding/base64.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -139,7 +140,7 @@ serve(async (req) => {
       // Legacy: still answer with base64 for back-compat. Fetch & re-encode.
       const r = await fetch(cdnUrl);
       const bytes = await r.arrayBuffer();
-      const b64 = btoa(String.fromCharCode(...new Uint8Array(bytes)));
+      const b64 = base64Encode(bytes);
       return json({ audioContent: b64, audioUrl: cdnUrl, mimeType: "audio/mpeg", cached: true, provider });
     }
 
@@ -171,25 +172,15 @@ serve(async (req) => {
       }
     }
 
-    // Persist for everyone (fire-and-forget so we don't add latency to this call).
+    // Persist for everyone — fire-and-forget so we don't add latency to this
+    // request. The first user pays the synthesis cost; everyone after them
+    // gets a CDN hit (<200ms).
     queueMicrotask(() => uploadToStorage(path, bytes!).catch(() => {}));
 
-    if (format === "url") {
-      // For URL-mode clients, we still need to wait for the upload so the
-      // file is there when they fetch it. But we already have the bytes —
-      // give them an inline data URL instead so they can play immediately
-      // while the upload happens in the background.
-      const b64 = btoa(String.fromCharCode(...new Uint8Array(bytes)));
-      return json({
-        audioContent: b64,
-        audioUrl: cdnUrl, // available momentarily; client may pre-warm cache
-        mimeType: "audio/mpeg",
-        cached: false,
-        provider: usedProvider,
-      });
-    }
-
-    const b64 = btoa(String.fromCharCode(...new Uint8Array(bytes)));
+    const b64 = base64Encode(bytes);
+    // For both `format=url` and legacy clients on a cache miss, send back the
+    // inline base64 so playback can start now. The audioUrl will be valid for
+    // the *next* request (after the background upload completes).
     return json({ audioContent: b64, audioUrl: cdnUrl, mimeType: "audio/mpeg", cached: false, provider: usedProvider });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Unknown error";

@@ -785,7 +785,7 @@ function RecapView({
         user_answer: q.options_cn[picked!] ?? "",
         correct_answer: q.options_cn[q.answer_index] ?? "",
         explanation: q.explanation_cn,
-        snapshot: q as unknown as Record<string, unknown>,
+        snapshot: q as any,
         last_wrong_at: new Date().toISOString(),
         next_review_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
       }));

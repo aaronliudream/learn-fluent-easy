@@ -204,7 +204,7 @@ export default function GaokaoReadingArticle() {
     }
 
     if (timeUp) toast.warning("时间到，已自动交卷");
-    setStage("result");
+    setStage("review");
   }
 
   if (loading) {
@@ -312,40 +312,8 @@ export default function GaokaoReadingArticle() {
           </div>
         </header>
 
-        {/* Two-column: passage + questions */}
-        <div className="mx-auto max-w-7xl px-4 py-6 grid lg:grid-cols-[1.3fr_1fr] gap-6">
-          {/* LEFT: Passage */}
-          <article className="rounded-2xl border bg-card p-6 lg:p-8 lg:sticky lg:top-[72px] lg:self-start lg:max-h-[calc(100vh-96px)] lg:overflow-y-auto">
-            <div className="flex items-center justify-between mb-4 pb-3 border-b">
-              <div className="text-xs text-muted-foreground">
-                {article.word_count} 词 · 建议 {article.recommended_minutes} 分钟
-              </div>
-              <div className="flex items-center gap-1">
-                <button
-                  onClick={() => setFontScale((s) => Math.max(0.85, s - 0.1))}
-                  className="size-7 rounded-md border bg-background hover:bg-muted text-xs font-bold"
-                >A-</button>
-                <button
-                  onClick={() => setFontScale((s) => Math.min(1.4, s + 0.1))}
-                  className="size-7 rounded-md border bg-background hover:bg-muted text-xs font-bold"
-                >A+</button>
-              </div>
-            </div>
-            <h1 className="text-xl font-bold mb-4 leading-snug">{article.title}</h1>
-            <div
-              className="prose prose-slate max-w-none leading-[1.85] text-foreground space-y-4 select-text"
-              style={{ fontSize: `${fontScale}rem` }}
-            >
-              {article.body.split("\n\n").map((p, i) => (
-                <p key={i} className="text-justify">
-                  <span className="text-muted-foreground/40 mr-2 font-mono text-xs select-none">{i + 1}</span>
-                  {p}
-                </p>
-              ))}
-            </div>
-          </article>
-
-          {/* RIGHT: Questions */}
+        {/* Questions only */}
+        <div className="mx-auto max-w-3xl px-4 py-6">
           <section className="space-y-4">
             <div className="rounded-xl border bg-primary/5 border-primary/20 p-3 flex gap-2 text-xs text-primary">
               <Target className="size-4 shrink-0 mt-0.5" />

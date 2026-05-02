@@ -183,12 +183,17 @@ export const TodayTaskCard = () => {
         </div>
       </div>
 
-      <Collapsible open={!collapsed}>
-        <CollapsibleContent
-          id="today-task-list"
-          className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-        >
-        <ul className="relative mt-4 space-y-2">
+      {/* Pure CSS grid expand/collapse — avoids Radix mount-timing issues that
+          previously left this region empty after expanding. */}
+      <div
+        id="today-task-list"
+        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+          collapsed ? "grid-rows-[0fr] opacity-0" : "mt-4 grid-rows-[1fr] opacity-100"
+        }`}
+        aria-hidden={collapsed}
+      >
+        <div className="min-h-0 overflow-hidden">
+        <ul className="relative space-y-2">
         {tasks.map((t, i) => {
           const Icon = t.icon;
           return (
@@ -222,8 +227,8 @@ export const TodayTaskCard = () => {
           );
         })}
         </ul>
-        </CollapsibleContent>
-      </Collapsible>
+        </div>
+      </div>
     </section>
   );
 };

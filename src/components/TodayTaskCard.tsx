@@ -199,10 +199,9 @@ export const TodayTaskCard = () => {
           return (
             <li
               key={t.key}
-              className="animate-fade-in opacity-0"
+              className="animate-in fade-in slide-in-from-top-1 duration-300"
               style={{
                 animationDelay: `${i * 70}ms`,
-                animationFillMode: "forwards",
               }}
             >
               <Link

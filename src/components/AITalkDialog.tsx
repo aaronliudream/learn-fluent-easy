@@ -740,7 +740,7 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
 
   return (
     <div className="space-y-3">
-      {transcript.map((t, i) => (
+      {transcript.filter((t) => t.role !== "user").map((t, i) => (
         <div key={i} className={`flex ${t.role === "user" ? "justify-end" : "justify-start"}`}>
           <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-lg leading-relaxed shadow-sm ${
             t.role === "user"

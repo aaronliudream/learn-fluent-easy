@@ -772,7 +772,7 @@ function QuizPhase({
 
   if (!item) {
     // shouldn't happen mid-flight; finish
-    onDone({ ...stats, bestStreak, score, spellCorrect });
+    onDone({ ...stats, bestStreak, score, spellCorrect, levelUps });
     return null;
   }
 

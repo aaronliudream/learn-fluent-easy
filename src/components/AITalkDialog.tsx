@@ -671,7 +671,13 @@ function GuestSignupCTA() {
 }
 function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[]; aiSpeaking: boolean; phase: string }) {
   const endRef = useRef<HTMLDivElement>(null);
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [transcript]);
+  // Track total text length so streaming deltas (which mutate the last
+  // turn in place) also trigger scroll. Otherwise the array reference
+  // changes but scrollIntoView only fires once per turn.
+  const totalLen = transcript.reduce((n, t) => n + (t.text?.length || 0), 0);
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, [transcript.length, totalLen, aiSpeaking]);
 
   if (transcript.length === 0) {
     return (

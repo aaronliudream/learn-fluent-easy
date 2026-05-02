@@ -1,6 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, Clock, ChevronRight, GraduationCap, Sparkles, Target, Trophy, Library, Gauge, Wand2 } from "lucide-react";
+import {
+  ArrowLeft, BookOpen, Clock, ChevronRight, GraduationCap, Sparkles, Target, Trophy,
+  Library, Gauge, Wand2, CheckCircle2, Circle, RefreshCw, Flame, TrendingUp, Award,
+  Zap, Search,
+} from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { cn } from "@/lib/utils";
@@ -46,6 +50,22 @@ type Recommendation = {
   done_before: boolean;
 };
 
+type SessionStat = {
+  best_pct: number;
+  attempts: number;
+  last_at: string;
+};
+// 状态: mastered ≥ 85% | passed ≥ 60% | tried < 60% | new
+
+type ArticleStatus = "mastered" | "passed" | "tried" | "new";
+
+function statusOf(s?: SessionStat): ArticleStatus {
+  if (!s) return "new";
+  if (s.best_pct >= 85) return "mastered";
+  if (s.best_pct >= 60) return "passed";
+  return "tried";
+}
+
 function lexileBadgeColor(lex: number) {
   if (lex < 700) return "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border-emerald-500/30";
   if (lex < 900) return "bg-sky-500/15 text-sky-700 dark:text-sky-400 border-sky-500/30";
@@ -53,11 +73,11 @@ function lexileBadgeColor(lex: number) {
   return "bg-rose-500/15 text-rose-700 dark:text-rose-400 border-rose-500/30";
 }
 
-const BANDS: { id: GradeBand; label: string; sub: string; icon: typeof BookOpen; color: string }[] = [
-  { id: "g1", label: "高一", sub: "Foundation · 打基础", icon: Sparkles, color: "from-emerald-500/20 to-emerald-500/5 text-emerald-600 border-emerald-500/30" },
-  { id: "g2", label: "高二", sub: "Build-up · 扩词汇", icon: BookOpen, color: "from-sky-500/20 to-sky-500/5 text-sky-600 border-sky-500/30" },
-  { id: "g3", label: "高三", sub: "Polish · 精读训练", icon: Target, color: "from-violet-500/20 to-violet-500/5 text-violet-600 border-violet-500/30" },
-  { id: "gaokao", label: "高考", sub: "Sprint · 真题模拟", icon: Trophy, color: "from-amber-500/20 to-amber-500/5 text-amber-600 border-amber-500/30" },
+const BANDS: { id: GradeBand; label: string; sub: string; icon: typeof BookOpen; gradient: string; ring: string }[] = [
+  { id: "g1",     label: "高一", sub: "Foundation",   icon: Sparkles, gradient: "from-emerald-500 to-teal-600",  ring: "ring-emerald-500/30" },
+  { id: "g2",     label: "高二", sub: "Build-up",     icon: BookOpen, gradient: "from-sky-500 to-blue-600",      ring: "ring-sky-500/30" },
+  { id: "g3",     label: "高三", sub: "Polish",       icon: Target,   gradient: "from-violet-500 to-purple-600", ring: "ring-violet-500/30" },
+  { id: "gaokao", label: "高考", sub: "Sprint 真题",  icon: Trophy,   gradient: "from-amber-500 to-orange-600",  ring: "ring-amber-500/30" },
 ];
 
 const THEME_LABEL: Record<string, string> = {
@@ -66,12 +86,23 @@ const THEME_LABEL: Record<string, string> = {
   nature: "人与自然",
 };
 
+const STATUS_FILTERS: { k: ArticleStatus | "all"; label: string; dot: string }[] = [
+  { k: "all",      label: "全部",     dot: "" },
+  { k: "new",      label: "未读",     dot: "bg-slate-400" },
+  { k: "tried",    label: "需重做",   dot: "bg-orange-500" },
+  { k: "passed",   label: "通过",     dot: "bg-amber-500" },
+  { k: "mastered", label: "完美掌握", dot: "bg-emerald-500" },
+];
+
 export default function GaokaoReading() {
   const [tab, setTab] = useState<GradeBand>("g3");
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState<LexileProfile | null>(null);
   const [recs, setRecs] = useState<Recommendation[]>([]);
+  const [sessions, setSessions] = useState<Record<string, SessionStat>>({});
+  const [statusFilter, setStatusFilter] = useState<ArticleStatus | "all">("all");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -84,15 +115,33 @@ export default function GaokaoReading() {
       setArticles((data ?? []) as Article[]);
       setLoading(false);
 
-      // 拉取个人 Lexile + 自适应推荐 (登录用户才有意义)
       const { data: u } = await supabase.auth.getUser();
       if (u.user) {
-        const [{ data: p }, { data: r }] = await Promise.all([
+        const [{ data: p }, { data: r }, { data: ss }] = await Promise.all([
           supabase.rpc("get_user_reading_lexile"),
           supabase.rpc("get_lexile_recommendations"),
+          supabase
+            .from("gaokao_reading_sessions")
+            .select("article_id, score_pct, submitted_at")
+            .eq("user_id", u.user.id)
+            .eq("status", "submitted")
+            .order("submitted_at", { ascending: false }),
         ]);
         if (p && p[0]) setProfile(p[0] as LexileProfile);
         if (r) setRecs(r as Recommendation[]);
+        if (ss) {
+          const map: Record<string, SessionStat> = {};
+          for (const s of ss as { article_id: string; score_pct: number; submitted_at: string }[]) {
+            const ex = map[s.article_id];
+            if (!ex) {
+              map[s.article_id] = { best_pct: s.score_pct ?? 0, attempts: 1, last_at: s.submitted_at };
+            } else {
+              ex.attempts += 1;
+              ex.best_pct = Math.max(ex.best_pct, s.score_pct ?? 0);
+            }
+          }
+          setSessions(map);
+        }
       }
     })();
   }, []);
@@ -106,7 +155,58 @@ export default function GaokaoReading() {
     return m;
   }, [articles]);
 
-  const current = grouped.get(tab) ?? [];
+  // ====== 全局统计 ======
+  const overall = useMemo(() => {
+    const total = articles.length;
+    let mastered = 0, passed = 0, tried = 0, sumPct = 0, attempts = 0;
+    for (const a of articles) {
+      const st = statusOf(sessions[a.id]);
+      if (st === "mastered") mastered++;
+      else if (st === "passed") passed++;
+      else if (st === "tried") tried++;
+      const s = sessions[a.id];
+      if (s) { sumPct += s.best_pct; attempts += s.attempts; }
+    }
+    const done = mastered + passed + tried;
+    const newCount = total - done;
+    const pct = total ? Math.round((mastered / total) * 100) : 0;
+    const avgScore = done ? Math.round(sumPct / done) : 0;
+    return { total, mastered, passed, tried, newCount, pct, avgScore, attempts, done };
+  }, [articles, sessions]);
+
+  // ====== 每年级统计 ======
+  const bandStats = useMemo(() => {
+    const stats: Record<string, { total: number; mastered: number; done: number }> = {};
+    for (const b of BANDS) stats[b.id] = { total: 0, mastered: 0, done: 0 };
+    for (const a of articles) {
+      const st = stats[a.grade_band]; if (!st) continue;
+      st.total++;
+      const s = statusOf(sessions[a.id]);
+      if (s === "mastered") { st.mastered++; st.done++; }
+      else if (s !== "new") st.done++;
+    }
+    return stats;
+  }, [articles, sessions]);
+
+  // ====== 当前 tab 文章 + 筛选 + 排序 ======
+  const current = useMemo(() => {
+    const list = grouped.get(tab) ?? [];
+    const q = search.trim().toLowerCase();
+    return list
+      .filter((a) => {
+        if (statusFilter !== "all" && statusOf(sessions[a.id]) !== statusFilter) return false;
+        if (!q) return true;
+        return (a.title + " " + a.specific_topic + " " + (a.genre_label ?? "")).toLowerCase().includes(q);
+      })
+      .sort((a, b) => {
+        const sa = statusOf(sessions[a.id]); const sb = statusOf(sessions[b.id]);
+        // 需重做最优先 → 未读 → 通过 → 已掌握
+        const ord: Record<ArticleStatus, number> = { tried: 0, new: 1, passed: 2, mastered: 3 };
+        if (ord[sa] !== ord[sb]) return ord[sa] - ord[sb];
+        return (a.lexile_score ?? 0) - (b.lexile_score ?? 0);
+      });
+  }, [grouped, tab, sessions, statusFilter, search]);
+
   const currentBand = BANDS.find((b) => b.id === tab)!;
 
   return (
@@ -115,160 +215,206 @@ export default function GaokaoReading() {
         <ArrowLeft className="size-4" /> 返回高考英语
       </Link>
 
-      <PageHeader
-        hideReviewBanner
-        title="阅读理解训练"
-        subtitle="按年级分级 · 三阶段隔离法 · 雅思官方训练标准"
-      />
+      <PageHeader hideReviewBanner title="阅读理解训练" subtitle="个人化追踪 · Lexile 自适应 · 三阶段答题流程" />
 
-      {/* 教学法说明卡 */}
-      <div className="mb-5 rounded-2xl border bg-gradient-to-br from-primary/5 via-card to-card p-4">
-        <div className="flex items-center gap-2 text-sm font-semibold">
-          <GraduationCap className="size-4 text-primary" /> 科学三阶段答题流程
+      {/* ============= 顶部学习仪表盘 ============= */}
+      <section className="mb-5 rounded-3xl border bg-gradient-to-br from-primary/10 via-violet-500/5 to-transparent p-5 sm:p-6 relative overflow-hidden">
+        <div className="absolute -right-12 -top-12 size-44 rounded-full bg-primary/15 blur-3xl pointer-events-none" />
+        <div className="relative grid sm:grid-cols-[auto_1fr] gap-5 items-center">
+          {/* 左：进度环 */}
+          <div className="relative shrink-0 mx-auto sm:mx-0">
+            <svg viewBox="0 0 120 120" className="size-32 -rotate-90">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="hsl(var(--muted))" strokeWidth="10" />
+              <circle cx="60" cy="60" r="52" fill="none" stroke="url(#rg)" strokeWidth="10" strokeLinecap="round"
+                strokeDasharray={`${(overall.pct / 100) * 326.7} 326.7`} className="transition-all duration-700" />
+              <defs>
+                <linearGradient id="rg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="hsl(var(--primary))" />
+                  <stop offset="100%" stopColor="hsl(262 83% 58%)" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div className="absolute inset-0 grid place-items-center text-center">
+              <div>
+                <div className="text-3xl font-extrabold tabular-nums leading-none">{overall.pct}<span className="text-lg">%</span></div>
+                <div className="text-[10px] text-muted-foreground mt-1">完美掌握</div>
+              </div>
+            </div>
+          </div>
+
+          {/* 右：能力 + 数字 */}
+          <div className="grid gap-3 min-w-0">
+            <div className="flex items-center gap-2 flex-wrap">
+              {profile ? (
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-primary to-violet-500 text-primary-foreground px-3 py-1 text-xs font-bold shadow">
+                  <Gauge className="size-3.5" /> {profile.estimated_lexile}L · CEFR {profile.cefr_estimate}
+                </span>
+              ) : (
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-muted text-foreground px-3 py-1 text-xs font-bold">
+                  <Award className="size-3.5" /> 先做 3 篇校准能力
+                </span>
+              )}
+              <span className="inline-flex items-center gap-1 rounded-full bg-card border px-2.5 py-1 text-[11px] text-muted-foreground">
+                <Flame className="size-3 text-orange-500" /> 共 {overall.total} 篇
+              </span>
+              {overall.attempts > 0 && (
+                <span className="inline-flex items-center gap-1 rounded-full bg-card border px-2.5 py-1 text-[11px] text-muted-foreground">
+                  <TrendingUp className="size-3 text-emerald-500" /> 平均 {overall.avgScore}%
+                </span>
+              )}
+            </div>
+
+            <div className="grid grid-cols-4 gap-2">
+              <Stat color="emerald" label="完美" value={overall.mastered} icon={CheckCircle2} />
+              <Stat color="amber"   label="通过" value={overall.passed}   icon={Award} />
+              <Stat color="orange"  label="重做" value={overall.tried}    icon={RefreshCw} />
+              <Stat color="slate"   label="未读" value={overall.newCount} icon={Circle} />
+            </div>
+
+            <div className="h-2 w-full rounded-full bg-muted overflow-hidden flex">
+              <div className="h-full bg-emerald-500 transition-all" style={{ width: `${(overall.mastered / Math.max(overall.total,1)) * 100}%` }} />
+              <div className="h-full bg-amber-500 transition-all" style={{ width: `${(overall.passed / Math.max(overall.total,1)) * 100}%` }} />
+              <div className="h-full bg-orange-500 transition-all" style={{ width: `${(overall.tried / Math.max(overall.total,1)) * 100}%` }} />
+            </div>
+
+            {profile && (
+              <div className="text-[11px] text-muted-foreground">
+                💡 最佳学习区 <b className="text-foreground">{profile.optimal_min}L–{profile.optimal_max}L</b>
+                {profile.confidence === "cold_start"
+                  ? <span className="text-amber-600"> · 冷启动中，先完成 3 篇校准</span>
+                  : <> · 已基于 <b>{profile.articles_used}</b> 篇估算</>}
+              </div>
+            )}
+          </div>
         </div>
-        <div className="mt-2 grid grid-cols-3 gap-2 text-xs">
-          <div className="rounded-lg bg-background/60 p-2">
-            <div className="font-semibold text-foreground">① 限时答题</div>
-            <div className="text-muted-foreground mt-0.5">⏱ 答案完全锁死</div>
+
+        {/* 智能推荐 */}
+        {recs.length > 0 && (
+          <div className="relative mt-5 pt-5 border-t border-border/60">
+            <div className="flex items-center gap-1.5 mb-2">
+              <Wand2 className="size-4 text-violet-500" />
+              <h3 className="font-bold text-sm">为你定制 · 自适应推荐</h3>
+              <span className="text-[10px] text-muted-foreground">±50L 最佳学习区</span>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-2">
+              {recs.slice(0, 3).map((r) => (
+                <Link key={r.article_id} to={`/gaokao/reading/article/${r.article_id}`}
+                  className="rounded-xl border bg-card p-3 hover:border-primary/50 hover:shadow-md transition group">
+                  <div className="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                    <span className={cn(
+                      "text-[10px] rounded-full px-1.5 py-0.5 font-bold",
+                      r.zone === "optimal" ? "bg-primary text-primary-foreground"
+                        : r.zone === "challenge" ? "bg-rose-500 text-white"
+                        : "bg-emerald-500 text-white"
+                    )}>{r.zone_label}</span>
+                    <span className={cn("text-[10px] rounded border px-1.5 py-0.5 font-mono font-bold", lexileBadgeColor(r.lexile_score))}>
+                      {r.lexile_score}L
+                    </span>
+                    {r.done_before && <span className="text-[10px] text-muted-foreground">↻ 复练</span>}
+                  </div>
+                  <div className="text-sm font-semibold leading-snug line-clamp-2 group-hover:text-primary transition">{r.title}</div>
+                  <div className="mt-1.5 flex items-center justify-between text-[10px] text-muted-foreground">
+                    <span><Clock className="inline size-3 mr-0.5" />{r.recommended_minutes} min</span>
+                    <ChevronRight className="size-3.5 group-hover:translate-x-0.5 transition" />
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-          <div className="rounded-lg bg-background/60 p-2">
-            <div className="font-semibold text-foreground">② 即时成绩</div>
-            <div className="text-muted-foreground mt-0.5">📊 题型诊断</div>
+        )}
+      </section>
+
+      {/* 三阶段法 + 知识点入口 */}
+      <div className="mb-5 grid sm:grid-cols-2 gap-3">
+        <div className="rounded-2xl border bg-gradient-to-br from-card to-muted/30 p-4">
+          <div className="flex items-center gap-1.5 text-sm font-bold">
+            <GraduationCap className="size-4 text-primary" /> 三阶段答题流程
           </div>
-          <div className="rounded-lg bg-background/60 p-2">
-            <div className="font-semibold text-foreground">③ 精读复盘</div>
-            <div className="text-muted-foreground mt-0.5">🔍 ABCD 逐项</div>
+          <div className="mt-2 grid grid-cols-3 gap-1.5 text-[10px]">
+            {[
+              { n: "①", t: "限时答题", d: "⏱ 锁死答案" },
+              { n: "②", t: "即时成绩", d: "📊 题型诊断" },
+              { n: "③", t: "精读复盘", d: "🔍 ABCD 逐项" },
+            ].map((s) => (
+              <div key={s.n} className="rounded-lg bg-background/60 border p-2">
+                <div className="font-bold text-foreground">{s.n} {s.t}</div>
+                <div className="text-muted-foreground mt-0.5">{s.d}</div>
+              </div>
+            ))}
           </div>
         </div>
+        <Link to="/gaokao/reading/knowledge"
+          className="flex items-center gap-3 rounded-2xl border bg-gradient-to-br from-violet-500/10 via-card to-card p-4 hover:border-violet-500/40 transition">
+          <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-violet-500/15 text-violet-600">
+            <Library className="size-6" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="font-bold text-sm">📚 知识点速查</div>
+            <div className="text-[11px] text-muted-foreground mt-0.5">题型 · 文体 · 策略 · 信号词 · 话题</div>
+          </div>
+          <ChevronRight className="size-4 text-muted-foreground" />
+        </Link>
       </div>
 
-      {/* 🚀 个人 Lexile 能力卡 + 自适应推荐 */}
-      {profile && (
-        <div className="mb-5 rounded-2xl border-2 border-primary/25 bg-gradient-to-br from-primary/5 via-violet-500/5 to-card p-4">
-          <div className="flex items-start gap-3">
-            <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-primary to-violet-500 text-primary-foreground">
-              <Gauge className="size-6" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="flex items-baseline gap-2 flex-wrap">
-                <span className="text-xs font-medium text-muted-foreground">你的阅读能力</span>
-                <span className="text-[10px] border rounded px-1.5 py-0.5 text-muted-foreground">
-                  Lexile · MetaMetrics
-                </span>
-              </div>
-              <div className="flex items-baseline gap-2 mt-0.5 flex-wrap">
-                <span className="text-2xl font-bold tabular-nums text-primary">
-                  {profile.estimated_lexile}L
-                </span>
-                <span className="text-sm font-semibold text-muted-foreground">
-                  ≈ CEFR {profile.cefr_estimate}
-                </span>
-              </div>
-              <div className="mt-1 text-[11px] text-muted-foreground">
-                最佳学习区 <b className="text-foreground">{profile.optimal_min}L–{profile.optimal_max}L</b>
-                {" · "}
-                {profile.confidence === "cold_start" ? (
-                  <span className="text-amber-600">未做过测评，先做 3 篇校准</span>
-                ) : (
-                  <>已基于 <b className="text-foreground">{profile.articles_used}</b> 篇做过的文章估算</>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {recs.length > 0 && (
-            <>
-              <div className="mt-4 mb-2 flex items-center gap-1.5 text-xs font-semibold text-muted-foreground">
-                <Wand2 className="size-3.5 text-violet-500" />
-                自适应推荐 · 为你定制
-              </div>
-              <div className="grid sm:grid-cols-2 gap-2">
-                {recs.slice(0, 4).map((r) => (
-                  <Link
-                    key={r.article_id}
-                    to={`/gaokao/reading/article/${r.article_id}`}
-                    className="rounded-xl border bg-card p-2.5 hover:border-primary/40 transition group"
-                  >
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <span className={cn(
-                        "text-[10px] rounded-full px-1.5 py-0.5 font-semibold",
-                        r.zone === "optimal"
-                          ? "bg-primary/15 text-primary"
-                          : r.zone === "challenge"
-                          ? "bg-rose-500/15 text-rose-600"
-                          : "bg-emerald-500/15 text-emerald-700"
-                      )}>
-                        {r.zone_label}
-                      </span>
-                      <span className={cn("text-[10px] rounded border px-1 py-px font-mono", lexileBadgeColor(r.lexile_score))}>
-                        {r.lexile_score}L
-                      </span>
-                      {r.done_before && (
-                        <span className="text-[10px] text-muted-foreground">已做过</span>
-                      )}
-                    </div>
-                    <div className="text-xs font-medium line-clamp-2 group-hover:text-primary transition">
-                      {r.title}
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-      )}
-
-      {/* 知识体系速查入口 */}
-      <Link
-        to="/gaokao/reading/knowledge"
-        className="mb-5 flex items-center gap-3 rounded-2xl border bg-gradient-to-r from-violet-500/10 via-card to-card p-4 hover:border-violet-500/40 transition"
-      >
-        <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-violet-500/15 text-violet-600">
-          <Library className="size-6" />
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="font-bold text-sm">阅读知识点速查 · 体系化训练</div>
-          <div className="text-xs text-muted-foreground mt-0.5">题型 116 · 文体 40 · 策略 71 · 信号词 113 · 话题 88 · 长难句 32...</div>
-        </div>
-        <ChevronRight className="size-4 text-muted-foreground" />
-      </Link>
-
-      {/* 年级 Tab */}
-      <div className="grid grid-cols-4 gap-2 mb-5">
+      {/* ====== 年级卡片 — 含进度 ====== */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
         {BANDS.map((b) => {
           const Icon = b.icon;
           const active = tab === b.id;
-          const count = grouped.get(b.id)?.length ?? 0;
+          const s = bandStats[b.id] ?? { total: 0, mastered: 0, done: 0 };
+          const pct = s.total ? Math.round((s.mastered / s.total) * 100) : 0;
           return (
-            <button
-              key={b.id}
-              onClick={() => setTab(b.id)}
+            <button key={b.id} onClick={() => setTab(b.id)}
               className={cn(
-                "rounded-xl border p-3 text-left transition",
-                active
-                  ? `bg-gradient-to-br ${b.color} border-current shadow-tile`
-                  : "bg-card border-border hover:border-primary/30"
-              )}
-            >
-              <div className="flex items-center justify-between">
-                <Icon className={cn("size-4", active ? "" : "text-muted-foreground")} />
-                <span className={cn("text-[10px] tabular-nums", active ? "opacity-80" : "text-muted-foreground")}>
-                  {count} 篇
-                </span>
+                "relative overflow-hidden rounded-2xl border p-3 text-left transition group",
+                active ? `bg-gradient-to-br ${b.gradient} text-white border-transparent shadow-lg ring-2 ${b.ring}` : "bg-card hover:border-primary/40 hover:-translate-y-0.5"
+              )}>
+              <div className="flex items-start justify-between mb-1.5">
+                <div className={cn("rounded-lg p-1.5", active ? "bg-white/25" : `bg-gradient-to-br ${b.gradient} text-white`)}>
+                  <Icon className="size-3.5" />
+                </div>
+                <div className={cn("text-[10px] font-bold tabular-nums px-1.5 py-0.5 rounded-md", active ? "bg-white/25" : "bg-muted")}>
+                  {s.mastered}/{s.total}
+                </div>
               </div>
-              <div className={cn("mt-2 font-bold leading-tight", active ? "" : "text-foreground")}>{b.label}</div>
-              <div className={cn("text-[10px] mt-0.5 leading-tight", active ? "opacity-75" : "text-muted-foreground")}>
-                {b.sub}
+              <div className="font-bold text-base leading-tight">{b.label}</div>
+              <div className={cn("text-[10px] leading-tight", active ? "text-white/85" : "text-muted-foreground")}>{b.sub}</div>
+              <div className={cn("mt-1.5 h-1.5 rounded-full overflow-hidden", active ? "bg-white/25" : "bg-muted")}>
+                <div className={cn("h-full transition-all", active ? "bg-white" : "bg-gradient-to-r " + b.gradient)} style={{ width: `${pct}%` }} />
               </div>
             </button>
           );
         })}
       </div>
 
+      {/* 搜索 + 状态筛选 */}
+      <div className="mb-3 grid sm:grid-cols-[1fr_auto] gap-2 items-center">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
+          <input
+            value={search} onChange={(e) => setSearch(e.target.value)}
+            placeholder="搜索文章标题或话题..."
+            className="w-full rounded-xl border bg-card pl-10 pr-3 py-2 text-sm outline-none focus:border-primary"
+          />
+        </div>
+        <div className="flex flex-wrap gap-1.5 text-xs">
+          {STATUS_FILTERS.map((s) => (
+            <button key={s.k} onClick={() => setStatusFilter(s.k)}
+              className={cn(
+                "rounded-full px-2.5 py-1 transition inline-flex items-center gap-1.5",
+                statusFilter === s.k ? "bg-foreground text-background" : "bg-muted text-muted-foreground hover:bg-muted/80"
+              )}>
+              {s.dot && <span className={cn("size-1.5 rounded-full", s.dot)} />}
+              {s.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* 当前板块说明 */}
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-base font-bold">{currentBand.label} · {currentBand.sub}</h2>
-        <span className="text-xs text-muted-foreground">{current.length} 篇可练</span>
+        <span className="text-xs text-muted-foreground">{current.length} 篇</span>
       </div>
 
       {loading && <p className="text-sm text-muted-foreground">加载中...</p>}
@@ -276,64 +422,107 @@ export default function GaokaoReading() {
       {!loading && current.length === 0 && (
         <div className="rounded-2xl border border-dashed bg-card p-8 text-center">
           <BookOpen className="size-8 mx-auto text-muted-foreground/50" />
-          <p className="mt-3 text-sm text-muted-foreground">本板块文章正在精心准备中</p>
-          <p className="text-xs text-muted-foreground/70 mt-1">先去其他年级板块看看吧 👆</p>
+          <p className="mt-3 text-sm text-muted-foreground">没有符合筛选的文章</p>
         </div>
       )}
 
       <ul className="grid gap-3">
-        {current.map((a) => (
-          <li key={a.id}>
-            <Link
-              to={`/gaokao/reading/article/${a.id}`}
-              className="block rounded-2xl border bg-card p-4 transition hover:border-primary/40 hover:shadow-tile"
-            >
-              <div className="flex items-start gap-3">
-                <div className={cn(
-                  "grid size-12 shrink-0 place-items-center rounded-xl text-sm font-bold",
-                  "bg-gradient-to-br from-primary/15 to-primary/5 text-primary"
+        {current.map((a) => {
+          const stat = sessions[a.id];
+          const st = statusOf(stat);
+          const inOptimal = profile && a.lexile_score
+            && a.lexile_score >= profile.optimal_min - 1 && a.lexile_score <= profile.optimal_max + 1;
+          return (
+            <li key={a.id}>
+              <Link to={`/gaokao/reading/article/${a.id}`}
+                className={cn(
+                  "block rounded-2xl border p-4 transition hover:shadow-tile relative overflow-hidden",
+                  st === "mastered" ? "bg-emerald-500/5 border-emerald-500/30 hover:border-emerald-500/60"
+                  : st === "passed"   ? "bg-amber-500/5 border-amber-500/30 hover:border-amber-500/60"
+                  : st === "tried"    ? "bg-orange-500/5 border-orange-500/30 hover:border-orange-500/60"
+                  : "bg-card hover:border-primary/40"
                 )}>
-                  {a.genre_label?.match(/[A-E]/)?.[0] ?? "R"}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    {a.sub_band && (
-                      <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-semibold text-primary">
-                        {a.sub_band}
-                      </span>
-                    )}
-                    {a.cefr_level && (
-                      <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">
-                        {a.cefr_level}
-                      </span>
-                    )}
-                    {a.lexile_score && (
-                      <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-mono font-bold border", lexileBadgeColor(a.lexile_score))}>
-                        {a.lexile_score}L
-                      </span>
-                    )}
-                    {a.genre_label && (
-                      <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">
-                        {a.genre_label}
-                      </span>
+                {inOptimal && (
+                  <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-violet-500 text-white px-1.5 py-0.5 text-[9px] font-bold shadow">
+                    <Zap className="size-2.5" /> 最佳区
+                  </span>
+                )}
+                <div className="flex items-start gap-3">
+                  {/* 状态图标 + 得分 */}
+                  <div className="shrink-0">
+                    {stat ? (
+                      <div className={cn(
+                        "grid size-12 place-items-center rounded-xl text-center",
+                        st === "mastered" ? "bg-emerald-500 text-white"
+                        : st === "passed" ? "bg-amber-500 text-white"
+                        : "bg-orange-500 text-white"
+                      )}>
+                        <div>
+                          <div className="text-sm font-extrabold leading-none tabular-nums">{Math.round(stat.best_pct)}<span className="text-[9px]">%</span></div>
+                          <div className="text-[8px] opacity-90 mt-0.5">最佳</div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 text-primary">
+                        <Circle className="size-5" />
+                      </div>
                     )}
                   </div>
-                  <div className="mt-1.5 font-semibold leading-tight line-clamp-2">{a.title}</div>
-                  <div className="mt-1.5 flex items-center gap-3 text-xs text-muted-foreground flex-wrap">
-                    <span className="inline-flex items-center gap-1">
-                      <Clock className="size-3" /> {a.recommended_minutes} 分钟
-                    </span>
-                    <span>· {a.word_count} 词</span>
-                    <span>· {THEME_LABEL[a.theme_context] ?? a.theme_context} / {a.specific_topic}</span>
-                    <span className="text-amber-500">{"★".repeat(a.difficulty)}{"☆".repeat(5 - a.difficulty)}</span>
+
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      {a.sub_band && (
+                        <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-semibold text-primary">{a.sub_band}</span>
+                      )}
+                      {a.cefr_level && (
+                        <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">{a.cefr_level}</span>
+                      )}
+                      {a.lexile_score && (
+                        <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-mono font-bold border", lexileBadgeColor(a.lexile_score))}>
+                          {a.lexile_score}L
+                        </span>
+                      )}
+                      {a.genre_label && (
+                        <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">{a.genre_label}</span>
+                      )}
+                      {/* 状态文字徽标 */}
+                      {st === "mastered" && <span className="inline-flex items-center gap-0.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30 px-1.5 py-0.5 text-[10px] font-bold"><CheckCircle2 className="size-2.5" />完美</span>}
+                      {st === "passed"   && <span className="rounded-full bg-amber-500/15 text-amber-700 dark:text-amber-400 border border-amber-500/30 px-1.5 py-0.5 text-[10px] font-bold">通过</span>}
+                      {st === "tried"    && <span className="inline-flex items-center gap-0.5 rounded-full bg-orange-500/15 text-orange-700 dark:text-orange-400 border border-orange-500/30 px-1.5 py-0.5 text-[10px] font-bold"><RefreshCw className="size-2.5" />重做</span>}
+                    </div>
+                    <div className="mt-1.5 font-semibold leading-tight line-clamp-2 pr-12">{a.title}</div>
+                    <div className="mt-1.5 flex items-center gap-3 text-xs text-muted-foreground flex-wrap">
+                      <span className="inline-flex items-center gap-1"><Clock className="size-3" />{a.recommended_minutes} 分钟</span>
+                      <span>· {a.word_count} 词</span>
+                      <span>· {THEME_LABEL[a.theme_context] ?? a.theme_context} / {a.specific_topic}</span>
+                      <span className="text-amber-500">{"★".repeat(a.difficulty)}<span className="text-muted-foreground/30">{"★".repeat(5 - a.difficulty)}</span></span>
+                      {stat && stat.attempts > 1 && (
+                        <span className="text-primary">· 已练 {stat.attempts} 次</span>
+                      )}
+                    </div>
                   </div>
+                  <ChevronRight className="size-4 text-muted-foreground mt-1 shrink-0" />
                 </div>
-                <ChevronRight className="size-4 text-muted-foreground mt-1" />
-              </div>
-            </Link>
-          </li>
-        ))}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </main>
+  );
+}
+
+function Stat({ color, label, value, icon: Icon }: { color: "emerald" | "amber" | "orange" | "slate"; label: string; value: number; icon: typeof Circle }) {
+  const colors = {
+    emerald: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20",
+    amber:   "bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/20",
+    orange:  "bg-orange-500/10 text-orange-700 dark:text-orange-400 border-orange-500/20",
+    slate:   "bg-muted text-muted-foreground border-border",
+  }[color];
+  return (
+    <div className={cn("rounded-xl border px-2 py-1.5 text-center", colors)}>
+      <div className="flex items-center justify-center gap-1 text-[10px] opacity-80"><Icon className="size-3" />{label}</div>
+      <div className="text-lg font-extrabold tabular-nums leading-tight">{value}</div>
+    </div>
   );
 }

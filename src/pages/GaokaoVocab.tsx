@@ -315,7 +315,8 @@ export default function GaokaoVocab() {
         .order("freq_rank", { ascending: true, nullsFirst: false })
         .order("exam_frequency", { ascending: false, nullsFirst: false })
         .order("star_level", { ascending: false, nullsFirst: false })
-        .order("word", { ascending: true });
+        .order("word", { ascending: true })
+        .range(0, 4999);
       setAllVocab((data ?? []) as Vocab[]);
       setLoading(false);
     })();

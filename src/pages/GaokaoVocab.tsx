@@ -728,6 +728,7 @@ export type QuizSessionResult = {
   bestStreak: number;
   score: number;
   spellCorrect: number;
+  levelUps?: { word: string; level: MasteryLevel }[];
 };
 
 function QuizPhase({
@@ -835,6 +836,7 @@ function QuizPhase({
         bestStreak: finalBestStreak,
         score: finalScore,
         spellCorrect: finalSpell,
+        levelUps,
       });
     } else {
       setPos(pos + 1);

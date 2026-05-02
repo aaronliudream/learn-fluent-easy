@@ -321,7 +321,7 @@ export default function WordDuel({
       _opp_score: oppTotal,
       _duration_ms: duration,
       _rounds: ROUNDS,
-      _questions: allLogs as unknown as object,
+      _questions: allLogs as unknown as never,
     });
     if (error) console.error(error);
     const row = Array.isArray(data) ? data[0] : data;
@@ -436,7 +436,7 @@ export default function WordDuel({
         />
       )}
 
-      {unlocked && <BadgeUnlockOverlay badge={unlocked} onClose={() => setUnlocked(null)} />}
+      {unlocked && <BadgeUnlockOverlay badges={[unlocked]} onDismiss={() => setUnlocked(null)} />}
     </main>
   );
 }

@@ -465,6 +465,23 @@ export default function WordDuel({
 }
 
 /* ============= Lobby ============= */
+function SignInGate() {
+  return (
+    <div className="rounded-3xl border-2 border-rose-500/40 bg-gradient-to-br from-rose-500/15 via-orange-500/10 to-transparent p-6 shadow-tile text-center">
+      <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-600 dark:text-rose-400">
+        <LogIn className="size-7" />
+      </div>
+      <h2 className="mt-4 text-xl font-extrabold">登录后开战 ⚔️</h2>
+      <p className="mt-2 text-sm text-muted-foreground">
+        Word Duel 需要登录才能匹配对手、记录 ELO 段位与排行榜成绩。
+      </p>
+      <Link to="/auth" className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-rose-500 px-6 py-3 text-sm font-bold text-white shadow-lg hover:bg-rose-600">
+        <LogIn className="size-4" /> 立即登录 / 注册
+      </Link>
+    </div>
+  );
+}
+
 function LobbyView({
   me,
   onMatch,

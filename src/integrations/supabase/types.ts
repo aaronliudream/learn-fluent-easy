@@ -1261,10 +1261,15 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      _elo_delta: {
-        Args: { _k?: number; _my: number; _opp: number; _score: number }
-        Returns: number
-      }
+      _elo_delta:
+        | {
+            Args: { _k?: number; _my: number; _opp: number; _score: number }
+            Returns: number
+          }
+        | {
+            Args: { _k?: number; _my: number; _opp: number; _score: number }
+            Returns: number
+          }
       award_coins: {
         Args: { _amount: number }
         Returns: {

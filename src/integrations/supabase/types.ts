@@ -481,33 +481,45 @@ export type Database = {
       }
       gaokao_vocab: {
         Row: {
+          cet_level: string | null
           created_at: string
           example_cn: string | null
           example_en: string | null
           frequency_band: number
           id: string
           meaning_cn: string
+          phonetic: string | null
           pos: string | null
+          sort_order: number
+          star_level: number
           word: string
         }
         Insert: {
+          cet_level?: string | null
           created_at?: string
           example_cn?: string | null
           example_en?: string | null
           frequency_band?: number
           id?: string
           meaning_cn: string
+          phonetic?: string | null
           pos?: string | null
+          sort_order?: number
+          star_level?: number
           word: string
         }
         Update: {
+          cet_level?: string | null
           created_at?: string
           example_cn?: string | null
           example_en?: string | null
           frequency_band?: number
           id?: string
           meaning_cn?: string
+          phonetic?: string | null
           pos?: string | null
+          sort_order?: number
+          star_level?: number
           word?: string
         }
         Relationships: []

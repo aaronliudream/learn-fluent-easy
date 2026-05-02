@@ -108,6 +108,79 @@ function cleanArticleBody(body: string) {
   return result.trim();
 }
 
+function extractSection(body: string, startMarker: string, endMarkers: string[]) {
+  const start = body.indexOf(startMarker);
+  if (start < 0) return "";
+  const fromStart = body.slice(start + startMarker.length);
+  const end = endMarkers.reduce((min, marker) => {
+    const idx = fromStart.indexOf(marker);
+    return idx >= 0 ? Math.min(min, idx) : min;
+  }, fromStart.length);
+  return fromStart.slice(0, end).trim();
+}
+
+function parseEmbeddedQuestions(body: string, articleId: string): Question[] {
+  const questionSection = extractSection(body.replace(/\r\n/g, "\n"), "**二、测试题目**", ["**三、答案与解析**", "**三、答案", "**四、文章分析**"]);
+  if (!questionSection) return [];
+
+  const answerSection = extractSection(body.replace(/\r\n/g, "\n"), "**三、答案与解析**", ["**四、文章分析**", "**五、生词与重点表达**"]);
+  const answers = new Map<number, { correct: "A" | "B" | "C" | "D"; explanations: Partial<Record<"A" | "B" | "C" | "D", string>>; general: string | null }>();
+
+  for (const block of answerSection.split(/(?=\n?\*\*\d+\.\s*【[A-D]】\*\*)/).filter(Boolean)) {
+    const head = block.match(/\*\*(\d+)\.\s*【([A-D])】\*\*/);
+    if (!head) continue;
+    const sortOrder = Number(head[1]);
+    const correct = head[2] as "A" | "B" | "C" | "D";
+    const explanations: Partial<Record<"A" | "B" | "C" | "D", string>> = {};
+    (["A", "B", "C", "D"] as const).forEach((opt) => {
+      const match = block.match(new RegExp(`\\*\\*${opt} 项 [✓✗]\\*\\*\\s*([\\s\\S]*?)(?=\\n\\n\\*\\*[A-D] 项 [✓✗]\\*\\*|\\n\\n\\*\\*▸|$)`));
+      if (match) explanations[opt] = match[1].replace(/-{2,}/g, "——").trim();
+    });
+    const general = block.replace(head[0], "").split("\n\n**A 项")[0]?.trim() || null;
+    answers.set(sortOrder, { correct, explanations, general });
+  }
+
+  return questionSection
+    .split(/(?=\n?\*\*\d+\.\*\*)/)
+    .filter((block) => /^\s*\*\*\d+\.\*\*/.test(block))
+    .map((block, index) => {
+      const stemMatch = block.match(/^\s*\*\*(\d+)\.\*\*\s*([\s\S]*?)(?=\n\s*A\.\s)/);
+      const sortOrder = stemMatch ? Number(stemMatch[1]) : index + 1;
+      const parsed = answers.get(sortOrder);
+      const optionText = (opt: "A" | "B" | "C" | "D") => {
+        const next = opt === "A" ? "B" : opt === "B" ? "C" : opt === "C" ? "D" : null;
+        const pattern = next
+          ? new RegExp(`\\n\\s*${opt}\\.\\s*([\\s\\S]*?)(?=\\n\\s*${next}\\.\\s)`, "m")
+          : new RegExp(`\\n\\s*${opt}\\.\\s*([\\s\\S]*?)$`, "m");
+        return block.match(pattern)?.[1]?.trim() ?? "";
+      };
+      return {
+        id: `embedded-${articleId}-${sortOrder}`,
+        sort_order: sortOrder,
+        stem: stemMatch?.[2]?.trim() ?? "",
+        question_type: "reading",
+        question_type_cn: "阅读理解",
+        option_a: optionText("A"),
+        option_b: optionText("B"),
+        option_c: optionText("C"),
+        option_d: optionText("D"),
+        correct_answer: parsed?.correct ?? "A",
+        explanation_a: parsed?.explanations.A ?? null,
+        explanation_b: parsed?.explanations.B ?? null,
+        explanation_c: parsed?.explanations.C ?? null,
+        explanation_d: parsed?.explanations.D ?? null,
+        general_explanation: parsed?.general,
+        locate_paragraph: null,
+        key_sentence: null,
+        difficulty: 3,
+      };
+    });
+}
+
+function isUuid(value: string) {
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value);
+}
+
 export default function GaokaoReadingArticle() {
   const { id } = useParams();
   const navigate = useNavigate();

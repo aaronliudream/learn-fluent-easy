@@ -165,35 +165,52 @@ const speakBrowserFallback = async (text: string, voiceId: string, speed: number
   });
 };
 
-// ---------- ElevenLabs via edge function ----------
+// ---------- TTS via edge function ----------
+// Use a direct fetch (not supabase.functions.invoke) so we can read raw
+// audio/mpeg responses without forcing JSON parsing. The cold path returns
+// the MP3 bytes directly; the cache-hit path returns a JSON {audioUrl} so
+// the browser can fetch from the CDN.
+const SUPABASE_FN_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/tts`;
+const SUPABASE_ANON = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string;
+
 const fetchTTS = async (text: string, voiceId: string, speed: number, accent?: string): Promise<string | null> => {
   const cacheKey = `${voiceId}|${speed}|${accent || ''}|${text}`;
   const cached = audioCache.get(cacheKey);
   if (cached) return cached;
 
   try {
-    const { data, error } = await supabase.functions.invoke("tts", {
-      body: { text, voiceId, speed, accent, format: "url" },
+    const session = (await supabase.auth.getSession()).data.session;
+    const headers: Record<string, string> = {
+      "Content-Type": "application/json",
+      apikey: SUPABASE_ANON,
+      Authorization: `Bearer ${session?.access_token || SUPABASE_ANON}`,
+    };
+    const res = await fetch(SUPABASE_FN_URL, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ text, voiceId, speed, accent, format: "url" }),
     });
-    if (error) {
-      console.warn("[tts] edge function error:", error.message);
+    if (!res.ok) {
+      console.warn("[tts] edge function status:", res.status);
       return null;
     }
-    // Prefer the CDN URL when the file is already cached server-side — the
-    // browser fetches the MP3 directly from Supabase's CDN edge (no base64
-    // decode, no JSON parsing of a multi-hundred-KB string).
+    const ct = res.headers.get("content-type") || "";
     let url: string | null = null;
-    if (data?.cached && data?.audioUrl) {
-      url = data.audioUrl as string;
-    } else if (data?.audioContent) {
-      // Cold synth: server returns inline base64 so we can play immediately
-      // (the CDN file is still uploading in the background).
-      url = `data:${data.mimeType || "audio/mpeg"};base64,${data.audioContent}`;
-    } else if (data?.audioUrl) {
-      url = data.audioUrl as string;
+    if (ct.startsWith("audio/")) {
+      // Cold path → raw MP3 bytes. Wrap in a Blob URL for instant playback.
+      const blob = await res.blob();
+      url = URL.createObjectURL(blob);
     } else {
-      console.warn("[tts] no audio returned");
-      return null;
+      // Cache hit → JSON with CDN URL.
+      const data = await res.json();
+      if (data?.audioUrl) {
+        url = data.audioUrl as string;
+      } else if (data?.audioContent) {
+        url = `data:${data.mimeType || "audio/mpeg"};base64,${data.audioContent}`;
+      } else {
+        console.warn("[tts] no audio returned");
+        return null;
+      }
     }
     if (audioCache.size >= MAX_CACHE) {
       const firstKey = audioCache.keys().next().value;

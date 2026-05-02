@@ -1,4 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
+import { VOCAB_DATA } from "./data.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -12,8 +13,7 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
     );
-    const dataUrl = new URL("./data.json", import.meta.url);
-    const records: any[] = JSON.parse(await Deno.readTextFile(dataUrl));
+    const records: any[] = VOCAB_DATA;
 
     let inserted = 0;
     const chunkSize = 100;

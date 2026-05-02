@@ -1094,10 +1094,12 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
 /* ---------- Done panel ---------- */
 function DonePanel({
   stats,
+  coinsAwarded,
   onExit,
   onRetry,
 }: {
   stats: { correct: number; total: number };
+  coinsAwarded?: number;
   onExit: () => void;
   onRetry: () => void;
 }) {
@@ -1109,7 +1111,12 @@ function DonePanel({
       <div className="mt-2 text-sm text-muted-foreground">
         正确率 <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
       </div>
-      <div className="mt-1 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>
+      {coinsAwarded !== undefined && coinsAwarded > 0 && (
+        <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
+          🪙 +{coinsAwarded} 金币
+        </div>
+      )}
+      <div className="mt-2 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>
       <div className="mt-6 grid grid-cols-2 gap-3">
         <Button variant="outline" onClick={onRetry}>
           <RotateCw className="mr-1 size-4" /> 再练一遍

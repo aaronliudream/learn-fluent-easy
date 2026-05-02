@@ -29,7 +29,7 @@ const TABS = [
       p.startsWith("/workplace") ||
       p.startsWith("/talk"),
   },
-  { to: "/leaderboard", label: "排行", icon: Trophy, match: (p: string) => p.startsWith("/leaderboard") || p.startsWith("/review") },
+  { to: "/leaderboard", label: "Global Ranking", icon: Trophy, match: (p: string) => p.startsWith("/leaderboard") || p.startsWith("/review") },
   { to: "/account", label: "我的", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
 ];
 

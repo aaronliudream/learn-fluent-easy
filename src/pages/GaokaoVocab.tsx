@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame } from "lucide-react";
+import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
@@ -55,7 +55,7 @@ function AccentBadge({ accent }: { accent: Vocab["accent"] }) {
 const GROUP_SIZE = 20;
 
 type Phase = "flashcard" | "quiz" | "done";
-type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze" | "en2en" | "en2word";
+type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze" | "en2en" | "en2word" | "spell";
 type QuizItem = { vocab: Vocab; kind: QuizKind; choices: Vocab[] };
 
 function shuffle<T>(arr: T[]): T[] {
@@ -68,7 +68,7 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function pickKind(v: Vocab): QuizKind {
-  const kinds: QuizKind[] = ["en2cn", "cn2en"];
+  const kinds: QuizKind[] = ["en2cn", "cn2en", "spell"];
   if (v.example_en) kinds.push("listen", "cloze");
   if (v.meaning_en) kinds.push("en2en", "en2word");
   return kinds[Math.floor(Math.random() * kinds.length)];

@@ -583,6 +583,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
               quizScore={quizScore}
               isGuest={isGuest}
               lessonTitle={lessonTitle}
+              targets={targets}
             />
             </>
           )}

@@ -1805,3 +1805,467 @@ function FloatingComboBadge({ label }: { label: string }) {
     </div>
   );
 }
+
+/* ====================================================================== */
+/* ============ Word Rush — falling-meaning rhythm matching =============== */
+/* ====================================================================== */
+
+const RUSH_DURATION_SEC = 60;
+const RUSH_FALL_BASE_MS = 6000;   // initial fall duration
+const RUSH_FALL_MIN_MS = 2200;    // fastest fall duration
+const RUSH_SPAWN_BASE_MS = 1800;  // initial spawn interval
+const RUSH_SPAWN_MIN_MS = 700;    // fastest spawn interval
+const RUSH_MAX_ACTIVE = 4;        // max simultaneous falling tiles
+
+type RushTile = {
+  id: number;
+  vocab: Vocab;
+  // 0..1 horizontal position
+  x: number;
+  spawnedAt: number;
+  fallMs: number;
+};
+
+function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const playable = useMemo(
+    () => pool.filter((v) => v.meaning_cn && v.meaning_cn.trim().length > 0),
+    [pool],
+  );
+
+  const [phase, setPhase] = useState<"intro" | "playing" | "done">("intro");
+  const [tiles, setTiles] = useState<RushTile[]>([]);
+  const [score, setScore] = useState(0);
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(0);
+  const [hits, setHits] = useState(0);
+  const [misses, setMisses] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(RUSH_DURATION_SEC);
+  const [choices, setChoices] = useState<Vocab[]>([]);
+  const [activeTileId, setActiveTileId] = useState<number | null>(null);
+  const [floatPop, setFloatPop] = useState<{ id: number; text: string; ok: boolean } | null>(null);
+
+  const [coinRefresh, setCoinRefresh] = useState(0);
+  const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
+
+  const tileSeqRef = useRef(1);
+  const startedAtRef = useRef<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  /* Pick the active tile (lowest one) and refresh choice buttons. */
+  function pickActive(currentTiles: RushTile[]) {
+    if (currentTiles.length === 0) {
+      setActiveTileId(null);
+      setChoices([]);
+      return;
+    }
+    // active = the tile that has been alive the longest (closest to ground)
+    const active = [...currentTiles].sort((a, b) => a.spawnedAt - b.spawnedAt)[0];
+    setActiveTileId(active.id);
+    // Build 4 choices: correct + 3 distractors from pool
+    const distractors = shuffle(playable.filter((p) => p.id !== active.vocab.id)).slice(0, 3);
+    setChoices(shuffle([active.vocab, ...distractors]));
+  }
+
+  /* Start the game. */
+  function start() {
+    if (playable.length < 4) return;
+    setPhase("playing");
+    setTiles([]);
+    setScore(0);
+    setStreak(0);
+    setBestStreak(0);
+    setHits(0);
+    setMisses(0);
+    setTimeLeft(RUSH_DURATION_SEC);
+    setActiveTileId(null);
+    setChoices([]);
+    setFloatPop(null);
+    setUnlockedBadges([]);
+    tileSeqRef.current = 1;
+    startedAtRef.current = Date.now();
+  }
+
+  /* Countdown timer */
+  useEffect(() => {
+    if (phase !== "playing") return;
+    const t = setInterval(() => {
+      setTimeLeft((s) => {
+        if (s <= 1) {
+          clearInterval(t);
+          return 0;
+        }
+        return s - 1;
+      });
+    }, 1000);
+    return () => clearInterval(t);
+  }, [phase]);
+
+  /* End game when time expires */
+  useEffect(() => {
+    if (phase === "playing" && timeLeft === 0) {
+      finish();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, timeLeft]);
+
+  /* Spawner — accelerates with elapsed time */
+  useEffect(() => {
+    if (phase !== "playing") return;
+    let stopped = false;
+    function schedule() {
+      if (stopped) return;
+      const elapsed = (Date.now() - startedAtRef.current) / 1000;
+      const t = elapsed / RUSH_DURATION_SEC; // 0..1
+      const interval =
+        RUSH_SPAWN_BASE_MS - (RUSH_SPAWN_BASE_MS - RUSH_SPAWN_MIN_MS) * Math.min(1, t);
+      setTimeout(() => {
+        if (stopped) return;
+        spawn();
+        schedule();
+      }, interval);
+    }
+    schedule();
+    // Initial spawn immediately
+    spawn();
+    return () => {
+      stopped = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase]);
+
+  function spawn() {
+    setTiles((prev) => {
+      if (prev.length >= RUSH_MAX_ACTIVE) return prev;
+      const elapsed = (Date.now() - startedAtRef.current) / 1000;
+      const t = elapsed / RUSH_DURATION_SEC;
+      const fallMs =
+        RUSH_FALL_BASE_MS - (RUSH_FALL_BASE_MS - RUSH_FALL_MIN_MS) * Math.min(1, t);
+      const v = playable[Math.floor(Math.random() * playable.length)];
+      // Avoid duplicate active words
+      if (prev.some((p) => p.vocab.id === v.id)) return prev;
+      const tile: RushTile = {
+        id: tileSeqRef.current++,
+        vocab: v,
+        x: 0.1 + Math.random() * 0.8,
+        spawnedAt: Date.now(),
+        fallMs,
+      };
+      const next = [...prev, tile];
+      // If no active tile, set this one
+      setTimeout(() => pickActive(next), 0);
+      return next;
+    });
+  }
+
+  /* Sweep: remove tiles that fell off-screen (miss) */
+  useEffect(() => {
+    if (phase !== "playing") return;
+    const i = setInterval(() => {
+      const now = Date.now();
+      setTiles((prev) => {
+        const stillAlive: RushTile[] = [];
+        let missed = 0;
+        for (const t of prev) {
+          if (now - t.spawnedAt >= t.fallMs) {
+            missed++;
+          } else {
+            stillAlive.push(t);
+          }
+        }
+        if (missed > 0) {
+          setMisses((m) => m + missed);
+          setStreak(0);
+          // re-pick active
+          setTimeout(() => pickActive(stillAlive), 0);
+        }
+        return stillAlive;
+      });
+    }, 200);
+    return () => clearInterval(i);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase]);
+
+  function answer(choice: Vocab) {
+    if (phase !== "playing") return;
+    if (activeTileId == null) return;
+    setTiles((prev) => {
+      const active = prev.find((p) => p.id === activeTileId);
+      if (!active) return prev;
+      const correct = choice.id === active.vocab.id;
+      if (correct) {
+        setHits((h) => h + 1);
+        setStreak((s) => {
+          const ns = s + 1;
+          setBestStreak((b) => Math.max(b, ns));
+          // Score: 10 base * combo multiplier
+          const mult = comboMultiplier(ns);
+          setScore((sc) => sc + 10 * mult);
+          return ns;
+        });
+        setFloatPop({ id: Date.now(), text: `+${10 * comboMultiplier(streak + 1)}`, ok: true });
+        const remaining = prev.filter((p) => p.id !== activeTileId);
+        setTimeout(() => pickActive(remaining), 0);
+        return remaining;
+      } else {
+        setMisses((m) => m + 1);
+        setStreak(0);
+        setFloatPop({ id: Date.now(), text: `${active.vocab.word}`, ok: false });
+        return prev;
+      }
+    });
+  }
+
+  // Auto-clear float pop
+  useEffect(() => {
+    if (!floatPop) return;
+    const t = setTimeout(() => setFloatPop(null), 700);
+    return () => clearTimeout(t);
+  }, [floatPop]);
+
+  async function finish() {
+    setPhase("done");
+    // Award coins: 1 coin per 10 score points, min 5 if any hits
+    const coins = Math.max(hits > 0 ? 5 : 0, Math.floor(score / 10));
+    if (coins > 0) {
+      const totals = await awardCoins(coins);
+      setCoinRefresh((k) => k + 1);
+      const attempted = hits + misses;
+      const accuracy = attempted > 0 ? Math.round((hits / attempted) * 100) : 0;
+      const milestones: BadgeDef[] = [];
+      // Standard milestones
+      const m = await evaluateMilestones({
+        bestStreak,
+        spellCorrect: 0,
+        perfectGroup: false,
+        totalEarned: totals?.total_earned ?? 0,
+        attempted,
+      });
+      milestones.push(...m);
+      // WordRush-specific
+      if (score >= 300) {
+        const def = (await import("@/lib/coinsBadges")).BADGE_CATALOG.wordrush_master;
+        const { unlockBadge } = await import("@/lib/coinsBadges");
+        const got = await unlockBadge("wordrush_master");
+        if (got) milestones.push(got);
+        void def;
+      }
+      setUnlockedBadges(milestones);
+      // Side-effect to silence unused
+      void accuracy;
+    }
+  }
+
+  /* ============ Render ============ */
+  if (phase === "intro") {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <div className="mb-4 flex items-center justify-between">
+          <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+            <ArrowLeft className="size-4" /> 返回
+          </button>
+          <CoinPill />
+        </div>
+        <div className="rounded-3xl border-2 border-fuchsia-500/40 bg-gradient-to-br from-fuchsia-500/10 via-purple-500/5 to-transparent p-8 text-center shadow-tile">
+          <div className="mx-auto mb-3 flex size-20 items-center justify-center rounded-3xl bg-fuchsia-500/20 text-fuchsia-600 dark:text-fuchsia-400">
+            <Music className="size-10" />
+          </div>
+          <h1 className="text-3xl font-extrabold">⚡ Word Rush</h1>
+          <p className="mt-2 text-sm text-muted-foreground">节奏消除 · 60 秒挑战</p>
+
+          <div className="mt-6 grid grid-cols-1 gap-3 text-left text-sm sm:grid-cols-2">
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="font-bold">🎯 玩法</div>
+              <div className="text-xs text-muted-foreground mt-1">中文释义从顶部下落，从底部 4 个英文单词中选出对应词。</div>
+            </div>
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="font-bold">🔥 Combo</div>
+              <div className="text-xs text-muted-foreground mt-1">连对触发 ×2 / ×3 / ×5 倍率，分数飞涨。</div>
+            </div>
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="font-bold">⏱ 越来越快</div>
+              <div className="text-xs text-muted-foreground mt-1">下落速度和出现频率会随时间递增。</div>
+            </div>
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="font-bold">🪙 奖励</div>
+              <div className="text-xs text-muted-foreground mt-1">每 10 分换 1 金币，得分 ≥ 300 解锁徽章。</div>
+            </div>
+          </div>
+
+          <Button
+            onClick={start}
+            disabled={playable.length < 4}
+            className="mt-6 h-12 w-full rounded-2xl bg-gradient-to-r from-fuchsia-600 to-purple-600 text-base font-bold text-white hover:opacity-90"
+          >
+            <Zap className="mr-2 size-5" /> 开始挑战
+          </Button>
+        </div>
+      </main>
+    );
+  }
+
+  if (phase === "done") {
+    const attempted = hits + misses;
+    const accuracy = attempted > 0 ? Math.round((hits / attempted) * 100) : 0;
+    const coins = Math.max(hits > 0 ? 5 : 0, Math.floor(score / 10));
+    return (
+      <>
+        <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+          <div className="mb-4 flex items-center justify-between">
+            <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+              <ArrowLeft className="size-4" /> 返回
+            </button>
+            <CoinPill refreshKey={coinRefresh} />
+          </div>
+          <div className="rounded-3xl border-2 border-fuchsia-500/40 bg-gradient-to-br from-fuchsia-500/10 to-transparent p-8 text-center shadow-tile">
+            <Trophy className="mx-auto size-14 text-amber-500" />
+            <div className="mt-2 text-sm uppercase tracking-wider text-muted-foreground">Final Score</div>
+            <div className="text-6xl font-extrabold tabular-nums">{score}</div>
+            <div className="mt-4 grid grid-cols-3 gap-3 text-sm">
+              <div className="rounded-xl border bg-card p-3">
+                <div className="text-xs text-muted-foreground">命中</div>
+                <div className="text-xl font-bold text-emerald-600">{hits}</div>
+              </div>
+              <div className="rounded-xl border bg-card p-3">
+                <div className="text-xs text-muted-foreground">最高连击</div>
+                <div className="text-xl font-bold text-fuchsia-600">{bestStreak}</div>
+              </div>
+              <div className="rounded-xl border bg-card p-3">
+                <div className="text-xs text-muted-foreground">准确率</div>
+                <div className="text-xl font-bold">{accuracy}%</div>
+              </div>
+            </div>
+            {coins > 0 && (
+              <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-100 px-4 py-2 text-sm font-bold text-amber-900 dark:bg-amber-500/15 dark:text-amber-300">
+                +{coins} 🪙 金币入账
+              </div>
+            )}
+            <div className="mt-6 flex gap-2">
+              <Button onClick={start} className="h-12 flex-1 rounded-2xl bg-gradient-to-r from-fuchsia-600 to-purple-600 font-bold text-white hover:opacity-90">
+                <RotateCw className="mr-2 size-4" /> 再来一局
+              </Button>
+              <Button variant="outline" onClick={onExit} className="h-12 flex-1 rounded-2xl">
+                返回词组
+              </Button>
+            </div>
+          </div>
+        </main>
+        {unlockedBadges.length > 0 && (
+          <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
+        )}
+      </>
+    );
+  }
+
+  /* Playing */
+  return (
+    <main className="mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-4">
+      {/* Top bar */}
+      <div className="mb-3 flex items-center justify-between gap-2">
+        <button onClick={onExit} className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> 退出
+        </button>
+        <div className="flex items-center gap-2 text-sm font-bold">
+          <span className="rounded-full bg-card px-3 py-1 tabular-nums shadow-sm border">
+            ⏱ {timeLeft}s
+          </span>
+          <span className="rounded-full bg-card px-3 py-1 tabular-nums shadow-sm border">
+            🎯 {score}
+          </span>
+          {streak >= 2 && (
+            <span className="rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-500 px-3 py-1 text-white tabular-nums shadow-sm">
+              🔥 ×{comboMultiplier(streak)}
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* Time progress bar */}
+      <div className="mb-3 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+        <div
+          className={cn(
+            "h-full transition-all duration-1000 ease-linear",
+            timeLeft > 20 ? "bg-emerald-500" : timeLeft > 10 ? "bg-amber-500" : "bg-red-500"
+          )}
+          style={{ width: `${(timeLeft / RUSH_DURATION_SEC) * 100}%` }}
+        />
+      </div>
+
+      {/* Falling area */}
+      <div
+        ref={containerRef}
+        className="relative flex-1 overflow-hidden rounded-2xl border-2 border-fuchsia-500/30 bg-gradient-to-b from-purple-500/5 via-background to-fuchsia-500/5"
+        style={{ minHeight: "50vh" }}
+      >
+        {/* Ground line */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-red-500/60 to-transparent" />
+
+        {tiles.map((t) => {
+          const isActive = t.id === activeTileId;
+          return (
+            <div
+              key={t.id}
+              className={cn(
+                "absolute -translate-x-1/2 rounded-2xl border-2 px-3 py-2 text-center text-sm font-bold shadow-md whitespace-nowrap max-w-[80%] truncate",
+                isActive
+                  ? "border-fuchsia-500 bg-fuchsia-500/15 text-fuchsia-700 dark:text-fuchsia-300 ring-2 ring-fuchsia-500/40"
+                  : "border-muted-foreground/30 bg-card/80 text-muted-foreground"
+              )}
+              style={{
+                left: `${t.x * 100}%`,
+                top: 0,
+                animation: `rush-fall ${t.fallMs}ms linear forwards`,
+              }}
+            >
+              {t.vocab.meaning_cn}
+            </div>
+          );
+        })}
+
+        {/* Floating feedback */}
+        {floatPop && (
+          <div
+            key={floatPop.id}
+            className={cn(
+              "pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 animate-fade-in text-2xl font-extrabold",
+              floatPop.ok ? "text-emerald-500" : "text-red-500"
+            )}
+          >
+            {floatPop.ok ? floatPop.text : `❌ ${floatPop.text}`}
+          </div>
+        )}
+
+        {tiles.length === 0 && (
+          <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
+            准备…
+          </div>
+        )}
+      </div>
+
+      {/* Choice buttons */}
+      <div className="mt-3 grid grid-cols-2 gap-2">
+        {choices.map((c) => (
+          <button
+            key={c.id}
+            onClick={() => answer(c)}
+            className="rounded-2xl border-2 border-border bg-card px-3 py-3 text-base font-bold shadow-sm transition active:scale-95 hover:border-fuchsia-500 hover:bg-fuchsia-500/5"
+          >
+            {c.word}
+          </button>
+        ))}
+        {choices.length === 0 && (
+          <div className="col-span-2 rounded-2xl border-2 border-dashed border-muted bg-muted/30 px-3 py-6 text-center text-sm text-muted-foreground">
+            等待第一个单词…
+          </div>
+        )}
+      </div>
+
+      {/* Inline keyframes */}
+      <style>{`
+        @keyframes rush-fall {
+          from { transform: translate(-50%, 0); }
+          to { transform: translate(-50%, calc(50vh - 3rem)); }
+        }
+      `}</style>
+    </main>
+  );
+}

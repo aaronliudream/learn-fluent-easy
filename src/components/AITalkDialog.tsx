@@ -746,20 +746,34 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
 
   return (
     <div className="space-y-3">
-      {transcript.map((t, i) => (
-        <div key={i} className={`flex ${t.role === "user" ? "justify-end" : "justify-start"}`}>
-          <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-lg leading-relaxed shadow-sm ${
-            t.role === "user"
-              ? "bg-primary text-primary-foreground"
-              : "bg-secondary text-foreground"
-          }`}>
-            <div className="mb-1 text-[11px] font-bold uppercase tracking-wider opacity-70">
-              {t.role === "user" ? "You" : "Alex"}
+      {transcript.map((t, i) => {
+        const isAlexSpeaking = t.role === "assistant" && t.pending && aiSpeaking;
+        return (
+          <div key={i} className={`flex ${t.role === "user" ? "justify-end" : "justify-start"}`}>
+            <div
+              className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-lg leading-relaxed shadow-sm transition-all ${
+                t.role === "user"
+                  ? "bg-primary text-primary-foreground"
+                  : isAlexSpeaking
+                    ? "bg-primary/10 text-primary ring-2 ring-primary/40 shadow-[0_0_20px_hsl(var(--primary)/0.25)]"
+                    : "bg-secondary text-foreground"
+              }`}
+            >
+              <div className="mb-1 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider opacity-70">
+                <span>{t.role === "user" ? "You" : "Alex"}</span>
+                {isAlexSpeaking && (
+                  <span className="flex items-center gap-0.5">
+                    <span className="size-1.5 animate-pulse rounded-full bg-primary" />
+                    <span className="size-1.5 animate-pulse rounded-full bg-primary [animation-delay:150ms]" />
+                    <span className="size-1.5 animate-pulse rounded-full bg-primary [animation-delay:300ms]" />
+                  </span>
+                )}
+              </div>
+              {t.text || <span className="opacity-60 italic">…</span>}
             </div>
-            {t.text || <span className="opacity-60 italic">…</span>}
           </div>
-        </div>
-      ))}
+        );
+      })}
       <div ref={endRef} />
     </div>
   );

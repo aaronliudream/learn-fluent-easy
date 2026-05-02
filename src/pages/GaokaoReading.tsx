@@ -387,6 +387,13 @@ export default function GaokaoReading() {
         })}
       </div>
 
+      {!tab && (
+        <div className="rounded-2xl border border-dashed bg-card p-8 text-center text-sm text-muted-foreground">
+          👆 点击上方任意年级卡片，查看该年级的阅读文章
+        </div>
+      )}
+
+      {tab && currentBand && (<>
       {/* 搜索 + 状态筛选 */}
       <div className="mb-3 grid sm:grid-cols-[1fr_auto] gap-2 items-center">
         <div className="relative">
@@ -508,6 +515,7 @@ export default function GaokaoReading() {
           );
         })}
       </ul>
+      </>)}
     </main>
   );
 }

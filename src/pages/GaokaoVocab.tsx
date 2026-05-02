@@ -17,6 +17,7 @@ import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 import MasteryDashboard from "@/components/MasteryDashboard";
 import MemoryMatch from "@/components/MemoryMatch";
 import MistakeExplainer from "@/components/MistakeExplainer";
+import WordBento from "@/components/WordBento";
 
 type Vocab = {
   id: string;
@@ -320,6 +321,10 @@ export default function GaokaoVocab() {
     return <WordRushSession pool={allVocab} onExit={() => setParams({})} />;
   }
 
+  if (mode === "bento") {
+    return <WordBento pool={allVocab} onExit={() => setParams({})} />;
+  }
+
   if (mode === "dict") {
     return <DictationSession pool={allVocab} onExit={() => setParams({})} />;
   }
@@ -336,6 +341,7 @@ export default function GaokaoVocab() {
         onPick={(i) => setParams({ group: String(i + 1) })}
         onStartSrs={() => setParams({ mode: "srs" })}
         onStartRush={() => setParams({ mode: "rush" })}
+        onStartBento={() => setParams({ mode: "bento" })}
         onStartDict={() => setParams({ mode: "dict" })}
         onOpenDash={() => setParams({ mode: "dash" })}
       />
@@ -359,6 +365,7 @@ function GroupList({
   onPick,
   onStartSrs,
   onStartRush,
+  onStartBento,
   onStartDict,
   onOpenDash,
 }: {
@@ -367,6 +374,7 @@ function GroupList({
   onPick: (i: number) => void;
   onStartSrs: () => void;
   onStartRush: () => void;
+  onStartBento: () => void;
   onStartDict: () => void;
   onOpenDash: () => void;
 }) {
@@ -483,6 +491,39 @@ function GroupList({
             </div>
           </div>
           <ChevronRight className="size-5 text-fuchsia-500" />
+        </div>
+      </button>
+
+      {/* Word Bento — drag/tap match */}
+      <button
+        onClick={onStartBento}
+        disabled={pool.length < 12}
+        className={cn(
+          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
+          pool.length >= 12
+            ? "border-amber-500/60 bg-gradient-to-br from-amber-500/15 via-orange-500/10 to-transparent hover:border-amber-500 hover:shadow-md"
+            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}
+      >
+        <div className="flex items-center gap-4">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-amber-500/20 text-amber-600 dark:text-amber-400">
+            <span className="text-2xl">🍱</span>
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-base font-extrabold">🍱 Word Bento 单词便当</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-amber-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                NEW
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-0.5 text-[10px] font-bold text-amber-700 dark:text-amber-300">
+                🏆 排行榜
+              </span>
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              拖拽配对消除 · 30 对单词 · 全对 + 极速双重奖励
+            </div>
+          </div>
+          <ChevronRight className="size-5 text-amber-500" />
         </div>
       </button>
 

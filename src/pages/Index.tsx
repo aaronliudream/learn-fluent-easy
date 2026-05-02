@@ -125,20 +125,20 @@ const Index = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
-      <div className="mb-4 flex justify-end">
+      <div className="sticky top-3 z-40 mb-4 flex justify-start md:static md:justify-end">
         <LanguageSwitcher />
-        <Button asChild variant="ghost" size="sm" className="mr-2">
+        <Button asChild variant="ghost" size="sm" className="mr-2 hidden md:inline-flex">
           <Link to="/stats">
             <BarChart3 className="size-4" /> {t("nav.myStats")}
           </Link>
         </Button>
-        <Button asChild variant="ghost" size="sm" className="mr-2">
+        <Button asChild variant="ghost" size="sm" className="mr-2 hidden md:inline-flex">
           <Link to="/account">
             <UserCog className="size-4" /> {t("nav.account")}
           </Link>
         </Button>
         {user ? (
-          <div className="flex items-center gap-3">
+          <div className="hidden items-center gap-3 md:flex">
             <span className="text-sm text-muted-foreground">
               {user.user_metadata?.display_name || user.email}
             </span>
@@ -147,7 +147,7 @@ const Index = () => {
             </Button>
           </div>
         ) : (
-          <Button asChild variant="outline" size="sm">
+          <Button asChild variant="outline" size="sm" className="hidden md:inline-flex">
             <Link to="/auth">
               <LogIn className="size-4" /> {t("nav.signIn")}
             </Link>

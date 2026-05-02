@@ -766,6 +766,7 @@ export type QuizSessionResult = {
   score: number;
   spellCorrect: number;
   levelUps?: { word: string; level: MasteryLevel }[];
+  wrongVocabIds?: string[];
 };
 
 function QuizPhase({
@@ -788,6 +789,7 @@ function QuizPhase({
   const [spellCorrect, setSpellCorrect] = useState(0);
   const questionShownAtRef = useRef<number>(Date.now());
   const [levelUps, setLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+  const wrongIdsRef = useRef<Set<string>>(new Set());
 
   // Reset stopwatch every time we land on a new question
   useEffect(() => {
@@ -829,6 +831,9 @@ function QuizPhase({
 
     if (isCorrect && item.kind === "spell") {
       setSpellCorrect((n) => n + 1);
+    }
+    if (!isCorrect) {
+      wrongIdsRef.current.add(item.vocab.id);
     }
 
     // Combo + score
@@ -874,6 +879,7 @@ function QuizPhase({
         score: finalScore,
         spellCorrect: finalSpell,
         levelUps,
+        wrongVocabIds: Array.from(wrongIdsRef.current),
       });
     } else {
       setPos(pos + 1);

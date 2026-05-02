@@ -514,52 +514,106 @@ export type Database = {
           accent: string | null
           cet_level: string | null
           created_at: string
+          exam_frequency: number | null
           example_cn: string | null
           example_en: string | null
+          freq_rank: number | null
           frequency_band: number
+          gaokao_level: number | null
           id: string
+          is_hot_topic: boolean | null
           meaning_cn: string
           meaning_en: string | null
           phonetic: string | null
           pos: string | null
           sort_order: number
           star_level: number
+          sub_theme: string | null
           synonyms: Json | null
+          tags: Json | null
+          theme: string | null
           word: string
         }
         Insert: {
           accent?: string | null
           cet_level?: string | null
           created_at?: string
+          exam_frequency?: number | null
           example_cn?: string | null
           example_en?: string | null
+          freq_rank?: number | null
           frequency_band?: number
+          gaokao_level?: number | null
           id?: string
+          is_hot_topic?: boolean | null
           meaning_cn: string
           meaning_en?: string | null
           phonetic?: string | null
           pos?: string | null
           sort_order?: number
           star_level?: number
+          sub_theme?: string | null
           synonyms?: Json | null
+          tags?: Json | null
+          theme?: string | null
           word: string
         }
         Update: {
           accent?: string | null
           cet_level?: string | null
           created_at?: string
+          exam_frequency?: number | null
           example_cn?: string | null
           example_en?: string | null
+          freq_rank?: number | null
           frequency_band?: number
+          gaokao_level?: number | null
           id?: string
+          is_hot_topic?: boolean | null
           meaning_cn?: string
           meaning_en?: string | null
           phonetic?: string | null
           pos?: string | null
           sort_order?: number
           star_level?: number
+          sub_theme?: string | null
           synonyms?: Json | null
+          tags?: Json | null
+          theme?: string | null
           word?: string
+        }
+        Relationships: []
+      }
+      gaokao_vocab_themes: {
+        Row: {
+          code: string
+          created_at: string
+          description_cn: string | null
+          emoji: string
+          is_hot: boolean
+          name_cn: string
+          name_en: string
+          sort_order: number
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          description_cn?: string | null
+          emoji: string
+          is_hot?: boolean
+          name_cn: string
+          name_en: string
+          sort_order?: number
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          description_cn?: string | null
+          emoji?: string
+          is_hot?: boolean
+          name_cn?: string
+          name_en?: string
+          sort_order?: number
         }
         Relationships: []
       }

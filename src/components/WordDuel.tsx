@@ -212,6 +212,13 @@ export default function WordDuel({
     setStatus("lobby");
   };
 
+  const createLocalBot = (): Opponent => ({
+    id: null,
+    alias: "AI 小智",
+    rating: me?.rating ?? 1000,
+    is_bot: true,
+  });
+
   const challengeBot = async () => {
     if (queueRef.current) window.clearTimeout(queueRef.current);
     // 1) 必须登录
@@ -227,13 +234,13 @@ export default function WordDuel({
       alert("词汇加载中，请稍候再试…");
       return;
     }
-    // 3) 取消排队 + 兜底获取对手
+    // 3) 取消排队 + 兜底获取对手；后端异常时也直接进入本地 AI 对战
     try {
       await supabase.rpc("cancel_duel_queue");
       const { data, error } = await supabase.rpc("match_duel_bot");
       if (error) {
         console.error("match_duel_bot RPC error", error);
-        alert(`挑战 AI 失败：${error.message ?? "请稍后再试"}`);
+        startMatch(createLocalBot());
         return;
       }
       const row = Array.isArray(data) ? data[0] : data;
@@ -245,16 +252,11 @@ export default function WordDuel({
             rating: row.opponent_rating || 1000,
             is_bot: true,
           }
-        : {
-            id: null,
-            alias: "AI 小智",
-            rating: me?.rating ?? 1000,
-            is_bot: true,
-          };
+        : createLocalBot();
       startMatch(opp);
     } catch (e: any) {
       console.error("challengeBot exception", e);
-      alert(`挑战 AI 失败：${e?.message ?? "未知错误"}`);
+      startMatch(createLocalBot());
     }
   };
 

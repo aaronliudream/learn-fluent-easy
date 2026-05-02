@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap, Music, Trophy } from "lucide-react";
+import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap, Music, Trophy, Headphones, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
@@ -316,6 +316,10 @@ export default function GaokaoVocab() {
     return <WordRushSession pool={allVocab} onExit={() => setParams({})} />;
   }
 
+  if (mode === "dict") {
+    return <DictationSession pool={allVocab} onExit={() => setParams({})} />;
+  }
+
   if (groupIdx < 0 || groupIdx >= groups.length) {
     return (
       <GroupList
@@ -324,6 +328,7 @@ export default function GaokaoVocab() {
         onPick={(i) => setParams({ group: String(i + 1) })}
         onStartSrs={() => setParams({ mode: "srs" })}
         onStartRush={() => setParams({ mode: "rush" })}
+        onStartDict={() => setParams({ mode: "dict" })}
       />
     );
   }
@@ -345,12 +350,14 @@ function GroupList({
   onPick,
   onStartSrs,
   onStartRush,
+  onStartDict,
 }: {
   groups: Vocab[][];
   pool: Vocab[];
   onPick: (i: number) => void;
   onStartSrs: () => void;
   onStartRush: () => void;
+  onStartDict: () => void;
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);
@@ -465,6 +472,36 @@ function GroupList({
             </div>
           </div>
           <ChevronRight className="size-5 text-fuchsia-500" />
+        </div>
+      </button>
+
+      {/* Dictation entry */}
+      <button
+        onClick={onStartDict}
+        disabled={pool.filter((v) => v.example_en).length < 5}
+        className={cn(
+          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
+          pool.filter((v) => v.example_en).length >= 5
+            ? "border-emerald-500/60 bg-gradient-to-br from-emerald-500/15 via-teal-500/10 to-transparent hover:border-emerald-500 hover:shadow-md"
+            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}
+      >
+        <div className="flex items-center gap-4">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
+            <Headphones className="size-7" />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-base font-extrabold">🎧 句子听写</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                NEW
+              </span>
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              听例句 → 输入 → AI 评分纠错 + 金币奖励
+            </div>
+          </div>
+          <ChevronRight className="size-5 text-emerald-500" />
         </div>
       </button>
 
@@ -2266,6 +2303,395 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
           to { transform: translate(-50%, calc(50vh - 3rem)); }
         }
       `}</style>
+    </main>
+  );
+}
+
+/* ====================================================================== */
+/* ============ Dictation — listen & type the full sentence =============== */
+/* ====================================================================== */
+
+const DICT_QUESTION_COUNT = 5;
+
+type DictResult = {
+  score: number;
+  comment: string;
+  mistakes: { expected: string; got: string; hint: string }[];
+  corrected: string;
+};
+
+function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const playable = useMemo(
+    () =>
+      pool.filter(
+        (v) =>
+          v.example_en &&
+          v.example_en.trim().split(/\s+/).length >= 4 &&
+          v.example_en.trim().split(/\s+/).length <= 18,
+      ),
+    [pool],
+  );
+
+  const [phase, setPhase] = useState<"intro" | "playing" | "done">("intro");
+  const [items, setItems] = useState<Vocab[]>([]);
+  const [idx, setIdx] = useState(0);
+  const [input, setInput] = useState("");
+  const [grading, setGrading] = useState(false);
+  const [result, setResult] = useState<DictResult | null>(null);
+  const [scores, setScores] = useState<number[]>([]);
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(0);
+  const [revealed, setRevealed] = useState(false);
+  const [coinRefresh, setCoinRefresh] = useState(0);
+  const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  function start() {
+    if (playable.length < DICT_QUESTION_COUNT) return;
+    const shuffled = shuffle(playable).slice(0, DICT_QUESTION_COUNT);
+    setItems(shuffled);
+    setIdx(0);
+    setInput("");
+    setResult(null);
+    setScores([]);
+    setStreak(0);
+    setBestStreak(0);
+    setRevealed(false);
+    setUnlockedBadges([]);
+    setPhase("playing");
+    // Auto-play first sentence shortly after mount
+    setTimeout(() => {
+      void speakExample(shuffled[0]);
+      inputRef.current?.focus();
+    }, 400);
+  }
+
+  const current = items[idx];
+
+  async function submit() {
+    if (!current?.example_en || !input.trim() || grading) return;
+    setGrading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("grade-dictation", {
+        body: { reference: current.example_en, attempt: input },
+      });
+      if (error) throw error;
+      const r = data as DictResult;
+      setResult(r);
+      setScores((prev) => [...prev, r.score]);
+      if (r.score >= 80) {
+        setStreak((s) => {
+          const ns = s + 1;
+          setBestStreak((b) => Math.max(b, ns));
+          return ns;
+        });
+      } else {
+        setStreak(0);
+      }
+    } catch (e) {
+      console.error(e);
+      setResult({
+        score: 0,
+        comment: "评分失败，请重试",
+        mistakes: [],
+        corrected: current.example_en,
+      });
+    } finally {
+      setGrading(false);
+    }
+  }
+
+  function nextItem() {
+    if (idx + 1 >= items.length) {
+      void finish();
+      return;
+    }
+    const ni = idx + 1;
+    setIdx(ni);
+    setInput("");
+    setResult(null);
+    setRevealed(false);
+    setTimeout(() => {
+      void speakExample(items[ni]);
+      inputRef.current?.focus();
+    }, 300);
+  }
+
+  async function finish() {
+    setPhase("done");
+    const avg = scores.length > 0
+      ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
+      : 0;
+    // Coins: half of avg score, +5 per streak ≥3
+    const coins = Math.max(0, Math.floor(avg / 2)) + (bestStreak >= 3 ? 10 : 0);
+    if (coins > 0) {
+      const totals = await awardCoins(coins);
+      setCoinRefresh((k) => k + 1);
+      const milestones = await evaluateMilestones({
+        bestStreak,
+        spellCorrect: 0,
+        perfectGroup: avg === 100,
+        totalEarned: totals?.total_earned ?? 0,
+        attempted: scores.length,
+      });
+      const extra: BadgeDef[] = [];
+      if (avg >= 80 && scores.length >= DICT_QUESTION_COUNT) {
+        const { unlockBadge } = await import("@/lib/coinsBadges");
+        const got = await unlockBadge("dictation_pro");
+        if (got) extra.push(got);
+      }
+      setUnlockedBadges([...milestones, ...extra]);
+    }
+  }
+
+  /* ============ Render ============ */
+  if (phase === "intro") {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <div className="mb-4 flex items-center justify-between">
+          <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+            <ArrowLeft className="size-4" /> 返回
+          </button>
+          <CoinPill />
+        </div>
+        <div className="rounded-3xl border-2 border-emerald-500/40 bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-transparent p-8 text-center shadow-tile">
+          <div className="mx-auto mb-3 flex size-20 items-center justify-center rounded-3xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
+            <Headphones className="size-10" />
+          </div>
+          <h1 className="text-3xl font-extrabold">🎧 句子听写</h1>
+          <p className="mt-2 text-sm text-muted-foreground">5 句英文例句 · AI 智能评分</p>
+
+          <div className="mt-6 grid grid-cols-1 gap-3 text-left text-sm sm:grid-cols-2">
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="font-bold">🔊 播放</div>
+              <div className="text-xs text-muted-foreground mt-1">点击喇叭可重复听，没有听清没关系。</div>
+            </div>
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="font-bold">⌨️ 输入</div>
+              <div className="text-xs text-muted-foreground mt-1">写下你听到的句子（不需逐字一致，意思接近也算）。</div>
+            </div>
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="font-bold">🤖 AI 评分</div>
+              <div className="text-xs text-muted-foreground mt-1">0-100 分 · 自动指出拼写/漏词错误。</div>
+            </div>
+            <div className="rounded-2xl border bg-card p-3">
+              <div className="font-bold">🪙 奖励</div>
+              <div className="text-xs text-muted-foreground mt-1">平均分 ≥ 80 解锁 🎧 听写达人徽章。</div>
+            </div>
+          </div>
+
+          <Button
+            onClick={start}
+            disabled={playable.length < DICT_QUESTION_COUNT}
+            className="mt-6 h-12 w-full rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 text-base font-bold text-white hover:opacity-90"
+          >
+            <Headphones className="mr-2 size-5" /> 开始听写
+          </Button>
+        </div>
+      </main>
+    );
+  }
+
+  if (phase === "done") {
+    const avg = scores.length > 0
+      ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
+      : 0;
+    const coins = Math.max(0, Math.floor(avg / 2)) + (bestStreak >= 3 ? 10 : 0);
+    return (
+      <>
+        <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+          <div className="mb-4 flex items-center justify-between">
+            <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+              <ArrowLeft className="size-4" /> 返回
+            </button>
+            <CoinPill refreshKey={coinRefresh} />
+          </div>
+          <div className="rounded-3xl border-2 border-emerald-500/40 bg-gradient-to-br from-emerald-500/10 to-transparent p-8 text-center shadow-tile">
+            <Trophy className="mx-auto size-14 text-amber-500" />
+            <div className="mt-2 text-sm uppercase tracking-wider text-muted-foreground">平均分</div>
+            <div className="text-6xl font-extrabold tabular-nums">{avg}</div>
+            <div className="mt-4 grid grid-cols-3 gap-3 text-sm">
+              <div className="rounded-xl border bg-card p-3">
+                <div className="text-xs text-muted-foreground">完成</div>
+                <div className="text-xl font-bold">{scores.length}/{DICT_QUESTION_COUNT}</div>
+              </div>
+              <div className="rounded-xl border bg-card p-3">
+                <div className="text-xs text-muted-foreground">最佳连击</div>
+                <div className="text-xl font-bold text-emerald-600">{bestStreak}</div>
+              </div>
+              <div className="rounded-xl border bg-card p-3">
+                <div className="text-xs text-muted-foreground">最高单题</div>
+                <div className="text-xl font-bold">{Math.max(0, ...scores)}</div>
+              </div>
+            </div>
+            {coins > 0 && (
+              <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-100 px-4 py-2 text-sm font-bold text-amber-900 dark:bg-amber-500/15 dark:text-amber-300">
+                +{coins} 🪙 金币入账
+              </div>
+            )}
+            <div className="mt-6 flex gap-2">
+              <Button onClick={start} className="h-12 flex-1 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white hover:opacity-90">
+                <RotateCw className="mr-2 size-4" /> 再来一组
+              </Button>
+              <Button variant="outline" onClick={onExit} className="h-12 flex-1 rounded-2xl">
+                返回
+              </Button>
+            </div>
+          </div>
+        </main>
+        {unlockedBadges.length > 0 && (
+          <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
+        )}
+      </>
+    );
+  }
+
+  /* Playing */
+  if (!current) return null;
+  const showResult = !!result;
+  return (
+    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+      <div className="mb-4 flex items-center justify-between">
+        <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> 退出
+        </button>
+        <div className="flex items-center gap-2 text-xs font-bold">
+          <span className="rounded-full bg-card px-3 py-1 tabular-nums shadow-sm border">
+            {idx + 1}/{items.length}
+          </span>
+          {streak >= 2 && (
+            <span className="rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-white tabular-nums shadow-sm">
+              🔥 ×{comboMultiplier(streak)}
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* Progress bar */}
+      <div className="mb-4 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+        <div
+          className="h-full bg-emerald-500 transition-all"
+          style={{ width: `${((idx + (showResult ? 1 : 0)) / items.length) * 100}%` }}
+        />
+      </div>
+
+      <div className="rounded-3xl border-2 border-emerald-500/30 bg-card p-6 shadow-tile">
+        <div className="text-center">
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">听音听写</div>
+          <button
+            onClick={() => speakExample(current)}
+            className="mt-3 inline-flex size-20 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 transition hover:bg-emerald-500/25 dark:text-emerald-400"
+            title="重听"
+          >
+            <Volume2 className="size-10" />
+          </button>
+          <div className="mt-2 text-xs text-muted-foreground">点击重听</div>
+        </div>
+
+        <textarea
+          ref={inputRef}
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          disabled={showResult}
+          placeholder="在此输入你听到的英文句子..."
+          rows={3}
+          className="mt-5 w-full rounded-2xl border-2 border-border bg-background px-4 py-3 text-base focus:border-emerald-500 focus:outline-none disabled:opacity-70"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+              e.preventDefault();
+              if (!showResult) submit();
+            }
+          }}
+        />
+        <div className="mt-1 text-right text-[11px] text-muted-foreground">
+          ⌘/Ctrl + Enter 提交
+        </div>
+
+        {!showResult && (
+          <div className="mt-3 flex gap-2">
+            <Button
+              variant="outline"
+              className="h-11 flex-1 rounded-2xl"
+              onClick={() => setRevealed(true)}
+              disabled={revealed}
+            >
+              我不会，看答案
+            </Button>
+            <Button
+              onClick={submit}
+              disabled={grading || !input.trim()}
+              className="h-11 flex-1 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white hover:opacity-90"
+            >
+              {grading ? <><Loader2 className="mr-2 size-4 animate-spin" /> 评分中…</> : "提交"}
+            </Button>
+          </div>
+        )}
+
+        {revealed && !showResult && (
+          <div className="mt-3 rounded-2xl border bg-muted/40 p-3 text-sm">
+            <div className="text-xs text-muted-foreground">参考答案</div>
+            <div className="mt-1 font-bold">{current.example_en}</div>
+            {current.example_cn && (
+              <div className="mt-1 text-xs text-muted-foreground">{current.example_cn}</div>
+            )}
+          </div>
+        )}
+
+        {showResult && result && (
+          <div className="mt-4 space-y-3">
+            <div
+              className={cn(
+                "rounded-2xl border-2 p-4 text-center",
+                result.score >= 80
+                  ? "border-emerald-500/40 bg-emerald-500/10"
+                  : result.score >= 50
+                  ? "border-amber-500/40 bg-amber-500/10"
+                  : "border-red-500/40 bg-red-500/10"
+              )}
+            >
+              <div className="text-xs uppercase tracking-wider text-muted-foreground">得分</div>
+              <div className="text-4xl font-extrabold tabular-nums">{result.score}</div>
+              <div className="mt-1 text-xs">{result.comment}</div>
+            </div>
+
+            <div className="rounded-2xl border bg-muted/30 p-3 text-sm">
+              <div className="text-xs text-muted-foreground">参考答案</div>
+              <div className="mt-1 font-bold">{current.example_en}</div>
+              {current.example_cn && (
+                <div className="mt-1 text-xs text-muted-foreground">{current.example_cn}</div>
+              )}
+            </div>
+
+            {result.mistakes.length > 0 && (
+              <div className="rounded-2xl border border-red-500/30 bg-red-500/5 p-3 text-sm">
+                <div className="mb-2 text-xs font-bold text-red-600 dark:text-red-400">错误点</div>
+                <ul className="space-y-1.5">
+                  {result.mistakes.map((m, i) => (
+                    <li key={i} className="text-xs">
+                      <span className="font-bold text-red-600 dark:text-red-400 line-through">
+                        {m.got || "(漏)"}
+                      </span>
+                      <span className="mx-1">→</span>
+                      <span className="font-bold text-emerald-600 dark:text-emerald-400">
+                        {m.expected}
+                      </span>
+                      <span className="ml-2 text-muted-foreground">{m.hint}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <Button
+              onClick={nextItem}
+              className="h-12 w-full rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white hover:opacity-90"
+            >
+              {idx + 1 >= items.length ? "查看结果" : "下一题"}
+              <ChevronRight className="ml-1 size-5" />
+            </Button>
+          </div>
+        )}
+      </div>
     </main>
   );
 }

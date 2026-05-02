@@ -69,6 +69,12 @@ export const BADGE_CATALOG: Record<string, BadgeDef> = {
     title: "节奏猎手",
     description: "Word Rush 单局得分 ≥ 300",
   },
+  dictation_pro: {
+    code: "dictation_pro",
+    emoji: "🎧",
+    title: "听写达人",
+    description: "完成 5 句听写且平均分 ≥ 80",
+  },
 };
 
 /* ---------- Coin balance ---------- */

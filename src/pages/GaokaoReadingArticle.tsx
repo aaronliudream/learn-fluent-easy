@@ -145,10 +145,9 @@ export default function GaokaoReadingArticle() {
   async function handleSubmit(timeUp = false) {
     if (!article) return;
     if (!timeUp && answeredCount < totalQ) {
-      setShowConfirm(true);
+      toast.warning("请先完成所有题目，再查看答案和解析");
       return;
     }
-    setShowConfirm(false);
 
     const now = Date.now();
     setSubmittedAt(now);

@@ -1124,6 +1124,10 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   const [pos, setPos] = useState(0);
   const [stats, setStats] = useState({ correct: 0, total: 0 });
   const [done, setDone] = useState(false);
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(0);
+  const [score, setScore] = useState(0);
+  const [floatBadge, setFloatBadge] = useState<string | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -1209,6 +1213,21 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
 
+    if (isCorrect) {
+      const newStreak = streak + 1;
+      const mult = comboMultiplier(newStreak);
+      setStreak(newStreak);
+      setBestStreak((b) => Math.max(b, newStreak));
+      setScore((s) => s + 10 * mult);
+      const label = comboLabel(newStreak);
+      if (label) {
+        setFloatBadge(label);
+        setTimeout(() => setFloatBadge(null), 900);
+      }
+    } else {
+      setStreak(0);
+    }
+
     let nextQueue = queue;
     if (!isCorrect) {
       const newKind = pickKind(item.vocab);
@@ -1241,11 +1260,25 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
         <div className="text-xs text-muted-foreground">SM-2 间隔重复</div>
       </div>
       <PageHeader title="今日复习队列" subtitle="答对延后下次复习，答错明天再来" />
-      <div className="mb-3 mt-4 flex items-center justify-between text-xs text-muted-foreground">
-        <span>{pos + 1} / {queue.length}</span>
-        <span>✓ {stats.correct} / {stats.total}</span>
+      <div className="mt-4">
+        <ComboHeader
+          pos={pos + 1}
+          total={queue.length}
+          correct={stats.correct}
+          attempted={stats.total}
+          streak={streak}
+          bestStreak={bestStreak}
+          score={score}
+        />
+        <div className="relative">
+          <QuizQuestion
+            key={`${item.vocab.id}-${pos}`}
+            item={item}
+            onResult={handleResult}
+          />
+          {floatBadge && <FloatingComboBadge label={floatBadge} />}
+        </div>
       </div>
-      <QuizQuestion key={`${item.vocab.id}-${pos}`} item={item} onResult={handleResult} />
     </main>
   );
 }

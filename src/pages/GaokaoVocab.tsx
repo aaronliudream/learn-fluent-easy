@@ -733,7 +733,8 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     item.kind === "cn2en" ||
     item.kind === "listen" ||
     item.kind === "en2en" ||
-    item.kind === "en2word";
+    item.kind === "en2word" ||
+    item.kind === "pos";
   const [secondsLeft, setSecondsLeft] = useState(QUESTION_TIMEOUT_SEC);
   useEffect(() => {
     if (!isTimedKind) return;
@@ -786,6 +787,10 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
 
   if (item.kind === "spell") {
     return <SpellQuestion vocab={v} onResult={onResult} />;
+  }
+
+  if (item.kind === "syn") {
+    return <SynQuestion vocab={v} onResult={onResult} />;
   }
 
   if (item.kind === "cloze" && v.example_en) {

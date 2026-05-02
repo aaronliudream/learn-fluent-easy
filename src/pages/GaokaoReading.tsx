@@ -460,18 +460,18 @@ export default function GaokaoReading() {
       {/* 答题流程 + 知识点入口 */}
       <div className="mb-5 grid sm:grid-cols-2 gap-3">
         <div className="rounded-2xl border bg-gradient-to-br from-card to-muted/30 p-4">
-          <div className="flex items-center gap-1.5 text-sm font-bold">
-            <GraduationCap className="size-4 text-primary" /> 每篇文章怎么练
+          <div className="flex items-center gap-1.5 text-base font-bold">
+            <GraduationCap className="size-5 text-primary" /> 每篇文章怎么练
           </div>
-          <div className="mt-2 grid grid-cols-3 gap-1.5 text-[10px]">
+          <div className="mt-3 grid grid-cols-3 gap-2 text-xs">
             {[
               { n: "1", t: "限时答题", d: "⏱ 模拟考场" },
               { n: "2", t: "查看得分", d: "📊 错在哪类题" },
               { n: "3", t: "逐题精读", d: "🔍 ABCD 全解析" },
             ].map((s) => (
-              <div key={s.n} className="rounded-lg bg-background/60 border p-2">
-                <div className="font-bold text-foreground"><span className="inline-grid place-items-center size-4 rounded-full bg-primary text-primary-foreground text-[9px] mr-1">{s.n}</span>{s.t}</div>
-                <div className="text-muted-foreground mt-0.5">{s.d}</div>
+              <div key={s.n} className="rounded-lg bg-background/60 border p-2.5">
+                <div className="font-bold text-foreground text-sm flex items-center gap-1.5"><span className="inline-grid place-items-center size-5 rounded-full bg-primary text-primary-foreground text-[11px]">{s.n}</span>{s.t}</div>
+                <div className="text-muted-foreground mt-1 text-[11px]">{s.d}</div>
               </div>
             ))}
           </div>

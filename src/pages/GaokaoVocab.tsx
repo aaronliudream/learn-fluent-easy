@@ -581,6 +581,7 @@ function GroupSession({
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [coinsAwarded, setCoinsAwarded] = useState(0);
   const [groupLevelUps, setGroupLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+  const [wrongWords, setWrongWords] = useState<Vocab[]>([]);
 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
@@ -615,6 +616,9 @@ function GroupSession({
             setStats({ correct: s.correct, total: s.total });
             setCoinsAwarded(s.score);
             setGroupLevelUps(s.levelUps ?? []);
+            // Resolve wrong-vocab IDs back to full vocab objects (from current group)
+            const wrongSet = new Set(s.wrongVocabIds ?? []);
+            setWrongWords(group.filter((v) => wrongSet.has(v.id)));
             setPhase("done");
             // Award coins and check milestone badges
             const totals = await awardCoins(s.score);
@@ -639,6 +643,7 @@ function GroupSession({
           onRetry={() => setPhase("flashcard")}
           levelUps={groupLevelUps}
           group={group}
+          wrongWords={wrongWords}
         />
       )}
       {unlockedBadges.length > 0 && (

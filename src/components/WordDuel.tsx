@@ -421,7 +421,11 @@ export default function WordDuel({
       </div>
 
       {status === "lobby" && (
-        <LobbyView me={me} onMatch={startMatching} onBot={challengeBot} />
+        authChecked && !isAuthed ? (
+          <SignInGate />
+        ) : (
+          <LobbyView me={me} onMatch={startMatching} onBot={challengeBot} />
+        )
       )}
 
       {status === "matching" && (

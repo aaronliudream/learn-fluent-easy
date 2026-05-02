@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, Loader2, Swords, Trophy, Crown, Medal, Bot, Zap, X, Check } from "lucide-react";
+import { ArrowLeft, Loader2, Swords, Trophy, Crown, Medal, Bot, Zap, X, Check, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { awardCoins, unlockBadge, type BadgeDef } from "@/lib/coinsBadges";
@@ -124,6 +125,8 @@ export default function WordDuel({
   const [matchSearchSec, setMatchSearchSec] = useState(0);
   const [unlocked, setUnlocked] = useState<BadgeDef | null>(null);
   const [resultBanner, setResultBanner] = useState<{ won: boolean; draw: boolean; delta: number; newRating: number } | null>(null);
+  const [authChecked, setAuthChecked] = useState(false);
+  const [isAuthed, setIsAuthed] = useState(false);
 
   const roundStartRef = useRef<number>(0);
   const tickRef = useRef<number | null>(null);
@@ -131,12 +134,28 @@ export default function WordDuel({
 
   /* --------- Load my rating --------- */
   const refreshMe = async () => {
-    const { data } = await supabase.rpc("get_or_init_duel_rating");
+    const { data: u } = await supabase.auth.getUser();
+    if (!u?.user) {
+      setIsAuthed(false);
+      setAuthChecked(true);
+      return;
+    }
+    setIsAuthed(true);
+    setAuthChecked(true);
+    const { data, error } = await supabase.rpc("get_or_init_duel_rating");
+    if (error) {
+      console.error("get_or_init_duel_rating", error);
+      return;
+    }
     const row = Array.isArray(data) ? data[0] : data;
     if (row) setMe(row as RatingInfo);
   };
   useEffect(() => {
     refreshMe();
+    const { data: sub } = supabase.auth.onAuthStateChange(() => {
+      refreshMe();
+    });
+    return () => sub.subscription.unsubscribe();
   }, []);
 
   /* --------- Matchmaking --------- */

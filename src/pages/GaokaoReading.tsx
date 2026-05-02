@@ -186,17 +186,34 @@ export default function GaokaoReading() {
 
   // ====== 每年级统计 ======
   const bandStats = useMemo(() => {
-    const stats: Record<string, { total: number; mastered: number; done: number }> = {};
-    for (const b of BANDS) stats[b.id] = { total: 0, mastered: 0, done: 0 };
+    const stats: Record<string, { total: number; mastered: number; done: number; tried: number; lastAt: number }> = {};
+    for (const b of BANDS) stats[b.id] = { total: 0, mastered: 0, done: 0, tried: 0, lastAt: 0 };
     for (const a of articles) {
       const st = stats[a.grade_band]; if (!st) continue;
       st.total++;
       const s = statusOf(sessions[a.id]);
       if (s === "mastered") { st.mastered++; st.done++; }
+      else if (s === "tried") { st.tried++; st.done++; }
       else if (s !== "new") st.done++;
+      const sess = sessions[a.id];
+      if (sess) {
+        const t = new Date(sess.last_at).getTime();
+        if (t > st.lastAt) st.lastAt = t;
+      }
     }
     return stats;
   }, [articles, sessions]);
+
+  function relativeTime(ms: number): string {
+    if (!ms) return "";
+    const diff = Date.now() - ms;
+    const d = Math.floor(diff / 86400000);
+    if (d === 0) return "今天";
+    if (d === 1) return "昨天";
+    if (d < 7) return `${d}天前`;
+    if (d < 30) return `${Math.floor(d / 7)}周前`;
+    return `${Math.floor(d / 30)}月前`;
+  }
 
   // ====== 当前 tab 文章 + 筛选 + 排序 ======
   const current = useMemo(() => {
@@ -427,28 +444,52 @@ export default function GaokaoReading() {
       </div>
 
       {/* ====== 年级卡片 — 含进度 ====== */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-4">
         {BANDS.map((b) => {
           const Icon = b.icon;
           const active = tab === b.id;
-          const s = bandStats[b.id] ?? { total: 0, mastered: 0, done: 0 };
+          const s = bandStats[b.id] ?? { total: 0, mastered: 0, done: 0, tried: 0, lastAt: 0 };
           const pct = s.total ? Math.round((s.mastered / s.total) * 100) : 0;
+          const newCount = s.total - s.done;
+          const lastLabel = relativeTime(s.lastAt);
           return (
             <button key={b.id} onClick={() => setTab(active ? null : b.id)}
               className={cn(
                 "relative overflow-hidden rounded-2xl border p-3 text-left transition group",
                 active ? `bg-gradient-to-br ${b.gradient} text-white border-transparent shadow-lg ring-2 ${b.ring}` : "bg-card hover:border-primary/40 hover:-translate-y-0.5"
               )}>
+              {/* 需重做小红点 */}
+              {!active && s.tried > 0 && (
+                <span className="absolute right-2 top-2 z-10 inline-flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-orange-500 text-white text-[10px] font-bold shadow ring-2 ring-background">
+                  {s.tried}
+                </span>
+              )}
               <div className="flex items-start justify-between mb-1.5">
                 <div className={cn("rounded-lg p-1.5", active ? "bg-white/25" : `bg-gradient-to-br ${b.gradient} text-white`)}>
                   <Icon className="size-3.5" />
                 </div>
-                <div className={cn("text-[10px] font-bold tabular-nums px-1.5 py-0.5 rounded-md", active ? "bg-white/25" : "bg-muted")}>
-                  {s.mastered}/{s.total}
-                </div>
+                {lastLabel && (
+                  <div className={cn("text-[9px] font-medium px-1.5 py-0.5 rounded-md", active ? "bg-white/25 text-white" : "bg-muted text-muted-foreground")}>
+                    {lastLabel}
+                  </div>
+                )}
               </div>
               <div className="font-bold text-base leading-tight">{b.label}</div>
               <div className={cn("text-[10px] leading-tight", active ? "text-white/85" : "text-muted-foreground")}>{b.sub}</div>
+
+              {/* 进度数字行 */}
+              <div className={cn("mt-2 flex items-center gap-2 text-[10px] tabular-nums font-semibold", active ? "text-white/95" : "text-muted-foreground")}>
+                <span className={cn("inline-flex items-center gap-0.5", active ? "" : "text-emerald-600 dark:text-emerald-400")}>
+                  <CheckCircle2 className="size-2.5" />{s.mastered}
+                </span>
+                {newCount > 0 && (
+                  <span>· {newCount} 未读</span>
+                )}
+                {s.total > 0 && (
+                  <span className="ml-auto">{pct}%</span>
+                )}
+              </div>
+
               <div className={cn("mt-1.5 h-1.5 rounded-full overflow-hidden", active ? "bg-white/25" : "bg-muted")}>
                 <div className={cn("h-full transition-all", active ? "bg-white" : "bg-gradient-to-r " + b.gradient)} style={{ width: `${pct}%` }} />
               </div>

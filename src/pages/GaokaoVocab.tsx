@@ -708,12 +708,15 @@ function buildChoices(target: Vocab, pool: Vocab[]): Vocab[] {
   return shuffle([target, ...distractors]);
 }
 
+function buildItem(v: Vocab, pool: Vocab[]): QuizItem {
+  const kind = pickKind(v);
+  const choices =
+    kind === "pos" ? buildPosChoices(v, pool) : buildChoices(v, pool);
+  return { vocab: v, kind, choices };
+}
+
 function buildInitialQueue(group: Vocab[], pool: Vocab[]): QuizItem[] {
-  return shuffle(group).map((v) => ({
-    vocab: v,
-    kind: pickKind(v),
-    choices: buildChoices(v, pool),
-  }));
+  return shuffle(group).map((v) => buildItem(v, pool));
 }
 
 /* ---------- Quiz question renderer ---------- */

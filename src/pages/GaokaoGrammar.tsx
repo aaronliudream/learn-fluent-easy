@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ChevronRight, Sparkles, Target, Flame, BookOpen, TrendingUp } from "lucide-react";
+import { ArrowLeft, ChevronRight, Sparkles, Target, Flame, BookOpen, TrendingUp, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
@@ -358,19 +358,30 @@ export default function GaokaoGrammar() {
                             const isDue = ms?.due_at && new Date(ms.due_at).getTime() <= Date.now();
                             return (
                               <li key={p.id}>
-                                <Link
-                                  to={`/gaokao/grammar/${p.slug}`}
-                                  className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm hover:bg-card transition"
-                                >
-                                  <span className="text-base shrink-0" title={meta.label}>{meta.emoji}</span>
-                                  <span className="flex-1 min-w-0 truncate">{p.title}</span>
-                                  {isDue && <span className="text-[9px] px-1 py-0.5 rounded bg-rose-500/15 text-rose-600 font-bold">复</span>}
-                                  <span className={`text-[9px] px-1 py-0.5 rounded shrink-0 ${FREQ_BADGE[p.exam_frequency || "medium"]}`}>
-                                    {FREQ_LABEL[p.exam_frequency || "medium"]}
-                                  </span>
-                                  <span className="text-[10px] text-muted-foreground shrink-0 tabular-nums w-8 text-right">{p.question_count}题</span>
-                                  <ChevronRight className="size-3.5 text-muted-foreground shrink-0" />
-                                </Link>
+                                <div className="flex items-center gap-1 rounded-lg px-1 py-1 hover:bg-card transition">
+                                  <Link
+                                    to={`/gaokao/grammar/${p.slug}`}
+                                    className="flex flex-1 min-w-0 items-center gap-2 px-1 py-1 text-sm"
+                                    title="查看讲解 + 完整学习路径"
+                                  >
+                                    <span className="text-base shrink-0" title={meta.label}>{meta.emoji}</span>
+                                    <span className="flex-1 min-w-0 truncate">{p.title}</span>
+                                    {isDue && <span className="text-[9px] px-1 py-0.5 rounded bg-rose-500/15 text-rose-600 font-bold">复</span>}
+                                    <span className={`text-[9px] px-1 py-0.5 rounded shrink-0 ${FREQ_BADGE[p.exam_frequency || "medium"]}`}>
+                                      {FREQ_LABEL[p.exam_frequency || "medium"]}
+                                    </span>
+                                    <span className="text-[10px] text-muted-foreground shrink-0 tabular-nums w-8 text-right">{p.question_count}题</span>
+                                  </Link>
+                                  {p.question_count > 0 && (
+                                    <Link
+                                      to={`/gaokao/grammar/${p.slug}/quiz/0`}
+                                      className="inline-flex items-center gap-0.5 rounded-md bg-primary/10 px-2 py-1 text-[10px] font-bold text-primary hover:bg-primary hover:text-primary-foreground transition shrink-0"
+                                      title="直接刷题"
+                                    >
+                                      <Zap className="size-3" /> 刷题
+                                    </Link>
+                                  )}
+                                </div>
                               </li>
                             );
                           })}

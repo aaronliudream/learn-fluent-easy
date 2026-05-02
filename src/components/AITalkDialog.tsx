@@ -109,6 +109,11 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [provider, setProvider] = useState<AIProvider | null>(null);
+  // Hidden curriculum: 5 target expressions Alex secretly weaves into the
+  // chat. Generated once at session start, surfaced only on the recap page.
+  const [targets, setTargets] = useState<TalkTarget[]>([]);
+  const targetsRef = useRef<TalkTarget[]>([]);
+  useEffect(() => { targetsRef.current = targets; }, [targets]);
 
   const pcRef = useRef<RTCPeerConnection | null>(null);
   const localStreamRef = useRef<MediaStream | null>(null);
@@ -157,6 +162,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       setQuizError(null);
       setQuizAnswers({});
       setQuizSubmitted(false);
+      setTargets([]);
       userTurnByItemId.current.clear();
       assistantTurnByRespId.current.clear();
     }

@@ -84,6 +84,14 @@ function speakInstant(text: string) {
   }
 }
 
+if (typeof window !== "undefined" && "speechSynthesis" in window) {
+  // 重置缓存，等待 voiceschanged 重新挑选最优声音
+  window.speechSynthesis.onvoiceschanged = () => {
+    _enVoice = null;
+    pickEnVoice();
+  };
+}
+
 export default function WordBento({
   pool,
   onExit,

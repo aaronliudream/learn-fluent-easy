@@ -954,6 +954,18 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     if (item.kind === "en2en") {
       return choiceMeaningsEn[c.id] ?? c.meaning_en ?? "…";
     }
+    if (item.kind === "pos") {
+      return (
+        <span className="inline-flex items-baseline gap-2">
+          <span className="font-semibold">{c.word}</span>
+          {c.pos && (
+            <span className="rounded-md border border-muted-foreground/30 bg-muted px-1.5 py-0.5 text-[10px] font-bold text-muted-foreground">
+              {c.pos}
+            </span>
+          )}
+        </span>
+      );
+    }
     return c.word;
   };
 

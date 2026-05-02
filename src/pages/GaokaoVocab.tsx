@@ -15,6 +15,7 @@ import {
 } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 import MasteryDashboard from "@/components/MasteryDashboard";
+import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
@@ -446,6 +447,11 @@ function GroupList({
         title="高考词汇 3500"
         subtitle={`${pool.length} 词 · 按词频/难度/主题科学分类 · 不再字母排序`}
       />
+
+      {/* 学习进度总览：掌握数、百分比、未完成、7 天到期、平均稳定天数 */}
+      <div className="mt-6">
+        <GaokaoVocabProgress />
+      </div>
 
       {/* SRS Smart Review Card — top priority entry */}
       <button

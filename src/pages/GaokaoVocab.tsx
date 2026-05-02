@@ -232,7 +232,7 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
   const v = group[idx];
 
   useEffect(() => {
-    if (v) speak(v.word);
+    if (v) speakWord(v);
     setFlipped(false);
   }, [idx, v?.id]);
 
@@ -254,7 +254,7 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
         onClick={() => setFlipped((f) => !f)}
       >
         <button
-          onClick={(e) => { e.stopPropagation(); speak(v.word); }}
+          onClick={(e) => { e.stopPropagation(); speakWord(v); }}
           className="mx-auto inline-flex items-center gap-2 text-3xl font-extrabold tracking-tight"
         >
           {v.word} <Volume2 className="size-5 text-primary" />
@@ -267,7 +267,7 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
             <div className="rounded-xl bg-muted/50 p-3 text-base font-medium">{v.meaning_cn}</div>
             {v.example_en && (
               <button
-                onClick={(e) => { e.stopPropagation(); speak(v.example_en!); }}
+                onClick={(e) => { e.stopPropagation(); speakExample(v); }}
                 className="block w-full rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
               >
                 <div className="flex items-start gap-2">
@@ -377,7 +377,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
   // Auto-play audio for "listen" type
   useEffect(() => {
     if (item.kind === "listen" && v.example_en) {
-      const t = setTimeout(() => speak(v.example_en!), 200);
+      const t = setTimeout(() => speakExample(v), 200);
       return () => clearTimeout(t);
     }
   }, [item.kind, v.id]);
@@ -389,7 +389,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
       setClozeChecked(ok);
       if (ok) {
         // ✅ User-required: speak full sentence on correct
-        speak(v.example_en!);
+        speakExample(v);
       }
     };
     return (
@@ -422,7 +422,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
               {clozeChecked ? "✓ 正确！正在朗读完整例句…" : `✗ 正确答案：${answer}`}
             </div>
             <button
-              onClick={() => speak(v.example_en!)}
+              onClick={() => speakExample(v)}
               className="flex w-full items-start gap-2 rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
             >
               <Volume2 className="mt-0.5 size-4 shrink-0 text-primary" />
@@ -447,7 +447,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
         <>
           <div className="text-xs uppercase tracking-wider text-muted-foreground">选择中文释义</div>
           <button
-            onClick={() => speak(v.word)}
+            onClick={() => speakWord(v)}
             className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
           >
             {v.word} <Volume2 className="size-5 text-primary" />
@@ -470,7 +470,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
       <>
         <div className="text-xs uppercase tracking-wider text-muted-foreground">听例句选单词</div>
         <button
-          onClick={() => speak(v.example_en!)}
+          onClick={() => speakExample(v)}
           className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-3 text-primary"
         >
           <Volume2 className="size-5" /> 再听一次
@@ -489,7 +489,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     if (picked) return;
     setPicked(c.id);
     const ok = c.id === v.id;
-    if (ok && item.kind === "cn2en") speak(v.word);
+    if (ok && item.kind === "cn2en") speakWord(v);
     setTimeout(() => onResult(ok), 900);
   };
 

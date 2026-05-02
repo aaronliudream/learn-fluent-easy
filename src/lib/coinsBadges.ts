@@ -63,6 +63,12 @@ export const BADGE_CATALOG: Record<string, BadgeDef> = {
     title: "拼写达人",
     description: "在一次会话中完成 5 题拼写挑战",
   },
+  wordrush_master: {
+    code: "wordrush_master",
+    emoji: "⚡",
+    title: "节奏猎手",
+    description: "Word Rush 单局得分 ≥ 300",
+  },
 };
 
 /* ---------- Coin balance ---------- */

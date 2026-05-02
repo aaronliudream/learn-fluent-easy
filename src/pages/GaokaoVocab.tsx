@@ -608,6 +608,14 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
 }
 
 /* ---------- Phase 2: Quiz ---------- */
+export type QuizSessionResult = {
+  correct: number;
+  total: number;
+  bestStreak: number;
+  score: number;
+  spellCorrect: number;
+};
+
 function QuizPhase({
   group,
   pool,
@@ -615,7 +623,7 @@ function QuizPhase({
 }: {
   group: Vocab[];
   pool: Vocab[];
-  onDone: (s: { correct: number; total: number }) => void;
+  onDone: (s: QuizSessionResult) => void;
 }) {
   // Build initial queue: each word once, random kind
   const [queue, setQueue] = useState<QuizItem[]>(() => buildInitialQueue(group, pool));
@@ -625,6 +633,7 @@ function QuizPhase({
   const [bestStreak, setBestStreak] = useState(0);
   const [score, setScore] = useState(0);
   const [floatBadge, setFloatBadge] = useState<string | null>(null);
+  const [spellCorrect, setSpellCorrect] = useState(0);
 
   // Prefetch English meanings so en2en/en2word questions render instantly
   useEffect(() => {
@@ -641,7 +650,7 @@ function QuizPhase({
 
   if (!item) {
     // shouldn't happen mid-flight; finish
-    onDone(stats);
+    onDone({ ...stats, bestStreak, score, spellCorrect });
     return null;
   }
 
@@ -649,6 +658,10 @@ function QuizPhase({
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+
+    if (isCorrect && item.kind === "spell") {
+      setSpellCorrect((n) => n + 1);
+    }
 
     // Combo + score
     if (isCorrect) {
@@ -677,9 +690,21 @@ function QuizPhase({
     }
 
     if (pos + 1 >= nextQueue.length) {
+      const finalCorrect = stats.correct + (isCorrect ? 1 : 0);
+      const finalTotal = stats.total + 1;
+      const finalBestStreak = Math.max(
+        bestStreak,
+        isCorrect ? streak + 1 : streak,
+      );
+      const finalScore = score + (isCorrect ? 10 * comboMultiplier(streak + 1) : 0);
+      const finalSpell =
+        spellCorrect + (isCorrect && item.kind === "spell" ? 1 : 0);
       onDone({
-        correct: stats.correct + (isCorrect ? 1 : 0),
-        total: stats.total + 1,
+        correct: finalCorrect,
+        total: finalTotal,
+        bestStreak: finalBestStreak,
+        score: finalScore,
+        spellCorrect: finalSpell,
       });
     } else {
       setPos(pos + 1);

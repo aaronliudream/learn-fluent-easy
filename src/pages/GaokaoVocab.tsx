@@ -842,6 +842,21 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
 
   return (
     <div className="rounded-3xl border bg-card p-6 text-center shadow-tile">
+      {isTimedKind && (
+        <div className="mb-4 -mx-6 -mt-6 h-1.5 overflow-hidden rounded-t-3xl bg-muted">
+          <div
+            className={cn(
+              "h-full transition-all duration-1000 ease-linear",
+              secondsLeft > 5
+                ? "bg-primary"
+                : secondsLeft > 2
+                ? "bg-amber-500"
+                : "bg-red-500 animate-pulse"
+            )}
+            style={{ width: `${(secondsLeft / QUESTION_TIMEOUT_SEC) * 100}%` }}
+          />
+        </div>
+      )}
       {renderPrompt()}
       <div className="mt-6 grid grid-cols-1 gap-2">
         {item.choices.map((c) => {

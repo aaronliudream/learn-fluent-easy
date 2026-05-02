@@ -73,38 +73,58 @@ const TYPE_COLOR: Record<string, string> = {
 
 function cleanArticleBody(body: string) {
   const normalized = body.replace(/\r\n/g, "\n").trim();
-  const lower = normalized.toLowerCase();
-  const markers = [
-    "测试题目",
-    "答案与解析",
-    "文章分析",
-    "生词与重点表达",
-    "questions",
-    "answers and analysis",
-    "answer analysis",
-    "article analysis",
-    "vocabulary",
-  ];
-  const cutAt = markers.reduce((min, marker) => {
-    const idx = lower.indexOf(marker);
-    return idx > 0 ? Math.min(min, idx) : min;
-  }, normalized.length);
-  let result = normalized.slice(0, cutAt).trim();
 
-  // 清理填空标记：把 \\_1\\、\_1\_、\\1\\、___1___ 等各种转义形式统一成 ①②③…
+  // 1) 优先抽取「一、文章正文」到「二、测试题目」之间的英文正文 (GMAT 风格 — 只要纯文章)
+  const startMarkers = [/\*\*一、\s*文章正文\*\*/, /【\s*一[、.]?\s*文章正文\s*】/, /^一、\s*文章正文/m];
+  const endMarkers = [/\*\*二、/, /【\s*二[、.]/, /^二、/m, /测试题目/, /答案与解析/, /文章分析/, /生词与重点表达/];
+
+  let body1 = normalized;
+  for (const re of startMarkers) {
+    const m = normalized.match(re);
+    if (m && m.index !== undefined) { body1 = normalized.slice(m.index + m[0].length); break; }
+  }
+  for (const re of endMarkers) {
+    const m = body1.match(re);
+    if (m && m.index !== undefined) { body1 = body1.slice(0, m.index); break; }
+  }
+  let result = body1.trim();
+
+  // 2) 填空标记：\\_1\\、___1___ 等 → ①②③
   const circled = ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"];
   const toCircled = (n: string) => {
     const i = parseInt(n, 10);
     return i >= 1 && i <= 10 ? circled[i - 1] : `(${n})`;
   };
-  // 形如 \\_1\\ / \_1\_ / \\1\\ / __1__ / \(1\) 等
   result = result.replace(/\\+_*\s*(\d{1,2})\s*_*\\+/g, (_, n) => ` ${toCircled(n)} `);
   result = result.replace(/_{2,}\s*(\d{1,2})\s*_{2,}/g, (_, n) => ` ${toCircled(n)} `);
-  // 去掉 markdown 标记 (** __ ##) 和孤立反斜杠
-  result = result.replace(/\*\*+/g, "").replace(/(^|\s)#{1,6}\s+/g, "$1");
-  result = result.replace(/\\+/g, "").replace(/[ \t]{2,}/g, " ");
-  // 去掉残余的孤立标点行 (如只剩 "**" 的段落)
-  result = result.split("\n").filter((l) => l.trim().replace(/[\s\*_#\-]/g, "").length > 0).join("\n");
+
+  // 3) 去 markdown / 反斜杠 / 转义
+  result = result
+    .replace(/\*\*+/g, "")
+    .replace(/(^|\s)#{1,6}\s+/g, "$1")
+    .replace(/\\([|*_#\-\\])/g, "$1") // 去掉转义反斜杠 (\| → |)
+    .replace(/\\+/g, "")
+    .replace(/[ \t]{2,}/g, " ");
+
+  // 4) 逐行过滤掉中文 metadata / 标签行 (GMAT 风格只留英文段落 + 标题)
+  const cnMetaPatterns = [
+    /^【.*】/,                      // 【主题语境】... / 【题型】...
+    /^\s*[一二三四五六七八九十][、.\s]/, // 一、二、三、...
+    /主题语境|话题群|具体话题|题型|字数|建议用时|文章正文|测试题目|答案与解析|文章分析|生词与重点表达/,
+  ];
+  result = result
+    .split("\n")
+    .filter((line) => {
+      const t = line.trim();
+      if (!t) return true; // keep blank lines for paragraph breaks
+      if (t.replace(/[\s\*_#\-|·]/g, "").length === 0) return false; // 残余装饰行
+      if (cnMetaPatterns.some((re) => re.test(t))) return false;
+      return true;
+    })
+    .join("\n");
+
+  // 5) 折叠 3+ 空行 → 双空行 (段落分隔)
+  result = result.replace(/\n{3,}/g, "\n\n");
   return result.trim();
 }
 

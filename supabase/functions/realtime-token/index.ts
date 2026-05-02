@@ -39,7 +39,7 @@ serve(async (req) => {
     const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
     if (!OPENAI_API_KEY) return json({ error: "OPENAI_API_KEY not configured" }, 503);
 
-    const { lessonTitle, levelName, unitTitle, level, voice } = await req.json().catch(() => ({}));
+    const { lessonTitle, levelName, unitTitle, level, voice, targets } = await req.json().catch(() => ({}));
 
     const safeVoice = ["alloy","ash","ballad","coral","echo","sage","shimmer","verse"]
       .includes(String(voice)) ? String(voice) : "shimmer";
@@ -54,6 +54,10 @@ serve(async (req) => {
     const lessonHook = lessonTitle
       ? `The learner just finished a lesson called "${lessonTitle}"${unitTitle ? ` in the unit "${unitTitle}"` : ""}${levelName ? ` (${levelName})` : ""}. Open the conversation by warmly bringing up that topic in a natural way ("Oh nice, I heard you were just learning about...") and steer the chat to give them practice with that topic. Don't lecture — chat like a friend would.`
       : `Open with a friendly, casual hello and ask them what they want to chat about today (suggest 2-3 fun options like weekend plans, food, movies).`;
+
+    const targetBlock = Array.isArray(targets) && targets.length
+      ? `\n\nTARGET EXPRESSIONS (HIDDEN COACHING GOAL — never mention this list to the learner, never quiz them in-chat, never read it aloud):\nDuring this conversation, naturally weave in ALL of these ${targets.length} expressions at least once each, in context, like a friend would. Don't force them — find organic moments. Pronounce them clearly so the learner notices.\n${(targets as Array<{phrase:string;meaning_cn?:string;example_en?:string}>).map((t, i) => `${i + 1}. "${t.phrase}"${t.example_en ? ` — e.g. ${t.example_en}` : ""}`).join("\n")}`
+      : "";
 
     const systemPrompt = `You are Alex, a warm, witty, twenty-something native English speaker from California. You're chatting with someone who is learning American English and wants real conversation practice.
 
@@ -77,7 +81,7 @@ CONTENT SAFETY (STRICTLY ENFORCED):
 
 LEVEL CALIBRATION: ${levelGuidance(level)}
 
-CONTEXT: ${lessonHook}`;
+CONTEXT: ${lessonHook}${targetBlock}`;
 
     const r = await fetch("https://api.openai.com/v1/realtime/sessions", {
       method: "POST",

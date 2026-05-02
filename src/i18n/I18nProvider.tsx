@@ -18,7 +18,12 @@ const STORAGE_PICKED = "fluentpath.langPicked";
 // catalogs (ja/ko/etc.), so even after adding new keys the provider would
 // "find" a cached value and skip re-translating. Bump the prefix and add a
 // stricter sanitiser (see sanitizeCachedCatalog) to evict stale entries.
-const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v4.";
+// v5: previously we sent English as the translation source, which made the
+// model occasionally echo the English back unchanged for less-common target
+// languages (Punjabi, Bengali, etc.). Those fallbacks then poisoned the
+// catalog. Bump the prefix so every client re-fetches once with the new
+// Chinese-source pipeline.
+const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v5.";
 
 type Catalog = Partial<Record<StringKey, string>>;
 

@@ -1025,6 +1025,138 @@ export type Database = {
         }
         Relationships: []
       }
+      word_duel_matches: {
+        Row: {
+          created_at: string
+          duration_ms: number
+          id: string
+          is_bot: boolean
+          is_draw: boolean
+          metadata: Json
+          player_a: string
+          player_b: string
+          questions: Json
+          rating_a_after: number | null
+          rating_a_before: number | null
+          rating_b_after: number | null
+          rating_b_before: number | null
+          rating_delta_a: number | null
+          rating_delta_b: number | null
+          rounds: number
+          score_a: number
+          score_b: number
+          winner: string | null
+        }
+        Insert: {
+          created_at?: string
+          duration_ms?: number
+          id?: string
+          is_bot?: boolean
+          is_draw?: boolean
+          metadata?: Json
+          player_a: string
+          player_b: string
+          questions?: Json
+          rating_a_after?: number | null
+          rating_a_before?: number | null
+          rating_b_after?: number | null
+          rating_b_before?: number | null
+          rating_delta_a?: number | null
+          rating_delta_b?: number | null
+          rounds?: number
+          score_a?: number
+          score_b?: number
+          winner?: string | null
+        }
+        Update: {
+          created_at?: string
+          duration_ms?: number
+          id?: string
+          is_bot?: boolean
+          is_draw?: boolean
+          metadata?: Json
+          player_a?: string
+          player_b?: string
+          questions?: Json
+          rating_a_after?: number | null
+          rating_a_before?: number | null
+          rating_b_after?: number | null
+          rating_b_before?: number | null
+          rating_delta_a?: number | null
+          rating_delta_b?: number | null
+          rounds?: number
+          score_a?: number
+          score_b?: number
+          winner?: string | null
+        }
+        Relationships: []
+      }
+      word_duel_queue: {
+        Row: {
+          joined_at: string
+          match_seed: string | null
+          matched_with: string | null
+          rating: number
+          user_id: string
+        }
+        Insert: {
+          joined_at?: string
+          match_seed?: string | null
+          matched_with?: string | null
+          rating: number
+          user_id: string
+        }
+        Update: {
+          joined_at?: string
+          match_seed?: string | null
+          matched_with?: string | null
+          rating?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
+      word_duel_ratings: {
+        Row: {
+          best_streak: number
+          created_at: string
+          current_streak: number
+          draws: number
+          losses: number
+          matches_played: number
+          peak_rating: number
+          rating: number
+          updated_at: string
+          user_id: string
+          wins: number
+        }
+        Insert: {
+          best_streak?: number
+          created_at?: string
+          current_streak?: number
+          draws?: number
+          losses?: number
+          matches_played?: number
+          peak_rating?: number
+          rating?: number
+          updated_at?: string
+          user_id: string
+          wins?: number
+        }
+        Update: {
+          best_streak?: number
+          created_at?: string
+          current_streak?: number
+          draws?: number
+          losses?: number
+          matches_played?: number
+          peak_rating?: number
+          rating?: number
+          updated_at?: string
+          user_id?: string
+          wins?: number
+        }
+        Relationships: []
+      }
       word_quest_attempts: {
         Row: {
           completed_at: string
@@ -1129,6 +1261,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      _elo_delta: {
+        Args: { _k?: number; _my: number; _opp: number; _score: number }
+        Returns: number
+      }
       award_coins: {
         Args: { _amount: number }
         Returns: {
@@ -1136,6 +1272,7 @@ export type Database = {
           total_earned: number
         }[]
       }
+      cancel_duel_queue: { Args: never; Returns: undefined }
       delete_email: {
         Args: { message_id: number; queue_name: string }
         Returns: boolean
@@ -1143,6 +1280,29 @@ export type Database = {
       enqueue_email: {
         Args: { payload: Json; queue_name: string }
         Returns: number
+      }
+      find_duel_opponent: {
+        Args: { _rating_range?: number }
+        Returns: {
+          is_bot: boolean
+          match_seed: string
+          opponent_alias: string
+          opponent_id: string
+          opponent_rating: number
+        }[]
+      }
+      get_duel_leaderboard: {
+        Args: { _scope?: string }
+        Returns: {
+          alias: string
+          best_streak: number
+          is_me: boolean
+          losses: number
+          rank: number
+          rating: number
+          tier: string
+          wins: number
+        }[]
       }
       get_game_leaderboard: {
         Args: { _game_type: string; _scope?: string }
@@ -1170,6 +1330,20 @@ export type Database = {
           rank: number
           total_players: number
           weekly_xp: number
+        }[]
+      }
+      get_or_init_duel_rating: {
+        Args: never
+        Returns: {
+          best_streak: number
+          current_streak: number
+          draws: number
+          losses: number
+          matches_played: number
+          peak_rating: number
+          rating: number
+          tier: string
+          wins: number
         }[]
       }
       get_user_streak_stats: {
@@ -1214,6 +1388,16 @@ export type Database = {
           total_perfect: number
         }[]
       }
+      match_duel_bot: {
+        Args: never
+        Returns: {
+          is_bot: boolean
+          match_seed: string
+          opponent_alias: string
+          opponent_id: string
+          opponent_rating: number
+        }[]
+      }
       move_to_dlq: {
         Args: {
           dlq_name: string
@@ -1229,6 +1413,25 @@ export type Database = {
           message: Json
           msg_id: number
           read_ct: number
+        }[]
+      }
+      submit_duel_result: {
+        Args: {
+          _duration_ms: number
+          _is_bot: boolean
+          _my_score: number
+          _opp_score: number
+          _opponent_id: string
+          _opponent_rating: number
+          _questions: Json
+          _rounds: number
+        }
+        Returns: {
+          current_streak: number
+          is_draw: boolean
+          my_delta: number
+          my_new_rating: number
+          won: boolean
         }[]
       }
     }

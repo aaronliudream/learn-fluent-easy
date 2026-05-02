@@ -82,6 +82,7 @@ const getSharedAudio = () => {
     sharedAudio.preload = "auto";
     sharedAudio.setAttribute("playsinline", "true");
     sharedAudio.setAttribute("webkit-playsinline", "true");
+    sharedAudio.crossOrigin = "anonymous";
   }
   return sharedAudio;
 };
@@ -102,6 +103,9 @@ const unlockAudioSync = (): HTMLAudioElement | null => {
     audio.load();
     const p = audio.play();
     if (p && typeof p.catch === "function") p.catch(() => {});
+    // Route through GainNode for loudness boost. Must run inside the
+    // user-gesture window so the AudioContext can start unsuspended.
+    ensureLoudnessRouting(audio);
   } catch {}
   return audio;
 };

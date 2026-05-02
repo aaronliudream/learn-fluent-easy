@@ -69,6 +69,18 @@ export const BADGE_CATALOG: Record<string, BadgeDef> = {
     title: "节奏猎手",
     description: "Word Rush 单局得分 ≥ 300",
   },
+  bento_master: {
+    code: "bento_master",
+    emoji: "🍱",
+    title: "便当大师",
+    description: "Word Bento 单局零失误通关",
+  },
+  bento_speedster: {
+    code: "bento_speedster",
+    emoji: "🏎️",
+    title: "便当极速",
+    description: "Word Bento 60 秒内通关",
+  },
   dictation_pro: {
     code: "dictation_pro",
     emoji: "🎧",

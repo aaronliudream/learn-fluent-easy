@@ -497,6 +497,12 @@ function QuizPhase({
   const [pos, setPos] = useState(0);
   const [stats, setStats] = useState({ correct: 0, total: 0 });
 
+  // Prefetch English meanings so en2en/en2word questions render instantly
+  useEffect(() => {
+    if (group.length > 0) ensureMeaningsEn(group);
+    if (pool.length > 0) ensureMeaningsEn(pool.slice(0, 60));
+  }, [group, pool]);
+
   const item = queue[pos];
 
   if (!item) {

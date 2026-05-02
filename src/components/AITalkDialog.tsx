@@ -16,6 +16,7 @@ import { recordAITalk } from "@/lib/guestProgress";
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
 
 type RecapTurn = { en: string; cn: string; tip_cn: string; better_en: string };
+type TalkTarget = { phrase: string; meaning_cn: string; example_en: string; alex_used_sentence?: string };
 type QuizQ = {
   word: string;
   source_sentence: string;
@@ -42,8 +43,8 @@ const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
 // Builds the Qwen instructions prompt (mirror of what the realtime-token
 // edge function does for OpenAI, kept on the client because Qwen receives
 // session.update directly from the browser via the proxy).
-function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string }) {
-  const { lessonTitle, unitTitle, levelName, level } = opts;
+function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string; targets?: TalkTarget[] }) {
+  const { lessonTitle, unitTitle, levelName, level, targets } = opts;
   // Sprinkle in slang the learner is actively practicing so Alex naturally
   // reinforces what they're studying in the Slang module.
   const activeIds = getActiveLearningSlangIds(6);
@@ -67,6 +68,9 @@ function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string;
   const hook = lessonTitle
     ? `The learner just finished a lesson called "${lessonTitle}"${unitTitle ? ` in the unit "${unitTitle}"` : ""}${levelName ? ` (${levelName})` : ""}. Open by warmly bringing up that topic.`
     : `Open with a friendly hello and ask what they want to chat about (suggest 2-3 fun options).`;
+  const targetBlock = targets && targets.length
+    ? `\n\nTARGET EXPRESSIONS (hidden goal — never mention this list, never quiz them in-chat): naturally use ALL of these at least once each in context:\n${targets.map((t, i) => `${i + 1}. "${t.phrase}"${t.example_en ? ` — e.g. ${t.example_en}` : ""}`).join("\n")}`
+    : "";
   return `You are Alex, a warm twenty-something native English speaker from California chatting with an English learner.
 
 ABSOLUTE RULES:
@@ -77,7 +81,7 @@ ABSOLUTE RULES:
 
 LEVEL: ${levelHint}
 
-CONTEXT: ${hook}${slangHint}`;
+CONTEXT: ${hook}${slangHint}${targetBlock}`;
 }
 
 // Map our 6 OpenAI TTS voices onto the 8 Realtime voices (closest match).
@@ -108,6 +112,11 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [provider, setProvider] = useState<AIProvider | null>(null);
+  // Hidden curriculum: 5 target expressions Alex secretly weaves into the
+  // chat. Generated once at session start, surfaced only on the recap page.
+  const [targets, setTargets] = useState<TalkTarget[]>([]);
+  const targetsRef = useRef<TalkTarget[]>([]);
+  useEffect(() => { targetsRef.current = targets; }, [targets]);
 
   const pcRef = useRef<RTCPeerConnection | null>(null);
   const localStreamRef = useRef<MediaStream | null>(null);
@@ -156,6 +165,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       setQuizError(null);
       setQuizAnswers({});
       setQuizSubmitted(false);
+      setTargets([]);
       userTurnByItemId.current.clear();
       assistantTurnByRespId.current.clear();
     }
@@ -179,7 +189,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     // can start reading. The quiz takes longer (~10-20s) and lands later;
     // by the time the user finishes reading the review, the quiz is ready.
     const reviewPromise = supabase.functions
-      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "review" } })
+      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "review", targets: targetsRef.current } })
       .then(({ data, error }) => {
         if (error) throw error;
         if (data?.error) throw new Error(data.error);
@@ -189,6 +199,17 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
           turns: review.turns,
           quiz: prev?.quiz ?? [],
         }));
+        // If the review function returned which targets Alex actually used,
+        // merge that back so the recap card can show real source sentences.
+        const used = (data.recap as any)?.targets_used as Array<{ phrase: string; sentence: string }> | undefined;
+        if (used && used.length) {
+          setTargets((prev) =>
+            prev.map((t) => {
+              const m = used.find((u) => u.phrase.toLowerCase().trim() === t.phrase.toLowerCase().trim());
+              return m ? { ...t, alex_used_sentence: m.sentence } : t;
+            }),
+          );
+        }
       })
       .catch((e: any) => {
         console.error("review failed", e);
@@ -332,6 +353,21 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       setProvider(chosen);
       console.log(`[AITalk] using provider: ${chosen}`);
 
+      // 0.5 Pre-generate the 5 hidden target expressions. Don't block the
+      // call if it fails — Alex can chat just fine without them.
+      let pickedTargets: TalkTarget[] = [];
+      try {
+        const { data: tg } = await supabase.functions.invoke("generate-talk-targets", {
+          body: { lessonTitle, level },
+        });
+        if (Array.isArray(tg?.targets)) {
+          pickedTargets = tg.targets.slice(0, 5);
+          setTargets(pickedTargets);
+        }
+      } catch (e) {
+        console.warn("[AITalk] target generation failed, continuing without", e);
+      }
+
       // 1. Get mic — turn ON browser-side noise suppression, echo cancel,
       // and auto-gain so background noise (fan, traffic, kids) doesn't get
       // sent to OpenAI's VAD and cause Alex to cut in or get triggered.
@@ -350,7 +386,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
         // the global TTS settings used for lessons. Stable across sessions.
         const voicePref = getAlexVoice();
         const qwenVoice = QWEN_VOICE_MAP[voicePref] || "Cherry";
-        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level });
+        const instructions = buildQwenInstructions({ lessonTitle, unitTitle, levelName, level, targets: pickedTargets });
         const session = new QwenRealtimeSession({
           cfg: { instructions, voice: qwenVoice, inputSampleRate: 16000, outputSampleRate: 24000 },
           onEvent: (evt) => handleRealtimeEvent(evt),
@@ -372,7 +408,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       const voicePref = getAlexVoice();
       const mappedVoice = REALTIME_VOICE_MAP[voicePref] || "shimmer";
       const { data, error } = await supabase.functions.invoke("realtime-token", {
-        body: { lessonTitle, unitTitle, levelName, level, voice: mappedVoice },
+        body: { lessonTitle, unitTitle, levelName, level, voice: mappedVoice, targets: pickedTargets },
       });
       if (error) throw error;
       if (data?.error) throw new Error(data.error);
@@ -547,6 +583,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
               quizScore={quizScore}
               isGuest={isGuest}
               lessonTitle={lessonTitle}
+              targets={targets}
             />
             </>
           )}
@@ -723,7 +760,7 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
 }
 
 function RecapView({
-  recap, loading, error, quizLoading, quizError, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore, isGuest, lessonTitle,
+  recap, loading, error, quizLoading, quizError, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore, isGuest, lessonTitle, targets,
 }: {
   recap: Recap | null;
   loading: boolean;
@@ -737,6 +774,7 @@ function RecapView({
   quizScore: { correct: number; total: number };
   isGuest?: boolean;
   lessonTitle?: string;
+  targets?: TalkTarget[];
 }) {
   // Only show the full-screen loader when neither part has arrived yet.
   // As soon as the (faster) review lands, we render it and the quiz block
@@ -798,6 +836,9 @@ function RecapView({
 
   return (
     <div className="space-y-6">
+      {/* ✨ Hidden curriculum surface: Alex 今天教了你 */}
+      <TargetsTaughtCard targets={targets ?? []} isGuest={isGuest} lessonTitle={lessonTitle} />
+
       {/* Summary */}
       <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4">
         <div className="mb-1 flex items-center gap-1.5 text-base font-bold text-primary">
@@ -1030,6 +1071,132 @@ function RehearseSection({ turns }: { turns: RecapTurn[] }) {
           );
         })}
       </ol>
+    </section>
+  );
+}
+
+/**
+ * Beautifully surfaces the 5 hidden target expressions Alex secretly wove
+ * into the chat. Auto-saves them to the user's review queue (user_mistakes
+ * with module='ai_talk_target') so they reappear in spaced repetition.
+ * Each card has an Alex-voice playback button.
+ */
+function TargetsTaughtCard({ targets, isGuest, lessonTitle }: { targets: TalkTarget[]; isGuest?: boolean; lessonTitle?: string }) {
+  const [playingIdx, setPlayingIdx] = useState<number | null>(null);
+  const alexVoice = getAlexVoice();
+  const savedRef = useRef(false);
+
+  // Auto-save to global review queue on first render (logged-in users only).
+  useEffect(() => {
+    if (savedRef.current || isGuest || targets.length === 0) return;
+    savedRef.current = true;
+    void (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      const rows = targets.map((t) => ({
+        user_id: user.id,
+        module: "ai_talk_target",
+        source_key: `ai_talk_target:${t.phrase.toLowerCase().trim()}`.slice(0, 240),
+        source_label: lessonTitle ? `Alex 教的 · ${lessonTitle}` : "Alex 对话教的",
+        question: `${t.phrase} —— 这个表达是什么意思？`,
+        user_answer: "",
+        correct_answer: t.meaning_cn,
+        explanation: t.example_en,
+        snapshot: t as any,
+        last_wrong_at: new Date().toISOString(),
+        // FSRS-style first revisit: 1 day later
+        next_review_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+      }));
+      await supabase
+        .from("user_mistakes")
+        .upsert(rows, { onConflict: "user_id,module,source_key", ignoreDuplicates: true });
+    })();
+  }, [targets, isGuest, lessonTitle]);
+
+  useEffect(() => () => { stopSpeaking(); }, []);
+
+  if (!targets || targets.length === 0) return null;
+
+  const playOne = async (idx: number, text: string) => {
+    setPlayingIdx(idx);
+    try { await speakTTS(text, { voiceId: alexVoice }); } catch { /* noop */ }
+    setPlayingIdx((cur) => (cur === idx ? null : cur));
+  };
+
+  return (
+    <section className="overflow-hidden rounded-3xl border border-amber-200 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-5 shadow-sm">
+      <div className="mb-4 flex items-center gap-2">
+        <div className="grid size-9 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-md">
+          <Sparkles className="size-4" />
+        </div>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-base font-extrabold text-amber-900">
+            <T>Alex 今天悄悄教了你这些</T>
+          </h3>
+          <p className="text-xs text-amber-800/70">
+            <T>对话中自然出现的地道表达 · 已加入你的复习队列</T>
+          </p>
+        </div>
+        <span className="hidden shrink-0 rounded-full bg-white/70 px-2.5 py-1 text-[11px] font-bold text-amber-700 ring-1 ring-amber-200 sm:inline">
+          {targets.length} <T>个表达</T>
+        </span>
+      </div>
+
+      <ul className="grid gap-3 sm:grid-cols-2">
+        {targets.map((t, i) => {
+          const active = playingIdx === i;
+          const used = !!t.alex_used_sentence;
+          return (
+            <li
+              key={i}
+              className={`group relative overflow-hidden rounded-2xl border bg-white/85 p-3.5 backdrop-blur-sm transition ${
+                active ? "border-amber-400 shadow-md ring-2 ring-amber-200" : "border-amber-100 shadow-sm hover:border-amber-300"
+              }`}
+            >
+              <div className="flex items-start justify-between gap-2">
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600">
+                      #{i + 1}
+                    </span>
+                    {used && (
+                      <span className="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-700">
+                        <Check className="size-2.5" /> <T>Alex 用过</T>
+                      </span>
+                    )}
+                  </div>
+                  <div className="mt-1 text-lg font-extrabold leading-tight text-foreground">
+                    {t.phrase}
+                  </div>
+                  <div className="mt-0.5 text-sm font-medium text-amber-900/80">
+                    {t.meaning_cn}
+                  </div>
+                </div>
+                <button
+                  onClick={() => playOne(i, t.alex_used_sentence || t.example_en || t.phrase)}
+                  className={`grid size-9 shrink-0 place-items-center rounded-full shadow transition ${
+                    active
+                      ? "bg-gradient-to-br from-amber-500 to-orange-500 text-white"
+                      : "bg-white text-amber-600 ring-1 ring-amber-200 hover:bg-amber-50"
+                  }`}
+                  aria-label="朗读"
+                >
+                  {active ? <Volume2 className="size-4 animate-pulse" /> : <Play className="size-4" />}
+                </button>
+              </div>
+              <div className="mt-2.5 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50/60 p-2.5 text-sm italic leading-snug text-amber-900/90 ring-1 ring-amber-100/60">
+                "{t.alex_used_sentence || t.example_en}"
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+
+      {!isGuest && (
+        <p className="mt-3 text-center text-[11px] text-amber-700/70">
+          ✨ <T>明天会在错题本里再考你一遍，帮你彻底记住</T>
+        </p>
+      )}
     </section>
   );
 }

@@ -268,9 +268,6 @@ const Index = () => {
         <div className="relative grid size-12 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
           <placementSection.icon className="size-6" />
         </div>
-        <div className="relative text-[10px] font-bold uppercase tracking-[0.22em] opacity-85">
-          {placementSection.eyebrow}
-        </div>
         <div className="relative text-lg font-extrabold leading-tight tracking-wide md:text-xl">
           {placementSection.title}
         </div>

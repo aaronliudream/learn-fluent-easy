@@ -276,10 +276,11 @@ export default function WordQuest({
   }
 
   function handleShare() {
-    if (!target) return;
+    if (!targets.length) return;
     const summary = emojiSummary(results);
     const dur = (results.reduce((s, r) => s + r.latency_ms, 0) / 1000).toFixed(1);
-    const text = `🗺️ Word Quest ${todayKey()}\n${summary}\n⏱ ${dur}s · 🔥 连续 ${streak?.current_streak ?? 0} 天\n${window.location.origin}/gaokao/vocab?mode=quest`;
+    const wordsLine = targets.map((t) => t.word).join(" · ");
+    const text = `🗺️ Word Quest ${todayKey()}\n${wordsLine}\n${summary}\n⏱ ${dur}s · 🔥 连续 ${streak?.current_streak ?? 0} 天\n${window.location.origin}/gaokao/vocab?mode=quest`;
     navigator.clipboard?.writeText(text).then(() => {
       setShareCopied(true);
       setTimeout(() => setShareCopied(false), 2000);
@@ -295,7 +296,7 @@ export default function WordQuest({
     );
   }
 
-  if (!target) {
+  if (!targets.length) {
     return (
       <main className="mx-auto max-w-xl p-8 text-center">
         <p className="text-sm text-muted-foreground">词库不足，无法开启今日挑战</p>
@@ -344,14 +345,14 @@ export default function WordQuest({
             <div className="text-4xl">🗺️</div>
             <div>
               <h1 className="text-2xl font-extrabold">Word Quest 单词奇旅</h1>
-              <p className="text-sm text-muted-foreground">每日 1 词 · 6 关闯关 · 全球同款</p>
+              <p className="text-sm text-muted-foreground">每日 3 词 · 每词 6 关 · 共 18 关</p>
             </div>
           </div>
 
           <StreakStrip streak={streak} className="mt-5" />
 
           <div className="mt-5 rounded-2xl border bg-card/60 p-4">
-            <div className="text-[11px] uppercase tracking-wider text-muted-foreground">今日单词将通过 6 个不同关卡考察</div>
+            <div className="text-[11px] uppercase tracking-wider text-muted-foreground">每个单词将通过 6 个不同关卡考察</div>
             <ol className="mt-2 grid grid-cols-2 gap-2 text-xs">
               {STAGES.map((s) => (
                 <li key={s.n} className="flex items-center gap-2 rounded-lg bg-background px-2 py-1.5">
@@ -360,6 +361,9 @@ export default function WordQuest({
                 </li>
               ))}
             </ol>
+            <div className="mt-2 text-[11px] text-muted-foreground">
+              📚 共 <b className="text-foreground">3 个单词</b>，连续打完一个再切下一个 · 总 <b className="text-foreground">18 关</b>
+            </div>
           </div>
 
           <div className="mt-4 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-xs text-amber-800 dark:text-amber-300">
@@ -396,14 +400,20 @@ export default function WordQuest({
           </div>
           <div className={cn(
             "rounded-3xl border-2 p-6 text-center shadow-tile",
-            passed === 6 ? "border-amber-500/50 bg-gradient-to-br from-amber-500/15 to-orange-500/5" : "border-indigo-500/40 bg-gradient-to-br from-indigo-500/15 to-sky-500/5"
+            passed === TOTAL_STAGES ? "border-amber-500/50 bg-gradient-to-br from-amber-500/15 to-orange-500/5" : "border-indigo-500/40 bg-gradient-to-br from-indigo-500/15 to-sky-500/5"
           )}>
-            <div className="text-5xl">{passed === 6 ? "🏆" : passed >= 4 ? "🌟" : "📚"}</div>
+            <div className="text-5xl">{passed === TOTAL_STAGES ? "🏆" : passed >= 12 ? "🌟" : "📚"}</div>
             <h2 className="mt-3 text-xl font-extrabold">
-              {passed === 6 ? "完美通关！" : `通关 ${passed}/6 关`}
+              {passed === TOTAL_STAGES ? "完美通关！" : `通关 ${passed}/${TOTAL_STAGES} 关`}
             </h2>
-            <div className="mt-1 text-sm text-muted-foreground">今日单词 · {target.word}</div>
-            <div className="mt-1 text-xs text-muted-foreground italic">{target.meaning_cn}</div>
+            <div className="mt-1 text-sm text-muted-foreground">
+              今日 3 词 · {targets.map((t) => t.word).join(" · ")}
+            </div>
+            <div className="mt-1 flex flex-wrap justify-center gap-x-3 gap-y-0.5 text-[11px] text-muted-foreground italic">
+              {targets.map((t) => (
+                <span key={t.id}><b className="not-italic text-foreground">{t.word}</b> {t.meaning_cn}</span>
+              ))}
+            </div>
 
             <div className="mt-4 inline-flex items-center gap-2 rounded-full border bg-card px-4 py-2 text-2xl tracking-widest">
               {emojiSummary(results)}
@@ -441,6 +451,7 @@ export default function WordQuest({
   }
 
   /* ---------- Playing ---------- */
+  if (!target) return null;
   return (
     <main className="mx-auto flex min-h-screen max-w-xl flex-col px-4 py-4">
       <div className="mb-3 flex items-center justify-between gap-2">
@@ -448,30 +459,39 @@ export default function WordQuest({
           <ArrowLeft className="size-4" /> 退出（视为放弃）
         </button>
         <div className="text-xs font-bold text-muted-foreground">
-          {STAGES[stage].emoji} 第 {stage + 1}/6 关
+          📚 第 {wordIdx + 1}/{WORDS_PER_QUEST} 词 · {STAGES[subStage].emoji} 第 {subStage + 1}/{STAGES_PER_WORD} 关
         </div>
       </div>
 
-      {/* Stage progress */}
-      <div className="mb-4 flex gap-1">
-        {STAGES.map((s, i) => {
-          const r = results[i];
-          return (
-            <div key={s.n} className={cn(
-              "h-2 flex-1 rounded-full transition-all",
-              r ? (r.correct ? "bg-emerald-500" : "bg-red-500") :
-              i === stage ? "bg-indigo-500" : "bg-muted"
-            )} />
-          );
-        })}
+      {/* 18-stage progress: 3 groups of 6, separated by gap */}
+      <div className="mb-4 flex gap-2">
+        {Array.from({ length: WORDS_PER_QUEST }).map((_, gi) => (
+          <div key={gi} className="flex flex-1 gap-0.5">
+            {Array.from({ length: STAGES_PER_WORD }).map((__, si) => {
+              const i = gi * STAGES_PER_WORD + si;
+              const r = results[i];
+              return (
+                <div
+                  key={si}
+                  className={cn(
+                    "h-2 flex-1 rounded-full transition-all",
+                    r ? (r.correct ? "bg-emerald-500" : "bg-red-500") :
+                    i === stage ? "bg-indigo-500" : "bg-muted"
+                  )}
+                />
+              );
+            })}
+          </div>
+        ))}
       </div>
 
       <StagePlayer
-        stage={stage}
+        stage={subStage}
         target={target}
         pool={pool}
         onResult={recordStage}
         onHint={() => setHintsUsed((h) => h + 1)}
+        wordIndexLabel={`📚 第 ${wordIdx + 1}/${WORDS_PER_QUEST} 词`}
       />
     </main>
   );

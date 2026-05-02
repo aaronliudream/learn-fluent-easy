@@ -306,12 +306,17 @@ export default function GaokaoVocab() {
       const { data } = await supabase
         .from("gaokao_vocab")
         .select("*")
+        // 🇨🇳 仅取「中国高中生必须掌握」的核心高考词汇（教育部新课标 3500 词，gaokao_level 1-3）
+        // 排除 level 4 拓展/超纲词，确保游戏内出现的都是必考词
+        .lte("gaokao_level", 3)
+        .not("gaokao_level", "is", null)
         // 🧠 科学排序（取代字母表）：词频↑ → 考频↓ → 难度↓
         // 依据：Zipf 定律 + Nation 2013《Learning Vocabulary in Another Language》
         .order("freq_rank", { ascending: true, nullsFirst: false })
         .order("exam_frequency", { ascending: false, nullsFirst: false })
         .order("star_level", { ascending: false, nullsFirst: false })
-        .order("word", { ascending: true });
+        .order("word", { ascending: true })
+        .range(0, 4999);
       setAllVocab((data ?? []) as Vocab[]);
       setLoading(false);
     })();

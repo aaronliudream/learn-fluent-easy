@@ -89,7 +89,20 @@ function cleanArticleBody(body: string) {
     const idx = lower.indexOf(marker);
     return idx > 0 ? Math.min(min, idx) : min;
   }, normalized.length);
-  return normalized.slice(0, cutAt).trim();
+  let result = normalized.slice(0, cutAt).trim();
+
+  // 清理填空标记：把 \\_1\\、\_1\_、\\1\\、___1___ 等各种转义形式统一成 ①②③…
+  const circled = ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩"];
+  const toCircled = (n: string) => {
+    const i = parseInt(n, 10);
+    return i >= 1 && i <= 10 ? circled[i - 1] : `(${n})`;
+  };
+  // 形如 \\_1\\ / \_1\_ / \\1\\ / __1__ / \(1\) 等
+  result = result.replace(/\\+_*\s*(\d{1,2})\s*_*\\+/g, (_, n) => ` ${toCircled(n)} `);
+  result = result.replace(/_{2,}\s*(\d{1,2})\s*_{2,}/g, (_, n) => ` ${toCircled(n)} `);
+  // 残留的孤立反斜杠和多余空格
+  result = result.replace(/\\+/g, "").replace(/[ \t]{2,}/g, " ");
+  return result.trim();
 }
 
 export default function GaokaoReadingArticle() {

@@ -2781,13 +2781,16 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
   function answer(choice: Vocab) {
     if (phase !== "playing") return;
     if (activeTileId == null) return;
+    // 立即朗读用户选中的单词（不等 setState 回调，确保零延迟）
+    const active = tiles.find((p) => p.id === activeTileId);
+    if (active && choice.id === active.vocab.id) {
+      void speakWord(choice);
+    }
     setTiles((prev) => {
       const active = prev.find((p) => p.id === activeTileId);
       if (!active) return prev;
       const correct = choice.id === active.vocab.id;
       if (correct) {
-        // 选对立即朗读单词，加深听觉记忆
-        void speakWord(active.vocab);
         setHits((h) => h + 1);
         setStreak((s) => {
           const ns = s + 1;

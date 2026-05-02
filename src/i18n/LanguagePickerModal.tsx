@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Globe, Check, Sparkles } from "lucide-react";
+import { Globe, Check } from "lucide-react";
 import { LANGUAGES, type LangCode } from "./languages";
 import { useI18n } from "./I18nProvider";
 
@@ -27,39 +27,32 @@ export function LanguagePickerModal() {
 
   return (
     <Dialog open onOpenChange={() => { /* lock */ }}>
-      <DialogContent className="max-w-lg w-[calc(100vw-1rem)] p-4 sm:p-6" onInteractOutside={(e) => e.preventDefault()}>
-        <DialogHeader>
-          <div className="mb-2 inline-flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-            <Globe className="size-6" />
+      <DialogContent
+        className="max-w-lg w-[calc(100vw-1rem)] max-h-[92vh] p-3 sm:p-6 flex flex-col gap-2"
+        onInteractOutside={(e) => e.preventDefault()}
+      >
+        {/* Compact header: icon + title inline so the language list is visible above the fold on mobile */}
+        <DialogHeader className="space-y-1">
+          <div className="flex items-center gap-2">
+            <div className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <Globe className="size-4" />
+            </div>
+            <DialogTitle className="text-base sm:text-2xl font-extrabold leading-tight">
+              {t("lang.pickerTitle")}
+            </DialogTitle>
           </div>
-          <DialogTitle className="text-2xl font-extrabold">{t("lang.pickerTitle")}</DialogTitle>
-          <DialogDescription>{t("lang.pickerSubtitle")}</DialogDescription>
+          <DialogDescription className="text-xs sm:text-sm">
+            <span className="font-semibold text-primary">Choose your mother language</span>
+            <span className="mx-1 opacity-40">·</span>
+            <span>请选择你的母语</span>
+            <span className="mx-1 opacity-40">·</span>
+            <span>母国語</span>
+            <span className="mx-1 opacity-40">·</span>
+            <span>모국어</span>
+          </DialogDescription>
         </DialogHeader>
 
-        {/* Multilingual hint so non-English speakers immediately understand
-            this is the "pick your mother language" prompt. */}
-        <div className="mt-1 rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 p-3 text-left sm:text-center">
-          <div className="mb-1 flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wide text-primary sm:justify-center">
-            <Sparkles className="size-3 shrink-0" />
-            <span className="break-words">Choose your mother language</span>
-            <Sparkles className="size-3 shrink-0 hidden sm:inline-block" />
-          </div>
-          <div className="text-xs leading-relaxed text-muted-foreground">
-            <span>请选择你的母语</span>
-            <span className="mx-1.5 opacity-40">·</span>
-            <span>母国語を選んでください</span>
-            <span className="mx-1.5 opacity-40">·</span>
-            <span>모국어를 선택하세요</span>
-            <br />
-            <span>Elige tu idioma</span>
-            <span className="mx-1.5 opacity-40">·</span>
-            <span>Choisissez votre langue</span>
-            <span className="mx-1.5 opacity-40">·</span>
-            <span>اختر لغتك</span>
-          </div>
-        </div>
-
-        <div className="my-3 grid max-h-[45vh] grid-cols-2 gap-2 overflow-y-auto pr-1">
+        <div className="grid flex-1 min-h-0 grid-cols-2 gap-2 overflow-y-auto pr-1">
           {sorted.map((l) => {
             const isSel = l.code === selected;
             return (

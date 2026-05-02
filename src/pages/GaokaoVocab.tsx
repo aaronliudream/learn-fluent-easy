@@ -189,6 +189,90 @@ function useMeaningEn(v: Vocab | null | undefined): string | null {
   return val;
 }
 
+/* ---------- Synonym pack fetcher (with cache) ---------- */
+const synonymCache = new Map<string, SynPack>();
+const synonymInflight = new Map<string, Promise<void>>();
+
+async function ensureSynonyms(vocabs: Vocab[]): Promise<Record<string, SynPack>> {
+  const missing = vocabs.filter((v) => !synonymCache.has(v.id));
+  if (missing.length > 0) {
+    const ids = missing.map((v) => v.id);
+    const key = ids.sort().join(",");
+    if (!synonymInflight.has(key)) {
+      const p = (async () => {
+        try {
+          const { data, error } = await supabase.functions.invoke(
+            "vocab-synonyms",
+            { body: { ids } },
+          );
+          if (error) throw error;
+          const results = (data?.results ?? {}) as Record<string, SynPack>;
+          for (const [id, pack] of Object.entries(results)) {
+            if (
+              pack &&
+              typeof pack.correct === "string" &&
+              Array.isArray(pack.distractors) &&
+              pack.distractors.length >= 3
+            ) {
+              synonymCache.set(id, {
+                correct: pack.correct,
+                distractors: pack.distractors.slice(0, 3),
+              });
+            }
+          }
+        } catch (e) {
+          console.error("ensureSynonyms failed", e);
+        }
+      })();
+      synonymInflight.set(key, p);
+    }
+    await synonymInflight.get(key);
+  }
+  const out: Record<string, SynPack> = {};
+  for (const v of vocabs) {
+    const pack = synonymCache.get(v.id);
+    if (pack) out[v.id] = pack;
+  }
+  return out;
+}
+
+/* ---------- POS-based distractor picker ---------- */
+/** Normalize POS strings like "n.", "noun", "v." to a canonical bucket. */
+function normPos(p: string | null | undefined): string {
+  if (!p) return "";
+  const s = p.toLowerCase().replace(/[.\s]/g, "");
+  if (s.startsWith("n")) return "n";
+  if (s.startsWith("v")) return "v";
+  if (s.startsWith("adj") || s === "a") return "adj";
+  if (s.startsWith("adv")) return "adv";
+  if (s.startsWith("prep")) return "prep";
+  if (s.startsWith("conj")) return "conj";
+  if (s.startsWith("pron")) return "pron";
+  if (s.startsWith("int") || s.startsWith("interj")) return "interj";
+  return s.slice(0, 4);
+}
+
+/**
+ * For "pos" questions: pick 3 distractors that have a DIFFERENT part of speech
+ * from the target. Falls back to random words if not enough are available.
+ */
+function buildPosChoices(target: Vocab, pool: Vocab[]): Vocab[] {
+  const targetPos = normPos(target.pos);
+  const differentPos = pool.filter(
+    (p) => p.id !== target.id && normPos(p.pos) && normPos(p.pos) !== targetPos,
+  );
+  let distractors = shuffle(differentPos).slice(0, 3);
+  if (distractors.length < 3) {
+    const fillers = shuffle(
+      pool.filter(
+        (p) => p.id !== target.id && !distractors.find((d) => d.id === p.id),
+      ),
+    ).slice(0, 3 - distractors.length);
+    distractors = [...distractors, ...fillers];
+  }
+  return shuffle([target, ...distractors]);
+}
+
 export default function GaokaoVocab() {
   const [params, setParams] = useSearchParams();
   const groupParam = params.get("group");

@@ -1074,3 +1074,129 @@ function RehearseSection({ turns }: { turns: RecapTurn[] }) {
     </section>
   );
 }
+
+/**
+ * Beautifully surfaces the 5 hidden target expressions Alex secretly wove
+ * into the chat. Auto-saves them to the user's review queue (user_mistakes
+ * with module='ai_talk_target') so they reappear in spaced repetition.
+ * Each card has an Alex-voice playback button.
+ */
+function TargetsTaughtCard({ targets, isGuest, lessonTitle }: { targets: TalkTarget[]; isGuest?: boolean; lessonTitle?: string }) {
+  const [playingIdx, setPlayingIdx] = useState<number | null>(null);
+  const alexVoice = getAlexVoice();
+  const savedRef = useRef(false);
+
+  // Auto-save to global review queue on first render (logged-in users only).
+  useEffect(() => {
+    if (savedRef.current || isGuest || targets.length === 0) return;
+    savedRef.current = true;
+    void (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      const rows = targets.map((t) => ({
+        user_id: user.id,
+        module: "ai_talk_target",
+        source_key: `ai_talk_target:${t.phrase.toLowerCase().trim()}`.slice(0, 240),
+        source_label: lessonTitle ? `Alex 教的 · ${lessonTitle}` : "Alex 对话教的",
+        question: `${t.phrase} —— 这个表达是什么意思？`,
+        user_answer: "",
+        correct_answer: t.meaning_cn,
+        explanation: t.example_en,
+        snapshot: t as any,
+        last_wrong_at: new Date().toISOString(),
+        // FSRS-style first revisit: 1 day later
+        next_review_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+      }));
+      await supabase
+        .from("user_mistakes")
+        .upsert(rows, { onConflict: "user_id,module,source_key", ignoreDuplicates: true });
+    })();
+  }, [targets, isGuest, lessonTitle]);
+
+  useEffect(() => () => { stopSpeaking(); }, []);
+
+  if (!targets || targets.length === 0) return null;
+
+  const playOne = async (idx: number, text: string) => {
+    setPlayingIdx(idx);
+    try { await speakTTS(text, { voiceId: alexVoice }); } catch { /* noop */ }
+    setPlayingIdx((cur) => (cur === idx ? null : cur));
+  };
+
+  return (
+    <section className="overflow-hidden rounded-3xl border border-amber-200 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-5 shadow-sm">
+      <div className="mb-4 flex items-center gap-2">
+        <div className="grid size-9 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-md">
+          <Sparkles className="size-4" />
+        </div>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-base font-extrabold text-amber-900">
+            <T>Alex 今天悄悄教了你这些</T>
+          </h3>
+          <p className="text-xs text-amber-800/70">
+            <T>对话中自然出现的地道表达 · 已加入你的复习队列</T>
+          </p>
+        </div>
+        <span className="hidden shrink-0 rounded-full bg-white/70 px-2.5 py-1 text-[11px] font-bold text-amber-700 ring-1 ring-amber-200 sm:inline">
+          {targets.length} <T>个表达</T>
+        </span>
+      </div>
+
+      <ul className="grid gap-3 sm:grid-cols-2">
+        {targets.map((t, i) => {
+          const active = playingIdx === i;
+          const used = !!t.alex_used_sentence;
+          return (
+            <li
+              key={i}
+              className={`group relative overflow-hidden rounded-2xl border bg-white/85 p-3.5 backdrop-blur-sm transition ${
+                active ? "border-amber-400 shadow-md ring-2 ring-amber-200" : "border-amber-100 shadow-sm hover:border-amber-300"
+              }`}
+            >
+              <div className="flex items-start justify-between gap-2">
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600">
+                      #{i + 1}
+                    </span>
+                    {used && (
+                      <span className="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-700">
+                        <Check className="size-2.5" /> <T>Alex 用过</T>
+                      </span>
+                    )}
+                  </div>
+                  <div className="mt-1 text-lg font-extrabold leading-tight text-foreground">
+                    {t.phrase}
+                  </div>
+                  <div className="mt-0.5 text-sm font-medium text-amber-900/80">
+                    {t.meaning_cn}
+                  </div>
+                </div>
+                <button
+                  onClick={() => playOne(i, t.alex_used_sentence || t.example_en || t.phrase)}
+                  className={`grid size-9 shrink-0 place-items-center rounded-full shadow transition ${
+                    active
+                      ? "bg-gradient-to-br from-amber-500 to-orange-500 text-white"
+                      : "bg-white text-amber-600 ring-1 ring-amber-200 hover:bg-amber-50"
+                  }`}
+                  aria-label="朗读"
+                >
+                  {active ? <Volume2 className="size-4 animate-pulse" /> : <Play className="size-4" />}
+                </button>
+              </div>
+              <div className="mt-2.5 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50/60 p-2.5 text-sm italic leading-snug text-amber-900/90 ring-1 ring-amber-100/60">
+                "{t.alex_used_sentence || t.example_en}"
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+
+      {!isGuest && (
+        <p className="mt-3 text-center text-[11px] text-amber-700/70">
+          ✨ <T>明天会在错题本里再考你一遍，帮你彻底记住</T>
+        </p>
+      )}
+    </section>
+  );
+}

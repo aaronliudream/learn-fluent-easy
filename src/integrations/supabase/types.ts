@@ -980,6 +980,51 @@ export type Database = {
         }
         Relationships: []
       }
+      vocab_game_scores: {
+        Row: {
+          best_combo: number
+          created_at: string
+          difficulty: number | null
+          duration_ms: number
+          game_type: string
+          hits: number
+          id: string
+          metadata: Json | null
+          misses: number
+          score: number
+          theme: string | null
+          user_id: string
+        }
+        Insert: {
+          best_combo?: number
+          created_at?: string
+          difficulty?: number | null
+          duration_ms?: number
+          game_type: string
+          hits?: number
+          id?: string
+          metadata?: Json | null
+          misses?: number
+          score?: number
+          theme?: string | null
+          user_id: string
+        }
+        Update: {
+          best_combo?: number
+          created_at?: string
+          difficulty?: number | null
+          duration_ms?: number
+          game_type?: string
+          hits?: number
+          id?: string
+          metadata?: Json | null
+          misses?: number
+          score?: number
+          theme?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       workplace_practice: {
         Row: {
           attempts: number
@@ -1053,6 +1098,25 @@ export type Database = {
       enqueue_email: {
         Args: { payload: Json; queue_name: string }
         Returns: number
+      }
+      get_game_leaderboard: {
+        Args: { _game_type: string; _scope?: string }
+        Returns: {
+          alias: string
+          best_score: number
+          is_me: boolean
+          rank: number
+          total_plays: number
+        }[]
+      }
+      get_my_game_stats: {
+        Args: { _game_type: string }
+        Returns: {
+          avg_score: number
+          best_score: number
+          total_plays: number
+          week_rank: number
+        }[]
       }
       get_my_weekly_rank: {
         Args: never

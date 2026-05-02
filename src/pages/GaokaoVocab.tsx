@@ -32,6 +32,11 @@ type Vocab = {
   example_cn: string | null;
   star_level: number | null;
   accent: "UK" | "US" | "BOTH" | null;
+  theme: string | null;
+  freq_rank: number | null;
+  exam_frequency: number | null;
+  gaokao_level: number | null;
+  is_hot_topic: boolean | null;
 };
 /* ---------- Accent helpers ---------- */
 function speakWord(v: Vocab) {

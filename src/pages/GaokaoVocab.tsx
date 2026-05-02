@@ -596,11 +596,20 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     }
     // Auto-play the word for English→Chinese & cloze questions so the
     // student hears the pronunciation as soon as the question appears.
-    if (item.kind === "en2cn" || item.kind === "cloze" || item.kind === "en2en") {
+    if (
+      item.kind === "en2cn" ||
+      item.kind === "cloze" ||
+      item.kind === "en2en" ||
+      item.kind === "spell"
+    ) {
       const t = setTimeout(() => speakWord(v), 200);
       return () => clearTimeout(t);
     }
   }, [item.kind, v.id]);
+
+  if (item.kind === "spell") {
+    return <SpellQuestion vocab={v} onResult={onResult} />;
+  }
 
   if (item.kind === "cloze" && v.example_en) {
     const { masked, answer } = buildClozeBlank(v.example_en, v.word);

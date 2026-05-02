@@ -36,12 +36,12 @@ const SECTIONS = [
     available: true,
   },
   {
-    to: "#",
+    to: "/gaokao/cloze",
     icon: PenLine,
     title: "完形填空",
-    desc: "敬请期待",
-    gradient: "from-slate-400 to-slate-500",
-    available: false,
+    desc: "高一基础册 · 16 篇话题精讲，逐空精解 + 自动收录错题",
+    gradient: "from-violet-600 to-purple-700",
+    available: true,
   },
   {
     to: "#",

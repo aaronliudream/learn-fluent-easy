@@ -42,6 +42,9 @@ const GaokaoReadingArticle = lazy(() => import("./pages/GaokaoReadingArticle.tsx
 const GaokaoReadingKnowledge = lazy(() => import("./pages/GaokaoReadingKnowledge.tsx"));
 const GaokaoVocab = lazy(() => import("./pages/GaokaoVocab.tsx"));
 const GaokaoDiagnostic = lazy(() => import("./pages/GaokaoDiagnostic.tsx"));
+const GaokaoCloze = lazy(() => import("./pages/GaokaoCloze.tsx"));
+const GaokaoClozePlay = lazy(() => import("./pages/GaokaoClozePlay.tsx"));
+const GaokaoMistakes = lazy(() => import("./pages/GaokaoMistakes.tsx"));
 const SavedPhrases = lazy(() => import("./pages/SavedPhrases.tsx"));
 const Review = lazy(() => import("./pages/Review.tsx"));
 const Leaderboard = lazy(() => import("./pages/Leaderboard.tsx"));
@@ -112,6 +115,9 @@ const App = () => (
           <Route path="/gaokao/reading/article/:id" element={<GaokaoReadingArticle />} />
           <Route path="/gaokao/reading/:id" element={<GaokaoReadingPlay />} />
           <Route path="/gaokao/vocab" element={<GaokaoVocab />} />
+          <Route path="/gaokao/cloze" element={<GaokaoCloze />} />
+          <Route path="/gaokao/cloze/:id" element={<GaokaoClozePlay />} />
+          <Route path="/gaokao/mistakes" element={<GaokaoMistakes />} />
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />

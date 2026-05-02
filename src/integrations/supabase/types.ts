@@ -257,6 +257,211 @@ export type Database = {
         }
         Relationships: []
       }
+      gaokao_cloze_blanks: {
+        Row: {
+          blank_no: number
+          correct_answer: string
+          created_at: string
+          difficulty: number
+          explanation_a: string | null
+          explanation_b: string | null
+          explanation_c: string | null
+          explanation_d: string | null
+          general_explanation: string | null
+          id: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          passage_id: string
+          pos_tag: string | null
+          skill_method: string | null
+          skill_tag: string | null
+        }
+        Insert: {
+          blank_no: number
+          correct_answer: string
+          created_at?: string
+          difficulty?: number
+          explanation_a?: string | null
+          explanation_b?: string | null
+          explanation_c?: string | null
+          explanation_d?: string | null
+          general_explanation?: string | null
+          id?: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          passage_id: string
+          pos_tag?: string | null
+          skill_method?: string | null
+          skill_tag?: string | null
+        }
+        Update: {
+          blank_no?: number
+          correct_answer?: string
+          created_at?: string
+          difficulty?: number
+          explanation_a?: string | null
+          explanation_b?: string | null
+          explanation_c?: string | null
+          explanation_d?: string | null
+          general_explanation?: string | null
+          id?: string
+          option_a?: string
+          option_b?: string
+          option_c?: string
+          option_d?: string
+          passage_id?: string
+          pos_tag?: string | null
+          skill_method?: string | null
+          skill_tag?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_cloze_blanks_passage_id_fkey"
+            columns: ["passage_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_cloze_passages"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gaokao_cloze_passages: {
+        Row: {
+          article_analysis: string | null
+          blank_count: number
+          body_with_placeholders: string
+          chapter_name: string | null
+          chapter_no: number
+          created_at: string
+          difficulty: number
+          exam_points: string | null
+          genre: string | null
+          id: string
+          is_published: boolean
+          passage_no: number
+          recommended_minutes: number
+          sort_order: number
+          source_book: string
+          source_book_label: string
+          title: string
+          topic: string | null
+          topic_group: string | null
+          translation_zh: string | null
+          updated_at: string
+          vocab_notes: string | null
+          word_count: number | null
+        }
+        Insert: {
+          article_analysis?: string | null
+          blank_count?: number
+          body_with_placeholders: string
+          chapter_name?: string | null
+          chapter_no?: number
+          created_at?: string
+          difficulty?: number
+          exam_points?: string | null
+          genre?: string | null
+          id?: string
+          is_published?: boolean
+          passage_no: number
+          recommended_minutes?: number
+          sort_order?: number
+          source_book?: string
+          source_book_label?: string
+          title: string
+          topic?: string | null
+          topic_group?: string | null
+          translation_zh?: string | null
+          updated_at?: string
+          vocab_notes?: string | null
+          word_count?: number | null
+        }
+        Update: {
+          article_analysis?: string | null
+          blank_count?: number
+          body_with_placeholders?: string
+          chapter_name?: string | null
+          chapter_no?: number
+          created_at?: string
+          difficulty?: number
+          exam_points?: string | null
+          genre?: string | null
+          id?: string
+          is_published?: boolean
+          passage_no?: number
+          recommended_minutes?: number
+          sort_order?: number
+          source_book?: string
+          source_book_label?: string
+          title?: string
+          topic?: string | null
+          topic_group?: string | null
+          translation_zh?: string | null
+          updated_at?: string
+          vocab_notes?: string | null
+          word_count?: number | null
+        }
+        Relationships: []
+      }
+      gaokao_cloze_sessions: {
+        Row: {
+          answers: Json
+          correct_count: number
+          created_at: string
+          duration_seconds: number | null
+          id: string
+          passage_id: string
+          score_pct: number | null
+          started_at: string
+          status: string
+          submitted_at: string | null
+          total_blanks: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          answers?: Json
+          correct_count?: number
+          created_at?: string
+          duration_seconds?: number | null
+          id?: string
+          passage_id: string
+          score_pct?: number | null
+          started_at?: string
+          status?: string
+          submitted_at?: string | null
+          total_blanks?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          answers?: Json
+          correct_count?: number
+          created_at?: string
+          duration_seconds?: number | null
+          id?: string
+          passage_id?: string
+          score_pct?: number | null
+          started_at?: string
+          status?: string
+          submitted_at?: string | null
+          total_blanks?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_cloze_sessions_passage_id_fkey"
+            columns: ["passage_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_cloze_passages"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       gaokao_diagnostic_sessions: {
         Row: {
           answered_question_ids: Json
@@ -1311,6 +1516,63 @@ export type Database = {
         }
         Relationships: []
       }
+      gaokao_user_mistakes: {
+        Row: {
+          correct_answer: string | null
+          created_at: string
+          id: string
+          is_resolved: boolean
+          is_starred: boolean
+          item_id: string
+          last_wrong_at: string
+          module: string
+          next_review_at: string
+          parent_id: string | null
+          parent_label: string | null
+          snapshot: Json
+          updated_at: string
+          user_answer: string | null
+          user_id: string
+          wrong_count: number
+        }
+        Insert: {
+          correct_answer?: string | null
+          created_at?: string
+          id?: string
+          is_resolved?: boolean
+          is_starred?: boolean
+          item_id: string
+          last_wrong_at?: string
+          module: string
+          next_review_at?: string
+          parent_id?: string | null
+          parent_label?: string | null
+          snapshot?: Json
+          updated_at?: string
+          user_answer?: string | null
+          user_id: string
+          wrong_count?: number
+        }
+        Update: {
+          correct_answer?: string | null
+          created_at?: string
+          id?: string
+          is_resolved?: boolean
+          is_starred?: boolean
+          item_id?: string
+          last_wrong_at?: string
+          module?: string
+          next_review_at?: string
+          parent_id?: string | null
+          parent_label?: string | null
+          snapshot?: Json
+          updated_at?: string
+          user_answer?: string | null
+          user_id?: string
+          wrong_count?: number
+        }
+        Relationships: []
+      }
       gaokao_vocab: {
         Row: {
           accent: string | null
@@ -2300,6 +2562,19 @@ export type Database = {
           message: Json
           msg_id: number
           read_ct: number
+        }[]
+      }
+      submit_cloze_session: {
+        Args: {
+          _answers: Json
+          _duration_seconds?: number
+          _passage_id: string
+        }
+        Returns: {
+          correct_count: number
+          score_pct: number
+          session_id: string
+          total_blanks: number
         }[]
       }
       submit_duel_result: {

@@ -1744,6 +1744,30 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
               🪙 +{coinsAwarded} 金币
             </div>
           )}
+          {srsLevelUps.length > 0 && (
+            <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">
+              <div className="text-xs font-bold uppercase tracking-wider text-primary">📈 升级单词</div>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {srsLevelUps.slice(0, 12).map((u, i) => {
+                  const l = MASTERY_LABELS[u.level];
+                  return (
+                    <span
+                      key={i}
+                      className={cn(
+                        "inline-flex items-center gap-1 rounded-full border bg-card px-2 py-0.5 text-xs font-semibold",
+                        l.color,
+                      )}
+                    >
+                      {l.emoji} {u.word}
+                    </span>
+                  );
+                })}
+                {srsLevelUps.length > 12 && (
+                  <span className="text-xs text-muted-foreground">+{srsLevelUps.length - 12} more</span>
+                )}
+              </div>
+            </div>
+          )}
           <div className="mt-1 text-xs text-muted-foreground">下次复习时间已自动调整</div>
           <Button className="mt-6 w-full" onClick={onExit}>返回</Button>
         </div>

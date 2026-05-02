@@ -568,6 +568,226 @@ export type Database = {
           },
         ]
       }
+      gaokao_reading_article_questions: {
+        Row: {
+          article_id: string
+          correct_answer: string
+          created_at: string
+          difficulty: number
+          explanation_a: string | null
+          explanation_b: string | null
+          explanation_c: string | null
+          explanation_d: string | null
+          general_explanation: string | null
+          id: string
+          key_sentence: string | null
+          locate_paragraph: number | null
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          question_type: string
+          question_type_cn: string | null
+          sort_order: number
+          stem: string
+        }
+        Insert: {
+          article_id: string
+          correct_answer: string
+          created_at?: string
+          difficulty?: number
+          explanation_a?: string | null
+          explanation_b?: string | null
+          explanation_c?: string | null
+          explanation_d?: string | null
+          general_explanation?: string | null
+          id?: string
+          key_sentence?: string | null
+          locate_paragraph?: number | null
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          question_type: string
+          question_type_cn?: string | null
+          sort_order?: number
+          stem: string
+        }
+        Update: {
+          article_id?: string
+          correct_answer?: string
+          created_at?: string
+          difficulty?: number
+          explanation_a?: string | null
+          explanation_b?: string | null
+          explanation_c?: string | null
+          explanation_d?: string | null
+          general_explanation?: string | null
+          id?: string
+          key_sentence?: string | null
+          locate_paragraph?: number | null
+          option_a?: string
+          option_b?: string
+          option_c?: string
+          option_d?: string
+          question_type?: string
+          question_type_cn?: string | null
+          sort_order?: number
+          stem?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_reading_article_questions_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_reading_articles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gaokao_reading_article_vocab: {
+        Row: {
+          article_id: string
+          category: string
+          created_at: string
+          example_cn: string | null
+          example_en: string | null
+          id: string
+          importance: number
+          meaning_cn: string
+          meaning_en: string | null
+          phonetic: string | null
+          pos: string | null
+          sort_order: number
+          word: string
+        }
+        Insert: {
+          article_id: string
+          category?: string
+          created_at?: string
+          example_cn?: string | null
+          example_en?: string | null
+          id?: string
+          importance?: number
+          meaning_cn: string
+          meaning_en?: string | null
+          phonetic?: string | null
+          pos?: string | null
+          sort_order?: number
+          word: string
+        }
+        Update: {
+          article_id?: string
+          category?: string
+          created_at?: string
+          example_cn?: string | null
+          example_en?: string | null
+          id?: string
+          importance?: number
+          meaning_cn?: string
+          meaning_en?: string | null
+          phonetic?: string | null
+          pos?: string | null
+          sort_order?: number
+          word?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_reading_article_vocab_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_reading_articles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gaokao_reading_articles: {
+        Row: {
+          argumentation_logic: string | null
+          body: string
+          cefr_level: string | null
+          core_question_types: string | null
+          created_at: string
+          difficulty: number
+          exam_strategies: string | null
+          genre: string
+          genre_label: string | null
+          grade_band: string
+          id: string
+          is_published: boolean
+          paragraph_structure: string | null
+          recommended_minutes: number
+          sort_order: number
+          source_label: string | null
+          specific_topic: string
+          sub_band: string | null
+          theme_context: string
+          title: string
+          topic_connection: string | null
+          topic_group: string
+          updated_at: string
+          useful_sentences: Json | null
+          word_count: number
+          writing_techniques: string | null
+        }
+        Insert: {
+          argumentation_logic?: string | null
+          body: string
+          cefr_level?: string | null
+          core_question_types?: string | null
+          created_at?: string
+          difficulty?: number
+          exam_strategies?: string | null
+          genre: string
+          genre_label?: string | null
+          grade_band: string
+          id?: string
+          is_published?: boolean
+          paragraph_structure?: string | null
+          recommended_minutes?: number
+          sort_order?: number
+          source_label?: string | null
+          specific_topic: string
+          sub_band?: string | null
+          theme_context: string
+          title: string
+          topic_connection?: string | null
+          topic_group: string
+          updated_at?: string
+          useful_sentences?: Json | null
+          word_count: number
+          writing_techniques?: string | null
+        }
+        Update: {
+          argumentation_logic?: string | null
+          body?: string
+          cefr_level?: string | null
+          core_question_types?: string | null
+          created_at?: string
+          difficulty?: number
+          exam_strategies?: string | null
+          genre?: string
+          genre_label?: string | null
+          grade_band?: string
+          id?: string
+          is_published?: boolean
+          paragraph_structure?: string | null
+          recommended_minutes?: number
+          sort_order?: number
+          source_label?: string | null
+          specific_topic?: string
+          sub_band?: string | null
+          theme_context?: string
+          title?: string
+          topic_connection?: string | null
+          topic_group?: string
+          updated_at?: string
+          useful_sentences?: Json | null
+          word_count?: number
+          writing_techniques?: string | null
+        }
+        Relationships: []
+      }
       gaokao_reading_passages: {
         Row: {
           body: string
@@ -659,6 +879,68 @@ export type Database = {
             columns: ["passage_id"]
             isOneToOne: false
             referencedRelation: "gaokao_reading_passages"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gaokao_reading_sessions: {
+        Row: {
+          annotations: Json | null
+          answers: Json
+          article_id: string
+          correct_count: number
+          created_at: string
+          duration_seconds: number | null
+          id: string
+          score_pct: number | null
+          started_at: string
+          status: string
+          submitted_at: string | null
+          total_questions: number
+          type_breakdown: Json | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          annotations?: Json | null
+          answers?: Json
+          article_id: string
+          correct_count?: number
+          created_at?: string
+          duration_seconds?: number | null
+          id?: string
+          score_pct?: number | null
+          started_at?: string
+          status?: string
+          submitted_at?: string | null
+          total_questions?: number
+          type_breakdown?: Json | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          annotations?: Json | null
+          answers?: Json
+          article_id?: string
+          correct_count?: number
+          created_at?: string
+          duration_seconds?: number | null
+          id?: string
+          score_pct?: number | null
+          started_at?: string
+          status?: string
+          submitted_at?: string | null
+          total_questions?: number
+          type_breakdown?: Json | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_reading_sessions_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_reading_articles"
             referencedColumns: ["id"]
           },
         ]

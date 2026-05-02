@@ -15,6 +15,7 @@ import {
 } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 import MasteryDashboard from "@/components/MasteryDashboard";
+import MemoryMatch from "@/components/MemoryMatch";
 
 type Vocab = {
   id: string;

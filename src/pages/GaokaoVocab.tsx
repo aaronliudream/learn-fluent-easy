@@ -365,6 +365,7 @@ function GroupList({
   onPick,
   onStartSrs,
   onStartRush,
+  onStartBento,
   onStartDict,
   onOpenDash,
 }: {
@@ -373,6 +374,7 @@ function GroupList({
   onPick: (i: number) => void;
   onStartSrs: () => void;
   onStartRush: () => void;
+  onStartBento: () => void;
   onStartDict: () => void;
   onOpenDash: () => void;
 }) {

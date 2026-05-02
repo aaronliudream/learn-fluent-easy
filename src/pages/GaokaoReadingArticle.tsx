@@ -269,7 +269,7 @@ export default function GaokaoReadingArticle() {
             className="prose prose-slate max-w-none space-y-4 leading-[1.85] text-foreground select-text"
             style={{ fontSize: `${fontScale}rem` }}
           >
-            {article.body.split("\n\n").map((p, i) => (
+            {displayBody.split("\n\n").map((p, i) => (
               <p key={i} className="text-justify">
                 <span className="mr-2 font-mono text-xs text-muted-foreground/40 select-none">{i + 1}</span>
                 {p}

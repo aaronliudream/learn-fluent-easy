@@ -7,6 +7,12 @@ import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { cn } from "@/lib/utils";
+import {
+  awardCoins,
+  evaluateMilestones,
+  type BadgeDef,
+} from "@/lib/coinsBadges";
+import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 
 type Vocab = {
   id: string;
@@ -368,9 +374,15 @@ function GroupList({
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-      <Link to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回高考英语
-      </Link>
+      <div className="mb-4 flex items-center justify-between">
+        <Link
+          to="/gaokao"
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="size-4" /> 返回高考英语
+        </Link>
+        <CoinPill />
+      </div>
       <PageHeader
         title="高考词汇 3500"
         subtitle={`共 ${groups.length} 组 · 每组 ${GROUP_SIZE} 词 · 闪卡 + 测试 + SRS 复习`}
@@ -457,12 +469,21 @@ function GroupSession({
 }) {
   const [phase, setPhase] = useState<Phase>("flashcard");
   const [stats, setStats] = useState({ correct: 0, total: 0 });
+  const [coinsRefreshKey, setCoinsRefreshKey] = useState(0);
+  const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
+  const [coinsAwarded, setCoinsAwarded] = useState(0);
 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
-      <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回组列表
-      </button>
+      <div className="mb-4 flex items-center justify-between">
+        <button
+          onClick={onExit}
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="size-4" /> 返回组列表
+        </button>
+        <CoinPill refreshKey={coinsRefreshKey} />
+      </div>
 
       <div className="mb-4 flex items-center gap-2 text-xs">
         <PhaseChip active={phase === "flashcard"} icon={<BookOpen className="size-3" />} label="闪卡" />
@@ -481,14 +502,38 @@ function GroupSession({
         <QuizPhase
           group={group}
           pool={pool}
-          onDone={(s) => {
-            setStats(s);
+          onDone={async (s) => {
+            setStats({ correct: s.correct, total: s.total });
+            setCoinsAwarded(s.score);
             setPhase("done");
+            // Award coins and check milestone badges
+            const totals = await awardCoins(s.score);
+            setCoinsRefreshKey((k) => k + 1);
+            const perfect = s.total > 0 && s.correct === s.total;
+            const newly = await evaluateMilestones({
+              bestStreak: s.bestStreak,
+              spellCorrect: s.spellCorrect,
+              perfectGroup: perfect,
+              totalEarned: totals?.total_earned ?? 0,
+              attempted: s.total,
+            });
+            if (newly.length > 0) setUnlockedBadges(newly);
           }}
         />
       )}
       {phase === "done" && (
-        <DonePanel stats={stats} onExit={onExit} onRetry={() => setPhase("flashcard")} />
+        <DonePanel
+          stats={stats}
+          coinsAwarded={coinsAwarded}
+          onExit={onExit}
+          onRetry={() => setPhase("flashcard")}
+        />
+      )}
+      {unlockedBadges.length > 0 && (
+        <BadgeUnlockOverlay
+          badges={unlockedBadges}
+          onDismiss={() => setUnlockedBadges([])}
+        />
       )}
     </main>
   );
@@ -602,6 +647,14 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
 }
 
 /* ---------- Phase 2: Quiz ---------- */
+export type QuizSessionResult = {
+  correct: number;
+  total: number;
+  bestStreak: number;
+  score: number;
+  spellCorrect: number;
+};
+
 function QuizPhase({
   group,
   pool,
@@ -609,7 +662,7 @@ function QuizPhase({
 }: {
   group: Vocab[];
   pool: Vocab[];
-  onDone: (s: { correct: number; total: number }) => void;
+  onDone: (s: QuizSessionResult) => void;
 }) {
   // Build initial queue: each word once, random kind
   const [queue, setQueue] = useState<QuizItem[]>(() => buildInitialQueue(group, pool));
@@ -619,6 +672,7 @@ function QuizPhase({
   const [bestStreak, setBestStreak] = useState(0);
   const [score, setScore] = useState(0);
   const [floatBadge, setFloatBadge] = useState<string | null>(null);
+  const [spellCorrect, setSpellCorrect] = useState(0);
 
   // Prefetch English meanings so en2en/en2word questions render instantly
   useEffect(() => {
@@ -635,7 +689,7 @@ function QuizPhase({
 
   if (!item) {
     // shouldn't happen mid-flight; finish
-    onDone(stats);
+    onDone({ ...stats, bestStreak, score, spellCorrect });
     return null;
   }
 
@@ -643,6 +697,10 @@ function QuizPhase({
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+
+    if (isCorrect && item.kind === "spell") {
+      setSpellCorrect((n) => n + 1);
+    }
 
     // Combo + score
     if (isCorrect) {
@@ -671,9 +729,21 @@ function QuizPhase({
     }
 
     if (pos + 1 >= nextQueue.length) {
+      const finalCorrect = stats.correct + (isCorrect ? 1 : 0);
+      const finalTotal = stats.total + 1;
+      const finalBestStreak = Math.max(
+        bestStreak,
+        isCorrect ? streak + 1 : streak,
+      );
+      const finalScore = score + (isCorrect ? 10 * comboMultiplier(streak + 1) : 0);
+      const finalSpell =
+        spellCorrect + (isCorrect && item.kind === "spell" ? 1 : 0);
       onDone({
-        correct: stats.correct + (isCorrect ? 1 : 0),
-        total: stats.total + 1,
+        correct: finalCorrect,
+        total: finalTotal,
+        bestStreak: finalBestStreak,
+        score: finalScore,
+        spellCorrect: finalSpell,
       });
     } else {
       setPos(pos + 1);
@@ -1030,10 +1100,12 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
 /* ---------- Done panel ---------- */
 function DonePanel({
   stats,
+  coinsAwarded,
   onExit,
   onRetry,
 }: {
   stats: { correct: number; total: number };
+  coinsAwarded?: number;
   onExit: () => void;
   onRetry: () => void;
 }) {
@@ -1045,7 +1117,12 @@ function DonePanel({
       <div className="mt-2 text-sm text-muted-foreground">
         正确率 <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
       </div>
-      <div className="mt-1 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>
+      {coinsAwarded !== undefined && coinsAwarded > 0 && (
+        <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
+          🪙 +{coinsAwarded} 金币
+        </div>
+      )}
+      <div className="mt-2 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>
       <div className="mt-6 grid grid-cols-2 gap-3">
         <Button variant="outline" onClick={onRetry}>
           <RotateCw className="mr-1 size-4" /> 再练一遍
@@ -1432,6 +1509,11 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   const [bestStreak, setBestStreak] = useState(0);
   const [score, setScore] = useState(0);
   const [floatBadge, setFloatBadge] = useState<string | null>(null);
+  const [spellCorrect, setSpellCorrect] = useState(0);
+  const [coinsRefreshKey, setCoinsRefreshKey] = useState(0);
+  const [coinsAwarded, setCoinsAwarded] = useState(0);
+  const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
+  const [milestonesEvaluated, setMilestonesEvaluated] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -1488,21 +1570,60 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   const item = queue[pos];
 
   if (done || !item) {
+    // Award coins + evaluate milestones once when the session ends.
+    if (!milestonesEvaluated) {
+      setMilestonesEvaluated(true);
+      (async () => {
+        const totals = await awardCoins(score);
+        setCoinsAwarded(score);
+        setCoinsRefreshKey((k) => k + 1);
+        const pctNum =
+          stats.total === 0
+            ? 0
+            : Math.round((stats.correct / stats.total) * 100);
+        const newly = await evaluateMilestones({
+          bestStreak,
+          spellCorrect,
+          perfectGroup: stats.total > 0 && stats.correct === stats.total,
+          srsAccuracyPct: pctNum,
+          totalEarned: totals?.total_earned ?? 0,
+          attempted: stats.total,
+        });
+        if (newly.length > 0) setUnlockedBadges(newly);
+      })();
+    }
     const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
-        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回
-        </button>
+        <div className="mb-4 flex items-center justify-between">
+          <button
+            onClick={onExit}
+            className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+          >
+            <ArrowLeft className="size-4" /> 返回
+          </button>
+          <CoinPill refreshKey={coinsRefreshKey} />
+        </div>
         <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
           <Brain className="mx-auto size-10 text-primary" />
           <div className="mt-3 text-xl font-extrabold">复习完成 🧠✨</div>
           <div className="mt-2 text-sm text-muted-foreground">
             正确率 <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
           </div>
+          {coinsAwarded > 0 && (
+            <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
+              🪙 +{coinsAwarded} 金币
+            </div>
+          )}
           <div className="mt-1 text-xs text-muted-foreground">下次复习时间已自动调整</div>
           <Button className="mt-6 w-full" onClick={onExit}>返回</Button>
         </div>
+        {unlockedBadges.length > 0 && (
+          <BadgeUnlockOverlay
+            badges={unlockedBadges}
+            onDismiss={() => setUnlockedBadges([])}
+          />
+        )}
       </main>
     );
   }
@@ -1511,6 +1632,10 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+
+    if (isCorrect && item.kind === "spell") {
+      setSpellCorrect((n) => n + 1);
+    }
 
     if (isCorrect) {
       const newStreak = streak + 1;
@@ -1544,9 +1669,15 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
-      <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 退出复习
-      </button>
+      <div className="mb-4 flex items-center justify-between">
+        <button
+          onClick={onExit}
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="size-4" /> 退出复习
+        </button>
+        <CoinPill refreshKey={coinsRefreshKey} />
+      </div>
       <div className="mb-4 flex items-center gap-2">
         <div className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
           <Brain className="size-3" /> 智能复习

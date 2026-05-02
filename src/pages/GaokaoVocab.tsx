@@ -2781,13 +2781,16 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
   function answer(choice: Vocab) {
     if (phase !== "playing") return;
     if (activeTileId == null) return;
+    // 立即朗读用户选中的单词（不等 setState 回调，确保零延迟）
+    const active = tiles.find((p) => p.id === activeTileId);
+    if (active && choice.id === active.vocab.id) {
+      void speakWord(choice);
+    }
     setTiles((prev) => {
       const active = prev.find((p) => p.id === activeTileId);
       if (!active) return prev;
       const correct = choice.id === active.vocab.id;
       if (correct) {
-        // 选对立即朗读单词，加深听觉记忆
-        void speakWord(active.vocab);
         setHits((h) => h + 1);
         setStreak((s) => {
           const ns = s + 1;
@@ -2953,9 +2956,9 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
 
   /* Playing */
   return (
-    <main className="mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-4">
+    <main className="mx-auto flex h-[100dvh] max-w-2xl flex-col px-4 pt-2 pb-3 overflow-hidden">
       {/* Top bar */}
-      <div className="mb-3 flex items-center justify-between gap-2">
+      <div className="mb-2 flex items-center justify-between gap-2">
         <button onClick={onExit} className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
           <ArrowLeft className="size-4" /> 退出
         </button>
@@ -2975,7 +2978,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
       </div>
 
       {/* Time progress bar */}
-      <div className="mb-3 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+      <div className="mb-2 h-1.5 w-full overflow-hidden rounded-full bg-muted">
         <div
           className={cn(
             "h-full transition-all duration-1000 ease-linear",
@@ -2989,7 +2992,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
       <div
         ref={containerRef}
         className="relative flex-1 overflow-hidden rounded-2xl border-2 border-fuchsia-500/30 bg-gradient-to-b from-purple-500/5 via-background to-fuchsia-500/5"
-        style={{ minHeight: "50vh" }}
+        style={{ minHeight: "40vh" }}
       >
         {/* Ground line */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-red-500/60 to-transparent" />
@@ -3000,7 +3003,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
             <div
               key={t.id}
               className={cn(
-                "absolute -translate-x-1/2 rounded-2xl border-2 px-3 py-2 text-center text-sm font-bold shadow-md whitespace-nowrap max-w-[80%] truncate",
+                "absolute -translate-x-1/2 rounded-2xl border-2 px-4 py-2.5 text-center text-lg font-extrabold shadow-md whitespace-nowrap max-w-[85%] truncate",
                 isActive
                   ? "border-fuchsia-500 bg-fuchsia-500/15 text-fuchsia-700 dark:text-fuchsia-300 ring-2 ring-fuchsia-500/40"
                   : "border-muted-foreground/30 bg-card/80 text-muted-foreground"
@@ -3037,12 +3040,12 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
       </div>
 
       {/* Choice buttons */}
-      <div className="mt-3 grid grid-cols-2 gap-2">
+      <div className="mt-2 grid grid-cols-2 gap-2 shrink-0">
         {choices.map((c) => (
           <button
             key={c.id}
             onClick={() => answer(c)}
-            className="rounded-2xl border-2 border-border bg-card px-3 py-3 text-base font-bold shadow-sm transition active:scale-95 hover:border-fuchsia-500 hover:bg-fuchsia-500/5"
+            className="rounded-2xl border-2 border-border bg-card px-3 py-4 text-xl font-extrabold shadow-sm transition active:scale-95 hover:border-fuchsia-500 hover:bg-fuchsia-500/5"
           >
             {c.word}
           </button>

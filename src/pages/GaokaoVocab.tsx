@@ -70,8 +70,25 @@ function comboLabel(streak: number): string | null {
 }
 
 type Phase = "flashcard" | "quiz" | "done";
-type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze" | "en2en" | "en2word" | "spell";
-type QuizItem = { vocab: Vocab; kind: QuizKind; choices: Vocab[] };
+type QuizKind =
+  | "en2cn"
+  | "cn2en"
+  | "listen"
+  | "cloze"
+  | "en2en"
+  | "en2word"
+  | "spell"
+  | "syn"
+  | "pos";
+type SynPack = { correct: string; distractors: string[] };
+type QuizItem = {
+  vocab: Vocab;
+  kind: QuizKind;
+  choices: Vocab[];
+  // For "syn" only: 4 string options (correct + 3 distractors), already shuffled.
+  synOptions?: string[];
+  synCorrect?: string;
+};
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -86,6 +103,9 @@ function pickKind(v: Vocab): QuizKind {
   const kinds: QuizKind[] = ["en2cn", "cn2en", "spell"];
   if (v.example_en) kinds.push("listen", "cloze");
   if (v.meaning_en) kinds.push("en2en", "en2word");
+  if (v.pos) kinds.push("pos");
+  // "syn" is always allowed — synonyms are AI-generated on demand.
+  kinds.push("syn");
   return kinds[Math.floor(Math.random() * kinds.length)];
 }
 

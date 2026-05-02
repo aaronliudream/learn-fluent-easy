@@ -17,7 +17,39 @@ type Vocab = {
   example_en: string | null;
   example_cn: string | null;
   star_level: number | null;
+  accent: "UK" | "US" | "BOTH" | null;
 };
+/* ---------- Accent helpers ---------- */
+function speakWord(v: Vocab) {
+  // Some words are stored with slashes (e.g. "a/an"); only speak the first form.
+  const text = v.word.split("/")[0];
+  const acc = v.accent === "UK" || v.accent === "US" ? v.accent : undefined;
+  return speak(text, acc ? { accent: acc } : undefined);
+}
+
+function speakExample(v: Vocab) {
+  if (!v.example_en) return Promise.resolve();
+  const acc = v.accent === "UK" || v.accent === "US" ? v.accent : undefined;
+  return speak(v.example_en, acc ? { accent: acc } : undefined);
+}
+
+function AccentBadge({ accent }: { accent: Vocab["accent"] }) {
+  if (accent !== "UK" && accent !== "US") return null;
+  const isUS = accent === "US";
+  return (
+    <span
+      className={cn(
+        "ml-2 inline-flex items-center rounded-md border px-1.5 py-0.5 text-[10px] font-bold tracking-wide",
+        isUS
+          ? "border-blue-500/40 bg-blue-500/10 text-blue-600 dark:text-blue-400"
+          : "border-rose-500/40 bg-rose-500/10 text-rose-600 dark:text-rose-400"
+      )}
+      title={isUS ? "美式发音" : "英式发音"}
+    >
+      {isUS ? "🇺🇸 US" : "🇬🇧 UK"}
+    </span>
+  );
+}
 
 const GROUP_SIZE = 20;
 
@@ -200,7 +232,7 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
   const v = group[idx];
 
   useEffect(() => {
-    if (v) speak(v.word);
+    if (v) speakWord(v);
     setFlipped(false);
   }, [idx, v?.id]);
 
@@ -222,12 +254,17 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
         onClick={() => setFlipped((f) => !f)}
       >
         <button
-          onClick={(e) => { e.stopPropagation(); speak(v.word); }}
+          onClick={(e) => { e.stopPropagation(); speakWord(v); }}
           className="mx-auto inline-flex items-center gap-2 text-3xl font-extrabold tracking-tight"
         >
           {v.word} <Volume2 className="size-5 text-primary" />
         </button>
-        {v.phonetic && <div className="mt-1 text-sm text-muted-foreground">{v.phonetic}</div>}
+        {v.phonetic && (
+          <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
+            {v.phonetic}
+            <AccentBadge accent={v.accent} />
+          </div>
+        )}
         {v.pos && <div className="mt-1 text-xs text-muted-foreground">{v.pos}</div>}
 
         {flipped ? (
@@ -235,7 +272,7 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
             <div className="rounded-xl bg-muted/50 p-3 text-base font-medium">{v.meaning_cn}</div>
             {v.example_en && (
               <button
-                onClick={(e) => { e.stopPropagation(); speak(v.example_en!); }}
+                onClick={(e) => { e.stopPropagation(); speakExample(v); }}
                 className="block w-full rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
               >
                 <div className="flex items-start gap-2">
@@ -345,7 +382,13 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
   // Auto-play audio for "listen" type
   useEffect(() => {
     if (item.kind === "listen" && v.example_en) {
-      const t = setTimeout(() => speak(v.example_en!), 200);
+      const t = setTimeout(() => speakExample(v), 200);
+      return () => clearTimeout(t);
+    }
+    // Auto-play the word for English→Chinese & cloze questions so the
+    // student hears the pronunciation as soon as the question appears.
+    if (item.kind === "en2cn" || item.kind === "cloze") {
+      const t = setTimeout(() => speakWord(v), 200);
       return () => clearTimeout(t);
     }
   }, [item.kind, v.id]);
@@ -357,12 +400,18 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
       setClozeChecked(ok);
       if (ok) {
         // ✅ User-required: speak full sentence on correct
-        speak(v.example_en!);
+        speakExample(v);
       }
     };
     return (
       <div className="rounded-3xl border bg-card p-6 shadow-tile">
-        <div className="text-xs uppercase tracking-wider text-muted-foreground">例句填空</div>
+        <div className="flex items-center justify-between">
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">例句填空</div>
+          <button onClick={() => speakWord(v)} className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs text-primary">
+            <Volume2 className="size-3" /> 听单词
+            <AccentBadge accent={v.accent} />
+          </button>
+        </div>
         <div className="mt-2 text-sm text-muted-foreground">{v.meaning_cn} · {v.pos}</div>
         <div className="mt-4 rounded-xl bg-muted/40 p-4 text-base leading-relaxed">{masked}</div>
         <input
@@ -390,7 +439,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
               {clozeChecked ? "✓ 正确！正在朗读完整例句…" : `✗ 正确答案：${answer}`}
             </div>
             <button
-              onClick={() => speak(v.example_en!)}
+              onClick={() => speakExample(v)}
               className="flex w-full items-start gap-2 rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
             >
               <Volume2 className="mt-0.5 size-4 shrink-0 text-primary" />
@@ -415,12 +464,17 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
         <>
           <div className="text-xs uppercase tracking-wider text-muted-foreground">选择中文释义</div>
           <button
-            onClick={() => speak(v.word)}
+            onClick={() => speakWord(v)}
             className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
           >
             {v.word} <Volume2 className="size-5 text-primary" />
           </button>
-          {v.phonetic && <div className="mt-1 text-sm text-muted-foreground">{v.phonetic}</div>}
+          {v.phonetic && (
+            <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
+              {v.phonetic}
+              <AccentBadge accent={v.accent} />
+            </div>
+          )}
         </>
       );
     }
@@ -438,7 +492,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
       <>
         <div className="text-xs uppercase tracking-wider text-muted-foreground">听例句选单词</div>
         <button
-          onClick={() => speak(v.example_en!)}
+          onClick={() => speakExample(v)}
           className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-3 text-primary"
         >
           <Volume2 className="size-5" /> 再听一次
@@ -457,7 +511,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     if (picked) return;
     setPicked(c.id);
     const ok = c.id === v.id;
-    if (ok && item.kind === "cn2en") speak(v.word);
+    if (ok && item.kind === "cn2en") speakWord(v);
     setTimeout(() => onResult(ok), 900);
   };
 

@@ -1,0 +1,1 @@
+ALTER TABLE public.gaokao_vocab ADD COLUMN IF NOT EXISTS accent text DEFAULT 'BOTH';

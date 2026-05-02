@@ -126,13 +126,19 @@ serve(async (req) => {
   }
 
   try {
-    const { text, voiceId, speed } = await req.json();
+    const { text, voiceId, speed, accent } = await req.json();
     if (!text) {
       return json({ error: "text is required" }, 400);
     }
 
     const requestedVoice = typeof voiceId === "string" ? voiceId : "alloy";
-    const selectedVoice = OPENAI_VOICES.has(requestedVoice) ? requestedVoice : "alloy";
+    let selectedVoice = OPENAI_VOICES.has(requestedVoice) ? requestedVoice : "alloy";
+
+    // Accent override: force a UK or US voice when caller specifies one.
+    // OpenAI's `fable` is the British-leaning voice; `alloy` is General American.
+    const accentUpper = typeof accent === "string" ? accent.toUpperCase() : "";
+    if (accentUpper === "UK") selectedVoice = "fable";
+    else if (accentUpper === "US") selectedVoice = "alloy";
     // Both providers support roughly 0.5–2.0; clamp to a friendly learning range.
     const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
     const safeText = String(text).slice(0, 4000);

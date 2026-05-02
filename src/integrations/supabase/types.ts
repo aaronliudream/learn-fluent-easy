@@ -481,6 +481,7 @@ export type Database = {
       }
       gaokao_vocab: {
         Row: {
+          accent: string | null
           cet_level: string | null
           created_at: string
           example_cn: string | null
@@ -495,6 +496,7 @@ export type Database = {
           word: string
         }
         Insert: {
+          accent?: string | null
           cet_level?: string | null
           created_at?: string
           example_cn?: string | null
@@ -509,6 +511,7 @@ export type Database = {
           word: string
         }
         Update: {
+          accent?: string | null
           cet_level?: string | null
           created_at?: string
           example_cn?: string | null

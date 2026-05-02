@@ -1171,6 +1171,21 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
     else setIdx(idx + 1);
   };
 
+  // ⌨️ 回车键：继续下一个 / 进入测试
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        next();
+      } else if (e.key === " ") {
+        e.preventDefault();
+        setFlipped((f) => !f);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [idx, group.length]);
+
   return (
     <div>
       <div className="mb-3 flex items-center justify-between text-xs text-muted-foreground">

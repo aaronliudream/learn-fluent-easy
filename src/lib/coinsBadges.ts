@@ -81,6 +81,30 @@ export const BADGE_CATALOG: Record<string, BadgeDef> = {
     title: "便当极速",
     description: "Word Bento 60 秒内通关",
   },
+  quest_streak_3: {
+    code: "quest_streak_3",
+    emoji: "🔥",
+    title: "三日连击",
+    description: "Word Quest 连续 3 天通关",
+  },
+  quest_streak_7: {
+    code: "quest_streak_7",
+    emoji: "🌟",
+    title: "七日之星",
+    description: "Word Quest 连续 7 天通关",
+  },
+  quest_streak_30: {
+    code: "quest_streak_30",
+    emoji: "🏆",
+    title: "月度王者",
+    description: "Word Quest 连续 30 天通关",
+  },
+  quest_perfect: {
+    code: "quest_perfect",
+    emoji: "💎",
+    title: "完美主义",
+    description: "Word Quest 单日 6 关全对零提示",
+  },
   dictation_pro: {
     code: "dictation_pro",
     emoji: "🎧",

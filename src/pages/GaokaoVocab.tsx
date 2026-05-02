@@ -2786,6 +2786,8 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
       if (!active) return prev;
       const correct = choice.id === active.vocab.id;
       if (correct) {
+        // 选对立即朗读单词，加深听觉记忆
+        void speakWord(active.vocab);
         setHits((h) => h + 1);
         setStreak((s) => {
           const ns = s + 1;

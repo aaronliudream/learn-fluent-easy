@@ -1,0 +1,2 @@
+DELETE FROM public.gaokao_cloze_blanks WHERE passage_id IN (SELECT id FROM public.gaokao_cloze_passages WHERE passage_no BETWEEN 1 AND 5 AND source_book='g1_basic');
+DELETE FROM public.gaokao_cloze_passages WHERE passage_no BETWEEN 1 AND 5 AND source_book='g1_basic';

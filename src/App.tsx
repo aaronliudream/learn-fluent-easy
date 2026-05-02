@@ -35,6 +35,7 @@ const Talk = lazy(() => import("./pages/Talk.tsx"));
 const Gaokao = lazy(() => import("./pages/Gaokao.tsx"));
 const GaokaoGrammar = lazy(() => import("./pages/GaokaoGrammar.tsx"));
 const GaokaoGrammarPoint = lazy(() => import("./pages/GaokaoGrammarPoint.tsx"));
+const GaokaoGrammarQuiz = lazy(() => import("./pages/GaokaoGrammarQuiz.tsx"));
 const GaokaoReading = lazy(() => import("./pages/GaokaoReading.tsx"));
 const GaokaoReadingPlay = lazy(() => import("./pages/GaokaoReadingPlay.tsx"));
 const GaokaoReadingArticle = lazy(() => import("./pages/GaokaoReadingArticle.tsx"));
@@ -104,6 +105,8 @@ const App = () => (
           <Route path="/gaokao/diagnostic" element={<GaokaoDiagnostic />} />
           <Route path="/gaokao/grammar" element={<GaokaoGrammar />} />
           <Route path="/gaokao/grammar/:slug" element={<GaokaoGrammarPoint />} />
+          <Route path="/gaokao/grammar/:slug/quiz" element={<GaokaoGrammarQuiz />} />
+          <Route path="/gaokao/grammar/:slug/quiz/:index" element={<GaokaoGrammarQuiz />} />
           <Route path="/gaokao/reading" element={<GaokaoReading />} />
           <Route path="/gaokao/reading/knowledge" element={<GaokaoReadingKnowledge />} />
           <Route path="/gaokao/reading/article/:id" element={<GaokaoReadingArticle />} />

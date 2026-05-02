@@ -1295,13 +1295,8 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       setDueWords(shuffled);
       // Prefetch English meanings for SRS queue
       ensureMeaningsEn(shuffled);
-      setQueue(
-        shuffled.map((v) => ({
-          vocab: v,
-          kind: pickKind(v),
-          choices: buildChoices(v, pool),
-        }))
-      );
+      ensureSynonyms(shuffled);
+      setQueue(shuffled.map((v) => buildItem(v, pool)));
       setLoading(false);
     })();
   }, [pool]);
@@ -1374,14 +1369,9 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
     let nextQueue = queue;
     if (!isCorrect) {
-      const newKind = pickKind(item.vocab);
       const reinsertIdx = Math.min(queue.length, pos + 3);
       nextQueue = [...queue];
-      nextQueue.splice(reinsertIdx, 0, {
-        vocab: item.vocab,
-        kind: newKind,
-        choices: buildChoices(item.vocab, pool),
-      });
+      nextQueue.splice(reinsertIdx, 0, buildItem(item.vocab, pool));
       setQueue(nextQueue);
     }
 

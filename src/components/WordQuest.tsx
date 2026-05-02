@@ -9,8 +9,8 @@ import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 
 /* ============================================================
    Word Quest 单词奇旅
-   - 每天系统从词池里基于日期 hash 选 1 个"今日单词"（全平台同款）
-   - 玩家打 6 关：听音/释义/例句/同义/拼写/BOSS
+   - 每天系统从词池里基于日期 hash 选 3 个"今日单词"（全平台同款）
+   - 每词打 6 关：听音/释义/例句/同义/拼写/BOSS（共 18 关）
    - 每天每位用户只能挑战 1 次
    - 通关后展示分享卡（emoji 战绩）+ streak / 排行榜
    ============================================================ */
@@ -57,14 +57,30 @@ function hashStr(s: string) {
   for (let i = 0; i < s.length; i++) h = ((h << 5) + h) ^ s.charCodeAt(i);
   return Math.abs(h);
 }
-function pickDailyVocab(pool: Vocab[]): Vocab | null {
-  if (!pool.length) return null;
-  // Prefer words with example_en + meaning_cn, with at least 4 chars (避免 a/an 等)
+function pickDailyVocabs(pool: Vocab[], n = 3): Vocab[] {
+  if (!pool.length) return [];
   const eligible = pool.filter(
     (v) => v.example_en && v.example_en.length > 12 && v.word.length >= 4 && /^[a-zA-Z]+$/.test(v.word)
   );
   const candidates = eligible.length > 50 ? eligible : pool;
-  return candidates[hashStr(todayKey()) % candidates.length];
+  if (!candidates.length) return [];
+  const baseHash = hashStr(todayKey());
+  const picked: Vocab[] = [];
+  const used = new Set<string>();
+  // Spread the 3 picks across the candidate space using prime offsets to avoid duplicates
+  const offsets = [0, 7919, 15485];
+  for (let i = 0; i < n; i++) {
+    for (let attempt = 0; attempt < candidates.length; attempt++) {
+      const idx = (baseHash + offsets[i % offsets.length] + attempt * 101) % candidates.length;
+      const v = candidates[idx];
+      if (!used.has(v.id)) {
+        used.add(v.id);
+        picked.push(v);
+        break;
+      }
+    }
+  }
+  return picked;
 }
 
 function speakWord(v: Vocab) {
@@ -82,6 +98,9 @@ const STAGES = [
   { n: 5, emoji: "🔤", name: "字母重排", hint: "将打乱的字母拼成正确单词" },
   { n: 6, emoji: "⏱", name: "BOSS 战", hint: "30 秒内综合作答" },
 ];
+const STAGES_PER_WORD = STAGES.length;
+const WORDS_PER_QUEST = 3;
+const TOTAL_STAGES = STAGES_PER_WORD * WORDS_PER_QUEST; // 18
 
 function shuffleStr(s: string) {
   const a = s.split("");
@@ -107,8 +126,8 @@ export default function WordQuest({
   onExit: () => void;
 }) {
   const [phase, setPhase] = useState<"loading" | "intro" | "playing" | "done" | "already">("loading");
-  const [target, setTarget] = useState<Vocab | null>(null);
-  const [stage, setStage] = useState(0); // 0..5 (=>6 关)
+  const [targets, setTargets] = useState<Vocab[]>([]);
+  const [stage, setStage] = useState(0); // 0..17 (=>18 关 = 3 词 × 6 关)
   const [results, setResults] = useState<StageResult[]>([]);
   const [stageStartedAt, setStageStartedAt] = useState(0);
   const [questStartedAt, setQuestStartedAt] = useState(0);
@@ -119,11 +138,16 @@ export default function WordQuest({
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [shareCopied, setShareCopied] = useState(false);
 
+  // 当前关的 word index 和 sub-stage
+  const wordIdx = Math.floor(stage / STAGES_PER_WORD);
+  const subStage = stage % STAGES_PER_WORD;
+  const target = targets[wordIdx] ?? null;
+
   // --- Bootstrap: pick daily, check today's status ---
   useEffect(() => {
     (async () => {
-      const v = pickDailyVocab(pool);
-      setTarget(v);
+      const vs = pickDailyVocabs(pool, WORDS_PER_QUEST);
+      setTargets(vs);
       // streak
       const { data } = await supabase.rpc("get_word_quest_streak");
       const s = (data?.[0] ?? null) as StreakStats | null;
@@ -139,7 +163,7 @@ export default function WordQuest({
   }, [pool.length]);
 
   function start() {
-    if (!target) return;
+    if (!targets.length) return;
     setPhase("playing");
     setStage(0);
     setResults([]);
@@ -157,7 +181,7 @@ export default function WordQuest({
 
     // brief pause then advance
     setTimeout(() => {
-      if (stage + 1 >= 6) {
+      if (stage + 1 >= TOTAL_STAGES) {
         finish(nextResults);
       } else {
         setStage(stage + 1);
@@ -167,15 +191,15 @@ export default function WordQuest({
   }
 
   async function finish(finalResults: StageResult[]) {
-    if (!target) return;
+    if (!targets.length) return;
     const totalDuration = Date.now() - questStartedAt;
     const passed = finalResults.filter((r) => r.correct).length;
-    const perfect = passed === 6 && hintsUsed === 0;
+    const perfect = passed === TOTAL_STAGES && hintsUsed === 0;
 
     // Score: 100 base/stage * combo bonus, minus hint penalty
     let score = passed * 100;
-    if (perfect) score += 200;
-    if (totalDuration < 90_000) score += 100;
+    if (perfect) score += 500;
+    if (totalDuration < 240_000) score += 200;
     score -= hintsUsed * 30;
     score = Math.max(0, score);
 
@@ -187,8 +211,8 @@ export default function WordQuest({
         await supabase.from("word_quest_attempts").insert({
           user_id: u.user.id,
           quest_date: todayKey(),
-          target_word: target.word,
-          target_vocab_id: target.id,
+          target_word: targets.map((t) => t.word).join(", "),
+          target_vocab_id: targets[0].id,
           stages_passed: passed,
           stage_results: finalResults,
           total_duration_ms: totalDuration,
@@ -205,8 +229,8 @@ export default function WordQuest({
           best_combo: passed,
           duration_ms: totalDuration,
           hits: passed,
-          misses: 6 - passed,
-          metadata: { perfect, hints_used: hintsUsed },
+          misses: TOTAL_STAGES - passed,
+          metadata: { perfect, hints_used: hintsUsed, words: targets.map((t) => t.word) },
         });
       }
     } catch (e) {
@@ -252,10 +276,11 @@ export default function WordQuest({
   }
 
   function handleShare() {
-    if (!target) return;
+    if (!targets.length) return;
     const summary = emojiSummary(results);
     const dur = (results.reduce((s, r) => s + r.latency_ms, 0) / 1000).toFixed(1);
-    const text = `🗺️ Word Quest ${todayKey()}\n${summary}\n⏱ ${dur}s · 🔥 连续 ${streak?.current_streak ?? 0} 天\n${window.location.origin}/gaokao/vocab?mode=quest`;
+    const wordsLine = targets.map((t) => t.word).join(" · ");
+    const text = `🗺️ Word Quest ${todayKey()}\n${wordsLine}\n${summary}\n⏱ ${dur}s · 🔥 连续 ${streak?.current_streak ?? 0} 天\n${window.location.origin}/gaokao/vocab?mode=quest`;
     navigator.clipboard?.writeText(text).then(() => {
       setShareCopied(true);
       setTimeout(() => setShareCopied(false), 2000);
@@ -271,7 +296,7 @@ export default function WordQuest({
     );
   }
 
-  if (!target) {
+  if (!targets.length) {
     return (
       <main className="mx-auto max-w-xl p-8 text-center">
         <p className="text-sm text-muted-foreground">词库不足，无法开启今日挑战</p>
@@ -320,14 +345,14 @@ export default function WordQuest({
             <div className="text-4xl">🗺️</div>
             <div>
               <h1 className="text-2xl font-extrabold">Word Quest 单词奇旅</h1>
-              <p className="text-sm text-muted-foreground">每日 1 词 · 6 关闯关 · 全球同款</p>
+              <p className="text-sm text-muted-foreground">每日 3 词 · 每词 6 关 · 共 18 关</p>
             </div>
           </div>
 
           <StreakStrip streak={streak} className="mt-5" />
 
           <div className="mt-5 rounded-2xl border bg-card/60 p-4">
-            <div className="text-[11px] uppercase tracking-wider text-muted-foreground">今日单词将通过 6 个不同关卡考察</div>
+            <div className="text-[11px] uppercase tracking-wider text-muted-foreground">每个单词将通过 6 个不同关卡考察</div>
             <ol className="mt-2 grid grid-cols-2 gap-2 text-xs">
               {STAGES.map((s) => (
                 <li key={s.n} className="flex items-center gap-2 rounded-lg bg-background px-2 py-1.5">
@@ -336,6 +361,9 @@ export default function WordQuest({
                 </li>
               ))}
             </ol>
+            <div className="mt-2 text-[11px] text-muted-foreground">
+              📚 共 <b className="text-foreground">3 个单词</b>，连续打完一个再切下一个 · 总 <b className="text-foreground">18 关</b>
+            </div>
           </div>
 
           <div className="mt-4 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-xs text-amber-800 dark:text-amber-300">
@@ -372,14 +400,20 @@ export default function WordQuest({
           </div>
           <div className={cn(
             "rounded-3xl border-2 p-6 text-center shadow-tile",
-            passed === 6 ? "border-amber-500/50 bg-gradient-to-br from-amber-500/15 to-orange-500/5" : "border-indigo-500/40 bg-gradient-to-br from-indigo-500/15 to-sky-500/5"
+            passed === TOTAL_STAGES ? "border-amber-500/50 bg-gradient-to-br from-amber-500/15 to-orange-500/5" : "border-indigo-500/40 bg-gradient-to-br from-indigo-500/15 to-sky-500/5"
           )}>
-            <div className="text-5xl">{passed === 6 ? "🏆" : passed >= 4 ? "🌟" : "📚"}</div>
+            <div className="text-5xl">{passed === TOTAL_STAGES ? "🏆" : passed >= 12 ? "🌟" : "📚"}</div>
             <h2 className="mt-3 text-xl font-extrabold">
-              {passed === 6 ? "完美通关！" : `通关 ${passed}/6 关`}
+              {passed === TOTAL_STAGES ? "完美通关！" : `通关 ${passed}/${TOTAL_STAGES} 关`}
             </h2>
-            <div className="mt-1 text-sm text-muted-foreground">今日单词 · {target.word}</div>
-            <div className="mt-1 text-xs text-muted-foreground italic">{target.meaning_cn}</div>
+            <div className="mt-1 text-sm text-muted-foreground">
+              今日 3 词 · {targets.map((t) => t.word).join(" · ")}
+            </div>
+            <div className="mt-1 flex flex-wrap justify-center gap-x-3 gap-y-0.5 text-[11px] text-muted-foreground italic">
+              {targets.map((t) => (
+                <span key={t.id}><b className="not-italic text-foreground">{t.word}</b> {t.meaning_cn}</span>
+              ))}
+            </div>
 
             <div className="mt-4 inline-flex items-center gap-2 rounded-full border bg-card px-4 py-2 text-2xl tracking-widest">
               {emojiSummary(results)}
@@ -417,6 +451,7 @@ export default function WordQuest({
   }
 
   /* ---------- Playing ---------- */
+  if (!target) return null;
   return (
     <main className="mx-auto flex min-h-screen max-w-xl flex-col px-4 py-4">
       <div className="mb-3 flex items-center justify-between gap-2">
@@ -424,26 +459,34 @@ export default function WordQuest({
           <ArrowLeft className="size-4" /> 退出（视为放弃）
         </button>
         <div className="text-xs font-bold text-muted-foreground">
-          {STAGES[stage].emoji} 第 {stage + 1}/6 关
+          📚 第 {wordIdx + 1}/{WORDS_PER_QUEST} 词 · {STAGES[subStage].emoji} 第 {subStage + 1}/{STAGES_PER_WORD} 关
         </div>
       </div>
 
-      {/* Stage progress */}
-      <div className="mb-4 flex gap-1">
-        {STAGES.map((s, i) => {
-          const r = results[i];
-          return (
-            <div key={s.n} className={cn(
-              "h-2 flex-1 rounded-full transition-all",
-              r ? (r.correct ? "bg-emerald-500" : "bg-red-500") :
-              i === stage ? "bg-indigo-500" : "bg-muted"
-            )} />
-          );
-        })}
+      {/* 18-stage progress: 3 groups of 6, separated by gap */}
+      <div className="mb-4 flex gap-2">
+        {Array.from({ length: WORDS_PER_QUEST }).map((_, gi) => (
+          <div key={gi} className="flex flex-1 gap-0.5">
+            {Array.from({ length: STAGES_PER_WORD }).map((__, si) => {
+              const i = gi * STAGES_PER_WORD + si;
+              const r = results[i];
+              return (
+                <div
+                  key={si}
+                  className={cn(
+                    "h-2 flex-1 rounded-full transition-all",
+                    r ? (r.correct ? "bg-emerald-500" : "bg-red-500") :
+                    i === stage ? "bg-indigo-500" : "bg-muted"
+                  )}
+                />
+              );
+            })}
+          </div>
+        ))}
       </div>
 
       <StagePlayer
-        stage={stage}
+        stage={subStage}
         target={target}
         pool={pool}
         onResult={recordStage}

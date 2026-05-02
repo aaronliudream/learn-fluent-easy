@@ -444,7 +444,7 @@ function GroupList({
       </div>
       <PageHeader
         title="高考词汇 3500"
-        subtitle={`共 ${groups.length} 组 · 每组 ${GROUP_SIZE} 词 · 闪卡 + 测试 + SRS 复习`}
+        subtitle={`${pool.length} 词 · 按词频/难度/主题科学分类 · 不再字母排序`}
       />
 
       {/* SRS Smart Review Card — top priority entry */}

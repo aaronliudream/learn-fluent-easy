@@ -748,6 +748,13 @@ function QuizPhase({
   const [score, setScore] = useState(0);
   const [floatBadge, setFloatBadge] = useState<string | null>(null);
   const [spellCorrect, setSpellCorrect] = useState(0);
+  const questionShownAtRef = useRef<number>(Date.now());
+  const [levelUps, setLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+
+  // Reset stopwatch every time we land on a new question
+  useEffect(() => {
+    questionShownAtRef.current = Date.now();
+  }, [pos]);
 
   // Prefetch English meanings so en2en/en2word questions render instantly
   useEffect(() => {
@@ -770,8 +777,17 @@ function QuizPhase({
 
   const handleResult = async (isCorrect: boolean) => {
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
+    const latencyMs = Date.now() - questionShownAtRef.current;
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
-    await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+    const update = await bumpVocabMastery({
+      vocabId: item.vocab.id,
+      kind: item.kind,
+      isCorrect,
+      latencyMs,
+    });
+    if (update && update.newLevel > update.prevLevel) {
+      setLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);
+    }
 
     if (isCorrect && item.kind === "spell") {
       setSpellCorrect((n) => n + 1);

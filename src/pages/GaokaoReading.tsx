@@ -380,8 +380,8 @@ export default function GaokaoReading() {
           <div className="relative mt-5 pt-5 border-t border-border/60">
             <div className="flex items-center gap-1.5 mb-2">
               <Wand2 className="size-4 text-violet-500" />
-              <h3 className="font-bold text-sm">为你定制 · 自适应推荐</h3>
-              <span className="text-[10px] text-muted-foreground">±50L 最佳学习区</span>
+              <h3 className="font-bold text-sm">挑给你的 · 难度刚好</h3>
+              <span className="text-[10px] text-muted-foreground">不太难也不太简单</span>
             </div>
             <div className="grid sm:grid-cols-3 gap-2">
               {recs.slice(0, 3).map((r) => (

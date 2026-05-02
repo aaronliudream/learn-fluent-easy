@@ -405,6 +405,13 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
     setFlipped(false);
   }, [idx, v?.id]);
 
+  // Prefetch English meanings for the whole group once
+  useEffect(() => {
+    if (group.length > 0) ensureMeaningsEn(group);
+  }, [group]);
+
+  const meaningEn = useMeaningEn(v);
+
   if (!v) return null;
 
   const next = () => {
@@ -439,6 +446,16 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
         {flipped ? (
           <div className="mt-6 space-y-3 text-left">
             <div className="rounded-xl bg-muted/50 p-3 text-base font-medium">{v.meaning_cn}</div>
+            <div className="rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm">
+              <div className="mb-1 text-[10px] font-bold uppercase tracking-wider text-primary">
+                English definition
+              </div>
+              {meaningEn ? (
+                <div className="italic">{meaningEn}</div>
+              ) : (
+                <div className="text-muted-foreground">Loading…</div>
+              )}
+            </div>
             {v.example_en && (
               <button
                 onClick={(e) => { e.stopPropagation(); speakExample(v); }}

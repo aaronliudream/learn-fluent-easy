@@ -350,12 +350,14 @@ function GroupList({
   onPick,
   onStartSrs,
   onStartRush,
+  onStartDict,
 }: {
   groups: Vocab[][];
   pool: Vocab[];
   onPick: (i: number) => void;
   onStartSrs: () => void;
   onStartRush: () => void;
+  onStartDict: () => void;
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);
@@ -470,6 +472,36 @@ function GroupList({
             </div>
           </div>
           <ChevronRight className="size-5 text-fuchsia-500" />
+        </div>
+      </button>
+
+      {/* Dictation entry */}
+      <button
+        onClick={onStartDict}
+        disabled={pool.filter((v) => v.example_en).length < 5}
+        className={cn(
+          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
+          pool.filter((v) => v.example_en).length >= 5
+            ? "border-emerald-500/60 bg-gradient-to-br from-emerald-500/15 via-teal-500/10 to-transparent hover:border-emerald-500 hover:shadow-md"
+            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}
+      >
+        <div className="flex items-center gap-4">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
+            <Headphones className="size-7" />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-base font-extrabold">🎧 句子听写</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                NEW
+              </span>
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              听例句 → 输入 → AI 评分纠错 + 金币奖励
+            </div>
+          </div>
+          <ChevronRight className="size-5 text-emerald-500" />
         </div>
       </button>
 

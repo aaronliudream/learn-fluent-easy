@@ -95,7 +95,7 @@ const STATUS_FILTERS: { k: ArticleStatus | "all"; label: string; dot: string }[]
 ];
 
 export default function GaokaoReading() {
-  const [tab, setTab] = useState<GradeBand>("g3");
+  const [tab, setTab] = useState<GradeBand | null>(null);
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [profile, setProfile] = useState<LexileProfile | null>(null);
@@ -190,7 +190,7 @@ export default function GaokaoReading() {
 
   // ====== 当前 tab 文章 + 筛选 + 排序 ======
   const current = useMemo(() => {
-    const list = grouped.get(tab) ?? [];
+    const list = tab ? (grouped.get(tab) ?? []) : [];
     const q = search.trim().toLowerCase();
     return list
       .filter((a) => {
@@ -207,7 +207,7 @@ export default function GaokaoReading() {
       });
   }, [grouped, tab, sessions, statusFilter, search]);
 
-  const currentBand = BANDS.find((b) => b.id === tab)!;
+  const currentBand = tab ? BANDS.find((b) => b.id === tab)! : null;
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-8">
@@ -364,7 +364,7 @@ export default function GaokaoReading() {
           const s = bandStats[b.id] ?? { total: 0, mastered: 0, done: 0 };
           const pct = s.total ? Math.round((s.mastered / s.total) * 100) : 0;
           return (
-            <button key={b.id} onClick={() => setTab(b.id)}
+            <button key={b.id} onClick={() => setTab(active ? null : b.id)}
               className={cn(
                 "relative overflow-hidden rounded-2xl border p-3 text-left transition group",
                 active ? `bg-gradient-to-br ${b.gradient} text-white border-transparent shadow-lg ring-2 ${b.ring}` : "bg-card hover:border-primary/40 hover:-translate-y-0.5"

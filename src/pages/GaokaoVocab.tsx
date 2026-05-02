@@ -19,6 +19,7 @@ import MemoryMatch from "@/components/MemoryMatch";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
+import WordDuel from "@/components/WordDuel";
 
 type Vocab = {
   id: string;
@@ -330,6 +331,10 @@ export default function GaokaoVocab() {
     return <WordQuest pool={allVocab} onExit={() => setParams({})} />;
   }
 
+  if (mode === "duel") {
+    return <WordDuel pool={allVocab} onExit={() => setParams({})} />;
+  }
+
   if (mode === "dict") {
     return <DictationSession pool={allVocab} onExit={() => setParams({})} />;
   }
@@ -348,6 +353,7 @@ export default function GaokaoVocab() {
         onStartRush={() => setParams({ mode: "rush" })}
         onStartBento={() => setParams({ mode: "bento" })}
         onStartQuest={() => setParams({ mode: "quest" })}
+        onStartDuel={() => setParams({ mode: "duel" })}
         onStartDict={() => setParams({ mode: "dict" })}
         onOpenDash={() => setParams({ mode: "dash" })}
       />
@@ -373,6 +379,7 @@ function GroupList({
   onStartRush,
   onStartBento,
   onStartQuest,
+  onStartDuel,
   onStartDict,
   onOpenDash,
 }: {
@@ -383,6 +390,7 @@ function GroupList({
   onStartRush: () => void;
   onStartBento: () => void;
   onStartQuest: () => void;
+  onStartDuel: () => void;
   onStartDict: () => void;
   onOpenDash: () => void;
 }) {
@@ -565,6 +573,39 @@ function GroupList({
             </div>
           </div>
           <ChevronRight className="size-5 text-indigo-500" />
+        </div>
+      </button>
+
+      {/* Word Duel — PVP ELO duel */}
+      <button
+        onClick={onStartDuel}
+        disabled={pool.length < 50}
+        className={cn(
+          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
+          pool.length >= 50
+            ? "border-rose-500/60 bg-gradient-to-br from-rose-500/15 via-orange-500/10 to-transparent hover:border-rose-500 hover:shadow-md"
+            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}
+      >
+        <div className="flex items-center gap-4">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-600 dark:text-rose-400">
+            <span className="text-2xl">⚔️</span>
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-base font-extrabold">⚔️ Word Duel 单词决斗</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                PVP
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-rose-500/40 bg-rose-500/10 px-2 py-0.5 text-[10px] font-bold text-rose-700 dark:text-rose-300">
+                👑 段位
+              </span>
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              真人 1v1 · 5 回合 8 秒题 · ELO 段位制 · 青铜→王者全球榜
+            </div>
+          </div>
+          <ChevronRight className="size-5 text-rose-500" />
         </div>
       </button>
 

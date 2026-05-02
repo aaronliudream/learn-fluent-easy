@@ -111,6 +111,48 @@ export const BADGE_CATALOG: Record<string, BadgeDef> = {
     title: "听写达人",
     description: "完成 5 句听写且平均分 ≥ 80",
   },
+  duel_first_blood: {
+    code: "duel_first_blood",
+    emoji: "⚔️",
+    title: "首战告捷",
+    description: "Word Duel 赢下你的第一场对决",
+  },
+  duel_streak_3: {
+    code: "duel_streak_3",
+    emoji: "🔥",
+    title: "三连胜",
+    description: "Word Duel 连胜 3 场",
+  },
+  duel_streak_5: {
+    code: "duel_streak_5",
+    emoji: "💥",
+    title: "五连绝世",
+    description: "Word Duel 连胜 5 场",
+  },
+  duel_silver: {
+    code: "duel_silver",
+    emoji: "🥈",
+    title: "白银决斗者",
+    description: "ELO 段位达到白银 (1050+)",
+  },
+  duel_gold: {
+    code: "duel_gold",
+    emoji: "🥇",
+    title: "黄金决斗者",
+    description: "ELO 段位达到黄金 (1200+)",
+  },
+  duel_diamond: {
+    code: "duel_diamond",
+    emoji: "💎",
+    title: "钻石决斗者",
+    description: "ELO 段位达到钻石 (1400+)",
+  },
+  duel_legend: {
+    code: "duel_legend",
+    emoji: "👑",
+    title: "王者决斗者",
+    description: "ELO 段位达到王者 (1800+)",
+  },
 };
 
 /* ---------- Coin balance ---------- */

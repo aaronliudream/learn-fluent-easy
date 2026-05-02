@@ -70,8 +70,25 @@ function comboLabel(streak: number): string | null {
 }
 
 type Phase = "flashcard" | "quiz" | "done";
-type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze" | "en2en" | "en2word" | "spell";
-type QuizItem = { vocab: Vocab; kind: QuizKind; choices: Vocab[] };
+type QuizKind =
+  | "en2cn"
+  | "cn2en"
+  | "listen"
+  | "cloze"
+  | "en2en"
+  | "en2word"
+  | "spell"
+  | "syn"
+  | "pos";
+type SynPack = { correct: string; distractors: string[] };
+type QuizItem = {
+  vocab: Vocab;
+  kind: QuizKind;
+  choices: Vocab[];
+  // For "syn" only: 4 string options (correct + 3 distractors), already shuffled.
+  synOptions?: string[];
+  synCorrect?: string;
+};
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -86,6 +103,9 @@ function pickKind(v: Vocab): QuizKind {
   const kinds: QuizKind[] = ["en2cn", "cn2en", "spell"];
   if (v.example_en) kinds.push("listen", "cloze");
   if (v.meaning_en) kinds.push("en2en", "en2word");
+  if (v.pos) kinds.push("pos");
+  // "syn" is always allowed — synonyms are AI-generated on demand.
+  kinds.push("syn");
   return kinds[Math.floor(Math.random() * kinds.length)];
 }
 
@@ -167,6 +187,90 @@ function useMeaningEn(v: Vocab | null | undefined): string | null {
     };
   }, [v?.id]);
   return val;
+}
+
+/* ---------- Synonym pack fetcher (with cache) ---------- */
+const synonymCache = new Map<string, SynPack>();
+const synonymInflight = new Map<string, Promise<void>>();
+
+async function ensureSynonyms(vocabs: Vocab[]): Promise<Record<string, SynPack>> {
+  const missing = vocabs.filter((v) => !synonymCache.has(v.id));
+  if (missing.length > 0) {
+    const ids = missing.map((v) => v.id);
+    const key = ids.sort().join(",");
+    if (!synonymInflight.has(key)) {
+      const p = (async () => {
+        try {
+          const { data, error } = await supabase.functions.invoke(
+            "vocab-synonyms",
+            { body: { ids } },
+          );
+          if (error) throw error;
+          const results = (data?.results ?? {}) as Record<string, SynPack>;
+          for (const [id, pack] of Object.entries(results)) {
+            if (
+              pack &&
+              typeof pack.correct === "string" &&
+              Array.isArray(pack.distractors) &&
+              pack.distractors.length >= 3
+            ) {
+              synonymCache.set(id, {
+                correct: pack.correct,
+                distractors: pack.distractors.slice(0, 3),
+              });
+            }
+          }
+        } catch (e) {
+          console.error("ensureSynonyms failed", e);
+        }
+      })();
+      synonymInflight.set(key, p);
+    }
+    await synonymInflight.get(key);
+  }
+  const out: Record<string, SynPack> = {};
+  for (const v of vocabs) {
+    const pack = synonymCache.get(v.id);
+    if (pack) out[v.id] = pack;
+  }
+  return out;
+}
+
+/* ---------- POS-based distractor picker ---------- */
+/** Normalize POS strings like "n.", "noun", "v." to a canonical bucket. */
+function normPos(p: string | null | undefined): string {
+  if (!p) return "";
+  const s = p.toLowerCase().replace(/[.\s]/g, "");
+  if (s.startsWith("n")) return "n";
+  if (s.startsWith("v")) return "v";
+  if (s.startsWith("adj") || s === "a") return "adj";
+  if (s.startsWith("adv")) return "adv";
+  if (s.startsWith("prep")) return "prep";
+  if (s.startsWith("conj")) return "conj";
+  if (s.startsWith("pron")) return "pron";
+  if (s.startsWith("int") || s.startsWith("interj")) return "interj";
+  return s.slice(0, 4);
+}
+
+/**
+ * For "pos" questions: pick 3 distractors that have a DIFFERENT part of speech
+ * from the target. Falls back to random words if not enough are available.
+ */
+function buildPosChoices(target: Vocab, pool: Vocab[]): Vocab[] {
+  const targetPos = normPos(target.pos);
+  const differentPos = pool.filter(
+    (p) => p.id !== target.id && normPos(p.pos) && normPos(p.pos) !== targetPos,
+  );
+  let distractors = shuffle(differentPos).slice(0, 3);
+  if (distractors.length < 3) {
+    const fillers = shuffle(
+      pool.filter(
+        (p) => p.id !== target.id && !distractors.find((d) => d.id === p.id),
+      ),
+    ).slice(0, 3 - distractors.length);
+    distractors = [...distractors, ...fillers];
+  }
+  return shuffle([target, ...distractors]);
 }
 
 export default function GaokaoVocab() {
@@ -522,6 +626,11 @@ function QuizPhase({
     if (pool.length > 0) ensureMeaningsEn(pool.slice(0, 60));
   }, [group, pool]);
 
+  // Prefetch synonym packs for "syn" questions in this group.
+  useEffect(() => {
+    if (group.length > 0) ensureSynonyms(group);
+  }, [group]);
+
   const item = queue[pos];
 
   if (!item) {
@@ -555,14 +664,9 @@ function QuizPhase({
     let nextQueue = queue;
     if (!isCorrect) {
       // re-insert a different kind of the same word ~3 ahead
-      const newKind = pickKind(item.vocab);
       const reinsertIdx = Math.min(queue.length, pos + 3);
       nextQueue = [...queue];
-      nextQueue.splice(reinsertIdx, 0, {
-        vocab: item.vocab,
-        kind: newKind,
-        choices: buildChoices(item.vocab, pool),
-      });
+      nextQueue.splice(reinsertIdx, 0, buildItem(item.vocab, pool));
       setQueue(nextQueue);
     }
 
@@ -604,12 +708,15 @@ function buildChoices(target: Vocab, pool: Vocab[]): Vocab[] {
   return shuffle([target, ...distractors]);
 }
 
+function buildItem(v: Vocab, pool: Vocab[]): QuizItem {
+  const kind = pickKind(v);
+  const choices =
+    kind === "pos" ? buildPosChoices(v, pool) : buildChoices(v, pool);
+  return { vocab: v, kind, choices };
+}
+
 function buildInitialQueue(group: Vocab[], pool: Vocab[]): QuizItem[] {
-  return shuffle(group).map((v) => ({
-    vocab: v,
-    kind: pickKind(v),
-    choices: buildChoices(v, pool),
-  }));
+  return shuffle(group).map((v) => buildItem(v, pool));
 }
 
 /* ---------- Quiz question renderer ---------- */
@@ -626,7 +733,8 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     item.kind === "cn2en" ||
     item.kind === "listen" ||
     item.kind === "en2en" ||
-    item.kind === "en2word";
+    item.kind === "en2word" ||
+    item.kind === "pos";
   const [secondsLeft, setSecondsLeft] = useState(QUESTION_TIMEOUT_SEC);
   useEffect(() => {
     if (!isTimedKind) return;
@@ -679,6 +787,10 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
 
   if (item.kind === "spell") {
     return <SpellQuestion vocab={v} onResult={onResult} />;
+  }
+
+  if (item.kind === "syn") {
+    return <SynQuestion vocab={v} onResult={onResult} />;
   }
 
   if (item.kind === "cloze" && v.example_en) {
@@ -809,6 +921,19 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
         </>
       );
     }
+    if (item.kind === "pos") {
+      return (
+        <>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">
+            选择匹配此<span className="text-primary">词性</span>的单词
+          </div>
+          <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary">
+            词性：{v.pos}
+          </div>
+          <div className="mt-3 text-2xl font-bold">{v.meaning_cn}</div>
+        </>
+      );
+    }
     // listen
     return (
       <>
@@ -828,6 +953,18 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     if (item.kind === "en2cn") return c.meaning_cn;
     if (item.kind === "en2en") {
       return choiceMeaningsEn[c.id] ?? c.meaning_en ?? "…";
+    }
+    if (item.kind === "pos") {
+      return (
+        <span className="inline-flex items-baseline gap-2">
+          <span className="font-semibold">{c.word}</span>
+          {c.pos && (
+            <span className="rounded-md border border-muted-foreground/30 bg-muted px-1.5 py-0.5 text-[10px] font-bold text-muted-foreground">
+              {c.pos}
+            </span>
+          )}
+        </span>
+      );
     }
     return c.word;
   };
@@ -914,6 +1051,136 @@ function DonePanel({
           <RotateCw className="mr-1 size-4" /> 再练一遍
         </Button>
         <Button onClick={onExit}>选下一组 →</Button>
+      </div>
+    </div>
+  );
+}
+
+/* ---------- Synonym differentiation question ---------- */
+function SynQuestion({
+  vocab,
+  onResult,
+}: {
+  vocab: Vocab;
+  onResult: (ok: boolean) => void;
+}) {
+  const v = vocab;
+  const [pack, setPack] = useState<SynPack | null>(
+    () => synonymCache.get(v.id) ?? null,
+  );
+  const [picked, setPicked] = useState<string | null>(null);
+  const [secondsLeft, setSecondsLeft] = useState(QUESTION_TIMEOUT_SEC);
+
+  // Fetch synonyms on mount if not cached
+  useEffect(() => {
+    if (pack) return;
+    let cancelled = false;
+    ensureSynonyms([v]).then((res) => {
+      if (!cancelled) setPack(res[v.id] ?? null);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [v.id, pack]);
+
+  // Build shuffled options once we have the pack
+  const options = useMemo(() => {
+    if (!pack) return [] as string[];
+    return shuffle([pack.correct, ...pack.distractors.slice(0, 3)]);
+  }, [pack]);
+
+  // Countdown only after options are loaded
+  useEffect(() => {
+    if (!pack || picked !== null) return;
+    if (secondsLeft <= 0) {
+      setPicked("__timeout__");
+      setTimeout(() => onResult(false), 700);
+      return;
+    }
+    const t = setTimeout(() => setSecondsLeft((s) => s - 1), 1000);
+    return () => clearTimeout(t);
+  }, [pack, picked, secondsLeft, onResult]);
+
+  const onPick = (opt: string) => {
+    if (!pack || picked) return;
+    setPicked(opt);
+    const ok = opt === pack.correct;
+    setTimeout(() => onResult(ok), 900);
+  };
+
+  if (!pack) {
+    return (
+      <div className="rounded-3xl border bg-card p-6 text-center shadow-tile">
+        <div className="text-xs uppercase tracking-wider text-muted-foreground">
+          近义词辨析 · Synonym
+        </div>
+        <div className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground">
+          <Sparkles className="size-4 animate-pulse text-primary" /> AI 正在生成近义词…
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="rounded-3xl border bg-card p-6 text-center shadow-tile">
+      <div className="-mx-6 -mt-6 mb-4 h-1.5 overflow-hidden rounded-t-3xl bg-muted">
+        <div
+          className={cn(
+            "h-full transition-all duration-1000 ease-linear",
+            secondsLeft > 5
+              ? "bg-primary"
+              : secondsLeft > 2
+              ? "bg-amber-500"
+              : "bg-red-500 animate-pulse",
+          )}
+          style={{ width: `${(secondsLeft / QUESTION_TIMEOUT_SEC) * 100}%` }}
+        />
+      </div>
+      <div className="text-xs uppercase tracking-wider text-muted-foreground">
+        选出 <span className="text-primary">近义词</span> · Synonym
+      </div>
+      <button
+        onClick={() => speakWord(v)}
+        className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
+      >
+        {v.word} <Volume2 className="size-5 text-primary" />
+      </button>
+      <div className="mt-1 text-sm text-muted-foreground">
+        {v.meaning_cn}
+        {v.pos ? ` · ${v.pos}` : ""}
+      </div>
+
+      <div className="mt-6 grid grid-cols-1 gap-2">
+        {options.map((opt, i) => {
+          const isPicked = picked === opt;
+          const isCorrect = opt === pack.correct;
+          const showState = picked !== null;
+          return (
+            <button
+              key={opt}
+              onClick={() => onPick(opt)}
+              disabled={picked !== null}
+              className={cn(
+                "rounded-xl border bg-background px-4 py-3 text-left text-sm transition",
+                !showState && "hover:border-primary hover:bg-accent/30",
+                showState && isCorrect && "border-green-500 bg-green-500/10",
+                showState && isPicked && !isCorrect && "border-red-500 bg-red-500/10",
+                showState && !isPicked && !isCorrect && "opacity-60",
+              )}
+            >
+              <span className="mr-2 inline-flex size-6 items-center justify-center rounded-full bg-muted text-xs font-bold">
+                {String.fromCharCode(65 + i)}
+              </span>
+              <span className="font-semibold">{opt}</span>
+              {showState && isCorrect && (
+                <Check className="ml-2 inline size-4 text-green-600" />
+              )}
+              {showState && isPicked && !isCorrect && (
+                <X className="ml-2 inline size-4 text-red-600" />
+              )}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
@@ -1188,13 +1455,8 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       setDueWords(shuffled);
       // Prefetch English meanings for SRS queue
       ensureMeaningsEn(shuffled);
-      setQueue(
-        shuffled.map((v) => ({
-          vocab: v,
-          kind: pickKind(v),
-          choices: buildChoices(v, pool),
-        }))
-      );
+      ensureSynonyms(shuffled);
+      setQueue(shuffled.map((v) => buildItem(v, pool)));
       setLoading(false);
     })();
   }, [pool]);
@@ -1267,14 +1529,9 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
     let nextQueue = queue;
     if (!isCorrect) {
-      const newKind = pickKind(item.vocab);
       const reinsertIdx = Math.min(queue.length, pos + 3);
       nextQueue = [...queue];
-      nextQueue.splice(reinsertIdx, 0, {
-        vocab: item.vocab,
-        kind: newKind,
-        choices: buildChoices(item.vocab, pool),
-      });
+      nextQueue.splice(reinsertIdx, 0, buildItem(item.vocab, pool));
       setQueue(nextQueue);
     }
 

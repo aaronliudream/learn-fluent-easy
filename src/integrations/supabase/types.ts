@@ -441,12 +441,22 @@ export type Database = {
         Row: {
           correct_count: number
           created_at: string
+          difficulty: number
+          due_at: string | null
           id: string
           item_id: string
           item_type: string
+          lapses: number
+          last_grade: number | null
+          last_latency_ms: number | null
           last_result: string | null
           last_seen_at: string | null
+          mastery_level: number
+          mastery_matrix: Json
           next_review_at: string | null
+          reached_master_at: string | null
+          retention_check_at: string | null
+          stability: number
           updated_at: string
           user_id: string
           wrong_count: number
@@ -454,12 +464,22 @@ export type Database = {
         Insert: {
           correct_count?: number
           created_at?: string
+          difficulty?: number
+          due_at?: string | null
           id?: string
           item_id: string
           item_type: string
+          lapses?: number
+          last_grade?: number | null
+          last_latency_ms?: number | null
           last_result?: string | null
           last_seen_at?: string | null
+          mastery_level?: number
+          mastery_matrix?: Json
           next_review_at?: string | null
+          reached_master_at?: string | null
+          retention_check_at?: string | null
+          stability?: number
           updated_at?: string
           user_id: string
           wrong_count?: number
@@ -467,12 +487,22 @@ export type Database = {
         Update: {
           correct_count?: number
           created_at?: string
+          difficulty?: number
+          due_at?: string | null
           id?: string
           item_id?: string
           item_type?: string
+          lapses?: number
+          last_grade?: number | null
+          last_latency_ms?: number | null
           last_result?: string | null
           last_seen_at?: string | null
+          mastery_level?: number
+          mastery_matrix?: Json
           next_review_at?: string | null
+          reached_master_at?: string | null
+          retention_check_at?: string | null
+          stability?: number
           updated_at?: string
           user_id?: string
           wrong_count?: number

@@ -2044,6 +2044,66 @@ export type Database = {
         }
         Relationships: []
       }
+      user_mistakes: {
+        Row: {
+          correct_answer: string | null
+          created_at: string
+          explanation: string | null
+          id: string
+          is_resolved: boolean
+          is_starred: boolean
+          last_wrong_at: string
+          module: string
+          next_review_at: string
+          question: string
+          snapshot: Json
+          source_key: string
+          source_label: string | null
+          updated_at: string
+          user_answer: string | null
+          user_id: string
+          wrong_count: number
+        }
+        Insert: {
+          correct_answer?: string | null
+          created_at?: string
+          explanation?: string | null
+          id?: string
+          is_resolved?: boolean
+          is_starred?: boolean
+          last_wrong_at?: string
+          module: string
+          next_review_at?: string
+          question: string
+          snapshot?: Json
+          source_key: string
+          source_label?: string | null
+          updated_at?: string
+          user_answer?: string | null
+          user_id: string
+          wrong_count?: number
+        }
+        Update: {
+          correct_answer?: string | null
+          created_at?: string
+          explanation?: string | null
+          id?: string
+          is_resolved?: boolean
+          is_starred?: boolean
+          last_wrong_at?: string
+          module?: string
+          next_review_at?: string
+          question?: string
+          snapshot?: Json
+          source_key?: string
+          source_label?: string | null
+          updated_at?: string
+          user_answer?: string | null
+          user_id?: string
+          wrong_count?: number
+        }
+        Relationships: []
+      }
       vocab_game_scores: {
         Row: {
           best_combo: number

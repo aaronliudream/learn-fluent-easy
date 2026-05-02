@@ -382,7 +382,7 @@ const playUrlOn = (
 // handler. We do the audio-element creation + first `.play()` BEFORE any
 // `await`, so mobile browsers see this as a valid user-initiated playback.
 // The async work continues afterwards and just updates the src.
-export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH" }): Promise<void> => {
+export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voiceId?: string; speed?: number }): Promise<void> => {
   if (!text) return Promise.resolve();
   const trimmed = text.trim();
   if (!trimmed) return Promise.resolve();
@@ -393,7 +393,9 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH" }): P
   //    keeps us inside the user-gesture window.
   const audio = unlockAudioSync();
   const myToken = speakToken;
-  const { voiceId, speed } = loadSettings();
+  const settings = loadSettings();
+  const voiceId = opts?.voiceId || settings.voiceId;
+  const speed = opts?.speed ?? settings.speed;
   const accent = opts?.accent;
 
   // 2) Cache hit → swap src right away, no network wait.

@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, ListChecks, Check, AlertCircle, Trophy } from "lucide-react";
+import { Mic, MicOff, X, Phone, PhoneOff, Loader2, Volume2, Sparkles, BookOpen, ListChecks, Check, AlertCircle, Trophy, Repeat2, Play } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
 import { getAlexVoice } from "@/lib/alexVoice";
+import { speak as speakTTS, stopSpeaking } from "@/lib/speak";
 import { getActiveLearningSlangIds } from "@/lib/slangMastery";
 import { IDIOMS } from "@/data/idioms";
 import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
@@ -544,6 +545,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
               quizSubmitted={quizSubmitted}
               setQuizSubmitted={setQuizSubmitted}
               quizScore={quizScore}
+              isGuest={isGuest}
+              lessonTitle={lessonTitle}
             />
             </>
           )}
@@ -670,7 +673,13 @@ function GuestSignupCTA() {
 }
 function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[]; aiSpeaking: boolean; phase: string }) {
   const endRef = useRef<HTMLDivElement>(null);
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [transcript]);
+  // Track total text length so streaming deltas (which mutate the last
+  // turn in place) also trigger scroll. Otherwise the array reference
+  // changes but scrollIntoView only fires once per turn.
+  const totalLen = transcript.reduce((n, t) => n + (t.text?.length || 0), 0);
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, [transcript.length, totalLen, aiSpeaking]);
 
   if (transcript.length === 0) {
     return (
@@ -714,7 +723,7 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
 }
 
 function RecapView({
-  recap, loading, error, quizLoading, quizError, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore,
+  recap, loading, error, quizLoading, quizError, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore, isGuest, lessonTitle,
 }: {
   recap: Recap | null;
   loading: boolean;
@@ -726,6 +735,8 @@ function RecapView({
   quizSubmitted: boolean;
   setQuizSubmitted: (v: boolean) => void;
   quizScore: { correct: number; total: number };
+  isGuest?: boolean;
+  lessonTitle?: string;
 }) {
   // Only show the full-screen loader when neither part has arrived yet.
   // As soon as the (faster) review lands, we render it and the quiz block
@@ -751,6 +762,39 @@ function RecapView({
   }
 
   if (!recap) return null;
+
+  // Save wrong quiz answers to the global mistake book (logged-in users only).
+  // Runs whenever the user picks a new wrong answer. De-duped server-side
+  // by the (user_id, module, source_key) unique index.
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    if (isGuest) return;
+    const wrongs = recap.quiz
+      .map((q, i) => ({ q, i, picked: quizAnswers[i] }))
+      .filter((x) => x.picked !== undefined && x.picked !== x.q.answer_index);
+    if (wrongs.length === 0) return;
+    void (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      const rows = wrongs.map(({ q, picked }) => ({
+        user_id: user.id,
+        module: "ai_talk",
+        source_key: `ai_talk:${q.word}:${q.source_sentence}`.slice(0, 240),
+        source_label: lessonTitle ? `Alex 对话 · ${lessonTitle}` : "Alex 对话",
+        question: `${q.source_sentence} —— ${q.question_cn}`,
+        user_answer: q.options_cn[picked!] ?? "",
+        correct_answer: q.options_cn[q.answer_index] ?? "",
+        explanation: q.explanation_cn,
+        snapshot: q as any,
+        last_wrong_at: new Date().toISOString(),
+        next_review_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+      }));
+      // upsert on (user_id, module, source_key) — bumps wrong_count when re-encountered.
+      await supabase
+        .from("user_mistakes")
+        .upsert(rows, { onConflict: "user_id,module,source_key", ignoreDuplicates: false });
+    })();
+  }, [quizAnswers, recap.quiz, isGuest, lessonTitle]);
 
   return (
     <div className="space-y-6">
@@ -895,6 +939,97 @@ function RecapView({
           </button>
         )}
       </section>
+
+      {/* 错句重练 — bilingual rehearsal of every line that had a "better_en" rewrite */}
+      <RehearseSection turns={recap.turns} />
     </div>
+  );
+}
+
+function RehearseSection({ turns }: { turns: RecapTurn[] }) {
+  // Only include turns where Alex offered a more idiomatic rewrite — those
+  // are the ones the learner actually said wrong / awkwardly.
+  const items = useMemo(
+    () => turns.filter((t) => t.better_en && t.better_en.trim() && t.better_en.trim() !== t.en.trim()),
+    [turns],
+  );
+  const [playingIdx, setPlayingIdx] = useState<number | null>(null);
+  const [playingAll, setPlayingAll] = useState(false);
+  const cancelRef = useRef(false);
+
+  useEffect(() => () => { cancelRef.current = true; stopSpeaking(); }, []);
+
+  if (items.length === 0) return null;
+
+  const alexVoice = getAlexVoice();
+
+  const playOne = async (idx: number, text: string) => {
+    cancelRef.current = false;
+    setPlayingIdx(idx);
+    try { await speakTTS(text, { voiceId: alexVoice }); } catch { /* noop */ }
+    setPlayingIdx((cur) => (cur === idx ? null : cur));
+  };
+
+  const playAll = async () => {
+    if (playingAll) {
+      cancelRef.current = true;
+      stopSpeaking();
+      setPlayingAll(false);
+      setPlayingIdx(null);
+      return;
+    }
+    cancelRef.current = false;
+    setPlayingAll(true);
+    for (let i = 0; i < items.length; i++) {
+      if (cancelRef.current) break;
+      setPlayingIdx(i);
+      try { await speakTTS(items[i].better_en, { voiceId: alexVoice }); } catch { /* noop */ }
+      if (cancelRef.current) break;
+      await new Promise((r) => setTimeout(r, 220));
+    }
+    setPlayingAll(false);
+    setPlayingIdx(null);
+  };
+
+  return (
+    <section>
+      <h3 className="mb-3 flex items-center gap-2 text-base font-bold">
+        <Repeat2 className="size-4 text-primary" /> <T>错句重练 · 跟着 Alex 念</T>
+        <button
+          onClick={playAll}
+          className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-bold text-primary-foreground shadow hover:opacity-90"
+        >
+          {playingAll ? <><Volume2 className="size-3.5 animate-pulse" /> <T>停止</T></> : <><Play className="size-3.5" /> <T>全部朗读</T></>}
+        </button>
+      </h3>
+      <p className="mb-3 text-xs text-muted-foreground">
+        <T>下面是你刚才说得不太地道的句子。Alex 已经帮你改成更地道的说法，点 🔊 跟读，把这些句子刻进肌肉记忆。</T>
+      </p>
+      <ol className="space-y-2.5">
+        {items.map((t, i) => {
+          const active = playingIdx === i;
+          return (
+            <li key={i} className={`rounded-2xl border p-3 shadow-sm transition ${active ? "border-primary bg-primary/5" : "border-border bg-card"}`}>
+              <div className="flex items-start gap-2">
+                <button
+                  onClick={() => playOne(i, t.better_en)}
+                  className={`grid size-9 shrink-0 place-items-center rounded-full shadow transition ${active ? "bg-primary text-primary-foreground" : "bg-secondary hover:bg-primary/20"}`}
+                  aria-label="朗读"
+                >
+                  {active ? <Volume2 className="size-4 animate-pulse" /> : <Play className="size-4" />}
+                </button>
+                <div className="min-w-0 flex-1">
+                  <div className="text-base font-semibold leading-snug">{t.better_en}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{t.cn}</div>
+                  <div className="mt-1 text-[11px] text-muted-foreground/80 italic">
+                    <T>你原来说</T>: "{t.en}"
+                  </div>
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
   );
 }

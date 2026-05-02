@@ -121,11 +121,20 @@ Return ONLY a tool call. Never write prose.`;
   if (part === "quiz") {
     return `You are an expert English-as-a-second-language coach for Chinese-speaking learners. You analyze a transcript of a real-time voice chat between an AI tutor (Alex) and a learner.
 
-Produce TEN (10) multiple-choice quiz questions that test useful vocabulary, idioms, or phrasal verbs that ACTUALLY APPEARED in the conversation, at Chinese senior-high-school level or above (think: B1-C1 / CET-4 to CET-6 / TOEFL). You MUST return exactly 10 questions — if the conversation is short, draw from any non-trivial words or phrases that appeared (including from Alex's lines). Each question must:
-   - Quote the source sentence (English) where the word/phrase appeared
-   - Ask about the meaning IN CHINESE
-   - Have 4 plausible Chinese options where only one is correct
-   - Include a one-sentence Chinese explanation
+Produce TEN (10) multiple-choice quiz questions. CRITICAL TARGETING RULES — these override anything else:
+   - DO NOT test words the LEARNER produced. The learner already knows those.
+   - ONLY test useful vocabulary, idioms, collocations, or phrasal verbs from:
+     (a) ALEX's lines (the AI tutor), or
+     (b) more idiomatic alternatives Alex would suggest to fix the learner's mistakes (i.e. the "better_en" rewrites of the learner's awkward sentences).
+   - Target Chinese senior-high-school level or above (B1-C1 / CET-4 to CET-6 / TOEFL).
+   - You MUST return exactly 10 questions. If Alex's lines are short, generate sensible "more idiomatic rewrites" of the learner's lines and test the new vocabulary in those rewrites.
+
+Each question must:
+   - \`word\`: the word / phrase being tested (must come from Alex or from a rewrite, NOT verbatim from the learner)
+   - \`source_sentence\`: the English sentence containing the word. Either an actual Alex line, OR a more idiomatic rewrite of a learner line (mark naturally — just the sentence).
+   - \`question_cn\`: ask the meaning IN CHINESE
+   - \`options_cn\`: 4 plausible Chinese options, only one correct
+   - \`explanation_cn\`: 1-sentence Chinese explanation
 
 Return ONLY a tool call. Never write prose.`;
   }

@@ -210,8 +210,10 @@ export default function GaokaoReadingArticle() {
         supabase.from("gaokao_reading_article_questions").select("*").eq("article_id", id).order("sort_order"),
         supabase.from("gaokao_reading_article_vocab").select("*").eq("article_id", id).order("sort_order"),
       ]);
-      setArticle(a.data as unknown as Article | null);
-      setQuestions((q.data ?? []) as Question[]);
+      const loadedArticle = a.data as unknown as Article | null;
+      const loadedQuestions = (q.data ?? []) as Question[];
+      setArticle(loadedArticle);
+      setQuestions(loadedQuestions.length > 0 ? loadedQuestions : loadedArticle ? parseEmbeddedQuestions(loadedArticle.body, loadedArticle.id) : []);
       setVocab((v.data ?? []) as VocabItem[]);
       if (a.data) setSecondsLeft((a.data.recommended_minutes ?? 8) * 60);
       setLoading(false);
@@ -293,7 +295,7 @@ export default function GaokaoReadingArticle() {
           type_breakdown: typeBreakdown,
         });
         // 写入诊断明细 (每题一条) — 驱动 5 维雷达图
-        const diagnostics = questions.map((q) => ({
+        const diagnostics = questions.filter((q) => isUuid(q.id)).map((q) => ({
           user_id: user.id,
           article_id: article.id,
           question_id: q.id,

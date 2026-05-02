@@ -763,6 +763,39 @@ function RecapView({
 
   if (!recap) return null;
 
+  // Save wrong quiz answers to the global mistake book (logged-in users only).
+  // Runs whenever the user picks a new wrong answer. De-duped server-side
+  // by the (user_id, module, source_key) unique index.
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    if (isGuest) return;
+    const wrongs = recap.quiz
+      .map((q, i) => ({ q, i, picked: quizAnswers[i] }))
+      .filter((x) => x.picked !== undefined && x.picked !== x.q.answer_index);
+    if (wrongs.length === 0) return;
+    void (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      const rows = wrongs.map(({ q, picked }) => ({
+        user_id: user.id,
+        module: "ai_talk",
+        source_key: `ai_talk:${q.word}:${q.source_sentence}`.slice(0, 240),
+        source_label: lessonTitle ? `Alex 对话 · ${lessonTitle}` : "Alex 对话",
+        question: `${q.source_sentence} —— ${q.question_cn}`,
+        user_answer: q.options_cn[picked!] ?? "",
+        correct_answer: q.options_cn[q.answer_index] ?? "",
+        explanation: q.explanation_cn,
+        snapshot: q as unknown as Record<string, unknown>,
+        last_wrong_at: new Date().toISOString(),
+        next_review_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+      }));
+      // upsert on (user_id, module, source_key) — bumps wrong_count when re-encountered.
+      await supabase
+        .from("user_mistakes")
+        .upsert(rows, { onConflict: "user_id,module,source_key", ignoreDuplicates: false });
+    })();
+  }, [quizAnswers, recap.quiz, isGuest, lessonTitle]);
+
   return (
     <div className="space-y-6">
       {/* Summary */}

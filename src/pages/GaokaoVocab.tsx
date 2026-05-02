@@ -5,7 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
-import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { bumpMastery, bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { MASTERY_LABELS, type MasteryLevel } from "@/lib/masteryScore";
 import { cn } from "@/lib/utils";
 import {
   awardCoins,

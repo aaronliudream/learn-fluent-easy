@@ -83,6 +83,77 @@ function buildClozeBlank(sentence: string, word: string): { masked: string; answ
   return { masked, answer };
 }
 
+/* ---------- English meaning fetcher (with cache) ---------- */
+const meaningEnCache = new Map<string, string>();
+const meaningEnInflight = new Map<string, Promise<void>>();
+
+async function ensureMeaningsEn(vocabs: Vocab[]): Promise<Record<string, string>> {
+  // Seed cache from already-loaded vocab rows
+  for (const v of vocabs) {
+    if (v.meaning_en && !meaningEnCache.has(v.id)) {
+      meaningEnCache.set(v.id, v.meaning_en);
+    }
+  }
+  const missing = vocabs.filter((v) => !meaningEnCache.has(v.id));
+  if (missing.length > 0) {
+    const ids = missing.map((v) => v.id);
+    const key = ids.sort().join(",");
+    if (!meaningEnInflight.has(key)) {
+      const p = (async () => {
+        try {
+          const { data, error } = await supabase.functions.invoke(
+            "vocab-meaning-en",
+            { body: { ids } },
+          );
+          if (error) throw error;
+          const results = (data?.results ?? {}) as Record<string, string>;
+          for (const [id, def] of Object.entries(results)) {
+            meaningEnCache.set(id, def);
+          }
+        } catch (e) {
+          console.error("ensureMeaningsEn failed", e);
+        }
+      })();
+      meaningEnInflight.set(key, p);
+    }
+    await meaningEnInflight.get(key);
+  }
+  const out: Record<string, string> = {};
+  for (const v of vocabs) {
+    const def = meaningEnCache.get(v.id);
+    if (def) out[v.id] = def;
+  }
+  return out;
+}
+
+function useMeaningEn(v: Vocab | null | undefined): string | null {
+  const [val, setVal] = useState<string | null>(
+    v ? meaningEnCache.get(v.id) ?? v.meaning_en ?? null : null,
+  );
+  useEffect(() => {
+    if (!v) {
+      setVal(null);
+      return;
+    }
+    const cached = meaningEnCache.get(v.id) ?? v.meaning_en ?? null;
+    if (cached) {
+      setVal(cached);
+      if (v.meaning_en && !meaningEnCache.has(v.id))
+        meaningEnCache.set(v.id, v.meaning_en);
+      return;
+    }
+    setVal(null);
+    let cancelled = false;
+    ensureMeaningsEn([v]).then((res) => {
+      if (!cancelled) setVal(res[v.id] ?? null);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [v?.id]);
+  return val;
+}
+
 export default function GaokaoVocab() {
   const [params, setParams] = useSearchParams();
   const groupParam = params.get("group");

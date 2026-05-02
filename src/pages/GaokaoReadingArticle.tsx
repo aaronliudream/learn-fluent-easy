@@ -144,8 +144,8 @@ export default function GaokaoReadingArticle() {
 
   async function handleSubmit(timeUp = false) {
     if (!article) return;
-    if (!timeUp && answeredCount < totalQ) {
-      toast.warning("请先完成所有题目，再查看答案和解析");
+    if (answeredCount < totalQ) {
+      toast.warning(timeUp ? "时间到，请补完所有题目后再查看答案和解析" : "请先完成所有题目，再查看答案和解析");
       return;
     }
 

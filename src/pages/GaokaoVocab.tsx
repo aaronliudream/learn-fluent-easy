@@ -674,3 +674,135 @@ function DonePanel({
     </div>
   );
 }
+
+/* ---------- SRS Smart Review Session ---------- */
+function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const [loading, setLoading] = useState(true);
+  const [dueWords, setDueWords] = useState<Vocab[]>([]);
+  const [queue, setQueue] = useState<QuizItem[]>([]);
+  const [pos, setPos] = useState(0);
+  const [stats, setStats] = useState({ correct: 0, total: 0 });
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user || pool.length === 0) {
+        setLoading(false);
+        return;
+      }
+      const nowIso = new Date().toISOString();
+      const { data: dueRows } = await supabase
+        .from("gaokao_user_mastery")
+        .select("item_id, wrong_count")
+        .eq("user_id", user.id)
+        .eq("item_type", "vocab")
+        .lte("next_review_at", nowIso)
+        .order("wrong_count", { ascending: false })
+        .limit(30);
+      const idSet = new Set((dueRows ?? []).map((r) => r.item_id as string));
+      const words = pool.filter((v) => idSet.has(v.id));
+      const shuffled = shuffle(words);
+      setDueWords(shuffled);
+      setQueue(
+        shuffled.map((v) => ({
+          vocab: v,
+          kind: pickKind(v),
+          choices: buildChoices(v, pool),
+        }))
+      );
+      setLoading(false);
+    })();
+  }, [pool]);
+
+  if (loading) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
+        <p className="text-sm text-muted-foreground">加载复习队列…</p>
+      </main>
+    );
+  }
+
+  if (dueWords.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
+        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> 返回
+        </button>
+        <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
+          <Sparkles className="mx-auto size-10 text-primary" />
+          <div className="mt-3 text-xl font-extrabold">今日无待复习 🎉</div>
+          <div className="mt-2 text-sm text-muted-foreground">回去学习新的词组吧</div>
+          <Button className="mt-6" onClick={onExit}>选词组学习 →</Button>
+        </div>
+      </main>
+    );
+  }
+
+  const item = queue[pos];
+
+  if (done || !item) {
+    const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
+        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> 返回
+        </button>
+        <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
+          <Brain className="mx-auto size-10 text-primary" />
+          <div className="mt-3 text-xl font-extrabold">复习完成 🧠✨</div>
+          <div className="mt-2 text-sm text-muted-foreground">
+            正确率 <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
+          </div>
+          <div className="mt-1 text-xs text-muted-foreground">下次复习时间已自动调整</div>
+          <Button className="mt-6 w-full" onClick={onExit}>返回</Button>
+        </div>
+      </main>
+    );
+  }
+
+  const handleResult = async (isCorrect: boolean) => {
+    setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
+    await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
+    await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+
+    let nextQueue = queue;
+    if (!isCorrect) {
+      const newKind = pickKind(item.vocab);
+      const reinsertIdx = Math.min(queue.length, pos + 3);
+      nextQueue = [...queue];
+      nextQueue.splice(reinsertIdx, 0, {
+        vocab: item.vocab,
+        kind: newKind,
+        choices: buildChoices(item.vocab, pool),
+      });
+      setQueue(nextQueue);
+    }
+
+    if (pos + 1 >= nextQueue.length) {
+      setDone(true);
+    } else {
+      setPos(pos + 1);
+    }
+  };
+
+  return (
+    <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
+      <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> 退出复习
+      </button>
+      <div className="mb-4 flex items-center gap-2">
+        <div className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+          <Brain className="size-3" /> 智能复习
+        </div>
+        <div className="text-xs text-muted-foreground">SM-2 间隔重复</div>
+      </div>
+      <PageHeader title="今日复习队列" subtitle="答对延后下次复习，答错明天再来" />
+      <div className="mb-3 mt-4 flex items-center justify-between text-xs text-muted-foreground">
+        <span>{pos + 1} / {queue.length}</span>
+        <span>✓ {stats.correct} / {stats.total}</span>
+      </div>
+      <QuizQuestion key={`${item.vocab.id}-${pos}`} item={item} onResult={handleResult} />
+    </main>
+  );
+}

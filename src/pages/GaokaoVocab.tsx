@@ -305,13 +305,18 @@ export default function GaokaoVocab() {
       const { data } = await supabase
         .from("gaokao_vocab")
         .select("*")
-        .order("sort_order", { ascending: true })
+        // 🧠 科学排序（取代字母表）：词频↑ → 考频↓ → 难度↓
+        // 依据：Zipf 定律 + Nation 2013《Learning Vocabulary in Another Language》
+        .order("freq_rank", { ascending: true, nullsFirst: false })
+        .order("exam_frequency", { ascending: false, nullsFirst: false })
+        .order("star_level", { ascending: false, nullsFirst: false })
         .order("word", { ascending: true });
       setAllVocab((data ?? []) as Vocab[]);
       setLoading(false);
     })();
   }, []);
 
+  // 默认 = 高频优先组（学生一进来就在学最该学的词）
   const groups = useMemo(() => {
     const out: Vocab[][] = [];
     for (let i = 0; i < allVocab.length; i += GROUP_SIZE) out.push(allVocab.slice(i, i + GROUP_SIZE));

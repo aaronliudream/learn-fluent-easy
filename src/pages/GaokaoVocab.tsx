@@ -2184,10 +2184,14 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
     }
     // active = the tile that has been alive the longest (closest to ground)
     const active = [...currentTiles].sort((a, b) => a.spawnedAt - b.spawnedAt)[0];
-    setActiveTileId(active.id);
-    // Build 4 choices: correct + 3 distractors from pool
-    const distractors = shuffle(playable.filter((p) => p.id !== active.vocab.id)).slice(0, 3);
-    setChoices(shuffle([active.vocab, ...distractors]));
+    // Only rebuild/shuffle choices when the active tile actually changes,
+    // so newly spawned tiles don't reshuffle the buttons under the user's finger.
+    setActiveTileId((prevId) => {
+      if (prevId === active.id) return prevId;
+      const distractors = shuffle(playable.filter((p) => p.id !== active.vocab.id)).slice(0, 3);
+      setChoices(shuffle([active.vocab, ...distractors]));
+      return active.id;
+    });
   }
 
   /* Start the game. */

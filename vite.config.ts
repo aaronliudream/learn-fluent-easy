@@ -19,4 +19,31 @@ export default defineConfig(({ mode }) => ({
     },
     dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime", "@tanstack/react-query", "@tanstack/query-core"],
   },
+  build: {
+    // Slightly higher inline limit cuts down on tiny asset requests
+    assetsInlineLimit: 4096,
+    // Avoid noisy warnings; we already chunk via dynamic imports
+    chunkSizeWarningLimit: 800,
+    rollupOptions: {
+      output: {
+        // Group large vendor libs into stable, cacheable chunks so the
+        // first-load JS payload stays small and repeat visits hit cache.
+        manualChunks: {
+          "react-vendor": ["react", "react-dom", "react-router-dom"],
+          "ui-vendor": [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-popover",
+            "@radix-ui/react-toast",
+            "@radix-ui/react-tooltip",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-select",
+          ],
+          "charts-vendor": ["recharts"],
+          "supabase-vendor": ["@supabase/supabase-js"],
+          "query-vendor": ["@tanstack/react-query"],
+        },
+      },
+    },
+  },
 }));

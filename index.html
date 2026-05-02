@@ -44,13 +44,23 @@
       }
     </script>
 
-    <!-- Brand fonts: serif display for titles, system sans for body -->
+    <!-- Brand fonts: serif display for titles, system sans for body.
+         Reduced weights (700 only for SC, 500/700 for Fraunces) and display=swap for fast first paint. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fottntyhwolbsdvkwriq.supabase.co" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Noto+Serif+SC:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Noto+Serif+SC:wght@700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Noto+Serif+SC:wght@700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 </head>
 
   <body>

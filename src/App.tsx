@@ -1,44 +1,47 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { stopSpeaking } from "@/lib/speak";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import { LanguagePickerModal } from "@/i18n/LanguagePickerModal";
+// Eagerly load home + auth (most common entry points) to avoid first-paint chunk fetch
 import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import Level from "./pages/Level.tsx";
-import Levels from "./pages/Levels.tsx";
-import Unit from "./pages/Unit.tsx";
-import Lesson from "./pages/Lesson.tsx";
 import Auth from "./pages/Auth.tsx";
-import Stats from "./pages/Stats.tsx";
-import WeeklyReport from "./pages/WeeklyReport.tsx";
-import Unsubscribe from "./pages/Unsubscribe.tsx";
-import Placement from "./pages/Placement.tsx";
-import Slang from "./pages/Slang.tsx";
-import Account from "./pages/Account.tsx";
-import Privacy from "./pages/Privacy.tsx";
-import Terms from "./pages/Terms.tsx";
-import Scenes from "./pages/Scenes.tsx";
-import ScenesCategory from "./pages/ScenesCategory.tsx";
-import ScenesPlay from "./pages/ScenesPlay.tsx";
-import Workplace from "./pages/Workplace.tsx";
-import WorkplaceCategory from "./pages/WorkplaceCategory.tsx";
-import WorkplacePlay from "./pages/WorkplacePlay.tsx";
-import Talk from "./pages/Talk.tsx";
-import Gaokao from "./pages/Gaokao.tsx";
-import GaokaoGrammar from "./pages/GaokaoGrammar.tsx";
-import GaokaoGrammarPoint from "./pages/GaokaoGrammarPoint.tsx";
-import GaokaoReading from "./pages/GaokaoReading.tsx";
-import GaokaoReadingPlay from "./pages/GaokaoReadingPlay.tsx";
-import GaokaoVocab from "./pages/GaokaoVocab.tsx";
-import GaokaoDiagnostic from "./pages/GaokaoDiagnostic.tsx";
-import SavedPhrases from "./pages/SavedPhrases.tsx";
-import Review from "./pages/Review.tsx";
-import Leaderboard from "./pages/Leaderboard.tsx";
+import NotFound from "./pages/NotFound.tsx";
+
+// Lazy-load everything else — each page becomes its own chunk
+const Level = lazy(() => import("./pages/Level.tsx"));
+const Levels = lazy(() => import("./pages/Levels.tsx"));
+const Unit = lazy(() => import("./pages/Unit.tsx"));
+const Lesson = lazy(() => import("./pages/Lesson.tsx"));
+const Stats = lazy(() => import("./pages/Stats.tsx"));
+const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
+const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
+const Placement = lazy(() => import("./pages/Placement.tsx"));
+const Slang = lazy(() => import("./pages/Slang.tsx"));
+const Account = lazy(() => import("./pages/Account.tsx"));
+const Privacy = lazy(() => import("./pages/Privacy.tsx"));
+const Terms = lazy(() => import("./pages/Terms.tsx"));
+const Scenes = lazy(() => import("./pages/Scenes.tsx"));
+const ScenesCategory = lazy(() => import("./pages/ScenesCategory.tsx"));
+const ScenesPlay = lazy(() => import("./pages/ScenesPlay.tsx"));
+const Workplace = lazy(() => import("./pages/Workplace.tsx"));
+const WorkplaceCategory = lazy(() => import("./pages/WorkplaceCategory.tsx"));
+const WorkplacePlay = lazy(() => import("./pages/WorkplacePlay.tsx"));
+const Talk = lazy(() => import("./pages/Talk.tsx"));
+const Gaokao = lazy(() => import("./pages/Gaokao.tsx"));
+const GaokaoGrammar = lazy(() => import("./pages/GaokaoGrammar.tsx"));
+const GaokaoGrammarPoint = lazy(() => import("./pages/GaokaoGrammarPoint.tsx"));
+const GaokaoReading = lazy(() => import("./pages/GaokaoReading.tsx"));
+const GaokaoReadingPlay = lazy(() => import("./pages/GaokaoReadingPlay.tsx"));
+const GaokaoVocab = lazy(() => import("./pages/GaokaoVocab.tsx"));
+const GaokaoDiagnostic = lazy(() => import("./pages/GaokaoDiagnostic.tsx"));
+const SavedPhrases = lazy(() => import("./pages/SavedPhrases.tsx"));
+const Review = lazy(() => import("./pages/Review.tsx"));
+const Leaderboard = lazy(() => import("./pages/Leaderboard.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 
 const queryClient = new QueryClient();
@@ -51,6 +54,16 @@ const StopAudioOnRouteChange = () => {
   return null;
 };
 
+// Branded skeleton shown while a lazy route chunk is loading
+const RouteFallback = () => (
+  <div className="min-h-[50vh] flex items-center justify-center">
+    <div className="flex flex-col items-center gap-3">
+      <div className="w-10 h-10 rounded-full border-2 border-primary/30 border-t-primary animate-spin" />
+      <p className="text-sm text-muted-foreground">Loading…</p>
+    </div>
+  </div>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <I18nProvider>
@@ -61,6 +74,7 @@ const App = () => (
         <StopAudioOnRouteChange />
         <LanguagePickerModal />
         <div className="pb-tabbar lg:pb-0">
+        <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
@@ -96,6 +110,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
         </div>
         <BottomTabBar />
       </BrowserRouter>

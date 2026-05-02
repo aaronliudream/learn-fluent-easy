@@ -17,6 +17,7 @@ import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 import MasteryDashboard from "@/components/MasteryDashboard";
 import MemoryMatch from "@/components/MemoryMatch";
 import MistakeExplainer from "@/components/MistakeExplainer";
+import WordBento from "@/components/WordBento";
 
 type Vocab = {
   id: string;
@@ -320,6 +321,10 @@ export default function GaokaoVocab() {
     return <WordRushSession pool={allVocab} onExit={() => setParams({})} />;
   }
 
+  if (mode === "bento") {
+    return <WordBento pool={allVocab} onExit={() => setParams({})} />;
+  }
+
   if (mode === "dict") {
     return <DictationSession pool={allVocab} onExit={() => setParams({})} />;
   }
@@ -336,6 +341,7 @@ export default function GaokaoVocab() {
         onPick={(i) => setParams({ group: String(i + 1) })}
         onStartSrs={() => setParams({ mode: "srs" })}
         onStartRush={() => setParams({ mode: "rush" })}
+        onStartBento={() => setParams({ mode: "bento" })}
         onStartDict={() => setParams({ mode: "dict" })}
         onOpenDash={() => setParams({ mode: "dash" })}
       />

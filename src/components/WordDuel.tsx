@@ -214,16 +214,47 @@ export default function WordDuel({
 
   const challengeBot = async () => {
     if (queueRef.current) window.clearTimeout(queueRef.current);
-    await supabase.rpc("cancel_duel_queue");
-    const { data } = await supabase.rpc("match_duel_bot");
-    const row = Array.isArray(data) ? data[0] : data;
-    if (row) {
-      startMatch({
-        id: null,
-        alias: row.opponent_alias || "AI 小智",
-        rating: row.opponent_rating || 1000,
-        is_bot: true,
-      });
+    // 1) 必须登录
+    const { data: u } = await supabase.auth.getUser();
+    if (!u?.user) {
+      alert("请先登录后再挑战 AI");
+      setIsAuthed(false);
+      return;
+    }
+    // 2) 词库必须有足够词（pickQuestions 需 4 个干扰项 + 1 正确 = 至少 5 个有效词）
+    const valid = pool.filter((v) => v.word && v.meaning_cn && !/[\/\s]/.test(v.word));
+    if (valid.length < 5) {
+      alert("词汇加载中，请稍候再试…");
+      return;
+    }
+    // 3) 取消排队 + 兜底获取对手
+    try {
+      await supabase.rpc("cancel_duel_queue");
+      const { data, error } = await supabase.rpc("match_duel_bot");
+      if (error) {
+        console.error("match_duel_bot RPC error", error);
+        alert(`挑战 AI 失败：${error.message ?? "请稍后再试"}`);
+        return;
+      }
+      const row = Array.isArray(data) ? data[0] : data;
+      // 即使 RPC 没返回对手，也给一个本地兜底 AI，确保按钮一定能进入对战
+      const opp: Opponent = row
+        ? {
+            id: null,
+            alias: row.opponent_alias || "AI 小智",
+            rating: row.opponent_rating || 1000,
+            is_bot: true,
+          }
+        : {
+            id: null,
+            alias: "AI 小智",
+            rating: me?.rating ?? 1000,
+            is_bot: true,
+          };
+      startMatch(opp);
+    } catch (e: any) {
+      console.error("challengeBot exception", e);
+      alert(`挑战 AI 失败：${e?.message ?? "未知错误"}`);
     }
   };
 

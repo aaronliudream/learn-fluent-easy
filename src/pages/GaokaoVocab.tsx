@@ -1196,11 +1196,13 @@ function DonePanel({
   coinsAwarded,
   onExit,
   onRetry,
+  levelUps,
 }: {
   stats: { correct: number; total: number };
   coinsAwarded?: number;
   onExit: () => void;
   onRetry: () => void;
+  levelUps?: { word: string; level: MasteryLevel }[];
 }) {
   const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
   return (
@@ -1213,6 +1215,30 @@ function DonePanel({
       {coinsAwarded !== undefined && coinsAwarded > 0 && (
         <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
           🪙 +{coinsAwarded} 金币
+        </div>
+      )}
+      {levelUps && levelUps.length > 0 && (
+        <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">
+          <div className="text-xs font-bold uppercase tracking-wider text-primary">📈 升级单词</div>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {levelUps.slice(0, 12).map((u, i) => {
+              const l = MASTERY_LABELS[u.level];
+              return (
+                <span
+                  key={i}
+                  className={cn(
+                    "inline-flex items-center gap-1 rounded-full border bg-card px-2 py-0.5 text-xs font-semibold",
+                    l.color,
+                  )}
+                >
+                  {l.emoji} {u.word}
+                </span>
+              );
+            })}
+            {levelUps.length > 12 && (
+              <span className="text-xs text-muted-foreground">+{levelUps.length - 12} more</span>
+            )}
+          </div>
         </div>
       )}
       <div className="mt-2 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>

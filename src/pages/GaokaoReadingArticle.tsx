@@ -97,7 +97,7 @@ export default function GaokaoReadingArticle() {
         supabase.from("gaokao_reading_article_questions").select("*").eq("article_id", id).order("sort_order"),
         supabase.from("gaokao_reading_article_vocab").select("*").eq("article_id", id).order("sort_order"),
       ]);
-      setArticle(a.data as Article | null);
+      setArticle(a.data as unknown as Article | null);
       setQuestions((q.data ?? []) as Question[]);
       setVocab((v.data ?? []) as VocabItem[]);
       if (a.data) setSecondsLeft((a.data.recommended_minutes ?? 8) * 60);

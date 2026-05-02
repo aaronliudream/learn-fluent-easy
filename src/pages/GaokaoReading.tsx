@@ -307,6 +307,11 @@ export default function GaokaoReading() {
                         {a.cefr_level}
                       </span>
                     )}
+                    {a.lexile_score && (
+                      <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-mono font-bold border", lexileBadgeColor(a.lexile_score))}>
+                        {a.lexile_score}L
+                      </span>
+                    )}
                     {a.genre_label && (
                       <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">
                         {a.genre_label}

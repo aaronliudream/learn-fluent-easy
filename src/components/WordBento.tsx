@@ -48,6 +48,42 @@ function formatMs(ms: number) {
   return `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, "0")}`;
 }
 
+/* -------- 零延迟英文发音 (浏览器原生 SpeechSynthesis) -------- */
+let _enVoice: SpeechSynthesisVoice | null = null;
+function pickEnVoice(): SpeechSynthesisVoice | null {
+  if (_enVoice) return _enVoice;
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return null;
+  const voices = window.speechSynthesis.getVoices();
+  if (!voices.length) return null;
+  // 优先 en-US > en-GB > en-*；优先 Google/Samantha 等高质量声音
+  const preferred =
+    voices.find((v) => /en[-_]US/i.test(v.lang) && /google|samantha|natural/i.test(v.name)) ||
+    voices.find((v) => /en[-_]US/i.test(v.lang)) ||
+    voices.find((v) => /en[-_]GB/i.test(v.lang)) ||
+    voices.find((v) => /^en/i.test(v.lang)) ||
+    null;
+  _enVoice = preferred;
+  return preferred;
+}
+function speakInstant(text: string) {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  try {
+    const synth = window.speechSynthesis;
+    // 立即打断上一段（避免排队 → 延迟）
+    synth.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    const v = pickEnVoice();
+    if (v) u.voice = v;
+    u.lang = v?.lang || "en-US";
+    u.rate = 1.0;
+    u.pitch = 1.0;
+    u.volume = 1.0;
+    synth.speak(u);
+  } catch {
+    /* ignore */
+  }
+}
+
 export default function WordBento({
   pool,
   onExit,

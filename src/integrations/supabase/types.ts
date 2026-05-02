@@ -2466,6 +2466,23 @@ export type Database = {
           efficiency_index: number
         }[]
       }
+      get_today_recommendations: {
+        Args: never
+        Returns: {
+          active_today: boolean
+          current_streak: number
+          due_expressions: number
+          due_grammar: number
+          due_mistakes: number
+          due_slang: number
+          due_vocab: number
+          top_area: string
+          top_area_count: number
+          total_due: number
+          weakest_count: number
+          weakest_module: string
+        }[]
+      }
       get_user_reading_lexile: {
         Args: never
         Returns: {

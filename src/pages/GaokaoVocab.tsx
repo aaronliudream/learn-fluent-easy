@@ -638,6 +638,7 @@ function GroupSession({
           onExit={onExit}
           onRetry={() => setPhase("flashcard")}
           levelUps={groupLevelUps}
+          group={group}
         />
       )}
       {unlockedBadges.length > 0 && (

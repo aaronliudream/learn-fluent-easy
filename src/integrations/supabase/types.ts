@@ -713,6 +713,8 @@ export type Database = {
       gaokao_reading_articles: {
         Row: {
           argumentation_logic: string | null
+          avg_sentence_length: number | null
+          avg_word_length: number | null
           body: string
           cefr_level: string | null
           core_question_types: string | null
@@ -724,7 +726,9 @@ export type Database = {
           grade_band: string
           id: string
           is_published: boolean
+          lexile_score: number | null
           paragraph_structure: string | null
+          readability_grade: number | null
           recommended_minutes: number
           sort_order: number
           source_label: string | null
@@ -741,6 +745,8 @@ export type Database = {
         }
         Insert: {
           argumentation_logic?: string | null
+          avg_sentence_length?: number | null
+          avg_word_length?: number | null
           body: string
           cefr_level?: string | null
           core_question_types?: string | null
@@ -752,7 +758,9 @@ export type Database = {
           grade_band: string
           id?: string
           is_published?: boolean
+          lexile_score?: number | null
           paragraph_structure?: string | null
+          readability_grade?: number | null
           recommended_minutes?: number
           sort_order?: number
           source_label?: string | null
@@ -769,6 +777,8 @@ export type Database = {
         }
         Update: {
           argumentation_logic?: string | null
+          avg_sentence_length?: number | null
+          avg_word_length?: number | null
           body?: string
           cefr_level?: string | null
           core_question_types?: string | null
@@ -780,7 +790,9 @@ export type Database = {
           grade_band?: string
           id?: string
           is_published?: boolean
+          lexile_score?: number | null
           paragraph_structure?: string | null
+          readability_grade?: number | null
           recommended_minutes?: number
           sort_order?: number
           source_label?: string | null
@@ -2109,6 +2121,22 @@ export type Database = {
           total_plays: number
         }[]
       }
+      get_lexile_recommendations: {
+        Args: never
+        Returns: {
+          article_id: string
+          done_before: boolean
+          genre_label: string
+          grade_band: string
+          lexile_score: number
+          recommended_minutes: number
+          specific_topic: string
+          title: string
+          word_count: number
+          zone: string
+          zone_label: string
+        }[]
+      }
       get_my_game_stats: {
         Args: { _game_type: string }
         Returns: {
@@ -2174,6 +2202,19 @@ export type Database = {
           avg_wpm: number
           benchmark_label: string
           efficiency_index: number
+        }[]
+      }
+      get_user_reading_lexile: {
+        Args: never
+        Returns: {
+          articles_used: number
+          cefr_estimate: string
+          challenge_max: number
+          challenge_min: number
+          confidence: string
+          estimated_lexile: number
+          optimal_max: number
+          optimal_min: number
         }[]
       }
       get_user_streak_stats: {

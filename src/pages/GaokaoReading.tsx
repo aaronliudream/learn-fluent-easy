@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpen, Clock, ChevronRight, GraduationCap, Sparkles, Target, Trophy, Library } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, ChevronRight, GraduationCap, Sparkles, Target, Trophy, Library, Gauge, Wand2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { cn } from "@/lib/utils";
@@ -20,7 +20,38 @@ type Article = {
   specific_topic: string;
   topic_group: string;
   theme_context: string;
+  lexile_score: number | null;
 };
+
+type LexileProfile = {
+  estimated_lexile: number;
+  optimal_min: number;
+  optimal_max: number;
+  cefr_estimate: string;
+  articles_used: number;
+  confidence: string;
+};
+
+type Recommendation = {
+  article_id: string;
+  title: string;
+  lexile_score: number;
+  grade_band: string;
+  genre_label: string | null;
+  specific_topic: string;
+  word_count: number;
+  recommended_minutes: number;
+  zone: "optimal" | "reinforce" | "challenge";
+  zone_label: string;
+  done_before: boolean;
+};
+
+function lexileBadgeColor(lex: number) {
+  if (lex < 700) return "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border-emerald-500/30";
+  if (lex < 900) return "bg-sky-500/15 text-sky-700 dark:text-sky-400 border-sky-500/30";
+  if (lex < 1100) return "bg-violet-500/15 text-violet-700 dark:text-violet-400 border-violet-500/30";
+  return "bg-rose-500/15 text-rose-700 dark:text-rose-400 border-rose-500/30";
+}
 
 const BANDS: { id: GradeBand; label: string; sub: string; icon: typeof BookOpen; color: string }[] = [
   { id: "g1", label: "高一", sub: "Foundation · 打基础", icon: Sparkles, color: "from-emerald-500/20 to-emerald-500/5 text-emerald-600 border-emerald-500/30" },
@@ -39,17 +70,30 @@ export default function GaokaoReading() {
   const [tab, setTab] = useState<GradeBand>("g3");
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
+  const [profile, setProfile] = useState<LexileProfile | null>(null);
+  const [recs, setRecs] = useState<Recommendation[]>([]);
 
   useEffect(() => {
     (async () => {
       setLoading(true);
       const { data } = await supabase
         .from("gaokao_reading_articles")
-        .select("id, grade_band, sub_band, title, word_count, recommended_minutes, difficulty, cefr_level, genre_label, specific_topic, topic_group, theme_context")
+        .select("id, grade_band, sub_band, title, word_count, recommended_minutes, difficulty, cefr_level, genre_label, specific_topic, topic_group, theme_context, lexile_score")
         .eq("is_published", true)
         .order("sort_order");
       setArticles((data ?? []) as Article[]);
       setLoading(false);
+
+      // 拉取个人 Lexile + 自适应推荐 (登录用户才有意义)
+      const { data: u } = await supabase.auth.getUser();
+      if (u.user) {
+        const [{ data: p }, { data: r }] = await Promise.all([
+          supabase.rpc("get_user_reading_lexile"),
+          supabase.rpc("get_lexile_recommendations"),
+        ]);
+        if (p && p[0]) setProfile(p[0] as LexileProfile);
+        if (r) setRecs(r as Recommendation[]);
+      }
     })();
   }, []);
 
@@ -97,6 +141,82 @@ export default function GaokaoReading() {
           </div>
         </div>
       </div>
+
+      {/* 🚀 个人 Lexile 能力卡 + 自适应推荐 */}
+      {profile && (
+        <div className="mb-5 rounded-2xl border-2 border-primary/25 bg-gradient-to-br from-primary/5 via-violet-500/5 to-card p-4">
+          <div className="flex items-start gap-3">
+            <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-primary to-violet-500 text-primary-foreground">
+              <Gauge className="size-6" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-baseline gap-2 flex-wrap">
+                <span className="text-xs font-medium text-muted-foreground">你的阅读能力</span>
+                <span className="text-[10px] border rounded px-1.5 py-0.5 text-muted-foreground">
+                  Lexile · MetaMetrics
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2 mt-0.5 flex-wrap">
+                <span className="text-2xl font-bold tabular-nums text-primary">
+                  {profile.estimated_lexile}L
+                </span>
+                <span className="text-sm font-semibold text-muted-foreground">
+                  ≈ CEFR {profile.cefr_estimate}
+                </span>
+              </div>
+              <div className="mt-1 text-[11px] text-muted-foreground">
+                最佳学习区 <b className="text-foreground">{profile.optimal_min}L–{profile.optimal_max}L</b>
+                {" · "}
+                {profile.confidence === "cold_start" ? (
+                  <span className="text-amber-600">未做过测评，先做 3 篇校准</span>
+                ) : (
+                  <>已基于 <b className="text-foreground">{profile.articles_used}</b> 篇做过的文章估算</>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {recs.length > 0 && (
+            <>
+              <div className="mt-4 mb-2 flex items-center gap-1.5 text-xs font-semibold text-muted-foreground">
+                <Wand2 className="size-3.5 text-violet-500" />
+                自适应推荐 · 为你定制
+              </div>
+              <div className="grid sm:grid-cols-2 gap-2">
+                {recs.slice(0, 4).map((r) => (
+                  <Link
+                    key={r.article_id}
+                    to={`/gaokao/reading/article/${r.article_id}`}
+                    className="rounded-xl border bg-card p-2.5 hover:border-primary/40 transition group"
+                  >
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <span className={cn(
+                        "text-[10px] rounded-full px-1.5 py-0.5 font-semibold",
+                        r.zone === "optimal"
+                          ? "bg-primary/15 text-primary"
+                          : r.zone === "challenge"
+                          ? "bg-rose-500/15 text-rose-600"
+                          : "bg-emerald-500/15 text-emerald-700"
+                      )}>
+                        {r.zone_label}
+                      </span>
+                      <span className={cn("text-[10px] rounded border px-1 py-px font-mono", lexileBadgeColor(r.lexile_score))}>
+                        {r.lexile_score}L
+                      </span>
+                      {r.done_before && (
+                        <span className="text-[10px] text-muted-foreground">已做过</span>
+                      )}
+                    </div>
+                    <div className="text-xs font-medium line-clamp-2 group-hover:text-primary transition">
+                      {r.title}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
 
       {/* 知识体系速查入口 */}
       <Link
@@ -185,6 +305,11 @@ export default function GaokaoReading() {
                     {a.cefr_level && (
                       <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">
                         {a.cefr_level}
+                      </span>
+                    )}
+                    {a.lexile_score && (
+                      <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-mono font-bold border", lexileBadgeColor(a.lexile_score))}>
+                        {a.lexile_score}L
                       </span>
                     )}
                     {a.genre_label && (

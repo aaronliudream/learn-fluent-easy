@@ -494,6 +494,7 @@ export type Database = {
           pos: string | null
           sort_order: number
           star_level: number
+          synonyms: Json | null
           word: string
         }
         Insert: {
@@ -510,6 +511,7 @@ export type Database = {
           pos?: string | null
           sort_order?: number
           star_level?: number
+          synonyms?: Json | null
           word: string
         }
         Update: {
@@ -526,6 +528,7 @@ export type Database = {
           pos?: string | null
           sort_order?: number
           star_level?: number
+          synonyms?: Json | null
           word?: string
         }
         Relationships: []

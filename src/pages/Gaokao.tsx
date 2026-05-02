@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, BookOpen, FileText, Sparkles, PenLine, Headphones, Edit3, Lock, Activity } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
+import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 
 const SECTIONS = [
   {
@@ -68,6 +69,10 @@ export default function Gaokao() {
         <ArrowLeft className="size-4" /> 返回首页
       </Link>
       <PageHeader title="高考英语" subtitle="像 Khan Academy 一样系统掌握高中英语" />
+
+      <div className="mb-4">
+        <GaokaoVocabProgress />
+      </div>
 
       <section className="grid gap-3">
         {SECTIONS.map((s) => {

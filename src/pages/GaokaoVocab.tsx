@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap } from "lucide-react";
+import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap, Music, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
@@ -312,6 +312,10 @@ export default function GaokaoVocab() {
     return <SrsReviewSession pool={allVocab} onExit={() => setParams({})} />;
   }
 
+  if (mode === "rush") {
+    return <WordRushSession pool={allVocab} onExit={() => setParams({})} />;
+  }
+
   if (groupIdx < 0 || groupIdx >= groups.length) {
     return (
       <GroupList
@@ -319,6 +323,7 @@ export default function GaokaoVocab() {
         pool={allVocab}
         onPick={(i) => setParams({ group: String(i + 1) })}
         onStartSrs={() => setParams({ mode: "srs" })}
+        onStartRush={() => setParams({ mode: "rush" })}
       />
     );
   }

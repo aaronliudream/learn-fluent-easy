@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Globe, Check, Sparkles } from "lucide-react";
+import { Globe, Check } from "lucide-react";
 import { LANGUAGES, type LangCode } from "./languages";
 import { useI18n } from "./I18nProvider";
 

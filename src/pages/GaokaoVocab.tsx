@@ -1282,3 +1282,64 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
     </main>
   );
 }
+
+/* ---------- Combo & scoring UI ---------- */
+function ComboHeader({
+  pos,
+  total,
+  correct,
+  attempted,
+  streak,
+  bestStreak,
+  score,
+}: {
+  pos: number;
+  total: number;
+  correct: number;
+  attempted: number;
+  streak: number;
+  bestStreak: number;
+  score: number;
+}) {
+  const mult = comboMultiplier(streak);
+  const onFire = streak >= 5;
+  return (
+    <div className="mb-3 flex items-center justify-between gap-2">
+      <div className="text-xs text-muted-foreground">
+        {pos} / {total} <span className="mx-1">·</span> ✓ {correct}/{attempted}
+      </div>
+      <div className="flex items-center gap-2">
+        {streak >= 2 && (
+          <span
+            className={cn(
+              "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold transition",
+              onFire
+                ? "bg-gradient-to-r from-amber-500 to-rose-500 text-white animate-pulse"
+                : "bg-primary text-primary-foreground"
+            )}
+          >
+            <Flame className="size-3" /> {streak} ×{mult}
+          </span>
+        )}
+        <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-bold">
+          <Zap className="size-3 text-amber-500" /> {score}
+        </span>
+        {bestStreak >= 3 && (
+          <span className="hidden text-[10px] text-muted-foreground sm:inline">
+            最佳 {bestStreak}
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function FloatingComboBadge({ label }: { label: string }) {
+  return (
+    <div className="pointer-events-none absolute inset-x-0 top-2 z-10 flex justify-center">
+      <div className="animate-fade-in rounded-full bg-gradient-to-r from-amber-500 via-rose-500 to-fuchsia-500 px-4 py-1.5 text-sm font-extrabold text-white shadow-lg">
+        🔥 {label}
+      </div>
+    </div>
+  );
+}

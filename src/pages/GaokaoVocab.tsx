@@ -18,6 +18,7 @@ import MasteryDashboard from "@/components/MasteryDashboard";
 import MemoryMatch from "@/components/MemoryMatch";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
+import WordQuest from "@/components/WordQuest";
 
 type Vocab = {
   id: string;
@@ -325,6 +326,10 @@ export default function GaokaoVocab() {
     return <WordBento pool={allVocab} onExit={() => setParams({})} />;
   }
 
+  if (mode === "quest") {
+    return <WordQuest pool={allVocab} onExit={() => setParams({})} />;
+  }
+
   if (mode === "dict") {
     return <DictationSession pool={allVocab} onExit={() => setParams({})} />;
   }
@@ -342,6 +347,7 @@ export default function GaokaoVocab() {
         onStartSrs={() => setParams({ mode: "srs" })}
         onStartRush={() => setParams({ mode: "rush" })}
         onStartBento={() => setParams({ mode: "bento" })}
+        onStartQuest={() => setParams({ mode: "quest" })}
         onStartDict={() => setParams({ mode: "dict" })}
         onOpenDash={() => setParams({ mode: "dash" })}
       />
@@ -366,6 +372,7 @@ function GroupList({
   onStartSrs,
   onStartRush,
   onStartBento,
+  onStartQuest,
   onStartDict,
   onOpenDash,
 }: {
@@ -375,6 +382,7 @@ function GroupList({
   onStartSrs: () => void;
   onStartRush: () => void;
   onStartBento: () => void;
+  onStartQuest: () => void;
   onStartDict: () => void;
   onOpenDash: () => void;
 }) {

@@ -215,41 +215,267 @@ export type Database = {
         }
         Relationships: []
       }
+      gaokao_ability_estimates: {
+        Row: {
+          cefr: string | null
+          id: string
+          last_session_id: string | null
+          mastery_pct: number | null
+          scope_id: string | null
+          scope_type: string
+          theta: number
+          theta_se: number
+          updated_at: string
+          user_id: string
+          weakest_kp_ids: Json | null
+        }
+        Insert: {
+          cefr?: string | null
+          id?: string
+          last_session_id?: string | null
+          mastery_pct?: number | null
+          scope_id?: string | null
+          scope_type: string
+          theta?: number
+          theta_se?: number
+          updated_at?: string
+          user_id: string
+          weakest_kp_ids?: Json | null
+        }
+        Update: {
+          cefr?: string | null
+          id?: string
+          last_session_id?: string | null
+          mastery_pct?: number | null
+          scope_id?: string | null
+          scope_type?: string
+          theta?: number
+          theta_se?: number
+          updated_at?: string
+          user_id?: string
+          weakest_kp_ids?: Json | null
+        }
+        Relationships: []
+      }
+      gaokao_diagnostic_sessions: {
+        Row: {
+          answered_question_ids: Json
+          completed_at: string | null
+          correct_count: number
+          duration_seconds: number | null
+          final_cefr: string | null
+          id: string
+          module_scores: Json | null
+          questions_answered: number
+          response_log: Json
+          scope_id: string | null
+          session_type: string
+          started_at: string
+          status: string
+          theta: number
+          theta_se: number
+          user_id: string
+          weakest_kp_ids: Json | null
+        }
+        Insert: {
+          answered_question_ids?: Json
+          completed_at?: string | null
+          correct_count?: number
+          duration_seconds?: number | null
+          final_cefr?: string | null
+          id?: string
+          module_scores?: Json | null
+          questions_answered?: number
+          response_log?: Json
+          scope_id?: string | null
+          session_type?: string
+          started_at?: string
+          status?: string
+          theta?: number
+          theta_se?: number
+          user_id: string
+          weakest_kp_ids?: Json | null
+        }
+        Update: {
+          answered_question_ids?: Json
+          completed_at?: string | null
+          correct_count?: number
+          duration_seconds?: number | null
+          final_cefr?: string | null
+          id?: string
+          module_scores?: Json | null
+          questions_answered?: number
+          response_log?: Json
+          scope_id?: string | null
+          session_type?: string
+          started_at?: string
+          status?: string
+          theta?: number
+          theta_se?: number
+          user_id?: string
+          weakest_kp_ids?: Json | null
+        }
+        Relationships: []
+      }
+      gaokao_grammar_categories: {
+        Row: {
+          code: string
+          created_at: string
+          description_cn: string | null
+          difficulty: number
+          exam_frequency: string | null
+          id: string
+          module_id: string
+          name_cn: string
+          name_en: string
+          sort_order: number
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          description_cn?: string | null
+          difficulty?: number
+          exam_frequency?: string | null
+          id?: string
+          module_id: string
+          name_cn: string
+          name_en: string
+          sort_order?: number
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          description_cn?: string | null
+          difficulty?: number
+          exam_frequency?: string | null
+          id?: string
+          module_id?: string
+          name_cn?: string
+          name_en?: string
+          sort_order?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_grammar_categories_module_id_fkey"
+            columns: ["module_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_grammar_modules"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      gaokao_grammar_modules: {
+        Row: {
+          code: string
+          created_at: string
+          description_cn: string | null
+          emoji: string | null
+          id: string
+          name_cn: string
+          name_en: string
+          sort_order: number
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          description_cn?: string | null
+          emoji?: string | null
+          id?: string
+          name_cn: string
+          name_en: string
+          sort_order?: number
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          description_cn?: string | null
+          emoji?: string | null
+          id?: string
+          name_cn?: string
+          name_en?: string
+          sort_order?: number
+        }
+        Relationships: []
+      }
       gaokao_grammar_points: {
         Row: {
+          category_id: string | null
+          common_mistake: string | null
           created_at: string
           difficulty: number
+          exam_frequency: string | null
           explanation: string | null
           id: string
+          irt_avg_difficulty: number | null
+          kp_id: string | null
+          module_id: string | null
           parent_id: string | null
+          prerequisite: string | null
+          question_count: number
           slug: string
           sort_order: number
+          source_code: string | null
           title: string
+          typical_example: string | null
           updated_at: string
         }
         Insert: {
+          category_id?: string | null
+          common_mistake?: string | null
           created_at?: string
           difficulty?: number
+          exam_frequency?: string | null
           explanation?: string | null
           id?: string
+          irt_avg_difficulty?: number | null
+          kp_id?: string | null
+          module_id?: string | null
           parent_id?: string | null
+          prerequisite?: string | null
+          question_count?: number
           slug: string
           sort_order?: number
+          source_code?: string | null
           title: string
+          typical_example?: string | null
           updated_at?: string
         }
         Update: {
+          category_id?: string | null
+          common_mistake?: string | null
           created_at?: string
           difficulty?: number
+          exam_frequency?: string | null
           explanation?: string | null
           id?: string
+          irt_avg_difficulty?: number | null
+          kp_id?: string | null
+          module_id?: string | null
           parent_id?: string | null
+          prerequisite?: string | null
+          question_count?: number
           slug?: string
           sort_order?: number
+          source_code?: string | null
           title?: string
+          typical_example?: string | null
           updated_at?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "gaokao_grammar_points_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_grammar_categories"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "gaokao_grammar_points_module_id_fkey"
+            columns: ["module_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_grammar_modules"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "gaokao_grammar_points_parent_id_fkey"
             columns: ["parent_id"]
@@ -261,42 +487,75 @@ export type Database = {
       }
       gaokao_grammar_questions: {
         Row: {
+          blank_index: number | null
+          bloom_level: number | null
           correct_answer: string
           created_at: string
           difficulty: number
+          distractor_analysis: string | null
           explanation: string
           id: string
+          irt_difficulty: number | null
+          irt_discrimination: number | null
+          irt_guessing: number | null
+          kp_ids: Json | null
           option_a: string
           option_b: string
           option_c: string
           option_d: string
+          passage: string | null
           point_id: string
+          question_type: string
+          source_label: string | null
+          source_qid: string | null
           stem: string
         }
         Insert: {
+          blank_index?: number | null
+          bloom_level?: number | null
           correct_answer: string
           created_at?: string
           difficulty?: number
+          distractor_analysis?: string | null
           explanation: string
           id?: string
+          irt_difficulty?: number | null
+          irt_discrimination?: number | null
+          irt_guessing?: number | null
+          kp_ids?: Json | null
           option_a: string
           option_b: string
           option_c: string
           option_d: string
+          passage?: string | null
           point_id: string
+          question_type?: string
+          source_label?: string | null
+          source_qid?: string | null
           stem: string
         }
         Update: {
+          blank_index?: number | null
+          bloom_level?: number | null
           correct_answer?: string
           created_at?: string
           difficulty?: number
+          distractor_analysis?: string | null
           explanation?: string
           id?: string
+          irt_difficulty?: number | null
+          irt_discrimination?: number | null
+          irt_guessing?: number | null
+          kp_ids?: Json | null
           option_a?: string
           option_b?: string
           option_c?: string
           option_d?: string
+          passage?: string | null
           point_id?: string
+          question_type?: string
+          source_label?: string | null
+          source_qid?: string | null
           stem?: string
         }
         Relationships: [

@@ -535,6 +535,39 @@ function GroupList({
         </div>
       </button>
 
+      {/* Word Quest — daily 1 word, 6 stages */}
+      <button
+        onClick={onStartQuest}
+        disabled={pool.length < 50}
+        className={cn(
+          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
+          pool.length >= 50
+            ? "border-indigo-500/60 bg-gradient-to-br from-indigo-500/15 via-sky-500/10 to-transparent hover:border-indigo-500 hover:shadow-md"
+            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}
+      >
+        <div className="flex items-center gap-4">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400">
+            <span className="text-2xl">🗺️</span>
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-base font-extrabold">🗺️ Word Quest 单词奇旅</span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-indigo-500 px-2 py-0.5 text-[11px] font-bold text-white">
+                每日
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-2 py-0.5 text-[10px] font-bold text-indigo-700 dark:text-indigo-300">
+                🏆 速度榜
+              </span>
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              全球同款今日单词 · 6 关闯关 · 连续打卡解锁稀有徽章
+            </div>
+          </div>
+          <ChevronRight className="size-5 text-indigo-500" />
+        </div>
+      </button>
+
       {/* Dictation entry */}
       <button
         onClick={onStartDict}

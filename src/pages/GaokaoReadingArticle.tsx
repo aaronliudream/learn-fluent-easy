@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState, useRef } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Clock, Send, AlertTriangle, CheckCircle2, XCircle, Sparkles, BookOpen, FileText, Target, ChevronDown, ChevronUp, Eye, EyeOff } from "lucide-react";
+import { ArrowLeft, Clock, Send, AlertTriangle, CheckCircle2, XCircle, Sparkles, BookOpen, FileText, Target, ChevronDown, ChevronUp, Eye, EyeOff, Gauge, Brain, HelpCircle, ThumbsUp, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -81,7 +81,11 @@ export default function GaokaoReadingArticle() {
 
   const [stage, setStage] = useState<Stage>("test");
   const [answers, setAnswers] = useState<Record<string, "A" | "B" | "C" | "D">>({});
+  // 信心度: 1=猜的, 2=比较确定, 3=非常确定 (PISA 元认知金标准)
+  const [confidences, setConfidences] = useState<Record<string, 1 | 2 | 3>>({});
   const [startTime] = useState(() => Date.now());
+  // 阅读阶段计时: 用户首次点击任意选项前都算"在阅读"
+  const [readingEndAt, setReadingEndAt] = useState<number | null>(null);
   const [submittedAt, setSubmittedAt] = useState<number | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [fontScale, setFontScale] = useState(1);
@@ -150,6 +154,12 @@ export default function GaokaoReadingArticle() {
     const now = Date.now();
     setSubmittedAt(now);
     const duration = Math.floor((now - startTime) / 1000);
+    // 阅读用时 = 首次答题前的时间; 若用户没点过选项, 用总时长
+    const readingSec = Math.max(
+      30,
+      Math.floor(((readingEndAt ?? now) - startTime) / 1000)
+    );
+    const wpm = Math.round((article.word_count / Math.max(readingSec, 1)) * 60);
 
     try {
       const { data: { user } } = await supabase.auth.getUser();
@@ -159,6 +169,7 @@ export default function GaokaoReadingArticle() {
           user_answer: answers[q.id] ?? null,
           is_correct: answers[q.id] === q.correct_answer,
           question_type: q.question_type,
+          confidence: confidences[q.id] ?? null,
         }));
         await supabase.from("gaokao_reading_sessions").insert({
           user_id: user.id,
@@ -172,6 +183,23 @@ export default function GaokaoReadingArticle() {
           duration_seconds: duration,
           type_breakdown: typeBreakdown,
         });
+        // 写入诊断明细 (每题一条) — 驱动 5 维雷达图
+        const diagnostics = questions.map((q) => ({
+          user_id: user.id,
+          article_id: article.id,
+          question_id: q.id,
+          question_type: q.question_type,
+          user_answer: answers[q.id] ?? null,
+          correct_answer: q.correct_answer,
+          is_correct: answers[q.id] === q.correct_answer,
+          confidence: confidences[q.id] ?? null,
+          reading_wpm: wpm,
+          reading_seconds: readingSec,
+          time_spent_seconds: Math.floor(duration / Math.max(totalQ, 1)),
+        }));
+        if (diagnostics.length) {
+          await supabase.from("gaokao_reading_diagnostics").insert(diagnostics);
+        }
       }
     } catch (err) {
       console.error("save session error", err);
@@ -302,7 +330,11 @@ export default function GaokaoReadingArticle() {
                     return (
                       <button
                         key={opt}
-                        onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: opt }))}
+                        onClick={() => {
+                          setAnswers((prev) => ({ ...prev, [q.id]: opt }));
+                          // 标记阅读阶段结束于首次答题
+                          if (readingEndAt === null) setReadingEndAt(Date.now());
+                        }}
                         className={cn(
                           "w-full flex gap-3 items-start rounded-xl border p-3 text-left text-sm transition",
                           selected
@@ -321,6 +353,48 @@ export default function GaokaoReadingArticle() {
                     );
                   })}
                 </div>
+
+                {/* 信心度评分 — 元认知训练 (PISA 金标准) */}
+                {answers[q.id] && (
+                  <div className="mt-3 pt-3 border-t border-dashed">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Brain className="size-3.5 text-violet-500" />
+                      <span className="text-xs font-medium text-muted-foreground">
+                        你对这个答案的把握？
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-3 gap-1.5">
+                      {([
+                        { v: 1, label: "猜的", icon: HelpCircle, color: "rose" },
+                        { v: 2, label: "比较确定", icon: ThumbsUp, color: "amber" },
+                        { v: 3, label: "非常确定", icon: Zap, color: "emerald" },
+                      ] as const).map(({ v, label, icon: Icon, color }) => {
+                        const active = confidences[q.id] === v;
+                        return (
+                          <button
+                            key={v}
+                            onClick={() =>
+                              setConfidences((p) => ({ ...p, [q.id]: v }))
+                            }
+                            className={cn(
+                              "flex items-center justify-center gap-1 rounded-lg border px-2 py-1.5 text-xs font-medium transition",
+                              active
+                                ? color === "rose"
+                                  ? "bg-rose-500/15 border-rose-500/40 text-rose-600"
+                                  : color === "amber"
+                                  ? "bg-amber-500/15 border-amber-500/40 text-amber-600"
+                                  : "bg-emerald-500/15 border-emerald-500/40 text-emerald-600"
+                                : "border-border text-muted-foreground hover:border-primary/30"
+                            )}
+                          >
+                            <Icon className="size-3" />
+                            {label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
 
@@ -368,6 +442,39 @@ export default function GaokaoReadingArticle() {
     const usedMM = String(Math.floor(usedSec / 60)).padStart(2, "0");
     const usedSS = String(usedSec % 60).padStart(2, "0");
 
+    // 阅读速度 WPM
+    const readingSec = Math.max(
+      30,
+      Math.floor(((readingEndAt ?? submittedAt ?? Date.now()) - startTime) / 1000)
+    );
+    const wpm = Math.round((article.word_count / Math.max(readingSec, 1)) * 60);
+    const efficiency = Math.round(wpm * (correctCount / Math.max(totalQ, 1)));
+
+    // 元认知诊断
+    const confEntries = questions
+      .map((q) => ({ c: confidences[q.id], ok: answers[q.id] === q.correct_answer }))
+      .filter((x) => x.c !== undefined);
+    const metacogN = confEntries.length;
+    const metacogOk = confEntries.filter(
+      (x) => (x.c! >= 2 && x.ok) || (x.c === 1 && !x.ok)
+    ).length;
+    const metacogPct = metacogN > 0 ? Math.round((metacogOk / metacogN) * 100) : 0;
+    // 高信心答错 — 最危险的"认知偏差"
+    const dangerCount = confEntries.filter((x) => x.c === 3 && !x.ok).length;
+    // 低信心答对 — 蒙对的, 复习重点
+    const luckyCount = confEntries.filter((x) => x.c === 1 && x.ok).length;
+
+    const wpmTier =
+      wpm >= 90 ? { label: "🚀 极速", color: "text-emerald-600" }
+      : wpm >= 70 ? { label: "✅ 高考达标", color: "text-emerald-600" }
+      : wpm >= 50 ? { label: "⚠️ 接近达标", color: "text-amber-600" }
+      : { label: "🐢 需提速", color: "text-rose-600" };
+    const effTier =
+      efficiency >= 70 ? { label: "🏆 优秀", color: "text-emerald-600" }
+      : efficiency >= 52 ? { label: "✅ 达标", color: "text-emerald-600" }
+      : efficiency >= 35 ? { label: "⚠️ 接近", color: "text-amber-600" }
+      : { label: "🔴 加练", color: "text-rose-600" };
+
     let feedback = { emoji: "🎉", title: "出色！", desc: "继续保持，向顶尖水平冲刺。", color: "text-emerald-600" };
     if (pct < 50) feedback = { emoji: "💪", title: "还需加强", desc: "别灰心，精读复盘比做对更重要。", color: "text-rose-600" };
     else if (pct < 75) feedback = { emoji: "👍", title: "有潜力", desc: "稳扎稳打，看看每题的解析。", color: "text-amber-600" };
@@ -392,6 +499,82 @@ export default function GaokaoReadingArticle() {
           <div className="rounded-2xl border bg-card p-4 text-center">
             <div className="text-2xl font-bold tabular-nums">{usedMM}:{usedSS}</div>
             <div className="text-xs text-muted-foreground mt-1">用时 / 限{article.recommended_minutes}分</div>
+          </div>
+        </div>
+
+        {/* 🚀 全球标准诊断: 阅读速度 + 效率指数 + 元认知 */}
+        <div className="rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-violet-500/5 p-5 mb-6">
+          <h2 className="font-bold mb-3 flex items-center gap-2">
+            <Sparkles className="size-4 text-primary" /> 全球标准诊断
+            <span className="text-[10px] font-normal text-muted-foreground border rounded px-1.5 py-0.5">
+              对标 PISA / Cambridge
+            </span>
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="rounded-xl bg-card border p-3">
+              <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
+                <Gauge className="size-3.5" /> 阅读速度
+              </div>
+              <div className="flex items-baseline gap-1">
+                <span className={cn("text-2xl font-bold tabular-nums", wpmTier.color)}>{wpm}</span>
+                <span className="text-xs text-muted-foreground">WPM</span>
+              </div>
+              <div className={cn("text-[10px] mt-0.5 font-medium", wpmTier.color)}>{wpmTier.label}</div>
+            </div>
+            <div className="rounded-xl bg-card border p-3">
+              <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
+                <Zap className="size-3.5" /> 效率指数
+              </div>
+              <div className="flex items-baseline gap-1">
+                <span className={cn("text-2xl font-bold tabular-nums", effTier.color)}>{efficiency}</span>
+              </div>
+              <div className={cn("text-[10px] mt-0.5 font-medium", effTier.color)}>{effTier.label}</div>
+            </div>
+            <div className="rounded-xl bg-card border p-3 col-span-2 sm:col-span-1">
+              <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
+                <Brain className="size-3.5" /> 元认知准确度
+              </div>
+              <div className="flex items-baseline gap-1">
+                <span className="text-2xl font-bold tabular-nums">
+                  {metacogN > 0 ? `${metacogPct}%` : "—"}
+                </span>
+              </div>
+              <div className="text-[10px] mt-0.5 text-muted-foreground">
+                {metacogN > 0 ? `${metacogOk}/${metacogN} 自评准确` : "未评估信心度"}
+              </div>
+            </div>
+          </div>
+
+          {/* 危险/侥幸提示 */}
+          {(dangerCount > 0 || luckyCount > 0) && (
+            <div className="mt-3 grid sm:grid-cols-2 gap-2">
+              {dangerCount > 0 && (
+                <div className="rounded-lg bg-rose-500/10 border border-rose-500/30 p-2.5 text-xs">
+                  <div className="font-bold text-rose-600 flex items-center gap-1">
+                    🚨 认知偏差 {dangerCount} 题
+                  </div>
+                  <div className="text-rose-600/80 mt-0.5">
+                    「非常确定」却答错 — 是最危险的盲点，必须重点复盘
+                  </div>
+                </div>
+              )}
+              {luckyCount > 0 && (
+                <div className="rounded-lg bg-amber-500/10 border border-amber-500/30 p-2.5 text-xs">
+                  <div className="font-bold text-amber-600 flex items-center gap-1">
+                    🍀 蒙对 {luckyCount} 题
+                  </div>
+                  <div className="text-amber-600/80 mt-0.5">
+                    「猜的」却答对 — 不是真掌握，建议刻意重做
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          <div className="mt-3 text-[10px] text-muted-foreground leading-relaxed">
+            💡 <b>效率指数 = WPM × 正确率</b>。高考阅读要求 ≥ 70 WPM × 75% = <b>52</b> 为达标线。
+            <br />
+            🧠 <b>元认知</b>: 你对自己掌握程度的判断是否准确（高信心+答对、低信心+答错都算"自评准确"）。
           </div>
         </div>
 

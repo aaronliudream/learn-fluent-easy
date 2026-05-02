@@ -47,6 +47,7 @@ const GaokaoClozePlay = lazy(() => import("./pages/GaokaoClozePlay.tsx"));
 const GaokaoMistakes = lazy(() => import("./pages/GaokaoMistakes.tsx"));
 const SavedPhrases = lazy(() => import("./pages/SavedPhrases.tsx"));
 const Review = lazy(() => import("./pages/Review.tsx"));
+const Mistakes = lazy(() => import("./pages/Mistakes.tsx"));
 const Leaderboard = lazy(() => import("./pages/Leaderboard.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
@@ -97,6 +98,7 @@ const App = () => (
           <Route path="/scenes" element={<Scenes />} />
           <Route path="/saved" element={<SavedPhrases />} />
           <Route path="/review" element={<Review />} />
+          <Route path="/mistakes" element={<Mistakes />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/scenes/:catKey" element={<ScenesCategory />} />
           <Route path="/scenes/:catKey/:dialogueId" element={<ScenesPlay />} />

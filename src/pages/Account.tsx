@@ -18,7 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Download, Trash2, Shield, FileText, LogIn, Trophy, Save } from "lucide-react";
+import { Download, Trash2, Shield, FileText, LogIn, Trophy, Save, BookMarked, Bookmark } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { loadProgress } from "@/lib/guestProgress";
 import { T, useT } from "@/i18n/T";
@@ -242,6 +242,25 @@ const Account = () => {
               size="sm"
             >
               <Save className="size-4" /> <T>保存设置</T>
+            </Button>
+          </div>
+        </section>
+      )}
+
+      {/* My learning shortcuts */}
+      {user && (
+        <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
+          <h3 className="text-base font-bold"><T>我的学习</T></h3>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+            <Button asChild variant="outline" className="justify-start">
+              <Link to="/mistakes">
+                <BookMarked className="size-4" /> <T>错题本</T>
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="justify-start">
+              <Link to="/saved">
+                <Bookmark className="size-4" /> <T>收藏的表达</T>
+              </Link>
             </Button>
           </div>
         </section>

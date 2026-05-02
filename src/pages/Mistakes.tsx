@@ -1,0 +1,400 @@
+import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  Loader2, Sparkles, Volume2, Play, Star, Check, Trash2, Search,
+  BookOpen, Mic, AlertCircle, Filter, Trophy,
+} from "lucide-react";
+import { PageHeader } from "@/components/PageHeader";
+import { T } from "@/i18n/T";
+import { supabase } from "@/integrations/supabase/client";
+import { speak as speakTTS, stopSpeaking } from "@/lib/speak";
+import { getAlexVoice } from "@/lib/alexVoice";
+import { toast } from "sonner";
+
+type Mistake = {
+  id: string;
+  module: string;
+  source_key: string;
+  source_label: string | null;
+  question: string;
+  user_answer: string | null;
+  correct_answer: string | null;
+  explanation: string | null;
+  snapshot: any;
+  wrong_count: number;
+  is_resolved: boolean;
+  is_starred: boolean;
+  last_wrong_at: string;
+  next_review_at: string;
+};
+
+type ModuleKey = "all" | "due" | "starred" | "ai_talk_target" | "ai_talk";
+
+const MODULE_META: Record<string, { label: string; emoji: string; color: string }> = {
+  ai_talk_target: { label: "Alex 教你的", emoji: "✨", color: "from-amber-400 to-orange-500" },
+  ai_talk:        { label: "对话错题",   emoji: "💬", color: "from-sky-400 to-blue-500" },
+  vocab:          { label: "词汇错题",   emoji: "📚", color: "from-violet-400 to-purple-500" },
+  reading:        { label: "阅读错题",   emoji: "📖", color: "from-emerald-400 to-green-500" },
+  grammar:        { label: "语法错题",   emoji: "🔤", color: "from-rose-400 to-pink-500" },
+};
+
+const moduleMeta = (m: string) =>
+  MODULE_META[m] || { label: m, emoji: "📌", color: "from-slate-400 to-slate-600" };
+
+const MistakesPage = () => {
+  const [loading, setLoading] = useState(true);
+  const [signedIn, setSignedIn] = useState<boolean | null>(null);
+  const [items, setItems] = useState<Mistake[]>([]);
+  const [tab, setTab] = useState<ModuleKey>("due");
+  const [search, setSearch] = useState("");
+  const [playingId, setPlayingId] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (cancelled) return;
+      if (!user) { setSignedIn(false); setLoading(false); return; }
+      setSignedIn(true);
+      const { data, error } = await supabase
+        .from("user_mistakes")
+        .select("*")
+        .eq("is_resolved", false)
+        .order("next_review_at", { ascending: true })
+        .limit(500);
+      if (cancelled) return;
+      if (error) toast.error(error.message);
+      setItems((data as Mistake[]) || []);
+      setLoading(false);
+    })();
+    return () => { cancelled = true; stopSpeaking(); };
+  }, []);
+
+  // Counts per tab
+  const counts = useMemo(() => {
+    const now = Date.now();
+    return {
+      all: items.length,
+      due: items.filter((i) => new Date(i.next_review_at).getTime() <= now).length,
+      starred: items.filter((i) => i.is_starred).length,
+      ai_talk_target: items.filter((i) => i.module === "ai_talk_target").length,
+      ai_talk: items.filter((i) => i.module === "ai_talk").length,
+    };
+  }, [items]);
+
+  const filtered = useMemo(() => {
+    const now = Date.now();
+    let list = items;
+    if (tab === "due") list = list.filter((i) => new Date(i.next_review_at).getTime() <= now);
+    else if (tab === "starred") list = list.filter((i) => i.is_starred);
+    else if (tab !== "all") list = list.filter((i) => i.module === tab);
+    const q = search.trim().toLowerCase();
+    if (q) {
+      list = list.filter((i) =>
+        (i.question + " " + (i.correct_answer || "") + " " + (i.source_label || ""))
+          .toLowerCase()
+          .includes(q),
+      );
+    }
+    return list;
+  }, [items, tab, search]);
+
+  const toggleStar = async (m: Mistake) => {
+    const next = !m.is_starred;
+    setItems((prev) => prev.map((x) => x.id === m.id ? { ...x, is_starred: next } : x));
+    await supabase.from("user_mistakes").update({ is_starred: next }).eq("id", m.id);
+  };
+
+  const markResolved = async (m: Mistake) => {
+    setItems((prev) => prev.filter((x) => x.id !== m.id));
+    await supabase.from("user_mistakes").update({ is_resolved: true }).eq("id", m.id);
+    toast.success("已掌握，从复习队列移除");
+  };
+
+  const removeOne = async (m: Mistake) => {
+    setItems((prev) => prev.filter((x) => x.id !== m.id));
+    await supabase.from("user_mistakes").delete().eq("id", m.id);
+  };
+
+  const playPhrase = async (m: Mistake) => {
+    // For target words: play the example sentence with Alex voice.
+    // For other mistakes: play the correct_answer (English) if it looks like English.
+    const text = m.module === "ai_talk_target"
+      ? (m.snapshot?.alex_used_sentence || m.snapshot?.example_en || m.snapshot?.phrase || "")
+      : (m.snapshot?.source_sentence || m.snapshot?.phrase || "");
+    if (!text) { toast.info("没有可朗读的内容"); return; }
+    setPlayingId(m.id);
+    try { await speakTTS(text, { voiceId: getAlexVoice() }); } catch { /* noop */ }
+    setPlayingId((cur) => (cur === m.id ? null : cur));
+  };
+
+  return (
+    <main className="mx-auto min-h-screen max-w-4xl px-4 py-8 md:px-8 md:py-12">
+      <PageHeader title="📒 错题本" subtitle="所有错题、Alex 教过的表达，按记忆曲线安排复习" />
+
+      {loading && (
+        <div className="mt-12 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+          <Loader2 className="size-4 animate-spin" /> <T>加载中…</T>
+        </div>
+      )}
+
+      {!loading && signedIn === false && (
+        <div className="mt-10 rounded-3xl border border-dashed border-border bg-card/50 p-10 text-center">
+          <div className="mx-auto mb-3 grid size-14 place-items-center rounded-full bg-primary/10 text-primary">
+            <BookOpen className="size-7" />
+          </div>
+          <p className="text-sm text-muted-foreground"><T>登录后即可同步你的错题本</T></p>
+          <Link to="/auth" className="mt-5 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground hover:opacity-90">
+            <T>去登录</T>
+          </Link>
+        </div>
+      )}
+
+      {!loading && signedIn && (
+        <>
+          {/* Stats strip */}
+          <section className="mb-5 grid grid-cols-3 gap-3 md:grid-cols-5">
+            <StatCard label="待复习" value={counts.due} emoji="⏰" highlight />
+            <StatCard label="全部" value={counts.all} emoji="📒" />
+            <StatCard label="已收藏" value={counts.starred} emoji="⭐" />
+            <StatCard label="Alex 教的" value={counts.ai_talk_target} emoji="✨" />
+            <StatCard label="对话错题" value={counts.ai_talk} emoji="💬" />
+          </section>
+
+          {/* Tabs */}
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            {[
+              { k: "due" as const, label: "今日复习", n: counts.due },
+              { k: "all" as const, label: "全部", n: counts.all },
+              { k: "starred" as const, label: "⭐ 收藏", n: counts.starred },
+              { k: "ai_talk_target" as const, label: "✨ Alex 教的", n: counts.ai_talk_target },
+              { k: "ai_talk" as const, label: "💬 对话错题", n: counts.ai_talk },
+            ].map(({ k, label, n }) => (
+              <button
+                key={k}
+                onClick={() => setTab(k)}
+                className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-semibold transition ${
+                  tab === k
+                    ? "bg-primary text-primary-foreground shadow"
+                    : "bg-card text-foreground/70 ring-1 ring-border hover:bg-secondary"
+                }`}
+              >
+                <T>{label}</T>
+                <span className={`rounded-full px-1.5 text-[11px] font-bold ${tab === k ? "bg-white/25" : "bg-secondary text-foreground/60"}`}>
+                  {n}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Search */}
+          <div className="relative mb-5">
+            <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+            <input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="搜索单词、句子、话题…"
+              className="w-full rounded-full border border-border bg-card pl-9 pr-4 py-2.5 text-sm outline-none ring-primary/30 transition focus:ring-2"
+            />
+          </div>
+
+          {filtered.length === 0 ? (
+            <EmptyState tab={tab} />
+          ) : (
+            <ul className="space-y-3">
+              {filtered.map((m) => (
+                <MistakeCard
+                  key={m.id}
+                  m={m}
+                  playing={playingId === m.id}
+                  onPlay={() => playPhrase(m)}
+                  onStar={() => toggleStar(m)}
+                  onResolve={() => markResolved(m)}
+                  onRemove={() => removeOne(m)}
+                />
+              ))}
+            </ul>
+          )}
+        </>
+      )}
+    </main>
+  );
+};
+
+function StatCard({ label, value, emoji, highlight }: { label: string; value: number; emoji: string; highlight?: boolean }) {
+  return (
+    <div className={`rounded-2xl p-3 text-center shadow-sm transition ${
+      highlight
+        ? "bg-gradient-to-br from-primary/15 to-primary/5 ring-1 ring-primary/30"
+        : "bg-card ring-1 ring-border"
+    }`}>
+      <div className="text-lg">{emoji}</div>
+      <div className="mt-0.5 text-xl font-extrabold leading-tight text-foreground">{value}</div>
+      <div className="text-[11px] font-medium text-muted-foreground"><T>{label}</T></div>
+    </div>
+  );
+}
+
+function EmptyState({ tab }: { tab: ModuleKey }) {
+  return (
+    <div className="rounded-3xl border border-dashed border-border bg-card/50 p-10 text-center">
+      <div className="mx-auto mb-3 grid size-14 place-items-center rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-300">
+        <Trophy className="size-7" />
+      </div>
+      <p className="text-base font-semibold">
+        {tab === "due" ? <T>今天没有要复习的，明天再来！</T> : <T>这里还是空的</T>}
+      </p>
+      <p className="mt-1 text-xs text-muted-foreground">
+        <T>多和 Alex 聊一聊，错题和新表达会自动收进这里。</T>
+      </p>
+      <Link
+        to="/talk"
+        className="mt-5 inline-flex items-center gap-2 rounded-full bg-grad-title px-5 py-2.5 text-sm font-bold text-white shadow-tile hover:opacity-95"
+      >
+        <Mic className="size-4" /> <T>去和 Alex 聊聊</T>
+      </Link>
+    </div>
+  );
+}
+
+function MistakeCard({
+  m, playing, onPlay, onStar, onResolve, onRemove,
+}: {
+  m: Mistake;
+  playing: boolean;
+  onPlay: () => void;
+  onStar: () => void;
+  onResolve: () => void;
+  onRemove: () => void;
+}) {
+  const [revealed, setRevealed] = useState(false);
+  const meta = moduleMeta(m.module);
+  const dueIn = useMemo(() => {
+    const ms = new Date(m.next_review_at).getTime() - Date.now();
+    if (ms <= 0) return { text: "待复习", urgent: true };
+    const days = Math.round(ms / 86_400_000);
+    return { text: days === 0 ? "今天" : `${days} 天后`, urgent: false };
+  }, [m.next_review_at]);
+
+  // Headline phrase for the card
+  const headline =
+    m.module === "ai_talk_target"
+      ? (m.snapshot?.phrase as string) || m.question
+      : (m.snapshot?.word as string) || m.question.split("——")[0]?.trim() || m.question;
+
+  const subline =
+    m.module === "ai_talk_target"
+      ? m.correct_answer
+      : m.snapshot?.question_cn || null;
+
+  const sourceSentence =
+    m.snapshot?.alex_used_sentence ||
+    m.snapshot?.example_en ||
+    m.snapshot?.source_sentence ||
+    null;
+
+  return (
+    <li className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-md">
+      {/* Module strip */}
+      <div className={`flex items-center gap-2 bg-gradient-to-r ${meta.color} px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/95`}>
+        <span>{meta.emoji}</span>
+        <span>{meta.label}</span>
+        {m.source_label && <span className="ml-1 truncate font-normal opacity-80">· {m.source_label}</span>}
+        <span className={`ml-auto rounded-full px-2 py-0.5 text-[10px] ${dueIn.urgent ? "bg-white text-rose-600" : "bg-white/20"}`}>
+          {dueIn.text}
+        </span>
+      </div>
+
+      <div className="p-4">
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0 flex-1">
+            <div className="text-xl font-extrabold leading-snug text-foreground">{headline}</div>
+            {subline && !revealed && (
+              <div className="mt-1 text-sm text-muted-foreground">{subline}</div>
+            )}
+            {sourceSentence && (
+              <div className="mt-2 rounded-xl bg-secondary/60 px-3 py-2 text-sm italic leading-snug text-foreground/85">
+                "{sourceSentence}"
+              </div>
+            )}
+          </div>
+          <div className="flex flex-col items-end gap-2">
+            <button
+              onClick={onPlay}
+              className={`grid size-10 place-items-center rounded-full shadow transition ${
+                playing
+                  ? "bg-gradient-to-br from-amber-500 to-orange-500 text-white"
+                  : "bg-secondary text-foreground hover:bg-primary/15"
+              }`}
+              aria-label="朗读"
+            >
+              {playing ? <Volume2 className="size-4 animate-pulse" /> : <Play className="size-4" />}
+            </button>
+            <button
+              onClick={onStar}
+              className={`grid size-10 place-items-center rounded-full transition ${
+                m.is_starred ? "bg-amber-100 text-amber-600" : "bg-secondary text-muted-foreground hover:text-amber-600"
+              }`}
+              aria-label="收藏"
+            >
+              <Star className={`size-4 ${m.is_starred ? "fill-current" : ""}`} />
+            </button>
+          </div>
+        </div>
+
+        {/* Reveal answer */}
+        {!revealed ? (
+          <button
+            onClick={() => setRevealed(true)}
+            className="mt-3 w-full rounded-xl border border-dashed border-primary/40 bg-primary/5 py-2 text-sm font-semibold text-primary transition hover:bg-primary/10"
+          >
+            👆 <T>点击查看答案与解析</T>
+          </button>
+        ) : (
+          <div className="mt-3 space-y-2">
+            {m.correct_answer && (
+              <div className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-sm text-emerald-900 dark:bg-emerald-500/10 dark:text-emerald-300">
+                <span className="text-[10px] font-bold uppercase tracking-wider opacity-70">✓ <T>正确答案</T></span>
+                <div className="mt-1 font-semibold">{m.correct_answer}</div>
+              </div>
+            )}
+            {m.user_answer && (
+              <div className="rounded-xl border-l-4 border-rose-500 bg-rose-50 p-3 text-sm text-rose-900 dark:bg-rose-500/10 dark:text-rose-300">
+                <span className="text-[10px] font-bold uppercase tracking-wider opacity-70">✕ <T>你当时选的</T></span>
+                <div className="mt-1">{m.user_answer}</div>
+              </div>
+            )}
+            {m.explanation && (
+              <div className="rounded-xl bg-secondary/60 p-3 text-sm leading-relaxed text-foreground/80">
+                💡 {m.explanation}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Footer actions */}
+        <div className="mt-3 flex items-center justify-between gap-2 border-t border-border/60 pt-3 text-xs">
+          <span className="text-muted-foreground">
+            <T>错过</T> <span className="font-bold text-foreground">{m.wrong_count}</span> <T>次</T>
+          </span>
+          <div className="flex gap-2">
+            <button
+              onClick={onResolve}
+              className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-3 py-1 font-semibold text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-500/20 dark:text-emerald-300"
+            >
+              <Check className="size-3" /> <T>已掌握</T>
+            </button>
+            <button
+              onClick={onRemove}
+              className="inline-flex items-center gap-1 rounded-full bg-secondary px-3 py-1 font-semibold text-muted-foreground hover:bg-rose-100 hover:text-rose-600"
+            >
+              <Trash2 className="size-3" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </li>
+  );
+}
+
+export default MistakesPage;

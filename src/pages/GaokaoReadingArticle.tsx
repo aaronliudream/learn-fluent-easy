@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Clock, Send, AlertTriangle, CheckCircle2, XCircle, Sparkles, BookOpen, FileText, Target, ChevronDown, ChevronUp, Eye, EyeOff, Gauge, Brain, HelpCircle, ThumbsUp, Zap } from "lucide-react";
+import { ArrowLeft, Clock, Send, CheckCircle2, XCircle, Sparkles, BookOpen, FileText, Target, ChevronDown, ChevronUp, Eye, Gauge, Brain, HelpCircle, ThumbsUp, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -58,7 +58,7 @@ type VocabItem = {
   importance: number;
 };
 
-type Stage = "test" | "result" | "review";
+type Stage = "read" | "test" | "result" | "review";
 
 const TYPE_COLOR: Record<string, string> = {
   main_idea: "bg-rose-500/10 text-rose-600 border-rose-500/20",
@@ -79,7 +79,7 @@ export default function GaokaoReadingArticle() {
   const [vocab, setVocab] = useState<VocabItem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const [stage, setStage] = useState<Stage>("test");
+  const [stage, setStage] = useState<Stage>("read");
   const [answers, setAnswers] = useState<Record<string, "A" | "B" | "C" | "D">>({});
   // 信心度: 1=猜的, 2=比较确定, 3=非常确定 (PISA 元认知金标准)
   const [confidences, setConfidences] = useState<Record<string, 1 | 2 | 3>>({});
@@ -89,7 +89,6 @@ export default function GaokaoReadingArticle() {
   const [submittedAt, setSubmittedAt] = useState<number | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [fontScale, setFontScale] = useState(1);
-  const [showConfirm, setShowConfirm] = useState(false);
 
   // Load
   useEffect(() => {

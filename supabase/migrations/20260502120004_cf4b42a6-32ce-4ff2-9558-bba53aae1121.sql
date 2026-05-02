@@ -1,0 +1,3 @@
+DELETE FROM gaokao_grammar_questions;
+DELETE FROM gaokao_grammar_points;
+DELETE FROM gaokao_grammar_categories;

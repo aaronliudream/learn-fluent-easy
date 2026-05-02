@@ -491,7 +491,6 @@ export default function WordQuest({
         pool={pool}
         onResult={recordStage}
         onHint={() => setHintsUsed((h) => h + 1)}
-        wordIndexLabel={`📚 第 ${wordIdx + 1}/${WORDS_PER_QUEST} 词`}
       />
     </main>
   );

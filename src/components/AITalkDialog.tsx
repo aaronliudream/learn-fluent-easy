@@ -43,8 +43,8 @@ const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
 // Builds the Qwen instructions prompt (mirror of what the realtime-token
 // edge function does for OpenAI, kept on the client because Qwen receives
 // session.update directly from the browser via the proxy).
-function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string }) {
-  const { lessonTitle, unitTitle, levelName, level } = opts;
+function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string; levelName?: string; level?: string; targets?: TalkTarget[] }) {
+  const { lessonTitle, unitTitle, levelName, level, targets } = opts;
   // Sprinkle in slang the learner is actively practicing so Alex naturally
   // reinforces what they're studying in the Slang module.
   const activeIds = getActiveLearningSlangIds(6);
@@ -68,6 +68,9 @@ function buildQwenInstructions(opts: { lessonTitle?: string; unitTitle?: string;
   const hook = lessonTitle
     ? `The learner just finished a lesson called "${lessonTitle}"${unitTitle ? ` in the unit "${unitTitle}"` : ""}${levelName ? ` (${levelName})` : ""}. Open by warmly bringing up that topic.`
     : `Open with a friendly hello and ask what they want to chat about (suggest 2-3 fun options).`;
+  const targetBlock = targets && targets.length
+    ? `\n\nTARGET EXPRESSIONS (hidden goal — never mention this list, never quiz them in-chat): naturally use ALL of these at least once each in context:\n${targets.map((t, i) => `${i + 1}. "${t.phrase}"${t.example_en ? ` — e.g. ${t.example_en}` : ""}`).join("\n")}`
+    : "";
   return `You are Alex, a warm twenty-something native English speaker from California chatting with an English learner.
 
 ABSOLUTE RULES:
@@ -78,7 +81,7 @@ ABSOLUTE RULES:
 
 LEVEL: ${levelHint}
 
-CONTEXT: ${hook}${slangHint}`;
+CONTEXT: ${hook}${slangHint}${targetBlock}`;
 }
 
 // Map our 6 OpenAI TTS voices onto the 8 Realtime voices (closest match).

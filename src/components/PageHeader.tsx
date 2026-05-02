@@ -21,9 +21,11 @@ type Props = {
   title: string;
   subtitle?: string;
   back?: string | true;
+  /** Hide the "X 个表达待复习" banner (e.g. on subject-specific pages like 高考英语). */
+  hideReviewBanner?: boolean;
 };
 
-export const PageHeader = ({ title, subtitle, back }: Props) => {
+export const PageHeader = ({ title, subtitle, back, hideReviewBanner }: Props) => {
   const nav = useNavigate();
   const [due, setDue] = useState(0);
   const [voiceOpen, setVoiceOpen] = useState(false);
@@ -43,7 +45,7 @@ export const PageHeader = ({ title, subtitle, back }: Props) => {
   return (
     <header className="mb-6">
       {/* Slim review banner — replaces the old brain icon. Only shows when there is something due. */}
-      {due > 0 && (
+      {due > 0 && !hideReviewBanner && (
         <Link
           to="/review"
           className="mb-4 flex items-center justify-between gap-3 rounded-xl border border-primary/20 bg-primary/5 px-3 py-2 text-xs transition hover:bg-primary/10"

@@ -7,6 +7,12 @@ import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { cn } from "@/lib/utils";
+import {
+  awardCoins,
+  evaluateMilestones,
+  type BadgeDef,
+} from "@/lib/coinsBadges";
+import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 
 type Vocab = {
   id: string;

@@ -626,6 +626,11 @@ function QuizPhase({
     if (pool.length > 0) ensureMeaningsEn(pool.slice(0, 60));
   }, [group, pool]);
 
+  // Prefetch synonym packs for "syn" questions in this group.
+  useEffect(() => {
+    if (group.length > 0) ensureSynonyms(group);
+  }, [group]);
+
   const item = queue[pos];
 
   if (!item) {

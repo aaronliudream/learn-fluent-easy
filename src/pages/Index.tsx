@@ -197,34 +197,6 @@ const Index = () => {
       {/* Primary: Today's Task card — single clear next action */}
       <TodayTaskCard />
 
-      {/* Gamification strip: XP ring + badges + leaderboard CTA */}
-      <section className="mt-4 grid gap-3 sm:grid-cols-[auto,1fr]">
-        <Link
-          to="/leaderboard"
-          className="card-paper group flex items-center gap-3 rounded-2xl p-3 transition hover:-translate-y-0.5 hover:shadow-md sm:flex-col sm:items-center sm:justify-center sm:p-4"
-        >
-          <XPRing value={displayStreak} target={Math.max(7, Math.ceil((displayStreak + 1) / 7) * 7)} label={t("index.streak.label")} />
-          <div className="flex flex-col gap-1 sm:items-center">
-            <span className="inline-flex items-center gap-1 rounded-full bg-accent/15 px-2.5 py-1 text-[11px] font-bold text-foreground">
-              <Trophy className="size-3.5 text-accent" /> <T>本周排行榜</T>
-            </span>
-            <span className="text-[10px] text-muted-foreground sm:hidden"><T>查看你的全球排名</T></span>
-          </div>
-        </Link>
-
-        <div className="card-paper rounded-2xl p-3">
-          <div className="mb-2 flex items-center justify-between">
-            <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
-              <T>成就徽章</T>
-            </div>
-            <Link to="/stats" className="text-[11px] font-semibold text-primary hover:underline">
-              <T>全部</T> →
-            </Link>
-          </div>
-          <BadgeStrip badges={badges} />
-        </div>
-      </section>
-
       {/* Secondary: all entry points, demoted to a compact grid */}
       <div className="mb-3 mt-8">
         <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">

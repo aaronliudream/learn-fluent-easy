@@ -72,12 +72,25 @@ function tierEmoji(rating: number): string {
 }
 
 function pickQuestions(pool: Vocab[], n: number): Question[] {
-  const filtered = pool.filter((v) => v.word && v.meaning_cn && !/[\/\s]/.test(v.word));
+  const cleaned = pool.filter((v) => v.word && v.meaning_cn && !/[\/\s]/.test(v.word));
+  // 按 word（小写）去重，避免同一个词以不同 id 出现多次导致重复题目
+  const seen = new Set<string>();
+  const filtered: Vocab[] = [];
+  for (const v of cleaned) {
+    const key = v.word.trim().toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    filtered.push(v);
+  }
   const shuffled = [...filtered].sort(() => Math.random() - 0.5);
   const picks = shuffled.slice(0, n);
+  const usedWords = new Set(picks.map((p) => p.word.trim().toLowerCase()));
   return picks.map((v) => {
     const distractors = filtered
-      .filter((d) => d.id !== v.id && d.word !== v.word)
+      .filter((d) => {
+        const k = d.word.trim().toLowerCase();
+        return d.id !== v.id && k !== v.word.trim().toLowerCase() && !usedWords.has(k);
+      })
       .sort(() => Math.random() - 0.5)
       .slice(0, 3)
       .map((d) => d.word);

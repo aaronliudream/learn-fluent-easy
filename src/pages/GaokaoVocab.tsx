@@ -16,6 +16,7 @@ import {
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 import MasteryDashboard from "@/components/MasteryDashboard";
 import MemoryMatch from "@/components/MemoryMatch";
+import MistakeExplainer from "@/components/MistakeExplainer";
 
 type Vocab = {
   id: string;
@@ -581,6 +582,7 @@ function GroupSession({
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [coinsAwarded, setCoinsAwarded] = useState(0);
   const [groupLevelUps, setGroupLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+  const [wrongWords, setWrongWords] = useState<Vocab[]>([]);
 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
@@ -615,6 +617,9 @@ function GroupSession({
             setStats({ correct: s.correct, total: s.total });
             setCoinsAwarded(s.score);
             setGroupLevelUps(s.levelUps ?? []);
+            // Resolve wrong-vocab IDs back to full vocab objects (from current group)
+            const wrongSet = new Set(s.wrongVocabIds ?? []);
+            setWrongWords(group.filter((v) => wrongSet.has(v.id)));
             setPhase("done");
             // Award coins and check milestone badges
             const totals = await awardCoins(s.score);
@@ -639,6 +644,7 @@ function GroupSession({
           onRetry={() => setPhase("flashcard")}
           levelUps={groupLevelUps}
           group={group}
+          wrongWords={wrongWords}
         />
       )}
       {unlockedBadges.length > 0 && (
@@ -766,6 +772,7 @@ export type QuizSessionResult = {
   score: number;
   spellCorrect: number;
   levelUps?: { word: string; level: MasteryLevel }[];
+  wrongVocabIds?: string[];
 };
 
 function QuizPhase({
@@ -788,6 +795,7 @@ function QuizPhase({
   const [spellCorrect, setSpellCorrect] = useState(0);
   const questionShownAtRef = useRef<number>(Date.now());
   const [levelUps, setLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+  const wrongIdsRef = useRef<Set<string>>(new Set());
 
   // Reset stopwatch every time we land on a new question
   useEffect(() => {
@@ -829,6 +837,9 @@ function QuizPhase({
 
     if (isCorrect && item.kind === "spell") {
       setSpellCorrect((n) => n + 1);
+    }
+    if (!isCorrect) {
+      wrongIdsRef.current.add(item.vocab.id);
     }
 
     // Combo + score
@@ -874,6 +885,7 @@ function QuizPhase({
         score: finalScore,
         spellCorrect: finalSpell,
         levelUps,
+        wrongVocabIds: Array.from(wrongIdsRef.current),
       });
     } else {
       setPos(pos + 1);
@@ -1235,6 +1247,7 @@ function DonePanel({
   onRetry,
   levelUps,
   group,
+  wrongWords,
 }: {
   stats: { correct: number; total: number };
   coinsAwarded?: number;
@@ -1242,6 +1255,7 @@ function DonePanel({
   onRetry: () => void;
   levelUps?: { word: string; level: MasteryLevel }[];
   group?: Vocab[];
+  wrongWords?: Vocab[];
 }) {
   const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
   const [showGame, setShowGame] = useState(false);
@@ -1282,6 +1296,50 @@ function DonePanel({
         </div>
       )}
       <div className="mt-2 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>
+      {wrongWords && wrongWords.length > 0 && (
+        <div className="mt-5 text-left">
+          <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-bold text-amber-700 dark:text-amber-300">
+            ✏️ 本次答错 {wrongWords.length} 词 · 点开查看 AI 深度讲解
+          </div>
+          {wrongWords.slice(0, 8).map((w) => (
+            <div key={w.id} className="mt-2 rounded-2xl border bg-background p-3">
+              <div className="flex items-baseline justify-between gap-2">
+                <div>
+                  <span className="text-base font-extrabold font-mono">{w.word}</span>
+                  {w.pos && (
+                    <span className="ml-2 rounded-md border border-muted-foreground/30 bg-muted px-1.5 py-0.5 text-[10px] font-bold text-muted-foreground">
+                      {w.pos}
+                    </span>
+                  )}
+                </div>
+                <button
+                  onClick={() => speakWord(w)}
+                  className="rounded-full bg-primary/10 p-1.5 text-primary hover:bg-primary/20"
+                  aria-label="朗读"
+                >
+                  <Volume2 className="size-3.5" />
+                </button>
+              </div>
+              <div className="mt-0.5 text-sm text-muted-foreground">{w.meaning_cn}</div>
+              <MistakeExplainer
+                vocab={{
+                  id: w.id,
+                  word: w.word,
+                  meaning_cn: w.meaning_cn,
+                  pos: w.pos,
+                  example_en: w.example_en,
+                  example_cn: w.example_cn,
+                }}
+              />
+            </div>
+          ))}
+          {wrongWords.length > 8 && (
+            <div className="mt-2 text-center text-xs text-muted-foreground">
+              还有 {wrongWords.length - 8} 词在 SRS 队列中
+            </div>
+          )}
+        </div>
+      )}
       {group && group.length >= 6 && !showGame && (
         <div className="mt-5">
           <button

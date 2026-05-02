@@ -100,8 +100,11 @@ function cleanArticleBody(body: string) {
   // 形如 \\_1\\ / \_1\_ / \\1\\ / __1__ / \(1\) 等
   result = result.replace(/\\+_*\s*(\d{1,2})\s*_*\\+/g, (_, n) => ` ${toCircled(n)} `);
   result = result.replace(/_{2,}\s*(\d{1,2})\s*_{2,}/g, (_, n) => ` ${toCircled(n)} `);
-  // 残留的孤立反斜杠和多余空格
+  // 去掉 markdown 标记 (** __ ##) 和孤立反斜杠
+  result = result.replace(/\*\*+/g, "").replace(/(^|\s)#{1,6}\s+/g, "$1");
   result = result.replace(/\\+/g, "").replace(/[ \t]{2,}/g, " ");
+  // 去掉残余的孤立标点行 (如只剩 "**" 的段落)
+  result = result.split("\n").filter((l) => l.trim().replace(/[\s\*_#\-]/g, "").length > 0).join("\n");
   return result.trim();
 }
 

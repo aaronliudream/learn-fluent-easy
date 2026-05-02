@@ -834,6 +834,240 @@ function DonePanel({
   );
 }
 
+/* ---------- Spelling Bee question ---------- */
+function SpellQuestion({
+  vocab,
+  onResult,
+}: {
+  vocab: Vocab;
+  onResult: (ok: boolean) => void;
+}) {
+  // Use the first form when the word stores variants like "a/an"
+  const target = vocab.word.split("/")[0].trim();
+  const chars = target.split("");
+  const [typed, setTyped] = useState(""); // matches the prefix of `target`
+  const [errorFlash, setErrorFlash] = useState(false);
+  const [hintShown, setHintShown] = useState(false);
+  const [reveal, setReveal] = useState<null | "correct" | "wrong">(null);
+  const [showFirst, setShowFirst] = useState(false); // first-letter hint
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  // Re-focus input on mount so mobile keyboard pops up
+  useEffect(() => {
+    const t = setTimeout(() => inputRef.current?.focus(), 250);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Auto-skip whitespace / hyphen positions
+  useEffect(() => {
+    if (reveal) return;
+    let i = typed.length;
+    let next = typed;
+    while (i < target.length && /[\s\-']/.test(target[i])) {
+      next += target[i];
+      i++;
+    }
+    if (next !== typed) setTyped(next);
+  }, [typed, target, reveal]);
+
+  // Detect completion
+  useEffect(() => {
+    if (reveal) return;
+    if (typed.length === target.length && typed.toLowerCase() === target.toLowerCase()) {
+      setReveal("correct");
+      speakWord(vocab);
+    }
+  }, [typed, target, reveal, vocab]);
+
+  const handleInput = (raw: string) => {
+    if (reveal) return;
+    // Take only the next character beyond what's already typed
+    if (raw.length <= typed.length) {
+      setTyped(raw);
+      return;
+    }
+    const nextChar = raw[raw.length - 1];
+    const expected = target[typed.length];
+    if (!expected) return;
+    if (nextChar.toLowerCase() === expected.toLowerCase()) {
+      setTyped(typed + expected);
+    } else {
+      setErrorFlash(true);
+      setTimeout(() => setErrorFlash(false), 250);
+    }
+  };
+
+  const giveUp = () => {
+    setReveal("wrong");
+    setTyped(target);
+    speakWord(vocab);
+  };
+
+  const useHint = () => {
+    if (reveal) return;
+    setHintShown(true);
+    setShowFirst(true);
+    // Auto-fill first letter if not yet typed
+    if (typed.length === 0 && target.length > 0) {
+      setTyped(target[0]);
+    }
+  };
+
+  return (
+    <div className="rounded-3xl border bg-card p-6 shadow-tile">
+      <div className="flex items-center justify-between">
+        <div className="text-xs uppercase tracking-wider text-muted-foreground inline-flex items-center gap-1">
+          <Keyboard className="size-3" /> Spelling Bee · 听音拼写
+        </div>
+        <button
+          onClick={() => speakWord(vocab)}
+          className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary"
+        >
+          <Volume2 className="size-3" /> 再听一次
+          <AccentBadge accent={vocab.accent} />
+        </button>
+      </div>
+
+      <div className="mt-4 text-center">
+        <button
+          onClick={() => speakWord(vocab)}
+          className="mx-auto inline-flex size-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-tile transition hover:scale-105"
+          aria-label="play pronunciation"
+        >
+          <Volume2 className="size-7" />
+        </button>
+        <div className="mt-3 text-sm text-muted-foreground">
+          {vocab.meaning_cn}{vocab.pos ? ` · ${vocab.pos}` : ""}
+        </div>
+        {vocab.phonetic && hintShown && (
+          <div className="mt-1 text-xs text-muted-foreground">{vocab.phonetic}</div>
+        )}
+      </div>
+
+      {/* Letter slots */}
+      <div
+        className={cn(
+          "mt-6 flex flex-wrap justify-center gap-1.5 transition",
+          errorFlash && "animate-pulse"
+        )}
+        onClick={() => inputRef.current?.focus()}
+      >
+        {chars.map((ch, i) => {
+          const isSpace = /[\s]/.test(ch);
+          const isFilled = i < typed.length;
+          const isCursor = i === typed.length && !reveal;
+          const isFirstHint = showFirst && i === 0 && !isFilled;
+          if (isSpace) {
+            return <div key={i} className="w-3" />;
+          }
+          return (
+            <div
+              key={i}
+              className={cn(
+                "flex h-11 w-8 items-center justify-center rounded-md border-2 font-mono text-lg font-bold uppercase transition",
+                isFilled && reveal === "correct" && "border-green-500 bg-green-500/15 text-green-700 dark:text-green-400",
+                isFilled && reveal === "wrong" && "border-red-500 bg-red-500/15 text-red-700 dark:text-red-400",
+                isFilled && !reveal && "border-primary bg-primary/10 text-foreground",
+                !isFilled && isCursor && "border-primary bg-background text-primary",
+                !isFilled && !isCursor && !isFirstHint && "border-border bg-muted/30 text-transparent",
+                !isFilled && isFirstHint && "border-amber-400 bg-amber-100/30 text-amber-700 dark:text-amber-400",
+                errorFlash && isCursor && "border-red-500 bg-red-500/20"
+              )}
+            >
+              {isFilled ? ch : isFirstHint ? ch : "·"}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Hidden text input that drives the slots (works with mobile keyboard + IME) */}
+      <input
+        ref={inputRef}
+        type="text"
+        autoCapitalize="off"
+        autoCorrect="off"
+        autoComplete="off"
+        spellCheck={false}
+        value={typed}
+        onChange={(e) => handleInput(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && reveal) onResult(reveal === "correct");
+        }}
+        disabled={reveal !== null}
+        className="sr-only"
+        aria-label="spell the word"
+      />
+
+      {/* Mobile fallback: visible input (since sr-only inputs sometimes don't trigger keyboard) */}
+      <input
+        type="text"
+        autoCapitalize="off"
+        autoCorrect="off"
+        autoComplete="off"
+        spellCheck={false}
+        value={typed}
+        onChange={(e) => handleInput(e.target.value)}
+        disabled={reveal !== null}
+        placeholder="Type the word…"
+        className="mt-5 w-full rounded-xl border bg-background px-4 py-3 text-center font-mono text-base focus:border-primary focus:outline-none disabled:opacity-70"
+      />
+
+      {!reveal && (
+        <div className="mt-3 flex items-center justify-between text-xs">
+          <button
+            onClick={useHint}
+            disabled={hintShown}
+            className="text-muted-foreground hover:text-foreground disabled:opacity-50"
+          >
+            💡 提示（首字母 + 音标）
+          </button>
+          <button onClick={giveUp} className="text-muted-foreground hover:text-foreground">
+            放弃 · 看答案 →
+          </button>
+        </div>
+      )}
+
+      {reveal && (
+        <div className="mt-5 space-y-3">
+          <div
+            className={cn(
+              "rounded-xl p-3 text-sm font-semibold",
+              reveal === "correct"
+                ? "bg-green-500/10 text-green-700 dark:text-green-400"
+                : "bg-red-500/10 text-red-700 dark:text-red-400"
+            )}
+          >
+            {reveal === "correct" ? (
+              <span className="inline-flex items-center gap-2">
+                <Zap className="size-4" /> 拼写正确！
+              </span>
+            ) : (
+              <>
+                ✗ 正确拼写：<span className="font-mono">{target}</span>
+              </>
+            )}
+          </div>
+          {vocab.example_en && (
+            <button
+              onClick={() => speakExample(vocab)}
+              className="flex w-full items-start gap-2 rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
+            >
+              <Volume2 className="mt-0.5 size-4 shrink-0 text-primary" />
+              <div>
+                <div>{vocab.example_en}</div>
+                <div className="mt-1 text-xs text-muted-foreground">{vocab.example_cn}</div>
+              </div>
+            </button>
+          )}
+          <Button className="w-full" size="lg" onClick={() => onResult(reveal === "correct")}>
+            继续 →
+          </Button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ---------- SRS Smart Review Session ---------- */
 function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
   const [loading, setLoading] = useState(true);

@@ -169,6 +169,9 @@ export default function WordBento({
     // Has a picked card → judge
     if (picked.pairId === card.pairId && picked.side !== card.side) {
       // ✅ Match
+      // 立即发音英文（picked 或 card 中 side==='en' 的那张）—— 零延迟
+      const enText = picked.side === "en" ? picked.text : card.text;
+      speakInstant(enText);
       const newMatched = new Set(matchedPairs);
       newMatched.add(card.pairId);
       setMatchedPairs(newMatched);

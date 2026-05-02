@@ -1,15 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { Brain, Sparkles, GraduationCap, ArrowRight, Flame, CheckCircle2, Zap, ChevronDown } from "lucide-react";
+import {
+  Brain, Sparkles, GraduationCap, ArrowRight, Flame, CheckCircle2, Zap,
+  ChevronDown, Target, BookOpen, MessageCircle, Headphones, Briefcase, Library,
+} from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { countDueReviews } from "@/lib/srs";
 import { LEVELS } from "@/data/course";
 import { loadProgress, getStreak } from "@/lib/guestProgress";
 import { IDIOMS } from "@/data/idioms";
 import { T, useT } from "@/i18n/T";
 
 type Task = {
-  key: "review" | "lesson" | "slang";
+  key: string;
   icon: typeof Brain;
   label: string;
   detail: string;
@@ -17,6 +19,14 @@ type Task = {
   cta: string;
   done: boolean;
   tone: string; // tailwind classes for the icon chip
+};
+
+type Reco = {
+  due_expressions: number; due_vocab: number; due_grammar: number;
+  due_slang: number; due_mistakes: number; total_due: number;
+  weakest_module: string | null; weakest_count: number;
+  top_area: string | null; top_area_count: number;
+  active_today: boolean; current_streak: number;
 };
 
 /**
@@ -43,18 +53,56 @@ function nextLessonInfo(completed: string[]): { to: string; title: string } {
   return { to: "/levels", title: "继续你的学习路径" }; // translated via t() at render time
 }
 
+/** Map weakest mistake module → CTA target */
+function weaknessTask(t: ReturnType<typeof useT>, mod: string, count: number): Task | null {
+  const map: Record<string, { to: string; label: string; icon: typeof Brain; tone: string }> = {
+    grammar: { to: "/gaokao/mistakes?module=grammar", label: t("攻克语法薄弱点"), icon: Target, tone: "from-rose-500 to-orange-500" },
+    cloze:   { to: "/gaokao/mistakes?module=cloze",   label: t("回顾完形填空错题"), icon: Target, tone: "from-rose-500 to-orange-500" },
+    reading: { to: "/gaokao/mistakes?module=reading", label: t("回顾阅读错题"),     icon: Target, tone: "from-rose-500 to-orange-500" },
+    vocab:   { to: "/gaokao/mistakes?module=vocab",   label: t("回顾词汇错题"),     icon: Target, tone: "from-rose-500 to-orange-500" },
+  };
+  const m = map[mod];
+  if (!m) return null;
+  return {
+    key: `weak-${mod}`, icon: m.icon, tone: m.tone,
+    label: m.label,
+    detail: t("最近 14 天还有 {n} 道未解决,趁热打铁").replace("{n}", String(count)),
+    to: m.to, cta: t("攻克"), done: false,
+  };
+}
+
+/** Map "most-used area" → next-step CTA in that same area */
+function preferenceTask(t: ReturnType<typeof useT>, area: string): Task | null {
+  const map: Record<string, { to: string; label: string; detail: string; icon: typeof Brain; tone: string }> = {
+    ai_talk:        { to: "/talk",            label: t("再来一段 AI 对话"),     detail: t("延续你最近的口语节奏"),           icon: MessageCircle, tone: "from-emerald-500 to-teal-500" },
+    slang:          { to: "/slang",           label: t("继续学俚语"),           detail: t("你最近常逛俚语,今天再加 3 句"),    icon: Zap,           tone: "from-amber-500 to-rose-500" },
+    scenes:         { to: "/scenes",          label: t("继续场景对话"),         detail: t("挑一个场景,5 分钟练完"),           icon: Headphones,    tone: "from-sky-500 to-indigo-500" },
+    workplace:      { to: "/workplace",       label: t("继续职场英语"),         detail: t("挑一个职场场景练手"),               icon: Briefcase,     tone: "from-indigo-500 to-violet-500" },
+    gaokao_vocab:   { to: "/gaokao/vocab",    label: t("继续高考词汇"),         detail: t("背完今天的单词"),                   icon: BookOpen,      tone: "from-blue-500 to-cyan-500" },
+    gaokao_grammar: { to: "/gaokao/grammar",  label: t("继续高考语法"),         detail: t("再练一组语法题"),                   icon: Library,       tone: "from-violet-500 to-fuchsia-500" },
+    gaokao_reading: { to: "/gaokao/reading",  label: t("继续高考阅读"),         detail: t("挑一篇文章读一读"),                 icon: BookOpen,      tone: "from-cyan-500 to-blue-500" },
+    gaokao_cloze:   { to: "/gaokao/cloze",    label: t("继续完形填空"),         detail: t("练一篇完形,15 分钟搞定"),           icon: Library,       tone: "from-fuchsia-500 to-pink-500" },
+    review:         { to: "/review",          label: t("继续刷题复习"),         detail: t("保持你最近的复习节奏"),             icon: Brain,         tone: "from-violet-500 to-fuchsia-500" },
+    lesson:         { to: "/levels",          label: t("继续课程学习"),         detail: t("接着上次的学习路径"),               icon: GraduationCap, tone: "from-blue-500 to-indigo-500" },
+  };
+  const m = map[area];
+  if (!m) return null;
+  return { key: `pref-${area}`, icon: m.icon, tone: m.tone, label: m.label, detail: m.detail, to: m.to, cta: t("继续"), done: false };
+}
+
 export const TodayTaskCard = () => {
-  const [dueReviews, setDueReviews] = useState<number | null>(null);
   const [signedIn, setSignedIn] = useState(false);
+  const [reco, setReco] = useState<Reco | null>(null);
   // Always start collapsed on page load. The user can expand it manually;
   // we don't persist the expanded state across reloads so the home page
   // stays compact by default.
   const [collapsed, setCollapsed] = useState<boolean>(true);
   const t = useT();
   const progress = useMemo(() => loadProgress(), []);
-  const streak = getStreak(progress);
   const todayKey = new Date().toISOString().slice(0, 10);
-  const studiedToday = progress.daysActive.includes(todayKey);
+  const guestStudiedToday = progress.daysActive.includes(todayKey);
+  const studiedToday = reco?.active_today ?? guestStudiedToday;
+  const streak = reco?.current_streak ?? getStreak(progress);
 
   useEffect(() => {
     let cancelled = false;
@@ -62,9 +110,12 @@ export const TodayTaskCard = () => {
       if (cancelled) return;
       setSignedIn(!!session?.user);
       if (session?.user) {
-        countDueReviews().then((c) => !cancelled && setDueReviews(c));
-      } else {
-        setDueReviews(0);
+        supabase.rpc("get_today_recommendations").then(({ data, error }) => {
+          if (cancelled) return;
+          if (error) { console.warn("today reco rpc error", error); return; }
+          const row = Array.isArray(data) ? data[0] : data;
+          if (row) setReco(row as Reco);
+        });
       }
     });
     return () => { cancelled = true; };
@@ -80,46 +131,97 @@ export const TodayTaskCard = () => {
     return IDIOMS[seed % IDIOMS.length];
   }, [todayKey]);
 
-  const tasks: Task[] = [
-    {
-      key: "review",
-      icon: Brain,
-      label: signedIn
-        ? t("复习 {n} 个表达").replace("{n}", String(dueReviews ?? "…"))
-        : t("登录解锁智能复习"),
-      detail: signedIn
-        ? (dueReviews && dueReviews > 0
-            ? t("AI 已为你挑选今日到期的关键词")
-            : t("今天暂无到期复习,再学一课就会有 ✨"))
-        : t("登录后,做过的题会按记忆曲线自动安排复习"),
-      to: signedIn ? "/review" : "/auth",
-      cta: signedIn && dueReviews && dueReviews > 0 ? t("去复习") : t("查看"),
-      done: signedIn && dueReviews === 0,
-      tone: "from-violet-500 to-fuchsia-500",
-    },
-    {
-      key: "lesson",
-      icon: GraduationCap,
-      label: progress.completedLessons.length > 0 ? t("继续下一课") : t("开始第一课"),
-      detail: t(next.title),
-      to: next.to,
-      cta: t("继续"),
-      done: false,
-      tone: "from-blue-500 to-indigo-500",
-    },
-    {
-      key: "slang",
-      icon: Zap,
-      label: t("今日一句俚语"),
-      detail: todaySlang
-        ? `“${todaySlang.phrase}” · ${t(todaySlang.meaning_cn)}`
-        : t("看看今天的流行表达"),
-      to: "/slang",
-      cta: t("去看"),
-      done: false,
-      tone: "from-amber-500 to-rose-500",
-    },
-  ];
+  // ----- Build personalized task list -----
+  const tasks: Task[] = useMemo(() => {
+    // Guest fallback (no science possible without an account)
+    if (!signedIn) {
+      return [
+        {
+          key: "guest-review", icon: Brain, tone: "from-violet-500 to-fuchsia-500",
+          label: t("登录解锁智能复习"),
+          detail: t("登录后,做过的题会按记忆曲线自动安排复习"),
+          to: "/auth", cta: t("登录"), done: false,
+        },
+        {
+          key: "guest-lesson", icon: GraduationCap, tone: "from-blue-500 to-indigo-500",
+          label: progress.completedLessons.length > 0 ? t("继续下一课") : t("开始第一课"),
+          detail: t(next.title), to: next.to, cta: t("继续"), done: false,
+        },
+        {
+          key: "guest-slang", icon: Zap, tone: "from-amber-500 to-rose-500",
+          label: t("今日一句俚语"),
+          detail: todaySlang ? `“${todaySlang.phrase}” · ${t(todaySlang.meaning_cn)}` : t("看看今天的流行表达"),
+          to: "/slang", cta: t("去看"), done: false,
+        },
+      ];
+    }
+
+    // Signed in but RPC still loading: show skeleton-ish placeholders
+    if (!reco) {
+      return [{
+        key: "loading", icon: Sparkles, tone: "from-violet-500 to-fuchsia-500",
+        label: t("正在为你挑选今日任务…"), detail: t("根据你的学习记录智能安排"),
+        to: "/review", cta: t("查看"), done: false,
+      }];
+    }
+
+    const out: Task[] = [];
+
+    // 1) Due reviews (highest priority — memory curve)
+    if (reco.total_due > 0) {
+      const parts: string[] = [];
+      if (reco.due_expressions) parts.push(t("{n} 个表达").replace("{n}", String(reco.due_expressions)));
+      if (reco.due_vocab)       parts.push(t("{n} 个单词").replace("{n}", String(reco.due_vocab)));
+      if (reco.due_grammar)     parts.push(t("{n} 个语法").replace("{n}", String(reco.due_grammar)));
+      if (reco.due_slang)       parts.push(t("{n} 句俚语").replace("{n}", String(reco.due_slang)));
+      if (reco.due_mistakes)    parts.push(t("{n} 道错题").replace("{n}", String(reco.due_mistakes)));
+      out.push({
+        key: "due", icon: Brain, tone: "from-violet-500 to-fuchsia-500",
+        label: t("到期复习 {n} 项").replace("{n}", String(reco.total_due)),
+        detail: parts.slice(0, 3).join(" · ") || t("AI 已为你挑选今日到期的关键内容"),
+        to: "/review", cta: t("去复习"), done: false,
+      });
+    } else {
+      out.push({
+        key: "due-empty", icon: Brain, tone: "from-violet-500 to-fuchsia-500",
+        label: t("今天暂无到期复习"), detail: t("再学一课就会有 ✨"),
+        to: "/review", cta: t("查看"), done: true,
+      });
+    }
+
+    // 2) Weakness — only if real and not duplicated by due-mistakes priority
+    if (reco.weakest_module && reco.weakest_count >= 2) {
+      const w = weaknessTask(t, reco.weakest_module, reco.weakest_count);
+      if (w) out.push(w);
+    }
+
+    // 3) Preference — keep the user in their groove (skip if same area as item 2)
+    if (reco.top_area && reco.top_area_count > 0) {
+      const p = preferenceTask(t, reco.top_area);
+      if (p && !out.some(x => x.to === p.to)) out.push(p);
+    }
+
+    // 4) Pad to 3: continue lesson if not already there
+    if (out.length < 3 && !out.some(x => x.to.startsWith("/level"))) {
+      out.push({
+        key: "lesson", icon: GraduationCap, tone: "from-blue-500 to-indigo-500",
+        label: progress.completedLessons.length > 0 ? t("继续下一课") : t("开始第一课"),
+        detail: t(next.title), to: next.to, cta: t("继续"), done: false,
+      });
+    }
+
+    // 5) Last resort: today's slang
+    if (out.length < 3) {
+      out.push({
+        key: "slang", icon: Zap, tone: "from-amber-500 to-rose-500",
+        label: t("今日一句俚语"),
+        detail: todaySlang ? `“${todaySlang.phrase}” · ${t(todaySlang.meaning_cn)}` : t("看看今天的流行表达"),
+        to: "/slang", cta: t("去看"), done: false,
+      });
+    }
+
+    return out.slice(0, 3);
+  }, [signedIn, reco, progress.completedLessons, next.title, next.to, todaySlang, t]);
 
   const totalActionable = tasks.filter((t) => !t.done).length;
 

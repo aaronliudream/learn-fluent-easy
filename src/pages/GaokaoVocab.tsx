@@ -450,7 +450,7 @@ function GroupList({
 
       {/* 学习进度总览：掌握数、百分比、未完成、7 天到期、平均稳定天数 */}
       <div className="mt-6">
-        <GaokaoVocabProgress totalVocab={pool.length} />
+        <GaokaoVocabProgress />
       </div>
 
       {/* SRS Smart Review Card — top priority entry */}

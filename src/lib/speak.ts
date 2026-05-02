@@ -123,14 +123,14 @@ const speakBrowserFallback = async (text: string, voiceId: string, speed: number
 };
 
 // ---------- ElevenLabs via edge function ----------
-const fetchTTS = async (text: string, voiceId: string, speed: number): Promise<string | null> => {
-  const cacheKey = `${voiceId}|${speed}|${text}`;
+const fetchTTS = async (text: string, voiceId: string, speed: number, accent?: string): Promise<string | null> => {
+  const cacheKey = `${voiceId}|${speed}|${accent || ''}|${text}`;
   const cached = audioCache.get(cacheKey);
   if (cached) return cached;
 
   try {
     const { data, error } = await supabase.functions.invoke("tts", {
-      body: { text, voiceId, speed },
+      body: { text, voiceId, speed, accent },
     });
     if (error) {
       console.warn("[tts] edge function error:", error.message);
@@ -182,7 +182,7 @@ const playUrlOn = (
 // handler. We do the audio-element creation + first `.play()` BEFORE any
 // `await`, so mobile browsers see this as a valid user-initiated playback.
 // The async work continues afterwards and just updates the src.
-export const speak = (text: string): Promise<void> => {
+export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH" }): Promise<void> => {
   if (!text) return Promise.resolve();
   const trimmed = text.trim();
   if (!trimmed) return Promise.resolve();
@@ -194,9 +194,10 @@ export const speak = (text: string): Promise<void> => {
   const audio = unlockAudioSync();
   const myToken = speakToken;
   const { voiceId, speed } = loadSettings();
+  const accent = opts?.accent;
 
   // 2) Cache hit → swap src right away, no network wait.
-  const cacheKey = `${voiceId}|${speed}|${trimmed}`;
+  const cacheKey = `${voiceId}|${speed}|${accent || ''}|${trimmed}`;
   const cached = audioCache.get(cacheKey);
   if (audio && cached) {
     return playUrlOn(audio, cached, myToken).then(() => undefined);
@@ -204,7 +205,7 @@ export const speak = (text: string): Promise<void> => {
 
   // 3) Cache miss → fetch then swap src on the same already-unlocked element.
   return (async () => {
-    const url = await fetchTTS(trimmed, voiceId, speed);
+    const url = await fetchTTS(trimmed, voiceId, speed, accent);
     if (myToken !== speakToken) return;
 
     if (audio && url) {

@@ -173,17 +173,28 @@ const fetchTTS = async (text: string, voiceId: string, speed: number, accent?: s
 
   try {
     const { data, error } = await supabase.functions.invoke("tts", {
-      body: { text, voiceId, speed, accent },
+      body: { text, voiceId, speed, accent, format: "url" },
     });
     if (error) {
       console.warn("[tts] edge function error:", error.message);
       return null;
     }
-    if (!data?.audioContent) {
-      console.warn("[tts] no audio content returned");
+    // Prefer the CDN URL when the file is already cached server-side — the
+    // browser fetches the MP3 directly from Supabase's CDN edge (no base64
+    // decode, no JSON parsing of a multi-hundred-KB string).
+    let url: string | null = null;
+    if (data?.cached && data?.audioUrl) {
+      url = data.audioUrl as string;
+    } else if (data?.audioContent) {
+      // Cold synth: server returns inline base64 so we can play immediately
+      // (the CDN file is still uploading in the background).
+      url = `data:${data.mimeType || "audio/mpeg"};base64,${data.audioContent}`;
+    } else if (data?.audioUrl) {
+      url = data.audioUrl as string;
+    } else {
+      console.warn("[tts] no audio returned");
       return null;
     }
-    const url = `data:${data.mimeType || "audio/mpeg"};base64,${data.audioContent}`;
     if (audioCache.size >= MAX_CACHE) {
       const firstKey = audioCache.keys().next().value;
       if (firstKey) audioCache.delete(firstKey);

@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Volume2, Eye, Sparkles, Loader2, CheckCircle2 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
-import { speak } from "@/lib/speak";
-import { prefetchTTS } from "@/lib/speak";
+import { speak, prefetchTTS, prefetchTTSBatch } from "@/lib/speak";
 import { T } from "@/i18n/T";
 import {
   fetchDueReviews,
@@ -43,6 +42,11 @@ const Review = () => {
       if (cancelled) return;
       setCards(due);
       setLoading(false);
+      // Warm the CDN/localStorage cache for the WHOLE review queue up
+      // front. Most phrases will resolve from a known CDN URL in
+      // <200ms (or 0ms if seen before). By the time the user reaches
+      // card #5, its mp3 is already in the browser's HTTP cache.
+      prefetchTTSBatch(due.map((c) => c.phrase));
     })();
     return () => {
       cancelled = true;

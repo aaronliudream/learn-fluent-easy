@@ -1,0 +1,1 @@
+ALTER TABLE public.gaokao_vocab ADD COLUMN IF NOT EXISTS meaning_en text;

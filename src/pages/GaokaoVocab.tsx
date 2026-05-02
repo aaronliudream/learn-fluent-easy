@@ -17,7 +17,39 @@ type Vocab = {
   example_en: string | null;
   example_cn: string | null;
   star_level: number | null;
+  accent: "UK" | "US" | "BOTH" | null;
 };
+/* ---------- Accent helpers ---------- */
+function speakWord(v: Vocab) {
+  // Some words are stored with slashes (e.g. "a/an"); only speak the first form.
+  const text = v.word.split("/")[0];
+  const acc = v.accent === "UK" || v.accent === "US" ? v.accent : undefined;
+  return speak(text, acc ? { accent: acc } : undefined);
+}
+
+function speakExample(v: Vocab) {
+  if (!v.example_en) return Promise.resolve();
+  const acc = v.accent === "UK" || v.accent === "US" ? v.accent : undefined;
+  return speak(v.example_en, acc ? { accent: acc } : undefined);
+}
+
+function AccentBadge({ accent }: { accent: Vocab["accent"] }) {
+  if (accent !== "UK" && accent !== "US") return null;
+  const isUS = accent === "US";
+  return (
+    <span
+      className={cn(
+        "ml-2 inline-flex items-center rounded-md border px-1.5 py-0.5 text-[10px] font-bold tracking-wide",
+        isUS
+          ? "border-blue-500/40 bg-blue-500/10 text-blue-600 dark:text-blue-400"
+          : "border-rose-500/40 bg-rose-500/10 text-rose-600 dark:text-rose-400"
+      )}
+      title={isUS ? "美式发音" : "英式发音"}
+    >
+      {isUS ? "🇺🇸 US" : "🇬🇧 UK"}
+    </span>
+  );
+}
 
 const GROUP_SIZE = 20;
 

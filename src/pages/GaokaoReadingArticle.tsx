@@ -71,6 +71,19 @@ const TYPE_COLOR: Record<string, string> = {
   viewpoint: "bg-indigo-500/10 text-indigo-600 border-indigo-500/20",
 };
 
+function cleanArticleBody(body: string) {
+  const normalized = body.replace(/\r\n/g, "\n").trim();
+  const sectionMarkers = [
+    /(?:^|\n)\s*(测试题目|答案与解析|文章分析|生词与重点表达)\s*[:：]?/i,
+    /(?:^|\n)\s*(Questions?|Answers?\s*(and|&)\s*Analysis|Article\s*Analysis|Vocabulary)\s*[:：]?/i,
+  ];
+  const cutAt = sectionMarkers.reduce((min, marker) => {
+    const match = marker.exec(normalized);
+    return match && match.index > 0 ? Math.min(min, match.index) : min;
+  }, normalized.length);
+  return normalized.slice(0, cutAt).trim();
+}
+
 export default function GaokaoReadingArticle() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -127,6 +140,7 @@ export default function GaokaoReadingArticle() {
 
   const answeredCount = Object.keys(answers).length;
   const totalQ = questions.length;
+  const displayBody = useMemo(() => cleanArticleBody(article?.body ?? ""), [article?.body]);
 
   const correctCount = useMemo(() => {
     return questions.filter((q) => answers[q.id] === q.correct_answer).length;

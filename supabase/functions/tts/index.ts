@@ -1,10 +1,12 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 import { encode as base64Encode } from "https://deno.land/std@0.168.0/encoding/base64.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  "Access-Control-Expose-Headers": "x-audio-url, x-cache",
 };
 
 const json = (body: Record<string, unknown>, status = 200) =>
@@ -13,225 +15,173 @@ const json = (body: Record<string, unknown>, status = 200) =>
     headers: { ...corsHeaders, "Content-Type": "application/json" },
   });
 
-// OpenAI TTS voice IDs we expose. Our app already uses these names, so this
-// is a 1:1 mapping — every voice produces highly natural English speech on
-// every browser/device because the audio is synthesized server-side and
-// delivered as MP3.
-const OPENAI_VOICES = new Set([
-  "alloy", "shimmer", "nova", "echo", "onyx", "fable",
-]);
+const OPENAI_VOICES = new Set(["alloy", "shimmer", "nova", "echo", "onyx", "fable"]);
 
-// Map our app's voice IDs to Alibaba CosyVoice voice IDs. CosyVoice has
-// excellent English voices — we pick natural-sounding ones that roughly
-// match the timbre of the OpenAI voice the user picked, so switching
-// providers feels seamless.
 const COSYVOICE_VOICE_MAP: Record<string, string> = {
-  alloy:   "loongstella",  // warm female English
-  shimmer: "loongstella",
-  nova:    "loongstella",
-  fable:   "loongstella",
-  echo:    "loongbella",   // male-leaning English
-  onyx:    "loongbella",
+  alloy: "loongstella", shimmer: "loongstella", nova: "loongstella",
+  fable: "loongstella", echo: "loongbella", onyx: "loongbella",
 };
 
-// Detect whether a request is coming from mainland China. We rely on
-// Cloudflare's `cf-ipcountry` header (set on Supabase Edge), then fall
-// back to `accept-language` containing zh-CN. False = treat as overseas
-// and use OpenAI; true = use Alibaba CosyVoice (much faster inside CN).
 function isMainlandChina(req: Request): boolean {
   const country = (req.headers.get("cf-ipcountry") || req.headers.get("x-vercel-ip-country") || "").toUpperCase();
   if (country === "CN") return true;
-  if (country && country !== "CN" && country !== "XX") return false; // trusted non-CN
-  // No country header — fall back to language hint.
+  if (country && country !== "CN" && country !== "XX") return false;
   const lang = (req.headers.get("accept-language") || "").toLowerCase();
   return lang.startsWith("zh-cn") || lang.includes(",zh-cn");
 }
 
-// In-memory cache shared across requests on the same edge instance. Short
-// utterances (single words / phrases) are looked up reliably here, so
-// repeated clicks on the same word return instantly without re-calling
-// the upstream provider. Capped to keep memory bounded.
-const audioCache = new Map<string, string>();
-const MAX_CACHE = 500;
-const cacheGet = (k: string) => {
-  const v = audioCache.get(k);
-  if (v !== undefined) {
-    // refresh LRU position
-    audioCache.delete(k);
-    audioCache.set(k, v);
-  }
-  return v;
-};
-const cacheSet = (k: string, v: string) => {
-  if (audioCache.size >= MAX_CACHE) {
-    const firstKey = audioCache.keys().next().value;
-    if (firstKey) audioCache.delete(firstKey);
-  }
-  audioCache.set(k, v);
-};
+// SHA-256 → hex (content-addressed cache key).
+async function sha256Hex(s: string): Promise<string> {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
 
-// Call Alibaba DashScope CosyVoice TTS. Returns base64-encoded MP3 on
-// success, or throws with a descriptive error.
-async function synthesizeWithCosyVoice(opts: {
-  text: string;
-  voice: string;
-  speed: number;
-  apiKey: string;
-}): Promise<string> {
-  const response = await fetch(
-    "https://dashscope.aliyuncs.com/api/v1/services/audio/tts/",
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${opts.apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "cosyvoice-v2",
-        input: { text: opts.text },
-        parameters: {
-          voice: opts.voice,
-          format: "mp3",
-          sample_rate: 22050,
-          volume: 100,
-          rate: opts.speed, // 0.5 – 2.0
-          pitch: 1.0,
-        },
-      }),
-    },
-  );
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
+const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+const supabase = createClient(SUPABASE_URL, SERVICE_KEY, { auth: { persistSession: false } });
+const BUCKET = "tts-audio";
 
+function publicUrlFor(path: string): string {
+  // Constructed manually so we can return it before/after upload without an extra round-trip.
+  return `${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${path}`;
+}
+
+async function existsInStorage(path: string): Promise<boolean> {
+  // HEAD on the public URL is cheaper than the SDK list call.
+  try {
+    const r = await fetch(publicUrlFor(path), { method: "HEAD" });
+    return r.ok;
+  } catch { return false; }
+}
+
+async function uploadToStorage(path: string, bytes: ArrayBuffer): Promise<void> {
+  const { error } = await supabase.storage.from(BUCKET).upload(path, bytes, {
+    contentType: "audio/mpeg",
+    cacheControl: "public, max-age=31536000, immutable",
+    upsert: true,
+  });
+  if (error) console.warn("[tts] storage upload failed:", error.message);
+}
+
+async function synthesizeWithCosyVoice(text: string, voice: string, speed: number, apiKey: string): Promise<ArrayBuffer> {
+  const response = await fetch("https://dashscope.aliyuncs.com/api/v1/services/audio/tts/", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: "cosyvoice-v2",
+      input: { text },
+      parameters: { voice, format: "mp3", sample_rate: 22050, volume: 100, rate: speed, pitch: 1.0 },
+    }),
+  });
   if (!response.ok) {
-    const errText = await response.text();
-    throw new Error(`CosyVoice ${response.status}: ${errText}`);
+    throw new Error(`CosyVoice ${response.status}: ${await response.text()}`);
   }
-
-  // CosyVoice sync endpoint returns MP3 audio directly when Accept is audio,
-  // or a JSON wrapper with `output.audio.data` (base64) otherwise. We sent
-  // JSON content-type without an Accept override, so handle both.
   const ct = response.headers.get("content-type") || "";
   if (ct.includes("application/json")) {
     const j = await response.json();
     const b64 = j?.output?.audio?.data;
-    if (typeof b64 === "string" && b64.length > 0) return b64;
+    if (typeof b64 === "string" && b64.length > 0) {
+      // Decode base64 → bytes.
+      const bin = atob(b64);
+      const out = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+      return out.buffer;
+    }
     throw new Error(`CosyVoice unexpected JSON: ${JSON.stringify(j).slice(0, 300)}`);
   }
-  const buf = await response.arrayBuffer();
-  return base64Encode(buf);
+  return await response.arrayBuffer();
+}
+
+async function synthesizeWithOpenAI(text: string, voice: string, speed: number, apiKey: string, isShort: boolean): Promise<ArrayBuffer> {
+  const model = isShort ? "tts-1" : "tts-1-hd";
+  const response = await fetch("https://api.openai.com/v1/audio/speech", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ model, voice, input: text, speed, response_format: "mp3" }),
+  });
+  if (!response.ok) {
+    const err = await response.text();
+    throw new Error(`OpenAI ${response.status}: ${err}`);
+  }
+  return await response.arrayBuffer();
 }
 
 serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders });
-  }
+  if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
   try {
-    const { text, voiceId, speed, accent } = await req.json();
-    if (!text) {
-      return json({ error: "text is required" }, 400);
-    }
+    const { text, voiceId, speed, accent, format } = await req.json();
+    if (!text) return json({ error: "text is required" }, 400);
 
     const requestedVoice = typeof voiceId === "string" ? voiceId : "alloy";
     let selectedVoice = OPENAI_VOICES.has(requestedVoice) ? requestedVoice : "alloy";
-
-    // Accent override: force a UK or US voice when caller specifies one.
-    // OpenAI's `fable` is the British-leaning voice; `alloy` is General American.
     const accentUpper = typeof accent === "string" ? accent.toUpperCase() : "";
     if (accentUpper === "UK") selectedVoice = "fable";
     else if (accentUpper === "US") selectedVoice = "alloy";
-    // Both providers support roughly 0.5–2.0; clamp to a friendly learning range.
     const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
     const safeText = String(text).slice(0, 4000);
-
     const isShort = safeText.length <= 40;
-
-    // Pick provider based on the user's geography. Mainland China users
-    // get Alibaba CosyVoice (servers inside CN → ~200ms vs ~3s for OpenAI),
-    // everyone else gets OpenAI's natural English voices.
     const useAliyun = isMainlandChina(req);
     const provider: "aliyun" | "openai" = useAliyun ? "aliyun" : "openai";
 
-    // Check the in-memory cache first for short utterances. We only cache
-    // shorts because long paragraphs would blow the memory budget quickly
-    // and aren't repeated enough to benefit from caching.
-    const cacheKey = isShort ? `${provider}|${selectedVoice}|${safeSpeed}|${safeText}` : null;
-    if (cacheKey) {
-      const hit = cacheGet(cacheKey);
-      if (hit) {
-        return json({ audioContent: hit, mimeType: "audio/mpeg", cached: true });
+    // Content-addressed cache key — same text+voice+speed always lands on the same file.
+    const keyInput = `${provider}|${selectedVoice}|${safeSpeed}|${accentUpper}|${safeText}`;
+    const hash = await sha256Hex(keyInput);
+    const path = `${hash.slice(0, 2)}/${hash}.mp3`;
+    const cdnUrl = publicUrlFor(path);
+
+    // FAST PATH: cache hit → return URL immediately. No synthesis, no bytes
+    // passing through edge. Client fetches from CDN directly.
+    if (await existsInStorage(path)) {
+      // `format=url` clients want JSON with the URL; legacy clients still get base64.
+      if (format === "url") {
+        return json({ audioUrl: cdnUrl, cached: true, provider, mimeType: "audio/mpeg" });
       }
+      // Legacy: still answer with base64 for back-compat. Fetch & re-encode.
+      const r = await fetch(cdnUrl);
+      const bytes = await r.arrayBuffer();
+      const b64 = base64Encode(bytes);
+      return json({ audioContent: b64, audioUrl: cdnUrl, mimeType: "audio/mpeg", cached: true, provider });
     }
 
-    // ===== Mainland China → Alibaba CosyVoice =====
+    // SLOW PATH: synthesize once.
+    let bytes: ArrayBuffer | null = null;
+    let usedProvider = provider;
+
     if (provider === "aliyun") {
-      const DASHSCOPE_API_KEY = Deno.env.get("DASHSCOPE_API_KEY");
-      if (!DASHSCOPE_API_KEY) {
-        // Fall back to OpenAI if Aliyun key is not configured.
-        console.warn("DASHSCOPE_API_KEY missing; falling back to OpenAI");
-      } else {
+      const k = Deno.env.get("DASHSCOPE_API_KEY");
+      if (k) {
         try {
-          const cosyVoice = COSYVOICE_VOICE_MAP[selectedVoice] || "loongstella";
-          const audioContent = await synthesizeWithCosyVoice({
-            text: safeText,
-            voice: cosyVoice,
-            speed: safeSpeed,
-            apiKey: DASHSCOPE_API_KEY,
-          });
-          if (cacheKey) cacheSet(cacheKey, audioContent);
-          return json({ audioContent, mimeType: "audio/mpeg", provider: "aliyun" });
+          const v = COSYVOICE_VOICE_MAP[selectedVoice] || "loongstella";
+          bytes = await synthesizeWithCosyVoice(safeText, v, safeSpeed, k);
         } catch (err) {
-          // On any CosyVoice failure, fall through to OpenAI so the user
-          // still hears something rather than getting an error.
           console.error("CosyVoice failed, falling back to OpenAI:", err);
         }
       }
     }
-
-    // ===== Overseas (or fallback) → OpenAI =====
-    const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
-    if (!OPENAI_API_KEY) return json({ error: "TTS provider is not configured" }, 503);
-
-    // Use the faster `tts-1` model for short utterances (single words /
-    // short phrases) — 3–5× faster than `tts-1-hd` and the quality
-    // difference is inaudible at this length.
-    const model = isShort ? "tts-1" : "tts-1-hd";
-
-    const response = await fetch("https://api.openai.com/v1/audio/speech", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model,
-        voice: selectedVoice,
-        input: safeText,
-        speed: safeSpeed,
-        response_format: "mp3",
-      }),
-    });
-
-    if (!response.ok) {
-      const err = await response.text();
-      console.error("OpenAI TTS via Lovable AI error:", response.status, err);
-      if (response.status === 429) {
-        return json({ error: "Rate limit exceeded, please try again later.", retryable: true }, 429);
+    if (!bytes) {
+      const k = Deno.env.get("OPENAI_API_KEY");
+      if (!k) return json({ error: "TTS provider is not configured" }, 503);
+      try {
+        bytes = await synthesizeWithOpenAI(safeText, selectedVoice, safeSpeed, k, isShort);
+        usedProvider = "openai";
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.error("OpenAI TTS error:", msg);
+        return json({ error: "TTS provider error", detail: msg }, 502);
       }
-      if (response.status === 402) {
-        return json({ error: "TTS provider credits are exhausted" }, 402);
-      }
-      if (response.status === 401 || response.status === 403) {
-        return json({ error: "TTS provider rejected the configured key" }, 503);
-      }
-      return json({ error: "TTS provider error", retryable: response.status >= 500 }, 502);
     }
 
-    const audioBuffer = await response.arrayBuffer();
-    const audioContent = base64Encode(audioBuffer);
+    // Persist for everyone — fire-and-forget so we don't add latency to this
+    // request. The first user pays the synthesis cost; everyone after them
+    // gets a CDN hit (<200ms).
+    queueMicrotask(() => uploadToStorage(path, bytes!).catch(() => {}));
 
-    if (cacheKey) cacheSet(cacheKey, audioContent);
-
-    return json({ audioContent, mimeType: "audio/mpeg", provider: "openai" });
+    const b64 = base64Encode(bytes);
+    // For both `format=url` and legacy clients on a cache miss, send back the
+    // inline base64 so playback can start now. The audioUrl will be valid for
+    // the *next* request (after the background upload completes).
+    return json({ audioContent: b64, audioUrl: cdnUrl, mimeType: "audio/mpeg", cached: false, provider: usedProvider });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Unknown error";
     console.error("tts error:", msg);

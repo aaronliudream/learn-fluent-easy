@@ -574,6 +574,8 @@ export type Database = {
           correct_answer: string
           created_at: string
           difficulty: number
+          distractor_pattern: string | null
+          error_tags: Json
           explanation_a: string | null
           explanation_b: string | null
           explanation_c: string | null
@@ -588,6 +590,7 @@ export type Database = {
           option_d: string
           question_type: string
           question_type_cn: string | null
+          skill_focus: string | null
           sort_order: number
           stem: string
         }
@@ -596,6 +599,8 @@ export type Database = {
           correct_answer: string
           created_at?: string
           difficulty?: number
+          distractor_pattern?: string | null
+          error_tags?: Json
           explanation_a?: string | null
           explanation_b?: string | null
           explanation_c?: string | null
@@ -610,6 +615,7 @@ export type Database = {
           option_d: string
           question_type: string
           question_type_cn?: string | null
+          skill_focus?: string | null
           sort_order?: number
           stem: string
         }
@@ -618,6 +624,8 @@ export type Database = {
           correct_answer?: string
           created_at?: string
           difficulty?: number
+          distractor_pattern?: string | null
+          error_tags?: Json
           explanation_a?: string | null
           explanation_b?: string | null
           explanation_c?: string | null
@@ -632,6 +640,7 @@ export type Database = {
           option_d?: string
           question_type?: string
           question_type_cn?: string | null
+          skill_focus?: string | null
           sort_order?: number
           stem?: string
         }
@@ -785,6 +794,51 @@ export type Database = {
           useful_sentences?: Json | null
           word_count?: number
           writing_techniques?: string | null
+        }
+        Relationships: []
+      }
+      gaokao_reading_diagnostics: {
+        Row: {
+          article_id: string
+          correct_answer: string
+          created_at: string
+          error_tags: Json
+          id: string
+          is_correct: boolean
+          question_id: string
+          question_type: string
+          skill_focus: string | null
+          time_spent_seconds: number | null
+          user_answer: string | null
+          user_id: string
+        }
+        Insert: {
+          article_id: string
+          correct_answer: string
+          created_at?: string
+          error_tags?: Json
+          id?: string
+          is_correct: boolean
+          question_id: string
+          question_type: string
+          skill_focus?: string | null
+          time_spent_seconds?: number | null
+          user_answer?: string | null
+          user_id: string
+        }
+        Update: {
+          article_id?: string
+          correct_answer?: string
+          created_at?: string
+          error_tags?: Json
+          id?: string
+          is_correct?: boolean
+          question_id?: string
+          question_type?: string
+          skill_focus?: string | null
+          time_spent_seconds?: number | null
+          user_answer?: string | null
+          user_id?: string
         }
         Relationships: []
       }
@@ -1890,6 +1944,17 @@ export type Database = {
           rating: number
           tier: string
           wins: number
+        }[]
+      }
+      get_reading_diagnostic_radar: {
+        Args: never
+        Returns: {
+          accuracy: number
+          correct_count: number
+          question_type: string
+          top_error_count: number
+          top_error_tag: string
+          total_attempts: number
         }[]
       }
       get_user_streak_stats: {

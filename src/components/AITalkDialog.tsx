@@ -723,7 +723,7 @@ function LiveTranscript({ transcript, aiSpeaking, phase }: { transcript: Turn[];
 }
 
 function RecapView({
-  recap, loading, error, quizLoading, quizError, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore,
+  recap, loading, error, quizLoading, quizError, quizAnswers, setQuizAnswers, quizSubmitted, setQuizSubmitted, quizScore, isGuest, lessonTitle,
 }: {
   recap: Recap | null;
   loading: boolean;
@@ -735,6 +735,8 @@ function RecapView({
   quizSubmitted: boolean;
   setQuizSubmitted: (v: boolean) => void;
   quizScore: { correct: number; total: number };
+  isGuest?: boolean;
+  lessonTitle?: string;
 }) {
   // Only show the full-screen loader when neither part has arrived yet.
   // As soon as the (faster) review lands, we render it and the quiz block

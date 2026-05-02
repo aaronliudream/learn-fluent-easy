@@ -619,6 +619,28 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
   const [clozeChecked, setClozeChecked] = useState<null | boolean>(null);
   const v = item.vocab;
 
+  // Per-question countdown timer for choice-type questions.
+  // Cloze and Spell are input-based and not timed (less stress, more accuracy).
+  const isTimedKind =
+    item.kind === "en2cn" ||
+    item.kind === "cn2en" ||
+    item.kind === "listen" ||
+    item.kind === "en2en" ||
+    item.kind === "en2word";
+  const [secondsLeft, setSecondsLeft] = useState(QUESTION_TIMEOUT_SEC);
+  useEffect(() => {
+    if (!isTimedKind) return;
+    if (picked !== null) return;
+    if (secondsLeft <= 0) {
+      // Time out — auto mark wrong
+      setPicked("__timeout__");
+      setTimeout(() => onResult(false), 700);
+      return;
+    }
+    const t = setTimeout(() => setSecondsLeft((s) => s - 1), 1000);
+    return () => clearTimeout(t);
+  }, [secondsLeft, picked, isTimedKind, onResult]);
+
   // For en2en / en2word: ensure the target's English meaning is loaded;
   // and gather English meanings for distractor choices too.
   const targetMeaningEn = useMeaningEn(

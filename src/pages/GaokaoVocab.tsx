@@ -1056,6 +1056,136 @@ function DonePanel({
   );
 }
 
+/* ---------- Synonym differentiation question ---------- */
+function SynQuestion({
+  vocab,
+  onResult,
+}: {
+  vocab: Vocab;
+  onResult: (ok: boolean) => void;
+}) {
+  const v = vocab;
+  const [pack, setPack] = useState<SynPack | null>(
+    () => synonymCache.get(v.id) ?? null,
+  );
+  const [picked, setPicked] = useState<string | null>(null);
+  const [secondsLeft, setSecondsLeft] = useState(QUESTION_TIMEOUT_SEC);
+
+  // Fetch synonyms on mount if not cached
+  useEffect(() => {
+    if (pack) return;
+    let cancelled = false;
+    ensureSynonyms([v]).then((res) => {
+      if (!cancelled) setPack(res[v.id] ?? null);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [v.id, pack]);
+
+  // Build shuffled options once we have the pack
+  const options = useMemo(() => {
+    if (!pack) return [] as string[];
+    return shuffle([pack.correct, ...pack.distractors.slice(0, 3)]);
+  }, [pack]);
+
+  // Countdown only after options are loaded
+  useEffect(() => {
+    if (!pack || picked !== null) return;
+    if (secondsLeft <= 0) {
+      setPicked("__timeout__");
+      setTimeout(() => onResult(false), 700);
+      return;
+    }
+    const t = setTimeout(() => setSecondsLeft((s) => s - 1), 1000);
+    return () => clearTimeout(t);
+  }, [pack, picked, secondsLeft, onResult]);
+
+  const onPick = (opt: string) => {
+    if (!pack || picked) return;
+    setPicked(opt);
+    const ok = opt === pack.correct;
+    setTimeout(() => onResult(ok), 900);
+  };
+
+  if (!pack) {
+    return (
+      <div className="rounded-3xl border bg-card p-6 text-center shadow-tile">
+        <div className="text-xs uppercase tracking-wider text-muted-foreground">
+          近义词辨析 · Synonym
+        </div>
+        <div className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground">
+          <Sparkles className="size-4 animate-pulse text-primary" /> AI 正在生成近义词…
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="rounded-3xl border bg-card p-6 text-center shadow-tile">
+      <div className="-mx-6 -mt-6 mb-4 h-1.5 overflow-hidden rounded-t-3xl bg-muted">
+        <div
+          className={cn(
+            "h-full transition-all duration-1000 ease-linear",
+            secondsLeft > 5
+              ? "bg-primary"
+              : secondsLeft > 2
+              ? "bg-amber-500"
+              : "bg-red-500 animate-pulse",
+          )}
+          style={{ width: `${(secondsLeft / QUESTION_TIMEOUT_SEC) * 100}%` }}
+        />
+      </div>
+      <div className="text-xs uppercase tracking-wider text-muted-foreground">
+        选出 <span className="text-primary">近义词</span> · Synonym
+      </div>
+      <button
+        onClick={() => speakWord(v)}
+        className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
+      >
+        {v.word} <Volume2 className="size-5 text-primary" />
+      </button>
+      <div className="mt-1 text-sm text-muted-foreground">
+        {v.meaning_cn}
+        {v.pos ? ` · ${v.pos}` : ""}
+      </div>
+
+      <div className="mt-6 grid grid-cols-1 gap-2">
+        {options.map((opt, i) => {
+          const isPicked = picked === opt;
+          const isCorrect = opt === pack.correct;
+          const showState = picked !== null;
+          return (
+            <button
+              key={opt}
+              onClick={() => onPick(opt)}
+              disabled={picked !== null}
+              className={cn(
+                "rounded-xl border bg-background px-4 py-3 text-left text-sm transition",
+                !showState && "hover:border-primary hover:bg-accent/30",
+                showState && isCorrect && "border-green-500 bg-green-500/10",
+                showState && isPicked && !isCorrect && "border-red-500 bg-red-500/10",
+                showState && !isPicked && !isCorrect && "opacity-60",
+              )}
+            >
+              <span className="mr-2 inline-flex size-6 items-center justify-center rounded-full bg-muted text-xs font-bold">
+                {String.fromCharCode(65 + i)}
+              </span>
+              <span className="font-semibold">{opt}</span>
+              {showState && isCorrect && (
+                <Check className="ml-2 inline size-4 text-green-600" />
+              )}
+              {showState && isPicked && !isCorrect && (
+                <X className="ml-2 inline size-4 text-red-600" />
+              )}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 /* ---------- Spelling Bee question ---------- */
 function SpellQuestion({
   vocab,

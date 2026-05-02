@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap, Music, Trophy, Headphones, Loader2 } from "lucide-react";
+import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap, Music, Trophy, Headphones, Loader2, BarChart3 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
@@ -14,6 +14,7 @@ import {
   type BadgeDef,
 } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
+import MasteryDashboard from "@/components/MasteryDashboard";
 
 type Vocab = {
   id: string;
@@ -321,6 +322,10 @@ export default function GaokaoVocab() {
     return <DictationSession pool={allVocab} onExit={() => setParams({})} />;
   }
 
+  if (mode === "dash") {
+    return <MasteryDashboard onExit={() => setParams({})} />;
+  }
+
   if (groupIdx < 0 || groupIdx >= groups.length) {
     return (
       <GroupList
@@ -330,6 +335,7 @@ export default function GaokaoVocab() {
         onStartSrs={() => setParams({ mode: "srs" })}
         onStartRush={() => setParams({ mode: "rush" })}
         onStartDict={() => setParams({ mode: "dict" })}
+        onOpenDash={() => setParams({ mode: "dash" })}
       />
     );
   }

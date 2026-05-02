@@ -116,7 +116,7 @@ export default function GaokaoReadingArticle() {
   const [vocab, setVocab] = useState<VocabItem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const [stage, setStage] = useState<Stage>("read");
+  const [stage, setStage] = useState<Stage>("test");
   const [answers, setAnswers] = useState<Record<string, "A" | "B" | "C" | "D">>({});
   // 信心度: 1=猜的, 2=比较确定, 3=非常确定 (PISA 元认知金标准)
   const [confidences, setConfidences] = useState<Record<string, 1 | 2 | 3>>({});
@@ -264,52 +264,7 @@ export default function GaokaoReadingArticle() {
     );
   }
 
-  // ============ STAGE 1: READ ============
-  if (stage === "read") {
-    return (
-      <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-        <Link to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回阅读列表
-        </Link>
-
-        <article className="rounded-2xl border bg-card p-6 lg:p-8">
-          <div className="mb-4 flex items-center justify-between border-b pb-3">
-            <div className="text-xs text-muted-foreground">
-              {article.word_count} 词 · 建议 {article.recommended_minutes} 分钟 · {article.sub_band} · {article.genre_label}
-            </div>
-            <div className="flex items-center gap-1">
-              <button
-                onClick={() => setFontScale((s) => Math.max(0.85, s - 0.1))}
-                className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted"
-              >A-</button>
-              <button
-                onClick={() => setFontScale((s) => Math.min(1.4, s + 0.1))}
-                className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted"
-              >A+</button>
-            </div>
-          </div>
-          <h1 className="mb-4 text-xl font-bold leading-snug">{article.title}</h1>
-          <div
-            className="prose prose-slate max-w-none space-y-4 leading-[1.85] text-foreground select-text"
-            style={{ fontSize: `${fontScale}rem` }}
-          >
-            {displayBody.split("\n\n").map((p, i) => (
-              <p key={i} className="text-justify">
-                <span className="mr-2 font-mono text-xs text-muted-foreground/40 select-none">{i + 1}</span>
-                {p}
-              </p>
-            ))}
-          </div>
-        </article>
-
-        <Button size="lg" className="mt-6 h-12 w-full gap-2" onClick={() => setStage("test")}>
-          <Target className="size-4" /> 开始测试选择题
-        </Button>
-      </main>
-    );
-  }
-
-  // ============ STAGE 2: TEST ============
+  // ============ STAGE 1: READ + TEST (同屏) ============
   if (stage === "test") {
     const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
     const ss = String(secondsLeft % 60).padStart(2, "0");
@@ -351,13 +306,45 @@ export default function GaokaoReadingArticle() {
         </header>
 
         {/* Questions only */}
-        <div className="mx-auto max-w-3xl px-4 py-6">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 py-6 lg:grid-cols-[1.1fr_1fr]">
+          {/* 文章 — 左侧 (移动端在上方) */}
+          <article className="rounded-2xl border bg-card p-5 lg:p-7 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+            <div className="mb-3 flex items-center justify-between border-b pb-2">
+              <div className="text-xs text-muted-foreground">
+                {article.word_count} 词 · {article.sub_band} · {article.genre_label}
+              </div>
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={() => setFontScale((s) => Math.max(0.85, s - 0.1))}
+                  className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted"
+                >A-</button>
+                <button
+                  onClick={() => setFontScale((s) => Math.min(1.4, s + 0.1))}
+                  className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted"
+                >A+</button>
+              </div>
+            </div>
+            <h1 className="mb-3 text-lg font-bold leading-snug">{article.title}</h1>
+            <div
+              className="prose prose-slate max-w-none space-y-3 leading-[1.85] text-foreground select-text"
+              style={{ fontSize: `${fontScale}rem` }}
+            >
+              {displayBody.split("\n\n").map((p, i) => (
+                <p key={i} className="text-justify">
+                  <span className="mr-2 font-mono text-xs text-muted-foreground/40 select-none">{i + 1}</span>
+                  {p}
+                </p>
+              ))}
+            </div>
+          </article>
+
+          {/* 题目 — 右侧 */}
           <section className="space-y-4">
             <div className="rounded-xl border bg-primary/5 border-primary/20 p-3 flex gap-2 text-xs text-primary">
               <Target className="size-4 shrink-0 mt-0.5" />
               <div>
-                <div className="font-semibold">测试阶段</div>
-                <div className="opacity-80 mt-0.5">完成所有选择题并交卷后，才会显示正确答案和解析。</div>
+                <div className="font-semibold">边读边答</div>
+                <div className="opacity-80 mt-0.5">读完文章作答，全部完成并交卷后才会显示正确答案与解析。</div>
               </div>
             </div>
 

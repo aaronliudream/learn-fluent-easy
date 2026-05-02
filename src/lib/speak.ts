@@ -344,6 +344,8 @@ const fetchTTS = async (text: string, voiceId: string, speed: number, accent?: s
       if (firstKey) audioCache.delete(firstKey);
     }
     audioCache.set(cacheKey, url);
+    // Persist CDN URLs (not blob: URLs — those die with the page).
+    if (url.startsWith("http")) savePersist(cacheKey, url);
     return url;
   } catch (e) {
     console.warn("[tts] fetch failed:", e);

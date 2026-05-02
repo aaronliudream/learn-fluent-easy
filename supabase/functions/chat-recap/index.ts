@@ -145,7 +145,7 @@ Each question must:
    - \`word\`: the word / phrase being tested (must come from Alex or from a rewrite, NOT verbatim from the learner)
    - \`source_sentence\`: the English sentence containing the word. Either an actual Alex line, OR a more idiomatic rewrite of a learner line (mark naturally — just the sentence).
    - \`question_cn\`: ask the meaning IN CHINESE
-   - \`options_cn\`: 4 plausible Chinese options, only one correct
+   - \`options_cn\`: 4 Chinese options, only one correct. CRITICAL: the 4 options MUST be CLEARLY DIFFERENT in meaning — never near-synonyms, never overlapping shades of the same idea. A learner who knows the correct meaning must be able to pick the answer with zero ambiguity. Bad example (forbidden): ["突然","忽然","猛地","骤然"]. Good example: ["突然发生","逐渐增加","小心避免","公开承认"]. Distractors should be plausible (same part of speech, fits the sentence grammatically) but semantically distinct from the correct answer and from each other.
    - \`explanation_cn\`: 1-sentence Chinese explanation
 
 Return ONLY a tool call. Never write prose.`;
@@ -154,7 +154,7 @@ Return ONLY a tool call. Never write prose.`;
 
 1) A bilingual review of EVERY learner turn: original English, faithful Chinese translation, and 1-2 sentences of *specific* coaching. If a learner turn is perfect, say so briefly. Don't pad.
 
-2) TEN (10) multiple-choice quiz questions testing useful vocabulary that actually appeared, B1-C1 / CET-4 to CET-6 / TOEFL level. Quote source sentence, ask in Chinese, 4 Chinese options, 1 correct, 1-sentence Chinese explanation.
+2) TEN (10) multiple-choice quiz questions testing useful vocabulary that actually appeared, B1-C1 / CET-4 to CET-6 / TOEFL level. Quote source sentence, ask in Chinese, 4 Chinese options, 1 correct, 1-sentence Chinese explanation. The 4 Chinese options MUST be clearly different in meaning — never near-synonyms or overlapping shades of the same idea. Distractors should be plausible but unambiguously wrong.
 
 Return ONLY a tool call. Never write prose.`;
 }

@@ -571,6 +571,23 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
   const [clozeChecked, setClozeChecked] = useState<null | boolean>(null);
   const v = item.vocab;
 
+  // For en2en / en2word: ensure the target's English meaning is loaded;
+  // and gather English meanings for distractor choices too.
+  const targetMeaningEn = useMeaningEn(
+    item.kind === "en2en" || item.kind === "en2word" ? v : null,
+  );
+  const [choiceMeaningsEn, setChoiceMeaningsEn] = useState<Record<string, string>>({});
+  useEffect(() => {
+    if (item.kind !== "en2en" && item.kind !== "en2word") return;
+    let cancelled = false;
+    ensureMeaningsEn(item.choices).then((res) => {
+      if (!cancelled) setChoiceMeaningsEn(res);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [item.kind, item.choices]);
+
   // Auto-play audio for "listen" type
   useEffect(() => {
     if (item.kind === "listen" && v.example_en) {
@@ -579,7 +596,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     }
     // Auto-play the word for English→Chinese & cloze questions so the
     // student hears the pronunciation as soon as the question appears.
-    if (item.kind === "en2cn" || item.kind === "cloze") {
+    if (item.kind === "en2cn" || item.kind === "cloze" || item.kind === "en2en") {
       const t = setTimeout(() => speakWord(v), 200);
       return () => clearTimeout(t);
     }
@@ -679,6 +696,40 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
         </>
       );
     }
+    if (item.kind === "en2en") {
+      return (
+        <>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">
+            Choose the English definition
+          </div>
+          <button
+            onClick={() => speakWord(v)}
+            className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
+          >
+            {v.word} <Volume2 className="size-5 text-primary" />
+          </button>
+          {v.phonetic && (
+            <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
+              {v.phonetic}
+              <AccentBadge accent={v.accent} />
+            </div>
+          )}
+        </>
+      );
+    }
+    if (item.kind === "en2word") {
+      return (
+        <>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground">
+            Choose the word that matches
+          </div>
+          <div className="mt-3 min-h-[3rem] text-lg font-semibold italic">
+            {targetMeaningEn ? `“${targetMeaningEn}”` : "Loading…"}
+          </div>
+          {v.pos && <div className="mt-1 text-xs text-muted-foreground">{v.pos}</div>}
+        </>
+      );
+    }
     // listen
     return (
       <>
@@ -696,6 +747,9 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
 
   const renderChoiceLabel = (c: Vocab) => {
     if (item.kind === "en2cn") return c.meaning_cn;
+    if (item.kind === "en2en") {
+      return choiceMeaningsEn[c.id] ?? c.meaning_en ?? "…";
+    }
     return c.word;
   };
 
@@ -703,7 +757,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     if (picked) return;
     setPicked(c.id);
     const ok = c.id === v.id;
-    if (ok && item.kind === "cn2en") speakWord(v);
+    if (ok && (item.kind === "cn2en" || item.kind === "en2word")) speakWord(v);
     setTimeout(() => onResult(ok), 900);
   };
 

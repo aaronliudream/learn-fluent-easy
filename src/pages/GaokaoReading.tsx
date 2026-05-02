@@ -499,9 +499,11 @@ export default function GaokaoReading() {
       </div>
 
       {!tab && (
-        <div className="rounded-2xl border border-dashed bg-card p-8 text-center text-sm text-muted-foreground">
-          👆 点击上方任意年级卡片，查看该年级的阅读文章
-        </div>
+        <EmptyHint
+          bandStats={bandStats}
+          onPick={(id) => setTab(id)}
+          totalTried={overall.tried}
+        />
       )}
 
       {tab && currentBand && (<>
@@ -642,6 +644,92 @@ function Stat({ color, label, value, icon: Icon }: { color: "emerald" | "amber" 
     <div className={cn("rounded-xl border px-2 py-1.5 text-center", colors)}>
       <div className="flex items-center justify-center gap-1 text-[10px] opacity-80"><Icon className="size-3" />{label}</div>
       <div className="text-lg font-extrabold tabular-nums leading-tight">{value}</div>
+    </div>
+  );
+}
+
+function EmptyHint({
+  bandStats,
+  onPick,
+  totalTried,
+}: {
+  bandStats: Record<string, { total: number; mastered: number; done: number; tried: number; lastAt: number }>;
+  onPick: (id: GradeBand) => void;
+  totalTried: number;
+}) {
+  // 找有 tried 的年级（薄弱点）
+  const weakBand = BANDS.find((b) => (bandStats[b.id]?.tried ?? 0) > 0);
+  // 找最近练过的年级
+  const recentBand = [...BANDS].sort(
+    (a, b) => (bandStats[b.id]?.lastAt ?? 0) - (bandStats[a.id]?.lastAt ?? 0)
+  ).find((b) => (bandStats[b.id]?.lastAt ?? 0) > 0);
+
+  if (totalTried > 0 && weakBand) {
+    return (
+      <button
+        onClick={() => onPick(weakBand.id)}
+        className="w-full text-left rounded-2xl border-2 border-orange-500/30 bg-gradient-to-br from-orange-500/10 via-card to-card p-5 hover:border-orange-500/60 hover:shadow-md transition group"
+      >
+        <div className="flex items-center gap-3">
+          <div className="grid size-12 shrink-0 place-items-center rounded-xl bg-orange-500 text-white">
+            <RefreshCw className="size-6" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400">
+              你有 {totalTried} 篇需要重做
+            </div>
+            <div className="mt-0.5 text-base font-bold">先攻克薄弱点 · {weakBand.label}</div>
+            <div className="mt-0.5 text-xs text-muted-foreground">这些题你只对了不到 60%，重做一次记得更牢</div>
+          </div>
+          <ChevronRight className="size-5 text-muted-foreground group-hover:translate-x-1 group-hover:text-orange-500 transition" />
+        </div>
+      </button>
+    );
+  }
+
+  if (recentBand) {
+    return (
+      <button
+        onClick={() => onPick(recentBand.id)}
+        className="w-full text-left rounded-2xl border bg-card p-5 hover:border-primary/40 hover:shadow-md transition group"
+      >
+        <div className="flex items-center gap-3">
+          <div className={cn("grid size-12 shrink-0 place-items-center rounded-xl text-white bg-gradient-to-br", recentBand.gradient)}>
+            <recentBand.icon className="size-6" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">最近在练</div>
+            <div className="mt-0.5 text-base font-bold">回到 {recentBand.label} · {recentBand.sub}</div>
+            <div className="mt-0.5 text-xs text-muted-foreground">已完成 {bandStats[recentBand.id]?.done ?? 0} / {bandStats[recentBand.id]?.total ?? 0} 篇</div>
+          </div>
+          <ChevronRight className="size-5 text-muted-foreground group-hover:translate-x-1 group-hover:text-primary transition" />
+        </div>
+      </button>
+    );
+  }
+
+  // 全新用户
+  return (
+    <div className="rounded-2xl border border-dashed bg-gradient-to-br from-card to-muted/30 p-6 text-center">
+      <div className="mx-auto grid size-12 place-items-center rounded-xl bg-primary/10 text-primary mb-3">
+        <Sparkles className="size-6" />
+      </div>
+      <div className="text-base font-bold mb-1">从高一开始 · 循序渐进</div>
+      <div className="text-xs text-muted-foreground mb-4">建议按年级顺序练习，系统会自动推送下一篇</div>
+      <div className="flex justify-center gap-2 flex-wrap">
+        {BANDS.map((b) => (
+          <button
+            key={b.id}
+            onClick={() => onPick(b.id)}
+            className={cn(
+              "rounded-full px-3 py-1.5 text-xs font-bold text-white bg-gradient-to-br hover:shadow-md transition",
+              b.gradient
+            )}
+          >
+            {b.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

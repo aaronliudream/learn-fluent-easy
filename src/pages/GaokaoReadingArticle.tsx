@@ -226,7 +226,52 @@ export default function GaokaoReadingArticle() {
     );
   }
 
-  // ============ STAGE 1: TEST ============
+  // ============ STAGE 1: READ ============
+  if (stage === "read") {
+    return (
+      <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+        <Link to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> 返回阅读列表
+        </Link>
+
+        <article className="rounded-2xl border bg-card p-6 lg:p-8">
+          <div className="mb-4 flex items-center justify-between border-b pb-3">
+            <div className="text-xs text-muted-foreground">
+              {article.word_count} 词 · 建议 {article.recommended_minutes} 分钟 · {article.sub_band} · {article.genre_label}
+            </div>
+            <div className="flex items-center gap-1">
+              <button
+                onClick={() => setFontScale((s) => Math.max(0.85, s - 0.1))}
+                className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted"
+              >A-</button>
+              <button
+                onClick={() => setFontScale((s) => Math.min(1.4, s + 0.1))}
+                className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted"
+              >A+</button>
+            </div>
+          </div>
+          <h1 className="mb-4 text-xl font-bold leading-snug">{article.title}</h1>
+          <div
+            className="prose prose-slate max-w-none space-y-4 leading-[1.85] text-foreground select-text"
+            style={{ fontSize: `${fontScale}rem` }}
+          >
+            {article.body.split("\n\n").map((p, i) => (
+              <p key={i} className="text-justify">
+                <span className="mr-2 font-mono text-xs text-muted-foreground/40 select-none">{i + 1}</span>
+                {p}
+              </p>
+            ))}
+          </div>
+        </article>
+
+        <Button size="lg" className="mt-6 h-12 w-full gap-2" onClick={() => setStage("test")}>
+          <Target className="size-4" /> 开始测试选择题
+        </Button>
+      </main>
+    );
+  }
+
+  // ============ STAGE 2: TEST ============
   if (stage === "test") {
     const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
     const ss = String(secondsLeft % 60).padStart(2, "0");

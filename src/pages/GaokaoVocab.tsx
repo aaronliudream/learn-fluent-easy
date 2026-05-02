@@ -511,6 +511,10 @@ function QuizPhase({
   const [queue, setQueue] = useState<QuizItem[]>(() => buildInitialQueue(group, pool));
   const [pos, setPos] = useState(0);
   const [stats, setStats] = useState({ correct: 0, total: 0 });
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(0);
+  const [score, setScore] = useState(0);
+  const [floatBadge, setFloatBadge] = useState<string | null>(null);
 
   // Prefetch English meanings so en2en/en2word questions render instantly
   useEffect(() => {
@@ -530,6 +534,23 @@ function QuizPhase({
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+
+    // Combo + score
+    if (isCorrect) {
+      const newStreak = streak + 1;
+      const mult = comboMultiplier(newStreak);
+      const gained = 10 * mult;
+      setStreak(newStreak);
+      setBestStreak((b) => Math.max(b, newStreak));
+      setScore((s) => s + gained);
+      const label = comboLabel(newStreak);
+      if (label) {
+        setFloatBadge(label);
+        setTimeout(() => setFloatBadge(null), 900);
+      }
+    } else {
+      setStreak(0);
+    }
 
     let nextQueue = queue;
     if (!isCorrect) {
@@ -557,11 +578,23 @@ function QuizPhase({
 
   return (
     <div>
-      <div className="mb-3 flex items-center justify-between text-xs text-muted-foreground">
-        <span>{pos + 1} / {queue.length}</span>
-        <span>✓ {stats.correct} / {stats.total}</span>
+      <ComboHeader
+        pos={pos + 1}
+        total={queue.length}
+        correct={stats.correct}
+        attempted={stats.total}
+        streak={streak}
+        bestStreak={bestStreak}
+        score={score}
+      />
+      <div className="relative">
+        <QuizQuestion
+          key={`${item.vocab.id}-${pos}`}
+          item={item}
+          onResult={handleResult}
+        />
+        {floatBadge && <FloatingComboBadge label={floatBadge} />}
       </div>
-      <QuizQuestion key={`${item.vocab.id}-${pos}`} item={item} onResult={handleResult} />
     </div>
   );
 }

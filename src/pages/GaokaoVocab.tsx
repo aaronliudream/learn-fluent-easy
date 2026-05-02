@@ -449,6 +449,7 @@ function GroupList({
         <CoinPill />
       </div>
       <PageHeader
+        hideReviewBanner
         title="高考词汇 3500"
         subtitle={`${pool.length} 词 · 按词频/难度/主题科学分类 · 不再字母排序`}
       />
@@ -1074,7 +1075,7 @@ function GroupSession({
         <PhaseChip active={phase === "done"} icon={<Sparkles className="size-3" />} label="复习" />
       </div>
 
-      <PageHeader title={`第 ${groupNumber} 组 · ${group.length} 词`} subtitle={phaseSubtitle(phase)} />
+      <PageHeader hideReviewBanner title={`第 ${groupNumber} 组 · ${group.length} 词`} subtitle={phaseSubtitle(phase)} />
 
       {phase === "flashcard" && (
         <FlashcardPhase group={group} onDone={() => setPhase("quiz")} />
@@ -2442,7 +2443,7 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
         </div>
         <div className="text-xs text-muted-foreground">SM-2 间隔重复</div>
       </div>
-      <PageHeader title="今日复习队列" subtitle="答对延后下次复习，答错明天再来" />
+      <PageHeader hideReviewBanner title="今日复习队列" subtitle="答对延后下次复习，答错明天再来" />
       <div className="mt-4">
         <ComboHeader
           pos={pos + 1}

@@ -68,7 +68,7 @@ export default function Gaokao() {
       <Link to="/" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回首页
       </Link>
-      <PageHeader title="高考英语" />
+      <PageHeader title="高考英语" hideReviewBanner />
 
       <div className="mb-4">
         <GaokaoVocabProgress />

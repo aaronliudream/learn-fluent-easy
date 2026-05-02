@@ -86,7 +86,7 @@ export default function GaokaoGrammarPoint() {
       <Link to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回语法列表
       </Link>
-      <PageHeader title={point.title} />
+      <PageHeader title={point.title} hideReviewBanner />
 
       <section className="mb-6 rounded-2xl border bg-card p-5">
         <div className="mb-2 text-xs font-bold uppercase tracking-wider text-primary">知识点讲解</div>

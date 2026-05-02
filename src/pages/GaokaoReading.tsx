@@ -26,7 +26,7 @@ export default function GaokaoReading() {
       <Link to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回高考英语
       </Link>
-      <PageHeader title="阅读理解" subtitle="文章结构分析 + 每个选项为什么对 / 错" />
+      <PageHeader hideReviewBanner title="阅读理解" subtitle="文章结构分析 + 每个选项为什么对 / 错" />
 
       {loading && <p className="text-sm text-muted-foreground">加载中...</p>}
 

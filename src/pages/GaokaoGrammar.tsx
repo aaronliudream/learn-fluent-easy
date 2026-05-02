@@ -31,7 +31,7 @@ export default function GaokaoGrammar() {
       <Link to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回高考英语
       </Link>
-      <PageHeader title="语法考点" subtitle="每个考点都有讲解 + 题库 + 错题智能追加" />
+      <PageHeader hideReviewBanner title="语法考点" subtitle="每个考点都有讲解 + 题库 + 错题智能追加" />
 
       {loading && <p className="text-sm text-muted-foreground">加载中...</p>}
 

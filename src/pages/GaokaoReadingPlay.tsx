@@ -61,7 +61,7 @@ export default function GaokaoReadingPlay() {
       <Link to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回阅读列表
       </Link>
-      <PageHeader title={passage.title} />
+      <PageHeader title={passage.title} hideReviewBanner />
 
       <article className="mb-6 rounded-2xl border bg-card p-5 text-sm leading-relaxed">
         {passage.body.split("\n\n").map((para, i) => (

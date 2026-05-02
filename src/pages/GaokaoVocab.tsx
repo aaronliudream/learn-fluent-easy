@@ -463,12 +463,21 @@ function GroupSession({
 }) {
   const [phase, setPhase] = useState<Phase>("flashcard");
   const [stats, setStats] = useState({ correct: 0, total: 0 });
+  const [coinsRefreshKey, setCoinsRefreshKey] = useState(0);
+  const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
+  const [coinsAwarded, setCoinsAwarded] = useState(0);
 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
-      <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回组列表
-      </button>
+      <div className="mb-4 flex items-center justify-between">
+        <button
+          onClick={onExit}
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="size-4" /> 返回组列表
+        </button>
+        <CoinPill refreshKey={coinsRefreshKey} />
+      </div>
 
       <div className="mb-4 flex items-center gap-2 text-xs">
         <PhaseChip active={phase === "flashcard"} icon={<BookOpen className="size-3" />} label="闪卡" />
@@ -487,14 +496,38 @@ function GroupSession({
         <QuizPhase
           group={group}
           pool={pool}
-          onDone={(s) => {
-            setStats(s);
+          onDone={async (s) => {
+            setStats({ correct: s.correct, total: s.total });
+            setCoinsAwarded(s.score);
             setPhase("done");
+            // Award coins and check milestone badges
+            const totals = await awardCoins(s.score);
+            setCoinsRefreshKey((k) => k + 1);
+            const perfect = s.total > 0 && s.correct === s.total;
+            const newly = await evaluateMilestones({
+              bestStreak: s.bestStreak,
+              spellCorrect: s.spellCorrect,
+              perfectGroup: perfect,
+              totalEarned: totals?.total_earned ?? 0,
+              attempted: s.total,
+            });
+            if (newly.length > 0) setUnlockedBadges(newly);
           }}
         />
       )}
       {phase === "done" && (
-        <DonePanel stats={stats} onExit={onExit} onRetry={() => setPhase("flashcard")} />
+        <DonePanel
+          stats={stats}
+          coinsAwarded={coinsAwarded}
+          onExit={onExit}
+          onRetry={() => setPhase("flashcard")}
+        />
+      )}
+      {unlockedBadges.length > 0 && (
+        <BadgeUnlockOverlay
+          badges={unlockedBadges}
+          onDismiss={() => setUnlockedBadges([])}
+        />
       )}
     </main>
   );

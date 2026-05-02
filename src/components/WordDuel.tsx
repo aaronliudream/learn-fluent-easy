@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, Loader2, Swords, Trophy, Crown, Medal, Bot, Zap, X, Check } from "lucide-react";
+import { ArrowLeft, Loader2, Swords, Trophy, Crown, Medal, Bot, Zap, X, Check, LogIn } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { awardCoins, unlockBadge, type BadgeDef } from "@/lib/coinsBadges";
@@ -124,6 +125,8 @@ export default function WordDuel({
   const [matchSearchSec, setMatchSearchSec] = useState(0);
   const [unlocked, setUnlocked] = useState<BadgeDef | null>(null);
   const [resultBanner, setResultBanner] = useState<{ won: boolean; draw: boolean; delta: number; newRating: number } | null>(null);
+  const [authChecked, setAuthChecked] = useState(false);
+  const [isAuthed, setIsAuthed] = useState(false);
 
   const roundStartRef = useRef<number>(0);
   const tickRef = useRef<number | null>(null);
@@ -131,12 +134,28 @@ export default function WordDuel({
 
   /* --------- Load my rating --------- */
   const refreshMe = async () => {
-    const { data } = await supabase.rpc("get_or_init_duel_rating");
+    const { data: u } = await supabase.auth.getUser();
+    if (!u?.user) {
+      setIsAuthed(false);
+      setAuthChecked(true);
+      return;
+    }
+    setIsAuthed(true);
+    setAuthChecked(true);
+    const { data, error } = await supabase.rpc("get_or_init_duel_rating");
+    if (error) {
+      console.error("get_or_init_duel_rating", error);
+      return;
+    }
     const row = Array.isArray(data) ? data[0] : data;
     if (row) setMe(row as RatingInfo);
   };
   useEffect(() => {
     refreshMe();
+    const { data: sub } = supabase.auth.onAuthStateChange(() => {
+      refreshMe();
+    });
+    return () => sub.subscription.unsubscribe();
   }, []);
 
   /* --------- Matchmaking --------- */
@@ -402,7 +421,11 @@ export default function WordDuel({
       </div>
 
       {status === "lobby" && (
-        <LobbyView me={me} onMatch={startMatching} onBot={challengeBot} />
+        authChecked && !isAuthed ? (
+          <SignInGate />
+        ) : (
+          <LobbyView me={me} onMatch={startMatching} onBot={challengeBot} />
+        )
       )}
 
       {status === "matching" && (
@@ -442,6 +465,23 @@ export default function WordDuel({
 }
 
 /* ============= Lobby ============= */
+function SignInGate() {
+  return (
+    <div className="rounded-3xl border-2 border-rose-500/40 bg-gradient-to-br from-rose-500/15 via-orange-500/10 to-transparent p-6 shadow-tile text-center">
+      <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-600 dark:text-rose-400">
+        <LogIn className="size-7" />
+      </div>
+      <h2 className="mt-4 text-xl font-extrabold">登录后开战 ⚔️</h2>
+      <p className="mt-2 text-sm text-muted-foreground">
+        Word Duel 需要登录才能匹配对手、记录 ELO 段位与排行榜成绩。
+      </p>
+      <Link to="/auth" className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-rose-500 px-6 py-3 text-sm font-bold text-white shadow-lg hover:bg-rose-600">
+        <LogIn className="size-4" /> 立即登录 / 注册
+      </Link>
+    </div>
+  );
+}
+
 function LobbyView({
   me,
   onMatch,

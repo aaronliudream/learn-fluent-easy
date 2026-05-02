@@ -51,6 +51,18 @@ const Review = () => {
 
   const current = cards[idx];
 
+  // Pre-warm OpenAI TTS for the current card AND the next one as soon as
+  // the card changes. By the time the user taps "听一下答案", the MP3 is
+  // already cached, so playback is effectively instant — no 2–5 s wait
+  // for OpenAI cold start, and no fallback to the browser's robotic
+  // speech synthesis (which is what triggers the iOS Dynamic Island
+  // "now playing" indicator).
+  useEffect(() => {
+    if (current?.phrase) prefetchTTS(current.phrase);
+    const nextCard = cards[idx + 1];
+    if (nextCard?.phrase) prefetchTTS(nextCard.phrase);
+  }, [idx, cards, current?.phrase]);
+
   const grade = async (g: Grade) => {
     if (!current) return;
     await gradeReview(current, g);

@@ -53,6 +53,21 @@ function AccentBadge({ accent }: { accent: Vocab["accent"] }) {
 }
 
 const GROUP_SIZE = 20;
+const QUESTION_TIMEOUT_SEC = 10; // for choice-type questions
+
+/* ---------- Scoring helpers ---------- */
+function comboMultiplier(streak: number): number {
+  if (streak >= 10) return 5;
+  if (streak >= 5) return 3;
+  if (streak >= 2) return 2;
+  return 1;
+}
+function comboLabel(streak: number): string | null {
+  if (streak >= 10) return "ON FIRE ×5";
+  if (streak >= 5) return "COMBO ×3";
+  if (streak >= 2) return "COMBO ×2";
+  return null;
+}
 
 type Phase = "flashcard" | "quiz" | "done";
 type QuizKind = "en2cn" | "cn2en" | "listen" | "cloze" | "en2en" | "en2word" | "spell";

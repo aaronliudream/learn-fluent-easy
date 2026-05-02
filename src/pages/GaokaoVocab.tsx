@@ -5,7 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
-import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { bumpMastery, bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { MASTERY_LABELS, type MasteryLevel } from "@/lib/masteryScore";
 import { cn } from "@/lib/utils";
 import {
   awardCoins,
@@ -546,6 +547,7 @@ function GroupSession({
   const [coinsRefreshKey, setCoinsRefreshKey] = useState(0);
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [coinsAwarded, setCoinsAwarded] = useState(0);
+  const [groupLevelUps, setGroupLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
@@ -579,6 +581,7 @@ function GroupSession({
           onDone={async (s) => {
             setStats({ correct: s.correct, total: s.total });
             setCoinsAwarded(s.score);
+            setGroupLevelUps(s.levelUps ?? []);
             setPhase("done");
             // Award coins and check milestone badges
             const totals = await awardCoins(s.score);
@@ -601,6 +604,7 @@ function GroupSession({
           coinsAwarded={coinsAwarded}
           onExit={onExit}
           onRetry={() => setPhase("flashcard")}
+          levelUps={groupLevelUps}
         />
       )}
       {unlockedBadges.length > 0 && (
@@ -727,6 +731,7 @@ export type QuizSessionResult = {
   bestStreak: number;
   score: number;
   spellCorrect: number;
+  levelUps?: { word: string; level: MasteryLevel }[];
 };
 
 function QuizPhase({
@@ -747,6 +752,13 @@ function QuizPhase({
   const [score, setScore] = useState(0);
   const [floatBadge, setFloatBadge] = useState<string | null>(null);
   const [spellCorrect, setSpellCorrect] = useState(0);
+  const questionShownAtRef = useRef<number>(Date.now());
+  const [levelUps, setLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+
+  // Reset stopwatch every time we land on a new question
+  useEffect(() => {
+    questionShownAtRef.current = Date.now();
+  }, [pos]);
 
   // Prefetch English meanings so en2en/en2word questions render instantly
   useEffect(() => {
@@ -763,14 +775,23 @@ function QuizPhase({
 
   if (!item) {
     // shouldn't happen mid-flight; finish
-    onDone({ ...stats, bestStreak, score, spellCorrect });
+    onDone({ ...stats, bestStreak, score, spellCorrect, levelUps });
     return null;
   }
 
   const handleResult = async (isCorrect: boolean) => {
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
+    const latencyMs = Date.now() - questionShownAtRef.current;
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
-    await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+    const update = await bumpVocabMastery({
+      vocabId: item.vocab.id,
+      kind: item.kind,
+      isCorrect,
+      latencyMs,
+    });
+    if (update && update.newLevel > update.prevLevel) {
+      setLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);
+    }
 
     if (isCorrect && item.kind === "spell") {
       setSpellCorrect((n) => n + 1);
@@ -818,6 +839,7 @@ function QuizPhase({
         bestStreak: finalBestStreak,
         score: finalScore,
         spellCorrect: finalSpell,
+        levelUps,
       });
     } else {
       setPos(pos + 1);
@@ -1177,11 +1199,13 @@ function DonePanel({
   coinsAwarded,
   onExit,
   onRetry,
+  levelUps,
 }: {
   stats: { correct: number; total: number };
   coinsAwarded?: number;
   onExit: () => void;
   onRetry: () => void;
+  levelUps?: { word: string; level: MasteryLevel }[];
 }) {
   const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
   return (
@@ -1194,6 +1218,30 @@ function DonePanel({
       {coinsAwarded !== undefined && coinsAwarded > 0 && (
         <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
           🪙 +{coinsAwarded} 金币
+        </div>
+      )}
+      {levelUps && levelUps.length > 0 && (
+        <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">
+          <div className="text-xs font-bold uppercase tracking-wider text-primary">📈 升级单词</div>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {levelUps.slice(0, 12).map((u, i) => {
+              const l = MASTERY_LABELS[u.level];
+              return (
+                <span
+                  key={i}
+                  className={cn(
+                    "inline-flex items-center gap-1 rounded-full border bg-card px-2 py-0.5 text-xs font-semibold",
+                    l.color,
+                  )}
+                >
+                  {l.emoji} {u.word}
+                </span>
+              );
+            })}
+            {levelUps.length > 12 && (
+              <span className="text-xs text-muted-foreground">+{levelUps.length - 12} more</span>
+            )}
+          </div>
         </div>
       )}
       <div className="mt-2 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>
@@ -1588,6 +1636,13 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   const [coinsAwarded, setCoinsAwarded] = useState(0);
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [milestonesEvaluated, setMilestonesEvaluated] = useState(false);
+  const [srsLevelUps, setSrsLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+  const srsQuestionShownAtRef = useRef<number>(Date.now());
+
+  // reset stopwatch each question
+  useEffect(() => {
+    srsQuestionShownAtRef.current = Date.now();
+  }, [pos]);
 
   useEffect(() => {
     (async () => {
@@ -1689,6 +1744,30 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
               🪙 +{coinsAwarded} 金币
             </div>
           )}
+          {srsLevelUps.length > 0 && (
+            <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">
+              <div className="text-xs font-bold uppercase tracking-wider text-primary">📈 升级单词</div>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {srsLevelUps.slice(0, 12).map((u, i) => {
+                  const l = MASTERY_LABELS[u.level];
+                  return (
+                    <span
+                      key={i}
+                      className={cn(
+                        "inline-flex items-center gap-1 rounded-full border bg-card px-2 py-0.5 text-xs font-semibold",
+                        l.color,
+                      )}
+                    >
+                      {l.emoji} {u.word}
+                    </span>
+                  );
+                })}
+                {srsLevelUps.length > 12 && (
+                  <span className="text-xs text-muted-foreground">+{srsLevelUps.length - 12} more</span>
+                )}
+              </div>
+            </div>
+          )}
           <div className="mt-1 text-xs text-muted-foreground">下次复习时间已自动调整</div>
           <Button className="mt-6 w-full" onClick={onExit}>返回</Button>
         </div>
@@ -1704,8 +1783,17 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
   const handleResult = async (isCorrect: boolean) => {
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
+    const latencyMs = Date.now() - srsQuestionShownAtRef.current;
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
-    await bumpMastery({ itemType: "vocab", itemId: item.vocab.id, isCorrect });
+    const update = await bumpVocabMastery({
+      vocabId: item.vocab.id,
+      kind: item.kind,
+      isCorrect,
+      latencyMs,
+    });
+    if (update && update.newLevel > update.prevLevel) {
+      setSrsLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);
+    }
 
     if (isCorrect && item.kind === "spell") {
       setSpellCorrect((n) => n + 1);

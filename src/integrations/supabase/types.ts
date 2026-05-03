@@ -2958,6 +2958,45 @@ export type Database = {
         }
         Relationships: []
       }
+      mistake_reflections: {
+        Row: {
+          correct_was: string
+          created_at: string
+          i_thought: string
+          id: string
+          item_id: string
+          module: string | null
+          seeds_awarded: number
+          user_id: string
+          why_wrong: string | null
+          word: string | null
+        }
+        Insert: {
+          correct_was: string
+          created_at?: string
+          i_thought: string
+          id?: string
+          item_id: string
+          module?: string | null
+          seeds_awarded?: number
+          user_id: string
+          why_wrong?: string | null
+          word?: string | null
+        }
+        Update: {
+          correct_was?: string
+          created_at?: string
+          i_thought?: string
+          id?: string
+          item_id?: string
+          module?: string | null
+          seeds_awarded?: number
+          user_id?: string
+          why_wrong?: string | null
+          word?: string | null
+        }
+        Relationships: []
+      }
       pending_seeds: {
         Row: {
           amount: number
@@ -5227,6 +5266,20 @@ export type Database = {
           allowed: boolean
           remaining_calls: number
           remaining_tokens: number
+        }[]
+      }
+      claim_reflection_energy: {
+        Args: {
+          _correct_was: string
+          _i_thought: string
+          _item_id: string
+          _module: string
+          _why_wrong: string
+          _word: string
+        }
+        Returns: {
+          awarded: number
+          reason: string
         }[]
       }
       contribute_community_goal: {

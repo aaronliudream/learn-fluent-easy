@@ -2531,6 +2531,36 @@ export type Database = {
         }
         Relationships: []
       }
+      learning_heartbeats: {
+        Row: {
+          active_seconds: number
+          created_at: string
+          id: string
+          path: string | null
+          segment: string
+          session_id: string | null
+          user_id: string
+        }
+        Insert: {
+          active_seconds?: number
+          created_at?: string
+          id?: string
+          path?: string | null
+          segment?: string
+          session_id?: string | null
+          user_id: string
+        }
+        Update: {
+          active_seconds?: number
+          created_at?: string
+          id?: string
+          path?: string | null
+          segment?: string
+          session_id?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       line_rewrites: {
         Row: {
           created_at: string
@@ -4673,6 +4703,7 @@ export type Database = {
           wins: number
         }[]
       }
+      get_parent_dashboard: { Args: { _days?: number }; Returns: Json }
       get_reading_diagnostic_radar: {
         Args: never
         Returns: {

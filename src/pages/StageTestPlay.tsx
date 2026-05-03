@@ -34,6 +34,7 @@ export default function StageTestPlay() {
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
+  const [results, setResults] = useState<{ id: string; correct: boolean }[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [finalCorrect, setFinalCorrect] = useState(0);
@@ -113,19 +114,23 @@ export default function StageTestPlay() {
     const isRight = opt === questions[idx].meaning_cn;
     const newCorrect = correctCount + (isRight ? 1 : 0);
     if (isRight) setCorrectCount(newCorrect);
+    const nextResults = [...results, { id: questions[idx].id, correct: isRight }];
+    setResults(nextResults);
     setTimeout(() => {
       if (idx + 1 < questions.length) {
         setIdx(idx + 1);
         setPicked(null);
       } else {
-        submit(newCorrect);
+        submit(newCorrect, nextResults);
       }
     }, 800);
   }
 
-  async function submit(finalCorrect: number) {
+  async function submit(finalCorrect: number, allResults: { id: string; correct: boolean }[]) {
     setSubmitted(true);
     setFinalCorrect(finalCorrect);
+    // 写入掌握度 + 做题分数，让家长中心能看到进度
+    syncProgress(allResults).catch(() => {});
     const { data, error } = await supabase.rpc("submit_stage_test", {
       _test_id: testId,
       _correct: finalCorrect,
@@ -134,6 +139,76 @@ export default function StageTestPlay() {
     });
     if (error) { toast.error(error.message); return; }
     setResult(Array.isArray(data) ? data[0] : data);
+  }
+
+  async function syncProgress(allResults: { id: string; correct: boolean }[]) {
+    const { data: u } = await supabase.auth.getUser();
+    const uid = u?.user?.id;
+    if (!uid) return;
+    const seg = segment as string;
+    const accuracy = allResults.length ? allResults.filter(r => r.correct).length / allResults.length : 0;
+
+    // 1) 做题分数（家长中心：sessions / accuracy / active_days）
+    if (seg === "primary") {
+      await supabase.from("primary_game_scores").insert({
+        user_id: uid, game_type: "stage_test", grade: Number(grade),
+        score: Math.round(accuracy * 100), accuracy, duration_ms: 0,
+      });
+    } else if (seg === "junior") {
+      await supabase.from("junior_game_scores").insert({
+        user_id: uid, game_type: "stage_test", grade: Number(grade),
+        score: Math.round(accuracy * 100), accuracy, duration_ms: 0,
+      });
+    }
+
+    // 2) 单词掌握度 + 做题记录
+    if (seg === "gaokao") {
+      // 高考：写 gaokao_user_attempts + gaokao_user_mastery
+      const attempts = allResults.map(r => ({
+        user_id: uid, question_type: "vocab", question_id: r.id,
+        is_correct: r.correct, user_answer: null, time_spent_seconds: null,
+      }));
+      await supabase.from("gaokao_user_attempts").insert(attempts);
+      for (const r of allResults) {
+        const { data: ex } = await supabase
+          .from("gaokao_user_mastery")
+          .select("id,correct_count,wrong_count,mastery_level")
+          .eq("user_id", uid).eq("item_type", "vocab").eq("item_id", r.id)
+          .maybeSingle();
+        const cc = (ex?.correct_count ?? 0) + (r.correct ? 1 : 0);
+        const wc = (ex?.wrong_count ?? 0) + (r.correct ? 0 : 1);
+        const lvl = Math.min(4, Math.max(0, (ex?.mastery_level ?? 0) + (r.correct ? 1 : -1)));
+        const payload: any = {
+          correct_count: cc, wrong_count: wc, mastery_level: lvl,
+          last_result: r.correct ? "correct" : "wrong",
+          last_seen_at: new Date().toISOString(),
+        };
+        if (ex) await supabase.from("gaokao_user_mastery").update(payload).eq("id", ex.id);
+        else await supabase.from("gaokao_user_mastery").insert({
+          user_id: uid, item_type: "vocab", item_id: r.id, ...payload,
+        });
+      }
+    } else {
+      const table = seg === "primary" ? "primary_word_mastery" : "junior_word_mastery";
+      for (const r of allResults) {
+        const { data: ex } = await supabase
+          .from(table as any)
+          .select("id,quiz_correct,quiz_wrong,mastery_level")
+          .eq("user_id", uid).eq("word_id", r.id)
+          .maybeSingle();
+        const qc = ((ex as any)?.quiz_correct ?? 0) + (r.correct ? 1 : 0);
+        const qw = ((ex as any)?.quiz_wrong ?? 0) + (r.correct ? 0 : 1);
+        const lvl = Math.min(4, Math.max(0, ((ex as any)?.mastery_level ?? 0) + (r.correct ? 1 : -1)));
+        const payload: any = {
+          quiz_correct: qc, quiz_wrong: qw, mastery_level: lvl,
+          last_seen_at: new Date().toISOString(),
+        };
+        if (ex) await supabase.from(table as any).update(payload).eq("id", (ex as any).id);
+        else await supabase.from(table as any).insert({
+          user_id: uid, word_id: r.id, grade: Number(grade), ...payload,
+        });
+      }
+    }
   }
 
   if (loading || !meta) {

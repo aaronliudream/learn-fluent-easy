@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowLeft, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock, Award } from "lucide-react";
+import { ArrowRight, ArrowLeft, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock, Award, Coins, Heart, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 type Stage = {
@@ -94,6 +94,34 @@ const China = () => {
         按学段精准提分：小学 · 初中 · 高中(高考) · 大学四级 · 大学六级 · 研究生
         </p>
       </header>
+
+      {/* 快捷入口：星币宠物 + 全局家长报告 */}
+      <section className="mb-2 grid gap-3 sm:grid-cols-2">
+        <Link to="/pets" className="group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-amber-400 via-orange-400 to-rose-400 p-4 text-white shadow-tile transition hover:-translate-y-0.5">
+          <span className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-white/20 blur-2xl" />
+          <div className="relative grid size-11 place-items-center rounded-xl bg-white/25 backdrop-blur-sm">
+            <Heart className="size-5" />
+          </div>
+          <div className="relative flex-1">
+            <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">PETS · 学习宠物</div>
+            <div className="text-base font-extrabold">我的电子宠物</div>
+            <div className="text-[11px] opacity-90">学习赚星币 · 喂养、出游、领养、进化</div>
+          </div>
+          <Coins className="size-5 opacity-90" />
+        </Link>
+        <Link to="/parent" className="group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-500 via-teal-500 to-sky-500 p-4 text-white shadow-tile transition hover:-translate-y-0.5">
+          <span className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-white/20 blur-2xl" />
+          <div className="relative grid size-11 place-items-center rounded-xl bg-white/25 backdrop-blur-sm">
+            <Users className="size-5" />
+          </div>
+          <div className="relative flex-1">
+            <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">PARENT CENTER · 家长中心</div>
+            <div className="text-base font-extrabold">全学段家长报告</div>
+            <div className="text-[11px] opacity-90">小学 / 初中 / 高中 进度、薄弱点、趋势一目了然</div>
+          </div>
+          <ArrowRight className="size-5 opacity-90 transition group-hover:translate-x-1" />
+        </Link>
+      </section>
 
       <section className="mt-6 grid gap-3 sm:grid-cols-2">
         {STAGES.map((s, i) => {

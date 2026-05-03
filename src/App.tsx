@@ -66,6 +66,7 @@ const Social = lazy(() => import("./pages/Social.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 import { FloatingPet } from "@/components/pet/FloatingPet";
+import { EvolutionCelebration } from "@/components/pet/EvolutionCelebration";
 
 const queryClient = new QueryClient();
 
@@ -120,6 +121,7 @@ const App = () => (
         <LanguagePickerModal />
         <GaokaoBreakReminder />
         <FloatingPetGate />
+        <EvolutionCelebration />
         <div className="pb-tabbar lg:pb-0">
         <Suspense fallback={<RouteFallback />}>
         <Routes>

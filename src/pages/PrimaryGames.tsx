@@ -461,9 +461,11 @@ function SpellGame({ words, grade }: { words: Word[]; grade: number }) {
     onRetry={() => { setIdx(0); setScore({c:0,t:0}); }} />;
 
   const submit = () => {
-    const ok = blanks.every((bi, k) => (vals[k]||"").toLowerCase() === cur.word[bi].toLowerCase());
+    // Case-sensitive: kids learn proper capitalization (Apple, London, I)
+    const ok = blanks.every((bi, k) => (vals[k]||"") === cur.word[bi]);
     setScore(s => ({ c: s.c + (ok?1:0), t: s.t+1 }));
     speak(cur.word);
+    recordWordResult(cur, "spell", ok);
     setTimeout(() => setIdx(i => i+1), 900);
   };
 
@@ -486,7 +488,7 @@ function SpellGame({ words, grade }: { words: Word[]; grade: number }) {
                 value={vals[k] ?? ""}
                 onChange={e => setVals(v => { const n = v.slice(); n[k] = e.target.value.slice(-1); return n; })}
                 maxLength={1}
-                className="size-11 rounded-lg border-2 border-amber-400 bg-white text-center text-2xl font-black uppercase text-amber-600 outline-none focus:border-amber-600"
+                className="size-11 rounded-lg border-2 border-amber-400 bg-white text-center text-2xl font-black text-amber-600 outline-none focus:border-amber-600"
               />
             );
           })}

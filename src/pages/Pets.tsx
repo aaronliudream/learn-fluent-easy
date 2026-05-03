@@ -312,6 +312,15 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
     if (error) { flash("❌ " + (error.message.includes("hungry") ? "宠物太饿啦，先喂饱再出门" : error.message.includes("coins") ? "💰 星币不够" : error.message)); return; }
     const r = Array.isArray(data) ? data[0] : data;
     flash((r?.surprise || "🎉 玩得很开心！") + ` Lv.${r?.new_level}`);
+    if (r?.new_level && r.new_level > active.level) {
+      const emoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "⭐";
+      celebratePet({
+        kind: "levelup",
+        emoji,
+        title: `Lv.${r.new_level} 达成！`,
+        subtitle: `${active.nickname} 在外面玩得超棒`,
+      });
+    }
     onAfter();
   };
   const sp = species[active.species_id];

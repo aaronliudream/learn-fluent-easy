@@ -113,6 +113,11 @@ export default function JuniorListeningPlay() {
           );
         })}
       </div>
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
+        <Link to="/junior/listening" className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> 返回听力列表</Link>
+        <Link to="/junior" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted">🏫 初中首页</Link>
+        <Link to="/pets" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted">🐾 宠物</Link>
+      </div>
     </main>
   );
 }

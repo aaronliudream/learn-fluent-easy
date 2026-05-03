@@ -1789,6 +1789,42 @@ export type Database = {
         }
         Relationships: []
       }
+      pet_state: {
+        Row: {
+          bond: number
+          last_interaction_at: string
+          level: number
+          name: string
+          skin: string
+          stars: number
+          updated_at: string
+          user_id: string
+          xp: number
+        }
+        Insert: {
+          bond?: number
+          last_interaction_at?: string
+          level?: number
+          name?: string
+          skin?: string
+          stars?: number
+          updated_at?: string
+          user_id: string
+          xp?: number
+        }
+        Update: {
+          bond?: number
+          last_interaction_at?: string
+          level?: number
+          name?: string
+          skin?: string
+          stars?: number
+          updated_at?: string
+          user_id?: string
+          xp?: number
+        }
+        Relationships: []
+      }
       phrase_explanations: {
         Row: {
           created_at: string
@@ -1869,6 +1905,133 @@ export type Database = {
           weighted?: number
         }
         Relationships: []
+      }
+      primary_grades: {
+        Row: {
+          created_at: string
+          emoji: string | null
+          gradient: string | null
+          id: number
+          name_cn: string
+          name_en: string
+          sort_order: number
+          unlocked: boolean
+        }
+        Insert: {
+          created_at?: string
+          emoji?: string | null
+          gradient?: string | null
+          id: number
+          name_cn: string
+          name_en: string
+          sort_order?: number
+          unlocked?: boolean
+        }
+        Update: {
+          created_at?: string
+          emoji?: string | null
+          gradient?: string | null
+          id?: number
+          name_cn?: string
+          name_en?: string
+          sort_order?: number
+          unlocked?: boolean
+        }
+        Relationships: []
+      }
+      primary_lesson_progress: {
+        Row: {
+          accuracy: number | null
+          completed_at: string | null
+          created_at: string
+          id: string
+          last_seen_at: string
+          lesson_id: string
+          stars: number
+          steps_done: number
+          total_steps: number
+          user_id: string
+          xp_earned: number
+        }
+        Insert: {
+          accuracy?: number | null
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          last_seen_at?: string
+          lesson_id: string
+          stars?: number
+          steps_done?: number
+          total_steps?: number
+          user_id: string
+          xp_earned?: number
+        }
+        Update: {
+          accuracy?: number | null
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          last_seen_at?: string
+          lesson_id?: string
+          stars?: number
+          steps_done?: number
+          total_steps?: number
+          user_id?: string
+          xp_earned?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "primary_lesson_progress_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "primary_lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      primary_lessons: {
+        Row: {
+          created_at: string
+          estimated_minutes: number
+          id: string
+          primary_skill: string
+          sort_order: number
+          steps: Json
+          title_cn: string
+          title_en: string
+          unit_id: string
+        }
+        Insert: {
+          created_at?: string
+          estimated_minutes?: number
+          id?: string
+          primary_skill: string
+          sort_order?: number
+          steps?: Json
+          title_cn: string
+          title_en: string
+          unit_id: string
+        }
+        Update: {
+          created_at?: string
+          estimated_minutes?: number
+          id?: string
+          primary_skill?: string
+          sort_order?: number
+          steps?: Json
+          title_cn?: string
+          title_en?: string
+          unit_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "primary_lessons_unit_id_fkey"
+            columns: ["unit_id"]
+            isOneToOne: false
+            referencedRelation: "primary_units"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       primary_letters: {
         Row: {
@@ -1977,6 +2140,47 @@ export type Database = {
           user_id?: string
         }
         Relationships: []
+      }
+      primary_units: {
+        Row: {
+          created_at: string
+          emoji: string | null
+          grade: number
+          id: string
+          skills: string[]
+          sort_order: number
+          title_cn: string
+          title_en: string
+        }
+        Insert: {
+          created_at?: string
+          emoji?: string | null
+          grade: number
+          id?: string
+          skills?: string[]
+          sort_order?: number
+          title_cn: string
+          title_en: string
+        }
+        Update: {
+          created_at?: string
+          emoji?: string | null
+          grade?: number
+          id?: string
+          skills?: string[]
+          sort_order?: number
+          title_cn?: string
+          title_en?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "primary_units_grade_fkey"
+            columns: ["grade"]
+            isOneToOne: false
+            referencedRelation: "primary_grades"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       profiles: {
         Row: {

@@ -121,6 +121,7 @@ const App = () => (
           <Route path="/primary" element={<Primary />} />
           <Route path="/primary/letters" element={<PrimaryLetters />} />
           <Route path="/primary/vocab" element={<PrimaryVocab />} />
+         <Route path="/primary/vocab/:grade" element={<PrimaryVocab />} />
           <Route path="/primary/chat" element={<PrimaryChat />} />
           <Route path="/primary/grade/:grade" element={<PrimaryGrade />} />
           <Route path="/primary/games" element={<PrimaryGames />} />

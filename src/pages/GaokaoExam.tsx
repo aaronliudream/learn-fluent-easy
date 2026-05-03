@@ -46,20 +46,6 @@ const COMBO = [
     gradient: "from-violet-600 to-purple-700",
   },
   {
-    to: "/gaokao/writing",
-    icon: PenLine,
-    title: "应用文 + 读后续写",
-    desc: "高考写作两大题型 · AI 批改 + 范文",
-    gradient: "from-amber-500 to-rose-500",
-  },
-  {
-    to: "/gaokao/listening",
-    icon: Headphones,
-    title: "听力套题",
-    desc: "高考听力全套 · 逐题精听",
-    gradient: "from-sky-500 to-blue-500",
-  },
-  {
     to: "/gaokao/mistakes",
     icon: AlertTriangle,
     title: "错题攻坚",

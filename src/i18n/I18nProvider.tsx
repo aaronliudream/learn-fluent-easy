@@ -153,6 +153,8 @@ type I18nContextValue = {
   /** English translation of an arbitrary source text. Async — returns
    *  empty string for one tick if not yet cached, then re-renders. */
   tDynamicEn: (text: string) => string;
+  /** Chinese version of a static key (for fixed bilingual zh/EN display). */
+  tZh: (key: StringKey, vars?: Record<string, string | number>) => string;
 };
 
 const I18nContext = createContext<I18nContextValue | null>(null);

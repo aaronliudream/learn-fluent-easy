@@ -44,11 +44,9 @@ export default function JuniorReadingPlay() {
 
   if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground">加载中…</main>;
 
-  return (
-    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-      <BackLink to="/junior/reading" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</BackLink>
-      <h1 className="text-grad-title text-2xl font-extrabold">{r.title}</h1>
-      <article className="mt-4 rounded-2xl border bg-card p-5 text-sm leading-relaxed whitespace-pre-wrap">{r.body}</article>
+  const passage = (
+    <>
+      <article className="rounded-2xl border bg-card p-5 text-[15px] leading-8 whitespace-pre-wrap font-serif">{r.body}</article>
       {r.vocab_notes?.length > 0 && (
         <div className="mt-4 rounded-xl bg-muted/40 p-3">
           <div className="text-[11px] font-extrabold text-muted-foreground">📚 词汇</div>
@@ -57,9 +55,12 @@ export default function JuniorReadingPlay() {
           </div>
         </div>
       )}
-      <h2 className="mt-6 mb-3 text-base font-extrabold">📝 阅读理解</h2>
-      <div className="space-y-4">
-        {r.questions.map((q, i) => {
+    </>
+  );
+
+  const qBlock = (
+    <div className="space-y-4">
+      {r.questions.map((q, i) => {
           const picked = picks[i];
           return (
             <section key={i} className="rounded-2xl border bg-card p-4">
@@ -85,7 +86,26 @@ export default function JuniorReadingPlay() {
             </section>
           );
         })}
+    </div>
+  );
+
+  return (
+    <main className="mx-auto min-h-screen max-w-7xl px-5 py-6">
+      <BackLink to="/junior/reading" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</BackLink>
+      <h1 className="text-grad-title text-2xl font-extrabold">{r.title}</h1>
+
+      {/* GMAT-style split layout on desktop, stacked on mobile */}
+      <div className="mt-4 grid gap-6 lg:grid-cols-2 lg:gap-8 lg:items-start">
+        <div className="lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-2">
+          <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">Passage 阅读材料</div>
+          {passage}
+        </div>
+        <div>
+          <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">📝 Questions 阅读理解</div>
+          {qBlock}
+        </div>
       </div>
+
       <BottomReturn to="/junior/reading" label="返回阅读列表" extra={[{to:"/junior",label:"🏫 初中首页"},{to:"/pets",label:"🐾 宠物"}]} />
     </main>
   );

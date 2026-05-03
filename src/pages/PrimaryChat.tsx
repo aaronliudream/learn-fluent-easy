@@ -38,6 +38,7 @@ export default function PrimaryChat() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const qStartRef = useRef<Record<number, number>>({});
   // Quiz state
   const [quizLoading, setQuizLoading] = useState(false);
   const [quizItems, setQuizItems] = useState<QuizItem[] | null>(null);

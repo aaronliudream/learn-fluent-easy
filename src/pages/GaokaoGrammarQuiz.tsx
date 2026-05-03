@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, RotateCcw, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -74,14 +75,14 @@ export default function GaokaoGrammarQuiz() {
     return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p className="text-sm text-muted-foreground">加载中...</p></main>;
   }
   if (!point) {
-    return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p>考点不存在。<Link to="/gaokao/grammar" className="text-primary underline">返回</Link></p></main>;
+    return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p>考点不存在。<BackLink to="/gaokao/grammar" className="text-primary underline">返回</BackLink></p></main>;
   }
   if (!total) {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-        <Link to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
           <ArrowLeft className="size-4" /> 返回语法地图
-        </Link>
+        </BackLink>
         <p className="text-muted-foreground">本考点暂无题目。</p>
       </main>
     );
@@ -92,9 +93,9 @@ export default function GaokaoGrammarQuiz() {
     const acc = stats.correct + stats.wrong > 0 ? stats.correct / (stats.correct + stats.wrong) : 0;
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-        <Link to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
           <ArrowLeft className="size-4" /> 返回语法地图
-        </Link>
+        </BackLink>
         <div className="rounded-2xl border bg-card p-8 text-center">
           <div className="text-5xl mb-3">🎉</div>
           <h2 className="text-xl font-bold mb-2">本考点已刷完！</h2>
@@ -110,7 +111,7 @@ export default function GaokaoGrammarQuiz() {
               <Link to={`/gaokao/grammar/${slug}`}><BookOpen className="size-4 mr-1" /> 看讲解</Link>
             </Button>
             <Button variant="ghost" asChild>
-              <Link to="/gaokao/grammar">返回地图</Link>
+              <BackLink to="/gaokao/grammar">返回地图</BackLink>
             </Button>
           </div>
         </div>
@@ -155,9 +156,9 @@ export default function GaokaoGrammarQuiz() {
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-5 pb-24 sm:px-5 sm:py-8">
       {/* 顶部返回 + 进度 */}
       <div className="mb-4 flex items-center justify-between gap-2">
-        <Link to="/gaokao/grammar" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <BackLink to="/gaokao/grammar" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
           <ArrowLeft className="size-4" /> 返回
-        </Link>
+        </BackLink>
         <div className="text-xs text-muted-foreground tabular-nums">
           {idx + 1} / {total} · ✓{stats.correct} ✗{stats.wrong}
         </div>

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Check, X, Volume2, Loader2, Trophy, Sparkles, Mic, BookOpen, Eye, Pencil, Target } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -71,7 +72,7 @@ export default function PrimaryLesson() {
   }
 
   if (loading) return <main className="grid min-h-screen place-items-center"><Loader2 className="size-6 animate-spin text-muted-foreground" /></main>;
-  if (!lesson) return <main className="mx-auto max-w-3xl p-6"><p className="text-muted-foreground">课程不存在</p><Link to="/primary" className="text-sm text-primary">返回</Link></main>;
+  if (!lesson) return <main className="mx-auto max-w-3xl p-6"><p className="text-muted-foreground">课程不存在</p><BackLink to="/primary" className="text-sm text-primary">返回</BackLink></main>;
 
   const onStepDone = (info?: { correct: number; total: number }) => {
     if (cur?.type === "test" && info) setTestScore({ c: info.correct, t: info.total });
@@ -85,9 +86,9 @@ export default function PrimaryLesson() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
-      <Link to={`/primary/grade/${lesson.unit?.grade ?? 1}`} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to={`/primary/grade/${lesson.unit?.grade ?? 1}`} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回
-      </Link>
+      </BackLink>
       <div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
         <span>{lesson.unit?.emoji} {lesson.unit?.title_cn}</span>
         <span>·</span>

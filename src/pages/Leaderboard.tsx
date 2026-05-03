@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { Trophy, Crown, ChevronLeft, Sparkles, Globe2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -58,7 +59,7 @@ const Leaderboard = () => {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <Button asChild variant="ghost" size="sm" className="mb-3 -ml-2">
-        <Link to="/"><ChevronLeft className="size-4" /> {t("返回")}</Link>
+        <BackLink to="/"><ChevronLeft className="size-4" /> {t("返回")}</BackLink>
       </Button>
 
       <header className="mb-6 flex items-center gap-3">

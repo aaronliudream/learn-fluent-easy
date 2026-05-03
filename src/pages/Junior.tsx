@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BackLink from "@/components/BackLink";
 import { ArrowLeft, Sparkles, BookOpen, Headphones, Target, Lock, Trophy, Heart, Users } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
 import { TodayGrowthCard } from "@/components/TodayGrowthCard";
@@ -49,9 +50,9 @@ const SECTIONS = [
 export default function Junior() {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <Link to="/china" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/china" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回中国学生专区
-      </Link>
+      </BackLink>
       <div className="mb-6">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
           初中英语 · JUNIOR HIGH

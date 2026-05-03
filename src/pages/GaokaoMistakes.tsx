@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, BookMarked, Star, CheckCircle2, Trash2, ChevronDown, ChevronUp, Filter } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -65,9 +66,9 @@ export default function GaokaoMistakes() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
-      <Link to="/gaokao" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/gaokao" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回高考英语
-      </Link>
+      </BackLink>
       <PageHeader title="我的错题本" subtitle="刻意练习薄弱点 · 自动收录所有错题" hideReviewBanner />
 
       {/* Filter chips */}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, BookOpen, Clock, Sparkles, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -40,12 +41,12 @@ export default function PrimaryReading() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
-      <Link
+      <BackLink
         to={`/primary/grade/${g}`}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> 返回 {GRADE_NAMES[g-1] ?? g}年级
-      </Link>
+      </BackLink>
 
       <div className="mb-5">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">

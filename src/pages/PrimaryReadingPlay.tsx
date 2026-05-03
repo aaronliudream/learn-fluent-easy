@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Trophy, Sparkles, Play, ChevronRight, Star, RotateCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -93,16 +94,16 @@ export default function PrimaryReadingPlay() {
   }, [finished, a, stars, accuracy]);
 
   if (loading) return <main className="grid min-h-screen place-items-center"><Loader2 className="size-6 animate-spin text-muted-foreground" /></main>;
-  if (!a) return <main className="mx-auto max-w-3xl p-6"><p className="text-muted-foreground">课文不存在</p><Link to="/primary" className="text-sm text-primary">返回</Link></main>;
+  if (!a) return <main className="mx-auto max-w-3xl p-6"><p className="text-muted-foreground">课文不存在</p><BackLink to="/primary" className="text-sm text-primary">返回</BackLink></main>;
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 pb-24">
-      <Link
+      <BackLink
         to={`/primary/reading/grade/${a.grade}`}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> 返回阅读列表
-      </Link>
+      </BackLink>
 
       <div className={`mb-4 rounded-3xl bg-gradient-to-br ${a.cover_gradient ?? "from-rose-400 to-amber-400"} p-5 text-white shadow-tile`}>
         <div className="flex items-center gap-3">
@@ -578,10 +579,10 @@ function FinishCard({ a, stars, accuracy, onRetry }: { a: Article; stars: number
         <RotateCw className="size-4" /> 再读一遍
       </button>
       <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-        <Link to={`/primary/reading/grade/${a.grade}`}
+        <BackLink to={`/primary/reading/grade/${a.grade}`}
           className="inline-flex items-center gap-1.5 rounded-full border-2 border-rose-300 bg-white px-5 py-2 text-sm font-extrabold text-rose-600">
           <ArrowLeft className="size-4" /> 返回阅读列表
-        </Link>
+        </BackLink>
         <Link to={`/primary/grade/${a.grade}`}
           className="inline-flex items-center gap-1.5 rounded-full border-2 border-amber-300 bg-white px-5 py-2 text-sm font-extrabold text-amber-700">
           🏠 年级首页

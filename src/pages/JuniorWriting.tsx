@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -14,7 +15,7 @@ export default function JuniorWriting() {
   }, []);
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <Link to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回初中专区</Link>
+      <BackLink to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回初中专区</BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold">✍️ 初中写作训练</h1>
       <p className="mt-1 text-sm text-muted-foreground">命题作文 · AI 评分 · 范文对比 · 提交奖星币</p>
       <div className="mt-5 grid gap-2">

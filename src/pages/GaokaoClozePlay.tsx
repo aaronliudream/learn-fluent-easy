@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Clock, CheckCircle2, XCircle, Send, RotateCcw, BookMarked, ChevronUp, ChevronDown, Lightbulb, Languages, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -387,9 +388,9 @@ export default function GaokaoClozePlay() {
               <Link to="/gaokao/mistakes" className="inline-flex items-center gap-1 rounded-xl border border-border px-3 py-2.5 text-sm">
                 <BookMarked className="size-4" /> 错题本
               </Link>
-              <Link to="/gaokao/cloze" className="inline-flex items-center justify-center rounded-xl border border-border px-3 py-2.5 text-sm">
+              <BackLink to="/gaokao/cloze" className="inline-flex items-center justify-center rounded-xl border border-border px-3 py-2.5 text-sm">
                 ← 返回
-              </Link>
+              </BackLink>
               <Link to="/gaokao/cloze" className="flex flex-1 items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground">
                 下一篇 →
               </Link>

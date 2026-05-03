@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -47,9 +48,9 @@ export default function JuniorGrammarPoint() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-      <Link to="/junior/grammar" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/junior/grammar" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回考点列表
-      </Link>
+      </BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold">{pt.title}</h1>
       <p className="mt-1 text-xs text-muted-foreground">CEFR {pt.cefr}</p>
       <article className="prose prose-sm mt-4 max-w-none rounded-2xl border bg-card p-5 dark:prose-invert">

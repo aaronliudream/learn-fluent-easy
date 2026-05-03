@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import BackLink from "@/components/BackLink";
 import { ArrowLeft, BookOpen, FileText, Sparkles, PenLine, Headphones, Edit3, Lock, Activity } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { TodayGrowthCard } from "@/components/TodayGrowthCard";
@@ -65,9 +66,9 @@ const SECTIONS = [
 export default function Gaokao() {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <Link to="/" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回首页
-      </Link>
+      </BackLink>
       <PageHeader title="高考英语" hideReviewBanner />
 
       <div className="mb-5">

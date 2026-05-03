@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft, Search, Filter, Sparkles, BookOpen, Target, Trophy, X,
@@ -227,9 +228,9 @@ export default function GaokaoReadingKnowledge() {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-8">
-      <Link to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回阅读训练
-      </Link>
+      </BackLink>
 
       <PageHeader hideReviewBanner title="阅读知识手册" subtitle="题型怎么辨 · 套路怎么用 · 易错点在哪" />
 

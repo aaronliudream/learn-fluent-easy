@@ -166,7 +166,7 @@ serve(async (req) => {
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) return json({ error: "AI gateway not configured" }, 503);
 
-    const { transcript, lessonTitle, part: partFromBody, targets } = await req.json();
+    const { transcript, lessonTitle, part: partFromBody, targets, avoidWords } = await req.json();
     const part: Part =
       partFromBody === "review" || partFromBody === "quiz" ? partFromBody : "all";
 
@@ -187,6 +187,10 @@ serve(async (req) => {
       ? `\n\nTARGET EXPRESSIONS Alex was *supposed* to weave in. For each one, check the TRANSCRIPT above and ONLY return it in targets_used if Alex (not the learner) literally said the phrase (or an obvious inflection like plural / past-tense). If Alex never said it, OMIT it. Do NOT invent or paraphrase. It is perfectly fine — and expected — to return an empty targets_used array.\n${targets.map((t: any, i: number) => `${i + 1}. "${t.phrase}"`).join("\n")}`
       : "";
 
+    const avoidBlock = part !== "review" && Array.isArray(avoidWords) && avoidWords.length
+      ? `\n\nAVOID LIST — these words/phrases were already quizzed in the learner's recent past sessions. DO NOT pick any of them again, even if Alex used them this time. Find DIFFERENT vocabulary instead. If the only useful words remaining are not in this list, prefer rare/lower-frequency over the avoid list:\n${avoidWords.slice(0, 80).map((w: string, i: number) => `${i + 1}. ${w}`).join("\n")}`
+      : "";
+
     const tool = part === "review" ? REVIEW_TOOL : part === "quiz" ? QUIZ_TOOL : COMBINED_TOOL;
     const toolName = tool.function.name;
 
@@ -199,7 +203,7 @@ serve(async (req) => {
         { role: "system", content: buildSystemPrompt(part) },
         {
           role: "user",
-          content: `Lesson context: ${lessonTitle || "(general free chat)"}\n\nTRANSCRIPT:\n${transcriptText}${targetsBlock}`,
+          content: `Lesson context: ${lessonTitle || "(general free chat)"}\n\nTRANSCRIPT:\n${transcriptText}${targetsBlock}${avoidBlock}`,
         },
       ],
       tools: [tool],

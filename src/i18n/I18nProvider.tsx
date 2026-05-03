@@ -415,6 +415,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     return interpolate(tmpl, vars);
   }, []);
 
+  const tZh = useCallback((key: StringKey, vars?: Record<string, string | number>) => {
+    const tmpl = ZH[key] ?? EN[key] ?? key;
+    return interpolate(tmpl, vars);
+  }, []);
+
   const tDynamicEn = useCallback((text: string) => {
     if (!text) return text;
     // Source already English (no CJK) → just return it.
@@ -439,8 +444,8 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   }, [flushDynEnQueue, dynVersion]);
 
   const value = useMemo<I18nContextValue>(() => ({
-    lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn,
-  }), [lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, dynVersion]);
+    lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, tZh,
+  }), [lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, tZh, dynVersion]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

@@ -35,9 +35,9 @@ const STAGES: Stage[] = [
   {
     to: "/gaokao",
     icon: BookOpenCheck,
-    eyebrow: "高中英语 · 高考",
-    title: "高中生 · 高考英语专区",
-    desc: "诊断薄弱点，覆盖语法、阅读、词汇全部考点，错题智能追加同类题",
+    eyebrow: "高中英语 · SENIOR HIGH",
+    title: "高中生 · 高中英语专区",
+    desc: "高一/高二/高三分级训练 + 高考综合冲刺 · 词汇/语法/阅读/完形/写作/听力全覆盖",
     gradient: "from-red-600 via-rose-600 to-orange-500",
     badge: "已上线",
   },

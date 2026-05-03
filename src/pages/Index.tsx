@@ -13,6 +13,7 @@ import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { T } from "@/i18n/T";
 import { SupportButton } from "@/components/SupportButton";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
+import CompanionHero from "@/components/pet/CompanionHero";
 
 const HOME_COUNTS = {
   slang: 347,
@@ -169,6 +170,9 @@ const Index = () => {
           </div>
         </Link>
       )}
+
+      {/* Emotional anchor: learning companion as hero */}
+      <CompanionHero />
 
       {/* Primary: Today's Task card — single clear next action */}
       <TodayTaskCard />

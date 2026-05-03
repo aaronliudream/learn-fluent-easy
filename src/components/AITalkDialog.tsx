@@ -218,11 +218,12 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       .finally(() => setRecapLoading(false));
 
     const quizPromise = supabase.functions
-      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "quiz" } })
+      .invoke("chat-recap", { body: { transcript: turns, lessonTitle, part: "quiz", avoidWords: loadRecentQuizWords() } })
       .then(({ data, error }) => {
         if (error) throw error;
         if (data?.error) throw new Error(data.error);
         const quiz = (data.recap?.quiz ?? []) as QuizQ[];
+        rememberQuizWords(quiz.map((q) => q.word));
         setRecap((prev) => ({
           summary_cn: prev?.summary_cn ?? "",
           turns: prev?.turns ?? [],

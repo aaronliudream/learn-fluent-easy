@@ -65,32 +65,9 @@ export default function PrimaryGames() {
         </p>
       </div>
 
-      {/* Grade selector */}
-      <div className="mb-5 flex flex-wrap gap-2">
-        {[1,2,3,4,5,6].map(g => (
-          <button
-            key={g}
-            onClick={() => {
-              localStorage.setItem("primary:lastGrade", String(g));
-              nav(game ? `/primary/games/${g}/${game}` : `/primary/games/${g}`);
-            }}
-            className={cn(
-              "rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
-              g === grade && !isAll ? "border-amber-400 bg-amber-400 text-white" : "border-border bg-card hover:border-amber-300"
-            )}
-          >
-            G{g}
-          </button>
-        ))}
-        <button
-          onClick={() => nav(game ? `/primary/games/all/${game}` : `/primary/games/all`)}
-          className={cn(
-            "rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
-            isAll ? "border-fuchsia-500 bg-fuchsia-500 text-white" : "border-border bg-card hover:border-fuchsia-300"
-          )}
-        >
-          🏆 全小学
-        </button>
+      {/* Locked to current grade — no cross-grade switching from inside a grade's game center */}
+      <div className="mb-5 inline-flex items-center gap-2 rounded-full border-2 border-amber-400 bg-amber-400 px-3 py-1 text-xs font-extrabold text-white">
+        {isAll ? "🏆 全小学" : `G${grade} · ${gradeName}`}
       </div>
 
       {loading ? (

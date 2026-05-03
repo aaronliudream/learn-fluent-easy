@@ -101,30 +101,17 @@ const HeartbeatGate = () => {
   return null;
 };
 
-// 仅在学习/答题相关路由显示浮动宠物，避免干扰首页/账号等页面
+// 全站浮动伙伴：除了少数干扰场景（登录/落地英雄区/全屏对话）外都显示。
+// 未登录访客也会看到 demo 蛋，点击引导到注册→领养。
 const FloatingPetGate = () => {
   const { pathname } = useLocation();
-  const show =
-    pathname.startsWith("/primary/games") ||
-    pathname.startsWith("/primary/lesson") ||
-    pathname.startsWith("/primary/vocab") ||
-    pathname.startsWith("/primary/letters") ||
-    pathname.startsWith("/junior/vocab") ||
-    pathname.startsWith("/junior/grammar") ||
-    pathname.startsWith("/junior/reading") ||
-    pathname.startsWith("/junior/listening") ||
-    pathname.startsWith("/junior/writing") ||
-    pathname.startsWith("/junior/g/") ||
-    pathname.startsWith("/gaokao/grammar") ||
-    pathname.startsWith("/gaokao/reading") ||
-    pathname.startsWith("/gaokao/vocab") ||
-    pathname.startsWith("/gaokao/cloze") ||
-    pathname.startsWith("/lesson") ||
-    pathname.startsWith("/level/") ||
-    pathname.startsWith("/scenes/") ||
-    pathname.startsWith("/workplace/") ||
-    pathname.startsWith("/review");
-  if (!show) return null;
+  const hide =
+    pathname === "/" ||                  // 首页已有英雄伙伴，避免重复
+    pathname.startsWith("/auth") ||
+    pathname.startsWith("/talk") ||      // 全屏语音对话
+    pathname.startsWith("/pets") ||      // 宠物详情页本身
+    pathname.startsWith("/placement");   // 评测专注模式
+  if (hide) return null;
   return <FloatingPet />;
 };
 

@@ -2958,6 +2958,36 @@ export type Database = {
         }
         Relationships: []
       }
+      pending_seeds: {
+        Row: {
+          amount: number
+          earned_at: string
+          id: number
+          mature_at: string
+          settled_at: string | null
+          source: string
+          user_id: string
+        }
+        Insert: {
+          amount: number
+          earned_at?: string
+          id?: number
+          mature_at: string
+          settled_at?: string | null
+          source: string
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          earned_at?: string
+          id?: number
+          mature_at?: string
+          settled_at?: string | null
+          source?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       pet_chat_messages: {
         Row: {
           content: string
@@ -4519,6 +4549,33 @@ export type Database = {
         }
         Relationships: []
       }
+      user_currencies: {
+        Row: {
+          crystals: number
+          seeds: number
+          starlight: number
+          total_seeds_earned: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          crystals?: number
+          seeds?: number
+          starlight?: number
+          total_seeds_earned?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          crystals?: number
+          seeds?: number
+          starlight?: number
+          total_seeds_earned?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_mistakes: {
         Row: {
           correct_answer: string | null
@@ -4827,6 +4884,39 @@ export type Database = {
         }
         Relationships: []
       }
+      wishlist: {
+        Row: {
+          added_at: string
+          cooldown_until: string
+          id: string
+          item_id: string
+          item_kind: string
+          purchased_at: string | null
+          removed_at: string | null
+          user_id: string
+        }
+        Insert: {
+          added_at?: string
+          cooldown_until: string
+          id?: string
+          item_id: string
+          item_kind: string
+          purchased_at?: string | null
+          removed_at?: string | null
+          user_id: string
+        }
+        Update: {
+          added_at?: string
+          cooldown_until?: string
+          id?: string
+          item_id?: string
+          item_kind?: string
+          purchased_at?: string | null
+          removed_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       word_duel_matches: {
         Row: {
           created_at: string
@@ -5072,6 +5162,10 @@ export type Database = {
             Args: { _k?: number; _my: number; _opp: number; _score: number }
             Returns: number
           }
+      add_pending_seed: {
+        Args: { _amount: number; _source: string }
+        Returns: number
+      }
       adopt_pet: {
         Args: { _nickname: string; _species_id: string }
         Returns: {
@@ -5485,6 +5579,15 @@ export type Database = {
         Returns: undefined
       }
       set_active_pet: { Args: { _pet_id: string }; Returns: undefined }
+      settle_matured_seeds: {
+        Args: never
+        Returns: {
+          crystals: number
+          pending: number
+          seeds: number
+          starlight: number
+        }[]
+      }
       submit_cloze_session: {
         Args: {
           _answers: Json
@@ -5560,6 +5663,10 @@ export type Database = {
       }
       username_available: { Args: { _name: string }; Returns: boolean }
       validate_username: { Args: { _name: string }; Returns: string }
+      wishlist_add: {
+        Args: { _item_id: string; _kind: string }
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never

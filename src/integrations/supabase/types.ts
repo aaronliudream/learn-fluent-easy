@@ -1720,6 +1720,278 @@ export type Database = {
         }
         Relationships: []
       }
+      junior_game_scores: {
+        Row: {
+          accuracy: number | null
+          created_at: string
+          duration_ms: number | null
+          game_type: string
+          grade: number | null
+          id: string
+          score: number
+          user_id: string
+        }
+        Insert: {
+          accuracy?: number | null
+          created_at?: string
+          duration_ms?: number | null
+          game_type: string
+          grade?: number | null
+          id?: string
+          score?: number
+          user_id: string
+        }
+        Update: {
+          accuracy?: number | null
+          created_at?: string
+          duration_ms?: number | null
+          game_type?: string
+          grade?: number | null
+          id?: string
+          score?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
+      junior_reading: {
+        Row: {
+          body: string
+          created_at: string
+          difficulty: number
+          grade: number
+          id: string
+          questions: Json
+          title: string
+          topic: string | null
+          vocab_notes: Json
+          word_count: number | null
+        }
+        Insert: {
+          body: string
+          created_at?: string
+          difficulty?: number
+          grade: number
+          id?: string
+          questions?: Json
+          title: string
+          topic?: string | null
+          vocab_notes?: Json
+          word_count?: number | null
+        }
+        Update: {
+          body?: string
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          id?: string
+          questions?: Json
+          title?: string
+          topic?: string | null
+          vocab_notes?: Json
+          word_count?: number | null
+        }
+        Relationships: []
+      }
+      junior_sentences: {
+        Row: {
+          blank: string
+          created_at: string
+          difficulty: number
+          grade: number
+          grammar_tag: string | null
+          id: string
+          meaning_cn: string | null
+          options: Json
+          sentence_en: string
+          word_id: string | null
+        }
+        Insert: {
+          blank: string
+          created_at?: string
+          difficulty?: number
+          grade: number
+          grammar_tag?: string | null
+          id?: string
+          meaning_cn?: string | null
+          options?: Json
+          sentence_en: string
+          word_id?: string | null
+        }
+        Update: {
+          blank?: string
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          grammar_tag?: string | null
+          id?: string
+          meaning_cn?: string | null
+          options?: Json
+          sentence_en?: string
+          word_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "junior_sentences_word_id_fkey"
+            columns: ["word_id"]
+            isOneToOne: false
+            referencedRelation: "junior_vocab"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      junior_themes: {
+        Row: {
+          code: string
+          emoji: string
+          grade: number
+          name_cn: string
+          sort_order: number
+        }
+        Insert: {
+          code: string
+          emoji?: string
+          grade: number
+          name_cn: string
+          sort_order?: number
+        }
+        Update: {
+          code?: string
+          emoji?: string
+          grade?: number
+          name_cn?: string
+          sort_order?: number
+        }
+        Relationships: []
+      }
+      junior_vocab: {
+        Row: {
+          created_at: string
+          example_cn: string | null
+          example_en: string | null
+          freq_rank: number | null
+          grade: number
+          id: string
+          meaning_cn: string
+          meaning_en: string | null
+          phonetic: string | null
+          pos: string | null
+          star_level: number
+          theme: string | null
+          tip: string | null
+          word: string
+        }
+        Insert: {
+          created_at?: string
+          example_cn?: string | null
+          example_en?: string | null
+          freq_rank?: number | null
+          grade: number
+          id?: string
+          meaning_cn: string
+          meaning_en?: string | null
+          phonetic?: string | null
+          pos?: string | null
+          star_level?: number
+          theme?: string | null
+          tip?: string | null
+          word: string
+        }
+        Update: {
+          created_at?: string
+          example_cn?: string | null
+          example_en?: string | null
+          freq_rank?: number | null
+          grade?: number
+          id?: string
+          meaning_cn?: string
+          meaning_en?: string | null
+          phonetic?: string | null
+          pos?: string | null
+          star_level?: number
+          theme?: string | null
+          tip?: string | null
+          word?: string
+        }
+        Relationships: []
+      }
+      junior_word_mastery: {
+        Row: {
+          cloze_correct: number
+          cloze_wrong: number
+          created_at: string
+          due_at: string
+          ease: number
+          grade: number
+          id: string
+          interval_days: number
+          last_seen_at: string | null
+          listen_correct: number
+          listen_wrong: number
+          mastery_level: number
+          match_correct: number
+          match_wrong: number
+          quiz_correct: number
+          quiz_wrong: number
+          reading_correct: number
+          reading_wrong: number
+          spell_correct: number
+          spell_wrong: number
+          updated_at: string
+          user_id: string
+          word_id: string
+        }
+        Insert: {
+          cloze_correct?: number
+          cloze_wrong?: number
+          created_at?: string
+          due_at?: string
+          ease?: number
+          grade: number
+          id?: string
+          interval_days?: number
+          last_seen_at?: string | null
+          listen_correct?: number
+          listen_wrong?: number
+          mastery_level?: number
+          match_correct?: number
+          match_wrong?: number
+          quiz_correct?: number
+          quiz_wrong?: number
+          reading_correct?: number
+          reading_wrong?: number
+          spell_correct?: number
+          spell_wrong?: number
+          updated_at?: string
+          user_id: string
+          word_id: string
+        }
+        Update: {
+          cloze_correct?: number
+          cloze_wrong?: number
+          created_at?: string
+          due_at?: string
+          ease?: number
+          grade?: number
+          id?: string
+          interval_days?: number
+          last_seen_at?: string | null
+          listen_correct?: number
+          listen_wrong?: number
+          mastery_level?: number
+          match_correct?: number
+          match_wrong?: number
+          quiz_correct?: number
+          quiz_wrong?: number
+          reading_correct?: number
+          reading_wrong?: number
+          spell_correct?: number
+          spell_wrong?: number
+          updated_at?: string
+          user_id?: string
+          word_id?: string
+        }
+        Relationships: []
+      }
       learning_events: {
         Row: {
           created_at: string

@@ -929,7 +929,11 @@ function RecapView({
             const answered = picked !== undefined;
             const isCorrect = picked === q.answer_index;
             return (
-              <li key={i} className="rounded-2xl border border-border bg-card p-4 shadow-sm">
+              <li
+                key={i}
+                ref={(el) => { quizItemRefs.current[i] = el; }}
+                className="rounded-2xl border border-border bg-card p-4 shadow-sm scroll-mt-24"
+              >
                 <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-primary">
                   Q{i + 1} · <span className="font-mono">{q.word}</span>
                 </div>
@@ -949,6 +953,15 @@ function RecapView({
                         onClick={() => {
                           if (answered) return; // lock after first pick
                           setQuizAnswers({ ...quizAnswers, [i]: j });
+                          // Auto-scroll the next unanswered question into
+                          // view so the user doesn't have to scroll manually.
+                          const nextIdx = i + 1;
+                          if (nextIdx < recap.quiz.length) {
+                            setTimeout(() => {
+                              const el = quizItemRefs.current[nextIdx];
+                              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }, 350);
+                          }
                         }}
                         disabled={answered}
                         className={`flex w-full items-center gap-3 rounded-xl border-2 p-3 text-left text-base font-medium transition ${

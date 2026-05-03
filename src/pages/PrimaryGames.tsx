@@ -158,6 +158,53 @@ async function saveScore(gameType: string, grade: number, score: number, accurac
   });
 }
 
+/** Update per-word mastery matrix (FSRS-lite). gameType ∈ quiz|listen|spell|match */
+async function recordWordResult(word: Word, gameType: "quiz"|"listen"|"spell"|"match", correct: boolean) {
+  const { data: u } = await supabase.auth.getUser();
+  const uid = u?.user?.id;
+  if (!uid) return;
+  // Try fetch existing
+  const { data: row } = await supabase
+    .from("primary_word_mastery")
+    .select("*").eq("user_id", uid).eq("word_id", word.id).maybeSingle();
+  const c = correct ? 1 : 0, w = correct ? 0 : 1;
+  const next = {
+    user_id: uid,
+    word_id: word.id,
+    grade: word.grade,
+    quiz_correct:   (row?.quiz_correct   ?? 0) + (gameType==="quiz"   ? c : 0),
+    quiz_wrong:     (row?.quiz_wrong     ?? 0) + (gameType==="quiz"   ? w : 0),
+    listen_correct: (row?.listen_correct ?? 0) + (gameType==="listen" ? c : 0),
+    listen_wrong:   (row?.listen_wrong   ?? 0) + (gameType==="listen" ? w : 0),
+    spell_correct:  (row?.spell_correct  ?? 0) + (gameType==="spell"  ? c : 0),
+    spell_wrong:    (row?.spell_wrong    ?? 0) + (gameType==="spell"  ? w : 0),
+    match_correct:  (row?.match_correct  ?? 0) + (gameType==="match"  ? c : 0),
+    match_wrong:    (row?.match_wrong    ?? 0) + (gameType==="match"  ? w : 0),
+    last_seen_at: new Date().toISOString(),
+  } as any;
+  // mastery: 0 new, 1 learning (≥1 correct), 2 familiar (≥2 different skills correct), 3 mastered (3+ skills correct & accuracy ≥ 80%)
+  const skills = [
+    [next.quiz_correct, next.quiz_wrong],
+    [next.listen_correct, next.listen_wrong],
+    [next.spell_correct, next.spell_wrong],
+    [next.match_correct, next.match_wrong],
+  ] as const;
+  const totalCorrect = skills.reduce((s,[a])=>s+a,0);
+  const totalAttempts = skills.reduce((s,[a,b])=>s+a+b,0);
+  const skillsWithCorrect = skills.filter(([a])=>a>0).length;
+  const acc = totalAttempts ? totalCorrect/totalAttempts : 0;
+  let level = 0;
+  if (totalCorrect >= 1) level = 1;
+  if (skillsWithCorrect >= 2 && acc >= 0.7) level = 2;
+  if (skillsWithCorrect >= 3 && acc >= 0.85) level = 3;
+  next.mastery_level = level;
+  if (row) {
+    await supabase.from("primary_word_mastery").update(next).eq("user_id", uid).eq("word_id", word.id);
+  } else {
+    await supabase.from("primary_word_mastery").insert(next);
+  }
+}
+
 function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
   correct: number; total: number; onRetry: () => void; gameType: string; grade: number; durationMs: number;
 }) {

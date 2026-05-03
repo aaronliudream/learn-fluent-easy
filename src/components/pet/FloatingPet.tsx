@@ -76,8 +76,8 @@ export function FloatingPet() {
         <div
           className={cn(
             "text-3xl leading-none transition",
-            isHappy && "animate-bounce-slow",
-            isSad && "opacity-70 grayscale animate-shake",
+            isHappy && "animate-bounce",
+            isSad && "opacity-70 grayscale animate-shake-x",
             !react && "group-hover:scale-110",
           )}
         >

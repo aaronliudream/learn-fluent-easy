@@ -59,13 +59,14 @@ export default function StageTestPlay() {
       // pull vocab pool for this grade (3-5x test size)
       const poolSize = Math.max(60, t.total_questions * 5);
       const gradeFilter: any = segment === "gaokao" ? {} : { grade: Number(grade) };
-      const { data: vocab } = await supabase
+      const { data: vocabRaw } = await supabase
         .from(vocabTable as any)
         .select("id,word,meaning_cn")
         .match(gradeFilter)
         .limit(poolSize);
+      const vocab = (vocabRaw as any[] | null) ?? [];
 
-      if (!vocab || vocab.length < 4) {
+      if (vocab.length < 4) {
         toast.error("题库不足，请先完成基础学习");
         nav(-1);
         return;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
@@ -17,6 +17,7 @@ export default function JuniorGrammarPoint() {
   const [picks, setPicks] = useState<Record<string, string>>({});
   const [streak, setStreak] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
+  const shownAt = useRef<Record<string, number>>({});
 
   useEffect(() => {
     if (!id) return;
@@ -26,7 +27,10 @@ export default function JuniorGrammarPoint() {
         supabase.from("junior_grammar_questions").select("*").eq("point_id", id).order("sort_order"),
       ]);
       setPt(a.data as Pt);
-      setQs((b.data ?? []) as Q[]);
+      const list = (b.data ?? []) as Q[];
+      setQs(list);
+      const now = Date.now();
+      list.forEach(q => { shownAt.current[q.id] = now; });
     })();
   }, [id]);
 
@@ -37,7 +41,8 @@ export default function JuniorGrammarPoint() {
     if (ok) {
       const next = streak + 1;
       setStreak(next);
-      await awardForCorrect(next, "junior_grammar", q.id, "junior_grammar");
+      const ms = Date.now() - (shownAt.current[q.id] ?? Date.now());
+      await awardForCorrect(next, "junior_grammar", q.id, "junior_grammar", ms);
       const cc = correctCount + 1;
       setCorrectCount(cc);
       if (cc % 5 === 0) await awardForBlock("junior_grammar");

@@ -110,6 +110,7 @@ const FloatingPetGate = () => {
     pathname.startsWith("/junior/reading") ||
     pathname.startsWith("/junior/listening") ||
     pathname.startsWith("/junior/writing") ||
+    pathname.startsWith("/junior/g/") ||
     pathname.startsWith("/gaokao/grammar") ||
     pathname.startsWith("/gaokao/reading") ||
     pathname.startsWith("/gaokao/vocab") ||

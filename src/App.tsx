@@ -44,6 +44,10 @@ const PrimaryLesson = lazy(() => import("./pages/PrimaryLesson.tsx"));
 const PrimaryParent = lazy(() => import("./pages/PrimaryParent.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
 const JuniorVocab = lazy(() => import("./pages/JuniorVocab.tsx"));
+const JuniorGrammar = lazy(() => import("./pages/JuniorGrammar.tsx"));
+const JuniorGrammarPoint = lazy(() => import("./pages/JuniorGrammarPoint.tsx"));
+const JuniorReading = lazy(() => import("./pages/JuniorReading.tsx"));
+const JuniorReadingPlay = lazy(() => import("./pages/JuniorReadingPlay.tsx"));
 const GaokaoGrammar = lazy(() => import("./pages/GaokaoGrammar.tsx"));
 const GaokaoGrammarPoint = lazy(() => import("./pages/GaokaoGrammarPoint.tsx"));
 const GaokaoGrammarQuiz = lazy(() => import("./pages/GaokaoGrammarQuiz.tsx"));
@@ -163,6 +167,10 @@ const App = () => (
          <Route path="/primary/parent" element={<PrimaryParent />} />
           <Route path="/junior" element={<Junior />} />
           <Route path="/junior/vocab" element={<JuniorVocab />} />
+          <Route path="/junior/grammar" element={<JuniorGrammar />} />
+          <Route path="/junior/grammar/:id" element={<JuniorGrammarPoint />} />
+          <Route path="/junior/reading" element={<JuniorReading />} />
+          <Route path="/junior/reading/:id" element={<JuniorReadingPlay />} />
           <Route path="/gaokao" element={<Gaokao />} />
           <Route path="/gaokao/diagnostic" element={<GaokaoDiagnostic />} />
           <Route path="/gaokao/grammar" element={<GaokaoGrammar />} />

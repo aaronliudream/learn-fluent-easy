@@ -542,14 +542,14 @@ function MatchGame({ t, onDone, onCorrect }: { t: Extract<Treasure, {type:"match
           {rights.map(rcn => {
             const isMatched = Object.values(matched).includes(rcn);
             return (
-              <button key={cn} onClick={() => onRight(cn)} disabled={isMatched}
+              <button key={rcn} onClick={() => onRight(rcn)} disabled={isMatched}
                 className={cn(
                   "w-full rounded-xl border-2 p-3 text-left text-sm font-bold transition",
                   isMatched ? "border-emerald-400 bg-emerald-50 text-emerald-700 opacity-60" :
-                  wrong === cn ? "border-rose-400 bg-rose-50 animate-pulse" :
+                  wrong === rcn ? "border-rose-400 bg-rose-50 animate-pulse" :
                   "border-border bg-background hover:border-amber-300"
                 )}>
-                {cn}
+                {rcn}
               </button>
             );
           })}

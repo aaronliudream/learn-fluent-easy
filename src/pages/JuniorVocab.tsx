@@ -278,6 +278,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
     speak(cur.word);
     if (correct) awardCoins(2, "junior_vocab_correct").catch(() => {});
+    else { import("@/lib/coins").then(m => m.notifyWrong()); }
     await Promise.all([
       bumpVocabMastery({ vocabId: cur.id, isCorrect: correct, kind: "en2cn" }).catch(() => {}),
       recordAttempt({

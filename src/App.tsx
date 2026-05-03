@@ -65,6 +65,7 @@ const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 const Social = lazy(() => import("./pages/Social.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
+import { FloatingPet } from "@/components/pet/FloatingPet";
 
 const queryClient = new QueryClient();
 
@@ -74,6 +75,28 @@ const StopAudioOnRouteChange = () => {
     stopSpeaking();
   }, [location.pathname]);
   return null;
+};
+
+// 仅在学习/答题相关路由显示浮动宠物，避免干扰首页/账号等页面
+const FloatingPetGate = () => {
+  const { pathname } = useLocation();
+  const show =
+    pathname.startsWith("/primary/games") ||
+    pathname.startsWith("/primary/lesson") ||
+    pathname.startsWith("/primary/vocab") ||
+    pathname.startsWith("/primary/letters") ||
+    pathname.startsWith("/junior/vocab") ||
+    pathname.startsWith("/gaokao/grammar") ||
+    pathname.startsWith("/gaokao/reading") ||
+    pathname.startsWith("/gaokao/vocab") ||
+    pathname.startsWith("/gaokao/cloze") ||
+    pathname.startsWith("/lesson") ||
+    pathname.startsWith("/level/") ||
+    pathname.startsWith("/scenes/") ||
+    pathname.startsWith("/workplace/") ||
+    pathname.startsWith("/review");
+  if (!show) return null;
+  return <FloatingPet />;
 };
 
 // Branded skeleton shown while a lazy route chunk is loading
@@ -96,6 +119,7 @@ const App = () => (
         <StopAudioOnRouteChange />
         <LanguagePickerModal />
         <GaokaoBreakReminder />
+        <FloatingPetGate />
         <div className="pb-tabbar lg:pb-0">
         <Suspense fallback={<RouteFallback />}>
         <Routes>

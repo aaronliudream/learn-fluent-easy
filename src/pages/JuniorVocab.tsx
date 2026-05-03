@@ -38,16 +38,25 @@ export default function JuniorVocab() {
 
   useEffect(() => {
     setLoading(true);
-    supabase
-      .from("gaokao_vocab")
-      .select("id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank")
-      .eq("stage", "junior")
-      .order("freq_rank", { ascending: true, nullsFirst: false })
-      .limit(500)
-      .then(({ data }) => {
-        setWords((data ?? []) as Vocab[]);
-        setLoading(false);
-      });
+    const gradeNum = Number(grade);
+    // Grade 7 (初一) 使用专门导入的 junior_vocab 词库；其他年级暂时回退到 gaokao_vocab(stage=junior)
+    const loader = gradeNum === 7
+      ? supabase
+          .from("junior_vocab")
+          .select("id,word,phonetic,pos,meaning_cn,meaning_en:meaning_cn,example_en,example_cn,star_level,theme,freq_rank")
+          .eq("grade", 7)
+          .order("freq_rank", { ascending: true, nullsFirst: false })
+          .limit(2000)
+      : supabase
+          .from("gaokao_vocab")
+          .select("id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank")
+          .eq("stage", "junior")
+          .order("freq_rank", { ascending: true, nullsFirst: false })
+          .limit(500);
+    loader.then(({ data }) => {
+      setWords((data ?? []) as Vocab[]);
+      setLoading(false);
+    });
   }, [grade]);
 
   const exit = () => {

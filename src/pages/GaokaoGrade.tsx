@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Sparkles, BookOpen, FileText, PenLine, Headphones, Edit3, Activity } from "lucide-react";
+import { ArrowLeft, Sparkles, BookOpen, FileText, PenLine, Headphones, Edit3, Activity, Lock } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
 
 const GRADE_META: Record<string, { title: string; emoji: string; gradient: string; tag: string; focus: string }> = {
@@ -15,7 +15,7 @@ export default function GaokaoGrade() {
   const meta = GRADE_META[g] ?? GRADE_META["1"];
 
   // 各年级模块入口 — 共享同一题库，前缀页面通过 URL 暗示进度路径
-  const SECTIONS = [
+  const SECTIONS: { to: string; icon: any; title: string; desc: string; gradient: string; soon?: boolean }[] = [
     {
       to: `/gaokao/vocab?grade=${g}`,
       icon: Sparkles,
@@ -45,18 +45,20 @@ export default function GaokaoGrade() {
       gradient: "from-violet-600 to-purple-700",
     },
     {
-      to: `/gaokao/writing?grade=${g}`,
+      to: `#`,
       icon: Edit3,
       title: "写作训练",
       desc: g === "3" ? "应用文 + 读后续写 · AI 批改" : g === "2" ? "段落写作 · 高分句型积累" : "句子翻译 · 短段写作起步",
       gradient: "from-amber-500 to-rose-500",
+      soon: true,
     },
     {
-      to: `/gaokao/listening?grade=${g}`,
+      to: `#`,
       icon: Headphones,
       title: "听力训练",
       desc: g === "3" ? "高考听力套题 · 逐题精听" : g === "2" ? "对话/独白 长篇训练" : "短对话 听力起步",
       gradient: "from-sky-500 to-blue-500",
+      soon: true,
     },
     {
       to: `/gaokao/diagnostic?grade=${g}`,
@@ -98,22 +100,22 @@ export default function GaokaoGrade() {
       <section className="grid gap-3">
         {SECTIONS.map((s) => {
           const Icon = s.icon;
-          return (
-            <Link
-              key={s.title}
-              to={s.to}
-              className={`relative flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile transition hover:-translate-y-0.5`}
-            >
+          const Card = (
+            <div className={`relative flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile ${s.soon ? "opacity-70" : "transition hover:-translate-y-0.5"}`}>
               <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
               <div className="relative grid size-12 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
                 <Icon className="size-6" />
               </div>
               <div className="relative flex-1 min-w-0">
                 <div className="text-base font-extrabold leading-tight">{s.title}</div>
-                <div className="mt-0.5 text-xs opacity-90">{s.desc}</div>
+                <div className="mt-0.5 text-xs opacity-90">{s.soon ? "敬请期待" : s.desc}</div>
               </div>
-            </Link>
+              {s.soon && <Lock className="size-4 opacity-80" />}
+            </div>
           );
+          return s.soon
+            ? <div key={s.title} className="cursor-not-allowed">{Card}</div>
+            : <Link key={s.title} to={s.to}>{Card}</Link>;
         })}
       </section>
 

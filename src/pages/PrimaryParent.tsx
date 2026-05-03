@@ -308,7 +308,7 @@ const WEAK_SKILLS: { key: WeakSkillKey; label: string; icon: any; color: string;
     tip: "看汉语 → 听发音 → 默写。注意首字母大小写、双写字母。",
     route: (g) => `/primary/games/${g}/spell` },
   { key: "match",  label: "配对", icon: Brain, color: "from-violet-400 to-fuchsia-500", cKey: "match_correct", wKey: "match_wrong",
-    tip: "翻牌时大声说出单词与中文，建立"看-听-说"三联结。",
+    tip: "翻牌时大声说出单词与中文，建立『看-听-说』三联结。",
     route: (g) => `/primary/games/${g}/match` },
   { key: "quiz",   label: "选义", icon: Target, color: "from-rose-400 to-pink-500", cKey: "quiz_correct", wKey: "quiz_wrong",
     tip: "用单词造一个生活短句，把意思和场景挂钩。",

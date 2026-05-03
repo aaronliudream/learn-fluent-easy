@@ -1,4 +1,4 @@
-import { ReactNode, MouseEvent } from "react";
+import { forwardRef, ReactNode, MouseEvent } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 
 type Props = {
@@ -14,14 +14,16 @@ type Props = {
  * Smart back link: goes to the previous page in history.
  * Falls back to `to` if there is no in-app history (e.g. opened directly).
  */
-export default function BackLink({ to, className, children, onClick, ariaLabel }: Props) {
+const BackLink = forwardRef<HTMLAnchorElement, Props>(function BackLink(
+  { to, className, children, onClick, ariaLabel },
+  ref,
+) {
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     onClick?.(e);
     if (e.defaultPrevented) return;
-    // Detect in-app history. `idx` is set by react-router for entries it created.
     const state = (location.state ?? null) as { idx?: number } | null;
     const hasInAppHistory =
       (state && typeof state.idx === "number" && state.idx > 0) ||
@@ -30,12 +32,13 @@ export default function BackLink({ to, className, children, onClick, ariaLabel }
       e.preventDefault();
       navigate(-1);
     }
-    // else: let the <Link> navigate to the fallback `to`
   };
 
   return (
-    <Link to={to} className={className} onClick={handleClick} aria-label={ariaLabel}>
+    <Link ref={ref} to={to} className={className} onClick={handleClick} aria-label={ariaLabel}>
       {children}
     </Link>
   );
-}
+});
+
+export default BackLink;

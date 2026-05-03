@@ -108,6 +108,12 @@ const MistakesPage = () => {
   const markResolved = async (m: Mistake) => {
     setItems((prev) => prev.filter((x) => x.id !== m.id));
     await supabase.from("user_mistakes").update({ is_resolved: true }).eq("id", m.id);
+    // 攻克错题最有价值——给 3 星币 + 宠物开心反应
+    try {
+      const c = await import("@/lib/coins");
+      await c.awardCoins(3, "mistake_resolved");
+      c.petReact("happy", { coins: 3 });
+    } catch { /* noop */ }
     toast.success("已掌握，从复习队列移除");
   };
 

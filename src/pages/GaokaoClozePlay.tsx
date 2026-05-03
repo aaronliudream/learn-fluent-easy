@@ -4,6 +4,7 @@ import { ArrowLeft, Clock, CheckCircle2, XCircle, Send, RotateCcw, BookMarked, C
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { awardCoins, awardForBlock, petReact } from "@/lib/coins";
 
 type Passage = {
   id: string; passage_no: number; title: string; topic: string | null; topic_group: string | null;
@@ -105,6 +106,14 @@ export default function GaokaoClozePlay() {
     const r = (data as any[])[0];
     setResult(r);
     setSubmitted(true);
+    // 宠物挂钩：每对一空 1 星币 + 满分 +20 + 5题块 +5
+    if (r?.correct_count > 0) {
+      const total = r.correct_count + (r.correct_count === r.total_blanks ? 20 : 0);
+      await awardCoins(total, "gaokao_cloze_submit");
+      const blocks = Math.floor(r.correct_count / 5);
+      for (let i = 0; i < blocks; i++) await awardForBlock("gaokao_cloze");
+      petReact("happy", { coins: total });
+    }
     if (r.correct_count === r.total_blanks) {
       toast.success("满分！🎉");
     } else {

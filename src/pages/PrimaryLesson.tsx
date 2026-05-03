@@ -61,6 +61,13 @@ export default function PrimaryLesson() {
       quiz_correct: testScore?.c ?? 0, quiz_total: testScore?.t ?? 0,
       study_minutes: Math.max(1, Math.round((Date.now() - t0) / 60000)),
     });
+    // 课程完成宠物挂钩：星级 → 星币 (1★=5, 2★=10, 3★=20)
+    try {
+      const c = await import("@/lib/coins");
+      const reward = stars === 3 ? 20 : stars === 2 ? 10 : 5;
+      await c.awardCoins(reward, "primary_lesson_complete");
+      c.petReact("happy", { coins: reward });
+    } catch { /* noop */ }
   }
 
   if (loading) return <main className="grid min-h-screen place-items-center"><Loader2 className="size-6 animate-spin text-muted-foreground" /></main>;

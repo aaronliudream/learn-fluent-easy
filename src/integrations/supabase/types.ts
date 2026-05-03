@@ -47,6 +47,54 @@ export type Database = {
         }
         Relationships: []
       }
+      audio_clips: {
+        Row: {
+          audio_url: string | null
+          created_at: string
+          difficulty: number
+          duration_ms: number | null
+          grade_band: string
+          id: string
+          ipa: string | null
+          is_dialogue: boolean
+          source: string | null
+          speaker: string | null
+          tags: string[] | null
+          text: string
+          translation_cn: string | null
+        }
+        Insert: {
+          audio_url?: string | null
+          created_at?: string
+          difficulty?: number
+          duration_ms?: number | null
+          grade_band?: string
+          id?: string
+          ipa?: string | null
+          is_dialogue?: boolean
+          source?: string | null
+          speaker?: string | null
+          tags?: string[] | null
+          text: string
+          translation_cn?: string | null
+        }
+        Update: {
+          audio_url?: string | null
+          created_at?: string
+          difficulty?: number
+          duration_ms?: number | null
+          grade_band?: string
+          id?: string
+          ipa?: string | null
+          is_dialogue?: boolean
+          source?: string | null
+          speaker?: string | null
+          tags?: string[] | null
+          text?: string
+          translation_cn?: string | null
+        }
+        Relationships: []
+      }
       coop_session_members: {
         Row: {
           contributed: number
@@ -1866,6 +1914,136 @@ export type Database = {
         }
         Relationships: []
       }
+      junior_grammar_categories: {
+        Row: {
+          code: string
+          created_at: string
+          emoji: string | null
+          id: string
+          name_cn: string
+          sort_order: number
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          emoji?: string | null
+          id?: string
+          name_cn: string
+          sort_order?: number
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          emoji?: string | null
+          id?: string
+          name_cn?: string
+          sort_order?: number
+        }
+        Relationships: []
+      }
+      junior_grammar_points: {
+        Row: {
+          category_id: string
+          cefr: string | null
+          code: string
+          created_at: string
+          examples: Json
+          explanation_md: string
+          grade: number
+          id: string
+          sort_order: number
+          summary: string | null
+          title: string
+        }
+        Insert: {
+          category_id: string
+          cefr?: string | null
+          code: string
+          created_at?: string
+          examples?: Json
+          explanation_md?: string
+          grade?: number
+          id?: string
+          sort_order?: number
+          summary?: string | null
+          title: string
+        }
+        Update: {
+          category_id?: string
+          cefr?: string | null
+          code?: string
+          created_at?: string
+          examples?: Json
+          explanation_md?: string
+          grade?: number
+          id?: string
+          sort_order?: number
+          summary?: string | null
+          title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "junior_grammar_points_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "junior_grammar_categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      junior_grammar_questions: {
+        Row: {
+          correct_answer: string
+          created_at: string
+          difficulty: number
+          explanation: string | null
+          id: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          point_id: string
+          sort_order: number
+          stem: string
+        }
+        Insert: {
+          correct_answer: string
+          created_at?: string
+          difficulty?: number
+          explanation?: string | null
+          id?: string
+          option_a: string
+          option_b: string
+          option_c: string
+          option_d: string
+          point_id: string
+          sort_order?: number
+          stem: string
+        }
+        Update: {
+          correct_answer?: string
+          created_at?: string
+          difficulty?: number
+          explanation?: string | null
+          id?: string
+          option_a?: string
+          option_b?: string
+          option_c?: string
+          option_d?: string
+          point_id?: string
+          sort_order?: number
+          stem?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "junior_grammar_questions_point_id_fkey"
+            columns: ["point_id"]
+            isOneToOne: false
+            referencedRelation: "junior_grammar_points"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       junior_reading: {
         Row: {
           body: string
@@ -1904,6 +2082,47 @@ export type Database = {
           word_count?: number | null
         }
         Relationships: []
+      }
+      junior_reading_attempts: {
+        Row: {
+          created_at: string
+          duration_ms: number | null
+          id: string
+          is_correct: boolean
+          question_idx: number
+          reading_id: string
+          user_answer: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          duration_ms?: number | null
+          id?: string
+          is_correct: boolean
+          question_idx: number
+          reading_id: string
+          user_answer?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          duration_ms?: number | null
+          id?: string
+          is_correct?: boolean
+          question_idx?: number
+          reading_id?: string
+          user_answer?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "junior_reading_attempts_reading_id_fkey"
+            columns: ["reading_id"]
+            isOneToOne: false
+            referencedRelation: "junior_reading"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       junior_sentences: {
         Row: {

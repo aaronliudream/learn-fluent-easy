@@ -50,10 +50,10 @@ export default function PrimaryGames() {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
       <Link
-        to={game ? `/primary/games/${grade}` : "/primary"}
+        to={game ? `/primary/games/${isAll ? "all" : grade}` : (isAll ? "/primary" : `/primary/grade/${grade}`)}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> {game ? "返回游戏中心" : "返回小学专区"}
+        <ArrowLeft className="size-4" /> {game ? "返回游戏中心" : (isAll ? "返回小学专区" : `返回 ${["一","二","三","四","五","六"][grade-1] ?? grade}年级`)}
       </Link>
 
       <div className="mb-4">

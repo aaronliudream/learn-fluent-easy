@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Sparkles, BookOpen, FileText, PenLine, Headphones, Activity, AlertTriangle, Trophy } from "lucide-react";
+import { ArrowLeft, Sparkles, BookOpen, FileText, PenLine, Activity, AlertTriangle, Trophy } from "lucide-react";
 
 const COMBO = [
   {

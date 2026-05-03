@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHeart, Star, Plus } from "lucide-react";
+import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHeart, Star, Shirt, Smile } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
@@ -8,11 +8,14 @@ import { celebratePet } from "@/components/pet/EvolutionCelebration";
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };
 type Dest = { id:string; name_cn:string; emoji:string; cost_coins:number; hunger_cost:number; exp_reward:number; unlock_level:number; description_cn:string };
-type Pet = { id:string; species_id:string; nickname:string; stage:number; level:number; exp:number; hunger:number; mood:number; is_active:boolean };
+type Pet = { id:string; species_id:string; nickname:string; stage:number; level:number; exp:number; hunger:number; mood:number; is_active:boolean; equipped_skin_id?:string|null };
+type Skin = { id:string; code:string; name_cn:string; description_cn:string; css_filter:string; rarity:number; price:number; unlock_level:number };
+type OwnedSkin = { skin_id:string };
+type Sticker = { id:string; code:string; emoji:string; caption_cn:string; unlock_level:number };
 type Inv = { food_id:string; qty:number };
 type Diary = { id:string; emoji:string|null; message:string; event_type:string; created_at:string };
 
-type Tab = "home" | "shop" | "outing" | "adopt" | "diary";
+type Tab = "home" | "shop" | "outing" | "adopt" | "skin" | "diary";
 
 export default function Pets() {
   const [authed, setAuthed] = useState<boolean|null>(null);
@@ -25,6 +28,9 @@ export default function Pets() {
   const [dests, setDests] = useState<Dest[]>([]);
   const [inv, setInv] = useState<Inv[]>([]);
   const [diary, setDiary] = useState<Diary[]>([]);
+  const [skins, setSkins] = useState<Skin[]>([]);
+  const [owned, setOwned] = useState<OwnedSkin[]>([]);
+  const [stickers, setStickers] = useState<Sticker[]>([]);
   const [toast, setToast] = useState<string>("");
 
   const reload = async () => {
@@ -32,7 +38,7 @@ export default function Pets() {
     const uid = u?.user?.id;
     setAuthed(!!uid);
     if (!uid) { setLoading(false); return; }
-    const [c, p, sp, fd, ds, iv, dy] = await Promise.all([
+    const [c, p, sp, fd, ds, iv, dy, sk, os, st] = await Promise.all([
       supabase.from("user_coins").select("balance").eq("user_id", uid).maybeSingle(),
       supabase.from("user_pets").select("*").eq("user_id", uid).order("created_at"),
       supabase.from("pet_species").select("*").order("sort_order"),
@@ -40,6 +46,9 @@ export default function Pets() {
       supabase.from("pet_destinations").select("*").order("sort_order"),
       supabase.from("pet_inventory").select("food_id,qty").eq("user_id", uid),
       supabase.from("pet_diary").select("id,emoji,message,event_type,created_at").eq("user_id", uid).order("created_at",{ascending:false}).limit(30),
+      (supabase as any).from("pet_skins").select("*").order("sort_order"),
+      (supabase as any).from("user_pet_skins").select("skin_id").eq("user_id", uid),
+      (supabase as any).from("pet_stickers").select("*").order("sort_order"),
     ]);
     setBalance(c.data?.balance ?? 0);
     setPets((p.data ?? []) as Pet[]);
@@ -48,6 +57,9 @@ export default function Pets() {
     setDests((ds.data ?? []) as Dest[]);
     setInv((iv.data ?? []) as Inv[]);
     setDiary((dy.data ?? []) as Diary[]);
+    setSkins((sk.data ?? []) as Skin[]);
+    setOwned((os.data ?? []) as OwnedSkin[]);
+    setStickers((st.data ?? []) as Sticker[]);
     setLoading(false);
   };
   useEffect(() => { reload(); }, []);
@@ -88,12 +100,13 @@ export default function Pets() {
       ) : (
         <>
           {/* Tabs */}
-          <div className="mb-4 grid grid-cols-5 gap-1 rounded-2xl bg-secondary p-1 text-[11px] font-bold">
+          <div className="mb-4 grid grid-cols-6 gap-1 rounded-2xl bg-secondary p-1 text-[11px] font-bold">
             {([
               ["home", "🏠 我家", Heart],
               ["shop", "🛒 商店", ShoppingBag],
               ["outing", "🗺️ 出游", MapPin],
               ["adopt", "🥚 领养", Sparkles],
+              ["skin", "👕 皮肤", Shirt],
               ["diary", "📖 日记", BookHeart],
             ] as const).map(([k, lbl]) => (
               <button
@@ -103,10 +116,11 @@ export default function Pets() {
             ))}
           </div>
 
-          {tab === "home" && <HomeTab pets={pets} active={active} species={speciesMap} inv={inv} foods={foods} onAfter={reload} flash={flash} />}
+          {tab === "home" && <HomeTab pets={pets} active={active} species={speciesMap} inv={inv} foods={foods} skins={skins} stickers={stickers} onAfter={reload} flash={flash} />}
           {tab === "shop" && <ShopTab foods={foods} balance={balance} inv={inv} onAfter={reload} flash={flash} />}
           {tab === "outing" && <OutingTab pets={pets} active={active} dests={dests} balance={balance} species={speciesMap} onAfter={reload} flash={flash} />}
           {tab === "adopt" && <AdoptTab species={species} balance={balance} onAfter={reload} flash={flash} setTab={setTab} />}
+          {tab === "skin" && <SkinTab active={active} species={speciesMap} skins={skins} owned={owned} balance={balance} onAfter={reload} flash={flash} />}
           {tab === "diary" && <DiaryTab diary={diary} />}
         </>
       )}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHeart, Star, Plus } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
+import { celebratePet } from "@/components/pet/EvolutionCelebration";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };
@@ -151,6 +152,26 @@ function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
     if (error) { flash("❌ " + error.message); return; }
     const r = Array.isArray(data) ? data[0] : data;
     flash(r?.message || "🍽️ 喂食成功！");
+    if (r?.evolved) {
+      const newStage = r.new_stage ?? active.stage + 1;
+      const newEmoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][newStage] ?? "✨";
+      const prevEmoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "🥚";
+      celebratePet({
+        kind: "evolve",
+        emoji: newEmoji,
+        prevEmoji,
+        title: r.message || "进化啦！",
+        subtitle: `${active.nickname} · ${STAGE_LABEL[newStage]}形态`,
+      });
+    } else if (r?.leveled) {
+      const emoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "⭐";
+      celebratePet({
+        kind: "levelup",
+        emoji,
+        title: `Lv.${r.new_level} 达成！`,
+        subtitle: active.nickname,
+      });
+    }
     onAfter();
   };
 

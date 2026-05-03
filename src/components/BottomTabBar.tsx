@@ -55,14 +55,14 @@ export const BottomTabBar = () => {
             <li key={tab.to}>
               <NavLink
                 to={tab.to}
-                className={`relative flex h-16 flex-col items-center justify-center gap-0.5 text-[11px] font-semibold transition ${
+                className={`relative flex h-16 flex-col items-center justify-center gap-1 text-center text-[13px] font-semibold transition ${
                   active ? "text-primary" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 <span className="relative">
-                  <Icon className={`size-5 transition ${active ? "scale-110" : ""}`} />
+                  <Icon className={`size-6 transition ${active ? "scale-110" : ""}`} />
                 </span>
-                <span>{t(tab.label)}</span>
+                <span className="w-full text-center leading-tight">{t(tab.label)}</span>
                 {active && (
                   <span aria-hidden className="absolute top-0 h-0.5 w-8 rounded-full bg-primary" />
                 )}

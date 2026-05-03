@@ -140,8 +140,9 @@ function petEmoji(p: Pet, sp?: Species) {
 }
 const STAGE_LABEL = ["蛋", "幼年", "成年", "传说"];
 
-function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
+function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, flash }: any) {
   const [feedingFood, setFeedingFood] = useState<string | null>(null);
+  const [pickedSticker, setPickedSticker] = useState<string | null>(null);
   if (!pets.length) {
     return (
       <div className="rounded-3xl border-2 border-dashed border-purple-300 bg-purple-50/50 p-10 text-center dark:bg-purple-950/20">
@@ -154,6 +155,10 @@ function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
   const sp: Species | undefined = species[active.species_id];
   const expToNext = active.level * 100;
   const expPct = Math.min(100, Math.round((active.exp / expToNext) * 100));
+  const equippedSkin: Skin | undefined = (skins as Skin[]).find(s => s.id === active.equipped_skin_id);
+  const skinFilter = equippedSkin?.css_filter || "";
+  const unlockedStickers = (stickers as Sticker[]).filter(s => s.unlock_level <= active.level);
+  const lockedStickers = (stickers as Sticker[]).filter(s => s.unlock_level > active.level).slice(0, 4);
 
   const setActive = async (id: string) => {
     await supabase.rpc("set_active_pet", { _pet_id: id });
@@ -194,8 +199,16 @@ function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
       {/* Active pet */}
       <div className="rounded-3xl bg-gradient-to-br from-purple-100 via-pink-50 to-amber-50 p-6 shadow-tile dark:from-purple-950/40 dark:via-pink-950/30 dark:to-amber-950/30">
         <div className="flex flex-col items-center text-center">
-          <div className="text-7xl drop-shadow-md md:text-8xl animate-bounce-slow">{petEmoji(active, sp)}</div>
-          <div className="mt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">{sp?.name_cn} · {STAGE_LABEL[active.stage]}</div>
+          <div className="relative">
+            <div className="text-7xl drop-shadow-md md:text-8xl animate-bounce-slow" style={{ filter: skinFilter }}>{petEmoji(active, sp)}</div>
+            {pickedSticker && (
+              <div className="absolute -right-3 -top-2 text-3xl animate-bounce">{pickedSticker}</div>
+            )}
+          </div>
+          <div className="mt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            {sp?.name_cn} · {STAGE_LABEL[active.stage]}
+            {equippedSkin && equippedSkin.code !== "classic" && <span className="ml-1.5 text-purple-500">· {equippedSkin.name_cn}</span>}
+          </div>
           <h2 className="mt-0.5 text-xl font-extrabold">{active.nickname}</h2>
           <div className="mt-1 flex items-center gap-2 text-xs">
             <span className="rounded-full bg-purple-500/10 px-2 py-0.5 font-bold text-purple-600">Lv.{active.level}</span>
@@ -206,6 +219,29 @@ function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
           <Bar label="经验" value={expPct} hint={`${active.exp} / ${expToNext}`} color="from-purple-400 to-pink-500" />
           <Bar label="饱食" value={active.hunger} hint={`${active.hunger}/100`} color="from-amber-400 to-orange-500" />
           <Bar label="心情" value={active.mood} hint={`${active.mood}/100`} color="from-rose-400 to-pink-500" />
+        </div>
+      </div>
+
+      {/* Sticker board */}
+      <div className="rounded-2xl border-2 border-border bg-card p-3">
+        <div className="mb-2 flex items-center justify-between">
+          <h3 className="text-sm font-extrabold">😊 表情贴纸</h3>
+          <span className="text-[10px] text-muted-foreground">已解锁 {unlockedStickers.length}/{(stickers as Sticker[]).length}</span>
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          {unlockedStickers.map((s: Sticker) => (
+            <button key={s.id} onClick={()=>{ setPickedSticker(s.emoji); setTimeout(()=>setPickedSticker(null), 1800); }}
+              title={s.caption_cn}
+              className="rounded-xl border border-border bg-background p-1.5 text-xl transition hover:-translate-y-0.5 hover:border-purple-400">
+              {s.emoji}
+            </button>
+          ))}
+          {lockedStickers.map((s: Sticker) => (
+            <div key={s.id} title={`Lv.${s.unlock_level} 解锁`}
+              className="rounded-xl border border-dashed border-border bg-muted/40 p-1.5 text-xl opacity-40 grayscale">
+              {s.emoji}
+            </div>
+          ))}
         </div>
       </div>
 

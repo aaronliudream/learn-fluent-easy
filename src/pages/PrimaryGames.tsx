@@ -27,7 +27,8 @@ type GameKey = typeof GAMES[number]["key"];
 export default function PrimaryGames() {
   const { grade: gradeParam, type: typeParam } = useParams<{ grade?: string; type?: string }>();
   const nav = useNavigate();
-  const grade = Number(gradeParam ?? localStorage.getItem("primary:lastGrade") ?? "3");
+  const isAll = gradeParam === "all";
+  const grade = isAll ? 0 : Number(gradeParam ?? localStorage.getItem("primary:lastGrade") ?? "3");
   const game = (typeParam as GameKey) ?? null;
 
   const [words, setWords] = useState<Word[]>([]);
@@ -35,17 +36,15 @@ export default function PrimaryGames() {
 
   useEffect(() => {
     setLoading(true);
-    supabase
-      .from("primary_vocab")
-      .select("id,word,meaning_cn,example_en,example_cn,theme,grade")
-      .eq("grade", grade)
-      .then(({ data }) => {
-        setWords((data ?? []) as Word[]);
-        setLoading(false);
-      });
-  }, [grade]);
+    let q = supabase.from("primary_vocab").select("id,word,meaning_cn,example_en,example_cn,theme,grade");
+    if (!isAll) q = q.eq("grade", grade);
+    q.then(({ data }) => {
+      setWords((data ?? []) as Word[]);
+      setLoading(false);
+    });
+  }, [grade, isAll]);
 
-  const gradeName = `${["一","二","三","四","五","六"][grade-1] ?? grade} 年级`;
+  const gradeName = isAll ? "全小学 · 1008 词大测验" : `${["一","二","三","四","五","六"][grade-1] ?? grade} 年级`;
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
@@ -77,12 +76,21 @@ export default function PrimaryGames() {
             }}
             className={cn(
               "rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
-              g === grade ? "border-amber-400 bg-amber-400 text-white" : "border-border bg-card hover:border-amber-300"
+              g === grade && !isAll ? "border-amber-400 bg-amber-400 text-white" : "border-border bg-card hover:border-amber-300"
             )}
           >
             G{g}
           </button>
         ))}
+        <button
+          onClick={() => nav(game ? `/primary/games/all/${game}` : `/primary/games/all`)}
+          className={cn(
+            "rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
+            isAll ? "border-fuchsia-500 bg-fuchsia-500 text-white" : "border-border bg-card hover:border-fuchsia-300"
+          )}
+        >
+          🏆 全小学
+        </button>
       </div>
 
       {loading ? (
@@ -90,7 +98,7 @@ export default function PrimaryGames() {
           <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
         </div>
       ) : !game ? (
-        <GameMenu grade={grade} count={words.length} />
+        <GameMenu grade={grade} count={words.length} isAll={isAll} />
       ) : words.length < 4 ? (
         <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">
           该年级单词太少，无法开始游戏
@@ -108,13 +116,14 @@ export default function PrimaryGames() {
   );
 }
 
-function GameMenu({ grade, count }: { grade: number; count: number }) {
+function GameMenu({ grade, count, isAll }: { grade: number; count: number; isAll?: boolean }) {
+  const base = isAll ? "all" : grade;
   return (
     <section className="grid gap-3 sm:grid-cols-2">
       {GAMES.map(g => (
         <Link
           key={g.key}
-          to={`/primary/games/${grade}/${g.key}`}
+          to={`/primary/games/${base}/${g.key}`}
           className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${g.gradient} p-5 text-white shadow-tile transition hover:-translate-y-1`}
         >
           <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/20 blur-2xl" />
@@ -147,6 +156,53 @@ async function saveScore(gameType: string, grade: number, score: number, accurac
   await supabase.from("primary_game_scores").insert({
     user_id: uid, game_type: gameType, grade, score, accuracy, duration_ms: durationMs
   });
+}
+
+/** Update per-word mastery matrix (FSRS-lite). gameType ∈ quiz|listen|spell|match */
+async function recordWordResult(word: Word, gameType: "quiz"|"listen"|"spell"|"match", correct: boolean) {
+  const { data: u } = await supabase.auth.getUser();
+  const uid = u?.user?.id;
+  if (!uid) return;
+  // Try fetch existing
+  const { data: row } = await supabase
+    .from("primary_word_mastery")
+    .select("*").eq("user_id", uid).eq("word_id", word.id).maybeSingle();
+  const c = correct ? 1 : 0, w = correct ? 0 : 1;
+  const next = {
+    user_id: uid,
+    word_id: word.id,
+    grade: word.grade,
+    quiz_correct:   (row?.quiz_correct   ?? 0) + (gameType==="quiz"   ? c : 0),
+    quiz_wrong:     (row?.quiz_wrong     ?? 0) + (gameType==="quiz"   ? w : 0),
+    listen_correct: (row?.listen_correct ?? 0) + (gameType==="listen" ? c : 0),
+    listen_wrong:   (row?.listen_wrong   ?? 0) + (gameType==="listen" ? w : 0),
+    spell_correct:  (row?.spell_correct  ?? 0) + (gameType==="spell"  ? c : 0),
+    spell_wrong:    (row?.spell_wrong    ?? 0) + (gameType==="spell"  ? w : 0),
+    match_correct:  (row?.match_correct  ?? 0) + (gameType==="match"  ? c : 0),
+    match_wrong:    (row?.match_wrong    ?? 0) + (gameType==="match"  ? w : 0),
+    last_seen_at: new Date().toISOString(),
+  } as any;
+  // mastery: 0 new, 1 learning (≥1 correct), 2 familiar (≥2 different skills correct), 3 mastered (3+ skills correct & accuracy ≥ 80%)
+  const skills = [
+    [next.quiz_correct, next.quiz_wrong],
+    [next.listen_correct, next.listen_wrong],
+    [next.spell_correct, next.spell_wrong],
+    [next.match_correct, next.match_wrong],
+  ] as const;
+  const totalCorrect = skills.reduce((s,[a])=>s+a,0);
+  const totalAttempts = skills.reduce((s,[a,b])=>s+a+b,0);
+  const skillsWithCorrect = skills.filter(([a])=>a>0).length;
+  const acc = totalAttempts ? totalCorrect/totalAttempts : 0;
+  let level = 0;
+  if (totalCorrect >= 1) level = 1;
+  if (skillsWithCorrect >= 2 && acc >= 0.7) level = 2;
+  if (skillsWithCorrect >= 3 && acc >= 0.85) level = 3;
+  next.mastery_level = level;
+  if (row) {
+    await supabase.from("primary_word_mastery").update(next).eq("user_id", uid).eq("word_id", word.id);
+  } else {
+    await supabase.from("primary_word_mastery").insert(next);
+  }
 }
 
 function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
@@ -197,6 +253,7 @@ function QuizGame({ words, grade }: { words: Word[]; grade: number }) {
     const ok = m === cur.meaning_cn;
     setScore(s => ({ c: s.c + (ok?1:0), t: s.t+1 }));
     speak(cur.word);
+    recordWordResult(cur, "quiz", ok);
     setTimeout(() => { setPicked(null); setIdx(i => i+1); }, 850);
   };
 
@@ -260,6 +317,7 @@ function ListenGame({ words, grade }: { words: Word[]; grade: number }) {
     setPicked(w);
     const ok = w === cur.word;
     setScore(s => ({ c: s.c + (ok?1:0), t: s.t+1 }));
+    recordWordResult(cur, "listen", ok);
     setTimeout(() => { setPicked(null); setIdx(i => i+1); }, 800);
   };
 
@@ -277,6 +335,7 @@ function ListenGame({ words, grade }: { words: Word[]; grade: number }) {
           const right = w === cur.word;
           const showR = picked && right;
           const showW = picked === w && !right;
+          const meaning = words.find(x => x.word === w)?.meaning_cn ?? "";
           return (
             <button key={w} onClick={() => pick(w)} disabled={!!picked} className={cn(
               "rounded-2xl border-2 p-4 text-lg font-extrabold transition",
@@ -284,7 +343,10 @@ function ListenGame({ words, grade }: { words: Word[]; grade: number }) {
               showW && "border-rose-500 bg-rose-50 text-rose-700",
               !picked && "border-border bg-card hover:border-sky-300",
               picked && !showR && !showW && "opacity-50"
-            )}>{w}</button>
+            )}>
+              <div>{w}</div>
+              <div className="mt-1 text-xs font-medium text-muted-foreground">{meaning}</div>
+            </button>
           );
         })}
       </div>
@@ -330,11 +392,15 @@ function MatchGame({ words, grade }: { words: Word[]; grade: number }) {
           setCards(cs => cs.map((c,idx) => idx===a||idx===b ? {...c, matched:true} : c));
           setOpen([]);
           if (next[a].isWord) speak(next[a].text); else speak(next[b].text);
+          const w = words.find(x => x.id === next[a].pairId);
+          if (w) recordWordResult(w, "match", true);
         }, 400);
       } else {
         setTimeout(() => {
           setCards(cs => cs.map((c,idx) => idx===a||idx===b ? {...c, flipped:false} : c));
           setOpen([]);
+          const w = words.find(x => x.id === next[a].pairId);
+          if (w) recordWordResult(w, "match", false);
         }, 900);
       }
     } else if (newOpen.length === 1 && cards[i].isWord) {
@@ -395,9 +461,11 @@ function SpellGame({ words, grade }: { words: Word[]; grade: number }) {
     onRetry={() => { setIdx(0); setScore({c:0,t:0}); }} />;
 
   const submit = () => {
-    const ok = blanks.every((bi, k) => (vals[k]||"").toLowerCase() === cur.word[bi].toLowerCase());
+    // Case-sensitive: kids learn proper capitalization (Apple, London, I)
+    const ok = blanks.every((bi, k) => (vals[k]||"") === cur.word[bi]);
     setScore(s => ({ c: s.c + (ok?1:0), t: s.t+1 }));
     speak(cur.word);
+    recordWordResult(cur, "spell", ok);
     setTimeout(() => setIdx(i => i+1), 900);
   };
 
@@ -420,7 +488,7 @@ function SpellGame({ words, grade }: { words: Word[]; grade: number }) {
                 value={vals[k] ?? ""}
                 onChange={e => setVals(v => { const n = v.slice(); n[k] = e.target.value.slice(-1); return n; })}
                 maxLength={1}
-                className="size-11 rounded-lg border-2 border-amber-400 bg-white text-center text-2xl font-black uppercase text-amber-600 outline-none focus:border-amber-600"
+                className="size-11 rounded-lg border-2 border-amber-400 bg-white text-center text-2xl font-black text-amber-600 outline-none focus:border-amber-600"
               />
             );
           })}

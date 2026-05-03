@@ -2254,6 +2254,72 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_word_mastery: {
+        Row: {
+          created_at: string
+          due_at: string
+          ease: number
+          grade: number
+          id: string
+          interval_days: number
+          last_seen_at: string | null
+          listen_correct: number
+          listen_wrong: number
+          mastery_level: number
+          match_correct: number
+          match_wrong: number
+          quiz_correct: number
+          quiz_wrong: number
+          spell_correct: number
+          spell_wrong: number
+          updated_at: string
+          user_id: string
+          word_id: string
+        }
+        Insert: {
+          created_at?: string
+          due_at?: string
+          ease?: number
+          grade: number
+          id?: string
+          interval_days?: number
+          last_seen_at?: string | null
+          listen_correct?: number
+          listen_wrong?: number
+          mastery_level?: number
+          match_correct?: number
+          match_wrong?: number
+          quiz_correct?: number
+          quiz_wrong?: number
+          spell_correct?: number
+          spell_wrong?: number
+          updated_at?: string
+          user_id: string
+          word_id: string
+        }
+        Update: {
+          created_at?: string
+          due_at?: string
+          ease?: number
+          grade?: number
+          id?: string
+          interval_days?: number
+          last_seen_at?: string | null
+          listen_correct?: number
+          listen_wrong?: number
+          mastery_level?: number
+          match_correct?: number
+          match_wrong?: number
+          quiz_correct?: number
+          quiz_wrong?: number
+          spell_correct?: number
+          spell_wrong?: number
+          updated_at?: string
+          user_id?: string
+          word_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

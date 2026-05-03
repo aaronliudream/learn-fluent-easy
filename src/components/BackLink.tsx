@@ -1,5 +1,5 @@
 import { ReactNode, MouseEvent } from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 type Props = {
   /** Fallback route if there's no history to go back to */
@@ -15,24 +15,8 @@ type Props = {
  * Falls back to `to` if there is no in-app history (e.g. opened directly).
  */
 function BackLink({ to, className, children, onClick, ariaLabel }: Props) {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
-    onClick?.(e);
-    if (e.defaultPrevented) return;
-    const state = (location.state ?? null) as { idx?: number } | null;
-    const hasInAppHistory =
-      (state && typeof state.idx === "number" && state.idx > 0) ||
-      window.history.length > 1;
-    if (hasInAppHistory) {
-      e.preventDefault();
-      navigate(-1);
-    }
-  };
-
   return (
-    <Link to={to} className={className} onClick={handleClick} aria-label={ariaLabel}>
+    <Link to={to} className={className} onClick={onClick} aria-label={ariaLabel}>
       {children}
     </Link>
   );

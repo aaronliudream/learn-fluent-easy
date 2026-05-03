@@ -153,6 +153,8 @@ type I18nContextValue = {
   /** English translation of an arbitrary source text. Async — returns
    *  empty string for one tick if not yet cached, then re-renders. */
   tDynamicEn: (text: string) => string;
+  /** Chinese version of a static key (for fixed bilingual zh/EN display). */
+  tZh: (key: StringKey, vars?: Record<string, string | number>) => string;
 };
 
 const I18nContext = createContext<I18nContextValue | null>(null);
@@ -415,6 +417,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     return interpolate(tmpl, vars);
   }, []);
 
+  const tZh = useCallback((key: StringKey, vars?: Record<string, string | number>) => {
+    const tmpl = ZH[key] ?? EN[key] ?? key;
+    return interpolate(tmpl, vars);
+  }, []);
+
   const tDynamicEn = useCallback((text: string) => {
     if (!text) return text;
     // Source already English (no CJK) → just return it.
@@ -439,8 +446,8 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   }, [flushDynEnQueue, dynVersion]);
 
   const value = useMemo<I18nContextValue>(() => ({
-    lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn,
-  }), [lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, dynVersion]);
+    lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, tZh,
+  }), [lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, tZh, dynVersion]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

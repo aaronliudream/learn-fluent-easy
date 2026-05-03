@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHeart, Star, Plus } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
+import { celebratePet } from "@/components/pet/EvolutionCelebration";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };
@@ -151,6 +152,26 @@ function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
     if (error) { flash("❌ " + error.message); return; }
     const r = Array.isArray(data) ? data[0] : data;
     flash(r?.message || "🍽️ 喂食成功！");
+    if (r?.evolved) {
+      const newStage = r.new_stage ?? active.stage + 1;
+      const newEmoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][newStage] ?? "✨";
+      const prevEmoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "🥚";
+      celebratePet({
+        kind: "evolve",
+        emoji: newEmoji,
+        prevEmoji,
+        title: r.message || "进化啦！",
+        subtitle: `${active.nickname} · ${STAGE_LABEL[newStage]}形态`,
+      });
+    } else if (r?.leveled) {
+      const emoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "⭐";
+      celebratePet({
+        kind: "levelup",
+        emoji,
+        title: `Lv.${r.new_level} 达成！`,
+        subtitle: active.nickname,
+      });
+    }
     onAfter();
   };
 
@@ -281,6 +302,7 @@ function ShopTab({ foods, balance, inv, onAfter, flash }: any) {
 
 function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: any) {
   const [busy, setBusy] = useState<string | null>(null);
+  const sp = species[active?.species_id];
   if (!active || active.stage < 1) {
     return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground">宠物还在蛋里，先去喂食孵化吧 🥚</div>;
   }
@@ -291,9 +313,17 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
     if (error) { flash("❌ " + (error.message.includes("hungry") ? "宠物太饿啦，先喂饱再出门" : error.message.includes("coins") ? "💰 星币不够" : error.message)); return; }
     const r = Array.isArray(data) ? data[0] : data;
     flash((r?.surprise || "🎉 玩得很开心！") + ` Lv.${r?.new_level}`);
+    if (r?.new_level && r.new_level > active.level) {
+      const emoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "⭐";
+      celebratePet({
+        kind: "levelup",
+        emoji,
+        title: `Lv.${r.new_level} 达成！`,
+        subtitle: `${active.nickname} 在外面玩得超棒`,
+      });
+    }
     onAfter();
   };
-  const sp = species[active.species_id];
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 p-3 dark:from-purple-950/30 dark:to-pink-950/30">

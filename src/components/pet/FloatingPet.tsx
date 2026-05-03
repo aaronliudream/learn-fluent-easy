@@ -22,7 +22,7 @@ export function FloatingPet() {
   const [sp, setSp] = useState<Species | null>(null);
   const [skinFilter, setSkinFilter] = useState<string>("");
   const [react, setReact] = useState<null | { kind: string; coins?: number; id: number }>(null);
-  const [isGuest, setIsGuest] = useState(false);
+  const [authState, setAuthState] = useState<"loading" | "guest" | "authed">("loading");
   const [demoTick, setDemoTick] = useState(0);
   const lastFetchRef = useRef(0);
 
@@ -31,11 +31,11 @@ export function FloatingPet() {
     if (now - lastFetchRef.current < 30000) return; // 30s 节流
     lastFetchRef.current = now;
     const { data: { session } } = await supabase.auth.getSession();
-    if (!session?.user) { setIsGuest(true); return; }
-    setIsGuest(false);
+    if (!session?.user) { setAuthState("guest"); setPet(null); return; }
+    setAuthState("authed");
     const { data } = await supabase.rpc("get_my_active_pet");
     const p = (Array.isArray(data) ? data[0] : data) as Pet | undefined;
-    if (!p) return;
+    if (!p) { setPet(null); return; }
     setPet(p);
     if (!sp || sp.id !== p.species_id) {
       const { data: s } = await supabase.from("pet_species")
@@ -55,15 +55,21 @@ export function FloatingPet() {
 
   useEffect(() => {
     refresh();
+    // Re-evaluate when auth changes (sign-in / sign-out)
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
+      lastFetchRef.current = 0;
+      refresh();
+    });
+    return () => subscription.unsubscribe();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Demo egg cycle for guests
+  // Demo egg cycle for guests AND authed-but-petless users
   useEffect(() => {
-    if (!isGuest) return;
+    if (pet) return;
     const id = window.setInterval(() => setDemoTick((x) => (x + 1) % 4), 2500);
     return () => window.clearInterval(id);
-  }, [isGuest]);
+  }, [pet]);
 
   useEffect(() => {
     const onReact = (e: Event) => {
@@ -78,17 +84,18 @@ export function FloatingPet() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Guest demo mode → small floating egg with adopt CTA
-  if (isGuest && !pet) {
+  // Demo mode (guest OR signed-in without pet) → adopt CTA
+  if (!pet && authState !== "loading") {
     const demoEmojis = ["🥚", "🐣", "🦊", "🐉"];
+    const isGuest = authState === "guest";
     return (
       <Link
-        to="/auth?next=/pets"
-        aria-label="Adopt your learning companion"
+        to="/pets"
+        aria-label={isGuest ? "Sign in to adopt your learning companion" : "Adopt your learning companion"}
         className="group fixed bottom-20 right-3 z-40 select-none lg:bottom-6 lg:right-6"
       >
         <div className="relative flex items-center gap-1.5 rounded-full border border-primary/30 bg-card/90 px-2.5 py-1.5 shadow-lg backdrop-blur transition hover:-translate-y-0.5">
-          <div className="text-3xl leading-none transition group-hover:scale-110" style={{ animation: "breathe 3s ease-in-out infinite" }}>
+          <div className="text-3xl leading-none transition animate-companion-breathe group-hover:scale-110">
             {demoEmojis[demoTick]}
           </div>
           <div className="hidden flex-col text-left leading-tight sm:flex">
@@ -99,7 +106,6 @@ export function FloatingPet() {
         <div className="pointer-events-none absolute -top-7 right-2 rounded-full bg-gradient-to-r from-fuchsia-500 to-amber-500 px-2 py-0.5 text-[11px] font-extrabold text-white shadow animate-bounce">
           ✨ Tap me
         </div>
-        <style>{`@keyframes breathe { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }`}</style>
       </Link>
     );
   }
@@ -112,7 +118,7 @@ export function FloatingPet() {
   return (
     <Link
       to="/pets"
-      aria-label={`查看宠物 ${pet.nickname}`}
+      aria-label={`Visit your companion ${pet.nickname}`}
       className="group fixed bottom-20 right-3 z-40 select-none lg:bottom-6 lg:right-6"
     >
       <div className={cn(

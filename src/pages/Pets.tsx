@@ -139,6 +139,9 @@ export default function Pets() {
           {toast}
         </div>
       )}
+      {needsOnboarding && (
+        <CompanionOnboarding onDone={() => { setNeedsOnboarding(false); reload(); }} />
+      )}
     </main>
   );
 }

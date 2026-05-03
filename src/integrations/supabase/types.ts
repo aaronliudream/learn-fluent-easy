@@ -95,6 +95,36 @@ export type Database = {
         }
         Relationships: []
       }
+      coin_award_log: {
+        Row: {
+          amount: number
+          awarded_at: string
+          id: number
+          item_id: string
+          module: string | null
+          source: string
+          user_id: string
+        }
+        Insert: {
+          amount: number
+          awarded_at?: string
+          id?: number
+          item_id: string
+          module?: string | null
+          source: string
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          awarded_at?: string
+          id?: number
+          item_id?: string
+          module?: string | null
+          source?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       coop_session_members: {
         Row: {
           contributed: number
@@ -4614,6 +4644,20 @@ export type Database = {
         Returns: {
           balance: number
           total_earned: number
+        }[]
+      }
+      award_for_item: {
+        Args: {
+          _amount: number
+          _item_id: string
+          _module?: string
+          _source: string
+        }
+        Returns: {
+          awarded: number
+          balance: number
+          capped: boolean
+          reason: string
         }[]
       }
       award_learning_coins: {

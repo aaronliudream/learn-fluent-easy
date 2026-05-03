@@ -47,7 +47,7 @@ export default function JuniorListeningPlay() {
     }
     if (ok) {
       const next = streak + 1; setStreak(next);
-      await awardForCorrect(next, "junior_listening");
+      await awardForCorrect(next, "junior_listening", `${id}:${idx}`, "junior_listening");
       await bumpPetSkill("listener_ear", 1);
       const correctCount = Object.entries(picks).filter(([i, l]) => l === e!.questions[Number(i)].answer).length + 1;
       if (correctCount % 5 === 0) await awardForBlock("junior_listening");

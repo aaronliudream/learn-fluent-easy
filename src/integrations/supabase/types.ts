@@ -2597,6 +2597,39 @@ export type Database = {
         }
         Relationships: []
       }
+      pet_diaries: {
+        Row: {
+          body_cn: string
+          created_at: string
+          diary_date: string
+          highlights: Json
+          id: string
+          pet_emoji: string | null
+          pet_nickname: string | null
+          user_id: string
+        }
+        Insert: {
+          body_cn: string
+          created_at?: string
+          diary_date?: string
+          highlights?: Json
+          id?: string
+          pet_emoji?: string | null
+          pet_nickname?: string | null
+          user_id: string
+        }
+        Update: {
+          body_cn?: string
+          created_at?: string
+          diary_date?: string
+          highlights?: Json
+          id?: string
+          pet_emoji?: string | null
+          pet_nickname?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       pet_diary: {
         Row: {
           created_at: string
@@ -2787,6 +2820,48 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      pet_skill_bindings: {
+        Row: {
+          created_at: string
+          description_cn: string | null
+          emoji: string
+          id: string
+          kp_codes: Json
+          label_cn: string
+          label_en: string
+          module: string
+          rarity: string
+          skill_code: string
+          threshold: number
+        }
+        Insert: {
+          created_at?: string
+          description_cn?: string | null
+          emoji?: string
+          id?: string
+          kp_codes?: Json
+          label_cn: string
+          label_en: string
+          module: string
+          rarity?: string
+          skill_code: string
+          threshold?: number
+        }
+        Update: {
+          created_at?: string
+          description_cn?: string | null
+          emoji?: string
+          id?: string
+          kp_codes?: Json
+          label_cn?: string
+          label_en?: string
+          module?: string
+          rarity?: string
+          skill_code?: string
+          threshold?: number
+        }
+        Relationships: []
       }
       pet_skins: {
         Row: {
@@ -3727,6 +3802,33 @@ export type Database = {
         }
         Relationships: []
       }
+      user_pet_skills: {
+        Row: {
+          id: string
+          progress: number
+          skill_code: string
+          unlocked_at: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          progress?: number
+          skill_code: string
+          unlocked_at?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          id?: string
+          progress?: number
+          skill_code?: string
+          unlocked_at?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_pet_skins: {
         Row: {
           acquired_at: string
@@ -4213,6 +4315,14 @@ export type Database = {
           awarded: number
           balance: number
           capped: boolean
+        }[]
+      }
+      bump_pet_skill: {
+        Args: { _delta?: number; _skill_code: string }
+        Returns: {
+          progress: number
+          threshold: number
+          unlocked: boolean
         }[]
       }
       buy_listing: { Args: { _listing_id: string }; Returns: undefined }

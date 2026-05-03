@@ -218,9 +218,26 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
       >
         <RotateCw className="size-4" /> 再玩一局
       </button>
-      <Link to="/pets" className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-purple-600 hover:underline">
-        🐾 去看看我的宠物
-      </Link>
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+        <Link
+          to={`/primary/games/${grade || "all"}`}
+          className="inline-flex items-center gap-1.5 rounded-full border-2 border-rose-300 bg-white px-5 py-2 text-sm font-extrabold text-rose-600 shadow-sm hover:bg-rose-50"
+        >
+          <ArrowLeft className="size-4" /> 返回游戏中心
+        </Link>
+        <Link
+          to="/primary"
+          className="inline-flex items-center gap-1.5 rounded-full border-2 border-amber-300 bg-white px-5 py-2 text-sm font-extrabold text-amber-700 shadow-sm hover:bg-amber-50"
+        >
+          🏠 小学首页
+        </Link>
+        <Link
+          to="/pets"
+          className="inline-flex items-center gap-1.5 rounded-full border-2 border-purple-300 bg-white px-5 py-2 text-sm font-extrabold text-purple-600 shadow-sm hover:bg-purple-50"
+        >
+          🐾 我的宠物
+        </Link>
+      </div>
     </div>
   );
 }

@@ -2199,6 +2199,33 @@ export type Database = {
           },
         ]
       }
+      junior_reading_completions: {
+        Row: {
+          created_at: string
+          id: string
+          perfect: boolean
+          reading_id: string
+          time_spent_sec: number
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          perfect?: boolean
+          reading_id: string
+          time_spent_sec?: number
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          perfect?: boolean
+          reading_id?: string
+          time_spent_sec?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       junior_sentences: {
         Row: {
           blank: string

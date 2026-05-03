@@ -12,11 +12,18 @@ import { supabase } from "@/integrations/supabase/client";
 const TICK_MS = 15_000;
 const IDLE_MS = 60_000;
 
-function segFromPath(p: string): "primary" | "junior" | "gaokao" | "other" {
+function segFromPath(p: string): "primary" | "junior" | "gaokao" | "other" | null {
   if (p.startsWith("/primary")) return "primary";
   if (p.startsWith("/junior")) return "junior";
   if (p.startsWith("/gaokao") || p.startsWith("/senior")) return "gaokao";
-  return "other";
+  // 其它真正在学习的通用页面（课时/对话/场景/单词/听力/写作/阅读等）也计入 other
+  if (
+    p.startsWith("/lesson") || p.startsWith("/talk") || p.startsWith("/scenes") ||
+    p.startsWith("/level") || p.startsWith("/stage-test") || p.startsWith("/slang") ||
+    p.startsWith("/placement")
+  ) return "other";
+  // 落地页 / 登录 / 家长中心 / 设置等，不计入学习时长
+  return null;
 }
 
 let SESSION_ID: string | null = null;
@@ -51,13 +58,15 @@ export function useActiveHeartbeat() {
       if (cancelled) return;
       if (document.visibilityState !== "visible") return;
       if (Date.now() - lastInteract.current > IDLE_MS) return;
+      const seg = segFromPath(loc.pathname);
+      if (!seg) return;
       const { data: u } = await supabase.auth.getUser();
       const uid = u?.user?.id;
       if (!uid) return;
       try {
         await supabase.from("learning_heartbeats").insert({
           user_id: uid,
-          segment: segFromPath(loc.pathname),
+          segment: seg,
           path: loc.pathname,
           active_seconds: TICK_MS / 1000,
           session_id: getSessionId(),

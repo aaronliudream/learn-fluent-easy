@@ -58,10 +58,10 @@ export default function PrimaryVocab() {
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-4 py-6 md:px-6 md:py-10">
       <Link
-        to="/primary"
+        to={lockedGrade ? `/primary/grade/${lockedGrade}` : "/primary"}
         className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> 返回小学专区
+        <ArrowLeft className="size-4" /> {lockedGrade ? `返回 ${["一","二","三","四","五","六"][lockedGrade-1] ?? lockedGrade}年级` : "返回小学专区"}
       </Link>
       <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
         <div>

@@ -37,7 +37,7 @@ export default function JuniorGrammarPoint() {
     if (ok) {
       const next = streak + 1;
       setStreak(next);
-      await awardForCorrect(next, "junior_grammar");
+      await awardForCorrect(next, "junior_grammar", q.id, "junior_grammar");
       const cc = correctCount + 1;
       setCorrectCount(cc);
       if (cc % 5 === 0) await awardForBlock("junior_grammar");

@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { ArrowLeft, Send, Sparkles } from "lucide-react";
+import { ArrowLeft, Send, Sparkles, Trophy, Check, X, Loader2, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 import { speak } from "@/lib/speak";
+import { supabase } from "@/integrations/supabase/client";
+import { awardForCorrect, awardForBlock, notifyWrong } from "@/lib/coins";
+import { cn } from "@/lib/utils";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -18,6 +21,15 @@ const STARTERS = [
 ];
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/primary-chat`;
+const QUIZ_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat-vocab-quiz`;
+
+type QuizItem = {
+  term: string;
+  question_cn: string;
+  options_cn: string[];
+  answer_index: number;
+  example_en: string;
+};
 
 export default function PrimaryChat() {
   const [messages, setMessages] = useState<Msg[]>([
@@ -26,6 +38,11 @@ export default function PrimaryChat() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  // Quiz state
+  const [quizLoading, setQuizLoading] = useState(false);
+  const [quizItems, setQuizItems] = useState<QuizItem[] | null>(null);
+  const [picks, setPicks] = useState<Record<number, number>>({});
+  const [streak, setStreak] = useState(0);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -105,6 +122,76 @@ export default function PrimaryChat() {
     }
   }
 
+  async function startQuiz() {
+    if (quizLoading) return;
+    const turns = messages.filter((m) => m.content.trim()).length;
+    if (turns < 2) { toast.info("先和 Spark 聊几句再来出题吧 🐾"); return; }
+    setQuizLoading(true);
+    try {
+      const resp = await fetch(QUIZ_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+        },
+        body: JSON.stringify({ messages }),
+      });
+      if (resp.status === 429) { toast.error("AI 正忙，5 秒后再试"); return; }
+      if (resp.status === 402) { toast.error("AI 额度用完啦"); return; }
+      const data = await resp.json();
+      if (!data?.items?.length) { toast.error("没有提取到可练习的单词"); return; }
+      setQuizItems(data.items);
+      setPicks({});
+      setStreak(0);
+      setTimeout(() => scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" }), 50);
+    } catch (e) {
+      console.error(e);
+      toast.error("出题失败，稍后再试");
+    } finally {
+      setQuizLoading(false);
+    }
+  }
+
+  async function pickAnswer(qi: number, oi: number) {
+    if (picks[qi] !== undefined || !quizItems) return;
+    const item = quizItems[qi];
+    const ok = oi === item.answer_index;
+    setPicks((p) => ({ ...p, [qi]: oi }));
+    speak(item.term).catch(() => {});
+    if (ok) {
+      const newStreak = streak + 1;
+      setStreak(newStreak);
+      await awardForCorrect(newStreak, "primary_chat_quiz");
+      const total = Object.keys(picks).length + 1;
+      if (total > 0 && total % 5 === 0) await awardForBlock("primary_chat_quiz");
+    } else {
+      setStreak(0);
+      notifyWrong();
+      // 写入错题本
+      try {
+        const { data: u } = await supabase.auth.getUser();
+        if (u?.user) {
+          const correctText = item.options_cn[item.answer_index];
+          const userText = item.options_cn[oi];
+          await supabase.from("user_mistakes").upsert({
+            user_id: u.user.id,
+            module: "primary_chat_quiz",
+            source_key: `chat:${item.term.toLowerCase()}`,
+            source_label: `Spark 对话词汇 · ${item.term}`,
+            question: item.question_cn,
+            user_answer: userText,
+            correct_answer: correctText,
+            explanation: item.example_en,
+            snapshot: { term: item.term, options: item.options_cn, answer_index: item.answer_index, example_en: item.example_en },
+          }, { onConflict: "user_id,module,source_key" });
+        }
+      } catch (e) { console.warn("save mistake failed", e); }
+    }
+  }
+
+  const allDone = quizItems && Object.keys(picks).length === quizItems.length;
+  const correctCount = quizItems ? quizItems.filter((it, i) => picks[i] === it.answer_index).length : 0;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 via-rose-50 to-sky-50 flex flex-col">
       <header className="flex items-center gap-3 p-4 bg-white/70 backdrop-blur border-b">
@@ -140,10 +227,73 @@ export default function PrimaryChat() {
             </Card>
           </div>
         ))}
+
+        {/* Quiz section */}
+        {quizItems && (
+          <div className="mt-4 space-y-3 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 p-4 shadow">
+            <div className="flex items-center gap-2 text-sm font-extrabold text-amber-700">
+              <Trophy className="size-4" /> 对话小测：刚才学到的单词
+              <span className="ml-auto text-xs text-muted-foreground">{Object.keys(picks).length}/{quizItems.length}</span>
+            </div>
+            {quizItems.map((it, qi) => {
+              const picked = picks[qi];
+              return (
+                <Card key={qi} className="p-3">
+                  <div className="flex items-center gap-2 text-sm font-bold">
+                    <span className="text-rose-600">{it.term}</span>
+                    <button onClick={() => speak(it.term).catch(() => {})} className="rounded-full bg-rose-100 p-1 text-rose-600">
+                      <Volume2 className="size-3.5" />
+                    </button>
+                    <span className="text-muted-foreground">· {it.question_cn}</span>
+                  </div>
+                  <div className="mt-2 grid gap-1.5 sm:grid-cols-2">
+                    {it.options_cn.map((opt, oi) => {
+                      const isAns = picked !== undefined && oi === it.answer_index;
+                      const isWrong = picked === oi && oi !== it.answer_index;
+                      return (
+                        <button key={oi} disabled={picked !== undefined} onClick={() => pickAnswer(qi, oi)}
+                          className={cn("flex items-center justify-between rounded-xl border-2 px-3 py-2 text-left text-sm transition",
+                            picked === undefined && "border-border bg-card hover:border-rose-300",
+                            isAns && "border-emerald-500 bg-emerald-50",
+                            isWrong && "border-rose-500 bg-rose-50",
+                            picked !== undefined && !isAns && !isWrong && "opacity-50")}>
+                          <span>{opt}</span>
+                          {isAns && <Check className="size-4 text-emerald-600" />}
+                          {isWrong && <X className="size-4 text-rose-600" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {picked !== undefined && it.example_en && (
+                    <div className="mt-2 rounded-lg bg-muted/50 p-2 text-xs text-muted-foreground">💡 {it.example_en}</div>
+                  )}
+                </Card>
+              );
+            })}
+            {allDone && (
+              <div className="rounded-2xl bg-gradient-to-r from-amber-400 to-rose-400 p-4 text-center text-white shadow">
+                <div className="text-lg font-extrabold">🎉 完成！答对 {correctCount}/{quizItems.length}</div>
+                <p className="mt-1 text-xs opacity-90">{correctCount < quizItems.length ? "做错的题已收进错题本，明天复习记得更牢哦" : "全对啦！太棒了 ✨"}</p>
+                <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+                  <Button size="sm" variant="secondary" onClick={() => { setQuizItems(null); setPicks({}); }}>继续聊天</Button>
+                  <Button size="sm" asChild className="bg-white text-rose-600 hover:bg-white/90"><Link to="/mistakes">📒 错题本</Link></Button>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       <div className="p-3 border-t bg-white/80 backdrop-blur">
         <div className="max-w-2xl mx-auto space-y-2">
+          {!quizItems && (
+            <div className="flex justify-center">
+              <Button size="sm" variant="outline" disabled={quizLoading || loading} onClick={startQuiz}
+                className="rounded-full border-amber-300 bg-amber-50 text-amber-700 hover:bg-amber-100">
+                {quizLoading ? <><Loader2 className="mr-1 size-3.5 animate-spin" /> AI 出题中…</> : <><Trophy className="mr-1 size-3.5" /> 结束对话 · 出小测</>}
+              </Button>
+            </div>
+          )}
           <div className="flex gap-2 overflow-x-auto pb-1">
             {STARTERS.map((s) => (
               <button

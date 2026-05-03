@@ -98,7 +98,7 @@ export default function PrimaryGames() {
           <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
         </div>
       ) : !game ? (
-        <GameMenu grade={grade} count={words.length} />
+        <GameMenu grade={grade} count={words.length} isAll={isAll} />
       ) : words.length < 4 ? (
         <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">
           该年级单词太少，无法开始游戏
@@ -116,13 +116,14 @@ export default function PrimaryGames() {
   );
 }
 
-function GameMenu({ grade, count }: { grade: number; count: number }) {
+function GameMenu({ grade, count, isAll }: { grade: number; count: number; isAll?: boolean }) {
+  const base = isAll ? "all" : grade;
   return (
     <section className="grid gap-3 sm:grid-cols-2">
       {GAMES.map(g => (
         <Link
           key={g.key}
-          to={`/primary/games/${grade}/${g.key}`}
+          to={`/primary/games/${base}/${g.key}`}
           className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${g.gradient} p-5 text-white shadow-tile transition hover:-translate-y-1`}
         >
           <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/20 blur-2xl" />

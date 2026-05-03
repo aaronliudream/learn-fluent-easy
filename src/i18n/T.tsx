@@ -95,7 +95,7 @@ export function TKey({ k, vars, layout = "stack", className }: {
   layout?: "stack" | "inline" | "compact";
   className?: string;
 }) {
-  const { t, tEn, tZh } = useI18n() as any;
+  const { t, tEn, tZh } = useI18n();
   const bilingual = useBilingualMode();
   if (!bilingual) return <>{t(k, vars)}</>;
   // Chinese-student zone: force Chinese副 + English主, never user language.

@@ -3279,6 +3279,7 @@ export type Database = {
           hunger: number
           id: string
           is_active: boolean
+          last_decay_at: string
           last_fed_at: string | null
           last_played_at: string | null
           level: number
@@ -3296,6 +3297,7 @@ export type Database = {
           hunger?: number
           id?: string
           is_active?: boolean
+          last_decay_at?: string
           last_fed_at?: string | null
           last_played_at?: string | null
           level?: number
@@ -3313,6 +3315,7 @@ export type Database = {
           hunger?: number
           id?: string
           is_active?: boolean
+          last_decay_at?: string
           last_fed_at?: string | null
           last_played_at?: string | null
           level?: number
@@ -3801,6 +3804,19 @@ export type Database = {
           zone_label: string
         }[]
       }
+      get_my_active_pet: {
+        Args: never
+        Returns: {
+          exp: number
+          hunger: number
+          id: string
+          level: number
+          mood: number
+          nickname: string
+          species_id: string
+          stage: number
+        }[]
+      }
       get_my_game_stats: {
         Args: { _game_type: string }
         Returns: {
@@ -4067,6 +4083,14 @@ export type Database = {
           new_hunger: number
           new_level: number
           surprise: string
+        }[]
+      }
+      tick_pet_hunger: {
+        Args: { _pet_id: string }
+        Returns: {
+          decayed: number
+          hunger: number
+          mood: number
         }[]
       }
       upgrade_guest_to_full: {

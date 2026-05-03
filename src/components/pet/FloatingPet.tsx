@@ -22,12 +22,17 @@ export function FloatingPet() {
   const [sp, setSp] = useState<Species | null>(null);
   const [skinFilter, setSkinFilter] = useState<string>("");
   const [react, setReact] = useState<null | { kind: string; coins?: number; id: number }>(null);
+  const [isGuest, setIsGuest] = useState(false);
+  const [demoTick, setDemoTick] = useState(0);
   const lastFetchRef = useRef(0);
 
   const refresh = async () => {
     const now = Date.now();
     if (now - lastFetchRef.current < 30000) return; // 30s 节流
     lastFetchRef.current = now;
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session?.user) { setIsGuest(true); return; }
+    setIsGuest(false);
     const { data } = await supabase.rpc("get_my_active_pet");
     const p = (Array.isArray(data) ? data[0] : data) as Pet | undefined;
     if (!p) return;
@@ -53,6 +58,13 @@ export function FloatingPet() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Demo egg cycle for guests
+  useEffect(() => {
+    if (!isGuest) return;
+    const id = window.setInterval(() => setDemoTick((x) => (x + 1) % 4), 2500);
+    return () => window.clearInterval(id);
+  }, [isGuest]);
+
   useEffect(() => {
     const onReact = (e: Event) => {
       const d = (e as CustomEvent).detail || {};
@@ -66,6 +78,31 @@ export function FloatingPet() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Guest demo mode → small floating egg with adopt CTA
+  if (isGuest && !pet) {
+    const demoEmojis = ["🥚", "🐣", "🦊", "🐉"];
+    return (
+      <Link
+        to="/auth?next=/pets"
+        aria-label="Adopt your learning companion"
+        className="group fixed bottom-20 right-3 z-40 select-none lg:bottom-6 lg:right-6"
+      >
+        <div className="relative flex items-center gap-1.5 rounded-full border border-primary/30 bg-card/90 px-2.5 py-1.5 shadow-lg backdrop-blur transition hover:-translate-y-0.5">
+          <div className="text-3xl leading-none transition group-hover:scale-110" style={{ animation: "breathe 3s ease-in-out infinite" }}>
+            {demoEmojis[demoTick]}
+          </div>
+          <div className="hidden flex-col text-left leading-tight sm:flex">
+            <span className="text-[10px] font-bold">Adopt me</span>
+            <span className="text-[10px] text-muted-foreground">领养我</span>
+          </div>
+        </div>
+        <div className="pointer-events-none absolute -top-7 right-2 rounded-full bg-gradient-to-r from-fuchsia-500 to-amber-500 px-2 py-0.5 text-[11px] font-extrabold text-white shadow animate-bounce">
+          ✨ Tap me
+        </div>
+        <style>{`@keyframes breathe { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }`}</style>
+      </Link>
+    );
+  }
   if (!pet) return null;
   const emoji = pickEmoji(pet, sp ?? undefined);
   const isHappy = react?.kind === "correct" || react?.kind === "happy" || react?.kind === "flash";

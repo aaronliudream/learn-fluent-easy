@@ -298,3 +298,95 @@ function SkillPill({ label, c, w }: { label: string; c?: number; w?: number }) {
     </span>
   );
 }
+
+type WeakSkillKey = "listen" | "spell" | "match" | "quiz";
+const WEAK_SKILLS: { key: WeakSkillKey; label: string; icon: any; color: string; cKey: keyof Mastery; wKey: keyof Mastery; tip: string; route: (g:number)=>string }[] = [
+  { key: "listen", label: "听力", icon: Headphones, color: "from-sky-400 to-cyan-500", cKey: "listen_correct", wKey: "listen_wrong",
+    tip: "先听 3 遍发音再选词。建议每天 5 分钟，重点听元音差异。",
+    route: (g) => `/primary/games/${g}/listen` },
+  { key: "spell",  label: "拼写", icon: PenLine, color: "from-amber-400 to-orange-500", cKey: "spell_correct", wKey: "spell_wrong",
+    tip: "看汉语 → 听发音 → 默写。注意首字母大小写、双写字母。",
+    route: (g) => `/primary/games/${g}/spell` },
+  { key: "match",  label: "配对", icon: Brain, color: "from-violet-400 to-fuchsia-500", cKey: "match_correct", wKey: "match_wrong",
+    tip: "翻牌时大声说出单词与中文，建立"看-听-说"三联结。",
+    route: (g) => `/primary/games/${g}/match` },
+  { key: "quiz",   label: "选义", icon: Target, color: "from-rose-400 to-pink-500", cKey: "quiz_correct", wKey: "quiz_wrong",
+    tip: "用单词造一个生活短句，把意思和场景挂钩。",
+    route: (g) => `/primary/games/${g}/quiz` },
+];
+
+function WeakPlan({ grade, words, masteryByWord }: { grade: number; words: Word[]; masteryByWord: Record<string, Mastery> }) {
+  // For each skill, find weak words: attempts >= 1 and acc < 70%, OR mastered overall but never attempted in this skill.
+  const buckets = WEAK_SKILLS.map(s => {
+    const list = words.map(w => {
+      const m = masteryByWord[w.id];
+      const c = (m?.[s.cKey] as number) ?? 0;
+      const wr = (m?.[s.wKey] as number) ?? 0;
+      const t = c + wr;
+      const acc = t ? c/t : -1; // -1 = never tried
+      return { word: w, acc, attempts: t, score: t === 0 ? 0.5 : 1 - acc }; // higher = weaker
+    })
+    .filter(x => x.acc >= 0 ? x.acc < 0.7 : (masteryByWord[x.word.id]?.mastery_level ?? 0) >= 1) // not-tried but seen elsewhere → still suggest
+    .sort((a,b) => b.score - a.score)
+    .slice(0, 8);
+    return { skill: s, list };
+  });
+
+  const anyWeak = buckets.some(b => b.list.length > 0);
+  if (!anyWeak) {
+    return (
+      <section className="mb-4 rounded-3xl border-2 border-emerald-300 bg-emerald-50/60 p-4 shadow-tile">
+        <div className="flex items-center gap-2 text-sm font-extrabold text-emerald-700">
+          <Sparkles className="size-4" /> 太棒了！{grade} 年级暂无明显薄弱词
+        </div>
+        <p className="mt-1 text-xs text-emerald-700/80">继续保持每天一局练习，巩固长期记忆 🌱</p>
+      </section>
+    );
+  }
+
+  return (
+    <section className="mb-4 rounded-3xl border-2 border-rose-200 bg-gradient-to-br from-rose-50 to-amber-50 p-4 shadow-tile">
+      <div className="mb-3 flex items-center gap-2 text-sm font-extrabold text-rose-700">
+        <AlertTriangle className="size-4" /> 智能薄弱词汇 · 今日推荐练习
+      </div>
+      <div className="grid gap-3">
+        {buckets.map(({ skill: s, list }) => (
+          <div key={s.key} className="rounded-2xl border border-border bg-card p-3">
+            <div className="mb-2 flex items-center gap-2">
+              <div className={`grid size-8 place-items-center rounded-xl bg-gradient-to-br ${s.color} text-white`}>
+                <s.icon className="size-4" />
+              </div>
+              <div className="flex-1">
+                <div className="text-sm font-extrabold">{s.label} · {list.length} 个薄弱词</div>
+                <div className="text-[11px] text-muted-foreground">{s.tip}</div>
+              </div>
+              {list.length > 0 && (
+                <Link to={s.route(grade)} className={`inline-flex items-center gap-1 rounded-full bg-gradient-to-r ${s.color} px-3 py-1 text-[11px] font-extrabold text-white shadow`}>
+                  <Play className="size-3 fill-white" /> 立即练
+                </Link>
+              )}
+            </div>
+            {list.length === 0 ? (
+              <div className="rounded-lg bg-emerald-50 px-2 py-1.5 text-[11px] text-emerald-700">✓ 此项暂无薄弱词</div>
+            ) : (
+              <div className="flex flex-wrap gap-1.5">
+                {list.map(({ word: w, acc, attempts }) => (
+                  <button key={w.id} onClick={() => speak(w.word)}
+                    className="group inline-flex items-center gap-1 rounded-lg border border-border bg-background px-2 py-1 text-[11px] hover:border-rose-300">
+                    <Volume2 className="size-3 text-muted-foreground group-hover:text-rose-500" />
+                    <b className="text-foreground">{w.word}</b>
+                    <span className="text-muted-foreground">{w.meaning_cn}</span>
+                    <span className={cn("rounded px-1 py-0.5 text-[9px] font-bold",
+                      attempts === 0 ? "bg-slate-100 text-slate-600" : acc < 0.4 ? "bg-rose-100 text-rose-700" : "bg-amber-100 text-amber-700")}>
+                      {attempts === 0 ? "未练" : `${Math.round(acc*100)}%`}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

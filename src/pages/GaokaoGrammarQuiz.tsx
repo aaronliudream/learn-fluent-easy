@@ -124,6 +124,7 @@ export default function GaokaoGrammarQuiz() {
     const isCorrect = letter === q.correct_answer;
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), wrong: s.wrong + (isCorrect ? 0 : 1) }));
     if (isCorrect) awardCoins(3, "gaokao_grammar_correct").catch(() => {});
+    else { import("@/lib/coins").then(m => m.notifyWrong()); }
     const latencyMs = Date.now() - startTs;
     await recordAttempt({ questionType: "grammar", questionId: q.id, userAnswer: letter, isCorrect });
     const res = await recordGrammarAttempt({

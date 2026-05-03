@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHeart, Star, Shirt, Smile } from "lucide-react";
+import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHeart, Star, Shirt, Smile, Sprout, Hourglass, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
@@ -9,6 +9,7 @@ import CompanionOnboarding from "@/components/pet/CompanionOnboarding";
 import ReportAIButton from "@/components/pet/ReportAIButton";
 import PlanetMap from "@/components/pet/PlanetMap";
 import PetChat from "@/components/pet/PetChat";
+import { useCurrencies, wishlistAdd, fetchWishlist, wishlistRemove, type WishlistRow } from "@/lib/currencies";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };
@@ -38,6 +39,7 @@ export default function Pets() {
   const [stickers, setStickers] = useState<Sticker[]>([]);
   const [toast, setToast] = useState<string>("");
   const [needsOnboarding, setNeedsOnboarding] = useState(false);
+  const currencies = useCurrencies(0);
 
   const reload = async () => {
     const { data: u } = await supabase.auth.getUser();
@@ -106,6 +108,23 @@ export default function Pets() {
           <Coins className="size-4" /> {balance}
         </div>
       </div>
+      {/* 三种货币 + 消化中（延迟满足设计） */}
+      <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px] font-bold">
+        <div className="flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-1 text-emerald-700 dark:text-emerald-300" title="种子：学习产出，可在商店心愿单兑换">
+          <Sprout className="size-3" /> {currencies.seeds} 种子
+        </div>
+        {currencies.pending > 0 && (
+          <div className="flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-amber-700 dark:text-amber-300" title="刚学到的种子正在宠物体内消化，明天到账">
+            <Hourglass className="size-3 animate-pulse" /> 消化中 +{currencies.pending}
+          </div>
+        )}
+        <div className="flex items-center gap-1 rounded-full bg-violet-500/10 px-2.5 py-1 text-violet-700 dark:text-violet-300" title="星光：连续学习奖励，未来可解锁场景">
+          ⭐ {currencies.starlight}
+        </div>
+        <div className="flex items-center gap-1 rounded-full bg-sky-500/10 px-2.5 py-1 text-sky-700 dark:text-sky-300" title="结晶：完成长期里程碑获得，购买稀有道具">
+          💎 {currencies.crystals}
+        </div>
+      </div>
 
       {loading ? (
         <div className="flex justify-center py-20"><Loader2 className="size-6 animate-spin text-muted-foreground" /></div>
@@ -129,7 +148,7 @@ export default function Pets() {
           </div>
 
           {tab === "home" && <HomeTab pets={pets} active={active} species={speciesMap} inv={inv} foods={foods} skins={skins} stickers={stickers} onAfter={reload} flash={flash} />}
-          {tab === "shop" && <ShopTab foods={foods} balance={balance} inv={inv} onAfter={reload} flash={flash} />}
+          {tab === "shop" && <ShopTab foods={foods} balance={balance} inv={inv} onAfter={reload} flash={flash} refreshCurrencies={currencies.refresh} />}
           {tab === "outing" && <OutingTab pets={pets} active={active} dests={dests} balance={balance} species={speciesMap} onAfter={reload} flash={flash} />}
           {tab === "adopt" && <AdoptTab species={species} balance={balance} onAfter={reload} flash={flash} setTab={setTab} />}
           {tab === "skin" && <SkinTab active={active} species={speciesMap} skins={skins} owned={owned} balance={balance} onAfter={reload} flash={flash} />}

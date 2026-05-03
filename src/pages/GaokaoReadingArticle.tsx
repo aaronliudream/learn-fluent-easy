@@ -6,6 +6,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import NoCopyGuard from "@/components/NoCopyGuard";
+import ReadingWatermark from "@/components/ReadingWatermark";
 
 type Article = {
   id: string;
@@ -220,6 +222,29 @@ export default function GaokaoReadingArticle() {
   const [submittedAt, setSubmittedAt] = useState<number | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [fontScale, setFontScale] = useState(1);
+  const [userEmail, setUserEmail] = useState<string>("user");
+  const [minReadSec, setMinReadSec] = useState<number>(60);
+  const [readSecLeft, setReadSecLeft] = useState<number>(60);
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => {
+      if (data?.user) setUserEmail(data.user.email ?? data.user.id.slice(0, 8));
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!article) return;
+    // 最短阅读时长：单词数 / 3.3 词每秒（≈200词/分钟），最少60秒
+    const m = Math.max(60, Math.round(article.word_count / 3.3));
+    setMinReadSec(m);
+    setReadSecLeft(m);
+  }, [article]);
+
+  useEffect(() => {
+    if (stage !== "test") return;
+    const t = setInterval(() => setReadSecLeft(s => Math.max(0, s - 1)), 1000);
+    return () => clearInterval(t);
+  }, [stage]);
 
   // Load
   useEffect(() => {
@@ -280,6 +305,10 @@ export default function GaokaoReadingArticle() {
     if (!article) return;
     if (answeredCount < totalQ) {
       toast.warning(timeUp ? "时间到，请补完所有题目后再查看答案和解析" : "请先完成所有题目，再查看答案和解析");
+      return;
+    }
+    if (!timeUp && readSecLeft > 0) {
+      toast.warning(`请认真阅读，还需 ${readSecLeft} 秒才能交卷`);
       return;
     }
 
@@ -368,6 +397,7 @@ export default function GaokaoReadingArticle() {
 
     return (
       <main className="min-h-screen bg-muted/30 pb-32">
+        <NoCopyGuard />
         {/* Sticky top bar */}
         <header className="sticky top-0 z-30 border-b bg-card/95 backdrop-blur">
           <div className="mx-auto max-w-7xl px-4 py-3 flex items-center gap-3">
@@ -377,6 +407,12 @@ export default function GaokaoReadingArticle() {
             <div className="flex-1 min-w-0">
               <div className="text-xs text-muted-foreground">{article.sub_band} · {article.genre_label}</div>
               <div className="text-sm font-semibold truncate">{article.title}</div>
+            </div>
+            <div className={cn(
+              "hidden sm:flex items-center gap-1 rounded-md border px-2 py-1 text-[11px] font-bold tabular-nums",
+              readSecLeft > 0 ? "border-amber-400 text-amber-600" : "border-emerald-400 text-emerald-600"
+            )} title="最短阅读时长">
+              📖 {readSecLeft > 0 ? `${readSecLeft}s` : "可交卷"}
             </div>
             <div className={cn(
               "flex items-center gap-1.5 rounded-lg px-3 py-1.5 font-mono font-bold tabular-nums text-sm",
@@ -404,7 +440,8 @@ export default function GaokaoReadingArticle() {
         {/* Questions only */}
         <div className="mx-auto grid max-w-7xl gap-6 px-4 py-6 lg:grid-cols-[1.1fr_1fr]">
           {/* 文章 — 左侧 (移动端在上方) */}
-          <article className="rounded-2xl border bg-card p-5 lg:p-7 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+          <article className="relative rounded-2xl border bg-card p-5 lg:p-7 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+            <ReadingWatermark text={`${userEmail} · ${new Date().toLocaleDateString()}`} />
             <div className="mb-3 flex items-center justify-between border-b pb-2">
               <div className="text-xs text-muted-foreground">
                 {article.word_count} 词 · {article.sub_band} · {article.genre_label}

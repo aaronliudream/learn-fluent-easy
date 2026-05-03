@@ -9,6 +9,7 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 type GradeBand = "g1" | "g2" | "g3" | "gaokao";
 
@@ -594,21 +595,31 @@ export default function GaokaoReading() {
       )}
 
       <ul className="grid gap-3">
-        {current.map((a) => {
+        {current.map((a, idx) => {
           const stat = sessions[a.id];
+          const prev = current[idx - 1];
+          const prevStat = prev ? sessions[prev.id] : undefined;
+          const locked = idx > 0 && (!prevStat || prevStat.best_pct < 100);
           const st = statusOf(stat);
           const inOptimal = profile && a.lexile_score
             && a.lexile_score >= profile.optimal_min - 1 && a.lexile_score <= profile.optimal_max + 1;
           return (
             <li key={a.id}>
               <Link to={`/gaokao/reading/article/${a.id}`}
+                onClick={(e) => { if (locked) { e.preventDefault(); toast.error("请先完成上一篇并 100% 全对"); } }}
                 className={cn(
                   "block rounded-2xl border p-4 transition hover:shadow-tile relative overflow-hidden",
+                  locked && "opacity-50 cursor-not-allowed pointer-events-auto",
                   st === "mastered" ? "bg-emerald-500/5 border-emerald-500/30 hover:border-emerald-500/60"
                   : st === "passed"   ? "bg-amber-500/5 border-amber-500/30 hover:border-amber-500/60"
                   : st === "tried"    ? "bg-orange-500/5 border-orange-500/30 hover:border-orange-500/60"
                   : "bg-card hover:border-primary/40"
                 )}>
+                {locked && (
+                  <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-muted-foreground/80 text-white px-2 py-0.5 text-[10px] font-bold shadow">
+                    🔒 待解锁
+                  </span>
+                )}
                 {inOptimal && (
                   <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-violet-500 text-white px-1.5 py-0.5 text-[9px] font-bold shadow">
                     <Zap className="size-2.5" /> 最佳区

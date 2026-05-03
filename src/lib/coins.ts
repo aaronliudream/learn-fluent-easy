@@ -63,8 +63,8 @@ export async function awardForCorrect(streak: number, source: string): Promise<R
   const total = base + streakBonus + flashAmt;
   const r = await awardCoins(total, `${source}_correct`);
   if (!r) return null;
-  // 通知 FloatingPet
-  petReact(flash ? "flash" : "correct", { coins: r.awarded });
+  // 闪光时覆盖默认事件，发更醒目的反馈
+  if (flash && r.awarded > 0) petReact("flash", { coins: r.awarded });
   return { ...r, flash, streakBonus, base, kind: flash ? "flash" : streakBonus ? "streak" : "base" };
 }
 
@@ -72,7 +72,6 @@ export async function awardForCorrect(streak: number, source: string): Promise<R
 export async function awardForBlock(source: string): Promise<RichAward | null> {
   const r = await awardCoins(5, `${source}_block`);
   if (!r) return null;
-  petReact("happy", { coins: r.awarded });
   return { ...r, flash: false, streakBonus: 0, base: 5, kind: "block" };
 }
 

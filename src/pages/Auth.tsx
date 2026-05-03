@@ -184,7 +184,16 @@ const Auth = () => {
 
   return (
     <main className="mx-auto flex min-h-screen max-w-md items-center px-5 py-10">
-      <div className="w-full rounded-2xl border bg-card p-8 shadow-tile">
+      <div className="relative w-full rounded-2xl border bg-card p-8 shadow-tile">
+        {/* Close — return to home */}
+        <button
+          type="button"
+          onClick={() => navigate("/", { replace: true })}
+          aria-label={t("nav.home")}
+          className="absolute right-3 top-3 grid size-9 place-items-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground"
+        >
+          <X className="size-5" />
+        </button>
         <div className="mb-6 flex flex-col items-center gap-3">
           <div className="grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-rose-500 text-white shadow-lg">
             <GraduationCap className="size-7" />

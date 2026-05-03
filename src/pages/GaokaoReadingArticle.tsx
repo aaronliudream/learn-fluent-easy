@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import NoCopyGuard from "@/components/NoCopyGuard";
 import ReadingWatermark from "@/components/ReadingWatermark";
+import { recordMastery } from "@/lib/masteryProgress";
 
 type Article = {
   id: string;

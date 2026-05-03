@@ -5,10 +5,23 @@ import {
   ChevronDown, Target, BookOpen, MessageCircle, Headphones, Briefcase, Library,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { LEVELS } from "@/data/course";
 import { loadProgress, getStreak } from "@/lib/guestProgress";
-import { IDIOMS } from "@/data/idioms";
 import { T, useT } from "@/i18n/T";
+
+const FIRST_LESSON = {
+  to: "/level/1/unit/1/lesson/1",
+  title: "Hello, I'm Mei. · 第一课：你好，我叫梅（梅刚到加州）",
+};
+
+const TODAY_SLANG = [
+  { phrase: "read the room", meaning_cn: "察言观色；读懂气氛" },
+  { phrase: "spill the tea", meaning_cn: "爆料八卦；分享内幕消息" },
+  { phrase: "no cap", meaning_cn: "不骗你；说真的" },
+  { phrase: "vibe check", meaning_cn: "看看气氛怎么样" },
+  { phrase: "send it", meaning_cn: "冲了；放手去做" },
+  { phrase: "that tracks", meaning_cn: "说得通；和我了解的一致" },
+  { phrase: "touch grass", meaning_cn: "出去走走；别上网了" },
+];
 
 type Task = {
   key: string;
@@ -29,28 +42,9 @@ type Reco = {
   active_today: boolean; current_streak: number;
 };
 
-/**
- * Find the next un-completed lesson for the signed-in / guest learner.
- * Walks LEVELS in order and returns the first lesson whose key isn't in
- * `completedLessons`. Falls back to the very first lesson.
- */
 function nextLessonInfo(completed: string[]): { to: string; title: string } {
-  const done = new Set(completed);
-  for (const lv of LEVELS) {
-    if (lv.locked) continue;
-    for (const u of lv.units) {
-      for (const l of u.lessons) {
-        const key = `${lv.id}-${u.id}-${l.id}`;
-        if (!done.has(key)) {
-          return {
-            to: `/level/${lv.id}/unit/${u.id}/lesson/${l.id}`,
-            title: l.title,
-          };
-        }
-      }
-    }
-  }
-  return { to: "/levels", title: "继续你的学习路径" }; // translated via t() at render time
+  if (completed.length > 0) return { to: "/levels", title: "继续你的学习路径" };
+  return FIRST_LESSON;
 }
 
 /** Map weakest mistake module → CTA target */
@@ -126,9 +120,8 @@ export const TodayTaskCard = () => {
   // Pick today's slang deterministically from the static catalog so the
   // suggestion is stable across reloads on the same day.
   const todaySlang = useMemo(() => {
-    if (!IDIOMS.length) return null;
     const seed = Number(todayKey.replace(/-/g, "")) || 0;
-    return IDIOMS[seed % IDIOMS.length];
+    return TODAY_SLANG[seed % TODAY_SLANG.length];
   }, [todayKey]);
 
   // ----- Build personalized task list -----

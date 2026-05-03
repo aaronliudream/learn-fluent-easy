@@ -42,6 +42,8 @@ const PrimaryGrade = lazy(() => import("./pages/PrimaryGrade.tsx"));
 const PrimaryGames = lazy(() => import("./pages/PrimaryGames.tsx"));
 const PrimaryLesson = lazy(() => import("./pages/PrimaryLesson.tsx"));
 const PrimaryParent = lazy(() => import("./pages/PrimaryParent.tsx"));
+const PrimaryReading = lazy(() => import("./pages/PrimaryReading.tsx"));
+const PrimaryReadingPlay = lazy(() => import("./pages/PrimaryReadingPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
 const JuniorVocab = lazy(() => import("./pages/JuniorVocab.tsx"));
 const JuniorGrammar = lazy(() => import("./pages/JuniorGrammar.tsx"));
@@ -173,6 +175,8 @@ const App = () => (
           <Route path="/primary/games/:grade/:type" element={<PrimaryGames />} />
           <Route path="/primary/lesson/:id" element={<PrimaryLesson />} />
          <Route path="/primary/parent" element={<PrimaryParent />} />
+          <Route path="/primary/reading/grade/:grade" element={<PrimaryReading />} />
+          <Route path="/primary/reading/:id" element={<PrimaryReadingPlay />} />
           <Route path="/junior" element={<Junior />} />
           <Route path="/junior/vocab" element={<JuniorVocab />} />
           <Route path="/junior/grammar" element={<JuniorGrammar />} />

@@ -3356,6 +3356,104 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_reading_articles: {
+        Row: {
+          cover_gradient: string | null
+          created_at: string
+          emoji: string | null
+          estimated_minutes: number
+          grade: number
+          id: string
+          level: number
+          parent_tip: string | null
+          questions: Json
+          sentences: Json
+          sort_order: number
+          theme: string
+          title_cn: string
+          title_en: string
+          treasure: Json
+          warmup: Json
+        }
+        Insert: {
+          cover_gradient?: string | null
+          created_at?: string
+          emoji?: string | null
+          estimated_minutes?: number
+          grade: number
+          id?: string
+          level?: number
+          parent_tip?: string | null
+          questions?: Json
+          sentences?: Json
+          sort_order?: number
+          theme: string
+          title_cn: string
+          title_en: string
+          treasure?: Json
+          warmup?: Json
+        }
+        Update: {
+          cover_gradient?: string | null
+          created_at?: string
+          emoji?: string | null
+          estimated_minutes?: number
+          grade?: number
+          id?: string
+          level?: number
+          parent_tip?: string | null
+          questions?: Json
+          sentences?: Json
+          sort_order?: number
+          theme?: string
+          title_cn?: string
+          title_en?: string
+          treasure?: Json
+          warmup?: Json
+        }
+        Relationships: []
+      }
+      primary_reading_progress: {
+        Row: {
+          article_id: string
+          best_step: number
+          completed_at: string | null
+          id: string
+          score: number
+          stars: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          article_id: string
+          best_step?: number
+          completed_at?: string | null
+          id?: string
+          score?: number
+          stars?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          article_id?: string
+          best_step?: number
+          completed_at?: string | null
+          id?: string
+          score?: number
+          stars?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "primary_reading_progress_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "primary_reading_articles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       primary_speaking_attempts: {
         Row: {
           audio_duration_ms: number | null

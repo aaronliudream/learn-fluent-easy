@@ -222,6 +222,29 @@ export default function GaokaoReadingArticle() {
   const [submittedAt, setSubmittedAt] = useState<number | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [fontScale, setFontScale] = useState(1);
+  const [userEmail, setUserEmail] = useState<string>("user");
+  const [minReadSec, setMinReadSec] = useState<number>(60);
+  const [readSecLeft, setReadSecLeft] = useState<number>(60);
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => {
+      if (data?.user) setUserEmail(data.user.email ?? data.user.id.slice(0, 8));
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!article) return;
+    // 最短阅读时长：单词数 / 3.3 词每秒（≈200词/分钟），最少60秒
+    const m = Math.max(60, Math.round(article.word_count / 3.3));
+    setMinReadSec(m);
+    setReadSecLeft(m);
+  }, [article]);
+
+  useEffect(() => {
+    if (stage !== "test") return;
+    const t = setInterval(() => setReadSecLeft(s => Math.max(0, s - 1)), 1000);
+    return () => clearInterval(t);
+  }, [stage]);
 
   // Load
   useEffect(() => {

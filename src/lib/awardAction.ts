@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { awardCoins } from "@/lib/coins";
+import { addPendingSeed } from "@/lib/currencies";
 
 /**
  * 全站行为奖励统一入口 — Single source of truth for "do X → get Y coins/XP".
@@ -61,5 +62,10 @@ export async function awardAction(code: string): Promise<ActionResult> {
   const r = await awardCoins(total, `act:${code}`);
   markCooldown(code);
   if (!r) return { ok: false, coins: 0, flash, reason: "rpc_error" };
+  // 延迟满足：同时把"种子"丢进 24h 消化队列（不立即可花）。
+  // 即时金币系统照旧运作以保证现有 UI 兼容；新货币（seeds/starlight/crystals）走单独通道。
+  if (r.awarded > 0) {
+    void addPendingSeed(r.awarded, `act:${code}`);
+  }
   return { ok: true, coins: r.awarded, flash };
 }

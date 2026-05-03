@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 
-type Pet = { id: string; nickname: string; stage: number; level: number; exp: number; hunger: number; mood: number; species_id: string };
+type Pet = { id: string; nickname: string; stage: number; level: number; exp: number; hunger: number; mood: number; species_id: string; equipped_skin_id?: string | null };
 type Species = { id: string; emoji_egg: string; emoji_baby: string; emoji_adult: string; emoji_legend: string };
 
 function pickEmoji(p: Pet, sp?: Species) {
@@ -20,6 +20,7 @@ function pickEmoji(p: Pet, sp?: Species) {
 export function FloatingPet() {
   const [pet, setPet] = useState<Pet | null>(null);
   const [sp, setSp] = useState<Species | null>(null);
+  const [skinFilter, setSkinFilter] = useState<string>("");
   const [react, setReact] = useState<null | { kind: string; coins?: number; id: number }>(null);
   const lastFetchRef = useRef(0);
 
@@ -36,6 +37,14 @@ export function FloatingPet() {
         .select("id,emoji_egg,emoji_baby,emoji_adult,emoji_legend")
         .eq("id", p.species_id).maybeSingle();
       if (s) setSp(s as Species);
+    }
+    // 装备皮肤滤镜
+    if (p.equipped_skin_id) {
+      const { data: sk } = await (supabase as any).from("pet_skins")
+        .select("css_filter").eq("id", p.equipped_skin_id).maybeSingle();
+      setSkinFilter((sk as any)?.css_filter || "");
+    } else {
+      setSkinFilter("");
     }
   };
 
@@ -80,6 +89,7 @@ export function FloatingPet() {
             isSad && "opacity-70 grayscale animate-shake-x",
             !react && "group-hover:scale-110",
           )}
+          style={{ filter: !isSad && skinFilter ? skinFilter : undefined }}
         >
           {emoji}
         </div>

@@ -6,7 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 const buildSkills = (g: number) => [
   { key: "games", title: "🎮 单词游戏中心", desc: "选义 · 听音 · 翻牌 · 拼词", gradient: "from-rose-400 to-orange-400", to: `/primary/games/${g}` },
   { key: "listening", title: "🎧 听力", desc: "听词选图 · 短对话理解", gradient: "from-sky-400 to-cyan-400", to: `/primary/games/${g}/listen` },
-  { key: "reading", title: "📖 阅读", desc: "单句 → 段落 → 短文", gradient: "from-emerald-400 to-teal-400", to: "#" },
+  { key: "reading", title: "📖 阅读", desc: "5 步通关：热身·听读·跟读·思考·宝藏关", gradient: "from-emerald-400 to-teal-400", to: `/primary/reading/grade/${g}` },
   { key: "writing", title: "✍️ 写作", desc: "拼写 · 填空 · 看图写句", gradient: "from-violet-400 to-fuchsia-400", to: `/primary/games/${g}/spell` },
   { key: "vocab", title: "📚 词汇", desc: "本年级核心词", gradient: "from-amber-400 to-orange-400", to: `/primary/vocab/${g}` },
   { key: "chat", title: "💬 Spark 对话", desc: "AI 陪你说英语", gradient: "from-pink-400 to-rose-400", to: "/primary/chat" },

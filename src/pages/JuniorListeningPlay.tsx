@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Volume2 } from "lucide-react";
@@ -17,6 +17,7 @@ export default function JuniorListeningPlay() {
   const [picks, setPicks] = useState<Record<number, string>>({});
   const [showScript, setShowScript] = useState(false);
   const [streak, setStreak] = useState(0);
+  const shownAt = useRef<Record<number, number>>({});
 
   useEffect(() => {
     if (!id) return;
@@ -37,6 +38,7 @@ export default function JuniorListeningPlay() {
   const pick = async (idx: number, letter: string) => {
     if (picks[idx]) return;
     setPicks(p => ({ ...p, [idx]: letter }));
+    if (!shownAt.current[idx]) shownAt.current[idx] = Date.now() - 1500;
     const ok = letter === e!.questions[idx].answer;
     const { data: u } = await supabase.auth.getUser();
     if (u?.user) {
@@ -47,7 +49,8 @@ export default function JuniorListeningPlay() {
     }
     if (ok) {
       const next = streak + 1; setStreak(next);
-      await awardForCorrect(next, "junior_listening", `${id}:${idx}`, "junior_listening");
+      const ms = Date.now() - shownAt.current[idx];
+      await awardForCorrect(next, "junior_listening", `${id}:${idx}`, "junior_listening", ms);
       await bumpPetSkill("listener_ear", 1);
       const correctCount = Object.entries(picks).filter(([i, l]) => l === e!.questions[Number(i)].answer).length + 1;
       if (correctCount % 5 === 0) await awardForBlock("junior_listening");

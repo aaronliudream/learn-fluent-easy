@@ -9,51 +9,41 @@ import { cn } from "@/lib/utils";
 type Vocab = {
   id: string;
   word: string;
-  phonetic: string | null;
   pos: string | null;
   meaning_cn: string;
-  meaning_en: string | null;
   example_en: string | null;
   example_cn: string | null;
-  star_level: number | null;
   theme: string | null;
-  freq_rank: number | null;
-};
-
-type Theme = {
-  code: string;
-  name_cn: string;
-  emoji: string;
+  grade: number;
 };
 
 type Mode = "browse" | "quiz";
 
 export default function PrimaryVocab() {
   const [words, setWords] = useState<Vocab[]>([]);
-  const [themes, setThemes] = useState<Theme[]>([]);
+  const [grade, setGrade] = useState<number>(() => Number(localStorage.getItem("primary:lastGrade") ?? "1"));
   const [activeTheme, setActiveTheme] = useState<string>("all");
   const [mode, setMode] = useState<Mode>("browse");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Promise.all([
-      supabase
-        .from("gaokao_vocab")
-        .select("id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank")
-        .eq("stage", "primary")
-        .order("freq_rank", { ascending: true })
-        .limit(500),
-      supabase
-        .from("gaokao_vocab_themes")
-        .select("code,name_cn,emoji")
-        .eq("stage", "primary")
-        .order("sort_order"),
-    ]).then(([w, t]) => {
-      setWords((w.data ?? []) as Vocab[]);
-      setThemes((t.data ?? []) as Theme[]);
-      setLoading(false);
-    });
-  }, []);
+    setLoading(true);
+    supabase
+      .from("primary_vocab")
+      .select("id,word,pos,meaning_cn,example_en,example_cn,theme,grade")
+      .eq("grade", grade)
+      .then(({ data }) => {
+        setWords((data ?? []) as Vocab[]);
+        setActiveTheme("all");
+        setLoading(false);
+      });
+  }, [grade]);
+
+  const themes = useMemo(() => {
+    const m = new Map<string, number>();
+    words.forEach(w => { if (w.theme) m.set(w.theme, (m.get(w.theme) ?? 0) + 1); });
+    return Array.from(m.entries()).map(([name, count]) => ({ name, count }));
+  }, [words]);
 
   const filtered = useMemo(
     () => (activeTheme === "all" ? words : words.filter((w) => w.theme === activeTheme)),
@@ -77,7 +67,7 @@ export default function PrimaryVocab() {
             小学核心词汇
           </h1>
           <p className="mt-1 text-xs text-muted-foreground">
-            教育部新课标 · 共 {words.length} 词 · 已选 {filtered.length} 词
+            {["一","二","三","四","五","六"][grade-1]}年级 · 共 {words.length} 词 · 已选 {filtered.length} 词
           </p>
         </div>
         <div className="inline-flex rounded-full bg-secondary p-1 text-xs font-bold">
@@ -102,6 +92,20 @@ export default function PrimaryVocab() {
         </div>
       </div>
 
+      {/* 年级 */}
+      <div className="mb-3 flex flex-wrap gap-2">
+        {[1,2,3,4,5,6].map(g => (
+          <button
+            key={g}
+            onClick={() => { setGrade(g); localStorage.setItem("primary:lastGrade", String(g)); }}
+            className={cn(
+              "rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
+              g === grade ? "border-amber-400 bg-amber-400 text-white" : "border-border bg-card hover:border-amber-300"
+            )}
+          >G{g}</button>
+        ))}
+      </div>
+
       {/* 主题 */}
       <div className="mb-4 flex flex-wrap gap-2">
         <ThemeChip
@@ -111,10 +115,10 @@ export default function PrimaryVocab() {
         />
         {themes.map((t) => (
           <ThemeChip
-            key={t.code}
-            active={activeTheme === t.code}
-            onClick={() => setActiveTheme(t.code)}
-            label={`${t.emoji} ${t.name_cn}`}
+            key={t.name}
+            active={activeTheme === t.name}
+            onClick={() => setActiveTheme(t.name)}
+            label={`${t.name} · ${t.count}`}
           />
         ))}
       </div>
@@ -166,11 +170,6 @@ function BrowseGrid({ words }: { words: Vocab[] }) {
                   </span>
                 )}
               </div>
-              {w.phonetic && (
-                <div className="mt-0.5 font-mono text-xs text-muted-foreground">
-                  {w.phonetic}
-                </div>
-              )}
             </div>
             <button
               onClick={() => speak(w.word)}
@@ -308,11 +307,6 @@ function QuizMode({ words }: { words: Vocab[] }) {
             <Volume2 className="size-5" />
           </button>
         </div>
-        {cur.phonetic && (
-          <div className="mt-1 font-mono text-sm text-muted-foreground">
-            {cur.phonetic}
-          </div>
-        )}
       </div>
       <div className="grid gap-2 sm:grid-cols-2">
         {options.map((m) => {

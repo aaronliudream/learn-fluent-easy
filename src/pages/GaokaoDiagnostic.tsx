@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
+import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 
 type Q = {
   id: string;
@@ -44,11 +45,22 @@ export default function GaokaoDiagnostic() {
   const pick = async (letter: string) => {
     if (!q || picks[q.id]) return;
     setPicks((p) => ({ ...p, [q.id]: letter }));
+    const ok = letter === q.correct_answer;
+    if (ok) {
+      const correctSoFar = Object.entries(picks).filter(([qid, l]) => {
+        const qq = questions.find(x => x.id === qid);
+        return qq && l === qq.correct_answer;
+      }).length + 1;
+      await awardForCorrect(correctSoFar, "gaokao_diagnostic");
+      if (correctSoFar % 5 === 0) await awardForBlock("gaokao_diagnostic");
+    } else {
+      notifyWrong();
+    }
     await recordAttempt({
       questionType: "grammar",
       questionId: q.id,
       userAnswer: letter,
-      isCorrect: letter === q.correct_answer,
+      isCorrect: ok,
     });
     setTimeout(() => {
       if (idx + 1 >= questions.length) setDone(true);

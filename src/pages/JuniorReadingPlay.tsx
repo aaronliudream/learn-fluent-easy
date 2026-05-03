@@ -28,6 +28,7 @@ export default function JuniorReadingPlay() {
   const [userId, setUserId] = useState<string | null>(null);
   const [allRevealed, setAllRevealed] = useState(false);
   const startRef = useRef<number>(Date.now());
+  const qStartRef = useRef<Record<number, number>>({});
   const [now, setNow] = useState(Date.now());
   const [submitted, setSubmitted] = useState(false);
   const [attempt, setAttempt] = useState(1);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHeart, Star, Plus } from "lucide-react";
+import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHeart, Star, Shirt, Smile } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
@@ -8,11 +8,14 @@ import { celebratePet } from "@/components/pet/EvolutionCelebration";
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };
 type Dest = { id:string; name_cn:string; emoji:string; cost_coins:number; hunger_cost:number; exp_reward:number; unlock_level:number; description_cn:string };
-type Pet = { id:string; species_id:string; nickname:string; stage:number; level:number; exp:number; hunger:number; mood:number; is_active:boolean };
+type Pet = { id:string; species_id:string; nickname:string; stage:number; level:number; exp:number; hunger:number; mood:number; is_active:boolean; equipped_skin_id?:string|null };
+type Skin = { id:string; code:string; name_cn:string; description_cn:string; css_filter:string; rarity:number; price:number; unlock_level:number };
+type OwnedSkin = { skin_id:string };
+type Sticker = { id:string; code:string; emoji:string; caption_cn:string; unlock_level:number };
 type Inv = { food_id:string; qty:number };
 type Diary = { id:string; emoji:string|null; message:string; event_type:string; created_at:string };
 
-type Tab = "home" | "shop" | "outing" | "adopt" | "diary";
+type Tab = "home" | "shop" | "outing" | "adopt" | "skin" | "diary";
 
 export default function Pets() {
   const [authed, setAuthed] = useState<boolean|null>(null);
@@ -25,6 +28,9 @@ export default function Pets() {
   const [dests, setDests] = useState<Dest[]>([]);
   const [inv, setInv] = useState<Inv[]>([]);
   const [diary, setDiary] = useState<Diary[]>([]);
+  const [skins, setSkins] = useState<Skin[]>([]);
+  const [owned, setOwned] = useState<OwnedSkin[]>([]);
+  const [stickers, setStickers] = useState<Sticker[]>([]);
   const [toast, setToast] = useState<string>("");
 
   const reload = async () => {
@@ -32,7 +38,7 @@ export default function Pets() {
     const uid = u?.user?.id;
     setAuthed(!!uid);
     if (!uid) { setLoading(false); return; }
-    const [c, p, sp, fd, ds, iv, dy] = await Promise.all([
+    const [c, p, sp, fd, ds, iv, dy, sk, os, st] = await Promise.all([
       supabase.from("user_coins").select("balance").eq("user_id", uid).maybeSingle(),
       supabase.from("user_pets").select("*").eq("user_id", uid).order("created_at"),
       supabase.from("pet_species").select("*").order("sort_order"),
@@ -40,6 +46,9 @@ export default function Pets() {
       supabase.from("pet_destinations").select("*").order("sort_order"),
       supabase.from("pet_inventory").select("food_id,qty").eq("user_id", uid),
       supabase.from("pet_diary").select("id,emoji,message,event_type,created_at").eq("user_id", uid).order("created_at",{ascending:false}).limit(30),
+      (supabase as any).from("pet_skins").select("*").order("sort_order"),
+      (supabase as any).from("user_pet_skins").select("skin_id").eq("user_id", uid),
+      (supabase as any).from("pet_stickers").select("*").order("sort_order"),
     ]);
     setBalance(c.data?.balance ?? 0);
     setPets((p.data ?? []) as Pet[]);
@@ -48,6 +57,9 @@ export default function Pets() {
     setDests((ds.data ?? []) as Dest[]);
     setInv((iv.data ?? []) as Inv[]);
     setDiary((dy.data ?? []) as Diary[]);
+    setSkins((sk.data ?? []) as Skin[]);
+    setOwned((os.data ?? []) as OwnedSkin[]);
+    setStickers((st.data ?? []) as Sticker[]);
     setLoading(false);
   };
   useEffect(() => { reload(); }, []);
@@ -88,12 +100,13 @@ export default function Pets() {
       ) : (
         <>
           {/* Tabs */}
-          <div className="mb-4 grid grid-cols-5 gap-1 rounded-2xl bg-secondary p-1 text-[11px] font-bold">
+          <div className="mb-4 grid grid-cols-6 gap-1 rounded-2xl bg-secondary p-1 text-[11px] font-bold">
             {([
               ["home", "🏠 我家", Heart],
               ["shop", "🛒 商店", ShoppingBag],
               ["outing", "🗺️ 出游", MapPin],
               ["adopt", "🥚 领养", Sparkles],
+              ["skin", "👕 皮肤", Shirt],
               ["diary", "📖 日记", BookHeart],
             ] as const).map(([k, lbl]) => (
               <button
@@ -103,10 +116,11 @@ export default function Pets() {
             ))}
           </div>
 
-          {tab === "home" && <HomeTab pets={pets} active={active} species={speciesMap} inv={inv} foods={foods} onAfter={reload} flash={flash} />}
+          {tab === "home" && <HomeTab pets={pets} active={active} species={speciesMap} inv={inv} foods={foods} skins={skins} stickers={stickers} onAfter={reload} flash={flash} />}
           {tab === "shop" && <ShopTab foods={foods} balance={balance} inv={inv} onAfter={reload} flash={flash} />}
           {tab === "outing" && <OutingTab pets={pets} active={active} dests={dests} balance={balance} species={speciesMap} onAfter={reload} flash={flash} />}
           {tab === "adopt" && <AdoptTab species={species} balance={balance} onAfter={reload} flash={flash} setTab={setTab} />}
+          {tab === "skin" && <SkinTab active={active} species={speciesMap} skins={skins} owned={owned} balance={balance} onAfter={reload} flash={flash} />}
           {tab === "diary" && <DiaryTab diary={diary} />}
         </>
       )}
@@ -126,8 +140,9 @@ function petEmoji(p: Pet, sp?: Species) {
 }
 const STAGE_LABEL = ["蛋", "幼年", "成年", "传说"];
 
-function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
+function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, flash }: any) {
   const [feedingFood, setFeedingFood] = useState<string | null>(null);
+  const [pickedSticker, setPickedSticker] = useState<string | null>(null);
   if (!pets.length) {
     return (
       <div className="rounded-3xl border-2 border-dashed border-purple-300 bg-purple-50/50 p-10 text-center dark:bg-purple-950/20">
@@ -140,6 +155,10 @@ function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
   const sp: Species | undefined = species[active.species_id];
   const expToNext = active.level * 100;
   const expPct = Math.min(100, Math.round((active.exp / expToNext) * 100));
+  const equippedSkin: Skin | undefined = (skins as Skin[]).find(s => s.id === active.equipped_skin_id);
+  const skinFilter = equippedSkin?.css_filter || "";
+  const unlockedStickers = (stickers as Sticker[]).filter(s => s.unlock_level <= active.level);
+  const lockedStickers = (stickers as Sticker[]).filter(s => s.unlock_level > active.level).slice(0, 4);
 
   const setActive = async (id: string) => {
     await supabase.rpc("set_active_pet", { _pet_id: id });
@@ -180,8 +199,16 @@ function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
       {/* Active pet */}
       <div className="rounded-3xl bg-gradient-to-br from-purple-100 via-pink-50 to-amber-50 p-6 shadow-tile dark:from-purple-950/40 dark:via-pink-950/30 dark:to-amber-950/30">
         <div className="flex flex-col items-center text-center">
-          <div className="text-7xl drop-shadow-md md:text-8xl animate-bounce-slow">{petEmoji(active, sp)}</div>
-          <div className="mt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">{sp?.name_cn} · {STAGE_LABEL[active.stage]}</div>
+          <div className="relative">
+            <div className="text-7xl drop-shadow-md md:text-8xl animate-bounce-slow" style={{ filter: skinFilter }}>{petEmoji(active, sp)}</div>
+            {pickedSticker && (
+              <div className="absolute -right-3 -top-2 text-3xl animate-bounce">{pickedSticker}</div>
+            )}
+          </div>
+          <div className="mt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            {sp?.name_cn} · {STAGE_LABEL[active.stage]}
+            {equippedSkin && equippedSkin.code !== "classic" && <span className="ml-1.5 text-purple-500">· {equippedSkin.name_cn}</span>}
+          </div>
           <h2 className="mt-0.5 text-xl font-extrabold">{active.nickname}</h2>
           <div className="mt-1 flex items-center gap-2 text-xs">
             <span className="rounded-full bg-purple-500/10 px-2 py-0.5 font-bold text-purple-600">Lv.{active.level}</span>
@@ -192,6 +219,29 @@ function HomeTab({ pets, active, species, inv, foods, onAfter, flash }: any) {
           <Bar label="经验" value={expPct} hint={`${active.exp} / ${expToNext}`} color="from-purple-400 to-pink-500" />
           <Bar label="饱食" value={active.hunger} hint={`${active.hunger}/100`} color="from-amber-400 to-orange-500" />
           <Bar label="心情" value={active.mood} hint={`${active.mood}/100`} color="from-rose-400 to-pink-500" />
+        </div>
+      </div>
+
+      {/* Sticker board */}
+      <div className="rounded-2xl border-2 border-border bg-card p-3">
+        <div className="mb-2 flex items-center justify-between">
+          <h3 className="text-sm font-extrabold">😊 表情贴纸</h3>
+          <span className="text-[10px] text-muted-foreground">已解锁 {unlockedStickers.length}/{(stickers as Sticker[]).length}</span>
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          {unlockedStickers.map((s: Sticker) => (
+            <button key={s.id} onClick={()=>{ setPickedSticker(s.emoji); setTimeout(()=>setPickedSticker(null), 1800); }}
+              title={s.caption_cn}
+              className="rounded-xl border border-border bg-background p-1.5 text-xl transition hover:-translate-y-0.5 hover:border-purple-400">
+              {s.emoji}
+            </button>
+          ))}
+          {lockedStickers.map((s: Sticker) => (
+            <div key={s.id} title={`Lv.${s.unlock_level} 解锁`}
+              className="rounded-xl border border-dashed border-border bg-muted/40 p-1.5 text-xl opacity-40 grayscale">
+              {s.emoji}
+            </div>
+          ))}
         </div>
       </div>
 
@@ -428,6 +478,96 @@ function DiaryTab({ diary }: { diary: Diary[] }) {
           </div>
         </div>
       ))}
+    </div>
+  );
+}
+
+function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any) {
+  const [busy, setBusy] = useState<string | null>(null);
+  if (!active) {
+    return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground">先去领养一只宠物吧 🥚</div>;
+  }
+  const sp: Species | undefined = species[active.species_id];
+  const ownedIds = new Set((owned as OwnedSkin[]).map(o => o.skin_id));
+  const baseEmoji = petEmoji(active, sp);
+
+  const buy = async (skin: Skin) => {
+    setBusy(skin.id);
+    const { data, error } = await (supabase as any).rpc("buy_pet_skin", { _skin_id: skin.id });
+    setBusy(null);
+    if (error) { flash("❌ " + error.message); return; }
+    const r = data as any;
+    if (!r?.ok) {
+      flash(r?.reason === "not_enough" ? "💰 星币不够，再去学习赚一些吧！" : r?.reason === "already_owned" ? "已经拥有啦" : "❌ 购买失败");
+      return;
+    }
+    flash(`🎉 解锁「${skin.name_cn}」皮肤！`);
+    onAfter();
+  };
+  const equip = async (skin: Skin | null) => {
+    setBusy(skin?.id || "off");
+    const { data, error } = await (supabase as any).rpc("equip_pet_skin", { _pet_id: active.id, _skin_id: skin?.id ?? null });
+    setBusy(null);
+    if (error) { flash("❌ " + error.message); return; }
+    const r = data as any;
+    if (!r?.ok) {
+      flash(r?.reason === "level_low" ? `⛔ 需要 Lv.${r.need_level} 才能装备` : r?.reason === "not_owned" ? "还未拥有该皮肤" : "❌ 装备失败");
+      return;
+    }
+    flash(skin ? `✨ 已换上「${skin.name_cn}」` : "已恢复原色");
+    onAfter();
+  };
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 p-3 dark:from-purple-950/30 dark:to-pink-950/30">
+        <div className="text-4xl" style={{ filter: (skins as Skin[]).find(s => s.id === active.equipped_skin_id)?.css_filter || "" }}>
+          {baseEmoji}
+        </div>
+        <div className="flex-1 text-sm"><b>{active.nickname}</b> · Lv.{active.level}</div>
+        <button onClick={()=>equip(null)} disabled={busy==="off" || !active.equipped_skin_id}
+          className="rounded-full bg-secondary px-3 py-1 text-xs font-bold disabled:opacity-40">恢复原色</button>
+      </div>
+
+      <div className="grid gap-3 sm:grid-cols-2">
+        {(skins as Skin[]).map(skin => {
+          const isOwned = ownedIds.has(skin.id) || skin.price === 0;
+          const isEquipped = active.equipped_skin_id === skin.id || (skin.code === "classic" && !active.equipped_skin_id);
+          const levelOk = active.level >= skin.unlock_level;
+          const canBuy = balance >= skin.price;
+          return (
+            <div key={skin.id} className={cn(
+              "relative flex items-center gap-3 rounded-2xl border-2 bg-card p-3 transition",
+              isEquipped ? "border-purple-500 shadow-md" : "border-border",
+            )}>
+              <div className="text-5xl" style={{ filter: skin.css_filter }}>{baseEmoji}</div>
+              <div className="min-w-0 flex-1">
+                <div className="flex items-center gap-1.5">
+                  <span className="font-extrabold">{skin.name_cn}</span>
+                  {Array.from({length: skin.rarity}).map((_,i)=><Star key={i} className="size-3 fill-amber-500 text-amber-500" />)}
+                </div>
+                <div className="text-[11px] text-muted-foreground line-clamp-1">{skin.description_cn}</div>
+                <div className="mt-0.5 text-[10px] text-muted-foreground">需要 Lv.{skin.unlock_level}</div>
+              </div>
+              {isEquipped ? (
+                <div className="shrink-0 rounded-full bg-purple-500 px-3 py-1 text-[10px] font-extrabold text-white shadow">已装备</div>
+              ) : isOwned ? (
+                <button onClick={()=>equip(skin)} disabled={busy===skin.id || !levelOk}
+                  className={cn("shrink-0 rounded-full px-3 py-1.5 text-[11px] font-extrabold text-white shadow",
+                    levelOk ? "bg-gradient-to-r from-purple-500 to-pink-500" : "bg-muted-foreground/40")}>
+                  {levelOk ? "装备" : `Lv.${skin.unlock_level}`}
+                </button>
+              ) : (
+                <button onClick={()=>buy(skin)} disabled={busy===skin.id || !canBuy}
+                  className={cn("flex shrink-0 items-center gap-1 rounded-full px-3 py-1.5 text-[11px] font-extrabold text-white shadow",
+                    canBuy ? "bg-gradient-to-r from-amber-500 to-orange-500" : "bg-muted-foreground/40")}>
+                  <Coins className="size-3" /> {skin.price}
+                </button>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

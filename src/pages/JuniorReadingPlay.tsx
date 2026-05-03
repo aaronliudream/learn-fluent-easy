@@ -85,6 +85,18 @@ export default function JuniorReadingPlay() {
           );
         })}
       </div>
+      <BottomReturn to="/junior/reading" label="返回阅读列表" extra={[{to:"/junior",label:"🏫 初中首页"},{to:"/pets",label:"🐾 宠物"}]} />
     </main>
+  );
+}
+
+function BottomReturn({ to, label, extra }: { to: string; label: string; extra?: { to: string; label: string }[] }) {
+  return (
+    <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
+      <Link to={to} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" />{label}</Link>
+      {extra?.map(e => (
+        <Link key={e.to} to={e.to} className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted">{e.label}</Link>
+      ))}
+    </div>
   );
 }

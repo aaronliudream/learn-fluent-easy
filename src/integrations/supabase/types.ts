@@ -125,6 +125,100 @@ export type Database = {
         }
         Relationships: []
       }
+      community_goal_contributions: {
+        Row: {
+          contribution: number
+          goal_id: string
+          id: string
+          rewarded: boolean
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          contribution?: number
+          goal_id: string
+          id?: string
+          rewarded?: boolean
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          contribution?: number
+          goal_id?: string
+          id?: string
+          rewarded?: boolean
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "community_goal_contributions_goal_id_fkey"
+            columns: ["goal_id"]
+            isOneToOne: false
+            referencedRelation: "community_goals"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      community_goals: {
+        Row: {
+          created_at: string
+          current_value: number
+          description_cn: string | null
+          ends_at: string | null
+          goal_code: string
+          id: string
+          is_active: boolean
+          reward_skin_id: string | null
+          reward_species_id: string | null
+          starts_at: string
+          target_metric: string
+          target_value: number
+          title_cn: string
+          title_en: string
+        }
+        Insert: {
+          created_at?: string
+          current_value?: number
+          description_cn?: string | null
+          ends_at?: string | null
+          goal_code: string
+          id?: string
+          is_active?: boolean
+          reward_skin_id?: string | null
+          reward_species_id?: string | null
+          starts_at?: string
+          target_metric: string
+          target_value: number
+          title_cn: string
+          title_en: string
+        }
+        Update: {
+          created_at?: string
+          current_value?: number
+          description_cn?: string | null
+          ends_at?: string | null
+          goal_code?: string
+          id?: string
+          is_active?: boolean
+          reward_skin_id?: string | null
+          reward_species_id?: string | null
+          starts_at?: string
+          target_metric?: string
+          target_value?: number
+          title_cn?: string
+          title_en?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "community_goals_reward_species_id_fkey"
+            columns: ["reward_species_id"]
+            isOneToOne: false
+            referencedRelation: "pet_species"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       coop_session_members: {
         Row: {
           contributed: number
@@ -3001,84 +3095,111 @@ export type Database = {
           code: string
           created_at: string
           css_filter: string
+          culture_tag: string | null
           description_cn: string | null
           id: string
           name_cn: string
           price: number
           rarity: number
+          season_tag: string | null
           sort_order: number
           unlock_level: number
+          unlock_type: string | null
         }
         Insert: {
           available_until?: string | null
           code: string
           created_at?: string
           css_filter?: string
+          culture_tag?: string | null
           description_cn?: string | null
           id?: string
           name_cn: string
           price?: number
           rarity?: number
+          season_tag?: string | null
           sort_order?: number
           unlock_level?: number
+          unlock_type?: string | null
         }
         Update: {
           available_until?: string | null
           code?: string
           created_at?: string
           css_filter?: string
+          culture_tag?: string | null
           description_cn?: string | null
           id?: string
           name_cn?: string
           price?: number
           rarity?: number
+          season_tag?: string | null
           sort_order?: number
           unlock_level?: number
+          unlock_type?: string | null
         }
         Relationships: []
       }
       pet_species: {
         Row: {
           adopt_cost: number
+          cefr_band: string | null
           description_cn: string | null
           emoji_adult: string
           emoji_baby: string
           emoji_egg: string
           emoji_legend: string
           id: string
+          is_starter: boolean | null
           name_cn: string
+          name_en: string | null
           personality_cn: string | null
+          planet_zone: string | null
           rarity: number
           sort_order: number
           unlock_level: number
+          unlock_task_code: string | null
+          unlock_task_target: number | null
         }
         Insert: {
           adopt_cost?: number
+          cefr_band?: string | null
           description_cn?: string | null
           emoji_adult: string
           emoji_baby: string
           emoji_egg: string
           emoji_legend: string
           id: string
+          is_starter?: boolean | null
           name_cn: string
+          name_en?: string | null
           personality_cn?: string | null
+          planet_zone?: string | null
           rarity?: number
           sort_order?: number
           unlock_level?: number
+          unlock_task_code?: string | null
+          unlock_task_target?: number | null
         }
         Update: {
           adopt_cost?: number
+          cefr_band?: string | null
           description_cn?: string | null
           emoji_adult?: string
           emoji_baby?: string
           emoji_egg?: string
           emoji_legend?: string
           id?: string
+          is_starter?: boolean | null
           name_cn?: string
+          name_en?: string | null
           personality_cn?: string | null
+          planet_zone?: string | null
           rarity?: number
           sort_order?: number
           unlock_level?: number
+          unlock_task_code?: string | null
+          unlock_task_target?: number | null
         }
         Relationships: []
       }
@@ -4687,6 +4808,14 @@ export type Database = {
       buy_pet_skin: { Args: { _skin_id: string }; Returns: Json }
       cancel_duel_queue: { Args: never; Returns: undefined }
       cancel_listing: { Args: { _listing_id: string }; Returns: undefined }
+      contribute_community_goal: {
+        Args: { _amount: number; _goal_code: string }
+        Returns: {
+          completed: boolean
+          current_value: number
+          target_value: number
+        }[]
+      }
       coop_contribute: {
         Args: { _correct: number; _session_id: string }
         Returns: undefined

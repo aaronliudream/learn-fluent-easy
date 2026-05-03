@@ -48,6 +48,10 @@ const JuniorGrammar = lazy(() => import("./pages/JuniorGrammar.tsx"));
 const JuniorGrammarPoint = lazy(() => import("./pages/JuniorGrammarPoint.tsx"));
 const JuniorReading = lazy(() => import("./pages/JuniorReading.tsx"));
 const JuniorReadingPlay = lazy(() => import("./pages/JuniorReadingPlay.tsx"));
+const JuniorListening = lazy(() => import("./pages/JuniorListening.tsx"));
+const JuniorListeningPlay = lazy(() => import("./pages/JuniorListeningPlay.tsx"));
+const JuniorWriting = lazy(() => import("./pages/JuniorWriting.tsx"));
+const JuniorWritingPlay = lazy(() => import("./pages/JuniorWritingPlay.tsx"));
 const GaokaoGrammar = lazy(() => import("./pages/GaokaoGrammar.tsx"));
 const GaokaoGrammarPoint = lazy(() => import("./pages/GaokaoGrammarPoint.tsx"));
 const GaokaoGrammarQuiz = lazy(() => import("./pages/GaokaoGrammarQuiz.tsx"));
@@ -91,6 +95,10 @@ const FloatingPetGate = () => {
     pathname.startsWith("/primary/vocab") ||
     pathname.startsWith("/primary/letters") ||
     pathname.startsWith("/junior/vocab") ||
+    pathname.startsWith("/junior/grammar") ||
+    pathname.startsWith("/junior/reading") ||
+    pathname.startsWith("/junior/listening") ||
+    pathname.startsWith("/junior/writing") ||
     pathname.startsWith("/gaokao/grammar") ||
     pathname.startsWith("/gaokao/reading") ||
     pathname.startsWith("/gaokao/vocab") ||
@@ -171,6 +179,10 @@ const App = () => (
           <Route path="/junior/grammar/:id" element={<JuniorGrammarPoint />} />
           <Route path="/junior/reading" element={<JuniorReading />} />
           <Route path="/junior/reading/:id" element={<JuniorReadingPlay />} />
+          <Route path="/junior/listening" element={<JuniorListening />} />
+          <Route path="/junior/listening/:id" element={<JuniorListeningPlay />} />
+          <Route path="/junior/writing" element={<JuniorWriting />} />
+          <Route path="/junior/writing/:id" element={<JuniorWritingPlay />} />
           <Route path="/gaokao" element={<Gaokao />} />
           <Route path="/gaokao/diagnostic" element={<GaokaoDiagnostic />} />
           <Route path="/gaokao/grammar" element={<GaokaoGrammar />} />

@@ -307,6 +307,10 @@ export default function GaokaoReadingArticle() {
       toast.warning(timeUp ? "时间到，请补完所有题目后再查看答案和解析" : "请先完成所有题目，再查看答案和解析");
       return;
     }
+    if (!timeUp && readSecLeft > 0) {
+      toast.warning(`请认真阅读，还需 ${readSecLeft} 秒才能交卷`);
+      return;
+    }
 
     const now = Date.now();
     setSubmittedAt(now);

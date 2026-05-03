@@ -47,6 +47,54 @@ export type Database = {
         }
         Relationships: []
       }
+      audio_clips: {
+        Row: {
+          audio_url: string | null
+          created_at: string
+          difficulty: number
+          duration_ms: number | null
+          grade_band: string
+          id: string
+          ipa: string | null
+          is_dialogue: boolean
+          source: string | null
+          speaker: string | null
+          tags: string[] | null
+          text: string
+          translation_cn: string | null
+        }
+        Insert: {
+          audio_url?: string | null
+          created_at?: string
+          difficulty?: number
+          duration_ms?: number | null
+          grade_band?: string
+          id?: string
+          ipa?: string | null
+          is_dialogue?: boolean
+          source?: string | null
+          speaker?: string | null
+          tags?: string[] | null
+          text: string
+          translation_cn?: string | null
+        }
+        Update: {
+          audio_url?: string | null
+          created_at?: string
+          difficulty?: number
+          duration_ms?: number | null
+          grade_band?: string
+          id?: string
+          ipa?: string | null
+          is_dialogue?: boolean
+          source?: string | null
+          speaker?: string | null
+          tags?: string[] | null
+          text?: string
+          translation_cn?: string | null
+        }
+        Relationships: []
+      }
       coop_session_members: {
         Row: {
           contributed: number

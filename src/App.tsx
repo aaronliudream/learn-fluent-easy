@@ -37,6 +37,7 @@ const China = lazy(() => import("./pages/China.tsx"));
 const Primary = lazy(() => import("./pages/Primary.tsx"));
 const PrimaryLetters = lazy(() => import("./pages/PrimaryLetters.tsx"));
 const PrimaryVocab = lazy(() => import("./pages/PrimaryVocab.tsx"));
+const PrimarySpeak = lazy(() => import("./pages/PrimarySpeak.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
 const JuniorVocab = lazy(() => import("./pages/JuniorVocab.tsx"));
 const GaokaoGrammar = lazy(() => import("./pages/GaokaoGrammar.tsx"));
@@ -116,6 +117,7 @@ const App = () => (
           <Route path="/primary" element={<Primary />} />
           <Route path="/primary/letters" element={<PrimaryLetters />} />
           <Route path="/primary/vocab" element={<PrimaryVocab />} />
+          <Route path="/primary/speak" element={<PrimarySpeak />} />
           <Route path="/junior" element={<Junior />} />
           <Route path="/junior/vocab" element={<JuniorVocab />} />
           <Route path="/gaokao" element={<Gaokao />} />

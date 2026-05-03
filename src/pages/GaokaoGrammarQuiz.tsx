@@ -4,6 +4,7 @@ import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, RotateCcw, BookOpen } f
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { recordAttempt } from "@/lib/gaokaoMastery";
+import { awardCoins } from "@/lib/coins";
 import { recordGrammarAttempt, loadGrammarMastery, LEVEL_META, type GrammarMastery } from "@/lib/grammarFsrs";
 import { toast } from "sonner";
 
@@ -122,6 +123,7 @@ export default function GaokaoGrammarQuiz() {
     setPicked(letter);
     const isCorrect = letter === q.correct_answer;
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), wrong: s.wrong + (isCorrect ? 0 : 1) }));
+    if (isCorrect) awardCoins(3, "gaokao_grammar_correct").catch(() => {});
     const latencyMs = Date.now() - startTs;
     await recordAttempt({ questionType: "grammar", questionId: q.id, userAnswer: letter, isCorrect });
     const res = await recordGrammarAttempt({

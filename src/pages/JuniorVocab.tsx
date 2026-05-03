@@ -4,6 +4,7 @@ import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw } fro
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { awardCoins } from "@/lib/coins";
 import { cn } from "@/lib/utils";
 
 type Vocab = {
@@ -241,6 +242,12 @@ function QuizMode({ words }: { words: Vocab[] }) {
 
   if (idx >= queue.length) {
     const pct = Math.round((score.correct / score.total) * 100);
+    // 完成一组奖励：基础 +5，全对 +20
+    if (typeof window !== "undefined" && !(queue as any).__rewarded) {
+      (queue as any).__rewarded = true;
+      const bonus = pct === 100 ? 20 : 5;
+      awardCoins(bonus, "junior_vocab_finish").catch(() => {});
+    }
     return (
       <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
         <Trophy className="mx-auto size-12 text-amber-500" />
@@ -270,6 +277,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
     const correct = m === cur.meaning_cn;
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
     speak(cur.word);
+    if (correct) awardCoins(2, "junior_vocab_correct").catch(() => {});
     await Promise.all([
       bumpVocabMastery({ vocabId: cur.id, isCorrect: correct, kind: "en2cn" }).catch(() => {}),
       recordAttempt({

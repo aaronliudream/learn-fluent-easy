@@ -12,8 +12,10 @@ export default function JuniorReading() {
   const backTo = grade ? `/junior/g/${grade}` : "/junior";
   const [items, setItems] = useState<R[]>([]);
   useEffect(() => {
+    const gradeMap: Record<string, number> = { "1": 7, "2": 8, "3": 9 };
+    const dbGrade = grade ? (gradeMap[grade] ?? Number(grade)) : null;
     let q = supabase.from("junior_reading").select("id,title,topic,word_count,difficulty,grade").order("grade").order("created_at", { ascending: true });
-    if (grade) q = q.eq("grade", Number(grade));
+    if (dbGrade) q = q.eq("grade", dbGrade);
     q.then(({ data }) => setItems((data ?? []) as R[]));
   }, [grade]);
   return (

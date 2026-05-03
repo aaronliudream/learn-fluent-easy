@@ -219,9 +219,6 @@ export default function JuniorReadingPlay() {
             timeOk ? "border-emerald-400 text-emerald-600" : "border-amber-400 text-amber-600")}>
             <Clock className="size-3" /> {Math.min(elapsed, minSec)}/{minSec}s
           </span>
-          <span className="inline-flex items-center gap-1 rounded-full border px-2 py-1 font-bold text-muted-foreground">
-            <ShieldCheck className="size-3" /> 反盗版保护已开启
-          </span>
           {currentRow && <StarRating stars={currentRow.stars} size={14} />}
           {attempt > 1 && <span className="rounded-full bg-orange-500/10 text-orange-600 px-2 py-1 font-bold">第 {attempt} 次尝试</span>}
         </div>

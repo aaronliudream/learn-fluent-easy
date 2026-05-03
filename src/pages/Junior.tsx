@@ -91,6 +91,22 @@ export default function Junior() {
           <li>📈 自动统计掌握度，动态调整复习</li>
         </ul>
       </div>
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+        <Link to="/pets" className="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 p-3 text-white shadow-tile transition hover:-translate-y-0.5">
+          <Heart className="size-5" />
+          <div className="flex-1">
+            <div className="text-sm font-extrabold">我的电子宠物</div>
+            <div className="text-[11px] opacity-90">学习赚星币 · 喂养与冒险</div>
+          </div>
+        </Link>
+        <Link to="/parent" className="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-3 text-white shadow-tile transition hover:-translate-y-0.5">
+          <Users className="size-5" />
+          <div className="flex-1">
+            <div className="text-sm font-extrabold">家长进度报告</div>
+            <div className="text-[11px] opacity-90">三学段全局进度看板</div>
+          </div>
+        </Link>
+      </div>
     </main>
   );
 }

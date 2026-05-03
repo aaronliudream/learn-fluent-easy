@@ -9,7 +9,6 @@ import {
 } from "./languages";
 import { BUILTIN, EN, ZH, type StringKey, interpolate } from "./strings";
 import { localizeProtagonist } from "./protagonistName";
-import { UI_PHRASES } from "./uiPhrases.generated";
 import { startDomLeakScanner } from "./devLeakDetector";
 
 const STORAGE_LANG = "fluentpath.lang";
@@ -24,6 +23,7 @@ const STORAGE_PICKED = "fluentpath.langPicked";
 // catalog. Bump the prefix so every client re-fetches once with the new
 // Chinese-source pipeline.
 const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v5.";
+const TRANSLATION_FETCH_TIMEOUT_MS = 2500;
 
 type Catalog = Partial<Record<StringKey, string>>;
 
@@ -149,6 +149,18 @@ function saveDynCache(lang: LangCode, c: Record<string, string>) {
   try { localStorage.setItem(STORAGE_CACHE_PREFIX + lang + ".dyn", JSON.stringify(c)); } catch { /* ignore */ }
 }
 
+async function invokeTranslateWithTimeout(
+  targetLanguage: string,
+  items: { key: string; text: string }[],
+) {
+  return Promise.race([
+    supabase.functions.invoke("translate", { body: { targetLanguage, items } }),
+    new Promise<{ data: null; error: Error }>((resolve) => {
+      window.setTimeout(() => resolve({ data: null, error: new Error("translation timeout") }), TRANSLATION_FETCH_TIMEOUT_MS);
+    }),
+  ]);
+}
+
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<LangCode>(() => {
     if (typeof window === "undefined") return DEFAULT_LANG;
@@ -219,9 +231,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       }));
       const targetLanguage = getLanguageInfo(lang).englishName;
       try {
-        const { data, error } = await supabase.functions.invoke("translate", {
-          body: { targetLanguage, items },
-        });
+        const { data, error } = await invokeTranslateWithTimeout(targetLanguage, items);
         if (cancelled) return;
         if (error) {
           console.error("translate error", error);
@@ -241,59 +251,6 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     })();
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang]);
-
-  // Warm the dynamic-translation cache for high-frequency UI phrases that are
-  // sprinkled across pages as <T>中文</T>. Without this, every page hop costs
-  // one network round-trip the first time a user visits it. By front-loading
-  // these right after the user picks a language, subsequent navigation is
-  // basically instant (cache hits in localStorage).
-  useEffect(() => {
-    if (lang === "zh") return; // Chinese users see the source text directly.
-    let cancelled = false;
-    // Stagger the warm-up so we don't compete with the static-string fetch
-    // above (which renders the immediate UI). 600ms is enough for the first
-    // paint to settle.
-    const timer = window.setTimeout(() => {
-      if (cancelled) return;
-      const cache = dynCacheRef.current;
-      const missing = UI_PHRASES.filter(
-        (p) => !isUsableTranslation(lang, p, cache[p]),
-      );
-      if (missing.length === 0) return;
-      const targetLanguage = getLanguageInfo(lang).englishName;
-      // Send in chunks of 80 — keeps each request small enough to stream
-      // back quickly and avoids hitting model context limits.
-      const CHUNK = 80;
-      (async () => {
-        for (let i = 0; i < missing.length; i += CHUNK) {
-          if (cancelled) return;
-          const slice = missing.slice(i, i + CHUNK);
-          const items = slice.map((text, idx) => ({ key: String(idx), text }));
-          try {
-            const { data, error } = await supabase.functions.invoke("translate", {
-              body: { targetLanguage, items },
-            });
-            if (cancelled || error) continue;
-            const translations: Record<string, string> = data?.translations || {};
-            const next = { ...dynCacheRef.current };
-            slice.forEach((src, idx) => {
-              const tr = translations[String(idx)];
-              if (isUsableTranslation(lang, src, tr)) next[src] = stripHtml(tr);
-            });
-            dynCacheRef.current = next;
-            saveDynCache(lang, next);
-            bump((x) => x + 1);
-          } catch (e) {
-            console.error("UI phrases warm-up failed", e);
-          }
-        }
-      })();
-    }, 600);
-    return () => {
-      cancelled = true;
-      window.clearTimeout(timer);
-    };
   }, [lang]);
 
   const setLang = useCallback((l: LangCode) => {

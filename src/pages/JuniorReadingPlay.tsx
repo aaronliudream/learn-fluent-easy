@@ -76,8 +76,6 @@ export default function JuniorReadingPlay() {
 
   const pick = async (qi: number, letter: string) => {
     if (!r || picks[qi]) return;
-    const key = `${r.id}:${qi}`;
-    const startedAt = (pick as any)._t?.[key] ?? Date.now() - 1500;
     setPicks(p => ({ ...p, [qi]: letter }));
     const ok = letter === r.questions[qi].answer;
     if (userId) {
@@ -89,7 +87,7 @@ export default function JuniorReadingPlay() {
     if (ok) {
       const next = streak + 1;
       setStreak(next);
-      await awardForCorrect(next, "junior_reading", key, "junior_reading", Date.now() - startedAt);
+      await awardForCorrect(next, "junior_reading", `${r.id}:${qi}`, "junior_reading");
       await bumpPetSkill("reading_owl", 1);
     } else {
       setStreak(0); notifyWrong();

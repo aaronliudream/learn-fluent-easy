@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Volume2, Check, X, Loader2, Trophy, RotateCw, Sparkles, Target, Headphones, Brain, PenLine } from "lucide-react";
+import { ArrowLeft, Volume2, Check, X, Loader2, Trophy, RotateCw, Sparkles, Target, Headphones, Brain, PenLine, Coins } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { cn } from "@/lib/utils";
+import { awardCoins } from "@/lib/coins";
 
 type Word = {
   id: string;
@@ -187,7 +188,13 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
 }) {
   const pct = Math.round((correct/Math.max(1,total))*100);
   const score = correct * 10 + (pct === 100 ? 50 : 0);
-  useEffect(() => { saveScore(gameType, grade, score, pct/100, durationMs); }, []);
+  // 奖励星币：答对 1 题 = 2 星币；满分额外 +20；封顶在后端按日 500 控制
+  const coinReward = correct * 2 + (pct === 100 ? 20 : 0);
+  const [coinResult, setCoinResult] = useState<{awarded:number;balance:number;capped:boolean}|null>(null);
+  useEffect(() => {
+    saveScore(gameType, grade, score, pct/100, durationMs);
+    awardCoins(coinReward, `primary_${gameType}`).then(r => { if (r) setCoinResult(r); });
+  }, []);
   return (
     <div className="rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 p-8 text-center shadow-tile">
       <Trophy className="mx-auto size-14 text-amber-500" />
@@ -197,12 +204,23 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
       <p className="mt-1 text-sm text-muted-foreground">
         答对 {correct} / {total} · 得分 <span className="font-extrabold text-amber-600">+{score}</span>
       </p>
+      {coinResult && coinResult.awarded > 0 && (
+        <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 px-4 py-1.5 text-sm font-extrabold text-white shadow-tile animate-bounce-slow">
+          <Coins className="size-4" /> +{coinResult.awarded} 星币 · 余额 {coinResult.balance}
+        </div>
+      )}
+      {coinResult?.capped && (
+        <div className="mt-2 text-[11px] text-amber-700">今日星币已达上限，继续加油明天再来 🌙</div>
+      )}
       <button
         onClick={onRetry}
         className="mt-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-6 py-2.5 text-sm font-extrabold text-white shadow"
       >
         <RotateCw className="size-4" /> 再玩一局
       </button>
+      <Link to="/pets" className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-purple-600 hover:underline">
+        🐾 去看看我的宠物
+      </Link>
     </div>
   );
 }

@@ -34,6 +34,9 @@ const WorkplacePlay = lazy(() => import("./pages/WorkplacePlay.tsx"));
 const Talk = lazy(() => import("./pages/Talk.tsx"));
 const Gaokao = lazy(() => import("./pages/Gaokao.tsx"));
 const China = lazy(() => import("./pages/China.tsx"));
+const Primary = lazy(() => import("./pages/Primary.tsx"));
+const PrimaryLetters = lazy(() => import("./pages/PrimaryLetters.tsx"));
+const PrimaryVocab = lazy(() => import("./pages/PrimaryVocab.tsx"));
 const GaokaoGrammar = lazy(() => import("./pages/GaokaoGrammar.tsx"));
 const GaokaoGrammarPoint = lazy(() => import("./pages/GaokaoGrammarPoint.tsx"));
 const GaokaoGrammarQuiz = lazy(() => import("./pages/GaokaoGrammarQuiz.tsx"));
@@ -108,6 +111,9 @@ const App = () => (
           <Route path="/workplace/:catKey/:dialogueId" element={<WorkplacePlay />} />
           <Route path="/talk" element={<Talk />} />
           <Route path="/china" element={<China />} />
+          <Route path="/primary" element={<Primary />} />
+          <Route path="/primary/letters" element={<PrimaryLetters />} />
+          <Route path="/primary/vocab" element={<PrimaryVocab />} />
           <Route path="/gaokao" element={<Gaokao />} />
           <Route path="/gaokao/diagnostic" element={<GaokaoDiagnostic />} />
           <Route path="/gaokao/grammar" element={<GaokaoGrammar />} />

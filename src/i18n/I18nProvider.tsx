@@ -195,9 +195,6 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const dynQueueRef = useRef<Set<string>>(new Set());
   const dynTimerRef = useRef<number | null>(null);
 
-  const langRef = useRef<LangCode>(lang);
-  useEffect(() => { langRef.current = lang; }, [lang]);
-
   // Load catalog + dyn cache when language changes.
   useEffect(() => {
     const builtin = BUILTIN[lang];

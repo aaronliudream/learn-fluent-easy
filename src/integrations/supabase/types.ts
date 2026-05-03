@@ -2401,6 +2401,48 @@ export type Database = {
           },
         ]
       }
+      pet_skins: {
+        Row: {
+          available_until: string | null
+          code: string
+          created_at: string
+          css_filter: string
+          description_cn: string | null
+          id: string
+          name_cn: string
+          price: number
+          rarity: number
+          sort_order: number
+          unlock_level: number
+        }
+        Insert: {
+          available_until?: string | null
+          code: string
+          created_at?: string
+          css_filter?: string
+          description_cn?: string | null
+          id?: string
+          name_cn: string
+          price?: number
+          rarity?: number
+          sort_order?: number
+          unlock_level?: number
+        }
+        Update: {
+          available_until?: string | null
+          code?: string
+          created_at?: string
+          css_filter?: string
+          description_cn?: string | null
+          id?: string
+          name_cn?: string
+          price?: number
+          rarity?: number
+          sort_order?: number
+          unlock_level?: number
+        }
+        Relationships: []
+      }
       pet_species: {
         Row: {
           adopt_cost: number
@@ -2479,6 +2521,33 @@ export type Database = {
           updated_at?: string
           user_id?: string
           xp?: number
+        }
+        Relationships: []
+      }
+      pet_stickers: {
+        Row: {
+          caption_cn: string
+          code: string
+          emoji: string
+          id: string
+          sort_order: number
+          unlock_level: number
+        }
+        Insert: {
+          caption_cn: string
+          code: string
+          emoji: string
+          id?: string
+          sort_order?: number
+          unlock_level?: number
+        }
+        Update: {
+          caption_cn?: string
+          code?: string
+          emoji?: string
+          id?: string
+          sort_order?: number
+          unlock_level?: number
         }
         Relationships: []
       }
@@ -3271,9 +3340,39 @@ export type Database = {
         }
         Relationships: []
       }
+      user_pet_skins: {
+        Row: {
+          acquired_at: string
+          id: string
+          skin_id: string
+          user_id: string
+        }
+        Insert: {
+          acquired_at?: string
+          id?: string
+          skin_id: string
+          user_id: string
+        }
+        Update: {
+          acquired_at?: string
+          id?: string
+          skin_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_pet_skins_skin_id_fkey"
+            columns: ["skin_id"]
+            isOneToOne: false
+            referencedRelation: "pet_skins"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       user_pets: {
         Row: {
           created_at: string
+          equipped_skin_id: string | null
           exp: number
           hatched_at: string | null
           hunger: number
@@ -3292,6 +3391,7 @@ export type Database = {
         }
         Insert: {
           created_at?: string
+          equipped_skin_id?: string | null
           exp?: number
           hatched_at?: string | null
           hunger?: number
@@ -3310,6 +3410,7 @@ export type Database = {
         }
         Update: {
           created_at?: string
+          equipped_skin_id?: string | null
           exp?: number
           hatched_at?: string | null
           hunger?: number
@@ -3327,6 +3428,13 @@ export type Database = {
           user_id?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "user_pets_equipped_skin_id_fkey"
+            columns: ["equipped_skin_id"]
+            isOneToOne: false
+            referencedRelation: "pet_skins"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "user_pets_species_id_fkey"
             columns: ["species_id"]
@@ -3728,6 +3836,7 @@ export type Database = {
           new_qty: number
         }[]
       }
+      buy_pet_skin: { Args: { _skin_id: string }; Returns: Json }
       cancel_duel_queue: { Args: never; Returns: undefined }
       cancel_listing: { Args: { _listing_id: string }; Returns: undefined }
       coop_contribute: {
@@ -3742,6 +3851,10 @@ export type Database = {
       enqueue_email: {
         Args: { payload: Json; queue_name: string }
         Returns: number
+      }
+      equip_pet_skin: {
+        Args: { _pet_id: string; _skin_id: string }
+        Returns: Json
       }
       feed_pet: {
         Args: { _food_id: string; _pet_id: string }

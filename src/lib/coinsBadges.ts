@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { addPendingSeed } from "@/lib/currencies";
 
 /* ---------- Badge catalog ---------- */
 export type BadgeDef = {
@@ -185,6 +186,8 @@ export async function awardCoins(amount: number): Promise<CoinTotals | null> {
   }
   const row = Array.isArray(data) ? data[0] : data;
   if (!row) return null;
+  // 统一接入"延迟满足"：奖励先入种子池，由宠物消化后再发放
+  void addPendingSeed(Math.floor(amount), "legacy_award");
   return { balance: row.balance, total_earned: row.total_earned };
 }
 

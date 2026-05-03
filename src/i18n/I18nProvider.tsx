@@ -8,7 +8,6 @@ import {
 } from "./languages";
 import { BUILTIN, EN, ZH, type StringKey, interpolate } from "./strings";
 import { localizeProtagonist } from "./protagonistName";
-import { startDomLeakScanner } from "./devLeakDetector";
 
 const STORAGE_LANG = "fluentpath.lang";
 const STORAGE_PICKED = "fluentpath.langPicked";
@@ -196,15 +195,8 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const dynQueueRef = useRef<Set<string>>(new Set());
   const dynTimerRef = useRef<number | null>(null);
 
-  // Dev-only: start a DOM-wide scanner that warns when text in the wrong
-  // script appears (catches hardcoded JSX strings that bypass <T>).
-  // Uses a ref so the scanner always sees the *current* language even
-  // though it's started exactly once.
   const langRef = useRef<LangCode>(lang);
   useEffect(() => { langRef.current = lang; }, [lang]);
-  useEffect(() => {
-    startDomLeakScanner(() => langRef.current);
-  }, []);
 
   // Load catalog + dyn cache when language changes.
   useEffect(() => {
@@ -301,7 +293,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // No translation needed if the user chose Chinese, which is the app's
     // original helper-language for lesson notes and hints.
     if (lang === "zh") return localizeProtagonist(text, lang);
-    if (lang === "en" && !CJK_TEXT_RE.test(text)) return localizeProtagonist(text, lang);
+    if (lang === "en") return localizeProtagonist(text, lang);
     const cached = dynCacheRef.current[text];
     if (isUsableTranslation(lang, text, cached)) return localizeProtagonist(cached, lang);
     // Queue the request. Use a microtask-style 0ms timer so the *first*

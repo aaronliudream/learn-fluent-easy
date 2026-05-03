@@ -10,7 +10,6 @@ import NoCopyGuard from "@/components/NoCopyGuard";
 import StarRating from "@/components/StarRating";
 import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
 import ReadingWatermark from "@/components/ReadingWatermark";
-import SegmentedReader from "@/components/SegmentedReader";
 import { toast } from "sonner";
 
 type Q = { q: string; options: string[]; answer: string; explanation?: string };

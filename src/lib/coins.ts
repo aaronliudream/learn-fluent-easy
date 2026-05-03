@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { addPendingSeed } from "@/lib/currencies";
 
 /**
  * 学习场景奖励星币（小学/初中/高中通用）
@@ -15,6 +16,7 @@ export async function awardCoins(amount: number, source: string = "study"): Prom
     const row = Array.isArray(data) ? data[0] : data;
     if (row && row.awarded > 0) {
       petReact(row.awarded >= 10 ? "happy" : "correct", { coins: row.awarded });
+      void addPendingSeed(row.awarded, source);
     }
     return row ?? null;
   } catch (e) {
@@ -89,6 +91,7 @@ export async function awardForCorrect(
       reason = row?.reason ?? null;
       if (r && r.awarded > 0) {
         petReact(r.awarded >= 10 ? "happy" : "correct", { coins: r.awarded });
+        void addPendingSeed(r.awarded, `${source}_correct`);
       }
       // 透明反馈：让用户知道为什么这次没拿到币
       if (r && r.awarded === 0) {

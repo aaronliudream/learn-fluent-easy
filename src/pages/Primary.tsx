@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, BookA, Sparkles, MessageCircle, Play, Star, Gamepad2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { TodayGrowthCard } from "@/components/TodayGrowthCard";
 
 type Grade = {
   id: number; name_cn: string; name_en: string;
@@ -81,6 +82,11 @@ export default function Primary() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Today's growth — synced with parent report */}
+      <div className="mb-5">
+        <TodayGrowthCard />
       </div>
 
       <div className="mb-3">

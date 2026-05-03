@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Sparkles, BookOpen, Headphones, Target, Lock, Trophy } from "lucide-react";
+import { ArrowLeft, Sparkles, BookOpen, Headphones, Target, Lock, Trophy, Heart, Users } from "lucide-react";
 
 const SECTIONS = [
   {

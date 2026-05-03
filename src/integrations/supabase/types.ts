@@ -1924,6 +1924,60 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_speaking_attempts: {
+        Row: {
+          audio_duration_ms: number | null
+          completeness_score: number
+          corrections: Json | null
+          created_at: string
+          encouragement: string | null
+          fluency_score: number
+          grade: number | null
+          id: string
+          overall_score: number
+          pronunciation_score: number
+          replacements: Json | null
+          scenario: string | null
+          target_sentence: string
+          transcript: string | null
+          user_id: string
+        }
+        Insert: {
+          audio_duration_ms?: number | null
+          completeness_score?: number
+          corrections?: Json | null
+          created_at?: string
+          encouragement?: string | null
+          fluency_score?: number
+          grade?: number | null
+          id?: string
+          overall_score?: number
+          pronunciation_score?: number
+          replacements?: Json | null
+          scenario?: string | null
+          target_sentence: string
+          transcript?: string | null
+          user_id: string
+        }
+        Update: {
+          audio_duration_ms?: number | null
+          completeness_score?: number
+          corrections?: Json | null
+          created_at?: string
+          encouragement?: string | null
+          fluency_score?: number
+          grade?: number | null
+          id?: string
+          overall_score?: number
+          pronunciation_score?: number
+          replacements?: Json | null
+          scenario?: string | null
+          target_sentence?: string
+          transcript?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

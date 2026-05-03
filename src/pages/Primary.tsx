@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, BookA, Sparkles, MessageCircle, Play, Star } from "lucide-react";
+import { ArrowLeft, BookA, Sparkles, MessageCircle, Play, Star, Gamepad2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 type Grade = {
@@ -117,7 +117,12 @@ export default function Primary() {
       </button>
 
       {/* Quick tools */}
-      <div className="mt-5 grid grid-cols-3 gap-3">
+      <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <Link to={`/primary/games/${selectedGrade}`} className="rounded-2xl bg-gradient-to-br from-rose-400 to-orange-400 p-3 text-white shadow-tile">
+          <Gamepad2 className="size-5" />
+          <div className="mt-2 text-sm font-extrabold leading-tight">单词游戏</div>
+          <div className="text-[10px] opacity-90">4 款玩中学</div>
+        </Link>
         <Link to="/primary/chat" className="rounded-2xl bg-gradient-to-br from-pink-400 to-violet-400 p-3 text-white shadow-tile">
           <MessageCircle className="size-5" />
           <div className="mt-2 text-sm font-extrabold leading-tight">Spark 对话</div>
@@ -131,7 +136,7 @@ export default function Primary() {
         <Link to="/primary/vocab" className="rounded-2xl bg-gradient-to-br from-sky-400 to-cyan-400 p-3 text-white shadow-tile">
           <Sparkles className="size-5" />
           <div className="mt-2 text-sm font-extrabold leading-tight">词汇专区</div>
-          <div className="text-[10px] opacity-90">200+ 核心词</div>
+          <div className="text-[10px] opacity-90">1000+ 核心词</div>
         </Link>
       </div>
     </main>

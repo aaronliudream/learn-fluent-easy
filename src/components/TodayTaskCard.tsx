@@ -103,14 +103,6 @@ export const TodayTaskCard = () => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (cancelled) return;
       setSignedIn(!!session?.user);
-      if (session?.user) {
-        supabase.rpc("get_today_recommendations").then(({ data, error }) => {
-          if (cancelled) return;
-          if (error) { console.warn("today reco rpc error", error); return; }
-          const row = Array.isArray(data) ? data[0] : data;
-          if (row) setReco(row as Reco);
-        });
-      }
     });
     return () => { cancelled = true; };
   }, []);

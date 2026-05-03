@@ -27,7 +27,7 @@ export default function ReflectionEnergy({
 
   async function submit() {
     if (iThought.trim().length < 2) {
-      toast("先写下"我以为是什么"，哪怕一个词也行～");
+      toast("先写下『我以为是什么』，哪怕一个词也行～");
       return;
     }
     setSubmitting(true);

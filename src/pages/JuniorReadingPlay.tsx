@@ -87,7 +87,7 @@ export default function JuniorReadingPlay() {
     if (ok) {
       const next = streak + 1;
       setStreak(next);
-      await awardForCorrect(next, "junior_reading");
+      await awardForCorrect(next, "junior_reading", `${r.id}:${qi}`, "junior_reading");
       await bumpPetSkill("reading_owl", 1);
     } else {
       setStreak(0); notifyWrong();

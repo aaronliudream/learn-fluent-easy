@@ -24,6 +24,7 @@ export default function GaokaoDiagnostic() {
   const [picks, setPicks] = useState<Record<string, string>>({});
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState(true);
+  const qStartRef = useRef<Record<string, number>>({});
 
   useEffect(() => {
     (async () => {

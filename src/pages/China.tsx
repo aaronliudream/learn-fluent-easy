@@ -14,13 +14,13 @@ type Stage = {
 
 const STAGES: Stage[] = [
   {
+    to: "/primary",
     icon: Backpack,
     eyebrow: "小学英语 · PRIMARY",
     title: "小学英语专区",
-    desc: "字母、自然拼读、基础词汇与句型，趣味闯关式启蒙",
+    desc: "26 字母自然拼读 + 200 核心词，新课标趣味启蒙",
     gradient: "from-sky-400 via-cyan-400 to-emerald-400",
-    locked: true,
-    badge: "即将上线",
+    badge: "已上线",
   },
   {
     icon: School,

@@ -15,6 +15,18 @@ const STORAGE_TS_KEY = "fluentpath.aiProvider.ts";
 // Re-probe at most every 6 hours in case the user changes networks.
 const TTL_MS = 6 * 60 * 60 * 1000;
 
+function isLikelyMainlandChinaBrowser(): boolean {
+  try {
+    const languages = [navigator.language, ...(navigator.languages || [])]
+      .filter(Boolean)
+      .map((v) => v.toLowerCase());
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    return languages.some((v) => v === "zh-cn" || v.startsWith("zh-hans-cn")) || timeZone === "Asia/Shanghai";
+  } catch {
+    return false;
+  }
+}
+
 export function getCachedProvider(): AIProvider | null {
   try {
     const v = localStorage.getItem(STORAGE_KEY);
@@ -72,6 +84,10 @@ export async function probeOpenAIReachable(timeoutMs = 1500): Promise<boolean> {
  * switching VPN on/off).
  */
 export async function resolveProvider(force = false): Promise<AIProvider> {
+  if (isLikelyMainlandChinaBrowser()) {
+    cacheProvider("qwen");
+    return "qwen";
+  }
   if (!force) {
     const cached = getCachedProvider();
     if (cached) return cached;

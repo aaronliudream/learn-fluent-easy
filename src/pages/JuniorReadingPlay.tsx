@@ -45,10 +45,7 @@ export default function JuniorReadingPlay() {
       if (u?.user) {
         setUserId(u.user.id);
         setEmail(u.user.email ?? u.user.id.slice(0, 8));
-        const { data: comps } = await supabase
-          .from("junior_reading_completions")
-          .select("reading_id").eq("user_id", u.user.id).eq("perfect", true);
-        setCompletedSet(new Set((comps ?? []).map((c: any) => c.reading_id)));
+        setMastery(await loadMastery("junior_reading"));
       }
       const grade = (data as any)?.grade;
       if (grade) {
@@ -102,17 +99,23 @@ export default function JuniorReadingPlay() {
     if (!r) return;
     if (!allAnswered) { toast.error("请先回答所有题目"); return; }
     setSubmitted(true);
-    if (allCorrect && timeOk) {
-      // 写入解锁
+    const pct = Math.round((correctCount / r.questions.length) * 100);
+    if (timeOk) {
+      // 写入完成 + 掌握度
       if (userId) {
         await supabase.from("junior_reading_completions")
-          .upsert({ user_id: userId, reading_id: r.id, perfect: true, time_spent_sec: elapsed }, { onConflict: "user_id,reading_id" });
-        setCompletedSet(prev => new Set(prev).add(r.id));
+          .upsert({ user_id: userId, reading_id: r.id, perfect: pct === 100, time_spent_sec: elapsed }, { onConflict: "user_id,reading_id" });
+        const updated = await recordMastery({ module: "junior_reading", itemId: r.id, pct });
+        if (updated) setMastery(m => ({ ...m, [r.id]: updated }));
       }
-      await awardForBlock("junior_reading");
-      toast.success("🎉 全对解锁！可以进入下一篇");
-    } else if (!allCorrect) {
-      toast.error(`还差 ${r.questions.length - correctCount} 题，请重做`);
+      if (pct === 100) {
+        await awardForBlock("junior_reading");
+        toast.success("🌟 完美掌握！星级+1");
+      } else if (pct >= PASS_PCT) {
+        toast.success(`✅ 通过 ${pct}%！可以进入下一篇（100% 才算完美掌握）`);
+      } else {
+        toast.error(`只有 ${pct}%，需 ≥${PASS_PCT}% 才能解锁下一篇`);
+      }
     } else {
       toast.warning(`还需阅读 ${minSec - elapsed} 秒`);
     }
@@ -126,23 +129,27 @@ export default function JuniorReadingPlay() {
     startRef.current = Date.now();
   };
 
-  // 检查当前篇是否被允许进入
+  // 检查当前篇是否被允许进入：上一篇 best_pct ≥ PASS_PCT
   useEffect(() => {
     if (!r || !list.length || !userId) return;
     const idx = list.findIndex(x => x.id === r.id);
-    if (idx <= 0) return; // 第一篇始终允许
+    if (idx <= 0) return;
     const prev = list[idx - 1];
-    if (!completedSet.has(prev.id)) {
-      toast.error("请先完成上一篇并全对，才能阅读本篇");
+    const prevRow = mastery[prev.id];
+    if (!prevRow || prevRow.best_pct < PASS_PCT) {
+      toast.error("请先完成上一篇并通过 80% 才能阅读本篇");
       nav(`/junior/reading/${prev.id}`, { replace: true });
     }
-  }, [r, list, userId, completedSet, nav]);
+  }, [r, list, userId, mastery, nav]);
 
   if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground">加载中…</main>;
 
+  const currentRow = mastery[r.id];
+  const passed = (currentRow?.best_pct ?? 0) >= PASS_PCT;
+  const perfect = currentRow?.stars && currentRow.stars >= 1;
   const goNext = () => {
     if (!nextItem) return;
-    if (!completedSet.has(r.id)) { toast.error("请先全对解锁本篇"); return; }
+    if (!passed) { toast.error("本篇得分需 ≥80% 才能进入下一篇"); return; }
     nav(`/junior/reading/${nextItem.id}`);
   };
 

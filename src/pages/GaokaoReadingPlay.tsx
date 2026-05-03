@@ -154,8 +154,10 @@ export default function GaokaoReadingPlay() {
         })}
       </div>
 
-      <div className="mt-6 flex justify-center">
-        <Button asChild variant="outline"><Link to="/gaokao/reading">返回阅读列表</Link></Button>
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
+        <Button asChild><Link to="/gaokao/reading">← 返回阅读列表</Link></Button>
+        <Button asChild variant="outline"><Link to="/gaokao">🎓 高考首页</Link></Button>
+        <Button asChild variant="outline"><Link to="/pets">🐾 宠物</Link></Button>
       </div>
     </main>
   );

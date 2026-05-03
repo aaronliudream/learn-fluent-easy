@@ -392,11 +392,15 @@ function MatchGame({ words, grade }: { words: Word[]; grade: number }) {
           setCards(cs => cs.map((c,idx) => idx===a||idx===b ? {...c, matched:true} : c));
           setOpen([]);
           if (next[a].isWord) speak(next[a].text); else speak(next[b].text);
+          const w = words.find(x => x.id === next[a].pairId);
+          if (w) recordWordResult(w, "match", true);
         }, 400);
       } else {
         setTimeout(() => {
           setCards(cs => cs.map((c,idx) => idx===a||idx===b ? {...c, flipped:false} : c));
           setOpen([]);
+          const w = words.find(x => x.id === next[a].pairId);
+          if (w) recordWordResult(w, "match", false);
         }, 900);
       }
     } else if (newOpen.length === 1 && cards[i].isWord) {

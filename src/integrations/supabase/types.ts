@@ -4514,14 +4514,23 @@ export type Database = {
           total_earned: number
         }[]
       }
-      award_learning_coins: {
-        Args: { _amount: number; _source?: string }
-        Returns: {
-          awarded: number
-          balance: number
-          capped: boolean
-        }[]
-      }
+      award_learning_coins:
+        | {
+            Args: { _amount: number }
+            Returns: {
+              awarded: number
+              balance: number
+              capped: boolean
+            }[]
+          }
+        | {
+            Args: { _amount: number; _source?: string }
+            Returns: {
+              awarded: number
+              balance: number
+              capped: boolean
+            }[]
+          }
       bump_pet_skill: {
         Args: { _delta?: number; _skill_code: string }
         Returns: {

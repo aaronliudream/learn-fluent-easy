@@ -14,6 +14,24 @@ export type Database = {
   }
   public: {
     Tables: {
+      daily_coin_log: {
+        Row: {
+          earned: number
+          log_date: string
+          user_id: string
+        }
+        Insert: {
+          earned?: number
+          log_date: string
+          user_id: string
+        }
+        Update: {
+          earned?: number
+          log_date?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       daily_slang: {
         Row: {
           created_at: string
@@ -2061,6 +2079,196 @@ export type Database = {
         }
         Relationships: []
       }
+      pet_destinations: {
+        Row: {
+          cost_coins: number
+          description_cn: string | null
+          emoji: string
+          exp_reward: number
+          hunger_cost: number
+          id: string
+          name_cn: string
+          sort_order: number
+          unlock_level: number
+        }
+        Insert: {
+          cost_coins?: number
+          description_cn?: string | null
+          emoji: string
+          exp_reward?: number
+          hunger_cost?: number
+          id: string
+          name_cn: string
+          sort_order?: number
+          unlock_level?: number
+        }
+        Update: {
+          cost_coins?: number
+          description_cn?: string | null
+          emoji?: string
+          exp_reward?: number
+          hunger_cost?: number
+          id?: string
+          name_cn?: string
+          sort_order?: number
+          unlock_level?: number
+        }
+        Relationships: []
+      }
+      pet_diary: {
+        Row: {
+          created_at: string
+          emoji: string | null
+          event_type: string
+          id: string
+          message: string
+          meta: Json | null
+          pet_id: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          emoji?: string | null
+          event_type: string
+          id?: string
+          message: string
+          meta?: Json | null
+          pet_id?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          emoji?: string | null
+          event_type?: string
+          id?: string
+          message?: string
+          meta?: Json | null
+          pet_id?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pet_diary_pet_id_fkey"
+            columns: ["pet_id"]
+            isOneToOne: false
+            referencedRelation: "user_pets"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      pet_food_items: {
+        Row: {
+          description_cn: string | null
+          emoji: string
+          exp_bonus: number
+          hunger_restore: number
+          id: string
+          mood_bonus: number
+          name_cn: string
+          price: number
+          rarity: number
+          sort_order: number
+        }
+        Insert: {
+          description_cn?: string | null
+          emoji: string
+          exp_bonus?: number
+          hunger_restore?: number
+          id: string
+          mood_bonus?: number
+          name_cn: string
+          price?: number
+          rarity?: number
+          sort_order?: number
+        }
+        Update: {
+          description_cn?: string | null
+          emoji?: string
+          exp_bonus?: number
+          hunger_restore?: number
+          id?: string
+          mood_bonus?: number
+          name_cn?: string
+          price?: number
+          rarity?: number
+          sort_order?: number
+        }
+        Relationships: []
+      }
+      pet_inventory: {
+        Row: {
+          food_id: string
+          qty: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          food_id: string
+          qty?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          food_id?: string
+          qty?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pet_inventory_food_id_fkey"
+            columns: ["food_id"]
+            isOneToOne: false
+            referencedRelation: "pet_food_items"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      pet_species: {
+        Row: {
+          adopt_cost: number
+          description_cn: string | null
+          emoji_adult: string
+          emoji_baby: string
+          emoji_egg: string
+          emoji_legend: string
+          id: string
+          name_cn: string
+          personality_cn: string | null
+          rarity: number
+          sort_order: number
+          unlock_level: number
+        }
+        Insert: {
+          adopt_cost?: number
+          description_cn?: string | null
+          emoji_adult: string
+          emoji_baby: string
+          emoji_egg: string
+          emoji_legend: string
+          id: string
+          name_cn: string
+          personality_cn?: string | null
+          rarity?: number
+          sort_order?: number
+          unlock_level?: number
+        }
+        Update: {
+          adopt_cost?: number
+          description_cn?: string | null
+          emoji_adult?: string
+          emoji_baby?: string
+          emoji_egg?: string
+          emoji_legend?: string
+          id?: string
+          name_cn?: string
+          personality_cn?: string | null
+          rarity?: number
+          sort_order?: number
+          unlock_level?: number
+        }
+        Relationships: []
+      }
       pet_state: {
         Row: {
           bond: number
@@ -2096,6 +2304,54 @@ export type Database = {
           xp?: number
         }
         Relationships: []
+      }
+      pet_trades: {
+        Row: {
+          created_at: string
+          from_pet_id: string
+          from_user: string
+          id: string
+          responded_at: string | null
+          status: string
+          to_pet_id: string
+          to_user: string
+        }
+        Insert: {
+          created_at?: string
+          from_pet_id: string
+          from_user: string
+          id?: string
+          responded_at?: string | null
+          status?: string
+          to_pet_id: string
+          to_user: string
+        }
+        Update: {
+          created_at?: string
+          from_pet_id?: string
+          from_user?: string
+          id?: string
+          responded_at?: string | null
+          status?: string
+          to_pet_id?: string
+          to_user?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pet_trades_from_pet_id_fkey"
+            columns: ["from_pet_id"]
+            isOneToOne: false
+            referencedRelation: "user_pets"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "pet_trades_to_pet_id_fkey"
+            columns: ["to_pet_id"]
+            isOneToOne: false
+            referencedRelation: "user_pets"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       phrase_explanations: {
         Row: {
@@ -2832,6 +3088,68 @@ export type Database = {
         }
         Relationships: []
       }
+      user_pets: {
+        Row: {
+          created_at: string
+          exp: number
+          hatched_at: string | null
+          hunger: number
+          id: string
+          is_active: boolean
+          last_fed_at: string | null
+          last_played_at: string | null
+          level: number
+          mood: number
+          nickname: string
+          species_id: string
+          stage: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          exp?: number
+          hatched_at?: string | null
+          hunger?: number
+          id?: string
+          is_active?: boolean
+          last_fed_at?: string | null
+          last_played_at?: string | null
+          level?: number
+          mood?: number
+          nickname: string
+          species_id: string
+          stage?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          exp?: number
+          hatched_at?: string | null
+          hunger?: number
+          id?: string
+          is_active?: boolean
+          last_fed_at?: string | null
+          last_played_at?: string | null
+          level?: number
+          mood?: number
+          nickname?: string
+          species_id?: string
+          stage?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_pets_species_id_fkey"
+            columns: ["species_id"]
+            isOneToOne: false
+            referencedRelation: "pet_species"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       vocab_game_scores: {
         Row: {
           best_combo: number
@@ -3122,11 +3440,33 @@ export type Database = {
             Args: { _k?: number; _my: number; _opp: number; _score: number }
             Returns: number
           }
+      adopt_pet: {
+        Args: { _nickname: string; _species_id: string }
+        Returns: {
+          balance: number
+          pet_id: string
+        }[]
+      }
       award_coins: {
         Args: { _amount: number }
         Returns: {
           balance: number
           total_earned: number
+        }[]
+      }
+      award_learning_coins: {
+        Args: { _amount: number; _source?: string }
+        Returns: {
+          awarded: number
+          balance: number
+          capped: boolean
+        }[]
+      }
+      buy_pet_food: {
+        Args: { _food_id: string; _qty: number }
+        Returns: {
+          balance: number
+          new_qty: number
         }[]
       }
       cancel_duel_queue: { Args: never; Returns: undefined }
@@ -3137,6 +3477,18 @@ export type Database = {
       enqueue_email: {
         Args: { payload: Json; queue_name: string }
         Returns: number
+      }
+      feed_pet: {
+        Args: { _food_id: string; _pet_id: string }
+        Returns: {
+          evolved: boolean
+          leveled: boolean
+          message: string
+          new_exp: number
+          new_hunger: number
+          new_level: number
+          new_stage: number
+        }[]
       }
       find_duel_opponent: {
         Args: { _rating_range?: number }
@@ -3369,6 +3721,7 @@ export type Database = {
           read_ct: number
         }[]
       }
+      set_active_pet: { Args: { _pet_id: string }; Returns: undefined }
       submit_cloze_session: {
         Args: {
           _answers: Json
@@ -3399,6 +3752,16 @@ export type Database = {
           my_delta: number
           my_new_rating: number
           won: boolean
+        }[]
+      }
+      take_pet_outing: {
+        Args: { _dest_id: string; _pet_id: string }
+        Returns: {
+          balance: number
+          new_exp: number
+          new_hunger: number
+          new_level: number
+          surprise: string
         }[]
       }
     }

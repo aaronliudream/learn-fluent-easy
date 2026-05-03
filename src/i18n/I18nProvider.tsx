@@ -274,15 +274,14 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (toSend.length === 0) return;
     const targetLanguage = getLanguageInfo(l).englishName;
     // Use index keys so we keep mapping; truncate text to a sane length.
-    const items = toSend.map((text, i) => ({ key: String(i), text }));
+      const items = toSend.slice(0, 12).map((text, i) => ({ key: String(i), text }));
+      const sent = toSend.slice(0, 12);
     try {
-      const { data, error } = await supabase.functions.invoke("translate", {
-        body: { targetLanguage, items },
-      });
+      const { data, error } = await invokeTranslateWithTimeout(targetLanguage, items);
       if (error) return;
       const translations: Record<string, string> = data?.translations || {};
       const next = { ...dynCacheRef.current };
-      toSend.forEach((src, i) => {
+      sent.forEach((src, i) => {
         const tr = translations[String(i)];
         if (isUsableTranslation(l, src, tr)) next[src] = stripHtml(tr);
       });
@@ -328,7 +327,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // (an ellipsis) that will be swapped out the instant the translation
     // batch resolves a few hundred ms later. For English users with a
     // CJK source we also redact, since they shouldn't see Chinese either.
-    if (CJK_TEXT_RE.test(text)) return "…";
+    if (CJK_TEXT_RE.test(text)) return localizeProtagonist(text, "en" as LangCode);
     // Source string contains no CJK — safe to show as-is while we wait
     // (e.g. an English helper string being translated into Spanish).
     return localizeProtagonist(text, lang);

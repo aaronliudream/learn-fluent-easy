@@ -60,6 +60,8 @@ const SavedPhrases = lazy(() => import("./pages/SavedPhrases.tsx"));
 const Review = lazy(() => import("./pages/Review.tsx"));
 const Mistakes = lazy(() => import("./pages/Mistakes.tsx"));
 const Leaderboard = lazy(() => import("./pages/Leaderboard.tsx"));
+const Pets = lazy(() => import("./pages/Pets.tsx"));
+const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 
@@ -111,6 +113,8 @@ const App = () => (
           <Route path="/review" element={<Review />} />
           <Route path="/mistakes" element={<Mistakes />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/pets" element={<Pets />} />
+          <Route path="/parent" element={<GlobalParent />} />
           <Route path="/scenes/:catKey" element={<ScenesCategory />} />
           <Route path="/scenes/:catKey/:dialogueId" element={<ScenesPlay />} />
           <Route path="/workplace" element={<Workplace />} />

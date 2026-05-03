@@ -347,42 +347,144 @@ function Bar({ label, value, hint, color }: { label:string; value:number; hint:s
   );
 }
 
-function ShopTab({ foods, balance, inv, onAfter, flash }: any) {
+/**
+ * 商店 — 心愿单 + 48h 冷静期（延迟满足设计）。
+ * 流程：浏览 → 加入心愿单 → 48 小时后才能"确认购买"。
+ * 教育意图：弱化即时消费冲动，培养计划与耐心；与宠物对话潜在引导"我们要不要再等等"。
+ */
+function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any) {
   const [busy, setBusy] = useState<string | null>(null);
-  const buy = async (id: string) => {
+  const [wishlist, setWishlist] = useState<WishlistRow[]>([]);
+  const [now, setNow] = useState(Date.now());
+
+  const reloadWishlist = async () => setWishlist(await fetchWishlist());
+  useEffect(() => { reloadWishlist(); }, []);
+  // 1 分钟刷新一次倒计时
+  useEffect(() => {
+    const t = setInterval(() => setNow(Date.now()), 60_000);
+    return () => clearInterval(t);
+  }, []);
+
+  const wishMap = new Map(wishlist.map((w) => [`food:${w.item_id}`, w]));
+
+  const addToWishlist = async (id: string) => {
     setBusy(id);
-    const { error } = await supabase.rpc("buy_pet_food", { _food_id: id, _qty: 1 });
+    const ok = await wishlistAdd("food", id);
     setBusy(null);
-    if (error) { flash(error.message.includes("not enough") ? "💰 星币不够，继续学习赚星币吧！" : "❌ "+error.message); return; }
-    flash("🛒 购买成功！");
+    if (!ok) { flash("❌ 加入心愿单失败"); return; }
+    flash("💭 已加入心愿单 · 48 小时后可确认购买");
+    await reloadWishlist();
+  };
+
+  const confirmBuy = async (foodId: string, wishId: string) => {
+    setBusy(foodId);
+    const { error } = await supabase.rpc("buy_pet_food", { _food_id: foodId, _qty: 1 });
+    if (!error) {
+      await supabase.from("wishlist").update({ purchased_at: new Date().toISOString() }).eq("id", wishId);
+    }
+    setBusy(null);
+    if (error) { flash(error.message.includes("not enough") ? "💰 星币不够，继续学习吧！" : "❌ "+error.message); return; }
+    flash("🛒 等待是值得的！购买成功");
+    await reloadWishlist();
+    await refreshCurrencies?.();
     onAfter();
   };
+
+  const removeWish = async (wishId: string) => {
+    await wishlistRemove(wishId);
+    flash("已移出心愿单");
+    reloadWishlist();
+  };
+
+  const fmtRemain = (until: string) => {
+    const ms = new Date(until).getTime() - now;
+    if (ms <= 0) return null;
+    const h = Math.floor(ms / 3_600_000);
+    const m = Math.floor((ms % 3_600_000) / 60_000);
+    return `${h}h ${m}m`;
+  };
+
   const invMap = Object.fromEntries(inv.map((i: Inv) => [i.food_id, i.qty]));
+
   return (
-    <div className="grid gap-3 sm:grid-cols-2">
-      {foods.map((f: Food) => {
-        const owned = invMap[f.id] ?? 0;
-        const canBuy = balance >= f.price;
-        return (
-          <div key={f.id} className="flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-3">
-            <div className="text-4xl">{f.emoji}</div>
-            <div className="min-w-0 flex-1">
-              <div className="flex items-center gap-1.5">
-                <span className="font-extrabold">{f.name_cn}</span>
-                <span className="text-[10px] text-muted-foreground">×{owned}</span>
-                {f.rarity >= 3 && <Star className="size-3 fill-amber-500 text-amber-500" />}
-              </div>
-              <div className="text-[11px] text-muted-foreground">饱+{f.hunger_restore} 经+{f.exp_bonus} 心+{f.mood_bonus}</div>
-              <div className="mt-0.5 text-[11px] text-muted-foreground line-clamp-1">{f.description_cn}</div>
-            </div>
-            <button onClick={()=>buy(f.id)} disabled={busy===f.id || !canBuy}
-              className={cn("flex shrink-0 items-center gap-1 rounded-full px-3 py-1.5 text-xs font-extrabold text-white shadow",
-                canBuy ? "bg-gradient-to-r from-amber-500 to-orange-500" : "bg-muted-foreground/40")}>
-              <Coins className="size-3" /> {f.price}
-            </button>
+    <div className="space-y-5">
+      <div className="rounded-2xl border-2 border-dashed border-emerald-300/50 bg-emerald-50/40 p-3 text-[11px] leading-relaxed text-emerald-800 dark:bg-emerald-950/20 dark:text-emerald-300">
+        <div className="font-extrabold">🌱 慢一点，更稳一点</div>
+        喜欢的物品先加入<b>心愿单</b>，48 小时后再决定买不买 —— 宠物相信会等待的孩子。
+      </div>
+
+      {wishlist.length > 0 && (
+        <section>
+          <div className="mb-2 flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">
+            <Clock className="size-3" /> 心愿单 ({wishlist.length})
           </div>
-        );
-      })}
+          <div className="space-y-2">
+            {wishlist.map((w) => {
+              const food = foods.find((x: Food) => x.id === w.item_id);
+              if (!food) return null;
+              const remain = fmtRemain(w.cooldown_until);
+              const ready = !remain;
+              const canBuy = ready && balance >= food.price;
+              return (
+                <div key={w.id} className="flex items-center gap-3 rounded-2xl border-2 border-violet-300/40 bg-violet-50/30 p-3 dark:bg-violet-950/20">
+                  <div className="text-3xl">{food.emoji}</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="font-extrabold">{food.name_cn}</div>
+                    {ready ? (
+                      <div className="text-[11px] font-bold text-emerald-600">✓ 冷静期已过，可以购买</div>
+                    ) : (
+                      <div className="text-[11px] text-muted-foreground">⏳ 还需 {remain} 才可购买</div>
+                    )}
+                  </div>
+                  <button onClick={()=>removeWish(w.id)} className="text-[10px] text-muted-foreground underline">移除</button>
+                  <button
+                    onClick={()=>confirmBuy(food.id, w.id)}
+                    disabled={!canBuy || busy === food.id}
+                    className={cn("flex shrink-0 items-center gap-1 rounded-full px-3 py-1.5 text-xs font-extrabold text-white shadow",
+                      canBuy ? "bg-gradient-to-r from-emerald-500 to-teal-500" : "bg-muted-foreground/40")}
+                  >
+                    <Coins className="size-3" /> {food.price}
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      <section>
+        <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">商店</div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {foods.map((f: Food) => {
+            const owned = invMap[f.id] ?? 0;
+            const inWish = wishMap.get(`food:${f.id}`);
+            return (
+              <div key={f.id} className="flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-3">
+                <div className="text-4xl">{f.emoji}</div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-1.5">
+                    <span className="font-extrabold">{f.name_cn}</span>
+                    <span className="text-[10px] text-muted-foreground">×{owned}</span>
+                    {f.rarity >= 3 && <Star className="size-3 fill-amber-500 text-amber-500" />}
+                  </div>
+                  <div className="text-[11px] text-muted-foreground">饱+{f.hunger_restore} 经+{f.exp_bonus} 心+{f.mood_bonus}</div>
+                  <div className="mt-0.5 flex items-center gap-1 text-[11px] text-muted-foreground"><Coins className="size-3" /> {f.price}</div>
+                </div>
+                {inWish ? (
+                  <span className="rounded-full bg-violet-500/15 px-2.5 py-1 text-[10px] font-extrabold text-violet-700 dark:text-violet-300">
+                    心愿单中
+                  </span>
+                ) : (
+                  <button onClick={()=>addToWishlist(f.id)} disabled={busy===f.id}
+                    className="flex shrink-0 items-center gap-1 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-3 py-1.5 text-[11px] font-extrabold text-white shadow">
+                    💭 加入心愿单
+                  </button>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 }

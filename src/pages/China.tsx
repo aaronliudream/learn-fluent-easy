@@ -1,8 +1,6 @@
 import { ArrowRight, ArrowLeft, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock, Award, Coins, Heart, Users, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 import OnlineWidget from "@/components/social/OnlineWidget";
-import { ensureSocialDefaults, pingPresence } from "@/lib/social";
 
 type Stage = {
   to?: string;

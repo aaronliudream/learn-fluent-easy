@@ -62,14 +62,7 @@ export default function Gaokao() {
         </ul>
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
-        <Link to="/pets" className="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 p-3 text-white shadow-tile">
-          <Heart className="size-5" />
-          <div className="flex-1">
-            <div className="text-sm font-extrabold"><X>我的学习伙伴</X></div>
-            <div className="text-[11px] opacity-90">学习赚星币 · 喂养与冒险</div>
-          </div>
-        </Link>
+      <div className="mt-4 grid gap-3">
         <Link to="/social" className="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-rose-500 to-fuchsia-600 p-3 text-white shadow-tile">
           <Sparkles className="size-5" />
           <div className="flex-1">

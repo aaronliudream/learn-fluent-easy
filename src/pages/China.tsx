@@ -104,19 +104,7 @@ const China = () => {
           <Sparkles className="h-3.5 w-3.5" />同学社区
         </Link>
       </div>
-      <section className="mb-2 grid gap-3 sm:grid-cols-2">
-        <Link to="/pets" className="group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-amber-400 via-orange-400 to-rose-400 p-4 text-white shadow-tile transition hover:-translate-y-0.5">
-          <span className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-white/20 blur-2xl" />
-          <div className="relative grid size-11 place-items-center rounded-xl bg-white/25 backdrop-blur-sm">
-            <Heart className="size-5" />
-          </div>
-          <div className="relative flex-1">
-            <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">PETS · 学习宠物</div>
-            <div className="text-base font-extrabold"><X>我的学习伙伴</X></div>
-            <div className="text-[11px] opacity-90">学习赚星币 · 喂养、出游、领养、进化</div>
-          </div>
-          <Coins className="size-5 opacity-90" />
-        </Link>
+      <section className="mb-2 grid gap-3">
         <Link to="/parent" className="group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-500 via-teal-500 to-sky-500 p-4 text-white shadow-tile transition hover:-translate-y-0.5">
           <span className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-white/20 blur-2xl" />
           <div className="relative grid size-11 place-items-center rounded-xl bg-white/25 backdrop-blur-sm">

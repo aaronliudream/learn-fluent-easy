@@ -1591,6 +1591,7 @@ export type Database = {
           phonetic: string | null
           pos: string | null
           sort_order: number
+          stage: string
           star_level: number
           sub_theme: string | null
           synonyms: Json | null
@@ -1615,6 +1616,7 @@ export type Database = {
           phonetic?: string | null
           pos?: string | null
           sort_order?: number
+          stage?: string
           star_level?: number
           sub_theme?: string | null
           synonyms?: Json | null
@@ -1639,6 +1641,7 @@ export type Database = {
           phonetic?: string | null
           pos?: string | null
           sort_order?: number
+          stage?: string
           star_level?: number
           sub_theme?: string | null
           synonyms?: Json | null
@@ -1658,6 +1661,7 @@ export type Database = {
           name_cn: string
           name_en: string
           sort_order: number
+          stage: string
         }
         Insert: {
           code: string
@@ -1668,6 +1672,7 @@ export type Database = {
           name_cn: string
           name_en: string
           sort_order?: number
+          stage?: string
         }
         Update: {
           code?: string
@@ -1678,6 +1683,7 @@ export type Database = {
           name_cn?: string
           name_en?: string
           sort_order?: number
+          stage?: string
         }
         Relationships: []
       }
@@ -1861,6 +1867,60 @@ export type Database = {
           user_id?: string
           weakest?: string[]
           weighted?: number
+        }
+        Relationships: []
+      }
+      primary_letters: {
+        Row: {
+          chant_cn: string | null
+          chant_en: string | null
+          created_at: string
+          example_words: Json
+          fun_fact_cn: string | null
+          id: string
+          letter_lower: string
+          letter_name_ipa: string
+          letter_upper: string
+          mouth_tip_cn: string | null
+          phonics_long_ipa: string | null
+          phonics_short_ipa: string | null
+          sort_order: number
+          stroke_order_cn: string | null
+          updated_at: string
+        }
+        Insert: {
+          chant_cn?: string | null
+          chant_en?: string | null
+          created_at?: string
+          example_words?: Json
+          fun_fact_cn?: string | null
+          id?: string
+          letter_lower: string
+          letter_name_ipa: string
+          letter_upper: string
+          mouth_tip_cn?: string | null
+          phonics_long_ipa?: string | null
+          phonics_short_ipa?: string | null
+          sort_order: number
+          stroke_order_cn?: string | null
+          updated_at?: string
+        }
+        Update: {
+          chant_cn?: string | null
+          chant_en?: string | null
+          created_at?: string
+          example_words?: Json
+          fun_fact_cn?: string | null
+          id?: string
+          letter_lower?: string
+          letter_name_ipa?: string
+          letter_upper?: string
+          mouth_tip_cn?: string | null
+          phonics_long_ipa?: string | null
+          phonics_short_ipa?: string | null
+          sort_order?: number
+          stroke_order_cn?: string | null
+          updated_at?: string
         }
         Relationships: []
       }

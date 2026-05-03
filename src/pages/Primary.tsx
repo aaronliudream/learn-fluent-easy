@@ -48,6 +48,7 @@ export default function Primary() {
   function pickGrade(id: number) {
     setSelectedGrade(id);
     localStorage.setItem("primary:lastGrade", String(id));
+    nav(`/primary/grade/${id}`);
   }
 
   function startToday() {

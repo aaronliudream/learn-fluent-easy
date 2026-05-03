@@ -179,6 +179,8 @@ const App = () => (
          <Route path="/primary/parent" element={<PrimaryParent />} />
           <Route path="/primary/reading/grade/:grade" element={<PrimaryReading />} />
           <Route path="/primary/reading/:id" element={<PrimaryReadingPlay />} />
+          <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
+          <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />
           <Route path="/junior" element={<Junior />} />
           <Route path="/junior/vocab" element={<JuniorVocab />} />
           <Route path="/junior/grammar" element={<JuniorGrammar />} />

@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import NoCopyGuard from "@/components/NoCopyGuard";
+import StarRating from "@/components/StarRating";
+import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
 import ReadingWatermark from "@/components/ReadingWatermark";
 import SegmentedReader from "@/components/SegmentedReader";
 import { toast } from "sonner";
@@ -20,7 +22,7 @@ export default function JuniorReadingPlay() {
   const nav = useNavigate();
   const [r, setR] = useState<R | null>(null);
   const [list, setList] = useState<ListItem[]>([]);
-  const [completedSet, setCompletedSet] = useState<Set<string>>(new Set());
+  const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
   const [picks, setPicks] = useState<Record<number, string>>({});
   const [streak, setStreak] = useState(0);
   const [email, setEmail] = useState<string>("user");

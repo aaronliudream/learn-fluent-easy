@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
+import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 
 type Passage = { id: string; title: string; body: string; structure_analysis: string | null };
 type Question = {
@@ -28,6 +29,8 @@ export default function GaokaoReadingPlay() {
   const [picks, setPicks] = useState<Record<string, string>>({});
   const [showAnalysis, setShowAnalysis] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [streak, setStreak] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
 
   useEffect(() => {
     if (!id) return;
@@ -45,11 +48,23 @@ export default function GaokaoReadingPlay() {
   const onPick = async (q: Question, letter: string) => {
     if (picks[q.id]) return;
     setPicks((prev) => ({ ...prev, [q.id]: letter }));
+    const ok = letter === q.correct_answer;
+    if (ok) {
+      const next = streak + 1;
+      setStreak(next);
+      await awardForCorrect(next, "gaokao_reading");
+      const cc = correctCount + 1;
+      setCorrectCount(cc);
+      if (cc % 5 === 0) await awardForBlock("gaokao_reading");
+    } else {
+      setStreak(0);
+      notifyWrong();
+    }
     await recordAttempt({
       questionType: "reading",
       questionId: q.id,
       userAnswer: letter,
-      isCorrect: letter === q.correct_answer,
+      isCorrect: ok,
     });
   };
 

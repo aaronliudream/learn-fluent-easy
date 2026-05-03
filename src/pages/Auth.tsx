@@ -236,6 +236,32 @@ const Auth = () => {
                       onChange={(e) => setPin(e.target.value.replace(/\D/g, ""))}
                       placeholder="例如 1234" autoComplete="new-password" />
                   </div>
+                  <div>
+                    <Label><T>你的年龄段</T></Label>
+                    <div className="mt-1 grid grid-cols-3 gap-2">
+                      {([
+                        { v: "child", label: t("12 岁以下") },
+                        { v: "teen",  label: t("13–17 岁") },
+                        { v: "adult", label: t("18+") },
+                      ] as const).map(opt => (
+                        <button
+                          key={opt.v}
+                          type="button"
+                          onClick={() => setAgeBand(opt.v)}
+                          className={`rounded-xl border-2 px-2 py-2 text-xs font-bold transition ${
+                            ageBand === opt.v
+                              ? "border-primary bg-primary/10 text-primary"
+                              : "border-border bg-card text-muted-foreground hover:border-primary/40"
+                          }`}
+                        >
+                          {opt.label}
+                        </button>
+                      ))}
+                    </div>
+                    <p className="mt-1 text-[10px] text-muted-foreground">
+                      <T>用于符合 COPPA / GDPR-K 的儿童数据保护，不会存储任何敏感信息。</T>
+                    </p>
+                  </div>
                   <Button type="submit" className="w-full" disabled={loading || nickAvailable === false}>
                     {loading ? <Loader2 className="size-4 animate-spin" /> : <T>开始学习 🚀</T>}
                   </Button>

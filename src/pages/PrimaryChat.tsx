@@ -88,6 +88,15 @@ export default function PrimaryChat() {
         const englishOnly = acc.replace(/[\u4e00-\u9fff（）()]/g, "").replace(/\s+/g, " ").trim();
         if (englishOnly) speak(englishOnly).catch(() => {});
       }
+      // 对话挂钩：用户输入英文越多奖励越多 (每 3 个英文单词 +1，封顶 5)
+      try {
+        const userEn = (t.match(/[a-zA-Z]+/g) || []).length;
+        const reward = Math.min(5, Math.floor(userEn / 3) + 1);
+        if (reward > 0) {
+          const m = await import("@/lib/coins");
+          await m.awardCoins(reward, "primary_chat_turn");
+        }
+      } catch { /* noop */ }
     } catch (e) {
       setMessages((prev) => prev.slice(0, -1));
       console.error(e);

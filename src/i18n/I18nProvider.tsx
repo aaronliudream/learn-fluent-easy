@@ -112,6 +112,11 @@ type I18nContextValue = {
   markPicked: () => void;
   t: (key: StringKey, vars?: Record<string, string | number>) => string;
   tDynamic: (text: string) => string; // for content (dialogue Chinese hints, etc.)
+  /** English version of a static key (for bilingual display). */
+  tEn: (key: StringKey, vars?: Record<string, string | number>) => string;
+  /** English translation of an arbitrary source text. Async — returns
+   *  empty string for one tick if not yet cached, then re-renders. */
+  tDynamicEn: (text: string) => string;
 };
 
 const I18nContext = createContext<I18nContextValue | null>(null);
@@ -184,6 +189,9 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   // Dynamic-text cache (translated content snippets).
   const dynCacheRef = useRef<Record<string, string>>({});
+  // Separate cache for English translations (used by bilingual UI when the
+  // user's chosen language is not English). Keyed by source string.
+  const dynEnCacheRef = useRef<Record<string, string>>({});
   // Bumped whenever a batch of dynamic translations lands. We MUST include
   // this in the memoised context value so that <T> / useT() consumers
   // actually re-render and pick up the freshly cached translation —
@@ -194,6 +202,8 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   // Pending dynamic-translation queue (debounced batch).
   const dynQueueRef = useRef<Set<string>>(new Set());
   const dynTimerRef = useRef<number | null>(null);
+  const dynEnQueueRef = useRef<Set<string>>(new Set());
+  const dynEnTimerRef = useRef<number | null>(null);
 
   // Load catalog + dyn cache when language changes.
   useEffect(() => {
@@ -204,6 +214,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       setCatalog(loadCachedCatalog(lang));
     }
     dynCacheRef.current = lang === "zh" ? {} : loadDynCache(lang);
+    dynEnCacheRef.current = loadDynCache("en" as LangCode);
   }, [lang]);
 
   // Fetch missing static-string translations from edge function.
@@ -285,6 +296,30 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  // Flush English-translation queue (for bilingual mode).
+  const flushDynEnQueue = useCallback(async () => {
+    const toSend = Array.from(dynEnQueueRef.current);
+    dynEnQueueRef.current.clear();
+    if (toSend.length === 0) return;
+    const items = toSend.slice(0, 12).map((text, i) => ({ key: String(i), text }));
+    const sent = toSend.slice(0, 12);
+    try {
+      const { data, error } = await invokeTranslateWithTimeout("English", items);
+      if (error) return;
+      const translations: Record<string, string> = data?.translations || {};
+      const next = { ...dynEnCacheRef.current };
+      sent.forEach((src, i) => {
+        const tr = translations[String(i)];
+        if (typeof tr === "string" && tr.trim()) next[src] = stripHtml(tr);
+      });
+      dynEnCacheRef.current = next;
+      saveDynCache("en" as LangCode, next);
+      bump((x) => x + 1);
+    } catch (e) {
+      console.error("dyn en translate failed", e);
+    }
+  }, []);
+
   const tDynamic = useCallback((text: string) => {
     if (!text) return text;
     // No translation needed if the user chose Chinese, which is the app's
@@ -332,9 +367,36 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   // we want every memoised consumer to recompute against the new cache.
   }, [lang, flushDynQueue, dynVersion]);
 
+  const tEn = useCallback((key: StringKey, vars?: Record<string, string | number>) => {
+    const tmpl = EN[key] ?? key;
+    return interpolate(tmpl, vars);
+  }, []);
+
+  const tDynamicEn = useCallback((text: string) => {
+    if (!text) return text;
+    // Source already English (no CJK) → just return it.
+    if (!CJK_TEXT_RE.test(text)) return localizeProtagonist(text, "en" as LangCode);
+    const cached = dynEnCacheRef.current[text];
+    if (cached) return localizeProtagonist(cached, "en" as LangCode);
+    dynEnQueueRef.current.add(text);
+    if (dynEnTimerRef.current === null) {
+      dynEnTimerRef.current = window.setTimeout(() => {
+        dynEnTimerRef.current = null;
+        flushDynEnQueue();
+      }, 0);
+    }
+    if (dynEnQueueRef.current.size >= 24 && dynEnTimerRef.current !== null) {
+      window.clearTimeout(dynEnTimerRef.current);
+      dynEnTimerRef.current = null;
+      void flushDynEnQueue();
+    }
+    return "";
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [flushDynEnQueue, dynVersion]);
+
   const value = useMemo<I18nContextValue>(() => ({
-    lang, setLang, hasPicked, markPicked, t, tDynamic,
-  }), [lang, setLang, hasPicked, markPicked, t, tDynamic, dynVersion]);
+    lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn,
+  }), [lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, dynVersion]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

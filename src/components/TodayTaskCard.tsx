@@ -5,10 +5,23 @@ import {
   ChevronDown, Target, BookOpen, MessageCircle, Headphones, Briefcase, Library,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { LEVELS } from "@/data/course";
 import { loadProgress, getStreak } from "@/lib/guestProgress";
-import { IDIOMS } from "@/data/idioms";
 import { T, useT } from "@/i18n/T";
+
+const FIRST_LESSON = {
+  to: "/level/1/unit/1/lesson/1",
+  title: "Hello, I'm Mei. · 第一课：你好，我叫梅（梅刚到加州）",
+};
+
+const TODAY_SLANG = [
+  { phrase: "read the room", meaning_cn: "察言观色；读懂气氛" },
+  { phrase: "spill the tea", meaning_cn: "爆料八卦；分享内幕消息" },
+  { phrase: "no cap", meaning_cn: "不骗你；说真的" },
+  { phrase: "vibe check", meaning_cn: "看看气氛怎么样" },
+  { phrase: "send it", meaning_cn: "冲了；放手去做" },
+  { phrase: "that tracks", meaning_cn: "说得通；和我了解的一致" },
+  { phrase: "touch grass", meaning_cn: "出去走走；别上网了" },
+];
 
 type Task = {
   key: string;
@@ -29,28 +42,9 @@ type Reco = {
   active_today: boolean; current_streak: number;
 };
 
-/**
- * Find the next un-completed lesson for the signed-in / guest learner.
- * Walks LEVELS in order and returns the first lesson whose key isn't in
- * `completedLessons`. Falls back to the very first lesson.
- */
 function nextLessonInfo(completed: string[]): { to: string; title: string } {
-  const done = new Set(completed);
-  for (const lv of LEVELS) {
-    if (lv.locked) continue;
-    for (const u of lv.units) {
-      for (const l of u.lessons) {
-        const key = `${lv.id}-${u.id}-${l.id}`;
-        if (!done.has(key)) {
-          return {
-            to: `/level/${lv.id}/unit/${u.id}/lesson/${l.id}`,
-            title: l.title,
-          };
-        }
-      }
-    }
-  }
-  return { to: "/levels", title: "继续你的学习路径" }; // translated via t() at render time
+  if (completed.length > 0) return { to: "/levels", title: "继续你的学习路径" };
+  return FIRST_LESSON;
 }
 
 /** Map weakest mistake module → CTA target */
@@ -109,14 +103,6 @@ export const TodayTaskCard = () => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (cancelled) return;
       setSignedIn(!!session?.user);
-      if (session?.user) {
-        supabase.rpc("get_today_recommendations").then(({ data, error }) => {
-          if (cancelled) return;
-          if (error) { console.warn("today reco rpc error", error); return; }
-          const row = Array.isArray(data) ? data[0] : data;
-          if (row) setReco(row as Reco);
-        });
-      }
     });
     return () => { cancelled = true; };
   }, []);
@@ -126,9 +112,8 @@ export const TodayTaskCard = () => {
   // Pick today's slang deterministically from the static catalog so the
   // suggestion is stable across reloads on the same day.
   const todaySlang = useMemo(() => {
-    if (!IDIOMS.length) return null;
     const seed = Number(todayKey.replace(/-/g, "")) || 0;
-    return IDIOMS[seed % IDIOMS.length];
+    return TODAY_SLANG[seed % TODAY_SLANG.length];
   }, [todayKey]);
 
   // ----- Build personalized task list -----
@@ -156,13 +141,27 @@ export const TodayTaskCard = () => {
       ];
     }
 
-    // Signed in but RPC still loading: show skeleton-ish placeholders
+    // Keep homepage instant on distant networks: use local, stable suggestions
+    // instead of waiting for a remote recommendation call.
     if (!reco) {
-      return [{
-        key: "loading", icon: Sparkles, tone: "from-violet-500 to-fuchsia-500",
-        label: t("正在为你挑选今日任务…"), detail: t("根据你的学习记录智能安排"),
-        to: "/review", cta: t("查看"), done: false,
-      }];
+      return [
+        {
+          key: "local-review", icon: Brain, tone: "from-violet-500 to-fuchsia-500",
+          label: t("先复习 5 分钟"), detail: t("巩固最近学过的单词和句子"),
+          to: "/review", cta: t("去复习"), done: false,
+        },
+        {
+          key: "local-lesson", icon: GraduationCap, tone: "from-blue-500 to-indigo-500",
+          label: progress.completedLessons.length > 0 ? t("继续下一课") : t("开始第一课"),
+          detail: t(next.title), to: next.to, cta: t("继续"), done: false,
+        },
+        {
+          key: "local-slang", icon: Zap, tone: "from-amber-500 to-rose-500",
+          label: t("今日一句俚语"),
+          detail: todaySlang ? `“${todaySlang.phrase}” · ${t(todaySlang.meaning_cn)}` : t("看看今天的流行表达"),
+          to: "/slang", cta: t("去看"), done: false,
+        },
+      ];
     }
 
     const out: Task[] = [];

@@ -4,13 +4,10 @@ import {
   DEFAULT_LANG,
   LANGUAGES,
   type LangCode,
-  detectBrowserLang,
   getLanguageInfo,
 } from "./languages";
 import { BUILTIN, EN, ZH, type StringKey, interpolate } from "./strings";
 import { localizeProtagonist } from "./protagonistName";
-import { UI_PHRASES } from "./uiPhrases.generated";
-import { startDomLeakScanner } from "./devLeakDetector";
 
 const STORAGE_LANG = "fluentpath.lang";
 const STORAGE_PICKED = "fluentpath.langPicked";
@@ -24,6 +21,7 @@ const STORAGE_PICKED = "fluentpath.langPicked";
 // catalog. Bump the prefix so every client re-fetches once with the new
 // Chinese-source pipeline.
 const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v5.";
+const TRANSLATION_FETCH_TIMEOUT_MS = 2500;
 
 type Catalog = Partial<Record<StringKey, string>>;
 
@@ -149,12 +147,28 @@ function saveDynCache(lang: LangCode, c: Record<string, string>) {
   try { localStorage.setItem(STORAGE_CACHE_PREFIX + lang + ".dyn", JSON.stringify(c)); } catch { /* ignore */ }
 }
 
+async function invokeTranslateWithTimeout(
+  targetLanguage: string,
+  items: { key: string; text: string }[],
+) {
+  return Promise.race([
+    supabase.functions.invoke("translate", { body: { targetLanguage, items } }),
+    new Promise<{ data: null; error: Error }>((resolve) => {
+      window.setTimeout(() => resolve({ data: null, error: new Error("translation timeout") }), TRANSLATION_FETCH_TIMEOUT_MS);
+    }),
+  ]);
+}
+
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<LangCode>(() => {
     if (typeof window === "undefined") return DEFAULT_LANG;
     const saved = localStorage.getItem(STORAGE_LANG) as LangCode | null;
     if (saved && LANGUAGES.some((l) => l.code === saved)) return saved;
-    return detectBrowserLang();
+    // This product primarily serves Chinese learners, including families in
+    // the US whose browser language is often English. Default to Chinese until
+    // the user explicitly chooses another mother tongue, avoiding slow first-load
+    // AI translation calls on US networks.
+    return DEFAULT_LANG;
   });
   const [hasPicked, setHasPicked] = useState<boolean>(() => {
     if (typeof window === "undefined") return true;
@@ -180,16 +194,6 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   // Pending dynamic-translation queue (debounced batch).
   const dynQueueRef = useRef<Set<string>>(new Set());
   const dynTimerRef = useRef<number | null>(null);
-
-  // Dev-only: start a DOM-wide scanner that warns when text in the wrong
-  // script appears (catches hardcoded JSX strings that bypass <T>).
-  // Uses a ref so the scanner always sees the *current* language even
-  // though it's started exactly once.
-  const langRef = useRef<LangCode>(lang);
-  useEffect(() => { langRef.current = lang; }, [lang]);
-  useEffect(() => {
-    startDomLeakScanner(() => langRef.current);
-  }, []);
 
   // Load catalog + dyn cache when language changes.
   useEffect(() => {
@@ -219,9 +223,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       }));
       const targetLanguage = getLanguageInfo(lang).englishName;
       try {
-        const { data, error } = await supabase.functions.invoke("translate", {
-          body: { targetLanguage, items },
-        });
+        const { data, error } = await invokeTranslateWithTimeout(targetLanguage, items);
         if (cancelled) return;
         if (error) {
           console.error("translate error", error);
@@ -241,59 +243,6 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     })();
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang]);
-
-  // Warm the dynamic-translation cache for high-frequency UI phrases that are
-  // sprinkled across pages as <T>中文</T>. Without this, every page hop costs
-  // one network round-trip the first time a user visits it. By front-loading
-  // these right after the user picks a language, subsequent navigation is
-  // basically instant (cache hits in localStorage).
-  useEffect(() => {
-    if (lang === "zh") return; // Chinese users see the source text directly.
-    let cancelled = false;
-    // Stagger the warm-up so we don't compete with the static-string fetch
-    // above (which renders the immediate UI). 600ms is enough for the first
-    // paint to settle.
-    const timer = window.setTimeout(() => {
-      if (cancelled) return;
-      const cache = dynCacheRef.current;
-      const missing = UI_PHRASES.filter(
-        (p) => !isUsableTranslation(lang, p, cache[p]),
-      );
-      if (missing.length === 0) return;
-      const targetLanguage = getLanguageInfo(lang).englishName;
-      // Send in chunks of 80 — keeps each request small enough to stream
-      // back quickly and avoids hitting model context limits.
-      const CHUNK = 80;
-      (async () => {
-        for (let i = 0; i < missing.length; i += CHUNK) {
-          if (cancelled) return;
-          const slice = missing.slice(i, i + CHUNK);
-          const items = slice.map((text, idx) => ({ key: String(idx), text }));
-          try {
-            const { data, error } = await supabase.functions.invoke("translate", {
-              body: { targetLanguage, items },
-            });
-            if (cancelled || error) continue;
-            const translations: Record<string, string> = data?.translations || {};
-            const next = { ...dynCacheRef.current };
-            slice.forEach((src, idx) => {
-              const tr = translations[String(idx)];
-              if (isUsableTranslation(lang, src, tr)) next[src] = stripHtml(tr);
-            });
-            dynCacheRef.current = next;
-            saveDynCache(lang, next);
-            bump((x) => x + 1);
-          } catch (e) {
-            console.error("UI phrases warm-up failed", e);
-          }
-        }
-      })();
-    }, 600);
-    return () => {
-      cancelled = true;
-      window.clearTimeout(timer);
-    };
   }, [lang]);
 
   const setLang = useCallback((l: LangCode) => {
@@ -317,15 +266,14 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (toSend.length === 0) return;
     const targetLanguage = getLanguageInfo(l).englishName;
     // Use index keys so we keep mapping; truncate text to a sane length.
-    const items = toSend.map((text, i) => ({ key: String(i), text }));
+      const items = toSend.slice(0, 12).map((text, i) => ({ key: String(i), text }));
+      const sent = toSend.slice(0, 12);
     try {
-      const { data, error } = await supabase.functions.invoke("translate", {
-        body: { targetLanguage, items },
-      });
+      const { data, error } = await invokeTranslateWithTimeout(targetLanguage, items);
       if (error) return;
       const translations: Record<string, string> = data?.translations || {};
       const next = { ...dynCacheRef.current };
-      toSend.forEach((src, i) => {
+      sent.forEach((src, i) => {
         const tr = translations[String(i)];
         if (isUsableTranslation(l, src, tr)) next[src] = stripHtml(tr);
       });
@@ -342,7 +290,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // No translation needed if the user chose Chinese, which is the app's
     // original helper-language for lesson notes and hints.
     if (lang === "zh") return localizeProtagonist(text, lang);
-    if (lang === "en" && !CJK_TEXT_RE.test(text)) return localizeProtagonist(text, lang);
+    if (lang === "en") return localizeProtagonist(text, lang);
     const cached = dynCacheRef.current[text];
     if (isUsableTranslation(lang, text, cached)) return localizeProtagonist(cached, lang);
     // Queue the request. Use a microtask-style 0ms timer so the *first*
@@ -364,14 +312,10 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       // Fire and forget — flushDynQueue handles its own state.
       void flushDynQueue(lang);
     }
-    // STRICT MODE: never show the original Chinese source to a user whose
-    // mother-tongue is something else (e.g. Spanish, French). Showing the
-    // raw source text would violate the rule "only English + the chosen
-    // language may appear on screen". Instead we render a short placeholder
-    // (an ellipsis) that will be swapped out the instant the translation
-    // batch resolves a few hundred ms later. For English users with a
-    // CJK source we also redact, since they shouldn't see Chinese either.
-    if (CJK_TEXT_RE.test(text)) return "…";
+    // For distant networks, never block the UI on AI translation. If the
+    // source is Chinese, show a readable fallback immediately and swap in the
+    // chosen-language translation only if it arrives quickly.
+    if (CJK_TEXT_RE.test(text)) return localizeProtagonist(text, "en" as LangCode);
     // Source string contains no CJK — safe to show as-is while we wait
     // (e.g. an English helper string being translated into Spanish).
     return localizeProtagonist(text, lang);

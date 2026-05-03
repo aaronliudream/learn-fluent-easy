@@ -1,4 +1,4 @@
-import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic, School } from "lucide-react";
+import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Clapperboard, Briefcase, Mic, School } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -6,24 +6,26 @@ import type { User } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
-import { IDIOMS } from "@/data/idioms";
-import { SCENE_DIALOGUES } from "@/data/scenes";
-import { WORK_CATEGORIES } from "@/data/workplace";
 import { useI18n } from "@/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { T } from "@/i18n/T";
 import { SupportButton } from "@/components/SupportButton";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
 
+const HOME_COUNTS = {
+  slang: 347,
+  scenes: 95,
+  workplace: 65,
+  levels: 4,
+};
+
 const Index = () => {
   const { t } = useI18n();
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
-  const [slangCount, setSlangCount] = useState<number>(IDIOMS.length);
 
   useEffect(() => {
     touchActive();
@@ -33,24 +35,6 @@ const Index = () => {
     });
     supabase.auth.getSession().then(({ data: { session } }) => setUser(session?.user ?? null));
     return () => subscription.unsubscribe();
-  }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      const { data, error } = await supabase
-        .from("daily_slang")
-        .select("phrase");
-      if (cancelled || error || !data) return;
-      const staticPhrases = new Set(IDIOMS.map((i) => i.phrase.toLowerCase()));
-      const extra = new Set<string>();
-      for (const row of data) {
-        const p = (row.phrase || "").toLowerCase();
-        if (p && !staticPhrases.has(p)) extra.add(p);
-      }
-      setSlangCount(IDIOMS.length + extra.size);
-    })();
-    return () => { cancelled = true; };
   }, []);
 
   const signOut = async () => {
@@ -74,7 +58,7 @@ const Index = () => {
       icon: GraduationCap,
       eyebrow: t("index.section.path.eyebrow"),
       title: t("index.section.path.title"),
-      desc: t("index.section.path.desc", { count: LEVELS.length }),
+      desc: t("index.section.path.desc", { count: HOME_COUNTS.levels }),
       gradient: "from-blue-600 via-indigo-600 to-purple-600",
     },
     {
@@ -82,7 +66,7 @@ const Index = () => {
       icon: Zap,
       eyebrow: t("index.section.slang.eyebrow"),
       title: t("index.section.slang.title"),
-      desc: t("index.section.slang.desc", { count: slangCount }),
+      desc: t("index.section.slang.desc", { count: HOME_COUNTS.slang }),
       gradient: "from-fuchsia-500 via-rose-500 to-orange-500",
     },
     {
@@ -90,7 +74,7 @@ const Index = () => {
       icon: Clapperboard,
       eyebrow: t("index.section.scenes.eyebrow"),
       title: t("index.section.scenes.title"),
-      desc: t("index.section.scenes.desc", { count: SCENE_DIALOGUES.length }),
+      desc: t("index.section.scenes.desc", { count: HOME_COUNTS.scenes }),
       gradient: "from-indigo-500 via-violet-500 to-sky-500",
     },
     {
@@ -98,7 +82,7 @@ const Index = () => {
       icon: Briefcase,
       eyebrow: t("index.section.workplace.eyebrow"),
       title: t("index.section.workplace.title"),
-      desc: t("index.section.workplace.desc", { count: WORK_CATEGORIES.length }),
+      desc: t("index.section.workplace.desc", { count: HOME_COUNTS.workplace }),
       gradient: "from-slate-800 via-slate-700 to-amber-600",
     },
     {
@@ -242,13 +226,6 @@ const Index = () => {
           {t("index.section.placement.cta")} <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
         </div>
       </Link>
-
-      {/* Locked-level hint (for transparency about coming-soon levels) */}
-      {LEVELS.some((lv) => lv.locked) && (
-        <p className="mt-4 flex items-center justify-center gap-1.5 text-center text-xs text-muted-foreground">
-          <Lock className="size-3" /> {t("index.levels.locked")}
-        </p>
-      )}
 
       <SupportButton variant="footer" />
     </main>

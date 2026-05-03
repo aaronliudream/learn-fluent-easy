@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, BookOpen, FileText, Sparkles, PenLine, Headphones, Edit3, Lock, Activity } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
+import { TodayGrowthCard } from "@/components/TodayGrowthCard";
 
 const SECTIONS = [
   {
@@ -68,6 +69,10 @@ export default function Gaokao() {
         <ArrowLeft className="size-4" /> 返回首页
       </Link>
       <PageHeader title="高考英语" hideReviewBanner />
+
+      <div className="mb-5">
+        <TodayGrowthCard />
+      </div>
 
       <section className="grid gap-3">
         {SECTIONS.map((s) => {

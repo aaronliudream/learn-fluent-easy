@@ -1,4 +1,4 @@
-import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic, BookOpenCheck } from "lucide-react";
+import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Lock, Clapperboard, Briefcase, Mic, School } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -102,14 +102,13 @@ const Index = () => {
       gradient: "from-slate-800 via-slate-700 to-amber-600",
     },
     {
-      to: "/gaokao",
-      icon: BookOpenCheck,
-      // Intentionally Chinese-only: this section targets Chinese high-school
-      // students preparing for Gaokao. Do NOT wrap in <T> or t() — must
-      // always render in Chinese regardless of the user's selected language.
-      eyebrow: "高考英语 · GAOKAO",
-      title: "中国高中生 · 高考英语专区",
-      desc: "诊断你的薄弱点，覆盖语法、阅读、词汇全部考点，错题智能追加同类题",
+      to: "/china",
+      icon: School,
+      // Intentionally Chinese-only: this hub targets Chinese students from
+      // primary school through college. Do NOT wrap in <T> or t().
+      eyebrow: "中国学生 · CHINA STUDENTS",
+      title: "中国学生英语学习专区",
+      desc: "覆盖小学 · 初中 · 高中(高考) · 大学四级 · 大学六级，按学段精准提分",
       gradient: "from-red-600 via-rose-600 to-orange-500",
     },
   ];

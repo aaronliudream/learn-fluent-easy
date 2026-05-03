@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Loader2, Lightbulb, BookOpen, Sparkles, ChevronDown, ChevronUp, AlertCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
+import ReportAIButton from "@/components/pet/ReportAIButton";
 
 export interface MistakeWordInput {
   id: string;
@@ -182,6 +183,13 @@ export default function MistakeExplainer({
                   <span className="ml-2">{data.tip}</span>
                 </div>
               )}
+              <div className="flex justify-end">
+                <ReportAIButton
+                  feature="mistake_explain"
+                  sourceId={vocab.id}
+                  contentSnippet={`${data.etymology}\n${data.mnemonic}\n${data.tip ?? ""}`}
+                />
+              </div>
             </div>
           )}
         </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -8,6 +8,9 @@ type Cat = { id: string; name_cn: string; emoji: string; sort_order: number };
 type Pt = { id: string; category_id: string; title: string; cefr: string; grade: number; summary: string };
 
 export default function JuniorGrammar() {
+  const [params] = useSearchParams();
+  const grade = params.get("grade");
+  const backTo = grade ? `/junior/g/${grade}` : "/junior";
   const [cats, setCats] = useState<Cat[]>([]);
   const [pts, setPts] = useState<Pt[]>([]);
   useEffect(() => {
@@ -17,13 +20,14 @@ export default function JuniorGrammar() {
         supabase.from("junior_grammar_points").select("*").order("sort_order"),
       ]);
       setCats((c.data ?? []) as Cat[]);
-      setPts((p.data ?? []) as Pt[]);
+      const all = (p.data ?? []) as Pt[];
+      setPts(grade ? all.filter((x) => x.grade === Number(grade)) : all);
     })();
-  }, []);
+  }, [grade]);
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回初中专区
+      <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> {grade ? `返回初${grade}` : "返回初中专区"}
       </BackLink>
       <div className="mb-6">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">JUNIOR · GRAMMAR</div>

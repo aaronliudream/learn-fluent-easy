@@ -1,21 +1,26 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 type P = { id: string; topic: string; prompt_cn: string; grade: number; min_words: number; max_words: number; difficulty: number };
 
 export default function JuniorWriting() {
+  const [params] = useSearchParams();
+  const grade = params.get("grade");
+  const backTo = grade ? `/junior/g/${grade}` : "/junior";
   const [items, setItems] = useState<P[]>([]);
   useEffect(() => {
-    (supabase as any).from("junior_writing_prompts")
+    let q: any = (supabase as any).from("junior_writing_prompts")
       .select("id,topic,prompt_cn,grade,min_words,max_words,difficulty")
-      .order("grade").then(({ data }: any) => setItems((data ?? []) as P[]));
-  }, []);
+      .order("grade");
+    if (grade) q = q.eq("grade", Number(grade));
+    q.then(({ data }: any) => setItems((data ?? []) as P[]));
+  }, [grade]);
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回初中专区</BackLink>
+      <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {grade ? `返回初${grade}` : "返回初中专区"}</BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold">✍️ 初中写作训练</h1>
       <p className="mt-1 text-sm text-muted-foreground">命题作文 · AI 评分 · 范文对比 · 提交奖星币</p>
       <div className="mt-5 grid gap-2">

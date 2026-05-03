@@ -47,6 +47,7 @@ const PrimaryReadingPlay = lazy(() => import("./pages/PrimaryReadingPlay.tsx"));
 const StageTests = lazy(() => import("./pages/StageTests.tsx"));
 const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
+const JuniorGrade = lazy(() => import("./pages/JuniorGrade.tsx"));
 const JuniorVocab = lazy(() => import("./pages/JuniorVocab.tsx"));
 const JuniorGrammar = lazy(() => import("./pages/JuniorGrammar.tsx"));
 const JuniorGrammarPoint = lazy(() => import("./pages/JuniorGrammarPoint.tsx"));
@@ -109,6 +110,7 @@ const FloatingPetGate = () => {
     pathname.startsWith("/junior/reading") ||
     pathname.startsWith("/junior/listening") ||
     pathname.startsWith("/junior/writing") ||
+    pathname.startsWith("/junior/g/") ||
     pathname.startsWith("/gaokao/grammar") ||
     pathname.startsWith("/gaokao/reading") ||
     pathname.startsWith("/gaokao/vocab") ||
@@ -189,6 +191,7 @@ const App = () => (
           <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
           <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />
           <Route path="/junior" element={<Junior />} />
+          <Route path="/junior/g/:grade" element={<JuniorGrade />} />
           <Route path="/junior/vocab" element={<JuniorVocab />} />
           <Route path="/junior/grammar" element={<JuniorGrammar />} />
           <Route path="/junior/grammar/:id" element={<JuniorGrammarPoint />} />

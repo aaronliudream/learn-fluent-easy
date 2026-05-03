@@ -43,7 +43,7 @@ export default function JuniorVocab() {
     const loader = gradeNum === 7
       ? supabase
           .from("junior_vocab")
-          .select("id,word,phonetic,pos,meaning_cn,meaning_en:meaning_cn,example_en,example_cn,star_level,theme,freq_rank")
+          .select("id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank")
           .eq("grade", 7)
           .order("freq_rank", { ascending: true, nullsFirst: false })
           .limit(2000)

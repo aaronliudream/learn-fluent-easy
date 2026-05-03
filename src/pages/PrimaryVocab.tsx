@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -57,12 +58,12 @@ export default function PrimaryVocab() {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-4 py-6 md:px-6 md:py-10">
-      <Link
+      <BackLink
         to={lockedGrade ? `/primary/grade/${lockedGrade}` : "/primary"}
         className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> {lockedGrade ? `返回 ${["一","二","三","四","五","六"][lockedGrade-1] ?? lockedGrade}年级` : "返回小学专区"}
-      </Link>
+      </BackLink>
       <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">

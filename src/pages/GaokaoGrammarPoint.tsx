@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, XCircle, RotateCcw, Eye, Lightbulb, Dumbbell, Target, ClipboardCheck, ChevronRight, Crown } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -118,7 +119,7 @@ export default function GaokaoGrammarPoint() {
   }, [allQuestions]);
 
   if (loading) return <p className="p-8 text-sm text-muted-foreground">加载中...</p>;
-  if (!point) return <p className="p-8">考点不存在。<Link to="/gaokao/grammar" className="text-primary underline">返回</Link></p>;
+  if (!point) return <p className="p-8">考点不存在。<BackLink to="/gaokao/grammar" className="text-primary underline">返回</BackLink></p>;
 
   const stageIdx = STAGES.findIndex((s) => s.id === stage);
   const meta = LEVEL_META[mastery?.mastery_level ?? 0];
@@ -221,9 +222,9 @@ export default function GaokaoGrammarPoint() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8 pb-24">
-      <Link to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回语法地图
-      </Link>
+      </BackLink>
       <PageHeader title={point.title} hideReviewBanner />
 
       {/* ===== 顶部：掌握度 + 阶段进度 ===== */}
@@ -488,7 +489,7 @@ export default function GaokaoGrammarPoint() {
             </div>
           )}
           <div className="mt-4 flex gap-2">
-            <Button variant="outline" asChild className="flex-1"><Link to="/gaokao/grammar">返回地图</Link></Button>
+            <Button variant="outline" asChild className="flex-1"><BackLink to="/gaokao/grammar">返回地图</BackLink></Button>
             <Button onClick={reset} className="flex-1"><RotateCcw className="mr-1 size-4" /> 再练一轮</Button>
           </div>
         </section>

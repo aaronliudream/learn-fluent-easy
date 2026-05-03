@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, lazy, Suspense } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Loader2, Coins, Backpack, School, GraduationCap, Sparkles, TrendingUp, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -90,9 +91,9 @@ export default function GlobalParent() {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-4 py-6 md:px-6 md:py-10">
-      <Link to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回首页
-      </Link>
+      </BackLink>
       <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">PARENT CENTER · K-12</div>

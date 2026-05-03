@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Activity } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -104,7 +105,7 @@ export default function GaokaoDiagnostic() {
 
         <div className="flex gap-3">
           <Button asChild className="flex-1"><Link to="/gaokao/grammar">去攻克薄弱点</Link></Button>
-          <Button asChild variant="outline" className="flex-1"><Link to="/gaokao">返回</Link></Button>
+          <Button asChild variant="outline" className="flex-1"><BackLink to="/gaokao">返回</BackLink></Button>
         </div>
       </main>
     );
@@ -114,9 +115,9 @@ export default function GaokaoDiagnostic() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-      <Link to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回
-      </Link>
+      </BackLink>
       <PageHeader hideReviewBanner title="水平诊断" subtitle={`第 ${idx + 1} / ${questions.length} 题`} />
 
       <section className="rounded-2xl border bg-card p-5">

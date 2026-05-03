@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, XCircle } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -71,13 +72,13 @@ export default function GaokaoReadingPlay() {
   };
 
   if (loading) return <p className="p-8 text-sm text-muted-foreground">加载中...</p>;
-  if (!passage) return <p className="p-8">文章不存在。<Link to="/gaokao/reading" className="text-primary underline">返回</Link></p>;
+  if (!passage) return <p className="p-8">文章不存在。<BackLink to="/gaokao/reading" className="text-primary underline">返回</BackLink></p>;
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-      <Link to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回阅读列表
-      </Link>
+      </BackLink>
       <PageHeader title={passage.title} hideReviewBanner />
 
       <article className="mb-6 rounded-2xl border bg-card p-5 text-sm leading-relaxed">
@@ -155,7 +156,7 @@ export default function GaokaoReadingPlay() {
       </div>
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
-        <Button asChild><Link to="/gaokao/reading">← 返回阅读列表</Link></Button>
+        <Button asChild><BackLink to="/gaokao/reading">← 返回阅读列表</BackLink></Button>
         <Button asChild variant="outline"><Link to="/gaokao">🎓 高考首页</Link></Button>
         <Button asChild variant="outline"><Link to="/pets">🐾 宠物</Link></Button>
       </div>

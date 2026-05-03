@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import BackLink from "@/components/BackLink";
 import { Award, BookOpen, Briefcase, Check, Cloud, Flame, Lock, Map, ShoppingBag, Star, TrendingUp } from "lucide-react";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
@@ -25,12 +26,12 @@ const Level = () => {
           <p className="relative mx-auto mt-2 max-w-md text-sm opacity-90">
             <T>我们正在精心打磨这个级别的课程内容，敬请期待。先去其他已开放的级别继续学习吧 ✨</T>
           </p>
-          <Link
+          <BackLink
             to="/"
             className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-white/25 px-5 py-2.5 text-sm font-semibold backdrop-blur-sm transition hover:bg-white/35"
           >
             ← <T>返回首页</T>
-          </Link>
+          </BackLink>
         </section>
       </main>
     );

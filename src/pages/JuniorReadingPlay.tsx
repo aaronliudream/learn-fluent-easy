@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -45,7 +46,7 @@ export default function JuniorReadingPlay() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-      <Link to="/junior/reading" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</Link>
+      <BackLink to="/junior/reading" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold">{r.title}</h1>
       <article className="mt-4 rounded-2xl border bg-card p-5 text-sm leading-relaxed whitespace-pre-wrap">{r.body}</article>
       {r.vocab_notes?.length > 0 && (

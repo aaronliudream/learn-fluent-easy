@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, BookA, Sparkles, MessageCircle, Play, Star, Gamepad2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -58,9 +59,9 @@ export default function Primary() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
-      <Link to="/china" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/china" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回中国学生专区
-      </Link>
+      </BackLink>
 
       {/* Spark pet bar */}
       <div className="mb-5 rounded-3xl bg-gradient-to-br from-amber-200 via-rose-200 to-violet-200 p-4 shadow-tile">

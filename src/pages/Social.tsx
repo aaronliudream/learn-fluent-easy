@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Users, Trophy, Store, Gift, Hand, Sparkles, Loader2, Coins } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -211,7 +212,7 @@ export default function Social() {
       {/* header */}
       <div className="sticky top-0 z-30 border-b bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
-          <Link to="/" className="inline-flex items-center gap-1 text-slate-600 hover:text-slate-900"><ArrowLeft className="h-4 w-4" />返回</Link>
+          <BackLink to="/" className="inline-flex items-center gap-1 text-slate-600 hover:text-slate-900"><ArrowLeft className="h-4 w-4" />返回</BackLink>
           <h1 className="text-base font-bold text-slate-800">🌟 同学社区</h1>
           <div className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-bold text-amber-700"><Coins className="h-3.5 w-3.5" />{balance}</div>
         </div>

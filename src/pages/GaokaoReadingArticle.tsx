@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Clock, Send, CheckCircle2, XCircle, Sparkles, BookOpen, FileText, Target, ChevronDown, ChevronUp, Eye, Gauge, Brain, HelpCircle, ThumbsUp, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -351,9 +352,9 @@ export default function GaokaoReadingArticle() {
   if (!article) {
     return (
       <main className="mx-auto min-h-screen max-w-5xl px-5 py-8">
-        <Link to="/gaokao/reading" className="inline-flex items-center gap-1 text-sm text-muted-foreground">
+        <BackLink to="/gaokao/reading" className="inline-flex items-center gap-1 text-sm text-muted-foreground">
           <ArrowLeft className="size-4" /> 返回阅读列表
-        </Link>
+        </BackLink>
         <p className="mt-8 text-center text-muted-foreground">文章不存在</p>
       </main>
     );

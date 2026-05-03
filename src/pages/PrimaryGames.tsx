@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Trophy, RotateCw, Sparkles, Target, Headphones, Brain, PenLine, Coins } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -49,12 +50,12 @@ export default function PrimaryGames() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
-      <Link
+      <BackLink
         to={game ? `/primary/games/${isAll ? "all" : grade}` : (isAll ? "/primary" : `/primary/grade/${grade}`)}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> {game ? "返回游戏中心" : (isAll ? "返回小学专区" : `返回 ${["一","二","三","四","五","六"][grade-1] ?? grade}年级`)}
-      </Link>
+      </BackLink>
 
       <div className="mb-4">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">PRIMARY · GAMES</div>
@@ -219,12 +220,12 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
         <RotateCw className="size-4" /> 再玩一局
       </button>
       <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-        <Link
+        <BackLink
           to={`/primary/games/${grade || "all"}`}
           className="inline-flex items-center gap-1.5 rounded-full border-2 border-rose-300 bg-white px-5 py-2 text-sm font-extrabold text-rose-600 shadow-sm hover:bg-rose-50"
         >
           <ArrowLeft className="size-4" /> 返回游戏中心
-        </Link>
+        </BackLink>
         <Link
           to="/primary"
           className="inline-flex items-center gap-1.5 rounded-full border-2 border-amber-300 bg-white px-5 py-2 text-sm font-extrabold text-amber-700 shadow-sm hover:bg-amber-50"

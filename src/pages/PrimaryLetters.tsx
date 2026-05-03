@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Volume2, Sparkles, Music, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -42,12 +43,12 @@ export default function PrimaryLetters() {
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-4 py-6 md:px-6 md:py-10">
-      <Link
+      <BackLink
         to="/primary"
         className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> 返回小学专区
-      </Link>
+      </BackLink>
       <div className="mb-5">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
           26 LETTERS · PHONICS

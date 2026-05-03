@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, BookOpenCheck, Clock, Target, ChevronRight, CheckCircle2, AlertCircle, BookMarked } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -71,9 +72,9 @@ export default function GaokaoCloze() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
-      <Link to="/gaokao" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/gaokao" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回高考英语
-      </Link>
+      </BackLink>
       <PageHeader title="完形填空" subtitle="高一基础册 · 16 篇话题精讲（已上线 6 篇，更多陆续添加）" hideReviewBanner />
 
       <Link

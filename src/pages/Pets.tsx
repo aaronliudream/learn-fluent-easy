@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHeart, Star, Shirt, Smile } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -81,9 +82,9 @@ export default function Pets() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-4 pb-24 pt-6 md:px-6">
-      <Link to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回主页
-      </Link>
+      </BackLink>
       <div className="mb-4 flex items-center justify-between">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">MY PETS</div>

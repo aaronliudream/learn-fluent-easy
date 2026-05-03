@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ChevronRight, Sparkles, Target, Flame, BookOpen, TrendingUp, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -177,9 +178,9 @@ export default function GaokaoGrammar() {
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 pb-24">
-      <Link to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回高考英语
-      </Link>
+      </BackLink>
       <PageHeader hideReviewBanner title="语法考点" subtitle="按掌握度学习 · 间隔复习 · 错因分析" />
 
       {/* ===== Hero: 今日推荐 / 待复习 ===== */}

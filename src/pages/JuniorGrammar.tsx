@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -21,9 +22,9 @@ export default function JuniorGrammar() {
   }, []);
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <Link to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回初中专区
-      </Link>
+      </BackLink>
       <div className="mb-6">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">JUNIOR · GRAMMAR</div>
         <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">中考语法专项</h1>

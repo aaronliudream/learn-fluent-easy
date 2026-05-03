@@ -141,13 +141,27 @@ export const TodayTaskCard = () => {
       ];
     }
 
-    // Signed in but RPC still loading: show skeleton-ish placeholders
+    // Keep homepage instant on distant networks: use local, stable suggestions
+    // instead of waiting for a remote recommendation call.
     if (!reco) {
-      return [{
-        key: "loading", icon: Sparkles, tone: "from-violet-500 to-fuchsia-500",
-        label: t("正在为你挑选今日任务…"), detail: t("根据你的学习记录智能安排"),
-        to: "/review", cta: t("查看"), done: false,
-      }];
+      return [
+        {
+          key: "local-review", icon: Brain, tone: "from-violet-500 to-fuchsia-500",
+          label: t("先复习 5 分钟"), detail: t("巩固最近学过的单词和句子"),
+          to: "/review", cta: t("去复习"), done: false,
+        },
+        {
+          key: "local-lesson", icon: GraduationCap, tone: "from-blue-500 to-indigo-500",
+          label: progress.completedLessons.length > 0 ? t("继续下一课") : t("开始第一课"),
+          detail: t(next.title), to: next.to, cta: t("继续"), done: false,
+        },
+        {
+          key: "local-slang", icon: Zap, tone: "from-amber-500 to-rose-500",
+          label: t("今日一句俚语"),
+          detail: todaySlang ? `“${todaySlang.phrase}” · ${t(todaySlang.meaning_cn)}` : t("看看今天的流行表达"),
+          to: "/slang", cta: t("去看"), done: false,
+        },
+      ];
     }
 
     const out: Task[] = [];

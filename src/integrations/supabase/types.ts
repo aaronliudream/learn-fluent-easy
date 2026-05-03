@@ -14,6 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
+      action_rewards: {
+        Row: {
+          action_code: string
+          coins_base: number
+          cooldown_seconds: number
+          created_at: string
+          daily_cap: number
+          display_name_cn: string
+          display_name_en: string | null
+          flash_chance: number
+          is_active: boolean
+          module: string | null
+          xp_base: number
+        }
+        Insert: {
+          action_code: string
+          coins_base?: number
+          cooldown_seconds?: number
+          created_at?: string
+          daily_cap?: number
+          display_name_cn: string
+          display_name_en?: string | null
+          flash_chance?: number
+          is_active?: boolean
+          module?: string | null
+          xp_base?: number
+        }
+        Update: {
+          action_code?: string
+          coins_base?: number
+          cooldown_seconds?: number
+          created_at?: string
+          daily_cap?: number
+          display_name_cn?: string
+          display_name_en?: string | null
+          flash_chance?: number
+          is_active?: boolean
+          module?: string | null
+          xp_base?: number
+        }
+        Relationships: []
+      }
       activity_feed: {
         Row: {
           created_at: string
@@ -43,6 +85,135 @@ export type Database = {
           kind?: string
           message?: string
           meta?: Json | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      ai_blocked_keywords: {
+        Row: {
+          category: string
+          created_at: string
+          id: string
+          keyword: string
+          severity: number
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          id?: string
+          keyword: string
+          severity?: number
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          id?: string
+          keyword?: string
+          severity?: number
+        }
+        Relationships: []
+      }
+      ai_content_reports: {
+        Row: {
+          content_snippet: string
+          created_at: string
+          feature: string
+          id: string
+          reason: string
+          source_id: string | null
+          status: string
+          user_id: string
+        }
+        Insert: {
+          content_snippet: string
+          created_at?: string
+          feature: string
+          id?: string
+          reason: string
+          source_id?: string | null
+          status?: string
+          user_id: string
+        }
+        Update: {
+          content_snippet?: string
+          created_at?: string
+          feature?: string
+          id?: string
+          reason?: string
+          source_id?: string | null
+          status?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      ai_quota_limits: {
+        Row: {
+          daily_call_limit: number
+          daily_token_limit: number
+          description: string | null
+          feature: string
+        }
+        Insert: {
+          daily_call_limit: number
+          daily_token_limit: number
+          description?: string | null
+          feature: string
+        }
+        Update: {
+          daily_call_limit?: number
+          daily_token_limit?: number
+          description?: string | null
+          feature?: string
+        }
+        Relationships: []
+      }
+      ai_safety_log: {
+        Row: {
+          action_taken: string
+          created_at: string
+          feature: string
+          id: string
+          matched_keywords: string[] | null
+          user_id: string | null
+        }
+        Insert: {
+          action_taken: string
+          created_at?: string
+          feature: string
+          id?: string
+          matched_keywords?: string[] | null
+          user_id?: string | null
+        }
+        Update: {
+          action_taken?: string
+          created_at?: string
+          feature?: string
+          id?: string
+          matched_keywords?: string[] | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      ai_usage_quota: {
+        Row: {
+          call_count: number
+          feature: string
+          token_count: number
+          usage_date: string
+          user_id: string
+        }
+        Insert: {
+          call_count?: number
+          feature: string
+          token_count?: number
+          usage_date?: string
+          user_id: string
+        }
+        Update: {
+          call_count?: number
+          feature?: string
+          token_count?: number
+          usage_date?: string
           user_id?: string
         }
         Relationships: []
@@ -2787,6 +2958,35 @@ export type Database = {
         }
         Relationships: []
       }
+      pet_companion_choice: {
+        Row: {
+          chosen_at: string
+          chosen_species_id: string
+          personality_quiz_result: Json | null
+          user_id: string
+        }
+        Insert: {
+          chosen_at?: string
+          chosen_species_id: string
+          personality_quiz_result?: Json | null
+          user_id: string
+        }
+        Update: {
+          chosen_at?: string
+          chosen_species_id?: string
+          personality_quiz_result?: Json | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pet_companion_choice_chosen_species_id_fkey"
+            columns: ["chosen_species_id"]
+            isOneToOne: false
+            referencedRelation: "pet_species"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       pet_destinations: {
         Row: {
           cost_coins: number
@@ -3043,6 +3243,83 @@ export type Database = {
             columns: ["food_id"]
             isOneToOne: false
             referencedRelation: "pet_food_items"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      pet_memories: {
+        Row: {
+          content: string
+          created_at: string
+          expires_at: string | null
+          id: string
+          importance: number
+          memory_type: string
+          user_id: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          importance?: number
+          memory_type: string
+          user_id: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          importance?: number
+          memory_type?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      pet_personality_traits: {
+        Row: {
+          ai_persona_prompt: string | null
+          catchphrase_cn: string | null
+          catchphrase_en: string | null
+          curiosity: number
+          empathy: number
+          energy: number
+          humor: number
+          patience: number
+          species_id: string
+          updated_at: string
+        }
+        Insert: {
+          ai_persona_prompt?: string | null
+          catchphrase_cn?: string | null
+          catchphrase_en?: string | null
+          curiosity?: number
+          empathy?: number
+          energy?: number
+          humor?: number
+          patience?: number
+          species_id: string
+          updated_at?: string
+        }
+        Update: {
+          ai_persona_prompt?: string | null
+          catchphrase_cn?: string | null
+          catchphrase_en?: string | null
+          curiosity?: number
+          empathy?: number
+          energy?: number
+          humor?: number
+          patience?: number
+          species_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pet_personality_traits_species_id_fkey"
+            columns: ["species_id"]
+            isOneToOne: true
+            referencedRelation: "pet_species"
             referencedColumns: ["id"]
           },
         ]
@@ -3909,14 +4186,18 @@ export type Database = {
       }
       profiles: {
         Row: {
+          age_band: string | null
           created_at: string
+          data_minimization: boolean | null
           display_name: string | null
           email: string | null
           id: string
           is_guest: boolean
+          is_minor: boolean | null
           last_weekly_report_at: string | null
           leaderboard_alias: string | null
           leaderboard_opt_in: boolean
+          parental_consent_at: string | null
           preferred_language: string | null
           target_language: string
           updated_at: string
@@ -3925,14 +4206,18 @@ export type Database = {
           weekly_report_enabled: boolean
         }
         Insert: {
+          age_band?: string | null
           created_at?: string
+          data_minimization?: boolean | null
           display_name?: string | null
           email?: string | null
           id?: string
           is_guest?: boolean
+          is_minor?: boolean | null
           last_weekly_report_at?: string | null
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
+          parental_consent_at?: string | null
           preferred_language?: string | null
           target_language?: string
           updated_at?: string
@@ -3941,14 +4226,18 @@ export type Database = {
           weekly_report_enabled?: boolean
         }
         Update: {
+          age_band?: string | null
           created_at?: string
+          data_minimization?: boolean | null
           display_name?: string | null
           email?: string | null
           id?: string
           is_guest?: boolean
+          is_minor?: boolean | null
           last_weekly_report_at?: string | null
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
+          parental_consent_at?: string | null
           preferred_language?: string | null
           target_language?: string
           updated_at?: string
@@ -4808,6 +5097,14 @@ export type Database = {
       buy_pet_skin: { Args: { _skin_id: string }; Returns: Json }
       cancel_duel_queue: { Args: never; Returns: undefined }
       cancel_listing: { Args: { _listing_id: string }; Returns: undefined }
+      check_and_consume_ai_quota: {
+        Args: { _estimated_tokens?: number; _feature: string }
+        Returns: {
+          allowed: boolean
+          remaining_calls: number
+          remaining_tokens: number
+        }[]
+      }
       contribute_community_goal: {
         Args: { _amount: number; _goal_code: string }
         Returns: {

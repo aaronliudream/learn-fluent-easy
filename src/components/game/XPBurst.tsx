@@ -10,7 +10,7 @@ import { getXPPreset, type Intensity } from "@/lib/feedback";
 export function XPBurst({
   trigger,
   amount = 1,
-  label = "XP",
+  label = "能力",
   intensity = "subtle",
 }: {
   trigger: number;
@@ -39,6 +39,10 @@ export function XPBurst({
 
   if (bursts.length === 0) return null;
 
+  // 延迟满足 / 内在动机设计：把"+N XP"重塑为"能力 +0.x% 📈"。
+  // 让孩子把注意力从"赚取"转向"成长"，而不是货币累积。
+  const pct = (b: { amount: number }) => (b.amount * 0.3).toFixed(1);
+
   return (
     <div
       aria-hidden
@@ -54,7 +58,7 @@ export function XPBurst({
             ["--xp-drift" as never]: `-${preset.driftPx}px`,
           }}
         >
-          +{b.amount} {label}
+          {label} +{pct(b)}% 📈
         </div>
       ))}
     </div>

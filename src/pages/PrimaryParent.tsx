@@ -1,22 +1,43 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Trophy, Loader2, Sparkles, Headphones, PenLine, Brain, Target } from "lucide-react";
+import { ArrowLeft, Loader2, Sparkles, Headphones, PenLine, Brain, Target, TrendingUp, Volume2, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { speak } from "@/lib/speak";
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
+import { cn } from "@/lib/utils";
 
 type Mastery = {
-  grade: number; mastery_level: number;
+  word_id: string;
+  grade: number;
+  mastery_level: number;
   quiz_correct: number; quiz_wrong: number;
   listen_correct: number; listen_wrong: number;
   spell_correct: number; spell_wrong: number;
   match_correct: number; match_wrong: number;
+  last_seen_at: string | null;
 };
+type Word = { id: string; word: string; meaning_cn: string; grade: number };
+type ScoreRow = { game_type: string; grade: number | null; accuracy: number | null; created_at: string };
 
 const TOTALS: Record<number, number> = { 1:80, 2:120, 3:160, 4:200, 5:220, 6:228 };
+const SKILLS = [
+  { key: "all",    label: "综合",  icon: Sparkles,    color: "from-pink-500 to-rose-500", c: "quiz_correct", w: "quiz_wrong" },
+  { key: "quiz",   label: "选义",  icon: Target,      color: "from-rose-400 to-pink-500", c: "quiz_correct", w: "quiz_wrong" },
+  { key: "listen", label: "听力",  icon: Headphones,  color: "from-sky-400 to-cyan-500",  c: "listen_correct", w: "listen_wrong" },
+  { key: "spell",  label: "拼写",  icon: PenLine,     color: "from-amber-400 to-orange-500", c: "spell_correct", w: "spell_wrong" },
+  { key: "match",  label: "配对",  icon: Brain,       color: "from-violet-400 to-fuchsia-500", c: "match_correct", w: "match_wrong" },
+] as const;
+type SkillKey = typeof SKILLS[number]["key"];
 
 export default function PrimaryParent() {
-  const [rows, setRows] = useState<Mastery[]>([]);
-  const [loading, setLoading] = useState(true);
   const [authed, setAuthed] = useState<boolean | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [mastery, setMastery] = useState<Mastery[]>([]);
+  const [words, setWords] = useState<Word[]>([]);
+  const [scores, setScores] = useState<ScoreRow[]>([]);
+  const [grade, setGrade] = useState<number>(1);
+  const [skill, setSkill] = useState<SkillKey>("all");
+  const [filter, setFilter] = useState<"all"|"new"|"learning"|"familiar"|"mastered">("all");
 
   useEffect(() => {
     (async () => {
@@ -24,36 +45,78 @@ export default function PrimaryParent() {
       const uid = u?.user?.id;
       setAuthed(!!uid);
       if (!uid) { setLoading(false); return; }
-      const { data } = await supabase
-        .from("primary_word_mastery")
-        .select("grade,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong")
-        .eq("user_id", uid);
-      setRows((data ?? []) as Mastery[]);
+      const since = new Date(Date.now() - 30*24*3600*1000).toISOString();
+      const [m, w, s] = await Promise.all([
+        supabase.from("primary_word_mastery")
+          .select("word_id,grade,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong,last_seen_at")
+          .eq("user_id", uid),
+        supabase.from("primary_vocab").select("id,word,meaning_cn,grade"),
+        supabase.from("primary_game_scores")
+          .select("game_type,grade,accuracy,created_at")
+          .eq("user_id", uid).gte("created_at", since).order("created_at"),
+      ]);
+      setMastery((m.data ?? []) as Mastery[]);
+      setWords((w.data ?? []) as Word[]);
+      setScores((s.data ?? []) as ScoreRow[]);
       setLoading(false);
     })();
   }, []);
 
-  const byGrade = useMemo(() => {
-    const map: Record<number, Mastery[]> = {};
-    rows.forEach(r => { (map[r.grade] ??= []).push(r); });
-    return map;
-  }, [rows]);
+  const gradeWords = useMemo(() => words.filter(w => w.grade === grade), [words, grade]);
+  const masteryByWord = useMemo(() => {
+    const m: Record<string, Mastery> = {};
+    mastery.forEach(r => { if (r.grade === grade) m[r.word_id] = r; });
+    return m;
+  }, [mastery, grade]);
 
-  const overallStats = (list: Mastery[]) => {
-    const counts = [0,0,0,0]; // new(0)/learning/familiar/mastered
+  // skill stats for current grade
+  const stats = useMemo(() => {
+    const list = mastery.filter(r => r.grade === grade);
+    const total = TOTALS[grade] ?? gradeWords.length;
+    const counts = [0,0,0,0];
     list.forEach(r => counts[r.mastery_level ?? 0]++);
-    const skill = (c: number, w: number) => {
-      const t = c + w; return { acc: t ? Math.round(c/t*100) : 0, attempts: t };
+    const seen = counts[1]+counts[2]+counts[3];
+    counts[0] = Math.max(0, total - seen);
+    const sumK = (k: keyof Mastery) => list.reduce((s,r)=>s+(Number(r[k])||0), 0);
+    const skillAcc = (cKey: keyof Mastery, wKey: keyof Mastery) => {
+      const c = sumK(cKey), w = sumK(wKey), t = c+w;
+      return { acc: t ? Math.round(c/t*100) : 0, attempts: t, correct: c };
     };
-    const sum = (k: keyof Mastery) => list.reduce((s, r) => s + (Number(r[k]) || 0), 0);
     return {
-      counts,
-      quiz:   skill(sum("quiz_correct"),   sum("quiz_wrong")),
-      listen: skill(sum("listen_correct"), sum("listen_wrong")),
-      spell:  skill(sum("spell_correct"),  sum("spell_wrong")),
-      match:  skill(sum("match_correct"),  sum("match_wrong")),
+      total, counts,
+      quiz:   skillAcc("quiz_correct","quiz_wrong"),
+      listen: skillAcc("listen_correct","listen_wrong"),
+      spell:  skillAcc("spell_correct","spell_wrong"),
+      match:  skillAcc("match_correct","match_wrong"),
     };
-  };
+  }, [mastery, grade, gradeWords]);
+
+  // 30-day trend per game-type for this grade
+  const trend = useMemo(() => {
+    const days: Record<string, { date: string; quiz?: number; listen?: number; spell?: number; match?: number; all?: number; counts: Record<string,number[]> }> = {};
+    const all = scores.filter(s => s.grade === grade);
+    all.forEach(s => {
+      const d = s.created_at.slice(5,10);
+      if (!days[d]) days[d] = { date: d, counts: { quiz:[], listen:[], spell:[], match:[], all:[] } };
+      const acc = (s.accuracy ?? 0) * 100;
+      days[d].counts[s.game_type]?.push(acc);
+      days[d].counts.all.push(acc);
+    });
+    return Object.values(days).map(d => {
+      const avg = (a: number[]) => a.length ? Math.round(a.reduce((x,y)=>x+y,0)/a.length) : null;
+      return { date: d.date, quiz: avg(d.counts.quiz), listen: avg(d.counts.listen), spell: avg(d.counts.spell), match: avg(d.counts.match), all: avg(d.counts.all) };
+    });
+  }, [scores, grade]);
+
+  const filteredWords = useMemo(() => {
+    return gradeWords.filter(w => {
+      if (filter === "all") return true;
+      const lv = masteryByWord[w.id]?.mastery_level ?? 0;
+      return ({ new:0, learning:1, familiar:2, mastered:3 } as any)[filter] === lv;
+    });
+  }, [gradeWords, masteryByWord, filter]);
+
+  const skillCfg = SKILLS.find(s => s.key === skill)!;
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
@@ -63,94 +126,140 @@ export default function PrimaryParent() {
       <div className="mb-5">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">PARENT · DASHBOARD</div>
         <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">👨‍👩‍👧 家长进度报告</h1>
-        <p className="mt-1 text-xs text-muted-foreground">
-          基于 Cambridge YLE × FSRS 间隔重复 · 每个单词追踪 4 项技能
-        </p>
+        <p className="mt-1 text-xs text-muted-foreground">Cambridge YLE × FSRS · 按年级与技能查看掌握度、趋势、词表</p>
       </div>
 
       {loading ? (
-        <div className="flex items-center justify-center py-20 text-muted-foreground">
-          <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
-        </div>
+        <div className="flex items-center justify-center py-20 text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> 加载中…</div>
       ) : authed === false ? (
-        <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">
-          请先登录后再查看孩子的学习数据
-        </div>
+        <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">请先登录后再查看</div>
       ) : (
         <>
-          {/* Legend */}
-          <div className="mb-4 flex flex-wrap gap-2 text-[11px]">
-            <Tag color="bg-slate-200 text-slate-700">⚪ 未学</Tag>
-            <Tag color="bg-amber-200 text-amber-800">🟡 学习中</Tag>
-            <Tag color="bg-sky-200 text-sky-800">🔵 熟悉</Tag>
-            <Tag color="bg-emerald-300 text-emerald-900">🟢 已掌握</Tag>
+          {/* Grade tabs */}
+          <div className="mb-4 flex flex-wrap gap-2">
+            {[1,2,3,4,5,6].map(g => (
+              <button key={g} onClick={() => setGrade(g)}
+                className={cn("rounded-full border-2 px-4 py-1.5 text-sm font-extrabold transition",
+                  g === grade ? "border-amber-400 bg-amber-400 text-white" : "border-border bg-card hover:border-amber-300")}>
+                G{g}
+              </button>
+            ))}
           </div>
 
-          <section className="grid gap-3">
-            {[1,2,3,4,5,6].map(g => {
-              const list = byGrade[g] ?? [];
-              const total = TOTALS[g] ?? list.length;
-              const s = overallStats(list);
-              const mastered = s.counts[3];
-              const familiar = s.counts[2];
-              const learning = s.counts[1];
-              const seen = mastered + familiar + learning;
-              const newCount = Math.max(0, total - seen);
-              const masteredPct = Math.round((mastered/total)*100);
-              const seenPct = Math.round((seen/total)*100);
-              return (
-                <div key={g} className="rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Trophy className="size-4 text-amber-500" />
-                      <span className="text-base font-extrabold">{g} 年级</span>
-                      <span className="text-xs text-muted-foreground">· 共 {total} 词</span>
-                    </div>
-                    <div className="text-xs">
-                      <span className="font-extrabold text-emerald-600">{masteredPct}%</span>
-                      <span className="text-muted-foreground"> 已掌握</span>
-                    </div>
-                  </div>
+          {/* Skill tabs */}
+          <div className="mb-4 grid grid-cols-5 gap-1 rounded-2xl bg-secondary p-1">
+            {SKILLS.map(s => (
+              <button key={s.key} onClick={() => setSkill(s.key)}
+                className={cn("flex flex-col items-center gap-0.5 rounded-xl py-2 text-[11px] font-bold transition",
+                  skill === s.key ? `bg-gradient-to-br ${s.color} text-white shadow` : "text-muted-foreground hover:text-foreground")}>
+                <s.icon className="size-4" />
+                {s.label}
+              </button>
+            ))}
+          </div>
 
-                  {/* Stacked bar */}
-                  <div className="mt-3 flex h-3 overflow-hidden rounded-full bg-secondary">
-                    <div className="bg-emerald-400" style={{ width: `${(mastered/total)*100}%` }} />
-                    <div className="bg-sky-400"     style={{ width: `${(familiar/total)*100}%` }} />
-                    <div className="bg-amber-400"   style={{ width: `${(learning/total)*100}%` }} />
-                  </div>
-                  <div className="mt-1 grid grid-cols-4 gap-2 text-center text-[11px] text-muted-foreground">
-                    <div><b className="text-emerald-600">{mastered}</b> 已掌握</div>
-                    <div><b className="text-sky-600">{familiar}</b> 熟悉</div>
-                    <div><b className="text-amber-600">{learning}</b> 学习中</div>
-                    <div><b>{newCount}</b> 未学</div>
-                  </div>
-
-                  {/* Per-skill accuracy */}
-                  <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
-                    <SkillBar icon={Target} label="选义" data={s.quiz} color="from-rose-400 to-pink-500" />
-                    <SkillBar icon={Headphones} label="听音" data={s.listen} color="from-sky-400 to-cyan-500" />
-                    <SkillBar icon={Brain} label="翻牌" data={s.match} color="from-violet-400 to-fuchsia-500" />
-                    <SkillBar icon={PenLine} label="拼写" data={s.spell} color="from-amber-400 to-orange-500" />
-                  </div>
-
-                  <div className="mt-3 flex justify-between gap-2">
-                    <Link to={`/primary/games/${g}`} className="flex-1 rounded-xl bg-secondary py-2 text-center text-xs font-bold hover:bg-secondary/70">
-                      去练习 →
-                    </Link>
-                    <Link to={`/primary/grade/${g}`} className="flex-1 rounded-xl bg-secondary py-2 text-center text-xs font-bold hover:bg-secondary/70">
-                      课程 →
-                    </Link>
-                  </div>
+          {/* Mastery overview card */}
+          <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
+            <div className="flex items-center justify-between">
+              <div className="text-sm font-extrabold">{grade} 年级 · {skillCfg.label}掌握情况</div>
+              <div className="text-xs text-muted-foreground">共 {stats.total} 词</div>
+            </div>
+            {skill === "all" ? (
+              <>
+                <div className="mt-3 flex h-3 overflow-hidden rounded-full bg-secondary">
+                  <div className="bg-emerald-400" style={{ width: `${(stats.counts[3]/stats.total)*100}%` }} />
+                  <div className="bg-sky-400"     style={{ width: `${(stats.counts[2]/stats.total)*100}%` }} />
+                  <div className="bg-amber-400"   style={{ width: `${(stats.counts[1]/stats.total)*100}%` }} />
                 </div>
-              );
-            })}
+                <div className="mt-2 grid grid-cols-4 gap-2 text-center text-[11px]">
+                  <Stat label="已掌握" value={stats.counts[3]} color="text-emerald-600" />
+                  <Stat label="熟悉"   value={stats.counts[2]} color="text-sky-600" />
+                  <Stat label="学习中" value={stats.counts[1]} color="text-amber-600" />
+                  <Stat label="未学"   value={stats.counts[0]} color="text-muted-foreground" />
+                </div>
+              </>
+            ) : (
+              <SkillDetail s={(stats as any)[skill]} colorClass={skillCfg.color} />
+            )}
           </section>
 
-          <div className="mt-6 rounded-2xl border border-dashed border-amber-300 bg-amber-50 p-4 text-xs text-amber-900">
+          {/* Trend chart */}
+          <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
+            <div className="mb-2 flex items-center gap-1 text-sm font-extrabold">
+              <TrendingUp className="size-4 text-emerald-500" /> 近 30 天准确率趋势 · {skillCfg.label}
+            </div>
+            {trend.length === 0 ? (
+              <div className="py-8 text-center text-xs text-muted-foreground">暂无练习记录，去玩一局后再看 ✨</div>
+            ) : (
+              <div className="h-56">
+                <ResponsiveContainer>
+                  <LineChart data={trend}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                    <XAxis dataKey="date" tick={{ fontSize: 10 }} />
+                    <YAxis domain={[0,100]} tick={{ fontSize: 10 }} unit="%" />
+                    <Tooltip contentStyle={{ borderRadius: 12, fontSize: 12 }} />
+                    <Line type="monotone" dataKey={skill} stroke="hsl(var(--primary))" strokeWidth={2.5} dot={{ r: 3 }} connectNulls />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+            )}
+          </section>
+
+          {/* Word drill-down */}
+          <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
+            <div className="mb-3 flex items-center justify-between">
+              <div className="text-sm font-extrabold">📖 {grade} 年级词表（{filteredWords.length}）</div>
+            </div>
+            <div className="mb-3 flex flex-wrap gap-1.5 text-[11px]">
+              {[
+                { k: "all", l: "全部", c: "bg-secondary text-foreground" },
+                { k: "mastered", l: "🟢 已掌握", c: "bg-emerald-100 text-emerald-700" },
+                { k: "familiar", l: "🔵 熟悉",   c: "bg-sky-100 text-sky-700" },
+                { k: "learning", l: "🟡 学习中", c: "bg-amber-100 text-amber-700" },
+                { k: "new",      l: "⚪ 未学",   c: "bg-slate-100 text-slate-600" },
+              ].map(o => (
+                <button key={o.k} onClick={() => setFilter(o.k as any)}
+                  className={cn("rounded-full px-2.5 py-1 font-bold transition", o.c, filter === o.k && "ring-2 ring-amber-400")}>
+                  {o.l}
+                </button>
+              ))}
+            </div>
+            <div className="max-h-[420px] overflow-y-auto divide-y divide-border">
+              {filteredWords.length === 0 && (
+                <div className="py-8 text-center text-xs text-muted-foreground">该筛选下没有单词</div>
+              )}
+              {filteredWords.map(w => {
+                const m = masteryByWord[w.id];
+                const lv = m?.mastery_level ?? 0;
+                const dot = ["bg-slate-300","bg-amber-400","bg-sky-400","bg-emerald-500"][lv];
+                return (
+                  <div key={w.id} className="flex items-center gap-3 py-2.5">
+                    <span className={cn("size-2.5 shrink-0 rounded-full", dot)} />
+                    <button onClick={() => speak(w.word)} className="grid size-7 shrink-0 place-items-center rounded-full bg-secondary text-muted-foreground hover:bg-amber-100 hover:text-amber-700">
+                      <Volume2 className="size-3.5" />
+                    </button>
+                    <div className="min-w-0 flex-1">
+                      <div className="truncate text-sm font-extrabold">{w.word}</div>
+                      <div className="truncate text-[11px] text-muted-foreground">{w.meaning_cn}</div>
+                    </div>
+                    <div className="hidden gap-1 text-[10px] text-muted-foreground sm:flex">
+                      <SkillPill label="选" c={m?.quiz_correct} w={m?.quiz_wrong} />
+                      <SkillPill label="听" c={m?.listen_correct} w={m?.listen_wrong} />
+                      <SkillPill label="拼" c={m?.spell_correct} w={m?.spell_wrong} />
+                      <SkillPill label="配" c={m?.match_correct} w={m?.match_wrong} />
+                    </div>
+                    <ChevronRight className="size-4 text-muted-foreground" />
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+
+          <div className="rounded-2xl border border-dashed border-amber-300 bg-amber-50 p-4 text-xs text-amber-900">
             <div className="flex items-center gap-1 font-extrabold"><Sparkles className="size-3.5" /> 科学说明</div>
             <p className="mt-1 leading-relaxed">
-              每个单词需要在 <b>选义/听音/翻牌/拼写</b> 中至少 3 项正确、且综合正确率 ≥ 85% 才算"已掌握"。
-              这套标准对齐 Cambridge YLE 与 CEFR Pre-A1~A2，确保孩子既会读、会听，也会写。
+              掌握度需要孩子在 <b>选义/听音/拼写/配对</b> 至少 3 项中正确，且综合准确率 ≥ 85%。
+              此标准对齐 Cambridge YLE 与 CEFR Pre-A1~A2 的 can-do statements。
             </p>
           </div>
         </>
@@ -159,20 +268,30 @@ export default function PrimaryParent() {
   );
 }
 
-function Tag({ color, children }: { color: string; children: React.ReactNode }) {
-  return <span className={`rounded-full px-2 py-0.5 font-bold ${color}`}>{children}</span>;
+function Stat({ label, value, color }: { label: string; value: number; color: string }) {
+  return <div><div className={cn("text-lg font-black", color)}>{value}</div><div className="text-muted-foreground">{label}</div></div>;
 }
 
-function SkillBar({ icon: Icon, label, data, color }: { icon: any; label: string; data: { acc: number; attempts: number }; color: string }) {
+function SkillDetail({ s, colorClass }: { s: { acc: number; attempts: number; correct: number }; colorClass: string }) {
   return (
-    <div className="rounded-xl border border-border bg-background p-2">
-      <div className="flex items-center gap-1 text-[11px] font-bold">
-        <Icon className="size-3" /> {label}
+    <>
+      <div className="mt-3 flex items-baseline justify-between">
+        <div className="text-3xl font-black">{s.acc}<span className="text-base font-bold text-muted-foreground">%</span></div>
+        <div className="text-xs text-muted-foreground">{s.correct} 对 / {s.attempts} 次</div>
       </div>
-      <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-secondary">
-        <div className={`h-full bg-gradient-to-r ${color}`} style={{ width: `${data.acc}%` }} />
+      <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-secondary">
+        <div className={`h-full bg-gradient-to-r ${colorClass}`} style={{ width: `${s.acc}%` }} />
       </div>
-      <div className="mt-0.5 text-[10px] text-muted-foreground">{data.acc}% · {data.attempts} 次</div>
-    </div>
+    </>
+  );
+}
+
+function SkillPill({ label, c, w }: { label: string; c?: number; w?: number }) {
+  const cc = c ?? 0, ww = w ?? 0, t = cc+ww;
+  const acc = t ? Math.round(cc/t*100) : 0;
+  return (
+    <span className={cn("rounded px-1.5 py-0.5", t ? (acc>=80 ? "bg-emerald-100 text-emerald-700" : acc>=50 ? "bg-amber-100 text-amber-700" : "bg-rose-100 text-rose-700") : "bg-secondary")}>
+      {label}{t ? ` ${acc}%` : ""}
+    </span>
   );
 }

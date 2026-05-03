@@ -8,13 +8,14 @@ import { speak } from "@/lib/speak";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 
-type Q = { q: string; options: string[]; answer: string; explanation?: string };
-type E = { id: string; title: string; transcript: string; translation_cn: string | null; questions: Q[]; key_vocab: { word: string; cn: string }[]; audio_url: string | null };
+type Q = { type?: "choice" | "fill" | "judge"; q: string; options: string[]; answer: string; explanation?: string };
+type E = { id: string; title: string; transcript: string; translation_cn: string | null; questions: Q[]; key_vocab: { word: string; cn: string }[]; audio_url: string | null; kind?: string | null };
 
 export default function JuniorListeningPlay() {
   const { id } = useParams<{ id: string }>();
   const [e, setE] = useState<E | null>(null);
   const [picks, setPicks] = useState<Record<number, string>>({});
+  const [fills, setFills] = useState<Record<number, string>>({});
   const [showScript, setShowScript] = useState(false);
   const [streak, setStreak] = useState(0);
   const shownAt = useRef<Record<number, number>>({});
@@ -22,7 +23,7 @@ export default function JuniorListeningPlay() {
   useEffect(() => {
     if (!id) return;
     (supabase as any).from("junior_listening_exercises")
-      .select("id,title,transcript,translation_cn,questions,key_vocab,audio_url")
+      .select("id,title,transcript,translation_cn,questions,key_vocab,audio_url,kind")
       .eq("id", id).maybeSingle().then(({ data }: any) => setE(data as any));
   }, [id]);
 
@@ -35,11 +36,16 @@ export default function JuniorListeningPlay() {
     }
   };
 
+  const checkAnswer = (q: Q, value: string) => {
+    if (q.type === "fill") return value.trim().toLowerCase() === String(q.answer).trim().toLowerCase();
+    return value === q.answer;
+  };
+
   const pick = async (idx: number, letter: string) => {
     if (picks[idx]) return;
     setPicks(p => ({ ...p, [idx]: letter }));
     if (!shownAt.current[idx]) shownAt.current[idx] = Date.now() - 1500;
-    const ok = letter === e!.questions[idx].answer;
+    const ok = checkAnswer(e!.questions[idx], letter);
     const { data: u } = await supabase.auth.getUser();
     if (u?.user) {
       await (supabase as any).from("junior_listening_attempts").insert({
@@ -52,7 +58,7 @@ export default function JuniorListeningPlay() {
       const ms = Date.now() - shownAt.current[idx];
       await awardForCorrect(next, "junior_listening", `${id}:${idx}`, "junior_listening", ms);
       await bumpPetSkill("listener_ear", 1);
-      const correctCount = Object.entries(picks).filter(([i, l]) => l === e!.questions[Number(i)].answer).length + 1;
+      const correctCount = Object.entries(picks).filter(([i, l]) => checkAnswer(e!.questions[Number(i)], l)).length + 1;
       if (correctCount % 5 === 0) await awardForBlock("junior_listening");
     } else { setStreak(0); notifyWrong(); }
   };
@@ -88,13 +94,37 @@ export default function JuniorListeningPlay() {
         </div>
       )}
 
-      <h2 className="mt-6 mb-3 text-base font-extrabold">📝 听力理解</h2>
+      <h2 className="mt-6 mb-3 text-base font-extrabold">📝 听力理解 <span className="ml-2 text-[11px] font-normal text-muted-foreground">共 {e.questions.length} 题</span></h2>
       <div className="space-y-4">
         {e.questions.map((q, i) => {
           const picked = picks[i];
+          const qType = q.type || "choice";
           return (
             <section key={i} className="rounded-2xl border bg-card p-4">
-              <div className="text-sm font-bold">{i + 1}. {q.q}</div>
+              <div className="text-sm font-bold flex items-start gap-2">
+                <span>{i + 1}.</span>
+                <span className="flex-1">{q.q}</span>
+                <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-extrabold text-muted-foreground">
+                  {qType === "fill" ? "填空" : qType === "judge" ? "判断" : "选择"}
+                </span>
+              </div>
+              {qType === "fill" ? (
+                <div className="mt-3 flex gap-2">
+                  <input
+                    disabled={!!picked}
+                    value={fills[i] ?? ""}
+                    onChange={(ev) => setFills(f => ({ ...f, [i]: ev.target.value }))}
+                    onKeyDown={(ev) => { if (ev.key === "Enter" && (fills[i] ?? "").trim()) pick(i, fills[i].trim()); }}
+                    placeholder="输入答案 (按回车确认)"
+                    className="flex-1 rounded-xl border-2 border-border bg-background px-3 py-2 text-sm focus:border-sky-400 focus:outline-none"
+                  />
+                  <button
+                    disabled={!!picked || !(fills[i] ?? "").trim()}
+                    onClick={() => pick(i, (fills[i] ?? "").trim())}
+                    className="rounded-xl bg-sky-600 px-4 py-2 text-sm font-extrabold text-white disabled:opacity-50"
+                  >提交</button>
+                </div>
+              ) : (
               <div className="mt-3 grid gap-2">
                 {q.options.map((opt, oi) => {
                   const L = ["A","B","C","D"][oi];
@@ -112,6 +142,12 @@ export default function JuniorListeningPlay() {
                   );
                 })}
               </div>
+              )}
+              {picked && qType === "fill" && (
+                <div className={cn("mt-2 text-xs font-bold", checkAnswer(q, picked) ? "text-emerald-600" : "text-rose-600")}>
+                  {checkAnswer(q, picked) ? "✓ 正确" : `✗ 你的答案：${picked} · 正确答案：${q.answer}`}
+                </div>
+              )}
               {picked && q.explanation && <div className="mt-3 rounded-lg bg-muted/50 p-3 text-xs">💡 {q.explanation}</div>}
             </section>
           );

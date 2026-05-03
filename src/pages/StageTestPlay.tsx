@@ -109,22 +109,24 @@ export default function StageTestPlay() {
   function pick(opt: string) {
     if (picked) return;
     setPicked(opt);
-    if (opt === questions[idx].meaning_cn) setCorrectCount((c) => c + 1);
+    const isRight = opt === questions[idx].meaning_cn;
+    const newCorrect = correctCount + (isRight ? 1 : 0);
+    if (isRight) setCorrectCount(newCorrect);
     setTimeout(() => {
       if (idx + 1 < questions.length) {
         setIdx(idx + 1);
         setPicked(null);
       } else {
-        submit();
+        submit(newCorrect);
       }
     }, 800);
   }
 
-  async function submit() {
+  async function submit(finalCorrect: number) {
     setSubmitted(true);
     const { data, error } = await supabase.rpc("submit_stage_test", {
       _test_id: testId,
-      _correct: correctCount + (picked === questions[idx].meaning_cn ? 0 : 0), // already counted
+      _correct: finalCorrect,
       _total: questions.length,
       _new_question_count: newCount,
     });

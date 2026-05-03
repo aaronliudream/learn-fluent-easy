@@ -18,6 +18,8 @@ export type DailyStats = {
 
 const DEFAULT_GOAL_TASKS = 3;
 const DEFAULT_GOAL_MINUTES = 15;
+const CACHE_KEY = "fluentpath.dailyStats.cache";
+const REQUEST_TIMEOUT_MS = 1800;
 
 function todayLocalISO(): string {
   const d = new Date();
@@ -46,6 +48,25 @@ export async function getDailyStats(): Promise<DailyStats | null> {
   const { data: u } = await supabase.auth.getUser();
   const uid = u?.user?.id;
   if (!uid) return null;
+
+  try {
+    const cached = localStorage.getItem(CACHE_KEY);
+    if (cached) {
+      const parsed = JSON.parse(cached) as { uid: string; ts: number; stats: DailyStats };
+      if (parsed.uid === uid && Date.now() - parsed.ts < 60_000) return parsed.stats;
+    }
+  } catch { /* ignore cache */ }
+
+  const remote = await Promise.race([
+    supabase.functions.invoke("daily-stats", { body: {} }),
+    new Promise<{ data: null; error: Error }>((resolve) => {
+      window.setTimeout(() => resolve({ data: null, error: new Error("daily stats timeout") }), REQUEST_TIMEOUT_MS);
+    }),
+  ]);
+  if (!remote.error && remote.data?.stats) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ uid, ts: Date.now(), stats: remote.data.stats })); } catch { /* ignore cache */ }
+    return remote.data.stats as DailyStats;
+  }
 
   const today = todayLocalISO();
   const startOfDay = new Date(today + "T00:00:00").toISOString();

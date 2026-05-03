@@ -282,6 +282,35 @@ export default function GaokaoClozePlay() {
         </div>
       )}
 
+      {/* 内容流内的醒目完成按钮 —— 答完最后一题滚动到这里就能看到 */}
+      {!submitted && (
+        <div className="mt-6 rounded-2xl border-2 border-dashed border-primary/30 bg-primary/5 p-5 text-center">
+          <div className="mb-3 text-sm text-muted-foreground">
+            已完成 <b className="text-foreground">{answeredCount}</b> / {blanks.length} 题
+            {answeredCount < blanks.length && <> · 还剩 <b className="text-amber-600">{blanks.length - answeredCount}</b> 题未作答</>}
+          </div>
+          <button
+            onClick={handleSubmit}
+            disabled={submitting}
+            className={cn(
+              "inline-flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-extrabold transition",
+              answeredCount === blanks.length
+                ? "bg-primary text-primary-foreground shadow-lg hover:opacity-90 animate-pulse"
+                : "bg-muted text-muted-foreground hover:bg-muted/80",
+              submitting && "opacity-50 cursor-wait"
+            )}
+          >
+            <Send className="size-5" />
+            {submitting ? "批改中…" : answeredCount === blanks.length ? "✅ 完成并提交答案" : `提交（${answeredCount}/${blanks.length}）`}
+          </button>
+          {answeredCount < blanks.length && (
+            <div className="mt-2 text-[11px] text-muted-foreground">
+              空着的题会按错处理，可点上方"快速跳转"补完
+            </div>
+          )}
+        </div>
+      )}
+
       {/* Per-blank explanation panel after submit */}
       {submitted && (
         <section className="mt-6 space-y-2">

@@ -140,6 +140,18 @@ export default function Primary() {
           <div className="text-[10px] opacity-90">1000+ 核心词</div>
         </Link>
       </div>
+
+      {/* Whole-primary mega test + parent dashboard */}
+      <div className="mt-3 grid grid-cols-2 gap-3">
+        <Link to="/primary/games/all" className="rounded-2xl bg-gradient-to-br from-fuchsia-500 to-purple-500 p-4 text-white shadow-tile">
+          <div className="text-sm font-extrabold">🏆 全小学大测验</div>
+          <div className="mt-1 text-[11px] opacity-90">1008 词混合 · 毕业挑战</div>
+        </Link>
+        <Link to="/primary/parent" className="rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 p-4 text-white shadow-tile">
+          <div className="text-sm font-extrabold">👨‍👩‍👧 家长进度报告</div>
+          <div className="mt-1 text-[11px] opacity-90">每个年级 · 每项技能掌握度</div>
+        </Link>
+      </div>
     </main>
   );
 }

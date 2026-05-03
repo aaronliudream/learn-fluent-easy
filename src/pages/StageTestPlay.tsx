@@ -36,6 +36,7 @@ export default function StageTestPlay() {
   const [correctCount, setCorrectCount] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [result, setResult] = useState<any>(null);
+  const [finalCorrect, setFinalCorrect] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -124,6 +125,7 @@ export default function StageTestPlay() {
 
   async function submit(finalCorrect: number) {
     setSubmitted(true);
+    setFinalCorrect(finalCorrect);
     const { data, error } = await supabase.rpc("submit_stage_test", {
       _test_id: testId,
       _correct: finalCorrect,
@@ -139,14 +141,14 @@ export default function StageTestPlay() {
   }
 
   if (submitted && result) {
-    const pct = Math.round((correctCount / questions.length) * 100);
+    const pct = Math.round((finalCorrect / questions.length) * 100);
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
         <div className={`rounded-3xl bg-gradient-to-br ${result.passed ? "from-emerald-400 to-teal-500" : "from-slate-400 to-slate-500"} p-8 text-center text-white shadow-tile`}>
           {result.passed ? <Trophy className="mx-auto size-16" /> : <Sparkles className="mx-auto size-16" />}
           <div className="mt-3 text-3xl font-extrabold">{result.passed ? "通关！" : "再接再厉"}</div>
           <div className="mt-2 text-5xl font-black">{pct}%</div>
-          <div className="mt-1 text-sm opacity-90">{correctCount} / {questions.length} 正确</div>
+          <div className="mt-1 text-sm opacity-90">{finalCorrect} / {questions.length} 正确</div>
           <div className="mt-5 grid grid-cols-2 gap-3">
             <div className="rounded-2xl bg-white/20 p-3">
               <div className="text-[10px] uppercase tracking-wider opacity-80">金币</div>

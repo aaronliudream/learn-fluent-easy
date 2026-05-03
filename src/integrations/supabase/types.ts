@@ -4356,13 +4356,11 @@ export type Database = {
       feed_pet: {
         Args: { _food_id: string; _pet_id: string }
         Returns: {
-          evolved: boolean
-          leveled: boolean
-          message: string
+          balance: number
           new_exp: number
           new_hunger: number
           new_level: number
-          new_stage: number
+          surprise: string
         }[]
       }
       find_duel_opponent: {

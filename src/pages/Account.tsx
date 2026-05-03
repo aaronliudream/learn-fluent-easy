@@ -18,7 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Download, Trash2, Shield, FileText, LogIn, Trophy, Save, BookMarked, Bookmark } from "lucide-react";
+import { Download, Trash2, Shield, FileText, LogIn, Trophy, Save, BookMarked, Bookmark, Sparkles, Mail } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { loadProgress } from "@/lib/guestProgress";
 import { T, useT } from "@/i18n/T";
@@ -35,6 +35,12 @@ const Account = () => {
   const [aliasSaved, setAliasSaved] = useState("");
   const [optIn, setOptIn] = useState(true);
   const [savingPrefs, setSavingPrefs] = useState(false);
+  // Guest upgrade
+  const [isGuest, setIsGuest] = useState(false);
+  const [username, setUsername] = useState<string>("");
+  const [upgradeEmail, setUpgradeEmail] = useState("");
+  const [upgradePw, setUpgradePw] = useState("");
+  const [upgrading, setUpgrading] = useState(false);
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
@@ -61,8 +67,34 @@ const Account = () => {
       setAliasSaved(data.leaderboard_alias ?? "");
       setOptIn(data.leaderboard_opt_in ?? true);
     })();
+    // Load guest status
+    (async () => {
+      const { data } = await supabase.from("profiles").select("is_guest, username").eq("user_id", user.id).maybeSingle();
+      if (cancelled) return;
+      setIsGuest(!!data?.is_guest);
+      setUsername((data?.username as string) ?? "");
+    })();
     return () => { cancelled = true; };
   }, [user]);
+
+  const handleUpgrade = async () => {
+    if (!user) return;
+    if (!upgradeEmail.includes("@")) { toast.error(t("请输入有效邮箱")); return; }
+    if (upgradePw.length < 6) { toast.error(t("密码至少 6 位")); return; }
+    setUpgrading(true);
+    try {
+      const { error: e1 } = await supabase.auth.updateUser({ email: upgradeEmail, password: upgradePw });
+      if (e1) throw e1;
+      const { error: e2 } = await supabase.rpc("upgrade_guest_to_full", { _real_email: upgradeEmail });
+      if (e2) throw e2;
+      setIsGuest(false);
+      toast.success(t("升级成功！现在可以用邮箱登录了 🎉"));
+    } catch (e) {
+      toast.error((e as Error).message);
+    } finally {
+      setUpgrading(false);
+    }
+  };
 
   const saveLeaderboardPrefs = async () => {
     if (!user) return;
@@ -169,13 +201,20 @@ const Account = () => {
         </h3>
         {user ? (
           <div className="space-y-1 text-sm">
+            {username && (
+              <div>
+                <span className="text-muted-foreground"><T>昵称：</T></span>
+                <b>{username}</b>
+                {isGuest && <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-800"><T>访客账号</T></span>}
+              </div>
+            )}
             <div>
-              <span className="text-muted-foreground"><T>昵称：</T></span>
+              <span className="text-muted-foreground"><T>显示名：</T></span>
               {user.user_metadata?.display_name || "—"}
             </div>
             <div>
               <span className="text-muted-foreground"><T>邮箱：</T></span>
-              {user.email}
+              {isGuest ? <span className="text-muted-foreground italic"><T>未绑定（仅本地占位）</T></span> : user.email}
             </div>
           </div>
         ) : (
@@ -187,6 +226,32 @@ const Account = () => {
           </div>
         )}
       </section>
+
+      {/* Guest upgrade card */}
+      {user && isGuest && (
+        <section className="mb-6 rounded-2xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 p-6 shadow-card">
+          <div className="flex items-center gap-2">
+            <Sparkles className="size-5 text-amber-500" />
+            <h3 className="text-base font-extrabold"><T>升级为完整账号</T></h3>
+          </div>
+          <p className="mt-1 text-sm text-amber-900/80">
+            <T>绑定邮箱后可在多设备同步、找回 PIN、接收每周学习报告。原昵称和所有进度都会保留。</T>
+          </p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            <div>
+              <Label htmlFor="up-email"><Mail className="mr-1 inline size-3.5" /> <T>邮箱</T></Label>
+              <Input id="up-email" type="email" value={upgradeEmail} onChange={(e) => setUpgradeEmail(e.target.value)} placeholder="you@example.com" />
+            </div>
+            <div>
+              <Label htmlFor="up-pw"><T>新密码（至少 6 位）</T></Label>
+              <Input id="up-pw" type="password" minLength={6} value={upgradePw} onChange={(e) => setUpgradePw(e.target.value)} />
+            </div>
+          </div>
+          <Button onClick={handleUpgrade} disabled={upgrading} className="mt-4 bg-gradient-to-r from-amber-500 to-rose-500 text-white">
+            <Sparkles className="size-4" /> <T>立即绑定邮箱</T>
+          </Button>
+        </section>
+      )}
 
       {/* Export */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">

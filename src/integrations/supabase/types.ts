@@ -2854,6 +2854,7 @@ export type Database = {
           display_name: string | null
           email: string | null
           id: string
+          is_guest: boolean
           last_weekly_report_at: string | null
           leaderboard_alias: string | null
           leaderboard_opt_in: boolean
@@ -2861,6 +2862,7 @@ export type Database = {
           target_language: string
           updated_at: string
           user_id: string
+          username: string | null
           weekly_report_enabled: boolean
         }
         Insert: {
@@ -2868,6 +2870,7 @@ export type Database = {
           display_name?: string | null
           email?: string | null
           id?: string
+          is_guest?: boolean
           last_weekly_report_at?: string | null
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
@@ -2875,6 +2878,7 @@ export type Database = {
           target_language?: string
           updated_at?: string
           user_id: string
+          username?: string | null
           weekly_report_enabled?: boolean
         }
         Update: {
@@ -2882,6 +2886,7 @@ export type Database = {
           display_name?: string | null
           email?: string | null
           id?: string
+          is_guest?: boolean
           last_weekly_report_at?: string | null
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
@@ -2889,6 +2894,7 @@ export type Database = {
           target_language?: string
           updated_at?: string
           user_id?: string
+          username?: string | null
           weekly_report_enabled?: boolean
         }
         Relationships: []
@@ -3694,6 +3700,8 @@ export type Database = {
           total_perfect: number
         }[]
       }
+      guest_email_for_username: { Args: { _name: string }; Returns: string }
+      is_username_clean: { Args: { _name: string }; Returns: boolean }
       match_duel_bot: {
         Args: never
         Returns: {
@@ -3764,6 +3772,12 @@ export type Database = {
           surprise: string
         }[]
       }
+      upgrade_guest_to_full: {
+        Args: { _real_email: string }
+        Returns: undefined
+      }
+      username_available: { Args: { _name: string }; Returns: boolean }
+      validate_username: { Args: { _name: string }; Returns: string }
     }
     Enums: {
       [_ in never]: never

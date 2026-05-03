@@ -47,14 +47,17 @@ export default function GaokaoReadingPlay() {
     })();
   }, [id]);
 
+  const qStartRef = useRef<Record<string, number>>({});
   const onPick = async (q: Question, letter: string) => {
     if (picks[q.id]) return;
+    const ms = Date.now() - (qStartRef.current[q.id] ?? Date.now());
+    qStartRef.current[q.id] = Date.now();
     setPicks((prev) => ({ ...prev, [q.id]: letter }));
     const ok = letter === q.correct_answer;
     if (ok) {
       const next = streak + 1;
       setStreak(next);
-      await awardForCorrect(next, "gaokao_reading", q.id, "gaokao_reading");
+      await awardForCorrect(next, "gaokao_reading", q.id, "gaokao_reading", ms);
       await bumpPetSkill("reading_owl", 1);
       const cc = correctCount + 1;
       setCorrectCount(cc);

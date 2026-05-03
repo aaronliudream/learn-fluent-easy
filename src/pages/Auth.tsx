@@ -35,6 +35,9 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [agreed, setAgreed] = useState(false);
+  // Age band — required for COPPA / GDPR-K compliance.
+  // child = <13, teen = 13–17, adult = 18+. Persisted to profiles.age_band + is_minor.
+  const [ageBand, setAgeBand] = useState<"child" | "teen" | "adult" | "">("");
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -67,6 +70,7 @@ const Auth = () => {
     if (n.length < 2 || n.length > 24) { toast.error(t("昵称需 2–24 个字符")); return; }
     if (!/^\d{4,6}$/.test(pin)) { toast.error(t("PIN 必须是 4–6 位数字")); return; }
     if (nickAvailable === false) { toast.error(t("昵称已被占用，换一个吧")); return; }
+    if (!ageBand) { toast.error(t("请选择你的年龄段")); return; }
     setLoading(true);
     // Server-side validation
     const { data: vCode } = await supabase.rpc("validate_username", { _name: n });
@@ -97,6 +101,9 @@ const Auth = () => {
       display_name: n,
       is_guest: true,
       email: placeholderEmail,
+      age_band: ageBand,
+      is_minor: ageBand === "child" || ageBand === "teen",
+      data_minimization: ageBand !== "adult",
     }, { onConflict: "user_id" });
     setLoading(false);
     toast.success(t("欢迎，") + n + " 🎉");

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles, BookOpen, Headphones, Target, Lock, Trophy, Heart, Users } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
+import { TodayGrowthCard } from "@/components/TodayGrowthCard";
 
 const SECTIONS = [
   {
@@ -59,6 +60,10 @@ export default function Junior() {
         <p className="mt-1 text-sm text-muted-foreground">
           按教育部《义务教育英语课程标准（2022 年版）》 · 中考考点系统训练
         </p>
+      </div>
+
+      <div className="mb-5">
+        <TodayGrowthCard />
       </div>
 
       <section className="grid gap-3">

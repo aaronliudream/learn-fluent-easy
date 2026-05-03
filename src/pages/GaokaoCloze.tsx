@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookOpenCheck, Clock, Target, ChevronRight, CheckCircle2, AlertCircle, BookMarked } from "lucide-react";
+import { ArrowLeft, BookOpenCheck, Clock, Target, ChevronRight, CheckCircle2, AlertCircle, BookMarked, Lock, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
+import StarRating from "@/components/StarRating";
+import { loadMastery, MasteryRow, statusOf, PASS_PCT, needsReview } from "@/lib/masteryProgress";
+import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
 type Passage = {
   id: string;
@@ -32,6 +36,8 @@ export default function GaokaoCloze() {
   const [stats, setStats] = useState<Record<string, SessionStat>>({});
   const [mistakeCount, setMistakeCount] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
+  const [showMastered, setShowMastered] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -68,7 +74,91 @@ export default function GaokaoCloze() {
       }
       setLoading(false);
     })();
+    loadMastery("gaokao_cloze").then(setMastery);
   }, []);
+
+  const { active, dueReview, mastered } = useMemo(() => {
+    const a: Passage[] = [], d: Passage[] = [], m: Passage[] = [];
+    for (const p of list) {
+      const row = mastery[p.id];
+      if (row && row.stars >= 5 && !needsReview(row)) m.push(p);
+      else if (needsReview(row)) d.push(p);
+      else a.push(p);
+    }
+    return { active: a, dueReview: d, mastered: m };
+  }, [list, mastery]);
+
+  const unlockedSet = useMemo(() => {
+    const set = new Set<string>();
+    if (list[0]) set.add(list[0].id);
+    for (let i = 1; i < list.length; i++) {
+      const prev = mastery[list[i - 1].id];
+      if (prev && prev.best_pct >= PASS_PCT) set.add(list[i].id);
+    }
+    return set;
+  }, [list, mastery]);
+
+  const renderItem = (p: Passage) => {
+    const st = stats[p.id];
+    const row = mastery[p.id];
+    const masteryStatus = statusOf(row);
+    const grad = GROUP_COLOR[p.topic_group || ""] || "from-slate-500 to-slate-600";
+    const unlocked = unlockedSet.has(p.id);
+    const handleClick = (e: React.MouseEvent) => {
+      if (!unlocked) { e.preventDefault(); toast.error("请先完成上一篇并通过 80%"); }
+    };
+    return (
+      <Link
+        key={p.id}
+        to={`/gaokao/cloze/${p.id}`}
+        onClick={handleClick}
+        className={cn(
+          "group relative overflow-hidden rounded-2xl border bg-card p-4 shadow-sm transition",
+          unlocked ? "border-border hover:-translate-y-0.5 hover:shadow-md" : "border-border/50 bg-muted/40 opacity-60 cursor-not-allowed"
+        )}
+      >
+        <div className={`absolute left-0 top-0 h-full w-1 bg-gradient-to-b ${grad}`} />
+        <div className="flex items-start justify-between gap-3 pl-2">
+          <div className="min-w-0 flex-1">
+            <div className="mb-1 flex items-center gap-2 text-[11px] text-muted-foreground">
+              <span className="rounded bg-muted px-1.5 py-0.5 font-mono">P{p.passage_no.toString().padStart(2, "0")}</span>
+              {p.topic_group && <span>{p.topic_group}</span>}
+              {p.genre && <><span>·</span><span>{p.genre}</span></>}
+            </div>
+            <div className="flex items-center gap-2">
+              <h3 className="truncate font-semibold">{p.title}</h3>
+              {row && <StarRating stars={row.stars} />}
+            </div>
+            <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+              <span className="inline-flex items-center gap-1"><Target className="size-3.5" />{p.blank_count} 空</span>
+              <span className="inline-flex items-center gap-1"><Clock className="size-3.5" />{p.recommended_minutes} 分钟</span>
+              <span className="inline-flex items-center gap-1"><BookOpenCheck className="size-3.5" />{p.word_count || "—"} 词</span>
+              {masteryStatus === "review_due" && <span className="text-amber-600 font-bold">· 该复习了</span>}
+              {masteryStatus === "mastered" && <span className="text-emerald-600 font-bold">· 完美掌握</span>}
+              {!unlocked && <span className="text-orange-500 font-bold">· 需先完成上一篇</span>}
+            </div>
+          </div>
+          <div className="flex flex-col items-end gap-2">
+            {!unlocked ? (
+              <Lock className="size-4 text-muted-foreground" />
+            ) : st ? (
+              <div className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold ${
+                st.best_pct >= 80 ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400"
+                : st.best_pct >= 60 ? "bg-amber-500/15 text-amber-600 dark:text-amber-400"
+                : "bg-rose-500/15 text-rose-600 dark:text-rose-400"
+              }`}>
+                {st.best_pct >= 80 ? <CheckCircle2 className="size-3" /> : <AlertCircle className="size-3" />}
+                {Math.round(st.best_pct)}%
+              </div>
+            ) : (
+              <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] text-primary">未做</span>
+            )}
+            <ChevronRight className="size-4 text-muted-foreground transition group-hover:translate-x-0.5" />
+          </div>
+        </div>
+      </Link>
+    );
+  };
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
@@ -98,52 +188,28 @@ export default function GaokaoCloze() {
           <div key={i} className="h-28 animate-pulse rounded-2xl bg-muted" />
         ))}</div>
       ) : (
-        <div className="grid gap-3">
-          {list.map((p) => {
-            const st = stats[p.id];
-            const grad = GROUP_COLOR[p.topic_group || ""] || "from-slate-500 to-slate-600";
-            return (
-              <Link
-                key={p.id}
-                to={`/gaokao/cloze/${p.id}`}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-card p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <div className={`absolute left-0 top-0 h-full w-1 bg-gradient-to-b ${grad}`} />
-                <div className="flex items-start justify-between gap-3 pl-2">
-                  <div className="min-w-0 flex-1">
-                    <div className="mb-1 flex items-center gap-2 text-[11px] text-muted-foreground">
-                      <span className="rounded bg-muted px-1.5 py-0.5 font-mono">P{p.passage_no.toString().padStart(2, "0")}</span>
-                      {p.topic_group && <span>{p.topic_group}</span>}
-                      {p.genre && <><span>·</span><span>{p.genre}</span></>}
-                    </div>
-                    <h3 className="truncate font-semibold">{p.title}</h3>
-                    <div className="mt-2 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-                      <span className="inline-flex items-center gap-1"><Target className="size-3.5" />{p.blank_count} 空</span>
-                      <span className="inline-flex items-center gap-1"><Clock className="size-3.5" />{p.recommended_minutes} 分钟</span>
-                      <span className="inline-flex items-center gap-1"><BookOpenCheck className="size-3.5" />{p.word_count || "—"} 词</span>
-                      <span className="inline-flex">难度 {"★".repeat(p.difficulty)}<span className="text-muted-foreground/40">{"★".repeat(5 - p.difficulty)}</span></span>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-end gap-2">
-                    {st ? (
-                      <div className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold ${
-                        st.best_pct >= 80 ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400"
-                        : st.best_pct >= 60 ? "bg-amber-500/15 text-amber-600 dark:text-amber-400"
-                        : "bg-rose-500/15 text-rose-600 dark:text-rose-400"
-                      }`}>
-                        {st.best_pct >= 80 ? <CheckCircle2 className="size-3" /> : <AlertCircle className="size-3" />}
-                        {Math.round(st.best_pct)}%
-                      </div>
-                    ) : (
-                      <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] text-primary">未做</span>
-                    )}
-                    <ChevronRight className="size-4 text-muted-foreground transition group-hover:translate-x-0.5" />
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+        <>
+          {dueReview.length > 0 && (
+            <section className="mb-4 rounded-2xl border-2 border-amber-400/50 bg-gradient-to-r from-amber-500/10 to-orange-500/10 p-4">
+              <div className="mb-2 flex items-center gap-2"><Clock className="size-4 text-amber-600" /><h2 className="text-sm font-extrabold text-amber-700 dark:text-amber-400">⏰ 该复习了 ({dueReview.length})</h2></div>
+              <div className="grid gap-2">{dueReview.map(renderItem)}</div>
+            </section>
+          )}
+          <div className="grid gap-3">{active.map(renderItem)}</div>
+          {mastered.length > 0 && (
+            <section className="mt-6">
+              <button onClick={() => setShowMastered(s => !s)} className="flex w-full items-center justify-between rounded-2xl border-2 border-dashed border-emerald-400/50 bg-emerald-500/5 px-4 py-3 text-sm font-extrabold text-emerald-700 dark:text-emerald-400">
+                <span>✅ 已完美掌握 {mastered.length} 篇</span>
+                <ChevronDown className={cn("size-4 transition", showMastered && "rotate-180")} />
+              </button>
+              {showMastered && <div className="mt-2 grid gap-2">{mastered.map(renderItem)}</div>}
+            </section>
+          )}
+          <div className="mt-6 text-[11px] text-muted-foreground leading-5">
+            💡 <b>解锁规则</b>：≥80% 通过解锁下一篇 · 100% 升一星 · 5⭐ 完美掌握<br/>
+            🔁 <b>遗忘曲线</b>：1天 → 3天 → 7天 → 14天 → 30天 → 90天
+          </div>
+        </>
       )}
     </main>
   );

@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { awardCoins, awardForBlock, petReact } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
+import { recordMastery } from "@/lib/masteryProgress";
 
 type Passage = {
   id: string; passage_no: number; title: string; topic: string | null; topic_group: string | null;
@@ -108,6 +109,14 @@ export default function GaokaoClozePlay() {
     const r = (data as any[])[0];
     setResult(r);
     setSubmitted(true);
+    // 记录掌握度（用于解锁下一篇 + 遗忘曲线复习）
+    if (r) {
+      await recordMastery({
+        module: "gaokao_cloze",
+        itemId: id,
+        pct: Math.round((r.score_pct ?? 0) * 100),
+      });
+    }
     // 宠物挂钩：每对一空 1 星币 + 满分 +20 + 5题块 +5
     if (r?.correct_count > 0) {
       const total = r.correct_count + (r.correct_count === r.total_blanks ? 20 : 0);

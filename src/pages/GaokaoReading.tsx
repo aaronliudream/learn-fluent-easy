@@ -599,14 +599,14 @@ export default function GaokaoReading() {
           const stat = sessions[a.id];
           const prev = current[idx - 1];
           const prevStat = prev ? sessions[prev.id] : undefined;
-          const locked = idx > 0 && (!prevStat || prevStat.best_pct < 100);
+          const locked = idx > 0 && (!prevStat || prevStat.best_pct < 80);
           const st = statusOf(stat);
           const inOptimal = profile && a.lexile_score
             && a.lexile_score >= profile.optimal_min - 1 && a.lexile_score <= profile.optimal_max + 1;
           return (
             <li key={a.id}>
               <Link to={`/gaokao/reading/article/${a.id}`}
-                onClick={(e) => { if (locked) { e.preventDefault(); toast.error("请先完成上一篇并 100% 全对"); } }}
+                onClick={(e) => { if (locked) { e.preventDefault(); toast.error("请先完成上一篇并通过 80%"); } }}
                 className={cn(
                   "block rounded-2xl border p-4 transition hover:shadow-tile relative overflow-hidden",
                   locked && "opacity-50 cursor-not-allowed pointer-events-auto",

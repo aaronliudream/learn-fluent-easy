@@ -118,13 +118,11 @@ function normalizeForHash(voiceId: string, speed: number, accent: string | undef
 
 async function predictCdnUrl(text: string, voiceId: string, speed: number, accent?: string): Promise<string> {
   const { voice, safeSpeed, accentUpper } = normalizeForHash(voiceId, speed, accent);
-  // We can't know server-side `provider` (aliyun vs openai) cheaply from
-  // the browser, but for non-CN users it's always "openai", and for CN
-  // users the server still falls back to "openai" if Aliyun fails. So we
-  // always probe the "openai" key first; on miss we just call the Edge
-  // Function which will do the right thing.
+  // Server now prefers Aliyun when configured, so probe the same cache key
+  // first. This prevents repeat phrases in China from missing the CDN and
+  // unnecessarily hitting the Edge Function again.
   const safeText = String(text).slice(0, 4000);
-  const keyInput = `openai|${voice}|${safeSpeed}|${accentUpper}|${safeText}`;
+  const keyInput = `aliyun|${voice}|${safeSpeed}|${accentUpper}|${safeText}`;
   const hash = await sha256Hex(keyInput);
   const path = `${hash.slice(0, 2)}/${hash}.mp3`;
   return `${SUPABASE_URL}/storage/v1/object/public/${TTS_BUCKET}/${path}`;

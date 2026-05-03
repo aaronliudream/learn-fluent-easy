@@ -147,7 +147,7 @@ export default function PrimaryReadingPlay() {
             <ThinkStep
               questions={a.questions}
               onDone={(c) => { setScore(s => s + c); setStep(4); }}
-              onCorrect={() => { setStreak(n => n + 1); awardForCorrect(streak + 1, "primary_reading"); }}
+              onCorrect={(qIdx?: number) => { setStreak(n => n + 1); awardForCorrect(streak + 1, "primary_reading", `${a.id}:think:${qIdx ?? 0}`, "primary_reading"); }}
               onWrong={(qSnap) => {
                 setStreak(0); notifyWrong();
                 logMistake(a, qSnap);
@@ -158,7 +158,7 @@ export default function PrimaryReadingPlay() {
             <TreasureStep
               treasure={a.treasure}
               onDone={(ok) => { if (ok) setScore(s => s + 1); setStep(5); }}
-              onCorrect={() => { setStreak(n => n + 1); awardForCorrect(streak + 1, "primary_reading"); }}
+              onCorrect={() => { setStreak(n => n + 1); awardForCorrect(streak + 1, "primary_reading", `${a.id}:treasure`, "primary_reading"); }}
             />
           )}
         </div>

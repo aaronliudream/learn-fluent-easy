@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { speak } from "@/lib/speak";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
+import { bumpPetSkill } from "@/lib/petSkills";
 
 type Q = { q: string; options: string[]; answer: string; explanation?: string };
 type E = { id: string; title: string; transcript: string; translation_cn: string | null; questions: Q[]; key_vocab: { word: string; cn: string }[]; audio_url: string | null };
@@ -46,6 +47,7 @@ export default function JuniorListeningPlay() {
     if (ok) {
       const next = streak + 1; setStreak(next);
       await awardForCorrect(next, "junior_listening");
+      await bumpPetSkill("listener_ear", 1);
       const correctCount = Object.entries(picks).filter(([i, l]) => l === e!.questions[Number(i)].answer).length + 1;
       if (correctCount % 5 === 0) await awardForBlock("junior_listening");
     } else { setStreak(0); notifyWrong(); }

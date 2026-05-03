@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Loader2, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { awardCoins } from "@/lib/coins";
+import { bumpPetSkill } from "@/lib/petSkills";
 import { toast } from "sonner";
 
 type P = { id: string; topic: string; prompt_cn: string; prompt_en: string; requirements: string[]; min_words: number; max_words: number; sample_answer: string | null; scoring_rubric: string | null };
@@ -52,6 +53,7 @@ export default function JuniorWritingPlay() {
       // Reward by score: 5 + bonus
       const reward = Math.max(5, Math.min(30, Math.round(r.score / 5)));
       await awardCoins(reward, "junior_writing");
+      await bumpPetSkill("writer_pen", 1);
       toast.success(`AI 已批改 · 得分 ${Math.round(r.score)} · +${reward} 星币`);
     } catch (e: any) {
       toast.error(e?.message || "批改失败，请稍后再试");

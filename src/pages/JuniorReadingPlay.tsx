@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
+import { bumpPetSkill } from "@/lib/petSkills";
 
 type Q = { q: string; options: string[]; answer: string; explanation?: string };
 type R = { id: string; title: string; body: string; questions: Q[]; vocab_notes: { word: string; cn: string }[] };
@@ -34,6 +35,7 @@ export default function JuniorReadingPlay() {
       const next = streak + 1;
       setStreak(next);
       await awardForCorrect(next, "junior_reading");
+      await bumpPetSkill("reading_owl", 1);
       const correctCount = Object.entries(picks).filter(([i, l]) => l === r!.questions[Number(i)].answer).length + 1;
       if (correctCount % 5 === 0) await awardForBlock("junior_reading");
     } else { setStreak(0); notifyWrong(); }

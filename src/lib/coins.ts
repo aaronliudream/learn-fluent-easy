@@ -12,6 +12,9 @@ export async function awardCoins(amount: number, source: string = "study"): Prom
     const { data, error } = await supabase.rpc("award_learning_coins", { _amount: amount, _source: source });
     if (error) { console.warn("[coins] award failed", error); return null; }
     const row = Array.isArray(data) ? data[0] : data;
+    if (row && row.awarded > 0) {
+      petReact(row.awarded >= 10 ? "happy" : "correct", { coins: row.awarded });
+    }
     return row ?? null;
   } catch (e) {
     console.warn("[coins] exception", e);

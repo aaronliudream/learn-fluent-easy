@@ -156,7 +156,7 @@ export default function JuniorReadingPlay() {
     <div className="relative">
       <ReadingWatermark text={`${email} · ${new Date().toLocaleString()}`} />
       <article className="relative rounded-2xl border bg-card p-5">
-        <SegmentedReader text={r.body} minSecPerSentence={3} onAllRevealed={() => setAllRevealed(true)} />
+        <div className="text-[15px] leading-8 font-serif whitespace-pre-wrap">{r.body}</div>
       </article>
       {r.vocab_notes?.length > 0 && (
         <div className="mt-4 rounded-xl bg-muted/40 p-3">

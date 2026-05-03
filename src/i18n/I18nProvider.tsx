@@ -4,7 +4,6 @@ import {
   DEFAULT_LANG,
   LANGUAGES,
   type LangCode,
-  detectBrowserLang,
   getLanguageInfo,
 } from "./languages";
 import { BUILTIN, EN, ZH, type StringKey, interpolate } from "./strings";
@@ -324,13 +323,9 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       // Fire and forget — flushDynQueue handles its own state.
       void flushDynQueue(lang);
     }
-    // STRICT MODE: never show the original Chinese source to a user whose
-    // mother-tongue is something else (e.g. Spanish, French). Showing the
-    // raw source text would violate the rule "only English + the chosen
-    // language may appear on screen". Instead we render a short placeholder
-    // (an ellipsis) that will be swapped out the instant the translation
-    // batch resolves a few hundred ms later. For English users with a
-    // CJK source we also redact, since they shouldn't see Chinese either.
+    // For distant networks, never block the UI on AI translation. If the
+    // source is Chinese, show a readable fallback immediately and swap in the
+    // chosen-language translation only if it arrives quickly.
     if (CJK_TEXT_RE.test(text)) return localizeProtagonist(text, "en" as LangCode);
     // Source string contains no CJK — safe to show as-is while we wait
     // (e.g. an English helper string being translated into Spanish).

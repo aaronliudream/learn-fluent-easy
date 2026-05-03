@@ -379,12 +379,18 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
   const confirmBuy = async (foodId: string, wishId: string) => {
     setBusy(foodId);
     const { error } = await supabase.rpc("buy_pet_food", { _food_id: foodId, _qty: 1 });
+    let patienceMsg = "";
     if (!error) {
-      await supabase.from("wishlist").update({ purchased_at: new Date().toISOString() }).eq("id", wishId);
+      // 走 RPC 关单，顺带累计耐心分（搁置 ≥7 天 +1）
+      const { data: cw } = await supabase.rpc("confirm_wishlist_purchase", { _wishlist_id: wishId });
+      const row: any = Array.isArray(cw) ? cw[0] : cw;
+      if (row?.days_held >= 7) {
+        patienceMsg = `💛 等待 ${row.days_held} 天 · 宠物耐心 +1（共 ${row.patience_after}）`;
+      }
     }
     setBusy(null);
     if (error) { flash(error.message.includes("not enough") ? "💰 星币不够，继续学习吧！" : "❌ "+error.message); return; }
-    flash("🛒 等待是值得的！购买成功");
+    flash(patienceMsg || "🛒 等待是值得的！购买成功");
     await reloadWishlist();
     await refreshCurrencies?.();
     onAfter();
@@ -411,6 +417,13 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
       <div className="rounded-2xl border-2 border-dashed border-emerald-300/50 bg-emerald-50/40 p-3 text-[11px] leading-relaxed text-emerald-800 dark:bg-emerald-950/20 dark:text-emerald-300">
         <div className="font-extrabold">🌱 慢一点，更稳一点</div>
         喜欢的物品先加入<b>心愿单</b>，48 小时后再决定买不买 —— 宠物相信会等待的孩子。
+        <div className="mt-1.5 text-[10px] opacity-80">
+          {(() => {
+            const d = new Date().getDay();
+            const open = d === 3 || d === 6;
+            return open ? "🛍️ 今天是商店开放日（每周三/六）—— 也是慢慢挑选的好日子。" : "🛍️ 商店每周三、周六最热闹 —— 把心愿留到那天再来看看。";
+          })()}
+        </div>
       </div>
 
       {wishlist.length > 0 && (

@@ -1,6 +1,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { addPendingSeed } from "@/lib/currencies";
+import { isFatigued, noteAnswered } from "@/lib/fatigue";
 
 /**
  * 学习场景奖励星币（小学/初中/高中通用）
@@ -80,6 +81,11 @@ export async function awardForCorrect(
   let tooFast = false;
   if (typeof answerMs === "number" && answerMs > 0 && answerMs < 1200) {
     tooFast = true;
+    total = Math.max(1, Math.ceil(total / 2));
+  }
+  // #14 宠物疲劳：长时间/大量同题型 → 奖励减半 + 提示休息
+  noteAnswered(source);
+  if (isFatigued(source)) {
     total = Math.max(1, Math.ceil(total / 2));
   }
   let r: { awarded: number; balance: number; capped: boolean } | null = null;

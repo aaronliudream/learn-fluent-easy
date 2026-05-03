@@ -86,11 +86,17 @@ const Leaderboard = () => {
             <Stat label={t("XP")} value={me?.weekly_xp ?? 0} />
             <Stat label={t("活跃天数")} value={me?.active_days ?? 0} />
             <Stat
-              label={t("排名")}
-              value={me?.rank ? `#${me.rank}` : "—"}
-              hint={me?.total_players ? `/ ${me.total_players}` : undefined}
+              label={t("超过同学")}
+              value={
+                me?.rank && me?.total_players
+                  ? `${Math.max(1, Math.round(((me.total_players - me.rank) / me.total_players) * 100))}%`
+                  : "—"
+              }
             />
           </div>
+          <p className="mt-2 text-center text-[10px] text-muted-foreground">
+            {t("我们不显示具体名次 — 比较自己的昨天就好 🌱")}
+          </p>
         </div>
       )}
 

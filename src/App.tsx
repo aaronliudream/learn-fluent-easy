@@ -83,6 +83,7 @@ import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 import { FloatingPet } from "@/components/pet/FloatingPet";
 import { DigestionAnimation } from "@/components/pet/DigestionAnimation";
 import { EvolutionCelebration } from "@/components/pet/EvolutionCelebration";
+import GrowthLetter from "@/components/pet/GrowthLetter";
 import useActiveHeartbeat from "@/hooks/useActiveHeartbeat";
 
 const queryClient = new QueryClient();
@@ -151,6 +152,7 @@ const App = () => (
         <FloatingPetGate />
         <EvolutionCelebration />
         <DigestionAnimation />
+        <GrowthLetter />
         <div className="pb-tabbar lg:pb-0">
         <Suspense fallback={<RouteFallback />}>
         <Routes>

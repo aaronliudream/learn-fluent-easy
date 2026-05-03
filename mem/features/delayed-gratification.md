@@ -20,3 +20,12 @@ type: feature
 **前端入口**：`src/lib/currencies.ts` 的 `useCurrencies()` / `addPendingSeed()` / `wishlistAdd()`
 
 **禁止**：不要再加"立即金币 → 立即购买"路径，违背延迟满足设计。
+
+## v2 增量（2026-05-03）
+- **每日种子上限**：默认 50/日，超出 → "明日储蓄罐"（mature_at 推到次日）
+- **心灵假日**：`no_reward_days` 表，每周确定性随机选一天，当天获得的种子全部进储蓄罐
+- **家长延迟系数**：`parent_delay_settings.delay_hours ∈ {1,24,72}`，影响 `add_pending_seed` 的成熟时长；UI 在 `<DelaySettings />` 家长后台
+- **耐心分**：`profiles.patience_score`，心愿单搁置 ≥7 天才购买 +1；走 `confirm_wishlist_purchase` RPC
+- **宠物成长信**：周日全屏弹窗 `<GrowthLetter />`，数据来自 `weekly_growth_letter` RPC，全文不提金币
+- **疲劳态**：`src/lib/fatigue.ts` 同模块连续 ≥20 题或 ≥30 分钟 → 奖励减半 + toast 休息提示；切换模块 / 闲置 10 分钟自动重置
+- **排行榜模糊化**：Leaderboard "我的排名"改显示"超过同学 X%"，不显示绝对名次

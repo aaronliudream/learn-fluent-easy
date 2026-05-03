@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import {
   ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid,
 } from "recharts";
+import DelaySettings from "@/components/parent/DelaySettings";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
 type Dashboard = {
@@ -305,6 +306,10 @@ export default function GlobalParent() {
           ③ <b>薄弱点</b>：近 14 天未解决的错题，按错误次数排序，点击右侧按钮可立即陪练。<br/>
           ④ 数据每次进入页面刷新；如刚做完题未显示，请稍候重新进入。
         </p>
+      </div>
+
+      <div className="mt-6">
+        <DelaySettings />
       </div>
     </main>
   );

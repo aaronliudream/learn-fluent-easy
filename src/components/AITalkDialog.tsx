@@ -28,6 +28,26 @@ type QuizQ = {
 type Review = { summary_cn: string; turns: RecapTurn[] };
 type Recap = { summary_cn: string; turns: RecapTurn[]; quiz: QuizQ[] };
 
+// 记录最近 Alex 复盘考过的词，避免每次出现 cut back / unwind 等高频复用词
+const QUIZ_HISTORY_KEY = "alex_recent_quiz_words_v1";
+const QUIZ_HISTORY_MAX = 80;
+function loadRecentQuizWords(): string[] {
+  try {
+    const raw = localStorage.getItem(QUIZ_HISTORY_KEY);
+    return raw ? (JSON.parse(raw) as string[]) : [];
+  } catch { return []; }
+}
+function rememberQuizWords(words: string[]) {
+  try {
+    const cur = loadRecentQuizWords();
+    const norm = (w: string) => w.toLowerCase().trim();
+    const merged = [...words.map(norm).filter(Boolean), ...cur];
+    const seen = new Set<string>();
+    const dedup = merged.filter((w) => { if (seen.has(w)) return false; seen.add(w); return true; });
+    localStorage.setItem(QUIZ_HISTORY_KEY, JSON.stringify(dedup.slice(0, QUIZ_HISTORY_MAX)));
+  } catch { /* ignore */ }
+}
+
 type Props = {
   open: boolean;
   onClose: () => void;

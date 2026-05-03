@@ -3468,6 +3468,48 @@ export type Database = {
           },
         ]
       }
+      pet_postcards: {
+        Row: {
+          created_at: string
+          destination_cn: string
+          destination_emoji: string
+          id: string
+          message_cn: string
+          month_key: string
+          pet_id: string
+          read_at: string | null
+          trip_end: string
+          trip_start: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          destination_cn: string
+          destination_emoji: string
+          id?: string
+          message_cn: string
+          month_key: string
+          pet_id: string
+          read_at?: string | null
+          trip_end?: string
+          trip_start?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          destination_cn?: string
+          destination_emoji?: string
+          id?: string
+          message_cn?: string
+          month_key?: string
+          pet_id?: string
+          read_at?: string | null
+          trip_end?: string
+          trip_start?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       pet_skill_bindings: {
         Row: {
           created_at: string
@@ -5455,6 +5497,28 @@ export type Database = {
           total_players: number
           weekly_xp: number
         }[]
+      }
+      get_or_create_monthly_postcard: {
+        Args: never
+        Returns: {
+          created_at: string
+          destination_cn: string
+          destination_emoji: string
+          id: string
+          message_cn: string
+          month_key: string
+          pet_id: string
+          read_at: string | null
+          trip_end: string
+          trip_start: string
+          user_id: string
+        }[]
+        SetofOptions: {
+          from: "*"
+          to: "pet_postcards"
+          isOneToOne: false
+          isSetofReturn: true
+        }
       }
       get_or_init_duel_rating: {
         Args: never

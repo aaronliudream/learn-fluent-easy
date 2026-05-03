@@ -27,7 +27,8 @@ type GameKey = typeof GAMES[number]["key"];
 export default function PrimaryGames() {
   const { grade: gradeParam, type: typeParam } = useParams<{ grade?: string; type?: string }>();
   const nav = useNavigate();
-  const grade = Number(gradeParam ?? localStorage.getItem("primary:lastGrade") ?? "3");
+  const isAll = gradeParam === "all";
+  const grade = isAll ? 0 : Number(gradeParam ?? localStorage.getItem("primary:lastGrade") ?? "3");
   const game = (typeParam as GameKey) ?? null;
 
   const [words, setWords] = useState<Word[]>([]);
@@ -35,17 +36,15 @@ export default function PrimaryGames() {
 
   useEffect(() => {
     setLoading(true);
-    supabase
-      .from("primary_vocab")
-      .select("id,word,meaning_cn,example_en,example_cn,theme,grade")
-      .eq("grade", grade)
-      .then(({ data }) => {
-        setWords((data ?? []) as Word[]);
-        setLoading(false);
-      });
-  }, [grade]);
+    let q = supabase.from("primary_vocab").select("id,word,meaning_cn,example_en,example_cn,theme,grade");
+    if (!isAll) q = q.eq("grade", grade);
+    q.then(({ data }) => {
+      setWords((data ?? []) as Word[]);
+      setLoading(false);
+    });
+  }, [grade, isAll]);
 
-  const gradeName = `${["一","二","三","四","五","六"][grade-1] ?? grade} 年级`;
+  const gradeName = isAll ? "全小学 · 1008 词大测验" : `${["一","二","三","四","五","六"][grade-1] ?? grade} 年级`;
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
@@ -77,12 +76,21 @@ export default function PrimaryGames() {
             }}
             className={cn(
               "rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
-              g === grade ? "border-amber-400 bg-amber-400 text-white" : "border-border bg-card hover:border-amber-300"
+              g === grade && !isAll ? "border-amber-400 bg-amber-400 text-white" : "border-border bg-card hover:border-amber-300"
             )}
           >
             G{g}
           </button>
         ))}
+        <button
+          onClick={() => nav(game ? `/primary/games/all/${game}` : `/primary/games/all`)}
+          className={cn(
+            "rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
+            isAll ? "border-fuchsia-500 bg-fuchsia-500 text-white" : "border-border bg-card hover:border-fuchsia-300"
+          )}
+        >
+          🏆 全小学
+        </button>
       </div>
 
       {loading ? (

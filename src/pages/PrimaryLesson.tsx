@@ -191,7 +191,7 @@ function QuizRunner({ questions, accent, onDone, label }: {
     setScore(next);
     if (/^[a-zA-Z ,.'!?-]+$/.test(cur.q)) speak(cur.q);
     setTimeout(() => {
-      if (i + 1 >= questions.length) onDone(next);
+      if (i + 1 >= questions.length) onDone({ correct: next.c, total: next.t });
       else { setI(i + 1); setPicked(null); }
     }, 700);
   };

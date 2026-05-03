@@ -2044,6 +2044,81 @@ export type Database = {
           },
         ]
       }
+      junior_listening_attempts: {
+        Row: {
+          created_at: string
+          exercise_id: string
+          id: string
+          is_correct: boolean
+          question_idx: number
+          user_answer: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          exercise_id: string
+          id?: string
+          is_correct: boolean
+          question_idx: number
+          user_answer?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          exercise_id?: string
+          id?: string
+          is_correct?: boolean
+          question_idx?: number
+          user_answer?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      junior_listening_exercises: {
+        Row: {
+          audio_url: string | null
+          created_at: string
+          difficulty: number
+          grade: number
+          id: string
+          key_vocab: Json
+          questions: Json
+          speaker: string | null
+          title: string
+          topic: string | null
+          transcript: string
+          translation_cn: string | null
+        }
+        Insert: {
+          audio_url?: string | null
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          id?: string
+          key_vocab?: Json
+          questions?: Json
+          speaker?: string | null
+          title: string
+          topic?: string | null
+          transcript: string
+          translation_cn?: string | null
+        }
+        Update: {
+          audio_url?: string | null
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          id?: string
+          key_vocab?: Json
+          questions?: Json
+          speaker?: string | null
+          title?: string
+          topic?: string | null
+          transcript?: string
+          translation_cn?: string | null
+        }
+        Relationships: []
+      }
       junior_reading: {
         Row: {
           body: string
@@ -2321,6 +2396,99 @@ export type Database = {
           updated_at?: string
           user_id?: string
           word_id?: string
+        }
+        Relationships: []
+      }
+      junior_writing_attempts: {
+        Row: {
+          content_score: number | null
+          corrections: Json | null
+          created_at: string
+          feedback_cn: string | null
+          highlights: Json | null
+          id: string
+          language_score: number | null
+          overall_score: number | null
+          prompt_id: string
+          structure_score: number | null
+          text: string
+          user_id: string
+          word_count: number
+        }
+        Insert: {
+          content_score?: number | null
+          corrections?: Json | null
+          created_at?: string
+          feedback_cn?: string | null
+          highlights?: Json | null
+          id?: string
+          language_score?: number | null
+          overall_score?: number | null
+          prompt_id: string
+          structure_score?: number | null
+          text: string
+          user_id: string
+          word_count?: number
+        }
+        Update: {
+          content_score?: number | null
+          corrections?: Json | null
+          created_at?: string
+          feedback_cn?: string | null
+          highlights?: Json | null
+          id?: string
+          language_score?: number | null
+          overall_score?: number | null
+          prompt_id?: string
+          structure_score?: number | null
+          text?: string
+          user_id?: string
+          word_count?: number
+        }
+        Relationships: []
+      }
+      junior_writing_prompts: {
+        Row: {
+          created_at: string
+          difficulty: number
+          grade: number
+          id: string
+          max_words: number
+          min_words: number
+          prompt_cn: string
+          prompt_en: string
+          requirements: Json
+          sample_answer: string | null
+          scoring_rubric: string | null
+          topic: string
+        }
+        Insert: {
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          id?: string
+          max_words?: number
+          min_words?: number
+          prompt_cn: string
+          prompt_en: string
+          requirements?: Json
+          sample_answer?: string | null
+          scoring_rubric?: string | null
+          topic: string
+        }
+        Update: {
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          id?: string
+          max_words?: number
+          min_words?: number
+          prompt_cn?: string
+          prompt_en?: string
+          requirements?: Json
+          sample_answer?: string | null
+          scoring_rubric?: string | null
+          topic?: string
         }
         Relationships: []
       }

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Sparkles, BookOpen, Headphones, Target, Lock, Trophy, Heart, Users } from "lucide-react";
+import OnlineWidget from "@/components/social/OnlineWidget";
 
 const SECTIONS = [
   {
@@ -99,6 +100,13 @@ export default function Junior() {
             <div className="text-[11px] opacity-90">学习赚星币 · 喂养与冒险</div>
           </div>
         </Link>
+        <Link to="/social" className="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-rose-500 to-fuchsia-600 p-3 text-white shadow-tile transition hover:-translate-y-0.5">
+          <Sparkles className="size-5" />
+          <div className="flex-1">
+            <div className="text-sm font-extrabold">同学社区</div>
+            <div className="text-[11px] opacity-90">动态 · 排行榜 · 市集 · 合作答题</div>
+          </div>
+        </Link>
         <Link to="/parent" className="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-3 text-white shadow-tile transition hover:-translate-y-0.5">
           <Users className="size-5" />
           <div className="flex-1">
@@ -107,6 +115,7 @@ export default function Junior() {
           </div>
         </Link>
       </div>
+      <div className="mt-3 flex justify-center"><OnlineWidget grade="junior" page="/junior" /></div>
     </main>
   );
 }

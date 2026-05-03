@@ -14,6 +14,101 @@ export type Database = {
   }
   public: {
     Tables: {
+      activity_feed: {
+        Row: {
+          created_at: string
+          emoji: string | null
+          grade_band: string | null
+          id: string
+          kind: string
+          message: string
+          meta: Json | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          emoji?: string | null
+          grade_band?: string | null
+          id?: string
+          kind: string
+          message: string
+          meta?: Json | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          emoji?: string | null
+          grade_band?: string | null
+          id?: string
+          kind?: string
+          message?: string
+          meta?: Json | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      coop_session_members: {
+        Row: {
+          contributed: number
+          joined_at: string
+          session_id: string
+          user_id: string
+        }
+        Insert: {
+          contributed?: number
+          joined_at?: string
+          session_id: string
+          user_id: string
+        }
+        Update: {
+          contributed?: number
+          joined_at?: string
+          session_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "coop_session_members_session_id_fkey"
+            columns: ["session_id"]
+            isOneToOne: false
+            referencedRelation: "coop_sessions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      coop_sessions: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          current_correct: number
+          expires_at: string
+          goal_correct: number
+          grade_band: string
+          id: string
+          status: string
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          current_correct?: number
+          expires_at?: string
+          goal_correct?: number
+          grade_band: string
+          id?: string
+          status?: string
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          current_correct?: number
+          expires_at?: string
+          goal_correct?: number
+          grade_band?: string
+          id?: string
+          status?: string
+        }
+        Relationships: []
+      }
       daily_coin_log: {
         Row: {
           earned: number
@@ -2156,6 +2251,44 @@ export type Database = {
           },
         ]
       }
+      pet_food_gifts: {
+        Row: {
+          claimed_at: string | null
+          created_at: string
+          food_id: string
+          from_user: string
+          id: string
+          qty: number
+          to_user: string
+        }
+        Insert: {
+          claimed_at?: string | null
+          created_at?: string
+          food_id: string
+          from_user: string
+          id?: string
+          qty?: number
+          to_user: string
+        }
+        Update: {
+          claimed_at?: string | null
+          created_at?: string
+          food_id?: string
+          from_user?: string
+          id?: string
+          qty?: number
+          to_user?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pet_food_gifts_food_id_fkey"
+            columns: ["food_id"]
+            isOneToOne: false
+            referencedRelation: "pet_food_items"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       pet_food_items: {
         Row: {
           description_cn: string | null
@@ -2194,6 +2327,50 @@ export type Database = {
           sort_order?: number
         }
         Relationships: []
+      }
+      pet_food_listings: {
+        Row: {
+          buyer_id: string | null
+          created_at: string
+          food_id: string
+          id: string
+          price_per_unit: number
+          qty: number
+          seller_id: string
+          sold_at: string | null
+          status: string
+        }
+        Insert: {
+          buyer_id?: string | null
+          created_at?: string
+          food_id: string
+          id?: string
+          price_per_unit: number
+          qty: number
+          seller_id: string
+          sold_at?: string | null
+          status?: string
+        }
+        Update: {
+          buyer_id?: string | null
+          created_at?: string
+          food_id?: string
+          id?: string
+          price_per_unit?: number
+          qty?: number
+          seller_id?: string
+          sold_at?: string | null
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "pet_food_listings_food_id_fkey"
+            columns: ["food_id"]
+            isOneToOne: false
+            referencedRelation: "pet_food_items"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       pet_inventory: {
         Row: {
@@ -3156,6 +3333,78 @@ export type Database = {
           },
         ]
       }
+      user_presence: {
+        Row: {
+          current_page: string | null
+          grade_band: string | null
+          last_seen: string
+          user_id: string
+        }
+        Insert: {
+          current_page?: string | null
+          grade_band?: string | null
+          last_seen?: string
+          user_id: string
+        }
+        Update: {
+          current_page?: string | null
+          grade_band?: string | null
+          last_seen?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_social_settings: {
+        Row: {
+          display_emoji: string | null
+          grade_band: string | null
+          social_visible: boolean
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          display_emoji?: string | null
+          grade_band?: string | null
+          social_visible?: boolean
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          display_emoji?: string | null
+          grade_band?: string | null
+          social_visible?: boolean
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_waves: {
+        Row: {
+          created_at: string
+          emoji: string
+          from_user: string
+          id: string
+          to_user: string
+          wave_date: string
+        }
+        Insert: {
+          created_at?: string
+          emoji?: string
+          from_user: string
+          id?: string
+          to_user: string
+          wave_date?: string
+        }
+        Update: {
+          created_at?: string
+          emoji?: string
+          from_user?: string
+          id?: string
+          to_user?: string
+          wave_date?: string
+        }
+        Relationships: []
+      }
       vocab_game_scores: {
         Row: {
           best_combo: number
@@ -3468,6 +3717,7 @@ export type Database = {
           capped: boolean
         }[]
       }
+      buy_listing: { Args: { _listing_id: string }; Returns: undefined }
       buy_pet_food: {
         Args: { _food_id: string; _qty: number }
         Returns: {
@@ -3476,6 +3726,12 @@ export type Database = {
         }[]
       }
       cancel_duel_queue: { Args: never; Returns: undefined }
+      cancel_listing: { Args: { _listing_id: string }; Returns: undefined }
+      coop_contribute: {
+        Args: { _correct: number; _session_id: string }
+        Returns: undefined
+      }
+      coop_join: { Args: { _grade: string }; Returns: string }
       delete_email: {
         Args: { message_id: number; queue_name: string }
         Returns: boolean
@@ -3702,6 +3958,30 @@ export type Database = {
       }
       guest_email_for_username: { Args: { _name: string }; Returns: string }
       is_username_clean: { Args: { _name: string }; Returns: boolean }
+      leaderboard_pets_week: {
+        Args: { _grade?: string; _limit?: number }
+        Returns: {
+          display_emoji: string
+          level: number
+          pet_emoji: string
+          pet_name: string
+          user_id: string
+          username: string
+        }[]
+      }
+      leaderboard_today: {
+        Args: { _grade?: string; _limit?: number }
+        Returns: {
+          display_emoji: string
+          earned: number
+          user_id: string
+          username: string
+        }[]
+      }
+      list_food: {
+        Args: { _food_id: string; _price: number; _qty: number }
+        Returns: string
+      }
       match_duel_bot: {
         Args: never
         Returns: {
@@ -3721,6 +4001,15 @@ export type Database = {
         }
         Returns: number
       }
+      online_count: { Args: { _grade?: string }; Returns: number }
+      post_activity: {
+        Args: { _emoji: string; _kind: string; _message: string; _meta?: Json }
+        Returns: string
+      }
+      presence_ping: {
+        Args: { _grade?: string; _page?: string }
+        Returns: undefined
+      }
       read_email_batch: {
         Args: { batch_size: number; queue_name: string; vt: number }
         Returns: {
@@ -3728,6 +4017,14 @@ export type Database = {
           msg_id: number
           read_ct: number
         }[]
+      }
+      send_gift: {
+        Args: { _food_id: string; _to_user: string }
+        Returns: undefined
+      }
+      send_wave: {
+        Args: { _emoji?: string; _to_user: string }
+        Returns: undefined
       }
       set_active_pet: { Args: { _pet_id: string }; Returns: undefined }
       submit_cloze_session: {

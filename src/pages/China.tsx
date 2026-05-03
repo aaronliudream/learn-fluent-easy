@@ -1,5 +1,6 @@
-import { ArrowRight, ArrowLeft, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock, Award, Coins, Heart, Users } from "lucide-react";
+import { ArrowRight, ArrowLeft, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock, Award, Coins, Heart, Users, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import OnlineWidget from "@/components/social/OnlineWidget";
 
 type Stage = {
   to?: string;
@@ -96,6 +97,12 @@ const China = () => {
       </header>
 
       {/* 快捷入口：星币宠物 + 全局家长报告 */}
+      <div className="mb-3 flex items-center justify-between">
+        <OnlineWidget grade="primary" page="/china" />
+        <Link to="/social" className="inline-flex items-center gap-1 rounded-full bg-rose-50 px-3 py-1 text-xs font-bold text-rose-700 ring-1 ring-rose-200 hover:bg-rose-100">
+          <Sparkles className="h-3.5 w-3.5" />同学社区
+        </Link>
+      </div>
       <section className="mb-2 grid gap-3 sm:grid-cols-2">
         <Link to="/pets" className="group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-amber-400 via-orange-400 to-rose-400 p-4 text-white shadow-tile transition hover:-translate-y-0.5">
           <span className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-white/20 blur-2xl" />

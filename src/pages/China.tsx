@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowLeft, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock } from "lucide-react";
+import { ArrowRight, ArrowLeft, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 
 type Stage = {
@@ -58,6 +58,15 @@ const STAGES: Stage[] = [
     locked: true,
     badge: "即将上线",
   },
+  {
+    icon: Award,
+    eyebrow: "研究生英语 · POSTGRADUATE",
+    title: "研究生英语专区",
+    desc: "考研英语一/二真题词汇、长难句与翻译写作专项突破",
+    gradient: "from-emerald-600 via-teal-600 to-cyan-600",
+    locked: true,
+    badge: "即将上线",
+  },
 ];
 
 const China = () => {
@@ -82,7 +91,7 @@ const China = () => {
           </div>
         </div>
         <p className="ml-1 mt-2 text-sm text-muted-foreground md:ml-[52px]">
-          按学段精准提分：小学 · 初中 · 高中(高考) · 大学四级 · 大学六级
+        按学段精准提分：小学 · 初中 · 高中(高考) · 大学四级 · 大学六级 · 研究生
         </p>
       </header>
 

@@ -55,12 +55,12 @@ const REVIEW_TOOL = {
         },
         targets_used: {
           type: "array",
-          description: "如果用户传入了 target expressions, 这里返回 Alex 实际在对话中用到的目标表达 + Alex 当时的原句。没用到的不要列。",
+          description: "如果用户传入了 target expressions, 这里只返回 Alex 在 TRANSCRIPT 里 *逐字* 用到的目标表达 + Alex 当时的那句原话 (verbatim)。如果某个目标 Alex 根本没说出口, 绝对不要列出来——宁可返回空数组。判断标准: phrase (或其明显屈折形式) 必须出现在某一句 Alex 的话里。学生说的不算。",
           items: {
             type: "object",
             properties: {
               phrase: { type: "string", description: "目标表达 (与传入的 phrase 完全一致)." },
-              sentence: { type: "string", description: "Alex 用到该表达的那句原话 (verbatim from transcript)." },
+              sentence: { type: "string", description: "Alex 用到该表达的那句原话 (必须 verbatim 来自 TRANSCRIPT 中 Alex 的某一行)." },
             },
             required: ["phrase", "sentence"],
           },
@@ -184,7 +184,7 @@ serve(async (req) => {
       .join("\n");
 
     const targetsBlock = Array.isArray(targets) && targets.length
-      ? `\n\nTARGET EXPRESSIONS that Alex was secretly trying to teach (check which ones he actually used in the transcript above and return them via targets_used):\n${targets.map((t: any, i: number) => `${i + 1}. "${t.phrase}"`).join("\n")}`
+      ? `\n\nTARGET EXPRESSIONS Alex was *supposed* to weave in. For each one, check the TRANSCRIPT above and ONLY return it in targets_used if Alex (not the learner) literally said the phrase (or an obvious inflection like plural / past-tense). If Alex never said it, OMIT it. Do NOT invent or paraphrase. It is perfectly fine — and expected — to return an empty targets_used array.\n${targets.map((t: any, i: number) => `${i + 1}. "${t.phrase}"`).join("\n")}`
       : "";
 
     const tool = part === "review" ? REVIEW_TOOL : part === "quiz" ? QUIZ_TOOL : COMBINED_TOOL;
@@ -232,6 +232,29 @@ serve(async (req) => {
       parsed = JSON.parse(call.function?.arguments || "{}");
     } catch {
       return json({ error: "AI returned invalid JSON" }, 502);
+    }
+
+    // Hard server-side guard: drop any targets_used entry whose phrase doesn't
+    // actually appear in one of Alex's transcript lines. The model sometimes
+    // hallucinates "Alex used X" when Alex didn't — this guarantees the
+    // "Alex 今天悄悄教了你" panel never lists phrases that weren't spoken.
+    if (parsed && Array.isArray(parsed.targets_used)) {
+      const alexCorpus = cleaned
+        .filter((t) => t.role === "assistant")
+        .map((t) => t.text.toLowerCase())
+        .join("\n");
+      const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9'\s-]/g, " ").replace(/\s+/g, " ").trim();
+      const corpusNorm = norm(alexCorpus);
+      parsed.targets_used = parsed.targets_used.filter((u: any) => {
+        if (!u || typeof u.phrase !== "string") return false;
+        const p = norm(u.phrase);
+        if (!p) return false;
+        if (corpusNorm.includes(p)) return true;
+        // also accept if all word-stems (≥4 chars) appear nearby
+        const tokens = p.split(" ").filter((w) => w.length >= 4);
+        if (tokens.length && tokens.every((w) => corpusNorm.includes(w.slice(0, Math.max(4, w.length - 2))))) return true;
+        return false;
+      });
     }
 
     return json({ recap: parsed, part });

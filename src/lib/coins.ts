@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 /**
  * 学习场景奖励星币（小学/初中/高中通用）
@@ -88,6 +89,14 @@ export async function awardForCorrect(
       reason = row?.reason ?? null;
       if (r && r.awarded > 0) {
         petReact(r.awarded >= 10 ? "happy" : "correct", { coins: r.awarded });
+      }
+      // 透明反馈：让用户知道为什么这次没拿到币
+      if (r && r.awarded === 0) {
+        if (reason === "mastered") toast("⭐ 已掌握，重做无奖励", { duration: 1600 });
+        else if (reason === "repeat_zero") toast("🔁 同题今日已多次奖励，无新奖励", { duration: 1600 });
+        else if (reason === "daily_cap") toast("🎯 今日金币已封顶，明天再来", { duration: 1600 });
+      } else if (reason === "repeat_30pct") {
+        toast("🔂 重复练习，奖励减至 30%", { duration: 1400 });
       }
     } catch (e) {
       console.warn("[coins] exception", e);

@@ -1,6 +1,5 @@
-import { ArrowRight, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock } from "lucide-react";
+import { ArrowRight, ArrowLeft, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
-import { PageHeader } from "@/components/PageHeader";
 
 type Stage = {
   to?: string;
@@ -64,12 +63,28 @@ const STAGES: Stage[] = [
 const China = () => {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
-      <PageHeader
-        backTo="/"
-        eyebrow="中国学生专区 · CHINA"
-        title="中国学生英语学习专区"
-        subtitle="按学段精准提分：小学 · 初中 · 高中(高考) · 大学四级 · 大学六级"
-      />
+      <header className="mb-6">
+        <div className="flex items-center gap-3">
+          <Link
+            to="/"
+            className="grid size-10 shrink-0 place-items-center rounded-full text-foreground/70 transition hover:bg-secondary hover:text-foreground"
+            aria-label="返回首页"
+          >
+            <ArrowLeft className="size-5" />
+          </Link>
+          <div className="min-w-0">
+            <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+              中国学生专区 · CHINA STUDENTS
+            </div>
+            <h1 className="text-grad-title mt-1 truncate text-2xl font-extrabold tracking-tight md:text-4xl">
+              中国学生英语学习专区
+            </h1>
+          </div>
+        </div>
+        <p className="ml-1 mt-2 text-sm text-muted-foreground md:ml-[52px]">
+          按学段精准提分：小学 · 初中 · 高中(高考) · 大学四级 · 大学六级
+        </p>
+      </header>
 
       <section className="mt-6 grid gap-3 sm:grid-cols-2">
         {STAGES.map((s, i) => {

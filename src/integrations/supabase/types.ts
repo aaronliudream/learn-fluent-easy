@@ -1906,6 +1906,39 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_game_scores: {
+        Row: {
+          accuracy: number | null
+          created_at: string
+          duration_ms: number | null
+          game_type: string
+          grade: number | null
+          id: string
+          score: number
+          user_id: string
+        }
+        Insert: {
+          accuracy?: number | null
+          created_at?: string
+          duration_ms?: number | null
+          game_type: string
+          grade?: number | null
+          id?: string
+          score?: number
+          user_id: string
+        }
+        Update: {
+          accuracy?: number | null
+          created_at?: string
+          duration_ms?: number | null
+          game_type?: string
+          grade?: number | null
+          id?: string
+          score?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       primary_grades: {
         Row: {
           created_at: string
@@ -2181,6 +2214,45 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      primary_vocab: {
+        Row: {
+          created_at: string
+          example_cn: string | null
+          example_en: string | null
+          grade: number
+          id: string
+          meaning_cn: string
+          pos: string | null
+          theme: string | null
+          tip: string | null
+          word: string
+        }
+        Insert: {
+          created_at?: string
+          example_cn?: string | null
+          example_en?: string | null
+          grade: number
+          id?: string
+          meaning_cn: string
+          pos?: string | null
+          theme?: string | null
+          tip?: string | null
+          word: string
+        }
+        Update: {
+          created_at?: string
+          example_cn?: string | null
+          example_en?: string | null
+          grade?: number
+          id?: string
+          meaning_cn?: string
+          pos?: string | null
+          theme?: string | null
+          tip?: string | null
+          word?: string
+        }
+        Relationships: []
       }
       profiles: {
         Row: {

@@ -1,17 +1,19 @@
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Headphones, BookOpen, PenLine, Sparkles, MessageCircle } from "lucide-react";
 
-const SKILLS = [
-  { key: "listening", title: "🎧 听力", desc: "听词选图 · 短对话理解", gradient: "from-sky-400 to-cyan-400", to: "#" },
+const buildSkills = (g: number) => [
+  { key: "games", title: "🎮 单词游戏中心", desc: "选义 · 听音 · 翻牌 · 拼词", gradient: "from-rose-400 to-orange-400", to: `/primary/games/${g}` },
+  { key: "listening", title: "🎧 听力", desc: "听词选图 · 短对话理解", gradient: "from-sky-400 to-cyan-400", to: `/primary/games/${g}/listen` },
   { key: "reading", title: "📖 阅读", desc: "单句 → 段落 → 短文", gradient: "from-emerald-400 to-teal-400", to: "#" },
-  { key: "writing", title: "✍️ 写作", desc: "拼写 · 填空 · 看图写句", gradient: "from-violet-400 to-fuchsia-400", to: "#" },
-  { key: "vocab", title: "📚 词汇", desc: "听音辨义 · 智能复习", gradient: "from-amber-400 to-orange-400", to: "/primary/vocab" },
+  { key: "writing", title: "✍️ 写作", desc: "拼写 · 填空 · 看图写句", gradient: "from-violet-400 to-fuchsia-400", to: `/primary/games/${g}/spell` },
+  { key: "vocab", title: "📚 词汇", desc: "本年级核心词", gradient: "from-amber-400 to-orange-400", to: "/primary/vocab" },
   { key: "chat", title: "💬 Spark 对话", desc: "AI 陪你说英语", gradient: "from-pink-400 to-rose-400", to: "/primary/chat" },
 ];
 
 export default function PrimaryGrade() {
   const { grade } = useParams<{ grade: string }>();
   const g = Number(grade ?? "3");
+  const SKILLS = buildSkills(g);
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
       <Link to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">

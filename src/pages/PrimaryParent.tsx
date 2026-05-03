@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Loader2, Sparkles, Headphones, PenLine, Brain, Target, TrendingUp, Volume2, ChevronRight } from "lucide-react";
+import { ArrowLeft, Loader2, Sparkles, Headphones, PenLine, Brain, Target, TrendingUp, Volume2, ChevronRight, AlertTriangle, Play } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
@@ -204,6 +204,9 @@ export default function PrimaryParent() {
               </div>
             )}
           </section>
+
+          {/* Weak words & action plan */}
+          <WeakPlan grade={grade} words={gradeWords} masteryByWord={masteryByWord} />
 
           {/* Word drill-down */}
           <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">

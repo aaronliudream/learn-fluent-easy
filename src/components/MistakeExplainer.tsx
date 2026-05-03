@@ -11,6 +11,7 @@ import { Loader2, Lightbulb, BookOpen, Sparkles, ChevronDown, ChevronUp, AlertCi
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import ReportAIButton from "@/components/pet/ReportAIButton";
+import ReflectionEnergy from "@/components/ReflectionEnergy";
 
 export interface MistakeWordInput {
   id: string;
@@ -190,6 +191,12 @@ export default function MistakeExplainer({
                   contentSnippet={`${data.etymology}\n${data.mnemonic}\n${data.tip ?? ""}`}
                 />
               </div>
+              <ReflectionEnergy
+                itemId={vocab.id}
+                module={questionKind ?? "vocab"}
+                word={vocab.word}
+                correctAnswer={vocab.meaning_cn}
+              />
             </div>
           )}
         </div>

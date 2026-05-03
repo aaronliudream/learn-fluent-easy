@@ -62,6 +62,7 @@ export async function awardForCorrect(
   source: string,
   itemId?: string,
   module?: string,
+  answerMs?: number,
 ): Promise<RichAward | null> {
   let base = 1;
   let streakBonus = 0;
@@ -74,7 +75,13 @@ export async function awardForCorrect(
     flash = true;
     flashAmt = 3 + Math.floor(Math.random() * 8); // 3-10
   }
-  const total = base + streakBonus + flashAmt;
+  let total = base + streakBonus + flashAmt;
+  // 反作弊：答题过快（<1.2s）→ 奖励减半，提示用户慢下来思考
+  let tooFast = false;
+  if (typeof answerMs === "number" && answerMs > 0 && answerMs < 1200) {
+    tooFast = true;
+    total = Math.max(1, Math.ceil(total / 2));
+  }
   let r: { awarded: number; balance: number; capped: boolean } | null = null;
   let reason: string | null = null;
   if (itemId) {
@@ -111,6 +118,9 @@ export async function awardForCorrect(
   if (!r) return null;
   // 闪光时覆盖默认事件，发更醒目的反馈
   if (flash && r.awarded > 0) petReact("flash", { coins: r.awarded });
+  if (tooFast) {
+    toast("🐢 答得太快啦，奖励减半。慢下来思考更牢固～", { duration: 1800 });
+  }
   return { ...r, flash, streakBonus, base, kind: flash ? "flash" : streakBonus ? "streak" : "base", reason };
 }
 

@@ -290,7 +290,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // No translation needed if the user chose Chinese, which is the app's
     // original helper-language for lesson notes and hints.
     if (lang === "zh") return localizeProtagonist(text, lang);
-    if (lang === "en") return localizeProtagonist(text, lang);
+    // For English (and every other non-Chinese language): if the source text
+    // contains CJK characters we MUST translate it. Previously English users
+    // saw raw Chinese on the home page (e.g. "今天已经开练了") because we
+    // short-circuited here.
+    if (lang === "en" && !CJK_TEXT_RE.test(text)) return localizeProtagonist(text, lang);
     const cached = dynCacheRef.current[text];
     if (isUsableTranslation(lang, text, cached)) return localizeProtagonist(cached, lang);
     // Queue the request. Use a microtask-style 0ms timer so the *first*
@@ -315,7 +319,12 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // For distant networks, never block the UI on AI translation. If the
     // source is Chinese, show a readable fallback immediately and swap in the
     // chosen-language translation only if it arrives quickly.
-    if (CJK_TEXT_RE.test(text)) return localizeProtagonist(text, "en" as LangCode);
+    // Source contains CJK and we don't have a translation yet. Showing the
+    // raw Chinese to a non-Chinese user is the bug we're fixing — return an
+    // empty string so the UI shows nothing for one tick instead of leaking
+    // Chinese. The component re-renders as soon as the translation lands
+    // (dynVersion bumps).
+    if (CJK_TEXT_RE.test(text)) return "";
     // Source string contains no CJK — safe to show as-is while we wait
     // (e.g. an English helper string being translated into Spanish).
     return localizeProtagonist(text, lang);

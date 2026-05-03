@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -13,28 +13,35 @@ function pickEmoji(p: Pet, sp?: Species) {
 
 /**
  * 学习页右下角浮动宠物：
- * - 显示当前活跃宠物 + 等级 + 饱食条
- * - 监听 `pet:react` 事件做表情/弹跳/星星反馈
- * - 点击跳转 /pets
+ * - 自动饥饿度衰减（调用 get_my_active_pet RPC，每次挂载/答题刷新）
+ * - 答对蹦跳、答错抖动灰色、闪光币金色弹出
+ * - 低饥饿（<25）持续脉冲提醒；点击跳转 /pets
  */
 export function FloatingPet() {
   const [pet, setPet] = useState<Pet | null>(null);
   const [sp, setSp] = useState<Species | null>(null);
   const [react, setReact] = useState<null | { kind: string; coins?: number; id: number }>(null);
+  const lastFetchRef = useRef(0);
+
+  const refresh = async () => {
+    const now = Date.now();
+    if (now - lastFetchRef.current < 30000) return; // 30s 节流
+    lastFetchRef.current = now;
+    const { data } = await supabase.rpc("get_my_active_pet");
+    const p = (Array.isArray(data) ? data[0] : data) as Pet | undefined;
+    if (!p) return;
+    setPet(p);
+    if (!sp || sp.id !== p.species_id) {
+      const { data: s } = await supabase.from("pet_species")
+        .select("id,emoji_egg,emoji_baby,emoji_adult,emoji_legend")
+        .eq("id", p.species_id).maybeSingle();
+      if (s) setSp(s as Species);
+    }
+  };
 
   useEffect(() => {
-    let mounted = true;
-    (async () => {
-      const { data: u } = await supabase.auth.getUser();
-      if (!u?.user) return;
-      const { data: pets } = await supabase.from("user_pets").select("*").eq("user_id", u.user.id).eq("is_active", true).limit(1);
-      const p = pets?.[0] as Pet | undefined;
-      if (!p || !mounted) return;
-      setPet(p);
-      const { data: s } = await supabase.from("pet_species").select("id,emoji_egg,emoji_baby,emoji_adult,emoji_legend").eq("id", p.species_id).maybeSingle();
-      if (mounted) setSp(s as Species);
-    })();
-    return () => { mounted = false; };
+    refresh();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -42,15 +49,19 @@ export function FloatingPet() {
       const d = (e as CustomEvent).detail || {};
       setReact({ kind: d.kind, coins: d.coins, id: Date.now() });
       window.setTimeout(() => setReact(null), 1600);
+      // 答对超过若干次后悄悄刷新一次饱食状态
+      if (d.kind === "correct" || d.kind === "happy" || d.kind === "flash") refresh();
     };
     window.addEventListener("pet:react", onReact);
     return () => window.removeEventListener("pet:react", onReact);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!pet) return null;
   const emoji = pickEmoji(pet, sp ?? undefined);
   const isHappy = react?.kind === "correct" || react?.kind === "happy" || react?.kind === "flash";
   const isSad = react?.kind === "wrong";
+  const isHungry = pet.hunger < 25;
 
   return (
     <Link
@@ -58,12 +69,15 @@ export function FloatingPet() {
       aria-label={`查看宠物 ${pet.nickname}`}
       className="group fixed bottom-20 right-3 z-40 select-none lg:bottom-6 lg:right-6"
     >
-      <div className="relative flex items-end gap-1.5 rounded-full border border-border/60 bg-card/90 px-2.5 py-1.5 shadow-lg backdrop-blur transition hover:-translate-y-0.5">
+      <div className={cn(
+        "relative flex items-end gap-1.5 rounded-full border border-border/60 bg-card/90 px-2.5 py-1.5 shadow-lg backdrop-blur transition hover:-translate-y-0.5",
+        isHungry && !react && "animate-pulse ring-2 ring-amber-400/60",
+      )}>
         <div
           className={cn(
             "text-3xl leading-none transition",
             isHappy && "animate-bounce-slow",
-            isSad && "opacity-70 grayscale",
+            isSad && "opacity-70 grayscale animate-shake",
             !react && "group-hover:scale-110",
           )}
         >
@@ -71,7 +85,17 @@ export function FloatingPet() {
         </div>
         <div className="hidden flex-col text-left leading-tight sm:flex">
           <span className="text-[10px] font-bold">{pet.nickname}</span>
-          <span className="text-[10px] text-muted-foreground">Lv.{pet.level}</span>
+          <span className="text-[10px] text-muted-foreground">Lv.{pet.level} · 🍖{pet.hunger}</span>
+        </div>
+        {/* 饥饿小条 */}
+        <div className="pointer-events-none absolute inset-x-2 -bottom-0.5 h-0.5 overflow-hidden rounded-full bg-muted/60">
+          <div
+            className={cn(
+              "h-full rounded-full transition-all",
+              pet.hunger < 25 ? "bg-rose-500" : pet.hunger < 60 ? "bg-amber-400" : "bg-emerald-500"
+            )}
+            style={{ width: `${pet.hunger}%` }}
+          />
         </div>
       </div>
 
@@ -92,6 +116,11 @@ export function FloatingPet() {
           {react.kind === "correct" && `+${react.coins ?? 1} ⭐`}
           {react.kind === "happy" && `🎉 +${react.coins ?? 5}`}
           {react.kind === "wrong" && "没事，再来！"}
+        </div>
+      )}
+      {isHungry && !react && (
+        <div className="pointer-events-none absolute -top-7 right-2 rounded-full bg-rose-500 px-2 py-0.5 text-[11px] font-extrabold text-white shadow animate-bounce">
+          🍖 我饿了…
         </div>
       )}
     </Link>

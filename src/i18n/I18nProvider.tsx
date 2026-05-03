@@ -166,7 +166,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (typeof window === "undefined") return DEFAULT_LANG;
     const saved = localStorage.getItem(STORAGE_LANG) as LangCode | null;
     if (saved && LANGUAGES.some((l) => l.code === saved)) return saved;
-    return detectBrowserLang();
+    // This product primarily serves Chinese learners, including families in
+    // the US whose browser language is often English. Default to Chinese until
+    // the user explicitly chooses another mother tongue, avoiding slow first-load
+    // AI translation calls on US networks.
+    return DEFAULT_LANG;
   });
   const [hasPicked, setHasPicked] = useState<boolean>(() => {
     if (typeof window === "undefined") return true;

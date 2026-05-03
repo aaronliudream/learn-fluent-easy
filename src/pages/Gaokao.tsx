@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, BookOpen, FileText, Sparkles, PenLine, Headphones, Edit3, Lock, Activity } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
-import { TodayGrowthCard } from "@/components/TodayGrowthCard";
 
 const SECTIONS = [
   {
@@ -70,10 +69,6 @@ export default function Gaokao() {
         <ArrowLeft className="size-4" /> 返回首页
       </BackLink>
       <PageHeader title="高考英语" hideReviewBanner />
-
-      <div className="mb-5">
-        <TodayGrowthCard />
-      </div>
 
       {/* Stage tests entry - 3 grades */}
       <div className="mb-5 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 p-4 text-white shadow-tile">

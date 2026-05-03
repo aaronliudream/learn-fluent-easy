@@ -111,7 +111,7 @@ const China = () => {
           </div>
           <div className="relative flex-1">
             <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">PETS · 学习宠物</div>
-            <div className="text-base font-extrabold">我的学习伙伴</div>
+            <div className="text-base font-extrabold"><X>我的学习伙伴</X></div>
             <div className="text-[11px] opacity-90">学习赚星币 · 喂养、出游、领养、进化</div>
           </div>
           <Coins className="size-5 opacity-90" />

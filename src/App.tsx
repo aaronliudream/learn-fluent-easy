@@ -79,6 +79,7 @@ import { BottomTabBar } from "@/components/BottomTabBar";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 import { FloatingPet } from "@/components/pet/FloatingPet";
 import { EvolutionCelebration } from "@/components/pet/EvolutionCelebration";
+import useActiveHeartbeat from "@/hooks/useActiveHeartbeat";
 
 const queryClient = new QueryClient();
 
@@ -87,6 +88,11 @@ const StopAudioOnRouteChange = () => {
   useEffect(() => {
     stopSpeaking();
   }, [location.pathname]);
+  return null;
+};
+
+const HeartbeatGate = () => {
+  useActiveHeartbeat();
   return null;
 };
 
@@ -134,6 +140,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <StopAudioOnRouteChange />
+        <HeartbeatGate />
         <LanguagePickerModal />
         <GaokaoBreakReminder />
         <FloatingPetGate />

@@ -9,6 +9,7 @@ import CompanionOnboarding from "@/components/pet/CompanionOnboarding";
 import ReportAIButton from "@/components/pet/ReportAIButton";
 import PlanetMap from "@/components/pet/PlanetMap";
 import PetChat from "@/components/pet/PetChat";
+import MonthlyPostcard from "@/components/pet/MonthlyPostcard";
 import { useCurrencies, wishlistAdd, fetchWishlist, wishlistRemove, type WishlistRow } from "@/lib/currencies";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
@@ -230,6 +231,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
 
   return (
     <div className="space-y-4">
+      <MonthlyPostcard />
       {/* Active pet */}
       <div className="rounded-3xl bg-gradient-to-br from-purple-100 via-pink-50 to-amber-50 p-6 shadow-tile dark:from-purple-950/40 dark:via-pink-950/30 dark:to-amber-950/30">
         <div className="flex flex-col items-center text-center">

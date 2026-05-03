@@ -45,6 +45,7 @@ export default function PrimaryReadingPlay() {
   const [step, setStep] = useState(0);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
+  const thinkStartRef = useRef<number>(Date.now());
 
   useEffect(() => {
     if (!id) return;
@@ -147,7 +148,7 @@ export default function PrimaryReadingPlay() {
             <ThinkStep
               questions={a.questions}
               onDone={(c) => { setScore(s => s + c); setStep(4); }}
-              onCorrect={(qIdx?: number) => { setStreak(n => n + 1); awardForCorrect(streak + 1, "primary_reading", `${a.id}:think:${qIdx ?? 0}`, "primary_reading"); }}
+              onCorrect={(qIdx?: number) => { setStreak(n => n + 1); awardForCorrect(streak + 1, "primary_reading", `${a.id}:think:${qIdx ?? 0}`, "primary_reading", Date.now() - thinkStartRef.current); thinkStartRef.current = Date.now(); }}
               onWrong={(qSnap) => {
                 setStreak(0); notifyWrong();
                 logMistake(a, qSnap);

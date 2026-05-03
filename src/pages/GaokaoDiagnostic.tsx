@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Activity } from "lucide-react";
@@ -24,6 +24,7 @@ export default function GaokaoDiagnostic() {
   const [picks, setPicks] = useState<Record<string, string>>({});
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState(true);
+  const qStartRef = useRef<Record<string, number>>({});
 
   useEffect(() => {
     (async () => {
@@ -45,6 +46,8 @@ export default function GaokaoDiagnostic() {
 
   const pick = async (letter: string) => {
     if (!q || picks[q.id]) return;
+    const ms = Date.now() - (qStartRef.current[q.id] ?? Date.now());
+    qStartRef.current[q.id] = Date.now();
     setPicks((p) => ({ ...p, [q.id]: letter }));
     const ok = letter === q.correct_answer;
     if (ok) {
@@ -52,7 +55,7 @@ export default function GaokaoDiagnostic() {
         const qq = questions.find(x => x.id === qid);
         return qq && l === qq.correct_answer;
       }).length + 1;
-      await awardForCorrect(correctSoFar, "gaokao_diagnostic");
+      await awardForCorrect(correctSoFar, "gaokao_diagnostic", q.id, "gaokao_diagnostic", ms);
       if (correctSoFar % 5 === 0) await awardForBlock("gaokao_diagnostic");
     } else {
       notifyWrong();

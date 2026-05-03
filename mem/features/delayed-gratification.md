@@ -29,3 +29,7 @@ type: feature
 - **宠物成长信**：周日全屏弹窗 `<GrowthLetter />`，数据来自 `weekly_growth_letter` RPC，全文不提金币
 - **疲劳态**：`src/lib/fatigue.ts` 同模块连续 ≥20 题或 ≥30 分钟 → 奖励减半 + toast 休息提示；切换模块 / 闲置 10 分钟自动重置
 - **排行榜模糊化**：Leaderboard "我的排名"改显示"超过同学 X%"，不显示绝对名次
+
+## v3 收尾（2026-05-03）
+- **#19 月度旅行明信片**：`pet_postcards` + `get_or_create_monthly_postcard` RPC，每月初宠物自动出游 3 天，`<MonthlyPostcard />` 挂在 Pets 首页
+- **#20 answerMs 全模块**：JuniorReading / GaokaoReading / GaokaoDiagnostic / PrimaryChat / PrimaryReadingPlay 全部传入答题耗时，<1.2s 触发奖励减半

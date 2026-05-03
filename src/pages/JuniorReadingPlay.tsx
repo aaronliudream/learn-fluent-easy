@@ -28,6 +28,7 @@ export default function JuniorReadingPlay() {
   const [userId, setUserId] = useState<string | null>(null);
   const [allRevealed, setAllRevealed] = useState(false);
   const startRef = useRef<number>(Date.now());
+  const qStartRef = useRef<Record<number, number>>({});
   const [now, setNow] = useState(Date.now());
   const [submitted, setSubmitted] = useState(false);
   const [attempt, setAttempt] = useState(1);
@@ -76,6 +77,8 @@ export default function JuniorReadingPlay() {
 
   const pick = async (qi: number, letter: string) => {
     if (!r || picks[qi]) return;
+    const ms = Date.now() - (qStartRef.current[qi] ?? Date.now());
+    qStartRef.current[qi] = Date.now();
     setPicks(p => ({ ...p, [qi]: letter }));
     const ok = letter === r.questions[qi].answer;
     if (userId) {
@@ -87,7 +90,7 @@ export default function JuniorReadingPlay() {
     if (ok) {
       const next = streak + 1;
       setStreak(next);
-      await awardForCorrect(next, "junior_reading", `${r.id}:${qi}`, "junior_reading");
+      await awardForCorrect(next, "junior_reading", `${r.id}:${qi}`, "junior_reading", ms);
       await bumpPetSkill("reading_owl", 1);
     } else {
       setStreak(0); notifyWrong();

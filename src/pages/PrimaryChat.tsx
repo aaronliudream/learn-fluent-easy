@@ -38,6 +38,7 @@ export default function PrimaryChat() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const qStartRef = useRef<Record<number, number>>({});
   // Quiz state
   const [quizLoading, setQuizLoading] = useState(false);
   const [quizItems, setQuizItems] = useState<QuizItem[] | null>(null);
@@ -154,6 +155,8 @@ export default function PrimaryChat() {
 
   async function pickAnswer(qi: number, oi: number) {
     if (picks[qi] !== undefined || !quizItems) return;
+    const ms = Date.now() - (qStartRef.current[qi] ?? Date.now());
+    qStartRef.current[qi] = Date.now();
     const item = quizItems[qi];
     const ok = oi === item.answer_index;
     setPicks((p) => ({ ...p, [qi]: oi }));
@@ -161,7 +164,7 @@ export default function PrimaryChat() {
     if (ok) {
       const newStreak = streak + 1;
       setStreak(newStreak);
-      await awardForCorrect(newStreak, "primary_chat_quiz");
+      await awardForCorrect(newStreak, "primary_chat_quiz", undefined, "primary_chat", ms);
       const total = Object.keys(picks).length + 1;
       if (total > 0 && total % 5 === 0) await awardForBlock("primary_chat_quiz");
     } else {

@@ -2374,9 +2374,11 @@ export type Database = {
           audio_url: string | null
           created_at: string
           difficulty: number
+          duration_sec: number | null
           grade: number
           id: string
           key_vocab: Json
+          kind: string | null
           questions: Json
           speaker: string | null
           title: string
@@ -2388,9 +2390,11 @@ export type Database = {
           audio_url?: string | null
           created_at?: string
           difficulty?: number
+          duration_sec?: number | null
           grade?: number
           id?: string
           key_vocab?: Json
+          kind?: string | null
           questions?: Json
           speaker?: string | null
           title: string
@@ -2402,9 +2406,11 @@ export type Database = {
           audio_url?: string | null
           created_at?: string
           difficulty?: number
+          duration_sec?: number | null
           grade?: number
           id?: string
           key_vocab?: Json
+          kind?: string | null
           questions?: Json
           speaker?: string | null
           title?: string

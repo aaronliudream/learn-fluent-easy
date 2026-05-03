@@ -271,7 +271,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
     speak(cur.word);
     await Promise.all([
-      bumpVocabMastery({ vocabId: cur.id, isCorrect: correct, kind: "meaning" }).catch(() => {}),
+      bumpVocabMastery({ vocabId: cur.id, isCorrect: correct, kind: "en2cn" }).catch(() => {}),
       recordAttempt({
         questionType: "vocab",
         questionId: cur.id,

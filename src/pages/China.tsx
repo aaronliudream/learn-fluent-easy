@@ -23,13 +23,13 @@ const STAGES: Stage[] = [
     badge: "已上线",
   },
   {
+    to: "/junior",
     icon: School,
     eyebrow: "初中英语 · JUNIOR HIGH",
     title: "初中英语专区",
-    desc: "中考核心语法、词汇与完形阅读，按考点系统训练",
+    desc: "中考新课标 200+ 词，按考点系统训练，智能复习",
     gradient: "from-violet-500 via-indigo-500 to-blue-500",
-    locked: true,
-    badge: "即将上线",
+    badge: "已上线",
   },
   {
     to: "/gaokao",

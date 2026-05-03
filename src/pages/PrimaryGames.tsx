@@ -253,6 +253,7 @@ function QuizGame({ words, grade }: { words: Word[]; grade: number }) {
     const ok = m === cur.meaning_cn;
     setScore(s => ({ c: s.c + (ok?1:0), t: s.t+1 }));
     speak(cur.word);
+    recordWordResult(cur, "quiz", ok);
     setTimeout(() => { setPicked(null); setIdx(i => i+1); }, 850);
   };
 
@@ -316,6 +317,7 @@ function ListenGame({ words, grade }: { words: Word[]; grade: number }) {
     setPicked(w);
     const ok = w === cur.word;
     setScore(s => ({ c: s.c + (ok?1:0), t: s.t+1 }));
+    recordWordResult(cur, "listen", ok);
     setTimeout(() => { setPicked(null); setIdx(i => i+1); }, 800);
   };
 
@@ -333,6 +335,7 @@ function ListenGame({ words, grade }: { words: Word[]; grade: number }) {
           const right = w === cur.word;
           const showR = picked && right;
           const showW = picked === w && !right;
+          const meaning = words.find(x => x.word === w)?.meaning_cn ?? "";
           return (
             <button key={w} onClick={() => pick(w)} disabled={!!picked} className={cn(
               "rounded-2xl border-2 p-4 text-lg font-extrabold transition",
@@ -340,7 +343,10 @@ function ListenGame({ words, grade }: { words: Word[]; grade: number }) {
               showW && "border-rose-500 bg-rose-50 text-rose-700",
               !picked && "border-border bg-card hover:border-sky-300",
               picked && !showR && !showW && "opacity-50"
-            )}>{w}</button>
+            )}>
+              <div>{w}</div>
+              <div className="mt-1 text-xs font-medium text-muted-foreground">{meaning}</div>
+            </button>
           );
         })}
       </div>

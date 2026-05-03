@@ -4,6 +4,7 @@ import { ArrowLeft, Loader2, Coins, Backpack, School, GraduationCap, Sparkles, T
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
+import { TodayGrowthCard } from "@/components/TodayGrowthCard";
 
 // Lazy import the existing primary parent dashboard – it already does deep drill-down per grade.
 const PrimaryParentInline = lazy(() => import("./PrimaryParent"));
@@ -109,6 +110,11 @@ export default function GlobalParent() {
         <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">请先登录后再查看</div>
       ) : (
         <>
+          {/* Today's growth — same data the student sees */}
+          <section className="mb-4">
+            <TodayGrowthCard />
+          </section>
+
           {/* Stage cards */}
           <section className="mb-4 grid gap-3 sm:grid-cols-3">
             {STAGES.map(s => {

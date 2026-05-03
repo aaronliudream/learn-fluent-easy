@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
@@ -20,8 +20,13 @@ type Vocab = {
 type Mode = "browse" | "quiz";
 
 export default function PrimaryVocab() {
+  const { grade: gradeParam } = useParams<{ grade?: string }>();
+  const lockedGrade = gradeParam ? Number(gradeParam) : null;
   const [words, setWords] = useState<Vocab[]>([]);
-  const [grade, setGrade] = useState<number>(() => Number(localStorage.getItem("primary:lastGrade") ?? "1"));
+  const [grade, setGrade] = useState<number>(() =>
+    lockedGrade ?? Number(localStorage.getItem("primary:lastGrade") ?? "1")
+  );
+  useEffect(() => { if (lockedGrade) setGrade(lockedGrade); }, [lockedGrade]);
   const [activeTheme, setActiveTheme] = useState<string>("all");
   const [mode, setMode] = useState<Mode>("browse");
   const [loading, setLoading] = useState(true);
@@ -93,18 +98,20 @@ export default function PrimaryVocab() {
       </div>
 
       {/* 年级 */}
-      <div className="mb-3 flex flex-wrap gap-2">
-        {[1,2,3,4,5,6].map(g => (
-          <button
-            key={g}
-            onClick={() => { setGrade(g); localStorage.setItem("primary:lastGrade", String(g)); }}
-            className={cn(
-              "rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
-              g === grade ? "border-amber-400 bg-amber-400 text-white" : "border-border bg-card hover:border-amber-300"
-            )}
-          >G{g}</button>
-        ))}
-      </div>
+      {!lockedGrade && (
+        <div className="mb-3 flex flex-wrap gap-2">
+          {[1,2,3,4,5,6].map(g => (
+            <button
+              key={g}
+              onClick={() => { setGrade(g); localStorage.setItem("primary:lastGrade", String(g)); }}
+              className={cn(
+                "rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
+                g === grade ? "border-amber-400 bg-amber-400 text-white" : "border-border bg-card hover:border-amber-300"
+              )}
+            >G{g}</button>
+          ))}
+        </div>
+      )}
 
       {/* 主题 */}
       <div className="mb-4 flex flex-wrap gap-2">

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Trophy, RotateCw, Sparkles, Target, Headphones, Brain, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -433,11 +433,17 @@ function SpellGame({ words, grade }: { words: Word[]; grade: number }) {
   }, [cur?.id]);
   const [vals, setVals] = useState<string[]>([]);
   useEffect(() => { setVals(blanks.map(()=>"")); }, [cur?.id]);
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  useEffect(() => {
+    const t = setTimeout(() => inputRefs.current[0]?.focus(), 50);
+    return () => clearTimeout(t);
+  }, [cur?.id]);
 
   if (idx >= queue.length) return <ScoreCard correct={score.c} total={score.t} gameType="spell" grade={grade} durationMs={Date.now()-t0}
     onRetry={() => { setIdx(0); setScore({c:0,t:0}); }} />;
 
   const submit = () => {
+    if (vals.some(v => !v)) return;
     // Case-sensitive: kids learn proper capitalization (Apple, London, I)
     const ok = blanks.every((bi, k) => (vals[k]||"") === cur.word[bi]);
     setScore(s => ({ c: s.c + (ok?1:0), t: s.t+1 }));
@@ -462,8 +468,19 @@ function SpellGame({ words, grade }: { words: Word[]; grade: number }) {
             return (
               <input
                 key={i}
+                ref={el => { inputRefs.current[k] = el; }}
                 value={vals[k] ?? ""}
-                onChange={e => setVals(v => { const n = v.slice(); n[k] = e.target.value.slice(-1); return n; })}
+                onChange={e => {
+                  const ch = e.target.value.slice(-1);
+                  setVals(v => { const n = v.slice(); n[k] = ch; return n; });
+                  if (ch && k < blanks.length - 1) inputRefs.current[k+1]?.focus();
+                }}
+                onKeyDown={e => {
+                  if (e.key === "Enter") { e.preventDefault(); submit(); }
+                  else if (e.key === "Backspace" && !vals[k] && k > 0) {
+                    inputRefs.current[k-1]?.focus();
+                  }
+                }}
                 maxLength={1}
                 className="size-11 rounded-lg border-2 border-amber-400 bg-white text-center text-2xl font-black text-amber-600 outline-none focus:border-amber-600"
               />

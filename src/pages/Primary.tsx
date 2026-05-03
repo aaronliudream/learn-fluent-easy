@@ -1,109 +1,138 @@
-import { Link } from "react-router-dom";
-import { ArrowLeft, BookA, Sparkles, Headphones, Target, Lock, Trophy, MessageCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { ArrowLeft, BookA, Sparkles, MessageCircle, Play, Star } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
-const SECTIONS = [
-  {
-    to: "/primary/chat",
-    icon: MessageCircle,
-    title: "AI 对话 · Spark 陪你聊",
-    desc: "和小宠物 Spark 用英语聊天 · 安全友好 · 错了也会被温柔鼓励 ✨",
-    gradient: "from-pink-400 via-fuchsia-400 to-violet-400",
-    available: true,
-  },
-  {
-    to: "/primary/letters",
-    icon: BookA,
-    title: "26 字母 · 自然拼读",
-    desc: "字母名 + Phonics 短长音 + 口型笔顺 + 儿歌 + 例词 emoji 卡",
-    gradient: "from-amber-400 via-orange-400 to-rose-400",
-    available: true,
-  },
-  {
-    to: "/primary/vocab",
-    icon: Sparkles,
-    title: "小学核心词汇",
-    desc: "教育部新课标 16 大主题 · 200 词 · 听音辨义 · 智能掌握度",
-    gradient: "from-sky-400 via-cyan-400 to-emerald-400",
-    available: true,
-  },
-  {
-    to: "#",
-    icon: Headphones,
-    title: "听力小故事",
-    desc: "敬请期待",
-    gradient: "from-slate-400 to-slate-500",
-    available: false,
-  },
-  {
-    to: "#",
-    icon: Target,
-    title: "趣味闯关测验",
-    desc: "敬请期待",
-    gradient: "from-slate-400 to-slate-500",
-    available: false,
-  },
+type Grade = {
+  id: number; name_cn: string; name_en: string;
+  emoji: string | null; gradient: string | null;
+};
+
+type Pet = { name: string; level: number; xp: number; bond: number; stars: number };
+
+const FALLBACK_GRADES: Grade[] = [
+  { id: 1, name_cn: "一年级", name_en: "Grade 1", emoji: "🐣", gradient: "from-amber-300 via-yellow-300 to-orange-300" },
+  { id: 2, name_cn: "二年级", name_en: "Grade 2", emoji: "🐥", gradient: "from-orange-300 via-pink-300 to-rose-300" },
+  { id: 3, name_cn: "三年级", name_en: "Grade 3", emoji: "🦊", gradient: "from-rose-300 via-fuchsia-300 to-violet-300" },
+  { id: 4, name_cn: "四年级", name_en: "Grade 4", emoji: "🐼", gradient: "from-violet-300 via-indigo-300 to-blue-300" },
+  { id: 5, name_cn: "五年级", name_en: "Grade 5", emoji: "🦁", gradient: "from-blue-300 via-sky-300 to-cyan-300" },
+  { id: 6, name_cn: "六年级", name_en: "Grade 6", emoji: "🦉", gradient: "from-cyan-300 via-teal-300 to-emerald-300" },
 ];
 
 export default function Primary() {
+  const nav = useNavigate();
+  const [grades, setGrades] = useState<Grade[]>(FALLBACK_GRADES);
+  const [pet, setPet] = useState<Pet | null>(null);
+  const [selectedGrade, setSelectedGrade] = useState<number>(() => {
+    const saved = localStorage.getItem("primary:lastGrade");
+    return saved ? Number(saved) : 3;
+  });
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await supabase.from("primary_grades").select("*").order("sort_order");
+      if (data && data.length) setGrades(data as Grade[]);
+      const { data: u } = await supabase.auth.getUser();
+      const uid = u?.user?.id;
+      if (uid) {
+        const { data: p } = await supabase.from("pet_state").select("*").eq("user_id", uid).maybeSingle();
+        if (p) setPet(p as Pet);
+        else {
+          const { data: created } = await supabase.from("pet_state").insert({ user_id: uid }).select().maybeSingle();
+          if (created) setPet(created as Pet);
+        }
+      }
+    })();
+  }, []);
+
+  function pickGrade(id: number) {
+    setSelectedGrade(id);
+    localStorage.setItem("primary:lastGrade", String(id));
+  }
+
+  function startToday() {
+    nav(`/primary/grade/${selectedGrade}`);
+  }
+
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <Link
-        to="/china"
-        className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-      >
+    <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
+      <Link to="/china" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回中国学生专区
       </Link>
-      <div className="mb-6">
-        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
-          小学英语 · PRIMARY ENGLISH
+
+      {/* Spark pet bar */}
+      <div className="mb-5 rounded-3xl bg-gradient-to-br from-amber-200 via-rose-200 to-violet-200 p-4 shadow-tile">
+        <div className="flex items-center gap-3">
+          <div className="grid size-14 place-items-center rounded-full bg-white/70 text-3xl">🐶</div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2">
+              <span className="font-extrabold">{pet?.name ?? "Spark"}</span>
+              <span className="rounded-full bg-white/70 px-2 py-0.5 text-xs font-bold text-amber-700">Lv.{pet?.level ?? 1}</span>
+              <span className="ml-auto inline-flex items-center gap-1 text-xs font-bold text-amber-700">
+                <Star className="size-3 fill-amber-500 stroke-amber-500" />{pet?.stars ?? 0}
+              </span>
+            </div>
+            <div className="mt-1 h-2 overflow-hidden rounded-full bg-white/60">
+              <div className="h-full bg-gradient-to-r from-amber-400 to-pink-400" style={{ width: `${Math.min(100, (pet?.xp ?? 0) % 100)}%` }} />
+            </div>
+            <div className="mt-1 text-[11px] text-amber-900/80">
+              亲密度 {pet?.bond ?? 0}/100 · 完成今日训练 +5 ⭐
+            </div>
+          </div>
         </div>
-        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">
-          小学英语启蒙专区
-        </h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          按教育部《义务教育英语课程标准（2022 年版）》 · 多感官趣味学习
-        </p>
       </div>
 
-      <section className="grid gap-3">
-        {SECTIONS.map((s) => {
-          const Icon = s.icon;
-          const Card = (
-            <div
-              className={`relative flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile ${
-                s.available ? "transition hover:-translate-y-0.5" : "opacity-70"
-              }`}
+      <div className="mb-3">
+        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">小学英语 · PRIMARY</div>
+        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">选择你的年级</h1>
+        <p className="mt-1 text-xs text-muted-foreground">教育部新课标 · 听 · 读 · 写 · 词汇全面训练</p>
+      </div>
+
+      {/* Grades grid */}
+      <section className="grid grid-cols-3 gap-3">
+        {grades.map((g) => {
+          const active = selectedGrade === g.id;
+          return (
+            <button
+              key={g.id}
+              onClick={() => pickGrade(g.id)}
+              className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition ${active ? "ring-4 ring-amber-400 scale-[1.02]" : "hover:-translate-y-0.5"}`}
             >
-              <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
-              <div className="relative grid size-12 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
-                <Icon className="size-6" />
+              <div className="text-3xl">{g.emoji}</div>
+              <div className="absolute inset-x-3 bottom-3">
+                <div className="text-sm font-extrabold text-white drop-shadow">{g.name_cn}</div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-white/90">{g.name_en}</div>
               </div>
-              <div className="relative flex-1 min-w-0">
-                <div className="text-base font-extrabold leading-tight">{s.title}</div>
-                <div className="mt-0.5 text-xs opacity-90">{s.desc}</div>
-              </div>
-              {!s.available && <Lock className="relative size-4 opacity-80" />}
-            </div>
-          );
-          return s.available ? (
-            <Link key={s.title} to={s.to}>{Card}</Link>
-          ) : (
-            <div key={s.title} className="cursor-not-allowed">{Card}</div>
+            </button>
           );
         })}
       </section>
 
-      <div className="mt-8 rounded-2xl border border-border/60 bg-card p-4">
-        <div className="flex items-center gap-2 text-sm font-bold">
-          <Trophy className="size-4 text-amber-500" /> 学习方式
-        </div>
-        <ul className="mt-2 list-inside list-disc space-y-1 text-xs text-muted-foreground">
-          <li>👀 看：字母大小写 + 笔顺动画提示</li>
-          <li>👂 听：纯正英美发音，反复跟读</li>
-          <li>👄 说：口型提示帮助小朋友模仿发音</li>
-          <li>🎵 唱：朗朗上口的儿歌口诀</li>
-          <li>🎮 玩：emoji 例词卡 + 智能复习</li>
-        </ul>
+      {/* One-click start */}
+      <button
+        onClick={startToday}
+        className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 px-5 py-4 text-base font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
+      >
+        <Play className="size-5 fill-white" /> 开始今日训练 · {grades.find(g => g.id === selectedGrade)?.name_cn}
+      </button>
+
+      {/* Quick tools */}
+      <div className="mt-5 grid grid-cols-3 gap-3">
+        <Link to="/primary/chat" className="rounded-2xl bg-gradient-to-br from-pink-400 to-violet-400 p-3 text-white shadow-tile">
+          <MessageCircle className="size-5" />
+          <div className="mt-2 text-sm font-extrabold leading-tight">Spark 对话</div>
+          <div className="text-[10px] opacity-90">陪你聊英语</div>
+        </Link>
+        <Link to="/primary/letters" className="rounded-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-3 text-white shadow-tile">
+          <BookA className="size-5" />
+          <div className="mt-2 text-sm font-extrabold leading-tight">26 字母</div>
+          <div className="text-[10px] opacity-90">自然拼读</div>
+        </Link>
+        <Link to="/primary/vocab" className="rounded-2xl bg-gradient-to-br from-sky-400 to-cyan-400 p-3 text-white shadow-tile">
+          <Sparkles className="size-5" />
+          <div className="mt-2 text-sm font-extrabold leading-tight">词汇专区</div>
+          <div className="text-[10px] opacity-90">200+ 核心词</div>
+        </Link>
       </div>
     </main>
   );

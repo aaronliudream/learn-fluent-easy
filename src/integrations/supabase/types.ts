@@ -2618,6 +2618,51 @@ export type Database = {
         }
         Relationships: []
       }
+      mastery_progress: {
+        Row: {
+          attempts: number
+          best_pct: number
+          created_at: string
+          id: string
+          item_id: string
+          last_attempt_at: string
+          last_perfect_at: string | null
+          module: string
+          next_review_at: string | null
+          stars: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          attempts?: number
+          best_pct?: number
+          created_at?: string
+          id?: string
+          item_id: string
+          last_attempt_at?: string
+          last_perfect_at?: string | null
+          module: string
+          next_review_at?: string | null
+          stars?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          attempts?: number
+          best_pct?: number
+          created_at?: string
+          id?: string
+          item_id?: string
+          last_attempt_at?: string
+          last_perfect_at?: string | null
+          module?: string
+          next_review_at?: string | null
+          stars?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       pet_destinations: {
         Row: {
           cost_coins: number

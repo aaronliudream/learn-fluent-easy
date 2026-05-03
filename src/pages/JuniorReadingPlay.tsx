@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import NoCopyGuard from "@/components/NoCopyGuard";
+import StarRating from "@/components/StarRating";
+import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
 import ReadingWatermark from "@/components/ReadingWatermark";
 import SegmentedReader from "@/components/SegmentedReader";
 import { toast } from "sonner";
@@ -20,7 +22,7 @@ export default function JuniorReadingPlay() {
   const nav = useNavigate();
   const [r, setR] = useState<R | null>(null);
   const [list, setList] = useState<ListItem[]>([]);
-  const [completedSet, setCompletedSet] = useState<Set<string>>(new Set());
+  const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
   const [picks, setPicks] = useState<Record<number, string>>({});
   const [streak, setStreak] = useState(0);
   const [email, setEmail] = useState<string>("user");
@@ -43,10 +45,7 @@ export default function JuniorReadingPlay() {
       if (u?.user) {
         setUserId(u.user.id);
         setEmail(u.user.email ?? u.user.id.slice(0, 8));
-        const { data: comps } = await supabase
-          .from("junior_reading_completions")
-          .select("reading_id").eq("user_id", u.user.id).eq("perfect", true);
-        setCompletedSet(new Set((comps ?? []).map((c: any) => c.reading_id)));
+        setMastery(await loadMastery("junior_reading"));
       }
       const grade = (data as any)?.grade;
       if (grade) {
@@ -100,17 +99,23 @@ export default function JuniorReadingPlay() {
     if (!r) return;
     if (!allAnswered) { toast.error("请先回答所有题目"); return; }
     setSubmitted(true);
-    if (allCorrect && timeOk) {
-      // 写入解锁
+    const pct = Math.round((correctCount / r.questions.length) * 100);
+    if (timeOk) {
+      // 写入完成 + 掌握度
       if (userId) {
         await supabase.from("junior_reading_completions")
-          .upsert({ user_id: userId, reading_id: r.id, perfect: true, time_spent_sec: elapsed }, { onConflict: "user_id,reading_id" });
-        setCompletedSet(prev => new Set(prev).add(r.id));
+          .upsert({ user_id: userId, reading_id: r.id, perfect: pct === 100, time_spent_sec: elapsed }, { onConflict: "user_id,reading_id" });
+        const updated = await recordMastery({ module: "junior_reading", itemId: r.id, pct });
+        if (updated) setMastery(m => ({ ...m, [r.id]: updated }));
       }
-      await awardForBlock("junior_reading");
-      toast.success("🎉 全对解锁！可以进入下一篇");
-    } else if (!allCorrect) {
-      toast.error(`还差 ${r.questions.length - correctCount} 题，请重做`);
+      if (pct === 100) {
+        await awardForBlock("junior_reading");
+        toast.success("🌟 完美掌握！星级+1");
+      } else if (pct >= PASS_PCT) {
+        toast.success(`✅ 通过 ${pct}%！可以进入下一篇（100% 才算完美掌握）`);
+      } else {
+        toast.error(`只有 ${pct}%，需 ≥${PASS_PCT}% 才能解锁下一篇`);
+      }
     } else {
       toast.warning(`还需阅读 ${minSec - elapsed} 秒`);
     }
@@ -124,23 +129,27 @@ export default function JuniorReadingPlay() {
     startRef.current = Date.now();
   };
 
-  // 检查当前篇是否被允许进入
+  // 检查当前篇是否被允许进入：上一篇 best_pct ≥ PASS_PCT
   useEffect(() => {
     if (!r || !list.length || !userId) return;
     const idx = list.findIndex(x => x.id === r.id);
-    if (idx <= 0) return; // 第一篇始终允许
+    if (idx <= 0) return;
     const prev = list[idx - 1];
-    if (!completedSet.has(prev.id)) {
-      toast.error("请先完成上一篇并全对，才能阅读本篇");
+    const prevRow = mastery[prev.id];
+    if (!prevRow || prevRow.best_pct < PASS_PCT) {
+      toast.error("请先完成上一篇并通过 80% 才能阅读本篇");
       nav(`/junior/reading/${prev.id}`, { replace: true });
     }
-  }, [r, list, userId, completedSet, nav]);
+  }, [r, list, userId, mastery, nav]);
 
   if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground">加载中…</main>;
 
+  const currentRow = mastery[r.id];
+  const passed = (currentRow?.best_pct ?? 0) >= PASS_PCT;
+  const perfect = currentRow?.stars && currentRow.stars >= 1;
   const goNext = () => {
     if (!nextItem) return;
-    if (!completedSet.has(r.id)) { toast.error("请先全对解锁本篇"); return; }
+    if (!passed) { toast.error("本篇得分需 ≥80% 才能进入下一篇"); return; }
     nav(`/junior/reading/${nextItem.id}`);
   };
 
@@ -197,7 +206,7 @@ export default function JuniorReadingPlay() {
     </div>
   );
 
-  const unlocked = completedSet.has(r.id);
+  const unlocked = passed;
 
   return (
     <main className="mx-auto min-h-screen max-w-7xl px-5 py-6">
@@ -213,6 +222,7 @@ export default function JuniorReadingPlay() {
           <span className="inline-flex items-center gap-1 rounded-full border px-2 py-1 font-bold text-muted-foreground">
             <ShieldCheck className="size-3" /> 反盗版保护已开启
           </span>
+          {currentRow && <StarRating stars={currentRow.stars} size={14} />}
           {attempt > 1 && <span className="rounded-full bg-orange-500/10 text-orange-600 px-2 py-1 font-bold">第 {attempt} 次尝试</span>}
         </div>
       </div>
@@ -239,21 +249,25 @@ export default function JuniorReadingPlay() {
                 <div className="text-sm font-bold">
                   得分：{correctCount}/{r.questions.length} · 用时 {elapsed}s
                 </div>
-                {allCorrect && timeOk ? (
-                  <div className="rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 p-3 text-sm font-bold">
-                    ✅ 已解锁！可以进入下一篇
-                  </div>
-                ) : !allCorrect ? (
-                  <div className="rounded-lg bg-rose-500/10 text-rose-600 p-3 text-sm">
-                    ❌ 必须 {r.questions.length}/{r.questions.length} 全对才能解锁，请认真重读后重做
-                  </div>
-                ) : (
+                {!timeOk ? (
                   <div className="rounded-lg bg-amber-500/10 text-amber-700 p-3 text-sm">
                     ⏳ 阅读时长不足，请再认真读 {minSec - elapsed} 秒后再提交
                   </div>
+                ) : allCorrect ? (
+                  <div className="rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 p-3 text-sm font-bold">
+                    🌟 完美掌握！星级 +1 · 已解锁下一篇
+                  </div>
+                ) : passed ? (
+                  <div className="rounded-lg bg-sky-500/10 text-sky-700 p-3 text-sm">
+                    ✅ 通过 ({correctCount}/{r.questions.length})！已解锁下一篇 · 重做到 100% 可获得⭐
+                  </div>
+                ) : (
+                  <div className="rounded-lg bg-rose-500/10 text-rose-600 p-3 text-sm">
+                    ❌ 仅 {correctCount}/{r.questions.length}，需 ≥{Math.ceil(r.questions.length * PASS_PCT / 100)} 题正确才能解锁
+                  </div>
                 )}
                 <div className="flex gap-2">
-                  {!allCorrect && (
+                  {(!allCorrect) && (
                     <button onClick={retry} className="flex-1 inline-flex items-center justify-center gap-1 rounded-xl border-2 px-4 py-2.5 text-sm font-extrabold hover:bg-muted">
                       <RotateCcw className="size-4" /> 重做本篇
                     </button>

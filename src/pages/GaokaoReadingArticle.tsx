@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import NoCopyGuard from "@/components/NoCopyGuard";
 import ReadingWatermark from "@/components/ReadingWatermark";
+import { recordMastery } from "@/lib/masteryProgress";
 
 type Article = {
   id: string;
@@ -361,6 +362,9 @@ export default function GaokaoReadingArticle() {
         if (diagnostics.length) {
           await supabase.from("gaokao_reading_diagnostics").insert(diagnostics);
         }
+        // 写入统一掌握度（5星 + 遗忘曲线）
+        const pct = totalQ > 0 ? (correctCount / totalQ) * 100 : 0;
+        await recordMastery({ module: "gaokao_reading", itemId: article.id, pct });
       }
     } catch (err) {
       console.error("save session error", err);

@@ -821,6 +821,9 @@ function RecapView({
 
   if (!recap) return null;
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const quizItemRefs = useRef<(HTMLLIElement | null)[]>([]);
+
   // Save wrong quiz answers to the global mistake book (logged-in users only).
   // Runs whenever the user picks a new wrong answer. De-duped server-side
   // by the (user_id, module, source_key) unique index.

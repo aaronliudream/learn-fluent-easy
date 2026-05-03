@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Loader2, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { awardCoins } from "@/lib/coins";
-import { toast } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 type P = { id: string; topic: string; prompt_cn: string; prompt_en: string; requirements: string[]; min_words: number; max_words: number; sample_answer: string | null; scoring_rubric: string | null };
 type Result = { score: number; overall: string; mistakes: { original: string; corrected: string; explanation: string }[]; suggestions: string[]; improved: string };

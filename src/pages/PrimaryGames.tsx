@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Trophy, RotateCw, Sparkles, Target, Headphones, Brain, PenLine, Coins } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 import { awardCoins } from "@/lib/coins";
 
@@ -233,6 +233,13 @@ function QuizGame({ words, grade }: { words: Word[]; grade: number }) {
   const [score, setScore] = useState({ c: 0, t: 0 });
   const queue = useMemo(() => shuffle(words).slice(0, Math.min(15, words.length)), [words]);
   const cur = queue[idx];
+  // 预取整局所有单词的发音，避免选择后才发起网络请求导致延迟
+  useEffect(() => { prefetchTTSBatch(queue.map(w => w.word)); }, [queue]);
+  // 同时提前预热下一题，进一步保证瞬时播放
+  useEffect(() => {
+    const next = queue[idx + 1];
+    if (next) prefetchTTSBatch([next.word]);
+  }, [idx, queue]);
   const options = useMemo(() => {
     if (!cur) return [];
     const distract = shuffle(words.filter(w => w.id !== cur.id)).slice(0,3).map(w => w.meaning_cn);
@@ -247,7 +254,8 @@ function QuizGame({ words, grade }: { words: Word[]; grade: number }) {
     setPicked(m);
     const ok = m === cur.meaning_cn;
     setScore(s => ({ c: s.c + (ok?1:0), t: s.t+1 }));
-    speak(cur.word);
+    // 立即在用户手势内同步发起播放（缓存命中即瞬时出声）
+    void speak(cur.word);
     recordWordResult(cur, "quiz", ok);
     setTimeout(() => { setPicked(null); setIdx(i => i+1); }, 850);
   };

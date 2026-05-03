@@ -2958,6 +2958,36 @@ export type Database = {
         }
         Relationships: []
       }
+      pet_chat_messages: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          pet_id: string | null
+          redacted: boolean
+          role: string
+          user_id: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          pet_id?: string | null
+          redacted?: boolean
+          role: string
+          user_id: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          pet_id?: string | null
+          redacted?: boolean
+          role?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       pet_companion_choice: {
         Row: {
           chosen_at: string

@@ -206,7 +206,7 @@ export default function JuniorReadingPlay() {
     </div>
   );
 
-  const unlocked = completedSet.has(r.id);
+  const unlocked = passed;
 
   return (
     <main className="mx-auto min-h-screen max-w-7xl px-5 py-6">
@@ -222,6 +222,7 @@ export default function JuniorReadingPlay() {
           <span className="inline-flex items-center gap-1 rounded-full border px-2 py-1 font-bold text-muted-foreground">
             <ShieldCheck className="size-3" /> 反盗版保护已开启
           </span>
+          {currentRow && <StarRating stars={currentRow.stars} size={14} />}
           {attempt > 1 && <span className="rounded-full bg-orange-500/10 text-orange-600 px-2 py-1 font-bold">第 {attempt} 次尝试</span>}
         </div>
       </div>
@@ -248,21 +249,25 @@ export default function JuniorReadingPlay() {
                 <div className="text-sm font-bold">
                   得分：{correctCount}/{r.questions.length} · 用时 {elapsed}s
                 </div>
-                {allCorrect && timeOk ? (
-                  <div className="rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 p-3 text-sm font-bold">
-                    ✅ 已解锁！可以进入下一篇
-                  </div>
-                ) : !allCorrect ? (
-                  <div className="rounded-lg bg-rose-500/10 text-rose-600 p-3 text-sm">
-                    ❌ 必须 {r.questions.length}/{r.questions.length} 全对才能解锁，请认真重读后重做
-                  </div>
-                ) : (
+                {!timeOk ? (
                   <div className="rounded-lg bg-amber-500/10 text-amber-700 p-3 text-sm">
                     ⏳ 阅读时长不足，请再认真读 {minSec - elapsed} 秒后再提交
                   </div>
+                ) : allCorrect ? (
+                  <div className="rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 p-3 text-sm font-bold">
+                    🌟 完美掌握！星级 +1 · 已解锁下一篇
+                  </div>
+                ) : passed ? (
+                  <div className="rounded-lg bg-sky-500/10 text-sky-700 p-3 text-sm">
+                    ✅ 通过 ({correctCount}/{r.questions.length})！已解锁下一篇 · 重做到 100% 可获得⭐
+                  </div>
+                ) : (
+                  <div className="rounded-lg bg-rose-500/10 text-rose-600 p-3 text-sm">
+                    ❌ 仅 {correctCount}/{r.questions.length}，需 ≥{Math.ceil(r.questions.length * PASS_PCT / 100)} 题正确才能解锁
+                  </div>
                 )}
                 <div className="flex gap-2">
-                  {!allCorrect && (
+                  {(!allCorrect) && (
                     <button onClick={retry} className="flex-1 inline-flex items-center justify-center gap-1 rounded-xl border-2 px-4 py-2.5 text-sm font-extrabold hover:bg-muted">
                       <RotateCcw className="size-4" /> 重做本篇
                     </button>

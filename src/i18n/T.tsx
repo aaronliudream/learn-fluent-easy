@@ -130,3 +130,10 @@ export function useTBi() {
     return `${en} ${opts?.sep ?? "/"} ${user}`;
   };
 }
+
+/**
+ * Shorthand alias for <TBi>. Use <X>中文</X> in page sweeps to wrap
+ * any source-language UI text. Identical behavior to <TBi>.
+ * Example: <h1><X>中考语法专项</X></h1>
+ */
+export const X = TBi;

@@ -45,6 +45,7 @@ export default function PrimaryReadingPlay() {
   const [step, setStep] = useState(0);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
+  const thinkStartRef = useRef<number>(Date.now());
 
   useEffect(() => {
     if (!id) return;

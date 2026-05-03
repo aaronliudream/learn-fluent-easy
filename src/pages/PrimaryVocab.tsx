@@ -170,11 +170,6 @@ function BrowseGrid({ words }: { words: Vocab[] }) {
                   </span>
                 )}
               </div>
-              {w.phonetic && (
-                <div className="mt-0.5 font-mono text-xs text-muted-foreground">
-                  {w.phonetic}
-                </div>
-              )}
             </div>
             <button
               onClick={() => speak(w.word)}
@@ -312,11 +307,6 @@ function QuizMode({ words }: { words: Vocab[] }) {
             <Volume2 className="size-5" />
           </button>
         </div>
-        {cur.phonetic && (
-          <div className="mt-1 font-mono text-sm text-muted-foreground">
-            {cur.phonetic}
-          </div>
-        )}
       </div>
       <div className="grid gap-2 sm:grid-cols-2">
         {options.map((m) => {

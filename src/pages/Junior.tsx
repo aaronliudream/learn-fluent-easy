@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Trophy, Heart, Users, Sparkles } from "lucide-react";
+import { ArrowLeft, Trophy, Heart, Sparkles } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
 
 const GRADES = [
@@ -42,18 +42,6 @@ export default function Junior() {
           按年级进入：核心词汇游戏 · 中考语法 · 阅读 · 听力 · 写作
         </p>
       </div>
-
-      <Link
-        to="/parent"
-        className="mb-5 flex items-center gap-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 p-4 text-white shadow-tile transition hover:-translate-y-0.5"
-      >
-        <Users className="size-5" />
-        <div className="flex-1">
-          <div className="text-sm font-extrabold">家长进度报告</div>
-          <div className="text-[11px] opacity-90">三学段全局进度看板 · 实时数据</div>
-        </div>
-        <span className="text-xl">→</span>
-      </Link>
 
       <section className="grid gap-3">
         {GRADES.map((g) => (

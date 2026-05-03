@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookA, Sparkles, Headphones, Target, Lock, Trophy, Mic } from "lucide-react";
+import { ArrowLeft, BookA, Sparkles, Headphones, Target, Lock, Trophy, MessageCircle } from "lucide-react";
 
 const SECTIONS = [
   {
-    to: "/primary/speak",
-    icon: Mic,
-    title: "AI 口语 · Spark 陪你说",
-    desc: "跟读评分 + 容错纠音 + 情境替换句 · 像和宠物聊天一样有趣",
+    to: "/primary/chat",
+    icon: MessageCircle,
+    title: "AI 对话 · Spark 陪你聊",
+    desc: "和小宠物 Spark 用英语聊天 · 安全友好 · 错了也会被温柔鼓励 ✨",
     gradient: "from-pink-400 via-fuchsia-400 to-violet-400",
     available: true,
   },

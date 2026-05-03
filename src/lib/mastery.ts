@@ -1,118 +1,122 @@
-import { LEVELS } from "@/data/course";
+import { supabase } from "@/integrations/supabase/client";
 
-const KEY = "mastered_lessons_v1";
-const LAST_KEY = "last_mastered_v1";
-const NUDGE_KEY = "next-lesson-nudge-shown";
-const VISITED_KEY = "last_visited_lesson_v1";
-const RESUME_NUDGE_KEY = "resume-nudge-shown";
+export type MasteryRow = {
+  id: string;
+  user_id: string;
+  module: string;
+  item_id: string;
+  stars: number;
+  best_pct: number;
+  attempts: number;
+  last_perfect_at: string | null;
+  next_review_at: string | null;
+  last_attempt_at: string;
+};
 
-export type LessonRef = { levelId: number; unitId: number; lessonId: number; title: string };
+/** 双档解锁阈值 */
+export const PASS_PCT = 80;       // ≥80% 解锁下一篇
+export const PERFECT_PCT = 100;   // 100% 算"完美/掌握度+1星"
 
-function load(): string[] {
-  try {
-    const raw = localStorage.getItem(KEY);
-    return raw ? (JSON.parse(raw) as string[]) : [];
-  } catch {
-    return [];
-  }
+/** 艾宾浩斯简化间隔（天）：0★→1天，1★→3，2★→7，3★→14，4★→30，5★→90 */
+const REVIEW_DAYS = [1, 3, 7, 14, 30, 90];
+
+function nextReviewAt(stars: number): string {
+  const days = REVIEW_DAYS[Math.min(stars, REVIEW_DAYS.length - 1)];
+  return new Date(Date.now() + days * 86400_000).toISOString();
 }
 
-function save(list: string[]) {
-  try { localStorage.setItem(KEY, JSON.stringify(list)); } catch { /* noop */ }
+/** 判断需要复习（next_review_at 已过期且 stars < 5） */
+export function needsReview(row: MasteryRow | undefined): boolean {
+  if (!row || !row.next_review_at) return false;
+  if (row.stars >= 5) return false;
+  return new Date(row.next_review_at).getTime() <= Date.now();
 }
 
-export function lessonKey(levelId: number, unitId: number, lessonId: number) {
-  return `${levelId}-${unitId}-${lessonId}`;
+/** 提交一次结果 → 更新掌握度（自动星升降+下次复习时间）*/
+export async function recordMastery(opts: {
+  module: string;
+  itemId: string;
+  pct: number;       // 本次得分 0..100
+}): Promise<MasteryRow | null> {
+  const { data: u } = await supabase.auth.getUser();
+  if (!u?.user) return null;
+  const userId = u.user.id;
+
+  const { data: existing } = await supabase
+    .from("mastery_progress")
+    .select("*")
+    .eq("user_id", userId).eq("module", opts.module).eq("item_id", opts.itemId)
+    .maybeSingle();
+
+  const prev = existing as MasteryRow | null;
+  const isPerfect = opts.pct >= PERFECT_PCT;
+  const isPass = opts.pct >= PASS_PCT;
+
+  let stars = prev?.stars ?? 0;
+  if (isPerfect) stars = Math.min(5, stars + 1);
+  else if (!isPass) stars = Math.max(0, stars - 1); // 没通过 → 降1星
+
+  const payload = {
+    user_id: userId,
+    module: opts.module,
+    item_id: opts.itemId,
+    stars,
+    best_pct: Math.max(prev?.best_pct ?? 0, Math.round(opts.pct)),
+    attempts: (prev?.attempts ?? 0) + 1,
+    last_perfect_at: isPerfect ? new Date().toISOString() : prev?.last_perfect_at ?? null,
+    next_review_at: isPerfect ? nextReviewAt(stars) : prev?.next_review_at ?? null,
+    last_attempt_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+  };
+
+  const { data } = await supabase
+    .from("mastery_progress")
+    .upsert(payload, { onConflict: "user_id,module,item_id" })
+    .select()
+    .maybeSingle();
+  return data as any;
 }
 
-export function isMastered(levelId: number, unitId: number, lessonId: number) {
-  return load().includes(lessonKey(levelId, unitId, lessonId));
+/** 拉取某模块全部掌握度 → Map<itemId, row> */
+export async function loadMastery(module: string): Promise<Record<string, MasteryRow>> {
+  const { data: u } = await supabase.auth.getUser();
+  if (!u?.user) return {};
+  const { data } = await supabase
+    .from("mastery_progress")
+    .select("*")
+    .eq("user_id", u.user.id).eq("module", module);
+  const map: Record<string, MasteryRow> = {};
+  for (const r of (data ?? []) as MasteryRow[]) map[r.item_id] = r;
+  return map;
 }
 
-export function setMastered(levelId: number, unitId: number, lessonId: number, mastered: boolean) {
-  const k = lessonKey(levelId, unitId, lessonId);
-  const list = load().filter((x) => x !== k);
-  if (mastered) {
-    list.push(k);
-    try {
-      localStorage.setItem(LAST_KEY, JSON.stringify({ levelId, unitId, lessonId, at: Date.now() }));
-      // allow the next-lesson nudge to fire again on the next app open
-      sessionStorage.removeItem(NUDGE_KEY);
-    } catch { /* noop */ }
-  }
-  save(list);
+/** 拉取所有到期复习项 */
+export async function loadDueReviews(modules?: string[]): Promise<MasteryRow[]> {
+  const { data: u } = await supabase.auth.getUser();
+  if (!u?.user) return [];
+  let q = supabase.from("mastery_progress").select("*")
+    .eq("user_id", u.user.id)
+    .lte("next_review_at", new Date().toISOString())
+    .lt("stars", 5)
+    .order("next_review_at", { ascending: true });
+  if (modules?.length) q = q.in("module", modules);
+  const { data } = await q;
+  return (data ?? []) as MasteryRow[];
 }
 
-/** Flat ordered list of all lessons across levels/units. */
-function flatLessons(): LessonRef[] {
-  const out: LessonRef[] = [];
-  for (const lv of LEVELS) {
-    for (const u of lv.units) {
-      for (const ls of u.lessons) {
-        out.push({ levelId: lv.id, unitId: u.id, lessonId: ls.id, title: ls.title });
-      }
-    }
-  }
-  return out;
+export type Status = "new" | "tried" | "passed" | "mastered" | "review_due";
+export function statusOf(row?: MasteryRow): Status {
+  if (!row) return "new";
+  if (needsReview(row)) return "review_due";
+  if (row.stars >= 5) return "mastered";
+  if (row.best_pct >= PASS_PCT) return "passed";
+  return "tried";
 }
 
-/** Find next lesson after the given one, skipping any already mastered. */
-export function findNextLesson(levelId: number, unitId: number, lessonId: number): LessonRef | null {
-  const all = flatLessons();
-  const idx = all.findIndex(
-    (l) => l.levelId === levelId && l.unitId === unitId && l.lessonId === lessonId,
-  );
-  if (idx < 0) return null;
-  const mastered = new Set(load());
-  for (let i = idx + 1; i < all.length; i++) {
-    const k = lessonKey(all[i].levelId, all[i].unitId, all[i].lessonId);
-    if (!mastered.has(k)) return all[i];
-  }
-  return null;
-}
-
-/** Get the most recently mastered lesson (for app-open suggestion). */
-export function getLastMastered(): LessonRef | null {
-  try {
-    const raw = localStorage.getItem(LAST_KEY);
-    if (!raw) return null;
-    const { levelId, unitId, lessonId } = JSON.parse(raw);
-    const all = flatLessons();
-    return all.find((l) => l.levelId === levelId && l.unitId === unitId && l.lessonId === lessonId) ?? null;
-  } catch {
-    return null;
-  }
-}
-
-/** Record the lesson the user is currently / was last viewing (in-progress). */
-export function setLastVisited(levelId: number, unitId: number, lessonId: number) {
-  try {
-    localStorage.setItem(
-      VISITED_KEY,
-      JSON.stringify({ levelId, unitId, lessonId, at: Date.now() }),
-    );
-    // allow the resume nudge to fire again on the next app open
-    sessionStorage.removeItem(RESUME_NUDGE_KEY);
-  } catch { /* noop */ }
-}
-
-/** Most recently visited lesson — used to offer "continue where you left off". */
-export function getLastVisited(): LessonRef | null {
-  try {
-    const raw = localStorage.getItem(VISITED_KEY);
-    if (!raw) return null;
-    const { levelId, unitId, lessonId } = JSON.parse(raw);
-    const all = flatLessons();
-    return all.find((l) => l.levelId === levelId && l.unitId === unitId && l.lessonId === lessonId) ?? null;
-  } catch {
-    return null;
-  }
-}
-
-/** Is the given lesson considered unfinished (visited but not mastered)? */
-export function isUnfinished(ref: LessonRef): boolean {
-  return !isMastered(ref.levelId, ref.unitId, ref.lessonId);
-}
-
-export const NEXT_NUDGE_KEY = NUDGE_KEY;
-export const RESUME_DIALOG_KEY = RESUME_NUDGE_KEY;
+export const STATUS_LABEL: Record<Status, string> = {
+  new: "未读",
+  tried: "需重做",
+  passed: "已通过",
+  mastered: "完美掌握",
+  review_due: "待复习",
+};

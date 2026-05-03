@@ -5,6 +5,7 @@ import { ArrowLeft, Coins, Loader2, Heart, Sparkles, ShoppingBag, MapPin, BookHe
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
+import CompanionOnboarding from "@/components/pet/CompanionOnboarding";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };
@@ -33,6 +34,7 @@ export default function Pets() {
   const [owned, setOwned] = useState<OwnedSkin[]>([]);
   const [stickers, setStickers] = useState<Sticker[]>([]);
   const [toast, setToast] = useState<string>("");
+  const [needsOnboarding, setNeedsOnboarding] = useState(false);
 
   const reload = async () => {
     const { data: u } = await supabase.auth.getUser();
@@ -62,6 +64,12 @@ export default function Pets() {
     setOwned((os.data ?? []) as OwnedSkin[]);
     setStickers((st.data ?? []) as Sticker[]);
     setLoading(false);
+    // 首次进入：未做选择 + 未持有任何宠物 → 弹出守护灵入职
+    try {
+      const { data: choice } = await (supabase as any)
+        .from("pet_companion_choice").select("user_id").eq("user_id", uid).maybeSingle();
+      if (!choice && (p.data ?? []).length === 0) setNeedsOnboarding(true);
+    } catch {}
   };
   useEffect(() => { reload(); }, []);
 
@@ -130,6 +138,9 @@ export default function Pets() {
         <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-full bg-foreground/90 px-5 py-2.5 text-sm font-bold text-background shadow-2xl animate-fade-in">
           {toast}
         </div>
+      )}
+      {needsOnboarding && (
+        <CompanionOnboarding onDone={() => { setNeedsOnboarding(false); reload(); }} />
       )}
     </main>
   );

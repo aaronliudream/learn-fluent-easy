@@ -9,10 +9,35 @@ const LOVABLE_KEY = Deno.env.get("LOVABLE_API_KEY");
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
+/** 关键词后置过滤 — 命中时 redact 并写 ai_safety_log */
+async function filterUnsafeOutput(sb: any, uid: string, text: string): Promise<{ safe: string; matched: string[] }> {
+  if (!text) return { safe: text, matched: [] };
+  const { data: kws } = await sb.from("ai_blocked_keywords").select("keyword,severity");
+  const matched: string[] = [];
+  let safe = text;
+  for (const row of (kws || [])) {
+    const kw = String(row.keyword || "");
+    if (!kw) continue;
+    const re = new RegExp(kw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+    if (re.test(safe)) {
+      matched.push(kw);
+      safe = safe.replace(re, "***");
+    }
+  }
+  if (matched.length > 0) {
+    await sb.from("ai_safety_log").insert({
+      user_id: uid, feature: "pet_diary", matched_keywords: matched, action_taken: "redacted",
+    });
+  }
+  return { safe, matched };
+}
+
 /**
  * Generates (or returns cached) today's pet diary for the authenticated user.
- * Uses today's learning telemetry (coins, attempts) to compose a warm Chinese diary
- * written from the pet's perspective.
+ * Includes 3 safety guardrails:
+ *  1) AI quota check (check_and_consume_ai_quota) — daily token/call cap
+ *  2) Pet personality injection — culturally neutral, A1-B1 English level
+ *  3) Keyword post-filter — redacts unsafe output and logs to ai_safety_log
  */
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
@@ -31,6 +56,18 @@ Deno.serve(async (req) => {
       return new Response(JSON.stringify({ diary: existing, cached: true }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
 
+    // === Risk 1 guardrail: AI quota check ===
+    const sbUser = createClient(SUPABASE_URL, SERVICE_KEY, { global: { headers: { Authorization: `Bearer ${token}` } } });
+    const { data: quota } = await sbUser.rpc("check_and_consume_ai_quota", { _feature: "pet_diary", _estimated_tokens: 1500 });
+    const quotaRow = Array.isArray(quota) ? quota[0] : quota;
+    if (quotaRow && quotaRow.allowed === false) {
+      return new Response(JSON.stringify({
+        error: "daily quota exceeded",
+        message: "今日宠物日记次数已用完，明天再来吧 🌙",
+        remaining_calls: quotaRow.remaining_calls,
+      }), { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+    }
+
     // Telemetry
     const { data: coins } = await sb.from("daily_coin_log").select("earned").eq("user_id", uid).eq("log_date", today).maybeSingle();
     const todayStart = new Date(); todayStart.setHours(0,0,0,0);
@@ -40,10 +77,26 @@ Deno.serve(async (req) => {
     const nickname = pet?.nickname || "小伙伴";
     const stage = pet?.stage ?? 1;
     const level = pet?.level ?? 1;
+    const speciesId = pet?.species_id;
+
+    // Risk 2 guardrail: minor data minimization — fetch persona but never include user PII in prompt
+    let persona = "";
+    if (speciesId) {
+      const { data: traits } = await sb.from("pet_personality_traits")
+        .select("ai_persona_prompt").eq("species_id", speciesId).maybeSingle();
+      persona = traits?.ai_persona_prompt || "";
+    }
 
     if (!LOVABLE_KEY) return new Response(JSON.stringify({ error: "LOVABLE_API_KEY missing" }), { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
 
-    const sys = "你是一只可爱、积极、温暖的电子学习宠物。用第一人称写一段中文日记，鼓励主人继续学习英语。语言活泼简短，5-7 句。最后输出 3 个 highlights。";
+    const safetyRules = `
+SAFETY RULES (must follow strictly):
+- Never mention politics, religion, war, violence, sex, self-harm, drugs, alcohol.
+- Never mention real people, leaders, countries, or controversial topics.
+- Never reveal or store user's real name, address, school, phone, or location.
+- Use simple, encouraging language suitable for children.
+- If user shows signs of distress, kindly suggest talking to a trusted adult.`;
+    const sys = `${persona || "你是一只可爱、积极、温暖的电子学习宠物。"}\n${safetyRules}\n\n用第一人称写一段中文日记，鼓励主人继续学习英语。语言活泼简短，5-7 句。最后输出 3 个 highlights（每条 6-10 字短语）。`;
     const user = `今天主人的学习数据：
 - 答题总数: ${gkAttempts ?? 0}
 - 答对: ${gkCorrect ?? 0}
@@ -64,12 +117,30 @@ Deno.serve(async (req) => {
       }),
     });
     if (!r.ok) {
+      if (r.status === 429) {
+        return new Response(JSON.stringify({ error: "AI gateway rate limited" }), { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      }
+      if (r.status === 402) {
+        return new Response(JSON.stringify({ error: "AI credits exhausted" }), { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      }
       const t = await r.text();
       return new Response(JSON.stringify({ error: t }), { status: r.status, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
     const j = await r.json();
     const args = j?.choices?.[0]?.message?.tool_calls?.[0]?.function?.arguments;
-    const parsed = args ? JSON.parse(args) : { body_cn: "", highlights: [] };
+    let parsed: { body_cn: string; highlights: string[] } = args ? JSON.parse(args) : { body_cn: "", highlights: [] };
+
+    // === Risk 3 guardrail: post-filter unsafe content ===
+    const filteredBody = await filterUnsafeOutput(sb, uid, parsed.body_cn);
+    parsed.body_cn = filteredBody.safe;
+    if (Array.isArray(parsed.highlights)) {
+      const filteredHl: string[] = [];
+      for (const h of parsed.highlights) {
+        const f = await filterUnsafeOutput(sb, uid, h);
+        filteredHl.push(f.safe);
+      }
+      parsed.highlights = filteredHl;
+    }
 
     const { data: inserted } = await sb.from("pet_diaries").insert({
       user_id: uid, diary_date: today, body_cn: parsed.body_cn,

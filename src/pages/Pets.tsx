@@ -379,17 +379,18 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
   const confirmBuy = async (foodId: string, wishId: string) => {
     setBusy(foodId);
     const { error } = await supabase.rpc("buy_pet_food", { _food_id: foodId, _qty: 1 });
+    let patienceMsg = "";
     if (!error) {
       // 走 RPC 关单，顺带累计耐心分（搁置 ≥7 天 +1）
       const { data: cw } = await supabase.rpc("confirm_wishlist_purchase", { _wishlist_id: wishId });
       const row: any = Array.isArray(cw) ? cw[0] : cw;
       if (row?.days_held >= 7) {
-        flash(`💛 等待 ${row.days_held} 天 · 宠物耐心 +1（共 ${row.patience_after}）`);
+        patienceMsg = `💛 等待 ${row.days_held} 天 · 宠物耐心 +1（共 ${row.patience_after}）`;
       }
     }
     setBusy(null);
     if (error) { flash(error.message.includes("not enough") ? "💰 星币不够，继续学习吧！" : "❌ "+error.message); return; }
-    flash((prev) => prev || "🛒 等待是值得的！购买成功");
+    flash(patienceMsg || "🛒 等待是值得的！购买成功");
     await reloadWishlist();
     await refreshCurrencies?.();
     onAfter();

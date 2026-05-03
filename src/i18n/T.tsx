@@ -42,8 +42,8 @@ export function useT() {
  */
 export const TBi = forwardRef<unknown, {
   children: string | undefined | null;
-  /** Layout: "stack" (default, two lines) | "inline" (slash-separated). */
-  layout?: "stack" | "inline";
+  /** Layout: "stack" (default, two lines) | "inline" (slash) | "compact" (副小灰一行). */
+  layout?: "stack" | "inline" | "compact";
   className?: string;
 }>(function TBi({ children, layout = "stack", className }, _ref) {
   const { tDynamic, tDynamicEn, lang } = useI18n();
@@ -59,10 +59,19 @@ export const TBi = forwardRef<unknown, {
   if (layout === "inline") {
     return <span className={className}>{enLine} / {userLine}</span>;
   }
+  if (layout === "compact") {
+    // For tight spaces (e.g. button labels): EN main + tiny user-lang suffix.
+    return (
+      <span className={className ?? "inline-flex items-baseline gap-1.5"}>
+        <span>{enLine}</span>
+        <span className="text-[0.72em] font-normal opacity-60 truncate max-w-[10em]">{userLine}</span>
+      </span>
+    );
+  }
   return (
-    <span className={className ? className : "inline-flex flex-col leading-tight"}>
-      <span>{enLine}</span>
-      <span className="text-[0.78em] font-normal opacity-70">{userLine}</span>
+    <span className={className ?? "inline-flex flex-col leading-[1.15] gap-0.5 text-left"}>
+      <span className="break-words">{enLine}</span>
+      <span className="text-[0.72em] font-normal opacity-65 break-words">{userLine}</span>
     </span>
   );
 });
@@ -75,7 +84,7 @@ export const TBi = forwardRef<unknown, {
 export function TKey({ k, vars, layout = "stack", className }: {
   k: StringKey;
   vars?: Record<string, string | number>;
-  layout?: "stack" | "inline";
+  layout?: "stack" | "inline" | "compact";
   className?: string;
 }) {
   const { t, tEn, lang } = useI18n();
@@ -87,10 +96,37 @@ export function TKey({ k, vars, layout = "stack", className }: {
   if (layout === "inline") {
     return <span className={className}>{enLine} / {userLine}</span>;
   }
+  if (layout === "compact") {
+    return (
+      <span className={className ?? "inline-flex items-baseline gap-1.5"}>
+        <span>{enLine}</span>
+        <span className="text-[0.72em] font-normal opacity-60 truncate max-w-[10em]">{userLine}</span>
+      </span>
+    );
+  }
   return (
-    <span className={className ? className : "inline-flex flex-col leading-tight"}>
-      <span>{enLine}</span>
-      <span className="text-[0.78em] font-normal opacity-70">{userLine}</span>
+    <span className={className ?? "inline-flex flex-col leading-[1.15] gap-0.5 text-left"}>
+      <span className="break-words">{enLine}</span>
+      <span className="text-[0.72em] font-normal opacity-65 break-words">{userLine}</span>
     </span>
   );
+}
+
+/**
+ * Hook for attribute-only contexts (placeholder, aria-label, title, document.title)
+ * that cannot accept JSX. Returns an EN/user-lang combined string when on a
+ * bilingual route, otherwise just the user-language string.
+ * Use the "inline" form (default) — placeholders shouldn't wrap.
+ */
+export function useTBi() {
+  const { tDynamic, tDynamicEn, lang } = useI18n();
+  const bilingual = useBilingualMode();
+  return (text: string, opts?: { sep?: string }) => {
+    if (!text) return text;
+    const user = tDynamic(text);
+    if (!bilingual || lang === "en") return user;
+    const en = tDynamicEn(text);
+    if (!en || en === user) return user;
+    return `${en} ${opts?.sep ?? "/"} ${user}`;
+  };
 }

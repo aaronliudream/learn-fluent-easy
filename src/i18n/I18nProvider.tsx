@@ -23,6 +23,42 @@ const STORAGE_PICKED = "fluentpath.langPicked";
 const STORAGE_CACHE_PREFIX = "fluentpath.i18n.v5.";
 const TRANSLATION_FETCH_TIMEOUT_MS = 2500;
 
+// =====================================================
+// Bilingual EN-translation observability
+// Lightweight in-memory metrics for the EN-side translation pipeline.
+// Logged to console every 30s and exposed via window.__i18nEnStats() so
+// you can call it from the dev console at any time.
+// =====================================================
+const enStats = {
+  hits: 0,            // dyn cache hit
+  misses: 0,          // queued for translation
+  requests: 0,        // edge-function calls
+  translated: 0,      // successful items returned
+  errors: 0,
+  totalMs: 0,         // accumulated request latency
+  lastFlushAt: 0,
+};
+function logEnStats(reason: string) {
+  const total = enStats.hits + enStats.misses;
+  const hitRate = total ? ((enStats.hits / total) * 100).toFixed(1) : "0.0";
+  const avgMs = enStats.requests ? Math.round(enStats.totalMs / enStats.requests) : 0;
+  console.info(
+    `[i18n.en] ${reason} hits=${enStats.hits} misses=${enStats.misses} ` +
+    `hitRate=${hitRate}% requests=${enStats.requests} translated=${enStats.translated} ` +
+    `errors=${enStats.errors} avgMs=${avgMs}`,
+  );
+}
+if (typeof window !== "undefined") {
+  // @ts-expect-error dev hook
+  window.__i18nEnStats = () => ({ ...enStats });
+  // Periodic snapshot every 30s if there was activity since last log.
+  setInterval(() => {
+    if (enStats.hits + enStats.misses === enStats.lastFlushAt) return;
+    logEnStats("snapshot");
+    enStats.lastFlushAt = enStats.hits + enStats.misses;
+  }, 30000);
+}
+
 type Catalog = Partial<Record<StringKey, string>>;
 
 const CJK_TEXT_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
@@ -303,19 +339,26 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (toSend.length === 0) return;
     const items = toSend.slice(0, 12).map((text, i) => ({ key: String(i), text }));
     const sent = toSend.slice(0, 12);
+    enStats.requests += 1;
+    const startedAt = performance.now();
     try {
       const { data, error } = await invokeTranslateWithTimeout("English", items);
-      if (error) return;
+      enStats.totalMs += performance.now() - startedAt;
+      if (error) { enStats.errors += 1; return; }
       const translations: Record<string, string> = data?.translations || {};
       const next = { ...dynEnCacheRef.current };
       sent.forEach((src, i) => {
         const tr = translations[String(i)];
-        if (typeof tr === "string" && tr.trim()) next[src] = stripHtml(tr);
+        if (typeof tr === "string" && tr.trim()) {
+          next[src] = stripHtml(tr);
+          enStats.translated += 1;
+        }
       });
       dynEnCacheRef.current = next;
       saveDynCache("en" as LangCode, next);
       bump((x) => x + 1);
     } catch (e) {
+      enStats.errors += 1;
       console.error("dyn en translate failed", e);
     }
   }, []);
@@ -377,7 +420,8 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // Source already English (no CJK) → just return it.
     if (!CJK_TEXT_RE.test(text)) return localizeProtagonist(text, "en" as LangCode);
     const cached = dynEnCacheRef.current[text];
-    if (cached) return localizeProtagonist(cached, "en" as LangCode);
+    if (cached) { enStats.hits += 1; return localizeProtagonist(cached, "en" as LangCode); }
+    enStats.misses += 1;
     dynEnQueueRef.current.add(text);
     if (dynEnTimerRef.current === null) {
       dynEnTimerRef.current = window.setTimeout(() => {

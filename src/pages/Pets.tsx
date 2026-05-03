@@ -302,6 +302,7 @@ function ShopTab({ foods, balance, inv, onAfter, flash }: any) {
 
 function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: any) {
   const [busy, setBusy] = useState<string | null>(null);
+  const sp = species[active?.species_id];
   if (!active || active.stage < 1) {
     return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground">宠物还在蛋里，先去喂食孵化吧 🥚</div>;
   }
@@ -323,7 +324,6 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
     }
     onAfter();
   };
-  const sp = species[active.species_id];
   return (
     <div className="space-y-3">
       <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 p-3 dark:from-purple-950/30 dark:to-pink-950/30">

@@ -35,6 +35,9 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [agreed, setAgreed] = useState(false);
+  // Age band — required for COPPA / GDPR-K compliance.
+  // child = <13, teen = 13–17, adult = 18+. Persisted to profiles.age_band + is_minor.
+  const [ageBand, setAgeBand] = useState<"child" | "teen" | "adult" | "">("");
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -67,6 +70,7 @@ const Auth = () => {
     if (n.length < 2 || n.length > 24) { toast.error(t("昵称需 2–24 个字符")); return; }
     if (!/^\d{4,6}$/.test(pin)) { toast.error(t("PIN 必须是 4–6 位数字")); return; }
     if (nickAvailable === false) { toast.error(t("昵称已被占用，换一个吧")); return; }
+    if (!ageBand) { toast.error(t("请选择你的年龄段")); return; }
     setLoading(true);
     // Server-side validation
     const { data: vCode } = await supabase.rpc("validate_username", { _name: n });
@@ -97,6 +101,9 @@ const Auth = () => {
       display_name: n,
       is_guest: true,
       email: placeholderEmail,
+      age_band: ageBand,
+      is_minor: ageBand === "child" || ageBand === "teen",
+      data_minimization: ageBand !== "adult",
     }, { onConflict: "user_id" });
     setLoading(false);
     toast.success(t("欢迎，") + n + " 🎉");
@@ -228,6 +235,32 @@ const Auth = () => {
                     <Input id="pin" inputMode="numeric" pattern="\d*" maxLength={6} required value={pin}
                       onChange={(e) => setPin(e.target.value.replace(/\D/g, ""))}
                       placeholder="例如 1234" autoComplete="new-password" />
+                  </div>
+                  <div>
+                    <Label><T>你的年龄段</T></Label>
+                    <div className="mt-1 grid grid-cols-3 gap-2">
+                      {([
+                        { v: "child", label: t("12 岁以下") },
+                        { v: "teen",  label: t("13–17 岁") },
+                        { v: "adult", label: t("18+") },
+                      ] as const).map(opt => (
+                        <button
+                          key={opt.v}
+                          type="button"
+                          onClick={() => setAgeBand(opt.v)}
+                          className={`rounded-xl border-2 px-2 py-2 text-xs font-bold transition ${
+                            ageBand === opt.v
+                              ? "border-primary bg-primary/10 text-primary"
+                              : "border-border bg-card text-muted-foreground hover:border-primary/40"
+                          }`}
+                        >
+                          {opt.label}
+                        </button>
+                      ))}
+                    </div>
+                    <p className="mt-1 text-[10px] text-muted-foreground">
+                      <T>用于符合 COPPA / GDPR-K 的儿童数据保护，不会存储任何敏感信息。</T>
+                    </p>
                   </div>
                   <Button type="submit" className="w-full" disabled={loading || nickAvailable === false}>
                     {loading ? <Loader2 className="size-4 animate-spin" /> : <T>开始学习 🚀</T>}

@@ -6,6 +6,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
 import CompanionOnboarding from "@/components/pet/CompanionOnboarding";
+import ReportAIButton from "@/components/pet/ReportAIButton";
+import PlanetMap from "@/components/pet/PlanetMap";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };
@@ -412,6 +414,9 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
           );
         })}
       </div>
+      <div className="pt-2">
+        <PlanetMap />
+      </div>
     </div>
   );
 }
@@ -516,6 +521,13 @@ function DiaryTab({ diary }: { diary: Diary[] }) {
                 {ai.highlights.map((h, i) => <span key={i} className="rounded-full bg-white/20 px-2 py-0.5 text-[11px] font-bold backdrop-blur">{h}</span>)}
               </div>
             )}
+            <div className="mt-2 flex justify-end">
+              <ReportAIButton
+                feature="pet_diary"
+                contentSnippet={ai.body_cn}
+                className="opacity-80"
+              />
+            </div>
           </>
         ) : (
           <p className="mt-3 text-sm opacity-90">点击"生成今日日记"，让宠物把今天的学习记下来 📝</p>

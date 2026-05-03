@@ -1,3 +1,4 @@
+import { X } from "@/i18n/T";
 import { ArrowRight, ArrowLeft, BookOpenCheck, School, GraduationCap, Backpack, Library, Lock, Award, Coins, Heart, Users, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import OnlineWidget from "@/components/social/OnlineWidget";

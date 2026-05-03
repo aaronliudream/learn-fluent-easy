@@ -1,3 +1,4 @@
+import { X } from "@/i18n/T";
 import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, Trophy, Heart, Sparkles } from "lucide-react";

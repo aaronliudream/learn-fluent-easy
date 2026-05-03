@@ -21,7 +21,12 @@ export default function JuniorListening() {
     let q: any = (supabase as any).from("junior_listening_exercises")
       .select("id,title,topic,grade,difficulty,kind,duration_sec")
       .order("title");
-    if (grade) q = q.eq("grade", Number(grade));
+    if (grade) {
+      // 初1=七年级=7, 初2=8, 初3=9
+      const g = Number(grade);
+      const dbGrade = g <= 3 ? g + 6 : g;
+      q = q.eq("grade", dbGrade);
+    }
     q.then(({ data }: any) => setItems((data ?? []) as E[]));
   }, [grade]);
   return (

@@ -2997,6 +2997,45 @@ export type Database = {
         }
         Relationships: []
       }
+      no_reward_days: {
+        Row: {
+          reason: string | null
+          rest_date: string
+          week_start: string
+        }
+        Insert: {
+          reason?: string | null
+          rest_date: string
+          week_start: string
+        }
+        Update: {
+          reason?: string | null
+          rest_date?: string
+          week_start?: string
+        }
+        Relationships: []
+      }
+      parent_delay_settings: {
+        Row: {
+          daily_seed_cap: number
+          delay_hours: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          daily_seed_cap?: number
+          delay_hours?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          daily_seed_cap?: number
+          delay_hours?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       pending_seeds: {
         Row: {
           amount: number
@@ -4297,6 +4336,7 @@ export type Database = {
           leaderboard_alias: string | null
           leaderboard_opt_in: boolean
           parental_consent_at: string | null
+          patience_score: number
           preferred_language: string | null
           target_language: string
           updated_at: string
@@ -4317,6 +4357,7 @@ export type Database = {
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
           parental_consent_at?: string | null
+          patience_score?: number
           preferred_language?: string | null
           target_language?: string
           updated_at?: string
@@ -4337,6 +4378,7 @@ export type Database = {
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
           parental_consent_at?: string | null
+          patience_score?: number
           preferred_language?: string | null
           target_language?: string
           updated_at?: string
@@ -5282,6 +5324,15 @@ export type Database = {
           reason: string
         }[]
       }
+      confirm_wishlist_purchase: {
+        Args: { _wishlist_id: string }
+        Returns: {
+          days_held: number
+          ok: boolean
+          patience_after: number
+          reason: string
+        }[]
+      }
       contribute_community_goal: {
         Args: { _amount: number; _goal_code: string }
         Returns: {
@@ -5632,6 +5683,10 @@ export type Database = {
         Returns: undefined
       }
       set_active_pet: { Args: { _pet_id: string }; Returns: undefined }
+      set_parent_delay_hours: {
+        Args: { _cap?: number; _hours: number }
+        Returns: undefined
+      }
       settle_matured_seeds: {
         Args: never
         Returns: {
@@ -5716,6 +5771,18 @@ export type Database = {
       }
       username_available: { Args: { _name: string }; Returns: boolean }
       validate_username: { Args: { _name: string }; Returns: string }
+      weekly_growth_letter: {
+        Args: never
+        Returns: {
+          active_days: number
+          minutes_active: number
+          patience_score: number
+          pet_level: number
+          pet_name: string
+          quiz_correct: number
+          weak_module: string
+        }[]
+      }
       wishlist_add: {
         Args: { _item_id: string; _kind: string }
         Returns: string

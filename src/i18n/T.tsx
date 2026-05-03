@@ -50,31 +50,39 @@ export const TBi = forwardRef<unknown, {
   const bilingual = useBilingualMode();
   if (!children) return null;
   const src = String(children);
+  // Chinese-student zone (/primary, /junior, /gaokao, /china):
+  // ALWAYS render English + Chinese source, regardless of user language.
+  // Never translate to German/Spanish/etc here.
+  if (bilingual) {
+    const enLine = tDynamicEn(src);
+    reportRenderedText(src, "zh");
+    if (!enLine || enLine === src) return <>{src}</>;
+    return renderBilingual(enLine, src, layout, className);
+  }
   const userLine = tDynamic(src);
   reportRenderedText(userLine, lang);
-  // Not bilingual route, or user lang is English → single line.
-  if (!bilingual || lang === "en") return <>{userLine}</>;
-  const enLine = tDynamicEn(src);
-  if (!enLine || enLine === userLine) return <>{userLine}</>;
+  return <>{userLine}</>;
+});
+
+function renderBilingual(enLine: string, zhLine: string, layout: "stack" | "inline" | "compact", className?: string) {
   if (layout === "inline") {
-    return <span className={className}>{enLine} / {userLine}</span>;
+    return <span className={className}>{enLine} / {zhLine}</span>;
   }
   if (layout === "compact") {
-    // For tight spaces (e.g. button labels): EN main + tiny user-lang suffix.
     return (
       <span className={className ?? "inline-flex items-baseline gap-1.5"}>
         <span>{enLine}</span>
-        <span className="text-[0.72em] font-normal opacity-60 truncate max-w-[10em]">{userLine}</span>
+        <span className="text-[0.72em] font-normal opacity-60 truncate max-w-[10em]">{zhLine}</span>
       </span>
     );
   }
   return (
     <span className={className ?? "inline-flex flex-col leading-[1.15] gap-0.5 text-left"}>
       <span className="break-words">{enLine}</span>
-      <span className="text-[0.72em] font-normal opacity-65 break-words">{userLine}</span>
+      <span className="text-[0.72em] font-normal opacity-65 break-words">{zhLine}</span>
     </span>
   );
-});
+}
 
 /**
  * Bilingual static-key component. Replaces `{t("key")}` in JSX where
@@ -87,29 +95,14 @@ export function TKey({ k, vars, layout = "stack", className }: {
   layout?: "stack" | "inline" | "compact";
   className?: string;
 }) {
-  const { t, tEn, lang } = useI18n();
+  const { t, tEn, tZh } = useI18n() as any;
   const bilingual = useBilingualMode();
-  const userLine = t(k, vars);
-  if (!bilingual || lang === "en") return <>{userLine}</>;
+  if (!bilingual) return <>{t(k, vars)}</>;
+  // Chinese-student zone: force Chinese副 + English主, never user language.
   const enLine = tEn(k, vars);
-  if (!enLine || enLine === userLine) return <>{userLine}</>;
-  if (layout === "inline") {
-    return <span className={className}>{enLine} / {userLine}</span>;
-  }
-  if (layout === "compact") {
-    return (
-      <span className={className ?? "inline-flex items-baseline gap-1.5"}>
-        <span>{enLine}</span>
-        <span className="text-[0.72em] font-normal opacity-60 truncate max-w-[10em]">{userLine}</span>
-      </span>
-    );
-  }
-  return (
-    <span className={className ?? "inline-flex flex-col leading-[1.15] gap-0.5 text-left"}>
-      <span className="break-words">{enLine}</span>
-      <span className="text-[0.72em] font-normal opacity-65 break-words">{userLine}</span>
-    </span>
-  );
+  const zhLine = typeof tZh === "function" ? tZh(k, vars) : t(k, vars);
+  if (!enLine || enLine === zhLine) return <>{zhLine}</>;
+  return renderBilingual(enLine, zhLine, layout, className);
 }
 
 /**
@@ -123,11 +116,11 @@ export function useTBi() {
   const bilingual = useBilingualMode();
   return (text: string, opts?: { sep?: string }) => {
     if (!text) return text;
-    const user = tDynamic(text);
-    if (!bilingual || lang === "en") return user;
+    if (!bilingual) return tDynamic(text);
+    // Chinese-student zone: always EN / 中文, regardless of user language.
     const en = tDynamicEn(text);
-    if (!en || en === user) return user;
-    return `${en} ${opts?.sep ?? "/"} ${user}`;
+    if (!en || en === text) return text;
+    return `${en} ${opts?.sep ?? "/"} ${text}`;
   };
 }
 

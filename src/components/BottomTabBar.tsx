@@ -1,4 +1,4 @@
-import { Home, GraduationCap, MessagesSquare, Trophy, User } from "lucide-react";
+import { Home, BookOpen, Bot, Trophy, User } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useT } from "@/i18n/T";
 
@@ -10,8 +10,8 @@ const TABS = [
   { to: "/", label: "首页", icon: Home, match: (p: string) => p === "/" },
   {
     to: "/levels",
-    label: "学",
-    icon: GraduationCap,
+    label: "课程",
+    icon: BookOpen,
     match: (p: string) =>
       p.startsWith("/level") ||
       p.startsWith("/lesson") ||
@@ -21,15 +21,15 @@ const TABS = [
       p.startsWith("/slang"),
   },
   {
-    to: "/scenes",
-    label: "练",
-    icon: MessagesSquare,
+    to: "/talk",
+    label: "AI 对话",
+    icon: Bot,
     match: (p: string) =>
+      p.startsWith("/talk") ||
       p.startsWith("/scenes") ||
-      p.startsWith("/workplace") ||
-      p.startsWith("/talk"),
+      p.startsWith("/workplace"),
   },
-  { to: "/leaderboard", label: "Global Ranking", icon: Trophy, match: (p: string) => p.startsWith("/leaderboard") || p.startsWith("/review") },
+  { to: "/leaderboard", label: "排行榜", icon: Trophy, match: (p: string) => p.startsWith("/leaderboard") || p.startsWith("/review") },
   { to: "/account", label: "我的", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
 ];
 

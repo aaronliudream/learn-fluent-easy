@@ -44,6 +44,8 @@ const PrimaryLesson = lazy(() => import("./pages/PrimaryLesson.tsx"));
 const PrimaryParent = lazy(() => import("./pages/PrimaryParent.tsx"));
 const PrimaryReading = lazy(() => import("./pages/PrimaryReading.tsx"));
 const PrimaryReadingPlay = lazy(() => import("./pages/PrimaryReadingPlay.tsx"));
+const StageTests = lazy(() => import("./pages/StageTests.tsx"));
+const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
 const JuniorVocab = lazy(() => import("./pages/JuniorVocab.tsx"));
 const JuniorGrammar = lazy(() => import("./pages/JuniorGrammar.tsx"));

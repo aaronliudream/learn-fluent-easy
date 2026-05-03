@@ -70,6 +70,13 @@ const Review = () => {
   const grade = async (g: Grade) => {
     if (!current) return;
     await gradeReview(current, g);
+    // 复习挂钩：Good +1, Easy +2 (Hard/Again 不发币但触发宠物失落)
+    try {
+      const m = await import("@/lib/coins");
+      if (g === "easy") await m.awardCoins(2, "review_easy");
+      else if (g === "good") await m.awardCoins(1, "review_good");
+      else m.notifyWrong();
+    } catch { /* noop */ }
     setDoneCount((c) => c + 1);
     setRevealed(false);
     if (idx + 1 < cards.length) {

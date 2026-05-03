@@ -3771,6 +3771,113 @@ export type Database = {
         }
         Relationships: []
       }
+      stage_test_attempts: {
+        Row: {
+          attempt_no: number
+          coins_awarded: number
+          cooldown_until: string | null
+          correct_count: number
+          created_at: string
+          exp_awarded: number
+          id: string
+          new_question_count: number
+          passed: boolean
+          score: number
+          test_id: string
+          total_count: number
+          user_id: string
+        }
+        Insert: {
+          attempt_no?: number
+          coins_awarded?: number
+          cooldown_until?: string | null
+          correct_count?: number
+          created_at?: string
+          exp_awarded?: number
+          id?: string
+          new_question_count?: number
+          passed?: boolean
+          score?: number
+          test_id: string
+          total_count?: number
+          user_id: string
+        }
+        Update: {
+          attempt_no?: number
+          coins_awarded?: number
+          cooldown_until?: string | null
+          correct_count?: number
+          created_at?: string
+          exp_awarded?: number
+          id?: string
+          new_question_count?: number
+          passed?: boolean
+          score?: number
+          test_id?: string
+          total_count?: number
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "stage_test_attempts_test_id_fkey"
+            columns: ["test_id"]
+            isOneToOne: false
+            referencedRelation: "stage_tests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      stage_tests: {
+        Row: {
+          base_coins: number
+          base_exp: number
+          created_at: string
+          description: string | null
+          grade: number
+          id: string
+          pass_threshold: number
+          required_lessons: number
+          scope: string
+          segment: string
+          sort_order: number
+          title: string
+          total_questions: number
+          unit_index: number | null
+        }
+        Insert: {
+          base_coins?: number
+          base_exp?: number
+          created_at?: string
+          description?: string | null
+          grade: number
+          id?: string
+          pass_threshold?: number
+          required_lessons?: number
+          scope: string
+          segment: string
+          sort_order?: number
+          title: string
+          total_questions?: number
+          unit_index?: number | null
+        }
+        Update: {
+          base_coins?: number
+          base_exp?: number
+          created_at?: string
+          description?: string | null
+          grade?: number
+          id?: string
+          pass_threshold?: number
+          required_lessons?: number
+          scope?: string
+          segment?: string
+          sort_order?: number
+          title?: string
+          total_questions?: number
+          unit_index?: number | null
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string
@@ -4706,6 +4813,30 @@ export type Database = {
         Args: { _food_id: string; _price: number; _qty: number }
         Returns: string
       }
+      list_stage_tests: {
+        Args: { _grade: number; _segment: string }
+        Returns: {
+          attempt_count: number
+          base_coins: number
+          base_exp: number
+          best_score: number
+          completed_lessons: number
+          cooldown_until: string
+          description: string
+          id: string
+          next_reward_coins: number
+          next_reward_exp: number
+          pass_count: number
+          pass_threshold: number
+          required_lessons: number
+          scope: string
+          sort_order: number
+          title: string
+          total_questions: number
+          unit_index: number
+          unlocked: boolean
+        }[]
+      }
       match_duel_bot: {
         Args: never
         Returns: {
@@ -4781,6 +4912,25 @@ export type Database = {
           my_delta: number
           my_new_rating: number
           won: boolean
+        }[]
+      }
+      submit_stage_test: {
+        Args: {
+          _correct: number
+          _new_question_count?: number
+          _test_id: string
+          _total: number
+        }
+        Returns: {
+          coins_awarded: number
+          cooldown_until: string
+          evolved: boolean
+          exp_awarded: number
+          message: string
+          new_balance: number
+          new_pet_level: number
+          passed: boolean
+          score: number
         }[]
       }
       take_pet_outing: {

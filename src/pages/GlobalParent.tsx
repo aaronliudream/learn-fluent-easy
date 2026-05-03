@@ -103,17 +103,26 @@ export default function GlobalParent() {
   }
 
   const d = data!;
-  const totalMin = d.minutes_total;
   const segTotal = d.minutes_by_segment.primary + d.minutes_by_segment.junior + d.minutes_by_segment.gaokao;
+  // 真实有效学习 = 三学段时长之和（不计入家长中心/登录页等浏览时长）
+  const totalMin = segTotal;
   const allWords =
     d.primary.words.mastered + d.junior.words.mastered + d.gaokao.words.mastered;
+
+  const totalAttempts =
+    d.primary.sessions + d.junior.sessions + d.gaokao.attempts;
+  const totalCorrect =
+    Math.round(d.primary.sessions * d.primary.accuracy) +
+    Math.round(d.junior.sessions * d.junior.accuracy) +
+    d.gaokao.correct;
 
   const radar = [
     { key: "vocab",   label: "单词", value: clamp01(allWords / 500) },
     { key: "reading", label: "阅读", value: clamp01((d.primary.reading_done + d.junior.reading_correct + d.gaokao.correct) / 50) },
     { key: "grammar", label: "语法", value: avgAccByType(d, "grammar") },
     { key: "listening", label: "听力", value: avgAccByType(d, "listening") },
-    { key: "speaking", label: "口语", value: clamp01(d.minutes_7d / 60) },
+    // 口语：基于实际做题量，不再用浏览时长，避免新用户 0 题也显示进度
+    { key: "speaking", label: "口语", value: clamp01(totalAttempts / 100) },
   ];
 
   return (
@@ -139,7 +148,7 @@ export default function GlobalParent() {
 
       {/* Top KPI strip */}
       <section className="mb-4 grid gap-3 sm:grid-cols-4">
-        <Kpi icon={Clock}  label="本周专注" value={fmtMinutes(d.minutes_7d)} color="from-emerald-500 to-teal-500" />
+        <Kpi icon={Clock}  label="本周专注" value={fmtMinutes(Math.min(d.minutes_7d, segTotal))} color="from-emerald-500 to-teal-500" />
         <Kpi icon={Flame}  label="连续学习" value={`${streak} 天`}            color="from-orange-500 to-amber-500" />
         <Kpi icon={Target} label="掌握单词" value={`${allWords}`}              color="from-sky-500 to-blue-500" />
         <Kpi icon={AlertTriangle} label="待攻克薄弱" value={`${d.weakness.length}`} color="from-rose-500 to-pink-500" />

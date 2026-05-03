@@ -1,49 +1,30 @@
 import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Sparkles, BookOpen, Headphones, Target, Lock, Trophy, Heart, Users } from "lucide-react";
+import { ArrowLeft, Trophy, Heart, Users, Sparkles } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
 import { TodayGrowthCard } from "@/components/TodayGrowthCard";
 
-const SECTIONS = [
+const GRADES = [
   {
-    to: "/junior/vocab",
-    icon: Sparkles,
-    title: "初中核心词汇",
-    desc: "中考新课标 16 大主题 · 200+ 词 · 听音辨义 · 智能掌握度",
-    gradient: "from-violet-500 via-indigo-500 to-blue-500",
-    available: true,
-  },
-  {
-    to: "/junior/grammar",
-    icon: BookOpen,
-    title: "中考语法专项",
-    desc: "时态 · 从句 · 非谓语 · 中考考点直击",
+    grade: 1,
+    title: "初一 · Grade 7",
+    subtitle: "起步年级 · 时态/词汇打基础",
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
-    available: true,
+    emoji: "🌱",
   },
   {
-    to: "/junior/reading",
-    icon: Target,
-    title: "初中阅读训练",
-    desc: "主题阅读 · 答题解析 · 答对喂宠物",
-    gradient: "from-amber-500 via-orange-500 to-rose-500",
-    available: true,
+    grade: 2,
+    title: "初二 · Grade 8",
+    subtitle: "中考关键年 · 从句/语法系统化",
+    gradient: "from-violet-500 via-indigo-500 to-blue-500",
+    emoji: "🚀",
   },
   {
-    to: "/junior/listening",
-    icon: Headphones,
-    title: "听力短文训练",
-    desc: "对话/短文 · 听音答题 · 中考听力题型",
-    gradient: "from-sky-500 via-blue-500 to-indigo-500",
-    available: true,
-  },
-  {
-    to: "/junior/writing",
-    icon: BookOpen,
-    title: "中考写作训练",
-    desc: "命题作文 · AI 批改 · 高分范文对比",
+    grade: 3,
+    title: "初三 · Grade 9",
+    subtitle: "中考冲刺 · 真题/写作/听力",
     gradient: "from-fuchsia-500 via-pink-500 to-rose-500",
-    available: true,
+    emoji: "🔥",
   },
 ];
 
@@ -59,7 +40,7 @@ export default function Junior() {
         </div>
         <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">初中英语专区</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          按教育部《义务教育英语课程标准（2022 年版）》 · 中考考点系统训练
+          按年级进入：核心词汇游戏 · 中考语法 · 阅读 · 听力 · 写作
         </p>
       </div>
 
@@ -67,45 +48,24 @@ export default function Junior() {
         <TodayGrowthCard />
       </div>
 
-      {/* Stage tests entry - 3 grades */}
-      <div className="mb-5 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 p-4 text-white shadow-tile">
-        <div className="flex items-center gap-2 text-sm font-extrabold">📊 阶段测试 · 通关挑战</div>
-        <div className="mt-1 text-[11px] opacity-90">单元小测 → 模块过关 → 学段诊断 → 中考冲刺 · 答对得宠物经验和金币</div>
-        <div className="mt-3 grid grid-cols-3 gap-2">
-          {[1,2,3].map(g => (
-            <Link key={g} to={`/stage-tests/junior/${g}`} className="rounded-xl bg-white/20 py-2 text-center text-sm font-extrabold transition hover:bg-white/30">
-              初{g}
-            </Link>
-          ))}
-        </div>
-      </div>
-
       <section className="grid gap-3">
-        {SECTIONS.map((s) => {
-          const Icon = s.icon;
-          const Card = (
-            <div
-              className={`relative flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile ${
-                s.available ? "transition hover:-translate-y-0.5" : "opacity-70"
-              }`}
-            >
-              <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
-              <div className="relative grid size-12 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
-                <Icon className="size-6" />
-              </div>
-              <div className="relative flex-1 min-w-0">
-                <div className="text-base font-extrabold leading-tight">{s.title}</div>
-                <div className="mt-0.5 text-xs opacity-90">{s.desc}</div>
-              </div>
-              {!s.available && <Lock className="relative size-4 opacity-80" />}
+        {GRADES.map((g) => (
+          <Link
+            key={g.grade}
+            to={`/junior/g/${g.grade}`}
+            className={`relative flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br ${g.gradient} p-5 text-white shadow-tile transition hover:-translate-y-0.5`}
+          >
+            <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
+            <div className="relative grid size-14 shrink-0 place-items-center rounded-2xl bg-white/20 text-3xl backdrop-blur-sm">
+              {g.emoji}
             </div>
-          );
-          return s.available ? (
-            <Link key={s.title} to={s.to}>{Card}</Link>
-          ) : (
-            <div key={s.title} className="cursor-not-allowed">{Card}</div>
-          );
-        })}
+            <div className="relative flex-1 min-w-0">
+              <div className="text-lg font-extrabold leading-tight">{g.title}</div>
+              <div className="mt-0.5 text-xs opacity-90">{g.subtitle}</div>
+            </div>
+            <span className="relative text-2xl">→</span>
+          </Link>
+        ))}
       </section>
 
       <div className="mt-8 rounded-2xl border border-border/60 bg-card p-4">
@@ -113,10 +73,10 @@ export default function Junior() {
           <Trophy className="size-4 text-amber-500" /> 学习方式
         </div>
         <ul className="mt-2 list-inside list-disc space-y-1 text-xs text-muted-foreground">
-          <li>📖 主题词块化学习，对接中考考纲</li>
-          <li>👂 标准英美音听音辨义</li>
-          <li>🎯 测验答题接入智能复习系统（FSRS）</li>
-          <li>📈 自动统计掌握度，动态调整复习</li>
+          <li>🎮 词汇用 5 种游戏（便当/任务/对决/翻牌/听写）彻底掌握</li>
+          <li>📚 中考语法专项 + 阅读 + 听力 + 写作 全覆盖</li>
+          <li>🐣 答对得金币和宠物经验，错题进智能复习</li>
+          <li>📈 自动按艾宾浩斯曲线安排复习</li>
         </ul>
       </div>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">

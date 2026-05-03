@@ -282,6 +282,16 @@ All colors MUST be HSL.
 .animate-badge-pop  { animation: badge-pop 0.55s cubic-bezier(.34,1.56,.64,1); }
 .animate-flame      { animation: flame-flicker 1.4s ease-in-out infinite; }
 
+/* Companion gentle breathing — used by hero pet + floating pet */
+@keyframes companion-breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.06); }
+}
+.animate-companion-breathe { animation: companion-breathe 3s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-companion-breathe { animation: none; }
+}
+
 /* Soft "paper" card — works beautifully on warm ivory bg */
 .card-paper {
   background: hsl(var(--card));

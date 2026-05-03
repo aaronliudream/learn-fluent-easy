@@ -54,7 +54,7 @@ export default function GaokaoReadingPlay() {
     if (ok) {
       const next = streak + 1;
       setStreak(next);
-      await awardForCorrect(next, "gaokao_reading");
+      await awardForCorrect(next, "gaokao_reading", q.id, "gaokao_reading");
       await bumpPetSkill("reading_owl", 1);
       const cc = correctCount + 1;
       setCorrectCount(cc);

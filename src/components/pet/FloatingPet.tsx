@@ -118,7 +118,7 @@ export function FloatingPet() {
   return (
     <Link
       to="/pets"
-      aria-label={`查看宠物 ${pet.nickname}`}
+      aria-label={`Visit your companion ${pet.nickname}`}
       className="group fixed bottom-20 right-3 z-40 select-none lg:bottom-6 lg:right-6"
     >
       <div className={cn(

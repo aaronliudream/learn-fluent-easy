@@ -81,6 +81,7 @@ const Social = lazy(() => import("./pages/Social.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 import { FloatingPet } from "@/components/pet/FloatingPet";
+import { DigestionAnimation } from "@/components/pet/DigestionAnimation";
 import { EvolutionCelebration } from "@/components/pet/EvolutionCelebration";
 import useActiveHeartbeat from "@/hooks/useActiveHeartbeat";
 
@@ -149,6 +150,7 @@ const App = () => (
         <GaokaoBreakReminder />
         <FloatingPetGate />
         <EvolutionCelebration />
+        <DigestionAnimation />
         <div className="pb-tabbar lg:pb-0">
         <Suspense fallback={<RouteFallback />}>
         <Routes>

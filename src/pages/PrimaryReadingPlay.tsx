@@ -507,15 +507,15 @@ function MatchGame({ t, onDone, onCorrect }: { t: Extract<Treasure, {type:"match
   const [wrong, setWrong] = useState<string | null>(null);
 
   const onLeft = (en: string) => { if (matched[en]) return; setPickedL(en); };
-  const onRight = (cn: string) => {
+  const onRight = (rcn: string) => {
     if (!pickedL) return;
-    const correct = t.pairs.find(p => p.en === pickedL)?.cn === cn;
+    const correct = t.pairs.find(p => p.en === pickedL)?.cn === rcn;
     if (correct) {
-      setMatched(m => ({ ...m, [pickedL]: cn }));
+      setMatched(m => ({ ...m, [pickedL]: rcn }));
       setPickedL(null);
       speak(pickedL);
     } else {
-      setWrong(cn); setTimeout(() => setWrong(null), 500);
+      setWrong(rcn); setTimeout(() => setWrong(null), 500);
     }
   };
   const allDone = Object.keys(matched).length === t.pairs.length;
@@ -539,8 +539,8 @@ function MatchGame({ t, onDone, onCorrect }: { t: Extract<Treasure, {type:"match
           ))}
         </div>
         <div className="space-y-2">
-          {rights.map(cn => {
-            const isMatched = Object.values(matched).includes(cn);
+          {rights.map(rcn => {
+            const isMatched = Object.values(matched).includes(rcn);
             return (
               <button key={cn} onClick={() => onRight(cn)} disabled={isMatched}
                 className={cn(

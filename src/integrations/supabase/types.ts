@@ -2044,6 +2044,81 @@ export type Database = {
           },
         ]
       }
+      junior_listening_attempts: {
+        Row: {
+          created_at: string
+          exercise_id: string
+          id: string
+          is_correct: boolean
+          question_idx: number
+          user_answer: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          exercise_id: string
+          id?: string
+          is_correct: boolean
+          question_idx: number
+          user_answer?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          exercise_id?: string
+          id?: string
+          is_correct?: boolean
+          question_idx?: number
+          user_answer?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      junior_listening_exercises: {
+        Row: {
+          audio_url: string | null
+          created_at: string
+          difficulty: number
+          grade: number
+          id: string
+          key_vocab: Json
+          questions: Json
+          speaker: string | null
+          title: string
+          topic: string | null
+          transcript: string
+          translation_cn: string | null
+        }
+        Insert: {
+          audio_url?: string | null
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          id?: string
+          key_vocab?: Json
+          questions?: Json
+          speaker?: string | null
+          title: string
+          topic?: string | null
+          transcript: string
+          translation_cn?: string | null
+        }
+        Update: {
+          audio_url?: string | null
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          id?: string
+          key_vocab?: Json
+          questions?: Json
+          speaker?: string | null
+          title?: string
+          topic?: string | null
+          transcript?: string
+          translation_cn?: string | null
+        }
+        Relationships: []
+      }
       junior_reading: {
         Row: {
           body: string
@@ -2324,6 +2399,99 @@ export type Database = {
         }
         Relationships: []
       }
+      junior_writing_attempts: {
+        Row: {
+          content_score: number | null
+          corrections: Json | null
+          created_at: string
+          feedback_cn: string | null
+          highlights: Json | null
+          id: string
+          language_score: number | null
+          overall_score: number | null
+          prompt_id: string
+          structure_score: number | null
+          text: string
+          user_id: string
+          word_count: number
+        }
+        Insert: {
+          content_score?: number | null
+          corrections?: Json | null
+          created_at?: string
+          feedback_cn?: string | null
+          highlights?: Json | null
+          id?: string
+          language_score?: number | null
+          overall_score?: number | null
+          prompt_id: string
+          structure_score?: number | null
+          text: string
+          user_id: string
+          word_count?: number
+        }
+        Update: {
+          content_score?: number | null
+          corrections?: Json | null
+          created_at?: string
+          feedback_cn?: string | null
+          highlights?: Json | null
+          id?: string
+          language_score?: number | null
+          overall_score?: number | null
+          prompt_id?: string
+          structure_score?: number | null
+          text?: string
+          user_id?: string
+          word_count?: number
+        }
+        Relationships: []
+      }
+      junior_writing_prompts: {
+        Row: {
+          created_at: string
+          difficulty: number
+          grade: number
+          id: string
+          max_words: number
+          min_words: number
+          prompt_cn: string
+          prompt_en: string
+          requirements: Json
+          sample_answer: string | null
+          scoring_rubric: string | null
+          topic: string
+        }
+        Insert: {
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          id?: string
+          max_words?: number
+          min_words?: number
+          prompt_cn: string
+          prompt_en: string
+          requirements?: Json
+          sample_answer?: string | null
+          scoring_rubric?: string | null
+          topic: string
+        }
+        Update: {
+          created_at?: string
+          difficulty?: number
+          grade?: number
+          id?: string
+          max_words?: number
+          min_words?: number
+          prompt_cn?: string
+          prompt_en?: string
+          requirements?: Json
+          sample_answer?: string | null
+          scoring_rubric?: string | null
+          topic?: string
+        }
+        Relationships: []
+      }
       learning_events: {
         Row: {
           created_at: string
@@ -2426,6 +2594,39 @@ export type Database = {
           name_cn?: string
           sort_order?: number
           unlock_level?: number
+        }
+        Relationships: []
+      }
+      pet_diaries: {
+        Row: {
+          body_cn: string
+          created_at: string
+          diary_date: string
+          highlights: Json
+          id: string
+          pet_emoji: string | null
+          pet_nickname: string | null
+          user_id: string
+        }
+        Insert: {
+          body_cn: string
+          created_at?: string
+          diary_date?: string
+          highlights?: Json
+          id?: string
+          pet_emoji?: string | null
+          pet_nickname?: string | null
+          user_id: string
+        }
+        Update: {
+          body_cn?: string
+          created_at?: string
+          diary_date?: string
+          highlights?: Json
+          id?: string
+          pet_emoji?: string | null
+          pet_nickname?: string | null
+          user_id?: string
         }
         Relationships: []
       }
@@ -2619,6 +2820,48 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      pet_skill_bindings: {
+        Row: {
+          created_at: string
+          description_cn: string | null
+          emoji: string
+          id: string
+          kp_codes: Json
+          label_cn: string
+          label_en: string
+          module: string
+          rarity: string
+          skill_code: string
+          threshold: number
+        }
+        Insert: {
+          created_at?: string
+          description_cn?: string | null
+          emoji?: string
+          id?: string
+          kp_codes?: Json
+          label_cn: string
+          label_en: string
+          module: string
+          rarity?: string
+          skill_code: string
+          threshold?: number
+        }
+        Update: {
+          created_at?: string
+          description_cn?: string | null
+          emoji?: string
+          id?: string
+          kp_codes?: Json
+          label_cn?: string
+          label_en?: string
+          module?: string
+          rarity?: string
+          skill_code?: string
+          threshold?: number
+        }
+        Relationships: []
       }
       pet_skins: {
         Row: {
@@ -3559,6 +3802,33 @@ export type Database = {
         }
         Relationships: []
       }
+      user_pet_skills: {
+        Row: {
+          id: string
+          progress: number
+          skill_code: string
+          unlocked_at: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          progress?: number
+          skill_code: string
+          unlocked_at?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          id?: string
+          progress?: number
+          skill_code?: string
+          unlocked_at?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_pet_skins: {
         Row: {
           acquired_at: string
@@ -4045,6 +4315,14 @@ export type Database = {
           awarded: number
           balance: number
           capped: boolean
+        }[]
+      }
+      bump_pet_skill: {
+        Args: { _delta?: number; _skill_code: string }
+        Returns: {
+          progress: number
+          threshold: number
+          unlocked: boolean
         }[]
       }
       buy_listing: { Args: { _listing_id: string }; Returns: undefined }

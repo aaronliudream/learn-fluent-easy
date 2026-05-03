@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { awardCoins, awardForBlock, petReact } from "@/lib/coins";
+import { bumpPetSkill } from "@/lib/petSkills";
 
 type Passage = {
   id: string; passage_no: number; title: string; topic: string | null; topic_group: string | null;
@@ -112,6 +113,7 @@ export default function GaokaoClozePlay() {
       await awardCoins(total, "gaokao_cloze_submit");
       const blocks = Math.floor(r.correct_count / 5);
       for (let i = 0; i < blocks; i++) await awardForBlock("gaokao_cloze");
+      await bumpPetSkill("cloze_ninja", 1);
       petReact("happy", { coins: total });
     }
     if (r.correct_count === r.total_blanks) {

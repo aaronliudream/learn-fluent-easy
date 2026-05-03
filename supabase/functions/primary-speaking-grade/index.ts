@@ -149,6 +149,15 @@ Deno.serve(async (req) => {
             corrections: result.corrections, replacements: result.replacements,
             scenario: scenario ?? null, audio_duration_ms: audio_duration_ms ?? null,
           });
+          // Award coins based on overall score (5-25)
+          try {
+            const score = Math.max(0, Math.min(100, result.overall_score | 0));
+            const reward = Math.max(3, Math.min(25, Math.round(score / 5)));
+            const userClient = createClient(SUPABASE_URL, Deno.env.get("SUPABASE_ANON_KEY") || "", {
+              global: { headers: { Authorization: `Bearer ${token}` } },
+            });
+            await userClient.rpc("award_learning_coins", { _amount: reward, _source: "primary_speaking" });
+          } catch (e) { console.error("speaking coin award skipped", e); }
         }
       }
     } catch (e) { console.error("save attempt skipped", e); }

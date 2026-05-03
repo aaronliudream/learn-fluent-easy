@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
+import { bumpPetSkill } from "@/lib/petSkills";
 
 type Passage = { id: string; title: string; body: string; structure_analysis: string | null };
 type Question = {
@@ -53,6 +54,7 @@ export default function GaokaoReadingPlay() {
       const next = streak + 1;
       setStreak(next);
       await awardForCorrect(next, "gaokao_reading");
+      await bumpPetSkill("reading_owl", 1);
       const cc = correctCount + 1;
       setCorrectCount(cc);
       if (cc % 5 === 0) await awardForBlock("gaokao_reading");

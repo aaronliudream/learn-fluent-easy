@@ -397,6 +397,7 @@ export default function GaokaoReadingArticle() {
 
     return (
       <main className="min-h-screen bg-muted/30 pb-32">
+        <NoCopyGuard />
         {/* Sticky top bar */}
         <header className="sticky top-0 z-30 border-b bg-card/95 backdrop-blur">
           <div className="mx-auto max-w-7xl px-4 py-3 flex items-center gap-3">
@@ -406,6 +407,12 @@ export default function GaokaoReadingArticle() {
             <div className="flex-1 min-w-0">
               <div className="text-xs text-muted-foreground">{article.sub_band} · {article.genre_label}</div>
               <div className="text-sm font-semibold truncate">{article.title}</div>
+            </div>
+            <div className={cn(
+              "hidden sm:flex items-center gap-1 rounded-md border px-2 py-1 text-[11px] font-bold tabular-nums",
+              readSecLeft > 0 ? "border-amber-400 text-amber-600" : "border-emerald-400 text-emerald-600"
+            )} title="最短阅读时长">
+              📖 {readSecLeft > 0 ? `${readSecLeft}s` : "可交卷"}
             </div>
             <div className={cn(
               "flex items-center gap-1.5 rounded-lg px-3 py-1.5 font-mono font-bold tabular-nums text-sm",
@@ -433,7 +440,8 @@ export default function GaokaoReadingArticle() {
         {/* Questions only */}
         <div className="mx-auto grid max-w-7xl gap-6 px-4 py-6 lg:grid-cols-[1.1fr_1fr]">
           {/* 文章 — 左侧 (移动端在上方) */}
-          <article className="rounded-2xl border bg-card p-5 lg:p-7 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+          <article className="relative rounded-2xl border bg-card p-5 lg:p-7 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+            <ReadingWatermark text={`${userEmail} · ${new Date().toLocaleDateString()}`} />
             <div className="mb-3 flex items-center justify-between border-b pb-2">
               <div className="text-xs text-muted-foreground">
                 {article.word_count} 词 · {article.sub_band} · {article.genre_label}

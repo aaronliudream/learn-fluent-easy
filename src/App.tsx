@@ -84,6 +84,7 @@ const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 const Social = lazy(() => import("./pages/Social.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import FeedbackWidget from "@/components/FeedbackWidget";
+import InstallPrompt from "@/components/InstallPrompt";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 import { FloatingPet } from "@/components/pet/FloatingPet";
 import { DigestionAnimation } from "@/components/pet/DigestionAnimation";
@@ -233,6 +234,7 @@ const App = () => (
         </div>
         <BottomTabBar />
         <FeedbackWidget />
+        <InstallPrompt />
       </BrowserRouter>
     </TooltipProvider>
     </I18nProvider>

@@ -139,7 +139,9 @@ const App = () => (
       <BrowserRouter>
         <StopAudioOnRouteChange />
         <HeartbeatGate />
-        <LanguagePickerModal />
+        {/* LanguagePickerModal removed — language is auto-defaulted to English
+            and switchable via the header LanguageSwitcher. Forcing a 23+ option
+            modal on first visit was a major bounce driver for global users. */}
         <GaokaoBreakReminder />
         <FloatingPetGate />
         <EvolutionCelebration />

@@ -130,6 +130,10 @@ const Lesson = () => {
   const [generating, setGenerating] = useState(false);
   const [talkOpen, setTalkOpen] = useState(false);
   const [authedUser, setAuthedUser] = useState<boolean>(false);
+  const [tutorReq, setTutorReq] = useState<{
+    refId: string;
+    snapshot: Record<string, unknown>;
+  } | null>(null);
   useEffect(() => {
     let active = true;
     supabase.auth.getSession().then(({ data: { session } }) => {

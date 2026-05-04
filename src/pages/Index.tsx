@@ -282,11 +282,16 @@ const Index = () => {
         {sections.map((s) => {
           const Icon = s.icon;
           return (
-            <Link
-              key={s.to}
-              to={s.to}
-              className={`group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(250_50%_30%/0.5)]`}
-            >
+            <div key={s.to} className="relative">
+              {s.proFeature && (
+                <div className="absolute right-2 top-2 z-10">
+                  <ProWaitlistButton feature={s.proFeature} source="home-card" />
+                </div>
+              )}
+              <Link
+                to={s.to}
+                className={`group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(250_50%_30%/0.5)]`}
+              >
               <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/15 blur-2xl" />
               <div className="relative grid size-11 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
                 <Icon className="size-5" />
@@ -299,7 +304,8 @@ const Index = () => {
                 <div className="mt-0.5 line-clamp-1 text-[11px] opacity-85"><T>{s.desc}</T></div>
               </div>
               <ArrowRight className="relative size-4 shrink-0 opacity-80 transition-transform group-hover:translate-x-1" />
-            </Link>
+              </Link>
+            </div>
           );
         })}
       </section>

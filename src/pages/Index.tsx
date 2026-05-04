@@ -271,7 +271,7 @@ const Index = () => {
       <ThreeTracksHero />
 
       {/* Primary: Today's Task card — single clear next action */}
-      <TodayTaskCard />
+      {user && <TodayTaskCard />}
 
       {/* Secondary: all entry points, demoted to a compact grid */}
       <div className="mb-3 mt-8">

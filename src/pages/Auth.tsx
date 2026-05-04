@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import { GraduationCap, ArrowRight, Sparkles, Loader2, Check, X, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { T, useT } from "@/i18n/T";
+import { useI18n } from "@/i18n/I18nProvider";
 
 // Internal placeholder domain for guest accounts (never receives email)
 const GUEST_DOMAIN = "guest.bigmoon.local";
@@ -24,6 +25,7 @@ const pinToPassword = (pin: string) => `pin:${pin}:bigmoon-2026`;
 const Auth = () => {
   const navigate = useNavigate();
   const t = useT();
+  const { lang } = useI18n();
   const [loading, setLoading] = useState(false);
   // ----- nickname (guest) state -----
   const [nickname, setNickname] = useState("");
@@ -110,6 +112,7 @@ const Auth = () => {
       display_name: n,
       is_guest: true,
       email: placeholderEmail,
+      preferred_language: lang,
       age_band: ageBand,
       is_minor: ageBand === "child" || ageBand === "teen",
       data_minimization: ageBand !== "adult",
@@ -172,6 +175,7 @@ const Auth = () => {
       if (u?.user?.id) {
         await supabase.from("profiles").upsert({
           user_id: u.user.id,
+          preferred_language: lang,
           age_band: emailAgeBand,
           is_minor: emailAgeBand === "child" || emailAgeBand === "teen",
           data_minimization: emailAgeBand !== "adult",

@@ -90,7 +90,7 @@ CONTEXT: ${lessonHook}${targetBlock}`;
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "gpt-4o-realtime-preview-2024-12-17",
+        model: "gpt-4o-mini-realtime-preview-2024-12-17",
         voice: safeVoice,
         modalities: ["audio", "text"],
         instructions: systemPrompt,
@@ -98,11 +98,11 @@ CONTEXT: ${lessonHook}${targetBlock}`;
         turn_detection: {
           type: "server_vad",
           // Higher threshold = ignores background noise, fan, keyboard, kids, etc.
-          threshold: 0.78,
-          prefix_padding_ms: 400,
+          threshold: 0.68,
+          prefix_padding_ms: 250,
           // Wait longer before deciding the user is done talking. Prevents
           // Alex from cutting in during natural mid-sentence pauses.
-          silence_duration_ms: 1400,
+          silence_duration_ms: 700,
           // Don't auto-fire a response the instant VAD ends — we still let
           // it auto-respond, but the longer silence above gives the user
           // breathing room. (create_response stays default true.)
@@ -122,7 +122,7 @@ CONTEXT: ${lessonHook}${targetBlock}`;
     const data = await r.json();
     return json({
       client_secret: data.client_secret,
-      model: "gpt-4o-realtime-preview-2024-12-17",
+      model: "gpt-4o-mini-realtime-preview-2024-12-17",
     });
   } catch (e) {
     console.error("realtime-token error", e);

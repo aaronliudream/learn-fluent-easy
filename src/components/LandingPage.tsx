@@ -95,18 +95,18 @@ const EN_COPY: Record<string, string> = {
 
 /**
  * Render polished English when the user is in English; otherwise fall back
- * to the existing <T> auto-translation pipeline (which uses the Chinese
+ * to the existing <L> auto-translation pipeline (which uses the Chinese
  * source to translate to all other languages).
  */
 function L({ children }: { children: string }) {
   const { lang } = useI18n();
   if (lang === "en" && EN_COPY[children]) return <>{EN_COPY[children]}</>;
-  return <T>{children}</T>;
+  return <L>{children}</L>;
 }
 
 /**
  * Public landing page (cold traffic).
- * All visible copy is wrapped in <T> so it auto-translates to the user's
+ * All visible copy is wrapped in <L> so it auto-translates to the user's
  * chosen language (cached in localStorage by I18nProvider).
  */
 export default function LandingPage() {
@@ -125,7 +125,7 @@ export default function LandingPage() {
               to="/auth"
               className="hidden text-xs font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/70 hover:text-[#1F3A2E] md:inline"
             >
-              <T>登录</T>
+              <L>登录</L>
             </Link>
           </div>
         </nav>
@@ -133,28 +133,28 @@ export default function LandingPage() {
         <div className="mx-auto max-w-[1100px] px-6 pb-16 pt-6 md:px-10 md:pb-24 md:pt-10">
           <div className="mx-auto max-w-2xl">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#3BA3E0] shadow-[0_4px_14px_-6px_rgba(59,163,224,0.4)]">
-              <Globe2 className="size-3.5" /> <T>已在 184 个国家上线</T>
+              <Globe2 className="size-3.5" /> <L>已在 184 个国家上线</L>
             </div>
             <h1 className="text-[44px] font-extrabold leading-[1.05] tracking-tight text-[#1F3A2E] md:text-[88px]">
-              <T>说英语</T>
+              <L>说英语</L>
               <br />
-              <T>像玩游戏一样上头。</T>
+              <L>像玩游戏一样上头。</L>
             </h1>
             <p className="mt-7 max-w-lg text-base leading-relaxed text-[#1F3A2E]/70 md:text-lg">
-              <T>5 分钟一节的小课、即时口语反馈、连胜系统让你真的停不下来。每天 5 分钟，就能开始。</T>
+              <L>5 分钟一节的小课、即时口语反馈、连胜系统让你真的停不下来。每天 5 分钟，就能开始。</L>
             </p>
             <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
               <Link
                 to="/auth"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#E8743C] px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_-10px_rgba(232,116,60,0.6)] transition hover:bg-[#d4632d]"
               >
-                <T>免费开始</T> <ArrowRight className="size-4" />
+                <L>免费开始</L> <ArrowRight className="size-4" />
               </Link>
               <Link
                 to="/auth"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F3A2E]/15 bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#1F3A2E] transition hover:bg-[#F4EFE3]"
               >
-                <T>我已有账号</T>
+                <L>我已有账号</L>
               </Link>
             </div>
 
@@ -177,7 +177,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55">
-                  <T>4.9 平均评分</T>
+                  <L>4.9 平均评分</L>
                 </div>
               </div>
             </div>
@@ -214,14 +214,14 @@ export default function LandingPage() {
           <div className="mb-14 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#E8743C]">
-                <T>01 — 里面有什么</T>
+                <L>01 — 里面有什么</L>
               </div>
               <h2 className="max-w-xl font-serif text-3xl font-medium leading-tight md:text-5xl">
-                <T>四种真正用得上英语的方式。</T>
+                <L>四种真正用得上英语的方式。</L>
               </h2>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-[#1F3A2E]/65">
-              <T>每个模块都可以独立使用 —— 选你今天想学的，或者跟着完整路径从 A1 走到 C2。</T>
+              <L>每个模块都可以独立使用 —— 选你今天想学的，或者跟着完整路径从 A1 走到 C2。</L>
             </p>
           </div>
 
@@ -263,10 +263,10 @@ export default function LandingPage() {
         <div className="mx-auto max-w-[1100px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 max-w-2xl">
             <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#E8743C]">
-              <T>02 — 适合谁</T>
+              <L>02 — 适合谁</L>
             </div>
             <h2 className="font-serif text-3xl font-medium leading-tight md:text-5xl">
-              <T>为孩子、学生和成人精心打造。</T>
+              <L>为孩子、学生和成人精心打造。</L>
             </h2>
           </div>
 
@@ -307,10 +307,10 @@ export default function LandingPage() {
         <div className="mx-auto max-w-[1100px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 max-w-2xl">
             <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#E8743C]">
-              <T>03 — 为什么大家会留下来</T>
+              <L>03 — 为什么大家会留下来</L>
             </div>
             <h2 className="font-serif text-3xl font-medium leading-tight md:text-5xl">
-              <span className="italic text-[#E8743C]">12,847</span> <T>位学员本周在学习。</T>
+              <span className="italic text-[#E8743C]">12,847</span> <L>位学员本周在学习。</L>
             </h2>
           </div>
 
@@ -338,8 +338,8 @@ export default function LandingPage() {
       <section className="border-t border-[#1F3A2E]/10 bg-[#EEF4FB]">
         <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10 md:py-28">
           <h2 className="mb-14 text-center text-3xl font-extrabold leading-tight text-[#1F3A2E] md:text-5xl">
-            <T>全球学员都在用</T>{" "}
-            <span className="text-[#E8743C]"><T>Big Moon</T></span>
+            <L>全球学员都在用</L>{" "}
+            <span className="text-[#E8743C]"><L>Big Moon</L></span>
           </h2>
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -374,21 +374,21 @@ export default function LandingPage() {
         <div className="mx-auto max-w-[1100px] px-6 py-24 text-center md:px-10 md:py-32">
           <GraduationCap className="mx-auto mb-6 size-10 text-[#E8743C]" />
           <h2 className="mx-auto max-w-2xl font-serif text-3xl font-medium leading-tight md:text-5xl">
-            <T>不知道从哪里开始？</T>
+            <L>不知道从哪里开始？</L>
           </h2>
           <p className="mx-auto mt-5 max-w-md text-base text-[#1F3A2E]/70">
-            <T>3 分钟测试帮你定位水平，并生成专属学习路径。无需注册。</T>
+            <L>3 分钟测试帮你定位水平，并生成专属学习路径。无需注册。</L>
           </p>
           <Link
             to="/placement"
             className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-[#E8743C] px-9 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-[#d4632d]"
           >
-            <T>测一测我的水平</T> <ArrowRight className="size-4" />
+            <L>测一测我的水平</L> <ArrowRight className="size-4" />
           </Link>
           <div className="mt-6 text-xs text-[#1F3A2E]/50">
-            <T>已经是会员？</T>{" "}
+            <L>已经是会员？</L>{" "}
             <Link to="/auth" className="font-bold text-[#1F3A2E] underline-offset-4 hover:underline">
-              <T>登录</T>
+              <L>登录</L>
             </Link>
           </div>
         </div>
@@ -399,10 +399,10 @@ export default function LandingPage() {
         <div className="mx-auto flex max-w-[1100px] flex-col items-center justify-between gap-4 px-6 py-8 text-[11px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55 md:flex-row md:px-10">
           <div>© {new Date().getFullYear()} Big Moon English</div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            <Link to="/about" className="hover:text-[#1F3A2E]"><T>关于</T></Link>
-            <Link to="/privacy" className="hover:text-[#1F3A2E]"><T>隐私</T></Link>
-            <Link to="/terms" className="hover:text-[#1F3A2E]"><T>条款</T></Link>
-            <a href="mailto:support@bigmoonenglish.com" className="hover:text-[#1F3A2E]"><T>联系我们</T></a>
+            <Link to="/about" className="hover:text-[#1F3A2E]"><L>关于</L></Link>
+            <Link to="/privacy" className="hover:text-[#1F3A2E]"><L>隐私</L></Link>
+            <Link to="/terms" className="hover:text-[#1F3A2E]"><L>条款</L></Link>
+            <a href="mailto:support@bigmoonenglish.com" className="hover:text-[#1F3A2E]"><L>联系我们</L></a>
           </div>
         </div>
       </footer>
@@ -423,13 +423,13 @@ function FeatureCard({
           {icon}
         </div>
         <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#1F3A2E]/45">
-          <T>{eyebrow}</T>
+          <L>{eyebrow}</L>
         </div>
       </div>
-      <h3 className="font-serif text-2xl font-medium leading-tight md:text-3xl"><T>{title}</T></h3>
-      <p className="text-sm leading-relaxed text-[#1F3A2E]/65"><T>{desc}</T></p>
+      <h3 className="font-serif text-2xl font-medium leading-tight md:text-3xl"><L>{title}</L></h3>
+      <p className="text-sm leading-relaxed text-[#1F3A2E]/65"><L>{desc}</L></p>
       <div className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#E8743C]">
-        <T>查看示例</T> <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
+        <L>查看示例</L> <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
       </div>
     </Link>
   );
@@ -440,13 +440,13 @@ function Audience({
 }: { tag: string; title: string; points: string[] }) {
   return (
     <div className="flex flex-col gap-5 rounded-3xl border border-[#1F3A2E]/10 bg-white p-7 md:p-8">
-      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#E8743C]"><T>{tag}</T></div>
-      <h3 className="font-serif text-xl font-medium leading-snug md:text-2xl"><T>{title}</T></h3>
+      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#E8743C]"><L>{tag}</L></div>
+      <h3 className="font-serif text-xl font-medium leading-snug md:text-2xl"><L>{title}</L></h3>
       <ul className="space-y-2.5 border-t border-[#1F3A2E]/10 pt-5">
         {points.map((p) => (
           <li key={p} className="flex items-start gap-2.5 text-sm text-[#1F3A2E]/75">
             <span className="mt-2 block size-1.5 shrink-0 rounded-full bg-[#E8743C]" />
-            <T>{p}</T>
+            <L>{p}</L>
           </li>
         ))}
       </ul>
@@ -459,11 +459,11 @@ function Testimonial({ quote, name, role }: { quote: string; name: string; role:
     <figure className="flex flex-col gap-5 rounded-3xl border border-[#FAF8F3]/15 bg-[#27513f]/40 p-7 md:p-8">
       <Quote className="size-6 text-[#E8743C]" />
       <blockquote className="text-base leading-relaxed text-[#FAF8F3]/90">
-        <T>{quote}</T>
+        <L>{quote}</L>
       </blockquote>
       <figcaption className="border-t border-[#FAF8F3]/10 pt-4">
         <div className="text-sm font-bold text-[#FAF8F3]">{name}</div>
-        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#FAF8F3]/55"><T>{role}</T></div>
+        <div className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#FAF8F3]/55"><L>{role}</L></div>
       </figcaption>
     </figure>
   );
@@ -479,7 +479,7 @@ function ReviewCard({ quote, name, role }: { quote: string; name: string; role: 
         ))}
       </div>
       <blockquote className="text-[15px] leading-relaxed text-[#1F3A2E]/80">
-        &ldquo;<T>{quote}</T>&rdquo;
+        &ldquo;<L>{quote}</L>&rdquo;
       </blockquote>
       <figcaption className="mt-auto flex items-center gap-3 pt-2">
         <div className="grid size-10 shrink-0 place-items-center rounded-full bg-[#1F3A2E]/10 text-sm font-bold text-[#1F3A2E]">
@@ -487,7 +487,7 @@ function ReviewCard({ quote, name, role }: { quote: string; name: string; role: 
         </div>
         <div className="min-w-0">
           <div className="text-sm font-bold text-[#1F3A2E]">{name}</div>
-          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55"><T>{role}</T></div>
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55"><L>{role}</L></div>
         </div>
       </figcaption>
     </figure>
@@ -498,7 +498,7 @@ function StatCard({ value, label }: { value: string; label: string }) {
   return (
     <div className="flex flex-col items-center gap-1 rounded-2xl bg-white px-5 py-6 text-center shadow-[0_8px_24px_-12px_rgba(31,58,46,0.15)]">
       <div className="text-2xl font-extrabold text-[#3BA3E0] md:text-3xl">{value}</div>
-      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#1F3A2E]/55"><T>{label}</T></div>
+      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#1F3A2E]/55"><L>{label}</L></div>
     </div>
   );
 }

@@ -247,13 +247,13 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
             )}
           </div>
           <div className="mt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-            {sp?.name_cn} · {STAGE_LABEL[active.stage]}
-            {equippedSkin && equippedSkin.code !== "classic" && <span className="ml-1.5 text-purple-500">· {equippedSkin.name_cn}</span>}
+            <T>{sp?.name_cn}</T> · <T>{STAGE_LABEL[active.stage]}</T>
+            {equippedSkin && equippedSkin.code !== "classic" && <span className="ml-1.5 text-purple-500">· <T>{equippedSkin.name_cn}</T></span>}
           </div>
           <h2 className="mt-0.5 text-xl font-extrabold">{active.nickname}</h2>
           <div className="mt-1 flex items-center gap-2 text-xs">
             <span className="rounded-full bg-purple-500/10 px-2 py-0.5 font-bold text-purple-600">Lv.{active.level}</span>
-            <span className="text-muted-foreground">{sp?.personality_cn}</span>
+            <span className="text-muted-foreground"><T>{sp?.personality_cn}</T></span>
           </div>
         </div>
         <div className="mt-4 space-y-2">
@@ -307,7 +307,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
                 <button key={i.food_id} disabled={feedingFood===i.food_id} onClick={()=>doFeed(i.food_id)}
                   className="group flex flex-col items-center rounded-2xl border-2 border-border bg-card p-2 transition hover:-translate-y-0.5 hover:border-amber-400 disabled:opacity-50">
                   <span className="text-3xl">{f.emoji}</span>
-                  <span className="mt-1 text-[10px] font-bold">{f.name_cn}</span>
+                  <span className="mt-1 text-[10px] font-bold"><T>{f.name_cn}</T></span>
                   <span className="text-[10px] text-muted-foreground">×{i.qty}</span>
                 </button>
               );
@@ -328,7 +328,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
                   className={cn("rounded-2xl border-2 p-2 text-center transition", p.is_active ? "border-purple-500 bg-purple-50 dark:bg-purple-950/30" : "border-border bg-card hover:border-purple-300")}>
                   <div className="text-3xl">{petEmoji(p, s)}</div>
                   <div className="mt-0.5 text-[11px] font-bold">{p.nickname}</div>
-                  <div className="text-[10px] text-muted-foreground">Lv.{p.level} · {STAGE_LABEL[p.stage]}</div>
+                  <div className="text-[10px] text-muted-foreground">Lv.{p.level} · <T>{STAGE_LABEL[p.stage]}</T></div>
                 </button>
               );
             })}
@@ -356,7 +356,7 @@ function Bar({ label, value, hint, color }: { label:string; value:number; hint:s
   return (
     <div>
       <div className="mb-1 flex items-center justify-between text-[11px]">
-        <span className="font-bold">{label}</span>
+        <span className="font-bold"><T>{label}</T></span>
         <span className="text-muted-foreground">{hint}</span>
       </div>
       <div className="h-2.5 overflow-hidden rounded-full bg-muted">

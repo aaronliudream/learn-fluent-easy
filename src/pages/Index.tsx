@@ -259,10 +259,10 @@ const Index = () => {
             <Award className="size-6" />
           </div>
           <h2 className="relative text-xl font-extrabold leading-tight md:text-2xl">
-            <T>测一测你的英语等级</T>
+            <T>Check your English level</T>
           </h2>
           <div className="relative inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-indigo-700 transition group-hover:bg-white/95">
-            <T>免费 · 3 分钟</T> <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+            <T>Free · 3 min</T> <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
           </div>
         </Link>
       )}
@@ -276,7 +276,7 @@ const Index = () => {
       {/* Secondary: all entry points, demoted to a compact grid */}
       <div className="mb-3 mt-8">
         <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">
-          <T>更多学习方式</T>
+          <T>More ways to learn</T>
         </h3>
       </div>
 

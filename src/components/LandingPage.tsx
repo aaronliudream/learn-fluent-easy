@@ -355,3 +355,37 @@ function Testimonial({ quote, name, role }: { quote: string; name: string; role:
     </figure>
   );
 }
+
+function ReviewCard({ quote, name, role }: { quote: string; name: string; role: string }) {
+  const initial = name.trim().charAt(0).toUpperCase();
+  return (
+    <figure className="flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-[0_8px_30px_-12px_rgba(31,58,46,0.18)] md:p-7">
+      <div className="flex gap-1 text-[#F5A623]">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star key={i} className="size-4 fill-current" />
+        ))}
+      </div>
+      <blockquote className="text-[15px] leading-relaxed text-[#1F3A2E]/80">
+        &ldquo;<T>{quote}</T>&rdquo;
+      </blockquote>
+      <figcaption className="mt-auto flex items-center gap-3 pt-2">
+        <div className="grid size-10 shrink-0 place-items-center rounded-full bg-[#1F3A2E]/10 text-sm font-bold text-[#1F3A2E]">
+          {initial}
+        </div>
+        <div className="min-w-0">
+          <div className="text-sm font-bold text-[#1F3A2E]">{name}</div>
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55"><T>{role}</T></div>
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+
+function StatCard({ value, label }: { value: string; label: string }) {
+  return (
+    <div className="flex flex-col items-center gap-1 rounded-2xl bg-white px-5 py-6 text-center shadow-[0_8px_24px_-12px_rgba(31,58,46,0.15)]">
+      <div className="text-2xl font-extrabold text-[#3BA3E0] md:text-3xl">{value}</div>
+      <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#1F3A2E]/55"><T>{label}</T></div>
+    </div>
+  );
+}

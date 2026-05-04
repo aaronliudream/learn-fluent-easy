@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fireConfetti } from "@/lib/feedback";
 import { cn } from "@/lib/utils";
+import { T, useT } from "@/i18n/T";
 
 type Detail = {
   kind: "evolve" | "levelup";
@@ -16,6 +17,7 @@ type Detail = {
  * 升级：2.5 秒轻量庆典 + confetti（normal）
  */
 export function EvolutionCelebration() {
+  const t = useT();
   const [d, setD] = useState<Detail | null>(null);
   const [phase, setPhase] = useState<"in" | "show" | "out">("in");
 
@@ -80,7 +82,7 @@ export function EvolutionCelebration() {
           </span>
         </div>
         <h2 className="mt-4 text-2xl font-extrabold drop-shadow">
-          {d.title ?? (isEvolve ? "进化啦！" : "升级！")}
+          {d.title ?? (isEvolve ? t("进化啦！") : t("升级！"))}
         </h2>
         {d.subtitle && (
           <p className="mt-1 text-sm font-bold text-white/90">{d.subtitle}</p>
@@ -89,7 +91,7 @@ export function EvolutionCelebration() {
           className="mt-5 rounded-full bg-white/20 px-5 py-1.5 text-xs font-extrabold backdrop-blur hover:bg-white/30"
           onClick={(e) => { e.stopPropagation(); setD(null); }}
         >
-          继续 →
+          <T>继续 →</T>
         </button>
       </div>
     </div>

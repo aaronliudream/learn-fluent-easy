@@ -383,6 +383,8 @@ const EN_FALLBACKS: Record<string, string> = {
   "的信": "'s letter",
   "这一周，我们一起做到了 ✨": "This week, we did it together ✨",
   "嘿！这周我们一起学习了": "Hey! This week we studied together for",
+  "天": "days",
+  "升级！": "Level up!",
   "累计专注": "Focused for",
   "答对": "got",
   "道题": "questions right",

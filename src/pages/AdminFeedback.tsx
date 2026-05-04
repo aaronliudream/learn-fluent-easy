@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Loader2, Mail, Bug, Lightbulb, Heart, FileText, Star } from "lucide-react";
+import { ArrowLeft, Loader2, Mail, Bug, Lightbulb, Heart, FileText, Star, User, UserX } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 type Row = {
@@ -90,7 +90,11 @@ export default function AdminFeedback() {
               </div>
               <p className="whitespace-pre-wrap text-sm">{r.message}</p>
               <div className="mt-2 flex flex-wrap items-center gap-3 text-[11px] text-muted-foreground">
+                <span className="inline-flex items-center gap-1 rounded-full bg-secondary px-2 py-0.5 font-bold">
+                  {r.user_id ? <><User className="size-3" /> 已登录用户</> : <><UserX className="size-3" /> 匿名访客</>}
+                </span>
                 {r.email && <span className="inline-flex items-center gap-1"><Mail className="size-3" /> {r.email}</span>}
+                {r.user_id && !r.email && <span className="text-amber-700">（无邮箱，无法回复）</span>}
                 {r.page_url && <span className="truncate max-w-[240px]">📄 {r.page_url}</span>}
                 <span>🕐 {new Date(r.created_at).toLocaleString()}</span>
                 {r.moderation_result?.reason && <span title={JSON.stringify(r.moderation_result)}>🤖 {r.moderation_result.reason}</span>}

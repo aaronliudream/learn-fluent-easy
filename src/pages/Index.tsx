@@ -15,6 +15,8 @@ import { TodayTaskCard } from "@/components/TodayTaskCard";
 import CompanionHero from "@/components/pet/CompanionHero";
 import ThreeTracksHero from "@/components/ThreeTracksHero";
 import LandingPage from "@/components/LandingPage";
+import { XPRing } from "@/components/game/XPRing";
+import { useStreakStats } from "@/hooks/useStreakStats";
 
 const HOME_COUNTS = {
   slang: 347,
@@ -25,6 +27,8 @@ const Index = () => {
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
+  const { stats } = useStreakStats(user?.id);
+  const liveStreak = stats?.current_streak ?? streak;
 
   useEffect(() => {
     touchActive();

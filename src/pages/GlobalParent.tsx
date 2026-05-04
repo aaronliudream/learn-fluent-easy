@@ -232,6 +232,7 @@ export default function GlobalParent() {
       <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
         <div className="mb-2 flex items-center gap-1 text-sm font-extrabold">
           <Sparkles className="size-4 text-violet-500" /> <T>学习足迹（按有效时长占比）</T>
+          <span className="ml-1 text-[10px] font-normal text-muted-foreground">· <T>百分比 = 该主题占总学习时间的比例，非正确率</T></span>
         </div>
         <div className="space-y-2">
             {activeSegs.map(seg => {

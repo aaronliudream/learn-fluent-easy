@@ -757,9 +757,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const tDynamic = useCallback((text: string) => {
     if (!text) return text;
-    // No translation needed if the user chose Chinese, which is the app's
-    // original helper-language for lesson notes and hints.
-    if (lang === "zh") return localizeProtagonist(text, lang);
+    // If the user chose Chinese: source text that's already Chinese (CJK)
+    // can be returned as-is. But English source strings (e.g. the new
+    // English-first landing page) MUST still be translated into Chinese,
+    // otherwise Chinese users see raw English.
+    if (lang === "zh" && CJK_TEXT_RE.test(text)) return localizeProtagonist(text, lang);
     // For English (and every other non-Chinese language): if the source text
     // contains CJK characters we MUST translate it. Previously English users
     // saw raw Chinese on the home page (e.g. "今天已经开练了") because we

@@ -581,6 +581,7 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
 }
 
 function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
+  const t = useT();
   const [picking, setPicking] = useState<Species | null>(null);
   const [name, setName] = useState("");
   const [busy, setBusy] = useState(false);
@@ -589,8 +590,8 @@ function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
     setBusy(true);
     const { error } = await supabase.rpc("adopt_pet", { _species_id: picking.id, _nickname: name.trim() });
     setBusy(false);
-    if (error) { flash(error.message.includes("not enough") ? "💰 星币不够，先去学习赚星币吧！" : "❌ "+error.message); return; }
-    flash("🎉 领养成功！欢迎回家");
+    if (error) { flash(error.message.includes("not enough") ? t("💰 星币不够，先去学习赚星币吧！") : "❌ "+error.message); return; }
+    flash(t("🎉 领养成功！欢迎回家"));
     setPicking(null); setName("");
     onAfter();
     setTab("home");
@@ -606,11 +607,11 @@ function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
               <div className="text-4xl group-hover:scale-110 transition">{s.emoji_baby}</div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold">{s.name_cn}</span>
+                  <span className="font-extrabold"><T>{s.name_cn}</T></span>
                   {Array.from({length: s.rarity}).map((_,i)=><Star key={i} className="size-3 fill-amber-500 text-amber-500" />)}
                 </div>
-                <div className="text-[11px] text-muted-foreground line-clamp-1">{s.description_cn}</div>
-                <div className="text-[11px] text-muted-foreground">{s.personality_cn}</div>
+                <div className="text-[11px] text-muted-foreground line-clamp-1"><T>{s.description_cn}</T></div>
+                <div className="text-[11px] text-muted-foreground"><T>{s.personality_cn}</T></div>
               </div>
               <div className={cn("flex shrink-0 items-center gap-1 rounded-full px-3 py-1.5 text-xs font-extrabold text-white shadow", can ? "bg-gradient-to-r from-purple-500 to-pink-500" : "bg-muted-foreground/40")}>
                 <Coins className="size-3" /> {s.adopt_cost}
@@ -624,14 +625,14 @@ function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center" onClick={()=>setPicking(null)}>
           <div onClick={e=>e.stopPropagation()} className="w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-2xl">
             <div className="text-6xl">{picking.emoji_egg}</div>
-            <h3 className="mt-2 text-lg font-extrabold">领养 {picking.name_cn}</h3>
-            <p className="mt-1 text-xs text-muted-foreground">{picking.description_cn}</p>
-            <input value={name} onChange={e=>setName(e.target.value)} maxLength={12} placeholder="给它起个名字…"
+            <h3 className="mt-2 text-lg font-extrabold"><T>领养</T> <T>{picking.name_cn}</T></h3>
+            <p className="mt-1 text-xs text-muted-foreground"><T>{picking.description_cn}</T></p>
+            <input value={name} onChange={e=>setName(e.target.value)} maxLength={12} placeholder={t("给它起个名字…")}
               className="mt-4 w-full rounded-xl border-2 border-border bg-background px-3 py-2 text-center text-sm font-bold outline-none focus:border-purple-500" />
             <div className="mt-4 flex gap-2">
-              <button onClick={()=>setPicking(null)} className="flex-1 rounded-full bg-secondary px-4 py-2 text-sm font-bold">取消</button>
+              <button onClick={()=>setPicking(null)} className="flex-1 rounded-full bg-secondary px-4 py-2 text-sm font-bold"><T>取消</T></button>
               <button onClick={adopt} disabled={busy || !name.trim() || balance<picking.adopt_cost} className="flex-1 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 text-sm font-extrabold text-white shadow disabled:opacity-50">
-                {busy ? "领养中…" : `花费 ${picking.adopt_cost} ⭐`}
+                {busy ? t("领养中…") : <><T>花费</T> {picking.adopt_cost} ⭐</>}
               </button>
             </div>
           </div>

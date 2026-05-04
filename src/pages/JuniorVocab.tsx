@@ -150,15 +150,18 @@ export default function JuniorVocab() {
 /* -------------------- HUB -------------------- */
 type WordMasteryRow = { word_id: string; mastery_level: number | null; due_at: string | null; interval_days: number | null };
 function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }: { words: Vocab[]; groups: Vocab[][]; grade: number; gradeNum: number; onPick: (m: Exclude<Mode, null>) => void; onPickGroup: (i: number) => void }) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
+  const levelName = gradeLabel(grade, zh);
   const [masteryMap, setMasteryMap] = useState<Map<string, WordMasteryRow>>(new Map());
   const [loadedMastery, setLoadedMastery] = useState(false);
   const games: { mode: Exclude<Mode, null>; icon: any; title: string; desc: string; gradient: string; badge?: string }[] = [
-    { mode: "classic", icon: Brain, title: "智能选义", desc: "听音辨义 · 自动接入复习曲线", gradient: "from-emerald-500 to-teal-500", badge: "推荐" },
-    { mode: "bento", icon: Sparkles, title: "单词便当", desc: "6×4 翻牌速配 · 训练反应力", gradient: "from-rose-500 to-orange-500" },
-    { mode: "quest", icon: Trophy, title: "单词任务", desc: "每日 3 词 · 多关卡彻底掌握一个词", gradient: "from-amber-500 to-yellow-500" },
-    { mode: "duel", icon: Zap, title: "单词对决", desc: "60 秒高速答题 · 拼连击拿高分", gradient: "from-fuchsia-500 to-pink-500" },
-    { mode: "match", icon: Music, title: "记忆翻牌", desc: "图音中英匹配 · 经典训练法", gradient: "from-sky-500 to-blue-500" },
-    { mode: "dict", icon: Keyboard, title: "听写挑战", desc: "听音拼词 · 锁定拼写细节", gradient: "from-violet-500 to-indigo-500" },
+    { mode: "classic", icon: Brain, title: zh ? "智能选义" : "Smart meanings", desc: zh ? "听音辨义 · 自动接入复习曲线" : "Listen, choose meaning · feeds the review curve", gradient: "from-emerald-500 to-teal-500", badge: zh ? "推荐" : "Recommended" },
+    { mode: "bento", icon: Sparkles, title: zh ? "单词便当" : "Word Bento", desc: zh ? "6×4 翻牌速配 · 训练反应力" : "6×4 fast matching · reaction training", gradient: "from-rose-500 to-orange-500" },
+    { mode: "quest", icon: Trophy, title: zh ? "单词任务" : "Word Quest", desc: zh ? "每日 3 词 · 多关卡彻底掌握一个词" : "3 words a day · multi-stage mastery", gradient: "from-amber-500 to-yellow-500" },
+    { mode: "duel", icon: Zap, title: zh ? "单词对决" : "Word Duel", desc: zh ? "60 秒高速答题 · 拼连击拿高分" : "60-second speed round · build combos", gradient: "from-fuchsia-500 to-pink-500" },
+    { mode: "match", icon: Music, title: zh ? "记忆翻牌" : "Memory Match", desc: zh ? "图音中英匹配 · 经典训练法" : "Match words and meanings · classic drill", gradient: "from-sky-500 to-blue-500" },
+    { mode: "dict", icon: Keyboard, title: zh ? "听写挑战" : "Dictation", desc: zh ? "听音拼词 · 锁定拼写细节" : "Hear it, spell it · lock in spelling", gradient: "from-violet-500 to-indigo-500" },
   ];
 
   useEffect(() => {
@@ -195,13 +198,13 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
       <BackLink to={`/junior/g/${grade}`} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回初{grade}
+        <ArrowLeft className="size-4" /> {zh ? `返回初${grade}` : `Back to ${levelName}`}
       </BackLink>
 
       <div className="mb-5">
-        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CORE VOCABULARY · 初{grade}</div>
-        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">初{grade}核心词汇</h1>
-        <p className="mt-1 text-xs text-muted-foreground">中考新课标 · 共 {words.length} 词 · 按 20 词一组系统学习</p>
+        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CORE VOCABULARY · {levelName}</div>
+        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">{zh ? `初${grade}核心词汇` : `${levelName} Core Vocabulary`}</h1>
+        <p className="mt-1 text-xs text-muted-foreground">{zh ? `中考新课标 · 共 ${words.length} 词 · 按 20 词一组系统学习` : `Junior curriculum · ${words.length} words · 20 words per group`}</p>
       </div>
 
       {/* 学习进度总览（高考同款风格，复用 junior_word_mastery） */}
@@ -209,13 +212,13 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <BarChart3 className="size-4 text-fuchsia-600" />
-            <h3 className="text-sm font-bold text-foreground">我的词汇掌握度</h3>
+            <h3 className="text-sm font-bold text-foreground">{zh ? "我的词汇掌握度" : "My vocabulary mastery"}</h3>
           </div>
-          <span className="text-[10px] text-muted-foreground">FSRS 遗忘曲线 · 多维评判</span>
+          <span className="text-[10px] text-muted-foreground">{zh ? "FSRS 遗忘曲线 · 多维评判" : "FSRS review curve · multi-signal scoring"}</span>
         </div>
         <div className="mt-3 flex items-end gap-2">
           <div className="text-3xl font-extrabold leading-none text-fuchsia-600">{mastered.toLocaleString()}</div>
-          <div className="pb-1 text-xs text-muted-foreground">/ {total.toLocaleString()} 词彻底掌握 ({masteredPct}%)</div>
+          <div className="pb-1 text-xs text-muted-foreground">/ {total.toLocaleString()} {zh ? `词彻底掌握 (${masteredPct}%)` : `words mastered (${masteredPct}%)`}</div>
         </div>
         <div className="mt-3 flex h-2.5 w-full overflow-hidden rounded-full bg-muted">
           <div className="bg-gradient-to-r from-fuchsia-500 to-pink-500" style={{ width: `${total ? (mastered / total) * 100 : 0}%` }} />

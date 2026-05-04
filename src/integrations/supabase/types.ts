@@ -4795,6 +4795,104 @@ export type Database = {
         }
         Relationships: []
       }
+      tutor_conversations: {
+        Row: {
+          context: string
+          created_at: string
+          hint_level: number
+          id: string
+          language: string
+          question_ref: string
+          question_snapshot: Json
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          context: string
+          created_at?: string
+          hint_level?: number
+          id?: string
+          language?: string
+          question_ref: string
+          question_snapshot?: Json
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          context?: string
+          created_at?: string
+          hint_level?: number
+          id?: string
+          language?: string
+          question_ref?: string
+          question_snapshot?: Json
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      tutor_messages: {
+        Row: {
+          content: string
+          conversation_id: string
+          created_at: string
+          hint_level: number | null
+          id: string
+          role: string
+          tokens_in: number | null
+          tokens_out: number | null
+          user_id: string
+        }
+        Insert: {
+          content: string
+          conversation_id: string
+          created_at?: string
+          hint_level?: number | null
+          id?: string
+          role: string
+          tokens_in?: number | null
+          tokens_out?: number | null
+          user_id: string
+        }
+        Update: {
+          content?: string
+          conversation_id?: string
+          created_at?: string
+          hint_level?: number | null
+          id?: string
+          role?: string
+          tokens_in?: number | null
+          tokens_out?: number | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tutor_messages_conversation_id_fkey"
+            columns: ["conversation_id"]
+            isOneToOne: false
+            referencedRelation: "tutor_conversations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      tutor_usage_daily: {
+        Row: {
+          day: string
+          message_count: number
+          user_id: string
+        }
+        Insert: {
+          day?: string
+          message_count?: number
+          user_id: string
+        }
+        Update: {
+          day?: string
+          message_count?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_badges: {
         Row: {
           badge_code: string

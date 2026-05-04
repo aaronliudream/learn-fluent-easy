@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Lock, GraduationCap } from "lucide-react";
+import { Lock } from "lucide-react";
 import { LEVELS } from "@/data/course";
 import { PageHeader } from "@/components/PageHeader";
 import { useT } from "@/i18n/T";
@@ -8,21 +8,39 @@ const Levels = () => {
   const t = useT();
   const groups = [
     {
+      key: "beginner",
       title: t("入门"),
+      chip: "BEGINNER",
+      tagline: t("打好基础"),
+      persona: t("基础使用者"),
       subtitle: "A1 – A2",
       desc: t("适合零基础或刚起步的学习者：掌握 1500+ 高频词、基本语法与日常对话，能听懂、读懂并写出简单句子。"),
+      chipBg: "bg-sky-100 text-sky-700",
+      cardBg: "bg-sky-50/70",
       ids: [1, 2],
     },
     {
+      key: "intermediate",
       title: t("进阶"),
+      chip: "INTERMEDIATE",
+      tagline: t("自如表达"),
+      persona: t("独立使用者"),
       subtitle: "B1 – B2",
       desc: t("适合有一定基础、想流利表达的学习者：扩展到 4000+ 词汇，能就熟悉话题自如交流、读懂文章并写出连贯段落。"),
+      chipBg: "bg-emerald-100 text-emerald-700",
+      cardBg: "bg-emerald-50/70",
       ids: [3, 4],
     },
     {
+      key: "advanced",
       title: t("高阶"),
+      chip: "ADVANCED",
+      tagline: t("精通流利表达"),
+      persona: t("精通使用者"),
       subtitle: "C1 – C2",
       desc: t("适合冲刺学术、职场与考试的学习者：精通 8000+ 词汇与复杂语法，能就专业话题深入讨论、写作和演讲，接近母语水平。"),
+      chipBg: "bg-violet-100 text-violet-700",
+      cardBg: "bg-violet-50/70",
       ids: [5, 6],
     },
   ];
@@ -34,66 +52,53 @@ const Levels = () => {
         back="/"
       />
 
-      <div className="space-y-8">
+      <div className="space-y-5">
         {groups.map((g) => {
           const items = g.ids
             .map((id) => LEVELS.find((l) => l.id === id))
             .filter(Boolean) as typeof LEVELS;
           if (items.length === 0) return null;
           return (
-            <section key={g.title}>
-              <header className="mb-3 border-b border-border/50 pb-2">
-                <div className="flex items-baseline justify-between">
-                  <h2 className="text-lg font-extrabold tracking-tight text-foreground md:text-xl">
-                    {g.title}
-                  </h2>
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                    {g.subtitle}
-                  </span>
-                </div>
-                <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground md:text-sm">
-                  {g.desc}
-                </p>
-              </header>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {items.map((lv) => {
-          const allLessons = lv.units.flatMap((u) => u.lessons);
-          const done = allLessons.filter((l) => l.status === "done").length;
-          const pct = allLessons.length ? Math.round((done / allLessons.length) * 100) : 0;
-          const locked = !!lv.locked;
-          return (
-            <Link
-              key={lv.id}
-              to={`/level/${lv.id}`}
-              className={`group relative overflow-hidden rounded-2xl ${lv.gradient} p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(250_50%_30%/0.5)]`}
+            <section
+              key={g.key}
+              className={`rounded-2xl ${g.cardBg} p-4 shadow-sm md:p-5`}
             >
-              <span className="pointer-events-none absolute -right-12 -top-14 size-44 rounded-full bg-white/15 blur-2xl" />
-              <div className="relative flex items-start justify-between gap-4">
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] opacity-80">
-                    <GraduationCap className="size-3.5" /> {t("级别")} {lv.id}
-                    {locked && <Lock className="size-3" />}
-                  </div>
-                  <div className="mt-1 text-2xl font-extrabold leading-tight">{lv.name}</div>
-                  <div className="mt-1 text-xs opacity-90">
-                    {locked
-                      ? t("内容更新中")
-                      : `${lv.units.length} ${t("单元")} · ${allLessons.length} ${t("课程")}`}
-                  </div>
+              <div className="flex items-start gap-4">
+                <div className="min-w-0 flex-1">
+                  <span className={`inline-block rounded-md px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-[0.18em] ${g.chipBg}`}>
+                    {g.chip}
+                  </span>
+                  <h2 className="mt-2 text-lg font-extrabold leading-tight tracking-tight text-foreground md:text-xl">
+                    {g.tagline}
+                  </h2>
+                  <p className="mt-0.5 text-xs text-muted-foreground md:text-sm">
+                    {g.subtitle} — {g.persona}
+                  </p>
                 </div>
-                <div className="flex shrink-0 flex-col items-end gap-2">
-                  {!locked && (
-                    <div className="rounded-full bg-white/20 px-2.5 py-1 text-[11px] font-bold backdrop-blur-sm">
-                      {pct}%
-                    </div>
-                  )}
-                  <ArrowRight className="size-5 opacity-80 transition-transform group-hover:translate-x-1" />
+                <div className="flex shrink-0 items-center gap-2">
+                  {items.map((lv) => {
+                    const locked = !!lv.locked;
+                    return (
+                      <Link
+                        key={lv.id}
+                        to={`/level/${lv.id}`}
+                        aria-label={`${t("级别")} ${lv.id}`}
+                        className={`relative grid size-11 place-items-center rounded-full ${lv.gradient} text-base font-extrabold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg md:size-12`}
+                      >
+                        {lv.id}
+                        {locked && (
+                          <span className="absolute -right-1 -top-1 grid size-4 place-items-center rounded-full bg-white text-foreground shadow">
+                            <Lock className="size-2.5" />
+                          </span>
+                        )}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
-            </Link>
-          );
-                })}
-              </div>
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground md:text-sm">
+                {g.desc}
+              </p>
             </section>
           );
         })}

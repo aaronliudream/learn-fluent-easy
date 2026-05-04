@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Mic, BookOpen, Flame, GraduationCap, Sparkles, Globe2, Quote, BookMarked, Star } from "lucide-react";
+import { ArrowRight, Mic, BookOpen, Flame, GraduationCap, Sparkles, Globe2, Quote, BookMarked, Star, Gamepad2, Heart, Trophy, Check, MessageCircle } from "lucide-react";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { T } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
+import SpeakingDemo from "@/components/SpeakingDemo";
 
 /**
  * Polished English copy keyed by the Chinese source. When the user's

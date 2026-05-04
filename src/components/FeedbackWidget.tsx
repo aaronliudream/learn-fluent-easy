@@ -249,9 +249,6 @@ export default function FeedbackWidget() {
               <p className="mt-2 text-center text-[11px] font-semibold text-rose-500">{qIssue}</p>
             )}
 
-            <p className="mt-2 text-center text-[10px] text-muted-foreground">
-              <T>📜 含色情、暴力、毒品或与英语学习无关的内容会被自动过滤</T>
-            </p>
           </div>
         </div>
       )}

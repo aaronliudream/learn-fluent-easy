@@ -178,6 +178,9 @@ const Auth = () => {
         }, { onConflict: "user_id" });
       }
       toast.success(t("注册成功！正在登录…"));
+      import("@/lib/funnel").then(m =>
+        m.trackFunnel("signup", "completed", { method: "email", age_band: emailAgeBand })
+      );
       navigate("/", { replace: true });
     }
   };

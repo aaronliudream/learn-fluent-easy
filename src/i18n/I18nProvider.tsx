@@ -250,6 +250,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const dynTimerRef = useRef<number | null>(null);
   const dynEnQueueRef = useRef<Set<string>>(new Set());
   const dynEnTimerRef = useRef<number | null>(null);
+  const lastManualLangAtRef = useRef(0);
 
   // Load catalog + dyn cache when language changes.
   useEffect(() => {
@@ -303,6 +304,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   }, [lang]);
 
   const setLang = useCallback((l: LangCode) => {
+    lastManualLangAtRef.current = Date.now();
     setLangState(l);
     try { localStorage.setItem(STORAGE_LANG, l); } catch { /* ignore */ }
     supabase.auth.getUser().then(({ data }) => {
@@ -325,6 +327,10 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
         .maybeSingle();
       const profileLang = (data as any)?.preferred_language;
       if (isSupportedLang(profileLang) && profileLang !== lang) {
+        if (Date.now() - lastManualLangAtRef.current < 5000) {
+          await supabase.from("profiles").update({ preferred_language: lang } as never).eq("user_id", uid);
+          return;
+        }
         setLangState(profileLang);
         try { localStorage.setItem(STORAGE_LANG, profileLang); } catch { /* ignore */ }
       } else if (!profileLang && lang) {

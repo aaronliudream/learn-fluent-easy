@@ -27,7 +27,6 @@ const Account = lazy(() => import("./pages/Account.tsx"));
 const Privacy = lazy(() => import("./pages/Privacy.tsx"));
 const Terms = lazy(() => import("./pages/Terms.tsx"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer.tsx"));
-const AdminFeedback = lazy(() => import("./pages/admin/AdminFeedback.tsx"));
 const Scenes = lazy(() => import("./pages/Scenes.tsx"));
 const ScenesCategory = lazy(() => import("./pages/ScenesCategory.tsx"));
 const ScenesPlay = lazy(() => import("./pages/ScenesPlay.tsx"));

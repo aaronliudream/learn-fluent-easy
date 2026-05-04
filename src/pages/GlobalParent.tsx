@@ -78,6 +78,7 @@ export default function GlobalParent() {
   const [data, setData] = useState<Dashboard | null>(null);
   const [coins, setCoins] = useState(0);
   const [streak, setStreak] = useState(0);
+  const [slangAcc, setSlangAcc] = useState<{ correct: number; total: number } | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -93,6 +94,15 @@ export default function GlobalParent() {
       if (dash.data) setData(dash.data as unknown as Dashboard);
       if (c.data) setCoins((c.data as any).balance ?? 0);
       if (s.data?.[0]) setStreak((s.data[0] as any).current_streak ?? 0);
+      const { data: sm } = await supabase
+        .from("slang_mastery")
+        .select("correct_count,wrong_count")
+        .eq("user_id", uid);
+      if (sm) {
+        const correct = sm.reduce((a: number, r: any) => a + (r.correct_count ?? 0), 0);
+        const wrong = sm.reduce((a: number, r: any) => a + (r.wrong_count ?? 0), 0);
+        setSlangAcc({ correct, total: correct + wrong });
+      }
       setLoading(false);
     })();
   }, []);
@@ -277,6 +287,44 @@ export default function GlobalParent() {
                 </div>
               );
             })}
+        </div>
+      </section>
+      )}
+
+      {/* 各主题正确率 */}
+      {hasAnyActivity && (
+      <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
+        <div className="mb-3 flex items-center gap-1 text-sm font-extrabold">
+          <Target className="size-4 text-emerald-500" /> <T>各主题正确率</T>
+          <span className="ml-1 text-[10px] font-normal text-muted-foreground">· <T>基于实际答题</T></span>
+        </div>
+        <div className="space-y-2">
+          {(() => {
+            const rows: { key: string; label: string; correct: number; total: number; color: string }[] = [];
+            if (slangAcc && slangAcc.total > 0) rows.push({ key: "slang", label: t("Slang & Idioms"), correct: slangAcc.correct, total: slangAcc.total, color: "from-fuchsia-500 to-purple-500" });
+            if (d.primary.sessions > 0) rows.push({ key: "primary", label: t("小学 / Primary"), correct: Math.round(d.primary.sessions * d.primary.accuracy), total: d.primary.sessions, color: "from-sky-500 to-cyan-500" });
+            if (d.junior.sessions > 0) rows.push({ key: "junior", label: t("初中 / Lower Secondary"), correct: Math.round(d.junior.sessions * d.junior.accuracy), total: d.junior.sessions, color: "from-violet-500 to-indigo-500" });
+            if (d.gaokao.attempts > 0) rows.push({ key: "gaokao", label: t("高中 / Upper Secondary"), correct: d.gaokao.correct, total: d.gaokao.attempts, color: "from-rose-500 to-orange-500" });
+            if (rows.length === 0) {
+              return <div className="py-4 text-center text-xs text-muted-foreground"><T>还没有可统计的答题记录</T></div>;
+            }
+            return rows.map(r => {
+              const pct = Math.round((r.correct / Math.max(1, r.total)) * 100);
+              return (
+                <div key={r.key}>
+                  <div className="flex items-center justify-between text-xs font-bold">
+                    <span>{r.label}</span>
+                    <span className={cn(pct < 60 ? "text-rose-600" : pct < 80 ? "text-amber-600" : "text-emerald-600")}>
+                      {r.correct}/{r.total} · {pct}%
+                    </span>
+                  </div>
+                  <div className="mt-1 h-2 overflow-hidden rounded-full bg-secondary">
+                    <div className={cn("h-full bg-gradient-to-r", r.color)} style={{ width: `${Math.max(2, pct)}%` }} />
+                  </div>
+                </div>
+              );
+            });
+          })()}
         </div>
       </section>
       )}

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { useSearchParams } from "react-router-dom";
-import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap, Brain, Headphones, Music, Keyboard, BarChart3 } from "lucide-react";
+import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
@@ -26,7 +26,7 @@ type Vocab = {
   freq_rank: number | null;
 };
 
-type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict";
+type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs";
 const GROUP_SIZE = 20;
 
 export default function JuniorVocab() {
@@ -73,6 +73,24 @@ export default function JuniorVocab() {
   const groupIdx = Number.isFinite(groupParam) ? groupParam - 1 : -1;
   const activePool = groupIdx >= 0 && groupIdx < groups.length ? groups[groupIdx] : words;
 
+  // For SRS mode we filter the pool to only words that are due now (per junior_word_mastery)
+  const [srsPool, setSrsPool] = useState<Vocab[] | null>(null);
+  useEffect(() => {
+    if (mode !== "srs") { setSrsPool(null); return; }
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) { setSrsPool([]); return; }
+      const { data } = await supabase
+        .from("junior_word_mastery")
+        .select("word_id,due_at")
+        .eq("user_id", user.id)
+        .lte("due_at", new Date().toISOString())
+        .limit(200);
+      const dueIds = new Set((data ?? []).map((r: any) => r.word_id));
+      setSrsPool(words.filter((w) => dueIds.has(w.id)));
+    })();
+  }, [mode, words]);
+
   const exit = () => {
     const np = new URLSearchParams(params);
     np.delete("mode");
@@ -89,6 +107,24 @@ export default function JuniorVocab() {
     );
   }
 
+  if (mode === "srs") {
+    if (srsPool === null) {
+      return <main className="mx-auto min-h-screen max-w-3xl px-5 py-8"><div className="flex items-center justify-center py-20 text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> 加载到期单词…</div></main>;
+    }
+    if (srsPool.length === 0) {
+      return (
+        <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+          <button onClick={exit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</button>
+          <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
+            <Trophy className="mx-auto size-12 text-amber-500" />
+            <h3 className="mt-2 text-xl font-extrabold">今日没有到期单词 🎉</h3>
+            <p className="mt-1 text-sm text-muted-foreground">先去清单里学一组新词，系统会按艾宾浩斯曲线自动安排复习。</p>
+          </div>
+        </main>
+      );
+    }
+    return <ClassicQuiz pool={srsPool} onExit={exit} />;
+  }
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
   if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
   if (mode === "duel") return <WordDuel pool={activePool} onExit={exit} />;

@@ -12,8 +12,8 @@ const ALL_TRACKS = [
   {
     to: "/levels",
     cefr: "CEFR Pre-A1 — A2",
-    zh: "零基础起步",
-    en: "Beginner Track",
+    zh: "系统学习课程",
+    en: "Structured Course",
     gradient: "linear-gradient(160deg, #F47C45 0%, #F59E0B 100%)",
     btnTextColor: "#F47C45",
     chinaOnly: false,

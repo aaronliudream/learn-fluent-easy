@@ -471,6 +471,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     return interpolate(tmpl, vars);
   }, [catalog]);
 
+  const translateImmediately = useCallback((text: string) => {
+    if (lang === "en") return englishFallbackFor(text);
+    return "";
+  }, [lang]);
+
   const flushDynQueue = useCallback(async (l: LangCode) => {
     const toSend = Array.from(dynQueueRef.current);
     dynQueueRef.current.clear();
@@ -566,13 +571,13 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // empty string so the UI shows nothing for one tick instead of leaking
     // Chinese. The component re-renders as soon as the translation lands
     // (dynVersion bumps).
-    if (CJK_TEXT_RE.test(text)) return "";
+    if (CJK_TEXT_RE.test(text)) return translateImmediately(text);
     // Source string contains no CJK — safe to show as-is while we wait
     // (e.g. an English helper string being translated into Spanish).
     return localizeProtagonist(text, lang);
   // dynVersion is intentionally a dep: when a translation batch resolves
   // we want every memoised consumer to recompute against the new cache.
-  }, [lang, flushDynQueue, dynVersion]);
+  }, [lang, flushDynQueue, translateImmediately, dynVersion]);
 
   const tEn = useCallback((key: StringKey, vars?: Record<string, string | number>) => {
     const tmpl = EN[key] ?? key;

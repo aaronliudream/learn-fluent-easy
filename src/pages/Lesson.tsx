@@ -9,6 +9,7 @@ import {
   Headphones,
   HelpCircle,
   MessageCircle,
+  MessageCircleQuestion,
   Mic,
   Pencil,
   RefreshCw,
@@ -56,6 +57,7 @@ import {
 import { AITalkDialog } from "@/components/AITalkDialog";
 import { Phone } from "lucide-react";
 import { fireConfetti } from "@/lib/feedback";
+import TutorChat from "@/components/tutor/TutorChat";
 
 const STEP_ICONS = {
   BookOpen,

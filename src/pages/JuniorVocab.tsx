@@ -653,6 +653,8 @@ function MemoryMatchWrapper({ pool, onExit }: { pool: Vocab[]; onExit: () => voi
 
 /* -------------------- DICTATION -------------------- */
 function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
   const queue = useMemo(() => shuffle(pool.filter((v) => v.word && !/[\/\s]/.test(v.word))).slice(0, 15), [pool]);
   const [idx, setIdx] = useState(0);
   const [input, setInput] = useState("");
@@ -662,7 +664,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
   useEffect(() => { if (cur) speak(cur.word); }, [cur?.id]);
 
-  if (!cur) return <main className="p-8"><p className="text-sm text-muted-foreground">暂无可用单词</p></main>;
+  if (!cur) return <main className="p-8"><p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p></main>;
 
   if (idx >= queue.length) {
     const pct = Math.round((score.correct / Math.max(1, score.total)) * 100);
@@ -670,9 +672,9 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
         <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
           <Headphones className="mx-auto size-12 text-primary" />
-          <h3 className="mt-2 text-xl font-extrabold">听写完成</h3>
-          <p className="mt-1 text-sm text-muted-foreground">{score.correct} / {score.total}（{pct}%）</p>
-          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">返回中心</button>
+          <h3 className="mt-2 text-xl font-extrabold">{zh ? "听写完成" : "Dictation complete"}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{zh ? `${score.correct} / ${score.total}（${pct}%）` : `${score.correct} / ${score.total} correct (${pct}%)`}</p>
+          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">{zh ? "返回中心" : "Back to center"}</button>
         </div>
       </main>
     );
@@ -695,18 +697,18 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回游戏中心
+        <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
       </button>
       <div className="space-y-4">
         <div className="flex items-center justify-between text-xs text-muted-foreground">
-          <span>第 {idx + 1} / {queue.length}</span>
+          <span>{zh ? `第 ${idx + 1} / ${queue.length}` : `${idx + 1} / ${queue.length}`}</span>
           <span className="font-bold">✅ {score.correct} / {score.total}</span>
         </div>
         <div className="rounded-3xl border border-border/60 bg-card p-6 text-center">
           <button onClick={() => speak(cur.word)} className="mx-auto grid size-16 place-items-center rounded-full bg-primary text-primary-foreground">
             <Volume2 className="size-7" />
           </button>
-          <p className="mt-3 text-sm text-muted-foreground">中文：{cur.meaning_cn}</p>
+          <p className="mt-3 text-sm text-muted-foreground">{zh ? `中文：${cur.meaning_cn}` : meaningForUi(cur, zh)}</p>
         </div>
         <div className="space-y-2">
           <input
@@ -715,7 +717,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => { if (e.key === "Enter") submit(); }}
             disabled={!!feedback}
-            placeholder="拼写单词后回车"
+            placeholder={zh ? "拼写单词后回车" : "Type the spelling, then press Enter"}
             className={cn(
               "w-full rounded-2xl border-2 px-4 py-3 text-center text-lg font-extrabold tracking-wide outline-none transition",
               feedback === "right" && "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40",
@@ -724,10 +726,10 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
             )}
           />
           {feedback === "wrong" && (
-            <p className="text-center text-xs font-bold text-rose-600">正确拼写：{cur.word}</p>
+            <p className="text-center text-xs font-bold text-rose-600">{zh ? `正确拼写：${cur.word}` : `Correct spelling: ${cur.word}`}</p>
           )}
           <button onClick={submit} disabled={!!feedback || !input.trim()} className="w-full rounded-2xl bg-primary py-3 text-sm font-bold text-primary-foreground disabled:opacity-50">
-            提交
+            {zh ? "提交" : "Submit"}
           </button>
         </div>
       </div>

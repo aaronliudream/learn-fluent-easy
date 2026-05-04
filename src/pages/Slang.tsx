@@ -433,7 +433,17 @@ const Slang = () => {
   useEffect(() => {
     if (!revealed) return;
     const t = window.setTimeout(() => {
-      actionBarRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+      const el = actionBarRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      // 如果 Next 按钮已经在视口内，就不动；否则把页面"往上滑一点"，
+      // 让按钮出现在视口下方约 1/4 处（而不是顶到屏幕最底部）。
+      const targetY = vh * 0.75;
+      const delta = rect.bottom - targetY;
+      if (Math.abs(delta) > 8) {
+        window.scrollBy({ top: delta, behavior: "smooth" });
+      }
     }, 120);
     return () => window.clearTimeout(t);
   }, [revealed]);

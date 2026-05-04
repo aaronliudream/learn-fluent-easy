@@ -53,7 +53,10 @@ const Levels = () => {
       />
 
       <div className="space-y-5">
-        {groups.map((g) => {
+        {[...groups].reverse().map((g, idx) => {
+          // idx 0 = Advanced (top, narrowest), 2 = Beginner (bottom, widest)
+          const widths = ["w-[70%]", "w-[85%]", "w-full"];
+          const aligns = ["mx-auto", "mr-auto", "ml-auto"];
           const items = g.ids
             .map((id) => LEVELS.find((l) => l.id === id))
             .filter(Boolean) as typeof LEVELS;
@@ -61,7 +64,7 @@ const Levels = () => {
           return (
             <section
               key={g.key}
-              className={`rounded-2xl ${g.cardBg} p-4 shadow-sm md:p-5`}
+              className={`rounded-2xl ${g.cardBg} ${widths[idx]} ${aligns[idx]} p-4 shadow-sm md:p-5`}
             >
               <div className="flex items-start gap-4">
                 <div className="min-w-0 flex-1">

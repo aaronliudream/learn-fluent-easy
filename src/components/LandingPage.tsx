@@ -41,10 +41,10 @@ export default function LandingPage() {
           <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-[#1F3A2E]/15 bg-white/60 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/70">
             <Globe2 className="size-3.5" /> <T>已覆盖 30+ 个国家的学员</T>
           </div>
-          <h1 className="font-serif text-5xl font-medium leading-[1.05] tracking-tight md:text-7xl">
-            <T>像母语者一样</T>
+          <h1 className="text-5xl font-extrabold leading-[1.15] tracking-tight md:text-7xl md:leading-[1.1]" style={{ fontFamily: '"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif' }}>
+            <T>开口说英语</T>
             <br className="hidden md:block" />
-            <span className="italic text-[#E8743C]"> <T>学习真实的英语。</T></span>
+            <span className="text-[#E8743C]"> <T>就像在和朋友聊天。</T></span>
           </h1>
           <p className="mx-auto mt-7 max-w-xl text-pretty text-base leading-relaxed text-[#1F3A2E]/75 md:text-lg">
             <T>从 CEFR 水平测试到俚语、真实场景对话，再到 AI 口语陪练 —— 一条结构化路径，从孩子到成人都适用。</T>

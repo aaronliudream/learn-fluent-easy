@@ -1080,6 +1080,27 @@ const Lesson = () => {
                       💡 {nativeText(q.explain)}
                     </p>
                   )}
+                  {reveal && (
+                    <div className="mt-3">
+                      <button
+                        onClick={() => setTutorReq({
+                          refId: `lesson-${levelId}-${unitId}-${lessonId}-quiz-${i}`,
+                          snapshot: {
+                            type: "quiz",
+                            question: q.q,
+                            options: q.options,
+                            correct_index: q.answer,
+                            user_index: picked,
+                            is_correct: picked === q.answer,
+                            explain: q.explain,
+                          },
+                        })}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
+                      >
+                        <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
+                      </button>
+                    </div>
+                  )}
                 </div>
               );
             })}

@@ -4,6 +4,7 @@ import { Settings2, X as XIcon } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { useCompanionMode, type CompanionMode } from "@/lib/companionPrefs";
+import { T, useT } from "@/i18n/T";
 
 type Pet = { id: string; nickname: string; stage: number; level: number; exp: number; hunger: number; mood: number; species_id: string; equipped_skin_id?: string | null };
 type Species = { id: string; emoji_egg: string; emoji_baby: string; emoji_adult: string; emoji_legend: string };
@@ -22,6 +23,7 @@ const HIDDEN_KEY = "bme_companion_hidden";
  * - Honors prefers-reduced-motion (WCAG 2.2.2).
  */
 export function FloatingPet() {
+  const t = useT();
   const { mode, setMode, animate, showHungerAlert } = useCompanionMode();
   const [pet, setPet] = useState<Pet | null>(null);
   const [sp, setSp] = useState<Species | null>(null);
@@ -92,7 +94,7 @@ export function FloatingPet() {
     return (
       <button
         onClick={() => { localStorage.removeItem(HIDDEN_KEY); setHidden(false); }}
-        aria-label="Show learning companion"
+        aria-label={t("显示学习伙伴")}
         className="fixed bottom-20 right-3 z-40 grid size-9 place-items-center rounded-full border border-border/60 bg-card/80 text-base shadow-md backdrop-blur transition hover:scale-105 lg:bottom-6 lg:right-6"
       >
         🐾
@@ -107,11 +109,11 @@ export function FloatingPet() {
     openSettings && (
       <div
         role="dialog"
-        aria-label="Companion settings"
+        aria-label={t("伙伴设置")}
         className="absolute bottom-full right-0 mb-2 w-56 rounded-2xl border border-border bg-card p-3 text-left shadow-2xl"
         onClick={(e) => e.preventDefault()}
       >
-        <div className="mb-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">伙伴模式</div>
+        <div className="mb-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><T>伙伴模式</T></div>
         <div className="space-y-1">
           {([
             ["quiet", "🤫 安静模式", "无动画、无主动提醒"],
@@ -126,8 +128,8 @@ export function FloatingPet() {
                 mode === k ? "bg-primary/15 font-bold text-primary" : "hover:bg-muted"
               )}
             >
-              <div>{label}</div>
-              <div className="text-[10px] font-normal text-muted-foreground">{hint}</div>
+              <div><T>{label}</T></div>
+              <div className="text-[10px] font-normal text-muted-foreground"><T>{hint}</T></div>
             </button>
           ))}
         </div>
@@ -136,7 +138,7 @@ export function FloatingPet() {
             onClick={(e) => { e.preventDefault(); hideAll(); }}
             className="flex w-full items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs text-muted-foreground transition hover:bg-muted"
           >
-            <XIcon className="size-3.5" /> 完全隐藏伙伴
+            <XIcon className="size-3.5" /> <T>完全隐藏伙伴</T>
           </button>
         </div>
       </div>
@@ -152,19 +154,19 @@ export function FloatingPet() {
         {SettingsPopover}
         <Link
           to="/pets"
-          aria-label={isGuest ? "Sign in to adopt your learning companion" : "Adopt your learning companion"}
+          aria-label={isGuest ? t("登录后领养你的学习伙伴") : t("领养你的学习伙伴")}
           className="group relative flex items-center gap-1.5 rounded-full border border-primary/30 bg-card/90 px-2.5 py-1.5 shadow-lg backdrop-blur transition hover:-translate-y-0.5"
         >
           <div className={cn("text-3xl leading-none transition", animate && "animate-companion-breathe group-hover:scale-110")}>
             {demoEmojis[demoTick]}
           </div>
           <div className="hidden flex-col text-left leading-tight sm:flex">
-            <span className="text-[10px] font-bold">遇见伙伴</span>
-            <span className="text-[10px] text-muted-foreground">Meet companion</span>
+            <span className="text-[10px] font-bold"><T>遇见伙伴</T></span>
+            <span className="text-[10px] text-muted-foreground"><T>Learning companion</T></span>
           </div>
           <button
             onClick={(e) => { e.preventDefault(); setOpenSettings((v) => !v); }}
-            aria-label="Companion settings"
+            aria-label={t("伙伴设置")}
             className="grid size-5 place-items-center rounded-full text-muted-foreground hover:bg-muted"
           >
             <Settings2 className="size-3" />
@@ -184,7 +186,7 @@ export function FloatingPet() {
       {SettingsPopover}
       <Link
         to="/pets"
-        aria-label={`Visit your companion ${pet.nickname}`}
+        aria-label={`${t("查看你的学习伙伴")} ${pet.nickname}`}
         className="group relative block"
       >
         <div className={cn(
@@ -209,7 +211,7 @@ export function FloatingPet() {
           </div>
           <button
             onClick={(e) => { e.preventDefault(); setOpenSettings((v) => !v); }}
-            aria-label="Companion settings"
+            aria-label={t("伙伴设置")}
             className="grid size-5 place-items-center rounded-full text-muted-foreground hover:bg-muted"
           >
             <Settings2 className="size-3" />
@@ -238,10 +240,10 @@ export function FloatingPet() {
             )}
             style={{ animation: animate ? "xp-burst 1.4s ease-out forwards" : undefined }}
           >
-            {react.kind === "flash" && `✨ +${react.coins} 闪光！`}
-            {react.kind === "correct" && `+${react.coins ?? 1} ⭐ 真棒`}
+            {react.kind === "flash" && `✨ +${react.coins} ${t("闪光！")}`}
+            {react.kind === "correct" && `+${react.coins ?? 1} ⭐ ${t("真棒")}`}
             {react.kind === "happy" && `🎉 +${react.coins ?? 5}`}
-            {react.kind === "wrong" && "没事，再来一次 💛"}
+            {react.kind === "wrong" && t("没事，再来一次 💛")}
           </div>
         )}
         {isWaiting && showHungerAlert && !react && (
@@ -249,7 +251,7 @@ export function FloatingPet() {
             "pointer-events-none absolute -top-7 right-2 rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-extrabold text-amber-800 shadow",
             animate && "animate-pulse"
           )}>
-            💛 在等你练习
+            💛 <T>在等你练习</T>
           </div>
         )}
       </Link>

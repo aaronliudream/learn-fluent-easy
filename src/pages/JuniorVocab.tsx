@@ -104,7 +104,9 @@ export default function JuniorVocab() {
 }
 
 /* -------------------- HUB -------------------- */
-function JuniorVocabHub({ words, grade, onPick }: { words: Vocab[]; grade: string; onPick: (m: Exclude<Mode, null>) => void }) {
+function JuniorVocabHub({ words, groups, grade, onPick, onPickGroup }: { words: Vocab[]; groups: Vocab[][]; grade: number; onPick: (m: Exclude<Mode, null>) => void; onPickGroup: (i: number) => void }) {
+  const [studiedCount, setStudiedCount] = useState(0);
+  const [dueCount, setDueCount] = useState(0);
   const games: { mode: Exclude<Mode, null>; icon: any; title: string; desc: string; gradient: string; badge?: string }[] = [
     { mode: "classic", icon: Brain, title: "智能选义", desc: "听音辨义 · 自动接入复习曲线", gradient: "from-emerald-500 to-teal-500", badge: "推荐" },
     { mode: "bento", icon: Sparkles, title: "单词便当", desc: "6×4 翻牌速配 · 训练反应力", gradient: "from-rose-500 to-orange-500" },
@@ -113,6 +115,28 @@ function JuniorVocabHub({ words, grade, onPick }: { words: Vocab[]; grade: strin
     { mode: "match", icon: Music, title: "记忆翻牌", desc: "图音中英匹配 · 经典训练法", gradient: "from-sky-500 to-blue-500" },
     { mode: "dict", icon: Keyboard, title: "听写挑战", desc: "听音拼词 · 锁定拼写细节", gradient: "from-violet-500 to-indigo-500" },
   ];
+
+  useEffect(() => {
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user || words.length === 0) return;
+      const ids = words.map((w) => w.id);
+      const { data: studied } = await supabase
+        .from("gaokao_user_mastery")
+        .select("item_id,due_at,next_review_at")
+        .eq("user_id", user.id)
+        .eq("item_type", "vocab")
+        .in("item_id", ids);
+      const now = Date.now();
+      setStudiedCount(studied?.length ?? 0);
+      setDueCount((studied ?? []).filter((m: any) => {
+        const due = m.due_at ?? m.next_review_at;
+        return due && new Date(due).getTime() <= now;
+      }).length);
+    })();
+  }, [words]);
+
+  const pct = Math.round((studiedCount / Math.max(1, words.length)) * 100);
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">

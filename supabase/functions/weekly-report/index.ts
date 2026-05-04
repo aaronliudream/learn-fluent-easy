@@ -23,6 +23,64 @@ function fmtRange(start: Date, end: Date): string {
   return `${start.toLocaleDateString('en-US', opt)} – ${end.toLocaleDateString('en-US', opt)}`
 }
 
+const LANG_NAME: Record<string, string> = {
+  zh: 'Simplified Chinese', 'zh-TW': 'Traditional Chinese', en: 'English',
+  es: 'Spanish', ja: 'Japanese', ko: 'Korean', fr: 'French', de: 'German',
+}
+
+async function generateAiInsights(
+  stats: { lessonsCompleted: number; vocabLearned: number; studyMinutes: number; quizCorrect: number; quizTotal: number; streak: number },
+  lang: string,
+  name: string,
+): Promise<{ highlight: string; suggestion: string } | null> {
+  const apiKey = Deno.env.get('LOVABLE_API_KEY')
+  if (!apiKey) return null
+  const langName = LANG_NAME[lang] || 'English'
+  const accuracy = stats.quizTotal > 0 ? Math.round((stats.quizCorrect / stats.quizTotal) * 100) : 0
+  try {
+    const resp = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'google/gemini-3-flash-preview',
+        messages: [
+          { role: 'system', content: `You write short, warm parent-facing weekly summaries about a child's English learning. Output ONLY in ${langName}. Be specific, concrete, encouraging. No emojis. Each field 1-2 sentences max.` },
+          { role: 'user', content: `Learner${name ? `: ${name}` : ''}\nThis week: ${stats.lessonsCompleted} lessons, ${stats.vocabLearned} new words, ${stats.studyMinutes} study minutes, ${accuracy}% quiz accuracy (${stats.quizTotal} questions), ${stats.streak}-day streak.\n\nReturn JSON with two fields: "highlight" (本周亮点) and "suggestion" (下周建议).` },
+        ],
+        tools: [{
+          type: 'function',
+          function: {
+            name: 'weekly_insights',
+            description: 'Return weekly highlight and next-week suggestion.',
+            parameters: {
+              type: 'object',
+              properties: {
+                highlight: { type: 'string', description: 'This week highlight, 1-2 sentences.' },
+                suggestion: { type: 'string', description: 'Next week suggestion, 1-2 sentences, actionable.' },
+              },
+              required: ['highlight', 'suggestion'],
+              additionalProperties: false,
+            },
+          },
+        }],
+        tool_choice: { type: 'function', function: { name: 'weekly_insights' } },
+      }),
+    })
+    if (!resp.ok) { console.warn('ai insights failed', resp.status); return null }
+    const j = await resp.json()
+    const args = j?.choices?.[0]?.message?.tool_calls?.[0]?.function?.arguments
+    if (!args) return null
+    const parsed = JSON.parse(args)
+    if (typeof parsed?.highlight === 'string' && typeof parsed?.suggestion === 'string') {
+      return { highlight: parsed.highlight, suggestion: parsed.suggestion }
+    }
+    return null
+  } catch (e) {
+    console.warn('ai insights error', e)
+    return null
+  }
+}
+
 async function aggregateForUser(
   supabase: ReturnType<typeof createClient>,
   userId: string,
@@ -111,6 +169,8 @@ Deno.serve(async (req) => {
     const accuracy = stats.quizTotal > 0 ? Math.round((stats.quizCorrect / stats.quizTotal) * 100) : 0
     const lang = (p.preferred_language as string) || 'zh'
 
+    const ai = await generateAiInsights(stats, lang, (p.display_name as string) || '')
+
     try {
       await supabase.functions.invoke('send-transactional-email', {
         body: {
@@ -127,6 +187,8 @@ Deno.serve(async (req) => {
             streak: stats.streak,
             weekRange,
             lang,
+            aiHighlight: ai?.highlight || '',
+            aiSuggestion: ai?.suggestion || '',
           },
         },
       })

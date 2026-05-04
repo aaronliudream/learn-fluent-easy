@@ -147,6 +147,7 @@ const Placement = () => {
   useEffect(() => {
     if (stage !== "test") return;
     import("@/lib/guestProgress").then(m => m.recordVisit("placement"));
+    import("@/lib/funnel").then(m => m.trackFunnel("placement", "started"));
   }, [stage]);
 
   // Per-question timer: resets whenever the current question changes; stops as
@@ -185,6 +186,14 @@ const Placement = () => {
     setResult(r);
     setStage("result");
     window.scrollTo({ top: 0 });
+    import("@/lib/funnel").then(m =>
+      m.trackFunnel("placement", "completed", {
+        cefr: r.cefr,
+        weighted: r.weighted,
+        ability: r.ability,
+        weakest: r.weakest,
+      })
+    );
   };
 
   const sectionGroups = useMemo(() => {

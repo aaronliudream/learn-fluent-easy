@@ -1,4 +1,4 @@
-import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Mic } from "lucide-react";
+import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Mic, Users } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -83,6 +83,11 @@ const Index = () => {
         <Button asChild variant="ghost" size="sm" className="mr-2 hidden md:inline-flex">
           <Link to="/account">
             <UserCog className="size-4" /> {t("nav.account")}
+          </Link>
+        </Button>
+        <Button asChild variant="ghost" size="sm" className="mr-2 hidden md:inline-flex">
+          <Link to="/parent">
+            <Users className="size-4" /> <T>家长 / 老师</T>
           </Link>
         </Button>
         {user ? (

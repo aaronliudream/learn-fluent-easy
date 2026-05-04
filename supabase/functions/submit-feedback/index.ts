@@ -28,6 +28,67 @@ function hardCheck(text: string): { ok: boolean; matched?: string } {
   return { ok: true }
 }
 
+/** Count meaningful tokens: each CJK char = 1 token, each English/number word = 1 token. */
+function countTokens(text: string): number {
+  const cjk = (text.match(/[\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]/g) ?? []).length
+  const words = (text.match(/[A-Za-z0-9]+/g) ?? []).length
+  return cjk + words
+}
+
+/** Heuristic quality check — reject obvious gibberish / copy-paste / spam.
+ *  Returns ok:false with a reason when the message looks invalid. */
+function qualityCheck(raw: string): { ok: boolean; reason?: string } {
+  const text = raw.trim()
+  if (!text) return { ok: false, reason: '内容不能为空' }
+
+  // 1) Minimum meaningful length: ≥10 tokens (CJK chars + English words)
+  const tokens = countTokens(text)
+  if (tokens < 10) {
+    return { ok: false, reason: '反馈太短啦，请至少写 10 个字（或 10 个英文单词）描述清楚 🙏' }
+  }
+
+  // 2) Reject if too few unique characters (e.g. "aaaaaaaaaa", "哈哈哈哈哈哈哈哈哈哈")
+  const stripped = text.replace(/\s+/g, '')
+  const unique = new Set(stripped.toLowerCase()).size
+  if (stripped.length >= 10 && unique < Math.max(4, Math.floor(stripped.length * 0.2))) {
+    return { ok: false, reason: '内容看起来是重复字符，请认真描述你的反馈' }
+  }
+
+  // 3) Reject long runs of the same character (e.g. "aaaaaaa", "！！！！！！")
+  if (/(.)\1{6,}/.test(stripped)) {
+    return { ok: false, reason: '请不要重复相同字符，认真描述你的反馈' }
+  }
+
+  // 4) Reject the same word repeated (e.g. "test test test test test test test test test test")
+  const words = text.toLowerCase().match(/[a-z\u4e00-\u9fff]+/g) ?? []
+  if (words.length >= 6) {
+    const uniq = new Set(words).size
+    if (uniq <= Math.max(2, Math.floor(words.length * 0.25))) {
+      return { ok: false, reason: '内容看起来是重复粘贴，请认真描述你的反馈' }
+    }
+  }
+
+  // 5) Pure-Latin gibberish detection: long letter run with no vowels / no spaces
+  //    Skip when there are CJK chars (Chinese has no vowels concept).
+  const hasCJK = /[\u4e00-\u9fff]/.test(text)
+  if (!hasCJK) {
+    const letters = text.replace(/[^a-zA-Z]/g, '')
+    if (letters.length >= 15) {
+      const vowels = (letters.match(/[aeiouAEIOU]/g) ?? []).length
+      const ratio = vowels / letters.length
+      if (ratio < 0.15 || ratio > 0.75) {
+        return { ok: false, reason: '内容看起来不是正常文字，请用完整句子描述你的反馈' }
+      }
+      // No spaces at all in a long string → likely keyboard mash
+      if (letters.length >= 30 && !/\s/.test(text)) {
+        return { ok: false, reason: '请用完整的句子描述你的反馈（用空格分词）' }
+      }
+    }
+  }
+
+  return { ok: true }
+}
+
 async function aiModerate(message: string): Promise<{ is_relevant: boolean; is_safe: boolean; reason: string } | null> {
   const key = Deno.env.get('LOVABLE_API_KEY')
   if (!key) return null
@@ -104,8 +165,15 @@ Deno.serve(async (req) => {
     // Validation
     if (!['bug','suggestion','praise','other'].includes(category))
       return Response.json({ error: '请选择反馈类别' }, { status: 400, headers: corsHeaders })
-    if (message.length < 10 || message.length > 1000)
-      return Response.json({ error: '反馈内容请控制在 10–1000 字' }, { status: 400, headers: corsHeaders })
+    if (message.length > 1000)
+      return Response.json({ error: '反馈内容请控制在 1000 字以内' }, { status: 400, headers: corsHeaders })
+
+    // Quality check: minimum tokens + gibberish/spam detection
+    const quality = qualityCheck(message)
+    if (!quality.ok) {
+      return Response.json({ error: quality.reason }, { status: 400, headers: corsHeaders })
+    }
+
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
       return Response.json({ error: '邮箱格式不正确' }, { status: 400, headers: corsHeaders })
     if (rating != null && (!Number.isFinite(rating) || rating < 1 || rating > 5))

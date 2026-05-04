@@ -328,6 +328,16 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
           </div>
         </div>
       )}
+
+      {/* Friends entry */}
+      <Link to="/friends" className="mt-4 flex items-center gap-3 rounded-2xl border border-border bg-gradient-to-r from-fuchsia-500/10 to-amber-400/10 p-4 transition hover:-translate-y-0.5 hover:border-primary">
+        <div className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-amber-500 text-white text-xl">🐾</div>
+        <div className="flex-1 min-w-0">
+          <div className="text-sm font-extrabold">学习朋友圈 · Pet Friends</div>
+          <div className="text-[11px] text-muted-foreground">互访朋友的伙伴 · 送礼物 · 拍合影</div>
+        </div>
+        <span className="text-muted-foreground">→</span>
+      </Link>
       {active?.stage >= 1 && (
         <PetChat petName={active?.nickname || "小伙伴"} />
       )}

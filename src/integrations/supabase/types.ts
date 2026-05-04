@@ -4540,10 +4540,13 @@ export type Database = {
           last_weekly_report_at: string | null
           leaderboard_alias: string | null
           leaderboard_opt_in: boolean
+          learning_goal: string | null
+          onboarded_at: string | null
           parental_consent_at: string | null
           patience_score: number
           preferred_language: string | null
           recall_email_sent_at: string | null
+          self_level: string | null
           target_language: string
           updated_at: string
           user_id: string
@@ -4563,10 +4566,13 @@ export type Database = {
           last_weekly_report_at?: string | null
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
+          learning_goal?: string | null
+          onboarded_at?: string | null
           parental_consent_at?: string | null
           patience_score?: number
           preferred_language?: string | null
           recall_email_sent_at?: string | null
+          self_level?: string | null
           target_language?: string
           updated_at?: string
           user_id: string
@@ -4586,10 +4592,13 @@ export type Database = {
           last_weekly_report_at?: string | null
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
+          learning_goal?: string | null
+          onboarded_at?: string | null
           parental_consent_at?: string | null
           patience_score?: number
           preferred_language?: string | null
           recall_email_sent_at?: string | null
+          self_level?: string | null
           target_language?: string
           updated_at?: string
           user_id?: string

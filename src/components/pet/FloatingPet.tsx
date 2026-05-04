@@ -177,7 +177,7 @@ export function FloatingPet() {
           </div>
           <div className="hidden flex-col text-left leading-tight sm:flex">
             <span className="text-[10px] font-bold"><T>遇见伙伴</T></span>
-            <span className="text-[10px] text-muted-foreground"><T>Learning companion</T></span>
+            <span className="text-[10px] text-muted-foreground"><T>学习伙伴</T></span>
           </div>
           <button
             onClick={(e) => { e.preventDefault(); setOpenSettings((v) => !v); }}

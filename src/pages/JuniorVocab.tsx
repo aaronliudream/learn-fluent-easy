@@ -146,9 +146,38 @@ function JuniorVocabHub({ words, groups, grade, onPick, onPickGroup }: { words: 
 
       <div className="mb-5">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CORE VOCABULARY · 初{grade}</div>
-        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">初中核心词汇 · 游戏中心</h1>
-        <p className="mt-1 text-xs text-muted-foreground">中考新课标 · 共 {words.length} 词 · 6 种游戏化训练，彻底掌握每个单词</p>
+        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">初{grade}核心词汇</h1>
+        <p className="mt-1 text-xs text-muted-foreground">中考新课标 · 共 {words.length} 词 · 按 20 词一组系统学习</p>
       </div>
+
+      <section className="mb-5 grid grid-cols-3 gap-2">
+        <div className="rounded-2xl border border-border/60 bg-card p-3 text-center"><div className="text-lg font-black text-primary">{studiedCount}</div><div className="text-[10px] text-muted-foreground">已练习</div></div>
+        <div className="rounded-2xl border border-border/60 bg-card p-3 text-center"><div className="text-lg font-black text-primary">{pct}%</div><div className="text-[10px] text-muted-foreground">完成度</div></div>
+        <div className="rounded-2xl border border-border/60 bg-card p-3 text-center"><div className="text-lg font-black text-primary">{dueCount}</div><div className="text-[10px] text-muted-foreground">待复习</div></div>
+      </section>
+
+      <section className="mb-6">
+        <div className="mb-3 flex items-end justify-between gap-3">
+          <div>
+            <h2 className="text-base font-extrabold">单词清单</h2>
+            <p className="text-xs text-muted-foreground">和高中一样，先按清单逐组学习，再进入游戏强化。</p>
+          </div>
+          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">{groups.length} 组</span>
+        </div>
+        <div className="grid gap-2">
+          {groups.map((group, i) => (
+            <button key={i} onClick={() => onPickGroup(i)} className="rounded-2xl border border-border/60 bg-card p-3 text-left transition hover:border-primary/50 hover:bg-primary/5">
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="text-sm font-extrabold">第 {i + 1} 组 · {group.length} 词</div>
+                  <div className="mt-1 truncate text-xs text-muted-foreground">{group.slice(0, 5).map((w) => w.word).join(" · ")}</div>
+                </div>
+                <span className="shrink-0 rounded-full bg-secondary px-3 py-1 text-xs font-bold">打开</span>
+              </div>
+            </button>
+          ))}
+        </div>
+      </section>
 
       <div className="grid gap-3 sm:grid-cols-2">
         {games.map((g) => {

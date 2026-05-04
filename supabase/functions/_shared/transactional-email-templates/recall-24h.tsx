@@ -34,8 +34,8 @@ const STRINGS: Record<string, Dict> = {
   },
 }
 
-const RecallEmail = ({ name, lang = 'zh' }: RecallProps) => {
-  const s = STRINGS[lang] || STRINGS.zh
+const RecallEmail = ({ name, lang = 'en' }: RecallProps) => {
+  const s = STRINGS[lang] || STRINGS.en
   return (
     <Html lang={lang} dir="ltr">
       <Head />
@@ -59,11 +59,11 @@ const RecallEmail = ({ name, lang = 'zh' }: RecallProps) => {
 export const template = {
   component: RecallEmail,
   subject: (data: Record<string, any>) =>
-    (data?.lang === 'en')
-      ? 'Your learning companion is waiting 🌙'
-      : '你的学习伙伴在等你 🌙',
+    (data?.lang === 'zh' || data?.lang === 'zh-TW')
+      ? '你的学习伙伴在等你 🌙'
+      : 'Your learning companion is waiting 🌙',
   displayName: '24h recall — sign-up nudge',
-  previewData: { name: 'Alex', lang: 'zh' },
+  previewData: { name: 'Alex', lang: 'en' },
 } satisfies TemplateEntry
 
 const main = { backgroundColor: '#ffffff', fontFamily: 'system-ui, -apple-system, "Segoe UI", Arial, sans-serif' }

@@ -27,11 +27,13 @@ type Vocab = {
 };
 
 type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict";
+const GROUP_SIZE = 20;
 
 export default function JuniorVocab() {
   const [params, setParams] = useSearchParams();
   const grade = params.get("grade") ?? "1";
   const mode = (params.get("mode") as Mode) ?? null;
+  const groupParam = Number(params.get("group") ?? "0");
 
   const [words, setWords] = useState<Vocab[]>([]);
   const [loading, setLoading] = useState(true);
@@ -61,6 +63,16 @@ export default function JuniorVocab() {
     });
   }, [grade]);
 
+  const rawGrade = Number(grade);
+  const displayGrade = rawGrade <= 3 ? rawGrade : rawGrade - 6;
+  const groups = useMemo(() => {
+    const out: Vocab[][] = [];
+    for (let i = 0; i < words.length; i += GROUP_SIZE) out.push(words.slice(i, i + GROUP_SIZE));
+    return out;
+  }, [words]);
+  const groupIdx = Number.isFinite(groupParam) ? groupParam - 1 : -1;
+  const activePool = groupIdx >= 0 && groupIdx < groups.length ? groups[groupIdx] : words;
+
   const exit = () => {
     const np = new URLSearchParams(params);
     np.delete("mode");
@@ -77,18 +89,24 @@ export default function JuniorVocab() {
     );
   }
 
-  if (mode === "bento") return <WordBento pool={words} onExit={exit} />;
-  if (mode === "quest") return <WordQuest pool={words} onExit={exit} />;
-  if (mode === "duel") return <WordDuel pool={words} onExit={exit} />;
-  if (mode === "match") return <MemoryMatchWrapper pool={words} onExit={exit} />;
-  if (mode === "dict") return <DictationSession pool={words} onExit={exit} />;
-  if (mode === "classic") return <ClassicQuiz pool={words} onExit={exit} />;
+  if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
+  if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
+  if (mode === "duel") return <WordDuel pool={activePool} onExit={exit} />;
+  if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} />;
+  if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} />;
+  if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} />;
 
-  return <JuniorVocabHub words={words} grade={grade} onPick={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} />;
+  if (groupIdx >= 0 && groupIdx < groups.length) {
+    return <JuniorWordGroup group={groups[groupIdx]} groupNumber={groupIdx + 1} grade={displayGrade} onExit={() => setParams({ grade })} onPractice={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} />;
+  }
+
+  return <JuniorVocabHub words={words} groups={groups} grade={displayGrade} onPick={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} onPickGroup={(i) => setParams({ grade, group: String(i + 1) })} />;
 }
 
 /* -------------------- HUB -------------------- */
-function JuniorVocabHub({ words, grade, onPick }: { words: Vocab[]; grade: string; onPick: (m: Exclude<Mode, null>) => void }) {
+function JuniorVocabHub({ words, groups, grade, onPick, onPickGroup }: { words: Vocab[]; groups: Vocab[][]; grade: number; onPick: (m: Exclude<Mode, null>) => void; onPickGroup: (i: number) => void }) {
+  const [studiedCount, setStudiedCount] = useState(0);
+  const [dueCount, setDueCount] = useState(0);
   const games: { mode: Exclude<Mode, null>; icon: any; title: string; desc: string; gradient: string; badge?: string }[] = [
     { mode: "classic", icon: Brain, title: "智能选义", desc: "听音辨义 · 自动接入复习曲线", gradient: "from-emerald-500 to-teal-500", badge: "推荐" },
     { mode: "bento", icon: Sparkles, title: "单词便当", desc: "6×4 翻牌速配 · 训练反应力", gradient: "from-rose-500 to-orange-500" },
@@ -98,6 +116,28 @@ function JuniorVocabHub({ words, grade, onPick }: { words: Vocab[]; grade: strin
     { mode: "dict", icon: Keyboard, title: "听写挑战", desc: "听音拼词 · 锁定拼写细节", gradient: "from-violet-500 to-indigo-500" },
   ];
 
+  useEffect(() => {
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user || words.length === 0) return;
+      const ids = words.map((w) => w.id);
+      const { data: studied } = await supabase
+        .from("gaokao_user_mastery")
+        .select("item_id,due_at,next_review_at")
+        .eq("user_id", user.id)
+        .eq("item_type", "vocab")
+        .in("item_id", ids);
+      const now = Date.now();
+      setStudiedCount(studied?.length ?? 0);
+      setDueCount((studied ?? []).filter((m: any) => {
+        const due = m.due_at ?? m.next_review_at;
+        return due && new Date(due).getTime() <= now;
+      }).length);
+    })();
+  }, [words]);
+
+  const pct = Math.round((studiedCount / Math.max(1, words.length)) * 100);
+
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
       <BackLink to={`/junior/g/${grade}`} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
@@ -106,9 +146,38 @@ function JuniorVocabHub({ words, grade, onPick }: { words: Vocab[]; grade: strin
 
       <div className="mb-5">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CORE VOCABULARY · 初{grade}</div>
-        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">初中核心词汇 · 游戏中心</h1>
-        <p className="mt-1 text-xs text-muted-foreground">中考新课标 · 共 {words.length} 词 · 6 种游戏化训练，彻底掌握每个单词</p>
+        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">初{grade}核心词汇</h1>
+        <p className="mt-1 text-xs text-muted-foreground">中考新课标 · 共 {words.length} 词 · 按 20 词一组系统学习</p>
       </div>
+
+      <section className="mb-5 grid grid-cols-3 gap-2">
+        <div className="rounded-2xl border border-border/60 bg-card p-3 text-center"><div className="text-lg font-black text-primary">{studiedCount}</div><div className="text-[10px] text-muted-foreground">已练习</div></div>
+        <div className="rounded-2xl border border-border/60 bg-card p-3 text-center"><div className="text-lg font-black text-primary">{pct}%</div><div className="text-[10px] text-muted-foreground">完成度</div></div>
+        <div className="rounded-2xl border border-border/60 bg-card p-3 text-center"><div className="text-lg font-black text-primary">{dueCount}</div><div className="text-[10px] text-muted-foreground">待复习</div></div>
+      </section>
+
+      <section className="mb-6">
+        <div className="mb-3 flex items-end justify-between gap-3">
+          <div>
+            <h2 className="text-base font-extrabold">单词清单</h2>
+            <p className="text-xs text-muted-foreground">和高中一样，先按清单逐组学习，再进入游戏强化。</p>
+          </div>
+          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">{groups.length} 组</span>
+        </div>
+        <div className="grid gap-2">
+          {groups.map((group, i) => (
+            <button key={i} onClick={() => onPickGroup(i)} className="rounded-2xl border border-border/60 bg-card p-3 text-left transition hover:border-primary/50 hover:bg-primary/5">
+              <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="text-sm font-extrabold">第 {i + 1} 组 · {group.length} 词</div>
+                  <div className="mt-1 truncate text-xs text-muted-foreground">{group.slice(0, 5).map((w) => w.word).join(" · ")}</div>
+                </div>
+                <span className="shrink-0 rounded-full bg-secondary px-3 py-1 text-xs font-bold">打开</span>
+              </div>
+            </button>
+          ))}
+        </div>
+      </section>
 
       <div className="grid gap-3 sm:grid-cols-2">
         {games.map((g) => {
@@ -149,6 +218,51 @@ function JuniorVocabHub({ words, grade, onPick }: { words: Vocab[]; grade: strin
           <li>答错：自动进错题本，下次优先复习</li>
           <li>每天通过任意 3 个游戏即可深度记住一组单词</li>
         </ul>
+      </div>
+    </main>
+  );
+}
+
+function JuniorWordGroup({ group, groupNumber, grade, onExit, onPractice }: { group: Vocab[]; groupNumber: number; grade: number; onExit: () => void; onPractice: (m: Exclude<Mode, null>) => void }) {
+  return (
+    <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+      <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> 返回初{grade}单词清单
+      </button>
+      <div className="mb-5">
+        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CORE VOCABULARY · GROUP {groupNumber}</div>
+        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">第 {groupNumber} 组单词</h1>
+        <p className="mt-1 text-xs text-muted-foreground">先看清单理解词义，再选择练习模式强化记忆。</p>
+      </div>
+      <div className="mb-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
+        {(["classic", "bento", "match", "dict"] as Exclude<Mode, null>[]).map((m) => (
+          <button key={m} onClick={() => onPractice(m)} className="rounded-2xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90">
+            {m === "classic" ? "智能选义" : m === "bento" ? "单词便当" : m === "match" ? "记忆翻牌" : "听写挑战"}
+          </button>
+        ))}
+      </div>
+      <div className="space-y-2">
+        {group.map((w, i) => (
+          <article key={w.id} className="rounded-2xl border border-border/60 bg-card p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-baseline gap-2">
+                  <span className="text-[10px] font-bold text-muted-foreground">{(groupNumber - 1) * GROUP_SIZE + i + 1}</span>
+                  <h2 className="text-xl font-black text-foreground">{w.word}</h2>
+                  {w.phonetic && <span className="font-mono text-xs text-muted-foreground">{w.phonetic}</span>}
+                  {w.pos && <span className="rounded-full bg-secondary px-2 py-0.5 text-[10px] font-bold text-muted-foreground">{w.pos}</span>}
+                </div>
+                <p className="mt-1 text-sm font-semibold text-foreground">{w.meaning_cn}</p>
+                {w.meaning_en && <p className="mt-0.5 text-xs text-muted-foreground">{w.meaning_en}</p>}
+              </div>
+              <button onClick={() => speak(w.word)} className="grid size-9 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground" aria-label={`播放 ${w.word}`}>
+                <Volume2 className="size-4" />
+              </button>
+            </div>
+            {w.example_en && <p className="mt-3 rounded-xl bg-secondary/60 px-3 py-2 text-sm text-foreground">{w.example_en}</p>}
+            {w.example_cn && <p className="mt-1 px-3 text-xs text-muted-foreground">{w.example_cn}</p>}
+          </article>
+        ))}
       </div>
     </main>
   );

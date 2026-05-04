@@ -225,15 +225,15 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
           <div className="bg-gradient-to-r from-amber-400 to-orange-400" style={{ width: `${total ? (Math.max(0, studied - mastered) / total) * 100 : 0}%` }} />
         </div>
         <div className="mt-2 flex items-center justify-between text-[11px] text-muted-foreground">
-          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-fuchsia-500" /> 掌握 {masteredPct}%</span>
-          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-amber-400" /> 学习中 {Math.max(0, Math.round((studiedPct - masteredPct) * 10) / 10)}%</span>
-          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-muted-foreground/30" /> 未开始 {Math.max(0, Math.round((100 - studiedPct) * 10) / 10)}%</span>
+          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-fuchsia-500" /> {zh ? "掌握" : "Mastered"} {masteredPct}%</span>
+          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-amber-400" /> {zh ? "学习中" : "Learning"} {Math.max(0, Math.round((studiedPct - masteredPct) * 10) / 10)}%</span>
+          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-muted-foreground/30" /> {zh ? "未开始" : "Not started"} {Math.max(0, Math.round((100 - studiedPct) * 10) / 10)}%</span>
         </div>
         <div className="mt-3 grid grid-cols-4 gap-2">
-          <MiniStat icon={<Crown className="size-3.5" />} label="👑 掌握" value={mastered} tone="from-fuchsia-500 to-pink-500" />
-          <MiniStat icon={<Sparkles className="size-3.5" />} label="🌟 学习中" value={Math.max(0, studied - mastered)} tone="from-amber-400 to-orange-500" />
-          <MiniStat icon={<Clock className="size-3.5" />} label="⏰ 待复习" value={dueCount} tone="from-blue-500 to-indigo-600" />
-          <MiniStat icon={<Flame className="size-3.5" />} label="📈 平均稳定" value={Math.round(avgStability * 10) / 10} tone="from-emerald-500 to-teal-500" hint="天" />
+          <MiniStat icon={<Crown className="size-3.5" />} label={zh ? "👑 掌握" : "👑 Mastered"} value={mastered} tone="from-fuchsia-500 to-pink-500" />
+          <MiniStat icon={<Sparkles className="size-3.5" />} label={zh ? "🌟 学习中" : "🌟 Learning"} value={Math.max(0, studied - mastered)} tone="from-amber-400 to-orange-500" />
+          <MiniStat icon={<Clock className="size-3.5" />} label={zh ? "⏰ 待复习" : "⏰ Due"} value={dueCount} tone="from-blue-500 to-indigo-600" />
+          <MiniStat icon={<Flame className="size-3.5" />} label={zh ? "📈 平均稳定" : "📈 Avg stability"} value={Math.round(avgStability * 10) / 10} tone="from-emerald-500 to-teal-500" hint={zh ? "天" : "d"} />
         </div>
       </section>
 
@@ -253,18 +253,18 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">🧠 智能复习</span>
+              <span className="text-base font-extrabold">🧠 {zh ? "智能复习" : "Smart review"}</span>
               {dueCount > 0 && (
                 <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[11px] font-bold text-primary-foreground">
-                  <Flame className="size-3" /> 今日 {dueCount} 词待复习
+                  <Flame className="size-3" /> {zh ? `今日 ${dueCount} 词待复习` : `${dueCount} due today`}
                 </span>
               )}
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              {!loadedMastery ? "加载中…" : dueCount === 0
-                ? studied === 0 ? "先学一组单词，系统会按艾宾浩斯曲线安排复习"
-                                : `已学 ${studied} 词 · 今日没有到期单词，明天再来`
-                : `已学 ${studied} 词 · SM-2 算法 · 答错重学，答对延后`}
+              {!loadedMastery ? (zh ? "加载中…" : "Loading…") : dueCount === 0
+                ? studied === 0 ? (zh ? "先学一组单词，系统会按艾宾浩斯曲线安排复习" : "Study one group first; reviews will be scheduled automatically")
+                                : (zh ? `已学 ${studied} 词 · 今日没有到期单词，明天再来` : `${studied} words studied · nothing due today`)
+                : (zh ? `已学 ${studied} 词 · SM-2 算法 · 答错重学，答对延后` : `${studied} words studied · SM-2 schedule · wrong answers come back sooner`)}
             </div>
           </div>
           {dueCount > 0 && <ChevronRight className="size-5 text-primary" />}

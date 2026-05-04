@@ -6,7 +6,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { stopSpeaking } from "@/lib/speak";
 import { I18nProvider } from "@/i18n/I18nProvider";
-import { LanguagePickerModal } from "@/i18n/LanguagePickerModal";
 // Eagerly load home + auth (most common entry points) to avoid first-paint chunk fetch
 import Index from "./pages/Index.tsx";
 import Auth from "./pages/Auth.tsx";

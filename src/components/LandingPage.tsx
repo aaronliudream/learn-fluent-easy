@@ -50,12 +50,12 @@ export default function LandingPage() {
             one structured path, from kids to adults.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a
-              href="#whats-inside"
+            <Link
+              to="/levels"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1F3A2E] px-8 py-3.5 text-sm font-bold uppercase tracking-[0.16em] text-[#FAF8F3] transition hover:bg-[#27513f]"
             >
-              Explore lessons <ArrowRight className="size-4" />
-            </a>
+              Browse lessons <ArrowRight className="size-4" />
+            </Link>
             <Link
               to="/placement"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F3A2E]/25 bg-transparent px-8 py-3.5 text-sm font-bold uppercase tracking-[0.16em] text-[#1F3A2E] transition hover:bg-[#1F3A2E]/5"
@@ -63,8 +63,11 @@ export default function LandingPage() {
               Take the 3-min test
             </Link>
           </div>
-          <p className="mt-5 text-xs text-[#1F3A2E]/50">
-            No sign-up needed to look around.
+          <p className="mt-5 text-xs text-[#1F3A2E]/55">
+            No sign-up needed.{" "}
+            <a href="#whats-inside" className="font-bold text-[#1F3A2E] underline-offset-4 hover:underline">
+              See what&apos;s inside ↓
+            </a>
           </p>
         </div>
       </section>

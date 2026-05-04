@@ -191,6 +191,10 @@ function saveDynCache(lang: LangCode, c: Record<string, string>) {
   try { localStorage.setItem(STORAGE_CACHE_PREFIX + lang + ".dyn", JSON.stringify(c)); } catch { /* ignore */ }
 }
 
+function isSupportedLang(value: unknown): value is LangCode {
+  return typeof value === "string" && LANGUAGES.some((l) => l.code === value);
+}
+
 async function invokeTranslateWithTimeout(
   targetLanguage: string,
   items: { key: string; text: string }[],
@@ -301,7 +305,38 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   const setLang = useCallback((l: LangCode) => {
     setLangState(l);
     try { localStorage.setItem(STORAGE_LANG, l); } catch { /* ignore */ }
+    supabase.auth.getUser().then(({ data }) => {
+      const uid = data.user?.id;
+      if (!uid) return;
+      return supabase.from("profiles").update({ preferred_language: l } as never).eq("user_id", uid);
+    }).catch(() => { /* best-effort sync */ });
   }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    const syncProfileLanguage = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      const uid = session?.user?.id;
+      if (!uid || cancelled) return;
+      const { data } = await supabase
+        .from("profiles")
+        .select("preferred_language")
+        .eq("user_id", uid)
+        .maybeSingle();
+      const profileLang = (data as any)?.preferred_language;
+      if (isSupportedLang(profileLang) && profileLang !== lang) {
+        setLangState(profileLang);
+        try { localStorage.setItem(STORAGE_LANG, profileLang); } catch { /* ignore */ }
+      } else if (!profileLang && lang) {
+        await supabase.from("profiles").update({ preferred_language: lang } as never).eq("user_id", uid);
+      }
+    };
+    void syncProfileLanguage();
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
+      void syncProfileLanguage();
+    });
+    return () => { cancelled = true; subscription.unsubscribe(); };
+  }, [lang]);
 
   const markPicked = useCallback(() => {
     setHasPicked(true);

@@ -18,6 +18,7 @@ import LandingPage from "@/components/LandingPage";
 import { XPRing } from "@/components/game/XPRing";
 import { useStreakStats } from "@/hooks/useStreakStats";
 import OnboardingWizard from "@/components/OnboardingWizard";
+import ProWaitlistButton from "@/components/ProWaitlistButton";
 
 const HOME_COUNTS = {
   slang: 347,
@@ -81,6 +82,7 @@ const Index = () => {
       title: t("index.section.aitalk.title"),
       desc: t("index.section.aitalk.desc"),
       gradient: "from-amber-500 via-orange-500 to-rose-500",
+      proFeature: "ai-talk-unlimited",
     },
     {
       to: "/slang",

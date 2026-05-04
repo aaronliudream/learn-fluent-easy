@@ -40,7 +40,7 @@ const fmt = (s: string, vars: Record<string, string | number>) =>
   s.replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? ''))
 
 const StreakRecall = ({ name, lang = 'zh', daysSilent = 7, bestStreak = 0 }: StreakProps) => {
-  const s = STRINGS[lang] || STRINGS.zh
+  const s = STRINGS[lang] || STRINGS.en
   const vars = { n: daysSilent, best: bestStreak }
   return (
     <Html lang={lang} dir="ltr">
@@ -65,11 +65,11 @@ const StreakRecall = ({ name, lang = 'zh', daysSilent = 7, bestStreak = 0 }: Str
 export const template = {
   component: StreakRecall,
   subject: (data: Record<string, any>) =>
-    (data?.lang === 'en')
-      ? 'Your streak is waiting for you 🔥'
-      : '你的连胜在等你回来 🔥',
+    (data?.lang === 'zh' || data?.lang === 'zh-TW')
+      ? '你的连胜在等你回来 🔥'
+      : 'Your streak is waiting for you 🔥',
   displayName: 'Streak break recall (7d silent)',
-  previewData: { name: 'Alex', lang: 'zh', daysSilent: 7, bestStreak: 12 },
+  previewData: { name: 'Alex', lang: 'en', daysSilent: 7, bestStreak: 12 },
 } satisfies TemplateEntry
 
 const main = { backgroundColor: '#ffffff', fontFamily: 'system-ui, -apple-system, "Segoe UI", Arial, sans-serif' }

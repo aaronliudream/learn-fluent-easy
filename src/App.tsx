@@ -20,6 +20,7 @@ const Lesson = lazy(() => import("./pages/Lesson.tsx"));
 const Stats = lazy(() => import("./pages/Stats.tsx"));
 const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
+const AdminFeedback = lazy(() => import("./pages/AdminFeedback.tsx"));
 const Placement = lazy(() => import("./pages/Placement.tsx"));
 const Slang = lazy(() => import("./pages/Slang.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
@@ -219,6 +220,7 @@ const App = () => (
           <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />
+          <Route path="/admin/feedback" element={<AdminFeedback />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -166,7 +166,6 @@ export default function LandingPage() {
                 "游戏化经验值与每日连胜",
                 "家长面板可追踪学习进度",
               ]}
-              link="/primary"
             />
             <Audience
               tag="中学生 · 中考 / 高考"
@@ -176,7 +175,6 @@ export default function LandingPage() {
                 "学习中自动生成错题本",
                 "每道错题都有 AI 讲解",
               ]}
-              link="/gaokao"
             />
             <Audience
               tag="成人 · 工作 & 生活"
@@ -186,7 +184,6 @@ export default function LandingPage() {
                 "俚语帮你跟上社交节奏",
                 "5 分钟一节，融入日常",
               ]}
-              link="/talk"
             />
           </div>
         </div>
@@ -291,8 +288,8 @@ function FeatureCard({
 }
 
 function Audience({
-  tag, title, points, link,
-}: { tag: string; title: string; points: string[]; link: string }) {
+  tag, title, points,
+}: { tag: string; title: string; points: string[] }) {
   return (
     <div className="flex flex-col gap-5 rounded-3xl border border-[#1F3A2E]/10 bg-white p-7 md:p-8">
       <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#E8743C]"><T>{tag}</T></div>
@@ -305,12 +302,6 @@ function Audience({
           </li>
         ))}
       </ul>
-      <Link
-        to={link}
-        className="mt-auto inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#1F3A2E] hover:text-[#E8743C]"
-      >
-        <T>查看示例课程</T> <ArrowRight className="size-3.5" />
-      </Link>
     </div>
   );
 }

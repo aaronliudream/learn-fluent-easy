@@ -220,14 +220,14 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
         emoji: newEmoji,
         prevEmoji,
         title: r.message || t("进化啦！"),
-        subtitle: `${active.nickname} · ${STAGE_LABEL[newStage]}形态`,
+        subtitle: `${active.nickname} · ${t(STAGE_LABEL[newStage])}${t("形态")}`,
       });
     } else if (r?.leveled) {
       const emoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "⭐";
       celebratePet({
         kind: "levelup",
         emoji,
-        title: `Lv.${r.new_level} 达成！`,
+        title: `Lv.${r.new_level} ${t("达成！")}`,
         subtitle: active.nickname,
       });
     }

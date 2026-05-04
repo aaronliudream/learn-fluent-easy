@@ -385,6 +385,46 @@ const Auth = () => {
                 <Label htmlFor="su-pw"><T>密码（至少 6 位）</T></Label>
                 <Input id="su-pw" type="password" required minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} />
               </div>
+              <div>
+                <Label><T>你的年龄段</T></Label>
+                <div className="mt-1 grid grid-cols-3 gap-2">
+                  {([
+                    { v: "child", label: t("12 岁以下") },
+                    { v: "teen",  label: t("13–17 岁") },
+                    { v: "adult", label: t("18+") },
+                  ] as const).map(opt => (
+                    <button
+                      key={opt.v}
+                      type="button"
+                      onClick={() => setEmailAgeBand(opt.v)}
+                      className={`rounded-xl border-2 px-2 py-2 text-xs font-bold transition ${
+                        emailAgeBand === opt.v
+                          ? "border-primary bg-primary/10 text-primary"
+                          : "border-border bg-card text-muted-foreground hover:border-primary/40"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+                {emailAgeBand === "child" && (
+                  <div className="mt-2 flex items-start gap-2 rounded-lg border border-amber-300 bg-amber-50 p-2.5">
+                    <Checkbox
+                      id="email-parent-consent"
+                      checked={emailParentConsent}
+                      onCheckedChange={(v) => setEmailParentConsent(v === true)}
+                      className="mt-0.5"
+                    />
+                    <Label htmlFor="email-parent-consent" className="text-[11px] font-normal leading-relaxed text-amber-900">
+                      <T>我是家长或法定监护人，同意 13 岁以下儿童使用本应用，并已阅读</T>{" "}
+                      <Link to="/privacy" className="underline">
+                        <T>《隐私政策》儿童条款</T>
+                      </Link>
+                      。
+                    </Label>
+                  </div>
+                )}
+              </div>
               <div className="flex items-start gap-2 pt-1">
                 <Checkbox
                   id="agree"

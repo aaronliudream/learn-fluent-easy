@@ -51,12 +51,13 @@ export default function JuniorVocab() {
     // 入口可能传 1/2/3（初一/二/三 序号）或 7/8/9（Grade 7/8/9），统一映射到 7/8/9。
     const raw = Number(grade);
     const gradeNum = raw <= 3 ? raw + 6 : raw;
-    // Grade 7 (初一) 使用专门导入的 junior_vocab 词库；其他年级暂时回退到 gaokao_vocab(stage=junior)
-    const loader = gradeNum === 7
+    // junior_vocab 已覆盖初一(7)与初三(9)。初二(8)暂回退到 gaokao_vocab(stage=junior)。
+    const hasJunior = gradeNum === 7 || gradeNum === 9;
+    const loader = hasJunior
       ? supabase
           .from("junior_vocab")
           .select("id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank")
-          .eq("grade", 7)
+          .eq("grade", gradeNum)
           .order("freq_rank", { ascending: true, nullsFirst: false })
           .limit(2000)
       : supabase

@@ -297,6 +297,23 @@ const Auth = () => {
                     <p className="mt-1 text-[10px] text-muted-foreground">
                       <T>用于符合 COPPA / GDPR-K 的儿童数据保护，不会存储任何敏感信息。</T>
                     </p>
+                    {ageBand === "child" && (
+                      <div className="mt-2 flex items-start gap-2 rounded-lg border border-amber-300 bg-amber-50 p-2.5">
+                        <Checkbox
+                          id="parent-consent"
+                          checked={parentConsent}
+                          onCheckedChange={(v) => setParentConsent(v === true)}
+                          className="mt-0.5"
+                        />
+                        <Label htmlFor="parent-consent" className="text-[11px] font-normal leading-relaxed text-amber-900">
+                          <T>我是家长或法定监护人，同意 13 岁以下儿童使用本应用，并已阅读</T>{" "}
+                          <Link to="/privacy" className="underline">
+                            <T>《隐私政策》儿童条款</T>
+                          </Link>
+                          。
+                        </Label>
+                      </div>
+                    )}
                   </div>
                   <Button type="submit" className="w-full" disabled={loading || nickAvailable === false}>
                     {loading ? <Loader2 className="size-4 animate-spin" /> : <T>开始学习 🚀</T>}

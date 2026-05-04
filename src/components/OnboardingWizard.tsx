@@ -166,7 +166,11 @@ export default function OnboardingWizard({
               We'll personalize your daily plan around this.
             </p>
             <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-              {GOALS.map((g) => {
+              {GOALS
+                // China-only exam track (Gaokao/Junior/Primary) is in Chinese.
+                // Hide it from non-Chinese onboarding to avoid a content/UI mismatch.
+                .filter((g) => g.id !== "exam" || native === "zh" || native === "zh-TW")
+                .map((g) => {
                 const Icon = g.icon;
                 const sel = goal === g.id;
                 return (

@@ -102,6 +102,8 @@ const EN_FALLBACKS: Record<string, string> = {
   "的问候": "",
   "休息也是学习的一部分 · 这几天不必赶进度": "Rest is also part of learning · no need to rush these days",
   "例如 1234": "e.g. 1234",
+  "学习足迹（按有效时长占比）": "Learning Journey (share of effective study time)",
+  "百分比 = 该主题占总学习时间的比例，非正确率": "Percentage = share of total study time on this topic, not accuracy",
   "如：小明🐱、Dragon123": "e.g. KittyKat🐱, Dragon123",
   "首页": "Home",
   "课程": "Courses",

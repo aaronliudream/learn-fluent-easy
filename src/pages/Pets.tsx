@@ -714,9 +714,10 @@ function DiaryTab({ diary }: { diary: Diary[] }) {
 }
 
 function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any) {
+  const t = useT();
   const [busy, setBusy] = useState<string | null>(null);
   if (!active) {
-    return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground">先去领养一只宠物吧 🥚</div>;
+    return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground"><T>先去领养一只宠物吧 🥚</T></div>;
   }
   const sp: Species | undefined = species[active.species_id];
   const ownedIds = new Set((owned as OwnedSkin[]).map(o => o.skin_id));
@@ -729,10 +730,10 @@ function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any
     if (error) { flash("❌ " + error.message); return; }
     const r = data as any;
     if (!r?.ok) {
-      flash(r?.reason === "not_enough" ? "💰 星币不够，再去学习赚一些吧！" : r?.reason === "already_owned" ? "已经拥有啦" : "❌ 购买失败");
+      flash(r?.reason === "not_enough" ? t("💰 星币不够，再去学习赚一些吧！") : r?.reason === "already_owned" ? t("已经拥有啦") : t("❌ 购买失败"));
       return;
     }
-    flash(`🎉 解锁「${skin.name_cn}」皮肤！`);
+    flash(`🎉 ${t("解锁")}「${t(skin.name_cn)}」${t("皮肤！")}`);
     onAfter();
   };
   const equip = async (skin: Skin | null) => {
@@ -742,10 +743,10 @@ function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any
     if (error) { flash("❌ " + error.message); return; }
     const r = data as any;
     if (!r?.ok) {
-      flash(r?.reason === "level_low" ? `⛔ 需要 Lv.${r.need_level} 才能装备` : r?.reason === "not_owned" ? "还未拥有该皮肤" : "❌ 装备失败");
+      flash(r?.reason === "level_low" ? `⛔ ${t("需要")} Lv.${r.need_level} ${t("才能装备")}` : r?.reason === "not_owned" ? t("还未拥有该皮肤") : t("❌ 装备失败"));
       return;
     }
-    flash(skin ? `✨ 已换上「${skin.name_cn}」` : "已恢复原色");
+    flash(skin ? `✨ ${t("已换上")}「${t(skin.name_cn)}」` : t("已恢复原色"));
     onAfter();
   };
 
@@ -757,7 +758,7 @@ function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any
         </div>
         <div className="flex-1 text-sm"><b>{active.nickname}</b> · Lv.{active.level}</div>
         <button onClick={()=>equip(null)} disabled={busy==="off" || !active.equipped_skin_id}
-          className="rounded-full bg-secondary px-3 py-1 text-xs font-bold disabled:opacity-40">恢复原色</button>
+          className="rounded-full bg-secondary px-3 py-1 text-xs font-bold disabled:opacity-40"><T>恢复原色</T></button>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
@@ -774,19 +775,19 @@ function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any
               <div className="text-5xl" style={{ filter: skin.css_filter }}>{baseEmoji}</div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold">{skin.name_cn}</span>
+                  <span className="font-extrabold"><T>{skin.name_cn}</T></span>
                   {Array.from({length: skin.rarity}).map((_,i)=><Star key={i} className="size-3 fill-amber-500 text-amber-500" />)}
                 </div>
-                <div className="text-[11px] text-muted-foreground line-clamp-1">{skin.description_cn}</div>
-                <div className="mt-0.5 text-[10px] text-muted-foreground">需要 Lv.{skin.unlock_level}</div>
+                <div className="text-[11px] text-muted-foreground line-clamp-1"><T>{skin.description_cn}</T></div>
+                <div className="mt-0.5 text-[10px] text-muted-foreground"><T>需要</T> Lv.{skin.unlock_level}</div>
               </div>
               {isEquipped ? (
-                <div className="shrink-0 rounded-full bg-purple-500 px-3 py-1 text-[10px] font-extrabold text-white shadow">已装备</div>
+                <div className="shrink-0 rounded-full bg-purple-500 px-3 py-1 text-[10px] font-extrabold text-white shadow"><T>已装备</T></div>
               ) : isOwned ? (
                 <button onClick={()=>equip(skin)} disabled={busy===skin.id || !levelOk}
                   className={cn("shrink-0 rounded-full px-3 py-1.5 text-[11px] font-extrabold text-white shadow",
                     levelOk ? "bg-gradient-to-r from-purple-500 to-pink-500" : "bg-muted-foreground/40")}>
-                  {levelOk ? "装备" : `Lv.${skin.unlock_level}`}
+                  {levelOk ? <T>装备</T> : `Lv.${skin.unlock_level}`}
                 </button>
               ) : (
                 <button onClick={()=>buy(skin)} disabled={busy===skin.id || !canBuy}

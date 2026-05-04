@@ -18,13 +18,6 @@ export default function JuniorGrade() {
 
   const SECTIONS = [
     {
-      to: `/junior/vocab?grade=${dbGrade}`,
-      icon: Sparkles,
-      title: "核心词汇",
-      desc: "5 种游戏 · 单词便当 / 任务 / 对决 / 听写 · 彻底掌握",
-      gradient: "from-violet-500 via-indigo-500 to-blue-500",
-    },
-    {
       to: `/junior/grammar?grade=${dbGrade}`,
       icon: BookOpen,
       title: "中考语法专项",

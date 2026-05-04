@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Mic, ArrowLeft, Sparkles, Lightbulb, Phone } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
+import ProWaitlistButton from "@/components/ProWaitlistButton";
 import { AITalkDialog } from "@/components/AITalkDialog";
 import { T } from "@/i18n/T";
 import { LEVELS } from "@/data/course";
@@ -77,8 +78,11 @@ export default function Talk() {
           <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-grad-title text-white shadow-lg">
             <Sparkles className="size-6" />
           </div>
-          <div>
-            <h2 className="text-lg font-bold"><T>这是什么？</T></h2>
+          <div className="flex-1">
+            <div className="mb-1 flex items-center gap-2">
+              <h2 className="text-lg font-bold"><T>这是什么？</T></h2>
+              <ProWaitlistButton feature="ai-talk-unlimited" source="talk-page" label={<T>解锁无限时长</T>} />
+            </div>
             <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
               <T>Alex 是一位加州年轻人，只用英语和你聊天。10 分钟到点自动结束。结束后 AI 会逐句翻译你说的话、给出更地道的说法，并出 5 道选择题让你巩固刚学到的词汇短语。</T>
             </p>

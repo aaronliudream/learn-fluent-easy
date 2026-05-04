@@ -70,6 +70,131 @@ const JAPANESE_TEXT_RE = /[\u3040-\u30ff]/;
 // identical to the original Chinese source (i.e. translation didn't happen).
 const HAN_RE = /[\u3400-\u9fff]/;
 
+const EN_FALLBACKS: Record<string, string> = {
+  "首页": "Home",
+  "课程": "Courses",
+  "AI 对话": "AI Chat",
+  "排行榜": "Leaderboard",
+  "我的": "Me",
+  "主导航": "Main navigation",
+  "家长 / 老师": "Parents / Teachers",
+  "当前连胜": "Current streak",
+  "今天开练，点亮你的第一天": "Start today and light up your first day",
+  "每天 5 分钟，足够养成习惯": "Five minutes a day is enough to build the habit",
+  "查看进度": "View progress",
+  "欢迎加入": "Welcome aboard",
+  "完成第一节课，点亮你的第一颗 ⭐": "Complete your first lesson and light up your first star ⭐",
+  "5 分钟即可建立第一天连胜，从此每晚都进步一点点。": "Build your first-day streak in five minutes, then improve a little every night.",
+  "测一测你的英语等级": "Check your English level",
+  "免费 · 3 分钟": "Free · 3 min",
+  "更多学习方式": "More ways to learn",
+  "本周排行榜": "Weekly leaderboard",
+  "和全球学员一起冲榜，每周清零": "Climb the board with learners worldwide. Resets weekly.",
+  "加好友 · 互相鼓励": "Add friends · Encourage each other",
+  "看看朋友的连胜，一起坚持下去": "See your friends' streaks and keep going together",
+  "登录": "Log in",
+  "注册": "Sign up",
+  "退出": "Exit",
+  "返回": "Back",
+  "加载中…": "Loading…",
+  "关闭": "Close",
+  "取消": "Cancel",
+  "确认": "Confirm",
+  "保存": "Save",
+  "删除": "Delete",
+  "提交": "Submit",
+  "下一步": "Next",
+  "上一步": "Back",
+  "开始": "Start",
+  "继续": "Continue",
+  "完成": "Done",
+  "已保存": "Saved",
+  "请输入有效邮箱": "Please enter a valid email address",
+  "密码至少 6 位": "Password must be at least 6 characters",
+  "升级成功！现在可以用邮箱登录了 🎉": "Upgrade successful! You can now log in with email 🎉",
+  "昵称至少 2 个字符": "Nickname must be at least 2 characters",
+  "数据已导出": "Data exported",
+  "导出失败：": "Export failed: ",
+  "请输入 DELETE 以确认": "Enter DELETE to confirm",
+  "账户已删除": "Account deleted",
+  "删除失败：": "Delete failed: ",
+  "账户与隐私": "Account & Privacy",
+  "管理你的账户、数据与隐私设置": "Manage your account, data and privacy settings",
+  "账户信息": "Account information",
+  "邮箱": "Email",
+  "密码": "Password",
+  "昵称": "Nickname",
+  "告诉我们你的想法 💬": "Tell us what you think 💬",
+  "仅限英语学习 / 网站相关反馈 · 我们会在 24h 内查看": "English-learning or website feedback only · We'll review it within 24 hours",
+  "建议": "Suggestion",
+  "表扬": "Praise",
+  "其他": "Other",
+  "整体满意度（可选）": "Overall satisfaction (optional)",
+  "发送中…": "Sending…",
+  "发送反馈": "Send feedback",
+  "反馈": "Feedback",
+  "内容不能为空": "Content can't be empty",
+  "反馈已收到，谢谢你 🙏": "Feedback received. Thank you 🙏",
+  "提交失败": "Submit failed",
+  "提交失败，请稍后重试": "Submit failed. Please try again later",
+  "把 Big Moon 装到主屏幕": "Install Big Moon on your home screen",
+  "点击 Safari 底部的": "Tap the button at the bottom of Safari",
+  "分享按钮": "Share button",
+  "选择": "Choose",
+  "添加到主屏幕": "Add to Home Screen",
+  "菜单按钮": "menu button",
+  "安装应用": "Install app",
+  "在 Chrome / Edge 地址栏右侧点击": "In Chrome / Edge, tap the icon on the right side of the address bar",
+  "安装": "Install",
+  "图标": "icon",
+  "或打开浏览器菜单，选择": "Or open the browser menu and choose",
+  "安装 Big Moon": "Install Big Moon",
+  "像 App 一样打开，离线也能学，连胜不会断。": "Open it like an app, learn offline, and keep your streak going.",
+  "一键安装": "Install now",
+  "语音设置": "Voice settings",
+  "选择你喜欢的发音角色和语速": "Choose the voice and speed you prefer",
+  "角色": "Voice",
+  "语速": "Speed",
+  "试听示例": "Preview example",
+  "重播当前": "Replay current",
+  "让发音更自然（强烈推荐）": "Make pronunciation more natural (strongly recommended)",
+  "关于我们": "About us",
+  "我们的使命": "Our mission",
+  "核心价值": "Core values",
+  "联系我们": "Contact us",
+  "隐私政策": "Privacy Policy",
+  "服务条款": "Terms of Service",
+  "免责声明": "Disclaimer",
+  "句": "sentences",
+  "组对话": "dialogue sets",
+  "内容更新中，敬请期待 ✨": "Content is being updated. Stay tuned ✨",
+  "停止播放": "Stop playback",
+  "播放整段对话": "Play full dialogue",
+  "巩固一下": "Practice it",
+  "播放": "Play",
+  "换种说法": "Say it another way",
+  "分钟": "min",
+  "小时": "hr",
+  "分": "min",
+  "单词": "Vocabulary",
+  "语法": "Grammar",
+  "阅读": "Reading",
+  "完形": "Cloze",
+  "听力": "Listening",
+  "写作": "Writing",
+  "请先登录后再查看": "Please log in to view this",
+};
+
+function englishFallbackFor(text: string) {
+  const exact = EN_FALLBACKS[text];
+  if (exact) return exact;
+  let match = text.match(/^已经坚持\s*(\d+)\s*天，继续保持！$/);
+  if (match) return `You've kept going for ${match[1]} days — keep it up!`;
+  match = text.match(/^本月已学\s*(\d+)\s*分钟\s*·\s*答对\s*(\d+)\s*题$/);
+  if (match) return `Studied ${match[1]} minutes this month · ${match[2]} correct answers`;
+  return "";
+}
+
 // Strip any HTML tags (e.g. <b>, </b>, <i>) the translator may have added,
 // decode common entities, and collapse whitespace. Translations are rendered
 // as plain text, so any tag would otherwise show up literally on screen.
@@ -341,10 +466,10 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     try { localStorage.setItem(STORAGE_PICKED, "1"); } catch { /* ignore */ }
   }, []);
 
-  const t = useCallback((key: StringKey, vars?: Record<string, string | number>) => {
-    const tmpl = catalog[key] ?? EN[key] ?? key;
-    return interpolate(tmpl, vars);
-  }, [catalog]);
+  const translateImmediately = useCallback((text: string) => {
+    if (lang === "en") return englishFallbackFor(text);
+    return "";
+  }, [lang]);
 
   const flushDynQueue = useCallback(async (l: LangCode) => {
     const toSend = Array.from(dynQueueRef.current);
@@ -441,13 +566,13 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // empty string so the UI shows nothing for one tick instead of leaking
     // Chinese. The component re-renders as soon as the translation lands
     // (dynVersion bumps).
-    if (CJK_TEXT_RE.test(text)) return "";
+    if (CJK_TEXT_RE.test(text)) return translateImmediately(text);
     // Source string contains no CJK — safe to show as-is while we wait
     // (e.g. an English helper string being translated into Spanish).
     return localizeProtagonist(text, lang);
   // dynVersion is intentionally a dep: when a translation batch resolves
   // we want every memoised consumer to recompute against the new cache.
-  }, [lang, flushDynQueue, dynVersion]);
+  }, [lang, flushDynQueue, translateImmediately, dynVersion]);
 
   const tEn = useCallback((key: StringKey, vars?: Record<string, string | number>) => {
     const tmpl = EN[key] ?? key;

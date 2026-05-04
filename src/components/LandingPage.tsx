@@ -15,65 +15,79 @@ export default function LandingPage() {
   const isSimplifiedChinese = lang === "zh";
   return (
     <main className="min-h-dvh bg-[#FAF8F3] text-[#1F3A2E] antialiased">
-      {/* NAV */}
-      <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6 md:px-10 md:py-8">
-        <BrandLockup size={36} />
-        <div className="flex items-center gap-3">
-          <LanguageSwitcher />
-          <Link
-            to="/auth"
-            className="hidden text-xs font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/70 hover:text-[#1F3A2E] md:inline"
-          >
-            <T>登录</T>
-          </Link>
-          <Link
-            to="/auth"
-            className="rounded-full bg-[#1F3A2E] px-5 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#FAF8F3] transition hover:bg-[#27513f]"
-          >
-            <T>开始使用</T>
-          </Link>
-        </div>
-      </nav>
+      {/* HERO — light-blue gamified hero */}
+      <section className="bg-[#EEF4FB]">
+        {/* NAV */}
+        <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6 md:px-10 md:py-8">
+          <BrandLockup size={36} />
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
+            <Link
+              to="/auth"
+              className="hidden text-xs font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/70 hover:text-[#1F3A2E] md:inline"
+            >
+              <T>登录</T>
+            </Link>
+          </div>
+        </nav>
 
-      {/* HERO */}
-      <section className="mx-auto max-w-[1100px] px-6 pb-20 pt-10 md:px-10 md:pb-32 md:pt-16">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-[#1F3A2E]/15 bg-white/60 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/70">
-            <Globe2 className="size-3.5" /> <T>已覆盖 30+ 个国家的学员</T>
+        <div className="mx-auto max-w-[1100px] px-6 pb-16 pt-6 md:px-10 md:pb-24 md:pt-10">
+          <div className="mx-auto max-w-2xl">
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#3BA3E0] shadow-[0_4px_14px_-6px_rgba(59,163,224,0.4)]">
+              <Globe2 className="size-3.5" /> <T>已在 184 个国家上线</T>
+            </div>
+            <h1 className="text-[44px] font-extrabold leading-[1.05] tracking-tight text-[#1F3A2E] md:text-[88px]">
+              <T>说英语</T>
+              <br />
+              <T>像玩游戏一样上头。</T>
+            </h1>
+            <p className="mt-7 max-w-lg text-base leading-relaxed text-[#1F3A2E]/70 md:text-lg">
+              <T>5 分钟一节的小课、即时口语反馈、连胜系统让你真的停不下来。每天 5 分钟，就能开始。</T>
+            </p>
+            <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+              <Link
+                to="/auth"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#E8743C] px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_-10px_rgba(232,116,60,0.6)] transition hover:bg-[#d4632d]"
+              >
+                <T>免费开始</T> <ArrowRight className="size-4" />
+              </Link>
+              <Link
+                to="/auth"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F3A2E]/15 bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#1F3A2E] transition hover:bg-[#F4EFE3]"
+              >
+                <T>我已有账号</T>
+              </Link>
+            </div>
+
+            {/* social proof bar */}
+            <div className="mt-10 flex items-center gap-4 border-t border-[#1F3A2E]/10 pt-6">
+              <div className="flex -space-x-2">
+                {["#F4B86A","#E8743C","#7FB069","#3BA3E0"].map((c) => (
+                  <div key={c} className="grid size-8 place-items-center rounded-full border-2 border-[#EEF4FB] text-[10px] font-bold text-white" style={{ background: c }}>
+                    {c.slice(1,2)}
+                  </div>
+                ))}
+                <div className="grid size-8 place-items-center rounded-full border-2 border-[#EEF4FB] bg-[#3BA3E0] text-[9px] font-bold text-white">
+                  +14M
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <div className="flex gap-0.5 text-[#F5A623]">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="size-3.5 fill-current" />
+                  ))}
+                </div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55">
+                  <T>4.9 平均评分</T>
+                </div>
+              </div>
+            </div>
           </div>
-          <h1 className="text-5xl font-extrabold leading-[1.15] tracking-tight md:text-7xl md:leading-[1.1]" style={{ fontFamily: '"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif' }}>
-            <T>开口说英语</T>
-            <br className="hidden md:block" />
-            <span className="text-[#E8743C]"> <T>就像在和朋友聊天。</T></span>
-          </h1>
-          <p className="mx-auto mt-7 max-w-xl text-pretty text-base leading-relaxed text-[#1F3A2E]/75 md:text-lg">
-            <T>从 CEFR 水平测试到俚语、真实场景对话，再到 AI 口语陪练 —— 一条结构化路径，从孩子到成人都适用。</T>
-          </p>
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link
-              to="/?hub=1"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1F3A2E] px-8 py-3.5 text-sm font-bold uppercase tracking-[0.16em] text-[#FAF8F3] transition hover:bg-[#27513f]"
-            >
-              <T>浏览课程</T> <ArrowRight className="size-4" />
-            </Link>
-            <Link
-              to="/placement"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F3A2E]/25 bg-transparent px-8 py-3.5 text-sm font-bold uppercase tracking-[0.16em] text-[#1F3A2E] transition hover:bg-[#1F3A2E]/5"
-            >
-              <T>3 分钟水平测试</T>
-            </Link>
-          </div>
-          <p className="mt-5 text-xs text-[#1F3A2E]/55">
-            <T>无需注册即可浏览。</T>{" "}
-            <a href="#whats-inside" className="font-bold text-[#1F3A2E] underline-offset-4 hover:underline">
-              <T>看看里面有什么 ↓</T>
-            </a>
-          </p>
 
           {isSimplifiedChinese && (
             <Link
               to="/china"
-              className="group mx-auto mt-10 flex max-w-xl items-center gap-4 rounded-2xl border-2 border-[#E8743C]/30 bg-gradient-to-br from-[#FFF4EC] to-[#FFE3CF] px-6 py-5 text-left transition hover:-translate-y-0.5 hover:border-[#E8743C]/60 hover:shadow-[0_18px_40px_-20px_rgba(232,116,60,0.5)]"
+              className="group mx-auto mt-10 flex max-w-2xl items-center gap-4 rounded-2xl border-2 border-[#E8743C]/30 bg-gradient-to-br from-[#FFF4EC] to-[#FFE3CF] px-6 py-5 text-left transition hover:-translate-y-0.5 hover:border-[#E8743C]/60 hover:shadow-[0_18px_40px_-20px_rgba(232,116,60,0.5)]"
             >
               <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#E8743C] text-white">
                 <BookMarked className="size-6" />

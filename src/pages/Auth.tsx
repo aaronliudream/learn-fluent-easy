@@ -38,6 +38,11 @@ const Auth = () => {
   // Age band — required for COPPA / GDPR-K compliance.
   // child = <13, teen = 13–17, adult = 18+. Persisted to profiles.age_band + is_minor.
   const [ageBand, setAgeBand] = useState<"child" | "teen" | "adult" | "">("");
+  // Parent consent — required when ageBand === "child" (under 13).
+  const [parentConsent, setParentConsent] = useState(false);
+  // Email signup also collects age band for COPPA / GDPR-K compliance.
+  const [emailAgeBand, setEmailAgeBand] = useState<"child" | "teen" | "adult" | "">("");
+  const [emailParentConsent, setEmailParentConsent] = useState(false);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -71,6 +76,10 @@ const Auth = () => {
     if (!/^\d{4,6}$/.test(pin)) { toast.error(t("PIN 必须是 4–6 位数字")); return; }
     if (nickAvailable === false) { toast.error(t("昵称已被占用，换一个吧")); return; }
     if (!ageBand) { toast.error(t("请选择你的年龄段")); return; }
+    if (ageBand === "child" && !parentConsent) {
+      toast.error(t("13 岁以下需家长或监护人同意才能注册"));
+      return;
+    }
     setLoading(true);
     // Server-side validation
     const { data: vCode } = await supabase.rpc("validate_username", { _name: n });
@@ -137,6 +146,14 @@ const Auth = () => {
       toast.error(t("请先阅读并同意隐私政策与服务条款"));
       return;
     }
+    if (!emailAgeBand) {
+      toast.error(t("请选择你的年龄段"));
+      return;
+    }
+    if (emailAgeBand === "child" && !emailParentConsent) {
+      toast.error(t("13 岁以下需家长或监护人同意才能注册"));
+      return;
+    }
     setLoading(true);
     const { error } = await supabase.auth.signUp({
       email,
@@ -150,6 +167,16 @@ const Auth = () => {
     if (error) {
       toast.error(error.message);
     } else {
+      // Persist age band + minor flag to profile (best-effort, after auth state lands)
+      const { data: u } = await supabase.auth.getUser();
+      if (u?.user?.id) {
+        await supabase.from("profiles").upsert({
+          user_id: u.user.id,
+          age_band: emailAgeBand,
+          is_minor: emailAgeBand === "child" || emailAgeBand === "teen",
+          data_minimization: emailAgeBand !== "adult",
+        }, { onConflict: "user_id" });
+      }
       toast.success(t("注册成功！正在登录…"));
       navigate("/", { replace: true });
     }
@@ -270,6 +297,23 @@ const Auth = () => {
                     <p className="mt-1 text-[10px] text-muted-foreground">
                       <T>用于符合 COPPA / GDPR-K 的儿童数据保护，不会存储任何敏感信息。</T>
                     </p>
+                    {ageBand === "child" && (
+                      <div className="mt-2 flex items-start gap-2 rounded-lg border border-amber-300 bg-amber-50 p-2.5">
+                        <Checkbox
+                          id="parent-consent"
+                          checked={parentConsent}
+                          onCheckedChange={(v) => setParentConsent(v === true)}
+                          className="mt-0.5"
+                        />
+                        <Label htmlFor="parent-consent" className="text-[11px] font-normal leading-relaxed text-amber-900">
+                          <T>我是家长或法定监护人，同意 13 岁以下儿童使用本应用，并已阅读</T>{" "}
+                          <Link to="/privacy" className="underline">
+                            <T>《隐私政策》儿童条款</T>
+                          </Link>
+                          。
+                        </Label>
+                      </div>
+                    )}
                   </div>
                   <Button type="submit" className="w-full" disabled={loading || nickAvailable === false}>
                     {loading ? <Loader2 className="size-4 animate-spin" /> : <T>开始学习 🚀</T>}
@@ -340,6 +384,46 @@ const Auth = () => {
               <div>
                 <Label htmlFor="su-pw"><T>密码（至少 6 位）</T></Label>
                 <Input id="su-pw" type="password" required minLength={6} value={password} onChange={(e) => setPassword(e.target.value)} />
+              </div>
+              <div>
+                <Label><T>你的年龄段</T></Label>
+                <div className="mt-1 grid grid-cols-3 gap-2">
+                  {([
+                    { v: "child", label: t("12 岁以下") },
+                    { v: "teen",  label: t("13–17 岁") },
+                    { v: "adult", label: t("18+") },
+                  ] as const).map(opt => (
+                    <button
+                      key={opt.v}
+                      type="button"
+                      onClick={() => setEmailAgeBand(opt.v)}
+                      className={`rounded-xl border-2 px-2 py-2 text-xs font-bold transition ${
+                        emailAgeBand === opt.v
+                          ? "border-primary bg-primary/10 text-primary"
+                          : "border-border bg-card text-muted-foreground hover:border-primary/40"
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+                {emailAgeBand === "child" && (
+                  <div className="mt-2 flex items-start gap-2 rounded-lg border border-amber-300 bg-amber-50 p-2.5">
+                    <Checkbox
+                      id="email-parent-consent"
+                      checked={emailParentConsent}
+                      onCheckedChange={(v) => setEmailParentConsent(v === true)}
+                      className="mt-0.5"
+                    />
+                    <Label htmlFor="email-parent-consent" className="text-[11px] font-normal leading-relaxed text-amber-900">
+                      <T>我是家长或法定监护人，同意 13 岁以下儿童使用本应用，并已阅读</T>{" "}
+                      <Link to="/privacy" className="underline">
+                        <T>《隐私政策》儿童条款</T>
+                      </Link>
+                      。
+                    </Label>
+                  </div>
+                )}
               </div>
               <div className="flex items-start gap-2 pt-1">
                 <Checkbox

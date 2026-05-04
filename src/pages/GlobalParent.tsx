@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import {
   ArrowLeft, Loader2, Coins, BookOpen, GraduationCap, School, Backpack,
-  TrendingUp, AlertTriangle, Clock, Flame, Target, Sparkles,
+  TrendingUp, AlertTriangle, Clock, Flame, Target, Sparkles, Download,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -146,6 +146,15 @@ export default function GlobalParent() {
         <Link to="/pets" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 px-4 py-2 text-sm font-extrabold text-white shadow">
           <Coins className="size-4" /> {coins} 星币
         </Link>
+        <button
+          type="button"
+          onClick={() => window.print()}
+          className="print:hidden inline-flex items-center gap-1.5 rounded-full border-2 border-border bg-card px-4 py-2 text-sm font-bold text-foreground shadow-sm hover:bg-muted"
+          aria-label="导出 PDF / 打印报告"
+          title="导出 PDF（在打印对话框中选择「另存为 PDF」）"
+        >
+          <Download className="size-4" /> 导出 PDF
+        </button>
       </div>
 
       {/* Top KPI strip */}

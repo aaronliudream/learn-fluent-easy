@@ -329,7 +329,6 @@ const EN_FALLBACKS: Record<string, string> = {
   "为什么举报？": "Why are you reporting?",
   "举报": "Report",
   "举报已提交，谢谢！我们会尽快查看 🙏": "Report submitted — thank you! We'll review it soon 🙏",
-  "取消": "Cancel",
   "和": "and",
   "心": "Heart",
   "慢一点，更稳一点": "Slow down, stay steady",

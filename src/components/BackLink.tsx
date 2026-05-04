@@ -1,4 +1,4 @@
-import { ReactNode, MouseEvent } from "react";
+import { ReactNode, MouseEvent, forwardRef } from "react";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -14,12 +14,12 @@ type Props = {
  * Smart back link: goes to the previous page in history.
  * Falls back to `to` if there is no in-app history (e.g. opened directly).
  */
-function BackLink({ to, className, children, onClick, ariaLabel }: Props) {
+const BackLink = forwardRef<HTMLAnchorElement, Props>(function BackLink({ to, className, children, onClick, ariaLabel }, ref) {
   return (
-    <Link to={to} className={className} onClick={onClick} aria-label={ariaLabel}>
+    <Link ref={ref} to={to} className={className} onClick={onClick} aria-label={ariaLabel}>
       {children}
     </Link>
   );
-}
+});
 
 export default BackLink;

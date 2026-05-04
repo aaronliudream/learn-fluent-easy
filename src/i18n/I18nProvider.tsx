@@ -71,6 +71,36 @@ const JAPANESE_TEXT_RE = /[\u3040-\u30ff]/;
 const HAN_RE = /[\u3400-\u9fff]/;
 
 const EN_FALLBACKS: Record<string, string> = {
+  // Pets page
+  "🏠 我家": "🏠 Home",
+  "🛒 商店": "🛒 Shop",
+  "🗺️ 出游": "🗺️ Go out",
+  "🥚 领养": "🥚 Adopt",
+  "👕 皮肤": "👕 Skins",
+  "📖 日记": "📖 Diary",
+  "蛋": "Egg",
+  "幼年": "Baby",
+  "成年": "Adult",
+  "传说": "Legend",
+  "饱食": "Fullness",
+  "心情": "Mood",
+  // Evolution tree
+  "成长之路": "Path of Growth",
+  "完全透明 · 不开盲盒": "Fully transparent · no loot boxes",
+  "起点": "Starting point",
+  "Lv.1 解锁": "Unlock at Lv.1",
+  "Lv.5 解锁": "Unlock at Lv.5",
+  "Lv.15 解锁": "Unlock at Lv.15",
+  "现在": "Now",
+  "当前": "Current",
+  "通过完成学习任务获得经验解锁下一阶段": "Complete learning tasks to gain XP and unlock the next stage",
+  // Monthly postcard
+  "本月明信片": "This month's postcard",
+  "出游中": "On a trip",
+  "至": "until",
+  "来自": "Greetings from",
+  "的问候": "",
+  "休息也是学习的一部分 · 这几天不必赶进度": "Rest is also part of learning · no need to rush these days",
   "例如 1234": "e.g. 1234",
   "如：小明🐱、Dragon123": "e.g. KittyKat🐱, Dragon123",
   "首页": "Home",

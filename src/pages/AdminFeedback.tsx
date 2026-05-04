@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Loader2, Mail, Bug, Lightbulb, Heart, FileText, Star, User, UserX, MessageSquare } from "lucide-react";
+import { ArrowLeft, Loader2, Mail, Bug, Lightbulb, Heart, FileText, Star, User, UserX, MessageSquare, TrendingUp } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 type Row = {
@@ -25,6 +25,15 @@ type EmailLog = {
   created_at: string;
 };
 
+type FunnelEvent = {
+  event_name: string;
+  step: string | null;
+  session_id: string | null;
+  user_id: string | null;
+  metadata: any;
+  created_at: string;
+};
+
 const ICON: Record<string, any> = { bug: Bug, suggestion: Lightbulb, praise: Heart, other: FileText };
 
 export default function AdminFeedback() {
@@ -33,8 +42,10 @@ export default function AdminFeedback() {
   const [rows, setRows] = useState<Row[]>([]);
   const [filter, setFilter] = useState<"all" | "new" | "blocked" | "resolved">("all");
   const [loading, setLoading] = useState(true);
-  const [tab, setTab] = useState<"feedback" | "emails">("feedback");
+  const [tab, setTab] = useState<"feedback" | "emails" | "funnel">("feedback");
   const [emails, setEmails] = useState<EmailLog[]>([]);
+  const [funnel, setFunnel] = useState<FunnelEvent[]>([]);
+  const [funnelDays, setFunnelDays] = useState<7 | 30>(7);
 
   useEffect(() => {
     (async () => {
@@ -63,6 +74,14 @@ export default function AdminFeedback() {
         dedup.push(r);
       }
       setEmails(dedup);
+      const since = new Date(Date.now() - 30 * 24 * 3600 * 1000).toISOString();
+      const { data: fe } = await supabase
+        .from("funnel_events")
+        .select("event_name, step, session_id, user_id, metadata, created_at")
+        .gte("created_at", since)
+        .order("created_at", { ascending: false })
+        .limit(5000);
+      setFunnel((fe ?? []) as any);
       setLoading(false);
     })();
   }, []);

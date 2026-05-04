@@ -5,9 +5,23 @@ import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { useCompanionMode, type CompanionMode } from "@/lib/companionPrefs";
 import { T, useT } from "@/i18n/T";
+import { useI18n } from "@/i18n/I18nProvider";
 
 type Pet = { id: string; nickname: string; stage: number; level: number; exp: number; hunger: number; mood: number; species_id: string; equipped_skin_id?: string | null };
 type Species = { id: string; emoji_egg: string; emoji_baby: string; emoji_adult: string; emoji_legend: string };
+
+const DEFAULT_PET_NAMES: Record<string, { zh: string; en: string }> = {
+  lumi_spark: { zh: "绿芽精灵", en: "Sprout" },
+  fire_fox: { zh: "火焰狐", en: "Ember" },
+  rainbow_whale: { zh: "彩虹鲸", en: "Aqua" },
+};
+
+function displayPetName(p: Pet, lang: string) {
+  const defaults = DEFAULT_PET_NAMES[p.species_id];
+  if (!defaults) return p.nickname;
+  if ((lang !== "zh" && lang !== "zh-TW") && p.nickname === defaults.zh) return defaults.en;
+  return p.nickname;
+}
 
 function pickEmoji(p: Pet, sp?: Species) {
   if (!sp) return "🐣";
@@ -24,6 +38,7 @@ const HIDDEN_KEY = "bme_companion_hidden";
  */
 export function FloatingPet() {
   const t = useT();
+  const { lang } = useI18n();
   const { mode, setMode, animate, showHungerAlert } = useCompanionMode();
   const [pet, setPet] = useState<Pet | null>(null);
   const [sp, setSp] = useState<Species | null>(null);
@@ -177,6 +192,7 @@ export function FloatingPet() {
   }
   if (!pet) return null;
   const emoji = pickEmoji(pet, sp ?? undefined);
+  const petName = displayPetName(pet, lang);
   const isHappy = react?.kind === "correct" || react?.kind === "happy" || react?.kind === "flash";
   const isSad = react?.kind === "wrong";
   const isWaiting = pet.hunger < 25;
@@ -186,7 +202,7 @@ export function FloatingPet() {
       {SettingsPopover}
       <Link
         to="/pets"
-        aria-label={`${t("查看你的学习伙伴")} ${pet.nickname}`}
+        aria-label={`${t("查看你的学习伙伴")} ${petName}`}
         className="group relative block"
       >
         <div className={cn(
@@ -206,7 +222,7 @@ export function FloatingPet() {
             {emoji}
           </div>
           <div className="hidden flex-col text-left leading-tight sm:flex">
-            <span className="text-[10px] font-bold">{pet.nickname}</span>
+            <span className="text-[10px] font-bold">{petName}</span>
             <span className="text-[10px] text-muted-foreground">Lv.{pet.level}</span>
           </div>
           <button

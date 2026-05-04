@@ -11,6 +11,7 @@ import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
 import WordDuel from "@/components/WordDuel";
 import MemoryMatch from "@/components/MemoryMatch";
+import { useI18n } from "@/i18n/I18nProvider";
 
 type Vocab = {
   id: string;
@@ -29,8 +30,15 @@ type Vocab = {
 type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs";
 const GROUP_SIZE = 20;
 
+const isChineseUi = (lang: string) => lang === "zh" || lang === "zh-TW";
+const gradeLabel = (grade: number, zh: boolean) => zh ? `初${grade}` : `Grade ${grade + 6}`;
+const meaningForUi = (word: Vocab, zh: boolean) => zh ? word.meaning_cn : (word.meaning_en || word.meaning_cn);
+const secondaryMeaningForUi = (word: Vocab, zh: boolean) => zh ? word.meaning_en : word.meaning_cn;
+
 export default function JuniorVocab() {
   const [params, setParams] = useSearchParams();
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
   const grade = params.get("grade") ?? "1";
   const mode = (params.get("mode") as Mode) ?? null;
   const groupParam = Number(params.get("group") ?? "0");
@@ -101,7 +109,7 @@ export default function JuniorVocab() {
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
         <div className="flex items-center justify-center py-20 text-muted-foreground">
-          <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
         </div>
       </main>
     );
@@ -109,16 +117,16 @@ export default function JuniorVocab() {
 
   if (mode === "srs") {
     if (srsPool === null) {
-      return <main className="mx-auto min-h-screen max-w-3xl px-5 py-8"><div className="flex items-center justify-center py-20 text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> 加载到期单词…</div></main>;
+      return <main className="mx-auto min-h-screen max-w-3xl px-5 py-8"><div className="flex items-center justify-center py-20 text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载到期单词…" : "Loading due words…"}</div></main>;
     }
     if (srsPool.length === 0) {
       return (
         <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-          <button onClick={exit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</button>
+          <button onClick={exit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {zh ? "返回" : "Back"}</button>
           <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
             <Trophy className="mx-auto size-12 text-amber-500" />
-            <h3 className="mt-2 text-xl font-extrabold">今日没有到期单词 🎉</h3>
-            <p className="mt-1 text-sm text-muted-foreground">先去清单里学一组新词，系统会按艾宾浩斯曲线自动安排复习。</p>
+            <h3 className="mt-2 text-xl font-extrabold">{zh ? "今日没有到期单词 🎉" : "No words are due today 🎉"}</h3>
+            <p className="mt-1 text-sm text-muted-foreground">{zh ? "先去清单里学一组新词，系统会按艾宾浩斯曲线自动安排复习。" : "Study a new group first, then the system will schedule reviews automatically."}</p>
           </div>
         </main>
       );
@@ -142,15 +150,18 @@ export default function JuniorVocab() {
 /* -------------------- HUB -------------------- */
 type WordMasteryRow = { word_id: string; mastery_level: number | null; due_at: string | null; interval_days: number | null };
 function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }: { words: Vocab[]; groups: Vocab[][]; grade: number; gradeNum: number; onPick: (m: Exclude<Mode, null>) => void; onPickGroup: (i: number) => void }) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
+  const levelName = gradeLabel(grade, zh);
   const [masteryMap, setMasteryMap] = useState<Map<string, WordMasteryRow>>(new Map());
   const [loadedMastery, setLoadedMastery] = useState(false);
   const games: { mode: Exclude<Mode, null>; icon: any; title: string; desc: string; gradient: string; badge?: string }[] = [
-    { mode: "classic", icon: Brain, title: "智能选义", desc: "听音辨义 · 自动接入复习曲线", gradient: "from-emerald-500 to-teal-500", badge: "推荐" },
-    { mode: "bento", icon: Sparkles, title: "单词便当", desc: "6×4 翻牌速配 · 训练反应力", gradient: "from-rose-500 to-orange-500" },
-    { mode: "quest", icon: Trophy, title: "单词任务", desc: "每日 3 词 · 多关卡彻底掌握一个词", gradient: "from-amber-500 to-yellow-500" },
-    { mode: "duel", icon: Zap, title: "单词对决", desc: "60 秒高速答题 · 拼连击拿高分", gradient: "from-fuchsia-500 to-pink-500" },
-    { mode: "match", icon: Music, title: "记忆翻牌", desc: "图音中英匹配 · 经典训练法", gradient: "from-sky-500 to-blue-500" },
-    { mode: "dict", icon: Keyboard, title: "听写挑战", desc: "听音拼词 · 锁定拼写细节", gradient: "from-violet-500 to-indigo-500" },
+    { mode: "classic", icon: Brain, title: zh ? "智能选义" : "Smart meanings", desc: zh ? "听音辨义 · 自动接入复习曲线" : "Listen, choose meaning · feeds the review curve", gradient: "from-emerald-500 to-teal-500", badge: zh ? "推荐" : "Recommended" },
+    { mode: "bento", icon: Sparkles, title: zh ? "单词便当" : "Word Bento", desc: zh ? "6×4 翻牌速配 · 训练反应力" : "6×4 fast matching · reaction training", gradient: "from-rose-500 to-orange-500" },
+    { mode: "quest", icon: Trophy, title: zh ? "单词任务" : "Word Quest", desc: zh ? "每日 3 词 · 多关卡彻底掌握一个词" : "3 words a day · multi-stage mastery", gradient: "from-amber-500 to-yellow-500" },
+    { mode: "duel", icon: Zap, title: zh ? "单词对决" : "Word Duel", desc: zh ? "60 秒高速答题 · 拼连击拿高分" : "60-second speed round · build combos", gradient: "from-fuchsia-500 to-pink-500" },
+    { mode: "match", icon: Music, title: zh ? "记忆翻牌" : "Memory Match", desc: zh ? "图音中英匹配 · 经典训练法" : "Match words and meanings · classic drill", gradient: "from-sky-500 to-blue-500" },
+    { mode: "dict", icon: Keyboard, title: zh ? "听写挑战" : "Dictation", desc: zh ? "听音拼词 · 锁定拼写细节" : "Hear it, spell it · lock in spelling", gradient: "from-violet-500 to-indigo-500" },
   ];
 
   useEffect(() => {
@@ -187,13 +198,13 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
       <BackLink to={`/junior/g/${grade}`} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回初{grade}
+        <ArrowLeft className="size-4" /> {zh ? `返回初${grade}` : `Back to ${levelName}`}
       </BackLink>
 
       <div className="mb-5">
-        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CORE VOCABULARY · 初{grade}</div>
-        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">初{grade}核心词汇</h1>
-        <p className="mt-1 text-xs text-muted-foreground">中考新课标 · 共 {words.length} 词 · 按 20 词一组系统学习</p>
+        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CORE VOCABULARY · {levelName}</div>
+        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">{zh ? `初${grade}核心词汇` : `${levelName} Core Vocabulary`}</h1>
+        <p className="mt-1 text-xs text-muted-foreground">{zh ? `中考新课标 · 共 ${words.length} 词 · 按 20 词一组系统学习` : `Junior curriculum · ${words.length} words · 20 words per group`}</p>
       </div>
 
       {/* 学习进度总览（高考同款风格，复用 junior_word_mastery） */}
@@ -201,28 +212,28 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <BarChart3 className="size-4 text-fuchsia-600" />
-            <h3 className="text-sm font-bold text-foreground">我的词汇掌握度</h3>
+            <h3 className="text-sm font-bold text-foreground">{zh ? "我的词汇掌握度" : "My vocabulary mastery"}</h3>
           </div>
-          <span className="text-[10px] text-muted-foreground">FSRS 遗忘曲线 · 多维评判</span>
+          <span className="text-[10px] text-muted-foreground">{zh ? "FSRS 遗忘曲线 · 多维评判" : "FSRS review curve · multi-signal scoring"}</span>
         </div>
         <div className="mt-3 flex items-end gap-2">
           <div className="text-3xl font-extrabold leading-none text-fuchsia-600">{mastered.toLocaleString()}</div>
-          <div className="pb-1 text-xs text-muted-foreground">/ {total.toLocaleString()} 词彻底掌握 ({masteredPct}%)</div>
+          <div className="pb-1 text-xs text-muted-foreground">/ {total.toLocaleString()} {zh ? `词彻底掌握 (${masteredPct}%)` : `words mastered (${masteredPct}%)`}</div>
         </div>
         <div className="mt-3 flex h-2.5 w-full overflow-hidden rounded-full bg-muted">
           <div className="bg-gradient-to-r from-fuchsia-500 to-pink-500" style={{ width: `${total ? (mastered / total) * 100 : 0}%` }} />
           <div className="bg-gradient-to-r from-amber-400 to-orange-400" style={{ width: `${total ? (Math.max(0, studied - mastered) / total) * 100 : 0}%` }} />
         </div>
         <div className="mt-2 flex items-center justify-between text-[11px] text-muted-foreground">
-          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-fuchsia-500" /> 掌握 {masteredPct}%</span>
-          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-amber-400" /> 学习中 {Math.max(0, Math.round((studiedPct - masteredPct) * 10) / 10)}%</span>
-          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-muted-foreground/30" /> 未开始 {Math.max(0, Math.round((100 - studiedPct) * 10) / 10)}%</span>
+          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-fuchsia-500" /> {zh ? "掌握" : "Mastered"} {masteredPct}%</span>
+          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-amber-400" /> {zh ? "学习中" : "Learning"} {Math.max(0, Math.round((studiedPct - masteredPct) * 10) / 10)}%</span>
+          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-muted-foreground/30" /> {zh ? "未开始" : "Not started"} {Math.max(0, Math.round((100 - studiedPct) * 10) / 10)}%</span>
         </div>
         <div className="mt-3 grid grid-cols-4 gap-2">
-          <MiniStat icon={<Crown className="size-3.5" />} label="👑 掌握" value={mastered} tone="from-fuchsia-500 to-pink-500" />
-          <MiniStat icon={<Sparkles className="size-3.5" />} label="🌟 学习中" value={Math.max(0, studied - mastered)} tone="from-amber-400 to-orange-500" />
-          <MiniStat icon={<Clock className="size-3.5" />} label="⏰ 待复习" value={dueCount} tone="from-blue-500 to-indigo-600" />
-          <MiniStat icon={<Flame className="size-3.5" />} label="📈 平均稳定" value={Math.round(avgStability * 10) / 10} tone="from-emerald-500 to-teal-500" hint="天" />
+          <MiniStat icon={<Crown className="size-3.5" />} label={zh ? "👑 掌握" : "👑 Mastered"} value={mastered} tone="from-fuchsia-500 to-pink-500" />
+          <MiniStat icon={<Sparkles className="size-3.5" />} label={zh ? "🌟 学习中" : "🌟 Learning"} value={Math.max(0, studied - mastered)} tone="from-amber-400 to-orange-500" />
+          <MiniStat icon={<Clock className="size-3.5" />} label={zh ? "⏰ 待复习" : "⏰ Due"} value={dueCount} tone="from-blue-500 to-indigo-600" />
+          <MiniStat icon={<Flame className="size-3.5" />} label={zh ? "📈 平均稳定" : "📈 Avg stability"} value={Math.round(avgStability * 10) / 10} tone="from-emerald-500 to-teal-500" hint={zh ? "天" : "d"} />
         </div>
       </section>
 
@@ -242,18 +253,18 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">🧠 智能复习</span>
+              <span className="text-base font-extrabold">🧠 {zh ? "智能复习" : "Smart review"}</span>
               {dueCount > 0 && (
                 <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[11px] font-bold text-primary-foreground">
-                  <Flame className="size-3" /> 今日 {dueCount} 词待复习
+                  <Flame className="size-3" /> {zh ? `今日 ${dueCount} 词待复习` : `${dueCount} due today`}
                 </span>
               )}
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              {!loadedMastery ? "加载中…" : dueCount === 0
-                ? studied === 0 ? "先学一组单词，系统会按艾宾浩斯曲线安排复习"
-                                : `已学 ${studied} 词 · 今日没有到期单词，明天再来`
-                : `已学 ${studied} 词 · SM-2 算法 · 答错重学，答对延后`}
+              {!loadedMastery ? (zh ? "加载中…" : "Loading…") : dueCount === 0
+                ? studied === 0 ? (zh ? "先学一组单词，系统会按艾宾浩斯曲线安排复习" : "Study one group first; reviews will be scheduled automatically")
+                                : (zh ? `已学 ${studied} 词 · 今日没有到期单词，明天再来` : `${studied} words studied · nothing due today`)
+                : (zh ? `已学 ${studied} 词 · SM-2 算法 · 答错重学，答对延后` : `${studied} words studied · SM-2 schedule · wrong answers come back sooner`)}
             </div>
           </div>
           {dueCount > 0 && <ChevronRight className="size-5 text-primary" />}
@@ -263,10 +274,10 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
       <section className="mb-6">
         <div className="mb-3 flex items-end justify-between gap-3">
           <div>
-            <h2 className="text-base font-extrabold">单词清单</h2>
-            <p className="text-xs text-muted-foreground">和高中一样，先按清单逐组学习，再进入游戏强化。</p>
+            <h2 className="text-base font-extrabold">{zh ? "单词清单" : "Word list"}</h2>
+            <p className="text-xs text-muted-foreground">{zh ? "和高中一样，先按清单逐组学习，再进入游戏强化。" : "Learn each 20-word group in order, then use games to reinforce it."}</p>
           </div>
-          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">{groups.length} 组</span>
+          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">{groups.length} {zh ? "组" : "groups"}</span>
         </div>
         <div className="grid gap-2">
           {groups.map((group, i) => {
@@ -287,23 +298,23 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
                 <div className="flex items-center justify-between gap-3">
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-extrabold">第 {i + 1} 组</span>
-                      <span className="text-[11px] text-muted-foreground">{group.length} 词</span>
-                      {allMastered && <span className="rounded-full bg-fuchsia-500/15 px-2 py-0.5 text-[10px] font-bold text-fuchsia-600">👑 全部掌握</span>}
+                      <span className="text-sm font-extrabold">{zh ? `第 ${i + 1} 组` : `Group ${i + 1}`}</span>
+                      <span className="text-[11px] text-muted-foreground">{group.length} {zh ? "词" : "words"}</span>
+                      {allMastered && <span className="rounded-full bg-fuchsia-500/15 px-2 py-0.5 text-[10px] font-bold text-fuchsia-600">👑 {zh ? "全部掌握" : "Mastered"}</span>}
                     </div>
                     <div className="mt-1 truncate text-xs text-muted-foreground">{group.slice(0, 5).map((w) => w.word).join(" · ")}</div>
                     <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
                       <span className="inline-flex items-center gap-1 rounded-full bg-fuchsia-500/10 px-2 py-0.5 text-[10px] font-bold text-fuchsia-600">
-                        <Crown className="size-3" /> 已掌握 {gMastered}
+                        <Crown className="size-3" /> {zh ? "已掌握" : "Mastered"} {gMastered}
                       </span>
                       {gDue > 0 && (
                         <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/10 px-2 py-0.5 text-[10px] font-bold text-blue-600">
-                          <Clock className="size-3" /> 待复习 {gDue}
+                          <Clock className="size-3" /> {zh ? "待复习" : "Due"} {gDue}
                         </span>
                       )}
                       {gTouched < group.length && (
                         <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-[10px] font-bold text-muted-foreground">
-                          未学 {group.length - gTouched}
+                          {zh ? "未学" : "New"} {group.length - gTouched}
                         </span>
                       )}
                     </div>
@@ -317,8 +328,8 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
       </section>
 
       <div className="mb-3 mt-4 flex items-end justify-between">
-        <h2 className="text-base font-extrabold">辅助训练</h2>
-        <span className="text-[11px] text-muted-foreground">6 种游戏 · 全部接入复习曲线</span>
+        <h2 className="text-base font-extrabold">{zh ? "辅助训练" : "Practice games"}</h2>
+        <span className="text-[11px] text-muted-foreground">{zh ? "6 种游戏 · 全部接入复习曲线" : "6 games · all connected to the review curve"}</span>
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         {games.map((g) => {
@@ -352,12 +363,12 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
 
       <div className="mt-6 rounded-2xl border border-border/60 bg-card p-4 text-xs text-muted-foreground">
         <div className="flex items-center gap-2 font-bold text-foreground">
-          <BarChart3 className="size-4 text-primary" /> 全部游戏数据自动接入智能复习
+          <BarChart3 className="size-4 text-primary" /> {zh ? "全部游戏数据自动接入智能复习" : "Game results feed smart review automatically"}
         </div>
         <ul className="mt-2 list-inside list-disc space-y-1">
-          <li>答对：金币 +2，宠物经验自动累计</li>
-          <li>答错：自动进错题本，下次优先复习</li>
-          <li>每天通过任意 3 个游戏即可深度记住一组单词</li>
+          <li>{zh ? "答对：金币 +2，宠物经验自动累计" : "Correct answers: +2 coins and pet XP"}</li>
+          <li>{zh ? "答错：自动进错题本，下次优先复习" : "Wrong answers: added to review priority"}</li>
+          <li>{zh ? "每天通过任意 3 个游戏即可深度记住一组单词" : "Finish any 3 games to lock in one group each day"}</li>
         </ul>
       </div>
     </main>
@@ -375,20 +386,23 @@ function MiniStat({ icon, label, value, tone, hint }: { icon: React.ReactNode; l
 }
 
 function JuniorWordGroup({ group, groupNumber, grade, onExit, onPractice }: { group: Vocab[]; groupNumber: number; grade: number; onExit: () => void; onPractice: (m: Exclude<Mode, null>) => void }) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
+  const levelName = gradeLabel(grade, zh);
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回初{grade}单词清单
+        <ArrowLeft className="size-4" /> {zh ? `返回初${grade}单词清单` : `Back to ${levelName} word list`}
       </button>
       <div className="mb-5">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CORE VOCABULARY · GROUP {groupNumber}</div>
-        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">第 {groupNumber} 组单词</h1>
-        <p className="mt-1 text-xs text-muted-foreground">先看清单理解词义，再选择练习模式强化记忆。</p>
+        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">{zh ? `第 ${groupNumber} 组单词` : `Group ${groupNumber} words`}</h1>
+        <p className="mt-1 text-xs text-muted-foreground">{zh ? "先看清单理解词义，再选择练习模式强化记忆。" : "Review the list first, then choose a practice mode to reinforce it."}</p>
       </div>
       <div className="mb-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
         {(["classic", "bento", "match", "dict"] as Exclude<Mode, null>[]).map((m) => (
           <button key={m} onClick={() => onPractice(m)} className="rounded-2xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90">
-            {m === "classic" ? "智能选义" : m === "bento" ? "单词便当" : m === "match" ? "记忆翻牌" : "听写挑战"}
+            {m === "classic" ? (zh ? "智能选义" : "Smart meanings") : m === "bento" ? (zh ? "单词便当" : "Word Bento") : m === "match" ? (zh ? "记忆翻牌" : "Memory Match") : (zh ? "听写挑战" : "Dictation")}
           </button>
         ))}
       </div>
@@ -403,15 +417,15 @@ function JuniorWordGroup({ group, groupNumber, grade, onExit, onPractice }: { gr
                   {w.phonetic && <span className="font-mono text-xs text-muted-foreground">{w.phonetic}</span>}
                   {w.pos && <span className="rounded-full bg-secondary px-2 py-0.5 text-[10px] font-bold text-muted-foreground">{w.pos}</span>}
                 </div>
-                <p className="mt-1 text-sm font-semibold text-foreground">{w.meaning_cn}</p>
-                {w.meaning_en && <p className="mt-0.5 text-xs text-muted-foreground">{w.meaning_en}</p>}
+                <p className="mt-1 text-sm font-semibold text-foreground">{meaningForUi(w, zh)}</p>
+                {secondaryMeaningForUi(w, zh) && <p className="mt-0.5 text-xs text-muted-foreground">{secondaryMeaningForUi(w, zh)}</p>}
               </div>
-              <button onClick={() => speak(w.word)} className="grid size-9 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground" aria-label={`播放 ${w.word}`}>
+              <button onClick={() => speak(w.word)} className="grid size-9 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground" aria-label={zh ? `播放 ${w.word}` : `Play ${w.word}`}>
                 <Volume2 className="size-4" />
               </button>
             </div>
             {w.example_en && <p className="mt-3 rounded-xl bg-secondary/60 px-3 py-2 text-sm text-foreground">{w.example_en}</p>}
-            {w.example_cn && <p className="mt-1 px-3 text-xs text-muted-foreground">{w.example_cn}</p>}
+            {zh && w.example_cn && <p className="mt-1 px-3 text-xs text-muted-foreground">{w.example_cn}</p>}
           </article>
         ))}
       </div>
@@ -430,6 +444,8 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
   const queue = useMemo(() => shuffle(pool).slice(0, 20), [pool]);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
@@ -440,17 +456,17 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
     if (!cur) return [];
     const distractors = shuffle(pool.filter((w) => w.id !== cur.id))
       .slice(0, 3)
-      .map((w) => w.meaning_cn);
-    return shuffle([cur.meaning_cn, ...distractors]);
-  }, [cur, pool]);
+      .map((w) => meaningForUi(w, zh));
+    return shuffle([meaningForUi(cur, zh), ...distractors]);
+  }, [cur, pool, zh]);
 
   if (!cur) {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回
+          <ArrowLeft className="size-4" /> {zh ? "返回" : "Back"}
         </button>
-        <p className="text-sm text-muted-foreground">暂无可用单词</p>
+        <p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p>
       </main>
     );
   }
@@ -466,15 +482,15 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
       <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
         <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
           <Trophy className="mx-auto size-12 text-amber-500" />
-          <h3 className="mt-2 text-xl font-extrabold">{pct >= 90 ? "🌟 太棒了！" : pct >= 70 ? "👍 不错！" : "💪 继续加油！"}</h3>
-          <p className="mt-1 text-sm text-muted-foreground">答对 {score.correct} / {score.total}（{pct}%）</p>
+          <h3 className="mt-2 text-xl font-extrabold">{pct >= 90 ? (zh ? "🌟 太棒了！" : "🌟 Great work!") : pct >= 70 ? (zh ? "👍 不错！" : "👍 Nice job!") : (zh ? "💪 继续加油！" : "💪 Keep going!")}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{zh ? `答对 ${score.correct} / ${score.total}（${pct}%）` : `${score.correct} / ${score.total} correct (${pct}%)`}</p>
           <div className="mt-4 flex justify-center gap-3">
-            <button onClick={onExit} className="rounded-full border border-border px-5 py-2 text-sm font-bold">返回中心</button>
+            <button onClick={onExit} className="rounded-full border border-border px-5 py-2 text-sm font-bold">{zh ? "返回中心" : "Back to center"}</button>
             <button
               onClick={() => { (queue as any).__rewarded = false; setIdx(0); setPicked(null); setScore({ correct: 0, total: 0 }); }}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground"
             >
-              <RotateCw className="size-4" /> 再来一组
+              <RotateCw className="size-4" /> {zh ? "再来一组" : "Try another set"}
             </button>
           </div>
         </div>
@@ -485,7 +501,7 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
   const onPickAns = async (m: string) => {
     if (picked) return;
     setPicked(m);
-    const correct = m === cur.meaning_cn;
+    const correct = m === meaningForUi(cur, zh);
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
     speak(cur.word);
     if (correct) awardCoins(2, "junior_vocab_correct").catch(() => {});
@@ -500,15 +516,15 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回游戏中心
+        <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
       </button>
       <div className="space-y-4">
         <div className="flex items-center justify-between text-xs text-muted-foreground">
-          <span>第 {idx + 1} / {queue.length} 题</span>
+          <span>{zh ? `第 ${idx + 1} / ${queue.length} 题` : `Question ${idx + 1} / ${queue.length}`}</span>
           <span className="font-bold">✅ {score.correct} / {score.total}</span>
         </div>
         <div className="rounded-3xl border border-border/60 bg-card p-6 text-center">
-          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">请选择正确的中文意思</div>
+          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{zh ? "请选择正确的中文意思" : "Choose the correct meaning"}</div>
           <div className="mt-3 flex items-center justify-center gap-3">
             <span className="text-3xl font-black md:text-4xl">{cur.word}</span>
             <button onClick={() => speak(cur.word)} className="grid size-10 place-items-center rounded-full bg-primary text-primary-foreground">
@@ -519,7 +535,7 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
         </div>
         <div className="grid gap-2 sm:grid-cols-2">
           {options.map((m) => {
-            const isCorrect = m === cur.meaning_cn;
+            const isCorrect = m === meaningForUi(cur, zh);
             const showRight = picked && isCorrect;
             const showWrong = picked === m && !isCorrect;
             return (
@@ -543,7 +559,7 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
           })}
         </div>
         <div className="flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
-          <Sparkles className="size-3" /> 答题数据已自动接入智能复习系统
+          <Sparkles className="size-3" /> {zh ? "答题数据已自动接入智能复习系统" : "Answers automatically feed the smart review system"}
         </div>
       </div>
     </main>
@@ -553,15 +569,17 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
 /* -------------------- MEMORY MATCH WRAPPER --------------------
    MemoryMatch 组件签名可能不同；用一个简化的本地实现保证可用 */
 function MemoryMatchWrapper({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
   const PAIRS = 8;
   const initial = useMemo(() => {
-    const sample = shuffle(pool.filter((v) => v.word && v.meaning_cn)).slice(0, PAIRS);
+    const sample = shuffle(pool.filter((v) => v.word && meaningForUi(v, zh))).slice(0, PAIRS);
     const cards = sample.flatMap((v, i) => [
       { key: `${i}-en`, pairId: v.id, side: "en" as const, text: v.word },
-      { key: `${i}-cn`, pairId: v.id, side: "cn" as const, text: v.meaning_cn },
+      { key: `${i}-meaning`, pairId: v.id, side: "meaning" as const, text: meaningForUi(v, zh) },
     ]);
     return shuffle(cards);
-  }, [pool]);
+  }, [pool, zh]);
 
   const [cards] = useState(initial);
   const [opened, setOpened] = useState<string[]>([]);
@@ -596,17 +614,17 @@ function MemoryMatchWrapper({ pool, onExit }: { pool: Vocab[]; onExit: () => voi
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回游戏中心
+        <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
       </button>
-      <h2 className="text-xl font-extrabold">🃏 记忆翻牌</h2>
-      <p className="mt-1 text-xs text-muted-foreground">配对 {PAIRS} 对单词与中文 · 已配对 {matched.size}/{PAIRS} · 步数 {moves}</p>
+      <h2 className="text-xl font-extrabold">🃏 {zh ? "记忆翻牌" : "Memory Match"}</h2>
+      <p className="mt-1 text-xs text-muted-foreground">{zh ? `配对 ${PAIRS} 对单词与中文 · 已配对 ${matched.size}/${PAIRS} · 步数 ${moves}` : `Match ${PAIRS} word pairs · matched ${matched.size}/${PAIRS} · moves ${moves}`}</p>
 
       {done ? (
         <div className="mt-6 rounded-3xl border border-border/60 bg-card p-8 text-center">
           <Trophy className="mx-auto size-12 text-amber-500" />
-          <h3 className="mt-2 text-xl font-extrabold">完美通关！</h3>
-          <p className="mt-1 text-sm text-muted-foreground">用了 {moves} 步</p>
-          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">返回</button>
+          <h3 className="mt-2 text-xl font-extrabold">{zh ? "完美通关！" : "Perfect clear!"}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{zh ? `用了 ${moves} 步` : `${moves} moves`}</p>
+          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">{zh ? "返回" : "Back"}</button>
         </div>
       ) : (
         <div className="mt-4 grid grid-cols-4 gap-2">
@@ -635,6 +653,8 @@ function MemoryMatchWrapper({ pool, onExit }: { pool: Vocab[]; onExit: () => voi
 
 /* -------------------- DICTATION -------------------- */
 function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
   const queue = useMemo(() => shuffle(pool.filter((v) => v.word && !/[\/\s]/.test(v.word))).slice(0, 15), [pool]);
   const [idx, setIdx] = useState(0);
   const [input, setInput] = useState("");
@@ -644,7 +664,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
   useEffect(() => { if (cur) speak(cur.word); }, [cur?.id]);
 
-  if (!cur) return <main className="p-8"><p className="text-sm text-muted-foreground">暂无可用单词</p></main>;
+  if (!cur) return <main className="p-8"><p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p></main>;
 
   if (idx >= queue.length) {
     const pct = Math.round((score.correct / Math.max(1, score.total)) * 100);
@@ -652,9 +672,9 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
         <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
           <Headphones className="mx-auto size-12 text-primary" />
-          <h3 className="mt-2 text-xl font-extrabold">听写完成</h3>
-          <p className="mt-1 text-sm text-muted-foreground">{score.correct} / {score.total}（{pct}%）</p>
-          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">返回中心</button>
+          <h3 className="mt-2 text-xl font-extrabold">{zh ? "听写完成" : "Dictation complete"}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{zh ? `${score.correct} / ${score.total}（${pct}%）` : `${score.correct} / ${score.total} correct (${pct}%)`}</p>
+          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">{zh ? "返回中心" : "Back to center"}</button>
         </div>
       </main>
     );
@@ -677,18 +697,18 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   return (
     <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回游戏中心
+        <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
       </button>
       <div className="space-y-4">
         <div className="flex items-center justify-between text-xs text-muted-foreground">
-          <span>第 {idx + 1} / {queue.length}</span>
+          <span>{zh ? `第 ${idx + 1} / ${queue.length}` : `${idx + 1} / ${queue.length}`}</span>
           <span className="font-bold">✅ {score.correct} / {score.total}</span>
         </div>
         <div className="rounded-3xl border border-border/60 bg-card p-6 text-center">
           <button onClick={() => speak(cur.word)} className="mx-auto grid size-16 place-items-center rounded-full bg-primary text-primary-foreground">
             <Volume2 className="size-7" />
           </button>
-          <p className="mt-3 text-sm text-muted-foreground">中文：{cur.meaning_cn}</p>
+          <p className="mt-3 text-sm text-muted-foreground">{zh ? `中文：${cur.meaning_cn}` : meaningForUi(cur, zh)}</p>
         </div>
         <div className="space-y-2">
           <input
@@ -697,7 +717,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => { if (e.key === "Enter") submit(); }}
             disabled={!!feedback}
-            placeholder="拼写单词后回车"
+            placeholder={zh ? "拼写单词后回车" : "Type the spelling, then press Enter"}
             className={cn(
               "w-full rounded-2xl border-2 px-4 py-3 text-center text-lg font-extrabold tracking-wide outline-none transition",
               feedback === "right" && "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40",
@@ -706,10 +726,10 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
             )}
           />
           {feedback === "wrong" && (
-            <p className="text-center text-xs font-bold text-rose-600">正确拼写：{cur.word}</p>
+            <p className="text-center text-xs font-bold text-rose-600">{zh ? `正确拼写：${cur.word}` : `Correct spelling: ${cur.word}`}</p>
           )}
           <button onClick={submit} disabled={!!feedback || !input.trim()} className="w-full rounded-2xl bg-primary py-3 text-sm font-bold text-primary-foreground disabled:opacity-50">
-            提交
+            {zh ? "提交" : "Submit"}
           </button>
         </div>
       </div>

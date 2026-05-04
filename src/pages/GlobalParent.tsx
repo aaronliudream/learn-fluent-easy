@@ -184,8 +184,8 @@ export default function GlobalParent() {
       {/* Header */}
       <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
         <div>
-          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">PARENT CENTER</div>
-          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">👨‍👩‍👧 <T>全局家长中心</T></h1>
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">LEARNING CENTER</div>
+          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">📊 <T>学习中心 / Learning Center</T></h1>
           <p className="mt-1 text-xs text-muted-foreground">
             {mainSeg ? <><T>主修</T>：<b>{SEG_META[mainSeg].label}</b> · </> : null}
             <T>近 30 天 有效学习</T> <b>{fmtMinutes(totalMin)}</b> · <T>连续学习</T> <b>{streak}</b> <T>天</T> 🔥

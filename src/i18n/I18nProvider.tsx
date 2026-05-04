@@ -471,6 +471,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     return "";
   }, [lang]);
 
+  const t = useCallback((key: StringKey, vars?: Record<string, string | number>) => {
+    const tmpl = catalog[key] ?? EN[key] ?? key;
+    return interpolate(tmpl, vars);
+  }, [catalog]);
+
   const flushDynQueue = useCallback(async (l: LangCode) => {
     const toSend = Array.from(dynQueueRef.current);
     dynQueueRef.current.clear();

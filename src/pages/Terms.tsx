@@ -11,7 +11,7 @@ const Terms = () => {
         <h2><T>中文版</T></h2>
 
         <h3><T>1. 接受条款</T></h3>
-        <p><T>注册或使用 learn-fluent-easy（以下简称"本应用"）即表示你同意本服务条款。</T></p>
+        <p><T>注册或使用 Big Moon English（以下简称"本应用"）即表示你同意本服务条款。</T></p>
 
         <h3><T>2. 服务描述</T></h3>
         <p><T>本应用提供英语自适应学习功能，包括分级课程、水平测试、俚语学习、AI 批改等。</T></p>
@@ -25,7 +25,7 @@ const Terms = () => {
         </ul>
 
         <h3><T>4. 知识产权</T></h3>
-        <p><T>本应用的代码、设计、课程内容均归 learn-fluent-easy 团队所有。AI 生成的内容仅供学习使用。</T></p>
+        <p><T>本应用的代码、设计、课程内容均归 Big Moon English 团队所有。AI 生成的内容仅供学习使用。</T></p>
 
         <h3><T>5. 免责声明</T></h3>
         <p>
@@ -39,14 +39,14 @@ const Terms = () => {
         <p><T>本条款的解释与执行适用相关司法管辖区的法律。</T></p>
 
         <h3><T>8. 联系方式</T></h3>
-        <p>support@learn-fluent-easy.app</p>
+        <p>support@bigmoonenglish.com</p>
 
         <hr />
 
         <h2>English Version</h2>
 
         <h3>1. Acceptance</h3>
-        <p>By registering or using learn-fluent-easy ("the App"), you agree to these Terms.</p>
+        <p>By registering or using Big Moon English ("the App"), you agree to these Terms.</p>
 
         <h3>2. Service</h3>
         <p>
@@ -64,7 +64,7 @@ const Terms = () => {
 
         <h3>4. Intellectual Property</h3>
         <p>
-          All code, design, and curated content belong to the learn-fluent-easy team.
+          All code, design, and curated content belong to the Big Moon English team.
           AI-generated content is for personal learning use only.
         </p>
 
@@ -84,7 +84,7 @@ const Terms = () => {
         <p>These Terms are interpreted under the applicable jurisdiction's law.</p>
 
         <h3>8. Contact</h3>
-        <p>support@learn-fluent-easy.app</p>
+        <p>support@bigmoonenglish.com</p>
       </article>
     </main>
   );

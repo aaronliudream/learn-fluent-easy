@@ -10,7 +10,7 @@ const Privacy = () => {
       <article className="prose prose-sm max-w-none rounded-2xl bg-card p-6 shadow-card md:p-8 dark:prose-invert">
         <h2><T>中文版</T></h2>
         <p>
-          <T>欢迎使用 learn-fluent-easy（以下简称"本应用"）。我们重视你的隐私，本政策说明我们收集哪些信息、如何使用以及如何保护它们。</T>
+          <T>欢迎使用 Big Moon English（以下简称"本应用"）。我们重视你的隐私，本政策说明我们收集哪些信息、如何使用以及如何保护它们。</T>
         </p>
 
         <h3><T>1. 我们收集的信息</T></h3>
@@ -59,13 +59,13 @@ const Privacy = () => {
         </ul>
 
         <h3><T>7. 联系我们</T></h3>
-        <p><T>如有任何隐私相关问题，请联系：</T>support@learn-fluent-easy.app</p>
+        <p><T>如有任何隐私相关问题，请联系：</T>support@bigmoonenglish.com</p>
 
         <hr />
 
         <h2>English Version</h2>
         <p>
-          Welcome to learn-fluent-easy ("the App"). We respect your privacy. This policy
+          Welcome to Big Moon English ("the App"). We respect your privacy. This policy
           explains what data we collect, how we use it, and how we protect it.
         </p>
 
@@ -123,7 +123,7 @@ const Privacy = () => {
         </ul>
 
         <h3>7. Contact</h3>
-        <p>For privacy questions, contact: support@learn-fluent-easy.app</p>
+        <p>For privacy questions, contact: support@bigmoonenglish.com</p>
       </article>
     </main>
   );

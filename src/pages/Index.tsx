@@ -1,6 +1,6 @@
 import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Mic, Users, Trophy, UserPlus } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -26,6 +26,8 @@ const HOME_COUNTS = {
 
 const Index = () => {
   const { t } = useI18n();
+  const [searchParams] = useSearchParams();
+  const forceHub = searchParams.get("hub") === "1";
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
@@ -70,7 +72,7 @@ const Index = () => {
   // Cold/global traffic: show a real Landing page (hero + value prop + social
   // proof + CTA). Logged-in users skip straight to the study hub. Returning
   // guests with saved progress also keep their hub so they don't lose context.
-  if (!user && !hasProgress) {
+  if (!user && !hasProgress && !forceHub) {
     return <LandingPage />;
   }
 

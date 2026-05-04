@@ -51,7 +51,7 @@ export default function LandingPage() {
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
-              to="/levels"
+              to="/?hub=1"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1F3A2E] px-8 py-3.5 text-sm font-bold uppercase tracking-[0.16em] text-[#FAF8F3] transition hover:bg-[#27513f]"
             >
               <T>浏览课程</T> <ArrowRight className="size-4" />

@@ -203,7 +203,9 @@ const Index = () => {
         })}
       </section>
 
-      {/* Full-width placement test tile at the bottom */}
+      {/* Full-width placement test tile at the bottom — only for logged-in users
+          (unlogged users already see it as the hero above) */}
+      {user && (
       <Link
         to={placementSection.to}
         className={`group relative mt-3 flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-br ${placementSection.gradient} px-6 py-7 text-center text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(160_50%_30%/0.5)]`}
@@ -223,6 +225,7 @@ const Index = () => {
           {t("index.section.placement.cta")} <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
         </div>
       </Link>
+      )}
 
       <SupportButton variant="footer" />
     </main>

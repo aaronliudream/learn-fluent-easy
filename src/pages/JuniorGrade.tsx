@@ -18,13 +18,6 @@ export default function JuniorGrade() {
 
   const SECTIONS = [
     {
-      to: `/junior/vocab?grade=${dbGrade}`,
-      icon: Sparkles,
-      title: "核心词汇",
-      desc: "5 种游戏 · 单词便当 / 任务 / 对决 / 听写 · 彻底掌握",
-      gradient: "from-violet-500 via-indigo-500 to-blue-500",
-    },
-    {
       to: `/junior/grammar?grade=${dbGrade}`,
       icon: BookOpen,
       title: "中考语法专项",
@@ -68,6 +61,24 @@ export default function JuniorGrade() {
           <p className="mt-0.5 text-xs opacity-90">五大模块系统训练 · 一站搞定中考考点</p>
         </div>
       </div>
+
+      {/* 🎮 游戏化词汇 — 最吸引学生的入口，放最前面 */}
+      <Link
+        to={`/junior/vocab?grade=${dbGrade}`}
+        className="mb-3 relative flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br from-violet-500 via-indigo-500 to-blue-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:shadow-[0_24px_50px_-18px_rgba(91,43,201,0.6)]"
+      >
+        <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/20 blur-2xl" />
+        <span className="pointer-events-none absolute -left-6 -bottom-10 size-32 rounded-full bg-white/10 blur-2xl" />
+        <div className="relative grid size-16 shrink-0 place-items-center rounded-2xl bg-white/25 text-4xl backdrop-blur-sm">
+          🎮
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">VOCAB · GAMES</div>
+          <div className="text-lg font-extrabold leading-tight">核心词汇 · 5 种游戏</div>
+          <div className="mt-0.5 text-xs opacity-90">单词便当 / 任务 / 对决 / 听写 · 边玩边背</div>
+        </div>
+        <span className="relative rounded-full bg-white/25 px-3 py-1 text-xs font-bold backdrop-blur-sm">▶ 开始</span>
+      </Link>
 
       {/* 阶段测试入口 */}
       <Link

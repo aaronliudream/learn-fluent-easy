@@ -274,10 +274,10 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
       <section className="mb-6">
         <div className="mb-3 flex items-end justify-between gap-3">
           <div>
-            <h2 className="text-base font-extrabold">单词清单</h2>
-            <p className="text-xs text-muted-foreground">和高中一样，先按清单逐组学习，再进入游戏强化。</p>
+            <h2 className="text-base font-extrabold">{zh ? "单词清单" : "Word list"}</h2>
+            <p className="text-xs text-muted-foreground">{zh ? "和高中一样，先按清单逐组学习，再进入游戏强化。" : "Learn each 20-word group in order, then use games to reinforce it."}</p>
           </div>
-          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">{groups.length} 组</span>
+          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">{groups.length} {zh ? "组" : "groups"}</span>
         </div>
         <div className="grid gap-2">
           {groups.map((group, i) => {
@@ -298,23 +298,23 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
                 <div className="flex items-center justify-between gap-3">
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-extrabold">第 {i + 1} 组</span>
-                      <span className="text-[11px] text-muted-foreground">{group.length} 词</span>
-                      {allMastered && <span className="rounded-full bg-fuchsia-500/15 px-2 py-0.5 text-[10px] font-bold text-fuchsia-600">👑 全部掌握</span>}
+                      <span className="text-sm font-extrabold">{zh ? `第 ${i + 1} 组` : `Group ${i + 1}`}</span>
+                      <span className="text-[11px] text-muted-foreground">{group.length} {zh ? "词" : "words"}</span>
+                      {allMastered && <span className="rounded-full bg-fuchsia-500/15 px-2 py-0.5 text-[10px] font-bold text-fuchsia-600">👑 {zh ? "全部掌握" : "Mastered"}</span>}
                     </div>
                     <div className="mt-1 truncate text-xs text-muted-foreground">{group.slice(0, 5).map((w) => w.word).join(" · ")}</div>
                     <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
                       <span className="inline-flex items-center gap-1 rounded-full bg-fuchsia-500/10 px-2 py-0.5 text-[10px] font-bold text-fuchsia-600">
-                        <Crown className="size-3" /> 已掌握 {gMastered}
+                        <Crown className="size-3" /> {zh ? "已掌握" : "Mastered"} {gMastered}
                       </span>
                       {gDue > 0 && (
                         <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/10 px-2 py-0.5 text-[10px] font-bold text-blue-600">
-                          <Clock className="size-3" /> 待复习 {gDue}
+                          <Clock className="size-3" /> {zh ? "待复习" : "Due"} {gDue}
                         </span>
                       )}
                       {gTouched < group.length && (
                         <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-[10px] font-bold text-muted-foreground">
-                          未学 {group.length - gTouched}
+                          {zh ? "未学" : "New"} {group.length - gTouched}
                         </span>
                       )}
                     </div>
@@ -328,8 +328,8 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
       </section>
 
       <div className="mb-3 mt-4 flex items-end justify-between">
-        <h2 className="text-base font-extrabold">辅助训练</h2>
-        <span className="text-[11px] text-muted-foreground">6 种游戏 · 全部接入复习曲线</span>
+        <h2 className="text-base font-extrabold">{zh ? "辅助训练" : "Practice games"}</h2>
+        <span className="text-[11px] text-muted-foreground">{zh ? "6 种游戏 · 全部接入复习曲线" : "6 games · all connected to the review curve"}</span>
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         {games.map((g) => {
@@ -363,12 +363,12 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
 
       <div className="mt-6 rounded-2xl border border-border/60 bg-card p-4 text-xs text-muted-foreground">
         <div className="flex items-center gap-2 font-bold text-foreground">
-          <BarChart3 className="size-4 text-primary" /> 全部游戏数据自动接入智能复习
+          <BarChart3 className="size-4 text-primary" /> {zh ? "全部游戏数据自动接入智能复习" : "Game results feed smart review automatically"}
         </div>
         <ul className="mt-2 list-inside list-disc space-y-1">
-          <li>答对：金币 +2，宠物经验自动累计</li>
-          <li>答错：自动进错题本，下次优先复习</li>
-          <li>每天通过任意 3 个游戏即可深度记住一组单词</li>
+          <li>{zh ? "答对：金币 +2，宠物经验自动累计" : "Correct answers: +2 coins and pet XP"}</li>
+          <li>{zh ? "答错：自动进错题本，下次优先复习" : "Wrong answers: added to review priority"}</li>
+          <li>{zh ? "每天通过任意 3 个游戏即可深度记住一组单词" : "Finish any 3 games to lock in one group each day"}</li>
         </ul>
       </div>
     </main>

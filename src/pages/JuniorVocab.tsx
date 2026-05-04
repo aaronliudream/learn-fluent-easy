@@ -444,6 +444,8 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
   const queue = useMemo(() => shuffle(pool).slice(0, 20), [pool]);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
@@ -454,17 +456,17 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
     if (!cur) return [];
     const distractors = shuffle(pool.filter((w) => w.id !== cur.id))
       .slice(0, 3)
-      .map((w) => w.meaning_cn);
-    return shuffle([cur.meaning_cn, ...distractors]);
-  }, [cur, pool]);
+      .map((w) => meaningForUi(w, zh));
+    return shuffle([meaningForUi(cur, zh), ...distractors]);
+  }, [cur, pool, zh]);
 
   if (!cur) {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回
+          <ArrowLeft className="size-4" /> {zh ? "返回" : "Back"}
         </button>
-        <p className="text-sm text-muted-foreground">暂无可用单词</p>
+        <p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p>
       </main>
     );
   }
@@ -480,15 +482,15 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
       <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
         <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
           <Trophy className="mx-auto size-12 text-amber-500" />
-          <h3 className="mt-2 text-xl font-extrabold">{pct >= 90 ? "🌟 太棒了！" : pct >= 70 ? "👍 不错！" : "💪 继续加油！"}</h3>
-          <p className="mt-1 text-sm text-muted-foreground">答对 {score.correct} / {score.total}（{pct}%）</p>
+          <h3 className="mt-2 text-xl font-extrabold">{pct >= 90 ? (zh ? "🌟 太棒了！" : "🌟 Great work!") : pct >= 70 ? (zh ? "👍 不错！" : "👍 Nice job!") : (zh ? "💪 继续加油！" : "💪 Keep going!")}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{zh ? `答对 ${score.correct} / ${score.total}（${pct}%）` : `${score.correct} / ${score.total} correct (${pct}%)`}</p>
           <div className="mt-4 flex justify-center gap-3">
-            <button onClick={onExit} className="rounded-full border border-border px-5 py-2 text-sm font-bold">返回中心</button>
+            <button onClick={onExit} className="rounded-full border border-border px-5 py-2 text-sm font-bold">{zh ? "返回中心" : "Back to center"}</button>
             <button
               onClick={() => { (queue as any).__rewarded = false; setIdx(0); setPicked(null); setScore({ correct: 0, total: 0 }); }}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground"
             >
-              <RotateCw className="size-4" /> 再来一组
+              <RotateCw className="size-4" /> {zh ? "再来一组" : "Try another set"}
             </button>
           </div>
         </div>
@@ -499,7 +501,7 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
   const onPickAns = async (m: string) => {
     if (picked) return;
     setPicked(m);
-    const correct = m === cur.meaning_cn;
+    const correct = m === meaningForUi(cur, zh);
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
     speak(cur.word);
     if (correct) awardCoins(2, "junior_vocab_correct").catch(() => {});
@@ -514,15 +516,15 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回游戏中心
+        <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
       </button>
       <div className="space-y-4">
         <div className="flex items-center justify-between text-xs text-muted-foreground">
-          <span>第 {idx + 1} / {queue.length} 题</span>
+          <span>{zh ? `第 ${idx + 1} / ${queue.length} 题` : `Question ${idx + 1} / ${queue.length}`}</span>
           <span className="font-bold">✅ {score.correct} / {score.total}</span>
         </div>
         <div className="rounded-3xl border border-border/60 bg-card p-6 text-center">
-          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">请选择正确的中文意思</div>
+          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{zh ? "请选择正确的中文意思" : "Choose the correct meaning"}</div>
           <div className="mt-3 flex items-center justify-center gap-3">
             <span className="text-3xl font-black md:text-4xl">{cur.word}</span>
             <button onClick={() => speak(cur.word)} className="grid size-10 place-items-center rounded-full bg-primary text-primary-foreground">
@@ -533,7 +535,7 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
         </div>
         <div className="grid gap-2 sm:grid-cols-2">
           {options.map((m) => {
-            const isCorrect = m === cur.meaning_cn;
+            const isCorrect = m === meaningForUi(cur, zh);
             const showRight = picked && isCorrect;
             const showWrong = picked === m && !isCorrect;
             return (
@@ -557,7 +559,7 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
           })}
         </div>
         <div className="flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
-          <Sparkles className="size-3" /> 答题数据已自动接入智能复习系统
+          <Sparkles className="size-3" /> {zh ? "答题数据已自动接入智能复习系统" : "Answers automatically feed the smart review system"}
         </div>
       </div>
     </main>

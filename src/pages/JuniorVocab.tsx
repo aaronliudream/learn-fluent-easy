@@ -569,15 +569,17 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
 /* -------------------- MEMORY MATCH WRAPPER --------------------
    MemoryMatch 组件签名可能不同；用一个简化的本地实现保证可用 */
 function MemoryMatchWrapper({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
   const PAIRS = 8;
   const initial = useMemo(() => {
-    const sample = shuffle(pool.filter((v) => v.word && v.meaning_cn)).slice(0, PAIRS);
+    const sample = shuffle(pool.filter((v) => v.word && meaningForUi(v, zh))).slice(0, PAIRS);
     const cards = sample.flatMap((v, i) => [
       { key: `${i}-en`, pairId: v.id, side: "en" as const, text: v.word },
-      { key: `${i}-cn`, pairId: v.id, side: "cn" as const, text: v.meaning_cn },
+      { key: `${i}-meaning`, pairId: v.id, side: "meaning" as const, text: meaningForUi(v, zh) },
     ]);
     return shuffle(cards);
-  }, [pool]);
+  }, [pool, zh]);
 
   const [cards] = useState(initial);
   const [opened, setOpened] = useState<string[]>([]);
@@ -612,17 +614,17 @@ function MemoryMatchWrapper({ pool, onExit }: { pool: Vocab[]; onExit: () => voi
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回游戏中心
+        <ArrowLeft className="size-4" /> {zh ? "返回游戏中心" : "Back to games"}
       </button>
-      <h2 className="text-xl font-extrabold">🃏 记忆翻牌</h2>
-      <p className="mt-1 text-xs text-muted-foreground">配对 {PAIRS} 对单词与中文 · 已配对 {matched.size}/{PAIRS} · 步数 {moves}</p>
+      <h2 className="text-xl font-extrabold">🃏 {zh ? "记忆翻牌" : "Memory Match"}</h2>
+      <p className="mt-1 text-xs text-muted-foreground">{zh ? `配对 ${PAIRS} 对单词与中文 · 已配对 ${matched.size}/${PAIRS} · 步数 ${moves}` : `Match ${PAIRS} word pairs · matched ${matched.size}/${PAIRS} · moves ${moves}`}</p>
 
       {done ? (
         <div className="mt-6 rounded-3xl border border-border/60 bg-card p-8 text-center">
           <Trophy className="mx-auto size-12 text-amber-500" />
-          <h3 className="mt-2 text-xl font-extrabold">完美通关！</h3>
-          <p className="mt-1 text-sm text-muted-foreground">用了 {moves} 步</p>
-          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">返回</button>
+          <h3 className="mt-2 text-xl font-extrabold">{zh ? "完美通关！" : "Perfect clear!"}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{zh ? `用了 ${moves} 步` : `${moves} moves`}</p>
+          <button onClick={onExit} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">{zh ? "返回" : "Back"}</button>
         </div>
       ) : (
         <div className="mt-4 grid grid-cols-4 gap-2">

@@ -1,0 +1,17 @@
+{
+  "name": "Big Moon English",
+  "short_name": "Big Moon",
+  "description": "Speak English in 5 minutes a day. Bite-sized AI lessons, real-time speaking feedback, and streaks that stick.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F2F9FF",
+  "theme_color": "#00C4FF",
+  "lang": "en",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "/favicon.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

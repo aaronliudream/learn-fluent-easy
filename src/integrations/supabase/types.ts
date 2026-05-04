@@ -2372,44 +2372,50 @@ export type Database = {
       }
       junior_grammar_questions: {
         Row: {
-          correct_answer: string
+          accepted_answers: string[] | null
+          correct_answer: string | null
           created_at: string
           difficulty: number
           explanation: string | null
           id: string
-          option_a: string
-          option_b: string
-          option_c: string
-          option_d: string
+          option_a: string | null
+          option_b: string | null
+          option_c: string | null
+          option_d: string | null
           point_id: string
+          question_type: string
           sort_order: number
           stem: string
         }
         Insert: {
-          correct_answer: string
+          accepted_answers?: string[] | null
+          correct_answer?: string | null
           created_at?: string
           difficulty?: number
           explanation?: string | null
           id?: string
-          option_a: string
-          option_b: string
-          option_c: string
-          option_d: string
+          option_a?: string | null
+          option_b?: string | null
+          option_c?: string | null
+          option_d?: string | null
           point_id: string
+          question_type?: string
           sort_order?: number
           stem: string
         }
         Update: {
-          correct_answer?: string
+          accepted_answers?: string[] | null
+          correct_answer?: string | null
           created_at?: string
           difficulty?: number
           explanation?: string | null
           id?: string
-          option_a?: string
-          option_b?: string
-          option_c?: string
-          option_d?: string
+          option_a?: string | null
+          option_b?: string | null
+          option_c?: string | null
+          option_d?: string | null
           point_id?: string
+          question_type?: string
           sort_order?: number
           stem?: string
         }

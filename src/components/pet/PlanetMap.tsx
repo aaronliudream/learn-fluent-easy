@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { T, useT } from "@/i18n/T";
 
 /**
  * 4-planet companion world map — culturally neutral, level-gated unlock system.
@@ -28,6 +29,7 @@ const PLANETS: Planet[] = [
 ];
 
 export default function PlanetMap() {
+  const t = useT();
   const [petLevel, setPetLevel] = useState(1);
 
   useEffect(() => {
@@ -42,8 +44,8 @@ export default function PlanetMap() {
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-bold">🌌 学习星图</h3>
-        <span className="text-[11px] text-muted-foreground">伙伴 Lv.{petLevel}</span>
+        <h3 className="text-sm font-bold">🌌 <T>学习星图</T></h3>
+        <span className="text-[11px] text-muted-foreground"><T>伙伴</T> Lv.{petLevel}</span>
       </div>
       <div className="grid grid-cols-2 gap-3">
         {PLANETS.map(p => {
@@ -57,18 +59,18 @@ export default function PlanetMap() {
             >
               <div className="text-3xl">{unlocked ? p.emoji : "❔"}</div>
               <div className="mt-2 text-sm font-bold">
-                {unlocked ? p.name_cn : "未知星球"}
+                {unlocked ? <T>{p.name_cn}</T> : <T>未知星球</T>}
               </div>
               <div className="text-[11px] opacity-90">
-                {unlocked ? `${p.name_en} · ${p.band}` : `Lv.${p.unlock_level} 解锁`}
+                {unlocked ? `${p.name_en} · ${p.band}` : `Lv.${p.unlock_level} ${t("解锁")}`}
               </div>
-              {unlocked && <p className="mt-2 text-[11px] leading-snug opacity-90">{p.blurb_cn}</p>}
+              {unlocked && <p className="mt-2 text-[11px] leading-snug opacity-90"><T>{p.blurb_cn}</T></p>}
             </div>
           );
         })}
       </div>
       <p className="text-center text-[10px] text-muted-foreground">
-        🌍 全球学习者一起探索 · 没有竞赛，只有发现
+        🌍 <T>全球学习者一起探索 · 没有竞赛，只有发现</T>
       </p>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Mail, X } from "lucide-react";
+import { T, useT } from "@/i18n/T";
 
 /**
  * 周日"宠物成长信"（#10）
@@ -28,6 +29,7 @@ function thisWeekKey() {
 }
 
 export default function GrowthLetter() {
+  const t = useT();
   const [open, setOpen] = useState(false);
   const [data, setData] = useState<Letter | null>(null);
 
@@ -49,7 +51,7 @@ export default function GrowthLetter() {
   }, []);
 
   if (!open || !data) return null;
-  const name = data.pet_name || "你的小伙伴";
+  const name = data.pet_name || t("你的小伙伴");
   const close = () => {
     try { localStorage.setItem(LS_KEY, thisWeekKey()); } catch {}
     setOpen(false);
@@ -62,23 +64,23 @@ export default function GrowthLetter() {
           <X className="size-4" />
         </button>
         <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-rose-500">
-          <Mail className="size-4" /> 来自 {name} 的信
+          <Mail className="size-4" /> <T>来自</T> {name} <T>的信</T>
         </div>
-        <h2 className="mt-2 text-2xl font-extrabold">这一周，我们一起做到了 ✨</h2>
+        <h2 className="mt-2 text-2xl font-extrabold"><T>这一周，我们一起做到了 ✨</T></h2>
         <div className="mt-4 space-y-2.5 text-sm leading-relaxed">
-          <p>嘿！这周我们一起学习了 <b>{data.active_days} 天</b>，</p>
-          <p>累计专注 <b>{data.minutes_active} 分钟</b>，答对 <b>{data.quiz_correct} 道题</b>。</p>
+          <p><T>嘿！这周我们一起学习了</T> <b>{data.active_days} <T>天</T></b>，</p>
+          <p><T>累计专注</T> <b>{data.minutes_active} <T>分钟</T></b>，<T>答对</T> <b>{data.quiz_correct} <T>道题</T></b>。</p>
           {data.weak_module && (
-            <p>我注意到 <b>{data.weak_module}</b> 这块你有点纠结，下周我们慢慢来 🌱</p>
+            <p><T>我注意到</T> <b>{data.weak_module}</b> <T>这块你有点纠结，下周我们慢慢来 🌱</T></p>
           )}
           {(data.patience_score ?? 0) > 0 && (
-            <p>而且你这周的耐心值 <b>+{data.patience_score}</b> —— 你愿意等待，比拿到东西更可贵。</p>
+            <p><T>而且你这周的耐心值</T> <b>+{data.patience_score}</b> <T>—— 你愿意等待，比拿到东西更可贵。</T></p>
           )}
-          <p className="pt-2 text-muted-foreground">下周也想和你一起继续，慢慢的，没关系 💛</p>
+          <p className="pt-2 text-muted-foreground"><T>下周也想和你一起继续，慢慢的，没关系 💛</T></p>
         </div>
         <button onClick={close}
           className="mt-5 w-full rounded-2xl bg-gradient-to-r from-rose-400 to-purple-500 py-2.5 text-sm font-extrabold text-white shadow">
-          收下这封信 💌
+          <T>收下这封信 💌</T>
         </button>
       </div>
     </div>

@@ -27,11 +27,13 @@ type Vocab = {
 };
 
 type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict";
+const GROUP_SIZE = 20;
 
 export default function JuniorVocab() {
   const [params, setParams] = useSearchParams();
   const grade = params.get("grade") ?? "1";
   const mode = (params.get("mode") as Mode) ?? null;
+  const groupParam = Number(params.get("group") ?? "0");
 
   const [words, setWords] = useState<Vocab[]>([]);
   const [loading, setLoading] = useState(true);
@@ -61,6 +63,16 @@ export default function JuniorVocab() {
     });
   }, [grade]);
 
+  const rawGrade = Number(grade);
+  const displayGrade = rawGrade <= 3 ? rawGrade : rawGrade - 6;
+  const groups = useMemo(() => {
+    const out: Vocab[][] = [];
+    for (let i = 0; i < words.length; i += GROUP_SIZE) out.push(words.slice(i, i + GROUP_SIZE));
+    return out;
+  }, [words]);
+  const groupIdx = Number.isFinite(groupParam) ? groupParam - 1 : -1;
+  const activePool = groupIdx >= 0 && groupIdx < groups.length ? groups[groupIdx] : words;
+
   const exit = () => {
     const np = new URLSearchParams(params);
     np.delete("mode");
@@ -77,14 +89,18 @@ export default function JuniorVocab() {
     );
   }
 
-  if (mode === "bento") return <WordBento pool={words} onExit={exit} />;
-  if (mode === "quest") return <WordQuest pool={words} onExit={exit} />;
-  if (mode === "duel") return <WordDuel pool={words} onExit={exit} />;
-  if (mode === "match") return <MemoryMatchWrapper pool={words} onExit={exit} />;
-  if (mode === "dict") return <DictationSession pool={words} onExit={exit} />;
-  if (mode === "classic") return <ClassicQuiz pool={words} onExit={exit} />;
+  if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
+  if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
+  if (mode === "duel") return <WordDuel pool={activePool} onExit={exit} />;
+  if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} />;
+  if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} />;
+  if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} />;
 
-  return <JuniorVocabHub words={words} grade={grade} onPick={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} />;
+  if (groupIdx >= 0 && groupIdx < groups.length) {
+    return <JuniorWordGroup group={groups[groupIdx]} groupNumber={groupIdx + 1} grade={displayGrade} onExit={() => setParams({ grade })} onPractice={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} />;
+  }
+
+  return <JuniorVocabHub words={words} groups={groups} grade={displayGrade} onPick={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} onPickGroup={(i) => setParams({ grade, group: String(i + 1) })} />;
 }
 
 /* -------------------- HUB -------------------- */

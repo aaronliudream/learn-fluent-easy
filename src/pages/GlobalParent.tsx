@@ -11,6 +11,7 @@ import {
   ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid,
 } from "recharts";
 import DelaySettings from "@/components/parent/DelaySettings";
+import FamilyGoalSettings from "@/components/parent/FamilyGoalSettings";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
 type Dashboard = {
@@ -310,6 +311,10 @@ export default function GlobalParent() {
 
       <div className="mt-6">
         <DelaySettings />
+      </div>
+
+      <div className="mt-4">
+        <FamilyGoalSettings />
       </div>
     </main>
   );

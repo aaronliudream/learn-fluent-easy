@@ -4446,6 +4446,7 @@ export type Database = {
         Row: {
           age_band: string | null
           created_at: string
+          daily_goal_minutes: number
           data_minimization: boolean | null
           display_name: string | null
           email: string | null
@@ -4458,6 +4459,7 @@ export type Database = {
           parental_consent_at: string | null
           patience_score: number
           preferred_language: string | null
+          recall_email_sent_at: string | null
           target_language: string
           updated_at: string
           user_id: string
@@ -4467,6 +4469,7 @@ export type Database = {
         Insert: {
           age_band?: string | null
           created_at?: string
+          daily_goal_minutes?: number
           data_minimization?: boolean | null
           display_name?: string | null
           email?: string | null
@@ -4479,6 +4482,7 @@ export type Database = {
           parental_consent_at?: string | null
           patience_score?: number
           preferred_language?: string | null
+          recall_email_sent_at?: string | null
           target_language?: string
           updated_at?: string
           user_id: string
@@ -4488,6 +4492,7 @@ export type Database = {
         Update: {
           age_band?: string | null
           created_at?: string
+          daily_goal_minutes?: number
           data_minimization?: boolean | null
           display_name?: string | null
           email?: string | null
@@ -4500,6 +4505,7 @@ export type Database = {
           parental_consent_at?: string | null
           patience_score?: number
           preferred_language?: string | null
+          recall_email_sent_at?: string | null
           target_language?: string
           updated_at?: string
           user_id?: string

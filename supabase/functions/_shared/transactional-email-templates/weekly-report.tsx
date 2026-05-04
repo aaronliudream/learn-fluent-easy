@@ -111,7 +111,7 @@ export const template = {
     return `${SITE_NAME} — ${s.subtitle}`
   },
   displayName: 'Weekly learning report',
-  previewData: { name: 'Alex', lessonsCompleted: 5, vocabLearned: 42, studyMinutes: 87, accuracy: 84, quizTotal: 25, streak: 4, weekRange: 'Apr 22 – Apr 28', lang: 'en' },
+  previewData: { name: 'Alex', lessonsCompleted: 5, vocabLearned: 42, studyMinutes: 87, accuracy: 84, quizTotal: 25, streak: 4, weekRange: 'Apr 22 – Apr 28', lang: 'en', aiHighlight: 'Alex hit a 4-day streak and nailed 84% accuracy on quizzes — strong consistency this week.', aiSuggestion: 'Spend 5 extra minutes on listening practice next week to balance reading-heavy sessions.' },
 } satisfies TemplateEntry
 
 const main = { backgroundColor: '#ffffff', fontFamily: '-apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif' }
@@ -125,3 +125,6 @@ const statValue = { fontSize: '28px', fontWeight: 'bold' as const, color: '#7c3a
 const statLabel = { fontSize: '12px', color: '#7a7898', margin: '4px 0 0' }
 const streakText = { fontSize: '15px', color: '#1a1530', textAlign: 'center' as const, margin: '0 0 20px' }
 const button = { backgroundColor: '#7c3aed', color: '#ffffff', fontSize: '15px', fontWeight: 'bold' as const, borderRadius: '12px', padding: '14px 28px', textDecoration: 'none', display: 'inline-block', margin: '12px 0' }
+const aiCard = { backgroundColor: '#fffaeb', border: '1px solid #fde68a', borderRadius: '12px', padding: '14px 16px', margin: '0 0 20px' }
+const aiLabel = { fontSize: '12px', fontWeight: 'bold' as const, color: '#92400e', textTransform: 'uppercase' as const, letterSpacing: '0.04em', margin: '0 0 4px' }
+const aiBody = { fontSize: '14px', color: '#1a1530', lineHeight: '1.55', margin: '0 0 12px' }

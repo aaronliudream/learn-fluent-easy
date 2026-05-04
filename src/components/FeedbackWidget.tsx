@@ -3,33 +3,35 @@ import { MessageCircle, X, Loader2, Star, Bug, Lightbulb, Heart, FileText } from
 import { z } from "zod";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { T, useT } from "@/i18n/T";
 
 type Category = "bug" | "suggestion" | "praise" | "other";
 
 const CATS: { value: Category; label: string; icon: any; color: string }[] = [
-  { value: "bug",        label: "Bug",  icon: Bug,       color: "from-rose-500 to-red-500" },
-  { value: "suggestion", label: "建议", icon: Lightbulb, color: "from-amber-500 to-orange-500" },
-  { value: "praise",     label: "表扬", icon: Heart,     color: "from-pink-500 to-fuchsia-500" },
-  { value: "other",      label: "其他", icon: FileText,  color: "from-slate-500 to-slate-700" },
+  { value: "bug",        label: "Bug",   icon: Bug,       color: "from-rose-500 to-red-500" },
+  { value: "suggestion", label: "建议",  icon: Lightbulb, color: "from-amber-500 to-orange-500" },
+  { value: "praise",     label: "表扬",  icon: Heart,     color: "from-pink-500 to-fuchsia-500" },
+  { value: "other",      label: "其他",  icon: FileText,  color: "from-slate-500 to-slate-700" },
 ];
-
-const schema = z.object({
-  category: z.enum(["bug", "suggestion", "praise", "other"]),
-  rating: z.number().min(1).max(5).optional().nullable(),
-  message: z.string().trim().min(10, "至少 10 个字").max(1000, "最多 1000 字"),
-  email: z.string().trim().email("邮箱格式不正确").max(255).optional().or(z.literal("")),
-});
 
 /** Floating feedback widget — bottom-right bubble + dialog.
  *  Submits to the `submit-feedback` edge function which handles moderation,
  *  storage, and email notifications. */
 export default function FeedbackWidget() {
+  const t = useT();
   const [open, setOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [category, setCategory] = useState<Category>("suggestion");
   const [rating, setRating] = useState<number>(0);
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
+
+  const schema = z.object({
+    category: z.enum(["bug", "suggestion", "praise", "other"]),
+    rating: z.number().min(1).max(5).optional().nullable(),
+    message: z.string().trim().min(10, t("至少 10 个字")).max(1000, t("最多 1000 字")),
+    email: z.string().trim().email(t("邮箱格式不正确")).max(255).optional().or(z.literal("")),
+  });
 
   // Auto-fill email if logged in
   useEffect(() => {
@@ -47,7 +49,7 @@ export default function FeedbackWidget() {
       email: email || undefined,
     });
     if (!parsed.success) {
-      toast.error(parsed.error.issues[0]?.message ?? "请检查输入");
+      toast.error(parsed.error.issues[0]?.message ?? t("请检查输入"));
       return;
     }
     setSubmitting(true);
@@ -62,7 +64,7 @@ export default function FeedbackWidget() {
       if (error) {
         // FunctionsHttpError surfaces the response body in `context`
         const ctx: any = (error as any).context;
-        let msg = "提交失败，请稍后重试";
+        let msg = t("提交失败，请稍后重试");
         try {
           const body = ctx?.body ? JSON.parse(await new Response(ctx.body).text()) : null;
           if (body?.error) msg = body.error;
@@ -74,11 +76,11 @@ export default function FeedbackWidget() {
         toast.error((data as any).error);
         return;
       }
-      toast.success("反馈已收到，谢谢你 🙏");
+      toast.success(t("反馈已收到，谢谢你 🙏"));
       setOpen(false);
       setMessage(""); setRating(0); setCategory("suggestion");
     } catch (e: any) {
-      toast.error(e?.message ?? "提交失败");
+      toast.error(e?.message ?? t("提交失败"));
     } finally {
       setSubmitting(false);
     }
@@ -89,7 +91,7 @@ export default function FeedbackWidget() {
       {/* Floating bubble */}
       <button
         onClick={() => setOpen(true)}
-        aria-label="反馈"
+        aria-label={t("反馈")}
         className="fixed bottom-5 right-5 z-40 grid size-14 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-[0_10px_30px_-10px_rgba(91,43,201,0.6)] transition hover:scale-105"
       >
         <MessageCircle className="size-6" />
@@ -105,7 +107,7 @@ export default function FeedbackWidget() {
             <button
               onClick={() => setOpen(false)}
               className="absolute right-3 top-3 grid size-8 place-items-center rounded-full text-muted-foreground hover:bg-secondary"
-              aria-label="关闭"
+              aria-label={t("关闭")}
             >
               <X className="size-4" />
             </button>
@@ -113,9 +115,9 @@ export default function FeedbackWidget() {
             <div className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
               FEEDBACK
             </div>
-            <h2 className="text-xl font-extrabold">告诉我们你的想法 💬</h2>
+            <h2 className="text-xl font-extrabold"><T>告诉我们你的想法 💬</T></h2>
             <p className="mt-1 text-xs text-muted-foreground">
-              仅限英语学习 / 网站相关反馈 · 我们会在 24h 内查看
+              <T>仅限英语学习 / 网站相关反馈 · 我们会在 24h 内查看</T>
             </p>
 
             {/* Category */}
@@ -134,7 +136,7 @@ export default function FeedbackWidget() {
                     }`}
                   >
                     <Icon className="size-4" />
-                    {c.label}
+                    {c.value === "bug" ? "Bug" : <T>{c.label}</T>}
                   </button>
                 );
               })}
@@ -142,13 +144,13 @@ export default function FeedbackWidget() {
 
             {/* Rating */}
             <div className="mt-4">
-              <div className="mb-1 text-[11px] font-bold text-muted-foreground">整体满意度（可选）</div>
+              <div className="mb-1 text-[11px] font-bold text-muted-foreground"><T>整体满意度（可选）</T></div>
               <div className="flex gap-1">
                 {[1, 2, 3, 4, 5].map(n => (
                   <button
                     key={n}
                     onClick={() => setRating(rating === n ? 0 : n)}
-                    aria-label={`${n} 星`}
+                    aria-label={t("{n} 星", { n })}
                     className="grid size-9 place-items-center rounded-lg hover:bg-secondary"
                   >
                     <Star className={`size-6 transition ${rating >= n ? "fill-amber-400 text-amber-400" : "text-muted-foreground/40"}`} />
@@ -162,7 +164,7 @@ export default function FeedbackWidget() {
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value.slice(0, 1000))}
-                placeholder="说说你的想法、Bug 或建议… (10–1000 字)"
+                placeholder={t("说说你的想法、Bug 或建议… (10–1000 字)")}
                 rows={5}
                 className="w-full rounded-xl border-2 border-border bg-card p-3 text-sm focus:border-primary focus:outline-none"
               />
@@ -175,7 +177,7 @@ export default function FeedbackWidget() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="邮箱（可选，便于我们回复你）"
+                placeholder={t("邮箱（可选，便于我们回复你）")}
                 className="w-full rounded-xl border-2 border-border bg-card p-3 text-sm focus:border-primary focus:outline-none"
               />
             </div>
@@ -185,11 +187,11 @@ export default function FeedbackWidget() {
               disabled={submitting}
               className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-600 py-3 text-sm font-extrabold text-white shadow transition hover:opacity-90 disabled:opacity-60"
             >
-              {submitting ? <><Loader2 className="size-4 animate-spin" /> 发送中…</> : "发送反馈"}
+              {submitting ? <><Loader2 className="size-4 animate-spin" /> <T>发送中…</T></> : <T>发送反馈</T>}
             </button>
 
             <p className="mt-2 text-center text-[10px] text-muted-foreground">
-              📜 含色情、暴力、毒品或与英语学习无关的内容会被自动过滤
+              <T>📜 含色情、暴力、毒品或与英语学习无关的内容会被自动过滤</T>
             </p>
           </div>
         </div>

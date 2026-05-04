@@ -78,6 +78,7 @@ export default function GlobalParent() {
   const [data, setData] = useState<Dashboard | null>(null);
   const [coins, setCoins] = useState(0);
   const [streak, setStreak] = useState(0);
+  const [slangAcc, setSlangAcc] = useState<{ correct: number; total: number } | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -93,6 +94,15 @@ export default function GlobalParent() {
       if (dash.data) setData(dash.data as unknown as Dashboard);
       if (c.data) setCoins((c.data as any).balance ?? 0);
       if (s.data?.[0]) setStreak((s.data[0] as any).current_streak ?? 0);
+      const { data: sm } = await supabase
+        .from("slang_mastery")
+        .select("correct_count,wrong_count")
+        .eq("user_id", uid);
+      if (sm) {
+        const correct = sm.reduce((a: number, r: any) => a + (r.correct_count ?? 0), 0);
+        const wrong = sm.reduce((a: number, r: any) => a + (r.wrong_count ?? 0), 0);
+        setSlangAcc({ correct, total: correct + wrong });
+      }
       setLoading(false);
     })();
   }, []);

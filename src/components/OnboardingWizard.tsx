@@ -1,25 +1,24 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
-import { Check, ArrowRight, Globe2, Briefcase, Plane, GraduationCap, Sparkles, Clock, BookOpen } from "lucide-react";
-import { LANGUAGES, type LangCode } from "@/i18n/languages";
+import {
+  Check, ArrowRight, Globe2, Briefcase, Plane, GraduationCap, Sparkles,
+  Clock, BookOpen, Coffee, Mic, Music, Film, Plane as PlaneIcon, Heart, Trophy, Flame,
+} from "lucide-react";
 import { useI18n } from "@/i18n/I18nProvider";
 import { toast } from "sonner";
 
 /**
- * 4-step onboarding wizard shown the first time a logged-in user lands on
- * the home page (when `profiles.onboarded_at` is null).
+ * Duolingo-style 4-step onboarding shown the first time a logged-in user
+ * lands on the home page (when `profiles.onboarded_at` is null).
  *
- *   1. Native language     -> profiles.preferred_language
- *   2. Why English?         -> profiles.learning_goal
- *   3. Self-assessed level  -> profiles.self_level
- *   4. Daily goal minutes   -> profiles.daily_goal_minutes
- *
- * On finish, we navigate the user straight to the path that matches their
- * goal so they immediately see the right content (no second click).
+ *   1. Goal + interest scenes (combined)        -> learning_goal
+ *   2. Self-assessed level + 1 placement check  -> self_level
+ *   3. Daily commitment (3 / 5 / 10 / 15 min)   -> daily_goal_minutes
+ *   4. Pick pet + first micro-lesson teaser     -> navigate to /pets
  */
 
 type Goal = "travel" | "career" | "exam" | "general";
@@ -39,6 +38,41 @@ const LEVELS: { id: Level; titleEn: string; descEn: string }[] = [
 ];
 
 const MINUTES = [5, 10, 15, 30];
+const COMMIT_MINUTES = [3, 5, 10, 15];
+
+const SCENES = [
+  { id: "smalltalk", icon: Coffee,   labelEn: "Small talk" },
+  { id: "travel",    icon: PlaneIcon, labelEn: "Travel" },
+  { id: "work",      icon: Briefcase, labelEn: "Work & meetings" },
+  { id: "movies",    icon: Film,     labelEn: "Movies & TV" },
+  { id: "music",     icon: Music,    labelEn: "Music & lyrics" },
+  { id: "exams",     icon: GraduationCap, labelEn: "Exams" },
+];
+
+const PETS = [
+  { id: "lumi_spark",    emoji: "🌱", nameEn: "Sprout", tagEn: "Patient & gentle"  },
+  { id: "fire_fox",      emoji: "🦊", nameEn: "Ember",  tagEn: "Bold & energetic"  },
+  { id: "rainbow_whale", emoji: "🐋", nameEn: "Aqua",   tagEn: "Calm & curious"    },
+];
+
+// Tiny placement check (one quick question per level option).
+const PLACEMENT_QUIZ: Record<Level, { q: string; options: string[]; correctIdx: number }> = {
+  beginner: {
+    q: "Pick the correct sentence:",
+    options: ["She go to school.", "She goes to school.", "She going school."],
+    correctIdx: 1,
+  },
+  intermediate: {
+    q: "If I _____ more time, I would travel.",
+    options: ["have", "had", "will have"],
+    correctIdx: 1,
+  },
+  advanced: {
+    q: "Choose the most natural reply: \"Sorry I'm late!\"",
+    options: ["No worries.", "It does not be a problem.", "Don't think anything."],
+    correctIdx: 0,
+  },
+};
 
 export default function OnboardingWizard({
   userId,
@@ -47,45 +81,38 @@ export default function OnboardingWizard({
   userId: string;
   onClose: () => void;
 }) {
-  const { lang, setLang } = useI18n();
+  const { lang } = useI18n();
   const navigate = useNavigate();
   const [step, setStep] = useState(0);
-  const [native, setNative] = useState<LangCode>(lang);
   const [goal, setGoal] = useState<Goal | null>(null);
+  const [scenes, setScenes] = useState<string[]>([]);
   const [level, setLevel] = useState<Level | null>(null);
-  const [minutes, setMinutes] = useState<number>(15);
+  const [quizAnswered, setQuizAnswered] = useState<number | null>(null);
+  const [minutes, setMinutes] = useState<number>(5);
+  const [pet, setPet] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
 
   const totalSteps = 4;
   const progress = ((step + 1) / totalSteps) * 100;
 
-  // Pre-sort languages: keep current selection first then English then alpha
-  const sortedLangs = useMemo(() => {
-    return [...LANGUAGES].sort((a, b) => {
-      if (a.code === native) return -1;
-      if (b.code === native) return 1;
-      if (a.code === "en") return -1;
-      if (b.code === "en") return 1;
-      return a.nativeName.localeCompare(b.nativeName);
-    });
-  }, [native]);
-
   const canNext =
-    (step === 0 && !!native) ||
-    (step === 1 && !!goal) ||
-    (step === 2 && !!level) ||
-    (step === 3 && minutes > 0);
+    (step === 0 && !!goal && scenes.length > 0) ||
+    (step === 1 && !!level && quizAnswered !== null) ||
+    (step === 2 && minutes > 0) ||
+    (step === 3 && !!pet);
+
+  function toggleScene(id: string) {
+    setScenes((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
+  }
 
   async function finish() {
     if (!goal || !level) return;
     setSaving(true);
     try {
-      // Persist UI language pref locally + server side
-      setLang(native);
       const { error } = await supabase
         .from("profiles")
         .update({
-          preferred_language: native,
+          preferred_language: lang,
           learning_goal: goal,
           self_level: level,
           daily_goal_minutes: minutes,
@@ -93,10 +120,10 @@ export default function OnboardingWizard({
         } as never)
         .eq("user_id", userId);
       if (error) throw error;
-      toast.success("All set! Let's start.");
+      toast.success("Welcome aboard! Time to meet your buddy.");
       onClose();
-      const target = GOALS.find((g) => g.id === goal)?.route ?? "/levels";
-      navigate(target);
+      // Send them to /pets so the chosen buddy adoption flow takes over.
+      navigate("/pets");
     } catch (e) {
       console.error(e);
       toast.error("Could not save your preferences. Please try again.");
@@ -120,43 +147,8 @@ export default function OnboardingWizard({
         </div>
         <Progress value={progress} className="mb-6 h-1.5" />
 
+        {/* STEP 1 — Goal + interest scenes (combined) */}
         {step === 0 && (
-          <div>
-            <div className="mb-1 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
-              <Globe2 className="size-3.5" /> Welcome
-            </div>
-            <h2 className="text-2xl font-extrabold leading-tight">What's your native language?</h2>
-            <p className="mb-5 mt-1 text-sm text-muted-foreground">
-              We'll translate hints and instructions to make learning easier.
-            </p>
-            <div className="grid max-h-[40vh] grid-cols-2 gap-2 overflow-y-auto pr-1 sm:grid-cols-3">
-              {sortedLangs.map((l) => {
-                const sel = l.code === native;
-                return (
-                  <button
-                    key={l.code}
-                    type="button"
-                    onClick={() => setNative(l.code)}
-                    className={
-                      "flex items-center gap-2 rounded-xl border px-3 py-2.5 text-left transition " +
-                      (sel
-                        ? "border-primary bg-primary/5 ring-2 ring-primary/30"
-                        : "border-border hover:bg-secondary")
-                    }
-                  >
-                    <span className="text-xl leading-none">{l.flag}</span>
-                    <span className="flex-1 min-w-0">
-                      <span className="block truncate text-sm font-semibold">{l.nativeName}</span>
-                    </span>
-                    {sel && <Check className="size-4 text-primary" />}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {step === 1 && (
           <div>
             <div className="mb-1 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
               <Sparkles className="size-3.5" /> Goal
@@ -167,9 +159,7 @@ export default function OnboardingWizard({
             </p>
             <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
               {GOALS
-                // China-only exam track (Gaokao/Junior/Primary) is in Chinese.
-                // Hide it from non-Chinese onboarding to avoid a content/UI mismatch.
-                .filter((g) => g.id !== "exam" || native === "zh" || native === "zh-TW")
+                .filter((g) => g.id !== "exam" || lang === "zh" || lang === "zh-TW")
                 .map((g) => {
                 const Icon = g.icon;
                 const sel = goal === g.id;
@@ -197,17 +187,46 @@ export default function OnboardingWizard({
                 );
               })}
             </div>
+
+            <div className="mt-7">
+              <h3 className="text-base font-extrabold">What do you want to talk about?</h3>
+              <p className="mb-3 mt-1 text-xs text-muted-foreground">
+                Pick at least one — we'll fill your lessons with these topics.
+              </p>
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                {SCENES.map((s) => {
+                  const sel = scenes.includes(s.id);
+                  const Icon = s.icon;
+                  return (
+                    <button
+                      key={s.id}
+                      type="button"
+                      onClick={() => toggleScene(s.id)}
+                      className={
+                        "flex items-center gap-2 rounded-xl border-2 px-3 py-2.5 text-left text-sm transition " +
+                        (sel ? "border-primary bg-primary/5" : "border-border hover:bg-secondary")
+                      }
+                    >
+                      <Icon className="size-4 shrink-0" />
+                      <span className="flex-1 text-xs font-semibold">{s.labelEn}</span>
+                      {sel && <Check className="size-3.5 text-primary" />}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         )}
 
-        {step === 2 && (
+        {/* STEP 2 — Self-rated level + 1 placement check */}
+        {step === 1 && (
           <div>
             <div className="mb-1 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
               <BookOpen className="size-3.5" /> Level
             </div>
             <h2 className="text-2xl font-extrabold leading-tight">How would you rate your English?</h2>
             <p className="mb-5 mt-1 text-sm text-muted-foreground">
-              No pressure — you can take a free 3-min placement test later.
+              Pick a level, then answer one quick question to confirm.
             </p>
             <div className="flex flex-col gap-2.5">
               {LEVELS.map((lv) => {
@@ -216,7 +235,7 @@ export default function OnboardingWizard({
                   <button
                     key={lv.id}
                     type="button"
-                    onClick={() => setLevel(lv.id)}
+                    onClick={() => { setLevel(lv.id); setQuizAnswered(null); }}
                     className={
                       "flex items-center gap-3 rounded-2xl border-2 p-4 text-left transition " +
                       (sel
@@ -233,20 +252,61 @@ export default function OnboardingWizard({
                 );
               })}
             </div>
+
+            {level && (
+              <div className="mt-6 rounded-2xl border-2 border-primary/30 bg-primary/5 p-4">
+                <div className="mb-3 text-sm font-extrabold">{PLACEMENT_QUIZ[level].q}</div>
+                <div className="flex flex-col gap-2">
+                  {PLACEMENT_QUIZ[level].options.map((opt, i) => {
+                    const sel = quizAnswered === i;
+                    const correct = i === PLACEMENT_QUIZ[level].correctIdx;
+                    const showResult = quizAnswered !== null;
+                    return (
+                      <button
+                        key={i}
+                        type="button"
+                        onClick={() => setQuizAnswered(i)}
+                        disabled={quizAnswered !== null}
+                        className={
+                          "rounded-xl border-2 px-3 py-2.5 text-left text-sm transition " +
+                          (showResult
+                            ? correct
+                              ? "border-emerald-500 bg-emerald-50 text-emerald-900"
+                              : sel
+                                ? "border-rose-400 bg-rose-50 text-rose-900"
+                                : "border-border opacity-60"
+                            : "border-border hover:bg-white")
+                        }
+                      >
+                        {opt}
+                      </button>
+                    );
+                  })}
+                </div>
+                {quizAnswered !== null && (
+                  <div className="mt-3 text-xs text-muted-foreground">
+                    {quizAnswered === PLACEMENT_QUIZ[level].correctIdx
+                      ? "Nice! Looks like a good match."
+                      : "No worries — we'll start a touch easier and ramp up."}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )}
 
-        {step === 3 && (
+        {/* STEP 3 — Daily commitment */}
+        {step === 2 && (
           <div>
             <div className="mb-1 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
-              <Clock className="size-3.5" /> Daily goal
+              <Clock className="size-3.5" /> Daily commitment
             </div>
             <h2 className="text-2xl font-extrabold leading-tight">How many minutes a day?</h2>
             <p className="mb-5 mt-1 text-sm text-muted-foreground">
-              We'll size your daily tasks to fit. Start small — you can change this anytime.
+              Tiny is fine. Streaks form fastest at 3–5 minutes.
             </p>
             <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-              {MINUTES.map((m) => {
+              {COMMIT_MINUTES.map((m) => {
                 const sel = minutes === m;
                 return (
                   <button
@@ -254,7 +314,7 @@ export default function OnboardingWizard({
                     type="button"
                     onClick={() => setMinutes(m)}
                     className={
-                      "rounded-2xl border-2 p-4 text-center transition " +
+                      "flex flex-col items-center gap-1 rounded-2xl border-2 p-4 text-center transition " +
                       (sel ? "border-primary bg-primary/5" : "border-border hover:bg-secondary")
                     }
                   >
@@ -262,10 +322,65 @@ export default function OnboardingWizard({
                     <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
                       min / day
                     </div>
+                    {m === 5 && (
+                      <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-emerald-700">
+                        <Flame className="size-3" /> Most popular
+                      </div>
+                    )}
                   </button>
                 );
               })}
             </div>
+          </div>
+        )}
+
+        {/* STEP 4 — Pick pet + first micro-lesson teaser */}
+        {step === 3 && (
+          <div>
+            <div className="mb-1 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+              <Heart className="size-3.5" /> Your buddy
+            </div>
+            <h2 className="text-2xl font-extrabold leading-tight">Choose your learning buddy</h2>
+            <p className="mb-5 mt-1 text-sm text-muted-foreground">
+              Your buddy levels up every time you study. Pick one to start your first 60-second lesson.
+            </p>
+            <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
+              {PETS.map((p) => {
+                const sel = pet === p.id;
+                return (
+                  <button
+                    key={p.id}
+                    type="button"
+                    onClick={() => setPet(p.id)}
+                    className={
+                      "flex flex-col items-center gap-2 rounded-2xl border-2 p-5 text-center transition " +
+                      (sel
+                        ? "border-primary bg-primary/5 ring-2 ring-primary/20"
+                        : "border-border hover:bg-secondary")
+                    }
+                  >
+                    <div className="text-5xl">{p.emoji}</div>
+                    <div className="text-base font-extrabold">{p.nameEn}</div>
+                    <div className="text-[11px] text-muted-foreground">{p.tagEn}</div>
+                    {sel && (
+                      <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
+                        <Check className="size-3" /> Picked
+                      </div>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+            {pet && (
+              <div className="mt-5 rounded-2xl border border-primary/30 bg-primary/5 p-4 text-sm">
+                <div className="flex items-center gap-2 font-extrabold">
+                  <Trophy className="size-4 text-primary" /> First lesson is ready
+                </div>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  60 seconds. One real conversation. Your buddy earns its first XP with you.
+                </p>
+              </div>
+            )}
           </div>
         )}
 
@@ -293,7 +408,7 @@ export default function OnboardingWizard({
               size="lg"
               className="min-w-[160px]"
             >
-              {saving ? "Saving…" : "Start learning"} <ArrowRight className="size-4" />
+              {saving ? "Saving…" : "Start my first lesson"} <ArrowRight className="size-4" />
             </Button>
           )}
         </div>

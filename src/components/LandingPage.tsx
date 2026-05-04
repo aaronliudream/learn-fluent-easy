@@ -507,3 +507,80 @@ function StatCard({ value, label }: { value: string; label: string }) {
     </div>
   );
 }
+
+function USP({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
+  return (
+    <div className="flex flex-col gap-4 rounded-3xl border border-[#1F3A2E]/10 bg-white p-7 transition hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-25px_rgba(31,58,46,0.3)] md:p-8">
+      <div className="grid size-11 place-items-center rounded-2xl bg-[#E8743C]/10 text-[#E8743C]">
+        {icon}
+      </div>
+      <h3 className="font-serif text-xl font-medium leading-snug md:text-2xl"><L>{title}</L></h3>
+      <p className="text-sm leading-relaxed text-[#1F3A2E]/70"><L>{desc}</L></p>
+    </div>
+  );
+}
+
+function GameCard({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
+  return (
+    <div className="flex flex-col gap-4 rounded-3xl border border-[#FAF8F3]/15 bg-[#27513f]/40 p-7 md:p-8">
+      <div className="grid size-11 place-items-center rounded-2xl bg-[#E8743C] text-white">
+        {icon}
+      </div>
+      <h3 className="font-serif text-xl font-medium leading-snug text-[#FAF8F3] md:text-2xl"><L>{title}</L></h3>
+      <p className="text-sm leading-relaxed text-[#FAF8F3]/75"><L>{desc}</L></p>
+    </div>
+  );
+}
+
+function PricingCard({
+  tier, price, period, features, cta, badge, highlighted,
+}: {
+  tier: string;
+  price: string;
+  period: string;
+  features: string[];
+  cta: string;
+  badge?: string;
+  highlighted?: boolean;
+}) {
+  return (
+    <div
+      className={`relative flex flex-col gap-6 rounded-3xl border p-7 md:p-8 ${
+        highlighted
+          ? "border-[#E8743C] bg-white shadow-[0_24px_60px_-25px_rgba(232,116,60,0.45)]"
+          : "border-[#1F3A2E]/15 bg-white"
+      }`}
+    >
+      {badge && (
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#E8743C] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white">
+          <L>{badge}</L>
+        </div>
+      )}
+      <div>
+        <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#1F3A2E]/55"><L>{tier}</L></div>
+        <div className="mt-3 flex items-baseline gap-1.5">
+          <div className="text-4xl font-extrabold text-[#1F3A2E]">{price}</div>
+          <div className="text-xs text-[#1F3A2E]/60"><L>{period}</L></div>
+        </div>
+      </div>
+      <ul className="space-y-2.5 border-t border-[#1F3A2E]/10 pt-5">
+        {features.map((f) => (
+          <li key={f} className="flex items-start gap-2.5 text-sm text-[#1F3A2E]/80">
+            <Check className="mt-0.5 size-4 shrink-0 text-[#7FB069]" />
+            <L>{f}</L>
+          </li>
+        ))}
+      </ul>
+      <Link
+        to="/auth"
+        className={`mt-auto inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-xs font-bold uppercase tracking-[0.18em] transition ${
+          highlighted
+            ? "bg-[#E8743C] text-white hover:bg-[#d4632d]"
+            : "border border-[#1F3A2E]/20 text-[#1F3A2E] hover:bg-[#F4EFE3]"
+        }`}
+      >
+        <L>{cta}</L> <ArrowRight className="size-3.5" />
+      </Link>
+    </div>
+  );
+}

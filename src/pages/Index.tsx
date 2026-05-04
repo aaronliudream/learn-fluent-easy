@@ -88,7 +88,7 @@ const Index = () => {
       eyebrow: t("index.section.slang.eyebrow"),
       title: t("index.section.slang.title"),
       desc: t("index.section.slang.desc", { count: HOME_COUNTS.slang }),
-      gradient: "from-fuchsia-500 via-rose-500 to-orange-500",
+      gradient: "from-teal-500 via-cyan-500 to-sky-500",
     },
   ];
 
@@ -98,7 +98,7 @@ const Index = () => {
     eyebrow: t("index.section.placement.eyebrow"),
     title: t("index.section.placement.title"),
     desc: t("index.section.placement.desc"),
-    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+    gradient: "from-indigo-500 via-violet-500 to-purple-500",
   };
 
   return (
@@ -178,7 +178,7 @@ const Index = () => {
 
       {/* Streak / XP momentum banner — surfaces the live streak so it's the
           first thing returning learners see. (Zeigarnik + SDT competence) */}
-      {user && (
+      {user && (stats?.current_streak ?? 0) > 0 && (
         <section className="mb-6 mt-4 flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-sm">
           <XPRing value={liveStreak} target={Math.max(7, liveStreak + 1)} />
           <div className="flex-1 min-w-0">
@@ -205,11 +205,34 @@ const Index = () => {
         </section>
       )}
 
+      {/* New-learner welcome ribbon — replaces the depressing "0 streak / 0 minutes"
+          state for users who haven't done anything yet. (ARCS - Confidence) */}
+      {user && (stats?.current_streak ?? 0) === 0 && (
+        <section className="mb-6 mt-4 overflow-hidden rounded-2xl border-2 border-amber-300/60 bg-gradient-to-br from-amber-50 to-orange-50 p-5 shadow-sm dark:border-amber-500/30 dark:from-amber-950/40 dark:to-orange-950/40">
+          <div className="flex items-start gap-4">
+            <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-md">
+              <Sparkles className="size-6" />
+            </div>
+            <div className="flex-1">
+              <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">
+                <T>欢迎加入</T>
+              </div>
+              <div className="mt-0.5 text-lg font-extrabold leading-tight">
+                <T>完成第一节课，点亮你的第一颗 ⭐</T>
+              </div>
+              <div className="mt-1 text-xs text-muted-foreground">
+                <T>5 分钟即可建立第一天连胜，从此每晚都进步一点点。</T>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Unlogged visitors: free CEFR diagnosis hero — cold-start lever */}
       {!user && (
         <Link
           to="/placement"
-          className="group relative mb-6 mt-2 flex flex-col items-center justify-center gap-2 overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 px-6 py-6 text-center text-white shadow-tile transition-all hover:-translate-y-0.5"
+          className="group relative mb-6 mt-2 flex flex-col items-center justify-center gap-2 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-500 via-violet-500 to-purple-500 px-6 py-6 text-center text-white shadow-tile transition-all hover:-translate-y-0.5"
         >
           <span className="pointer-events-none absolute -right-12 -top-12 size-48 rounded-full bg-white/15 blur-3xl" />
           <div className="relative grid size-12 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
@@ -218,7 +241,7 @@ const Index = () => {
           <h2 className="relative text-xl font-extrabold leading-tight md:text-2xl">
             <T>测一测你的英语等级</T>
           </h2>
-          <div className="relative inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-emerald-700 transition group-hover:bg-white/95">
+          <div className="relative inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-indigo-700 transition group-hover:bg-white/95">
             <T>免费 · 3 分钟</T> <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
           </div>
         </Link>
@@ -286,6 +309,19 @@ const Index = () => {
         </div>
       </Link>
       )}
+
+      {/* Trust footer for logged-in hub — links to About / Privacy / Terms / Contact */}
+      <footer className="mt-12 border-t border-border pt-6 text-center">
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">
+          <Link to="/about" className="hover:text-foreground"><T>关于</T></Link>
+          <Link to="/privacy" className="hover:text-foreground"><T>隐私</T></Link>
+          <Link to="/terms" className="hover:text-foreground"><T>条款</T></Link>
+          <a href="mailto:support@bigmoonenglish.com" className="hover:text-foreground"><T>联系我们</T></a>
+        </div>
+        <div className="mt-3 text-[10px] text-muted-foreground">
+          © {new Date().getFullYear()} Big Moon English
+        </div>
+      </footer>
 
     </main>
   );

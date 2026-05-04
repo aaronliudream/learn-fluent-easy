@@ -1005,6 +1005,27 @@ const Lesson = () => {
                       )}
                     </div>
                   )}
+                  {picked && (
+                    <div className="mt-2">
+                      <button
+                        onClick={() => setTutorReq({
+                          refId: `lesson-${levelId}-${unitId}-${lessonId}-fill-${i}`,
+                          snapshot: {
+                            type: "fill_blank",
+                            sentence: f.sentence,
+                            options: f.options,
+                            correct_answer: f.answer,
+                            user_answer: picked,
+                            is_correct: correct,
+                            translation: f.cn,
+                          },
+                        })}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
+                      >
+                        <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
+                      </button>
+                    </div>
+                  )}
                 </div>
               );
             })}

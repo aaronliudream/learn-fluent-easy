@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Mic, BookOpen, Flame, GraduationCap, Sparkles, Globe2, Quote, BookMarked, Star } from "lucide-react";
+import { ArrowRight, Mic, BookOpen, Flame, GraduationCap, Sparkles, Globe2, Quote, BookMarked, Star, Gamepad2, Heart, Trophy, Check, MessageCircle } from "lucide-react";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { T } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
+import SpeakingDemo from "@/components/SpeakingDemo";
 
 /**
  * Polished English copy keyed by the Chinese source. When the user's
@@ -91,6 +92,71 @@ const EN_COPY: Record<string, string> = {
   "隐私": "Privacy",
   "条款": "Terms",
   "联系我们": "Contact",
+
+  // ── High-conversion landing copy (v2) ───────────────────────────────────
+  "Make speaking English as addictive as playing a game.": "Make speaking English as addictive as playing a game.",
+  "Practice real conversations with AI, get instant feedback, and improve your speaking in just 5 minutes a day.":
+    "Practice real conversations with AI, get instant feedback, and improve your speaking in just 5 minutes a day.",
+  "Start for free": "Start for free",
+  "Try the 30-sec demo": "Try the 30-sec demo",
+  "4.9 rating · 10,000+ learners · Available worldwide": "4.9 rating · 10,000+ learners · Available worldwide",
+
+  "Why Big Moon English works": "Why Big Moon English works",
+  "Three things, done right.": "Three things, done right.",
+  "AI Speaking Feedback": "AI Speaking Feedback",
+  "Get instant corrections on pronunciation and fluency — like a real coach in your pocket.":
+    "Get instant corrections on pronunciation and fluency — like a real coach in your pocket.",
+  "Addictive Learning System": "Addictive Learning System",
+  "Streaks, XP, and your own learning companion keep you coming back, day after day.":
+    "Streaks, XP, and your own learning companion keep you coming back, day after day.",
+  "Real-world English": "Real-world English",
+  "Learn how people actually speak — from daily conversations to slang, not textbook lines.":
+    "Learn how people actually speak — from daily conversations to slang, not textbook lines.",
+
+  "Trusted by learners worldwide": "Trusted by learners worldwide",
+  "Real stories from real users.": "Real stories from real users.",
+  "Finally, something that actually helps me speak.": "Finally, something that actually helps me speak.",
+  "Jason · United States": "Jason · United States",
+  "I improved my pronunciation in just 2 weeks.": "I improved my pronunciation in just 2 weeks.",
+  "Maria · Mexico": "Maria · Mexico",
+  "My kid loves the pet system!": "My kid loves the pet system!",
+  "Li Wei · China": "Li Wei · China",
+  "Used in 180+ countries": "Used in 180+ countries",
+
+  "Stay motivated, every day": "Stay motivated, every day",
+  "Build your streak": "Build your streak",
+  "Light up a flame each day you study. Miss a day and your streak resets — so you don't.":
+    "Light up a flame each day you study. Miss a day and your streak resets — so you don't.",
+  "Grow your learning companion": "Grow your learning companion",
+  "Adopt a virtual buddy. Feed it with words you learn. Watch it evolve as you level up.":
+    "Adopt a virtual buddy. Feed it with words you learn. Watch it evolve as you level up.",
+  "Earn XP and level up": "Earn XP and level up",
+  "Every lesson, quiz, and conversation earns XP. Climb the leaderboard with friends.":
+    "Every lesson, quiz, and conversation earns XP. Climb the leaderboard with friends.",
+  "Learning English doesn't feel like studying anymore.": "Learning English doesn't feel like studying anymore.",
+
+  "Simple pricing": "Simple pricing",
+  "Start free. Upgrade when you're hooked.": "Start free. Upgrade when you're hooked.",
+  "Free": "Free",
+  "Free forever": "Free forever",
+  "3 lessons per day": "3 lessons per day",
+  "Basic AI speaking practice": "Basic AI speaking practice",
+  "Daily streak & XP": "Daily streak & XP",
+  "Pet companion": "Pet companion",
+  "Pro": "Pro",
+  "/ month": "/ month",
+  "Most popular": "Most popular",
+  "Unlimited speaking practice": "Unlimited speaking practice",
+  "Advanced AI feedback (pronunciation, grammar, fluency)": "Advanced AI feedback (pronunciation, grammar, fluency)",
+  "All scenarios & slang unlocked": "All scenarios & slang unlocked",
+  "Weekly progress reports": "Weekly progress reports",
+  "Priority support": "Priority support",
+  "Get Pro": "Get Pro",
+  "No credit card required": "No credit card required",
+
+  "Ready to actually speak English?": "Ready to actually speak English?",
+  "Five minutes a day. Real conversations. Visible progress.":
+    "Five minutes a day. Real conversations. Visible progress.",
 };
 
 /**
@@ -135,27 +201,25 @@ export default function LandingPage() {
             <div className="mb-7 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#3BA3E0] shadow-[0_4px_14px_-6px_rgba(59,163,224,0.4)]">
               <Globe2 className="size-3.5" /> <L>已在 184 个国家上线</L>
             </div>
-            <h1 className="text-[44px] font-extrabold leading-[1.05] tracking-tight text-[#1F3A2E] md:text-[88px]">
-              <L>说英语</L>
-              <br />
-              <L>像玩游戏一样上头。</L>
+            <h1 className="text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#1F3A2E] md:text-[72px]">
+              <L>Make speaking English as addictive as playing a game.</L>
             </h1>
             <p className="mt-7 max-w-lg text-base leading-relaxed text-[#1F3A2E]/70 md:text-lg">
-              <L>5 分钟一节的小课、即时口语反馈、连胜系统让你真的停不下来。每天 5 分钟，就能开始。</L>
+              <L>Practice real conversations with AI, get instant feedback, and improve your speaking in just 5 minutes a day.</L>
             </p>
             <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
               <Link
                 to="/auth"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#E8743C] px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-white shadow-[0_10px_24px_-10px_rgba(232,116,60,0.6)] transition hover:bg-[#d4632d]"
               >
-                <L>免费开始</L> <ArrowRight className="size-4" />
+                <L>Start for free</L> <ArrowRight className="size-4" />
               </Link>
-              <Link
-                to="/auth"
+              <a
+                href="#try-now"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1F3A2E]/15 bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-[#1F3A2E] transition hover:bg-[#F4EFE3]"
               >
-                <L>我已有账号</L>
-              </Link>
+                <Mic className="size-4" /> <L>Try the 30-sec demo</L>
+              </a>
             </div>
 
             {/* social proof bar */}
@@ -177,7 +241,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55">
-                  <L>4.9 平均评分</L>
+                  <L>4.9 rating · 10,000+ learners · Available worldwide</L>
                 </div>
               </div>
             </div>
@@ -208,188 +272,129 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* WHAT'S INSIDE */}
-      <section id="whats-inside" className="border-t border-[#1F3A2E]/10 bg-[#F4EFE3]/50">
-        <div className="mx-auto max-w-[1100px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-14 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-            <div>
-              <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#E8743C]">
-                <L>01 — 里面有什么</L>
-              </div>
-              <h2 className="max-w-xl font-serif text-3xl font-medium leading-tight md:text-5xl">
-                <L>四种真正用得上英语的方式。</L>
-              </h2>
-            </div>
-            <p className="max-w-sm text-sm leading-relaxed text-[#1F3A2E]/65">
-              <L>每个模块都可以独立使用 —— 选你今天想学的，或者跟着完整路径从 A1 走到 C2。</L>
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2">
-            <FeatureCard
-              to="/levels"
-              eyebrow="结构化路径"
-              title="CEFR 等级 A1 → C2"
-              desc="6 个等级、单元和短课程。词汇、语法、阅读和听力一条路径全包。"
-              icon={<BookOpen className="size-5" />}
-            />
-            <FeatureCard
-              to="/talk"
-              eyebrow="口语训练"
-              title="AI 口语陪练"
-              desc="按住说话，立刻获得发音反馈。会议、面试、日常聊天 —— 随时练习。"
-              icon={<Mic className="size-5" />}
-            />
-            <FeatureCard
-              to="/scenes"
-              eyebrow="真实生活"
-              title="真实场景对话"
-              desc="机场、咖啡馆、看医生、求职面试，100+ 情景对话可以大声练习。"
-              icon={<Sparkles className="size-5" />}
-            />
-            <FeatureCard
-              to="/slang"
-              eyebrow="地道英语"
-              title="俚语 & 母语者表达"
-              desc="从 lowkey 到 it's giving —— TikTok、Reddit 和职场上真实在用的词。"
-              icon={<Flame className="size-5" />}
-            />
-          </div>
+      {/* 02 — TRY IT NOW (the highest-leverage section: live AI demo) */}
+      <section id="try-now" className="border-t border-[#1F3A2E]/10 bg-[#F4EFE3]/40">
+        <div className="mx-auto max-w-[900px] px-6 py-16 md:px-10 md:py-24">
+          <SpeakingDemo />
         </div>
       </section>
 
-      {/* WHO IS IT FOR */}
+      {/* 03 — THREE CORE USPs (only 3, exactly as the screenshot says) */}
       <section className="border-t border-[#1F3A2E]/10">
         <div className="mx-auto max-w-[1100px] px-6 py-20 md:px-10 md:py-28">
           <div className="mb-14 max-w-2xl">
             <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#E8743C]">
-              <L>02 — 适合谁</L>
+              <L>Why Big Moon English works</L>
             </div>
             <h2 className="font-serif text-3xl font-medium leading-tight md:text-5xl">
-              <L>为孩子、学生和成人精心打造。</L>
+              <L>Three things, done right.</L>
             </h2>
           </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <Audience
-              tag="孩子 · 8–14 岁"
-              title="比补习班更友好的选择。"
-              points={[
-                "自然拼读、常用词、短篇阅读",
-                "游戏化经验值与每日连胜",
-                "家长面板可追踪学习进度",
-              ]}
-            />
-            <Audience
-              tag="中学生 · 中考 / 高考"
-              title="备考无需死记硬背。"
-              points={[
-                "阅读、完形、语法、听力",
-                "学习中自动生成错题本",
-                "每道错题都有 AI 讲解",
-              ]}
-            />
-            <Audience
-              tag="成人 · 工作 & 生活"
-              title="在会议、邮件、出行中自信开口。"
-              points={[
-                "职场场景与邮件模板",
-                "俚语帮你跟上社交节奏",
-                "5 分钟一节，融入日常",
-              ]}
-            />
+          <div className="grid gap-5 md:grid-cols-3">
+            <USP icon={<Mic className="size-5" />}     title="AI Speaking Feedback"      desc="Get instant corrections on pronunciation and fluency — like a real coach in your pocket." />
+            <USP icon={<Gamepad2 className="size-5" />} title="Addictive Learning System" desc="Streaks, XP, and your own learning companion keep you coming back, day after day." />
+            <USP icon={<Globe2 className="size-5" />}   title="Real-world English"        desc="Learn how people actually speak — from daily conversations to slang, not textbook lines." />
           </div>
         </div>
       </section>
 
-      {/* SOCIAL PROOF */}
+      {/* 04 — SOCIAL PROOF */}
+      <section className="border-t border-[#1F3A2E]/10 bg-[#EEF4FB]">
+        <div className="mx-auto max-w-[1100px] px-6 py-20 md:px-10 md:py-28">
+          <div className="mb-12 text-center">
+            <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#E8743C]">
+              <L>Trusted by learners worldwide</L>
+            </div>
+            <h2 className="font-serif text-3xl font-medium leading-tight md:text-5xl">
+              <L>Real stories from real users.</L>
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <ReviewCard quote="Finally, something that actually helps me speak." name="Jason M." role="Jason · United States" />
+            <ReviewCard quote="I improved my pronunciation in just 2 weeks."     name="Maria G." role="Maria · Mexico" />
+            <ReviewCard quote="My kid loves the pet system!"                      name="Li Wei"   role="Li Wei · China" />
+          </div>
+          <div className="mt-10 flex items-center justify-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-[#1F3A2E]/55">
+            <Globe2 className="size-3.5" /> <L>Used in 180+ countries</L>
+          </div>
+        </div>
+      </section>
+
+      {/* 05 — GAMIFICATION (your strength) */}
       <section className="border-t border-[#1F3A2E]/10 bg-[#1F3A2E] text-[#FAF8F3]">
         <div className="mx-auto max-w-[1100px] px-6 py-20 md:px-10 md:py-28">
-          <div className="mb-14 max-w-2xl">
+          <div className="mb-12 max-w-2xl">
             <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#E8743C]">
-              <L>03 — 为什么大家会留下来</L>
+              🔥 <L>Stay motivated, every day</L>
             </div>
             <h2 className="font-serif text-3xl font-medium leading-tight md:text-5xl">
-              <span className="italic text-[#E8743C]">12,847</span> <L>位学员本周在学习。</L>
+              <L>Learning English doesn't feel like studying anymore.</L>
             </h2>
           </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <Testimonial
-              quote="我女儿现在主动要求学英语，连胜系统让她上瘾。"
-              name="Wei L."
-              role="家长 · 上海"
-            />
-            <Testimonial
-              quote="我从开会发言紧张，到 3 个月后能主导会议。AI 发音反馈是别家没有的。"
-              name="Marisol G."
-              role="产品经理 · 墨西哥城"
-            />
-            <Testimonial
-              quote="终于有一款不像作业的英语 app，连胜 127 天还在继续。"
-              name="Akira T."
-              role="工程师 · 东京"
-            />
+          <div className="grid gap-5 md:grid-cols-3">
+            <GameCard icon={<Flame className="size-5" />}  title="Build your streak"             desc="Light up a flame each day you study. Miss a day and your streak resets — so you don't." />
+            <GameCard icon={<Heart className="size-5" />}  title="Grow your learning companion" desc="Adopt a virtual buddy. Feed it with words you learn. Watch it evolve as you level up." />
+            <GameCard icon={<Trophy className="size-5" />} title="Earn XP and level up"          desc="Every lesson, quiz, and conversation earns XP. Climb the leaderboard with friends." />
           </div>
         </div>
       </section>
 
-      {/* GLOBAL LOVE — 5-star reviews + headline stats */}
-      <section className="border-t border-[#1F3A2E]/10 bg-[#EEF4FB]">
-        <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10 md:py-28">
-          <h2 className="mb-14 text-center text-3xl font-extrabold leading-tight text-[#1F3A2E] md:text-5xl">
-            <L>全球学员都在用</L>{" "}
-            <span className="text-[#E8743C]"><L>Big Moon</L></span>
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <ReviewCard
-              quote="我从开会发言紧张，到 3 个月后能主导会议。AI 发音反馈是别家没有的。"
-              name="Marisol G."
-              role="产品经理 · 墨西哥城"
-            />
-            <ReviewCard
-              quote="终于有一款不像作业的英语 app。连胜 127 天，每晚都期待打开。"
-              name="Akira T."
-              role="工程师 · 东京"
-            />
-            <ReviewCard
-              quote="旅行场景课救了我去伦敦的行程，我真的能开口对话，而不是手指着菜单。"
-              name="Lucas P."
-              role="设计师 · 圣保罗"
-            />
-          </div>
-
-          <div className="mt-8 grid grid-cols-2 gap-4 md:mt-10 md:grid-cols-4">
-            <StatCard value="14M+" label="学员" />
-            <StatCard value="184" label="国家" />
-            <StatCard value="4.9★" label="平均评分" />
-            <StatCard value="97%" label="愿意推荐" />
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
+      {/* 06 — SIMPLE PRICING */}
       <section className="border-t border-[#1F3A2E]/10">
-        <div className="mx-auto max-w-[1100px] px-6 py-24 text-center md:px-10 md:py-32">
-          <GraduationCap className="mx-auto mb-6 size-10 text-[#E8743C]" />
+        <div className="mx-auto max-w-[1100px] px-6 py-20 md:px-10 md:py-28">
+          <div className="mb-12 text-center">
+            <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#E8743C]">
+              💰 <L>Simple pricing</L>
+            </div>
+            <h2 className="font-serif text-3xl font-medium leading-tight md:text-5xl">
+              <L>Start free. Upgrade when you're hooked.</L>
+            </h2>
+          </div>
+          <div className="mx-auto grid max-w-3xl gap-5 md:grid-cols-2">
+            <PricingCard
+              tier="Free"
+              price="$0"
+              period="Free forever"
+              features={["3 lessons per day", "Basic AI speaking practice", "Daily streak & XP", "Pet companion"]}
+              cta="Start for free"
+              highlighted={false}
+            />
+            <PricingCard
+              tier="Pro"
+              price="$6.99"
+              period="/ month"
+              badge="Most popular"
+              features={["Unlimited speaking practice", "Advanced AI feedback (pronunciation, grammar, fluency)", "All scenarios & slang unlocked", "Weekly progress reports", "Priority support"]}
+              cta="Get Pro"
+              highlighted
+            />
+          </div>
+          <div className="mt-6 text-center text-xs text-[#1F3A2E]/55">
+            <L>No credit card required</L>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="border-t border-[#1F3A2E]/10 bg-[#EEF4FB]">
+        <div className="mx-auto max-w-[1100px] px-6 py-20 text-center md:px-10 md:py-28">
+          <MessageCircle className="mx-auto mb-6 size-10 text-[#E8743C]" />
           <h2 className="mx-auto max-w-2xl font-serif text-3xl font-medium leading-tight md:text-5xl">
-            <L>不知道从哪里开始？</L>
+            <L>Ready to actually speak English?</L>
           </h2>
           <p className="mx-auto mt-5 max-w-md text-base text-[#1F3A2E]/70">
-            <L>3 分钟测试帮你定位水平，并生成专属学习路径。无需注册。</L>
+            <L>Five minutes a day. Real conversations. Visible progress.</L>
           </p>
-          <Link
-            to="/placement"
-            className="mt-9 inline-flex items-center justify-center gap-2 rounded-full bg-[#E8743C] px-9 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-[#d4632d]"
-          >
-            <L>测一测我的水平</L> <ArrowRight className="size-4" />
-          </Link>
-          <div className="mt-6 text-xs text-[#1F3A2E]/50">
-            <L>已经是会员？</L>{" "}
-            <Link to="/auth" className="font-bold text-[#1F3A2E] underline-offset-4 hover:underline">
-              <L>登录</L>
+          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              to="/auth"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#E8743C] px-9 py-4 text-sm font-bold uppercase tracking-[0.18em] text-white transition hover:bg-[#d4632d]"
+            >
+              <L>Start for free</L> <ArrowRight className="size-4" />
             </Link>
+            <a href="#try-now" className="text-xs font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55 hover:text-[#1F3A2E]">
+              <L>Try the 30-sec demo</L>
+            </a>
           </div>
         </div>
       </section>

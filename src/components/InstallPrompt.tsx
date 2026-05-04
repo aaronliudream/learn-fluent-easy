@@ -119,7 +119,6 @@ export default function InstallPrompt() {
           <div className="text-sm font-extrabold">
             <T>把 Big Moon 装到主屏幕</T>
           </div>
-          {ios || showHowTo && !event ? null : null}
           {ios ? (
             <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
               <T>点击 Safari 底部的</T>{" "}

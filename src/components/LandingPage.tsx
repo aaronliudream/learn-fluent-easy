@@ -101,7 +101,7 @@ const EN_COPY: Record<string, string> = {
 function L({ children }: { children: string }) {
   const { lang } = useI18n();
   if (lang === "en" && EN_COPY[children]) return <>{EN_COPY[children]}</>;
-  return <L>{children}</L>;
+  return <T>{children}</T>;
 }
 
 /**

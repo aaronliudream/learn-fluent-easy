@@ -12,6 +12,7 @@ import {
 } from "recharts";
 import DelaySettings from "@/components/parent/DelaySettings";
 import FamilyGoalSettings from "@/components/parent/FamilyGoalSettings";
+import { T, useT } from "@/i18n/T";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
 type Dashboard = {
@@ -32,22 +33,31 @@ const SEG_META = {
   gaokao:  { label: "高中 / Upper Secondary", icon: GraduationCap, color: "from-rose-500 to-orange-500", route: "/gaokao" },
 } as const;
 
-function fmtMinutes(m: number): string {
-  if (m < 60) return `${m} 分钟`;
-  const h = Math.floor(m / 60);
-  const r = m % 60;
-  return r ? `${h} 小时 ${r} 分` : `${h} 小时`;
+function useFmtMinutes() {
+  const t = useT();
+  return (m: number): string => {
+    if (m < 60) return `${m} ${t("分钟")}`;
+    const h = Math.floor(m / 60);
+    const r = m % 60;
+    return r ? `${h} ${t("小时")} ${r} ${t("分")}` : `${h} ${t("小时")}`;
+  };
 }
 
-function moduleLabel(m: string): string {
-  const map: Record<string, string> = {
-    vocab: "单词", grammar: "语法", reading: "阅读", cloze: "完形",
-    listening: "听力", writing: "写作",
+function useModuleLabel() {
+  const t = useT();
+  return (m: string): string => {
+    const map: Record<string, string> = {
+      vocab: t("单词"), grammar: t("语法"), reading: t("阅读"), cloze: t("完形"),
+      listening: t("听力"), writing: t("写作"),
+    };
+    return map[m] ?? m;
   };
-  return map[m] ?? m;
 }
 
 export default function GlobalParent() {
+  const t = useT();
+  const fmtMinutes = useFmtMinutes();
+  const moduleLabel = useModuleLabel();
   const [authed, setAuthed] = useState<boolean | null>(null);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState<Dashboard | null>(null);
@@ -87,7 +97,7 @@ export default function GlobalParent() {
     return (
       <main className="mx-auto min-h-screen max-w-5xl px-4 py-10">
         <div className="flex items-center justify-center py-20 text-muted-foreground">
-          <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
+          <Loader2 className="mr-2 size-5 animate-spin" /> <T>加载中…</T>
         </div>
       </main>
     );
@@ -97,9 +107,9 @@ export default function GlobalParent() {
     return (
       <main className="mx-auto min-h-screen max-w-5xl px-4 py-10">
         <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回
+          <ArrowLeft className="size-4" /> <T>返回</T>
         </BackLink>
-        <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">请先登录后再查看</div>
+        <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground"><T>请先登录后再查看</T></div>
       </main>
     );
   }
@@ -129,62 +139,62 @@ export default function GlobalParent() {
     d.gaokao.correct;
 
   const radar = [
-    { key: "vocab",   label: "单词", value: clamp01(allWords / 500) },
-    { key: "reading", label: "阅读", value: clamp01((d.primary.reading_done + d.junior.reading_correct + d.gaokao.correct) / 50) },
-    { key: "grammar", label: "语法", value: avgAccByType(d, "grammar") },
-    { key: "listening", label: "听力", value: avgAccByType(d, "listening") },
+    { key: "vocab",   label: t("单词"), value: clamp01(allWords / 500) },
+    { key: "reading", label: t("阅读"), value: clamp01((d.primary.reading_done + d.junior.reading_correct + d.gaokao.correct) / 50) },
+    { key: "grammar", label: t("语法"), value: avgAccByType(d, "grammar") },
+    { key: "listening", label: t("听力"), value: avgAccByType(d, "listening") },
     // 口语：基于实际做题量，不再用浏览时长，避免新用户 0 题也显示进度
-    { key: "speaking", label: "口语", value: clamp01(totalAttempts / 100) },
+    { key: "speaking", label: t("口语"), value: clamp01(totalAttempts / 100) },
   ];
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-4 py-6 md:px-6 md:py-10">
       <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回
+        <ArrowLeft className="size-4" /> <T>返回</T>
       </BackLink>
 
       {/* Header */}
       <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">PARENT CENTER</div>
-          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">👨‍👩‍👧 全局家长中心</h1>
+          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">👨‍👩‍👧 <T>全局家长中心</T></h1>
           <p className="mt-1 text-xs text-muted-foreground">
-            {mainSeg ? <>主修：<b>{SEG_META[mainSeg].label}</b> · </> : null}
-            近 30 天 有效学习 <b>{fmtMinutes(totalMin)}</b> · 连续学习 <b>{streak}</b> 天 🔥
+            {mainSeg ? <><T>主修</T>：<b>{SEG_META[mainSeg].label}</b> · </> : null}
+            <T>近 30 天 有效学习</T> <b>{fmtMinutes(totalMin)}</b> · <T>连续学习</T> <b>{streak}</b> <T>天</T> 🔥
           </p>
         </div>
         <Link to="/pets" className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 px-4 py-2 text-sm font-extrabold text-white shadow">
-          <Coins className="size-4" /> {coins} 星币
+          <Coins className="size-4" /> {coins} <T>星币</T>
         </Link>
         <button
           type="button"
           onClick={() => window.print()}
           className="print:hidden inline-flex items-center gap-1.5 rounded-full border-2 border-border bg-card px-4 py-2 text-sm font-bold text-foreground shadow-sm hover:bg-muted"
-          aria-label="导出 PDF / 打印报告"
-          title="导出 PDF（在打印对话框中选择「另存为 PDF」）"
+          aria-label={t("导出 PDF / 打印报告")}
+          title={t("导出 PDF（在打印对话框中选择「另存为 PDF」）")}
         >
-          <Download className="size-4" /> 导出 PDF
+          <Download className="size-4" /> <T>导出 PDF</T>
         </button>
       </div>
 
       {/* Top KPI strip */}
       <section className="mb-4 grid gap-3 sm:grid-cols-4">
-        <Kpi icon={Clock}  label="本周专注" value={fmtMinutes(Math.min(d.minutes_7d, segTotal))} color="from-emerald-500 to-teal-500" />
-        <Kpi icon={Flame}  label="连续学习" value={`${streak} 天`}            color="from-orange-500 to-amber-500" />
-        <Kpi icon={Target} label="掌握单词" value={`${allWords}`}              color="from-sky-500 to-blue-500" />
-        <Kpi icon={AlertTriangle} label="待攻克薄弱" value={`${d.weakness.length}`} color="from-rose-500 to-pink-500" />
+        <Kpi icon={Clock}  label={t("本周专注")} value={fmtMinutes(Math.min(d.minutes_7d, segTotal))} color="from-emerald-500 to-teal-500" />
+        <Kpi icon={Flame}  label={t("连续学习")} value={`${streak} ${t("天")}`}            color="from-orange-500 to-amber-500" />
+        <Kpi icon={Target} label={t("掌握单词")} value={`${allWords}`}              color="from-sky-500 to-blue-500" />
+        <Kpi icon={AlertTriangle} label={t("待攻克薄弱")} value={`${d.weakness.length}`} color="from-rose-500 to-pink-500" />
       </section>
 
       {/* 完全没有任何学习数据 → 引导诊断 */}
       {!hasAnyActivity && (
         <section className="mb-4 rounded-3xl border-2 border-dashed border-violet-300 bg-gradient-to-br from-violet-50 to-sky-50 p-6 text-center">
           <div className="text-3xl">🌱</div>
-          <div className="mt-2 text-base font-extrabold">孩子还没开始学习 / No learning data yet</div>
+          <div className="mt-2 text-base font-extrabold"><T>孩子还没开始学习</T></div>
           <p className="mx-auto mt-1 max-w-md text-xs text-muted-foreground">
-            让孩子先完成 5 分钟免费诊断，我们会根据 CEFR 等级自动推荐适合的学习路径——无论你在中国、日本、韩国还是任何国家。
+            <T>让孩子先完成 5 分钟免费诊断，我们会根据 CEFR 等级自动推荐适合的学习路径——无论你在中国、日本、韩国还是任何国家。</T>
           </p>
           <Link to="/placement" className="mt-4 inline-block rounded-full bg-gradient-to-r from-violet-500 to-sky-500 px-5 py-2 text-sm font-extrabold text-white shadow">
-            开始免费诊断 →
+            <T>开始免费诊断 →</T>
           </Link>
         </section>
       )}
@@ -193,7 +203,7 @@ export default function GlobalParent() {
       {hasAnyActivity && (
       <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
         <div className="mb-2 flex items-center gap-1 text-sm font-extrabold">
-          <Sparkles className="size-4 text-violet-500" /> 学习足迹（按有效时长占比）
+          <Sparkles className="size-4 text-violet-500" /> <T>学习足迹（按有效时长占比）</T>
         </div>
         <div className="space-y-2">
             {activeSegs.map(seg => {
@@ -207,7 +217,7 @@ export default function GlobalParent() {
                       <span className={cn("inline-grid size-5 place-items-center rounded bg-gradient-to-br text-white", M.color)}>
                         <M.icon className="size-3" />
                       </span>
-                      {M.label} {seg === mainSeg && <span className="rounded bg-amber-100 px-1.5 text-[10px] text-amber-700">主修</span>}
+                      {M.label} {seg === mainSeg && <span className="rounded bg-amber-100 px-1.5 text-[10px] text-amber-700"><T>主修</T></span>}
                     </span>
                     <span className="text-muted-foreground">{fmtMinutes(mins)} · {pct}%</span>
                   </div>
@@ -224,7 +234,7 @@ export default function GlobalParent() {
       {/* 掌握度雷达 (条形版，更易读) */}
       <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
         <div className="mb-3 flex items-center gap-1 text-sm font-extrabold">
-          <BookOpen className="size-4 text-emerald-500" /> 各模块掌握度
+          <BookOpen className="size-4 text-emerald-500" /> <T>各模块掌握度</T>
         </div>
         <div className="grid gap-2 sm:grid-cols-2">
           {radar.map(r => (
@@ -241,7 +251,7 @@ export default function GlobalParent() {
                   style={{ width: `${Math.max(2, r.value * 100)}%` }}
                 />
               </div>
-              {r.value < 0.4 && <div className="mt-1 text-[10px] text-rose-600">⚠️ 薄弱，建议本周重点练习</div>}
+              {r.value < 0.4 && <div className="mt-1 text-[10px] text-rose-600">⚠️ <T>薄弱，建议本周重点练习</T></div>}
             </div>
           ))}
         </div>
@@ -250,10 +260,10 @@ export default function GlobalParent() {
       {/* 薄弱点 Top 5 */}
       <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
         <div className="mb-3 flex items-center gap-1 text-sm font-extrabold">
-          <AlertTriangle className="size-4 text-rose-500" /> 本周需要关注（近 14 天未解决错题）
+          <AlertTriangle className="size-4 text-rose-500" /> <T>本周需要关注（近 14 天未解决错题）</T>
         </div>
         {d.weakness.length === 0 ? (
-          <div className="py-6 text-center text-xs text-muted-foreground">🎉 没有未解决的薄弱点，状态非常好！</div>
+          <div className="py-6 text-center text-xs text-muted-foreground">🎉 <T>没有未解决的薄弱点，状态非常好！</T></div>
         ) : (
           <ul className="space-y-2">
             {d.weakness.map((w, i) => (
@@ -261,12 +271,12 @@ export default function GlobalParent() {
                 <div className="min-w-0">
                   <div className="text-sm font-bold">
                     <span className="mr-2 inline-block rounded bg-rose-100 px-1.5 text-[10px] text-rose-700">{moduleLabel(w.module)}</span>
-                    <span className="truncate">{w.parent_label || w.snapshot?.title || w.snapshot?.stem || "题目"}</span>
+                    <span className="truncate">{w.parent_label || w.snapshot?.title || w.snapshot?.stem || t("题目")}</span>
                   </div>
-                  <div className="mt-0.5 text-[10px] text-muted-foreground">错 {w.wrong_count} 次 · {new Date(w.last_wrong_at).toLocaleDateString("zh-CN")}</div>
+                  <div className="mt-0.5 text-[10px] text-muted-foreground"><T>错</T> {w.wrong_count} <T>次</T> · {new Date(w.last_wrong_at).toLocaleDateString()}</div>
                 </div>
                 <Link to="/gaokao/mistakes" className="shrink-0 rounded-full bg-rose-500 px-3 py-1 text-[11px] font-extrabold text-white hover:bg-rose-600">
-                  陪练 10 分钟 →
+                  <T>陪练 10 分钟 →</T>
                 </Link>
               </li>
             ))}
@@ -282,10 +292,10 @@ export default function GlobalParent() {
             seg="primary"
             words={d.primary.words}
             extra={[
-              { k: "做题次数", v: `${d.primary.sessions}` },
-              { k: "平均正确率", v: `${Math.round(d.primary.accuracy * 100)}%` },
-              { k: "阅读完成", v: `${d.primary.reading_done} 篇` },
-              { k: "活跃天数", v: `${d.primary.active_days} 天` },
+              { k: t("做题次数"), v: `${d.primary.sessions}` },
+              { k: t("平均正确率"), v: `${Math.round(d.primary.accuracy * 100)}%` },
+              { k: t("阅读完成"), v: `${d.primary.reading_done} ${t("篇")}` },
+              { k: t("活跃天数"), v: `${d.primary.active_days} ${t("天")}` },
             ]}
           />
         )}
@@ -294,10 +304,10 @@ export default function GlobalParent() {
             seg="junior"
             words={d.junior.words}
             extra={[
-              { k: "做题次数", v: `${d.junior.sessions}` },
-              { k: "平均正确率", v: `${Math.round(d.junior.accuracy * 100)}%` },
-              { k: "阅读正确", v: `${d.junior.reading_correct}/${d.junior.reading_attempts}` },
-              { k: "活跃天数", v: `${d.junior.active_days} 天` },
+              { k: t("做题次数"), v: `${d.junior.sessions}` },
+              { k: t("平均正确率"), v: `${Math.round(d.junior.accuracy * 100)}%` },
+              { k: t("阅读正确"), v: `${d.junior.reading_correct}/${d.junior.reading_attempts}` },
+              { k: t("活跃天数"), v: `${d.junior.active_days} ${t("天")}` },
             ]}
           />
         )}
@@ -306,10 +316,10 @@ export default function GlobalParent() {
             seg="gaokao"
             words={d.gaokao.words}
             extra={[
-              { k: "做题次数", v: `${d.gaokao.attempts}` },
-              { k: "正确率", v: `${d.gaokao.attempts ? Math.round(d.gaokao.correct / d.gaokao.attempts * 100) : 0}%` },
-              { k: "正确题数", v: `${d.gaokao.correct}` },
-              { k: "活跃天数", v: `${d.gaokao.active_days} 天` },
+              { k: t("做题次数"), v: `${d.gaokao.attempts}` },
+              { k: t("正确率"), v: `${d.gaokao.attempts ? Math.round(d.gaokao.correct / d.gaokao.attempts * 100) : 0}%` },
+              { k: t("正确题数"), v: `${d.gaokao.correct}` },
+              { k: t("活跃天数"), v: `${d.gaokao.active_days} ${t("天")}` },
             ]}
           />
         )}
@@ -319,10 +329,10 @@ export default function GlobalParent() {
       {/* 每日学习时长曲线 */}
       <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
         <div className="mb-2 flex items-center gap-1 text-sm font-extrabold">
-          <TrendingUp className="size-4 text-emerald-500" /> 近 14 天 每日有效学习时长
+          <TrendingUp className="size-4 text-emerald-500" /> <T>近 14 天 每日有效学习时长</T>
         </div>
         {d.daily_minutes.length === 0 ? (
-          <div className="py-6 text-center text-xs text-muted-foreground">暂无数据</div>
+          <div className="py-6 text-center text-xs text-muted-foreground"><T>暂无数据</T></div>
         ) : (
           <div className="h-48">
             <ResponsiveContainer>
@@ -339,12 +349,12 @@ export default function GlobalParent() {
       </section>
 
       <div className="mt-6 rounded-2xl border border-dashed border-amber-300 bg-amber-50 p-4 text-xs text-amber-900">
-        <div className="flex items-center gap-1 font-extrabold"><Sparkles className="size-3.5" /> 数据说明</div>
+        <div className="flex items-center gap-1 font-extrabold"><Sparkles className="size-3.5" /> <T>数据说明</T></div>
         <p className="mt-1 leading-relaxed">
-          ① <b>有效学习时长</b>：仅在屏幕可见 + 60 秒内有交互时计入，自动剔除挂机。<br/>
-          ② <b>跨学段足迹</b>：孩子可能跨年级学习，系统按时长自动判定主修学段，所有正确答题都计入掌握。<br/>
-          ③ <b>薄弱点</b>：近 14 天未解决的错题，按错误次数排序，点击右侧按钮可立即陪练。<br/>
-          ④ 数据每次进入页面刷新；如刚做完题未显示，请稍候重新进入。
+          <T>① 有效学习时长：仅在屏幕可见 + 60 秒内有交互时计入，自动剔除挂机。</T><br/>
+          <T>② 学习足迹：孩子可能跨年级学习，系统按时长自动判定主修学段，所有正确答题都计入掌握。</T><br/>
+          <T>③ 薄弱点：近 14 天未解决的错题，按错误次数排序，点击右侧按钮可立即陪练。</T><br/>
+          <T>④ 数据每次进入页面刷新；如刚做完题未显示，请稍候重新进入。</T>
         </p>
       </div>
 
@@ -390,18 +400,19 @@ function SegCard({ seg, words, extra }: {
   extra: { k: string; v: string }[];
 }) {
   const M = SEG_META[seg];
+  const t = useT();
   return (
     <div className="rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
       <div className="mb-3 flex items-center gap-2">
         <div className={cn("grid size-9 place-items-center rounded-xl bg-gradient-to-br text-white shadow", M.color)}>
           <M.icon className="size-4" />
         </div>
-        <div className="text-sm font-extrabold">{M.label}详情</div>
+        <div className="text-sm font-extrabold">{M.label} <T>详情</T></div>
       </div>
       <div className="mb-3 rounded-2xl bg-secondary/50 p-2 text-center">
-        <div className="text-[10px] text-muted-foreground">单词掌握</div>
+        <div className="text-[10px] text-muted-foreground"><T>单词掌握</T></div>
         <div className="text-2xl font-black">{words.mastered}</div>
-        <div className="text-[10px] text-muted-foreground">熟练 {words.proficient} · 见过 {words.familiar}</div>
+        <div className="text-[10px] text-muted-foreground"><T>熟练</T> {words.proficient} · <T>见过</T> {words.familiar}</div>
       </div>
       <div className="space-y-1.5 text-xs">
         {extra.map(e => (
@@ -412,7 +423,7 @@ function SegCard({ seg, words, extra }: {
         ))}
       </div>
       <Link to={M.route} className={cn("mt-3 block rounded-xl bg-gradient-to-r py-2 text-center text-xs font-extrabold text-white shadow", M.color)}>
-        进入{M.label}专区 →
+        <T>进入</T>{M.label} →
       </Link>
     </div>
   );

@@ -11,6 +11,7 @@ import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
 import WordDuel from "@/components/WordDuel";
 import MemoryMatch from "@/components/MemoryMatch";
+import { useI18n } from "@/i18n/I18nProvider";
 
 type Vocab = {
   id: string;
@@ -29,8 +30,15 @@ type Vocab = {
 type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs";
 const GROUP_SIZE = 20;
 
+const isChineseUi = (lang: string) => lang === "zh" || lang === "zh-TW";
+const gradeLabel = (grade: number, zh: boolean) => zh ? `初${grade}` : `Grade ${grade + 6}`;
+const meaningForUi = (word: Vocab, zh: boolean) => zh ? word.meaning_cn : (word.meaning_en || word.meaning_cn);
+const secondaryMeaningForUi = (word: Vocab, zh: boolean) => zh ? word.meaning_en : word.meaning_cn;
+
 export default function JuniorVocab() {
   const [params, setParams] = useSearchParams();
+  const { lang } = useI18n();
+  const zh = isChineseUi(lang);
   const grade = params.get("grade") ?? "1";
   const mode = (params.get("mode") as Mode) ?? null;
   const groupParam = Number(params.get("group") ?? "0");
@@ -101,7 +109,7 @@ export default function JuniorVocab() {
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
         <div className="flex items-center justify-center py-20 text-muted-foreground">
-          <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
+          <Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载中…" : "Loading…"}
         </div>
       </main>
     );
@@ -109,16 +117,16 @@ export default function JuniorVocab() {
 
   if (mode === "srs") {
     if (srsPool === null) {
-      return <main className="mx-auto min-h-screen max-w-3xl px-5 py-8"><div className="flex items-center justify-center py-20 text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> 加载到期单词…</div></main>;
+      return <main className="mx-auto min-h-screen max-w-3xl px-5 py-8"><div className="flex items-center justify-center py-20 text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> {zh ? "加载到期单词…" : "Loading due words…"}</div></main>;
     }
     if (srsPool.length === 0) {
       return (
         <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-          <button onClick={exit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</button>
+          <button onClick={exit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {zh ? "返回" : "Back"}</button>
           <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
             <Trophy className="mx-auto size-12 text-amber-500" />
-            <h3 className="mt-2 text-xl font-extrabold">今日没有到期单词 🎉</h3>
-            <p className="mt-1 text-sm text-muted-foreground">先去清单里学一组新词，系统会按艾宾浩斯曲线自动安排复习。</p>
+            <h3 className="mt-2 text-xl font-extrabold">{zh ? "今日没有到期单词 🎉" : "No words are due today 🎉"}</h3>
+            <p className="mt-1 text-sm text-muted-foreground">{zh ? "先去清单里学一组新词，系统会按艾宾浩斯曲线自动安排复习。" : "Study a new group first, then the system will schedule reviews automatically."}</p>
           </div>
         </main>
       );

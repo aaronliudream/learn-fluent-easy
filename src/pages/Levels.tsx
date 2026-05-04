@@ -6,6 +6,11 @@ import { useT } from "@/i18n/T";
 
 const Levels = () => {
   const t = useT();
+  const groups = [
+    { title: t("入门"), subtitle: "A1 – A2", ids: [1, 2] },
+    { title: t("进阶"), subtitle: "B1 – B2", ids: [3, 4] },
+    { title: t("高阶"), subtitle: "C1 – C2", ids: [5, 6] },
+  ];
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
@@ -14,8 +19,24 @@ const Levels = () => {
         back="/"
       />
 
-      <section className="grid gap-4 sm:grid-cols-2">
-        {LEVELS.map((lv) => {
+      <div className="space-y-8">
+        {groups.map((g) => {
+          const items = g.ids
+            .map((id) => LEVELS.find((l) => l.id === id))
+            .filter(Boolean) as typeof LEVELS;
+          if (items.length === 0) return null;
+          return (
+            <section key={g.title}>
+              <header className="mb-3 flex items-baseline justify-between border-b border-border/50 pb-2">
+                <h2 className="text-lg font-extrabold tracking-tight text-foreground md:text-xl">
+                  {g.title}
+                </h2>
+                <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                  {g.subtitle}
+                </span>
+              </header>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {items.map((lv) => {
           const allLessons = lv.units.flatMap((u) => u.lessons);
           const done = allLessons.filter((l) => l.status === "done").length;
           const pct = allLessons.length ? Math.round((done / allLessons.length) * 100) : 0;
@@ -51,8 +72,12 @@ const Levels = () => {
               </div>
             </Link>
           );
+                })}
+              </div>
+            </section>
+          );
         })}
-      </section>
+      </div>
     </main>
   );
 };

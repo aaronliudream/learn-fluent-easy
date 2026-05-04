@@ -76,6 +76,8 @@ const Review = lazy(() => import("./pages/Review.tsx"));
 const Mistakes = lazy(() => import("./pages/Mistakes.tsx"));
 const Leaderboard = lazy(() => import("./pages/Leaderboard.tsx"));
 const Pets = lazy(() => import("./pages/Pets.tsx"));
+const Friends = lazy(() => import("./pages/Friends.tsx"));
+const FriendPet = lazy(() => import("./pages/FriendPet.tsx"));
 const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 const Social = lazy(() => import("./pages/Social.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
@@ -159,6 +161,8 @@ const App = () => (
           <Route path="/mistakes" element={<Mistakes />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/pets" element={<Pets />} />
+          <Route path="/friends" element={<Friends />} />
+          <Route path="/friend/:id" element={<FriendPet />} />
           <Route path="/parent" element={<GlobalParent />} />
           <Route path="/social" element={<Social />} />
           <Route path="/scenes/:catKey" element={<ScenesCategory />} />

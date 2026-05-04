@@ -3362,6 +3362,33 @@ export type Database = {
           },
         ]
       }
+      pet_friendships: {
+        Row: {
+          addressee_id: string
+          created_at: string
+          id: string
+          requester_id: string
+          responded_at: string | null
+          status: string
+        }
+        Insert: {
+          addressee_id: string
+          created_at?: string
+          id?: string
+          requester_id: string
+          responded_at?: string | null
+          status?: string
+        }
+        Update: {
+          addressee_id?: string
+          created_at?: string
+          id?: string
+          requester_id?: string
+          responded_at?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
       pet_inventory: {
         Row: {
           food_id: string
@@ -3467,6 +3494,30 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      pet_photos: {
+        Row: {
+          caption: string | null
+          created_at: string
+          host_id: string
+          id: string
+          visitor_id: string
+        }
+        Insert: {
+          caption?: string | null
+          created_at?: string
+          host_id: string
+          id?: string
+          visitor_id: string
+        }
+        Update: {
+          caption?: string | null
+          created_at?: string
+          host_id?: string
+          id?: string
+          visitor_id?: string
+        }
+        Relationships: []
       }
       pet_postcards: {
         Row: {
@@ -3776,6 +3827,27 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      pet_visits: {
+        Row: {
+          created_at: string
+          host_id: string
+          id: string
+          visitor_id: string
+        }
+        Insert: {
+          created_at?: string
+          host_id: string
+          id?: string
+          visitor_id: string
+        }
+        Update: {
+          created_at?: string
+          host_id?: string
+          id?: string
+          visitor_id?: string
+        }
+        Relationships: []
       }
       phrase_explanations: {
         Row: {
@@ -5302,6 +5374,7 @@ export type Database = {
           pet_id: string
         }[]
       }
+      are_friends: { Args: { _a: string; _b: string }; Returns: boolean }
       award_coins: {
         Args: { _amount: number }
         Returns: {
@@ -5659,6 +5732,7 @@ export type Database = {
         }[]
       }
       guest_email_for_username: { Args: { _name: string }; Returns: string }
+      is_current_user_minor: { Args: never; Returns: boolean }
       is_username_clean: { Args: { _name: string }; Returns: boolean }
       leaderboard_pets_week: {
         Args: { _grade?: string; _limit?: number }
@@ -5683,6 +5757,51 @@ export type Database = {
       list_food: {
         Args: { _food_id: string; _price: number; _qty: number }
         Returns: string
+      }
+      list_friend_requests: {
+        Args: never
+        Returns: {
+          created_at: string
+          direction: string
+          display_name: string
+          other_id: string
+          request_id: string
+          username: string
+        }[]
+      }
+      list_friends: {
+        Args: never
+        Returns: {
+          display_name: string
+          friend_id: string
+          is_online: boolean
+          pet_emoji: string
+          pet_hunger: number
+          pet_level: number
+          pet_nickname: string
+          pet_stage: number
+          username: string
+        }[]
+      }
+      list_my_pet_visitors: {
+        Args: never
+        Returns: {
+          display_name: string
+          last_visit: string
+          username: string
+          visitor_id: string
+          visits: number
+        }[]
+      }
+      list_pet_photos: {
+        Args: { _other: string }
+        Returns: {
+          caption: string
+          created_at: string
+          host_id: string
+          id: string
+          visitor_id: string
+        }[]
       }
       list_stage_tests: {
         Args: { _grade: number; _segment: string }
@@ -5743,6 +5862,12 @@ export type Database = {
           msg_id: number
           read_ct: number
         }[]
+      }
+      remove_friend: { Args: { _other: string }; Returns: Json }
+      request_friend: { Args: { _username: string }; Returns: Json }
+      respond_friend: {
+        Args: { _accept: boolean; _request_id: string }
+        Returns: Json
       }
       send_gift: {
         Args: { _food_id: string; _to_user: string }
@@ -5827,6 +5952,10 @@ export type Database = {
           surprise: string
         }[]
       }
+      take_pet_photo: {
+        Args: { _caption: string; _friend_id: string }
+        Returns: Json
+      }
       tick_pet_hunger: {
         Args: { _pet_id: string }
         Returns: {
@@ -5841,6 +5970,7 @@ export type Database = {
       }
       username_available: { Args: { _name: string }; Returns: boolean }
       validate_username: { Args: { _name: string }; Returns: string }
+      visit_friend_pet: { Args: { _friend_id: string }; Returns: Json }
       weekly_growth_letter: {
         Args: never
         Returns: {

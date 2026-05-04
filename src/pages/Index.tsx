@@ -1,4 +1,4 @@
-import { ArrowRight, GraduationCap, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Clapperboard, Briefcase, Mic, School } from "lucide-react";
+import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Mic } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -18,9 +18,6 @@ import ThreeTracksHero from "@/components/ThreeTracksHero";
 
 const HOME_COUNTS = {
   slang: 347,
-  scenes: 95,
-  workplace: 65,
-  levels: 4,
 };
 
 const Index = () => {
@@ -56,46 +53,12 @@ const Index = () => {
       gradient: "from-amber-500 via-orange-500 to-rose-500",
     },
     {
-      to: `/levels`,
-      icon: GraduationCap,
-      eyebrow: t("index.section.path.eyebrow"),
-      title: t("index.section.path.title"),
-      desc: t("index.section.path.desc", { count: HOME_COUNTS.levels }),
-      gradient: "from-blue-600 via-indigo-600 to-purple-600",
-    },
-    {
       to: "/slang",
       icon: Zap,
       eyebrow: t("index.section.slang.eyebrow"),
       title: t("index.section.slang.title"),
       desc: t("index.section.slang.desc", { count: HOME_COUNTS.slang }),
       gradient: "from-fuchsia-500 via-rose-500 to-orange-500",
-    },
-    {
-      to: "/scenes",
-      icon: Clapperboard,
-      eyebrow: t("index.section.scenes.eyebrow"),
-      title: t("index.section.scenes.title"),
-      desc: t("index.section.scenes.desc", { count: HOME_COUNTS.scenes }),
-      gradient: "from-indigo-500 via-violet-500 to-sky-500",
-    },
-    {
-      to: "/workplace",
-      icon: Briefcase,
-      eyebrow: t("index.section.workplace.eyebrow"),
-      title: t("index.section.workplace.title"),
-      desc: t("index.section.workplace.desc", { count: HOME_COUNTS.workplace }),
-      gradient: "from-slate-800 via-slate-700 to-amber-600",
-    },
-    {
-      to: "/china",
-      icon: School,
-      // Intentionally Chinese-only: this hub targets Chinese students from
-      // primary school through college. Do NOT wrap in <T> or t().
-      eyebrow: "中国学生 · CHINA STUDENTS",
-      title: "中国学生英语学习专区",
-      desc: "覆盖小学 · 初中 · 高中(高考) · 大学四级 · 大学六级，按学段精准提分",
-      gradient: "from-red-600 via-rose-600 to-orange-500",
     },
   ];
 

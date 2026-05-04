@@ -255,6 +255,27 @@ export default function GlobalParent() {
                 </div>
               );
             })}
+            {activeTracks.map(k => {
+              const M = TRACK_META[k];
+              const mins = (d.minutes_by_segment as any)[k] ?? 0;
+              const pct = Math.round((mins / Math.max(1, segTotal)) * 100);
+              return (
+                <div key={k}>
+                  <div className="flex items-center justify-between text-xs font-bold">
+                    <span className="inline-flex items-center gap-1.5">
+                      <span className={cn("inline-grid size-5 place-items-center rounded bg-gradient-to-br text-white", M.color)}>
+                        <M.icon className="size-3" />
+                      </span>
+                      <T>{M.labelKey}</T>
+                    </span>
+                    <span className="text-muted-foreground">{fmtMinutes(mins)} · {pct}%</span>
+                  </div>
+                  <div className="mt-1 h-2 overflow-hidden rounded-full bg-secondary">
+                    <div className={cn("h-full bg-gradient-to-r transition-all", M.color)} style={{ width: `${pct}%` }} />
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </section>
       )}

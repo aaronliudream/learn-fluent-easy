@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Loader2, Mail, Bug, Lightbulb, Heart, FileText, Star, User, UserX, MessageSquare } from "lucide-react";
+import { ArrowLeft, Loader2, Mail, Bug, Lightbulb, Heart, FileText, Star, User, UserX, MessageSquare, TrendingUp } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 type Row = {
@@ -25,6 +25,15 @@ type EmailLog = {
   created_at: string;
 };
 
+type FunnelEvent = {
+  event_name: string;
+  step: string | null;
+  session_id: string | null;
+  user_id: string | null;
+  metadata: any;
+  created_at: string;
+};
+
 const ICON: Record<string, any> = { bug: Bug, suggestion: Lightbulb, praise: Heart, other: FileText };
 
 export default function AdminFeedback() {
@@ -33,8 +42,10 @@ export default function AdminFeedback() {
   const [rows, setRows] = useState<Row[]>([]);
   const [filter, setFilter] = useState<"all" | "new" | "blocked" | "resolved">("all");
   const [loading, setLoading] = useState(true);
-  const [tab, setTab] = useState<"feedback" | "emails">("feedback");
+  const [tab, setTab] = useState<"feedback" | "emails" | "funnel">("feedback");
   const [emails, setEmails] = useState<EmailLog[]>([]);
+  const [funnel, setFunnel] = useState<FunnelEvent[]>([]);
+  const [funnelDays, setFunnelDays] = useState<7 | 30>(7);
 
   useEffect(() => {
     (async () => {
@@ -63,6 +74,14 @@ export default function AdminFeedback() {
         dedup.push(r);
       }
       setEmails(dedup);
+      const since = new Date(Date.now() - 30 * 24 * 3600 * 1000).toISOString();
+      const { data: fe } = await supabase
+        .from("funnel_events")
+        .select("event_name, step, session_id, user_id, metadata, created_at")
+        .gte("created_at", since)
+        .order("created_at", { ascending: false })
+        .limit(5000);
+      setFunnel((fe ?? []) as any);
       setLoading(false);
     })();
   }, []);
@@ -103,6 +122,14 @@ export default function AdminFeedback() {
           }`}
         >
           <Mail className="size-4" /> 邮件日志 ({emails.length})
+        </button>
+        <button
+          onClick={() => setTab("funnel")}
+          className={`inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition ${
+            tab === "funnel" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <TrendingUp className="size-4" /> 转化漏斗
         </button>
       </div>
 
@@ -157,7 +184,7 @@ export default function AdminFeedback() {
         })}
       </div>
       </>
-      ) : (
+      ) : tab === "emails" ? (
         <section className="mt-4 overflow-hidden rounded-2xl border bg-card">
           {emails.length === 0 ? (
             <div className="p-10 text-center text-sm text-muted-foreground">还没有邮件记录</div>
@@ -193,7 +220,106 @@ export default function AdminFeedback() {
             </table>
           )}
         </section>
+      ) : (
+        <FunnelPanel funnel={funnel} days={funnelDays} setDays={setFunnelDays} />
       )}
     </main>
+  );
+}
+
+function FunnelPanel({ funnel, days, setDays }: { funnel: FunnelEvent[]; days: 7 | 30; setDays: (d: 7 | 30) => void }) {
+  const cutoff = Date.now() - days * 24 * 3600 * 1000;
+  const inWin = funnel.filter(e => new Date(e.created_at).getTime() >= cutoff);
+
+  const placementStarted = new Set(inWin.filter(e => e.event_name === "placement" && e.step === "started").map(e => e.session_id || ""));
+  const placementCompleted = new Set(inWin.filter(e => e.event_name === "placement" && e.step === "completed").map(e => e.session_id || ""));
+  const signedUp = new Set(inWin.filter(e => e.event_name === "signup" && e.step === "completed").map(e => e.session_id || ""));
+
+  // Cross-step conversion: completed AND started in same session
+  const completedFromStart = [...placementCompleted].filter(s => placementStarted.has(s)).length;
+  const signedFromCompleted = [...signedUp].filter(s => placementCompleted.has(s)).length;
+
+  const startCount = placementStarted.size;
+  const completeCount = placementCompleted.size;
+  const signupCount = signedUp.size;
+
+  const completionRate = startCount > 0 ? Math.round((completedFromStart / startCount) * 100) : 0;
+  const signupRate = completeCount > 0 ? Math.round((signedFromCompleted / completeCount) * 100) : 0;
+
+  // CEFR distribution from completed placements
+  const cefrCounts: Record<string, number> = {};
+  for (const e of inWin) {
+    if (e.event_name === "placement" && e.step === "completed") {
+      const c = e.metadata?.cefr;
+      if (c) cefrCounts[c] = (cefrCounts[c] || 0) + 1;
+    }
+  }
+  const cefrSorted = Object.entries(cefrCounts).sort((a, b) => a[0].localeCompare(b[0]));
+
+  return (
+    <section className="mt-4 space-y-4">
+      <div className="inline-flex rounded-xl border bg-card p-1">
+        {([7, 30] as const).map(d => (
+          <button key={d} onClick={() => setDays(d)}
+            className={`rounded-lg px-3 py-1.5 text-xs font-bold transition ${days === d ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>
+            最近 {d} 天
+          </button>
+        ))}
+      </div>
+
+      <div className="grid gap-3 sm:grid-cols-3">
+        <StatCard label="开始诊断" value={startCount} sub="独立 session" tone="blue" />
+        <StatCard label="完成诊断" value={completeCount} sub={`${completionRate}% 完成率`} tone="violet" />
+        <StatCard label="注册" value={signupCount} sub={`诊断后 ${signupRate}% 注册`} tone="emerald" />
+      </div>
+
+      <div className="rounded-2xl border bg-card p-4">
+        <h3 className="mb-3 text-sm font-bold">漏斗</h3>
+        <FunnelBar label="开始诊断" count={startCount} max={Math.max(startCount, 1)} color="bg-blue-500" />
+        <FunnelBar label="完成诊断" count={completedFromStart} max={Math.max(startCount, 1)} color="bg-violet-500" />
+        <FunnelBar label="完成 → 注册" count={signedFromCompleted} max={Math.max(startCount, 1)} color="bg-emerald-500" />
+      </div>
+
+      {cefrSorted.length > 0 && (
+        <div className="rounded-2xl border bg-card p-4">
+          <h3 className="mb-3 text-sm font-bold">完成者 CEFR 分布</h3>
+          <div className="space-y-1.5">
+            {cefrSorted.map(([cefr, n]) => (
+              <FunnelBar key={cefr} label={cefr} count={n} max={Math.max(...cefrSorted.map(([, v]) => v))} color="bg-amber-500" />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {inWin.length === 0 && (
+        <div className="rounded-2xl border border-dashed p-8 text-center text-sm text-muted-foreground">该时间段还没有埋点数据</div>
+      )}
+    </section>
+  );
+}
+
+function StatCard({ label, value, sub, tone }: { label: string; value: number; sub: string; tone: "blue" | "violet" | "emerald" }) {
+  const toneCls = tone === "blue" ? "text-blue-600" : tone === "violet" ? "text-violet-600" : "text-emerald-600";
+  return (
+    <div className="rounded-2xl border bg-card p-4">
+      <div className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{label}</div>
+      <div className={`mt-1 text-3xl font-extrabold ${toneCls}`}>{value}</div>
+      <div className="mt-0.5 text-xs text-muted-foreground">{sub}</div>
+    </div>
+  );
+}
+
+function FunnelBar({ label, count, max, color }: { label: string; count: number; max: number; color: string }) {
+  const pct = max > 0 ? Math.max(2, Math.round((count / max) * 100)) : 0;
+  return (
+    <div className="mb-2 last:mb-0">
+      <div className="mb-1 flex items-center justify-between text-xs">
+        <span className="font-bold">{label}</span>
+        <span className="text-muted-foreground">{count}</span>
+      </div>
+      <div className="h-2 overflow-hidden rounded-full bg-secondary">
+        <div className={`h-full ${color} transition-all`} style={{ width: `${pct}%` }} />
+      </div>
+    </div>
   );
 }

@@ -180,14 +180,15 @@ function petEmoji(p: Pet, sp?: Species) {
 const STAGE_LABEL = ["蛋", "幼年", "成年", "传说"];
 
 function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, flash }: any) {
+  const t = useT();
   const [feedingFood, setFeedingFood] = useState<string | null>(null);
   const [pickedSticker, setPickedSticker] = useState<string | null>(null);
   if (!pets.length) {
     return (
       <div className="rounded-3xl border-2 border-dashed border-purple-300 bg-purple-50/50 p-10 text-center dark:bg-purple-950/20">
         <div className="text-6xl">🥚</div>
-        <h3 className="mt-3 text-lg font-extrabold">还没有宠物哦</h3>
-        <p className="mt-1 text-sm text-muted-foreground">去「领养」标签页带一只回家吧！</p>
+        <h3 className="mt-3 text-lg font-extrabold"><T>还没有宠物哦</T></h3>
+        <p className="mt-1 text-sm text-muted-foreground"><T>去「领养」标签页带一只回家吧！</T></p>
       </div>
     );
   }
@@ -209,7 +210,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
     setFeedingFood(null);
     if (error) { flash("❌ " + error.message); return; }
     const r = Array.isArray(data) ? data[0] : data;
-    flash(r?.message || "🍽️ 喂食成功！");
+    flash(r?.message || t("🍽️ 喂食成功！"));
     if (r?.evolved) {
       const newStage = r.new_stage ?? active.stage + 1;
       const newEmoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][newStage] ?? "✨";
@@ -218,7 +219,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
         kind: "evolve",
         emoji: newEmoji,
         prevEmoji,
-        title: r.message || "进化啦！",
+        title: r.message || t("进化啦！"),
         subtitle: `${active.nickname} · ${STAGE_LABEL[newStage]}形态`,
       });
     } else if (r?.leveled) {
@@ -345,7 +346,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
         <span className="text-muted-foreground">→</span>
       </Link>
       {active?.stage >= 1 && (
-        <PetChat petName={active?.nickname || "小伙伴"} />
+      <PetChat petName={active?.nickname || t("小伙伴")} />
       )}
     </div>
   );

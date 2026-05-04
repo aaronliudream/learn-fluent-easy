@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Loader2, Mail, Bug, Lightbulb, Heart, FileText, Star, User, UserX } from "lucide-react";
+import { ArrowLeft, Loader2, Mail, Bug, Lightbulb, Heart, FileText, Star, User, UserX, MessageSquare } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 type Row = {
@@ -16,6 +16,15 @@ type Row = {
   created_at: string;
 };
 
+type EmailLog = {
+  message_id: string;
+  template_name: string;
+  recipient_email: string;
+  status: string;
+  error_message: string | null;
+  created_at: string;
+};
+
 const ICON: Record<string, any> = { bug: Bug, suggestion: Lightbulb, praise: Heart, other: FileText };
 
 export default function AdminFeedback() {
@@ -24,6 +33,8 @@ export default function AdminFeedback() {
   const [rows, setRows] = useState<Row[]>([]);
   const [filter, setFilter] = useState<"all" | "new" | "blocked" | "resolved">("all");
   const [loading, setLoading] = useState(true);
+  const [tab, setTab] = useState<"feedback" | "emails">("feedback");
+  const [emails, setEmails] = useState<EmailLog[]>([]);
 
   useEffect(() => {
     (async () => {
@@ -37,6 +48,21 @@ export default function AdminFeedback() {
       const { data } = await supabase
         .from("feedback").select("*").order("created_at", { ascending: false }).limit(200);
       setRows((data ?? []) as any);
+      const { data: em } = await supabase
+        .from("email_send_log")
+        .select("message_id, template_name, recipient_email, status, error_message, created_at")
+        .not("message_id", "is", null)
+        .order("created_at", { ascending: false })
+        .limit(500);
+      // Dedupe by message_id (keep latest status)
+      const seen = new Set<string>();
+      const dedup: EmailLog[] = [];
+      for (const r of ((em as EmailLog[]) ?? [])) {
+        if (seen.has(r.message_id)) continue;
+        seen.add(r.message_id);
+        dedup.push(r);
+      }
+      setEmails(dedup);
       setLoading(false);
     })();
   }, []);
@@ -58,9 +84,30 @@ export default function AdminFeedback() {
       <Link to="/" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回首页
       </Link>
-      <h1 className="text-2xl font-extrabold">📨 用户反馈管理</h1>
-      <p className="mt-1 text-xs text-muted-foreground">显示最近 200 条反馈</p>
+      <h1 className="text-2xl font-extrabold">📨 反馈与邮件后台</h1>
+      <p className="mt-1 text-xs text-muted-foreground">用户反馈（最近 200 条）· 邮件投递日志（最近 500 封）</p>
 
+      <div className="mt-4 inline-flex rounded-xl border bg-card p-1">
+        <button
+          onClick={() => setTab("feedback")}
+          className={`inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition ${
+            tab === "feedback" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <MessageSquare className="size-4" /> 用户反馈 ({rows.length})
+        </button>
+        <button
+          onClick={() => setTab("emails")}
+          className={`inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition ${
+            tab === "emails" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <Mail className="size-4" /> 邮件日志 ({emails.length})
+        </button>
+      </div>
+
+      {tab === "feedback" ? (
+      <>
       <div className="mt-4 flex flex-wrap gap-2">
         {(["all","new","blocked","resolved"] as const).map(f => (
           <button key={f} onClick={() => setFilter(f)}
@@ -109,6 +156,44 @@ export default function AdminFeedback() {
           );
         })}
       </div>
+      </>
+      ) : (
+        <section className="mt-4 overflow-hidden rounded-2xl border bg-card">
+          {emails.length === 0 ? (
+            <div className="p-10 text-center text-sm text-muted-foreground">还没有邮件记录</div>
+          ) : (
+            <table className="w-full text-sm">
+              <thead className="bg-muted/50 text-left text-xs uppercase tracking-wide text-muted-foreground">
+                <tr>
+                  <th className="px-4 py-3">时间</th>
+                  <th className="px-4 py-3">模板</th>
+                  <th className="px-4 py-3">收件人</th>
+                  <th className="px-4 py-3">状态</th>
+                  <th className="px-4 py-3">错误</th>
+                </tr>
+              </thead>
+              <tbody>
+                {emails.map(e => {
+                  const color =
+                    e.status === "sent" ? "bg-emerald-100 text-emerald-700"
+                    : e.status === "pending" ? "bg-amber-100 text-amber-700"
+                    : e.status === "suppressed" ? "bg-yellow-100 text-yellow-700"
+                    : "bg-rose-100 text-rose-700";
+                  return (
+                    <tr key={e.message_id} className="border-t align-top">
+                      <td className="whitespace-nowrap px-4 py-3 text-xs text-muted-foreground">{new Date(e.created_at).toLocaleString()}</td>
+                      <td className="px-4 py-3 text-xs">{e.template_name}</td>
+                      <td className="px-4 py-3 text-xs">{e.recipient_email}</td>
+                      <td className="px-4 py-3"><span className={`inline-flex rounded-full px-2 py-0.5 text-[11px] font-bold ${color}`}>{e.status}</span></td>
+                      <td className="px-4 py-3 text-xs text-rose-600">{e.error_message ?? ""}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          )}
+        </section>
+      )}
     </main>
   );
 }

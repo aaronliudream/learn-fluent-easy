@@ -138,6 +138,32 @@ const Index = () => {
       {/* Emotional anchor: learning companion as hero */}
       <CompanionHero />
 
+      {/* Unlogged visitors: free CEFR diagnosis hero — cold-start lever */}
+      {!user && (
+        <Link
+          to="/placement"
+          className="group relative mb-6 mt-2 flex flex-col items-center justify-center gap-3 overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 px-6 py-8 text-center text-white shadow-tile transition-all hover:-translate-y-0.5"
+        >
+          <span className="pointer-events-none absolute -right-12 -top-12 size-48 rounded-full bg-white/15 blur-3xl" />
+          <span className="pointer-events-none absolute -left-12 -bottom-12 size-48 rounded-full bg-white/10 blur-3xl" />
+          <div className="relative grid size-14 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+            <Award className="size-7" />
+          </div>
+          <div className="relative text-[10px] font-bold uppercase tracking-[0.2em] opacity-80">
+            <T>免费 · 3 分钟 · 无需注册</T>
+          </div>
+          <h2 className="relative text-2xl font-extrabold leading-tight md:text-3xl">
+            <T>测一测你的英语等级</T>
+          </h2>
+          <p className="relative max-w-lg text-sm opacity-90 md:text-base">
+            <T>基于 CEFR (A1–C2) 国际标准 · 测完立刻看到你的薄弱点和学习路径</T>
+          </p>
+          <div className="relative mt-1 inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2 text-sm font-bold text-emerald-700 transition group-hover:bg-white/95">
+            <T>开始免费测试</T> <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+          </div>
+        </Link>
+      )}
+
       {/* Three-track entry — primary path selection (Exam / Career / Beginner) */}
       <ThreeTracksHero />
 

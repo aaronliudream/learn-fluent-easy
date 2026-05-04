@@ -7,10 +7,10 @@ import { useT } from "@/i18n/T";
  * already provides good navigation. Hidden on auth/onboarding routes too.
  */
 const TABS = [
-  { to: "/", label: "首页", icon: Home, match: (p: string) => p === "/" },
+  { to: "/", label: "Home", icon: Home, match: (p: string) => p === "/" },
   {
     to: "/levels",
-    label: "课程",
+    label: "Courses",
     icon: BookOpen,
     match: (p: string) =>
       p.startsWith("/level") ||
@@ -22,15 +22,15 @@ const TABS = [
   },
   {
     to: "/talk",
-    label: "AI 对话",
+    label: "AI Chat",
     icon: Bot,
     match: (p: string) =>
       p.startsWith("/talk") ||
       p.startsWith("/scenes") ||
       p.startsWith("/workplace"),
   },
-  { to: "/leaderboard", label: "排行榜", icon: Trophy, match: (p: string) => p.startsWith("/leaderboard") || p.startsWith("/review") },
-  { to: "/account", label: "我的", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
+  { to: "/leaderboard", label: "Leaderboard", icon: Trophy, match: (p: string) => p.startsWith("/leaderboard") || p.startsWith("/review") },
+  { to: "/account", label: "Me", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
 ];
 
 const HIDDEN_ROUTES = ["/auth"];
@@ -43,7 +43,7 @@ export const BottomTabBar = () => {
 
   return (
     <nav
-      aria-label={t("主导航")}
+      aria-label={t("Main navigation")}
       className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur-md lg:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom, 0)" }}
     >

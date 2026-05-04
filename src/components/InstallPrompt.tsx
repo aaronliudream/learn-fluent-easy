@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { X, Smartphone, Share, Plus } from "lucide-react";
+import { X, Smartphone, Share, Plus, MoreVertical } from "lucide-react";
 import { T } from "@/i18n/T";
 
 /**
@@ -35,6 +35,11 @@ function isIOS() {
   return /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as unknown as { MSStream?: unknown }).MSStream;
 }
 
+function isAndroid() {
+  if (typeof navigator === "undefined") return false;
+  return /Android/i.test(navigator.userAgent);
+}
+
 function recentlyDismissed() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -49,7 +54,9 @@ function recentlyDismissed() {
 export default function InstallPrompt() {
   const [event, setEvent] = useState<BeforeInstallPromptEvent | null>(null);
   const [show, setShow] = useState(false);
+  const [showHowTo, setShowHowTo] = useState(false);
   const ios = isIOS();
+  const android = isAndroid();
 
   useEffect(() => {
     if (isStandalone() || recentlyDismissed()) return;
@@ -79,10 +86,18 @@ export default function InstallPrompt() {
   };
 
   const install = async () => {
-    if (!event) return;
-    await event.prompt();
-    await event.userChoice;
-    dismiss();
+    if (event) {
+      try {
+        await event.prompt();
+        await event.userChoice;
+        dismiss();
+        return;
+      } catch {
+        // fall through to manual instructions
+      }
+    }
+    // No native prompt available — show step-by-step instructions.
+    setShowHowTo(true);
   };
 
   if (!show) return null;
@@ -113,6 +128,36 @@ export default function InstallPrompt() {
                 <Plus className="size-3.5" /> <T>添加到主屏幕</T>
               </span>
             </p>
+          ) : showHowTo ? (
+            <div className="mt-1 space-y-1.5 text-xs leading-relaxed text-muted-foreground">
+              {android ? (
+                <>
+                  <p>
+                    <T>点击浏览器右上角的</T>{" "}
+                    <MoreVertical className="inline size-3.5 align-text-bottom text-foreground" />{" "}
+                    <T>菜单按钮</T>
+                  </p>
+                  <p>
+                    <T>选择</T>{" "}
+                    <span className="font-semibold text-foreground"><T>添加到主屏幕</T></span>{" "}
+                    <T>或</T>{" "}
+                    <span className="font-semibold text-foreground"><T>安装应用</T></span>
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p>
+                    <T>在 Chrome / Edge 地址栏右侧点击</T>{" "}
+                    <span className="font-semibold text-foreground">⊕ <T>安装</T></span>{" "}
+                    <T>图标</T>
+                  </p>
+                  <p>
+                    <T>或打开浏览器菜单，选择</T>{" "}
+                    <span className="font-semibold text-foreground"><T>安装 Big Moon</T></span>
+                  </p>
+                </>
+              )}
+            </div>
           ) : (
             <>
               <p className="mt-1 text-xs leading-relaxed text-muted-foreground">

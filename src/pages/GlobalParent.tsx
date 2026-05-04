@@ -4,6 +4,7 @@ import BackLink from "@/components/BackLink";
 import {
   ArrowLeft, Loader2, Coins, BookOpen, GraduationCap, School, Backpack,
   TrendingUp, AlertTriangle, Clock, Flame, Target, Sparkles, Download,
+  Briefcase, MessageCircle, Mic, Layers, Hash,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -19,7 +20,12 @@ type Dashboard = {
   days_window: number;
   minutes_total: number;
   minutes_7d: number;
-  minutes_by_segment: { primary: number; junior: number; gaokao: number; other: number };
+  minutes_by_segment: {
+    primary: number; junior: number; gaokao: number;
+    workplace?: number; scenes?: number; talk?: number;
+    systematic?: number; slang?: number; other?: number;
+  };
+  tracks_activity?: Record<"workplace"|"scenes"|"talk"|"systematic"|"slang", { days: number; items: number }>;
   primary: { words: Words; reading_done: number; reading_avg_score: number; sessions: number; accuracy: number; active_days: number };
   junior: { words: Words; reading_attempts: number; reading_correct: number; sessions: number; accuracy: number; active_days: number };
   gaokao: { words: Words; attempts: number; correct: number; active_days: number; by_type: { qt: string; attempts: number; correct: number }[] };
@@ -32,6 +38,15 @@ const SEG_META = {
   junior:  { label: "初中 / Lower Secondary", icon: School, color: "from-violet-500 to-indigo-500", route: "/junior" },
   gaokao:  { label: "高中 / Upper Secondary", icon: GraduationCap, color: "from-rose-500 to-orange-500", route: "/gaokao" },
 } as const;
+
+const TRACK_META = {
+  workplace:  { labelKey: "Business / Workplace English", icon: Briefcase,    color: "from-amber-500 to-orange-500",   route: "/workplace" },
+  scenes:     { labelKey: "Daily Scenes",                  icon: MessageCircle,color: "from-emerald-500 to-teal-500",  route: "/scenes" },
+  talk:       { labelKey: "AI Conversation",               icon: Mic,          color: "from-pink-500 to-rose-500",      route: "/talk" },
+  systematic: { labelKey: "Systematic Course",             icon: Layers,       color: "from-indigo-500 to-blue-500",   route: "/level" },
+  slang:      { labelKey: "Slang & Idioms",                icon: Hash,         color: "from-fuchsia-500 to-purple-500", route: "/slang" },
+} as const;
+type TrackKey = keyof typeof TRACK_META;
 
 function useFmtMinutes() {
   const t = useT();
@@ -115,8 +130,12 @@ export default function GlobalParent() {
   }
 
   const d = data!;
-  const segTotal = d.minutes_by_segment.primary + d.minutes_by_segment.junior + d.minutes_by_segment.gaokao;
-  // 真实有效学习 = 三学段时长之和（不计入家长中心/登录页等浏览时长）
+  const m = d.minutes_by_segment;
+  const segTotal =
+    m.primary + m.junior + m.gaokao +
+    (m.workplace ?? 0) + (m.scenes ?? 0) + (m.talk ?? 0) +
+    (m.systematic ?? 0) + (m.slang ?? 0);
+  // 真实有效学习 = 所有学习类时长之和（不计入家长中心/登录页等浏览时长）
   const totalMin = segTotal;
 
   // 只显示孩子实际学过的部分（全球化：日本/韩国/西语家长不会三段都学）
@@ -126,7 +145,16 @@ export default function GlobalParent() {
     gaokao:  d.minutes_by_segment.gaokao + d.gaokao.attempts + d.gaokao.words.mastered + d.gaokao.words.touched,
   };
   const activeSegs = (["primary","junior","gaokao"] as const).filter(s => segActivity[s] > 0);
-  const hasAnyActivity = activeSegs.length > 0;
+
+  // 非 K-12 学习轨迹（商务、场景、AI 口语、系统课、俚语…）
+  const tracksAct = d.tracks_activity ?? ({} as NonNullable<Dashboard["tracks_activity"]>);
+  const activeTracks = (Object.keys(TRACK_META) as TrackKey[]).filter(k => {
+    const mins = (m as any)[k] ?? 0;
+    const a = tracksAct[k];
+    return mins > 0 || (a && (a.days > 0 || a.items > 0));
+  });
+
+  const hasAnyActivity = activeSegs.length > 0 || activeTracks.length > 0;
 
   const allWords =
     d.primary.words.mastered + d.junior.words.mastered + d.gaokao.words.mastered;

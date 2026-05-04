@@ -221,6 +221,41 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* GLOBAL LOVE — 5-star reviews + headline stats */}
+      <section className="border-t border-[#1F3A2E]/10 bg-[#EEF4FB]">
+        <div className="mx-auto max-w-[1200px] px-6 py-20 md:px-10 md:py-28">
+          <h2 className="mb-14 text-center text-3xl font-extrabold leading-tight text-[#1F3A2E] md:text-5xl">
+            <T>全球学员都在用</T>{" "}
+            <span className="text-[#E8743C]"><T>Big Moon</T></span>
+          </h2>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <ReviewCard
+              quote="我从开会发言紧张，到 3 个月后能主导会议。AI 发音反馈是别家没有的。"
+              name="Marisol G."
+              role="产品经理 · 墨西哥城"
+            />
+            <ReviewCard
+              quote="终于有一款不像作业的英语 app。连胜 127 天，每晚都期待打开。"
+              name="Akira T."
+              role="工程师 · 东京"
+            />
+            <ReviewCard
+              quote="旅行场景课救了我去伦敦的行程，我真的能开口对话，而不是手指着菜单。"
+              name="Lucas P."
+              role="设计师 · 圣保罗"
+            />
+          </div>
+
+          <div className="mt-8 grid grid-cols-2 gap-4 md:mt-10 md:grid-cols-4">
+            <StatCard value="14M+" label="学员" />
+            <StatCard value="184" label="国家" />
+            <StatCard value="4.9★" label="平均评分" />
+            <StatCard value="97%" label="愿意推荐" />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="border-t border-[#1F3A2E]/10">
         <div className="mx-auto max-w-[1100px] px-6 py-24 text-center md:px-10 md:py-32">

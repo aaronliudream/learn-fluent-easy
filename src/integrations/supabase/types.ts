@@ -4574,6 +4574,7 @@ export type Database = {
           preferred_language: string | null
           recall_email_sent_at: string | null
           self_level: string | null
+          streak_recall_sent_at: string | null
           target_language: string
           updated_at: string
           user_id: string
@@ -4600,6 +4601,7 @@ export type Database = {
           preferred_language?: string | null
           recall_email_sent_at?: string | null
           self_level?: string | null
+          streak_recall_sent_at?: string | null
           target_language?: string
           updated_at?: string
           user_id: string
@@ -4626,6 +4628,7 @@ export type Database = {
           preferred_language?: string | null
           recall_email_sent_at?: string | null
           self_level?: string | null
+          streak_recall_sent_at?: string | null
           target_language?: string
           updated_at?: string
           user_id?: string

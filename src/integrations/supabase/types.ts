@@ -4526,6 +4526,33 @@ export type Database = {
         }
         Relationships: []
       }
+      pro_waitlist: {
+        Row: {
+          created_at: string
+          email: string | null
+          feature: string
+          id: string
+          source: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          feature: string
+          id?: string
+          source?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          feature?: string
+          id?: string
+          source?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           age_band: string | null

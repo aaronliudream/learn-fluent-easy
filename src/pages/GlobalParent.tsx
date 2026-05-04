@@ -27,9 +27,9 @@ type Dashboard = {
 };
 
 const SEG_META = {
-  primary: { label: "小学", icon: Backpack, color: "from-sky-500 to-cyan-500", route: "/primary" },
-  junior:  { label: "初中", icon: School,   color: "from-violet-500 to-indigo-500", route: "/junior" },
-  gaokao:  { label: "高中", icon: GraduationCap, color: "from-rose-500 to-orange-500", route: "/gaokao" },
+  primary: { label: "小学 / Primary", icon: Backpack, color: "from-sky-500 to-cyan-500", route: "/primary" },
+  junior:  { label: "初中 / Lower Secondary", icon: School, color: "from-violet-500 to-indigo-500", route: "/junior" },
+  gaokao:  { label: "高中 / Upper Secondary", icon: GraduationCap, color: "from-rose-500 to-orange-500", route: "/gaokao" },
 } as const;
 
 function fmtMinutes(m: number): string {
@@ -108,6 +108,16 @@ export default function GlobalParent() {
   const segTotal = d.minutes_by_segment.primary + d.minutes_by_segment.junior + d.minutes_by_segment.gaokao;
   // 真实有效学习 = 三学段时长之和（不计入家长中心/登录页等浏览时长）
   const totalMin = segTotal;
+
+  // 只显示孩子实际学过的部分（全球化：日本/韩国/西语家长不会三段都学）
+  const segActivity = {
+    primary: d.minutes_by_segment.primary + d.primary.sessions + d.primary.words.mastered + d.primary.words.touched,
+    junior:  d.minutes_by_segment.junior + d.junior.sessions + d.junior.words.mastered + d.junior.words.touched,
+    gaokao:  d.minutes_by_segment.gaokao + d.gaokao.attempts + d.gaokao.words.mastered + d.gaokao.words.touched,
+  };
+  const activeSegs = (["primary","junior","gaokao"] as const).filter(s => segActivity[s] > 0);
+  const hasAnyActivity = activeSegs.length > 0;
+
   const allWords =
     d.primary.words.mastered + d.junior.words.mastered + d.gaokao.words.mastered;
 
@@ -165,16 +175,28 @@ export default function GlobalParent() {
         <Kpi icon={AlertTriangle} label="待攻克薄弱" value={`${d.weakness.length}`} color="from-rose-500 to-pink-500" />
       </section>
 
+      {/* 完全没有任何学习数据 → 引导诊断 */}
+      {!hasAnyActivity && (
+        <section className="mb-4 rounded-3xl border-2 border-dashed border-violet-300 bg-gradient-to-br from-violet-50 to-sky-50 p-6 text-center">
+          <div className="text-3xl">🌱</div>
+          <div className="mt-2 text-base font-extrabold">孩子还没开始学习 / No learning data yet</div>
+          <p className="mx-auto mt-1 max-w-md text-xs text-muted-foreground">
+            让孩子先完成 5 分钟免费诊断，我们会根据 CEFR 等级自动推荐适合的学习路径——无论你在中国、日本、韩国还是任何国家。
+          </p>
+          <Link to="/placement" className="mt-4 inline-block rounded-full bg-gradient-to-r from-violet-500 to-sky-500 px-5 py-2 text-sm font-extrabold text-white shadow">
+            开始免费诊断 →
+          </Link>
+        </section>
+      )}
+
       {/* 跨学段足迹 */}
+      {hasAnyActivity && (
       <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
         <div className="mb-2 flex items-center gap-1 text-sm font-extrabold">
-          <Sparkles className="size-4 text-violet-500" /> 跨学段学习足迹（按有效时长占比）
+          <Sparkles className="size-4 text-violet-500" /> 学习足迹（按有效时长占比）
         </div>
-        {segTotal === 0 ? (
-          <div className="py-6 text-center text-xs text-muted-foreground">暂无学习时长，开始任意一节课就会自动统计</div>
-        ) : (
-          <div className="space-y-2">
-            {(["primary","junior","gaokao"] as const).map(seg => {
+        <div className="space-y-2">
+            {activeSegs.map(seg => {
               const M = SEG_META[seg];
               const mins = d.minutes_by_segment[seg];
               const pct = Math.round((mins / Math.max(1, segTotal)) * 100);
@@ -195,9 +217,9 @@ export default function GlobalParent() {
                 </div>
               );
             })}
-          </div>
-        )}
+        </div>
       </section>
+      )}
 
       {/* 掌握度雷达 (条形版，更易读) */}
       <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
@@ -252,39 +274,47 @@ export default function GlobalParent() {
         )}
       </section>
 
-      {/* 三学段详情卡片 */}
-      <section className="mb-4 grid gap-3 md:grid-cols-3">
-        <SegCard
-          seg="primary"
-          words={d.primary.words}
-          extra={[
-            { k: "做题次数", v: `${d.primary.sessions}` },
-            { k: "平均正确率", v: `${Math.round(d.primary.accuracy * 100)}%` },
-            { k: "阅读完成", v: `${d.primary.reading_done} 篇` },
-            { k: "活跃天数", v: `${d.primary.active_days} 天` },
-          ]}
-        />
-        <SegCard
-          seg="junior"
-          words={d.junior.words}
-          extra={[
-            { k: "做题次数", v: `${d.junior.sessions}` },
-            { k: "平均正确率", v: `${Math.round(d.junior.accuracy * 100)}%` },
-            { k: "阅读正确", v: `${d.junior.reading_correct}/${d.junior.reading_attempts}` },
-            { k: "活跃天数", v: `${d.junior.active_days} 天` },
-          ]}
-        />
-        <SegCard
-          seg="gaokao"
-          words={d.gaokao.words}
-          extra={[
-            { k: "做题次数", v: `${d.gaokao.attempts}` },
-            { k: "正确率", v: `${d.gaokao.attempts ? Math.round(d.gaokao.correct / d.gaokao.attempts * 100) : 0}%` },
-            { k: "正确题数", v: `${d.gaokao.correct}` },
-            { k: "活跃天数", v: `${d.gaokao.active_days} 天` },
-          ]}
-        />
+      {/* 学段详情卡片 — 只显示孩子实际学过的部分 */}
+      {hasAnyActivity && (
+      <section className={cn("mb-4 grid gap-3", activeSegs.length === 1 ? "md:grid-cols-1" : activeSegs.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3")}>
+        {activeSegs.includes("primary") && (
+          <SegCard
+            seg="primary"
+            words={d.primary.words}
+            extra={[
+              { k: "做题次数", v: `${d.primary.sessions}` },
+              { k: "平均正确率", v: `${Math.round(d.primary.accuracy * 100)}%` },
+              { k: "阅读完成", v: `${d.primary.reading_done} 篇` },
+              { k: "活跃天数", v: `${d.primary.active_days} 天` },
+            ]}
+          />
+        )}
+        {activeSegs.includes("junior") && (
+          <SegCard
+            seg="junior"
+            words={d.junior.words}
+            extra={[
+              { k: "做题次数", v: `${d.junior.sessions}` },
+              { k: "平均正确率", v: `${Math.round(d.junior.accuracy * 100)}%` },
+              { k: "阅读正确", v: `${d.junior.reading_correct}/${d.junior.reading_attempts}` },
+              { k: "活跃天数", v: `${d.junior.active_days} 天` },
+            ]}
+          />
+        )}
+        {activeSegs.includes("gaokao") && (
+          <SegCard
+            seg="gaokao"
+            words={d.gaokao.words}
+            extra={[
+              { k: "做题次数", v: `${d.gaokao.attempts}` },
+              { k: "正确率", v: `${d.gaokao.attempts ? Math.round(d.gaokao.correct / d.gaokao.attempts * 100) : 0}%` },
+              { k: "正确题数", v: `${d.gaokao.correct}` },
+              { k: "活跃天数", v: `${d.gaokao.active_days} 天` },
+            ]}
+          />
+        )}
       </section>
+      )}
 
       {/* 每日学习时长曲线 */}
       <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">

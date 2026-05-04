@@ -13,38 +13,40 @@ export default function JuniorGrade() {
   const { grade } = useParams<{ grade: string }>();
   const g = grade ?? "1";
   const meta = GRADE_META[g] ?? GRADE_META["1"];
+  // URL uses 1/2/3 (初一/初二/初三) but DB stores 7/8/9 (Grade 7/8/9).
+  const dbGrade = g === "1" ? 7 : g === "2" ? 8 : g === "3" ? 9 : Number(g);
 
   const SECTIONS = [
     {
-      to: `/junior/vocab?grade=${g}`,
+      to: `/junior/vocab?grade=${dbGrade}`,
       icon: Sparkles,
       title: "核心词汇",
       desc: "5 种游戏 · 单词便当 / 任务 / 对决 / 听写 · 彻底掌握",
       gradient: "from-violet-500 via-indigo-500 to-blue-500",
     },
     {
-      to: `/junior/grammar?grade=${g}`,
+      to: `/junior/grammar?grade=${dbGrade}`,
       icon: BookOpen,
       title: "中考语法专项",
       desc: "时态 · 从句 · 非谓语 · 中考考点直击",
       gradient: "from-emerald-500 via-teal-500 to-cyan-500",
     },
     {
-      to: `/junior/reading?grade=${g}`,
+      to: `/junior/reading?grade=${dbGrade}`,
       icon: Target,
       title: "阅读训练",
       desc: "主题阅读 · 答题解析 · 答对喂宠物",
       gradient: "from-amber-500 via-orange-500 to-rose-500",
     },
     {
-      to: `/junior/listening?grade=${g}`,
+      to: `/junior/listening?grade=${dbGrade}`,
       icon: Headphones,
       title: "听力短文训练",
       desc: "对话/短文 · 听音答题 · 中考听力题型",
       gradient: "from-sky-500 via-blue-500 to-indigo-500",
     },
     {
-      to: `/junior/writing?grade=${g}`,
+      to: `/junior/writing?grade=${dbGrade}`,
       icon: PenLine,
       title: "中考写作训练",
       desc: "命题作文 · AI 批改 · 高分范文对比",

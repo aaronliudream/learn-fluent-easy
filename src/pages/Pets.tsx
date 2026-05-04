@@ -372,6 +372,7 @@ function Bar({ label, value, hint, color }: { label:string; value:number; hint:s
  * 教育意图：弱化即时消费冲动，培养计划与耐心；与宠物对话潜在引导"我们要不要再等等"。
  */
 function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any) {
+  const t = useT();
   const [busy, setBusy] = useState<string | null>(null);
   const [wishlist, setWishlist] = useState<WishlistRow[]>([]);
   const [now, setNow] = useState(Date.now());
@@ -390,8 +391,8 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
     setBusy(id);
     const ok = await wishlistAdd("food", id);
     setBusy(null);
-    if (!ok) { flash("❌ 加入心愿单失败"); return; }
-    flash("💭 已加入心愿单 · 48 小时后可确认购买");
+    if (!ok) { flash(t("❌ 加入心愿单失败")); return; }
+    flash(t("💭 已加入心愿单 · 48 小时后可确认购买"));
     await reloadWishlist();
   };
 
@@ -404,12 +405,12 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
       const { data: cw } = await supabase.rpc("confirm_wishlist_purchase", { _wishlist_id: wishId });
       const row: any = Array.isArray(cw) ? cw[0] : cw;
       if (row?.days_held >= 7) {
-        patienceMsg = `💛 等待 ${row.days_held} 天 · 宠物耐心 +1（共 ${row.patience_after}）`;
+        patienceMsg = `💛 ${t("等待")} ${row.days_held} ${t("天 · 宠物耐心 +1（共")} ${row.patience_after}）`;
       }
     }
     setBusy(null);
-    if (error) { flash(error.message.includes("not enough") ? "💰 星币不够，继续学习吧！" : "❌ "+error.message); return; }
-    flash(patienceMsg || "🛒 等待是值得的！购买成功");
+    if (error) { flash(error.message.includes("not enough") ? t("💰 星币不够，继续学习吧！") : "❌ "+error.message); return; }
+    flash(patienceMsg || t("🛒 等待是值得的！购买成功"));
     await reloadWishlist();
     await refreshCurrencies?.();
     onAfter();
@@ -417,7 +418,7 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
 
   const removeWish = async (wishId: string) => {
     await wishlistRemove(wishId);
-    flash("已移出心愿单");
+    flash(t("已移出心愿单"));
     reloadWishlist();
   };
 
@@ -434,13 +435,13 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
   return (
     <div className="space-y-5">
       <div className="rounded-2xl border-2 border-dashed border-emerald-300/50 bg-emerald-50/40 p-3 text-[11px] leading-relaxed text-emerald-800 dark:bg-emerald-950/20 dark:text-emerald-300">
-        <div className="font-extrabold">🌱 慢一点，更稳一点</div>
-        喜欢的物品先加入<b>心愿单</b>，48 小时后再决定买不买 —— 宠物相信会等待的孩子。
+        <div className="font-extrabold">🌱 <T>慢一点，更稳一点</T></div>
+        <T>喜欢的物品先加入心愿单，48 小时后再决定买不买 —— 宠物相信会等待的孩子。</T>
         <div className="mt-1.5 text-[10px] opacity-80">
           {(() => {
             const d = new Date().getDay();
             const open = d === 3 || d === 6;
-            return open ? "🛍️ 今天是商店开放日（每周三/六）—— 也是慢慢挑选的好日子。" : "🛍️ 商店每周三、周六最热闹 —— 把心愿留到那天再来看看。";
+            return open ? t("🛍️ 今天是商店开放日（每周三/六）—— 也是慢慢挑选的好日子。") : t("🛍️ 商店每周三、周六最热闹 —— 把心愿留到那天再来看看。");
           })()}
         </div>
       </div>
@@ -448,7 +449,7 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
       {wishlist.length > 0 && (
         <section>
           <div className="mb-2 flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">
-            <Clock className="size-3" /> 心愿单 ({wishlist.length})
+            <Clock className="size-3" /> <T>心愿单</T> ({wishlist.length})
           </div>
           <div className="space-y-2">
             {wishlist.map((w) => {
@@ -461,14 +462,14 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
                 <div key={w.id} className="flex items-center gap-3 rounded-2xl border-2 border-violet-300/40 bg-violet-50/30 p-3 dark:bg-violet-950/20">
                   <div className="text-3xl">{food.emoji}</div>
                   <div className="min-w-0 flex-1">
-                    <div className="font-extrabold">{food.name_cn}</div>
+                    <div className="font-extrabold"><T>{food.name_cn}</T></div>
                     {ready ? (
-                      <div className="text-[11px] font-bold text-emerald-600">✓ 冷静期已过，可以购买</div>
+                      <div className="text-[11px] font-bold text-emerald-600">✓ <T>冷静期已过，可以购买</T></div>
                     ) : (
-                      <div className="text-[11px] text-muted-foreground">⏳ 还需 {remain} 才可购买</div>
+                      <div className="text-[11px] text-muted-foreground">⏳ <T>还需</T> {remain} <T>才可购买</T></div>
                     )}
                   </div>
-                  <button onClick={()=>removeWish(w.id)} className="text-[10px] text-muted-foreground underline">移除</button>
+                  <button onClick={()=>removeWish(w.id)} className="text-[10px] text-muted-foreground underline"><T>移除</T></button>
                   <button
                     onClick={()=>confirmBuy(food.id, w.id)}
                     disabled={!canBuy || busy === food.id}
@@ -485,7 +486,7 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
       )}
 
       <section>
-        <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">商店</div>
+        <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground"><T>商店</T></div>
         <div className="grid gap-3 sm:grid-cols-2">
           {foods.map((f: Food) => {
             const owned = invMap[f.id] ?? 0;

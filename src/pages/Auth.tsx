@@ -277,7 +277,7 @@ const Auth = () => {
                     <Label htmlFor="pin"><T>设个 4 位数字 PIN（用于以后登录）</T></Label>
                     <Input id="pin" inputMode="numeric" pattern="\d*" maxLength={6} required value={pin}
                       onChange={(e) => setPin(e.target.value.replace(/\D/g, ""))}
-                      placeholder="例如 1234" autoComplete="new-password" />
+                      placeholder={t("例如 1234")} autoComplete="new-password" />
                   </div>
                   <div>
                     <Label><T>你的年龄段</T></Label>

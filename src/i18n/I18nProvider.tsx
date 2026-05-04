@@ -72,8 +72,6 @@ const HAN_RE = /[\u3400-\u9fff]/;
 
 const EN_FALLBACKS: Record<string, string> = {
   // Pets page
-  "返回主页": "Back to Home",
-  "奇幻宠物乐园": "Fantasy Pet Paradise",
   "🏠 我家": "🏠 Home",
   "🛒 商店": "🛒 Shop",
   "🗺️ 出游": "🗺️ Go out",

@@ -189,8 +189,9 @@ const Placement = () => {
     import("@/lib/funnel").then(m =>
       m.trackFunnel("placement", "completed", {
         cefr: r.cefr,
-        overall: r.overall,
-        sectionScores: r.sectionScores,
+        weighted: r.weighted,
+        ability: r.ability,
+        weakest: r.weakest,
       })
     );
   };

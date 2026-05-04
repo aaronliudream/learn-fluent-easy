@@ -195,6 +195,39 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ======================== SOCIAL PROOF ======================== */}
+      <section className="mx-auto max-w-[1280px] px-5 pb-20 md:px-8 md:pb-24">
+        <h2 className="mb-10 text-center text-2xl font-extrabold tracking-tight md:text-4xl">
+          Loved by learners <span className="text-[#FF7A00]">worldwide</span>.
+        </h2>
+        <div className="grid gap-6 md:grid-cols-3">
+          <Testimonial
+            quote="I went from freezing in meetings to leading them in 3 months. The AI feedback on my pronunciation is what changed it."
+            name="Marisol G."
+            role="Product Manager · Mexico City"
+            avatar="https://i.pravatar.cc/100?img=47"
+          />
+          <Testimonial
+            quote="Finally an app that doesn't feel like homework. My streak is at 127 days and I look forward to it every night."
+            name="Akira T."
+            role="Engineer · Tokyo"
+            avatar="https://i.pravatar.cc/100?img=15"
+          />
+          <Testimonial
+            quote="The scenes for travel saved my trip to London. I actually had real conversations instead of pointing at menus."
+            name="Lucas P."
+            role="Designer · São Paulo"
+            avatar="https://i.pravatar.cc/100?img=33"
+          />
+        </div>
+        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+          <Stat n="14M+" label="Learners" />
+          <Stat n="184" label="Countries" />
+          <Stat n="4.9★" label="Avg rating" />
+          <Stat n="97%" label="Recommend" />
+        </div>
+      </section>
+
       {/* ======================== CTA STRIP ======================== */}
       <section className="mx-auto max-w-[1280px] px-5 pb-20 md:px-8 md:pb-28">
         <div className="overflow-hidden rounded-[2.5rem] border-4 border-slate-100 bg-white p-8 shadow-[0_12px_0_#E2E8F0] md:p-14">
@@ -226,14 +259,57 @@ export default function LandingPage() {
             <span>© {new Date().getFullYear()} Big Moon English</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <Link to="/about" className="hover:text-[#1E2B4D]">About</Link>
             <Link to="/privacy" className="hover:text-[#1E2B4D]">Privacy</Link>
             <Link to="/terms" className="hover:text-[#1E2B4D]">Terms</Link>
             <Link to="/disclaimer" className="hover:text-[#1E2B4D]">Disclaimer</Link>
+            <a href="mailto:support@bigmoonenglish.com" className="hover:text-[#1E2B4D]">Contact</a>
             <Link to="/auth" className="hover:text-[#1E2B4D]">Sign in</Link>
           </div>
         </div>
       </footer>
     </main>
+  );
+}
+
+function Testimonial({
+  quote,
+  name,
+  role,
+  avatar,
+}: {
+  quote: string;
+  name: string;
+  role: string;
+  avatar: string;
+}) {
+  return (
+    <figure className="rounded-[2rem] border-4 border-slate-100 bg-white p-7 shadow-[0_12px_0_#E2E8F0]">
+      <div className="mb-3 flex items-center gap-0.5 text-[#FF7A00]">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star key={i} className="size-4 fill-current" />
+        ))}
+      </div>
+      <blockquote className="mb-5 text-base font-medium leading-relaxed text-[#1E2B4D]">
+        &ldquo;{quote}&rdquo;
+      </blockquote>
+      <figcaption className="flex items-center gap-3">
+        <img src={avatar} alt="" loading="lazy" className="size-10 rounded-full border-2 border-slate-100 object-cover" />
+        <div>
+          <div className="text-sm font-extrabold text-[#1E2B4D]">{name}</div>
+          <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">{role}</div>
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+
+function Stat({ n, label }: { n: string; label: string }) {
+  return (
+    <div className="rounded-2xl border-4 border-slate-100 bg-white p-5 text-center shadow-[0_8px_0_#E2E8F0]">
+      <div className="text-2xl font-black text-[#00C4FF] md:text-3xl">{n}</div>
+      <div className="mt-1 text-[10px] font-black uppercase tracking-widest text-slate-400">{label}</div>
+    </div>
   );
 }
 

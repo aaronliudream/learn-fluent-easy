@@ -26,6 +26,7 @@ const Account = lazy(() => import("./pages/Account.tsx"));
 const Privacy = lazy(() => import("./pages/Privacy.tsx"));
 const Terms = lazy(() => import("./pages/Terms.tsx"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer.tsx"));
+const About = lazy(() => import("./pages/About.tsx"));
 const Scenes = lazy(() => import("./pages/Scenes.tsx"));
 const ScenesCategory = lazy(() => import("./pages/ScenesCategory.tsx"));
 const ScenesPlay = lazy(() => import("./pages/ScenesPlay.tsx"));
@@ -160,6 +161,7 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/about" element={<About />} />
           <Route path="/scenes" element={<Scenes />} />
           <Route path="/saved" element={<SavedPhrases />} />
           <Route path="/review" element={<Review />} />

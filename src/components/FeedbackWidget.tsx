@@ -150,7 +150,7 @@ export default function FeedbackWidget() {
                   <button
                     key={n}
                     onClick={() => setRating(rating === n ? 0 : n)}
-                    aria-label={t("{n} 星", { n })}
+                    aria-label={`${n} ${t("星")}`}
                     className="grid size-9 place-items-center rounded-lg hover:bg-secondary"
                   >
                     <Star className={`size-6 transition ${rating >= n ? "fill-amber-400 text-amber-400" : "text-muted-foreground/40"}`} />

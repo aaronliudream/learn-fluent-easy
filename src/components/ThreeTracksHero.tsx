@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { T, useT } from "@/i18n/T";
 
 /**
  * Three-track entry section shown at the very top of the homepage.
@@ -8,14 +9,14 @@ import { ArrowRight } from "lucide-react";
  */
 const tracks = [
   {
-    to: "/china",
-    cefr: "CEFR A2 — B2",
-    zh: "中国学生专区",
-    en: "China Students",
-    desc: "小学 · 初中 · 高中 · 高考 — 校内同步 + 考点突破。",
-    bullets: ["按学段精准提分", "历年真题 + 80% 掌握解锁", "错题间隔重复"],
-    gradient: "linear-gradient(160deg, #7B3FF1 0%, #5B2BC9 100%)",
-    btnTextColor: "#7B3FF1",
+    to: "/levels",
+    cefr: "CEFR Pre-A1 — A2",
+    zh: "零基础起步",
+    en: "Beginner Track",
+    desc: "大字体 · 语音主导 · 每课 5 分钟。",
+    bullets: ["拼读发音领读", "强制复习上一课", "生活场景为主"],
+    gradient: "linear-gradient(160deg, #F47C45 0%, #F59E0B 100%)",
+    btnTextColor: "#F47C45",
   },
   {
     to: "/workplace",
@@ -29,26 +30,27 @@ const tracks = [
     badge: "热门",
   },
   {
-    to: "/levels",
-    cefr: "CEFR Pre-A1 — A2",
-    zh: "零基础起步",
-    en: "Beginner Track",
-    desc: "大字体 · 语音主导 · 每课 5 分钟。",
-    bullets: ["拼读发音领读", "强制复习上一课", "生活场景为主"],
-    gradient: "linear-gradient(160deg, #F47C45 0%, #F59E0B 100%)",
-    btnTextColor: "#F47C45",
+    to: "/china",
+    cefr: "CEFR A2 — B2",
+    zh: "中国学生专区",
+    en: "China Students",
+    desc: "小学 · 初中 · 高中 · 高考 — 校内同步 + 考点突破。",
+    bullets: ["按学段精准提分", "历年真题 + 80% 掌握解锁", "错题间隔重复"],
+    gradient: "linear-gradient(160deg, #7B3FF1 0%, #5B2BC9 100%)",
+    btnTextColor: "#7B3FF1",
   },
 ];
 
 export default function ThreeTracksHero() {
+  const t = useT();
   return (
     <section className="mb-8">
       <div className="mb-6 text-center">
         <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
-          你今天想学什么？
+          <T>你今天想学什么？</T>
         </h2>
         <p className="mt-2 text-sm text-muted-foreground md:text-base">
-          三条路径 · 一样的科学诊断 — Exam · Career · Beginner
+          <T>三条路径 · 一样的科学诊断</T> — Beginner · Career · China
         </p>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
@@ -63,22 +65,22 @@ export default function ThreeTracksHero() {
           >
             {tr.badge && (
               <span className="absolute -top-2 right-6 rounded-full bg-[hsl(var(--brand-amber))] px-2.5 py-0.5 text-[10px] font-bold text-[#1d2233]">
-                {tr.badge}
+                <T>{tr.badge}</T>
               </span>
             )}
             <div className="text-[10px] font-mono uppercase tracking-[0.2em] opacity-75">
               {tr.cefr}
             </div>
-            <h3 className="mt-2 text-2xl font-extrabold">{tr.zh}</h3>
+            <h3 className="mt-2 text-2xl font-extrabold"><T>{tr.zh}</T></h3>
             <p className="text-xs font-semibold uppercase tracking-widest opacity-80">
               {tr.en}
             </p>
-            <p className="mt-4 text-sm leading-relaxed opacity-95">{tr.desc}</p>
+            <p className="mt-4 text-sm leading-relaxed opacity-95"><T>{tr.desc}</T></p>
             <ul className="mt-4 mb-6 flex-1 space-y-1.5 text-sm opacity-90">
               {tr.bullets.map((b) => (
                 <li key={b} className="flex items-start gap-2">
                   <span className="mt-1 size-1.5 shrink-0 rounded-full bg-white/80" />
-                  <span>{b}</span>
+                  <span><T>{b}</T></span>
                 </li>
               ))}
             </ul>
@@ -86,7 +88,7 @@ export default function ThreeTracksHero() {
               className="mt-auto inline-flex items-center justify-center gap-1.5 rounded-xl bg-white py-2.5 text-sm font-bold transition group-hover:bg-white/90"
               style={{ color: tr.btnTextColor }}
             >
-              开始诊断 <ArrowRight className="size-4" />
+              <T>开始诊断</T> <ArrowRight className="size-4" />
             </span>
           </Link>
         ))}

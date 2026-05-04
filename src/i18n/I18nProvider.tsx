@@ -71,6 +71,8 @@ const JAPANESE_TEXT_RE = /[\u3040-\u30ff]/;
 const HAN_RE = /[\u3400-\u9fff]/;
 
 const EN_FALLBACKS: Record<string, string> = {
+  "例如 1234": "e.g. 1234",
+  "如：小明🐱、Dragon123": "e.g. KittyKat🐱, Dragon123",
   "首页": "Home",
   "课程": "Courses",
   "AI 对话": "AI Chat",

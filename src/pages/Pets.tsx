@@ -259,6 +259,8 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
           <Bar label="心情" value={active.mood} hint={`${active.mood}/100`} color="from-rose-400 to-pink-500" />
         </div>
       </div>
+      <EvolutionTree stage={active.stage} level={active.level} nickname={active.nickname} />
+      <PetAbilities />
 
       {/* Sticker board */}
       <div className="rounded-2xl border-2 border-border bg-card p-3">

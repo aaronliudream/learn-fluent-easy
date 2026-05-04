@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
+import { T } from "@/i18n/T";
 
 /**
  * 守护灵入职引导：3 题性格测试 → 推荐 1 只 → 用户主动 3 选 1
@@ -98,16 +99,16 @@ export default function CompanionOnboarding({ onDone }: Props) {
         {step === "intro" && (
           <div className="text-center">
             <div className="text-6xl">🌟</div>
-            <h2 className="mt-3 text-2xl font-extrabold">选择你的英语守护灵</h2>
+            <h2 className="mt-3 text-2xl font-extrabold"><T>选择你的英语守护灵</T></h2>
             <p className="mt-2 text-sm text-muted-foreground">
               Choose your English Learning Companion<br />
-              一个会陪你成长、记得你、为你加油的 AI 伙伴
+              <T>一个会陪你成长、记得你、为你加油的 AI 伙伴</T>
             </p>
             <div className="my-5 grid grid-cols-3 gap-2">
               {COMPANIONS.map((c) => (
                 <div key={c.speciesId} className={cn("rounded-2xl bg-gradient-to-br p-3 text-white", c.color)}>
                   <div className="text-3xl">{c.emoji}</div>
-                  <div className="mt-1 text-[11px] font-bold">{c.nameCn}</div>
+                  <div className="mt-1 text-[11px] font-bold"><T>{c.nameCn}</T></div>
                 </div>
               ))}
             </div>
@@ -115,13 +116,13 @@ export default function CompanionOnboarding({ onDone }: Props) {
               onClick={() => setStep("quiz")}
               className="w-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-sm font-extrabold text-white shadow"
             >
-              开始 30 秒匹配 →
+              <T>开始 30 秒匹配</T> →
             </button>
             <button
               onClick={() => setStep("pick")}
               className="mt-2 w-full text-xs text-muted-foreground underline"
             >
-              跳过测试，我自己选
+              <T>跳过测试，我自己选</T>
             </button>
           </div>
         )}
@@ -129,20 +130,20 @@ export default function CompanionOnboarding({ onDone }: Props) {
         {step === "quiz" && (
           <div>
             <div className="mb-4 flex items-center justify-between text-xs text-muted-foreground">
-              <span>性格匹配</span>
+              <span><T>性格匹配</T></span>
               <span>{qIdx + 1} / {QUIZ.length}</span>
             </div>
             <div className="h-1 w-full overflow-hidden rounded-full bg-muted">
               <div className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all"
                    style={{ width: `${((qIdx + 1) / QUIZ.length) * 100}%` }} />
             </div>
-            <h3 className="mt-5 text-lg font-extrabold">{QUIZ[qIdx].q.cn}</h3>
+            <h3 className="mt-5 text-lg font-extrabold"><T>{QUIZ[qIdx].q.cn}</T></h3>
             <p className="mt-0.5 text-xs text-muted-foreground">{QUIZ[qIdx].q.en}</p>
             <div className="mt-4 space-y-2">
               {QUIZ[qIdx].options.map((opt, i) => (
                 <button key={i} onClick={() => choose(i)}
                         className="w-full rounded-2xl border border-border bg-card px-4 py-3 text-left text-sm font-bold transition hover:scale-[1.02] hover:border-primary hover:bg-primary/5">
-                  <div>{opt.label.cn}</div>
+                  <div><T>{opt.label.cn}</T></div>
                   <div className="text-[11px] font-normal text-muted-foreground">{opt.label.en}</div>
                 </button>
               ))}
@@ -152,11 +153,11 @@ export default function CompanionOnboarding({ onDone }: Props) {
 
         {step === "pick" && (
           <div>
-            <h3 className="text-center text-xl font-extrabold">挑选你的守护灵</h3>
+            <h3 className="text-center text-xl font-extrabold"><T>挑选你的守护灵</T></h3>
             <p className="mt-1 text-center text-xs text-muted-foreground">
               {scores.fire + scores.water + scores.wood > 0
-                ? `根据测试，我们推荐 ${recommendedSpecies.nameCn}，但选择权在你！`
-                : "三只都很棒，跟着直觉选一只吧 ✨"}
+                ? <><T>根据测试，我们推荐</T> <T>{recommendedSpecies.nameCn}</T>，<T>但选择权在你！</T></>
+                : <T>三只都很棒，跟着直觉选一只吧 ✨</T>}
             </p>
             <div className="mt-4 space-y-3">
               {COMPANIONS.map((c) => {
@@ -176,15 +177,15 @@ export default function CompanionOnboarding({ onDone }: Props) {
                   >
                     {isReco && (
                       <span className="absolute right-2 top-2 rounded-full bg-yellow-300 px-2 py-0.5 text-[10px] font-extrabold text-amber-900">
-                        ⭐ 推荐
+                        ⭐ <T>推荐</T>
                       </span>
                     )}
                     <div className="flex items-center gap-3">
                       <div className="text-5xl">{c.emoji}</div>
                       <div className="flex-1">
-                        <div className="text-lg font-extrabold">{c.nameCn} · {c.nameEn}</div>
-                        <div className="text-xs opacity-90">{c.tagCn}</div>
-                        <div className="mt-1 text-[11px] italic opacity-80">"{c.catchphrase}"</div>
+                        <div className="text-lg font-extrabold"><T>{c.nameCn}</T> · {c.nameEn}</div>
+                        <div className="text-xs opacity-90"><T>{c.tagCn}</T></div>
+                        <div className="mt-1 text-[11px] italic opacity-80">"<T>{c.catchphrase}</T>"</div>
                       </div>
                     </div>
                   </button>
@@ -192,7 +193,7 @@ export default function CompanionOnboarding({ onDone }: Props) {
               })}
             </div>
             <p className="mt-4 text-center text-[10px] text-muted-foreground">
-              你可以随时在「领养」标签换养更多伙伴
+              <T>你可以随时在「领养」标签换养更多伙伴</T>
             </p>
           </div>
         )}

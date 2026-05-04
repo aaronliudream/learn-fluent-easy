@@ -13,6 +13,7 @@ import MonthlyPostcard from "@/components/pet/MonthlyPostcard";
 import PetAbilities from "@/components/pet/PetAbilities";
 import EvolutionTree from "@/components/pet/EvolutionTree";
 import { useCurrencies, wishlistAdd, fetchWishlist, wishlistRemove, type WishlistRow } from "@/lib/currencies";
+import { T, useT } from "@/i18n/T";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };
@@ -27,6 +28,7 @@ type Diary = { id:string; emoji:string|null; message:string; event_type:string; 
 type Tab = "home" | "shop" | "outing" | "adopt" | "skin" | "diary";
 
 export default function Pets() {
+  const t = useT();
   const [authed, setAuthed] = useState<boolean|null>(null);
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState<Tab>("home");
@@ -89,9 +91,9 @@ export default function Pets() {
     return (
       <main className="mx-auto min-h-screen max-w-md px-5 py-10 text-center">
         <div className="text-5xl">🐾</div>
-        <h1 className="mt-3 text-2xl font-extrabold">登录后开启宠物之旅</h1>
-        <p className="mt-1 text-sm text-muted-foreground">学习赚星币 → 领养 → 喂养 → 进化 → 出游</p>
-        <Link to="/auth" className="mt-5 inline-block rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-2.5 text-sm font-extrabold text-white shadow">立即登录</Link>
+        <h1 className="mt-3 text-2xl font-extrabold"><T>登录后开启宠物之旅</T></h1>
+        <p className="mt-1 text-sm text-muted-foreground"><T>学习赚星币 → 领养 → 喂养 → 进化 → 出游</T></p>
+        <Link to="/auth" className="mt-5 inline-block rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-2.5 text-sm font-extrabold text-white shadow"><T>立即登录</T></Link>
       </main>
     );
   }
@@ -99,13 +101,13 @@ export default function Pets() {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-4 pb-24 pt-6 md:px-6">
       <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回主页
+          <ArrowLeft className="size-4" /> <T>返回主页</T>
       </BackLink>
       <div className="mb-4 flex items-center justify-between">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">MY PETS</div>
-          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">🐾 奇幻宠物乐园</h1>
-          <p className="mt-1 text-xs text-muted-foreground">学习赚星币，喂养专属伙伴</p>
+          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">🐾 <T>奇幻宠物乐园</T></h1>
+          <p className="mt-1 text-xs text-muted-foreground"><T>学习赚星币，喂养专属伙伴</T></p>
         </div>
         <div className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 px-3 py-1.5 text-sm font-extrabold text-white shadow-tile">
           <Coins className="size-4" /> {balance}
@@ -113,18 +115,18 @@ export default function Pets() {
       </div>
       {/* 三种货币 + 消化中（延迟满足设计） */}
       <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px] font-bold">
-        <div className="flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-1 text-emerald-700 dark:text-emerald-300" title="种子：学习产出，可在商店心愿单兑换">
-          <Sprout className="size-3" /> {currencies.seeds} 种子
+        <div className="flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-1 text-emerald-700 dark:text-emerald-300" title={t("种子：学习产出，可在商店心愿单兑换")}>
+          <Sprout className="size-3" /> {currencies.seeds} <T>种子</T>
         </div>
         {currencies.pending > 0 && (
-          <div className="flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-amber-700 dark:text-amber-300" title="刚学到的种子正在宠物体内消化，明天到账">
-            <Hourglass className="size-3 animate-pulse" /> 消化中 +{currencies.pending}
+          <div className="flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-amber-700 dark:text-amber-300" title={t("刚学到的种子正在宠物体内消化，明天到账")}>
+            <Hourglass className="size-3 animate-pulse" /> <T>消化中</T> +{currencies.pending}
           </div>
         )}
-        <div className="flex items-center gap-1 rounded-full bg-violet-500/10 px-2.5 py-1 text-violet-700 dark:text-violet-300" title="星光：连续学习奖励，未来可解锁场景">
+        <div className="flex items-center gap-1 rounded-full bg-violet-500/10 px-2.5 py-1 text-violet-700 dark:text-violet-300" title={t("星光：连续学习奖励，未来可解锁场景")}>
           ⭐ {currencies.starlight}
         </div>
-        <div className="flex items-center gap-1 rounded-full bg-sky-500/10 px-2.5 py-1 text-sky-700 dark:text-sky-300" title="结晶：完成长期里程碑获得，购买稀有道具">
+        <div className="flex items-center gap-1 rounded-full bg-sky-500/10 px-2.5 py-1 text-sky-700 dark:text-sky-300" title={t("结晶：完成长期里程碑获得，购买稀有道具")}>
           💎 {currencies.crystals}
         </div>
       </div>
@@ -146,7 +148,7 @@ export default function Pets() {
               <button
                 key={k} onClick={()=>setTab(k as Tab)}
                 className={cn("rounded-xl px-2 py-2 transition", tab === k ? "bg-card shadow-sm" : "text-muted-foreground hover:bg-card/50")}
-              >{lbl}</button>
+              ><T>{lbl}</T></button>
             ))}
           </div>
 
@@ -178,14 +180,15 @@ function petEmoji(p: Pet, sp?: Species) {
 const STAGE_LABEL = ["蛋", "幼年", "成年", "传说"];
 
 function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, flash }: any) {
+  const t = useT();
   const [feedingFood, setFeedingFood] = useState<string | null>(null);
   const [pickedSticker, setPickedSticker] = useState<string | null>(null);
   if (!pets.length) {
     return (
       <div className="rounded-3xl border-2 border-dashed border-purple-300 bg-purple-50/50 p-10 text-center dark:bg-purple-950/20">
         <div className="text-6xl">🥚</div>
-        <h3 className="mt-3 text-lg font-extrabold">还没有宠物哦</h3>
-        <p className="mt-1 text-sm text-muted-foreground">去「领养」标签页带一只回家吧！</p>
+        <h3 className="mt-3 text-lg font-extrabold"><T>还没有宠物哦</T></h3>
+        <p className="mt-1 text-sm text-muted-foreground"><T>去「领养」标签页带一只回家吧！</T></p>
       </div>
     );
   }
@@ -207,7 +210,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
     setFeedingFood(null);
     if (error) { flash("❌ " + error.message); return; }
     const r = Array.isArray(data) ? data[0] : data;
-    flash(r?.message || "🍽️ 喂食成功！");
+    flash(r?.message || t("🍽️ 喂食成功！"));
     if (r?.evolved) {
       const newStage = r.new_stage ?? active.stage + 1;
       const newEmoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][newStage] ?? "✨";
@@ -216,15 +219,15 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
         kind: "evolve",
         emoji: newEmoji,
         prevEmoji,
-        title: r.message || "进化啦！",
-        subtitle: `${active.nickname} · ${STAGE_LABEL[newStage]}形态`,
+        title: r.message || t("进化啦！"),
+        subtitle: `${active.nickname} · ${t(STAGE_LABEL[newStage])}${t("形态")}`,
       });
     } else if (r?.leveled) {
       const emoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "⭐";
       celebratePet({
         kind: "levelup",
         emoji,
-        title: `Lv.${r.new_level} 达成！`,
+        title: `Lv.${r.new_level} ${t("达成！")}`,
         subtitle: active.nickname,
       });
     }
@@ -244,13 +247,13 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
             )}
           </div>
           <div className="mt-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-            {sp?.name_cn} · {STAGE_LABEL[active.stage]}
-            {equippedSkin && equippedSkin.code !== "classic" && <span className="ml-1.5 text-purple-500">· {equippedSkin.name_cn}</span>}
+            <T>{sp?.name_cn}</T> · <T>{STAGE_LABEL[active.stage]}</T>
+            {equippedSkin && equippedSkin.code !== "classic" && <span className="ml-1.5 text-purple-500">· <T>{equippedSkin.name_cn}</T></span>}
           </div>
           <h2 className="mt-0.5 text-xl font-extrabold">{active.nickname}</h2>
           <div className="mt-1 flex items-center gap-2 text-xs">
             <span className="rounded-full bg-purple-500/10 px-2 py-0.5 font-bold text-purple-600">Lv.{active.level}</span>
-            <span className="text-muted-foreground">{sp?.personality_cn}</span>
+            <span className="text-muted-foreground"><T>{sp?.personality_cn}</T></span>
           </div>
         </div>
         <div className="mt-4 space-y-2">
@@ -265,8 +268,8 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
       {/* Sticker board */}
       <div className="rounded-2xl border-2 border-border bg-card p-3">
         <div className="mb-2 flex items-center justify-between">
-          <h3 className="text-sm font-extrabold">😊 表情贴纸</h3>
-          <span className="text-[10px] text-muted-foreground">已解锁 {unlockedStickers.length}/{(stickers as Sticker[]).length}</span>
+            <h3 className="text-sm font-extrabold">😊 <T>表情贴纸</T></h3>
+          <span className="text-[10px] text-muted-foreground"><T>已解锁</T> {unlockedStickers.length}/{(stickers as Sticker[]).length}</span>
         </div>
         <div className="flex flex-wrap gap-1.5">
           {unlockedStickers.map((s: Sticker) => (
@@ -277,7 +280,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
             </button>
           ))}
           {lockedStickers.map((s: Sticker) => (
-            <div key={s.id} title={`Lv.${s.unlock_level} 解锁`}
+            <div key={s.id} title={`Lv.${s.unlock_level} ${t("解锁")}`}
               className="rounded-xl border border-dashed border-border bg-muted/40 p-1.5 text-xl opacity-40 grayscale">
               {s.emoji}
             </div>
@@ -288,12 +291,12 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
       {/* Quick feed */}
       <div>
         <div className="mb-2 flex items-center justify-between">
-          <h3 className="text-sm font-extrabold">🍽️ 喂它吃点东西</h3>
-          <span className="text-[11px] text-muted-foreground">点食物即可喂食</span>
+          <h3 className="text-sm font-extrabold">🍽️ <T>喂它吃点东西</T></h3>
+          <span className="text-[11px] text-muted-foreground"><T>点食物即可喂食</T></span>
         </div>
         {inv.filter((i: Inv) => i.qty > 0).length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border bg-card p-4 text-center text-xs text-muted-foreground">
-            背包空空，去「商店」买点食物吧 🛒
+            <T>背包空空，去「商店」买点食物吧 🛒</T>
           </div>
         ) : (
           <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
@@ -304,7 +307,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
                 <button key={i.food_id} disabled={feedingFood===i.food_id} onClick={()=>doFeed(i.food_id)}
                   className="group flex flex-col items-center rounded-2xl border-2 border-border bg-card p-2 transition hover:-translate-y-0.5 hover:border-amber-400 disabled:opacity-50">
                   <span className="text-3xl">{f.emoji}</span>
-                  <span className="mt-1 text-[10px] font-bold">{f.name_cn}</span>
+                  <span className="mt-1 text-[10px] font-bold"><T>{f.name_cn}</T></span>
                   <span className="text-[10px] text-muted-foreground">×{i.qty}</span>
                 </button>
               );
@@ -316,7 +319,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
       {/* Other pets */}
       {pets.length > 1 && (
         <div>
-          <h3 className="mb-2 text-sm font-extrabold">🏡 我的伙伴们</h3>
+          <h3 className="mb-2 text-sm font-extrabold">🏡 <T>我的伙伴们</T></h3>
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
             {pets.map((p: Pet) => {
               const s: Species = species[p.species_id];
@@ -325,7 +328,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
                   className={cn("rounded-2xl border-2 p-2 text-center transition", p.is_active ? "border-purple-500 bg-purple-50 dark:bg-purple-950/30" : "border-border bg-card hover:border-purple-300")}>
                   <div className="text-3xl">{petEmoji(p, s)}</div>
                   <div className="mt-0.5 text-[11px] font-bold">{p.nickname}</div>
-                  <div className="text-[10px] text-muted-foreground">Lv.{p.level} · {STAGE_LABEL[p.stage]}</div>
+                  <div className="text-[10px] text-muted-foreground">Lv.{p.level} · <T>{STAGE_LABEL[p.stage]}</T></div>
                 </button>
               );
             })}
@@ -337,13 +340,13 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
       <Link to="/friends" className="mt-4 flex items-center gap-3 rounded-2xl border border-border bg-gradient-to-r from-fuchsia-500/10 to-amber-400/10 p-4 transition hover:-translate-y-0.5 hover:border-primary">
         <div className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-amber-500 text-white text-xl">🐾</div>
         <div className="flex-1 min-w-0">
-          <div className="text-sm font-extrabold">学习朋友圈 · Pet Friends</div>
-          <div className="text-[11px] text-muted-foreground">互访朋友的伙伴 · 送礼物 · 拍合影</div>
+          <div className="text-sm font-extrabold"><T>学习朋友圈</T> · Pet Friends</div>
+          <div className="text-[11px] text-muted-foreground"><T>互访朋友的伙伴 · 送礼物 · 拍合影</T></div>
         </div>
         <span className="text-muted-foreground">→</span>
       </Link>
       {active?.stage >= 1 && (
-        <PetChat petName={active?.nickname || "小伙伴"} />
+      <PetChat petName={active?.nickname || t("小伙伴")} />
       )}
     </div>
   );
@@ -353,7 +356,7 @@ function Bar({ label, value, hint, color }: { label:string; value:number; hint:s
   return (
     <div>
       <div className="mb-1 flex items-center justify-between text-[11px]">
-        <span className="font-bold">{label}</span>
+        <span className="font-bold"><T>{label}</T></span>
         <span className="text-muted-foreground">{hint}</span>
       </div>
       <div className="h-2.5 overflow-hidden rounded-full bg-muted">
@@ -369,6 +372,7 @@ function Bar({ label, value, hint, color }: { label:string; value:number; hint:s
  * 教育意图：弱化即时消费冲动，培养计划与耐心；与宠物对话潜在引导"我们要不要再等等"。
  */
 function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any) {
+  const t = useT();
   const [busy, setBusy] = useState<string | null>(null);
   const [wishlist, setWishlist] = useState<WishlistRow[]>([]);
   const [now, setNow] = useState(Date.now());
@@ -387,8 +391,8 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
     setBusy(id);
     const ok = await wishlistAdd("food", id);
     setBusy(null);
-    if (!ok) { flash("❌ 加入心愿单失败"); return; }
-    flash("💭 已加入心愿单 · 48 小时后可确认购买");
+    if (!ok) { flash(t("❌ 加入心愿单失败")); return; }
+    flash(t("💭 已加入心愿单 · 48 小时后可确认购买"));
     await reloadWishlist();
   };
 
@@ -401,12 +405,12 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
       const { data: cw } = await supabase.rpc("confirm_wishlist_purchase", { _wishlist_id: wishId });
       const row: any = Array.isArray(cw) ? cw[0] : cw;
       if (row?.days_held >= 7) {
-        patienceMsg = `💛 等待 ${row.days_held} 天 · 宠物耐心 +1（共 ${row.patience_after}）`;
+        patienceMsg = `💛 ${t("等待")} ${row.days_held} ${t("天 · 宠物耐心 +1（共")} ${row.patience_after}）`;
       }
     }
     setBusy(null);
-    if (error) { flash(error.message.includes("not enough") ? "💰 星币不够，继续学习吧！" : "❌ "+error.message); return; }
-    flash(patienceMsg || "🛒 等待是值得的！购买成功");
+    if (error) { flash(error.message.includes("not enough") ? t("💰 星币不够，继续学习吧！") : "❌ "+error.message); return; }
+    flash(patienceMsg || t("🛒 等待是值得的！购买成功"));
     await reloadWishlist();
     await refreshCurrencies?.();
     onAfter();
@@ -414,7 +418,7 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
 
   const removeWish = async (wishId: string) => {
     await wishlistRemove(wishId);
-    flash("已移出心愿单");
+    flash(t("已移出心愿单"));
     reloadWishlist();
   };
 
@@ -431,13 +435,13 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
   return (
     <div className="space-y-5">
       <div className="rounded-2xl border-2 border-dashed border-emerald-300/50 bg-emerald-50/40 p-3 text-[11px] leading-relaxed text-emerald-800 dark:bg-emerald-950/20 dark:text-emerald-300">
-        <div className="font-extrabold">🌱 慢一点，更稳一点</div>
-        喜欢的物品先加入<b>心愿单</b>，48 小时后再决定买不买 —— 宠物相信会等待的孩子。
+        <div className="font-extrabold">🌱 <T>慢一点，更稳一点</T></div>
+        <T>喜欢的物品先加入心愿单，48 小时后再决定买不买 —— 宠物相信会等待的孩子。</T>
         <div className="mt-1.5 text-[10px] opacity-80">
           {(() => {
             const d = new Date().getDay();
             const open = d === 3 || d === 6;
-            return open ? "🛍️ 今天是商店开放日（每周三/六）—— 也是慢慢挑选的好日子。" : "🛍️ 商店每周三、周六最热闹 —— 把心愿留到那天再来看看。";
+            return open ? t("🛍️ 今天是商店开放日（每周三/六）—— 也是慢慢挑选的好日子。") : t("🛍️ 商店每周三、周六最热闹 —— 把心愿留到那天再来看看。");
           })()}
         </div>
       </div>
@@ -445,7 +449,7 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
       {wishlist.length > 0 && (
         <section>
           <div className="mb-2 flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">
-            <Clock className="size-3" /> 心愿单 ({wishlist.length})
+            <Clock className="size-3" /> <T>心愿单</T> ({wishlist.length})
           </div>
           <div className="space-y-2">
             {wishlist.map((w) => {
@@ -458,14 +462,14 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
                 <div key={w.id} className="flex items-center gap-3 rounded-2xl border-2 border-violet-300/40 bg-violet-50/30 p-3 dark:bg-violet-950/20">
                   <div className="text-3xl">{food.emoji}</div>
                   <div className="min-w-0 flex-1">
-                    <div className="font-extrabold">{food.name_cn}</div>
+                    <div className="font-extrabold"><T>{food.name_cn}</T></div>
                     {ready ? (
-                      <div className="text-[11px] font-bold text-emerald-600">✓ 冷静期已过，可以购买</div>
+                      <div className="text-[11px] font-bold text-emerald-600">✓ <T>冷静期已过，可以购买</T></div>
                     ) : (
-                      <div className="text-[11px] text-muted-foreground">⏳ 还需 {remain} 才可购买</div>
+                      <div className="text-[11px] text-muted-foreground">⏳ <T>还需</T> {remain} <T>才可购买</T></div>
                     )}
                   </div>
-                  <button onClick={()=>removeWish(w.id)} className="text-[10px] text-muted-foreground underline">移除</button>
+                  <button onClick={()=>removeWish(w.id)} className="text-[10px] text-muted-foreground underline"><T>移除</T></button>
                   <button
                     onClick={()=>confirmBuy(food.id, w.id)}
                     disabled={!canBuy || busy === food.id}
@@ -482,7 +486,7 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
       )}
 
       <section>
-        <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">商店</div>
+        <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground"><T>商店</T></div>
         <div className="grid gap-3 sm:grid-cols-2">
           {foods.map((f: Food) => {
             const owned = invMap[f.id] ?? 0;
@@ -492,21 +496,21 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
                 <div className="text-4xl">{f.emoji}</div>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="font-extrabold">{f.name_cn}</span>
+                    <span className="font-extrabold"><T>{f.name_cn}</T></span>
                     <span className="text-[10px] text-muted-foreground">×{owned}</span>
                     {f.rarity >= 3 && <Star className="size-3 fill-amber-500 text-amber-500" />}
                   </div>
-                  <div className="text-[11px] text-muted-foreground">饱+{f.hunger_restore} 经+{f.exp_bonus} 心+{f.mood_bonus}</div>
+                  <div className="text-[11px] text-muted-foreground"><T>饱</T>+{f.hunger_restore} <T>经</T>+{f.exp_bonus} <T>心</T>+{f.mood_bonus}</div>
                   <div className="mt-0.5 flex items-center gap-1 text-[11px] text-muted-foreground"><Coins className="size-3" /> {f.price}</div>
                 </div>
                 {inWish ? (
                   <span className="rounded-full bg-violet-500/15 px-2.5 py-1 text-[10px] font-extrabold text-violet-700 dark:text-violet-300">
-                    心愿单中
+                    <T>心愿单中</T>
                   </span>
                 ) : (
                   <button onClick={()=>addToWishlist(f.id)} disabled={busy===f.id}
                     className="flex shrink-0 items-center gap-1 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-3 py-1.5 text-[11px] font-extrabold text-white shadow">
-                    💭 加入心愿单
+                    💭 <T>加入心愿单</T>
                   </button>
                 )}
               </div>
@@ -519,25 +523,26 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
 }
 
 function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: any) {
+  const t = useT();
   const [busy, setBusy] = useState<string | null>(null);
   const sp = species[active?.species_id];
   if (!active || active.stage < 1) {
-    return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground">宠物还在蛋里，先去喂食孵化吧 🥚</div>;
+    return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground"><T>宠物还在蛋里，先去喂食孵化吧 🥚</T></div>;
   }
   const go = async (id: string) => {
     setBusy(id);
     const { data, error } = await supabase.rpc("take_pet_outing", { _pet_id: active.id, _dest_id: id });
     setBusy(null);
-    if (error) { flash("❌ " + (error.message.includes("hungry") ? "宠物太饿啦，先喂饱再出门" : error.message.includes("coins") ? "💰 星币不够" : error.message)); return; }
+    if (error) { flash("❌ " + (error.message.includes("hungry") ? t("宠物太饿啦，先喂饱再出门") : error.message.includes("coins") ? t("💰 星币不够") : error.message)); return; }
     const r = Array.isArray(data) ? data[0] : data;
-    flash((r?.surprise || "🎉 玩得很开心！") + ` Lv.${r?.new_level}`);
+    flash((r?.surprise || t("🎉 玩得很开心！")) + ` Lv.${r?.new_level}`);
     if (r?.new_level && r.new_level > active.level) {
       const emoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "⭐";
       celebratePet({
         kind: "levelup",
         emoji,
-        title: `Lv.${r.new_level} 达成！`,
-        subtitle: `${active.nickname} 在外面玩得超棒`,
+        title: `Lv.${r.new_level} ${t("达成！")}`,
+        subtitle: `${active.nickname} ${t("在外面玩得超棒")}`,
       });
     }
     onAfter();
@@ -546,7 +551,7 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
     <div className="space-y-3">
       <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 p-3 dark:from-purple-950/30 dark:to-pink-950/30">
         <div className="text-3xl">{petEmoji(active, sp)}</div>
-        <div className="flex-1 text-sm"><b>{active.nickname}</b> · Lv.{active.level} · 饱 {active.hunger}/100</div>
+        <div className="flex-1 text-sm"><b>{active.nickname}</b> · Lv.{active.level} · <T>饱</T> {active.hunger}/100</div>
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         {dests.map((d: Dest) => {
@@ -555,14 +560,14 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
             <div key={d.id} className={cn("flex items-center gap-3 rounded-2xl border-2 bg-card p-3", locked ? "opacity-50" : "border-border")}>
               <div className="text-4xl">{d.emoji}</div>
               <div className="min-w-0 flex-1">
-                <div className="font-extrabold">{d.name_cn}</div>
-                <div className="text-[11px] text-muted-foreground line-clamp-1">{d.description_cn}</div>
-                <div className="mt-0.5 text-[11px] text-muted-foreground">花费 {d.cost_coins} ⭐ · 经验 +{d.exp_reward}</div>
+                <div className="font-extrabold"><T>{d.name_cn}</T></div>
+                <div className="text-[11px] text-muted-foreground line-clamp-1"><T>{d.description_cn}</T></div>
+                <div className="mt-0.5 text-[11px] text-muted-foreground"><T>花费</T> {d.cost_coins} ⭐ · <T>经验</T> +{d.exp_reward}</div>
               </div>
               <button onClick={()=>go(d.id)} disabled={busy===d.id || locked || balance < d.cost_coins}
                 className={cn("shrink-0 rounded-full px-3 py-1.5 text-xs font-extrabold text-white shadow",
                   locked ? "bg-muted-foreground/40" : "bg-gradient-to-r from-emerald-500 to-teal-500")}>
-                {locked ? `Lv.${d.unlock_level}` : "出发"}
+                {locked ? `Lv.${d.unlock_level}` : <T>出发</T>}
               </button>
             </div>
           );
@@ -576,6 +581,7 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
 }
 
 function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
+  const t = useT();
   const [picking, setPicking] = useState<Species | null>(null);
   const [name, setName] = useState("");
   const [busy, setBusy] = useState(false);
@@ -584,8 +590,8 @@ function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
     setBusy(true);
     const { error } = await supabase.rpc("adopt_pet", { _species_id: picking.id, _nickname: name.trim() });
     setBusy(false);
-    if (error) { flash(error.message.includes("not enough") ? "💰 星币不够，先去学习赚星币吧！" : "❌ "+error.message); return; }
-    flash("🎉 领养成功！欢迎回家");
+    if (error) { flash(error.message.includes("not enough") ? t("💰 星币不够，先去学习赚星币吧！") : "❌ "+error.message); return; }
+    flash(t("🎉 领养成功！欢迎回家"));
     setPicking(null); setName("");
     onAfter();
     setTab("home");
@@ -601,11 +607,11 @@ function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
               <div className="text-4xl group-hover:scale-110 transition">{s.emoji_baby}</div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold">{s.name_cn}</span>
+                  <span className="font-extrabold"><T>{s.name_cn}</T></span>
                   {Array.from({length: s.rarity}).map((_,i)=><Star key={i} className="size-3 fill-amber-500 text-amber-500" />)}
                 </div>
-                <div className="text-[11px] text-muted-foreground line-clamp-1">{s.description_cn}</div>
-                <div className="text-[11px] text-muted-foreground">{s.personality_cn}</div>
+                <div className="text-[11px] text-muted-foreground line-clamp-1"><T>{s.description_cn}</T></div>
+                <div className="text-[11px] text-muted-foreground"><T>{s.personality_cn}</T></div>
               </div>
               <div className={cn("flex shrink-0 items-center gap-1 rounded-full px-3 py-1.5 text-xs font-extrabold text-white shadow", can ? "bg-gradient-to-r from-purple-500 to-pink-500" : "bg-muted-foreground/40")}>
                 <Coins className="size-3" /> {s.adopt_cost}
@@ -619,14 +625,14 @@ function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
         <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center" onClick={()=>setPicking(null)}>
           <div onClick={e=>e.stopPropagation()} className="w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-2xl">
             <div className="text-6xl">{picking.emoji_egg}</div>
-            <h3 className="mt-2 text-lg font-extrabold">领养 {picking.name_cn}</h3>
-            <p className="mt-1 text-xs text-muted-foreground">{picking.description_cn}</p>
-            <input value={name} onChange={e=>setName(e.target.value)} maxLength={12} placeholder="给它起个名字…"
+            <h3 className="mt-2 text-lg font-extrabold"><T>领养</T> <T>{picking.name_cn}</T></h3>
+            <p className="mt-1 text-xs text-muted-foreground"><T>{picking.description_cn}</T></p>
+            <input value={name} onChange={e=>setName(e.target.value)} maxLength={12} placeholder={t("给它起个名字…")}
               className="mt-4 w-full rounded-xl border-2 border-border bg-background px-3 py-2 text-center text-sm font-bold outline-none focus:border-purple-500" />
             <div className="mt-4 flex gap-2">
-              <button onClick={()=>setPicking(null)} className="flex-1 rounded-full bg-secondary px-4 py-2 text-sm font-bold">取消</button>
+              <button onClick={()=>setPicking(null)} className="flex-1 rounded-full bg-secondary px-4 py-2 text-sm font-bold"><T>取消</T></button>
               <button onClick={adopt} disabled={busy || !name.trim() || balance<picking.adopt_cost} className="flex-1 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 text-sm font-extrabold text-white shadow disabled:opacity-50">
-                {busy ? "领养中…" : `花费 ${picking.adopt_cost} ⭐`}
+                {busy ? t("领养中…") : <><T>花费</T> {picking.adopt_cost} ⭐</>}
               </button>
             </div>
           </div>
@@ -637,6 +643,7 @@ function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
 }
 
 function DiaryTab({ diary }: { diary: Diary[] }) {
+  const t = useT();
   const [ai, setAi] = useState<{ body_cn: string; highlights: string[]; pet_nickname?: string } | null>(null);
   const [loadingAi, setLoadingAi] = useState(false);
   useEffect(() => {
@@ -662,17 +669,17 @@ function DiaryTab({ diary }: { diary: Diary[] }) {
     <div className="space-y-3">
       <div className="rounded-2xl bg-gradient-to-br from-amber-300 via-orange-400 to-rose-500 p-5 text-white shadow-tile">
         <div className="flex items-center justify-between">
-          <div className="text-xs uppercase tracking-wider opacity-90">🐾 AI 宠物日记 · 今日</div>
+          <div className="text-xs uppercase tracking-wider opacity-90">🐾 AI <T>宠物日记 · 今日</T></div>
           <button onClick={generate} disabled={loadingAi} className="rounded-full bg-white/20 px-3 py-1 text-[11px] font-bold backdrop-blur disabled:opacity-60">
-            {loadingAi ? "生成中…" : ai ? "重新生成" : "生成今日日记"}
+            {loadingAi ? t("生成中…") : ai ? t("重新生成") : t("生成今日日记")}
           </button>
         </div>
         {ai ? (
           <>
-            <p className="mt-3 text-sm leading-relaxed whitespace-pre-wrap">{ai.body_cn}</p>
+            <p className="mt-3 text-sm leading-relaxed whitespace-pre-wrap"><T>{ai.body_cn}</T></p>
             {ai.highlights?.length > 0 && (
               <div className="mt-3 flex flex-wrap gap-1.5">
-                {ai.highlights.map((h, i) => <span key={i} className="rounded-full bg-white/20 px-2 py-0.5 text-[11px] font-bold backdrop-blur">{h}</span>)}
+                {ai.highlights.map((h, i) => <span key={i} className="rounded-full bg-white/20 px-2 py-0.5 text-[11px] font-bold backdrop-blur"><T>{h}</T></span>)}
               </div>
             )}
             <div className="mt-2 flex justify-end">
@@ -684,18 +691,18 @@ function DiaryTab({ diary }: { diary: Diary[] }) {
             </div>
           </>
         ) : (
-          <p className="mt-3 text-sm opacity-90">点击"生成今日日记"，让宠物把今天的学习记下来 📝</p>
+          <p className="mt-3 text-sm opacity-90"><T>点击生成今日日记，让宠物把今天的学习记下来 📝</T></p>
         )}
       </div>
       {diary.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-xs text-muted-foreground">动态日记会显示在这里</div>
+        <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-xs text-muted-foreground"><T>动态日记会显示在这里</T></div>
       ) : (
         <div className="space-y-2">
           {diary.map(d => (
             <div key={d.id} className="flex items-start gap-3 rounded-xl border border-border bg-card p-3">
               <div className="text-2xl">{d.emoji || "📝"}</div>
               <div className="min-w-0 flex-1">
-                <div className="text-sm font-bold">{d.message}</div>
+                <div className="text-sm font-bold"><T>{d.message}</T></div>
                 <div className="text-[10px] text-muted-foreground">{new Date(d.created_at).toLocaleString("zh-CN")}</div>
               </div>
             </div>
@@ -707,9 +714,10 @@ function DiaryTab({ diary }: { diary: Diary[] }) {
 }
 
 function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any) {
+  const t = useT();
   const [busy, setBusy] = useState<string | null>(null);
   if (!active) {
-    return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground">先去领养一只宠物吧 🥚</div>;
+    return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground"><T>先去领养一只宠物吧 🥚</T></div>;
   }
   const sp: Species | undefined = species[active.species_id];
   const ownedIds = new Set((owned as OwnedSkin[]).map(o => o.skin_id));
@@ -722,10 +730,10 @@ function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any
     if (error) { flash("❌ " + error.message); return; }
     const r = data as any;
     if (!r?.ok) {
-      flash(r?.reason === "not_enough" ? "💰 星币不够，再去学习赚一些吧！" : r?.reason === "already_owned" ? "已经拥有啦" : "❌ 购买失败");
+      flash(r?.reason === "not_enough" ? t("💰 星币不够，再去学习赚一些吧！") : r?.reason === "already_owned" ? t("已经拥有啦") : t("❌ 购买失败"));
       return;
     }
-    flash(`🎉 解锁「${skin.name_cn}」皮肤！`);
+    flash(`🎉 ${t("解锁")}「${t(skin.name_cn)}」${t("皮肤！")}`);
     onAfter();
   };
   const equip = async (skin: Skin | null) => {
@@ -735,10 +743,10 @@ function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any
     if (error) { flash("❌ " + error.message); return; }
     const r = data as any;
     if (!r?.ok) {
-      flash(r?.reason === "level_low" ? `⛔ 需要 Lv.${r.need_level} 才能装备` : r?.reason === "not_owned" ? "还未拥有该皮肤" : "❌ 装备失败");
+      flash(r?.reason === "level_low" ? `⛔ ${t("需要")} Lv.${r.need_level} ${t("才能装备")}` : r?.reason === "not_owned" ? t("还未拥有该皮肤") : t("❌ 装备失败"));
       return;
     }
-    flash(skin ? `✨ 已换上「${skin.name_cn}」` : "已恢复原色");
+    flash(skin ? `✨ ${t("已换上")}「${t(skin.name_cn)}」` : t("已恢复原色"));
     onAfter();
   };
 
@@ -750,7 +758,7 @@ function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any
         </div>
         <div className="flex-1 text-sm"><b>{active.nickname}</b> · Lv.{active.level}</div>
         <button onClick={()=>equip(null)} disabled={busy==="off" || !active.equipped_skin_id}
-          className="rounded-full bg-secondary px-3 py-1 text-xs font-bold disabled:opacity-40">恢复原色</button>
+          className="rounded-full bg-secondary px-3 py-1 text-xs font-bold disabled:opacity-40"><T>恢复原色</T></button>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
@@ -767,19 +775,19 @@ function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any
               <div className="text-5xl" style={{ filter: skin.css_filter }}>{baseEmoji}</div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold">{skin.name_cn}</span>
+                  <span className="font-extrabold"><T>{skin.name_cn}</T></span>
                   {Array.from({length: skin.rarity}).map((_,i)=><Star key={i} className="size-3 fill-amber-500 text-amber-500" />)}
                 </div>
-                <div className="text-[11px] text-muted-foreground line-clamp-1">{skin.description_cn}</div>
-                <div className="mt-0.5 text-[10px] text-muted-foreground">需要 Lv.{skin.unlock_level}</div>
+                <div className="text-[11px] text-muted-foreground line-clamp-1"><T>{skin.description_cn}</T></div>
+                <div className="mt-0.5 text-[10px] text-muted-foreground"><T>需要</T> Lv.{skin.unlock_level}</div>
               </div>
               {isEquipped ? (
-                <div className="shrink-0 rounded-full bg-purple-500 px-3 py-1 text-[10px] font-extrabold text-white shadow">已装备</div>
+                <div className="shrink-0 rounded-full bg-purple-500 px-3 py-1 text-[10px] font-extrabold text-white shadow"><T>已装备</T></div>
               ) : isOwned ? (
                 <button onClick={()=>equip(skin)} disabled={busy===skin.id || !levelOk}
                   className={cn("shrink-0 rounded-full px-3 py-1.5 text-[11px] font-extrabold text-white shadow",
                     levelOk ? "bg-gradient-to-r from-purple-500 to-pink-500" : "bg-muted-foreground/40")}>
-                  {levelOk ? "装备" : `Lv.${skin.unlock_level}`}
+                  {levelOk ? <T>装备</T> : `Lv.${skin.unlock_level}`}
                 </button>
               ) : (
                 <button onClick={()=>buy(skin)} disabled={busy===skin.id || !canBuy}

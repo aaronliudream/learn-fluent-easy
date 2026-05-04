@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Flag } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { T, useT } from "@/i18n/T";
 
 /**
  * AI 内容举报按钮 — 任何 AI 生成内容旁可挂载
@@ -22,6 +23,7 @@ const REASONS = [
 ];
 
 export default function ReportAIButton({ feature, sourceId, contentSnippet, className }: Props) {
+  const t = useT();
   const [open, setOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -29,7 +31,7 @@ export default function ReportAIButton({ feature, sourceId, contentSnippet, clas
     setSubmitting(true);
     try {
       const { data: u } = await supabase.auth.getUser();
-      if (!u?.user) { toast.error("请先登录"); setSubmitting(false); setOpen(false); return; }
+      if (!u?.user) { toast.error(t("请先登录")); setSubmitting(false); setOpen(false); return; }
       await supabase.from("ai_content_reports").insert({
         user_id: u.user.id,
         feature,
@@ -37,9 +39,9 @@ export default function ReportAIButton({ feature, sourceId, contentSnippet, clas
         content_snippet: (contentSnippet || "").slice(0, 500),
         reason,
       });
-      toast.success("举报已提交，谢谢！我们会尽快查看 🙏");
+      toast.success(t("举报已提交，谢谢！我们会尽快查看 🙏"));
     } catch (e: any) {
-      toast.error("提交失败：" + (e?.message || "未知错误"));
+      toast.error(t("提交失败：") + (e?.message || t("未知错误")));
     } finally {
       setSubmitting(false);
       setOpen(false);
@@ -52,14 +54,14 @@ export default function ReportAIButton({ feature, sourceId, contentSnippet, clas
         <button
           onClick={() => setOpen(true)}
           className="inline-flex items-center gap-1 text-[10px] text-muted-foreground hover:text-rose-500"
-          aria-label="举报此 AI 内容"
+          aria-label={t("举报此 AI 内容")}
         >
           <Flag className="size-3" />
-          举报
+          <T>举报</T>
         </button>
       ) : (
         <div className="rounded-xl border border-border bg-card p-2 text-xs shadow-lg">
-          <div className="mb-1.5 font-bold">为什么举报？</div>
+          <div className="mb-1.5 font-bold"><T>为什么举报？</T></div>
           <div className="space-y-1">
             {REASONS.map(r => (
               <button
@@ -68,14 +70,14 @@ export default function ReportAIButton({ feature, sourceId, contentSnippet, clas
                 onClick={() => submit(r.code)}
                 className="block w-full rounded-md px-2 py-1 text-left hover:bg-muted disabled:opacity-50"
               >
-                {r.label}
+                <T>{r.label}</T>
               </button>
             ))}
             <button
               onClick={() => setOpen(false)}
               className="block w-full rounded-md px-2 py-1 text-left text-muted-foreground hover:bg-muted"
             >
-              取消
+              <T>取消</T>
             </button>
           </div>
         </div>

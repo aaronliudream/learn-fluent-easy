@@ -428,8 +428,8 @@ const Slang = () => {
   // below (inside the user-gesture window), so iOS Safari unlocks audio and
   // playback starts instantly without the 1-frame React effect delay.
 
-  // Once the answer is revealed, smooth-scroll the action bar (Next button +
-  // explanation) into view so the user doesn't have to scroll manually.
+  // Once the answer is revealed, only scroll downward enough to keep the
+  // Next button above the mobile bottom bar. Never scroll upward after a pick.
   useEffect(() => {
     if (!revealed) return;
     const t = window.setTimeout(() => {
@@ -437,12 +437,10 @@ const Slang = () => {
       if (!el) return;
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight || document.documentElement.clientHeight;
-      // 如果 Next 按钮已经在视口内，就不动；否则把页面"往上滑一点"，
-      // 让按钮出现在视口下方约 1/4 处（而不是顶到屏幕最底部）。
-      const targetY = vh * 0.75;
-      const delta = rect.bottom - targetY;
-      if (Math.abs(delta) > 8) {
-        window.scrollBy({ top: delta, behavior: "smooth" });
+      const reservedBottom = window.innerWidth < 768 ? 112 : 40;
+      const visibleBottom = vh - reservedBottom;
+      if (rect.bottom > visibleBottom) {
+        window.scrollBy({ top: rect.bottom - visibleBottom, behavior: "smooth" });
       }
     }, 120);
     return () => window.clearTimeout(t);
@@ -804,20 +802,12 @@ const Slang = () => {
         const q = questions[qIdx];
         const picked = picks[q.id];
         const isCorrect = isQuestionCorrect(q);
-        const KIND_LABEL: Record<QuizKind, string> = {
-          en2cn: tt("英 → 中：选出正确含义"),
-          cn2en: tt("中 → 英：选出对应俚语"),
-          fill: tt("填空：选出适合的俚语"),
-          scenario: tt("情境匹配：哪个俚语最合适？"),
-          compose: tt("自己造句：用上这个俚语"),
-        };
         return (
           <>
-            <div className="mb-4 flex items-center justify-between">
+            <div className="mb-4 flex items-center justify-start">
               <div className="rounded-full bg-secondary px-3 py-1 text-sm font-semibold text-muted-foreground">
                 {qIdx + 1} / {questions.length}
               </div>
-              <div className="text-sm font-semibold text-muted-foreground">{KIND_LABEL[q.kind]}</div>
             </div>
 
             <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-secondary">

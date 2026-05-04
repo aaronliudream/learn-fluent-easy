@@ -18,7 +18,7 @@ export function LanguageSwitcher() {
       >
         <Globe className="size-4 text-primary" />
         <span className="text-base leading-none">{current.flag}</span>
-        <span className="text-sm font-bold md:hidden">语言</span>
+        <span className="text-sm font-bold md:hidden">{current.nativeName}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="max-h-[60vh] w-56 overflow-y-auto">
         {LANGUAGES.map((l) => (

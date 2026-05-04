@@ -1,4 +1,4 @@
-import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Mic, Users } from "lucide-react";
+import { ArrowRight, LogIn, LogOut, Sparkles, Cloud, BarChart3, Award, Zap, UserCog, Mic, Users, Trophy, UserPlus } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -89,6 +89,22 @@ const Index = () => {
       title: t("index.section.slang.title"),
       desc: t("index.section.slang.desc", { count: HOME_COUNTS.slang }),
       gradient: "from-teal-500 via-cyan-500 to-sky-500",
+    },
+    {
+      to: "/leaderboard",
+      icon: Trophy,
+      eyebrow: t("Community"),
+      title: t("本周排行榜"),
+      desc: t("和全球学员一起冲榜，每周清零"),
+      gradient: "from-yellow-500 via-amber-500 to-orange-500",
+    },
+    {
+      to: "/friends",
+      icon: UserPlus,
+      eyebrow: t("Social"),
+      title: t("加好友 · 互相鼓励"),
+      desc: t("看看朋友的连胜，一起坚持下去"),
+      gradient: "from-pink-500 via-rose-500 to-red-500",
     },
   ];
 

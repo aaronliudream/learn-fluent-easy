@@ -12,16 +12,24 @@ import { supabase } from "@/integrations/supabase/client";
 const TICK_MS = 15_000;
 const IDLE_MS = 60_000;
 
-function segFromPath(p: string): "primary" | "junior" | "gaokao" | "other" | null {
+type Segment =
+  | "primary" | "junior" | "gaokao"
+  | "workplace" | "scenes" | "talk" | "systematic" | "slang"
+  | "other";
+
+function segFromPath(p: string): Segment | null {
   if (p.startsWith("/primary")) return "primary";
   if (p.startsWith("/junior")) return "junior";
   if (p.startsWith("/gaokao") || p.startsWith("/senior")) return "gaokao";
-  // 其它真正在学习的通用页面（课时/对话/场景/单词/听力/写作/阅读等）也计入 other
+  if (p.startsWith("/workplace")) return "workplace";
+  if (p.startsWith("/scenes")) return "scenes";
+  if (p.startsWith("/talk")) return "talk";
+  if (p.startsWith("/slang")) return "slang";
+  // 系统课程：lesson / level / stage-test / placement
   if (
-    p.startsWith("/lesson") || p.startsWith("/talk") || p.startsWith("/scenes") ||
-    p.startsWith("/level") || p.startsWith("/stage-test") || p.startsWith("/slang") ||
-    p.startsWith("/placement")
-  ) return "other";
+    p.startsWith("/lesson") || p.startsWith("/level") ||
+    p.startsWith("/stage-test") || p.startsWith("/placement")
+  ) return "systematic";
   // 落地页 / 登录 / 家长中心 / 设置等，不计入学习时长
   return null;
 }

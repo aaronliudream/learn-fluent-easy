@@ -181,11 +181,7 @@ export default function FeedbackWidget() {
             </div>
 
             {/* Email */}
-            {authedEmail ? (
-              <div className="mt-1 rounded-xl border-2 border-border bg-secondary/40 px-3 py-2 text-xs text-muted-foreground">
-                ✉️ <T>回复将发送到</T> <b className="text-foreground">{authedEmail}</b>
-              </div>
-            ) : (
+            {!authedEmail && (
               <div className="mt-1">
                 <input
                   type="email"

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { T } from "@/i18n/T";
 
 /**
  * 消化动画 — 答对后种子飞入宠物体内"咀嚼/消化"4-6 秒。
@@ -31,8 +32,8 @@ export function DigestionAnimation() {
           className="flex flex-col items-center gap-1 rounded-2xl bg-emerald-500/95 px-4 py-2 text-white shadow-xl"
           style={{ animation: "digest-pop 4500ms ease-out forwards" }}
         >
-          <div className="text-xl font-extrabold">🌱 +{b.amount} 种子</div>
-          <div className="text-[11px] opacity-90">宠物正在消化…明天到账</div>
+          <div className="text-xl font-extrabold">🌱 +{b.amount} <T>种子</T></div>
+          <div className="text-[11px] opacity-90"><T>宠物正在消化…明天到账</T></div>
         </div>
       ))}
       <style>{`

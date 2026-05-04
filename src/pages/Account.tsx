@@ -263,6 +263,26 @@ const Account = () => {
         </section>
       )}
 
+      {/* Admin shortcut */}
+      {user && isAdmin && (
+        <section className="mb-6 rounded-2xl border-2 border-purple-300 bg-gradient-to-br from-purple-50 to-indigo-50 p-6 shadow-card">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <Shield className="size-5 text-purple-600" />
+                <h3 className="text-base font-extrabold"><T>管理后台</T></h3>
+              </div>
+              <p className="mt-1 text-sm text-purple-900/70">
+                <T>查看与处理用户反馈（仅管理员可见）</T>
+              </p>
+            </div>
+            <Button asChild className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
+              <Link to="/admin/feedback"><MessageSquare className="size-4" /> <T>反馈管理</T></Link>
+            </Button>
+          </div>
+        </section>
+      )}
+
       {/* Export */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
         <h3 className="text-base font-bold"><T>导出我的数据</T></h3>

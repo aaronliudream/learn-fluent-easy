@@ -764,6 +764,26 @@ const Lesson = () => {
                       );
                     })}
                   </div>
+                  {picked !== undefined && (
+                    <div className="mt-3">
+                      <button
+                        onClick={() => setTutorReq({
+                          refId: `lesson-${levelId}-${unitId}-${lessonId}-vocab-${q.idx}`,
+                          snapshot: {
+                            type: "vocab_quiz",
+                            word: q.word,
+                            options: q.options,
+                            correct_index: q.answer,
+                            user_index: picked,
+                            is_correct: picked === q.answer,
+                          },
+                        })}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
+                      >
+                        <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
+                      </button>
+                    </div>
+                  )}
                 </div>
               );
             })}

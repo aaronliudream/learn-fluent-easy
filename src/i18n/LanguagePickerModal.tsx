@@ -42,13 +42,7 @@ export function LanguagePickerModal() {
             </DialogTitle>
           </div>
           <DialogDescription className="text-xs sm:text-sm">
-            <span className="font-semibold text-primary">Choose your mother language</span>
-            <span className="mx-1 opacity-40">·</span>
-            <span>请选择你的母语</span>
-            <span className="mx-1 opacity-40">·</span>
-            <span>母国語</span>
-            <span className="mx-1 opacity-40">·</span>
-            <span>모국어</span>
+            {t("lang.pickerSubtitle")}
           </DialogDescription>
         </DialogHeader>
 

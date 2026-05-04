@@ -5,6 +5,7 @@ import {
   RefreshCw,
   PencilLine,
   Sparkles,
+  MessageCircleQuestion,
 } from "lucide-react";
 import { KNOWN_PHRASES } from "@/components/TappableLine";
 import { stripTags } from "@/lib/richText";
@@ -12,6 +13,7 @@ import { T } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import { recordQuizAnswer, seedReviews, type ReviewSeed } from "@/lib/srs";
 import { fireConfettiIfPassed } from "@/lib/feedback";
+import TutorChat from "@/components/tutor/TutorChat";
 
 type DialogLine = { en: string; cn: string };
 
@@ -314,6 +316,7 @@ export function PhraseQuiz({
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState(0);
   const [done, setDone] = useState(false);
+  const [tutorOpen, setTutorOpen] = useState(false);
   const feedbackRef = useRef<HTMLDivElement | null>(null);
 
   // Reset state whenever the source dialogue changes.
@@ -576,13 +579,38 @@ export function PhraseQuiz({
             {isCorrect ? <CheckCircle2 className="size-4" /> : <XCircle className="size-4" />}
             {isCorrect ? <T>太棒了!</T> : <T>正确答案如上</T>}
           </div>
-          <button
-            onClick={next}
-            className="rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-primary-foreground transition hover:opacity-90"
-          >
-            {idx + 1 < items.length ? <T>下一题</T> : <T>查看成绩</T>}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setTutorOpen(true)}
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
+            >
+              <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
+            </button>
+            <button
+              onClick={next}
+              className="rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-primary-foreground transition hover:opacity-90"
+            >
+              {idx + 1 < items.length ? <T>下一题</T> : <T>查看成绩</T>}
+            </button>
+          </div>
         </div>
+      )}
+
+      {picked && (
+        <TutorChat
+          context={dialogueKey?.startsWith("workplace") ? "workplace" : "phrase_quiz"}
+          questionRef={`${dialogueKey ?? "phrase"}-${idx}`}
+          questionSnapshot={{
+            sentence_with_blank: current.blanked,
+            hint_translation: current.hint,
+            correct_answer: current.answer,
+            user_answer: picked,
+            is_correct: isCorrect,
+            options: current.options,
+          }}
+          open={tutorOpen}
+          onClose={() => setTutorOpen(false)}
+        />
       )}
     </div>
   );

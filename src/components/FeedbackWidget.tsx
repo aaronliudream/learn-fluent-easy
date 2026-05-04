@@ -119,13 +119,13 @@ export default function FeedbackWidget() {
         let msg = t("提交失败，请稍后重试");
         try {
           const body = ctx?.body ? JSON.parse(await new Response(ctx.body).text()) : null;
-          if (body?.error) msg = body.error;
+          if (body?.error) msg = t(body.error);
         } catch { /* ignore */ }
         toast.error(msg);
         return;
       }
       if ((data as any)?.error) {
-        toast.error((data as any).error);
+        toast.error(t((data as any).error));
         return;
       }
       toast.success(t("反馈已收到，谢谢你 🙏"));

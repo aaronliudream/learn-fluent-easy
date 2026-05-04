@@ -38,6 +38,11 @@ const Auth = () => {
   // Age band — required for COPPA / GDPR-K compliance.
   // child = <13, teen = 13–17, adult = 18+. Persisted to profiles.age_band + is_minor.
   const [ageBand, setAgeBand] = useState<"child" | "teen" | "adult" | "">("");
+  // Parent consent — required when ageBand === "child" (under 13).
+  const [parentConsent, setParentConsent] = useState(false);
+  // Email signup also collects age band for COPPA / GDPR-K compliance.
+  const [emailAgeBand, setEmailAgeBand] = useState<"child" | "teen" | "adult" | "">("");
+  const [emailParentConsent, setEmailParentConsent] = useState(false);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -71,6 +76,10 @@ const Auth = () => {
     if (!/^\d{4,6}$/.test(pin)) { toast.error(t("PIN 必须是 4–6 位数字")); return; }
     if (nickAvailable === false) { toast.error(t("昵称已被占用，换一个吧")); return; }
     if (!ageBand) { toast.error(t("请选择你的年龄段")); return; }
+    if (ageBand === "child" && !parentConsent) {
+      toast.error(t("13 岁以下需家长或监护人同意才能注册"));
+      return;
+    }
     setLoading(true);
     // Server-side validation
     const { data: vCode } = await supabase.rpc("validate_username", { _name: n });
@@ -137,6 +146,14 @@ const Auth = () => {
       toast.error(t("请先阅读并同意隐私政策与服务条款"));
       return;
     }
+    if (!emailAgeBand) {
+      toast.error(t("请选择你的年龄段"));
+      return;
+    }
+    if (emailAgeBand === "child" && !emailParentConsent) {
+      toast.error(t("13 岁以下需家长或监护人同意才能注册"));
+      return;
+    }
     setLoading(true);
     const { error } = await supabase.auth.signUp({
       email,
@@ -150,6 +167,16 @@ const Auth = () => {
     if (error) {
       toast.error(error.message);
     } else {
+      // Persist age band + minor flag to profile (best-effort, after auth state lands)
+      const { data: u } = await supabase.auth.getUser();
+      if (u?.user?.id) {
+        await supabase.from("profiles").upsert({
+          user_id: u.user.id,
+          age_band: emailAgeBand,
+          is_minor: emailAgeBand === "child" || emailAgeBand === "teen",
+          data_minimization: emailAgeBand !== "adult",
+        }, { onConflict: "user_id" });
+      }
       toast.success(t("注册成功！正在登录…"));
       navigate("/", { replace: true });
     }

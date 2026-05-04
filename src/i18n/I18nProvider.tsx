@@ -5,6 +5,7 @@ import {
   LANGUAGES,
   type LangCode,
   getLanguageInfo,
+  detectBrowserLang,
 } from "./languages";
 import { BUILTIN, EN, ZH, type StringKey, interpolate } from "./strings";
 import { localizeProtagonist } from "./protagonistName";

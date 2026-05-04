@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, MessageCircleQuestion } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
+import TutorChat from "@/components/tutor/TutorChat";
 
 type Pt = { id: string; title: string; cefr: string; explanation_md: string };
 type Q = { id: string; stem: string; option_a: string; option_b: string; option_c: string; option_d: string; correct_answer: string; explanation: string };
@@ -17,6 +18,7 @@ export default function JuniorGrammarPoint() {
   const [picks, setPicks] = useState<Record<string, string>>({});
   const [streak, setStreak] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
+  const [tutorFor, setTutorFor] = useState<Q | null>(null);
   const shownAt = useRef<Record<string, number>>({});
 
   useEffect(() => {
@@ -90,10 +92,40 @@ export default function JuniorGrammarPoint() {
               {picked && q.explanation && (
                 <div className="mt-3 rounded-lg bg-muted/50 p-3 text-xs">💡 {q.explanation}</div>
               )}
+              {picked && (
+                <div className="mt-3">
+                  <button
+                    onClick={() => setTutorFor(q)}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
+                  >
+                    <MessageCircleQuestion className="size-3.5" />
+                    问小月 / Ask Luna
+                  </button>
+                </div>
+              )}
             </section>
           );
         })}
       </div>
+
+      {tutorFor && (
+        <TutorChat
+          context="junior_grammar"
+          questionRef={tutorFor.id}
+          questionSnapshot={{
+            point: pt.title,
+            cefr: pt.cefr,
+            stem: tutorFor.stem,
+            options: { A: tutorFor.option_a, B: tutorFor.option_b, C: tutorFor.option_c, D: tutorFor.option_d },
+            correct_answer: tutorFor.correct_answer,
+            user_answer: picks[tutorFor.id],
+            is_correct: picks[tutorFor.id] === tutorFor.correct_answer,
+            explanation: tutorFor.explanation,
+          }}
+          open={!!tutorFor}
+          onClose={() => setTutorFor(null)}
+        />
+      )}
     </main>
   );
 }

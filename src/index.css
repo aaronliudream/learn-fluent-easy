@@ -300,3 +300,15 @@ All colors MUST be HSL.
     0 1px 0 hsl(36 30% 88%),
     0 8px 24px -12px hsl(36 30% 40% / 0.18);
 }
+
+/* Print styles — used by /parent "导出 PDF" button (window.print). */
+@media print {
+  @page { size: A4; margin: 14mm; }
+  body { background: white !important; }
+  .print\:hidden { display: none !important; }
+  /* Hide global nav, support buttons, language switcher in print */
+  nav, .sticky, [role="navigation"] { display: none !important; }
+  main { max-width: none !important; padding: 0 !important; }
+  a { color: inherit !important; text-decoration: none !important; }
+  .shadow-tile, .shadow-card { box-shadow: none !important; }
+}

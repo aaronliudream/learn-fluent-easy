@@ -156,6 +156,35 @@ Deno.serve(async (req) => {
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
     const ipHash = await sha256(ip + '|big-moon')
 
+    // Rate limiting:
+    //   - logged-in user: max 10 per day per account
+    //   - anonymous / guest: max 3 per 5 minutes per IP
+    if (userId) {
+      const since = new Date(Date.now() - 24 * 3600 * 1000).toISOString()
+      const { count } = await supabase.from('feedback')
+        .select('id', { count: 'exact', head: true })
+        .eq('user_id', userId)
+        .gte('created_at', since)
+      if ((count ?? 0) >= 10) {
+        return Response.json(
+          { error: '今日反馈次数已达上限（10 条），请明天再来 🙏' },
+          { status: 429, headers: corsHeaders },
+        )
+      }
+    } else {
+      const since = new Date(Date.now() - 5 * 60 * 1000).toISOString()
+      const { count } = await supabase.from('feedback')
+        .select('id', { count: 'exact', head: true })
+        .eq('ip_hash', ipHash)
+        .gte('created_at', since)
+      if ((count ?? 0) >= 3) {
+        return Response.json(
+          { error: '提交过于频繁，请 5 分钟后再试' },
+          { status: 429, headers: corsHeaders },
+        )
+      }
+    }
+
     // Insert
     const { data: row, error: insErr } = await supabase.from('feedback').insert({
       user_id: userId, category, rating, message, email, page_url: pageUrl,

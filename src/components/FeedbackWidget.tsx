@@ -25,6 +25,8 @@ export default function FeedbackWidget() {
   const [rating, setRating] = useState<number>(0);
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
+  const [authedEmail, setAuthedEmail] = useState<string | null>(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const schema = z.object({
     category: z.enum(["bug", "suggestion", "praise", "other"]),
@@ -33,11 +35,18 @@ export default function FeedbackWidget() {
     email: z.string().trim().email(t("邮箱格式不正确")).max(255).optional().or(z.literal("")),
   });
 
-  // Auto-fill email if logged in
+  // Detect login status & auto-fill email if available
   useEffect(() => {
     if (!open) return;
     supabase.auth.getUser().then(({ data }) => {
-      if (data?.user?.email && !email) setEmail(data.user.email);
+      const u = data?.user;
+      setIsLoggedIn(!!u);
+      // Real (non-guest) email — auth.users always has email for normal signups,
+      // but guest accounts may have a placeholder. Heuristic: must look like a
+      // real address the user would actually check.
+      const e = u?.email && !u.email.endsWith("@guest.local") ? u.email : null;
+      setAuthedEmail(e);
+      if (e && !email) setEmail(e);
     });
   }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -172,15 +181,23 @@ export default function FeedbackWidget() {
             </div>
 
             {/* Email */}
-            <div className="mt-1">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={t("邮箱（可选，便于我们回复你）")}
-                className="w-full rounded-xl border-2 border-border bg-card p-3 text-sm focus:border-primary focus:outline-none"
-              />
-            </div>
+            {authedEmail ? (
+              <div className="mt-1 rounded-xl border-2 border-border bg-secondary/40 px-3 py-2 text-xs text-muted-foreground">
+                ✉️ <T>回复将发送到</T> <b className="text-foreground">{authedEmail}</b>
+              </div>
+            ) : (
+              <div className="mt-1">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={isLoggedIn
+                    ? t("留个邮箱以便我们回复你（可选）")
+                    : t("邮箱（可选，便于我们回复你）")}
+                  className="w-full rounded-xl border-2 border-border bg-card p-3 text-sm focus:border-primary focus:outline-none"
+                />
+              </div>
+            )}
 
             <button
               onClick={submit}

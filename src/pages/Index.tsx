@@ -17,6 +17,7 @@ import ThreeTracksHero from "@/components/ThreeTracksHero";
 import LandingPage from "@/components/LandingPage";
 import { XPRing } from "@/components/game/XPRing";
 import { useStreakStats } from "@/hooks/useStreakStats";
+import OnboardingWizard from "@/components/OnboardingWizard";
 
 const HOME_COUNTS = {
   slang: 347,
@@ -29,6 +30,7 @@ const Index = () => {
   const streak = getStreak(progress);
   const { stats } = useStreakStats(user?.id);
   const liveStreak = stats?.current_streak ?? streak;
+  const [needsOnboarding, setNeedsOnboarding] = useState(false);
 
   useEffect(() => {
     touchActive();
@@ -39,6 +41,23 @@ const Index = () => {
     supabase.auth.getSession().then(({ data: { session } }) => setUser(session?.user ?? null));
     return () => subscription.unsubscribe();
   }, []);
+
+  // Show 4-step onboarding for first-time logged-in users (no onboarded_at).
+  useEffect(() => {
+    if (!user) { setNeedsOnboarding(false); return; }
+    let cancelled = false;
+    (async () => {
+      const { data } = await supabase
+        .from("profiles")
+        .select("onboarded_at")
+        .eq("user_id", user.id)
+        .maybeSingle();
+      if (cancelled) return;
+      const done = !!(data as { onboarded_at?: string } | null)?.onboarded_at;
+      setNeedsOnboarding(!done);
+    })();
+    return () => { cancelled = true; };
+  }, [user]);
 
   const signOut = async () => {
     await supabase.auth.signOut();
@@ -84,6 +103,9 @@ const Index = () => {
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
+      {user && needsOnboarding && (
+        <OnboardingWizard userId={user.id} onClose={() => setNeedsOnboarding(false)} />
+      )}
       <div className="sticky top-3 z-40 mb-4 flex justify-start md:static md:justify-end">
         <LanguageSwitcher />
         <Button asChild variant="ghost" size="sm" className="mr-2 hidden md:inline-flex">

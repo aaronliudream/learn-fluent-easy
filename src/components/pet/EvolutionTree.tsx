@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Lock } from "lucide-react";
+import { T } from "@/i18n/T";
 
 type Props = { stage: number; level: number; nickname?: string };
 
@@ -18,8 +19,8 @@ export default function EvolutionTree({ stage, level, nickname }: Props) {
   return (
     <div className="rounded-3xl border border-border/60 bg-card p-5 shadow-tile">
       <div className="mb-3 flex items-baseline justify-between">
-        <h3 className="text-sm font-extrabold">成长之路</h3>
-        <span className="text-[10px] text-muted-foreground">完全透明 · 不开盲盒</span>
+        <h3 className="text-sm font-extrabold"><T>成长之路</T></h3>
+        <span className="text-[10px] text-muted-foreground"><T>完全透明 · 不开盲盒</T></span>
       </div>
       <div className="grid grid-cols-4 gap-2">
         {NODES.map((n, i) => {
@@ -38,14 +39,14 @@ export default function EvolutionTree({ stage, level, nickname }: Props) {
                 reached ? "bg-card" : "bg-muted/40 border-border",
               )}>
                 <div className={cn("text-3xl", !reached && "grayscale opacity-50")}>{n.emoji}</div>
-                <div className="mt-1 text-[11px] font-bold">{n.label}</div>
+                <div className="mt-1 text-[11px] font-bold"><T>{n.label}</T></div>
                 <div className="text-[9px] uppercase tracking-wider text-muted-foreground">{n.labelEn}</div>
                 <div className="mt-1 flex items-center gap-0.5 text-[9px] text-muted-foreground">
-                  {!reached && <Lock className="size-2.5" />} {n.req}
+                  {!reached && <Lock className="size-2.5" />} <T>{n.req}</T>
                 </div>
                 {isCurrent && (
                   <span className="absolute -top-2 rounded-full bg-primary px-1.5 py-0.5 text-[8px] font-extrabold text-primary-foreground">
-                    现在
+                    <T>现在</T>
                   </span>
                 )}
               </div>
@@ -54,7 +55,7 @@ export default function EvolutionTree({ stage, level, nickname }: Props) {
         })}
       </div>
       <p className="mt-3 text-center text-[11px] text-muted-foreground">
-        {nickname ? `${nickname} 当前 Lv.${level}` : `当前 Lv.${level}`} · 通过完成学习任务获得经验解锁下一阶段
+        {nickname ? <>{nickname} <T>当前</T> Lv.{level}</> : <><T>当前</T> Lv.{level}</>} · <T>通过完成学习任务获得经验解锁下一阶段</T>
       </p>
     </div>
   );

@@ -154,6 +154,35 @@ const Index = () => {
       {/* Emotional anchor: learning companion as hero */}
       <CompanionHero />
 
+      {/* Streak / XP momentum banner — surfaces the live streak so it's the
+          first thing returning learners see. (Zeigarnik + SDT competence) */}
+      {user && (
+        <section className="mb-6 mt-4 flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-sm">
+          <XPRing value={liveStreak} target={Math.max(7, liveStreak + 1)} />
+          <div className="flex-1 min-w-0">
+            <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+              <T>当前连胜</T>
+            </div>
+            <div className="mt-0.5 text-lg font-extrabold leading-tight">
+              {liveStreak > 0
+                ? <T>{`已经坚持 ${liveStreak} 天，继续保持！`}</T>
+                : <T>今天开练，点亮你的第一天</T>}
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              {stats?.minutes_this_month != null
+                ? <T>{`本月已学 ${stats.minutes_this_month} 分钟 · 答对 ${stats.total_quiz_correct ?? 0} 题`}</T>
+                : <T>每天 5 分钟，足够养成习惯</T>}
+            </div>
+          </div>
+          <Link
+            to="/stats"
+            className="hidden shrink-0 items-center gap-1 rounded-full bg-primary px-4 py-2 text-xs font-bold text-primary-foreground hover:bg-primary/90 md:inline-flex"
+          >
+            <T>查看进度</T> <ArrowRight className="size-3.5" />
+          </Link>
+        </section>
+      )}
+
       {/* Unlogged visitors: free CEFR diagnosis hero — cold-start lever */}
       {!user && (
         <Link

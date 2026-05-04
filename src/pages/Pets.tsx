@@ -523,25 +523,26 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
 }
 
 function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: any) {
+  const t = useT();
   const [busy, setBusy] = useState<string | null>(null);
   const sp = species[active?.species_id];
   if (!active || active.stage < 1) {
-    return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground">宠物还在蛋里，先去喂食孵化吧 🥚</div>;
+    return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground"><T>宠物还在蛋里，先去喂食孵化吧 🥚</T></div>;
   }
   const go = async (id: string) => {
     setBusy(id);
     const { data, error } = await supabase.rpc("take_pet_outing", { _pet_id: active.id, _dest_id: id });
     setBusy(null);
-    if (error) { flash("❌ " + (error.message.includes("hungry") ? "宠物太饿啦，先喂饱再出门" : error.message.includes("coins") ? "💰 星币不够" : error.message)); return; }
+    if (error) { flash("❌ " + (error.message.includes("hungry") ? t("宠物太饿啦，先喂饱再出门") : error.message.includes("coins") ? t("💰 星币不够") : error.message)); return; }
     const r = Array.isArray(data) ? data[0] : data;
-    flash((r?.surprise || "🎉 玩得很开心！") + ` Lv.${r?.new_level}`);
+    flash((r?.surprise || t("🎉 玩得很开心！")) + ` Lv.${r?.new_level}`);
     if (r?.new_level && r.new_level > active.level) {
       const emoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "⭐";
       celebratePet({
         kind: "levelup",
         emoji,
-        title: `Lv.${r.new_level} 达成！`,
-        subtitle: `${active.nickname} 在外面玩得超棒`,
+        title: `Lv.${r.new_level} ${t("达成！")}`,
+        subtitle: `${active.nickname} ${t("在外面玩得超棒")}`,
       });
     }
     onAfter();
@@ -550,7 +551,7 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
     <div className="space-y-3">
       <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 p-3 dark:from-purple-950/30 dark:to-pink-950/30">
         <div className="text-3xl">{petEmoji(active, sp)}</div>
-        <div className="flex-1 text-sm"><b>{active.nickname}</b> · Lv.{active.level} · 饱 {active.hunger}/100</div>
+        <div className="flex-1 text-sm"><b>{active.nickname}</b> · Lv.{active.level} · <T>饱</T> {active.hunger}/100</div>
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         {dests.map((d: Dest) => {
@@ -559,14 +560,14 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
             <div key={d.id} className={cn("flex items-center gap-3 rounded-2xl border-2 bg-card p-3", locked ? "opacity-50" : "border-border")}>
               <div className="text-4xl">{d.emoji}</div>
               <div className="min-w-0 flex-1">
-                <div className="font-extrabold">{d.name_cn}</div>
-                <div className="text-[11px] text-muted-foreground line-clamp-1">{d.description_cn}</div>
-                <div className="mt-0.5 text-[11px] text-muted-foreground">花费 {d.cost_coins} ⭐ · 经验 +{d.exp_reward}</div>
+                <div className="font-extrabold"><T>{d.name_cn}</T></div>
+                <div className="text-[11px] text-muted-foreground line-clamp-1"><T>{d.description_cn}</T></div>
+                <div className="mt-0.5 text-[11px] text-muted-foreground"><T>花费</T> {d.cost_coins} ⭐ · <T>经验</T> +{d.exp_reward}</div>
               </div>
               <button onClick={()=>go(d.id)} disabled={busy===d.id || locked || balance < d.cost_coins}
                 className={cn("shrink-0 rounded-full px-3 py-1.5 text-xs font-extrabold text-white shadow",
                   locked ? "bg-muted-foreground/40" : "bg-gradient-to-r from-emerald-500 to-teal-500")}>
-                {locked ? `Lv.${d.unlock_level}` : "出发"}
+                {locked ? `Lv.${d.unlock_level}` : <T>出发</T>}
               </button>
             </div>
           );

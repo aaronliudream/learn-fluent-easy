@@ -92,6 +92,71 @@ const EN_COPY: Record<string, string> = {
   "隐私": "Privacy",
   "条款": "Terms",
   "联系我们": "Contact",
+
+  // ── High-conversion landing copy (v2) ───────────────────────────────────
+  "Make speaking English as addictive as playing a game.": "Make speaking English as addictive as playing a game.",
+  "Practice real conversations with AI, get instant feedback, and improve your speaking in just 5 minutes a day.":
+    "Practice real conversations with AI, get instant feedback, and improve your speaking in just 5 minutes a day.",
+  "Start for free": "Start for free",
+  "Try the 30-sec demo": "Try the 30-sec demo",
+  "4.9 rating · 10,000+ learners · Available worldwide": "4.9 rating · 10,000+ learners · Available worldwide",
+
+  "Why Big Moon English works": "Why Big Moon English works",
+  "Three things, done right.": "Three things, done right.",
+  "AI Speaking Feedback": "AI Speaking Feedback",
+  "Get instant corrections on pronunciation and fluency — like a real coach in your pocket.":
+    "Get instant corrections on pronunciation and fluency — like a real coach in your pocket.",
+  "Addictive Learning System": "Addictive Learning System",
+  "Streaks, XP, and your own learning companion keep you coming back, day after day.":
+    "Streaks, XP, and your own learning companion keep you coming back, day after day.",
+  "Real-world English": "Real-world English",
+  "Learn how people actually speak — from daily conversations to slang, not textbook lines.":
+    "Learn how people actually speak — from daily conversations to slang, not textbook lines.",
+
+  "Trusted by learners worldwide": "Trusted by learners worldwide",
+  "Real stories from real users.": "Real stories from real users.",
+  "Finally, something that actually helps me speak.": "Finally, something that actually helps me speak.",
+  "Jason · United States": "Jason · United States",
+  "I improved my pronunciation in just 2 weeks.": "I improved my pronunciation in just 2 weeks.",
+  "Maria · Mexico": "Maria · Mexico",
+  "My kid loves the pet system!": "My kid loves the pet system!",
+  "Li Wei · China": "Li Wei · China",
+  "Used in 180+ countries": "Used in 180+ countries",
+
+  "Stay motivated, every day": "Stay motivated, every day",
+  "Build your streak": "Build your streak",
+  "Light up a flame each day you study. Miss a day and your streak resets — so you don't.":
+    "Light up a flame each day you study. Miss a day and your streak resets — so you don't.",
+  "Grow your learning companion": "Grow your learning companion",
+  "Adopt a virtual buddy. Feed it with words you learn. Watch it evolve as you level up.":
+    "Adopt a virtual buddy. Feed it with words you learn. Watch it evolve as you level up.",
+  "Earn XP and level up": "Earn XP and level up",
+  "Every lesson, quiz, and conversation earns XP. Climb the leaderboard with friends.":
+    "Every lesson, quiz, and conversation earns XP. Climb the leaderboard with friends.",
+  "Learning English doesn't feel like studying anymore.": "Learning English doesn't feel like studying anymore.",
+
+  "Simple pricing": "Simple pricing",
+  "Start free. Upgrade when you're hooked.": "Start free. Upgrade when you're hooked.",
+  "Free": "Free",
+  "Free forever": "Free forever",
+  "3 lessons per day": "3 lessons per day",
+  "Basic AI speaking practice": "Basic AI speaking practice",
+  "Daily streak & XP": "Daily streak & XP",
+  "Pet companion": "Pet companion",
+  "Pro": "Pro",
+  "/ month": "/ month",
+  "Most popular": "Most popular",
+  "Unlimited speaking practice": "Unlimited speaking practice",
+  "Advanced AI feedback (pronunciation, grammar, fluency)": "Advanced AI feedback (pronunciation, grammar, fluency)",
+  "All scenarios & slang unlocked": "All scenarios & slang unlocked",
+  "Weekly progress reports": "Weekly progress reports",
+  "Priority support": "Priority support",
+  "Get Pro": "Get Pro",
+  "No credit card required": "No credit card required",
+
+  "Ready to actually speak English?": "Ready to actually speak English?",
+  "Five minutes a day. Real conversations. Visible progress.":
+    "Five minutes a day. Real conversations. Visible progress.",
 };
 
 /**

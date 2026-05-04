@@ -81,6 +81,7 @@ const FriendPet = lazy(() => import("./pages/FriendPet.tsx"));
 const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 const Social = lazy(() => import("./pages/Social.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
+import FeedbackWidget from "@/components/FeedbackWidget";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 import { FloatingPet } from "@/components/pet/FloatingPet";
 import { DigestionAnimation } from "@/components/pet/DigestionAnimation";
@@ -224,6 +225,7 @@ const App = () => (
         </Suspense>
         </div>
         <BottomTabBar />
+        <FeedbackWidget />
       </BrowserRouter>
     </TooltipProvider>
     </I18nProvider>

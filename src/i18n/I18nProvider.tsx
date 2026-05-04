@@ -380,7 +380,6 @@ const EN_FALLBACKS: Record<string, string> = {
   "宠物正在消化…明天到账": "Buddy is digesting… arrives tomorrow",
   "继续 →": "Continue →",
   "你的小伙伴": "your buddy",
-  "来自": "From",
   "的信": "'s letter",
   "这一周，我们一起做到了 ✨": "This week, we did it together ✨",
   "嘿！这周我们一起学习了": "Hey! This week we studied together for",

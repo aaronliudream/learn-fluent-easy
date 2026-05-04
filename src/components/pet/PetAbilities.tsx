@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { Lock, Sparkles } from "lucide-react";
+import { T } from "@/i18n/T";
 
 type Binding = {
   skill_code: string; label_cn: string; label_en: string;
@@ -48,8 +49,8 @@ export default function PetAbilities() {
     <div className="rounded-3xl border border-border/60 bg-card p-5 shadow-tile">
       <div className="mb-3 flex items-center gap-2">
         <Sparkles className="size-4 text-primary" />
-        <h3 className="text-sm font-extrabold">伙伴的能力</h3>
-        <span className="text-[10px] text-muted-foreground">每掌握一个知识点，它就会解锁一个能力</span>
+        <h3 className="text-sm font-extrabold"><T>伙伴的能力</T></h3>
+        <span className="text-[10px] text-muted-foreground"><T>每掌握一个知识点，它就会解锁一个能力</T></span>
       </div>
       <div className="grid gap-2 sm:grid-cols-2">
         {items.map(it => (
@@ -64,10 +65,10 @@ export default function PetAbilities() {
               <div className={cn("text-2xl", !it.unlocked && "grayscale opacity-60")}>{it.emoji}</div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-1 text-sm font-bold">
-                  {it.label_cn}
+                  <T>{it.label_cn}</T>
                   {!it.unlocked && <Lock className="size-3 text-muted-foreground" />}
                 </div>
-                <div className="text-[11px] text-muted-foreground">{it.description_cn}</div>
+                <div className="text-[11px] text-muted-foreground"><T>{it.description_cn}</T></div>
               </div>
             </div>
             <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted">
@@ -81,8 +82,8 @@ export default function PetAbilities() {
               <span>{it.cur} / {it.threshold}</span>
               <span>
                 {it.unlocked
-                  ? "已解锁 ✨"
-                  : `还差 ${it.threshold - it.cur} 次`}
+                  ? <T>已解锁 ✨</T>
+                  : <><T>还差</T> {it.threshold - it.cur} <T>次</T></>}
               </span>
             </div>
           </div>

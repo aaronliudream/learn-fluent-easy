@@ -14,6 +14,7 @@ import { T } from "@/i18n/T";
 import { SupportButton } from "@/components/SupportButton";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
 import CompanionHero from "@/components/pet/CompanionHero";
+import ThreeTracksHero from "@/components/ThreeTracksHero";
 
 const HOME_COUNTS = {
   slang: 347,
@@ -173,6 +174,9 @@ const Index = () => {
 
       {/* Emotional anchor: learning companion as hero */}
       <CompanionHero />
+
+      {/* Three-track entry — primary path selection (Exam / Career / Beginner) */}
+      <ThreeTracksHero />
 
       {/* Primary: Today's Task card — single clear next action */}
       <TodayTaskCard />

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { useSearchParams } from "react-router-dom";
-import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap, Brain, Headphones, Music, Keyboard, BarChart3 } from "lucide-react";
+import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
@@ -26,7 +26,7 @@ type Vocab = {
   freq_rank: number | null;
 };
 
-type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict";
+type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs";
 const GROUP_SIZE = 20;
 
 export default function JuniorVocab() {
@@ -73,6 +73,24 @@ export default function JuniorVocab() {
   const groupIdx = Number.isFinite(groupParam) ? groupParam - 1 : -1;
   const activePool = groupIdx >= 0 && groupIdx < groups.length ? groups[groupIdx] : words;
 
+  // For SRS mode we filter the pool to only words that are due now (per junior_word_mastery)
+  const [srsPool, setSrsPool] = useState<Vocab[] | null>(null);
+  useEffect(() => {
+    if (mode !== "srs") { setSrsPool(null); return; }
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) { setSrsPool([]); return; }
+      const { data } = await supabase
+        .from("junior_word_mastery")
+        .select("word_id,due_at")
+        .eq("user_id", user.id)
+        .lte("due_at", new Date().toISOString())
+        .limit(200);
+      const dueIds = new Set((data ?? []).map((r: any) => r.word_id));
+      setSrsPool(words.filter((w) => dueIds.has(w.id)));
+    })();
+  }, [mode, words]);
+
   const exit = () => {
     const np = new URLSearchParams(params);
     np.delete("mode");
@@ -89,6 +107,24 @@ export default function JuniorVocab() {
     );
   }
 
+  if (mode === "srs") {
+    if (srsPool === null) {
+      return <main className="mx-auto min-h-screen max-w-3xl px-5 py-8"><div className="flex items-center justify-center py-20 text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> 加载到期单词…</div></main>;
+    }
+    if (srsPool.length === 0) {
+      return (
+        <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+          <button onClick={exit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</button>
+          <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
+            <Trophy className="mx-auto size-12 text-amber-500" />
+            <h3 className="mt-2 text-xl font-extrabold">今日没有到期单词 🎉</h3>
+            <p className="mt-1 text-sm text-muted-foreground">先去清单里学一组新词，系统会按艾宾浩斯曲线自动安排复习。</p>
+          </div>
+        </main>
+      );
+    }
+    return <ClassicQuiz pool={srsPool} onExit={exit} />;
+  }
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
   if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
   if (mode === "duel") return <WordDuel pool={activePool} onExit={exit} />;
@@ -100,13 +136,14 @@ export default function JuniorVocab() {
     return <JuniorWordGroup group={groups[groupIdx]} groupNumber={groupIdx + 1} grade={displayGrade} onExit={() => setParams({ grade })} onPractice={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} />;
   }
 
-  return <JuniorVocabHub words={words} groups={groups} grade={displayGrade} onPick={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} onPickGroup={(i) => setParams({ grade, group: String(i + 1) })} />;
+  return <JuniorVocabHub words={words} groups={groups} grade={displayGrade} gradeNum={rawGrade <= 3 ? rawGrade + 6 : rawGrade} onPick={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} onPickGroup={(i) => setParams({ grade, group: String(i + 1) })} />;
 }
 
 /* -------------------- HUB -------------------- */
-function JuniorVocabHub({ words, groups, grade, onPick, onPickGroup }: { words: Vocab[]; groups: Vocab[][]; grade: number; onPick: (m: Exclude<Mode, null>) => void; onPickGroup: (i: number) => void }) {
-  const [studiedCount, setStudiedCount] = useState(0);
-  const [dueCount, setDueCount] = useState(0);
+type WordMasteryRow = { word_id: string; mastery_level: number | null; due_at: string | null; interval_days: number | null };
+function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }: { words: Vocab[]; groups: Vocab[][]; grade: number; gradeNum: number; onPick: (m: Exclude<Mode, null>) => void; onPickGroup: (i: number) => void }) {
+  const [masteryMap, setMasteryMap] = useState<Map<string, WordMasteryRow>>(new Map());
+  const [loadedMastery, setLoadedMastery] = useState(false);
   const games: { mode: Exclude<Mode, null>; icon: any; title: string; desc: string; gradient: string; badge?: string }[] = [
     { mode: "classic", icon: Brain, title: "智能选义", desc: "听音辨义 · 自动接入复习曲线", gradient: "from-emerald-500 to-teal-500", badge: "推荐" },
     { mode: "bento", icon: Sparkles, title: "单词便当", desc: "6×4 翻牌速配 · 训练反应力", gradient: "from-rose-500 to-orange-500" },
@@ -119,24 +156,33 @@ function JuniorVocabHub({ words, groups, grade, onPick, onPickGroup }: { words: 
   useEffect(() => {
     (async () => {
       const { data: { user } } = await supabase.auth.getUser();
-      if (!user || words.length === 0) return;
-      const ids = words.map((w) => w.id);
-      const { data: studied } = await supabase
-        .from("gaokao_user_mastery")
-        .select("item_id,due_at,next_review_at")
+      if (!user || words.length === 0) { setLoadedMastery(true); return; }
+      const { data } = await supabase
+        .from("junior_word_mastery")
+        .select("word_id,mastery_level,due_at,interval_days")
         .eq("user_id", user.id)
-        .eq("item_type", "vocab")
-        .in("item_id", ids);
-      const now = Date.now();
-      setStudiedCount(studied?.length ?? 0);
-      setDueCount((studied ?? []).filter((m: any) => {
-        const due = m.due_at ?? m.next_review_at;
-        return due && new Date(due).getTime() <= now;
-      }).length);
+        .eq("grade", gradeNum)
+        .limit(5000);
+      const map = new Map<string, WordMasteryRow>();
+      (data ?? []).forEach((r: any) => map.set(r.word_id, r));
+      setMasteryMap(map);
+      setLoadedMastery(true);
     })();
-  }, [words]);
+  }, [words, gradeNum]);
 
-  const pct = Math.round((studiedCount / Math.max(1, words.length)) * 100);
+  // Aggregate stats
+  const now = Date.now();
+  let mastered = 0, studied = 0, dueCount = 0, intervalSum = 0, intervalN = 0;
+  masteryMap.forEach((r) => {
+    studied += 1;
+    if ((r.mastery_level ?? 0) >= 4) mastered += 1;
+    if (r.due_at && new Date(r.due_at).getTime() <= now) dueCount += 1;
+    if (r.interval_days && r.interval_days > 0) { intervalSum += r.interval_days; intervalN += 1; }
+  });
+  const total = words.length;
+  const masteredPct = total > 0 ? Math.round((mastered / total) * 1000) / 10 : 0;
+  const studiedPct = total > 0 ? Math.round((studied / total) * 1000) / 10 : 0;
+  const avgStability = intervalN > 0 ? intervalSum / intervalN : 0;
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
@@ -150,11 +196,69 @@ function JuniorVocabHub({ words, groups, grade, onPick, onPickGroup }: { words: 
         <p className="mt-1 text-xs text-muted-foreground">中考新课标 · 共 {words.length} 词 · 按 20 词一组系统学习</p>
       </div>
 
-      <section className="mb-5 grid grid-cols-3 gap-2">
-        <div className="rounded-2xl border border-border/60 bg-card p-3 text-center"><div className="text-lg font-black text-primary">{studiedCount}</div><div className="text-[10px] text-muted-foreground">已练习</div></div>
-        <div className="rounded-2xl border border-border/60 bg-card p-3 text-center"><div className="text-lg font-black text-primary">{pct}%</div><div className="text-[10px] text-muted-foreground">完成度</div></div>
-        <div className="rounded-2xl border border-border/60 bg-card p-3 text-center"><div className="text-lg font-black text-primary">{dueCount}</div><div className="text-[10px] text-muted-foreground">待复习</div></div>
+      {/* 学习进度总览（高考同款风格，复用 junior_word_mastery） */}
+      <section className="mb-5 rounded-2xl bg-card p-4 shadow-tile">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <BarChart3 className="size-4 text-fuchsia-600" />
+            <h3 className="text-sm font-bold text-foreground">我的词汇掌握度</h3>
+          </div>
+          <span className="text-[10px] text-muted-foreground">FSRS 遗忘曲线 · 多维评判</span>
+        </div>
+        <div className="mt-3 flex items-end gap-2">
+          <div className="text-3xl font-extrabold leading-none text-fuchsia-600">{mastered.toLocaleString()}</div>
+          <div className="pb-1 text-xs text-muted-foreground">/ {total.toLocaleString()} 词彻底掌握 ({masteredPct}%)</div>
+        </div>
+        <div className="mt-3 flex h-2.5 w-full overflow-hidden rounded-full bg-muted">
+          <div className="bg-gradient-to-r from-fuchsia-500 to-pink-500" style={{ width: `${total ? (mastered / total) * 100 : 0}%` }} />
+          <div className="bg-gradient-to-r from-amber-400 to-orange-400" style={{ width: `${total ? (Math.max(0, studied - mastered) / total) * 100 : 0}%` }} />
+        </div>
+        <div className="mt-2 flex items-center justify-between text-[11px] text-muted-foreground">
+          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-fuchsia-500" /> 掌握 {masteredPct}%</span>
+          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-amber-400" /> 学习中 {Math.max(0, Math.round((studiedPct - masteredPct) * 10) / 10)}%</span>
+          <span className="flex items-center gap-1"><span className="inline-block size-2 rounded-full bg-muted-foreground/30" /> 未开始 {Math.max(0, Math.round((100 - studiedPct) * 10) / 10)}%</span>
+        </div>
+        <div className="mt-3 grid grid-cols-4 gap-2">
+          <MiniStat icon={<Crown className="size-3.5" />} label="👑 掌握" value={mastered} tone="from-fuchsia-500 to-pink-500" />
+          <MiniStat icon={<Sparkles className="size-3.5" />} label="🌟 学习中" value={Math.max(0, studied - mastered)} tone="from-amber-400 to-orange-500" />
+          <MiniStat icon={<Clock className="size-3.5" />} label="⏰ 待复习" value={dueCount} tone="from-blue-500 to-indigo-600" />
+          <MiniStat icon={<Flame className="size-3.5" />} label="📈 平均稳定" value={Math.round(avgStability * 10) / 10} tone="from-emerald-500 to-teal-500" hint="天" />
+        </div>
       </section>
+
+      {/* SRS 智能复习入口（高考同款） */}
+      <button
+        onClick={() => onPick("srs")}
+        disabled={dueCount === 0}
+        className={cn(
+          "mb-5 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
+          dueCount > 0 ? "border-primary bg-gradient-to-br from-primary/15 via-primary/5 to-transparent hover:border-primary"
+                       : "border-border bg-muted/30 opacity-70 cursor-not-allowed",
+        )}
+      >
+        <div className="flex items-center gap-4">
+          <div className={cn("flex size-14 shrink-0 items-center justify-center rounded-2xl", dueCount > 0 ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground")}>
+            <Brain className="size-7" />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-base font-extrabold">🧠 智能复习</span>
+              {dueCount > 0 && (
+                <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[11px] font-bold text-primary-foreground">
+                  <Flame className="size-3" /> 今日 {dueCount} 词待复习
+                </span>
+              )}
+            </div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              {!loadedMastery ? "加载中…" : dueCount === 0
+                ? studied === 0 ? "先学一组单词，系统会按艾宾浩斯曲线安排复习"
+                                : `已学 ${studied} 词 · 今日没有到期单词，明天再来`
+                : `已学 ${studied} 词 · SM-2 算法 · 答错重学，答对延后`}
+            </div>
+          </div>
+          {dueCount > 0 && <ChevronRight className="size-5 text-primary" />}
+        </div>
+      </button>
 
       <section className="mb-6">
         <div className="mb-3 flex items-end justify-between gap-3">
@@ -165,20 +269,57 @@ function JuniorVocabHub({ words, groups, grade, onPick, onPickGroup }: { words: 
           <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">{groups.length} 组</span>
         </div>
         <div className="grid gap-2">
-          {groups.map((group, i) => (
-            <button key={i} onClick={() => onPickGroup(i)} className="rounded-2xl border border-border/60 bg-card p-3 text-left transition hover:border-primary/50 hover:bg-primary/5">
-              <div className="flex items-center justify-between gap-3">
-                <div className="min-w-0">
-                  <div className="text-sm font-extrabold">第 {i + 1} 组 · {group.length} 词</div>
-                  <div className="mt-1 truncate text-xs text-muted-foreground">{group.slice(0, 5).map((w) => w.word).join(" · ")}</div>
+          {groups.map((group, i) => {
+            let gMastered = 0, gDue = 0, gTouched = 0;
+            group.forEach((w) => {
+              const r = masteryMap.get(w.id);
+              if (!r) return;
+              gTouched += 1;
+              if ((r.mastery_level ?? 0) >= 4) gMastered += 1;
+              if (r.due_at && new Date(r.due_at).getTime() <= now) gDue += 1;
+            });
+            const allMastered = gMastered === group.length;
+            return (
+              <button key={i} onClick={() => onPickGroup(i)} className={cn(
+                "rounded-2xl border bg-card p-3 text-left transition hover:border-primary/50 hover:bg-primary/5",
+                allMastered ? "border-fuchsia-400/60" : "border-border/60",
+              )}>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-extrabold">第 {i + 1} 组</span>
+                      <span className="text-[11px] text-muted-foreground">{group.length} 词</span>
+                      {allMastered && <span className="rounded-full bg-fuchsia-500/15 px-2 py-0.5 text-[10px] font-bold text-fuchsia-600">👑 全部掌握</span>}
+                    </div>
+                    <div className="mt-1 truncate text-xs text-muted-foreground">{group.slice(0, 5).map((w) => w.word).join(" · ")}</div>
+                    <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-fuchsia-500/10 px-2 py-0.5 text-[10px] font-bold text-fuchsia-600">
+                        <Crown className="size-3" /> 已掌握 {gMastered}
+                      </span>
+                      {gDue > 0 && (
+                        <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/10 px-2 py-0.5 text-[10px] font-bold text-blue-600">
+                          <Clock className="size-3" /> 待复习 {gDue}
+                        </span>
+                      )}
+                      {gTouched < group.length && (
+                        <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-[10px] font-bold text-muted-foreground">
+                          未学 {group.length - gTouched}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
                 </div>
-                <span className="shrink-0 rounded-full bg-secondary px-3 py-1 text-xs font-bold">打开</span>
-              </div>
-            </button>
-          ))}
+              </button>
+            );
+          })}
         </div>
       </section>
 
+      <div className="mb-3 mt-4 flex items-end justify-between">
+        <h2 className="text-base font-extrabold">辅助训练</h2>
+        <span className="text-[11px] text-muted-foreground">6 种游戏 · 全部接入复习曲线</span>
+      </div>
       <div className="grid gap-3 sm:grid-cols-2">
         {games.map((g) => {
           const Icon = g.icon;
@@ -220,6 +361,16 @@ function JuniorVocabHub({ words, groups, grade, onPick, onPickGroup }: { words: 
         </ul>
       </div>
     </main>
+  );
+}
+
+function MiniStat({ icon, label, value, tone, hint }: { icon: React.ReactNode; label: string; value: number; tone: string; hint?: string }) {
+  return (
+    <div className="rounded-xl bg-muted/40 p-2 text-center">
+      <div className={`mx-auto flex size-7 items-center justify-center rounded-lg bg-gradient-to-br ${tone} text-white`}>{icon}</div>
+      <div className="mt-1 text-base font-extrabold leading-none text-foreground">{value.toLocaleString()}{hint && <span className="ml-0.5 text-[9px] font-bold text-muted-foreground">{hint}</span>}</div>
+      <div className="mt-0.5 text-[10px] leading-tight text-muted-foreground">{label}</div>
+    </div>
   );
 }
 

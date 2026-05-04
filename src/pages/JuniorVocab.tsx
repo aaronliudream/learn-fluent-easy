@@ -38,7 +38,9 @@ export default function JuniorVocab() {
 
   useEffect(() => {
     setLoading(true);
-    const gradeNum = Number(grade);
+    // 入口可能传 1/2/3（初一/二/三 序号）或 7/8/9（Grade 7/8/9），统一映射到 7/8/9。
+    const raw = Number(grade);
+    const gradeNum = raw <= 3 ? raw + 6 : raw;
     // Grade 7 (初一) 使用专门导入的 junior_vocab 词库；其他年级暂时回退到 gaokao_vocab(stage=junior)
     const loader = gradeNum === 7
       ? supabase

@@ -643,6 +643,7 @@ function AdoptTab({ species, balance, onAfter, flash, setTab }: any) {
 }
 
 function DiaryTab({ diary }: { diary: Diary[] }) {
+  const t = useT();
   const [ai, setAi] = useState<{ body_cn: string; highlights: string[]; pet_nickname?: string } | null>(null);
   const [loadingAi, setLoadingAi] = useState(false);
   useEffect(() => {
@@ -668,17 +669,17 @@ function DiaryTab({ diary }: { diary: Diary[] }) {
     <div className="space-y-3">
       <div className="rounded-2xl bg-gradient-to-br from-amber-300 via-orange-400 to-rose-500 p-5 text-white shadow-tile">
         <div className="flex items-center justify-between">
-          <div className="text-xs uppercase tracking-wider opacity-90">🐾 AI 宠物日记 · 今日</div>
+          <div className="text-xs uppercase tracking-wider opacity-90">🐾 AI <T>宠物日记 · 今日</T></div>
           <button onClick={generate} disabled={loadingAi} className="rounded-full bg-white/20 px-3 py-1 text-[11px] font-bold backdrop-blur disabled:opacity-60">
-            {loadingAi ? "生成中…" : ai ? "重新生成" : "生成今日日记"}
+            {loadingAi ? t("生成中…") : ai ? t("重新生成") : t("生成今日日记")}
           </button>
         </div>
         {ai ? (
           <>
-            <p className="mt-3 text-sm leading-relaxed whitespace-pre-wrap">{ai.body_cn}</p>
+            <p className="mt-3 text-sm leading-relaxed whitespace-pre-wrap"><T>{ai.body_cn}</T></p>
             {ai.highlights?.length > 0 && (
               <div className="mt-3 flex flex-wrap gap-1.5">
-                {ai.highlights.map((h, i) => <span key={i} className="rounded-full bg-white/20 px-2 py-0.5 text-[11px] font-bold backdrop-blur">{h}</span>)}
+                {ai.highlights.map((h, i) => <span key={i} className="rounded-full bg-white/20 px-2 py-0.5 text-[11px] font-bold backdrop-blur"><T>{h}</T></span>)}
               </div>
             )}
             <div className="mt-2 flex justify-end">
@@ -690,18 +691,18 @@ function DiaryTab({ diary }: { diary: Diary[] }) {
             </div>
           </>
         ) : (
-          <p className="mt-3 text-sm opacity-90">点击"生成今日日记"，让宠物把今天的学习记下来 📝</p>
+          <p className="mt-3 text-sm opacity-90"><T>点击生成今日日记，让宠物把今天的学习记下来 📝</T></p>
         )}
       </div>
       {diary.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-xs text-muted-foreground">动态日记会显示在这里</div>
+        <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-xs text-muted-foreground"><T>动态日记会显示在这里</T></div>
       ) : (
         <div className="space-y-2">
           {diary.map(d => (
             <div key={d.id} className="flex items-start gap-3 rounded-xl border border-border bg-card p-3">
               <div className="text-2xl">{d.emoji || "📝"}</div>
               <div className="min-w-0 flex-1">
-                <div className="text-sm font-bold">{d.message}</div>
+                <div className="text-sm font-bold"><T>{d.message}</T></div>
                 <div className="text-[10px] text-muted-foreground">{new Date(d.created_at).toLocaleString("zh-CN")}</div>
               </div>
             </div>

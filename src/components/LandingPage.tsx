@@ -69,6 +69,29 @@ export default function LandingPage() {
               <T>看看里面有什么 ↓</T>
             </a>
           </p>
+
+          {isSimplifiedChinese && (
+            <Link
+              to="/china"
+              className="group mx-auto mt-10 flex max-w-xl items-center gap-4 rounded-2xl border-2 border-[#E8743C]/30 bg-gradient-to-br from-[#FFF4EC] to-[#FFE3CF] px-6 py-5 text-left transition hover:-translate-y-0.5 hover:border-[#E8743C]/60 hover:shadow-[0_18px_40px_-20px_rgba(232,116,60,0.5)]"
+            >
+              <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#E8743C] text-white">
+                <BookMarked className="size-6" />
+              </div>
+              <div className="flex-1">
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#E8743C]">
+                  中国学生专区 · China Students
+                </div>
+                <div className="mt-1 font-serif text-lg font-medium leading-tight text-[#1F3A2E] md:text-xl">
+                  小学 · 初中 · 高考 一站式备考
+                </div>
+                <div className="mt-1 text-xs text-[#1F3A2E]/65">
+                  人教版 · 外研版同步教材，AI 错题讲解、阅读完形、语法专项
+                </div>
+              </div>
+              <ArrowRight className="size-5 shrink-0 text-[#E8743C] transition-transform group-hover:translate-x-1" />
+            </Link>
+          )}
         </div>
       </section>
 

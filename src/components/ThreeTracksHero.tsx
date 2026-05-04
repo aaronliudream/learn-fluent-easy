@@ -35,7 +35,7 @@ const tracks = [
     zh: "中国学生专区",
     en: "China Students",
     desc: "小学 · 初中 · 高中 · 高考 — 校内同步 + 考点突破。",
-    bullets: ["按学段精准提分", "历年真题 + 80% 掌握解锁", "错题间隔重复"],
+    bullets: ["按学段定位薄弱点 · 科学复习路径", "历年真题 + 80% 掌握解锁", "错题间隔重复"],
     gradient: "linear-gradient(160deg, #7B3FF1 0%, #5B2BC9 100%)",
     btnTextColor: "#7B3FF1",
   },

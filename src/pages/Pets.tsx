@@ -10,6 +10,8 @@ import ReportAIButton from "@/components/pet/ReportAIButton";
 import PlanetMap from "@/components/pet/PlanetMap";
 import PetChat from "@/components/pet/PetChat";
 import MonthlyPostcard from "@/components/pet/MonthlyPostcard";
+import PetAbilities from "@/components/pet/PetAbilities";
+import EvolutionTree from "@/components/pet/EvolutionTree";
 import { useCurrencies, wishlistAdd, fetchWishlist, wishlistRemove, type WishlistRow } from "@/lib/currencies";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
@@ -257,6 +259,8 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
           <Bar label="心情" value={active.mood} hint={`${active.mood}/100`} color="from-rose-400 to-pink-500" />
         </div>
       </div>
+      <EvolutionTree stage={active.stage} level={active.level} nickname={active.nickname} />
+      <PetAbilities />
 
       {/* Sticker board */}
       <div className="rounded-2xl border-2 border-border bg-card p-3">

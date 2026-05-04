@@ -268,8 +268,8 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
       {/* Sticker board */}
       <div className="rounded-2xl border-2 border-border bg-card p-3">
         <div className="mb-2 flex items-center justify-between">
-          <h3 className="text-sm font-extrabold">😊 表情贴纸</h3>
-          <span className="text-[10px] text-muted-foreground">已解锁 {unlockedStickers.length}/{(stickers as Sticker[]).length}</span>
+            <h3 className="text-sm font-extrabold">😊 <T>表情贴纸</T></h3>
+          <span className="text-[10px] text-muted-foreground"><T>已解锁</T> {unlockedStickers.length}/{(stickers as Sticker[]).length}</span>
         </div>
         <div className="flex flex-wrap gap-1.5">
           {unlockedStickers.map((s: Sticker) => (
@@ -280,7 +280,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
             </button>
           ))}
           {lockedStickers.map((s: Sticker) => (
-            <div key={s.id} title={`Lv.${s.unlock_level} 解锁`}
+            <div key={s.id} title={`Lv.${s.unlock_level} ${t("解锁")}`}
               className="rounded-xl border border-dashed border-border bg-muted/40 p-1.5 text-xl opacity-40 grayscale">
               {s.emoji}
             </div>
@@ -291,12 +291,12 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
       {/* Quick feed */}
       <div>
         <div className="mb-2 flex items-center justify-between">
-          <h3 className="text-sm font-extrabold">🍽️ 喂它吃点东西</h3>
-          <span className="text-[11px] text-muted-foreground">点食物即可喂食</span>
+          <h3 className="text-sm font-extrabold">🍽️ <T>喂它吃点东西</T></h3>
+          <span className="text-[11px] text-muted-foreground"><T>点食物即可喂食</T></span>
         </div>
         {inv.filter((i: Inv) => i.qty > 0).length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border bg-card p-4 text-center text-xs text-muted-foreground">
-            背包空空，去「商店」买点食物吧 🛒
+            <T>背包空空，去「商店」买点食物吧 🛒</T>
           </div>
         ) : (
           <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
@@ -319,7 +319,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
       {/* Other pets */}
       {pets.length > 1 && (
         <div>
-          <h3 className="mb-2 text-sm font-extrabold">🏡 我的伙伴们</h3>
+          <h3 className="mb-2 text-sm font-extrabold">🏡 <T>我的伙伴们</T></h3>
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
             {pets.map((p: Pet) => {
               const s: Species = species[p.species_id];
@@ -340,8 +340,8 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
       <Link to="/friends" className="mt-4 flex items-center gap-3 rounded-2xl border border-border bg-gradient-to-r from-fuchsia-500/10 to-amber-400/10 p-4 transition hover:-translate-y-0.5 hover:border-primary">
         <div className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-amber-500 text-white text-xl">🐾</div>
         <div className="flex-1 min-w-0">
-          <div className="text-sm font-extrabold">学习朋友圈 · Pet Friends</div>
-          <div className="text-[11px] text-muted-foreground">互访朋友的伙伴 · 送礼物 · 拍合影</div>
+          <div className="text-sm font-extrabold"><T>学习朋友圈</T> · Pet Friends</div>
+          <div className="text-[11px] text-muted-foreground"><T>互访朋友的伙伴 · 送礼物 · 拍合影</T></div>
         </div>
         <span className="text-muted-foreground">→</span>
       </Link>

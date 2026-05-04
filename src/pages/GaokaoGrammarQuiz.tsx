@@ -1,13 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, RotateCcw, BookOpen } from "lucide-react";
+import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, RotateCcw, BookOpen, MessageCircleQuestion } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { recordAttempt } from "@/lib/gaokaoMastery";
 import { awardCoins } from "@/lib/coins";
 import { recordGrammarAttempt, loadGrammarMastery, LEVEL_META, type GrammarMastery } from "@/lib/grammarFsrs";
 import { toast } from "sonner";
+import TutorChat from "@/components/tutor/TutorChat";
 
 type Point = { id: string; title: string; slug: string };
 type Question = {
@@ -35,6 +36,7 @@ export default function GaokaoGrammarQuiz() {
   const [picked, setPicked] = useState<string | null>(null);
   const [startTs, setStartTs] = useState<number>(Date.now());
   const [stats, setStats] = useState({ correct: 0, wrong: 0 });
+  const [tutorOpen, setTutorOpen] = useState(false);
 
   useEffect(() => {
     if (!slug) return;
@@ -65,6 +67,7 @@ export default function GaokaoGrammarQuiz() {
   useEffect(() => {
     setPicked(null);
     setStartTs(Date.now());
+    setTutorOpen(false);
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   }, [idx]);
 
@@ -215,6 +218,17 @@ export default function GaokaoGrammarQuiz() {
               {"\n"}
               {q.explanation}
             </p>
+            <div className="mt-3">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setTutorOpen(true)}
+                className="rounded-full border-primary/40 text-primary hover:bg-primary/10"
+              >
+                <MessageCircleQuestion className="size-4 mr-1.5" />
+                问小月 / Ask Luna
+              </Button>
+            </div>
           </div>
         )}
       </section>
@@ -235,6 +249,24 @@ export default function GaokaoGrammarQuiz() {
           </Button>
         )}
       </div>
+
+      {picked && (
+        <TutorChat
+          context="gaokao_grammar"
+          questionRef={q.id}
+          questionSnapshot={{
+            point: point.title,
+            stem: q.stem,
+            options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
+            correct_answer: q.correct_answer,
+            user_answer: picked,
+            is_correct: picked === q.correct_answer,
+            explanation: q.explanation,
+          }}
+          open={tutorOpen}
+          onClose={() => setTutorOpen(false)}
+        />
+      )}
     </main>
   );
 }

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Loader2, Sparkles, Volume2, Play, Star, Check, Trash2, Search,
-  BookOpen, Mic, AlertCircle, Filter, Trophy,
+  BookOpen, Mic, AlertCircle, Filter, Trophy, MessageCircleQuestion,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { T } from "@/i18n/T";
@@ -10,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak as speakTTS, stopSpeaking } from "@/lib/speak";
 import { getAlexVoice } from "@/lib/alexVoice";
 import { toast } from "sonner";
+import TutorChat from "@/components/tutor/TutorChat";
 
 type Mistake = {
   id: string;
@@ -48,6 +49,7 @@ const MistakesPage = () => {
   const [tab, setTab] = useState<ModuleKey>("due");
   const [search, setSearch] = useState("");
   const [playingId, setPlayingId] = useState<string | null>(null);
+  const [tutorFor, setTutorFor] = useState<Mistake | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -217,11 +219,30 @@ const MistakesPage = () => {
                   onStar={() => toggleStar(m)}
                   onResolve={() => markResolved(m)}
                   onRemove={() => removeOne(m)}
+                  onAskTutor={() => setTutorFor(m)}
                 />
               ))}
             </ul>
           )}
         </>
+      )}
+
+      {tutorFor && (
+        <TutorChat
+          context="mistakes"
+          questionRef={tutorFor.id}
+          questionSnapshot={{
+            module: tutorFor.module,
+            source: tutorFor.source_label,
+            question: tutorFor.question,
+            user_answer: tutorFor.user_answer,
+            correct_answer: tutorFor.correct_answer,
+            explanation: tutorFor.explanation,
+            extra: tutorFor.snapshot,
+          }}
+          open={!!tutorFor}
+          onClose={() => setTutorFor(null)}
+        />
       )}
     </main>
   );
@@ -264,7 +285,7 @@ function EmptyState({ tab }: { tab: ModuleKey }) {
 }
 
 function MistakeCard({
-  m, playing, onPlay, onStar, onResolve, onRemove,
+  m, playing, onPlay, onStar, onResolve, onRemove, onAskTutor,
 }: {
   m: Mistake;
   playing: boolean;
@@ -272,6 +293,7 @@ function MistakeCard({
   onStar: () => void;
   onResolve: () => void;
   onRemove: () => void;
+  onAskTutor: () => void;
 }) {
   const [revealed, setRevealed] = useState(false);
   const meta = moduleMeta(m.module);
@@ -384,6 +406,12 @@ function MistakeCard({
             <T>错过</T> <span className="font-bold text-foreground">{m.wrong_count}</span> <T>次</T>
           </span>
           <div className="flex gap-2">
+            <button
+              onClick={onAskTutor}
+              className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 font-semibold text-primary hover:bg-primary/20"
+            >
+              <MessageCircleQuestion className="size-3" /> <T>问小月</T>
+            </button>
             <button
               onClick={onResolve}
               className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-3 py-1 font-semibold text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-500/20 dark:text-emerald-300"

@@ -9,6 +9,7 @@ import {
   Headphones,
   HelpCircle,
   MessageCircle,
+  MessageCircleQuestion,
   Mic,
   Pencil,
   RefreshCw,
@@ -56,6 +57,7 @@ import {
 import { AITalkDialog } from "@/components/AITalkDialog";
 import { Phone } from "lucide-react";
 import { fireConfetti } from "@/lib/feedback";
+import TutorChat from "@/components/tutor/TutorChat";
 
 const STEP_ICONS = {
   BookOpen,
@@ -128,6 +130,10 @@ const Lesson = () => {
   const [generating, setGenerating] = useState(false);
   const [talkOpen, setTalkOpen] = useState(false);
   const [authedUser, setAuthedUser] = useState<boolean>(false);
+  const [tutorReq, setTutorReq] = useState<{
+    refId: string;
+    snapshot: Record<string, unknown>;
+  } | null>(null);
   useEffect(() => {
     let active = true;
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -758,6 +764,26 @@ const Lesson = () => {
                       );
                     })}
                   </div>
+                  {picked !== undefined && (
+                    <div className="mt-3">
+                      <button
+                        onClick={() => setTutorReq({
+                          refId: `lesson-${levelId}-${unitId}-${lessonId}-vocab-${q.idx}`,
+                          snapshot: {
+                            type: "vocab_quiz",
+                            word: q.word,
+                            options: q.options,
+                            correct_index: q.answer,
+                            user_index: picked,
+                            is_correct: picked === q.answer,
+                          },
+                        })}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
+                      >
+                        <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
+                      </button>
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -979,6 +1005,27 @@ const Lesson = () => {
                       )}
                     </div>
                   )}
+                  {picked && (
+                    <div className="mt-2">
+                      <button
+                        onClick={() => setTutorReq({
+                          refId: `lesson-${levelId}-${unitId}-${lessonId}-fill-${i}`,
+                          snapshot: {
+                            type: "fill_blank",
+                            sentence: f.sentence,
+                            options: f.options,
+                            correct_answer: f.answer,
+                            user_answer: picked,
+                            is_correct: correct,
+                            translation: f.cn,
+                          },
+                        })}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
+                      >
+                        <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
+                      </button>
+                    </div>
+                  )}
                 </div>
               );
             })}
@@ -1032,6 +1079,27 @@ const Lesson = () => {
                     <p className="mt-3 rounded-lg bg-primary/5 p-3 text-xs text-primary">
                       💡 {nativeText(q.explain)}
                     </p>
+                  )}
+                  {reveal && (
+                    <div className="mt-3">
+                      <button
+                        onClick={() => setTutorReq({
+                          refId: `lesson-${levelId}-${unitId}-${lessonId}-quiz-${i}`,
+                          snapshot: {
+                            type: "quiz",
+                            question: q.q,
+                            options: q.options,
+                            correct_index: q.answer,
+                            user_index: picked,
+                            is_correct: picked === q.answer,
+                            explain: q.explain,
+                          },
+                        })}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
+                      >
+                        <MessageCircleQuestion className="size-3.5" /> <T>问小月</T>
+                      </button>
+                    </div>
                   )}
                 </div>
               );
@@ -1331,6 +1399,16 @@ const Lesson = () => {
         level={["A1","A2","B1","B2","C1","C2"][Number(levelId) - 1] || undefined}
         isGuest={!authedUser}
       />
+
+      {tutorReq && (
+        <TutorChat
+          context="lesson"
+          questionRef={tutorReq.refId}
+          questionSnapshot={{ ...tutorReq.snapshot, lesson_title: lesson?.title }}
+          open={!!tutorReq}
+          onClose={() => setTutorReq(null)}
+        />
+      )}
     </main>
   );
 };

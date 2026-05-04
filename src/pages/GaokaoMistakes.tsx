@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BookMarked, Star, CheckCircle2, Trash2, ChevronDown, ChevronUp, Filter } from "lucide-react";
+import { ArrowLeft, BookMarked, Star, CheckCircle2, Trash2, ChevronDown, ChevronUp, Filter, MessageCircleQuestion } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import TutorChat from "@/components/tutor/TutorChat";
 
 type Mistake = {
   id: string;
@@ -33,6 +34,7 @@ export default function GaokaoMistakes() {
   const [showResolved, setShowResolved] = useState(false);
   const [expanded, setExpanded] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [tutorFor, setTutorFor] = useState<Mistake | null>(null);
 
   async function load() {
     setLoading(true);
@@ -167,12 +169,36 @@ export default function GaokaoMistakes() {
                         <Trash2 className="size-3.5" /> 删除
                       </button>
                     </div>
+                    <div className="pt-1">
+                      <button
+                        onClick={() => setTutorFor(m)}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
+                      >
+                        <MessageCircleQuestion className="size-3.5" /> 问小月 / Ask Luna
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
             );
           })}
         </div>
+      )}
+
+      {tutorFor && (
+        <TutorChat
+          context="gaokao_mistakes"
+          questionRef={tutorFor.id}
+          questionSnapshot={{
+            module: tutorFor.module,
+            label: tutorFor.parent_label,
+            user_answer: tutorFor.user_answer,
+            correct_answer: tutorFor.correct_answer,
+            snapshot: tutorFor.snapshot,
+          }}
+          open={!!tutorFor}
+          onClose={() => setTutorFor(null)}
+        />
       )}
     </main>
   );

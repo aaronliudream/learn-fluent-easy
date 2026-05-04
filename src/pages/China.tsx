@@ -93,7 +93,7 @@ const China = () => {
           </div>
         </div>
         <p className="ml-1 mt-2 text-sm text-muted-foreground md:ml-[52px]">
-        按学段精准提分：小学 · 初中 · 高中(高考) · 大学四级 · 大学六级 · 研究生
+        按学段定位薄弱点 · 科学复习路径：小学 · 初中 · 高中(高考) · 大学四级 · 大学六级 · 研究生
         </p>
       </header>
 

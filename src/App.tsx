@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { stopSpeaking } from "@/lib/speak";
 import { I18nProvider } from "@/i18n/I18nProvider";
+import ChineseOnlyRoute from "@/components/ChineseOnlyRoute";
 // Eagerly load home + auth (most common entry points) to avoid first-paint chunk fetch
 import Index from "./pages/Index.tsx";
 import Auth from "./pages/Auth.tsx";
@@ -179,49 +180,49 @@ const App = () => (
           <Route path="/workplace/:catKey" element={<WorkplaceCategory />} />
           <Route path="/workplace/:catKey/:dialogueId" element={<WorkplacePlay />} />
           <Route path="/talk" element={<Talk />} />
-          <Route path="/china" element={<China />} />
-          <Route path="/primary" element={<Primary />} />
-          <Route path="/primary/letters" element={<PrimaryLetters />} />
-          <Route path="/primary/vocab" element={<PrimaryVocab />} />
-         <Route path="/primary/vocab/:grade" element={<PrimaryVocab />} />
-          <Route path="/primary/chat" element={<PrimaryChat />} />
-          <Route path="/primary/grade/:grade" element={<PrimaryGrade />} />
-          <Route path="/primary/games" element={<PrimaryGames />} />
-          <Route path="/primary/games/:grade" element={<PrimaryGames />} />
-          <Route path="/primary/games/:grade/:type" element={<PrimaryGames />} />
-          <Route path="/primary/lesson/:id" element={<PrimaryLesson />} />
-         <Route path="/primary/parent" element={<PrimaryParent />} />
-          <Route path="/primary/reading/grade/:grade" element={<PrimaryReading />} />
-          <Route path="/primary/reading/:id" element={<PrimaryReadingPlay />} />
+          <Route path="/china" element={<ChineseOnlyRoute><China /></ChineseOnlyRoute>} />
+          <Route path="/primary" element={<ChineseOnlyRoute><Primary /></ChineseOnlyRoute>} />
+          <Route path="/primary/letters" element={<ChineseOnlyRoute><PrimaryLetters /></ChineseOnlyRoute>} />
+          <Route path="/primary/vocab" element={<ChineseOnlyRoute><PrimaryVocab /></ChineseOnlyRoute>} />
+         <Route path="/primary/vocab/:grade" element={<ChineseOnlyRoute><PrimaryVocab /></ChineseOnlyRoute>} />
+          <Route path="/primary/chat" element={<ChineseOnlyRoute><PrimaryChat /></ChineseOnlyRoute>} />
+          <Route path="/primary/grade/:grade" element={<ChineseOnlyRoute><PrimaryGrade /></ChineseOnlyRoute>} />
+          <Route path="/primary/games" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
+          <Route path="/primary/games/:grade" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
+          <Route path="/primary/games/:grade/:type" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
+          <Route path="/primary/lesson/:id" element={<ChineseOnlyRoute><PrimaryLesson /></ChineseOnlyRoute>} />
+         <Route path="/primary/parent" element={<ChineseOnlyRoute><PrimaryParent /></ChineseOnlyRoute>} />
+          <Route path="/primary/reading/grade/:grade" element={<ChineseOnlyRoute><PrimaryReading /></ChineseOnlyRoute>} />
+          <Route path="/primary/reading/:id" element={<ChineseOnlyRoute><PrimaryReadingPlay /></ChineseOnlyRoute>} />
           <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
           <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />
-          <Route path="/junior" element={<Junior />} />
-          <Route path="/junior/g/:grade" element={<JuniorGrade />} />
-          <Route path="/junior/vocab" element={<JuniorVocab />} />
-          <Route path="/junior/grammar" element={<JuniorGrammar />} />
-          <Route path="/junior/grammar/:id" element={<JuniorGrammarPoint />} />
-          <Route path="/junior/reading" element={<JuniorReading />} />
-          <Route path="/junior/reading/:id" element={<JuniorReadingPlay />} />
-          <Route path="/junior/listening" element={<JuniorListening />} />
-          <Route path="/junior/listening/:id" element={<JuniorListeningPlay />} />
-          <Route path="/junior/writing" element={<JuniorWriting />} />
-          <Route path="/junior/writing/:id" element={<JuniorWritingPlay />} />
-          <Route path="/gaokao" element={<Gaokao />} />
-          <Route path="/gaokao/g/:grade" element={<GaokaoGrade />} />
-          <Route path="/gaokao/exam" element={<GaokaoExam />} />
-          <Route path="/gaokao/diagnostic" element={<GaokaoDiagnostic />} />
-          <Route path="/gaokao/grammar" element={<GaokaoGrammar />} />
-          <Route path="/gaokao/grammar/:slug" element={<GaokaoGrammarPoint />} />
-          <Route path="/gaokao/grammar/:slug/quiz" element={<GaokaoGrammarQuiz />} />
-          <Route path="/gaokao/grammar/:slug/quiz/:index" element={<GaokaoGrammarQuiz />} />
-          <Route path="/gaokao/reading" element={<GaokaoReading />} />
-          <Route path="/gaokao/reading/knowledge" element={<GaokaoReadingKnowledge />} />
-          <Route path="/gaokao/reading/article/:id" element={<GaokaoReadingArticle />} />
-          <Route path="/gaokao/reading/:id" element={<GaokaoReadingPlay />} />
-          <Route path="/gaokao/vocab" element={<GaokaoVocab />} />
-          <Route path="/gaokao/cloze" element={<GaokaoCloze />} />
-          <Route path="/gaokao/cloze/:id" element={<GaokaoClozePlay />} />
-          <Route path="/gaokao/mistakes" element={<GaokaoMistakes />} />
+          <Route path="/junior" element={<ChineseOnlyRoute><Junior /></ChineseOnlyRoute>} />
+          <Route path="/junior/g/:grade" element={<ChineseOnlyRoute><JuniorGrade /></ChineseOnlyRoute>} />
+          <Route path="/junior/vocab" element={<ChineseOnlyRoute><JuniorVocab /></ChineseOnlyRoute>} />
+          <Route path="/junior/grammar" element={<ChineseOnlyRoute><JuniorGrammar /></ChineseOnlyRoute>} />
+          <Route path="/junior/grammar/:id" element={<ChineseOnlyRoute><JuniorGrammarPoint /></ChineseOnlyRoute>} />
+          <Route path="/junior/reading" element={<ChineseOnlyRoute><JuniorReading /></ChineseOnlyRoute>} />
+          <Route path="/junior/reading/:id" element={<ChineseOnlyRoute><JuniorReadingPlay /></ChineseOnlyRoute>} />
+          <Route path="/junior/listening" element={<ChineseOnlyRoute><JuniorListening /></ChineseOnlyRoute>} />
+          <Route path="/junior/listening/:id" element={<ChineseOnlyRoute><JuniorListeningPlay /></ChineseOnlyRoute>} />
+          <Route path="/junior/writing" element={<ChineseOnlyRoute><JuniorWriting /></ChineseOnlyRoute>} />
+          <Route path="/junior/writing/:id" element={<ChineseOnlyRoute><JuniorWritingPlay /></ChineseOnlyRoute>} />
+          <Route path="/gaokao" element={<ChineseOnlyRoute><Gaokao /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/g/:grade" element={<ChineseOnlyRoute><GaokaoGrade /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/exam" element={<ChineseOnlyRoute><GaokaoExam /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/diagnostic" element={<ChineseOnlyRoute><GaokaoDiagnostic /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/grammar" element={<ChineseOnlyRoute><GaokaoGrammar /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/grammar/:slug" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/grammar/:slug/quiz" element={<ChineseOnlyRoute><GaokaoGrammarQuiz /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/grammar/:slug/quiz/:index" element={<ChineseOnlyRoute><GaokaoGrammarQuiz /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/reading" element={<ChineseOnlyRoute><GaokaoReading /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/reading/knowledge" element={<ChineseOnlyRoute><GaokaoReadingKnowledge /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/reading/article/:id" element={<ChineseOnlyRoute><GaokaoReadingArticle /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/reading/:id" element={<ChineseOnlyRoute><GaokaoReadingPlay /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/vocab" element={<ChineseOnlyRoute><GaokaoVocab /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/cloze" element={<ChineseOnlyRoute><GaokaoCloze /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/cloze/:id" element={<ChineseOnlyRoute><GaokaoClozePlay /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/level/:levelId" element={<Level />} />
           <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />

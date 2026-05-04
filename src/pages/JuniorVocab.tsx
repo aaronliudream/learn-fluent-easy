@@ -223,6 +223,51 @@ function JuniorVocabHub({ words, groups, grade, onPick, onPickGroup }: { words: 
   );
 }
 
+function JuniorWordGroup({ group, groupNumber, grade, onExit, onPractice }: { group: Vocab[]; groupNumber: number; grade: number; onExit: () => void; onPractice: (m: Exclude<Mode, null>) => void }) {
+  return (
+    <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+      <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> 返回初{grade}单词清单
+      </button>
+      <div className="mb-5">
+        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CORE VOCABULARY · GROUP {groupNumber}</div>
+        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">第 {groupNumber} 组单词</h1>
+        <p className="mt-1 text-xs text-muted-foreground">先看清单理解词义，再选择练习模式强化记忆。</p>
+      </div>
+      <div className="mb-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
+        {(["classic", "bento", "match", "dict"] as Exclude<Mode, null>[]).map((m) => (
+          <button key={m} onClick={() => onPractice(m)} className="rounded-2xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground transition hover:opacity-90">
+            {m === "classic" ? "智能选义" : m === "bento" ? "单词便当" : m === "match" ? "记忆翻牌" : "听写挑战"}
+          </button>
+        ))}
+      </div>
+      <div className="space-y-2">
+        {group.map((w, i) => (
+          <article key={w.id} className="rounded-2xl border border-border/60 bg-card p-4">
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-baseline gap-2">
+                  <span className="text-[10px] font-bold text-muted-foreground">{(groupNumber - 1) * GROUP_SIZE + i + 1}</span>
+                  <h2 className="text-xl font-black text-foreground">{w.word}</h2>
+                  {w.phonetic && <span className="font-mono text-xs text-muted-foreground">{w.phonetic}</span>}
+                  {w.pos && <span className="rounded-full bg-secondary px-2 py-0.5 text-[10px] font-bold text-muted-foreground">{w.pos}</span>}
+                </div>
+                <p className="mt-1 text-sm font-semibold text-foreground">{w.meaning_cn}</p>
+                {w.meaning_en && <p className="mt-0.5 text-xs text-muted-foreground">{w.meaning_en}</p>}
+              </div>
+              <button onClick={() => speak(w.word)} className="grid size-9 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground" aria-label={`播放 ${w.word}`}>
+                <Volume2 className="size-4" />
+              </button>
+            </div>
+            {w.example_en && <p className="mt-3 rounded-xl bg-secondary/60 px-3 py-2 text-sm text-foreground">{w.example_en}</p>}
+            {w.example_cn && <p className="mt-1 px-3 text-xs text-muted-foreground">{w.example_cn}</p>}
+          </article>
+        ))}
+      </div>
+    </main>
+  );
+}
+
 /* -------------------- CLASSIC QUIZ -------------------- */
 function shuffle<T>(arr: T[]): T[] {
   const a = arr.slice();

@@ -1,0 +1,1 @@
+ALTER TABLE public.junior_grammar_questions DROP CONSTRAINT IF EXISTS junior_grammar_questions_correct_answer_check;

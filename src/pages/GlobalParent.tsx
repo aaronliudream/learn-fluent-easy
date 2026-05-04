@@ -312,6 +312,10 @@ export default function GlobalParent() {
       <div className="mt-6">
         <DelaySettings />
       </div>
+
+      <div className="mt-4">
+        <FamilyGoalSettings />
+      </div>
     </main>
   );
 }

@@ -496,21 +496,21 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
                 <div className="text-4xl">{f.emoji}</div>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="font-extrabold">{f.name_cn}</span>
+                    <span className="font-extrabold"><T>{f.name_cn}</T></span>
                     <span className="text-[10px] text-muted-foreground">×{owned}</span>
                     {f.rarity >= 3 && <Star className="size-3 fill-amber-500 text-amber-500" />}
                   </div>
-                  <div className="text-[11px] text-muted-foreground">饱+{f.hunger_restore} 经+{f.exp_bonus} 心+{f.mood_bonus}</div>
+                  <div className="text-[11px] text-muted-foreground"><T>饱</T>+{f.hunger_restore} <T>经</T>+{f.exp_bonus} <T>心</T>+{f.mood_bonus}</div>
                   <div className="mt-0.5 flex items-center gap-1 text-[11px] text-muted-foreground"><Coins className="size-3" /> {f.price}</div>
                 </div>
                 {inWish ? (
                   <span className="rounded-full bg-violet-500/15 px-2.5 py-1 text-[10px] font-extrabold text-violet-700 dark:text-violet-300">
-                    心愿单中
+                    <T>心愿单中</T>
                   </span>
                 ) : (
                   <button onClick={()=>addToWishlist(f.id)} disabled={busy===f.id}
                     className="flex shrink-0 items-center gap-1 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-3 py-1.5 text-[11px] font-extrabold text-white shadow">
-                    💭 加入心愿单
+                    💭 <T>加入心愿单</T>
                   </button>
                 )}
               </div>

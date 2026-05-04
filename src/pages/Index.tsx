@@ -11,10 +11,10 @@ import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
 import { useI18n } from "@/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { T } from "@/i18n/T";
-import { SupportButton } from "@/components/SupportButton";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
 import CompanionHero from "@/components/pet/CompanionHero";
 import ThreeTracksHero from "@/components/ThreeTracksHero";
+import LandingPage from "@/components/LandingPage";
 
 const HOME_COUNTS = {
   slang: 347,
@@ -42,6 +42,13 @@ const Index = () => {
   };
 
   const hasProgress = progress.completedLessons.length > 0 || progress.studyMinutes > 0;
+
+  // Cold/global traffic: show a real Landing page (hero + value prop + social
+  // proof + CTA). Logged-in users skip straight to the study hub. Returning
+  // guests with saved progress also keep their hub so they don't lose context.
+  if (!user && !hasProgress) {
+    return <LandingPage />;
+  }
 
   const sections = [
     {
@@ -225,7 +232,6 @@ const Index = () => {
       </Link>
       )}
 
-      <SupportButton variant="footer" />
     </main>
   );
 };

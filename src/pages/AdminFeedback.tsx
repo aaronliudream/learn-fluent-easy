@@ -123,6 +123,14 @@ export default function AdminFeedback() {
         >
           <Mail className="size-4" /> 邮件日志 ({emails.length})
         </button>
+        <button
+          onClick={() => setTab("funnel")}
+          className={`inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold transition ${
+            tab === "funnel" ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          <TrendingUp className="size-4" /> 转化漏斗
+        </button>
       </div>
 
       {tab === "feedback" ? (

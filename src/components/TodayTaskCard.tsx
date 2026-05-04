@@ -87,10 +87,10 @@ function preferenceTask(t: ReturnType<typeof useT>, area: string): Task | null {
 export const TodayTaskCard = () => {
   const [signedIn, setSignedIn] = useState(false);
   const [reco, setReco] = useState<Reco | null>(null);
-  // Always start collapsed on page load. The user can expand it manually;
-  // we don't persist the expanded state across reloads so the home page
-  // stays compact by default.
-  const [collapsed, setCollapsed] = useState<boolean>(true);
+  // Default EXPANDED on page load — uncompleted tasks must be visible
+  // (Zeigarnik effect). Users can collapse manually for a cleaner home
+  // page; we don't persist the state across reloads.
+  const [collapsed, setCollapsed] = useState<boolean>(false);
   const t = useT();
   const progress = useMemo(() => loadProgress(), []);
   const todayKey = new Date().toISOString().slice(0, 10);

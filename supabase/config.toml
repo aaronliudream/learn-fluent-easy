@@ -29,6 +29,8 @@ project_id = "fottntyhwolbsdvkwriq"
     verify_jwt = false
   [functions.recall-24h]
     verify_jwt = false
+  [functions.submit-feedback]
+    verify_jwt = false
   [functions.qwen-realtime-proxy]
     verify_jwt = false
   [functions.explain-phrase]

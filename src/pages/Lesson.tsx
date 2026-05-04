@@ -1399,6 +1399,16 @@ const Lesson = () => {
         level={["A1","A2","B1","B2","C1","C2"][Number(levelId) - 1] || undefined}
         isGuest={!authedUser}
       />
+
+      {tutorReq && (
+        <TutorChat
+          context="lesson"
+          questionRef={tutorReq.refId}
+          questionSnapshot={{ ...tutorReq.snapshot, lesson_title: lesson?.title }}
+          open={!!tutorReq}
+          onClose={() => setTutorReq(null)}
+        />
+      )}
     </main>
   );
 };

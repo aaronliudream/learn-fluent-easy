@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { T, useT } from "@/i18n/T";
+import { useI18n } from "@/i18n/I18nProvider";
 
 /**
  * Three-track entry section shown at the very top of the homepage.
  * Maps the three primary user intents (exam / career / beginner) to existing modules.
  * Uses brand gradients (violet → magenta → coral) on the warm-paper canvas.
  */
-const tracks = [
+const ALL_TRACKS = [
   {
     to: "/levels",
     cefr: "CEFR Pre-A1 — A2",
@@ -15,6 +16,7 @@ const tracks = [
     en: "Beginner Track",
     gradient: "linear-gradient(160deg, #F47C45 0%, #F59E0B 100%)",
     btnTextColor: "#F47C45",
+    chinaOnly: false,
   },
   {
     to: "/workplace",
@@ -24,6 +26,7 @@ const tracks = [
     gradient: "linear-gradient(160deg, #ED3F8C 0%, #F47C45 100%)",
     btnTextColor: "#ED3F8C",
     badge: "热门",
+    chinaOnly: false,
   },
   {
     to: "/china",
@@ -32,17 +35,25 @@ const tracks = [
     en: "China Students",
     gradient: "linear-gradient(160deg, #7B3FF1 0%, #5B2BC9 100%)",
     btnTextColor: "#7B3FF1",
+    chinaOnly: true,
   },
 ];
 
 export default function ThreeTracksHero() {
   const t = useT();
+  const { lang } = useI18n();
+  const isChinese = lang === "zh" || lang === "zh-TW";
+  // International users don't need the "China Students" exam track — surface
+  // the two universal tracks and let them grow from there. Chinese-language
+  // users continue to see all three.
+  const tracks = isChinese ? ALL_TRACKS : ALL_TRACKS.filter((t) => !t.chinaOnly);
+  const gridCols = tracks.length === 3 ? "md:grid-cols-3" : "md:grid-cols-2";
   return (
     <section className="mb-8">
       <h2 className="mb-4 text-center text-xl font-extrabold tracking-tight text-foreground md:text-2xl">
         <T>你今天想学什么？</T>
       </h2>
-      <div className="grid gap-3 md:grid-cols-3">
+      <div className={`grid gap-3 ${gridCols}`}>
         {tracks.map((tr, i) => (
           <Link
             key={tr.to}

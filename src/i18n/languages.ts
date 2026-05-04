@@ -50,7 +50,7 @@ export const LANGUAGES: LanguageInfo[] = [
   { code: "bn",  englishName: "Bengali",         nativeName: "বাংলা",        flag: "🇧🇩" },
 ];
 
-export const DEFAULT_LANG: LangCode = "zh";
+export const DEFAULT_LANG: LangCode = "en";
 
 export function detectBrowserLang(): LangCode {
   if (typeof navigator === "undefined") return DEFAULT_LANG;

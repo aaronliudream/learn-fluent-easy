@@ -6,6 +6,105 @@ import { T } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
 
 /**
+ * Polished English copy keyed by the Chinese source. When the user's
+ * language is English we render this directly instead of letting the
+ * auto-translator guess from Chinese — it keeps marketing copy crisp,
+ * idiomatic and free of literal translations.
+ * Other languages continue to translate from the Chinese source as before.
+ */
+const EN_COPY: Record<string, string> = {
+  "登录": "Log in",
+  "已在 184 个国家上线": "Live in 184 countries",
+  "说英语": "Speak English",
+  "像玩游戏一样上头。": "the way you play your favorite game.",
+  "5 分钟一节的小课、即时口语反馈、连胜系统让你真的停不下来。每天 5 分钟，就能开始。":
+    "Bite-sized 5-minute lessons, instant speaking feedback, and a streak system you genuinely can't put down. Five minutes a day is all it takes to begin.",
+  "免费开始": "Start free",
+  "我已有账号": "I have an account",
+  "4.9 平均评分": "4.9 average rating",
+  "01 — 里面有什么": "01 — What's inside",
+  "四种真正用得上英语的方式。": "Four ways to actually use English.",
+  "每个模块都可以独立使用 —— 选你今天想学的，或者跟着完整路径从 A1 走到 C2。":
+    "Every module stands on its own — pick what you feel like today, or follow the full path from A1 all the way to C2.",
+  "结构化路径": "Structured path",
+  "CEFR 等级 A1 → C2": "CEFR levels A1 → C2",
+  "6 个等级、单元和短课程。词汇、语法、阅读和听力一条路径全包。":
+    "Six levels, structured units and short lessons. Vocabulary, grammar, reading and listening — all in one path.",
+  "口语训练": "Speaking practice",
+  "AI 口语陪练": "AI speaking partner",
+  "按住说话，立刻获得发音反馈。会议、面试、日常聊天 —— 随时练习。":
+    "Hold to talk and get instant pronunciation feedback. Practise meetings, interviews and everyday chats — anytime.",
+  "真实生活": "Real life",
+  "真实场景对话": "Real-world dialogues",
+  "机场、咖啡馆、看医生、求职面试，100+ 情景对话可以大声练习。":
+    "Airports, cafés, the doctor's office, job interviews — 100+ real-life conversations to practise out loud.",
+  "地道英语": "Sound like a native",
+  "俚语 & 母语者表达": "Slang & native expressions",
+  "从 lowkey 到 it's giving —— TikTok、Reddit 和职场上真实在用的词。":
+    "From “lowkey” to “it's giving” — the words people actually use on TikTok, Reddit and at work.",
+  "查看示例": "See an example",
+  "02 — 适合谁": "02 — Who it's for",
+  "为孩子、学生和成人精心打造。": "Thoughtfully built for kids, students and adults.",
+  "孩子 · 8–14 岁": "Kids · ages 8–14",
+  "比补习班更友好的选择。": "A friendlier alternative to after-school tutoring.",
+  "自然拼读、常用词、短篇阅读": "Phonics, sight words and short readings",
+  "游戏化经验值与每日连胜": "Game-style XP and daily streaks",
+  "家长面板可追踪学习进度": "Parent dashboard to follow their progress",
+  "中学生 · 中考 / 高考": "Teens · Zhongkao / Gaokao",
+  "备考无需死记硬背。": "Exam prep without rote memorisation.",
+  "阅读、完形、语法、听力": "Reading, cloze, grammar and listening",
+  "学习中自动生成错题本": "An automatic mistake log built as you study",
+  "每道错题都有 AI 讲解": "AI explanations for every wrong answer",
+  "成人 · 工作 & 生活": "Adults · work & life",
+  "在会议、邮件、出行中自信开口。": "Speak with confidence in meetings, emails and travel.",
+  "职场场景与邮件模板": "Workplace scenarios and email templates",
+  "俚语帮你跟上社交节奏": "Slang that helps you keep up socially",
+  "5 分钟一节，融入日常": "5-minute lessons that fit into your day",
+  "03 — 为什么大家会留下来": "03 — Why people stick around",
+  "位学员本周在学习。": "learners studied this week.",
+  "我女儿现在主动要求学英语，连胜系统让她上瘾。":
+    "My daughter now asks to study English on her own — the streak system completely hooked her.",
+  "家长 · 上海": "Parent · Shanghai",
+  "我从开会发言紧张，到 3 个月后能主导会议。AI 发音反馈是别家没有的。":
+    "I went from freezing up in meetings to leading them in three months. The AI pronunciation feedback is something no other app does.",
+  "产品经理 · 墨西哥城": "Product Manager · Mexico City",
+  "终于有一款不像作业的英语 app，连胜 127 天还在继续。":
+    "Finally an English app that doesn't feel like homework — 127-day streak and still going.",
+  "工程师 · 东京": "Engineer · Tokyo",
+  "全球学员都在用": "Learners around the world choose",
+  "Big Moon": "Big Moon",
+  "终于有一款不像作业的英语 app。连胜 127 天，每晚都期待打开。":
+    "Finally an English app that doesn't feel like homework. 127-day streak, and I look forward to it every night.",
+  "旅行场景课救了我去伦敦的行程，我真的能开口对话，而不是手指着菜单。":
+    "The travel scenarios saved my trip to London — I could actually hold a conversation instead of pointing at the menu.",
+  "设计师 · 圣保罗": "Designer · São Paulo",
+  "学员": "Learners",
+  "国家": "Countries",
+  "平均评分": "Avg. rating",
+  "愿意推荐": "Would recommend",
+  "不知道从哪里开始？": "Not sure where to start?",
+  "3 分钟测试帮你定位水平，并生成专属学习路径。无需注册。":
+    "A 3-minute placement test pinpoints your level and builds a learning path made for you. No signup required.",
+  "测一测我的水平": "Test my level",
+  "已经是会员？": "Already a member?",
+  "关于": "About",
+  "隐私": "Privacy",
+  "条款": "Terms",
+  "联系我们": "Contact",
+};
+
+/**
+ * Render polished English when the user is in English; otherwise fall back
+ * to the existing <T> auto-translation pipeline (which uses the Chinese
+ * source to translate to all other languages).
+ */
+function L({ children }: { children: string }) {
+  const { lang } = useI18n();
+  if (lang === "en" && EN_COPY[children]) return <>{EN_COPY[children]}</>;
+  return <T>{children}</T>;
+}
+
+/**
  * Public landing page (cold traffic).
  * All visible copy is wrapped in <T> so it auto-translates to the user's
  * chosen language (cached in localStorage by I18nProvider).

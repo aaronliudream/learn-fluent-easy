@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Target, Mail, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { T, useT } from "@/i18n/T";
 
-/** Daily study-minutes goal + weekly-report email opt-in.
- *  Reads/writes profiles.daily_goal_minutes and profiles.weekly_report_enabled. */
 export default function FamilyGoalSettings() {
+  const t = useT();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [goal, setGoal] = useState(15);
@@ -36,12 +36,12 @@ export default function FamilyGoalSettings() {
     setSaving(true);
     const { error } = await supabase.from("profiles").update(next).eq("user_id", uid);
     setSaving(false);
-    if (error) toast.error("保存失败：" + error.message);
-    else toast.success("已保存 ✓");
+    if (error) toast.error(t("保存失败：") + error.message);
+    else toast.success(t("已保存 ✓"));
   }
 
   if (loading) {
-    return <div className="rounded-3xl border-2 border-border bg-card p-4 text-sm text-muted-foreground"><Loader2 className="mr-2 inline size-4 animate-spin" />加载设置…</div>;
+    return <div className="rounded-3xl border-2 border-border bg-card p-4 text-sm text-muted-foreground"><Loader2 className="mr-2 inline size-4 animate-spin" /><T>加载设置…</T></div>;
   }
   if (!uid) return null;
 
@@ -50,14 +50,14 @@ export default function FamilyGoalSettings() {
   return (
     <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
       <div className="mb-3 flex items-center gap-1.5 text-sm font-extrabold">
-        <Target className="size-4 text-emerald-500" /> 学习目标 & 提醒
+        <Target className="size-4 text-emerald-500" /> <T>学习目标 & 提醒</T>
         {saving && <Loader2 className="ml-1 size-3 animate-spin text-muted-foreground" />}
       </div>
 
       <div className="mb-4">
         <div className="mb-2 flex items-center justify-between text-xs">
-          <span className="text-muted-foreground">每日学习目标</span>
-          <span className="font-extrabold text-foreground">{goal} 分钟 / 天</span>
+          <span className="text-muted-foreground"><T>每日学习目标</T></span>
+          <span className="font-extrabold text-foreground">{goal} <T>分钟 / 天</T></span>
         </div>
         <div className="flex flex-wrap gap-1.5">
           {presets.map(m => (
@@ -70,12 +70,12 @@ export default function FamilyGoalSettings() {
                   : "bg-secondary text-foreground hover:bg-secondary/80"
               }`}
             >
-              {m} 分
+              {m} <T>分</T>
             </button>
           ))}
         </div>
         <p className="mt-2 text-[10px] text-muted-foreground">
-          科学建议：青少年 15–30 分钟/天，间隔重复效果最佳（基于 SRS 记忆曲线）
+          <T>科学建议：青少年 15–30 分钟/天，间隔重复效果最佳（基于 SRS 记忆曲线）</T>
         </p>
       </div>
 
@@ -83,8 +83,8 @@ export default function FamilyGoalSettings() {
         <span className="flex items-center gap-2 text-xs">
           <Mail className="size-4 text-blue-500" />
           <span>
-            <div className="font-bold text-foreground">每周学习报告邮件</div>
-            <div className="text-[10px] text-muted-foreground">每周日发送一次学习数据汇总</div>
+            <div className="font-bold text-foreground"><T>每周学习报告邮件</T></div>
+            <div className="text-[10px] text-muted-foreground"><T>每周日发送一次学习数据汇总</T></div>
           </span>
         </span>
         <input

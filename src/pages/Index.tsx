@@ -293,8 +293,8 @@ const Index = () => {
                 <div className="text-[9px] font-bold uppercase tracking-[0.16em] opacity-80">
                   {s.eyebrow}
                 </div>
-                <div className="mt-0.5 line-clamp-1 text-sm font-extrabold leading-tight md:text-base">{s.title}</div>
-                <div className="mt-0.5 line-clamp-1 text-[11px] opacity-85">{s.desc}</div>
+                <div className="mt-0.5 line-clamp-1 text-sm font-extrabold leading-tight md:text-base"><T>{s.title}</T></div>
+                <div className="mt-0.5 line-clamp-1 text-[11px] opacity-85"><T>{s.desc}</T></div>
               </div>
               <ArrowRight className="relative size-4 shrink-0 opacity-80 transition-transform group-hover:translate-x-1" />
             </Link>

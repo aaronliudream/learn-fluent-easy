@@ -7,9 +7,24 @@ import { useT } from "@/i18n/T";
 const Levels = () => {
   const t = useT();
   const groups = [
-    { title: t("入门"), subtitle: "A1 – A2", ids: [1, 2] },
-    { title: t("进阶"), subtitle: "B1 – B2", ids: [3, 4] },
-    { title: t("高阶"), subtitle: "C1 – C2", ids: [5, 6] },
+    {
+      title: t("入门"),
+      subtitle: "A1 – A2",
+      desc: t("适合零基础或刚起步的学习者：掌握 1500+ 高频词、基本语法与日常对话，能听懂、读懂并写出简单句子。"),
+      ids: [1, 2],
+    },
+    {
+      title: t("进阶"),
+      subtitle: "B1 – B2",
+      desc: t("适合有一定基础、想流利表达的学习者：扩展到 4000+ 词汇，能就熟悉话题自如交流、读懂文章并写出连贯段落。"),
+      ids: [3, 4],
+    },
+    {
+      title: t("高阶"),
+      subtitle: "C1 – C2",
+      desc: t("适合冲刺学术、职场与考试的学习者：精通 8000+ 词汇与复杂语法，能就专业话题深入讨论、写作和演讲，接近母语水平。"),
+      ids: [5, 6],
+    },
   ];
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-10 md:px-8 md:py-14">
@@ -27,13 +42,18 @@ const Levels = () => {
           if (items.length === 0) return null;
           return (
             <section key={g.title}>
-              <header className="mb-3 flex items-baseline justify-between border-b border-border/50 pb-2">
-                <h2 className="text-lg font-extrabold tracking-tight text-foreground md:text-xl">
-                  {g.title}
-                </h2>
-                <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                  {g.subtitle}
-                </span>
+              <header className="mb-3 border-b border-border/50 pb-2">
+                <div className="flex items-baseline justify-between">
+                  <h2 className="text-lg font-extrabold tracking-tight text-foreground md:text-xl">
+                    {g.title}
+                  </h2>
+                  <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                    {g.subtitle}
+                  </span>
+                </div>
+                <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground md:text-sm">
+                  {g.desc}
+                </p>
               </header>
               <div className="grid gap-4 sm:grid-cols-2">
                 {items.map((lv) => {

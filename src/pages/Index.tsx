@@ -93,17 +93,17 @@ const Index = () => {
     {
       to: "/leaderboard",
       icon: Trophy,
-      eyebrow: t("Community"),
-      title: t("本周排行榜"),
-      desc: t("和全球学员一起冲榜，每周清零"),
+      eyebrow: "Community",
+      title: "本周排行榜",
+      desc: "和全球学员一起冲榜，每周清零",
       gradient: "from-yellow-500 via-amber-500 to-orange-500",
     },
     {
       to: "/friends",
       icon: UserPlus,
-      eyebrow: t("Social"),
-      title: t("加好友 · 互相鼓励"),
-      desc: t("看看朋友的连胜，一起坚持下去"),
+      eyebrow: "Social",
+      title: "加好友 · 互相鼓励",
+      desc: "看看朋友的连胜，一起坚持下去",
       gradient: "from-pink-500 via-rose-500 to-red-500",
     },
   ];

@@ -20,6 +20,7 @@ const Lesson = lazy(() => import("./pages/Lesson.tsx"));
 const Stats = lazy(() => import("./pages/Stats.tsx"));
 const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
+const AdminFeedback = lazy(() => import("./pages/AdminFeedback.tsx"));
 const Placement = lazy(() => import("./pages/Placement.tsx"));
 const Slang = lazy(() => import("./pages/Slang.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
@@ -81,6 +82,7 @@ const FriendPet = lazy(() => import("./pages/FriendPet.tsx"));
 const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 const Social = lazy(() => import("./pages/Social.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
+import FeedbackWidget from "@/components/FeedbackWidget";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 import { FloatingPet } from "@/components/pet/FloatingPet";
 import { DigestionAnimation } from "@/components/pet/DigestionAnimation";
@@ -218,12 +220,14 @@ const App = () => (
           <Route path="/levels" element={<Levels />} />
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />
+          <Route path="/admin/feedback" element={<AdminFeedback />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>
         </div>
         <BottomTabBar />
+        <FeedbackWidget />
       </BrowserRouter>
     </TooltipProvider>
     </I18nProvider>

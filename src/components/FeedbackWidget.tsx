@@ -28,6 +28,44 @@ export default function FeedbackWidget() {
   const [authedEmail, setAuthedEmail] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  // ---- Client-side quality check (mirrors edge function) ----
+  function countTokens(text: string): number {
+    const cjk = (text.match(/[\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]/g) ?? []).length;
+    const words = (text.match(/[A-Za-z0-9]+/g) ?? []).length;
+    return cjk + words;
+  }
+  function qualityIssue(raw: string): string | null {
+    const text = raw.trim();
+    if (!text) return t("内容不能为空");
+    if (countTokens(text) < 10) return t("反馈太短啦，请至少写 10 个字（或 10 个英文单词）");
+    const stripped = text.replace(/\s+/g, "");
+    const unique = new Set(stripped.toLowerCase()).size;
+    if (stripped.length >= 10 && unique < Math.max(4, Math.floor(stripped.length * 0.2)))
+      return t("内容看起来是重复字符，请认真描述你的反馈");
+    if (/(.)\1{6,}/.test(stripped)) return t("请不要重复相同字符");
+    const words = text.toLowerCase().match(/[a-z\u4e00-\u9fff]+/g) ?? [];
+    if (words.length >= 6) {
+      const uniq = new Set(words).size;
+      if (uniq <= Math.max(2, Math.floor(words.length * 0.25)))
+        return t("内容看起来是重复粘贴，请认真描述你的反馈");
+    }
+    const hasCJK = /[\u4e00-\u9fff]/.test(text);
+    if (!hasCJK) {
+      const letters = text.replace(/[^a-zA-Z]/g, "");
+      if (letters.length >= 15) {
+        const vowels = (letters.match(/[aeiouAEIOU]/g) ?? []).length;
+        const ratio = vowels / letters.length;
+        if (ratio < 0.15 || ratio > 0.75)
+          return t("内容看起来不是正常文字，请用完整句子描述");
+        if (letters.length >= 30 && !/\s/.test(text))
+          return t("请用完整的句子描述你的反馈（用空格分词）");
+      }
+    }
+    return null;
+  }
+  const qIssue = qualityIssue(message);
+  const canSubmit = !submitting && !qIssue;
+
   const schema = z.object({
     category: z.enum(["bug", "suggestion", "praise", "other"]),
     rating: z.number().min(1).max(5).optional().nullable(),
@@ -51,6 +89,11 @@ export default function FeedbackWidget() {
   }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function submit() {
+    const issue = qualityIssue(message);
+    if (issue) {
+      toast.error(issue);
+      return;
+    }
     const parsed = schema.safeParse({
       category,
       rating: rating || undefined,
@@ -197,11 +240,14 @@ export default function FeedbackWidget() {
 
             <button
               onClick={submit}
-              disabled={submitting}
+              disabled={!canSubmit}
               className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-indigo-500 to-violet-600 py-3 text-sm font-extrabold text-white shadow transition hover:opacity-90 disabled:opacity-60"
             >
               {submitting ? <><Loader2 className="size-4 animate-spin" /> <T>发送中…</T></> : <T>发送反馈</T>}
             </button>
+            {message.length > 0 && qIssue && (
+              <p className="mt-2 text-center text-[11px] font-semibold text-rose-500">{qIssue}</p>
+            )}
 
             <p className="mt-2 text-center text-[10px] text-muted-foreground">
               <T>📜 含色情、暴力、毒品或与英语学习无关的内容会被自动过滤</T>

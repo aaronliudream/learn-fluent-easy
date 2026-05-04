@@ -6,7 +6,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { stopSpeaking } from "@/lib/speak";
 import { I18nProvider } from "@/i18n/I18nProvider";
-import { LanguagePickerModal } from "@/i18n/LanguagePickerModal";
 // Eagerly load home + auth (most common entry points) to avoid first-paint chunk fetch
 import Index from "./pages/Index.tsx";
 import Auth from "./pages/Auth.tsx";
@@ -139,7 +138,9 @@ const App = () => (
       <BrowserRouter>
         <StopAudioOnRouteChange />
         <HeartbeatGate />
-        <LanguagePickerModal />
+        {/* LanguagePickerModal removed — language is auto-defaulted to English
+            and switchable via the header LanguageSwitcher. Forcing a 23+ option
+            modal on first visit was a major bounce driver for global users. */}
         <GaokaoBreakReminder />
         <FloatingPetGate />
         <EvolutionCelebration />

@@ -212,14 +212,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     if (typeof window === "undefined") return DEFAULT_LANG;
     const saved = localStorage.getItem(STORAGE_LANG) as LangCode | null;
     if (saved && LANGUAGES.some((l) => l.code === saved)) return saved;
-    // First-time visitor: auto-detect from browser language so global users
-    // land in their own language. Chinese-mainland zones (/primary, /junior,
-    // /gaokao, /china) still render bilingually regardless of this choice.
-    try {
-      return detectBrowserLang();
-    } catch {
-      return DEFAULT_LANG;
-    }
+    return DEFAULT_LANG;
   });
   const [hasPicked, setHasPicked] = useState<boolean>(() => {
     if (typeof window === "undefined") return true;

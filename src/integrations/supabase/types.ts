@@ -506,6 +506,36 @@ export type Database = {
         }
         Relationships: []
       }
+      daily_task_completions: {
+        Row: {
+          coins_awarded: number
+          completed_at: string
+          id: string
+          task_date: string
+          task_key: string
+          user_id: string
+          xp_awarded: number
+        }
+        Insert: {
+          coins_awarded?: number
+          completed_at?: string
+          id?: string
+          task_date: string
+          task_key: string
+          user_id: string
+          xp_awarded?: number
+        }
+        Update: {
+          coins_awarded?: number
+          completed_at?: string
+          id?: string
+          task_date?: string
+          task_key?: string
+          user_id?: string
+          xp_awarded?: number
+        }
+        Relationships: []
+      }
       dialogue_key_phrases: {
         Row: {
           content_hash: string
@@ -5699,6 +5729,16 @@ export type Database = {
           reason: string
         }[]
       }
+      complete_daily_task: {
+        Args: { _coins?: number; _task_key: string; _xp?: number }
+        Returns: {
+          all_done: boolean
+          already_done: boolean
+          coins_awarded: number
+          total_today: number
+          xp_awarded: number
+        }[]
+      }
       confirm_wishlist_purchase: {
         Args: { _wishlist_id: string }
         Returns: {
@@ -5912,6 +5952,15 @@ export type Database = {
           total_due: number
           weakest_count: number
           weakest_module: string
+        }[]
+      }
+      get_today_task_state: {
+        Args: never
+        Returns: {
+          coins_awarded: number
+          completed_at: string
+          task_key: string
+          xp_awarded: number
         }[]
       }
       get_user_reading_lexile: {

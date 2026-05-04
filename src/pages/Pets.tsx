@@ -13,6 +13,7 @@ import MonthlyPostcard from "@/components/pet/MonthlyPostcard";
 import PetAbilities from "@/components/pet/PetAbilities";
 import EvolutionTree from "@/components/pet/EvolutionTree";
 import { useCurrencies, wishlistAdd, fetchWishlist, wishlistRemove, type WishlistRow } from "@/lib/currencies";
+import { T, useT } from "@/i18n/T";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };
@@ -27,6 +28,7 @@ type Diary = { id:string; emoji:string|null; message:string; event_type:string; 
 type Tab = "home" | "shop" | "outing" | "adopt" | "skin" | "diary";
 
 export default function Pets() {
+  const t = useT();
   const [authed, setAuthed] = useState<boolean|null>(null);
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState<Tab>("home");
@@ -89,9 +91,9 @@ export default function Pets() {
     return (
       <main className="mx-auto min-h-screen max-w-md px-5 py-10 text-center">
         <div className="text-5xl">🐾</div>
-        <h1 className="mt-3 text-2xl font-extrabold">登录后开启宠物之旅</h1>
-        <p className="mt-1 text-sm text-muted-foreground">学习赚星币 → 领养 → 喂养 → 进化 → 出游</p>
-        <Link to="/auth" className="mt-5 inline-block rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-2.5 text-sm font-extrabold text-white shadow">立即登录</Link>
+        <h1 className="mt-3 text-2xl font-extrabold"><T>登录后开启宠物之旅</T></h1>
+        <p className="mt-1 text-sm text-muted-foreground"><T>学习赚星币 → 领养 → 喂养 → 进化 → 出游</T></p>
+        <Link to="/auth" className="mt-5 inline-block rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-2.5 text-sm font-extrabold text-white shadow"><T>立即登录</T></Link>
       </main>
     );
   }
@@ -99,13 +101,13 @@ export default function Pets() {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-4 pb-24 pt-6 md:px-6">
       <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回主页
+          <ArrowLeft className="size-4" /> <T>返回主页</T>
       </BackLink>
       <div className="mb-4 flex items-center justify-between">
         <div>
           <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">MY PETS</div>
-          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">🐾 奇幻宠物乐园</h1>
-          <p className="mt-1 text-xs text-muted-foreground">学习赚星币，喂养专属伙伴</p>
+          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">🐾 <T>奇幻宠物乐园</T></h1>
+          <p className="mt-1 text-xs text-muted-foreground"><T>学习赚星币，喂养专属伙伴</T></p>
         </div>
         <div className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 px-3 py-1.5 text-sm font-extrabold text-white shadow-tile">
           <Coins className="size-4" /> {balance}
@@ -113,18 +115,18 @@ export default function Pets() {
       </div>
       {/* 三种货币 + 消化中（延迟满足设计） */}
       <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px] font-bold">
-        <div className="flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-1 text-emerald-700 dark:text-emerald-300" title="种子：学习产出，可在商店心愿单兑换">
-          <Sprout className="size-3" /> {currencies.seeds} 种子
+        <div className="flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-1 text-emerald-700 dark:text-emerald-300" title={t("种子：学习产出，可在商店心愿单兑换")}>
+          <Sprout className="size-3" /> {currencies.seeds} <T>种子</T>
         </div>
         {currencies.pending > 0 && (
-          <div className="flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-amber-700 dark:text-amber-300" title="刚学到的种子正在宠物体内消化，明天到账">
-            <Hourglass className="size-3 animate-pulse" /> 消化中 +{currencies.pending}
+          <div className="flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-amber-700 dark:text-amber-300" title={t("刚学到的种子正在宠物体内消化，明天到账")}>
+            <Hourglass className="size-3 animate-pulse" /> <T>消化中</T> +{currencies.pending}
           </div>
         )}
-        <div className="flex items-center gap-1 rounded-full bg-violet-500/10 px-2.5 py-1 text-violet-700 dark:text-violet-300" title="星光：连续学习奖励，未来可解锁场景">
+        <div className="flex items-center gap-1 rounded-full bg-violet-500/10 px-2.5 py-1 text-violet-700 dark:text-violet-300" title={t("星光：连续学习奖励，未来可解锁场景")}>
           ⭐ {currencies.starlight}
         </div>
-        <div className="flex items-center gap-1 rounded-full bg-sky-500/10 px-2.5 py-1 text-sky-700 dark:text-sky-300" title="结晶：完成长期里程碑获得，购买稀有道具">
+        <div className="flex items-center gap-1 rounded-full bg-sky-500/10 px-2.5 py-1 text-sky-700 dark:text-sky-300" title={t("结晶：完成长期里程碑获得，购买稀有道具")}>
           💎 {currencies.crystals}
         </div>
       </div>
@@ -146,7 +148,7 @@ export default function Pets() {
               <button
                 key={k} onClick={()=>setTab(k as Tab)}
                 className={cn("rounded-xl px-2 py-2 transition", tab === k ? "bg-card shadow-sm" : "text-muted-foreground hover:bg-card/50")}
-              >{lbl}</button>
+              ><T>{lbl}</T></button>
             ))}
           </div>
 

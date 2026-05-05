@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { ConversationProvider, useConversation } from "@elevenlabs/react";
 import { ArrowLeft, Loader2, Mic, PhoneOff, Sparkles, Trophy, RefreshCw, AlertCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
@@ -48,7 +47,8 @@ const CUE_CARDS: { topic: string; card: string }[] = [
   { topic: "object", card: "Describe an object that is important to you.\nYou should say:\n• what it is\n• how long you've had it\n• how you got it\n• and explain why it is important to you." },
 ];
 
-const ELEVENLABS_AGENT_ID = "agent_2801kqvhz6m2ehasqcjadep8zm25";
+const SILENT_WAV =
+  "data:audio/wav;base64,UklGRmQGAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YUAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 
 function pickCueCard(topicCategory: string | null) {
   const t = (topicCategory || "").toLowerCase();
@@ -60,6 +60,19 @@ function friendlyVoiceError(err: unknown) {
   if (/requested device not found|notfounderror/i.test(msg)) return "未检测到可用麦克风。请换到有麦克风的设备，或在系统设置中启用麦克风后重试。";
   if (/notallowederror|permission|denied/i.test(msg)) return "麦克风权限被拒绝。请在浏览器地址栏/系统设置中允许麦克风后重试。";
   return msg || "语音连接出错，请稍后重试。";
+}
+
+const blobToBase64 = (blob: Blob) => new Promise<string>((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => resolve(String(reader.result || "").split(",").pop() || "");
+  reader.onerror = () => reject(reader.error);
+  reader.readAsDataURL(blob);
+});
+
+function preferredRecordingMimeType() {
+  if (typeof MediaRecorder === "undefined") return "";
+  const candidates = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/mpeg"];
+  return candidates.find((type) => MediaRecorder.isTypeSupported(type)) || "";
 }
 
 // Build the system prompt that turns the ElevenLabs agent into a strict
@@ -112,11 +125,7 @@ EXAMINER BEHAVIOUR
 }
 
 export default function IeltsSpeakingSession() {
-  return (
-    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc" useWakeLock={false}>
-      <IeltsSpeakingSessionContent />
-    </ConversationProvider>
-  );
+  return <IeltsSpeakingSessionContent />;
 }
 
 function IeltsSpeakingSessionContent() {
@@ -128,10 +137,16 @@ function IeltsSpeakingSessionContent() {
   const [grading, setGrading] = useState(false);
   const [connecting, setConnecting] = useState(false);
   const [voiceConnected, setVoiceConnected] = useState(false);
+  const [recording, setRecording] = useState(false);
+  const [processingTurn, setProcessingTurn] = useState(false);
+  const [examinerSpeaking, setExaminerSpeaking] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0); // seconds since connected
   const startedAtRef = useRef<number | null>(null);
-  const connectTimeoutRef = useRef<number | null>(null);
+  const mediaStreamRef = useRef<MediaStream | null>(null);
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const transcriptRef = useRef<Msg[]>([]);
   const partRef = useRef<1 | 2 | 3>(1);
   useEffect(() => { partRef.current = currentPart; }, [currentPart]);
@@ -155,55 +170,12 @@ function IeltsSpeakingSessionContent() {
     return null;
   }, []);
 
-  // ---- ElevenLabs conversation hook ----
-  const conversation = useConversation({
-    onConnect: () => {
-      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
-      startedAtRef.current = Date.now();
-      setVoiceConnected(true);
-      setConnecting(false);
-      setErrorMsg(null);
-      toast.success("已接通考官 🎙️");
-    },
-    onDisconnect: () => {
-      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
-      setVoiceConnected(false);
-      setConnecting(false);
-      // Auto-grade if we have a real conversation
-      const msgs = transcriptRef.current;
-      if (msgs.length >= 2 && session && id) {
-        toast("通话结束，正在生成评分…");
-        grade(msgs);
-      }
-    },
-    onError: (err: any) => {
-      console.error("EL error", err);
-      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
-      setVoiceConnected(false);
-      setConnecting(false);
-      setErrorMsg(friendlyVoiceError(err));
-    },
-    onMessage: (msg: any) => {
-      try {
-        const role: "user" | "assistant" | null =
-          msg?.source === "user" ? "user" : msg?.source === "ai" ? "assistant" : null;
-        const text = typeof msg?.message === "string" ? msg.message : "";
-        if (!role || !text) return;
-
-        if (role === "assistant") {
-          const detected = detectPartFromText(text);
-          if (detected && detected > partRef.current) {
-            partRef.current = detected;
-            setCurrentPart(detected);
-          }
-        }
-        const next = [...transcriptRef.current, { role, content: text, part: partRef.current } as Msg];
-        transcriptRef.current = next;
-        setMessages(next);
-        persist(next, partRef.current);
-      } catch (e) { console.warn(e); }
-    },
-  });
+  const appendTranscript = useCallback((items: Msg[]) => {
+    const next = [...transcriptRef.current, ...items];
+    transcriptRef.current = next;
+    setMessages(next);
+    persist(next, partRef.current);
+  }, [persist]);
 
   // ---- Load session ----
   useEffect(() => {
@@ -217,24 +189,91 @@ function IeltsSpeakingSessionContent() {
     });
   }, [id, nav]);
 
-  // ---- Start the call as soon as we have the session ----
+  const playExaminerAudio = useCallback(async (audioContent: string, mimeType = "audio/mpeg") => {
+    const audio = audioRef.current ?? new Audio();
+    audioRef.current = audio;
+    audio.setAttribute("playsinline", "true");
+    audio.src = `data:${mimeType};base64,${audioContent}`;
+    setExaminerSpeaking(true);
+    try { await audio.play(); } finally {
+      await new Promise<void>((resolve) => {
+        audio.onended = () => resolve();
+        audio.onerror = () => resolve();
+      });
+      setExaminerSpeaking(false);
+    }
+  }, []);
+
+  const requestExaminerTurn = useCallback(async (opts: { startOnly?: boolean; audioBlob?: Blob }) => {
+    if (!session) return;
+    setProcessingTurn(true);
+    setErrorMsg(null);
+    try {
+      const audioBase64 = opts.audioBlob ? await blobToBase64(opts.audioBlob) : undefined;
+      const { data, error } = await supabase.functions.invoke("ielts-voice-turn", {
+        body: {
+          startOnly: Boolean(opts.startOnly),
+          audioBase64,
+          mimeType: opts.audioBlob?.type || "audio/webm",
+          messages: transcriptRef.current,
+          part: partRef.current,
+          targetBand: session.target_band,
+          topicCategory: session.topic_category,
+          cueCard: cueCard.card,
+        },
+      });
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+
+      const newItems: Msg[] = [];
+      const userText = String(data?.userText || "").trim();
+      const assistantText = String(data?.assistantText || "").trim();
+      if (userText) newItems.push({ role: "user", content: userText, part: partRef.current });
+      if (assistantText) {
+        const detected = detectPartFromText(assistantText);
+        if (detected && detected > partRef.current) {
+          partRef.current = detected;
+          setCurrentPart(detected);
+        }
+        newItems.push({ role: "assistant", content: assistantText, part: partRef.current });
+      }
+      if (newItems.length) appendTranscript(newItems);
+      if (data?.audioContent) await playExaminerAudio(String(data.audioContent), String(data.mimeType || "audio/mpeg"));
+    } catch (e: any) {
+      console.error(e);
+      setErrorMsg(friendlyVoiceError(e));
+    } finally {
+      setProcessingTurn(false);
+    }
+  }, [appendTranscript, cueCard.card, detectPartFromText, playExaminerAudio, session]);
+
   const startCall = useCallback(async () => {
     if (!session) return;
     setVoiceConnected(false);
     setConnecting(true);
     setErrorMsg(null);
     try {
-      connectTimeoutRef.current = window.setTimeout(() => {
-        setConnecting(false);
-        setErrorMsg("语音连接超时。请确认麦克风权限已允许，并点击重试接通。");
-      }, 25_000);
-      conversation.startSession({ useWakeLock: false });
+      const audio = audioRef.current ?? new Audio();
+      audioRef.current = audio;
+      audio.setAttribute("playsinline", "true");
+      audio.src = SILENT_WAV;
+      audio.play().catch(() => {});
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } as MediaTrackConstraints,
+      });
+      mediaStreamRef.current = stream;
+      startedAtRef.current = Date.now();
+      setVoiceConnected(true);
+      setConnecting(false);
+      toast.success("已接通考官 🎙️");
+      await requestExaminerTurn({ startOnly: true });
     } catch (e: any) {
       console.error(e);
       setErrorMsg(friendlyVoiceError(e));
       setConnecting(false);
+      setVoiceConnected(false);
     }
-  }, [session, conversation]);
+  }, [requestExaminerTurn, session]);
 
   // Do not auto-start here: iOS/mobile browsers require microphone access to be
   // requested directly from a user tap on this page.
@@ -274,15 +313,50 @@ function IeltsSpeakingSessionContent() {
     }
   }, [session, id]);
 
+  const stopRecording = useCallback(() => {
+    const recorder = recorderRef.current;
+    if (!recorder || recorder.state !== "recording") return;
+    recorder.stop();
+    setRecording(false);
+  }, []);
+
+  const startRecording = useCallback(() => {
+    const stream = mediaStreamRef.current;
+    if (!stream || recording || processingTurn || examinerSpeaking) return;
+    chunksRef.current = [];
+    const mimeType = preferredRecordingMimeType();
+    const recorder = new MediaRecorder(stream, mimeType ? { mimeType } : undefined);
+    recorderRef.current = recorder;
+    recorder.ondataavailable = (event) => { if (event.data.size > 0) chunksRef.current.push(event.data); };
+    recorder.onstop = () => {
+      const blob = new Blob(chunksRef.current, { type: recorder.mimeType || mimeType || "audio/webm" });
+      chunksRef.current = [];
+      if (blob.size > 800) void requestExaminerTurn({ audioBlob: blob });
+      else setErrorMsg("录音太短，请按住说完一句完整英文后再松开。");
+    };
+    recorder.start();
+    setRecording(true);
+  }, [examinerSpeaking, processingTurn, recording, requestExaminerTurn]);
+
   const hangUp = useCallback(async () => {
-    try { await conversation.endSession(); } catch { /* */ }
-    // grading is triggered in onDisconnect when transcript is non-trivial
-  }, [conversation]);
+    try { recorderRef.current?.state === "recording" && recorderRef.current.stop(); } catch { /* */ }
+    try { audioRef.current?.pause(); } catch { /* */ }
+    try { mediaStreamRef.current?.getTracks().forEach((t) => t.stop()); } catch { /* */ }
+    setRecording(false);
+    setVoiceConnected(false);
+    setExaminerSpeaking(false);
+    const msgs = transcriptRef.current;
+    if (msgs.length >= 2) {
+      toast("通话结束，正在生成评分…");
+      await grade(msgs);
+    }
+  }, [grade]);
 
   // Cleanup on unmount
   useEffect(() => () => {
-    if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
-    try { conversation.endSession(); } catch { /* */ }
+    try { recorderRef.current?.state === "recording" && recorderRef.current.stop(); } catch { /* */ }
+    try { audioRef.current?.pause(); } catch { /* */ }
+    try { mediaStreamRef.current?.getTracks().forEach((t) => t.stop()); } catch { /* */ }
   }, []);
 
   // ==================== RENDER ====================
@@ -314,8 +388,8 @@ function IeltsSpeakingSessionContent() {
   }
 
   const isConnected = voiceConnected;
-  const isExaminerSpeaking = isConnected && conversation.isSpeaking;
-  const isYourTurn = isConnected && !conversation.isSpeaking;
+  const isExaminerSpeaking = isConnected && examinerSpeaking;
+  const isYourTurn = isConnected && !examinerSpeaking && !processingTurn;
   const mins = Math.floor(elapsed / 60).toString().padStart(2, "0");
   const secs = (elapsed % 60).toString().padStart(2, "0");
 
@@ -381,18 +455,20 @@ function IeltsSpeakingSessionContent() {
                 ? "bg-gradient-to-br from-rose-500 to-rose-600"
                 : "bg-muted-foreground/30"
             }`}>
-              {connecting ? <Loader2 className="size-14 animate-spin" /> : <Mic className="size-14" />}
+              {connecting || processingTurn ? <Loader2 className="size-14 animate-spin" /> : <Mic className="size-14" />}
             </div>
           </div>
           <div className="text-center">
             <div className="text-base font-bold">
               {connecting && "正在接通考官…"}
               {!connecting && isExaminerSpeaking && "🔊 考官正在说话…"}
-              {!connecting && isYourTurn && "🎤 请回答（直接开口说英语）"}
+              {!connecting && recording && "🎙️ 正在录音，说完后松开"}
+              {!connecting && processingTurn && "正在识别并生成考官回复…"}
+              {!connecting && isYourTurn && !recording && "🎤 按住下方按钮回答"}
               {!connecting && !isConnected && (errorMsg ? "连接失败" : "等待接通…")}
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              真人双工语音 · 你可以随时打断考官 · 全程英语
+              OpenAI 转写 + OpenAI TTS · 全程英语 · 结束后自动评分
             </div>
           </div>
         </div>
@@ -426,15 +502,30 @@ function IeltsSpeakingSessionContent() {
       )}
 
       {/* Hang up + grade */}
-      <div className="flex justify-center pb-[calc(env(safe-area-inset-bottom,0px)+1rem)]">
+      <div className="flex flex-col items-center gap-3 pb-[calc(env(safe-area-inset-bottom,0px)+1rem)]">
         {isConnected || connecting ? (
-          <button
-            onClick={hangUp}
-            disabled={!isConnected && !connecting}
-            className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-rose-600 disabled:opacity-40"
-          >
-            <PhoneOff className="size-5" /> 挂断结束 · 自动评分
-          </button>
+          <>
+            {isConnected && (
+              <button
+                onMouseDown={startRecording}
+                onMouseUp={stopRecording}
+                onMouseLeave={recording ? stopRecording : undefined}
+                onTouchStart={(e) => { e.preventDefault(); startRecording(); }}
+                onTouchEnd={(e) => { e.preventDefault(); stopRecording(); }}
+                disabled={!isYourTurn && !recording}
+                className={`inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-bold shadow-lg transition disabled:opacity-40 ${recording ? "bg-rose-500 text-white" : "bg-primary text-primary-foreground hover:bg-primary/90"}`}
+              >
+                <Mic className="size-5" /> {recording ? "松开发送回答" : "按住回答"}
+              </button>
+            )}
+            <button
+              onClick={hangUp}
+              disabled={!isConnected && !connecting}
+              className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-rose-600 disabled:opacity-40"
+            >
+              <PhoneOff className="size-5" /> 挂断结束 · 自动评分
+            </button>
+          </>
         ) : (
           <button
             onClick={startCall}

@@ -212,33 +212,17 @@ function IeltsSpeakingSessionContent() {
     setConnecting(true);
     setErrorMsg(null);
     try {
-      await navigator.mediaDevices.getUserMedia({ audio: true });
-    } catch {
-      setErrorMsg("无法访问麦克风。请在浏览器地址栏允许麦克风权限后重试。");
-      setConnecting(false);
-      return;
-    }
-    try {
-      // Public agent — connect directly with agentId (no server token needed)
       connectTimeoutRef.current = window.setTimeout(() => {
         setConnecting(false);
         setErrorMsg("语音连接超时。请确认麦克风权限已允许，并点击重试接通。");
       }, 25_000);
-      conversation.startSession({
-        overrides: {
-          agent: {
-            prompt: { prompt: buildExaminerPrompt({ targetBand: session.target_band, cueCard: cueCard.card, topicCategory: session.topic_category }) },
-            firstMessage: "Good morning. My name is Daniel, and I'll be your examiner today. Could you please tell me your full name?",
-            language: "en",
-          },
-        },
-      });
+      conversation.startSession();
     } catch (e: any) {
       console.error(e);
       setErrorMsg(e?.message || "无法启动语音对话");
       setConnecting(false);
     }
-  }, [session, conversation, cueCard]);
+  }, [session, conversation]);
 
   // Do not auto-start here: iOS/mobile browsers require microphone access to be
   // requested directly from a user tap on this page.

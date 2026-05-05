@@ -3,6 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, PenLine } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import ModuleStageTests from "@/components/ModuleStageTests";
 
 type P = { id: string; topic: string; prompt_cn: string; grade: number; min_words: number; max_words: number; difficulty: number };
 
@@ -23,6 +24,14 @@ export default function JuniorWriting() {
       <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {grade ? `返回初${grade}` : "返回初中专区"}</BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold">✍️ 初中写作训练</h1>
       <p className="mt-1 text-sm text-muted-foreground">命题作文 · AI 评分 · 范文对比 · 提交奖星币</p>
+      {grade && (
+        <ModuleStageTests
+          segment="junior"
+          grade={Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)}
+          module="writing"
+          className="mt-4"
+        />
+      )}
       <div className="mt-5 grid gap-2">
         {items.length === 0 && <p className="text-sm text-muted-foreground">暂无题目，敬请期待</p>}
         {items.map(p => (

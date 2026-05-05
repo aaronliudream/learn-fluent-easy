@@ -5176,6 +5176,7 @@ export type Database = {
           description: string | null
           grade: number
           id: string
+          module: string | null
           pass_threshold: number
           required_lessons: number
           scope: string
@@ -5192,6 +5193,7 @@ export type Database = {
           description?: string | null
           grade: number
           id?: string
+          module?: string | null
           pass_threshold?: number
           required_lessons?: number
           scope: string
@@ -5208,6 +5210,7 @@ export type Database = {
           description?: string | null
           grade?: number
           id?: string
+          module?: string | null
           pass_threshold?: number
           required_lessons?: number
           scope?: string
@@ -6494,30 +6497,56 @@ export type Database = {
           visitor_id: string
         }[]
       }
-      list_stage_tests: {
-        Args: { _grade: number; _segment: string }
-        Returns: {
-          attempt_count: number
-          base_coins: number
-          base_exp: number
-          best_score: number
-          completed_lessons: number
-          cooldown_until: string
-          description: string
-          id: string
-          next_reward_coins: number
-          next_reward_exp: number
-          pass_count: number
-          pass_threshold: number
-          required_lessons: number
-          scope: string
-          sort_order: number
-          title: string
-          total_questions: number
-          unit_index: number
-          unlocked: boolean
-        }[]
-      }
+      list_stage_tests:
+        | {
+            Args: { _grade: number; _segment: string }
+            Returns: {
+              attempt_count: number
+              base_coins: number
+              base_exp: number
+              best_score: number
+              completed_lessons: number
+              cooldown_until: string
+              description: string
+              id: string
+              next_reward_coins: number
+              next_reward_exp: number
+              pass_count: number
+              pass_threshold: number
+              required_lessons: number
+              scope: string
+              sort_order: number
+              title: string
+              total_questions: number
+              unit_index: number
+              unlocked: boolean
+            }[]
+          }
+        | {
+            Args: { _grade: number; _module?: string; _segment: string }
+            Returns: {
+              attempt_count: number
+              base_coins: number
+              base_exp: number
+              best_score: number
+              completed_lessons: number
+              cooldown_until: string
+              description: string
+              id: string
+              module: string
+              next_reward_coins: number
+              next_reward_exp: number
+              pass_count: number
+              pass_threshold: number
+              required_lessons: number
+              scope: string
+              sort_order: number
+              title: string
+              total_questions: number
+              unit_index: number
+              unlocked: boolean
+            }[]
+          }
       match_duel_bot: {
         Args: never
         Returns: {

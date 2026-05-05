@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import StarRating from "@/components/StarRating";
 import { loadMastery, MasteryRow, statusOf, PASS_PCT, needsReview } from "@/lib/masteryProgress";
+import ModuleStageTests from "@/components/ModuleStageTests";
 
 type R = { id: string; title: string; topic: string | null; word_count: number | null; difficulty: number; grade: number };
 
@@ -97,6 +98,15 @@ export default function JuniorReading() {
       <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {grade ? `返回初${grade}` : "返回初中专区"}</BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold">📖 初中阅读训练</h1>
       <p className="mt-1 text-sm text-muted-foreground">闯关式阅读 · ≥80% 解锁下一篇 · 100% 升一星 · 5⭐ 永久掌握</p>
+
+      {grade && (
+        <ModuleStageTests
+          segment="junior"
+          grade={Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)}
+          module="reading"
+          className="mt-4"
+        />
+      )}
 
       {/* 复习提醒 */}
       {dueReview.length > 0 && (

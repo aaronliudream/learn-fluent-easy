@@ -3,6 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import ModuleStageTests from "@/components/ModuleStageTests";
 import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { cn } from "@/lib/utils";
@@ -97,6 +98,8 @@ export default function PrimaryVocab() {
           </button>
         </div>
       </div>
+
+      <ModuleStageTests segment="primary" grade={grade} module="vocab" />
 
       {/* 年级 */}
       {!lockedGrade && (

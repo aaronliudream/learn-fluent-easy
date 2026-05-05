@@ -15,6 +15,7 @@ import {
   type BadgeDef,
 } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
+import ModuleStageTests from "@/components/ModuleStageTests";
 import MasteryDashboard from "@/components/MasteryDashboard";
 import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";
@@ -413,6 +414,9 @@ function GroupList({
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);
+  const [sp] = useSearchParams();
+  const gradeParam = sp.get("grade");
+  const gradeNum = gradeParam ? Number(gradeParam) : null;
 
   useEffect(() => {
     (async () => {
@@ -454,6 +458,12 @@ function GroupList({
         title="高考词汇 3500"
         subtitle={`${pool.length} 词 · 按词频/难度/主题科学分类 · 不再字母排序`}
       />
+
+      {gradeNum && (
+        <div className="mt-4">
+          <ModuleStageTests segment="gaokao" grade={gradeNum} module="vocab" />
+        </div>
+      )}
 
       {/* 学习进度总览：掌握数、百分比、未完成、7 天到期、平均稳定天数 */}
       <div className="mt-6">

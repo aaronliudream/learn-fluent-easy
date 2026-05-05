@@ -19,7 +19,7 @@ export async function consumeQuestionQuota(): Promise<QuotaResult> {
     if (!user) {
       return { allowed: true, used: 0, limit: 5, tier: "guest", remaining: 5 };
     }
-    const { data, error } = await supabase.rpc("consume_question_quota");
+    const { data, error } = await (supabase.rpc as any)("consume_question_quota");
     if (error) {
       console.warn("[quota] consume failed", error);
       return { allowed: true, used: 0, limit: 5, tier: "free" };
@@ -39,7 +39,7 @@ export async function getQuotaStatus(): Promise<QuotaStatus> {
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return { allowed: true, used: 0, limit: 5, tier: "guest", remaining: 5 };
-    const { data, error } = await supabase.rpc("get_quota_status");
+    const { data, error } = await (supabase.rpc as any)("get_quota_status");
     if (error) return { allowed: true, used: 0, limit: 5, tier: "free", remaining: 5 };
     return data as QuotaStatus;
   } catch {

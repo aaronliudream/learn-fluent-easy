@@ -183,6 +183,7 @@ const App = () => (
           <Route path="/ask" element={<Ask />} />
           <Route path="/q/:slug" element={<KnowledgeCard />} />
           <Route path="/teacher/cards" element={<TeacherCards />} />
+          <Route path="/teacher/cards/:slug" element={<TeacherCardStats />} />
           <Route path="/scenes/:catKey" element={<ScenesCategory />} />
           <Route path="/scenes/:catKey/:dialogueId" element={<ScenesPlay />} />
           <Route path="/workplace" element={<Workplace />} />

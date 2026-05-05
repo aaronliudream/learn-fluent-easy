@@ -19,7 +19,7 @@ interface Props {
 
 export function IeltsVoiceCall({ open, onClose, targetBand, currentPart, onTranscriptUpdate, initialTranscript }: Props) {
   return (
-    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc">
+    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc" useWakeLock={false}>
       <IeltsVoiceCallContent
         open={open}
         onClose={onClose}
@@ -65,7 +65,7 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
   const start = useCallback(async () => {
     setConnecting(true);
     try {
-      conversation.startSession();
+      conversation.startSession({ useWakeLock: false });
     } catch (e: any) {
       console.error(e);
       toast.error("无法启动语音：" + (e?.message || "未知错误"), { duration: 8000 });

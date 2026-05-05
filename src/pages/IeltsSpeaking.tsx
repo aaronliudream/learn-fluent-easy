@@ -54,9 +54,12 @@ export default function IeltsSpeaking() {
       toast("请先登录后开始练习", { action: { label: "去登录", onClick: () => nav("/auth") } });
       return;
     }
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) { toast.error("登录已过期"); return; }
     const { data, error } = await supabase
       .from("ielts_sessions")
       .insert({
+        user_id: user.id,
         target_band: targetBand,
         mode,
         topic_category: topic,

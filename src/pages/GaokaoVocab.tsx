@@ -459,6 +459,12 @@ function GroupList({
         subtitle={`${pool.length} 词 · 按词频/难度/主题科学分类 · 不再字母排序`}
       />
 
+      {gradeNum && (
+        <div className="mt-4">
+          <ModuleStageTests segment="gaokao" grade={gradeNum} module="vocab" />
+        </div>
+      )}
+
       {/* 学习进度总览：掌握数、百分比、未完成、7 天到期、平均稳定天数 */}
       <div className="mt-6">
         <GaokaoVocabProgress />

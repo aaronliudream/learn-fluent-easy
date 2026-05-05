@@ -7,6 +7,7 @@ import { useCompanionMode, type CompanionMode } from "@/lib/companionPrefs";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
 import { displayPetName } from "@/lib/petName";
+import { useDraggable } from "@/hooks/useDraggable";
 
 type Pet = { id: string; nickname: string; stage: number; level: number; exp: number; hunger: number; mood: number; species_id: string; equipped_skin_id?: string | null };
 type Species = { id: string; emoji_egg: string; emoji_baby: string; emoji_adult: string; emoji_legend: string };
@@ -29,6 +30,7 @@ export function FloatingPet() {
   const t = useT();
   const { lang } = useI18n();
   const { mode, setMode, animate, showHungerAlert } = useCompanionMode();
+  const drag = useDraggable("bme_pet_pos");
   const [pet, setPet] = useState<Pet | null>(null);
   const [sp, setSp] = useState<Species | null>(null);
   const [skinFilter, setSkinFilter] = useState<string>("");
@@ -154,10 +156,16 @@ export function FloatingPet() {
     const demoEmojis = ["🥚", "🐣", "🦊", "🐉"];
     const isGuest = authState === "guest";
     return (
-      <div className="fixed bottom-20 right-3 z-40 select-none lg:bottom-6 lg:right-6">
+      <div
+        ref={drag.ref}
+        style={drag.style}
+        {...drag.handlers}
+        className="fixed bottom-20 right-3 z-40 cursor-grab select-none active:cursor-grabbing lg:bottom-6 lg:right-6"
+      >
         {SettingsPopover}
         <Link
           to="/pets"
+          onClick={(e) => { if (drag.wasDragging()) e.preventDefault(); }}
           aria-label={isGuest ? t("登录后领养你的学习伙伴") : t("领养你的学习伙伴")}
           className="group relative flex items-center gap-1.5 rounded-full border border-primary/30 bg-card/90 px-2.5 py-1.5 shadow-lg backdrop-blur transition hover:-translate-y-0.5"
         >
@@ -187,10 +195,16 @@ export function FloatingPet() {
   const isWaiting = pet.hunger < 25;
 
   return (
-    <div className="fixed bottom-20 right-3 z-40 select-none lg:bottom-6 lg:right-6">
+    <div
+      ref={drag.ref}
+      style={drag.style}
+      {...drag.handlers}
+      className="fixed bottom-20 right-3 z-40 cursor-grab select-none active:cursor-grabbing lg:bottom-6 lg:right-6"
+    >
       {SettingsPopover}
       <Link
         to="/pets"
+        onClick={(e) => { if (drag.wasDragging()) e.preventDefault(); }}
         aria-label={`${t("查看你的学习伙伴")} ${petName}`}
         className="group relative block"
       >

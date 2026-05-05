@@ -87,6 +87,14 @@ const Index = () => {
       proFeature: "ai-talk-unlimited",
     },
     {
+      to: "/ielts-speaking",
+      icon: Mic,
+      eyebrow: "IELTS",
+      title: "雅思口语 AI 训练",
+      desc: "考官+教练双角色 · Part 1/2/3 全流程 · 官方 9 分制评分 + 错题本",
+      gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    },
+    {
       to: "/slang",
       icon: Zap,
       eyebrow: t("index.section.slang.eyebrow"),

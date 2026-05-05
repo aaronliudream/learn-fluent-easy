@@ -292,6 +292,55 @@ All colors MUST be HSL.
   .animate-companion-breathe { animation: none; }
 }
 
+/* Cute flapping wings — appear when a floating widget is being dragged. */
+@keyframes wing-flap-left {
+  0%, 100% { transform: rotate(-18deg) scaleY(1); }
+  50%      { transform: rotate(-58deg) scaleY(0.85); }
+}
+@keyframes wing-flap-right {
+  0%, 100% { transform: rotate(18deg) scaleY(1); }
+  50%      { transform: rotate(58deg) scaleY(0.85); }
+}
+@keyframes wing-pop-in {
+  from { opacity: 0; transform: scale(0.4); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.drag-wings {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: wing-pop-in 180ms ease-out;
+}
+.drag-wings::before,
+.drag-wings::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(ellipse at 60% 40%,
+    hsl(0 0% 100% / 0.95) 0%,
+    hsl(220 90% 92% / 0.85) 45%,
+    hsl(280 85% 88% / 0.55) 80%,
+    hsl(280 85% 88% / 0) 100%);
+  border-radius: 100% 30% 60% 40% / 60% 40% 80% 40%;
+  filter: drop-shadow(0 2px 6px hsl(220 80% 60% / 0.35));
+  transform-origin: 100% 50%;
+}
+.drag-wings::before {
+  left: -45%;
+  animation: wing-flap-left 220ms ease-in-out infinite;
+}
+.drag-wings::after {
+  right: -45%;
+  transform-origin: 0% 50%;
+  border-radius: 30% 100% 40% 60% / 40% 60% 40% 80%;
+  animation: wing-flap-right 220ms ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .drag-wings::before, .drag-wings::after { animation: none; }
+}
+
 /* Soft "paper" card — works beautifully on warm ivory bg */
 .card-paper {
   background: hsl(var(--card));

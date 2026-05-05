@@ -60,13 +60,6 @@ export default function GaokaoGrade() {
       gradient: "from-sky-500 to-blue-500",
       soon: true,
     },
-    {
-      to: `/gaokao/diagnostic?grade=${g}`,
-      icon: Activity,
-      title: "水平诊断",
-      desc: "10 分钟 mini 测评 · 看薄弱点",
-      gradient: "from-emerald-500 to-teal-600",
-    },
   ];
 
   return (
@@ -74,15 +67,6 @@ export default function GaokaoGrade() {
       <BackLink to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回高中专区
       </BackLink>
-
-      <div className={`mb-5 flex items-center gap-4 rounded-3xl bg-gradient-to-br ${meta.gradient} p-5 text-white shadow-tile`}>
-        <div className="grid size-14 place-items-center rounded-2xl bg-white/25 text-3xl">{meta.emoji}</div>
-        <div className="flex-1 min-w-0">
-          <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">{meta.tag}</div>
-          <h1 className="text-2xl font-extrabold leading-tight">{meta.title}</h1>
-          <p className="mt-0.5 text-xs opacity-90">{meta.focus}</p>
-        </div>
-      </div>
 
       <section className="grid gap-3">
         {SECTIONS.map((s) => {

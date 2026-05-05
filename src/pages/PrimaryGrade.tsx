@@ -3,6 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Play, Sparkles, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import ModuleStageTests from "@/components/ModuleStageTests";
 
 const buildSkills = (g: number) => [
   { key: "games", title: "🎮 单词游戏中心", desc: "选义 · 听音 · 翻牌 · 拼词", gradient: "from-rose-400 to-orange-400", to: `/primary/games/${g}` },

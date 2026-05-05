@@ -33,7 +33,7 @@ const TABS = [
   { to: "/account", label: "Me", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
 ];
 
-const HIDDEN_ROUTES = ["/auth"];
+const HIDDEN_ROUTES = ["/auth", "/ielts-speaking/session"];
 
 export const BottomTabBar = () => {
   const { pathname } = useLocation();

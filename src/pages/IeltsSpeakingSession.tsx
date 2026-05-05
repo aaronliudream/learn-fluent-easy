@@ -212,8 +212,8 @@ export default function IeltsSpeakingSession() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session, persist]);
 
-  const send = useCallback(async () => {
-    const text = input.trim();
+  const send = useCallback(async (textOverride?: string) => {
+    const text = (textOverride ?? input).trim();
     if (!text || streaming || !session) return;
     setInput("");
     const next: Msg[] = [...messages, { role: "user", content: text, part: currentPart }];

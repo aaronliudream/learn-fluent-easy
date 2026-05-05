@@ -4,6 +4,7 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { T, useT } from "@/i18n/T";
+import { useDraggable } from "@/hooks/useDraggable";
 
 type Category = "bug" | "suggestion" | "praise" | "other";
 
@@ -20,6 +21,7 @@ const CATS: { value: Category; label: string; icon: any; color: string }[] = [
 export default function FeedbackWidget() {
   const t = useT();
   const [open, setOpen] = useState(false);
+  const drag = useDraggable("bme_feedback_pos");
   const [submitting, setSubmitting] = useState(false);
   const [category, setCategory] = useState<Category>("suggestion");
   const [rating, setRating] = useState<number>(0);
@@ -141,13 +143,20 @@ export default function FeedbackWidget() {
   return (
     <>
       {/* Floating bubble */}
-      <button
-        onClick={() => setOpen(true)}
-        aria-label={t("反馈")}
-        className="fixed left-4 z-40 grid size-12 place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-[0_10px_30px_-10px_rgba(91,43,201,0.6)] transition hover:scale-105 sm:size-14 sm:left-5 bottom-[calc(env(safe-area-inset-bottom,0px)+5.5rem)] sm:bottom-5"
+      <div
+        ref={drag.ref}
+        style={drag.style}
+        {...drag.handlers}
+        className="fixed left-4 z-40 sm:left-5 bottom-[calc(env(safe-area-inset-bottom,0px)+5.5rem)] sm:bottom-5"
       >
-        <MessageCircle className="size-6" />
-      </button>
+        <button
+          onClick={() => { if (drag.wasDragging()) return; setOpen(true); }}
+          aria-label={t("反馈")}
+          className="grid size-12 cursor-grab place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-[0_10px_30px_-10px_rgba(91,43,201,0.6)] transition hover:scale-105 active:cursor-grabbing sm:size-14"
+        >
+          <MessageCircle className="size-6" />
+        </button>
+      </div>
 
       {/* Dialog */}
       {open && (

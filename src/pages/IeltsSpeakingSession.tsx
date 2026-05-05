@@ -106,7 +106,7 @@ EXAMINER BEHAVIOUR
 
 export default function IeltsSpeakingSession() {
   return (
-    <ConversationProvider>
+    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc">
       <IeltsSpeakingSessionContent />
     </ConversationProvider>
   );
@@ -225,8 +225,6 @@ function IeltsSpeakingSessionContent() {
         setErrorMsg("语音连接超时。请确认麦克风权限已允许，并点击重试接通。");
       }, 25_000);
       conversation.startSession({
-        agentId: ELEVENLABS_AGENT_ID,
-        connectionType: "webrtc",
         overrides: {
           agent: {
             prompt: { prompt: buildExaminerPrompt({ targetBand: session.target_band, cueCard: cueCard.card, topicCategory: session.topic_category }) },
@@ -433,7 +431,7 @@ function IeltsSpeakingSessionContent() {
       )}
 
       {/* Hang up + grade */}
-      <div className="flex justify-center">
+      <div className="flex justify-center pb-[calc(env(safe-area-inset-bottom,0px)+1rem)]">
         {isConnected || connecting ? (
           <button
             onClick={hangUp}

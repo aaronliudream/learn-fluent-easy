@@ -123,6 +123,7 @@ function IeltsSpeakingSessionContent() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0); // seconds since connected
   const startedAtRef = useRef<number | null>(null);
+  const connectTimeoutRef = useRef<number | null>(null);
   const transcriptRef = useRef<Msg[]>([]);
   const partRef = useRef<1 | 2 | 3>(1);
   useEffect(() => { partRef.current = currentPart; }, [currentPart]);
@@ -149,12 +150,14 @@ function IeltsSpeakingSessionContent() {
   // ---- ElevenLabs conversation hook ----
   const conversation = useConversation({
     onConnect: () => {
+      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
       startedAtRef.current = Date.now();
       setConnecting(false);
       setErrorMsg(null);
       toast.success("已接通考官 🎙️");
     },
     onDisconnect: () => {
+      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
       setConnecting(false);
       // Auto-grade if we have a real conversation
       const msgs = transcriptRef.current;
@@ -165,6 +168,7 @@ function IeltsSpeakingSessionContent() {
     },
     onError: (err: any) => {
       console.error("EL error", err);
+      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
       setConnecting(false);
       setErrorMsg(typeof err === "string" ? err : (err?.message || "语音连接出错"));
     },
@@ -216,6 +220,10 @@ function IeltsSpeakingSessionContent() {
     }
     try {
       // Public agent — connect directly with agentId (no server token needed)
+      connectTimeoutRef.current = window.setTimeout(() => {
+        setConnecting(false);
+        setErrorMsg("语音连接超时。请确认麦克风权限已允许，并点击重试接通。");
+      }, 25_000);
       conversation.startSession({
         agentId: ELEVENLABS_AGENT_ID,
         connectionType: "webrtc",
@@ -278,7 +286,10 @@ function IeltsSpeakingSessionContent() {
   }, [conversation]);
 
   // Cleanup on unmount
-  useEffect(() => () => { try { conversation.endSession(); } catch { /* */ } }, []);
+  useEffect(() => () => {
+    if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
+    try { conversation.endSession(); } catch { /* */ }
+  }, []);
 
   // ==================== RENDER ====================
   if (!session) {

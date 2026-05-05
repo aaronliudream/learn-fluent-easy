@@ -5894,6 +5894,13 @@ export type Database = {
           capped: boolean
         }[]
       }
+      award_referrer: {
+        Args: { _amount?: number; _card_id: string; _ref_user_id: string }
+        Returns: {
+          awarded: number
+          reason: string
+        }[]
+      }
       bump_pet_skill: {
         Args: { _delta?: number; _skill_code: string }
         Returns: {

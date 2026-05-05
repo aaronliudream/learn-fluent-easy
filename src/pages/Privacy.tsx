@@ -26,26 +26,17 @@ const Privacy = () => {
           <li><T>提供并改进个性化的学习体验；</T></li>
           <li><T>跨设备同步你的学习进度；</T></li>
           <li><T>生成统计数据以帮助你了解学习成果；</T></li>
-          <li><T>调用 AI 服务（OpenAI / Google Gemini）来生成课程内容与批改作业。</T></li>
         </ul>
 
-        <h3><T>3. 第三方服务</T></h3>
-        <ul>
-          <li><T>Lovable Cloud（基于 Supabase）：账户认证与数据存储。</T></li>
-          <li><T>Google OAuth：可选的第三方登录。</T></li>
-          <li><T>Lovable AI Gateway：调用大型语言模型进行内容生成与批改。</T></li>
-          <li><T>Google Gemini TTS（通过 Lovable AI Gateway）：文本转语音（朗读单词与例句）。</T></li>
-        </ul>
-
-        <h3><T>4. 数据保留与删除</T></h3>
+        <h3><T>3. 数据保留与删除</T></h3>
         <p>
           <T>你的数据保留至你主动删除账户。你可以随时在"账户与隐私"页面删除账户，所有相关数据将立即且永久删除。</T>
         </p>
 
-        <h3><T>5. 数据导出</T></h3>
+        <h3><T>4. 数据导出</T></h3>
         <p><T>你可以随时在"账户与隐私"页面导出全部个人数据（JSON 格式）。</T></p>
 
-        <h3><T>6. 儿童隐私（COPPA / GDPR-K / CCPA 儿童条款）</T></h3>
+        <h3><T>5. 儿童隐私（COPPA / GDPR-K / CCPA 儿童条款）</T></h3>
         <p>
           <T>本应用面向所有年龄段的英语学习者，但根据美国《儿童在线隐私保护法》（COPPA）、欧盟《通用数据保护条例》（GDPR 第 8 条）以及加州《消费者隐私法案》（CCPA / CPRA）针对未成年人的特别规定：</T>
         </p>
@@ -58,7 +49,7 @@ const Privacy = () => {
           <li><T>如发现我们在未取得家长同意的情况下收集了 13 岁以下儿童的信息，请立即与我们联系，我们会立刻删除相关数据。</T></li>
         </ul>
 
-        <h3><T>7. 联系我们</T></h3>
+        <h3><T>6. 联系我们</T></h3>
         <p><T>如有任何隐私相关问题，请联系：</T>support@bigmoonenglish.com</p>
 
         <hr />
@@ -82,28 +73,19 @@ const Privacy = () => {
           <li>Provide and improve a personalized learning experience;</li>
           <li>Sync your progress across devices;</li>
           <li>Generate statistics to show your learning outcomes;</li>
-          <li>Call AI services (OpenAI / Google Gemini) to generate lesson content and grade writing.</li>
         </ul>
 
-        <h3>3. Third-Party Services</h3>
-        <ul>
-          <li><strong>Lovable Cloud (powered by Supabase)</strong>: authentication and data storage;</li>
-          <li><strong>Google OAuth</strong>: optional sign-in;</li>
-          <li><strong>Lovable AI Gateway</strong>: large language models for content generation and grading;</li>
-          <li><strong>ElevenLabs</strong>: text-to-speech for word and sentence playback.</li>
-        </ul>
-
-        <h3>4. Data Retention &amp; Deletion</h3>
+        <h3>3. Data Retention &amp; Deletion</h3>
         <p>
           Your data is kept until you delete your account. You can delete your account at
           any time from the "Account &amp; Privacy" page; all related data will be removed
           immediately and permanently.
         </p>
 
-        <h3>5. Data Export</h3>
+        <h3>4. Data Export</h3>
         <p>You can export all your personal data (JSON) at any time from the "Account &amp; Privacy" page.</p>
 
-        <h3>6. Children's Privacy (COPPA / GDPR-K / CCPA)</h3>
+        <h3>5. Children's Privacy (COPPA / GDPR-K / CCPA)</h3>
         <p>
           The App is intended for English learners of all ages. In line with the U.S. Children's Online Privacy
           Protection Act (COPPA), Article 8 of the EU General Data Protection Regulation (GDPR), and the
@@ -122,7 +104,7 @@ const Privacy = () => {
             consent, please contact us immediately and we will delete the data without delay.</li>
         </ul>
 
-        <h3>7. Contact</h3>
+        <h3>6. Contact</h3>
         <p>For privacy questions, contact: support@bigmoonenglish.com</p>
       </article>
     </main>

@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Lock, Share2, Sparkles, Volume2 } from "lucide-react";
+import { Heart, Lock, Share2, Sparkles, Volume2, BookmarkPlus, Trophy } from "lucide-react";
 import { toast } from "sonner";
 
 type Quiz = { q: string; options: string[]; answer: number; explain?: string };
@@ -154,10 +154,9 @@ export default function KnowledgeCard() {
       {/* Quiz — gated */}
       <section>
         <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-3 flex items-center gap-2">
-          🎯 3 题小测验 {!authed && <Lock className="w-3 h-3" />}
+          🎯 3 题小测验
         </p>
-        <div className="relative">
-          <div className={authed ? "space-y-3" : "space-y-3 blur-sm pointer-events-none select-none"}>
+        <div className="space-y-3">
             {card.quiz.map((q, i) => (
               <Card key={i} className="p-4">
                 <p className="font-medium mb-3">{i + 1}. {q.q}</p>
@@ -187,23 +186,41 @@ export default function KnowledgeCard() {
                 )}
               </Card>
             ))}
-          </div>
-          {!authed && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Card className="p-6 max-w-sm text-center shadow-2xl border-primary">
-                <Lock className="w-8 h-8 mx-auto text-primary mb-2" />
-                <p className="font-semibold mb-1">解锁互动学习</p>
-                <p className="text-sm text-muted-foreground mb-4">
-                  注册免费账号后即可做小测验、跟读发音、追问 AI。
-                </p>
-                <Button onClick={() => navigate(`/auth?redirect=/q/${slug}`)} className="w-full">
-                  免费注册解锁 →
-                </Button>
-              </Card>
-            </div>
-          )}
         </div>
       </section>
+
+      {/* End-of-quiz CTA — only after user answered all questions, only for guests */}
+      {!authed && Object.keys(picked).length === card.quiz.length && card.quiz.length > 0 && (() => {
+        const correct = card.quiz.reduce((acc, q, i) => acc + (picked[i] === q.answer ? 1 : 0), 0);
+        return (
+          <Card className="p-6 text-center bg-gradient-to-br from-primary/10 via-primary/5 to-background border-primary shadow-lg">
+            <Trophy className="w-10 h-10 mx-auto text-primary mb-2" />
+            <p className="text-lg font-bold mb-1">🎉 答对 {correct}/{card.quiz.length}！</p>
+            <p className="text-sm text-muted-foreground mb-4">
+              想再练一道类似的题？让 AI 给你出专属题目。
+            </p>
+            <div className="space-y-2">
+              <Button
+                onClick={() => navigate(`/auth?redirect=/ask`)}
+                className="w-full h-12 text-base"
+                size="lg"
+              >
+                <Sparkles className="w-4 h-4 mr-2" />
+                免费生成我的专属题 →
+              </Button>
+              <Button
+                onClick={() => navigate(`/auth?redirect=/q/${slug}`)}
+                variant="outline"
+                className="w-full"
+              >
+                <BookmarkPlus className="w-4 h-4 mr-2" />
+                保存这张卡片到我的学习库
+              </Button>
+            </div>
+            <p className="text-[11px] text-muted-foreground mt-3">注册免费 · 30 秒搞定</p>
+          </Card>
+        );
+      })()}
 
       {/* Speak / Ask AI placeholders (locked for guests) */}
       <section className="grid grid-cols-2 gap-3">

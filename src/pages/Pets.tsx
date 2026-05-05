@@ -14,6 +14,8 @@ import PetAbilities from "@/components/pet/PetAbilities";
 import EvolutionTree from "@/components/pet/EvolutionTree";
 import { useCurrencies, wishlistAdd, fetchWishlist, wishlistRemove, type WishlistRow } from "@/lib/currencies";
 import { T, useT } from "@/i18n/T";
+import { useI18n } from "@/i18n/I18nProvider";
+import { displayPetName } from "@/lib/petName";
 
 type Species = { id:string; name_cn:string; emoji_egg:string; emoji_baby:string; emoji_adult:string; emoji_legend:string; rarity:number; adopt_cost:number; description_cn:string; personality_cn:string };
 type Food = { id:string; name_cn:string; emoji:string; price:number; hunger_restore:number; exp_bonus:number; mood_bonus:number; rarity:number; description_cn:string };

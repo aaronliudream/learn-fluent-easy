@@ -50,8 +50,14 @@ export function IeltsVoiceCall({ open, onClose, targetBand, currentPart, onTrans
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
       const { data, error } = await supabase.functions.invoke("elevenlabs-token");
-      if (error) throw error;
-      if (!data?.token) throw new Error("未获取到 token");
+      // supabase-js wraps non-2xx responses in `error` but the JSON body
+      // (with our friendly message) is still in `data`. Prefer that.
+      const serverMsg =
+        (data && typeof data === "object" && "error" in data && (data as any).error) ||
+        (error as any)?.message;
+      if (!data?.token) {
+        throw new Error(serverMsg || "未获取到 token");
+      }
       await conversation.startSession({
         conversationToken: data.token,
         connectionType: "webrtc",
@@ -66,11 +72,13 @@ export function IeltsVoiceCall({ open, onClose, targetBand, currentPart, onTrans
       });
     } catch (e: any) {
       console.error(e);
-      toast.error("无法启动语音：" + (e?.message || ""));
+      toast.error("无法启动语音：" + (e?.message || "未知错误"), { duration: 8000 });
+      // Auto-close the modal so the user isn't stuck on "等待接通…"
+      setTimeout(() => onClose(), 100);
     } finally {
       setConnecting(false);
     }
-  }, [conversation]);
+  }, [conversation, onClose]);
 
   const stop = useCallback(async () => {
     try { await conversation.endSession(); } catch { /* */ }

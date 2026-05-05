@@ -4,6 +4,9 @@ import { Check, Sparkles, ArrowLeft } from "lucide-react";
 import { trackFunnel } from "@/lib/funnel";
 import BackLink from "@/components/BackLink";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
+import { StripeEmbeddedCheckout } from "@/components/StripeEmbeddedCheckout";
+import { PaymentTestModeBanner } from "@/components/PaymentTestModeBanner";
 
 const PLANS = [
   {
@@ -14,6 +17,7 @@ const PLANS = [
     cta: "继续免费使用",
     features: ["每日 5 题", "基础语法讲解", "进度同步"],
     highlight: false,
+    priceId: null as string | null,
   },
   {
     id: "monthly",
@@ -23,6 +27,7 @@ const PLANS = [
     cta: "选择月付",
     features: ["不限题量", "AI 小月一对一", "全部错题本 + 间隔复习", "随时取消"],
     highlight: false,
+    priceId: "pro_monthly",
   },
   {
     id: "yearly",
@@ -33,6 +38,7 @@ const PLANS = [
     cta: "选择年付（推荐）",
     features: ["月付全部权益", "高考 / 中考真题库", "听说读写四项全开", "宠物专属皮肤"],
     highlight: true,
+    priceId: "pro_yearly",
   },
 ];
 
@@ -40,25 +46,37 @@ export default function Pricing() {
   const [params] = useSearchParams();
   const navigate = useNavigate();
   const fromTrigger = params.get("from") || "direct";
-  const [pendingPlan, setPendingPlan] = useState<string | null>(null);
+  const [checkout, setCheckout] = useState<{ priceId: string; userId?: string; email?: string } | null>(null);
+  const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
 
   useEffect(() => {
     trackFunnel("pricing_view", "page_view", { from: fromTrigger }).catch(() => {});
     document.title = "升级 Pro · Big Moon English";
   }, [fromTrigger]);
 
-  const onChoose = (planId: string) => {
+  const onChoose = async (planId: string) => {
     if (planId === "free") {
       navigate("/");
       return;
     }
+    const plan = PLANS.find((p) => p.id === planId);
+    if (!plan?.priceId) return;
+    setLoadingPlan(planId);
     trackFunnel("pricing_select_plan", planId, { from: fromTrigger }).catch(() => {});
-    setPendingPlan(planId);
-    // TODO（下一迭代）：调用 Stripe / WeChat checkout edge function
-    setTimeout(() => setPendingPlan(null), 1500);
+
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      // 未登录 → 去登录，登录后回到 pricing
+      navigate(`/auth?redirect=${encodeURIComponent(`/pricing?plan=${planId}&from=${fromTrigger}`)}`);
+      return;
+    }
+    setCheckout({ priceId: plan.priceId, userId: user.id, email: user.email });
+    setLoadingPlan(null);
   };
 
   return (
+    <>
+    <PaymentTestModeBanner />
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-8 md:py-14">
       <BackLink to="/" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回
@@ -75,6 +93,22 @@ export default function Pricing() {
         </p>
       </header>
 
+      {checkout ? (
+        <section className="rounded-3xl border bg-card p-3 shadow-card">
+          <button
+            onClick={() => setCheckout(null)}
+            className="mb-2 inline-flex items-center gap-1 px-2 py-1 text-xs text-muted-foreground hover:text-foreground"
+          >
+            ← 重新选择档位
+          </button>
+          <StripeEmbeddedCheckout
+            priceId={checkout.priceId}
+            userId={checkout.userId}
+            customerEmail={checkout.email}
+            returnUrl={`${window.location.origin}/checkout/return?session_id={CHECKOUT_SESSION_ID}`}
+          />
+        </section>
+      ) : (
       <section className="grid gap-4 md:grid-cols-3">
         {PLANS.map((p) => (
           <article
@@ -111,19 +145,21 @@ export default function Pricing() {
               onClick={() => onChoose(p.id)}
               variant={p.highlight ? "default" : "outline"}
               size="lg"
-              disabled={pendingPlan === p.id}
+              disabled={loadingPlan === p.id}
               className="w-full"
             >
-              {pendingPlan === p.id ? "跳转中…" : p.cta}
+              {loadingPlan === p.id ? "准备中…" : p.cta}
             </Button>
           </article>
         ))}
       </section>
+      )}
 
       <p className="mx-auto mt-8 max-w-md text-center text-xs text-muted-foreground">
-        支付通道：Stripe（信用卡 / Apple Pay）· 微信支付即将上线。
+        支付通道：信用卡 / Apple Pay · 7 天无理由退款。
         付费后立即解锁所有 Pro 权益。
       </p>
     </main>
+    </>
   );
 }

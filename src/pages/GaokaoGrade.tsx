@@ -84,19 +84,6 @@ export default function GaokaoGrade() {
         </div>
       </div>
 
-      {/* 阶段测试入口 */}
-      <Link
-        to={`/stage-tests/gaokao/${g}`}
-        className="mb-5 flex items-center gap-3 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 p-4 text-white shadow-tile transition hover:-translate-y-0.5"
-      >
-        <div className="grid size-12 place-items-center rounded-xl bg-white/25 text-2xl">📊</div>
-        <div className="flex-1 min-w-0">
-          <div className="text-sm font-extrabold">阶段测试 · 通关挑战</div>
-          <div className="text-[11px] opacity-90">单元小测 → 模块过关 → 学段诊断 · 答对得宠物经验和金币</div>
-        </div>
-        <span className="text-2xl">→</span>
-      </Link>
-
       <section className="grid gap-3">
         {SECTIONS.map((s) => {
           const Icon = s.icon;

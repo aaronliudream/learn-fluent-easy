@@ -71,7 +71,7 @@ const TOOL = {
               },
             },
             rule_oneliner_zh: { type: "string", description: "ONE Chinese sentence that captures the rule, plain language" },
-            mnemonic_zh: { type: "string", description: "A memorable 口诀 or trick in Chinese, max 12 chars" },
+            mnemonic_zh: { type: "string", description: "A memorable 口诀 in Chinese, MUST be <= 8 Chinese characters, punchy and rhythmic. NOT a full sentence." },
           },
           required: ["examples", "rule_oneliner_zh", "mnemonic_zh"],
           additionalProperties: false,
@@ -98,7 +98,7 @@ const TOOL = {
             properties: {
               type: { type: "string", enum: ["mcq", "fill", "spot_error", "reorder"] },
               difficulty: { type: "string", enum: ["easy", "medium", "hard"] },
-              prompt: { type: "string", description: "the question stem; for fill use ___ for blank; for spot_error give a sentence with one wrong word; for reorder give scrambled tokens joined by ' / '" },
+              prompt: { type: "string", description: "Question stem. fill: use ___ for blank. spot_error: a sentence containing exactly ONE wrong word. reorder: tokens joined by ' / ' that MUST be RANDOMLY SHUFFLED (NOT in correct order — the user has to rearrange them)." },
               answer: { type: "string", description: "the correct answer (word, full sentence for reorder, or the wrong word for spot_error)" },
               options: {
                 type: "array",

@@ -169,6 +169,7 @@ export function FloatingPet() {
           aria-label={isGuest ? t("登录后领养你的学习伙伴") : t("领养你的学习伙伴")}
           className="group relative flex items-center gap-1.5 rounded-full border border-primary/30 bg-card/90 px-2.5 py-1.5 shadow-lg backdrop-blur transition hover:-translate-y-0.5"
         >
+          {drag.dragging && <span className="drag-wings" aria-hidden />}
           <div className={cn("text-3xl leading-none transition", animate && "animate-companion-breathe group-hover:scale-110")}>
             {demoEmojis[demoTick]}
           </div>
@@ -208,6 +209,7 @@ export function FloatingPet() {
         aria-label={`${t("查看你的学习伙伴")} ${petName}`}
         className="group relative block"
       >
+        {drag.dragging && <span className="drag-wings" aria-hidden />}
         <div className={cn(
           "relative flex items-end gap-1.5 rounded-full border border-border/60 bg-card/90 px-2.5 py-1.5 shadow-lg backdrop-blur transition hover:-translate-y-0.5",
           isWaiting && showHungerAlert && !react && animate && "ring-2 ring-amber-300/60",

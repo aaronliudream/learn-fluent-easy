@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, Check, X, Volume2, Loader2, Trophy, Sparkles, Mic, BookOpen, Eye, Pencil, Target } from "lucide-react";
+import { ArrowLeft, Check, X, Volume2, Loader2, Trophy, Sparkles, Mic, MicOff, BookOpen, Eye, Pencil, Target } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 type StepType = "input" | "understand" | "practice" | "output" | "test";
 type Step = { type: StepType; title?: string; intro?: string; kind?: string; passScore?: number;
@@ -122,7 +123,7 @@ export default function PrimaryLesson() {
       ) : cur?.type === "input"      ? <InputStep step={cur} onNext={() => onStepDone()} />
         : cur?.type === "understand" ? <UnderstandStep step={cur} onNext={() => onStepDone()} />
         : cur?.type === "practice"   ? <PracticeStep step={cur} onNext={(r) => onStepDone(r)} />
-        : cur?.type === "output"     ? <OutputStep step={cur} onNext={() => onStepDone()} />
+        : cur?.type === "output"     ? <OutputStep step={cur} grade={lesson.unit?.grade ?? 3} onNext={() => onStepDone()} />
         : cur?.type === "test"       ? <TestStep step={cur} onNext={(r) => onStepDone(r)} />
         : null}
     </main>
@@ -249,10 +250,11 @@ function TestStep({ step, onNext }: { step: Step; onNext: (r: { correct: number;
     onDone={(r) => onNext(r)} label="🏁 小测验" />;
 }
 
-function OutputStep({ step, onNext }: { step: Step; onNext: () => void }) {
+function OutputStep({ step, grade, onNext }: { step: Step; grade?: number; onNext: () => void }) {
   const items = step.items ?? [];
   const [i, setI] = useState(0);
   const [done, setDone] = useState<number[]>([]);
+  const g = grade ?? 3;
   const cur = items[i];
   if (!cur) { onNext(); return null; }
   return (
@@ -268,17 +270,165 @@ function OutputStep({ step, onNext }: { step: Step; onNext: () => void }) {
           className="mx-auto mt-4 grid size-14 place-items-center rounded-full bg-gradient-to-br from-pink-500 to-rose-500 text-white shadow-lg transition hover:scale-105">
           <Volume2 className="size-6" />
         </button>
-        <p className="mt-3 text-[11px] text-muted-foreground">先听一听，然后大声跟读 ✨</p>
+        <p className="mt-3 text-[11px] text-muted-foreground">先听一听，然后点下方麦克风跟读，AI 会打分 ✨</p>
       </div>
-      <button onClick={() => {
-        const nd = [...done, i];
-        setDone(nd);
-        if (i + 1 >= items.length) onNext();
-        else setI(i + 1);
-      }} className="w-full rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 py-4 text-base font-extrabold text-white shadow-tile">
-        我说完啦 ✓
-      </button>
+
+      <SpeakRecorder
+        key={i}
+        target={cur.say}
+        grade={g}
+        scenario={cur.prompt ?? ""}
+        onPass={() => {
+          const nd = [...done, i];
+          setDone(nd);
+          if (i + 1 >= items.length) onNext();
+          else setI(i + 1);
+        }}
+        onSkip={() => {
+          if (i + 1 >= items.length) onNext();
+          else setI(i + 1);
+        }}
+      />
     </section>
+  );
+}
+
+/**
+ * SpeakRecorder — kid-friendly mic recorder.
+ * Records up to 6s, calls primary-speaking-grade, shows score + encouragement.
+ * Auto-passes (calls onPass) if score >= 60 after a short delay.
+ */
+function SpeakRecorder({ target, grade, scenario, onPass, onSkip }:
+  { target: string; grade: number; scenario: string; onPass: () => void; onSkip: () => void }) {
+  const [phase, setPhase] = useState<"idle" | "recording" | "scoring" | "done">("idle");
+  const [result, setResult] = useState<{ overall_score: number; encouragement: string; transcript: string; corrections?: { word: string; tip_cn: string }[] } | null>(null);
+  const recRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const streamRef = useRef<MediaStream | null>(null);
+  const stopTimerRef = useRef<number | null>(null);
+  const startedAtRef = useRef<number>(0);
+
+  function cleanup() {
+    try { recRef.current?.state !== "inactive" && recRef.current?.stop(); } catch { /* noop */ }
+    try { streamRef.current?.getTracks().forEach(t => t.stop()); } catch { /* noop */ }
+    if (stopTimerRef.current) { window.clearTimeout(stopTimerRef.current); stopTimerRef.current = null; }
+  }
+  useEffect(() => () => cleanup(), []);
+
+  async function startRec() {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } });
+      streamRef.current = stream;
+      const rec = new MediaRecorder(stream, { mimeType: "audio/webm" });
+      recRef.current = rec;
+      chunksRef.current = [];
+      rec.ondataavailable = (e) => { if (e.data.size > 0) chunksRef.current.push(e.data); };
+      rec.onstop = async () => {
+        const dur = Date.now() - startedAtRef.current;
+        const blob = new Blob(chunksRef.current, { type: "audio/webm" });
+        cleanup();
+        if (blob.size < 800 || dur < 400) {
+          toast.error("没听清楚，再说一次哦 🎤");
+          setPhase("idle");
+          return;
+        }
+        setPhase("scoring");
+        try {
+          const buf = await blob.arrayBuffer();
+          let bin = "";
+          const bytes = new Uint8Array(buf);
+          for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+          const audio_base64 = btoa(bin);
+          const { data, error } = await supabase.functions.invoke("primary-speaking-grade", {
+            body: { target, audio_base64, mime: "audio/webm", grade, scenario, audio_duration_ms: dur },
+          });
+          if (error) throw error;
+          setResult(data as any);
+          setPhase("done");
+          // Auto-advance on good score
+          if ((data as any)?.overall_score >= 60) {
+            window.setTimeout(() => onPass(), 1800);
+          }
+        } catch (e: any) {
+          console.error("speak grade failed", e);
+          toast.error("打分失败，可以跳过哦");
+          setPhase("idle");
+        }
+      };
+      startedAtRef.current = Date.now();
+      rec.start();
+      setPhase("recording");
+      // Auto-stop at 6s
+      stopTimerRef.current = window.setTimeout(() => {
+        if (recRef.current?.state === "recording") recRef.current.stop();
+      }, 6000);
+    } catch (e) {
+      console.error("mic err", e);
+      toast.error("麦克风权限被拒绝了，请允许一下 🎙️");
+      setPhase("idle");
+    }
+  }
+
+  function stopNow() {
+    if (recRef.current?.state === "recording") recRef.current.stop();
+  }
+
+  if (phase === "done" && result) {
+    const s = result.overall_score | 0;
+    const tone = s >= 85 ? "from-emerald-500 to-teal-500" : s >= 60 ? "from-amber-500 to-orange-500" : "from-rose-500 to-pink-500";
+    const stars = s >= 85 ? 3 : s >= 60 ? 2 : 1;
+    return (
+      <div className="space-y-3">
+        <div className={`rounded-2xl bg-gradient-to-br ${tone} p-4 text-white shadow-tile`}>
+          <div className="flex items-center justify-between">
+            <div className="text-lg font-black">{s} 分</div>
+            <div className="text-lg">{Array.from({ length: 3 }).map((_, k) => (<span key={k}>{k < stars ? "⭐" : "☆"}</span>))}</div>
+          </div>
+          <div className="mt-1 text-sm font-bold">{result.encouragement}</div>
+          {result.transcript && <div className="mt-1 text-[11px] opacity-90">你说的：{result.transcript}</div>}
+          {result.corrections && result.corrections.length > 0 && (
+            <div className="mt-2 space-y-1">
+              {result.corrections.map((c, k) => (
+                <div key={k} className="text-[11px] opacity-90">💡 <b>{c.word}</b> · {c.tip_cn}</div>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          <button onClick={() => { setResult(null); setPhase("idle"); }} className="rounded-2xl border-2 border-pink-200 bg-white py-3 text-sm font-extrabold text-pink-600">再录一次</button>
+          <button onClick={onPass} className="rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 py-3 text-sm font-extrabold text-white shadow-tile">下一句 →</button>
+        </div>
+      </div>
+    );
+  }
+
+  if (phase === "scoring") {
+    return (
+      <div className="flex items-center justify-center gap-2 rounded-2xl border-2 border-pink-200 bg-pink-50 py-4 text-sm font-bold text-pink-600">
+        <Loader2 className="size-4 animate-spin" /> Spark 正在听你说…
+      </div>
+    );
+  }
+
+  if (phase === "recording") {
+    return (
+      <div className="space-y-2">
+        <button onClick={stopNow}
+          className="w-full rounded-2xl bg-gradient-to-r from-rose-500 to-pink-500 py-4 text-base font-extrabold text-white shadow-tile animate-pulse">
+          <span className="inline-flex items-center gap-2"><MicOff className="size-5" /> 录音中…点击结束（自动 6 秒）</span>
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid grid-cols-3 gap-2">
+      <button onClick={onSkip} className="col-span-1 rounded-2xl border-2 border-muted bg-card py-3 text-xs font-bold text-muted-foreground">跳过</button>
+      <button onClick={startRec}
+        className="col-span-2 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 py-4 text-base font-extrabold text-white shadow-tile">
+        <span className="inline-flex items-center gap-2"><Mic className="size-5" /> 点我说一遍</span>
+      </button>
+    </div>
   );
 }
 

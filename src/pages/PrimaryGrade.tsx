@@ -3,6 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Play, Sparkles, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import ModuleStageTests from "@/components/ModuleStageTests";
 
 const buildSkills = (g: number) => [
   { key: "games", title: "🎮 单词游戏中心", desc: "选义 · 听音 · 翻牌 · 拼词", gradient: "from-rose-400 to-orange-400", to: `/primary/games/${g}` },
@@ -70,6 +71,7 @@ export default function PrimaryGrade() {
       {/* Lessons list */}
       {!loading && lessons.length > 0 && (
         <section className="mb-6">
+          <ModuleStageTests segment="primary" grade={g} module="vocab" />
           <div className="mb-2 flex items-center gap-2 text-sm font-extrabold">
             <Sparkles className="size-4 text-amber-500" /> 本年级课程
           </div>

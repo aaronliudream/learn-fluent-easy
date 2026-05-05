@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, BookA, Sparkles, MessageCircle, Play, Star, Gamepad2 } from "lucide-react";
+import { ArrowLeft, BookA, Sparkles, MessageCircle, Play, Star, Gamepad2, AlertCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { StreakBanner } from "@/components/StreakBanner";
 
 type Grade = {
   id: number; name_cn: string; name_en: string;
@@ -24,6 +25,8 @@ export default function Primary() {
   const nav = useNavigate();
   const [grades, setGrades] = useState<Grade[]>(FALLBACK_GRADES);
   const [pet, setPet] = useState<Pet | null>(null);
+  const [uid, setUid] = useState<string | null>(null);
+  const [mistakeCount, setMistakeCount] = useState<number>(0);
   const [selectedGrade, setSelectedGrade] = useState<number>(() => {
     const saved = localStorage.getItem("primary:lastGrade");
     return saved ? Number(saved) : 3;
@@ -31,17 +34,29 @@ export default function Primary() {
 
   useEffect(() => {
     (async () => {
+      // SEO: title + meta description
+      document.title = "小学英语 G1-G6 · 自然拼读 · 词汇 · 听说读写 | FluentPath";
+      const desc = "教育部新课标小学英语 1-6 年级：自然拼读、核心词汇、听力对话、阅读闯关、AI 口语陪练，孩子每天 10 分钟。";
+      let m = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+      if (!m) { m = document.createElement("meta"); m.name = "description"; document.head.appendChild(m); }
+      m.content = desc;
+
       const { data } = await supabase.from("primary_grades").select("*").order("sort_order");
       if (data && data.length) setGrades(data as Grade[]);
       const { data: u } = await supabase.auth.getUser();
-      const uid = u?.user?.id;
-      if (uid) {
-        const { data: p } = await supabase.from("pet_state").select("*").eq("user_id", uid).maybeSingle();
+      const userId = u?.user?.id ?? null;
+      setUid(userId);
+      if (userId) {
+        const { data: p } = await supabase.from("pet_state").select("*").eq("user_id", userId).maybeSingle();
         if (p) setPet(p as Pet);
         else {
-          const { data: created } = await supabase.from("pet_state").insert({ user_id: uid }).select().maybeSingle();
+          const { data: created } = await supabase.from("pet_state").insert({ user_id: userId }).select().maybeSingle();
           if (created) setPet(created as Pet);
         }
+        const { count } = await supabase.from("user_mistakes")
+          .select("id", { count: "exact", head: true })
+          .eq("user_id", userId).eq("is_resolved", false);
+        setMistakeCount(count ?? 0);
       }
     })();
   }, []);
@@ -61,6 +76,9 @@ export default function Primary() {
       <BackLink to="/china" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回中国学生专区
       </BackLink>
+
+      {/* Streak / 打卡 — 留存核心 */}
+      {uid && <StreakBanner userId={uid} />}
 
       {/* Spark pet bar */}
       <div className="mb-5 rounded-3xl bg-gradient-to-br from-amber-200 via-rose-200 to-violet-200 p-4 shadow-tile">
@@ -143,14 +161,20 @@ export default function Primary() {
       </div>
 
       {/* Whole-primary mega test + parent dashboard */}
-      <div className="mt-3 grid grid-cols-2 gap-3">
+      <div className="mt-3 grid grid-cols-3 gap-3">
+        <Link to="/mistakes" className="rounded-2xl bg-gradient-to-br from-rose-500 to-orange-500 p-4 text-white shadow-tile">
+          <div className="flex items-center gap-1 text-sm font-extrabold">
+            <AlertCircle className="size-4" /> 错词本
+          </div>
+          <div className="mt-1 text-[11px] opacity-90">{mistakeCount > 0 ? `待复习 ${mistakeCount}` : "暂无错题 ✨"}</div>
+        </Link>
         <Link to="/primary/games/all" className="rounded-2xl bg-gradient-to-br from-fuchsia-500 to-purple-500 p-4 text-white shadow-tile">
           <div className="text-sm font-extrabold">🏆 全小学大测验</div>
           <div className="mt-1 text-[11px] opacity-90">1008 词混合 · 毕业挑战</div>
         </Link>
         <Link to="/primary/parent" className="rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 p-4 text-white shadow-tile">
-          <div className="text-sm font-extrabold">👨‍👩‍👧 家长进度报告</div>
-          <div className="mt-1 text-[11px] opacity-90">每个年级 · 每项技能掌握度</div>
+          <div className="text-sm font-extrabold">👨‍👩‍👧 家长报告</div>
+          <div className="mt-1 text-[11px] opacity-90">每项技能掌握度</div>
         </Link>
       </div>
     </main>

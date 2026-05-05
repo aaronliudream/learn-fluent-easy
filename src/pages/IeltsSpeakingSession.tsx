@@ -4,8 +4,6 @@ import { Mic, Send, Square, Loader2, ArrowLeft, AlertCircle, Trophy, RefreshCw, 
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { toast } from "sonner";
-import ReactMarkdown from "react-markdown";
-
 type Msg = { role: "user" | "assistant"; content: string; part: 1 | 2 | 3 };
 type SessionRow = {
   id: string;

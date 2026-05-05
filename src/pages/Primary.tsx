@@ -53,7 +53,7 @@ export default function Primary() {
           const { data: created } = await supabase.from("pet_state").insert({ user_id: userId }).select().maybeSingle();
           if (created) setPet(created as Pet);
         }
-        const { count } = await supabase.from("mistakes")
+        const { count } = await supabase.from("user_mistakes")
           .select("id", { count: "exact", head: true })
           .eq("user_id", userId).eq("is_resolved", false);
         setMistakeCount(count ?? 0);

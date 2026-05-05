@@ -8,6 +8,7 @@ import { stopSpeaking } from "@/lib/speak";
 import { I18nProvider } from "@/i18n/I18nProvider";
 import ChineseOnlyRoute from "@/components/ChineseOnlyRoute";
 import { GuestCardClaimer } from "@/components/GuestCardClaimer";
+import { RouteErrorBoundary } from "@/components/RouteErrorBoundary";
 // Eagerly load home + auth (most common entry points) to avoid first-paint chunk fetch
 import Index from "./pages/Index.tsx";
 import Auth from "./pages/Auth.tsx";
@@ -165,6 +166,7 @@ const App = () => (
         <DigestionAnimation />
         <GrowthLetter />
         <div className="pb-tabbar lg:pb-0">
+        <RouteErrorBoundary>
         <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Index />} />
@@ -253,6 +255,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>
+        </RouteErrorBoundary>
         </div>
         <BottomTabBar />
         <FeedbackWidgetGate />

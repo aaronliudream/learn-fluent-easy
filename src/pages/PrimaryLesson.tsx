@@ -123,7 +123,7 @@ export default function PrimaryLesson() {
       ) : cur?.type === "input"      ? <InputStep step={cur} onNext={() => onStepDone()} />
         : cur?.type === "understand" ? <UnderstandStep step={cur} onNext={() => onStepDone()} />
         : cur?.type === "practice"   ? <PracticeStep step={cur} onNext={(r) => onStepDone(r)} />
-        : cur?.type === "output"     ? <OutputStep step={cur} onNext={() => onStepDone()} />
+        : cur?.type === "output"     ? <OutputStep step={cur} grade={lesson.unit?.grade ?? 3} onNext={() => onStepDone()} />
         : cur?.type === "test"       ? <TestStep step={cur} onNext={(r) => onStepDone(r)} />
         : null}
     </main>

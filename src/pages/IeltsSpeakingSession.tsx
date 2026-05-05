@@ -299,8 +299,8 @@ export default function IeltsSpeakingSession() {
   }, [session, id]);
 
   const endNow = useCallback(() => {
-    if (messages.length < 4) {
-      toast("对话太短，请至少完成 Part 1 后再结束");
+    if (messages.length < 2) {
+      toast.error("还没有任何回答，至少先回答一个问题再结束");
       return;
     }
     if (confirm("确定结束并生成评分吗？")) grade(messages);

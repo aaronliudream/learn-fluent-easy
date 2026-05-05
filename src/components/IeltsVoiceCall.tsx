@@ -34,6 +34,7 @@ export function IeltsVoiceCall({ open, onClose, targetBand, currentPart, onTrans
 
 function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTranscriptUpdate, initialTranscript }: Props) {
   const [connecting, setConnecting] = useState(false);
+  const [voiceConnected, setVoiceConnected] = useState(false);
   const transcriptRef = useRef<Msg[]>(initialTranscript);
   const partRef = useRef<1 | 2 | 3>(currentPart);
 
@@ -41,10 +42,12 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
   useEffect(() => { partRef.current = currentPart; }, [currentPart]);
 
   const conversation = useConversation({
-    onConnect: () => toast.success("已接通考官 🎙️"),
-    onDisconnect: () => toast("通话已结束"),
+    onConnect: () => { setVoiceConnected(true); setConnecting(false); toast.success("已接通考官 🎙️"); },
+    onDisconnect: () => { setVoiceConnected(false); setConnecting(false); toast("通话已结束"); },
     onError: (err) => {
       console.error("EL error", err);
+      setVoiceConnected(false);
+      setConnecting(false);
       toast.error("语音连接出错");
     },
     onMessage: (msg: any) => {
@@ -63,6 +66,7 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
   });
 
   const start = useCallback(async () => {
+    setVoiceConnected(false);
     setConnecting(true);
     try {
       conversation.startSession({ useWakeLock: false });

@@ -647,7 +647,7 @@ function FeedbackView({ session, onRetry }: { session: SessionRow; onRetry: () =
         <section className="mb-5 grid grid-cols-2 gap-3">
           {scoresEntries.map(([key, raw]) => {
             const s = (raw || {}) as { band?: number | null; comment?: string; evidence?: string[] };
-            const bandText = typeof s.band === "number" ? s.band.toFixed(1) : "N/A";
+            const bandText = typeof s.band === "number" && s.band > 0 ? s.band.toFixed(1) : "N/A";
             const evidence = Array.isArray(s.evidence) ? s.evidence : [];
             return (
               <div key={key} className="rounded-2xl border border-border bg-card p-4 shadow-card">

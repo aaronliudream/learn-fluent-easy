@@ -9,6 +9,8 @@ import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import TutorChat from "@/components/tutor/TutorChat";
 import PaywallDialog from "@/components/PaywallDialog";
 import { consumeQuestionQuota } from "@/lib/quota";
+import { fireEmojiConfetti } from "@/lib/feedback";
+import { Trophy, RotateCw } from "lucide-react";
 
 type Pt = { id: string; title: string; cefr: string; explanation_md: string };
 type Q = {
@@ -45,6 +47,32 @@ export default function JuniorGrammarPoint() {
   const [tutorFor, setTutorFor] = useState<Q | null>(null);
   const [paywall, setPaywall] = useState<{ open: boolean; used: number; limit: number }>({ open: false, used: 5, limit: 5 });
   const shownAt = useRef<Record<string, number>>({});
+
+  // Are all questions answered? (MCQ → picked; open → revealed)
+  const answeredCount = qs.filter(q =>
+    (q.question_type || "mcq") === "mcq" ? !!picks[q.id] : !!reveal[q.id]
+  ).length;
+  const allDone = qs.length > 0 && answeredCount === qs.length;
+  const pct = qs.length ? Math.round((correctCount / qs.length) * 100) : 0;
+  const celebratedRef = useRef(false);
+
+  useEffect(() => {
+    if (allDone && !celebratedRef.current) {
+      celebratedRef.current = true;
+      if (pct >= 70) {
+        fireEmojiConfetti({ vibrate: pct === 100, count: pct === 100 ? 60 : 36 });
+      }
+    }
+  }, [allDone, pct]);
+
+  const resetAll = () => {
+    setPicks({}); setInputs({}); setReveal({});
+    setStreak(0); setCorrectCount(0);
+    celebratedRef.current = false;
+    const now = Date.now();
+    qs.forEach(q => { shownAt.current[q.id] = now; });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   useEffect(() => {
     if (!id) return;
@@ -198,6 +226,38 @@ export default function JuniorGrammarPoint() {
           );
         })}
       </div>
+
+      {allDone && (
+        <section className="mt-6 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 p-6 text-center shadow-tile dark:from-amber-950/30 dark:to-rose-950/30">
+          <Trophy className="mx-auto size-12 text-amber-500" />
+          <h3 className="mt-2 text-xl font-extrabold">
+            {pct === 100 ? "🌟 满分通关！" : pct >= 90 ? "🌟 太厉害啦！" : pct >= 70 ? "👍 不错哦！" : "💪 再来一次会更好！"}
+          </h3>
+          <p className="mt-1 text-sm text-muted-foreground">
+            答对 {correctCount} / {qs.length} · 正确率 <span className="font-extrabold text-amber-600">{pct}%</span>
+          </p>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+            <button
+              onClick={resetAll}
+              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-5 py-2 text-sm font-extrabold text-white shadow"
+            >
+              <RotateCw className="size-4" /> 再做一遍
+            </button>
+            <Link
+              to="/junior/grammar"
+              className="inline-flex items-center gap-1.5 rounded-full border-2 border-indigo-300 bg-card px-5 py-2 text-sm font-extrabold text-indigo-600 shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-950/30"
+            >
+              📚 下一个考点
+            </Link>
+            <Link
+              to="/junior"
+              className="inline-flex items-center gap-1.5 rounded-full border-2 border-amber-300 bg-card px-5 py-2 text-sm font-extrabold text-amber-700 shadow-sm hover:bg-amber-50 dark:hover:bg-amber-950/30"
+            >
+              🏠 初中首页
+            </Link>
+          </div>
+        </section>
+      )}
 
       {tutorFor && (
         <TutorChat

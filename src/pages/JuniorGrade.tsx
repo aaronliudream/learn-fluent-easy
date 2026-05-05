@@ -53,15 +53,6 @@ export default function JuniorGrade() {
         <ArrowLeft className="size-4" /> 返回初中专区
       </BackLink>
 
-      <div className={`mb-5 flex items-center gap-4 rounded-3xl bg-gradient-to-br ${meta.gradient} p-5 text-white shadow-tile`}>
-        <div className="grid size-14 place-items-center rounded-2xl bg-white/25 text-3xl">{meta.emoji}</div>
-        <div className="flex-1 min-w-0">
-          <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">{meta.tag}</div>
-          <h1 className="text-2xl font-extrabold leading-tight">{meta.title}</h1>
-          <p className="mt-0.5 text-xs opacity-90">五大模块系统训练 · 一站搞定中考考点</p>
-        </div>
-      </div>
-
       {/* 🎮 游戏化词汇 — 最吸引学生的入口，放最前面 */}
       <Link
         to={`/junior/vocab?grade=${dbGrade}`}

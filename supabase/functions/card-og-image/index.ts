@@ -133,7 +133,7 @@ Deno.serve(async (req) => {
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
   );
 
-  const cachePath = `${slug}.png`;
+  const cachePath = `${slug}-v2.png`;
   const publicUrl = supabase.storage.from("card-og").getPublicUrl(cachePath).data.publicUrl;
 
   // If already cached, redirect.

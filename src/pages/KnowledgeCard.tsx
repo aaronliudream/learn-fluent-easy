@@ -13,7 +13,25 @@ import QRCode from "qrcode";
 import { awardCoins, awardForCorrect, notifyWrong } from "@/lib/coins";
 import { getGuestCardToken } from "@/lib/cardGuest";
 
-type Quiz = { q: string; options: string[]; answer: number; explain?: string };
+// Tiny WebAudio beep — no asset files, no library
+function playTone(freq: number, duration = 0.1, type: OscillatorType = "sine") {
+  try {
+    const Ctx = (window as any).AudioContext || (window as any).webkitAudioContext;
+    if (!Ctx) return;
+    const ctx = new Ctx();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.value = freq;
+    gain.gain.value = 0.08;
+    osc.connect(gain).connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + duration);
+    setTimeout(() => ctx.close(), (duration + 0.1) * 1000);
+  } catch {}
+}
+
+type Quiz = { q: string; options: string[]; answer: number; explain?: string; difficulty?: number };
 type CardData = {
   id: string;
   slug: string;
@@ -42,17 +60,21 @@ export default function KnowledgeCard() {
   const [card, setCard] = useState<CardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [authed, setAuthed] = useState(false);
+  const [myUserId, setMyUserId] = useState<string | null>(null);
+  const [refUserId, setRefUserId] = useState<string | null>(null);
   const [liked, setLiked] = useState(false);
   const [picked, setPicked] = useState<Record<number, number>>({});
   const [qrOpen, setQrOpen] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
-  const shareUrl = `https://bigmoonenglish.com/q/${slug}`;
+  // Sharing: append ?ref=<myUserId> so author/sharer earns when others complete
+  const shareUrl = `https://bigmoonenglish.com/q/${slug}${myUserId ? `?ref=${myUserId}` : ""}`;
   // Progressive challenge: start with 3, can extend to 5, then 10.
   const [stage, setStage] = useState<3 | 5 | 10>(3);
   const [stageDone, setStageDone] = useState<{ s3?: boolean; s5?: boolean; s10?: boolean }>({});
   const [coinsEarned, setCoinsEarned] = useState(0);
   const [streak, setStreak] = useState(0);
   const [savedCTA, setSavedCTA] = useState(false); // shows "saved + sign-up" CTA after stage settle
+  const [cardStats, setCardStats] = useState<{ attempts: number; avgPct: number } | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -60,6 +82,7 @@ export default function KnowledgeCard() {
       const { data: u } = await supabase.auth.getUser();
       if (!mounted) return;
       setAuthed(!!u?.user);
+      setMyUserId(u?.user?.id ?? null);
 
       const { data, error } = await supabase
         .from("knowledge_cards")
@@ -72,10 +95,13 @@ export default function KnowledgeCard() {
 
       // record view + ref reward hook (Phase 2 will use ref_user_id)
       const ref = new URLSearchParams(window.location.search).get("ref");
+      // Don't credit self-shares
+      const refClean = ref && ref !== u?.user?.id ? ref : null;
+      setRefUserId(refClean);
       supabase.from("card_views").insert({
         card_id: data.id,
         viewer_id: u?.user?.id ?? null,
-        ref_user_id: ref ?? null,
+        ref_user_id: refClean,
       });
 
       if (u?.user) {
@@ -87,6 +113,19 @@ export default function KnowledgeCard() {
           .maybeSingle();
         setLiked(!!like);
       }
+
+      // Lightweight aggregate: how many people tried + avg correct rate
+      try {
+        const { data: aRows } = await supabase
+          .from("card_attempts")
+          .select("score_pct")
+          .eq("card_id", data.id)
+          .limit(500);
+        if (aRows && aRows.length > 0) {
+          const sum = aRows.reduce((n: number, r: any) => n + (r.score_pct ?? 0), 0);
+          setCardStats({ attempts: aRows.length, avgPct: Math.round(sum / aRows.length) });
+        }
+      } catch {}
     })();
     return () => { mounted = false; };
   }, [slug]);
@@ -174,6 +213,9 @@ export default function KnowledgeCard() {
       });
     } catch {}
     if (isRight) {
+      // Sound + tiny haptic on correct
+      try { playTone(880, 0.08); } catch {}
+      try { (navigator as any).vibrate?.(15); } catch {}
       const newStreak = streak + 1;
       setStreak(newStreak);
       if (authed) {
@@ -184,8 +226,44 @@ export default function KnowledgeCard() {
         setCoinsEarned((c) => c + 1);
       }
     } else {
+      // Haptic + low tone on wrong
+      try { playTone(220, 0.12, "square"); } catch {}
+      try { (navigator as any).vibrate?.([30, 40, 30]); } catch {}
       setStreak(0);
       notifyWrong();
+      // Add to mistakes book (logged-in only)
+      if (authed) {
+        try {
+          const { data: u } = await supabase.auth.getUser();
+          if (u?.user) {
+            await supabase.from("user_mistakes").upsert({
+              user_id: u.user.id,
+              module: "card_quiz",
+              source_key: `${card!.id}:${qIdx}`,
+              source_label: card!.question?.slice(0, 60) ?? "知识卡",
+              question: q.q,
+              user_answer: q.options[optIdx] ?? "",
+              correct_answer: q.options[q.answer] ?? "",
+              explanation: q.explain ?? card!.explanation ?? "",
+              snapshot: {
+                card_slug: card!.slug,
+                card_id: card!.id,
+                question_idx: qIdx,
+                options: q.options,
+                answer: q.answer,
+                picked: optIdx,
+              } as any,
+              wrong_count: 1,
+              is_resolved: false,
+              is_starred: false,
+              last_wrong_at: new Date().toISOString(),
+              next_review_at: new Date(Date.now() + 24 * 3600 * 1000).toISOString(),
+            }, { onConflict: "user_id,module,source_key" });
+          }
+        } catch (e) {
+          console.warn("[mistakes] save failed", e);
+        }
+      }
     }
   }
 
@@ -215,6 +293,16 @@ export default function KnowledgeCard() {
         const row: any = Array.isArray(r2) ? r2[0] : r2;
         if (row?.awarded > 0) setCoinsEarned((c) => c + row.awarded);
       } catch {}
+      // Reward the friend who shared this card (once per viewer per card)
+      if (refUserId) {
+        try {
+          await supabase.rpc("award_referrer", {
+            _ref_user_id: refUserId,
+            _card_id: card.id,
+            _amount: 2,
+          });
+        } catch {}
+      }
     }
     // Persist attempt (works for guest + logged-in via RLS)
     try {
@@ -296,6 +384,22 @@ export default function KnowledgeCard() {
             {coinsEarned > 0 && `💰 已获 ${coinsEarned} 金币`}
           </span>
         </p>
+        {/* Difficulty preview — reduces drop-off by setting expectations */}
+        {(() => {
+          const easy = card.quiz.filter((q) => (q.difficulty ?? 0) <= 3).length;
+          const hard = card.quiz.filter((q) => (q.difficulty ?? 0) >= 8).length;
+          if (card.quiz.length === 0) return null;
+          return (
+            <div className="mb-3 px-3 py-2 rounded-md bg-muted/40 border border-border text-xs text-muted-foreground flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span>📊 共 {card.quiz.length} 题</span>
+              {easy > 0 && <span>· {easy} 道简单</span>}
+              {hard > 0 && <span>· {hard} 道挑战</span>}
+              {cardStats && cardStats.attempts >= 3 && (
+                <span>· 已有 {cardStats.attempts} 人挑战，平均正确率 <strong className="text-foreground">{cardStats.avgPct}%</strong></span>
+              )}
+            </div>
+          );
+        })()}
         <div className="space-y-3">
             {visibleQuiz.map((q, i) => (
               <Card key={i} className="p-4">
@@ -472,9 +576,9 @@ export default function KnowledgeCard() {
       <Dialog open={qrOpen} onOpenChange={setQrOpen}>
         <DialogContent className="max-w-sm">
           <DialogHeader>
-            <DialogTitle className="text-center">扫码查看这张卡片</DialogTitle>
+            <DialogTitle className="text-center">扫码挑战 3 题</DialogTitle>
             <DialogDescription className="text-center">
-              用手机相机对准下方二维码即可打开
+              答对得金币 🎁 用手机相机对准二维码即可
             </DialogDescription>
           </DialogHeader>
           <div className="flex flex-col items-center gap-4">
@@ -487,6 +591,11 @@ export default function KnowledgeCard() {
                   style={{ imageRendering: "pixelated" }}
                 />
               </div>
+            )}
+            {myUserId && (
+              <p className="text-[11px] text-center text-primary font-medium">
+                💡 朋友扫码答完题，你也能得金币（每张卡每人 +2）
+              </p>
             )}
             <p className="text-xs text-muted-foreground break-all text-center px-2">
               {shareUrl}

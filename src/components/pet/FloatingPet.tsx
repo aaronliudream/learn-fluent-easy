@@ -6,22 +6,11 @@ import { cn } from "@/lib/utils";
 import { useCompanionMode, type CompanionMode } from "@/lib/companionPrefs";
 import { T, useT } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
+import { displayPetName } from "@/lib/petName";
 
 type Pet = { id: string; nickname: string; stage: number; level: number; exp: number; hunger: number; mood: number; species_id: string; equipped_skin_id?: string | null };
 type Species = { id: string; emoji_egg: string; emoji_baby: string; emoji_adult: string; emoji_legend: string };
 
-const DEFAULT_PET_NAMES: Record<string, { zh: string; en: string }> = {
-  lumi_spark: { zh: "绿芽精灵", en: "Sprout" },
-  fire_fox: { zh: "火焰狐", en: "Ember" },
-  rainbow_whale: { zh: "彩虹鲸", en: "Aqua" },
-};
-
-function displayPetName(p: Pet, lang: string) {
-  const defaults = DEFAULT_PET_NAMES[p.species_id];
-  if (!defaults) return p.nickname;
-  if ((lang !== "zh" && lang !== "zh-TW") && p.nickname === defaults.zh) return defaults.en;
-  return p.nickname;
-}
 
 function pickEmoji(p: Pet, sp?: Species) {
   if (!sp) return "🐣";

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { T } from "@/i18n/T";
+import { useI18n } from "@/i18n/I18nProvider";
 
 /**
  * 守护灵入职引导：3 题性格测试 → 推荐 1 只 → 用户主动 3 选 1
@@ -51,6 +52,8 @@ const QUIZ = [
 type Props = { onDone: () => void };
 
 export default function CompanionOnboarding({ onDone }: Props) {
+  const { lang } = useI18n();
+  const isZh = lang === "zh" || lang === "zh-TW";
   const [step, setStep] = useState<"intro" | "quiz" | "pick">("intro");
   const [qIdx, setQIdx] = useState(0);
   const [scores, setScores] = useState<{ fire: number; water: number; wood: number }>({ fire: 0, water: 0, wood: 0 });
@@ -83,7 +86,7 @@ export default function CompanionOnboarding({ onDone }: Props) {
       // 创建宠物（其它 pet 设为非 active）
       await supabase.from("user_pets").update({ is_active: false }).eq("user_id", uid);
       await supabase.from("user_pets").insert({
-        user_id: uid, species_id: speciesId, nickname: sp.nameCn,
+        user_id: uid, species_id: speciesId, nickname: isZh ? sp.nameCn : sp.nameEn,
         stage: 1, level: 1, exp: 0, hunger: 80, mood: 90, is_active: true,
       });
       onDone();

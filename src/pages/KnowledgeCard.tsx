@@ -8,6 +8,8 @@ import { Heart, Lock, Share2, Sparkles, Volume2, BookmarkPlus, Trophy } from "lu
 import { toast } from "sonner";
 import { BrandLogo } from "@/components/brand/BrandLogo";
 import { speak } from "@/lib/speak";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import QRCode from "qrcode";
 
 type Quiz = { q: string; options: string[]; answer: number; explain?: string };
 type CardData = {
@@ -40,6 +42,9 @@ export default function KnowledgeCard() {
   const [authed, setAuthed] = useState(false);
   const [liked, setLiked] = useState(false);
   const [picked, setPicked] = useState<Record<number, number>>({});
+  const [qrOpen, setQrOpen] = useState(false);
+  const [qrDataUrl, setQrDataUrl] = useState<string>("");
+  const shareUrl = `https://bigmoonenglish.com/q/${slug}`;
 
   useEffect(() => {
     let mounted = true;
@@ -94,13 +99,35 @@ export default function KnowledgeCard() {
   }
 
   async function share() {
-    // Short site URL — keeps QR codes scannable and looks clean when shared.
-    // Crawlers that need OG metadata can hit the edge function directly via
-    // the <link rel="alternate"> / og:url tags rendered server-side.
-    const url = `https://bigmoonenglish.com/q/${slug}`;
+    // Render a high-fidelity QR (large, high error-correction) so any phone can scan it.
     try {
-      if (navigator.share) await navigator.share({ title: card?.question, url });
-      else { await navigator.clipboard.writeText(url); toast.success("链接已复制"); }
+      const dataUrl = await QRCode.toDataURL(shareUrl, {
+        errorCorrectionLevel: "H",
+        margin: 2,
+        width: 720,
+        color: { dark: "#000000", light: "#ffffff" },
+      });
+      setQrDataUrl(dataUrl);
+      setQrOpen(true);
+    } catch (e) {
+      console.error("qr failed", e);
+      toast.error("二维码生成失败");
+    }
+  }
+
+  async function copyLink() {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      toast.success("链接已复制");
+    } catch {
+      toast.error("复制失败，请手动选择网址");
+    }
+  }
+
+  async function nativeShare() {
+    try {
+      if (navigator.share) await navigator.share({ title: card?.question, url: shareUrl });
+      else await copyLink();
     } catch {}
   }
 
@@ -308,6 +335,38 @@ export default function KnowledgeCard() {
           <Button variant="ghost"><Sparkles className="w-4 h-4 mr-2" />提一个新问题</Button>
         </Link>
       </div>
+
+      <Dialog open={qrOpen} onOpenChange={setQrOpen}>
+        <DialogContent className="max-w-sm">
+          <DialogHeader>
+            <DialogTitle className="text-center">扫码查看这张卡片</DialogTitle>
+            <DialogDescription className="text-center">
+              用手机相机对准下方二维码即可打开
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col items-center gap-4">
+            {qrDataUrl && (
+              <div className="rounded-2xl bg-white p-4 shadow-lg ring-1 ring-border">
+                <img
+                  src={qrDataUrl}
+                  alt="分享二维码"
+                  className="block w-[280px] h-[280px]"
+                  style={{ imageRendering: "pixelated" }}
+                />
+              </div>
+            )}
+            <p className="text-xs text-muted-foreground break-all text-center px-2">
+              {shareUrl}
+            </p>
+            <div className="flex gap-2 w-full">
+              <Button onClick={copyLink} variant="outline" className="flex-1">复制链接</Button>
+              <Button onClick={nativeShare} className="flex-1">
+                <Share2 className="w-4 h-4 mr-2" />分享
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }

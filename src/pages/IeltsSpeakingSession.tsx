@@ -202,13 +202,10 @@ export default function IeltsSpeakingSession() {
       return;
     }
     try {
-      const { data, error } = await supabase.functions.invoke("elevenlabs-token");
-      const serverMsg = (data && typeof data === "object" && "error" in data && (data as any).error) || (error as any)?.message;
-      if (!data?.token) throw new Error(serverMsg || "未获取到 token");
-
+      // Public agent — connect directly with agentId (no server token needed)
       await conversation.startSession({
         connectionType: "webrtc",
-        conversationToken: data.token,
+        agentId: "agent_2801kqvhz6m2ehasqcjadep8zm25",
         overrides: {
           agent: {
             prompt: { prompt: buildExaminerPrompt({ targetBand: session.target_band, cueCard: cueCard.card, topicCategory: session.topic_category }) },

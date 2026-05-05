@@ -88,6 +88,8 @@ const Ask = lazy(() => import("./pages/Ask.tsx"));
 const TeacherCards = lazy(() => import("./pages/TeacherCards.tsx"));
 const TeacherCardStats = lazy(() => import("./pages/TeacherCardStats.tsx"));
 const KnowledgeCard = lazy(() => import("./pages/KnowledgeCard.tsx"));
+const IeltsSpeaking = lazy(() => import("./pages/IeltsSpeaking.tsx"));
+const IeltsSpeakingSession = lazy(() => import("./pages/IeltsSpeakingSession.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import FeedbackWidget from "@/components/FeedbackWidget";
 import InstallPrompt from "@/components/InstallPrompt";
@@ -190,6 +192,8 @@ const App = () => (
           <Route path="/workplace/:catKey" element={<WorkplaceCategory />} />
           <Route path="/workplace/:catKey/:dialogueId" element={<WorkplacePlay />} />
           <Route path="/talk" element={<Talk />} />
+          <Route path="/ielts-speaking" element={<IeltsSpeaking />} />
+          <Route path="/ielts-speaking/session/:id" element={<IeltsSpeakingSession />} />
           <Route path="/china" element={<ChineseOnlyRoute><China /></ChineseOnlyRoute>} />
           <Route path="/primary" element={<ChineseOnlyRoute><Primary /></ChineseOnlyRoute>} />
           <Route path="/primary/letters" element={<ChineseOnlyRoute><PrimaryLetters /></ChineseOnlyRoute>} />

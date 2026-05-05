@@ -9,6 +9,8 @@
  * Reads PG* env vars + LOVABLE_API_KEY from environment.
  */
 import { Client } from "pg";
+import { existsSync, readFileSync, appendFileSync, mkdirSync } from "fs";
+import { dirname } from "path";
 
 const args = process.argv.slice(2);
 const arg = (k: string, def?: string) => {
@@ -22,6 +24,22 @@ const LIMIT = parseInt(arg("limit", "0")!, 10);
 const DRY = arg("dry") === "true";
 const MODEL = arg("model", "google/gemini-2.5-flash-lite")!;
 const ONLY_MISSING = arg("only-missing", "true") === "true";
+const CHECKPOINT = arg("checkpoint", `.seed-checkpoint/${TABLE}.txt`)!;
+const RESET = arg("reset") === "true";
+
+function loadCheckpoint(): Set<string> {
+  if (RESET || !existsSync(CHECKPOINT)) return new Set();
+  return new Set(
+    readFileSync(CHECKPOINT, "utf8")
+      .split("\n")
+      .map((l) => l.trim())
+      .filter(Boolean),
+  );
+}
+function appendCheckpoint(id: string) {
+  mkdirSync(dirname(CHECKPOINT), { recursive: true });
+  appendFileSync(CHECKPOINT, id + "\n");
+}
 
 const KEY = process.env.LOVABLE_API_KEY!;
 if (!KEY) throw new Error("LOVABLE_API_KEY missing");
@@ -170,9 +188,14 @@ async function main() {
       : "id, title, explanation, typical_example, common_mistake";
   const where = ONLY_MISSING ? "WHERE ai_corpus IS NULL" : "";
   const limitSql = LIMIT > 0 ? `LIMIT ${LIMIT}` : "";
-  const sql = `SELECT ${cols} FROM ${tableName} ${where} ORDER BY sort_order ${limitSql}`;
-  const { rows } = await client.query(sql);
-  console.log(`📚 ${rows.length} points to process from ${tableName} (model=${MODEL}, dry=${DRY})`);
+  const sql = `SELECT ${cols} FROM ${tableName} ${where} ORDER BY sort_order`;
+  const { rows: allRows } = await client.query(sql);
+  const done = loadCheckpoint();
+  const pending = allRows.filter((r: any) => !done.has(r.id));
+  const rows = LIMIT > 0 ? pending.slice(0, LIMIT) : pending;
+  console.log(
+    `📚 ${tableName}: total=${allRows.length} done=${done.size} pending=${pending.length} batch=${rows.length} (model=${MODEL}, dry=${DRY}, ckpt=${CHECKPOINT})`,
+  );
 
   let ok = 0, fail = 0;
   for (const row of rows) {
@@ -184,6 +207,7 @@ async function main() {
         console.log(JSON.stringify(corpus, null, 2));
       } else {
         await client.query(`UPDATE ${tableName} SET ai_corpus = $1 WHERE id = $2`, [corpus, row.id]);
+        appendCheckpoint(row.id);
         console.log("✓ saved");
       }
       ok++;

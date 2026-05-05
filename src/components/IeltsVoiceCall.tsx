@@ -19,7 +19,7 @@ interface Props {
 
 export function IeltsVoiceCall({ open, onClose, targetBand, currentPart, onTranscriptUpdate, initialTranscript }: Props) {
   return (
-    <ConversationProvider>
+    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc" useWakeLock={false}>
       <IeltsVoiceCallContent
         open={open}
         onClose={onClose}
@@ -65,20 +65,7 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
   const start = useCallback(async () => {
     setConnecting(true);
     try {
-      await navigator.mediaDevices.getUserMedia({ audio: true });
-      // Public agent — connect directly with agentId, no server token needed
-      conversation.startSession({
-        agentId: ELEVENLABS_AGENT_ID,
-        connectionType: "webrtc",
-        overrides: {
-          agent: {
-            firstMessage:
-              partRef.current === 1
-                ? "Good morning. My name is Daniel, and I'll be your examiner today. Could you please tell me your full name?"
-                : "Let's continue. I'd like to ask you a few more questions.",
-          },
-        },
-      });
+      conversation.startSession({ useWakeLock: false });
     } catch (e: any) {
       console.error(e);
       toast.error("无法启动语音：" + (e?.message || "未知错误"), { duration: 8000 });

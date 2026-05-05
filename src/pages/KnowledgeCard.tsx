@@ -13,7 +13,7 @@ import QRCode from "qrcode";
 import { awardCoins, awardForCorrect, notifyWrong } from "@/lib/coins";
 import { getGuestCardToken } from "@/lib/cardGuest";
 
-type Quiz = { q: string; options: string[]; answer: number; explain?: string };
+type Quiz = { q: string; options: string[]; answer: number; explain?: string; difficulty?: number };
 type CardData = {
   id: string;
   slug: string;
@@ -53,6 +53,7 @@ export default function KnowledgeCard() {
   const [coinsEarned, setCoinsEarned] = useState(0);
   const [streak, setStreak] = useState(0);
   const [savedCTA, setSavedCTA] = useState(false); // shows "saved + sign-up" CTA after stage settle
+  const [cardStats, setCardStats] = useState<{ attempts: number; avgPct: number } | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -87,6 +88,19 @@ export default function KnowledgeCard() {
           .maybeSingle();
         setLiked(!!like);
       }
+
+      // Lightweight aggregate: how many people tried + avg correct rate
+      try {
+        const { data: aRows } = await supabase
+          .from("card_attempts")
+          .select("score_pct")
+          .eq("card_id", data.id)
+          .limit(500);
+        if (aRows && aRows.length > 0) {
+          const sum = aRows.reduce((n: number, r: any) => n + (r.score_pct ?? 0), 0);
+          setCardStats({ attempts: aRows.length, avgPct: Math.round(sum / aRows.length) });
+        }
+      } catch {}
     })();
     return () => { mounted = false; };
   }, [slug]);
@@ -174,6 +188,9 @@ export default function KnowledgeCard() {
       });
     } catch {}
     if (isRight) {
+      // Sound + tiny haptic on correct
+      try { playTone(880, 0.08); } catch {}
+      try { (navigator as any).vibrate?.(15); } catch {}
       const newStreak = streak + 1;
       setStreak(newStreak);
       if (authed) {
@@ -184,8 +201,44 @@ export default function KnowledgeCard() {
         setCoinsEarned((c) => c + 1);
       }
     } else {
+      // Haptic + low tone on wrong
+      try { playTone(220, 0.12, "square"); } catch {}
+      try { (navigator as any).vibrate?.([30, 40, 30]); } catch {}
       setStreak(0);
       notifyWrong();
+      // Add to mistakes book (logged-in only)
+      if (authed) {
+        try {
+          const { data: u } = await supabase.auth.getUser();
+          if (u?.user) {
+            await supabase.from("user_mistakes").upsert({
+              user_id: u.user.id,
+              module: "card_quiz",
+              source_key: `${card!.id}:${qIdx}`,
+              source_label: card!.question?.slice(0, 60) ?? "知识卡",
+              question: q.q,
+              user_answer: q.options[optIdx] ?? "",
+              correct_answer: q.options[q.answer] ?? "",
+              explanation: q.explain ?? card!.explanation ?? "",
+              snapshot: {
+                card_slug: card!.slug,
+                card_id: card!.id,
+                question_idx: qIdx,
+                options: q.options,
+                answer: q.answer,
+                picked: optIdx,
+              } as any,
+              wrong_count: 1,
+              is_resolved: false,
+              is_starred: false,
+              last_wrong_at: new Date().toISOString(),
+              next_review_at: new Date(Date.now() + 24 * 3600 * 1000).toISOString(),
+            }, { onConflict: "user_id,module,source_key" });
+          }
+        } catch (e) {
+          console.warn("[mistakes] save failed", e);
+        }
+      }
     }
   }
 

@@ -42,6 +42,7 @@ function wrap(text: string, perLine: number, maxLines: number): string[] {
 }
 
 const SITE = "https://bigmoonenglish.com";
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL") ?? "https://fottntyhwolbsdvkwriq.supabase.co";
 
 async function buildQrSvg(text: string, size: number): Promise<string> {
   // Returns just the inner <path> elements positioned at (x,y)=(0,0); we wrap with <g transform>.
@@ -70,7 +71,9 @@ async function buildSvg(slug: string, question: string, answer: string, t: CardI
   const qrSize = 200;
   const qrX = 1120 - qrSize;
   const qrY = 320;
-  const shareUrl = `${SITE}/q/${slug}`;
+  // QR encodes the edge-function URL so crawlers (WeChat preview etc.) get full
+  // OG metadata; real users are 302-redirected to bigmoonenglish.com/q/<slug>.
+  const shareUrl = `${SUPABASE_URL}/functions/v1/card-og/${slug}`;
   const qrInner = await buildQrSvg(shareUrl, qrSize);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">

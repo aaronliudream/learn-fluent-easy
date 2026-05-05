@@ -124,10 +124,16 @@ function IeltsSpeakingSessionContent() {
   const [grading, setGrading] = useState(false);
   const [connecting, setConnecting] = useState(false);
   const [voiceConnected, setVoiceConnected] = useState(false);
+  const [recording, setRecording] = useState(false);
+  const [processingTurn, setProcessingTurn] = useState(false);
+  const [examinerSpeaking, setExaminerSpeaking] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0); // seconds since connected
   const startedAtRef = useRef<number | null>(null);
-  const connectTimeoutRef = useRef<number | null>(null);
+  const mediaStreamRef = useRef<MediaStream | null>(null);
+  const recorderRef = useRef<MediaRecorder | null>(null);
+  const chunksRef = useRef<Blob[]>([]);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const transcriptRef = useRef<Msg[]>([]);
   const partRef = useRef<1 | 2 | 3>(1);
   useEffect(() => { partRef.current = currentPart; }, [currentPart]);
@@ -151,55 +157,12 @@ function IeltsSpeakingSessionContent() {
     return null;
   }, []);
 
-  // ---- ElevenLabs conversation hook ----
-  const conversation = useConversation({
-    onConnect: () => {
-      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
-      startedAtRef.current = Date.now();
-      setVoiceConnected(true);
-      setConnecting(false);
-      setErrorMsg(null);
-      toast.success("已接通考官 🎙️");
-    },
-    onDisconnect: () => {
-      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
-      setVoiceConnected(false);
-      setConnecting(false);
-      // Auto-grade if we have a real conversation
-      const msgs = transcriptRef.current;
-      if (msgs.length >= 2 && session && id) {
-        toast("通话结束，正在生成评分…");
-        grade(msgs);
-      }
-    },
-    onError: (err: any) => {
-      console.error("EL error", err);
-      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
-      setVoiceConnected(false);
-      setConnecting(false);
-      setErrorMsg(friendlyVoiceError(err));
-    },
-    onMessage: (msg: any) => {
-      try {
-        const role: "user" | "assistant" | null =
-          msg?.source === "user" ? "user" : msg?.source === "ai" ? "assistant" : null;
-        const text = typeof msg?.message === "string" ? msg.message : "";
-        if (!role || !text) return;
-
-        if (role === "assistant") {
-          const detected = detectPartFromText(text);
-          if (detected && detected > partRef.current) {
-            partRef.current = detected;
-            setCurrentPart(detected);
-          }
-        }
-        const next = [...transcriptRef.current, { role, content: text, part: partRef.current } as Msg];
-        transcriptRef.current = next;
-        setMessages(next);
-        persist(next, partRef.current);
-      } catch (e) { console.warn(e); }
-    },
-  });
+  const appendTranscript = useCallback((items: Msg[]) => {
+    const next = [...transcriptRef.current, ...items];
+    transcriptRef.current = next;
+    setMessages(next);
+    persist(next, partRef.current);
+  }, [persist]);
 
   // ---- Load session ----
   useEffect(() => {

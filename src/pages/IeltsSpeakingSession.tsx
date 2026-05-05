@@ -106,7 +106,7 @@ EXAMINER BEHAVIOUR
 
 export default function IeltsSpeakingSession() {
   return (
-    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc">
+    <ConversationProvider>
       <IeltsSpeakingSessionContent />
     </ConversationProvider>
   );
@@ -123,6 +123,7 @@ function IeltsSpeakingSessionContent() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0); // seconds since connected
   const startedAtRef = useRef<number | null>(null);
+  const connectTimeoutRef = useRef<number | null>(null);
   const transcriptRef = useRef<Msg[]>([]);
   const partRef = useRef<1 | 2 | 3>(1);
   useEffect(() => { partRef.current = currentPart; }, [currentPart]);
@@ -149,11 +150,15 @@ function IeltsSpeakingSessionContent() {
   // ---- ElevenLabs conversation hook ----
   const conversation = useConversation({
     onConnect: () => {
+      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
       startedAtRef.current = Date.now();
+      setConnecting(false);
       setErrorMsg(null);
       toast.success("已接通考官 🎙️");
     },
     onDisconnect: () => {
+      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
+      setConnecting(false);
       // Auto-grade if we have a real conversation
       const msgs = transcriptRef.current;
       if (msgs.length >= 2 && session && id) {
@@ -163,6 +168,8 @@ function IeltsSpeakingSessionContent() {
     },
     onError: (err: any) => {
       console.error("EL error", err);
+      if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
+      setConnecting(false);
       setErrorMsg(typeof err === "string" ? err : (err?.message || "语音连接出错"));
     },
     onMessage: (msg: any) => {
@@ -213,7 +220,12 @@ function IeltsSpeakingSessionContent() {
     }
     try {
       // Public agent — connect directly with agentId (no server token needed)
-      await conversation.startSession({
+      connectTimeoutRef.current = window.setTimeout(() => {
+        setConnecting(false);
+        setErrorMsg("语音连接超时。请确认麦克风权限已允许，并点击重试接通。");
+      }, 25_000);
+      conversation.startSession({
+        agentId: ELEVENLABS_AGENT_ID,
         connectionType: "webrtc",
         overrides: {
           agent: {
@@ -226,19 +238,12 @@ function IeltsSpeakingSessionContent() {
     } catch (e: any) {
       console.error(e);
       setErrorMsg(e?.message || "无法启动语音对话");
-    } finally {
       setConnecting(false);
     }
   }, [session, conversation, cueCard]);
 
-  // Auto-start when session loaded and not already connected/graded
-  const autoStartedRef = useRef(false);
-  useEffect(() => {
-    if (!session || autoStartedRef.current) return;
-    if (session.status === "graded") return;
-    autoStartedRef.current = true;
-    startCall();
-  }, [session, startCall]);
+  // Do not auto-start here: iOS/mobile browsers require microphone access to be
+  // requested directly from a user tap on this page.
 
   // ---- Elapsed timer ----
   useEffect(() => {
@@ -281,7 +286,10 @@ function IeltsSpeakingSessionContent() {
   }, [conversation]);
 
   // Cleanup on unmount
-  useEffect(() => () => { try { conversation.endSession(); } catch { /* */ } }, []);
+  useEffect(() => () => {
+    if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
+    try { conversation.endSession(); } catch { /* */ }
+  }, []);
 
   // ==================== RENDER ====================
   if (!session) {
@@ -426,13 +434,22 @@ function IeltsSpeakingSessionContent() {
 
       {/* Hang up + grade */}
       <div className="flex justify-center">
-        <button
-          onClick={hangUp}
-          disabled={!isConnected && !connecting}
-          className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-rose-600 disabled:opacity-40"
-        >
-          <PhoneOff className="size-5" /> 挂断结束 · 自动评分
-        </button>
+        {isConnected || connecting ? (
+          <button
+            onClick={hangUp}
+            disabled={!isConnected && !connecting}
+            className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-rose-600 disabled:opacity-40"
+          >
+            <PhoneOff className="size-5" /> 挂断结束 · 自动评分
+          </button>
+        ) : (
+          <button
+            onClick={startCall}
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-primary-foreground shadow-lg transition hover:bg-primary/90"
+          >
+            <Mic className="size-5" /> 接通 AI 考官
+          </button>
+        )}
       </div>
     </main>
   );

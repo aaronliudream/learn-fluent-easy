@@ -92,14 +92,14 @@ const TOOL = {
         },
         drill_pool: {
           type: "array",
-          description: "12 practice items mixing 4 types and 3 difficulties (easy/medium/hard).",
+          description: "EXACTLY 12 practice items. MUST contain exactly 3 of each type: 3 mcq, 3 fill, 3 spot_error, 3 reorder. Across difficulties: 4 easy, 4 medium, 4 hard.",
           items: {
             type: "object",
             properties: {
               type: { type: "string", enum: ["mcq", "fill", "spot_error", "reorder"] },
               difficulty: { type: "string", enum: ["easy", "medium", "hard"] },
-              prompt: { type: "string", description: "Question stem. fill: use ___ for blank. spot_error: a sentence containing exactly ONE wrong word. reorder: tokens joined by ' / ' that MUST be RANDOMLY SHUFFLED (NOT in correct order — the user has to rearrange them)." },
-              answer: { type: "string", description: "the correct answer (word, full sentence for reorder, or the wrong word for spot_error)" },
+              prompt: { type: "string", description: "Question stem. mcq: a question or sentence with ___. fill: a sentence with ___ for the blank. spot_error: a full sentence containing EXACTLY ONE wrong word. reorder: tokens joined by ' / ' that MUST be RANDOMLY SHUFFLED out of order (e.g. 'every / he / day / coffee / drinks')." },
+              answer: { type: "string", description: "mcq: the correct option text. fill: just the word(s) that fill the blank (NOT the full sentence). spot_error: ONLY the single wrong word from the prompt (NOT the full sentence). reorder: the full correct sentence." },
               options: {
                 type: "array",
                 description: "MCQ only: 4 options including the correct answer",

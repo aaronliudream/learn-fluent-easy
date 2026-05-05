@@ -13,6 +13,24 @@ import QRCode from "qrcode";
 import { awardCoins, awardForCorrect, notifyWrong } from "@/lib/coins";
 import { getGuestCardToken } from "@/lib/cardGuest";
 
+// Tiny WebAudio beep — no asset files, no library
+function playTone(freq: number, duration = 0.1, type: OscillatorType = "sine") {
+  try {
+    const Ctx = (window as any).AudioContext || (window as any).webkitAudioContext;
+    if (!Ctx) return;
+    const ctx = new Ctx();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.value = freq;
+    gain.gain.value = 0.08;
+    osc.connect(gain).connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + duration);
+    setTimeout(() => ctx.close(), (duration + 0.1) * 1000);
+  } catch {}
+}
+
 type Quiz = { q: string; options: string[]; answer: number; explain?: string; difficulty?: number };
 type CardData = {
   id: string;

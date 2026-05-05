@@ -104,7 +104,7 @@ export default function TeacherCards() {
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-6 space-y-6">
-      <BackLink fallback="/" />
+      <BackLink />
       <header>
         <h1 className="text-2xl md:text-3xl font-bold flex items-center gap-2">
           <Sparkles className="w-7 h-7 text-primary" />

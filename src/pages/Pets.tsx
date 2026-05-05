@@ -223,7 +223,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
         emoji: newEmoji,
         prevEmoji,
         title: r.message || t("进化啦！"),
-        subtitle: `${active.nickname} · ${t(STAGE_LABEL[newStage])}${t("形态")}`,
+        subtitle: `${displayPetName(active, lang)} · ${t(STAGE_LABEL[newStage])}${t("形态")}`,
       });
     } else if (r?.leveled) {
       const emoji = [sp?.emoji_egg, sp?.emoji_baby, sp?.emoji_adult, sp?.emoji_legend][active.stage] ?? "⭐";
@@ -231,7 +231,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
         kind: "levelup",
         emoji,
         title: `Lv.${r.new_level} ${t("达成！")}`,
-        subtitle: active.nickname,
+        subtitle: displayPetName(active, lang),
       });
     }
     onAfter();
@@ -253,7 +253,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
             <T>{sp?.name_cn}</T> · <T>{STAGE_LABEL[active.stage]}</T>
             {equippedSkin && equippedSkin.code !== "classic" && <span className="ml-1.5 text-purple-500">· <T>{equippedSkin.name_cn}</T></span>}
           </div>
-          <h2 className="mt-0.5 text-xl font-extrabold">{active.nickname}</h2>
+          <h2 className="mt-0.5 text-xl font-extrabold">{displayPetName(active, lang)}</h2>
           <div className="mt-1 flex items-center gap-2 text-xs">
             <span className="rounded-full bg-purple-500/10 px-2 py-0.5 font-bold text-purple-600">Lv.{active.level}</span>
             <span className="text-muted-foreground"><T>{sp?.personality_cn}</T></span>
@@ -265,7 +265,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
           <Bar label="心情" value={active.mood} hint={`${active.mood}/100`} color="from-rose-400 to-pink-500" />
         </div>
       </div>
-      <EvolutionTree stage={active.stage} level={active.level} nickname={active.nickname} />
+      <EvolutionTree stage={active.stage} level={active.level} nickname={displayPetName(active, lang)} />
       <PetAbilities />
 
       {/* Sticker board */}
@@ -330,7 +330,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
                 <button key={p.id} onClick={()=>setActive(p.id)}
                   className={cn("rounded-2xl border-2 p-2 text-center transition", p.is_active ? "border-purple-500 bg-purple-50 dark:bg-purple-950/30" : "border-border bg-card hover:border-purple-300")}>
                   <div className="text-3xl">{petEmoji(p, s)}</div>
-                  <div className="mt-0.5 text-[11px] font-bold">{p.nickname}</div>
+                  <div className="mt-0.5 text-[11px] font-bold">{displayPetName(p, lang)}</div>
                   <div className="text-[10px] text-muted-foreground">Lv.{p.level} · <T>{STAGE_LABEL[p.stage]}</T></div>
                 </button>
               );
@@ -349,7 +349,7 @@ function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, 
         <span className="text-muted-foreground">→</span>
       </Link>
       {active?.stage >= 1 && (
-      <PetChat petName={active?.nickname || t("小伙伴")} />
+      <PetChat petName={active ? displayPetName(active, lang) : t("小伙伴")} />
       )}
     </div>
   );
@@ -545,7 +545,7 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
         kind: "levelup",
         emoji,
         title: `Lv.${r.new_level} ${t("达成！")}`,
-        subtitle: `${active.nickname} ${t("在外面玩得超棒")}`,
+        subtitle: `${displayPetName(active, lang)} ${t("在外面玩得超棒")}`,
       });
     }
     onAfter();
@@ -554,7 +554,7 @@ function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: an
     <div className="space-y-3">
       <div className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 p-3 dark:from-purple-950/30 dark:to-pink-950/30">
         <div className="text-3xl">{petEmoji(active, sp)}</div>
-        <div className="flex-1 text-sm"><b>{active.nickname}</b> · Lv.{active.level} · <T>饱</T> {active.hunger}/100</div>
+        <div className="flex-1 text-sm"><b>{displayPetName(active, lang)}</b> · Lv.{active.level} · <T>饱</T> {active.hunger}/100</div>
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         {dests.map((d: Dest) => {
@@ -759,7 +759,7 @@ function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any
         <div className="text-4xl" style={{ filter: (skins as Skin[]).find(s => s.id === active.equipped_skin_id)?.css_filter || "" }}>
           {baseEmoji}
         </div>
-        <div className="flex-1 text-sm"><b>{active.nickname}</b> · Lv.{active.level}</div>
+        <div className="flex-1 text-sm"><b>{displayPetName(active, lang)}</b> · Lv.{active.level}</div>
         <button onClick={()=>equip(null)} disabled={busy==="off" || !active.equipped_skin_id}
           className="rounded-full bg-secondary px-3 py-1 text-xs font-bold disabled:opacity-40"><T>恢复原色</T></button>
       </div>

@@ -454,57 +454,79 @@ export default function IeltsSpeakingSession() {
 // ==================== FEEDBACK VIEW ====================
 function FeedbackView({ session, onRetry }: { session: SessionRow; onRetry: () => void }) {
   const fb = session.feedback!;
+  // Defensive: AI output (Gemini/GPT) can be malformed or truncated. Coerce
+  // every field we read to a safe shape so a missing key never blanks the
+  // whole report page.
+  const overallBand = typeof fb?.overall_band === "number" ? fb.overall_band : 0;
+  const summary = fb?.summary_zh || "评分已完成";
+  const scoresEntries = fb?.scores && typeof fb.scores === "object"
+    ? Object.entries(fb.scores)
+    : [];
+  const errors = Array.isArray(fb?.errors) ? fb.errors : [];
+  const missed = Array.isArray(fb?.missed_opportunities) ? fb.missed_opportunities : [];
+  const strengths = Array.isArray(fb?.strengths) ? fb.strengths : [];
+  const plan = fb?.next_session_plan || {};
+  const focusAreas = Array.isArray((plan as any).focus_areas) ? (plan as any).focus_areas : [];
+  const suggestedTopics = Array.isArray((plan as any).suggested_topics) ? (plan as any).suggested_topics : [];
+  const microTask = (plan as any).micro_task || "";
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8 md:px-8 md:py-12">
-      <PageHeader title="雅思口语评分报告" subtitle={fb.summary_zh} back="/ielts-speaking" />
+      <PageHeader title="雅思口语评分报告" subtitle={summary} back="/ielts-speaking" />
 
       {/* Overall band */}
       <section className="mb-5 rounded-3xl border-2 border-amber-400 bg-gradient-to-br from-amber-50 to-amber-100/50 p-6 text-center shadow-card dark:from-amber-950/30 dark:to-amber-900/10">
         <div className="mb-1 text-xs font-bold uppercase tracking-wider text-amber-800 dark:text-amber-300">Overall Band Score</div>
-        <div className="text-6xl font-black text-amber-600 dark:text-amber-400">{fb.overall_band.toFixed(1)}</div>
-        <div className="mt-1 text-xs text-muted-foreground">目标 Band {session.target_band.toFixed(1)} · {fb.overall_band >= session.target_band ? "✅ 已达标" : `差 ${(session.target_band - fb.overall_band).toFixed(1)} 分`}</div>
+        <div className="text-6xl font-black text-amber-600 dark:text-amber-400">{overallBand.toFixed(1)}</div>
+        <div className="mt-1 text-xs text-muted-foreground">目标 Band {session.target_band.toFixed(1)} · {overallBand >= session.target_band ? "✅ 已达标" : `差 ${(session.target_band - overallBand).toFixed(1)} 分`}</div>
       </section>
 
       {/* 4 dimension scores */}
-      <section className="mb-5 grid grid-cols-2 gap-3">
-        {Object.entries(fb.scores).map(([key, s]) => (
-          <div key={key} className="rounded-2xl border border-border bg-card p-4 shadow-card">
-            <div className="text-xs font-semibold text-muted-foreground">{DIMENSION_LABEL[key] || key}</div>
-            <div className="mt-1 text-2xl font-extrabold text-primary">
-              {s.band !== null ? s.band.toFixed(1) : "N/A"}
-            </div>
-            <div className="mt-1.5 text-xs leading-relaxed text-foreground/80">{s.comment}</div>
-            {s.evidence?.length > 0 && (
-              <div className="mt-2 space-y-0.5">
-                {s.evidence.map((ev, i) => (
-                  <div key={i} className="text-[11px] italic text-muted-foreground">"{ev}"</div>
-                ))}
+      {scoresEntries.length > 0 && (
+        <section className="mb-5 grid grid-cols-2 gap-3">
+          {scoresEntries.map(([key, raw]) => {
+            const s = (raw || {}) as { band?: number | null; comment?: string; evidence?: string[] };
+            const bandText = typeof s.band === "number" ? s.band.toFixed(1) : "N/A";
+            const evidence = Array.isArray(s.evidence) ? s.evidence : [];
+            return (
+              <div key={key} className="rounded-2xl border border-border bg-card p-4 shadow-card">
+                <div className="text-xs font-semibold text-muted-foreground">{DIMENSION_LABEL[key] || key}</div>
+                <div className="mt-1 text-2xl font-extrabold text-primary">{bandText}</div>
+                {s.comment && <div className="mt-1.5 text-xs leading-relaxed text-foreground/80">{s.comment}</div>}
+                {evidence.length > 0 && (
+                  <div className="mt-2 space-y-0.5">
+                    {evidence.map((ev, i) => (
+                      <div key={i} className="text-[11px] italic text-muted-foreground">"{ev}"</div>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        ))}
-      </section>
+            );
+          })}
+        </section>
+      )}
 
       {/* Top errors */}
-      {fb.errors.length > 0 && (
+      {errors.length > 0 && (
         <section className="mb-5">
-          <h3 className="mb-2 text-sm font-bold">⚠️ 优先改进的 {fb.errors.length} 个错误</h3>
+          <h3 className="mb-2 text-sm font-bold">⚠️ 优先改进的 {errors.length} 个错误</h3>
           <div className="space-y-2">
-            {fb.errors.map((e, i) => (
+            {errors.map((e: any, i) => (
               <div key={i} className="rounded-2xl border border-border bg-card p-4 shadow-card">
                 <div className="mb-2 flex items-center gap-2">
                   <span className="rounded-full bg-rose-500/15 px-2 py-0.5 text-[10px] font-bold uppercase text-rose-700">
-                    Part {e.part} · {DIMENSION_LABEL[e.ielts_dimension]}
+                    Part {e?.part ?? "?"} · {DIMENSION_LABEL[e?.ielts_dimension] || e?.ielts_dimension || ""}
                   </span>
-                  <span className="text-[10px] text-muted-foreground">{e.error_type}</span>
+                  {e?.error_type && <span className="text-[10px] text-muted-foreground">{e.error_type}</span>}
                 </div>
                 <div className="space-y-1.5 text-sm">
-                  <div><span className="font-bold text-rose-600">❌ </span><span className="line-through opacity-70">{e.original}</span></div>
-                  <div><span className="font-bold text-emerald-600">✅ </span>{e.corrected}</div>
-                  <div className="text-xs text-muted-foreground">💡 {e.explanation_zh}</div>
-                  <div className="mt-1.5 rounded-lg bg-amber-500/10 p-2 text-xs">
-                    <span className="font-bold text-amber-700">Band 7+ 升级：</span> {e.higher_band_version}
-                  </div>
+                  {e?.original && <div><span className="font-bold text-rose-600">❌ </span><span className="line-through opacity-70">{e.original}</span></div>}
+                  {e?.corrected && <div><span className="font-bold text-emerald-600">✅ </span>{e.corrected}</div>}
+                  {e?.explanation_zh && <div className="text-xs text-muted-foreground">💡 {e.explanation_zh}</div>}
+                  {e?.higher_band_version && (
+                    <div className="mt-1.5 rounded-lg bg-amber-500/10 p-2 text-xs">
+                      <span className="font-bold text-amber-700">Band 7+ 升级：</span> {e.higher_band_version}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -513,16 +535,16 @@ function FeedbackView({ session, onRetry }: { session: SessionRow; onRetry: () =
       )}
 
       {/* Missed opportunities */}
-      {fb.missed_opportunities?.length > 0 && (
+      {missed.length > 0 && (
         <section className="mb-5">
           <h3 className="mb-2 text-sm font-bold">✨ 错过的高分表达</h3>
           <div className="space-y-2">
-            {fb.missed_opportunities.map((m, i) => (
+            {missed.map((m: any, i) => (
               <div key={i} className="rounded-2xl border border-border bg-card p-4 shadow-card">
-                <div className="text-xs text-muted-foreground">{m.context}</div>
-                <div className="mt-1.5 text-sm">你说的: <span className="text-muted-foreground">"{m.what_you_said}"</span></div>
-                <div className="mt-1 text-sm font-semibold text-primary">高分版: "{m.higher_band_version}"</div>
-                <div className="mt-1 text-xs text-muted-foreground">📈 {m.why_better}</div>
+                {m?.context && <div className="text-xs text-muted-foreground">{m.context}</div>}
+                {m?.what_you_said && <div className="mt-1.5 text-sm">你说的: <span className="text-muted-foreground">"{m.what_you_said}"</span></div>}
+                {m?.higher_band_version && <div className="mt-1 text-sm font-semibold text-primary">高分版: "{m.higher_band_version}"</div>}
+                {m?.why_better && <div className="mt-1 text-xs text-muted-foreground">📈 {m.why_better}</div>}
               </div>
             ))}
           </div>
@@ -530,34 +552,42 @@ function FeedbackView({ session, onRetry }: { session: SessionRow; onRetry: () =
       )}
 
       {/* Strengths */}
-      {fb.strengths?.length > 0 && (
+      {strengths.length > 0 && (
         <section className="mb-5 rounded-2xl border border-emerald-400/40 bg-emerald-500/5 p-4">
           <h3 className="mb-2 text-sm font-bold text-emerald-700 dark:text-emerald-400">👍 你做得好的地方</h3>
           <ul className="space-y-1 text-sm">
-            {fb.strengths.map((s, i) => <li key={i} className="text-foreground/90">• {s}</li>)}
+            {strengths.map((s: string, i: number) => <li key={i} className="text-foreground/90">• {s}</li>)}
           </ul>
         </section>
       )}
 
       {/* Next session plan */}
-      <section className="mb-5 rounded-2xl border-2 border-primary/40 bg-primary/5 p-4">
-        <h3 className="mb-2 flex items-center gap-1.5 text-sm font-bold text-primary">
-          <Sparkles className="size-4" /> 下次练习计划（教练建议）
-        </h3>
-        <div className="space-y-2 text-sm">
-          <div>
-            <span className="font-semibold">重点突破：</span>
-            {fb.next_session_plan.focus_areas.join("、")}
+      {(focusAreas.length > 0 || microTask || suggestedTopics.length > 0) && (
+        <section className="mb-5 rounded-2xl border-2 border-primary/40 bg-primary/5 p-4">
+          <h3 className="mb-2 flex items-center gap-1.5 text-sm font-bold text-primary">
+            <Sparkles className="size-4" /> 下次练习计划（教练建议）
+          </h3>
+          <div className="space-y-2 text-sm">
+            {focusAreas.length > 0 && (
+              <div>
+                <span className="font-semibold">重点突破：</span>
+                {focusAreas.join("、")}
+              </div>
+            )}
+            {microTask && (
+              <div className="rounded-xl bg-card p-3">
+                <span className="font-semibold text-primary">🎯 微练习任务：</span>
+                <div className="mt-1 text-foreground/90">{microTask}</div>
+              </div>
+            )}
+            {suggestedTopics.length > 0 && (
+              <div className="text-xs text-muted-foreground">
+                建议下次话题：{suggestedTopics.join(" · ")}
+              </div>
+            )}
           </div>
-          <div className="rounded-xl bg-card p-3">
-            <span className="font-semibold text-primary">🎯 微练习任务：</span>
-            <div className="mt-1 text-foreground/90">{fb.next_session_plan.micro_task}</div>
-          </div>
-          <div className="text-xs text-muted-foreground">
-            建议下次话题：{fb.next_session_plan.suggested_topics.join(" · ")}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <div className="flex gap-2">
         <button onClick={onRetry} className="flex-1 rounded-2xl bg-grad-title px-5 py-3 text-sm font-bold text-white shadow-tile">

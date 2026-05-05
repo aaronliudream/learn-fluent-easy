@@ -3,6 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Headphones } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import ModuleStageTests from "@/components/ModuleStageTests";
 
 type E = { id: string; title: string; topic: string | null; grade: number; difficulty: number; kind: string | null; duration_sec: number | null };
 
@@ -36,6 +37,14 @@ export default function JuniorListening() {
       <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {grade ? `返回初${grade}` : "返回初中专区"}</BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold">🎧 初中听力训练</h1>
       <p className="mt-1 text-sm text-muted-foreground">参考高考分块设计 · 短对话 / 长对话 / 独白短文</p>
+      {grade && (
+        <ModuleStageTests
+          segment="junior"
+          grade={Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)}
+          module="listening"
+          className="mt-4"
+        />
+      )}
       {items.length === 0 && <p className="mt-6 text-sm text-muted-foreground">暂无听力，敬请期待</p>}
       {SECTIONS.map(sec => {
         const list = items.filter(e => (e.kind ?? "short") === sec.key);

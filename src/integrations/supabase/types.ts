@@ -266,6 +266,47 @@ export type Database = {
         }
         Relationships: []
       }
+      card_answer_events: {
+        Row: {
+          card_id: string
+          created_at: string
+          guest_token: string | null
+          id: string
+          is_correct: boolean
+          picked_idx: number
+          question_idx: number
+          user_id: string | null
+        }
+        Insert: {
+          card_id: string
+          created_at?: string
+          guest_token?: string | null
+          id?: string
+          is_correct: boolean
+          picked_idx: number
+          question_idx: number
+          user_id?: string | null
+        }
+        Update: {
+          card_id?: string
+          created_at?: string
+          guest_token?: string | null
+          id?: string
+          is_correct?: boolean
+          picked_idx?: number
+          question_idx?: number
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "card_answer_events_card_id_fkey"
+            columns: ["card_id"]
+            isOneToOne: false
+            referencedRelation: "knowledge_cards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       card_attempts: {
         Row: {
           card_id: string

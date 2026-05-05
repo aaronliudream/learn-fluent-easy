@@ -528,6 +528,7 @@ function ShopTab({ foods, balance, inv, onAfter, flash, refreshCurrencies }: any
 
 function OutingTab({ pets, active, dests, balance, species, onAfter, flash }: any) {
   const t = useT();
+  const { lang } = useI18n();
   const [busy, setBusy] = useState<string | null>(null);
   const sp = species[active?.species_id];
   if (!active || active.stage < 1) {
@@ -719,6 +720,7 @@ function DiaryTab({ diary }: { diary: Diary[] }) {
 
 function SkinTab({ active, species, skins, owned, balance, onAfter, flash }: any) {
   const t = useT();
+  const { lang } = useI18n();
   const [busy, setBusy] = useState<string | null>(null);
   if (!active) {
     return <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-sm text-muted-foreground"><T>先去领养一只宠物吧 🥚</T></div>;

@@ -58,24 +58,24 @@ export default function ThreeTracksHero() {
           <Link
             key={tr.to}
             to={tr.to}
-            className={`group relative flex flex-col rounded-2xl p-4 text-white shadow-tile transition-all hover:-translate-y-1 hover:shadow-[0_24px_50px_-18px_rgba(0,0,0,0.35)] md:p-5 ${
-              i === 1 ? "md:scale-[1.03]" : ""
+            className={`group relative flex min-h-[120px] flex-col justify-between rounded-2xl p-5 text-white shadow-[0_18px_40px_-12px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition-all hover:-translate-y-1 hover:shadow-[0_28px_60px_-18px_rgba(0,0,0,0.45)] md:min-h-[148px] md:p-6 ${
+              i === 1 ? "md:scale-[1.04]" : ""
             }`}
             style={{ background: tr.gradient }}
           >
             {tr.badge && (
-              <span className="absolute -top-2 right-4 rounded-full bg-[hsl(var(--brand-amber))] px-2 py-0.5 text-[9px] font-bold text-[#1d2233]">
+              <span className="absolute -top-2 right-4 rounded-full bg-[hsl(var(--brand-amber))] px-2.5 py-0.5 text-[10px] font-bold text-[#1d2233] shadow-md">
                 <T>{tr.badge}</T>
               </span>
             )}
-            <div className="text-[9px] font-mono uppercase tracking-[0.18em] opacity-75">
+            <div className="text-[10px] font-mono uppercase tracking-[0.18em] opacity-80">
               {tr.cefr}
             </div>
-            <h3 className="mt-1 flex items-center justify-between gap-2 text-lg font-extrabold leading-tight">
+            <h3 className="mt-2 flex items-center justify-between gap-2 text-2xl font-extrabold leading-tight md:text-[26px]">
               <T>{tr.zh}</T>
-              <ArrowRight className="size-4 shrink-0 opacity-70 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="size-5 shrink-0 opacity-80 transition-transform group-hover:translate-x-1" />
             </h3>
-            <p className="text-[10px] font-semibold uppercase tracking-widest opacity-75">
+            <p className="mt-1 text-[11px] font-semibold uppercase tracking-widest opacity-80">
               {tr.en}
             </p>
           </Link>

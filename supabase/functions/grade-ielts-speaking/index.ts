@@ -228,6 +228,30 @@ Deno.serve(async (req) => {
       await supabase.from("ielts_errors").insert(rows);
     }
 
+    // Review mode: advance FSRS interval on user's previously-due errors
+    if (mode === "review") {
+      const { data: due } = await supabase.from("ielts_errors")
+        .select("id, ease_factor, interval_days, review_count")
+        .eq("user_id", user.id)
+        .eq("is_resolved", false)
+        .lte("next_review_at", new Date().toISOString())
+        .limit(20);
+      if (due?.length) {
+        const now = new Date();
+        for (const row of due) {
+          const ef = Math.max(1.3, Number(row.ease_factor) || 2.5);
+          const newInterval = Math.max(1, Math.round((Number(row.interval_days) || 1) * ef));
+          const next = new Date(now.getTime() + newInterval * 86400_000);
+          await supabase.from("ielts_errors").update({
+            review_count: (row.review_count || 0) + 1,
+            interval_days: newInterval,
+            last_reviewed_at: now.toISOString(),
+            next_review_at: next.toISOString(),
+          }).eq("id", row.id);
+        }
+      }
+    }
+
     return new Response(JSON.stringify({ feedback }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });

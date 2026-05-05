@@ -10,6 +10,8 @@ const SECTIONS: { key: string; label: string; emoji: string; desc: string }[] = 
   { key: "short", label: "Section A · 短对话", emoji: "💬", desc: "30 段 · 每段 1 题 · 听一遍即答" },
   { key: "long", label: "Section B · 长对话", emoji: "🗣️", desc: "10 段 · 每段 3 题 · 听两遍" },
   { key: "mono", label: "Section C · 独白短文", emoji: "📻", desc: "8 段 · 每段 5 题 · 含填空与判断" },
+  { key: "passage", label: "Section D · 听短文填空", emoji: "📝", desc: "5 篇 · 每篇 4 个空 · 选项填空" },
+  { key: "dictation", label: "Section E · 听写句子", emoji: "🖊️", desc: "10 句 · 听完整句默写" },
 ];
 
 export default function JuniorListening() {

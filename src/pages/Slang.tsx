@@ -17,7 +17,7 @@ import {
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
@@ -292,6 +292,24 @@ const Slang = () => {
   const safePage = Math.min(page, totalPages - 1);
   const pageItems = filtered.slice(safePage * PER_PAGE, safePage * PER_PAGE + PER_PAGE);
 
+  // Pre-warm TTS for the visible browse page (and the next page) so the
+  // speaker buttons play instantly. Silent network-only prefetch.
+  useEffect(() => {
+    if (mode !== "browse") return;
+    const texts: string[] = [];
+    for (const it of pageItems) {
+      if (it.phrase) texts.push(it.phrase);
+      if (it.example) texts.push(it.example);
+    }
+    const nextStart = (safePage + 1) * PER_PAGE;
+    const nextItems = filtered.slice(nextStart, nextStart + PER_PAGE);
+    for (const it of nextItems) {
+      if (it.phrase) texts.push(it.phrase);
+    }
+    prefetchTTSBatch(texts);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode, safePage, filtered]);
+
   // Per-page dwell + invite logic.
   // After DWELL_MS on a page, mark its idioms as "reviewed".
   // After PAGES change, wait PROMPT_DELAY_MS then show the invite (if not docked
@@ -358,6 +376,19 @@ const Slang = () => {
       recordedRef.current = new Set();
     }
   }, [mode, questions.length]);
+
+  // Pre-warm TTS for every phrase + example in the current quiz so when the
+  // user taps the speaker on any question, audio plays instantly with no
+  // network wait. Pure prefetch (no <audio> element), so it's silent.
+  useEffect(() => {
+    if (mode !== "quiz" || questions.length === 0) return;
+    const texts: string[] = [];
+    for (const q of questions) {
+      if (q.idiom?.phrase) texts.push(q.idiom.phrase);
+      if (q.idiom?.example) texts.push(q.idiom.example);
+    }
+    prefetchTTSBatch(texts);
+  }, [mode, questions]);
 
   const startQuiz = () => {
     const qs = buildQuiz();

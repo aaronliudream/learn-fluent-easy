@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Lock, Share2, Sparkles, Volume2, BookmarkPlus, Trophy } from "lucide-react";
 import { toast } from "sonner";
+import { BrandLogo } from "@/components/brand/BrandLogo";
 
 type Quiz = { q: string; options: string[]; answer: number; explain?: string };
 type CardData = {
@@ -181,8 +182,28 @@ export default function KnowledgeCard() {
                     );
                   })}
                 </div>
-                {picked[i] !== undefined && q.explain && (
-                  <p className="mt-2 text-xs text-muted-foreground">{q.explain}</p>
+                {picked[i] !== undefined && (
+                  <div className="mt-3">
+                    {picked[i] === q.answer ? (
+                      <div className="flex items-center gap-2 px-3 py-2 rounded-md bg-gradient-to-r from-primary/10 to-transparent border border-primary/30 animate-in fade-in slide-in-from-bottom-1 duration-300">
+                        <BrandLogo size={22} />
+                        <span className="text-sm font-semibold text-primary">太棒了，答对了！</span>
+                      </div>
+                    ) : (
+                      <div className="flex items-start gap-2 px-3 py-2 rounded-md bg-muted/60 border border-border animate-in fade-in duration-300">
+                        <span className="text-base leading-none mt-0.5">🌙</span>
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-foreground">没关系，再看看～</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">
+                            正确答案是 <span className="font-semibold text-foreground">{String.fromCharCode(65 + q.answer)}. {q.options[q.answer]}</span>
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                    {q.explain && (
+                      <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{q.explain}</p>
+                    )}
+                  </div>
                 )}
               </Card>
             ))}

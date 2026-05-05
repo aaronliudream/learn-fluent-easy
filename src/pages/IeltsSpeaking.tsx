@@ -274,13 +274,11 @@ export default function IeltsSpeaking() {
                     {new Date(s.created_at).toLocaleString("zh-CN")}
                   </div>
                 </div>
-                {s.overall_band ? (
+                {s.overall_band && (
                   <div className="flex items-center gap-1 rounded-full bg-amber-500/15 px-3 py-1 text-sm font-extrabold text-amber-700">
                     <Trophy className="size-3.5" />
                     {s.overall_band.toFixed(1)}
                   </div>
-                ) : (
-                  <div className="rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground">未完成</div>
                 )}
               </button>
             ))}

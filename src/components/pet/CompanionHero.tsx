@@ -6,6 +6,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { X, useTBi } from "@/i18n/T";
 import { cn } from "@/lib/utils";
 import { useCompanionMode } from "@/lib/companionPrefs";
+import { useI18n } from "@/i18n/I18nProvider";
+import { displayPetName } from "@/lib/petName";
 
 type Pet = { id: string; nickname: string; stage: number; level: number; exp: number; hunger: number; species_id: string };
 type Species = { id: string; emoji_egg: string; emoji_baby: string; emoji_adult: string; emoji_legend: string };
@@ -20,6 +22,7 @@ const DEMO_EMOJIS = ["🥚", "🐣", "🦊", "🐉"];
  */
 export function CompanionHero() {
   const tbi = useTBi();
+  const { lang } = useI18n();
   const { animate } = useCompanionMode();
   const [user, setUser] = useState<User | null>(null);
   const [pet, setPet] = useState<Pet | null>(null);
@@ -77,7 +80,7 @@ export function CompanionHero() {
   if (!user) line = tbi("我在等你 — 登录后我们一起开始 💛");
   else if (!pet) line = tbi("先选一个伙伴吧，我会陪你练每一句英文 ✨");
   else if (reco && reco.total_due > 0) line = tbi(`今天有 ${reco.total_due} 个复习在等我们 — 一起完成？`);
-  else line = tbi(`${pet.nickname} 想和你练 5 个新单词 ✨`);
+  else line = tbi(`${displayPetName(pet, lang)} 想和你练 5 个新单词 ✨`);
 
   const ctaTo = pet ? "/pets" : (user ? "/pets" : "/auth");
   const ctaLabel = pet ? "去看它" : (user ? "立即领养" : "登录领养");

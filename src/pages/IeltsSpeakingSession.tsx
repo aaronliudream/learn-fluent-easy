@@ -62,6 +62,19 @@ function friendlyVoiceError(err: unknown) {
   return msg || "语音连接出错，请稍后重试。";
 }
 
+const blobToBase64 = (blob: Blob) => new Promise<string>((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => resolve(String(reader.result || "").split(",").pop() || "");
+  reader.onerror = () => reject(reader.error);
+  reader.readAsDataURL(blob);
+});
+
+function preferredRecordingMimeType() {
+  if (typeof MediaRecorder === "undefined") return "";
+  const candidates = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/mpeg"];
+  return candidates.find((type) => MediaRecorder.isTypeSupported(type)) || "";
+}
+
 // Build the system prompt that turns the ElevenLabs agent into a strict
 // IELTS examiner running the full Part 1 → Part 2 → Part 3 flow.
 function buildExaminerPrompt(opts: { targetBand: number; cueCard: string; topicCategory: string | null }) {

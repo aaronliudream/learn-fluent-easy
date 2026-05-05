@@ -63,9 +63,6 @@ export default function PrimaryReading() {
 
       <ModuleStageTests segment="primary" grade={g} module="reading" />
 
-      <div>
-      </div>
-
       {loading ? (
         <div className="py-20 text-center text-muted-foreground">加载中…</div>
       ) : list.length === 0 ? (

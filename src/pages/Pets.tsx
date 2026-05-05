@@ -184,6 +184,7 @@ const STAGE_LABEL = ["蛋", "幼年", "成年", "传说"];
 
 function HomeTab({ pets, active, species, inv, foods, skins, stickers, onAfter, flash }: any) {
   const t = useT();
+  const { lang } = useI18n();
   const [feedingFood, setFeedingFood] = useState<string | null>(null);
   const [pickedSticker, setPickedSticker] = useState<string | null>(null);
   if (!pets.length) {

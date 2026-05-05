@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Heart, Lock, Share2, Sparkles, Volume2, BookmarkPlus, Trophy } from "lucide-react";
 import { toast } from "sonner";
 import { BrandLogo } from "@/components/brand/BrandLogo";
+import { speak } from "@/lib/speak";
 
 type Quiz = { q: string; options: string[]; answer: number; explain?: string };
 type CardData = {
@@ -248,8 +249,24 @@ export default function KnowledgeCard() {
 
       {/* Speak / Ask AI placeholders (locked for guests) */}
       <section className="grid grid-cols-2 gap-3">
-        <Button variant="outline" disabled={!authed} className="h-12">
-          <Volume2 className="w-4 h-4 mr-2" />跟读发音 {!authed && <Lock className="w-3 h-3 ml-1" />}
+        <Button
+          variant="outline"
+          className="h-12"
+          onClick={async () => {
+            // Prefer the first English example; fall back to short_answer / question.
+            const text =
+              card.examples?.find((e) => /[a-zA-Z]/.test(e)) ||
+              card.short_answer ||
+              card.question;
+            try {
+              await speak(text, { accent: "US" });
+            } catch (e) {
+              console.error("speak failed", e);
+              toast.error("发音播放失败，请稍后再试");
+            }
+          }}
+        >
+          <Volume2 className="w-4 h-4 mr-2" />跟读发音
         </Button>
         <Button variant="outline" disabled={!authed} className="h-12">
           <Sparkles className="w-4 h-4 mr-2" />追问 AI {!authed && <Lock className="w-3 h-3 ml-1" />}

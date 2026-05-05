@@ -12,6 +12,7 @@ import WordQuest from "@/components/WordQuest";
 import WordDuel from "@/components/WordDuel";
 import MemoryMatch from "@/components/MemoryMatch";
 import { useI18n } from "@/i18n/I18nProvider";
+import ModuleStageTests from "@/components/ModuleStageTests";
 
 type Vocab = {
   id: string;
@@ -207,6 +208,8 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
         <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">{zh ? `初${grade}核心词汇` : `${levelName} Core Vocabulary`}</h1>
         <p className="mt-1 text-xs text-muted-foreground">{zh ? `中考新课标 · 共 ${words.length} 词 · 按 20 词一组系统学习` : `Junior curriculum · ${words.length} words · 20 words per group`}</p>
       </div>
+
+      <ModuleStageTests segment="junior" grade={grade} module="vocab" />
 
       {/* 学习进度总览（高考同款风格，复用 junior_word_mastery） */}
       <section className="mb-5 rounded-2xl bg-card p-4 shadow-tile">

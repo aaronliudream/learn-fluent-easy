@@ -86,6 +86,7 @@ const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 const Social = lazy(() => import("./pages/Social.tsx"));
 const Ask = lazy(() => import("./pages/Ask.tsx"));
 const TeacherCards = lazy(() => import("./pages/TeacherCards.tsx"));
+const TeacherCardStats = lazy(() => import("./pages/TeacherCardStats.tsx"));
 const KnowledgeCard = lazy(() => import("./pages/KnowledgeCard.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import FeedbackWidget from "@/components/FeedbackWidget";

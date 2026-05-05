@@ -13,6 +13,7 @@ import {
 } from "recharts";
 import DelaySettings from "@/components/parent/DelaySettings";
 import FamilyGoalSettings from "@/components/parent/FamilyGoalSettings";
+import CardLearningSection from "@/components/parent/CardLearningSection";
 import { T, useT } from "@/i18n/T";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
@@ -222,6 +223,9 @@ export default function GlobalParent() {
         <Kpi icon={Target} label={t("掌握单词")} value={`${allWords}`}              color="from-sky-500 to-blue-500" />
         <Kpi icon={AlertTriangle} label={t("待攻克薄弱")} value={`${d.weakness.length}`} color="from-rose-500 to-pink-500" />
       </section>
+
+      {/* Knowledge-card scan-and-quiz timeline */}
+      <CardLearningSection />
 
       {/* 完全没有任何学习数据 → 引导诊断 */}
       {!hasAnyActivity && (

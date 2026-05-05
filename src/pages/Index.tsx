@@ -290,6 +290,27 @@ const Index = () => {
         <ArrowRight className="relative size-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
       </Link>
 
+      {/* Teacher / creator dashboard entry — only for logged-in users */}
+      {user && (
+        <Link
+          to="/teacher/cards"
+          className="group relative mt-2 flex items-center gap-3 rounded-2xl border border-border bg-card p-3 text-sm transition-all hover:-translate-y-0.5 hover:shadow-sm"
+        >
+          <div className="grid size-9 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
+            <BarChart3 className="size-4" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="font-semibold leading-tight">
+              <T>我的卡片数据</T>
+            </div>
+            <div className="text-xs text-muted-foreground">
+              <T>看你创建的卡片帮助了多少人 · 答得怎么样</T>
+            </div>
+          </div>
+          <ArrowRight className="size-4 text-muted-foreground transition-transform group-hover:translate-x-1" />
+        </Link>
+      )}
+
       {/* Primary: Today's Task card — single clear next action */}
       {user && <TodayTaskCard />}
 

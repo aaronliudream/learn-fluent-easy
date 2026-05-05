@@ -188,6 +188,21 @@ export default function KnowledgeCard() {
     } else if (!authed && bonus > 0) {
       setCoinsEarned((c) => c + bonus);
     }
+    // First-completion bonus: peak-end anchor. award_for_item dedupes by item_id,
+    // so the user only ever gets this +5 the very first time they finish stage 3
+    // on this card (no farming, no abuse).
+    if (authed && stage === 3) {
+      try {
+        const { data: r2 } = await supabase.rpc("award_for_item", {
+          _amount: 5,
+          _source: "card_first_complete",
+          _item_id: `${card.id}:first_complete`,
+          _module: "card_quiz",
+        });
+        const row: any = Array.isArray(r2) ? r2[0] : r2;
+        if (row?.awarded > 0) setCoinsEarned((c) => c + row.awarded);
+      } catch {}
+    }
     // Persist attempt (works for guest + logged-in via RLS)
     try {
       const { data: u } = await supabase.auth.getUser();

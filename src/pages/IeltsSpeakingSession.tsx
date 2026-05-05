@@ -274,6 +274,13 @@ function IeltsSpeakingSessionContent() {
       setVoiceConnected(true);
       setConnecting(false);
       toast.success("已接通考官 🎙️");
+      // Nudge the viewport up so the orb + transcript are centered nicely
+      // (especially helpful on mobile where the start button sits low).
+      setTimeout(() => {
+        try {
+          window.scrollTo({ top: 120, behavior: "smooth" });
+        } catch { /* noop */ }
+      }, 200);
       await requestExaminerTurn({ startOnly: true });
     } catch (e: any) {
       console.error(e);

@@ -259,12 +259,13 @@ export default function KnowledgeCard() {
         <Button
           variant="outline"
           className="h-12"
+          disabled={!ttsText(card)}
           onClick={async () => {
-            // Prefer the first English example; fall back to short_answer / question.
-            const text =
-              card.examples?.find((e) => /[a-zA-Z]/.test(e)) ||
-              card.short_answer ||
-              card.question;
+            const text = ttsText(card);
+            if (!text) {
+              toast.info("这张卡片没有英文例句可朗读");
+              return;
+            }
             try {
               await speak(text, { accent: "US" });
             } catch (e) {
@@ -275,7 +276,19 @@ export default function KnowledgeCard() {
         >
           <Volume2 className="w-4 h-4 mr-2" />跟读发音
         </Button>
-        <Button variant="outline" disabled={!authed} className="h-12">
+        <Button
+          variant="outline"
+          className="h-12"
+          onClick={() => {
+            if (!authed) {
+              toast.info("登录后即可向 AI 追问这张卡片");
+              navigate(`/auth?next=/q/${card.slug}`);
+              return;
+            }
+            const seed = `请就这张知识卡继续讲解：\n问题：${card.question}\n要点：${card.short_answer}`;
+            navigate(`/ask?q=${encodeURIComponent(seed)}`);
+          }}
+        >
           <Sparkles className="w-4 h-4 mr-2" />追问 AI {!authed && <Lock className="w-3 h-3 ml-1" />}
         </Button>
       </section>

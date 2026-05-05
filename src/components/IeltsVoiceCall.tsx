@@ -49,17 +49,9 @@ export function IeltsVoiceCall({ open, onClose, targetBand, currentPart, onTrans
     setConnecting(true);
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
-      const { data, error } = await supabase.functions.invoke("elevenlabs-token");
-      // supabase-js wraps non-2xx responses in `error` but the JSON body
-      // (with our friendly message) is still in `data`. Prefer that.
-      const serverMsg =
-        (data && typeof data === "object" && "error" in data && (data as any).error) ||
-        (error as any)?.message;
-      if (!data?.token) {
-        throw new Error(serverMsg || "未获取到 token");
-      }
+      // Public agent — connect directly with agentId, no server token needed
       await conversation.startSession({
-        conversationToken: data.token,
+        agentId: "agent_2801kqvhz6m2ehasqcjadep8zm25",
         connectionType: "webrtc",
         overrides: {
           agent: {

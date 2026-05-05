@@ -55,6 +55,13 @@ function pickCueCard(topicCategory: string | null) {
   return CUE_CARDS.find((c) => t.includes(c.topic)) || CUE_CARDS[Math.floor(Math.random() * CUE_CARDS.length)];
 }
 
+function friendlyVoiceError(err: unknown) {
+  const msg = typeof err === "string" ? err : err instanceof Error ? err.message : String((err as any)?.message || "");
+  if (/requested device not found|notfounderror/i.test(msg)) return "未检测到可用麦克风。请换到有麦克风的设备，或在系统设置中启用麦克风后重试。";
+  if (/notallowederror|permission|denied/i.test(msg)) return "麦克风权限被拒绝。请在浏览器地址栏/系统设置中允许麦克风后重试。";
+  return msg || "语音连接出错，请稍后重试。";
+}
+
 // Build the system prompt that turns the ElevenLabs agent into a strict
 // IELTS examiner running the full Part 1 → Part 2 → Part 3 flow.
 function buildExaminerPrompt(opts: { targetBand: number; cueCard: string; topicCategory: string | null }) {
@@ -170,7 +177,7 @@ function IeltsSpeakingSessionContent() {
       console.error("EL error", err);
       if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
       setConnecting(false);
-      setErrorMsg(typeof err === "string" ? err : (err?.message || "语音连接出错"));
+      setErrorMsg(friendlyVoiceError(err));
     },
     onMessage: (msg: any) => {
       try {
@@ -219,7 +226,7 @@ function IeltsSpeakingSessionContent() {
       conversation.startSession({ useWakeLock: false });
     } catch (e: any) {
       console.error(e);
-      setErrorMsg(e?.message || "无法启动语音对话");
+      setErrorMsg(friendlyVoiceError(e));
       setConnecting(false);
     }
   }, [session, conversation]);

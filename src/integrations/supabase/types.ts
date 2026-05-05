@@ -1323,6 +1323,7 @@ export type Database = {
       }
       gaokao_grammar_points: {
         Row: {
+          ai_corpus: Json | null
           category_id: string | null
           common_mistake: string | null
           created_at: string
@@ -1344,6 +1345,7 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          ai_corpus?: Json | null
           category_id?: string | null
           common_mistake?: string | null
           created_at?: string
@@ -1365,6 +1367,7 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          ai_corpus?: Json | null
           category_id?: string | null
           common_mistake?: string | null
           created_at?: string
@@ -2668,6 +2671,7 @@ export type Database = {
       }
       junior_grammar_points: {
         Row: {
+          ai_corpus: Json | null
           category_id: string
           cefr: string | null
           code: string
@@ -2681,6 +2685,7 @@ export type Database = {
           title: string
         }
         Insert: {
+          ai_corpus?: Json | null
           category_id: string
           cefr?: string | null
           code: string
@@ -2694,6 +2699,7 @@ export type Database = {
           title: string
         }
         Update: {
+          ai_corpus?: Json | null
           category_id?: string
           cefr?: string | null
           code?: string

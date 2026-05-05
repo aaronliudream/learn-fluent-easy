@@ -40,6 +40,14 @@ function uniq(arr: string[]): string[] {
   return Array.from(new Set(arr.map((s) => s.trim()).filter(Boolean)));
 }
 
+// Skip strings that are mostly Chinese / non-Latin — TTS for those would
+// just be wasted bytes since the app only plays English audio.
+function isEnglish(s: string): boolean {
+  if (!s || s.length < 2) return false;
+  const ascii = s.replace(/[^A-Za-z]/g, "").length;
+  return ascii >= Math.max(3, s.length * 0.4);
+}
+
 // Split a long passage into sentence-ish chunks the way the client's
 // SegmentedReader splits them, so the cache keys match real playback.
 function splitSentences(text: string): string[] {

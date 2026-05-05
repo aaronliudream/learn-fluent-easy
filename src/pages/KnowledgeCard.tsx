@@ -75,11 +75,9 @@ export default function KnowledgeCard() {
   const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
   const refQuery = myUserId ? `?ref=${myUserId}` : "";
   const qrUrl = `https://bigmoonenglish.com/q/${slug}${refQuery}`;
-  const ogPath = `/functions/v1/card-og/${slug}${refQuery}`;
-  const shareUrl = `https://bigmoonenglish.com${ogPath}`;
-  const backendShareUrl = projectId
-    ? `https://${projectId}.supabase.co${ogPath}`
-    : shareUrl;
+  const shareUrl = projectId
+    ? `https://${projectId}.supabase.co/functions/v1/card-og/${slug}${refQuery}`
+    : qrUrl;
   // Progressive challenge: start with 3, can extend to 5, then 10.
   const [stage, setStage] = useState<3 | 5 | 10>(3);
   const [stageDone, setStageDone] = useState<{ s3?: boolean; s5?: boolean; s10?: boolean }>({});

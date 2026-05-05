@@ -55,7 +55,7 @@ export const TodayTaskCard = () => {
   const [signedIn, setSignedIn] = useState(false);
   const [reco, setReco] = useState<Reco | null>(null);
   const [doneKeys, setDoneKeys] = useState<Set<string>>(new Set());
-  const [collapsed, setCollapsed] = useState<boolean>(false);
+  const [collapsed, setCollapsed] = useState<boolean>(true);
   const [celebrated, setCelebrated] = useState<boolean>(false);
   const t = useT();
   const progress = useMemo(() => loadProgress(), []);

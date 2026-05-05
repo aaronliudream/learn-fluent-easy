@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Mic, Send, Square, Loader2, ArrowLeft, AlertCircle, Trophy, RefreshCw, Sparkles } from "lucide-react";
+import { Mic, Send, Square, Loader2, ArrowLeft, AlertCircle, Trophy, RefreshCw, Sparkles, Volume2, VolumeX } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { toast } from "sonner";
@@ -59,6 +59,32 @@ export default function IeltsSpeakingSession() {
   const [recording, setRecording] = useState(false);
   const recognitionRef = useRef<any>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [voiceOn, setVoiceOn] = useState(true);
+  const voiceOnRef = useRef(true);
+  const speakingRef = useRef(false);
+  useEffect(() => { voiceOnRef.current = voiceOn; }, [voiceOn]);
+
+  const speak = useCallback((text: string) => {
+    if (!voiceOnRef.current || !text) return;
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    try {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = "en-GB";
+      u.rate = 0.95;
+      u.pitch = 1;
+      const voices = window.speechSynthesis.getVoices();
+      const pref = voices.find((v) => /en-GB/i.test(v.lang)) || voices.find((v) => /en[-_]/i.test(v.lang));
+      if (pref) u.voice = pref;
+      speakingRef.current = true;
+      u.onend = () => { speakingRef.current = false; };
+      u.onerror = () => { speakingRef.current = false; };
+      window.speechSynthesis.speak(u);
+    } catch (e) { console.warn("tts err", e); }
+  }, []);
+
+  // Stop any speech when leaving the page
+  useEffect(() => () => { try { window.speechSynthesis?.cancel(); } catch { /* */ } }, []);
 
   // Load session
   useEffect(() => {
@@ -168,6 +194,9 @@ export default function IeltsSpeakingSession() {
       setMessages(finalMsgs);
       setCurrentPart(nextPart);
       await persist(finalMsgs, nextPart);
+
+      // Speak the examiner's reply aloud
+      if (cleaned) speak(cleaned);
 
       if (endNow) {
         setTimeout(() => grade(finalMsgs), 500);

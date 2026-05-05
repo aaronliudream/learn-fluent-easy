@@ -432,14 +432,21 @@ export default function IeltsSpeakingSession() {
         </button>
       </div>
 
-      <IeltsVoiceCall
-        open={callOpen}
-        onClose={() => { setCallOpen(false); persist(messages, currentPart); }}
-        targetBand={session.target_band}
-        currentPart={currentPart}
-        initialTranscript={messages}
-        onTranscriptUpdate={(next) => setMessages(next)}
-      />
+      {/* Mount IeltsVoiceCall ONLY when the user opens the voice call.
+          The ElevenLabs `useConversation` hook touches navigator.mediaDevices /
+          AudioContext / WebRTC at init time and can throw in iOS private mode,
+          Capacitor WebView, or restricted networks — bringing the whole page
+          down (no global ErrorBoundary). Lazy mounting eliminates that risk. */}
+      {callOpen && (
+        <IeltsVoiceCall
+          open={callOpen}
+          onClose={() => { setCallOpen(false); persist(messages, currentPart); }}
+          targetBand={session.target_band}
+          currentPart={currentPart}
+          initialTranscript={messages}
+          onTranscriptUpdate={(next) => setMessages(next)}
+        />
+      )}
     </main>
   );
 }

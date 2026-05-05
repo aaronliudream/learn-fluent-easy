@@ -15,6 +15,7 @@ import {
   type BadgeDef,
 } from "@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
+import ModuleStageTests from "@/components/ModuleStageTests";
 import MasteryDashboard from "@/components/MasteryDashboard";
 import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";

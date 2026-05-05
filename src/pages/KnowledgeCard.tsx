@@ -60,11 +60,14 @@ export default function KnowledgeCard() {
   const [card, setCard] = useState<CardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [authed, setAuthed] = useState(false);
+  const [myUserId, setMyUserId] = useState<string | null>(null);
+  const [refUserId, setRefUserId] = useState<string | null>(null);
   const [liked, setLiked] = useState(false);
   const [picked, setPicked] = useState<Record<number, number>>({});
   const [qrOpen, setQrOpen] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
-  const shareUrl = `https://bigmoonenglish.com/q/${slug}`;
+  // Sharing: append ?ref=<myUserId> so author/sharer earns when others complete
+  const shareUrl = `https://bigmoonenglish.com/q/${slug}${myUserId ? `?ref=${myUserId}` : ""}`;
   // Progressive challenge: start with 3, can extend to 5, then 10.
   const [stage, setStage] = useState<3 | 5 | 10>(3);
   const [stageDone, setStageDone] = useState<{ s3?: boolean; s5?: boolean; s10?: boolean }>({});
@@ -79,6 +82,7 @@ export default function KnowledgeCard() {
       const { data: u } = await supabase.auth.getUser();
       if (!mounted) return;
       setAuthed(!!u?.user);
+      setMyUserId(u?.user?.id ?? null);
 
       const { data, error } = await supabase
         .from("knowledge_cards")
@@ -91,10 +95,13 @@ export default function KnowledgeCard() {
 
       // record view + ref reward hook (Phase 2 will use ref_user_id)
       const ref = new URLSearchParams(window.location.search).get("ref");
+      // Don't credit self-shares
+      const refClean = ref && ref !== u?.user?.id ? ref : null;
+      setRefUserId(refClean);
       supabase.from("card_views").insert({
         card_id: data.id,
         viewer_id: u?.user?.id ?? null,
-        ref_user_id: ref ?? null,
+        ref_user_id: refClean,
       });
 
       if (u?.user) {

@@ -76,7 +76,7 @@ const FEEDBACK_TOOL = {
             pronunciation: {
               type: "object",
               properties: {
-                band: { type: ["number", "null"] },
+                band: { type: "number", description: "Use 0 if N/A (text-only transcript)" },
                 comment: { type: "string" },
                 evidence: { type: "array", items: { type: "string" } },
               },
@@ -87,11 +87,10 @@ const FEEDBACK_TOOL = {
         },
         errors: {
           type: "array",
-          maxItems: 5,
           items: {
             type: "object",
             properties: {
-              part: { type: "integer", enum: [1, 2, 3] },
+              part: { type: "integer", description: "1, 2, or 3" },
               original: { type: "string" },
               corrected: { type: "string" },
               explanation_zh: { type: "string" },
@@ -99,16 +98,15 @@ const FEEDBACK_TOOL = {
               error_type: { type: "string" },
               ielts_dimension: {
                 type: "string",
-                enum: ["fluency_coherence", "lexical_resource", "grammar", "pronunciation"],
+                description: "One of: fluency_coherence, lexical_resource, grammar, pronunciation",
               },
-              severity: { type: "integer", minimum: 1, maximum: 3 },
+              severity: { type: "integer", description: "1 (low) to 3 (high)" },
             },
             required: ["part", "original", "corrected", "explanation_zh", "higher_band_version", "error_type", "ielts_dimension", "severity"],
           },
         },
         missed_opportunities: {
           type: "array",
-          maxItems: 3,
           items: {
             type: "object",
             properties: {
@@ -120,13 +118,13 @@ const FEEDBACK_TOOL = {
             required: ["context", "what_you_said", "higher_band_version", "why_better"],
           },
         },
-        strengths: { type: "array", items: { type: "string" }, maxItems: 3 },
+        strengths: { type: "array", items: { type: "string" } },
         next_session_plan: {
           type: "object",
           properties: {
-            focus_areas: { type: "array", items: { type: "string" }, maxItems: 2 },
+            focus_areas: { type: "array", items: { type: "string" } },
             micro_task: { type: "string", description: "One concrete deliberate-practice task for next session" },
-            suggested_topics: { type: "array", items: { type: "string" }, maxItems: 3 },
+            suggested_topics: { type: "array", items: { type: "string" } },
           },
           required: ["focus_areas", "micro_task", "suggested_topics"],
         },

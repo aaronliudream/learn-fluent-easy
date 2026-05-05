@@ -192,7 +192,7 @@ function IeltsSpeakingSessionContent() {
   const playExaminerAudio = useCallback(async (audioContent: string, mimeType = "audio/mpeg") => {
     const audio = audioRef.current ?? new Audio();
     audioRef.current = audio;
-    audio.playsInline = true;
+    audio.setAttribute("playsinline", "true");
     audio.src = `data:${mimeType};base64,${audioContent}`;
     setExaminerSpeaking(true);
     try { await audio.play(); } finally {
@@ -255,7 +255,7 @@ function IeltsSpeakingSessionContent() {
     try {
       const audio = audioRef.current ?? new Audio();
       audioRef.current = audio;
-      audio.playsInline = true;
+      audio.setAttribute("playsinline", "true");
       audio.src = SILENT_WAV;
       audio.play().catch(() => {});
       const stream = await navigator.mediaDevices.getUserMedia({
@@ -313,15 +313,50 @@ function IeltsSpeakingSessionContent() {
     }
   }, [session, id]);
 
+  const stopRecording = useCallback(() => {
+    const recorder = recorderRef.current;
+    if (!recorder || recorder.state !== "recording") return;
+    recorder.stop();
+    setRecording(false);
+  }, []);
+
+  const startRecording = useCallback(() => {
+    const stream = mediaStreamRef.current;
+    if (!stream || recording || processingTurn || examinerSpeaking) return;
+    chunksRef.current = [];
+    const mimeType = preferredRecordingMimeType();
+    const recorder = new MediaRecorder(stream, mimeType ? { mimeType } : undefined);
+    recorderRef.current = recorder;
+    recorder.ondataavailable = (event) => { if (event.data.size > 0) chunksRef.current.push(event.data); };
+    recorder.onstop = () => {
+      const blob = new Blob(chunksRef.current, { type: recorder.mimeType || mimeType || "audio/webm" });
+      chunksRef.current = [];
+      if (blob.size > 800) void requestExaminerTurn({ audioBlob: blob });
+      else setErrorMsg("录音太短，请按住说完一句完整英文后再松开。");
+    };
+    recorder.start();
+    setRecording(true);
+  }, [examinerSpeaking, processingTurn, recording, requestExaminerTurn]);
+
   const hangUp = useCallback(async () => {
-    try { await conversation.endSession(); } catch { /* */ }
-    // grading is triggered in onDisconnect when transcript is non-trivial
-  }, [conversation]);
+    try { recorderRef.current?.state === "recording" && recorderRef.current.stop(); } catch { /* */ }
+    try { audioRef.current?.pause(); } catch { /* */ }
+    try { mediaStreamRef.current?.getTracks().forEach((t) => t.stop()); } catch { /* */ }
+    setRecording(false);
+    setVoiceConnected(false);
+    setExaminerSpeaking(false);
+    const msgs = transcriptRef.current;
+    if (msgs.length >= 2) {
+      toast("通话结束，正在生成评分…");
+      await grade(msgs);
+    }
+  }, [grade]);
 
   // Cleanup on unmount
   useEffect(() => () => {
-    if (connectTimeoutRef.current) window.clearTimeout(connectTimeoutRef.current);
-    try { conversation.endSession(); } catch { /* */ }
+    try { recorderRef.current?.state === "recording" && recorderRef.current.stop(); } catch { /* */ }
+    try { audioRef.current?.pause(); } catch { /* */ }
+    try { mediaStreamRef.current?.getTracks().forEach((t) => t.stop()); } catch { /* */ }
   }, []);
 
   // ==================== RENDER ====================
@@ -353,8 +388,8 @@ function IeltsSpeakingSessionContent() {
   }
 
   const isConnected = voiceConnected;
-  const isExaminerSpeaking = isConnected && conversation.isSpeaking;
-  const isYourTurn = isConnected && !conversation.isSpeaking;
+  const isExaminerSpeaking = isConnected && examinerSpeaking;
+  const isYourTurn = isConnected && !examinerSpeaking && !processingTurn;
   const mins = Math.floor(elapsed / 60).toString().padStart(2, "0");
   const secs = (elapsed % 60).toString().padStart(2, "0");
 

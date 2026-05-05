@@ -315,6 +315,19 @@ export default function IeltsSpeakingSession() {
             Part {currentPart} · 目标 Band {session.target_band.toFixed(1)}
           </span>
           <button
+            onClick={() => {
+              setVoiceOn((v) => {
+                if (v) { try { window.speechSynthesis.cancel(); } catch { /* */ } }
+                return !v;
+              });
+            }}
+            className="grid size-8 place-items-center rounded-full bg-secondary text-foreground hover:bg-muted"
+            title={voiceOn ? "关闭考官语音" : "开启考官语音"}
+            aria-label={voiceOn ? "关闭考官语音" : "开启考官语音"}
+          >
+            {voiceOn ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
+          </button>
+          <button
             onClick={endNow}
             disabled={grading}
             className="rounded-full bg-rose-500 px-3 py-1.5 text-xs font-bold text-white hover:bg-rose-600 disabled:opacity-50"

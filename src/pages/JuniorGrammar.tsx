@@ -36,7 +36,11 @@ export default function JuniorGrammar() {
         <p className="mt-1 text-sm text-muted-foreground">按 CEFR 分级 · 每个考点配讲解 + 题库 · 答对喂宠物</p>
       </div>
       {grade && (
-        <ModuleStageTests segment="junior" grade={Number(grade)} module="grammar" />
+        <ModuleStageTests
+          segment="junior"
+          grade={Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)}
+          module="grammar"
+        />
       )}
       <div className="space-y-6">
         {cats.map(c => (

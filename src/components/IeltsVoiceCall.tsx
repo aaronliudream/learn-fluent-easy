@@ -85,10 +85,10 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
 
   // Auto-start when opened
   useEffect(() => {
-    if (open && conversation.status === "disconnected" && !connecting) {
+    if (open && !voiceConnected && !connecting) {
       start();
     }
-    if (!open && conversation.status === "connected") {
+    if (!open && voiceConnected) {
       stop();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -99,7 +99,6 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
 
   if (!open) return null;
 
-  const status = conversation.status;
   const isSpeaking = conversation.isSpeaking;
 
   return (
@@ -113,7 +112,7 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
         <div className="relative grid size-48 place-items-center">
           <div
             className={`absolute inset-0 rounded-full bg-primary/30 transition-transform duration-300 ${
-              status === "connected" ? (isSpeaking ? "scale-110 animate-pulse" : "scale-100") : "scale-90"
+              voiceConnected ? (isSpeaking ? "scale-110 animate-pulse" : "scale-100") : "scale-90"
             }`}
           />
           <div
@@ -124,7 +123,7 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
           <div className="relative z-10 grid size-32 place-items-center rounded-full bg-primary text-primary-foreground shadow-2xl">
             {connecting ? (
               <Loader2 className="size-12 animate-spin" />
-            ) : status === "connected" ? (
+            ) : voiceConnected ? (
               <Mic className="size-12" />
             ) : (
               <Phone className="size-12" />
@@ -134,8 +133,8 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
 
         <div className="text-lg font-bold">
           {connecting && "正在接通…"}
-          {!connecting && status === "connected" && (isSpeaking ? "考官正在说话…" : "请开始回答 🎤")}
-          {!connecting && status === "disconnected" && "等待接通…"}
+          {!connecting && voiceConnected && (isSpeaking ? "考官正在说话…" : "请开始回答 🎤")}
+          {!connecting && !voiceConnected && "等待接通…"}
         </div>
         <div className="text-xs text-muted-foreground">
           双工真人语音 · 你可以随时打断考官 · 中途挂断会自动评分

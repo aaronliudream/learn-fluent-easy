@@ -266,6 +266,67 @@ export type Database = {
         }
         Relationships: []
       }
+      card_likes: {
+        Row: {
+          card_id: string
+          created_at: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          card_id: string
+          created_at?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          card_id?: string
+          created_at?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "card_likes_card_id_fkey"
+            columns: ["card_id"]
+            isOneToOne: false
+            referencedRelation: "knowledge_cards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      card_views: {
+        Row: {
+          card_id: string
+          created_at: string
+          id: string
+          ref_user_id: string | null
+          viewer_id: string | null
+        }
+        Insert: {
+          card_id: string
+          created_at?: string
+          id?: string
+          ref_user_id?: string | null
+          viewer_id?: string | null
+        }
+        Update: {
+          card_id?: string
+          created_at?: string
+          id?: string
+          ref_user_id?: string | null
+          viewer_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "card_views_card_id_fkey"
+            columns: ["card_id"]
+            isOneToOne: false
+            referencedRelation: "knowledge_cards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       coin_award_log: {
         Row: {
           amount: number
@@ -2937,6 +2998,63 @@ export type Database = {
           sample_answer?: string | null
           scoring_rubric?: string | null
           topic?: string
+        }
+        Relationships: []
+      }
+      knowledge_cards: {
+        Row: {
+          author_id: string | null
+          common_mistakes: Json
+          created_at: string
+          examples: Json
+          explanation: string
+          id: string
+          language: string
+          like_count: number
+          question: string
+          quiz: Json
+          short_answer: string
+          slug: string
+          status: string
+          tags: string[]
+          updated_at: string
+          view_count: number
+        }
+        Insert: {
+          author_id?: string | null
+          common_mistakes?: Json
+          created_at?: string
+          examples?: Json
+          explanation: string
+          id?: string
+          language?: string
+          like_count?: number
+          question: string
+          quiz?: Json
+          short_answer: string
+          slug: string
+          status?: string
+          tags?: string[]
+          updated_at?: string
+          view_count?: number
+        }
+        Update: {
+          author_id?: string | null
+          common_mistakes?: Json
+          created_at?: string
+          examples?: Json
+          explanation?: string
+          id?: string
+          language?: string
+          like_count?: number
+          question?: string
+          quiz?: Json
+          short_answer?: string
+          slug?: string
+          status?: string
+          tags?: string[]
+          updated_at?: string
+          view_count?: number
         }
         Relationships: []
       }

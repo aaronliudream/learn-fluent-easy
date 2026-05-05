@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import {
   ArrowLeft, BookOpen, Clock, ChevronRight, GraduationCap, Sparkles, Target, Trophy,
   Library, Gauge, Wand2, CheckCircle2, Circle, RefreshCw, Flame, TrendingUp, Award,
@@ -10,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import ModuleStageTests from "@/components/ModuleStageTests";
 
 type GradeBand = "g1" | "g2" | "g3" | "gaokao";
 
@@ -103,6 +104,9 @@ const STATUS_FILTERS: { k: ArticleStatus | "all"; label: string; dot: string }[]
 ];
 
 export default function GaokaoReading() {
+  const [sp] = useSearchParams();
+  const gradeParam = sp.get("grade");
+  const gradeNum = gradeParam ? Number(gradeParam) : null;
   const [tab, setTab] = useState<GradeBand | null>(null);
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
@@ -269,6 +273,10 @@ export default function GaokaoReading() {
       </BackLink>
 
       <PageHeader hideReviewBanner title="阅读理解训练" subtitle="按你的水平推荐文章 · 答题 → 评分 → 精读复盘" />
+
+      {gradeNum && (
+        <ModuleStageTests segment="gaokao" grade={gradeNum} module="reading" />
+      )}
 
       {/* ============= 继续阅读 Hero ============= */}
       {continueCard && (

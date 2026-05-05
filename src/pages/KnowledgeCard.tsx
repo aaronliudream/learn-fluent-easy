@@ -88,10 +88,9 @@ export default function KnowledgeCard() {
   }
 
   async function share() {
-    // Share link points to edge function so crawlers (WeChat etc.) get proper OG tags;
-    // real users are 302-redirected back to the SPA.
-    const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
-    const url = `https://${projectId}.supabase.co/functions/v1/card-og/${slug}`;
+    // Use main domain — Cloudflare Worker on bigmoonenglish.com routes
+    // crawlers to the OG-HTML edge function and real users to the SPA.
+    const url = `https://bigmoonenglish.com/q/${slug}`;
     try {
       if (navigator.share) await navigator.share({ title: card?.question, url });
       else { await navigator.clipboard.writeText(url); toast.success("链接已复制"); }

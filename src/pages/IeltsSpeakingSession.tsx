@@ -230,6 +230,10 @@ export default function IeltsSpeakingSession() {
     await sendToExaminer(next, currentPart);
   }, [input, streaming, session, messages, currentPart, persist, sendToExaminer]);
 
+  // Keep a ref to the latest `send` so the speech-recognition onend
+  // callback (captured at start) can call the freshest version.
+  useEffect(() => { sendRef.current = (t: string) => { void send(t); }; }, [send]);
+
   // Voice input via Web Speech API.
   // UX: tap mic → speak → tap mic again to STOP and AUTO-SEND.
   const sendRef = useRef<(text: string) => void>();
@@ -434,7 +438,7 @@ export default function IeltsSpeakingSession() {
           className="flex-1 resize-none rounded-2xl border border-border bg-card px-4 py-2.5 text-sm shadow-sm focus:border-primary focus:outline-none disabled:opacity-50"
         />
         <button
-          onClick={send}
+          onClick={() => send()}
           disabled={!input.trim() || streaming}
           className="grid size-12 shrink-0 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-md hover:opacity-90 disabled:opacity-50"
         >

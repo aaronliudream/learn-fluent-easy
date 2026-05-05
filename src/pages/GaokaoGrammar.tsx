@@ -54,6 +54,9 @@ const FREQ_BADGE: Record<string, string> = {
 const FREQ_LABEL: Record<string, string> = { high: "高频", medium: "中频", low: "低频" };
 
 export default function GaokaoGrammar() {
+  const [searchParams] = useSearchParams();
+  const gradeParam = searchParams.get("grade");
+  const gradeNum = gradeParam ? Number(gradeParam) : null;
   const [modules, setModules] = useState<Module[]>([]);
   const [cats, setCats] = useState<Category[]>([]);
   const [points, setPoints] = useState<Point[]>([]);
@@ -183,6 +186,10 @@ export default function GaokaoGrammar() {
         <ArrowLeft className="size-4" /> 返回高考英语
       </BackLink>
       <PageHeader hideReviewBanner title="语法考点" subtitle="按掌握度学习 · 间隔复习 · 错因分析" />
+
+      {gradeNum && (
+        <ModuleStageTests segment="gaokao" grade={gradeNum} module="grammar" />
+      )}
 
       {/* ===== Hero: 今日推荐 / 待复习 ===== */}
       <section className="mb-6 grid gap-4 md:grid-cols-3">

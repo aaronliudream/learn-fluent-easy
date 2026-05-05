@@ -160,6 +160,19 @@ export default function KnowledgeCard() {
     setPicked((p) => ({ ...p, [qIdx]: optIdx }));
     const q = card!.quiz[qIdx];
     const isRight = optIdx === q.answer;
+    // Fire-and-forget: record this answer for per-question analytics
+    try {
+      void supabase.auth.getUser().then(({ data: u }) => {
+        supabase.from("card_answer_events").insert({
+          card_id: card!.id,
+          question_idx: qIdx,
+          picked_idx: optIdx,
+          is_correct: isRight,
+          user_id: u?.user?.id ?? null,
+          guest_token: u?.user ? null : getGuestCardToken(),
+        });
+      });
+    } catch {}
     if (isRight) {
       const newStreak = streak + 1;
       setStreak(newStreak);

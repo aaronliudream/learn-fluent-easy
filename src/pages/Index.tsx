@@ -270,6 +270,26 @@ const Index = () => {
       {/* Three-track entry — primary path selection (Exam / Career / Beginner) */}
       <ThreeTracksHero />
 
+      {/* Ask-AI knowledge card — quick entry to generate a shareable card */}
+      <Link
+        to="/ask"
+        className="group relative mt-4 flex items-center gap-4 overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/15 via-primary/5 to-background p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg"
+      >
+        <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-primary/20 blur-2xl" />
+        <div className="relative grid size-12 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground shadow-md">
+          <Sparkles className="size-6" />
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <div className="text-base font-bold leading-tight">
+            <T>提问 AI · 生成知识卡</T>
+          </div>
+          <div className="mt-0.5 text-xs text-muted-foreground">
+            <T>输入英语问题，10 秒生成讲解 + 例句 + 小测，可分享二维码</T>
+          </div>
+        </div>
+        <ArrowRight className="relative size-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
+      </Link>
+
       {/* Primary: Today's Task card — single clear next action */}
       {user && <TodayTaskCard />}
 

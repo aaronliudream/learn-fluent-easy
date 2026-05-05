@@ -158,7 +158,7 @@ export default function KnowledgeCard() {
   async function share() {
     // Render a high-fidelity QR (large, high error-correction) so any phone can scan it.
     try {
-      const dataUrl = await QRCode.toDataURL(shareUrl, {
+      const dataUrl = await QRCode.toDataURL(qrUrl, {
         errorCorrectionLevel: "H",
         margin: 2,
         width: 720,

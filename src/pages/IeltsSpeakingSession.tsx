@@ -212,8 +212,8 @@ export default function IeltsSpeakingSession() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [session, persist]);
 
-  const send = useCallback(async () => {
-    const text = input.trim();
+  const send = useCallback(async (textOverride?: string) => {
+    const text = (textOverride ?? input).trim();
     if (!text || streaming || !session) return;
     setInput("");
     const next: Msg[] = [...messages, { role: "user", content: text, part: currentPart }];
@@ -230,7 +230,13 @@ export default function IeltsSpeakingSession() {
     await sendToExaminer(next, currentPart);
   }, [input, streaming, session, messages, currentPart, persist, sendToExaminer]);
 
-  // Voice input via Web Speech API
+  // Keep a ref to the latest `send` so the speech-recognition onend
+  // callback (captured at start) can call the freshest version.
+  useEffect(() => { sendRef.current = (t: string) => { void send(t); }; }, [send]);
+
+  // Voice input via Web Speech API.
+  // UX: tap mic → speak → tap mic again to STOP and AUTO-SEND.
+  const sendRef = useRef<(text: string) => void>();
   const toggleRecord = useCallback(() => {
     const SR: any = (window as any).webkitSpeechRecognition || (window as any).SpeechRecognition;
     if (!SR) { toast.error("浏览器不支持语音输入，请用 Chrome 或 Edge"); return; }
@@ -243,16 +249,24 @@ export default function IeltsSpeakingSession() {
     rec.lang = "en-US";
     rec.continuous = true;
     rec.interimResults = true;
+    let collected = "";
     rec.onresult = (e: any) => {
       let final = "";
       for (let i = e.resultIndex; i < e.results.length; i++) {
         const r = e.results[i];
         if (r.isFinal) final += r[0].transcript;
       }
-      if (final) setInput((prev) => (prev ? prev + " " : "") + final.trim());
+      if (final) {
+        collected = (collected ? collected + " " : "") + final.trim();
+        setInput(collected);
+      }
     };
     rec.onerror = (e: any) => { console.error("speech err", e); setRecording(false); };
-    rec.onend = () => setRecording(false);
+    rec.onend = () => {
+      setRecording(false);
+      const text = collected.trim();
+      if (text) setTimeout(() => sendRef.current?.(text), 0);
+    };
     rec.start();
     recognitionRef.current = rec;
     setRecording(true);
@@ -285,8 +299,8 @@ export default function IeltsSpeakingSession() {
   }, [session, id]);
 
   const endNow = useCallback(() => {
-    if (messages.length < 4) {
-      toast("对话太短，请至少完成 Part 1 后再结束");
+    if (messages.length < 2) {
+      toast.error("还没有任何回答，至少先回答一个问题再结束");
       return;
     }
     if (confirm("确定结束并生成评分吗？")) grade(messages);
@@ -424,7 +438,7 @@ export default function IeltsSpeakingSession() {
           className="flex-1 resize-none rounded-2xl border border-border bg-card px-4 py-2.5 text-sm shadow-sm focus:border-primary focus:outline-none disabled:opacity-50"
         />
         <button
-          onClick={send}
+          onClick={() => send()}
           disabled={!input.trim() || streaming}
           className="grid size-12 shrink-0 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-md hover:opacity-90 disabled:opacity-50"
         >

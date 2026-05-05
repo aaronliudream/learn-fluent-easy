@@ -66,14 +66,18 @@ export default function KnowledgeCard() {
   const [picked, setPicked] = useState<Record<number, number>>({});
   const [qrOpen, setQrOpen] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
-  // Sharing URL points to the OG edge function so WeChat / Twitter / Facebook crawlers
-  // get a proper card-specific preview (title, description, cover image). Real users
-  // are 302-redirected to /q/<slug>. Append ?ref=<myUserId> for share-bonus tracking.
+  // Two URLs:
+  //   • qrUrl: clean short URL — used inside the QR image (smaller, easier to scan)
+  //   • shareUrl: points to the OG edge function so WeChat / Twitter / Facebook
+  //     crawlers get a card-specific preview (title, description, cover image).
+  //     Real users are 302-redirected to /q/<slug>.
+  // Both append ?ref=<myUserId> for share-bonus tracking.
   const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
   const refQuery = myUserId ? `?ref=${myUserId}` : "";
+  const qrUrl = `https://bigmoonenglish.com/q/${slug}${refQuery}`;
   const shareUrl = projectId
     ? `https://${projectId}.supabase.co/functions/v1/card-og/${slug}${refQuery}`
-    : `https://bigmoonenglish.com/q/${slug}${refQuery}`;
+    : qrUrl;
   // Progressive challenge: start with 3, can extend to 5, then 10.
   const [stage, setStage] = useState<3 | 5 | 10>(3);
   const [stageDone, setStageDone] = useState<{ s3?: boolean; s5?: boolean; s10?: boolean }>({});

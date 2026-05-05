@@ -3,7 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Volume2, Sparkles, Music, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 
 type ExampleWord = { word: string; ipa: string; meaning_cn: string; emoji: string };
@@ -40,6 +40,22 @@ export default function PrimaryLetters() {
         setLoading(false);
       });
   }, []);
+
+  // Pre-warm TTS audio for ALL letters on mount so the first tap on any
+  // letter / chant / example word plays instantly. Runs in the background;
+  // re-uses the CDN cache + localStorage so it's free on repeat visits.
+  useEffect(() => {
+    if (!letters.length) return;
+    const phrases: string[] = [];
+    for (const l of letters) {
+      phrases.push(l.letter_upper);
+      if (l.chant_en) phrases.push(l.chant_en);
+      for (const w of l.example_words || []) {
+        if (w?.word) phrases.push(w.word);
+      }
+    }
+    prefetchTTSBatch(phrases);
+  }, [letters]);
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-4 py-6 md:px-6 md:py-10">

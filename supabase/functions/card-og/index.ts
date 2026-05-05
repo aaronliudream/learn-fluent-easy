@@ -19,7 +19,9 @@ Deno.serve(async (req) => {
   const parts = url.pathname.split("/").filter(Boolean);
   const slug = url.searchParams.get("slug") || parts[parts.length - 1];
   const ua = req.headers.get("user-agent") || "";
-  const target = `${SITE}/q/${slug}`;
+  const ref = url.searchParams.get("ref");
+  const refQuery = ref ? `?ref=${encodeURIComponent(ref)}` : "";
+  const target = `${SITE}/q/${slug}${refQuery}`;
 
   if (!slug || slug === "card-og") {
     return new Response("Missing slug", { status: 400 });

@@ -455,18 +455,20 @@ function IeltsSpeakingSessionContent() {
                 ? "bg-gradient-to-br from-rose-500 to-rose-600"
                 : "bg-muted-foreground/30"
             }`}>
-              {connecting ? <Loader2 className="size-14 animate-spin" /> : <Mic className="size-14" />}
+              {connecting || processingTurn ? <Loader2 className="size-14 animate-spin" /> : <Mic className="size-14" />}
             </div>
           </div>
           <div className="text-center">
             <div className="text-base font-bold">
               {connecting && "正在接通考官…"}
               {!connecting && isExaminerSpeaking && "🔊 考官正在说话…"}
-              {!connecting && isYourTurn && "🎤 请回答（直接开口说英语）"}
+              {!connecting && recording && "🎙️ 正在录音，说完后松开"}
+              {!connecting && processingTurn && "正在识别并生成考官回复…"}
+              {!connecting && isYourTurn && !recording && "🎤 按住下方按钮回答"}
               {!connecting && !isConnected && (errorMsg ? "连接失败" : "等待接通…")}
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              真人双工语音 · 你可以随时打断考官 · 全程英语
+              OpenAI 转写 + OpenAI TTS · 全程英语 · 结束后自动评分
             </div>
           </div>
         </div>
@@ -500,15 +502,30 @@ function IeltsSpeakingSessionContent() {
       )}
 
       {/* Hang up + grade */}
-      <div className="flex justify-center pb-[calc(env(safe-area-inset-bottom,0px)+1rem)]">
+      <div className="flex flex-col items-center gap-3 pb-[calc(env(safe-area-inset-bottom,0px)+1rem)]">
         {isConnected || connecting ? (
-          <button
-            onClick={hangUp}
-            disabled={!isConnected && !connecting}
-            className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-rose-600 disabled:opacity-40"
-          >
-            <PhoneOff className="size-5" /> 挂断结束 · 自动评分
-          </button>
+          <>
+            {isConnected && (
+              <button
+                onMouseDown={startRecording}
+                onMouseUp={stopRecording}
+                onMouseLeave={recording ? stopRecording : undefined}
+                onTouchStart={(e) => { e.preventDefault(); startRecording(); }}
+                onTouchEnd={(e) => { e.preventDefault(); stopRecording(); }}
+                disabled={!isYourTurn && !recording}
+                className={`inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-bold shadow-lg transition disabled:opacity-40 ${recording ? "bg-rose-500 text-white" : "bg-primary text-primary-foreground hover:bg-primary/90"}`}
+              >
+                <Mic className="size-5" /> {recording ? "松开发送回答" : "按住回答"}
+              </button>
+            )}
+            <button
+              onClick={hangUp}
+              disabled={!isConnected && !connecting}
+              className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-rose-600 disabled:opacity-40"
+            >
+              <PhoneOff className="size-5" /> 挂断结束 · 自动评分
+            </button>
+          </>
         ) : (
           <button
             onClick={startCall}

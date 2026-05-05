@@ -106,7 +106,7 @@ EXAMINER BEHAVIOUR
 
 export default function IeltsSpeakingSession() {
   return (
-    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc">
+    <ConversationProvider>
       <IeltsSpeakingSessionContent />
     </ConversationProvider>
   );
@@ -150,10 +150,12 @@ function IeltsSpeakingSessionContent() {
   const conversation = useConversation({
     onConnect: () => {
       startedAtRef.current = Date.now();
+      setConnecting(false);
       setErrorMsg(null);
       toast.success("已接通考官 🎙️");
     },
     onDisconnect: () => {
+      setConnecting(false);
       // Auto-grade if we have a real conversation
       const msgs = transcriptRef.current;
       if (msgs.length >= 2 && session && id) {
@@ -163,6 +165,7 @@ function IeltsSpeakingSessionContent() {
     },
     onError: (err: any) => {
       console.error("EL error", err);
+      setConnecting(false);
       setErrorMsg(typeof err === "string" ? err : (err?.message || "语音连接出错"));
     },
     onMessage: (msg: any) => {
@@ -213,7 +216,8 @@ function IeltsSpeakingSessionContent() {
     }
     try {
       // Public agent — connect directly with agentId (no server token needed)
-      await conversation.startSession({
+      conversation.startSession({
+        agentId: ELEVENLABS_AGENT_ID,
         connectionType: "webrtc",
         overrides: {
           agent: {
@@ -226,19 +230,12 @@ function IeltsSpeakingSessionContent() {
     } catch (e: any) {
       console.error(e);
       setErrorMsg(e?.message || "无法启动语音对话");
-    } finally {
       setConnecting(false);
     }
   }, [session, conversation, cueCard]);
 
-  // Auto-start when session loaded and not already connected/graded
-  const autoStartedRef = useRef(false);
-  useEffect(() => {
-    if (!session || autoStartedRef.current) return;
-    if (session.status === "graded") return;
-    autoStartedRef.current = true;
-    startCall();
-  }, [session, startCall]);
+  // Do not auto-start here: iOS/mobile browsers require microphone access to be
+  // requested directly from a user tap on this page.
 
   // ---- Elapsed timer ----
   useEffect(() => {

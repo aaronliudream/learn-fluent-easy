@@ -71,6 +71,7 @@ export default function PrimaryGrade() {
       {/* Lessons list */}
       {!loading && lessons.length > 0 && (
         <section className="mb-6">
+          <ModuleStageTests segment="primary" grade={g} module="vocab" />
           <div className="mb-2 flex items-center gap-2 text-sm font-extrabold">
             <Sparkles className="size-4 text-amber-500" /> 本年级课程
           </div>

@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { StripeEmbeddedCheckout } from "@/components/StripeEmbeddedCheckout";
 import { PaymentTestModeBanner } from "@/components/PaymentTestModeBanner";
-import wechatQr from "@/assets/wechat-pay-qr.png";
 
 const PLANS = [
   {
@@ -155,20 +154,6 @@ export default function Pricing() {
         ))}
       </section>
       )}
-
-      <section className="mx-auto mt-10 max-w-md rounded-3xl border-2 border-emerald-500/40 bg-emerald-50 p-6 text-center dark:bg-emerald-950/30">
-        <h2 className="mb-1 text-lg font-extrabold text-emerald-700 dark:text-emerald-300">
-          🇨🇳 国内用户：微信支付
-        </h2>
-        <p className="mb-4 text-xs text-muted-foreground">
-          扫码付款后，请截图发给客服开通 Pro（月付 ¥39 / 年付 ¥299）
-        </p>
-        <img
-          src={wechatQr}
-          alt="微信支付收款码"
-          className="mx-auto w-64 rounded-2xl shadow-md"
-        />
-      </section>
 
       <p className="mx-auto mt-8 max-w-md text-center text-xs text-muted-foreground">
         支付通道：信用卡 / Apple Pay · 7 天无理由退款。

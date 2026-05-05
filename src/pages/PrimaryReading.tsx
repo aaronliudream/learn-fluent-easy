@@ -3,6 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, BookOpen, Clock, Sparkles, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import ModuleStageTests from "@/components/ModuleStageTests";
 
 type Article = {
   id: string;
@@ -58,6 +59,11 @@ export default function PrimaryReading() {
         <p className="mt-1 text-xs text-muted-foreground">
           5 步通关：热身 · 听读 · 跟读 · 思考 · 宝藏关
         </p>
+      </div>
+
+      <ModuleStageTests segment="primary" grade={g} module="reading" />
+
+      <div>
       </div>
 
       {loading ? (

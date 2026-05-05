@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useConversation } from "@elevenlabs/react";
+import { ConversationProvider, useConversation } from "@elevenlabs/react";
 import { Phone, PhoneOff, Loader2, Mic } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 type Msg = { role: "user" | "assistant"; content: string; part: 1 | 2 | 3 };
+
+const ELEVENLABS_AGENT_ID = "agent_2801kqvhz6m2ehasqcjadep8zm25";
 
 interface Props {
   open: boolean;
@@ -16,6 +18,21 @@ interface Props {
 }
 
 export function IeltsVoiceCall({ open, onClose, targetBand, currentPart, onTranscriptUpdate, initialTranscript }: Props) {
+  return (
+    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc">
+      <IeltsVoiceCallContent
+        open={open}
+        onClose={onClose}
+        targetBand={targetBand}
+        currentPart={currentPart}
+        onTranscriptUpdate={onTranscriptUpdate}
+        initialTranscript={initialTranscript}
+      />
+    </ConversationProvider>
+  );
+}
+
+function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTranscriptUpdate, initialTranscript }: Props) {
   const [connecting, setConnecting] = useState(false);
   const transcriptRef = useRef<Msg[]>(initialTranscript);
   const partRef = useRef<1 | 2 | 3>(currentPart);
@@ -51,7 +68,6 @@ export function IeltsVoiceCall({ open, onClose, targetBand, currentPart, onTrans
       await navigator.mediaDevices.getUserMedia({ audio: true });
       // Public agent — connect directly with agentId, no server token needed
       await conversation.startSession({
-        agentId: "agent_2801kqvhz6m2ehasqcjadep8zm25",
         connectionType: "webrtc",
         overrides: {
           agent: {

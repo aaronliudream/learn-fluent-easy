@@ -130,6 +130,12 @@ const FloatingPetGate = () => {
   return <FloatingPet />;
 };
 
+const FeedbackWidgetGate = () => {
+  const { pathname } = useLocation();
+  if (pathname.startsWith("/ielts-speaking/session") || pathname.startsWith("/talk")) return null;
+  return <FeedbackWidget />;
+};
+
 // Branded skeleton shown while a lazy route chunk is loading
 const RouteFallback = () => (
   <div className="min-h-[50vh] flex items-center justify-center">

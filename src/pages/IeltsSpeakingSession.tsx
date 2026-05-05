@@ -106,7 +106,7 @@ EXAMINER BEHAVIOUR
 
 export default function IeltsSpeakingSession() {
   return (
-    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc">
+    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc" useWakeLock={false}>
       <IeltsSpeakingSessionContent />
     </ConversationProvider>
   );
@@ -216,7 +216,7 @@ function IeltsSpeakingSessionContent() {
         setConnecting(false);
         setErrorMsg("语音连接超时。请确认麦克风权限已允许，并点击重试接通。");
       }, 25_000);
-      conversation.startSession();
+      conversation.startSession({ useWakeLock: false });
     } catch (e: any) {
       console.error(e);
       setErrorMsg(e?.message || "无法启动语音对话");

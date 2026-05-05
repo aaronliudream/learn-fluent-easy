@@ -1,6 +1,7 @@
 // Public edge function: returns HTML with proper OG tags for crawlers (WeChat, Twitter, Facebook),
 // and redirects real users to the SPA route /q/:slug.
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
+import { pickI18n } from "../_shared/card-i18n.ts";
 
 const SITE = "https://bigmoonenglish.com";
 
@@ -36,16 +37,21 @@ Deno.serve(async (req) => {
 
   const { data: card } = await supabase
     .from("knowledge_cards")
-    .select("question, short_answer, explanation, tags")
+    .select("question, short_answer, explanation, tags, language")
     .eq("slug", slug)
     .eq("status", "published")
     .maybeSingle();
 
-  const title = card ? `${card.question} — Big Moon English` : "Big Moon English 知识卡片";
-  const desc = card ? (card.short_answer || card.explanation || "").slice(0, 150) : "AI 生成英语知识卡片，5 分钟搞懂一个考点。";
-  const image = `${SITE}/og-cover.jpg`;
+  const t = pickI18n(card?.language);
+  const title = card ? `${card.question}${t.titleSuffix}` : t.fallbackTitle;
+  const desc = card ? (card.short_answer || card.explanation || "").slice(0, 150) : t.fallbackDesc;
+  const projectRef = Deno.env.get("SUPABASE_URL")!.match(/https:\/\/([^.]+)/)![1];
+  const image = card
+    ? `https://${projectRef}.supabase.co/functions/v1/card-og-image/${slug}`
+    : `${SITE}/og-cover.jpg`;
+  const isRtl = ["ar", "he", "fa"].includes(t.htmlLang);
 
-  const html = `<!doctype html><html lang="zh-CN"><head>
+  const html = `<!doctype html><html lang="${t.htmlLang}"${isRtl ? ' dir="rtl"' : ""}><head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>${escapeHtml(title)}</title>
@@ -56,6 +62,9 @@ Deno.serve(async (req) => {
 <meta property="og:description" content="${escapeHtml(desc)}"/>
 <meta property="og:url" content="${target}"/>
 <meta property="og:image" content="${image}"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="${t.locale}"/>
 <meta property="og:site_name" content="Big Moon English"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="${escapeHtml(title)}"/>
@@ -65,7 +74,7 @@ Deno.serve(async (req) => {
 </head><body>
 <h1>${escapeHtml(card?.question || "Knowledge Card")}</h1>
 <p>${escapeHtml(desc)}</p>
-<p><a href="${target}">打开卡片</a></p>
+<p><a href="${target}">${escapeHtml(t.scanCta)} →</a></p>
 </body></html>`;
 
   return new Response(html, {

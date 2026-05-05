@@ -4,6 +4,7 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 import { Resvg, initWasm } from "https://esm.sh/@resvg/resvg-wasm@2.6.2";
 import QRCode from "https://esm.sh/qrcode@1.5.3";
+import { pickI18n, type CardI18n } from "../_shared/card-i18n.ts";
 
 let wasmReady: Promise<void> | null = null;
 function ensureWasm() {
@@ -56,7 +57,7 @@ async function buildQrSvg(text: string, size: number): Promise<string> {
   return inner;
 }
 
-async function buildSvg(slug: string, question: string, answer: string) {
+async function buildSvg(slug: string, question: string, answer: string, t: CardI18n) {
   // Left text column ~720px wide, right reserved ~360px for QR.
   // Question 52px, ~13 CJK chars per line; answer 28px, ~22 CJK chars.
   const qLines = wrap(question, 13, 4);
@@ -89,7 +90,7 @@ async function buildSvg(slug: string, question: string, answer: string) {
   <circle cx="990" cy="105" r="62" fill="#1B2440"/>
 
   <text x="80" y="120" font-family="'Noto Serif SC','Songti SC',serif" font-weight="700" font-size="34" fill="#F5C66B">Big Moon English</text>
-  <text x="80" y="160" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" fill="#A9B1C9" letter-spacing="2">KNOWLEDGE CARD · 知识卡片</text>
+  <text x="80" y="160" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" fill="#A9B1C9" letter-spacing="2">${escapeXml(t.label)}</text>
 
   ${qLines
     .map(
@@ -110,10 +111,10 @@ async function buildSvg(slug: string, question: string, answer: string) {
     <rect width="${qrSize + 32}" height="${qrSize + 32}" rx="14" fill="#FFFFFF"/>
   </g>
   <g transform="translate(${qrX}, ${qrY})">${qrInner}</g>
-  <text x="${qrX + qrSize / 2}" y="${qrY + qrSize + 38}" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" fill="#A9B1C9">扫码做这道题</text>
+  <text x="${qrX + qrSize / 2}" y="${qrY + qrSize + 38}" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" fill="#A9B1C9">${escapeXml(t.scanCta)}</text>
 
   <line x1="80" y1="540" x2="1120" y2="540" stroke="#3A4366" stroke-width="1"/>
-  <text x="80" y="585" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" fill="#A9B1C9">答对解锁全部解析 · 5 分钟搞懂一个考点</text>
+  <text x="80" y="585" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" fill="#A9B1C9">${escapeXml(t.cta)}</text>
   <text x="1120" y="585" text-anchor="end" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" fill="#F5C66B">bigmoonenglish.com</text>
 </svg>`;
 }
@@ -139,7 +140,7 @@ Deno.serve(async (req) => {
   // Fetch card
   const { data: card } = await supabase
     .from("knowledge_cards")
-    .select("question, short_answer")
+    .select("question, short_answer, language")
     .eq("slug", slug)
     .eq("status", "published")
     .maybeSingle();
@@ -147,7 +148,8 @@ Deno.serve(async (req) => {
   if (!card) return new Response("Not found", { status: 404 });
 
   await ensureWasm();
-  const svg = await buildSvg(slug, card.question, card.short_answer || "");
+  const t = pickI18n(card.language);
+  const svg = await buildSvg(slug, card.question, card.short_answer || "", t);
   const png = new Resvg(svg, { fitTo: { mode: "width", value: 1200 } }).render().asPng();
 
   const { error: upErr } = await supabase.storage

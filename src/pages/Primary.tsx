@@ -80,8 +80,8 @@ export default function Primary() {
       {/* Streak / 打卡 — 留存核心 */}
       {uid && <StreakBanner userId={uid} />}
 
-      {/* Spark pet bar */}
-      <div className="mb-5 rounded-3xl bg-gradient-to-br from-amber-200 via-rose-200 to-violet-200 p-4 shadow-tile">
+      {/* Spark pet bar — clickable to pet detail */}
+      <Link to="/pets" className="mb-5 block rounded-3xl bg-gradient-to-br from-amber-200 via-rose-200 to-violet-200 p-4 shadow-tile transition hover:-translate-y-0.5">
         <div className="flex items-center gap-3">
           <div className="grid size-14 place-items-center rounded-full bg-white/70 text-3xl">🐶</div>
           <div className="flex-1 min-w-0">
@@ -96,11 +96,11 @@ export default function Primary() {
               <div className="h-full bg-gradient-to-r from-amber-400 to-pink-400" style={{ width: `${Math.min(100, (pet?.xp ?? 0) % 100)}%` }} />
             </div>
             <div className="mt-1 text-[11px] text-amber-900/80">
-              亲密度 {pet?.bond ?? 0}/100 · 完成今日训练 +5 ⭐
+              亲密度 {pet?.bond ?? 0}/100 · 点击查看 Spark 成长 →
             </div>
           </div>
         </div>
-      </div>
+      </Link>
 
       <div className="mb-3">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">小学英语 · PRIMARY</div>

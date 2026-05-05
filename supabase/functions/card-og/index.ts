@@ -27,10 +27,12 @@ Deno.serve(async (req) => {
     return new Response("Missing slug", { status: 400 });
   }
 
-  // Real users: redirect to SPA
-  if (!isCrawler(ua)) {
-    return Response.redirect(target, 302);
-  }
+  // IMPORTANT: do NOT 302 redirect real users here.
+  // WeChat treats "URL → 302 → another URL" as a high-risk redirect page
+  // and will refuse to render share previews / block sharing entirely.
+  // Instead, always return a stable 200 HTML with full OG tags.
+  // Real users get a silent JS redirect (after OG is parsed by crawlers).
+  const _ = isCrawler(ua); // kept for potential future analytics; do not branch on it
 
   const supabase = createClient(
     Deno.env.get("SUPABASE_URL")!,
@@ -72,11 +74,22 @@ Deno.serve(async (req) => {
 <meta name="twitter:title" content="${escapeHtml(title)}"/>
 <meta name="twitter:description" content="${escapeHtml(desc)}"/>
 <meta name="twitter:image" content="${image}"/>
-<meta http-equiv="refresh" content="0;url=${target}"/>
 </head><body>
 <h1>${escapeHtml(card?.question || "Knowledge Card")}</h1>
 <p>${escapeHtml(desc)}</p>
 <p><a href="${target}">${escapeHtml(t.scanCta)} →</a></p>
+<script>
+  // Silent client-side redirect for real users only.
+  // Crawlers (WeChat / Twitter / Facebook / etc.) don't execute JS,
+  // so they see the stable OG HTML above without any redirect.
+  (function () {
+    var ua = navigator.userAgent || "";
+    var isBot = /MicroMessenger|QQ\/|Weibo|facebookexternalhit|Facebot|Twitterbot|LinkedInBot|Slackbot|TelegramBot|WhatsApp|Discordbot|Googlebot|bingbot|Baiduspider|YisouSpider|Bytespider|Sogou|360Spider|Embedly|Pinterest|redditbot/i.test(ua);
+    if (isBot) return;
+    // Use replace so back button doesn't return to this shim page.
+    window.location.replace(${JSON.stringify(target)});
+  })();
+</script>
 </body></html>`;
 
   return new Response(html, {

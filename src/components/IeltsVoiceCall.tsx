@@ -19,7 +19,7 @@ interface Props {
 
 export function IeltsVoiceCall({ open, onClose, targetBand, currentPart, onTranscriptUpdate, initialTranscript }: Props) {
   return (
-    <ConversationProvider>
+    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc">
       <IeltsVoiceCallContent
         open={open}
         onClose={onClose}
@@ -66,10 +66,7 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
     setConnecting(true);
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
-      // Public agent — connect directly with agentId, no server token needed
       conversation.startSession({
-        agentId: ELEVENLABS_AGENT_ID,
-        connectionType: "webrtc",
         overrides: {
           agent: {
             firstMessage:

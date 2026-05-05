@@ -31,7 +31,11 @@ Deno.serve(async (req) => {
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY not configured");
 
-    const sys = `You are an English teacher. Given a learner's question, return a structured "knowledge card" using the provided tool. Be concise, friendly, accurate. Examples must be natural English. Quiz must have exactly 3 multiple-choice questions, each with 4 options and the correct index. Tags: 1-4 short lowercase tags (grammar, vocab, pronunciation, idiom, etc.). Respond in ${language === "zh" ? "Chinese for explanations but keep English examples" : "English"}.`;
+    const sys = `You are an English teacher. Given a learner's question, return a structured "knowledge card" using the provided tool. Be concise, friendly, accurate. Examples must be natural English.
+
+Quiz: produce EXACTLY 1 multiple-choice question that directly tests the SAME knowledge point as the learner's original question (same grammar rule, same vocabulary, same pronunciation pattern, etc.). It must NOT drift to a related-but-different topic. 4 options, one correct, plus a one-sentence "explain". The question should feel like a natural variation of what the learner just asked, not a generic review item.
+
+Tags: 1-4 short lowercase tags (grammar, vocab, pronunciation, idiom, etc.). Respond in ${language === "zh" ? "Chinese for explanations but keep English examples" : "English"}.`;
 
     const tool = {
       type: "function",
@@ -47,8 +51,8 @@ Deno.serve(async (req) => {
             common_mistakes: { type: "array", items: { type: "string" }, minItems: 0, maxItems: 4 },
             quiz: {
               type: "array",
-              minItems: 3,
-              maxItems: 3,
+              minItems: 1,
+              maxItems: 1,
               items: {
                 type: "object",
                 properties: {

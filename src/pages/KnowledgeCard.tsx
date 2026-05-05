@@ -27,7 +27,7 @@ type CardData = {
 export default function KnowledgeCard() {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const [card, setCard] = useState<Card | null>(null);
+  const [card, setCard] = useState<CardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [authed, setAuthed] = useState(false);
   const [liked, setLiked] = useState(false);

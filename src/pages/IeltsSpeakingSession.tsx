@@ -108,6 +108,7 @@ export default function IeltsSpeakingSession() {
           part,
           targetBand: s.target_band,
           topicCategory: s.topic_category,
+          mode: s.mode,
         }),
       });
       if (!resp.ok || !resp.body) {

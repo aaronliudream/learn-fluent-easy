@@ -367,6 +367,22 @@ export default function KnowledgeCard() {
             {coinsEarned > 0 && `💰 已获 ${coinsEarned} 金币`}
           </span>
         </p>
+        {/* Difficulty preview — reduces drop-off by setting expectations */}
+        {(() => {
+          const easy = card.quiz.filter((q) => (q.difficulty ?? 0) <= 3).length;
+          const hard = card.quiz.filter((q) => (q.difficulty ?? 0) >= 8).length;
+          if (card.quiz.length === 0) return null;
+          return (
+            <div className="mb-3 px-3 py-2 rounded-md bg-muted/40 border border-border text-xs text-muted-foreground flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span>📊 共 {card.quiz.length} 题</span>
+              {easy > 0 && <span>· {easy} 道简单</span>}
+              {hard > 0 && <span>· {hard} 道挑战</span>}
+              {cardStats && cardStats.attempts >= 3 && (
+                <span>· 已有 {cardStats.attempts} 人挑战，平均正确率 <strong className="text-foreground">{cardStats.avgPct}%</strong></span>
+              )}
+            </div>
+          );
+        })()}
         <div className="space-y-3">
             {visibleQuiz.map((q, i) => (
               <Card key={i} className="p-4">

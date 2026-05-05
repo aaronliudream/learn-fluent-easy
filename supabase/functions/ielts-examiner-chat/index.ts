@@ -8,7 +8,26 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-function buildSystem(part: number, targetBand: number, topicCategory: string | null) {
+type BankItem = { part: number; title: string; questions?: string[]; cue_card?: any };
+
+function formatBank(part: number, items: BankItem[]) {
+  if (!items?.length) return "";
+  if (part === 2) {
+    const c = items[0]?.cue_card;
+    if (!c) return "";
+    return `# Real exam cue card to use VERBATIM (do not invent your own)
+Topic title: ${items[0].title}
+Prompt: ${c.prompt}
+You should say:
+${(c.points || []).map((p: string) => `- ${p}`).join("\n")}
+And explain ${c.explain?.replace(/^and explain /i, "") || ""}`;
+  }
+  const lines = items.flatMap((it) => (it.questions || []).map((q) => `- ${q}`));
+  return `# Real exam questions to draw from (use these, do not invent)
+${lines.join("\n")}`;
+}
+
+function buildSystem(part: number, targetBand: number, topicCategory: string | null, bankBlock: string) {
   return `You are a certified IELTS Speaking examiner conducting a real mock test. You sound like a professional, neutral British examiner — warm but never gushing.
 
 # CRITICAL behaviour rules
@@ -23,6 +42,8 @@ function buildSystem(part: number, targetBand: number, topicCategory: string | n
 # Current part: Part ${part}
 Target band: ${targetBand}
 ${topicCategory ? `Topic theme: ${topicCategory}` : ""}
+
+${bankBlock}
 
 ${part === 1 ? `# Part 1 instructions
 - Ask 4 short personal questions (hometown, work/study, hobbies, daily routine).
@@ -59,13 +80,40 @@ Deno.serve(async (req) => {
     const apiKey = Deno.env.get("LOVABLE_API_KEY");
     if (!apiKey) throw new Error("LOVABLE_API_KEY not configured");
 
+    // Pull a few real questions from the topic bank (service role bypasses RLS)
+    let bankBlock = "";
+    try {
+      const url = Deno.env.get("SUPABASE_URL");
+      const srv = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+      if (url && srv) {
+        const q = new URL(`${url}/rest/v1/ielts_topics`);
+        q.searchParams.set("select", "part,title,questions,cue_card");
+        q.searchParams.set("part", `eq.${part}`);
+        q.searchParams.set("is_active", "eq.true");
+        if (topicCategory) q.searchParams.set("category", `eq.${topicCategory}`);
+        q.searchParams.set("limit", part === 2 ? "5" : "3");
+        const r = await fetch(q.toString(), {
+          headers: { apikey: srv, Authorization: `Bearer ${srv}` },
+        });
+        if (r.ok) {
+          const items = (await r.json()) as BankItem[];
+          if (items.length) {
+            const pick = part === 2 ? [items[Math.floor(Math.random() * items.length)]] : items;
+            bankBlock = formatBank(part, pick);
+          }
+        }
+      }
+    } catch (e) {
+      console.warn("bank fetch failed", e);
+    }
+
     const resp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
         model: "google/gemini-3-flash-preview",
         messages: [
-          { role: "system", content: buildSystem(part, targetBand, topicCategory) },
+          { role: "system", content: buildSystem(part, targetBand, topicCategory, bankBlock) },
           ...messages,
         ],
         stream: true,

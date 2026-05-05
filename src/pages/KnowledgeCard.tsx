@@ -94,11 +94,10 @@ export default function KnowledgeCard() {
   }
 
   async function share() {
-    // Direct edge-function URL — crawlers (WeChat, Twitter, Facebook, LinkedIn, etc.)
-    // get full OG-HTML with og:image / og:title / og:description, real users get
-    // an HTML page that immediately redirects to the SPA at /q/<slug>.
-    const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
-    const url = `https://${projectId}.supabase.co/functions/v1/card-og/${slug}`;
+    // Short site URL — keeps QR codes scannable and looks clean when shared.
+    // Crawlers that need OG metadata can hit the edge function directly via
+    // the <link rel="alternate"> / og:url tags rendered server-side.
+    const url = `https://bigmoonenglish.com/q/${slug}`;
     try {
       if (navigator.share) await navigator.share({ title: card?.question, url });
       else { await navigator.clipboard.writeText(url); toast.success("链接已复制"); }

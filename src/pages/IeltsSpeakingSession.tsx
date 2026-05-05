@@ -32,6 +32,12 @@ type Feedback = {
   summary_zh: string;
 };
 
+type FastBands = {
+  overall_band: number;
+  scores: Record<string, { band: number; comment: string }>;
+  summary_zh: string;
+};
+
 const DIMENSION_LABEL: Record<string, string> = {
   fluency_coherence: "流利度与连贯性",
   lexical_resource: "词汇丰富度",
@@ -135,6 +141,7 @@ function IeltsSpeakingSessionContent() {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [currentPart, setCurrentPart] = useState<1 | 2 | 3>(1);
   const [grading, setGrading] = useState(false);
+  const [fastBands, setFastBands] = useState<FastBands | null>(null);
   const [connecting, setConnecting] = useState(false);
   const [voiceConnected, setVoiceConnected] = useState(false);
   const [recording, setRecording] = useState(false);
@@ -306,11 +313,24 @@ function IeltsSpeakingSessionContent() {
   const grade = useCallback(async (transcript: Msg[]) => {
     if (!session || !id) return;
     setGrading(true);
+    setFastBands(null);
+    const transcriptPayload = transcript.map((m) => ({ role: m.role, text: m.content, part: m.part }));
+
+    // Fire fast (Flash) bands + full (Pro) analysis in parallel.
+    // Bands typically resolve in ~3-5s and unblocks the UI immediately;
+    // the full report streams in afterwards (~15-25s).
+    const fastPromise = supabase.functions.invoke("grade-ielts-bands", {
+      body: { transcript: transcriptPayload, targetBand: session.target_band },
+    }).then(({ data, error }) => {
+      if (error || data?.error) return;
+      if (data?.bands) setFastBands(data.bands as FastBands);
+    }).catch((e) => console.warn("fast bands failed", e));
+
     try {
       const { data, error } = await supabase.functions.invoke("grade-ielts-speaking", {
         body: {
           sessionId: id,
-          transcript: transcript.map((m) => ({ role: m.role, text: m.content, part: m.part })),
+          transcript: transcriptPayload,
           targetBand: session.target_band,
           mode: session.mode,
         },
@@ -325,6 +345,7 @@ function IeltsSpeakingSessionContent() {
       toast.error("评分失败：" + (e?.message || "未知错误，请稍后在历史里重试"));
       setErrorMsg("评分失败：" + (e?.message || "请稍后再试"));
     } finally {
+      await fastPromise;
       setGrading(false);
     }
   }, [session, id]);
@@ -471,18 +492,7 @@ function IeltsSpeakingSessionContent() {
   }
 
   if (grading) {
-    return (
-      <main className="grid min-h-screen place-items-center px-6 text-center">
-        <div className="flex flex-col items-center gap-4">
-          <div className="relative grid size-32 place-items-center">
-            <div className="absolute inset-0 animate-ping rounded-full bg-primary/30" />
-            <Trophy className="relative size-16 text-primary" />
-          </div>
-          <div className="text-xl font-bold">考官正在评分…</div>
-          <div className="text-sm text-muted-foreground">分析你的流利度、词汇、语法、发音 — 通常需要 15-30 秒</div>
-        </div>
-      </main>
-    );
+    return <GradingProgressView fastBands={fastBands} targetBand={session.target_band} />;
   }
 
   const isConnected = voiceConnected;
@@ -623,6 +633,79 @@ function IeltsSpeakingSessionContent() {
 }
 
 // ==================== FEEDBACK VIEW ====================
+
+function GradingProgressView({ fastBands, targetBand }: { fastBands: FastBands | null; targetBand: number }) {
+  const scoresEntries = fastBands?.scores ? Object.entries(fastBands.scores) : [];
+  return (
+    <main className="mx-auto min-h-screen max-w-3xl px-5 py-8 md:px-8 md:py-12">
+      <PageHeader title="雅思口语评分报告" subtitle={fastBands?.summary_zh || "考官正在分析你的回答…"} back="/ielts-speaking" />
+
+      {/* Overall band: real or skeleton */}
+      <section className="mb-5 rounded-3xl border-2 border-amber-400 bg-gradient-to-br from-amber-50 to-amber-100/50 p-6 text-center shadow-card dark:from-amber-950/30 dark:to-amber-900/10">
+        <div className="mb-1 text-xs font-bold uppercase tracking-wider text-amber-800 dark:text-amber-300">Overall Band Score</div>
+        {fastBands ? (
+          <>
+            <div className="text-6xl font-black text-amber-600 dark:text-amber-400">{fastBands.overall_band.toFixed(1)}</div>
+            <div className="mt-1 text-xs text-muted-foreground">
+              目标 Band {targetBand.toFixed(1)} · {fastBands.overall_band >= targetBand ? "✅ 已达标" : `差 ${(targetBand - fastBands.overall_band).toFixed(1)} 分`}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="mx-auto h-16 w-24 animate-pulse rounded-2xl bg-amber-200/60 dark:bg-amber-700/30" />
+            <div className="mt-2 text-xs text-muted-foreground">⚡ 快速分数 3-5 秒到达…</div>
+          </>
+        )}
+      </section>
+
+      {/* 4-dimension bands: real or skeleton */}
+      <section className="mb-5 grid grid-cols-2 gap-3">
+        {(scoresEntries.length > 0 ? scoresEntries : [["fluency_coherence", null], ["lexical_resource", null], ["grammar", null], ["pronunciation", null]] as const).map(([key, raw]) => {
+          const s = (raw || {}) as { band?: number; comment?: string } | null;
+          const has = !!raw;
+          const bandText = has && typeof s?.band === "number" && s.band > 0 ? s.band.toFixed(1) : has ? "N/A" : null;
+          return (
+            <div key={key} className="rounded-2xl border border-border bg-card p-4 shadow-card">
+              <div className="text-xs font-semibold text-muted-foreground">{DIMENSION_LABEL[key] || key}</div>
+              {bandText !== null ? (
+                <>
+                  <div className="mt-1 text-2xl font-extrabold text-primary">{bandText}</div>
+                  {s?.comment && <div className="mt-1.5 text-xs leading-relaxed text-foreground/80">{s.comment}</div>}
+                </>
+              ) : (
+                <>
+                  <div className="mt-1 h-7 w-12 animate-pulse rounded bg-muted" />
+                  <div className="mt-2 h-3 w-full animate-pulse rounded bg-muted" />
+                </>
+              )}
+            </div>
+          );
+        })}
+      </section>
+
+      {/* Detailed analysis loading card */}
+      <section className="rounded-2xl border-2 border-dashed border-primary/40 bg-primary/5 p-5">
+        <div className="flex items-center gap-3">
+          <Loader2 className="size-5 shrink-0 animate-spin text-primary" />
+          <div>
+            <div className="text-sm font-bold text-primary">考官正在写详细批改…</div>
+            <div className="mt-0.5 text-xs text-muted-foreground">
+              {fastBands
+                ? "分数已出 ✓ — 正在逐句标错、给出 Band 7+ 升级版本，约 10-20 秒"
+                : "同时分析流利度、词汇、语法、发音 4 个维度"}
+            </div>
+          </div>
+        </div>
+        <div className="mt-4 space-y-2">
+          <div className="h-3 w-3/4 animate-pulse rounded bg-muted" />
+          <div className="h-3 w-5/6 animate-pulse rounded bg-muted" />
+          <div className="h-3 w-2/3 animate-pulse rounded bg-muted" />
+        </div>
+      </section>
+    </main>
+  );
+}
+
 function FeedbackView({ session, onRetry }: { session: SessionRow; onRetry: () => void }) {
   const fb = session.feedback!;
   const overallBand = typeof fb?.overall_band === "number" ? fb.overall_band : 0;

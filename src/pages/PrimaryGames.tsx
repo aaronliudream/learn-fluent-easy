@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 import { awardCoins } from "@/lib/coins";
+import { fireEmojiConfetti } from "@/lib/feedback";
 
 type Word = {
   id: string;
@@ -195,6 +196,12 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
   useEffect(() => {
     saveScore(gameType, grade, score, pct/100, durationMs);
     awardCoins(coinReward, `primary_${gameType}`).then(r => { if (r) setCoinResult(r); });
+    if (pct >= 70) {
+      fireEmojiConfetti({
+        vibrate: pct === 100,
+        count: pct === 100 ? 60 : 36,
+      });
+    }
   }, []);
   return (
     <div className="rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 p-8 text-center shadow-tile">

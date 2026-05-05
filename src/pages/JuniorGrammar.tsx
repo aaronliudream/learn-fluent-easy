@@ -3,6 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import ModuleStageTests from "@/components/ModuleStageTests";
 
 type Cat = { id: string; name_cn: string; emoji: string; sort_order: number };
 type Pt = { id: string; category_id: string; title: string; cefr: string; grade: number; summary: string };
@@ -34,6 +35,9 @@ export default function JuniorGrammar() {
         <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">中考语法专项</h1>
         <p className="mt-1 text-sm text-muted-foreground">按 CEFR 分级 · 每个考点配讲解 + 题库 · 答对喂宠物</p>
       </div>
+      {grade && (
+        <ModuleStageTests segment="junior" grade={Number(grade)} module="grammar" />
+      )}
       <div className="space-y-6">
         {cats.map(c => (
           <section key={c.id}>

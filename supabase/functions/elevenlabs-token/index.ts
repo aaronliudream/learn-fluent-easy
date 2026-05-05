@@ -21,7 +21,22 @@ serve(async (req) => {
     if (!resp.ok) {
       const t = await resp.text();
       console.error("eleven token err", resp.status, t);
-      return new Response(JSON.stringify({ error: t }), {
+      // Try to surface a friendlier message for the most common cause:
+      // the API key is missing the `convai_write` scope.
+      let friendly = t;
+      try {
+        const parsed = JSON.parse(t);
+        const detail = parsed?.detail;
+        const msg = typeof detail === "string" ? detail : detail?.message;
+        const status = detail?.status;
+        if (status === "missing_permissions" || /convai_write/i.test(t)) {
+          friendly =
+            "ElevenLabs API Key 缺少 convai_write 权限。请在 ElevenLabs 控制台重新生成一个勾选了 Conversational AI 写权限的 Key，然后更新 ELEVENLABS_API_KEY。";
+        } else if (msg) {
+          friendly = msg;
+        }
+      } catch { /* keep raw text */ }
+      return new Response(JSON.stringify({ error: friendly, raw: t, status: resp.status }), {
         status: resp.status,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });

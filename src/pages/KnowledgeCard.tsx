@@ -576,9 +576,9 @@ export default function KnowledgeCard() {
       <Dialog open={qrOpen} onOpenChange={setQrOpen}>
         <DialogContent className="max-w-sm">
           <DialogHeader>
-            <DialogTitle className="text-center">扫码查看这张卡片</DialogTitle>
+            <DialogTitle className="text-center">扫码挑战 3 题</DialogTitle>
             <DialogDescription className="text-center">
-              用手机相机对准下方二维码即可打开
+              答对得金币 🎁 用手机相机对准二维码即可
             </DialogDescription>
           </DialogHeader>
           <div className="flex flex-col items-center gap-4">
@@ -591,6 +591,11 @@ export default function KnowledgeCard() {
                   style={{ imageRendering: "pixelated" }}
                 />
               </div>
+            )}
+            {myUserId && (
+              <p className="text-[11px] text-center text-primary font-medium">
+                💡 朋友扫码答完题，你也能得金币（每张卡每人 +2）
+              </p>
             )}
             <p className="text-xs text-muted-foreground break-all text-center px-2">
               {shareUrl}

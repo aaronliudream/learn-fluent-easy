@@ -359,6 +359,19 @@ const Slang = () => {
     }
   }, [mode, questions.length]);
 
+  // Pre-warm TTS for every phrase + example in the current quiz so when the
+  // user taps the speaker on any question, audio plays instantly with no
+  // network wait. Pure prefetch (no <audio> element), so it's silent.
+  useEffect(() => {
+    if (mode !== "quiz" || questions.length === 0) return;
+    const texts: string[] = [];
+    for (const q of questions) {
+      if (q.idiom?.phrase) texts.push(q.idiom.phrase);
+      if (q.idiom?.example) texts.push(q.idiom.example);
+    }
+    prefetchTTSBatch(texts);
+  }, [mode, questions]);
+
   const startQuiz = () => {
     const qs = buildQuiz();
     if (qs.length === 0) {

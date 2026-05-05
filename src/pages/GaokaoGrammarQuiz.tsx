@@ -9,6 +9,8 @@ import { awardCoins } from "@/lib/coins";
 import { recordGrammarAttempt, loadGrammarMastery, LEVEL_META, type GrammarMastery } from "@/lib/grammarFsrs";
 import { toast } from "sonner";
 import TutorChat from "@/components/tutor/TutorChat";
+import PaywallDialog from "@/components/PaywallDialog";
+import { consumeQuestionQuota } from "@/lib/quota";
 
 type Point = { id: string; title: string; slug: string };
 type Question = {
@@ -37,6 +39,7 @@ export default function GaokaoGrammarQuiz() {
   const [startTs, setStartTs] = useState<number>(Date.now());
   const [stats, setStats] = useState({ correct: 0, wrong: 0 });
   const [tutorOpen, setTutorOpen] = useState(false);
+  const [paywall, setPaywall] = useState<{ open: boolean; used: number; limit: number }>({ open: false, used: 5, limit: 5 });
 
   useEffect(() => {
     if (!slug) return;
@@ -124,6 +127,12 @@ export default function GaokaoGrammarQuiz() {
 
   const onPick = async (letter: string) => {
     if (picked) return;
+    // Daily quota gate (free 用户每天 5 题)
+    const quota = await consumeQuestionQuota();
+    if (!quota.allowed) {
+      setPaywall({ open: true, used: quota.used, limit: quota.limit });
+      return;
+    }
     setPicked(letter);
     const isCorrect = letter === q.correct_answer;
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), wrong: s.wrong + (isCorrect ? 0 : 1) }));
@@ -267,6 +276,14 @@ export default function GaokaoGrammarQuiz() {
           onClose={() => setTutorOpen(false)}
         />
       )}
+
+      <PaywallDialog
+        open={paywall.open}
+        onClose={() => setPaywall((p) => ({ ...p, open: false }))}
+        trigger="daily_quota_exhausted"
+        used={paywall.used}
+        limit={paywall.limit}
+      />
     </main>
   );
 }

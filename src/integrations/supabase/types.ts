@@ -619,6 +619,33 @@ export type Database = {
         }
         Relationships: []
       }
+      daily_question_usage: {
+        Row: {
+          created_at: string
+          id: string
+          questions_used: number
+          updated_at: string
+          usage_date: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          questions_used?: number
+          updated_at?: string
+          usage_date?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          questions_used?: number
+          updated_at?: string
+          usage_date?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       daily_slang: {
         Row: {
           created_at: string
@@ -5228,6 +5255,42 @@ export type Database = {
         }
         Relationships: []
       }
+      subscribers: {
+        Row: {
+          created_at: string
+          current_period_end: string | null
+          id: string
+          status: string
+          stripe_customer_id: string | null
+          stripe_subscription_id: string | null
+          tier: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          current_period_end?: string | null
+          id?: string
+          status?: string
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          tier?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          current_period_end?: string | null
+          id?: string
+          status?: string
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          tier?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string
@@ -6138,6 +6201,7 @@ export type Database = {
           reason: string
         }[]
       }
+      consume_question_quota: { Args: never; Returns: Json }
       contribute_community_goal: {
         Args: { _amount: number; _goal_code: string }
         Returns: {
@@ -6292,6 +6356,7 @@ export type Database = {
         }[]
       }
       get_parent_dashboard: { Args: { _days?: number }; Returns: Json }
+      get_quota_status: { Args: never; Returns: Json }
       get_reading_diagnostic_radar: {
         Args: never
         Returns: {
@@ -6378,6 +6443,7 @@ export type Database = {
           total_quiz_correct: number
         }[]
       }
+      get_user_tier: { Args: { _user_id: string }; Returns: string }
       get_vocab_mastery_overview: {
         Args: never
         Returns: {

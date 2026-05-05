@@ -53,6 +53,8 @@ export default function IeltsSpeaking() {
     if (!authed) return;
     supabase.from("ielts_sessions")
       .select("id, overall_band, mode, topic_category, completed_at, created_at")
+      .eq("status", "graded")
+      .not("overall_band", "is", null)
       .order("created_at", { ascending: false })
       .limit(5)
       .then(({ data }) => setRecent(data || []));

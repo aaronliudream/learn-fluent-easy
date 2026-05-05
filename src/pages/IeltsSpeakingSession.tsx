@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Mic, Send, Square, Loader2, ArrowLeft, AlertCircle, Trophy, RefreshCw, Sparkles, Volume2, VolumeX } from "lucide-react";
+import { Mic, Send, Square, Loader2, ArrowLeft, AlertCircle, Trophy, RefreshCw, Sparkles, Volume2, VolumeX, Phone } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { toast } from "sonner";
+import { IeltsVoiceCall } from "@/components/IeltsVoiceCall";
 type Msg = { role: "user" | "assistant"; content: string; part: 1 | 2 | 3 };
 type SessionRow = {
   id: string;
@@ -62,6 +63,7 @@ export default function IeltsSpeakingSession() {
   const [voiceOn, setVoiceOn] = useState(true);
   const voiceOnRef = useRef(true);
   const speakingRef = useRef(false);
+  const [callOpen, setCallOpen] = useState(false);
   useEffect(() => { voiceOnRef.current = voiceOn; }, [voiceOn]);
 
   const speak = useCallback((text: string) => {
@@ -328,6 +330,13 @@ export default function IeltsSpeakingSession() {
             {voiceOn ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
           </button>
           <button
+            onClick={() => setCallOpen(true)}
+            className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500 px-3 py-1.5 text-xs font-bold text-white shadow hover:bg-emerald-600"
+            title="开启真人语音对话（ElevenLabs）"
+          >
+            <Phone className="size-3.5" /> 真人语音
+          </button>
+          <button
             onClick={endNow}
             disabled={grading}
             className="rounded-full bg-rose-500 px-3 py-1.5 text-xs font-bold text-white hover:bg-rose-600 disabled:opacity-50"
@@ -422,6 +431,15 @@ export default function IeltsSpeakingSession() {
           <Send className="size-5" />
         </button>
       </div>
+
+      <IeltsVoiceCall
+        open={callOpen}
+        onClose={() => { setCallOpen(false); persist(messages, currentPart); }}
+        targetBand={session.target_band}
+        currentPart={currentPart}
+        initialTranscript={messages}
+        onTranscriptUpdate={(next) => setMessages(next)}
+      />
     </main>
   );
 }

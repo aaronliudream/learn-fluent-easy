@@ -51,7 +51,7 @@ async function buildQrSvg(text: string, size: number): Promise<string> {
     margin: 0,
     color: { dark: "#1B2440", light: "#FFFFFF" },
     width: size,
-    errorCorrectionLevel: "M",
+    errorCorrectionLevel: "H",
   });
   // Strip outer <svg ...>..</svg>, keep inner content.
   const inner = svgStr.replace(/^[\s\S]*?<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
@@ -71,9 +71,9 @@ async function buildSvg(slug: string, question: string, answer: string, t: CardI
   const qrSize = 200;
   const qrX = 1120 - qrSize;
   const qrY = 320;
-  // QR encodes the edge-function URL so crawlers (WeChat preview etc.) get full
-  // OG metadata; real users are 302-redirected to bigmoonenglish.com/q/<slug>.
-  const shareUrl = `${SUPABASE_URL}/functions/v1/card-og/${slug}`;
+  // QR encodes the short site URL so phone cameras can scan it reliably.
+  // (OG/social previews use the edge-function URL via the share link, not the QR.)
+  const shareUrl = `${SITE}/q/${slug}`;
   const qrInner = await buildQrSvg(shareUrl, qrSize);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
@@ -133,7 +133,7 @@ Deno.serve(async (req) => {
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
   );
 
-  const cachePath = `${slug}.png`;
+  const cachePath = `${slug}-v2.png`;
   const publicUrl = supabase.storage.from("card-og").getPublicUrl(cachePath).data.publicUrl;
 
   // If already cached, redirect.

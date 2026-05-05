@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Lock, Share2, Sparkles, Volume2, BookmarkPlus, Trophy } from "lucide-react";
+import { Heart, Lock, Share2, Sparkles, Volume2, BookmarkPlus, Trophy, Copy } from "lucide-react";
 import { toast } from "sonner";
 import { BrandLogo } from "@/components/brand/BrandLogo";
 import { speak } from "@/lib/speak";
@@ -181,11 +181,21 @@ export default function KnowledgeCard() {
     }
   }
 
+  const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+
   async function nativeShare() {
+    if (isWeChat) {
+      await copyLink();
+      toast.info("微信不允许网页按钮直接发到聊天，已复制链接，请粘贴到聊天窗口发送");
+      return;
+    }
+
     try {
-      if (navigator.share) await navigator.share({ title: card?.question, url: shareUrl });
+      if (navigator.share) await navigator.share({ title: card?.question, text: card?.short_answer, url: shareUrl });
       else await copyLink();
-    } catch {}
+    } catch {
+      await copyLink();
+    }
   }
 
   if (loading) return <main className="p-10 text-center text-muted-foreground">Loading…</main>;
@@ -588,7 +598,7 @@ export default function KnowledgeCard() {
           <DialogHeader>
             <DialogTitle className="text-center">扫码挑战 3 题</DialogTitle>
             <DialogDescription className="text-center">
-              答对得金币 🎁 用手机相机对准二维码即可
+              二维码用于扫码打开；要在微信聊天里显示标题/封面/描述，请发送下方链接
             </DialogDescription>
           </DialogHeader>
           <div className="flex flex-col items-center gap-4">
@@ -610,10 +620,17 @@ export default function KnowledgeCard() {
             <p className="text-xs text-muted-foreground break-all text-center px-2">
               {shareUrl}
             </p>
+            {isWeChat && (
+              <p className="text-xs text-center text-muted-foreground px-2">
+                微信内网页按钮不能直接发出消息：点“复制链接”后粘贴到聊天窗口，或用右上角菜单分享。
+              </p>
+            )}
             <div className="flex gap-2 w-full">
-              <Button onClick={copyLink} variant="outline" className="flex-1">复制链接</Button>
+              <Button onClick={copyLink} variant="outline" className="flex-1">
+                <Copy className="w-4 h-4 mr-2" />复制链接
+              </Button>
               <Button onClick={nativeShare} className="flex-1">
-                <Share2 className="w-4 h-4 mr-2" />分享
+                <Share2 className="w-4 h-4 mr-2" />{isWeChat ? "复制去微信发" : "分享"}
               </Button>
             </div>
           </div>

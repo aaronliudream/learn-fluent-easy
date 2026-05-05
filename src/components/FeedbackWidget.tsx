@@ -149,13 +149,16 @@ export default function FeedbackWidget() {
         {...drag.handlers}
         className="fixed left-4 z-40 sm:left-5 bottom-[calc(env(safe-area-inset-bottom,0px)+5.5rem)] sm:bottom-5"
       >
-        <button
-          onClick={() => { if (drag.wasDragging()) return; setOpen(true); }}
-          aria-label={t("反馈")}
-          className="grid size-12 cursor-grab place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-[0_10px_30px_-10px_rgba(91,43,201,0.6)] transition hover:scale-105 active:cursor-grabbing sm:size-14"
-        >
-          <MessageCircle className="size-6" />
-        </button>
+        <div className="relative">
+          {drag.dragging && <span className="drag-wings" aria-hidden />}
+          <button
+            onClick={() => { if (drag.wasDragging()) return; setOpen(true); }}
+            aria-label={t("反馈")}
+            className="relative grid size-12 cursor-grab place-items-center rounded-full bg-gradient-to-br from-indigo-500 to-violet-600 text-white shadow-[0_10px_30px_-10px_rgba(91,43,201,0.6)] transition hover:scale-105 active:cursor-grabbing sm:size-14"
+          >
+            <MessageCircle className="size-6" />
+          </button>
+        </div>
       </div>
 
       {/* Dialog */}

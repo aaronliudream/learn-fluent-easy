@@ -160,7 +160,7 @@ Generate the full learning corpus JSON now.`;
 }
 
 async function main() {
-  const client = new Client();
+  const client = new Client({ ssl: { rejectUnauthorized: false } });
   await client.connect();
 
   const tableName = TABLE === "junior" ? "junior_grammar_points" : "gaokao_grammar_points";

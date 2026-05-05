@@ -241,12 +241,12 @@ function IeltsSpeakingSessionContent() {
 
   // ---- Elapsed timer ----
   useEffect(() => {
-    if (conversation.status !== "connected") return;
+    if (!voiceConnected) return;
     const t = setInterval(() => {
       if (startedAtRef.current) setElapsed(Math.floor((Date.now() - startedAtRef.current) / 1000));
     }, 500);
     return () => clearInterval(t);
-  }, [conversation.status]);
+  }, [voiceConnected]);
 
   // ---- End call & grade ----
   const grade = useCallback(async (transcript: Msg[]) => {
@@ -313,8 +313,7 @@ function IeltsSpeakingSessionContent() {
     );
   }
 
-  const status = conversation.status; // "connected" | "disconnected" | ...
-  const isConnected = status === "connected";
+  const isConnected = voiceConnected;
   const isExaminerSpeaking = isConnected && conversation.isSpeaking;
   const isYourTurn = isConnected && !conversation.isSpeaking;
   const mins = Math.floor(elapsed / 60).toString().padStart(2, "0");

@@ -189,24 +189,91 @@ function IeltsSpeakingSessionContent() {
     });
   }, [id, nav]);
 
-  // ---- Start the call as soon as we have the session ----
+  const playExaminerAudio = useCallback(async (audioContent: string, mimeType = "audio/mpeg") => {
+    const audio = audioRef.current ?? new Audio();
+    audioRef.current = audio;
+    audio.playsInline = true;
+    audio.src = `data:${mimeType};base64,${audioContent}`;
+    setExaminerSpeaking(true);
+    try { await audio.play(); } finally {
+      await new Promise<void>((resolve) => {
+        audio.onended = () => resolve();
+        audio.onerror = () => resolve();
+      });
+      setExaminerSpeaking(false);
+    }
+  }, []);
+
+  const requestExaminerTurn = useCallback(async (opts: { startOnly?: boolean; audioBlob?: Blob }) => {
+    if (!session) return;
+    setProcessingTurn(true);
+    setErrorMsg(null);
+    try {
+      const audioBase64 = opts.audioBlob ? await blobToBase64(opts.audioBlob) : undefined;
+      const { data, error } = await supabase.functions.invoke("ielts-voice-turn", {
+        body: {
+          startOnly: Boolean(opts.startOnly),
+          audioBase64,
+          mimeType: opts.audioBlob?.type || "audio/webm",
+          messages: transcriptRef.current,
+          part: partRef.current,
+          targetBand: session.target_band,
+          topicCategory: session.topic_category,
+          cueCard: cueCard.card,
+        },
+      });
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+
+      const newItems: Msg[] = [];
+      const userText = String(data?.userText || "").trim();
+      const assistantText = String(data?.assistantText || "").trim();
+      if (userText) newItems.push({ role: "user", content: userText, part: partRef.current });
+      if (assistantText) {
+        const detected = detectPartFromText(assistantText);
+        if (detected && detected > partRef.current) {
+          partRef.current = detected;
+          setCurrentPart(detected);
+        }
+        newItems.push({ role: "assistant", content: assistantText, part: partRef.current });
+      }
+      if (newItems.length) appendTranscript(newItems);
+      if (data?.audioContent) await playExaminerAudio(String(data.audioContent), String(data.mimeType || "audio/mpeg"));
+    } catch (e: any) {
+      console.error(e);
+      setErrorMsg(friendlyVoiceError(e));
+    } finally {
+      setProcessingTurn(false);
+    }
+  }, [appendTranscript, cueCard.card, detectPartFromText, playExaminerAudio, session]);
+
   const startCall = useCallback(async () => {
     if (!session) return;
     setVoiceConnected(false);
     setConnecting(true);
     setErrorMsg(null);
     try {
-      connectTimeoutRef.current = window.setTimeout(() => {
-        setConnecting(false);
-        setErrorMsg("语音连接超时。请确认麦克风权限已允许，并点击重试接通。");
-      }, 25_000);
-      conversation.startSession({ useWakeLock: false });
+      const audio = audioRef.current ?? new Audio();
+      audioRef.current = audio;
+      audio.playsInline = true;
+      audio.src = SILENT_WAV;
+      audio.play().catch(() => {});
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } as MediaTrackConstraints,
+      });
+      mediaStreamRef.current = stream;
+      startedAtRef.current = Date.now();
+      setVoiceConnected(true);
+      setConnecting(false);
+      toast.success("已接通考官 🎙️");
+      await requestExaminerTurn({ startOnly: true });
     } catch (e: any) {
       console.error(e);
       setErrorMsg(friendlyVoiceError(e));
       setConnecting(false);
+      setVoiceConnected(false);
     }
-  }, [session, conversation]);
+  }, [requestExaminerTurn, session]);
 
   // Do not auto-start here: iOS/mobile browsers require microphone access to be
   // requested directly from a user tap on this page.

@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, ChevronRight, Sparkles, Target, Flame, BookOpen, TrendingUp, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import { ErrorRadar } from "@/components/grammar/ErrorRadar";
+import ModuleStageTests from "@/components/ModuleStageTests";
 import {
   loadGrammarMasteryAll,
   aggregateErrors,

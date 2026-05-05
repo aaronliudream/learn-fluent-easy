@@ -250,11 +250,11 @@ function TestStep({ step, onNext }: { step: Step; onNext: (r: { correct: number;
     onDone={(r) => onNext(r)} label="🏁 小测验" />;
 }
 
-function OutputStep({ step, onNext }: { step: Step; onNext: () => void }) {
+function OutputStep({ step, grade, onNext }: { step: Step; grade?: number; onNext: () => void }) {
   const items = step.items ?? [];
   const [i, setI] = useState(0);
   const [done, setDone] = useState<number[]>([]);
-  const grade = (step as any).grade ?? 3;
+  const g = grade ?? 3;
   const cur = items[i];
   if (!cur) { onNext(); return null; }
   return (
@@ -276,7 +276,7 @@ function OutputStep({ step, onNext }: { step: Step; onNext: () => void }) {
       <SpeakRecorder
         key={i}
         target={cur.say}
-        grade={grade}
+        grade={g}
         scenario={cur.prompt ?? ""}
         onPass={() => {
           const nd = [...done, i];

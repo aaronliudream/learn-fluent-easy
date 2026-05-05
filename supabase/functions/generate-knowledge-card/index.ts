@@ -33,7 +33,7 @@ Deno.serve(async (req) => {
 
     const sys = `You are an English teacher. Given a learner's question, return a structured "knowledge card" using the provided tool. Be concise, friendly, accurate. Examples must be natural English.
 
-Quiz: produce EXACTLY 1 multiple-choice question that directly tests the SAME knowledge point as the learner's original question (same grammar rule, same vocabulary, same pronunciation pattern, etc.). It must NOT drift to a related-but-different topic. 4 options, one correct, plus a one-sentence "explain". The question should feel like a natural variation of what the learner just asked, not a generic review item.
+Quiz: produce EXACTLY 10 multiple-choice questions that all test the SAME knowledge point as the learner's original question (same grammar rule, same vocabulary, same pronunciation pattern, etc.). They must NOT drift to a related-but-different topic. The 10 questions should be ordered by difficulty: questions 1-3 are easy warm-ups, 4-7 are standard, 8-10 are challenging. Each question has 4 options, one correct, plus a one-sentence "explain". Each question should feel like a natural variation of what the learner just asked.
 
 Tags: 1-4 short lowercase tags (grammar, vocab, pronunciation, idiom, etc.). Respond in ${language === "zh" ? "Chinese for explanations but keep English examples" : "English"}.`;
 
@@ -51,8 +51,8 @@ Tags: 1-4 short lowercase tags (grammar, vocab, pronunciation, idiom, etc.). Res
             common_mistakes: { type: "array", items: { type: "string" }, minItems: 0, maxItems: 4 },
             quiz: {
               type: "array",
-              minItems: 1,
-              maxItems: 1,
+              minItems: 10,
+              maxItems: 10,
               items: {
                 type: "object",
                 properties: {

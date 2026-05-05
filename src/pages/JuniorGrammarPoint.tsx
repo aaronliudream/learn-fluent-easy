@@ -7,6 +7,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import TutorChat from "@/components/tutor/TutorChat";
+import PaywallDialog from "@/components/PaywallDialog";
+import { consumeQuestionQuota } from "@/lib/quota";
 
 type Pt = { id: string; title: string; cefr: string; explanation_md: string };
 type Q = {
@@ -41,6 +43,7 @@ export default function JuniorGrammarPoint() {
   const [streak, setStreak] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
   const [tutorFor, setTutorFor] = useState<Q | null>(null);
+  const [paywall, setPaywall] = useState<{ open: boolean; used: number; limit: number }>({ open: false, used: 5, limit: 5 });
   const shownAt = useRef<Record<string, number>>({});
 
   useEffect(() => {
@@ -60,6 +63,11 @@ export default function JuniorGrammarPoint() {
 
   const pick = async (q: Q, letter: string) => {
     if (picks[q.id]) return;
+    const quota = await consumeQuestionQuota();
+    if (!quota.allowed) {
+      setPaywall({ open: true, used: quota.used, limit: quota.limit });
+      return;
+    }
     setPicks(p => ({ ...p, [q.id]: letter }));
     const ok = letter === q.correct_answer;
     if (ok) {
@@ -77,6 +85,11 @@ export default function JuniorGrammarPoint() {
     if (reveal[q.id]) return;
     const ans = (inputs[q.id] || "").trim();
     if (!ans) return;
+    const quota = await consumeQuestionQuota();
+    if (!quota.allowed) {
+      setPaywall({ open: true, used: quota.used, limit: quota.limit });
+      return;
+    }
     setReveal(r => ({ ...r, [q.id]: true }));
     const ok = checkOpenAnswer(ans, q);
     if (ok) {
@@ -210,6 +223,14 @@ export default function JuniorGrammarPoint() {
           onClose={() => setTutorFor(null)}
         />
       )}
+
+      <PaywallDialog
+        open={paywall.open}
+        onClose={() => setPaywall((p) => ({ ...p, open: false }))}
+        trigger="daily_quota_exhausted"
+        used={paywall.used}
+        limit={paywall.limit}
+      />
     </main>
   );
 }

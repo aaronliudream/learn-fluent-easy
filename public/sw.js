@@ -3,9 +3,10 @@
 // Android Chrome) and provide light HTML/asset caching. Designed to be
 // safe to remove later — see kill-switch pattern in PWA docs.
 
-const VERSION = "v1";
+const VERSION = "v2";
 const HTML_CACHE = `bm-html-${VERSION}`;
 const ASSET_CACHE = `bm-assets-${VERSION}`;
+const TTS_CACHE = `bm-tts-${VERSION}`;
 
 self.addEventListener("install", (event) => {
   // Activate immediately on first install
@@ -31,8 +32,33 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(req.url);
 
-  // Same-origin only
-  if (url.origin !== self.location.origin) return;
+  // Cross-origin: only handle Supabase TTS audio bucket (CacheFirst, immutable).
+  // Audio files are content-addressed (sha256-named .mp3) — same URL = same
+  // bytes forever, so it's safe to cache aggressively. Eliminates network
+  // entirely on repeat plays across sessions.
+  if (url.origin !== self.location.origin) {
+    if (
+      /\.supabase\.co$/.test(url.hostname) &&
+      url.pathname.includes("/storage/v1/object/public/tts-audio/")
+    ) {
+      event.respondWith((async () => {
+        const cache = await caches.open(TTS_CACHE);
+        const cached = await cache.match(req);
+        if (cached) return cached;
+        try {
+          const fresh = await fetch(req);
+          // Only cache successful full responses (skip 206 Range probes).
+          if (fresh.ok && fresh.status === 200) {
+            cache.put(req, fresh.clone()).catch(() => {});
+          }
+          return fresh;
+        } catch {
+          return cached || new Response("", { status: 503 });
+        }
+      })());
+    }
+    return;
+  }
 
   // NEVER cache OAuth callback or Supabase auth flows
   if (url.pathname.startsWith("/~oauth") || url.pathname.startsWith("/auth")) {

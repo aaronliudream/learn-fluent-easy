@@ -115,3 +115,54 @@ export function getXPPreset(intensity: Intensity = "subtle"): XPPreset {
   }
   return FEEDBACK.xp[intensity];
 }
+
+/**
+ * Emoji confetti — celebratory rain of emoji glyphs.
+ * Honors reduced-motion + global cooldown.
+ * Pass `vibrate: true` to also pulse the device on perfect scores.
+ */
+export function fireEmojiConfetti(opts: {
+  emojis?: string[];
+  count?: number;
+  vibrate?: boolean;
+} = {}) {
+  if (typeof window === "undefined") return;
+  if (prefersReducedMotion()) return;
+  const now = Date.now();
+  if (now - lastConfettiAt < FEEDBACK.globalConfettiCooldownMs) return;
+  lastConfettiAt = now;
+
+  const emojis = opts.emojis ?? ["🎉", "✨", "⭐️", "🌟", "🥳", "💫", "🏆", "🎊"];
+  const count = opts.count ?? 36;
+  const layer = document.createElement("div");
+  layer.style.cssText =
+    "position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden;";
+  document.body.appendChild(layer);
+
+  const w = window.innerWidth;
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement("span");
+    const x = Math.random() * w;
+    const size = 20 + Math.random() * 18;
+    const dx = (Math.random() - 0.5) * 200;
+    const dur = 1.6 + Math.random() * 1.2;
+    const delay = Math.random() * 0.25;
+    el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    el.style.cssText = `
+      position:absolute;
+      left:${x}px; top:-40px;
+      font-size:${size}px;
+      line-height:1;
+      --cx:${dx}px;
+      --cr:${(Math.random() * 720 - 360).toFixed(0)}deg;
+      animation: confetti-fall ${dur}s cubic-bezier(.2,.6,.4,1) ${delay}s forwards;
+      will-change: transform, opacity;
+    `;
+    layer.appendChild(el);
+  }
+  setTimeout(() => layer.remove(), 3200);
+
+  if (opts.vibrate && typeof navigator !== "undefined" && "vibrate" in navigator) {
+    try { navigator.vibrate([30, 60, 30, 60, 80]); } catch { /* ignore */ }
+  }
+}

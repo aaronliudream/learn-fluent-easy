@@ -19,6 +19,7 @@ export function useDraggable(storageKey: string) {
       return raw ? JSON.parse(raw) : null;
     } catch { return null; }
   });
+  const [dragging, setDragging] = useState(false);
   const draggingRef = useRef(false);
   const movedRef = useRef(false);
   const startRef = useRef({ x: 0, y: 0, baseX: 0, baseY: 0 });
@@ -60,7 +61,10 @@ export function useDraggable(storageKey: string) {
     if (!draggingRef.current) return;
     const dx = e.clientX - startRef.current.x;
     const dy = e.clientY - startRef.current.y;
-    if (!movedRef.current && Math.hypot(dx, dy) > 5) movedRef.current = true;
+    if (!movedRef.current && Math.hypot(dx, dy) > 5) {
+      movedRef.current = true;
+      setDragging(true);
+    }
     if (movedRef.current) {
       e.preventDefault();
       setPos({ x: startRef.current.baseX + dx, y: startRef.current.baseY + dy });
@@ -70,6 +74,7 @@ export function useDraggable(storageKey: string) {
   const endDrag = useCallback(() => {
     if (!draggingRef.current) return;
     draggingRef.current = false;
+    setDragging(false);
     setPos((p) => {
       if (!p) return p;
       const c = clamp(p);
@@ -114,5 +119,6 @@ export function useDraggable(storageKey: string) {
       onPointerCancel: onPointerUp,
     },
     wasDragging,
+    dragging,
   };
 }

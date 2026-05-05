@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useConversation } from "@elevenlabs/react";
+import { ConversationProvider, useConversation } from "@elevenlabs/react";
 import { ArrowLeft, Loader2, Mic, PhoneOff, Sparkles, Trophy, RefreshCw, AlertCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
@@ -47,6 +47,8 @@ const CUE_CARDS: { topic: string; card: string }[] = [
   { topic: "experience", card: "Describe a time when you helped someone.\nYou should say:\n• who you helped\n• when and where it happened\n• how you helped them\n• and explain how you felt about it." },
   { topic: "object", card: "Describe an object that is important to you.\nYou should say:\n• what it is\n• how long you've had it\n• how you got it\n• and explain why it is important to you." },
 ];
+
+const ELEVENLABS_AGENT_ID = "agent_2801kqvhz6m2ehasqcjadep8zm25";
 
 function pickCueCard(topicCategory: string | null) {
   const t = (topicCategory || "").toLowerCase();
@@ -103,6 +105,14 @@ EXAMINER BEHAVIOUR
 }
 
 export default function IeltsSpeakingSession() {
+  return (
+    <ConversationProvider agentId={ELEVENLABS_AGENT_ID} connectionType="webrtc">
+      <IeltsSpeakingSessionContent />
+    </ConversationProvider>
+  );
+}
+
+function IeltsSpeakingSessionContent() {
   const { id } = useParams<{ id: string }>();
   const nav = useNavigate();
   const [session, setSession] = useState<SessionRow | null>(null);
@@ -205,7 +215,6 @@ export default function IeltsSpeakingSession() {
       // Public agent — connect directly with agentId (no server token needed)
       await conversation.startSession({
         connectionType: "webrtc",
-        agentId: "agent_2801kqvhz6m2ehasqcjadep8zm25",
         overrides: {
           agent: {
             prompt: { prompt: buildExaminerPrompt({ targetBand: session.target_band, cueCard: cueCard.card, topicCategory: session.topic_category }) },

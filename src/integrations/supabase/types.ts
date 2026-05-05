@@ -266,6 +266,53 @@ export type Database = {
         }
         Relationships: []
       }
+      card_attempts: {
+        Row: {
+          card_id: string
+          coins_awarded: number
+          correct_count: number
+          created_at: string
+          guest_token: string | null
+          id: string
+          score_pct: number
+          stage: string
+          total_questions: number
+          user_id: string | null
+        }
+        Insert: {
+          card_id: string
+          coins_awarded?: number
+          correct_count: number
+          created_at?: string
+          guest_token?: string | null
+          id?: string
+          score_pct: number
+          stage?: string
+          total_questions: number
+          user_id?: string | null
+        }
+        Update: {
+          card_id?: string
+          coins_awarded?: number
+          correct_count?: number
+          created_at?: string
+          guest_token?: string | null
+          id?: string
+          score_pct?: number
+          stage?: string
+          total_questions?: number
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "card_attempts_card_id_fkey"
+            columns: ["card_id"]
+            isOneToOne: false
+            referencedRelation: "knowledge_cards"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       card_likes: {
         Row: {
           card_id: string
@@ -5833,6 +5880,7 @@ export type Database = {
           remaining_tokens: number
         }[]
       }
+      claim_guest_card_attempts: { Args: { _token: string }; Returns: number }
       claim_reflection_energy: {
         Args: {
           _correct_was: string

@@ -10,6 +10,8 @@ import { BrandLogo } from "@/components/brand/BrandLogo";
 import { speak } from "@/lib/speak";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import QRCode from "qrcode";
+import { awardCoins, awardForCorrect, notifyWrong } from "@/lib/coins";
+import { getGuestCardToken } from "@/lib/cardGuest";
 
 type Quiz = { q: string; options: string[]; answer: number; explain?: string };
 type CardData = {
@@ -45,6 +47,12 @@ export default function KnowledgeCard() {
   const [qrOpen, setQrOpen] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
   const shareUrl = `https://bigmoonenglish.com/q/${slug}`;
+  // Progressive challenge: start with 3, can extend to 5, then 10.
+  const [stage, setStage] = useState<3 | 5 | 10>(3);
+  const [stageDone, setStageDone] = useState<{ s3?: boolean; s5?: boolean; s10?: boolean }>({});
+  const [coinsEarned, setCoinsEarned] = useState(0);
+  const [streak, setStreak] = useState(0);
+  const [savedCTA, setSavedCTA] = useState(false); // shows "saved + sign-up" CTA after stage settle
 
   useEffect(() => {
     let mounted = true;
@@ -139,6 +147,69 @@ export default function KnowledgeCard() {
     </main>
   );
 
+  // ===== Quiz logic (progressive) =====
+  const visibleQuiz = card.quiz.slice(0, stage);
+  const answeredCount = visibleQuiz.reduce((n, _, i) => n + (picked[i] !== undefined ? 1 : 0), 0);
+  const correctCount = visibleQuiz.reduce((n, q, i) => n + (picked[i] === q.answer ? 1 : 0), 0);
+  const stageComplete = answeredCount === visibleQuiz.length && visibleQuiz.length > 0;
+  const stageKey = stage === 3 ? "s3" : stage === 5 ? "s5" : "s10";
+  const justSettled = stageComplete && !stageDone[stageKey as keyof typeof stageDone];
+
+  async function pickAnswer(qIdx: number, optIdx: number) {
+    if (picked[qIdx] !== undefined) return;
+    setPicked((p) => ({ ...p, [qIdx]: optIdx }));
+    const q = card!.quiz[qIdx];
+    const isRight = optIdx === q.answer;
+    if (isRight) {
+      const newStreak = streak + 1;
+      setStreak(newStreak);
+      if (authed) {
+        const r = await awardForCorrect(newStreak, "card_quiz", `${card!.id}:${qIdx}`, "card_quiz");
+        if (r?.awarded) setCoinsEarned((c) => c + r.awarded);
+      } else {
+        // 游客：本地暂记，注册后通过 first-login bonus 一次性补发
+        setCoinsEarned((c) => c + 1);
+      }
+    } else {
+      setStreak(0);
+      notifyWrong();
+    }
+  }
+
+  async function settleStage() {
+    if (!card || stageDone[stageKey as keyof typeof stageDone]) return;
+    setStageDone((d) => ({ ...d, [stageKey]: true }));
+    const allRight = correctCount === visibleQuiz.length;
+    let bonus = 0;
+    if (allRight) bonus = stage === 3 ? 5 : stage === 5 ? 10 : 20;
+    if (authed && bonus > 0) {
+      const r = await awardCoins(bonus, `card_quiz_${stage}_perfect`);
+      if (r?.awarded) setCoinsEarned((c) => c + r.awarded);
+    } else if (!authed && bonus > 0) {
+      setCoinsEarned((c) => c + bonus);
+    }
+    // Persist attempt (works for guest + logged-in via RLS)
+    try {
+      const { data: u } = await supabase.auth.getUser();
+      await supabase.from("card_attempts").insert({
+        card_id: card.id,
+        user_id: u?.user?.id ?? null,
+        guest_token: u?.user ? null : getGuestCardToken(),
+        total_questions: visibleQuiz.length,
+        correct_count: correctCount,
+        score_pct: Math.round((correctCount / visibleQuiz.length) * 100),
+        coins_awarded: coinsEarned + bonus,
+        stage: `s${stage}`,
+      });
+    } catch (e) {
+      console.warn("[card_attempts] insert failed", e);
+    }
+    if (!authed) setSavedCTA(true);
+  }
+
+  // Auto-settle the moment a stage is just completed
+  if (justSettled) { void settleStage(); }
+
   return (
     <main className="max-w-2xl mx-auto px-4 py-8 space-y-6">
       {/* Title */}
@@ -192,10 +263,13 @@ export default function KnowledgeCard() {
       {/* Quiz — gated */}
       <section>
         <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-3 flex items-center gap-2">
-          🎯 3 题小测验
+          🎯 挑战测试 · 第 {stage} 关
+          <span className="ml-auto text-[11px] normal-case tracking-normal text-primary font-bold">
+            {coinsEarned > 0 && `💰 已获 ${coinsEarned} 金币`}
+          </span>
         </p>
         <div className="space-y-3">
-            {card.quiz.map((q, i) => (
+            {visibleQuiz.map((q, i) => (
               <Card key={i} className="p-4">
                 <p className="font-medium mb-3">{i + 1}. {q.q}</p>
                 <div className="grid gap-2">
@@ -207,7 +281,7 @@ export default function KnowledgeCard() {
                     return (
                       <button
                         key={j}
-                        onClick={() => setPicked((p) => ({ ...p, [i]: j }))}
+                        onClick={() => pickAnswer(i, j)}
                         className={`text-left px-3 py-2 rounded-md border text-sm transition-colors ${
                           showState && isRight ? "border-green-500 bg-green-50 dark:bg-green-950/30"
                           : showState && isPicked ? "border-destructive bg-destructive/10"
@@ -245,40 +319,71 @@ export default function KnowledgeCard() {
               </Card>
             ))}
         </div>
-      </section>
 
-      {/* End-of-quiz CTA — only after user answered all questions, only for guests */}
-      {!authed && Object.keys(picked).length === card.quiz.length && card.quiz.length > 0 && (() => {
-        const correct = card.quiz.reduce((acc, q, i) => acc + (picked[i] === q.answer ? 1 : 0), 0);
-        return (
-          <Card className="p-6 text-center bg-gradient-to-br from-primary/10 via-primary/5 to-background border-primary shadow-lg">
-            <Trophy className="w-10 h-10 mx-auto text-primary mb-2" />
-            <p className="text-lg font-bold mb-1">🎉 答对 {correct}/{card.quiz.length}！</p>
-            <p className="text-sm text-muted-foreground mb-4">
-              想再练一道类似的题？让 AI 给你出专属题目。
+        {/* Stage settlement — appears the moment all visible questions are answered */}
+        {stageComplete && (
+          <Card className="mt-4 p-6 text-center bg-gradient-to-br from-primary/15 via-primary/5 to-background border-primary shadow-lg animate-in fade-in slide-in-from-bottom-2 duration-500">
+            <Trophy className="w-12 h-12 mx-auto text-primary mb-2" />
+            <p className="text-2xl font-extrabold mb-1">
+              {correctCount === visibleQuiz.length ? "🎉 全部答对！" : `答对 ${correctCount}/${visibleQuiz.length}`}
             </p>
-            <div className="space-y-2">
+            <div className="flex justify-center gap-1 mb-2">
+              {Array.from({ length: visibleQuiz.length }).map((_, i) => (
+                <span key={i} className={`text-xl ${i < correctCount ? "" : "grayscale opacity-30"}`}>⭐</span>
+              ))}
+            </div>
+            {coinsEarned > 0 && (
+              <p className="text-base font-bold text-primary mb-3">💰 共获得 {coinsEarned} 金币</p>
+            )}
+
+            {/* Progression: stage 3 → 5 → 10 */}
+            {stage === 3 && card.quiz.length >= 5 && (
               <Button
-                onClick={() => navigate(`/auth?redirect=/ask`)}
-                className="w-full h-12 text-base"
                 size="lg"
+                className="w-full h-12 text-base mt-2"
+                onClick={() => setStage(5)}
               >
                 <Sparkles className="w-4 h-4 mr-2" />
-                免费生成我的专属题 →
+                再战 2 题（全对再得 +10）→
               </Button>
+            )}
+            {stage === 5 && card.quiz.length >= 10 && (
               <Button
-                onClick={() => navigate(`/auth?redirect=/q/${slug}`)}
-                variant="outline"
-                className="w-full"
+                size="lg"
+                className="w-full h-12 text-base mt-2"
+                onClick={() => setStage(10)}
               >
-                <BookmarkPlus className="w-4 h-4 mr-2" />
-                保存这张卡片到我的学习库
+                <Trophy className="w-4 h-4 mr-2" />
+                冲刺 5 题精通章（全对 +20）🏆
               </Button>
-            </div>
-            <p className="text-[11px] text-muted-foreground mt-3">注册免费 · 30 秒搞定</p>
+            )}
+            {stage === 10 && (
+              <p className="text-sm text-muted-foreground mt-1">
+                你已完成精通章，了不起！🏆
+              </p>
+            )}
+
+            {/* Guest CTA: register to keep score */}
+            {!authed && savedCTA && (
+              <div className="mt-4 pt-4 border-t border-primary/20">
+                <p className="text-sm font-semibold mb-2">想保留这 {coinsEarned} 金币 + 喂宠物吗？</p>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => navigate(`/auth?redirect=/q/${slug}`)}
+                >
+                  <BookmarkPlus className="w-4 h-4 mr-2" />
+                  注册 1 秒领取金币 + 永久保存
+                </Button>
+                <p className="text-[11px] text-muted-foreground mt-2">注册后金币自动到账，可去给宠物买东西</p>
+              </div>
+            )}
+            {authed && (
+              <p className="text-[11px] text-muted-foreground mt-3">金币已入账，去 🐾 喂宠物吧</p>
+            )}
           </Card>
-        );
-      })()}
+        )}
+      </section>
 
       {/* Speak / Ask AI placeholders (locked for guests) */}
       <section className="grid grid-cols-2 gap-3">

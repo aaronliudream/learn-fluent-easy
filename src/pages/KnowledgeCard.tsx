@@ -66,18 +66,12 @@ export default function KnowledgeCard() {
   const [picked, setPicked] = useState<Record<number, number>>({});
   const [qrOpen, setQrOpen] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState<string>("");
-  // Two URLs:
-  //   • qrUrl: clean short URL — used inside the QR image (smaller, easier to scan)
-  //   • shareUrl: points to the OG edge function so WeChat / Twitter / Facebook
-  //     crawlers get a card-specific preview (title, description, cover image).
-  //     Real users are 302-redirected to /q/<slug>.
-  // Both append ?ref=<myUserId> for share-bonus tracking.
-  const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
+  // Use one stable main-domain URL for QR codes, copied links, and native sharing.
+  // WeChat is sensitive to serverless/intermediate domains and redirects; keeping
+  // everything on bigmoonenglish.com makes the QR scannable and shareable.
   const refQuery = myUserId ? `?ref=${myUserId}` : "";
   const qrUrl = `https://bigmoonenglish.com/q/${slug}${refQuery}`;
-  const shareUrl = projectId
-    ? `https://${projectId}.supabase.co/functions/v1/card-og/${slug}${refQuery}`
-    : qrUrl;
+  const shareUrl = qrUrl;
   // Progressive challenge: start with 3, can extend to 5, then 10.
   const [stage, setStage] = useState<3 | 5 | 10>(3);
   const [stageDone, setStageDone] = useState<{ s3?: boolean; s5?: boolean; s10?: boolean }>({});
@@ -610,7 +604,7 @@ export default function KnowledgeCard() {
           <DialogHeader>
             <DialogTitle className="text-center">扫码挑战 3 题</DialogTitle>
             <DialogDescription className="text-center">
-              二维码用于扫码打开；要在微信聊天里显示标题/封面/描述，请发送下方链接
+              二维码和复制链接都使用 Big Moon English 主域名，方便微信扫码和分享
             </DialogDescription>
           </DialogHeader>
           <div className="flex flex-col items-center gap-4">

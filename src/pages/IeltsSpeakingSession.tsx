@@ -149,6 +149,14 @@ function IeltsSpeakingSessionContent() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const transcriptRef = useRef<Msg[]>([]);
   const partRef = useRef<1 | 2 | 3>(1);
+  // VAD (auto recording) refs
+  const audioCtxRef = useRef<AudioContext | null>(null);
+  const analyserRef = useRef<AnalyserNode | null>(null);
+  const vadRafRef = useRef<number | null>(null);
+  const speechStartedAtRef = useRef<number | null>(null);
+  const lastVoiceAtRef = useRef<number | null>(null);
+  const recordingRef = useRef(false);
+  useEffect(() => { recordingRef.current = recording; }, [recording]);
   useEffect(() => { partRef.current = currentPart; }, [currentPart]);
   useEffect(() => { transcriptRef.current = messages; }, [messages]);
 
@@ -331,12 +339,94 @@ function IeltsSpeakingSessionContent() {
     recorder.onstop = () => {
       const blob = new Blob(chunksRef.current, { type: recorder.mimeType || mimeType || "audio/webm" });
       chunksRef.current = [];
-      if (blob.size > 800) void requestExaminerTurn({ audioBlob: blob });
-      else setErrorMsg("录音太短，请按住说完一句完整英文后再松开。");
+      if (blob.size > 800 && speechStartedAtRef.current) {
+        void requestExaminerTurn({ audioBlob: blob });
+      }
+      // else: silently discard — auto-VAD will try again
+      speechStartedAtRef.current = null;
+      lastVoiceAtRef.current = null;
     };
     recorder.start();
     setRecording(true);
   }, [examinerSpeaking, processingTurn, recording, requestExaminerTurn]);
+
+  // ---- Voice Activity Detection: auto start/stop recording ----
+  // When connected and it's the candidate's turn, continuously listen to the
+  // mic. As soon as voice energy passes a threshold we start recording. After
+  // ~1.5s of silence we stop and send. Mirrors the hands-free feel of the
+  // Alex chat without needing a full WebRTC realtime connection.
+  useEffect(() => {
+    if (!voiceConnected) return;
+    const stream = mediaStreamRef.current;
+    if (!stream) return;
+    const AC: typeof AudioContext = (window as any).AudioContext || (window as any).webkitAudioContext;
+    if (!AC) return;
+    const ctx = new AC();
+    audioCtxRef.current = ctx;
+    const source = ctx.createMediaStreamSource(stream);
+    const analyser = ctx.createAnalyser();
+    analyser.fftSize = 1024;
+    analyser.smoothingTimeConstant = 0.6;
+    source.connect(analyser);
+    analyserRef.current = analyser;
+    const buf = new Uint8Array(analyser.fftSize);
+
+    // Tunable thresholds
+    const VOICE_RMS = 0.025;          // start speaking threshold
+    const SILENCE_RMS = 0.018;        // below this counts as silence
+    const MIN_SPEECH_MS = 600;        // ignore blips
+    const SILENCE_HANG_MS = 1400;     // stop after this much silence
+    const MAX_RECORD_MS = 60_000;     // hard cap per turn
+
+    const tick = () => {
+      vadRafRef.current = requestAnimationFrame(tick);
+      // Don't listen while examiner is speaking or we're processing — avoid
+      // capturing the examiner's own audio leaking through speakers.
+      if (examinerSpeaking || processingTurn) return;
+      analyser.getByteTimeDomainData(buf);
+      // RMS over the buffer (centered around 128)
+      let sum = 0;
+      for (let i = 0; i < buf.length; i++) {
+        const v = (buf[i] - 128) / 128;
+        sum += v * v;
+      }
+      const rms = Math.sqrt(sum / buf.length);
+      const now = performance.now();
+
+      if (!recordingRef.current) {
+        if (rms > VOICE_RMS) {
+          speechStartedAtRef.current = now;
+          lastVoiceAtRef.current = now;
+          startRecording();
+        }
+      } else {
+        if (rms > SILENCE_RMS) {
+          lastVoiceAtRef.current = now;
+        }
+        const startedAt = speechStartedAtRef.current ?? now;
+        const lastVoice = lastVoiceAtRef.current ?? now;
+        const speechDur = now - startedAt;
+        const silenceDur = now - lastVoice;
+        if (
+          (speechDur > MIN_SPEECH_MS && silenceDur > SILENCE_HANG_MS) ||
+          speechDur > MAX_RECORD_MS
+        ) {
+          stopRecording();
+        }
+      }
+    };
+    vadRafRef.current = requestAnimationFrame(tick);
+
+    return () => {
+      if (vadRafRef.current) cancelAnimationFrame(vadRafRef.current);
+      vadRafRef.current = null;
+      try { source.disconnect(); } catch { /* */ }
+      try { analyser.disconnect(); } catch { /* */ }
+      try { ctx.close(); } catch { /* */ }
+      audioCtxRef.current = null;
+      analyserRef.current = null;
+    };
+  }, [voiceConnected, examinerSpeaking, processingTurn, startRecording, stopRecording]);
 
   const hangUp = useCallback(async () => {
     try { recorderRef.current?.state === "recording" && recorderRef.current.stop(); } catch { /* */ }
@@ -462,13 +552,13 @@ function IeltsSpeakingSessionContent() {
             <div className="text-base font-bold">
               {connecting && "正在接通考官…"}
               {!connecting && isExaminerSpeaking && "🔊 考官正在说话…"}
-              {!connecting && recording && "🎙️ 正在录音，说完后松开"}
+              {!connecting && recording && "🎙️ 正在听你说…说完停顿一下即可"}
               {!connecting && processingTurn && "正在识别并生成考官回复…"}
-              {!connecting && isYourTurn && !recording && "🎤 按住下方按钮回答"}
+              {!connecting && isYourTurn && !recording && "🎤 请直接说话，无需按键"}
               {!connecting && !isConnected && (errorMsg ? "连接失败" : "等待接通…")}
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              OpenAI 转写 + OpenAI TTS · 全程英语 · 结束后自动评分
+              全双工自动对话 · 全程英语 · 结束后自动评分
             </div>
           </div>
         </div>
@@ -504,29 +594,13 @@ function IeltsSpeakingSessionContent() {
       {/* Hang up + grade */}
       <div className="flex flex-col items-center gap-3 pb-[calc(env(safe-area-inset-bottom,0px)+1rem)]">
         {isConnected || connecting ? (
-          <>
-            {isConnected && (
-              <button
-                onPointerDown={(e) => { e.preventDefault(); (e.currentTarget as HTMLButtonElement).setPointerCapture?.(e.pointerId); startRecording(); }}
-                onPointerUp={(e) => { e.preventDefault(); stopRecording(); }}
-                onPointerCancel={(e) => { e.preventDefault(); if (recording) stopRecording(); }}
-                onContextMenu={(e) => e.preventDefault()}
-                disabled={!isYourTurn && !recording}
-                style={{ WebkitUserSelect: "none", userSelect: "none", WebkitTouchCallout: "none", touchAction: "none" }}
-                className={`select-none inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-bold shadow-lg transition disabled:opacity-40 ${recording ? "bg-rose-500 text-white" : "bg-primary text-primary-foreground hover:bg-primary/90"}`}
-              >
-                <Mic className="pointer-events-none size-5" />
-                <span className="pointer-events-none select-none">{recording ? "松开发送回答" : "按住回答"}</span>
-              </button>
-            )}
-            <button
+          <button
               onClick={hangUp}
               disabled={!isConnected && !connecting}
               className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-rose-600 disabled:opacity-40"
             >
               <PhoneOff className="size-5" /> 挂断结束 · 自动评分
             </button>
-          </>
         ) : (
           <button
             onClick={startCall}

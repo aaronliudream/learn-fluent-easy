@@ -123,10 +123,17 @@ const FloatingPetGate = () => {
     pathname === "/" ||                  // 首页已有英雄伙伴，避免重复
     pathname.startsWith("/auth") ||
     pathname.startsWith("/talk") ||      // 全屏语音对话
+    pathname.startsWith("/ielts-speaking/session") || // 雅思口语全屏对话
     pathname.startsWith("/pets") ||      // 宠物详情页本身
     pathname.startsWith("/placement");   // 评测专注模式
   if (hide) return null;
   return <FloatingPet />;
+};
+
+const FeedbackWidgetGate = () => {
+  const { pathname } = useLocation();
+  if (pathname.startsWith("/ielts-speaking/session") || pathname.startsWith("/talk")) return null;
+  return <FeedbackWidget />;
 };
 
 // Branded skeleton shown while a lazy route chunk is loading
@@ -248,7 +255,7 @@ const App = () => (
         </Suspense>
         </div>
         <BottomTabBar />
-        <FeedbackWidget />
+        <FeedbackWidgetGate />
         <InstallPrompt />
       </BrowserRouter>
     </TooltipProvider>

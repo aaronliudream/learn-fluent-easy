@@ -293,6 +293,16 @@ export default function KnowledgeCard() {
         const row: any = Array.isArray(r2) ? r2[0] : r2;
         if (row?.awarded > 0) setCoinsEarned((c) => c + row.awarded);
       } catch {}
+      // Reward the friend who shared this card (once per viewer per card)
+      if (refUserId) {
+        try {
+          await supabase.rpc("award_referrer", {
+            _ref_user_id: refUserId,
+            _card_id: card.id,
+            _amount: 2,
+          });
+        } catch {}
+      }
     }
     // Persist attempt (works for guest + logged-in via RLS)
     try {

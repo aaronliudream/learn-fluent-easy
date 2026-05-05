@@ -57,15 +57,18 @@ async function buildQrSvg(text: string, size: number): Promise<string> {
 }
 
 async function buildSvg(slug: string, question: string, answer: string) {
-  const qLines = wrap(question, 18, 3);
-  const aLines = wrap(answer || "", 24, 2);
+  // Left text column ~720px wide, right reserved ~360px for QR.
+  // Question 52px, ~13 CJK chars per line; answer 28px, ~22 CJK chars.
+  const qLines = wrap(question, 13, 4);
+  const aLines = wrap(answer || "", 22, 2);
+  const qFont = 52;
+  const qLineH = 64;
   const qY = 230;
-  const lineH = 80;
-  const aY = qY + qLines.length * lineH + 60;
+  const aY = qY + qLines.length * qLineH + 40;
 
-  const qrSize = 180;
+  const qrSize = 200;
   const qrX = 1120 - qrSize;
-  const qrY = 540 - qrSize - 20;
+  const qrY = 320;
   const shareUrl = `${SITE}/q/${slug}`;
   const qrInner = await buildQrSvg(shareUrl, qrSize);
 
@@ -91,25 +94,26 @@ async function buildSvg(slug: string, question: string, answer: string) {
   ${qLines
     .map(
       (l, i) =>
-        `<text x="80" y="${qY + i * lineH}" font-family="'Noto Serif SC','Songti SC',serif" font-weight="700" font-size="64" fill="#FFFFFF">${escapeXml(l)}</text>`,
+        `<text x="80" y="${qY + i * qLineH}" font-family="'Noto Serif SC','Songti SC',serif" font-weight="700" font-size="${qFont}" fill="#FFFFFF">${escapeXml(l)}</text>`,
     )
     .join("")}
 
   ${aLines
     .map(
       (l, i) =>
-        `<text x="80" y="${aY + i * 44}" font-family="ui-sans-serif,system-ui,sans-serif" font-size="32" fill="#D8DEEE">${escapeXml(l)}</text>`,
+        `<text x="80" y="${aY + i * 38}" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28" fill="#D8DEEE">${escapeXml(l)}</text>`,
     )
     .join("")}
 
-  <!-- QR code with white card -->
-  <g transform="translate(${qrX - 20}, ${qrY - 20})">
-    <rect width="${qrSize + 40}" height="${qrSize + 40}" rx="16" fill="#FFFFFF"/>
+  <!-- QR code with white rounded card -->
+  <g transform="translate(${qrX - 16}, ${qrY - 16})">
+    <rect width="${qrSize + 32}" height="${qrSize + 32}" rx="14" fill="#FFFFFF"/>
   </g>
   <g transform="translate(${qrX}, ${qrY})">${qrInner}</g>
+  <text x="${qrX + qrSize / 2}" y="${qrY + qrSize + 38}" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" fill="#A9B1C9">扫码做这道题</text>
 
   <line x1="80" y1="540" x2="1120" y2="540" stroke="#3A4366" stroke-width="1"/>
-  <text x="80" y="585" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" fill="#A9B1C9">扫码做题 · 答对解锁全部解析</text>
+  <text x="80" y="585" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" fill="#A9B1C9">答对解锁全部解析 · 5 分钟搞懂一个考点</text>
   <text x="1120" y="585" text-anchor="end" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" fill="#F5C66B">bigmoonenglish.com</text>
 </svg>`;
 }

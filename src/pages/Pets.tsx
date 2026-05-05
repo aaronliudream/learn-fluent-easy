@@ -31,6 +31,7 @@ type Tab = "home" | "shop" | "outing" | "adopt" | "skin" | "diary";
 
 export default function Pets() {
   const t = useT();
+  const { lang } = useI18n();
   const [authed, setAuthed] = useState<boolean|null>(null);
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState<Tab>("home");

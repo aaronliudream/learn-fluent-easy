@@ -58,7 +58,7 @@ function splitSentences(text: string): string[] {
 }
 
 function collectSlang(): string[] {
-  return uniq(IDIOMS.flatMap((i) => [i.example, i.phrase]));
+  return uniq(IDIOMS.flatMap((i) => [i.example, i.phrase])).filter(isEnglish);
 }
 
 function collectLessonSamples(): string[] {
@@ -69,7 +69,7 @@ function collectLessonSamples(): string[] {
     out.push(sample);
     out.push(...splitSentences(sample));
   }
-  return uniq(out);
+  return uniq(out).filter(isEnglish);
 }
 
 function collectPlacement(): string[] {
@@ -78,7 +78,7 @@ function collectPlacement(): string[] {
     if (q.context) out.push(...splitSentences(q.context));
     if (q.prompt) out.push(q.prompt);
   }
-  return uniq(out);
+  return uniq(out).filter(isEnglish);
 }
 
 function collectCourse(): string[] {
@@ -95,7 +95,7 @@ function collectCourse(): string[] {
       }
     }
   }
-  return uniq(out);
+  return uniq(out).filter(isEnglish);
 }
 
 // IELTS examiner Part 1 / 2 / 3 prompts are loaded dynamically by the

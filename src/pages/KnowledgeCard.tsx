@@ -8,7 +8,7 @@ import { Heart, Lock, Share2, Sparkles, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 
 type Quiz = { q: string; options: string[]; answer: number; explain?: string };
-type Card = {
+type CardData = {
   id: string;
   slug: string;
   question: string;

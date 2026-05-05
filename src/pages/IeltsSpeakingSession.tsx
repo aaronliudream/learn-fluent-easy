@@ -507,15 +507,16 @@ function IeltsSpeakingSessionContent() {
           <>
             {isConnected && (
               <button
-                onMouseDown={startRecording}
-                onMouseUp={stopRecording}
-                onMouseLeave={recording ? stopRecording : undefined}
-                onTouchStart={(e) => { e.preventDefault(); startRecording(); }}
-                onTouchEnd={(e) => { e.preventDefault(); stopRecording(); }}
+                onPointerDown={(e) => { e.preventDefault(); (e.currentTarget as HTMLButtonElement).setPointerCapture?.(e.pointerId); startRecording(); }}
+                onPointerUp={(e) => { e.preventDefault(); stopRecording(); }}
+                onPointerCancel={(e) => { e.preventDefault(); if (recording) stopRecording(); }}
+                onContextMenu={(e) => e.preventDefault()}
                 disabled={!isYourTurn && !recording}
-                className={`inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-bold shadow-lg transition disabled:opacity-40 ${recording ? "bg-rose-500 text-white" : "bg-primary text-primary-foreground hover:bg-primary/90"}`}
+                style={{ WebkitUserSelect: "none", userSelect: "none", WebkitTouchCallout: "none", touchAction: "none" }}
+                className={`select-none inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-bold shadow-lg transition disabled:opacity-40 ${recording ? "bg-rose-500 text-white" : "bg-primary text-primary-foreground hover:bg-primary/90"}`}
               >
-                <Mic className="size-5" /> {recording ? "松开发送回答" : "按住回答"}
+                <Mic className="pointer-events-none size-5" />
+                <span className="pointer-events-none select-none">{recording ? "松开发送回答" : "按住回答"}</span>
               </button>
             )}
             <button

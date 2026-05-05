@@ -423,13 +423,22 @@ function IeltsSpeakingSessionContent() {
 
       {/* Hang up + grade */}
       <div className="flex justify-center">
-        <button
-          onClick={hangUp}
-          disabled={!isConnected && !connecting}
-          className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-rose-600 disabled:opacity-40"
-        >
-          <PhoneOff className="size-5" /> 挂断结束 · 自动评分
-        </button>
+        {isConnected || connecting ? (
+          <button
+            onClick={hangUp}
+            disabled={!isConnected && !connecting}
+            className="inline-flex items-center gap-2 rounded-full bg-rose-500 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:bg-rose-600 disabled:opacity-40"
+          >
+            <PhoneOff className="size-5" /> 挂断结束 · 自动评分
+          </button>
+        ) : (
+          <button
+            onClick={startCall}
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-bold text-primary-foreground shadow-lg transition hover:bg-primary/90"
+          >
+            <Mic className="size-5" /> 接通 AI 考官
+          </button>
+        )}
       </div>
     </main>
   );

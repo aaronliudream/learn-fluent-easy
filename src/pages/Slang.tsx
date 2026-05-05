@@ -17,7 +17,7 @@ import {
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
-import { speak } from "@/lib/speak";
+import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { toast } from "sonner";
 import { T, useT } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";

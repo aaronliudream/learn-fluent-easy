@@ -247,9 +247,9 @@ export const TodayTaskCard = () => {
   return (
     <section
       aria-label={t("今日任务")}
-      className="relative mb-6 overflow-hidden rounded-3xl border border-border bg-card p-5 shadow-tile md:p-6"
+      className="relative mb-6 overflow-hidden rounded-2xl border border-border/60 bg-card/70 p-4 shadow-sm md:p-5"
     >
-      <span aria-hidden className="pointer-events-none absolute -right-16 -top-16 size-48 rounded-full bg-primary/15 blur-3xl" />
+      <span aria-hidden className="pointer-events-none absolute -right-16 -top-16 size-40 rounded-full bg-primary/8 blur-3xl" />
 
       <div className="relative flex items-start justify-between gap-4">
         <button
@@ -267,7 +267,7 @@ export const TodayTaskCard = () => {
               </span>
             )}
           </div>
-          <h2 className="mt-1 text-xl font-extrabold leading-tight md:text-2xl">
+          <h2 className="mt-1 text-base font-bold leading-tight md:text-lg">
             {allDone
               ? <T>🎉 今日目标达成!</T>
               : (studiedToday ? <T>今天已经开练了 👏</T> : <T>今天先做这 3 件小事</T>)}

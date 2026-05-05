@@ -139,7 +139,7 @@ export default function TeacherCards() {
           </h2>
           {rows.map((r) => (
             <Link
-              to={`/q/${r.slug}`}
+              to={`/teacher/cards/${r.slug}`}
               key={r.id}
               className="block group"
             >

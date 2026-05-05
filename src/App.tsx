@@ -86,6 +86,7 @@ const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 const Social = lazy(() => import("./pages/Social.tsx"));
 const Ask = lazy(() => import("./pages/Ask.tsx"));
 const TeacherCards = lazy(() => import("./pages/TeacherCards.tsx"));
+const TeacherCardStats = lazy(() => import("./pages/TeacherCardStats.tsx"));
 const KnowledgeCard = lazy(() => import("./pages/KnowledgeCard.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import FeedbackWidget from "@/components/FeedbackWidget";
@@ -182,6 +183,7 @@ const App = () => (
           <Route path="/ask" element={<Ask />} />
           <Route path="/q/:slug" element={<KnowledgeCard />} />
           <Route path="/teacher/cards" element={<TeacherCards />} />
+          <Route path="/teacher/cards/:slug" element={<TeacherCardStats />} />
           <Route path="/scenes/:catKey" element={<ScenesCategory />} />
           <Route path="/scenes/:catKey/:dialogueId" element={<ScenesPlay />} />
           <Route path="/workplace" element={<Workplace />} />

@@ -322,7 +322,8 @@ function IeltsSpeakingSessionContent() {
       toast.success("评分完成 🎯");
     } catch (e: any) {
       console.error(e);
-      toast.error("评分失败：" + (e?.message || ""));
+      toast.error("评分失败：" + (e?.message || "未知错误，请稍后在历史里重试"));
+      setErrorMsg("评分失败：" + (e?.message || "请稍后再试"));
     } finally {
       setGrading(false);
     }

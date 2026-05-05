@@ -91,6 +91,7 @@ const TeacherCardStats = lazy(() => import("./pages/TeacherCardStats.tsx"));
 const KnowledgeCard = lazy(() => import("./pages/KnowledgeCard.tsx"));
 const IeltsSpeaking = lazy(() => import("./pages/IeltsSpeaking.tsx"));
 const IeltsSpeakingSession = lazy(() => import("./pages/IeltsSpeakingSession.tsx"));
+const Pricing = lazy(() => import("./pages/Pricing.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import FeedbackWidget from "@/components/FeedbackWidget";
 import InstallPrompt from "@/components/InstallPrompt";
@@ -251,6 +252,7 @@ const App = () => (
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />
           <Route path="/admin/feedback" element={<AdminFeedback />} />
+          <Route path="/pricing" element={<Pricing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

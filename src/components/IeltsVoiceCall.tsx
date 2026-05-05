@@ -65,17 +65,7 @@ function IeltsVoiceCallContent({ open, onClose, targetBand, currentPart, onTrans
   const start = useCallback(async () => {
     setConnecting(true);
     try {
-      await navigator.mediaDevices.getUserMedia({ audio: true });
-      conversation.startSession({
-        overrides: {
-          agent: {
-            firstMessage:
-              partRef.current === 1
-                ? "Good morning. My name is Daniel, and I'll be your examiner today. Could you please tell me your full name?"
-                : "Let's continue. I'd like to ask you a few more questions.",
-          },
-        },
-      });
+      conversation.startSession();
     } catch (e: any) {
       console.error(e);
       toast.error("无法启动语音：" + (e?.message || "未知错误"), { duration: 8000 });

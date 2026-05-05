@@ -185,6 +185,7 @@ function UnderstandStep({ step, onNext }: { step: Step; onNext: () => void }) {
 function QuizRunner({ questions, accent, onDone, label }: {
   questions: { q: string; options: string[]; answer: number }[];
   accent: string; onDone: (r: { correct: number; total: number }) => void; label: string;
+  onWrong?: (q: { q: string; options: string[]; answer: number }, picked: number) => void;
 }) {
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
@@ -199,6 +200,24 @@ function QuizRunner({ questions, accent, onDone, label }: {
     const next = { c: score.c + (ok ? 1 : 0), t: score.t + 1 };
     setScore(next);
     if (/^[a-zA-Z ,.'!?-]+$/.test(cur.q)) speak(cur.q);
+    if (!ok) {
+      // best-effort: log to mistake book
+      try {
+        (async () => {
+          const { data: u } = await supabase.auth.getUser();
+          if (!u?.user) return;
+          await supabase.from("user_mistakes").upsert({
+            user_id: u.user.id,
+            module: "primary_lesson",
+            source_key: `${cur.q.slice(0, 60)}`,
+            question: cur.q,
+            user_answer: cur.options[k] ?? null,
+            correct_answer: cur.options[cur.answer] ?? null,
+            snapshot: { q: cur, label } as any,
+          } as any, { onConflict: "user_id,module,source_key" });
+        })();
+      } catch { /* noop */ }
+    }
     setTimeout(() => {
       if (i + 1 >= questions.length) onDone({ correct: next.c, total: next.t });
       else { setI(i + 1); setPicked(null); }

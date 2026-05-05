@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Mic, Sparkles, Trophy, History, Target, BookOpen } from "lucide-react";
+import { Mic, Sparkles, Trophy, History, Target, BookOpen, TrendingUp, AlertCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import { toast } from "sonner";
@@ -26,6 +26,13 @@ type RecentSession = {
   created_at: string;
 };
 
+type ErrorRow = {
+  id: string;
+  ielts_dimension: string;
+  next_review_at: string;
+  is_resolved: boolean;
+};
+
 export default function IeltsSpeaking() {
   const nav = useNavigate();
   const [authed, setAuthed] = useState<boolean | null>(null);
@@ -33,6 +40,8 @@ export default function IeltsSpeaking() {
   const [mode, setMode] = useState<"training" | "mock_test" | "review">("training");
   const [topic, setTopic] = useState(TOPICS[0]);
   const [recent, setRecent] = useState<RecentSession[]>([]);
+  const [dueErrors, setDueErrors] = useState<number>(0);
+  const [bandHistory, setBandHistory] = useState<{ band: number; at: string }[]>([]);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -47,11 +56,42 @@ export default function IeltsSpeaking() {
       .order("created_at", { ascending: false })
       .limit(5)
       .then(({ data }) => setRecent(data || []));
+
+    supabase.from("ielts_sessions")
+      .select("overall_band, completed_at")
+      .eq("status", "graded")
+      .not("overall_band", "is", null)
+      .order("completed_at", { ascending: true })
+      .limit(20)
+      .then(({ data }) => setBandHistory((data || []).map((d: any) => ({ band: Number(d.overall_band), at: d.completed_at }))));
+
+    supabase.from("ielts_errors")
+      .select("id", { count: "exact", head: true })
+      .eq("is_resolved", false)
+      .lte("next_review_at", new Date().toISOString())
+      .then(({ count }) => setDueErrors(count || 0));
   }, [authed]);
+
+  const trendPath = useMemo(() => {
+    if (bandHistory.length < 2) return "";
+    const W = 280, H = 60, P = 4;
+    const min = Math.min(...bandHistory.map((p) => p.band)) - 0.5;
+    const max = Math.max(...bandHistory.map((p) => p.band)) + 0.5;
+    const range = Math.max(0.5, max - min);
+    return bandHistory.map((p, i) => {
+      const x = P + (i * (W - 2 * P)) / (bandHistory.length - 1);
+      const y = H - P - ((p.band - min) / range) * (H - 2 * P);
+      return `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(" ");
+  }, [bandHistory]);
 
   const start = async () => {
     if (!authed) {
       toast("请先登录后开始练习", { action: { label: "去登录", onClick: () => nav("/auth") } });
+      return;
+    }
+    if (mode === "review" && dueErrors === 0) {
+      toast("还没有到期的错题，先完成一次练习生成错题本吧");
       return;
     }
     const { data: { user } } = await supabase.auth.getUser();
@@ -98,6 +138,37 @@ export default function IeltsSpeaking() {
           </div>
         </div>
       </section>
+
+      {/* Stats: trend + due errors */}
+      {(bandHistory.length > 0 || dueErrors > 0) && (
+        <section className="mb-6 grid gap-3 md:grid-cols-2">
+          <div className="rounded-2xl border border-border bg-card p-4 shadow-card">
+            <div className="mb-1 flex items-center gap-1.5 text-xs font-bold text-muted-foreground">
+              <TrendingUp className="size-3.5 text-primary" /> 最近 Band 走势
+            </div>
+            {bandHistory.length >= 2 ? (
+              <>
+                <svg viewBox="0 0 280 60" className="h-14 w-full">
+                  <path d={trendPath} fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <div className="mt-1 flex justify-between text-[10px] text-muted-foreground">
+                  <span>{bandHistory.length} 次</span>
+                  <span>最新 Band {bandHistory[bandHistory.length - 1].band.toFixed(1)}</span>
+                </div>
+              </>
+            ) : (
+              <div className="text-xs text-muted-foreground">完成 2 次以上练习后显示走势</div>
+            )}
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-4 shadow-card">
+            <div className="mb-1 flex items-center gap-1.5 text-xs font-bold text-muted-foreground">
+              <AlertCircle className="size-3.5 text-amber-500" /> 待复习错题
+            </div>
+            <div className="text-3xl font-black text-amber-600">{dueErrors}</div>
+            <div className="mt-1 text-xs text-muted-foreground">基于 FSRS 间隔重复算法 · 选「错题复习」模式即可针对性练习</div>
+          </div>
+        </section>
+      )}
 
       {/* Target band */}
       <section className="mb-5">

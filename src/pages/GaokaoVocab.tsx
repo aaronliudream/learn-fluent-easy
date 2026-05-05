@@ -414,6 +414,9 @@ function GroupList({
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);
+  const [sp] = useSearchParams();
+  const gradeParam = sp.get("grade");
+  const gradeNum = gradeParam ? Number(gradeParam) : null;
 
   useEffect(() => {
     (async () => {

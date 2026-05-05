@@ -3,6 +3,8 @@ project_id = "fottntyhwolbsdvkwriq"
 [functions]
   [functions.card-og]
     verify_jwt = false
+  [functions.card-og-image]
+    verify_jwt = false
   [functions.auth-email-hook]
     verify_jwt = false
   [functions.check-writing]

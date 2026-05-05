@@ -230,7 +230,9 @@ export default function IeltsSpeakingSession() {
     await sendToExaminer(next, currentPart);
   }, [input, streaming, session, messages, currentPart, persist, sendToExaminer]);
 
-  // Voice input via Web Speech API
+  // Voice input via Web Speech API.
+  // UX: tap mic → speak → tap mic again to STOP and AUTO-SEND.
+  const sendRef = useRef<(text: string) => void>();
   const toggleRecord = useCallback(() => {
     const SR: any = (window as any).webkitSpeechRecognition || (window as any).SpeechRecognition;
     if (!SR) { toast.error("浏览器不支持语音输入，请用 Chrome 或 Edge"); return; }
@@ -243,16 +245,24 @@ export default function IeltsSpeakingSession() {
     rec.lang = "en-US";
     rec.continuous = true;
     rec.interimResults = true;
+    let collected = "";
     rec.onresult = (e: any) => {
       let final = "";
       for (let i = e.resultIndex; i < e.results.length; i++) {
         const r = e.results[i];
         if (r.isFinal) final += r[0].transcript;
       }
-      if (final) setInput((prev) => (prev ? prev + " " : "") + final.trim());
+      if (final) {
+        collected = (collected ? collected + " " : "") + final.trim();
+        setInput(collected);
+      }
     };
     rec.onerror = (e: any) => { console.error("speech err", e); setRecording(false); };
-    rec.onend = () => setRecording(false);
+    rec.onend = () => {
+      setRecording(false);
+      const text = collected.trim();
+      if (text) setTimeout(() => sendRef.current?.(text), 0);
+    };
     rec.start();
     recognitionRef.current = rec;
     setRecording(true);

@@ -129,10 +129,11 @@ Generate the full learning corpus JSON now.`;
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
-  if (req.headers.get("x-seed-token") !== SEED_TOKEN) {
-    return new Response("forbidden", { status: 403, headers: corsHeaders });
-  }
   const url = new URL(req.url);
+  const token = req.headers.get("x-seed-token") ?? url.searchParams.get("token");
+  if (token !== SEED_TOKEN) {
+    return new Response(JSON.stringify({ error: "forbidden", got: token }), { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+  }
   const table = url.searchParams.get("table") === "junior" ? "junior_grammar_points" : "gaokao_grammar_points";
   const isJunior = table === "junior_grammar_points";
   const batch = Math.min(parseInt(url.searchParams.get("batch") || "20"), 50);

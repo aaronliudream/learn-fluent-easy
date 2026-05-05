@@ -28,6 +28,12 @@ type CardData = {
 
 export default function KnowledgeCard() {
   const { slug } = useParams();
+  // English-only text for TTS. Returns "" if no usable English content.
+  const ttsText = (c: CardData | null) => {
+    if (!c) return "";
+    const isEn = (s: string) => /[a-zA-Z]/.test(s) && !/[\u4e00-\u9fff]/.test(s);
+    return c.examples?.find(isEn) || (isEn(c.short_answer) ? c.short_answer : "") || "";
+  };
   const navigate = useNavigate();
   const [card, setCard] = useState<CardData | null>(null);
   const [loading, setLoading] = useState(true);

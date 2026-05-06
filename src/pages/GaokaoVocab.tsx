@@ -22,6 +22,8 @@ import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import NextStepHint from "@/components/vocab/NextStepHint";
+import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
+import { computeMasteryScore as _cms, type MasteryMatrix as _MM } from "@/lib/masteryScore";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
@@ -338,7 +340,8 @@ export default function GaokaoVocab() {
   if (loading) return <p className="p-8 text-sm text-muted-foreground">加载中...</p>;
 
   if (mode === "srs") {
-    return <SrsReviewSession pool={allVocab} onExit={() => setParams({})} />;
+    const focus = params.get("focus") === "retention" ? "retention" : undefined;
+    return <SrsReviewSession pool={allVocab} onExit={() => setParams({})} focus={focus} />;
   }
 
   if (mode === "rush") {

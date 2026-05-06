@@ -262,27 +262,6 @@ export default function GlobalParent() {
                 </div>
               );
             })}
-            {activeTracks.map(k => {
-              const M = TRACK_META[k];
-              const mins = (d.minutes_by_segment as any)[k] ?? 0;
-              const pct = Math.round((mins / Math.max(1, segTotal)) * 100);
-              return (
-                <div key={k}>
-                  <div className="flex items-center justify-between text-xs font-bold">
-                    <span className="inline-flex items-center gap-1.5">
-                      <span className={cn("inline-grid size-5 place-items-center rounded bg-gradient-to-br text-white", M.color)}>
-                        <M.icon className="size-3" />
-                      </span>
-                      <T>{M.labelKey}</T>
-                    </span>
-                    <span className="text-muted-foreground">{fmtMinutes(mins)} · {pct}%</span>
-                  </div>
-                  <div className="mt-1 h-2 overflow-hidden rounded-full bg-secondary">
-                    <div className={cn("h-full bg-gradient-to-r transition-all", M.color)} style={{ width: `${pct}%` }} />
-                  </div>
-                </div>
-              );
-            })}
         </div>
       </section>
       )}
@@ -297,7 +276,6 @@ export default function GlobalParent() {
         <div className="space-y-2">
           {(() => {
             const rows: { key: string; label: string; correct: number; total: number; color: string }[] = [];
-            if (slangAcc && slangAcc.total > 0) rows.push({ key: "slang", label: t("Slang & Idioms"), correct: slangAcc.correct, total: slangAcc.total, color: "from-fuchsia-500 to-purple-500" });
             if (d.primary.sessions > 0) rows.push({ key: "primary", label: t("小学 / Primary"), correct: Math.round(d.primary.sessions * d.primary.accuracy), total: d.primary.sessions, color: "from-sky-500 to-cyan-500" });
             if (d.junior.sessions > 0) rows.push({ key: "junior", label: t("初中 / Lower Secondary"), correct: Math.round(d.junior.sessions * d.junior.accuracy), total: d.junior.sessions, color: "from-violet-500 to-indigo-500" });
             if (d.gaokao.attempts > 0) rows.push({ key: "gaokao", label: t("高中 / Upper Secondary"), correct: d.gaokao.correct, total: d.gaokao.attempts, color: "from-rose-500 to-orange-500" });
@@ -418,39 +396,6 @@ export default function GlobalParent() {
           />
         )}
       </section>
-      )}
-
-      {/* 其它学习轨迹（商务、场景、AI 口语、系统课、俚语…） */}
-      {activeTracks.length > 0 && (
-        <section className={cn(
-          "mb-4 grid gap-3",
-          activeTracks.length === 1 ? "md:grid-cols-1" :
-          activeTracks.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"
-        )}>
-          {activeTracks.map(k => {
-            const M = TRACK_META[k];
-            const mins = (d.minutes_by_segment as any)[k] ?? 0;
-            const a = tracksAct[k] ?? { days: 0, items: 0 };
-            return (
-              <div key={k} className="rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
-                <div className="mb-3 flex items-center gap-2">
-                  <div className={cn("grid size-9 place-items-center rounded-xl bg-gradient-to-br text-white shadow", M.color)}>
-                    <M.icon className="size-4" />
-                  </div>
-                  <div className="text-sm font-extrabold"><T>{M.labelKey}</T></div>
-                </div>
-                <div className="mb-3 rounded-2xl bg-secondary/50 p-2 text-center">
-                  <div className="text-[10px] text-muted-foreground"><T>有效学习</T></div>
-                  <div className="text-2xl font-black">{fmtMinutes(mins)}</div>
-                  <div className="text-[10px] text-muted-foreground"><T>活跃天数</T> {a.days} · <T>已学条目</T> {a.items}</div>
-                </div>
-                <Link to={M.route} className={cn("mt-1 block rounded-xl bg-gradient-to-r py-2 text-center text-xs font-extrabold text-white shadow", M.color)}>
-                  <T>继续学习</T> →
-                </Link>
-              </div>
-            );
-          })}
-        </section>
       )}
 
       {/* 每日学习时长曲线 */}

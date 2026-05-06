@@ -72,7 +72,7 @@ export default function Junior() {
             <Link
               key={m.title}
               to={m.to}
-              className={`relative flex items-center gap-4 overflow-hidden rounded-${m.hero ? "3xl p-5" : "2xl p-4"} bg-gradient-to-br ${m.gradient} text-white shadow-tile transition hover:-translate-y-0.5`}
+              className={`relative flex items-center gap-4 overflow-hidden ${m.hero ? "rounded-3xl p-5" : "rounded-2xl p-4"} bg-gradient-to-br ${m.gradient} text-white shadow-tile transition hover:-translate-y-0.5`}
             >
               <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
               <div className={`relative grid ${m.hero ? "size-16 text-4xl" : "size-12"} shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm`}>

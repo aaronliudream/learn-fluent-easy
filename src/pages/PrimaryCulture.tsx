@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { ArrowLeft, Volume2, Award, Sparkles, Check, Eye, Ear, GitCompare, Gamepad2, Mic } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { PRIMARY_CULTURE_CARDS, CULTURE_CATEGORIES, type CultureCard } from "@/data/primaryCultureCards";
+import RolePlayTheater from "@/components/RolePlayTheater";
 
 const STAMP_KEY = "primary_culture_stamps_v1";
 

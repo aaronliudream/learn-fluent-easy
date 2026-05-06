@@ -8,6 +8,7 @@ import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
+import { markBrowseDone } from "@/components/primary/MasteryPath";
 
 type Vocab = {
   id: string;
@@ -32,6 +33,8 @@ export default function PrimaryVocab() {
     lockedGrade ?? Number(localStorage.getItem("primary:lastGrade") ?? "1")
   );
   useEffect(() => { if (lockedGrade) setGrade(lockedGrade); }, [lockedGrade]);
+  // 进入词汇浏览即视为完成「① 认词」这一步
+  useEffect(() => { if (mode === "browse") markBrowseDone(grade); }, [mode, grade]);
   const [activeTheme, setActiveTheme] = useState<string>("all");
   const [mode, setMode] = useState<Mode>(focus === "weak" ? "quiz" : "browse");
   const [loading, setLoading] = useState(true);

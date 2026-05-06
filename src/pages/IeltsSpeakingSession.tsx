@@ -340,6 +340,22 @@ function IeltsSpeakingSessionContent() {
       const { data: fresh } = await supabase.from("ielts_sessions").select("*").eq("id", id).maybeSingle();
       if (fresh) setSession(fresh as unknown as SessionRow);
       toast.success("评分完成 🎯");
+      // Average band → percent for celebration
+      try {
+        const fb = (fresh as any)?.feedback;
+        const scores = fb?.scores;
+        if (scores && typeof scores === "object") {
+          const bands = Object.values(scores)
+            .map((s: any) => Number(s?.band))
+            .filter((n) => !isNaN(n) && n > 0);
+          if (bands.length) {
+            const avg = bands.reduce((a, b) => a + b, 0) / bands.length;
+            const pct = Math.min(100, Math.round((avg / 9) * 100));
+            const f = await import("@/lib/feedback");
+            f.celebrateScore(pct, { silent: true });
+          }
+        }
+      } catch { /* ignore */ }
     } catch (e: any) {
       console.error(e);
       toast.error("评分失败：" + (e?.message || "未知错误，请稍后在历史里重试"));

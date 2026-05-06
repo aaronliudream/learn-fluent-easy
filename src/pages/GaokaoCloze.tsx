@@ -165,7 +165,7 @@ export default function GaokaoCloze() {
       <BackLink to="/gaokao" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回高考英语
       </BackLink>
-      <PageHeader title="完形填空" subtitle="高一基础册 · 16 篇话题精讲（已上线 6 篇，更多陆续添加）" hideReviewBanner />
+      <PageHeader back="/gaokao" title="完形填空" subtitle="高一基础册 · 16 篇话题精讲（已上线 6 篇，更多陆续添加）" hideReviewBanner />
 
       <Link
         to="/gaokao/mistakes"

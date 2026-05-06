@@ -1,6 +1,8 @@
-import { ArrowLeft, Home, Star, Brain, MoreVertical, Globe, Settings2 } from "lucide-react";
+import { ArrowLeft, Home, Star, Brain, MoreVertical, Globe, Settings2, UserCog, LogOut, LogIn } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,6 +32,7 @@ export const PageHeader = ({ title, subtitle, back, hideReviewBanner }: Props) =
   const [due, setDue] = useState(0);
   const [voiceOpen, setVoiceOpen] = useState(false);
   const { lang, setLang, markPicked } = useI18n();
+  const [loggedIn, setLoggedIn] = useState(false);
 
   // Light poll: fetch the due review count once when header mounts.
   useEffect(() => {
@@ -41,6 +44,25 @@ export const PageHeader = ({ title, subtitle, back, hideReviewBanner }: Props) =
       cancelled = true;
     };
   }, []);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => setLoggedIn(!!session));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_e, session) => setLoggedIn(!!session),
+    );
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleSwitchAccount = async () => {
+    await supabase.auth.signOut();
+    toast.success("已退出，请用其他账号登录");
+    nav("/auth");
+  };
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    toast.success("已退出登录");
+    nav("/");
+  };
 
   return (
     <header className="mb-6">
@@ -120,6 +142,31 @@ export const PageHeader = ({ title, subtitle, back, hideReviewBanner }: Props) =
                 <Star className="size-4 text-amber-500" /> 我的收藏
               </Link>
             </DropdownMenuItem>
+
+            <DropdownMenuSeparator />
+
+            {loggedIn ? (
+              <>
+                <DropdownMenuItem
+                  onSelect={(e) => { e.preventDefault(); handleSwitchAccount(); }}
+                  className="flex items-center gap-2"
+                >
+                  <UserCog className="size-4" /> 切换账号
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onSelect={(e) => { e.preventDefault(); handleSignOut(); }}
+                  className="flex items-center gap-2 text-destructive focus:text-destructive"
+                >
+                  <LogOut className="size-4" /> 退出登录
+                </DropdownMenuItem>
+              </>
+            ) : (
+              <DropdownMenuItem asChild>
+                <Link to="/auth" className="flex items-center gap-2">
+                  <LogIn className="size-4" /> 登录
+                </Link>
+              </DropdownMenuItem>
+            )}
 
             <DropdownMenuSeparator />
 

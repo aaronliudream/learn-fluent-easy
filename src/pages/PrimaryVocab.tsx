@@ -33,10 +33,10 @@ export default function PrimaryVocab() {
     lockedGrade ?? Number(localStorage.getItem("primary:lastGrade") ?? "1")
   );
   useEffect(() => { if (lockedGrade) setGrade(lockedGrade); }, [lockedGrade]);
-  // 进入词汇浏览即视为完成「① 认词」这一步
-  useEffect(() => { if (mode === "browse") markBrowseDone(grade); }, [mode, grade]);
   const [activeTheme, setActiveTheme] = useState<string>("all");
   const [mode, setMode] = useState<Mode>(focus === "weak" ? "quiz" : "browse");
+  // 进入词汇浏览即视为完成「① 认词」这一步
+  useEffect(() => { if (mode === "browse") markBrowseDone(grade); }, [mode, grade]);
   const [loading, setLoading] = useState(true);
   const [weakIds, setWeakIds] = useState<Set<string> | null>(null);
 

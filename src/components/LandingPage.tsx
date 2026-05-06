@@ -15,7 +15,7 @@ import SpeakingDemo from "@/components/SpeakingDemo";
  */
 const EN_COPY: Record<string, string> = {
   "登录": "Log in",
-  "已在 184 个国家上线": "Live in 184 countries",
+  "已在 184 个国家上线": "Built for learners worldwide",
   "说英语": "Speak English",
   "像玩游戏一样上头。": "the way you play your favorite game.",
   "5 分钟一节的小课、即时口语反馈、连胜系统让你真的停不下来。每天 5 分钟，就能开始。":

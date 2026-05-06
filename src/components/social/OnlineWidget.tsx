@@ -5,19 +5,9 @@ import { getOnlineCount, pingPresence } from "@/lib/social";
 
 /** 浮动展示在线学员人数 + 学习动态滚动 */
 export default function OnlineWidget({ grade, page }: { grade?: string; page?: string }) {
-  const [count, setCount] = useState<number>(0);
-
-  useEffect(() => {
-    let cancelled = false;
-    const tick = async () => {
-      await pingPresence(grade, page);
-      const n = await getOnlineCount();
-      if (!cancelled) setCount(n);
-    };
-    tick();
-    const t = setInterval(tick, 60_000);
-    return () => { cancelled = true; clearInterval(t); };
-  }, [grade, page]);
+  // 早期阶段隐藏在线人数 / 社交证明，等 DAU 上来后再开
+  void grade; void page;
+  return null;
 
   return (
     <Link

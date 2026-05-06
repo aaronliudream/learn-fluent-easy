@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, Trophy, Heart, Sparkles } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
+import { ContinueCard } from "@/components/mastery/ContinueCard";
 
 const GRADES = [
   { grade: 1, title: "高一 · Grade 10", subtitle: "起步年级 · 词汇基础 + 语法搭建", gradient: "from-emerald-500 via-teal-500 to-cyan-500", emoji: "🌱" },
@@ -18,6 +19,10 @@ export default function Gaokao() {
       </BackLink>
       <PageHeader title="高中英语" hideReviewBanner />
       <p className="mt-1 text-sm text-muted-foreground">按年级进入：核心词汇 · 语法 · 阅读 · 完形 · 写作 · 听力</p>
+
+      <div className="mt-4">
+        <ContinueCard stage="gaokao" />
+      </div>
 
       <section className="mt-5 grid gap-3">
         {GRADES.map((g) => (

@@ -1,4 +1,4 @@
-import { Home, BookOpen, Bot, Trophy, User } from "lucide-react";
+import { Home, BookOpen, Bot, BarChart3, User } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useT } from "@/i18n/T";
 
@@ -29,7 +29,7 @@ const TABS = [
       p.startsWith("/scenes") ||
       p.startsWith("/workplace"),
   },
-  { to: "/leaderboard", label: "Leaderboard", icon: Trophy, match: (p: string) => p.startsWith("/leaderboard") || p.startsWith("/review") },
+  { to: "/dashboard", label: "Progress", icon: BarChart3, match: (p: string) => p.startsWith("/dashboard") || p.startsWith("/leaderboard") || p.startsWith("/review") },
   { to: "/account", label: "Me", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
 ];
 

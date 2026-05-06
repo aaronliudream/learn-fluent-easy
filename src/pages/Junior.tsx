@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import { ArrowLeft, Trophy, Heart, Sparkles } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
+import { ContinueCard } from "@/components/mastery/ContinueCard";
 
 const GRADES = [
   {
@@ -43,6 +44,8 @@ export default function Junior() {
           按年级进入：核心词汇游戏 · 中考语法 · 阅读 · 听力 · 写作
         </p>
       </div>
+
+      <ContinueCard stage="junior" />
 
       <section className="grid gap-3">
         {GRADES.map((g) => (

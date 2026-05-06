@@ -371,7 +371,11 @@ function QuizMode({ words }: { words: Vocab[] }) {
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
     if (cur.type !== "listen2en") speak(cur.word.word);
     await Promise.all([
-      bumpVocabMastery({ vocabId: cur.word.id, isCorrect: correct, kind: cur.type }).catch(() => {}),
+      bumpVocabMastery({
+        vocabId: cur.word.id,
+        isCorrect: correct,
+        kind: cur.type === "listen2en" ? "listen" : cur.type,
+      }).catch(() => {}),
       recordAttempt({
         questionType: "vocab",
         questionId: cur.word.id,
@@ -437,7 +441,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
       </div>
 
       <div className="grid gap-2 sm:grid-cols-2">
-        {options.map((m) => {
+        {cur.options.map((m) => {
           const isCorrect = m === cur.answer;
           const showRight = picked && isCorrect;
           const showWrong = picked === m && !isCorrect;

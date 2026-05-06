@@ -233,29 +233,6 @@ const Index = () => {
         </section>
       )}
 
-      {/* New-learner welcome ribbon — replaces the depressing "0 streak / 0 minutes"
-          state for users who haven't done anything yet. (ARCS - Confidence) */}
-      {user && (stats?.current_streak ?? 0) === 0 && (
-        <section className="mb-6 mt-4 overflow-hidden rounded-2xl border-2 border-amber-300/60 bg-gradient-to-br from-amber-50 to-orange-50 p-5 shadow-sm dark:border-amber-500/30 dark:from-amber-950/40 dark:to-orange-950/40">
-          <div className="flex items-start gap-4">
-            <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-md">
-              <Sparkles className="size-6" />
-            </div>
-            <div className="flex-1">
-              <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">
-                <T>Welcome aboard</T>
-              </div>
-              <div className="mt-0.5 text-lg font-extrabold leading-tight">
-                <T>Complete your first lesson and light up your first star ⭐</T>
-              </div>
-              <div className="mt-1 text-xs text-muted-foreground">
-                <T>Build your first-day streak in five minutes, then improve a little every night.</T>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* Unlogged visitors: free CEFR diagnosis hero — cold-start lever */}
       {!user && (
         <Link

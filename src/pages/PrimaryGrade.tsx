@@ -25,46 +25,6 @@ const CEFR_BY_GRADE: Record<number, { label: string; cn: string; goal: string }>
   6: { label: "A2", cn: "基础阶段", goal: "课标三级 · 累计认读约 700 词" },
 };
 
-// 教育学推荐学习路径：输入 → 内化 → 输出
-const LEARNING_PATH = [
-  {
-    stage: 1, emoji: "👂", title: "听一听", subtitle: "Listen",
-    desc: "听字母 · 听单词 · 听小故事",
-    bg: "from-sky-300 to-cyan-400", ring: "ring-sky-300",
-    items: [
-      { label: "🔤 字母歌", to: (g: number) => `/primary/games/${g}/listen` },
-      { label: "🎧 听词选图", to: (g: number) => `/primary/games/${g}/listen` },
-    ],
-  },
-  {
-    stage: 2, emoji: "👀", title: "看一看", subtitle: "Look",
-    desc: "看图认词 · 翻牌配对",
-    bg: "from-amber-300 to-orange-400", ring: "ring-amber-300",
-    items: [
-      { label: "📚 图卡词汇", to: (g: number) => `/primary/vocab/${g}` },
-      { label: "🃏 翻牌找朋友", to: (g: number) => `/primary/games/${g}` },
-    ],
-  },
-  {
-    stage: 3, emoji: "✋", title: "玩一玩", subtitle: "Play",
-    desc: "拖字母拼单词 · 闯关得星",
-    bg: "from-violet-300 to-fuchsia-400", ring: "ring-fuchsia-300",
-    items: [
-      { label: "🧩 拼字母", to: (g: number) => `/primary/games/${g}/spell` },
-      { label: "🎮 游戏中心", to: (g: number) => `/primary/games/${g}` },
-    ],
-  },
-  {
-    stage: 4, emoji: "🗣️", title: "说一说", subtitle: "Speak",
-    desc: "跟 Spark 对话 · 大声说出来",
-    bg: "from-rose-300 to-pink-400", ring: "ring-rose-300",
-    items: [
-      { label: "💬 Spark 对话", to: (_g: number) => `/primary/chat` },
-      { label: "🌍 文化卡片", to: (g: number) => `/primary/culture/${g}` },
-    ],
-  },
-];
-
 type LessonRow = {
   id: string; title_cn: string; title_en: string | null; estimated_minutes: number;
   primary_skill: string; sort_order: number;

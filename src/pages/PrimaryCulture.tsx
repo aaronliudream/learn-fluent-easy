@@ -1,30 +1,96 @@
-import { useMemo, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Volume2 } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { useParams } from "react-router-dom";
+import { ArrowLeft, Volume2, Award, Sparkles, Check, Eye, Ear, GitCompare, Gamepad2, Mic } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { PRIMARY_CULTURE_CARDS, CULTURE_CATEGORIES, type CultureCard } from "@/data/primaryCultureCards";
 
-function speak(text: string) {
+const STAMP_KEY = "primary_culture_stamps_v1";
+
+function loadStamps(): Record<string, number> {
+  try { return JSON.parse(localStorage.getItem(STAMP_KEY) || "{}"); } catch { return {}; }
+}
+function saveStamp(id: string) {
+  const s = loadStamps();
+  s[id] = Date.now();
+  localStorage.setItem(STAMP_KEY, JSON.stringify(s));
+}
+
+function speak(text: string, rate = 0.85) {
   if (typeof window === "undefined" || !window.speechSynthesis) return;
   const u = new SpeechSynthesisUtterance(text);
   u.lang = "en-US";
-  u.rate = 0.85;
+  u.rate = rate;
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(u);
 }
 
+const STEPS = [
+  { key: "see", label: "看一看", icon: Eye, color: "from-sky-400 to-cyan-400" },
+  { key: "hear", label: "听一听", icon: Ear, color: "from-violet-400 to-fuchsia-400" },
+  { key: "compare", label: "比一比", icon: GitCompare, color: "from-amber-400 to-orange-400" },
+  { key: "play", label: "玩一玩", icon: Gamepad2, color: "from-emerald-400 to-teal-400" },
+  { key: "say", label: "说一说", icon: Mic, color: "from-rose-400 to-pink-400" },
+] as const;
+
 export default function PrimaryCulture() {
   const { grade } = useParams<{ grade: string }>();
   const g = Number(grade ?? "1");
-  const [filter, setFilter] = useState<CultureCard["category"] | "all">("all");
+  const [filter, setFilter] = useState<CultureCard["category"] | "all" | "passport">("all");
   const [openCard, setOpenCard] = useState<CultureCard | null>(null);
+  const [stamps, setStamps] = useState<Record<string, number>>(() => loadStamps());
+  const [stepIdx, setStepIdx] = useState(0);
+  const [quizPicked, setQuizPicked] = useState<string | null>(null);
+  const [saidIt, setSaidIt] = useState(false);
+  const [justStamped, setJustStamped] = useState(false);
 
-  const cards = useMemo(
-    () => (filter === "all" ? PRIMARY_CULTURE_CARDS : PRIMARY_CULTURE_CARDS.filter((c) => c.category === filter)),
-    [filter]
-  );
+  const cards = useMemo(() => {
+    if (filter === "all") return PRIMARY_CULTURE_CARDS;
+    if (filter === "passport") return PRIMARY_CULTURE_CARDS.filter((c) => stamps[c.id]);
+    return PRIMARY_CULTURE_CARDS.filter((c) => c.category === filter);
+  }, [filter, stamps]);
 
   const cats = Object.entries(CULTURE_CATEGORIES) as [CultureCard["category"], typeof CULTURE_CATEGORIES[CultureCard["category"]]][];
+  const stampedCount = Object.keys(stamps).length;
+  const total = PRIMARY_CULTURE_CARDS.length;
+
+  // 简单 quiz: 在同类别其他卡里取 2 个干扰项
+  const quizOptions = useMemo(() => {
+    if (!openCard) return [];
+    const sameCat = PRIMARY_CULTURE_CARDS.filter((c) => c.category === openCard.category && c.id !== openCard.id);
+    const distractors = sameCat.sort(() => Math.random() - 0.5).slice(0, 2);
+    return [openCard, ...distractors].sort(() => Math.random() - 0.5);
+  }, [openCard]);
+
+  function openMicroLesson(c: CultureCard) {
+    setOpenCard(c);
+    setStepIdx(0);
+    setQuizPicked(null);
+    setSaidIt(false);
+    setJustStamped(false);
+  }
+
+  function nextStep() {
+    if (!openCard) return;
+    if (stepIdx < STEPS.length - 1) {
+      setStepIdx(stepIdx + 1);
+    } else {
+      // 完成 → 盖章
+      if (!stamps[openCard.id]) {
+        saveStamp(openCard.id);
+        setStamps(loadStamps());
+        setJustStamped(true);
+        setTimeout(() => setJustStamped(false), 2200);
+      }
+    }
+  }
+
+  // 自动朗读"听一听"步骤
+  useEffect(() => {
+    if (openCard && STEPS[stepIdx].key === "hear") {
+      const t = setTimeout(() => speak(openCard.sentence_en || openCard.title_en), 250);
+      return () => clearTimeout(t);
+    }
+  }, [stepIdx, openCard]);
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
@@ -34,7 +100,30 @@ export default function PrimaryCulture() {
       <div className="mb-4">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">CULTURE · 文化意识</div>
         <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">🌍 西方文化小课堂</h1>
-        <p className="mt-1 text-xs text-muted-foreground">课标核心素养 · 节日 · 礼仪 · 校园 · 生活，30 张卡片轻松了解</p>
+        <p className="mt-1 text-xs text-muted-foreground">每张卡 = 一次 5 步小冒险：看 → 听 → 比 → 玩 → 说，集满 30 章成为环球小公民</p>
+      </div>
+
+      {/* 文化护照进度条 */}
+      <div className="mb-4 overflow-hidden rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-orange-50 p-4 shadow-tile dark:border-amber-700 dark:from-amber-950/30 dark:to-orange-950/30">
+        <div className="flex items-center gap-3">
+          <div className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-2xl shadow-md">📔</div>
+          <div className="flex-1">
+            <div className="flex items-baseline gap-2">
+              <div className="text-sm font-extrabold text-amber-900 dark:text-amber-200">我的文化护照</div>
+              <div className="text-[10px] font-bold text-amber-700/70 dark:text-amber-300/70">PASSPORT</div>
+            </div>
+            <div className="mt-1.5 h-2.5 w-full overflow-hidden rounded-full bg-amber-200/60 dark:bg-amber-900/40">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-500"
+                style={{ width: `${(stampedCount / total) * 100}%` }}
+              />
+            </div>
+            <div className="mt-1 text-[11px] font-bold text-amber-800 dark:text-amber-300">
+              已盖 <span className="text-base">{stampedCount}</span> / {total} 章
+              {stampedCount >= total && <span className="ml-2">🏆 环球小公民达成！</span>}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* 分类筛选 */}
@@ -45,10 +134,19 @@ export default function PrimaryCulture() {
             filter === "all" ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-foreground hover:border-primary/50"
           }`}
         >
-          全部 · {PRIMARY_CULTURE_CARDS.length}
+          全部 · {total}
+        </button>
+        <button
+          onClick={() => setFilter("passport")}
+          className={`inline-flex items-center gap-1 rounded-full border-2 px-3 py-1 text-xs font-bold transition ${
+            filter === "passport" ? "border-amber-500 bg-amber-500 text-white" : "border-amber-300 bg-amber-50 text-amber-700 hover:bg-amber-100 dark:bg-amber-950/30 dark:text-amber-300"
+          }`}
+        >
+          <Award className="size-3" /> 已学 · {stampedCount}
         </button>
         {cats.map(([key, cat]) => {
           const count = PRIMARY_CULTURE_CARDS.filter((c) => c.category === key).length;
+          const done = PRIMARY_CULTURE_CARDS.filter((c) => c.category === key && stamps[c.id]).length;
           return (
             <button
               key={key}
@@ -57,76 +155,246 @@ export default function PrimaryCulture() {
                 filter === key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-foreground hover:border-primary/50"
               }`}
             >
-              {cat.emoji} {cat.label} · {count}
+              {cat.emoji} {cat.label} · {done}/{count}
             </button>
           );
         })}
       </div>
 
       {/* 卡片网格 */}
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-        {cards.map((c) => {
-          const cat = CULTURE_CATEGORIES[c.category];
-          return (
-            <button
-              key={c.id}
-              onClick={() => setOpenCard(c)}
-              className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${cat.color} p-4 text-left text-white shadow-tile transition hover:-translate-y-0.5`}
-            >
-              <span className="pointer-events-none absolute -right-6 -top-6 size-20 rounded-full bg-white/20 blur-2xl" />
-              <div className="text-3xl">{c.emoji}</div>
-              <div className="mt-2 text-sm font-extrabold leading-tight">{c.title_cn}</div>
-              <div className="mt-0.5 text-[11px] font-bold opacity-90">{c.title_en}</div>
-              <div className="mt-2 inline-block rounded-full bg-white/25 px-2 py-0.5 text-[9px] font-bold backdrop-blur-sm">
-                {cat.emoji} {cat.label}
-              </div>
-            </button>
-          );
-        })}
-      </div>
+      {cards.length === 0 ? (
+        <div className="rounded-2xl border-2 border-dashed border-border bg-muted/30 p-10 text-center text-sm text-muted-foreground">
+          还没有盖章哦，去学一张吧 ✨
+        </div>
+      ) : (
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+          {cards.map((c) => {
+            const cat = CULTURE_CATEGORIES[c.category];
+            const stamped = !!stamps[c.id];
+            return (
+              <button
+                key={c.id}
+                onClick={() => openMicroLesson(c)}
+                className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${cat.color} p-4 text-left text-white shadow-tile transition hover:-translate-y-0.5`}
+              >
+                <span className="pointer-events-none absolute -right-6 -top-6 size-20 rounded-full bg-white/20 blur-2xl" />
+                {stamped && (
+                  <span className="absolute right-2 top-2 grid size-7 place-items-center rounded-full bg-white text-amber-600 shadow-md">
+                    <Check className="size-4" strokeWidth={3} />
+                  </span>
+                )}
+                <div className="text-3xl">{c.emoji}</div>
+                <div className="mt-2 text-sm font-extrabold leading-tight">{c.title_cn}</div>
+                <div className="mt-0.5 text-[11px] font-bold opacity-90">{c.title_en}</div>
+                <div className="mt-2 inline-block rounded-full bg-white/25 px-2 py-0.5 text-[9px] font-bold backdrop-blur-sm">
+                  {cat.emoji} {cat.label}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      )}
 
-      {/* 卡片详情弹窗 */}
+      {/* 5 步微课弹窗 */}
       {openCard && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
           onClick={() => setOpenCard(null)}
         >
           <div
-            className="relative w-full max-w-md overflow-hidden rounded-3xl bg-card p-6 shadow-2xl"
+            className="relative w-full max-w-md overflow-hidden rounded-3xl bg-card shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className={`absolute inset-x-0 top-0 h-2 bg-gradient-to-r ${CULTURE_CATEGORIES[openCard.category].color}`} />
-            <div className="text-center">
-              <div className="mx-auto text-6xl">{openCard.emoji}</div>
-              <div className="mt-3 text-xl font-extrabold">{openCard.title_cn}</div>
-              <button
-                onClick={() => speak(openCard.title_en)}
-                className="mt-1 inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-sm font-bold text-primary hover:bg-primary/20"
-              >
-                <Volume2 className="size-3.5" /> {openCard.title_en}
-              </button>
-            </div>
-            <p className="mt-4 rounded-2xl bg-muted/50 p-4 text-sm leading-relaxed text-foreground">{openCard.desc_cn}</p>
-            <div className="mt-4">
-              <div className="mb-2 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">关键词 · 点击发音</div>
-              <div className="flex flex-wrap gap-1.5">
-                {openCard.keywords.map((kw) => (
-                  <button
-                    key={kw}
-                    onClick={() => speak(kw)}
-                    className="inline-flex items-center gap-1 rounded-full border-2 border-border bg-card px-3 py-1 text-sm font-bold transition hover:border-primary hover:bg-primary/5"
-                  >
-                    <Volume2 className="size-3" /> {kw}
-                  </button>
+            {/* 顶部步骤指示 */}
+            <div className={`bg-gradient-to-r ${STEPS[stepIdx].color} px-5 pb-3 pt-4 text-white`}>
+              <div className="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider opacity-90">
+                <span>{openCard.title_cn} · {openCard.title_en}</span>
+                <span>第 {stepIdx + 1} / {STEPS.length} 步</span>
+              </div>
+              <div className="mt-2 flex items-center gap-1">
+                {STEPS.map((s, i) => (
+                  <div
+                    key={s.key}
+                    className={`h-1.5 flex-1 rounded-full transition-all ${
+                      i <= stepIdx ? "bg-white" : "bg-white/30"
+                    }`}
+                  />
                 ))}
               </div>
+              <div className="mt-2 flex items-center gap-1.5 text-base font-extrabold">
+                {(() => { const I = STEPS[stepIdx].icon; return <I className="size-5" />; })()}
+                {STEPS[stepIdx].label}
+              </div>
             </div>
-            <button
-              onClick={() => setOpenCard(null)}
-              className="mt-5 w-full rounded-2xl bg-primary py-3 text-sm font-extrabold text-primary-foreground hover:bg-primary/90"
-            >
-              知道啦 ✨
-            </button>
+
+            {/* 步骤内容 */}
+            <div className="min-h-[280px] p-5">
+              {STEPS[stepIdx].key === "see" && (
+                <div className="text-center">
+                  <div className="mx-auto text-7xl">{openCard.emoji}</div>
+                  <div className="mt-3 text-xl font-extrabold">{openCard.title_cn}</div>
+                  <div className="mt-1 text-sm font-bold text-muted-foreground">{openCard.title_en}</div>
+                  <p className="mt-4 rounded-2xl bg-muted/50 p-4 text-sm leading-relaxed">{openCard.desc_cn}</p>
+                </div>
+              )}
+
+              {STEPS[stepIdx].key === "hear" && (
+                <div className="text-center">
+                  <div className="text-5xl">🔊</div>
+                  <p className="mt-3 text-xs text-muted-foreground">点击下方按钮反复听</p>
+                  <button
+                    onClick={() => speak(openCard.sentence_en || openCard.title_en)}
+                    className="mt-4 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 px-5 py-3 font-extrabold text-white shadow-md hover:scale-105"
+                  >
+                    <Volume2 className="size-5" /> 再听一次
+                  </button>
+                  <div className="mt-4 rounded-2xl border-2 border-violet-200 bg-violet-50 p-4 text-base font-bold text-violet-900 dark:border-violet-800 dark:bg-violet-950/30 dark:text-violet-200">
+                    "{openCard.sentence_en || openCard.title_en}"
+                  </div>
+                  <div className="mt-3 flex flex-wrap justify-center gap-1.5">
+                    {openCard.keywords.map((kw) => (
+                      <button
+                        key={kw}
+                        onClick={() => speak(kw)}
+                        className="inline-flex items-center gap-1 rounded-full border-2 border-border bg-card px-3 py-1 text-sm font-bold hover:border-primary"
+                      >
+                        <Volume2 className="size-3" /> {kw}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {STEPS[stepIdx].key === "compare" && (
+                <div>
+                  <div className="text-center text-xs font-bold uppercase tracking-wider text-muted-foreground">中国 VS 西方</div>
+                  <div className="mt-3 grid grid-cols-2 gap-3">
+                    <div className="rounded-2xl border-2 border-rose-200 bg-rose-50 p-3 text-center dark:border-rose-800 dark:bg-rose-950/30">
+                      <div className="text-[10px] font-bold uppercase text-rose-600 dark:text-rose-400">🇨🇳 中国</div>
+                      <div className="mt-2 text-4xl">{openCard.cn_compare?.emoji}</div>
+                      <div className="mt-1 text-sm font-extrabold">{openCard.cn_compare?.label}</div>
+                      <p className="mt-1 text-[11px] leading-snug text-rose-900 dark:text-rose-200">{openCard.cn_compare?.desc}</p>
+                    </div>
+                    <div className="rounded-2xl border-2 border-sky-200 bg-sky-50 p-3 text-center dark:border-sky-800 dark:bg-sky-950/30">
+                      <div className="text-[10px] font-bold uppercase text-sky-600 dark:text-sky-400">🌍 西方</div>
+                      <div className="mt-2 text-4xl">{openCard.emoji}</div>
+                      <div className="mt-1 text-sm font-extrabold">{openCard.title_cn}</div>
+                      <p className="mt-1 text-[11px] leading-snug text-sky-900 dark:text-sky-200">{openCard.desc_cn}</p>
+                    </div>
+                  </div>
+                  <p className="mt-3 rounded-xl bg-amber-50 p-2 text-center text-[11px] font-bold text-amber-800 dark:bg-amber-950/30 dark:text-amber-300">
+                    💡 不同文化都很棒，让我们互相了解！
+                  </p>
+                </div>
+              )}
+
+              {STEPS[stepIdx].key === "play" && (
+                <div>
+                  <p className="text-center text-sm font-bold">哪一个是 <span className="text-primary">{openCard.title_en}</span>？</p>
+                  <div className="mt-4 grid grid-cols-3 gap-2">
+                    {quizOptions.map((opt) => {
+                      const isRight = opt.id === openCard.id;
+                      const picked = quizPicked === opt.id;
+                      return (
+                        <button
+                          key={opt.id}
+                          disabled={!!quizPicked}
+                          onClick={() => setQuizPicked(opt.id)}
+                          className={`rounded-2xl border-2 p-3 text-center transition ${
+                            picked && isRight ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30" :
+                            picked && !isRight ? "border-rose-500 bg-rose-50 dark:bg-rose-950/30" :
+                            quizPicked && isRight ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30" :
+                            "border-border bg-card hover:border-primary"
+                          }`}
+                        >
+                          <div className="text-3xl">{opt.emoji}</div>
+                          <div className="mt-1 text-[10px] font-bold">{opt.title_cn}</div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {quizPicked && (
+                    <div className={`mt-3 rounded-xl p-2 text-center text-xs font-bold ${
+                      quizPicked === openCard.id
+                        ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300"
+                        : "bg-rose-50 text-rose-700 dark:bg-rose-950/30 dark:text-rose-300"
+                    }`}>
+                      {quizPicked === openCard.id ? "🎉 答对啦！太棒了！" : "再想想看～正确答案已高亮 💡"}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {STEPS[stepIdx].key === "say" && (
+                <div className="text-center">
+                  <p className="text-xs text-muted-foreground">大声跟读这一句：</p>
+                  <div className="mt-3 rounded-2xl border-2 border-rose-200 bg-rose-50 p-4 text-base font-extrabold text-rose-900 dark:border-rose-800 dark:bg-rose-950/30 dark:text-rose-200">
+                    "{openCard.sentence_en || openCard.title_en}"
+                  </div>
+                  <div className="mt-4 flex justify-center gap-2">
+                    <button
+                      onClick={() => speak(openCard.sentence_en || openCard.title_en, 0.7)}
+                      className="inline-flex items-center gap-1.5 rounded-2xl bg-violet-500 px-4 py-2.5 text-sm font-extrabold text-white shadow-md hover:scale-105"
+                    >
+                      <Volume2 className="size-4" /> 听示范
+                    </button>
+                    <button
+                      onClick={() => setSaidIt(true)}
+                      className={`inline-flex items-center gap-1.5 rounded-2xl px-4 py-2.5 text-sm font-extrabold shadow-md transition hover:scale-105 ${
+                        saidIt ? "bg-emerald-500 text-white" : "bg-rose-500 text-white"
+                      }`}
+                    >
+                      <Mic className="size-4" /> {saidIt ? "✓ 我说啦" : "我跟读啦"}
+                    </button>
+                  </div>
+                  {saidIt && (
+                    <p className="mt-3 text-xs font-bold text-emerald-600">🌟 太棒啦！点下方完成盖章吧</p>
+                  )}
+                </div>
+              )}
+
+              {/* 盖章动效 */}
+              {justStamped && (
+                <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
+                  <div className="animate-[ping_2s_ease-out] rounded-full bg-amber-400/30 p-12">
+                    <div className="grid size-24 place-items-center rounded-full border-4 border-amber-500 bg-amber-100 text-4xl shadow-2xl">
+                      📔
+                    </div>
+                  </div>
+                  <div className="absolute mt-32 rounded-full bg-amber-500 px-4 py-1.5 text-sm font-extrabold text-white shadow-lg">
+                    <Sparkles className="mr-1 inline size-3.5" /> 集得一枚新印章！
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* 底部按钮 */}
+            <div className="flex items-center gap-2 border-t bg-muted/30 p-4">
+              <button
+                onClick={() => setOpenCard(null)}
+                className="rounded-2xl border-2 border-border bg-card px-4 py-2.5 text-sm font-bold hover:bg-muted"
+              >
+                关闭
+              </button>
+              {stepIdx < STEPS.length - 1 ? (
+                <button
+                  onClick={nextStep}
+                  className="flex-1 rounded-2xl bg-primary py-2.5 text-sm font-extrabold text-primary-foreground hover:bg-primary/90"
+                >
+                  下一步 →
+                </button>
+              ) : (
+                <button
+                  onClick={() => {
+                    if (!stamps[openCard.id]) nextStep();
+                    else setOpenCard(null);
+                  }}
+                  className="flex-1 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-500 py-2.5 text-sm font-extrabold text-white shadow-md hover:scale-[1.02]"
+                >
+                  {stamps[openCard.id] ? "已收藏 · 知道啦 ✨" : "🎯 完成 · 盖章！"}
+                </button>
+              )}
+            </div>
           </div>
         </div>
       )}

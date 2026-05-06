@@ -80,14 +80,6 @@ const Index = () => {
 
   const sections = [
     {
-      to: "/slang",
-      icon: Zap,
-      eyebrow: t("index.section.slang.eyebrow"),
-      title: t("index.section.slang.title"),
-      desc: t("index.section.slang.desc", { count: HOME_COUNTS.slang }),
-      gradient: "from-teal-500 via-cyan-500 to-sky-500",
-    },
-    {
       to: "/leaderboard",
       icon: Trophy,
       eyebrow: "Community",

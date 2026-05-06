@@ -21,6 +21,7 @@ import MasteryDashboard from "@/components/MasteryDashboard";
 import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
+import NextStepHint from "@/components/vocab/NextStepHint";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
@@ -1162,6 +1163,7 @@ function GroupSession({
           levelUps={groupLevelUps}
           group={group}
           wrongWords={wrongWords}
+          poolIds={pool.map((v) => v.id)}
         />
       )}
       {unlockedBadges.length > 0 && (
@@ -1780,6 +1782,7 @@ function DonePanel({
   levelUps,
   group,
   wrongWords,
+  poolIds,
 }: {
   stats: { correct: number; total: number };
   coinsAwarded?: number;
@@ -1788,6 +1791,7 @@ function DonePanel({
   levelUps?: { word: string; level: MasteryLevel }[];
   group?: Vocab[];
   wrongWords?: Vocab[];
+  poolIds?: string[];
 }) {
   const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
   const [showGame, setShowGame] = useState(false);
@@ -1802,6 +1806,18 @@ function DonePanel({
         <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
           🪙 +{coinsAwarded} 金币
         </div>
+      )}
+      {poolIds && poolIds.length > 0 && (
+        <NextStepHint
+          vocabIds={poolIds}
+          onPickMode={(m) => {
+            // navigate via URL change so the parent picks up the mode
+            const url = new URL(window.location.href);
+            url.searchParams.set("mode", m);
+            url.searchParams.delete("group");
+            window.location.assign(url.toString());
+          }}
+        />
       )}
       {levelUps && levelUps.length > 0 && (
         <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">

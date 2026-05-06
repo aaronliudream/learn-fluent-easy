@@ -72,16 +72,6 @@ type LessonRow = {
   progress?: { stars: number; completed_at: string | null }[];
 };
 
-// 词汇 6 步掌握闭环（牛津 Word Learning Cycle + 艾宾浩斯）
-const VOCAB_6_STEPS = [
-  { n: 1, icon: Eye, label: "看见", desc: "图+词+音", to: (g: number) => `/primary/vocab/${g}` },
-  { n: 2, icon: Ear, label: "听辨", desc: "听音选图", to: (g: number) => `/primary/games/${g}/listen` },
-  { n: 3, icon: MousePointerClick, label: "识别", desc: "看图选词", to: (g: number) => `/primary/games/${g}` },
-  { n: 4, icon: PenLine, label: "拼写", desc: "字母拖拽", to: (g: number) => `/primary/games/${g}/spell` },
-  { n: 5, icon: Mic, label: "开口", desc: "AI 跟读", to: (_g: number) => `/primary/chat` },
-  { n: 6, icon: MessageCircle, label: "运用", desc: "情景对话", to: (_g: number) => `/primary/chat` },
-];
-
 // 勋章定义（基于已有数据派生）
 type BadgeDef = { key: string; emoji: string; title: string; check: (s: BadgeStats) => boolean; hint: string };
 type BadgeStats = { totalDone: number; totalStars: number; perfectLessons: number; streak: number; unitsCleared: number; cultureSeen: boolean };

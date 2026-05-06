@@ -7,6 +7,7 @@ import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 import { awardCoins } from "@/lib/coins";
 import { fireEmojiConfetti } from "@/lib/feedback";
+import MasteryPath, { nextStepAfter } from "@/components/primary/MasteryPath";
 
 type Word = {
   id: string;

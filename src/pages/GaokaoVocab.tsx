@@ -470,6 +470,27 @@ function GroupList({
         </div>
       )}
 
+      {/* ⭐ 彻底掌握 5 步走 */}
+      <div className="mt-4">
+        <VocabMasteryPath
+          stage="gaokao"
+          totalWords={pool.length}
+          vocabIds={pool.map((v) => v.id)}
+          onPickMode={(m) => {
+            const map: Record<string, () => void> = {
+              srs: onStartSrs,
+              dict: onStartDict,
+              classic: onStartRush,
+              quest: onStartQuest,
+              bento: onStartBento,
+              duel: onStartDuel,
+            };
+            (map[m] ?? (() => onPickMode(m)))();
+          }}
+          onBrowse={() => onPick(0)}
+        />
+      </div>
+
       {/* 学习进度总览：掌握数、百分比、未完成、7 天到期、平均稳定天数 */}
       <div className="mt-6">
         <GaokaoVocabProgress />

@@ -21,6 +21,7 @@ import MasteryDashboard from "@/components/MasteryDashboard";
 import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
+import NextStepHint from "@/components/vocab/NextStepHint";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
@@ -1162,6 +1163,7 @@ function GroupSession({
           levelUps={groupLevelUps}
           group={group}
           wrongWords={wrongWords}
+          poolIds={pool.map((v) => v.id)}
         />
       )}
       {unlockedBadges.length > 0 && (

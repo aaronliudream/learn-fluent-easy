@@ -32,7 +32,7 @@ type Article = {
 
 const STEPS = [
   { key: "warmup", title: "词卡热身", emoji: "🌈", color: "from-rose-400 to-pink-500" },
-  { key: "listen", title: "看图听读", emoji: "👀", color: "from-sky-400 to-cyan-500" },
+  { key: "listen", title: "句子朗读", emoji: "👀", color: "from-sky-400 to-cyan-500" },
   { key: "read", title: "跟我读", emoji: "📣", color: "from-emerald-400 to-teal-500" },
   { key: "think", title: "理解小问", emoji: "🤔", color: "from-violet-400 to-fuchsia-500" },
   { key: "treasure", title: "宝藏关", emoji: "🎁", color: "from-amber-400 to-orange-500" },
@@ -258,7 +258,7 @@ function ListenStep({ sentences, onDone }: { sentences: Sentence[]; onDone: () =
 
   return (
     <div>
-      <h3 className="text-base font-extrabold">👀 看图听读</h3>
+      <h3 className="text-base font-extrabold">👀 句子朗读</h3>
       <p className="mt-1 text-xs text-muted-foreground">点 ▶︎ 自动播放整篇，跟着高亮的句子听。</p>
       <div className="mt-3 flex justify-center">
         <button

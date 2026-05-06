@@ -32,7 +32,7 @@ const BRANDS: Brand[] = [
     status: "live",
     gradient: "from-amber-300 via-orange-400 to-rose-400",
     accent: "bg-orange-500",
-    tag: "Real English from real American kids · 温暖橙黄",
+    tag: "来自真实美国小朋友的英语 · 温暖橙黄",
   },
   {
     to: "/junior",
@@ -42,7 +42,7 @@ const BRANDS: Brand[] = [
     status: "soon",
     gradient: "from-emerald-400 via-teal-500 to-cyan-500",
     accent: "bg-teal-600",
-    tag: "Bright, energetic, exam-ready · 青绿色",
+    tag: "朝气向上 · 中考备考 · 青绿色",
   },
   {
     to: "/senior",
@@ -52,21 +52,21 @@ const BRANDS: Brand[] = [
     status: "soon",
     gradient: "from-blue-700 via-indigo-700 to-slate-800",
     accent: "bg-indigo-700",
-    tag: "Serious, exam-grade, efficient · 深蓝",
+    tag: "严肃高效 · 应试导向 · 深蓝",
   },
 ];
 
 function StatusPill({ status }: { status: Status }) {
   if (status === "live") {
     return (
-      <span className="inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-emerald-700">
-        <Sparkles className="size-3" /> 已上线 · Live
+      <span className="inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-bold tracking-[0.16em] text-emerald-700">
+        <Sparkles className="size-3" /> 已上线
       </span>
     );
   }
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-black/40 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white/90 backdrop-blur-sm">
-      <Construction className="size-3" /> 开发中 · Coming soon
+    <span className="inline-flex items-center gap-1 rounded-full bg-black/40 px-2.5 py-1 text-[10px] font-bold tracking-[0.16em] text-white/90 backdrop-blur-sm">
+      <Construction className="size-3" /> 开发中
     </span>
   );
 }

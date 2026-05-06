@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Headphones, BookOpen, Gamepad2 } from "lucide-react";
+import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Headphones, BookOpen, Gamepad2, AlertCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { speak } from "@/lib/speak";
@@ -360,8 +360,28 @@ function QuizMode({ words }: { words: Vocab[] }) {
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  // Track wrong words from this session for the "复习错题" mini-quiz
+  const [wrongIds, setWrongIds] = useState<Set<string>>(new Set());
+  const [reviewSession, setReviewSession] = useState<Q[] | null>(null);
 
-  const cur = session[idx];
+  const buildReviewSession = (): Q[] => {
+    const wrongWords = words.filter(w => wrongIds.has(w.id));
+    if (wrongWords.length === 0) return [];
+    const types: QType[] = ["en2cn", "cn2en", "listen2en"];
+    return wrongWords.map((w, i): Q => {
+      const type = types[i % types.length];
+      const wrongPool = shuffle(words.filter(x => x.id !== w.id));
+      if (type === "en2cn") {
+        const opts = shuffle([w.meaning_cn, ...wrongPool.slice(0, 3).map(x => x.meaning_cn)]);
+        return { type, word: w, options: opts, answer: w.meaning_cn };
+      }
+      const opts = shuffle([w.word, ...wrongPool.slice(0, 3).map(x => x.word)]);
+      return { type, word: w, options: opts, answer: w.word };
+    });
+  };
+
+  const activeSession = reviewSession ?? session;
+  const cur = activeSession[idx];
 
   // Auto-play audio for listen-type questions
   useEffect(() => {
@@ -371,7 +391,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
     }
   }, [cur]);
 
-  if (!cur && session.length === 0) {
+  if (!cur && activeSession.length === 0) {
     return (
       <div className="rounded-2xl border border-border/60 bg-card p-8 text-center">
         <Trophy className="mx-auto size-10 text-amber-500" />
@@ -380,12 +400,13 @@ function QuizMode({ words }: { words: Vocab[] }) {
     );
   }
 
-  if (idx >= session.length) {
+  if (idx >= activeSession.length) {
     const pct = Math.round((score.correct / score.total) * 100);
-    if (typeof window !== "undefined" && !(session as any).__celebrated) {
-      (session as any).__celebrated = true;
+    if (typeof window !== "undefined" && !(activeSession as any).__celebrated) {
+      (activeSession as any).__celebrated = true;
       celebrateScore(pct);
     }
+    const wrongCount = wrongIds.size;
     return (
       <div className="rounded-3xl border border-border/60 bg-card p-6 text-center">
         <Trophy className="mx-auto size-12 text-amber-500" />
@@ -396,10 +417,34 @@ function QuizMode({ words }: { words: Vocab[] }) {
           答对 {score.correct} / {score.total} ({pct}%)
         </p>
 
+        {/* 错题复习入口 — 优先级最高 */}
+        {wrongCount > 0 && (
+          <button
+            onClick={() => {
+              const rs = buildReviewSession();
+              if (rs.length === 0) return;
+              setReviewSession(rs);
+              setIdx(0); setPicked(null); setScore({ correct: 0, total: 0 });
+              (rs as any).__celebrated = false;
+            }}
+            className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl border-2 border-rose-300 bg-gradient-to-r from-rose-50 to-orange-50 p-4 text-base font-extrabold text-rose-700 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:from-rose-950/30 dark:to-orange-950/30 dark:text-rose-300"
+          >
+            <AlertCircle className="size-5" />
+            复习错题 · {wrongCount} 词
+          </button>
+        )}
+        {reviewSession && wrongCount === 0 && (
+          <p className="mt-4 rounded-xl bg-emerald-50 p-3 text-sm font-bold text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300">
+            🎉 错题已全部攻克！
+          </p>
+        )}
+
         {/* "继续玩" 出口 — 与一年级其他活动联动 */}
         <div className="mt-5 grid gap-2 sm:grid-cols-3">
           <button
             onClick={() => {
+              setReviewSession(null);
+              setWrongIds(new Set());
               setIdx(0); setPicked(null); setScore({ correct: 0, total: 0 });
             }}
             className="flex items-center justify-center gap-1.5 rounded-2xl border-2 border-violet-300 bg-violet-50 p-3 text-sm font-extrabold text-violet-700 transition hover:-translate-y-0.5 dark:bg-violet-950/30 dark:text-violet-300"
@@ -434,6 +479,16 @@ function QuizMode({ words }: { words: Vocab[] }) {
     setPicked(m);
     const correct = m === cur.answer;
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
+    if (!correct) {
+      setWrongIds(prev => {
+        const n = new Set(prev); n.add(cur.word.id); return n;
+      });
+    } else if (reviewSession) {
+      // 在错题复习中答对 → 从错题集合移除
+      setWrongIds(prev => {
+        const n = new Set(prev); n.delete(cur.word.id); return n;
+      });
+    }
     if (cur.type !== "listen2en") speak(cur.word.word);
     await Promise.all([
       bumpVocabMastery({

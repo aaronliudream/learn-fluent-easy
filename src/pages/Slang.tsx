@@ -32,8 +32,12 @@ import {
   pickDailyPlan,
   getSlangProgress,
   getSlangLevel,
+  getSlangMatrix,
+  SLANG_DIMS,
+  type SlangDim,
 } from "@/lib/slangMastery";
 import { XPBurst } from "@/components/game/XPBurst";
+import SlangMasteryDots from "@/components/slang/SlangMasteryDots";
 
 type Mode = "browse" | "quiz";
 // quiz direction: en2cn = show English idiom, choose Chinese meaning;
@@ -42,6 +46,16 @@ type Mode = "browse" | "quiz";
 // scenario = read a Chinese real-life scene, pick the right English slang.
 // compose  = write a sentence using the slang in a given scenario (AI graded).
 type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose";
+
+/** Map a quiz kind to the mastery dimension it strengthens. */
+const KIND_TO_DIM: Record<QuizKind, SlangDim> = {
+  en2cn: "recognize",
+  cn2en: "recall",
+  fill: "recall",
+  scenario: "recall",
+  compose: "use",
+  // (listen → "hear" comes in phase 2)
+};
 
 export type ComposeGrade = {
   usedPhrase: boolean;
@@ -126,17 +140,27 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
   // and skip mastered items still in cooldown.
   const picked = pickQuizPool(pool, Math.min(len, pool.length));
   return picked.map((idiom, i) => {
-    // Pick a drill kind matched to the user's current level for THIS phrase.
-    //   L1 → en2cn (recognise meaning)
-    //   L2 → cn2en or fill (recall + listening)
-    //   L3 → scenario (situational matching)
-    //   L4+ → compose (active production, AI-graded)
-    const lvl = getSlangLevel(idiom.id);
+    // 4-DIM AWARE pick: target the user's WEAKEST dim for this slang first.
+    //   recognize  → en2cn
+    //   recall     → cn2en / fill / scenario (rotate to keep variety)
+    //   use        → compose
+    //   hear       → not yet (phase 2); fall back to recall.
+    const m = getSlangMatrix(idiom.id);
+    const score = (d: SlangDim) => m[d] ?? 0;
+    // Pick the dim with lowest score; tie-break in fixed order so we always
+    // build "认 → 想 → 用" foundationally.
+    const order: SlangDim[] = ["recognize", "recall", "use", "hear"];
+    const target = order.reduce((a, b) => (score(a) <= score(b) ? a : b));
     let kind: QuizKind;
-    if (lvl <= 1) kind = "en2cn";
-    else if (lvl === 2) kind = i % 2 === 0 ? "cn2en" : "fill";
-    else if (lvl === 3) kind = "scenario";
-    else kind = "compose";
+    if (target === "recognize") kind = "en2cn";
+    else if (target === "use") kind = "compose";
+    else {
+      // recall (or hear-fallback) → rotate among the 3 recall drills
+      const recallKinds: QuizKind[] = ["cn2en", "fill", "scenario"];
+      kind = recallKinds[i % recallKinds.length];
+    }
+    // Don't bombard a brand-new slang with compose; gate it behind recognize ≥ 1.
+    if (kind === "compose" && score("recognize") < 1) kind = "en2cn";
 
     const distractorPool = sourceForDistractors.filter((x) => x.id !== idiom.id);
     const distractors = shuffle(distractorPool).slice(0, 3);
@@ -452,7 +476,7 @@ const Slang = () => {
       q.kind === "compose"
         ? composeGrade[q.id]?.verdict !== "needs_work"
         : picks[q.id] === q.answer;
-    recordSlangResult(q.idiom.id, correct);
+    recordSlangResult(q.idiom.id, correct, KIND_TO_DIM[q.kind]);
     setMasteryVersion((v) => v + 1);
   }, [revealed, qIdx, questions, picks, composeGrade]);
 
@@ -718,11 +742,11 @@ const Slang = () => {
                           🔥 <T>新</T>
                         </span>
                       )}
-                      {isMasteredSlang(it.id) && (
-                        <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">
-                          <CheckCircle2 className="size-3" /> <T>已掌握</T>
-                        </span>
-                      )}
+                      <SlangMasteryDots
+                        className="ml-auto"
+                        matrix={getSlangMatrix(it.id)}
+                        isMaster={isMasteredSlang(it.id)}
+                      />
                     </div>
                     <div className="mt-0.5 text-lg font-semibold text-primary md:text-base">
                       <T>{it.meaning_cn}</T>

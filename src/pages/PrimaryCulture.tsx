@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ArrowLeft, Volume2, Award, Sparkles, Check, Eye, Ear, GitCompare, Gamepad2, Mic } from "lucide-react";
+import { ArrowLeft, Volume2, Award, Sparkles, Check, Eye, Ear, GitCompare, Gamepad2, Mic, Share2, Download, CalendarDays } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { PRIMARY_CULTURE_CARDS, CULTURE_CATEGORIES, type CultureCard } from "@/data/primaryCultureCards";
 import RolePlayTheater from "@/components/RolePlayTheater";
@@ -25,6 +25,92 @@ function speak(text: string, rate = 0.85) {
   window.speechSynthesis.speak(u);
 }
 
+// ===== 节日时令推送 =====
+// 根据今天日期返回当下/即将到来的节日卡 id
+function getSeasonalCardId(now = new Date()): { id: string; daysAway: number; label: string } | null {
+  const m = now.getMonth() + 1;
+  const d = now.getDate();
+  const today = m * 100 + d;
+  // [起始, 结束, cardId, 标签]
+  const windows: Array<[number, number, string, string]> = [
+    [1215, 1231, "f1", "圣诞节就快到啦"],
+    [1010, 1101, "f2", "万圣节季节"],
+    [1101, 1130, "f3", "感恩节季节"],
+    [301, 430, "f4", "复活节春天到"],
+    [201, 215, "f5", "情人节就要到了"],
+    [101, 110, "f7", "新年新气象"],
+    [501, 515, "f8", "母亲节快到了"],
+    [615, 625, "f8", "父亲节快到了"],
+  ];
+  for (const [s, e, id, label] of windows) {
+    if (today >= s && today <= e) return { id, daysAway: 0, label };
+  }
+  return null;
+}
+
+// ===== 家长分享卡 =====
+async function buildShareCard(card: CultureCard, stampedCount: number, total: number): Promise<string> {
+  const W = 720, H = 1080;
+  const canvas = document.createElement("canvas");
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext("2d")!;
+  // 背景渐变
+  const g = ctx.createLinearGradient(0, 0, W, H);
+  g.addColorStop(0, "#fff7ed"); g.addColorStop(1, "#fde68a");
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  // 顶部装饰
+  ctx.fillStyle = "#f59e0b"; ctx.fillRect(0, 0, W, 12);
+  // 标题
+  ctx.fillStyle = "#92400e";
+  ctx.font = "bold 28px system-ui, -apple-system, sans-serif";
+  ctx.fillText("📔 我的文化护照", 60, 90);
+  ctx.font = "bold 18px system-ui";
+  ctx.fillStyle = "#b45309";
+  ctx.fillText("MY CULTURE PASSPORT · 1ST GRADE", 60, 120);
+  // 主 emoji 圆框
+  ctx.beginPath(); ctx.arc(W / 2, 340, 130, 0, Math.PI * 2); ctx.closePath();
+  ctx.fillStyle = "#ffffff"; ctx.fill();
+  ctx.lineWidth = 8; ctx.strokeStyle = "#f59e0b"; ctx.stroke();
+  ctx.font = "150px system-ui";
+  ctx.textAlign = "center"; ctx.fillStyle = "#000";
+  ctx.fillText(card.emoji, W / 2, 390);
+  ctx.textAlign = "left";
+  // 今天学了
+  ctx.fillStyle = "#78350f";
+  ctx.font = "bold 22px system-ui";
+  ctx.textAlign = "center";
+  ctx.fillText("今天我学了", W / 2, 530);
+  ctx.fillStyle = "#7c2d12";
+  ctx.font = "bold 52px system-ui";
+  ctx.fillText(card.title_cn, W / 2, 600);
+  ctx.fillStyle = "#b45309";
+  ctx.font = "bold 30px system-ui";
+  ctx.fillText(card.title_en, W / 2, 645);
+  // 一句话
+  ctx.fillStyle = "#92400e";
+  ctx.font = "italic 22px system-ui";
+  const sentence = `"${card.sentence_en || card.title_en}"`;
+  ctx.fillText(sentence, W / 2, 720);
+  // 进度条
+  const barX = 80, barY = 820, barW = W - 160, barH = 28;
+  ctx.fillStyle = "#fed7aa"; ctx.beginPath();
+  (ctx as any).roundRect?.(barX, barY, barW, barH, 14);
+  ctx.fill();
+  const pct = stampedCount / total;
+  const grad = ctx.createLinearGradient(barX, 0, barX + barW, 0);
+  grad.addColorStop(0, "#fbbf24"); grad.addColorStop(1, "#f97316");
+  ctx.fillStyle = grad; ctx.beginPath();
+  (ctx as any).roundRect?.(barX, barY, Math.max(barW * pct, 16), barH, 14);
+  ctx.fill();
+  ctx.fillStyle = "#7c2d12"; ctx.font = "bold 22px system-ui";
+  ctx.fillText(`已盖 ${stampedCount} / ${total} 章 文化印章`, W / 2, barY + 80);
+  // 底部署名
+  ctx.fillStyle = "#a16207"; ctx.font = "bold 18px system-ui";
+  ctx.fillText("Big Moon English · 一年级文化小课堂", W / 2, H - 60);
+  ctx.textAlign = "left";
+  return canvas.toDataURL("image/png");
+}
+
 const STEPS = [
   { key: "see", label: "看一看", icon: Eye, color: "from-sky-400 to-cyan-400" },
   { key: "hear", label: "听一听", icon: Ear, color: "from-violet-400 to-fuchsia-400" },
@@ -43,6 +129,13 @@ export default function PrimaryCulture() {
   const [quizPicked, setQuizPicked] = useState<string | null>(null);
   const [saidIt, setSaidIt] = useState(false);
   const [justStamped, setJustStamped] = useState(false);
+  const [shareUrl, setShareUrl] = useState<string | null>(null);
+
+  const seasonal = useMemo(() => getSeasonalCardId(), []);
+  const seasonalCard = useMemo(
+    () => (seasonal ? PRIMARY_CULTURE_CARDS.find((c) => c.id === seasonal.id) : null),
+    [seasonal]
+  );
 
   const cards = useMemo(() => {
     if (filter === "all") return PRIMARY_CULTURE_CARDS;
@@ -126,6 +219,27 @@ export default function PrimaryCulture() {
           </div>
         </div>
       </div>
+
+      {/* 节日时令推送 */}
+      {seasonalCard && !stamps[seasonalCard.id] && (
+        <button
+          onClick={() => openMicroLesson(seasonalCard)}
+          className="mb-4 flex w-full items-center gap-3 overflow-hidden rounded-3xl border-2 border-rose-300 bg-gradient-to-r from-rose-100 via-pink-100 to-orange-100 p-3 text-left shadow-tile transition hover:scale-[1.01] dark:border-rose-700 dark:from-rose-950/40 dark:via-pink-950/40 dark:to-orange-950/40"
+        >
+          <div className="grid size-14 shrink-0 place-items-center rounded-2xl bg-white text-3xl shadow-md">
+            {seasonalCard.emoji}
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wider text-rose-600 dark:text-rose-300">
+              <CalendarDays className="size-3" /> 今日推荐 · {seasonal!.label}
+            </div>
+            <div className="truncate text-base font-extrabold text-rose-900 dark:text-rose-100">
+              📣 {seasonalCard.title_cn} · {seasonalCard.title_en}
+            </div>
+            <div className="text-[11px] font-bold text-rose-700/80 dark:text-rose-300/80">点这里立刻学，赶上节日氛围 →</div>
+          </div>
+        </button>
+      )}
 
       {/* 角色扮演剧场 */}
       <section className="mb-5">
@@ -391,6 +505,18 @@ export default function PrimaryCulture() {
               >
                 关闭
               </button>
+              {stamps[openCard.id] && (
+                <button
+                  onClick={async () => {
+                    const url = await buildShareCard(openCard, stampedCount, total);
+                    setShareUrl(url);
+                  }}
+                  className="inline-flex items-center gap-1 rounded-2xl border-2 border-emerald-300 bg-emerald-50 px-3 py-2.5 text-xs font-extrabold text-emerald-700 hover:bg-emerald-100 dark:border-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300"
+                  title="生成家长分享卡"
+                >
+                  <Share2 className="size-3.5" /> 分享
+                </button>
+              )}
               {stepIdx < STEPS.length - 1 ? (
                 <button
                   onClick={nextStep}
@@ -410,6 +536,32 @@ export default function PrimaryCulture() {
                 </button>
               )}
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* 家长分享卡预览 */}
+      {shareUrl && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm" onClick={() => setShareUrl(null)}>
+          <div className="w-full max-w-sm overflow-hidden rounded-3xl bg-card p-4 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="mb-2 text-center text-sm font-extrabold">📨 分享给爸爸妈妈</div>
+            <img src={shareUrl} alt="分享卡" className="w-full rounded-2xl border-2 border-amber-200 shadow-md" />
+            <div className="mt-3 grid grid-cols-2 gap-2">
+              <a
+                href={shareUrl}
+                download={`culture-passport-${Date.now()}.png`}
+                className="inline-flex items-center justify-center gap-1 rounded-2xl bg-primary py-2.5 text-sm font-extrabold text-primary-foreground hover:bg-primary/90"
+              >
+                <Download className="size-4" /> 保存图片
+              </a>
+              <button
+                onClick={() => setShareUrl(null)}
+                className="rounded-2xl border-2 border-border bg-card py-2.5 text-sm font-bold hover:bg-muted"
+              >
+                关闭
+              </button>
+            </div>
+            <p className="mt-2 text-center text-[11px] text-muted-foreground">长按图片可保存或转发到微信</p>
           </div>
         </div>
       )}

@@ -11,6 +11,7 @@ import StarRating from "@/components/StarRating";
 import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
 import ReadingWatermark from "@/components/ReadingWatermark";
 import { toast } from "sonner";
+import { celebrateScore } from "@/lib/feedback";
 
 type Q = { q: string; options: string[]; answer: string; explanation?: string };
 type R = { id: string; title: string; body: string; word_count: number | null; grade: number; questions: Q[]; vocab_notes: { word: string; cn: string }[] };
@@ -112,12 +113,12 @@ export default function JuniorReadingPlay() {
       }
       if (pct === 100) {
         await awardForBlock("junior_reading");
-        toast.success("🌟 完美掌握！星级+1");
       } else if (pct >= PASS_PCT) {
-        toast.success(`✅ 通过 ${pct}%！可以进入下一篇（100% 才算完美掌握）`);
+        toast(`✅ 通过 · 100% 才算完美掌握`);
       } else {
         toast.error(`只有 ${pct}%，需 ≥${PASS_PCT}% 才能解锁下一篇`);
       }
+      celebrateScore(pct);
     } else {
       toast.warning(`还需阅读 ${minSec - elapsed} 秒`);
     }

@@ -504,8 +504,8 @@ export default function GrowthReport() {
           </div>
         </Block>
 
-        {/* ===== 6. 弱点诊断 ===== */}
-        <Block title="🩺 5. 薄弱分析（AI 学习建议）" subtitle="按重要性排序的前 3 个改进项">
+        {/* ===== 6. 提升建议 ===== */}
+        <Block title="💡 5. 提升建议（AI 个性化辅导）" subtitle="按重要性排序的前 3 个进步方向">
           <div className="space-y-3">
             {prescriptions.map((p, i) => (
               <div key={i} className="rounded-xl border bg-white/80 p-3 dark:bg-black/20">

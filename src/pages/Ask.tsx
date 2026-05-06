@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Sparkles, Loader2 } from "lucide-react";
+import { Sparkles, Loader2, ArrowLeft } from "lucide-react";
+import BackLink from "@/components/BackLink";
 
 const SAMPLES = [
   "book 的复数形式是什么？",
@@ -64,6 +65,9 @@ export default function Ask() {
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-10">
+      <BackLink to="/" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> 返回首页
+      </BackLink>
       <h1 className="text-3xl font-bold mb-2 flex items-center gap-2">
         <Sparkles className="w-7 h-7 text-primary" />
         提问 AI 知识卡

@@ -1087,7 +1087,7 @@ function GroupSession({
         <PhaseChip active={phase === "done"} icon={<Sparkles className="size-3" />} label="复习" />
       </div>
 
-      <PageHeader hideReviewBanner title={`第 ${groupNumber} 组 · ${group.length} 词`} subtitle={phaseSubtitle(phase)} />
+      <PageHeader back="/gaokao/vocab" hideReviewBanner title={`第 ${groupNumber} 组 · ${group.length} 词`} subtitle={phaseSubtitle(phase)} />
 
       {phase === "flashcard" && (
         <FlashcardPhase group={group} onDone={() => setPhase("quiz")} />
@@ -2457,7 +2457,7 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
         </div>
         <div className="text-xs text-muted-foreground">SM-2 间隔重复</div>
       </div>
-      <PageHeader hideReviewBanner title="今日复习队列" subtitle="答对延后下次复习，答错明天再来" />
+      <PageHeader back="/gaokao/vocab" hideReviewBanner title="今日复习队列" subtitle="答对延后下次复习，答错明天再来" />
       <div className="mt-4">
         <ComboHeader
           pos={pos + 1}

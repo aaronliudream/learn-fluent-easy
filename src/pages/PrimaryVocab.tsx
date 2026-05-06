@@ -349,7 +349,10 @@ function QuizMode({ words }: { words: Vocab[] }) {
     const picks = shuffle(candidatePool).slice(0, sessionSize).map(x => x.w);
     return picks.map((w, i): Q => {
       const type = tShuffled[i % tShuffled.length];
-      const wrongPool = shuffle(words.filter(x => x.id !== w.id));
+      // 排除中文/英文与正确答案相同的干扰项，避免歧义
+      const wrongPool = shuffle(
+        words.filter(x => x.id !== w.id && x.word !== w.word && x.meaning_cn !== w.meaning_cn)
+      );
       if (type === "en2cn") {
         const opts = shuffle([w.meaning_cn, ...wrongPool.slice(0, 3).map(x => x.meaning_cn)]);
         return { type, word: w, options: opts, answer: w.meaning_cn };

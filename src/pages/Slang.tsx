@@ -275,6 +275,15 @@ const Slang = () => {
   // Active emotion filter (null = show all). When set, browse list & quizzes
   // are scoped to that emotion family.
   const [emotion, setEmotion] = useState<EmotionKey | null>(null);
+  // Daily Street-Slang gauntlet — completed flag persisted per day so the
+  // CTA only fires once per day per browser.
+  const [dailyDone, setDailyDone] = useState(false);
+  const todayKey = useMemo(() => new Date().toISOString().slice(0, 10), []);
+  useEffect(() => {
+    try {
+      setDailyDone(localStorage.getItem(`slang_street_done_${todayKey}`) === "1");
+    } catch { /* noop */ }
+  }, [todayKey]);
 
   // Load mastery from cloud once.
   useEffect(() => {
@@ -683,6 +692,61 @@ const Slang = () => {
     setComposeGrade({});
     recordedRef.current = new Set();
     setMode("quiz");
+    window.scrollTo({ top: 0 });
+  };
+
+  // ─────────── Daily Street Slang gauntlet ───────────
+  // Take today's top trending slang (newest from daily_slang) and run a
+  // 4-step 认→听→想→用 sprint on it. Forces every dim in one go so the
+  // user can crown a fresh slang in ~3 minutes.
+  const todayStreetSlang = useMemo<Idiom | null>(() => {
+    return dailySlang[0] ?? null;
+  }, [dailySlang]);
+
+  const startStreetSlangSprint = () => {
+    if (!todayStreetSlang) return;
+    const idiom = todayStreetSlang;
+    const distractorPool = IDIOMS.filter((x) => x.id !== idiom.id);
+    const pickDistractors = () =>
+      shuffle(distractorPool).slice(0, 3);
+
+    const mk = (kind: QuizKind): QuizQuestion => {
+      const distractors = pickDistractors();
+      if (kind === "en2cn") {
+        const opts = shuffle([idiom, ...distractors]).map((x) => x.meaning_cn);
+        return { id: idiom.id, kind, prompt: idiom.phrase, context: idiom.example, options: opts, answer: opts.indexOf(idiom.meaning_cn), idiom };
+      }
+      if (kind === "listen") {
+        const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+        return { id: idiom.id, kind, prompt: idiom.example, context: idiom.example_cn, options: opts, answer: opts.indexOf(idiom.phrase), idiom };
+      }
+      if (kind === "scenario") {
+        const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+        return { id: idiom.id, kind, prompt: "", context: idiom.example_cn, options: opts, answer: opts.indexOf(idiom.phrase), idiom };
+      }
+      // compose
+      return { id: idiom.id, kind, prompt: idiom.example_cn, context: idiom.meaning_cn, options: [], answer: -1, idiom };
+    };
+
+    // 4-step: 认 → 听 → 想 → 用. Each step uses a fresh question id offset
+    // so picks/grades don't collide across steps.
+    const baseId = idiom.id;
+    const seq: QuizQuestion[] = [
+      { ...mk("en2cn"),    id: baseId * 10 + 1 },
+      { ...mk("listen"),   id: baseId * 10 + 2 },
+      { ...mk("scenario"), id: baseId * 10 + 3 },
+      { ...mk("compose"),  id: baseId * 10 + 4 },
+    ];
+    setQuestions(seq);
+    setQIdx(0);
+    setPicks({});
+    setRevealed(false);
+    setComposeText({});
+    setComposeGrade({});
+    recordedRef.current = new Set();
+    setMode("quiz");
+    try { localStorage.setItem(`slang_street_done_${todayKey}`, "1"); } catch { /* noop */ }
+    setDailyDone(true);
     window.scrollTo({ top: 0 });
   };
 

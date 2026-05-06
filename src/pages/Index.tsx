@@ -216,28 +216,6 @@ const Index = () => {
         </section>
       )}
 
-      {/* Unlogged visitors: free CEFR diagnosis hero — cold-start lever */}
-      {!user && (
-        <Link
-          to="/placement"
-          className="group relative mb-6 mt-2 flex flex-col items-center justify-center gap-2 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-500 via-violet-500 to-purple-500 px-6 py-6 text-center text-white shadow-tile transition-all hover:-translate-y-0.5"
-        >
-          <span className="pointer-events-none absolute -right-12 -top-12 size-48 rounded-full bg-white/15 blur-3xl" />
-          <div className="relative grid size-12 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
-            <Award className="size-6" />
-          </div>
-          <h2 className="relative text-xl font-extrabold leading-tight md:text-2xl">
-            <T>Check your English level</T>
-          </h2>
-          <div className="relative inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-1.5 text-sm font-bold text-indigo-700 transition group-hover:bg-white/95">
-            <T>Free · 3 min</T> <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-          </div>
-        </Link>
-      )}
-
-      {/* Three-track entry — primary path selection (Exam / Career / Beginner) */}
-      <ThreeTracksHero />
-
       {/* Ask-AI knowledge card — quick entry to generate a shareable card */}
       <Link
         to="/ask"

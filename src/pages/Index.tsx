@@ -19,6 +19,8 @@ import { XPRing } from "@/components/game/XPRing";
 import { useStreakStats } from "@/hooks/useStreakStats";
 import OnboardingWizard from "@/components/OnboardingWizard";
 import ProWaitlistButton from "@/components/ProWaitlistButton";
+import BrandHubNav from "@/components/BrandHubNav";
+import BrandFamilyHero from "@/components/BrandFamilyHero";
 
 const HOME_COUNTS = {
   slang: 347,
@@ -174,9 +176,15 @@ const Index = () => {
       <header className="mt-2 mb-6 flex flex-col items-center text-center">
         <BrandLockup size={56} />
         <p className="mt-3 max-w-md font-serif text-base italic text-muted-foreground md:text-lg">
-          {t("brand.slogan")}
+          Real English from real American kids, for every age in China.
         </p>
       </header>
+
+      {/* 母品牌横向导航 */}
+      <BrandHubNav />
+
+      {/* 4 子品牌入口卡 — 母品牌主页核心模块 */}
+      <BrandFamilyHero />
 
       {/* Optional: guest progress save nudge */}
       {!user && hasProgress && (

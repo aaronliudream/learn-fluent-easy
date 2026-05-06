@@ -13,6 +13,7 @@ import { RouteErrorBoundary } from "@/components/RouteErrorBoundary";
 import Index from "./pages/Index.tsx";
 import Auth from "./pages/Auth.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import { Navigate } from "react-router-dom";
 
 // Lazy-load everything else — each page becomes its own chunk
 const Level = lazy(() => import("./pages/Level.tsx"));
@@ -95,6 +96,7 @@ const IeltsSpeaking = lazy(() => import("./pages/IeltsSpeaking.tsx"));
 const IeltsSpeakingSession = lazy(() => import("./pages/IeltsSpeakingSession.tsx"));
 const Pricing = lazy(() => import("./pages/Pricing.tsx"));
 const Dashboard = lazy(() => import("./pages/Dashboard.tsx"));
+const Cet = lazy(() => import("./pages/Cet.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import FeedbackWidget from "@/components/FeedbackWidget";
 import InstallPrompt from "@/components/InstallPrompt";
@@ -260,6 +262,10 @@ const App = () => (
           <Route path="/admin/feedback" element={<AdminFeedback />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          {/* Sub-brand entry redirects (母品牌 → 子品牌内部已有的实现) */}
+          <Route path="/kids" element={<Navigate to="/primary" replace />} />
+          <Route path="/senior" element={<Navigate to="/gaokao" replace />} />
+          <Route path="/cet" element={<Cet />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

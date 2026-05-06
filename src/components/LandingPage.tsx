@@ -5,6 +5,7 @@ import { BrandLockup } from "@/components/brand/BrandLogo";
 import { T } from "@/i18n/T";
 import { useI18n } from "@/i18n/I18nProvider";
 import SpeakingDemo from "@/components/SpeakingDemo";
+import BrandFamilyHero from "@/components/BrandFamilyHero";
 
 /**
  * Polished English copy keyed by the Chinese source. When the user's
@@ -185,7 +186,23 @@ export default function LandingPage() {
         {/* NAV */}
         <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-6 md:px-10 md:py-8">
           <BrandLockup size={36} />
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1 md:gap-2">
+            {[
+              { to: "/", label: "Home" },
+              { to: "/kids", label: "Kids" },
+              { to: "/junior", label: "Junior" },
+              { to: "/senior", label: "Senior" },
+              { to: "/cet", label: "CET" },
+              { to: "/about", label: "About Us" },
+            ].map((it) => (
+              <Link
+                key={it.to}
+                to={it.to}
+                className="hidden rounded-full px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#1F3A2E]/70 hover:bg-white hover:text-[#1F3A2E] md:inline-block"
+              >
+                {it.label}
+              </Link>
+            ))}
             <LanguageSwitcher />
             <Link
               to="/auth"
@@ -204,6 +221,9 @@ export default function LandingPage() {
             <h1 className="text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#1F3A2E] md:text-[72px]">
               <L>Make speaking English as addictive as playing a game.</L>
             </h1>
+            <p className="mt-4 max-w-xl font-serif text-base italic text-[#1F3A2E]/70 md:text-lg">
+              Real English from real American kids, for every age in China.
+            </p>
             <p className="mt-7 max-w-lg text-base leading-relaxed text-[#1F3A2E]/70 md:text-lg">
               <L>Practice real conversations with AI, get instant feedback, and improve your speaking in just 5 minutes a day.</L>
             </p>
@@ -276,6 +296,13 @@ export default function LandingPage() {
       <section id="try-now" className="border-t border-[#1F3A2E]/10 bg-[#F4EFE3]/40">
         <div className="mx-auto max-w-[900px] px-6 py-16 md:px-10 md:py-24">
           <SpeakingDemo />
+        </div>
+      </section>
+
+      {/* 02b — 4 子品牌入口（母品牌主页核心模块） */}
+      <section className="border-t border-[#1F3A2E]/10 bg-white">
+        <div className="mx-auto max-w-[1100px] px-6 py-16 md:px-10 md:py-24">
+          <BrandFamilyHero />
         </div>
       </section>
 

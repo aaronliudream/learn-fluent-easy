@@ -76,7 +76,7 @@ export const PRIMARY_CULTURE_CARDS: CultureCard[] = [
   { id: "s5", category: "school", emoji: "🎨", title_cn: "Show and Tell", title_en: "Show and Tell",
     desc_cn: "美国小学很有名的活动：每周带一样喜欢的东西到学校，介绍给同学。", keywords: ["show", "tell", "share"] },
   { id: "s6", category: "school", emoji: "🏆", title_cn: "Star of the Week", title_en: "Star Student",
-    desc_cn: "每周老师会评选一个"本周之星"，把照片贴在教室墙上，是很大的荣誉。", keywords: ["star", "week", "great job"] },
+    desc_cn: "每周老师会评选一个『本周之星』，把照片贴在教室墙上，是很大的荣誉。", keywords: ["star", "week", "great job"] },
 
   // 生活 (5 张)
   { id: "l1", category: "life", emoji: "🐶", title_cn: "宠物是家人", title_en: "Pet is Family",
@@ -88,5 +88,5 @@ export const PRIMARY_CULTURE_CARDS: CultureCard[] = [
   { id: "l4", category: "life", emoji: "👨‍👩‍👦", title_cn: "Sleepover 过夜", title_en: "Sleepover",
     desc_cn: "好朋友会到对方家过夜，一起看电影、玩游戏，叫 Sleepover Party。", keywords: ["sleepover", "friend"] },
   { id: "l5", category: "life", emoji: "💰", title_cn: "Allowance 零花钱", title_en: "Allowance",
-    desc_cn: "西方孩子做家务可以挣零花钱：洗碗、遛狗、剪草坪都有"工资"。", keywords: ["allowance", "chore", "money"] },
+    desc_cn: "西方孩子做家务可以挣零花钱：洗碗、遛狗、剪草坪都有『工资』。", keywords: ["allowance", "chore", "money"] },
 ];

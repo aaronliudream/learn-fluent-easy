@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, Play, Sparkles, Star, Award, Target, Flame, Trophy, Map as MapIcon, Eye, Ear, MousePointerClick, PenLine, Mic, MessageCircle, Users } from "lucide-react";
+import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, Users, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 
+// 6 个核心能力入口（图标化，不再是全宽 banner）
 const buildSkills = (g: number) => [
-  { key: "games", title: "🎮 单词游戏中心", desc: "选义 · 听音 · 翻牌 · 拼词", gradient: "from-rose-400 to-orange-400", to: `/primary/games/${g}` },
-  { key: "listening", title: "🎧 听力", desc: "听词选图 · 短对话理解", gradient: "from-sky-400 to-cyan-400", to: `/primary/games/${g}/listen` },
-  { key: "reading", title: "📖 阅读", desc: "5 步通关：热身·听读·跟读·思考·宝藏关", gradient: "from-emerald-400 to-teal-400", to: `/primary/reading/grade/${g}` },
-  { key: "writing", title: "✍️ 写作", desc: "拼写 · 填空 · 看图写句", gradient: "from-violet-400 to-fuchsia-400", to: `/primary/games/${g}/spell` },
-  { key: "vocab", title: "📚 词汇", desc: "本年级核心词", gradient: "from-amber-400 to-orange-400", to: `/primary/vocab/${g}` },
-  { key: "culture", title: "🌍 西方文化小课堂", desc: "节日 · 礼仪 · 校园 · 生活 · 课标核心素养", gradient: "from-indigo-400 to-purple-400", to: `/primary/culture/${g}` },
-  { key: "chat", title: "💬 Spark 对话", desc: "AI 陪你说英语", gradient: "from-pink-400 to-rose-400", to: "/primary/chat" },
+  { key: "games", emoji: "🎮", title: "游戏", to: `/primary/games/${g}`, color: "from-rose-400 to-orange-400" },
+  { key: "listening", emoji: "🎧", title: "听力", to: `/primary/games/${g}/listen`, color: "from-sky-400 to-cyan-400" },
+  { key: "reading", emoji: "📖", title: "阅读", to: `/primary/reading/grade/${g}`, color: "from-emerald-400 to-teal-400" },
+  { key: "vocab", emoji: "📚", title: "词汇", to: `/primary/vocab/${g}`, color: "from-amber-400 to-orange-400" },
+  { key: "culture", emoji: "🌍", title: "文化", to: `/primary/culture/${g}`, color: "from-indigo-400 to-purple-400" },
+  { key: "chat", emoji: "💬", title: "Spark", to: "/primary/chat", color: "from-pink-400 to-rose-400" },
 ];
 
 // 课标对照：1-2 年级 → CEFR Pre-A1 启蒙阶段

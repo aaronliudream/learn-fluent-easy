@@ -13,6 +13,8 @@ import {
   Loader2,
   Lightbulb,
   PenLine,
+  Headphones,
+  Play,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -45,7 +47,7 @@ type Mode = "browse" | "quiz";
 // fill  = show example with blank, choose missing idiom.
 // scenario = read a Chinese real-life scene, pick the right English slang.
 // compose  = write a sentence using the slang in a given scenario (AI graded).
-type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose";
+type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose" | "listen";
 
 /** Map a quiz kind to the mastery dimension it strengthens. */
 const KIND_TO_DIM: Record<QuizKind, SlangDim> = {
@@ -54,7 +56,7 @@ const KIND_TO_DIM: Record<QuizKind, SlangDim> = {
   fill: "recall",
   scenario: "recall",
   compose: "use",
-  // (listen → "hear" comes in phase 2)
+  listen: "hear",
 };
 
 export type ComposeGrade = {

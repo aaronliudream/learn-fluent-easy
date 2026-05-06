@@ -360,4 +360,8 @@ All colors MUST be HSL.
   main { max-width: none !important; padding: 0 !important; }
   a { color: inherit !important; text-decoration: none !important; }
   .shadow-tile, .shadow-card { box-shadow: none !important; }
+  /* Force collapsible <details> open in print so PDFs aren't blank */
+  details > *:not(summary) { display: block !important; }
+  details > summary { list-style: none; }
+  details { break-inside: avoid; }
 }

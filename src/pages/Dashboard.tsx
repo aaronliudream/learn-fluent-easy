@@ -117,7 +117,7 @@ export default function Dashboard() {
   const [stage, setStage] = useState<Stage>("gaokao");
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 md:px-8 md:py-12">
-      <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" backTo="/" />
+      <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back="/" />
       <Tabs value={stage} onValueChange={(v) => setStage(v as Stage)} className="mt-4">
         <TabsList className="grid w-full max-w-xs grid-cols-2">
           <TabsTrigger value="junior">初中</TabsTrigger>

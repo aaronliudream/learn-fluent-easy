@@ -10,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { awardForCorrect, awardForBlock, notifyWrong } from "@/lib/coins";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
+import { track, bumpTurn, classifyTopic, detectLang } from "@/lib/sparkTrack";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -45,6 +46,17 @@ export default function PrimaryChat() {
   const [quizItems, setQuizItems] = useState<QuizItem[] | null>(null);
   const [picks, setPicks] = useState<Record<number, number>>({});
   const [streak, setStreak] = useState(0);
+  // Track which term Spark "remembered" this session — so we can detect
+  // whether the kid emotionally engaged with it (the gold-standard signal).
+  const rememberedTermRef = useRef<string | null>(null);
+
+  // chat_opened: fires once per page load
+  useEffect(() => {
+    track("chat_opened", {});
+    const handleUnload = () => track("session_end", {});
+    window.addEventListener("pagehide", handleUnload);
+    return () => window.removeEventListener("pagehide", handleUnload);
+  }, []);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -76,6 +88,8 @@ export default function PrimaryChat() {
         const snap = (pick.snapshot ?? {}) as { term?: string };
         const term = snap.term;
         if (!term) return;
+        rememberedTermRef.current = term.toLowerCase();
+        track("remembered_shown", { term });
         setMessages([{
           role: "assistant",
           content: `Hi again! 🐶✨ I missed you! Last time we talked about "${term}". Do you still remember what it means? 💭`,
@@ -93,6 +107,24 @@ export default function PrimaryChat() {
     const next = [...messages, userMsg];
     setMessages([...next, { role: "assistant", content: "" }]);
     setLoading(true);
+    const turnNum = bumpTurn();
+    const topic = classifyTopic(t);
+    const lang = detectLang(t);
+    const usedStarter = STARTERS.includes(text);
+    track("turn_sent", {
+      topic,
+      lang,
+      msg_len: t.length,
+      used_starter: usedStarter,
+      turn_num: turnNum,
+    });
+    // Did the kid actually engage with what Spark remembered?
+    const rt = rememberedTermRef.current;
+    if (rt && turnNum <= 2 && t.toLowerCase().includes(rt)) {
+      track("remembered_engaged", { term: rt });
+      rememberedTermRef.current = null; // only fire once
+    }
+    const replyStartedAt = Date.now();
     try {
       const resp = await fetch(CHAT_URL, {
         method: "POST",
@@ -142,6 +174,10 @@ export default function PrimaryChat() {
         const englishOnly = acc.replace(/[\u4e00-\u9fff（）()]/g, "").replace(/\s+/g, " ").trim();
         if (englishOnly) speak(englishOnly).catch(() => {});
       }
+      track("spark_replied", {
+        latency_ms: Date.now() - replyStartedAt,
+        reply_len: acc.length,
+      });
       // 对话挂钩：用户输入英文越多奖励越多 (每 3 个英文单词 +1，封顶 5)
       try {
         const userEn = (t.match(/[a-zA-Z]+/g) || []).length;
@@ -164,6 +200,7 @@ export default function PrimaryChat() {
     const turns = messages.filter((m) => m.content.trim()).length;
     if (turns < 2) { toast.info("先和 Spark 聊几句再来出题吧 🐾"); return; }
     setQuizLoading(true);
+    track("quiz_started", { turns_before_quiz: turns });
     try {
       const resp = await fetch(QUIZ_URL, {
         method: "POST",
@@ -237,6 +274,7 @@ export default function PrimaryChat() {
     if (celebratedKey.current === key) return;
     celebratedKey.current = key;
     celebrateScore(Math.round((correctCount / quizItems.length) * 100));
+    track("quiz_finished", { correct: correctCount, total: quizItems.length });
   }, [allDone, quizItems, correctCount]);
 
   return (

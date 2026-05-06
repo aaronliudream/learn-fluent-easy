@@ -5015,6 +5015,8 @@ export type Database = {
           parental_consent_at: string | null
           patience_score: number
           preferred_language: string | null
+          quiz_session_size: number
+          quiz_type_mix: Json
           recall_email_sent_at: string | null
           self_level: string | null
           streak_recall_sent_at: string | null
@@ -5044,6 +5046,8 @@ export type Database = {
           parental_consent_at?: string | null
           patience_score?: number
           preferred_language?: string | null
+          quiz_session_size?: number
+          quiz_type_mix?: Json
           recall_email_sent_at?: string | null
           self_level?: string | null
           streak_recall_sent_at?: string | null
@@ -5073,6 +5077,8 @@ export type Database = {
           parental_consent_at?: string | null
           patience_score?: number
           preferred_language?: string | null
+          quiz_session_size?: number
+          quiz_type_mix?: Json
           recall_email_sent_at?: string | null
           self_level?: string | null
           streak_recall_sent_at?: string | null

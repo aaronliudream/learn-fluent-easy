@@ -616,10 +616,29 @@ export default function GrowthReport() {
       {/* Print styles */}
       <style>{`
         @media print {
-          body * { visibility: hidden; }
-          .report-print, .report-print * { visibility: visible; }
-          .report-print { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none !important; border: none !important; }
-          @page { margin: 12mm; }
+          /* 隐藏页面其它内容（用 display:none 而不是 visibility，避免占空间且能正确分页） */
+          body > *:not(.report-print-wrapper) { display: none !important; }
+          .report-print-wrapper, .report-print-wrapper * { visibility: visible; }
+          .report-print-wrapper { display: block !important; }
+          .report-print {
+            box-shadow: none !important;
+            border: none !important;
+            background: white !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          /* 每个板块尽量不要被分页切到中间 */
+          .report-print > * { break-inside: avoid; page-break-inside: avoid; }
+          /* 让卡片渐变背景能在打印里显示 */
+          .report-print, .report-print * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          /* 自动适应纸张并允许跨页 */
+          html, body { height: auto !important; overflow: visible !important; background: white !important; }
+          @page { size: A4; margin: 10mm; }
         }
       `}</style>
     </section>

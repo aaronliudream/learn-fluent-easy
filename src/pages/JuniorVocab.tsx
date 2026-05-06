@@ -245,12 +245,20 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
 
       {/* SRS 智能复习入口（高考同款） */}
       <button
-        onClick={() => onPick("srs")}
-        disabled={dueCount === 0}
+        onClick={() => {
+          if (dueCount > 0) {
+            onPick("srs");
+          } else if (studied === 0) {
+            toast.info(zh ? "还没有学过单词，先从第 1 组开始学吧 👇" : "No words learned yet — start with group 1 below 👇");
+            onPickGroup(0);
+          } else {
+            toast.success(zh ? `已学 ${studied} 词 · 今日没有到期单词，继续学新词巩固吧 ✨` : `${studied} words learned · nothing due today — keep learning new ones ✨`);
+          }
+        }}
         className={cn(
           "mb-5 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
           dueCount > 0 ? "border-primary bg-gradient-to-br from-primary/15 via-primary/5 to-transparent hover:border-primary"
-                       : "border-border bg-muted/30 opacity-70 cursor-not-allowed",
+                       : "border-border bg-card hover:border-primary/40",
         )}
       >
         <div className="flex items-center gap-4">
@@ -268,12 +276,12 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
               {!loadedMastery ? (zh ? "加载中…" : "Loading…") : dueCount === 0
-                ? studied === 0 ? (zh ? "先学一组单词，系统会按艾宾浩斯曲线安排复习" : "Study one group first; reviews will be scheduled automatically")
+                ? studied === 0 ? (zh ? "点这里去学第一组单词，系统会按艾宾浩斯曲线安排复习 →" : "Tap to start group 1; reviews will be scheduled automatically →")
                                 : (zh ? `已学 ${studied} 词 · 今日没有到期单词，明天再来` : `${studied} words studied · nothing due today`)
                 : (zh ? `已学 ${studied} 词 · SM-2 算法 · 答错重学，答对延后` : `${studied} words studied · SM-2 schedule · wrong answers come back sooner`)}
             </div>
           </div>
-          {dueCount > 0 && <ChevronRight className="size-5 text-primary" />}
+          <ChevronRight className={cn("size-5", dueCount > 0 ? "text-primary" : "text-muted-foreground")} />
         </div>
       </button>
 

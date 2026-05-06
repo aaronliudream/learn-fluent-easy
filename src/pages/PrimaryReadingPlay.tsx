@@ -304,8 +304,20 @@ function ReadStep({ sentences, onDone }: { sentences: Sentence[]; onDone: () => 
   const cur = sentences[idx];
   const allRead = readSet.size >= sentences.length;
 
-  const playAndMark = async () => {
-    try { await speak(cur.en); setReadSet(s => new Set(s).add(idx)); } catch {}
+  // Mark as read immediately on click (user intent), then play TTS.
+  // Keeping the speak() call synchronous in the gesture chain (no await
+  // before it) ensures iOS Safari and Chrome autoplay policies allow it,
+  // and TTS failures never block progress.
+  const playAndMark = () => {
+    setReadSet(s => {
+      const next = new Set(s); next.add(idx); return next;
+    });
+    // Auto-advance to next sentence after a brief moment so user keeps flowing
+    const isLast = idx >= sentences.length - 1;
+    try { speak(cur.en); } catch {}
+    if (!isLast) {
+      window.setTimeout(() => setIdx(i => Math.min(sentences.length - 1, i + 1)), 800);
+    }
   };
 
   return (

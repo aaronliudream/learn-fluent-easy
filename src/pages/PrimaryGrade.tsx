@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, Users, ChevronDown } from "lucide-react";
+import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, Users, ChevronDown, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 
@@ -105,6 +105,7 @@ export default function PrimaryGrade() {
   const SKILLS = buildSkills(g);
   const [lessons, setLessons] = useState<LessonRow[]>([]);
   const [loading, setLoading] = useState(true);
+  const [weakCount, setWeakCount] = useState<number>(0);
 
   useEffect(() => {
     (async () => {
@@ -116,6 +117,19 @@ export default function PrimaryGrade() {
         .order("sort_order");
       setLessons((data ?? []) as any);
       setLoading(false);
+
+      // 统计本年级"待攻克"词汇数 = 未学 + 学习中 + 错>对
+      const { data: u } = await supabase.auth.getUser();
+      const uid = u?.user?.id;
+      const { data: vocab } = await supabase.from("primary_vocab").select("id").eq("grade", g);
+      const total = (vocab ?? []).length;
+      if (!uid || total === 0) { setWeakCount(total); return; }
+      const { data: m } = await supabase
+        .from("primary_word_mastery")
+        .select("word_id,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong")
+        .eq("user_id", uid).eq("grade", g);
+      const mastered = (m ?? []).filter((r: any) => (r.mastery_level ?? 0) >= 3).length;
+      setWeakCount(Math.max(0, total - mastered));
     })();
   }, [g]);
 
@@ -174,28 +188,28 @@ export default function PrimaryGrade() {
   });
 
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 pb-24">
-      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回年级选择
+    <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 pb-24 text-base">
+      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-base text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-5" /> 返回年级选择
       </BackLink>
 
       {/* 顶部迷你状态栏 — 一行三个迷你徽章 */}
-      <div className="mb-3 flex items-center justify-between text-xs">
-        <div className="flex items-center gap-2">
-          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-extrabold text-primary">G{g}</span>
+      <div className="mb-3 flex items-center justify-between text-sm">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-extrabold text-primary">G{g}</span>
           <span className="inline-flex items-center gap-1 text-muted-foreground">
-            <Flame className="size-3.5 text-orange-500" /> <b className="text-orange-600">{streak}</b> 天
+            <Flame className="size-4 text-orange-500" /> <b className="text-orange-600">{streak}</b> 天
           </span>
           <span className="inline-flex items-center gap-1 text-muted-foreground">
-            <Trophy className="size-3.5 text-amber-500" /> <b className="text-amber-600">{earnedCount}</b>/{BADGES.length}
+            <Trophy className="size-4 text-amber-500" /> <b className="text-amber-600">{earnedCount}</b>/{BADGES.length}
           </span>
           <span className="inline-flex items-center gap-1 text-muted-foreground">
-            <Star className="size-3.5 fill-amber-400 stroke-amber-500" /> <b className="text-amber-600">{totalStars}</b>
+            <Star className="size-4 fill-amber-400 stroke-amber-500" /> <b className="text-amber-600">{totalStars}</b>
           </span>
         </div>
         <Link
           to="/parent"
-          className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-3.5 py-1.5 text-xs font-extrabold text-white shadow-md ring-2 ring-emerald-200 transition hover:-translate-y-0.5 hover:shadow-lg dark:ring-emerald-900"
+          className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-2 text-sm font-extrabold text-white shadow-md ring-2 ring-emerald-200 transition hover:-translate-y-0.5 hover:shadow-lg dark:ring-emerald-900"
           aria-label="进入家长学习中心，查看孩子学习进度"
         >
           <Users className="size-4" /> 📊 学习进度
@@ -206,31 +220,48 @@ export default function PrimaryGrade() {
       {/* 🌟 主 CTA — 今天的冒险 */}
       {nextLesson ? (
         <Link to={`/primary/lesson/${nextLesson.id}`}
-          className="mb-4 flex items-center gap-4 rounded-3xl bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:scale-[1.01]">
+          className="mb-3 flex items-center gap-4 rounded-3xl bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:scale-[1.01]">
           <div className="grid size-16 shrink-0 place-items-center rounded-3xl bg-white/25 text-4xl backdrop-blur-sm">{nextLesson.unit.emoji ?? "🏝️"}</div>
           <div className="flex-1 min-w-0">
-            <div className="text-[10px] font-bold uppercase tracking-wider opacity-90">今天的冒险</div>
-            <div className="truncate text-xl font-extrabold leading-tight">{nextLesson.title_cn}</div>
-            <div className="mt-0.5 text-[11px] opacity-90">{nextLesson.unit.title_cn} · 约 {nextLesson.estimated_minutes || 8} 分钟</div>
+            <div className="text-xs font-bold uppercase tracking-wider opacity-90">今天的冒险</div>
+            <div className="truncate text-2xl font-extrabold leading-tight">{nextLesson.title_cn}</div>
+            <div className="mt-1 text-sm opacity-90">{nextLesson.unit.title_cn} · 约 {nextLesson.estimated_minutes || 8} 分钟</div>
           </div>
           <div className="grid size-12 shrink-0 place-items-center rounded-full bg-white/30 backdrop-blur-sm">
             <Play className="size-6 fill-white" />
           </div>
         </Link>
       ) : !loading && (
-        <div className="mb-4 rounded-3xl bg-gradient-to-br from-emerald-400 to-teal-500 p-5 text-center text-white shadow-tile">
-          <div className="text-3xl">🏆</div>
-          <div className="mt-1 text-base font-extrabold">已完成本年级所有课程！</div>
+        <div className="mb-3 rounded-3xl bg-gradient-to-br from-emerald-400 to-teal-500 p-5 text-center text-white shadow-tile">
+          <div className="text-4xl">🏆</div>
+          <div className="mt-1 text-lg font-extrabold">已完成本年级所有课程！</div>
         </div>
       )}
+
+      {/* ⚡ 今日词汇挑战 — 智能抽词（优先未学/做错/掌握度低） */}
+      <Link
+        to={`/primary/vocab/${g}?focus=weak`}
+        className="mb-5 flex items-center gap-3 rounded-2xl border-2 border-amber-300 bg-gradient-to-r from-amber-50 to-orange-50 p-3.5 transition hover:-translate-y-0.5 hover:border-amber-400 dark:border-amber-700 dark:from-amber-950/30 dark:to-orange-950/30"
+      >
+        <div className="grid size-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-2xl text-white shadow">⚡</div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-1.5 text-sm font-extrabold">
+            今日 10 词挑战 <Sparkles className="size-3.5 text-amber-500" />
+          </div>
+          <div className="text-xs text-muted-foreground">
+            智能抽取「{weakCount > 0 ? `${weakCount} 个待攻克` : "新词"}」· 优先没学过 / 做错过的 / 掌握度低的
+          </div>
+        </div>
+        <div className="rounded-full bg-amber-500 px-3 py-1.5 text-xs font-extrabold text-white shadow">开始 →</div>
+      </Link>
 
       {/* 🎯 6 个能力小入口 — 图标化，2 行 */}
       <section className="mb-5 grid grid-cols-3 gap-2 sm:grid-cols-6">
         {SKILLS.map((s) => (
           <Link key={s.key} to={s.to}
-            className={`group flex flex-col items-center gap-1 rounded-2xl bg-gradient-to-br ${s.color} p-3 text-white shadow-sm transition hover:-translate-y-0.5`}>
-            <span className="text-2xl">{s.emoji}</span>
-            <span className="text-[11px] font-extrabold">{s.title}</span>
+            className={`group flex flex-col items-center gap-1 rounded-2xl bg-gradient-to-br ${s.color} p-3.5 text-white shadow-sm transition hover:-translate-y-0.5`}>
+            <span className="text-3xl">{s.emoji}</span>
+            <span className="text-sm font-extrabold">{s.title}</span>
           </Link>
         ))}
       </section>
@@ -238,40 +269,40 @@ export default function PrimaryGrade() {
       {/* 🗺 学习地图（按单元分岛） — 主要进度可视化 */}
       {!loading && units.length > 0 && (
         <section className="mb-5">
-          <div className="mb-2 flex items-center gap-2 text-sm font-extrabold">
-            <MapIcon className="size-4 text-emerald-500" /> 学习地图
-            <span className="ml-auto text-[10px] font-normal text-muted-foreground">{totalDone}/{totalAll} 课</span>
+          <div className="mb-2 flex items-center gap-2 text-base font-extrabold">
+            <MapIcon className="size-5 text-emerald-500" /> 学习地图
+            <span className="ml-auto text-xs font-normal text-muted-foreground">{totalDone}/{totalAll} 课</span>
           </div>
           <div className="space-y-2">
             {unitStates.map((u, idx) => (
-              <div key={u.id} className={`rounded-2xl border-2 p-2.5 transition ${u.current ? "border-rose-300 bg-gradient-to-br from-rose-50 to-amber-50 shadow-tile dark:border-rose-700 dark:from-rose-950/30 dark:to-amber-950/30" : u.allDone ? "border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 dark:border-emerald-700 dark:from-emerald-950/30 dark:to-teal-950/30" : u.isUnlocked ? "border-border bg-card" : "border-border bg-muted/30 opacity-60"}`}>
-                <div className="mb-1.5 flex items-center gap-2">
-                  <div className={`grid size-9 place-items-center rounded-xl text-lg shadow-sm ${u.allDone ? "bg-gradient-to-br from-emerald-400 to-teal-400 text-white" : u.isUnlocked ? "bg-gradient-to-br from-amber-300 to-rose-300" : "bg-muted"}`}>
+              <div key={u.id} className={`rounded-2xl border-2 p-3 transition ${u.current ? "border-rose-300 bg-gradient-to-br from-rose-50 to-amber-50 shadow-tile dark:border-rose-700 dark:from-rose-950/30 dark:to-amber-950/30" : u.allDone ? "border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 dark:border-emerald-700 dark:from-emerald-950/30 dark:to-teal-950/30" : u.isUnlocked ? "border-border bg-card" : "border-border bg-muted/30 opacity-60"}`}>
+                <div className="mb-2 flex items-center gap-2">
+                  <div className={`grid size-10 place-items-center rounded-xl text-xl shadow-sm ${u.allDone ? "bg-gradient-to-br from-emerald-400 to-teal-400 text-white" : u.isUnlocked ? "bg-gradient-to-br from-amber-300 to-rose-300" : "bg-muted"}`}>
                     {u.isUnlocked ? (u.emoji ?? "🏝️") : "🔒"}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground">岛屿 {idx + 1}{u.current && " · 你在这里"}</div>
-                    <div className="truncate text-sm font-extrabold">{u.title_cn}</div>
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">岛屿 {idx + 1}{u.current && " · 你在这里"}</div>
+                    <div className="truncate text-base font-extrabold">{u.title_cn}</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-[10px] font-extrabold">{u.doneCount}/{u.totalCount}</div>
-                    <div className="h-1 w-12 overflow-hidden rounded-full bg-muted">
+                    <div className="text-xs font-extrabold">{u.doneCount}/{u.totalCount}</div>
+                    <div className="h-1.5 w-14 overflow-hidden rounded-full bg-muted">
                       <div className="h-full bg-gradient-to-r from-emerald-400 to-teal-400 transition-all" style={{ width: `${u.totalCount ? (u.doneCount / u.totalCount) * 100 : 0}%` }} />
                     </div>
                   </div>
                 </div>
                 {u.isUnlocked && (
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1.5">
                     {u.lessons.map(l => {
                       const stars = l.progress?.[0]?.stars ?? 0;
                       const done = !!l.progress?.[0]?.completed_at;
                       return (
                         <Link key={l.id} to={`/primary/lesson/${l.id}`}
-                          className={`flex items-center gap-1 rounded-lg border px-1.5 py-1 text-[10px] font-bold transition hover:-translate-y-0.5 ${done ? "border-emerald-300 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300" : "border-border bg-card hover:border-amber-300"}`}>
-                          <span className="truncate max-w-[100px]">{l.title_cn}</span>
+                          className={`flex items-center gap-1 rounded-lg border px-2 py-1.5 text-xs font-bold transition hover:-translate-y-0.5 ${done ? "border-emerald-300 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300" : "border-border bg-card hover:border-amber-300"}`}>
+                          <span className="truncate max-w-[140px]">{l.title_cn}</span>
                           <span className="flex">
                             {Array.from({ length: 3 }).map((_, i) => (
-                              <Star key={i} className={`size-2 ${i < stars ? "fill-amber-400 stroke-amber-500" : "stroke-muted-foreground/40"}`} />
+                              <Star key={i} className={`size-2.5 ${i < stars ? "fill-amber-400 stroke-amber-500" : "stroke-muted-foreground/40"}`} />
                             ))}
                           </span>
                         </Link>
@@ -280,7 +311,7 @@ export default function PrimaryGrade() {
                   </div>
                 )}
                 {!u.isUnlocked && (
-                  <div className="text-center text-[10px] text-muted-foreground">通关上一岛即可解锁 🔓</div>
+                  <div className="text-center text-xs text-muted-foreground">通关上一岛即可解锁 🔓</div>
                 )}
               </div>
             ))}
@@ -290,12 +321,12 @@ export default function PrimaryGrade() {
 
       {/* 🏆 我的成就 — 折叠抽屉（默认收起） */}
       <details className="mb-4 rounded-2xl border-2 border-border bg-card">
-        <summary className="flex cursor-pointer items-center gap-2 p-3 text-sm font-extrabold list-none">
-          <Trophy className="size-4 text-amber-500" />
+        <summary className="flex cursor-pointer items-center gap-2 p-3.5 text-base font-extrabold list-none">
+          <Trophy className="size-5 text-amber-500" />
           <span>我的成就</span>
-          <span className="ml-auto inline-flex items-center gap-1 text-[11px] font-normal text-muted-foreground">
+          <span className="ml-auto inline-flex items-center gap-1 text-xs font-normal text-muted-foreground">
             勋章 {earnedCount}/{BADGES.length} · 总进度 {overallPct}%
-            <ChevronDown className="size-3.5 transition group-open:rotate-180" />
+            <ChevronDown className="size-4 transition group-open:rotate-180" />
           </span>
         </summary>
         <div className="border-t p-3">

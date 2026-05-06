@@ -226,217 +226,108 @@ export default function PrimaryGrade() {
   });
 
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
+    <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 pb-24">
       <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回年级选择
       </BackLink>
-      <div className="mb-5">
-        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">PRIMARY · G{g}</div>
-        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">{g} 年级 · 四大能力</h1>
-        <p className="mt-1 text-xs text-muted-foreground">输入 → 理解 → 练习 → 输出 → 测试 · 每天一键开始</p>
-      </div>
 
-      {/* CEFR 国际等级 + 课标对照 */}
-      <div className="mb-4 flex items-center gap-3 rounded-2xl border-2 border-primary/20 bg-primary/5 p-3">
-        <div className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-primary to-primary/70 text-white shadow-sm">
-          <Award className="size-6" />
+      {/* 顶部迷你状态栏 — 一行三个迷你徽章 */}
+      <div className="mb-3 flex items-center justify-between text-xs">
+        <div className="flex items-center gap-2">
+          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-extrabold text-primary">G{g}</span>
+          <span className="inline-flex items-center gap-1 text-muted-foreground">
+            <Flame className="size-3.5 text-orange-500" /> <b className="text-orange-600">{streak}</b> 天
+          </span>
+          <span className="inline-flex items-center gap-1 text-muted-foreground">
+            <Trophy className="size-3.5 text-amber-500" /> <b className="text-amber-600">{earnedCount}</b>/{BADGES.length}
+          </span>
+          <span className="inline-flex items-center gap-1 text-muted-foreground">
+            <Star className="size-3.5 fill-amber-400 stroke-amber-500" /> <b className="text-amber-600">{totalStars}</b>
+          </span>
         </div>
-        <div className="flex-1 min-w-0">
-          <div className="flex flex-wrap items-center gap-1.5">
-            <span className="rounded-full bg-primary px-2 py-0.5 text-[10px] font-extrabold text-primary-foreground">CEFR {cefr.label}</span>
-            <span className="text-[11px] font-bold text-foreground">{cefr.cn}</span>
-          </div>
-          <div className="mt-0.5 text-[11px] text-muted-foreground">{cefr.goal}</div>
-        </div>
-        <div className="text-right">
-          <div className="text-base font-extrabold text-primary">{overallPct}%</div>
-          <div className="text-[10px] text-muted-foreground">总进度</div>
-        </div>
-      </div>
-
-      {/* 连续打卡 + 勋章 + 家长入口 */}
-      <section className="mb-4 grid grid-cols-3 gap-2">
-        <div className="rounded-2xl border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-rose-50 p-2.5 text-center">
-          <Flame className="mx-auto size-5 text-orange-500" />
-          <div className="mt-0.5 text-lg font-extrabold text-orange-600">{streak}</div>
-          <div className="text-[10px] font-bold text-muted-foreground">连续打卡(天)</div>
-        </div>
-        <div className="rounded-2xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-yellow-50 p-2.5 text-center">
-          <Trophy className="mx-auto size-5 text-amber-500" />
-          <div className="mt-0.5 text-lg font-extrabold text-amber-600">{earnedCount}/{BADGES.length}</div>
-          <div className="text-[10px] font-bold text-muted-foreground">已获勋章</div>
-        </div>
-        <Link to="/primary/parent" className="rounded-2xl border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 to-teal-50 p-2.5 text-center transition hover:-translate-y-0.5">
-          <Users className="mx-auto size-5 text-emerald-500" />
-          <div className="mt-0.5 text-lg font-extrabold text-emerald-600">家长</div>
-          <div className="text-[10px] font-bold text-muted-foreground">查看周报</div>
+        <Link to="/primary/parent" className="inline-flex items-center gap-1 rounded-full border border-emerald-300 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-950/30 dark:text-emerald-300">
+          <Users className="size-3" /> 家长
         </Link>
-      </section>
+      </div>
 
-      {/* 勋章墙 */}
-      <section className="mb-4 rounded-2xl border-2 border-border bg-card p-3">
-        <div className="mb-2 flex items-center gap-1.5 text-[11px] font-extrabold text-muted-foreground">
-          <Trophy className="size-3.5 text-amber-500" /> 勋章墙 · 收集你的成就
-        </div>
-        <div className="grid grid-cols-4 gap-2">
-          {BADGES.map(b => {
-            const got = b.check(badgeStats);
-            return (
-              <div key={b.key} title={b.hint} className={`rounded-xl border-2 p-2 text-center transition ${got ? "border-amber-300 bg-gradient-to-br from-amber-50 to-orange-50" : "border-border bg-muted/30 opacity-50 grayscale"}`}>
-                <div className="text-2xl">{b.emoji}</div>
-                <div className="mt-0.5 text-[10px] font-extrabold">{b.title}</div>
-                <div className="text-[9px] text-muted-foreground leading-tight">{b.hint}</div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* 词汇 6 步掌握闭环 */}
-      <section className="mb-4 rounded-2xl border-2 border-border bg-card p-3">
-        <div className="mb-2 flex items-center justify-between">
-          <div className="flex items-center gap-1.5 text-[11px] font-extrabold text-muted-foreground">
-            <Sparkles className="size-3.5 text-violet-500" /> 词汇 6 步掌握闭环 · 牛津学习环
-          </div>
-          <span className="text-[9px] text-muted-foreground">每个新词走完 6 步 = 真正学会</span>
-        </div>
-        <div className="grid grid-cols-6 gap-1.5">
-          {VOCAB_6_STEPS.map(s => {
-            const Icon = s.icon;
-            return (
-              <Link key={s.n} to={s.to(g)} className="group rounded-xl border-2 border-border bg-gradient-to-br from-violet-50 to-fuchsia-50 p-1.5 text-center transition hover:-translate-y-0.5 hover:border-violet-300">
-                <div className="mx-auto grid size-6 place-items-center rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 text-[10px] font-extrabold text-white">{s.n}</div>
-                <Icon className="mx-auto mt-1 size-3.5 text-violet-500" />
-                <div className="mt-0.5 text-[10px] font-extrabold">{s.label}</div>
-                <div className="text-[8px] text-muted-foreground leading-tight">{s.desc}</div>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* 教育学学习路径：输入 → 内化 → 输出 */}
-      <section className="mb-4">
-        <div className="mb-2 flex items-center gap-1.5 text-sm font-extrabold">
-          <Target className="size-4 text-rose-500" />
-          <span>每天这样学最棒 🌈</span>
-          <span className="ml-1 text-[10px] font-normal text-muted-foreground">听 → 看 → 玩 → 说</span>
-        </div>
-        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-          {LEARNING_PATH.map((p) => (
-            <div
-              key={p.stage}
-              className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${p.bg} p-3 text-white shadow-tile ring-2 ${p.ring} ring-offset-2 ring-offset-background`}
-            >
-              <span className="pointer-events-none absolute -right-4 -top-4 size-16 rounded-full bg-white/25 blur-xl" />
-              <div className="relative flex items-center gap-2">
-                <div className="grid size-10 shrink-0 place-items-center rounded-2xl bg-white/30 text-2xl backdrop-blur-sm">
-                  {p.emoji}
-                </div>
-                <div className="min-w-0">
-                  <div className="text-[9px] font-bold uppercase tracking-wider opacity-90">Step {p.stage} · {p.subtitle}</div>
-                  <div className="text-base font-extrabold leading-tight">{p.title}</div>
-                </div>
-              </div>
-              <div className="relative mt-1.5 text-[11px] font-medium opacity-95">{p.desc}</div>
-              <div className="relative mt-2 grid gap-1.5">
-                {p.items.map((it) => (
-                  <Link
-                    key={it.label}
-                    to={it.to(g)}
-                    className="flex items-center justify-between rounded-xl bg-white/90 px-2.5 py-1.5 text-[11px] font-bold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
-                  >
-                    <span className="truncate">{it.label}</span>
-                    <span className="text-muted-foreground">▶</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 能力雷达图 */}
-      <section className="mb-5 flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-3">
-        <div className="size-32 shrink-0">
-          <RadarChart scores={radarScores} />
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="text-sm font-extrabold">五维能力雷达</div>
-          <div className="mt-0.5 text-[11px] text-muted-foreground">基于已完成课程，对照课标核心素养</div>
-          <div className="mt-2 grid grid-cols-5 gap-1 text-center">
-            {radarScores.map((s) => (
-              <div key={s.label} className="rounded-lg bg-muted/50 px-1 py-1">
-                <div className="text-[10px] font-bold text-muted-foreground">{s.label}</div>
-                <div className="text-[11px] font-extrabold text-primary">{Math.round(s.value * 100)}%</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Today's lesson big CTA */}
-      {nextLesson && (
+      {/* 🌟 主 CTA — 今天的冒险 */}
+      {nextLesson ? (
         <Link to={`/primary/lesson/${nextLesson.id}`}
-          className="mb-5 flex items-center gap-3 rounded-3xl bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5">
-          <div className="grid size-14 place-items-center rounded-2xl bg-white/25 text-3xl">{nextLesson.unit.emoji ?? "📖"}</div>
+          className="mb-4 flex items-center gap-4 rounded-3xl bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:scale-[1.01]">
+          <div className="grid size-16 shrink-0 place-items-center rounded-3xl bg-white/25 text-4xl backdrop-blur-sm">{nextLesson.unit.emoji ?? "🏝️"}</div>
           <div className="flex-1 min-w-0">
-            <div className="text-[10px] font-bold uppercase tracking-wider opacity-80">今日推荐 · 5 步学透</div>
-            <div className="truncate text-lg font-extrabold">{nextLesson.title_cn}</div>
-            <div className="text-xs opacity-90">{nextLesson.unit.title_cn} · 约 {nextLesson.estimated_minutes} 分钟</div>
+            <div className="text-[10px] font-bold uppercase tracking-wider opacity-90">今天的冒险</div>
+            <div className="truncate text-xl font-extrabold leading-tight">{nextLesson.title_cn}</div>
+            <div className="mt-0.5 text-[11px] opacity-90">{nextLesson.unit.title_cn} · 约 {nextLesson.estimated_minutes || 8} 分钟</div>
           </div>
-          <Play className="size-7 fill-white" />
+          <div className="grid size-12 shrink-0 place-items-center rounded-full bg-white/30 backdrop-blur-sm">
+            <Play className="size-6 fill-white" />
+          </div>
         </Link>
+      ) : !loading && (
+        <div className="mb-4 rounded-3xl bg-gradient-to-br from-emerald-400 to-teal-500 p-5 text-center text-white shadow-tile">
+          <div className="text-3xl">🏆</div>
+          <div className="mt-1 text-base font-extrabold">已完成本年级所有课程！</div>
+        </div>
       )}
 
-      {/* 学习地图（按单元分岛） */}
+      {/* 🎯 6 个能力小入口 — 图标化，2 行 */}
+      <section className="mb-5 grid grid-cols-3 gap-2 sm:grid-cols-6">
+        {SKILLS.map((s) => (
+          <Link key={s.key} to={s.to}
+            className={`group flex flex-col items-center gap-1 rounded-2xl bg-gradient-to-br ${s.color} p-3 text-white shadow-sm transition hover:-translate-y-0.5`}>
+            <span className="text-2xl">{s.emoji}</span>
+            <span className="text-[11px] font-extrabold">{s.title}</span>
+          </Link>
+        ))}
+      </section>
+
+      {/* 🗺 学习地图（按单元分岛） — 主要进度可视化 */}
       {!loading && units.length > 0 && (
-        <section className="mb-6">
-          <ModuleStageTests segment="primary" grade={g} module="vocab" />
+        <section className="mb-5">
           <div className="mb-2 flex items-center gap-2 text-sm font-extrabold">
-            <MapIcon className="size-4 text-emerald-500" /> 学习地图 · 探险路线
-            <span className="ml-auto text-[10px] font-normal text-muted-foreground">{totalDone}/{totalAll} 课 · {totalStars} ⭐</span>
+            <MapIcon className="size-4 text-emerald-500" /> 学习地图
+            <span className="ml-auto text-[10px] font-normal text-muted-foreground">{totalDone}/{totalAll} 课</span>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {unitStates.map((u, idx) => (
-              <div key={u.id} className={`rounded-2xl border-2 p-3 transition ${u.current ? "border-rose-300 bg-gradient-to-br from-rose-50 to-amber-50 shadow-tile" : u.allDone ? "border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50" : u.isUnlocked ? "border-border bg-card" : "border-border bg-muted/30 opacity-60"}`}>
-                <div className="mb-2 flex items-center gap-2">
-                  <div className={`grid size-10 place-items-center rounded-2xl text-xl shadow-sm ${u.allDone ? "bg-gradient-to-br from-emerald-400 to-teal-400 text-white" : u.isUnlocked ? "bg-gradient-to-br from-amber-300 to-rose-300" : "bg-muted"}`}>
+              <div key={u.id} className={`rounded-2xl border-2 p-2.5 transition ${u.current ? "border-rose-300 bg-gradient-to-br from-rose-50 to-amber-50 shadow-tile dark:border-rose-700 dark:from-rose-950/30 dark:to-amber-950/30" : u.allDone ? "border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 dark:border-emerald-700 dark:from-emerald-950/30 dark:to-teal-950/30" : u.isUnlocked ? "border-border bg-card" : "border-border bg-muted/30 opacity-60"}`}>
+                <div className="mb-1.5 flex items-center gap-2">
+                  <div className={`grid size-9 place-items-center rounded-xl text-lg shadow-sm ${u.allDone ? "bg-gradient-to-br from-emerald-400 to-teal-400 text-white" : u.isUnlocked ? "bg-gradient-to-br from-amber-300 to-rose-300" : "bg-muted"}`}>
                     {u.isUnlocked ? (u.emoji ?? "🏝️") : "🔒"}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">岛屿 {idx + 1} {u.current && "· 你在这里"}</div>
+                    <div className="text-[9px] font-bold uppercase tracking-wider text-muted-foreground">岛屿 {idx + 1}{u.current && " · 你在这里"}</div>
                     <div className="truncate text-sm font-extrabold">{u.title_cn}</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-[11px] font-extrabold text-foreground">{u.doneCount}/{u.totalCount}</div>
-                    <div className="h-1 w-14 overflow-hidden rounded-full bg-muted">
+                    <div className="text-[10px] font-extrabold">{u.doneCount}/{u.totalCount}</div>
+                    <div className="h-1 w-12 overflow-hidden rounded-full bg-muted">
                       <div className="h-full bg-gradient-to-r from-emerald-400 to-teal-400 transition-all" style={{ width: `${u.totalCount ? (u.doneCount / u.totalCount) * 100 : 0}%` }} />
                     </div>
                   </div>
                 </div>
                 {u.isUnlocked && (
-                  <div className="flex flex-wrap gap-1.5">
+                  <div className="flex flex-wrap gap-1">
                     {u.lessons.map(l => {
                       const stars = l.progress?.[0]?.stars ?? 0;
                       const done = !!l.progress?.[0]?.completed_at;
                       return (
                         <Link key={l.id} to={`/primary/lesson/${l.id}`}
-                          className={`group flex items-center gap-1.5 rounded-xl border-2 px-2 py-1.5 text-[11px] font-bold transition hover:-translate-y-0.5 ${done ? "border-emerald-300 bg-emerald-50 text-emerald-700" : "border-border bg-card text-foreground hover:border-amber-300"}`}>
-                          <span className="truncate max-w-[110px]">{l.title_cn}</span>
-                          <span className="flex items-center gap-0">
+                          className={`flex items-center gap-1 rounded-lg border px-1.5 py-1 text-[10px] font-bold transition hover:-translate-y-0.5 ${done ? "border-emerald-300 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300" : "border-border bg-card hover:border-amber-300"}`}>
+                          <span className="truncate max-w-[100px]">{l.title_cn}</span>
+                          <span className="flex">
                             {Array.from({ length: 3 }).map((_, i) => (
-                              <Star key={i} className={`size-2.5 ${i < stars ? "fill-amber-400 stroke-amber-500" : "stroke-muted-foreground/40"}`} />
+                              <Star key={i} className={`size-2 ${i < stars ? "fill-amber-400 stroke-amber-500" : "stroke-muted-foreground/40"}`} />
                             ))}
                           </span>
-                          {done && <span className="text-emerald-500">✓</span>}
                         </Link>
                       );
                     })}
                   </div>
                 )}
                 {!u.isUnlocked && (
-                  <div className="text-center text-[11px] text-muted-foreground">通关上一个岛屿即可解锁 🔓</div>
+                  <div className="text-center text-[10px] text-muted-foreground">通关上一岛即可解锁 🔓</div>
                 )}
               </div>
             ))}
@@ -444,16 +335,54 @@ export default function PrimaryGrade() {
         </section>
       )}
 
-      <section className="grid gap-3">
-        {SKILLS.map((s) => (
-          <Link key={s.key} to={s.to} className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile transition hover:-translate-y-0.5`}>
-            <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
-            <div className="text-base font-extrabold">{s.title}</div>
-            <div className="mt-1 text-xs opacity-90">{s.desc}</div>
-            {s.to === "#" && <div className="mt-2 inline-block rounded-full bg-white/20 px-2 py-0.5 text-[10px] font-bold">即将上线</div>}
-          </Link>
-        ))}
-      </section>
+      {/* 🏆 我的成就 — 折叠抽屉（默认收起） */}
+      <details className="mb-4 rounded-2xl border-2 border-border bg-card">
+        <summary className="flex cursor-pointer items-center gap-2 p-3 text-sm font-extrabold list-none">
+          <Trophy className="size-4 text-amber-500" />
+          <span>我的成就</span>
+          <span className="ml-auto inline-flex items-center gap-1 text-[11px] font-normal text-muted-foreground">
+            勋章 {earnedCount}/{BADGES.length} · 总进度 {overallPct}%
+            <ChevronDown className="size-3.5 transition group-open:rotate-180" />
+          </span>
+        </summary>
+        <div className="border-t p-3">
+          <div className="grid grid-cols-4 gap-2">
+            {BADGES.map(b => {
+              const got = b.check(badgeStats);
+              return (
+                <div key={b.key} title={b.hint} className={`rounded-xl border-2 p-2 text-center transition ${got ? "border-amber-300 bg-gradient-to-br from-amber-50 to-orange-50 dark:border-amber-700 dark:from-amber-950/30 dark:to-orange-950/30" : "border-border bg-muted/30 opacity-50 grayscale"}`}>
+                  <div className="text-xl">{b.emoji}</div>
+                  <div className="mt-0.5 text-[10px] font-extrabold">{b.title}</div>
+                  <div className="text-[9px] text-muted-foreground leading-tight">{b.hint}</div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-3 flex items-center gap-3 rounded-xl bg-muted/30 p-2.5">
+            <div className="size-20 shrink-0">
+              <RadarChart scores={radarScores} />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-[11px] font-extrabold">五维能力</div>
+              <div className="mt-1 grid grid-cols-5 gap-1 text-center">
+                {radarScores.map((s) => (
+                  <div key={s.label} className="rounded bg-card px-0.5 py-0.5">
+                    <div className="text-[9px] font-bold text-muted-foreground">{s.label}</div>
+                    <div className="text-[10px] font-extrabold text-primary">{Math.round(s.value * 100)}%</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      {/* 隐藏的阶段测试入口 */}
+      {!loading && units.length > 0 && (
+        <div className="mb-4">
+          <ModuleStageTests segment="primary" grade={g} module="vocab" />
+        </div>
+      )}
     </main>
   );
 }

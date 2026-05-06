@@ -186,6 +186,11 @@ const Placement = () => {
     setResult(r);
     setStage("result");
     window.scrollTo({ top: 0 });
+    import("@/lib/feedback").then((m) => {
+      const correct = questions.filter((q) => picks[q.id] === q.answer).length;
+      const pct = questions.length ? Math.round((correct / questions.length) * 100) : 0;
+      m.celebrateScore(pct, { silent: true });
+    });
     import("@/lib/funnel").then(m =>
       m.trackFunnel("placement", "completed", {
         cefr: r.cefr,

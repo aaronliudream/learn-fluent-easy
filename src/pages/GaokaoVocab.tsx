@@ -1807,6 +1807,18 @@ function DonePanel({
           🪙 +{coinsAwarded} 金币
         </div>
       )}
+      {poolIds && poolIds.length > 0 && (
+        <NextStepHint
+          vocabIds={poolIds}
+          onPickMode={(m) => {
+            // navigate via URL change so the parent picks up the mode
+            const url = new URL(window.location.href);
+            url.searchParams.set("mode", m);
+            url.searchParams.delete("group");
+            window.location.assign(url.toString());
+          }}
+        />
+      )}
       {levelUps && levelUps.length > 0 && (
         <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">
           <div className="text-xs font-bold uppercase tracking-wider text-primary">📈 升级单词</div>

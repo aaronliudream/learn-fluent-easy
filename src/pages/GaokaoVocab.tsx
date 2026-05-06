@@ -20,6 +20,7 @@ import ModuleStageTests from "@/components/ModuleStageTests";
 import MasteryDashboard from "@/components/MasteryDashboard";
 import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";
+import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
@@ -376,6 +377,7 @@ export default function GaokaoVocab() {
         onStartDuel={() => setParams({ mode: "duel" })}
         onStartDict={() => setParams({ mode: "dict" })}
         onOpenDash={() => setParams({ mode: "dash" })}
+        onPickMode={(m) => setParams({ mode: m })}
       />
     );
   }
@@ -402,6 +404,7 @@ function GroupList({
   onStartDuel,
   onStartDict,
   onOpenDash,
+  onPickMode,
 }: {
   groups: Vocab[][];
   pool: Vocab[];
@@ -413,6 +416,7 @@ function GroupList({
   onStartDuel: () => void;
   onStartDict: () => void;
   onOpenDash: () => void;
+  onPickMode: (mode: string) => void;
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);
@@ -466,6 +470,27 @@ function GroupList({
           <ModuleStageTests segment="gaokao" grade={gradeNum} module="vocab" />
         </div>
       )}
+
+      {/* ⭐ 彻底掌握 5 步走 */}
+      <div className="mt-4">
+        <VocabMasteryPath
+          stage="gaokao"
+          totalWords={pool.length}
+          vocabIds={pool.map((v) => v.id)}
+          onPickMode={(m) => {
+            const map: Record<string, () => void> = {
+              srs: onStartSrs,
+              dict: onStartDict,
+              classic: onStartRush,
+              quest: onStartQuest,
+              bento: onStartBento,
+              duel: onStartDuel,
+            };
+            (map[m] ?? (() => onPickMode(m)))();
+          }}
+          onBrowse={() => onPick(0)}
+        />
+      </div>
 
       {/* 学习进度总览：掌握数、百分比、未完成、7 天到期、平均稳定天数 */}
       <div className="mt-6">

@@ -42,33 +42,6 @@ const STAGES: Stage[] = [
     gradient: "from-red-600 via-rose-600 to-orange-500",
     badge: "已上线",
   },
-  {
-    icon: GraduationCap,
-    eyebrow: "大学英语 · CET-4",
-    title: "大学英语四级专区",
-    desc: "四级高频词汇、长难句、听力与写作模板",
-    gradient: "from-amber-500 via-orange-500 to-rose-500",
-    locked: true,
-    badge: "即将上线",
-  },
-  {
-    icon: Library,
-    eyebrow: "大学英语 · CET-6",
-    title: "大学英语六级专区",
-    desc: "六级进阶词汇、翻译与篇章理解强化训练",
-    gradient: "from-fuchsia-600 via-purple-600 to-indigo-600",
-    locked: true,
-    badge: "即将上线",
-  },
-  {
-    icon: Award,
-    eyebrow: "研究生英语 · POSTGRADUATE",
-    title: "研究生英语专区",
-    desc: "考研英语一/二真题词汇、长难句与翻译写作专项突破",
-    gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-    locked: true,
-    badge: "即将上线",
-  },
 ];
 
 const China = () => {
@@ -93,7 +66,7 @@ const China = () => {
           </div>
         </div>
         <p className="ml-1 mt-2 text-sm text-muted-foreground md:ml-[52px]">
-        按学段定位薄弱点 · 科学复习路径：小学 · 初中 · 高中(高考) · 大学四级 · 大学六级 · 研究生
+        按学段定位薄弱点 · 科学复习路径：小学 · 初中 · 高中(高考)
         </p>
       </header>
 

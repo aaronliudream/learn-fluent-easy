@@ -8,6 +8,7 @@ import { speak } from "@/lib/speak";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
+import { ShareButton } from "@/components/share/ShareButton";
 
 type Q = { type?: "choice" | "fill" | "judge"; q: string; options: string[]; answer: string; explanation?: string };
 type E = { id: string; title: string; transcript: string; translation_cn: string | null; questions: Q[]; key_vocab: { word: string; cn: string }[]; audio_url: string | null; kind?: string | null };
@@ -76,7 +77,19 @@ export default function JuniorListeningPlay() {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
       <BackLink to="/junior/listening" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</BackLink>
-      <h1 className="text-grad-title text-2xl font-extrabold">{e.title}</h1>
+      <div className="flex items-start justify-between gap-3">
+        <h1 className="text-grad-title text-2xl font-extrabold">{e.title}</h1>
+        <ShareButton
+          variant="icon"
+          item={{
+            type: "listening",
+            title: e.title,
+            topic: (e as any).topic ?? undefined,
+            duration: (e as any).duration_sec ?? undefined,
+            url: typeof window !== "undefined" ? window.location.href : "",
+          }}
+        />
+      </div>
 
       <div className="mt-4 flex flex-wrap items-center gap-3 rounded-2xl border bg-card p-4">
         <button onClick={playAudio} className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-sky-500 to-blue-600 px-4 py-2 text-sm font-extrabold text-white shadow-tile">

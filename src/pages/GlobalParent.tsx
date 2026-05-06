@@ -4,7 +4,6 @@ import BackLink from "@/components/BackLink";
 import {
   ArrowLeft, Loader2, Coins, BookOpen, GraduationCap, School, Backpack,
   TrendingUp, AlertTriangle, Clock, Flame, Target, Sparkles, Download,
-  Briefcase, MessageCircle, Mic, Layers, Hash,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -46,15 +45,6 @@ const SEG_META = {
   gaokao:  { label: "高中 / Upper Secondary", icon: GraduationCap, color: "from-rose-500 to-orange-500", route: "/gaokao" },
 } as const;
 
-const TRACK_META = {
-  workplace:  { labelKey: "Business / Workplace English", icon: Briefcase,    color: "from-amber-500 to-orange-500",   route: "/workplace" },
-  scenes:     { labelKey: "Daily Scenes",                  icon: MessageCircle,color: "from-emerald-500 to-teal-500",  route: "/scenes" },
-  talk:       { labelKey: "AI Conversation",               icon: Mic,          color: "from-pink-500 to-rose-500",      route: "/talk" },
-  systematic: { labelKey: "Systematic Course",             icon: Layers,       color: "from-indigo-500 to-blue-500",   route: "/level" },
-  slang:      { labelKey: "Slang & Idioms",                icon: Hash,         color: "from-fuchsia-500 to-purple-500", route: "/slang" },
-} as const;
-type TrackKey = keyof typeof TRACK_META;
-
 function useFmtMinutes() {
   const t = useT();
   return (m: number): string => {
@@ -85,7 +75,6 @@ export default function GlobalParent() {
   const [data, setData] = useState<Dashboard | null>(null);
   const [coins, setCoins] = useState(0);
   const [streak, setStreak] = useState(0);
-  const [slangAcc, setSlangAcc] = useState<{ correct: number; total: number } | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -101,15 +90,6 @@ export default function GlobalParent() {
       if (dash.data) setData(dash.data as unknown as Dashboard);
       if (c.data) setCoins((c.data as any).balance ?? 0);
       if (s.data?.[0]) setStreak((s.data[0] as any).current_streak ?? 0);
-      const { data: sm } = await supabase
-        .from("slang_mastery")
-        .select("correct_count,wrong_count")
-        .eq("user_id", uid);
-      if (sm) {
-        const correct = sm.reduce((a: number, r: any) => a + (r.correct_count ?? 0), 0);
-        const wrong = sm.reduce((a: number, r: any) => a + (r.wrong_count ?? 0), 0);
-        setSlangAcc({ correct, total: correct + wrong });
-      }
       setLoading(false);
     })();
   }, []);
@@ -148,10 +128,7 @@ export default function GlobalParent() {
 
   const d = data!;
   const m = d.minutes_by_segment;
-  const segTotal =
-    m.primary + m.junior + m.gaokao +
-    (m.workplace ?? 0) + (m.scenes ?? 0) + (m.talk ?? 0) +
-    (m.systematic ?? 0) + (m.slang ?? 0);
+  const segTotal = m.primary + m.junior + m.gaokao;
   // 真实有效学习 = 所有学习类时长之和（不计入家长中心/登录页等浏览时长）
   const totalMin = segTotal;
 
@@ -163,15 +140,7 @@ export default function GlobalParent() {
   };
   const activeSegs = (["primary","junior","gaokao"] as const).filter(s => segActivity[s] > 0);
 
-  // 非 K-12 学习轨迹（商务、场景、AI 口语、系统课、俚语…）
-  const tracksAct = d.tracks_activity ?? ({} as NonNullable<Dashboard["tracks_activity"]>);
-  const activeTracks = (Object.keys(TRACK_META) as TrackKey[]).filter(k => {
-    const mins = (m as any)[k] ?? 0;
-    const a = tracksAct[k];
-    return mins > 0 || (a && (a.days > 0 || a.items > 0));
-  });
-
-  const hasAnyActivity = activeSegs.length > 0 || activeTracks.length > 0;
+  const hasAnyActivity = activeSegs.length > 0;
 
   const allWords =
     d.primary.words.mastered + d.junior.words.mastered + d.gaokao.words.mastered;
@@ -293,27 +262,6 @@ export default function GlobalParent() {
                 </div>
               );
             })}
-            {activeTracks.map(k => {
-              const M = TRACK_META[k];
-              const mins = (d.minutes_by_segment as any)[k] ?? 0;
-              const pct = Math.round((mins / Math.max(1, segTotal)) * 100);
-              return (
-                <div key={k}>
-                  <div className="flex items-center justify-between text-xs font-bold">
-                    <span className="inline-flex items-center gap-1.5">
-                      <span className={cn("inline-grid size-5 place-items-center rounded bg-gradient-to-br text-white", M.color)}>
-                        <M.icon className="size-3" />
-                      </span>
-                      <T>{M.labelKey}</T>
-                    </span>
-                    <span className="text-muted-foreground">{fmtMinutes(mins)} · {pct}%</span>
-                  </div>
-                  <div className="mt-1 h-2 overflow-hidden rounded-full bg-secondary">
-                    <div className={cn("h-full bg-gradient-to-r transition-all", M.color)} style={{ width: `${pct}%` }} />
-                  </div>
-                </div>
-              );
-            })}
         </div>
       </section>
       )}
@@ -328,7 +276,6 @@ export default function GlobalParent() {
         <div className="space-y-2">
           {(() => {
             const rows: { key: string; label: string; correct: number; total: number; color: string }[] = [];
-            if (slangAcc && slangAcc.total > 0) rows.push({ key: "slang", label: t("Slang & Idioms"), correct: slangAcc.correct, total: slangAcc.total, color: "from-fuchsia-500 to-purple-500" });
             if (d.primary.sessions > 0) rows.push({ key: "primary", label: t("小学 / Primary"), correct: Math.round(d.primary.sessions * d.primary.accuracy), total: d.primary.sessions, color: "from-sky-500 to-cyan-500" });
             if (d.junior.sessions > 0) rows.push({ key: "junior", label: t("初中 / Lower Secondary"), correct: Math.round(d.junior.sessions * d.junior.accuracy), total: d.junior.sessions, color: "from-violet-500 to-indigo-500" });
             if (d.gaokao.attempts > 0) rows.push({ key: "gaokao", label: t("高中 / Upper Secondary"), correct: d.gaokao.correct, total: d.gaokao.attempts, color: "from-rose-500 to-orange-500" });
@@ -449,39 +396,6 @@ export default function GlobalParent() {
           />
         )}
       </section>
-      )}
-
-      {/* 其它学习轨迹（商务、场景、AI 口语、系统课、俚语…） */}
-      {activeTracks.length > 0 && (
-        <section className={cn(
-          "mb-4 grid gap-3",
-          activeTracks.length === 1 ? "md:grid-cols-1" :
-          activeTracks.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"
-        )}>
-          {activeTracks.map(k => {
-            const M = TRACK_META[k];
-            const mins = (d.minutes_by_segment as any)[k] ?? 0;
-            const a = tracksAct[k] ?? { days: 0, items: 0 };
-            return (
-              <div key={k} className="rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
-                <div className="mb-3 flex items-center gap-2">
-                  <div className={cn("grid size-9 place-items-center rounded-xl bg-gradient-to-br text-white shadow", M.color)}>
-                    <M.icon className="size-4" />
-                  </div>
-                  <div className="text-sm font-extrabold"><T>{M.labelKey}</T></div>
-                </div>
-                <div className="mb-3 rounded-2xl bg-secondary/50 p-2 text-center">
-                  <div className="text-[10px] text-muted-foreground"><T>有效学习</T></div>
-                  <div className="text-2xl font-black">{fmtMinutes(mins)}</div>
-                  <div className="text-[10px] text-muted-foreground"><T>活跃天数</T> {a.days} · <T>已学条目</T> {a.items}</div>
-                </div>
-                <Link to={M.route} className={cn("mt-1 block rounded-xl bg-gradient-to-r py-2 text-center text-xs font-extrabold text-white shadow", M.color)}>
-                  <T>继续学习</T> →
-                </Link>
-              </div>
-            );
-          })}
-        </section>
       )}
 
       {/* 每日学习时长曲线 */}

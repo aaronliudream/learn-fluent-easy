@@ -616,11 +616,13 @@ export default function GrowthReport() {
       {/* Print styles */}
       <style>{`
         @media print {
-          /* 隐藏页面其它内容（用 display:none 而不是 visibility，避免占空间且能正确分页） */
-          body > *:not(.report-print-wrapper) { display: none !important; }
-          .report-print-wrapper, .report-print-wrapper * { visibility: visible; }
-          .report-print-wrapper { display: block !important; }
+          /* 1) 隐藏页面其余所有内容 */
+          body * { visibility: hidden; }
+          /* 2) 仅显示报告及其子节点 */
+          .report-print, .report-print * { visibility: visible; }
+          /* 3) 保持文档流（不要 position:absolute），这样浏览器才能自动分页打印所有 8 个板块 */
           .report-print {
+            position: static !important;
             box-shadow: none !important;
             border: none !important;
             background: white !important;
@@ -629,15 +631,15 @@ export default function GrowthReport() {
             width: 100% !important;
             max-width: 100% !important;
           }
-          /* 每个板块尽量不要被分页切到中间 */
+          /* 4) 每个板块尽量不要被分页切到中间 */
           .report-print > * { break-inside: avoid; page-break-inside: avoid; }
-          /* 让卡片渐变背景能在打印里显示 */
+          /* 5) 保留渐变 / 高亮颜色 */
           .report-print, .report-print * {
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
           }
-          /* 自动适应纸张并允许跨页 */
-          html, body { height: auto !important; overflow: visible !important; background: white !important; }
+          /* 6) 防止隐藏元素仍然占据多余的空白页 */
+          html, body { height: auto !important; overflow: visible !important; background: white !important; margin: 0 !important; }
           @page { size: A4; margin: 10mm; }
         }
       `}</style>

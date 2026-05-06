@@ -54,16 +54,6 @@ const BRANDS: Brand[] = [
     accent: "bg-indigo-700",
     tag: "Serious, exam-grade, efficient · 深蓝",
   },
-  {
-    to: "/cet",
-    eyebrow: "Big Moon CET",
-    title: "大学 · CET-4",
-    desc: "大学英语四级真题词汇、长篇阅读、听力、翻译写作 + AI 评分。",
-    status: "soon",
-    gradient: "from-zinc-700 via-stone-700 to-amber-700",
-    accent: "bg-amber-600",
-    tag: "Mature, professional · 灰金",
-  },
 ];
 
 function StatusPill({ status }: { status: Status }) {

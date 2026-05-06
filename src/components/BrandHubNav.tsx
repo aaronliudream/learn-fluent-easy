@@ -11,7 +11,6 @@ const ITEMS: { to: string; label: string }[] = [
   { to: "/kids", label: "Kids" },
   { to: "/junior", label: "Junior" },
   { to: "/senior", label: "Senior" },
-  { to: "/cet", label: "CET" },
   { to: "/about", label: "About Us" },
 ];
 

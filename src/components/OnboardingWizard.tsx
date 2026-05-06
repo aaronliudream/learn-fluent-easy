@@ -6,19 +6,21 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 import {
   Check, ArrowRight, Globe2, Briefcase, Plane, GraduationCap, Sparkles,
-  Clock, BookOpen, Coffee, Mic, Music, Film, Plane as PlaneIcon, Heart, Trophy, Flame,
+  Clock, BookOpen, Coffee, Mic, Music, Film, Plane as PlaneIcon, Flame,
 } from "lucide-react";
 import { useI18n } from "@/i18n/I18nProvider";
 import { toast } from "sonner";
 
 /**
- * Duolingo-style 4-step onboarding shown the first time a logged-in user
+ * Duolingo-style 3-step onboarding shown the first time a logged-in user
  * lands on the home page (when `profiles.onboarded_at` is null).
  *
  *   1. Goal + interest scenes (combined)        -> learning_goal
  *   2. Self-assessed level + 1 placement check  -> self_level
  *   3. Daily commitment (3 / 5 / 10 / 15 min)   -> daily_goal_minutes
- *   4. Pick pet + first micro-lesson teaser     -> navigate to /pets
+ *
+ * Pet/buddy is auto-assigned (default: Sprout) so users land in the product
+ * faster. They can rename / swap later in /pets.
  */
 
 type Goal = "travel" | "career" | "exam" | "general";
@@ -47,12 +49,6 @@ const SCENES = [
   { id: "movies",    icon: Film,     labelEn: "Movies & TV" },
   { id: "music",     icon: Music,    labelEn: "Music & lyrics" },
   { id: "exams",     icon: GraduationCap, labelEn: "Exams" },
-];
-
-const PETS = [
-  { id: "lumi_spark",    emoji: "🌱", nameEn: "Sprout", tagEn: "Patient & gentle"  },
-  { id: "fire_fox",      emoji: "🦊", nameEn: "Ember",  tagEn: "Bold & energetic"  },
-  { id: "rainbow_whale", emoji: "🐋", nameEn: "Aqua",   tagEn: "Calm & curious"    },
 ];
 
 // Tiny placement check (one quick question per level option).
@@ -89,17 +85,15 @@ export default function OnboardingWizard({
   const [level, setLevel] = useState<Level | null>(null);
   const [quizAnswered, setQuizAnswered] = useState<number | null>(null);
   const [minutes, setMinutes] = useState<number>(5);
-  const [pet, setPet] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
 
-  const totalSteps = 4;
+  const totalSteps = 3;
   const progress = ((step + 1) / totalSteps) * 100;
 
   const canNext =
     (step === 0 && !!goal && scenes.length > 0) ||
     (step === 1 && !!level && quizAnswered !== null) ||
-    (step === 2 && minutes > 0) ||
-    (step === 3 && !!pet);
+    (step === 2 && minutes > 0);
 
   function toggleScene(id: string) {
     setScenes((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
@@ -120,10 +114,10 @@ export default function OnboardingWizard({
         } as never)
         .eq("user_id", userId);
       if (error) throw error;
-      toast.success("Welcome aboard! Time to meet your buddy.");
+      toast.success("You're all set — let's start learning!");
       onClose();
-      // Send them to /pets so the chosen buddy adoption flow takes over.
-      navigate("/pets");
+      // Stay on home so users land directly on their personalized plan.
+      navigate("/");
     } catch (e) {
       console.error(e);
       toast.error("Could not save your preferences. Please try again.");

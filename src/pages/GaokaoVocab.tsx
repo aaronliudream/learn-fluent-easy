@@ -24,6 +24,7 @@ import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
 import WordDuel from "@/components/WordDuel";
+import { toast } from "sonner";
 
 type Vocab = {
   id: string;
@@ -473,13 +474,21 @@ function GroupList({
 
       {/* SRS Smart Review Card — top priority entry */}
       <button
-        onClick={onStartSrs}
-        disabled={dueCount === 0}
+        onClick={() => {
+          if (dueCount && dueCount > 0) {
+            onStartSrs();
+          } else if (studiedCount === 0) {
+            toast.info("还没有学过单词，先从下方第 1 组开始学吧 👇");
+            onPick(0);
+          } else {
+            toast.success(`已掌握 ${studiedCount} 词 · 今日没有到期单词，继续学新词巩固吧 ✨`);
+          }
+        }}
         className={cn(
           "mt-6 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
           dueCount && dueCount > 0
             ? "border-primary bg-gradient-to-br from-primary/15 via-primary/5 to-transparent hover:border-primary hover:shadow-md"
-            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+            : "border-border bg-card hover:border-primary/40 hover:shadow-md"
         )}
       >
         <div className="flex items-center gap-4">
@@ -503,14 +512,12 @@ function GroupList({
                 ? "加载中…"
                 : dueCount === 0
                 ? studiedCount === 0
-                  ? "先学一组单词，系统会按艾宾浩斯曲线安排复习"
+                  ? "点这里去学第一组单词，系统会按艾宾浩斯曲线安排复习 →"
                   : `已学 ${studiedCount} 词 · 今日没有到期单词，明天再来`
                 : `已学 ${studiedCount} 词 · Anki SM-2 算法 · 答错重学，答对延后`}
             </div>
           </div>
-          {dueCount && dueCount > 0 ? (
-            <ChevronRight className="size-5 text-primary" />
-          ) : null}
+          <ChevronRight className={cn("size-5", dueCount && dueCount > 0 ? "text-primary" : "text-muted-foreground")} />
         </div>
       </button>
 

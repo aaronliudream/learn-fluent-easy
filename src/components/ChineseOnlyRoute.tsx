@@ -1,5 +1,3 @@
-import { Navigate } from "react-router-dom";
-import { useI18n } from "@/i18n/I18nProvider";
 import type { ReactNode } from "react";
 
 /**
@@ -10,8 +8,8 @@ import type { ReactNode } from "react";
  * so we redirect them back to the universal homepage.
  */
 export default function ChineseOnlyRoute({ children }: { children: ReactNode }) {
-  const { lang } = useI18n();
-  const isChinese = lang === "zh" || lang === "zh-TW";
-  if (!isChinese) return <Navigate to="/" replace />;
+  // App is now China-only (小学/初中/高中). The legacy non-Chinese guard
+  // would redirect users back to "/" and made the brand entry cards appear
+  // broken. Always render the content.
   return <>{children}</>;
 }

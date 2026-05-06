@@ -616,10 +616,31 @@ export default function GrowthReport() {
       {/* Print styles */}
       <style>{`
         @media print {
+          /* 1) 隐藏页面其余所有内容 */
           body * { visibility: hidden; }
+          /* 2) 仅显示报告及其子节点 */
           .report-print, .report-print * { visibility: visible; }
-          .report-print { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none !important; border: none !important; }
-          @page { margin: 12mm; }
+          /* 3) 保持文档流（不要 position:absolute），这样浏览器才能自动分页打印所有 8 个板块 */
+          .report-print {
+            position: static !important;
+            box-shadow: none !important;
+            border: none !important;
+            background: white !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          /* 4) 每个板块尽量不要被分页切到中间 */
+          .report-print > * { break-inside: avoid; page-break-inside: avoid; }
+          /* 5) 保留渐变 / 高亮颜色 */
+          .report-print, .report-print * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          /* 6) 防止隐藏元素仍然占据多余的空白页 */
+          html, body { height: auto !important; overflow: visible !important; background: white !important; margin: 0 !important; }
+          @page { size: A4; margin: 10mm; }
         }
       `}</style>
     </section>

@@ -40,7 +40,7 @@ export const EMOTION_META: Record<EmotionKey, {
 // when a phrase has both). Keep keywords short & high-signal.
 const RULES: { key: EmotionKey; needles: RegExp }[] = [
   { key: "shock",  needles: /震惊|难以置信|傻眼|目瞪|不敢相信|吓|惊|无语|懵|崩溃|哇塞|天哪|搞什么|wtf|omg|傻了|绝了|惊呆/i },
-  { key: "praise", needles: /厉害|牛|酷|帅|赞|太顶|顶级|超棒|出色|出彩|高级|强|绝|绝活|香|帅气|帅炸|无敌|NB|nb|6|666|爽|火|燃|顶/i },
+  { key: "praise", needles: /厉害|牛|酷|帅|赞|太顶|顶级|超棒|出色|出彩|高级|强|绝|绝活|香|帅气|帅炸|无敌|NB|nb|666|爽|火|燃|顶/i },
   { key: "roast",  needles: /嘲|讽|吐槽|挖苦|阴阳|损|怼|怪|抱怨|不爽|烂|垃圾|拉|废|废物|无语|蠢|装|做作|演|戏|尴尬|拉胯|敷衍|甩锅/i },
   { key: "tease",  needles: /玩笑|开玩笑|调侃|逗|戏弄|八卦|爆料|吃瓜|搞事|搞笑|搞怪|乐|皮|抖|耍|捉弄|起哄|拱火|嗑|嗑cp|嗑糖|秀恩爱/i },
   { key: "agree",  needles: /同意|支持|赞同|认同|共鸣|对|没错|确实|真的|+1|真是|我懂|懂的|说得对|有道理|准|绝对|完全|举双手|赞成/i },

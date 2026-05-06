@@ -177,7 +177,7 @@ export default function AchievementBanner() {
       </div>
 
       {/* Three big metrics */}
-      <div className="grid gap-3 p-4 sm:grid-cols-3 md:p-5">
+      <div className="grid gap-4 p-4 sm:grid-cols-3 md:p-5">
         <BigMetric
           icon={BookOpen}
           tone="from-emerald-500 to-teal-500"
@@ -213,7 +213,7 @@ export default function AchievementBanner() {
 
       {/* Bottom strip — ETA + actions */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-t border-violet-200/60 bg-white/40 px-5 py-3 dark:border-violet-900/40 dark:bg-black/20">
-        <div className="flex items-center gap-2 text-xs">
+        <div className="flex items-center gap-2 text-sm">
           <Sparkles className="size-4 text-amber-500" />
           {weeksToGoal > 0 ? (
             <span className="font-bold">
@@ -225,12 +225,12 @@ export default function AchievementBanner() {
         </div>
         <div className="flex flex-wrap gap-2">
           {stats.vocabUntouched > 0 && (
-            <Link to={`/primary/vocab/${grade}?focus=weak`} className="inline-flex items-center gap-1 rounded-full bg-violet-600 px-3 py-1 text-[11px] font-extrabold text-white hover:bg-violet-700">
-              <AlertCircle className="size-3" /> 一键补练 <ChevronRight className="size-3" />
+            <Link to={`/primary/vocab/${grade}?focus=weak`} className="inline-flex items-center gap-1 rounded-full bg-violet-600 px-3.5 py-1.5 text-xs font-extrabold text-white hover:bg-violet-700">
+              <AlertCircle className="size-3.5" /> 一键补练 <ChevronRight className="size-3.5" />
             </Link>
           )}
-          <Link to={`/primary/grade/${grade}`} className="inline-flex items-center gap-1 rounded-full border border-violet-300 bg-white px-3 py-1 text-[11px] font-extrabold text-violet-700 hover:bg-violet-50 dark:bg-violet-950/40 dark:text-violet-300">
-            进入 G{grade} 学习中心 <ChevronRight className="size-3" />
+          <Link to={`/primary/grade/${grade}`} className="inline-flex items-center gap-1 rounded-full border border-violet-300 bg-white px-3.5 py-1.5 text-xs font-extrabold text-violet-700 hover:bg-violet-50 dark:bg-violet-950/40 dark:text-violet-300">
+            进入小学 G{grade} 课程 <ChevronRight className="size-3.5" />
           </Link>
         </div>
       </div>
@@ -248,35 +248,35 @@ function BigMetric({
 }) {
   const pct = Math.min(100, Math.round((numerator / Math.max(1, denominator)) * 100));
   return (
-    <div className="rounded-2xl border border-white/80 bg-white/90 p-4 shadow-sm dark:border-white/10 dark:bg-black/30">
-      <div className="mb-1 flex items-center justify-between">
-        <div className={cn("inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-white", tone)}>
-          <Icon className="size-3" /> {label}
+    <div className="rounded-2xl border border-white/80 bg-white/90 p-5 shadow-sm dark:border-white/10 dark:bg-black/30">
+      <div className="mb-2 flex items-center justify-between">
+        <div className={cn("inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r px-3 py-1 text-sm font-extrabold tracking-wide text-white", tone)}>
+          <Icon className="size-4" /> {label}
         </div>
         {delta !== null && delta !== 0 && (
           <span className={cn(
-            "inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 text-[10px] font-extrabold",
+            "inline-flex items-center gap-0.5 rounded-full px-2 py-0.5 text-xs font-extrabold",
             delta > 0 ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300" : "bg-rose-100 text-rose-700"
           )}>
-            {delta > 0 ? <TrendingUp className="size-3" /> : <TrendingDown className="size-3" />}
+            {delta > 0 ? <TrendingUp className="size-3.5" /> : <TrendingDown className="size-3.5" />}
             {delta > 0 ? `+${delta}` : delta}
           </span>
         )}
       </div>
       <div className="flex items-baseline gap-1">
-        <span className="text-3xl font-black tabular-nums md:text-4xl">{numerator}</span>
-        <span className="text-base font-bold text-muted-foreground">/ {denominator}{isPercent ? "%" : ""}</span>
+        <span className="text-4xl font-black tabular-nums md:text-5xl">{numerator}</span>
+        <span className="text-lg font-bold text-muted-foreground">/ {denominator}{isPercent ? "%" : ""}</span>
       </div>
-      <div className="mt-2 h-2.5 overflow-hidden rounded-full bg-secondary">
+      <div className="mt-3 h-3 overflow-hidden rounded-full bg-secondary">
         <div className={cn("h-full bg-gradient-to-r transition-all", tone)} style={{ width: `${pct}%` }} />
       </div>
-      <div className="mt-2 flex items-center justify-between text-[11px]">
+      <div className="mt-2 flex items-center justify-between text-sm">
         <span className="font-bold text-muted-foreground">{pct}% 完成</span>
         {remaining !== null && remaining > 0 && (
           <span className="font-extrabold text-violet-700 dark:text-violet-300">还差 {remaining}</span>
         )}
       </div>
-      <div className="mt-1.5 text-[10.5px] leading-snug text-muted-foreground">{subtext}</div>
+      <div className="mt-2 text-xs leading-snug text-muted-foreground">{subtext}</div>
     </div>
   );
 }

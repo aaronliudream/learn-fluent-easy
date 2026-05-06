@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { speak } from "@/lib/speak";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
+import { celebrateScore } from "@/lib/feedback";
 
 type Q = { type?: "choice" | "fill" | "judge"; q: string; options: string[]; answer: string; explanation?: string };
 type E = { id: string; title: string; transcript: string; translation_cn: string | null; questions: Q[]; key_vocab: { word: string; cn: string }[]; audio_url: string | null; kind?: string | null };
@@ -61,6 +62,13 @@ export default function JuniorListeningPlay() {
       const correctCount = Object.entries(picks).filter(([i, l]) => checkAnswer(e!.questions[Number(i)], l)).length + 1;
       if (correctCount % 5 === 0) await awardForBlock("junior_listening");
     } else { setStreak(0); notifyWrong(); }
+    // If this was the last question answered, celebrate
+    if (e && Object.keys(picks).length + 1 >= e.questions.length) {
+      const updated = { ...picks, [idx]: letter };
+      const correct = e.questions.filter((q, i) => updated[i] && checkAnswer(q, updated[i])).length;
+      const pct = Math.round((correct / e.questions.length) * 100);
+      setTimeout(() => celebrateScore(pct), 400);
+    }
   };
 
   if (!e) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground">加载中…</main>;

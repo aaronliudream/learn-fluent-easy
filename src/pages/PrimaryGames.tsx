@@ -79,7 +79,10 @@ export default function PrimaryGames() {
           <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
         </div>
       ) : !game ? (
-        <GameMenu grade={grade} count={words.length} isAll={isAll} />
+        <>
+          <MasteryPath grade={grade} isAll={isAll} />
+          <GameMenu grade={grade} count={words.length} isAll={isAll} />
+        </>
       ) : words.length < 4 ? (
         <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">
           该年级单词太少，无法开始游戏

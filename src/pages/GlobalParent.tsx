@@ -183,7 +183,19 @@ export default function GlobalParent() {
         </Link>
         <button
           type="button"
-          onClick={() => window.print()}
+          onClick={() => {
+            // 1) Expand every <details> so its content is in the print layout
+            const opened: HTMLDetailsElement[] = [];
+            document.querySelectorAll<HTMLDetailsElement>("details").forEach(d => {
+              if (!d.open) { d.open = true; opened.push(d); }
+            });
+            // 2) Wait one frame so the browser lays out the now-visible content
+            requestAnimationFrame(() => {
+              window.print();
+              // 3) Restore previous collapsed state after the print dialog closes
+              setTimeout(() => opened.forEach(d => { d.open = false; }), 500);
+            });
+          }}
           className="print:hidden inline-flex items-center gap-1.5 rounded-full border-2 border-border bg-card px-4 py-2 text-sm font-bold text-foreground shadow-sm hover:bg-muted"
           aria-label={t("导出 PDF / 打印报告")}
           title={t("导出 PDF（在打印对话框中选择「另存为 PDF」）")}

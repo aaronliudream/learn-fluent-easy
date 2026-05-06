@@ -99,7 +99,7 @@ export function getSlangStoreSync(): Store {
 }
 
 /** Optimistically update the local cache and best-effort sync to cloud. */
-export async function recordSlangResult(id: number, correct: boolean) {
+export async function recordSlangResult(id: number, correct: boolean, dim?: SlangDim) {
   const s = getSlangStoreSync();
   if (correct) {
     s.correct[id] = (s.correct[id] ?? 0) + 1;
@@ -107,30 +107,74 @@ export async function recordSlangResult(id: number, correct: boolean) {
   } else {
     s.wrong[id] = (s.wrong[id] ?? 0) + 1;
   }
+  // Update the 4-dim mastery matrix when a dim is supplied.
+  if (dim) {
+    const cur = { ...(s.matrix[id] ?? {}) };
+    const v = cur[dim] ?? 0;
+    if (correct) {
+      // Cap at 4. Each correct in a dim moves it +1.
+      cur[dim] = Math.min(4, v + 1);
+    } else {
+      // A mistake gently rolls back that dim by 1 (floor 0).
+      cur[dim] = Math.max(0, v - 1);
+    }
+    s.matrix[id] = cur;
+    // First time all 4 dims reach ≥ 2 → mark as 👑 master.
+    const m = s.matrix[id];
+    const isMaster = SLANG_DIMS.every((d) => (m[d] ?? 0) >= 2);
+    if (isMaster && !s.reachedMasterAt[id]) {
+      s.reachedMasterAt[id] = Date.now();
+    }
+  }
   saveLocal(s);
 
   try {
     const { data: auth } = await supabase.auth.getUser();
     const uid = auth.user?.id;
     if (!uid) return;
-    await supabase.from("slang_mastery").upsert(
-      {
-        user_id: uid,
-        idiom_id: id,
-        correct_count: s.correct[id] ?? 0,
-        wrong_count: s.wrong[id] ?? 0,
-        last_result: correct ? "correct" : "wrong",
-        last_correct_at: correct ? new Date().toISOString() : undefined,
-      },
-      { onConflict: "user_id,idiom_id" },
-    );
+    const payload: Record<string, any> = {
+      user_id: uid,
+      idiom_id: id,
+      correct_count: s.correct[id] ?? 0,
+      wrong_count: s.wrong[id] ?? 0,
+      last_result: correct ? "correct" : "wrong",
+      mastery_matrix: s.matrix[id] ?? {},
+    };
+    if (correct) payload.last_correct_at = new Date().toISOString();
+    if (s.reachedMasterAt[id]) {
+      payload.reached_master_at = new Date(s.reachedMasterAt[id]).toISOString();
+    }
+    await supabase.from("slang_mastery").upsert(payload, { onConflict: "user_id,idiom_id" });
   } catch {
     /* ignore — local cache wins, will sync on next successful write */
   }
 }
 
 export function isMasteredSlang(id: number, store = getSlangStoreSync()): boolean {
-  return (store.correct[id] ?? 0) >= 1 && (store.correct[id] ?? 0) > (store.wrong[id] ?? 0);
+  // 4-dim master beats legacy. When matrix exists, require all dims ≥ 2.
+  const m = store.matrix[id];
+  if (m && SLANG_DIMS.some((d) => (m[d] ?? 0) > 0)) {
+    return SLANG_DIMS.every((d) => (m[d] ?? 0) >= 2);
+  }
+  // Legacy fallback for users with old data only.
+  return (store.correct[id] ?? 0) >= 3 && (store.correct[id] ?? 0) > (store.wrong[id] ?? 0);
+}
+
+/** Read the 4-dim matrix for an idiom. */
+export function getSlangMatrix(id: number, store = getSlangStoreSync()): SlangMatrix {
+  return store.matrix[id] ?? {};
+}
+
+/** Returns the dim with the lowest score — the next thing to practise. */
+export function weakestDim(id: number, store = getSlangStoreSync()): SlangDim {
+  const m = getSlangMatrix(id, store);
+  let best: SlangDim = "recognize";
+  let bestV = Infinity;
+  for (const d of SLANG_DIMS) {
+    const v = m[d] ?? 0;
+    if (v < bestV) { bestV = v; best = d; }
+  }
+  return best;
 }
 
 /**

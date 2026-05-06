@@ -19,6 +19,7 @@ import QuizPacingSettings from "@/components/parent/QuizPacingSettings";
 import AchievementBanner from "@/components/parent/AchievementBanner";
 import WeeklyDigest from "@/components/parent/WeeklyDigest";
 import GrowthReport from "@/components/parent/GrowthReport";
+import ProgressSnapshot from "@/components/parent/ProgressSnapshot";
 import { T, useT } from "@/i18n/T";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
@@ -193,6 +194,22 @@ export default function GlobalParent() {
 
       {/* 🌟 顶部成就横幅 — 家长 3 秒看懂全年级进度 */}
       <AchievementBanner />
+
+      {/* 🚦 本周 vs 上周 — 一目了然进步/退步 */}
+      <ProgressSnapshot />
+
+      {/* 折叠：详细数据（家长按需展开） */}
+      <details className="group mb-4 rounded-3xl border-2 border-border bg-card shadow-tile open:shadow-lg">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-2 rounded-3xl px-5 py-4 hover:bg-muted/50">
+          <div className="flex items-center gap-2">
+            <Sparkles className="size-4 text-violet-500" />
+            <span className="text-sm font-extrabold md:text-base"><T>📂 查看详细数据</T></span>
+            <span className="text-[11px] text-muted-foreground"><T>· 体检报告 / 本周快报 / 学段足迹 / 雷达 / 薄弱点 / 趋势</T></span>
+          </div>
+          <span className="text-xs font-bold text-violet-600 group-open:hidden"><T>展开 ▾</T></span>
+          <span className="text-xs font-bold text-violet-600 hidden group-open:inline"><T>收起 ▴</T></span>
+        </summary>
+        <div className="border-t border-border px-3 pb-3 pt-4 md:px-5">
 
       <GrowthReport />
 

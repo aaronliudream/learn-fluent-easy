@@ -185,7 +185,7 @@ export default function GaokaoGrammar() {
       <BackLink to="/gaokao" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回高考英语
       </BackLink>
-      <PageHeader hideReviewBanner title="语法考点" subtitle="按掌握度学习 · 间隔复习 · 错因分析" />
+      <PageHeader back="/gaokao" hideReviewBanner title="语法考点" subtitle="按掌握度学习 · 间隔复习 · 错因分析" />
 
       {gradeNum && (
         <ModuleStageTests segment="gaokao" grade={gradeNum} module="grammar" />

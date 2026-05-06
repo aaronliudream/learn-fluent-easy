@@ -12,6 +12,7 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
 import { T } from "@/i18n/T";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
+import { HomeMasterySummary } from "@/components/mastery/HomeMasterySummary";
 import CompanionHero from "@/components/pet/CompanionHero";
 import ThreeTracksHero from "@/components/ThreeTracksHero";
 import LandingPage from "@/components/LandingPage";
@@ -298,6 +299,9 @@ const Index = () => {
 
       {/* Primary: Today's Task card — single clear next action */}
       {user && <TodayTaskCard />}
+
+      {/* Mastery snapshot — see-everything-at-a-glance entry to /dashboard */}
+      {user && <HomeMasterySummary />}
 
       {/* Secondary: all entry points, demoted to a compact grid */}
       <div className="mb-3 mt-8">

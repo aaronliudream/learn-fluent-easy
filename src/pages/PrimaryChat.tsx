@@ -11,6 +11,7 @@ import { awardForCorrect, awardForBlock, notifyWrong } from "@/lib/coins";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
 import { track, bumpTurn, classifyTopic, detectLang } from "@/lib/sparkTrack";
+import { bondOnChatTurn, bondOnQuizWin } from "@/lib/petGrowth";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -118,6 +119,8 @@ export default function PrimaryChat() {
       used_starter: usedStarter,
       turn_num: turnNum,
     });
+    // Spark grows a tiny bit every time the kid talks to it.
+    bondOnChatTurn();
     // Did the kid actually engage with what Spark remembered?
     const rt = rememberedTermRef.current;
     if (rt && turnNum <= 2 && t.toLowerCase().includes(rt)) {
@@ -275,6 +278,7 @@ export default function PrimaryChat() {
     celebratedKey.current = key;
     celebrateScore(Math.round((correctCount / quizItems.length) * 100));
     track("quiz_finished", { correct: correctCount, total: quizItems.length });
+    if (correctCount / quizItems.length >= 0.6) bondOnQuizWin();
   }, [allDone, quizItems, correctCount]);
 
   return (

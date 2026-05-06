@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
+import { celebrateScore } from "@/lib/feedback";
 import {
   recordGrammarAttempt,
   loadGrammarMastery,

@@ -70,13 +70,6 @@ const China = () => {
         </p>
       </header>
 
-      {/* 快捷入口：星币宠物 + 全局家长报告 */}
-      <div className="mb-3 flex items-center justify-between">
-        <OnlineWidget grade="primary" page="/china" />
-        <Link to="/social" className="inline-flex items-center gap-1 rounded-full bg-rose-50 px-3 py-1 text-xs font-bold text-rose-700 ring-1 ring-rose-200 hover:bg-rose-100">
-          <Sparkles className="h-3.5 w-3.5" />同学社区
-        </Link>
-      </div>
       <section className="mb-2 grid gap-3">
         <Link to="/parent" className="group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-500 via-teal-500 to-sky-500 p-4 text-white shadow-tile transition hover:-translate-y-0.5">
           <span className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full bg-white/20 blur-2xl" />

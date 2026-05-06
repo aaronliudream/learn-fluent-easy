@@ -7,6 +7,7 @@ import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 import { awardCoins } from "@/lib/coins";
 import { fireEmojiConfetti } from "@/lib/feedback";
+import MasteryPath, { nextStepAfter } from "@/components/primary/MasteryPath";
 
 type Word = {
   id: string;
@@ -78,7 +79,10 @@ export default function PrimaryGames() {
           <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
         </div>
       ) : !game ? (
-        <GameMenu grade={grade} count={words.length} isAll={isAll} />
+        <>
+          <MasteryPath grade={grade} isAll={isAll} />
+          <GameMenu grade={grade} count={words.length} isAll={isAll} />
+        </>
       ) : words.length < 4 ? (
         <div className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">
           该年级单词太少，无法开始游戏
@@ -193,6 +197,8 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
   // 奖励星币：答对 1 题 = 2 星币；满分额外 +20；封顶在后端按日 500 控制
   const coinReward = correct * 2 + (pct === 100 ? 20 : 0);
   const [coinResult, setCoinResult] = useState<{awarded:number;balance:number;capped:boolean}|null>(null);
+  const passed = pct >= 80;
+  const nextStep = nextStepAfter(gameType as any);
   useEffect(() => {
     saveScore(gameType, grade, score, pct/100, durationMs);
     awardCoins(coinReward, `primary_${gameType}`).then(r => { if (r) setCoinResult(r); });
@@ -226,6 +232,26 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
       >
         <RotateCw className="size-4" /> 再玩一局
       </button>
+      {passed && nextStep && (
+        <div className="mt-3">
+          <Link
+            to={`/primary/games/${grade || "all"}/${nextStep.key}`}
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-6 py-2.5 text-sm font-extrabold text-white shadow hover:-translate-y-0.5"
+          >
+            {nextStep.emoji} 进入下一步：{nextStep.label} <ArrowLeft className="size-4 rotate-180" />
+          </Link>
+        </div>
+      )}
+      {passed && !nextStep && (
+        <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-400 to-yellow-500 px-5 py-2 text-sm font-extrabold text-white shadow">
+          🏆 五步完成！本词包已彻底掌握 ⭐
+        </div>
+      )}
+      {!passed && (
+        <div className="mt-3 text-xs font-bold text-rose-600">
+          ⚠️ 正确率需 ≥ 80% 才解锁下一步，再来一局加把劲！
+        </div>
+      )}
       <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
         <BackLink
           to={`/primary/games/${grade || "all"}`}

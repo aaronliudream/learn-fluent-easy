@@ -220,6 +220,27 @@ export default function PrimaryCulture() {
         </div>
       </div>
 
+      {/* 节日时令推送 */}
+      {seasonalCard && !stamps[seasonalCard.id] && (
+        <button
+          onClick={() => openMicroLesson(seasonalCard)}
+          className="mb-4 flex w-full items-center gap-3 overflow-hidden rounded-3xl border-2 border-rose-300 bg-gradient-to-r from-rose-100 via-pink-100 to-orange-100 p-3 text-left shadow-tile transition hover:scale-[1.01] dark:border-rose-700 dark:from-rose-950/40 dark:via-pink-950/40 dark:to-orange-950/40"
+        >
+          <div className="grid size-14 shrink-0 place-items-center rounded-2xl bg-white text-3xl shadow-md">
+            {seasonalCard.emoji}
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wider text-rose-600 dark:text-rose-300">
+              <CalendarDays className="size-3" /> 今日推荐 · {seasonal!.label}
+            </div>
+            <div className="truncate text-base font-extrabold text-rose-900 dark:text-rose-100">
+              📣 {seasonalCard.title_cn} · {seasonalCard.title_en}
+            </div>
+            <div className="text-[11px] font-bold text-rose-700/80 dark:text-rose-300/80">点这里立刻学，赶上节日氛围 →</div>
+          </div>
+        </button>
+      )}
+
       {/* 角色扮演剧场 */}
       <section className="mb-5">
         <div className="mb-2 flex items-baseline justify-between">

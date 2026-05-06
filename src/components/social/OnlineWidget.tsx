@@ -8,6 +8,16 @@ export default function OnlineWidget({ grade, page }: { grade?: string; page?: s
   // 早期阶段隐藏在线人数 / 社交证明，等 DAU 上来后再开
   void grade; void page;
   return null;
+}
+
+function _Unused() {
+  return (
+    <>
+      <span />
+      <Users className="h-3.5 w-3.5" />
+      <span>0 位同学在学习</span>
+    </>
+  );
 
   return (
     <Link
@@ -19,8 +29,3 @@ export default function OnlineWidget({ grade, page }: { grade?: string; page?: s
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
         <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
       </span>
-      <Users className="h-3.5 w-3.5" />
-      <span>{count} 位同学在学习</span>
-    </Link>
-  );
-}

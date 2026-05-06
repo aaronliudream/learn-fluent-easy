@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw } from "lucide-react";
+import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Headphones, BookOpen, Gamepad2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { speak } from "@/lib/speak";
@@ -264,55 +264,102 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function QuizMode({ words }: { words: Vocab[] }) {
+  // Session = 6 questions, 3 mixed types (en→cn / cn→en / listen→en)
+  // Inspired by Duolingo Kids & Lingokids "micro-lesson" structure
+  type QType = "en2cn" | "cn2en" | "listen2en";
+  type Q = { type: QType; word: Vocab; options: string[]; answer: string };
+
+  const SESSION_SIZE = 6;
+  const params = useParams<{ grade?: string }>();
+  const grade = Number(params.grade ?? "1");
+
+  const session: Q[] = useMemo(() => {
+    if (words.length < 4) return [];
+    const pool = shuffle(words);
+    const picks = pool.slice(0, SESSION_SIZE);
+    const types: QType[] = ["en2cn", "en2cn", "cn2en", "cn2en", "listen2en", "listen2en"];
+    const tShuffled = shuffle(types);
+    return picks.map((w, i): Q => {
+      const type = tShuffled[i % tShuffled.length];
+      const wrongPool = shuffle(words.filter(x => x.id !== w.id));
+      if (type === "en2cn") {
+        const opts = shuffle([w.meaning_cn, ...wrongPool.slice(0, 3).map(x => x.meaning_cn)]);
+        return { type, word: w, options: opts, answer: w.meaning_cn };
+      }
+      // cn2en & listen2en: pick the correct English word
+      const opts = shuffle([w.word, ...wrongPool.slice(0, 3).map(x => x.word)]);
+      return { type, word: w, options: opts, answer: w.word };
+    });
+  }, [words]);
+
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState({ correct: 0, total: 0 });
 
-  const queue = useMemo(() => shuffle(words).slice(0, 20), [words]);
-  const cur = queue[idx];
+  const cur = session[idx];
 
-  const options = useMemo(() => {
-    if (!cur) return [];
-    const distractors = shuffle(words.filter((w) => w.id !== cur.id))
-      .slice(0, 3)
-      .map((w) => w.meaning_cn);
-    return shuffle([cur.meaning_cn, ...distractors]);
-  }, [cur, words]);
+  // Auto-play audio for listen-type questions
+  useEffect(() => {
+    if (cur?.type === "listen2en") {
+      const t = setTimeout(() => speak(cur.word.word), 250);
+      return () => clearTimeout(t);
+    }
+  }, [cur]);
 
-  if (!cur) {
+  if (!cur && session.length === 0) {
     return (
       <div className="rounded-2xl border border-border/60 bg-card p-8 text-center">
         <Trophy className="mx-auto size-10 text-amber-500" />
-        <p className="mt-2 text-sm text-muted-foreground">没有可用单词</p>
+        <p className="mt-2 text-sm text-muted-foreground">单词不足 4 个，无法生成测验</p>
       </div>
     );
   }
 
-  if (idx >= queue.length) {
+  if (idx >= session.length) {
     const pct = Math.round((score.correct / score.total) * 100);
-    if (typeof window !== "undefined" && !(queue as any).__celebrated) {
-      (queue as any).__celebrated = true;
+    if (typeof window !== "undefined" && !(session as any).__celebrated) {
+      (session as any).__celebrated = true;
       celebrateScore(pct);
     }
     return (
-      <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
+      <div className="rounded-3xl border border-border/60 bg-card p-6 text-center">
         <Trophy className="mx-auto size-12 text-amber-500" />
-        <h3 className="mt-2 text-xl font-extrabold">
+        <h3 className="mt-2 text-2xl font-extrabold">
           {pct >= 90 ? "🌟 太棒了！" : pct >= 70 ? "👍 不错！" : "💪 继续加油！"}
         </h3>
-        <p className="mt-1 text-sm text-muted-foreground">
+        <p className="mt-1 text-base text-muted-foreground">
           答对 {score.correct} / {score.total} ({pct}%)
         </p>
-        <button
-          onClick={() => {
-            setIdx(0);
-            setPicked(null);
-            setScore({ correct: 0, total: 0 });
-          }}
-          className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground"
+
+        {/* "继续玩" 出口 — 与一年级其他活动联动 */}
+        <div className="mt-5 grid gap-2 sm:grid-cols-3">
+          <button
+            onClick={() => {
+              setIdx(0); setPicked(null); setScore({ correct: 0, total: 0 });
+            }}
+            className="flex items-center justify-center gap-1.5 rounded-2xl border-2 border-violet-300 bg-violet-50 p-3 text-sm font-extrabold text-violet-700 transition hover:-translate-y-0.5 dark:bg-violet-950/30 dark:text-violet-300"
+          >
+            <RotateCw className="size-4" /> 再来 6 题
+          </button>
+          <Link
+            to={`/primary/games/${grade}/listen`}
+            className="flex items-center justify-center gap-1.5 rounded-2xl border-2 border-sky-300 bg-sky-50 p-3 text-sm font-extrabold text-sky-700 transition hover:-translate-y-0.5 dark:bg-sky-950/30 dark:text-sky-300"
+          >
+            <Headphones className="size-4" /> 听力游戏
+          </Link>
+          <Link
+            to={`/primary/reading/grade/${grade}`}
+            className="flex items-center justify-center gap-1.5 rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-3 text-sm font-extrabold text-emerald-700 transition hover:-translate-y-0.5 dark:bg-emerald-950/30 dark:text-emerald-300"
+          >
+            <BookOpen className="size-4" /> 去阅读
+          </Link>
+        </div>
+        <Link
+          to={`/primary/games/${grade}`}
+          className="mt-3 inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground"
         >
-          <RotateCw className="size-4" /> 再来一组
-        </button>
+          <Gamepad2 className="size-3.5" /> 或玩个单词游戏 →
+        </Link>
       </div>
     );
   }
@@ -320,14 +367,14 @@ function QuizMode({ words }: { words: Vocab[] }) {
   const onPick = async (m: string) => {
     if (picked) return;
     setPicked(m);
-    const correct = m === cur.meaning_cn;
+    const correct = m === cur.answer;
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
-    speak(cur.word);
+    if (cur.type !== "listen2en") speak(cur.word.word);
     await Promise.all([
-      bumpVocabMastery({ vocabId: cur.id, isCorrect: correct, kind: "en2cn" }).catch(() => {}),
+      bumpVocabMastery({ vocabId: cur.word.id, isCorrect: correct, kind: cur.type }).catch(() => {}),
       recordAttempt({
         questionType: "vocab",
-        questionId: cur.id,
+        questionId: cur.word.id,
         userAnswer: m,
         isCorrect: correct,
       }).catch(() => {}),
@@ -335,36 +382,63 @@ function QuizMode({ words }: { words: Vocab[] }) {
     setTimeout(() => {
       setPicked(null);
       setIdx((i) => i + 1);
-    }, 900);
+    }, 800);
   };
+
+  const promptLabel =
+    cur.type === "en2cn" ? "请选择正确的中文意思" :
+    cur.type === "cn2en" ? "请选择正确的英文单词" :
+    "🎧 听一听，选出对应的单词";
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between text-xs text-muted-foreground">
-        <span>
-          第 {idx + 1} / {queue.length} 题
-        </span>
-        <span className="font-bold">
-          ✅ {score.correct} / {score.total}
-        </span>
+      {/* Progress bar — Duolingo-style */}
+      <div>
+        <div className="mb-1.5 flex items-center justify-between text-xs">
+          <span className="text-muted-foreground">第 {idx + 1} / {session.length} 题 · 一轮 6 题</span>
+          <span className="font-extrabold text-emerald-600">✅ {score.correct} / {score.total}</span>
+        </div>
+        <div className="h-2 overflow-hidden rounded-full bg-secondary">
+          <div
+            className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all"
+            style={{ width: `${(idx / session.length) * 100}%` }}
+          />
+        </div>
       </div>
+
       <div className="rounded-3xl border border-border/60 bg-card p-6 text-center">
         <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-          请选择正确的中文意思
+          {promptLabel}
         </div>
-        <div className="mt-3 flex items-center justify-center gap-3">
-          <span className="text-3xl font-black md:text-4xl">{cur.word}</span>
-          <button
-            onClick={() => speak(cur.word)}
-            className="grid size-10 place-items-center rounded-full bg-primary text-primary-foreground"
-          >
-            <Volume2 className="size-5" />
-          </button>
-        </div>
+
+        {cur.type === "en2cn" && (
+          <div className="mt-3 flex items-center justify-center gap-3">
+            <span className="text-3xl font-black md:text-4xl">{cur.word.word}</span>
+            <button onClick={() => speak(cur.word.word)} className="grid size-10 place-items-center rounded-full bg-primary text-primary-foreground">
+              <Volume2 className="size-5" />
+            </button>
+          </div>
+        )}
+        {cur.type === "cn2en" && (
+          <div className="mt-3 text-3xl font-black md:text-4xl">{cur.word.meaning_cn}</div>
+        )}
+        {cur.type === "listen2en" && (
+          <div className="mt-3 flex flex-col items-center gap-2">
+            <button
+              onClick={() => speak(cur.word.word)}
+              className="grid size-20 place-items-center rounded-full bg-gradient-to-br from-sky-500 to-blue-500 text-white shadow-lg transition hover:scale-105"
+              aria-label="再听一次"
+            >
+              <Volume2 className="size-9" />
+            </button>
+            <div className="text-xs text-muted-foreground">点击图标再听一次</div>
+          </div>
+        )}
       </div>
+
       <div className="grid gap-2 sm:grid-cols-2">
         {options.map((m) => {
-          const isCorrect = m === cur.meaning_cn;
+          const isCorrect = m === cur.answer;
           const showRight = picked && isCorrect;
           const showWrong = picked === m && !isCorrect;
           return (
@@ -373,7 +447,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
               onClick={() => onPick(m)}
               disabled={!!picked}
               className={cn(
-                "flex items-center justify-between rounded-2xl border-2 p-4 text-left text-sm font-bold transition",
+                "flex items-center justify-between rounded-2xl border-2 p-4 text-left text-base font-bold transition",
                 showRight && "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40",
                 showWrong && "border-rose-500 bg-rose-50 text-rose-700 dark:bg-rose-950/40",
                 !picked && "border-border bg-card hover:border-primary/40",

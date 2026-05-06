@@ -294,30 +294,6 @@ const Index = () => {
         })}
       </section>
 
-      {/* Full-width placement test tile at the bottom — only for logged-in users
-          (unlogged users already see it as the hero above) */}
-      {user && (
-      <Link
-        to={placementSection.to}
-        className={`group relative mt-3 flex flex-col items-center justify-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-br ${placementSection.gradient} px-6 py-7 text-center text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(160_50%_30%/0.5)]`}
-      >
-        <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/15 blur-2xl" />
-        <span className="pointer-events-none absolute -left-10 -bottom-10 size-40 rounded-full bg-white/10 blur-2xl" />
-        <div className="relative grid size-12 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
-          <placementSection.icon className="size-6" />
-        </div>
-        <div className="relative text-lg font-extrabold leading-tight tracking-wide md:text-xl">
-          {placementSection.title}
-        </div>
-        <div className="relative max-w-md text-xs opacity-90 md:text-sm">
-          {placementSection.desc}
-        </div>
-        <div className="relative mt-2 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-1.5 text-xs font-semibold backdrop-blur-sm transition group-hover:bg-white/30">
-          {t("index.section.placement.cta")} <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
-        </div>
-      </Link>
-      )}
-
       {/* Trust footer for logged-in hub — links to About / Privacy / Terms / Contact */}
       <footer className="mt-12 border-t border-border pt-6 text-center">
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">

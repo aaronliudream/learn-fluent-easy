@@ -6,6 +6,7 @@ import { useMasteryOverview, pickContinue, type Stage } from "@/hooks/useMastery
 import { MasteryRing } from "@/components/mastery/MasteryRing";
 import { MasteryBadge, MASTERY_LEGEND } from "@/components/mastery/MasteryBadge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { ShareButton } from "@/components/share/ShareButton";
 
 function StageView({ stage }: { stage: Stage }) {
   const ov = useMasteryOverview(stage);
@@ -34,6 +35,16 @@ function StageView({ stage }: { stage: Stage }) {
           <Stat n={ov.untouched} label="🌱 未学" tone="text-muted-foreground" />
           <Stat n={ov.due}      label="⏰ 待复习" tone="text-orange-600 dark:text-orange-400" />
         </div>
+        <ShareButton
+          variant="pill"
+          label="📤 分享我的进度"
+          item={{
+            type: "score",
+            module: stage === "junior" ? "初中英语" : "高考英语",
+            score: ov.percent,
+            url: typeof window !== "undefined" ? window.location.origin : "https://bigmoonenglish.com",
+          }}
+        />
       </section>
 
       {/* Continue card */}

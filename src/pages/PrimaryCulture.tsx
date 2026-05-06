@@ -505,6 +505,18 @@ export default function PrimaryCulture() {
               >
                 关闭
               </button>
+              {stamps[openCard.id] && (
+                <button
+                  onClick={async () => {
+                    const url = await buildShareCard(openCard, stampedCount, total);
+                    setShareUrl(url);
+                  }}
+                  className="inline-flex items-center gap-1 rounded-2xl border-2 border-emerald-300 bg-emerald-50 px-3 py-2.5 text-xs font-extrabold text-emerald-700 hover:bg-emerald-100 dark:border-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300"
+                  title="生成家长分享卡"
+                >
+                  <Share2 className="size-3.5" /> 分享
+                </button>
+              )}
               {stepIdx < STEPS.length - 1 ? (
                 <button
                   onClick={nextStep}
@@ -524,6 +536,32 @@ export default function PrimaryCulture() {
                 </button>
               )}
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* 家长分享卡预览 */}
+      {shareUrl && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm" onClick={() => setShareUrl(null)}>
+          <div className="w-full max-w-sm overflow-hidden rounded-3xl bg-card p-4 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="mb-2 text-center text-sm font-extrabold">📨 分享给爸爸妈妈</div>
+            <img src={shareUrl} alt="分享卡" className="w-full rounded-2xl border-2 border-amber-200 shadow-md" />
+            <div className="mt-3 grid grid-cols-2 gap-2">
+              <a
+                href={shareUrl}
+                download={`culture-passport-${Date.now()}.png`}
+                className="inline-flex items-center justify-center gap-1 rounded-2xl bg-primary py-2.5 text-sm font-extrabold text-primary-foreground hover:bg-primary/90"
+              >
+                <Download className="size-4" /> 保存图片
+              </a>
+              <button
+                onClick={() => setShareUrl(null)}
+                className="rounded-2xl border-2 border-border bg-card py-2.5 text-sm font-bold hover:bg-muted"
+              >
+                关闭
+              </button>
+            </div>
+            <p className="mt-2 text-center text-[11px] text-muted-foreground">长按图片可保存或转发到微信</p>
           </div>
         </div>
       )}

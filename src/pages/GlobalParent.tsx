@@ -204,7 +204,7 @@ export default function GlobalParent() {
           <div className="flex items-center gap-2">
             <Sparkles className="size-4 text-violet-500" />
             <span className="text-sm font-extrabold md:text-base"><T>📂 查看详细数据</T></span>
-            <span className="text-[11px] text-muted-foreground"><T>· 体检报告 / 本周快报 / 学段足迹 / 雷达 / 薄弱点 / 趋势</T></span>
+            <span className="text-[11px] text-muted-foreground"><T>· 成长报告 / 本周快报 / 学段足迹 / 雷达 / 薄弱点 / 趋势</T></span>
           </div>
           <span className="text-xs font-bold text-violet-600 group-open:hidden"><T>展开 ▾</T></span>
           <span className="text-xs font-bold text-violet-600 hidden group-open:inline"><T>收起 ▴</T></span>
@@ -242,10 +242,10 @@ export default function GlobalParent() {
           <div className="text-3xl">🌱</div>
           <div className="mt-2 text-base font-extrabold"><T>孩子还没开始学习</T></div>
           <p className="mx-auto mt-1 max-w-md text-xs text-muted-foreground">
-            <T>让孩子先完成 5 分钟免费诊断，我们会根据 CEFR 等级自动推荐适合的学习路径——无论你在中国、日本、韩国还是任何国家。</T>
+            <T>让孩子先完成 5 分钟免费评估，我们会根据 CEFR 等级自动推荐适合的学习路径——无论你在中国、日本、韩国还是任何国家。</T>
           </p>
           <Link to="/placement" className="mt-4 inline-block rounded-full bg-gradient-to-r from-violet-500 to-sky-500 px-5 py-2 text-sm font-extrabold text-white shadow">
-            <T>开始免费诊断 →</T>
+            <T>开始免费评估 →</T>
           </Link>
         </section>
       )}

@@ -4,7 +4,7 @@ import BackLink from "@/components/BackLink";
 import { supabase } from "@/integrations/supabase/client";
 import {
   Trophy, Award, Sparkles, CheckCircle2, XCircle, Loader2, Volume2,
-  ArrowRight, Star, Printer, RefreshCw, Stethoscope, Target, ChevronRight,
+  ArrowRight, Star, Printer, RefreshCw, Lightbulb, Target, ChevronRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -346,7 +346,7 @@ export default function PrimaryAssessment() {
               <div className="mt-3 text-4xl font-black tabular-nums">{pct}<span className="text-xl text-muted-foreground">/100</span></div>
               <div className="mt-1 text-xs text-muted-foreground">
                 {isCheckup
-                  ? `${m.correct}/${m.total_questions} 题正确 · ${m.month_key} 月度体检`
+                  ? `${m.correct}/${m.total_questions} 题正确 · ${m.month_key} 月度评估`
                   : `${m.score}/${m.total} 题正确 · ${unit?.emoji} ${unit?.title_cn} 单元`}
               </div>
               {isCheckup && (
@@ -365,7 +365,7 @@ export default function PrimaryAssessment() {
             {isCheckup && (m.recommendations as any[])?.length > 0 && (
               <div className="mt-5">
                 <h3 className="mb-2 flex items-center gap-1 text-sm font-extrabold">
-                  <Stethoscope className="size-4 text-rose-500" /> AI 教研处方
+                  <Lightbulb className="size-4 text-rose-500" /> AI 学习建议
                 </h3>
                 <div className="space-y-2">
                   {(m.recommendations as any[]).map((r, i) => (
@@ -419,7 +419,7 @@ export default function PrimaryAssessment() {
           <BackLink to={`/primary/grade/${grade}`}>返回</BackLink>
           <div className="flex items-center gap-2">
             <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-extrabold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
-              {mode === "challenge" ? `🏝️ ${unit?.title_cn ?? ""} · 单元挑战` : "🩺 月度体检"}
+              {mode === "challenge" ? `🏝️ ${unit?.title_cn ?? ""} · 单元挑战` : "📊 月度评估"}
             </span>
             <span className="rounded-full bg-violet-100 px-2.5 py-0.5 text-[10px] font-extrabold text-violet-800 dark:bg-violet-900/40 dark:text-violet-300">
               {idx + 1} / {totalQ}

@@ -261,20 +261,20 @@ export default function GrowthReport() {
     const list: { symptom: string; cause: string; prescription: string; eta: string; tone: string; icon: any }[] = [];
     if (stats.skills.listen < 70 && stats.attempts.listen >= 5) {
       list.push({
-        symptom: `听力辨词准确率 ${stats.skills.listen}%（健康基线 80%+）`,
+        symptom: `听力辨词准确率 ${stats.skills.listen}%（优秀线 80%+）`,
         cause: "辅音/元音音位区分不足，多在 /θ/ /ð/ /æ/ /ʌ/ 等英语特有音上失误",
         prescription: "每日 5 分钟最小对立对（minimal pairs）听辨训练 + 重点单词慢速跟读",
-        eta: "约 14 天可提升至 80%+",
+        eta: "约 14 天可提升至 80%+ 优秀线",
         tone: "from-violet-500 to-fuchsia-500",
         icon: Headphones,
       });
     }
     if (stats.skills.vocab < 70 && stats.attempts.vocab >= 10) {
       list.push({
-        symptom: `词义选择正确率 ${stats.skills.vocab}%（健康基线 80%+）`,
+        symptom: `词义选择正确率 ${stats.skills.vocab}%（优秀线 80%+）`,
         cause: "新词学完后未在 24 小时内复习，进入遗忘曲线陡降区",
         prescription: "启用「错题复习小测」，按艾宾浩斯间隔（1天/3天/7天）复习",
-        eta: "约 10 天可达健康水平",
+        eta: "约 10 天可达优秀水平",
         tone: "from-emerald-500 to-teal-500",
         icon: BookOpen,
       });
@@ -302,7 +302,7 @@ export default function GrowthReport() {
     }
     if (!list.length) {
       list.push({
-        symptom: "各项指标均处于健康区间 ✨",
+        symptom: "各项指标均处于优秀区间 ✨",
         cause: "学习节奏稳定、复习按时进行",
         prescription: "保持当前节奏，可开始下一单元挑战",
         eta: "持续保持即可",
@@ -320,7 +320,7 @@ export default function GrowthReport() {
       { week: "第 1 周", focus: `${weakTheme}主题词汇 + 错题复习`, daily: "15分钟：5min听音 + 5min词卡 + 5min错题", goal: "+8 个新词" },
       { week: "第 2 周", focus: "听力辨词强化 + 当周新课", daily: "15分钟：6min听写 + 9min新课通关", goal: "+10 个新词，听力 75%+" },
       { week: "第 3 周", focus: "前两周复习 + 拼读基础", daily: "15分钟：5min复习 + 10min phonics", goal: "巩固 25 词，拼写 70%+" },
-      { week: "第 4 周", focus: "单元挑战 + 月度体检", daily: "15分钟：12题挑战 + 错题修复", goal: "+8 个新词，整月 +30 词" },
+      { week: "第 4 周", focus: "单元挑战 + 月度评估", daily: "15分钟：12题挑战 + 错题修复", goal: "+8 个新词，整月 +30 词" },
     ];
   }, [stats.themes]);
 
@@ -330,7 +330,7 @@ export default function GrowthReport() {
     return (
       <section className="mb-4 rounded-3xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-rose-50 p-8 dark:border-amber-900 dark:from-amber-950/20 dark:to-rose-950/20">
         <div className="flex items-center justify-center text-muted-foreground">
-          <Loader2 className="mr-2 size-5 animate-spin" /> 正在生成成长体检报告…
+          <Loader2 className="mr-2 size-5 animate-spin" /> 正在生成成长报告…
         </div>
       </section>
     );
@@ -342,7 +342,7 @@ export default function GrowthReport() {
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2 print:hidden">
         <div className="flex items-center gap-2">
           <Award className="size-5 text-amber-500" />
-          <h2 className="text-base font-extrabold md:text-lg">📋 孩子成长体检报告</h2>
+          <h2 className="text-base font-extrabold md:text-lg">📋 孩子成长报告</h2>
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <div className="flex gap-1 rounded-full border bg-card p-0.5">
@@ -378,7 +378,7 @@ export default function GrowthReport() {
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <div className="text-[11px] font-bold uppercase tracking-widest text-amber-600">Big Moon English · Growth Report</div>
-              <h1 className="mt-1 text-2xl font-black md:text-3xl">{childName} 的英语成长体检报告</h1>
+              <h1 className="mt-1 text-2xl font-black md:text-3xl">{childName} 的英语成长报告</h1>
               <p className="mt-1 text-xs text-muted-foreground">
                 {periodLabel(period)} · 一年级 {grade === 1 ? "" : `→ G${grade}`} · {target?.benchmark_name ?? "剑桥 Starters"} 对标 · 报告日期 {fmtDate(new Date())}
               </p>
@@ -505,7 +505,7 @@ export default function GrowthReport() {
         </Block>
 
         {/* ===== 6. 弱点诊断 ===== */}
-        <Block title="🩺 5. 弱点诊断（AI 教研处方）" subtitle="按重要性排序的前 3 个改进项">
+        <Block title="🩺 5. 薄弱分析（AI 学习建议）" subtitle="按重要性排序的前 3 个改进项">
           <div className="space-y-3">
             {prescriptions.map((p, i) => (
               <div key={i} className="rounded-xl border bg-white/80 p-3 dark:bg-black/20">
@@ -513,12 +513,12 @@ export default function GrowthReport() {
                   <div className={cn("inline-flex size-8 items-center justify-center rounded-full bg-gradient-to-br text-white", p.tone)}>
                     <p.icon className="size-4" />
                   </div>
-                  <div className="text-xs font-extrabold">处方 #{i + 1}</div>
+                  <div className="text-xs font-extrabold">建议 #{i + 1}</div>
                 </div>
-                <Diag label="🩺 症状" text={p.symptom} />
-                <Diag label="🔬 原因" text={p.cause} />
-                <Diag label="💊 处方" text={p.prescription} />
-                <Diag label="⏱ 预计恢复" text={p.eta} highlight />
+                <Diag label="📌 现状" text={p.symptom} />
+                <Diag label="🔍 原因" text={p.cause} />
+                <Diag label="💡 建议" text={p.prescription} />
+                <Diag label="⏱ 预计达成" text={p.eta} highlight />
               </div>
             ))}
           </div>
@@ -581,9 +581,9 @@ export default function GrowthReport() {
             <ActionCard time="本周内" title="完成 3 节新课"
               desc={`聚焦薄弱主题：${stats.themes.find(t => t.mastered / Math.max(1, t.total) < 0.5)?.name ?? "下一单元"}`}
               link={`/primary/grade/${grade}`} cta="进入学习中心" />
-            <ActionCard time="本月内" title="参加月度体检"
+            <ActionCard time="本月内" title="参加月度评估"
               desc="15 题自适应测评，生成新报告 + 成长证书"
-              link={`/primary/grade/${grade}`} cta="预约体检" />
+              link={`/primary/grade/${grade}`} cta="开始评估" />
           </div>
         </Block>
 

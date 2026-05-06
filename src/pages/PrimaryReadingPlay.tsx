@@ -237,6 +237,7 @@ function WarmupStep({ warm, onDone }: { warm: Warm[]; onDone: () => void }) {
 function ListenStep({ sentences, onDone }: { sentences: Sentence[]; onDone: () => void }) {
   const [active, setActive] = useState(-1);
   const [playing, setPlaying] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false);
   const cancelRef = useRef(false);
 
   async function playAll() {
@@ -250,6 +251,7 @@ function ListenStep({ sentences, onDone }: { sentences: Sentence[]; onDone: () =
     }
     setPlaying(false);
     setActive(-1);
+    if (!cancelRef.current) setHasPlayed(true);
   }
 
   useEffect(() => () => { cancelRef.current = true; stopSpeaking(); }, []);
@@ -289,9 +291,13 @@ function ListenStep({ sentences, onDone }: { sentences: Sentence[]; onDone: () =
       </div>
       <button
         onClick={onDone}
-        className="mt-5 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-cyan-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile"
+        disabled={playing || !hasPlayed}
+        className={cn(
+          "mt-5 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-cyan-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile",
+          (playing || !hasPlayed) && "opacity-50 cursor-not-allowed"
+        )}
       >
-        下一步 →
+        {playing ? "正在播放… 请听完整篇" : hasPlayed ? "下一步 →" : "请先点 ▶︎ 播放全篇"}
       </button>
     </div>
   );

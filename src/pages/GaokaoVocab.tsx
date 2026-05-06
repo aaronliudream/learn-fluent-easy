@@ -1782,6 +1782,7 @@ function DonePanel({
   levelUps,
   group,
   wrongWords,
+  poolIds,
 }: {
   stats: { correct: number; total: number };
   coinsAwarded?: number;
@@ -1790,6 +1791,7 @@ function DonePanel({
   levelUps?: { word: string; level: MasteryLevel }[];
   group?: Vocab[];
   wrongWords?: Vocab[];
+  poolIds?: string[];
 }) {
   const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
   const [showGame, setShowGame] = useState(false);

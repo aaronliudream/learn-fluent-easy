@@ -496,7 +496,12 @@ function GroupList({
         />
         <RetentionChallengeCard
           vocabIds={pool.map((v) => v.id)}
-          onStart={() => onPickMode("srs&focus=retention")}
+          onStart={() => {
+            const url = new URL(window.location.href);
+            url.searchParams.set("mode", "srs");
+            url.searchParams.set("focus", "retention");
+            window.location.assign(url.toString());
+          }}
         />
       </div>
 

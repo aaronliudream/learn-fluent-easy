@@ -275,6 +275,8 @@ function QuizMode({ words }: { words: Vocab[] }) {
   // Parent-configurable: read session size + type mix from profile
   const [sessionSize, setSessionSize] = useState(6);
   const [mix, setMix] = useState<{ en2cn: number; cn2en: number; listen2en: number }>({ en2cn: 2, cn2en: 2, listen2en: 2 });
+  // Adaptive: per-word mastery rows for current grade
+  const [masteryMap, setMasteryMap] = useState<Map<string, any>>(new Map());
   useEffect(() => {
     (async () => {
       const { data: u } = await supabase.auth.getUser();
@@ -285,8 +287,34 @@ function QuizMode({ words }: { words: Vocab[] }) {
         const m = (data as any).quiz_type_mix;
         if (m) setMix({ en2cn: m.en2cn ?? 2, cn2en: m.cn2en ?? 2, listen2en: m.listen2en ?? 2 });
       }
+      const { data: mr } = await supabase
+        .from("primary_word_mastery")
+        .select("word_id,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong,last_seen_at")
+        .eq("user_id", id).eq("grade", grade);
+      const mp = new Map<string, any>();
+      (mr ?? []).forEach((r: any) => mp.set(r.word_id, r));
+      setMasteryMap(mp);
     })();
-  }, []);
+  }, [grade]);
+
+  // Adaptive scoring: higher = more in need of practice
+  // - Unlearned (no record): ~100
+  // - Recently wrong: 80 + wrongRate*20
+  // - Low mastery level: 60 - lvl*15
+  // - Mastered (lvl>=3): ~5  (still occasionally surface for spaced review)
+  const scoreWord = (w: Vocab): number => {
+    const r = masteryMap.get(w.id);
+    if (!r) return 100 + Math.random() * 5;
+    const lvl = r.mastery_level ?? 0;
+    const correct = (r.quiz_correct ?? 0) + (r.listen_correct ?? 0) + (r.spell_correct ?? 0) + (r.match_correct ?? 0);
+    const wrong = (r.quiz_wrong ?? 0) + (r.listen_wrong ?? 0) + (r.spell_wrong ?? 0) + (r.match_wrong ?? 0);
+    if (lvl >= 3) return 5 + Math.random() * 5;
+    if (wrong > 0) {
+      const wrongRate = wrong / Math.max(1, wrong + correct);
+      return 80 + wrongRate * 20 + Math.random() * 3;
+    }
+    return 60 - lvl * 15 + Math.random() * 6;
+  };
 
   const session: Q[] = useMemo(() => {
     if (words.length < 4) return [];
@@ -309,8 +337,13 @@ function QuizMode({ words }: { words: Vocab[] }) {
     }
     const tShuffled = shuffle(types).slice(0, sessionSize);
 
-    const pool = shuffle(words);
-    const picks = pool.slice(0, sessionSize);
+    // Adaptive pick: weighted toward weakest / unlearned / recently-wrong words.
+    // Take top (sessionSize * 3) by score, then sample sessionSize for variety.
+    const ranked = words
+      .map(w => ({ w, s: scoreWord(w) }))
+      .sort((a, b) => b.s - a.s);
+    const candidatePool = ranked.slice(0, Math.max(sessionSize, Math.min(ranked.length, sessionSize * 3)));
+    const picks = shuffle(candidatePool).slice(0, sessionSize).map(x => x.w);
     return picks.map((w, i): Q => {
       const type = tShuffled[i % tShuffled.length];
       const wrongPool = shuffle(words.filter(x => x.id !== w.id));
@@ -322,7 +355,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
       const opts = shuffle([w.word, ...wrongPool.slice(0, 3).map(x => x.word)]);
       return { type, word: w, options: opts, answer: w.word };
     });
-  }, [words, sessionSize, mix.en2cn, mix.cn2en, mix.listen2en]);
+  }, [words, sessionSize, mix.en2cn, mix.cn2en, mix.listen2en, masteryMap]);
 
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);

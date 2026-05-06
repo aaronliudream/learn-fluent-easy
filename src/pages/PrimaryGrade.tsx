@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, Play, Sparkles, Star, Award, Target } from "lucide-react";
+import { ArrowLeft, Play, Sparkles, Star, Award, Target, Flame, Trophy, Map as MapIcon, Eye, Ear, MousePointerClick, PenLine, Mic, MessageCircle, Users } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 
@@ -39,6 +39,50 @@ type LessonRow = {
   unit: { id: string; title_cn: string; emoji: string | null; sort_order: number };
   progress?: { stars: number; completed_at: string | null }[];
 };
+
+// 词汇 6 步掌握闭环（牛津 Word Learning Cycle + 艾宾浩斯）
+const VOCAB_6_STEPS = [
+  { n: 1, icon: Eye, label: "看见", desc: "图+词+音", to: (g: number) => `/primary/vocab/${g}` },
+  { n: 2, icon: Ear, label: "听辨", desc: "听音选图", to: (g: number) => `/primary/games/${g}/listen` },
+  { n: 3, icon: MousePointerClick, label: "识别", desc: "看图选词", to: (g: number) => `/primary/games/${g}` },
+  { n: 4, icon: PenLine, label: "拼写", desc: "字母拖拽", to: (g: number) => `/primary/games/${g}/spell` },
+  { n: 5, icon: Mic, label: "开口", desc: "AI 跟读", to: (_g: number) => `/primary/chat` },
+  { n: 6, icon: MessageCircle, label: "运用", desc: "情景对话", to: (_g: number) => `/primary/chat` },
+];
+
+// 勋章定义（基于已有数据派生）
+type BadgeDef = { key: string; emoji: string; title: string; check: (s: BadgeStats) => boolean; hint: string };
+type BadgeStats = { totalDone: number; totalStars: number; perfectLessons: number; streak: number; unitsCleared: number; cultureSeen: boolean };
+const BADGES: BadgeDef[] = [
+  { key: "first", emoji: "🌱", title: "启程", hint: "完成 1 课", check: s => s.totalDone >= 1 },
+  { key: "five", emoji: "🚀", title: "小火箭", hint: "完成 5 课", check: s => s.totalDone >= 5 },
+  { key: "ten", emoji: "⭐", title: "十全十美", hint: "完成 10 课", check: s => s.totalDone >= 10 },
+  { key: "perfect", emoji: "💎", title: "三星达人", hint: "3 课全 ⭐⭐⭐", check: s => s.perfectLessons >= 3 },
+  { key: "streak3", emoji: "🔥", title: "三日连击", hint: "连续 3 天", check: s => s.streak >= 3 },
+  { key: "streak7", emoji: "🏆", title: "七日王者", hint: "连续 7 天", check: s => s.streak >= 7 },
+  { key: "stars30", emoji: "✨", title: "星光熠熠", hint: "累计 30 颗星", check: s => s.totalStars >= 30 },
+  { key: "unit", emoji: "🏝️", title: "登岛者", hint: "通关 1 个单元", check: s => s.unitsCleared >= 1 },
+];
+
+function computeStreak(dates: string[]): number {
+  if (dates.length === 0) return 0;
+  const days = new Set(dates.map(d => d.slice(0, 10)));
+  let streak = 0;
+  const cur = new Date();
+  for (let i = 0; i < 365; i++) {
+    const key = cur.toISOString().slice(0, 10);
+    if (days.has(key)) {
+      streak += 1;
+      cur.setDate(cur.getDate() - 1);
+    } else if (i === 0) {
+      // 今天没学，看昨天起算
+      cur.setDate(cur.getDate() - 1);
+    } else {
+      break;
+    }
+  }
+  return streak;
+}
 
 // 能力雷达图（SVG，无依赖）
 function RadarChart({ scores }: { scores: { label: string; value: number }[] }) {
@@ -132,6 +176,33 @@ export default function PrimaryGrade() {
 
   const cefr = CEFR_BY_GRADE[g] ?? CEFR_BY_GRADE[1];
 
+  // 勋章 & 连续打卡 数据
+  const completedDates = lessons.map(l => l.progress?.[0]?.completed_at).filter(Boolean) as string[];
+  const totalStars = lessons.reduce((sum, l) => sum + (l.progress?.[0]?.stars ?? 0), 0);
+  const perfectLessons = lessons.filter(l => (l.progress?.[0]?.stars ?? 0) >= 3).length;
+  const streak = computeStreak(completedDates);
+  // 按 unit 分组
+  const unitsMap = new Map<string, { id: string; title_cn: string; emoji: string | null; sort_order: number; lessons: LessonRow[] }>();
+  lessons.forEach(l => {
+    const u = unitsMap.get(l.unit.id);
+    if (u) u.lessons.push(l);
+    else unitsMap.set(l.unit.id, { ...l.unit, lessons: [l] });
+  });
+  const units = Array.from(unitsMap.values()).sort((a, b) => a.sort_order - b.sort_order);
+  const unitsCleared = units.filter(u => u.lessons.every(l => l.progress?.[0]?.completed_at)).length;
+  const badgeStats: BadgeStats = { totalDone, totalStars, perfectLessons, streak, unitsCleared, cultureSeen: false };
+  const earnedCount = BADGES.filter(b => b.check(badgeStats)).length;
+  // 解锁逻辑：上一个单元全部通关才解锁下一个
+  let unlockedSoFar = true;
+  const unitStates = units.map((u, idx) => {
+    const isUnlocked = idx === 0 || unlockedSoFar;
+    const allDone = u.lessons.every(l => l.progress?.[0]?.completed_at);
+    if (!allDone) unlockedSoFar = false;
+    const doneCount = u.lessons.filter(l => l.progress?.[0]?.completed_at).length;
+    const totalCount = u.lessons.length;
+    return { ...u, isUnlocked, allDone, doneCount, totalCount, current: isUnlocked && !allDone };
+  });
+
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
       <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
@@ -160,6 +231,67 @@ export default function PrimaryGrade() {
           <div className="text-[10px] text-muted-foreground">总进度</div>
         </div>
       </div>
+
+      {/* 连续打卡 + 勋章 + 家长入口 */}
+      <section className="mb-4 grid grid-cols-3 gap-2">
+        <div className="rounded-2xl border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-rose-50 p-2.5 text-center">
+          <Flame className="mx-auto size-5 text-orange-500" />
+          <div className="mt-0.5 text-lg font-extrabold text-orange-600">{streak}</div>
+          <div className="text-[10px] font-bold text-muted-foreground">连续打卡(天)</div>
+        </div>
+        <div className="rounded-2xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-yellow-50 p-2.5 text-center">
+          <Trophy className="mx-auto size-5 text-amber-500" />
+          <div className="mt-0.5 text-lg font-extrabold text-amber-600">{earnedCount}/{BADGES.length}</div>
+          <div className="text-[10px] font-bold text-muted-foreground">已获勋章</div>
+        </div>
+        <Link to="/primary/parent" className="rounded-2xl border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 to-teal-50 p-2.5 text-center transition hover:-translate-y-0.5">
+          <Users className="mx-auto size-5 text-emerald-500" />
+          <div className="mt-0.5 text-lg font-extrabold text-emerald-600">家长</div>
+          <div className="text-[10px] font-bold text-muted-foreground">查看周报</div>
+        </Link>
+      </section>
+
+      {/* 勋章墙 */}
+      <section className="mb-4 rounded-2xl border-2 border-border bg-card p-3">
+        <div className="mb-2 flex items-center gap-1.5 text-[11px] font-extrabold text-muted-foreground">
+          <Trophy className="size-3.5 text-amber-500" /> 勋章墙 · 收集你的成就
+        </div>
+        <div className="grid grid-cols-4 gap-2">
+          {BADGES.map(b => {
+            const got = b.check(badgeStats);
+            return (
+              <div key={b.key} title={b.hint} className={`rounded-xl border-2 p-2 text-center transition ${got ? "border-amber-300 bg-gradient-to-br from-amber-50 to-orange-50" : "border-border bg-muted/30 opacity-50 grayscale"}`}>
+                <div className="text-2xl">{b.emoji}</div>
+                <div className="mt-0.5 text-[10px] font-extrabold">{b.title}</div>
+                <div className="text-[9px] text-muted-foreground leading-tight">{b.hint}</div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* 词汇 6 步掌握闭环 */}
+      <section className="mb-4 rounded-2xl border-2 border-border bg-card p-3">
+        <div className="mb-2 flex items-center justify-between">
+          <div className="flex items-center gap-1.5 text-[11px] font-extrabold text-muted-foreground">
+            <Sparkles className="size-3.5 text-violet-500" /> 词汇 6 步掌握闭环 · 牛津学习环
+          </div>
+          <span className="text-[9px] text-muted-foreground">每个新词走完 6 步 = 真正学会</span>
+        </div>
+        <div className="grid grid-cols-6 gap-1.5">
+          {VOCAB_6_STEPS.map(s => {
+            const Icon = s.icon;
+            return (
+              <Link key={s.n} to={s.to(g)} className="group rounded-xl border-2 border-border bg-gradient-to-br from-violet-50 to-fuchsia-50 p-1.5 text-center transition hover:-translate-y-0.5 hover:border-violet-300">
+                <div className="mx-auto grid size-6 place-items-center rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 text-[10px] font-extrabold text-white">{s.n}</div>
+                <Icon className="mx-auto mt-1 size-3.5 text-violet-500" />
+                <div className="mt-0.5 text-[10px] font-extrabold">{s.label}</div>
+                <div className="text-[8px] text-muted-foreground leading-tight">{s.desc}</div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
 
       {/* 教育学学习路径：输入 → 内化 → 输出 */}
       <section className="mb-4">
@@ -213,34 +345,57 @@ export default function PrimaryGrade() {
         </Link>
       )}
 
-      {/* Lessons list */}
-      {!loading && lessons.length > 0 && (
+      {/* 学习地图（按单元分岛） */}
+      {!loading && units.length > 0 && (
         <section className="mb-6">
           <ModuleStageTests segment="primary" grade={g} module="vocab" />
           <div className="mb-2 flex items-center gap-2 text-sm font-extrabold">
-            <Sparkles className="size-4 text-amber-500" /> 本年级课程
+            <MapIcon className="size-4 text-emerald-500" /> 学习地图 · 探险路线
+            <span className="ml-auto text-[10px] font-normal text-muted-foreground">{totalDone}/{totalAll} 课 · {totalStars} ⭐</span>
           </div>
-          <div className="grid gap-2">
-            {lessons.map(l => {
-              const stars = l.progress?.[0]?.stars ?? 0;
-              const done = !!l.progress?.[0]?.completed_at;
-              return (
-                <Link key={l.id} to={`/primary/lesson/${l.id}`}
-                  className="flex items-center gap-3 rounded-2xl border-2 border-border bg-card p-3 transition hover:-translate-y-0.5 hover:border-amber-300">
-                  <div className="grid size-11 place-items-center rounded-xl bg-gradient-to-br from-amber-200 to-rose-200 text-xl">{l.unit.emoji ?? "📘"}</div>
+          <div className="space-y-3">
+            {unitStates.map((u, idx) => (
+              <div key={u.id} className={`rounded-2xl border-2 p-3 transition ${u.current ? "border-rose-300 bg-gradient-to-br from-rose-50 to-amber-50 shadow-tile" : u.allDone ? "border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50" : u.isUnlocked ? "border-border bg-card" : "border-border bg-muted/30 opacity-60"}`}>
+                <div className="mb-2 flex items-center gap-2">
+                  <div className={`grid size-10 place-items-center rounded-2xl text-xl shadow-sm ${u.allDone ? "bg-gradient-to-br from-emerald-400 to-teal-400 text-white" : u.isUnlocked ? "bg-gradient-to-br from-amber-300 to-rose-300" : "bg-muted"}`}>
+                    {u.isUnlocked ? (u.emoji ?? "🏝️") : "🔒"}
+                  </div>
                   <div className="flex-1 min-w-0">
-                    <div className="truncate text-sm font-extrabold">{l.title_cn}</div>
-                    <div className="text-[11px] text-muted-foreground">{l.unit.title_cn} · {l.estimated_minutes} 分钟</div>
+                    <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">岛屿 {idx + 1} {u.current && "· 你在这里"}</div>
+                    <div className="truncate text-sm font-extrabold">{u.title_cn}</div>
                   </div>
-                  <div className="flex items-center gap-0.5 text-amber-500">
-                    {Array.from({ length: 3 }).map((_, i) => (
-                      <Star key={i} className={`size-3.5 ${i < stars ? "fill-amber-400 stroke-amber-500" : "stroke-muted-foreground/40"}`} />
-                    ))}
+                  <div className="text-right">
+                    <div className="text-[11px] font-extrabold text-foreground">{u.doneCount}/{u.totalCount}</div>
+                    <div className="h-1 w-14 overflow-hidden rounded-full bg-muted">
+                      <div className="h-full bg-gradient-to-r from-emerald-400 to-teal-400 transition-all" style={{ width: `${u.totalCount ? (u.doneCount / u.totalCount) * 100 : 0}%` }} />
+                    </div>
                   </div>
-                  {done && <div className="rounded-full bg-emerald-500 px-2 py-0.5 text-[10px] font-bold text-white">✓</div>}
-                </Link>
-              );
-            })}
+                </div>
+                {u.isUnlocked && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {u.lessons.map(l => {
+                      const stars = l.progress?.[0]?.stars ?? 0;
+                      const done = !!l.progress?.[0]?.completed_at;
+                      return (
+                        <Link key={l.id} to={`/primary/lesson/${l.id}`}
+                          className={`group flex items-center gap-1.5 rounded-xl border-2 px-2 py-1.5 text-[11px] font-bold transition hover:-translate-y-0.5 ${done ? "border-emerald-300 bg-emerald-50 text-emerald-700" : "border-border bg-card text-foreground hover:border-amber-300"}`}>
+                          <span className="truncate max-w-[110px]">{l.title_cn}</span>
+                          <span className="flex items-center gap-0">
+                            {Array.from({ length: 3 }).map((_, i) => (
+                              <Star key={i} className={`size-2.5 ${i < stars ? "fill-amber-400 stroke-amber-500" : "stroke-muted-foreground/40"}`} />
+                            ))}
+                          </span>
+                          {done && <span className="text-emerald-500">✓</span>}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+                {!u.isUnlocked && (
+                  <div className="text-center text-[11px] text-muted-foreground">通关上一个岛屿即可解锁 🔓</div>
+                )}
+              </div>
+            ))}
           </div>
         </section>
       )}

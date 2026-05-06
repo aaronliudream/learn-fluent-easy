@@ -241,7 +241,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55">
-                  <L>4.9 rating · 10,000+ learners · Available worldwide</L>
+                  <L>Loved by early learners · Available worldwide</L>
                 </div>
               </div>
             </div>

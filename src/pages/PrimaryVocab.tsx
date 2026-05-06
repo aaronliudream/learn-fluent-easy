@@ -371,7 +371,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
             }}
             className="flex items-center justify-center gap-1.5 rounded-2xl border-2 border-violet-300 bg-violet-50 p-3 text-sm font-extrabold text-violet-700 transition hover:-translate-y-0.5 dark:bg-violet-950/30 dark:text-violet-300"
           >
-            <RotateCw className="size-4" /> 再来 6 题
+            <RotateCw className="size-4" /> 再来 {sessionSize} 题
           </button>
           <Link
             to={`/primary/games/${grade}/listen`}
@@ -431,7 +431,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
       {/* Progress bar — Duolingo-style */}
       <div>
         <div className="mb-1.5 flex items-center justify-between text-xs">
-          <span className="text-muted-foreground">第 {idx + 1} / {session.length} 题 · 一轮 6 题</span>
+          <span className="text-muted-foreground">第 {idx + 1} / {session.length} 题 · 一轮 {session.length} 题</span>
           <span className="font-extrabold text-emerald-600">✅ {score.correct} / {score.total}</span>
         </div>
         <div className="h-2 overflow-hidden rounded-full bg-secondary">

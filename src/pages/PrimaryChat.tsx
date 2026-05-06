@@ -50,6 +50,41 @@ export default function PrimaryChat() {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, loading]);
 
+  // "Spark remembers" — on mount, if the user has a due mistake from a previous
+  // chat, gently weave it into the opening line. This is the "AI 个性记忆" hook:
+  // Spark naturally asks "do you still remember X?" instead of showing a quiz UI,
+  // so review feels like conversation, not a test.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const { data: u } = await supabase.auth.getUser();
+        if (!u?.user) return;
+        const { data } = await supabase
+          .from("user_mistakes")
+          .select("snapshot, source_key")
+          .eq("user_id", u.user.id)
+          .eq("module", "primary_chat_quiz")
+          .eq("is_resolved", false)
+          .lte("next_review_at", new Date().toISOString())
+          .order("next_review_at", { ascending: true })
+          .limit(3);
+        if (cancelled || !data?.length) return;
+        // 30% chance to skip — keeps it feeling natural, not mechanical
+        if (Math.random() > 0.7) return;
+        const pick = data[Math.floor(Math.random() * data.length)];
+        const snap = (pick.snapshot ?? {}) as { term?: string };
+        const term = snap.term;
+        if (!term) return;
+        setMessages([{
+          role: "assistant",
+          content: `Hi again! 🐶✨ I missed you! Last time we talked about "${term}". Do you still remember what it means? 💭`,
+        }]);
+      } catch { /* silently fall back to default greeting */ }
+    })();
+    return () => { cancelled = true; };
+  }, []);
+
   async function send(text: string) {
     const t = text.trim();
     if (!t || loading) return;

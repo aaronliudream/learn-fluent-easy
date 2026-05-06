@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>句型篇 · 英语小冒险</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.mode-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+.mode-tab { flex: 1; background: var(--c-cloud); border-radius: 100px; padding: 12px; font-size: 13px; }
+.mode-tab.active { background: var(--gradient-warm); color: white; }
+
+.sent-card {
+  background: white;
+  border: 3px solid var(--c-soft);
+  border-radius: 20px;
+  padding: 24px 16px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.sent-en {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--c-grape);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.sent-cn {
+  font-size: 16px;
+  color: rgba(45, 48, 71, 0.7);
+}
+.sent-action-btn {
+  background: var(--gradient-sky);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.sent-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+.sent-nav button { flex: 1; padding: 14px; border-radius: 100px; font-size: 15px; font-weight: 600; }
+.sent-nav .prev { background: var(--c-cloud); }
+.sent-nav .next { background: var(--gradient-warm); color: white; }
+
+.match-area {
+  display: grid;
+  gap: 8px;
+}
+.match-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.match-card {
+  background: white;
+  border: 3px solid var(--c-soft);
+  border-radius: 16px;
+  padding: 14px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  min-height: 60px;
+  display: grid;
+  place-items: center;
+}
+.match-card.selected { border-color: var(--c-grape); background: rgba(178,127,241,0.1); }
+.match-card.matched { border-color: var(--c-mint); background: rgba(111,226,166,0.15); pointer-events: none; }
+.match-card.wrong-shake { animation: shake 0.4s; }
+
+.theme-badge {
+  display: inline-block;
+  background: var(--c-cloud);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: rgba(45,48,71,0.7);
+  margin-bottom: 8px;
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="data.js"></script>
+<script src="engine.js"></script>
+<script>
+const STATE = { tab: 'learn', currentIdx: 0, matchQueue: [], matchScore: 0 };
+
+const THEME_NAMES = {
+  greet: '问候', intro: '自我介绍', feel: '感受',
+  age: '年龄', point: '指认事物', like: '喜好',
+  have: '拥有', class: '课堂用语', polite: '礼貌用语',
+};
+
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  const screen = eg1.$(`
+    <div class="screen">
+      <div class="hud">
+        <button class="hud-back" onclick="location.href='index.html'">←</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:16px;">💬 句型篇</div>
+        <div style="width:44px"></div>
+      </div>
+      <div class="mode-tabs">
+        <button class="mode-tab ${STATE.tab === 'learn' ? 'active' : ''}" data-tab="learn">学一学</button>
+        <button class="mode-tab ${STATE.tab === 'match' ? 'active' : ''}" data-tab="match">配对</button>
+      </div>
+      <div id="body"></div>
+    </div>
+  `);
+  app.appendChild(screen);
+
+  screen.querySelectorAll('.mode-tab').forEach(b => {
+    b.onclick = () => { STATE.tab = b.dataset.tab; if (STATE.tab === 'match') startMatch(); render(); };
+  });
+
+  if (STATE.tab === 'learn') renderLearn(screen.querySelector('#body'));
+  else renderMatch(screen.querySelector('#body'));
+}
+
+function renderLearn(container) {
+  const idx = STATE.currentIdx;
+  const s = SENTENCES[idx];
+  const status = eg1.srsStatus(s.id);
+  const statusText = status === 'mastered' ? '✓ 已掌握' : status === 'learning' ? '📖 学习中' : '🆕 新句子';
+
+  container.appendChild(eg1.$(`
+    <div class="sent-card">
+      <div class="theme-badge">${THEME_NAMES[s.theme] || ''} · ${statusText}</div>
+      <div class="sent-en">${s.en}</div>
+      <div class="sent-cn">${s.cn}</div>
+      <button class="sent-action-btn" id="hear">🔊 听一听</button>
+    </div>
+    <div style="text-align:center;font-size:12px;color:rgba(45,48,71,0.5);margin-top:8px">
+      第 ${idx + 1} / ${SENTENCES.length} 句
+    </div>
+    <div class="sent-nav">
+      <button class="prev" id="prev">← 上一句</button>
+      <button class="next" id="next">下一句 →</button>
+    </div>
+  `));
+
+  setTimeout(() => eg1.speak(s.en), 300);
+  container.querySelector('#hear').onclick = () => eg1.speak(s.en);
+  container.querySelector('#prev').onclick = () => {
+    STATE.currentIdx = (idx - 1 + SENTENCES.length) % SENTENCES.length;
+    render();
+  };
+  container.querySelector('#next').onclick = () => {
+    eg1.recordAnswer(s.id, true, 5);
+    STATE.currentIdx = (idx + 1) % SENTENCES.length;
+    render();
+  };
+}
+
+// ========== 配对游戏：英文-中文对应 ==========
+function startMatch() {
+  STATE.matchQueue = eg1.pickRandom(SENTENCES, 5);
+  STATE.matchScore = 0;
+}
+
+function renderMatch(container) {
+  const sents = STATE.matchQueue;
+  const ens = sents.map(s => ({ side: 'en', text: s.en, id: s.id }));
+  const cns = sents.map(s => ({ side: 'cn', text: s.cn, id: s.id }));
+  eg1.shuffle(ens);
+  eg1.shuffle(cns);
+
+  container.appendChild(eg1.$(`
+    <div style="text-align:center;font-size:14px;color:rgba(45,48,71,0.7);margin-bottom:16px">
+      🎯 把英文和中文配对吧！
+    </div>
+    <div class="match-pair" id="pair"></div>
+    <div style="text-align:center;font-size:12px;color:rgba(45,48,71,0.5);margin-top:16px">
+      点一个英文卡片，再点对应的中文
+    </div>
+  `));
+
+  const pairEl = container.querySelector('#pair');
+
+  // 左列英文，右列中文
+  const leftCol = eg1.$('<div style="display:grid;gap:8px"></div>');
+  const rightCol = eg1.$('<div style="display:grid;gap:8px"></div>');
+  pairEl.appendChild(leftCol);
+  pairEl.appendChild(rightCol);
+
+  ens.forEach(e => {
+    const card = eg1.$(`<div class="match-card" data-side="en" data-id="${e.id}">${e.text}</div>`);
+    card.onclick = () => onMatchClick(card);
+    leftCol.appendChild(card);
+  });
+  cns.forEach(c => {
+    const card = eg1.$(`<div class="match-card" data-side="cn" data-id="${c.id}">${c.text}</div>`);
+    card.onclick = () => onMatchClick(card);
+    rightCol.appendChild(card);
+  });
+}
+
+let _selected = null;
+function onMatchClick(card) {
+  if (card.classList.contains('matched')) return;
+  if (_selected === card) {
+    card.classList.remove('selected');
+    _selected = null;
+    return;
+  }
+  if (!_selected) {
+    card.classList.add('selected');
+    _selected = card;
+    if (card.dataset.side === 'en') {
+      const sent = SENTENCES.find(s => s.id === card.dataset.id);
+      if (sent) eg1.speak(sent.en);
+    }
+    return;
+  }
+  // 已经有一个选中的，看是否匹配
+  if (_selected.dataset.side === card.dataset.side) {
+    // 同侧不能匹配，重新选
+    _selected.classList.remove('selected');
+    card.classList.add('selected');
+    _selected = card;
+    return;
+  }
+  const isRight = _selected.dataset.id === card.dataset.id;
+  if (isRight) {
+    _selected.classList.remove('selected');
+    _selected.classList.add('matched');
+    card.classList.add('matched');
+    STATE.matchScore += 20;
+    eg1.recordAnswer(card.dataset.id, true, 20);
+    eg1.burstStars(window.innerWidth / 2, window.innerHeight / 2);
+    eg1.showFeedback(true);
+    _selected = null;
+
+    // 检查是否全部完成
+    if (document.querySelectorAll('.match-card.matched').length === STATE.matchQueue.length * 2) {
+      setTimeout(() => renderMatchDone(), 1500);
+    }
+  } else {
+    _selected.classList.add('wrong-shake');
+    card.classList.add('wrong-shake');
+    eg1.recordAnswer(card.dataset.id, false, 0);
+    eg1.showFeedback(false);
+    setTimeout(() => {
+      _selected.classList.remove('selected', 'wrong-shake');
+      card.classList.remove('wrong-shake');
+      _selected = null;
+    }, 600);
+  }
+}
+
+function renderMatchDone() {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  document.querySelectorAll('.feedback').forEach(el => el.remove());
+
+  app.appendChild(eg1.$(`
+    <div class="screen result-screen">
+      <div class="result-medal">🏆</div>
+      <div class="result-title">全部配对成功！</div>
+      <div class="result-stats">
+        <div><div class="result-stat-num">${STATE.matchScore}</div><div class="result-stat-label">本轮得分</div></div>
+        <div><div class="result-stat-num">${STATE.matchQueue.length}</div><div class="result-stat-label">配对数</div></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn-primary" id="again">再来一轮</button>
+        <button class="btn-secondary" onclick="location.href='index.html'">回首页</button>
+      </div>
+    </div>
+  `));
+
+  setTimeout(() => {
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => eg1.burstStars(
+        Math.random() * window.innerWidth,
+        window.innerHeight / 3 + Math.random() * 200
+      ), i * 200);
+    }
+  }, 200);
+
+  document.getElementById('again').onclick = () => { startMatch(); render(); };
+}
+
+render();
+</script>
+</body>
+</html>

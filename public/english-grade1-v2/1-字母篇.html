@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>字母篇 · 英语小冒险</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.mode-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.mode-tab {
+  flex: 1;
+  background: var(--c-cloud);
+  border-radius: 100px;
+  padding: 12px;
+  font-size: 13px;
+  color: var(--c-ink);
+}
+.mode-tab.active {
+  background: var(--gradient-sky);
+  color: white;
+}
+
+/* 字母大卡片（学习模式）*/
+.letter-display {
+  text-align: center;
+  padding: 20px;
+}
+.big-letter {
+  font-size: 140px;
+  font-weight: 700;
+  line-height: 1;
+  background: var(--gradient-sky);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 12px 0;
+  animation: letterPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes letterPop {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.letter-case {
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--c-grape);
+  margin-bottom: 8px;
+}
+.letter-words {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.letter-word-card {
+  background: var(--c-cloud);
+  border-radius: 16px;
+  padding: 12px 16px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.letter-word-card:hover { border-color: var(--c-sky); }
+.letter-word-emoji { font-size: 32px; }
+.letter-word-text { font-size: 14px; font-weight: 600; }
+
+.letter-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+.letter-nav button {
+  flex: 1;
+  padding: 14px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.letter-nav .prev { background: var(--c-cloud); color: var(--c-ink); }
+.letter-nav .next { background: var(--gradient-sky); color: white; }
+
+.letter-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  padding: 16px 8px;
+}
+.letter-cell {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  background: var(--c-cloud);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.letter-cell.learned { background: rgba(111, 226, 166, 0.2); border-color: var(--c-mint); }
+.letter-cell.current { background: var(--gradient-sky); color: white; transform: scale(1.1); }
+
+@media (max-width: 380px) {
+  .big-letter { font-size: 110px; }
+  .letter-case { font-size: 42px; }
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="data.js"></script>
+<script src="engine.js"></script>
+<script>
+const STATE = { tab: 'learn', currentIdx: 0, quizQueue: [], quizIdx: 0, quizScore: 0 };
+
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  const screen = eg1.$(`
+    <div class="screen">
+      <div class="hud">
+        <button class="hud-back" onclick="location.href='index.html'">←</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:16px;">🔤 字母篇</div>
+        <div style="width:44px"></div>
+      </div>
+      <div class="mode-tabs">
+        <button class="mode-tab ${STATE.tab === 'learn' ? 'active' : ''}" data-tab="learn">学一学</button>
+        <button class="mode-tab ${STATE.tab === 'grid' ? 'active' : ''}" data-tab="grid">字母表</button>
+        <button class="mode-tab ${STATE.tab === 'quiz' ? 'active' : ''}" data-tab="quiz">考一考</button>
+      </div>
+      <div id="body"></div>
+    </div>
+  `);
+  app.appendChild(screen);
+
+  screen.querySelectorAll('.mode-tab').forEach(b => {
+    b.onclick = () => { STATE.tab = b.dataset.tab; if (STATE.tab === 'quiz') startQuiz(); render(); };
+  });
+
+  if (STATE.tab === 'learn') renderLearn(screen.querySelector('#body'));
+  else if (STATE.tab === 'grid') renderGrid(screen.querySelector('#body'));
+  else if (STATE.tab === 'quiz') renderQuiz(screen.querySelector('#body'));
+}
+
+function renderLearn(container) {
+  const idx = STATE.currentIdx;
+  const L = LETTERS[idx];
+  container.appendChild(eg1.$(`
+    <div class="letter-display">
+      <div class="big-letter">${L.letter}</div>
+      <div class="letter-case">${L.letter} ${L.letter.toLowerCase()}</div>
+      <div style="font-size:14px;color:rgba(45,48,71,0.6);margin-top:4px">大写 / 小写</div>
+      <div class="letter-words" id="words"></div>
+    </div>
+    <div class="letter-nav">
+      <button class="prev" id="prev">← 上一个</button>
+      <button class="next" id="next">下一个 →</button>
+    </div>
+  `));
+
+  const wordsEl = container.querySelector('#words');
+  L.words.forEach(w => {
+    const card = eg1.$(`<div class="letter-word-card">
+      <div class="letter-word-emoji">${getEmoji(w)}</div>
+      <div class="letter-word-text">${w}</div>
+    </div>`);
+    card.onclick = () => eg1.speak(w);
+    wordsEl.appendChild(card);
+  });
+
+  // 自动读字母 + 第一个单词
+  setTimeout(() => eg1.speak(L.letter + ' for ' + L.words[0]), 200);
+
+  container.querySelector('#prev').onclick = () => {
+    STATE.currentIdx = (idx - 1 + 26) % 26;
+    render();
+  };
+  container.querySelector('#next').onclick = () => {
+    // 标记看过这个字母
+    eg1.recordAnswer('L_' + L.letter, true, 5);
+    STATE.currentIdx = (idx + 1) % 26;
+    render();
+  };
+}
+
+function renderGrid(container) {
+  const grid = eg1.$(`<div class="letter-grid"></div>`);
+  const p = eg1.loadProgress();
+  LETTERS.forEach((L, i) => {
+    const it = p.items['L_' + L.letter];
+    const learned = it && it.level >= 1;
+    const cls = `letter-cell${learned ? ' learned' : ''}${i === STATE.currentIdx ? ' current' : ''}`;
+    const cell = eg1.$(`<div class="${cls}">${L.letter}</div>`);
+    cell.onclick = () => { STATE.tab = 'learn'; STATE.currentIdx = i; render(); };
+    grid.appendChild(cell);
+  });
+  container.appendChild(grid);
+  container.appendChild(eg1.$(`<div style="text-align:center;font-size:13px;color:rgba(45,48,71,0.6);margin-top:12px">绿色 = 已学过 · 点击进入学习</div>`));
+}
+
+// ========== 考一考：听音选字母 ==========
+function startQuiz() {
+  STATE.quizQueue = eg1.shuffle(LETTERS.slice()).slice(0, 8);
+  STATE.quizIdx = 0;
+  STATE.quizScore = 0;
+}
+
+function renderQuiz(container) {
+  if (STATE.quizIdx >= STATE.quizQueue.length) {
+    return renderQuizDone(container);
+  }
+  const L = STATE.quizQueue[STATE.quizIdx];
+  const wrongs = eg1.pickRandom(LETTERS.filter(l => l.letter !== L.letter), 3);
+  const opts = eg1.shuffle([L, ...wrongs]);
+
+  container.appendChild(eg1.$(`
+    <div class="question-card">
+      <button class="speaker-btn" id="spk">🔊</button>
+      <div class="question-prompt">听一听，是哪个字母？</div>
+      <div class="question-prompt-cn">题目 ${STATE.quizIdx + 1} / ${STATE.quizQueue.length}</div>
+    </div>
+    <div class="options" id="opts"></div>
+  `));
+
+  setTimeout(() => eg1.speak(L.letter), 300);
+  container.querySelector('#spk').onclick = () => eg1.speak(L.letter);
+
+  const optsEl = container.querySelector('#opts');
+  opts.forEach(o => {
+    const btn = eg1.$(`<button class="option-btn" style="font-size:36px;font-weight:700">${o.letter}  ${o.letter.toLowerCase()}</button>`);
+    btn.onclick = (e) => handleQuizAnswer(btn, o.letter === L.letter, L, e);
+    optsEl.appendChild(btn);
+  });
+}
+
+function handleQuizAnswer(btn, isRight, L, e) {
+  document.querySelectorAll('.option-btn, .speaker-btn').forEach(b => { if (b !== btn) b.disabled = true; });
+  btn.classList.add(isRight ? 'correct' : 'wrong');
+  if (!isRight) {
+    document.querySelectorAll('.option-btn').forEach(b => {
+      if (b.textContent.trim().startsWith(L.letter)) b.classList.add('correct');
+    });
+  }
+  eg1.speak(L.letter);
+  eg1.showFeedback(isRight);
+  if (isRight) {
+    STATE.quizScore += 10;
+    eg1.burstStars(e.clientX || window.innerWidth / 2, e.clientY || window.innerHeight / 2);
+  }
+  eg1.recordAnswer('L_' + L.letter, isRight, 10);
+
+  setTimeout(() => {
+    STATE.quizIdx++;
+    render();
+  }, isRight ? 1000 : 1500);
+}
+
+function renderQuizDone(container) {
+  const total = STATE.quizQueue.length;
+  const correct = STATE.quizScore / 10;
+  const rate = correct / total;
+  let medal = '🥉', title = '继续加油!';
+  if (rate >= 1) { medal = '🏆'; title = '全部答对！太厉害了!'; }
+  else if (rate >= 0.75) { medal = '🥇'; title = '你真棒！'; }
+  else if (rate >= 0.5) { medal = '🥈'; title = '不错哦~'; }
+
+  container.appendChild(eg1.$(`
+    <div class="result-screen">
+      <div class="result-medal">${medal}</div>
+      <div class="result-title">${title}</div>
+      <div class="result-stats">
+        <div><div class="result-stat-num">${STATE.quizScore}</div><div class="result-stat-label">本轮得分</div></div>
+        <div><div class="result-stat-num">${correct}/${total}</div><div class="result-stat-label">答对</div></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn-primary" id="again">再来一轮</button>
+        <button class="btn-secondary" onclick="location.href='index.html'">返回首页</button>
+      </div>
+    </div>
+  `));
+  container.querySelector('#again').onclick = () => { startQuiz(); render(); };
+}
+
+function getEmoji(word) {
+  const v = VOCAB.find(v => v.word === word);
+  if (v) return v.emoji;
+  // 字母篇里有些独有词，找 LETTERS 里的
+  for (const L of LETTERS) {
+    if (L.words.includes(word) && L.emoji) return L.emoji;
+  }
+  return '✨';
+}
+
+render();
+</script>
+</body>
+</html>

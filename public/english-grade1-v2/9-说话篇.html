@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>说话篇 · 英语小冒险</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.tab {
+  flex: 1;
+  background: var(--c-cloud);
+  border-radius: 100px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.tab.active { background: var(--gradient-warm); color: white; }
+
+.task-card { padding: 16px 8px; }
+.task-emoji {
+  font-size: 80px;
+  text-align: center;
+  margin: 16px 0 12px;
+  filter: drop-shadow(0 8px 16px rgba(45, 48, 71, 0.15));
+}
+.task-prompt {
+  background: linear-gradient(135deg, rgba(255,203,71,0.15), rgba(255,126,126,0.1));
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.task-prompt-cn {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--c-coral);
+  margin-bottom: 8px;
+}
+.task-prompt-instr {
+  font-size: 12px;
+  color: rgba(45,48,71,0.6);
+}
+
+.sample-area {
+  background: white;
+  border: 2px solid var(--c-soft);
+  border-radius: 16px;
+  padding: 16px 14px;
+  margin-bottom: 16px;
+}
+.sample-label {
+  font-size: 11px;
+  color: rgba(45,48,71,0.5);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.sample-en {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--c-grape);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+.sample-cn { font-size: 12px; color: rgba(45,48,71,0.6); }
+
+.task-actions { display: grid; gap: 10px; margin-top: 16px; }
+.task-actions button {
+  padding: 14px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.task-actions .listen { background: var(--gradient-sky); color: white; }
+.task-actions .reveal {
+  background: var(--c-cloud);
+  color: var(--c-ink);
+}
+.task-actions .reveal.shown {
+  background: rgba(255,203,71,0.2);
+  color: var(--c-coral);
+}
+.task-actions .next { background: var(--gradient-warm); color: white; }
+
+.hidden-sample { display: none; }
+.hidden-sample.show { display: block; }
+
+.task-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: rgba(45,48,71,0.6);
+}
+.task-progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--c-cloud);
+  border-radius: 100px;
+  margin: 0 12px;
+  overflow: hidden;
+}
+.task-progress-fill {
+  height: 100%;
+  background: var(--gradient-warm);
+  border-radius: 100px;
+  transition: width 0.4s;
+}
+
+.tip {
+  background: rgba(93,211,243,0.1);
+  border-left: 4px solid var(--c-sky);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-top: 12px;
+  color: rgba(45,48,71,0.8);
+}
+.tip strong { color: var(--c-sky); }
+
+/* 写句模式 */
+.write-template {
+  background: white;
+  border: 2px dashed var(--c-soft);
+  border-radius: 16px;
+  padding: 20px 16px;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+  color: var(--c-ink);
+}
+.write-blank {
+  display: inline-block;
+  min-width: 80px;
+  border-bottom: 4px solid var(--c-coral);
+  padding: 0 6px;
+  margin: 0 4px;
+  color: var(--c-coral);
+}
+.write-options { display: grid; gap: 8px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="data.js"></script>
+<script src="output-data.js"></script>
+<script src="engine.js"></script>
+<script>
+const STATE = { tab: 'speak', queue: [], idx: 0, score: 0, correct: 0 };
+
+function start(tab) {
+  STATE.tab = tab;
+  const data = tab === 'speak' ? SPEAK_TASKS : WRITE_TASKS;
+  STATE.queue = eg1.shuffle(data.slice()).slice(0, 8);
+  STATE.idx = 0;
+  STATE.score = 0;
+  STATE.correct = 0;
+  render();
+}
+
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  if (STATE.queue.length === 0 || STATE.idx >= STATE.queue.length) {
+    return STATE.queue.length === 0 ? renderMenu() : renderResult();
+  }
+  if (STATE.tab === 'speak') renderSpeakTask();
+  else renderWriteTask();
+}
+
+function renderMenu() {
+  const app = document.getElementById('app');
+  app.appendChild(eg1.$(`
+    <div class="screen">
+      <div class="hud">
+        <button class="hud-back" onclick="location.href='index.html'">←</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:16px;">🗣️ 说话篇</div>
+        <div style="width:44px"></div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active">两种练习</button>
+      </div>
+
+      <div style="display:grid;gap:12px;margin-bottom:16px">
+        <button class="list-item" id="speak" style="background:rgba(255,203,71,0.12);border:3px solid var(--c-sun);border-radius:20px;padding:18px;display:flex;align-items:center;gap:14px;font-family:inherit;cursor:pointer">
+          <div style="font-size:40px">🗣️</div>
+          <div style="flex:1;text-align:left">
+            <div style="font-size:17px;font-weight:700;color:var(--c-ink)">看图说话</div>
+            <div style="font-size:12px;color:rgba(45,48,71,0.6)">看图 + 中文提示，开口说英文</div>
+            <div style="font-size:11px;color:var(--c-grape);margin-top:4px">${SPEAK_TASKS.length} 个任务</div>
+          </div>
+        </button>
+
+        <button class="list-item" id="write" style="background:rgba(255,126,126,0.12);border:3px solid var(--c-coral);border-radius:20px;padding:18px;display:flex;align-items:center;gap:14px;font-family:inherit;cursor:pointer">
+          <div style="font-size:40px">✍️</div>
+          <div style="flex:1;text-align:left">
+            <div style="font-size:17px;font-weight:700;color:var(--c-ink)">看图造句</div>
+            <div style="font-size:12px;color:rgba(45,48,71,0.6)">看图 + 句子模板，选词填空</div>
+            <div style="font-size:11px;color:var(--c-grape);margin-top:4px">${WRITE_TASKS.length} 个任务</div>
+          </div>
+        </button>
+      </div>
+
+      <div class="tip">
+        💡 <strong>说话练习</strong>没有对错——孩子开口尝试就是胜利。<br>
+        <strong>造句练习</strong>会自动批改，错了不扣分。
+      </div>
+    </div>
+  `));
+
+  document.getElementById('speak').onclick = () => start('speak');
+  document.getElementById('write').onclick = () => start('write');
+}
+
+// ============ 看图说话（输出，开放性） ============
+function renderSpeakTask() {
+  const t = STATE.queue[STATE.idx];
+  const app = document.getElementById('app');
+  const progress = ((STATE.idx) / STATE.queue.length) * 100;
+
+  const screen = eg1.$(`
+    <div class="screen">
+      <div class="hud">
+        <button class="hud-back" id="back">←</button>
+        <div class="hud-progress"><div class="hud-progress-bar" style="width:${progress}%"></div></div>
+        <div class="hud-score">${STATE.score}</div>
+      </div>
+
+      <div class="task-card">
+        <div class="task-emoji">${t.emoji}</div>
+
+        <div class="task-prompt">
+          <div class="task-prompt-cn">${t.prompt}</div>
+          <div class="task-prompt-instr">看图，用英文说出来吧！</div>
+        </div>
+
+        <div class="hidden-sample" id="sampleBox">
+          <div class="sample-area">
+            <div class="sample-label">📝 参考答案</div>
+            <div class="sample-en">${t.sample}</div>
+            <div class="sample-cn">${t.cn}</div>
+          </div>
+        </div>
+
+        <div class="task-actions">
+          <button class="reveal" id="reveal">💡 看参考答案</button>
+          <button class="listen" id="listen">🔊 听参考发音</button>
+          <button class="next" id="next">下一题 →</button>
+        </div>
+
+        <div class="tip">
+          💡 <strong>怎么练</strong>：看着 emoji 大声说英文。<br>
+          说完了再点"看参考答案"对比一下。<br>
+          <strong>开口比说对更重要！</strong>
+        </div>
+      </div>
+    </div>
+  `);
+  app.appendChild(screen);
+
+  screen.querySelector('#back').onclick = () => {
+    if (confirm('返回主菜单？')) {
+      STATE.queue = [];
+      render();
+    }
+  };
+
+  const sampleBox = screen.querySelector('#sampleBox');
+  const revealBtn = screen.querySelector('#reveal');
+  let revealed = false;
+
+  revealBtn.onclick = () => {
+    revealed = true;
+    sampleBox.classList.add('show');
+    revealBtn.classList.add('shown');
+    revealBtn.textContent = '✓ 已显示';
+    eg1.speak(t.sample);
+  };
+
+  screen.querySelector('#listen').onclick = () => eg1.speak(t.sample);
+
+  screen.querySelector('#next').onclick = () => {
+    // 鼓励性计分：开口算 5 分，看了答案再说算 10 分
+    const pts = revealed ? 10 : 8;
+    STATE.score += pts;
+    STATE.correct++;
+    eg1.recordAnswer(t.id, true, pts);
+    eg1.burstStars(window.innerWidth / 2, window.innerHeight / 3);
+    STATE.idx++;
+    render();
+  };
+}
+
+// ============ 看图造句（输出，封闭性） ============
+function renderWriteTask() {
+  const t = STATE.queue[STATE.idx];
+  const app = document.getElementById('app');
+  const progress = ((STATE.idx) / STATE.queue.length) * 100;
+
+  const templateHtml = t.template.replace('___', `<span class="write-blank" id="blank">?</span>`);
+
+  const screen = eg1.$(`
+    <div class="screen">
+      <div class="hud">
+        <button class="hud-back" id="back">←</button>
+        <div class="hud-progress"><div class="hud-progress-bar" style="width:${progress}%"></div></div>
+        <div class="hud-score">${STATE.score}</div>
+      </div>
+
+      <div class="task-card">
+        <div class="task-emoji">${t.emoji}</div>
+
+        <div class="task-prompt">
+          <div class="task-prompt-cn">${t.cn}</div>
+          <div class="task-prompt-instr">用下面的词填空</div>
+        </div>
+
+        <div class="write-template">${templateHtml}</div>
+
+        <div class="write-options" id="opts"></div>
+      </div>
+    </div>
+  `);
+  app.appendChild(screen);
+
+  screen.querySelector('#back').onclick = () => {
+    if (confirm('返回主菜单？')) {
+      STATE.queue = [];
+      render();
+    }
+  };
+
+  const optsEl = screen.querySelector('#opts');
+  const blank = screen.querySelector('#blank');
+
+  t.options.forEach((opt, i) => {
+    const btn = eg1.$(`<button class="option-btn">${opt}</button>`);
+    btn.onclick = (e) => {
+      const isRight = i === t.answer;
+      // 锁住所有按钮
+      optsEl.querySelectorAll('button').forEach(b => b.disabled = true);
+      btn.classList.add(isRight ? 'correct' : 'wrong');
+      if (!isRight) {
+        optsEl.querySelectorAll('button').forEach((b, bi) => {
+          if (bi === t.answer) b.classList.add('correct');
+        });
+        blank.textContent = t.options[t.answer];
+        blank.style.color = 'var(--c-mint)';
+        blank.style.borderColor = 'var(--c-mint)';
+      } else {
+        blank.textContent = opt;
+        blank.style.color = 'var(--c-mint)';
+        blank.style.borderColor = 'var(--c-mint)';
+      }
+      // 朗读完整句子
+      const fullSent = t.template.replace('___', t.options[t.answer]);
+      setTimeout(() => eg1.speak(fullSent), 400);
+      eg1.showFeedback(isRight);
+      if (isRight) {
+        STATE.score += 12;
+        STATE.correct++;
+        eg1.burstStars(e.clientX || window.innerWidth / 2, e.clientY || window.innerHeight / 2);
+      }
+      eg1.recordAnswer(t.id, isRight, 12);
+      setTimeout(() => { STATE.idx++; render(); }, isRight ? 1500 : 2200);
+    };
+    optsEl.appendChild(btn);
+  });
+}
+
+// ============ 结算 ============
+function renderResult() {
+  const total = STATE.queue.length;
+  const rate = STATE.correct / total;
+  let medal = '🥉', title = '继续加油!';
+  if (rate >= 1) { medal = '🏆'; title = '太棒了!'; }
+  else if (rate >= 0.75) { medal = '🥇'; title = '很厉害!'; }
+  else if (rate >= 0.5) { medal = '🥈'; title = '不错哦~'; }
+
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  app.appendChild(eg1.$(`
+    <div class="screen result-screen">
+      <div class="result-medal">${medal}</div>
+      <div class="result-title">${title}</div>
+      <div class="result-stats">
+        <div><div class="result-stat-num">${STATE.score}</div><div class="result-stat-label">本轮得分</div></div>
+        <div><div class="result-stat-num">${STATE.correct}/${total}</div><div class="result-stat-label">完成</div></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn-primary" id="again">再来一轮</button>
+        <button class="btn-secondary" onclick="location.href='index.html'">回首页</button>
+      </div>
+    </div>
+  `));
+
+  if (rate >= 0.75) {
+    setTimeout(() => {
+      for (let i = 0; i < 3; i++) {
+        setTimeout(() => eg1.burstStars(
+          Math.random() * window.innerWidth,
+          window.innerHeight / 3 + Math.random() * 200
+        ), i * 200);
+      }
+    }, 400);
+  }
+  document.getElementById('again').onclick = () => start(STATE.tab);
+}
+
+renderMenu();
+</script>
+</body>
+</html>

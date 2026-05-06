@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>家长报告 · 英语小冒险</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.section { background: white; border-radius: 20px; padding: 18px 16px; margin-bottom: 12px; box-shadow: var(--shadow-soft); }
+.section-title { font-size: 15px; font-weight: 700; color: var(--c-grape); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+
+.overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.overview-card { background: var(--c-cloud); border-radius: 14px; padding: 14px 12px; text-align: center; }
+.overview-num { font-size: 26px; font-weight: 700; background: var(--gradient-warm); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; }
+.overview-label { font-size: 11px; color: rgba(45, 48, 71, 0.6); margin-top: 4px; }
+
+.module-progress { margin-bottom: 10px; }
+.module-progress:last-child { margin-bottom: 0; }
+.module-progress-header { display: flex; justify-content: space-between; align-items: center; font-size: 12px; margin-bottom: 5px; }
+.module-progress-name { font-weight: 600; }
+.module-progress-num { color: rgba(45, 48, 71, 0.6); font-size: 11px; }
+.module-progress-bar { height: 8px; background: var(--c-cloud); border-radius: 100px; overflow: hidden; }
+.module-progress-fill { height: 100%; border-radius: 100px; transition: width 0.6s; }
+
+.layer-section-pr { background: rgba(255,255,255,0.5); border-radius: 12px; padding: 12px; margin-bottom: 8px; }
+.layer-section-pr-title { font-size: 11px; font-weight: 700; color: var(--c-grape); margin-bottom: 8px; }
+.fill-input    { background: linear-gradient(135deg, #5DD3F3, #7FB3F1); }
+.fill-practice { background: linear-gradient(135deg, #B27FF1, #FF7E7E); }
+.fill-output   { background: linear-gradient(135deg, #FFCB47, #FF7E7E); }
+
+.streak-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.streak-cell { aspect-ratio: 1; border-radius: 8px; background: var(--c-cloud); display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 10px; color: rgba(45, 48, 71, 0.6); }
+.streak-cell.active { background: var(--gradient-success); color: white; }
+.streak-cell.today { border: 2px solid var(--c-coral); }
+.streak-cell-day { font-size: 9px; }
+.streak-cell-min { font-size: 11px; font-weight: 700; }
+
+.word-status-bar { display: flex; height: 14px; border-radius: 100px; overflow: hidden; margin-bottom: 10px; }
+.word-status-segment { display: flex; align-items: center; justify-content: center; font-size: 10px; color: white; font-weight: 700; }
+.word-status-segment.mastered { background: var(--c-mint); }
+.word-status-segment.learning { background: var(--c-sun); color: var(--c-ink); }
+.word-status-segment.untouched { background: rgba(45, 48, 71, 0.15); }
+
+.word-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.word-pill { font-size: 12px; padding: 4px 10px; border-radius: 100px; background: var(--c-cloud); color: var(--c-ink); }
+.word-pill.weak { background: rgba(255,126,126,0.15); color: var(--c-coral); font-weight: 600; }
+.word-pill.weak::before { content: '⚠️ '; }
+
+.weak-section { background: linear-gradient(135deg, rgba(255,126,126,0.1) 0%, rgba(255,203,71,0.1) 100%); }
+
+.action-buttons { display: grid; gap: 8px; }
+.action-btn { background: var(--c-cloud); border-radius: 100px; padding: 12px; font-size: 14px; font-weight: 600; text-align: center; }
+.action-btn.danger { background: rgba(255,126,126,0.15); color: var(--c-coral); }
+
+.empty-tip { text-align: center; padding: 30px 16px; color: rgba(45, 48, 71, 0.5); font-size: 14px; }
+
+.recommendation { background: rgba(178,127,241,0.08); border-left: 4px solid var(--c-grape); padding: 12px 14px; border-radius: 8px; font-size: 13px; line-height: 1.5; color: var(--c-ink); margin-top: 8px; }
+.recommendation strong { color: var(--c-grape); }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="data.js"></script>
+<script src="reading-data.js"></script>
+<script src="story-data.js"></script>
+<script src="output-data.js"></script>
+<script src="engine.js"></script>
+<script>
+function render() {
+  const p = eg1.loadProgress();
+  const s = computeStats(p);
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  app.appendChild(eg1.$(`
+    <div class="screen" style="padding: 20px 16px">
+      <div class="hud">
+        <button class="hud-back" onclick="location.href='index.html'">←</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:16px;">📊 家长报告</div>
+        <div style="width:44px"></div>
+      </div>
+      ${renderOverview(s)}
+      ${renderTodayActivity(s)}
+      ${renderStreak(s)}
+      ${renderModuleProgress(s)}
+      ${renderWordStatus(s)}
+      ${renderWeakItems(s)}
+      ${renderRecommendation(s)}
+      ${renderActions()}
+      <div style="text-align:center;font-size:11px;color:rgba(45,48,71,0.4);margin-top:12px">
+        所有数据保存在浏览器本地（不上传）
+      </div>
+    </div>
+  `));
+  document.getElementById('reset').onclick = () => {
+    if (confirm('确定要清除所有学习数据吗？\n\n这会让进度归零，但词库不会丢。\n（这个操作无法撤销）')) {
+      eg1.resetProgress();
+      alert('已清除。');
+      render();
+    }
+  };
+}
+
+function computeStats(p) {
+  const wordStats = { mastered: [], learning: [], untouched: [] };
+  VOCAB.forEach(v => {
+    const it = p.items[v.id];
+    if (!it || it.level === 0) wordStats.untouched.push(v);
+    else if (it.level >= 3) wordStats.mastered.push(v);
+    else wordStats.learning.push(v);
+  });
+
+  const cnt = (ids, threshold = 1) => ids.filter(id => {
+    const it = p.items[id];
+    return it && it.level >= threshold;
+  }).length;
+
+  // 第 1 层（输入）
+  const letterDone = cnt(LETTERS.map(l => 'L_' + l.letter));
+  const phonicsDone = cnt(PHONICS.map(ph => ph.id));
+  const readingDone = cnt(READING.map(r => r.id));
+  const storyDone = cnt(STORIES.map(st => st.id));
+
+  // 第 2 层（练习）
+  const sentDone = cnt(SENTENCES.map(s => s.id));
+  // 听力以 d01 开头的 id
+  const listenDone = Object.keys(p.items).filter(id => id.match(/^d\d+$/) && p.items[id].level >= 1).length;
+
+  // 第 3 层（输出）
+  const speakDone = cnt(SPEAK_TASKS.map(t => t.id));
+  const writeDone = cnt(WRITE_TASKS.map(t => t.id));
+
+  // 今天 / 打卡
+  const today = eg1.todayStr();
+  const todayData = p.days[today] || { score: 0, correct: 0, total: 0, minutes: 0 };
+
+  let streak = 0;
+  let cur = new Date();
+  for (let i = 0; i < 60; i++) {
+    const ds = `${cur.getFullYear()}-${String(cur.getMonth()+1).padStart(2,'0')}-${String(cur.getDate()).padStart(2,'0')}`;
+    if (p.days[ds] && p.days[ds].total > 0) {
+      streak++;
+      cur.setDate(cur.getDate() - 1);
+    } else if (i === 0) {
+      cur.setDate(cur.getDate() - 1);
+    } else break;
+  }
+
+  const weakItems = eg1.getWeakItems(2);
+  const weakWords = weakItems
+    .map(it => VOCAB.find(v => v.id === it.id))
+    .filter(Boolean);
+
+  return {
+    p, wordStats,
+    letterDone, sentDone, phonicsDone, readingDone, storyDone, listenDone, speakDone, writeDone,
+    todayData, streak, weakWords,
+    accuracy: p.totalAnswered > 0 ? Math.round(p.totalCorrect / p.totalAnswered * 100) : 0,
+  };
+}
+
+function renderOverview(s) {
+  return `
+    <div class="section">
+      <div class="section-title">⭐ 学习总览</div>
+      <div class="overview-grid">
+        <div class="overview-card"><div class="overview-num">${s.p.totalScore}</div><div class="overview-label">总积分</div></div>
+        <div class="overview-card"><div class="overview-num">${s.wordStats.mastered.length}</div><div class="overview-label">已掌握词 (满分 150)</div></div>
+        <div class="overview-card"><div class="overview-num">${s.accuracy}%</div><div class="overview-label">总正确率</div></div>
+        <div class="overview-card"><div class="overview-num">${Math.round(s.p.totalMinutes)}</div><div class="overview-label">总学习分钟</div></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderTodayActivity(s) {
+  if (s.todayData.total === 0) {
+    return `<div class="section"><div class="section-title">📅 今天</div><div class="empty-tip">今天还没开始玩~ 让孩子打开任意模块开始学习吧</div></div>`;
+  }
+  const acc = s.todayData.total > 0 ? Math.round(s.todayData.correct / s.todayData.total * 100) : 0;
+  return `
+    <div class="section">
+      <div class="section-title">📅 今天</div>
+      <div class="overview-grid">
+        <div class="overview-card"><div class="overview-num">${s.todayData.total}</div><div class="overview-label">答题数</div></div>
+        <div class="overview-card"><div class="overview-num">${acc}%</div><div class="overview-label">正确率</div></div>
+        <div class="overview-card"><div class="overview-num">${s.todayData.score}</div><div class="overview-label">今天得分</div></div>
+        <div class="overview-card"><div class="overview-num">${Math.round(s.todayData.minutes)}</div><div class="overview-label">学了几分钟</div></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderStreak(s) {
+  const today = new Date();
+  const cells = [];
+  const dayNames = ['日','一','二','三','四','五','六'];
+  const todayStr = eg1.todayStr();
+
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const ds = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    const data = s.p.days[ds];
+    const active = data && data.total > 0;
+    const isToday = ds === todayStr;
+    cells.push(`<div class="streak-cell ${active ? 'active' : ''} ${isToday ? 'today' : ''}">
+        <div class="streak-cell-day">${dayNames[d.getDay()]}</div>
+        <div class="streak-cell-min">${active ? Math.round(data.minutes) + 'm' : '-'}</div>
+    </div>`);
+  }
+
+  return `<div class="section"><div class="section-title">🔥 7 天打卡 · 连续 ${s.streak} 天</div><div class="streak-grid">${cells.join('')}</div></div>`;
+}
+
+function renderModuleProgress(s) {
+  const inputItems = [
+    { name: '🔤 字母', done: s.letterDone, total: LETTERS.length },
+    { name: '🎵 拼读', done: s.phonicsDone, total: PHONICS.length },
+    { name: '📖 阅读', done: s.readingDone, total: READING.length },
+    { name: '📚 故事', done: s.storyDone, total: STORIES.length },
+  ];
+  const practiceItems = [
+    { name: '📚 单词（已掌握）', done: s.wordStats.mastered.length, total: VOCAB.length },
+    { name: '💬 句型', done: s.sentDone, total: SENTENCES.length },
+    { name: '🎧 听力', done: s.listenDone, total: DIALOGUES.length },
+  ];
+  const outputItems = [
+    { name: '🗣️ 看图说话', done: s.speakDone, total: SPEAK_TASKS.length },
+    { name: '✍️ 看图造句', done: s.writeDone, total: WRITE_TASKS.length },
+  ];
+
+  const renderRow = (it, fillCls) => {
+    const pct = it.total > 0 ? Math.round(it.done / it.total * 100) : 0;
+    return `<div class="module-progress">
+      <div class="module-progress-header">
+        <div class="module-progress-name">${it.name}</div>
+        <div class="module-progress-num">${it.done} / ${it.total}</div>
+      </div>
+      <div class="module-progress-bar"><div class="module-progress-fill ${fillCls}" style="width:${pct}%"></div></div>
+    </div>`;
+  };
+
+  return `
+    <div class="section">
+      <div class="section-title">📈 9 个模块进度</div>
+      <div class="layer-section-pr">
+        <div class="layer-section-pr-title">第 1 层 · 输入</div>
+        ${inputItems.map(it => renderRow(it, 'fill-input')).join('')}
+      </div>
+      <div class="layer-section-pr">
+        <div class="layer-section-pr-title">第 2 层 · 练习</div>
+        ${practiceItems.map(it => renderRow(it, 'fill-practice')).join('')}
+      </div>
+      <div class="layer-section-pr">
+        <div class="layer-section-pr-title">第 3 层 · 输出</div>
+        ${outputItems.map(it => renderRow(it, 'fill-output')).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderWordStatus(s) {
+  const total = VOCAB.length;
+  const m = s.wordStats.mastered.length;
+  const l = s.wordStats.learning.length;
+  const u = s.wordStats.untouched.length;
+  const mp = total > 0 ? (m / total * 100) : 0;
+  const lp = total > 0 ? (l / total * 100) : 0;
+  const up = total > 0 ? (u / total * 100) : 0;
+
+  return `
+    <div class="section">
+      <div class="section-title">📚 150 个核心词分类</div>
+      <div class="word-status-bar">
+        ${m > 0 ? `<div class="word-status-segment mastered" style="width:${mp}%">${m > 8 ? '已掌握 ' + m : ''}</div>` : ''}
+        ${l > 0 ? `<div class="word-status-segment learning" style="width:${lp}%">${l > 8 ? '学习中 ' + l : ''}</div>` : ''}
+        ${u > 0 ? `<div class="word-status-segment untouched" style="width:${up}%">${u > 8 ? '未学 ' + u : ''}</div>` : ''}
+      </div>
+      <div style="display:flex;justify-content:space-around;font-size:12px;color:rgba(45,48,71,0.6)">
+        <div>🟢 已掌握 ${m}</div>
+        <div>🟡 学习中 ${l}</div>
+        <div>⚪ 未接触 ${u}</div>
+      </div>
+      ${l > 0 ? `
+        <div style="margin-top:12px;font-size:12px;color:rgba(45,48,71,0.6);margin-bottom:6px">学习中的词（再答对 2 次就能"掌握"）：</div>
+        <div class="word-list">
+          ${s.wordStats.learning.slice(0, 30).map(v => `<span class="word-pill">${v.word}</span>`).join('')}
+          ${s.wordStats.learning.length > 30 ? `<span class="word-pill">...还有 ${s.wordStats.learning.length - 30} 个</span>` : ''}
+        </div>
+      ` : ''}
+    </div>
+  `;
+}
+
+function renderWeakItems(s) {
+  if (s.weakWords.length === 0) return '';
+  return `
+    <div class="section weak-section">
+      <div class="section-title">⚠️ 薄弱点（错过 2 次以上）</div>
+      <div style="font-size:13px;color:rgba(45,48,71,0.7);margin-bottom:10px">
+        建议家长用这些词重点辅导：
+      </div>
+      <div class="word-list">
+        ${s.weakWords.slice(0, 20).map(w => `<span class="word-pill weak">${w.word} (${w.cn})</span>`).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderRecommendation(s) {
+  const m = s.wordStats.mastered.length;
+  const u = s.wordStats.untouched.length;
+  let rec = '';
+
+  if (s.p.totalAnswered === 0) {
+    rec = `孩子刚开始，建议先去 <strong>1-字母篇</strong> 学完 26 个字母，然后玩 <strong>2-单词篇</strong> 的"看图认词"。每次 10-15 分钟最合适。`;
+  } else if (s.letterDone < 13) {
+    rec = `字母还没认全（${s.letterDone}/26）。建议先把字母篇学完再玩拼写题。`;
+  } else if (s.weakWords.length >= 5) {
+    rec = `有 <strong>${s.weakWords.length}</strong> 个词反复答错。建议家长当面用闪卡或图片教这几个词，比让孩子再玩游戏有用。`;
+  } else if (s.readingDone < 3 && m >= 30) {
+    rec = `已掌握 ${m} 个词了，是时候试试 <strong>7-阅读篇</strong>！从 L1 入门级开始读。读懂一篇文章比记住 10 个单词更有成就感。`;
+  } else if (s.speakDone < 3 && m >= 50) {
+    rec = `单词储备不少了，去 <strong>9-说话篇</strong> 让孩子开口！看图说话不评分，孩子大胆开口是关键。`;
+  } else if (s.storyDone < 2) {
+    rec = `推荐去 <strong>8-故事篇</strong> 听故事和儿歌。研究表明 4-7 岁孩子通过反复听故事学英语效率最高。`;
+  } else if (m < 30) {
+    rec = `已掌握 ${m} 个词，继续玩 <strong>2-单词篇</strong>。每天保持节奏。`;
+  } else if (u > 80 && s.phonicsDone < 10) {
+    rec = `单词进展不错。开始 <strong>5-拼读篇</strong> 吧——学会 phonics 后看到生词也能读出来，这是质变。`;
+  } else if (s.streak >= 7) {
+    rec = `连续学习 ${s.streak} 天 🎉 习惯已经养成。继续保持每天 10 分钟，比突击 1 小时管用得多。`;
+  } else {
+    rec = `进度健康。记住：四层均衡发展——输入（阅读/故事/拼读）+ 练习（单词/句型/听力）+ 输出（说话/造句）。`;
+  }
+
+  return `<div class="section"><div class="section-title">💡 建议</div><div class="recommendation">${rec}</div></div>`;
+}
+
+function renderActions() {
+  return `
+    <div class="section">
+      <div class="section-title">🛠️ 操作</div>
+      <div class="action-buttons">
+        <button class="action-btn" onclick="location.href='index.html'">⬅️ 返回首页</button>
+        <button class="action-btn danger" id="reset">🗑️ 清除所有学习数据</button>
+      </div>
+    </div>
+  `;
+}
+
+render();
+</script>
+</body>
+</html>

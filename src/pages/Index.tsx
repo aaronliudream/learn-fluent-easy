@@ -256,6 +256,25 @@ const Index = () => {
       {/* Three-track entry — primary path selection (Exam / Career / Beginner) */}
       <ThreeTracksHero />
 
+      {/* External module: Primary Grade-1 English (static HTML) */}
+      <button
+        type="button"
+        onClick={() => window.open("/english-grade1-v2/index.html", "_blank")}
+        className="group relative mt-4 flex w-full items-center gap-4 overflow-hidden rounded-2xl border border-amber-400/40 bg-gradient-to-br from-amber-400/20 via-orange-400/10 to-background p-4 text-left shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg"
+      >
+        <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-amber-400/25 blur-2xl" />
+        <div className="relative grid size-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-2xl text-white shadow-md">
+          🚀
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <div className="text-base font-bold leading-tight">小学一年级英语 🚀</div>
+          <div className="mt-0.5 text-xs text-muted-foreground">
+            字母 · 单词 · 句型 · 听力 · 拼读 · 阅读 · 故事 · 说话 · 家长报告
+          </div>
+        </div>
+        <ArrowRight className="relative size-5 shrink-0 text-amber-600 transition-transform group-hover:translate-x-1" />
+      </button>
+
       {/* Ask-AI knowledge card — quick entry to generate a shareable card */}
       <Link
         to="/ask"

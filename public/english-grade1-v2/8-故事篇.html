@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>故事篇 · 英语小冒险</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.tab {
+  flex: 1;
+  background: var(--c-cloud);
+  border-radius: 100px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.tab.active { background: linear-gradient(135deg, var(--c-grape), var(--c-coral)); color: white; }
+
+/* 故事 + 儿歌 列表卡片 */
+.list { display: grid; gap: 8px; }
+.list-item {
+  background: white;
+  border: 2px solid var(--c-soft);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+  text-align: left;
+  color: var(--c-ink);
+}
+.list-item .em {
+  font-size: 32px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: var(--c-cloud);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+.list-item .info { flex: 1; min-width: 0; }
+.list-item .t { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+.list-item .c { font-size: 12px; color: rgba(45,48,71,0.6); }
+.list-item.read { background: rgba(178,127,241,0.08); border-color: var(--c-grape); }
+
+/* 故事页面 */
+.story-page { padding: 8px 0; }
+.story-line {
+  background: white;
+  border-radius: 18px;
+  padding: 16px 14px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.story-line:active { transform: scale(0.98); }
+.story-line.current {
+  background: linear-gradient(135deg, rgba(178,127,241,0.15), rgba(255,126,126,0.1));
+  border: 2px solid var(--c-grape);
+}
+.story-line-emoji {
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.story-line-en {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--c-ink);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.story-line-cn {
+  font-size: 13px;
+  color: rgba(45,48,71,0.6);
+}
+
+.story-controls {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+.story-controls button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.story-controls .play-all { background: linear-gradient(135deg, var(--c-grape), var(--c-coral)); color: white; }
+.story-controls .stop-btn { background: var(--c-cloud); color: var(--c-ink); }
+
+/* 儿歌 */
+.song-page { padding: 16px 4px; text-align: center; }
+.song-emoji { font-size: 64px; margin-bottom: 12px; }
+.song-title { font-size: 24px; font-weight: 700; color: var(--c-grape); margin-bottom: 4px; }
+.song-title-cn { font-size: 14px; color: rgba(45,48,71,0.6); margin-bottom: 24px; }
+.song-lines {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 16px;
+  margin-bottom: 16px;
+}
+.song-line {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--c-ink);
+  margin-bottom: 8px;
+  line-height: 1.6;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.song-line:hover { background: var(--c-cloud); }
+.song-line.current {
+  background: linear-gradient(135deg, rgba(178,127,241,0.2), rgba(255,203,71,0.2));
+  color: var(--c-grape);
+}
+.song-line-cn {
+  font-size: 12px;
+  color: rgba(45,48,71,0.5);
+  margin-top: 2px;
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="data.js"></script>
+<script src="story-data.js"></script>
+<script src="engine.js"></script>
+<script>
+const STATE = { tab: 'story', current: null };
+
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+
+  if (STATE.current && STATE.tab === 'story') return renderStory(STATE.current);
+  if (STATE.current && STATE.tab === 'song') return renderSong(STATE.current);
+
+  const screen = eg1.$(`
+    <div class="screen">
+      <div class="hud">
+        <button class="hud-back" onclick="location.href='index.html'">←</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:16px;">📚 故事篇</div>
+        <div style="width:44px"></div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab ${STATE.tab === 'story' ? 'active' : ''}" data-t="story">📖 看故事 (${STORIES.length})</button>
+        <button class="tab ${STATE.tab === 'song' ? 'active' : ''}" data-t="song">🎵 唱儿歌 (${SONGS.length})</button>
+      </div>
+
+      <div class="list" id="list"></div>
+
+      <div style="text-align:center;font-size:12px;color:rgba(45,48,71,0.5);padding:12px 8px 4px">
+        💡 反复看故事和唱儿歌是孩子学英语最有效的方式<br>
+        听到熟悉的句子，自然就会说了
+      </div>
+    </div>
+  `);
+  app.appendChild(screen);
+
+  screen.querySelectorAll('.tab').forEach(t => {
+    t.onclick = () => { STATE.tab = t.dataset.t; render(); };
+  });
+
+  const list = screen.querySelector('#list');
+  if (STATE.tab === 'story') {
+    STORIES.forEach(s => {
+      const status = eg1.srsStatus(s.id);
+      const read = status === 'learning' || status === 'mastered';
+      const card = eg1.$(`
+        <button class="list-item ${read ? 'read' : ''}">
+          <div class="em">${s.lines[0].emoji.split('').slice(0, 2).join('')}</div>
+          <div class="info">
+            <div class="t">${s.title}</div>
+            <div class="c">${s.title_cn} · ${s.lines.length} 句话</div>
+          </div>
+        </button>
+      `);
+      card.onclick = () => { STATE.current = s; render(); };
+      list.appendChild(card);
+    });
+  } else {
+    SONGS.forEach(s => {
+      const card = eg1.$(`
+        <button class="list-item">
+          <div class="em">🎵</div>
+          <div class="info">
+            <div class="t">${s.title}</div>
+            <div class="c">${s.title_cn}</div>
+          </div>
+        </button>
+      `);
+      card.onclick = () => { STATE.current = s; render(); };
+      list.appendChild(card);
+    });
+  }
+}
+
+// ============ 故事页面 ============
+function renderStory(s) {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  let playing = false;
+  let currentIdx = -1;
+
+  const screen = eg1.$(`
+    <div class="screen">
+      <div class="hud">
+        <button class="hud-back" id="back">←</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:14px;">${s.title_cn}</div>
+        <div style="width:44px"></div>
+      </div>
+
+      <div class="story-page">
+        <h2 style="text-align:center;font-size:22px;color:var(--c-grape);margin:8px 0 4px">${s.title}</h2>
+        <div style="text-align:center;font-size:13px;color:rgba(45,48,71,0.6);margin-bottom:16px">${s.title_cn}</div>
+
+        <div id="lines"></div>
+
+        <div class="story-controls">
+          <button class="play-all" id="playAll">🔊 听整个故事</button>
+          <button class="stop-btn" id="stop">⏸ 停一下</button>
+        </div>
+
+        <div style="text-align:center;font-size:12px;color:rgba(45,48,71,0.5)">
+          💡 点击任意一句也可以单独听
+        </div>
+      </div>
+    </div>
+  `);
+  app.appendChild(screen);
+
+  screen.querySelector('#back').onclick = () => {
+    if ('speechSynthesis' in window) speechSynthesis.cancel();
+    STATE.current = null;
+    render();
+  };
+
+  const linesEl = screen.querySelector('#lines');
+  s.lines.forEach((line, i) => {
+    const lineEl = eg1.$(`
+      <div class="story-line" data-i="${i}">
+        <div class="story-line-emoji">${line.emoji}</div>
+        <div class="story-line-en">${line.en}</div>
+        <div class="story-line-cn">${line.cn}</div>
+      </div>
+    `);
+    lineEl.onclick = () => {
+      if (playing) return;
+      eg1.speak(line.en);
+    };
+    linesEl.appendChild(lineEl);
+  });
+
+  function highlight(i) {
+    linesEl.querySelectorAll('.story-line').forEach((el, idx) => {
+      el.classList.toggle('current', idx === i);
+    });
+    if (i >= 0) {
+      linesEl.children[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  screen.querySelector('#playAll').onclick = async () => {
+    if (playing) return;
+    playing = true;
+    for (let i = 0; i < s.lines.length; i++) {
+      if (!playing) break;
+      currentIdx = i;
+      highlight(i);
+      eg1.speak(s.lines[i].en, { rate: 0.8 });
+      await new Promise(r => setTimeout(r, Math.max(1500, s.lines[i].en.length * 80)));
+    }
+    playing = false;
+    highlight(-1);
+    // 完成 → 标记已读
+    eg1.recordAnswer(s.id, true, 10);
+  };
+
+  screen.querySelector('#stop').onclick = () => {
+    playing = false;
+    if ('speechSynthesis' in window) speechSynthesis.cancel();
+    highlight(-1);
+  };
+
+  // 自动开始读
+  setTimeout(() => screen.querySelector('#playAll').click(), 600);
+}
+
+// ============ 儿歌页面 ============
+function renderSong(s) {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  let playing = false;
+
+  const screen = eg1.$(`
+    <div class="screen">
+      <div class="hud">
+        <button class="hud-back" id="back">←</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:14px;">${s.title_cn}</div>
+        <div style="width:44px"></div>
+      </div>
+
+      <div class="song-page">
+        <div class="song-emoji">🎵</div>
+        <div class="song-title">${s.title}</div>
+        <div class="song-title-cn">${s.title_cn}</div>
+
+        <div class="song-lines" id="lines"></div>
+
+        <div class="story-controls">
+          <button class="play-all" id="play">▶️ 唱给我听</button>
+          <button class="stop-btn" id="stop">⏸ 停一下</button>
+        </div>
+      </div>
+    </div>
+  `);
+  app.appendChild(screen);
+
+  screen.querySelector('#back').onclick = () => {
+    if ('speechSynthesis' in window) speechSynthesis.cancel();
+    STATE.current = null;
+    render();
+  };
+
+  const linesEl = screen.querySelector('#lines');
+  s.lines.forEach((line, i) => {
+    const el = eg1.$(`
+      <div class="song-line" data-i="${i}">
+        ${line}
+        <div class="song-line-cn">${s.cn[i] || ''}</div>
+      </div>
+    `);
+    el.onclick = () => { if (!playing) eg1.speak(line); };
+    linesEl.appendChild(el);
+  });
+
+  function highlight(i) {
+    linesEl.querySelectorAll('.song-line').forEach((el, idx) => {
+      el.classList.toggle('current', idx === i);
+    });
+  }
+
+  screen.querySelector('#play').onclick = async () => {
+    if (playing) return;
+    playing = true;
+    for (let i = 0; i < s.lines.length; i++) {
+      if (!playing) break;
+      highlight(i);
+      eg1.speak(s.lines[i], { rate: 0.8, pitch: 1.2 }); // 稍高 pitch 模拟"唱"
+      await new Promise(r => setTimeout(r, Math.max(1500, s.lines[i].length * 85)));
+    }
+    playing = false;
+    highlight(-1);
+  };
+
+  screen.querySelector('#stop').onclick = () => {
+    playing = false;
+    if ('speechSynthesis' in window) speechSynthesis.cancel();
+    highlight(-1);
+  };
+
+  // 自动开始
+  setTimeout(() => screen.querySelector('#play').click(), 500);
+}
+
+render();
+</script>
+</body>
+</html>

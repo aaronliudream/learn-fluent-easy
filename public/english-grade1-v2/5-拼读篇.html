@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>拼读篇 · 英语小冒险</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.mode-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+.mode-tab { flex: 1; background: var(--c-cloud); border-radius: 100px; padding: 12px; font-size: 13px; }
+.mode-tab.active { background: linear-gradient(135deg, var(--c-coral), var(--c-sun)); color: white; }
+
+.sound-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.sound-chip {
+  background: var(--c-cloud);
+  border: 2px solid var(--c-soft);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.sound-chip.active {
+  background: var(--gradient-warm);
+  color: white;
+  border-color: transparent;
+}
+
+.phonics-card {
+  background: white;
+  border: 3px solid var(--c-coral);
+  border-radius: 24px;
+  padding: 28px 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.phonics-emoji { font-size: 80px; margin-bottom: 12px; }
+.phonics-word {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--c-grape);
+  margin-bottom: 12px;
+  letter-spacing: 4px;
+}
+.phonics-breakdown {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.phoneme-block {
+  background: var(--gradient-sky);
+  color: white;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: lowercase;
+  min-width: 56px;
+  transition: transform 0.2s;
+}
+.phoneme-block:hover { transform: translateY(-3px); }
+.phoneme-block:active { transform: scale(0.95); }
+.phoneme-block.short-a { background: linear-gradient(135deg, #FF7E7E, #FFCB47); }
+.phoneme-block.short-e { background: linear-gradient(135deg, #6FE2A6, #5DD3F3); }
+.phoneme-block.short-i { background: linear-gradient(135deg, #5DD3F3, #B27FF1); }
+.phoneme-block.short-o { background: linear-gradient(135deg, #B27FF1, #FF7E7E); }
+.phoneme-block.short-u { background: linear-gradient(135deg, #FFCB47, #6FE2A6); }
+
+.phonics-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+.phonics-actions button {
+  padding: 12px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.phonics-actions .listen-each {
+  background: var(--c-cloud);
+}
+.phonics-actions .listen-full {
+  background: var(--gradient-sky);
+  color: white;
+}
+
+.phonics-nav {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.phonics-nav button { flex: 1; padding: 12px; border-radius: 100px; font-size: 14px; }
+.phonics-nav .prev { background: var(--c-cloud); }
+.phonics-nav .next {
+  background: linear-gradient(135deg, var(--c-coral), var(--c-sun));
+  color: white;
+}
+
+.sound-name {
+  font-size: 13px;
+  color: rgba(45,48,71,0.6);
+  margin-bottom: 8px;
+}
+
+@media (max-width: 380px) {
+  .phonics-word { font-size: 36px; }
+  .phoneme-block { padding: 12px 14px; font-size: 24px; min-width: 48px; }
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="data.js"></script>
+<script src="engine.js"></script>
+<script>
+const STATE = { tab: 'learn', currentIdx: 0, soundFilter: 'all', quizQueue: [], quizIdx: 0, quizScore: 0, quizCorrect: 0 };
+
+const SOUND_LABELS = {
+  'short-a': '短音 a /æ/',
+  'short-e': '短音 e /ɛ/',
+  'short-i': '短音 i /ɪ/',
+  'short-o': '短音 o /ɒ/',
+  'short-u': '短音 u /ʌ/',
+  'long-a':  '长音 a /eɪ/',
+  'long-e':  '长音 e /iː/',
+  'long-i':  '长音 i /aɪ/',
+  'long-o':  '长音 o /oʊ/',
+  'long-u':  '长音 u /juː/',
+};
+const SOUNDS = Array.from(new Set(PHONICS.map(p => p.sound)));
+
+function getFilteredPhonics() {
+  if (STATE.soundFilter === 'all') return PHONICS;
+  return PHONICS.filter(p => p.sound === STATE.soundFilter);
+}
+
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  const screen = eg1.$(`
+    <div class="screen">
+      <div class="hud">
+        <button class="hud-back" onclick="location.href='index.html'">←</button>
+        <div style="flex:1;text-align:center;font-weight:700;font-size:16px;">🎵 拼读篇</div>
+        <div style="width:44px"></div>
+      </div>
+      <div class="mode-tabs">
+        <button class="mode-tab ${STATE.tab === 'learn' ? 'active' : ''}" data-tab="learn">学拼读</button>
+        <button class="mode-tab ${STATE.tab === 'quiz' ? 'active' : ''}" data-tab="quiz">拼读考试</button>
+      </div>
+      <div id="body"></div>
+    </div>
+  `);
+  app.appendChild(screen);
+
+  screen.querySelectorAll('.mode-tab').forEach(b => {
+    b.onclick = () => { STATE.tab = b.dataset.tab; if (STATE.tab === 'quiz') startQuiz(); render(); };
+  });
+
+  if (STATE.tab === 'learn') renderLearn(screen.querySelector('#body'));
+  else renderQuiz(screen.querySelector('#body'));
+}
+
+function renderLearn(container) {
+  // 顶部音节筛选
+  const filtered = getFilteredPhonics();
+  if (STATE.currentIdx >= filtered.length) STATE.currentIdx = 0;
+
+  const chips = eg1.$(`<div class="sound-chips" id="chips"></div>`);
+  const all = eg1.$(`<button class="sound-chip ${STATE.soundFilter === 'all' ? 'active' : ''}">全部</button>`);
+  all.onclick = () => { STATE.soundFilter = 'all'; STATE.currentIdx = 0; render(); };
+  chips.appendChild(all);
+  SOUNDS.forEach(s => {
+    const c = eg1.$(`<button class="sound-chip ${STATE.soundFilter === s ? 'active' : ''}">${SOUND_LABELS[s] || s}</button>`);
+    c.onclick = () => { STATE.soundFilter = s; STATE.currentIdx = 0; render(); };
+    chips.appendChild(c);
+  });
+  container.appendChild(chips);
+
+  if (filtered.length === 0) {
+    container.appendChild(eg1.$(`<div style="text-align:center;padding:40px;color:rgba(45,48,71,0.5)">这个音节暂无单词</div>`));
+    return;
+  }
+
+  const idx = STATE.currentIdx;
+  const p = filtered[idx];
+  const status = eg1.srsStatus(p.id);
+  const statusText = status === 'mastered' ? '✓ 已掌握' : status === 'learning' ? '📖 学习中' : '🆕 新词';
+
+  const card = eg1.$(`
+    <div class="phonics-card">
+      <div class="sound-name">${SOUND_LABELS[p.sound] || p.sound} · ${statusText}</div>
+      <div class="phonics-emoji">${p.emoji}</div>
+      <div class="phonics-word">${p.word}</div>
+      <div class="phonics-breakdown" id="breakdown"></div>
+    </div>
+    <div class="phonics-actions">
+      <button class="listen-each" id="each">🔊 一个字母一个字母读</button>
+      <button class="listen-full" id="full">🔊 整个单词读出来</button>
+    </div>
+    <div style="text-align:center;font-size:12px;color:rgba(45,48,71,0.5);margin-top:12px">
+      第 ${idx + 1} / ${filtered.length} 个
+    </div>
+    <div class="phonics-nav">
+      <button class="prev" id="prev">← 上一个</button>
+      <button class="next" id="next">下一个 →</button>
+    </div>
+  `);
+  container.appendChild(card);
+
+  // breakdown 块
+  const bdEl = container.querySelector('#breakdown');
+  p.breakdown.forEach((ph, i) => {
+    const b = eg1.$(`<div class="phoneme-block ${p.sound}">${ph}</div>`);
+    b.onclick = () => speakPhoneme(ph, p.sound);
+    bdEl.appendChild(b);
+  });
+
+  // 自动读：先单个 → 再整词
+  setTimeout(async () => {
+    for (let i = 0; i < p.breakdown.length; i++) {
+      speakPhoneme(p.breakdown[i], p.sound);
+      await wait(700);
+    }
+    await wait(400);
+    eg1.speak(p.word);
+  }, 300);
+
+  container.querySelector('#each').onclick = async () => {
+    for (let i = 0; i < p.breakdown.length; i++) {
+      speakPhoneme(p.breakdown[i], p.sound);
+      await wait(700);
+    }
+  };
+  container.querySelector('#full').onclick = () => eg1.speak(p.word);
+
+  container.querySelector('#prev').onclick = () => {
+    STATE.currentIdx = (idx - 1 + filtered.length) % filtered.length;
+    render();
+  };
+  container.querySelector('#next').onclick = () => {
+    eg1.recordAnswer(p.id, true, 5);
+    STATE.currentIdx = (idx + 1) % filtered.length;
+    render();
+  };
+}
+
+// 单独读一个音节（TTS 不擅长读单字母音，用 trick：把字母 + 一个常见词组合念）
+function speakPhoneme(ph, sound) {
+  // 短元音处理：用对应单词的发音帮助
+  const phonemeWords = {
+    'a': 'apple', 'e': 'egg', 'i': 'igloo', 'o': 'octopus', 'u': 'umbrella',
+    'b': 'bee',   'c': 'cup', 'd': 'dog',   'f': 'fan',     'g': 'go',
+    'h': 'hat',   'j': 'jump','k': 'king',  'l': 'lion',    'm': 'mom',
+    'n': 'no',    'p': 'pen', 'r': 'red',   's': 'sun',     't': 'top',
+    'v': 'van',   'w': 'we',  'x': 'box',   'y': 'yes',     'z': 'zoo',
+    'sh': 'shh',  'ch': 'chair', 'th': 'thank', 'ck': 'duck', 'mp': 'jump',
+    'ke': 'cake', 'me': 'home', 'te': 'kite', 'se': 'nose', 'ee': 'tree',
+  };
+  // 直接念字母名（rate 慢一点）
+  if (ph.length === 1) {
+    eg1.speak(ph, { rate: 0.7 });
+  } else {
+    // 多字母组合 - 念整个 phoneme
+    eg1.speak(ph, { rate: 0.7 });
+  }
+}
+
+// ========== 拼读考试 ==========
+function startQuiz() {
+  STATE.quizQueue = eg1.shuffle(PHONICS.slice()).slice(0, 8);
+  STATE.quizIdx = 0;
+  STATE.quizScore = 0;
+  STATE.quizCorrect = 0;
+}
+
+function renderQuiz(container) {
+  if (STATE.quizIdx >= STATE.quizQueue.length) return renderQuizDone(container);
+  const p = STATE.quizQueue[STATE.quizIdx];
+  // 题型：听声拼词 - 给出拆分音节，让孩子选哪个拼起来是 p.word
+  const wrongs = eg1.pickRandom(PHONICS.filter(x => x.word !== p.word), 3);
+  const opts = eg1.shuffle([p, ...wrongs]);
+
+  container.appendChild(eg1.$(`
+    <div class="question-card">
+      <button class="speaker-btn" id="spk">🔊</button>
+      <div class="question-prompt">听一听音节</div>
+      <div class="question-prompt-cn">题目 ${STATE.quizIdx + 1} / ${STATE.quizQueue.length}</div>
+      <div style="display:flex;gap:6px;justify-content:center;margin-top:16px;flex-wrap:wrap">
+        ${p.breakdown.map(ph => `<div style="background:var(--c-cloud);padding:8px 14px;border-radius:12px;font-size:18px;font-weight:700">${ph}</div>`).join('')}
+      </div>
+      <div style="font-size:13px;color:rgba(45,48,71,0.5);margin-top:12px">这些音节拼起来是哪个词？</div>
+    </div>
+    <div class="options" id="opts"></div>
+  `));
+
+  const playPhonemes = async () => {
+    for (let i = 0; i < p.breakdown.length; i++) {
+      speakPhoneme(p.breakdown[i], p.sound);
+      await wait(650);
+    }
+    await wait(300);
+    eg1.speak(p.word);
+  };
+
+  setTimeout(playPhonemes, 300);
+  container.querySelector('#spk').onclick = playPhonemes;
+
+  const optsEl = container.querySelector('#opts');
+  opts.forEach(o => {
+    const btn = eg1.$(`<button class="option-btn">${o.emoji} ${o.word}</button>`);
+    btn.onclick = (e) => handleQuizAnswer(btn, o.word === p.word, p, e);
+    optsEl.appendChild(btn);
+  });
+}
+
+function handleQuizAnswer(btn, isRight, p, e) {
+  document.querySelectorAll('.option-btn, .speaker-btn').forEach(b => { if (b !== btn) b.disabled = true; });
+  btn.classList.add(isRight ? 'correct' : 'wrong');
+  if (!isRight) {
+    document.querySelectorAll('.option-btn').forEach(b => {
+      if (b.textContent.includes(p.word)) b.classList.add('correct');
+    });
+  }
+  eg1.speak(p.word);
+  eg1.showFeedback(isRight);
+  if (isRight) {
+    STATE.quizScore += 12;
+    STATE.quizCorrect++;
+    if (e) eg1.burstStars(e.clientX || window.innerWidth / 2, e.clientY || window.innerHeight / 2);
+  }
+  eg1.recordAnswer(p.id, isRight, 12);
+  setTimeout(() => { STATE.quizIdx++; render(); }, isRight ? 1100 : 1700);
+}
+
+function renderQuizDone(container) {
+  const total = STATE.quizQueue.length;
+  const rate = STATE.quizCorrect / total;
+  let medal = '🥉', title = '加油!';
+  if (rate >= 1) { medal = '🏆'; title = '拼读小天才!'; }
+  else if (rate >= 0.75) { medal = '🥇'; title = '太棒了!'; }
+  else if (rate >= 0.5) { medal = '🥈'; title = '不错!'; }
+
+  container.appendChild(eg1.$(`
+    <div class="result-screen">
+      <div class="result-medal">${medal}</div>
+      <div class="result-title">${title}</div>
+      <div class="result-stats">
+        <div><div class="result-stat-num">${STATE.quizScore}</div><div class="result-stat-label">本轮得分</div></div>
+        <div><div class="result-stat-num">${STATE.quizCorrect}/${total}</div><div class="result-stat-label">答对</div></div>
+      </div>
+      <div class="result-actions">
+        <button class="btn-primary" id="again">再来一轮</button>
+        <button class="btn-secondary" onclick="location.href='index.html'">回首页</button>
+      </div>
+    </div>
+  `));
+  container.querySelector('#again').onclick = () => { startQuiz(); render(); };
+}
+
+function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+render();
+</script>
+</body>
+</html>

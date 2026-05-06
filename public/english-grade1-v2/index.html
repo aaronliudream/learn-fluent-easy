@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>英语小冒险 · 一年级 🚀</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.layer-section {
+  margin-bottom: 14px;
+}
+.layer-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 0 4px;
+}
+.layer-num {
+  width: 24px;
+  height: 24px;
+  background: var(--gradient-warm);
+  color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.layer-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--c-grape);
+}
+.layer-desc {
+  font-size: 11px;
+  color: rgba(45,48,71,0.5);
+  margin-left: 32px;
+  margin-bottom: 8px;
+}
+
+.modules-row {
+  display: grid;
+  gap: 8px;
+}
+.module-card {
+  background: white;
+  border: 2px solid var(--c-soft);
+  border-radius: 18px;
+  padding: 14px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  width: 100%;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--c-ink);
+}
+.module-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* 输入层 - 蓝色调 */
+.module-card.input { border-color: rgba(93,211,243,0.5); background: rgba(93,211,243,0.06); }
+/* 练习层 - 紫色调 */
+.module-card.practice { border-color: rgba(178,127,241,0.5); background: rgba(178,127,241,0.06); }
+/* 输出层 - 黄色调 */
+.module-card.output { border-color: rgba(255,203,71,0.5); background: rgba(255,203,71,0.06); }
+/* 反馈层 - 绿色调 */
+.module-card.feedback { border-color: rgba(111,226,166,0.5); background: rgba(111,226,166,0.06); }
+
+.module-emoji {
+  font-size: 32px;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+.module-info { flex: 1; min-width: 0; }
+.module-name {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.module-desc {
+  font-size: 11px;
+  color: rgba(45,48,71,0.6);
+  line-height: 1.4;
+}
+.module-progress {
+  font-size: 10px;
+  color: var(--c-grape);
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+.stats-bar {
+  background: var(--c-cloud);
+  border-radius: 16px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  color: rgba(45,48,71,0.7);
+  margin-bottom: 12px;
+}
+.stat-num {
+  font-weight: 700;
+  color: var(--c-ink);
+  font-size: 18px;
+  display: block;
+}
+
+.streak-badge {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(45,48,71,0.6);
+  margin-bottom: 14px;
+}
+.streak-badge strong { color: var(--c-coral); font-size: 15px; }
+
+.menu-title h1 { font-size: 32px !important; }
+.menu-title { margin-bottom: 18px !important; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script src="data.js"></script>
+<script src="reading-data.js"></script>
+<script src="story-data.js"></script>
+<script src="output-data.js"></script>
+<script src="engine.js"></script>
+<script>
+function calcStats() {
+  const p = eg1.loadProgress();
+  const wordIds = VOCAB.map(v => v.id);
+  let mastered = 0;
+  wordIds.forEach(id => {
+    const it = p.items[id];
+    if (it && it.level >= 3) mastered++;
+  });
+
+  let streak = 0;
+  let cur = new Date();
+  for (let i = 0; i < 30; i++) {
+    const ds = `${cur.getFullYear()}-${String(cur.getMonth()+1).padStart(2,'0')}-${String(cur.getDate()).padStart(2,'0')}`;
+    if (p.days[ds] && p.days[ds].total > 0) {
+      streak++;
+      cur.setDate(cur.getDate() - 1);
+    } else if (i === 0) {
+      cur.setDate(cur.getDate() - 1);
+    } else break;
+  }
+
+  return {
+    totalScore: p.totalScore,
+    mastered,
+    streak,
+    accuracy: p.totalAnswered > 0 ? Math.round(p.totalCorrect / p.totalAnswered * 100) : 0,
+  };
+}
+
+function modProgress() {
+  const p = eg1.loadProgress();
+  const count = (ids) => ids.filter(id => p.items[id] && p.items[id].level >= 1).length;
+
+  return {
+    letters: count(LETTERS.map(l => 'L_' + l.letter)) + '/' + LETTERS.length,
+    words: VOCAB.filter(v => p.items[v.id] && p.items[v.id].level >= 3).length + '/' + VOCAB.length,
+    sentences: count(SENTENCES.map(s => s.id)) + '/' + SENTENCES.length,
+    phonics: count(PHONICS.map(ph => ph.id)) + '/' + PHONICS.length,
+    reading: count(READING.map(r => r.id)) + '/' + READING.length,
+    stories: count(STORIES.map(s => s.id)) + '/' + STORIES.length,
+    speak: count(SPEAK_TASKS.map(t => t.id)) + '/' + SPEAK_TASKS.length,
+    write: count(WRITE_TASKS.map(t => t.id)) + '/' + WRITE_TASKS.length,
+  };
+}
+
+function render() {
+  const stats = calcStats();
+  const m = modProgress();
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+
+  app.appendChild(eg1.$(`
+    <div class="screen" style="padding: 20px 16px">
+      <div class="menu-title">
+        <span class="emoji">🚀</span>
+        <h1>英语小冒险</h1>
+        <p>一年级 · 完整学习系统 · 9 大模块</p>
+      </div>
+
+      ${stats.streak > 0 ? `<div class="streak-badge">🔥 已经连续打卡 <strong>${stats.streak}</strong> 天，太棒了！</div>` : ''}
+
+      <div class="stats-bar">
+        <div><span class="stat-num">${stats.totalScore}</span><span>总积分</span></div>
+        <div><span class="stat-num">${stats.mastered}/150</span><span>已掌握词</span></div>
+        <div><span class="stat-num">${stats.accuracy}%</span><span>正确率</span></div>
+      </div>
+
+      <!-- 第 1 层：输入 -->
+      <div class="layer-section">
+        <div class="layer-header">
+          <div class="layer-num">1</div>
+          <div class="layer-title">输入 · 看 / 听 / 读</div>
+        </div>
+        <div class="layer-desc">先建立"听得懂、看得懂"的能力</div>
+        <div class="modules-row">
+          <button class="module-card input" data-href="1-字母篇.html">
+            <div class="module-emoji">🔤</div>
+            <div class="module-info">
+              <div class="module-name">字母篇</div>
+              <div class="module-desc">26 字母 · 大小写 · 听音认形</div>
+              <div class="module-progress">进度: ${m.letters}</div>
+            </div>
+          </button>
+          <button class="module-card input" data-href="5-拼读篇.html">
+            <div class="module-emoji">🎵</div>
+            <div class="module-info">
+              <div class="module-name">拼读篇</div>
+              <div class="module-desc">50 个 phonics 词 · 看到就会读</div>
+              <div class="module-progress">进度: ${m.phonics}</div>
+            </div>
+          </button>
+          <button class="module-card input" data-href="7-阅读篇.html">
+            <div class="module-emoji">📖</div>
+            <div class="module-info">
+              <div class="module-name">阅读篇 <span style="color:var(--c-coral);font-size:10px">NEW</span></div>
+              <div class="module-desc">30 篇分级阅读 · 入门到挑战</div>
+              <div class="module-progress">进度: ${m.reading}</div>
+            </div>
+          </button>
+          <button class="module-card input" data-href="8-故事篇.html">
+            <div class="module-emoji">📚</div>
+            <div class="module-info">
+              <div class="module-name">故事篇 <span style="color:var(--c-coral);font-size:10px">NEW</span></div>
+              <div class="module-desc">8 个图文故事 + 5 首儿歌</div>
+              <div class="module-progress">${STORIES.length} 故事 · ${SONGS.length} 儿歌</div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- 第 2 层：练习 -->
+      <div class="layer-section">
+        <div class="layer-header">
+          <div class="layer-num">2</div>
+          <div class="layer-title">练习 · 玩游戏</div>
+        </div>
+        <div class="layer-desc">通过 SRS 智能复习把输入变成能力</div>
+        <div class="modules-row">
+          <button class="module-card practice" data-href="2-单词篇.html">
+            <div class="module-emoji">📚</div>
+            <div class="module-info">
+              <div class="module-name">单词篇</div>
+              <div class="module-desc">150 词 · 看图/听音/拼写/填空</div>
+              <div class="module-progress">已掌握: ${m.words}</div>
+            </div>
+          </button>
+          <button class="module-card practice" data-href="3-句型篇.html">
+            <div class="module-emoji">💬</div>
+            <div class="module-info">
+              <div class="module-name">句型篇</div>
+              <div class="module-desc">50 个常用句型 · 跟读 + 配对</div>
+              <div class="module-progress">进度: ${m.sentences}</div>
+            </div>
+          </button>
+          <button class="module-card practice" data-href="4-听力篇.html">
+            <div class="module-emoji">🎧</div>
+            <div class="module-info">
+              <div class="module-name">听力篇</div>
+              <div class="module-desc">30 段对话 · 听完答问题</div>
+              <div class="module-progress">${DIALOGUES.length} 段对话</div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- 第 3 层：输出 -->
+      <div class="layer-section">
+        <div class="layer-header">
+          <div class="layer-num">3</div>
+          <div class="layer-title">输出 · 开口 / 动手</div>
+        </div>
+        <div class="layer-desc">真正的"学会"是会用</div>
+        <div class="modules-row">
+          <button class="module-card output" data-href="9-说话篇.html">
+            <div class="module-emoji">🗣️</div>
+            <div class="module-info">
+              <div class="module-name">说话篇 <span style="color:var(--c-coral);font-size:10px">NEW</span></div>
+              <div class="module-desc">看图说话 + 看图造句 (60 题)</div>
+              <div class="module-progress">说: ${m.speak} · 写: ${m.write}</div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- 第 4 层：反馈 -->
+      <div class="layer-section">
+        <div class="layer-header">
+          <div class="layer-num">4</div>
+          <div class="layer-title">反馈 · 看进度</div>
+        </div>
+        <div class="layer-desc">让学习"看得见、调得动"</div>
+        <div class="modules-row">
+          <button class="module-card feedback" data-href="6-家长报告.html">
+            <div class="module-emoji">📊</div>
+            <div class="module-info">
+              <div class="module-name">家长报告</div>
+              <div class="module-desc">查看学习数据 + 智能建议</div>
+              <div class="module-progress">点击查看详情</div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div style="text-align:center;font-size:11px;color:rgba(45,48,71,0.4);padding:8px;margin-top:12px">
+        💡 建议：每次学 10-15 分钟，持续比多更重要
+      </div>
+    </div>
+  `));
+
+  app.querySelectorAll('.module-card').forEach(c => {
+    c.onclick = () => location.href = c.dataset.href;
+  });
+}
+
+render();
+</script>
+</body>
+</html>

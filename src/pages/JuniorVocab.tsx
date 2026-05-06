@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { awardCoins, notifyWrong } from "@/lib/coins";
+import { celebrateScore } from "@/lib/feedback";
 import { cn } from "@/lib/utils";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
@@ -483,6 +484,7 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
       (queue as any).__rewarded = true;
       const bonus = pct === 100 ? 20 : 5;
       awardCoins(bonus, "junior_vocab_finish").catch(() => {});
+      celebrateScore(pct);
     }
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
@@ -674,6 +676,10 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
   if (idx >= queue.length) {
     const pct = Math.round((score.correct / Math.max(1, score.total)) * 100);
+    if (typeof window !== "undefined" && !(queue as any).__rewarded) {
+      (queue as any).__rewarded = true;
+      celebrateScore(pct);
+    }
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-10">
         <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">

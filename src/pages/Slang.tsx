@@ -13,6 +13,8 @@ import {
   Loader2,
   Lightbulb,
   PenLine,
+  Headphones,
+  Play,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
@@ -45,7 +47,7 @@ type Mode = "browse" | "quiz";
 // fill  = show example with blank, choose missing idiom.
 // scenario = read a Chinese real-life scene, pick the right English slang.
 // compose  = write a sentence using the slang in a given scenario (AI graded).
-type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose";
+type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose" | "listen";
 
 /** Map a quiz kind to the mastery dimension it strengthens. */
 const KIND_TO_DIM: Record<QuizKind, SlangDim> = {
@@ -54,7 +56,7 @@ const KIND_TO_DIM: Record<QuizKind, SlangDim> = {
   fill: "recall",
   scenario: "recall",
   compose: "use",
-  // (listen → "hear" comes in phase 2)
+  listen: "hear",
 };
 
 export type ComposeGrade = {
@@ -154,6 +156,7 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
     let kind: QuizKind;
     if (target === "recognize") kind = "en2cn";
     else if (target === "use") kind = "compose";
+    else if (target === "hear") kind = "listen";
     else {
       // recall (or hear-fallback) → rotate among the 3 recall drills
       const recallKinds: QuizKind[] = ["cn2en", "fill", "scenario"];
@@ -161,6 +164,8 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
     }
     // Don't bombard a brand-new slang with compose; gate it behind recognize ≥ 1.
     if (kind === "compose" && score("recognize") < 1) kind = "en2cn";
+    // Same rule for listen — don't ask user to recognise audio of a brand-new slang.
+    if (kind === "listen" && score("recognize") < 1) kind = "en2cn";
 
     const distractorPool = sourceForDistractors.filter((x) => x.id !== idiom.id);
     const distractors = shuffle(distractorPool).slice(0, 3);
@@ -211,6 +216,21 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
         kind,
         prompt: "",
         context: idiom.example_cn,
+        options: opts,
+        answer: opts.indexOf(idiom.phrase),
+        idiom,
+      };
+    }
+    if (kind === "listen") {
+      // Listen drill: user hears the example sentence (with the slang in it),
+      // and must pick which slang phrase they heard. The prompt text is
+      // intentionally hidden in the UI — only audio is played.
+      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+      return {
+        id: idiom.id,
+        kind,
+        prompt: idiom.example,           // played, not displayed
+        context: idiom.example_cn,       // shown after reveal
         options: opts,
         answer: opts.indexOf(idiom.phrase),
         idiom,
@@ -574,6 +594,12 @@ const Slang = () => {
     const q = questions[qIdx];
     if (!q) return;
     if (q.kind === "scenario") void ensureScenario(q);
+    // Auto-play the audio for a listen drill on first show, so the user
+    // doesn't have to find the button. Subsequent plays are user-initiated.
+    if (q.kind === "listen" && !revealed) {
+      const t = window.setTimeout(() => speak(q.prompt), 250);
+      return () => window.clearTimeout(t);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode, qIdx, questions]);
 
@@ -924,6 +950,32 @@ const Slang = () => {
                     )}
                     <p className="mt-2 text-sm text-muted-foreground">
                       <T>下面哪个俚语最适合用在这个场景里？</T>
+                    </p>
+                  </div>
+                )}
+                {q.kind === "listen" && (
+                  <div>
+                    <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-sky-500/15 px-2.5 py-1 text-[11px] font-bold text-sky-700 dark:text-sky-400">
+                      <Headphones className="size-3" /> <T>听辨</T>
+                    </div>
+                    <button
+                      onClick={() => speak(q.prompt)}
+                      className="group flex w-full items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-sky-400/60 bg-sky-500/5 px-6 py-8 transition hover:border-sky-500 hover:bg-sky-500/10"
+                    >
+                      <span className="grid size-12 place-items-center rounded-full bg-sky-500 text-white shadow-lg transition group-hover:scale-110">
+                        <Play className="size-6 translate-x-0.5" />
+                      </span>
+                      <span className="text-left">
+                        <span className="block text-base font-extrabold text-sky-700 dark:text-sky-300">
+                          <T>点击播放音频</T>
+                        </span>
+                        <span className="block text-xs text-muted-foreground">
+                          <T>可重复播放，听清楚里面用了哪个俚语</T>
+                        </span>
+                      </span>
+                    </button>
+                    <p className="mt-3 text-sm text-muted-foreground">
+                      <T>你听到的是哪个俚语？</T>
                     </p>
                   </div>
                 )}

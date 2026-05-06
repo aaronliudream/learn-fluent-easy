@@ -302,11 +302,6 @@ const Index = () => {
           const Icon = s.icon;
           return (
             <div key={s.to} className="relative">
-              {s.proFeature && (
-                <div className="absolute right-2 top-2 z-10">
-                  <ProWaitlistButton feature={s.proFeature} source="home-card" />
-                </div>
-              )}
               <Link
                 to={s.to}
                 className={`group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(250_50%_30%/0.5)]`}

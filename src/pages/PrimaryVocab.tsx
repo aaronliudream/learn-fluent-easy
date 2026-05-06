@@ -519,13 +519,15 @@ function QuizMode({ words }: { words: Vocab[] }) {
       {/* Progress bar — Duolingo-style */}
       <div>
         <div className="mb-1.5 flex items-center justify-between text-xs">
-          <span className="text-muted-foreground">第 {idx + 1} / {session.length} 题 · 一轮 {session.length} 题</span>
+          <span className="text-muted-foreground">
+            {reviewSession ? "🔁 错题复习 · " : ""}第 {idx + 1} / {activeSession.length} 题
+          </span>
           <span className="font-extrabold text-emerald-600">✅ {score.correct} / {score.total}</span>
         </div>
         <div className="h-2 overflow-hidden rounded-full bg-secondary">
           <div
             className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all"
-            style={{ width: `${(idx / session.length) * 100}%` }}
+            style={{ width: `${(idx / activeSession.length) * 100}%` }}
           />
         </div>
       </div>

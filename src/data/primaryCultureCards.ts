@@ -9,6 +9,8 @@ export type CultureCard = {
   title_en: string;
   desc_cn: string;
   keywords: string[]; // 关键英文词
+  cn_compare: { emoji: string; label: string; desc: string }; // 中国对照
+  sentence_en?: string; // 一句典型场景英文
 };
 
 export const CULTURE_CATEGORIES: Record<CultureCard["category"], { label: string; emoji: string; color: string }> = {

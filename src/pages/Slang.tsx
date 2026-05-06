@@ -37,6 +37,7 @@ import {
   type SlangDim,
 } from "@/lib/slangMastery";
 import { XPBurst } from "@/components/game/XPBurst";
+import SlangMasteryDots from "@/components/slang/SlangMasteryDots";
 
 type Mode = "browse" | "quiz";
 // quiz direction: en2cn = show English idiom, choose Chinese meaning;
@@ -731,11 +732,11 @@ const Slang = () => {
                           🔥 <T>新</T>
                         </span>
                       )}
-                      {isMasteredSlang(it.id) && (
-                        <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">
-                          <CheckCircle2 className="size-3" /> <T>已掌握</T>
-                        </span>
-                      )}
+                      <SlangMasteryDots
+                        className="ml-auto"
+                        matrix={getSlangMatrix(it.id)}
+                        isMaster={isMasteredSlang(it.id)}
+                      />
                     </div>
                     <div className="mt-0.5 text-lg font-semibold text-primary md:text-base">
                       <T>{it.meaning_cn}</T>

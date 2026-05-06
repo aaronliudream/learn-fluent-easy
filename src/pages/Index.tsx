@@ -80,23 +80,6 @@ const Index = () => {
 
   const sections = [
     {
-      to: "/talk",
-      icon: Mic,
-      eyebrow: t("index.section.aitalk.eyebrow"),
-      title: t("index.section.aitalk.title"),
-      desc: t("index.section.aitalk.desc"),
-      gradient: "from-amber-500 via-orange-500 to-rose-500",
-      proFeature: "ai-talk-unlimited",
-    },
-    {
-      to: "/ielts-speaking",
-      icon: Mic,
-      eyebrow: "IELTS",
-      title: "雅思口语 AI 训练",
-      desc: "考官+教练双角色 · Part 1/2/3 全流程 · 官方 9 分制评分 + 错题本",
-      gradient: "from-indigo-500 via-purple-500 to-pink-500",
-    },
-    {
       to: "/slang",
       icon: Zap,
       eyebrow: t("index.section.slang.eyebrow"),
@@ -319,11 +302,6 @@ const Index = () => {
           const Icon = s.icon;
           return (
             <div key={s.to} className="relative">
-              {s.proFeature && (
-                <div className="absolute right-2 top-2 z-10">
-                  <ProWaitlistButton feature={s.proFeature} source="home-card" />
-                </div>
-              )}
               <Link
                 to={s.to}
                 className={`group relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-br ${s.gradient} p-4 text-white shadow-tile transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_45px_-15px_hsl(250_50%_30%/0.5)]`}

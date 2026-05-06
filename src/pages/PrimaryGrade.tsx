@@ -11,6 +11,7 @@ const buildSkills = (g: number) => [
   { key: "reading", title: "📖 阅读", desc: "5 步通关：热身·听读·跟读·思考·宝藏关", gradient: "from-emerald-400 to-teal-400", to: `/primary/reading/grade/${g}` },
   { key: "writing", title: "✍️ 写作", desc: "拼写 · 填空 · 看图写句", gradient: "from-violet-400 to-fuchsia-400", to: `/primary/games/${g}/spell` },
   { key: "vocab", title: "📚 词汇", desc: "本年级核心词", gradient: "from-amber-400 to-orange-400", to: `/primary/vocab/${g}` },
+  { key: "culture", title: "🌍 西方文化小课堂", desc: "节日 · 礼仪 · 校园 · 生活 · 课标核心素养", gradient: "from-indigo-400 to-purple-400", to: `/primary/culture/${g}` },
   { key: "chat", title: "💬 Spark 对话", desc: "AI 陪你说英语", gradient: "from-pink-400 to-rose-400", to: "/primary/chat" },
 ];
 

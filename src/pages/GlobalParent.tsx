@@ -19,6 +19,7 @@ import PacingSettings from "@/components/parent/PacingSettings";
 import QuizPacingSettings from "@/components/parent/QuizPacingSettings";
 import AchievementBanner from "@/components/parent/AchievementBanner";
 import WeeklyDigest from "@/components/parent/WeeklyDigest";
+import GrowthReport from "@/components/parent/GrowthReport";
 import { T, useT } from "@/i18n/T";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
@@ -223,6 +224,8 @@ export default function GlobalParent() {
 
       {/* 🌟 顶部成就横幅 — 家长 3 秒看懂全年级进度 */}
       <AchievementBanner />
+
+      <GrowthReport />
 
       {/* 📰 本周快报 — 新掌握 / 薄弱 / 时长 / 课程 */}
       <WeeklyDigest />

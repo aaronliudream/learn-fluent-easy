@@ -15,16 +15,6 @@ const buildSkills = (g: number) => [
   { key: "chat", emoji: "💬", title: "Spark", to: "/primary/chat", color: "from-pink-400 to-rose-400" },
 ];
 
-// 课标对照：1-2 年级 → CEFR Pre-A1 启蒙阶段
-const CEFR_BY_GRADE: Record<number, { label: string; cn: string; goal: string }> = {
-  1: { label: "Pre-A1", cn: "启蒙阶段", goal: "课标一级 · 累计认读约 150 词" },
-  2: { label: "Pre-A1", cn: "启蒙阶段", goal: "课标一级 · 累计认读约 200 词" },
-  3: { label: "A1", cn: "入门阶段", goal: "课标二级 · 累计认读约 400 词" },
-  4: { label: "A1", cn: "入门阶段", goal: "课标二级 · 累计认读约 500 词" },
-  5: { label: "A2", cn: "基础阶段", goal: "课标三级 · 累计认读约 600 词" },
-  6: { label: "A2", cn: "基础阶段", goal: "课标三级 · 累计认读约 700 词" },
-};
-
 type LessonRow = {
   id: string; title_cn: string; title_en: string | null; estimated_minutes: number;
   primary_skill: string; sort_order: number;

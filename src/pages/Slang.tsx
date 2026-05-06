@@ -40,6 +40,13 @@ import {
 } from "@/lib/slangMastery";
 import { XPBurst } from "@/components/game/XPBurst";
 import SlangMasteryDots from "@/components/slang/SlangMasteryDots";
+import {
+  EMOTION_META,
+  VISIBLE_EMOTIONS,
+  classifyIdiom,
+  groupByEmotion,
+  type EmotionKey,
+} from "@/lib/slangEmotions";
 
 type Mode = "browse" | "quiz";
 // quiz direction: en2cn = show English idiom, choose Chinese meaning;
@@ -265,6 +272,9 @@ const Slang = () => {
   const [showInvite, setShowInvite] = useState(false);
   // After the user dismisses the invite once, switch to the docked button.
   const [dockedInvite, setDockedInvite] = useState(false);
+  // Active emotion filter (null = show all). When set, browse list & quizzes
+  // are scoped to that emotion family.
+  const [emotion, setEmotion] = useState<EmotionKey | null>(null);
 
   // Load mastery from cloud once.
   useEffect(() => {
@@ -320,7 +330,9 @@ const Slang = () => {
       seen.add(k);
       return true;
     });
-    const base = [...merged, ...sortedRest];
+    let base = [...merged, ...sortedRest];
+    // Emotion filter: only keep slang whose primary emotion matches.
+    if (emotion) base = base.filter((it) => classifyIdiom(it) === emotion);
     if (!search.trim()) return base;
     const k = search.trim().toLowerCase();
     return base.filter(
@@ -331,7 +343,17 @@ const Slang = () => {
     );
     // re-evaluate when masteryVersion changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search, masteryVersion, dailySlang]);
+  }, [search, masteryVersion, dailySlang, emotion]);
+
+  // When the user picks an emotion, jump back to page 0 so they see the top.
+  useEffect(() => { setPage(0); }, [emotion]);
+
+  // Compute counts per emotion family — drives the badge on each card.
+  const emotionGroups = useMemo(() => {
+    const all = [...IDIOMS, ...dailySlang];
+    return groupByEmotion(all);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dailySlang]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const safePage = Math.min(page, totalPages - 1);
@@ -706,6 +728,81 @@ const Slang = () => {
       {/* ───────────── BROWSE MODE ───────────── */}
       {mode === "browse" && (
         <>
+          {/* ───── Emotion card deck ───── */}
+          <section className="mb-5">
+            <div className="mb-2 flex items-center justify-between">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
+                <T>按情绪挑卡组</T>
+              </h2>
+              {emotion && (
+                <button
+                  onClick={() => setEmotion(null)}
+                  className="inline-flex items-center gap-1 rounded-full bg-secondary px-2.5 py-1 text-xs font-bold text-muted-foreground transition hover:bg-secondary/70"
+                >
+                  <X className="size-3" /> <T>返回全部</T>
+                </button>
+              )}
+            </div>
+            <div className="grid grid-cols-3 gap-2 md:grid-cols-6">
+              {VISIBLE_EMOTIONS.map((k) => {
+                const meta = EMOTION_META[k];
+                const count = emotionGroups[k]?.length ?? 0;
+                const active = emotion === k;
+                return (
+                  <button
+                    key={k}
+                    onClick={() => setEmotion(active ? null : k)}
+                    disabled={count === 0}
+                    className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${meta.grad} p-3 text-left text-white shadow-card transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 ${
+                      active ? `ring-4 ${meta.ring} scale-[1.02]` : ""
+                    }`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <span className="text-2xl leading-none">{meta.emoji}</span>
+                      <span className="rounded-full bg-white/20 px-1.5 py-0.5 text-[10px] font-bold backdrop-blur">
+                        {count}
+                      </span>
+                    </div>
+                    <div className="mt-2 text-sm font-extrabold">
+                      <T>{meta.label}</T>
+                    </div>
+                    <div className="mt-0.5 text-[10px] leading-tight opacity-90">
+                      <T>{meta.blurb}</T>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+            {emotion && filtered.length > 0 && (
+              <div className="mt-3 flex flex-wrap items-center gap-2 rounded-xl border border-primary/20 bg-primary/5 p-3">
+                <span className="text-2xl">{EMOTION_META[emotion].emoji}</span>
+                <div className="flex-1 text-sm">
+                  <div className="font-extrabold">
+                    <T>{EMOTION_META[emotion].label}</T> · {filtered.length} <T>条</T>
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    <T>把这一组练熟，开口就能对号入座</T>
+                  </div>
+                </div>
+                <Button size="sm" onClick={() => {
+                  // Quiz only this emotion's pool
+                  const len = Math.min(QUIZ_LEN, filtered.length);
+                  setQuestions(buildQuiz(filtered, len));
+                  setQIdx(0);
+                  setPicks({});
+                  setRevealed(false);
+                  setComposeText({});
+                  setComposeGrade({});
+                  recordedRef.current = new Set();
+                  setMode("quiz");
+                  window.scrollTo({ top: 0 });
+                }}>
+                  <Target className="mr-1.5 size-4" /> <T>训练这组</T>
+                </Button>
+              </div>
+            )}
+          </section>
+
           {/* ───── Today's 5-min practice ───── */}
           {dailyTotal > 0 && (
             <section className="mb-5 overflow-hidden rounded-2xl border border-primary/30 bg-grad-title p-5 text-white shadow-card">

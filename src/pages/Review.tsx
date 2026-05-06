@@ -11,6 +11,8 @@ import {
   type ReviewCard,
 } from "@/lib/srs";
 import { supabase } from "@/integrations/supabase/client";
+import { fireEmojiConfetti } from "@/lib/feedback";
+import { toast } from "sonner";
 
 /**
  * Daily spaced-repetition review. The learner sees a Chinese cue plus a
@@ -83,6 +85,8 @@ const Review = () => {
       setIdx(idx + 1);
     } else {
       setSessionDone(true);
+      fireEmojiConfetti({ count: 36 });
+      toast.success("复习完成 🎉", { description: `今天又巩固了 ${cards.length} 个表达，明天见！` });
     }
   };
 

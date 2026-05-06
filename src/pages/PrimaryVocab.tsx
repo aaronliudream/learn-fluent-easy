@@ -269,16 +269,48 @@ function QuizMode({ words }: { words: Vocab[] }) {
   type QType = "en2cn" | "cn2en" | "listen2en";
   type Q = { type: QType; word: Vocab; options: string[]; answer: string };
 
-  const SESSION_SIZE = 6;
   const params = useParams<{ grade?: string }>();
   const grade = Number(params.grade ?? "1");
 
+  // Parent-configurable: read session size + type mix from profile
+  const [sessionSize, setSessionSize] = useState(6);
+  const [mix, setMix] = useState<{ en2cn: number; cn2en: number; listen2en: number }>({ en2cn: 2, cn2en: 2, listen2en: 2 });
+  useEffect(() => {
+    (async () => {
+      const { data: u } = await supabase.auth.getUser();
+      const id = u?.user?.id; if (!id) return;
+      const { data } = await supabase.from("profiles").select("quiz_session_size,quiz_type_mix").eq("user_id", id).maybeSingle();
+      if (data) {
+        if ((data as any).quiz_session_size) setSessionSize((data as any).quiz_session_size);
+        const m = (data as any).quiz_type_mix;
+        if (m) setMix({ en2cn: m.en2cn ?? 2, cn2en: m.cn2en ?? 2, listen2en: m.listen2en ?? 2 });
+      }
+    })();
+  }, []);
+
   const session: Q[] = useMemo(() => {
     if (words.length < 4) return [];
+    const ratio: [QType, number][] = [
+      ["en2cn", Math.max(0, mix.en2cn)],
+      ["cn2en", Math.max(0, mix.cn2en)],
+      ["listen2en", Math.max(0, mix.listen2en)],
+    ];
+    const totalRatio = ratio.reduce((a, [, n]) => a + n, 0);
+    const types: QType[] = [];
+    if (totalRatio === 0) {
+      for (let i = 0; i < sessionSize; i++) types.push("en2cn");
+    } else {
+      const counts = ratio.map(([t, n]) => [t, Math.floor((n / totalRatio) * sessionSize)] as [QType, number]);
+      let used = counts.reduce((a, [, n]) => a + n, 0);
+      counts.sort((a, b) => b[1] - a[1]);
+      let i = 0;
+      while (used < sessionSize) { counts[i % counts.length][1] += 1; used++; i++; }
+      counts.forEach(([t, n]) => { for (let k = 0; k < n; k++) types.push(t); });
+    }
+    const tShuffled = shuffle(types).slice(0, sessionSize);
+
     const pool = shuffle(words);
-    const picks = pool.slice(0, SESSION_SIZE);
-    const types: QType[] = ["en2cn", "en2cn", "cn2en", "cn2en", "listen2en", "listen2en"];
-    const tShuffled = shuffle(types);
+    const picks = pool.slice(0, sessionSize);
     return picks.map((w, i): Q => {
       const type = tShuffled[i % tShuffled.length];
       const wrongPool = shuffle(words.filter(x => x.id !== w.id));
@@ -290,7 +322,7 @@ function QuizMode({ words }: { words: Vocab[] }) {
       const opts = shuffle([w.word, ...wrongPool.slice(0, 3).map(x => x.word)]);
       return { type, word: w, options: opts, answer: w.word };
     });
-  }, [words]);
+  }, [words, sessionSize, mix.en2cn, mix.cn2en, mix.listen2en]);
 
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);

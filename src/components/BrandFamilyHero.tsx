@@ -74,18 +74,6 @@ function StatusPill({ status }: { status: Status }) {
 export default function BrandFamilyHero() {
   return (
     <section aria-labelledby="brand-family-heading" className="mb-10">
-      <header className="mb-5 text-center">
-        <h2
-          id="brand-family-heading"
-          className="font-serif text-2xl font-extrabold tracking-tight md:text-3xl"
-        >
-          一个家庭，四个年龄段
-        </h2>
-        <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground">
-          Big Moon English 旗下 4 个子品牌，覆盖小学到大学的中国英语学习者。
-        </p>
-      </header>
-
       <div className="grid gap-4 md:grid-cols-2">
         {BRANDS.map((b) => (
           <Link

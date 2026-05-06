@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import {
   Loader2, Award, Sparkles, Download, Share2, Printer, TrendingUp, TrendingDown,
-  Stethoscope, Map, Calendar, Target, ChevronRight, Trophy, Zap, BookOpen,
-  Headphones, Brain, AlertTriangle, CheckCircle2, Clock,
+  Target, ChevronRight, Trophy, Zap, BookOpen,
+  Headphones, AlertTriangle, CheckCircle2, Clock,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {

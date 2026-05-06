@@ -108,6 +108,7 @@ const MistakesPage = () => {
   };
 
   const markResolved = async (m: Mistake) => {
+    const wasLast = items.length <= 1;
     setItems((prev) => prev.filter((x) => x.id !== m.id));
     await supabase.from("user_mistakes").update({ is_resolved: true }).eq("id", m.id);
     // 攻克错题最有价值——给 3 星币 + 宠物开心反应
@@ -116,7 +117,12 @@ const MistakesPage = () => {
       await c.awardCoins(3, "mistake_resolved");
       c.petReact("happy", { coins: 3 });
     } catch { /* noop */ }
-    toast.success("已掌握，从复习队列移除");
+    if (wasLast) {
+      toast.success("🎉 错题本清空！", { description: "全部攻克，复习队列已清零！" });
+      import("@/lib/feedback").then((f) => f.fireEmojiConfetti({ count: 60, vibrate: true }));
+    } else {
+      toast.success("已掌握 ✨", { description: "从复习队列移除" });
+    }
   };
 
   const removeOne = async (m: Mistake) => {

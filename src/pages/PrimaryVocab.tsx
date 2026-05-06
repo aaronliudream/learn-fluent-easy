@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
@@ -24,6 +24,8 @@ type Mode = "browse" | "quiz";
 
 export default function PrimaryVocab() {
   const { grade: gradeParam } = useParams<{ grade?: string }>();
+  const [sp] = useSearchParams();
+  const focus = sp.get("focus"); // "weak" → 智能抽取薄弱词
   const lockedGrade = gradeParam ? Number(gradeParam) : null;
   const [words, setWords] = useState<Vocab[]>([]);
   const [grade, setGrade] = useState<number>(() =>
@@ -31,20 +33,53 @@ export default function PrimaryVocab() {
   );
   useEffect(() => { if (lockedGrade) setGrade(lockedGrade); }, [lockedGrade]);
   const [activeTheme, setActiveTheme] = useState<string>("all");
-  const [mode, setMode] = useState<Mode>("browse");
+  const [mode, setMode] = useState<Mode>(focus === "weak" ? "quiz" : "browse");
   const [loading, setLoading] = useState(true);
+  const [weakIds, setWeakIds] = useState<Set<string> | null>(null);
 
   useEffect(() => {
     setLoading(true);
-    supabase
-      .from("primary_vocab")
-      .select("id,word,pos,meaning_cn,example_en,example_cn,theme,grade")
-      .eq("grade", grade)
-      .then(({ data }) => {
-        setWords((data ?? []) as Vocab[]);
-        setActiveTheme("all");
-        setLoading(false);
-      });
+    (async () => {
+      const { data } = await supabase
+        .from("primary_vocab")
+        .select("id,word,pos,meaning_cn,example_en,example_cn,theme,grade")
+        .eq("grade", grade);
+      const all = (data ?? []) as Vocab[];
+      setWords(all);
+      setActiveTheme("all");
+
+      if (focus === "weak") {
+        const { data: u } = await supabase.auth.getUser();
+        const uid = u?.user?.id;
+        if (uid && all.length) {
+          const { data: m } = await supabase
+            .from("primary_word_mastery")
+            .select("word_id,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong")
+            .eq("user_id", uid).eq("grade", grade);
+          const mMap = new Map<string, any>();
+          (m ?? []).forEach((r: any) => mMap.set(r.word_id, r));
+          // 评分：未学=100，做错过=80+错率*20，掌握度低 = 50-(level*10)，已掌握=0
+          const scored = all.map(w => {
+            const r = mMap.get(w.id);
+            if (!r) return { w, score: 100 + Math.random() * 5 };
+            const lvl = r.mastery_level ?? 0;
+            const correct = (r.quiz_correct ?? 0) + (r.listen_correct ?? 0) + (r.spell_correct ?? 0) + (r.match_correct ?? 0);
+            const wrong = (r.quiz_wrong ?? 0) + (r.listen_wrong ?? 0) + (r.spell_wrong ?? 0) + (r.match_wrong ?? 0);
+            if (lvl >= 3) return { w, score: 5 + Math.random() * 5 };
+            if (wrong > 0) {
+              const wrongRate = wrong / Math.max(1, wrong + correct);
+              return { w, score: 80 + wrongRate * 20 };
+            }
+            return { w, score: 60 - lvl * 15 + Math.random() * 5 };
+          });
+          scored.sort((a, b) => b.score - a.score);
+          setWeakIds(new Set(scored.slice(0, 10).map(x => x.w.id)));
+        }
+      } else {
+        setWeakIds(null);
+      }
+      setLoading(false);
+    })();
   }, [grade]);
 
   const themes = useMemo(() => {
@@ -54,8 +89,11 @@ export default function PrimaryVocab() {
   }, [words]);
 
   const filtered = useMemo(
-    () => (activeTheme === "all" ? words : words.filter((w) => w.theme === activeTheme)),
-    [words, activeTheme],
+    () => {
+      if (weakIds) return words.filter(w => weakIds.has(w.id));
+      return activeTheme === "all" ? words : words.filter((w) => w.theme === activeTheme);
+    },
+    [words, activeTheme, weakIds],
   );
 
   return (

@@ -243,6 +243,7 @@ export const TodayTaskCard = () => {
   const toggle = () => setCollapsed((prev) => !prev);
 
   const progressPct = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
+  const showWelcome = signedIn && streak === 0 && !studiedToday;
 
   return (
     <section
@@ -250,6 +251,28 @@ export const TodayTaskCard = () => {
       className="relative mb-6 overflow-hidden rounded-2xl border border-border/60 bg-card/70 p-4 shadow-sm md:p-5"
     >
       <span aria-hidden className="pointer-events-none absolute -right-16 -top-16 size-40 rounded-full bg-primary/8 blur-3xl" />
+
+      {showWelcome && (
+        <div className="relative mb-4 flex items-center gap-3 rounded-2xl border-2 border-amber-300/60 bg-gradient-to-br from-amber-50 to-orange-50 p-3 dark:border-amber-500/30 dark:from-amber-950/40 dark:to-orange-950/40">
+          <div className="grid size-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-md">
+            <Sparkles className="size-5" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">
+              <T>欢迎加入</T>
+            </div>
+            <div className="mt-0.5 text-sm font-extrabold leading-tight md:text-base">
+              <T>完成第一节课，点亮你的第一颗 ⭐</T>
+            </div>
+          </div>
+          <Link
+            to={next.to}
+            className="inline-flex shrink-0 items-center gap-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-3 py-1.5 text-xs font-bold text-white shadow-md shadow-amber-500/30 transition hover:scale-105 active:scale-95"
+          >
+            <T>开始第一课</T> <ArrowRight className="size-3.5" />
+          </Link>
+        </div>
+      )}
 
       <div className="relative flex items-start justify-between gap-4">
         <button

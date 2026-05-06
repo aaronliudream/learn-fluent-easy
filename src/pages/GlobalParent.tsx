@@ -15,6 +15,7 @@ import DelaySettings from "@/components/parent/DelaySettings";
 import FamilyGoalSettings from "@/components/parent/FamilyGoalSettings";
 import CardLearningSection from "@/components/parent/CardLearningSection";
 import SkillMasteryPanel from "@/components/parent/SkillMasteryPanel";
+import PacingSettings from "@/components/parent/PacingSettings";
 import { T, useT } from "@/i18n/T";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
@@ -230,6 +231,9 @@ export default function GlobalParent() {
 
       {/* 各项技能掌握度（按年级） */}
       <SkillMasteryPanel />
+
+      {/* 学习节奏 & 个性化周计划 */}
+      <PacingSettings />
 
       {/* 完全没有任何学习数据 → 引导诊断 */}
       {!hasAnyActivity && (

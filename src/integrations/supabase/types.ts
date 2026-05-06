@@ -5010,6 +5010,7 @@ export type Database = {
           leaderboard_alias: string | null
           leaderboard_opt_in: boolean
           learning_goal: string | null
+          lessons_per_week: number
           onboarded_at: string | null
           parental_consent_at: string | null
           patience_score: number
@@ -5017,6 +5018,7 @@ export type Database = {
           recall_email_sent_at: string | null
           self_level: string | null
           streak_recall_sent_at: string | null
+          study_days: number[]
           target_language: string
           updated_at: string
           user_id: string
@@ -5037,6 +5039,7 @@ export type Database = {
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
           learning_goal?: string | null
+          lessons_per_week?: number
           onboarded_at?: string | null
           parental_consent_at?: string | null
           patience_score?: number
@@ -5044,6 +5047,7 @@ export type Database = {
           recall_email_sent_at?: string | null
           self_level?: string | null
           streak_recall_sent_at?: string | null
+          study_days?: number[]
           target_language?: string
           updated_at?: string
           user_id: string
@@ -5064,6 +5068,7 @@ export type Database = {
           leaderboard_alias?: string | null
           leaderboard_opt_in?: boolean
           learning_goal?: string | null
+          lessons_per_week?: number
           onboarded_at?: string | null
           parental_consent_at?: string | null
           patience_score?: number
@@ -5071,6 +5076,7 @@ export type Database = {
           recall_email_sent_at?: string | null
           self_level?: string | null
           streak_recall_sent_at?: string | null
+          study_days?: number[]
           target_language?: string
           updated_at?: string
           user_id?: string

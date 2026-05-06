@@ -494,6 +494,10 @@ function GroupList({
           }}
           onBrowse={() => onPick(0)}
         />
+        <RetentionChallengeCard
+          vocabIds={pool.map((v) => v.id)}
+          onStart={() => onPickMode("srs&focus=retention")}
+        />
       </div>
 
       {/* 学习进度总览：掌握数、百分比、未完成、7 天到期、平均稳定天数 */}

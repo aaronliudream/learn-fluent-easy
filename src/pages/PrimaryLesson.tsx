@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { celebrateScore } from "@/lib/feedback";
 
 type StepType = "input" | "understand" | "practice" | "output" | "test";
 type Step = { type: StepType; title?: string; intro?: string; kind?: string; passScore?: number;
@@ -81,6 +82,7 @@ export default function PrimaryLesson() {
       const acc = info ? info.correct / Math.max(1, info.total) : (testScore ? testScore.c / Math.max(1, testScore.t) : 1);
       const score = info ? Math.round(acc * 100) : 100;
       recordCompletion(score, acc);
+      celebrateScore(score);
     }
     setStepIdx(i => i + 1);
   };

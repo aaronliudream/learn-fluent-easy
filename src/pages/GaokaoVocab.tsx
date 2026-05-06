@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { bumpMastery, bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { celebrateScore } from "@/lib/feedback";
 import { MASTERY_LABELS, type MasteryLevel } from "@/lib/masteryScore";
 import { cn } from "@/lib/utils";
 import {
@@ -1103,6 +1104,8 @@ function GroupSession({
             const wrongSet = new Set(s.wrongVocabIds ?? []);
             setWrongWords(group.filter((v) => wrongSet.has(v.id)));
             setPhase("done");
+            const pct = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0;
+            celebrateScore(pct);
             // Award coins and check milestone badges
             const totals = await awardCoins(s.score);
             setCoinsRefreshKey((k) => k + 1);

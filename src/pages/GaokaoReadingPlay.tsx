@@ -9,6 +9,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
+import { celebrateScore } from "@/lib/feedback";
 
 type Passage = { id: string; title: string; body: string; structure_analysis: string | null };
 type Question = {
@@ -48,6 +49,16 @@ export default function GaokaoReadingPlay() {
   }, [id]);
 
   const qStartRef = useRef<Record<string, number>>({});
+  const celebratedRef = useRef(false);
+  useEffect(() => {
+    if (celebratedRef.current) return;
+    if (questions.length === 0) return;
+    const answered = questions.filter((q) => picks[q.id]).length;
+    if (answered < questions.length) return;
+    celebratedRef.current = true;
+    const correct = questions.filter((q) => picks[q.id] === q.correct_answer).length;
+    celebrateScore(Math.round((correct / questions.length) * 100));
+  }, [picks, questions]);
   const onPick = async (q: Question, letter: string) => {
     if (picks[q.id]) return;
     const ms = Date.now() - (qStartRef.current[q.id] ?? Date.now());

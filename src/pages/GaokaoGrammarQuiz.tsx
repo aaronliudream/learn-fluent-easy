@@ -5,6 +5,7 @@ import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, RotateCcw, BookOpen, Me
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { recordAttempt } from "@/lib/gaokaoMastery";
+import { celebrateScore } from "@/lib/feedback";
 import { awardCoins } from "@/lib/coins";
 import { recordGrammarAttempt, loadGrammarMastery, LEVEL_META, type GrammarMastery } from "@/lib/grammarFsrs";
 import { toast } from "sonner";
@@ -97,6 +98,14 @@ export default function GaokaoGrammarQuiz() {
   // Finished
   if (idx >= total) {
     const acc = stats.correct + stats.wrong > 0 ? stats.correct / (stats.correct + stats.wrong) : 0;
+    // Fire celebration once per finish
+    if (typeof window !== "undefined") {
+      const key = `gk-grammar-quiz-${slug}-${stats.correct}-${stats.wrong}`;
+      if ((window as any).__celebrated !== key) {
+        (window as any).__celebrated = key;
+        celebrateScore(Math.round(acc * 100));
+      }
+    }
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">

@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import NoCopyGuard from "@/components/NoCopyGuard";
 import ReadingWatermark from "@/components/ReadingWatermark";
 import { recordMastery } from "@/lib/masteryProgress";
+import { celebrateScore } from "@/lib/feedback";
 
 type Article = {
   id: string;
@@ -371,6 +372,8 @@ export default function GaokaoReadingArticle() {
     }
 
     if (timeUp) toast.warning("时间到，已自动交卷");
+    const finalPct = totalQ > 0 ? Math.round((correctCount / totalQ) * 100) : 0;
+    celebrateScore(finalPct);
     setStage("review");
   }
 

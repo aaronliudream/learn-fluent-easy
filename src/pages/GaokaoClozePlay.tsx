@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { awardCoins, awardForBlock, petReact } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { recordMastery } from "@/lib/masteryProgress";
+import { celebrateScore } from "@/lib/feedback";
 
 type Passage = {
   id: string; passage_no: number; title: string; topic: string | null; topic_group: string | null;
@@ -126,9 +127,9 @@ export default function GaokaoClozePlay() {
       await bumpPetSkill("cloze_ninja", 1);
       petReact("happy", { coins: total });
     }
-    if (r.correct_count === r.total_blanks) {
-      toast.success("满分！🎉");
-    } else {
+    const pct = r.total_blanks > 0 ? Math.round((r.correct_count / r.total_blanks) * 100) : 0;
+    celebrateScore(pct);
+    if (r.correct_count !== r.total_blanks) {
       toast(`${r.correct_count} / ${r.total_blanks} · 错题已自动加入错题本`);
     }
   }

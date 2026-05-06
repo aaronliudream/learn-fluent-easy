@@ -347,6 +347,8 @@ export default function KnowledgeCard() {
       console.warn("[card_attempts] insert failed", e);
     }
     if (!authed) setSavedCTA(true);
+    const pct = visibleQuiz.length > 0 ? Math.round((correctCount / visibleQuiz.length) * 100) : 0;
+    import("@/lib/feedback").then((f) => f.celebrateScore(pct));
   }
 
   // Auto-settle the moment a stage is just completed

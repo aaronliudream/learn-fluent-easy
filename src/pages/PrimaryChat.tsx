@@ -9,6 +9,7 @@ import { speak } from "@/lib/speak";
 import { supabase } from "@/integrations/supabase/client";
 import { awardForCorrect, awardForBlock, notifyWrong } from "@/lib/coins";
 import { cn } from "@/lib/utils";
+import { celebrateScore } from "@/lib/feedback";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -194,6 +195,14 @@ export default function PrimaryChat() {
 
   const allDone = quizItems && Object.keys(picks).length === quizItems.length;
   const correctCount = quizItems ? quizItems.filter((it, i) => picks[i] === it.answer_index).length : 0;
+  const celebratedKey = useRef<string>("");
+  useEffect(() => {
+    if (!allDone || !quizItems) return;
+    const key = `${quizItems.length}-${correctCount}`;
+    if (celebratedKey.current === key) return;
+    celebratedKey.current = key;
+    celebrateScore(Math.round((correctCount / quizItems.length) * 100));
+  }, [allDone, quizItems, correctCount]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 via-rose-50 to-sky-50 flex flex-col">

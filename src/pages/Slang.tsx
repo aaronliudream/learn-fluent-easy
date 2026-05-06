@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { IDIOMS, type Idiom } from "@/data/idioms";
 import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { toast } from "sonner";
+import { celebrateScore } from "@/lib/feedback";
 import { T, useT } from "@/i18n/T";
 import { supabase } from "@/integrations/supabase/client";
 import {
@@ -493,6 +494,17 @@ const Slang = () => {
       ? composeGrade[q.id]?.verdict !== undefined && composeGrade[q.id].verdict !== "needs_work"
       : picks[q.id] === q.answer,
   ).length;
+
+  const slangCelebratedRef = useRef(false);
+  useEffect(() => {
+    if (mode !== "quiz" || questions.length === 0 || qIdx < questions.length) {
+      slangCelebratedRef.current = false;
+      return;
+    }
+    if (slangCelebratedRef.current) return;
+    slangCelebratedRef.current = true;
+    celebrateScore(Math.round((correctCount / questions.length) * 100));
+  }, [mode, qIdx, questions.length, correctCount]);
 
   // For mixed quiz results, "correct" means: either the user picked the
   // right MC option, or (for compose questions) the AI graded their

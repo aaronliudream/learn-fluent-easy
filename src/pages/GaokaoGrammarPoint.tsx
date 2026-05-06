@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
+import { celebrateScore } from "@/lib/feedback";
 import {
   recordGrammarAttempt,
   loadGrammarMastery,
@@ -209,6 +210,10 @@ export default function GaokaoGrammarPoint() {
     setAskReason(false);
     setQuestionStartTs(Date.now());
     if (pracIdx + 1 >= practiceQuestions.length) {
+      const finalCorrect = stats.correct + (picked && picked === q?.correct_answer ? 1 : 0);
+      const finalTotal = stats.correct + stats.wrong + (picked ? 1 : 0);
+      const pct = finalTotal > 0 ? Math.round((finalCorrect / finalTotal) * 100) : 0;
+      celebrateScore(pct);
       setStage("apply");
     } else {
       setPracIdx((i) => i + 1);

@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { awardCoins } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { toast } from "sonner";
+import { celebrateScore } from "@/lib/feedback";
 
 type P = { id: string; topic: string; prompt_cn: string; prompt_en: string; requirements: string[]; min_words: number; max_words: number; sample_answer: string | null; scoring_rubric: string | null };
 type Result = { score: number; overall: string; mistakes: { original: string; corrected: string; explanation: string }[]; suggestions: string[]; improved: string };
@@ -56,6 +57,7 @@ export default function JuniorWritingPlay() {
       await awardCoins(reward, "junior_writing");
       await bumpPetSkill("writer_pen", 1);
       toast.success(`AI 已批改 · 得分 ${Math.round(r.score)} · +${reward} 星币`);
+      celebrateScore(Math.round(r.score));
     } catch (e: any) {
       toast.error(e?.message || "批改失败，请稍后再试");
     } finally { setLoading(false); }

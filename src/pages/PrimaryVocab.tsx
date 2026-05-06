@@ -7,6 +7,7 @@ import ModuleStageTests from "@/components/ModuleStageTests";
 import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { cn } from "@/lib/utils";
+import { celebrateScore } from "@/lib/feedback";
 
 type Vocab = {
   id: string;
@@ -251,6 +252,10 @@ function QuizMode({ words }: { words: Vocab[] }) {
 
   if (idx >= queue.length) {
     const pct = Math.round((score.correct / score.total) * 100);
+    if (typeof window !== "undefined" && !(queue as any).__celebrated) {
+      (queue as any).__celebrated = true;
+      celebrateScore(pct);
+    }
     return (
       <div className="rounded-3xl border border-border/60 bg-card p-8 text-center">
         <Trophy className="mx-auto size-12 text-amber-500" />

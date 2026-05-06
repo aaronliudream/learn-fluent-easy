@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Check, X, Trophy, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { celebrateScore } from "@/lib/feedback";
 
 type Q = { id: string; word: string; meaning_cn: string; options: string[]; isNew: boolean };
 
@@ -139,6 +140,8 @@ export default function StageTestPlay() {
     });
     if (error) { toast.error(error.message); return; }
     setResult(Array.isArray(data) ? data[0] : data);
+    const pct = questions.length > 0 ? Math.round((finalCorrect / questions.length) * 100) : 0;
+    celebrateScore(pct);
   }
 
   async function syncProgress(allResults: { id: string; correct: boolean }[]) {

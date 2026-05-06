@@ -792,6 +792,67 @@ const Slang = () => {
       {/* ───────────── BROWSE MODE ───────────── */}
       {mode === "browse" && (
         <>
+          {/* ───── Daily Street Slang gauntlet ───── */}
+          {todayStreetSlang && (
+            <section className={`mb-5 overflow-hidden rounded-2xl border-2 p-5 shadow-card transition ${
+              dailyDone
+                ? "border-emerald-500/40 bg-gradient-to-br from-emerald-500/10 to-teal-500/10"
+                : "border-orange-500/50 bg-gradient-to-br from-orange-500 via-rose-500 to-fuchsia-500 text-white"
+            }`}>
+              <div className="flex items-start gap-3">
+                <div className={`grid size-12 shrink-0 place-items-center rounded-xl text-2xl ${
+                  dailyDone ? "bg-emerald-500/20" : "bg-white/15 backdrop-blur"
+                }`}>
+                  {dailyDone ? "✅" : "🔥"}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className={`text-[11px] font-bold uppercase tracking-widest ${
+                    dailyDone ? "text-emerald-700 dark:text-emerald-400" : "opacity-90"
+                  }`}>
+                    <T>每日街头黑话</T> · {todayKey.slice(5)}
+                  </div>
+                  <div className="mt-1 flex items-baseline gap-2">
+                    <span className="truncate text-2xl font-extrabold">{todayStreetSlang.phrase}</span>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); speak(todayStreetSlang.phrase); }}
+                      className={`grid size-7 shrink-0 place-items-center rounded-full transition ${
+                        dailyDone
+                          ? "bg-emerald-500/15 text-emerald-700 hover:bg-emerald-500/25 dark:text-emerald-400"
+                          : "bg-white/20 text-white hover:bg-white/30"
+                      }`}
+                      aria-label={tt("朗读")}
+                    >
+                      <Volume2 className="size-3.5" />
+                    </button>
+                  </div>
+                  <div className={`mt-0.5 text-sm font-semibold ${
+                    dailyDone ? "text-emerald-700 dark:text-emerald-300" : "opacity-95"
+                  }`}>
+                    <T>{todayStreetSlang.meaning_cn}</T>
+                  </div>
+                  <div className={`mt-2 text-xs ${dailyDone ? "text-muted-foreground" : "opacity-90"}`}>
+                    <T>3 分钟通关：认 → 听 → 想 → 用，一次拿下今日 slang 👑</T>
+                  </div>
+                  <div className="mt-3">
+                    <Button
+                      size="sm"
+                      onClick={startStreetSlangSprint}
+                      className={
+                        dailyDone
+                          ? ""
+                          : "bg-white text-rose-600 hover:bg-white/90"
+                      }
+                      variant={dailyDone ? "outline" : "default"}
+                    >
+                      <Zap className="mr-1.5 size-4" />
+                      {dailyDone ? <T>再练一遍</T> : <T>开始 3 分钟通关</T>}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+
           {/* ───── Emotion card deck ───── */}
           <section className="mb-5">
             <div className="mb-2 flex items-center justify-between">

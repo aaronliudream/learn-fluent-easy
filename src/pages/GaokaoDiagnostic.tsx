@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
+import { celebrateScore } from "@/lib/feedback";
 
 type Q = {
   id: string;
@@ -25,6 +26,14 @@ export default function GaokaoDiagnostic() {
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState(true);
   const qStartRef = useRef<Record<string, number>>({});
+  const celebratedRef = useRef(false);
+
+  useEffect(() => {
+    if (!done || celebratedRef.current || questions.length === 0) return;
+    celebratedRef.current = true;
+    const correct = questions.filter((q) => picks[q.id] === q.correct_answer).length;
+    celebrateScore(Math.round((correct / questions.length) * 100));
+  }, [done, questions, picks]);
 
   useEffect(() => {
     (async () => {

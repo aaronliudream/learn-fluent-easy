@@ -7,11 +7,11 @@ import { BrandLockup } from "@/components/brand/BrandLogo";
  * 仅渲染导航本身 — 不包裹布局，方便在多个页面复用。
  */
 const ITEMS: { to: string; label: string }[] = [
-  { to: "/", label: "Home" },
-  { to: "/kids", label: "Kids" },
-  { to: "/junior", label: "Junior" },
-  { to: "/senior", label: "Senior" },
-  { to: "/about", label: "About Us" },
+  { to: "/", label: "首页" },
+  { to: "/kids", label: "小学" },
+  { to: "/junior", label: "初中" },
+  { to: "/senior", label: "高中" },
+  { to: "/about", label: "关于我们" },
 ];
 
 export default function BrandHubNav() {
@@ -27,7 +27,7 @@ export default function BrandHubNav() {
               to={it.to}
               end={it.to === "/"}
               className={({ isActive }) =>
-                `rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] transition ${
+                `rounded-full px-3 py-1.5 text-xs font-bold tracking-[0.14em] transition ${
                   isActive
                     ? "bg-foreground text-background"
                     : "text-muted-foreground hover:bg-secondary hover:text-foreground"

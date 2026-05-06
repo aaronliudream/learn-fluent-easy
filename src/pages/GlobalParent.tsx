@@ -4,7 +4,6 @@ import BackLink from "@/components/BackLink";
 import {
   ArrowLeft, Loader2, Coins, BookOpen, GraduationCap, School, Backpack,
   TrendingUp, AlertTriangle, Clock, Flame, Target, Sparkles, Download,
-  Briefcase, MessageCircle, Mic, Layers, Hash,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -46,15 +45,6 @@ const SEG_META = {
   gaokao:  { label: "高中 / Upper Secondary", icon: GraduationCap, color: "from-rose-500 to-orange-500", route: "/gaokao" },
 } as const;
 
-const TRACK_META = {
-  workplace:  { labelKey: "Business / Workplace English", icon: Briefcase,    color: "from-amber-500 to-orange-500",   route: "/workplace" },
-  scenes:     { labelKey: "Daily Scenes",                  icon: MessageCircle,color: "from-emerald-500 to-teal-500",  route: "/scenes" },
-  talk:       { labelKey: "AI Conversation",               icon: Mic,          color: "from-pink-500 to-rose-500",      route: "/talk" },
-  systematic: { labelKey: "Systematic Course",             icon: Layers,       color: "from-indigo-500 to-blue-500",   route: "/level" },
-  slang:      { labelKey: "Slang & Idioms",                icon: Hash,         color: "from-fuchsia-500 to-purple-500", route: "/slang" },
-} as const;
-type TrackKey = keyof typeof TRACK_META;
-
 function useFmtMinutes() {
   const t = useT();
   return (m: number): string => {
@@ -85,7 +75,6 @@ export default function GlobalParent() {
   const [data, setData] = useState<Dashboard | null>(null);
   const [coins, setCoins] = useState(0);
   const [streak, setStreak] = useState(0);
-  const [slangAcc, setSlangAcc] = useState<{ correct: number; total: number } | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -101,15 +90,6 @@ export default function GlobalParent() {
       if (dash.data) setData(dash.data as unknown as Dashboard);
       if (c.data) setCoins((c.data as any).balance ?? 0);
       if (s.data?.[0]) setStreak((s.data[0] as any).current_streak ?? 0);
-      const { data: sm } = await supabase
-        .from("slang_mastery")
-        .select("correct_count,wrong_count")
-        .eq("user_id", uid);
-      if (sm) {
-        const correct = sm.reduce((a: number, r: any) => a + (r.correct_count ?? 0), 0);
-        const wrong = sm.reduce((a: number, r: any) => a + (r.wrong_count ?? 0), 0);
-        setSlangAcc({ correct, total: correct + wrong });
-      }
       setLoading(false);
     })();
   }, []);
@@ -148,10 +128,7 @@ export default function GlobalParent() {
 
   const d = data!;
   const m = d.minutes_by_segment;
-  const segTotal =
-    m.primary + m.junior + m.gaokao +
-    (m.workplace ?? 0) + (m.scenes ?? 0) + (m.talk ?? 0) +
-    (m.systematic ?? 0) + (m.slang ?? 0);
+  const segTotal = m.primary + m.junior + m.gaokao;
   // 真实有效学习 = 所有学习类时长之和（不计入家长中心/登录页等浏览时长）
   const totalMin = segTotal;
 
@@ -163,15 +140,7 @@ export default function GlobalParent() {
   };
   const activeSegs = (["primary","junior","gaokao"] as const).filter(s => segActivity[s] > 0);
 
-  // 非 K-12 学习轨迹（商务、场景、AI 口语、系统课、俚语…）
-  const tracksAct = d.tracks_activity ?? ({} as NonNullable<Dashboard["tracks_activity"]>);
-  const activeTracks = (Object.keys(TRACK_META) as TrackKey[]).filter(k => {
-    const mins = (m as any)[k] ?? 0;
-    const a = tracksAct[k];
-    return mins > 0 || (a && (a.days > 0 || a.items > 0));
-  });
-
-  const hasAnyActivity = activeSegs.length > 0 || activeTracks.length > 0;
+  const hasAnyActivity = activeSegs.length > 0;
 
   const allWords =
     d.primary.words.mastered + d.junior.words.mastered + d.gaokao.words.mastered;

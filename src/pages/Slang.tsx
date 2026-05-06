@@ -594,6 +594,12 @@ const Slang = () => {
     const q = questions[qIdx];
     if (!q) return;
     if (q.kind === "scenario") void ensureScenario(q);
+    // Auto-play the audio for a listen drill on first show, so the user
+    // doesn't have to find the button. Subsequent plays are user-initiated.
+    if (q.kind === "listen" && !revealed) {
+      const t = window.setTimeout(() => speak(q.prompt), 250);
+      return () => window.clearTimeout(t);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode, qIdx, questions]);
 

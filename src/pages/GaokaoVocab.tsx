@@ -20,6 +20,7 @@ import ModuleStageTests from "@/components/ModuleStageTests";
 import MasteryDashboard from "@/components/MasteryDashboard";
 import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";
+import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
@@ -376,6 +377,7 @@ export default function GaokaoVocab() {
         onStartDuel={() => setParams({ mode: "duel" })}
         onStartDict={() => setParams({ mode: "dict" })}
         onOpenDash={() => setParams({ mode: "dash" })}
+        onPickMode={(m) => setParams({ mode: m })}
       />
     );
   }
@@ -413,6 +415,7 @@ function GroupList({
   onStartDuel: () => void;
   onStartDict: () => void;
   onOpenDash: () => void;
+  onPickMode: (mode: string) => void;
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);

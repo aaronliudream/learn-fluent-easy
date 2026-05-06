@@ -404,6 +404,7 @@ function GroupList({
   onStartDuel,
   onStartDict,
   onOpenDash,
+  onPickMode,
 }: {
   groups: Vocab[][];
   pool: Vocab[];

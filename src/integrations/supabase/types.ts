@@ -3568,6 +3568,48 @@ export type Database = {
         }
         Relationships: []
       }
+      parent_weekly_snapshots: {
+        Row: {
+          created_at: string
+          grade: number
+          id: string
+          lessons_completed: number
+          listen_correct: number
+          listen_total: number
+          minutes_studied: number
+          user_id: string
+          vocab_learning: number
+          vocab_mastered: number
+          week_start: string
+        }
+        Insert: {
+          created_at?: string
+          grade: number
+          id?: string
+          lessons_completed?: number
+          listen_correct?: number
+          listen_total?: number
+          minutes_studied?: number
+          user_id: string
+          vocab_learning?: number
+          vocab_mastered?: number
+          week_start: string
+        }
+        Update: {
+          created_at?: string
+          grade?: number
+          id?: string
+          lessons_completed?: number
+          listen_correct?: number
+          listen_total?: number
+          minutes_studied?: number
+          user_id?: string
+          vocab_learning?: number
+          vocab_mastered?: number
+          week_start?: string
+        }
+        Relationships: []
+      }
       pending_seeds: {
         Row: {
           amount: number
@@ -4488,6 +4530,41 @@ export type Database = {
           user_id?: string
         }
         Relationships: []
+      }
+      primary_grade_targets: {
+        Row: {
+          benchmark_desc: string | null
+          benchmark_name: string
+          grade: number
+          target_lessons: number
+          target_vocab: number
+          updated_at: string
+        }
+        Insert: {
+          benchmark_desc?: string | null
+          benchmark_name?: string
+          grade: number
+          target_lessons?: number
+          target_vocab?: number
+          updated_at?: string
+        }
+        Update: {
+          benchmark_desc?: string | null
+          benchmark_name?: string
+          grade?: number
+          target_lessons?: number
+          target_vocab?: number
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "primary_grade_targets_grade_fkey"
+            columns: ["grade"]
+            isOneToOne: true
+            referencedRelation: "primary_grades"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       primary_grades: {
         Row: {

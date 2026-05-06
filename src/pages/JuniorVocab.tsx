@@ -14,6 +14,7 @@ import WordDuel from "@/components/WordDuel";
 import MemoryMatch from "@/components/MemoryMatch";
 import { useI18n } from "@/i18n/I18nProvider";
 import ModuleStageTests from "@/components/ModuleStageTests";
+import { toast } from "sonner";
 
 type Vocab = {
   id: string;

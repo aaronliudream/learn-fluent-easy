@@ -156,8 +156,6 @@ export default function PrimaryGrade() {
   const totalAll = lessons.length;
   const overallPct = totalAll ? Math.round((totalDone / totalAll) * 100) : 0;
 
-  const cefr = CEFR_BY_GRADE[g] ?? CEFR_BY_GRADE[1];
-
   // 勋章 & 连续打卡 数据
   const completedDates = lessons.map(l => l.progress?.[0]?.completed_at).filter(Boolean) as string[];
   const totalStars = lessons.reduce((sum, l) => sum + (l.progress?.[0]?.stars ?? 0), 0);

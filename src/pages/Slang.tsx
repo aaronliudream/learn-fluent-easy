@@ -40,6 +40,13 @@ import {
 } from "@/lib/slangMastery";
 import { XPBurst } from "@/components/game/XPBurst";
 import SlangMasteryDots from "@/components/slang/SlangMasteryDots";
+import {
+  EMOTION_META,
+  VISIBLE_EMOTIONS,
+  classifyIdiom,
+  groupByEmotion,
+  type EmotionKey,
+} from "@/lib/slangEmotions";
 
 type Mode = "browse" | "quiz";
 // quiz direction: en2cn = show English idiom, choose Chinese meaning;
@@ -265,6 +272,9 @@ const Slang = () => {
   const [showInvite, setShowInvite] = useState(false);
   // After the user dismisses the invite once, switch to the docked button.
   const [dockedInvite, setDockedInvite] = useState(false);
+  // Active emotion filter (null = show all). When set, browse list & quizzes
+  // are scoped to that emotion family.
+  const [emotion, setEmotion] = useState<EmotionKey | null>(null);
 
   // Load mastery from cloud once.
   useEffect(() => {
@@ -320,7 +330,9 @@ const Slang = () => {
       seen.add(k);
       return true;
     });
-    const base = [...merged, ...sortedRest];
+    let base = [...merged, ...sortedRest];
+    // Emotion filter: only keep slang whose primary emotion matches.
+    if (emotion) base = base.filter((it) => classifyIdiom(it) === emotion);
     if (!search.trim()) return base;
     const k = search.trim().toLowerCase();
     return base.filter(
@@ -331,7 +343,17 @@ const Slang = () => {
     );
     // re-evaluate when masteryVersion changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search, masteryVersion, dailySlang]);
+  }, [search, masteryVersion, dailySlang, emotion]);
+
+  // When the user picks an emotion, jump back to page 0 so they see the top.
+  useEffect(() => { setPage(0); }, [emotion]);
+
+  // Compute counts per emotion family — drives the badge on each card.
+  const emotionGroups = useMemo(() => {
+    const all = [...IDIOMS, ...dailySlang];
+    return groupByEmotion(all);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dailySlang]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const safePage = Math.min(page, totalPages - 1);

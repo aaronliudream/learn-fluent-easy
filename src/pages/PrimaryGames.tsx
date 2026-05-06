@@ -293,7 +293,10 @@ function QuizGame({ words, grade }: { words: Word[]; grade: number }) {
   }, [idx, queue]);
   const options = useMemo(() => {
     if (!cur) return [];
-    const distract = shuffle(words.filter(w => w.id !== cur.id)).slice(0,3).map(w => w.meaning_cn);
+    // 排除与正确答案中文相同的干扰项，避免出现两个相同选项
+    const distract = shuffle(
+      words.filter(w => w.id !== cur.id && w.meaning_cn !== cur.meaning_cn)
+    ).slice(0, 3).map(w => w.meaning_cn);
     return shuffle([cur.meaning_cn, ...distract]);
   }, [cur, words]);
 

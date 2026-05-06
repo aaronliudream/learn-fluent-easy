@@ -4747,6 +4747,63 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_monthly_checkups: {
+        Row: {
+          cert_code: string
+          correct: number
+          created_at: string
+          grade: number
+          id: string
+          level_label: string
+          listen_score: number
+          month_key: string
+          overall_score: number
+          questions: Json | null
+          recommendations: Json | null
+          spell_score: number
+          total_questions: number
+          user_id: string
+          vocab_score: number
+          weak_themes: Json | null
+        }
+        Insert: {
+          cert_code?: string
+          correct?: number
+          created_at?: string
+          grade: number
+          id?: string
+          level_label?: string
+          listen_score?: number
+          month_key: string
+          overall_score?: number
+          questions?: Json | null
+          recommendations?: Json | null
+          spell_score?: number
+          total_questions?: number
+          user_id: string
+          vocab_score?: number
+          weak_themes?: Json | null
+        }
+        Update: {
+          cert_code?: string
+          correct?: number
+          created_at?: string
+          grade?: number
+          id?: string
+          level_label?: string
+          listen_score?: number
+          month_key?: string
+          overall_score?: number
+          questions?: Json | null
+          recommendations?: Json | null
+          spell_score?: number
+          total_questions?: number
+          user_id?: string
+          vocab_score?: number
+          weak_themes?: Json | null
+        }
+        Relationships: []
+      }
       primary_reading_articles: {
         Row: {
           cover_gradient: string | null
@@ -4898,6 +4955,56 @@ export type Database = {
           user_id?: string
         }
         Relationships: []
+      }
+      primary_unit_challenges: {
+        Row: {
+          accuracy: number
+          created_at: string
+          details: Json | null
+          grade: number
+          id: string
+          medal: string
+          passed: boolean
+          score: number
+          total: number
+          unit_id: string
+          user_id: string
+        }
+        Insert: {
+          accuracy?: number
+          created_at?: string
+          details?: Json | null
+          grade: number
+          id?: string
+          medal?: string
+          passed?: boolean
+          score?: number
+          total?: number
+          unit_id: string
+          user_id: string
+        }
+        Update: {
+          accuracy?: number
+          created_at?: string
+          details?: Json | null
+          grade?: number
+          id?: string
+          medal?: string
+          passed?: boolean
+          score?: number
+          total?: number
+          unit_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "primary_unit_challenges_unit_id_fkey"
+            columns: ["unit_id"]
+            isOneToOne: false
+            referencedRelation: "primary_units"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       primary_units: {
         Row: {

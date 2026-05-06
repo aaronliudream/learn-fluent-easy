@@ -127,6 +127,20 @@ export default function PrimaryCulture() {
         </div>
       </div>
 
+      {/* 角色扮演剧场 */}
+      <section className="mb-5">
+        <div className="mb-2 flex items-baseline justify-between">
+          <h2 className="text-base font-extrabold">🎭 角色扮演剧场</h2>
+          <span className="text-[11px] font-bold text-muted-foreground">读对话 → 自己选答 → 拿 ⭐⭐⭐</span>
+        </div>
+        <RolePlayTheater />
+      </section>
+
+      <div className="mb-3 flex items-baseline justify-between">
+        <h2 className="text-base font-extrabold">📚 文化卡片库</h2>
+        <span className="text-[11px] font-bold text-muted-foreground">点击任意卡片开始 5 步小冒险</span>
+      </div>
+
       {/* 分类筛选 */}
       <div className="mb-4 flex flex-wrap gap-1.5">
         <button

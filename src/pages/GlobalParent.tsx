@@ -17,6 +17,8 @@ import CardLearningSection from "@/components/parent/CardLearningSection";
 import SkillMasteryPanel from "@/components/parent/SkillMasteryPanel";
 import PacingSettings from "@/components/parent/PacingSettings";
 import QuizPacingSettings from "@/components/parent/QuizPacingSettings";
+import AchievementBanner from "@/components/parent/AchievementBanner";
+import WeeklyDigest from "@/components/parent/WeeklyDigest";
 import { T, useT } from "@/i18n/T";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
@@ -218,6 +220,12 @@ export default function GlobalParent() {
           <Download className="size-4" /> <T>导出 PDF</T>
         </button>
       </div>
+
+      {/* 🌟 顶部成就横幅 — 家长 3 秒看懂全年级进度 */}
+      <AchievementBanner />
+
+      {/* 📰 本周快报 — 新掌握 / 薄弱 / 时长 / 课程 */}
+      <WeeklyDigest />
 
       {/* Top KPI strip */}
       <section className="mb-4 grid gap-3 sm:grid-cols-4">

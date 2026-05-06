@@ -947,6 +947,32 @@ const Slang = () => {
                     </p>
                   </div>
                 )}
+                {q.kind === "listen" && (
+                  <div>
+                    <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-sky-500/15 px-2.5 py-1 text-[11px] font-bold text-sky-700 dark:text-sky-400">
+                      <Headphones className="size-3" /> <T>听辨</T>
+                    </div>
+                    <button
+                      onClick={() => speak(q.prompt)}
+                      className="group flex w-full items-center justify-center gap-3 rounded-2xl border-2 border-dashed border-sky-400/60 bg-sky-500/5 px-6 py-8 transition hover:border-sky-500 hover:bg-sky-500/10"
+                    >
+                      <span className="grid size-12 place-items-center rounded-full bg-sky-500 text-white shadow-lg transition group-hover:scale-110">
+                        <Play className="size-6 translate-x-0.5" />
+                      </span>
+                      <span className="text-left">
+                        <span className="block text-base font-extrabold text-sky-700 dark:text-sky-300">
+                          <T>点击播放音频</T>
+                        </span>
+                        <span className="block text-xs text-muted-foreground">
+                          <T>可重复播放，听清楚里面用了哪个俚语</T>
+                        </span>
+                      </span>
+                    </button>
+                    <p className="mt-3 text-sm text-muted-foreground">
+                      <T>你听到的是哪个俚语？</T>
+                    </p>
+                  </div>
+                )}
                 {q.kind === "compose" && (
                   <div>
                     <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-violet-500/15 px-2.5 py-1 text-[11px] font-bold text-violet-700 dark:text-violet-400">

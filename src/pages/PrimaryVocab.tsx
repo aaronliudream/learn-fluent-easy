@@ -383,13 +383,40 @@ function QuizMode({ words }: { words: Vocab[] }) {
   const activeSession = reviewSession ?? session;
   const cur = activeSession[idx];
 
+  // 听力题：播放次数 + 倒计时
+  const LISTEN_MAX_PLAYS = 3;
+  const LISTEN_SECONDS = 12;
+  const [playsLeft, setPlaysLeft] = useState(LISTEN_MAX_PLAYS);
+  const [secondsLeft, setSecondsLeft] = useState(LISTEN_SECONDS);
+
   // Auto-play audio for listen-type questions
   useEffect(() => {
+    setPlaysLeft(LISTEN_MAX_PLAYS);
+    setSecondsLeft(LISTEN_SECONDS);
     if (cur?.type === "listen2en") {
-      const t = setTimeout(() => speak(cur.word.word), 250);
+      const t = setTimeout(() => {
+        speak(cur.word.word);
+        setPlaysLeft(p => Math.max(0, p - 1));
+      }, 250);
       return () => clearTimeout(t);
     }
   }, [cur]);
+
+  // 听力题倒计时：每秒-1，归零自动进入下一题（按未作答处理）
+  useEffect(() => {
+    if (cur?.type !== "listen2en" || picked) return;
+    if (secondsLeft <= 0) {
+      // 超时：记为错题，自动进入下一题
+      setScore(s => ({ correct: s.correct, total: s.total + 1 }));
+      setWrongIds(prev => { const n = new Set(prev); n.add(cur.word.id); return n; });
+      bumpVocabMastery({ vocabId: cur.word.id, isCorrect: false, kind: "listen" }).catch(() => {});
+      recordAttempt({ questionType: "vocab", questionId: cur.word.id, userAnswer: "(timeout)", isCorrect: false }).catch(() => {});
+      const t = setTimeout(() => { setPicked(null); setIdx(i => i + 1); }, 600);
+      return () => clearTimeout(t);
+    }
+    const t = setTimeout(() => setSecondsLeft(s => s - 1), 1000);
+    return () => clearTimeout(t);
+  }, [cur, picked, secondsLeft]);
 
   if (!cur && activeSession.length === 0) {
     return (
@@ -551,13 +578,31 @@ function QuizMode({ words }: { words: Vocab[] }) {
         {cur.type === "listen2en" && (
           <div className="mt-3 flex flex-col items-center gap-2">
             <button
-              onClick={() => speak(cur.word.word)}
-              className="grid size-20 place-items-center rounded-full bg-gradient-to-br from-sky-500 to-blue-500 text-white shadow-lg transition hover:scale-105"
+              onClick={() => {
+                if (playsLeft <= 0 || picked) return;
+                speak(cur.word.word);
+                setPlaysLeft(p => Math.max(0, p - 1));
+              }}
+              disabled={playsLeft <= 0 || !!picked}
+              className="grid size-20 place-items-center rounded-full bg-gradient-to-br from-sky-500 to-blue-500 text-white shadow-lg transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-40"
               aria-label="再听一次"
             >
               <Volume2 className="size-9" />
             </button>
-            <div className="text-xs text-muted-foreground">点击图标再听一次</div>
+            <div className="flex items-center gap-3 text-xs">
+              <span className={cn("font-bold", playsLeft === 0 ? "text-rose-600" : "text-muted-foreground")}>
+                🔊 剩 {playsLeft} / {LISTEN_MAX_PLAYS} 次
+              </span>
+              <span className={cn("font-extrabold tabular-nums", secondsLeft <= 3 ? "text-rose-600" : "text-sky-600")}>
+                ⏱ {secondsLeft}s
+              </span>
+            </div>
+            <div className="h-1.5 w-full max-w-[200px] overflow-hidden rounded-full bg-secondary">
+              <div
+                className={cn("h-full transition-all", secondsLeft <= 3 ? "bg-rose-500" : "bg-sky-500")}
+                style={{ width: `${(secondsLeft / LISTEN_SECONDS) * 100}%` }}
+              />
+            </div>
           </div>
         )}
       </div>

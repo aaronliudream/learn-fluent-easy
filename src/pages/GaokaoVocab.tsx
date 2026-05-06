@@ -22,6 +22,8 @@ import { GaokaoVocabProgress } from "@/components/GaokaoVocabProgress";
 import MemoryMatch from "@/components/MemoryMatch";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import NextStepHint from "@/components/vocab/NextStepHint";
+import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
+import { computeMasteryScore as _cms, type MasteryMatrix as _MM } from "@/lib/masteryScore";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
@@ -338,7 +340,8 @@ export default function GaokaoVocab() {
   if (loading) return <p className="p-8 text-sm text-muted-foreground">加载中...</p>;
 
   if (mode === "srs") {
-    return <SrsReviewSession pool={allVocab} onExit={() => setParams({})} />;
+    const focus = params.get("focus") === "retention" ? "retention" : undefined;
+    return <SrsReviewSession pool={allVocab} onExit={() => setParams({})} focus={focus} />;
   }
 
   if (mode === "rush") {
@@ -490,6 +493,15 @@ function GroupList({
             (map[m] ?? (() => onPickMode(m)))();
           }}
           onBrowse={() => onPick(0)}
+        />
+        <RetentionChallengeCard
+          vocabIds={pool.map((v) => v.id)}
+          onStart={() => {
+            const url = new URL(window.location.href);
+            url.searchParams.set("mode", "srs");
+            url.searchParams.set("focus", "retention");
+            window.location.assign(url.toString());
+          }}
         />
       </div>
 
@@ -2279,7 +2291,7 @@ function SpellQuestion({
 }
 
 /* ---------- SRS Smart Review Session ---------- */
-function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () => void; focus?: "retention" }) {
   const [loading, setLoading] = useState(true);
   const [dueWords, setDueWords] = useState<Vocab[]>([]);
   const [queue, setQueue] = useState<QuizItem[]>([]);
@@ -2311,15 +2323,35 @@ function SrsReviewSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
         return;
       }
       const nowIso = new Date().toISOString();
-      const { data: dueRows } = await supabase
-        .from("gaokao_user_mastery")
-        .select("item_id, wrong_count")
-        .eq("user_id", user.id)
-        .eq("item_type", "vocab")
-        .lte("next_review_at", nowIso)
-        .order("wrong_count", { ascending: false })
-        .limit(30);
-      const idSet = new Set((dueRows ?? []).map((r) => r.item_id as string));
+      let idSet: Set<string>;
+      if (focus === "retention") {
+        // 21 天保留测试：score≥0.85 + last_seen_at 21 天前 + 还没有 reached_master_at
+        const cutoff = new Date(Date.now() - 21 * 24 * 3600 * 1000).toISOString();
+        const { data: rows } = await supabase
+          .from("gaokao_user_mastery")
+          .select("item_id, mastery_matrix, reached_master_at, last_seen_at")
+          .eq("user_id", user.id)
+          .eq("item_type", "vocab")
+          .lte("last_seen_at", cutoff)
+          .is("reached_master_at", null)
+          .limit(200);
+        idSet = new Set(
+          (rows ?? [])
+            .filter((r: any) => _cms((r.mastery_matrix ?? {}) as _MM) >= 0.85)
+            .slice(0, 30)
+            .map((r: any) => r.item_id as string),
+        );
+      } else {
+        const { data: dueRows } = await supabase
+          .from("gaokao_user_mastery")
+          .select("item_id, wrong_count")
+          .eq("user_id", user.id)
+          .eq("item_type", "vocab")
+          .lte("next_review_at", nowIso)
+          .order("wrong_count", { ascending: false })
+          .limit(30);
+        idSet = new Set((dueRows ?? []).map((r) => r.item_id as string));
+      }
       const words = pool.filter((v) => idSet.has(v.id));
       const shuffled = shuffle(words);
       setDueWords(shuffled);

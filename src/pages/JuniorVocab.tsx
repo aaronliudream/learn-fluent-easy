@@ -16,6 +16,7 @@ import { useI18n } from "@/i18n/I18nProvider";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { toast } from "sonner";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
+import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
 
 type Vocab = {
   id: string;
@@ -221,6 +222,11 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
         vocabIds={words.map((w) => w.id)}
         onPickMode={(m) => onPick(m as Exclude<Mode, null>)}
         onBrowse={() => onPickGroup(0)}
+      />
+
+      <RetentionChallengeCard
+        vocabIds={words.map((w) => w.id)}
+        onStart={() => onPick("srs")}
       />
 
       {/* 学习进度总览（高考同款风格，复用 junior_word_mastery） */}

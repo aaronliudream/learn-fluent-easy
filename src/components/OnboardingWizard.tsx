@@ -6,19 +6,21 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Progress } from "@/components/ui/progress";
 import {
   Check, ArrowRight, Globe2, Briefcase, Plane, GraduationCap, Sparkles,
-  Clock, BookOpen, Coffee, Mic, Music, Film, Plane as PlaneIcon, Heart, Trophy, Flame,
+  Clock, BookOpen, Coffee, Mic, Music, Film, Plane as PlaneIcon, Flame,
 } from "lucide-react";
 import { useI18n } from "@/i18n/I18nProvider";
 import { toast } from "sonner";
 
 /**
- * Duolingo-style 4-step onboarding shown the first time a logged-in user
+ * Duolingo-style 3-step onboarding shown the first time a logged-in user
  * lands on the home page (when `profiles.onboarded_at` is null).
  *
  *   1. Goal + interest scenes (combined)        -> learning_goal
  *   2. Self-assessed level + 1 placement check  -> self_level
  *   3. Daily commitment (3 / 5 / 10 / 15 min)   -> daily_goal_minutes
- *   4. Pick pet + first micro-lesson teaser     -> navigate to /pets
+ *
+ * Pet/buddy is auto-assigned (default: Sprout) so users land in the product
+ * faster. They can rename / swap later in /pets.
  */
 
 type Goal = "travel" | "career" | "exam" | "general";
@@ -47,12 +49,6 @@ const SCENES = [
   { id: "movies",    icon: Film,     labelEn: "Movies & TV" },
   { id: "music",     icon: Music,    labelEn: "Music & lyrics" },
   { id: "exams",     icon: GraduationCap, labelEn: "Exams" },
-];
-
-const PETS = [
-  { id: "lumi_spark",    emoji: "🌱", nameEn: "Sprout", tagEn: "Patient & gentle"  },
-  { id: "fire_fox",      emoji: "🦊", nameEn: "Ember",  tagEn: "Bold & energetic"  },
-  { id: "rainbow_whale", emoji: "🐋", nameEn: "Aqua",   tagEn: "Calm & curious"    },
 ];
 
 // Tiny placement check (one quick question per level option).
@@ -89,17 +85,15 @@ export default function OnboardingWizard({
   const [level, setLevel] = useState<Level | null>(null);
   const [quizAnswered, setQuizAnswered] = useState<number | null>(null);
   const [minutes, setMinutes] = useState<number>(5);
-  const [pet, setPet] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
 
-  const totalSteps = 4;
+  const totalSteps = 3;
   const progress = ((step + 1) / totalSteps) * 100;
 
   const canNext =
     (step === 0 && !!goal && scenes.length > 0) ||
     (step === 1 && !!level && quizAnswered !== null) ||
-    (step === 2 && minutes > 0) ||
-    (step === 3 && !!pet);
+    (step === 2 && minutes > 0);
 
   function toggleScene(id: string) {
     setScenes((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
@@ -120,10 +114,10 @@ export default function OnboardingWizard({
         } as never)
         .eq("user_id", userId);
       if (error) throw error;
-      toast.success("Welcome aboard! Time to meet your buddy.");
+      toast.success("You're all set — let's start learning!");
       onClose();
-      // Send them to /pets so the chosen buddy adoption flow takes over.
-      navigate("/pets");
+      // Stay on home so users land directly on their personalized plan.
+      navigate("/");
     } catch (e) {
       console.error(e);
       toast.error("Could not save your preferences. Please try again.");
@@ -335,55 +329,6 @@ export default function OnboardingWizard({
         )}
 
         {/* STEP 4 — Pick pet + first micro-lesson teaser */}
-        {step === 3 && (
-          <div>
-            <div className="mb-1 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
-              <Heart className="size-3.5" /> Your buddy
-            </div>
-            <h2 className="text-2xl font-extrabold leading-tight">Choose your learning buddy</h2>
-            <p className="mb-5 mt-1 text-sm text-muted-foreground">
-              Your buddy levels up every time you study. Pick one to start your first 60-second lesson.
-            </p>
-            <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
-              {PETS.map((p) => {
-                const sel = pet === p.id;
-                return (
-                  <button
-                    key={p.id}
-                    type="button"
-                    onClick={() => setPet(p.id)}
-                    className={
-                      "flex flex-col items-center gap-2 rounded-2xl border-2 p-5 text-center transition " +
-                      (sel
-                        ? "border-primary bg-primary/5 ring-2 ring-primary/20"
-                        : "border-border hover:bg-secondary")
-                    }
-                  >
-                    <div className="text-5xl">{p.emoji}</div>
-                    <div className="text-base font-extrabold">{p.nameEn}</div>
-                    <div className="text-[11px] text-muted-foreground">{p.tagEn}</div>
-                    {sel && (
-                      <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
-                        <Check className="size-3" /> Picked
-                      </div>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-            {pet && (
-              <div className="mt-5 rounded-2xl border border-primary/30 bg-primary/5 p-4 text-sm">
-                <div className="flex items-center gap-2 font-extrabold">
-                  <Trophy className="size-4 text-primary" /> First lesson is ready
-                </div>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  60 seconds. One real conversation. Your buddy earns its first XP with you.
-                </p>
-              </div>
-            )}
-          </div>
-        )}
-
         <div className="mt-7 flex items-center justify-between gap-3">
           <Button
             variant="ghost"

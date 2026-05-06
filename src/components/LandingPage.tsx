@@ -99,7 +99,7 @@ const EN_COPY: Record<string, string> = {
     "Practice real conversations with AI, get instant feedback, and improve your speaking in just 5 minutes a day.",
   "Start for free": "Start for free",
   "Try the 30-sec demo": "Try the 30-sec demo",
-  "4.9 rating · 10,000+ learners · Available worldwide": "4.9 rating · 10,000+ learners · Available worldwide",
+  "4.9 rating · 10,000+ learners · Available worldwide": "Loved by early learners · Available worldwide",
 
   "Why Big Moon English works": "Why Big Moon English works",
   "Three things, done right.": "Three things, done right.",
@@ -230,8 +230,8 @@ export default function LandingPage() {
                     {c.slice(1,2)}
                   </div>
                 ))}
-                <div className="grid size-8 place-items-center rounded-full border-2 border-[#EEF4FB] bg-[#3BA3E0] text-[9px] font-bold text-white">
-                  +14M
+                <div className="grid size-8 place-items-center rounded-full border-2 border-[#EEF4FB] bg-[#3BA3E0] text-[10px] font-bold text-white">
+                  +
                 </div>
               </div>
               <div className="flex flex-col">

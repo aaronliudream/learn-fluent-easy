@@ -27,10 +27,42 @@ const CEFR_BY_GRADE: Record<number, { label: string; cn: string; goal: string }>
 
 // 教育学推荐学习路径：输入 → 内化 → 输出
 const LEARNING_PATH = [
-  { stage: 1, title: "听 · 看", desc: "字母 · 词汇输入", skills: ["vocab", "listening"] },
-  { stage: 2, title: "拼 · 读", desc: "拼读 · 分级阅读", skills: ["reading", "writing"] },
-  { stage: 3, title: "练 · 玩", desc: "游戏巩固 SRS", skills: ["games"] },
-  { stage: 4, title: "说 · 用", desc: "对话输出", skills: ["chat"] },
+  {
+    stage: 1, emoji: "👂", title: "听一听", subtitle: "Listen",
+    desc: "听字母 · 听单词 · 听小故事",
+    bg: "from-sky-300 to-cyan-400", ring: "ring-sky-300",
+    items: [
+      { label: "🔤 字母歌", to: (g: number) => `/primary/games/${g}/listen` },
+      { label: "🎧 听词选图", to: (g: number) => `/primary/games/${g}/listen` },
+    ],
+  },
+  {
+    stage: 2, emoji: "👀", title: "看一看", subtitle: "Look",
+    desc: "看图认词 · 翻牌配对",
+    bg: "from-amber-300 to-orange-400", ring: "ring-amber-300",
+    items: [
+      { label: "📚 图卡词汇", to: (g: number) => `/primary/vocab/${g}` },
+      { label: "🃏 翻牌找朋友", to: (g: number) => `/primary/games/${g}` },
+    ],
+  },
+  {
+    stage: 3, emoji: "✋", title: "玩一玩", subtitle: "Play",
+    desc: "拖字母拼单词 · 闯关得星",
+    bg: "from-violet-300 to-fuchsia-400", ring: "ring-fuchsia-300",
+    items: [
+      { label: "🧩 拼字母", to: (g: number) => `/primary/games/${g}/spell` },
+      { label: "🎮 游戏中心", to: (g: number) => `/primary/games/${g}` },
+    ],
+  },
+  {
+    stage: 4, emoji: "🗣️", title: "说一说", subtitle: "Speak",
+    desc: "跟 Spark 对话 · 大声说出来",
+    bg: "from-rose-300 to-pink-400", ring: "ring-rose-300",
+    items: [
+      { label: "💬 Spark 对话", to: (_g: number) => `/primary/chat` },
+      { label: "🌍 文化卡片", to: (g: number) => `/primary/culture/${g}` },
+    ],
+  },
 ];
 
 type LessonRow = {
@@ -295,18 +327,40 @@ export default function PrimaryGrade() {
 
       {/* 教育学学习路径：输入 → 内化 → 输出 */}
       <section className="mb-4">
-        <div className="mb-2 flex items-center gap-1.5 text-[11px] font-extrabold text-muted-foreground">
-          <Target className="size-3.5 text-rose-500" /> 推荐学习路径 · 二语习得规律
+        <div className="mb-2 flex items-center gap-1.5 text-sm font-extrabold">
+          <Target className="size-4 text-rose-500" />
+          <span>每天这样学最棒 🌈</span>
+          <span className="ml-1 text-[10px] font-normal text-muted-foreground">听 → 看 → 玩 → 说</span>
         </div>
-        <div className="grid grid-cols-4 gap-1.5">
-          {LEARNING_PATH.map((p, i) => (
-            <div key={p.stage} className="relative rounded-xl border-2 border-border bg-card p-2 text-center">
-              <div className="mx-auto grid size-6 place-items-center rounded-full bg-gradient-to-br from-amber-400 to-rose-400 text-[10px] font-extrabold text-white">{p.stage}</div>
-              <div className="mt-1 text-[11px] font-extrabold">{p.title}</div>
-              <div className="text-[9px] text-muted-foreground leading-tight">{p.desc}</div>
-              {i < LEARNING_PATH.length - 1 && (
-                <div className="absolute -right-1 top-1/2 -translate-y-1/2 text-muted-foreground/40">›</div>
-              )}
+        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+          {LEARNING_PATH.map((p) => (
+            <div
+              key={p.stage}
+              className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${p.bg} p-3 text-white shadow-tile ring-2 ${p.ring} ring-offset-2 ring-offset-background`}
+            >
+              <span className="pointer-events-none absolute -right-4 -top-4 size-16 rounded-full bg-white/25 blur-xl" />
+              <div className="relative flex items-center gap-2">
+                <div className="grid size-10 shrink-0 place-items-center rounded-2xl bg-white/30 text-2xl backdrop-blur-sm">
+                  {p.emoji}
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[9px] font-bold uppercase tracking-wider opacity-90">Step {p.stage} · {p.subtitle}</div>
+                  <div className="text-base font-extrabold leading-tight">{p.title}</div>
+                </div>
+              </div>
+              <div className="relative mt-1.5 text-[11px] font-medium opacity-95">{p.desc}</div>
+              <div className="relative mt-2 grid gap-1.5">
+                {p.items.map((it) => (
+                  <Link
+                    key={it.label}
+                    to={it.to(g)}
+                    className="flex items-center justify-between rounded-xl bg-white/90 px-2.5 py-1.5 text-[11px] font-bold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:bg-white"
+                  >
+                    <span className="truncate">{it.label}</span>
+                    <span className="text-muted-foreground">▶</span>
+                  </Link>
+                ))}
+              </div>
             </div>
           ))}
         </div>

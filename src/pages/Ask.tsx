@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
 import { Sparkles, Loader2, ArrowLeft } from "lucide-react";
-import BackLink from "@/components/BackLink";
 
 const SAMPLES = [
   "book 的复数形式是什么？",

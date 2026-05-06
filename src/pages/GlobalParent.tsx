@@ -14,6 +14,7 @@ import {
 import DelaySettings from "@/components/parent/DelaySettings";
 import FamilyGoalSettings from "@/components/parent/FamilyGoalSettings";
 import CardLearningSection from "@/components/parent/CardLearningSection";
+import SkillMasteryPanel from "@/components/parent/SkillMasteryPanel";
 import { T, useT } from "@/i18n/T";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
@@ -226,6 +227,9 @@ export default function GlobalParent() {
 
       {/* Knowledge-card scan-and-quiz timeline */}
       <CardLearningSection />
+
+      {/* 各项技能掌握度（按年级） */}
+      <SkillMasteryPanel />
 
       {/* 完全没有任何学习数据 → 引导诊断 */}
       {!hasAnyActivity && (

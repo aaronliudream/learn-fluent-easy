@@ -1,33 +1,48 @@
 // Tracks which slang idioms the user has answered correctly.
 // Mastered idioms sink to the bottom; unseen / wrong ones float to the top.
-// Persists to Supabase when the user is signed in, with a localStorage cache
-// so the UI stays snappy and works offline.
+//
+// 4-DIM MASTERY (v3): each slang has a mastery_matrix:
+//   recognize — see English phrase, pick Chinese meaning  (en2cn)
+//   hear      — listen to a sentence, pick the slang      (listen) [phase 2]
+//   recall    — see Chinese / scenario / blank, recall    (cn2en, fill, scenario)
+//   use       — write a sentence using the slang          (compose, AI graded)
+// Each dim is an integer 0..4. A slang becomes 👑 mastered only when ALL
+// four dims ≥ 2 — guaranteeing the learner can recognise, hear, recall AND
+// produce the phrase. This mirrors the gaokao vocab mastery model.
 
 import { supabase } from "@/integrations/supabase/client";
 
 const LOCAL_KEY = "slang_mastery_v2";
 
+export type SlangDim = "recognize" | "hear" | "recall" | "use";
+export const SLANG_DIMS: SlangDim[] = ["recognize", "hear", "recall", "use"];
+export type SlangMatrix = Partial<Record<SlangDim, number>>;
+
 type Store = {
   correct: Record<number, number>;
   wrong: Record<number, number>;
   lastCorrectAt: Record<number, number>; // epoch ms of last correct answer
+  matrix: Record<number, SlangMatrix>;     // 4-dim matrix per idiom
+  reachedMasterAt: Record<number, number>; // epoch ms when 4 dims first all ≥ 2
 };
 
-let cache: Store = { correct: {}, wrong: {}, lastCorrectAt: {} };
+let cache: Store = { correct: {}, wrong: {}, lastCorrectAt: {}, matrix: {}, reachedMasterAt: {} };
 let loaded = false;
 
 function loadLocal(): Store {
   try {
     const raw = localStorage.getItem(LOCAL_KEY);
-    if (!raw) return { correct: {}, wrong: {}, lastCorrectAt: {} };
+    if (!raw) return { correct: {}, wrong: {}, lastCorrectAt: {}, matrix: {}, reachedMasterAt: {} };
     const p = JSON.parse(raw);
     return {
       correct: p.correct ?? {},
       wrong: p.wrong ?? {},
       lastCorrectAt: p.lastCorrectAt ?? {},
+      matrix: p.matrix ?? {},
+      reachedMasterAt: p.reachedMasterAt ?? {},
     };
   } catch {
-    return { correct: {}, wrong: {}, lastCorrectAt: {} };
+    return { correct: {}, wrong: {}, lastCorrectAt: {}, matrix: {}, reachedMasterAt: {} };
   }
 }
 
@@ -50,15 +65,21 @@ export async function loadSlangMastery(): Promise<Store> {
     if (!uid) return cache;
     const { data, error } = await supabase
       .from("slang_mastery")
-      .select("idiom_id, correct_count, wrong_count, last_correct_at")
+      .select("idiom_id, correct_count, wrong_count, last_correct_at, mastery_matrix, reached_master_at")
       .eq("user_id", uid);
     if (error || !data) return cache;
-    const next: Store = { correct: {}, wrong: {}, lastCorrectAt: {} };
+    const next: Store = { correct: {}, wrong: {}, lastCorrectAt: {}, matrix: {}, reachedMasterAt: {} };
     for (const row of data) {
       next.correct[row.idiom_id] = row.correct_count ?? 0;
       next.wrong[row.idiom_id] = row.wrong_count ?? 0;
       if (row.last_correct_at) {
         next.lastCorrectAt[row.idiom_id] = new Date(row.last_correct_at).getTime();
+      }
+      if (row.mastery_matrix && typeof row.mastery_matrix === "object") {
+        next.matrix[row.idiom_id] = row.mastery_matrix as SlangMatrix;
+      }
+      if (row.reached_master_at) {
+        next.reachedMasterAt[row.idiom_id] = new Date(row.reached_master_at).getTime();
       }
     }
     cache = next;

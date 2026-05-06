@@ -129,6 +129,13 @@ export default function PrimaryCulture() {
   const [quizPicked, setQuizPicked] = useState<string | null>(null);
   const [saidIt, setSaidIt] = useState(false);
   const [justStamped, setJustStamped] = useState(false);
+  const [shareUrl, setShareUrl] = useState<string | null>(null);
+
+  const seasonal = useMemo(() => getSeasonalCardId(), []);
+  const seasonalCard = useMemo(
+    () => (seasonal ? PRIMARY_CULTURE_CARDS.find((c) => c.id === seasonal.id) : null),
+    [seasonal]
+  );
 
   const cards = useMemo(() => {
     if (filter === "all") return PRIMARY_CULTURE_CARDS;

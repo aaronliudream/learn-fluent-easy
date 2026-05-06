@@ -299,6 +299,13 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* 02b — 4 子品牌入口（母品牌主页核心模块） */}
+      <section className="border-t border-[#1F3A2E]/10 bg-white">
+        <div className="mx-auto max-w-[1100px] px-6 py-16 md:px-10 md:py-24">
+          <BrandFamilyHero />
+        </div>
+      </section>
+
       {/* 03 — THREE CORE USPs (only 3, exactly as the screenshot says) */}
       <section className="border-t border-[#1F3A2E]/10">
         <div className="mx-auto max-w-[1100px] px-6 py-20 md:px-10 md:py-28">

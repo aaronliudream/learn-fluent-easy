@@ -192,8 +192,8 @@ export default function GlobalParent() {
         </button>
       </div>
 
-      {/* 🌟 顶部成就横幅 — 家长 3 秒看懂全年级进度 */}
-      <AchievementBanner />
+      {/* 🌟 顶部成就横幅 — 家长 3 秒看懂全年级进度（按主修学段自动适配） */}
+      <AchievementBanner defaultStage={mainSeg ?? "primary"} />
 
       {/* 🚦 本周 vs 上周 — 一目了然进步/退步 */}
       <ProgressSnapshot />

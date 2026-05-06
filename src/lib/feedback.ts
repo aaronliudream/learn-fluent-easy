@@ -166,3 +166,34 @@ export function fireEmojiConfetti(opts: {
     try { navigator.vibrate([30, 60, 30, 60, 80]); } catch { /* ignore */ }
   }
 }
+
+/**
+ * One-call tiered finish-celebration for any quiz/lesson completion.
+ * Pass percent (0-100). Handles confetti + toast + haptics by tier:
+ *   100      → emoji rain + vibrate + toast "完美！"
+ *   90-99    → emoji + short vibrate + "太棒了！"
+ *   70-89    → smaller emoji burst + "做得好！"
+ *   50-69    → gentle toast "再试一次会更好 💪"
+ *   < 50     → kind toast "别灰心，错的题已加入复习 ✨"
+ */
+import { toast } from "sonner";
+
+export function celebrateScore(percent: number, opts: { silent?: boolean } = {}) {
+  const pct = Math.max(0, Math.min(100, Math.round(percent)));
+  const silent = !!opts.silent;
+  if (pct >= 100) {
+    fireEmojiConfetti({ count: 60, vibrate: true });
+    if (!silent) toast.success("完美！🏆", { description: "全部答对，太厉害了！" });
+  } else if (pct >= 90) {
+    fireEmojiConfetti({ count: 40 });
+    try { navigator.vibrate?.(80); } catch { /* ignore */ }
+    if (!silent) toast.success("太棒了！🎉", { description: `得分 ${pct}%` });
+  } else if (pct >= 70) {
+    fireEmojiConfetti({ count: 24 });
+    if (!silent) toast.success("做得好！✨", { description: `得分 ${pct}%` });
+  } else if (pct >= 50) {
+    if (!silent) toast("再试一次会更好 💪", { description: `得分 ${pct}%，继续加油！` });
+  } else {
+    if (!silent) toast("别灰心 ✨", { description: "错的题已加入复习，下次更稳。" });
+  }
+}

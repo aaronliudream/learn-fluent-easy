@@ -78,16 +78,6 @@ export default function Junior() {
           <li>📈 自动按艾宾浩斯曲线安排复习</li>
         </ul>
       </div>
-      <div className="mt-4 grid gap-3">
-        <Link to="/social" className="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-rose-500 to-fuchsia-600 p-3 text-white shadow-tile transition hover:-translate-y-0.5">
-          <Sparkles className="size-5" />
-          <div className="flex-1">
-            <div className="text-sm font-extrabold">同学社区</div>
-            <div className="text-[11px] opacity-90">动态 · 排行榜 · 市集 · 合作答题</div>
-          </div>
-        </Link>
-      </div>
-      <div className="mt-3 flex justify-center"><OnlineWidget grade="junior" page="/junior" /></div>
     </main>
   );
 }

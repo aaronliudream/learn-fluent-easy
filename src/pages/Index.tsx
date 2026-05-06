@@ -95,14 +95,6 @@ const Index = () => {
       desc: "Climb the board with learners worldwide. Resets weekly.",
       gradient: "from-yellow-500 via-amber-500 to-orange-500",
     },
-    {
-      to: "/friends",
-      icon: UserPlus,
-      eyebrow: "Social",
-      title: "Add friends · Encourage each other",
-      desc: "See your friends' streaks and keep going together",
-      gradient: "from-pink-500 via-rose-500 to-red-500",
-    },
   ];
 
   const placementSection = {

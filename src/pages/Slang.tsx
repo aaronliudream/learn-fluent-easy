@@ -1061,8 +1061,7 @@ const Slang = () => {
 
       {/* ───────────── QUIZ RESULT ───────────── */}
       {mode === "quiz" && questions.length > 0 && qIdx >= questions.length && (
-        <SlangQuizResultCelebrate pct={Math.round((correctCount / questions.length) * 100)} />
-        ) && (<section className="rounded-3xl bg-card p-7 text-center shadow-card md:p-10">
+        <section className="rounded-3xl bg-card p-7 text-center shadow-card md:p-10">
           <div className="mx-auto mb-3 grid size-16 place-items-center rounded-2xl bg-grad-title text-white">
             <Target className="size-8" />
           </div>

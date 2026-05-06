@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak, prefetchTTSBatch, stopSpeaking } from "@/lib/speak";
 import { awardForCorrect, awardCoins, notifyWrong } from "@/lib/coins";
 import { cn } from "@/lib/utils";
+import { celebrateScore } from "@/lib/feedback";
 
 type Sentence = { en: string; cn: string };
 type Warm = { w: string; cn: string };
@@ -92,6 +93,7 @@ export default function PrimaryReadingPlay() {
       }, { onConflict: "user_id,article_id" });
       await awardCoins(stars * 5, "primary_reading");
     })();
+    celebrateScore(Math.round(accuracy * 100));
   }, [finished, a, stars, accuracy]);
 
   if (loading) return <main className="grid min-h-screen place-items-center"><Loader2 className="size-6 animate-spin text-muted-foreground" /></main>;

@@ -15,7 +15,7 @@ import SpeakingDemo from "@/components/SpeakingDemo";
  */
 const EN_COPY: Record<string, string> = {
   "登录": "Log in",
-  "已在 184 个国家上线": "Live in 184 countries",
+  "已在 184 个国家上线": "Built for learners worldwide",
   "说英语": "Speak English",
   "像玩游戏一样上头。": "the way you play your favorite game.",
   "5 分钟一节的小课、即时口语反馈、连胜系统让你真的停不下来。每天 5 分钟，就能开始。":
@@ -99,7 +99,7 @@ const EN_COPY: Record<string, string> = {
     "Practice real conversations with AI, get instant feedback, and improve your speaking in just 5 minutes a day.",
   "Start for free": "Start for free",
   "Try the 30-sec demo": "Try the 30-sec demo",
-  "4.9 rating · 10,000+ learners · Available worldwide": "4.9 rating · 10,000+ learners · Available worldwide",
+  "4.9 rating · 10,000+ learners · Available worldwide": "Loved by early learners · Available worldwide",
 
   "Why Big Moon English works": "Why Big Moon English works",
   "Three things, done right.": "Three things, done right.",
@@ -230,8 +230,8 @@ export default function LandingPage() {
                     {c.slice(1,2)}
                   </div>
                 ))}
-                <div className="grid size-8 place-items-center rounded-full border-2 border-[#EEF4FB] bg-[#3BA3E0] text-[9px] font-bold text-white">
-                  +14M
+                <div className="grid size-8 place-items-center rounded-full border-2 border-[#EEF4FB] bg-[#3BA3E0] text-[10px] font-bold text-white">
+                  +
                 </div>
               </div>
               <div className="flex flex-col">
@@ -241,7 +241,7 @@ export default function LandingPage() {
                   ))}
                 </div>
                 <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1F3A2E]/55">
-                  <L>4.9 rating · 10,000+ learners · Available worldwide</L>
+                  <L>Loved by early learners · Available worldwide</L>
                 </div>
               </div>
             </div>

@@ -193,8 +193,13 @@ export default function PrimaryGrade() {
             <Star className="size-3.5 fill-amber-400 stroke-amber-500" /> <b className="text-amber-600">{totalStars}</b>
           </span>
         </div>
-        <Link to="/primary/parent" className="inline-flex items-center gap-1 rounded-full border border-emerald-300 bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 hover:bg-emerald-100 dark:bg-emerald-950/30 dark:text-emerald-300">
-          <Users className="size-3" /> 家长
+        <Link
+          to="/parent"
+          className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-3.5 py-1.5 text-xs font-extrabold text-white shadow-md ring-2 ring-emerald-200 transition hover:-translate-y-0.5 hover:shadow-lg dark:ring-emerald-900"
+          aria-label="进入家长学习中心，查看孩子学习进度"
+        >
+          <Users className="size-4" /> 📊 学习进度
+          <span className="ml-0.5 hidden sm:inline opacity-90">查看 →</span>
         </Link>
       </div>
 

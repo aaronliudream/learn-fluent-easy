@@ -5313,6 +5313,8 @@ export type Database = {
           idiom_id: number
           last_correct_at: string | null
           last_result: string | null
+          mastery_matrix: Json
+          reached_master_at: string | null
           updated_at: string
           user_id: string
           wrong_count: number
@@ -5324,6 +5326,8 @@ export type Database = {
           idiom_id: number
           last_correct_at?: string | null
           last_result?: string | null
+          mastery_matrix?: Json
+          reached_master_at?: string | null
           updated_at?: string
           user_id: string
           wrong_count?: number
@@ -5335,6 +5339,8 @@ export type Database = {
           idiom_id?: number
           last_correct_at?: string | null
           last_result?: string | null
+          mastery_matrix?: Json
+          reached_master_at?: string | null
           updated_at?: string
           user_id?: string
           wrong_count?: number

@@ -10,6 +10,7 @@ import NoCopyGuard from "@/components/NoCopyGuard";
 import ReadingWatermark from "@/components/ReadingWatermark";
 import { recordMastery } from "@/lib/masteryProgress";
 import { celebrateScore } from "@/lib/feedback";
+import { ShareButton } from "@/components/share/ShareButton";
 
 type Article = {
   id: string;
@@ -431,6 +432,16 @@ export default function GaokaoReadingArticle() {
             <div className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground">
               <span className="font-semibold text-foreground">{answeredCount}</span>/{totalQ}
             </div>
+            <ShareButton
+              variant="icon"
+              item={{
+                type: "reading",
+                title: article.title,
+                wordCount: article.word_count,
+                difficulty: article.sub_band ?? undefined,
+                url: typeof window !== "undefined" ? window.location.href : "",
+              }}
+            />
             <Button size="sm" onClick={() => handleSubmit(false)} className="gap-1.5">
               <Send className="size-3.5" /> 交卷
             </Button>

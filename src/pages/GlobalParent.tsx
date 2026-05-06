@@ -447,6 +447,9 @@ export default function GlobalParent() {
         </p>
       </div>
 
+        </div>
+      </details>
+
       <div className="mt-6">
         <DelaySettings />
       </div>

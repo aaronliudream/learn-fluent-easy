@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
 import { Sparkles, Loader2, ArrowLeft } from "lucide-react";
-import BackLink from "@/components/BackLink";
 
 const SAMPLES = [
   "book 的复数形式是什么？",
@@ -15,10 +14,20 @@ const SAMPLES = [
   "What's the difference between 'affect' and 'effect'?",
 ];
 
+const DRAFT_KEY = "ask:draft";
+
 export default function Ask() {
-  const [question, setQuestion] = useState("");
+  const [question, setQuestion] = useState<string>(() => {
+    if (typeof window === "undefined") return "";
+    return sessionStorage.getItem(DRAFT_KEY) ?? "";
+  });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  // Persist draft so returning to this page restores user's input
+  useEffect(() => {
+    try { sessionStorage.setItem(DRAFT_KEY, question); } catch {}
+  }, [question]);
 
   async function submit() {
     const q = question.trim();
@@ -54,6 +63,8 @@ export default function Ask() {
         .select("slug")
         .single();
       if (insErr) throw insErr;
+      // Successful submit → clear draft
+      try { sessionStorage.removeItem(DRAFT_KEY); } catch {}
       navigate(`/q/${inserted.slug}`);
     } catch (e: any) {
       console.error(e);
@@ -65,9 +76,16 @@ export default function Ask() {
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-10">
-      <BackLink to="/" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回首页
-      </BackLink>
+      <button
+        type="button"
+        onClick={() => {
+          if (window.history.length > 1) navigate(-1);
+          else navigate("/");
+        }}
+        className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+      >
+        <ArrowLeft className="size-4" /> 返回
+      </button>
       <h1 className="text-3xl font-bold mb-2 flex items-center gap-2">
         <Sparkles className="w-7 h-7 text-primary" />
         提问 AI 知识卡

@@ -156,6 +156,7 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
     let kind: QuizKind;
     if (target === "recognize") kind = "en2cn";
     else if (target === "use") kind = "compose";
+    else if (target === "hear") kind = "listen";
     else {
       // recall (or hear-fallback) → rotate among the 3 recall drills
       const recallKinds: QuizKind[] = ["cn2en", "fill", "scenario"];
@@ -163,6 +164,8 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
     }
     // Don't bombard a brand-new slang with compose; gate it behind recognize ≥ 1.
     if (kind === "compose" && score("recognize") < 1) kind = "en2cn";
+    // Same rule for listen — don't ask user to recognise audio of a brand-new slang.
+    if (kind === "listen" && score("recognize") < 1) kind = "en2cn";
 
     const distractorPool = sourceForDistractors.filter((x) => x.id !== idiom.id);
     const distractors = shuffle(distractorPool).slice(0, 3);
@@ -213,6 +216,21 @@ function buildQuiz(pool: Idiom[] = IDIOMS, len = QUIZ_LEN): QuizQuestion[] {
         kind,
         prompt: "",
         context: idiom.example_cn,
+        options: opts,
+        answer: opts.indexOf(idiom.phrase),
+        idiom,
+      };
+    }
+    if (kind === "listen") {
+      // Listen drill: user hears the example sentence (with the slang in it),
+      // and must pick which slang phrase they heard. The prompt text is
+      // intentionally hidden in the UI — only audio is played.
+      const opts = shuffle([idiom, ...distractors]).map((x) => x.phrase);
+      return {
+        id: idiom.id,
+        kind,
+        prompt: idiom.example,           // played, not displayed
+        context: idiom.example_cn,       // shown after reveal
         options: opts,
         answer: opts.indexOf(idiom.phrase),
         idiom,

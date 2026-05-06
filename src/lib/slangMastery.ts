@@ -144,7 +144,7 @@ export async function recordSlangResult(id: number, correct: boolean, dim?: Slan
     if (s.reachedMasterAt[id]) {
       payload.reached_master_at = new Date(s.reachedMasterAt[id]).toISOString();
     }
-    await supabase.from("slang_mastery").upsert(payload, { onConflict: "user_id,idiom_id" });
+    await supabase.from("slang_mastery").upsert(payload as any, { onConflict: "user_id,idiom_id" });
   } catch {
     /* ignore — local cache wins, will sync on next successful write */
   }

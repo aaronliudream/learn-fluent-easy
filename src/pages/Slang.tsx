@@ -32,6 +32,9 @@ import {
   pickDailyPlan,
   getSlangProgress,
   getSlangLevel,
+  getSlangMatrix,
+  SLANG_DIMS,
+  type SlangDim,
 } from "@/lib/slangMastery";
 import { XPBurst } from "@/components/game/XPBurst";
 
@@ -42,6 +45,16 @@ type Mode = "browse" | "quiz";
 // scenario = read a Chinese real-life scene, pick the right English slang.
 // compose  = write a sentence using the slang in a given scenario (AI graded).
 type QuizKind = "en2cn" | "cn2en" | "fill" | "scenario" | "compose";
+
+/** Map a quiz kind to the mastery dimension it strengthens. */
+const KIND_TO_DIM: Record<QuizKind, SlangDim> = {
+  en2cn: "recognize",
+  cn2en: "recall",
+  fill: "recall",
+  scenario: "recall",
+  compose: "use",
+  // (listen → "hear" comes in phase 2)
+};
 
 export type ComposeGrade = {
   usedPhrase: boolean;
@@ -452,7 +465,7 @@ const Slang = () => {
       q.kind === "compose"
         ? composeGrade[q.id]?.verdict !== "needs_work"
         : picks[q.id] === q.answer;
-    recordSlangResult(q.idiom.id, correct);
+    recordSlangResult(q.idiom.id, correct, KIND_TO_DIM[q.kind]);
     setMasteryVersion((v) => v + 1);
   }, [revealed, qIdx, questions, picks, composeGrade]);
 

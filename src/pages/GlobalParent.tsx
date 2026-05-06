@@ -16,6 +16,7 @@ import FamilyGoalSettings from "@/components/parent/FamilyGoalSettings";
 import CardLearningSection from "@/components/parent/CardLearningSection";
 import SkillMasteryPanel from "@/components/parent/SkillMasteryPanel";
 import PacingSettings from "@/components/parent/PacingSettings";
+import QuizPacingSettings from "@/components/parent/QuizPacingSettings";
 import { T, useT } from "@/i18n/T";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
@@ -234,6 +235,9 @@ export default function GlobalParent() {
 
       {/* 学习节奏 & 个性化周计划 */}
       <PacingSettings />
+
+      {/* 测验节奏 & 题型比例 */}
+      <QuizPacingSettings />
 
       {/* 完全没有任何学习数据 → 引导诊断 */}
       {!hasAnyActivity && (

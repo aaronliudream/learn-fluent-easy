@@ -8,7 +8,6 @@ import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
-import { useRef } from "react";
 
 type Vocab = {
   id: string;

@@ -293,7 +293,10 @@ function QuizGame({ words, grade }: { words: Word[]; grade: number }) {
   }, [idx, queue]);
   const options = useMemo(() => {
     if (!cur) return [];
-    const distract = shuffle(words.filter(w => w.id !== cur.id)).slice(0,3).map(w => w.meaning_cn);
+    // 排除与正确答案中文相同的干扰项，避免出现两个相同选项
+    const distract = shuffle(
+      words.filter(w => w.id !== cur.id && w.meaning_cn !== cur.meaning_cn)
+    ).slice(0, 3).map(w => w.meaning_cn);
     return shuffle([cur.meaning_cn, ...distract]);
   }, [cur, words]);
 
@@ -357,7 +360,10 @@ function ListenGame({ words, grade }: { words: Word[]; grade: number }) {
   const cur = queue[idx];
   const options = useMemo(() => {
     if (!cur) return [];
-    const distract = shuffle(words.filter(w => w.id !== cur.id)).slice(0,3).map(w => w.word);
+    // 听辨题：避免出现拼写不同但中文相同的干扰项（如 child/kid 都是"孩子"会让用户无所适从）
+    const distract = shuffle(
+      words.filter(w => w.id !== cur.id && w.word !== cur.word && w.meaning_cn !== cur.meaning_cn)
+    ).slice(0, 3).map(w => w.word);
     return shuffle([cur.word, ...distract]);
   }, [cur, words]);
 

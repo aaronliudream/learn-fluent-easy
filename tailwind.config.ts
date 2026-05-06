@@ -4,6 +4,15 @@ export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
+  safelist: [
+    // 阅读卡片渐变色 from-* / to-* 来自数据库，Tailwind 静态扫描扫不到，必须 safelist
+    {
+      pattern:
+        /(from|to|via)-(rose|pink|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia)-(300|400|500|600)/,
+    },
+    "bg-gradient-to-br",
+    "bg-gradient-to-r",
+  ],
   theme: {
     container: {
       center: true,

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
-import { ArrowLeft, Volume2, Award, Sparkles, Check, Eye, Ear, GitCompare, Gamepad2, Mic } from "lucide-react";
+import { ArrowLeft, Volume2, Award, Sparkles, Check, Eye, Ear, GitCompare, Gamepad2, Mic, Share2, Download, CalendarDays } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { PRIMARY_CULTURE_CARDS, CULTURE_CATEGORIES, type CultureCard } from "@/data/primaryCultureCards";
 import RolePlayTheater from "@/components/RolePlayTheater";
@@ -23,6 +23,92 @@ function speak(text: string, rate = 0.85) {
   u.rate = rate;
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(u);
+}
+
+// ===== 节日时令推送 =====
+// 根据今天日期返回当下/即将到来的节日卡 id
+function getSeasonalCardId(now = new Date()): { id: string; daysAway: number; label: string } | null {
+  const m = now.getMonth() + 1;
+  const d = now.getDate();
+  const today = m * 100 + d;
+  // [起始, 结束, cardId, 标签]
+  const windows: Array<[number, number, string, string]> = [
+    [1215, 1231, "f1", "圣诞节就快到啦"],
+    [1010, 1101, "f2", "万圣节季节"],
+    [1101, 1130, "f3", "感恩节季节"],
+    [301, 430, "f4", "复活节春天到"],
+    [201, 215, "f5", "情人节就要到了"],
+    [101, 110, "f7", "新年新气象"],
+    [501, 515, "f8", "母亲节快到了"],
+    [615, 625, "f8", "父亲节快到了"],
+  ];
+  for (const [s, e, id, label] of windows) {
+    if (today >= s && today <= e) return { id, daysAway: 0, label };
+  }
+  return null;
+}
+
+// ===== 家长分享卡 =====
+async function buildShareCard(card: CultureCard, stampedCount: number, total: number): Promise<string> {
+  const W = 720, H = 1080;
+  const canvas = document.createElement("canvas");
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext("2d")!;
+  // 背景渐变
+  const g = ctx.createLinearGradient(0, 0, W, H);
+  g.addColorStop(0, "#fff7ed"); g.addColorStop(1, "#fde68a");
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  // 顶部装饰
+  ctx.fillStyle = "#f59e0b"; ctx.fillRect(0, 0, W, 12);
+  // 标题
+  ctx.fillStyle = "#92400e";
+  ctx.font = "bold 28px system-ui, -apple-system, sans-serif";
+  ctx.fillText("📔 我的文化护照", 60, 90);
+  ctx.font = "bold 18px system-ui";
+  ctx.fillStyle = "#b45309";
+  ctx.fillText("MY CULTURE PASSPORT · 1ST GRADE", 60, 120);
+  // 主 emoji 圆框
+  ctx.beginPath(); ctx.arc(W / 2, 340, 130, 0, Math.PI * 2); ctx.closePath();
+  ctx.fillStyle = "#ffffff"; ctx.fill();
+  ctx.lineWidth = 8; ctx.strokeStyle = "#f59e0b"; ctx.stroke();
+  ctx.font = "150px system-ui";
+  ctx.textAlign = "center"; ctx.fillStyle = "#000";
+  ctx.fillText(card.emoji, W / 2, 390);
+  ctx.textAlign = "left";
+  // 今天学了
+  ctx.fillStyle = "#78350f";
+  ctx.font = "bold 22px system-ui";
+  ctx.textAlign = "center";
+  ctx.fillText("今天我学了", W / 2, 530);
+  ctx.fillStyle = "#7c2d12";
+  ctx.font = "bold 52px system-ui";
+  ctx.fillText(card.title_cn, W / 2, 600);
+  ctx.fillStyle = "#b45309";
+  ctx.font = "bold 30px system-ui";
+  ctx.fillText(card.title_en, W / 2, 645);
+  // 一句话
+  ctx.fillStyle = "#92400e";
+  ctx.font = "italic 22px system-ui";
+  const sentence = `"${card.sentence_en || card.title_en}"`;
+  ctx.fillText(sentence, W / 2, 720);
+  // 进度条
+  const barX = 80, barY = 820, barW = W - 160, barH = 28;
+  ctx.fillStyle = "#fed7aa"; ctx.beginPath();
+  (ctx as any).roundRect?.(barX, barY, barW, barH, 14);
+  ctx.fill();
+  const pct = stampedCount / total;
+  const grad = ctx.createLinearGradient(barX, 0, barX + barW, 0);
+  grad.addColorStop(0, "#fbbf24"); grad.addColorStop(1, "#f97316");
+  ctx.fillStyle = grad; ctx.beginPath();
+  (ctx as any).roundRect?.(barX, barY, Math.max(barW * pct, 16), barH, 14);
+  ctx.fill();
+  ctx.fillStyle = "#7c2d12"; ctx.font = "bold 22px system-ui";
+  ctx.fillText(`已盖 ${stampedCount} / ${total} 章 文化印章`, W / 2, barY + 80);
+  // 底部署名
+  ctx.fillStyle = "#a16207"; ctx.font = "bold 18px system-ui";
+  ctx.fillText("Big Moon English · 一年级文化小课堂", W / 2, H - 60);
+  ctx.textAlign = "left";
+  return canvas.toDataURL("image/png");
 }
 
 const STEPS = [

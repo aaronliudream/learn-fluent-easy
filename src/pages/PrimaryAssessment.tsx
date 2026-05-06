@@ -309,7 +309,7 @@ export default function PrimaryAssessment() {
     return (
       <div className="min-h-screen bg-background">
         <div className="mx-auto max-w-3xl px-4 py-12 text-center">
-          <BackLink to={`/primary/grade/${grade}`} />
+          <BackLink to={`/primary/grade/${grade}`}>返回</BackLink>
           <p className="mt-6 text-sm text-muted-foreground">本年级词汇不足，无法生成题目。请先完成一些课程。</p>
         </div>
       </div>
@@ -325,7 +325,7 @@ export default function PrimaryAssessment() {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-rose-50 to-violet-50 dark:from-amber-950/20 dark:via-rose-950/20 dark:to-violet-950/20">
         <div className="mx-auto max-w-3xl px-4 py-6">
           <div className="mb-3 flex items-center justify-between print:hidden">
-            <BackLink to={`/primary/grade/${grade}`} />
+            <BackLink to={`/primary/grade/${grade}`}>返回</BackLink>
             <button onClick={() => window.print()}
               className="inline-flex items-center gap-1 rounded-full bg-amber-600 px-3 py-1.5 text-xs font-extrabold text-white hover:bg-amber-700">
               <Printer className="size-3.5" /> 下载证书 PDF
@@ -416,7 +416,7 @@ export default function PrimaryAssessment() {
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-rose-50 to-violet-50 dark:from-amber-950/20 dark:via-rose-950/20 dark:to-violet-950/20">
       <div className="mx-auto max-w-2xl px-4 py-5">
         <div className="mb-3 flex items-center justify-between">
-          <BackLink to={`/primary/grade/${grade}`} />
+          <BackLink to={`/primary/grade/${grade}`}>返回</BackLink>
           <div className="flex items-center gap-2">
             <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-extrabold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
               {mode === "challenge" ? `🏝️ ${unit?.title_cn ?? ""} · 单元挑战` : "🩺 月度体检"}

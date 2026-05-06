@@ -5347,6 +5347,33 @@ export type Database = {
         }
         Relationships: []
       }
+      spark_events: {
+        Row: {
+          context: Json
+          created_at: string
+          event: string
+          id: string
+          session_id: string
+          user_id: string | null
+        }
+        Insert: {
+          context?: Json
+          created_at?: string
+          event: string
+          id?: string
+          session_id: string
+          user_id?: string | null
+        }
+        Update: {
+          context?: Json
+          created_at?: string
+          event?: string
+          id?: string
+          session_id?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       stage_test_attempts: {
         Row: {
           attempt_no: number

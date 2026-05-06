@@ -18,7 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Download, Trash2, Shield, FileText, LogIn, Trophy, Save, BookMarked, Bookmark, Sparkles, Mail, MessageSquare } from "lucide-react";
+import { Download, Trash2, Shield, FileText, LogIn, LogOut, UserCog, Trophy, Save, BookMarked, Bookmark, Sparkles, Mail, MessageSquare } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { loadProgress } from "@/lib/guestProgress";
 import { T, useT } from "@/i18n/T";
@@ -373,6 +373,38 @@ const Account = () => {
           </Button>
         </div>
       </section>
+
+      {/* Session actions */}
+      {user && (
+        <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">
+          <h3 className="text-base font-bold"><T>登录会话</T></h3>
+          <p className="mt-1 text-sm text-muted-foreground">
+            <T>退出当前账号，或登录另一个账号继续学习。</T>
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <Button
+              variant="outline"
+              onClick={async () => {
+                await supabase.auth.signOut();
+                toast.success(t("已退出，请用其他账号登录"));
+                navigate("/auth");
+              }}
+            >
+              <UserCog className="size-4" /> <T>切换到其他账号</T>
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={async () => {
+                await supabase.auth.signOut();
+                toast.success(t("已退出登录"));
+                navigate("/");
+              }}
+            >
+              <LogOut className="size-4" /> <T>退出登录</T>
+            </Button>
+          </div>
+        </section>
+      )}
 
       {/* Support */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">

@@ -24,6 +24,7 @@ import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
 import WordQuest from "@/components/WordQuest";
 import WordDuel from "@/components/WordDuel";
+import { toast } from "sonner";
 
 type Vocab = {
   id: string;

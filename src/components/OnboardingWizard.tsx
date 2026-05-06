@@ -329,55 +329,6 @@ export default function OnboardingWizard({
         )}
 
         {/* STEP 4 — Pick pet + first micro-lesson teaser */}
-        {step === 3 && (
-          <div>
-            <div className="mb-1 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
-              <Heart className="size-3.5" /> Your buddy
-            </div>
-            <h2 className="text-2xl font-extrabold leading-tight">Choose your learning buddy</h2>
-            <p className="mb-5 mt-1 text-sm text-muted-foreground">
-              Your buddy levels up every time you study. Pick one to start your first 60-second lesson.
-            </p>
-            <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3">
-              {PETS.map((p) => {
-                const sel = pet === p.id;
-                return (
-                  <button
-                    key={p.id}
-                    type="button"
-                    onClick={() => setPet(p.id)}
-                    className={
-                      "flex flex-col items-center gap-2 rounded-2xl border-2 p-5 text-center transition " +
-                      (sel
-                        ? "border-primary bg-primary/5 ring-2 ring-primary/20"
-                        : "border-border hover:bg-secondary")
-                    }
-                  >
-                    <div className="text-5xl">{p.emoji}</div>
-                    <div className="text-base font-extrabold">{p.nameEn}</div>
-                    <div className="text-[11px] text-muted-foreground">{p.tagEn}</div>
-                    {sel && (
-                      <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
-                        <Check className="size-3" /> Picked
-                      </div>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-            {pet && (
-              <div className="mt-5 rounded-2xl border border-primary/30 bg-primary/5 p-4 text-sm">
-                <div className="flex items-center gap-2 font-extrabold">
-                  <Trophy className="size-4 text-primary" /> First lesson is ready
-                </div>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  60 seconds. One real conversation. Your buddy earns its first XP with you.
-                </p>
-              </div>
-            )}
-          </div>
-        )}
-
         <div className="mt-7 flex items-center justify-between gap-3">
           <Button
             variant="ghost"

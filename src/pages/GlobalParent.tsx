@@ -204,7 +204,7 @@ export default function GlobalParent() {
           <div className="flex items-center gap-2">
             <Sparkles className="size-4 text-violet-500" />
             <span className="text-sm font-extrabold md:text-base"><T>📂 查看详细数据</T></span>
-            <span className="text-[11px] text-muted-foreground"><T>· 成长报告 / 本周快报 / 学段足迹 / 雷达 / 薄弱点 / 趋势</T></span>
+            <span className="text-[11px] text-muted-foreground"><T>· 成长报告 / 本周快报 / 学段足迹 / 雷达 / 提升方向 / 趋势</T></span>
           </div>
           <span className="text-xs font-bold text-violet-600 group-open:hidden"><T>展开 ▾</T></span>
           <span className="text-xs font-bold text-violet-600 hidden group-open:inline"><T>收起 ▴</T></span>
@@ -236,7 +236,7 @@ export default function GlobalParent() {
       {/* 测验节奏 & 题型比例 */}
       <QuizPacingSettings />
 
-      {/* 完全没有任何学习数据 → 引导诊断 */}
+      {/* 完全没有任何学习数据 → 引导评估 */}
       {!hasAnyActivity && (
         <section className="mb-4 rounded-3xl border-2 border-dashed border-violet-300 bg-gradient-to-br from-violet-50 to-sky-50 p-6 text-center">
           <div className="text-3xl">🌱</div>
@@ -346,13 +346,13 @@ export default function GlobalParent() {
         </div>
       </section>
 
-      {/* 薄弱点 Top 5 */}
+      {/* 提升方向 Top 5 */}
       <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
         <div className="mb-3 flex items-center gap-1 text-sm font-extrabold">
           <AlertTriangle className="size-4 text-rose-500" /> <T>本周需要关注（近 14 天未解决错题）</T>
         </div>
         {d.weakness.length === 0 ? (
-          <div className="py-6 text-center text-xs text-muted-foreground">🎉 <T>没有未解决的薄弱点，状态非常好！</T></div>
+          <div className="py-6 text-center text-xs text-muted-foreground">🎉 <T>各项掌握得很棒，暂无需要重点提升的内容！</T></div>
         ) : (
           <ul className="space-y-2">
             {d.weakness.map((w, i) => (
@@ -442,7 +442,7 @@ export default function GlobalParent() {
         <p className="mt-1 leading-relaxed">
           <T>① 有效学习时长：仅在屏幕可见 + 60 秒内有交互时计入，自动剔除挂机。</T><br/>
           <T>② 学习足迹：孩子可能跨年级学习，系统按时长自动判定主修学段，所有正确答题都计入掌握。</T><br/>
-          <T>③ 薄弱点：近 14 天未解决的错题，按错误次数排序，点击右侧按钮可立即陪练。</T><br/>
+          <T>③ 提升方向：近 14 天可加强的题目，按练习次数排序，点击右侧按钮可立即陪练。</T><br/>
           <T>④ 数据每次进入页面刷新；如刚做完题未显示，请稍候重新进入。</T>
         </p>
       </div>

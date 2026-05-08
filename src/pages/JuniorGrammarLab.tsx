@@ -672,6 +672,27 @@ export default function JuniorGrammarLab() {
             <Zap className="size-3" /> {state.xp} XP
           </div>
         </div>
+
+        {(hasLesson || hasImmersion) && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {hasLesson && (
+              <button
+                onClick={() => setOverview("lesson")}
+                className="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur px-3 py-1.5 text-xs font-bold hover:bg-white/30 transition"
+              >
+                <BookOpen className="size-3.5" /> 老师讲解
+              </button>
+            )}
+            {hasImmersion && (
+              <button
+                onClick={() => setOverview("immersion")}
+                className="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur px-3 py-1.5 text-xs font-bold hover:bg-white/30 transition"
+              >
+                <Target className="size-3.5" /> 情景沉浸
+              </button>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Mnemonic */}

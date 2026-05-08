@@ -798,13 +798,22 @@ function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, o
 }
 
 /* ─────────────── Phase: Done ─────────────── */
-function DoneScreen({ state, mistakes, onReplay, onAskTutor }: { state: LabState; mistakes: Mistake[]; onReplay: () => void; onAskTutor: (m: Mistake) => void }) {
+function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPointId }: {
+  state: LabState; mistakes: Mistake[];
+  onReplay: () => void; onAskTutor: (m: Mistake) => void;
+  bossPassed?: boolean; nextPointId?: string | null;
+}) {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-8 animate-fade-in">
       <div className="text-center space-y-3">
         <div className="text-7xl">🎉</div>
         <h2 className="font-display text-4xl">通关庆典</h2>
         <p className="ink-dim">本次累计 {state.xp} XP · 最佳连对 {state.bestStreak}</p>
+        {bossPassed && (
+          <div className="inline-flex items-center gap-2 rounded-full bg-mint-soft text-mint px-4 py-2 text-sm font-semibold">
+            <Check size={16} /> Boss 100% 通关 · 已解锁下一关
+          </div>
+        )}
       </div>
       <div className="glass-card-strong rounded-2xl p-6">
         <div className="text-xs uppercase tracking-widest text-amber mb-3">已解锁成就</div>
@@ -838,8 +847,14 @@ function DoneScreen({ state, mistakes, onReplay, onAskTutor }: { state: LabState
           ))}
         </div>
       )}
-      <div className="text-center">
-        <button onClick={onReplay} className="btn-primary inline-flex items-center gap-2"><RotateCw size={16} /> 再来一次</button>
+      <div className="text-center flex flex-wrap gap-3 justify-center">
+        <button onClick={onReplay} className="btn-ghost inline-flex items-center gap-2"><RotateCw size={16} /> 再来一次</button>
+        {bossPassed && nextPointId && (
+          <Link to={`/junior/grammar-lab/${nextPointId}`} className="btn-primary inline-flex items-center gap-2">
+            进入下一关 <ArrowRight size={16} />
+          </Link>
+        )}
+        <Link to="/junior/grammar" className="btn-ghost inline-flex items-center gap-2">返回语法地图</Link>
       </div>
     </div>
   );

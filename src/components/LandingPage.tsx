@@ -40,8 +40,9 @@ export default function LandingPage() {
           </div>
         </nav>
 
-        <div className="mx-auto max-w-[1100px] px-6 pb-16 pt-6 md:px-10 md:pb-24 md:pt-10">
-          <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-[1200px] px-6 pb-16 pt-6 md:px-10 md:pb-24 md:pt-10">
+          <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-12">
+          <div className="max-w-2xl text-center md:text-left">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-[11px] font-bold tracking-[0.18em] text-[#3BA3E0] shadow-[0_4px_14px_-6px_rgba(59,163,224,0.4)]">
               <Sparkles className="size-3.5" /> 专为中国 K-12 学生打造
             </div>
@@ -49,13 +50,13 @@ export default function LandingPage() {
               小学到高中，<br className="hidden md:block" />
               一个英语 App 全搞定。
             </h1>
-            <p className="mt-6 max-w-xl mx-auto font-serif text-base italic text-[#1F3A2E]/70 md:text-lg">
+            <p className="mt-6 max-w-xl mx-auto md:mx-0 font-serif text-base italic text-[#1F3A2E]/70 md:text-lg">
               Real English from real American kids, for every age in China.
             </p>
-            <p className="mt-6 max-w-lg mx-auto text-base leading-relaxed text-[#1F3A2E]/70 md:text-lg">
+            <p className="mt-6 max-w-lg mx-auto md:mx-0 text-base leading-relaxed text-[#1F3A2E]/70 md:text-lg">
               人教版 / 外研版同步教材，AI 跟读评分、错题讲解、阅读完形语法专项 —— 一站式备考小升初 · 中考 · 高考。
             </p>
-            <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">
+            <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center md:justify-start">
               <Link
                 to="/auth"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#E8743C] px-8 py-4 text-sm font-bold tracking-[0.16em] text-white shadow-[0_10px_24px_-10px_rgba(232,116,60,0.6)] transition hover:bg-[#d4632d]"
@@ -69,6 +70,26 @@ export default function LandingPage() {
                 <Mic className="size-4" /> 试听 30 秒 AI 口语
               </a>
             </div>
+          </div>
+          {/* Spark 吉祥物视频 */}
+          <div className="relative mx-auto w-full max-w-[440px]">
+            <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-[#FFD9A8] via-[#FFB8C8] to-[#A8D8FF] opacity-60 blur-2xl" />
+            <div className="overflow-hidden rounded-[2rem] bg-white shadow-[0_30px_60px_-20px_rgba(31,58,46,0.35)] ring-1 ring-white/60">
+              <video
+                src="/spark-hero.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                aria-label="Spark — Big Moon English 学习伙伴"
+                className="block aspect-square w-full object-cover"
+              />
+            </div>
+            <div className="mt-3 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-[#1F3A2E]/50">
+              ✨ Meet Spark · 你的英语学习伙伴
+            </div>
+          </div>
           </div>
         </div>
       </section>

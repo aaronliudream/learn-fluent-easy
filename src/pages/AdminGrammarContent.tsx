@@ -182,7 +182,7 @@ export default function AdminGrammarContent() {
 
       const { error: upErr } = await supabase
         .from("junior_grammar_points")
-        .update(updatePayload)
+        .update(updatePayload as any)
         .eq("id", pt.id);
       if (upErr) {
         toast.error(`保存失败：${pt.title}`, { description: upErr.message });

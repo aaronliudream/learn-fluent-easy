@@ -377,23 +377,45 @@ function DrillScreen({ items, onDone, onMistake }: { items: DrillItem[]; onDone:
   const [val, setVal] = useState("");
   const [result, setResult] = useState<null | "ok" | "ng">(null);
   const [correct, setCorrect] = useState(0);
+  const [grading, setGrading] = useState(false);
+  const [aiFocus, setAiFocus] = useState<string>("");
+  const [aiFix, setAiFix] = useState<string>("");
 
   if (!items.length) {
     return <SkipPhase emoji="✍️" label="情境翻译" onSkip={() => onDone(0, 0)} />;
   }
   const it = items[i];
 
-  const submit = () => {
-    if (!val.trim()) return;
-    const ok = fuzzyMatch(val, it.en, it.accepted || []);
-    setResult(ok ? "ok" : "ng");
-    if (ok) setCorrect((c) => c + 1);
-    else onMistake({ phase: "drill", stem: it.cn, picked: val, correct: it.en });
+  const submit = async () => {
+    if (!val.trim() || grading || result !== null) return;
+    // Quick local pass: if it already matches, no need to spend AI credits.
+    if (fuzzyMatch(val, it.en, it.accepted || [])) {
+      setResult("ok"); setCorrect((c) => c + 1); return;
+    }
+    setGrading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("grade-grammar-translation", {
+        body: { pointTitle: pointTitleRef, mnemonic: mnemonicRef, cn: it.cn, modelEn: it.en, userEn: val },
+      });
+      if (error) throw error;
+      const pass = !!(data as any)?.pass;
+      setAiFocus((data as any)?.focus || "");
+      setAiFix((data as any)?.fix || "");
+      setResult(pass ? "ok" : "ng");
+      if (pass) setCorrect((c) => c + 1);
+      else onMistake({ phase: "drill", stem: it.cn, picked: val, correct: it.en });
+    } catch {
+      // AI unavailable → fall back to fuzzy result (already failed above)
+      setResult("ng");
+      onMistake({ phase: "drill", stem: it.cn, picked: val, correct: it.en });
+    } finally {
+      setGrading(false);
+    }
   };
 
   const next = () => {
     if (i + 1 >= items.length) onDone(correct + (result === "ok" ? 0 : 0), items.length);
-    else { setI(i + 1); setVal(""); setResult(null); }
+    else { setI(i + 1); setVal(""); setResult(null); setAiFocus(""); setAiFix(""); }
   };
 
   return (
@@ -407,27 +429,37 @@ function DrillScreen({ items, onDone, onMistake }: { items: DrillItem[]; onDone:
         <textarea
           value={val}
           onChange={(e) => setVal(e.target.value)}
-          disabled={result !== null}
+          disabled={result !== null || grading}
           placeholder="用今天学的语法点翻译成英文…"
           className="lab-input min-h-[88px] resize-none"
-          onKeyDown={(e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) submit(); }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
+              e.preventDefault();
+              if (result === null) submit(); else next();
+            }
+          }}
         />
         {result === "ok" && (
-          <div className="bg-mint-soft rounded-xl p-4 text-mint flex items-center gap-2">
-            <Check size={16} /> 答得不错！
+          <div className="bg-mint-soft rounded-xl p-4 text-mint space-y-1">
+            <div className="flex items-center gap-2"><Check size={16} /> 语法点用对了！</div>
+            {aiFocus && <div className="text-xs ink-dim">{aiFocus}</div>}
           </div>
         )}
         {result === "ng" && (
           <div className="bg-rose-soft rounded-xl p-4 space-y-2">
-            <div className="text-rose flex items-center gap-2 font-semibold"><X size={16} /> 还差一点</div>
-            <div className="font-mono text-mint">{it.en}</div>
+            <div className="text-rose flex items-center gap-2 font-semibold"><X size={16} /> 语法点还没用对</div>
+            {aiFocus && <div className="text-sm">{aiFocus}</div>}
+            {aiFix && <div className="font-mono text-mint text-sm">建议：{aiFix}</div>}
+            <div className="text-xs ink-dim">参考：<span className="font-mono">{it.en}</span></div>
           </div>
         )}
         <div className="flex justify-end gap-2">
           {result === null ? (
-            <button onClick={submit} className="btn-primary">提交</button>
+            <button onClick={submit} disabled={grading} className="btn-primary">
+              {grading ? "AI 批改中…" : "提交 (Enter)"}
+            </button>
           ) : (
-            <button onClick={next} className="btn-primary">下一题 <ArrowRight size={14} className="inline" /></button>
+            <button onClick={next} className="btn-primary">下一题 (Enter) <ArrowRight size={14} className="inline" /></button>
           )}
         </div>
       </div>

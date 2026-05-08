@@ -1,7 +1,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { render, screen, act, cleanup } from "@testing-library/react";
+import { render, act, cleanup } from "@testing-library/react";
+import { screen } from "@testing-library/dom";
 import React from "react";
 import { I18nProvider, useI18n } from "@/i18n/I18nProvider";
 import { T } from "@/i18n/T";

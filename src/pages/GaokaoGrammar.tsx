@@ -191,6 +191,21 @@ export default function GaokaoGrammar() {
         <ModuleStageTests segment="gaokao" grade={gradeNum} module="grammar" />
       )}
 
+      {/* ===== 特色专题: 虚拟语气 ===== */}
+      <section className="mb-6">
+        <a
+          href="/grammar-lab/subjunctive-mood.html"
+          className="block rounded-2xl border-2 border-amber-300/60 bg-gradient-to-br from-amber-50 to-rose-50 p-5 transition hover:-translate-y-0.5 hover:border-amber-400 hover:shadow-lg dark:from-amber-950/30 dark:to-rose-950/30"
+        >
+          <div className="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">
+            <span className="rounded-full bg-amber-200/70 px-2 py-0.5 dark:bg-amber-900/50">特色专题</span>
+            <span className="rounded-full bg-rose-200/70 px-2 py-0.5 dark:bg-rose-900/50">高考压轴</span>
+          </div>
+          <div className="text-lg font-extrabold">虚拟语气全攻克</div>
+          <div className="mt-1 text-xs text-muted-foreground">9 关闯关式课程 · 从 If I were you 到混合虚拟、倒装、含蓄虚拟</div>
+        </a>
+      </section>
+
       {/* ===== Hero: 今日推荐 / 待复习 ===== */}
       <section className="mb-6 grid gap-4 md:grid-cols-3">
         {/* 总掌握度 */}

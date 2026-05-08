@@ -1,907 +1,809 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, BookOpen, Lock, RotateCw, Sparkles, Star, Target, Trophy, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Eye, EyeOff, Moon, RotateCw, Sparkles, Star, Sun, Trophy, X, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
-import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
-import { fireEmojiConfetti } from "@/lib/feedback";
-import {
-  recordJuniorGrammarAttempt,
-  type JuniorGrammarErrorReason,
-} from "@/lib/juniorGrammarFsrs";
-import {
-  GrammarQuestionCard,
-  type GrammarQuestion,
-  type AnswerResult,
-} from "@/components/grammar/GrammarQuestionCard";
-import TutorChat from "@/components/tutor/TutorChat";
-import PaywallDialog from "@/components/PaywallDialog";
-import { consumeQuestionQuota } from "@/lib/quota";
+import { recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
-import { ImmersionCards, type ImmersionCard } from "@/components/grammar/ImmersionCards";
+import { fireEmojiConfetti } from "@/lib/feedback";
+import { awardForCorrect } from "@/lib/coins";
 import ReactMarkdown from "react-markdown";
 
-/**
- * Junior Grammar 全攻克 Lab — gamified, level-based learning experience
- * inspired by /grammar-lab/subjunctive but data-driven from the same DB
- * tables every other junior grammar point uses.
- *
- *   • 3 levels per point (新手 / 熟练 / 大师), bucketed by question difficulty
- *   • Stars per level (60% / 80% / 100%)
- *   • XP, streak, level-clear bonus, achievement unlocks
- *   • Per-point progress persisted to localStorage + FSRS recorded normally
- *   • Reuses GrammarQuestionCard for actual question UI
- */
+/* ──────────────────────────────────────────────────────────────
+   Junior Grammar Lab — generic 6-phase template inspired by
+   /grammar-lab/subjunctive-mood.html. One Lab per grammar point.
+   Phases:
+     0 Briefing → 1 TeacherLesson → 2 Foundation → 3 Reflex
+     → 4 Drill → 5 Correction → 6 Exam → 7 Boss → 8 Done
+   ────────────────────────────────────────────────────────────── */
+
+type ContrastRow = { lhs: string; rhs: string };
+type ReflexCard = { cn: string; en: string; keyword?: string };
+type DrillItem = { situation: string; cn: string; en: string; accepted?: string[] };
+type CorrectionTask = { wrong: string; model: string; hint: string; why: string };
+type BossQ = { stem: string; option_a: string; option_b: string; option_c: string; option_d: string; correct_answer: string; trap: string; why: string };
+type ExamQ = {
+  id: string; stem: string;
+  option_a?: string | null; option_b?: string | null; option_c?: string | null; option_d?: string | null;
+  correct_answer?: string | null; explanation?: string | null;
+};
 
 type Pt = {
   id: string;
   title: string;
-  cefr: string;
+  cefr: string | null;
   mnemonic: string | null;
-  explanation_md: string | null;
+  hook_line: string | null;
+  hook_line_cn: string | null;
   teacher_script: LessonSegment[] | null;
-  immersion_cards: ImmersionCard[] | null;
+  contrast_table: ContrastRow[] | null;
+  reflex_cards: ReflexCard[] | null;
+  situation_drills: DrillItem[] | null;
+  correction_tasks: CorrectionTask[] | null;
+  boss_questions: BossQ[] | null;
 };
 
-type Level = {
-  id: 1 | 2 | 3;
-  name: string;
-  emoji: string;
-  desc: string;
-  color: string;
-  questions: GrammarQuestion[];
-};
-
-type LevelProgress = {
-  bestStars: number;
-  bestPct: number;
-  attempts: number;
-  lastPlayedAt: string;
-};
+type Mistake = { phase: string; stem: string; picked: string; correct: string; why?: string };
 
 type LabState = {
   xp: number;
-  levels: Record<number, LevelProgress>;
+  streak: number;
+  bestStreak: number;
+  phasesDone: number[];   // phase indices completed
   achievements: string[];
+  mistakes: Mistake[];
 };
 
-const QUESTIONS_PER_LEVEL = 5;
-
-const LEVEL_META: Record<1 | 2 | 3, Omit<Level, "id" | "questions">> = {
-  1: {
-    name: "新手训练",
-    emoji: "🌱",
-    desc: "基础题目，建立信心",
-    color: "from-emerald-400 to-teal-500",
-  },
-  2: {
-    name: "熟练运用",
-    emoji: "⚡",
-    desc: "进阶题目，灵活应用",
-    color: "from-sky-400 to-indigo-500",
-  },
-  3: {
-    name: "大师挑战",
-    emoji: "👑",
-    desc: "高难题目，挑战满分",
-    color: "from-amber-400 to-rose-500",
-  },
-};
-
-const ACHIEVEMENTS: { id: string; emoji: string; name: string; desc: string }[] = [
-  { id: "first_clear", emoji: "🎓", name: "初出茅庐", desc: "首次通关任意一关" },
-  { id: "all_three", emoji: "📚", name: "全关通过", desc: "通关所有 3 个关卡" },
-  { id: "perfect_lv1", emoji: "🌟", name: "新手满分", desc: "新手关满星" },
-  { id: "perfect_lv2", emoji: "✨", name: "熟练满分", desc: "熟练关满星" },
-  { id: "perfect_lv3", emoji: "👑", name: "大师满分", desc: "大师关满星" },
-  { id: "all_perfect", emoji: "🏆", name: "全攻克", desc: "三关全部满星" },
-  { id: "streak10", emoji: "🔥", name: "十连击", desc: "单关连对 10 题" },
+const PHASES = [
+  { id: 0, key: "brief", name: "情境钩子", emoji: "🎬" },
+  { id: 1, key: "lesson", name: "老师讲堂", emoji: "👩‍🏫" },
+  { id: 2, key: "foundation", name: "核心公式", emoji: "📐" },
+  { id: 3, key: "reflex", name: "反射卡", emoji: "⚡" },
+  { id: 4, key: "drill", name: "情境翻译", emoji: "✍️" },
+  { id: 5, key: "correction", name: "改错挑战", emoji: "🛠️" },
+  { id: 6, key: "exam", name: "真题练习", emoji: "📚" },
+  { id: 7, key: "boss", name: "Boss 冲刺", emoji: "👑" },
+  { id: 8, key: "done", name: "通关庆典", emoji: "🎉" },
 ];
 
-function loadState(pointId: string): LabState {
+const ACHIEVEMENTS = [
+  { id: "first_step",        icon: "🎯", cn: "迈出第一步",     desc: "完成情境钩子",                xp: 10 },
+  { id: "lesson_complete",   icon: "📖", cn: "听完一课",       desc: "听完老师全程",                xp: 30 },
+  { id: "reflex_master",     icon: "⚡", cn: "反射大师",       desc: "10 张反射卡全对",             xp: 60 },
+  { id: "drill_warrior",     icon: "✍️", cn: "翻译战士",       desc: "情境翻译正确率 ≥ 80%",        xp: 75 },
+  { id: "fix_it_pro",        icon: "🛠️", cn: "改错能手",       desc: "5 道改错全对",                xp: 80 },
+  { id: "exam_clear",        icon: "📚", cn: "真题闯关",       desc: "完成真题阶段",                xp: 50 },
+  { id: "boss_slayer",       icon: "👑", cn: "Boss 终结者",    desc: "击败 Boss 关卡",              xp: 150 },
+  { id: "perfect_run",       icon: "💯", cn: "完美通关",       desc: "全程零错通关",                xp: 200 },
+  { id: "streak_5",          icon: "🔥", cn: "5 连对",         desc: "答题 5 连对",                 xp: 25 },
+  { id: "streak_10",         icon: "🌟", cn: "10 连对",        desc: "答题 10 连对",                xp: 60 },
+  { id: "lab_complete",      icon: "🏆", cn: "Lab 通关",       desc: "全部 8 个阶段全部完成",       xp: 100 },
+  { id: "comeback",          icon: "💪", cn: "再战归来",       desc: "回头复盘一道错题",            xp: 20 },
+];
+
+const XP = { reflex: 5, drill: 10, correction: 15, exam: 12, boss: 25, phase_clear: 20 };
+
+const lvlOf = (xp: number) => Math.floor(Math.sqrt(xp / 50)) + 1;
+
+const storageKey = (id: string) => `junior-lab:v2:${id}`;
+
+const loadState = (id: string): LabState => {
   try {
-    const raw = localStorage.getItem(`junior-lab:${pointId}`);
+    const raw = localStorage.getItem(storageKey(id));
     if (raw) return JSON.parse(raw);
-  } catch {
-    /* ignore */
-  }
-  return { xp: 0, levels: {}, achievements: [] };
-}
-function saveState(pointId: string, state: LabState) {
-  try {
-    localStorage.setItem(`junior-lab:${pointId}`, JSON.stringify(state));
-  } catch {
-    /* ignore */
-  }
-}
+  } catch {}
+  return { xp: 0, streak: 0, bestStreak: 0, phasesDone: [], achievements: [], mistakes: [] };
+};
 
-function starsFromPct(pct: number): number {
-  if (pct >= 100) return 3;
-  if (pct >= 80) return 2;
-  if (pct >= 60) return 1;
-  return 0;
-}
+const saveState = (id: string, s: LabState) => {
+  try { localStorage.setItem(storageKey(id), JSON.stringify(s)); } catch {}
+};
 
-function shuffle<T>(arr: T[]): T[] {
-  const a = arr.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+const normalize = (s: string) =>
+  s.toLowerCase().replace(/[.,!?;:'"`]/g, "").replace(/\s+/g, " ").trim();
 
-/** Bucket questions into 3 levels by difficulty; backfill empty buckets from neighbours. */
-function bucketLevels(qs: (GrammarQuestion & { difficulty?: number | null })[]): Level[] {
-  const by = { 1: [] as GrammarQuestion[], 2: [] as GrammarQuestion[], 3: [] as GrammarQuestion[] };
-  for (const q of qs) {
-    const d = (q as any).difficulty ?? 2;
-    const k = (Math.min(3, Math.max(1, d)) as 1 | 2 | 3);
-    by[k].push(q);
+function fuzzyMatch(input: string, target: string, accepted: string[] = []): boolean {
+  const n = normalize(input);
+  if (!n) return false;
+  if (n === normalize(target)) return true;
+  for (const a of accepted) if (n === normalize(a)) return true;
+  // tolerate small typos via Levenshtein-1 on word level
+  const tw = normalize(target).split(" ");
+  const iw = n.split(" ");
+  if (Math.abs(tw.length - iw.length) > 1) return false;
+  let diff = 0;
+  for (let k = 0; k < Math.max(tw.length, iw.length); k++) {
+    if ((tw[k] || "") !== (iw[k] || "")) diff++;
+    if (diff > 1) return false;
   }
-  // Backfill: if a bucket is empty, steal from the nearest non-empty
-  ([1, 2, 3] as const).forEach((k) => {
-    if (by[k].length === 0) {
-      const others = ([1, 2, 3] as const).filter((x) => x !== k && by[x].length > 1);
-      if (others.length) {
-        const donor = others[0];
-        const moved = by[donor].shift();
-        if (moved) by[k].push(moved);
-      }
-    }
-  });
-  return ([1, 2, 3] as const).map((id) => ({
-    id,
-    ...LEVEL_META[id],
-    questions: by[id],
-  }));
+  return true;
 }
 
-export default function JuniorGrammarLab() {
-  const { id } = useParams<{ id: string }>();
-  const [pt, setPt] = useState<Pt | null>(null);
-  const [allQs, setAllQs] = useState<(GrammarQuestion & { difficulty?: number })[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [state, setState] = useState<LabState>({ xp: 0, levels: {}, achievements: [] });
-
-  // Active session
-  const [active, setActive] = useState<Level | null>(null);
-  const [sessionQs, setSessionQs] = useState<GrammarQuestion[]>([]);
-  const [results, setResults] = useState<Record<string, AnswerResult>>({});
-  const [streak, setStreak] = useState(0);
-  const [bestStreak, setBestStreak] = useState(0);
-  const [tutorFor, setTutorFor] = useState<GrammarQuestion | null>(null);
-  const [paywall, setPaywall] = useState({ open: false, used: 5, limit: 5 });
-  const [unlockedAch, setUnlockedAch] = useState<string | null>(null);
-
-  // Pre-level briefing & overview screens
-  const [briefingFor, setBriefingFor] = useState<Level | null>(null);
-  const [overview, setOverview] = useState<"lesson" | "immersion" | null>(null);
-
-  const finishedRef = useRef(false);
-
-  useEffect(() => {
-    if (!id) return;
-    setState(loadState(id));
-    (async () => {
-      setLoading(true);
-      const [a, b] = await Promise.all([
-        supabase
-          .from("junior_grammar_points")
-          .select("id,title,cefr,mnemonic,explanation_md,teacher_script,immersion_cards")
-          .eq("id", id)
-          .maybeSingle(),
-        supabase
-          .from("junior_grammar_questions")
-          .select(
-            "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty",
-          )
-          .eq("point_id", id)
-          .order("sort_order"),
-      ]);
-      setPt(a.data as Pt);
-      setAllQs((b.data ?? []) as any);
-      setLoading(false);
-    })();
-  }, [id]);
-
-  const levels = useMemo(() => bucketLevels(allQs), [allQs]);
-
-  // ─── Achievement helper ───
-  const grantAch = (state: LabState, achId: string): LabState => {
-    if (state.achievements.includes(achId)) return state;
-    const next = { ...state, achievements: [...state.achievements, achId] };
-    setUnlockedAch(achId);
-    setTimeout(() => setUnlockedAch((x) => (x === achId ? null : x)), 4000);
-    return next;
-  };
-
-  // ─── Open level briefing first ───
-  const openLevel = (lv: Level) => {
-    if (lv.questions.length === 0) return;
-    setBriefingFor(lv);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  // ─── Actually start a level (after briefing) ───
-  const startLevel = (lv: Level) => {
-    if (lv.questions.length === 0) return;
-    finishedRef.current = false;
-    setResults({});
-    setStreak(0);
-    setBestStreak(0);
-    setSessionQs(shuffle(lv.questions).slice(0, QUESTIONS_PER_LEVEL));
-    setActive(lv);
-    setBriefingFor(null);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const exitLevel = () => {
-    setActive(null);
-    setResults({});
-    setStreak(0);
-    setBestStreak(0);
-    finishedRef.current = false;
-  };
-
-  // ─── Per-question result ───
-  const onAnswered = async (q: GrammarQuestion, result: AnswerResult) => {
-    if (results[q.id]) return;
-    const quota = await consumeQuestionQuota();
-    if (!quota.allowed) {
-      setPaywall({ open: true, used: quota.used, limit: quota.limit });
-      return;
-    }
-    setResults((prev) => ({ ...prev, [q.id]: result }));
-    const ok = result.kind === "correct" || result.kind === "acceptable";
-    if (ok) {
-      const next = streak + 1;
-      setStreak(next);
-      setBestStreak((b) => Math.max(b, next));
-      await awardForCorrect(next, "junior_grammar_lab", q.id, "junior_grammar", result.latencyMs);
-      const correctSoFar = Object.values({ ...results, [q.id]: result }).filter(
-        (r) => r.kind === "correct" || r.kind === "acceptable",
-      ).length;
-      if (correctSoFar % 5 === 0) await awardForBlock("junior_grammar");
-    } else {
-      setStreak(0);
-      notifyWrong();
-    }
-    if (pt) {
-      await recordJuniorGrammarAttempt({
-        pointId: pt.id,
-        questionType: q.question_type || "mcq",
-        isCorrect: ok,
-        latencyMs: result.latencyMs,
-        errorReason:
-          result.kind === "wrong"
-            ? (result.errorReason as JuniorGrammarErrorReason | undefined)
-            : undefined,
-      });
-    }
-  };
-
-  // ─── Compute session score ───
-  const correctCount = Object.values(results).filter(
-    (r) => r.kind === "correct" || r.kind === "acceptable",
-  ).length;
-  const total = sessionQs.length;
-  const allDone = active && total > 0 && Object.keys(results).length === total;
-  const pct = total ? Math.round((correctCount / total) * 100) : 0;
-  const stars = starsFromPct(pct);
-
-  // ─── On finish → record progress ───
-  useEffect(() => {
-    if (!allDone || !active || !pt || finishedRef.current) return;
-    finishedRef.current = true;
-
-    let next = { ...state };
-    const prev = next.levels[active.id];
-    const prevStars = prev?.bestStars ?? 0;
-    const prevPct = prev?.bestPct ?? 0;
-    const newStars = Math.max(prevStars, stars);
-    const newPct = Math.max(prevPct, pct);
-    next.levels = {
-      ...next.levels,
-      [active.id]: {
-        bestStars: newStars,
-        bestPct: newPct,
-        attempts: (prev?.attempts ?? 0) + 1,
-        lastPlayedAt: new Date().toISOString(),
-      },
-    };
-    // XP: 10 per star + 30 clear bonus if ≥1 star
-    next.xp += stars * 10 + (stars >= 1 ? 30 : 0);
-
-    // Achievements
-    if (stars >= 1) next = grantAch(next, "first_clear");
-    if (stars === 3) next = grantAch(next, `perfect_lv${active.id}`);
-    if (bestStreak >= 10) next = grantAch(next, "streak10");
-    const lvCleared = Object.values(next.levels).filter((l) => l.bestStars >= 1).length;
-    if (lvCleared >= 3) next = grantAch(next, "all_three");
-    const lvPerfect = Object.values(next.levels).filter((l) => l.bestStars === 3).length;
-    if (lvPerfect >= 3) next = grantAch(next, "all_perfect");
-
-    setState(next);
-    saveState(pt.id, next);
-
-    if (pct >= 70) {
-      fireEmojiConfetti({ vibrate: pct === 100, count: pct === 100 ? 60 : 36 });
-    }
-  }, [allDone, active, pt, stars, pct, bestStreak, state]);
-
-  if (loading) {
-    return (
-      <main className="grid min-h-screen place-items-center text-sm text-muted-foreground">
-        加载中…
-      </main>
-    );
-  }
-  if (!pt) {
-    return (
-      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-        <Link to="/junior/grammar" className="mb-3 inline-flex items-center gap-1 text-sm">
-          <ArrowLeft className="size-4" /> 返回考点列表
-        </Link>
-        <p className="text-sm text-muted-foreground">考点未找到</p>
-      </main>
-    );
-  }
-
-  // ════════════ COURSE OVERVIEW (lesson / immersion) ════════════
-  if (overview === "lesson" && pt.teacher_script && pt.teacher_script.length > 0) {
-    return (
-      <CosmicShell>
-        <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-          <button
-            onClick={() => setOverview(null)}
-            className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
-          >
-            <ArrowLeft className="size-4" /> 返回 Lab
-          </button>
-          <TeacherLessonPlayer
-            segments={pt.teacher_script}
-            pointTitle={pt.title}
-            onContinue={() => setOverview("immersion")}
-            onSkip={() => setOverview(null)}
-          />
-        </main>
-      </CosmicShell>
-    );
-  }
-  if (overview === "immersion" && pt.immersion_cards && pt.immersion_cards.length > 0) {
-    return (
-      <CosmicShell>
-        <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-          <button
-            onClick={() => setOverview(null)}
-            className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
-          >
-            <ArrowLeft className="size-4" /> 返回 Lab
-          </button>
-          <ImmersionCards cards={pt.immersion_cards} onContinue={() => setOverview(null)} />
-        </main>
-      </CosmicShell>
-    );
-  }
-
-  // ════════════ LEVEL BRIEFING (pre-game) ════════════
-  if (briefingFor) {
-    const lv = briefingFor;
-    const sampleQ = lv.questions[0];
-    return (
-      <CosmicShell>
-        <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-          <button
-            onClick={() => setBriefingFor(null)}
-            className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
-          >
-            <ArrowLeft className="size-4" /> 返回关卡地图
-          </button>
-
-          <div
-            className={cn(
-              "rounded-3xl bg-gradient-to-br p-6 sm:p-8 text-white shadow-xl",
-              lv.color,
-            )}
-          >
-            <div className="text-[11px] font-bold uppercase tracking-widest opacity-90">
-              Level {lv.id} · 课前简报
-            </div>
-            <h1 className="mt-1 text-3xl font-extrabold">
-              {lv.emoji} {lv.name}
-            </h1>
-            <p className="mt-1 text-sm opacity-90">{lv.desc}</p>
-
-            {/* Hook */}
-            <div className="mt-5 rounded-2xl bg-white/15 backdrop-blur p-4">
-              <div className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">
-                🎯 本关任务
-              </div>
-              <div className="text-sm font-bold">
-                完成 {Math.min(lv.questions.length, QUESTIONS_PER_LEVEL)} 题{lv.id === 3 ? "高难度" : lv.id === 2 ? "进阶" : "基础"}训练，争取 60% 通关 / 80% 双星 / 100% 满星。
-              </div>
-            </div>
-
-            {/* Mnemonic —核心公式 */}
-            {pt.mnemonic && (
-              <div className="mt-3 rounded-2xl bg-white/15 backdrop-blur p-4">
-                <div className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">
-                  🔑 核心记忆
-                </div>
-                <div className="text-base font-extrabold">{pt.mnemonic}</div>
-              </div>
-            )}
-
-            {/* 例句 from sample question */}
-            {sampleQ && (
-              <div className="mt-3 rounded-2xl bg-white/15 backdrop-blur p-4">
-                <div className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">
-                  📖 题型预览
-                </div>
-                <div className="text-sm font-bold opacity-95">{sampleQ.stem}</div>
-              </div>
-            )}
-          </div>
-
-          <button
-            onClick={() => startLevel(lv)}
-            className="mt-6 w-full rounded-full bg-gradient-to-r from-amber-400 to-rose-500 px-6 py-4 text-base font-extrabold text-white shadow-xl hover:shadow-2xl transition active:scale-[0.99]"
-          >
-            🚀 开始挑战 Level {lv.id}
-          </button>
-
-          <button
-            onClick={() => setBriefingFor(null)}
-            className="mt-3 w-full rounded-full bg-white/10 backdrop-blur px-6 py-2 text-sm font-bold text-white/80 hover:text-white border border-white/20"
-          >
-            返回地图
-          </button>
-        </main>
-      </CosmicShell>
-    );
-  }
-
-  // ════════════ ACTIVE LEVEL VIEW ════════════
-  if (active) {
-    return (
-      <CosmicShell>
-      <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 relative">
-        <button
-          onClick={exitLevel}
-          className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
-        >
-          <ArrowLeft className="size-4" /> 返回关卡地图
-        </button>
-
-        {/* Level header */}
-        <div
-          className={cn(
-            "rounded-3xl bg-gradient-to-br p-5 text-white shadow-md",
-            active.color,
-          )}
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="text-xs font-bold uppercase tracking-widest opacity-90">
-                Level {active.id}
-              </div>
-              <h1 className="mt-0.5 text-2xl font-extrabold">
-                {active.emoji} {active.name}
-              </h1>
-              <p className="text-xs opacity-90 mt-0.5">{active.desc}</p>
-            </div>
-            <div className="text-right">
-              <div className="text-[10px] font-bold uppercase tracking-widest opacity-90">连击</div>
-              <div className="text-3xl font-extrabold tabular-nums">
-                {streak}
-                {streak >= 3 && <span className="text-base"> 🔥</span>}
-              </div>
-            </div>
-          </div>
-          <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/30">
-            <div
-              className="h-full bg-white transition-all"
-              style={{ width: `${total ? (Object.keys(results).length / total) * 100 : 0}%` }}
-            />
-          </div>
-          <div className="mt-1 text-right text-[11px] font-bold opacity-90 tabular-nums">
-            {Object.keys(results).length} / {total}
-          </div>
-        </div>
-
-        {/* Mnemonic */}
-        {pt.mnemonic && (
-          <div className="mt-4 rounded-2xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 dark:from-amber-950/30 dark:to-rose-950/20 p-3 text-center">
-            <div className="text-[10px] font-bold uppercase tracking-widest text-amber-700 dark:text-amber-300">
-              🔑 一句话记住
-            </div>
-            <div className="mt-0.5 text-sm font-bold text-amber-800 dark:text-amber-200">
-              {pt.mnemonic}
-            </div>
-          </div>
-        )}
-
-        {/* Questions */}
-        <div className="mt-5 space-y-4">
-          {sessionQs.map((q, i) => (
-            <GrammarQuestionCard
-              key={q.id}
-              question={q}
-              index={i}
-              onAnswered={(r) => onAnswered(q, r)}
-              onAskTutor={() => setTutorFor(q)}
-              enableTtsForStem={false}
-            />
-          ))}
-        </div>
-
-        {/* Result panel */}
-        {allDone && (
-          <section className="mt-6 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 dark:from-amber-950/30 dark:to-rose-950/30 p-6 text-center shadow-sm">
-            <Trophy className="mx-auto size-12 text-amber-500" />
-            <h2 className="mt-2 text-xl font-extrabold">
-              {pct === 100
-                ? "🌟 满分通关！"
-                : pct >= 80
-                  ? "✨ 出色完成！"
-                  : pct >= 60
-                    ? "👍 顺利通关！"
-                    : "💪 再来一次会更好！"}
-            </h2>
-            <p className="mt-1 text-sm text-muted-foreground">
-              答对 {correctCount} / {total} · 正确率{" "}
-              <span className="font-extrabold text-amber-600">{pct}%</span>
-            </p>
-            <div className="mt-3 flex items-center justify-center gap-1.5">
-              {[1, 2, 3].map((s) => (
-                <Star
-                  key={s}
-                  className={cn(
-                    "size-8 transition",
-                    s <= stars
-                      ? "fill-amber-400 text-amber-500 drop-shadow"
-                      : "text-muted-foreground/30",
-                  )}
-                />
-              ))}
-            </div>
-            {stars >= 1 && (
-              <div className="mt-3 inline-flex items-center gap-1 rounded-full bg-amber-500/20 px-3 py-1 text-xs font-bold text-amber-700 dark:text-amber-300">
-                <Zap className="size-3" /> +{stars * 10 + 30} XP
-              </div>
-            )}
-
-            {/* Mistake review */}
-            {(() => {
-              const wrongs = sessionQs.filter(
-                (q) => results[q.id] && results[q.id].kind === "wrong",
-              );
-              if (wrongs.length === 0) return null;
-              return (
-                <div className="mt-5 mx-auto max-w-md rounded-2xl bg-card/90 p-4 text-left shadow-inner">
-                  <div className="text-[10px] font-bold uppercase tracking-widest text-rose-600 mb-2 flex items-center gap-1">
-                    📝 错题复盘 ({wrongs.length})
-                  </div>
-                  <ul className="space-y-2.5">
-                    {wrongs.map((q) => (
-                      <li key={q.id} className="rounded-xl border border-rose-200 bg-rose-50/60 dark:bg-rose-950/20 p-3">
-                        <div className="text-xs font-bold text-foreground">{q.stem}</div>
-                        {q.correct_answer && (
-                          <div className="mt-1 text-[11px]">
-                            <span className="font-bold text-emerald-600">正确：</span>
-                            <span className="text-foreground">{q.correct_answer}</span>
-                          </div>
-                        )}
-                        {q.explanation && (
-                          <div className="mt-1 text-[11px] text-muted-foreground">
-                            💡 {q.explanation}
-                          </div>
-                        )}
-                        <button
-                          onClick={() => setTutorFor(q)}
-                          className="mt-2 inline-flex items-center gap-1 rounded-full bg-indigo-100 dark:bg-indigo-950/40 px-2.5 py-1 text-[10px] font-bold text-indigo-700 dark:text-indigo-300"
-                        >
-                          🤖 问 AI 老师
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })()}
-
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
-              <button
-                onClick={() => startLevel(active)}
-                className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-5 py-2 text-sm font-extrabold text-white shadow"
-              >
-                <RotateCw className="size-4" /> 再挑战
-              </button>
-              <button
-                onClick={exitLevel}
-                className="inline-flex items-center gap-1.5 rounded-full border-2 border-indigo-300 bg-card px-5 py-2 text-sm font-extrabold text-indigo-600 shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-950/30"
-              >
-                🗺️ 返回地图
-              </button>
-            </div>
-          </section>
-        )}
-
-        {tutorFor && (
-          <TutorChat
-            context="junior_grammar"
-            questionRef={tutorFor.id}
-            questionSnapshot={{
-              point: pt.title,
-              cefr: pt.cefr,
-              stem: tutorFor.stem,
-              question_type: tutorFor.question_type,
-              options:
-                tutorFor.question_type === "mcq"
-                  ? {
-                      A: tutorFor.option_a,
-                      B: tutorFor.option_b,
-                      C: tutorFor.option_c,
-                      D: tutorFor.option_d,
-                    }
-                  : undefined,
-              correct_answer: tutorFor.correct_answer,
-              accepted_answers: tutorFor.accepted_answers,
-              user_result: results[tutorFor.id]?.kind,
-              explanation: tutorFor.explanation,
-            }}
-            open={!!tutorFor}
-            onClose={() => setTutorFor(null)}
-          />
-        )}
-
-        <PaywallDialog
-          open={paywall.open}
-          onClose={() => setPaywall((p) => ({ ...p, open: false }))}
-          trigger="daily_quota_exhausted"
-          used={paywall.used}
-          limit={paywall.limit}
+/* ─────────────── Cosmic shell + theme ─────────────── */
+function CosmicShell({ children, theme, focus }: { children: React.ReactNode; theme: "dark" | "light"; focus: boolean }) {
+  const dark = theme === "dark";
+  return (
+    <div
+      className="min-h-screen relative overflow-x-hidden"
+      style={{
+        background: dark
+          ? "radial-gradient(ellipse at 18% 12%, rgba(125,211,192,.10), transparent 55%), radial-gradient(ellipse at 82% 88%, rgba(232,181,106,.08), transparent 55%), radial-gradient(ellipse at 50% 50%, #1c0e3d 0%, #0a0a1f 75%)"
+          : "radial-gradient(ellipse at 18% 12%, rgba(43,169,145,.08), transparent 55%), radial-gradient(ellipse at 82% 88%, rgba(192,138,62,.06), transparent 55%), radial-gradient(ellipse at 50% 50%, #f3eee2 0%, #faf7f1 75%)",
+        color: dark ? "#f0ebe0" : "#1a1820",
+        fontFamily: "'Inter', system-ui, sans-serif",
+      }}
+    >
+      {!focus && dark && (
+        <div className="pointer-events-none fixed inset-0 z-0 opacity-50"
+             style={{
+               backgroundImage:
+                 "radial-gradient(1px 1px at 12% 22%,#fff,transparent),radial-gradient(1px 1px at 67% 14%,#fff,transparent),radial-gradient(1.5px 1.5px at 84% 71%,#fff,transparent),radial-gradient(1px 1px at 33% 78%,#fff,transparent),radial-gradient(1px 1px at 92% 33%,#fff,transparent),radial-gradient(2px 2px at 8% 88%,#fff,transparent),radial-gradient(1px 1px at 48% 48%,#fff,transparent),radial-gradient(1px 1px at 22% 56%,#fff,transparent)",
+               backgroundSize: "700px 700px",
+               animation: "twinkle 9s ease-in-out infinite",
+             }}
         />
-
-        {unlockedAch && <AchievementToast id={unlockedAch} />}
-      </main>
-      </CosmicShell>
-    );
-  }
-
-  // ════════════ MAP / OVERVIEW VIEW ════════════
-  const totalStars = Object.values(state.levels).reduce((s, l) => s + l.bestStars, 0);
-  const allCleared = levels.every((l) => (state.levels[l.id]?.bestStars ?? 0) >= 1);
-  const hasLesson = !!(pt.teacher_script && pt.teacher_script.length > 0);
-  const hasImmersion = !!(pt.immersion_cards && pt.immersion_cards.length > 0);
-
-  return (
-    <CosmicShell>
-    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 relative">
-      <Link
-        to="/junior/grammar"
-        className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
-      >
-        <ArrowLeft className="size-4" /> 返回考点列表
-      </Link>
-
-      {/* Hero */}
-      <div className="rounded-3xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-6 text-white shadow-md">
-        <div className="text-[11px] font-bold uppercase tracking-widest opacity-90">
-          🚀 全攻克 Lab · CEFR {pt.cefr}
-        </div>
-        <h1 className="mt-1 text-2xl font-extrabold">{pt.title}</h1>
-        <p className="mt-1 text-xs opacity-90">3 关 · 每关 {QUESTIONS_PER_LEVEL} 题 · 满星挑战</p>
-
-        <div className="mt-4 flex items-center gap-4">
-          <div className="flex items-center gap-1">
-            {Array.from({ length: 9 }).map((_, i) => (
-              <Star
-                key={i}
-                className={cn(
-                  "size-4",
-                  i < totalStars
-                    ? "fill-amber-300 text-amber-300"
-                    : "text-white/40",
-                )}
-              />
-            ))}
-          </div>
-          <div className="ml-auto inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-xs font-bold">
-            <Zap className="size-3" /> {state.xp} XP
-          </div>
-        </div>
-
-        {(hasLesson || hasImmersion) && (
-          <div className="mt-4 flex flex-wrap gap-2">
-            {hasLesson && (
-              <button
-                onClick={() => setOverview("lesson")}
-                className="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur px-3 py-1.5 text-xs font-bold hover:bg-white/30 transition"
-              >
-                <BookOpen className="size-3.5" /> 老师讲解
-              </button>
-            )}
-            {hasImmersion && (
-              <button
-                onClick={() => setOverview("immersion")}
-                className="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur px-3 py-1.5 text-xs font-bold hover:bg-white/30 transition"
-              >
-                <Target className="size-3.5" /> 情景沉浸
-              </button>
-            )}
-          </div>
-        )}
-      </div>
-
-      {/* Mnemonic */}
-      {pt.mnemonic && (
-        <div className="mt-4 rounded-2xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 dark:from-amber-950/30 dark:to-rose-950/20 p-4 text-center">
-          <div className="text-[10px] font-bold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-1">
-            🔑 一句话记住
-          </div>
-          <div className="text-sm font-bold text-amber-800 dark:text-amber-200">{pt.mnemonic}</div>
-        </div>
       )}
-
-      {/* Level map */}
-      <h2 className="mt-6 mb-3 text-base font-extrabold flex items-center gap-1.5 text-white">
-        🗺️ 关卡地图
-      </h2>
-      <div className="space-y-3">
-        {levels.map((lv, idx) => {
-          const prev = idx > 0 ? levels[idx - 1] : null;
-          const prevCleared = !prev || (state.levels[prev.id]?.bestStars ?? 0) >= 1;
-          const locked = !prevCleared;
-          const prog = state.levels[lv.id];
-          const noQs = lv.questions.length === 0;
-          return (
-            <button
-              key={lv.id}
-              disabled={locked || noQs}
-              onClick={() => openLevel(lv)}
-              className={cn(
-                "w-full text-left rounded-3xl p-5 shadow-sm transition relative overflow-hidden",
-                "bg-gradient-to-br text-white",
-                lv.color,
-                (locked || noQs) && "opacity-50 cursor-not-allowed grayscale",
-                !locked && !noQs && "hover:shadow-lg hover:scale-[1.01] active:scale-[0.99]",
-              )}
-            >
-              <div className="flex items-center gap-4">
-                <div className="text-4xl flex-shrink-0">{lv.emoji}</div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-[10px] font-bold uppercase tracking-widest opacity-90">
-                    Level {lv.id}
-                  </div>
-                  <div className="text-lg font-extrabold">{lv.name}</div>
-                  <div className="text-xs opacity-90">{lv.desc}</div>
-                  <div className="mt-1.5 flex items-center gap-2 text-[11px] font-bold opacity-95">
-                    <span>{Math.min(lv.questions.length, QUESTIONS_PER_LEVEL)} 题</span>
-                    {prog && <span>· 最佳 {prog.bestPct}%</span>}
-                    {prog && prog.attempts > 0 && <span>· 尝试 {prog.attempts} 次</span>}
-                  </div>
-                </div>
-                <div className="flex-shrink-0 text-right">
-                  {locked ? (
-                    <Lock className="size-6 opacity-90" />
-                  ) : noQs ? (
-                    <span className="text-xs opacity-90">暂无题目</span>
-                  ) : (
-                    <div className="flex items-center gap-0.5">
-                      {[1, 2, 3].map((s) => (
-                        <Star
-                          key={s}
-                          className={cn(
-                            "size-5",
-                            s <= (prog?.bestStars ?? 0)
-                              ? "fill-amber-300 text-amber-300"
-                              : "text-white/40",
-                          )}
-                        />
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Achievements */}
-      <h2 className="mt-8 mb-3 text-base font-extrabold flex items-center gap-1.5 text-white">
-        <Sparkles className="size-4" /> 成就 ({state.achievements.length}/{ACHIEVEMENTS.length})
-      </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-        {ACHIEVEMENTS.map((a) => {
-          const owned = state.achievements.includes(a.id);
-          return (
-            <div
-              key={a.id}
-              className={cn(
-                "rounded-2xl border-2 p-3 text-center transition",
-                owned
-                  ? "border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 text-amber-900 shadow-md"
-                  : "border-dashed border-white/30 bg-white/5 text-white/70 opacity-80",
-              )}
-            >
-              <div className="text-2xl">{a.emoji}</div>
-              <div className="mt-1 text-[11px] font-extrabold">{a.name}</div>
-              <div className={cn("text-[10px]", owned ? "text-amber-700" : "text-white/60")}>{a.desc}</div>
-            </div>
-          );
-        })}
-      </div>
-
-      {allCleared && (
-        <div className="mt-6 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 dark:from-amber-950/30 dark:to-rose-950/30 p-5 text-center">
-          <Trophy className="mx-auto size-10 text-amber-500" />
-          <div className="mt-2 text-lg font-extrabold">🎉 三关全部通过！</div>
-          <p className="mt-1 text-xs text-muted-foreground">
-            继续刷高星数挑战满星，或选下一个考点
-          </p>
-          <Link
-            to="/junior/grammar"
-            className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-2 text-sm font-extrabold text-white shadow"
-          >
-            📚 下一个考点
-          </Link>
-        </div>
-      )}
-
-      {unlockedAch && <AchievementToast id={unlockedAch} />}
-    </main>
-    </CosmicShell>
-  );
-}
-
-/**
- * Cosmic backdrop — deep gradient + animated stars, mimicking the
- * subjunctive lab's signature look.
- */
-function CosmicShell({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0b0a1f] via-[#1a0f3a] to-[#2a1454]">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            "radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.7), transparent 50%), radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1px 1px at 85% 65%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(2px 2px at 10% 70%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1.5px 1.5px at 90% 90%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1px 1px at 30% 10%, rgba(255,255,255,0.6), transparent 50%)",
-          backgroundSize: "100% 100%",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 -left-40 size-[600px] rounded-full opacity-30 blur-3xl"
-        style={{ background: "radial-gradient(circle, #ff79c6 0%, transparent 70%)" }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-40 -right-40 size-[600px] rounded-full opacity-30 blur-3xl"
-        style={{ background: "radial-gradient(circle, #50fa7b 0%, transparent 70%)" }}
-      />
+      <style>{`
+        @keyframes twinkle { 0%,100%{opacity:.30} 50%{opacity:.65} }
+        .glass-card { background: ${dark ? "rgba(255,255,255,.03)" : "rgba(255,255,255,.7)"}; border: 1px solid ${dark ? "rgba(240,235,224,.10)" : "rgba(26,24,32,.10)"}; }
+        .glass-card-strong { background: ${dark ? "rgba(255,255,255,.05)" : "rgba(255,255,255,.85)"}; border: 1px solid ${dark ? "rgba(240,235,224,.18)" : "rgba(26,24,32,.18)"}; }
+        .ink-dim { color: ${dark ? "#9c9588" : "#5a5469"}; }
+        .ink-faint { color: ${dark ? "#5a5469" : "#9c9588"}; }
+        .text-mint { color: ${dark ? "#7dd3c0" : "#2ba991"}; }
+        .text-amber { color: ${dark ? "#e8b56a" : "#c08a3e"}; }
+        .text-rose { color: ${dark ? "#e87a7a" : "#c43d3d"}; }
+        .bg-mint-soft { background: ${dark ? "rgba(125,211,192,.12)" : "rgba(43,169,145,.10)"}; }
+        .bg-amber-soft { background: ${dark ? "rgba(232,181,106,.12)" : "rgba(192,138,62,.10)"}; }
+        .bg-rose-soft { background: ${dark ? "rgba(232,122,122,.12)" : "rgba(196,61,61,.10)"}; }
+        .btn-primary { background:${dark?"#7dd3c0":"#2ba991"}; color:${dark?"#0a0a1f":"#faf7f1"}; font-weight:600; padding:.65rem 1.25rem; border-radius:.75rem; transition:transform .2s, box-shadow .2s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow:0 12px 30px rgba(125,211,192,.35); }
+        .btn-ghost { background:transparent; border:1px solid ${dark?"rgba(240,235,224,.20)":"rgba(26,24,32,.18)"}; color:${dark?"#9c9588":"#5a5469"}; padding:.55rem 1rem; border-radius:.7rem; transition:.2s; }
+        .btn-ghost:hover { color:${dark?"#f0ebe0":"#1a1820"}; }
+        .lab-input { background:${dark?"rgba(255,255,255,.04)":"rgba(255,255,255,.7)"}; border:1px solid ${dark?"rgba(240,235,224,.18)":"rgba(26,24,32,.15)"}; color:${dark?"#f0ebe0":"#1a1820"}; padding:.7rem 1rem; border-radius:.7rem; width:100%; font-size:1rem; }
+        .lab-input:focus { outline: 2px solid ${dark?"#7dd3c0":"#2ba991"}; outline-offset:2px; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .font-display { font-family: 'Fraunces', serif; font-optical-sizing:auto; }
+      `}</style>
       <div className="relative z-10">{children}</div>
     </div>
   );
 }
 
-function AchievementToast({ id }: { id: string }) {
-  const ach = ACHIEVEMENTS.find((a) => a.id === id);
-  if (!ach) return null;
+/* ─────────────── HUD ─────────────── */
+function HUD({ state, theme, focus, onToggleTheme, onToggleFocus, onBack }: any) {
   return (
-    <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 animate-in slide-in-from-bottom-4 duration-300">
-      <div className="rounded-2xl border-2 border-amber-300 bg-gradient-to-r from-amber-100 to-rose-100 px-5 py-3 shadow-xl flex items-center gap-3">
-        <div className="text-3xl">{ach.emoji}</div>
-        <div>
-          <div className="text-[10px] font-bold uppercase tracking-widest text-amber-700">
-            🏆 解锁成就
-          </div>
-          <div className="text-sm font-extrabold text-amber-900">{ach.name}</div>
-          <div className="text-[11px] text-amber-800">{ach.desc}</div>
+    <div className="sticky top-0 z-40 backdrop-blur-md" style={{ background: theme === "dark" ? "rgba(10,10,31,.65)" : "rgba(250,247,241,.7)", borderBottom: "1px solid rgba(125,211,192,.15)" }}>
+      <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3 flex-wrap">
+        <button onClick={onBack} className="btn-ghost text-sm flex items-center gap-1"><ArrowLeft size={14} /> 返回</button>
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-mint-soft rounded-full text-sm">
+          <Trophy size={14} className="text-mint" />
+          <span className="font-semibold text-mint">Lv {lvlOf(state.xp)}</span>
+          <span className="ink-dim">· {state.xp} XP</span>
+        </div>
+        <div className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-soft rounded-full text-sm">
+          <Zap size={14} className="text-amber" />
+          <span className="font-semibold text-amber">{state.streak}</span>
+          <span className="ink-faint text-xs">连对 · 最佳 {state.bestStreak}</span>
+        </div>
+        <div className="flex items-center gap-1.5 px-3 py-1.5 glass-card rounded-full text-sm">
+          <Star size={14} />
+          <span>{state.achievements.length}/{ACHIEVEMENTS.length}</span>
+        </div>
+        <div className="ml-auto flex gap-2">
+          <button onClick={onToggleFocus} className="btn-ghost text-xs flex items-center gap-1" title="专注模式">
+            {focus ? <EyeOff size={14} /> : <Eye size={14} />} {focus ? "退出专注" : "专注"}
+          </button>
+          <button onClick={onToggleTheme} className="btn-ghost text-xs flex items-center gap-1">
+            {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
+          </button>
         </div>
       </div>
     </div>
+  );
+}
+
+/* ─────────────── Phase progress dots ─────────────── */
+function PhaseRail({ active, done, onJump }: { active: number; done: number[]; onJump: (i: number) => void }) {
+  return (
+    <div className="max-w-5xl mx-auto px-4 pt-4">
+      <div className="flex items-center gap-1 overflow-x-auto pb-2">
+        {PHASES.map((p) => {
+          const isDone = done.includes(p.id);
+          const isActive = active === p.id;
+          return (
+            <button
+              key={p.id}
+              onClick={() => onJump(p.id)}
+              className={cn(
+                "flex items-center gap-1 px-3 py-1.5 rounded-full text-xs whitespace-nowrap transition",
+                isActive ? "bg-mint-soft text-mint font-semibold" : isDone ? "text-mint" : "ink-faint",
+              )}
+            >
+              <span>{isDone ? "✓" : p.emoji}</span>
+              <span>{p.name}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────── Phase: Briefing ─────────────── */
+function BriefingScreen({ pt, onStart }: { pt: Pt; onStart: () => void }) {
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-12 space-y-8 animate-fade-in">
+      <div className="text-center space-y-3">
+        <div className="text-xs uppercase tracking-widest ink-dim">本期主题</div>
+        <h1 className="font-display text-5xl md:text-6xl font-semibold">{pt.title}</h1>
+        {pt.cefr && <div className="ink-dim text-sm">CEFR · {pt.cefr}</div>}
+      </div>
+
+      {(pt.hook_line_cn || pt.hook_line) && (
+        <div className="glass-card-strong rounded-2xl p-8 space-y-3">
+          <div className="text-xs uppercase tracking-widest text-amber">情境钩子</div>
+          {pt.hook_line_cn && <div className="text-2xl font-display leading-relaxed">{pt.hook_line_cn}</div>}
+          {pt.hook_line && <div className="ink-dim italic text-lg">"{pt.hook_line}"</div>}
+        </div>
+      )}
+
+      {pt.mnemonic && (
+        <div className="glass-card rounded-2xl p-6 text-center">
+          <div className="text-xs uppercase tracking-widest text-mint mb-2">核心口诀</div>
+          <div className="font-mono text-2xl">{pt.mnemonic}</div>
+        </div>
+      )}
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+        {PHASES.slice(1, -1).map((p) => (
+          <div key={p.id} className="glass-card rounded-xl p-4">
+            <div className="text-3xl mb-1">{p.emoji}</div>
+            <div className="text-xs ink-dim">{p.name}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="text-center pt-4">
+        <button onClick={onStart} className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-3">
+          <Sparkles size={18} /> 开始闯关
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────── Phase: Foundation ─────────────── */
+function FoundationScreen({ pt, onContinue }: { pt: Pt; onContinue: () => void }) {
+  const rows = pt.contrast_table || [];
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
+      <div className="text-center space-y-2">
+        <div className="text-xs uppercase tracking-widest text-mint">核心公式 · Foundation</div>
+        <h2 className="font-display text-4xl">{pt.title}</h2>
+      </div>
+      {pt.mnemonic && (
+        <div className="glass-card-strong rounded-2xl p-6 text-center">
+          <div className="text-xs ink-dim mb-2">一句话记住</div>
+          <div className="font-mono text-2xl text-amber">{pt.mnemonic}</div>
+        </div>
+      )}
+      {rows.length > 0 ? (
+        <div className="space-y-3">
+          {rows.map((r, i) => (
+            <div key={i} className="glass-card rounded-xl p-5 grid md:grid-cols-[160px,1fr] gap-3 items-start">
+              <div className="font-semibold text-mint">
+                <ReactMarkdown>{r.lhs}</ReactMarkdown>
+              </div>
+              <div className="ink-dim leading-relaxed">
+                <ReactMarkdown>{r.rhs}</ReactMarkdown>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : pt.explanation_md ? (
+        <div className="glass-card rounded-xl p-6 prose prose-sm prose-invert max-w-none">
+          <ReactMarkdown>{(pt as any).explanation_md}</ReactMarkdown>
+        </div>
+      ) : (
+        <div className="ink-faint text-center py-6">这个语法点还没有对比表，先去看老师讲堂吧。</div>
+      )}
+      <div className="text-center">
+        <button onClick={onContinue} className="btn-primary inline-flex items-center gap-2">
+          继续 <ArrowRight size={16} />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────── Phase: Reflex Cards ─────────────── */
+function ReflexScreen({ cards, onDone }: { cards: ReflexCard[]; onDone: (correct: number) => void }) {
+  const [i, setI] = useState(0);
+  const [revealed, setRevealed] = useState(false);
+  const [correct, setCorrect] = useState(0);
+  const [start, setStart] = useState(Date.now());
+
+  if (!cards.length) {
+    return (
+      <div className="max-w-2xl mx-auto px-4 py-12 text-center space-y-4">
+        <div className="text-5xl">⚡</div>
+        <p className="ink-dim">还没有反射卡数据。</p>
+        <button onClick={() => onDone(0)} className="btn-ghost">跳过这一阶段</button>
+      </div>
+    );
+  }
+  const card = cards[i];
+  const reveal = () => { setRevealed(true); };
+  const score = (ok: boolean) => {
+    const next = correct + (ok ? 1 : 0);
+    setCorrect(next);
+    if (i + 1 >= cards.length) onDone(next);
+    else { setI(i + 1); setRevealed(false); setStart(Date.now()); }
+  };
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
+      <div className="flex items-center justify-between text-xs ink-dim">
+        <span>反射卡 · 看中文 → 秒说英文</span>
+        <span>{i + 1} / {cards.length}</span>
+      </div>
+      <div className="glass-card-strong rounded-3xl p-10 min-h-[280px] flex flex-col items-center justify-center text-center space-y-6">
+        <div className="text-xs uppercase tracking-widest text-amber">想一想怎么说</div>
+        <div className="font-display text-3xl md:text-4xl leading-snug">{card.cn}</div>
+        {!revealed ? (
+          <button onClick={reveal} className="btn-primary mt-4">显示答案</button>
+        ) : (
+          <div className="space-y-4 w-full">
+            <div className="font-mono text-2xl text-mint">
+              {card.en}
+              {card.keyword && <div className="text-xs ink-dim mt-1">关键: <span className="text-amber">{card.keyword}</span></div>}
+            </div>
+            <div className="flex gap-3 justify-center pt-2">
+              <button onClick={() => score(false)} className="btn-ghost"><X size={16} className="inline" /> 没反应过来</button>
+              <button onClick={() => score(true)} className="btn-primary"><Check size={16} className="inline" /> 我反应对了</button>
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="ink-faint text-xs text-center">已答对 {correct} / 已答 {revealed ? i + 1 : i}</div>
+    </div>
+  );
+}
+
+/* ─────────────── Phase: Drill (translation input) ─────────────── */
+function DrillScreen({ items, onDone, onMistake }: { items: DrillItem[]; onDone: (correct: number, total: number) => void; onMistake: (m: Mistake) => void }) {
+  const [i, setI] = useState(0);
+  const [val, setVal] = useState("");
+  const [result, setResult] = useState<null | "ok" | "ng">(null);
+  const [correct, setCorrect] = useState(0);
+
+  if (!items.length) {
+    return <SkipPhase emoji="✍️" label="情境翻译" onSkip={() => onDone(0, 0)} />;
+  }
+  const it = items[i];
+
+  const submit = () => {
+    if (!val.trim()) return;
+    const ok = fuzzyMatch(val, it.en, it.accepted || []);
+    setResult(ok ? "ok" : "ng");
+    if (ok) setCorrect((c) => c + 1);
+    else onMistake({ phase: "drill", stem: it.cn, picked: val, correct: it.en });
+  };
+
+  const next = () => {
+    if (i + 1 >= items.length) onDone(correct + (result === "ok" ? 0 : 0), items.length);
+    else { setI(i + 1); setVal(""); setResult(null); }
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
+      <div className="flex items-center justify-between text-xs ink-dim">
+        <span>情境翻译 · {it.situation}</span>
+        <span>{i + 1} / {items.length}</span>
+      </div>
+      <div className="glass-card-strong rounded-2xl p-8 space-y-5">
+        <div className="font-display text-2xl leading-relaxed">{it.cn}</div>
+        <textarea
+          value={val}
+          onChange={(e) => setVal(e.target.value)}
+          disabled={result !== null}
+          placeholder="用今天学的语法点翻译成英文…"
+          className="lab-input min-h-[88px] resize-none"
+          onKeyDown={(e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) submit(); }}
+        />
+        {result === "ok" && (
+          <div className="bg-mint-soft rounded-xl p-4 text-mint flex items-center gap-2">
+            <Check size={16} /> 答得不错！
+          </div>
+        )}
+        {result === "ng" && (
+          <div className="bg-rose-soft rounded-xl p-4 space-y-2">
+            <div className="text-rose flex items-center gap-2 font-semibold"><X size={16} /> 还差一点</div>
+            <div className="font-mono text-mint">{it.en}</div>
+          </div>
+        )}
+        <div className="flex justify-end gap-2">
+          {result === null ? (
+            <button onClick={submit} className="btn-primary">提交</button>
+          ) : (
+            <button onClick={next} className="btn-primary">下一题 <ArrowRight size={14} className="inline" /></button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────── Phase: Correction ─────────────── */
+function CorrectionScreen({ tasks, onDone, onMistake }: { tasks: CorrectionTask[]; onDone: (correct: number, total: number) => void; onMistake: (m: Mistake) => void }) {
+  const [i, setI] = useState(0);
+  const [val, setVal] = useState("");
+  const [showHint, setShowHint] = useState(false);
+  const [result, setResult] = useState<null | "ok" | "ng">(null);
+  const [correct, setCorrect] = useState(0);
+
+  if (!tasks.length) return <SkipPhase emoji="🛠️" label="改错" onSkip={() => onDone(0, 0)} />;
+
+  const t = tasks[i];
+  const submit = () => {
+    if (!val.trim()) return;
+    const ok = fuzzyMatch(val, t.model);
+    setResult(ok ? "ok" : "ng");
+    if (ok) setCorrect((c) => c + 1);
+    else onMistake({ phase: "correction", stem: t.wrong, picked: val, correct: t.model, why: t.why });
+  };
+  const next = () => {
+    if (i + 1 >= tasks.length) onDone(correct, tasks.length);
+    else { setI(i + 1); setVal(""); setShowHint(false); setResult(null); }
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
+      <div className="flex items-center justify-between text-xs ink-dim">
+        <span>改错 · 找出错误并改正</span>
+        <span>{i + 1} / {tasks.length}</span>
+      </div>
+      <div className="glass-card-strong rounded-2xl p-8 space-y-5">
+        <div className="bg-rose-soft rounded-xl p-4">
+          <div className="text-xs ink-dim mb-1">错误句</div>
+          <div className="font-mono text-lg line-through text-rose">{t.wrong}</div>
+        </div>
+        <textarea
+          value={val}
+          onChange={(e) => setVal(e.target.value)}
+          disabled={result !== null}
+          placeholder="把它改正…"
+          className="lab-input min-h-[80px] resize-none"
+        />
+        {showHint && result === null && (
+          <div className="bg-amber-soft rounded-xl p-3 text-sm">
+            <ReactMarkdown>{t.hint}</ReactMarkdown>
+          </div>
+        )}
+        {result === "ok" && (
+          <div className="bg-mint-soft rounded-xl p-4 text-mint flex items-center gap-2"><Check size={16} /> 完美修复！</div>
+        )}
+        {result === "ng" && (
+          <div className="bg-rose-soft rounded-xl p-4 space-y-2">
+            <div className="font-mono text-mint">{t.model}</div>
+            <div className="text-sm ink-dim"><ReactMarkdown>{t.why}</ReactMarkdown></div>
+          </div>
+        )}
+        <div className="flex justify-between">
+          <button onClick={() => setShowHint(true)} className="btn-ghost text-xs" disabled={showHint || result !== null}>💡 提示</button>
+          {result === null ? (
+            <button onClick={submit} className="btn-primary">提交</button>
+          ) : (
+            <button onClick={next} className="btn-primary">下一题 <ArrowRight size={14} className="inline" /></button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────── Phase: MCQ runner (Exam + Boss) ─────────────── */
+function MCQRunner({ questions, label, onDone, onMistake, onCorrect }: {
+  questions: { stem: string; option_a?: string|null; option_b?: string|null; option_c?: string|null; option_d?: string|null; correct_answer?: string|null; explanation?: string|null; trap?: string; why?: string; }[];
+  label: string;
+  onDone: (correct: number, total: number) => void;
+  onMistake: (m: Mistake) => void;
+  onCorrect: () => void;
+}) {
+  const [i, setI] = useState(0);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [correct, setCorrect] = useState(0);
+
+  if (!questions.length) return <SkipPhase emoji="📚" label={label} onSkip={() => onDone(0, 0)} />;
+
+  const q = questions[i];
+  const opts: { k: string; v: string }[] = (
+    [["A", q.option_a], ["B", q.option_b], ["C", q.option_c], ["D", q.option_d]] as const
+  ).filter(([_, v]) => !!v).map(([k, v]) => ({ k, v: v as string }));
+
+  const ans = (q.correct_answer || "").trim().toUpperCase();
+  const pick = (k: string) => {
+    if (picked) return;
+    setPicked(k);
+    if (k === ans) {
+      setCorrect((c) => c + 1);
+      onCorrect();
+    } else {
+      const correctText = opts.find((o) => o.k === ans)?.v || ans;
+      onMistake({ phase: label, stem: q.stem, picked: opts.find((o) => o.k === k)?.v || k, correct: correctText, why: q.why || q.explanation || "" });
+    }
+  };
+  const next = () => {
+    if (i + 1 >= questions.length) onDone(correct, questions.length);
+    else { setI(i + 1); setPicked(null); }
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
+      <div className="flex items-center justify-between text-xs ink-dim">
+        <span>{label}</span>
+        <span>{i + 1} / {questions.length}</span>
+      </div>
+      <div className="glass-card-strong rounded-2xl p-8 space-y-5">
+        <div className="font-display text-xl leading-relaxed">{q.stem}</div>
+        <div className="space-y-2">
+          {opts.map(({ k, v }) => {
+            const isCorrect = picked && k === ans;
+            const isWrong = picked === k && k !== ans;
+            return (
+              <button
+                key={k}
+                disabled={!!picked}
+                onClick={() => pick(k)}
+                className={cn(
+                  "w-full text-left rounded-xl px-4 py-3 transition border",
+                  "glass-card",
+                  isCorrect && "bg-mint-soft text-mint border-mint",
+                  isWrong && "bg-rose-soft text-rose",
+                  !picked && "hover:bg-mint-soft",
+                )}
+              >
+                <span className="font-mono text-xs ink-dim mr-2">{k}.</span>{v}
+              </button>
+            );
+          })}
+        </div>
+        {picked && (
+          <div className="space-y-2 pt-2 text-sm">
+            {q.trap && <div className="bg-amber-soft rounded-lg p-3"><span className="text-amber font-semibold">陷阱：</span><ReactMarkdown>{q.trap}</ReactMarkdown></div>}
+            {(q.why || q.explanation) && <div className="bg-mint-soft rounded-lg p-3"><span className="text-mint font-semibold">解析：</span><ReactMarkdown>{q.why || q.explanation || ""}</ReactMarkdown></div>}
+          </div>
+        )}
+        {picked && (
+          <div className="text-right">
+            <button onClick={next} className="btn-primary">{i + 1 >= questions.length ? "完成阶段" : "下一题"} <ArrowRight size={14} className="inline" /></button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function SkipPhase({ emoji, label, onSkip }: { emoji: string; label: string; onSkip: () => void }) {
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-12 text-center space-y-4">
+      <div className="text-6xl">{emoji}</div>
+      <h3 className="font-display text-2xl">{label}</h3>
+      <p className="ink-dim">这个语法点还没有该阶段的内容，去 /admin/grammar-content 重新生成可以补齐。</p>
+      <button onClick={onSkip} className="btn-ghost">跳过</button>
+    </div>
+  );
+}
+
+/* ─────────────── Phase: Done ─────────────── */
+function DoneScreen({ state, mistakes, onReplay, onAskTutor }: { state: LabState; mistakes: Mistake[]; onReplay: () => void; onAskTutor: (m: Mistake) => void }) {
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-12 space-y-8 animate-fade-in">
+      <div className="text-center space-y-3">
+        <div className="text-7xl">🎉</div>
+        <h2 className="font-display text-4xl">通关庆典</h2>
+        <p className="ink-dim">本次累计 {state.xp} XP · 最佳连对 {state.bestStreak}</p>
+      </div>
+      <div className="glass-card-strong rounded-2xl p-6">
+        <div className="text-xs uppercase tracking-widest text-amber mb-3">已解锁成就</div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+          {ACHIEVEMENTS.map((a) => {
+            const got = state.achievements.includes(a.id);
+            return (
+              <div key={a.id} className={cn("rounded-lg p-3 flex items-center gap-2 text-sm", got ? "bg-mint-soft" : "glass-card opacity-50")}>
+                <span className="text-2xl">{a.icon}</span>
+                <div>
+                  <div className="font-semibold">{a.cn}</div>
+                  <div className="text-xs ink-dim">{a.desc}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {mistakes.length > 0 && (
+        <div className="glass-card-strong rounded-2xl p-6 space-y-3">
+          <div className="text-xs uppercase tracking-widest text-rose mb-2">错题复盘 · {mistakes.length} 道</div>
+          {mistakes.map((m, i) => (
+            <div key={i} className="bg-rose-soft rounded-xl p-4 space-y-2">
+              <div className="text-xs ink-dim">{m.phase}</div>
+              <div className="font-display">{m.stem}</div>
+              <div className="text-sm"><span className="ink-dim">你的答：</span><span className="text-rose">{m.picked}</span></div>
+              <div className="text-sm"><span className="ink-dim">正确：</span><span className="text-mint font-mono">{m.correct}</span></div>
+              {m.why && <div className="text-xs ink-dim"><ReactMarkdown>{m.why}</ReactMarkdown></div>}
+              <button onClick={() => onAskTutor(m)} className="btn-ghost text-xs">🤖 问 AI 老师</button>
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="text-center">
+        <button onClick={onReplay} className="btn-primary inline-flex items-center gap-2"><RotateCw size={16} /> 再来一次</button>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────── Main ─────────────── */
+export default function JuniorGrammarLab() {
+  const { id } = useParams<{ id: string }>();
+  const [pt, setPt] = useState<Pt | null>(null);
+  const [examQs, setExamQs] = useState<ExamQ[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [phase, setPhase] = useState(0);
+  const [state, setState] = useState<LabState>({ xp: 0, streak: 0, bestStreak: 0, phasesDone: [], achievements: [], mistakes: [] });
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [focus, setFocus] = useState(false);
+  const initRef = useRef(false);
+
+  useEffect(() => {
+    if (!id) return;
+    setState(loadState(id));
+    (async () => {
+      const { data: p } = await supabase.from("junior_grammar_points")
+        .select("id,title,cefr,mnemonic,explanation_md,teacher_script,immersion_cards,hook_line,hook_line_cn,contrast_table,reflex_cards,situation_drills,correction_tasks,boss_questions")
+        .eq("id", id).maybeSingle();
+      if (p) setPt(p as any);
+      const { data: qs } = await supabase.from("junior_grammar_questions")
+        .select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty")
+        .eq("point_id", id).eq("question_type", "mcq").order("difficulty").limit(8);
+      setExamQs((qs as any) || []);
+      setLoading(false);
+    })();
+  }, [id]);
+
+  useEffect(() => { if (id && initRef.current) saveState(id, state); else initRef.current = true; }, [id, state]);
+
+  const grant = (delta: Partial<LabState> & { addXp?: number; unlock?: string[] }) => {
+    setState((s) => {
+      const next = { ...s };
+      if (delta.addXp) next.xp += delta.addXp;
+      if (delta.unlock) {
+        for (const u of delta.unlock) if (!next.achievements.includes(u)) {
+          next.achievements = [...next.achievements, u];
+          const ach = ACHIEVEMENTS.find((a) => a.id === u);
+          if (ach) next.xp += ach.xp;
+        }
+      }
+      return next;
+    });
+  };
+
+  const onCorrect = () => {
+    setState((s) => {
+      const streak = s.streak + 1;
+      const bestStreak = Math.max(s.bestStreak, streak);
+      const ach = [...s.achievements];
+      if (streak === 5 && !ach.includes("streak_5")) ach.push("streak_5");
+      if (streak === 10 && !ach.includes("streak_10")) ach.push("streak_10");
+      return { ...s, streak, bestStreak, achievements: ach };
+    });
+    awardForCorrect("junior_grammar_lab", 1).catch(() => {});
+  };
+  const onMistake = (m: Mistake) => {
+    setState((s) => ({ ...s, streak: 0, mistakes: [m, ...s.mistakes].slice(0, 50) }));
+    if (id) recordJuniorGrammarAttempt({ pointId: id, isCorrect: false, errorReason: "knowledge" }).catch(() => {});
+  };
+
+  const completePhase = (phaseId: number, unlocks: string[] = []) => {
+    setState((s) => ({ ...s, phasesDone: Array.from(new Set([...s.phasesDone, phaseId])) }));
+    grant({ addXp: XP.phase_clear, unlock: unlocks });
+    setPhase((p) => Math.min(p + 1, PHASES.length - 1));
+  };
+
+  if (loading) return <CosmicShell theme={theme} focus={focus}><div className="flex items-center justify-center min-h-screen ink-dim">加载中…</div></CosmicShell>;
+  if (!pt) return <CosmicShell theme={theme} focus={focus}><div className="text-center py-20 ink-dim">语法点不存在</div></CosmicShell>;
+
+  return (
+    <CosmicShell theme={theme} focus={focus}>
+      <HUD state={state} theme={theme} focus={focus} onToggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")} onToggleFocus={() => setFocus(!focus)} onBack={() => history.back()} />
+      <PhaseRail active={phase} done={state.phasesDone} onJump={(i) => setPhase(i)} />
+
+      {phase === 0 && (
+        <BriefingScreen pt={pt} onStart={() => completePhase(0, ["first_step"])} />
+      )}
+      {phase === 1 && (
+        pt.teacher_script && pt.teacher_script.length > 0 ? (
+          <div className="max-w-3xl mx-auto px-4 py-6">
+            <TeacherLessonPlayer
+              segments={pt.teacher_script}
+              pointTitle={pt.title}
+              onContinue={() => completePhase(1, ["lesson_complete"])}
+              onSkip={() => completePhase(1)}
+            />
+          </div>
+        ) : <SkipPhase emoji="👩‍🏫" label="老师讲堂" onSkip={() => completePhase(1)} />
+      )}
+      {phase === 2 && (
+        <FoundationScreen pt={pt as any} onContinue={() => completePhase(2)} />
+      )}
+      {phase === 3 && (
+        <ReflexScreen
+          cards={pt.reflex_cards || []}
+          onDone={(correct) => {
+            grant({ addXp: correct * XP.reflex });
+            const unlocks = correct === (pt.reflex_cards?.length || 0) && correct > 0 ? ["reflex_master"] : [];
+            completePhase(3, unlocks);
+            if (correct > 0) fireEmojiConfetti("⚡");
+          }}
+        />
+      )}
+      {phase === 4 && (
+        <DrillScreen
+          items={pt.situation_drills || []}
+          onMistake={onMistake}
+          onDone={(correct, total) => {
+            grant({ addXp: correct * XP.drill });
+            const pct = total ? correct / total : 0;
+            const unlocks = pct >= 0.8 ? ["drill_warrior"] : [];
+            completePhase(4, unlocks);
+          }}
+        />
+      )}
+      {phase === 5 && (
+        <CorrectionScreen
+          tasks={pt.correction_tasks || []}
+          onMistake={onMistake}
+          onDone={(correct, total) => {
+            grant({ addXp: correct * XP.correction });
+            const unlocks = correct === total && total > 0 ? ["fix_it_pro"] : [];
+            completePhase(5, unlocks);
+          }}
+        />
+      )}
+      {phase === 6 && (
+        <MCQRunner
+          label="真题练习"
+          questions={examQs.slice(0, 5)}
+          onCorrect={() => { onCorrect(); grant({ addXp: XP.exam }); }}
+          onMistake={onMistake}
+          onDone={() => completePhase(6, ["exam_clear"])}
+        />
+      )}
+      {phase === 7 && (
+        <MCQRunner
+          label="Boss 冲刺"
+          questions={(pt.boss_questions || []) as any}
+          onCorrect={() => { onCorrect(); grant({ addXp: XP.boss }); }}
+          onMistake={onMistake}
+          onDone={(c, t) => {
+            const unlocks: string[] = ["boss_slayer"];
+            if (state.mistakes.length === 0 && c === t && t > 0) unlocks.push("perfect_run");
+            unlocks.push("lab_complete");
+            completePhase(7, unlocks);
+            fireEmojiConfetti("👑");
+          }}
+        />
+      )}
+      {phase === 8 && (
+        <DoneScreen
+          state={state}
+          mistakes={state.mistakes}
+          onReplay={() => { setPhase(0); setState({ ...state, phasesDone: [], streak: 0, mistakes: [] }); }}
+          onAskTutor={(m) => {
+            const url = `/junior/grammar-point/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;
+            window.location.href = url;
+          }}
+        />
+      )}
+    </CosmicShell>
   );
 }

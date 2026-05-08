@@ -571,6 +571,45 @@ export default function JuniorGrammarLab() {
               </div>
             )}
 
+            {/* Mistake review */}
+            {(() => {
+              const wrongs = sessionQs.filter(
+                (q) => results[q.id] && results[q.id].kind === "wrong",
+              );
+              if (wrongs.length === 0) return null;
+              return (
+                <div className="mt-5 mx-auto max-w-md rounded-2xl bg-card/90 p-4 text-left shadow-inner">
+                  <div className="text-[10px] font-bold uppercase tracking-widest text-rose-600 mb-2 flex items-center gap-1">
+                    📝 错题复盘 ({wrongs.length})
+                  </div>
+                  <ul className="space-y-2.5">
+                    {wrongs.map((q) => (
+                      <li key={q.id} className="rounded-xl border border-rose-200 bg-rose-50/60 dark:bg-rose-950/20 p-3">
+                        <div className="text-xs font-bold text-foreground">{q.stem}</div>
+                        {q.correct_answer && (
+                          <div className="mt-1 text-[11px]">
+                            <span className="font-bold text-emerald-600">正确：</span>
+                            <span className="text-foreground">{q.correct_answer}</span>
+                          </div>
+                        )}
+                        {q.explanation && (
+                          <div className="mt-1 text-[11px] text-muted-foreground">
+                            💡 {q.explanation}
+                          </div>
+                        )}
+                        <button
+                          onClick={() => setTutorFor(q)}
+                          className="mt-2 inline-flex items-center gap-1 rounded-full bg-indigo-100 dark:bg-indigo-950/40 px-2.5 py-1 text-[10px] font-bold text-indigo-700 dark:text-indigo-300"
+                        >
+                          🤖 问 AI 老师
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })()}
+
             <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
               <button
                 onClick={() => startLevel(active)}

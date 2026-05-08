@@ -61,6 +61,11 @@ if (typeof window !== "undefined") {
 
 type Catalog = Partial<Record<StringKey, string>>;
 
+type TranslateInvokeResult = {
+  data: { translations?: Record<string, string>; fallback?: boolean; error?: string; message?: string } | null;
+  error: Error | null;
+};
+
 const CJK_TEXT_RE = /[\u3400-\u9fff\u3040-\u30ff\uac00-\ud7af]/;
 const HANGUL_TEXT_RE = /[\uac00-\ud7af]/;
 const JAPANESE_TEXT_RE = /[\u3040-\u30ff]/;
@@ -547,8 +552,8 @@ async function invokeTranslateWithTimeout(
   items: { key: string; text: string }[],
 ) {
   return Promise.race([
-    supabase.functions.invoke("translate", { body: { targetLanguage, items } }),
-    new Promise<{ data: null; error: Error }>((resolve) => {
+    supabase.functions.invoke("translate", { body: { targetLanguage, items } }) as Promise<TranslateInvokeResult>,
+    new Promise<TranslateInvokeResult>((resolve) => {
       window.setTimeout(() => resolve({ data: null, error: new Error("translation timeout") }), TRANSLATION_FETCH_TIMEOUT_MS);
     }),
   ]);

@@ -792,6 +792,38 @@ export default function JuniorGrammarLab() {
 
       {unlockedAch && <AchievementToast id={unlockedAch} />}
     </main>
+    </CosmicShell>
+  );
+}
+
+/**
+ * Cosmic backdrop — deep gradient + animated stars, mimicking the
+ * subjunctive lab's signature look.
+ */
+function CosmicShell({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0b0a1f] via-[#1a0f3a] to-[#2a1454]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.7), transparent 50%), radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1px 1px at 85% 65%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(2px 2px at 10% 70%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1.5px 1.5px at 90% 90%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1px 1px at 30% 10%, rgba(255,255,255,0.6), transparent 50%)",
+          backgroundSize: "100% 100%",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-40 -left-40 size-[600px] rounded-full opacity-30 blur-3xl"
+        style={{ background: "radial-gradient(circle, #ff79c6 0%, transparent 70%)" }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-40 -right-40 size-[600px] rounded-full opacity-30 blur-3xl"
+        style={{ background: "radial-gradient(circle, #50fa7b 0%, transparent 70%)" }}
+      />
+      <div className="relative z-10">{children}</div>
+    </div>
   );
 }
 

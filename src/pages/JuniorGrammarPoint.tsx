@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, MessageCircleQuestion } from "lucide-react";
+import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -10,255 +10,400 @@ import TutorChat from "@/components/tutor/TutorChat";
 import PaywallDialog from "@/components/PaywallDialog";
 import { consumeQuestionQuota } from "@/lib/quota";
 import { fireEmojiConfetti } from "@/lib/feedback";
-import { Trophy, RotateCw } from "lucide-react";
+import { recordJuniorGrammarAttempt, JUNIOR_LEVEL_META, type JuniorGrammarErrorReason } from "@/lib/juniorGrammarFsrs";
+import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
+import { ImmersionCards, type ImmersionCard } from "@/components/grammar/ImmersionCards";
+import { GrammarQuestionCard, type GrammarQuestion, type AnswerResult } from "@/components/grammar/GrammarQuestionCard";
 
-type Pt = { id: string; title: string; cefr: string; explanation_md: string };
-type Q = {
-  id: string; stem: string;
-  option_a: string | null; option_b: string | null; option_c: string | null; option_d: string | null;
-  correct_answer: string | null; explanation: string;
-  question_type: "mcq" | "fill" | "transform" | "translation" | "correction" | string | null;
-  accepted_answers: string[] | null;
+/**
+ * Junior grammar point — multi-stage data-driven learning flow.
+ *
+ * Stages (auto-skip if data not populated):
+ *   1. 讲解 (teacher_script)         — paced TTS + blackboard
+ *   2. 沉浸 (immersion_cards)        — situation cards
+ *   3. 练习 (questions)              — universal question card with auto-mode
+ *   4. 复盘 (always)                 — celebration + mastery update + next steps
+ *
+ * Backwards compatible: if all rich fields are empty, falls back to the legacy
+ * markdown + question-list view (same as the previous JuniorGrammarPoint.tsx).
+ */
+
+type Pt = {
+  id: string;
+  title: string;
+  cefr: string;
+  explanation_md: string;
+  // New rich content fields (may be missing/empty for legacy points)
+  teacher_script: LessonSegment[] | null;
+  immersion_cards: ImmersionCard[] | null;
+  mnemonic: string | null;
+  content_depth: number | null;
 };
 
-const TYPE_LABEL: Record<string, string> = {
-  mcq: "选择", fill: "填空", transform: "句型转换", translation: "翻译", correction: "改错",
-};
-
-function normalize(s: string) {
-  return s.toLowerCase().replace(/\s+/g, " ").replace(/[.．。!?！？,，;；:：]+$/g, "").trim();
-}
-function checkOpenAnswer(input: string, q: Q): boolean {
-  const acc = (q.accepted_answers && q.accepted_answers.length ? q.accepted_answers : [q.correct_answer || ""])
-    .filter(Boolean) as string[];
-  const norm = normalize(input);
-  return acc.some(a => normalize(a) === norm);
-}
+type Stage = "lesson" | "immersion" | "practice" | "reflect";
 
 export default function JuniorGrammarPoint() {
   const { id } = useParams<{ id: string }>();
   const [pt, setPt] = useState<Pt | null>(null);
-  const [qs, setQs] = useState<Q[]>([]);
-  const [picks, setPicks] = useState<Record<string, string>>({});
-  const [inputs, setInputs] = useState<Record<string, string>>({});
-  const [reveal, setReveal] = useState<Record<string, boolean>>({});
-  const [streak, setStreak] = useState(0);
-  const [correctCount, setCorrectCount] = useState(0);
-  const [tutorFor, setTutorFor] = useState<Q | null>(null);
-  const [paywall, setPaywall] = useState<{ open: boolean; used: number; limit: number }>({ open: false, used: 5, limit: 5 });
-  const shownAt = useRef<Record<string, number>>({});
+  const [qs, setQs] = useState<GrammarQuestion[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // Are all questions answered? (MCQ → picked; open → revealed)
-  const answeredCount = qs.filter(q =>
-    (q.question_type || "mcq") === "mcq" ? !!picks[q.id] : !!reveal[q.id]
-  ).length;
-  const allDone = qs.length > 0 && answeredCount === qs.length;
-  const pct = qs.length ? Math.round((correctCount / qs.length) * 100) : 0;
+  // Per-question result tracking
+  const [results, setResults] = useState<Record<string, AnswerResult>>({});
+  const [streak, setStreak] = useState(0);
+  const [tutorFor, setTutorFor] = useState<GrammarQuestion | null>(null);
+  const [paywall, setPaywall] = useState<{ open: boolean; used: number; limit: number }>({
+    open: false,
+    used: 5,
+    limit: 5,
+  });
+
+  // Stage navigation
+  const [stage, setStage] = useState<Stage>("lesson");
+  const [stagesUnlocked, setStagesUnlocked] = useState<Set<Stage>>(new Set(["lesson"]));
+
   const celebratedRef = useRef(false);
 
+  // Fetch grammar point + questions
   useEffect(() => {
-    if (allDone && !celebratedRef.current) {
+    if (!id) return;
+    (async () => {
+      setLoading(true);
+      const [a, b] = await Promise.all([
+        supabase
+          .from("junior_grammar_points")
+          .select("id,title,cefr,explanation_md,teacher_script,immersion_cards,mnemonic,content_depth")
+          .eq("id", id)
+          .maybeSingle(),
+        supabase
+          .from("junior_grammar_questions")
+          .select("id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading")
+          .eq("point_id", id)
+          .order("sort_order"),
+      ]);
+      setPt(a.data as Pt);
+      setQs((b.data ?? []) as GrammarQuestion[]);
+      setLoading(false);
+    })();
+  }, [id]);
+
+  // Determine which stages have data → auto-skip empty ones
+  const availableStages = useMemo<Stage[]>(() => {
+    if (!pt) return ["practice", "reflect"];
+    const stages: Stage[] = [];
+    if (Array.isArray(pt.teacher_script) && pt.teacher_script.length > 0) stages.push("lesson");
+    if (Array.isArray(pt.immersion_cards) && pt.immersion_cards.length > 0) stages.push("immersion");
+    if (qs.length > 0) stages.push("practice");
+    stages.push("reflect");
+    return stages;
+  }, [pt, qs]);
+
+  // Set initial stage to first available
+  useEffect(() => {
+    if (availableStages.length > 0 && !availableStages.includes(stage)) {
+      setStage(availableStages[0]);
+      setStagesUnlocked(new Set([availableStages[0]]));
+    }
+  }, [availableStages]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const correctCount = Object.values(results).filter((r) => r.kind === "correct" || r.kind === "acceptable").length;
+  const answeredCount = Object.keys(results).length;
+  const allDone = qs.length > 0 && answeredCount === qs.length;
+  const pct = qs.length ? Math.round((correctCount / qs.length) * 100) : 0;
+
+  // Celebrate once when all done
+  useEffect(() => {
+    if (allDone && !celebratedRef.current && stage === "practice") {
       celebratedRef.current = true;
       if (pct >= 70) {
         fireEmojiConfetti({ vibrate: pct === 100, count: pct === 100 ? 60 : 36 });
       }
     }
-  }, [allDone, pct]);
+  }, [allDone, pct, stage]);
 
+  // ─── Recording an answer (FSRS + coins) ───
+  const onAnswered = async (q: GrammarQuestion, result: AnswerResult) => {
+    if (results[q.id]) return; // already recorded
+
+    // Quota check (legacy behavior)
+    const quota = await consumeQuestionQuota();
+    if (!quota.allowed) {
+      setPaywall({ open: true, used: quota.used, limit: quota.limit });
+      return;
+    }
+
+    setResults((prev) => ({ ...prev, [q.id]: result }));
+
+    const isPositive = result.kind === "correct" || result.kind === "acceptable";
+    if (isPositive) {
+      const next = streak + 1;
+      setStreak(next);
+      await awardForCorrect(next, "junior_grammar", q.id, "junior_grammar", result.latencyMs);
+      const cc = correctCount + 1;
+      if (cc % 5 === 0) await awardForBlock("junior_grammar");
+    } else {
+      setStreak(0);
+      notifyWrong();
+    }
+
+    // FSRS — record one attempt against the GRAMMAR POINT (not the question)
+    await recordJuniorGrammarAttempt({
+      pointId: pt!.id,
+      questionType: q.question_type || "mcq",
+      isCorrect: isPositive,
+      latencyMs: result.latencyMs,
+      errorReason: result.kind === "wrong" ? (result.errorReason as JuniorGrammarErrorReason | undefined) : undefined,
+    });
+  };
+
+  // Reset everything (再做一遍)
   const resetAll = () => {
-    setPicks({}); setInputs({}); setReveal({});
-    setStreak(0); setCorrectCount(0);
+    setResults({});
+    setStreak(0);
     celebratedRef.current = false;
-    const now = Date.now();
-    qs.forEach(q => { shownAt.current[q.id] = now; });
+    if (availableStages.length > 0) {
+      setStage(availableStages[0]);
+      setStagesUnlocked(new Set([availableStages[0]]));
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  useEffect(() => {
-    if (!id) return;
-    (async () => {
-      const [a, b] = await Promise.all([
-        supabase.from("junior_grammar_points").select("id,title,cefr,explanation_md").eq("id", id).maybeSingle(),
-        supabase.from("junior_grammar_questions").select("*").eq("point_id", id).order("sort_order"),
-      ]);
-      setPt(a.data as Pt);
-      const list = (b.data ?? []) as Q[];
-      setQs(list);
-      const now = Date.now();
-      list.forEach(q => { shownAt.current[q.id] = now; });
-    })();
-  }, [id]);
-
-  const pick = async (q: Q, letter: string) => {
-    if (picks[q.id]) return;
-    const quota = await consumeQuestionQuota();
-    if (!quota.allowed) {
-      setPaywall({ open: true, used: quota.used, limit: quota.limit });
-      return;
-    }
-    setPicks(p => ({ ...p, [q.id]: letter }));
-    const ok = letter === q.correct_answer;
-    if (ok) {
-      const next = streak + 1;
-      setStreak(next);
-      const ms = Date.now() - (shownAt.current[q.id] ?? Date.now());
-      await awardForCorrect(next, "junior_grammar", q.id, "junior_grammar", ms);
-      const cc = correctCount + 1;
-      setCorrectCount(cc);
-      if (cc % 5 === 0) await awardForBlock("junior_grammar");
-    } else { setStreak(0); notifyWrong(); }
+  const goToStage = (s: Stage) => {
+    setStage(s);
+    setStagesUnlocked((prev) => {
+      const next = new Set(prev);
+      next.add(s);
+      return next;
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const submitOpen = async (q: Q) => {
-    if (reveal[q.id]) return;
-    const ans = (inputs[q.id] || "").trim();
-    if (!ans) return;
-    const quota = await consumeQuestionQuota();
-    if (!quota.allowed) {
-      setPaywall({ open: true, used: quota.used, limit: quota.limit });
-      return;
-    }
-    setReveal(r => ({ ...r, [q.id]: true }));
-    const ok = checkOpenAnswer(ans, q);
-    if (ok) {
-      const next = streak + 1;
-      setStreak(next);
-      const ms = Date.now() - (shownAt.current[q.id] ?? Date.now());
-      await awardForCorrect(next, "junior_grammar", q.id, "junior_grammar", ms);
-      const cc = correctCount + 1;
-      setCorrectCount(cc);
-      if (cc % 5 === 0) await awardForBlock("junior_grammar");
-    } else { setStreak(0); notifyWrong(); }
+  if (loading) {
+    return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground">加载中…</main>;
+  }
+
+  if (!pt) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <BackLink to="/junior/grammar" className="mb-3 inline-flex items-center gap-1 text-sm">
+          <ArrowLeft className="size-4" /> 返回考点列表
+        </BackLink>
+        <p className="text-sm text-muted-foreground">考点未找到</p>
+      </main>
+    );
+  }
+
+  // ═══ Stage indicator (shown on top, only when multi-stage) ═══
+  const STAGE_META: Record<Stage, { label: string; emoji: string; color: string }> = {
+    lesson: { label: "讲解", emoji: "🎓", color: "text-emerald-600" },
+    immersion: { label: "沉浸", emoji: "📚", color: "text-sky-600" },
+    practice: { label: "练习", emoji: "✏️", color: "text-amber-600" },
+    reflect: { label: "复盘", emoji: "🌟", color: "text-rose-600" },
   };
 
-  if (!pt) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground">加载中…</main>;
+  const showStageNav = availableStages.length > 1;
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
       <BackLink to="/junior/grammar" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回考点列表
       </BackLink>
+
       <h1 className="text-grad-title text-2xl font-extrabold">{pt.title}</h1>
       <p className="mt-1 text-xs text-muted-foreground">CEFR {pt.cefr}</p>
-      <article className="prose prose-sm mt-4 max-w-none rounded-2xl border bg-card p-5 dark:prose-invert">
-        <ReactMarkdown>{pt.explanation_md}</ReactMarkdown>
-      </article>
-      <h2 className="mt-6 mb-3 text-base font-extrabold">📝 练一练 ({correctCount}/{qs.length})</h2>
-      <div className="space-y-4">
-        {qs.map((q, i) => {
-          const qType = (q.question_type || "mcq") as string;
-          const isMCQ = qType === "mcq";
-          const picked = picks[q.id];
-          const revealed = reveal[q.id];
-          const userInput = inputs[q.id] || "";
-          const openOk = revealed && checkOpenAnswer(userInput, q);
-          return (
-            <section key={q.id} className="rounded-2xl border bg-card p-4">
-              <div className="mb-2 inline-block rounded-full bg-muted px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">
-                {TYPE_LABEL[qType] || qType}
-              </div>
-              <div className="text-sm font-bold whitespace-pre-wrap">{i + 1}. {q.stem}</div>
-              {isMCQ ? (
-              <div className="mt-3 grid gap-2">
-                {(["A","B","C","D"] as const).map(L => {
-                  const txt = (q as any)["option_" + L.toLowerCase()];
-                  if (txt == null) return null;
-                  const isPicked = picked === L;
-                  const isAns = picked && L === q.correct_answer;
-                  const isWrong = picked && isPicked && L !== q.correct_answer;
-                  return (
-                    <button key={L} disabled={!!picked} onClick={() => pick(q, L)}
-                      className={cn("rounded-xl border-2 px-3 py-2 text-left text-sm transition",
-                        !picked && "border-border hover:border-indigo-400",
-                        isAns && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
-                        isWrong && "border-rose-500 bg-rose-50 dark:bg-rose-950/30",
-                        picked && !isAns && !isWrong && "opacity-60",
-                      )}>
-                      <span className="mr-2 font-extrabold">{L}.</span>{txt}
-                    </button>
-                  );
-                })}
-              </div>
-              ) : (
-                <div className="mt-3 space-y-2">
-                  <textarea
-                    value={userInput}
-                    onChange={e => setInputs(s => ({ ...s, [q.id]: e.target.value }))}
-                    disabled={revealed}
-                    rows={qType === "translation" || qType === "transform" || qType === "correction" ? 2 : 1}
-                    placeholder={qType === "translation" ? "请输入英文翻译…" : qType === "correction" ? "请输入改正后的句子…" : qType === "transform" ? "请输入转换后的句子…" : "请填入答案…"}
-                    className={cn("w-full rounded-xl border-2 bg-background px-3 py-2 text-sm transition outline-none focus:border-indigo-400",
-                      revealed && openOk && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
-                      revealed && !openOk && "border-rose-500 bg-rose-50 dark:bg-rose-950/30",
-                      !revealed && "border-border",
-                    )}
-                  />
-                  {!revealed ? (
-                    <button onClick={() => submitOpen(q)} disabled={!userInput.trim()}
-                      className="rounded-full bg-primary px-4 py-1.5 text-xs font-extrabold text-primary-foreground disabled:opacity-40">
-                      提交答案
-                    </button>
-                  ) : (
-                    <div className="rounded-lg bg-muted/60 p-2.5 text-xs">
-                      <div className={cn("font-bold", openOk ? "text-emerald-600" : "text-rose-600")}>
-                        {openOk ? "✓ 正确" : "✗ 参考答案"}
-                      </div>
-                      <div className="mt-1 font-mono text-[13px]">{q.correct_answer}</div>
-                    </div>
-                  )}
-                </div>
-              )}
-              {(isMCQ ? picked : revealed) && q.explanation && (
-                <div className="mt-3 rounded-lg bg-muted/50 p-3 text-xs">💡 {q.explanation}</div>
-              )}
-              {(isMCQ ? picked : revealed) && (
-                <div className="mt-3">
-                  <button
-                    onClick={() => setTutorFor(q)}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
-                  >
-                    <MessageCircleQuestion className="size-3.5" />
-                    问小月 / Ask Luna
-                  </button>
-                </div>
-              )}
-            </section>
-          );
-        })}
-      </div>
 
-      {allDone && (
-        <section className="mt-6 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 p-6 text-center shadow-tile dark:from-amber-950/30 dark:to-rose-950/30">
-          <Trophy className="mx-auto size-12 text-amber-500" />
-          <h3 className="mt-2 text-xl font-extrabold">
-            {pct === 100 ? "🌟 满分通关！" : pct >= 90 ? "🌟 太厉害啦！" : pct >= 70 ? "👍 不错哦！" : "💪 再来一次会更好！"}
-          </h3>
-          <p className="mt-1 text-sm text-muted-foreground">
-            答对 {correctCount} / {qs.length} · 正确率 <span className="font-extrabold text-amber-600">{pct}%</span>
-          </p>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-            <button
-              onClick={resetAll}
-              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-5 py-2 text-sm font-extrabold text-white shadow"
-            >
-              <RotateCw className="size-4" /> 再做一遍
-            </button>
-            <Link
-              to="/junior/grammar"
-              className="inline-flex items-center gap-1.5 rounded-full border-2 border-indigo-300 bg-card px-5 py-2 text-sm font-extrabold text-indigo-600 shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-950/30"
-            >
-              📚 下一个考点
-            </Link>
-            <Link
-              to="/junior"
-              className="inline-flex items-center gap-1.5 rounded-full border-2 border-amber-300 bg-card px-5 py-2 text-sm font-extrabold text-amber-700 shadow-sm hover:bg-amber-50 dark:hover:bg-amber-950/30"
-            >
-              🏠 初中首页
-            </Link>
-          </div>
-        </section>
+      {/* Stage breadcrumb */}
+      {showStageNav && (
+        <div className="mt-4 flex items-center gap-1 overflow-x-auto pb-2">
+          {availableStages.map((s, i) => {
+            const meta = STAGE_META[s];
+            const isActive = stage === s;
+            const isUnlocked = stagesUnlocked.has(s);
+            return (
+              <div key={s} className="flex items-center gap-1 flex-shrink-0">
+                <button
+                  onClick={() => isUnlocked && goToStage(s)}
+                  disabled={!isUnlocked}
+                  className={cn(
+                    "px-3 py-1.5 rounded-full text-xs font-bold transition flex items-center gap-1",
+                    isActive && "bg-primary text-primary-foreground shadow-sm",
+                    !isActive && isUnlocked && "bg-muted hover:bg-muted/80 text-foreground",
+                    !isUnlocked && "bg-muted/40 text-muted-foreground cursor-not-allowed",
+                  )}
+                >
+                  <span>{meta.emoji}</span>
+                  <span>{meta.label}</span>
+                </button>
+                {i < availableStages.length - 1 && (
+                  <span className="text-muted-foreground/40 text-xs">→</span>
+                )}
+              </div>
+            );
+          })}
+        </div>
       )}
 
+      {/* ═══ Stage content ═══ */}
+      <div className="mt-5">
+        {/* Stage 1: Teacher lesson */}
+        {stage === "lesson" && pt.teacher_script && pt.teacher_script.length > 0 && (
+          <TeacherLessonPlayer
+            segments={pt.teacher_script}
+            pointTitle={pt.title}
+            onContinue={() => {
+              const idx = availableStages.indexOf("lesson");
+              const next = availableStages[idx + 1];
+              if (next) goToStage(next);
+            }}
+            onSkip={() => {
+              const idx = availableStages.indexOf("lesson");
+              const next = availableStages[idx + 1];
+              if (next) goToStage(next);
+            }}
+          />
+        )}
+
+        {/* Stage 2: Immersion cards */}
+        {stage === "immersion" && pt.immersion_cards && pt.immersion_cards.length > 0 && (
+          <ImmersionCards
+            cards={pt.immersion_cards}
+            onContinue={() => {
+              const idx = availableStages.indexOf("immersion");
+              const next = availableStages[idx + 1];
+              if (next) goToStage(next);
+            }}
+          />
+        )}
+
+        {/* Stage 3: Practice */}
+        {stage === "practice" && (
+          <>
+            {/* Mnemonic banner (if any) */}
+            {pt.mnemonic && (
+              <div className="mb-4 rounded-2xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 dark:from-amber-950/30 dark:to-rose-950/20 p-4 text-center">
+                <div className="text-[10px] font-bold uppercase tracking-widest text-amber-700 dark:text-amber-300 mb-1">
+                  🔑 一句话记住
+                </div>
+                <div className="text-sm font-bold text-amber-800 dark:text-amber-200">{pt.mnemonic}</div>
+              </div>
+            )}
+
+            {/* Brief explanation_md (if no teacher_script — keeps legacy points usable) */}
+            {(!pt.teacher_script || pt.teacher_script.length === 0) && pt.explanation_md && (
+              <article className="prose prose-sm mb-4 max-w-none rounded-2xl border bg-card p-5 dark:prose-invert">
+                <ReactMarkdown>{pt.explanation_md}</ReactMarkdown>
+              </article>
+            )}
+
+            {qs.length === 0 ? (
+              <div className="rounded-2xl border bg-card p-8 text-center text-sm text-muted-foreground">
+                这个考点暂无练习题
+              </div>
+            ) : (
+              <>
+                <h2 className="mb-3 text-base font-extrabold flex items-center justify-between">
+                  <span>📝 练一练</span>
+                  <span className="text-xs font-normal tabular-nums text-muted-foreground">
+                    {answeredCount}/{qs.length} 题 · {correctCount} 对
+                  </span>
+                </h2>
+                <div className="space-y-4">
+                  {qs.map((q, i) => (
+                    <GrammarQuestionCard
+                      key={q.id}
+                      question={q}
+                      index={i}
+                      onAnswered={(r) => onAnswered(q, r)}
+                      onAskTutor={() => setTutorFor(q)}
+                      enableTtsForStem={false}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+
+            {/* When all done, link to reflect stage */}
+            {allDone && (
+              <div className="mt-6 text-center">
+                <button
+                  onClick={() => goToStage("reflect")}
+                  className="rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-6 py-3 text-sm font-extrabold text-white shadow-md hover:shadow-lg transition"
+                >
+                  ✨ 看看本次表现 →
+                </button>
+              </div>
+            )}
+          </>
+        )}
+
+        {/* Stage 4: Reflect (always) */}
+        {stage === "reflect" && (
+          <section className="rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 p-6 sm:p-8 text-center shadow-sm dark:from-amber-950/30 dark:to-rose-950/30">
+            <Trophy className="mx-auto size-12 text-amber-500" />
+            <h3 className="mt-2 text-xl font-extrabold">
+              {pct === 100 ? "🌟 满分通关！" : pct >= 90 ? "🌟 太厉害啦！" : pct >= 70 ? "👍 不错哦！" : "💪 再来一次会更好！"}
+            </h3>
+            {qs.length > 0 ? (
+              <p className="mt-1 text-sm text-muted-foreground">
+                答对 {correctCount} / {qs.length} · 正确率{" "}
+                <span className="font-extrabold text-amber-600">{pct}%</span>
+              </p>
+            ) : (
+              <p className="mt-1 text-sm text-muted-foreground">已完成本考点的学习</p>
+            )}
+
+            {/* Per-question quick review */}
+            {answeredCount > 0 && (
+              <div className="mt-4 mx-auto max-w-md rounded-2xl bg-card/80 p-3 text-left">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-2">本次答题概览</div>
+                <div className="flex flex-wrap gap-1.5">
+                  {qs.map((q, i) => {
+                    const r = results[q.id];
+                    const ok = r && (r.kind === "correct" || r.kind === "acceptable");
+                    return (
+                      <span
+                        key={q.id}
+                        className={cn(
+                          "inline-flex items-center justify-center w-7 h-7 rounded-md text-[11px] font-bold",
+                          ok && "bg-emerald-500 text-white",
+                          r && !ok && "bg-rose-500 text-white",
+                          !r && "bg-muted text-muted-foreground",
+                        )}
+                        title={`第 ${i + 1} 题`}
+                      >
+                        {i + 1}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+              <button
+                onClick={resetAll}
+                className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-5 py-2 text-sm font-extrabold text-white shadow"
+              >
+                <RotateCw className="size-4" /> 再做一遍
+              </button>
+              <Link
+                to="/junior/grammar"
+                className="inline-flex items-center gap-1.5 rounded-full border-2 border-indigo-300 bg-card px-5 py-2 text-sm font-extrabold text-indigo-600 shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-950/30"
+              >
+                📚 下一个考点
+              </Link>
+              <Link
+                to="/junior"
+                className="inline-flex items-center gap-1.5 rounded-full border-2 border-amber-300 bg-card px-5 py-2 text-sm font-extrabold text-amber-700 shadow-sm hover:bg-amber-50 dark:hover:bg-amber-950/30"
+              >
+                🏠 初中首页
+              </Link>
+            </div>
+          </section>
+        )}
+      </div>
+
+      {/* Tutor chat */}
       {tutorFor && (
         <TutorChat
           context="junior_grammar"
@@ -273,10 +418,7 @@ export default function JuniorGrammarPoint() {
               : undefined,
             correct_answer: tutorFor.correct_answer,
             accepted_answers: tutorFor.accepted_answers,
-            user_answer: tutorFor.question_type === "mcq" ? picks[tutorFor.id] : inputs[tutorFor.id],
-            is_correct: tutorFor.question_type === "mcq"
-              ? picks[tutorFor.id] === tutorFor.correct_answer
-              : checkOpenAnswer(inputs[tutorFor.id] || "", tutorFor),
+            user_result: results[tutorFor.id]?.kind,
             explanation: tutorFor.explanation,
           }}
           open={!!tutorFor}
@@ -284,6 +426,7 @@ export default function JuniorGrammarPoint() {
         />
       )}
 
+      {/* Paywall */}
       <PaywallDialog
         open={paywall.open}
         onClose={() => setPaywall((p) => ({ ...p, open: false }))}

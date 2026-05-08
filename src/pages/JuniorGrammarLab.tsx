@@ -174,6 +174,10 @@ export default function JuniorGrammarLab() {
   const [paywall, setPaywall] = useState({ open: false, used: 5, limit: 5 });
   const [unlockedAch, setUnlockedAch] = useState<string | null>(null);
 
+  // Pre-level briefing & overview screens
+  const [briefingFor, setBriefingFor] = useState<Level | null>(null);
+  const [overview, setOverview] = useState<"lesson" | "immersion" | null>(null);
+
   const finishedRef = useRef(false);
 
   useEffect(() => {
@@ -184,7 +188,7 @@ export default function JuniorGrammarLab() {
       const [a, b] = await Promise.all([
         supabase
           .from("junior_grammar_points")
-          .select("id,title,cefr,mnemonic,explanation_md")
+          .select("id,title,cefr,mnemonic,explanation_md,teacher_script,immersion_cards")
           .eq("id", id)
           .maybeSingle(),
         supabase

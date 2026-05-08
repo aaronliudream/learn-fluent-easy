@@ -8,6 +8,7 @@ import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/Te
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { awardForCorrect } from "@/lib/coins";
 import ReactMarkdown from "react-markdown";
+import { Lock, Lightbulb, Loader2 } from "lucide-react";
 
 /* ──────────────────────────────────────────────────────────────
    Junior Grammar Lab — generic 6-phase template inspired by
@@ -595,14 +596,224 @@ function SkipPhase({ emoji, label, onSkip }: { emoji: string; label: string; onS
   );
 }
 
+/* ─────────────── AI Wrong-Answer Explainer ─────────────── */
+function WrongAnswerAI({ question, userAnswer, correctAnswer, pointTitle, gradeLabel = "初中", explanation }: {
+  question: string; userAnswer: string; correctAnswer: string;
+  pointTitle?: string; gradeLabel?: string; explanation?: string;
+}) {
+  const [text, setText] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState<string | null>(null);
+
+  useEffect(() => {
+    let aborted = false;
+    (async () => {
+      try {
+        setLoading(true); setErr(null); setText("");
+        const projectId = (import.meta as any).env?.VITE_SUPABASE_PROJECT_ID;
+        const url = `https://${projectId}.supabase.co/functions/v1/explain-wrong-answer`;
+        const { data: { session } } = await supabase.auth.getSession();
+        const resp = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
+          },
+          body: JSON.stringify({ question, userAnswer, correctAnswer, pointTitle, gradeLabel, explanation }),
+        });
+        if (!resp.ok || !resp.body) {
+          const t = await resp.text();
+          if (resp.status === 402) throw new Error("AI 余额已用完，请到工作区充值后重试。");
+          if (resp.status === 429) throw new Error("AI 请求过于频繁，请稍后再试。");
+          throw new Error(t || `HTTP ${resp.status}`);
+        }
+        const reader = resp.body.getReader();
+        const decoder = new TextDecoder();
+        let buf = "";
+        while (!aborted) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buf += decoder.decode(value, { stream: true });
+          const lines = buf.split("\n");
+          buf = lines.pop() || "";
+          for (const line of lines) {
+            const s = line.trim();
+            if (!s.startsWith("data:")) continue;
+            const data = s.slice(5).trim();
+            if (data === "[DONE]") continue;
+            try {
+              const json = JSON.parse(data);
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) setText((prev) => prev + delta);
+            } catch { /* ignore */ }
+          }
+        }
+      } catch (e: any) {
+        if (!aborted) setErr(e?.message || String(e));
+      } finally {
+        if (!aborted) setLoading(false);
+      }
+    })();
+    return () => { aborted = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [question, userAnswer, correctAnswer]);
+
+  return (
+    <div className="rounded-xl border border-amber/40 bg-amber-soft/40 p-4 space-y-2">
+      <div className="flex items-center gap-2 text-amber font-semibold text-sm">
+        <Lightbulb size={16} /> AI 老师为你专属讲解
+      </div>
+      {err ? (
+        <div className="text-sm text-rose">{err}</div>
+      ) : (
+        <div className="prose prose-sm max-w-none">
+          <ReactMarkdown>{text || (loading ? "正在思考..." : "")}</ReactMarkdown>
+          {loading && <Loader2 size={14} className="inline animate-spin ink-dim" />}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ─────────────── Boss Runner — must clear 100% to unlock next ─────────────── */
+function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, onPassed, onAnyAttempt }: {
+  questions: BossQ[];
+  pointTitle: string;
+  gradeLabel: string;
+  onCorrect: () => void;
+  onMistake: (m: Mistake) => void;
+  onPassed: (totalCorrectFirstTry: number, total: number) => void;
+  onAnyAttempt?: () => void;
+}) {
+  const [queue, setQueue] = useState<BossQ[]>(questions);
+  const [i, setI] = useState(0);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [round, setRound] = useState(1);
+  const [firstTryCorrect, setFirstTryCorrect] = useState(0);
+  const [redoList, setRedoList] = useState<BossQ[]>([]);
+  const total = questions.length;
+
+  if (!queue.length) return <SkipPhase emoji="👑" label="Boss 冲刺" onSkip={() => onPassed(0, 0)} />;
+
+  const q = queue[i];
+  const opts = [["A", q.option_a], ["B", q.option_b], ["C", q.option_c], ["D", q.option_d]]
+    .filter(([, v]) => !!v) as [string, string][];
+  const ans = (q.correct_answer || "").trim().toUpperCase();
+
+  const pick = (k: string) => {
+    if (picked) return;
+    setPicked(k);
+    onAnyAttempt?.();
+    if (k === ans) {
+      onCorrect();
+      if (round === 1) setFirstTryCorrect((c) => c + 1);
+    } else {
+      const correctText = opts.find(([kk]) => kk === ans)?.[1] || ans;
+      onMistake({ phase: `Boss R${round}`, stem: q.stem, picked: opts.find(([kk]) => kk === k)?.[1] || k, correct: correctText, why: q.why });
+      setRedoList((rl) => [...rl, q]);
+    }
+  };
+
+  const next = () => {
+    if (i + 1 < queue.length) {
+      setI(i + 1); setPicked(null); return;
+    }
+    // round done
+    if (redoList.length === 0) {
+      onPassed(firstTryCorrect, total);
+      return;
+    }
+    // start redo round with only mistakes
+    setQueue(redoList);
+    setRedoList([]);
+    setI(0);
+    setPicked(null);
+    setRound((r) => r + 1);
+  };
+
+  const isLastInRound = i + 1 >= queue.length;
+  const isWrong = picked !== null && picked !== ans;
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-10 space-y-5 animate-fade-in">
+      <div className="flex items-center justify-between text-xs ink-dim">
+        <span className="font-semibold text-amber">👑 Boss 冲刺 · 必须全部答对才能解锁下一关</span>
+        <span>R{round} · {i + 1} / {queue.length}</span>
+      </div>
+      {round > 1 && (
+        <div className="rounded-lg bg-rose-soft text-rose text-xs px-3 py-2 flex items-center gap-2">
+          <Lock size={14} /> 上一轮有错题，已收集错题重做。全部改对即通关。
+        </div>
+      )}
+      <div className="glass-card-strong rounded-2xl p-7 space-y-5">
+        <div className="font-display text-xl leading-relaxed">{q.stem}</div>
+        <div className="space-y-2">
+          {opts.map(([k, v]) => {
+            const isCorrect = picked && k === ans;
+            const wrongPick = picked === k && k !== ans;
+            return (
+              <button
+                key={k}
+                disabled={!!picked}
+                onClick={() => pick(k)}
+                className={cn(
+                  "w-full text-left rounded-xl px-4 py-3 transition border glass-card",
+                  isCorrect && "bg-mint-soft text-mint border-mint",
+                  wrongPick && "bg-rose-soft text-rose",
+                  !picked && "hover:bg-mint-soft",
+                )}
+              >
+                <span className="font-mono text-xs ink-dim mr-2">{k}.</span>{v}
+              </button>
+            );
+          })}
+        </div>
+        {picked && (
+          <div className="space-y-3 pt-1 text-sm">
+            {q.trap && <div className="bg-amber-soft rounded-lg p-3"><span className="text-amber font-semibold">陷阱：</span><ReactMarkdown>{q.trap}</ReactMarkdown></div>}
+            {q.why && <div className="bg-mint-soft rounded-lg p-3"><span className="text-mint font-semibold">解析：</span><ReactMarkdown>{q.why}</ReactMarkdown></div>}
+            {isWrong && (
+              <WrongAnswerAI
+                question={q.stem}
+                userAnswer={`${picked}. ${opts.find(([kk]) => kk === picked)?.[1] || ""}`}
+                correctAnswer={`${ans}. ${opts.find(([kk]) => kk === ans)?.[1] || ""}`}
+                pointTitle={pointTitle}
+                gradeLabel={gradeLabel}
+                explanation={q.why}
+              />
+            )}
+          </div>
+        )}
+        {picked && (
+          <div className="text-right">
+            <button onClick={next} className="btn-primary">
+              {isLastInRound ? (redoList.length ? "进入错题重做" : "完成 Boss 关") : "下一题"}
+              <ArrowRight size={14} className="inline ml-1" />
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 /* ─────────────── Phase: Done ─────────────── */
-function DoneScreen({ state, mistakes, onReplay, onAskTutor }: { state: LabState; mistakes: Mistake[]; onReplay: () => void; onAskTutor: (m: Mistake) => void }) {
+function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPointId }: {
+  state: LabState; mistakes: Mistake[];
+  onReplay: () => void; onAskTutor: (m: Mistake) => void;
+  bossPassed?: boolean; nextPointId?: string | null;
+}) {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-8 animate-fade-in">
       <div className="text-center space-y-3">
         <div className="text-7xl">🎉</div>
         <h2 className="font-display text-4xl">通关庆典</h2>
         <p className="ink-dim">本次累计 {state.xp} XP · 最佳连对 {state.bestStreak}</p>
+        {bossPassed && (
+          <div className="inline-flex items-center gap-2 rounded-full bg-mint-soft text-mint px-4 py-2 text-sm font-semibold">
+            <Check size={16} /> Boss 100% 通关 · 已解锁下一关
+          </div>
+        )}
       </div>
       <div className="glass-card-strong rounded-2xl p-6">
         <div className="text-xs uppercase tracking-widest text-amber mb-3">已解锁成就</div>
@@ -636,8 +847,14 @@ function DoneScreen({ state, mistakes, onReplay, onAskTutor }: { state: LabState
           ))}
         </div>
       )}
-      <div className="text-center">
-        <button onClick={onReplay} className="btn-primary inline-flex items-center gap-2"><RotateCw size={16} /> 再来一次</button>
+      <div className="text-center flex flex-wrap gap-3 justify-center">
+        <button onClick={onReplay} className="btn-ghost inline-flex items-center gap-2"><RotateCw size={16} /> 再来一次</button>
+        {bossPassed && nextPointId && (
+          <Link to={`/junior/grammar-lab/${nextPointId}`} className="btn-primary inline-flex items-center gap-2">
+            进入下一关 <ArrowRight size={16} />
+          </Link>
+        )}
+        <Link to="/junior/grammar" className="btn-ghost inline-flex items-center gap-2">返回语法地图</Link>
       </div>
     </div>
   );
@@ -653,6 +870,9 @@ export default function JuniorGrammarLab() {
   const [state, setState] = useState<LabState>({ xp: 0, streak: 0, bestStreak: 0, phasesDone: [], achievements: [], mistakes: [] });
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [focus, setFocus] = useState(false);
+  const [nextPointId, setNextPointId] = useState<string | null>(null);
+  const [bossPassed, setBossPassed] = useState(false);
+  const [gradeLabel, setGradeLabel] = useState<string>("初中");
   const initRef = useRef(false);
 
   useEffect(() => {
@@ -667,6 +887,22 @@ export default function JuniorGrammarLab() {
         .select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty")
         .eq("point_id", id).eq("question_type", "mcq").order("difficulty").limit(8);
       setExamQs((qs as any) || []);
+      // figure out next grammar point in same level by sort order
+      const { data: all } = await supabase.from("junior_grammar_points")
+        .select("id,sort_order,created_at").order("sort_order", { ascending: true }).order("created_at", { ascending: true });
+      if (all && id) {
+        const idx = all.findIndex((r: any) => r.id === id);
+        if (idx >= 0 && idx + 1 < all.length) setNextPointId((all[idx + 1] as any).id);
+      }
+      // detect grade label from profile if available
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (user) {
+          const { data: prof } = await supabase.from("profiles").select("grade").eq("id", user.id).maybeSingle();
+          const g = (prof as any)?.grade;
+          if (g) setGradeLabel(String(g));
+        }
+      } catch {}
       setLoading(false);
     })();
   }, [id]);
@@ -708,6 +944,27 @@ export default function JuniorGrammarLab() {
     setState((s) => ({ ...s, phasesDone: Array.from(new Set([...s.phasesDone, phaseId])) }));
     grant({ addXp: XP.phase_clear, unlock: unlocks });
     setPhase((p) => Math.min(p + 1, PHASES.length - 1));
+  };
+
+  const persistBossPassed = async (firstTryCorrect: number, total: number) => {
+    setBossPassed(true);
+    if (!id) return;
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      const score = total > 0 ? Math.round((firstTryCorrect / total) * 100) : 100;
+      await supabase.from("grammar_lab_progress").upsert({
+        user_id: user.id,
+        point_id: id,
+        level: "junior",
+        boss_passed: true,
+        best_score: score,
+        attempts: 1,
+        completed_at: new Date().toISOString(),
+      } as any, { onConflict: "user_id,point_id,level" });
+    } catch (e) {
+      console.warn("persist boss progress failed", e);
+    }
   };
 
   if (loading) return <CosmicShell theme={theme} focus={focus}><div className="flex items-center justify-center min-h-screen ink-dim">加载中…</div></CosmicShell>;
@@ -780,15 +1037,16 @@ export default function JuniorGrammarLab() {
         />
       )}
       {phase === 7 && (
-        <MCQRunner
-          label="Boss 冲刺"
-          questions={(pt.boss_questions || []) as any}
+        <BossRunner
+          questions={(pt.boss_questions || []) as BossQ[]}
+          pointTitle={pt.title}
+          gradeLabel={gradeLabel}
           onCorrect={() => { onCorrect(); grant({ addXp: XP.boss }); }}
           onMistake={onMistake}
-          onDone={(c, t) => {
-            const unlocks: string[] = ["boss_slayer"];
-            if (state.mistakes.length === 0 && c === t && t > 0) unlocks.push("perfect_run");
-            unlocks.push("lab_complete");
+          onPassed={(firstTry, total) => {
+            const unlocks: string[] = ["boss_slayer", "lab_complete"];
+            if (firstTry === total && total > 0) unlocks.push("perfect_run");
+            persistBossPassed(firstTry, total);
             completePhase(7, unlocks);
             fireEmojiConfetti({ emojis: ["👑", "🏆", "✨"] });
           }}
@@ -798,6 +1056,8 @@ export default function JuniorGrammarLab() {
         <DoneScreen
           state={state}
           mistakes={state.mistakes}
+          bossPassed={bossPassed}
+          nextPointId={nextPointId}
           onReplay={() => { setPhase(0); setState({ ...state, phasesDone: [], streak: 0, mistakes: [] }); }}
           onAskTutor={(m) => {
             const url = `/junior/grammar-point/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;

@@ -42,6 +42,19 @@ export default function JuniorGrammar() {
           module="grammar"
         />
       )}
+      <section className="mb-6">
+        <a
+          href="/grammar-lab/subjunctive-mood.html"
+          className="block rounded-2xl border-2 border-indigo-300/60 bg-gradient-to-br from-indigo-50 to-blue-50 p-5 transition hover:-translate-y-0.5 hover:border-indigo-400 hover:shadow-lg dark:from-indigo-950/30 dark:to-blue-950/30"
+        >
+          <div className="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-indigo-700 dark:text-indigo-300">
+            <span className="rounded-full bg-indigo-200/70 px-2 py-0.5 dark:bg-indigo-900/50">选学专题</span>
+            <span className="rounded-full bg-blue-200/70 px-2 py-0.5 dark:bg-blue-900/50">中考+高考衔接</span>
+          </div>
+          <div className="text-lg font-extrabold">虚拟语气全攻克</div>
+          <div className="mt-1 text-xs text-muted-foreground">前 3 关对应中考要求，后 6 关高考预习</div>
+        </a>
+      </section>
       <div className="space-y-6">
         {cats.map(c => (
           <section key={c.id}>

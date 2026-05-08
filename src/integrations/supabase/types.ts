@@ -2469,6 +2469,45 @@ export type Database = {
         }
         Relationships: []
       }
+      grammar_lab_progress: {
+        Row: {
+          attempts: number
+          best_score: number
+          boss_passed: boolean
+          completed_at: string | null
+          created_at: string
+          id: string
+          level: string
+          point_id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          attempts?: number
+          best_score?: number
+          boss_passed?: boolean
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          level: string
+          point_id: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          attempts?: number
+          best_score?: number
+          boss_passed?: boolean
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          level?: string
+          point_id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       ielts_errors: {
         Row: {
           corrected: string

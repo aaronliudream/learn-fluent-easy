@@ -2699,17 +2699,24 @@ export type Database = {
       junior_grammar_points: {
         Row: {
           ai_corpus: Json | null
+          boss_questions: Json
           category_id: string
           cefr: string | null
           code: string
           content_depth: number
+          contrast_table: Json
+          correction_tasks: Json
           created_at: string
           examples: Json
           explanation_md: string
           grade: number
+          hook_line: string | null
+          hook_line_cn: string | null
           id: string
           immersion_cards: Json
           mnemonic: string | null
+          reflex_cards: Json
+          situation_drills: Json
           sort_order: number
           summary: string | null
           teacher_script: Json
@@ -2717,17 +2724,24 @@ export type Database = {
         }
         Insert: {
           ai_corpus?: Json | null
+          boss_questions?: Json
           category_id: string
           cefr?: string | null
           code: string
           content_depth?: number
+          contrast_table?: Json
+          correction_tasks?: Json
           created_at?: string
           examples?: Json
           explanation_md?: string
           grade?: number
+          hook_line?: string | null
+          hook_line_cn?: string | null
           id?: string
           immersion_cards?: Json
           mnemonic?: string | null
+          reflex_cards?: Json
+          situation_drills?: Json
           sort_order?: number
           summary?: string | null
           teacher_script?: Json
@@ -2735,17 +2749,24 @@ export type Database = {
         }
         Update: {
           ai_corpus?: Json | null
+          boss_questions?: Json
           category_id?: string
           cefr?: string | null
           code?: string
           content_depth?: number
+          contrast_table?: Json
+          correction_tasks?: Json
           created_at?: string
           examples?: Json
           explanation_md?: string
           grade?: number
+          hook_line?: string | null
+          hook_line_cn?: string | null
           id?: string
           immersion_cards?: Json
           mnemonic?: string | null
+          reflex_cards?: Json
+          situation_drills?: Json
           sort_order?: number
           summary?: string | null
           teacher_script?: Json

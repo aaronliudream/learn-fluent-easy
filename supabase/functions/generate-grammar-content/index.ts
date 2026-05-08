@@ -27,7 +27,18 @@ interface ReqBody {
   cefr?: string;               // CEFR level (A1/A2/B1/B2)
   grade?: number;              // 7/8/9 for Junior
   // What to generate. Default: everything.
-  parts?: ("teacher_script" | "immersion_cards" | "questions" | "mnemonic")[];
+  parts?: (
+    | "teacher_script"
+    | "immersion_cards"
+    | "questions"
+    | "mnemonic"
+    | "hook"
+    | "contrast_table"
+    | "reflex_cards"
+    | "situation_drills"
+    | "correction_tasks"
+    | "boss_questions"
+  )[];
   // For "questions" generation: how many of each type
   numQuestions?: { mcq?: number; fill?: number; transform?: number; translation?: number; correction?: number };
 }
@@ -40,7 +51,18 @@ Deno.serve(async (req) => {
   try {
     const body: ReqBody = await req.json();
     const { pointTitle, pointSummary, cefr, grade } = body;
-    const parts = body.parts || ["teacher_script", "immersion_cards", "questions", "mnemonic"];
+    const parts = body.parts || [
+      "teacher_script",
+      "immersion_cards",
+      "questions",
+      "mnemonic",
+      "hook",
+      "contrast_table",
+      "reflex_cards",
+      "situation_drills",
+      "correction_tasks",
+      "boss_questions",
+    ];
     const numQ = {
       mcq: body.numQuestions?.mcq ?? 3,
       fill: body.numQuestions?.fill ?? 1,
@@ -175,6 +197,118 @@ Return only the JSON via the function call. No prose.`;
       required.push("questions");
     }
 
+    if (parts.includes("hook")) {
+      properties.hook_line = {
+        type: "string",
+        description: "One-line English scene-setting hook for the lesson opening, ≤90 chars. Vivid, relatable to a Chinese teen.",
+      };
+      properties.hook_line_cn = {
+        type: "string",
+        description: "Chinese version of the hook line, ≤45 chars. Should provoke a 'I want to know how to say this' feeling.",
+      };
+      required.push("hook_line", "hook_line_cn");
+    }
+
+    if (parts.includes("contrast_table")) {
+      properties.contrast_table = {
+        type: "array",
+        description: "Foundation comparison table (e.g. 真实 vs 虚拟, 现在 vs 过去, 主动 vs 被动). 3–5 rows.",
+        items: {
+          type: "object",
+          properties: {
+            lhs: { type: "string", description: "Left side label, Chinese, ≤14 chars. Use **bold** for the key term." },
+            rhs: { type: "string", description: "Right side: rule + example. May contain **bold** key parts." },
+          },
+          required: ["lhs", "rhs"],
+          additionalProperties: false,
+        },
+      };
+      required.push("contrast_table");
+    }
+
+    if (parts.includes("reflex_cards")) {
+      properties.reflex_cards = {
+        type: "array",
+        description: "Reflex cards: see a Chinese situation, instantly produce the English target. 10 items, increasing length.",
+        items: {
+          type: "object",
+          properties: {
+            cn: { type: "string", description: "Chinese situation prompt, 4–14 chars." },
+            en: { type: "string", description: "Target English sentence using the grammar point. 4–12 words." },
+            keyword: { type: "string", description: "The single English keyword that proves the grammar point is used (e.g. 'were', 'had eaten'). Empty string if not applicable." },
+          },
+          required: ["cn", "en", "keyword"],
+          additionalProperties: false,
+        },
+      };
+      required.push("reflex_cards");
+    }
+
+    if (parts.includes("situation_drills")) {
+      properties.situation_drills = {
+        type: "array",
+        description: "Situation drills: a real-life Chinese scene + Chinese sentence to translate into English. 12 items spanning study, travel, friendship, weather, shopping, health.",
+        items: {
+          type: "object",
+          properties: {
+            situation: { type: "string", description: "Brief Chinese scene, 6–18 chars." },
+            cn: { type: "string", description: "Chinese sentence to translate." },
+            en: { type: "string", description: "Model English answer using the grammar point. Natural, native-sounding." },
+            accepted: {
+              type: "array",
+              description: "0–4 alternative acceptable English answers (lowercase, normalized punctuation).",
+              items: { type: "string" },
+            },
+          },
+          required: ["situation", "cn", "en", "accepted"],
+          additionalProperties: false,
+        },
+      };
+      required.push("situation_drills");
+    }
+
+    if (parts.includes("correction_tasks")) {
+      properties.correction_tasks = {
+        type: "array",
+        description: "Find-and-fix tasks: each is a wrong English sentence that a Chinese student would actually write, plus the model fix. 5 items targeting top mistakes for this point.",
+        items: {
+          type: "object",
+          properties: {
+            wrong: { type: "string", description: "The wrong sentence as-typed by a typical learner." },
+            model: { type: "string", description: "The corrected sentence." },
+            hint: { type: "string", description: "1-sentence Chinese hint (no answer reveal). **bold** for the error type." },
+            why: { type: "string", description: "1–2 sentence Chinese explanation of the error and rule." },
+          },
+          required: ["wrong", "model", "hint", "why"],
+          additionalProperties: false,
+        },
+      };
+      required.push("correction_tasks");
+    }
+
+    if (parts.includes("boss_questions")) {
+      properties.boss_questions = {
+        type: "array",
+        description: "Boss-level mixed-form exam questions (中考/高考 style) testing the grammar point under pressure. 5 items, harder than regular questions.",
+        items: {
+          type: "object",
+          properties: {
+            stem: { type: "string", description: "English sentence with one blank, or a complete English question." },
+            option_a: { type: "string" },
+            option_b: { type: "string" },
+            option_c: { type: "string" },
+            option_d: { type: "string" },
+            correct_answer: { type: "string", description: "'A' / 'B' / 'C' / 'D'." },
+            trap: { type: "string", description: "Chinese explanation of the most tempting wrong choice and why it traps Chinese students." },
+            why: { type: "string", description: "Chinese explanation of why the correct answer is right." },
+          },
+          required: ["stem", "option_a", "option_b", "option_c", "option_d", "correct_answer", "trap", "why"],
+          additionalProperties: false,
+        },
+      };
+      required.push("boss_questions");
+    }
+
     const tool = {
       type: "function",
       function: {
@@ -197,7 +331,7 @@ Return only the JSON via the function call. No prose.`;
       },
       body: JSON.stringify({
         // Use a stronger model for content generation — quality matters here
-        model: "google/gemini-2.5-flash",
+        model: "google/gemini-2.5-pro",
         messages: [
           { role: "system", content: system },
           { role: "user", content: userMsg },

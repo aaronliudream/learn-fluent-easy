@@ -488,6 +488,7 @@ export default function JuniorGrammarLab() {
         <PaywallDialog
           open={paywall.open}
           onClose={() => setPaywall((p) => ({ ...p, open: false }))}
+          trigger="daily_quota_exhausted"
           used={paywall.used}
           limit={paywall.limit}
         />

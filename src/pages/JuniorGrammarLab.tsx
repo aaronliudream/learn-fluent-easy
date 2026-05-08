@@ -347,6 +347,120 @@ export default function JuniorGrammarLab() {
     );
   }
 
+  // ════════════ COURSE OVERVIEW (lesson / immersion) ════════════
+  if (overview === "lesson" && pt.teacher_script && pt.teacher_script.length > 0) {
+    return (
+      <CosmicShell>
+        <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+          <button
+            onClick={() => setOverview(null)}
+            className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
+          >
+            <ArrowLeft className="size-4" /> 返回 Lab
+          </button>
+          <TeacherLessonPlayer
+            segments={pt.teacher_script}
+            pointTitle={pt.title}
+            onContinue={() => setOverview("immersion")}
+            onSkip={() => setOverview(null)}
+          />
+        </main>
+      </CosmicShell>
+    );
+  }
+  if (overview === "immersion" && pt.immersion_cards && pt.immersion_cards.length > 0) {
+    return (
+      <CosmicShell>
+        <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+          <button
+            onClick={() => setOverview(null)}
+            className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
+          >
+            <ArrowLeft className="size-4" /> 返回 Lab
+          </button>
+          <ImmersionCards cards={pt.immersion_cards} onContinue={() => setOverview(null)} />
+        </main>
+      </CosmicShell>
+    );
+  }
+
+  // ════════════ LEVEL BRIEFING (pre-game) ════════════
+  if (briefingFor) {
+    const lv = briefingFor;
+    const sampleQ = lv.questions[0];
+    return (
+      <CosmicShell>
+        <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+          <button
+            onClick={() => setBriefingFor(null)}
+            className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
+          >
+            <ArrowLeft className="size-4" /> 返回关卡地图
+          </button>
+
+          <div
+            className={cn(
+              "rounded-3xl bg-gradient-to-br p-6 sm:p-8 text-white shadow-xl",
+              lv.color,
+            )}
+          >
+            <div className="text-[11px] font-bold uppercase tracking-widest opacity-90">
+              Level {lv.id} · 课前简报
+            </div>
+            <h1 className="mt-1 text-3xl font-extrabold">
+              {lv.emoji} {lv.name}
+            </h1>
+            <p className="mt-1 text-sm opacity-90">{lv.desc}</p>
+
+            {/* Hook */}
+            <div className="mt-5 rounded-2xl bg-white/15 backdrop-blur p-4">
+              <div className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">
+                🎯 本关任务
+              </div>
+              <div className="text-sm font-bold">
+                完成 {Math.min(lv.questions.length, QUESTIONS_PER_LEVEL)} 题{lv.id === 3 ? "高难度" : lv.id === 2 ? "进阶" : "基础"}训练，争取 60% 通关 / 80% 双星 / 100% 满星。
+              </div>
+            </div>
+
+            {/* Mnemonic —核心公式 */}
+            {pt.mnemonic && (
+              <div className="mt-3 rounded-2xl bg-white/15 backdrop-blur p-4">
+                <div className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">
+                  🔑 核心记忆
+                </div>
+                <div className="text-base font-extrabold">{pt.mnemonic}</div>
+              </div>
+            )}
+
+            {/* 例句 from sample question */}
+            {sampleQ && (
+              <div className="mt-3 rounded-2xl bg-white/15 backdrop-blur p-4">
+                <div className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">
+                  📖 题型预览
+                </div>
+                <div className="text-sm font-bold opacity-95">{sampleQ.stem}</div>
+              </div>
+            )}
+          </div>
+
+          <button
+            onClick={() => startLevel(lv)}
+            className="mt-6 w-full rounded-full bg-gradient-to-r from-amber-400 to-rose-500 px-6 py-4 text-base font-extrabold text-white shadow-xl hover:shadow-2xl transition active:scale-[0.99]"
+          >
+            🚀 开始挑战 Level {lv.id}
+          </button>
+
+          <button
+            onClick={() => setBriefingFor(null)}
+            className="mt-3 w-full rounded-full bg-white/10 backdrop-blur px-6 py-2 text-sm font-bold text-white/80 hover:text-white border border-white/20"
+          >
+            返回地图
+          </button>
+        </main>
+      </CosmicShell>
+    );
+  }
+
   // ════════════ ACTIVE LEVEL VIEW ════════════
   if (active) {
     return (

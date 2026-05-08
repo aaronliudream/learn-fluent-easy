@@ -30,6 +30,7 @@ const Index = () => {
   const { t } = useI18n();
   const [searchParams] = useSearchParams();
   const forceHub = searchParams.get("hub") === "1";
+  const forceLanding = searchParams.get("landing") === "1";
   const [user, setUser] = useState<User | null>(null);
   const [progress, setProgress] = useState(() => loadProgress());
   const streak = getStreak(progress);
@@ -74,7 +75,7 @@ const Index = () => {
   // Cold/global traffic: show a real Landing page (hero + value prop + social
   // proof + CTA). Logged-in users skip straight to the study hub. Returning
   // guests with saved progress also keep their hub so they don't lose context.
-  if (!user && !hasProgress && !forceHub) {
+  if (forceLanding || (!user && !hasProgress && !forceHub)) {
     return <LandingPage />;
   }
 

@@ -216,7 +216,13 @@ export default function JuniorGrammarLab() {
     return next;
   };
 
-  // ─── Start a level ───
+  // ─── Open level briefing first ───
+  const openLevel = (lv: Level) => {
+    if (lv.questions.length === 0) return;
+    setBriefingFor(lv);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  // ─── Actually start a level (after briefing) ───
   const startLevel = (lv: Level) => {
     if (lv.questions.length === 0) return;
     finishedRef.current = false;
@@ -225,6 +231,7 @@ export default function JuniorGrammarLab() {
     setBestStreak(0);
     setSessionQs(shuffle(lv.questions).slice(0, QUESTIONS_PER_LEVEL));
     setActive(lv);
+    setBriefingFor(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

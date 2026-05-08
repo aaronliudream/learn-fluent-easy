@@ -621,6 +621,14 @@ function mockAskTutor({ question }) {
 }
 
 const STORAGE_KEY = "pwl_v1";
+/* ─── Bridge to parent app (React wrapper listens for these) ─── */
+function postBridge(type, payload) {
+  try {
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ source: "subjunctive-lab", type, payload }, "*");
+    }
+  } catch (e) {}
+}
 const Storage = {
   available: (() => {
     try { localStorage.setItem("__t","1"); localStorage.removeItem("__t"); return true; }

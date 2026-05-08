@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, Lock, RotateCw, Sparkles, Star, Trophy, Zap } from "lucide-react";
+import { ArrowLeft, BookOpen, Lock, RotateCw, Sparkles, Star, Target, Trophy, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
@@ -17,6 +17,9 @@ import {
 import TutorChat from "@/components/tutor/TutorChat";
 import PaywallDialog from "@/components/PaywallDialog";
 import { consumeQuestionQuota } from "@/lib/quota";
+import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
+import { ImmersionCards, type ImmersionCard } from "@/components/grammar/ImmersionCards";
+import ReactMarkdown from "react-markdown";
 
 /**
  * Junior Grammar 全攻克 Lab — gamified, level-based learning experience
@@ -36,6 +39,8 @@ type Pt = {
   cefr: string;
   mnemonic: string | null;
   explanation_md: string | null;
+  teacher_script: LessonSegment[] | null;
+  immersion_cards: ImmersionCard[] | null;
 };
 
 type Level = {

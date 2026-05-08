@@ -371,9 +371,10 @@ export default function JuniorGrammar() {
                   const hasRichContent = (p.content_depth ?? 0) >= 1;
                   return (
                     <li key={p.id}>
+                      <div className="flex items-stretch gap-1.5">
                       <Link
                         to={`/junior/grammar/${p.id}`}
-                        className="flex items-center gap-2 rounded-xl border bg-card px-3 py-2.5 text-sm transition hover:border-primary hover:shadow-sm"
+                        className="flex flex-1 min-w-0 items-center gap-2 rounded-xl border bg-card px-3 py-2.5 text-sm transition hover:border-primary hover:shadow-sm"
                       >
                         <span className="text-lg flex-shrink-0" title={meta.label}>
                           {meta.emoji}
@@ -396,6 +397,14 @@ export default function JuniorGrammar() {
                         </span>
                         <ChevronRight className="size-3.5 text-muted-foreground flex-shrink-0" />
                       </Link>
+                      <Link
+                        to={`/junior/grammar-lab/${p.id}`}
+                        title="全攻克 Lab — 闯关模式"
+                        className="flex items-center justify-center px-2.5 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white text-xs font-extrabold shadow-sm hover:shadow-md transition flex-shrink-0"
+                      >
+                        🚀
+                      </Link>
+                      </div>
                     </li>
                   );
                 })}

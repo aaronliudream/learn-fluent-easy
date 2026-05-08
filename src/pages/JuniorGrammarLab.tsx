@@ -8,6 +8,7 @@ import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/Te
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { awardForCorrect } from "@/lib/coins";
 import ReactMarkdown from "react-markdown";
+import { Lock, Lightbulb, Loader2 } from "lucide-react";
 
 /* ──────────────────────────────────────────────────────────────
    Junior Grammar Lab — generic 6-phase template inspired by
@@ -591,6 +592,207 @@ function SkipPhase({ emoji, label, onSkip }: { emoji: string; label: string; onS
       <h3 className="font-display text-2xl">{label}</h3>
       <p className="ink-dim">这个语法点还没有该阶段的内容，去 /admin/grammar-content 重新生成可以补齐。</p>
       <button onClick={onSkip} className="btn-ghost">跳过</button>
+    </div>
+  );
+}
+
+/* ─────────────── AI Wrong-Answer Explainer ─────────────── */
+function WrongAnswerAI({ question, userAnswer, correctAnswer, pointTitle, gradeLabel = "初中", explanation }: {
+  question: string; userAnswer: string; correctAnswer: string;
+  pointTitle?: string; gradeLabel?: string; explanation?: string;
+}) {
+  const [text, setText] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState<string | null>(null);
+
+  useEffect(() => {
+    let aborted = false;
+    (async () => {
+      try {
+        setLoading(true); setErr(null); setText("");
+        const projectId = (import.meta as any).env?.VITE_SUPABASE_PROJECT_ID;
+        const url = `https://${projectId}.supabase.co/functions/v1/explain-wrong-answer`;
+        const { data: { session } } = await supabase.auth.getSession();
+        const resp = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
+          },
+          body: JSON.stringify({ question, userAnswer, correctAnswer, pointTitle, gradeLabel, explanation }),
+        });
+        if (!resp.ok || !resp.body) {
+          const t = await resp.text();
+          if (resp.status === 402) throw new Error("AI 余额已用完，请到工作区充值后重试。");
+          if (resp.status === 429) throw new Error("AI 请求过于频繁，请稍后再试。");
+          throw new Error(t || `HTTP ${resp.status}`);
+        }
+        const reader = resp.body.getReader();
+        const decoder = new TextDecoder();
+        let buf = "";
+        while (!aborted) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buf += decoder.decode(value, { stream: true });
+          const lines = buf.split("\n");
+          buf = lines.pop() || "";
+          for (const line of lines) {
+            const s = line.trim();
+            if (!s.startsWith("data:")) continue;
+            const data = s.slice(5).trim();
+            if (data === "[DONE]") continue;
+            try {
+              const json = JSON.parse(data);
+              const delta = json.choices?.[0]?.delta?.content;
+              if (delta) setText((prev) => prev + delta);
+            } catch { /* ignore */ }
+          }
+        }
+      } catch (e: any) {
+        if (!aborted) setErr(e?.message || String(e));
+      } finally {
+        if (!aborted) setLoading(false);
+      }
+    })();
+    return () => { aborted = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [question, userAnswer, correctAnswer]);
+
+  return (
+    <div className="rounded-xl border border-amber/40 bg-amber-soft/40 p-4 space-y-2">
+      <div className="flex items-center gap-2 text-amber font-semibold text-sm">
+        <Lightbulb size={16} /> AI 老师为你专属讲解
+      </div>
+      {err ? (
+        <div className="text-sm text-rose">{err}</div>
+      ) : (
+        <div className="prose prose-sm max-w-none">
+          <ReactMarkdown>{text || (loading ? "正在思考..." : "")}</ReactMarkdown>
+          {loading && <Loader2 size={14} className="inline animate-spin ink-dim" />}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ─────────────── Boss Runner — must clear 100% to unlock next ─────────────── */
+function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, onPassed, onAnyAttempt }: {
+  questions: BossQ[];
+  pointTitle: string;
+  gradeLabel: string;
+  onCorrect: () => void;
+  onMistake: (m: Mistake) => void;
+  onPassed: (totalCorrectFirstTry: number, total: number) => void;
+  onAnyAttempt?: () => void;
+}) {
+  const [queue, setQueue] = useState<BossQ[]>(questions);
+  const [i, setI] = useState(0);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [round, setRound] = useState(1);
+  const [firstTryCorrect, setFirstTryCorrect] = useState(0);
+  const [redoList, setRedoList] = useState<BossQ[]>([]);
+  const total = questions.length;
+
+  if (!queue.length) return <SkipPhase emoji="👑" label="Boss 冲刺" onSkip={() => onPassed(0, 0)} />;
+
+  const q = queue[i];
+  const opts = [["A", q.option_a], ["B", q.option_b], ["C", q.option_c], ["D", q.option_d]]
+    .filter(([, v]) => !!v) as [string, string][];
+  const ans = (q.correct_answer || "").trim().toUpperCase();
+
+  const pick = (k: string) => {
+    if (picked) return;
+    setPicked(k);
+    onAnyAttempt?.();
+    if (k === ans) {
+      onCorrect();
+      if (round === 1) setFirstTryCorrect((c) => c + 1);
+    } else {
+      const correctText = opts.find(([kk]) => kk === ans)?.[1] || ans;
+      onMistake({ phase: `Boss R${round}`, stem: q.stem, picked: opts.find(([kk]) => kk === k)?.[1] || k, correct: correctText, why: q.why });
+      setRedoList((rl) => [...rl, q]);
+    }
+  };
+
+  const next = () => {
+    if (i + 1 < queue.length) {
+      setI(i + 1); setPicked(null); return;
+    }
+    // round done
+    if (redoList.length === 0) {
+      onPassed(firstTryCorrect, total);
+      return;
+    }
+    // start redo round with only mistakes
+    setQueue(redoList);
+    setRedoList([]);
+    setI(0);
+    setPicked(null);
+    setRound((r) => r + 1);
+  };
+
+  const isLastInRound = i + 1 >= queue.length;
+  const isWrong = picked !== null && picked !== ans;
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-10 space-y-5 animate-fade-in">
+      <div className="flex items-center justify-between text-xs ink-dim">
+        <span className="font-semibold text-amber">👑 Boss 冲刺 · 必须全部答对才能解锁下一关</span>
+        <span>R{round} · {i + 1} / {queue.length}</span>
+      </div>
+      {round > 1 && (
+        <div className="rounded-lg bg-rose-soft text-rose text-xs px-3 py-2 flex items-center gap-2">
+          <Lock size={14} /> 上一轮有错题，已收集错题重做。全部改对即通关。
+        </div>
+      )}
+      <div className="glass-card-strong rounded-2xl p-7 space-y-5">
+        <div className="font-display text-xl leading-relaxed">{q.stem}</div>
+        <div className="space-y-2">
+          {opts.map(([k, v]) => {
+            const isCorrect = picked && k === ans;
+            const wrongPick = picked === k && k !== ans;
+            return (
+              <button
+                key={k}
+                disabled={!!picked}
+                onClick={() => pick(k)}
+                className={cn(
+                  "w-full text-left rounded-xl px-4 py-3 transition border glass-card",
+                  isCorrect && "bg-mint-soft text-mint border-mint",
+                  wrongPick && "bg-rose-soft text-rose",
+                  !picked && "hover:bg-mint-soft",
+                )}
+              >
+                <span className="font-mono text-xs ink-dim mr-2">{k}.</span>{v}
+              </button>
+            );
+          })}
+        </div>
+        {picked && (
+          <div className="space-y-3 pt-1 text-sm">
+            {q.trap && <div className="bg-amber-soft rounded-lg p-3"><span className="text-amber font-semibold">陷阱：</span><ReactMarkdown>{q.trap}</ReactMarkdown></div>}
+            {q.why && <div className="bg-mint-soft rounded-lg p-3"><span className="text-mint font-semibold">解析：</span><ReactMarkdown>{q.why}</ReactMarkdown></div>}
+            {isWrong && (
+              <WrongAnswerAI
+                question={q.stem}
+                userAnswer={`${picked}. ${opts.find(([kk]) => kk === picked)?.[1] || ""}`}
+                correctAnswer={`${ans}. ${opts.find(([kk]) => kk === ans)?.[1] || ""}`}
+                pointTitle={pointTitle}
+                gradeLabel={gradeLabel}
+                explanation={q.why}
+              />
+            )}
+          </div>
+        )}
+        {picked && (
+          <div className="text-right">
+            <button onClick={next} className="btn-primary">
+              {isLastInRound ? (redoList.length ? "进入错题重做" : "完成 Boss 关") : "下一题"}
+              <ArrowRight size={14} className="inline ml-1" />
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -33,6 +33,7 @@ type Pt = {
   title: string;
   cefr: string | null;
   mnemonic: string | null;
+  explanation_md: string | null;
   hook_line: string | null;
   hook_line_cn: string | null;
   teacher_script: LessonSegment[] | null;
@@ -302,7 +303,7 @@ function FoundationScreen({ pt, onContinue }: { pt: Pt; onContinue: () => void }
         </div>
       ) : pt.explanation_md ? (
         <div className="glass-card rounded-xl p-6 prose prose-sm prose-invert max-w-none">
-          <ReactMarkdown>{(pt as any).explanation_md}</ReactMarkdown>
+          <ReactMarkdown>{pt.explanation_md}</ReactMarkdown>
         </div>
       ) : (
         <div className="ink-faint text-center py-6">这个语法点还没有对比表，先去看老师讲堂吧。</div>
@@ -696,11 +697,11 @@ export default function JuniorGrammarLab() {
       if (streak === 10 && !ach.includes("streak_10")) ach.push("streak_10");
       return { ...s, streak, bestStreak, achievements: ach };
     });
-    awardForCorrect("junior_grammar_lab", 1).catch(() => {});
+    awardForCorrect(1, "junior_grammar_lab").catch(() => {});
   };
   const onMistake = (m: Mistake) => {
     setState((s) => ({ ...s, streak: 0, mistakes: [m, ...s.mistakes].slice(0, 50) }));
-    if (id) recordJuniorGrammarAttempt({ pointId: id, isCorrect: false, errorReason: "knowledge" }).catch(() => {});
+    if (id) recordJuniorGrammarAttempt({ pointId: id, isCorrect: false, errorReason: "rule_unknown" }).catch(() => {});
   };
 
   const completePhase = (phaseId: number, unlocks: string[] = []) => {
@@ -742,7 +743,7 @@ export default function JuniorGrammarLab() {
             grant({ addXp: correct * XP.reflex });
             const unlocks = correct === (pt.reflex_cards?.length || 0) && correct > 0 ? ["reflex_master"] : [];
             completePhase(3, unlocks);
-            if (correct > 0) fireEmojiConfetti("⚡");
+            if (correct > 0) fireEmojiConfetti({ emojis: ["⚡"] });
           }}
         />
       )}
@@ -789,7 +790,7 @@ export default function JuniorGrammarLab() {
             if (state.mistakes.length === 0 && c === t && t > 0) unlocks.push("perfect_run");
             unlocks.push("lab_complete");
             completePhase(7, unlocks);
-            fireEmojiConfetti("👑");
+            fireEmojiConfetti({ emojis: ["👑", "🏆", "✨"] });
           }}
         />
       )}

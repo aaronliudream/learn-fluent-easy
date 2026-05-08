@@ -220,6 +220,20 @@ export default function AdminGrammarContent() {
         }
       }
 
+      // Optimistically refresh local state so the ✨ badge updates immediately
+      setPts((prev) =>
+        prev.map((x) =>
+          x.id === pt.id
+            ? {
+                ...x,
+                content_depth: (updatePayload.content_depth as number) ?? x.content_depth,
+                teacher_script: (updatePayload.teacher_script as any[]) ?? x.teacher_script,
+                immersion_cards: (updatePayload.immersion_cards as any[]) ?? x.immersion_cards,
+                mnemonic: (updatePayload.mnemonic as string) ?? x.mnemonic,
+              }
+            : x,
+        ),
+      );
       toast.success(`✨ 已生成：${pt.title}`);
       return true;
     } catch (e) {

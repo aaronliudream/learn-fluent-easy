@@ -1,93 +1,72 @@
-## 我从 `public/grammar-lab/subjunctive-mood.html`（9057 行）里读出来的"虚拟语气全攻克"全部要求
+# 把"语法点罗列 + 做几道题"全面升级为 Lab + AI 个性化教学 + 关卡解锁
 
-下面这份清单就是你要求"读取出来"的内容。我把它当作**所有初中/高中语法点的统一设计规格**，后续每个语法点都必须满足。
+## 目标
+- **唯一入口**：每个语法点只通过 9 阶段 Lab 学习（不再看到旧的知识点罗列页）。
+- **AI 在每个错误处出现**：错一道题立刻调用 AI，按学生年级（初一/初二/初三/高一/高二/高三）出"看得懂"的解释。
+- **关卡解锁**：Boss 关 100% 全对才解锁下一个语法点；错了必须重做。
+- **培养语感 + 提分**：通过 hook → 老师讲堂 → 公式 → 反射卡 → 情境翻译 → 改错 → 真题 → Boss 8 个阶段，把"理解 → 反射 → 输出 → 应试"打穿。
 
-### A. 视觉与体感（Look & Feel）
-1. **宇宙星空背景**：cosmic-bg + 闪烁星星 + grain 噪点 + mint/amber/rose 三色辉光体系。
-2. **三套主题切换**：深色（默认）/ 浅色（白天学习）/ Focus Mode（去掉一切动画与装饰，专注答题）。
-3. **字体体系**：Fraunces（display 衬线）+ Inter（正文）+ JetBrains Mono（公式）+ Noto Serif/Sans SC（中文）。
-4. **可访问性**：focus-visible 描边、prefers-reduced-motion 兼容、移动端 ≥44px 点击区。
+## 现状盘点
+- ✅ 9 阶段 Lab UI 已存在：`/junior/grammar-lab/:pointId`
+- ✅ 内容生成 edge function：`generate-grammar-content`（已用 Gemini 2.5 Pro）
+- ✅ 已生成 23/52 个初中语法点的 Lab 内容
+- ❌ 剩余 29 个初中点 + 全部高中点未生成（上次跑到一半 402 余额耗尽）
+- ❌ 旧的"知识点列表 + 选择题"页仍是初中/高中入口默认
+- ❌ Boss 关错题没有 AI 解释，也不强制 100% 通关
+- ❌ 没有 per-user per-point 通关记录 → 没法做"解锁下一关"
 
-### B. 关卡结构（每个语法点统一含 N 关 + Boss）
-每一关都按这 6 个 phase 顺序推进：
+## 改造步骤
 
+### Step 1 · 把内容补齐（等额度恢复后我跑脚本）
+- 续跑 `gen_lab.py` 把剩余 29 个初中点写满
+- 把高中表 `gaokao_grammar_points` 加上同样的 9 个字段（迁移），跑同一脚本生成 ~40 个高中语法点
+
+### Step 2 · 关卡解锁机制（数据库 + UI）
+新表 `grammar_lab_progress`：
 ```
-1. Hook（情境钩子）       —— 一句中文剧情 + 一句英文场景
-2. Teacher Lesson（讲台） —— 15-20 行老师独白脚本，每行带：show（板书）、highlight（关键词高亮）、duration（节奏秒数）
-3. Foundation（真实 vs 虚拟） —— 对比表格 + Formula 卡（mono 字体公式）+ Contrast 表
-4. Reflex Cards（声音反射卡 × 10）—— 中文情境秒答英文，记录反应速度
-5. Situation Drill（情境翻译 × 20+）—— 真人化场景：考试/出行/感情/天气/购物/健康…
-6. Correction Tasks（改错 × 5）—— 给出错句 + 模型答案 + 正则匹配 + 即时反馈
-7. Real Exam（真题 × 5）—— 高考/中考真题，每题带 trap 解释 + why（解析）
+user_id, point_id, level (junior|gaokao),
+boss_passed (bool), best_score, attempts, completed_at
 ```
+- 进入 Lab 时读取该用户已通关点 → 在语法列表里"未通关的下一个"高亮、其它锁住
+- Boss 阶段必须 5/5 全对才标记 `boss_passed = true`
+- 通关后解锁下一个 + 弹"下一关：xxx"按钮直接跳转
 
-通关后进入 **Mistake Replay（错题复盘）** 与 **Spaced Review（间隔复习提醒）**。
+### Step 3 · AI 个性化错题讲解（新 edge function）
+新建 `explain-wrong-answer`：
+- 入参：`question`、`userAnswer`、`correctAnswer`、`pointTitle`、`gradeLabel`（如"初二"）
+- 模型：`google/gemini-2.5-flash`（便宜快）
+- 输出：3 段
+  1. **你哪里错了**（用学生母语类比，≤2 句）
+  2. **为什么正确答案对**（指出关键语法触发点）
+  3. **一句口诀帮你记住**（≤15 字）
+- 在 Boss 阶段、改错阶段、真题阶段错题时实时调用 + 流式显示
 
-完成 ≥3 关解锁 **Mixed Practice（三关混练）**；完成全部解锁 **Boss Level（综合真题冲刺）**。
+### Step 4 · 改造入口（隐藏旧路径）
+- `/junior/grammar` 列表改为：每张卡片显示 🔒/✅/▶️ 状态，点击只去 Lab，不再有"做几道题"模式
+- `/gaokao/grammar`（如有）同样处理
+- 旧 `JuniorGrammarPoint` 这类纯刷题页保留为只读归档（避免数据丢失），但首页/导航不再链入
 
-### C. 游戏化与激励
-- **12 个成就徽章**（first_reflex / reflex_complete / perfect_lesson / subjunctive_sage 等），每个带 XP 奖励。
-- **XP 体系**：reflex_card +5、exam_correct +15、perfect +75、boss +200，按 XP → Level 升级。
-- **三种连击**：correctStreak / bestCorrectStreak / dayStreak。
-- **Spaced Review 间隔**：完成关后按 REVIEW_INTERVALS（如 1h / 1d / 3d / 7d / 14d）提醒回来复习。
-- 与站点统一的 `recordAttempt` / `bumpMastery` / `__rewards` 桥接。
+### Step 5 · 语感强化收尾（用 AI 做的小亮点）
+- 每个语法点结束时，AI 根据用户在该点的错误模式生成一段 100 字"个人化复盘"
+- 错题进 SRS 复习队列，第 1/3/7 天自动出现在首页"今日必练"
 
-### D. 内容字段（每个语法点必须在 DB 里准备）
-为了让模板能跑出"虚拟语气"级别效果，每个 grammar point 需要包含：
+## 技术清单（一次写清，便于估工）
+- 1 个新表 `grammar_lab_progress` + RLS
+- 1 个迁移给 `gaokao_grammar_points` 加 9 个字段
+- 1 个新 edge function `explain-wrong-answer`
+- 1 个新 edge function 或复用：`grammar-lesson-recap`（个人化复盘，可后期）
+- `JuniorGrammarLab.tsx` 改造 Boss 阶段：错题 → 调用 AI 解释 + 不通过禁止前进
+- `Junior.tsx` / `JuniorGrammar.tsx` 列表页改为"关卡地图"样式
+- 跑批量脚本补齐内容（需要先充 AI 余额）
 
-| 字段 | 用途 |
-|---|---|
-| `hookLine` / `hookLineCN` | Hook 阶段 |
-| `teacher_script[]`（含 text/show/highlight/duration） | Teacher Lesson |
-| `formula` + `contrast_table[]`（lhs/rhs） | Foundation |
-| `reflex_cards[]`（中文情境 → 英文反射） | Reflex |
-| `situation_drills[]`（situation/cn/en，建议 ≥20） | Drill |
-| `correction_tasks[]`（wrong/model/pattern/hint） | Correction |
-| `exam_questions[]`（stem/options/answer/trap/why） | Real Exam |
-| `mnemonic`（6-8 字口诀） | 通用记忆点 |
-| `boss_questions[]`（综合关卡） | Boss |
+## 建议执行顺序
+1. **现在就做**：Step 2（解锁表）+ Step 3（AI 错题解释 edge function）+ Boss 强制 100% 改造 → 体验立刻升级
+2. **额度恢复后**：Step 1 续跑生成全部内容
+3. **下一轮**：Step 4（隐藏旧入口）+ Step 5（语感复盘 + SRS）
 
-`teacher_script` / `immersion_cards` / `exam_questions` 数据库已有；其余字段（`reflex_cards` / `situation_drills` / `correction_tasks` / `contrast_table` / `boss_questions` / `hookLine`）**目前还没有**——需要扩字段并由 generate-grammar-content 批量生成。
+## 需要你确认的 1 件事
+"必须 100% 全对才能解锁下一关" — 我建议 Boss 5 道题里：
+- 全对 → 通关 + 解锁下一点
+- 错任何一道 → AI 出讲解 + 当场重做错题，全部改对后也算通关（不必从头再来 5 道）
 
-### E. 当前 `JuniorGrammarLab.tsx` 与规格的差距
-- ✅ 有 cosmic 背景、briefing 屏、错题复盘骨架
-- ❌ 没有 Hook / Teacher Lesson 节奏脚本播放
-- ❌ 没有 Reflex Cards
-- ❌ 没有 Situation Drill（中翻英输入题）
-- ❌ 没有 Correction Tasks（改错）
-- ❌ 没有 Boss 关、Mixed Practice、Spaced Review
-- ❌ 成就只有 7 个，没有 XP 体系和等级
-- ❌ 没有 Light Mode / Focus Mode 切换
-
----
-
-## 我建议的执行步骤（请确认要不要这样推进）
-
-### Step 1 — 数据层扩展（一次性）
-- migration：在 `junior_grammar_points` 加字段 `hook_line / hook_line_cn / contrast_table / reflex_cards / situation_drills / correction_tasks / boss_questions`（jsonb）。
-- 升级 `generate-grammar-content` edge function 的 prompt，让它一次性产出上面所有字段（保持原有 teacher_script / immersion_cards / mnemonic / drill_pool / exam_questions）。
-- 在 `/admin/grammar-content` 加"全字段重生成"按钮。
-
-### Step 2 — 模板 6 个 Phase 组件
-重写 `JuniorGrammarLab.tsx`，拆成：
-- `HookScreen` · `TeacherLessonPlayer`（带 highlight + 节奏）· `FoundationCard`（formula + contrast）· `ReflexDeck` · `SituationDrillInput`（带 pattern 校验）· `CorrectionTask` · `RealExamRunner` · `MistakeReplay` · `BossLevel`
-- 全局壳：cosmic + 主题切换 + Focus Mode + XP/Level/Streak HUD + 12 成就。
-
-### Step 3 — 内容批量化（验证）
-- 先选 3 个高价值点（一般现在时 / 现在完成时 / 宾语从句）跑全字段生成 → 在 Lab 模板里逐项核对。
-- 没问题后批量铺初中全部语法点；高中同模板复用。
-
-### Step 4 — 入口与替换
-- `/junior/grammar/:id` 默认跳转到新 Lab；保留旧 `/junior/grammar-point/:id` 作为"清单视图"。
-- `/grammar-lab/subjunctive` 保留为原始手工版的特例（这一关已经超规格）。
-
----
-
-## 需要你拍板
-
-1. **范围**：是否同意先做初中（再复用到高中），且按上面 4 步走？
-2. **字段生成成本**：全量字段会让单点 token 涨 3-4 倍，初中 ~25 个点估 ¥0.5–1，可接受？
-3. **改错题型**：subjunctive 是用正则严格匹配；通用模板里我打算再给一个"AI 宽松判分"兜底（用 Lovable AI），可以吗？
-4. **是否保留旧 Lab**：现在的 `JuniorGrammarLab.tsx` 我会**完全重写**（不是增量），确认 OK？
-
-回复"按此推进"或者指出要调整的点，我就开 Step 1。
+这样既严格又不打击信心。OK 的话我就按这个执行 Step 2/3。

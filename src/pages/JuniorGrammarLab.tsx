@@ -745,7 +745,7 @@ export default function JuniorGrammarLab() {
       )}
 
       {/* Level map */}
-      <h2 className="mt-6 mb-3 text-base font-extrabold flex items-center gap-1.5">
+      <h2 className="mt-6 mb-3 text-base font-extrabold flex items-center gap-1.5 text-white">
         🗺️ 关卡地图
       </h2>
       <div className="space-y-3">
@@ -810,7 +810,7 @@ export default function JuniorGrammarLab() {
       </div>
 
       {/* Achievements */}
-      <h2 className="mt-8 mb-3 text-base font-extrabold flex items-center gap-1.5">
+      <h2 className="mt-8 mb-3 text-base font-extrabold flex items-center gap-1.5 text-white">
         <Sparkles className="size-4" /> 成就 ({state.achievements.length}/{ACHIEVEMENTS.length})
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -822,13 +822,13 @@ export default function JuniorGrammarLab() {
               className={cn(
                 "rounded-2xl border-2 p-3 text-center transition",
                 owned
-                  ? "border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 dark:from-amber-950/30 dark:to-rose-950/30"
-                  : "border-dashed border-muted bg-muted/20 opacity-60 grayscale",
+                  ? "border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 text-amber-900 shadow-md"
+                  : "border-dashed border-white/30 bg-white/5 text-white/70 opacity-80",
               )}
             >
               <div className="text-2xl">{a.emoji}</div>
               <div className="mt-1 text-[11px] font-extrabold">{a.name}</div>
-              <div className="text-[10px] text-muted-foreground">{a.desc}</div>
+              <div className={cn("text-[10px]", owned ? "text-amber-700" : "text-white/60")}>{a.desc}</div>
             </div>
           );
         })}

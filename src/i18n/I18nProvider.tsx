@@ -670,7 +670,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
         .select("preferred_language")
         .eq("user_id", uid)
         .maybeSingle();
-      const profileLang = (data as any)?.preferred_language;
+      const profileLang = (data as { preferred_language?: unknown } | null)?.preferred_language;
       if (isSupportedLang(profileLang) && profileLang !== lang) {
         if (Date.now() - lastManualLangAtRef.current < 5000) {
           await supabase.from("profiles").update({ preferred_language: lang } as never).eq("user_id", uid);

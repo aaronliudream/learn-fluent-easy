@@ -372,7 +372,7 @@ function ReflexScreen({ cards, onDone }: { cards: ReflexCard[]; onDone: (correct
 }
 
 /* ─────────────── Phase: Drill (translation input) ─────────────── */
-function DrillScreen({ items, onDone, onMistake }: { items: DrillItem[]; onDone: (correct: number, total: number) => void; onMistake: (m: Mistake) => void }) {
+function DrillScreen({ items, pointTitle, mnemonic, onDone, onMistake }: { items: DrillItem[]; pointTitle?: string; mnemonic?: string; onDone: (correct: number, total: number) => void; onMistake: (m: Mistake) => void }) {
   const [i, setI] = useState(0);
   const [val, setVal] = useState("");
   const [result, setResult] = useState<null | "ok" | "ng">(null);
@@ -395,7 +395,7 @@ function DrillScreen({ items, onDone, onMistake }: { items: DrillItem[]; onDone:
     setGrading(true);
     try {
       const { data, error } = await supabase.functions.invoke("grade-grammar-translation", {
-        body: { pointTitle: pointTitleRef, mnemonic: mnemonicRef, cn: it.cn, modelEn: it.en, userEn: val },
+        body: { pointTitle, mnemonic, cn: it.cn, modelEn: it.en, userEn: val },
       });
       if (error) throw error;
       const pass = !!(data as any)?.pass;

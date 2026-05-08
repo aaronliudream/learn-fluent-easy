@@ -169,7 +169,7 @@ export default function JuniorGrammar() {
 
       {/* ===== 选学专题 · 虚拟语气 (preserve from previous integration) ===== */}
       <a
-        href="/grammar-lab/subjunctive-mood.html"
+        href="/grammar-lab/subjunctive"
         className="block mb-6 rounded-2xl border bg-gradient-to-br from-amber-500/10 via-rose-500/5 to-primary/10 p-5 hover:shadow-tile transition group"
       >
         <div className="flex items-start gap-4">

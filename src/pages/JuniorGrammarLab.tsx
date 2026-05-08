@@ -855,6 +855,9 @@ export default function JuniorGrammarLab() {
   const [state, setState] = useState<LabState>({ xp: 0, streak: 0, bestStreak: 0, phasesDone: [], achievements: [], mistakes: [] });
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [focus, setFocus] = useState(false);
+  const [nextPointId, setNextPointId] = useState<string | null>(null);
+  const [bossPassed, setBossPassed] = useState(false);
+  const [gradeLabel, setGradeLabel] = useState<string>("初中");
   const initRef = useRef(false);
 
   useEffect(() => {
@@ -869,6 +872,22 @@ export default function JuniorGrammarLab() {
         .select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty")
         .eq("point_id", id).eq("question_type", "mcq").order("difficulty").limit(8);
       setExamQs((qs as any) || []);
+      // figure out next grammar point in same level by sort order
+      const { data: all } = await supabase.from("junior_grammar_points")
+        .select("id,sort_order,created_at").order("sort_order", { ascending: true }).order("created_at", { ascending: true });
+      if (all && id) {
+        const idx = all.findIndex((r: any) => r.id === id);
+        if (idx >= 0 && idx + 1 < all.length) setNextPointId((all[idx + 1] as any).id);
+      }
+      // detect grade label from profile if available
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (user) {
+          const { data: prof } = await supabase.from("profiles").select("grade").eq("id", user.id).maybeSingle();
+          const g = (prof as any)?.grade;
+          if (g) setGradeLabel(String(g));
+        }
+      } catch {}
       setLoading(false);
     })();
   }, [id]);
@@ -910,6 +929,27 @@ export default function JuniorGrammarLab() {
     setState((s) => ({ ...s, phasesDone: Array.from(new Set([...s.phasesDone, phaseId])) }));
     grant({ addXp: XP.phase_clear, unlock: unlocks });
     setPhase((p) => Math.min(p + 1, PHASES.length - 1));
+  };
+
+  const persistBossPassed = async (firstTryCorrect: number, total: number) => {
+    setBossPassed(true);
+    if (!id) return;
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      const score = total > 0 ? Math.round((firstTryCorrect / total) * 100) : 100;
+      await supabase.from("grammar_lab_progress").upsert({
+        user_id: user.id,
+        point_id: id,
+        level: "junior",
+        boss_passed: true,
+        best_score: score,
+        attempts: 1,
+        completed_at: new Date().toISOString(),
+      } as any, { onConflict: "user_id,point_id,level" });
+    } catch (e) {
+      console.warn("persist boss progress failed", e);
+    }
   };
 
   if (loading) return <CosmicShell theme={theme} focus={focus}><div className="flex items-center justify-center min-h-screen ink-dim">加载中…</div></CosmicShell>;
@@ -982,15 +1022,16 @@ export default function JuniorGrammarLab() {
         />
       )}
       {phase === 7 && (
-        <MCQRunner
-          label="Boss 冲刺"
-          questions={(pt.boss_questions || []) as any}
+        <BossRunner
+          questions={(pt.boss_questions || []) as BossQ[]}
+          pointTitle={pt.title}
+          gradeLabel={gradeLabel}
           onCorrect={() => { onCorrect(); grant({ addXp: XP.boss }); }}
           onMistake={onMistake}
-          onDone={(c, t) => {
-            const unlocks: string[] = ["boss_slayer"];
-            if (state.mistakes.length === 0 && c === t && t > 0) unlocks.push("perfect_run");
-            unlocks.push("lab_complete");
+          onPassed={(firstTry, total) => {
+            const unlocks: string[] = ["boss_slayer", "lab_complete"];
+            if (firstTry === total && total > 0) unlocks.push("perfect_run");
+            persistBossPassed(firstTry, total);
             completePhase(7, unlocks);
             fireEmojiConfetti({ emojis: ["👑", "🏆", "✨"] });
           }}
@@ -1000,6 +1041,8 @@ export default function JuniorGrammarLab() {
         <DoneScreen
           state={state}
           mistakes={state.mistakes}
+          bossPassed={bossPassed}
+          nextPointId={nextPointId}
           onReplay={() => { setPhase(0); setState({ ...state, phasesDone: [], streak: 0, mistakes: [] }); }}
           onAskTutor={(m) => {
             const url = `/junior/grammar-point/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;

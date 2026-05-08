@@ -732,6 +732,7 @@ function useProgress() {
       }));
     },
     recordMistake(levelId, mistake) {
+      postBridge("attempt", { isCorrect: false, kind: "exam", levelId, mistake });
       update(p => ({
         ...p,
         mistakes: [
@@ -764,6 +765,7 @@ function useProgress() {
     recordCorrect() {
       let unlocked = null;
       let leveled = false;
+      postBridge("attempt", { isCorrect: true, kind: "exam" });
       update(p => {
         const newStreak = (p.correctStreak || 0) + 1;
         const newBest = Math.max(p.bestCorrectStreak || 0, newStreak);
@@ -781,6 +783,7 @@ function useProgress() {
       }
     },
     awardFillCorrect() {
+      postBridge("attempt", { isCorrect: true, kind: "fill" });
       update(p => ({ ...p, xp: (p.xp || 0) + XP_REWARDS.fill_correct, correctStreak: (p.correctStreak || 0) + 1 }));
       if (window.__rewards) window.__rewards.xp(XP_REWARDS.fill_correct);
     },
@@ -797,6 +800,7 @@ function useProgress() {
     },
     completeLevelWithRewards(levelId, scoreData = {}) {
       let unlocked = null;
+      postBridge("level_complete", { levelId, ...scoreData });
       update(p => {
         const ach = [...(p.achievements || [])];
         const justCompleted = !p.levels[levelId];

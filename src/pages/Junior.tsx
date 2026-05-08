@@ -31,8 +31,8 @@ export default function Junior() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to="/china" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回中国学生专区
+      <BackLink to="/#stages" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> 返回学习阶段
       </BackLink>
       <div className="mb-6">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">

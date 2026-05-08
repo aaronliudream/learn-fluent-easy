@@ -33,8 +33,8 @@ export default function Gaokao() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to="/china" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回中国学生专区
+      <BackLink to="/#stages" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> 返回学习阶段
       </BackLink>
       <PageHeader title="高中英语" hideReviewBanner />
       <p className="mt-1 text-sm text-muted-foreground">核心词汇 · 语法 · 阅读 · 完形 · 写作 · 听力（可按年级筛选）</p>

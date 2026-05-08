@@ -194,7 +194,7 @@ export default function GaokaoGrammar() {
       {/* ===== 特色专题: 虚拟语气 ===== */}
       <section className="mb-6">
         <a
-          href="/grammar-lab/subjunctive-mood.html"
+          href="/grammar-lab/subjunctive"
           className="block rounded-2xl border-2 border-amber-300/60 bg-gradient-to-br from-amber-50 to-rose-50 p-5 transition hover:-translate-y-0.5 hover:border-amber-400 hover:shadow-lg dark:from-amber-950/30 dark:to-rose-950/30"
         >
           <div className="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">

@@ -44,7 +44,7 @@ export default function JuniorGrammar() {
       )}
       <section className="mb-6">
         <a
-          href="/grammar-lab/subjunctive-mood.html"
+          href="/grammar-lab/subjunctive"
           className="block rounded-2xl border-2 border-indigo-300/60 bg-gradient-to-br from-indigo-50 to-blue-50 p-5 transition hover:-translate-y-0.5 hover:border-indigo-400 hover:shadow-lg dark:from-indigo-950/30 dark:to-blue-950/30"
         >
           <div className="mb-2 flex flex-wrap items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-indigo-700 dark:text-indigo-300">

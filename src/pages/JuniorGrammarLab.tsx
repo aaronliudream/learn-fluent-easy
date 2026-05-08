@@ -699,7 +699,7 @@ export default function JuniorGrammarLab() {
             <button
               key={lv.id}
               disabled={locked || noQs}
-              onClick={() => startLevel(lv)}
+              onClick={() => openLevel(lv)}
               className={cn(
                 "w-full text-left rounded-3xl p-5 shadow-sm transition relative overflow-hidden",
                 "bg-gradient-to-br text-white",

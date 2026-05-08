@@ -701,7 +701,7 @@ export default function JuniorGrammarLab() {
   };
   const onMistake = (m: Mistake) => {
     setState((s) => ({ ...s, streak: 0, mistakes: [m, ...s.mistakes].slice(0, 50) }));
-    if (id) recordJuniorGrammarAttempt({ pointId: id, isCorrect: false, errorReason: "rule_unknown" }).catch(() => {});
+    if (id) recordJuniorGrammarAttempt({ pointId: id, questionType: "lab", isCorrect: false, errorReason: "rule_unknown" }).catch(() => {});
   };
 
   const completePhase = (phaseId: number, unlocks: string[] = []) => {

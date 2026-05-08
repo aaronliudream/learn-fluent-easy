@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Mic, BookOpen, GraduationCap, Sparkles, Quote, Check, MessageCircle } from "lucide-react";
+import { useRef, useState } from "react";
+import { ArrowRight, Mic, BookOpen, GraduationCap, Sparkles, Quote, Check, MessageCircle, Volume2, VolumeX } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import SpeakingDemo from "@/components/SpeakingDemo";
 import BrandFamilyHero from "@/components/BrandFamilyHero";
@@ -9,6 +10,19 @@ import BrandFamilyHero from "@/components/BrandFamilyHero";
  * 不做全球营销、不做 CET、不做职场。
  */
 export default function LandingPage() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
+  const toggleSound = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    const next = !muted;
+    v.muted = next;
+    if (!next) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    }
+    setMuted(next);
+  };
   return (
     <main className="min-h-dvh bg-[#FAF8F3] text-[#1F3A2E] antialiased">
       {/* HERO */}

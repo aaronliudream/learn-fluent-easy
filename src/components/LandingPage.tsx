@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
-import heroBg from "@/assets/landing-hero-mist.jpg";
+import moonBg from "@/assets/moon-hero-bg.jpg";
 
 /**
  * Big Moon English — landing page
@@ -48,7 +48,7 @@ export default function LandingPage() {
       <section
         className="relative overflow-hidden"
         style={{
-          backgroundImage: `url(${heroBg})`,
+          backgroundImage: `url(${moonBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

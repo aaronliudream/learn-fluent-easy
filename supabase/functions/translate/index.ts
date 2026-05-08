@@ -14,15 +14,6 @@ const corsHeaders = {
 
 type Item = { key: string; text: string };
 
-const jsonResponse = (body: unknown, status = 200) =>
-  new Response(JSON.stringify(body), {
-    status,
-    headers: { ...corsHeaders, "Content-Type": "application/json" },
-  });
-
-const fallbackResponse = (error: string, message: string) =>
-  jsonResponse({ translations: {}, fallback: true, error, message });
-
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
@@ -34,14 +25,13 @@ Deno.serve(async (req) => {
     };
 
     if (!targetLanguage || !Array.isArray(items) || items.length === 0) {
-      return jsonResponse({ error: "Invalid request" }, 400);
+      return new Response(JSON.stringify({ error: "Invalid request" }), {
+        status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) {
-      console.error("translate error: LOVABLE_API_KEY missing");
-      return fallbackResponse("AI_UNAVAILABLE", "Translation is temporarily unavailable.");
-    }
+    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY missing");
 
     const fromClause = sourceLanguage
       ? `from ${sourceLanguage} into ${targetLanguage}`
@@ -85,13 +75,15 @@ Deno.serve(async (req) => {
     if (!resp.ok) {
       const t = await resp.text();
       console.error("AI gateway error:", resp.status, t);
-      if (resp.status === 402) {
-        return fallbackResponse("AI_CREDITS_EXHAUSTED", "AI credits exhausted; translations are paused.");
-      }
-      if (resp.status === 429) {
-        return fallbackResponse("AI_RATE_LIMITED", "Translation rate limit reached; retry later.");
-      }
-      return fallbackResponse("AI_PROVIDER_ERROR", "Translation provider error.");
+      const status = resp.status === 429 || resp.status === 402 ? resp.status : 500;
+      const msg = resp.status === 429
+        ? "Rate limit reached, please retry shortly."
+        : resp.status === 402
+          ? "AI credits exhausted; please top up Lovable AI credits."
+          : "Translation provider error";
+      return new Response(JSON.stringify({ error: msg }), {
+        status, headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     const data = await resp.json();
@@ -105,9 +97,13 @@ Deno.serve(async (req) => {
       if (m) parsed = JSON.parse(m[0]);
     }
 
-    return jsonResponse({ translations: parsed });
+    return new Response(JSON.stringify({ translations: parsed }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
   } catch (e) {
     console.error("translate error", e);
-    return fallbackResponse("TRANSLATION_FAILED", e instanceof Error ? e.message : "Unknown translation error");
+    return new Response(JSON.stringify({ error: e instanceof Error ? e.message : "Unknown" }), {
+      status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
   }
 });

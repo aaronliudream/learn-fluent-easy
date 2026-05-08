@@ -24,6 +24,7 @@ const Stats = lazy(() => import("./pages/Stats.tsx"));
 const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
 const AdminFeedback = lazy(() => import("./pages/AdminFeedback.tsx"));
+const AdminGrammarContent = lazy(() => import("./pages/AdminGrammarContent.tsx"));
 const Placement = lazy(() => import("./pages/Placement.tsx"));
 const Slang = lazy(() => import("./pages/Slang.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
@@ -262,6 +263,7 @@ const App = () => (
           <Route path="/level/:levelId/unit/:unitId" element={<Unit />} />
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />
           <Route path="/admin/feedback" element={<AdminFeedback />} />
+          <Route path="/admin/grammar-content" element={<AdminGrammarContent />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/* Sub-brand entry redirects (母品牌 → 子品牌内部已有的实现) */}

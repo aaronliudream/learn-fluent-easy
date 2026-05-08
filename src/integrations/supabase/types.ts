@@ -2702,13 +2702,17 @@ export type Database = {
           category_id: string
           cefr: string | null
           code: string
+          content_depth: number
           created_at: string
           examples: Json
           explanation_md: string
           grade: number
           id: string
+          immersion_cards: Json
+          mnemonic: string | null
           sort_order: number
           summary: string | null
+          teacher_script: Json
           title: string
         }
         Insert: {
@@ -2716,13 +2720,17 @@ export type Database = {
           category_id: string
           cefr?: string | null
           code: string
+          content_depth?: number
           created_at?: string
           examples?: Json
           explanation_md?: string
           grade?: number
           id?: string
+          immersion_cards?: Json
+          mnemonic?: string | null
           sort_order?: number
           summary?: string | null
+          teacher_script?: Json
           title: string
         }
         Update: {
@@ -2730,13 +2738,17 @@ export type Database = {
           category_id?: string
           cefr?: string | null
           code?: string
+          content_depth?: number
           created_at?: string
           examples?: Json
           explanation_md?: string
           grade?: number
           id?: string
+          immersion_cards?: Json
+          mnemonic?: string | null
           sort_order?: number
           summary?: string | null
+          teacher_script?: Json
           title?: string
         }
         Relationships: [
@@ -2755,8 +2767,11 @@ export type Database = {
           correct_answer: string | null
           created_at: string
           difficulty: number
+          distractors: Json
           explanation: string | null
+          grammar_topic: string | null
           id: string
+          natural_note: string | null
           option_a: string | null
           option_b: string | null
           option_c: string | null
@@ -2765,14 +2780,18 @@ export type Database = {
           question_type: string
           sort_order: number
           stem: string
+          use_ai_grading: boolean
         }
         Insert: {
           accepted_answers?: string[] | null
           correct_answer?: string | null
           created_at?: string
           difficulty?: number
+          distractors?: Json
           explanation?: string | null
+          grammar_topic?: string | null
           id?: string
+          natural_note?: string | null
           option_a?: string | null
           option_b?: string | null
           option_c?: string | null
@@ -2781,14 +2800,18 @@ export type Database = {
           question_type?: string
           sort_order?: number
           stem: string
+          use_ai_grading?: boolean
         }
         Update: {
           accepted_answers?: string[] | null
           correct_answer?: string | null
           created_at?: string
           difficulty?: number
+          distractors?: Json
           explanation?: string | null
+          grammar_topic?: string | null
           id?: string
+          natural_note?: string | null
           option_a?: string | null
           option_b?: string | null
           option_c?: string | null
@@ -2797,6 +2820,7 @@ export type Database = {
           question_type?: string
           sort_order?: number
           stem?: string
+          use_ai_grading?: boolean
         }
         Relationships: [
           {
@@ -3064,6 +3088,78 @@ export type Database = {
           grade?: number
           name_cn?: string
           sort_order?: number
+        }
+        Relationships: []
+      }
+      junior_user_mastery: {
+        Row: {
+          correct_count: number
+          created_at: string
+          difficulty: number
+          due_at: string | null
+          id: string
+          item_id: string
+          item_type: string
+          lapses: number
+          last_grade: number | null
+          last_latency_ms: number | null
+          last_result: string | null
+          last_seen_at: string | null
+          mastery_level: number
+          mastery_matrix: Json
+          next_review_at: string | null
+          reached_master_at: string | null
+          retention_check_at: string | null
+          stability: number
+          updated_at: string
+          user_id: string
+          wrong_count: number
+        }
+        Insert: {
+          correct_count?: number
+          created_at?: string
+          difficulty?: number
+          due_at?: string | null
+          id?: string
+          item_id: string
+          item_type: string
+          lapses?: number
+          last_grade?: number | null
+          last_latency_ms?: number | null
+          last_result?: string | null
+          last_seen_at?: string | null
+          mastery_level?: number
+          mastery_matrix?: Json
+          next_review_at?: string | null
+          reached_master_at?: string | null
+          retention_check_at?: string | null
+          stability?: number
+          updated_at?: string
+          user_id: string
+          wrong_count?: number
+        }
+        Update: {
+          correct_count?: number
+          created_at?: string
+          difficulty?: number
+          due_at?: string | null
+          id?: string
+          item_id?: string
+          item_type?: string
+          lapses?: number
+          last_grade?: number | null
+          last_latency_ms?: number | null
+          last_result?: string | null
+          last_seen_at?: string | null
+          mastery_level?: number
+          mastery_matrix?: Json
+          next_review_at?: string | null
+          reached_master_at?: string | null
+          retention_check_at?: string | null
+          stability?: number
+          updated_at?: string
+          user_id?: string
+          wrong_count?: number
         }
         Relationships: []
       }

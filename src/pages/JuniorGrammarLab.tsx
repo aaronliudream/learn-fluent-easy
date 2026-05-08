@@ -464,10 +464,11 @@ export default function JuniorGrammarLab() {
   // ════════════ ACTIVE LEVEL VIEW ════════════
   if (active) {
     return (
-      <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+      <CosmicShell>
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 relative">
         <button
           onClick={exitLevel}
-          className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+          className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
         >
           <ArrowLeft className="size-4" /> 返回关卡地图
         </button>
@@ -625,18 +626,22 @@ export default function JuniorGrammarLab() {
 
         {unlockedAch && <AchievementToast id={unlockedAch} />}
       </main>
+      </CosmicShell>
     );
   }
 
   // ════════════ MAP / OVERVIEW VIEW ════════════
   const totalStars = Object.values(state.levels).reduce((s, l) => s + l.bestStars, 0);
   const allCleared = levels.every((l) => (state.levels[l.id]?.bestStars ?? 0) >= 1);
+  const hasLesson = !!(pt.teacher_script && pt.teacher_script.length > 0);
+  const hasImmersion = !!(pt.immersion_cards && pt.immersion_cards.length > 0);
 
   return (
-    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+    <CosmicShell>
+    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 relative">
       <Link
         to="/junior/grammar"
-        className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
       >
         <ArrowLeft className="size-4" /> 返回考点列表
       </Link>

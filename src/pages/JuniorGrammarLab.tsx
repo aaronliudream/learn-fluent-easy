@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, Lock, RotateCw, Sparkles, Star, Trophy, Zap } from "lucide-react";
+import { ArrowLeft, BookOpen, Lock, RotateCw, Sparkles, Star, Target, Trophy, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
@@ -17,6 +17,9 @@ import {
 import TutorChat from "@/components/tutor/TutorChat";
 import PaywallDialog from "@/components/PaywallDialog";
 import { consumeQuestionQuota } from "@/lib/quota";
+import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
+import { ImmersionCards, type ImmersionCard } from "@/components/grammar/ImmersionCards";
+import ReactMarkdown from "react-markdown";
 
 /**
  * Junior Grammar 全攻克 Lab — gamified, level-based learning experience
@@ -36,6 +39,8 @@ type Pt = {
   cefr: string;
   mnemonic: string | null;
   explanation_md: string | null;
+  teacher_script: LessonSegment[] | null;
+  immersion_cards: ImmersionCard[] | null;
 };
 
 type Level = {
@@ -169,6 +174,10 @@ export default function JuniorGrammarLab() {
   const [paywall, setPaywall] = useState({ open: false, used: 5, limit: 5 });
   const [unlockedAch, setUnlockedAch] = useState<string | null>(null);
 
+  // Pre-level briefing & overview screens
+  const [briefingFor, setBriefingFor] = useState<Level | null>(null);
+  const [overview, setOverview] = useState<"lesson" | "immersion" | null>(null);
+
   const finishedRef = useRef(false);
 
   useEffect(() => {
@@ -179,7 +188,7 @@ export default function JuniorGrammarLab() {
       const [a, b] = await Promise.all([
         supabase
           .from("junior_grammar_points")
-          .select("id,title,cefr,mnemonic,explanation_md")
+          .select("id,title,cefr,mnemonic,explanation_md,teacher_script,immersion_cards")
           .eq("id", id)
           .maybeSingle(),
         supabase
@@ -207,7 +216,13 @@ export default function JuniorGrammarLab() {
     return next;
   };
 
-  // ─── Start a level ───
+  // ─── Open level briefing first ───
+  const openLevel = (lv: Level) => {
+    if (lv.questions.length === 0) return;
+    setBriefingFor(lv);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  // ─── Actually start a level (after briefing) ───
   const startLevel = (lv: Level) => {
     if (lv.questions.length === 0) return;
     finishedRef.current = false;
@@ -216,6 +231,7 @@ export default function JuniorGrammarLab() {
     setBestStreak(0);
     setSessionQs(shuffle(lv.questions).slice(0, QUESTIONS_PER_LEVEL));
     setActive(lv);
+    setBriefingFor(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -331,13 +347,128 @@ export default function JuniorGrammarLab() {
     );
   }
 
+  // ════════════ COURSE OVERVIEW (lesson / immersion) ════════════
+  if (overview === "lesson" && pt.teacher_script && pt.teacher_script.length > 0) {
+    return (
+      <CosmicShell>
+        <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+          <button
+            onClick={() => setOverview(null)}
+            className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
+          >
+            <ArrowLeft className="size-4" /> 返回 Lab
+          </button>
+          <TeacherLessonPlayer
+            segments={pt.teacher_script}
+            pointTitle={pt.title}
+            onContinue={() => setOverview("immersion")}
+            onSkip={() => setOverview(null)}
+          />
+        </main>
+      </CosmicShell>
+    );
+  }
+  if (overview === "immersion" && pt.immersion_cards && pt.immersion_cards.length > 0) {
+    return (
+      <CosmicShell>
+        <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+          <button
+            onClick={() => setOverview(null)}
+            className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
+          >
+            <ArrowLeft className="size-4" /> 返回 Lab
+          </button>
+          <ImmersionCards cards={pt.immersion_cards} onContinue={() => setOverview(null)} />
+        </main>
+      </CosmicShell>
+    );
+  }
+
+  // ════════════ LEVEL BRIEFING (pre-game) ════════════
+  if (briefingFor) {
+    const lv = briefingFor;
+    const sampleQ = lv.questions[0];
+    return (
+      <CosmicShell>
+        <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+          <button
+            onClick={() => setBriefingFor(null)}
+            className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
+          >
+            <ArrowLeft className="size-4" /> 返回关卡地图
+          </button>
+
+          <div
+            className={cn(
+              "rounded-3xl bg-gradient-to-br p-6 sm:p-8 text-white shadow-xl",
+              lv.color,
+            )}
+          >
+            <div className="text-[11px] font-bold uppercase tracking-widest opacity-90">
+              Level {lv.id} · 课前简报
+            </div>
+            <h1 className="mt-1 text-3xl font-extrabold">
+              {lv.emoji} {lv.name}
+            </h1>
+            <p className="mt-1 text-sm opacity-90">{lv.desc}</p>
+
+            {/* Hook */}
+            <div className="mt-5 rounded-2xl bg-white/15 backdrop-blur p-4">
+              <div className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">
+                🎯 本关任务
+              </div>
+              <div className="text-sm font-bold">
+                完成 {Math.min(lv.questions.length, QUESTIONS_PER_LEVEL)} 题{lv.id === 3 ? "高难度" : lv.id === 2 ? "进阶" : "基础"}训练，争取 60% 通关 / 80% 双星 / 100% 满星。
+              </div>
+            </div>
+
+            {/* Mnemonic —核心公式 */}
+            {pt.mnemonic && (
+              <div className="mt-3 rounded-2xl bg-white/15 backdrop-blur p-4">
+                <div className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">
+                  🔑 核心记忆
+                </div>
+                <div className="text-base font-extrabold">{pt.mnemonic}</div>
+              </div>
+            )}
+
+            {/* 例句 from sample question */}
+            {sampleQ && (
+              <div className="mt-3 rounded-2xl bg-white/15 backdrop-blur p-4">
+                <div className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">
+                  📖 题型预览
+                </div>
+                <div className="text-sm font-bold opacity-95">{sampleQ.stem}</div>
+              </div>
+            )}
+          </div>
+
+          <button
+            onClick={() => startLevel(lv)}
+            className="mt-6 w-full rounded-full bg-gradient-to-r from-amber-400 to-rose-500 px-6 py-4 text-base font-extrabold text-white shadow-xl hover:shadow-2xl transition active:scale-[0.99]"
+          >
+            🚀 开始挑战 Level {lv.id}
+          </button>
+
+          <button
+            onClick={() => setBriefingFor(null)}
+            className="mt-3 w-full rounded-full bg-white/10 backdrop-blur px-6 py-2 text-sm font-bold text-white/80 hover:text-white border border-white/20"
+          >
+            返回地图
+          </button>
+        </main>
+      </CosmicShell>
+    );
+  }
+
   // ════════════ ACTIVE LEVEL VIEW ════════════
   if (active) {
     return (
-      <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+      <CosmicShell>
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 relative">
         <button
           onClick={exitLevel}
-          className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+          className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
         >
           <ArrowLeft className="size-4" /> 返回关卡地图
         </button>
@@ -440,6 +571,45 @@ export default function JuniorGrammarLab() {
               </div>
             )}
 
+            {/* Mistake review */}
+            {(() => {
+              const wrongs = sessionQs.filter(
+                (q) => results[q.id] && results[q.id].kind === "wrong",
+              );
+              if (wrongs.length === 0) return null;
+              return (
+                <div className="mt-5 mx-auto max-w-md rounded-2xl bg-card/90 p-4 text-left shadow-inner">
+                  <div className="text-[10px] font-bold uppercase tracking-widest text-rose-600 mb-2 flex items-center gap-1">
+                    📝 错题复盘 ({wrongs.length})
+                  </div>
+                  <ul className="space-y-2.5">
+                    {wrongs.map((q) => (
+                      <li key={q.id} className="rounded-xl border border-rose-200 bg-rose-50/60 dark:bg-rose-950/20 p-3">
+                        <div className="text-xs font-bold text-foreground">{q.stem}</div>
+                        {q.correct_answer && (
+                          <div className="mt-1 text-[11px]">
+                            <span className="font-bold text-emerald-600">正确：</span>
+                            <span className="text-foreground">{q.correct_answer}</span>
+                          </div>
+                        )}
+                        {q.explanation && (
+                          <div className="mt-1 text-[11px] text-muted-foreground">
+                            💡 {q.explanation}
+                          </div>
+                        )}
+                        <button
+                          onClick={() => setTutorFor(q)}
+                          className="mt-2 inline-flex items-center gap-1 rounded-full bg-indigo-100 dark:bg-indigo-950/40 px-2.5 py-1 text-[10px] font-bold text-indigo-700 dark:text-indigo-300"
+                        >
+                          🤖 问 AI 老师
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })()}
+
             <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
               <button
                 onClick={() => startLevel(active)}
@@ -495,18 +665,22 @@ export default function JuniorGrammarLab() {
 
         {unlockedAch && <AchievementToast id={unlockedAch} />}
       </main>
+      </CosmicShell>
     );
   }
 
   // ════════════ MAP / OVERVIEW VIEW ════════════
   const totalStars = Object.values(state.levels).reduce((s, l) => s + l.bestStars, 0);
   const allCleared = levels.every((l) => (state.levels[l.id]?.bestStars ?? 0) >= 1);
+  const hasLesson = !!(pt.teacher_script && pt.teacher_script.length > 0);
+  const hasImmersion = !!(pt.immersion_cards && pt.immersion_cards.length > 0);
 
   return (
-    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+    <CosmicShell>
+    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 relative">
       <Link
         to="/junior/grammar"
-        className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        className="mb-3 inline-flex items-center gap-1 text-sm text-white/80 hover:text-white"
       >
         <ArrowLeft className="size-4" /> 返回考点列表
       </Link>
@@ -537,6 +711,27 @@ export default function JuniorGrammarLab() {
             <Zap className="size-3" /> {state.xp} XP
           </div>
         </div>
+
+        {(hasLesson || hasImmersion) && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {hasLesson && (
+              <button
+                onClick={() => setOverview("lesson")}
+                className="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur px-3 py-1.5 text-xs font-bold hover:bg-white/30 transition"
+              >
+                <BookOpen className="size-3.5" /> 老师讲解
+              </button>
+            )}
+            {hasImmersion && (
+              <button
+                onClick={() => setOverview("immersion")}
+                className="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur px-3 py-1.5 text-xs font-bold hover:bg-white/30 transition"
+              >
+                <Target className="size-3.5" /> 情景沉浸
+              </button>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Mnemonic */}
@@ -550,7 +745,7 @@ export default function JuniorGrammarLab() {
       )}
 
       {/* Level map */}
-      <h2 className="mt-6 mb-3 text-base font-extrabold flex items-center gap-1.5">
+      <h2 className="mt-6 mb-3 text-base font-extrabold flex items-center gap-1.5 text-white">
         🗺️ 关卡地图
       </h2>
       <div className="space-y-3">
@@ -564,7 +759,7 @@ export default function JuniorGrammarLab() {
             <button
               key={lv.id}
               disabled={locked || noQs}
-              onClick={() => startLevel(lv)}
+              onClick={() => openLevel(lv)}
               className={cn(
                 "w-full text-left rounded-3xl p-5 shadow-sm transition relative overflow-hidden",
                 "bg-gradient-to-br text-white",
@@ -615,7 +810,7 @@ export default function JuniorGrammarLab() {
       </div>
 
       {/* Achievements */}
-      <h2 className="mt-8 mb-3 text-base font-extrabold flex items-center gap-1.5">
+      <h2 className="mt-8 mb-3 text-base font-extrabold flex items-center gap-1.5 text-white">
         <Sparkles className="size-4" /> 成就 ({state.achievements.length}/{ACHIEVEMENTS.length})
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -627,13 +822,13 @@ export default function JuniorGrammarLab() {
               className={cn(
                 "rounded-2xl border-2 p-3 text-center transition",
                 owned
-                  ? "border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 dark:from-amber-950/30 dark:to-rose-950/30"
-                  : "border-dashed border-muted bg-muted/20 opacity-60 grayscale",
+                  ? "border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 text-amber-900 shadow-md"
+                  : "border-dashed border-white/30 bg-white/5 text-white/70 opacity-80",
               )}
             >
               <div className="text-2xl">{a.emoji}</div>
               <div className="mt-1 text-[11px] font-extrabold">{a.name}</div>
-              <div className="text-[10px] text-muted-foreground">{a.desc}</div>
+              <div className={cn("text-[10px]", owned ? "text-amber-700" : "text-white/60")}>{a.desc}</div>
             </div>
           );
         })}
@@ -657,6 +852,38 @@ export default function JuniorGrammarLab() {
 
       {unlockedAch && <AchievementToast id={unlockedAch} />}
     </main>
+    </CosmicShell>
+  );
+}
+
+/**
+ * Cosmic backdrop — deep gradient + animated stars, mimicking the
+ * subjunctive lab's signature look.
+ */
+function CosmicShell({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#0b0a1f] via-[#1a0f3a] to-[#2a1454]">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.7), transparent 50%), radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1px 1px at 85% 65%, rgba(255,255,255,0.6), transparent 50%), radial-gradient(2px 2px at 10% 70%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1.5px 1.5px at 90% 90%, rgba(255,255,255,0.5), transparent 50%), radial-gradient(1px 1px at 30% 10%, rgba(255,255,255,0.6), transparent 50%)",
+          backgroundSize: "100% 100%",
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-40 -left-40 size-[600px] rounded-full opacity-30 blur-3xl"
+        style={{ background: "radial-gradient(circle, #ff79c6 0%, transparent 70%)" }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-40 -right-40 size-[600px] rounded-full opacity-30 blur-3xl"
+        style={{ background: "radial-gradient(circle, #50fa7b 0%, transparent 70%)" }}
+      />
+      <div className="relative z-10">{children}</div>
+    </div>
   );
 }
 

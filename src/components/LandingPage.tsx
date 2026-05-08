@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Mic, BookOpen, GraduationCap, Sparkles, Quote, Check, MessageCircle } from "lucide-react";
+import { useRef, useState } from "react";
+import { ArrowRight, Mic, BookOpen, GraduationCap, Sparkles, Quote, Check, MessageCircle, Volume2, VolumeX } from "lucide-react";
 import { BrandLockup } from "@/components/brand/BrandLogo";
 import SpeakingDemo from "@/components/SpeakingDemo";
 import BrandFamilyHero from "@/components/BrandFamilyHero";
@@ -9,6 +10,19 @@ import BrandFamilyHero from "@/components/BrandFamilyHero";
  * 不做全球营销、不做 CET、不做职场。
  */
 export default function LandingPage() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [muted, setMuted] = useState(true);
+  const toggleSound = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    const next = !muted;
+    v.muted = next;
+    if (!next) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    }
+    setMuted(next);
+  };
   return (
     <main className="min-h-dvh bg-[#FAF8F3] text-[#1F3A2E] antialiased">
       {/* HERO */}
@@ -74,8 +88,9 @@ export default function LandingPage() {
           {/* Spark 吉祥物视频 */}
           <div className="relative mx-auto w-full max-w-[440px]">
             <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-[#FFD9A8] via-[#FFB8C8] to-[#A8D8FF] opacity-60 blur-2xl" />
-            <div className="overflow-hidden rounded-[2rem] bg-white shadow-[0_30px_60px_-20px_rgba(31,58,46,0.35)] ring-1 ring-white/60">
+            <div className="relative overflow-hidden rounded-[2rem] bg-white shadow-[0_30px_60px_-20px_rgba(31,58,46,0.35)] ring-1 ring-white/60">
               <video
+                ref={videoRef}
                 src="/spark-hero.mp4"
                 autoPlay
                 loop
@@ -83,8 +98,17 @@ export default function LandingPage() {
                 playsInline
                 preload="metadata"
                 aria-label="Spark — Big Moon English 学习伙伴"
-                className="block aspect-square w-full object-cover"
+                onClick={toggleSound}
+                className="block aspect-square w-full cursor-pointer object-cover"
               />
+              <button
+                type="button"
+                onClick={toggleSound}
+                aria-label={muted ? "开启声音" : "静音"}
+                className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 text-[11px] font-bold tracking-[0.14em] text-white backdrop-blur-sm transition hover:bg-black/75"
+              >
+                {muted ? <><VolumeX className="size-3.5" /> 点击开声音</> : <><Volume2 className="size-3.5" /> 有声</>}
+              </button>
             </div>
             <div className="mt-3 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-[#1F3A2E]/50">
               ✨ Meet Spark · 你的英语学习伙伴

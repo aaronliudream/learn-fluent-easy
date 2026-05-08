@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine } from "lucide-react";
+import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine, Rocket, Sparkles } from "lucide-react";
 import { ContinueCard } from "@/components/mastery/ContinueCard";
 
 const GRADE_FILTERS = [
@@ -45,6 +45,30 @@ export default function Junior() {
       </div>
 
       <ContinueCard stage="junior" />
+
+      {/* Grammar Lab 显眼入口 */}
+      <Link
+        to={`/junior/grammar${q}`}
+        className="group relative mt-4 flex items-center gap-4 overflow-hidden rounded-3xl border-2 border-fuchsia-300/40 bg-gradient-to-br from-fuchsia-600 via-purple-600 to-indigo-600 p-5 text-white shadow-2xl transition hover:-translate-y-0.5 hover:shadow-fuchsia-500/40"
+      >
+        <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/20 blur-3xl" />
+        <span className="pointer-events-none absolute -left-6 -bottom-6 size-24 rounded-full bg-pink-400/30 blur-2xl" />
+        <div className="relative grid size-16 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
+          <Rocket className="size-8" />
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <div className="flex items-center gap-2">
+            <span className="rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-extrabold tracking-wider backdrop-blur-sm">
+              NEW
+            </span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-90">Grammar Lab · 9 阶段语法实验室</span>
+          </div>
+          <div className="mt-1 text-xl font-extrabold leading-tight">🚀 进入语法实验室</div>
+          <div className="mt-1 flex items-center gap-1 text-xs opacity-95">
+            <Sparkles className="size-3" /> 钩子 · 口诀 · 老师讲解 · 反射卡 · 情景演练 · 改错 · BOSS 题
+          </div>
+        </div>
+      </Link>
 
       <div className="my-4">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground mb-2">年级筛选</div>

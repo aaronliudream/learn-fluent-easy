@@ -1039,6 +1039,8 @@ export default function JuniorGrammarLab() {
       {phase === 4 && (
         <DrillScreen
           items={pt.situation_drills || []}
+          pointTitle={pt.title}
+          mnemonic={pt.mnemonic ?? undefined}
           onMistake={onMistake}
           onDone={(correct, total) => {
             grant({ addXp: correct * XP.drill });

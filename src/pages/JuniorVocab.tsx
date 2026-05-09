@@ -807,3 +807,31 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
     </main>
   );
 }
+
+/* -------- FSRS review launcher: filters pool to due words, then runs GuidedSession in review mode -------- */
+function JuniorReviewLauncher({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const [duePool, setDuePool] = useState<Vocab[] | null>(null);
+  useEffect(() => {
+    (async () => {
+      const ids = await fetchDueReviewIds(pool.map((p) => p.id));
+      const set = new Set(ids);
+      setDuePool(pool.filter((p) => set.has(p.id)));
+    })();
+  }, [pool]);
+  if (duePool === null) {
+    return <main className="mx-auto flex min-h-[60dvh] max-w-2xl items-center justify-center text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> 加载到期单词…</main>;
+  }
+  if (duePool.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</button>
+        <div className="rounded-3xl border border-border bg-card p-8 text-center">
+          <Trophy className="mx-auto size-12 text-amber-500" />
+          <h3 className="mt-2 text-xl font-extrabold">今天没有到期复习的词 🎉</h3>
+          <p className="mt-1 text-sm text-muted-foreground">先去开启一关通关，复习池会按遗忘曲线自动安排。</p>
+        </div>
+      </main>
+    );
+  }
+  return <GuidedSession pool={duePool} onExit={onExit} title="到期复习" mode="review" />;
+}

@@ -6650,8 +6650,13 @@ function App() {
         return r.top >= 0 && r.bottom <= window.innerHeight + 100;
       });
       const pool = inView.length ? inView : cands;
-      pool.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
-      return pool[pool.length - 1];
+      pool.sort((a, b) => {
+        const pa = a.hasAttribute("data-quiz-submit") ? 1 : 0;
+        const pb = b.hasAttribute("data-quiz-submit") ? 1 : 0;
+        if (pa !== pb) return pb - pa;
+        return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+      });
+      return pool[0];
     }
     function onKey(e) {
       if (e.metaKey || e.ctrlKey || e.altKey) return;
@@ -8730,7 +8735,7 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
             </div>
 
             <div className="mt-4 flex items-center gap-3 flex-wrap">
-              <button onClick={onCheckTiles} disabled={tilePicked.length === 0 || (transformFb && transformFb.kind === "correct")} className="font-cn btn-primary px-6 py-2.5 rounded-full text-sm disabled:opacity-50">检查</button>
+              <button data-quiz-submit onClick={onCheckTiles} disabled={tilePicked.length === 0 || (transformFb && transformFb.kind === "correct")} className="font-cn btn-primary px-6 py-2.5 rounded-full text-sm disabled:opacity-50">检查</button>
               <button onClick={onClearPicked} disabled={tilePicked.length === 0 || (transformFb && transformFb.kind === "correct")} className="font-cn btn-ghost px-5 py-2.5 rounded-full text-sm disabled:opacity-50">清空</button>
               <button onClick={() => { setTransformReveal(true); setTransformFb({kind:"wrong",msg:"看一下参考答案，跟着读一遍。",target:tt.model}); }} className="font-cn btn-ghost px-5 py-2.5 rounded-full text-sm">直接看答案</button>
               <span className="ink-faint text-xs ml-auto font-cn hide-mobile">Enter 提交</span>
@@ -8780,7 +8785,7 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
           )}
 
           <div className="mt-8 flex justify-end">
-            <button onClick={advanceTransform} disabled={!transformFb}
+            <button data-quiz-submit onClick={advanceTransform} disabled={!transformFb}
               className={`font-cn px-8 py-3.5 rounded-full inline-flex items-center gap-3 transition-all ${transformFb ? "btn-primary" : "btn-ghost cursor-not-allowed opacity-50"}`}>
               下一题 <span className="font-mono">→</span>
             </button>

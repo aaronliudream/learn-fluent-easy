@@ -607,14 +607,33 @@ const Slang = () => {
           exampleEn: q.idiom.example,
         },
       });
-      if (error) throw error;
-      const s: string = data?.scenario;
+      // Gracefully degrade on rate-limit / billing errors instead of
+      // bubbling a runtime error (which can blank the page).
+      const apiErr = (data as any)?.error as string | undefined;
+      if (error || apiErr) {
+        const msg = apiErr || error?.message || "";
+        if (/rate limit/i.test(msg)) {
+          toast(tt("AI 有点忙，先用本地场景练习 ⏳"));
+        } else if (/payment|credit/i.test(msg)) {
+          toast(tt("AI 额度已用完，先用本地场景练习"));
+        }
+        // Fallback: synthesise a simple scenario from the Chinese meaning
+        // so the drill remains playable.
+        const fallback = `${q.idiom.meaning_cn}。这时美国朋友最可能说哪句？`;
+        scenarioCacheRef.current[q.id] = fallback;
+        setScenarioText((prev) => ({ ...prev, [q.id]: fallback }));
+        return;
+      }
+      const s: string = (data as any)?.scenario;
       if (s) {
         scenarioCacheRef.current[q.id] = s;
         setScenarioText((prev) => ({ ...prev, [q.id]: s }));
       }
     } catch (e) {
       console.error("scenario fetch failed", e);
+      const fallback = `${q.idiom.meaning_cn}。这时美国朋友最可能说哪句？`;
+      scenarioCacheRef.current[q.id] = fallback;
+      setScenarioText((prev) => ({ ...prev, [q.id]: fallback }));
     } finally {
       setScenarioBusy((s) => ({ ...s, [q.id]: false }));
     }
@@ -653,8 +672,18 @@ const Slang = () => {
           userText: text,
         },
       });
-      if (error) throw error;
-      if (data?.error) throw new Error(data.error);
+      const apiErr = (data as any)?.error as string | undefined;
+      if (error || apiErr) {
+        const msg = apiErr || error?.message || "";
+        if (/rate limit/i.test(msg)) {
+          toast(tt("AI 有点忙，请稍后再试 ⏳"));
+        } else if (/payment|credit/i.test(msg)) {
+          toast(tt("AI 额度已用完，请稍后再试"));
+        } else {
+          toast.error(tt("评分失败，请稍后再试"));
+        }
+        return;
+      }
       const grade = data.grade as ComposeGrade;
       setComposeGrade((prev) => ({ ...prev, [q.id]: grade }));
       setRevealed(true);

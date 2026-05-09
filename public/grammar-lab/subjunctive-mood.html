@@ -8669,20 +8669,60 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
             <p className="font-display text-xl mb-1 ink">"{tt.prompt}"</p>
             <p className="font-cn ink-dim text-sm mb-6">{tt.promptCN}</p>
 
-            <div className="text-mint text-[10px] font-mono tracking-[0.3em] uppercase mb-2">{(level.transformUI && level.transformUI.writeLabel) || "YOUR REWRITE · 改写"}</div>
-            <textarea rows="2" placeholder={tt.hintCN.replace(/\*\*/g, "")}
-              value={transformInput}
-              onChange={(e) => setTransformInput(e.target.value)}
-              onKeyDown={handleTransformKey}
-              disabled={transformFb && transformFb.kind === "correct"} />
+            <div className="text-mint text-[10px] font-mono tracking-[0.3em] uppercase mb-2">{(level.transformUI && level.transformUI.writeLabel) || "YOUR REWRITE · 选词拼句"}</div>
+
+            {/* 已选词区 */}
+            <div className="min-h-[64px] rounded-xl bg-deep/30 border-2 border-dashed border-line-mid px-4 py-3 mb-3 flex flex-wrap gap-2 items-center">
+              {tilePicked.length === 0 && (
+                <span className="font-cn ink-faint text-sm">↓ 从下方点选单词组成英文句子</span>
+              )}
+              {tilePicked.map((id, i) => {
+                const t = tilePool.find(x => x.id === id);
+                if (!t) return null;
+                return (
+                  <button
+                    key={`p-${id}-${i}`}
+                    onClick={() => onUnpickTile(id)}
+                    disabled={transformFb && transformFb.kind === "correct"}
+                    className="font-mono px-3 py-1.5 rounded-lg bg-amber/20 border border-amber/50 text-amber hover:bg-amber/30 transition text-sm"
+                    title="点击移除"
+                  >
+                    {t.word}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* 单词磁贴池 */}
+            <div className="rounded-xl bg-warm/30 border border-line-mid px-4 py-3 mb-3 flex flex-wrap gap-2">
+              {tilePool.map(t => {
+                const used = tilePicked.includes(t.id);
+                return (
+                  <button
+                    key={`b-${t.id}`}
+                    onClick={() => onPickTile(t.id)}
+                    disabled={used || (transformFb && transformFb.kind === "correct")}
+                    className={`font-mono px-3 py-1.5 rounded-lg border text-sm transition ${
+                      used
+                        ? "border-line-mid bg-deep/20 ink-faint opacity-40 cursor-not-allowed"
+                        : "border-mint/40 bg-mint-soft/20 ink hover:bg-mint-soft/40 hover:border-mint"
+                    }`}
+                  >
+                    {t.word}
+                  </button>
+                );
+              })}
+            </div>
+
             <div className="font-cn ink-faint text-xs mt-2 leading-relaxed">
               💡 <MD text={tt.hintCN} />
             </div>
 
             <div className="mt-4 flex items-center gap-3 flex-wrap">
-              <button onClick={checkTransform} disabled={!transformInput.trim() || (transformFb && transformFb.kind === "correct")} className="font-cn btn-primary px-6 py-2.5 rounded-full text-sm disabled:opacity-50">检查</button>
+              <button onClick={onCheckTiles} disabled={tilePicked.length === 0 || (transformFb && transformFb.kind === "correct")} className="font-cn btn-primary px-6 py-2.5 rounded-full text-sm disabled:opacity-50">检查</button>
+              <button onClick={onClearPicked} disabled={tilePicked.length === 0 || (transformFb && transformFb.kind === "correct")} className="font-cn btn-ghost px-5 py-2.5 rounded-full text-sm disabled:opacity-50">清空</button>
               <button onClick={() => { setTransformReveal(true); setTransformFb({kind:"wrong",msg:"看一下参考答案，跟着读一遍。",target:tt.model}); }} className="font-cn btn-ghost px-5 py-2.5 rounded-full text-sm">直接看答案</button>
-              <span className="ink-faint text-xs ml-auto font-cn hide-mobile">回车提交</span>
+              <span className="ink-faint text-xs ml-auto font-cn hide-mobile">Enter 提交</span>
             </div>
           </div>
 

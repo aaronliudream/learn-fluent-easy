@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 /**
  * Wraps the standalone subjunctive-mood HTML in an iframe and bridges
@@ -9,6 +10,18 @@ import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
  */
 export default function SubjunctiveLab() {
   const ref = useRef<HTMLIFrameElement>(null);
+
+  // Register this page with the global AI assistant.
+  // Free mode: user can ask anything about subjunctive concepts at any time;
+  // strict prompt prevents the AI from revealing specific question answers.
+  useRegisterAssistant({
+    context: "subjunctive",
+    ref: "lab",
+    topic: "虚拟语气 (Subjunctive Mood)",
+    mode: "free",
+    unlocked: true,
+    pageTitle: "💬 小月 · 虚拟语气答疑",
+  });
 
   useEffect(() => {
     const onMsg = (e: MessageEvent) => {

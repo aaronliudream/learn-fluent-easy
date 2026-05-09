@@ -168,7 +168,7 @@ export default function LandingPage() {
 
         {/* Hero copy */}
         <div className="relative z-10 mx-auto max-w-[1180px] px-6 pb-8 pt-10 text-center md:pb-12 md:pt-16 animate-hero-fade-up">
-          <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7B3FF1]">
+          <div className="text-sm font-bold tracking-[0.18em] text-[#7B3FF1] md:text-base">
             陪伴中国孩子真正走进英语世界
           </div>
           <h1 className="mt-3 font-serif text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
@@ -360,7 +360,7 @@ export default function LandingPage() {
               BIG MOON SLANG · BONUS
             </div>
             <h3 className="mt-3 font-serif text-3xl font-black tracking-tight md:text-4xl">
-              美国俚语 American Slang
+              课堂之外的真实英语
             </h3>
             <p className="mt-3 max-w-xl text-sm leading-relaxed opacity-95 md:text-base">
               课本之外，真正美国年轻人每天在说的英语。短视频场景 + AI 跟读，让你一开口就像 native。

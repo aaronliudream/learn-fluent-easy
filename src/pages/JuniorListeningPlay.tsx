@@ -23,6 +23,11 @@ export default function JuniorListeningPlay() {
   const [streak, setStreak] = useState(0);
   const shownAt = useRef<Record<number, number>>({});
 
+  const checkAnswer = (q: Q, value: string) => {
+    if (q.type === "fill") return value.trim().toLowerCase() === String(q.answer).trim().toLowerCase();
+    return value === q.answer;
+  };
+
   // Full-test lock: AI may only discuss the listening once every question is answered.
   const allAnswered = !!e && e.questions.length > 0 && e.questions.every((_, i) => picks[i] || fills[i]);
   useRegisterAssistant(
@@ -70,11 +75,6 @@ export default function JuniorListeningPlay() {
     } else {
       speak(e.transcript);
     }
-  };
-
-  const checkAnswer = (q: Q, value: string) => {
-    if (q.type === "fill") return value.trim().toLowerCase() === String(q.answer).trim().toLowerCase();
-    return value === q.answer;
   };
 
   const pick = async (idx: number, letter: string) => {

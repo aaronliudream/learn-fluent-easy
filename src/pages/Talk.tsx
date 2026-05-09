@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { Mic, ArrowLeft, Sparkles, Lightbulb, Phone } from "lucide-react";
+import { Mic, ArrowLeft, Sparkles, Lightbulb, Phone, MessageSquare, Gamepad2, BookA, ListChecks, Repeat2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
 import ProWaitlistButton from "@/components/ProWaitlistButton";
@@ -136,20 +136,76 @@ export default function Talk() {
       return;
     }
     if (authed && userId && voiceQuotaRemaining(userId) <= 0) {
-      toast("今天的免费语音对话已用完", {
-        description: "每位同学每天免费 1 次语音对话，明天再来吧～急着练可以试试『文字陪练』",
-        duration: 7000,
+      // Auto-degrade: send them straight to text chat instead of dead-ending.
+      toast("今日语音次数已用完，可继续文字学习", {
+        description: "为了让孩子更专注学习，每天提供 1 次高质量 AI 语音陪练。文字陪练不限次数。",
+        duration: 6000,
       });
+      nav("/primary/chat");
       return;
     }
     setOpen(true);
   };
 
+  // 小学默认关闭自由聊天 —— 只开放结构化训练（跟读 / 复述 / 选择题 / 情景句子）
+  // 原因：小学生在开放语音对话里 token 消耗最不可控，且自由聊天不符合
+  // 教学目标。这里把入口收敛到几个已存在的结构化模块。
+  if (stage === "primary") {
+    const drills = [
+      { to: "/primary/chat", icon: Repeat2, title: "跟 Spark 跟读复述", desc: "句句跟读 · 即时反馈", grad: "from-pink-400 to-rose-400" },
+      { to: "/primary/letters", icon: BookA, title: "情景句子 · 自然拼读", desc: "26 字母 + 高频句", grad: "from-amber-400 to-orange-400" },
+      { to: "/primary/vocab", icon: ListChecks, title: "选择题 · 词汇巩固", desc: "1000+ 核心词测验", grad: "from-sky-400 to-cyan-400" },
+      { to: "/primary/games/all", icon: Gamepad2, title: "单词游戏 · 玩中学", desc: "4 款互动游戏", grad: "from-fuchsia-500 to-purple-500" },
+    ];
+    return (
+      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
+        <PageHeader
+          title="小学口语 · Primary"
+          subtitle="为了让孩子更专注学习，小学阶段以结构化训练为主：跟读 · 复述 · 选择题 · 情景句子"
+          back="/primary"
+        />
+
+        <section className="mb-6 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 to-primary/0 p-6 shadow-card">
+          <div className="flex items-start gap-3">
+            <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-grad-title text-white shadow-lg">
+              <Sparkles className="size-6" />
+            </div>
+            <div className="flex-1">
+              <h2 className="text-base font-bold">为什么不让小朋友自由聊天？</h2>
+              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                小学阶段重在<b>"开口正确"</b>而不是"开口随便"。我们把口语训练拆成跟读、复述、选择题、情景句子四种科学模式，
+                每一句都有清晰的学习目标，避免孩子无意识地说错却无人纠正。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid grid-cols-2 gap-3">
+          {drills.map((d) => (
+            <Link
+              key={d.to}
+              to={d.to}
+              className={`rounded-2xl bg-gradient-to-br ${d.grad} p-4 text-white shadow-tile transition hover:-translate-y-0.5`}
+            >
+              <d.icon className="size-6" />
+              <div className="mt-2 text-base font-extrabold leading-tight">{d.title}</div>
+              <div className="mt-0.5 text-[11px] opacity-90">{d.desc}</div>
+            </Link>
+          ))}
+        </section>
+
+        <p className="mt-5 text-center text-xs text-muted-foreground">
+          初中、高中阶段才会开放自由口语对话 —— 那时孩子已经具备稳定的发音和句型基础。
+        </p>
+      </main>
+    );
+  }
+
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
         title={STAGE_LABEL[stage] ?? STAGE_LABEL.general}
-        subtitle={`和地道美国人 Alex 来一场 ${stageMinutes} 分钟全英文真人对话，结束后给你逐句中英讲解 + 词汇测试`}
+        subtitle={`和地道美国人 Alex 来一场 ${stageMinutes} 分钟全英文真人对话 · 每日 1 次，专注学习`}
         back={stage === "primary" ? "/primary" : stage === "junior" ? "/junior" : stage === "gaokao" ? "/gaokao" : "/"}
       />
 
@@ -164,7 +220,7 @@ export default function Talk() {
               <ProWaitlistButton feature="ai-talk-unlimited" source="talk-page" label={<T>解锁无限时长</T>} />
             </div>
             <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-              <T>{`Alex 是一位加州年轻人，只用英语和你聊天。${stageMinutes} 分钟到点自动结束。结束后 AI 会逐句翻译你说的话、给出更地道的说法，并出 5 道选择题让你巩固刚学到的词汇短语。每天免费 1 次。`}</T>
+              <T>{`Alex 是一位加州年轻人，只用英语和你聊天。${stageMinutes} 分钟到点自动结束。结束后逐句中英讲解 + 5 道词汇测试。为了让孩子更专注学习，每天提供 1 次高质量 AI 语音陪练 —— 用完后可继续文字陪练，不限次数。`}</T>
             </p>
           </div>
         </div>
@@ -216,22 +272,31 @@ export default function Talk() {
         onClick={start}
         className="flex w-full items-center justify-center gap-2 rounded-3xl bg-grad-title py-5 text-lg font-extrabold text-white shadow-tile transition hover:opacity-95"
       >
-        <Mic className="size-6" />
-        {authed
-          ? (voiceLeft > 0
+        {authed && voiceLeft <= 0
+          ? <><MessageSquare className="size-6" /><T>今日语音已用完 · 进入文字陪练</T></>
+          : <><Mic className="size-6" />{authed
               ? <T>{`开始 ${stageMinutes} 分钟对话`}</T>
-              : <T>今日语音已用完 · 明天再来</T>)
-          : trialsLeft > 0
-            ? <T>免费试一下 3 分钟</T>
-            : <T>登录解锁完整对话</T>}
+              : trialsLeft > 0
+                ? <T>免费试一下 3 分钟</T>
+                : <T>登录解锁完整对话</T>}</>}
       </button>
 
       {authed && (
         <p className="mt-3 text-center text-xs text-muted-foreground">
           {voiceLeft > 0
-            ? <T>{`今日剩余免费语音对话：${voiceLeft} 次`}</T>
-            : <T>今日 1 次免费语音已用完，明天 0 点重置</T>}
+            ? <T>{`今日剩余免费语音对话：${voiceLeft} 次 · 科学控制时长，避免疲劳`}</T>
+            : <T>语音陪练每日 0 点重置 · 文字陪练不限次数</T>}
         </p>
+      )}
+
+      {authed && voiceLeft <= 0 && (
+        <Link
+          to="/primary/chat"
+          className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border border-primary/30 bg-card py-3 text-sm font-bold text-primary transition hover:bg-primary/5"
+        >
+          <MessageSquare className="size-4" />
+          <T>立即进入文字陪练（不限次数）</T>
+        </Link>
       )}
 
       {!authed && (

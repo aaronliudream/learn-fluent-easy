@@ -110,6 +110,8 @@ import { DigestionAnimation } from "@/components/pet/DigestionAnimation";
 import { EvolutionCelebration } from "@/components/pet/EvolutionCelebration";
 import GrowthLetter from "@/components/pet/GrowthLetter";
 import useActiveHeartbeat from "@/hooks/useActiveHeartbeat";
+import { AIAssistantProvider } from "@/contexts/AIAssistantContext";
+import GlobalAIAssistant from "@/components/assistant/GlobalAIAssistant";
 
 const queryClient = new QueryClient();
 
@@ -160,6 +162,7 @@ const RouteFallback = () => (
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <I18nProvider>
+    <AIAssistantProvider>
     <TooltipProvider>
       <Toaster />
       <Sonner />
@@ -283,8 +286,10 @@ const App = () => (
         <FeedbackWidgetGate />
         <InstallPrompt />
         <QuizKeyboardShortcuts />
+        <GlobalAIAssistant />
       </BrowserRouter>
     </TooltipProvider>
+    </AIAssistantProvider>
     </I18nProvider>
   </QueryClientProvider>
 );

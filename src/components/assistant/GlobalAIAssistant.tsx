@@ -61,6 +61,7 @@ export default function GlobalAIAssistant() {
 function FloatingButton({ onClick, unlocked }: { onClick: () => void; unlocked: boolean }) {
   // Show "💬 问小月" hint bubble on first ever visit, and re-show once per page topic.
   const [showHint, setShowHint] = useState(false);
+  const isHome = typeof window !== "undefined" && window.location.pathname === "/";
   useEffect(() => {
     try {
       const seen = localStorage.getItem("xiaoyue_hint_seen");
@@ -69,7 +70,7 @@ function FloatingButton({ onClick, unlocked }: { onClick: () => void; unlocked: 
         const t2 = setTimeout(() => {
           setShowHint(false);
           localStorage.setItem("xiaoyue_hint_seen", "1");
-        }, 8000);
+        }, 10000);
         return () => { clearTimeout(t); clearTimeout(t2); };
       }
     } catch { /* noop */ }
@@ -82,8 +83,15 @@ function FloatingButton({ onClick, unlocked }: { onClick: () => void; unlocked: 
     >
       {showHint && (
         <div className="relative animate-in fade-in slide-in-from-right-2 duration-300">
-          <div className="rounded-2xl border border-primary/20 bg-card px-3 py-2 text-xs font-semibold text-foreground shadow-lg">
-            💡 不懂？<span className="text-primary">点我问小月！</span>
+          <div className="max-w-[240px] rounded-2xl border border-primary/20 bg-card px-3.5 py-2.5 text-xs font-semibold text-foreground shadow-lg">
+            {isHome ? (
+              <>
+                👋 我是 <span className="text-primary">小月</span>！<br />
+                <span className="text-muted-foreground font-normal">想知道我们怎么帮孩子提分？点我问问看～</span>
+              </>
+            ) : (
+              <>💡 不懂？<span className="text-primary">点我问小月！</span></>
+            )}
           </div>
           <div className="absolute -bottom-1 right-6 size-3 rotate-45 border-b border-r border-primary/20 bg-card" />
         </div>

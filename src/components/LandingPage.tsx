@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Brain } from "lucide-react";
+import { ArrowRight, Sparkles, Brain, GraduationCap, Users, BookOpen, Quote, TrendingUp, Clock, Target, ShieldCheck } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import moonBg from "@/assets/moon-hero-bg.jpg";
 
@@ -301,6 +301,99 @@ export default function LandingPage() {
 
       {/* ============ THREE STAGES ============ */}
       <section id="stages" className="mx-auto max-w-[1180px] px-6 py-8 md:py-10">
+        {/* Audience picker — 让学生/家长/老师秒速找到自己的入口 */}
+        <div className="mb-10 md:mb-14">
+          <div className="mb-5 text-center">
+            <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7B3FF1]">
+              WHO ARE YOU
+            </div>
+            <h2 className="mt-2 font-serif text-2xl font-black tracking-tight md:text-3xl">
+              你是谁？我们都为你准备好了
+            </h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              {
+                to: "/auth",
+                icon: GraduationCap,
+                eyebrow: "FOR STUDENTS",
+                title: "我是学生",
+                desc: "想提分、想真正会用英语",
+                cta: "3 分钟语法闪练 →",
+                bg: "linear-gradient(160deg,#7B3FF1 0%,#ED3F8C 100%)",
+              },
+              {
+                to: "/parent",
+                icon: Users,
+                eyebrow: "FOR PARENTS",
+                title: "我是家长",
+                desc: "想看孩子学得怎么样、能提多少分",
+                cta: "查看家长报告 →",
+                bg: "linear-gradient(160deg,#0F8C8C 0%,#2BB7A8 100%)",
+              },
+              {
+                to: "/teacher/cards",
+                icon: BookOpen,
+                eyebrow: "FOR TEACHERS",
+                title: "我是老师",
+                desc: "用 AI 给学生生成讲解卡片",
+                cta: "进入老师工作台 →",
+                bg: "linear-gradient(160deg,#F5A26B 0%,#ED5C8E 100%)",
+              },
+            ].map((c) => {
+              const Icon = c.icon;
+              return (
+                <Link
+                  key={c.to}
+                  to={c.to}
+                  className="group relative overflow-hidden rounded-3xl p-6 text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.3)] ring-1 ring-white/10 transition hover:-translate-y-1 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.4)]"
+                  style={{ background: c.bg }}
+                >
+                  <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/15 blur-2xl" />
+                  <div className="relative">
+                    <div className="flex items-center gap-3">
+                      <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-white/20 backdrop-blur">
+                        <Icon className="size-5" />
+                      </span>
+                      <div className="text-[10px] font-bold uppercase tracking-[0.22em] opacity-85">
+                        {c.eyebrow}
+                      </div>
+                    </div>
+                    <h3 className="mt-4 font-serif text-2xl font-black tracking-tight">{c.title}</h3>
+                    <p className="mt-1.5 text-sm opacity-90">{c.desc}</p>
+                    <div className="mt-5 inline-flex items-center gap-1 text-sm font-bold opacity-95 transition group-hover:translate-x-1">
+                      {c.cta}
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Trust metrics — 用数字打动家长 */}
+        <div className="mb-10 grid grid-cols-2 gap-3 rounded-3xl border border-[#1A1A1A]/10 bg-white/70 p-6 backdrop-blur md:mb-14 md:grid-cols-4 md:gap-6 md:p-8">
+          {[
+            { n: "350+", label: "中考高考语法点", icon: Target },
+            { n: "10,000+", label: "AI 智能练习题", icon: Sparkles },
+            { n: "24/7", label: "AI 助手随时答疑", icon: Clock },
+            { n: "100%", label: "对标新课标大纲", icon: ShieldCheck },
+          ].map((m) => {
+            const Icon = m.icon;
+            return (
+              <div key={m.label} className="text-center">
+                <Icon className="mx-auto size-5 text-[#7B3FF1]" />
+                <div className="mt-2 font-serif text-3xl font-black tracking-tight text-[#1A1A1A] md:text-4xl">
+                  {m.n}
+                </div>
+                <div className="mt-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#7A7A7A] md:text-xs">
+                  {m.label}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
         <div className="mb-6 text-center md:mb-8">
           <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7B3FF1]">
             COURSE TRACKS
@@ -340,6 +433,79 @@ export default function LandingPage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* ============ TESTIMONIALS — 学员 & 家长见证 ============ */}
+      <section className="mx-auto max-w-[1180px] px-6 pb-10 md:pb-14">
+        <div className="mb-6 text-center md:mb-8">
+          <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7B3FF1]">
+            REAL VOICES
+          </div>
+          <h2 className="mt-2 font-serif text-2xl font-black tracking-tight md:text-3xl">
+            他们在 Big Moon 找到了节奏
+          </h2>
+          <p className="mt-2 text-xs text-[#9A9A9A]">用户反馈节选 · 已隐去真实姓名</p>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          {[
+            {
+              quote: "孩子以前看到英语题就头疼，现在每天主动打卡 15 分钟，月考从 78 涨到 102。",
+              who: "初二学生家长 · 杭州",
+              gain: "+24 分",
+              accent: "#7B3FF1",
+            },
+            {
+              quote: "语法实验室真的把虚拟语气讲明白了，之前老师讲三遍我都懵，这里一次就懂。",
+              who: "高三学生 · 北京",
+              gain: "高考语法 0 失分",
+              accent: "#ED3F8C",
+            },
+            {
+              quote: "AI 小月会针对错题反复出变式，学生不用我盯着也能查漏补缺。",
+              who: "公立中学英语老师 · 成都",
+              gain: "课后效率 ×3",
+              accent: "#0F8C8C",
+            },
+          ].map((t) => (
+            <div
+              key={t.who}
+              className="relative flex flex-col rounded-3xl border border-[#1A1A1A]/10 bg-white/70 p-6 backdrop-blur transition hover:-translate-y-1 hover:shadow-[0_18px_40px_-16px_rgba(0,0,0,0.2)]"
+            >
+              <Quote className="size-6 opacity-30" style={{ color: t.accent }} />
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#3A3A3A] md:text-base">
+                "{t.quote}"
+              </p>
+              <div className="mt-5 flex items-center justify-between border-t border-[#1A1A1A]/10 pt-4">
+                <div className="text-xs font-semibold text-[#5A5A5A]">{t.who}</div>
+                <div
+                  className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-[11px] font-black text-white"
+                  style={{ background: t.accent }}
+                >
+                  <TrendingUp className="size-3" /> {t.gain}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Final CTA — 收口 */}
+        <div className="mt-10 flex flex-col items-center gap-4 rounded-3xl bg-gradient-to-br from-[#7B3FF1] to-[#ED3F8C] p-8 text-center text-white shadow-[0_20px_50px_-20px_rgba(123,63,241,0.5)] md:mt-14 md:p-12">
+          <div className="text-[11px] font-bold uppercase tracking-[0.22em] opacity-85">
+            START TODAY · FREE
+          </div>
+          <h3 className="font-serif text-2xl font-black tracking-tight md:text-4xl">
+            今天就开始 5 分钟，<br className="md:hidden" />让英语真的变成你的工具
+          </h3>
+          <p className="max-w-xl text-sm opacity-90 md:text-base">
+            免费注册即可解锁全部小学/初中/高中内容 · AI 助手陪伴答疑 · 不满意随时离开
+          </p>
+          <Link
+            to="/auth"
+            className="mt-2 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-black text-[#7B3FF1] shadow-lg transition hover:-translate-y-0.5 hover:shadow-2xl md:text-base"
+          >
+            <Sparkles className="size-4" /> 免费开始学习
+          </Link>
         </div>
       </section>
 

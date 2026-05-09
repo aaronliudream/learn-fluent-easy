@@ -399,17 +399,67 @@ const AnimatePresence = FM_LOADED
 const spring = REDUCED_MOTION ? { duration: 0.01 } : { type: "spring", damping: 28, stiffness: 280 };
 const softSpring = REDUCED_MOTION ? { duration: 0.01 } : { type: "spring", damping: 24, stiffness: 200 };
 
-const speak = (text) => {
-  if (!("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
-  const utter = new SpeechSynthesisUtterance(text);
-  utter.lang = "en-US";
-  utter.rate = 0.92;
-  const voices = window.speechSynthesis.getVoices();
-  const preferred = voices.find(v => /Samantha|Karen|Alex|Daniel|Google US/i.test(v.name));
-  if (preferred) utter.voice = preferred;
-  window.speechSynthesis.speak(utter);
-};
+/* ─── Cloud TTS — uses our `tts` edge function (OpenAI / 阿里云 CosyVoice)
+   for natural-sounding voice. Falls back to browser SpeechSynthesis if
+   the network call fails. Returns a Promise that resolves when audio
+   finishes (or fallback completes). Used by `speak` (English) and
+   `playTTS` (Chinese teacher narration). ─── */
+const TTS_ENDPOINT = "https://fottntyhwolbsdvkwriq.supabase.co/functions/v1/tts";
+const TTS_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvdHRudHlod29sYnNkdmt3cmlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczMzg2NzUsImV4cCI6MjA5MjkxNDY3NX0.s7YXfJzG_DRIGWwrYmX4gehxwmPEXbWLOqrLEzAueM4";
+const TTS_CACHE = new Map(); // text|voice|speed → blob URL
+let _ttsAudio = null;
+function stopCloudTTS() {
+  try { _ttsAudio?.pause(); _ttsAudio = null; } catch {}
+  try { window.speechSynthesis?.cancel(); } catch {}
+}
+async function cloudTTS(text, { voiceId = "shimmer", speed = 1.0, lang = "en" } = {}) {
+  if (!text) return;
+  stopCloudTTS();
+  const cacheKey = `${voiceId}|${speed}|${text}`;
+  const playUrl = (url) => new Promise((resolve) => {
+    const a = new Audio(url);
+    _ttsAudio = a;
+    a.onended = () => resolve();
+    a.onerror = () => resolve();
+    a.play().catch(() => resolve());
+  });
+  if (TTS_CACHE.has(cacheKey)) {
+    return playUrl(TTS_CACHE.get(cacheKey));
+  }
+  try {
+    const r = await fetch(TTS_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": TTS_ANON_KEY,
+        "Authorization": `Bearer ${TTS_ANON_KEY}`,
+      },
+      body: JSON.stringify({ text, voiceId, speed, format: "mp3" }),
+    });
+    if (!r.ok) throw new Error(`tts ${r.status}`);
+    const j = await r.json();
+    let url = j.audioUrl;
+    if (!url && j.audioContent) url = `data:audio/mpeg;base64,${j.audioContent}`;
+    if (!url) throw new Error("no audio");
+    if (TTS_CACHE.size > 50) TTS_CACHE.clear();
+    TTS_CACHE.set(cacheKey, url);
+    return playUrl(url);
+  } catch (e) {
+    // Fallback: browser SpeechSynthesis
+    if (!("speechSynthesis" in window)) return;
+    return new Promise((resolve) => {
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = lang === "zh" ? "zh-CN" : "en-US";
+      u.rate = lang === "zh" ? 0.95 * speed : 0.92 * speed;
+      u.onend = () => resolve();
+      u.onerror = () => resolve();
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    });
+  }
+}
+
+const speak = (text) => { cloudTTS(text, { voiceId: "shimmer", speed: 0.95, lang: "en" }); };
 if (typeof window !== "undefined" && "speechSynthesis" in window) {
   window.speechSynthesis.onvoiceschanged = () => {};
   window.speechSynthesis.getVoices();

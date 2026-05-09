@@ -12,7 +12,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
  * helper (always unlocked, generic topic).
  */
 
-export type AssistantMode = "free" | "per-question" | "full-test";
+export type AssistantMode = "free" | "per-question" | "full-test" | "concierge";
 
 export interface AssistantState {
   /** Logical bucket — used as the persistence "context" key. */

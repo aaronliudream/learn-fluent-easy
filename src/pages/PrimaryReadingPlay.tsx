@@ -7,6 +7,7 @@ import { speak, prefetchTTSBatch, stopSpeaking } from "@/lib/speak";
 import { awardForCorrect, awardCoins, notifyWrong } from "@/lib/coins";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 type Sentence = { en: string; cn: string };
 type Warm = { w: string; cn: string };

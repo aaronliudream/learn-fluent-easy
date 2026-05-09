@@ -72,10 +72,9 @@ const Index = () => {
 
   const hasProgress = progress.completedLessons.length > 0 || progress.studyMinutes > 0;
 
-  // Cold/global traffic: show a real Landing page (hero + value prop + social
-  // proof + CTA). Logged-in users skip straight to the study hub. Returning
-  // guests with saved progress also keep their hub so they don't lose context.
-  if (forceLanding || (!user && !hasProgress && !forceHub)) {
+  // Homepage = LandingPage for everyone (logged-in or not).
+  // Power users can still reach the old study hub via /?hub=1.
+  if (!forceHub) {
     return <LandingPage />;
   }
 

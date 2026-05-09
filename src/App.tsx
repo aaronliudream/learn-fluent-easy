@@ -100,6 +100,7 @@ const IeltsSpeakingSession = lazy(() => import("./pages/IeltsSpeakingSession.tsx
 const Pricing = lazy(() => import("./pages/Pricing.tsx"));
 const Dashboard = lazy(() => import("./pages/Dashboard.tsx"));
 const GrammarMastery = lazy(() => import("./pages/GrammarMastery.tsx"));
+const Me = lazy(() => import("./pages/Me.tsx"));
 const Cet = lazy(() => import("./pages/Cet.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import FeedbackWidget from "@/components/FeedbackWidget";
@@ -274,6 +275,7 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/grammar" element={<GrammarMastery />} />
+          <Route path="/me" element={<Me />} />
           {/* Sub-brand entry redirects (母品牌 → 子品牌内部已有的实现) */}
           <Route path="/kids" element={<Navigate to="/primary" replace />} />
           <Route path="/senior" element={<Navigate to="/gaokao" replace />} />

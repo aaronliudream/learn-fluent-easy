@@ -27,7 +27,7 @@ const TILES: Tile[] = [
 export default function Me() {
   const navigate = useNavigate();
   const [user, setUser] = useState<User | null>(null);
-  const [profile, setProfile] = useState<{ display_name?: string | null; avatar_url?: string | null } | null>(null);
+  const [profile, setProfile] = useState<{ display_name?: string | null } | null>(null);
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => setUser(s?.user ?? null));
@@ -40,7 +40,7 @@ export default function Me() {
     (async () => {
       const { data } = await supabase
         .from("profiles")
-        .select("display_name, avatar_url")
+        .select("display_name")
         .eq("user_id", user.id)
         .maybeSingle();
       setProfile(data ?? null);
@@ -57,11 +57,7 @@ export default function Me() {
       {/* Identity card */}
       <section className="mt-5 flex items-center gap-4 rounded-3xl border border-border bg-gradient-to-br from-primary/10 via-card to-card p-5">
         <div className="grid size-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-indigo-400 to-violet-500 text-2xl font-extrabold text-white shadow-md">
-          {profile?.avatar_url ? (
-            <img src={profile.avatar_url} alt={name} className="size-full rounded-2xl object-cover" />
-          ) : (
-            initial
-          )}
+          {initial}
         </div>
         <div className="min-w-0 flex-1">
           <div className="truncate text-lg font-extrabold">{user ? name : "未登录"}</div>

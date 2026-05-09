@@ -71,15 +71,17 @@ Return ONLY the scenario text, no quotes, no explanations.`;
     if (!resp.ok) {
       const t = await resp.text();
       console.error("AI gateway error", resp.status, t);
-      const status = resp.status === 429 || resp.status === 402 ? resp.status : 500;
-      const msg = resp.status === 429
-        ? "Rate limit reached, please retry shortly."
+      const code = resp.status === 429
+        ? "RATE_LIMIT"
         : resp.status === 402
-          ? "Payment required — please add Lovable AI credits."
-          : "Scenario generation failed";
-      return new Response(JSON.stringify({ error: msg }), {
-        status, headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+          ? "PAYMENT_REQUIRED"
+          : "SERVICE_UNAVAILABLE";
+      // Always return 200 so the client SDK does not throw; signal
+      // fallback via the body so the UI can degrade gracefully.
+      return new Response(
+        JSON.stringify({ error: code, fallback: true }),
+        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      );
     }
 
     const data = await resp.json();
@@ -95,8 +97,9 @@ Return ONLY the scenario text, no quotes, no explanations.`;
     });
   } catch (e) {
     console.error("slang-scenario error", e);
-    return new Response(JSON.stringify({ error: e instanceof Error ? e.message : "Unknown error" }), {
-      status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    return new Response(
+      JSON.stringify({ error: "SERVICE_FAILED", fallback: true }),
+      { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+    );
   }
 });

@@ -74,7 +74,7 @@ export default function JuniorVocab() {
           .select("id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank")
           .eq("stage", "junior")
           .order("freq_rank", { ascending: true, nullsFirst: false })
-          .limit(500);
+          .limit(2000);
     loader.then(({ data }) => {
       setWords((data ?? []) as Vocab[]);
       setLoading(false);

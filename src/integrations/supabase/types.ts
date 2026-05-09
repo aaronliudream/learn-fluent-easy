@@ -5210,6 +5210,7 @@ export type Database = {
           example_en: string | null
           grade: number
           id: string
+          ipa: string | null
           meaning_cn: string
           pos: string | null
           theme: string | null
@@ -5222,6 +5223,7 @@ export type Database = {
           example_en?: string | null
           grade: number
           id?: string
+          ipa?: string | null
           meaning_cn: string
           pos?: string | null
           theme?: string | null
@@ -5234,6 +5236,7 @@ export type Database = {
           example_en?: string | null
           grade?: number
           id?: string
+          ipa?: string | null
           meaning_cn?: string
           pos?: string | null
           theme?: string | null

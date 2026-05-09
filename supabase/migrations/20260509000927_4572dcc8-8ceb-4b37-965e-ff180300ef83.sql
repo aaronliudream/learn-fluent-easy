@@ -1,0 +1,1 @@
+ALTER TABLE public.primary_vocab ADD COLUMN IF NOT EXISTS ipa TEXT;

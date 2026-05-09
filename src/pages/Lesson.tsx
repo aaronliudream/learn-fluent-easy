@@ -130,6 +130,7 @@ const Lesson = () => {
   const [generating, setGenerating] = useState(false);
   const [talkOpen, setTalkOpen] = useState(false);
   const [authedUser, setAuthedUser] = useState<boolean>(false);
+  const [authedUserId, setAuthedUserId] = useState<string | null>(null);
   const [tutorReq, setTutorReq] = useState<{
     refId: string;
     snapshot: Record<string, unknown>;
@@ -137,10 +138,10 @@ const Lesson = () => {
   useEffect(() => {
     let active = true;
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (active) setAuthedUser(!!session?.user);
+      if (active) { setAuthedUser(!!session?.user); setAuthedUserId(session?.user?.id ?? null); }
     });
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => {
-      if (active) setAuthedUser(!!s?.user);
+      if (active) { setAuthedUser(!!s?.user); setAuthedUserId(s?.user?.id ?? null); }
     });
     return () => { active = false; subscription.unsubscribe(); };
   }, []);
@@ -1398,6 +1399,7 @@ const Lesson = () => {
         levelName={LEVELS.find((l) => l.id === Number(levelId))?.name}
         level={["A1","A2","B1","B2","C1","C2"][Number(levelId) - 1] || undefined}
         isGuest={!authedUser}
+        userId={authedUserId}
       />
 
       {tutorReq && (

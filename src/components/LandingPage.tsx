@@ -194,7 +194,7 @@ export default function LandingPage() {
       </section>
 
       {/* ============ CORE ENTRIES · 4 大核心入口 ============ */}
-      <section className="mx-auto max-w-[1180px] px-6 pt-8 md:pt-12">
+      <section id="entries" className="mx-auto max-w-[1180px] scroll-mt-20 px-6 pt-8 md:pt-12">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-5">
           {[
             {

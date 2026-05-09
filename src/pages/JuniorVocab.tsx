@@ -60,17 +60,16 @@ export default function JuniorVocab() {
     // 入口可能传 1/2/3（初一/二/三 序号）或 7/8/9（Grade 7/8/9），统一映射到 7/8/9。
     const raw = Number(grade);
     const gradeNum = raw <= 3 ? raw + 6 : raw;
-    // junior_vocab 已覆盖初一(7)与初三(9)。初二(8)暂回退到 gaokao_vocab(stage=junior)。
-    const hasJunior = gradeNum === 7 || gradeNum === 9;
+    // 双表统一后：junior_vocab 已覆盖初一(7)、初二(8)、初三(9)，统一从此读取。
     const COLS = "id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank";
     const PAGE = 1000;
     (async () => {
       const all: Vocab[] = [];
       for (let from = 0; from < 5000; from += PAGE) {
-        const q = hasJunior
-          ? supabase.from("junior_vocab").select(COLS).eq("grade", gradeNum)
-          : supabase.from("gaokao_vocab").select(COLS).eq("stage", "junior");
-        const { data, error } = await q
+        const { data, error } = await supabase
+          .from("junior_vocab")
+          .select(COLS)
+          .eq("grade", gradeNum)
           .order("freq_rank", { ascending: true, nullsFirst: false })
           .range(from, from + PAGE - 1);
         if (error || !data || data.length === 0) break;

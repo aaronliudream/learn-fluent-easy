@@ -699,7 +699,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
                 setRecap(null);
                 setQuizAnswers({});
                 setQuizSubmitted(false);
-                setSecondsLeft(SESSION_DURATION_SEC);
+                setSecondsLeft(sessionLen);
                 userTurnByItemId.current.clear();
                 assistantTurnByRespId.current.clear();
               }}

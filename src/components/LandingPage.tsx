@@ -367,7 +367,7 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="relative inline-flex items-center gap-1.5 rounded-full bg-white/20 px-5 py-2 text-xs font-bold backdrop-blur transition group-hover:bg-white/30 md:text-sm">
-            进入俚语专区 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+            进入专区 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
           </div>
         </Link>
       </section>

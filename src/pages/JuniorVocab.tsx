@@ -227,6 +227,28 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
 
       <ModuleStageTests segment="junior" grade={grade} module="vocab" />
 
+      {/* 🚀 引导通关入口（5 步走 + FSRS） */}
+      <button
+        onClick={() => onPick("guided")}
+        className="mb-4 flex w-full items-center justify-between gap-3 rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-500 to-teal-600 px-5 py-4 text-left text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700"
+      >
+        <div className="flex items-center gap-3">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/20"><Rocket className="size-5" /></span>
+          <div>
+            <p className="text-sm font-bold">{zh ? "开始本组通关 · 5 步走" : "Start guided round · 5 steps"}</p>
+            <p className="mt-0.5 text-[11px] text-white/85">{zh ? "看 → 认 → 想 → 拼 → 用，按级解锁，自动收进遗忘曲线" : "See → Recognize → Recall → Spell → Use"}</p>
+          </div>
+        </div>
+        <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold">{zh ? "推荐 ★" : "Top pick ★"}</span>
+      </button>
+
+      <div className="mb-4">
+        <ReviewPool
+          pool={words.map((w) => ({ id: w.id, word: w.word }))}
+          onStart={() => onPick("review")}
+        />
+      </div>
+
       {/* ⭐ 彻底掌握 5 步走 */}
       <VocabMasteryPath
         stage="junior"

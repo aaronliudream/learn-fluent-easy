@@ -12,6 +12,7 @@ import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryP
 import ReadingWatermark from "@/components/ReadingWatermark";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 type Q = { q: string; options: string[]; answer: string; explanation?: string };
 type R = { id: string; title: string; body: string; word_count: number | null; grade: number; questions: Q[]; vocab_notes: { word: string; cn: string }[] };
@@ -33,6 +34,37 @@ export default function JuniorReadingPlay() {
   const [now, setNow] = useState(Date.now());
   const [submitted, setSubmitted] = useState(false);
   const [attempt, setAttempt] = useState(1);
+
+  // Full-test lock: AI may only discuss the reading after submission.
+  useRegisterAssistant(
+    r
+      ? {
+          context: "junior_reading",
+          ref: r.id,
+          topic: `初中阅读 · ${r.title}`,
+          mode: "full-test",
+          unlocked: submitted,
+          lockedHint: "请先把所有阅读题做完并点「提交」之后再来找我答疑哦 ✨",
+          pageTitle: "💬 小月 · 阅读复盘",
+          snapshot: submitted
+            ? {
+                title: r.title,
+                passage_excerpt: r.body.slice(0, 1200),
+                vocab_notes: r.vocab_notes?.slice(0, 12),
+                questions: r.questions.map((q, i) => ({
+                  index: i + 1,
+                  stem: q.q,
+                  options: q.options,
+                  correct_answer: q.answer,
+                  user_answer: picks[i],
+                  is_correct: picks[i] === q.answer,
+                  explanation: q.explanation,
+                })),
+              }
+            : undefined,
+        }
+      : null,
+  );
 
   // 推荐阅读时长（秒）：单词数 / 1.8 词每秒（约100词/分钟），最少 30 秒
   const minSec = useMemo(() => Math.max(30, Math.round((r?.word_count ?? 150) / 1.8)), [r?.word_count]);

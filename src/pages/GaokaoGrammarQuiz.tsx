@@ -12,6 +12,7 @@ import { toast } from "sonner";
 import TutorChat from "@/components/tutor/TutorChat";
 import PaywallDialog from "@/components/PaywallDialog";
 import { consumeQuestionQuota } from "@/lib/quota";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 type Point = { id: string; title: string; slug: string };
 type Question = {
@@ -41,6 +42,34 @@ export default function GaokaoGrammarQuiz() {
   const [stats, setStats] = useState({ correct: 0, wrong: 0 });
   const [tutorOpen, setTutorOpen] = useState(false);
   const [paywall, setPaywall] = useState<{ open: boolean; used: number; limit: number }>({ open: false, used: 5, limit: 5 });
+
+  // Register the global AI assistant for this question.
+  // Locked until the user has answered (`picked` is set), preventing answer leakage.
+  const currentQ = questions[idx];
+  useRegisterAssistant(
+    currentQ
+      ? {
+          context: "gaokao_grammar",
+          ref: currentQ.id,
+          topic: point ? `高考语法 · ${point.title}` : "高考语法",
+          mode: "per-question",
+          unlocked: !!picked,
+          lockedHint: "请先选出你认为正确的选项，提交后我再来帮你解析 ✨",
+          pageTitle: "💬 小月 · 本题答疑",
+          snapshot: picked
+            ? {
+                point: point?.title,
+                stem: currentQ.stem,
+                options: { A: currentQ.option_a, B: currentQ.option_b, C: currentQ.option_c, D: currentQ.option_d },
+                correct_answer: currentQ.correct_answer,
+                user_answer: picked,
+                is_correct: picked === currentQ.correct_answer,
+                explanation: currentQ.explanation,
+              }
+            : undefined,
+        }
+      : null,
+  );
 
   useEffect(() => {
     if (!slug) return;

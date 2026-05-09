@@ -105,15 +105,15 @@ Then provide:
     if (!resp.ok) {
       const t = await resp.text();
       console.error("AI gateway error", resp.status, t);
-      const status = resp.status === 429 || resp.status === 402 ? resp.status : 500;
-      const msg = resp.status === 429
-        ? "Rate limit reached, please retry shortly."
+      const code = resp.status === 429
+        ? "RATE_LIMIT"
         : resp.status === 402
-          ? "Payment required — please add Lovable AI credits."
-          : "AI grading failed";
-      return new Response(JSON.stringify({ error: msg }), {
-        status, headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+          ? "PAYMENT_REQUIRED"
+          : "SERVICE_UNAVAILABLE";
+      return new Response(
+        JSON.stringify({ error: code, fallback: true }),
+        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      );
     }
 
     const data = await resp.json();
@@ -131,8 +131,9 @@ Then provide:
     });
   } catch (e) {
     console.error("grade-slang-sentence error", e);
-    return new Response(JSON.stringify({ error: e instanceof Error ? e.message : "Unknown error" }), {
-      status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    return new Response(
+      JSON.stringify({ error: "SERVICE_FAILED", fallback: true }),
+      { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+    );
   }
 });

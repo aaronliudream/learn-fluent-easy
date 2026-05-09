@@ -612,7 +612,7 @@ const Slang = () => {
       const apiErr = (data as any)?.error as string | undefined;
       if (error || apiErr) {
         const msg = apiErr || error?.message || "";
-        if (/rate limit/i.test(msg)) {
+        if (/rate[_ ]?limit/i.test(msg)) {
           toast(tt("AI 有点忙，先用本地场景练习 ⏳"));
         } else if (/payment|credit/i.test(msg)) {
           toast(tt("AI 额度已用完，先用本地场景练习"));
@@ -675,7 +675,7 @@ const Slang = () => {
       const apiErr = (data as any)?.error as string | undefined;
       if (error || apiErr) {
         const msg = apiErr || error?.message || "";
-        if (/rate limit/i.test(msg)) {
+        if (/rate[_ ]?limit/i.test(msg)) {
           toast(tt("AI 有点忙，请稍后再试 ⏳"));
         } else if (/payment|credit/i.test(msg)) {
           toast(tt("AI 额度已用完，请稍后再试"));

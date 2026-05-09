@@ -39,7 +39,8 @@ export function TutorChat({ context, questionRef, questionSnapshot, open, onClos
   const { lang } = useI18n();
   const tt = useT();
   // The tutor speaks in user's language (zh family => zh, otherwise en)
-  const tutorLang: "zh" | "en" = lang.startsWith("zh") ? "zh" : "en";
+  // 面向中国学生 — 小月始终用中文答疑
+  const tutorLang: "zh" | "en" = "zh";
 
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");

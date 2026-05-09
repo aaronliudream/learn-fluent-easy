@@ -81,6 +81,14 @@ const Index = () => {
 
   const sections = [
     {
+      to: "/slang",
+      icon: Zap,
+      eyebrow: "American Slang",
+      title: "347 条地道俚语",
+      desc: "从 'rizz' 到 'spill the tea'，认 / 听 / 想 / 用 四维掌握。",
+      gradient: "from-rose-500 via-orange-500 to-amber-500",
+    },
+    {
       to: "/leaderboard",
       icon: Trophy,
       eyebrow: "Community",

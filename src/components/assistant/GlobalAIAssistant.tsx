@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Loader2, Send, Sparkles, X, Lock } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { Button } from "@/components/ui/button";
-import { useI18n } from "@/i18n/I18nProvider";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useAIAssistant, type AssistantState } from "@/contexts/AIAssistantContext";
@@ -129,11 +128,19 @@ const STARTERS_FREE_ZH = ["这个语法点的核心规则是什么？", "再举�
 const STARTERS_FREE_EN = ["What's the core rule here?", "Give me 2 real-life example sentences", "How is this different from a similar grammar point?"];
 const STARTERS_Q_ZH = ["为什么这道题选这个？", "再给我一个类似的练习", "我还是不太懂，给我一个提示"];
 const STARTERS_Q_EN = ["Why is this the right answer?", "Give me a similar practice", "I'm still confused — hint please"];
+const STARTERS_CONCIERGE = [
+  "你们怎么帮孩子提分？",
+  "AI 是怎么诊断薄弱点的？",
+  "家长能看到孩子哪些数据？",
+  "为什么用艾宾浩斯遗忘曲线？",
+];
 
 function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: () => void }) {
-  const { lang } = useI18n();
+  const { pathname } = useLocation();
   // 面向中国学生 / 家长 — 小月始终用中文回复，无论 UI 语言是什么
   const tutorLang: "zh" | "en" = "zh";
+  // 首页 = 顾问/讲解员模式（介绍网站、教育理念、AI 能力）；其他页面延用既有逻辑
+  const isHomeConcierge = pathname === "/";
 
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
@@ -161,6 +168,11 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
   }, [messages, sending]);
 
   const isFree = state.mode === "free";
+  const effectiveMode: "concierge" | "free" | "question" = isHomeConcierge
+    ? "concierge"
+    : isFree
+      ? "free"
+      : "question";
 
   const send = async (text: string) => {
     const trimmed = text.trim();
@@ -176,13 +188,13 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
 
       const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/tutor-chat`;
       const body: Record<string, unknown> = {
-        context: state.context,
+        context: isHomeConcierge ? "homepage" : state.context,
         user_message: trimmed,
         language: tutorLang,
-        mode: isFree ? "free" : "question",
-        topic: state.topic,
+        mode: effectiveMode,
+        topic: isHomeConcierge ? "Big Moon English 网站介绍" : state.topic,
       };
-      if (!isFree) {
+      if (effectiveMode === "question") {
         body.question_ref = state.ref;
         body.question_snapshot = state.snapshot ?? {};
       }
@@ -267,18 +279,20 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
     }
   };
 
-  const starters = isFree
-    ? (tutorLang === "zh" ? STARTERS_FREE_ZH : STARTERS_FREE_EN)
-    : (tutorLang === "zh" ? STARTERS_Q_ZH : STARTERS_Q_EN);
+  const starters = isHomeConcierge
+    ? STARTERS_CONCIERGE
+    : isFree
+      ? (tutorLang === "zh" ? STARTERS_FREE_ZH : STARTERS_FREE_EN)
+      : (tutorLang === "zh" ? STARTERS_Q_ZH : STARTERS_Q_EN);
 
-  const headerTitle = state.pageTitle ?? (tutorLang === "zh" ? "💬 小月 · AI 学习助手" : "💬 Luna · AI Tutor");
-  const sub = isFree
-    ? (tutorLang === "zh"
-        ? `当前话题：${state.topic}（只聊英语学习）`
-        : `Topic: ${state.topic} (English study only)`)
-    : (tutorLang === "zh"
-        ? "我只针对你已经做完的这道题答疑。"
-        : "I only discuss the question you've already answered.");
+  const headerTitle = isHomeConcierge
+    ? "💬 小月 · AI 学习顾问"
+    : (state.pageTitle ?? "💬 小月 · AI 学习助手");
+  const sub = isHomeConcierge
+    ? "网站讲解 · 学习方法 · 家长答疑 — 我都可以聊"
+    : isFree
+      ? `当前话题：${state.topic}（只聊英语学习）`
+      : "我只针对你已经做完的这道题答疑。";
 
   return (
     <div

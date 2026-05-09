@@ -6609,6 +6609,78 @@ function App() {
   const [stage, setStage] = useState(0);
   const [progress, progressActions] = useProgress();
   const [theme, toggleTheme] = useTheme();
+
+  // ───── 全站统一键盘快捷键：1/2/3/4 选 ABCD，Enter 提交/下一步 ─────
+  useEffect(() => {
+    const SUBMIT_RE = /(下一题|下一步|继续|提交|确认|看建议|看解析|完成|开始|进入|Next|Submit|Continue|Confirm|Done|Start)/i;
+    function visible(el) {
+      if (!el || el.disabled) return false;
+      if (el.getAttribute && el.getAttribute("aria-disabled") === "true") return false;
+      if (el.offsetParent === null) return false;
+      const r = el.getBoundingClientRect();
+      return r.width > 0 && r.height > 0;
+    }
+    function getOpts() {
+      const all = Array.from(document.querySelectorAll("button"));
+      const opts = all.filter(b => {
+        if (!visible(b)) return false;
+        if (b.hasAttribute("data-quiz-opt")) return true;
+        const txt = (b.innerText || b.textContent || "").trim();
+        if (!txt) return false;
+        return /^([A-Da-d1-4])([\.\)\s\:、]|$)/.test(txt);
+      });
+      opts.sort((a, b) => {
+        const ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+        if (Math.abs(ra.top - rb.top) > 8) return ra.top - rb.top;
+        return ra.left - rb.left;
+      });
+      return opts;
+    }
+    function getSubmit() {
+      const all = Array.from(document.querySelectorAll("button"));
+      const cands = all.filter(b => {
+        if (!visible(b)) return false;
+        if (b.hasAttribute("data-quiz-submit")) return true;
+        const txt = (b.innerText || b.textContent || "").trim();
+        return SUBMIT_RE.test(txt);
+      });
+      if (!cands.length) return null;
+      const inView = cands.filter(b => {
+        const r = b.getBoundingClientRect();
+        return r.top >= 0 && r.bottom <= window.innerHeight + 100;
+      });
+      const pool = inView.length ? inView : cands;
+      pool.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
+      return pool[pool.length - 1];
+    }
+    function onKey(e) {
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      const t = e.target, tag = t && t.tagName;
+      const inInput = tag === "INPUT";
+      const inTextarea = tag === "TEXTAREA";
+      const inEditable = inInput || inTextarea || (t && t.isContentEditable);
+      if (e.key === "Enter") {
+        if (tag === "SELECT") return;
+        if (inTextarea && e.shiftKey) return;
+        if (tag === "BUTTON") return;
+        const hasOpts = getOpts().length > 0;
+        if (!inEditable && !hasOpts) return;
+        const btn = getSubmit();
+        if (btn) { e.preventDefault(); btn.click(); }
+        return;
+      }
+      if (inEditable || tag === "SELECT") return;
+      const n = Number(e.key);
+      if (!Number.isFinite(n) || n < 1 || n > 4) return;
+      const opts = getOpts();
+      if (opts.length < n) return;
+      e.preventDefault();
+      opts[n - 1].click();
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   const [devMode, setDevMode] = useState(() => {
     try { return localStorage.getItem("pwl_dev") === "1"; } catch { return false; }
   });

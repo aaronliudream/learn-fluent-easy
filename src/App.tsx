@@ -103,6 +103,7 @@ const Cet = lazy(() => import("./pages/Cet.tsx"));
 import { BottomTabBar } from "@/components/BottomTabBar";
 import FeedbackWidget from "@/components/FeedbackWidget";
 import InstallPrompt from "@/components/InstallPrompt";
+import QuizKeyboardShortcuts from "@/components/QuizKeyboardShortcuts";
 import { GaokaoBreakReminder } from "@/components/GaokaoBreakReminder";
 import { FloatingPet } from "@/components/pet/FloatingPet";
 import { DigestionAnimation } from "@/components/pet/DigestionAnimation";
@@ -281,6 +282,7 @@ const App = () => (
         <BottomTabBar />
         <FeedbackWidgetGate />
         <InstallPrompt />
+        <QuizKeyboardShortcuts />
       </BrowserRouter>
     </TooltipProvider>
     </I18nProvider>

@@ -168,13 +168,16 @@ export default function LandingPage() {
 
         {/* Hero copy */}
         <div className="relative z-10 mx-auto max-w-[1180px] px-6 pb-8 pt-10 text-center md:pb-12 md:pt-16 animate-hero-fade-up">
-          <h1 className="font-serif text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-            Real English from
+          <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7B3FF1]">
+            陪伴中国孩子真正走进英语世界
+          </div>
+          <h1 className="mt-3 font-serif text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
+            真正的英语，
             <br />
-            real American kids
+            不该只会做题
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-sm text-[#5A5A5A] md:text-base">
-            来自真实美国小朋友的英语 — 为中国 K-12 学生量身打造的英语成长平台。
+          <p className="mx-auto mt-5 max-w-xl text-sm text-[#5A5A5A] md:text-base">
+            专为中国学生打造 — 同步考试体系，同时培养真实英语能力。
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link
@@ -189,6 +192,73 @@ export default function LandingPage() {
             >
               浏览课程
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ MANIFESTO: why + how ============ */}
+      <section className="mx-auto max-w-[1180px] px-6 pt-10 md:pt-14">
+        <div className="mb-8 text-center md:mb-10">
+          <h2 className="font-serif text-2xl font-black leading-tight tracking-tight md:text-3xl">
+            为什么很多孩子学了多年英语，
+            <br className="hidden md:block" />
+            依然不会真正使用英语？
+          </h2>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2">
+          {/* Pain points */}
+          <div className="rounded-3xl border border-[#1A1A1A]/10 bg-white/60 p-7 backdrop-blur md:p-9">
+            <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9A9A9A]">
+              传统英语学习
+            </div>
+            <h3 className="mt-2 font-serif text-xl font-black tracking-tight md:text-2xl">
+              问题出在哪里
+            </h3>
+            <ul className="mt-5 space-y-3 text-sm text-[#3A3A3A] md:text-base">
+              {[
+                "只会刷题做卷",
+                "没有真实语境输入",
+                "缺乏语感与节奏",
+                "难以长期积累",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-3">
+                  <span className="mt-[7px] inline-block size-1.5 shrink-0 rounded-full bg-[#9A9A9A]" />
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Big Moon promise */}
+          <div
+            className="relative overflow-hidden rounded-3xl p-7 text-white shadow-[0_18px_40px_-16px_rgba(123,63,241,0.35)] md:p-9"
+            style={{
+              background: "linear-gradient(160deg,#7B3FF1 0%,#ED3F8C 100%)",
+            }}
+          >
+            <span className="pointer-events-none absolute -right-12 -top-12 size-44 rounded-full bg-white/15 blur-2xl" />
+            <div className="text-[11px] font-bold uppercase tracking-[0.22em] opacity-85">
+              Big Moon English
+            </div>
+            <h3 className="mt-2 font-serif text-xl font-black tracking-tight md:text-2xl">
+              我们希望帮助孩子
+            </h3>
+            <ul className="relative mt-5 space-y-3 text-sm md:text-base">
+              {[
+                "提高考试成绩",
+                "建立真实英语能力",
+                "听懂真实英语",
+                "形成长期英语思维",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-3">
+                  <span className="mt-[2px] inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-white/25 text-[11px] font-black">
+                    ✓
+                  </span>
+                  <span className="opacity-95">{t}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

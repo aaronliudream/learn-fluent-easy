@@ -3463,47 +3463,97 @@ export type Database = {
         }
         Relationships: []
       }
+      junior_writing_drills: {
+        Row: {
+          created_at: string
+          difficulty_label: string | null
+          hint: string | null
+          id: string
+          prompt: string
+          prompt_id: string
+          sort_order: number
+        }
+        Insert: {
+          created_at?: string
+          difficulty_label?: string | null
+          hint?: string | null
+          id?: string
+          prompt: string
+          prompt_id: string
+          sort_order?: number
+        }
+        Update: {
+          created_at?: string
+          difficulty_label?: string | null
+          hint?: string | null
+          id?: string
+          prompt?: string
+          prompt_id?: string
+          sort_order?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "junior_writing_drills_prompt_id_fkey"
+            columns: ["prompt_id"]
+            isOneToOne: false
+            referencedRelation: "junior_writing_prompts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       junior_writing_prompts: {
         Row: {
           created_at: string
           difficulty: number
+          error_pairs: Json
           grade: number
+          high_sentences: Json
           id: string
           max_words: number
           min_words: number
+          paragraph_template: string | null
           prompt_cn: string
           prompt_en: string
           requirements: Json
           sample_answer: string | null
           scoring_rubric: string | null
+          title_en: string | null
           topic: string
         }
         Insert: {
           created_at?: string
           difficulty?: number
+          error_pairs?: Json
           grade?: number
+          high_sentences?: Json
           id?: string
           max_words?: number
           min_words?: number
+          paragraph_template?: string | null
           prompt_cn: string
           prompt_en: string
           requirements?: Json
           sample_answer?: string | null
           scoring_rubric?: string | null
+          title_en?: string | null
           topic: string
         }
         Update: {
           created_at?: string
           difficulty?: number
+          error_pairs?: Json
           grade?: number
+          high_sentences?: Json
           id?: string
           max_words?: number
           min_words?: number
+          paragraph_template?: string | null
           prompt_cn?: string
           prompt_en?: string
           requirements?: Json
           sample_answer?: string | null
           scoring_rubric?: string | null
+          title_en?: string | null
           topic?: string
         }
         Relationships: []

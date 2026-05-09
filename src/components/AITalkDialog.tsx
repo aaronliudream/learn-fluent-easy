@@ -468,6 +468,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
             setPhase("live");
             setSecondsLeft(sessionLen);
             if (isGuest) { try { incrementGuestTrials(); } catch { /* noop */ } }
+            else if (userId) { try { consumeVoiceQuota(userId); } catch { /* noop */ } }
           },
           onError: (msg) => toast.error(msg),
         });

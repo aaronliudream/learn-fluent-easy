@@ -11,6 +11,7 @@ import PaywallDialog from "@/components/PaywallDialog";
 import { consumeQuestionQuota } from "@/lib/quota";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { recordJuniorGrammarAttempt, JUNIOR_LEVEL_META, type JuniorGrammarErrorReason } from "@/lib/juniorGrammarFsrs";
+import { recordGrammarAttempt as recordPanoramaAttempt } from "@/lib/grammarMastery";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
 import { ImmersionCards, type ImmersionCard } from "@/components/grammar/ImmersionCards";
 import { GrammarQuestionCard, type GrammarQuestion, type AnswerResult } from "@/components/grammar/GrammarQuestionCard";
@@ -30,6 +31,7 @@ import { GrammarQuestionCard, type GrammarQuestion, type AnswerResult } from "@/
 
 type Pt = {
   id: string;
+  code: string | null;
   title: string;
   cefr: string;
   explanation_md: string;
@@ -72,7 +74,7 @@ export default function JuniorGrammarPoint() {
       const [a, b] = await Promise.all([
         supabase
           .from("junior_grammar_points")
-          .select("id,title,cefr,explanation_md,teacher_script,immersion_cards,mnemonic,content_depth")
+          .select("id,code,title,cefr,explanation_md,teacher_script,immersion_cards,mnemonic,content_depth")
           .eq("id", id)
           .maybeSingle(),
         supabase
@@ -154,6 +156,8 @@ export default function JuniorGrammarPoint() {
       latencyMs: result.latencyMs,
       errorReason: result.kind === "wrong" ? (result.errorReason as JuniorGrammarErrorReason | undefined) : undefined,
     });
+    // Feed the cross-stage 语法掌握全景图
+    if (pt?.code) recordPanoramaAttempt(`junior:${pt.code}`, isPositive);
   };
 
   // Reset everything (再做一遍)

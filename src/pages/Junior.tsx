@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine, Rocket, Sparkles } from "lucide-react";
+import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine, Rocket, Sparkles, Mic } from "lucide-react";
 import { ContinueCard } from "@/components/mastery/ContinueCard";
 
 const GRADE_FILTERS = [
@@ -23,6 +23,7 @@ export default function Junior() {
 
   const MODULES = [
     { to: `/junior/vocab${q}`, icon: "🎮", title: "核心词汇 · 5 种游戏", desc: "单词便当 / 任务 / 对决 / 听写 · 边玩边背", gradient: "from-violet-500 via-indigo-500 to-blue-500", hero: true },
+    { to: `/talk?stage=junior`, icon: Mic, title: "AI 口语对话 · 中考话题", desc: "和 Alex 真人语音聊天 · 校园 / 兴趣 / 旅行 / 节日", gradient: "from-rose-500 via-pink-500 to-fuchsia-600" },
     { to: `/junior/grammar${q}`, icon: BookOpen, title: "中考语法专项", desc: "时态 · 从句 · 非谓语 · 中考考点直击", gradient: "from-emerald-500 via-teal-500 to-cyan-500" },
     { to: `/junior/reading${q}`, icon: Target, title: "阅读训练", desc: "主题阅读 · 答题解析 · 答对喂宠物", gradient: "from-amber-500 via-orange-500 to-rose-500" },
     { to: `/junior/listening${q}`, icon: Headphones, title: "听力短文训练", desc: "对话/短文 · 听音答题 · 中考听力题型", gradient: "from-sky-500 via-blue-500 to-indigo-500" },

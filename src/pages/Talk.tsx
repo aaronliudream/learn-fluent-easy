@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Mic, ArrowLeft, Sparkles, Lightbulb, Phone } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
@@ -10,16 +10,63 @@ import { LEVELS } from "@/data/course";
 import { toast } from "sonner";
 import { guestTrialsRemaining, GUEST_TRIAL_LIMIT } from "@/lib/guestTrial";
 
-const TOPICS = [
-  { key: "free",      label: "随便聊聊",       prompt: "" },
-  { key: "weekend",   label: "周末计划",       prompt: "Talking about weekend plans" },
-  { key: "food",      label: "美食与餐厅",     prompt: "Ordering food and discussing favorite restaurants" },
-  { key: "travel",    label: "旅行经历",       prompt: "Sharing travel experiences and recommendations" },
-  { key: "movies",    label: "电影和剧集",     prompt: "Discussing recent movies and TV shows" },
-  { key: "work",      label: "工作日常",       prompt: "Workplace small talk and projects" },
-  { key: "interview", label: "求职面试",       prompt: "Mock job interview practice" },
-  { key: "airport",   label: "机场问路",       prompt: "Asking for directions at the airport" },
-];
+type Topic = { key: string; label: string; prompt: string };
+
+const TOPIC_PACKS: Record<string, { defaultLevel: string; topics: Topic[] }> = {
+  primary: {
+    defaultLevel: "A1",
+    topics: [
+      { key: "self",    label: "自我介绍",   prompt: "A primary-school child introducing themselves: name, age, school, hobbies. Use only the most basic 500 words." },
+      { key: "family",  label: "我的家人",   prompt: "Talking about family members in very simple English suitable for a 7-10 year old." },
+      { key: "animals", label: "我的宠物",   prompt: "Talking about pets and animals using simple words like cat, dog, big, small, cute." },
+      { key: "school",  label: "我的学校",   prompt: "Describing school day, favorite subjects, classmates, in beginner English." },
+      { key: "food",    label: "我喜欢的食物", prompt: "Talking about favorite foods and meals, very basic vocabulary." },
+      { key: "weather", label: "今天天气",   prompt: "Discussing weather and clothing in simple English." },
+    ],
+  },
+  junior: {
+    defaultLevel: "A2",
+    topics: [
+      { key: "weekend", label: "周末活动",   prompt: "Junior-high student talking about weekend plans and after-school activities." },
+      { key: "school",  label: "校园生活",   prompt: "Discussing classes, exams, friendships at junior high school." },
+      { key: "hobby",   label: "兴趣爱好",   prompt: "Sharing hobbies like sports, music, gaming, reading at A2 level." },
+      { key: "travel",  label: "旅行经历",   prompt: "Talking about a recent trip in simple past tense, A2 level." },
+      { key: "festival", label: "节日文化",  prompt: "Comparing Chinese and Western festivals in simple English." },
+      { key: "future",  label: "未来梦想",   prompt: "Talking about future career and dreams using simple future tense." },
+    ],
+  },
+  gaokao: {
+    defaultLevel: "B1",
+    topics: [
+      { key: "gaokao",   label: "高考口语题", prompt: "Mock gaokao oral exam: read-aloud passage, then 3 follow-up questions." },
+      { key: "picture",  label: "看图说话",   prompt: "Describe a picture and tell a short story about it (gaokao-style)." },
+      { key: "argue",    label: "议论话题",   prompt: "Discuss a debatable topic (e.g. online learning vs classroom) at B1-B2 level." },
+      { key: "culture",  label: "中西文化对比", prompt: "Compare Chinese and Western cultural differences, B1-B2 level." },
+      { key: "essay",    label: "议论文复述", prompt: "Summarize an opinion essay and share your view, B1-B2 level." },
+      { key: "interview", label: "大学面试",  prompt: "Mock university admission interview practice." },
+    ],
+  },
+  general: {
+    defaultLevel: "B1",
+    topics: [
+      { key: "free",      label: "随便聊聊",   prompt: "" },
+      { key: "weekend",   label: "周末计划",   prompt: "Talking about weekend plans" },
+      { key: "food",      label: "美食与餐厅", prompt: "Ordering food and discussing favorite restaurants" },
+      { key: "travel",    label: "旅行经历",   prompt: "Sharing travel experiences and recommendations" },
+      { key: "movies",    label: "电影和剧集", prompt: "Discussing recent movies and TV shows" },
+      { key: "work",      label: "工作日常",   prompt: "Workplace small talk and projects" },
+      { key: "interview", label: "求职面试",   prompt: "Mock job interview practice" },
+      { key: "airport",   label: "机场问路",   prompt: "Asking for directions at the airport" },
+    ],
+  },
+};
+
+const STAGE_LABEL: Record<string, string> = {
+  primary: "小学口语 · Primary",
+  junior:  "初中口语 · Junior",
+  gaokao:  "高考口语 · Senior",
+  general: "AI 英语口语对话",
+};
 
 const LEVELS_OPT = [
   { id: "A1", name: "A1 入门" },
@@ -31,11 +78,29 @@ const LEVELS_OPT = [
 
 export default function Talk() {
   const nav = useNavigate();
+  const [params] = useSearchParams();
+  const stage = (params.get("stage") || "general") as keyof typeof TOPIC_PACKS;
+  const pack = TOPIC_PACKS[stage] ?? TOPIC_PACKS.general;
+  const TOPICS = pack.topics;
+
   const [authed, setAuthed] = useState<boolean | null>(null);
   const [topic, setTopic] = useState(TOPICS[0]);
-  const [level, setLevel] = useState("B1");
+  const [level, setLevel] = useState(pack.defaultLevel);
   const [open, setOpen] = useState(false);
   const [trialsLeft, setTrialsLeft] = useState<number>(GUEST_TRIAL_LIMIT);
+
+  // Re-init when stage changes (e.g. user navigates from another stage)
+  useEffect(() => {
+    setTopic(TOPICS[0]);
+    setLevel(pack.defaultLevel);
+  }, [stage]);
+
+  // 🔥 WARM-UP: as soon as user lands on this page, preflight the AI provider
+  // and microphone permission UI hint. This shaves ~1-2s off the first tap.
+  useEffect(() => {
+    // Provider resolution is cached for 6h in resolveProvider()
+    import("@/lib/aiProvider").then((m) => m.resolveProvider().catch(() => {}));
+  }, []);
 
   useEffect(() => {
     setTrialsLeft(guestTrialsRemaining());
@@ -68,9 +133,9 @@ export default function Talk() {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
-        title="AI 英语口语对话"
+        title={STAGE_LABEL[stage] ?? STAGE_LABEL.general}
         subtitle="和地道美国人 Alex 来一场 10 分钟全英文真人对话，结束后给你逐句中英讲解 + 词汇测试"
-        back="/"
+        back={stage === "primary" ? "/primary" : stage === "junior" ? "/junior" : stage === "gaokao" ? "/gaokao" : "/"}
       />
 
       <section className="mb-6 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 to-primary/0 p-6 shadow-card">

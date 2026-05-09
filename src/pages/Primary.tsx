@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, BookA, Sparkles, MessageCircle, Play, Star, Gamepad2, AlertCircle } from "lucide-react";
+import { ArrowLeft, BookA, Sparkles, MessageCircle, Play, Star, Gamepad2, AlertCircle, Mic } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { StreakBanner } from "@/components/StreakBanner";
 
@@ -143,10 +143,10 @@ export default function Primary() {
           <div className="mt-2 text-sm font-extrabold leading-tight">单词游戏</div>
           <div className="text-[10px] opacity-90">4 款玩中学</div>
         </Link>
-        <Link to="/primary/chat" className="rounded-2xl bg-gradient-to-br from-pink-400 to-violet-400 p-3 text-white shadow-tile">
-          <MessageCircle className="size-5" />
-          <div className="mt-2 text-sm font-extrabold leading-tight">Spark 对话</div>
-          <div className="text-[10px] opacity-90">陪你聊英语</div>
+        <Link to="/talk?stage=primary" className="rounded-2xl bg-gradient-to-br from-pink-400 to-violet-400 p-3 text-white shadow-tile">
+          <Mic className="size-5" />
+          <div className="mt-2 text-sm font-extrabold leading-tight">AI 口语对话</div>
+          <div className="text-[10px] opacity-90">和 Alex 开口说</div>
         </Link>
         <Link to="/primary/letters" className="rounded-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-3 text-white shadow-tile">
           <BookA className="size-5" />

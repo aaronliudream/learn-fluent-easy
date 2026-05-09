@@ -138,6 +138,11 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
   const targetsRef = useRef<TalkTarget[]>([]);
   useEffect(() => { targetsRef.current = targets; }, [targets]);
 
+  // 🔥 WARM-UP cache: pre-resolved during the few seconds the user is
+  // looking at the "ready to talk" screen, so when they tap Start the
+  // hard work is already done. This is the biggest perceived-latency win.
+  const warmupRef = useRef<{ provider?: AIProvider; targets?: TalkTarget[] }>({});
+
   const pcRef = useRef<RTCPeerConnection | null>(null);
   const localStreamRef = useRef<MediaStream | null>(null);
   const dataChannelRef = useRef<RTCDataChannel | null>(null);
@@ -188,8 +193,32 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       setTargets([]);
       userTurnByItemId.current.clear();
       assistantTurnByRespId.current.clear();
+      warmupRef.current = {};
     }
   }, [open, cleanup, sessionLen]);
+
+  // 🔥 WARM-UP: when dialog opens (idle phase, before user taps Start),
+  // fire off the slow network calls in background so the first tap feels
+  // instant. Both calls are safe to discard if the user closes early.
+  useEffect(() => {
+    if (!open || phase !== "idle") return;
+    let cancelled = false;
+    // 1) Provider resolution (cached 6h, but first call costs ~300-800ms)
+    resolveProvider().then((p) => {
+      if (!cancelled) warmupRef.current.provider = p;
+    }).catch(() => { /* fall back to live resolve in startCall */ });
+    // 2) Target expression generation (~1.5-3s LLM call)
+    supabase.functions
+      .invoke("generate-talk-targets", { body: { lessonTitle, level } })
+      .then(({ data }) => {
+        if (cancelled) return;
+        if (Array.isArray(data?.targets)) {
+          warmupRef.current.targets = data.targets.slice(0, 5);
+        }
+      })
+      .catch(() => { /* startCall will retry */ });
+    return () => { cancelled = true; };
+  }, [open, phase, lessonTitle, level]);
 
   const requestRecap = useCallback(async () => {
     const turns = transcriptSnapshot.current.filter(t => t.text && !t.pending);
@@ -376,23 +405,28 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
     setPhase("connecting");
     try {
       // 0. Decide which provider works on this network. Cached for 6h.
-      const chosen = await resolveProvider();
+      // 🔥 Use warm-up cache if available — instant.
+      const chosen = warmupRef.current.provider ?? await resolveProvider();
       setProvider(chosen);
       console.log(`[AITalk] using provider: ${chosen}`);
 
       // 0.5 Pre-generate the 5 hidden target expressions. Don't block the
       // call if it fails — Alex can chat just fine without them.
-      let pickedTargets: TalkTarget[] = [];
-      try {
-        const { data: tg } = await supabase.functions.invoke("generate-talk-targets", {
-          body: { lessonTitle, level },
-        });
-        if (Array.isArray(tg?.targets)) {
-          pickedTargets = tg.targets.slice(0, 5);
-          setTargets(pickedTargets);
+      let pickedTargets: TalkTarget[] = warmupRef.current.targets ?? [];
+      if (pickedTargets.length) {
+        setTargets(pickedTargets);
+      } else {
+        try {
+          const { data: tg } = await supabase.functions.invoke("generate-talk-targets", {
+            body: { lessonTitle, level },
+          });
+          if (Array.isArray(tg?.targets)) {
+            pickedTargets = tg.targets.slice(0, 5);
+            setTargets(pickedTargets);
+          }
+        } catch (e) {
+          console.warn("[AITalk] target generation failed, continuing without", e);
         }
-      } catch (e) {
-        console.warn("[AITalk] target generation failed, continuing without", e);
       }
 
       // 1. Get mic — turn ON browser-side noise suppression, echo cancel,

@@ -486,7 +486,9 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       if (error) throw error;
       if (data?.error) throw new Error(data.error);
       const ephemeralKey = data?.client_secret?.value;
-      const model = data?.model || "gpt-4o-realtime-preview-2024-12-17";
+      // Default to mini-realtime to keep cost down — full 4o-realtime is
+      // ~5× more expensive and not worth it for K-12 chat practice.
+      const model = data?.model || "gpt-4o-mini-realtime-preview-2024-12-17";
       if (!ephemeralKey) throw new Error("No ephemeral key returned");
 
       // 3. Open peer connection
@@ -547,6 +549,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       // Count this as a used trial for guests (only on successful connect)
       if (isGuest) {
         try { incrementGuestTrials(); } catch { /* noop */ }
+      } else if (userId) {
+        try { consumeVoiceQuota(userId); } catch { /* noop */ }
       }
     } catch (e: any) {
       console.error("startCall failed", e);

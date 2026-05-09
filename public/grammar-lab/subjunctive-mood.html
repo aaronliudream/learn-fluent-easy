@@ -6519,12 +6519,12 @@ function DiagnosticScreen({ onBack, onComplete }) {
   if (stage === "intro") {
     return (
       <div className="min-h-screen bg-paper flex flex-col items-center justify-center p-6">
-        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
-          <h2 className="font-cn-serif text-3xl ink mb-3">30 秒分级测试</h2>
-          <p className="ink-dim mb-6">3 道题 · 帮你找起点</p>
-          <p className="ink text-sm mb-8 leading-relaxed">
+        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center text-gray-900">
+          <h2 className="font-cn-serif text-3xl text-gray-900 mb-3">30 秒分级测试</h2>
+          <p className="text-gray-500 mb-6">3 道题 · 帮你找起点</p>
+          <p className="text-gray-800 text-sm mb-8 leading-relaxed">
             不知道从哪关开始？做完 3 题给你建议起点。<br/>
-            <span className="ink-dim">不做也完全 OK——可以直接从地图选关。</span>
+            <span className="text-gray-500">不做也完全 OK——可以直接从地图选关。</span>
           </p>
           <button onClick={() => setStage("quiz")} className="w-full bg-indigo-600 text-white rounded-xl py-3 font-medium hover:bg-indigo-700 mb-3">
             开始测试
@@ -6532,7 +6532,7 @@ function DiagnosticScreen({ onBack, onComplete }) {
           <button onClick={() => onComplete(1)} className="w-full text-sm text-blue-600 underline hover:text-blue-700 py-2">
             🚀 跳过测试 → 直接从 L1 开始学
           </button>
-          <button onClick={onBack} className="w-full text-sm ink-dim hover:ink py-2 mt-2">
+          <button onClick={onBack} className="w-full text-sm text-gray-500 hover:text-gray-900 py-2 mt-2">
             ← 回地图
           </button>
         </div>
@@ -6544,20 +6544,20 @@ function DiagnosticScreen({ onBack, onComplete }) {
     const rec = getRecommendation(correctCount);
     return (
       <div className="min-h-screen bg-paper flex flex-col items-center justify-center p-6">
-        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8">
+        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-gray-900">
           <div className="text-center mb-6">
             <div className="text-5xl mb-2">⭐</div>
-            <h2 className="font-cn-serif text-2xl ink mb-2">建议起点：{rec.level}</h2>
-            <p className="ink-dim text-sm">你做对了 {correctCount}/3 题</p>
+            <h2 className="font-cn-serif text-2xl text-gray-900 mb-2">建议起点：{rec.level}</h2>
+            <p className="text-gray-500 text-sm">你做对了 {correctCount}/3 题</p>
           </div>
           <div className="bg-indigo-50 rounded-xl p-4 mb-6">
-            <p className="font-cn-serif text-lg ink mb-2">{rec.title}</p>
-            <p className="text-sm ink leading-relaxed">{rec.desc}</p>
+            <p className="font-cn-serif text-lg text-gray-900 mb-2">{rec.title}</p>
+            <p className="text-sm text-gray-800 leading-relaxed">{rec.desc}</p>
           </div>
           <button onClick={() => onComplete(rec.stage)} className="w-full bg-indigo-600 text-white rounded-xl py-3 font-medium hover:bg-indigo-700 mb-3">
             ▶ 立刻去 {rec.level}
           </button>
-          <button onClick={() => onComplete(0)} className="w-full ink rounded-xl py-3 border border-gray-300 hover:bg-gray-50">
+          <button onClick={() => onComplete(0)} className="w-full text-gray-900 rounded-xl py-3 border border-gray-300 hover:bg-gray-50">
             📍 回地图自由选关
           </button>
         </div>
@@ -6567,8 +6567,8 @@ function DiagnosticScreen({ onBack, onComplete }) {
 
   return (
     <div className="min-h-screen bg-paper flex flex-col items-center justify-center p-6">
-      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8">
-        <div className="flex justify-between items-center mb-4 text-xs ink-dim">
+      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-gray-900">
+        <div className="flex justify-between items-center mb-4 text-xs text-gray-500">
           <span>题 {qIdx + 1}/{total}</span>
           <button onClick={() => onComplete(1)} className="text-blue-600 underline hover:text-blue-700">
             🚀 跳过 → 从 L1 开始
@@ -6577,7 +6577,7 @@ function DiagnosticScreen({ onBack, onComplete }) {
         <div className="w-full bg-gray-200 rounded-full h-1 mb-6">
           <div className="bg-indigo-600 h-1 rounded-full" style={{ width: `${((qIdx) / total) * 100}%` }}></div>
         </div>
-        <p className="font-cn-serif text-lg ink mb-6 leading-relaxed">{q.stem}</p>
+        <p className="font-cn-serif text-lg text-gray-900 mb-6 leading-relaxed">{q.stem}</p>
         <div className="space-y-2 mb-6">
           {q.opts.map((opt, i) => (
             <button
@@ -6585,8 +6585,8 @@ function DiagnosticScreen({ onBack, onComplete }) {
               onClick={() => setPicked(opt)}
               className={`w-full text-left rounded-xl py-3 px-4 border-2 transition ${
                 picked === opt
-                  ? "border-indigo-600 bg-indigo-50 ink"
-                  : "border-gray-200 ink hover:border-gray-400"
+                  ? "border-indigo-600 bg-indigo-50 text-gray-900"
+                  : "border-gray-200 text-gray-900 hover:border-gray-400"
               }`}
             >
               {String.fromCharCode(65 + i)}. {opt}

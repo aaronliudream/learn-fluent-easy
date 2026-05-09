@@ -115,6 +115,8 @@ const EN_FALLBACKS: Record<string, string> = {
   "首页": "Home",
   "课程": "Courses",
   "AI 对话": "AI Chat",
+  "练习": "Practice",
+  "错题": "Mistakes",
   "排行榜": "Leaderboard",
   "我的": "Me",
   "主导航": "Main navigation",

@@ -50,8 +50,18 @@ export default function PrimaryReadingPlay() {
 
   // Free-mode AI helper for primary reading lessons (multi-step kids module).
   // The strict prompt prevents leaking specific quiz answers.
-  // Uses imported helper — see top of file.
-  usePrimaryReadingAssistant(a);
+  useRegisterAssistant(
+    a
+      ? {
+          context: "primary_reading",
+          ref: a.id,
+          topic: `小学阅读 · ${a.title_cn}`,
+          mode: "free",
+          unlocked: true,
+          pageTitle: "💬 小月 · 小学阅读答疑",
+        }
+      : null,
+  );
 
   useEffect(() => {
     if (!id) return;

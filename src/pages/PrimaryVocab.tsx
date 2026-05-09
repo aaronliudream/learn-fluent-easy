@@ -14,6 +14,7 @@ type Vocab = {
   id: string;
   word: string;
   pos: string | null;
+  ipa: string | null;
   meaning_cn: string;
   example_en: string | null;
   example_cn: string | null;
@@ -45,7 +46,7 @@ export default function PrimaryVocab() {
     (async () => {
       const { data } = await supabase
         .from("primary_vocab")
-        .select("id,word,pos,meaning_cn,example_en,example_cn,theme,grade")
+        .select("id,word,pos,ipa,meaning_cn,example_en,example_cn,theme,grade")
         .eq("grade", grade);
       const all = (data ?? []) as Vocab[];
       setWords(all);
@@ -223,6 +224,9 @@ function BrowseGrid({ words }: { words: Vocab[] }) {
                   </span>
                 )}
               </div>
+              {w.ipa && (
+                <div className="mt-0.5 font-mono text-xs text-muted-foreground">{w.ipa}</div>
+              )}
             </div>
             <button
               onClick={() => speak(w.word)}

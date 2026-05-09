@@ -17,6 +17,10 @@ import ModuleStageTests from "@/components/ModuleStageTests";
 import { toast } from "sonner";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
+import GuidedSession from "@/components/vocab/GuidedSession";
+import ReviewPool from "@/components/vocab/ReviewPool";
+import { fetchDueReviewIds } from "@/lib/vocabMastery";
+import { Rocket } from "lucide-react";
 
 type Vocab = {
   id: string;
@@ -32,7 +36,7 @@ type Vocab = {
   freq_rank: number | null;
 };
 
-type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs";
+type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs" | "guided" | "review";
 const GROUP_SIZE = 20;
 
 const isChineseUi = (lang: string) => lang === "zh" || lang === "zh-TW";
@@ -138,6 +142,14 @@ export default function JuniorVocab() {
       );
     }
     return <ClassicQuiz pool={srsPool} onExit={exit} />;
+  }
+  if (mode === "guided") {
+    // Take the current group (or first 100) so we have a focused pool.
+    const focused = activePool.slice(0, 100);
+    return <GuidedSession pool={focused} onExit={exit} title={zh ? `初${displayGrade} · 本关通关` : `Guided round`} />;
+  }
+  if (mode === "review") {
+    return <JuniorReviewLauncher pool={words} onExit={exit} />;
   }
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
   if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;

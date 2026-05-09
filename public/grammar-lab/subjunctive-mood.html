@@ -8134,6 +8134,8 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
   const [transformInput, setTransformInput] = useState("");
   const [transformFb, setTransformFb] = useState(null);
   const [transformReveal, setTransformReveal] = useState(false);
+  const [tilePool, setTilePool] = useState([]);  // [{id, word}]
+  const [tilePicked, setTilePicked] = useState([]);  // [tileId,...]
 
   const [examIdx, setExamIdx] = useState(0);
   const [examPicked, setExamPicked] = useState(null);
@@ -8174,8 +8176,9 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
 
   // Transform check
   const tt = level.fillTasks[transformIdx] || level.fillTasks[0];
-  const checkTransform = () => {
-    const norm = transformInput.trim().toLowerCase().replace(/\s+/g, " ");
+  const checkTransform = (overrideInput) => {
+    const raw = (overrideInput !== undefined ? overrideInput : transformInput) || "";
+    const norm = raw.trim().toLowerCase().replace(/\s+/g, " ");
     if (!norm) return;
     // Layer 1 — perfect match against the model answer's pattern
     if (tt.pattern.test(norm)) {
@@ -8217,6 +8220,60 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
     setTransformInput("");
     setTransformFb(null);
     setTransformReveal(false);
+    setTilePicked([]);
+  };
+
+  // ─── 选词拼句：当题目切换时，重新生成单词磁贴 ───
+  useEffect(() => {
+    if (!tt || !tt.model) return;
+    const correctTokens = tt.model
+      .replace(/([.,!?;:])/g, " $1")
+      .split(/\s+/)
+      .filter(Boolean);
+    const lower = new Set(correctTokens.map(t => t.toLowerCase()));
+    const distractorPool = ["was", "am", "will", "did", "have", "do", "would", "had", "be", "is", "are", "can", "could"];
+    const distractors = distractorPool.filter(w => !lower.has(w)).slice(0, 3);
+    const tiles = [...correctTokens, ...distractors].map((w, i) => ({ id: i, word: w }));
+    // Fisher-Yates 洗牌
+    for (let i = tiles.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+    }
+    setTilePool(tiles);
+    setTilePicked([]);
+    setTransformInput("");
+    setTransformFb(null);
+    setTransformReveal(false);
+  }, [transformIdx, tt && tt.model]);
+
+  const assemblePicked = () => {
+    const words = tilePicked.map(id => {
+      const t = tilePool.find(x => x.id === id);
+      return t ? t.word : "";
+    });
+    return words.join(" ").replace(/\s+([.,!?;:])/g, "$1");
+  };
+  const onPickTile = (id) => {
+    if (transformFb && transformFb.kind === "correct") return;
+    if (tilePicked.includes(id)) return;
+    setTilePicked(p => [...p, id]);
+    if (transformFb) setTransformFb(null);  // 重新选词时清掉旧反馈
+  };
+  const onUnpickTile = (id) => {
+    if (transformFb && transformFb.kind === "correct") return;
+    setTilePicked(p => p.filter(x => x !== id));
+    if (transformFb) setTransformFb(null);
+  };
+  const onClearPicked = () => {
+    if (transformFb && transformFb.kind === "correct") return;
+    setTilePicked([]);
+    setTransformFb(null);
+  };
+  const onCheckTiles = () => {
+    const sentence = assemblePicked();
+    if (!sentence) return;
+    setTransformInput(sentence);
+    checkTransform(sentence);
   };
 
   const handleTransformKey = (e) => {

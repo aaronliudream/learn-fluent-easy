@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Trophy, Sparkles, BookOpen, FileText, PenLine, Headphones, Edit3, Lock } from "lucide-react";
+import { ArrowLeft, Trophy, Sparkles, BookOpen, FileText, PenLine, Headphones, Edit3, Lock, Mic } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { ContinueCard } from "@/components/mastery/ContinueCard";
 
@@ -24,6 +24,7 @@ export default function Gaokao() {
 
   const MODULES: { to: string; icon: any; title: string; desc: string; gradient: string; soon?: boolean }[] = [
     { to: `/gaokao/vocab${q}`, icon: Sparkles, title: "核心词汇", desc: "高考 3500 词 · 多种游戏巩固", gradient: "from-fuchsia-500 to-pink-500" },
+    { to: `/talk?stage=gaokao`, icon: Mic, title: "AI 口语对话 · 高考题型", desc: "看图说话 · 议论话题 · 大学面试 · Alex 真人语音", gradient: "from-rose-500 via-pink-500 to-fuchsia-600" },
     { to: `/gaokao/grammar${q}`, icon: BookOpen, title: "语法专项", desc: "全考点串讲 + 高考真题题组", gradient: "from-blue-600 to-indigo-700" },
     { to: `/gaokao/reading${q}`, icon: FileText, title: "阅读理解", desc: "长难文 · 题型套路精讲", gradient: "from-violet-600 to-purple-700" },
     { to: `/gaokao/cloze${q}`, icon: PenLine, title: "完形填空", desc: "真题完形 · 逐空精解", gradient: "from-violet-600 to-purple-700" },

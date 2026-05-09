@@ -229,7 +229,8 @@ Deno.serve(async (req) => {
     const body = (await req.json()) as Body;
     const language: "zh" | "en" = body.language === "en" ? "en" : "zh";
     const hintLevel = Math.max(0, Math.min(3, body.hint_level ?? 0));
-    const mode: "question" | "free" = body.mode === "free" ? "free" : "question";
+    const mode: "question" | "free" | "concierge" =
+      body.mode === "free" ? "free" : body.mode === "concierge" ? "concierge" : "question";
 
     // Determine tier: premium iff user is in user_roles with 'premium' (not yet defined → fall back to registered)
     let tier: Tier = "guest";
@@ -265,13 +266,13 @@ Deno.serve(async (req) => {
       });
     }
 
-    // For free mode: synthesize a stable question_ref so storage schema still works
-    const questionRef = mode === "free"
-      ? `free:${(body.topic || body.context).slice(0, 80)}`
-      : body.question_ref!;
-    const questionSnapshot = mode === "free"
-      ? { mode: "free", topic: body.topic || body.context }
-      : (body.question_snapshot ?? {});
+    // For free / concierge mode: synthesize a stable question_ref so storage schema still works
+    const questionRef = mode === "question"
+      ? body.question_ref!
+      : `${mode}:${(body.topic || body.context).slice(0, 80)}`;
+    const questionSnapshot = mode === "question"
+      ? (body.question_snapshot ?? {})
+      : { mode, topic: body.topic || body.context };
 
     // --- Daily quota (tier-aware) ---
     const today = new Date().toISOString().slice(0, 10);
@@ -337,10 +338,14 @@ Deno.serve(async (req) => {
       history = h ?? [];
     }
 
-    const messages: ChatMsg[] = [
-      { role: "system", content: mode === "free"
+    const systemPrompt =
+      mode === "concierge"
+        ? buildConciergeSystemPrompt()
+        : mode === "free"
           ? buildFreeSystemPrompt(language, body.topic || body.context)
-          : buildSystemPrompt(language, questionSnapshot, hintLevel) },
+          : buildSystemPrompt(language, questionSnapshot, hintLevel);
+    const messages: ChatMsg[] = [
+      { role: "system", content: systemPrompt },
       ...history.map(h => ({ role: h.role as Role, content: h.content })),
       { role: "user", content: body.user_message },
     ];

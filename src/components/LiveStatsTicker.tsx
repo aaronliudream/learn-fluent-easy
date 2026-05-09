@@ -34,13 +34,13 @@ export default function LiveStatsTicker() {
 
   return (
     <div className="mx-auto mt-6 inline-flex max-w-full flex-wrap items-center justify-center gap-x-5 gap-y-2 rounded-full border border-white/40 bg-white/60 px-5 py-2.5 text-sm shadow-[0_8px_30px_-12px_rgba(123,63,241,0.35)] backdrop-blur-md md:px-7 md:py-3">
-      {/* LIVE pulse */}
+      {/* 实时 pulse */}
       <span className="inline-flex items-center gap-1.5 font-extrabold tracking-wider text-emerald-700">
         <span className="relative flex size-2.5">
           <span className="absolute inset-0 animate-ping rounded-full bg-emerald-500 opacity-75" />
           <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
         </span>
-        LIVE
+        实时数据
       </span>
 
       <Stat

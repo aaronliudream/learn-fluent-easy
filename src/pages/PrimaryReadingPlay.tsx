@@ -48,6 +48,11 @@ export default function PrimaryReadingPlay() {
   const [streak, setStreak] = useState(0);
   const thinkStartRef = useRef<number>(Date.now());
 
+  // Free-mode AI helper for primary reading lessons (multi-step kids module).
+  // The strict prompt prevents leaking specific quiz answers.
+  // Uses imported helper — see top of file.
+  usePrimaryReadingAssistant(a);
+
   useEffect(() => {
     if (!id) return;
     setLoading(true);

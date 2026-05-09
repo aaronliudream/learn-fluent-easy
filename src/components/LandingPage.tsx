@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import LiveStatsTicker from "@/components/LiveStatsTicker";
-import { ArrowRight, Sparkles, Brain, GraduationCap, Users, BookOpen, Quote, TrendingUp, Clock, Target, ShieldCheck, Backpack, MessageCircle } from "lucide-react";
+import { ArrowRight, Sparkles, Brain, GraduationCap, Users, BookOpen, Quote, TrendingUp, Clock, Target, ShieldCheck } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import moonBg from "@/assets/moon-hero-bg.jpg";
 
@@ -199,7 +199,6 @@ export default function LandingPage() {
           {[
             {
               to: "/kids",
-              icon: Backpack,
               emoji: "🎒",
               title: "小学英语",
               desc: "自然拼读 · 趣味闯关",
@@ -207,7 +206,6 @@ export default function LandingPage() {
             },
             {
               to: "/junior",
-              icon: BookOpen,
               emoji: "📚",
               title: "初中英语",
               desc: "语法 · 词汇 · 听说",
@@ -215,7 +213,6 @@ export default function LandingPage() {
             },
             {
               to: "/gaokao",
-              icon: GraduationCap,
               emoji: "🎓",
               title: "高考冲刺",
               desc: "真题 · 押题 · 写作",
@@ -223,15 +220,12 @@ export default function LandingPage() {
             },
             {
               to: "/talk",
-              icon: MessageCircle,
               emoji: "💬",
               title: "AI 对话练习",
               desc: "24h 外教，随时开口",
               bg: "linear-gradient(160deg,#7B3FF1 0%,#ED3F8C 100%)",
             },
-          ].map((c) => {
-            const Icon = c.icon;
-            return (
+          ].map((c) => (
               <Link
                 key={c.to}
                 to={c.to}
@@ -252,8 +246,7 @@ export default function LandingPage() {
                   <ArrowRight className="size-5 shrink-0 opacity-70 transition group-hover:translate-x-1 group-hover:opacity-100" />
                 </div>
               </Link>
-            );
-          })}
+          ))}
         </div>
       </section>
 

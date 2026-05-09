@@ -23,6 +23,10 @@ import MemoryMatch from "@/components/MemoryMatch";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import NextStepHint from "@/components/vocab/NextStepHint";
 import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
+import GuidedSession from "@/components/vocab/GuidedSession";
+import ReviewPool from "@/components/vocab/ReviewPool";
+import { fetchDueReviewIds } from "@/lib/vocabMastery";
+import { Rocket } from "lucide-react";
 import { computeMasteryScore as _cms, type MasteryMatrix as _MM } from "@/lib/masteryScore";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
@@ -368,6 +372,15 @@ export default function GaokaoVocab() {
     return <MasteryDashboard onExit={() => setParams({})} />;
   }
 
+  if (mode === "guided") {
+    // Use the freq-sorted top 100 so the session always has fresh material.
+    return <GuidedSession pool={allVocab.slice(0, 100)} onExit={() => setParams({})} title="高考词汇 · 本关通关" />;
+  }
+
+  if (mode === "review") {
+    return <GaokaoReviewLauncher pool={allVocab} onExit={() => setParams({})} />;
+  }
+
   if (groupIdx < 0 || groupIdx >= groups.length) {
     return (
       <GroupList
@@ -382,6 +395,8 @@ export default function GaokaoVocab() {
         onStartDict={() => setParams({ mode: "dict" })}
         onOpenDash={() => setParams({ mode: "dash" })}
         onPickMode={(m) => setParams({ mode: m })}
+        onStartGuided={() => setParams({ mode: "guided" })}
+        onStartReview={() => setParams({ mode: "review" })}
       />
     );
   }

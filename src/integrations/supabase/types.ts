@@ -2550,6 +2550,27 @@ export type Database = {
         }
         Relationships: []
       }
+      guest_ai_usage: {
+        Row: {
+          client_id: string
+          day: string
+          message_count: number
+          updated_at: string
+        }
+        Insert: {
+          client_id: string
+          day: string
+          message_count?: number
+          updated_at?: string
+        }
+        Update: {
+          client_id?: string
+          day?: string
+          message_count?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
       ielts_errors: {
         Row: {
           corrected: string

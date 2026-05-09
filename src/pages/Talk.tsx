@@ -9,6 +9,7 @@ import { T } from "@/i18n/T";
 import { LEVELS } from "@/data/course";
 import { toast } from "sonner";
 import { guestTrialsRemaining, GUEST_TRIAL_LIMIT } from "@/lib/guestTrial";
+import { voiceQuotaRemaining, DAILY_VOICE_LIMIT } from "@/lib/dailyVoiceQuota";
 
 type Topic = { key: string; label: string; prompt: string };
 
@@ -84,10 +85,12 @@ export default function Talk() {
   const TOPICS = pack.topics;
 
   const [authed, setAuthed] = useState<boolean | null>(null);
+  const [userId, setUserId] = useState<string | null>(null);
   const [topic, setTopic] = useState(TOPICS[0]);
   const [level, setLevel] = useState(pack.defaultLevel);
   const [open, setOpen] = useState(false);
   const [trialsLeft, setTrialsLeft] = useState<number>(GUEST_TRIAL_LIMIT);
+  const [voiceLeft, setVoiceLeft] = useState<number>(DAILY_VOICE_LIMIT);
 
   // Re-init when stage changes (e.g. user navigates from another stage)
   useEffect(() => {
@@ -104,25 +107,37 @@ export default function Talk() {
 
   useEffect(() => {
     setTrialsLeft(guestTrialsRemaining());
-  }, [open]);
+    setVoiceLeft(voiceQuotaRemaining(userId));
+  }, [open, userId]);
 
   useEffect(() => {
     let active = true;
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!active) return;
       setAuthed(!!session?.user);
+      setUserId(session?.user?.id ?? null);
     });
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => {
-      if (active) setAuthed(!!s?.user);
+      if (active) { setAuthed(!!s?.user); setUserId(s?.user?.id ?? null); }
     });
     return () => { active = false; subscription.unsubscribe(); };
   }, []);
+
+  // Stage-aware session length (matches AITalkDialog STAGE_DURATION_SEC).
+  const stageMinutes = stage === "primary" ? 5 : stage === "junior" ? 8 : 10;
 
   const start = () => {
     if (!authed && guestTrialsRemaining() <= 0) {
       toast("免费试用已结束 · 登录后可继续畅聊", {
         description: "登录账号即可解锁 10 分钟完整对话和学习记录",
         action: { label: "去登录", onClick: () => nav("/auth") },
+        duration: 7000,
+      });
+      return;
+    }
+    if (authed && userId && voiceQuotaRemaining(userId) <= 0) {
+      toast("今天的免费语音对话已用完", {
+        description: "每位同学每天免费 1 次语音对话，明天再来吧～急着练可以试试『文字陪练』",
         duration: 7000,
       });
       return;
@@ -134,7 +149,7 @@ export default function Talk() {
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">
       <PageHeader
         title={STAGE_LABEL[stage] ?? STAGE_LABEL.general}
-        subtitle="和地道美国人 Alex 来一场 10 分钟全英文真人对话，结束后给你逐句中英讲解 + 词汇测试"
+        subtitle={`和地道美国人 Alex 来一场 ${stageMinutes} 分钟全英文真人对话，结束后给你逐句中英讲解 + 词汇测试`}
         back={stage === "primary" ? "/primary" : stage === "junior" ? "/junior" : stage === "gaokao" ? "/gaokao" : "/"}
       />
 
@@ -149,7 +164,7 @@ export default function Talk() {
               <ProWaitlistButton feature="ai-talk-unlimited" source="talk-page" label={<T>解锁无限时长</T>} />
             </div>
             <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-              <T>Alex 是一位加州年轻人，只用英语和你聊天。10 分钟到点自动结束。结束后 AI 会逐句翻译你说的话、给出更地道的说法，并出 5 道选择题让你巩固刚学到的词汇短语。</T>
+              <T>{`Alex 是一位加州年轻人，只用英语和你聊天。${stageMinutes} 分钟到点自动结束。结束后 AI 会逐句翻译你说的话、给出更地道的说法，并出 5 道选择题让你巩固刚学到的词汇短语。每天免费 1 次。`}</T>
             </p>
           </div>
         </div>
@@ -203,11 +218,21 @@ export default function Talk() {
       >
         <Mic className="size-6" />
         {authed
-          ? <T>开始 10 分钟对话</T>
+          ? (voiceLeft > 0
+              ? <T>{`开始 ${stageMinutes} 分钟对话`}</T>
+              : <T>今日语音已用完 · 明天再来</T>)
           : trialsLeft > 0
             ? <T>免费试一下 3 分钟</T>
             : <T>登录解锁完整对话</T>}
       </button>
+
+      {authed && (
+        <p className="mt-3 text-center text-xs text-muted-foreground">
+          {voiceLeft > 0
+            ? <T>{`今日剩余免费语音对话：${voiceLeft} 次`}</T>
+            : <T>今日 1 次免费语音已用完，明天 0 点重置</T>}
+        </p>
+      )}
 
       {!authed && (
         <p className="mt-3 flex items-center justify-center gap-1.5 text-center text-xs text-muted-foreground">
@@ -226,6 +251,8 @@ export default function Talk() {
         levelName={LEVELS_OPT.find((l) => l.id === level)?.name}
         level={level}
         isGuest={authed === false}
+        stage={stage as "primary" | "junior" | "gaokao" | "general"}
+        userId={userId}
       />
     </main>
   );

@@ -67,6 +67,19 @@ function StageView({ stage }: { stage: Stage }) {
         </Link>
       )}
 
+      {/* Grammar mastery panorama entry */}
+      <Link
+        to="/dashboard/grammar"
+        className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+      >
+        <div className="grid size-12 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-2xl text-white">📊</div>
+        <div className="flex-1">
+          <div className="text-base font-extrabold">语法掌握全景图</div>
+          <div className="text-xs text-muted-foreground">按考点查看每一项虚拟语气、时态、从句的强弱</div>
+        </div>
+        <ArrowRight className="size-5 text-muted-foreground transition-transform group-hover:translate-x-1" />
+      </Link>
+
       {/* Module grid */}
       <section>
         <h3 className="mb-3 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">各模块进度</h3>

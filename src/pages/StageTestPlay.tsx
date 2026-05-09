@@ -4,6 +4,7 @@ import { ArrowLeft, Check, X, Trophy, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 type Q = { id: string; word: string; meaning_cn: string; options: string[]; isNew: boolean };
 
@@ -40,6 +41,30 @@ export default function StageTestPlay() {
   const [result, setResult] = useState<any>(null);
   const [finalCorrect, setFinalCorrect] = useState(0);
   const [loading, setLoading] = useState(true);
+
+  // Full-test lock for vocabulary stage tests.
+  useRegisterAssistant(
+    meta && testId
+      ? {
+          context: "stage_test",
+          ref: testId,
+          topic: `阶段测验 · ${meta.title}`,
+          mode: "full-test",
+          unlocked: submitted,
+          lockedHint: "请先把整套测验做完并提交，我再来帮你分析每个词 ✨",
+          pageTitle: "💬 小月 · 测验复盘",
+          snapshot: submitted
+            ? {
+                title: meta.title,
+                total: meta.total,
+                pass_threshold: meta.threshold,
+                final_correct: finalCorrect,
+                results: results.slice(0, 50),
+              }
+            : undefined,
+        }
+      : null,
+  );
 
   useEffect(() => {
     (async () => {

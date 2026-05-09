@@ -494,6 +494,28 @@ function GroupList({
         </div>
       )}
 
+      {/* 🚀 引导通关入口（5 步走 + FSRS） */}
+      <button
+        onClick={onStartGuided}
+        className="mt-4 flex w-full items-center justify-between gap-3 rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-500 to-teal-600 px-5 py-4 text-left text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700"
+      >
+        <div className="flex items-center gap-3">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/20"><Rocket className="size-5" /></span>
+          <div>
+            <p className="text-sm font-bold">开始本关通关 · 5 步走</p>
+            <p className="mt-0.5 text-[11px] text-white/85">看 → 认 → 想 → 拼 → 用，按级解锁，自动收进遗忘曲线</p>
+          </div>
+        </div>
+        <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold">推荐 ★</span>
+      </button>
+
+      <div className="mt-4">
+        <ReviewPool
+          pool={pool.map((v) => ({ id: v.id, word: v.word }))}
+          onStart={onStartReview}
+        />
+      </div>
+
       {/* ⭐ 彻底掌握 5 步走 */}
       <div className="mt-4">
         <VocabMasteryPath

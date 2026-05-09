@@ -1,12 +1,26 @@
 import { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { Loader2, Send, Sparkles, X, MessageCircle, Lock } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { Loader2, Send, Sparkles, X, Lock } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/i18n/I18nProvider";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useAIAssistant, type AssistantState } from "@/contexts/AIAssistantContext";
+import xiaoyueMascot from "@/assets/xiaoyue-mascot.png";
+
+/** Persistent random ID for guest quota tracking. */
+function getGuestClientId(): string {
+  if (typeof window === "undefined") return "ssr";
+  try {
+    let id = localStorage.getItem("xiaoyue_client_id");
+    if (!id) {
+      id = "g_" + crypto.randomUUID().replace(/-/g, "").slice(0, 24);
+      localStorage.setItem("xiaoyue_client_id", id);
+    }
+    return id;
+  } catch { return "g_fallback"; }
+}
 
 /**
  * Global floating AI assistant.
@@ -45,20 +59,61 @@ export default function GlobalAIAssistant() {
 }
 
 function FloatingButton({ onClick, unlocked }: { onClick: () => void; unlocked: boolean }) {
+  // Show "💬 问小月" hint bubble on first ever visit, and re-show once per page topic.
+  const [showHint, setShowHint] = useState(false);
+  useEffect(() => {
+    try {
+      const seen = localStorage.getItem("xiaoyue_hint_seen");
+      if (!seen) {
+        const t = setTimeout(() => setShowHint(true), 1200);
+        const t2 = setTimeout(() => {
+          setShowHint(false);
+          localStorage.setItem("xiaoyue_hint_seen", "1");
+        }, 8000);
+        return () => { clearTimeout(t); clearTimeout(t2); };
+      }
+    } catch { /* noop */ }
+  }, []);
+
   return (
-    <button
-      onClick={onClick}
-      aria-label="AI 学习助手"
-      className="fixed right-4 z-40 flex size-14 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary/70 text-primary-foreground shadow-xl ring-2 ring-background transition hover:scale-105 active:scale-95"
+    <div
+      className="fixed right-4 z-40 flex flex-col items-end gap-2"
       style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 88px)" }}
     >
-      <MessageCircle className="size-6" />
-      {!unlocked && (
-        <span className="absolute -right-1 -top-1 inline-flex size-5 items-center justify-center rounded-full bg-amber-500 text-[10px] font-bold text-white shadow">
-          <Lock className="size-3" />
-        </span>
+      {showHint && (
+        <div className="relative animate-in fade-in slide-in-from-right-2 duration-300">
+          <div className="rounded-2xl border border-primary/20 bg-card px-3 py-2 text-xs font-semibold text-foreground shadow-lg">
+            💡 不懂？<span className="text-primary">点我问小月！</span>
+          </div>
+          <div className="absolute -bottom-1 right-6 size-3 rotate-45 border-b border-r border-primary/20 bg-card" />
+        </div>
       )}
-    </button>
+      <button
+        onClick={() => { setShowHint(false); try { localStorage.setItem("xiaoyue_hint_seen", "1"); } catch {} onClick(); }}
+        aria-label="AI 学习助手 小月"
+        className="group relative flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-400 via-violet-500 to-amber-300 p-0.5 shadow-2xl ring-2 ring-background transition-transform hover:scale-105 active:scale-95"
+      >
+        <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-violet-400/30 [animation-duration:2.5s]" aria-hidden />
+        <span className="flex size-full items-center justify-center overflow-hidden rounded-full bg-card">
+          <img
+            src={xiaoyueMascot}
+            alt="小月"
+            width={64}
+            height={64}
+            loading="lazy"
+            className="size-[88%] object-contain"
+          />
+        </span>
+        <span className="pointer-events-none absolute -bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-foreground px-2 py-0.5 text-[10px] font-bold text-background opacity-0 shadow-md transition-opacity group-hover:opacity-100">
+          小月 · AI 助手
+        </span>
+        {!unlocked && (
+          <span className="absolute -right-1 -top-1 inline-flex size-5 items-center justify-center rounded-full bg-amber-500 text-[10px] font-bold text-white shadow">
+            <Lock className="size-3" />
+          </span>
+        )}
+      </button>
+    </div>
   );
 }
 
@@ -74,6 +129,7 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [sending, setSending] = useState(false);
+  const [meta, setMeta] = useState<{ tier?: string; used?: number; limit?: number } | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -108,12 +164,6 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
     try {
       const { data: sess } = await supabase.auth.getSession();
       const token = sess?.session?.access_token;
-      if (!token) {
-        toast.error(tutorLang === "zh" ? "请先登录再使用 AI 助手" : "Please sign in to use the assistant");
-        setMessages((prev) => prev.slice(0, -2));
-        setSending(false);
-        return;
-      }
 
       const url = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/tutor-chat`;
       const body: Record<string, unknown> = {
@@ -127,12 +177,15 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
         body.question_ref = state.ref;
         body.question_snapshot = state.snapshot ?? {};
       }
+      if (!token) {
+        body.client_id = getGuestClientId();
+      }
 
       const resp = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
           apikey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,
         },
         body: JSON.stringify(body),
@@ -167,6 +220,16 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
           let line = buf.slice(0, idx);
           buf = buf.slice(idx + 1);
           if (line.endsWith("\r")) line = line.slice(0, -1);
+          if (line.startsWith("data: ") && /^data: \{"conversation_id"|"tier"/.test(line)) {
+            // meta event payload (we sent on its own data line)
+            try {
+              const j = JSON.parse(line.slice(6).trim());
+              if (j && (j.tier || j.limit !== undefined)) {
+                setMeta({ tier: j.tier, used: j.used, limit: j.limit });
+                continue;
+              }
+            } catch { /* fall through */ }
+          }
           if (!line.startsWith("data: ")) continue;
           const j = line.slice(6).trim();
           if (j === "[DONE]") { done = true; break; }
@@ -219,9 +282,22 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
       >
         {/* Header */}
         <div className="flex items-start justify-between gap-3 border-b border-border px-5 py-4">
-          <div className="min-w-0">
-            <div className="text-base font-extrabold leading-tight">{headerTitle}</div>
-            <div className="mt-0.5 text-xs text-muted-foreground line-clamp-2">{sub}</div>
+          <div className="flex min-w-0 items-start gap-3">
+            <img src={xiaoyueMascot} alt="小月" width={40} height={40} className="size-10 shrink-0 rounded-full bg-gradient-to-br from-indigo-100 to-amber-100 object-contain p-0.5" />
+            <div className="min-w-0">
+              <div className="text-base font-extrabold leading-tight">{headerTitle}</div>
+              <div className="mt-0.5 text-xs text-muted-foreground line-clamp-2">{sub}</div>
+              {meta?.limit && (
+                <div className="mt-1 text-[11px] font-semibold text-muted-foreground">
+                  {tutorLang === "zh" ? "今日已用" : "Today"} {meta.used}/{meta.limit}
+                  {meta.tier === "guest" && (
+                    <Link to="/auth" className="ml-2 text-primary underline">
+                      {tutorLang === "zh" ? "登录解锁更多" : "Sign in for more"}
+                    </Link>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
           <button
             onClick={onClose}

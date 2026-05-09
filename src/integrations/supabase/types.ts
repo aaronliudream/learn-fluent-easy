@@ -2514,6 +2514,8 @@ export type Database = {
           created_at: string
           grade: string | null
           id: string
+          legacy_id: string | null
+          legacy_table: string | null
           name: string
           slug: string
           sort_order: number
@@ -2525,6 +2527,8 @@ export type Database = {
           created_at?: string
           grade?: string | null
           id?: string
+          legacy_id?: string | null
+          legacy_table?: string | null
           name: string
           slug: string
           sort_order?: number
@@ -2536,6 +2540,8 @@ export type Database = {
           created_at?: string
           grade?: string | null
           id?: string
+          legacy_id?: string | null
+          legacy_table?: string | null
           name?: string
           slug?: string
           sort_order?: number

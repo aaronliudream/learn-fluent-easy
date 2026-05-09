@@ -11,6 +11,7 @@ const ITEMS: { to: string; label: string }[] = [
   { to: "/kids", label: "小学" },
   { to: "/junior", label: "初中" },
   { to: "/senior", label: "高中" },
+  { to: "/slang", label: "俚语" },
   { to: "/about", label: "关于我们" },
 ];
 

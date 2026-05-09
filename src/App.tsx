@@ -85,6 +85,7 @@ const GaokaoMistakes = lazy(() => import("./pages/GaokaoMistakes.tsx"));
 const SavedPhrases = lazy(() => import("./pages/SavedPhrases.tsx"));
 const Review = lazy(() => import("./pages/Review.tsx"));
 const Mistakes = lazy(() => import("./pages/Mistakes.tsx"));
+const ReviewToday = lazy(() => import("./pages/ReviewToday.tsx"));
 const Leaderboard = lazy(() => import("./pages/Leaderboard.tsx"));
 const Pets = lazy(() => import("./pages/Pets.tsx"));
 const Friends = lazy(() => import("./pages/Friends.tsx"));
@@ -200,6 +201,7 @@ const App = () => (
           <Route path="/saved" element={<SavedPhrases />} />
           <Route path="/review" element={<Review />} />
           <Route path="/mistakes" element={<Mistakes />} />
+          <Route path="/review/today" element={<ReviewToday />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/pets" element={<Pets />} />
           <Route path="/friends" element={<Friends />} />

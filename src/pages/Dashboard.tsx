@@ -1,12 +1,59 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Clock } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
+import { supabase } from "@/integrations/supabase/client";
 import { useMasteryOverview, pickContinue, type Stage } from "@/hooks/useMasteryOverview";
 import { MasteryRing } from "@/components/mastery/MasteryRing";
 import { MasteryBadge, MASTERY_LEGEND } from "@/components/mastery/MasteryBadge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ShareButton } from "@/components/share/ShareButton";
+
+function TodayReviewCard() {
+  const [count, setCount] = useState<number | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) { if (!cancelled) setCount(0); return; }
+      const nowIso = new Date().toISOString();
+      const { count: n } = await supabase
+        .from("user_mistakes")
+        .select("id", { head: true, count: "exact" })
+        .eq("is_resolved", false)
+        .lte("next_review_at", nowIso);
+      if (!cancelled) setCount(n ?? 0);
+    })();
+    return () => { cancelled = true; };
+  }, []);
+
+  if (count === null) return null;
+  if (count === 0) {
+    return (
+      <div className="mt-4 flex items-center gap-3 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-200">
+        <div className="text-2xl">🎉</div>
+        <div className="text-sm font-semibold">今天没有要复习的错题，干得好！</div>
+      </div>
+    );
+  }
+  const mins = Math.max(1, Math.round(count * 0.5));
+  return (
+    <Link
+      to="/review/today"
+      className="group mt-4 flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br from-orange-500 to-rose-500 p-5 text-white shadow-tile transition-all hover:-translate-y-0.5"
+    >
+      <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
+        <Clock className="size-7" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-85">⏰ 今日复习</div>
+        <div className="mt-1 text-lg font-extrabold leading-tight">今日待复习 {count} 道 · 预计 {mins} 分钟</div>
+        <div className="mt-0.5 text-xs opacity-90">按记忆曲线推送，刷掉就不再忘</div>
+      </div>
+      <div className="rounded-full bg-white/95 px-4 py-2 text-xs font-extrabold text-rose-600 shadow group-hover:scale-105 transition">开始 →</div>
+    </Link>
+  );
+}
 
 function StageView({ stage }: { stage: Stage }) {
   const ov = useMasteryOverview(stage);
@@ -142,6 +189,7 @@ export default function Dashboard() {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 md:px-8 md:py-12">
       <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back="/" />
+      <TodayReviewCard />
       <Tabs value={stage} onValueChange={(v) => setStage(v as Stage)} className="mt-4">
         <TabsList className="grid w-full max-w-xs grid-cols-2">
           <TabsTrigger value="junior">初中</TabsTrigger>

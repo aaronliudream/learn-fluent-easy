@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LiveStatsTicker from "@/components/LiveStatsTicker";
 import { ArrowRight, Sparkles, Brain, GraduationCap, Users, BookOpen, Quote, TrendingUp, Clock, Target, ShieldCheck } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import moonBg from "@/assets/moon-hero-bg.jpg";
@@ -193,6 +194,9 @@ export default function LandingPage() {
               浏览课程
             </a>
           </div>
+
+          {/* 🔴 LIVE 数据条 — 紧贴 CTA，社会证明 + 科技感 */}
+          <LiveStatsTicker />
         </div>
       </section>
 

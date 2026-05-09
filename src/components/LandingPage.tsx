@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Brain } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import moonBg from "@/assets/moon-hero-bg.jpg";
 
@@ -176,21 +176,9 @@ export default function LandingPage() {
             <br />
             英语要会用
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-[#3A3A3A] md:text-lg">
-            AI持续分析孩子薄弱点，<br />
-            动态生成专属练习，<br />
-            不再盲目刷题。
+          <p className="mx-auto mt-5 max-w-xl text-sm text-[#5A5A5A] md:text-base">
+            对照最新中考高考要求 · 同步最新大纲要求 — 让应试和能力同时长进。
           </p>
-          <div className="mx-auto mt-4 inline-flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-[#5A5A5A] md:text-sm">
-            <span className="inline-flex items-center gap-1.5">
-              <span className="inline-flex size-5 items-center justify-center rounded-full bg-[#10B981]/15 text-[#10B981]">✓</span>
-              符合教育部英语新课标
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <span className="inline-flex size-5 items-center justify-center rounded-full bg-[#10B981]/15 text-[#10B981]">✓</span>
-              适合中国小学初高中学生
-            </span>
-          </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/auth"
@@ -271,6 +259,42 @@ export default function LandingPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* ===== AI 解决方案亮带（问题 → 承诺 之间的桥梁） ===== */}
+        <div className="relative mt-8 overflow-hidden rounded-3xl bg-[#0E0B1F] p-8 text-white shadow-[0_20px_50px_-20px_rgba(123,63,241,0.5)] md:mt-10 md:p-12">
+          <span className="pointer-events-none absolute -right-20 -top-20 size-72 rounded-full bg-[#7B3FF1]/40 blur-3xl" />
+          <span className="pointer-events-none absolute -left-16 -bottom-20 size-64 rounded-full bg-[#ED3F8C]/30 blur-3xl" />
+          <div className="relative grid items-center gap-8 md:grid-cols-[auto,1fr]">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#7B3FF1] to-[#ED3F8C] shadow-lg shadow-[#7B3FF1]/40">
+                <Brain className="size-7" />
+              </span>
+              <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/70">
+                AI 解决方案
+              </div>
+            </div>
+            <div>
+              <h3 className="font-serif text-2xl font-black leading-tight tracking-tight md:text-4xl">
+                AI 持续分析孩子薄弱点，
+                <br className="hidden md:block" />
+                <span className="bg-gradient-to-r from-[#FFD86B] via-[#ED3F8C] to-[#7B3FF1] bg-clip-text text-transparent">
+                  动态生成专属练习
+                </span>
+                ，不再盲目刷题。
+              </h3>
+              <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-bold text-white/85 md:text-sm">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="inline-flex size-5 items-center justify-center rounded-full bg-[#10B981]/25 text-[#5EEAD4]">✓</span>
+                  符合教育部英语新课标
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="inline-flex size-5 items-center justify-center rounded-full bg-[#10B981]/25 text-[#5EEAD4]">✓</span>
+                  适合中国小学初高中学生
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -85,16 +85,16 @@ export default function LandingPage() {
         </header>
 
         {/* Hero copy */}
-        <div className="relative z-10 mx-auto max-w-[1180px] px-6 pb-16 pt-20 text-center md:pb-28 md:pt-32">
-          <h1 className="font-serif text-5xl font-black leading-[1.05] tracking-tight md:text-7xl">
+        <div className="relative z-10 mx-auto max-w-[1180px] px-6 pb-8 pt-10 text-center md:pb-12 md:pt-16">
+          <h1 className="font-serif text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
             Real English from
             <br />
             real American kids
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-base text-[#5A5A5A] md:text-lg">
+          <p className="mx-auto mt-4 max-w-xl text-sm text-[#5A5A5A] md:text-base">
             来自真实美国小朋友的英语 — 为中国 K-12 学生量身打造的英语成长平台。
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/auth"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#7B3FF1] to-[#ED3F8C] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-[#7B3FF1]/25 hover:-translate-y-0.5 transition"
@@ -112,15 +112,15 @@ export default function LandingPage() {
       </section>
 
       {/* ============ THREE STAGES ============ */}
-      <section id="stages" className="mx-auto max-w-[1180px] px-6 py-20 md:py-24">
-        <div className="mb-10 text-center md:mb-14">
+      <section id="stages" className="mx-auto max-w-[1180px] px-6 py-8 md:py-10">
+        <div className="mb-6 text-center md:mb-8">
           <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7B3FF1]">
             COURSE TRACKS
           </div>
-          <h2 className="mt-3 font-serif text-3xl font-black tracking-tight md:text-4xl">
+          <h2 className="mt-2 font-serif text-2xl font-black tracking-tight md:text-3xl">
             选择你的学习阶段
           </h2>
-          <p className="mt-3 text-sm text-[#5A5A5A]">
+          <p className="mt-2 text-sm text-[#5A5A5A]">
             小学、初中、高中 — 每个阶段都有专属的内容和节奏
           </p>
         </div>
@@ -130,7 +130,7 @@ export default function LandingPage() {
             <Link
               key={s.to}
               to={s.to}
-              className="group relative flex min-h-[280px] flex-col justify-between overflow-hidden rounded-3xl p-7 text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)]"
+              className="group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-3xl p-6 text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)]"
               style={{ background: s.gradient }}
             >
               <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/15 blur-2xl" />

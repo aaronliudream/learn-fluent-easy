@@ -8124,6 +8124,23 @@ function CompressionCard({ comp, onContinue }) {
 function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
   // ─── Teacher mode (only if level.teacherScript exists) ───
   const hasTeacher = !!level.teacherScript;
+  // ─── Announce active level to parent (for global AI assistant context) ───
+  useEffect(() => {
+    try {
+      window.parent && window.parent.postMessage({
+        source: "subjunctive-lab",
+        type: "state",
+        payload: { levelId: levelId, levelTitle: (level && level.title) || ("Level " + levelId) },
+      }, "*");
+    } catch (e) { /* noop */ }
+    return () => {
+      try {
+        window.parent && window.parent.postMessage({
+          source: "subjunctive-lab", type: "state", payload: { levelId: null },
+        }, "*");
+      } catch (e) { /* noop */ }
+    };
+  }, [levelId]);
   // teacherStage: 'intro' (show modal) | 'lesson' (playing) | 'done' (finished/skipped)
   const [teacherStage, setTeacherStage] = useState(hasTeacher ? "intro" : "done");
   const [teacherSkipped, setTeacherSkipped] = useState(false);

@@ -9,6 +9,7 @@ import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
 import { ShareButton } from "@/components/share/ShareButton";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 type Q = { type?: "choice" | "fill" | "judge"; q: string; options: string[]; answer: string; explanation?: string };
 type E = { id: string; title: string; transcript: string; translation_cn: string | null; questions: Q[]; key_vocab: { word: string; cn: string }[]; audio_url: string | null; kind?: string | null };
@@ -21,6 +22,39 @@ export default function JuniorListeningPlay() {
   const [showScript, setShowScript] = useState(false);
   const [streak, setStreak] = useState(0);
   const shownAt = useRef<Record<number, number>>({});
+
+  // Full-test lock: AI may only discuss the listening once every question is answered.
+  const allAnswered = !!e && e.questions.length > 0 && e.questions.every((_, i) => picks[i] || fills[i]);
+  useRegisterAssistant(
+    e
+      ? {
+          context: "junior_listening",
+          ref: e.id,
+          topic: `初中听力 · ${e.title}`,
+          mode: "full-test",
+          unlocked: allAnswered,
+          lockedHint: "请先把所有听力题做完再来找我答疑哦 ✨",
+          pageTitle: "💬 小月 · 听力复盘",
+          snapshot: allAnswered
+            ? {
+                title: e.title,
+                transcript_excerpt: e.transcript?.slice(0, 1200),
+                key_vocab: e.key_vocab?.slice(0, 12),
+                questions: e.questions.map((q, i) => ({
+                  index: i + 1,
+                  type: q.type ?? "choice",
+                  stem: q.q,
+                  options: q.options,
+                  correct_answer: q.answer,
+                  user_answer: picks[i] ?? fills[i],
+                  is_correct: !!(picks[i] ?? fills[i]) && checkAnswer(q, (picks[i] ?? fills[i])!),
+                  explanation: q.explanation,
+                })),
+              }
+            : undefined,
+        }
+      : null,
+  );
 
   useEffect(() => {
     if (!id) return;

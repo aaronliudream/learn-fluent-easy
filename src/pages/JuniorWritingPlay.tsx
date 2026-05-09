@@ -7,6 +7,7 @@ import { awardCoins } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 type P = { id: string; topic: string; prompt_cn: string; prompt_en: string; requirements: string[]; min_words: number; max_words: number; sample_answer: string | null; scoring_rubric: string | null };
 type Result = { score: number; overall: string; mistakes: { original: string; corrected: string; explanation: string }[]; suggestions: string[]; improved: string };
@@ -17,6 +18,21 @@ export default function JuniorWritingPlay() {
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
+
+  // Writing has no multiple-choice answer to leak. Assistant is always available
+  // for vocabulary/grammar help while drafting; topic is the writing prompt.
+  useRegisterAssistant(
+    p
+      ? {
+          context: "junior_writing",
+          ref: p.id,
+          topic: `初中写作 · ${p.topic}`,
+          mode: "free",
+          unlocked: true,
+          pageTitle: "💬 小月 · 写作答疑",
+        }
+      : null,
+  );
 
   useEffect(() => {
     if (!id) return;

@@ -7,6 +7,7 @@ import { speak, prefetchTTSBatch, stopSpeaking } from "@/lib/speak";
 import { awardForCorrect, awardCoins, notifyWrong } from "@/lib/coins";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 type Sentence = { en: string; cn: string };
 type Warm = { w: string; cn: string };
@@ -47,6 +48,21 @@ export default function PrimaryReadingPlay() {
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const thinkStartRef = useRef<number>(Date.now());
+
+  // Free-mode AI helper for primary reading lessons (multi-step kids module).
+  // The strict prompt prevents leaking specific quiz answers.
+  useRegisterAssistant(
+    a
+      ? {
+          context: "primary_reading",
+          ref: a.id,
+          topic: `小学阅读 · ${a.title_cn}`,
+          mode: "free",
+          unlocked: true,
+          pageTitle: "💬 小月 · 小学阅读答疑",
+        }
+      : null,
+  );
 
   useEffect(() => {
     if (!id) return;

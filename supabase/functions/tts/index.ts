@@ -172,12 +172,13 @@ serve(async (req) => {
     const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
     const safeText = String(text).slice(0, 4000);
     const isShort = safeText.length <= 40;
-    // Routing: mainland China → Aliyun CosyVoice; everyone else → OpenAI.
-    // The content-addressed Supabase Storage cache means each unique
-    // (provider, voice, speed, text) is only synthesized ONCE.
-    const hasAliyun = Boolean(Deno.env.get("DASHSCOPE_API_KEY"));
-    const provider: "aliyun" | "openai" =
-      hasAliyun && isMainlandChina(req) ? "aliyun" : "openai";
+    // Routing: OpenAI for ALL users (including mainland China). Aliyun CosyVoice
+    // disabled per user request — voice quality was unsatisfactory. The
+    // content-addressed Supabase Storage cache means each unique
+    // (voice, speed, text) is only synthesized ONCE; subsequent plays
+    // for ANY user worldwide are served from CDN (<200ms), so China
+    // users only pay the OpenAI round-trip on the very first play.
+    const provider: "aliyun" | "openai" = "openai";
 
     // Content-addressed cache key — same text+voice+speed always lands on the same file.
     const keyInput = `${provider}|${selectedVoice}|${safeSpeed}|${accentUpper}|${safeText}`;

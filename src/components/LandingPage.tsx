@@ -237,6 +237,35 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ============ BONUS: AMERICAN SLANG ============ */}
+      <section className="mx-auto max-w-[1180px] px-6 pb-10 md:pb-14">
+        <Link
+          to="/slang"
+          className="group relative flex flex-col items-start justify-between gap-5 overflow-hidden rounded-3xl p-7 text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)] md:flex-row md:items-center md:p-9"
+          style={{
+            background:
+              "linear-gradient(120deg,#1A1A2E 0%,#3B1E5E 45%,#ED3F8C 100%)",
+          }}
+        >
+          <span className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-white/10 blur-3xl" />
+          <span className="pointer-events-none absolute -left-10 bottom-[-40px] size-40 rounded-full bg-[#F5A26B]/30 blur-3xl" />
+          <div className="relative">
+            <div className="text-[10px] font-bold uppercase tracking-[0.22em] opacity-85">
+              BIG MOON SLANG · BONUS
+            </div>
+            <h3 className="mt-3 font-serif text-3xl font-black tracking-tight md:text-4xl">
+              美国俚语 American Slang
+            </h3>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed opacity-95 md:text-base">
+              课本之外，真正美国年轻人每天在说的英语。短视频场景 + AI 跟读，让你一开口就像 native。
+            </p>
+          </div>
+          <div className="relative inline-flex items-center gap-1.5 rounded-full bg-white/20 px-5 py-2 text-xs font-bold backdrop-blur transition group-hover:bg-white/30 md:text-sm">
+            进入俚语专区 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+          </div>
+        </Link>
+      </section>
+
       {/* ============ FOOTER ============ */}
       <footer className="border-t border-[#1A1A1A]/10 bg-[#FBF6EC] py-10">
         <div className="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-4 px-6 text-xs text-[#7A7A7A] md:flex-row">

@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
+import { recordGrammarAttempt as recordPanoramaAttempt } from "@/lib/grammarMastery";
 import { celebrateScore } from "@/lib/feedback";
 import {
   recordGrammarAttempt,
@@ -172,6 +173,8 @@ export default function GaokaoGrammarPoint() {
 
     const latencyMs = Date.now() - questionStartTs;
     await recordAttempt({ questionType: "grammar", questionId: q.id, userAnswer: letter, isCorrect });
+    // Feed the cross-stage 语法掌握全景图
+    if (point?.slug) recordPanoramaAttempt(`gaokao:${point.slug}`, isCorrect);
     const res = await recordGrammarAttempt({
       pointId: point.id,
       questionType: q.question_type || "multiple_choice",

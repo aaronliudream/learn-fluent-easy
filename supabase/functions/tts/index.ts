@@ -173,11 +173,10 @@ serve(async (req) => {
     const safeText = String(text).slice(0, 4000);
     const isShort = safeText.length <= 40;
     const hasAliyun = Boolean(Deno.env.get("DASHSCOPE_API_KEY"));
-    // Prefer Aliyun whenever it is configured. The previous country-header
-    // detection is unreliable behind hosted edge networks, so mainland users
-    // could still be routed to OpenAI and wait a very long time. Aliyun is now
-    // the primary low-latency TTS path; OpenAI remains the safety fallback.
-    const useAliyun = hasAliyun || isMainlandChina(req);
+    // Routing rule: mainland China users → Aliyun CosyVoice (low latency in CN),
+    // everyone else → OpenAI. Aliyun is only used when the API key is configured;
+    // otherwise we fall back to OpenAI for everyone.
+    const useAliyun = hasAliyun && isMainlandChina(req);
     const provider: "aliyun" | "openai" = useAliyun ? "aliyun" : "openai";
 
     // Content-addressed cache key — same text+voice+speed always lands on the same file.

@@ -204,6 +204,26 @@ All colors MUST be HSL.
 }
 
 /* ─────────────────────────────────────────────────────────────────────
+   Buttons should not behave like selectable text.
+   Prevents accidental text-selection when clicking/dragging on buttons.
+   ───────────────────────────────────────────────────────────────────── */
+@layer base {
+  button,
+  [role="button"],
+  summary,
+  a[class*="rounded-full"],
+  a[class*="rounded-2xl"],
+  a[class*="rounded-3xl"],
+  label[class*="cursor-pointer"] {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────
    Mobile bottom-tab safe area
    ───────────────────────────────────────────────────────────────────── */
 @layer utilities {

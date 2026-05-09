@@ -3416,7 +3416,7 @@ const CURRICULUM_TREE = [
   {
     id: "cat_diagnostic", icon: "📊", name: "水平诊断",
     children: [
-      { id: "i_diagnostic", name: "8 分钟水平诊断 · 找弱点",   builtAs: "diagnostic", route: "DIAGNOSTIC" },
+      { id: "i_diagnostic", name: "30 秒分级测试（可选） · 找起点", builtAs: "diagnostic", route: "DIAGNOSTIC" },
     ],
   },
   {
@@ -5893,60 +5893,18 @@ function WritingPracticeScreen({ onBack }) {
    the home CTA logic to consume.
 ═══════════════════════════════════════════════════════════════════ */
 const DIAGNOSTIC_TEST = [
-  // L1 — If I were you (2)
-  { id: "d1",  level: "1", point: "be 动词虚拟用 were",
-    stem: "If I ___ you, I would tell him the truth.",
+  { id: "d1", level: "1", point: "If I were you 给建议",
+    stem: "If I ___ you, I would help him.",
     opts: ["was", "were", "am", "be"], answer: "were",
-    why: "虚拟语气从句中 be 动词所有人称都用 **were**。" },
-  { id: "d2",  level: "1", point: "would 后接动词原形",
-    stem: "If I were you, I ___ apologize first.",
-    opts: ["will", "would", "can", "could be"], answer: "would",
-    why: "虚拟语气主句用 **would + 动词原形**。" },
-  // L2 — I wish 现在不满 (2)
-  { id: "d3",  level: "2", point: "wish 后过去式（be → were）",
-    stem: "I wish I ___ taller — I always have to look up at others.",
-    opts: ["am", "was", "were", "had been"], answer: "were",
-    why: "wish 后用过去式表对现在不满，be 动词全用 **were**。" },
-  { id: "d4",  level: "2", point: "wish + could",
-    stem: "I wish I ___ play the piano like my sister does.",
-    opts: ["can", "could", "will", "would"], answer: "could",
-    why: "wish 后 can → **could**——\"远离现实\"的标记。" },
-  // L3 — I wish 过去后悔 (2)
-  { id: "d5",  level: "3", point: "wish + had + 过去分词",
-    stem: "I failed the test. I wish I ___ harder for it last week.",
-    opts: ["studied", "had studied", "would study", "had study"], answer: "had studied",
-    why: "对**过去**后悔用 **had + 过去分词**。" },
-  { id: "d6",  level: "3", point: "wish 过去否定",
-    stem: "I really regret what I said yesterday. I wish I ___ that to her.",
-    opts: ["didn't say", "hadn't said", "don't say", "wouldn't say"], answer: "hadn't said",
-    why: "过去后悔的否定形式：**hadn't + 过去分词**。" },
-  // L4 — If I had..., would have... (2)
-  { id: "d7",  level: "4", point: "过去虚拟主从句配套",
-    stem: "If I had studied harder, I ___ passed the exam.",
-    opts: ["would", "would have", "will", "had"], answer: "would have",
-    why: "过去虚拟两半都要完成形式：had done → **would have done**。" },
-  { id: "d8",  level: "4", point: "if 从句用 had + 过去分词",
-    stem: "If she ___ the bus, she would have arrived on time.",
-    opts: ["caught", "had caught", "catches", "would catch"], answer: "had caught",
-    why: "过去虚拟从句用 **had + 过去分词**。" },
-  // L5 — 混合虚拟 (2)
-  { id: "d9",  level: "5", point: "混合虚拟时间标志",
-    stem: "If I had studied harder back then, I ___ a doctor now.",
-    opts: ["would have been", "would be", "will be", "am"], answer: "would be",
-    why: "**混合虚拟**：过去因 had studied + 现在果 **would be (now)**。" },
-  { id: "d10", level: "5", point: "混合虚拟陷阱（now 关键字）",
-    stem: "If they had let me learn piano, I ___ how to play now.",
-    opts: ["would have known", "would know", "had known", "knew"], answer: "would know",
-    why: "题目说 **now** → 混合虚拟，主句用 **would + 动原**（不带 have）。" },
-  // L6 — 倒装 (2)
-  { id: "d11", level: "6", point: "Had I 倒装",
-    stem: "___ harder, I would have passed the exam.",
-    opts: ["If I studied", "Had I studied", "I had studied", "Did I study"], answer: "Had I studied",
-    why: "去掉 if，把 had 提前。**Had + 主语 + 过去分词**。" },
-  { id: "d12", level: "6", point: "Were it not for（含蓄虚拟+倒装）",
-    stem: "___ for your help, I would be lost.",
-    opts: ["Was it not", "If it was not", "Were it not", "Had it not been"], answer: "Were it not",
-    why: "Were it not for = If it weren't for。**was 不能倒装**，必须用 were。" },
+    why: "虚拟语气从句中 be 动词所有人称都用 were。" },
+  { id: "d2", level: "2", point: "I wish + 过去式",
+    stem: "I wish I ___ a piano at home.",
+    opts: ["have", "had", "would have", "will have"], answer: "had",
+    why: "wish 后接虚拟语气，对现在不满用过去式 had。" },
+  { id: "d3", level: "4", point: "完整过去虚拟",
+    stem: "If I ___ harder, I would have passed the exam.",
+    opts: ["study", "studied", "had studied", "would study"], answer: "had studied",
+    why: "过去虚拟 if 从句必须用 had + 过去分词。" },
 ];
 
 /* ════════════════════════════════════════════════════════════════════
@@ -6515,330 +6473,135 @@ function DetectiveScreen({ onBack }) {
 }
 
 function DiagnosticScreen({ onBack, onComplete }) {
-  const [phase, setPhase] = useState("intro");
-  const [idx, setIdx] = useState(0);
+  const [stage, setStage] = useState("intro");
+  const [qIdx, setQIdx] = useState(0);
   const [picked, setPicked] = useState(null);
   const [answers, setAnswers] = useState([]);
+  const total = DIAGNOSTIC_TEST.length;
+  const q = DIAGNOSTIC_TEST[qIdx];
+  const correctCount = answers.filter(a => a.correct).length;
 
-  const questions = DIAGNOSTIC_TEST;
-  const q = questions[idx];
-
-  const submit = () => {
-    if (!picked) return;
-    const correct = picked === q.answer;
-    const newAnswers = [...answers, { qId: q.id, level: q.level, point: q.point, picked, correct, why: q.why, stem: q.stem, answer: q.answer }];
-    setAnswers(newAnswers);
-    setPicked(null);
-    if (idx + 1 >= questions.length) {
-      // Save diagnostic to localStorage
-      const result = computeDiagnostic(newAnswers);
-      try { localStorage.setItem("pwl_diagnostic", JSON.stringify(result)); } catch {}
-      setPhase("result");
-    } else {
-      setIdx(idx + 1);
-    }
-  };
-
-  const computeDiagnostic = (allAnswers) => {
-    const byLevel = {};
-    for (const a of allAnswers) {
-      if (!byLevel[a.level]) byLevel[a.level] = { correct: 0, total: 0, points: [] };
-      byLevel[a.level].total++;
-      byLevel[a.level].points.push(a);
-      if (a.correct) byLevel[a.level].correct++;
-    }
-    return { byLevel, completedAt: Date.now(), totalCorrect: allAnswers.filter(a => a.correct).length, totalQs: allAnswers.length };
-  };
-
-  // Keyboard 1-4 to pick
-  useEffect(() => {
-    if (phase !== "test") return;
-    const handler = (e) => {
-      const num = parseInt(e.key);
-      if (num >= 1 && num <= q.opts.length) {
-        setPicked(q.opts[num - 1]);
-        e.preventDefault();
-      } else if (e.key === "Enter" && picked) {
-        submit();
-        e.preventDefault();
-      }
+  function getRecommendation(correct) {
+    if (correct === 3) return {
+      stage: 17, level: "L4",
+      title: "你已经掌握基础——直接进阶",
+      desc: "L4 教完整的过去虚拟，是高考压轴的核心，也是你接下来最值得攻克的点。"
     };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [phase, idx, picked, q]);
+    if (correct === 2) return {
+      stage: 12, level: "L2",
+      title: "基础够用——从弱点突破",
+      desc: "L2 教 wish 句型——虚拟语气最高频的考点，先把这部分扎实。"
+    };
+    if (correct === 1) return {
+      stage: 29, level: "L1A",
+      title: "再扎实一下——基础进阶",
+      desc: "L1A 把现在虚拟讲透——所有动词都能虚拟，不只是 be 动词。"
+    };
+    return {
+      stage: 1, level: "L1",
+      title: "从头系统学一遍",
+      desc: "L1 教 If I were you 给建议——虚拟语气最经典的入门，从这里开始最稳。"
+    };
+  }
 
-  // ─── INTRO ───
-  if (phase === "intro") {
+  function handleSubmit() {
+    if (picked === null) return;
+    const correct = picked === q.answer;
+    setAnswers([...answers, { qId: q.id, picked, correct, correctAnswer: q.answer, why: q.why }]);
+    setPicked(null);
+    if (qIdx + 1 < total) {
+      setQIdx(qIdx + 1);
+    } else {
+      setStage("result");
+    }
+  }
+
+  if (stage === "intro") {
     return (
-      <section className="w-full max-w-xl mx-auto">
-        <div className="flex items-center gap-3 mb-6">
-          <button onClick={onBack} className="ink-faint hover:ink text-xs font-mono tracking-widest uppercase">← 返回</button>
-        </div>
-        <div className="text-center mb-8">
-          <div className="text-6xl mb-4">📊</div>
-          <h2 className="font-cn-serif text-3xl ink mb-2">水平诊断</h2>
-          <p className="font-cn ink-dim text-sm">12 题 · 约 8 分钟 · 找出你的真实弱点</p>
-        </div>
-
-        <div className="rounded-2xl border-2 border-mint/40 bg-mint-soft/15 p-6 mb-5">
-          <div className="font-cn font-medium text-mint text-sm mb-4 tracking-wider">为什么先做诊断？</div>
-          <ul className="space-y-3 font-cn ink text-sm leading-relaxed">
-            <li className="flex items-baseline gap-3">
-              <span className="font-mono text-mint">1.</span>
-              <span><span className="font-bold">不浪费时间</span> · 已经掌握的关跳过</span>
-            </li>
-            <li className="flex items-baseline gap-3">
-              <span className="font-mono text-mint">2.</span>
-              <span><span className="font-bold">精准定位弱点</span> · 知道哪里完全不懂、哪里只是不稳</span>
-            </li>
-            <li className="flex items-baseline gap-3">
-              <span className="font-mono text-mint">3.</span>
-              <span><span className="font-bold">个性化路径</span> · 推荐你最该先学的关</span>
-            </li>
-          </ul>
-        </div>
-
-        <div className="rounded-xl bg-amber/10 border border-amber/40 px-5 py-4 mb-6">
-          <p className="font-cn text-sm ink leading-relaxed">
-            <span className="font-bold text-amber">⏱ 注意：</span>
-            诊断**不算学习成绩**，做错完全没关系——它只是用来定位你的水平。
-            **不要查答案、不要猜**——凭直觉作答最准。
+      <div className="min-h-screen bg-paper flex flex-col items-center justify-center p-6">
+        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
+          <h2 className="font-cn-serif text-3xl ink mb-3">30 秒分级测试</h2>
+          <p className="ink-dim mb-6">3 道题 · 帮你找起点</p>
+          <p className="ink text-sm mb-8 leading-relaxed">
+            不知道从哪关开始？做完 3 题给你建议起点。<br/>
+            <span className="ink-dim">不做也完全 OK——可以直接从地图选关。</span>
           </p>
+          <button onClick={() => setStage("quiz")} className="w-full bg-indigo-600 text-white rounded-xl py-3 font-medium hover:bg-indigo-700 mb-3">
+            开始测试
+          </button>
+          <button onClick={() => onComplete(1)} className="w-full text-sm text-blue-600 underline hover:text-blue-700 py-2">
+            🚀 跳过测试 → 直接从 L1 开始学
+          </button>
+          <button onClick={onBack} className="w-full text-sm ink-dim hover:ink py-2 mt-2">
+            ← 回地图
+          </button>
         </div>
-
-        <div className="text-center">
-          <motion.button
-            onClick={() => setPhase("test")}
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.96 }}
-            transition={spring}
-            className="font-cn px-10 py-4 rounded-full bg-mint text-bg-deep hover:bg-mint/90 transition text-base font-medium inline-flex items-center gap-3 shadow-2xl"
-          >
-            📊 开始诊断 · 12 题
-          </motion.button>
-          <p className="font-cn ink-faint text-xs mt-3">⌨ 键盘 1-4 选答案 · Enter 下一题</p>
-        </div>
-      </section>
+      </div>
     );
   }
 
-  // ─── TEST ───
-  if (phase === "test") {
-    const progress = ((idx + 1) / questions.length) * 100;
+  if (stage === "result") {
+    const rec = getRecommendation(correctCount);
     return (
-      <section className="w-full max-w-xl mx-auto">
-        {/* Top bar */}
-        <div className="flex items-center gap-4 mb-3">
-          <span className="font-mono text-mint text-sm">
-            <span className="font-bold">{idx + 1}</span>
-            <span className="ink-faint">/ {questions.length}</span>
-          </span>
-          <div className="flex-1 h-2 rounded-full bg-warm/40 overflow-hidden">
-            <div className="h-full bg-mint transition-all" style={{ width: `${progress}%` }} />
+      <div className="min-h-screen bg-paper flex flex-col items-center justify-center p-6">
+        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8">
+          <div className="text-center mb-6">
+            <div className="text-5xl mb-2">⭐</div>
+            <h2 className="font-cn-serif text-2xl ink mb-2">建议起点：{rec.level}</h2>
+            <p className="ink-dim text-sm">你做对了 {correctCount}/3 题</p>
           </div>
+          <div className="bg-indigo-50 rounded-xl p-4 mb-6">
+            <p className="font-cn-serif text-lg ink mb-2">{rec.title}</p>
+            <p className="text-sm ink leading-relaxed">{rec.desc}</p>
+          </div>
+          <button onClick={() => onComplete(rec.stage)} className="w-full bg-indigo-600 text-white rounded-xl py-3 font-medium hover:bg-indigo-700 mb-3">
+            ▶ 立刻去 {rec.level}
+          </button>
+          <button onClick={() => onComplete(0)} className="w-full ink rounded-xl py-3 border border-gray-300 hover:bg-gray-50">
+            📍 回地图自由选关
+          </button>
         </div>
-        <div className="text-center mb-5">
-          <span className="font-mono text-[10px] ink-faint tracking-widest uppercase">DIAGNOSTIC · 不计分 · 凭直觉作答</span>
-        </div>
+      </div>
+    );
+  }
 
-        {/* Question */}
-        <div className="rounded-2xl bg-warm/30 border-2 border-line-mid p-6 mb-5 min-h-[120px] flex items-center">
-          <p className="font-display text-xl sm:text-2xl ink leading-snug w-full text-center">
-            {q.stem.split("___").map((part, i, arr) => (
-              <React.Fragment key={i}>
-                {part}
-                {i < arr.length - 1 && (
-                  <span className="inline-block min-w-[60px] mx-1 border-b-2 border-amber/70 align-baseline">&nbsp;</span>
-                )}
-              </React.Fragment>
-            ))}
-          </p>
+  return (
+    <div className="min-h-screen bg-paper flex flex-col items-center justify-center p-6">
+      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8">
+        <div className="flex justify-between items-center mb-4 text-xs ink-dim">
+          <span>题 {qIdx + 1}/{total}</span>
+          <button onClick={() => onComplete(1)} className="text-blue-600 underline hover:text-blue-700">
+            🚀 跳过 → 从 L1 开始
+          </button>
         </div>
-
-        {/* Options */}
-        <div className="grid grid-cols-2 gap-3 mb-5">
+        <div className="w-full bg-gray-200 rounded-full h-1 mb-6">
+          <div className="bg-indigo-600 h-1 rounded-full" style={{ width: `${((qIdx) / total) * 100}%` }}></div>
+        </div>
+        <p className="font-cn-serif text-lg ink mb-6 leading-relaxed">{q.stem}</p>
+        <div className="space-y-2 mb-6">
           {q.opts.map((opt, i) => (
             <button
               key={i}
               onClick={() => setPicked(opt)}
-              className={`relative rounded-xl border-2 px-4 py-4 text-left transition text-base font-mono ${
-                picked === opt ? "border-mint bg-mint-soft/30 text-mint font-bold" : "border-line-mid hover:border-mint/60 hover:bg-mint-soft/10 ink"
+              className={`w-full text-left rounded-xl py-3 px-4 border-2 transition ${
+                picked === opt
+                  ? "border-indigo-600 bg-indigo-50 ink"
+                  : "border-gray-200 ink hover:border-gray-400"
               }`}
             >
-              <span className="font-cn text-[10px] tracking-wider opacity-60 absolute top-2 left-3">{i + 1}</span>
-              <span className="block pl-4">{opt}</span>
+              {String.fromCharCode(65 + i)}. {opt}
             </button>
           ))}
         </div>
-
-        {/* Submit */}
-        <div className="text-center">
-          <motion.button
-            onClick={submit}
-            disabled={!picked}
-            whileHover={{ scale: picked ? 1.04 : 1 }}
-            whileTap={{ scale: 0.96 }}
-            className="font-cn px-8 py-3 rounded-full bg-mint text-bg-deep hover:bg-mint/90 disabled:opacity-40 disabled:cursor-not-allowed transition text-base font-medium inline-flex items-center gap-2"
-          >
-            {idx + 1 >= questions.length ? "完成诊断" : "下一题"} <span className="font-mono text-xs opacity-60">⏎</span>
-          </motion.button>
-        </div>
-      </section>
-    );
-  }
-
-  // ─── RESULT ───
-  const result = computeDiagnostic(answers);
-  const overallPct = Math.round((result.totalCorrect / result.totalQs) * 100);
-
-  // Per-level analysis
-  const levelMeta = {
-    "1": { code: "L1", name: "If I were you 给建议",         routeStage: 1 },
-    "2": { code: "L2", name: "I wish 现在不满",              routeStage: 12 },
-    "3": { code: "L3", name: "I wish 过去后悔",              routeStage: 16 },
-    "4": { code: "L4", name: "If I had... 虚拟过去条件句",   routeStage: 17 },
-    "5": { code: "L5", name: "混合虚拟 · 时间错位",          routeStage: 19 },
-    "6": { code: "L6", name: "倒装变换",                     routeStage: 21 },
-  };
-  const levelStatus = (lvl) => {
-    const data = result.byLevel[lvl];
-    if (!data) return { tier: "unknown", icon: "?", label: "未测", color: "ink-dim" };
-    const pct = data.correct / data.total;
-    if (pct === 1)    return { tier: "mastered", icon: "✓", label: "完全掌握", color: "text-mint",  action: "可跳过" };
-    if (pct >= 0.5)   return { tier: "shaky",    icon: "⚠", label: "不稳",     color: "text-amber", action: "巩固加强" };
-    return                 { tier: "unknown",  icon: "✗", label: "完全不懂", color: "text-rose",  action: "必须从零学" };
-  };
-
-  // Build recommendation
-  const sortedLevels = Object.keys(levelMeta).sort((a, b) => {
-    const sa = levelStatus(a), sb = levelStatus(b);
-    const order = { unknown: 0, shaky: 1, mastered: 2 };
-    return order[sa.tier] - order[sb.tier];
-  });
-  const firstUnknown = sortedLevels.find(l => levelStatus(l).tier === "unknown");
-  const firstShaky   = sortedLevels.find(l => levelStatus(l).tier === "shaky");
-  const recommendStart = firstUnknown || firstShaky || "1";
-  const recommendStage = levelMeta[recommendStart].routeStage;
-
-  return (
-    <section className="w-full max-w-2xl mx-auto pb-12">
-      <div className="text-center mb-6">
-        <div className="text-5xl mb-3">📊</div>
-        <h2 className="font-cn-serif text-3xl ink mb-1">你的诊断报告</h2>
-        <p className="font-cn ink-dim text-sm">基于 12 道题的水平定位</p>
-      </div>
-
-      {/* Overall */}
-      <div className="rounded-3xl border-2 border-mint/40 bg-mint-soft/15 p-6 mb-5">
-        <div className="text-center">
-          <div className="font-cn ink-dim text-xs mb-2 tracking-wider">整体得分</div>
-          <div className="flex items-baseline justify-center gap-2 mb-3">
-            <span className="font-display text-6xl text-mint font-bold leading-none">{result.totalCorrect}</span>
-            <span className="font-cn ink-dim text-lg">/ {result.totalQs}</span>
-            <span className="font-mono text-mint text-2xl ml-2">{overallPct}%</span>
-          </div>
-          <div className="h-3 rounded-full bg-warm/40 overflow-hidden mb-3">
-            <div className="h-full bg-mint transition-all" style={{ width: `${overallPct}%` }} />
-          </div>
-          <p className="font-cn ink-dim text-sm">
-            {overallPct >= 90 ? "✓ 基础非常扎实，重点冲刺难点即可。" :
-             overallPct >= 60 ? "👍 基础不错，有几个关需要重点学。" :
-             overallPct >= 30 ? "💪 基础一般，按推荐路径系统学习就行。" :
-             "🌱 现在是零基础——按路径学，3-4 周可以全掌握。"}
-          </p>
-        </div>
-      </div>
-
-      {/* Per-level breakdown */}
-      <div className="rounded-2xl border border-line-mid bg-warm/15 p-5 mb-5">
-        <div className="font-cn font-medium ink text-sm mb-4 tracking-wider">📊 各 Level 掌握情况</div>
-        <div className="space-y-3">
-          {Object.keys(levelMeta).map(lvl => {
-            const data = result.byLevel[lvl];
-            const status = levelStatus(lvl);
-            return (
-              <div key={lvl} className="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-deep/30">
-                <span className={`font-mono text-lg shrink-0 w-6 text-center ${status.color}`}>{status.icon}</span>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-mono text-xs ink-faint shrink-0">{levelMeta[lvl].code}</span>
-                    <span className="font-cn text-sm ink truncate">{levelMeta[lvl].name}</span>
-                  </div>
-                  <div className="flex items-center gap-2 mt-1">
-                    <div className="flex-1 h-1.5 rounded-full bg-deep/50 overflow-hidden max-w-[100px]">
-                      <div className={`h-full ${status.tier === "mastered" ? "bg-mint" : status.tier === "shaky" ? "bg-amber" : "bg-rose"}`} style={{ width: `${(data.correct / data.total) * 100}%` }} />
-                    </div>
-                    <span className="font-mono text-xs ink-dim">{data.correct}/{data.total}</span>
-                  </div>
-                </div>
-                <div className="text-right shrink-0">
-                  <div className={`font-cn text-xs font-medium ${status.color}`}>{status.label}</div>
-                  <div className="font-cn text-[10px] ink-faint mt-0.5">{status.action}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Recommendation */}
-      <div className="rounded-2xl border-2 border-amber/50 bg-amber/5 p-5 mb-5">
-        <div className="font-cn font-bold text-amber text-sm mb-3 tracking-wider">📋 你的个性化学习路径</div>
-        <div className="space-y-2 mb-5">
-          {sortedLevels.map((lvl, i) => {
-            const status = levelStatus(lvl);
-            const tag = status.tier === "unknown" ? "⚡ 优先" : status.tier === "shaky" ? "↻ 巩固" : "✓ 已会";
-            return (
-              <div key={lvl} className={`flex items-baseline gap-3 px-4 py-2 rounded-lg ${i === 0 ? "bg-mint-soft/30 border border-mint/40" : "bg-deep/30"}`}>
-                <span className="font-mono text-xs ink-faint shrink-0">{i + 1}.</span>
-                <span className={`font-cn text-xs shrink-0 ${status.color}`}>{tag}</span>
-                <span className="font-cn text-sm ink flex-1 truncate">{levelMeta[lvl].code} · {levelMeta[lvl].name}</span>
-              </div>
-            );
-          })}
-        </div>
-
-        <motion.button
-          onClick={() => onComplete(recommendStage)}
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.96 }}
-          className="w-full font-cn px-7 py-4 rounded-full bg-amber text-bg-deep hover:bg-amber/90 transition text-base font-medium inline-flex items-center justify-center gap-2"
+        <button
+          onClick={handleSubmit}
+          disabled={picked === null}
+          className="w-full bg-indigo-600 text-white rounded-xl py-3 font-medium disabled:bg-gray-300 hover:bg-indigo-700"
         >
-          按推荐路径开始 · 从 {levelMeta[recommendStart].code} 起步 →
-        </motion.button>
+          {qIdx + 1 < total ? "下一题" : "看建议"}
+        </button>
       </div>
-
-      {/* Wrong answer review */}
-      {answers.filter(a => !a.correct).length > 0 && (
-        <details className="rounded-xl border border-rose/30 bg-rose/5 px-4 py-3 mb-5">
-          <summary className="font-cn text-rose text-sm cursor-pointer">
-            ⚠ 看哪些题做错了 · {answers.filter(a => !a.correct).length} 题（可选展开）
-          </summary>
-          <div className="mt-4 space-y-3">
-            {answers.filter(a => !a.correct).map((a, i) => (
-              <div key={i} className="border-b border-line last:border-0 pb-3 last:pb-0">
-                <div className="font-mono text-xs ink leading-snug mb-2">
-                  {a.stem.split("___").map((part, j, arr) => (
-                    <React.Fragment key={j}>
-                      {part}
-                      {j < arr.length - 1 && <span className="text-mint font-bold mx-1">{a.answer}</span>}
-                    </React.Fragment>
-                  ))}
-                </div>
-                <div className="font-cn text-[11px] ink-dim">
-                  你选了 <span className="text-rose font-mono">{a.picked}</span> · 正确 <span className="text-mint font-mono">{a.answer}</span>
-                </div>
-                <div className="font-cn text-xs ink-dim mt-1.5 leading-relaxed">{a.why}</div>
-              </div>
-            ))}
-          </div>
-        </details>
-      )}
-
-      <div className="text-center">
-        <button onClick={onBack} className="font-cn ink-faint hover:ink text-sm">← 返回主页</button>
-      </div>
-    </section>
+    </div>
   );
 }
 

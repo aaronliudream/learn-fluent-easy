@@ -225,7 +225,15 @@ function BrowseGrid({ words }: { words: Vocab[] }) {
                 )}
               </div>
               {w.ipa && (
-                <div className="mt-0.5 font-mono text-xs text-muted-foreground">{w.ipa}</div>
+                <button
+                  type="button"
+                  onClick={() => speak(w.word)}
+                  className="mt-0.5 inline-flex items-center gap-1 rounded-md px-1 py-0.5 font-mono text-xs text-muted-foreground transition hover:bg-primary/10 hover:text-primary"
+                  aria-label={`朗读 ${w.word}`}
+                >
+                  <Volume2 className="size-3" />
+                  {w.ipa}
+                </button>
               )}
             </div>
             <button

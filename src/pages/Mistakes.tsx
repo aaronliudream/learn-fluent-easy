@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Loader2, Sparkles, Volume2, Play, Star, Check, Trash2, Search,
-  BookOpen, Mic, AlertCircle, Filter, Trophy, MessageCircleQuestion,
+  BookOpen, Mic, AlertCircle, Filter, Trophy, MessageCircleQuestion, Wand2, X,
 } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { T } from "@/i18n/T";
@@ -29,7 +29,7 @@ type Mistake = {
   next_review_at: string;
 };
 
-type ModuleKey = "all" | "due" | "starred" | "ai_talk_target" | "ai_talk";
+type ModuleKey = "all" | "due" | "starred" | "topics" | "ai_talk_target" | "ai_talk";
 
 const MODULE_META: Record<string, { label: string; emoji: string; color: string }> = {
   ai_talk_target: { label: "Alex 教你的", emoji: "✨", color: "from-amber-400 to-orange-500" },
@@ -50,6 +50,7 @@ const MistakesPage = () => {
   const [search, setSearch] = useState("");
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [tutorFor, setTutorFor] = useState<Mistake | null>(null);
+  const [aiFor, setAiFor] = useState<Mistake | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -179,6 +180,7 @@ const MistakesPage = () => {
           <div className="mb-4 flex flex-wrap items-center gap-2">
             {[
               { k: "due" as const, label: "今日复习", n: counts.due },
+              { k: "topics" as const, label: "📂 专题分组", n: counts.all },
               { k: "all" as const, label: "全部", n: counts.all },
               { k: "starred" as const, label: "⭐ 收藏", n: counts.starred },
               { k: "ai_talk_target" as const, label: "✨ Alex 教的", n: counts.ai_talk_target },
@@ -212,7 +214,9 @@ const MistakesPage = () => {
             />
           </div>
 
-          {filtered.length === 0 ? (
+          {tab === "topics" ? (
+            <TopicGroups items={items} onPick={(m) => setTab(m as ModuleKey)} />
+          ) : filtered.length === 0 ? (
             <EmptyState tab={tab} />
           ) : (
             <ul className="space-y-3">
@@ -226,6 +230,7 @@ const MistakesPage = () => {
                   onResolve={() => markResolved(m)}
                   onRemove={() => removeOne(m)}
                   onAskTutor={() => setTutorFor(m)}
+                  onAskAI={() => setAiFor(m)}
                 />
               ))}
             </ul>
@@ -250,6 +255,7 @@ const MistakesPage = () => {
           onClose={() => setTutorFor(null)}
         />
       )}
+      {aiFor && <SimilarQuestionsModal mistake={aiFor} onClose={() => setAiFor(null)} />}
     </main>
   );
 };

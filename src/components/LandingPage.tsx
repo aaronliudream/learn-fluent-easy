@@ -176,9 +176,21 @@ export default function LandingPage() {
             <br />
             英语要会用
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-sm text-[#5A5A5A] md:text-base">
-            对照最新中考高考要求 · 同步最新大纲要求 — 让应试和能力同时长进。
+          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-[#3A3A3A] md:text-lg">
+            AI持续分析孩子薄弱点，<br />
+            动态生成专属练习，<br />
+            不再盲目刷题。
           </p>
+          <div className="mx-auto mt-4 inline-flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-[#5A5A5A] md:text-sm">
+            <span className="inline-flex items-center gap-1.5">
+              <span className="inline-flex size-5 items-center justify-center rounded-full bg-[#10B981]/15 text-[#10B981]">✓</span>
+              符合教育部英语新课标
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="inline-flex size-5 items-center justify-center rounded-full bg-[#10B981]/15 text-[#10B981]">✓</span>
+              适合中国小学初高中学生
+            </span>
+          </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/auth"

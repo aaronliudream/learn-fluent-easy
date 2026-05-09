@@ -32,8 +32,9 @@ interface Body {
   user_message: string;
   language?: "zh" | "en";
   hint_level?: 0 | 1 | 2 | 3;        // when student asks "give me a hint"
-  /** "question" (default) = strict per-question tutor; "free" = general English helper for the page */
-  mode?: "question" | "free";
+  /** "question" (default) = strict per-question tutor; "free" = general English helper for the page;
+   *  "concierge" = homepage product guide for parents/students (introduces site, learning philosophy, AI features) */
+  mode?: "question" | "free" | "concierge";
   /** Free-mode topic descriptor — what page/section the user is on. The AI may discuss this topic only. */
   topic?: string;
   /** Random per-browser ID used to track guest usage when the user is not signed in. */

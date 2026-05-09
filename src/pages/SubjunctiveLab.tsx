@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
@@ -10,17 +10,23 @@ import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
  */
 export default function SubjunctiveLab() {
   const ref = useRef<HTMLIFrameElement>(null);
+  // Active sub-level reported by the iframe via postMessage. Null when on the menu.
+  const [activeLevel, setActiveLevel] = useState<{ id: string; title: string } | null>(null);
 
   // Register this page with the global AI assistant.
   // Free mode: user can ask anything about subjunctive concepts at any time;
   // strict prompt prevents the AI from revealing specific question answers.
   useRegisterAssistant({
     context: "subjunctive",
-    ref: "lab",
-    topic: "虚拟语气 (Subjunctive Mood)",
+    ref: activeLevel ? `lab:${activeLevel.id}` : "lab",
+    topic: activeLevel
+      ? `虚拟语气 · ${activeLevel.title}`
+      : "虚拟语气 (Subjunctive Mood)",
     mode: "free",
     unlocked: true,
-    pageTitle: "💬 小月 · 虚拟语气答疑",
+    pageTitle: activeLevel
+      ? `💬 小月 · ${activeLevel.title} 答疑`
+      : "💬 小月 · 虚拟语气答疑",
   });
 
   useEffect(() => {
@@ -50,6 +56,13 @@ export default function SubjunctiveLab() {
           itemId: `subjunctive_lv${levelId}`,
           isCorrect: passed,
         }).catch(() => {});
+      } else if (type === "state") {
+        const lid = payload?.levelId;
+        if (lid) {
+          setActiveLevel({ id: String(lid), title: String(payload?.levelTitle || `Level ${lid}`) });
+        } else {
+          setActiveLevel(null);
+        }
       }
     };
     window.addEventListener("message", onMsg);

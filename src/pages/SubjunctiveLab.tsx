@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { recordGrammarAttempt } from "@/lib/grammarMastery";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 /**
@@ -46,6 +47,11 @@ export default function SubjunctiveLab() {
           itemId: qId,
           isCorrect,
         }).catch(() => {});
+        // Also feed the new grammar-points mastery panel
+        const lid = payload?.mistake?.levelId ?? payload?.levelId;
+        if (lid != null) {
+          recordGrammarAttempt(`subj-lv${String(lid)}`, isCorrect);
+        }
       } else if (type === "level_complete") {
         const levelId = String(payload?.levelId ?? "");
         const score = Number(payload?.score ?? 0);
@@ -56,6 +62,12 @@ export default function SubjunctiveLab() {
           itemId: `subjunctive_lv${levelId}`,
           isCorrect: passed,
         }).catch(() => {});
+        // Strong push to the new mastery model: target = score/total*100
+        if (levelId) {
+          // Send N attempts: score correct + (total-score) wrong, smoothing toward true rate
+          for (let i = 0; i < score; i++) recordGrammarAttempt(`subj-lv${levelId}`, true);
+          for (let i = 0; i < total - score; i++) recordGrammarAttempt(`subj-lv${levelId}`, false);
+        }
       } else if (type === "state") {
         const lid = payload?.levelId;
         if (lid) {

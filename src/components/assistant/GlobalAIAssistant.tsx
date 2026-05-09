@@ -426,10 +426,9 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
     const trimmed = text.trim();
     if (!trimmed || sending || !state.unlocked) return;
 
-    const preface = prefaceFor(trimmed, effectiveMode);
-    setMessages((prev) => [...prev, { role: "user", content: trimmed }, { role: "assistant", content: preface }]);
     setInput("");
-    setSending(true);
+
+    // 首页预设问题：完全本地分
 
     try {
       const { data: sess } = await supabase.auth.getSession();

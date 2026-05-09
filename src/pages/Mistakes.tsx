@@ -451,3 +451,228 @@ function MistakeCard({
 }
 
 export default MistakesPage;
+
+function TopicGroups({ items, onPick }: { items: Mistake[]; onPick: (moduleKey: string) => void }) {
+  const groups = useMemo(() => {
+    const map = new Map<string, { module: string; label: string; items: Mistake[] }>();
+    for (const m of items) {
+      const label = m.source_label || moduleMeta(m.module).label;
+      const key = `${m.module}::${label}`;
+      if (!map.has(key)) map.set(key, { module: m.module, label, items: [] });
+      map.get(key)!.items.push(m);
+    }
+    return Array.from(map.entries())
+      .map(([key, g]) => {
+        const total = g.items.length;
+        const avgWrong = g.items.reduce((s, x) => s + (x.wrong_count || 1), 0) / Math.max(1, total);
+        // Mastery heuristic: lower avg wrong_count => higher mastery
+        const mastery = Math.max(0, Math.min(100, Math.round(100 - (avgWrong - 1) * 25)));
+        return { key, ...g, total, mastery };
+      })
+      .sort((a, b) => b.total - a.total);
+  }, [items]);
+
+  if (groups.length === 0) return <EmptyState tab={"topics" as ModuleKey} />;
+
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      {groups.map((g) => {
+        const meta = moduleMeta(g.module);
+        const tone =
+          g.mastery >= 80 ? "text-emerald-600 dark:text-emerald-400" :
+          g.mastery >= 50 ? "text-amber-600 dark:text-amber-400" :
+          "text-rose-600 dark:text-rose-400";
+        return (
+          <button
+            key={g.key}
+            onClick={() => onPick(g.module)}
+            className="group rounded-2xl border border-border bg-card p-4 text-left transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+          >
+            <div className={`mb-2 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${meta.color} px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white/95`}>
+              <span>{meta.emoji}</span><span>{meta.label}</span>
+            </div>
+            <div className="text-base font-extrabold leading-snug">{g.label}</div>
+            <div className="mt-3 h-2 overflow-hidden rounded-full bg-muted">
+              <div className="h-full bg-gradient-to-r from-primary to-emerald-500 transition-all" style={{ width: `${g.mastery}%` }} />
+            </div>
+            <div className="mt-2 flex items-center justify-between text-[11px]">
+              <span className="text-muted-foreground">{g.total} 道错题</span>
+              <span className={`font-bold ${tone}`}>掌握度 {g.mastery}%</span>
+            </div>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+type SimQ = { question: string; options?: string[]; correct_answer: string; explanation?: string };
+
+function SimilarQuestionsModal({ mistake, onClose }: { mistake: Mistake; onClose: () => void }) {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [qs, setQs] = useState<SimQ[]>([]);
+  const [idx, setIdx] = useState(0);
+  const [picked, setPicked] = useState<string | null>(null);
+  const [right, setRight] = useState(0);
+  const [wrong, setWrong] = useState(0);
+  const [logged, setLogged] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const { data, error } = await supabase.functions.invoke("generate-similar-questions", {
+          body: {
+            module: mistake.module,
+            source_label: mistake.source_label,
+            question: mistake.question,
+            correct_answer: mistake.correct_answer,
+            explanation: mistake.explanation,
+            snapshot: mistake.snapshot,
+          },
+        });
+        if (cancelled) return;
+        if (error) throw error;
+        const arr: SimQ[] = (data as any)?.questions || [];
+        if (arr.length === 0) throw new Error("AI 没有返回相似题，稍后再试");
+        setQs(arr);
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message || "生成失败");
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [mistake]);
+
+  const cur = qs[idx];
+  const done = !loading && qs.length > 0 && idx >= qs.length;
+
+  const grade = (choice: string) => {
+    if (!cur || picked) return;
+    setPicked(choice);
+    const ok = (cur.correct_answer || "").trim().toLowerCase().startsWith(choice.trim().toLowerCase().slice(0, 1));
+    if (ok) setRight((n) => n + 1); else setWrong((n) => n + 1);
+  };
+
+  const next = () => { setPicked(null); setIdx((i) => i + 1); };
+
+  // After done, log a summary mistake row tagged to original (if user got any wrong)
+  useEffect(() => {
+    if (!done || logged) return;
+    setLogged(true);
+    if (wrong === 0) return;
+    (async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) return;
+      await supabase.from("user_mistakes").insert({
+        user_id: user.id,
+        module: mistake.module,
+        source_key: `ai_similar:${mistake.id}:${Date.now()}`,
+        source_label: `AI 相似题 · ${mistake.source_label || moduleMeta(mistake.module).label}`,
+        question: `（来自 AI 出题）相似题 ${qs.length} 道，答错 ${wrong} 道`,
+        correct_answer: null,
+        explanation: `源自错题：${mistake.question.slice(0, 80)}`,
+        snapshot: { source_mistake_id: mistake.id, original_question: mistake.question, similar_total: qs.length, wrong, right },
+      } as any);
+    })();
+  }, [done, logged, wrong, right, qs.length, mistake]);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-2 sm:items-center sm:p-6" onClick={onClose}>
+      <div className="relative w-full max-w-xl rounded-3xl bg-card p-5 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+        <button onClick={onClose} className="absolute right-3 top-3 grid size-8 place-items-center rounded-full bg-secondary text-muted-foreground hover:text-foreground">
+          <X className="size-4" />
+        </button>
+        <div className="mb-3 flex items-center gap-2">
+          <Wand2 className="size-4 text-violet-600" />
+          <div className="text-sm font-bold">AI 出 5 道同考点相似题</div>
+        </div>
+
+        {loading && (
+          <div className="flex items-center justify-center gap-2 py-12 text-sm text-muted-foreground">
+            <Loader2 className="size-4 animate-spin" /> AI 正在出题…
+          </div>
+        )}
+        {!loading && error && (
+          <div className="rounded-xl bg-rose-50 p-4 text-sm text-rose-700 dark:bg-rose-500/10 dark:text-rose-300">{error}</div>
+        )}
+
+        {!loading && !error && cur && (
+          <>
+            <div className="mb-2 text-xs font-semibold text-muted-foreground">第 {idx + 1} / {qs.length} 题 · ✓ {right} ✕ {wrong}</div>
+            <div className="rounded-2xl border border-border bg-background p-4">
+              <div className="text-base font-extrabold leading-snug">{cur.question}</div>
+              {cur.options && cur.options.length > 0 && (
+                <div className="mt-3 grid gap-2">
+                  {cur.options.map((opt, i) => {
+                    const isCorrect = (cur.correct_answer || "").trim().toLowerCase().startsWith(opt.trim().toLowerCase().slice(0, 1));
+                    const chosen = picked === opt;
+                    let cls = "border-border bg-card hover:border-primary/40";
+                    if (picked) {
+                      if (isCorrect) cls = "border-emerald-500 bg-emerald-50 dark:bg-emerald-500/10";
+                      else if (chosen) cls = "border-rose-500 bg-rose-50 dark:bg-rose-500/10";
+                      else cls = "border-border bg-card opacity-60";
+                    }
+                    return (
+                      <button
+                        key={i}
+                        disabled={!!picked}
+                        onClick={() => grade(opt)}
+                        className={`rounded-xl border-2 px-3 py-2 text-left text-sm font-medium transition ${cls}`}
+                      >
+                        {opt}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+              {(!cur.options || cur.options.length === 0) && (
+                <div className="mt-3 grid gap-2">
+                  {!picked ? (
+                    <button onClick={() => setPicked("__reveal__")} className="rounded-xl border border-dashed border-primary/40 bg-primary/5 py-2 text-sm font-semibold text-primary">
+                      点击查看答案
+                    </button>
+                  ) : (
+                    <div className="rounded-xl border-l-4 border-emerald-500 bg-emerald-50 p-3 text-sm text-emerald-900 dark:bg-emerald-500/10 dark:text-emerald-300">
+                      <div className="text-[10px] font-bold uppercase opacity-70">✓ 参考答案</div>
+                      <div className="mt-1 font-semibold">{cur.correct_answer}</div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {picked && (
+                <>
+                  {cur.explanation && (
+                    <div className="mt-3 rounded-xl bg-secondary/60 p-3 text-xs leading-relaxed text-foreground/80">💡 {cur.explanation}</div>
+                  )}
+                  {(!cur.options || cur.options.length === 0) && picked === "__reveal__" && (
+                    <div className="mt-3 grid grid-cols-2 gap-2">
+                      <button onClick={() => { setWrong((n) => n + 1); next(); }} className="rounded-full bg-rose-500 px-4 py-2 text-sm font-bold text-white">还不会</button>
+                      <button onClick={() => { setRight((n) => n + 1); next(); }} className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-bold text-white">我会了</button>
+                    </div>
+                  )}
+                  {cur.options && cur.options.length > 0 && (
+                    <button onClick={next} className="mt-3 w-full rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
+                      {idx + 1 < qs.length ? "下一题 →" : "查看结果"}
+                    </button>
+                  )}
+                </>
+              )}
+            </div>
+          </>
+        )}
+
+        {done && (
+          <div className="mt-4 rounded-2xl bg-secondary/40 p-4 text-center">
+            <div className="text-lg font-extrabold">完成 ✨</div>
+            <div className="mt-1 text-sm text-muted-foreground">答对 {right} · 答错 {wrong}{wrong > 0 ? "（已加入错题本）" : ""}</div>
+            <button onClick={onClose} className="mt-3 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">关闭</button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

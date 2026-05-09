@@ -9,6 +9,7 @@ import { fireEmojiConfetti } from "@/lib/feedback";
 import { awardForCorrect } from "@/lib/coins";
 import ReactMarkdown from "react-markdown";
 import { Lock, Lightbulb, Loader2 } from "lucide-react";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 /* ──────────────────────────────────────────────────────────────
    Junior Grammar Lab — generic 6-phase template inspired by
@@ -906,6 +907,21 @@ export default function JuniorGrammarLab() {
   const [bossPassed, setBossPassed] = useState(false);
   const [gradeLabel, setGradeLabel] = useState<string>("初中");
   const initRef = useRef(false);
+
+  // Free-mode AI helper for this grammar point.
+  // The system prompt forbids leaking specific test answers; users can ask conceptual questions anytime.
+  useRegisterAssistant(
+    pt
+      ? {
+          context: "junior_grammar_lab",
+          ref: pt.id,
+          topic: `初中语法 · ${pt.title}`,
+          mode: "free",
+          unlocked: true,
+          pageTitle: "💬 小月 · 语法答疑",
+        }
+      : null,
+  );
 
   useEffect(() => {
     if (!id) return;

@@ -212,14 +212,14 @@ export default function LandingPage() {
             <Link
               key={s.to}
               to={s.to}
-              className="group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-3xl p-6 text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)] animate-card-float"
+              className="group relative flex min-h-[240px] flex-col items-center justify-between overflow-hidden rounded-3xl p-6 text-center text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)] animate-card-float"
               style={{
                 background: s.gradient,
                 animationDelay: `${i * 1.2}s`,
               }}
             >
               <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/15 blur-2xl" />
-              <div>
+              <div className="flex flex-col items-center">
                 <div className="text-[10px] font-bold uppercase tracking-[0.22em] opacity-85">
                   {s.eyebrow}
                 </div>
@@ -229,7 +229,7 @@ export default function LandingPage() {
                 <div className="mt-1 text-sm font-semibold opacity-90">{s.range}</div>
                 <p className="mt-4 text-sm leading-relaxed opacity-95">{s.desc}</p>
               </div>
-              <div className="mt-6 inline-flex items-center gap-1.5 self-start rounded-full bg-white/20 px-4 py-1.5 text-xs font-bold backdrop-blur transition group-hover:bg-white/30">
+              <div className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-1.5 text-xs font-bold backdrop-blur transition group-hover:bg-white/30">
                 进入 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
               </div>
             </Link>
@@ -241,7 +241,7 @@ export default function LandingPage() {
       <section className="mx-auto max-w-[1180px] px-6 pb-10 md:pb-14">
         <Link
           to="/slang"
-          className="group relative flex flex-col items-start justify-between gap-5 overflow-hidden rounded-3xl p-7 text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)] md:flex-row md:items-center md:p-9"
+          className="group relative flex flex-col items-center justify-center gap-5 overflow-hidden rounded-3xl p-8 text-center text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)] md:p-12"
           style={{
             background:
               "linear-gradient(120deg,#1A1A2E 0%,#3B1E5E 45%,#ED3F8C 100%)",
@@ -249,7 +249,7 @@ export default function LandingPage() {
         >
           <span className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-white/10 blur-3xl" />
           <span className="pointer-events-none absolute -left-10 bottom-[-40px] size-40 rounded-full bg-[#F5A26B]/30 blur-3xl" />
-          <div className="relative">
+          <div className="relative flex flex-col items-center">
             <div className="text-[10px] font-bold uppercase tracking-[0.22em] opacity-85">
               BIG MOON SLANG · BONUS
             </div>

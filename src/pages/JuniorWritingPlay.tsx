@@ -9,12 +9,29 @@ import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
-type P = { id: string; topic: string; prompt_cn: string; prompt_en: string; requirements: string[]; min_words: number; max_words: number; sample_answer: string | null; scoring_rubric: string | null };
+type ErrorPair = { wrong: string; correct: string; note?: string };
+type P = {
+  id: string;
+  topic: string;
+  prompt_cn: string;
+  prompt_en: string;
+  requirements: string[];
+  min_words: number;
+  max_words: number;
+  sample_answer: string | null;
+  scoring_rubric: string | null;
+  title_en: string | null;
+  high_sentences: string[] | null;
+  error_pairs: ErrorPair[] | null;
+  paragraph_template: string | null;
+};
+type Drill = { id: string; difficulty_label: string | null; prompt: string; hint: string | null; sort_order: number | null };
 type Result = { score: number; overall: string; mistakes: { original: string; corrected: string; explanation: string }[]; suggestions: string[]; improved: string };
 
 export default function JuniorWritingPlay() {
   const { id } = useParams<{ id: string }>();
   const [p, setP] = useState<P | null>(null);
+  const [drills, setDrills] = useState<Drill[]>([]);
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
@@ -37,8 +54,12 @@ export default function JuniorWritingPlay() {
   useEffect(() => {
     if (!id) return;
     (supabase as any).from("junior_writing_prompts")
-      .select("id,topic,prompt_cn,prompt_en,requirements,min_words,max_words,sample_answer,scoring_rubric")
+      .select("id,topic,prompt_cn,prompt_en,requirements,min_words,max_words,sample_answer,scoring_rubric,title_en,high_sentences,error_pairs,paragraph_template")
       .eq("id", id).maybeSingle().then(({ data }: any) => setP(data as any));
+    (supabase as any).from("junior_writing_drills")
+      .select("id,difficulty_label,prompt,hint,sort_order")
+      .eq("prompt_id", id).order("sort_order", { ascending: true })
+      .then(({ data }: any) => setDrills((data as Drill[]) || []));
   }, [id]);
 
   const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
@@ -96,7 +117,81 @@ export default function JuniorWritingPlay() {
         )}
       </div>
 
+      {p.sample_answer && (
+        <section className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-950/20">
+          <div className="text-sm font-extrabold">✨ 高分范文</div>
+          {p.title_en && <div className="mt-1 text-xs italic text-amber-700 dark:text-amber-400">{p.title_en}</div>}
+          <div className="mt-2 whitespace-pre-line font-serif text-sm leading-relaxed text-amber-950 dark:text-amber-100">{p.sample_answer}</div>
+        </section>
+      )}
+
+      {Array.isArray(p.high_sentences) && p.high_sentences.length > 0 && (
+        <section className="mt-4 rounded-2xl border bg-card p-4">
+          <div className="text-sm font-extrabold">🌟 高分句型库（共 {p.high_sentences.length} 句）</div>
+          <ol className="mt-2 space-y-2 text-sm">
+            {p.high_sentences.map((s, i) => (
+              <li key={i} className="rounded-lg bg-muted/40 p-2 leading-relaxed">
+                <span className="mr-1 font-bold text-fuchsia-600">{i + 1}.</span>{s}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {Array.isArray(p.error_pairs) && p.error_pairs.length > 0 && (
+        <section className="mt-4 rounded-2xl border bg-card p-4">
+          <div className="text-sm font-extrabold">❌ 常见错误对比（共 {p.error_pairs.length} 组）</div>
+          <ul className="mt-2 space-y-3 text-xs">
+            {p.error_pairs.map((ep, i) => (
+              <li key={i} className="overflow-hidden rounded-lg border">
+                <div className="bg-rose-50 px-3 py-2 text-rose-700 dark:bg-rose-950/30 dark:text-rose-300"><span className="font-bold">❌ 错误：</span>{ep.wrong}</div>
+                <div className="bg-emerald-50 px-3 py-2 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300"><span className="font-bold">✅ 正确：</span>{ep.correct}</div>
+                {ep.note && <div className="bg-muted/50 px-3 py-2 text-muted-foreground"><span className="font-bold">💡 说明：</span>{ep.note}</div>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {p.paragraph_template && (
+        <section className="mt-4 rounded-2xl border border-sky-200 bg-sky-50 p-4 dark:border-sky-900/40 dark:bg-sky-950/20">
+          <div className="text-sm font-extrabold">📐 段落结构模板</div>
+          <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-sky-950 dark:text-sky-100">{p.paragraph_template}</div>
+        </section>
+      )}
+
+      {drills.length > 0 && (
+        <section className="mt-4 rounded-2xl border bg-card p-4">
+          <div className="text-sm font-extrabold">✏️ 仿写练习（共 {drills.length} 题）</div>
+          <ul className="mt-3 space-y-3">
+            {drills.map((d) => (
+              <li key={d.id} className="rounded-xl border bg-background p-3">
+                <div className="flex items-center justify-between gap-2">
+                  {d.difficulty_label && (
+                    <span className="rounded-full bg-fuchsia-100 px-2 py-0.5 text-[11px] font-bold text-fuchsia-700 dark:bg-fuchsia-950/40 dark:text-fuchsia-300">{d.difficulty_label}</span>
+                  )}
+                  <button
+                    onClick={() => { setText(""); setResult(null); document.getElementById("writing-area")?.scrollIntoView({ behavior: "smooth" }); }}
+                    className="rounded-full bg-gradient-to-br from-fuchsia-500 to-pink-600 px-3 py-1 text-xs font-extrabold text-white shadow-tile"
+                  >开始仿写</button>
+                </div>
+                <div className="mt-2 whitespace-pre-line text-sm">{d.prompt}</div>
+                {d.hint && <div className="mt-1 text-xs text-muted-foreground">💡 {d.hint}</div>}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {p.scoring_rubric && (
+        <section className="mt-4 rounded-2xl border bg-card p-4">
+          <div className="text-sm font-extrabold">🎯 评分标准</div>
+          <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">{p.scoring_rubric}</div>
+        </section>
+      )}
+
       <textarea value={text} onChange={e => setText(e.target.value)} rows={12}
+        id="writing-area"
         placeholder={`请用英语写作（${p.min_words}-${p.max_words} 词）…`}
         className="mt-4 w-full rounded-2xl border-2 border-border bg-card p-4 text-sm leading-relaxed focus:border-pink-400 focus:outline-none" />
       <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">

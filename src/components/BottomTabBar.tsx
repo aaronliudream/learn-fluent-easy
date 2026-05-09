@@ -1,10 +1,11 @@
-import { Home, BookOpen, Bot, BarChart3, User } from "lucide-react";
+import { Home, BookOpen, Zap, AlertCircle, User } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useT } from "@/i18n/T";
 
 /**
- * Mobile-only bottom tab bar. Hidden on `md` and up where the page header
- * already provides good navigation. Hidden on auth/onboarding routes too.
+ * Mobile-only bottom tab bar — 5 tabs with a centered "Start practice"
+ * elevated CTA. AI chat lives in the floating Xiaoyue FAB, so it does
+ * not compete for a tab slot.
  */
 const TABS = [
   { to: "/", label: "Home", icon: Home, match: (p: string) => p === "/" },
@@ -17,20 +18,36 @@ const TABS = [
       p.startsWith("/lesson") ||
       p.startsWith("/unit") ||
       p.startsWith("/placement") ||
+      p.startsWith("/kids") ||
+      p.startsWith("/junior") ||
       p.startsWith("/gaokao") ||
       p.startsWith("/slang"),
   },
   {
-    to: "/talk",
-    label: "AI Chat",
-    icon: Bot,
-    match: (p: string) =>
-      p.startsWith("/talk") ||
-      p.startsWith("/scenes") ||
-      p.startsWith("/workplace"),
+    to: "/dashboard",
+    label: "Practice",
+    icon: Zap,
+    cta: true,
+    match: (p: string) => p.startsWith("/dashboard") || p.startsWith("/today"),
   },
-  { to: "/dashboard", label: "Progress", icon: BarChart3, match: (p: string) => p.startsWith("/dashboard") || p.startsWith("/leaderboard") || p.startsWith("/review") },
-  { to: "/me", label: "Me", icon: User, match: (p: string) => p.startsWith("/me") || p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") || p.startsWith("/pets") },
+  {
+    to: "/mistakes",
+    label: "Mistakes",
+    icon: AlertCircle,
+    match: (p: string) => p.startsWith("/mistakes") || p.startsWith("/review"),
+  },
+  {
+    to: "/me",
+    label: "Me",
+    icon: User,
+    match: (p: string) =>
+      p.startsWith("/me") ||
+      p.startsWith("/account") ||
+      p.startsWith("/stats") ||
+      p.startsWith("/saved") ||
+      p.startsWith("/pets") ||
+      p.startsWith("/leaderboard"),
+  },
 ];
 
 const HIDDEN_ROUTES = ["/auth", "/ielts-speaking/session"];
@@ -51,6 +68,28 @@ export const BottomTabBar = () => {
         {TABS.map((tab) => {
           const Icon = tab.icon;
           const active = tab.match(pathname);
+          const isCta = (tab as { cta?: boolean }).cta;
+
+          if (isCta) {
+            return (
+              <li key={tab.to} className="relative">
+                <NavLink
+                  to={tab.to}
+                  aria-label={t(tab.label)}
+                  className="flex h-16 flex-col items-center justify-end pb-1.5 text-center text-[11px] font-bold text-primary"
+                >
+                  <span
+                    className="absolute -top-5 grid size-14 place-items-center rounded-full bg-gradient-to-br from-[#7B3FF1] to-[#ED3F8C] text-white shadow-[0_10px_24px_-6px_rgba(123,63,241,0.6)] ring-4 ring-background transition-transform active:scale-95"
+                    aria-hidden
+                  >
+                    <Icon className="size-6" />
+                  </span>
+                  <span className="mt-9 leading-tight">{t(tab.label)}</span>
+                </NavLink>
+              </li>
+            );
+          }
+
           return (
             <li key={tab.to}>
               <NavLink

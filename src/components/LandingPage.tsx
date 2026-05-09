@@ -13,7 +13,6 @@ const NAV = [
   { to: "/kids", label: "小学" },
   { to: "/junior", label: "初中" },
   { to: "/gaokao", label: "高中" },
-  { to: "/about", label: "关于我们" },
 ];
 
 const STAGES = [
@@ -158,12 +157,12 @@ export default function LandingPage() {
                 </Link>
               ))}
             </div>
-            <Link
-              to="/auth"
+            <a
+              href="#stages"
               className="rounded-full border border-[#1A1A1A]/15 bg-white/70 px-4 py-2 text-sm font-bold text-[#1A1A1A] backdrop-blur hover:bg-white"
             >
-              登录 / 注册
-            </Link>
+              浏览课程
+            </a>
           </nav>
         </header>
 
@@ -181,17 +180,11 @@ export default function LandingPage() {
             对照最新中考高考要求 · 同步最新大纲要求 — 让应试和能力同时长进。
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              to="/auth"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#7B3FF1] to-[#ED3F8C] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-[#7B3FF1]/25 hover:-translate-y-0.5 transition"
-            >
-              <Sparkles className="size-4" /> 免费开始学习
-            </Link>
             <a
               href="#stages"
-              className="rounded-full border border-[#1A1A1A]/15 bg-white/70 px-7 py-3 text-sm font-bold text-[#1A1A1A] backdrop-blur hover:bg-white"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#7B3FF1] to-[#ED3F8C] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-[#7B3FF1]/25 hover:-translate-y-0.5 transition"
             >
-              浏览课程
+              <Sparkles className="size-4" /> 浏览课程
             </a>
           </div>
 

@@ -172,12 +172,12 @@ export default function LandingPage() {
             陪伴中国孩子真正走进英语世界
           </div>
           <h1 className="mt-3 font-serif text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-            真正的英语，
+            考试要拿分
             <br />
-            不该只会做题
+            英语要会用
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-sm text-[#5A5A5A] md:text-base">
-            专为中国学生打造 — 同步考试体系，同时培养真实英语能力。
+            对照最新中考高考要求 · 同步最新大纲要求 — 让应试和能力同时长进。
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <Link

@@ -2508,6 +2508,42 @@ export type Database = {
         }
         Relationships: []
       }
+      grammar_points: {
+        Row: {
+          category: string
+          created_at: string
+          grade: string | null
+          id: string
+          name: string
+          slug: string
+          sort_order: number
+          stage: string
+          weight: number
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          grade?: string | null
+          id?: string
+          name: string
+          slug: string
+          sort_order?: number
+          stage: string
+          weight?: number
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          grade?: string | null
+          id?: string
+          name?: string
+          slug?: string
+          sort_order?: number
+          stage?: string
+          weight?: number
+        }
+        Relationships: []
+      }
       ielts_errors: {
         Row: {
           corrected: string
@@ -5921,6 +5957,47 @@ export type Database = {
         }
         Relationships: []
       }
+      user_grammar_mastery: {
+        Row: {
+          attempts: number
+          correct: number
+          id: string
+          last_practiced_at: string | null
+          point_id: string
+          score: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          attempts?: number
+          correct?: number
+          id?: string
+          last_practiced_at?: string | null
+          point_id: string
+          score?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          attempts?: number
+          correct?: number
+          id?: string
+          last_practiced_at?: string | null
+          point_id?: string
+          score?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_grammar_mastery_point_id_fkey"
+            columns: ["point_id"]
+            isOneToOne: false
+            referencedRelation: "grammar_points"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       user_mistakes: {
         Row: {
           correct_answer: string | null
@@ -7091,6 +7168,25 @@ export type Database = {
           msg_id: number
           read_ct: number
         }[]
+      }
+      record_grammar_attempt: {
+        Args: { p_correct: boolean; p_slug: string }
+        Returns: {
+          attempts: number
+          correct: number
+          id: string
+          last_practiced_at: string | null
+          point_id: string
+          score: number
+          updated_at: string
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "user_grammar_mastery"
+          isOneToOne: true
+          isSetofReturn: false
+        }
       }
       remove_friend: { Args: { _other: string }; Returns: Json }
       request_friend: { Args: { _username: string }; Returns: Json }

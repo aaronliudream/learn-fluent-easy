@@ -193,6 +193,63 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ============ CORE ENTRIES · 4 大核心入口 ============ */}
+      <section className="mx-auto max-w-[1180px] px-6 pt-8 md:pt-12">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-5">
+          {[
+            {
+              to: "/kids",
+              emoji: "🎒",
+              title: "小学英语",
+              desc: "自然拼读 · 趣味闯关",
+              bg: "linear-gradient(160deg,#F5A26B 0%,#ED5C8E 100%)",
+            },
+            {
+              to: "/junior",
+              emoji: "📚",
+              title: "初中英语",
+              desc: "语法 · 词汇 · 听说",
+              bg: "linear-gradient(160deg,#2BB7A8 0%,#0F8C8C 100%)",
+            },
+            {
+              to: "/gaokao",
+              emoji: "🎓",
+              title: "高考冲刺",
+              desc: "真题 · 押题 · 写作",
+              bg: "linear-gradient(160deg,#5B6BE3 0%,#2A2F7A 100%)",
+            },
+            {
+              to: "/talk",
+              emoji: "💬",
+              title: "AI 对话练习",
+              desc: "24h 外教，随时开口",
+              bg: "linear-gradient(160deg,#7B3FF1 0%,#ED3F8C 100%)",
+            },
+          ].map((c) => (
+              <Link
+                key={c.to}
+                to={c.to}
+                className="group relative overflow-hidden rounded-3xl p-6 text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.3)] ring-1 ring-white/10 transition duration-200 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.4)] md:p-7"
+                style={{ background: c.bg }}
+              >
+                <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/15 blur-2xl" />
+                <div className="relative flex items-center gap-4">
+                  <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-2xl backdrop-blur md:size-16 md:text-3xl">
+                    {c.emoji}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-serif text-xl font-black tracking-tight md:text-2xl">
+                      {c.title}
+                    </h3>
+                    <p className="mt-1 text-sm opacity-90">{c.desc}</p>
+                  </div>
+                  <ArrowRight className="size-5 shrink-0 opacity-70 transition group-hover:translate-x-1 group-hover:opacity-100" />
+                </div>
+              </Link>
+          ))}
+        </div>
+      </section>
+
       {/* ============ MANIFESTO: why + how ============ */}
       <section className="mx-auto max-w-[1180px] px-6 pt-10 md:pt-14">
         <div className="mb-8 text-center md:mb-10">

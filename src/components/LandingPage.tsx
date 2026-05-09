@@ -158,7 +158,7 @@ export default function LandingPage() {
               ))}
             </div>
             <a
-              href="#stages"
+              href="#entries"
               className="rounded-full border border-[#1A1A1A]/15 bg-white/70 px-4 py-2 text-sm font-bold text-[#1A1A1A] backdrop-blur hover:bg-white"
             >
               浏览课程
@@ -181,7 +181,7 @@ export default function LandingPage() {
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <a
-              href="#stages"
+              href="#entries"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#7B3FF1] to-[#ED3F8C] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-[#7B3FF1]/25 hover:-translate-y-0.5 transition"
             >
               <Sparkles className="size-4" /> 浏览课程

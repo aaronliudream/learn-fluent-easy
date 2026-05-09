@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Activity, Users, Target } from "lucide-react";
 
 /**
@@ -11,24 +11,40 @@ import { Activity, Users, Target } from "lucide-react";
  * 没有调任何后端，纯前端。零成本、零延迟、永远在线。
  */
 export default function LiveStatsTicker() {
-  // 初始基线：用「自零点起经过的秒数」算出今日累计，刷新页面也保持一致
   const [questions, setQuestions] = useState(() => baselineQuestions());
   const [online, setOnline] = useState(() => baselineOnline());
   const [mastery, setMastery] = useState(89.3);
+  const onlineRef = useRef(online);
+  onlineRef.current = online;
 
   useEffect(() => {
+    // 题数：永远只增不减。增速 = 当前在线人数 × 每人每分钟约 1.6 题
+    // 即每秒 ≈ online * 1.6 / 60。每 1.5s tick 一次。
     const tickQ = setInterval(() => {
-      setQuestions((n) => n + Math.floor(Math.random() * 7) + 1);
-    }, 2200);
+      const perSecond = (onlineRef.current * 1.6) / 60;
+      const inc = Math.max(1, Math.round(perSecond * 1.5 * (0.85 + Math.random() * 0.3)));
+      setQuestions((n) => n + inc);
+    }, 1500);
+
+    // 在线人数：缓慢向「当前时段目标值」回归（±20 抖动），每 5s 重算一次目标
     const tickO = setInterval(() => {
-      setOnline((n) => Math.max(2400, n + (Math.random() > 0.5 ? 1 : -1) * (Math.floor(Math.random() * 9) + 1)));
-    }, 3500);
+      const target = baselineOnline();
+      setOnline((cur) => {
+        const diff = target - cur;
+        // 平滑过渡：每次最多挪 8% 距离 + 小噪声
+        const step = Math.round(diff * 0.08) + Math.floor((Math.random() - 0.5) * 14);
+        return Math.max(80, cur + step);
+      });
+    }, 5000);
+
+    // 掌握率：极小幅漂移
     const tickM = setInterval(() => {
       setMastery((m) => {
         const drift = (Math.random() - 0.5) * 0.2;
         return Math.max(88.5, Math.min(91.2, +(m + drift).toFixed(1)));
       });
     }, 4200);
+
     return () => { clearInterval(tickQ); clearInterval(tickO); clearInterval(tickM); };
   }, []);
 
@@ -75,25 +91,69 @@ function Stat({ icon, value, label, tone }: { icon: React.ReactNode; value: stri
   );
 }
 
-/** 让今日数随时间自然增长（00:00 起 ~12k/日） */
-function baselineQuestions(): number {
+/* ─────────────── 真实节奏建模 ───────────────
+ * 中国学生作息（北京时间）：
+ *   工作日（周一-周五）：白天上学，主要使用集中在 19:00-23:00 + 早上 6-7 点
+ *   周末（周六-周日）：全天活跃，10-23 点都不错，是工作日峰值的 ~2.5 倍
+ * 题数增速 = 在线人数 × 1.6 题/分钟（教育平台合理值），所以人数 3000 时
+ * 大约每秒 +80 题 —— 远大于人数本身的波动。
+ * ─────────────────────────────────────── */
+
+// 工作日 24h 在线人数曲线（每个小时一个值，单位：人）
+const WEEKDAY_CURVE = [
+  600,  300,  180,  120,  100,  150, //  0-5  深夜→凌晨，最低
+  450,  900,  600,  400,  350,  380, //  6-11 早起背单词→上学路上→课堂中很少
+  520,  500,  450,  500,  600,  900, // 12-17 午休小高峰→下午课堂→放学路上
+ 1800, 2800, 3400, 3200, 2400, 1400, // 18-23 晚饭后晚自习是真高峰
+];
+
+// 周末 24h 在线人数曲线（普遍 2-3 倍）
+const WEEKEND_CURVE = [
+ 1100,  700,  400,  220,  180,  220, //  0-5  熬夜的稍多一些
+  450,  900, 1500, 2400, 3200, 3600, //  6-11 睡到自然醒后开始学
+ 3200, 2800, 3400, 3800, 4200, 4500, // 12-17 下午是周末峰值
+ 4800, 5200, 5400, 4800, 3600, 2200, // 18-23 周末晚高峰更高更长
+];
+
+/** 当前时段「应该有多少人在线」 */
+function baselineOnline(): number {
   const now = new Date();
-  const start = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
-  const elapsedSec = Math.max(0, (now.getTime() - start) / 1000);
-  const dayProgress = elapsedSec / 86400; // 0 → 1
-  // 一天目标 ~12,500，加 ±300 噪声
-  return Math.floor(12500 * dayProgress + 600 + Math.random() * 200);
+  const h = now.getHours();
+  const m = now.getMinutes();
+  const day = now.getDay(); // 0=Sun, 6=Sat
+  const isWeekend = day === 0 || day === 6;
+  const curve = isWeekend ? WEEKEND_CURVE : WEEKDAY_CURVE;
+  // 在小时之间做线性插值，避免整点跳变
+  const cur = curve[h];
+  const next = curve[(h + 1) % 24];
+  const lerped = cur + (next - cur) * (m / 60);
+  // ±3% 自然噪声
+  const noise = (Math.random() - 0.5) * 0.06;
+  return Math.max(60, Math.round(lerped * (1 + noise)));
 }
 
-/** 在线人数：白天高、夜间低，固定基线 */
-function baselineOnline(): number {
-  const h = new Date().getHours();
-  // 工作/学习高峰：14-22 点，深夜低谷
-  const dayCurve = [
-    1800, 1500, 1300, 1200, 1200, 1300, // 0-5
-    1600, 2100, 2600, 2900, 3000, 3100, // 6-11
-    3200, 3300, 3500, 3700, 3800, 3700, // 12-17
-    3600, 3500, 3400, 3300, 3000, 2400, // 18-23
-  ];
-  return dayCurve[h] + Math.floor(Math.random() * 80) - 40;
+/** 今日已练题数基线 = ∫(在线人数 × 1.6 题/分钟) dt 自 00:00 起 */
+function baselineQuestions(): number {
+  const now = new Date();
+  const day = now.getDay();
+  const isWeekend = day === 0 || day === 6;
+  const curve = isWeekend ? WEEKEND_CURVE : WEEKDAY_CURVE;
+  const h = now.getHours();
+  const m = now.getMinutes();
+
+  // 累加完整的过去小时
+  let total = 0;
+  for (let i = 0; i < h; i++) {
+    // 一小时内 = 平均人数 × 60 分钟 × 1.6 题/人/分钟
+    const avg = (curve[i] + curve[(i + 1) % 24]) / 2;
+    total += avg * 60 * 1.6;
+  }
+  // 当前小时已过去的部分
+  const cur = curve[h];
+  const next = curve[(h + 1) % 24];
+  const avgPart = (cur + (cur + (next - cur) * (m / 60))) / 2;
+  total += avgPart * m * 1.6;
+
+  // ±2% 噪声让每次刷新略不同
+  return Math.round(total * (0.98 + Math.random() * 0.04));
 }

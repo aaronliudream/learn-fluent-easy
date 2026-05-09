@@ -6650,8 +6650,13 @@ function App() {
         return r.top >= 0 && r.bottom <= window.innerHeight + 100;
       });
       const pool = inView.length ? inView : cands;
-      pool.sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
-      return pool[pool.length - 1];
+      pool.sort((a, b) => {
+        const pa = a.hasAttribute("data-quiz-submit") ? 1 : 0;
+        const pb = b.hasAttribute("data-quiz-submit") ? 1 : 0;
+        if (pa !== pb) return pb - pa;
+        return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+      });
+      return pool[0];
     }
     function onKey(e) {
       if (e.metaKey || e.ctrlKey || e.altKey) return;
@@ -8174,14 +8179,24 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
     setCorrectionRevealed(false);
   };
 
+  const normalizeTransformAnswer = (value) => String(value || "")
+    .toLowerCase()
+    .replace(/[’]/g, "'")
+    .replace(/\s+([.,!?;:])/g, "$1")
+    .replace(/[.,!?;:]+$/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
   // Transform check
   const tt = level.fillTasks[transformIdx] || level.fillTasks[0];
   const checkTransform = (overrideInput) => {
     const raw = (overrideInput !== undefined ? overrideInput : transformInput) || "";
-    const norm = raw.trim().toLowerCase().replace(/\s+/g, " ");
+    const norm = normalizeTransformAnswer(raw);
     if (!norm) return;
+    const targetNorm = normalizeTransformAnswer(tt.model);
     // Layer 1 — perfect match against the model answer's pattern
-    if (tt.pattern.test(norm)) {
+    tt.pattern.lastIndex = 0;
+    if (tt.pattern.test(norm) || norm === targetNorm) {
       setTransformFb({ kind: "correct", msg: "**完全正确！** 你抓住了核心结构。", target: tt.model });
       if (progressActions) progressActions.awardFillCorrect();
       return;
@@ -8200,11 +8215,12 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
     // Layer 3 — grammar OK but not the most natural phrasing.
     // Critical: if a student got the subjunctive structure right (had + done → would + V now),
     // they should not be punished for choosing a less idiomatic verb. Reward grammar; nudge naturalness.
+    if (tt.acceptPattern) tt.acceptPattern.lastIndex = 0;
     if (tt.acceptPattern && tt.acceptPattern.test(norm)) {
       const grammarLine = "**✓ 语法完全正确**——你成功用了" + (tt.grammarLabel || "虚拟语气结构") + "。";
       const naturalLine = tt.naturalNote
         ? " 💎 **更地道的说法**：" + tt.naturalNote
-        : " 💎 下方有一个 native speaker 更常用的表达，作为参考。";
+        : (tt.acceptMsg ? " " + tt.acceptMsg : " 💎 下方有一个 native speaker 更常用的表达，作为参考。");
       setTransformFb({ kind: "acceptable", msg: grammarLine + naturalLine, target: tt.model });
       if (progressActions) progressActions.awardFillCorrect();
       return;
@@ -8719,7 +8735,7 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
             </div>
 
             <div className="mt-4 flex items-center gap-3 flex-wrap">
-              <button onClick={onCheckTiles} disabled={tilePicked.length === 0 || (transformFb && transformFb.kind === "correct")} className="font-cn btn-primary px-6 py-2.5 rounded-full text-sm disabled:opacity-50">检查</button>
+              <button data-quiz-submit onClick={onCheckTiles} disabled={tilePicked.length === 0 || (transformFb && transformFb.kind === "correct")} className="font-cn btn-primary px-6 py-2.5 rounded-full text-sm disabled:opacity-50">检查</button>
               <button onClick={onClearPicked} disabled={tilePicked.length === 0 || (transformFb && transformFb.kind === "correct")} className="font-cn btn-ghost px-5 py-2.5 rounded-full text-sm disabled:opacity-50">清空</button>
               <button onClick={() => { setTransformReveal(true); setTransformFb({kind:"wrong",msg:"看一下参考答案，跟着读一遍。",target:tt.model}); }} className="font-cn btn-ghost px-5 py-2.5 rounded-full text-sm">直接看答案</button>
               <span className="ink-faint text-xs ml-auto font-cn hide-mobile">Enter 提交</span>
@@ -8769,7 +8785,7 @@ function LessonRunner({ level, levelId, onBack, onComplete, progressActions }) {
           )}
 
           <div className="mt-8 flex justify-end">
-            <button onClick={advanceTransform} disabled={!transformFb}
+            <button data-quiz-submit onClick={advanceTransform} disabled={!transformFb}
               className={`font-cn px-8 py-3.5 rounded-full inline-flex items-center gap-3 transition-all ${transformFb ? "btn-primary" : "btn-ghost cursor-not-allowed opacity-50"}`}>
               下一题 <span className="font-mono">→</span>
             </button>

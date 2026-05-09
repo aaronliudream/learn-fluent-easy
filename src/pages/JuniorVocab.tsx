@@ -62,23 +62,24 @@ export default function JuniorVocab() {
     const gradeNum = raw <= 3 ? raw + 6 : raw;
     // junior_vocab 已覆盖初一(7)与初三(9)。初二(8)暂回退到 gaokao_vocab(stage=junior)。
     const hasJunior = gradeNum === 7 || gradeNum === 9;
-    const loader = hasJunior
-      ? supabase
-          .from("junior_vocab")
-          .select("id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank")
-          .eq("grade", gradeNum)
+    const COLS = "id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank";
+    const PAGE = 1000;
+    (async () => {
+      const all: Vocab[] = [];
+      for (let from = 0; from < 5000; from += PAGE) {
+        const q = hasJunior
+          ? supabase.from("junior_vocab").select(COLS).eq("grade", gradeNum)
+          : supabase.from("gaokao_vocab").select(COLS).eq("stage", "junior");
+        const { data, error } = await q
           .order("freq_rank", { ascending: true, nullsFirst: false })
-          .limit(2000)
-      : supabase
-          .from("gaokao_vocab")
-          .select("id,word,phonetic,pos,meaning_cn,meaning_en,example_en,example_cn,star_level,theme,freq_rank")
-          .eq("stage", "junior")
-          .order("freq_rank", { ascending: true, nullsFirst: false })
-          .limit(2000);
-    loader.then(({ data }) => {
-      setWords((data ?? []) as Vocab[]);
+          .range(from, from + PAGE - 1);
+        if (error || !data || data.length === 0) break;
+        all.push(...(data as Vocab[]));
+        if (data.length < PAGE) break;
+      }
+      setWords(all);
       setLoading(false);
-    });
+    })();
   }, [grade]);
 
   const rawGrade = Number(grade);

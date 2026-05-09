@@ -5368,7 +5368,20 @@ function SpeedDrillScreen({ onBack, progress, progressActions }) {
       const j = Math.floor(Math.random() * (i + 1));
       [pool[i], pool[j]] = [pool[j], pool[i]];
     }
-    setQuestions(pool.slice(0, 10));
+    // Normalize question shape: SpeedDrill expects opts as strings + an `answer` string.
+    // QUESTION_BANK stores opts as {id,text,correct} objects, so flatten them here.
+    const normalized = pool.slice(0, 10).map(q => {
+      if (Array.isArray(q.opts) && q.opts.length && typeof q.opts[0] === "object") {
+        const correctOpt = q.opts.find(o => o && o.correct);
+        return {
+          ...q,
+          opts: q.opts.map(o => o.text),
+          answer: correctOpt ? correctOpt.text : (q.answer ?? ""),
+        };
+      }
+      return q;
+    });
+    setQuestions(normalized);
     setIdx(0);
     setAnswers([]);
     setTimeLeft(TIMER_S);

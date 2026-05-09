@@ -732,6 +732,13 @@ function useProgress() {
         ].slice(0, 50),
         correctStreak: 0, // wrong answer breaks the streak
       }));
+      try {
+        window.parent && window.parent.postMessage({
+          source: "subjunctive-lab",
+          type: "attempt",
+          payload: { isCorrect: false, levelId, mistake: { ...mistake, levelId } },
+        }, "*");
+      } catch (e) { /* noop */ }
     },
     completeReview(levelId) {
       update(p => ({
@@ -810,6 +817,13 @@ function useProgress() {
         window.__rewards.xp(XP_REWARDS.level_complete);
         if (unlocked) setTimeout(() => window.__rewards.achievement(unlocked), 1200);
       }
+      try {
+        window.parent && window.parent.postMessage({
+          source: "subjunctive-lab",
+          type: "level_complete",
+          payload: { levelId, score: scoreData.score || 0, total: scoreData.total || 5 },
+        }, "*");
+      } catch (e) { /* noop */ }
     },
     unlockAchievement(id) {
       let actuallyUnlocked = false;

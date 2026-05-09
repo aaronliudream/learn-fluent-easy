@@ -172,12 +172,11 @@ serve(async (req) => {
     const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
     const safeText = String(text).slice(0, 4000);
     const isShort = safeText.length <= 40;
-    const hasAliyun = Boolean(Deno.env.get("DASHSCOPE_API_KEY"));
-    // Routing rule: mainland China users → Aliyun CosyVoice (low latency in CN),
-    // everyone else → OpenAI. Aliyun is only used when the API key is configured;
-    // otherwise we fall back to OpenAI for everyone.
-    const useAliyun = hasAliyun && isMainlandChina(req);
-    const provider: "aliyun" | "openai" = useAliyun ? "aliyun" : "openai";
+    // Routing rule: ALL users → OpenAI. We rely on the content-addressed
+    // Supabase Storage cache + immutable CDN headers so OpenAI is only ever
+    // hit ONCE per unique (text, voice, speed) tuple. Every subsequent play
+    // (any user, any device) is served from CDN at near-zero cost.
+    const provider: "aliyun" | "openai" = "openai";
 
     // Content-addressed cache key — same text+voice+speed always lands on the same file.
     const keyInput = `${provider}|${selectedVoice}|${safeSpeed}|${accentUpper}|${safeText}`;

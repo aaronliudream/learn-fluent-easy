@@ -64,32 +64,73 @@ async function uploadToStorage(path: string, bytes: ArrayBuffer): Promise<void> 
 }
 
 async function synthesizeWithCosyVoice(text: string, voice: string, speed: number, apiKey: string): Promise<ArrayBuffer> {
-  const response = await fetch("https://dashscope.aliyuncs.com/api/v1/services/audio/tts/", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      model: "cosyvoice-v2",
-      input: { text },
-      parameters: { voice, format: "mp3", sample_rate: 22050, volume: 100, rate: speed, pitch: 1.0 },
-    }),
+  // CosyVoice-v2 has dropped the synchronous REST endpoint; the only supported
+  // transport now is WebSocket at wss://dashscope.aliyuncs.com/api-ws/v1/inference/
+  // We open the socket, drive the duplex protocol (run-task → continue-task →
+  // finish-task), collect binary audio frames, and return one stitched MP3 buffer.
+  // npm:ws is required because Deno's stock WebSocket client cannot send custom
+  // headers (we need `Authorization: bearer …`).
+  const { default: WebSocket } = await import("npm:ws@8.18.0");
+  const url = "wss://dashscope.aliyuncs.com/api-ws/v1/inference/";
+  const taskId = crypto.randomUUID().replace(/-/g, "");
+
+  return await new Promise<ArrayBuffer>((resolve, reject) => {
+    const ws = new WebSocket(url, {
+      headers: { Authorization: `bearer ${apiKey}`, "X-DashScope-DataInspection": "enable" },
+    });
+    const chunks: Uint8Array[] = [];
+    let started = false;
+    const fail = (msg: string) => { try { ws.close(); } catch { /* noop */ } reject(new Error(`CosyVoice WS: ${msg}`)); };
+    const timer = setTimeout(() => fail("timeout after 30s"), 30_000);
+
+    ws.on("open", () => {
+      ws.send(JSON.stringify({
+        header: { action: "run-task", task_id: taskId, streaming: "duplex" },
+        payload: {
+          task_group: "audio", task: "tts", function: "SpeechSynthesizer",
+          model: "cosyvoice-v2",
+          parameters: {
+            text_type: "PlainText", voice, format: "mp3",
+            sample_rate: 22050, volume: 50, rate: speed, pitch: 1.0,
+          },
+          input: {},
+        },
+      }));
+    });
+
+    ws.on("message", (data: ArrayBuffer | Buffer, isBinary: boolean) => {
+      if (isBinary) { chunks.push(new Uint8Array(data as ArrayBuffer)); return; }
+      let msg: { header?: { event?: string; error_message?: string } };
+      try { msg = JSON.parse(typeof data === "string" ? data : new TextDecoder().decode(data as ArrayBuffer)); }
+      catch { return; }
+      const ev = msg.header?.event;
+      if (ev === "task-started" && !started) {
+        started = true;
+        ws.send(JSON.stringify({
+          header: { action: "continue-task", task_id: taskId, streaming: "duplex" },
+          payload: { input: { text } },
+        }));
+        ws.send(JSON.stringify({
+          header: { action: "finish-task", task_id: taskId, streaming: "duplex" },
+          payload: { input: {} },
+        }));
+      } else if (ev === "task-failed") {
+        fail(msg.header?.error_message || "task-failed");
+      } else if (ev === "task-finished") {
+        clearTimeout(timer);
+        const total = chunks.reduce((n, c) => n + c.length, 0);
+        const out = new Uint8Array(total);
+        let off = 0;
+        for (const c of chunks) { out.set(c, off); off += c.length; }
+        try { ws.close(); } catch { /* noop */ }
+        if (out.length === 0) reject(new Error("CosyVoice WS: empty audio"));
+        else resolve(out.buffer);
+      }
+    });
+
+    ws.on("error", (e: Error) => fail(e.message || String(e)));
+    ws.on("close", () => { clearTimeout(timer); if (!started) fail("closed before task-started"); });
   });
-  if (!response.ok) {
-    throw new Error(`CosyVoice ${response.status}: ${await response.text()}`);
-  }
-  const ct = response.headers.get("content-type") || "";
-  if (ct.includes("application/json")) {
-    const j = await response.json();
-    const b64 = j?.output?.audio?.data;
-    if (typeof b64 === "string" && b64.length > 0) {
-      // Decode base64 → bytes.
-      const bin = atob(b64);
-      const out = new Uint8Array(bin.length);
-      for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
-      return out.buffer;
-    }
-    throw new Error(`CosyVoice unexpected JSON: ${JSON.stringify(j).slice(0, 300)}`);
-  }
-  return await response.arrayBuffer();
 }
 
 async function synthesizeWithOpenAI(text: string, voice: string, speed: number, apiKey: string, isShort: boolean): Promise<ArrayBuffer> {

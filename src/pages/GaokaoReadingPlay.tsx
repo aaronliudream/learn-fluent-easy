@@ -10,6 +10,7 @@ import { recordAttempt } from "@/lib/gaokaoMastery";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 type Passage = { id: string; title: string; body: string; structure_analysis: string | null };
 type Question = {
@@ -34,6 +35,37 @@ export default function GaokaoReadingPlay() {
   const [loading, setLoading] = useState(true);
   const [streak, setStreak] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
+
+  // Full-test lock: AI may only discuss the reading once every question is answered.
+  const allAnswered = questions.length > 0 && questions.every((q) => picks[q.id]);
+  useRegisterAssistant(
+    passage
+      ? {
+          context: "gaokao_reading",
+          ref: passage.id,
+          topic: `高考阅读 · ${passage.title}`,
+          mode: "full-test",
+          unlocked: allAnswered,
+          lockedHint: "请先做完本篇所有阅读题再来找我哦，避免提前看到答案 ✨",
+          pageTitle: "💬 小月 · 阅读复盘",
+          snapshot: allAnswered
+            ? {
+                title: passage.title,
+                passage_excerpt: passage.body.slice(0, 1200),
+                questions: questions.map((q) => ({
+                  id: q.id,
+                  type: q.question_type,
+                  stem: q.stem,
+                  options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
+                  correct_answer: q.correct_answer,
+                  user_answer: picks[q.id],
+                  is_correct: picks[q.id] === q.correct_answer,
+                })),
+              }
+            : undefined,
+        }
+      : null,
+  );
 
   useEffect(() => {
     if (!id) return;

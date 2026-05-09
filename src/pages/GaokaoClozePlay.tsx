@@ -9,6 +9,7 @@ import { awardCoins, awardForBlock, petReact } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { recordMastery } from "@/lib/masteryProgress";
 import { celebrateScore } from "@/lib/feedback";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 type Passage = {
   id: string; passage_no: number; title: string; topic: string | null; topic_group: string | null;
@@ -42,6 +43,36 @@ export default function GaokaoClozePlay() {
   const [showAnalysis, setShowAnalysis] = useState(false);
   const [expandedBlank, setExpandedBlank] = useState<number | null>(null);
   const startedAt = useRef(Date.now());
+
+  // Full-test lock: AI may only discuss the cloze passage after submission.
+  useRegisterAssistant(
+    passage
+      ? {
+          context: "gaokao_cloze",
+          ref: passage.id,
+          topic: `高考完形 · ${passage.title}`,
+          mode: "full-test",
+          unlocked: submitted,
+          lockedHint: "请先把所有空填完并提交后，我再来帮你逐题分析 ✨",
+          pageTitle: "💬 小月 · 完形复盘",
+          snapshot: submitted
+            ? {
+                title: passage.title,
+                topic: passage.topic,
+                blanks: blanks.map((b) => ({
+                  no: b.blank_no,
+                  options: { A: b.option_a, B: b.option_b, C: b.option_c, D: b.option_d },
+                  correct_answer: b.correct_answer,
+                  user_answer: answers[b.blank_no],
+                  is_correct: answers[b.blank_no] === b.correct_answer,
+                  skill: b.skill_tag,
+                  general_explanation: b.general_explanation,
+                })),
+              }
+            : undefined,
+        }
+      : null,
+  );
 
   useEffect(() => {
     if (!id) return;

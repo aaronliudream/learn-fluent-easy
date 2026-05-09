@@ -621,14 +621,6 @@ function mockAskTutor({ question }) {
 }
 
 const STORAGE_KEY = "pwl_v1";
-/* ─── Bridge to parent app (React wrapper listens for these) ─── */
-function postBridge(type, payload) {
-  try {
-    if (window.parent && window.parent !== window) {
-      window.parent.postMessage({ source: "subjunctive-lab", type, payload }, "*");
-    }
-  } catch (e) {}
-}
 const Storage = {
   available: (() => {
     try { localStorage.setItem("__t","1"); localStorage.removeItem("__t"); return true; }
@@ -676,7 +668,7 @@ const ACHIEVEMENTS = [
   { id: "streak_3",        icon: "🔥",  cn: "三日坚持",    desc: "连续学习 3 天",              xp: 30 },
   { id: "streak_7",        icon: "🔥",  cn: "一周战士",    desc: "连续学习 7 天",              xp: 70 },
   { id: "comeback",        icon: "💪",  cn: "知错能改",    desc: "在错题本里复习并答对",       xp: 30 },
-  { id: "subjunctive_sage",icon: "👑",  cn: "虚拟语气王",  desc: "征服全部 11 关",             xp: 200 },
+  { id: "subjunctive_sage",icon: "👑",  cn: "虚拟语气王",  desc: "征服全部 9 关",              xp: 200 },
 ];
 
 /* ─── XP rewards ─── */
@@ -732,7 +724,6 @@ function useProgress() {
       }));
     },
     recordMistake(levelId, mistake) {
-      postBridge("attempt", { isCorrect: false, kind: "exam", levelId, mistake });
       update(p => ({
         ...p,
         mistakes: [
@@ -765,7 +756,6 @@ function useProgress() {
     recordCorrect() {
       let unlocked = null;
       let leveled = false;
-      postBridge("attempt", { isCorrect: true, kind: "exam" });
       update(p => {
         const newStreak = (p.correctStreak || 0) + 1;
         const newBest = Math.max(p.bestCorrectStreak || 0, newStreak);
@@ -783,7 +773,6 @@ function useProgress() {
       }
     },
     awardFillCorrect() {
-      postBridge("attempt", { isCorrect: true, kind: "fill" });
       update(p => ({ ...p, xp: (p.xp || 0) + XP_REWARDS.fill_correct, correctStreak: (p.correctStreak || 0) + 1 }));
       if (window.__rewards) window.__rewards.xp(XP_REWARDS.fill_correct);
     },
@@ -800,7 +789,6 @@ function useProgress() {
     },
     completeLevelWithRewards(levelId, scoreData = {}) {
       let unlocked = null;
-      postBridge("level_complete", { levelId, ...scoreData });
       update(p => {
         const ach = [...(p.achievements || [])];
         const justCompleted = !p.levels[levelId];
@@ -1669,6 +1657,244 @@ const LEVEL_5 = {
   },
 };
 
+/* ═══════════════════════════════════════════════════════════════
+   LEVEL 5A · 现在条件 → 过去结果
+   ═══════════════════════════════════════════════════════════════
+   This is the REVERSE of L5 — and the hardest of all subjunctives:
+
+   L5  (already built): 过去原因 → 现在结果
+       If + had + V-ed,  would + V       (foundations: bad past → bad now)
+
+   L5A (this level):    现在状态 → 过去结果
+       If + 过去式,       would have + V-ed   (current state → missed past chance)
+
+   Pattern violates intuitive time-order — a CURRENT lasting trait
+   affecting a PAST specific action's outcome:
+
+       If I were taller,           I would have made the team last year.
+       (身高一直矮)                (去年没进队)
+
+       If she weren't so shy,      she would have introduced herself.
+       (一直害羞)                  (那次聚会没自我介绍)
+
+       If I weren't afraid of heights,   I would have gone bungee jumping last summer.
+       (一直恐高)                         (去年没去蹦极)
+
+   Top mistakes — virtually all Chinese students make at least one:
+     1. Reverse L5 formula:   If I had been taller, I would make the team.
+                              (把状态写成过去完成 + 过去结果写成现在)
+     2. Apply L4 (双虚拟过去): If I had been taller, I would have made it.
+                              (但身高不是过去事件，是持续状态)
+     3. Apply L1A (双过去式):  If I were taller, I would make the team.
+                              (但结果在过去某一刻，不是现在)
+     4. Wrong tense markers:  ignoring "last year/that time/then"
+   ═══════════════════════════════════════════════════════════════ */
+
+const L5A_LESSON_SCRIPT = [
+  // ─── HOOK · 引出反方向 ─────────────
+  { text: "L5 学了\"过去原因 → 现在结果\"——比如\"过去没努力 → 现在工作不好\"。但生活里还有**反方向**：**现在的状态**影响了**过去**做的事。",
+    show: "L5：过去 → 现在\nL5A：现在 → 过去（反方向）",            highlight: "反方向",
+    duration: 16.0 },
+
+  { text: "比如：你**现在**恐高——所以**去年**同学叫你去蹦极你拒绝了。\"恐高\"是持续到现在的状态，但影响了**过去**那次具体的事。",
+    show: "现在恐高（持续）→ 去年没去蹦极（具体）",                 highlight: null,
+    duration: 16.5 },
+
+  // ─── WRONG ATTEMPTS · 三种典型错误 ─────────────
+  { text: "面对这种情况，中国学生 **3 种典型错误**——咱们一个个看。",
+    show: "3 种典型错误",                                           highlight: null,
+    duration: 8.5 },
+
+  { text: "错法 1：直接套 L5 公式 → \"If I had been afraid of heights, I would refuse...\"——**完全反了**！恐高是\"现在状态\"，不是\"过去事件\"。",
+    show: "❌ 错 1：If I had been ..., I would V (反向)",            highlight: "had been",
+    duration: 16.0 },
+
+  { text: "错法 2：套 L4 双虚拟过去 → \"If I had been afraid, I would have refused.\"——**形式整齐但不准确**，因为恐高不是过去某一刻的事。",
+    show: "❌ 错 2：If I had been ..., would have V-ed",             highlight: "had been",
+    duration: 15.5 },
+
+  { text: "错法 3：套 L1A 双过去式 → \"If I weren't afraid, I would refuse.\"——**结果时态错**，去年那次不是现在的事。",
+    show: "❌ 错 3：If I weren't ..., I would refuse (现在)",        highlight: "would refuse",
+    duration: 14.5 },
+
+  // ─── CORRECT FORMULA ─────────────
+  { text: "**正确公式**：If + 主语 + **过去式**（虚拟现在状态），主语 + **would have + 过去分词**（虚拟过去结果）。",
+    show: "If + 过去式,   would have + V-ed\n  (现在状态)        (过去结果)",  highlight: "would have",
+    duration: 18.0 },
+
+  { text: "应用：**If I weren't afraid of heights, I would have gone bungee jumping last summer.** ✓ 现在恐高 → 去年没去蹦极。",
+    show: "If I weren't afraid, I would have gone bungee jumping last summer.",  highlight: "weren't · would have gone",
+    duration: 19.0 },
+
+  // ─── KEY METHODOLOGY · 判断技巧 ─────────────
+  { text: "**判断技巧**——做题前问自己**两个问题**：① if 从句说的是\"持续到现在的状态\"吗？② 主句说的是\"过去具体结果\"吗？",
+    show: "Q1: if 从句 = 持续状态？\nQ2: 主句 = 过去结果？",          highlight: "两个问题",
+    duration: 16.5 },
+
+  { text: "**时间标志词**——主句出现 last year / that time / then / yesterday 这些词，几乎一定是 **would have + V-ed**。",
+    show: "last year / that time / then  →  would have + V-ed",     highlight: "would have",
+    duration: 14.5 },
+
+  // ─── COMPARISON ─────────────
+  { text: "**完整对比**——L5 和 L5A 合起来才是完整的混合虚拟。两个方向都是\"现实是什么，虚拟就反\"——只是时间错位的方向不同。",
+    show: "L5：过去原因 → 现在结果（had V-ed, would V）\nL5A：现在原因 → 过去结果（V过, would have V-ed）",  highlight: null,
+    duration: 19.0 },
+
+  // ─── CLOSING ─────────────
+  { text: "记住：**身高、性格、恐高、能力**——这些都是\"持续到现在\"的状态。它们影响过去某次具体的事，就用 **L5A**。",
+    show: "🔑 现在状态 + 过去结果 = L5A",                            highlight: null,
+    duration: 13.5 },
+];
+
+const L5A_CORRECTION_TASKS = [
+  {
+    wrong: "If I had been taller, I would make the basketball team last year.",
+    model: "If I were taller, I would have made the basketball team last year.",
+    pattern: /^if i were taller,?\s+i would have made the basketball team last year/i,
+    errors: [
+      { spot: "had been", fix: "were", note: "身高是**持续到现在**的状态，不是过去事件——用过去式 **were**，不是 had been" },
+      { spot: "would make", fix: "would have made", note: "**last year** 是过去时间标志——主句要用 **would have + 过去分词**（would have made）" },
+    ],
+    hintCN: "找出 2 处错误并改正（提示：身高是\"现在持续状态\"+ 进队是\"去年的事\"）",
+  },
+  {
+    wrong: "If she weren't so shy, she would meet more people at that party.",
+    model: "If she weren't so shy, she would have met more people at that party.",
+    pattern: /^if she weren't so shy,?\s+she would have met more people at that party/i,
+    errors: [
+      { spot: "would meet", fix: "would have met", note: "**at that party** 指**过去某次具体场合**——主句要用 **would have + 过去分词**（would have met）" },
+    ],
+    hintCN: "找出 1 处错误并改正（提示：注意 'at that party' 是过去时点）",
+  },
+];
+
+const LEVEL_5A = {
+  id: "5A",
+  code: "L05A",
+  title: "现在条件 → 过去结果",
+  subtitle: "Mixed Conditional · 现在状态影响过去 · 高考最难压轴",
+  teacherScript: L5A_LESSON_SCRIPT,
+  correctionTasks: L5A_CORRECTION_TASKS,
+  hookLine: "Reverse mixed conditional — the hardest of all",
+  hookLineCN: "L5 教\"过去 → 现在\"，L5A 教反方向\"现在 → 过去\"。当下持续的状态/特质（身高、性格、恐高）影响了过去某次具体的事——这是高考最难压轴题。",
+  ruleCard: {
+    formula: "If + 主语 + 过去式 (现在状态),  主语 + would have + 过去分词 (过去结果)",
+    points: [
+      { lhs: "用法",       rhs: "**现在持续的状态**（身高、性格、能力、心理）→ 影响**过去某次具体的结果**" },
+      { lhs: "公式",       rhs: "**if 从句过去式**（虚拟现在）+ **主句 would have + 过去分词**（虚拟过去）——两边时间错位" },
+      { lhs: "判断技巧",   rhs: "做题前问 ① if 从句 = 持续到现在的状态？② 主句 = 过去具体结果？两个都是 → 用 L5A 公式" },
+      { lhs: "时间标志",   rhs: "主句出现 **last year / that time / then / yesterday** → 几乎一定是 **would have + V-ed**" },
+    ],
+  },
+  immersionCards: [
+    // Round 1 — 持续状态（身高/年龄）→ 过去结果
+    { situation: "现在身高不够，去年没进篮球队",          cn: "如果我个子高一点，去年就进了篮球队。",          en: "If I were taller, I would have made the basketball team last year." },
+    { situation: "现在年龄太大，那个项目当时没申请",      cn: "如果我年轻一点，当时就申请那个项目了。",        en: "If I were younger, I would have applied for that program." },
+    // Round 2 — 性格特质 → 过去结果
+    { situation: "性格内向，那次聚会没主动认识人",        cn: "如果她不那么害羞，那次聚会就认识更多人了。",    en: "If she weren't so shy, she would have met more people at that party." },
+    { situation: "性格急躁，上次面试因为紧张表现差",      cn: "如果我没那么紧张，上次面试就发挥得更好。",      en: "If I weren't so nervous, I would have done better at the interview." },
+    // Round 3 — 能力/技能 → 过去结果
+    { situation: "不会游泳，那次海滩没下水",              cn: "如果我会游泳，那次海滩我就下水了。",            en: "If I could swim, I would have gone in the water at the beach." },
+    { situation: "不会开车，去年没去自驾游",              cn: "如果我会开车，去年就去自驾游了。",              en: "If I could drive, I would have gone on the road trip last year." },
+    // Round 4 — 心理/恐惧 → 过去结果
+    { situation: "恐高，去年没去蹦极",                    cn: "如果我不恐高，去年就去蹦极了。",                en: "If I weren't afraid of heights, I would have gone bungee jumping last summer." },
+    { situation: "怕狗，朋友家上次没去",                  cn: "如果我不怕狗，上次朋友家就去了。",              en: "If I weren't afraid of dogs, I would have visited my friend's house." },
+    // Round 5 — 持续身份 / 经济状态 → 过去结果
+    { situation: "现在没钱，那双鞋没买",                  cn: "如果我有钱，那双鞋当时就买了。",                en: "If I had the money, I would have bought those shoes." },
+    { situation: "现在英语不好，那次国外交流没参加",      cn: "如果我英语好一点，那次交流活动就参加了。",      en: "If my English were better, I would have joined that exchange program." },
+  ],
+  transformUI: {
+    title:        "用 'If 过去式, would have + V-ed' 表达\"现在状态 → 过去结果\"",
+    realityLabel: "REALITY · 现在的状态 + 过去发生的事（陈述）",
+    writeLabel:   "VIRTUAL · 用 If 过去式 + would have + V-ed 改写",
+  },
+  fillTasks: [
+    {
+      prompt: "I'm short. I didn't make the basketball team last year.",
+      promptCN: "我个子矮。去年我没进篮球队。",
+      hintCN: "用 'If I were ___, I would have ___ last year' 改写（现在矮 → 去年没进队）",
+      model: "If I were taller, I would have made the basketball team last year.",
+      pattern: /^if i were taller,?\s+i would have made the basketball team( last year)?/,
+      errors: [
+        { match: /^if i had been taller,?\s+i would make/,           msg: "❌ **完全反了**！身高是\"持续到现在\"的状态，不是过去事件——用 **were**（不是 had been）。结果在 last year，要用 **would have made**（不是 would make）。" },
+        { match: /^if i had been taller,?\s+i would have made/,      msg: "❌ **had been 不准确**——身高是**持续状态**，不是\"过去某一刻才矮\"。用现在虚拟 **were**（这关核心：if 从句 = 现在状态 = 过去式 were）。" },
+        { match: /^if i were taller,?\s+i would make/,               msg: "❌ **结果时态错**——last year 是过去时间，主句要用 **would have made**（不是 would make 现在式）。" },
+        { match: /^if i was taller,?\s+i would have made/,           msg: "❌ 虚拟语气 be 动词所有人称用 **were**（不是 was）——这是 L1 的核心规则，在混合虚拟里同样适用。" },
+        { match: /^if i were taller,?\s+i would have make/,          msg: "**would have 后接过去分词**（made），不是动词原形（make）。" },
+        { match: /^if i were taller,?\s+i would made/,               msg: "❌ 缺 **have**——主句必须是 'would **have** + 过去分词'（would have made）。" },
+      ],
+    },
+    {
+      prompt: "She is shy. She didn't introduce herself at the party.",
+      promptCN: "她很害羞。她在聚会上没自我介绍。",
+      hintCN: "用 'If she weren't ___, she would have ___' 改写",
+      model: "If she weren't so shy, she would have introduced herself at the party.",
+      pattern: /^if she weren't (so |that )?shy,?\s+she would have introduced herself( at the party)?/,
+      errors: [
+        { match: /^if she hadn't been (so |that )?shy,?\s+she would introduce/, msg: "❌ **完全反了**！害羞是\"持续到现在\"的特质，用过去式 **weren't**（不是 hadn't been）。结果在过去某次聚会，用 **would have introduced**。" },
+        { match: /^if she hadn't been (so |that )?shy,?\s+she would have introduced/, msg: "❌ **hadn't been 不准确**——害羞是**性格特质**（持续到现在），不是\"过去某一刻才害羞\"。用 **weren't**。" },
+        { match: /^if she weren't (so |that )?shy,?\s+she would introduce/, msg: "❌ **结果时态错**——'at the party' 指过去某次场合，主句要用 **would have introduced**（不是 would introduce）。" },
+        { match: /^if she wasn't (so |that )?shy,?\s+she would have introduced/, msg: "❌ 虚拟语气 be 动词所有人称用 **were/weren't**（不是 was/wasn't）——she 也用 weren't。" },
+        { match: /^if she weren't shy,?\s+she introduced/,           msg: "**主句必须有 would have**——'would have + 过去分词'（would have introduced）。" },
+      ],
+    },
+    {
+      prompt: "I can't swim. I didn't go in the water at the beach last week.",
+      promptCN: "我不会游泳。上周在海滩我没下水。",
+      hintCN: "用 'If I could ___, I would have ___' 改写",
+      model: "If I could swim, I would have gone in the water at the beach.",
+      pattern: /^if i could swim,?\s+i would have gone (in the water|swimming|in)/,
+      errors: [
+        { match: /^if i couldn't swim/,                              msg: "❌ **方向反了**——\"我不会游泳\"是现实，虚拟要说\"**会**游泳\"（反事实）。用 **could swim**（不是 couldn't）。" },
+        { match: /^if i hadn't been able to swim/,                   msg: "❌ \"会不会游泳\"是**持续能力状态**，用 **could**（不是 hadn't been able to）——这是 L5A 的核心：现在状态用过去式。" },
+        { match: /^if i could swim,?\s+i would go/,                  msg: "❌ **结果时态错**——'last week at the beach' 是过去具体场合，用 **would have gone**（不是 would go）。" },
+        { match: /^if i can swim,?\s+i would have gone/,             msg: "❌ if 从句**虚拟必须用过去式**——can 后退一步变 **could**。" },
+        { match: /^if i could swim,?\s+i would have went/,           msg: "❌ **went 是过去式，不是过去分词**——go 的过去分词是 **gone**。'would have gone'。" },
+        { match: /^if i could swim,?\s+i would have go/,             msg: "**would have 后接过去分词**（gone），不是动词原形（go）。" },
+      ],
+    },
+    {
+      prompt: "I'm afraid of heights. I didn't go bungee jumping with my friends.",
+      promptCN: "我恐高。我没和朋友们去蹦极。",
+      hintCN: "用 'If I weren't afraid of ___, I would have ___' 改写",
+      model: "If I weren't afraid of heights, I would have gone bungee jumping with my friends.",
+      pattern: /^if i weren't afraid of heights,?\s+i would have gone bungee jumping( with my friends)?/,
+      errors: [
+        { match: /^if i hadn't been afraid/,                         msg: "❌ 恐高是**心理状态**（一直怕），不是\"过去某一刻才怕\"——用 **weren't**（不是 hadn't been）。" },
+        { match: /^if i weren't afraid of heights,?\s+i would go/,   msg: "❌ **结果时态错**——朋友过去去蹦极，主句要用 **would have gone**（不是 would go）。" },
+        { match: /^if i wasn't afraid/,                              msg: "❌ 虚拟用 **weren't**（不是 wasn't）——所有人称都用 were/weren't。" },
+        { match: /^if i'm not afraid/,                               msg: "❌ if 从句**虚拟用过去式**——'I'm not afraid' 是现在式（陈述真实），虚拟应该是 'I weren't afraid'。" },
+        { match: /^if i weren't afraid of heights,?\s+i would have went/, msg: "❌ **went 是过去式，不是过去分词**——go 的过去分词是 **gone**。" },
+      ],
+    },
+    {
+      // CHALLENGE: 陷阱题——这一道实际是 L5（过去 → 现在），不是 L5A
+      prompt: "I didn't save money in college. I'm broke now.",
+      promptCN: "我大学时没存钱。现在没钱。",
+      hintCN: "⚠ 陷阱题：先判断方向。这道是\"过去原因 → 现在结果\"还是\"现在状态 → 过去结果\"？",
+      model: "If I had saved money in college, I would have money now.",
+      pattern: /^if i had saved money in college,?\s+i would have money now/,
+      errors: [
+        { match: /^if i saved money in college,?\s+i would have had money/, msg: "❌ **方向判断错了**——这道题是 **L5**（过去原因 → 现在结果），不是 L5A。\"大学时没存钱\"是**过去事件**（不是持续状态），\"现在没钱\"是**现在结果**。公式：had + V-ed, would + V。" },
+        { match: /^if i hadn't saved money/,                         msg: "❌ **方向反了**——\"我没存钱\"是现实，虚拟要说\"**存了**\"（反事实）。用 had **saved**（不是 hadn't saved）。" },
+        { match: /^if i had saved money,?\s+i would have had money/, msg: "❌ **结果时态错**——\"现在没钱\"是**现在结果**，主句用 **would have**（不是 would have had）。这道是 L5 不是 L5A。" },
+        { match: /^if i had saved money,?\s+i wouldn't be broke/,    msg: "💡 'I wouldn't be broke now' 也对——表达\"现在不会破产\"。但更直接的写法是 'I would have money now'。" },
+        { match: /^if i had saved money,?\s+i would have money/,     msg: "等等——这正是 L5 的标准句式（had + V-ed, would + V）。不是 L5A 错误，但需要识别这道题方向跟前面 4 道不同。本题考察判断能力。" },
+      ],
+      acceptPattern: /^if i had saved money( in college)?,?\s+i wouldn't be broke (now|today)/,
+      acceptMsg: "✓ 'I wouldn't be broke now' 也完全正确。**关键洞察**：这道题是 L5（过去 → 现在），不是 L5A。会判断方向才能选对公式——这是混合虚拟的核心能力。",
+    },
+  ],
+  compression: {
+    title:    "混合虚拟反方向 · 现在 → 过去",
+    formula:  "If + 过去式 (现在状态), would have + V-ed (过去结果)",
+    triggers: ['身高/性格/恐高 + 过去某事', 'last year/that time + 持续状态', '反方向混合虚拟'],
+    killer:   "现在持续状态用过去式（were/could/knew），过去具体结果用 would have + V-ed",
+    mantra:   "现在状态 → 过去结果 · if 过去式 + would have V-ed",
+  },
+};
+
+
 /* ─── LEVEL 6 DATA — Subjunctive Inversion · 高考高频 · 三种形式合一关 ─── */
 const LEVEL_6 = {
   id: "6",
@@ -2141,6 +2367,462 @@ const LEVEL_2 = {
   },
 };
 
+/* ═══════════════════════════════════════════════════════════════
+   LEVEL 2A · I wish 否定 · 后悔做过某事
+   ═══════════════════════════════════════════════════════════════
+   This level extends L3 (I wish I HAD done) with its NEGATIVE form
+   (I wish I HADN'T done) — but more importantly, it trains the
+   COUNTERFACTUAL FLIPPING that is the soul of "wish":
+
+       现实做了某事  →  wish 没做  →  I wish I HADN'T done
+       现实没做某事  →  wish 做了  →  I wish I HAD done
+
+   L3 taught the form. L2A teaches the LOGIC — which Chinese
+   students struggle with more than the grammar itself.
+
+   Pedagogical focus — top mistakes:
+     1. Tense fallback: writes 'I wish I didn't do that'
+        (using simple-past negation, not wish-virtual)
+     2. Direction confusion: 现实做了 but wish 写成 'I wish I had done'
+        (forgot to flip — repeats reality instead of inverting it)
+     3. Form confusion: 'I wish I haven't done' (使用现在完成代替过去完成)
+     4. Wish vs hope: 'I hope I hadn't done' (用真希望表达虚拟后悔)
+   ═══════════════════════════════════════════════════════════════ */
+
+const L2A_LESSON_SCRIPT = [
+  // ─── HOOK · 提出新场景 ─────────────
+  { text: "上一关学了 **I wish I had studied**——后悔\"没做某事\"。但生活里，更多时候后悔的是\"**做了**不该做的事\"。",
+    show: "L3：后悔没做  →  L2A：后悔做了",                     highlight: null,
+    duration: 14.5 },
+
+  { text: "比如昨晚熬夜了——你说\"I shouldn't have stayed up\"——其实有更地道的英语表达。",
+    show: "I shouldn't have stayed up.   (中规中矩)",            highlight: null,
+    duration: 13.0 },
+
+  // ─── FORMULA · 否定形 ─────────────
+  { text: "用 wish 反着说——**I wish I hadn't stayed up**。意思是\"真希望我没熬夜\"。",
+    show: "I wish I hadn't stayed up.   (✓ 地道)",               highlight: "hadn't stayed",
+    duration: 16.5 },
+
+  { text: "公式：**I wish + 主语 + hadn't + 过去分词**——表示\"真希望当初没做这件事\"。",
+    show: "I wish + 主语 + hadn't + 过去分词",                   highlight: "hadn't",
+    duration: 13.5 },
+
+  { text: "和 L3 对比——L3 是 **had + 过去分词**（后悔没做），L2A 是 **hadn't + 过去分词**（后悔做了）。",
+    show: "wish I HAD done = 后悔没做\nwish I HADN'T done = 后悔做了", highlight: null,
+    duration: 17.0 },
+
+  // ─── INSIGHT · 反事实倒转 ─────────────
+  { text: "现在最关键的来了——**wish 永远说反话**。这是这一关的**灵魂**。",
+    show: "🔑 wish 永远说反话",                                  highlight: "反话",
+    duration: 11.5 },
+
+  { text: "现实做了某事 → wish 要说\"没做\"。比如：\"我熬夜了\" → I wish I **hadn't** stayed up.",
+    show: "现实：我熬夜了\nwish：我没熬夜（反向）→ hadn't stayed up", highlight: "反向",
+    duration: 16.5 },
+
+  { text: "现实没做某事 → wish 要说\"做了\"。比如：\"我没去看奶奶\" → I wish I **had** visited her.",
+    show: "现实：我没去看奶奶\nwish：我去了（反向）→ had visited",   highlight: "反向",
+    duration: 16.5 },
+
+  // ─── CHINESE STUDENT TOP TRAPS ─────────────
+  { text: "中国学生 **Top 1 错误** —— 直接陈述否定。\"我没做\"写成 **I wish I didn't do that**——不对！wish 后面要 **hadn't done**。",
+    show: "❌ I wish I didn't do that\n✓ I wish I hadn't done that", highlight: "hadn't done",
+    duration: 17.5 },
+
+  { text: "**Top 2 错误** —— 方向写反。\"我熬夜了\"，结果写成 \"I wish I had stayed up\"——这是**重复现实**，不是反事实，意思变成\"希望我**真的**熬夜了\"。",
+    show: "❌ 现实做了，wish 写成 had done  =  重复现实",         highlight: "重复现实",
+    duration: 18.0 },
+
+  // ─── PRACTICAL TIP ─────────────
+  { text: "判断技巧——做题前先问自己：\"**现实是做了还是没做？**\"——然后 wish 一定要写**反向**。",
+    show: "Step 1: 现实 = 做了 or 没做？\nStep 2: wish = 反向",     highlight: "反向",
+    duration: 14.5 },
+
+  // ─── CLOSING ─────────────
+  { text: "记住一句话：**wish 是平行宇宙，永远跟现实相反**。这不是语法题，是**逻辑题**——做对了你就赢了。",
+    show: "🌟 wish = 平行宇宙 · 永远跟现实相反",                  highlight: "平行宇宙",
+    duration: 15.0 },
+];
+
+const L2A_CORRECTION_TASKS = [
+  {
+    wrong: "I wish I didn't say those mean things to her yesterday.",
+    model: "I wish I hadn't said those mean things to her yesterday.",
+    pattern: /^i wish i hadn't said those mean things to her yesterday/i,
+    errors: [
+      { spot: "didn't say", fix: "hadn't said", note: "wish 后悔过去做过的事，必须用 **hadn't + 过去分词**——不是简单过去否定" },
+    ],
+    hintCN: "找出 1 处错误并改正（提示：wish 句型的时态）",
+  },
+  {
+    wrong: "I wish I have not eaten so much last night.",
+    model: "I wish I hadn't eaten so much last night.",
+    pattern: /^i wish i hadn't eaten so much last night/i,
+    errors: [
+      { spot: "have not", fix: "hadn't", note: "wish 后悔过去用 **hadn't（had not）+ 过去分词**——不是 have not（现在完成时）。wish 表达虚拟，时态要往前推一步" },
+    ],
+    hintCN: "找出 1 处错误并改正（提示：现在完成 vs 过去完成）",
+  },
+];
+
+const LEVEL_2A = {
+  id: "2A",
+  code: "L02A",
+  title: "I wish 否定 · 后悔做过某事",
+  subtitle: "Past Wish (Negative) · 反事实倒转思维",
+  teacherScript: L2A_LESSON_SCRIPT,
+  correctionTasks: L2A_CORRECTION_TASKS,
+  hookLine: "wish 永远说反话 — 现实做了就 wish 没做",
+  hookLineCN: "L3 教了\"后悔没做\"，L2A 教\"后悔做了\"——更重要的是**反事实倒转思维**：wish 永远跟现实相反。",
+  ruleCard: {
+    formula: "I wish + 主语 + hadn't + 过去分词",
+    points: [
+      { lhs: "用法",    rhs: "**后悔做过的事**——\"真希望当初没那么做\"。比 'I shouldn't have done' 更口语" },
+      { lhs: "核心规则", rhs: "**wish 永远说反话**——现实做了就 wish 没做；现实没做就 wish 做了" },
+      { lhs: "形式",    rhs: "wish + 主语 + **hadn't（= had not）+ 过去分词**——这是\"过去完成的否定式\"" },
+      { lhs: "对比 L3", rhs: "**had done = 后悔没做** (L3) · **hadn't done = 后悔做了** (本关)——前后映照学" },
+    ],
+  },
+  immersionCards: [
+    // Round 1 — 后悔说话/沟通
+    { situation: "跟妈妈吵架说了狠话，事后后悔",      cn: "真希望我没说那些话。",            en: "I wish I hadn't said those things." },
+    { situation: "答应朋友的事没兑现，对方失望",     cn: "真希望我没答应他。",              en: "I wish I hadn't promised him." },
+    // Round 2 — 后悔吃喝/身体
+    { situation: "晚餐吃太撑现在难受",                cn: "真希望我没吃那么多。",            en: "I wish I hadn't eaten so much." },
+    { situation: "熬夜刷剧今天起不来",                cn: "真希望我昨晚没熬那么晚。",        en: "I wish I hadn't stayed up so late." },
+    // Round 3 — 后悔花钱
+    { situation: "买了贵的耳机现在又不喜欢",          cn: "真希望我没买这副耳机。",          en: "I wish I hadn't bought these headphones." },
+    { situation: "充值游戏后悔了",                    cn: "真希望我没在那游戏里花那么多钱。", en: "I wish I hadn't spent so much on that game." },
+    // Round 4 — 后悔决定/选择
+    { situation: "高中选了不喜欢的专业方向",          cn: "真希望我当初没选这个专业。",      en: "I wish I hadn't chosen this major." },
+    { situation: "辞职后发现新工作不如旧的",          cn: "真希望我没辞掉上一份工作。",      en: "I wish I hadn't quit my last job." },
+    // Round 5 — 后悔行为/疏忽
+    { situation: "考前刷手机没复习，结果没考好",      cn: "真希望我没在考前刷手机。",        en: "I wish I hadn't been on my phone before the exam." },
+    { situation: "把秘密告诉了不该告诉的人",          cn: "真希望我没把这事告诉他。",        en: "I wish I hadn't told him about it." },
+  ],
+  transformUI: {
+    title:        "用 'I wish I hadn't ___' 表达\"后悔做过某事\"",
+    realityLabel: "REALITY · 你做了 / 没做的事（陈述）",
+    writeLabel:   "WISH · 用 wish + 反向 + had/hadn't + 过去分词 改写",
+  },
+  fillTasks: [
+    {
+      prompt: "I stayed up until 3 a.m. last night.",
+      promptCN: "昨晚我熬夜到凌晨 3 点。",
+      hintCN: "现实做了——用 'I wish I hadn't ___' 反向（真希望没熬夜）",
+      model: "I wish I hadn't stayed up so late.",
+      pattern: /^i wish i hadn't stayed up( so late| late| until.*)?/,
+      errors: [
+        { match: /^i wish i didn't stay up/,             msg: "❌ 中国学生 **Top 1 错误**：直接陈述否定。wish 后悔过去要用 **hadn't + 过去分词**（hadn't stayed），不是 didn't stay。" },
+        { match: /^i wish i don't stay up/,              msg: "❌ 时态完全错——wish 表达虚拟，过去式后悔要 **hadn't + 过去分词**，不是 don't。" },
+        { match: /^i wish i had stayed up/,              msg: "❌ **方向反了**——现实**确实熬夜了**，wish 应该是\"**没**熬夜\"（hadn't stayed）。'I wish I had stayed up' 意思是\"真希望我**真的**熬了夜\"——这是重复现实，不是反事实。" },
+        { match: /^i wish i hadn't stay up/,             msg: "**hadn't 后接过去分词**（stayed），不是动词原形（stay）。" },
+        { match: /^i wish i haven't stayed/,             msg: "**have → had**——wish 后悔用过去完成（hadn't），不是现在完成（haven't）。" },
+        { match: /^i hope i hadn't stayed/,              msg: "❌ **wish vs hope**：wish 表达\"与现实相反\"的虚拟愿望（已经发生，无法改变），hope 表达\"还有可能\"的真希望。后悔过去要用 wish。" },
+      ],
+    },
+    {
+      prompt: "I didn't apologize to my mom after our argument.",
+      promptCN: "我吵架后没向妈妈道歉。",
+      hintCN: "现实没做——用 'I wish I had ___' 反向（真希望道歉了）",
+      model: "I wish I had apologized to my mom.",
+      pattern: /^i wish i had apologized( to my mom| to mom| to her)?/,
+      errors: [
+        { match: /^i wish i apologized/,                 msg: "**形式不对**——wish 后悔过去必须用 **had + 过去分词**（had apologized），不能直接用过去式。" },
+        { match: /^i wish i hadn't apologized/,          msg: "❌ **方向反了**——现实是**没**道歉，wish 应该是\"**道歉了**\"（had apologized）。'hadn't apologized' 意思是\"真希望我**没**道歉\"——这跟你想表达的相反。" },
+        { match: /^i wish i would apologize/,            msg: "❌ wish 后**不能用 would**——后悔过去用 **had + 过去分词**。" },
+        { match: /^i wish i did apologize/,              msg: "**had → 强调过去虚拟的形式**：wish 后悔必须用 had + 过去分词，过去式 did 不够远。" },
+        { match: /^i wish i have apologized/,            msg: "**have → had**——wish 后悔用过去完成（had），不是现在完成（have）。" },
+      ],
+    },
+    {
+      prompt: "I bought an expensive phone I don't really need.",
+      promptCN: "我买了一部根本用不上的贵手机。",
+      hintCN: "现实做了——用 'I wish I hadn't ___' 反向",
+      model: "I wish I hadn't bought that phone.",
+      pattern: /^i wish i hadn't bought (that|the|this) phone/,
+      errors: [
+        { match: /^i wish i didn't buy/,                 msg: "❌ wish 后悔要 **hadn't + 过去分词**（hadn't bought），不是 didn't buy（陈述否定）。" },
+        { match: /^i wish i had bought/,                 msg: "❌ **方向反了**——现实是\"**已经买了**\"，wish 应该说\"**没买**\"（hadn't bought）。'I wish I had bought' 是\"真希望我**真的**买了\"。" },
+        { match: /^i wish i hadn't buy/,                 msg: "**buy → bought**——hadn't 后接**过去分词**（bought），不是动词原形。" },
+        { match: /^i wish i hadn't buyed/,               msg: "❌ **buyed 不存在**——buy 的过去分词是不规则的 **bought**（buy → bought → bought）。" },
+        { match: /^i don't want to buy/,                 msg: "题目要求用 wish 句型表达**事后后悔**——你这个表达是\"现在不想买\"，时态和含义都不对。" },
+      ],
+    },
+    {
+      prompt: "I didn't take my umbrella, and I got soaked.",
+      promptCN: "我没带伞，结果被淋成了落汤鸡。",
+      hintCN: "现实没做——用 'I wish I had ___' 反向",
+      model: "I wish I had taken my umbrella.",
+      pattern: /^i wish i had taken (my|the|an) umbrella/,
+      errors: [
+        { match: /^i wish i took/,                       msg: "**形式不对**——wish 后悔过去必须 **had + 过去分词**（had taken），不能只用过去式 took。" },
+        { match: /^i wish i hadn't taken/,               msg: "❌ **方向反了**——现实是\"**没**带伞\"，wish 应该是\"**带了**\"（had taken）。'hadn't taken' 是\"真希望我没带\"——这跟你想表达的相反。" },
+        { match: /^i wish i had took/,                   msg: "**had 后接过去分词**——take 的过去分词是 **taken**（不是 took 这个过去式形态）。" },
+        { match: /^i wish i would take/,                 msg: "❌ wish 后**不能用 would**——后悔过去用 had + 过去分词。" },
+        { match: /^i wish i bring/,                      msg: "形式 + 时态都不对——后悔过去要用 **had + 过去分词**：'I wish I had brought my umbrella' 也对，但更标准的是 had taken。" },
+      ],
+      acceptPattern: /^i wish i had brought (my|the|an) umbrella/,
+      acceptMsg: "✓ 'I wish I had brought my umbrella' 也完全正确——bring 和 take 在这种情景下都地道。",
+    },
+    {
+      prompt: "I told him my secret, and now everyone knows.",
+      promptCN: "我告诉他了我的秘密，现在大家都知道了。",
+      hintCN: "现实做了——用 'I wish I hadn't ___' 反向",
+      model: "I wish I hadn't told him my secret.",
+      pattern: /^i wish i hadn't told him (my secret|about it|the secret|anything)/,
+      errors: [
+        { match: /^i wish i didn't tell/,                msg: "❌ wish 后悔过去要 **hadn't + 过去分词**（hadn't told），不是 didn't tell（陈述否定）。" },
+        { match: /^i wish i had told/,                   msg: "❌ **方向反了**——现实是\"**已经告诉了**\"，wish 应该是\"**没告诉**\"（hadn't told）。" },
+        { match: /^i wish i hadn't telled/,              msg: "❌ **telled 不存在**——tell 的过去分词是不规则的 **told**（tell → told → told）。" },
+        { match: /^i wish i hadn't tell/,                msg: "**tell → told**——hadn't 后接**过去分词**（told），不是动词原形 tell。" },
+        { match: /^i wouldn't have told/,                msg: "💡 这是另一个虚拟句型 'I wouldn't have done...'，也对——但这关训练的是 wish 句型。题目要求用 'I wish I hadn't ___'。" },
+      ],
+    },
+  ],
+  compression: {
+    title:    "wish 后悔 · 否定形 · 反事实倒转",
+    formula:  "I wish + 主语 + hadn't + 过去分词",
+    triggers: ['后悔', '真希望我没', '不该做', 'shouldn\'t have'],
+    killer:   "wish 永远说反话——现实做了 → wish 没做（hadn't done）；现实没做 → wish 做了（had done）",
+    mantra:   "wish 是平行宇宙 · 永远跟现实相反",
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════════
+   LEVEL 2B · I wish she would... 对他人
+   ═══════════════════════════════════════════════════════════════
+   This is the THIRD wish pattern — and the trickiest:
+
+       I wish + 主语 + would + 动词原形
+
+   Used for:  对**别人**行为的期望/轻微抱怨,  或  希望外部环境改变.
+
+   It's NOT just "wish for someone else" formally — it's the
+   pragmatic function of "would" that matters:
+     I wish she WOULD listen.   →  暗含"她有能力听，但不愿意听"
+     I wish it WOULD stop raining.  →  希望天气改变（外部环境）
+
+   Crucial RULE: subject of wish + would CANNOT be I:
+     ❌ I wish I would study harder.   (你想学就去学，不需要 wish)
+     ✓  I wish my brother would help.  (希望别人改变)
+
+   Top mistakes:
+     1. Apply wish+past tense formula:  I wish he stopped → 形式对但语气不对
+     2. Use will / shall:                I wish he will stop → 时态错
+     3. Use could instead of would:      could = 能力 ≠ would = 意愿
+     4. Use I as subject:                I wish I would do it
+     5. Wrong placement:                 I wish to him to stop (滥用 to-不定式)
+   ═══════════════════════════════════════════════════════════════ */
+
+const L2B_LESSON_SCRIPT = [
+  // ─── HOOK · 引出新问题 ─────────────
+  { text: "前面两关学了 wish 对自己——\"我希望我会弹琴\"、\"我希望我没熬夜\"。但 wish 还有第三种用法：**希望别人做某事**。",
+    show: "L2 + L3 + L2A：对自己\nL2B：对别人",                  highlight: "对别人",
+    duration: 14.0 },
+
+  { text: "比如：你弟弟一直打游戏不学习。你想说\"我真希望他停下来\"——怎么说？",
+    show: "弟弟一直打游戏 → 真希望他停下来",                     highlight: null,
+    duration: 11.0 },
+
+  // ─── WRONG ATTEMPT · 套用前面的公式 ─────────────
+  { text: "套用前面的公式 wish + 过去式 → \"I wish he **stopped** playing games.\"——形式上没错，但语气**完全不对**。",
+    show: "I wish he stopped playing games.   (奇怪)",          highlight: "stopped",
+    duration: 16.0 },
+
+  { text: "为什么奇怪？因为弟弟**有能力**停下来——只是不愿意。这种情况要用一个新工具：**would**。",
+    show: "他有能力 · 但不愿意  →  需要 would",                  highlight: "would",
+    duration: 14.5 },
+
+  // ─── FORMULA ─────────────
+  { text: "正确说法：**I wish he would stop playing games.** 公式：**I wish + 主语 + would + 动词原形**。",
+    show: "I wish + 主语 + would + 动词原形",                   highlight: "would",
+    duration: 16.5 },
+
+  { text: "为什么用 would？因为 **would = 愿不愿意做**。\"I wish he would stop\" 暗含\"**他能停，但不愿停**\"——是对他行为的轻微抱怨。",
+    show: "would = 愿不愿意 → 暗含\"对方不愿做\"",                highlight: "愿不愿意",
+    duration: 17.5 },
+
+  // ─── THREE SCENARIOS ─────────────
+  { text: "用法一：**抱怨**别人不做的事。\"My mom never listens to me\" → **I wish my mom would listen.**",
+    show: "抱怨 · I wish my mom would listen.",                 highlight: "would listen",
+    duration: 16.0 },
+
+  { text: "用法二：**期望**别人做某事。\"You don't call me much\" → **I wish you would call more often.**",
+    show: "期望 · I wish you would call more often.",           highlight: "would call",
+    duration: 15.5 },
+
+  { text: "用法三：希望**外部环境**改变。\"It's been raining for a week\" → **I wish it would stop raining.**",
+    show: "环境 · I wish it would stop raining.",               highlight: "would stop",
+    duration: 15.0 },
+
+  // ─── KEY RESTRICTION ─────────────
+  { text: "**关键限制**——wish + would 的主语**不能是 I**。不能说 \"I wish I would study harder\"——你想学就去学，不用 wish！",
+    show: "❌ I wish I would ...   (无意义)\n✓ I wish 别人 would ...",  highlight: "不能是 I",
+    duration: 17.5 },
+
+  // ─── CHINESE STUDENT TOP TRAPS ─────────────
+  { text: "中国学生 **Top 1 错误** —— 用 will 不用 would。**\"I wish he will stop\" 错！wish 后面永远不能用 will**——必须 would。",
+    show: "❌ I wish he will stop\n✓ I wish he would stop",     highlight: "would",
+    duration: 16.5 },
+
+  // ─── CLOSING ─────────────
+  { text: "记住：**wish + would = 希望别人做某事**。两个关键——① 主语不是 I ② 用 would 不用 will / could。",
+    show: "🔑 wish + 别人 + would + 动原",                      highlight: null,
+    duration: 13.0 },
+];
+
+const L2B_CORRECTION_TASKS = [
+  {
+    wrong: "I wish my brother will stop playing games at night.",
+    model: "I wish my brother would stop playing games at night.",
+    pattern: /^i wish my brother would stop playing games at night/i,
+    errors: [
+      { spot: "will", fix: "would", note: "wish 后面永远不能用 **will**——必须 **would**。这是这一关最高频考点" },
+    ],
+    hintCN: "找出 1 处错误并改正（提示：wish 后的助动词）",
+  },
+  {
+    wrong: "I wish I would study harder for the exam tomorrow.",
+    model: "I wish I had studied harder for the exam tomorrow.",
+    pattern: /^i wish i had studied harder for the exam( tomorrow)?/i,
+    errors: [
+      { spot: "I would study", fix: "I had studied", note: "**wish + would 主语不能是 I**——对自己用 would 没意义。表达对自己的后悔/愿望，要用 wish + 过去式（had studied）" },
+    ],
+    hintCN: "找出 1 处错误并改正（提示：主语是 I 不能用 would）",
+  },
+];
+
+const LEVEL_2B = {
+  id: "2B",
+  code: "L02B",
+  title: "I wish she would... 对他人",
+  subtitle: "Wish + Would · 期望别人做某事",
+  teacherScript: L2B_LESSON_SCRIPT,
+  correctionTasks: L2B_CORRECTION_TASKS,
+  hookLine: "wish + would — for OTHER people, not yourself",
+  hookLineCN: "L2/L3/L2A 都是\"对自己\"的 wish。L2B 教\"对别人\"的 wish——必须用 **would**，主语不能是 I。",
+  ruleCard: {
+    formula: "I wish + 主语（不是 I）+ would + 动词原形",
+    points: [
+      { lhs: "用法",       rhs: "希望**别人**做某事——抱怨他不做 / 期望他做 / 希望外部环境改变" },
+      { lhs: "为什么 would", rhs: "**would = 愿不愿意**——暗含\"对方有能力但不愿做\"，是轻微抱怨/期望" },
+      { lhs: "主语限制",   rhs: "**主语不能是 I**——\"I wish I would...\" 没意义（你想做就去做）。必须是 he / she / they / you / it（天气）" },
+      { lhs: "对比",       rhs: "wish + 过去式（**状态**：希望我会弹琴）vs wish + would（**行为**：希望他停止）" },
+    ],
+  },
+  immersionCards: [
+    // Round 1 — 抱怨家人
+    { situation: "弟弟一直熬夜打游戏",                 cn: "真希望弟弟能早点睡。",          en: "I wish my brother would go to bed earlier." },
+    { situation: "妈妈从来不听你说话",                 cn: "真希望妈妈能听我说。",          en: "I wish my mom would listen to me." },
+    // Round 2 — 抱怨同学/同事
+    { situation: "同桌上课老打断老师",                 cn: "真希望他能停止打断老师。",      en: "I wish he would stop interrupting the teacher." },
+    { situation: "同事打电话特别大声",                 cn: "真希望她讲电话能小声点。",      en: "I wish she would talk more quietly on the phone." },
+    // Round 3 — 期望伴侣 / 朋友
+    { situation: "出差中朋友很少打电话",               cn: "真希望你能多打几个电话。",      en: "I wish you would call more often." },
+    { situation: "好朋友约了几次都失约",               cn: "真希望他能信守承诺。",          en: "I wish he would keep his promises." },
+    // Round 4 — 天气 / 外部环境
+    { situation: "下雨连续一周不停",                   cn: "真希望雨能停了。",              en: "I wish it would stop raining." },
+    { situation: "夏天太热不想出门",                   cn: "真希望天气能凉快点。",          en: "I wish it would cool down." },
+    // Round 5 — 期望整体改善
+    { situation: "邻居总是放音乐到深夜",               cn: "真希望邻居能小声点。",          en: "I wish the neighbors would keep it down." },
+    { situation: "公交车经常晚点",                     cn: "真希望公交车能准时。",          en: "I wish the bus would run on time." },
+  ],
+  transformUI: {
+    title:        "用 'I wish ___ would ___' 表达\"希望别人做某事\"",
+    realityLabel: "REALITY · 别人正在做 / 不做的事（陈述）",
+    writeLabel:   "WISH · 用 wish + 主语（不是 I）+ would + 动原 改写",
+  },
+  fillTasks: [
+    {
+      prompt: "My brother plays video games all night.",
+      promptCN: "我弟弟一整晚都在打游戏。",
+      hintCN: "用 'I wish + he/my brother + would ___' 表达希望他停下",
+      model: "I wish my brother would stop playing games at night.",
+      pattern: /^i wish (my brother|he) would stop playing (video )?games( at night| all night)?/,
+      errors: [
+        { match: /^i wish my brother stops/,                  msg: "❌ **形式不对**——这里不能用 stops（一般现在式）。希望别人停止某行为，必须 **would + 动词原形**（would stop）。" },
+        { match: /^i wish my brother stopped/,                msg: "❌ 用 wish + 过去式（stopped）形式上没错，但**语气不对**——失去了\"催促/期望对方改变\"的语用色彩。希望别人**行为改变**要用 **would**。" },
+        { match: /^i wish my brother will stop/,              msg: "❌ 中国学生 **Top 1 错误**：wish 后面永远不能用 **will**——必须用 **would**。" },
+        { match: /^i wish my brother could stop/,             msg: "❌ **could 表能力，would 表意愿**——你弟弟其实**能**停（不是没能力），他是**不愿意**停。所以用 **would**。" },
+        { match: /^i wish my brother shall stop/,             msg: "❌ **shall 在这种语境下完全不用**——wish 后面要 would。" },
+        { match: /^i wish my brother to stop/,                msg: "❌ **wish + 不定式（to stop）只用于\"祝愿\"**（如 'I wish you to succeed' 也罕用）。希望别人停止某行为，必须用从句结构 'wish + 主语 + would + 动原'。" },
+      ],
+    },
+    {
+      prompt: "It's been raining for a week.",
+      promptCN: "已经下了一周雨了。",
+      hintCN: "用 'I wish it would ___' 表达希望天气改变",
+      model: "I wish it would stop raining.",
+      pattern: /^i wish it would stop raining/,
+      errors: [
+        { match: /^i wish it stops raining/,                  msg: "❌ 希望外部环境改变要用 **would + 动原**——不是一般现在式 stops。" },
+        { match: /^i wish it stopped raining/,                msg: "❌ 用 wish + 过去式（stopped）这里**语气不对**——希望天气**改变**要用 **would**（强调希望发生变化）。" },
+        { match: /^i wish it will stop/,                      msg: "❌ wish 后**永远不能用 will**——必须 **would**。这是这关高频陷阱。" },
+        { match: /^i wish it could stop/,                     msg: "❌ **could 表能力**（雨能不能停？这不是能力问题）。希望天气改变用 **would**——表达\"愿望/期待变化\"。" },
+        { match: /^i wish it weren't raining/,                msg: "💡 'I wish it weren't raining' 也对——但语义是\"现在不在下雨就好了\"（状态）。原句\"已经下了一周雨\"更适合用 **would stop raining**（希望它**停下来**）。" },
+      ],
+      acceptPattern: /^i wish it weren't raining( anymore)?/,
+      acceptMsg: "✓ 'I wish it weren't raining' 也是合理答案，但 **I wish it would stop raining** 更贴近原句\"已经下了一周\"的含义——强调\"希望它停下来\"。",
+    },
+    {
+      prompt: "You never call me when you're traveling.",
+      promptCN: "你出差时从来不打电话给我。",
+      hintCN: "用 'I wish you would ___' 表达期望对方多打电话",
+      model: "I wish you would call me more often.",
+      pattern: /^i wish you would call (me )?(more often|more|me)?/,
+      errors: [
+        { match: /^i wish you call/,                          msg: "❌ **形式不对**——希望对方做某事必须 **would + 动原**（would call），不能直接用 call。" },
+        { match: /^i wish you called/,                        msg: "❌ wish + 过去式 形式正确但**语气不对**——希望对方\"行为改变/愿意做\"要用 **would**。'I wish you called' 的语气更像\"希望你**经常**打\"（一种状态），不如 **would call** 直接表达期望。" },
+        { match: /^i wish you will call/,                     msg: "❌ wish 后**永远不能用 will**——必须 **would**。" },
+        { match: /^i wish you can call/,                      msg: "❌ wish 后从句不用现在式 can——表达期望要用 **would call**。如果想强调\"能不能打\"，用 could call（但这里 would 更准确）。" },
+        { match: /^i wish you could call/,                    msg: "💡 'I wish you could call' 暗含\"你**没法**打\"（能力限制）。但原句的意思是\"你**不愿**打\"——用 **would** 更准确（表达\"希望你愿意打\"）。" },
+      ],
+    },
+    {
+      prompt: "My coworker talks really loudly on the phone.",
+      promptCN: "我的同事打电话声音特别大。",
+      hintCN: "用 'I wish she would ___' 表达希望她小声点",
+      model: "I wish she would talk more quietly on the phone.",
+      pattern: /^i wish (she|my coworker) would (talk|speak) (more quietly|quietly|softer|less loudly|lower)/,
+      errors: [
+        { match: /^i wish she talks quietly/,                 msg: "❌ 希望别人**改变行为**必须 **would + 动原**（would talk），不是一般现在式。" },
+        { match: /^i wish she will talk/,                     msg: "❌ wish 后**永远不能用 will**——必须 **would**。" },
+        { match: /^i wish she can talk/,                      msg: "❌ wish 后不能用现在式 can——希望对方改变行为用 **would**。" },
+        { match: /^i wish she could talk/,                    msg: "❌ **could 表能力**——你同事**有能力**小声讲（人当然能小声），她只是**没意识/不愿意**。所以用 **would**（表达\"愿意做\"）。" },
+        { match: /^i wish my coworker shut up/,               msg: "💡 语义可以理解（希望她闭嘴），但太粗鲁——这关训练**得体**的 wish + would 表达。试试 **would talk more quietly**。" },
+      ],
+    },
+    {
+      // CHALLENGE: trap question — should NOT use would (subject is I)
+      prompt: "I'm exhausted but I have to keep working tonight.",
+      promptCN: "我累坏了但今晚还得继续工作。",
+      hintCN: "⚠ 陷阱题：主语是 I，**不能**用 would。用 wish + 过去式表达\"对自己当下的状态遗憾\"",
+      model: "I wish I didn't have to keep working tonight.",
+      pattern: /^i wish i didn't have to (keep working|work|continue working)( tonight)?/,
+      errors: [
+        { match: /^i wish i would (not |n't )?(keep|have to)/, msg: "❌ **主语是 I 不能用 would**——这是这关核心限制。对自己当下不满，要用 **wish + 过去式**（didn't have to）。" },
+        { match: /^i wish i wouldn't/,                        msg: "❌ **wish + would 主语不能是 I**——你能控制自己做不做（不需要 wish 别人愿意）。改用 **wish I didn't have to ...**。" },
+        { match: /^i wish i don't have to/,                   msg: "❌ wish 后从句要用**过去式**（didn't）——不是 don't（现在式）。这是 L2 教过的 \"wish + 过去式\"。" },
+        { match: /^i wish i hadn't to work/,                  msg: "❌ \"hadn't to\" 不是英语用法。wish 表达**当下不想**做某事，用 'I wish I didn't have to ___'。" },
+        { match: /^i wish i could stop working/,              msg: "💡 'I wish I could stop' 也合理——但更地道的表达是 'I wish I didn't have to keep working'，更贴近原句\"不得不继续\"的含义。" },
+      ],
+      acceptPattern: /^i wish i could (stop|finish|quit) working/,
+      acceptMsg: "✓ 'I wish I could stop working' 也对——但 'I wish I didn't have to keep working' 更贴近\"不得不继续\"的原意。这道题的核心：**主语是 I 时不能用 would**，必须 wish + 过去式。",
+    },
+  ],
+  compression: {
+    title:    "wish 对他人 · would 表愿意",
+    formula:  "I wish + 主语（不是 I）+ would + 动词原形",
+    triggers: ['希望别人', '真希望他/她', '抱怨', '希望天气'],
+    killer:   "wish 后永远不用 will——希望别人改变行为/外部环境改变，用 would；主语不能是 I",
+    mantra:   "wish + 别人 + would · 主语不是 I",
+  },
+};
+
+
+
 /* ─── LEVEL 3 — I wish + had done · 用 wish 表达过去后悔 (单从句，比条件句简单) ─── */
 const LEVEL_3 = {
   id: "3",
@@ -2332,6 +3014,232 @@ const LEVEL_1 = {
   },
 };
 
+/* ═══════════════════════════════════════════════════════════════
+   LEVEL 1A · If I knew, I could... 完整型
+   ═══════════════════════════════════════════════════════════════
+   This level is the GENERALIZATION of L1 (If I were you).
+   L1 only taught the special case (be verbs all → were).
+   L1A teaches the universal formula for ANY verb:
+
+       If + 主语 + 过去式动词,  主语 + would/could + 动原.
+       If I knew the answer,    I would tell you.
+       If I had more money,     I could buy a new phone.
+       If she lived nearby,     she would visit us.
+
+   Pedagogical focus — top mistakes by Chinese students:
+     1. Wrong verb form for 3rd person:  If she knows  →  If she knew
+     2. "would" stuck in the if-clause:  If I would know  →  If I knew
+     3. Confusing real vs unreal:        If I have time, I will help.  vs.
+                                         If I had time, I would help.
+     4. Wrong tense (over-rotating):     If I had known  →  that's L4 (past unreal)
+     5. could/would confusion:           "ability" → could · "willingness" → would
+   ═══════════════════════════════════════════════════════════════ */
+
+const L1A_LESSON_SCRIPT = [
+  // ─── HOOK · 提出新问题 ─────────────
+  { text: "上一关你学会了 **If I were you, I would...**——但有个限制：**只对 be 动词管用**。",
+    show: "L1 学过：If I were you, I would ...   (仅 be 动词)",   highlight: "be 动词",
+    duration: 13.0 },
+
+  { text: "可生活里大部分\"如果\"用的不是 be 动词。比如：\"如果我**有**钱\"、\"如果我**会**弹琴\"。这些怎么办？",
+    show: "如果我有钱  ·  如果我会弹琴  ·  如果我懂法语",     highlight: null,
+    duration: 13.5 },
+
+  // ─── FORMULA · 万能公式 ─────────────
+  { text: "答案是——给任何动词\"后退一步\"。现在式 **know** 后退一步变 **knew**。**have** 后退变 **had**。**live** 后退变 **lived**。",
+    show: "know → knew  ·  have → had  ·  live → lived",       highlight: "后退一步",
+    duration: 16.0 },
+
+  { text: "万能公式：**If 主语 + 过去式 + 任何动词，主语 + would 加动原**。两边都要后退。",
+    show: "If 主语 + 过去式,  主语 + would + 动原",             highlight: "would + 动原",
+    duration: 14.5 },
+
+  { text: "比如：**If I knew the answer, I would tell you.** 中文是\"如果我知道答案，我会告诉你\"——意思是：实际不知道。",
+    show: "If I knew the answer, I would tell you.  (实际不知道)",  highlight: "knew",
+    duration: 17.5 },
+
+  { text: "再来一句：**If I had a car, I would drive you home.** 实际没车——所以用 had（过去式），主句配 would。",
+    show: "If I had a car, I would drive you home.   (实际没车)",   highlight: "had",
+    duration: 17.0 },
+
+  // ─── CONTRAST · 真实 vs 虚拟 ─────────────
+  { text: "现在最关键的来了——**对比**这两句，长得像，意思天差地别！",
+    show: "对比 · 真实 vs 虚拟",                                 highlight: null,
+    duration: 9.5 },
+
+  { text: "真实条件：**If I have time, I will help.** 现在式——可能有时间，也可能没。",
+    show: "If I have time, I will help.   (真实 · 可能)",         highlight: "have",
+    duration: 14.0 },
+
+  { text: "虚拟条件：**If I had time, I would help.** 过去式——实际**没**时间，只是假设。",
+    show: "If I had time, I would help.   (虚拟 · 实际没时间)",   highlight: "had",
+    duration: 15.0 },
+
+  // ─── TRAP · 中国学生 Top 错误 ─────────────
+  { text: "中国学生 **Top 1 错误**——第三人称单数。\"如果她知道\"很多人写成 **If she knows**——这是真实条件句！虚拟要用 **knew**。",
+    show: "❌ If she knows ...    ✓ If she knew ...",            highlight: "knew",
+    duration: 17.5 },
+
+  { text: "**Top 2 错误**——把 **would 塞进 if 从句**。❌ If I would know... 错！would 只能放**主句**，从句永远不用 would。",
+    show: "❌ If I would know ...    ✓ If I knew ...",           highlight: "would",
+    duration: 16.5 },
+
+  // ─── CLOSING · 一句话浓缩 ─────────────
+  { text: "记住一句话：**两边都后退**——if 从句用过去式，主句用 would 加动原。这一关不只学了一个句型，是学会了**整套**现在虚拟。",
+    show: "🔑 两边都后退 · 过去式 + would + 动原",                highlight: "🔑 两边都后退",
+    duration: 16.0 },
+];
+
+const L1A_CORRECTION_TASKS = [
+  {
+    wrong: "If I would know the answer, I will tell you.",
+    model: "If I knew the answer, I would tell you.",
+    pattern: /^if i knew the answer,?\s+i would tell you/i,
+    errors: [
+      { spot: "would know", fix: "knew",  note: "**would 不能放 if 从句**——从句用过去式（knew），不用 would" },
+      { spot: "will",       fix: "would", note: "现在虚拟主句必须 **would + 动原**（不是 will）" },
+    ],
+    hintCN: "找出 2 处错误并改正",
+  },
+  {
+    wrong: "If she has more money, she would buys a car.",
+    model: "If she had more money, she would buy a car.",
+    pattern: /^if she had more money,?\s+she would buy a car/i,
+    errors: [
+      { spot: "has",  fix: "had", note: "第三人称单数虚拟也用**过去式**（had），不是 has——很多人最容易在这里错" },
+      { spot: "buys", fix: "buy", note: "**would 后接动词原形**（buy），不是 buys（第三人称单数）" },
+    ],
+    hintCN: "找出 2 处错误并改正（提示：注意第三人称单数）",
+  },
+];
+
+const LEVEL_1A = {
+  id: "1A",
+  code: "L01A",
+  title: "If I knew, I could... 完整型",
+  subtitle: "All Verbs · 现在虚拟通用公式",
+  teacherScript: L1A_LESSON_SCRIPT,
+  correctionTasks: L1A_CORRECTION_TASKS,
+  hookLine: "Not just be verbs — every verb can step back",
+  hookLineCN: "上一关只学了 If I were you 这个特殊型。这一关教你万能公式——任何动词都能用虚拟语气。",
+  ruleCard: {
+    formula: "If 主语 + 过去式动词,  主语 + would/could/might + 动原",
+    points: [
+      { lhs: "适用范围",       rhs: "**所有动词**——不只是 be 动词。If I knew / had / lived / spoke / understood..." },
+      { lhs: "核心规则",       rhs: "**两边都要后退一步**——if 从句用过去式，主句用 would（或 could / might）+ 动原" },
+      { lhs: "would vs could", rhs: "**would = 愿意/会做**（'I would tell you'），**could = 能够**（'I could help you'）——按含义选" },
+      { lhs: "时态陷阱",       rhs: "现在虚拟用**一般过去式**（knew, had, lived）——**不是**过去完成（had known）。had + 过去分词那是 L4 的过去虚拟" },
+    ],
+  },
+  immersionCards: [
+    // Round 1 — 假设知识 / 能力
+    { situation: "朋友问你历史题，你不会",       cn: "如果我知道答案，我会告诉你。",         en: "If I knew the answer, I would tell you." },
+    { situation: "朋友想学钢琴，你也不会弹",     cn: "如果我会弹钢琴，我会教你。",           en: "If I could play the piano, I would teach you." },
+    // Round 2 — 假设拥有 / 物质
+    { situation: "朋友想借点钱，你也没多余的",   cn: "如果我有钱，我会借给你。",             en: "If I had the money, I would lend it to you." },
+    { situation: "聊起读书但实际没空",           cn: "如果我有时间，我会多读点书。",         en: "If I had the time, I would read more books." },
+    // Round 3 — 假设地点 / 距离
+    { situation: "想常去看朋友但住得远",         cn: "如果我住得近，我会经常来看你。",       en: "If I lived nearby, I would visit you more often." },
+    { situation: "家人在外地，想多陪",           cn: "如果我们住一起，我会每天做饭。",       en: "If we lived together, I would cook every day." },
+    // Round 4 — 假设语言 / 技能
+    { situation: "外国朋友看不懂中文菜单",       cn: "如果我会说西班牙语，我会帮你点菜。",   en: "If I spoke Spanish, I would help you order." },
+    { situation: "想看法国电影但听不懂",         cn: "如果我懂法语，我会看法国电影。",       en: "If I understood French, I would watch French movies." },
+    // Round 5 — 假设状态 / 身体
+    { situation: "想去蹦极但恐高",               cn: "如果我不恐高，我会去蹦极。",           en: "If I weren't afraid of heights, I would try bungee jumping." },
+    { situation: "感冒了去不了聚会",             cn: "如果我感觉好些，我会去参加聚会。",     en: "If I felt better, I would come to the party." },
+  ],
+  transformUI: {
+    title:        "用 If + 过去式 表达\"与现实相反的假设\"",
+    realityLabel: "REALITY · 现在的真实情况（陈述）",
+    writeLabel:   "VIRTUAL · 用 If 过去式 + would 改写",
+  },
+  fillTasks: [
+    {
+      prompt: "I don't know the answer to this question.",
+      promptCN: "我不知道这道题的答案。",
+      hintCN: "用 'If I knew ___, I would ___' 表示假设知道",
+      model: "If I knew the answer, I would tell you.",
+      pattern: /^if i knew the answer,?\s+i('d| would)\s+tell\s+you/,
+      errors: [
+        { match: /^if i know/,                            msg: "❌ 中国学生 **Top 错误**：现在虚拟从句必须用**过去式 knew**，不能用现在式 know——这是\"动词后退一步\"。" },
+        { match: /^if i would know/,                      msg: "❌ **would 不能放 if 从句**！正确说法是 **If I knew**——从句永远不用 would。would 只放主句。" },
+        { match: /^if i had known/,                       msg: "时态过头了——**had + 过去分词** 是过去虚拟（L4 才学）。这里要表达**现在不知道**，用一般过去式 **knew**。" },
+        { match: /^if i knew the answer,?\s+i\s+will/,    msg: "**will → would**——主句要用 would 远离现实，不是 will（真实将来）。" },
+        { match: /^if i knew the answer,?\s+i\s+would\s+told/, msg: "**would 后接动词原形**（tell），不是过去式（told）。" },
+        { match: /^if i knew the answer,?\s+tell\s+you/,  msg: "主句**缺主语 I**——完整应该是 'I would tell you'。" },
+      ],
+    },
+    {
+      prompt: "I don't have a car.",
+      promptCN: "我没有车。",
+      hintCN: "用 'If I had ___, I would ___' 表示假设有车",
+      model: "If I had a car, I would drive you home.",
+      pattern: /^if i had (a |the )?car,?\s+i('d| would)\s+drive/,
+      errors: [
+        { match: /^if i have/,                            msg: "❌ 现在虚拟用**过去式 had**，不是 have——\"动词后退一步\"。" },
+        { match: /^if i would have/,                      msg: "❌ **would 不能放 if 从句**！直接用 **If I had**——从句永远不用 would。" },
+        { match: /^if i had had/,                         msg: "时态过头——**had had** 是过去虚拟（L4）。这里表达\"现在没车\"，用一般过去式 **had** 即可。" },
+        { match: /^if i had (a |the )?car,?\s+i\s+will/,  msg: "**will → would**——现在虚拟主句必须 would。" },
+        { match: /^if i had (a |the )?car,?\s+i\s+would\s+drove/, msg: "**would 后接动词原形**（drive），不是过去式（drove）。" },
+      ],
+    },
+    {
+      prompt: "She lives far from her parents.",
+      promptCN: "她离父母住得远。",
+      hintCN: "用 'If she lived ___, she would ___' 表示假设住得近",
+      model: "If she lived nearby, she would visit them more often.",
+      pattern: /^if she lived (nearby|near|close),?\s+she('d| would)\s+visit/,
+      errors: [
+        { match: /^if she lives/,                         msg: "❌ **第三人称单数**虚拟也用**过去式 lived**，不是 lives——这是中国学生最容易错的点：\"她\"不影响虚拟语气的过去式。" },
+        { match: /^if she would live/,                    msg: "❌ **would 不能放 if 从句**！正确：**If she lived**。" },
+        { match: /^if she had lived/,                     msg: "时态过头——**had lived** 是过去虚拟（L4）。这里表达\"现在住得远\"，用 **lived** 即可。" },
+        { match: /^if she lived (nearby|near|close),?\s+she\s+visits?/, msg: "主句要用 **would visit**——现在虚拟主句必须 would + 动原。" },
+        { match: /^if she lived (nearby|near|close),?\s+she\s+will/, msg: "**will → would**——主句要 would。" },
+        { match: /^if she lived (nearby|near|close),?\s+she\s+would\s+visits/, msg: "**would 后接动词原形**（visit），不加 s。" },
+      ],
+    },
+    {
+      prompt: "I have to work this weekend.",
+      promptCN: "我这周末必须上班。",
+      hintCN: "用 'If I didn't have to ___, I would ___' 表示假设不用上班",
+      model: "If I didn't have to work, I would go to the beach.",
+      pattern: /^if i didn't have to work,?\s+i('d| would)\s+\w+/,
+      errors: [
+        { match: /^if i don't have to/,                   msg: "❌ 现在虚拟从句要**过去式**——'don't have to' 是现在式，应该是 **didn't have to**。" },
+        { match: /^if i wouldn't have to/,                msg: "❌ **would 不能放 if 从句**！直接用 **If I didn't have to**。" },
+        { match: /^if i hadn't had to/,                   msg: "时态过头——**hadn't had to** 是过去虚拟（L4）。表达\"现在必须上班\"，用 **didn't have to** 即可。" },
+        { match: /^if i didn't have to work,?\s+i\s+will/, msg: "**will → would**——主句要 would。" },
+        { match: /^if i didn't have to work,?\s+i\s+would\s+went/, msg: "**would 后接动词原形**（go），不是过去式（went）。" },
+      ],
+    },
+    {
+      prompt: "I can't speak French.",
+      promptCN: "我不会说法语。",
+      hintCN: "用 'If I could ___, I would ___' 表示假设会说",
+      model: "If I could speak French, I would watch French movies.",
+      pattern: /^if i could speak french,?\s+i('d| would)\s+watch/,
+      errors: [
+        { match: /^if i can speak/,                       msg: "❌ 现在虚拟从句用**过去式 could**，不是 can——can 后退一步变 could。" },
+        { match: /^if i would speak/,                     msg: "❌ **would 不能放 if 从句**！表达\"会说\"用 **could**（能力的过去式）。" },
+        { match: /^if i spoke french,?\s+i('d| would)\s+watch/, msg: "💡 **acceptable**：'If I spoke French' 也对（spoke 是 speak 的过去式）。但 **could speak** 更强调\"能力\"——更贴近\"我**会**说法语\"的意思。" },
+        { match: /^if i could speak french,?\s+i\s+will/, msg: "**will → would**——主句要 would。" },
+        { match: /^if i could speak french,?\s+i\s+watch/, msg: "主句要 **would watch**——现在虚拟主句必须 would + 动原。" },
+        { match: /^if i could speak french,?\s+i\s+would\s+watched/, msg: "**would 后接动词原形**（watch），不是过去式（watched）。" },
+      ],
+      acceptPattern: /^if i spoke french,?\s+i('d| would)\s+watch/,
+      acceptMsg: "✓ 答案合理——'If I spoke French' 是另一种正确写法。但 **could speak** 更强调\"能力\"含义，更贴近原句 \"I can't speak French\"。",
+    },
+  ],
+  compression: {
+    title:    "现在虚拟 · 完整型",
+    formula:  "If + 过去式,  would/could + 动原",
+    triggers: ['假设', '与现实相反', 'if I knew', 'if I had', 'if I could'],
+    killer:   "看到 If + 过去式 → 主句必用 would + 动原（两边都后退一步）",
+    mantra:   "两边都后退 · 过去式配 would 动原",
+  },
+};
+
+
 /* ─── REFRESHED SELF-AUDIT — reflects the new persistence + content additions ─── */
 
 /* ─── 5 WORLDS for interleaving practice — per user's pedagogy spec ─── */
@@ -2405,7 +3313,7 @@ const ROADMAP = [
     capability: "11 考点教学",
     current: { tier: "Level 1-2 完整", desc: "If I were you / I wish 完整教学" },
     next:    { tier: "Level 3-6 完整", desc: "虚拟现在全 / 虚拟过去 / 混合 / 倒装" },
-    full:    { tier: "11 关全完整", desc: "+ Level 7-10 + 综合 Boss 真题冲刺" },
+    full:    { tier: "9 关全完整", desc: "+ 综合 Boss 真题冲刺" },
     achieved: "current",
   },
   {
@@ -2521,8 +3429,8 @@ const CURRICULUM_TREE = [
     id: "cat_present", icon: "🌱", name: "现在虚拟",
     children: [
       { id: "i_l1",        name: "If I were you 给建议",       builtAs: "1", route: "L1" },
-      { id: "i_pres_full", name: "If I knew, I could... 完整型", builtAs: null },
-      { id: "i_pres_inv",  name: "Were I you 现在虚拟倒装",     builtAs: null },
+      { id: "i_pres_full", name: "If I knew, I could... 完整型", builtAs: "1A", route: "L1A" },
+      { id: "i_pres_inv",  name: "Were I you 现在虚拟倒装",     builtAs: "6", route: "L6" },
     ],
   },
   {
@@ -2530,23 +3438,23 @@ const CURRICULUM_TREE = [
     children: [
       { id: "i_l2",       name: "I wish 现在不满 (过去式)",     builtAs: "2", route: "L2" },
       { id: "i_l3",       name: "I wish 过去后悔 (had + 过去分词)", builtAs: "3", route: "L3" },
-      { id: "i_wish_neg", name: "I wish 否定 (hadn't done)",   builtAs: null },
-      { id: "i_wish_oth", name: "I wish she would... 对他人",    builtAs: null },
+      { id: "i_wish_neg", name: "I wish 否定 (hadn't done)",   builtAs: "2A", route: "L2A" },
+      { id: "i_wish_oth", name: "I wish she would... 对他人",    builtAs: "2B", route: "L2B" },
     ],
   },
   {
     id: "cat_past", icon: "🔙", name: "过去虚拟",
     children: [
       { id: "i_l4",        name: "If I had... I would have...", builtAs: "4", route: "L4" },
-      { id: "i_past_inv",  name: "Had I known 过去虚拟倒装",     builtAs: null },
-      { id: "i_implicit_w",name: "Without your help 含蓄虚拟",    builtAs: null },
+      { id: "i_past_inv",  name: "Had I known 过去虚拟倒装",     builtAs: "6", route: "L6" },
+      { id: "i_implicit_w",name: "Without your help 含蓄虚拟",    builtAs: "7", route: "L7" },
     ],
   },
   {
     id: "cat_mixed", icon: "🔀", name: "混合虚拟",
     children: [
       { id: "i_mixed_pp", name: "过去原因 → 现在结果",            builtAs: "5", route: "L5" },
-      { id: "i_mixed_pf", name: "现在条件 → 过去结果",            builtAs: null },
+      { id: "i_mixed_pf", name: "现在条件 → 过去结果",            builtAs: "5A", route: "L5A" },
     ],
   },
   {
@@ -3596,6 +4504,10 @@ function SidebarMenu({ progress, onNavigate, currentStage }) {
     else if (item.route === "DIAGNOSTIC") onNavigate(23);
     else if (item.route === "MOCK") onNavigate(27);
     else if (item.route === "DETECTIVE") onNavigate(28);
+    else if (item.route === "L1A") onNavigate(29);
+    else if (item.route === "L2A") onNavigate(30);
+    else if (item.route === "L2B") onNavigate(31);
+    else if (item.route === "L5A") onNavigate(32);
   };
 
   const allItems = CURRICULUM_TREE.flatMap(c => c.children).filter(i => i.builtAs !== "exam_ref");
@@ -3608,6 +4520,10 @@ function SidebarMenu({ progress, onNavigate, currentStage }) {
 
   const isActiveItem = (item) => {
     if (item.route === "L1" && currentStage === 1) return true;
+    if (item.route === "L1A" && currentStage === 29) return true;
+    if (item.route === "L2A" && currentStage === 30) return true;
+    if (item.route === "L2B" && currentStage === 31) return true;
+    if (item.route === "L5A" && currentStage === 32) return true;
     if (item.route === "L2" && currentStage === 12) return true;
     if (item.route === "L3" && currentStage === 16) return true;
     if (item.route === "L4" && currentStage === 17) return true;
@@ -6030,6 +6946,10 @@ function App() {
   let screen;
   if      (stage === 0) screen = <IntroScreen onNext={() => setStage(1)} onMap={() => setStage(10)} onAudit={() => setStage(11)} onMistakes={() => setStage(13)} onInterleaving={() => setStage(14)} onAchievements={() => setStage(15)} progress={progress} />;
   else if (stage === 1) screen = <LessonRunner level={LEVEL_1} levelId="1" onBack={() => setStage(0)} onComplete={(score) => { progressActions.completeLevelWithRewards("1", { score, total: 5 }); progressActions.addStudyTime(15); setTimeout(() => setStage(8), 500); }} progressActions={progressActions} />;
+  else if (stage === 29) screen = <LessonRunner level={LEVEL_1A} levelId="1A" onBack={() => setStage(0)} onComplete={(score) => { progressActions.completeLevelWithRewards("1A", { score, total: 5 }); progressActions.addStudyTime(15); setTimeout(() => setStage(8), 500); }} progressActions={progressActions} />;
+  else if (stage === 30) screen = <LessonRunner level={LEVEL_2A} levelId="2A" onBack={() => setStage(0)} onComplete={(score) => { progressActions.completeLevelWithRewards("2A", { score, total: 5 }); progressActions.addStudyTime(15); setTimeout(() => setStage(8), 500); }} progressActions={progressActions} />;
+  else if (stage === 31) screen = <LessonRunner level={LEVEL_2B} levelId="2B" onBack={() => setStage(0)} onComplete={(score) => { progressActions.completeLevelWithRewards("2B", { score, total: 5 }); progressActions.addStudyTime(15); setTimeout(() => setStage(8), 500); }} progressActions={progressActions} />;
+  else if (stage === 32) screen = <LessonRunner level={LEVEL_5A} levelId="5A" onBack={() => setStage(0)} onComplete={(score) => { progressActions.completeLevelWithRewards("5A", { score, total: 5 }); progressActions.addStudyTime(15); setTimeout(() => setStage(8), 500); }} progressActions={progressActions} />;
   else if (stage === 8) screen = <EndingScreen onRestart={() => setStage(0)} onExam={() => setStage(9)} />;
   else if (stage === 9) screen = <ExamBridge onBack={() => setStage(0)} onRestart={() => setStage(0)} progressActions={progressActions} />;
   else if (stage === 10) screen = <CourseMapScreen onBack={() => setStage(0)} onStartLevel1={() => setStage(1)} onStartLevel2={() => setStage(12)} progress={progress} />;
@@ -8337,7 +9257,7 @@ function InterleavingTrainer({ onBack, progress, progressActions }) {
           {[
             { id: "double", title: "双关混练 · Level 1+2", sub: "If I were you + I wish + 真实条件诱饵 · 8 题", available: true },
             { id: "triple", title: "三关混练 · Level 1-4", sub: "+ 虚拟现在完整 + 虚拟过去 · 8 题", available: true },
-            { id: "global", title: "全局 Boss · 全部 5 个世界", sub: "11 关全部考点混合 · 8 题 · 高考前必练", available: true },
+            { id: "global", title: "全局 Boss · 全部 5 个世界", sub: "9 关全部考点混合 · 8 题 · 高考前必练", available: true },
           ].map(m => (
             <button key={m.id} onClick={() => m.available && startMode(m.id)} disabled={!m.available}
               className={`w-full text-left rounded-2xl p-5 border transition-all ${m.available ? "border-line-mid bg-warm/40 hover:border-mint hover:bg-mint-soft/20 cursor-pointer" : "border-line bg-warm/20 cursor-not-allowed opacity-50"}`}>

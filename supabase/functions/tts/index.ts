@@ -17,9 +17,16 @@ const json = (body: Record<string, unknown>, status = 200) =>
 
 const OPENAI_VOICES = new Set(["alloy", "shimmer", "nova", "echo", "onyx", "fable"]);
 
+// CosyVoice-v2 voice catalogue (all suffixed with _v2). Map our six OpenAI-style
+// front-end voice handles to the closest CosyVoice-v2 timbre so cached audio is
+// stable per voice and the assistant sounds like the same "person" across providers.
 const COSYVOICE_VOICE_MAP: Record<string, string> = {
-  alloy: "loongstella", shimmer: "loongstella", nova: "loongstella",
-  fable: "loongstella", echo: "loongbella", onyx: "loongbella",
+  shimmer: "longxiaochun_v2", // warm female "teacher" — default for 小月
+  alloy:   "longxiaochun_v2",
+  nova:    "longxiaoxia_v2",  // bright female
+  fable:   "longwan_v2",      // gentle female narrator
+  echo:    "longcheng_v2",    // calm male
+  onyx:    "longshu_v2",      // deeper male
 };
 
 function isMainlandChina(req: Request): boolean {

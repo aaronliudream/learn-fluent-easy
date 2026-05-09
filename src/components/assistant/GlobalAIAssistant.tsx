@@ -428,7 +428,31 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
 
     setInput("");
 
-    // 首页预设问题：完全本地分
+    // 首页预设问题：完全本地分段展示，零网络零 AI 费用
+    const localAnswer = isHomeConcierge ? FULL_ANSWERS_CONCIERGE[trimmed] : undefined;
+    if (localAnswer) {
+      const chunks = splitStaged(localAnswer);
+      setSending(true);
+      setMessages((prev) => [...prev, { role: "user", content: trimmed }, { role: "assistant", content: chunks[0] }]);
+      for (let i = 1; i < chunks.length; i++) {
+        await new Promise((r) => setTimeout(r, 500));
+        const soFar = chunks.slice(0, i + 1).join("\n\n");
+        setMessages((prev) => {
+          const next = [...prev];
+          const last = next[next.length - 1];
+          if (last?.role === "assistant") next[next.length - 1] = { ...last, content: soFar };
+          return next;
+        });
+      }
+      setSending(false);
+      setTimeout(() => inputRef.current?.focus(), 30);
+      return;
+    }
+
+    // 非预设问题：走 AI 流式
+    const preface = prefaceFor(trimmed, effectiveMode);
+    setMessages((prev) => [...prev, { role: "user", content: trimmed }, { role: "assistant", content: preface }]);
+    setSending(true);
 
     try {
       const { data: sess } = await supabase.auth.getSession();

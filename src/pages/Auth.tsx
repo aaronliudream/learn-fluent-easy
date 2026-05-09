@@ -48,7 +48,8 @@ const Auth = () => {
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) navigate("/", { replace: true });
+      // 已登录用户进 /auth → 跳到学习面板（而不是首页，避免「点免费开始学习没反应」的死循环）
+      if (session) navigate("/dashboard", { replace: true });
     });
   }, [navigate]);
 

@@ -415,6 +415,21 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, sending]);
 
+  /**
+   * "X" 关闭按钮的智能行为：
+   * - 如果当前有对话内容 → 清空消息，回到「试试这样问我」问题列表（对话框保留）
+   * - 如果已经在问题列表（无消息）→ 真正关闭对话框
+   * 这样用户不会一不小心被踢回主页。
+   */
+  const handleCloseClick = () => {
+    if (messages.length > 0) {
+      setMessages([]);
+      setInput("");
+      return;
+    }
+    onClose();
+  };
+
   const isFree = state.mode === "free";
   const effectiveMode: "concierge" | "free" | "question" = isHomeConcierge
     ? "concierge"
@@ -595,9 +610,10 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
             </div>
           </div>
           <button
-            onClick={onClose}
-            className="rounded-full p-1.5 text-muted-foreground hover:bg-secondary"
-            aria-label="close"
+            onClick={handleCloseClick}
+            className="rounded-full p-1.5 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+            aria-label={messages.length > 0 ? "返回问题列表" : "关闭"}
+            title={messages.length > 0 ? "返回问题列表" : "关闭"}
           >
             <X className="size-5" />
           </button>

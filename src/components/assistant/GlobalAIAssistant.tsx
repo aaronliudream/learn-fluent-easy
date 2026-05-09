@@ -344,16 +344,16 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
       onClick={onClose}
     >
       <div
-        className="flex h-[88vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-3xl bg-card shadow-2xl md:h-[80vh] md:rounded-3xl"
+        className="flex h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-3xl bg-card shadow-2xl md:h-[88vh] md:rounded-3xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex items-start justify-between gap-3 border-b border-border px-5 py-4">
           <div className="flex min-w-0 items-start gap-3">
-            <img src={xiaoyueMascot} alt="小月" width={40} height={40} className="size-10 shrink-0 rounded-full bg-gradient-to-br from-indigo-100 to-amber-100 object-contain p-0.5" />
+            <img src={xiaoyueMascot} alt="小月" width={44} height={44} className="size-11 shrink-0 rounded-full bg-gradient-to-br from-indigo-100 to-amber-100 object-contain p-0.5" />
             <div className="min-w-0">
-              <div className="text-base font-extrabold leading-tight">{headerTitle}</div>
-              <div className="mt-0.5 text-xs text-muted-foreground line-clamp-2">{sub}</div>
+              <div className="text-lg font-extrabold leading-tight">{headerTitle}</div>
+              <div className="mt-0.5 text-sm text-muted-foreground line-clamp-2">{sub}</div>
               {meta?.limit && (
                 <div className="mt-1 text-[11px] font-semibold text-muted-foreground">
                   {tutorLang === "zh" ? "今日已用" : "Today"} {meta.used}/{meta.limit}
@@ -380,11 +380,11 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
           <LockedState hint={state.lockedHint} mode={state.mode} lang={tutorLang} onClose={onClose} />
         ) : (
           <>
-            <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+            <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3 md:px-6">
               {messages.length === 0 && (
-                <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm">
+                <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4 text-base">
                   <div className="flex items-center gap-2 font-semibold text-primary">
-                    <Sparkles className="size-4" />
+                    <Sparkles className="size-5" />
                     {tutorLang === "zh" ? "试试这样问我：" : "Try asking:"}
                   </div>
                   <div className="mt-3 flex flex-wrap gap-2">
@@ -392,7 +392,7 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
                       <button
                         key={s}
                         onClick={() => send(s)}
-                        className="rounded-full border border-primary/30 bg-card px-3 py-1.5 text-xs font-medium text-foreground hover:bg-primary/10"
+                        className="rounded-full border border-primary/30 bg-card px-3.5 py-2 text-sm font-medium text-foreground hover:bg-primary/10"
                       >
                         {s}
                       </button>
@@ -404,13 +404,13 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
               {messages.map((m, i) => (
                 <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div
-                    className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+                    className={`max-w-[88%] rounded-2xl px-4 py-3 text-[15.5px] leading-[1.7] md:text-base ${
                       m.role === "user" ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground"
                     }`}
                   >
                     {m.role === "assistant" ? (
                       m.content ? (
-                        <div className="prose prose-sm max-w-none prose-p:my-1 prose-ul:my-1 dark:prose-invert">
+                        <div className="prose prose-base max-w-none prose-p:my-2 prose-ul:my-2 prose-li:my-1 prose-strong:text-foreground dark:prose-invert">
                           <ReactMarkdown>{m.content}</ReactMarkdown>
                         </div>
                       ) : (
@@ -424,7 +424,7 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
               ))}
             </div>
 
-            <div className="border-t border-border bg-card px-3 py-3">
+            <div className="border-t border-border bg-card px-4 py-3 md:px-6 md:py-4">
               <form
                 onSubmit={(e) => { e.preventDefault(); void send(input); }}
                 className="flex items-end gap-2"
@@ -439,18 +439,18 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
                       void send(input);
                     }
                   }}
-                  rows={1}
+                  rows={2}
                   placeholder={tutorLang === "zh" ? "输入你的英语问题…" : "Ask any English question…"}
-                  className="min-h-[42px] max-h-32 flex-1 resize-none rounded-2xl border border-border bg-background px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/40"
+                  className="min-h-[56px] max-h-40 flex-1 resize-none rounded-2xl border border-border bg-background px-4 py-3 text-base leading-relaxed outline-none focus:ring-2 focus:ring-primary/40"
                   disabled={sending}
                 />
                 <Button
                   type="submit"
                   size="icon"
                   disabled={sending || !input.trim()}
-                  className="size-10 shrink-0 rounded-full"
+                  className="size-12 shrink-0 rounded-full"
                 >
-                  {sending ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}
+                  {sending ? <Loader2 className="size-5 animate-spin" /> : <Send className="size-5" />}
                 </Button>
               </form>
             </div>

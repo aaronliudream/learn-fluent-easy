@@ -194,6 +194,9 @@ export default function LandingPage() {
               浏览课程
             </a>
           </div>
+
+          {/* 🔴 LIVE 数据条 — 紧贴 CTA，社会证明 + 科技感 */}
+          <LiveStatsTicker />
         </div>
       </section>
 

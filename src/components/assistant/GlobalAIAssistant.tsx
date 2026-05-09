@@ -132,7 +132,8 @@ const STARTERS_Q_EN = ["Why is this the right answer?", "Give me a similar pract
 
 function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: () => void }) {
   const { lang } = useI18n();
-  const tutorLang: "zh" | "en" = lang.startsWith("zh") ? "zh" : "en";
+  // 面向中国学生 / 家长 — 小月始终用中文回复，无论 UI 语言是什么
+  const tutorLang: "zh" | "en" = "zh";
 
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");

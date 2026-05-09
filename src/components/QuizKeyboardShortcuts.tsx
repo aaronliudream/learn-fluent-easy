@@ -101,16 +101,19 @@ export default function QuizKeyboardShortcuts() {
         if (tag === "BUTTON") return;
 
         const scope = findScopeOf(target);
+        // 如果焦点处于 <form> 内：只在该表单里找按钮，找不到就让浏览器原生处理 submit
+        if (scope && scope.tagName === "FORM") {
+          const btn = getSubmitButton(scope);
+          if (btn) { e.preventDefault(); btn.click(); }
+          return;
+        }
         const btn = getSubmitButton(scope) || getSubmitButton();
         if (!btn) return;
-
         // 只在以下情境触发，避免误点：
         //   1) 焦点在输入框 / textarea（用户按回车 = 完成输入）
         //   2) 当前页面存在选项按钮（用户在做题）
-        //   3) 焦点在 body 上但页面有明确的主 CTA（保守：必须有选项按钮）
         const hasOpts = getOptionButtons().length > 0;
         if (!inEditable && !hasOpts) return;
-
         e.preventDefault();
         btn.click();
         return;

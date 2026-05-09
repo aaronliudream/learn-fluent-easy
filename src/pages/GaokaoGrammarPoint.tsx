@@ -174,7 +174,7 @@ export default function GaokaoGrammarPoint() {
     const latencyMs = Date.now() - questionStartTs;
     await recordAttempt({ questionType: "grammar", questionId: q.id, userAnswer: letter, isCorrect });
     // Feed the cross-stage 语法掌握全景图
-    if (point?.slug) recordPanoramaAttempt(`gaokao:${point.slug}`, isCorrect);
+    if (slug) recordPanoramaAttempt(`gaokao:${slug}`, isCorrect);
     const res = await recordGrammarAttempt({
       pointId: point.id,
       questionType: q.question_type || "multiple_choice",

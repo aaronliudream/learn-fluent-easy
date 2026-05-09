@@ -30,7 +30,7 @@ const TABS = [
       p.startsWith("/workplace"),
   },
   { to: "/dashboard", label: "Progress", icon: BarChart3, match: (p: string) => p.startsWith("/dashboard") || p.startsWith("/leaderboard") || p.startsWith("/review") },
-  { to: "/account", label: "Me", icon: User, match: (p: string) => p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") },
+  { to: "/me", label: "Me", icon: User, match: (p: string) => p.startsWith("/me") || p.startsWith("/account") || p.startsWith("/stats") || p.startsWith("/saved") || p.startsWith("/pets") },
 ];
 
 const HIDDEN_ROUTES = ["/auth", "/ielts-speaking/session"];

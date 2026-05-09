@@ -14,7 +14,13 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const DAILY_LIMIT = 60; // user messages per day
+// Tier-specific daily limits + model + max_tokens (cost control)
+const TIER = {
+  guest:       { limit: 3,   model: "google/gemini-2.5-flash-lite", maxTokens: 600  },
+  registered:  { limit: 30,  model: "google/gemini-2.5-flash",      maxTokens: 1200 },
+  premium:     { limit: 200, model: "google/gemini-2.5-pro",        maxTokens: 2000 },
+} as const;
+type Tier = keyof typeof TIER;
 
 type Role = "user" | "assistant" | "system";
 interface ChatMsg { role: Role; content: string }
@@ -30,6 +36,8 @@ interface Body {
   mode?: "question" | "free";
   /** Free-mode topic descriptor — what page/section the user is on. The AI may discuss this topic only. */
   topic?: string;
+  /** Random per-browser ID used to track guest usage when the user is not signed in. */
+  client_id?: string;
 }
 
 function buildSystemPrompt(language: "zh" | "en", snapshot: Record<string, unknown>, hintLevel: number) {
@@ -145,14 +153,6 @@ Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    const authHeader = req.headers.get("Authorization") ?? "";
-    const token = authHeader.replace(/^Bearer\s+/i, "");
-    if (!token) {
-      return new Response(JSON.stringify({ error: "auth required" }), {
-        status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
-    }
-
     const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
     const SUPABASE_ANON = Deno.env.get("SUPABASE_ANON_KEY")!;
     const SUPABASE_SERVICE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
@@ -163,15 +163,17 @@ Deno.serve(async (req) => {
       });
     }
 
-    const userClient = createClient(SUPABASE_URL, SUPABASE_ANON, {
-      global: { headers: { Authorization: `Bearer ${token}` } },
-    });
-    const { data: u } = await userClient.auth.getUser();
-    const userId = u?.user?.id;
-    if (!userId) {
-      return new Response(JSON.stringify({ error: "invalid session" }), {
-        status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" },
+    // Optional auth — if a valid token is present we treat as registered/premium,
+    // otherwise the caller is a guest identified by client_id.
+    const authHeader = req.headers.get("Authorization") ?? "";
+    const token = authHeader.replace(/^Bearer\s+/i, "");
+    let userId: string | null = null;
+    if (token) {
+      const userClient = createClient(SUPABASE_URL, SUPABASE_ANON, {
+        global: { headers: { Authorization: `Bearer ${token}` } },
       });
+      const { data: u } = await userClient.auth.getUser();
+      userId = u?.user?.id ?? null;
     }
 
     const admin = createClient(SUPABASE_URL, SUPABASE_SERVICE);
@@ -180,6 +182,29 @@ Deno.serve(async (req) => {
     const language: "zh" | "en" = body.language === "en" ? "en" : "zh";
     const hintLevel = Math.max(0, Math.min(3, body.hint_level ?? 0));
     const mode: "question" | "free" = body.mode === "free" ? "free" : "question";
+
+    // Determine tier: premium iff user is in user_roles with 'premium' (not yet defined → fall back to registered)
+    let tier: Tier = "guest";
+    if (userId) {
+      tier = "registered";
+      try {
+        const { data: roles } = await admin
+          .from("user_roles")
+          .select("role")
+          .eq("user_id", userId);
+        if ((roles ?? []).some((r: { role: string }) => r.role === "premium" || r.role === "admin")) {
+          tier = "premium";
+        }
+      } catch { /* ignore — keep registered */ }
+    } else {
+      // Guest must supply a client_id
+      if (!body.client_id || typeof body.client_id !== "string" || body.client_id.length < 6) {
+        return new Response(JSON.stringify({ error: "missing client_id" }), {
+          status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
+    }
+    const tierCfg = TIER[tier];
 
     if (!body.context || !body.user_message) {
       return new Response(JSON.stringify({ error: "missing fields" }), {
@@ -200,73 +225,92 @@ Deno.serve(async (req) => {
       ? { mode: "free", topic: body.topic || body.context }
       : (body.question_snapshot ?? {});
 
-    // --- Daily quota ---
+    // --- Daily quota (tier-aware) ---
     const today = new Date().toISOString().slice(0, 10);
-    const { data: usage } = await admin
-      .from("tutor_usage_daily")
-      .select("message_count")
-      .eq("user_id", userId).eq("day", today).maybeSingle();
-    const used = usage?.message_count ?? 0;
-    if (used >= DAILY_LIMIT) {
-      const msg = language === "zh"
-        ? `今天已经聊了 ${DAILY_LIMIT} 条啦，明天再来找小月吧 🌙`
-        : `You've reached today's ${DAILY_LIMIT}-message limit. Come back tomorrow ✨`;
-      return new Response(JSON.stringify({ error: "quota_exceeded", message: msg }), {
+    let used = 0;
+    if (userId) {
+      const { data: usage } = await admin
+        .from("tutor_usage_daily")
+        .select("message_count")
+        .eq("user_id", userId).eq("day", today).maybeSingle();
+      used = usage?.message_count ?? 0;
+    } else {
+      const { data: usage } = await admin
+        .from("guest_ai_usage")
+        .select("message_count")
+        .eq("client_id", body.client_id!).eq("day", today).maybeSingle();
+      used = usage?.message_count ?? 0;
+    }
+    if (used >= tierCfg.limit) {
+      const msg = tier === "guest"
+        ? (language === "zh"
+            ? `今天的免费 ${tierCfg.limit} 条已用完，登录后每天可问 ${TIER.registered.limit} 条 🌙`
+            : `Free ${tierCfg.limit} messages used. Sign in for ${TIER.registered.limit}/day ✨`)
+        : (language === "zh"
+            ? `今天的 ${tierCfg.limit} 条已用完，明天再来吧 🌙`
+            : `Daily limit (${tierCfg.limit}) reached. Try again tomorrow ✨`);
+      return new Response(JSON.stringify({ error: "quota_exceeded", message: msg, tier, used, limit: tierCfg.limit }), {
         status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
 
-    // --- Find or create conversation ---
-    let convId: string;
-    const { data: existing } = await admin
-      .from("tutor_conversations")
-      .select("id")
-      .eq("user_id", userId).eq("context", body.context).eq("question_ref", questionRef)
-      .maybeSingle();
-
-    if (existing?.id) {
-      convId = existing.id;
-      await admin.from("tutor_conversations")
-        .update({ language, hint_level: hintLevel, question_snapshot: questionSnapshot })
-        .eq("id", convId);
-    } else {
-      const { data: created, error: createErr } = await admin.from("tutor_conversations")
-        .insert({
-          user_id: userId,
-          context: body.context,
-          question_ref: questionRef,
-          question_snapshot: questionSnapshot,
-          language, hint_level: hintLevel,
-        }).select("id").single();
-      if (createErr || !created) throw createErr ?? new Error("conv create failed");
-      convId = created.id;
+    // --- Find or create conversation (signed-in users only; guests get no history) ---
+    let convId: string | null = null;
+    let history: Array<{ role: string; content: string }> = [];
+    if (userId) {
+      const { data: existing } = await admin
+        .from("tutor_conversations")
+        .select("id")
+        .eq("user_id", userId).eq("context", body.context).eq("question_ref", questionRef)
+        .maybeSingle();
+      if (existing?.id) {
+        convId = existing.id;
+        await admin.from("tutor_conversations")
+          .update({ language, hint_level: hintLevel, question_snapshot: questionSnapshot })
+          .eq("id", convId);
+      } else {
+        const { data: created, error: createErr } = await admin.from("tutor_conversations")
+          .insert({
+            user_id: userId,
+            context: body.context,
+            question_ref: questionRef,
+            question_snapshot: questionSnapshot,
+            language, hint_level: hintLevel,
+          }).select("id").single();
+        if (createErr || !created) throw createErr ?? new Error("conv create failed");
+        convId = created.id;
+      }
+      const { data: h } = await admin
+        .from("tutor_messages")
+        .select("role, content")
+        .eq("conversation_id", convId)
+        .order("created_at", { ascending: true })
+        .limit(40);
+      history = h ?? [];
     }
-
-    // --- Load history ---
-    const { data: history } = await admin
-      .from("tutor_messages")
-      .select("role, content")
-      .eq("conversation_id", convId)
-      .order("created_at", { ascending: true })
-      .limit(40);
 
     const messages: ChatMsg[] = [
       { role: "system", content: mode === "free"
           ? buildFreeSystemPrompt(language, body.topic || body.context)
           : buildSystemPrompt(language, questionSnapshot, hintLevel) },
-      ...((history ?? []).map(h => ({ role: h.role as Role, content: h.content }))),
+      ...history.map(h => ({ role: h.role as Role, content: h.content })),
       { role: "user", content: body.user_message },
     ];
 
     // Persist user message + bump quota
-    await admin.from("tutor_messages").insert({
-      conversation_id: convId, user_id: userId,
-      role: "user", content: body.user_message, hint_level: hintLevel,
-    });
-    await admin.from("tutor_usage_daily")
-      .upsert({ user_id: userId, day: today, message_count: used + 1 }, { onConflict: "user_id,day" });
+    if (userId && convId) {
+      await admin.from("tutor_messages").insert({
+        conversation_id: convId, user_id: userId,
+        role: "user", content: body.user_message, hint_level: hintLevel,
+      });
+      await admin.from("tutor_usage_daily")
+        .upsert({ user_id: userId, day: today, message_count: used + 1 }, { onConflict: "user_id,day" });
+    } else {
+      await admin.from("guest_ai_usage")
+        .upsert({ client_id: body.client_id!, day: today, message_count: used + 1, updated_at: new Date().toISOString() }, { onConflict: "client_id,day" });
+    }
 
-    // --- Call Lovable AI Gateway (streaming) ---
+    // --- Call Lovable AI Gateway (streaming) — model + max_tokens depend on tier ---
     const aiRes = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -274,7 +318,8 @@ Deno.serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-3-flash-preview",
+        model: tierCfg.model,
+        max_tokens: tierCfg.maxTokens,
         messages,
         stream: true,
       }),
@@ -307,8 +352,15 @@ Deno.serve(async (req) => {
     const stream = new ReadableStream({
       async start(controller) {
         const enc = new TextEncoder();
-        // Send a tiny header line so the client knows the conv id
-        controller.enqueue(enc.encode(`event: meta\ndata: ${JSON.stringify({ conversation_id: convId })}\n\n`));
+        // Send a tiny header line so the client knows the conv id + remaining quota
+        controller.enqueue(enc.encode(
+          `event: meta\ndata: ${JSON.stringify({
+            conversation_id: convId,
+            tier,
+            used: used + 1,
+            limit: tierCfg.limit,
+          })}\n\n`,
+        ));
 
         try {
           while (true) {
@@ -337,10 +389,10 @@ Deno.serve(async (req) => {
           console.error("stream error", e);
         } finally {
           controller.close();
-          if (assistantText.trim()) {
+          if (assistantText.trim() && userId && convId) {
             try {
               await admin.from("tutor_messages").insert({
-                conversation_id: convId, user_id: userId,
+                conversation_id: convId!, user_id: userId,
                 role: "assistant", content: assistantText,
               });
             } catch (e) { console.error("persist assistant failed", e); }

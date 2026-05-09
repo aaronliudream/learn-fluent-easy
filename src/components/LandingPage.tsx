@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import moonBg from "@/assets/moon-hero-bg.jpg";
 
 /**
@@ -55,30 +56,71 @@ const SPARKLES = Array.from({ length: 28 }).map((_, i) => {
 });
 
 export default function LandingPage() {
+  const heroRef = useRef<HTMLElement | null>(null);
+  const [parallax, setParallax] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+    let raf = 0;
+    const onMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      const cx = (e.clientX - rect.left) / rect.width - 0.5;
+      const cy = (e.clientY - rect.top) / rect.height - 0.5;
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => setParallax({ x: cx, y: cy }));
+    };
+    const onLeave = () => setParallax({ x: 0, y: 0 });
+    el.addEventListener("mousemove", onMove);
+    el.addEventListener("mouseleave", onLeave);
+    return () => {
+      el.removeEventListener("mousemove", onMove);
+      el.removeEventListener("mouseleave", onLeave);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <main className="min-h-dvh bg-[#FBF6EC] text-[#1A1A1A] antialiased">
       {/* ============ HERO with big moon ============ */}
       <section
+        ref={heroRef}
         className="relative overflow-hidden"
         style={{
-          backgroundImage: `url(${moonBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           backgroundColor: "#FBF6EC",
         }}
       >
+        {/* Parallax moon/mountain background layer */}
+        <div
+          className="absolute inset-0 will-change-transform"
+          style={{
+            backgroundImage: `url(${moonBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            transform: `scale(1.06) translate3d(${parallax.x * -18}px, ${parallax.y * -12}px, 0)`,
+            transition: "transform 240ms cubic-bezier(0.22, 1, 0.36, 1)",
+          }}
+        />
         {/* Subtle "breathing" glow over the moon */}
         <div
-          className="absolute inset-0 animate-moon-breath"
+          className="absolute inset-0 animate-moon-breath will-change-transform"
           style={{
             background:
               "radial-gradient(ellipse 60% 45% at 50% 35%, rgba(255,220,160,0.35) 0%, rgba(255,220,160,0) 60%)",
+            transform: `translate3d(${parallax.x * 24}px, ${parallax.y * 16}px, 0)`,
+            transition: "transform 320ms cubic-bezier(0.22, 1, 0.36, 1)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#FBF6EC]/30 via-transparent to-[#FBF6EC]" />
 
         {/* Floating sparkles rising from the mountains */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+          style={{
+            transform: `translate3d(${parallax.x * 12}px, ${parallax.y * 8}px, 0)`,
+            transition: "transform 400ms cubic-bezier(0.22, 1, 0.36, 1)",
+          }}
+        >
           {SPARKLES.map((s, i) => (
             <span
               key={i}

@@ -141,26 +141,41 @@ const STARTERS_CONCIERGE = [
   "中考/高考真题覆盖了吗？",
 ];
 
-/** 立刻给用户一行"垫话"，避免等 1-3s 首 token 时屏幕空白。 */
+/**
+ * 立刻给用户 2–3 句"垫话"，让他们点完问题就有东西看，
+ * 不必干等 1–3s 的首 token。下面文案故意写得"自包含"——
+ * 即使流式还没到，也已经回答了问题的骨架。
+ */
 function prefaceFor(question: string, mode: "concierge" | "free" | "question"): string {
   const q = question.trim();
-  // 针对首页常见问题做更贴合的开场白
   const map: Record<string, string> = {
-    "你们怎么帮孩子提分？": "好问题 👇 我从「诊断 → 练习 → 复习」三步给你讲：\n\n",
-    "AI 是怎么诊断薄弱点的？": "简单说，我们会从孩子做过的每一道题里抓 4 类信号 👇\n\n",
-    "家长能看到孩子哪些数据？": "家长端能看到的内容比你想的多 👇 我列一下：\n\n",
-    "为什么用艾宾浩斯遗忘曲线？": "因为「记不住」其实是有科学规律的 👇\n\n",
-    "和新东方/学而思有什么不一样？": "最大的差别在「个性化」和「即时反馈」上 👇\n\n",
-    "适合几年级的孩子使用？": "我们覆盖小学、初中、高中三个学段 👇\n\n",
-    "一天大概要练多久？": "建议每天 15–25 分钟，少而稳比一次猛刷更有效 👇\n\n",
-    "免费的内容有哪些？要付费吗？": "免费可用的部分其实已经很多了 👇\n\n",
-    "口语怎么练？真的能开口吗？": "可以，我们用 AI 实时对话来「逼」孩子开口 👇\n\n",
-    "中考/高考真题覆盖了吗？": "覆盖的，而且不是简单堆题 👇\n\n",
+    "你们怎么帮孩子提分？":
+      "我们走的是「**诊断 → 练习 → 复习**」这条闭环。\n先用 AI 找出孩子真正的薄弱点，再针对性出题，最后用艾宾浩斯曲线安排复习。\n下面我展开讲讲 👇\n\n",
+    "AI 是怎么诊断薄弱点的？":
+      "每一道题孩子做完，我们都会抓 **4 类信号**：错在哪个知识点、用了多久、是不是反复错、有没有蒙对。\n这些信号汇总成「能力画像」，比传统刷题精准得多。\n具体怎么算的我细讲 👇\n\n",
+    "家长能看到孩子哪些数据？":
+      "家长端能看到的内容比你想的多——**学习时长、正确率、薄弱点、坚持天数、单词掌握度**全都有。\n而且不是冷冰冰的数字，会自动总结成「这周孩子在 XXX 上有进步」这样的话。\n我列个完整清单 👇\n\n",
+    "为什么用艾宾浩斯遗忘曲线？":
+      "因为「记不住」**不是孩子笨，是大脑的科学规律**——学完 1 天就忘 70%，必须在遗忘前复习。\n我们的系统会自动在第 1、3、7、15 天把单词推回来，不用家长操心。\n背后的原理我详细说 👇\n\n",
+    "和新东方/学而思有什么不一样？":
+      "最大差别在 **「个性化」和「即时反馈」**。\n传统机构是同一套教材教所有孩子；我们是 AI 给每个孩子定制内容，错了立刻讲，不用等老师批改。\n下面对比给你看 👇\n\n",
+    "适合几年级的孩子使用？":
+      "我们覆盖 **小学（3-6 年级）、初中、高中** 三个学段，全部对应国家课标 + 中高考真题。\n每个年级都有专门的词汇、阅读、语法、写作模块。\n我按年级展开讲 👇\n\n",
+    "一天大概要练多久？":
+      "建议 **每天 15–25 分钟**，少而稳比一次猛刷三小时管用得多。\n这是基于记忆科学算出来的——超过 30 分钟大脑就开始抗拒了。\n具体怎么安排我说一下 👇\n\n",
+    "免费的内容有哪些？要付费吗？":
+      "**免费部分已经够日常用了**——单词、基础阅读、语法测试、AI 答疑都开放。\n付费解锁的是中高考真题深度训练、AI 口语陪练、家长报告这些进阶功能。\n详细清单 👇\n\n",
+    "口语怎么练？真的能开口吗？":
+      "可以。我们用 AI 实时对话「**逼**」孩子开口——不用怕被同学笑，错了 AI 也只会鼓励。\n实测两周后大部分孩子能主动说完整句子。\n方法我细讲 👇\n\n",
+    "中考/高考真题覆盖了吗？":
+      "**完全覆盖**，而且不是简单堆题。\n每道真题我们都拆成「考点 + 易错点 + 同类变式」三部分，做一题等于练一组。\n具体覆盖哪些省份和年份 👇\n\n",
   };
   if (map[q]) return map[q];
-  if (mode === "concierge") return "好问题，我来给你梳理一下 👇\n\n";
-  if (mode === "question") return "好的，我们一起看这道题 👇\n\n";
-  return "嗯，我来帮你讲讲 👇\n\n";
+  if (mode === "concierge")
+    return "好问题，我先给你一个**整体框架**，然后展开细节。\n这样你听完就能立刻判断「这是不是我要的答案」。\n开始 👇\n\n";
+  if (mode === "question")
+    return "好的，这道题我们**先看考点，再看陷阱，最后总结同类题怎么做**。\n这样下次遇到类似的你能自己解决。\n开始 👇\n\n";
+  return "嗯，这个问题我**先讲核心规则，再举例，最后说易混点**。\n这样听一遍就能记住。\n开始 👇\n\n";
 }
 
 function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: () => void }) {
@@ -329,16 +344,16 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
       onClick={onClose}
     >
       <div
-        className="flex h-[88vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-3xl bg-card shadow-2xl md:h-[80vh] md:rounded-3xl"
+        className="flex h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-3xl bg-card shadow-2xl md:h-[88vh] md:rounded-3xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex items-start justify-between gap-3 border-b border-border px-5 py-4">
           <div className="flex min-w-0 items-start gap-3">
-            <img src={xiaoyueMascot} alt="小月" width={40} height={40} className="size-10 shrink-0 rounded-full bg-gradient-to-br from-indigo-100 to-amber-100 object-contain p-0.5" />
+            <img src={xiaoyueMascot} alt="小月" width={44} height={44} className="size-11 shrink-0 rounded-full bg-gradient-to-br from-indigo-100 to-amber-100 object-contain p-0.5" />
             <div className="min-w-0">
-              <div className="text-base font-extrabold leading-tight">{headerTitle}</div>
-              <div className="mt-0.5 text-xs text-muted-foreground line-clamp-2">{sub}</div>
+              <div className="text-lg font-extrabold leading-tight">{headerTitle}</div>
+              <div className="mt-0.5 text-sm text-muted-foreground line-clamp-2">{sub}</div>
               {meta?.limit && (
                 <div className="mt-1 text-[11px] font-semibold text-muted-foreground">
                   {tutorLang === "zh" ? "今日已用" : "Today"} {meta.used}/{meta.limit}
@@ -365,11 +380,11 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
           <LockedState hint={state.lockedHint} mode={state.mode} lang={tutorLang} onClose={onClose} />
         ) : (
           <>
-            <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+            <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3 md:px-6">
               {messages.length === 0 && (
-                <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4 text-sm">
+                <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4 text-base">
                   <div className="flex items-center gap-2 font-semibold text-primary">
-                    <Sparkles className="size-4" />
+                    <Sparkles className="size-5" />
                     {tutorLang === "zh" ? "试试这样问我：" : "Try asking:"}
                   </div>
                   <div className="mt-3 flex flex-wrap gap-2">
@@ -377,7 +392,7 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
                       <button
                         key={s}
                         onClick={() => send(s)}
-                        className="rounded-full border border-primary/30 bg-card px-3 py-1.5 text-xs font-medium text-foreground hover:bg-primary/10"
+                        className="rounded-full border border-primary/30 bg-card px-3.5 py-2 text-sm font-medium text-foreground hover:bg-primary/10"
                       >
                         {s}
                       </button>
@@ -389,13 +404,13 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
               {messages.map((m, i) => (
                 <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div
-                    className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+                    className={`max-w-[88%] rounded-2xl px-4 py-3 text-[15.5px] leading-[1.7] md:text-base ${
                       m.role === "user" ? "bg-primary text-primary-foreground" : "bg-secondary text-foreground"
                     }`}
                   >
                     {m.role === "assistant" ? (
                       m.content ? (
-                        <div className="prose prose-sm max-w-none prose-p:my-1 prose-ul:my-1 dark:prose-invert">
+                        <div className="prose prose-base max-w-none prose-p:my-2 prose-ul:my-2 prose-li:my-1 prose-strong:text-foreground dark:prose-invert">
                           <ReactMarkdown>{m.content}</ReactMarkdown>
                         </div>
                       ) : (
@@ -409,7 +424,7 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
               ))}
             </div>
 
-            <div className="border-t border-border bg-card px-3 py-3">
+            <div className="border-t border-border bg-card px-4 py-3 md:px-6 md:py-4">
               <form
                 onSubmit={(e) => { e.preventDefault(); void send(input); }}
                 className="flex items-end gap-2"
@@ -424,18 +439,18 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
                       void send(input);
                     }
                   }}
-                  rows={1}
+                  rows={2}
                   placeholder={tutorLang === "zh" ? "输入你的英语问题…" : "Ask any English question…"}
-                  className="min-h-[42px] max-h-32 flex-1 resize-none rounded-2xl border border-border bg-background px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/40"
+                  className="min-h-[56px] max-h-40 flex-1 resize-none rounded-2xl border border-border bg-background px-4 py-3 text-base leading-relaxed outline-none focus:ring-2 focus:ring-primary/40"
                   disabled={sending}
                 />
                 <Button
                   type="submit"
                   size="icon"
                   disabled={sending || !input.trim()}
-                  className="size-10 shrink-0 rounded-full"
+                  className="size-12 shrink-0 rounded-full"
                 >
-                  {sending ? <Loader2 className="size-4 animate-spin" /> : <Send className="size-4" />}
+                  {sending ? <Loader2 className="size-5 animate-spin" /> : <Send className="size-5" />}
                 </Button>
               </form>
             </div>

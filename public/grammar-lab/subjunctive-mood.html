@@ -3616,7 +3616,7 @@ const STATUS_META = {
 const CURRICULUM = [
   {
     lvl: 0, code: "L00", title: "什么是虚拟语气",          subtitle: "Concept · 入门",
-    minutes: 10, status: "planned", weight: "基础",
+    minutes: 10, status: "preview", weight: "基础",
     cn: "建立\"动词后退一格 = 远离现实\"的核心认知，不学具体结构",
     pattern: "概念建立",
   },
@@ -3628,56 +3628,56 @@ const CURRICULUM = [
   },
   {
     lvl: 2, code: "L02", title: "I wish 三种用法",          subtitle: "Wishes · 表达愿望",
-    minutes: 15, status: "next", weight: "高考★★★★★",
+    minutes: 15, status: "ready", weight: "高考★★★★★",
     cn: "对现在的遗憾 / 对过去的后悔 / 对未来的愿望——三种 wish 不要混",
     pattern: "I wish I were... / had done... / would do...",
   },
   {
     lvl: 3, code: "L03", title: "虚拟现在 完整版",          subtitle: "Unreal Present (Full)",
-    minutes: 20, status: "planned", weight: "高考★★★★",
+    minutes: 20, status: "ready", weight: "高考★★★★",
     cn: "扩展到所有动词（不只 be 动词）。If 从句的完整形态",
     pattern: "If + 过去式, would/could/might + 原形",
   },
   {
     lvl: 4, code: "L04", title: "虚拟过去 与过去事实相反",   subtitle: "Unreal Past · 后悔莫及",
-    minutes: 20, status: "planned", weight: "高考★★★★★",
+    minutes: 20, status: "ready", weight: "高考★★★★★",
     cn: "\"如果我当时学了，就不会失败\"——高考最爱考的虚拟时态",
     pattern: "If + had done, would have done",
   },
   {
     lvl: 5, code: "L05", title: "混合虚拟时态",             subtitle: "Mixed Conditional",
-    minutes: 15, status: "planned", weight: "高考★★★",
+    minutes: 15, status: "ready", weight: "高考★★★",
     cn: "因为过去发生了什么，现在 / 未来不一样——时空交错",
     pattern: "If + had done, would now...",
   },
   {
     lvl: 6, code: "L06", title: "倒装虚拟",                 subtitle: "Inversion · 高考阅读高频",
-    minutes: 15, status: "preview", weight: "高考★★★",
+    minutes: 15, status: "ready", weight: "高考★★★",
     cn: "Had I known / Were I you / Should I fail——省略 If，把助动词提前",
     pattern: "Had / Were / Should + 主语...",
     note: "包含你之前问的 'Had you studied harder' 这道题",
   },
   {
     lvl: 7, code: "L07", title: "as if / as though",        subtitle: "Pretending · 假装",
-    minutes: 10, status: "planned", weight: "高考★★★",
+    minutes: 10, status: "ready", weight: "高考★★★",
     cn: "区分\"是事实\"和\"装出来的\"——动词跟着改变",
     pattern: "act as if + 过去式 / as if + 现在式",
   },
   {
     lvl: 8, code: "L08", title: "would rather",             subtitle: "Polite Refusal",
-    minutes: 10, status: "planned", weight: "中高考★★",
+    minutes: 10, status: "ready", weight: "中高考★★",
     cn: "委婉拒绝 / 委婉请求——后面跟过去式表语气距离",
     pattern: "I'd rather you didn't / hadn't ___",
   },
   {
     lvl: 9, code: "L09", title: "suggest / insist + should", subtitle: "Mandative Subjunctive",
-    minutes: 10, status: "planned", weight: "高考★★★",
+    minutes: 10, status: "ready", weight: "高考★★★",
     cn: "建议、坚持、要求等动词后的从句要用 should + 原形（should 可省略）",
     pattern: "suggest (that) sb (should) do",
   },
   {
     lvl: 10, code: "L10", title: "综合冲刺 · 真题大量",      subtitle: "Final Sprint · Real Exam",
-    minutes: 25, status: "planned", weight: "中高考★★★★★",
+    minutes: 25, status: "preview", weight: "中高考★★★★★",
     cn: "全部 11 种结构混合——50 道历年真题 + 写作模板",
     pattern: "全混合",
   },
@@ -7213,7 +7213,7 @@ function CourseMapScreen({ onBack, onStartLevel1, onStartLevel2, progress }) {
         每关一个原子知识点——避免认知超载。
       </p>
       <p className="font-cn ink-faint text-xs italic mb-10 max-w-2xl">
-        Level 1+2 已完整建成可学；Level 3-10 题库已建好，完整教学正在补；Level 6 可点击预览。
+        Level 1–9 已全部建成可学（教学动画 + 错题智能反馈 + 浸入式例句）。Level 0 概念入门 与 Level 10 综合冲刺 仍在打磨中，可点击预览。
       </p>
 
       <div className="space-y-3">

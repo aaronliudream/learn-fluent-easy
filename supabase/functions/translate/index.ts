@@ -75,15 +75,20 @@ Deno.serve(async (req) => {
     if (!resp.ok) {
       const t = await resp.text();
       console.error("AI gateway error:", resp.status, t);
-      const status = resp.status === 429 || resp.status === 402 ? resp.status : 500;
-      const msg = resp.status === 429
-        ? "Rate limit reached, please retry shortly."
-        : resp.status === 402
-          ? "AI credits exhausted; please top up Lovable AI credits."
-          : "Translation provider error";
-      return new Response(JSON.stringify({ error: msg }), {
-        status, headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+      // Return 200 with empty translations + fallback flag so the client
+      // gracefully falls back to source text instead of crashing on a thrown
+      // FunctionsHttpError. This keeps the UI usable when AI credits are
+      // exhausted (402) or the provider is rate-limiting (429).
+      const reason = resp.status === 402
+        ? "credits_exhausted"
+        : resp.status === 429
+          ? "rate_limited"
+          : "provider_error";
+      const passthrough = Object.fromEntries(items.map((i) => [i.key, i.text]));
+      return new Response(
+        JSON.stringify({ translations: passthrough, fallback: true, reason }),
+        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      );
     }
 
     const data = await resp.json();

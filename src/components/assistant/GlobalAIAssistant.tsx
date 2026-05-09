@@ -133,7 +133,35 @@ const STARTERS_CONCIERGE = [
   "AI 是怎么诊断薄弱点的？",
   "家长能看到孩子哪些数据？",
   "为什么用艾宾浩斯遗忘曲线？",
+  "和新东方/学而思有什么不一样？",
+  "适合几年级的孩子使用？",
+  "一天大概要练多久？",
+  "免费的内容有哪些？要付费吗？",
+  "口语怎么练？真的能开口吗？",
+  "中考/高考真题覆盖了吗？",
 ];
+
+/** 立刻给用户一行"垫话"，避免等 1-3s 首 token 时屏幕空白。 */
+function prefaceFor(question: string, mode: "concierge" | "free" | "question"): string {
+  const q = question.trim();
+  // 针对首页常见问题做更贴合的开场白
+  const map: Record<string, string> = {
+    "你们怎么帮孩子提分？": "好问题 👇 我从「诊断 → 练习 → 复习」三步给你讲：\n\n",
+    "AI 是怎么诊断薄弱点的？": "简单说，我们会从孩子做过的每一道题里抓 4 类信号 👇\n\n",
+    "家长能看到孩子哪些数据？": "家长端能看到的内容比你想的多 👇 我列一下：\n\n",
+    "为什么用艾宾浩斯遗忘曲线？": "因为「记不住」其实是有科学规律的 👇\n\n",
+    "和新东方/学而思有什么不一样？": "最大的差别在「个性化」和「即时反馈」上 👇\n\n",
+    "适合几年级的孩子使用？": "我们覆盖小学、初中、高中三个学段 👇\n\n",
+    "一天大概要练多久？": "建议每天 15–25 分钟，少而稳比一次猛刷更有效 👇\n\n",
+    "免费的内容有哪些？要付费吗？": "免费可用的部分其实已经很多了 👇\n\n",
+    "口语怎么练？真的能开口吗？": "可以，我们用 AI 实时对话来「逼」孩子开口 👇\n\n",
+    "中考/高考真题覆盖了吗？": "覆盖的，而且不是简单堆题 👇\n\n",
+  };
+  if (map[q]) return map[q];
+  if (mode === "concierge") return "好问题，我来给你梳理一下 👇\n\n";
+  if (mode === "question") return "好的，我们一起看这道题 👇\n\n";
+  return "嗯，我来帮你讲讲 👇\n\n";
+}
 
 function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: () => void }) {
   const { pathname } = useLocation();
@@ -178,7 +206,8 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
     const trimmed = text.trim();
     if (!trimmed || sending || !state.unlocked) return;
 
-    setMessages((prev) => [...prev, { role: "user", content: trimmed }, { role: "assistant", content: "" }]);
+    const preface = prefaceFor(trimmed, effectiveMode);
+    setMessages((prev) => [...prev, { role: "user", content: trimmed }, { role: "assistant", content: preface }]);
     setInput("");
     setSending(true);
 
@@ -230,7 +259,7 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
       const reader = resp.body.getReader();
       const decoder = new TextDecoder();
       let buf = "";
-      let acc = "";
+      let acc = preface;
       let done = false;
       while (!done) {
         const { value, done: rdDone } = await reader.read();

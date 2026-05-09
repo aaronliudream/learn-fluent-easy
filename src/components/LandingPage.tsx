@@ -41,6 +41,19 @@ const STAGES = [
   },
 ];
 
+// Pre-computed sparkle positions so they're stable across renders
+const SPARKLES = Array.from({ length: 28 }).map((_, i) => {
+  const size = 4 + ((i * 7) % 10);
+  return {
+    left: `${(i * 37) % 100}%`,
+    top: `${60 + ((i * 53) % 35)}%`,
+    width: `${size}px`,
+    height: `${size}px`,
+    duration: `${6 + ((i * 13) % 8)}s`,
+    delay: `${(i * 0.45) % 7}s`,
+  };
+});
+
 export default function LandingPage() {
   return (
     <main className="min-h-dvh bg-[#FBF6EC] text-[#1A1A1A] antialiased">
@@ -51,9 +64,36 @@ export default function LandingPage() {
           backgroundImage: `url(${moonBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundColor: "#FBF6EC",
         }}
       >
+        {/* Subtle "breathing" glow over the moon */}
+        <div
+          className="absolute inset-0 animate-moon-breath"
+          style={{
+            background:
+              "radial-gradient(ellipse 60% 45% at 50% 35%, rgba(255,220,160,0.35) 0%, rgba(255,220,160,0) 60%)",
+          }}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-[#FBF6EC]/30 via-transparent to-[#FBF6EC]" />
+
+        {/* Floating sparkles rising from the mountains */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          {SPARKLES.map((s, i) => (
+            <span
+              key={i}
+              className="sparkle"
+              style={{
+                left: s.left,
+                top: s.top,
+                width: s.width,
+                height: s.height,
+                animationDuration: s.duration,
+                animationDelay: s.delay,
+              }}
+            />
+          ))}
+        </div>
 
         {/* Nav */}
         <header className="relative z-10">
@@ -85,7 +125,7 @@ export default function LandingPage() {
         </header>
 
         {/* Hero copy */}
-        <div className="relative z-10 mx-auto max-w-[1180px] px-6 pb-8 pt-10 text-center md:pb-12 md:pt-16">
+        <div className="relative z-10 mx-auto max-w-[1180px] px-6 pb-8 pt-10 text-center md:pb-12 md:pt-16 animate-hero-fade-up">
           <h1 className="font-serif text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
             Real English from
             <br />
@@ -126,12 +166,15 @@ export default function LandingPage() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-3">
-          {STAGES.map((s) => (
+          {STAGES.map((s, i) => (
             <Link
               key={s.to}
               to={s.to}
-              className="group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-3xl p-6 text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)]"
-              style={{ background: s.gradient }}
+              className="group relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-3xl p-6 text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)] animate-card-float"
+              style={{
+                background: s.gradient,
+                animationDelay: `${i * 1.2}s`,
+              }}
             >
               <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/15 blur-2xl" />
               <div>

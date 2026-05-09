@@ -17,6 +17,10 @@ import ModuleStageTests from "@/components/ModuleStageTests";
 import { toast } from "sonner";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
+import GuidedSession from "@/components/vocab/GuidedSession";
+import ReviewPool from "@/components/vocab/ReviewPool";
+import { fetchDueReviewIds } from "@/lib/vocabMastery";
+import { Rocket } from "lucide-react";
 
 type Vocab = {
   id: string;
@@ -32,7 +36,7 @@ type Vocab = {
   freq_rank: number | null;
 };
 
-type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs";
+type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs" | "guided" | "review";
 const GROUP_SIZE = 20;
 
 const isChineseUi = (lang: string) => lang === "zh" || lang === "zh-TW";
@@ -139,6 +143,14 @@ export default function JuniorVocab() {
     }
     return <ClassicQuiz pool={srsPool} onExit={exit} />;
   }
+  if (mode === "guided") {
+    // Take the current group (or first 100) so we have a focused pool.
+    const focused = activePool.slice(0, 100);
+    return <GuidedSession pool={focused} onExit={exit} title={zh ? `初${displayGrade} · 本关通关` : `Guided round`} />;
+  }
+  if (mode === "review") {
+    return <JuniorReviewLauncher pool={words} onExit={exit} />;
+  }
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
   if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
   if (mode === "duel") return <WordDuel pool={activePool} onExit={exit} />;
@@ -214,6 +226,28 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
       </div>
 
       <ModuleStageTests segment="junior" grade={grade} module="vocab" />
+
+      {/* 🚀 引导通关入口（5 步走 + FSRS） */}
+      <button
+        onClick={() => onPick("guided")}
+        className="mb-4 flex w-full items-center justify-between gap-3 rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-500 to-teal-600 px-5 py-4 text-left text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700"
+      >
+        <div className="flex items-center gap-3">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/20"><Rocket className="size-5" /></span>
+          <div>
+            <p className="text-sm font-bold">{zh ? "开始本组通关 · 5 步走" : "Start guided round · 5 steps"}</p>
+            <p className="mt-0.5 text-[11px] text-white/85">{zh ? "看 → 认 → 想 → 拼 → 用，按级解锁，自动收进遗忘曲线" : "See → Recognize → Recall → Spell → Use"}</p>
+          </div>
+        </div>
+        <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold">{zh ? "推荐 ★" : "Top pick ★"}</span>
+      </button>
+
+      <div className="mb-4">
+        <ReviewPool
+          pool={words.map((w) => ({ id: w.id, word: w.word }))}
+          onStart={() => onPick("review")}
+        />
+      </div>
 
       {/* ⭐ 彻底掌握 5 步走 */}
       <VocabMasteryPath
@@ -772,4 +806,32 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       </div>
     </main>
   );
+}
+
+/* -------- FSRS review launcher: filters pool to due words, then runs GuidedSession in review mode -------- */
+function JuniorReviewLauncher({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const [duePool, setDuePool] = useState<Vocab[] | null>(null);
+  useEffect(() => {
+    (async () => {
+      const ids = await fetchDueReviewIds(pool.map((p) => p.id));
+      const set = new Set(ids);
+      setDuePool(pool.filter((p) => set.has(p.id)));
+    })();
+  }, [pool]);
+  if (duePool === null) {
+    return <main className="mx-auto flex min-h-[60dvh] max-w-2xl items-center justify-center text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> 加载到期单词…</main>;
+  }
+  if (duePool.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</button>
+        <div className="rounded-3xl border border-border bg-card p-8 text-center">
+          <Trophy className="mx-auto size-12 text-amber-500" />
+          <h3 className="mt-2 text-xl font-extrabold">今天没有到期复习的词 🎉</h3>
+          <p className="mt-1 text-sm text-muted-foreground">先去开启一关通关，复习池会按遗忘曲线自动安排。</p>
+        </div>
+      </main>
+    );
+  }
+  return <GuidedSession pool={duePool} onExit={onExit} title="到期复习" mode="review" />;
 }

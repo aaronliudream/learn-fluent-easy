@@ -23,6 +23,10 @@ import MemoryMatch from "@/components/MemoryMatch";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import NextStepHint from "@/components/vocab/NextStepHint";
 import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
+import GuidedSession from "@/components/vocab/GuidedSession";
+import ReviewPool from "@/components/vocab/ReviewPool";
+import { fetchDueReviewIds } from "@/lib/vocabMastery";
+import { Rocket } from "lucide-react";
 import { computeMasteryScore as _cms, type MasteryMatrix as _MM } from "@/lib/masteryScore";
 import MistakeExplainer from "@/components/MistakeExplainer";
 import WordBento from "@/components/WordBento";
@@ -368,6 +372,15 @@ export default function GaokaoVocab() {
     return <MasteryDashboard onExit={() => setParams({})} />;
   }
 
+  if (mode === "guided") {
+    // Use the freq-sorted top 100 so the session always has fresh material.
+    return <GuidedSession pool={allVocab.slice(0, 100)} onExit={() => setParams({})} title="高考词汇 · 本关通关" />;
+  }
+
+  if (mode === "review") {
+    return <GaokaoReviewLauncher pool={allVocab} onExit={() => setParams({})} />;
+  }
+
   if (groupIdx < 0 || groupIdx >= groups.length) {
     return (
       <GroupList
@@ -382,6 +395,8 @@ export default function GaokaoVocab() {
         onStartDict={() => setParams({ mode: "dict" })}
         onOpenDash={() => setParams({ mode: "dash" })}
         onPickMode={(m) => setParams({ mode: m })}
+        onStartGuided={() => setParams({ mode: "guided" })}
+        onStartReview={() => setParams({ mode: "review" })}
       />
     );
   }
@@ -409,6 +424,8 @@ function GroupList({
   onStartDict,
   onOpenDash,
   onPickMode,
+  onStartGuided,
+  onStartReview,
 }: {
   groups: Vocab[][];
   pool: Vocab[];
@@ -421,6 +438,8 @@ function GroupList({
   onStartDict: () => void;
   onOpenDash: () => void;
   onPickMode: (mode: string) => void;
+  onStartGuided: () => void;
+  onStartReview: () => void;
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);
@@ -474,6 +493,28 @@ function GroupList({
           <ModuleStageTests segment="gaokao" grade={gradeNum} module="vocab" />
         </div>
       )}
+
+      {/* 🚀 引导通关入口（5 步走 + FSRS） */}
+      <button
+        onClick={onStartGuided}
+        className="mt-4 flex w-full items-center justify-between gap-3 rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-500 to-teal-600 px-5 py-4 text-left text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700"
+      >
+        <div className="flex items-center gap-3">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/20"><Rocket className="size-5" /></span>
+          <div>
+            <p className="text-sm font-bold">开始本关通关 · 5 步走</p>
+            <p className="mt-0.5 text-[11px] text-white/85">看 → 认 → 想 → 拼 → 用，按级解锁，自动收进遗忘曲线</p>
+          </div>
+        </div>
+        <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold">推荐 ★</span>
+      </button>
+
+      <div className="mt-4">
+        <ReviewPool
+          pool={pool.map((v) => ({ id: v.id, word: v.word }))}
+          onStart={onStartReview}
+        />
+      </div>
 
       {/* ⭐ 彻底掌握 5 步走 */}
       <div className="mt-4">
@@ -3570,4 +3611,31 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       </div>
     </main>
   );
+}
+/* -------- FSRS review launcher: filters pool to due words, then runs GuidedSession in review mode -------- */
+function GaokaoReviewLauncher({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const [duePool, setDuePool] = useState<Vocab[] | null>(null);
+  useEffect(() => {
+    (async () => {
+      const ids = await fetchDueReviewIds(pool.map((p) => p.id));
+      const set = new Set(ids);
+      setDuePool(pool.filter((p) => set.has(p.id)));
+    })();
+  }, [pool]);
+  if (duePool === null) {
+    return <main className="mx-auto flex min-h-[60dvh] max-w-2xl items-center justify-center text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> 加载到期单词…</main>;
+  }
+  if (duePool.length === 0) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</button>
+        <div className="rounded-3xl border border-border bg-card p-8 text-center">
+          <Trophy className="mx-auto size-12 text-amber-500" />
+          <h3 className="mt-2 text-xl font-extrabold">今天没有到期复习的词 🎉</h3>
+          <p className="mt-1 text-sm text-muted-foreground">先去开启一关通关，复习池会按遗忘曲线自动安排。</p>
+        </div>
+      </main>
+    );
+  }
+  return <GuidedSession pool={duePool} onExit={onExit} title="高考词汇 · 到期复习" mode="review" />;
 }

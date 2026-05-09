@@ -12,6 +12,7 @@ import { GUEST_SESSION_SECONDS, incrementGuestTrials } from "@/lib/guestTrial";
 import { resolveProvider, type AIProvider } from "@/lib/aiProvider";
 import { QwenRealtimeSession, QWEN_VOICE_MAP } from "@/lib/qwenRealtime";
 import { recordAITalk } from "@/lib/guestProgress";
+import { consumeVoiceQuota } from "@/lib/dailyVoiceQuota";
 
 type Turn = { role: "user" | "assistant"; text: string; pending?: boolean };
 
@@ -56,9 +57,20 @@ type Props = {
   levelName?: string;
   level?: string; // CEFR like "A1"
   isGuest?: boolean; // if true, use shorter trial session + show signup CTA
+  /** Learning stage — controls hard session-length cap to manage costs. */
+  stage?: "primary" | "junior" | "gaokao" | "general";
+  /** Authed user id, used to record daily-quota consumption. */
+  userId?: string | null;
 };
 
-const SESSION_DURATION_SEC = 10 * 60; // 10 minutes hard cap
+// Hard cap per learning stage. Younger learners can't focus longer than
+// 5 min anyway, and shorter sessions cut realtime cost proportionally.
+const STAGE_DURATION_SEC: Record<NonNullable<Props["stage"]>, number> = {
+  primary: 5 * 60,
+  junior: 8 * 60,
+  gaokao: 10 * 60,
+  general: 10 * 60,
+};
 
 // Builds the Qwen instructions prompt (mirror of what the realtime-token
 // edge function does for OpenAI, kept on the client because Qwen receives
@@ -114,9 +126,9 @@ const REALTIME_VOICE_MAP: Record<string, string> = {
   fable: "verse",
 };
 
-export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level, isGuest }: Props) {
+export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName, level, isGuest, stage = "general", userId }: Props) {
   const tt = useT();
-  const sessionLen = isGuest ? GUEST_SESSION_SECONDS : SESSION_DURATION_SEC;
+  const sessionLen = isGuest ? GUEST_SESSION_SECONDS : STAGE_DURATION_SEC[stage];
   const [phase, setPhase] = useState<"idle" | "connecting" | "live" | "ending" | "recap">("idle");
   const [transcript, setTranscript] = useState<Turn[]>([]);
   const [secondsLeft, setSecondsLeft] = useState(sessionLen);
@@ -456,6 +468,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
             setPhase("live");
             setSecondsLeft(sessionLen);
             if (isGuest) { try { incrementGuestTrials(); } catch { /* noop */ } }
+            else if (userId) { try { consumeVoiceQuota(userId); } catch { /* noop */ } }
           },
           onError: (msg) => toast.error(msg),
         });
@@ -474,7 +487,9 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       if (error) throw error;
       if (data?.error) throw new Error(data.error);
       const ephemeralKey = data?.client_secret?.value;
-      const model = data?.model || "gpt-4o-realtime-preview-2024-12-17";
+      // Default to mini-realtime to keep cost down — full 4o-realtime is
+      // ~5× more expensive and not worth it for K-12 chat practice.
+      const model = data?.model || "gpt-4o-mini-realtime-preview-2024-12-17";
       if (!ephemeralKey) throw new Error("No ephemeral key returned");
 
       // 3. Open peer connection
@@ -535,6 +550,8 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
       // Count this as a used trial for guests (only on successful connect)
       if (isGuest) {
         try { incrementGuestTrials(); } catch { /* noop */ }
+      } else if (userId) {
+        try { consumeVoiceQuota(userId); } catch { /* noop */ }
       }
     } catch (e: any) {
       console.error("startCall failed", e);
@@ -687,7 +704,7 @@ export function AITalkDialog({ open, onClose, lessonTitle, unitTitle, levelName,
                 setRecap(null);
                 setQuizAnswers({});
                 setQuizSubmitted(false);
-                setSecondsLeft(SESSION_DURATION_SEC);
+                setSecondsLeft(sessionLen);
                 userTurnByItemId.current.clear();
                 assistantTurnByRespId.current.clear();
               }}

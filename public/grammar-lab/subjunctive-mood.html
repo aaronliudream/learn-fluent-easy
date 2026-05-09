@@ -6481,31 +6481,6 @@ function DiagnosticScreen({ onBack, onComplete }) {
   const q = DIAGNOSTIC_TEST[qIdx];
   const correctCount = answers.filter(a => a.correct).length;
 
-  // 全站统一键盘快捷键：1/2/3/4 选 ABCD，Enter 提交/下一步
-  useEffect(() => {
-    function onKey(e) {
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
-      const t = e.target;
-      const editable = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable);
-      if (e.key === "Enter") {
-        e.preventDefault();
-        if (stage === "intro") { setStage("quiz"); return; }
-        if (stage === "result") { onComplete(getRecommendation(correctCount).stage); return; }
-        if (stage === "quiz" && picked !== null) handleSubmit();
-        return;
-      }
-      if (editable) return;
-      if (stage !== "quiz") return;
-      const n = Number(e.key);
-      if (Number.isFinite(n) && n >= 1 && n <= q.opts.length) {
-        e.preventDefault();
-        setPicked(q.opts[n - 1]);
-      }
-    }
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [stage, picked, qIdx, correctCount]);
-
   function getRecommendation(correct) {
     if (correct === 3) return {
       stage: 17, level: "L4",

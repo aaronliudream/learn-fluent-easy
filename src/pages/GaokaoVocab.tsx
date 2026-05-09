@@ -424,6 +424,8 @@ function GroupList({
   onStartDict,
   onOpenDash,
   onPickMode,
+  onStartGuided,
+  onStartReview,
 }: {
   groups: Vocab[][];
   pool: Vocab[];
@@ -436,6 +438,8 @@ function GroupList({
   onStartDict: () => void;
   onOpenDash: () => void;
   onPickMode: (mode: string) => void;
+  onStartGuided: () => void;
+  onStartReview: () => void;
 }) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);

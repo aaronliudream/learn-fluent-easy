@@ -486,53 +486,6 @@ export default function LandingPage() {
           ))}
         </div>
 
-        {/* Final CTA — 收口 */}
-        <div className="mt-10 flex flex-col items-center gap-4 rounded-3xl bg-gradient-to-br from-[#7B3FF1] to-[#ED3F8C] p-8 text-center text-white shadow-[0_20px_50px_-20px_rgba(123,63,241,0.5)] md:mt-14 md:p-12">
-          <div className="text-[11px] font-bold uppercase tracking-[0.22em] opacity-85">
-            START TODAY · FREE
-          </div>
-          <h3 className="font-serif text-2xl font-black tracking-tight md:text-4xl">
-            今天就开始 5 分钟，<br className="md:hidden" />让英语真的变成你的工具
-          </h3>
-          <p className="max-w-xl text-sm opacity-90 md:text-base">
-            免费注册即可解锁全部小学/初中/高中内容 · AI 助手陪伴答疑 · 不满意随时离开
-          </p>
-          <Link
-            to="/auth"
-            className="mt-2 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-black text-[#7B3FF1] shadow-lg transition hover:-translate-y-0.5 hover:shadow-2xl md:text-base"
-          >
-            <Sparkles className="size-4" /> 免费开始学习
-          </Link>
-        </div>
-      </section>
-
-      {/* ============ BONUS: AMERICAN SLANG ============ */}
-      <section className="mx-auto max-w-[1180px] px-6 pb-10 md:pb-14">
-        <Link
-          to="/slang"
-          className="group relative flex flex-col items-center justify-center gap-5 overflow-hidden rounded-3xl p-8 text-center text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)] md:p-12"
-          style={{
-            background:
-              "linear-gradient(120deg,#1A1A2E 0%,#3B1E5E 45%,#ED3F8C 100%)",
-          }}
-        >
-          <span className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-white/10 blur-3xl" />
-          <span className="pointer-events-none absolute -left-10 bottom-[-40px] size-40 rounded-full bg-[#F5A26B]/30 blur-3xl" />
-          <div className="relative flex flex-col items-center">
-            <div className="text-[10px] font-bold uppercase tracking-[0.22em] opacity-85">
-              BIG MOON SLANG · BONUS
-            </div>
-            <h3 className="mt-3 font-serif text-3xl font-black tracking-tight md:text-4xl">
-              课堂之外的真实英语
-            </h3>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed opacity-95 md:text-base">
-              课本之外，真正美国年轻人每天在说的英语。短视频场景 + AI 跟读，让你一开口就像 native。
-            </p>
-          </div>
-          <div className="relative inline-flex items-center gap-1.5 rounded-full bg-white/20 px-5 py-2 text-xs font-bold backdrop-blur transition group-hover:bg-white/30 md:text-sm">
-            进入专区 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-          </div>
-        </Link>
       </section>
 
       {/* ============ FOOTER ============ */}
@@ -540,7 +493,9 @@ export default function LandingPage() {
         <div className="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-4 px-6 text-xs text-[#7A7A7A] md:flex-row">
           <div>© {new Date().getFullYear()} Big Moon English</div>
           <div className="flex items-center gap-5">
+            <Link to="/auth" className="hover:text-[#1A1A1A]">登录 / 注册</Link>
             <Link to="/about" className="hover:text-[#1A1A1A]">关于我们</Link>
+            <Link to="/slang" className="hover:text-[#1A1A1A]">美式俚语</Link>
             <Link to="/privacy" className="hover:text-[#1A1A1A]">隐私</Link>
             <Link to="/terms" className="hover:text-[#1A1A1A]">条款</Link>
           </div>

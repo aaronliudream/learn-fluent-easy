@@ -1372,6 +1372,12 @@ function QuizPhase({
   pool: Vocab[];
   onDone: (s: QuizSessionResult) => void;
 }) {
+  const [sp] = useSearchParams();
+  const gradeNum = (() => {
+    const raw = Number(sp.get("grade"));
+    if (!raw) return 10;
+    return raw >= 1 && raw <= 3 ? raw + 9 : raw;
+  })();
   // Build initial queue: each word once, random kind
   const [queue, setQueue] = useState<QuizItem[]>(() => buildInitialQueue(group, pool));
   const [pos, setPos] = useState(0);
@@ -1415,7 +1421,7 @@ function QuizPhase({
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     recordUnifiedAttempt({
       stage: "senior",
-      grade: 10,
+      grade: gradeNum,
       module: "vocab",
       item_type: "word",
       item_id: item.vocab.id,
@@ -2344,6 +2350,12 @@ function SpellQuestion({
 
 /* ---------- SRS Smart Review Session ---------- */
 function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () => void; focus?: "retention" }) {
+  const [sp] = useSearchParams();
+  const gradeNum = (() => {
+    const raw = Number(sp.get("grade"));
+    if (!raw) return 10;
+    return raw >= 1 && raw <= 3 ? raw + 9 : raw;
+  })();
   const [loading, setLoading] = useState(true);
   const [dueWords, setDueWords] = useState<Vocab[]>([]);
   const [queue, setQueue] = useState<QuizItem[]>([]);
@@ -2530,7 +2542,7 @@ function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () =
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
     recordUnifiedAttempt({
       stage: "senior",
-      grade: 10,
+      grade: gradeNum,
       module: "vocab",
       item_type: "word",
       item_id: item.vocab.id,

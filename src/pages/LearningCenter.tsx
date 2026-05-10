@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Layers, Sparkles, Loader2, RefreshCw } from "lucide-react";
+import { ArrowRight, Layers, Sparkles, Loader2, RefreshCw, AlertTriangle, Clock, Sprout, Trophy } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { supabase } from "@/integrations/supabase/client";
 import { useDiagnostic } from "@/hooks/useDiagnostic";
@@ -171,7 +171,32 @@ export default function LearningCenter() {
       </section>
 
       <CompositionDrawer open={drawerOpen} onOpenChange={setDrawerOpen} />
+
+      {/* 5 清单入口 — 按状态 / 按学段 */}
+      <section className="mt-5">
+        <h2 className="mb-2 text-sm font-bold text-muted-foreground">清单</h2>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+          <CohortTile to="/learning-center/list?cohort=weak"   icon={AlertTriangle} label="高频薄弱" tone="text-gps-weak"   n={overall?.weak ?? 0} />
+          <CohortTile to="/learning-center/list?cohort=due"    icon={Clock}         label="今日到期" tone="text-gps-weak"   />
+          <CohortTile to="/learning-center/list?cohort=none"   icon={Sprout}        label="全部未学" tone="text-muted-foreground" n={overall?.none ?? 0} />
+          <CohortTile to="/learning-center/list?cohort=master" icon={Trophy}        label="已掌握"   tone="text-gps-master" n={overall?.master ?? 0} />
+          <CohortTile to="/learning-center/list?cohort=recent" icon={Sparkles}      label="最近练习" tone="text-gps-fluent" />
+        </div>
+      </section>
     </main>
+  );
+}
+
+function CohortTile({ to, icon: Icon, label, tone, n }: { to: string; icon: any; label: string; tone: string; n?: number }) {
+  return (
+    <Link
+      to={to}
+      className="flex flex-col items-center gap-1.5 rounded-xl border border-border bg-card p-3 transition hover:bg-muted/40"
+    >
+      <Icon className={`size-5 ${tone}`} />
+      <span className="text-xs font-bold">{label}</span>
+      {typeof n === "number" && <span className="text-[10px] font-mono text-muted-foreground">{n}</span>}
+    </Link>
   );
 }
 

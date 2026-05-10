@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Loader2, Sparkles, Headphones, PenLine, Brain, Target, TrendingUp, Volume2, ChevronRight, AlertTriangle, Play, Heart, Calendar, Mic, Eye, BookOpen } from "lucide-react";
+import { ArrowLeft, Loader2, Sparkles, Headphones, PenLine, Brain, Target, TrendingUp, Volume2, ChevronRight, AlertTriangle, Play, Heart, Calendar } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";

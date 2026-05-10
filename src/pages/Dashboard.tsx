@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useMasteryOverview, pickContinue, type Stage } from "@/hooks/useMasteryOverview";
 import { MasteryRing } from "@/components/mastery/MasteryRing";
 import { MasteryBadge, MASTERY_LEGEND } from "@/components/mastery/MasteryBadge";
+import { SkillRadar } from "@/components/mastery/SkillRadar";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ShareButton } from "@/components/share/ShareButton";
 
@@ -224,6 +225,9 @@ export default function Dashboard() {
         <span className="rounded-full bg-foreground px-3 py-1.5 text-xs font-bold text-background">进入 →</span>
       </Link>
       <TodayReviewCard />
+      <div className="mt-5">
+        <SkillRadar />
+      </div>
       <Tabs value={stage} onValueChange={(v) => setStage(v as Stage)} className="mt-4">
         <TabsList className="grid w-full max-w-md grid-cols-3">
           <TabsTrigger value="primary">🎒 小学</TabsTrigger>

@@ -1,11 +1,18 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Play, Star, Calendar } from "lucide-react";
+import { ArrowLeft, Play, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { StreakBanner } from "@/components/StreakBanner";
 import MonthlyPostcard from "@/components/pet/MonthlyPostcard";
 import EvolutionTree from "@/components/pet/EvolutionTree";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 type Grade = {
   id: number; name_cn: string; name_en: string;
@@ -84,6 +91,8 @@ export default function Primary() {
   const [pet, setPet] = useState<Pet | null>(null);
   const [uid, setUid] = useState<string | null>(null);
   const [streak, setStreak] = useState<number>(0);
+  const [recommendedGrade, setRecommendedGrade] = useState<number | null>(null);
+  const [switchOpen, setSwitchOpen] = useState(false);
   const [grade, setGrade] = useState<number | null>(() => {
     const saved = localStorage.getItem("primary:lastGrade");
     return saved ? Number(saved) : null;
@@ -120,6 +129,21 @@ export default function Primary() {
           const { data: created } = await supabase.from("pet_state").insert({ user_id: userId }).select().maybeSingle();
           if (created) setPet(created as Pet);
         }
+        // Pull parent-set recommended grade — drives the "推荐" tag in the
+        // switch dialog and seeds the default grade for first-time visitors.
+        const { data: prof } = await supabase
+          .from("profiles")
+          .select("recommended_grade")
+          .eq("user_id", userId)
+          .maybeSingle();
+        const rg = (prof as any)?.recommended_grade ?? null;
+        if (rg) {
+          setRecommendedGrade(rg);
+          if (!localStorage.getItem("primary:lastGrade")) {
+            setGrade(rg);
+            localStorage.setItem("primary:lastGrade", String(rg));
+          }
+        }
       }
       // Record this visit *after* we've captured visitContext above.
       writeLastVisit();
@@ -129,6 +153,7 @@ export default function Primary() {
   function pickGrade(id: number) {
     setGrade(id);
     localStorage.setItem("primary:lastGrade", String(id));
+    setSwitchOpen(false);
   }
 
   function goAdventure() {
@@ -216,8 +241,12 @@ export default function Primary() {
             <div className="mt-4 flex items-center justify-center gap-3 text-xs text-rose-700/80 dark:text-rose-300/80">
               <span>{currentGradeName}</span>
               <span>·</span>
-              <button onClick={() => setGrade(null)} className="underline underline-offset-2 hover:text-rose-900">
-                切换年级
+              <button
+                onClick={() => setSwitchOpen(true)}
+                className="text-muted-foreground/80 hover:text-rose-900"
+                aria-label="去别的年级陪 Spark 冒险"
+              >
+                Spark 在别的等级也有冒险 →
               </button>
             </div>
           </section>
@@ -241,7 +270,7 @@ export default function Primary() {
               to="/parent"
               className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 font-bold text-muted-foreground transition hover:text-foreground"
             >
-              <Calendar className="size-3.5" /> 📅 周计划 &amp; 进度
+              📊 家长后台
             </Link>
             <Link
               to={`/primary/grade/${grade}`}
@@ -252,6 +281,60 @@ export default function Primary() {
           </div>
         </>
       )}
+
+      {/* === Grade switcher dialog === Spark 在每个等级都有冒险 === */}
+      <Dialog open={switchOpen} onOpenChange={setSwitchOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <div className="text-center text-5xl">🦊</div>
+            <DialogTitle className="mt-2 text-center text-lg">
+              Spark 在每个等级都有冒险,你想去哪个?
+            </DialogTitle>
+            <DialogDescription className="text-center">
+              所有等级都开放,你可以自由探索。
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-2 grid grid-cols-1 gap-2">
+            {grades.map((g) => {
+              const isCurrent = g.id === grade;
+              const isRecommended = recommendedGrade != null && g.id === recommendedGrade;
+              const isHard = g.id >= 5;
+              return (
+                <button
+                  key={g.id}
+                  onClick={() => pickGrade(g.id)}
+                  className={`flex items-center gap-3 rounded-2xl border-2 p-3 text-left transition hover:-translate-y-0.5 ${
+                    isCurrent
+                      ? "border-rose-400 bg-rose-50 dark:bg-rose-950/30"
+                      : "border-border bg-card hover:bg-muted"
+                  }`}
+                >
+                  <div className="text-3xl">{g.emoji}</div>
+                  <div className="flex-1">
+                    <div className="text-sm font-extrabold">{g.name_cn}</div>
+                    <div className="mt-0.5 flex flex-wrap gap-1.5 text-[10px] font-bold">
+                      {isCurrent && (
+                        <span className="rounded bg-rose-500 px-1.5 py-0.5 text-white">当前</span>
+                      )}
+                      {isRecommended && !isCurrent && (
+                        <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-white">推荐</span>
+                      )}
+                      {isHard && (
+                        <span className="rounded bg-amber-100 px-1.5 py-0.5 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
+                          ⚠️ 难度较高
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+          <p className="mt-1 text-center text-[11px] text-muted-foreground">
+            下次进来会回到{recommendedGrade ? "你的推荐等级" : "你上次选的等级"}。
+          </p>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }

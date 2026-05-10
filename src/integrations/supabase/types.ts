@@ -5415,6 +5415,7 @@ export type Database = {
           quiz_session_size: number
           quiz_type_mix: Json
           recall_email_sent_at: string | null
+          recommended_grade: number | null
           self_level: string | null
           streak_recall_sent_at: string | null
           study_days: number[]
@@ -5446,6 +5447,7 @@ export type Database = {
           quiz_session_size?: number
           quiz_type_mix?: Json
           recall_email_sent_at?: string | null
+          recommended_grade?: number | null
           self_level?: string | null
           streak_recall_sent_at?: string | null
           study_days?: number[]
@@ -5477,6 +5479,7 @@ export type Database = {
           quiz_session_size?: number
           quiz_type_mix?: Json
           recall_email_sent_at?: string | null
+          recommended_grade?: number | null
           self_level?: string | null
           streak_recall_sent_at?: string | null
           study_days?: number[]

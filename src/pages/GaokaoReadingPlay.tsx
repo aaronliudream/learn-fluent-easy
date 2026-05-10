@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
@@ -115,6 +116,18 @@ export default function GaokaoReadingPlay() {
       userAnswer: letter,
       isCorrect: ok,
     });
+    recordUnifiedAttempt({
+      stage: "senior",
+      grade: 10,
+      module: "reading",
+      item_type: "reading_question",
+      item_id: q.id,
+      item_label: passage?.title,
+      is_correct: ok,
+      user_answer: letter,
+      correct_answer: q.correct_answer,
+      context: { passage_id: passage?.id, qtype: q.question_type },
+    }).catch(() => {});
   };
 
   if (loading) return <p className="p-8 text-sm text-muted-foreground">加载中...</p>;

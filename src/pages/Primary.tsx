@@ -21,15 +21,19 @@ type Grade = {
 
 type Pet = { name: string; level: number; xp: number; bond: number; stars: number; hunger?: number; mood?: number; stage?: number };
 
-// Spark = fire_fox 物种。按 level 派生进化阶段表情,
-// 让 Lv.1 看到的不是成年狐,而是一颗蛋。
-// 阈值:Lv.1 = 蛋, Lv.2-3 = 幼年, Lv.4-6 = 成年, Lv.7+ = 传说。
-// 数据库的 pet_state.stage 目前不会自动推进,所以以 level 为唯一信号。
-function sparkFace(level: number): string {
-  if (level <= 1) return "🥚";
-  if (level <= 3) return "🐣";
-  if (level <= 6) return "🦊";
-  return "🔥";
+// Spark 的视觉来自 pet_species 表(优先用户激活的宠物;否则回退 fire_fox)。
+// 阶段索引按 level 派生:Lv.1=蛋, Lv.2-3=幼年, Lv.4-6=成年, Lv.7+=传说 —— 因为
+// pet_state.level 是 Spark 唯一稳定的进化信号(stage 字段目前不会自动推进)。
+type SparkEmojis = { egg: string; baby: string; adult: string; legend: string };
+const SPARK_FALLBACK: SparkEmojis = { egg: "🥚", baby: "🦊", adult: "🔥", legend: "☄️" };
+function sparkStageFromLevel(level: number): keyof SparkEmojis {
+  if (level <= 1) return "egg";
+  if (level <= 3) return "baby";
+  if (level <= 6) return "adult";
+  return "legend";
+}
+function sparkFace(level: number, emojis: SparkEmojis): string {
+  return emojis[sparkStageFromLevel(level)];
 }
 
 const FALLBACK_GRADES: Grade[] = [
@@ -104,6 +108,7 @@ export default function Primary() {
   const [streak, setStreak] = useState<number>(0);
   const [recommendedGrade, setRecommendedGrade] = useState<number | null>(null);
   const [switchOpen, setSwitchOpen] = useState(false);
+  const [sparkEmojis, setSparkEmojis] = useState<SparkEmojis>(SPARK_FALLBACK);
   const [grade, setGrade] = useState<number | null>(() => {
     const saved = localStorage.getItem("primary:lastGrade");
     return saved ? Number(saved) : null;
@@ -139,6 +144,28 @@ export default function Primary() {
         else {
           const { data: created } = await supabase.from("pet_state").insert({ user_id: userId }).select().maybeSingle();
           if (created) setPet(created as Pet);
+        }
+        // 找用户当前激活的宠物 → 拿对应物种的四阶段 emoji。
+        // 没有激活宠物时回退到 fire_fox(Spark 的默认形象)。
+        const { data: activePet } = await supabase
+          .from("user_pets")
+          .select("species_id")
+          .eq("user_id", userId)
+          .eq("is_active", true)
+          .maybeSingle();
+        const speciesId = activePet?.species_id ?? "fire_fox";
+        const { data: sp } = await supabase
+          .from("pet_species")
+          .select("emoji_egg,emoji_baby,emoji_adult,emoji_legend")
+          .eq("id", speciesId)
+          .maybeSingle();
+        if (sp) {
+          setSparkEmojis({
+            egg: sp.emoji_egg ?? SPARK_FALLBACK.egg,
+            baby: sp.emoji_baby ?? SPARK_FALLBACK.baby,
+            adult: sp.emoji_adult ?? SPARK_FALLBACK.adult,
+            legend: sp.emoji_legend ?? SPARK_FALLBACK.legend,
+          });
         }
         // Pull parent-set recommended grade — drives the "推荐" tag in the
         // switch dialog and seeds the default grade for first-time visitors.
@@ -186,7 +213,7 @@ export default function Primary() {
   const bondNow = Math.max(0, Math.min(100, pet?.bond ?? 0));
   const bondHearts = Math.round(bondNow / 10);
   const bondToLevel = Math.max(0, 100 - bondNow);
-  const sparkEmoji = sparkFace(pet?.level ?? 1);
+  const sparkEmoji = sparkFace(pet?.level ?? 1, sparkEmojis);
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">

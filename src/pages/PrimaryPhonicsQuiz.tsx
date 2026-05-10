@@ -50,9 +50,41 @@ export default function PrimaryPhonicsQuiz() {
 
   const total = items.length;
   const cur = items[idx];
+  const isFinished = !loading && total > 0 && idx >= total;
 
   // 每题随机一个题型(听音选字母 / 看字母选音 / 听词选 emoji)
   const q = useMemo(() => (cur ? buildOneQuestion(cur) : null), [cur]);
+
+  // 全部答完 → 结算 + 跳转(放 effect 里,避免 render 期副作用)
+  useEffect(() => {
+    if (!isFinished) return;
+    let cancel = false;
+    (async () => {
+      const allCorrect = correctCount === total;
+      if (!isReview && group && allCorrect) {
+        const groupItems = PHONICS_ITEMS.filter((it) => it.groupId === group.id);
+        await ensureGroupMastery(groupItems.map((it) => it.id), 2);
+        if (cancel) return;
+        celebratePet({
+          kind: "levelup",
+          emoji: "🦊",
+          title: `${group.groupName} 通关!`,
+          subtitle: "Spark 解锁了下一组~",
+        });
+      } else {
+        if (cancel) return;
+        celebratePet({
+          kind: "levelup",
+          emoji: "🦊",
+          title: `做完啦!对 ${correctCount}/${total}`,
+          subtitle: allCorrect ? "全对!" : "错题几天后会再考你哦",
+        });
+      }
+      const t = setTimeout(() => nav("/primary/phonics"), 1800);
+      return () => clearTimeout(t);
+    })();
+    return () => { cancel = true; };
+  }, [isFinished, correctCount, total, isReview, group, nav]);
 
   useEffect(() => {
     if (!q || !cur) return;
@@ -84,32 +116,7 @@ export default function PrimaryPhonicsQuiz() {
     );
   }
 
-  if (!cur || !q) {
-    // 全部答完
-    const allCorrect = correctCount === total;
-    void (async () => {
-      if (!isReview && group && allCorrect) {
-        const groupItems = PHONICS_ITEMS.filter((it) => it.groupId === group.id);
-        await ensureGroupMastery(
-          groupItems.map((it) => it.id),
-          2
-        );
-        celebratePet({
-          kind: "levelup",
-          emoji: "🦊",
-          title: `${group.groupName} 通关!`,
-          subtitle: "Spark 解锁了下一组~",
-        });
-      } else {
-        celebratePet({
-          kind: "levelup",
-          emoji: "🦊",
-          title: `做完啦!对 ${correctCount}/${total}`,
-          subtitle: allCorrect ? "全对!" : "错题几天后会再考你哦",
-        });
-      }
-    })();
-    setTimeout(() => nav("/primary/phonics"), 1800);
+  if (isFinished || !cur || !q) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <p className="text-lg font-bold">

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
-export type Stage = "junior" | "gaokao";
+export type Stage = "primary" | "junior" | "gaokao";
 
 export type ModuleKey =
   | "vocab"
@@ -9,7 +9,8 @@ export type ModuleKey =
   | "listening"
   | "writing"
   | "grammar"
-  | "cloze";
+  | "cloze"
+  | "lesson";
 
 export type ModuleStat = {
   key: ModuleKey;
@@ -38,8 +39,9 @@ export type StageOverview = {
 
 /** Module totals (seed corpus size). Keep in sync with DB seed counts. */
 const TOTALS: Record<Stage, Record<ModuleKey, number>> = {
-  junior: { vocab: 2043, reading: 91, listening: 209, writing: 143, grammar: 56, cloze: 0 },
-  gaokao: { vocab: 4141, reading: 65, listening: 0, writing: 0, grammar: 298, cloze: 16 },
+  primary: { vocab: 1038, reading: 60, listening: 0, writing: 0, grammar: 0, cloze: 0, lesson: 35 },
+  junior:  { vocab: 2043, reading: 91, listening: 209, writing: 143, grammar: 56, cloze: 0, lesson: 0 },
+  gaokao:  { vocab: 4141, reading: 65, listening: 0,   writing: 0,   grammar: 298, cloze: 16, lesson: 0 },
 };
 
 const MODULE_META: Record<ModuleKey, { label: string; emoji: string }> = {
@@ -49,10 +51,12 @@ const MODULE_META: Record<ModuleKey, { label: string; emoji: string }> = {
   writing:  { label: "写作",   emoji: "✍️" },
   grammar:  { label: "语法",   emoji: "🧩" },
   cloze:    { label: "完形",   emoji: "🧠" },
+  lesson:   { label: "课程",   emoji: "🎒" },
 };
 
 function routeFor(stage: Stage, key: ModuleKey): string {
-  const base = stage === "junior" ? "/junior" : "/gaokao";
+  const base = stage === "primary" ? "/primary" : stage === "junior" ? "/junior" : "/gaokao";
+  if (stage === "primary" && key === "lesson") return "/primary";
   return `${base}/${key}`;
 }
 
@@ -88,6 +92,58 @@ export function useMasteryOverview(stage: Stage): StageOverview {
         return;
       }
       const nowIso = new Date().toISOString();
+
+      // === PRIMARY stage: vocab + reading + lesson ===
+      if (stage === "primary") {
+        const vocabP = emptyStat("primary", "vocab");
+        const { data: pwm } = await supabase
+          .from("primary_word_mastery")
+          .select("mastery_level,due_at")
+          .eq("user_id", user.id);
+        for (const r of pwm ?? []) {
+          const lvl = (r as any).mastery_level ?? 0;
+          if (lvl >= 3) vocabP.mastered += 1;
+          else if (lvl >= 1) vocabP.learned += 1;
+          if ((r as any).due_at && new Date((r as any).due_at).getTime() <= Date.now() && lvl < 3) vocabP.due += 1;
+        }
+        vocabP.percent = vocabP.total ? Math.round((vocabP.mastered / vocabP.total) * 100) : 0;
+
+        const readP = emptyStat("primary", "reading");
+        const { data: prp } = await supabase
+          .from("primary_reading_progress")
+          .select("stars,score,completed_at")
+          .eq("user_id", user.id);
+        for (const r of prp ?? []) {
+          const stars = (r as any).stars ?? 0;
+          if (stars >= 3 || ((r as any).score ?? 0) >= 80) readP.mastered += 1;
+          else readP.learned += 1;
+        }
+        readP.percent = readP.total ? Math.round((readP.mastered / readP.total) * 100) : 0;
+
+        const lessonP = emptyStat("primary", "lesson");
+        const { data: plp } = await supabase
+          .from("primary_lesson_progress")
+          .select("stars,steps_done,total_steps,completed_at")
+          .eq("user_id", user.id);
+        for (const r of plp ?? []) {
+          const stars = (r as any).stars ?? 0;
+          const done = (r as any).steps_done ?? 0;
+          const tot = (r as any).total_steps ?? 5;
+          if (stars >= 3 || (r as any).completed_at) lessonP.mastered += 1;
+          else if (done > 0) lessonP.learned += 1;
+        }
+        lessonP.percent = lessonP.total ? Math.round((lessonP.mastered / lessonP.total) * 100) : 0;
+
+        const modulesP = [vocabP, readP, lessonP];
+        const totalP = modulesP.reduce((a, m) => a + m.total, 0);
+        const masteredP = modulesP.reduce((a, m) => a + m.mastered, 0);
+        const learnedP = modulesP.reduce((a, m) => a + m.learned, 0);
+        const dueP = modulesP.reduce((a, m) => a + m.due, 0);
+        const untouchedP = Math.max(0, totalP - masteredP - learnedP);
+        const pctP = totalP ? Math.round((masteredP / totalP) * 100) : 0;
+        if (!cancelled) setState({ stage, loading: false, signedIn: true, modules: modulesP, total: totalP, mastered: masteredP, learned: learnedP, untouched: untouchedP, due: dueP, percent: pctP });
+        return;
+      }
 
       // === Vocab ===
       const vocabKeys = stage === "junior" ? ["junior_word_mastery"] : ["gaokao_user_mastery"];

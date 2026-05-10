@@ -30,7 +30,8 @@ export function FloatingPet() {
   const t = useT();
   const { lang } = useI18n();
   const { mode, setMode, animate, showHungerAlert } = useCompanionMode();
-  const drag = useDraggable("bme_pet_pos");
+  // v2: 旧 key 里可能存着用户拖到屏幕中段的偏移,换 key 让定位回到默认右下
+  const drag = useDraggable("bme_pet_pos_v2");
   const [pet, setPet] = useState<Pet | null>(null);
   const [sp, setSp] = useState<Species | null>(null);
   const [skinFilter, setSkinFilter] = useState<string>("");
@@ -101,7 +102,7 @@ export function FloatingPet() {
       <button
         onClick={() => { localStorage.removeItem(HIDDEN_KEY); setHidden(false); }}
         aria-label={t("显示学习伙伴")}
-        className="fixed right-3 z-40 bottom-[calc(env(safe-area-inset-bottom,0px)+170px)] grid size-9 place-items-center rounded-full border border-border/60 bg-card/80 text-base shadow-md backdrop-blur transition hover:scale-105 lg:right-4"
+        className="fixed right-3 z-40 bottom-[calc(env(safe-area-inset-bottom,0px)+250px)] grid size-9 place-items-center rounded-full border border-border/60 bg-card/80 text-base shadow-md backdrop-blur transition hover:scale-105 lg:right-4"
       >
         🐾
       </button>
@@ -160,7 +161,7 @@ export function FloatingPet() {
         ref={drag.ref}
         style={drag.style}
         {...drag.handlers}
-        className="fixed right-3 z-40 bottom-[calc(env(safe-area-inset-bottom,0px)+170px)] cursor-grab select-none active:cursor-grabbing lg:right-4"
+        className="fixed right-3 z-40 bottom-[calc(env(safe-area-inset-bottom,0px)+250px)] cursor-grab select-none active:cursor-grabbing lg:right-4"
       >
         {SettingsPopover}
         <Link
@@ -200,7 +201,7 @@ export function FloatingPet() {
       ref={drag.ref}
       style={drag.style}
       {...drag.handlers}
-      className="fixed right-3 z-40 bottom-[calc(env(safe-area-inset-bottom,0px)+170px)] cursor-grab select-none active:cursor-grabbing lg:right-4"
+      className="fixed right-3 z-40 bottom-[calc(env(safe-area-inset-bottom,0px)+250px)] cursor-grab select-none active:cursor-grabbing lg:right-4"
     >
       {SettingsPopover}
       <Link

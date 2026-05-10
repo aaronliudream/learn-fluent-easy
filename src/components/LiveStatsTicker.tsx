@@ -18,10 +18,13 @@ export default function LiveStatsTicker() {
   onlineRef.current = online;
 
   useEffect(() => {
-    // 题数：永远只增不减。增速 = 当前在线人数 × 每人每分钟约 1.6 题
-    // 即每秒 ≈ online * 1.6 / 60。每 1.5s tick 一次。
+    // 题数：永远只增不减。
+    // 现实约束：每个真实用户单次会话 15–30 分钟、做 20–40 题（约 1 题/分钟），
+    // 但「在线人数」是瞬时并发槽位，会被不同用户轮换占据。考虑到大部分时段
+    // 槽位空转 / 用户在思考 / 阅读题目，每个并发槽位每分钟实际产出题数应 ≈ 0.05。
+    // 这样全天总题数 ≈ DAU × 30，与「人均 20–40 题」一致。
     const tickQ = setInterval(() => {
-      const perSecond = (onlineRef.current * 1.6) / 60;
+      const perSecond = (onlineRef.current * QUESTIONS_PER_USER_PER_MIN) / 60;
       const inc = Math.max(1, Math.round(perSecond * 1.5 * (0.85 + Math.random() * 0.3)));
       setQuestions((n) => n + inc);
     }, 1500);
@@ -95,9 +98,12 @@ function Stat({ icon, value, label, tone }: { icon: React.ReactNode; value: stri
  * 中国学生作息（北京时间）：
  *   工作日（周一-周五）：白天上学，主要使用集中在 19:00-23:00 + 早上 6-7 点
  *   周末（周六-周日）：全天活跃，10-23 点都不错，是工作日峰值的 ~2.5 倍
- * 题数增速 = 在线人数 × 1.6 题/分钟（教育平台合理值），所以人数 3000 时
- * 大约每秒 +80 题 —— 远大于人数本身的波动。
+ * 题数增速 = 在线人数 × 0.05 题/分钟（计入用户轮换、思考、阅读时间），
+ * 这样每位真实用户每天平均做 20–40 题，符合「15–30 分钟轻量练习」的产品定位。
  * ─────────────────────────────────────── */
+
+/** 每个并发在线槽位 平均每分钟产出题数（已考虑槽位轮换 / 思考 / 阅读时间） */
+const QUESTIONS_PER_USER_PER_MIN = 0.05;
 
 // 工作日 24h 在线人数曲线（每小时一个值，单位：人）
 // 综合考虑：上学时间、三餐时间、午休、晚自习、洗漱睡觉
@@ -150,15 +156,15 @@ function baselineQuestions(): number {
   // 累加完整的过去小时
   let total = 0;
   for (let i = 0; i < h; i++) {
-    // 一小时内 = 平均人数 × 60 分钟 × 1.6 题/人/分钟
+    // 一小时内 = 平均人数 × 60 分钟 × QUESTIONS_PER_USER_PER_MIN
     const avg = (curve[i] + curve[(i + 1) % 24]) / 2;
-    total += avg * 60 * 1.6;
+    total += avg * 60 * QUESTIONS_PER_USER_PER_MIN;
   }
   // 当前小时已过去的部分
   const cur = curve[h];
   const next = curve[(h + 1) % 24];
   const avgPart = (cur + (cur + (next - cur) * (m / 60))) / 2;
-  total += avgPart * m * 1.6;
+  total += avgPart * m * QUESTIONS_PER_USER_PER_MIN;
 
   // ±2% 噪声让每次刷新略不同
   return Math.round(total * (0.98 + Math.random() * 0.04));

@@ -227,6 +227,32 @@ const Lesson = () => {
   const [fills, setFills] = useState<Record<number, string>>({});
   const [quizPicks, setQuizPicks] = useState<Record<number, number>>({});
   const [listenInputs, setListenInputs] = useState<Record<number, string>>({});
+  // Track which (module, idx) have already been reported to unified_mastery,
+  // so resetting state or re-rendering does not double-count attempts.
+  const recordedAttemptsRef = useRef<Set<string>>(new Set());
+  const lessonSG = lessonStageGrade(Number(levelId) || 1);
+  const lessonItemBase = `lesson:L${levelId}-U${unitId}-${lessonId}`;
+  const recordLessonAttempt = (
+    module: ModuleKey,
+    idx: number,
+    isCorrect: boolean,
+    label: string,
+    extra?: { user_answer?: string; correct_answer?: string },
+  ) => {
+    const key = `${module}:${idx}`;
+    if (recordedAttemptsRef.current.has(key)) return;
+    recordedAttemptsRef.current.add(key);
+    recordUnifiedAttempt({
+      stage: lessonSG.stage,
+      grade: lessonSG.grade,
+      module,
+      item_type: `lesson_${module}`,
+      item_id: `${lessonItemBase}:${module}:${idx}`,
+      item_label: label,
+      is_correct: isCorrect,
+      ...extra,
+    }).catch(() => { /* non-blocking */ });
+  };
   const [output, setOutput] = useState("");
   const [checking, setChecking] = useState(false);
   type Feedback = {

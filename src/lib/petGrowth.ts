@@ -185,3 +185,12 @@ export function bondOnCultureStamp() {
 export function bondOnAssessmentComplete() {
   feedSpark({ bond: 20, xp: 60, capped: false });
 }
+
+/**
+ * Daily Adventure fully completed (all 4 steps).
+ * NOT capped (once per day) — and we want the day to end with a
+ * visible flash of growth so kids feel "I made Spark bigger today".
+ */
+export function bondOnAdventureComplete() {
+  feedSpark({ bond: 30, xp: 100, capped: false });
+}

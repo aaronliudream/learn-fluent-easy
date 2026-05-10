@@ -53,7 +53,7 @@ const TABS = [
   },
 ];
 
-const HIDDEN_ROUTES = ["/auth", "/ielts-speaking/session"];
+const HIDDEN_ROUTES = ["/auth"];
 
 export const BottomTabBar = () => {
   const { pathname } = useLocation();

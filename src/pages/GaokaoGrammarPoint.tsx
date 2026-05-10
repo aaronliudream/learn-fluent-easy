@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
 import { recordGrammarAttempt as recordPanoramaAttempt } from "@/lib/grammarMastery";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { celebrateScore } from "@/lib/feedback";
 import {
   recordGrammarAttempt,
@@ -173,6 +174,18 @@ export default function GaokaoGrammarPoint() {
 
     const latencyMs = Date.now() - questionStartTs;
     await recordAttempt({ questionType: "grammar", questionId: q.id, userAnswer: letter, isCorrect });
+    recordUnifiedAttempt({
+      stage: "senior",
+      grade: 10,
+      module: "grammar",
+      item_type: "grammar_question",
+      item_id: q.id,
+      item_label: point?.title ?? slug ?? undefined,
+      is_correct: isCorrect,
+      user_answer: letter,
+      correct_answer: q.correct_answer,
+      context: { point_id: point?.id, slug },
+    }).catch(() => {});
     // Feed the cross-stage 语法掌握全景图
     if (slug) recordPanoramaAttempt(`gaokao:${slug}`, isCorrect);
     const res = await recordGrammarAttempt({

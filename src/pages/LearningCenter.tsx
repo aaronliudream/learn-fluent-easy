@@ -81,12 +81,14 @@ export default function LearningCenter() {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) { if (!cancelled) { setSignedIn(false); setLoading(false); } return; }
 
+      const uid = user.id;
       const [ovR, spR, mpR, scR, snR] = await Promise.all([
-        supabase.from("mastery_overall").select("*").maybeSingle(),
-        supabase.from("mastery_stage_proportion").select("*"),
-        supabase.from("mastery_module_proportion").select("*"),
-        supabase.from("mastery_with_proportions").select("*"),
+        supabase.from("mastery_overall").select("*").eq("user_id", uid).maybeSingle(),
+        supabase.from("mastery_stage_proportion").select("*").eq("user_id", uid),
+        supabase.from("mastery_module_proportion").select("*").eq("user_id", uid),
+        supabase.from("mastery_with_proportions").select("*").eq("user_id", uid),
         supabase.from("mastery_snapshots").select("snap_date,score_pct,stage,grade,module")
+          .eq("user_id", uid)
           .is("stage", null).is("grade", null).is("module", null)
           .order("snap_date", { ascending: false }).limit(2000),
       ]);
@@ -407,8 +409,8 @@ function ModuleView({
           <div className="divide-y divide-border">
             {STAGES.map((s) => {
               const rows = scopes.filter((r) => r.module === openModule && r.stage === s.key);
-              if (rows.length === 0) return null;
               const agg = aggregate(rows);
+              const noData = rows.length === 0;
               return (
                 <div key={s.key} className="px-4 py-3">
                   <div className="flex items-baseline justify-between text-[12px]">

@@ -22,14 +22,19 @@ const MODEL_LITE = "google/gemini-3.1-flash-lite-preview";
 const CACHE_TTL_HOURS = 24;
 const MIN_ATTEMPTS_FOR_AI = 20; // 不足则走模板
 
-interface DiagSummary {
+interface DiagSummaryRaw {
+  total: number;
+  master_count: number;
   master_pct: number;
-  total_items: number;
-  total_attempts: number;
-  weak_top3: Array<{ module: string; item_label: string; wrong_count: number; accuracy: number }>;
-  none_by_module: Array<{ module: string; none_count: number }>;
-  modules: Array<{ module: string; master: number; weak: number; none: number; accuracy: number }>;
+  weak_count: number;
+  none_count: number;
+  due_count: number;
+  recent_attempt_count: number;
+  weak_top3: Array<{ label: string; module: string; stage: string; grade: number; wrong_count: number }>;
+  none_by_module: Array<{ module: string; count: number }>;
 }
+interface ModuleStat { module: string; master: number; weak: number; none: number; total: number; accuracy: number }
+interface DiagSummary extends DiagSummaryRaw { modules: ModuleStat[] }
 
 function templateInsights(s: DiagSummary, lang: "zh" | "en") {
   const weakModules = s.modules
@@ -41,7 +46,7 @@ function templateInsights(s: DiagSummary, lang: "zh" | "en") {
     .slice(0, 1);
 
   const tips: string[] = [];
-  if (s.total_attempts < 5) {
+  if (s.recent_attempt_count < 5) {
     tips.push("先完成几个模块的练习，AI 才能给出针对性诊断 ✨");
   } else {
     if (weakModules.length) {
@@ -52,7 +57,7 @@ function templateInsights(s: DiagSummary, lang: "zh" | "en") {
     }
     if (s.weak_top3.length) {
       const top = s.weak_top3[0];
-      tips.push(`🎯 优先攻克：${top.item_label}（错 ${top.wrong_count} 次）`);
+      tips.push(`🎯 优先攻克：${top.label}（错 ${top.wrong_count} 次）`);
     }
     if (strongModules.length) {
       tips.push(`💪 强项：${moduleCn(strongModules[0].module)} · 可冲刺更难内容`);
@@ -60,9 +65,9 @@ function templateInsights(s: DiagSummary, lang: "zh" | "en") {
   }
 
   return {
-    summary: `已掌握 ${s.master_pct}% · ${s.total_items} 个知识点 · ${s.total_attempts} 次练习`,
+    summary: `已掌握 ${s.master_pct ?? 0}% · ${s.total ?? 0} 个知识点 · 近 30 天 ${s.recent_attempt_count ?? 0} 次练习`,
     insights: tips,
-    expected_gain: Math.min(15, Math.round((100 - s.master_pct) * 0.15)),
+    expected_gain: Math.min(15, Math.round((100 - (s.master_pct ?? 0)) * 0.15)),
     weak_modules: weakModules.map((m) => m.module),
     source: "template" as const,
   };
@@ -75,13 +80,13 @@ function moduleCn(m: string) {
 async function callLovableAI(summary: DiagSummary): Promise<any> {
   // 极简 prompt — 只传聚合摘要，不传明细
   const prompt = `学情数据：
-总掌握度 ${summary.master_pct}% · 知识点 ${summary.total_items} · 练习 ${summary.total_attempts} 次
+总掌握度 ${summary.master_pct}% · 知识点 ${summary.total} · 近 30 天练习 ${summary.recent_attempt_count} 次
 
 各模块表现：
 ${summary.modules.map((m) => `- ${moduleCn(m.module)}：master ${m.master} · weak ${m.weak} · none ${m.none} · 准确率 ${Math.round(m.accuracy * 100)}%`).join("\n")}
 
 最弱 3 个知识点：
-${summary.weak_top3.map((w, i) => `${i + 1}. ${w.item_label}（${moduleCn(w.module)}，错 ${w.wrong_count} 次）`).join("\n")}
+${summary.weak_top3.map((w, i) => `${i + 1}. ${w.label}（${moduleCn(w.module)}，错 ${w.wrong_count} 次）`).join("\n")}
 
 请用中文输出 JSON：{ "insights": ["建议1","建议2","建议3"], "expected_gain": 数字(0-20，预计本周可提升的百分点) }
 建议要具体、克制、可执行，每条 ≤ 30 字。只回 JSON。`;
@@ -160,15 +165,41 @@ Deno.serve(async (req) => {
     // ── Layer 6: DB 预聚合 ─────────────────────────
     const { data: summary, error: sErr } = await admin.rpc("get_diagnostic_summary", { p_user_id: userId });
     if (sErr) throw sErr;
-    const s = summary as unknown as DiagSummary;
+    const raw = (summary as unknown as DiagSummaryRaw) || ({} as DiagSummaryRaw);
+
+    // 补充 per-module 统计（轻量查询，不占 AI token）
+    const { data: modRows } = await admin
+      .from("mastery_by_module_overall")
+      .select("module, master, weak, none, total, score_pct")
+      .eq("user_id", userId);
+    const modules: ModuleStat[] = (modRows || []).map((r: any) => ({
+      module: r.module,
+      master: Number(r.master) || 0,
+      weak: Number(r.weak) || 0,
+      none: Number(r.none) || 0,
+      total: Number(r.total) || 0,
+      accuracy: (Number(r.score_pct) || 0) / 100,
+    }));
+    const s: DiagSummary = {
+      total: raw.total ?? 0,
+      master_count: raw.master_count ?? 0,
+      master_pct: raw.master_pct ?? 0,
+      weak_count: raw.weak_count ?? 0,
+      none_count: raw.none_count ?? 0,
+      due_count: raw.due_count ?? 0,
+      recent_attempt_count: raw.recent_attempt_count ?? 0,
+      weak_top3: raw.weak_top3 ?? [],
+      none_by_module: raw.none_by_module ?? [],
+      modules,
+    };
 
     let result: any;
     let was_template = false;
     let tokens_used = 0;
 
     // ── Layer 2: 模板兜底 ──────────────────────────
-    if (!s || s.total_attempts < MIN_ATTEMPTS_FOR_AI) {
-      result = templateInsights(s || { master_pct: 0, total_items: 0, total_attempts: 0, weak_top3: [], none_by_module: [], modules: [] }, "zh");
+    if (!s || s.recent_attempt_count < MIN_ATTEMPTS_FOR_AI) {
+      result = templateInsights(s, "zh");
       was_template = true;
     } else {
       // ── Layer 4 + 5: 摘要 prompt + lite 模型 ────

@@ -103,7 +103,7 @@ export default function LearningCenter() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 [font-variant-numeric:tabular-nums]">
-      <BackLink to="/dashboard" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground">
+      <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground">
         ← 返回
       </BackLink>
 

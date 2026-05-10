@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { recordUnifiedAttempt } from "@/lib/unifiedMastery";
 
 type Q = { id: string; word: string; meaning_cn: string; options: string[]; isNew: boolean };
 
@@ -175,6 +176,25 @@ export default function StageTestPlay() {
     if (!uid) return;
     const seg = segment as string;
     const accuracy = allResults.length ? allResults.filter(r => r.correct).length / allResults.length : 0;
+
+    // 🆕 v7：阶段测试统一写 unified_mastery（每题一条 vocab）
+    const stage = (seg === "primary" ? "primary" : seg === "junior" ? "junior" : "senior") as
+      | "primary" | "junior" | "senior";
+    const gNum = Number(grade);
+    const dbGrade = stage === "senior"
+      ? (gNum >= 1 && gNum <= 3 ? gNum + 9 : gNum)
+      : gNum;
+    await Promise.all(allResults.map(r =>
+      recordUnifiedAttempt({
+        stage,
+        grade: dbGrade,
+        module: "vocab",
+        item_type: "word",
+        item_id: r.id,
+        is_correct: r.correct,
+        context: { source: "stage_test", test_id: testId },
+      }).catch(() => {})
+    ));
 
     // 1) 做题分数（家长中心：sessions / accuracy / active_days）
     if (seg === "primary") {

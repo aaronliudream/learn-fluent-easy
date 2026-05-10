@@ -467,23 +467,33 @@ function ModuleScopeRow({
   onOpenList: (p: { stage: StageK; module: string; state: ItemState; grade?: number; title: string }) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const empty = row.total === 0;
   return (
-    <div className="rounded-xl border border-border bg-card">
+    <div className={`rounded-xl border bg-card ${empty ? "border-dashed border-border/60" : "border-border"}`}>
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => !empty && setOpen(!open)}
+        disabled={empty}
         className="flex w-full items-center gap-3 px-3 py-2 text-left"
       >
         <span className="text-base" aria-hidden>{MODULE_EMOJI[row.module] ?? "🧠"}</span>
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline justify-between text-[11px]">
-            <span className="font-bold">{MODULE_LABEL[row.module] ?? row.module}</span>
-            <span className="text-muted-foreground tabular-nums">{Math.round(row.score_pct)}%</span>
+            <span className={`font-bold ${empty ? "text-muted-foreground" : ""}`}>
+              {MODULE_LABEL[row.module] ?? row.module}
+            </span>
+            {empty ? (
+              <span className="rounded-full bg-muted px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
+                未开放
+              </span>
+            ) : (
+              <span className="text-muted-foreground tabular-nums">{Math.round(row.score_pct)}%</span>
+            )}
           </div>
           <MasteryBar className="mt-1" master={row.master} fluent={row.fluent} weak={row.weak} none={row.none} height={5} />
         </div>
-        <ChevronDown className={`size-3.5 text-muted-foreground transition ${open ? "rotate-180" : ""}`} />
+        {!empty && <ChevronDown className={`size-3.5 text-muted-foreground transition ${open ? "rotate-180" : ""}`} />}
       </button>
-      {open && (
+      {open && !empty && (
         <div className="grid grid-cols-2 gap-1.5 border-t border-border bg-muted/20 px-3 py-2 sm:grid-cols-4">
           {(["master", "fluent", "weak", "none"] as ItemState[]).map((st) => {
             const n = (row as any)[st] as number;

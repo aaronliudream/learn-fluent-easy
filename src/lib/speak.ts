@@ -108,21 +108,28 @@ async function sha256Hex(s: string): Promise<string> {
 // Mirror Edge Function voice/speed normalization so the hash matches.
 const OPENAI_VOICES = new Set(["alloy", "shimmer", "nova", "echo", "onyx", "fable"]);
 function normalizeForHash(voiceId: string, speed: number, accent: string | undefined) {
-  let voice = OPENAI_VOICES.has(voiceId) ? voiceId : "alloy";
+  const isEl = typeof voiceId === "string" && voiceId.startsWith("el:");
+  let voice: string;
   const accentUpper = (accent || "").toUpperCase();
-  if (accentUpper === "UK") voice = "fable";
-  else if (accentUpper === "US") voice = "alloy";
-  const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
+  if (isEl) {
+    voice = voiceId; // ElevenLabs: keep as-is, accent doesn't apply
+  } else {
+    voice = OPENAI_VOICES.has(voiceId) ? voiceId : "alloy";
+    if (accentUpper === "UK") voice = "fable";
+    else if (accentUpper === "US") voice = "alloy";
+  }
+  // Allow slower speeds for young learners (down to 0.6).
+  const safeSpeed = Math.min(1.2, Math.max(0.6, Number(speed) || 0.95));
   return { voice, safeSpeed, accentUpper };
 }
 
 async function predictCdnUrl(text: string, voiceId: string, speed: number, accent?: string): Promise<string> {
   const { voice, safeSpeed, accentUpper } = normalizeForHash(voiceId, speed, accent);
-  // Server now prefers Aliyun when configured, so probe the same cache key
-  // first. This prevents repeat phrases in China from missing the CDN and
-  // unnecessarily hitting the Edge Function again.
   const safeText = String(text).slice(0, 4000);
-  const keyInput = `aliyun|${voice}|${safeSpeed}|${accentUpper}|${safeText}`;
+  // Hash key MUST mirror the edge function's `keyInput` exactly so the CDN
+  // probe finds previously-synthesized audio.
+  const provider = voice.startsWith("el:") ? "elevenlabs" : "openai";
+  const keyInput = `${provider}|${voice}|${safeSpeed}|${accentUpper}|${safeText}`;
   const hash = await sha256Hex(keyInput);
   const path = `${hash.slice(0, 2)}/${hash}.mp3`;
   return `${SUPABASE_URL}/storage/v1/object/public/${TTS_BUCKET}/${path}`;

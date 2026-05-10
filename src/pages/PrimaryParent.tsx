@@ -40,6 +40,9 @@ export default function PrimaryParent() {
   const [skill, setSkill] = useState<SkillKey>("all");
   const [filter, setFilter] = useState<"all"|"new"|"learning"|"familiar"|"mastered">("all");
   const [pet, setPet] = useState<{ level: number; bond: number; xp: number } | null>(null);
+  // Phase 6 — two parent-facing numbers, computed weekly.
+  const [weeklyReadingWords, setWeeklyReadingWords] = useState<number>(0);
+  const [weeklyNewWords, setWeeklyNewWords] = useState<number>(0);
 
   useEffect(() => {
     (async () => {
@@ -63,6 +66,28 @@ export default function PrimaryParent() {
       const { data: ps } = await supabase
         .from("pet_state").select("level,bond,xp").eq("user_id", uid).maybeSingle();
       if (ps) setPet({ level: ps.level ?? 1, bond: ps.bond ?? 0, xp: ps.xp ?? 0 });
+
+      // ── Phase 6: weekly reading words & new words ──
+      try {
+        const weekAgo = new Date(Date.now() - 7 * 24 * 3600 * 1000).toISOString();
+        const { data: rp } = await supabase
+          .from("primary_reading_progress")
+          .select("article_id,completed_at,article:primary_reading_articles(estimated_minutes)")
+          .eq("user_id", uid)
+          .gte("completed_at", weekAgo);
+        // ~30 wpm reading pace for primary kids; estimated_minutes is per-article.
+        const totalWords = (rp ?? []).reduce(
+          (sum: number, r: any) => sum + (r.article?.estimated_minutes ?? 6) * 30,
+          0
+        );
+        setWeeklyReadingWords(totalWords);
+      } catch { /* table may differ */ }
+      const newWords = (m.data ?? []).filter((r: any) =>
+        r.last_seen_at &&
+        (r.mastery_level ?? 0) >= 1 &&
+        new Date(r.last_seen_at).getTime() > Date.now() - 7 * 24 * 3600 * 1000
+      ).length;
+      setWeeklyNewWords(newWords);
       setLoading(false);
     })();
   }, []);
@@ -165,6 +190,37 @@ export default function PrimaryParent() {
 
           {/* 🆕 五项技能阵列 — 听 / 说 / 读 / 看 / 写 (新课标对齐) */}
           <FiveSkillArray stats={stats} grade={grade} />
+
+          {/* 🌟 Phase 6 — 本周看一眼 (两个核心数字给家长) */}
+          <section className="my-4 rounded-3xl border-2 border-emerald-200 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 p-4 shadow-tile dark:border-emerald-900/40 dark:from-emerald-950/40 dark:via-teal-950/30 dark:to-cyan-950/30">
+            <div className="mb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-300">📊 本周看一眼</div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="rounded-2xl bg-white/70 p-3 dark:bg-card">
+                <div className="text-xs text-muted-foreground">本周阅读字数</div>
+                <div className="mt-1 flex items-baseline gap-1">
+                  <span className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-300">{weeklyReadingWords.toLocaleString()}</span>
+                  <span className="text-xs text-muted-foreground">/ 4500 词</span>
+                </div>
+                <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-emerald-100 dark:bg-emerald-900/40">
+                  <div className="h-full bg-gradient-to-r from-emerald-400 to-teal-400 transition-all"
+                       style={{ width: `${Math.min(100, (weeklyReadingWords / 4500) * 100)}%` }} />
+                </div>
+                <div className="mt-1 text-[10px] text-muted-foreground">
+                  课标参考:小学高段每周约 4500 词
+                </div>
+              </div>
+              <div className="rounded-2xl bg-white/70 p-3 dark:bg-card">
+                <div className="text-xs text-muted-foreground">本周新学词汇</div>
+                <div className="mt-1 flex items-baseline gap-1">
+                  <span className="text-3xl font-extrabold text-teal-600 dark:text-teal-300">{weeklyNewWords}</span>
+                  <span className="text-xs text-muted-foreground">个</span>
+                </div>
+                <div className="mt-2 text-[10px] text-muted-foreground">
+                  按"7 天内首次熟练 (mastery ≥ 1)" 计算
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* 🆕 Spark 状态卡 */}
           <SparkStatusCard pet={pet} />

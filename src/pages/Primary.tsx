@@ -4,13 +4,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Play, Star, Calendar, Heart } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { StreakBanner } from "@/components/StreakBanner";
+import MonthlyPostcard from "@/components/pet/MonthlyPostcard";
+import EvolutionTree from "@/components/pet/EvolutionTree";
 
 type Grade = {
   id: number; name_cn: string; name_en: string;
   emoji: string | null; gradient: string | null;
 };
 
-type Pet = { name: string; level: number; xp: number; bond: number; stars: number; hunger?: number; mood?: number };
+type Pet = { name: string; level: number; xp: number; bond: number; stars: number; hunger?: number; mood?: number; stage?: number };
 
 const FALLBACK_GRADES: Grade[] = [
   { id: 1, name_cn: "一年级", name_en: "Grade 1", emoji: "🐣", gradient: "from-amber-300 via-yellow-300 to-orange-300" },
@@ -147,6 +149,16 @@ export default function Primary() {
 
           {/* Streak 退到次要位置 */}
           {uid && <div className="mt-4"><StreakBanner userId={uid} /></div>}
+
+          {/* Phase 5 — 复活宠物资产 */}
+          {pet && (
+            <div className="mt-4">
+              <EvolutionTree stage={pet.stage ?? 0} level={pet.level ?? 1} nickname={pet.name} />
+            </div>
+          )}
+          <div className="mt-4">
+            <MonthlyPostcard />
+          </div>
 
           {/* 唯一二级入口 — 周计划 & 进度(给家长) */}
           <div className="mt-4 flex items-center justify-center gap-2 text-xs">

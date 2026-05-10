@@ -3271,6 +3271,12 @@ type DictResult = {
 };
 
 function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+  const [sp] = useSearchParams();
+  const gradeNum = (() => {
+    const raw = Number(sp.get("grade"));
+    if (!raw) return 10;
+    return raw >= 1 && raw <= 3 ? raw + 9 : raw;
+  })();
   const playable = useMemo(
     () =>
       pool.filter(
@@ -3329,6 +3335,16 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       const r = data as DictResult;
       setResult(r);
       setScores((prev) => [...prev, r.score]);
+      recordUnifiedAttempt({
+        stage: "senior",
+        grade: gradeNum,
+        module: "vocab",
+        item_type: "dictation",
+        item_id: current.id,
+        item_label: (current.example_en || current.word).slice(0, 60),
+        is_correct: r.score >= 60,
+        context: { score: r.score, mode: "dictation" },
+      }).catch(() => {});
       if (r.score >= 80) {
         setStreak((s) => {
           const ns = s + 1;

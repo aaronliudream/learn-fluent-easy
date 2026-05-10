@@ -146,6 +146,66 @@ export type Database = {
         }
         Relationships: []
       }
+      ai_diagnostic_logs: {
+        Row: {
+          call_at: string | null
+          id: string
+          model_used: string | null
+          tokens_used: number | null
+          user_id: string | null
+          was_cached: boolean | null
+          was_template: boolean | null
+        }
+        Insert: {
+          call_at?: string | null
+          id?: string
+          model_used?: string | null
+          tokens_used?: number | null
+          user_id?: string | null
+          was_cached?: boolean | null
+          was_template?: boolean | null
+        }
+        Update: {
+          call_at?: string | null
+          id?: string
+          model_used?: string | null
+          tokens_used?: number | null
+          user_id?: string | null
+          was_cached?: boolean | null
+          was_template?: boolean | null
+        }
+        Relationships: []
+      }
+      ai_diagnostics: {
+        Row: {
+          expected_gain: string | null
+          expires_at: string
+          generated_at: string | null
+          id: string
+          insights: Json
+          summary: string | null
+          user_id: string
+        }
+        Insert: {
+          expected_gain?: string | null
+          expires_at?: string
+          generated_at?: string | null
+          id?: string
+          insights?: Json
+          summary?: string | null
+          user_id: string
+        }
+        Update: {
+          expected_gain?: string | null
+          expires_at?: string
+          generated_at?: string | null
+          id?: string
+          insights?: Json
+          summary?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       ai_quota_limits: {
         Row: {
           daily_call_limit: number
@@ -3759,6 +3819,54 @@ export type Database = {
         }
         Relationships: []
       }
+      mastery_snapshots: {
+        Row: {
+          created_at: string | null
+          fluent: number
+          grade: number | null
+          id: string
+          master: number
+          module: string | null
+          none: number
+          score_pct: number
+          snap_date: string
+          stage: string | null
+          total: number
+          user_id: string
+          weak: number
+        }
+        Insert: {
+          created_at?: string | null
+          fluent?: number
+          grade?: number | null
+          id?: string
+          master?: number
+          module?: string | null
+          none?: number
+          score_pct?: number
+          snap_date: string
+          stage?: string | null
+          total: number
+          user_id: string
+          weak?: number
+        }
+        Update: {
+          created_at?: string | null
+          fluent?: number
+          grade?: number | null
+          id?: string
+          master?: number
+          module?: string | null
+          none?: number
+          score_pct?: number
+          snap_date?: string
+          stage?: string | null
+          total?: number
+          user_id?: string
+          weak?: number
+        }
+        Relationships: []
+      }
       mistake_reflections: {
         Row: {
           correct_was: string
@@ -5962,6 +6070,69 @@ export type Database = {
         }
         Relationships: []
       }
+      unified_mastery: {
+        Row: {
+          attempt_count: number | null
+          correct_count: number | null
+          created_at: string | null
+          due_at: string | null
+          ease: number | null
+          grade: number
+          id: string
+          interval_days: number | null
+          item_id: string
+          item_label: string | null
+          item_type: string
+          last_review_at: string | null
+          module: string
+          stage: string
+          state: string
+          updated_at: string | null
+          user_id: string
+          wrong_count: number | null
+        }
+        Insert: {
+          attempt_count?: number | null
+          correct_count?: number | null
+          created_at?: string | null
+          due_at?: string | null
+          ease?: number | null
+          grade: number
+          id?: string
+          interval_days?: number | null
+          item_id: string
+          item_label?: string | null
+          item_type: string
+          last_review_at?: string | null
+          module: string
+          stage: string
+          state?: string
+          updated_at?: string | null
+          user_id: string
+          wrong_count?: number | null
+        }
+        Update: {
+          attempt_count?: number | null
+          correct_count?: number | null
+          created_at?: string | null
+          due_at?: string | null
+          ease?: number | null
+          grade?: number
+          id?: string
+          interval_days?: number | null
+          item_id?: string
+          item_label?: string | null
+          item_type?: string
+          last_review_at?: string | null
+          module?: string
+          stage?: string
+          state?: string
+          updated_at?: string | null
+          user_id?: string
+          wrong_count?: number | null
+        }
+        Relationships: []
+      }
       user_badges: {
         Row: {
           badge_code: string
@@ -6670,7 +6841,73 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      mastery_by_grade: {
+        Row: {
+          fluent: number | null
+          grade: number | null
+          master: number | null
+          none: number | null
+          score_pct: number | null
+          stage: string | null
+          total: number | null
+          user_id: string | null
+          weak: number | null
+        }
+        Relationships: []
+      }
+      mastery_by_module: {
+        Row: {
+          fluent: number | null
+          grade: number | null
+          master: number | null
+          module: string | null
+          none: number | null
+          score_pct: number | null
+          stage: string | null
+          total: number | null
+          user_id: string | null
+          weak: number | null
+        }
+        Relationships: []
+      }
+      mastery_by_module_overall: {
+        Row: {
+          fluent: number | null
+          master: number | null
+          module: string | null
+          none: number | null
+          score_pct: number | null
+          total: number | null
+          user_id: string | null
+          weak: number | null
+        }
+        Relationships: []
+      }
+      mastery_by_stage: {
+        Row: {
+          fluent: number | null
+          master: number | null
+          none: number | null
+          score_pct: number | null
+          stage: string | null
+          total: number | null
+          user_id: string | null
+          weak: number | null
+        }
+        Relationships: []
+      }
+      mastery_overall: {
+        Row: {
+          fluent: number | null
+          master: number | null
+          none: number | null
+          score_pct: number | null
+          total: number | null
+          user_id: string | null
+          weak: number | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       _elo_delta:
@@ -6839,6 +7076,7 @@ export type Database = {
           opponent_rating: number
         }[]
       }
+      get_diagnostic_summary: { Args: { p_user_id: string }; Returns: Json }
       get_duel_leaderboard: {
         Args: { _scope?: string }
         Returns: {

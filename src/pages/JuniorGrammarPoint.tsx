@@ -12,6 +12,7 @@ import { consumeQuestionQuota } from "@/lib/quota";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { recordJuniorGrammarAttempt, JUNIOR_LEVEL_META, type JuniorGrammarErrorReason } from "@/lib/juniorGrammarFsrs";
 import { recordGrammarAttempt as recordPanoramaAttempt } from "@/lib/grammarMastery";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
 import { ImmersionCards, type ImmersionCard } from "@/components/grammar/ImmersionCards";
 import { GrammarQuestionCard, type GrammarQuestion, type AnswerResult } from "@/components/grammar/GrammarQuestionCard";
@@ -158,6 +159,18 @@ export default function JuniorGrammarPoint() {
     });
     // Feed the cross-stage 语法掌握全景图
     if (pt?.code) recordPanoramaAttempt(`junior:${pt.code}`, isPositive);
+    if (pt) {
+      recordUnifiedAttempt({
+        stage: "junior",
+        grade: 7,
+        module: "grammar",
+        item_type: q.question_type || "mcq",
+        item_id: pt.id,
+        item_label: pt.title,
+        is_correct: isPositive,
+        context: { code: pt.code, cefr: pt.cefr, qid: q.id },
+      }).catch(() => {});
+    }
   };
 
   // Reset everything (再做一遍)

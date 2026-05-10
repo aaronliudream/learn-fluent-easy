@@ -196,7 +196,7 @@ export default function Primary() {
 
   function goAdventure() {
     if (grade == null) return;
-    nav(`/primary/adventure`);
+    nav(`/primary/adventure/${grade}`);
   }
 
   // First-time visitor → inline grade picker, then immediately show CTA.

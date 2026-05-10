@@ -6982,6 +6982,7 @@ export type Database = {
           correct_count: number | null
           due_at: string | null
           grade: number | null
+          id: string | null
           item_id: string | null
           item_label: string | null
           item_type: string | null

@@ -101,12 +101,13 @@ export default function GaokaoGrammarQuiz() {
       const sorted = ((qs ?? []) as Question[]).sort(
         (a, b) => (a.irt_difficulty ?? 0) - (b.irt_difficulty ?? 0),
       );
-      setQuestions(sorted);
+      // 单次抽题：普通模式 12 题（≤10 分钟），挑战模式 24 题。
+      setQuestions(sorted.slice(0, sessionSize));
       const ms = await loadGrammarMastery(pt.id);
       setMastery(ms);
       setLoading(false);
     })();
-  }, [slug]);
+  }, [slug, sessionSize]);
 
   // Reset per-question state when index changes
   useEffect(() => {

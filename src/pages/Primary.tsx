@@ -257,12 +257,15 @@ export default function Primary() {
             >
               <Play className="size-5 fill-white" /> 陪 Spark 出发吧
             </button>
-            <div className="mt-4 flex items-center justify-center gap-3 text-xs text-rose-700/80 dark:text-rose-300/80">
-              <span>{currentGradeName}</span>
-              <span>·</span>
+            <div className="mt-4 flex justify-center">
+              <span className="inline-flex items-center rounded-full bg-rose-100/80 px-3 py-1 text-xs font-semibold text-rose-600 dark:bg-rose-900/40 dark:text-rose-300">
+                当前 · {currentGradeName}
+              </span>
+            </div>
+            <div className="mt-2 flex justify-center">
               <button
                 onClick={() => setSwitchOpen(true)}
-                className="text-muted-foreground/80 hover:text-rose-900"
+                className="text-xs text-muted-foreground hover:text-rose-700"
                 aria-label="去别的年级陪 Spark 冒险"
               >
                 Spark 在别的等级也有冒险 →

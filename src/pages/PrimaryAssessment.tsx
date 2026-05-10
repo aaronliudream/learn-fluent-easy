@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { sparkOnAnswer } from "@/lib/sparkAnswerFeedback";
 
 /* ============== Types ============== */
 type Mode = "challenge" | "checkup";
@@ -205,6 +206,8 @@ export default function PrimaryAssessment() {
     const correct = optIdx === q.correctIdx;
     setShowFeedback(correct);
     setPicks(p => [...p, optIdx]);
+    // Phase 3 — Spark visibly reacts to every answer.
+    sparkOnAnswer(correct, picks.filter((p, i) => p === questions[i]?.correctIdx).length + (correct ? 1 : 0));
     recordUnifiedAttempt({
       stage: "primary", grade, module: "vocab",
       item_type: `assessment_${q.type}`, item_id: q.word.id, item_label: q.word.word,

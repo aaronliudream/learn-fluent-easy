@@ -8,6 +8,7 @@ import ModuleStageTests from "@/components/ModuleStageTests";
 import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+import { sparkOnAnswer, sparkOnWrong } from "@/lib/sparkAnswerFeedback";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
 import { markBrowseDone } from "@/components/primary/MasteryPath";
@@ -430,6 +431,8 @@ function QuizMode({ words }: { words: Vocab[] }) {
       // 超时：记为错题，自动进入下一题
       setScore(s => ({ correct: s.correct, total: s.total + 1 }));
       setWrongIds(prev => { const n = new Set(prev); n.add(cur.word.id); return n; });
+      // Listen-question timeout = wrong, Spark reacts.
+      sparkOnWrong();
       bumpVocabMastery({ vocabId: cur.word.id, isCorrect: false, kind: "listen" }).catch(() => {});
       recordAttempt({ questionType: "vocab", questionId: cur.word.id, userAnswer: "(timeout)", isCorrect: false }).catch(() => {});
       recordUnifiedAttempt({
@@ -534,6 +537,8 @@ function QuizMode({ words }: { words: Vocab[] }) {
     setPicked(m);
     const correct = m === cur.answer;
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
+    // Phase 3 — Spark visibly reacts to every answer.
+    sparkOnAnswer(correct, score.correct + (correct ? 1 : 0));
     if (!correct) {
       setWrongIds(prev => {
         const n = new Set(prev); n.add(cur.word.id); return n;

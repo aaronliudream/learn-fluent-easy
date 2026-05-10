@@ -35,7 +35,7 @@ export function buildDailyAdventure(opts: {
     title: "Spark 教你拼读",
     sparkLine: "今天 Spark 学了一个新音,你陪我念好不好?",
     cta: "陪 Spark 学拼读",
-    to: `/primary/letters`,
+    to: `/primary/phonics`,
     estMinutes: 3,
   });
 

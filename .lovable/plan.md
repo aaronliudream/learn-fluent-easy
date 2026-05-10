@@ -1,103 +1,157 @@
+# Big Moon English → AI 能力诊断系统升级方案
 
-# 词汇系统化通关 · 实施方案
-
-## 目标
-
-把现在散点的词汇游戏串成一条**必经路径**：每个词独立走 5 级，全部掌握后自动进 FSRS 复习池，按遗忘曲线回灌；不再让用户自己挑游戏。
-
-## 数据层（不需新建表）
-
-现有 `gaokao_user_mastery` / `junior_word_mastery` 已经有 `mastery_level (smallint)`、`difficulty/stability/due_at`（高考）或 `ease/interval_days/due_at`（初中）。**无需迁移**，直接复用。
-
-约定：
-- `mastery_level` 取值 `0..5`，含义如下
-  - 0 = 新词 / 未学
-  - 1 = 看过卡片
-  - 2 = 中→英 选择通过
-  - 3 = 英→中 选择通过
-  - 4 = 听音拼写通过
-  - 5 = 完形/造句通过 → **退出主队列，进 FSRS 复习池**
-- 答对 → `level + 1`；答错 → `level - 1`（最低 1，不打回 0，避免挫败）
-- 升到 5 时写 `reached_master_at = now()`，并按答题时长触发 `fsrsSchedule()` 写入 `due_at`
-- FSRS 复习答错 → `level` 打回 3，重走 4、5
-
-## 新增模块
-
-### 1. `src/lib/vocabMastery.ts` — 通用状态机
-统一两个学段（gaokao / junior）的逻辑：
-```ts
-type Stage = 'gaokao' | 'junior';
-getNextWord(stage, unitId): Promise<{ vocab, level }>      // 取当前单元里 level 最低的词
-recordVocabAttempt(stage, wordId, level, isCorrect, latencyMs)
-                                                            // 升降级 + 升到5时调度FSRS
-getDueReviews(stage, limit): Promise<Vocab[]>               // FSRS 到期池
-```
-内部按 stage 切表名，封装两套字段差异。
-
-### 2. `src/components/vocab/GuidedSession.tsx` — 通关容器
-一个组件跑完 8–10 个词的「这一关」：
-- 顶部进度条：当前词 / 本关词数 / 平均等级
-- 中间根据当前词的 `level` 渲染对应题型组件
-  - L0/L1 → `<FlashcardStep>` （已存在，抽提）
-  - L2 → `<Cn2EnQuiz>`（已存在）
-  - L3 → `<En2CnQuiz>`（已存在）
-  - L4 → `<ListenSpellStep>`（已存在）
-  - L5 → `<ClozeStep>`（已存在）
-- 答题后调 `recordVocabAttempt`，立刻取下一题（不一定是同一个词，按 level 最低优先轮转）
-- 全员到 5 → 显示通关页（金币 + 徽章 + 解锁下一单元）
-
-### 3. `src/components/vocab/ReviewPool.tsx` — FSRS 复习入口
-首页/词汇页顶部一个卡片：「⏰ 你有 N 个词到了复习时间」。点进去用 `GuidedSession` 跑混合题型小测（每个词随机抽 L3–L5 之一）。
-
-## 改造现有页面
-
-### `src/pages/GaokaoVocab.tsx` & `src/pages/JuniorVocab.tsx`
-- 默认入口改成 **"开始本单元通关"** 按钮 → 跳 `GuidedSession`
-- 现有的零散游戏入口（freq browse / spell-only / dictation 等）收进 **"自由练习"** 折叠区，老用户照常能用
-- 顶部加 `ReviewPool` 卡片
-- 词列表里给每个词显示 5 颗灯（L1..L5），亮的代表已通过——视觉上立刻看到自己在哪一级
-
-### `src/components/vocab/VocabMasteryPath.tsx`
-现有的关卡地图：每关亮灯条件改为「该单元所有词 `mastery_level >= 5`」。
-
-## 不动的部分
-
-- 词条数据 / 例句 / 音频 / TTS 全部复用
-- `fsrs.ts` 不改
-- 已有 mastery 行不动（`mastery_level` 现状值仍然有意义；旧用户首次进入会自然按规则演进）
-
-## 文件清单
-
-| 操作 | 文件 |
-|---|---|
-| 新增 | `src/lib/vocabMastery.ts` |
-| 新增 | `src/components/vocab/GuidedSession.tsx` |
-| 新增 | `src/components/vocab/ReviewPool.tsx` |
-| 修改 | `src/pages/GaokaoVocab.tsx`（顶部加引导入口 + 复习池） |
-| 修改 | `src/pages/JuniorVocab.tsx`（同上） |
-| 微调 | `src/components/vocab/VocabMasteryPath.tsx`（亮灯阈值） |
-
-## 落地分两轮
-
-**第一轮（这次）**：
-- 写 `vocabMastery.ts` 状态机
-- 写 `GuidedSession` 容器（先用最简单的 5 个题型 step）
-- 写 `ReviewPool` 卡片
-- 在两个 Vocab 页顶部插入 **"开始通关 / 复习池"** 两张卡片，**不删旧入口**
-
-这样可以立刻验证流程，老功能也不破坏。
-
-**第二轮（验证 OK 之后）**：
-- 把零散入口收折叠 / 去掉
-- `MasteryPath` 亮灯逻辑统一
-- 加金币、徽章、连续打卡奖励
-
-## 风险与回避
-
-- **数据兼容**：旧 `mastery_level` 已是 1..5 范围，规则不冲突
-- **样式不一致**：`GuidedSession` 复用现有 step 组件的样式，不引入新的设计 token
-- **加载性能**：`getNextWord` 一次只查 1 条 + 单元词列表缓存，避免重复请求
+你的判断完全正确：网站的真正壁垒不是题库，而是**学生能力建模 (Student Modeling)**。下面是分阶段、可落地的工程方案。核心思想：**先打通数据底座（视图化 + 知识点标签），再让 Dashboard 和"强化练习"自动消费这套底座。**
 
 ---
 
-请确认这个方向。确认后我执行**第一轮**（约 4 个新/改文件，~600 行代码）。
+## 阶段 1：统一数据底座（视图化方案 B）
+
+### 1.1 把 `unified_mastery` 改造为视图
+
+将现有 13+ 张源表（`primary_word_mastery` / `primary_reading_progress` / `primary_lesson_progress` / `primary_speaking_attempts` / `junior_word_mastery` / `junior_listening_attempts` / `user_grammar_mastery` / `gaokao_user_mastery` / `gaokao_user_attempts` / `mastery_progress` / `card_attempts` / `slang_mastery` …）通过 `UNION ALL` 合并为一个**实时视图**，统一字段：
+
+```text
+user_id | stage | grade | module | item_type | item_id
+       | attempts | correct_count | accuracy
+       | last_attempt_at | last_correct_at
+       | knowledge_tag | subskill | difficulty
+```
+
+好处：
+- 任何源表写入 → Dashboard 立即可见，**零同步成本**
+- 旧 `unified_mastery` 表里 24 行历史数据先备份再 DROP
+- 现有写入路径（`record-attempt` Edge Function 等）不变，但**只写源表**，不再写 unified_mastery
+
+### 1.2 mastery 状态规则（写在视图里，全站统一）
+
+| 状态 | 规则 |
+|---|---|
+| **master** | attempts ≥ 5 且 accuracy ≥ 90% |
+| **fluent** | attempts ≥ 3 且 accuracy 70–90% |
+| **weak** | accuracy < 70% **或** 最近一次答错 |
+| **none** | attempts = 0（通过题库 LEFT JOIN 得到） |
+
+---
+
+## 阶段 2：知识点标签体系（真正的护城河）
+
+### 2.1 新建 `question_tags` 表
+
+把所有题目（语法点、阅读题、词汇、听力片段、完形…）打上多维标签：
+
+```text
+question_id | stage | grade | module
+            | skill         -- grammar / reading / vocab / listening / writing / cloze
+            | subskill      -- subjunctive / inference / phrasal_verb / numbers ...
+            | difficulty    -- 1–5
+            | knowledge_point -- 自由文本，用于面向学生的展示
+```
+
+### 2.2 子技能字典（首批最小集）
+
+- **grammar**: subjunctive, relative_clause, tense, non_finite, inversion, conditionals
+- **reading**: main_idea, inference, detail, vocab_in_context, long_sentence, attitude
+- **vocab**: high_freq, academic, phrasal_verb, collocation, confusable
+- **listening**: numbers, liaison, scene_words, gist, detail
+- **writing**: grammar_error, sentence_variety, cohesion, task_response
+- **cloze**: logic, collocation, contrast, cohesion
+
+### 2.3 回填策略
+
+- 高考 / 初中语法已有的 grammar_point 字段直接映射
+- 阅读、完形、听力先跑一次 **AI 批量打标**（gemini-2.5-flash，便宜快），把结果写入 `question_tags`
+- 新生成的题目（generate-lesson / generate-grammar-content 等 Edge Function）从源头就写入 tags
+
+---
+
+## 阶段 3：能力雷达视图
+
+新建两个上层视图，**Dashboard 直接消费**：
+
+### 3.1 `mastery_by_skill`（雷达图数据）
+
+按 `user_id × skill` 聚合 → 每个用户在 grammar / reading / vocab / listening / writing / cloze 上的整体掌握百分比。
+
+### 3.2 `mastery_by_subskill`（弱点诊断）
+
+按 `user_id × skill × subskill` 聚合 → 输出每个子技能的 accuracy + state，**按 weak 优先排序**，前端 `LIMIT 5` 即得"今日待突破"。
+
+### 3.3 `coverage_gaps`（哪些还没做）
+
+`question_tags LEFT JOIN unified_mastery` → 列出 attempts=0 的题目数，按 subskill 分组，得到"阅读推理 还有 12 题没做"。
+
+---
+
+## 阶段 4：Dashboard 改版
+
+```text
+┌────────────────────────────────────┐
+│  AI 能力雷达图（6 轴）             │
+│  Grammar 82  Reading 61  …         │
+└────────────────────────────────────┘
+
+┌─ 今日待突破（来自 mastery_by_subskill, weak top 3）─┐
+│ • 阅读推理     45%   [开始训练]                     │
+│ • 长难句       52%   [开始训练]                     │
+│ • 虚拟语气     58%   [开始训练]                     │
+└─────────────────────────────────────────────────────┘
+
+┌─ 还没做（来自 coverage_gaps）─┐
+│ • 完形填空 12 篇未做           │
+│ • 听力数字题 8 段未做          │
+└────────────────────────────────┘
+
+点 Grammar → 子技能下钻表
+  虚拟语气  weak    [练]
+  定语从句  fluent  [复习]
+  时态     master  ✓
+```
+
+技术：雷达图用 `recharts` 的 `RadarChart`（已在依赖里）。
+
+---
+
+## 阶段 5：智能抽题（"针对性测试"）
+
+新增 Edge Function `next-recommended-questions`：
+
+```text
+输入: user_id, skill (可选), limit=10
+逻辑:
+  1. 优先取 weak 子技能的题目（占 60%）
+  2. 其次取 none（从未做过）的题目（占 30%）
+  3. 最后取 fluent 但超过 7 天未复习的（占 10%）
+  4. 同一子技能不超过 3 题，避免疲劳
+返回: 题目列表 + 推荐理由（"因为你在虚拟语气上较弱"）
+```
+
+所有"强化练习 / 智能复习"按钮都走这个函数，**取代现有随机抽题**。
+
+---
+
+## 阶段 6：AI 学习路径（后续迭代）
+
+基于 `mastery_by_subskill`，让 `tutor-chat` Edge Function 在系统 prompt 里注入学生当前最弱的 3 个子技能，输出个性化建议：
+
+> 因为你：虚拟语气差、长难句差
+> 请先完成：1. 从句专项 2. 虚拟语气专项 3. 长难句拆解
+
+---
+
+## 落地顺序（建议一步一步走，不要一次全做）
+
+1. **本轮先做**：阶段 1（视图化 unified_mastery）+ 阶段 3.1（mastery_by_skill 视图）+ 阶段 4 中的雷达图
+   - 这一步立即让 Dashboard 显示真实数据，所有现有 1200+ 行历史记录"一夜复活"
+2. **下一轮**：阶段 2（question_tags 表 + 首批 AI 打标）+ 阶段 3.2/3.3
+3. **再下一轮**：阶段 5 智能抽题 + 阶段 4 子技能下钻
+4. **最后**：阶段 6 AI 学习路径
+
+---
+
+## 需要你确认的 3 件事
+
+1. **mastery 阈值**：master = 5 次 & 90%、fluent = 3 次 & 70%、weak < 70%——这个数字 OK 吗？还是要更严（比如 master 要 95%）？
+2. **本轮范围**：是先只做"阶段 1 + 雷达图"（约 1 个工作单元，立竿见影），还是连阶段 2 知识点打标也一起做（约 3 个工作单元，需要跑 AI 批量任务）？
+3. **knowledge_tag 字典**：上面列的子技能字典够用吗？还是你想加 / 删某些（比如要不要加"音标 phonics"维度给小学）？
+
+确认后我就开始写迁移 SQL 和前端组件。

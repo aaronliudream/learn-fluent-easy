@@ -1,6 +1,7 @@
 // Phonics 掌握度 — 复用 primary_word_mastery 的 SRS 套路。
 // 与单词掌握度独立:用 primary_phonics_mastery 表,phonics_id 是文本 ("p_a")。
 import { supabase } from "@/integrations/supabase/client";
+import { nextSrsState, isMasteryDue } from "@/lib/masteryFsrs";
 
 export type PhonicsMastery = {
   phonics_id: string;
@@ -67,15 +68,10 @@ export async function bumpPhonicsMastery(
   else correct ? r.listen_correct++ : r.listen_wrong++;
 
   // SRS
-  if (correct) {
-    r.ease = Math.min(3.0, (r.ease ?? 2.5) + 0.05);
-    r.interval_days = r.interval_days < 1 ? 1 : r.interval_days * r.ease;
-  } else {
-    r.ease = Math.max(1.3, (r.ease ?? 2.5) - 0.15);
-    r.interval_days = 1;
-  }
-  const dueMs = Date.now() + r.interval_days * 24 * 3600 * 1000;
-  r.due_at = new Date(dueMs).toISOString();
+  const srs = nextSrsState(r, correct);
+  r.ease = srs.ease;
+  r.interval_days = srs.interval_days;
+  r.due_at = srs.due_at;
   r.last_seen_at = new Date().toISOString();
 
   await supabase
@@ -144,7 +140,5 @@ export function isGroupUnlocked(
 }
 
 export function isDue(m: PhonicsMastery | undefined): boolean {
-  if (!m) return false;
-  if (m.mastery_level >= 3) return false;
-  return new Date(m.due_at).getTime() <= Date.now();
+  return isMasteryDue(m);
 }

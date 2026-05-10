@@ -10,10 +10,12 @@ import {
 } from "@/data/primaryPhonics";
 import {
   bumpPhonicsMastery,
+  bumpPhonicsLevel,
   ensureGroupMastery,
   getPhonicsMasteryMap,
   isDue,
 } from "@/lib/phonicsMastery";
+import { buildDistractorPool } from "@/lib/phonicsDistractors";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
 
 /**
@@ -28,9 +30,14 @@ export default function PrimaryPhonicsQuiz() {
   const group = isReview ? null : PHONICS_GROUPS.find((g) => g.id === groupId);
 
   const [items, setItems] = useState<PhonicsItem[]>([]);
-  const [idx, setIdx] = useState(0);
+  // 每个 item 走 3 道题(轮换 3 种题型). retryArmed = 本题答错过 1 次,允许再答 1 次.
+  const [itemIdx, setItemIdx] = useState(0);     // 当前在第几个 item
+  const [subIdx, setSubIdx] = useState(0);       // 当前 item 的第几道(0..2)
   const [picked, setPicked] = useState<string | null>(null);
-  const [correctCount, setCorrectCount] = useState(0);
+  const [retryArmed, setRetryArmed] = useState(false); // 本题答错可重做一次
+  const [itemCorrects, setItemCorrects] = useState(0); // 当前 item 累计答对数(0..3)
+  const [perfectItems, setPerfectItems] = useState(0); // 累计 3 题全对的 item 数
+  const [totalCorrect, setTotalCorrect] = useState(0); // 总答对题数(用于结算)
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -39,7 +46,7 @@ export default function PrimaryPhonicsQuiz() {
       if (isReview) {
         const m = await getPhonicsMasteryMap();
         const due = PHONICS_ITEMS.filter((it) => isDue(m.get(it.id)));
-        setItems(shuffle(due).slice(0, 12));
+        setItems(shuffle(due).slice(0, 6));
       } else if (group) {
         const groupItems = PHONICS_ITEMS.filter((it) => it.groupId === group.id);
         setItems(shuffle(groupItems));
@@ -48,19 +55,20 @@ export default function PrimaryPhonicsQuiz() {
     })();
   }, [isReview, group]);
 
-  const total = items.length;
-  const cur = items[idx];
-  const isFinished = !loading && total > 0 && idx >= total;
+  const totalItems = items.length;
+  const totalQuestions = totalItems * 3;
+  const cur = items[itemIdx];
+  const isFinished = !loading && totalItems > 0 && itemIdx >= totalItems;
 
-  // 每题随机一个题型(听音选字母 / 看字母选音 / 听词选 emoji)
-  const q = useMemo(() => (cur ? buildOneQuestion(cur) : null), [cur]);
+  // 当前题目: kind 由 subIdx 决定(0=听音选字, 1=看字选音, 2=听词选图)
+  const q = useMemo(() => (cur ? buildQuestionFor(cur, subIdx) : null), [cur, subIdx]);
 
   // 全部答完 → 结算 + 跳转(放 effect 里,避免 render 期副作用)
   useEffect(() => {
     if (!isFinished) return;
     let cancel = false;
     (async () => {
-      const allCorrect = correctCount === total;
+      const allCorrect = perfectItems === totalItems;
       if (!isReview && group && allCorrect) {
         const groupItems = PHONICS_ITEMS.filter((it) => it.groupId === group.id);
         await ensureGroupMastery(groupItems.map((it) => it.id), 2);
@@ -76,15 +84,15 @@ export default function PrimaryPhonicsQuiz() {
         celebratePet({
           kind: "levelup",
           emoji: "🦊",
-          title: `做完啦!对 ${correctCount}/${total}`,
-          subtitle: allCorrect ? "全对!" : "错题几天后会再考你哦",
+          title: `做完啦!通过 ${perfectItems}/${totalItems} 个音`,
+          subtitle: allCorrect ? "全部 3 题都对!太强啦" : "没全对的音明天会再考你哦",
         });
       }
       const t = setTimeout(() => nav("/primary/phonics"), 1800);
       return () => clearTimeout(t);
     })();
     return () => { cancel = true; };
-  }, [isFinished, correctCount, total, isReview, group, nav]);
+  }, [isFinished, perfectItems, totalItems, isReview, group, nav]);
 
   useEffect(() => {
     if (!q || !cur) return;
@@ -103,7 +111,7 @@ export default function PrimaryPhonicsQuiz() {
     );
   }
 
-  if (!loading && total === 0) {
+  if (!loading && totalItems === 0) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <BackLink to="/primary/phonics" className="text-sm text-muted-foreground">
@@ -120,7 +128,7 @@ export default function PrimaryPhonicsQuiz() {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <p className="text-lg font-bold">
-          做完啦!{correctCount} / {total}
+          做完啦!{perfectItems} / {totalItems} 个音通过(共答对 {totalCorrect} 题)
         </p>
         <p className="mt-2 text-sm text-muted-foreground">回到拼读冒险…</p>
       </main>
@@ -134,17 +142,58 @@ export default function PrimaryPhonicsQuiz() {
     if (q.kind === "hearLetter") isCorrect = opt === q.correct;
     else if (q.kind === "seeLetter") isCorrect = opt === q.correct;
     else if (q.kind === "matchWord") isCorrect = opt === q.correctWord;
-    if (isCorrect) setCorrectCount((c) => c + 1);
-    bumpPhonicsMastery(
+
+    // SRS 计数(用于"今日复习"到期判定)
+    void bumpPhonicsMastery(
       cur.id,
       q.kind === "hearLetter" || q.kind === "matchWord" ? "listen" : "quiz",
       isCorrect
     );
-    setTimeout(() => {
-      setIdx(idx + 1);
-      setPicked(null);
-    }, 850);
+
+    if (isCorrect) {
+      setTotalCorrect((c) => c + 1);
+      const newItemCorrects = itemCorrects + 1;
+      setItemCorrects(newItemCorrects);
+      // 推进到下一题或下一个 item
+      setTimeout(() => {
+        setPicked(null);
+        setRetryArmed(false);
+        if (subIdx >= 2) {
+          // 本 item 3 题全对 → 升级
+          if (newItemCorrects === 3) {
+            void bumpPhonicsLevel(cur.id, 1, 3);
+            setPerfectItems((p) => p + 1);
+          }
+          // 进入下一个 item
+          setItemCorrects(0);
+          setSubIdx(0);
+          setItemIdx(itemIdx + 1);
+        } else {
+          setSubIdx(subIdx + 1);
+        }
+      }, 850);
+    } else {
+      // 答错: 第一次错允许重做; 第二次错则跳过该题(本 item 永远 < 3 不会升级)
+      setTimeout(() => {
+        setPicked(null);
+        if (!retryArmed) {
+          setRetryArmed(true); // 同样的题再来一次
+        } else {
+          setRetryArmed(false);
+          if (subIdx >= 2) {
+            setItemCorrects(0);
+            setSubIdx(0);
+            setItemIdx(itemIdx + 1);
+          } else {
+            setSubIdx(subIdx + 1);
+          }
+        }
+      }, 1100);
+    }
   }
+
+  // 进度数字
+  const doneQuestions = itemIdx * 3 + subIdx;
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
@@ -160,14 +209,15 @@ export default function PrimaryPhonicsQuiz() {
           {isReview ? "🔁 今日复习" : `✨ 挑战 ${group?.groupName}`}
         </h1>
         <div className="text-xs font-mono font-bold text-muted-foreground">
-          {idx + 1} / {total} · ✓ {correctCount}
+          第 {Math.min(itemIdx + 1, totalItems)}/{totalItems} 个音 · 题 {subIdx + 1}/3
+          {retryArmed && <span className="ml-1 text-rose-600">· 再来一次</span>}
         </div>
       </div>
 
       <div className="mb-3 h-2 w-full overflow-hidden rounded-full bg-muted">
         <div
           className="h-full bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 transition-all"
-          style={{ width: `${(idx / total) * 100}%` }}
+          style={{ width: `${(doneQuestions / Math.max(1, totalQuestions)) * 100}%` }}
         />
       </div>
 
@@ -259,24 +309,30 @@ type Q =
   | { kind: "seeLetter"; correct: string; options: string[]; letter: string }
   | { kind: "matchWord"; correctWord: string; correctEmoji: string; options: { word: string; emoji: string }[] };
 
-function buildOneQuestion(item: PhonicsItem): Q {
-  const sameGroupOthers = PHONICS_ITEMS.filter(
-    (p) => p.groupId === item.groupId && p.id !== item.id
-  );
-  const pool = sameGroupOthers.length >= 3 ? sameGroupOthers : PHONICS_ITEMS.filter((p) => p.id !== item.id);
-  const distractors = shuffle(pool).slice(0, 3);
+/**
+ * 为指定 item 出第 subIdx (0..2) 道题.
+ *  subIdx 0 → 听音选字母
+ *  subIdx 1 → 看字母选音
+ *  subIdx 2 → 听词选图(没有 emoji 时回退到听音选字母)
+ * 干扰项一律走智能映射 buildDistractorPool.
+ */
+function buildQuestionFor(item: PhonicsItem, subIdx: number): Q {
+  const allIds = PHONICS_ITEMS.map((p) => p.id);
+  const distractorIds = buildDistractorPool(item.id, allIds, 3);
+  const distractors = distractorIds
+    .map((id) => PHONICS_ITEMS.find((p) => p.id === id))
+    .filter(Boolean) as PhonicsItem[];
 
-  // 三种题型轮转(按 sortOrder mod 3)
-  const kindIdx = item.sortOrder % 3;
+  const kind = subIdx % 3;
 
-  if (kindIdx === 0) {
+  if (kind === 0) {
     return {
       kind: "hearLetter",
       correct: item.letter,
       options: shuffle([item.letter, ...distractors.map((p) => p.letter)]),
     };
   }
-  if (kindIdx === 1) {
+  if (kind === 1) {
     return {
       kind: "seeLetter",
       letter: item.letterUpper ?? item.letter,
@@ -286,16 +342,21 @@ function buildOneQuestion(item: PhonicsItem): Q {
   }
   const word0 = item.exampleWords.find((w) => w.emoji && w.word) ?? item.exampleWords[0];
   if (word0?.emoji && word0?.word) {
-    const otherWords = PHONICS_ITEMS.flatMap((p) =>
+    // 智能干扰: 优先用同组易混音的例词
+    const otherWords = distractors.flatMap((p) =>
+      p.exampleWords.filter((w) => w.emoji && w.word)
+    );
+    const fallbackWords = PHONICS_ITEMS.flatMap((p) =>
       p.id === item.id ? [] : p.exampleWords.filter((w) => w.emoji && w.word)
     );
+    const wordPool = otherWords.length >= 2 ? otherWords : fallbackWords;
     return {
       kind: "matchWord",
       correctWord: word0.word,
       correctEmoji: word0.emoji!,
       options: shuffle([
         { word: word0.word, emoji: word0.emoji! },
-        ...shuffle(otherWords).slice(0, 2).map((w) => ({ word: w.word, emoji: w.emoji! })),
+        ...shuffle(wordPool).slice(0, 2).map((w) => ({ word: w.word, emoji: w.emoji! })),
       ]),
     };
   }

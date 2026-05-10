@@ -164,6 +164,16 @@ export function bondOnPhonicsComplete() {
   feedSpark({ bond: 8, xp: 25, capped: true });
 }
 
+/** Child echoed Spark in single-phonics learn page. Capped. Tiny nudge. */
+export function bondOnSparkEcho() {
+  feedSpark({ bond: 5, xp: 10, capped: true });
+}
+
+/** Single phonics learn → quiz all-correct. Capped. Bigger than chant echo. */
+export function bondOnPhonicsLearnPass() {
+  feedSpark({ bond: 15, xp: 40, capped: true });
+}
+
 /** Vocab session finished with accuracy >= 70%. Capped. */
 export function bondOnVocabQuiz(accuracyPct: number) {
   if (accuracyPct < 70) return;

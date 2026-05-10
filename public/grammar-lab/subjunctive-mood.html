@@ -7955,11 +7955,10 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
         <button
           onClick={() => {
             // Restart current segment: reset typewriter, cancel TTS, replay
-            try { window.speechSynthesis?.cancel(); } catch {}
+            stopCloudTTS();
             setCharIdx(0);
-            // Force re-trigger of speak effect by toggling pause
-            setPaused(true);
-            setTimeout(() => { setPaused(false); }, 50);
+            // Bump tick to re-trigger speak effect cleanly (no pause hack)
+            setRestartTick(t => t + 1);
           }}
           className="w-10 h-10 rounded-full border border-line-mid hover:border-amber hover:bg-amber/10 transition flex items-center justify-center"
           title="重听本段"
@@ -7971,7 +7970,7 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
           onClick={() => {
             // Jump to next segment (or end). Lets fast readers skip ahead
             // without waiting out the segment's full duration.
-            try { window.speechSynthesis?.cancel(); } catch {}
+            stopCloudTTS();
             if (segIdx + 1 >= script.length) {
               setAllDone(true);
               setSpeaking(false);

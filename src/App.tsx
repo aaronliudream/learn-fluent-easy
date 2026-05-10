@@ -300,7 +300,8 @@ const App = () => (
         </RouteErrorBoundary>
         </div>
         <BottomTabBar />
-        <FeedbackWidgetGate />
+        {/* FeedbackWidget temporarily hidden per user request — re-enable when needed. */}
+        {/* <FeedbackWidgetGate /> */}
         <InstallPrompt />
         <QuizKeyboardShortcuts />
         <GlobalAIAssistant />

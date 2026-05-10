@@ -213,6 +213,8 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
   useEffect(() => {
     saveScore(gameType, grade, score, pct/100, durationMs);
     awardCoins(coinReward, `primary_${gameType}`).then(r => { if (r) setCoinResult(r); });
+    // v2 Spark bond: mini-game completion (≥60% accuracy).
+    import("@/lib/petGrowth").then(({ bondOnGameComplete }) => bondOnGameComplete(pct)).catch(() => {});
     if (pct >= 70) {
       fireEmojiConfetti({
         vibrate: pct === 100,

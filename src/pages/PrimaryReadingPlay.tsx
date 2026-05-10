@@ -109,6 +109,11 @@ export default function PrimaryReadingPlay() {
         updated_at: new Date().toISOString(),
       }, { onConflict: "user_id,article_id" });
       await awardCoins(stars * 5, "primary_reading");
+      // v2 Spark bond: reading completion feeds bond/XP.
+      try {
+        const { bondOnReadingComplete } = await import("@/lib/petGrowth");
+        bondOnReadingComplete();
+      } catch { /* noop */ }
     })();
     celebrateScore(Math.round(accuracy * 100));
   }, [finished, a, stars, accuracy]);

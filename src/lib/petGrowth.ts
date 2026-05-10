@@ -7,8 +7,13 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { petReact } from "@/lib/coins";
 
-const DAILY_TURN_CAP = 30;        // anti-spam: max bond gained from chatting
+// v2 — Spark bond is now fed by ALL learning behaviors, not just chat.
+// Daily cap raised from 30 → 60 to cover the "今日冒险 (4 件事)" loop
+// (≈ 50 bond) plus free-chat (≈ 10 bond). Above the cap, bond stops but
+// XP keeps flowing so highly-engaged kids still see Spark grow over time.
+const DAILY_BOND_CAP = 60;
 const BOND_PER_TURN = 1;
 const BOND_PER_QUIZ_WIN = 5;      // ≥60% on a quiz
 const XP_PER_QUIZ_WIN = 20;
@@ -31,7 +36,7 @@ function takeDailyBond(amount: number): number {
   try {
     const k = todayKey();
     const used = parseInt(localStorage.getItem(k) || "0", 10) || 0;
-    const left = Math.max(0, DAILY_TURN_CAP - used);
+    const left = Math.max(0, DAILY_BOND_CAP - used);
     const give = Math.min(amount, left);
     if (give > 0) localStorage.setItem(k, String(used + give));
     return give;
@@ -75,13 +80,93 @@ async function applyGrowth(bondDelta: number, xpDelta: number) {
   }
 }
 
+/**
+ * Internal: apply bond+XP, and make Spark visibly react in the corner.
+ * Capped/uncapped is decided per call site (see table below).
+ * Visible reaction is always fired — even when daily bond cap is hit —
+ * so kids never feel "I did this and Spark didn't notice".
+ */
+function feedSpark(opts: {
+  bond: number;
+  xp: number;
+  capped: boolean;
+  reactCoins?: number;   // number shown in floating reaction bubble
+}) {
+  const give = opts.capped ? takeDailyBond(opts.bond) : opts.bond;
+  // Visible reaction on the floating Spark — listened to by FloatingPet.
+  // Show the *intended* gain, not the post-cap amount, so feedback is consistent.
+  try { petReact("happy", { coins: opts.reactCoins ?? opts.bond }); } catch { /* noop */ }
+  if (give > 0 || opts.xp > 0) void applyGrowth(give, opts.xp);
+}
+
 /** Call once per user-sent chat turn. Daily-capped. */
 export function bondOnChatTurn() {
+  // Chat is high-frequency; don't pop a reaction every turn.
   const give = takeDailyBond(BOND_PER_TURN);
   if (give > 0) void applyGrowth(give, 0);
 }
 
-/** Call once when a quiz finishes with score >= 60%. */
+/** Call once when a generic quiz finishes with score >= 60%. NOT capped. */
 export function bondOnQuizWin() {
-  void applyGrowth(BOND_PER_QUIZ_WIN, XP_PER_QUIZ_WIN);
+  feedSpark({ bond: BOND_PER_QUIZ_WIN, xp: XP_PER_QUIZ_WIN, capped: false });
+}
+
+// =====================================================================
+// v2 named completion APIs — one per learning module.
+// Numerical proposal approved 2026-05 (see .lovable/spark-bond-inventory-v2.md):
+//
+// behavior              bond  xp   capped?
+// chat per turn          +1    0   ✅
+// quiz ≥60%              +5  +20   ❌
+// lesson 1★/2★/3★    +10/15/25  +30/50/80  ✅
+// reading complete      +15  +50   ✅
+// listening complete    +12  +40   ✅
+// phonics complete       +8  +25   ✅
+// vocab quiz ≥70%        +6  +20   ✅
+// culture stamp          +3  +10   ✅
+// assessment complete   +20  +60   ❌
+// =====================================================================
+
+/** Lesson finished. stars: 1 / 2 / 3. Capped. */
+export function bondOnLessonComplete(stars: 1 | 2 | 3) {
+  const bond = stars === 3 ? 25 : stars === 2 ? 15 : 10;
+  const xp   = stars === 3 ? 80 : stars === 2 ? 50 : 30;
+  feedSpark({ bond, xp, capped: true });
+}
+
+/** Reading article finished (any score). Capped. */
+export function bondOnReadingComplete() {
+  feedSpark({ bond: 15, xp: 50, capped: true });
+}
+
+/** Listening session finished. Capped. (Reserved for PrimaryListening module.) */
+export function bondOnListeningComplete() {
+  feedSpark({ bond: 12, xp: 40, capped: true });
+}
+
+/** Phonics lesson / letter mastered. Capped. */
+export function bondOnPhonicsComplete() {
+  feedSpark({ bond: 8, xp: 25, capped: true });
+}
+
+/** Vocab session finished with accuracy >= 70%. Capped. */
+export function bondOnVocabQuiz(accuracyPct: number) {
+  if (accuracyPct < 70) return;
+  feedSpark({ bond: 6, xp: 20, capped: true });
+}
+
+/** Mini-game session finished. Capped. (Same scale as vocab quiz.) */
+export function bondOnGameComplete(accuracyPct: number) {
+  if (accuracyPct < 60) return;
+  feedSpark({ bond: 6, xp: 20, capped: true });
+}
+
+/** Culture stamp / cultural card collected. Capped. */
+export function bondOnCultureStamp() {
+  feedSpark({ bond: 3, xp: 10, capped: true });
+}
+
+/** Monthly assessment / unit challenge finished. NOT capped (rare event). */
+export function bondOnAssessmentComplete() {
+  feedSpark({ bond: 20, xp: 60, capped: false });
 }

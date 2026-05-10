@@ -458,6 +458,8 @@ function QuizMode({ words }: { words: Vocab[] }) {
     if (typeof window !== "undefined" && !(activeSession as any).__celebrated) {
       (activeSession as any).__celebrated = true;
       celebrateScore(pct);
+      // v2 Spark bond: vocab session completion (≥70%).
+      import("@/lib/petGrowth").then(({ bondOnVocabQuiz }) => bondOnVocabQuiz(pct)).catch(() => {});
     }
     const wrongCount = wrongIds.size;
     return (

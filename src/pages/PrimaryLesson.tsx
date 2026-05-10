@@ -85,6 +85,11 @@ export default function PrimaryLesson() {
       await c.awardCoins(reward, "primary_lesson_complete");
       c.petReact("happy", { coins: reward });
     } catch { /* noop */ }
+    // v2 Spark bond: lesson completion feeds bond/XP per stars.
+    try {
+      const { bondOnLessonComplete } = await import("@/lib/petGrowth");
+      bondOnLessonComplete(stars as 1 | 2 | 3);
+    } catch { /* noop */ }
   }
 
   if (loading) return <main className="grid min-h-screen place-items-center"><Loader2 className="size-6 animate-spin text-muted-foreground" /></main>;

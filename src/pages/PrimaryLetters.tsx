@@ -16,21 +16,20 @@ export default function PrimaryLetters() {
   const letters = useMemo(() => getLettersAlphaSorted(), []);
   const [active, setActive] = useState<PhonicsItem | null>(letters[0] ?? null);
 
-  // Pre-warm TTS audio for ALL letters on mount so the first tap on any
-  // letter / chant / example word plays instantly. Runs in the background;
-  // re-uses the CDN cache + localStorage so it's free on repeat visits.
+  // Pre-warm only the first visible card after paint. Preloading every letter,
+  // chant, and example word at once creates 100+ audio requests and can make
+  // the preview look blank while the browser is saturated.
   useEffect(() => {
-    if (!letters.length) return;
-    const phrases: string[] = [];
-    for (const l of letters) {
-      if (l.letterUpper) phrases.push(l.letterUpper);
-      if (l.chantEn) phrases.push(l.chantEn);
-      for (const w of l.exampleWords || []) {
-        if (w?.word) phrases.push(w.word);
-      }
-    }
-    prefetchTTSBatch(phrases);
-  }, [letters]);
+    if (!active) return;
+    const timer = window.setTimeout(() => {
+      prefetchTTSBatch([
+        active.letterUpper ?? active.letter,
+        active.chantEn,
+        ...active.exampleWords.slice(0, 2).map((w) => w.word),
+      ].filter(Boolean) as string[]);
+    }, 1200);
+    return () => window.clearTimeout(timer);
+  }, [active]);
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-4 py-6 md:px-6 md:py-10">

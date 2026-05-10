@@ -32,6 +32,12 @@ export default {
         gold: "hsl(var(--gold))",
         silver: "hsl(var(--silver))",
         bronze: "hsl(var(--bronze))",
+        gps: {
+          master: "hsl(var(--gps-master))",
+          fluent: "hsl(var(--gps-fluent))",
+          weak: "hsl(var(--gps-weak))",
+          none: "hsl(var(--gps-none))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

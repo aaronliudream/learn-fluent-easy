@@ -6,6 +6,7 @@ import { ArrowLeft, Volume2, Sparkles, Music, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { cn } from "@/lib/utils";
+import { PHONICS_ITEMS, PHONICS_GROUPS } from "@/data/primaryPhonics";
 
 type ExampleWord = { word: string; ipa: string; meaning_cn: string; emoji: string };
 type Letter = {
@@ -81,6 +82,8 @@ export default function PrimaryLetters() {
           <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
         </div>
       ) : (
+        <>
+          <PhonicsDemoCard />
         <div className="grid gap-6 md:grid-cols-[260px_1fr]">
           {/* 字母网格 */}
           <div className="grid grid-cols-6 gap-2 md:grid-cols-4">
@@ -104,8 +107,62 @@ export default function PrimaryLetters() {
           {/* 字母详情 */}
           {active && <LetterCard letter={active} />}
         </div>
+        </>
       )}
     </main>
+  );
+}
+
+function PhonicsDemoCard() {
+  const sItem = PHONICS_ITEMS.find((p) => p.id === "p_s");
+  const group1 = PHONICS_GROUPS.find((g) => g.id === "g1");
+  if (!sItem || !group1) return null;
+
+  return (
+    <div className="mb-6 rounded-3xl border-2 border-dashed border-primary/40 bg-gradient-to-br from-rose-50 via-amber-50 to-orange-50 p-5 dark:from-rose-950/30 dark:via-amber-950/20 dark:to-orange-950/20">
+      <div className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
+        🧪 DEMO · 新 Phonics 体系
+      </div>
+      <h2 className="text-lg font-extrabold">{group1.groupName} · {group1.groupNameEn}</h2>
+      <p className="mt-1 text-sm italic text-muted-foreground">{group1.sparkIntro}</p>
+
+      <div className="mt-4 rounded-2xl bg-white/80 p-4 shadow-sm dark:bg-card/80">
+        <div className="flex items-baseline gap-3">
+          <div className="text-6xl font-black text-primary">{sItem.letter}</div>
+          <div className="font-mono text-lg text-muted-foreground">{sItem.sound}</div>
+        </div>
+        <p className="mt-2 text-sm"><span className="font-bold">怎么发：</span>{sItem.soundDesc}</p>
+        <p className="mt-1 text-sm text-muted-foreground"><span className="font-bold">小窍门：</span>{sItem.trickHint}</p>
+
+        <div className="mt-3 flex flex-wrap gap-2">
+          {sItem.exampleWords.map((w) => (
+            <button
+              key={w}
+              onClick={() => speak(w)}
+              className="flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1.5 text-sm font-bold text-primary hover:bg-primary/20"
+            >
+              <Volume2 className="size-3.5" /> {w}
+            </button>
+          ))}
+        </div>
+
+        <div className="mt-3 rounded-xl bg-amber-50 p-3 dark:bg-amber-950/30">
+          <button
+            onClick={() => speak(sItem.exampleSentence)}
+            className="flex items-center gap-1 text-sm font-bold text-amber-800 hover:underline dark:text-amber-300"
+          >
+            <Volume2 className="size-3.5" /> {sItem.exampleSentence}
+          </button>
+          <p className="mt-0.5 text-xs text-amber-700 dark:text-amber-400">{sItem.exampleSentenceCn}</p>
+        </div>
+
+        {sItem.sparkLine && (
+          <p className="mt-3 text-xs italic text-rose-600 dark:text-rose-400">
+            🦊 Spark：“{sItem.sparkLine}”
+          </p>
+        )}
+      </div>
+    </div>
   );
 }
 

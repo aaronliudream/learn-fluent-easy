@@ -356,6 +356,7 @@ function ModuleView({
   onOpenList: (p: { stage: StageK; module: string; state: ItemState; grade?: number; title: string }) => void;
 }) {
   const [openModule, setOpenModule] = useState<string | null>(null);
+  const [openStage, setOpenStage] = useState<StageK | null>(null);
 
   if (moduleProps.length === 0) {
     return (
@@ -411,17 +412,41 @@ function ModuleView({
               const rows = scopes.filter((r) => r.module === openModule && r.stage === s.key);
               const agg = aggregate(rows);
               const noData = rows.length === 0;
+              const expanded = openStage === s.key;
+              // 课标限定：完形填空 (cloze) 仅初中和高中开设，小学不开设
+              const notInCurriculum = openModule === "cloze" && s.key === "primary";
               return (
-                <div key={s.key} className="px-4 py-3">
-                  <div className="flex items-baseline justify-between text-[12px]">
-                    <span className="font-bold">{s.label}</span>
-                    <span className="text-[10px] text-muted-foreground">
-                      掌握度 <span className="tabular-nums font-bold text-foreground">{Math.round(agg.score_pct)}%</span> · 共 {agg.total} 项
-                    </span>
-                  </div>
-                  <MasteryBar className="mt-1.5" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} height={6} />
-                  {/* —— 各年级掌握度（点击可下钻到题目列表） —— */}
-                  <div className="mt-2.5 space-y-1.5">
+                <div key={s.key}>
+                  <button
+                    onClick={() => setOpenStage(expanded ? null : s.key)}
+                    disabled={notInCurriculum}
+                    className={`flex w-full items-center gap-3 px-4 py-3 text-left transition ${
+                      notInCurriculum ? "opacity-60" : "hover:bg-muted/20"
+                    }`}
+                  >
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-baseline justify-between text-[12px]">
+                        <span className="font-bold">{s.label}</span>
+                        {notInCurriculum ? (
+                          <span className="rounded-full bg-muted px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
+                            课标未开设
+                          </span>
+                        ) : (
+                          <span className="text-[10px] text-muted-foreground">
+                            掌握度 <span className="tabular-nums font-bold text-foreground">{Math.round(agg.score_pct)}%</span> · 共 {agg.total} 项
+                          </span>
+                        )}
+                      </div>
+                      {!notInCurriculum && (
+                        <MasteryBar className="mt-1.5" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} height={6} />
+                      )}
+                    </div>
+                    {!notInCurriculum && (
+                      <ChevronDown className={`size-4 text-muted-foreground transition ${expanded ? "rotate-180" : ""}`} />
+                    )}
+                  </button>
+                  {expanded && !notInCurriculum && (
+                  <div className="space-y-1.5 border-t border-border bg-muted/20 px-4 py-3">
                     <div className="text-[10px] font-medium text-muted-foreground">各年级掌握度</div>
                     {s.grades.map((g) => {
                       const gRow = rows.find((r) => r.grade === g);
@@ -474,8 +499,9 @@ function ModuleView({
                       );
                     })}
                   </div>
-                  {/* —— 学段汇总分状态入口 —— */}
-                  <div className="mt-2 grid grid-cols-2 gap-1.5 sm:grid-cols-4">
+                  )}
+                  {expanded && !notInCurriculum && (
+                  <div className="grid grid-cols-2 gap-1.5 border-t border-border bg-muted/10 px-4 py-3 sm:grid-cols-4">
                     {(["master", "fluent", "weak", "none"] as ItemState[]).map((st) => {
                       const n = (agg as any)[st] as number;
                       const dot = `bg-gps-${st}`;
@@ -502,6 +528,7 @@ function ModuleView({
                       );
                     })}
                   </div>
+                  )}
                 </div>
               );
             })}

@@ -97,7 +97,6 @@ export default function PrimaryGrade() {
   const g = Number(grade ?? "3");
   const [lessons, setLessons] = useState<LessonRow[]>([]);
   const [loading, setLoading] = useState(true);
-  const [, setWeakCount] = useState<number>(0);
 
   useEffect(() => {
     (async () => {
@@ -109,19 +108,6 @@ export default function PrimaryGrade() {
         .order("sort_order");
       setLessons((data ?? []) as any);
       setLoading(false);
-
-      // 统计本年级"待攻克"词汇数 = 未学 + 学习中 + 错>对
-      const { data: u } = await supabase.auth.getUser();
-      const uid = u?.user?.id;
-      const { data: vocab } = await supabase.from("primary_vocab").select("id").eq("grade", g);
-      const total = (vocab ?? []).length;
-      if (!uid || total === 0) { setWeakCount(total); return; }
-      const { data: m } = await supabase
-        .from("primary_word_mastery")
-        .select("word_id,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong")
-        .eq("user_id", uid).eq("grade", g);
-      const mastered = (m ?? []).filter((r: any) => (r.mastery_level ?? 0) >= 3).length;
-      setWeakCount(Math.max(0, total - mastered));
     })();
   }, [g]);
 

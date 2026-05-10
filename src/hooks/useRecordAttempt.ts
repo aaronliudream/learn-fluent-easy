@@ -39,8 +39,11 @@ export interface AttemptResult {
  * - Auto adds wrong answers to user_mistakes
  * - Smart-invalidates ai_diagnostics cache
  * Always non-throwing — pages should not break if recording fails.
+ *
+ * NOTE: named recordUnifiedAttempt (not recordAttempt) to avoid clashing with
+ * the legacy `recordAttempt` exported from @/lib/gaokaoMastery.
  */
-export async function recordAttempt(input: AttemptInput): Promise<AttemptResult> {
+export async function recordUnifiedAttempt(input: AttemptInput): Promise<AttemptResult> {
   try {
     const { data: { session } } = await supabase.auth.getSession();
     if (!session) return { success: false, reason: "not_signed_in" };

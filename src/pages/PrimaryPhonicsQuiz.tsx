@@ -194,11 +194,6 @@ export default function PrimaryPhonicsQuiz() {
 
   // 进度数字
   const doneQuestions = itemIdx * 3 + subIdx;
-    setTimeout(() => {
-      setIdx(idx + 1);
-      setPicked(null);
-    }, 850);
-  }
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">

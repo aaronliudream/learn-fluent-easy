@@ -9,6 +9,7 @@ import { bumpPetSkill } from "@/lib/petSkills";
 import NoCopyGuard from "@/components/NoCopyGuard";
 import StarRating from "@/components/StarRating";
 import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import ReadingWatermark from "@/components/ReadingWatermark";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
@@ -128,6 +129,18 @@ export default function JuniorReadingPlay() {
     } else {
       setStreak(0); notifyWrong();
     }
+    recordUnifiedAttempt({
+      stage: "junior",
+      grade: r.grade ?? 7,
+      module: "reading",
+      item_type: "reading_question",
+      item_id: `${r.id}:${qi}`,
+      item_label: r.title,
+      is_correct: ok,
+      user_answer: letter,
+      correct_answer: r.questions[qi].answer,
+      context: { reading_id: r.id, question_idx: qi, explanation: r.questions[qi].explanation },
+    }).catch(() => {});
   };
 
   const handleSubmit = async () => {

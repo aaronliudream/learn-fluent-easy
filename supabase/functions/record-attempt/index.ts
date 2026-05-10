@@ -1,0 +1,187 @@
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type",
+};
+
+interface AttemptPayload {
+  stage: "primary" | "junior" | "senior";
+  grade: number;
+  module: "vocab" | "grammar" | "reading" | "writing" | "listening" | "cloze" | "phonics";
+  item_type: string;
+  item_id: string;
+  item_label?: string;
+  is_correct: boolean;
+  user_answer?: string;
+  correct_answer?: string;
+  context?: Record<string, unknown>;
+}
+
+function clamp(v: number, lo: number, hi: number) {
+  return Math.max(lo, Math.min(hi, v));
+}
+
+Deno.serve(async (req) => {
+  if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
+  if (req.method !== "POST") {
+    return new Response("Method not allowed", { status: 405, headers: corsHeaders });
+  }
+
+  const authHeader = req.headers.get("Authorization");
+  if (!authHeader) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+
+  const supa = createClient(
+    Deno.env.get("SUPABASE_URL")!,
+    Deno.env.get("SUPABASE_ANON_KEY")!,
+    { global: { headers: { Authorization: authHeader } } },
+  );
+
+  const { data: userData } = await supa.auth.getUser();
+  const user = userData?.user;
+  if (!user) {
+    return new Response(JSON.stringify({ error: "Unauthorized" }), {
+      status: 401,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+
+  let payload: AttemptPayload;
+  try {
+    payload = await req.json();
+  } catch {
+    return new Response(JSON.stringify({ error: "Invalid JSON" }), {
+      status: 400,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+
+  // basic validation
+  const validStages = ["primary", "junior", "senior"];
+  const validModules = ["vocab", "grammar", "reading", "writing", "listening", "cloze", "phonics"];
+  if (
+    !payload?.stage || !validStages.includes(payload.stage) ||
+    !payload?.module || !validModules.includes(payload.module) ||
+    !payload?.item_type || !payload?.item_id ||
+    typeof payload?.is_correct !== "boolean" ||
+    typeof payload?.grade !== "number"
+  ) {
+    return new Response(JSON.stringify({ error: "Invalid payload" }), {
+      status: 400,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+  payload.grade = clamp(Math.round(payload.grade), 1, 12);
+
+  // current state
+  const { data: existing } = await supa
+    .from("unified_mastery")
+    .select("*")
+    .eq("user_id", user.id)
+    .eq("stage", payload.stage)
+    .eq("grade", payload.grade)
+    .eq("module", payload.module)
+    .eq("item_type", payload.item_type)
+    .eq("item_id", payload.item_id)
+    .maybeSingle();
+
+  const newAttemptCount = (existing?.attempt_count ?? 0) + 1;
+  const newCorrectCount = (existing?.correct_count ?? 0) + (payload.is_correct ? 1 : 0);
+  const newWrongCount = (existing?.wrong_count ?? 0) + (payload.is_correct ? 0 : 1);
+
+  let newState: "master" | "fluent" | "weak" | "none";
+  let newEase = existing?.ease ?? 2.5;
+  let newInterval = existing?.interval_days ?? 0;
+  const accuracy = newCorrectCount / newAttemptCount;
+
+  if (payload.is_correct) {
+    if (newAttemptCount >= 5 && accuracy >= 0.9) {
+      newState = "master";
+      newInterval = clamp(newInterval * newEase, 21, 365);
+    } else if (newAttemptCount >= 3 && accuracy >= 0.7) {
+      newState = "fluent";
+      newInterval = clamp(newInterval * newEase, 7, 21);
+    } else {
+      newState = "weak";
+      newInterval = Math.max(newInterval * 1.3, 1);
+    }
+    newEase = Math.min(newEase + 0.1, 3.0);
+  } else {
+    newState = "weak";
+    newEase = Math.max(newEase - 0.2, 1.3);
+    newInterval = 1;
+  }
+
+  const dueAt = new Date(Date.now() + newInterval * 86400000).toISOString();
+  const oldState = existing?.state ?? "none";
+
+  const { error: upsertErr } = await supa
+    .from("unified_mastery")
+    .upsert({
+      user_id: user.id,
+      stage: payload.stage,
+      grade: payload.grade,
+      module: payload.module,
+      item_type: payload.item_type,
+      item_id: payload.item_id,
+      item_label: payload.item_label || null,
+      state: newState,
+      ease: newEase,
+      interval_days: newInterval,
+      due_at: dueAt,
+      last_review_at: new Date().toISOString(),
+      attempt_count: newAttemptCount,
+      correct_count: newCorrectCount,
+      wrong_count: newWrongCount,
+      updated_at: new Date().toISOString(),
+    }, { onConflict: "user_id,stage,grade,module,item_type,item_id" });
+
+  if (upsertErr) {
+    console.error("[record-attempt] upsert error", upsertErr);
+    return new Response(JSON.stringify({ error: upsertErr.message }), {
+      status: 500,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+
+  // auto add to mistakes book
+  if (!payload.is_correct) {
+    const ctx = (payload.context ?? {}) as Record<string, unknown>;
+    await supa.from("user_mistakes").insert({
+      user_id: user.id,
+      module: payload.module,
+      source_key: `${payload.stage}_${payload.module}_${payload.item_id}`,
+      source_label: payload.item_label ?? null,
+      question: (ctx.question as string) ?? "",
+      user_answer: payload.user_answer ?? null,
+      correct_answer: payload.correct_answer ?? null,
+      explanation: (ctx.explanation as string) ?? null,
+      next_review_at: dueAt,
+    });
+  }
+
+  // smart cache invalidation for ai_diagnostics
+  const shouldRegenerate = (newState === "master" && oldState !== "master") ||
+    newAttemptCount % 30 === 0;
+  if (shouldRegenerate) {
+    await supa.from("ai_diagnostics").delete().eq("user_id", user.id);
+  }
+
+  return new Response(
+    JSON.stringify({
+      success: true,
+      new_state: newState,
+      old_state: oldState,
+      interval_days: newInterval,
+      due_at: dueAt,
+      accuracy,
+    }),
+    { headers: { ...corsHeaders, "Content-Type": "application/json" } },
+  );
+});

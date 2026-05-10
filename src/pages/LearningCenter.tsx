@@ -277,9 +277,6 @@ function StageView({
                 <div className="min-w-0 flex-1">
                   <div className="text-sm font-bold">{s.label}</div>
                   <div className="text-[10px] text-muted-foreground">{s.sub}</div>
-                  <div className="mt-0.5 text-[10px] text-muted-foreground">
-                    占总学习 <strong className="font-medium text-foreground tabular-nums">{prop}%</strong>
-                  </div>
                 </div>
               </div>
               <MasteryBar master={c.master} fluent={c.fluent} weak={c.weak} none={c.none} height={6} />
@@ -391,7 +388,7 @@ function ModuleView({
                       {MODULE_LABEL[m.module] ?? m.module}
                     </div>
                     <div className="mt-0.5 text-[10px] text-muted-foreground">
-                      占总学习 <strong className="font-medium text-foreground tabular-nums">{m.proportion_pct}%</strong>
+                      共 <strong className="font-medium text-foreground tabular-nums">{m.total}</strong> 项 · 点击看各年级掌握情况
                     </div>
                   </div>
                 </div>
@@ -419,7 +416,7 @@ function ModuleView({
                   <div className="flex items-baseline justify-between text-[12px]">
                     <span className="font-bold">{s.label}</span>
                     <span className="text-[10px] text-muted-foreground">
-                      <span className="tabular-nums">{Math.round(agg.score_pct)}%</span> · 占{MODULE_LABEL[openModule]} {inModulePct}%
+                      掌握度 <span className="tabular-nums font-bold text-foreground">{Math.round(agg.score_pct)}%</span> · 共 {agg.total} 项
                     </span>
                   </div>
                   <MasteryBar className="mt-1.5" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} height={6} />

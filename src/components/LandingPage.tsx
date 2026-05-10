@@ -450,46 +450,6 @@ export default function LandingPage() {
           })}
         </div>
 
-        <div className="mb-6 text-center md:mb-8">
-          <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7B3FF1]">
-            COURSE TRACKS
-          </div>
-          <h2 className="mt-2 font-serif text-2xl font-black tracking-tight md:text-3xl">
-            选择你的学习阶段
-          </h2>
-          <p className="mt-2 text-sm text-[#5A5A5A]">
-            小学、初中、高中 — 每个阶段都有专属的内容和节奏
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-3">
-          {STAGES.map((s, i) => (
-            <Link
-              key={s.to}
-              to={s.to}
-              className="group relative flex min-h-[240px] flex-col items-center justify-between overflow-hidden rounded-3xl p-6 text-center text-white shadow-[0_18px_40px_-16px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition hover:-translate-y-1.5 hover:shadow-[0_28px_60px_-20px_rgba(0,0,0,0.45)] animate-card-float"
-              style={{
-                background: s.gradient,
-                animationDelay: `${i * 1.2}s`,
-              }}
-            >
-              <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/15 blur-2xl" />
-              <div className="flex flex-col items-center">
-                <div className="text-[10px] font-bold uppercase tracking-[0.22em] opacity-85">
-                  {s.eyebrow}
-                </div>
-                <h3 className="mt-3 font-serif text-3xl font-black tracking-tight md:text-4xl">
-                  {s.title}
-                </h3>
-                <div className="mt-1 text-sm font-semibold opacity-90">{s.range}</div>
-                <p className="mt-4 text-sm leading-relaxed opacity-95">{s.desc}</p>
-              </div>
-              <div className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-1.5 text-xs font-bold backdrop-blur transition group-hover:bg-white/30">
-                进入 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-              </div>
-            </Link>
-          ))}
-        </div>
       </section>
 
       {/* ============ TESTIMONIALS — 学员 & 家长见证 ============ */}

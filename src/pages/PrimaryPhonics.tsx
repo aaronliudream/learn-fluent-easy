@@ -140,8 +140,60 @@ export default function PrimaryPhonics() {
         </div>
       </section>
 
+      {/* CTA 区(放在 Spark 下面,优先引导动作) */}
+      <section className="mt-4 space-y-3">
+        {/* 1) 学新音 */}
+        {nextNewItem && (
+          <CtaCard
+            color="from-rose-500 via-pink-500 to-amber-500"
+            icon={<Play className="size-5 fill-white" />}
+            label="继续学新音"
+            title={`学新音 ${nextNewItem.letter}`}
+            sub={`你这组掌握了 ${currentGroup.items.filter((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2).length}/${currentGroup.items.length}`}
+            onClick={() => nav(`/primary/phonics/learn/${nextNewItem.id}`)}
+          />
+        )}
+
+        {/* 2) 复习 */}
+        {dueItems.length > 0 && (
+          <CtaCard
+            color="from-sky-500 via-cyan-500 to-emerald-500"
+            icon={<RotateCw className="size-5" />}
+            label="今日复习"
+            title={`复习 ${dueItems.length} 个学过的音`}
+            sub="这些音上次没答对 / 该再考一次啦"
+            onClick={() => nav("/primary/phonics/quiz/review")}
+          />
+        )}
+
+        {/* 3) 整组挑战 */}
+        {currentGroup && canChallengeGroup && (
+          <CtaCard
+            color="from-violet-500 via-fuchsia-500 to-pink-500"
+            icon={<Sparkles className="size-5" />}
+            label="挑战测试"
+            title={`挑战 ${currentGroup.group.groupName}`}
+            sub="✨ 全部通过解锁下一组"
+            onClick={() => nav(`/primary/phonics/quiz/${currentGroup.group.id}`)}
+          />
+        )}
+
+        {/* fallback */}
+        {!nextNewItem && dueItems.length === 0 && !canChallengeGroup && !loading && (
+          <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+            🎉 你已经掌握了全部 {PHONICS_ITEMS.length} 个 Phonics 音!
+          </div>
+        )}
+
+        {loading && (
+          <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+            Spark 正在准备今天的拼读冒险…
+          </div>
+        )}
+      </section>
+
       {/* 7 组进度 */}
-      <section className="mt-5 space-y-2">
+      <section className="mt-6 space-y-2">
         <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
           📊 你的拼读地图
         </div>
@@ -211,58 +263,6 @@ export default function PrimaryPhonics() {
             </div>
           );
         })}
-      </section>
-
-      {/* CTA 区 */}
-      <section className="mt-6 space-y-3">
-        {/* 1) 学新音 */}
-        {nextNewItem && (
-          <CtaCard
-            color="from-rose-500 via-pink-500 to-amber-500"
-            icon={<Play className="size-5 fill-white" />}
-            label="继续学新音"
-            title={`学新音 ${nextNewItem.letter}`}
-            sub={`你这组掌握了 ${currentGroup.items.filter((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2).length}/${currentGroup.items.length}`}
-            onClick={() => nav(`/primary/phonics/learn/${nextNewItem.id}`)}
-          />
-        )}
-
-        {/* 2) 复习 */}
-        {dueItems.length > 0 && (
-          <CtaCard
-            color="from-sky-500 via-cyan-500 to-emerald-500"
-            icon={<RotateCw className="size-5" />}
-            label="今日复习"
-            title={`复习 ${dueItems.length} 个学过的音`}
-            sub="这些音上次没答对 / 该再考一次啦"
-            onClick={() => nav("/primary/phonics/quiz/review")}
-          />
-        )}
-
-        {/* 3) 整组挑战 */}
-        {currentGroup && canChallengeGroup && (
-          <CtaCard
-            color="from-violet-500 via-fuchsia-500 to-pink-500"
-            icon={<Sparkles className="size-5" />}
-            label="挑战测试"
-            title={`挑战 ${currentGroup.group.groupName}`}
-            sub="✨ 全部通过解锁下一组"
-            onClick={() => nav(`/primary/phonics/quiz/${currentGroup.group.id}`)}
-          />
-        )}
-
-        {/* fallback */}
-        {!nextNewItem && dueItems.length === 0 && !canChallengeGroup && !loading && (
-          <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            🎉 你已经掌握了全部 {PHONICS_ITEMS.length} 个 Phonics 音!
-          </div>
-        )}
-
-        {loading && (
-          <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            Spark 正在准备今天的拼读冒险…
-          </div>
-        )}
       </section>
 
       {/* 退路:A-Z 索引 */}

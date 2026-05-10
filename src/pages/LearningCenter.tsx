@@ -409,8 +409,8 @@ function ModuleView({
           <div className="divide-y divide-border">
             {STAGES.map((s) => {
               const rows = scopes.filter((r) => r.module === openModule && r.stage === s.key);
-              if (rows.length === 0) return null;
               const agg = aggregate(rows);
+              const empty = rows.length === 0;
               return (
                 <div key={s.key} className="px-4 py-3">
                   <div className="flex items-baseline justify-between text-[12px]">

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
+import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, XCircle, RotateCcw, Eye, Lightbulb, Dumbbell, Target, ClipboardCheck, ChevronRight, Crown } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -243,6 +244,7 @@ export default function GaokaoGrammarPoint() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8 pb-24">
+      <GuestBanner />
       <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回语法地图
       </BackLink>

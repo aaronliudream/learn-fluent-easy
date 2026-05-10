@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
+import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Headphones, BookOpen, Gamepad2, AlertCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -103,6 +104,7 @@ export default function PrimaryVocab() {
 
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-4 py-6 md:px-6 md:py-10">
+      <GuestBanner />
       <BackLink
         to={lockedGrade ? `/primary/grade/${lockedGrade}` : "/primary"}
         className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"

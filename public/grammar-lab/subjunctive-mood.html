@@ -426,21 +426,60 @@ function stopCloudTTS() {
    Caller can use the return value to surface a "no voice available" UI hint.
    Does NOT cancel previously-playing audio globally — caller is responsible
    for calling stopCloudTTS() if it needs hard interruption. */
-async function cloudTTS(text, { voiceId = "shimmer", speed = 1.0, lang = "en" } = {}) {
+async function cloudTTS(text, { voiceId = "shimmer", speed = 1.0, lang = "en", onStart } = {}) {
   if (!text) return "none";
   // Pause any currently-playing audio element (without killing speechSynthesis
   // queue or cache). Avoids wiping out the next-segment prefetch.
   try { _ttsAudio?.pause(); _ttsAudio = null; } catch {}
   const cacheKey = `${voiceId}|${speed}|${text}`;
-  const playUrl = (url) => new Promise((resolve) => {
+  /* tryPlayUrl resolves with:
+     - "cloud"  : audio actually played to completion (or errored mid-play)
+     - "fail"   : play() was rejected (autoplay blocked) or never started.
+     onStart fires the moment the audio truly begins playing (the `playing`
+     event), which lets the caller defer the typewriter/timer until then. */
+  const tryPlayUrl = (url) => new Promise((resolve) => {
     const a = new Audio(url);
+    a.preload = "auto";
     _ttsAudio = a;
-    a.onended = () => resolve("cloud");
-    a.onerror = () => resolve("cloud");
-    a.play().catch(() => resolve("cloud"));
+    let started = false;
+    let settled = false;
+    const done = (status) => { if (!settled) { settled = true; resolve(status); } };
+    a.addEventListener("playing", () => {
+      started = true;
+      try { onStart?.("cloud", isFinite(a.duration) ? a.duration : 0); } catch {}
+    }, { once: true });
+    a.onended = () => done("cloud");
+    a.onerror = () => done(started ? "cloud" : "fail");
+    // Play can reject (autoplay policy, codec error, transient). If it
+    // rejects BEFORE 'playing' fires, we treat as fail so caller can fall
+    // back to browser TTS instead of silently advancing.
+    a.play().catch(() => done("fail"));
   });
+  /* Browser SpeechSynthesis fallback. Resolves with "browser" or "none". */
+  const browserSpeak = () => {
+    if (!("speechSynthesis" in window)) return Promise.resolve("none");
+    if (lang === "zh" && !detectZhVoice()) return Promise.resolve("none");
+    return new Promise((resolve) => {
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = lang === "zh" ? "zh-CN" : "en-US";
+      u.rate = lang === "zh" ? 0.95 * speed : 0.92 * speed;
+      let started = false;
+      u.onstart = () => {
+        started = true;
+        try { onStart?.("browser", 0); } catch {}
+      };
+      u.onend = () => resolve(started ? "browser" : "none");
+      u.onerror = () => resolve("none");
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+      // Safety: if the engine never fires onstart within 1.5s, treat as none.
+      setTimeout(() => { if (!started) { try { window.speechSynthesis.cancel(); } catch {} resolve("none"); } }, 1500);
+    });
+  };
   if (TTS_CACHE.has(cacheKey)) {
-    return playUrl(TTS_CACHE.get(cacheKey));
+    const r = await tryPlayUrl(TTS_CACHE.get(cacheKey));
+    if (r === "fail") return browserSpeak();
+    return r;
   }
   try {
     const r = await fetch(TTS_ENDPOINT, {
@@ -459,20 +498,11 @@ async function cloudTTS(text, { voiceId = "shimmer", speed = 1.0, lang = "en" } 
     if (!url) throw new Error("no audio");
     if (TTS_CACHE.size > 50) TTS_CACHE.clear();
     TTS_CACHE.set(cacheKey, url);
-    return playUrl(url);
+    const r2 = await tryPlayUrl(url);
+    if (r2 === "fail") return browserSpeak();
+    return r2;
   } catch (e) {
-    // Fallback: browser SpeechSynthesis
-    if (!("speechSynthesis" in window)) return "none";
-    if (lang === "zh" && !detectZhVoice()) return "none";
-    return new Promise((resolve) => {
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = lang === "zh" ? "zh-CN" : "en-US";
-      u.rate = lang === "zh" ? 0.95 * speed : 0.92 * speed;
-      u.onend = () => resolve("browser");
-      u.onerror = () => resolve("none");
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(u);
-    });
+    return browserSpeak();
   }
 }
 

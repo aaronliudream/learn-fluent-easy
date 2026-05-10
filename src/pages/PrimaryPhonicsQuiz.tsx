@@ -111,7 +111,7 @@ export default function PrimaryPhonicsQuiz() {
     );
   }
 
-  if (!loading && total === 0) {
+  if (!loading && totalItems === 0) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <BackLink to="/primary/phonics" className="text-sm text-muted-foreground">
@@ -128,7 +128,7 @@ export default function PrimaryPhonicsQuiz() {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <p className="text-lg font-bold">
-          做完啦!{correctCount} / {total}
+          做完啦!{perfectItems} / {totalItems} 个音通过(共答对 {totalCorrect} 题)
         </p>
         <p className="mt-2 text-sm text-muted-foreground">回到拼读冒险…</p>
       </main>

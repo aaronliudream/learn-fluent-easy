@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Loader2, Sparkles, Headphones, PenLine, Brain, Target, TrendingUp, Volume2, ChevronRight, AlertTriangle, Play } from "lucide-react";
+import { ArrowLeft, Loader2, Sparkles, Headphones, PenLine, Brain, Target, TrendingUp, Volume2, ChevronRight, AlertTriangle, Play, Heart, Calendar, Mic, Eye, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
@@ -39,6 +39,7 @@ export default function PrimaryParent() {
   const [grade, setGrade] = useState<number>(1);
   const [skill, setSkill] = useState<SkillKey>("all");
   const [filter, setFilter] = useState<"all"|"new"|"learning"|"familiar"|"mastered">("all");
+  const [pet, setPet] = useState<{ level: number; bond: number; xp: number } | null>(null);
 
   useEffect(() => {
     (async () => {
@@ -59,6 +60,9 @@ export default function PrimaryParent() {
       setMastery((m.data ?? []) as Mastery[]);
       setWords((w.data ?? []) as Word[]);
       setScores((s.data ?? []) as ScoreRow[]);
+      const { data: ps } = await supabase
+        .from("pet_state").select("level,bond,xp").eq("user_id", uid).maybeSingle();
+      if (ps) setPet({ level: ps.level ?? 1, bond: ps.bond ?? 0, xp: ps.xp ?? 0 });
       setLoading(false);
     })();
   }, []);

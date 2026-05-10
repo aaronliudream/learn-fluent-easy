@@ -96,8 +96,6 @@ const Ask = lazy(() => import("./pages/Ask.tsx"));
 const TeacherCards = lazy(() => import("./pages/TeacherCards.tsx"));
 const TeacherCardStats = lazy(() => import("./pages/TeacherCardStats.tsx"));
 const KnowledgeCard = lazy(() => import("./pages/KnowledgeCard.tsx"));
-const IeltsSpeaking = lazy(() => import("./pages/IeltsSpeaking.tsx"));
-const IeltsSpeakingSession = lazy(() => import("./pages/IeltsSpeakingSession.tsx"));
 const Pricing = lazy(() => import("./pages/Pricing.tsx"));
 const Dashboard = lazy(() => import("./pages/Dashboard.tsx"));
 const LearningCenter = lazy(() => import("./pages/LearningCenter.tsx"));
@@ -144,7 +142,6 @@ const FloatingPetGate = () => {
     pathname === "/" ||                  // 首页已有英雄伙伴，避免重复
     pathname.startsWith("/auth") ||
     pathname.startsWith("/talk") ||      // 全屏语音对话
-    pathname.startsWith("/ielts-speaking/session") || // 雅思口语全屏对话
     pathname.startsWith("/pets") ||      // 宠物详情页本身
     pathname.startsWith("/placement");   // 评测专注模式
   if (hide) return null;
@@ -153,7 +150,7 @@ const FloatingPetGate = () => {
 
 const FeedbackWidgetGate = () => {
   const { pathname } = useLocation();
-  if (pathname.startsWith("/ielts-speaking/session") || pathname.startsWith("/talk")) return null;
+  if (pathname.startsWith("/talk")) return null;
   return <FeedbackWidget />;
 };
 
@@ -223,8 +220,6 @@ const App = () => (
           <Route path="/workplace/:catKey" element={<WorkplaceCategory />} />
           <Route path="/workplace/:catKey/:dialogueId" element={<WorkplacePlay />} />
           <Route path="/talk" element={<Talk />} />
-          <Route path="/ielts-speaking" element={<IeltsSpeaking />} />
-          <Route path="/ielts-speaking/session/:id" element={<IeltsSpeakingSession />} />
           <Route path="/china" element={<ChineseOnlyRoute><China /></ChineseOnlyRoute>} />
           <Route path="/primary" element={<ChineseOnlyRoute><Primary /></ChineseOnlyRoute>} />
           <Route path="/primary/letters" element={<ChineseOnlyRoute><PrimaryLetters /></ChineseOnlyRoute>} />

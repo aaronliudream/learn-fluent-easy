@@ -40,7 +40,6 @@ interface Msg { role: Role; content: string }
 const HIDE_ON = [
   /^\/auth/,
   /^\/talk/,
-  /^\/ielts-speaking\/session/,
   /^\/placement/,
 ];
 

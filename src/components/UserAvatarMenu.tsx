@@ -26,7 +26,7 @@ import {
 const HIDE_ON = [
   /^\/$/,                      // home — LandingPage / BrandHubNav render it inline
   /^\/kids/, /^\/junior/, /^\/senior/, /^\/about/, /^\/slang/, /^\/cet/, // brand-hub pages
-  /^\/auth/, /^\/talk/, /^\/ielts-speaking\/session/, /^\/placement/,
+  /^\/auth/, /^\/talk/, /^\/placement/,
 ];
 
 interface ProfileLite {

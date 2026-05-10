@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { recordUnifiedAttempt, type Stage, type ModuleKey } from "./unifiedMastery";
 
 export type MasteryRow = {
   id: string;
@@ -37,6 +38,9 @@ export async function recordMastery(opts: {
   module: string;
   itemId: string;
   pct: number;       // 本次得分 0..100
+  // 🆕 v7：统一掌握度路由所需上下文（不传则从 module 字符串推断）
+  grade?: number;
+  itemLabel?: string;
 }): Promise<MasteryRow | null> {
   const { data: u } = await supabase.auth.getUser();
   if (!u?.user) return null;
@@ -74,6 +78,28 @@ export async function recordMastery(opts: {
     .upsert(payload, { onConflict: "user_id,module,item_id" })
     .select()
     .maybeSingle();
+
+  // 🆕 v7：写 unified_mastery（module 字符串形如 "junior_reading" / "gaokao_cloze"）
+  const parts = opts.module.split("_");
+  const stagePrefix = parts[0];
+  const modKey = parts.slice(1).join("_") || parts[0];
+  const stage: Stage =
+    stagePrefix === "primary" ? "primary"
+      : stagePrefix === "junior" ? "junior"
+      : "senior";
+  const defaultGrade = stage === "primary" ? 3 : stage === "junior" ? 8 : 10;
+  recordUnifiedAttempt({
+    stage,
+    grade: opts.grade ?? defaultGrade,
+    module: (modKey as ModuleKey) ?? "reading",
+    item_type: "item",
+    item_id: opts.itemId,
+    item_label: opts.itemLabel,
+    // recordMastery 传的是百分比；≥80% 视为本次"通过"
+    is_correct: opts.pct >= PASS_PCT,
+    context: { pct: Math.round(opts.pct) },
+  }).catch(() => {});
+
   return data as any;
 }
 

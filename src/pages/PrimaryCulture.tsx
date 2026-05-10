@@ -137,15 +137,23 @@ export default function PrimaryCulture() {
     [seasonal]
   );
 
+  // 按当前年级解锁：minGrade 默认 1，G6 看到全部，G1 只看到入门卡。
+  const gradeCards = useMemo(
+    () => PRIMARY_CULTURE_CARDS.filter((c) => (c.minGrade ?? 1) <= g),
+    [g]
+  );
+
   const cards = useMemo(() => {
-    if (filter === "all") return PRIMARY_CULTURE_CARDS;
-    if (filter === "passport") return PRIMARY_CULTURE_CARDS.filter((c) => stamps[c.id]);
-    return PRIMARY_CULTURE_CARDS.filter((c) => c.category === filter);
-  }, [filter, stamps]);
+    if (filter === "all") return gradeCards;
+    if (filter === "passport") return gradeCards.filter((c) => stamps[c.id]);
+    return gradeCards.filter((c) => c.category === filter);
+  }, [filter, stamps, gradeCards]);
 
   const cats = Object.entries(CULTURE_CATEGORIES) as [CultureCard["category"], typeof CULTURE_CATEGORIES[CultureCard["category"]]][];
-  const stampedCount = Object.keys(stamps).length;
-  const total = PRIMARY_CULTURE_CARDS.length;
+  // 护照进度只统计本年级解锁的卡，避免 G1 永远是 X/30。
+  const gradeIds = useMemo(() => new Set(gradeCards.map((c) => c.id)), [gradeCards]);
+  const stampedCount = Object.keys(stamps).filter((id) => gradeIds.has(id)).length;
+  const total = gradeCards.length;
 
   // 简单 quiz: 在同类别其他卡里取 2 个干扰项
   const quizOptions = useMemo(() => {

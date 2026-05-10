@@ -81,6 +81,14 @@ All colors MUST be HSL.
     --shadow-card: 0 4px 18px -6px hsl(250 30% 60% / 0.18);
     --shadow-tile: 0 12px 28px -10px hsl(250 50% 40% / 0.35);
 
+    /* === GPS Learning Center — fixed 4-color palette (mockup) ===
+       Used by /learning-center and the unified mastery UI.
+       NO gradients, NO 3D, NO glass. Flat fills only. */
+    --gps-master:  158 70% 37%;   /* #1D9E75 — 已掌握 */
+    --gps-fluent:   83 49% 56%;   /* #97C459 — 熟练 */
+    --gps-weak:    34  86% 54%;   /* #EF9F27 — 薄弱 */
+    --gps-none:    52   9% 80%;   /* #D3D1C7 — 未学 */
+
     --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;

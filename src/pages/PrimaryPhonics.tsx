@@ -44,10 +44,24 @@ export default function PrimaryPhonics() {
 
   useEffect(() => {
     document.title = "Spark 的拼读冒险 | FluentPath";
-    (async () => {
-      setMastery(await getPhonicsMasteryMap());
-      setLoading(false);
-    })();
+    let cancelled = false;
+    const refresh = async () => {
+      const m = await getPhonicsMasteryMap();
+      if (!cancelled) {
+        setMastery(m);
+        setLoading(false);
+      }
+    };
+    refresh();
+    // 答完题回到本页时(tab 重新可见 / 窗口聚焦)重拉一次,保证进度实时
+    const onVis = () => { if (document.visibilityState === "visible") refresh(); };
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", onVis);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", onVis);
+    };
   }, []);
 
   // 当前应该聚焦的组 = 第一个还没全部掌握的已解锁组

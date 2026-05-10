@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
+import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -228,6 +229,8 @@ export default function JuniorGrammarPoint() {
       <BackLink to="/junior/grammar" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回考点列表
       </BackLink>
+
+      <GuestBanner />
 
       <h1 className="text-grad-title text-2xl font-extrabold">{pt.title}</h1>
       <p className="mt-1 text-xs text-muted-foreground">CEFR {pt.cefr}</p>

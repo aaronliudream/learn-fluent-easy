@@ -1,4 +1,7 @@
 # Project Memory
 
 ## Core
-Brand name is **Big Moon English** (中文：大月亮英语). NEVER use "FluentPath" in any user-facing copy, share text, card images, emails, or marketing. Domain bigmoonenglish.com is primary; fluentpath.tech is secondary/legacy.
+IELTS Speaking module is permanently removed — never re-add it (pages, routes, tables, or edge functions).
+
+## Memories
+- [No IELTS Speaking](mem://constraints/no-ielts-speaking) — Banned feature with full removed-asset list

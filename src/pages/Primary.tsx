@@ -185,23 +185,42 @@ export default function Primary() {
       {/* === Phase 1: Spark 主屏 === 单一中心 = Spark + 一句话 + 一个 CTA === */}
       {needsGrade ? (
         <section className="mt-6 rounded-3xl border-2 border-border bg-card p-6 text-center shadow-tile">
-          <div className="text-5xl">👋</div>
-          <h1 className="mt-3 text-xl font-extrabold">嗨,Spark 想认识你!</h1>
+          {/* P0 — Spark shows up. Big face + small wave so the first impression is a *who*, not a punctuation mark. */}
+          <div className="relative mx-auto grid size-24 place-items-center rounded-full bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 text-6xl shadow-md">
+            🦊
+            <span className="absolute -right-1 -top-1 grid size-9 place-items-center rounded-full bg-white text-2xl shadow-sm">👋</span>
+          </div>
+          <h1 className="mt-3 text-xl font-extrabold">嗨!我是 Spark,想认识你!</h1>
           <p className="mt-1 text-sm text-muted-foreground">先告诉我你在几年级,我会按你的进度陪你学。</p>
           <div className="mt-5 grid grid-cols-3 gap-3">
-            {grades.map((g) => (
-              <button
-                key={g.id}
-                onClick={() => pickGrade(g.id)}
-                className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5`}
-              >
-                <div className="text-3xl">{g.emoji}</div>
-                <div className="absolute inset-x-3 bottom-3">
-                  <div className="text-sm font-extrabold text-white drop-shadow">{g.name_cn}</div>
-                </div>
-              </button>
-            ))}
+            {grades.map((g) => {
+              // P1 — gentle "推荐" tag. Uses parent-set grade if any, otherwise
+              // the national-curriculum default (G3, when English officially starts).
+              const recId = recommendedGrade ?? 3;
+              const isRecommended = g.id === recId;
+              return (
+                <button
+                  key={g.id}
+                  onClick={() => pickGrade(g.id)}
+                  className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5`}
+                >
+                  <div className="text-3xl">{g.emoji}</div>
+                  {isRecommended && (
+                    <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-rose-600 shadow-sm">
+                      ⭐ 推荐
+                    </span>
+                  )}
+                  <div className="absolute inset-x-3 bottom-3">
+                    <div className="text-sm font-extrabold text-white drop-shadow">{g.name_cn}</div>
+                  </div>
+                </button>
+              );
+            })}
           </div>
+          {/* P1 — lower decision pressure: tell parents/kids switching is easy. */}
+          <p className="mt-4 text-center text-xs text-muted-foreground">
+            选错了也没关系,Spark 随时陪你换 →
+          </p>
         </section>
       ) : (
         <>

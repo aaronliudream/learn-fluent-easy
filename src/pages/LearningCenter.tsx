@@ -423,6 +423,61 @@ function ModuleView({
                     </span>
                   </div>
                   <MasteryBar className="mt-1.5" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} height={6} />
+                  {/* —— 各年级掌握度（点击可下钻到题目列表） —— */}
+                  <div className="mt-2.5 space-y-1.5">
+                    <div className="text-[10px] font-medium text-muted-foreground">各年级掌握度</div>
+                    {s.grades.map((g) => {
+                      const gRow = rows.find((r) => r.grade === g);
+                      const c: Counts = gRow ?? ZERO;
+                      const empty = c.total === 0;
+                      return (
+                        <div
+                          key={g}
+                          className={`flex items-center gap-2 rounded-lg border px-2 py-1.5 ${
+                            empty ? "border-dashed border-border/60 bg-muted/10" : "border-border bg-background"
+                          }`}
+                        >
+                          <span className="w-9 shrink-0 text-[10px] font-bold text-muted-foreground">G{g}</span>
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-baseline justify-between text-[10px]">
+                              {empty ? (
+                                <span className="text-muted-foreground">未学</span>
+                              ) : (
+                                <>
+                                  <span className="tabular-nums font-medium">{Math.round(c.score_pct)}%</span>
+                                  <span className="text-muted-foreground tabular-nums">{c.total} 项</span>
+                                </>
+                              )}
+                            </div>
+                            <MasteryBar className="mt-1" master={c.master} fluent={c.fluent} weak={c.weak} none={c.none} height={4} />
+                          </div>
+                          <div className="hidden gap-1 sm:flex">
+                            {(["master", "fluent", "weak", "none"] as ItemState[]).map((st) => {
+                              const n = (c as any)[st] as number;
+                              return (
+                                <button
+                                  key={st}
+                                  disabled={n === 0}
+                                  onClick={() => onOpenList({
+                                    stage: s.key, module: openModule, state: st, grade: g,
+                                    title: `${s.label} G${g} · ${MODULE_LABEL[openModule] ?? openModule} · ${STATE_LABEL[st]}`,
+                                  })}
+                                  className={`flex items-center gap-0.5 rounded px-1.5 py-0.5 text-[9px] transition hover:bg-muted ${
+                                    n === 0 ? "opacity-30" : ""
+                                  }`}
+                                  title={`${STATE_LABEL[st]}: ${n}`}
+                                >
+                                  <span className={`size-1.5 rounded-full bg-gps-${st}`} />
+                                  <span className="tabular-nums">{n}</span>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  {/* —— 学段汇总分状态入口 —— */}
                   <div className="mt-2 grid grid-cols-2 gap-1.5 sm:grid-cols-4">
                     {(["master", "fluent", "weak", "none"] as ItemState[]).map((st) => {
                       const n = (agg as any)[st] as number;

@@ -41,6 +41,26 @@ const STATE_LABEL: Record<ItemState, string> = {
   master: "已掌握", fluent: "熟练", weak: "薄弱（必练）", none: "未学",
 };
 
+/** 按 2022 版义务教育 / 普通高中英语课程标准定义的模块清单。
+ *  即使某模块尚无题库数据，也会在年级展开时显示为「未学」占位行。 */
+const CURRICULUM_MODULES: Record<StageK, string[]> = {
+  primary: ["vocab", "phonics", "listening", "reading", "writing"],
+  junior:  ["vocab", "grammar", "listening", "reading", "cloze", "writing"],
+  senior:  ["vocab", "grammar", "listening", "reading", "cloze", "writing"],
+};
+
+function emptyScope(stage: StageK, grade: number, module: string): ScopeRow {
+  return { stage, grade, module,
+    master: 0, fluent: 0, weak: 0, none: 0,
+    total: 0, score_pct: 0, proportion_pct: 0 };
+}
+
+/** Pad the actual scopes for one (stage, grade) with curriculum placeholders. */
+function padCurriculum(stage: StageK, grade: number, rows: ScopeRow[]): ScopeRow[] {
+  const byMod = new Map(rows.map((r) => [r.module, r]));
+  return CURRICULUM_MODULES[stage].map((m) => byMod.get(m) ?? emptyScope(stage, grade, m));
+}
+
 const ZERO: Counts = { master: 0, fluent: 0, weak: 0, none: 0, total: 0, score_pct: 0 };
 
 export default function LearningCenter() {

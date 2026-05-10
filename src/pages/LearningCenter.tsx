@@ -388,11 +388,14 @@ function StateCard({ color, label, n, to }: { color: string; label: string; n: n
   return (
     <Link
       to={to}
-      className="flex flex-col gap-1 rounded-2xl border border-border bg-card p-3 transition hover:bg-muted/30"
+      className="flex flex-col gap-1 rounded-2xl border border-border bg-card p-3 transition hover:bg-muted/30 hover:border-foreground/20 cursor-pointer"
     >
-      <div className="flex items-center gap-1.5">
-        <span className={`size-2 rounded-full ${color}`} />
-        <span className="text-[11px] text-muted-foreground">{label}</span>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-1.5">
+          <span className={`size-2 rounded-full ${color}`} />
+          <span className="text-[11px] text-muted-foreground">{label}</span>
+        </div>
+        <ChevronRight className="size-3 text-muted-foreground/50" />
       </div>
       <div className="text-2xl font-medium leading-tight">{n.toLocaleString()}</div>
     </Link>

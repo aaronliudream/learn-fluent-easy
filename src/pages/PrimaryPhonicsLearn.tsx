@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, Check, Music, Sparkles, Volume2, X } from "lucide-react";
+import { ArrowLeft, Check, Sparkles, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { speakKid as speak, prefetchTTSBatchKid as prefetchTTSBatch } from "@/lib/speak";
 import {
@@ -13,6 +13,7 @@ import {
   bumpPhonicsMastery,
 } from "@/lib/phonicsMastery";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
+import { bondOnSparkEcho, bondOnPhonicsLearnPass } from "@/lib/petGrowth";
 
 /** 学单个音 → 复习字母名/拼读音/口型/笔顺/儿歌/例词/小知识 → mini-quiz 3 题。 */
 export default function PrimaryPhonicsLearn() {
@@ -71,12 +72,13 @@ export default function PrimaryPhonicsLearn() {
       {phase === "learn" && (
         <>
           <LetterDetail item={item} />
+          <SparkEchoCard item={item} />
           <div className="mt-6 flex flex-col items-center gap-2">
             <button
               onClick={() => setPhase("quiz")}
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 px-8 py-4 text-lg font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
             >
-              <Check className="size-5" /> 我学会了 ✓
+              <Check className="size-5" /> 我学会了,开始测试
             </button>
             <button
               onClick={() =>
@@ -94,12 +96,15 @@ export default function PrimaryPhonicsLearn() {
         <MiniQuiz
           item={item}
           onDone={async (allCorrect) => {
-            if (allCorrect) await bumpPhonicsLevel(item.id, 1, 3);
+            if (allCorrect) {
+              await bumpPhonicsLevel(item.id, 1, 3);
+              try { bondOnPhonicsLearnPass(); } catch { /* noop */ }
+            }
             celebratePet({
               kind: "levelup",
               emoji: "🦊",
               title: allCorrect ? "全对!Spark 学会啦~" : "练完啦,继续加油!",
-              subtitle: allCorrect ? `${item.letter} +1 掌握度` : "下次再考一遍",
+              subtitle: allCorrect ? `${item.letter} +1 掌握度 · Spark +15 亲密度` : "下次再考一遍",
             });
             setPhase("done");
             setTimeout(() => nav("/primary/phonics"), 1600);
@@ -172,26 +177,6 @@ function LetterDetail({ item: l }: { item: PhonicsItem }) {
         )}
       </div>
 
-      {(l.chantCn || l.chantEn) && (
-        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-950/30">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-1.5 text-xs font-bold text-amber-700 dark:text-amber-400">
-              <Music className="size-4" /> 字母儿歌
-            </div>
-            {l.chantEn && (
-              <button
-                onClick={() => speak(l.chantEn!)}
-                className="flex items-center gap-1 rounded-full bg-amber-500 px-2 py-1 text-[11px] font-bold text-white hover:bg-amber-600"
-              >
-                <Volume2 className="size-3" /> 听
-              </button>
-            )}
-          </div>
-          {l.chantEn && <p className="mt-1.5 text-sm font-bold">{l.chantEn}</p>}
-          {l.chantCn && <p className="mt-0.5 text-sm text-amber-800 dark:text-amber-200">{l.chantCn}</p>}
-        </div>
-      )}
-
       <div>
         <div className="mb-2 text-xs font-bold text-muted-foreground">🎴 拼读例词</div>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -215,6 +200,72 @@ function LetterDetail({ item: l }: { item: PhonicsItem }) {
           💡 <span className="font-bold">小知识：</span>{l.funFact}
         </div>
       )}
+    </div>
+  );
+}
+
+// ─── Spark 想听你念 ── 让孩子模仿 Spark 念音 + 例词,+5 亲密度 ──
+function SparkEchoCard({ item }: { item: PhonicsItem }) {
+  const [echoed, setEchoed] = useState(false);
+  const sound = item.sound.replace(/[\/\[\]]/g, "");
+  const chant = `${sound}... ${sound}... ${sound}...`;
+  const wordsLine = item.exampleWords.slice(0, 4).map((w) => w.word).join(", ");
+
+  function playSparkChant() {
+    // 念三次音 + 例词,中间稍作停顿,模拟 Spark 在示范。
+    speak(`${chant}. ${wordsLine}`);
+  }
+
+  function handleEcho() {
+    if (echoed) return;
+    setEchoed(true);
+    try { bondOnSparkEcho(); } catch { /* noop */ }
+  }
+
+  return (
+    <div className="mt-5 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-5 shadow-tile dark:border-amber-900/40 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
+      <div className="flex items-center gap-2 text-sm font-extrabold text-amber-700 dark:text-amber-300">
+        <span className="text-xl">🦊</span> Spark 想听你念
+      </div>
+
+      <button
+        onClick={playSparkChant}
+        className="mt-3 inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-2 text-sm font-bold text-white shadow hover:bg-amber-600"
+      >
+        <Volume2 className="size-4" /> 听 Spark 念
+      </button>
+
+      <div className="mt-3 space-y-1 rounded-2xl bg-white/70 px-4 py-3 text-center dark:bg-background/40">
+        <div className="font-mono text-xl font-extrabold tracking-wider text-amber-700 dark:text-amber-300">
+          {chant}
+        </div>
+        <div className="text-sm font-bold text-foreground/80">{wordsLine}</div>
+      </div>
+
+      <p className="mt-3 text-sm italic text-muted-foreground">
+        “现在你跟着我念一遍好不好?”
+      </p>
+
+      <button
+        onClick={handleEcho}
+        disabled={echoed}
+        className={
+          "mt-3 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-extrabold transition " +
+          (echoed
+            ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300"
+            : "bg-gradient-to-r from-rose-500 to-amber-500 text-white shadow hover:-translate-y-0.5")
+        }
+      >
+        {echoed ? (
+          <>
+            <Check className="size-4" /> 已跟读 · Spark +5 亲密度 💖
+          </>
+        ) : (
+          <>
+            <Sparkles className="size-4" /> 我跟着 Spark 念了
+          </>
+        )}
+      </button>
     </div>
   );
 }

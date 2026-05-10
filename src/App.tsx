@@ -280,6 +280,7 @@ const App = () => (
           <Route path="/dashboard" element={<LearningCenter />} />
           <Route path="/learning-center" element={<Navigate to="/dashboard" replace />} />
           <Route path="/learning-center/list" element={<LearningCenterList />} />
+          <Route path="/dashboard/list/:stage/:state" element={<MasteryList />} />
           <Route path="/dashboard/grammar" element={<GrammarMastery />} />
           <Route path="/me" element={<Me />} />
           {/* Sub-brand entry redirects (母品牌 → 子品牌内部已有的实现) */}

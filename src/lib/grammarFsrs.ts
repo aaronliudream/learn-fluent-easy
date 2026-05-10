@@ -1,6 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
 import { fsrsSchedule, gradeFromAttempt, type FsrsState } from "./fsrs";
-import { recordUnifiedAttempt } from "./unifiedMastery";
 
 /**
  * Grammar point mastery scheduling — FSRS-backed.
@@ -102,9 +101,6 @@ export async function recordGrammarAttempt(opts: {
   isCorrect: boolean;
   latencyMs?: number;
   errorReason?: GrammarErrorReason;
-  // 🆕 v7：统一掌握度路由所需上下文
-  grade?: number;
-  pointLabel?: string;
 }): Promise<{ newLevel: number; intervalDays: number; justMastered: boolean } | null> {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
@@ -186,18 +182,6 @@ export async function recordGrammarAttempt(opts: {
       ...payload,
     });
   }
-
-  // 🆕 v7：写 unified_mastery
-  recordUnifiedAttempt({
-    stage: "senior",
-    grade: opts.grade ?? 10,
-    module: "grammar",
-    item_type: "grammar_point",
-    item_id: opts.pointId,
-    item_label: opts.pointLabel,
-    is_correct: opts.isCorrect,
-    context: { error_reason: opts.errorReason, latency_ms: opts.latencyMs },
-  }).catch(() => {});
 
   return {
     newLevel,

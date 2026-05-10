@@ -1,5 +1,4 @@
 import { supabase } from "@/integrations/supabase/client";
-import { recordUnifiedAttempt } from "./unifiedMastery";
 
 /** Calls the SECURITY DEFINER RPC to record one grammar attempt. */
 export async function recordGrammarAttempt(slug: string, isCorrect: boolean) {
@@ -12,20 +11,6 @@ export async function recordGrammarAttempt(slug: string, isCorrect: boolean) {
   } catch (e) {
     console.warn("[grammarMastery] rpc threw", e);
   }
-
-  // 🆕 v7：写 unified_mastery（slug 形如 "junior:past_simple" / "gaokao:subjunctive"）
-  const [stagePrefix, code] = slug.split(":");
-  const stage = stagePrefix === "junior" ? "junior" : "senior";
-  const grade = stage === "junior" ? 8 : 10;
-  recordUnifiedAttempt({
-    stage,
-    grade,
-    module: "grammar",
-    item_type: "grammar_point",
-    item_id: code ?? slug,
-    item_label: code,
-    is_correct: isCorrect,
-  }).catch(() => {});
 }
 
 export type MasteryBand = "expert" | "mastered" | "ok" | "weak" | "untouched";

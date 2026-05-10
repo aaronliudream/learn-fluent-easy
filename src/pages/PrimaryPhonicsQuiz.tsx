@@ -61,7 +61,9 @@ export default function PrimaryPhonicsQuiz() {
   const isFinished = !loading && totalItems > 0 && itemIdx >= totalItems;
 
   // 当前题目: kind 由 subIdx 决定(0=听音选字, 1=看字选音, 2=听词选图)
-  const q = useMemo(() => (cur ? buildQuestionFor(cur, subIdx) : null), [cur, subIdx]);
+  // 每个 item 预计算 3 道题(混 5 种题型),保持本 item 内 q 稳定.
+  const itemQuestions = useMemo(() => (cur ? buildItemQuestions(cur) : []), [cur, itemIdx]);
+  const q = itemQuestions[subIdx] ?? null;
 
   // 全部答完 → 结算 + 跳转(放 effect 里,避免 render 期副作用)
   useEffect(() => {
@@ -99,6 +101,11 @@ export default function PrimaryPhonicsQuiz() {
     const t = setTimeout(() => {
       if (q.kind === "hearLetter") speak(cur.exampleWords[0]?.word ?? cur.letter);
       else if (q.kind === "matchWord") speak(q.correctWord);
+      else if (q.kind === "blendCvc") {
+        // 自动连读三个音: /c/ - /a/ - /t/
+        const sounds = q.sounds;
+        sounds.forEach((s, i) => setTimeout(() => speak(s), i * 600));
+      }
     }, 300);
     return () => clearTimeout(t);
   }, [q, cur]);
@@ -142,11 +149,13 @@ export default function PrimaryPhonicsQuiz() {
     if (q.kind === "hearLetter") isCorrect = opt === q.correct;
     else if (q.kind === "seeLetter") isCorrect = opt === q.correct;
     else if (q.kind === "matchWord") isCorrect = opt === q.correctWord;
+    else if (q.kind === "blendCvc") isCorrect = opt === q.correctWord;
+    else if (q.kind === "seeImagePickWord") isCorrect = opt === q.correctWord;
 
     // SRS 计数(用于"今日复习"到期判定)
     void bumpPhonicsMastery(
       cur.id,
-      q.kind === "hearLetter" || q.kind === "matchWord" ? "listen" : "quiz",
+      q.kind === "hearLetter" || q.kind === "matchWord" || q.kind === "blendCvc" ? "listen" : "quiz",
       isCorrect
     );
 

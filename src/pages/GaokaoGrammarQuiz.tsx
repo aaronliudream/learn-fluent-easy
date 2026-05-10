@@ -38,6 +38,9 @@ type Question = {
 export default function GaokaoGrammarQuiz() {
   const { slug, index } = useParams<{ slug: string; index: string }>();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const isChallenge = searchParams.get("challenge") === "1";
+  const sessionSize = isChallenge ? CHALLENGE_QUESTIONS_SENIOR : 12;
   const idx = Math.max(0, parseInt(index || "0", 10) || 0);
 
   const [point, setPoint] = useState<Point | null>(null);

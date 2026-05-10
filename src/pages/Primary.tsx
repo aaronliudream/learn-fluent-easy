@@ -21,6 +21,17 @@ type Grade = {
 
 type Pet = { name: string; level: number; xp: number; bond: number; stars: number; hunger?: number; mood?: number; stage?: number };
 
+// Spark = fire_fox 物种。按 level 派生进化阶段表情,
+// 让 Lv.1 看到的不是成年狐,而是一颗蛋。
+// 阈值:Lv.1 = 蛋, Lv.2-3 = 幼年, Lv.4-6 = 成年, Lv.7+ = 传说。
+// 数据库的 pet_state.stage 目前不会自动推进,所以以 level 为唯一信号。
+function sparkFace(level: number): string {
+  if (level <= 1) return "🥚";
+  if (level <= 3) return "🐣";
+  if (level <= 6) return "🦊";
+  return "🔥";
+}
+
 const FALLBACK_GRADES: Grade[] = [
   { id: 1, name_cn: "一年级", name_en: "Grade 1", emoji: "🐣", gradient: "from-amber-300 via-yellow-300 to-orange-300" },
   { id: 2, name_cn: "二年级", name_en: "Grade 2", emoji: "🐥", gradient: "from-orange-300 via-pink-300 to-rose-300" },
@@ -175,6 +186,7 @@ export default function Primary() {
   const bondNow = Math.max(0, Math.min(100, pet?.bond ?? 0));
   const bondHearts = Math.round(bondNow / 10);
   const bondToLevel = Math.max(0, 100 - bondNow);
+  const sparkEmoji = sparkFace(pet?.level ?? 1);
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
@@ -187,7 +199,7 @@ export default function Primary() {
         <section className="mt-6 rounded-3xl border-2 border-border bg-card p-6 text-center shadow-tile">
           {/* P0 — Spark shows up. Big face + small wave so the first impression is a *who*, not a punctuation mark. */}
           <div className="relative mx-auto grid size-24 place-items-center rounded-full bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 text-6xl shadow-md">
-            🦊
+            {sparkEmoji}
             <span className="absolute -right-1 -top-1 grid size-9 place-items-center rounded-full bg-white text-2xl shadow-sm">👋</span>
           </div>
           <h1 className="mt-3 text-xl font-extrabold">嗨!我是 Spark,想认识你!</h1>
@@ -228,7 +240,7 @@ export default function Primary() {
           <section className="mt-4 rounded-3xl bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 p-6 text-center shadow-tile dark:from-pink-950/40 dark:via-rose-950/40 dark:to-amber-950/40">
             <Link to="/pets" className="inline-block transition hover:scale-105">
               <div className="mx-auto grid size-28 place-items-center rounded-full bg-white/70 text-7xl shadow-md">
-                🦊
+                {sparkEmoji}
               </div>
             </Link>
             <div className="mt-4 inline-flex flex-col items-center gap-1 rounded-2xl bg-white/85 px-4 py-2 text-xs font-bold text-rose-700 shadow-sm">
@@ -308,7 +320,7 @@ export default function Primary() {
       <Dialog open={switchOpen} onOpenChange={setSwitchOpen}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <div className="text-center text-5xl">🦊</div>
+            <div className="text-center text-5xl">{sparkEmoji}</div>
             <DialogTitle className="mt-2 text-center text-lg">
               Spark 在每个等级都有冒险,你想去哪个?
             </DialogTitle>

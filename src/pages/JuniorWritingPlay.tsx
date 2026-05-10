@@ -8,6 +8,7 @@ import { bumpPetSkill } from "@/lib/petSkills";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 
 type ErrorPair = { wrong: string; correct: string; note?: string };
 type P = {
@@ -93,6 +94,12 @@ export default function JuniorWritingPlay() {
       const reward = Math.max(5, Math.min(30, Math.round(r.score / 5)));
       await awardCoins(reward, "junior_writing");
       await bumpPetSkill("writer_pen", 1);
+      recordUnifiedAttempt({
+        stage: "junior", grade: 7, module: "writing",
+        item_type: "essay", item_id: p.id, item_label: p.topic,
+        is_correct: r.score >= 60,
+        context: { score: Math.round(r.score), word_count: wordCount },
+      }).catch(() => {});
       toast.success(`AI 已批改 · 得分 ${Math.round(r.score)} · +${reward} 星币`);
       celebrateScore(Math.round(r.score));
     } catch (e: any) {

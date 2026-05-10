@@ -3,7 +3,7 @@
 // 2. 模板兜底（数据极少时不调用 AI）
 // 3. 智能失效（由 record-attempt 触发）
 // 4. Prompt 摘要（仅传聚合后的 weak_top3 / module 弱项）
-// 5. Lite 模型（默认 gemini-3.1-flash-lite-preview）
+// 5. Lite 模型（默认 google/gemini-2.5-flash-lite）
 // 6. DB 预聚合函数 get_diagnostic_summary（不在 AI 端做计算）
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
@@ -18,9 +18,9 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
-const MODEL_LITE = "google/gemini-3.1-flash-lite-preview";
+const MODEL_LITE = "google/gemini-2.5-flash-lite";
 const CACHE_TTL_HOURS = 24;
-const MIN_ATTEMPTS_FOR_AI = 20; // 不足则走模板
+const MIN_ATTEMPTS_FOR_AI = 50; // 不足则走模板
 
 interface DiagSummaryRaw {
   total: number;

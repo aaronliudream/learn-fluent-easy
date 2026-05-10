@@ -163,6 +163,7 @@ export default function LandingPage() {
             >
               浏览课程
             </a>
+            <UserAvatarMenu variant="inline" />
           </nav>
         </header>
 

@@ -7787,29 +7787,52 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
   const [elapsed, setElapsed] = useState(0);
   const [allDone, setAllDone] = useState(false);
   const [speaking, setSpeaking] = useState(false);
+  const [noVoice, setNoVoice] = useState(false);
+  const [restartTick, setRestartTick] = useState(0);
   const timerRef = useRef(null);
 
   const totalDuration = lessonTotalDuration(script);
   const minRequired = totalDuration * 0.6; // need to watch 60% before can continue
   const currentSeg = script[segIdx] || script[script.length - 1];
 
-  /* TTS — uses cloud `tts` edge function (CosyVoice in CN / OpenAI elsewhere)
-     for natural Chinese teacher voice. Falls back to browser SpeechSynthesis. */
-  const playTTS = async (text) => {
-    setSpeaking(true);
-    try {
-      await cloudTTS(text, { voiceId: "shimmer", speed, lang: "zh" });
-    } finally {
-      setSpeaking(false);
-    }
-  };
-
-  /* Speak current segment when it changes */
+  /* Combined speak + auto-advance.
+     Plays the segment's TTS, waits until BOTH the audio finishes AND the
+     script's minimum duration has elapsed, then advances. This keeps the
+     teacher's voice and the on-screen flip-flop in sync (fixes "voice
+     cut off" / "silent gap" at higher speeds). */
   useEffect(() => {
     if (paused || allDone) return;
-    playTTS(currentSeg.text);
-    return () => { stopCloudTTS(); };
-  }, [segIdx, paused]);
+    let cancelled = false;
+    setSpeaking(true);
+    const minDelayMs = (currentSeg.duration * 1000) / speed;
+    const minDelay = new Promise(r => setTimeout(r, minDelayMs));
+    const audio = cloudTTS(currentSeg.text, { voiceId: "shimmer", speed, lang: "zh" })
+      .then((status) => {
+        if (cancelled) return;
+        setNoVoice(status === "none");
+      });
+    Promise.all([minDelay, audio]).then(() => {
+      if (cancelled) return;
+      setSpeaking(false);
+      if (segIdx + 1 >= script.length) {
+        setAllDone(true);
+      } else {
+        setSegIdx(i => i + 1);
+        setCharIdx(0);
+      }
+    });
+    /* Prefetch the next segment's mp3 so it plays instantly */
+    const next = script[segIdx + 1];
+    if (next) prefetchTTS(next.text, { voiceId: "shimmer", speed });
+    /* On segment change / pause, just pause the current audio element.
+       Do NOT call window.speechSynthesis.cancel() — that wipes the queue
+       and was the source of the "voice on/off" symptom. Do NOT call
+       stopCloudTTS() either; we want the cache to survive. */
+    return () => {
+      cancelled = true;
+      try { _ttsAudio?.pause(); _ttsAudio = null; } catch {}
+    };
+  }, [segIdx, paused, allDone, speed, restartTick]);
 
   /* Typewriter effect for subtitle */
   useEffect(() => {
@@ -7820,22 +7843,6 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
     return () => clearTimeout(t);
   }, [charIdx, paused, segIdx, speed]);
 
-  /* Segment auto-advance */
-  useEffect(() => {
-    if (paused || allDone) return;
-    timerRef.current = setTimeout(() => {
-      if (segIdx + 1 >= script.length) {
-        setAllDone(true);
-        stopCloudTTS();
-        setSpeaking(false);
-      } else {
-        setSegIdx(i => i + 1);
-        setCharIdx(0);
-      }
-    }, currentSeg.duration * 1000 / speed);
-    return () => clearTimeout(timerRef.current);
-  }, [segIdx, paused, speed, allDone]);
-
   /* Elapsed time tracker */
   useEffect(() => {
     if (paused || allDone) return;
@@ -7843,9 +7850,9 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
     return () => clearInterval(t);
   }, [paused, speed, allDone, totalDuration]);
 
-  /* Cleanup TTS on unmount */
+  /* Hard cleanup on real unmount only */
   useEffect(() => {
-    return () => { try { window.speechSynthesis?.cancel(); } catch {} };
+    return () => { stopCloudTTS(); };
   }, []);
 
   /* Keyboard controls */
@@ -7860,7 +7867,7 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
         e.preventDefault();
       } else if (e.key === "ArrowRight") {
         // → jumps to the next segment, mirroring the ⏭ button
-        try { window.speechSynthesis?.cancel(); } catch {}
+        stopCloudTTS();
         if (segIdx + 1 >= script.length) {
           setAllDone(true);
           setSpeaking(false);

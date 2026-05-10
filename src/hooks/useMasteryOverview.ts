@@ -75,7 +75,9 @@ function emptyStat(stage: Stage, key: ModuleKey): ModuleStat {
 
 export function useMasteryOverview(stage: Stage): StageOverview {
   const [state, setState] = useState<StageOverview>(() => {
-    const keys: ModuleKey[] = stage === "junior"
+    const keys: ModuleKey[] = stage === "primary"
+      ? ["vocab", "reading", "lesson"]
+      : stage === "junior"
       ? ["vocab", "reading", "listening", "writing", "grammar"]
       : ["vocab", "reading", "cloze", "grammar"];
     const modules = keys.map((k) => emptyStat(stage, k));

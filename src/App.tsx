@@ -101,6 +101,7 @@ const IeltsSpeakingSession = lazy(() => import("./pages/IeltsSpeakingSession.tsx
 const Pricing = lazy(() => import("./pages/Pricing.tsx"));
 const Dashboard = lazy(() => import("./pages/Dashboard.tsx"));
 const LearningCenter = lazy(() => import("./pages/LearningCenter.tsx"));
+const LearningCenterList = lazy(() => import("./pages/LearningCenterList.tsx"));
 const GrammarMastery = lazy(() => import("./pages/GrammarMastery.tsx"));
 const Me = lazy(() => import("./pages/Me.tsx"));
 const Cet = lazy(() => import("./pages/Cet.tsx"));
@@ -278,6 +279,7 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/learning-center" element={<LearningCenter />} />
+          <Route path="/learning-center/list" element={<LearningCenterList />} />
           <Route path="/dashboard/grammar" element={<GrammarMastery />} />
           <Route path="/me" element={<Me />} />
           {/* Sub-brand entry redirects (母品牌 → 子品牌内部已有的实现) */}

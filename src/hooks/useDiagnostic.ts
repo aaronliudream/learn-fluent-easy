@@ -21,6 +21,11 @@ export function useDiagnostic(autoFetch = true) {
   const refresh = useCallback(async (force = false) => {
     setLoading(true); setError(null);
     try {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        setData(null);
+        return;
+      }
       const { data: res, error: err } = await supabase.functions.invoke("generate-diagnostic", {
         body: { force },
       });

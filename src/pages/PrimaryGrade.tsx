@@ -210,9 +210,9 @@ export default function PrimaryGrade() {
         <Link
           to="/parent"
           className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-2 text-sm font-extrabold text-white shadow-md ring-2 ring-emerald-200 transition hover:-translate-y-0.5 hover:shadow-lg dark:ring-emerald-900"
-          aria-label="进入家长学习中心，查看孩子学习进度"
+          aria-label="进入家长学习中心，查看本周计划与进度"
         >
-          <Users className="size-4" /> 📊 学习进度
+          <Users className="size-4" /> 📅 周计划 &amp; 进度
           <span className="ml-0.5 hidden sm:inline opacity-90">查看 →</span>
         </Link>
       </div>

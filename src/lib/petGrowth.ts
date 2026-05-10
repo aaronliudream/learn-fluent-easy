@@ -96,6 +96,21 @@ function feedSpark(opts: {
   // Visible reaction on the floating Spark — listened to by FloatingPet.
   // Show the *intended* gain, not the post-cap amount, so feedback is consistent.
   try { petReact("happy", { coins: opts.reactCoins ?? opts.bond }); } catch { /* noop */ }
+  // Also surface a top-of-screen toast so the gain is unmistakable
+  // — bubble + toast together = "Spark 因我而动" 信号被孩子接收到。
+  try {
+    if (give > 0) {
+      toast(`💖 Spark +${opts.bond} 亲密度`, {
+        description: opts.xp > 0 ? `经验 +${opts.xp}` : undefined,
+        duration: 1800,
+      });
+    } else if (opts.capped) {
+      toast(`✨ Spark 今天已经吃饱啦`, {
+        description: `经验 +${opts.xp}（亲密度明天再涨）`,
+        duration: 1800,
+      });
+    }
+  } catch { /* noop */ }
   if (give > 0 || opts.xp > 0) void applyGrowth(give, opts.xp);
 }
 

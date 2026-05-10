@@ -426,21 +426,60 @@ function stopCloudTTS() {
    Caller can use the return value to surface a "no voice available" UI hint.
    Does NOT cancel previously-playing audio globally — caller is responsible
    for calling stopCloudTTS() if it needs hard interruption. */
-async function cloudTTS(text, { voiceId = "shimmer", speed = 1.0, lang = "en" } = {}) {
+async function cloudTTS(text, { voiceId = "shimmer", speed = 1.0, lang = "en", onStart } = {}) {
   if (!text) return "none";
   // Pause any currently-playing audio element (without killing speechSynthesis
   // queue or cache). Avoids wiping out the next-segment prefetch.
   try { _ttsAudio?.pause(); _ttsAudio = null; } catch {}
   const cacheKey = `${voiceId}|${speed}|${text}`;
-  const playUrl = (url) => new Promise((resolve) => {
+  /* tryPlayUrl resolves with:
+     - "cloud"  : audio actually played to completion (or errored mid-play)
+     - "fail"   : play() was rejected (autoplay blocked) or never started.
+     onStart fires the moment the audio truly begins playing (the `playing`
+     event), which lets the caller defer the typewriter/timer until then. */
+  const tryPlayUrl = (url) => new Promise((resolve) => {
     const a = new Audio(url);
+    a.preload = "auto";
     _ttsAudio = a;
-    a.onended = () => resolve("cloud");
-    a.onerror = () => resolve("cloud");
-    a.play().catch(() => resolve("cloud"));
+    let started = false;
+    let settled = false;
+    const done = (status) => { if (!settled) { settled = true; resolve(status); } };
+    a.addEventListener("playing", () => {
+      started = true;
+      try { onStart?.("cloud", isFinite(a.duration) ? a.duration : 0); } catch {}
+    }, { once: true });
+    a.onended = () => done("cloud");
+    a.onerror = () => done(started ? "cloud" : "fail");
+    // Play can reject (autoplay policy, codec error, transient). If it
+    // rejects BEFORE 'playing' fires, we treat as fail so caller can fall
+    // back to browser TTS instead of silently advancing.
+    a.play().catch(() => done("fail"));
   });
+  /* Browser SpeechSynthesis fallback. Resolves with "browser" or "none". */
+  const browserSpeak = () => {
+    if (!("speechSynthesis" in window)) return Promise.resolve("none");
+    if (lang === "zh" && !detectZhVoice()) return Promise.resolve("none");
+    return new Promise((resolve) => {
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = lang === "zh" ? "zh-CN" : "en-US";
+      u.rate = lang === "zh" ? 0.95 * speed : 0.92 * speed;
+      let started = false;
+      u.onstart = () => {
+        started = true;
+        try { onStart?.("browser", 0); } catch {}
+      };
+      u.onend = () => resolve(started ? "browser" : "none");
+      u.onerror = () => resolve("none");
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+      // Safety: if the engine never fires onstart within 1.5s, treat as none.
+      setTimeout(() => { if (!started) { try { window.speechSynthesis.cancel(); } catch {} resolve("none"); } }, 1500);
+    });
+  };
   if (TTS_CACHE.has(cacheKey)) {
-    return playUrl(TTS_CACHE.get(cacheKey));
+    const r = await tryPlayUrl(TTS_CACHE.get(cacheKey));
+    if (r === "fail") return browserSpeak();
+    return r;
   }
   try {
     const r = await fetch(TTS_ENDPOINT, {
@@ -459,20 +498,11 @@ async function cloudTTS(text, { voiceId = "shimmer", speed = 1.0, lang = "en" } 
     if (!url) throw new Error("no audio");
     if (TTS_CACHE.size > 50) TTS_CACHE.clear();
     TTS_CACHE.set(cacheKey, url);
-    return playUrl(url);
+    const r2 = await tryPlayUrl(url);
+    if (r2 === "fail") return browserSpeak();
+    return r2;
   } catch (e) {
-    // Fallback: browser SpeechSynthesis
-    if (!("speechSynthesis" in window)) return "none";
-    if (lang === "zh" && !detectZhVoice()) return "none";
-    return new Promise((resolve) => {
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = lang === "zh" ? "zh-CN" : "en-US";
-      u.rate = lang === "zh" ? 0.95 * speed : 0.92 * speed;
-      u.onend = () => resolve("browser");
-      u.onerror = () => resolve("none");
-      window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(u);
-    });
+    return browserSpeak();
   }
 }
 
@@ -7789,29 +7819,72 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
   const [speaking, setSpeaking] = useState(false);
   const [noVoice, setNoVoice] = useState(false);
   const [restartTick, setRestartTick] = useState(0);
+  const [audioReady, setAudioReady] = useState(false);
   const timerRef = useRef(null);
 
   const totalDuration = lessonTotalDuration(script);
   const minRequired = totalDuration * 0.6; // need to watch 60% before can continue
   const currentSeg = script[segIdx] || script[script.length - 1];
 
-  /* Combined speak + auto-advance.
-     Plays the segment's TTS, waits until BOTH the audio finishes AND the
-     script's minimum duration has elapsed, then advances. This keeps the
-     teacher's voice and the on-screen flip-flop in sync (fixes "voice
-     cut off" / "silent gap" at higher speeds). */
+  /* Combined speak + auto-advance — driven by the audio itself.
+     Flow:
+       1. Reset audioReady=false, request TTS.
+       2. cloudTTS calls onStart the moment audio truly begins playing
+          (the `playing` event for cloud, `onstart` for browser TTS, or
+          immediately as a synthetic "no voice" start if no engine works).
+       3. Only THEN do we start the typewriter, the elapsed timer, and the
+          minimum-duration timer. This guarantees subtitle ↔ voice sync
+          and prevents the "silent skip" bug.
+       4. Segment advances after the LATER of:
+          - the audio finishing
+          - max(scripted duration, actual audio duration) elapsed since start
+     */
   useEffect(() => {
     if (paused || allDone) return;
     let cancelled = false;
+    let minDelayTimeout = null;
     setSpeaking(true);
-    const minDelayMs = (currentSeg.duration * 1000) / speed;
-    const minDelay = new Promise(r => setTimeout(r, minDelayMs));
-    const audio = cloudTTS(currentSeg.text, { voiceId: "shimmer", speed, lang: "zh" })
-      .then((status) => {
+    setAudioReady(false);
+    let audioDurSec = 0;
+    let startedAt = 0;
+    const minStart = new Promise((resolve) => {
+      const handleStart = () => {
         if (cancelled) return;
-        setNoVoice(status === "none");
-      });
-    Promise.all([minDelay, audio]).then(() => {
+        startedAt = performance.now();
+        setAudioReady(true);
+        const scriptedMs = (currentSeg.duration * 1000) / speed;
+        const actualMs = audioDurSec > 0 ? (audioDurSec * 1000) : 0;
+        const minDelayMs = Math.max(scriptedMs, actualMs);
+        minDelayTimeout = setTimeout(resolve, minDelayMs);
+      };
+      // Safety net: if audio never starts within 4s (e.g. fetch hung),
+      // treat as "no voice" and proceed with the scripted minimum duration
+      // so the lesson never freezes.
+      setTimeout(() => {
+        if (cancelled || startedAt) return;
+        setNoVoice(true);
+        handleStart();
+      }, 4000);
+      // Wire the real start event from cloudTTS via outer closure.
+      window.__teacherOnStart = (kind, durSec) => {
+        audioDurSec = durSec || 0;
+        handleStart();
+      };
+    });
+    const audioPromise = cloudTTS(currentSeg.text, {
+      voiceId: "shimmer",
+      speed,
+      lang: "zh",
+      onStart: (kind, durSec) => {
+        if (cancelled) return;
+        if (window.__teacherOnStart) window.__teacherOnStart(kind, durSec);
+      },
+    }).then((status) => {
+      if (cancelled) return status;
+      setNoVoice(status === "none");
+      return status;
+    });
+    Promise.all([minStart, audioPromise]).then(() => {
       if (cancelled) return;
       setSpeaking(false);
       if (segIdx + 1 >= script.length) {
@@ -7824,31 +7897,29 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
     /* Prefetch the next segment's mp3 so it plays instantly */
     const next = script[segIdx + 1];
     if (next) prefetchTTS(next.text, { voiceId: "shimmer", speed });
-    /* On segment change / pause, just pause the current audio element.
-       Do NOT call window.speechSynthesis.cancel() — that wipes the queue
-       and was the source of the "voice on/off" symptom. Do NOT call
-       stopCloudTTS() either; we want the cache to survive. */
     return () => {
       cancelled = true;
+      if (minDelayTimeout) clearTimeout(minDelayTimeout);
+      window.__teacherOnStart = null;
       try { _ttsAudio?.pause(); _ttsAudio = null; } catch {}
     };
   }, [segIdx, paused, allDone, speed, restartTick]);
 
   /* Typewriter effect for subtitle */
   useEffect(() => {
-    if (paused) return;
+    if (paused || !audioReady) return;
     if (charIdx >= currentSeg.text.length) return;
     const charTimePerSeg = (currentSeg.duration * 1000 * 0.8) / currentSeg.text.length; // 80% of seg time spent typing
     const t = setTimeout(() => setCharIdx(c => c + 1), charTimePerSeg / speed);
     return () => clearTimeout(t);
-  }, [charIdx, paused, segIdx, speed]);
+  }, [charIdx, paused, segIdx, speed, audioReady]);
 
   /* Elapsed time tracker */
   useEffect(() => {
-    if (paused || allDone) return;
+    if (paused || allDone || !audioReady) return;
     const t = setInterval(() => setElapsed(e => Math.min(totalDuration, e + 0.1 * speed)), 100);
     return () => clearInterval(t);
-  }, [paused, speed, allDone, totalDuration]);
+  }, [paused, speed, allDone, totalDuration, audioReady]);
 
   /* Hard cleanup on real unmount only */
   useEffect(() => {
@@ -7936,9 +8007,15 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
           {/* Bubble pointer */}
           <div className="absolute left-0 top-1/2 -translate-x-2 -translate-y-1/2 w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-r-[10px] border-r-mint/30" />
           <p className="font-cn ink text-base sm:text-lg leading-relaxed">
-            {currentSeg.text.slice(0, charIdx)}
-            {!paused && charIdx < currentSeg.text.length && (
-              <span className="typing-cursor inline-block w-0.5 h-5 bg-mint ml-0.5 align-middle" />
+            {!audioReady ? (
+              <span className="ink-faint italic text-sm">老师正在准备…</span>
+            ) : (
+              <>
+                {currentSeg.text.slice(0, charIdx)}
+                {!paused && charIdx < currentSeg.text.length && (
+                  <span className="typing-cursor inline-block w-0.5 h-5 bg-mint ml-0.5 align-middle" />
+                )}
+              </>
             )}
           </p>
         </div>

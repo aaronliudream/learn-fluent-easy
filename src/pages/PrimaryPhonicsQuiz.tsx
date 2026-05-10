@@ -480,65 +480,6 @@ function buildBlendCvc(item: PhonicsItem): Q | null {
   };
 }
 
-/**
- * 为指定 item 出第 subIdx (0..2) 道题.
- *  subIdx 0 → 听音选字母
- *  subIdx 1 → 看字母选音
- *  subIdx 2 → 听词选图(没有 emoji 时回退到听音选字母)
- * 干扰项一律走智能映射 buildDistractorPool.
- */
-function buildQuestionFor(item: PhonicsItem, subIdx: number): Q {
-  const allIds = PHONICS_ITEMS.map((p) => p.id);
-  const distractorIds = buildDistractorPool(item.id, allIds, 3);
-  const distractors = distractorIds
-    .map((id) => PHONICS_ITEMS.find((p) => p.id === id))
-    .filter(Boolean) as PhonicsItem[];
-
-  const kind = subIdx % 3;
-
-  if (kind === 0) {
-    return {
-      kind: "hearLetter",
-      correct: item.letter,
-      options: shuffle([item.letter, ...distractors.map((p) => p.letter)]),
-    };
-  }
-  if (kind === 1) {
-    return {
-      kind: "seeLetter",
-      letter: item.letterUpper ?? item.letter,
-      correct: item.sound,
-      options: shuffle([item.sound, ...distractors.map((p) => p.sound)]),
-    };
-  }
-  const word0 = item.exampleWords.find((w) => w.emoji && w.word) ?? item.exampleWords[0];
-  if (word0?.emoji && word0?.word) {
-    // 智能干扰: 优先用同组易混音的例词
-    const otherWords = distractors.flatMap((p) =>
-      p.exampleWords.filter((w) => w.emoji && w.word)
-    );
-    const fallbackWords = PHONICS_ITEMS.flatMap((p) =>
-      p.id === item.id ? [] : p.exampleWords.filter((w) => w.emoji && w.word)
-    );
-    const wordPool = otherWords.length >= 2 ? otherWords : fallbackWords;
-    return {
-      kind: "matchWord",
-      correctWord: word0.word,
-      correctEmoji: word0.emoji!,
-      options: shuffle([
-        { word: word0.word, emoji: word0.emoji! },
-        ...shuffle(wordPool).slice(0, 2).map((w) => ({ word: w.word, emoji: w.emoji! })),
-      ]),
-    };
-  }
-  // fallback
-  return {
-    kind: "hearLetter",
-    correct: item.letter,
-    options: shuffle([item.letter, ...distractors.map((p) => p.letter)]),
-  };
-}
-
 function shuffle<T>(arr: T[]): T[] {
   const c = [...arr];
   for (let i = c.length - 1; i > 0; i--) {

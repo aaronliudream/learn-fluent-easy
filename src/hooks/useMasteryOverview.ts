@@ -335,7 +335,8 @@ export type ContinuePick = {
 };
 
 export function pickContinue(stage: Stage, ov: StageOverview): ContinuePick {
-  const dueModule = ov.modules.find((m) => m.due > 0);
+  const live = ov.modules.filter((m) => !m.comingSoon);
+  const dueModule = live.find((m) => m.due > 0);
   if (dueModule) {
     return {
       module: dueModule.key,
@@ -345,7 +346,7 @@ export function pickContinue(stage: Stage, ov: StageOverview): ContinuePick {
       subtitle: "今日到期，先稳固已学的",
     };
   }
-  const inProgress = ov.modules.find((m) => m.learned > 0 && m.percent < 100);
+  const inProgress = live.find((m) => m.learned > 0 && m.percent < 100);
   if (inProgress) {
     return {
       module: inProgress.key,
@@ -355,7 +356,7 @@ export function pickContinue(stage: Stage, ov: StageOverview): ContinuePick {
       subtitle: `已掌握 ${inProgress.mastered} · 继续推进`,
     };
   }
-  const next = ov.modules.find((m) => m.total > 0) ?? ov.modules[0];
+  const next = live.find((m) => m.total > 0) ?? live[0] ?? ov.modules[0];
   return {
     module: next.key,
     kind: "new",

@@ -148,6 +148,14 @@ export default function GaokaoGrammarQuiz() {
         celebrateScore(Math.round(acc * 100));
       }
     }
+    // 记录"组完成"驱动挑战模式连胜（同一轮只记一次）
+    const recordKey = `${slug}-${stats.correct}-${stats.wrong}`;
+    if (point?.id && groupRecordedRef.current !== recordKey) {
+      groupRecordedRef.current = recordKey;
+      recordGroupCompletion(`senior_grammar:${point.id}`, Math.round(acc * 100))
+        .then(setGroupStreak)
+        .catch(() => {});
+    }
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
@@ -164,6 +172,33 @@ export default function GaokaoGrammarQuiz() {
             <Button onClick={() => { setStats({ correct: 0, wrong: 0 }); navigate(`/gaokao/grammar/${slug}/quiz/0`); }}>
               <RotateCcw className="size-4 mr-1" /> 再刷一轮
             </Button>
+            {groupStreak.challenge_unlocked && !isChallenge && (
+              <Button
+                onClick={() => {
+                  setStats({ correct: 0, wrong: 0 });
+                  groupRecordedRef.current = null;
+                  const next = new URLSearchParams(searchParams);
+                  next.set("challenge", "1");
+                  setSearchParams(next);
+                  navigate(`/gaokao/grammar/${slug}/quiz/0?challenge=1`);
+                }}
+                className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700"
+              >
+                🏆 挑战模式 ({CHALLENGE_QUESTIONS_SENIOR} 题)
+              </Button>
+            )}
+            {isChallenge && (
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setStats({ correct: 0, wrong: 0 });
+                  groupRecordedRef.current = null;
+                  navigate(`/gaokao/grammar/${slug}/quiz/0`);
+                }}
+              >
+                ↩️ 退出挑战模式
+              </Button>
+            )}
             <Button variant="outline" asChild>
               <Link to={`/gaokao/grammar/${slug}`}><BookOpen className="size-4 mr-1" /> 看讲解</Link>
             </Button>
@@ -171,6 +206,18 @@ export default function GaokaoGrammarQuiz() {
               <BackLink to="/gaokao/grammar">返回地图</BackLink>
             </Button>
           </div>
+          {!groupStreak.challenge_unlocked && acc * 100 >= 70 && (
+            <p className="mt-5 text-xs font-bold text-violet-600 dark:text-violet-300">
+              🔥 连续完成 {groupStreak.consecutive_count}/{CHALLENGE_THRESHOLD} 组
+              {groupStreak.consecutive_count < CHALLENGE_THRESHOLD &&
+                ` · 再 ${CHALLENGE_THRESHOLD - groupStreak.consecutive_count} 组解锁挑战模式 🏆`}
+            </p>
+          )}
+          {!groupStreak.challenge_unlocked && acc * 100 < 70 && groupStreak.consecutive_count === 0 && (
+            <p className="mt-5 text-xs text-muted-foreground">
+              💡 单组正确率 ≥70% 才计入连胜，加油！
+            </p>
+          )}
         </div>
       </main>
     );

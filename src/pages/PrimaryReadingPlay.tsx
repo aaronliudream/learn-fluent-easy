@@ -621,7 +621,7 @@ function FinishCard({ a, stars, accuracy, onRetry }: { a: Article; stars: number
     <div className="rounded-3xl border-2 border-border bg-card p-6 text-center shadow-tile">
       <Trophy className="mx-auto size-14 text-amber-500" />
       <h3 className="mt-2 text-2xl font-extrabold">
-        {stars === 3 ? "🌟 完美通关！" : stars === 2 ? "👍 很棒！" : "💪 再来一次！"}
+        {stars === 3 ? "🌟 你太厉害啦,Spark 都跳起来了!" : stars === 2 ? "👍 不错哦,Spark 在为你鼓掌!" : "💪 没事,陪 Spark 再来一次!"}
       </h3>
       <div className="mt-2 text-3xl">
         {Array.from({length:3}).map((_,i)=>(<span key={i}>{i<stars?"⭐":"☆"}</span>))}

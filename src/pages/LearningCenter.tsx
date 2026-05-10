@@ -41,6 +41,26 @@ const STATE_LABEL: Record<ItemState, string> = {
   master: "已掌握", fluent: "熟练", weak: "薄弱（必练）", none: "未学",
 };
 
+/** 按 2022 版义务教育 / 普通高中英语课程标准定义的模块清单。
+ *  即使某模块尚无题库数据，也会在年级展开时显示为「未学」占位行。 */
+const CURRICULUM_MODULES: Record<StageK, string[]> = {
+  primary: ["vocab", "phonics", "listening", "reading", "writing"],
+  junior:  ["vocab", "grammar", "listening", "reading", "cloze", "writing"],
+  senior:  ["vocab", "grammar", "listening", "reading", "cloze", "writing"],
+};
+
+function emptyScope(stage: StageK, grade: number, module: string): ScopeRow {
+  return { stage, grade, module,
+    master: 0, fluent: 0, weak: 0, none: 0,
+    total: 0, score_pct: 0, proportion_pct: 0 };
+}
+
+/** Pad the actual scopes for one (stage, grade) with curriculum placeholders. */
+function padCurriculum(stage: StageK, grade: number, rows: ScopeRow[]): ScopeRow[] {
+  const byMod = new Map(rows.map((r) => [r.module, r]));
+  return CURRICULUM_MODULES[stage].map((m) => byMod.get(m) ?? emptyScope(stage, grade, m));
+}
+
 const ZERO: Counts = { master: 0, fluent: 0, weak: 0, none: 0, total: 0, score_pct: 0 };
 
 export default function LearningCenter() {
@@ -303,10 +323,10 @@ function StageView({
 
                   {expanded && (
                     <div className="space-y-1.5 border-t border-border bg-muted/20 px-4 py-3">
-                      {stageScopes.length === 0 && (
-                        <p className="text-[11px] text-muted-foreground">G{g} 还没有数据，先去做几道题。</p>
-                      )}
-                      {stageScopes.map((m) => (
+                      <p className="mb-1 text-[10px] text-muted-foreground">
+                        按 2022 新课标 · {STAGES.find((s) => s.key === openStage)!.label}英语模块
+                      </p>
+                      {padCurriculum(openStage, g, stageScopes).map((m) => (
                         <ModuleScopeRow
                           key={m.module}
                           stage={openStage}
@@ -447,23 +467,33 @@ function ModuleScopeRow({
   onOpenList: (p: { stage: StageK; module: string; state: ItemState; grade?: number; title: string }) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const empty = row.total === 0;
   return (
-    <div className="rounded-xl border border-border bg-card">
+    <div className={`rounded-xl border bg-card ${empty ? "border-dashed border-border/60" : "border-border"}`}>
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => !empty && setOpen(!open)}
+        disabled={empty}
         className="flex w-full items-center gap-3 px-3 py-2 text-left"
       >
         <span className="text-base" aria-hidden>{MODULE_EMOJI[row.module] ?? "🧠"}</span>
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline justify-between text-[11px]">
-            <span className="font-bold">{MODULE_LABEL[row.module] ?? row.module}</span>
-            <span className="text-muted-foreground tabular-nums">{Math.round(row.score_pct)}%</span>
+            <span className={`font-bold ${empty ? "text-muted-foreground" : ""}`}>
+              {MODULE_LABEL[row.module] ?? row.module}
+            </span>
+            {empty ? (
+              <span className="rounded-full bg-muted px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
+                未开放
+              </span>
+            ) : (
+              <span className="text-muted-foreground tabular-nums">{Math.round(row.score_pct)}%</span>
+            )}
           </div>
           <MasteryBar className="mt-1" master={row.master} fluent={row.fluent} weak={row.weak} none={row.none} height={5} />
         </div>
-        <ChevronDown className={`size-3.5 text-muted-foreground transition ${open ? "rotate-180" : ""}`} />
+        {!empty && <ChevronDown className={`size-3.5 text-muted-foreground transition ${open ? "rotate-180" : ""}`} />}
       </button>
-      {open && (
+      {open && !empty && (
         <div className="grid grid-cols-2 gap-1.5 border-t border-border bg-muted/20 px-3 py-2 sm:grid-cols-4">
           {(["master", "fluent", "weak", "none"] as ItemState[]).map((st) => {
             const n = (row as any)[st] as number;

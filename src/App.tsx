@@ -102,6 +102,7 @@ const Pricing = lazy(() => import("./pages/Pricing.tsx"));
 const Dashboard = lazy(() => import("./pages/Dashboard.tsx"));
 const LearningCenter = lazy(() => import("./pages/LearningCenter.tsx"));
 const LearningCenterList = lazy(() => import("./pages/LearningCenterList.tsx"));
+const MasteryList = lazy(() => import("./pages/MasteryList.tsx"));
 const GrammarMastery = lazy(() => import("./pages/GrammarMastery.tsx"));
 const Me = lazy(() => import("./pages/Me.tsx"));
 const Cet = lazy(() => import("./pages/Cet.tsx"));

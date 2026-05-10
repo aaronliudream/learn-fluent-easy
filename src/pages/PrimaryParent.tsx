@@ -163,6 +163,15 @@ export default function PrimaryParent() {
             ))}
           </div>
 
+          {/* 🆕 五项技能阵列 — 听 / 说 / 读 / 看 / 写 (新课标对齐) */}
+          <FiveSkillArray stats={stats} grade={grade} />
+
+          {/* 🆕 Spark 状态卡 */}
+          <SparkStatusCard pet={pet} />
+
+          {/* 🆕 本周学习计划 */}
+          <WeeklyPlanCard scores={scores} />
+
           {/* Mastery overview card */}
           <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
             <div className="flex items-center justify-between">

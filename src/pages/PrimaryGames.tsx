@@ -229,7 +229,7 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
     <div className="rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 p-8 text-center shadow-tile">
       <Trophy className="mx-auto size-14 text-amber-500" />
       <h3 className="mt-2 text-2xl font-extrabold">
-        {pct >= 90 ? "🌟 太厉害啦！" : pct >= 70 ? "👍 不错哦！" : "💪 再来一次！"}
+        {pct >= 90 ? "🌟 你太厉害啦,Spark 都跳起来了!" : pct >= 70 ? "👍 不错哦,Spark 在为你鼓掌!" : "💪 没事,陪 Spark 再来一次!"}
       </h3>
       <p className="mt-1 text-sm text-muted-foreground">
         答对 {correct} / {total} · 得分 <span className="font-extrabold text-amber-600">+{score}</span>

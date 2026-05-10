@@ -201,7 +201,7 @@ export default function PrimaryGrade() {
           className="mb-3 flex items-center gap-4 rounded-3xl bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:scale-[1.01]">
           <div className="grid size-16 shrink-0 place-items-center rounded-3xl bg-white/25 text-4xl backdrop-blur-sm">{nextLesson.unit.emoji ?? "🏝️"}</div>
           <div className="flex-1 min-w-0">
-            <div className="text-xs font-bold uppercase tracking-wider opacity-90">今天的冒险</div>
+            <div className="text-xs font-bold uppercase tracking-wider opacity-90">陪 Spark 出发</div>
             <div className="truncate text-2xl font-extrabold leading-tight">{nextLesson.title_cn}</div>
             <div className="mt-1 text-sm opacity-90">{nextLesson.unit.title_cn} · 约 {nextLesson.estimated_minutes || 8} 分钟</div>
           </div>

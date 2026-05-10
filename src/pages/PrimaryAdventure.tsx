@@ -145,7 +145,7 @@ export default function PrimaryAdventure() {
       <section className="mt-5 space-y-3">
         {loading && (
           <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            正在准备今天的冒险…
+            Spark 正在准备今天的冒险…
           </div>
         )}
         {!loading && steps.map((step, idx) => {

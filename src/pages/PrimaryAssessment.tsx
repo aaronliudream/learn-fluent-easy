@@ -406,7 +406,7 @@ export default function PrimaryAssessment() {
             <div className="mt-6 flex flex-wrap justify-center gap-2 print:hidden">
               <button onClick={() => window.location.reload()}
                 className="inline-flex items-center gap-1 rounded-full border-2 border-amber-300 bg-white px-4 py-1.5 text-xs font-extrabold text-amber-700 hover:bg-amber-50">
-                <RefreshCw className="size-3.5" /> 再来一次
+                <RefreshCw className="size-3.5" /> 陪 Spark 再来一次
               </button>
               <Link to={`/primary/grade/${grade}`}
                 className="inline-flex items-center gap-1 rounded-full bg-amber-600 px-4 py-1.5 text-xs font-extrabold text-white hover:bg-amber-700">

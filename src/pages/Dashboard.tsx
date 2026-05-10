@@ -189,6 +189,17 @@ export default function Dashboard() {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 md:px-8 md:py-12">
       <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back="/" />
+      <Link
+        to="/learning-center"
+        className="mt-4 flex items-center justify-between rounded-2xl border-2 border-foreground bg-card p-4 hover:bg-muted/40"
+      >
+        <div>
+          <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">NEW · GPS</div>
+          <div className="mt-0.5 text-base font-extrabold">学习地图（统一掌握度）</div>
+          <div className="text-xs text-muted-foreground">按教育部新课标 2022 · 4 色诊断 · AI 建议</div>
+        </div>
+        <span className="rounded-full bg-foreground px-3 py-1.5 text-xs font-bold text-background">进入 →</span>
+      </Link>
       <TodayReviewCard />
       <Tabs value={stage} onValueChange={(v) => setStage(v as Stage)} className="mt-4">
         <TabsList className="grid w-full max-w-xs grid-cols-2">

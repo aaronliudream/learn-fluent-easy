@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, Users, ChevronDown, Sparkles } from "lucide-react";
+import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, Users, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 
-// 6 个核心能力入口（图标化，不再是全宽 banner）
-const buildSkills = (g: number) => [
-  { key: "games", emoji: "🎮", title: "游戏", to: `/primary/games/${g}`, color: "from-rose-400 to-orange-400" },
-  { key: "listening", emoji: "🎧", title: "听力", to: `/primary/games/${g}/listen`, color: "from-sky-400 to-cyan-400" },
-  { key: "reading", emoji: "📖", title: "阅读", to: `/primary/reading/grade/${g}`, color: "from-emerald-400 to-teal-400" },
-  { key: "vocab", emoji: "📚", title: "词汇", to: `/primary/vocab/${g}`, color: "from-amber-400 to-orange-400" },
-  { key: "culture", emoji: "🌍", title: "文化", to: `/primary/culture/${g}`, color: "from-indigo-400 to-purple-400" },
-  { key: "chat", emoji: "💬", title: "Spark", to: "/primary/chat", color: "from-pink-400 to-rose-400" },
-];
+// Phase 1 删除项:6 个能力按钮入口、"今日 10 词挑战"独立卡 — 都并入未来的冒险流(阶段 2)。
+// 这个页面降级为"完整学习地图"详情页,不再是默认入口。
 
 type LessonRow = {
   id: string; title_cn: string; title_en: string | null; estimated_minutes: number;
@@ -102,10 +95,8 @@ function RadarChart({ scores }: { scores: { label: string; value: number }[] }) 
 export default function PrimaryGrade() {
   const { grade } = useParams<{ grade: string }>();
   const g = Number(grade ?? "3");
-  const SKILLS = buildSkills(g);
   const [lessons, setLessons] = useState<LessonRow[]>([]);
   const [loading, setLoading] = useState(true);
-  const [weakCount, setWeakCount] = useState<number>(0);
 
   useEffect(() => {
     (async () => {
@@ -117,19 +108,6 @@ export default function PrimaryGrade() {
         .order("sort_order");
       setLessons((data ?? []) as any);
       setLoading(false);
-
-      // 统计本年级"待攻克"词汇数 = 未学 + 学习中 + 错>对
-      const { data: u } = await supabase.auth.getUser();
-      const uid = u?.user?.id;
-      const { data: vocab } = await supabase.from("primary_vocab").select("id").eq("grade", g);
-      const total = (vocab ?? []).length;
-      if (!uid || total === 0) { setWeakCount(total); return; }
-      const { data: m } = await supabase
-        .from("primary_word_mastery")
-        .select("word_id,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong")
-        .eq("user_id", uid).eq("grade", g);
-      const mastered = (m ?? []).filter((r: any) => (r.mastery_level ?? 0) >= 3).length;
-      setWeakCount(Math.max(0, total - mastered));
     })();
   }, [g]);
 
@@ -238,33 +216,8 @@ export default function PrimaryGrade() {
         </div>
       )}
 
-      {/* ⚡ 今日词汇挑战 — 智能抽词（优先未学/做错/掌握度低） */}
-      <Link
-        to={`/primary/vocab/${g}?focus=weak`}
-        className="mb-5 flex items-center gap-3 rounded-2xl border-2 border-amber-300 bg-gradient-to-r from-amber-50 to-orange-50 p-3.5 transition hover:-translate-y-0.5 hover:border-amber-400 dark:border-amber-700 dark:from-amber-950/30 dark:to-orange-950/30"
-      >
-        <div className="grid size-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-2xl text-white shadow">⚡</div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-1.5 text-sm font-extrabold">
-            今日 10 词挑战 <Sparkles className="size-3.5 text-amber-500" />
-          </div>
-          <div className="text-xs text-muted-foreground">
-            智能抽取「{weakCount > 0 ? `${weakCount} 个待攻克` : "新词"}」· 优先没学过 / 做错过的 / 掌握度低的
-          </div>
-        </div>
-        <div className="rounded-full bg-amber-500 px-3 py-1.5 text-xs font-extrabold text-white shadow">开始 →</div>
-      </Link>
-
-      {/* 🎯 6 个能力小入口 — 图标化，2 行 */}
-      <section className="mb-5 grid grid-cols-3 gap-2 sm:grid-cols-6">
-        {SKILLS.map((s) => (
-          <Link key={s.key} to={s.to}
-            className={`group flex flex-col items-center gap-1 rounded-2xl bg-gradient-to-br ${s.color} p-3.5 text-white shadow-sm transition hover:-translate-y-0.5`}>
-            <span className="text-3xl">{s.emoji}</span>
-            <span className="text-sm font-extrabold">{s.title}</span>
-          </Link>
-        ))}
-      </section>
+      {/* Phase 1: 删除"今日 10 词"独立卡 + 6 能力按钮 → 全部并入未来的冒险流。
+          这个页面现在只剩"完整学习地图"+"成就",作为详情页存在。 */}
 
       {/* 🗺 学习地图（按单元分岛） — 主要进度可视化 */}
       {!loading && units.length > 0 && (

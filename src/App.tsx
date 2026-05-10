@@ -48,6 +48,9 @@ const PrimaryLetters = lazy(() => import("./pages/PrimaryLetters.tsx"));
 const PrimaryPhonics = lazy(() => import("./pages/PrimaryPhonics.tsx"));
 const PrimaryPhonicsLearn = lazy(() => import("./pages/PrimaryPhonicsLearn.tsx"));
 const PrimaryPhonicsQuiz = lazy(() => import("./pages/PrimaryPhonicsQuiz.tsx"));
+const PrimarySightWords = lazy(() => import("./pages/PrimarySightWords.tsx"));
+const PrimarySightWordsLearn = lazy(() => import("./pages/PrimarySightWordsLearn.tsx"));
+const PrimarySightWordsQuiz = lazy(() => import("./pages/PrimarySightWordsQuiz.tsx"));
 const PrimaryVocab = lazy(() => import("./pages/PrimaryVocab.tsx"));
 const PrimaryChat = lazy(() => import("./pages/PrimaryChat.tsx"));
 const PrimaryGrade = lazy(() => import("./pages/PrimaryGrade.tsx"));
@@ -229,6 +232,10 @@ const App = () => (
           <Route path="/primary/phonics" element={<ChineseOnlyRoute><PrimaryPhonics /></ChineseOnlyRoute>} />
           <Route path="/primary/phonics/learn/:phonicsId" element={<ChineseOnlyRoute><PrimaryPhonicsLearn /></ChineseOnlyRoute>} />
           <Route path="/primary/phonics/quiz/:groupId" element={<ChineseOnlyRoute><PrimaryPhonicsQuiz /></ChineseOnlyRoute>} />
+          <Route path="/primary/sightwords" element={<ChineseOnlyRoute><PrimarySightWords /></ChineseOnlyRoute>} />
+          <Route path="/primary/sightwords/learn/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsLearn /></ChineseOnlyRoute>} />
+          <Route path="/primary/sightwords/quiz/word/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsQuiz /></ChineseOnlyRoute>} />
+          <Route path="/primary/sightwords/quiz/:groupId" element={<ChineseOnlyRoute><PrimarySightWordsQuiz /></ChineseOnlyRoute>} />
           <Route path="/primary/vocab" element={<ChineseOnlyRoute><PrimaryVocab /></ChineseOnlyRoute>} />
          <Route path="/primary/vocab/:grade" element={<ChineseOnlyRoute><PrimaryVocab /></ChineseOnlyRoute>} />
           <Route path="/primary/chat" element={<ChineseOnlyRoute><PrimaryChat /></ChineseOnlyRoute>} />

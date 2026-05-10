@@ -75,7 +75,7 @@ function StageView({ stage }: { stage: Stage }) {
     <div className="space-y-5">
       {/* Top overview */}
       <section className="flex flex-col items-center gap-4 rounded-3xl border border-border bg-card p-5 md:flex-row md:gap-6">
-        <MasteryRing percent={ov.percent} size={140} thickness={14} label={stage === "junior" ? "初中总掌握" : "高中总掌握"} />
+        <MasteryRing percent={ov.percent} size={140} thickness={14} label={stage === "primary" ? "小学总掌握" : stage === "junior" ? "初中总掌握" : "高中总掌握"} />
         <div className="flex-1 grid w-full grid-cols-2 gap-3 md:grid-cols-4">
           <Stat n={ov.mastered} label="🌳 已掌握" tone="text-emerald-600 dark:text-emerald-400" />
           <Stat n={ov.learned}  label="🌿 学过未掌握" tone="text-blue-600 dark:text-blue-400" />
@@ -87,7 +87,7 @@ function StageView({ stage }: { stage: Stage }) {
           label="📤 分享我的进度"
           item={{
             type: "score",
-            module: stage === "junior" ? "初中英语" : "高考英语",
+            module: stage === "primary" ? "小学英语" : stage === "junior" ? "初中英语" : "高考英语",
             score: ov.percent,
             url: typeof window !== "undefined" ? window.location.origin : "https://bigmoonenglish.com",
           }}
@@ -185,7 +185,7 @@ function Stat({ n, label, tone }: { n: number; label: string; tone: string }) {
 }
 
 export default function Dashboard() {
-  const [stage, setStage] = useState<Stage>("gaokao");
+  const [stage, setStage] = useState<Stage>("primary");
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 md:px-8 md:py-12">
       <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back="/" />
@@ -202,10 +202,12 @@ export default function Dashboard() {
       </Link>
       <TodayReviewCard />
       <Tabs value={stage} onValueChange={(v) => setStage(v as Stage)} className="mt-4">
-        <TabsList className="grid w-full max-w-xs grid-cols-2">
-          <TabsTrigger value="junior">初中</TabsTrigger>
-          <TabsTrigger value="gaokao">高中</TabsTrigger>
+        <TabsList className="grid w-full max-w-md grid-cols-3">
+          <TabsTrigger value="primary">🎒 小学</TabsTrigger>
+          <TabsTrigger value="junior">📓 初中</TabsTrigger>
+          <TabsTrigger value="gaokao">🎓 高中</TabsTrigger>
         </TabsList>
+        <TabsContent value="primary" className="mt-5"><StageView stage="primary" /></TabsContent>
         <TabsContent value="junior" className="mt-5"><StageView stage="junior" /></TabsContent>
         <TabsContent value="gaokao" className="mt-5"><StageView stage="gaokao" /></TabsContent>
       </Tabs>

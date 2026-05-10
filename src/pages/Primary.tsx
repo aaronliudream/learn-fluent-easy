@@ -21,6 +21,17 @@ type Grade = {
 
 type Pet = { name: string; level: number; xp: number; bond: number; stars: number; hunger?: number; mood?: number; stage?: number };
 
+// Spark = fire_fox 物种。按 level 派生进化阶段表情,
+// 让 Lv.1 看到的不是成年狐,而是一颗蛋。
+// 阈值:Lv.1 = 蛋, Lv.2-3 = 幼年, Lv.4-6 = 成年, Lv.7+ = 传说。
+// 数据库的 pet_state.stage 目前不会自动推进,所以以 level 为唯一信号。
+function sparkFace(level: number): string {
+  if (level <= 1) return "🥚";
+  if (level <= 3) return "🐣";
+  if (level <= 6) return "🦊";
+  return "🔥";
+}
+
 const FALLBACK_GRADES: Grade[] = [
   { id: 1, name_cn: "一年级", name_en: "Grade 1", emoji: "🐣", gradient: "from-amber-300 via-yellow-300 to-orange-300" },
   { id: 2, name_cn: "二年级", name_en: "Grade 2", emoji: "🐥", gradient: "from-orange-300 via-pink-300 to-rose-300" },

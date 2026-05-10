@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, Users, ChevronDown, Sparkles } from "lucide-react";
+import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, Users, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 
-// 6 个核心能力入口（图标化，不再是全宽 banner）
-const buildSkills = (g: number) => [
-  { key: "games", emoji: "🎮", title: "游戏", to: `/primary/games/${g}`, color: "from-rose-400 to-orange-400" },
-  { key: "listening", emoji: "🎧", title: "听力", to: `/primary/games/${g}/listen`, color: "from-sky-400 to-cyan-400" },
-  { key: "reading", emoji: "📖", title: "阅读", to: `/primary/reading/grade/${g}`, color: "from-emerald-400 to-teal-400" },
-  { key: "vocab", emoji: "📚", title: "词汇", to: `/primary/vocab/${g}`, color: "from-amber-400 to-orange-400" },
-  { key: "culture", emoji: "🌍", title: "文化", to: `/primary/culture/${g}`, color: "from-indigo-400 to-purple-400" },
-  { key: "chat", emoji: "💬", title: "Spark", to: "/primary/chat", color: "from-pink-400 to-rose-400" },
-];
+// Phase 1 删除项:6 个能力按钮入口、"今日 10 词挑战"独立卡 — 都并入未来的冒险流(阶段 2)。
+// 这个页面降级为"完整学习地图"详情页,不再是默认入口。
 
 type LessonRow = {
   id: string; title_cn: string; title_en: string | null; estimated_minutes: number;
@@ -102,10 +95,9 @@ function RadarChart({ scores }: { scores: { label: string; value: number }[] }) 
 export default function PrimaryGrade() {
   const { grade } = useParams<{ grade: string }>();
   const g = Number(grade ?? "3");
-  const SKILLS = buildSkills(g);
   const [lessons, setLessons] = useState<LessonRow[]>([]);
   const [loading, setLoading] = useState(true);
-  const [weakCount, setWeakCount] = useState<number>(0);
+  const [, setWeakCount] = useState<number>(0);
 
   useEffect(() => {
     (async () => {

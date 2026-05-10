@@ -1182,6 +1182,17 @@ const Lesson = () => {
                     <input
                       value={v}
                       onChange={(e) => setListenInputs({ ...listenInputs, [i]: e.target.value })}
+                      onBlur={(e) => {
+                        const val = e.target.value.trim();
+                        if (!val) return;
+                        recordLessonAttempt(
+                          "listening",
+                          i,
+                          val.toLowerCase() === b.answer.toLowerCase(),
+                          `${b.before ?? ""} ___ ${b.after ?? ""}`.trim(),
+                          { user_answer: val, correct_answer: b.answer },
+                        );
+                      }}
                       className={`min-w-28 rounded-md border-b-2 bg-transparent px-2 py-1 text-center font-bold outline-none ${
                         v && showFeedback
                           ? correct

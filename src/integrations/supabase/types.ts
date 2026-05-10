@@ -5163,6 +5163,57 @@ export type Database = {
           },
         ]
       }
+      primary_sight_word_mastery: {
+        Row: {
+          created_at: string
+          due_at: string
+          ease: number
+          id: string
+          interval_days: number
+          last_seen_at: string | null
+          mastery_level: number
+          recognize_correct: number
+          recognize_wrong: number
+          spell_correct: number
+          spell_wrong: number
+          updated_at: string
+          user_id: string
+          word_id: string
+        }
+        Insert: {
+          created_at?: string
+          due_at?: string
+          ease?: number
+          id?: string
+          interval_days?: number
+          last_seen_at?: string | null
+          mastery_level?: number
+          recognize_correct?: number
+          recognize_wrong?: number
+          spell_correct?: number
+          spell_wrong?: number
+          updated_at?: string
+          user_id: string
+          word_id: string
+        }
+        Update: {
+          created_at?: string
+          due_at?: string
+          ease?: number
+          id?: string
+          interval_days?: number
+          last_seen_at?: string | null
+          mastery_level?: number
+          recognize_correct?: number
+          recognize_wrong?: number
+          spell_correct?: number
+          spell_wrong?: number
+          updated_at?: string
+          user_id?: string
+          word_id?: string
+        }
+        Relationships: []
+      }
       primary_speaking_attempts: {
         Row: {
           audio_duration_ms: number | null

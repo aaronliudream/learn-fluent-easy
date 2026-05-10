@@ -81,12 +81,14 @@ export default function LearningCenter() {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) { if (!cancelled) { setSignedIn(false); setLoading(false); } return; }
 
+      const uid = user.id;
       const [ovR, spR, mpR, scR, snR] = await Promise.all([
-        supabase.from("mastery_overall").select("*").maybeSingle(),
-        supabase.from("mastery_stage_proportion").select("*"),
-        supabase.from("mastery_module_proportion").select("*"),
-        supabase.from("mastery_with_proportions").select("*"),
+        supabase.from("mastery_overall").select("*").eq("user_id", uid).maybeSingle(),
+        supabase.from("mastery_stage_proportion").select("*").eq("user_id", uid),
+        supabase.from("mastery_module_proportion").select("*").eq("user_id", uid),
+        supabase.from("mastery_with_proportions").select("*").eq("user_id", uid),
         supabase.from("mastery_snapshots").select("snap_date,score_pct,stage,grade,module")
+          .eq("user_id", uid)
           .is("stage", null).is("grade", null).is("module", null)
           .order("snap_date", { ascending: false }).limit(2000),
       ]);

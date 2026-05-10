@@ -208,7 +208,7 @@ export default function PrimaryPhonics() {
             icon={<Play className="size-5 fill-white" />}
             label="继续学新音"
             title={`学新音 ${nextNewItem.letter}`}
-            sub={`你这组学了 ${currentGroup.items.filter((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 1).length}/${currentGroup.items.length}`}
+            sub={`你这组掌握了 ${currentGroup.items.filter((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2).length}/${currentGroup.items.length}`}
             onClick={() => nav(`/primary/phonics/learn/${nextNewItem.id}`)}
           />
         )}

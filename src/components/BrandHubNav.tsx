@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { BrandLockup } from "@/components/brand/BrandLogo";
+import UserAvatarMenu from "@/components/UserAvatarMenu";
 
 /**
  * Top horizontal nav for the母品牌主页 + 子品牌页面.
@@ -40,6 +41,7 @@ export default function BrandHubNav() {
           </li>
         ))}
       </ul>
+      <UserAvatarMenu variant="inline" />
     </nav>
   );
 }

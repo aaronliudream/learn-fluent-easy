@@ -21,7 +21,13 @@ import {
  * Hidden on /auth to keep the form clean.
  */
 
-const HIDE_ON = [/^\/auth/, /^\/talk/, /^\/ielts-speaking\/session/, /^\/placement/];
+// Routes whose own header already renders an inline <UserAvatarMenu variant="inline" />,
+// so the global floating one would overlap.
+const HIDE_ON = [
+  /^\/$/,                      // home — LandingPage / BrandHubNav render it inline
+  /^\/kids/, /^\/junior/, /^\/senior/, /^\/about/, /^\/slang/, /^\/cet/, // brand-hub pages
+  /^\/auth/, /^\/talk/, /^\/ielts-speaking\/session/, /^\/placement/,
+];
 
 interface ProfileLite {
   display_name: string | null;
@@ -38,7 +44,12 @@ function initialsFor(name: string): string {
   return first.toUpperCase();
 }
 
-export default function UserAvatarMenu() {
+interface UserAvatarMenuProps {
+  /** "fixed" = floating top-right (default). "inline" = sit inside an existing header. */
+  variant?: "fixed" | "inline";
+}
+
+export default function UserAvatarMenu({ variant = "fixed" }: UserAvatarMenuProps) {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [userId, setUserId] = useState<string | null>(null);
@@ -77,9 +88,14 @@ export default function UserAvatarMenu() {
       .then(({ data }) => setProfile((data as ProfileLite | null) ?? null));
   }, [userId]);
 
-  if (HIDE_ON.some((r) => r.test(pathname))) return null;
+  // Inline variant always renders; fixed variant is suppressed on routes
+  // whose own header already provides an inline avatar.
+  if (variant === "fixed" && HIDE_ON.some((r) => r.test(pathname))) return null;
 
-  const containerCls = "fixed right-3 top-3 z-50 md:right-4 md:top-4";
+  const containerCls =
+    variant === "fixed"
+      ? "fixed right-3 top-3 z-50 md:right-4 md:top-4"
+      : "relative";
 
   // Logged out — show a clear "Sign in" pill
   if (!userId) {

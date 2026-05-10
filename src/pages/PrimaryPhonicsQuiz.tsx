@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Check, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
-import { speak } from "@/lib/speak";
+import { speakKid as speak } from "@/lib/speak";
 import {
   PHONICS_GROUPS,
   PHONICS_ITEMS,

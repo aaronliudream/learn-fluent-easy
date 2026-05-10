@@ -108,21 +108,28 @@ async function sha256Hex(s: string): Promise<string> {
 // Mirror Edge Function voice/speed normalization so the hash matches.
 const OPENAI_VOICES = new Set(["alloy", "shimmer", "nova", "echo", "onyx", "fable"]);
 function normalizeForHash(voiceId: string, speed: number, accent: string | undefined) {
-  let voice = OPENAI_VOICES.has(voiceId) ? voiceId : "alloy";
+  const isEl = typeof voiceId === "string" && voiceId.startsWith("el:");
+  let voice: string;
   const accentUpper = (accent || "").toUpperCase();
-  if (accentUpper === "UK") voice = "fable";
-  else if (accentUpper === "US") voice = "alloy";
-  const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
+  if (isEl) {
+    voice = voiceId; // ElevenLabs: keep as-is, accent doesn't apply
+  } else {
+    voice = OPENAI_VOICES.has(voiceId) ? voiceId : "alloy";
+    if (accentUpper === "UK") voice = "fable";
+    else if (accentUpper === "US") voice = "alloy";
+  }
+  // Allow slower speeds for young learners (down to 0.6).
+  const safeSpeed = Math.min(1.2, Math.max(0.6, Number(speed) || 0.95));
   return { voice, safeSpeed, accentUpper };
 }
 
 async function predictCdnUrl(text: string, voiceId: string, speed: number, accent?: string): Promise<string> {
   const { voice, safeSpeed, accentUpper } = normalizeForHash(voiceId, speed, accent);
-  // Server now prefers Aliyun when configured, so probe the same cache key
-  // first. This prevents repeat phrases in China from missing the CDN and
-  // unnecessarily hitting the Edge Function again.
   const safeText = String(text).slice(0, 4000);
-  const keyInput = `aliyun|${voice}|${safeSpeed}|${accentUpper}|${safeText}`;
+  // Hash key MUST mirror the edge function's `keyInput` exactly so the CDN
+  // probe finds previously-synthesized audio.
+  const provider = voice.startsWith("el:") ? "elevenlabs" : "openai";
+  const keyInput = `${provider}|${voice}|${safeSpeed}|${accentUpper}|${safeText}`;
   const hash = await sha256Hex(keyInput);
   const path = `${hash.slice(0, 2)}/${hash}.mp3`;
   return `${SUPABASE_URL}/storage/v1/object/public/${TTS_BUCKET}/${path}`;
@@ -471,3 +478,76 @@ export const speakSequence = async (
 };
 
 // (cancelSequence defined near top.)
+
+// ---------- Child-friendly TTS (Phonics, K-G3) ----------
+// Pulls the kid's grade from localStorage (set by /primary/grade picker)
+// and maps it to a TTS speed appropriate for non-native learners:
+//   K / G1  → 0.70 (slow, every phoneme audible)
+//   G2 / G3 → 0.85 (still gentle, closer to natural)
+//   G4+     → 1.00 (natural)
+// Voice is fixed to ElevenLabs Lily — a warm, soft female voice that sounds
+// like a kindergarten teacher rather than a news anchor.
+export const KID_VOICE_ID = "el:lily";
+
+const readGradeFromLS = (): number => {
+  try {
+    const v = Number(localStorage.getItem("primary:lastGrade") || "1");
+    return Number.isFinite(v) && v > 0 ? v : 1;
+  } catch {
+    return 1;
+  }
+};
+
+export const getKidSpeed = (grade?: number): number => {
+  const g = grade ?? readGradeFromLS();
+  if (g <= 1) return 0.7;
+  if (g <= 3) return 0.85;
+  return 1.0;
+};
+
+/**
+ * Speak with a child-friendly voice (ElevenLabs Lily) at a grade-appropriate
+ * slower speed. Use this in Phonics / Letters / early-reader UI instead of
+ * the generic `speak()` so young learners get a warm voice they can follow.
+ */
+export const speakKid = (
+  text: string,
+  opts?: { grade?: number; accent?: "UK" | "US" | "BOTH" },
+) => speak(text, {
+  voiceId: KID_VOICE_ID,
+  speed: getKidSpeed(opts?.grade),
+  accent: opts?.accent,
+});
+
+/** Batch prefetch using the kid voice + grade-based speed. */
+export const prefetchTTSBatchKid = (
+  texts: string[],
+  opts?: { grade?: number; accent?: "UK" | "US" | "BOTH" },
+) => {
+  const speed = getKidSpeed(opts?.grade);
+  const accent = opts?.accent;
+  const seen = new Set<string>();
+  for (const t of texts) {
+    const trimmed = (t || "").trim();
+    if (!trimmed || seen.has(trimmed)) continue;
+    seen.add(trimmed);
+    const cacheKey = `${KID_VOICE_ID}|${speed}|${accent || ''}|${trimmed}`;
+    if (audioCache.has(cacheKey)) continue;
+    const persisted = loadPersist().get(cacheKey);
+    if (persisted) {
+      audioCache.set(cacheKey, persisted);
+      continue;
+    }
+    void (async () => {
+      try {
+        const guess = await predictCdnUrl(trimmed, KID_VOICE_ID, speed, accent);
+        if (await probeCdn(guess)) {
+          audioCache.set(cacheKey, guess);
+          savePersist(cacheKey, guess);
+          return;
+        }
+      } catch { /* fall through */ }
+      void fetchTTS(trimmed, KID_VOICE_ID, speed, accent);
+    })();
+  }
+};

@@ -17,6 +17,15 @@ const json = (body: Record<string, unknown>, status = 200) =>
 
 const OPENAI_VOICES = new Set(["alloy", "shimmer", "nova", "echo", "onyx", "fable"]);
 
+// ElevenLabs voices reserved for child-friendly narration. Front-end uses
+// the `el:<key>` namespace so it's obvious in logs and never collides with
+// OpenAI voice ids.
+const ELEVENLABS_VOICE_MAP: Record<string, string> = {
+  "el:lily":    "pFZP5JQG7iQjIQuC4Bku", // warm, soft female — best for K-G1
+  "el:matilda": "XrExE9yKIg1WjnnlVkGX", // gentle storyteller female
+  "el:sarah":   "EXAVITQu4vr4xnSDxMaL", // friendly female
+};
+
 // CosyVoice-v2 voice catalogue (all suffixed with _v2). Map our six OpenAI-style
 // front-end voice handles to the closest CosyVoice-v2 timbre so cached audio is
 // stable per voice and the assistant sounds like the same "person" across providers.
@@ -157,6 +166,36 @@ async function synthesizeWithOpenAI(text: string, voice: string, speed: number, 
   return await response.arrayBuffer();
 }
 
+async function synthesizeWithElevenLabs(text: string, voiceKey: string, speed: number, apiKey: string): Promise<ArrayBuffer> {
+  const voiceId = ELEVENLABS_VOICE_MAP[voiceKey] || ELEVENLABS_VOICE_MAP["el:lily"];
+  // ElevenLabs accepts speed 0.7-1.2 in voice_settings.
+  const elSpeed = Math.min(1.2, Math.max(0.7, speed));
+  const url = `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}?output_format=mp3_44100_128`;
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "xi-api-key": apiKey,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      text,
+      model_id: "eleven_multilingual_v2",
+      voice_settings: {
+        stability: 0.55,
+        similarity_boost: 0.8,
+        style: 0.35,
+        use_speaker_boost: true,
+        speed: elSpeed,
+      },
+    }),
+  });
+  if (!response.ok) {
+    const err = await response.text();
+    throw new Error(`ElevenLabs ${response.status}: ${err}`);
+  }
+  return await response.arrayBuffer();
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
@@ -165,11 +204,17 @@ serve(async (req) => {
     if (!text) return json({ error: "text is required" }, 400);
 
     const requestedVoice = typeof voiceId === "string" ? voiceId : "alloy";
-    let selectedVoice = OPENAI_VOICES.has(requestedVoice) ? requestedVoice : "alloy";
+    const isElevenLabs = requestedVoice.startsWith("el:");
+    let selectedVoice = isElevenLabs
+      ? (ELEVENLABS_VOICE_MAP[requestedVoice] ? requestedVoice : "el:lily")
+      : (OPENAI_VOICES.has(requestedVoice) ? requestedVoice : "alloy");
     const accentUpper = typeof accent === "string" ? accent.toUpperCase() : "";
-    if (accentUpper === "UK") selectedVoice = "fable";
-    else if (accentUpper === "US") selectedVoice = "alloy";
-    const safeSpeed = Math.min(1.2, Math.max(0.75, Number(speed) || 0.95));
+    if (!isElevenLabs) {
+      if (accentUpper === "UK") selectedVoice = "fable";
+      else if (accentUpper === "US") selectedVoice = "alloy";
+    }
+    // Allow slower speeds for young learners (down to 0.6).
+    const safeSpeed = Math.min(1.2, Math.max(0.6, Number(speed) || 0.95));
     const safeText = String(text).slice(0, 4000);
     const isShort = safeText.length <= 40;
     // Routing: OpenAI for ALL users (including mainland China). Aliyun CosyVoice
@@ -178,7 +223,7 @@ serve(async (req) => {
     // (voice, speed, text) is only synthesized ONCE; subsequent plays
     // for ANY user worldwide are served from CDN (<200ms), so China
     // users only pay the OpenAI round-trip on the very first play.
-    const provider: "aliyun" | "openai" = "openai";
+    const provider: "aliyun" | "openai" | "elevenlabs" = isElevenLabs ? "elevenlabs" : "openai";
 
     // Content-addressed cache key — same text+voice+speed always lands on the same file.
     const keyInput = `${provider}|${selectedVoice}|${safeSpeed}|${accentUpper}|${safeText}`;
@@ -204,7 +249,17 @@ serve(async (req) => {
     let bytes: ArrayBuffer | null = null;
     let usedProvider = provider;
 
-    if (provider === "aliyun") {
+    if (provider === "elevenlabs") {
+      const k = Deno.env.get("ELEVENLABS_API_KEY");
+      if (k) {
+        try {
+          bytes = await synthesizeWithElevenLabs(safeText, selectedVoice, safeSpeed, k);
+          usedProvider = "elevenlabs";
+        } catch (err) {
+          console.error("ElevenLabs failed, falling back to OpenAI:", err);
+        }
+      }
+    } else if (provider === "aliyun") {
       const k = Deno.env.get("DASHSCOPE_API_KEY");
       if (k) {
         try {
@@ -219,7 +274,9 @@ serve(async (req) => {
       const k = Deno.env.get("OPENAI_API_KEY");
       if (!k) return json({ error: "TTS provider is not configured" }, 503);
       try {
-        bytes = await synthesizeWithOpenAI(safeText, selectedVoice, safeSpeed, k, isShort);
+        // Fallback voice if we asked for ElevenLabs but it failed: pick a warm female.
+        const fallbackVoice = isElevenLabs ? "shimmer" : selectedVoice;
+        bytes = await synthesizeWithOpenAI(safeText, fallbackVoice, safeSpeed, k, isShort);
         usedProvider = "openai";
       } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);

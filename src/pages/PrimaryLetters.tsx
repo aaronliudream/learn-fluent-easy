@@ -3,7 +3,7 @@ import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Volume2, Sparkles, Music } from "lucide-react";
-import { speak, prefetchTTSBatch } from "@/lib/speak";
+import { speakKid as speak, prefetchTTSBatchKid as prefetchTTSBatch } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 import {
   PHONICS_ITEMS,

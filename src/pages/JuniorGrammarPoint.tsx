@@ -427,6 +427,33 @@ export default function JuniorGrammarPoint() {
               >
                 <RotateCw className="size-4" /> 再做一遍
               </button>
+              {/* 挑战模式入口 */}
+              {groupStreak.challenge_unlocked && !isChallenge && (
+                <button
+                  onClick={() => {
+                    const next = new URLSearchParams(searchParams);
+                    next.set("challenge", "1");
+                    setSearchParams(next);
+                    resetAll();
+                  }}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 px-5 py-2 text-sm font-extrabold text-white shadow"
+                >
+                  🏆 挑战模式（{CHALLENGE_QUESTIONS_JUNIOR} 题）
+                </button>
+              )}
+              {isChallenge && (
+                <button
+                  onClick={() => {
+                    const next = new URLSearchParams(searchParams);
+                    next.delete("challenge");
+                    setSearchParams(next);
+                    resetAll();
+                  }}
+                  className="inline-flex items-center gap-1.5 rounded-full border-2 border-violet-300 bg-card px-5 py-2 text-sm font-extrabold text-violet-700 shadow-sm hover:bg-violet-50 dark:hover:bg-violet-950/30"
+                >
+                  ↩️ 退出挑战模式
+                </button>
+              )}
               <Link
                 to="/junior/grammar"
                 className="inline-flex items-center gap-1.5 rounded-full border-2 border-indigo-300 bg-card px-5 py-2 text-sm font-extrabold text-indigo-600 shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-950/30"
@@ -440,6 +467,20 @@ export default function JuniorGrammarPoint() {
                 🏠 初中首页
               </Link>
             </div>
+
+            {/* 连胜进度提示 */}
+            {!groupStreak.challenge_unlocked && pct >= 70 && (
+              <p className="mt-4 text-xs font-bold text-violet-600 dark:text-violet-300">
+                🔥 连续完成 {groupStreak.consecutive_count}/{CHALLENGE_THRESHOLD} 组
+                {groupStreak.consecutive_count < CHALLENGE_THRESHOLD &&
+                  ` · 再 ${CHALLENGE_THRESHOLD - groupStreak.consecutive_count} 组解锁挑战模式 🏆`}
+              </p>
+            )}
+            {!groupStreak.challenge_unlocked && pct < 70 && groupStreak.consecutive_count === 0 && (
+              <p className="mt-4 text-xs text-muted-foreground">
+                💡 单组正确率 ≥70% 才计入连胜，加油！
+              </p>
+            )}
           </section>
         )}
       </div>

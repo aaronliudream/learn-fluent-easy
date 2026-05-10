@@ -404,3 +404,149 @@ function WeakPlan({ grade, words, masteryByWord }: { grade: number; words: Word[
     </section>
   );
 }
+
+// ===========================================================
+// 🆕 五项技能阵列 — 听 / 说 / 读 / 看 / 写（对齐新课标二级）
+// 数据来源：现有 stats（quiz/listen/spell/match accuracy） +
+// 暂用占位（说/看/写 模块尚未上线 → 显示"待开放"）。
+// 这块的目的：让家长一眼看到"5 个能力维度的当前形状"，
+// 而不是只看到"词汇掌握率"这一个轴。
+// ===========================================================
+function FiveSkillArray({
+  stats, grade,
+}: { stats: any; grade: number }) {
+  const items = [
+    { key: "listen", label: "听",  emoji: "🎧", color: "from-sky-400 to-cyan-500",       acc: stats.listen.acc, attempts: stats.listen.attempts, route: `/primary/games/${grade}/listen`, ready: true },
+    { key: "speak",  label: "说",  emoji: "🎤", color: "from-pink-400 to-rose-500",      acc: 0, attempts: 0, route: `/primary/chat`, ready: false, hint: "Spark 对话练习中" },
+    { key: "read",   label: "读",  emoji: "📖", color: "from-emerald-400 to-teal-500",   acc: stats.quiz.acc, attempts: stats.quiz.attempts, route: `/primary/reading/grade/${grade}`, ready: true },
+    { key: "view",   label: "看",  emoji: "🌍", color: "from-indigo-400 to-purple-500",  acc: 0, attempts: 0, route: `/primary/culture/${grade}`, ready: false, hint: "文化卡片" },
+    { key: "write",  label: "写",  emoji: "✏️", color: "from-amber-400 to-orange-500",   acc: stats.spell.acc, attempts: stats.spell.attempts, route: `/primary/games/${grade}/spell`, ready: true },
+  ];
+  return (
+    <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
+      <div className="mb-3 flex items-center gap-2 text-sm font-extrabold">
+        <Sparkles className="size-4 text-primary" /> 五项技能阵列
+        <span className="ml-auto text-[11px] font-normal text-muted-foreground">对齐新课标二级</span>
+      </div>
+      <div className="grid grid-cols-5 gap-2">
+        {items.map((it) => (
+          <Link
+            key={it.key}
+            to={it.route}
+            className={cn(
+              "flex flex-col items-center gap-1 rounded-2xl p-2.5 text-center transition hover:-translate-y-0.5",
+              it.ready ? `bg-gradient-to-br ${it.color} text-white shadow` : "bg-muted text-muted-foreground"
+            )}
+          >
+            <span className="text-2xl leading-none">{it.emoji}</span>
+            <span className="text-[11px] font-extrabold">{it.label}</span>
+            {it.ready ? (
+              <span className="text-[10px] font-bold opacity-95">
+                {it.attempts > 0 ? `${it.acc}%` : "未练"}
+              </span>
+            ) : (
+              <span className="text-[9px]">待开放</span>
+            )}
+          </Link>
+        ))}
+      </div>
+      <p className="mt-2 text-[11px] text-muted-foreground">
+        说 / 看 模块（口语对话 + 文化看图）将在后续版本补全；目前以词汇 4 项作为代理指标。
+      </p>
+    </section>
+  );
+}
+
+// ===========================================================
+// 🆕 Spark 状态卡 — 让家长看到孩子陪伴对象的当前等级与亲密度
+// ===========================================================
+function SparkStatusCard({ pet }: { pet: { level: number; bond: number; xp: number } | null }) {
+  if (!pet) {
+    return (
+      <section className="mb-4 rounded-3xl border-2 border-dashed border-border bg-card p-4 text-center text-xs text-muted-foreground">
+        Spark 还没开始陪伴。让孩子打开"小学 → 跟 Spark 聊"，开启第一次互动 ✨
+      </section>
+    );
+  }
+  const bondPct = Math.min(100, Math.round((pet.bond / 100) * 100));
+  return (
+    <section className="mb-4 rounded-3xl border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-rose-50 p-4 shadow-tile dark:border-pink-900/40 dark:from-pink-950/30 dark:to-rose-950/30">
+      <div className="flex items-center gap-3">
+        <div className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-pink-400 to-rose-500 text-3xl shadow-md">
+          🦊
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-baseline gap-2">
+            <span className="text-base font-extrabold">Spark · Lv.{pet.level}</span>
+            <span className="text-[11px] text-muted-foreground">XP {pet.xp}</span>
+          </div>
+          <div className="mt-1 flex items-center gap-1 text-[11px] text-rose-700">
+            <Heart className="size-3.5 fill-rose-500 stroke-rose-600" />
+            亲密度 {pet.bond}/100
+          </div>
+          <div className="mt-1 h-2 overflow-hidden rounded-full bg-white/60">
+            <div className="h-full rounded-full bg-gradient-to-r from-pink-400 to-rose-500 transition-all" style={{ width: `${bondPct}%` }} />
+          </div>
+        </div>
+      </div>
+      <p className="mt-2 text-[11px] text-rose-700/80">
+        孩子每完成一项学习，Spark 都会涨亲密度。满 100 → Spark 升级一阶。
+      </p>
+    </section>
+  );
+}
+
+// ===========================================================
+// 🆕 本周学习计划 — 7 天打卡格子
+// ===========================================================
+function WeeklyPlanCard({ scores }: { scores: ScoreRow[] }) {
+  // 取本周（周一 → 周日）每天是否练习过
+  const today = new Date();
+  const day = (today.getDay() + 6) % 7; // 周一 = 0
+  const monday = new Date(today); monday.setDate(today.getDate() - day);
+  const days = Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(monday); d.setDate(monday.getDate() + i);
+    return d;
+  });
+  const doneSet = new Set(
+    scores.map(s => new Date(s.created_at).toISOString().slice(0, 10))
+  );
+  const labels = ["一","二","三","四","五","六","日"];
+  const doneCount = days.filter(d => doneSet.has(d.toISOString().slice(0, 10))).length;
+  return (
+    <section className="mb-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
+      <div className="mb-3 flex items-center gap-2 text-sm font-extrabold">
+        <Calendar className="size-4 text-emerald-500" /> 本周学习计划
+        <span className="ml-auto text-[11px] font-normal text-muted-foreground">{doneCount}/7 天</span>
+      </div>
+      <div className="grid grid-cols-7 gap-1.5">
+        {days.map((d, i) => {
+          const key = d.toISOString().slice(0, 10);
+          const done = doneSet.has(key);
+          const isToday = d.toDateString() === today.toDateString();
+          const isFuture = d > today && !isToday;
+          return (
+            <div
+              key={key}
+              className={cn(
+                "flex flex-col items-center gap-1 rounded-xl border-2 py-2 text-center transition",
+                done ? "border-emerald-300 bg-emerald-50 dark:border-emerald-700 dark:bg-emerald-950/30" :
+                isToday ? "border-amber-300 bg-amber-50 dark:border-amber-700 dark:bg-amber-950/30" :
+                isFuture ? "border-dashed border-border bg-muted/20 opacity-50" :
+                "border-border bg-muted/30"
+              )}
+            >
+              <span className="text-[10px] font-bold text-muted-foreground">周{labels[i]}</span>
+              <span className="text-lg leading-none">
+                {done ? "✅" : isToday ? "⭐" : isFuture ? "·" : "—"}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+      <p className="mt-2 text-[11px] text-muted-foreground">
+        每天完成任意一项学习即算打卡。建议每周打 ≥ 5 天。
+      </p>
+    </section>
+  );
+}

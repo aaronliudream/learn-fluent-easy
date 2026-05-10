@@ -1413,6 +1413,16 @@ function QuizPhase({
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
     const latencyMs = Date.now() - questionShownAtRef.current;
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
+    recordUnifiedAttempt({
+      stage: "senior",
+      grade: 10,
+      module: "vocab",
+      item_type: "word",
+      item_id: item.vocab.id,
+      item_label: item.vocab.word,
+      is_correct: isCorrect,
+      context: { kind: item.kind, latency_ms: latencyMs },
+    }).catch(() => {});
     const update = await bumpVocabMastery({
       vocabId: item.vocab.id,
       kind: item.kind,
@@ -2518,6 +2528,16 @@ function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () =
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), total: s.total + 1 }));
     const latencyMs = Date.now() - srsQuestionShownAtRef.current;
     await recordAttempt({ questionType: "vocab", questionId: item.vocab.id, isCorrect });
+    recordUnifiedAttempt({
+      stage: "senior",
+      grade: 10,
+      module: "vocab",
+      item_type: "word",
+      item_id: item.vocab.id,
+      item_label: item.vocab.word,
+      is_correct: isCorrect,
+      context: { kind: item.kind, mode: "srs", latency_ms: latencyMs },
+    }).catch(() => {});
     const update = await bumpVocabMastery({
       vocabId: item.vocab.id,
       kind: item.kind,

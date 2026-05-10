@@ -300,6 +300,11 @@ export default function PrimaryAssessment() {
       await supabase.from("primary_monthly_checkups").upsert(row, { onConflict: "user_id,grade,month_key" });
       setResultRow({ ...row, ...medalFor(overall) });
     }
+    // v2 Spark bond: assessment completion (uncapped, rare event).
+    try {
+      const { bondOnAssessmentComplete } = await import("@/lib/petGrowth");
+      bondOnAssessmentComplete();
+    } catch { /* noop */ }
     setPhase("result");
   }
 

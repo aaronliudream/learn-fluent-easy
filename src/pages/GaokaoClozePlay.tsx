@@ -8,7 +8,6 @@ import { toast } from "sonner";
 import { awardCoins, awardForBlock, petReact } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { recordMastery } from "@/lib/masteryProgress";
-import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
@@ -148,24 +147,8 @@ export default function GaokaoClozePlay() {
         module: "gaokao_cloze",
         itemId: id,
         pct: Math.round((r.score_pct ?? 0) * 100),
+        itemLabel: passage?.title ?? `Cloze ${passage?.passage_no ?? ""}`,
       });
-    }
-    // Per-blank unified mastery (cloze 模块按教育部课标计入高中掌握度)
-    for (const b of blanks) {
-      const userAns = answers[b.blank_no];
-      const ok = userAns === b.correct_answer;
-      recordUnifiedAttempt({
-        stage: "senior",
-        grade: 10,
-        module: "cloze",
-        item_type: "cloze_blank",
-        item_id: b.id,
-        item_label: passage?.title ?? `Cloze ${passage?.passage_no ?? ""}`,
-        is_correct: ok,
-        user_answer: userAns,
-        correct_answer: b.correct_answer,
-        context: { passage_id: id, blank_no: b.blank_no, skill: b.skill_tag, explanation: b.general_explanation },
-      }).catch(() => {});
     }
     // 宠物挂钩：每对一空 1 星币 + 满分 +20 + 5题块 +5
     if (r?.correct_count > 0) {

@@ -7,6 +7,7 @@ import { speak } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
+import { recordUnifiedAttempt } from "@/lib/unifiedMastery";
 
 type StepType = "input" | "understand" | "practice" | "output" | "test";
 type Step = { type: StepType; title?: string; intro?: string; kind?: string; passScore?: number;
@@ -64,6 +65,19 @@ export default function PrimaryLesson() {
       quiz_correct: testScore?.c ?? 0, quiz_total: testScore?.t ?? 0,
       study_minutes: Math.max(1, Math.round((Date.now() - t0) / 60000)),
     });
+    // 🆕 v7：写 unified_mastery（小学课程主要服务自然拼读 + 词汇启蒙）
+    recordUnifiedAttempt({
+      stage: "primary",
+      grade: lesson.unit?.grade ?? 3,
+      module: lesson.primary_skill === "reading" ? "reading"
+        : lesson.primary_skill === "vocab" ? "vocab"
+        : "phonics",
+      item_type: "lesson",
+      item_id: lesson.id,
+      item_label: lesson.title_cn,
+      is_correct: accuracy >= 0.7,
+      context: { stars, accuracy, score, primary_skill: lesson.primary_skill },
+    }).catch(() => {});
     // 课程完成宠物挂钩：星级 → 星币 (1★=5, 2★=10, 3★=20)
     try {
       const c = await import("@/lib/coins");

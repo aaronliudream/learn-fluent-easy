@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
+import { GuestBanner } from "@/components/GuestBanner";
 import { useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -226,6 +227,8 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
         <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">{zh ? `初${grade}核心词汇` : `${levelName} Core Vocabulary`}</h1>
         <p className="mt-1 text-xs text-muted-foreground">{zh ? `中考新课标 · 共 ${words.length} 词 · 按 20 词一组系统学习` : `Junior curriculum · ${words.length} words · 20 words per group`}</p>
       </div>
+
+      <GuestBanner />
 
       <ModuleStageTests segment="junior" grade={grade} module="vocab" />
 

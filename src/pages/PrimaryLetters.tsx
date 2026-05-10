@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
+import { GuestBanner } from "@/components/GuestBanner";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Volume2, Sparkles, Music, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -59,6 +60,7 @@ export default function PrimaryLetters() {
 
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-4 py-6 md:px-6 md:py-10">
+      <GuestBanner />
       <BackLink
         to="/primary"
         className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"

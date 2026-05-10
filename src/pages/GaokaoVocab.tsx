@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
+import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Check, X, Volume2, Sparkles, BookOpen, Target, RotateCw, ChevronRight, Brain, Flame, Keyboard, Zap, Music, Trophy, Headphones, Loader2, BarChart3 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -475,6 +476,7 @@ function GroupList({
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <div className="mb-4 flex items-center justify-between">
+        <GuestBanner />
         <BackLink
           to="/gaokao"
           className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"

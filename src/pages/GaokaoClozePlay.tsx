@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
+import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Clock, CheckCircle2, XCircle, Send, RotateCcw, BookMarked, ChevronUp, ChevronDown, Lightbulb, Languages, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -203,6 +204,7 @@ export default function GaokaoClozePlay() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-4 py-4 pb-32">
+      <GuestBanner />
       {/* Sticky compact header */}
       <div className="sticky top-0 z-20 -mx-4 mb-4 border-b border-border bg-background/85 px-4 py-2 backdrop-blur">
         <div className="flex items-center justify-between gap-2">

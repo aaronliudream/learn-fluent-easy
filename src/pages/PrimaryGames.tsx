@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
+import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Trophy, RotateCw, Sparkles, Target, Headphones, Brain, PenLine, Coins } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -58,6 +59,8 @@ export default function PrimaryGames() {
       >
         <ArrowLeft className="size-4" /> {game ? "返回游戏中心" : (isAll ? "返回小学专区" : `返回 ${["一","二","三","四","五","六"][grade-1] ?? grade}年级`)}
       </BackLink>
+
+      <GuestBanner />
 
       <div className="mb-4">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">PRIMARY · GAMES</div>

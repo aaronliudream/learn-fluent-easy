@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
+import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, XCircle } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -135,6 +136,7 @@ export default function GaokaoReadingPlay() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
+      <GuestBanner />
       <BackLink to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回阅读列表
       </BackLink>

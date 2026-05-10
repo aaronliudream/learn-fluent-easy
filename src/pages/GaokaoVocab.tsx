@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
 import { bumpMastery, bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { celebrateScore } from "@/lib/feedback";
 import { MASTERY_LABELS, type MasteryLevel } from "@/lib/masteryScore";
 import { cn } from "@/lib/utils";

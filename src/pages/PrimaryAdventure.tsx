@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Check, Play, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import BackLink from "@/components/BackLink";
@@ -22,7 +22,15 @@ type Pet = { name: string; level: number; bond: number };
 
 export default function PrimaryAdventure() {
   const nav = useNavigate();
-  const grade = Number(localStorage.getItem("primary:lastGrade") || "1");
+  // Grade comes from the URL first (so "陪 Spark 出发吧" always lands on the
+  // grade the kid just picked), and falls back to last-picked grade for
+  // direct visits / refresh. Writing back to localStorage keeps the rest of
+  // the app in sync if the kid deep-linked into a different grade.
+  const { grade: gradeParam } = useParams<{ grade?: string }>();
+  const grade = Number(gradeParam || localStorage.getItem("primary:lastGrade") || "1");
+  useEffect(() => {
+    if (gradeParam) localStorage.setItem("primary:lastGrade", String(grade));
+  }, [gradeParam, grade]);
   const [nextLessonId, setNextLessonId] = useState<string | null>(null);
   const [nextReadingId, setNextReadingId] = useState<string | null>(null);
   const [pet, setPet] = useState<Pet | null>(null);

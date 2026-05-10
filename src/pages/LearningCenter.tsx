@@ -409,8 +409,6 @@ function ModuleView({
               const rows = scopes.filter((r) => r.module === openModule && r.stage === s.key);
               if (rows.length === 0) return null;
               const agg = aggregate(rows);
-              const moduleTotal = moduleProps.find((r) => r.module === openModule)?.total ?? 0;
-              const inModulePct = moduleTotal > 0 ? Math.round((agg.total / moduleTotal) * 1000) / 10 : 0;
               return (
                 <div key={s.key} className="px-4 py-3">
                   <div className="flex items-baseline justify-between text-[12px]">

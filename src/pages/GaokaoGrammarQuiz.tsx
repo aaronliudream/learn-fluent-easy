@@ -52,6 +52,8 @@ export default function GaokaoGrammarQuiz() {
   const [stats, setStats] = useState({ correct: 0, wrong: 0 });
   const [tutorOpen, setTutorOpen] = useState(false);
   const [paywall, setPaywall] = useState<{ open: boolean; used: number; limit: number }>({ open: false, used: 5, limit: 5 });
+  const [groupStreak, setGroupStreak] = useState<Streak>({ consecutive_count: 0, challenge_unlocked: false });
+  const groupRecordedRef = useRef<string | null>(null);
 
   // Register the global AI assistant for this question.
   // Locked until the user has answered (`picked` is set), preventing answer leakage.

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import LiveStatsTicker from "@/components/LiveStatsTicker";
+import UserAvatarMenu from "@/components/UserAvatarMenu";
 import { ArrowRight, Sparkles, Brain, GraduationCap, Users, BookOpen, Quote, TrendingUp, Clock, Target, ShieldCheck } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import moonBg from "@/assets/moon-hero-bg.jpg";

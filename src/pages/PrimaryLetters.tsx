@@ -1,47 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Volume2, Sparkles, Music, Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { ArrowLeft, Volume2, Sparkles, Music } from "lucide-react";
 import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { cn } from "@/lib/utils";
-import { PHONICS_ITEMS, PHONICS_GROUPS } from "@/data/primaryPhonics";
-
-type ExampleWord = { word: string; ipa: string; meaning_cn: string; emoji: string };
-type Letter = {
-  id: string;
-  letter_upper: string;
-  letter_lower: string;
-  sort_order: number;
-  letter_name_ipa: string;
-  phonics_short_ipa: string | null;
-  phonics_long_ipa: string | null;
-  mouth_tip_cn: string | null;
-  stroke_order_cn: string | null;
-  chant_cn: string | null;
-  chant_en: string | null;
-  example_words: ExampleWord[];
-  fun_fact_cn: string | null;
-};
+import {
+  PHONICS_ITEMS,
+  PHONICS_GROUPS,
+  getLettersAlphaSorted,
+  type PhonicsItem,
+} from "@/data/primaryPhonics";
 
 export default function PrimaryLetters() {
-  const [letters, setLetters] = useState<Letter[]>([]);
-  const [active, setActive] = useState<Letter | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    supabase
-      .from("primary_letters")
-      .select("*")
-      .order("sort_order")
-      .then(({ data }) => {
-        const list = (data ?? []) as unknown as Letter[];
-        setLetters(list);
-        if (list.length) setActive(list[0]);
-        setLoading(false);
-      });
-  }, []);
+  const letters = useMemo(() => getLettersAlphaSorted(), []);
+  const [active, setActive] = useState<PhonicsItem | null>(letters[0] ?? null);
 
   // Pre-warm TTS audio for ALL letters on mount so the first tap on any
   // letter / chant / example word plays instantly. Runs in the background;
@@ -50,9 +23,9 @@ export default function PrimaryLetters() {
     if (!letters.length) return;
     const phrases: string[] = [];
     for (const l of letters) {
-      phrases.push(l.letter_upper);
-      if (l.chant_en) phrases.push(l.chant_en);
-      for (const w of l.example_words || []) {
+      if (l.letterUpper) phrases.push(l.letterUpper);
+      if (l.chantEn) phrases.push(l.chantEn);
+      for (const w of l.exampleWords || []) {
         if (w?.word) phrases.push(w.word);
       }
     }
@@ -77,13 +50,7 @@ export default function PrimaryLetters() {
         </h1>
       </div>
 
-      {loading ? (
-        <div className="flex items-center justify-center py-20 text-muted-foreground">
-          <Loader2 className="mr-2 size-5 animate-spin" /> 加载中…
-        </div>
-      ) : (
-        <>
-          <PhonicsDemoCard />
+      <PhonicsDemoCard />
         <div className="grid gap-6 md:grid-cols-[260px_1fr]">
           {/* 字母网格 */}
           <div className="grid grid-cols-6 gap-2 md:grid-cols-4">
@@ -98,8 +65,8 @@ export default function PrimaryLetters() {
                     : "border-border bg-card hover:border-primary/40"
                 )}
               >
-                {l.letter_upper}
-                <span className="ml-0.5 text-muted-foreground">{l.letter_lower}</span>
+                {l.letterUpper}
+                <span className="ml-0.5 text-muted-foreground">{l.letter}</span>
               </button>
             ))}
           </div>
@@ -107,8 +74,6 @@ export default function PrimaryLetters() {
           {/* 字母详情 */}
           {active && <LetterCard letter={active} />}
         </div>
-        </>
-      )}
     </main>
   );
 }
@@ -137,24 +102,28 @@ function PhonicsDemoCard() {
         <div className="mt-3 flex flex-wrap gap-2">
           {sItem.exampleWords.map((w) => (
             <button
-              key={w}
-              onClick={() => speak(w)}
+              key={w.word}
+              onClick={() => speak(w.word)}
               className="flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1.5 text-sm font-bold text-primary hover:bg-primary/20"
             >
-              <Volume2 className="size-3.5" /> {w}
+              <Volume2 className="size-3.5" /> {w.emoji ?? ""} {w.word}
             </button>
           ))}
         </div>
 
-        <div className="mt-3 rounded-xl bg-amber-50 p-3 dark:bg-amber-950/30">
-          <button
-            onClick={() => speak(sItem.exampleSentence)}
-            className="flex items-center gap-1 text-sm font-bold text-amber-800 hover:underline dark:text-amber-300"
-          >
-            <Volume2 className="size-3.5" /> {sItem.exampleSentence}
-          </button>
-          <p className="mt-0.5 text-xs text-amber-700 dark:text-amber-400">{sItem.exampleSentenceCn}</p>
-        </div>
+        {sItem.exampleSentence && (
+          <div className="mt-3 rounded-xl bg-amber-50 p-3 dark:bg-amber-950/30">
+            <button
+              onClick={() => speak(sItem.exampleSentence!)}
+              className="flex items-center gap-1 text-sm font-bold text-amber-800 hover:underline dark:text-amber-300"
+            >
+              <Volume2 className="size-3.5" /> {sItem.exampleSentence}
+            </button>
+            {sItem.exampleSentenceCn && (
+              <p className="mt-0.5 text-xs text-amber-700 dark:text-amber-400">{sItem.exampleSentenceCn}</p>
+            )}
+          </div>
+        )}
 
         {sItem.sparkLine && (
           <p className="mt-3 text-xs italic text-rose-600 dark:text-rose-400">
@@ -166,10 +135,11 @@ function PhonicsDemoCard() {
   );
 }
 
-function LetterCard({ letter: l }: { letter: Letter }) {
-  const sayName = () => speak(l.letter_upper);
+function LetterCard({ letter: l }: { letter: PhonicsItem }) {
+  const upper = l.letterUpper ?? l.letter.toUpperCase();
+  const sayName = () => speak(upper);
   const sayShort = () =>
-    l.example_words[0] ? speak(l.example_words[0].word) : speak(l.letter_upper);
+    l.exampleWords[0] ? speak(l.exampleWords[0].word) : speak(upper);
 
   return (
     <div className="space-y-4">
@@ -178,12 +148,14 @@ function LetterCard({ letter: l }: { letter: Letter }) {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-[80px] font-black leading-none">
-              {l.letter_upper}
-              <span className="text-white/80">{l.letter_lower}</span>
+              {upper}
+              <span className="text-white/80">{l.letter}</span>
             </div>
-            <div className="mt-1 text-sm font-mono opacity-90">
-              字母名 {l.letter_name_ipa}
-            </div>
+            {l.letterNameIpa && (
+              <div className="mt-1 text-sm font-mono opacity-90">
+                字母名 {l.letterNameIpa}
+              </div>
+            )}
           </div>
           <div className="flex flex-col gap-2">
             <button
@@ -192,68 +164,64 @@ function LetterCard({ letter: l }: { letter: Letter }) {
             >
               <Volume2 className="size-4" /> 字母名
             </button>
-            {l.phonics_short_ipa && (
-              <button
-                onClick={sayShort}
-                className="flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-2 text-xs font-bold backdrop-blur-sm hover:bg-white/30"
-              >
-                <Sparkles className="size-4" /> 拼读音
-              </button>
-            )}
+            <button
+              onClick={sayShort}
+              className="flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-2 text-xs font-bold backdrop-blur-sm hover:bg-white/30"
+            >
+              <Sparkles className="size-4" /> 拼读音
+            </button>
           </div>
         </div>
-        {(l.phonics_short_ipa || l.phonics_long_ipa) && (
-          <div className="mt-3 flex flex-wrap gap-2 text-xs">
-            {l.phonics_short_ipa && (
-              <span className="rounded-full bg-white/25 px-3 py-1 font-mono">
-                短音 {l.phonics_short_ipa}
-              </span>
-            )}
-            {l.phonics_long_ipa && (
-              <span className="rounded-full bg-white/25 px-3 py-1 font-mono">
-                长音 {l.phonics_long_ipa}
-              </span>
-            )}
-          </div>
-        )}
+        <div className="mt-3 flex flex-wrap gap-2 text-xs">
+          {l.sound && (
+            <span className="rounded-full bg-white/25 px-3 py-1 font-mono">
+              短音 {l.sound}
+            </span>
+          )}
+          {l.longSound && (
+            <span className="rounded-full bg-white/25 px-3 py-1 font-mono">
+              长音 {l.longSound}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* 口型 + 笔顺 */}
       <div className="grid gap-3 sm:grid-cols-2">
-        {l.mouth_tip_cn && (
+        {l.soundDesc && (
           <div className="rounded-2xl border border-border/60 bg-card p-4">
             <div className="text-xs font-bold text-muted-foreground">👄 发音口型</div>
-            <p className="mt-1 text-sm">{l.mouth_tip_cn}</p>
+            <p className="mt-1 text-sm">{l.soundDesc}</p>
           </div>
         )}
-        {l.stroke_order_cn && (
+        {l.strokeOrder && (
           <div className="rounded-2xl border border-border/60 bg-card p-4">
             <div className="text-xs font-bold text-muted-foreground">✍️ 书写笔顺</div>
-            <p className="mt-1 text-sm">{l.stroke_order_cn}</p>
+            <p className="mt-1 text-sm">{l.strokeOrder}</p>
           </div>
         )}
       </div>
 
       {/* 儿歌 */}
-      {(l.chant_cn || l.chant_en) && (
+      {(l.chantCn || l.chantEn) && (
         <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-950/30">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-1.5 text-xs font-bold text-amber-700 dark:text-amber-400">
               <Music className="size-4" /> 字母儿歌
             </div>
-            {l.chant_en && (
+            {l.chantEn && (
               <button
-                onClick={() => speak(l.chant_en!)}
+                onClick={() => speak(l.chantEn!)}
                 className="flex items-center gap-1 rounded-full bg-amber-500 px-2 py-1 text-[11px] font-bold text-white hover:bg-amber-600"
               >
                 <Volume2 className="size-3" /> 听
               </button>
             )}
           </div>
-          {l.chant_en && <p className="mt-1.5 text-sm font-bold">{l.chant_en}</p>}
-          {l.chant_cn && (
+          {l.chantEn && <p className="mt-1.5 text-sm font-bold">{l.chantEn}</p>}
+          {l.chantCn && (
             <p className="mt-0.5 text-sm text-amber-800 dark:text-amber-200">
-              {l.chant_cn}
+              {l.chantCn}
             </p>
           )}
         </div>
@@ -263,7 +231,7 @@ function LetterCard({ letter: l }: { letter: Letter }) {
       <div>
         <div className="mb-2 text-xs font-bold text-muted-foreground">🎴 拼读例词</div>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-          {l.example_words.map((w, i) => (
+          {l.exampleWords.map((w, i) => (
             <button
               key={i}
               onClick={() => speak(w.word)}
@@ -274,17 +242,17 @@ function LetterCard({ letter: l }: { letter: Letter }) {
               <div className="text-[10px] font-mono text-muted-foreground">
                 {w.ipa}
               </div>
-              <div className="text-xs text-muted-foreground">{w.meaning_cn}</div>
+              <div className="text-xs text-muted-foreground">{w.meaningCn}</div>
               <Volume2 className="size-3 text-primary opacity-0 group-hover:opacity-100" />
             </button>
           ))}
         </div>
       </div>
 
-      {l.fun_fact_cn && (
+      {l.funFact && (
         <div className="rounded-2xl bg-violet-50 p-3 text-xs text-violet-800 dark:bg-violet-950/30 dark:text-violet-300">
           💡 <span className="font-bold">小知识：</span>
-          {l.fun_fact_cn}
+          {l.funFact}
         </div>
       )}
     </div>

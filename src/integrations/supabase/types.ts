@@ -6896,6 +6896,21 @@ export type Database = {
         }
         Relationships: []
       }
+      mastery_module_proportion: {
+        Row: {
+          fluent_count: number | null
+          master_count: number | null
+          module: string | null
+          module_total: number | null
+          none_count: number | null
+          proportion_pct: number | null
+          score_pct: number | null
+          user_id: string | null
+          user_total: number | null
+          weak_count: number | null
+        }
+        Relationships: []
+      }
       mastery_overall: {
         Row: {
           fluent: number | null
@@ -6905,6 +6920,42 @@ export type Database = {
           total: number | null
           user_id: string | null
           weak: number | null
+        }
+        Relationships: []
+      }
+      mastery_stage_proportion: {
+        Row: {
+          fluent_count: number | null
+          master_count: number | null
+          none_count: number | null
+          proportion_pct: number | null
+          score_pct: number | null
+          stage: string | null
+          stage_total: number | null
+          user_id: string | null
+          user_total: number | null
+          weak_count: number | null
+        }
+        Relationships: []
+      }
+      mastery_with_proportions: {
+        Row: {
+          fluent_count: number | null
+          fluent_pct: number | null
+          grade: number | null
+          master_count: number | null
+          master_pct: number | null
+          module: string | null
+          none_count: number | null
+          none_pct: number | null
+          proportion_of_total: number | null
+          scope_total: number | null
+          score_pct: number | null
+          stage: string | null
+          user_id: string | null
+          user_total: number | null
+          weak_count: number | null
+          weak_pct: number | null
         }
         Relationships: []
       }

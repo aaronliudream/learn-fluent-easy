@@ -252,12 +252,18 @@ export default function PrimaryPhonics() {
       </section>
 
       {/* 退路:A-Z 索引 */}
-      <div className="mt-6 text-center">
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
         <Link
           to="/primary/letters"
           className="inline-flex items-center gap-1 text-xs text-muted-foreground underline-offset-2 hover:underline"
         >
           <BookOpen className="size-3.5" /> 想按 A-Z 浏览所有字母?去字母索引 →
+        </Link>
+        <Link
+          to="/primary/sightwords"
+          className="inline-flex items-center gap-1 text-xs font-bold text-sky-600 underline-offset-2 hover:underline dark:text-sky-300"
+        >
+          📖 高频词 Sight Words →
         </Link>
       </div>
     </main>

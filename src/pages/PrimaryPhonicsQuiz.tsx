@@ -61,7 +61,9 @@ export default function PrimaryPhonicsQuiz() {
   const isFinished = !loading && totalItems > 0 && itemIdx >= totalItems;
 
   // 当前题目: kind 由 subIdx 决定(0=听音选字, 1=看字选音, 2=听词选图)
-  const q = useMemo(() => (cur ? buildQuestionFor(cur, subIdx) : null), [cur, subIdx]);
+  // 每个 item 预计算 3 道题(混 5 种题型),保持本 item 内 q 稳定.
+  const itemQuestions = useMemo(() => (cur ? buildItemQuestions(cur) : []), [cur, itemIdx]);
+  const q = itemQuestions[subIdx] ?? null;
 
   // 全部答完 → 结算 + 跳转(放 effect 里,避免 render 期副作用)
   useEffect(() => {
@@ -99,6 +101,11 @@ export default function PrimaryPhonicsQuiz() {
     const t = setTimeout(() => {
       if (q.kind === "hearLetter") speak(cur.exampleWords[0]?.word ?? cur.letter);
       else if (q.kind === "matchWord") speak(q.correctWord);
+      else if (q.kind === "blendCvc") {
+        // 自动连读三个音: /c/ - /a/ - /t/
+        const sounds = q.sounds;
+        sounds.forEach((s, i) => setTimeout(() => speak(s), i * 600));
+      }
     }, 300);
     return () => clearTimeout(t);
   }, [q, cur]);
@@ -142,11 +149,13 @@ export default function PrimaryPhonicsQuiz() {
     if (q.kind === "hearLetter") isCorrect = opt === q.correct;
     else if (q.kind === "seeLetter") isCorrect = opt === q.correct;
     else if (q.kind === "matchWord") isCorrect = opt === q.correctWord;
+    else if (q.kind === "blendCvc") isCorrect = opt === q.correctWord;
+    else if (q.kind === "seeImagePickWord") isCorrect = opt === q.correctWord;
 
     // SRS 计数(用于"今日复习"到期判定)
     void bumpPhonicsMastery(
       cur.id,
-      q.kind === "hearLetter" || q.kind === "matchWord" ? "listen" : "quiz",
+      q.kind === "hearLetter" || q.kind === "matchWord" || q.kind === "blendCvc" ? "listen" : "quiz",
       isCorrect
     );
 
@@ -298,6 +307,59 @@ export default function PrimaryPhonicsQuiz() {
             </div>
           </>
         )}
+
+        {q.kind === "blendCvc" && (
+          <>
+            <p className="text-center text-sm font-bold text-muted-foreground">
+              听这三个音连起来,是哪个词?
+            </p>
+            <div className="flex justify-center gap-2">
+              {q.sounds.map((s, i) => (
+                <button
+                  key={i}
+                  onClick={() => speak(s)}
+                  className="grid size-14 place-items-center rounded-2xl bg-primary/10 text-xl font-extrabold text-primary shadow-sm hover:bg-primary/20"
+                  title="点击单独听这个音"
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+            <div className="flex justify-center">
+              <button
+                onClick={() => {
+                  q.sounds.forEach((s, i) => setTimeout(() => speak(s), i * 600));
+                }}
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow"
+              >
+                <Volume2 className="size-4" /> 连读一遍
+              </button>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {q.options.map((o) => (
+                <Opt key={o} label={o} mono picked={picked} correct={q.correctWord} onPick={pick} />
+              ))}
+            </div>
+          </>
+        )}
+
+        {q.kind === "seeImagePickWord" && (
+          <>
+            <p className="text-center text-sm font-bold text-muted-foreground">
+              这是什么?选出对应的英文词
+            </p>
+            <div className="flex justify-center">
+              <div className="grid size-32 place-items-center rounded-3xl bg-amber-50 text-7xl shadow-sm dark:bg-amber-950/40">
+                {q.emoji}
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {q.options.map((o) => (
+                <Opt key={o} label={o} mono picked={picked} correct={q.correctWord} onPick={pick} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </main>
   );
@@ -307,64 +369,114 @@ export default function PrimaryPhonicsQuiz() {
 type Q =
   | { kind: "hearLetter"; correct: string; options: string[] }
   | { kind: "seeLetter"; correct: string; options: string[]; letter: string }
-  | { kind: "matchWord"; correctWord: string; correctEmoji: string; options: { word: string; emoji: string }[] };
+  | { kind: "matchWord"; correctWord: string; correctEmoji: string; options: { word: string; emoji: string }[] }
+  | { kind: "blendCvc"; correctWord: string; sounds: string[]; options: string[] }
+  | { kind: "seeImagePickWord"; correctWord: string; emoji: string; options: string[] };
 
 /**
- * 为指定 item 出第 subIdx (0..2) 道题.
- *  subIdx 0 → 听音选字母
- *  subIdx 1 → 看字母选音
- *  subIdx 2 → 听词选图(没有 emoji 时回退到听音选字母)
- * 干扰项一律走智能映射 buildDistractorPool.
+ * 给一个 item 构造 3 道题: 从 5 种题型中随机挑 3 种(只用本 item 实际能出的题型).
+ * 题型可用性:
+ *  - hearLetter / seeLetter: 永远可用
+ *  - matchWord / seeImagePickWord: 例词带 emoji 才可用
+ *  - blendCvc: 例词中存在 3 字母的 CVC 词才可用
  */
-function buildQuestionFor(item: PhonicsItem, subIdx: number): Q {
+function buildItemQuestions(item: PhonicsItem): Q[] {
+  const candidates: Array<() => Q | null> = [
+    () => buildHearLetter(item),
+    () => buildSeeLetter(item),
+    () => buildMatchWord(item),
+    () => buildSeeImagePickWord(item),
+    () => buildBlendCvc(item),
+  ];
+  const built = shuffle(candidates).map((f) => f()).filter((q): q is Q => q != null);
+  // 至少保证前 2 种,补足 3 道
+  while (built.length < 3) built.push(buildHearLetter(item));
+  return built.slice(0, 3);
+}
+
+function poolDistractors(item: PhonicsItem): PhonicsItem[] {
   const allIds = PHONICS_ITEMS.map((p) => p.id);
-  const distractorIds = buildDistractorPool(item.id, allIds, 3);
-  const distractors = distractorIds
+  return buildDistractorPool(item.id, allIds, 3)
     .map((id) => PHONICS_ITEMS.find((p) => p.id === id))
     .filter(Boolean) as PhonicsItem[];
+}
 
-  const kind = subIdx % 3;
-
-  if (kind === 0) {
-    return {
-      kind: "hearLetter",
-      correct: item.letter,
-      options: shuffle([item.letter, ...distractors.map((p) => p.letter)]),
-    };
-  }
-  if (kind === 1) {
-    return {
-      kind: "seeLetter",
-      letter: item.letterUpper ?? item.letter,
-      correct: item.sound,
-      options: shuffle([item.sound, ...distractors.map((p) => p.sound)]),
-    };
-  }
-  const word0 = item.exampleWords.find((w) => w.emoji && w.word) ?? item.exampleWords[0];
-  if (word0?.emoji && word0?.word) {
-    // 智能干扰: 优先用同组易混音的例词
-    const otherWords = distractors.flatMap((p) =>
-      p.exampleWords.filter((w) => w.emoji && w.word)
-    );
-    const fallbackWords = PHONICS_ITEMS.flatMap((p) =>
-      p.id === item.id ? [] : p.exampleWords.filter((w) => w.emoji && w.word)
-    );
-    const wordPool = otherWords.length >= 2 ? otherWords : fallbackWords;
-    return {
-      kind: "matchWord",
-      correctWord: word0.word,
-      correctEmoji: word0.emoji!,
-      options: shuffle([
-        { word: word0.word, emoji: word0.emoji! },
-        ...shuffle(wordPool).slice(0, 2).map((w) => ({ word: w.word, emoji: w.emoji! })),
-      ]),
-    };
-  }
-  // fallback
+function buildHearLetter(item: PhonicsItem): Q {
+  const d = poolDistractors(item);
   return {
     kind: "hearLetter",
     correct: item.letter,
-    options: shuffle([item.letter, ...distractors.map((p) => p.letter)]),
+    options: shuffle([item.letter, ...d.map((p) => p.letter)]),
+  };
+}
+function buildSeeLetter(item: PhonicsItem): Q {
+  const d = poolDistractors(item);
+  return {
+    kind: "seeLetter",
+    letter: item.letterUpper ?? item.letter,
+    correct: item.sound,
+    options: shuffle([item.sound, ...d.map((p) => p.sound)]),
+  };
+}
+function buildMatchWord(item: PhonicsItem): Q | null {
+  const word0 = item.exampleWords.find((w) => w.emoji && w.word);
+  if (!word0?.emoji || !word0?.word) return null;
+  const d = poolDistractors(item);
+  const otherWords = d.flatMap((p) => p.exampleWords.filter((w) => w.emoji && w.word));
+  const fallback = PHONICS_ITEMS.flatMap((p) =>
+    p.id === item.id ? [] : p.exampleWords.filter((w) => w.emoji && w.word)
+  );
+  const wordPool = otherWords.length >= 2 ? otherWords : fallback;
+  return {
+    kind: "matchWord",
+    correctWord: word0.word,
+    correctEmoji: word0.emoji,
+    options: shuffle([
+      { word: word0.word, emoji: word0.emoji },
+      ...shuffle(wordPool).slice(0, 2).map((w) => ({ word: w.word, emoji: w.emoji! })),
+    ]),
+  };
+}
+function buildSeeImagePickWord(item: PhonicsItem): Q | null {
+  const word0 = item.exampleWords.find((w) => w.emoji && w.word);
+  if (!word0?.emoji || !word0?.word) return null;
+  const d = poolDistractors(item);
+  const others = d.flatMap((p) => p.exampleWords.filter((w) => w.word));
+  const fallback = PHONICS_ITEMS.flatMap((p) =>
+    p.id === item.id ? [] : p.exampleWords.filter((w) => w.word)
+  );
+  const pool = others.length >= 3 ? others : fallback;
+  const distractorWords = shuffle(pool).slice(0, 3).map((w) => w.word);
+  return {
+    kind: "seeImagePickWord",
+    correctWord: word0.word,
+    emoji: word0.emoji,
+    options: shuffle([word0.word, ...distractorWords]),
+  };
+}
+/**
+ * CVC 拼读: 找到本 item 例词中 3 字母 (consonant-vowel-consonant) 的真词,
+ * 把单词拆成 3 个音播放,让孩子拼出来.如果本 item 没有 CVC 例词则返回 null.
+ */
+function buildBlendCvc(item: PhonicsItem): Q | null {
+  const cvc = item.exampleWords.find((w) => /^[bcdfghjklmnpqrstvwxyz][aeiou][bcdfghjklmnpqrstvwxyz]$/i.test(w.word));
+  if (!cvc) return null;
+  const letters = cvc.word.toLowerCase().split("");
+  // 把每个字母映射回它的 phonics sound, 找不到就用字母本身
+  const sounds = letters.map((ch) => {
+    const it = PHONICS_ITEMS.find((p) => p.letter.toLowerCase() === ch);
+    return it?.sound ?? `/${ch}/`;
+  });
+  // 干扰词: 同长度的其他 CVC 例词
+  const allCvc = PHONICS_ITEMS.flatMap((p) =>
+    p.exampleWords.filter((w) => w.word !== cvc.word && /^[bcdfghjklmnpqrstvwxyz][aeiou][bcdfghjklmnpqrstvwxyz]$/i.test(w.word))
+  );
+  const distractors = shuffle(allCvc).slice(0, 3).map((w) => w.word.toLowerCase());
+  return {
+    kind: "blendCvc",
+    correctWord: cvc.word.toLowerCase(),
+    sounds,
+    options: shuffle([cvc.word.toLowerCase(), ...distractors]),
   };
 }
 

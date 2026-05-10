@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, Users, ChevronDown } from "lucide-react";
+import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 

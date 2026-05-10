@@ -8,6 +8,7 @@ import {
   type QuizKind,
   type MasteryLevel,
 } from "./masteryScore";
+import { recordUnifiedAttempt, type Stage, type ModuleKey } from "./unifiedMastery";
 
 export type ItemType = "grammar_question" | "grammar_point" | "reading_question" | "vocab";
 
@@ -17,6 +18,12 @@ export async function recordAttempt(opts: {
   userAnswer?: string;
   isCorrect: boolean;
   timeSpent?: number;
+  // 🆕 v7：统一掌握度路由所需上下文（不传则默认按高考定位）
+  stage?: Stage;
+  grade?: number;
+  module?: ModuleKey;
+  itemLabel?: string;
+  correctAnswer?: string;
 }) {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return;
@@ -28,6 +35,24 @@ export async function recordAttempt(opts: {
     is_correct: opts.isCorrect,
     time_spent_seconds: opts.timeSpent ?? null,
   });
+
+  // 🆕 v7：写 unified_mastery（FSRS-lite + 错题本 + 诊断失效由 edge function 统一处理）
+  const inferredModule: ModuleKey =
+    opts.module ??
+    (opts.questionType === "reading" ? "reading"
+      : opts.questionType === "grammar" ? "grammar"
+      : "vocab");
+  recordUnifiedAttempt({
+    stage: opts.stage ?? "senior",
+    grade: opts.grade ?? 10,
+    module: inferredModule,
+    item_type: opts.questionType,
+    item_id: opts.questionId,
+    item_label: opts.itemLabel,
+    is_correct: opts.isCorrect,
+    user_answer: opts.userAnswer,
+    correct_answer: opts.correctAnswer,
+  }).catch(() => {});
 }
 
 export async function bumpMastery(opts: {

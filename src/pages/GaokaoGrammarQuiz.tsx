@@ -5,7 +5,6 @@ import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, RotateCcw, BookOpen, Me
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { recordAttempt } from "@/lib/gaokaoMastery";
-import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { celebrateScore } from "@/lib/feedback";
 import { awardCoins } from "@/lib/coins";
 import { recordGrammarAttempt, loadGrammarMastery, LEVEL_META, type GrammarMastery } from "@/lib/grammarFsrs";
@@ -178,19 +177,15 @@ export default function GaokaoGrammarQuiz() {
     if (isCorrect) awardCoins(3, "gaokao_grammar_correct").catch(() => {});
     else { import("@/lib/coins").then(m => m.notifyWrong()); }
     const latencyMs = Date.now() - startTs;
-    await recordAttempt({ questionType: "grammar", questionId: q.id, userAnswer: letter, isCorrect });
-    recordUnifiedAttempt({
-      stage: "senior",
-      grade: 10,
+    await recordAttempt({
+      questionType: "grammar",
+      questionId: q.id,
+      userAnswer: letter,
+      isCorrect,
       module: "grammar",
-      item_type: "grammar_question",
-      item_id: q.id,
-      item_label: point?.title ?? slug ?? undefined,
-      is_correct: isCorrect,
-      user_answer: letter,
-      correct_answer: q.correct_answer,
-      context: { point_id: point?.id, slug, explanation: q.explanation },
-    }).catch(() => {});
+      itemLabel: point?.title ?? slug ?? undefined,
+      correctAnswer: q.correct_answer,
+    });
     const res = await recordGrammarAttempt({
       pointId: point.id,
       questionType: q.question_type || "multiple_choice",

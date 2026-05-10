@@ -7912,6 +7912,14 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
           <span className="font-mono text-xs text-mint tracking-widest">🎓 老师讲解</span>
           <span className="ink-faint text-xs">·</span>
           <span className="font-cn text-xs ink-dim">{levelTitle}</span>
+          {noVoice && (
+            <>
+              <span className="ink-faint text-xs">·</span>
+              <span className="font-cn text-xs px-2 py-0.5 rounded-full bg-amber/15 text-amber border border-amber/40" title="本设备未安装中文语音引擎，已自动切换为字幕模式">
+                🔇 本段无语音（仅字幕）
+              </span>
+            </>
+          )}
         </div>
         <div className="flex items-center gap-2">
           <span className="font-mono text-xs ink-dim">{Math.floor(elapsed)}s / {Math.ceil(totalDuration)}s</span>

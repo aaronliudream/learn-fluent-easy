@@ -323,10 +323,10 @@ function StageView({
 
                   {expanded && (
                     <div className="space-y-1.5 border-t border-border bg-muted/20 px-4 py-3">
-                      {stageScopes.length === 0 && (
-                        <p className="text-[11px] text-muted-foreground">G{g} 还没有数据，先去做几道题。</p>
-                      )}
-                      {stageScopes.map((m) => (
+                      <p className="mb-1 text-[10px] text-muted-foreground">
+                        按 2022 新课标 · {STAGES.find((s) => s.key === openStage)!.label}英语模块
+                      </p>
+                      {padCurriculum(openStage, g, stageScopes).map((m) => (
                         <ModuleScopeRow
                           key={m.module}
                           stage={openStage}

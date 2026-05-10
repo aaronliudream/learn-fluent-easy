@@ -7509,7 +7509,7 @@ export type Database = {
         Args: { _accept: boolean; _request_id: string }
         Returns: Json
       }
-      run_mastery_snapshot: { Args: { _snap_date?: string }; Returns: number }
+      run_mastery_snapshot: { Args: { _snap_date: string }; Returns: number }
       send_gift: {
         Args: { _food_id: string; _to_user: string }
         Returns: undefined

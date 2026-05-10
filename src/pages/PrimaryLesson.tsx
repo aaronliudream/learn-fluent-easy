@@ -11,7 +11,7 @@ import { recordUnifiedAttempt } from "@/lib/unifiedMastery";
 
 type StepType = "input" | "understand" | "practice" | "output" | "test";
 type Step = { type: StepType; title?: string; intro?: string; kind?: string; passScore?: number;
-  items?: any[]; questions?: { q: string; options: string[]; answer: number }[] };
+  items?: any[]; questions?: { q: string; options: string[]; answer: number; answers?: number[] }[] };
 type Lesson = {
   id: string; title_cn: string; title_en: string | null; primary_skill: string;
   estimated_minutes: number; steps: Step[];
@@ -199,7 +199,7 @@ function UnderstandStep({ step, onNext }: { step: Step; onNext: () => void }) {
 }
 
 function QuizRunner({ questions, accent, onDone, label }: {
-  questions: { q: string; options: string[]; answer: number }[];
+  questions: { q: string; options: string[]; answer: number; answers?: number[] }[];
   accent: string; onDone: (r: { correct: number; total: number }) => void; label: string;
   onWrong?: (q: { q: string; options: string[]; answer: number }, picked: number) => void;
 }) {
@@ -209,10 +209,29 @@ function QuizRunner({ questions, accent, onDone, label }: {
   const cur = questions[i];
   if (!cur) return null;
 
+  // 同义/近义词组：所有题型共享。若正确答案与候选项落在同一组，则两者都判对。
+  // 覆盖小学一年级常见多义场景（hi=你好/嗨, bye=再见/拜拜 等）。
+  const SYNONYM_GROUPS: string[][] = [
+    ["你好", "嗨", "哈喽"],
+    ["再见", "拜拜", "拜"],
+    ["谢谢", "多谢", "感谢"],
+    ["对不起", "抱歉", "不好意思"],
+    ["不客气", "没关系", "不用谢"],
+    ["是的", "对", "嗯"],
+    ["不是", "不对", "不"],
+  ];
+  const norm = (s: string) => (s ?? "").trim().toLowerCase();
+  const acceptedIdx = new Set<number>(cur.answers ?? [cur.answer]);
+  const correctText = norm(cur.options[cur.answer] ?? "");
+  const group = SYNONYM_GROUPS.find((g) => g.map(norm).includes(correctText));
+  if (group) {
+    cur.options.forEach((o, k) => { if (group.map(norm).includes(norm(o))) acceptedIdx.add(k); });
+  }
+
   const pick = (k: number) => {
     if (picked !== null) return;
     setPicked(k);
-    const ok = k === cur.answer;
+    const ok = acceptedIdx.has(k);
     const next = { c: score.c + (ok ? 1 : 0), t: score.t + 1 };
     setScore(next);
     if (/^[a-zA-Z ,.'!?-]+$/.test(cur.q)) speak(cur.q);
@@ -252,7 +271,7 @@ function QuizRunner({ questions, accent, onDone, label }: {
       </div>
       <div className="grid gap-2 sm:grid-cols-2">
         {cur.options.map((o, k) => {
-          const right = k === cur.answer;
+          const right = acceptedIdx.has(k);
           const showR = picked !== null && right;
           const showW = picked === k && !right;
           return (

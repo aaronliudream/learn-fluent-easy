@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
 import { markBrowseDone } from "@/components/primary/MasteryPath";
@@ -429,6 +430,11 @@ function QuizMode({ words }: { words: Vocab[] }) {
       setWrongIds(prev => { const n = new Set(prev); n.add(cur.word.id); return n; });
       bumpVocabMastery({ vocabId: cur.word.id, isCorrect: false, kind: "listen" }).catch(() => {});
       recordAttempt({ questionType: "vocab", questionId: cur.word.id, userAnswer: "(timeout)", isCorrect: false }).catch(() => {});
+      recordUnifiedAttempt({
+        stage: "primary", grade, module: "vocab",
+        item_type: "listen2en", item_id: cur.word.id, item_label: cur.word.word,
+        is_correct: false, user_answer: "(timeout)", correct_answer: cur.word.word,
+      }).catch(() => {});
       const t = setTimeout(() => { setPicked(null); setIdx(i => i + 1); }, 600);
       return () => clearTimeout(t);
     }
@@ -546,6 +552,11 @@ function QuizMode({ words }: { words: Vocab[] }) {
         questionId: cur.word.id,
         userAnswer: m,
         isCorrect: correct,
+      }).catch(() => {}),
+      recordUnifiedAttempt({
+        stage: "primary", grade, module: "vocab",
+        item_type: cur.type, item_id: cur.word.id, item_label: cur.word.word,
+        is_correct: correct, user_answer: m, correct_answer: cur.answer,
       }).catch(() => {}),
     ]);
     setTimeout(() => {

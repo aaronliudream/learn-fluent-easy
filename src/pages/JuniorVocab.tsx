@@ -5,6 +5,7 @@ import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap,
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { awardCoins, notifyWrong } from "@/lib/coins";
 import { celebrateScore } from "@/lib/feedback";
 import { cn } from "@/lib/utils";
@@ -576,6 +577,17 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
     await Promise.all([
       bumpVocabMastery({ vocabId: cur.id, isCorrect: correct, kind: "en2cn" }).catch(() => {}),
       recordAttempt({ questionType: "vocab", questionId: cur.id, userAnswer: m, isCorrect: correct }).catch(() => {}),
+      recordUnifiedAttempt({
+        stage: "junior",
+        grade: (cur as any).grade ?? 7,
+        module: "vocab",
+        item_type: "word",
+        item_id: cur.id,
+        item_label: cur.word,
+        is_correct: correct,
+        user_answer: m,
+        correct_answer: meaningForUi(cur, zh),
+      }).catch(() => {}),
     ]);
     setTimeout(() => { setPicked(null); setIdx((i) => i + 1); }, 900);
   };
@@ -761,6 +773,17 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
     await Promise.all([
       bumpVocabMastery({ vocabId: cur.id, isCorrect: ok, kind: "spell" }).catch(() => {}),
       recordAttempt({ questionType: "vocab", questionId: cur.id, userAnswer: input, isCorrect: ok }).catch(() => {}),
+      recordUnifiedAttempt({
+        stage: "junior",
+        grade: (cur as any).grade ?? 7,
+        module: "vocab",
+        item_type: "word",
+        item_id: cur.id,
+        item_label: cur.word,
+        is_correct: ok,
+        user_answer: input,
+        correct_answer: cur.word,
+      }).catch(() => {}),
     ]);
     setTimeout(() => { setInput(""); setFeedback(""); setIdx((i) => i + 1); }, 1200);
   };

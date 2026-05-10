@@ -8007,9 +8007,15 @@ function TeacherLesson({ script, levelTitle, onContinue, onSkip }) {
           {/* Bubble pointer */}
           <div className="absolute left-0 top-1/2 -translate-x-2 -translate-y-1/2 w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-r-[10px] border-r-mint/30" />
           <p className="font-cn ink text-base sm:text-lg leading-relaxed">
-            {currentSeg.text.slice(0, charIdx)}
-            {!paused && charIdx < currentSeg.text.length && (
-              <span className="typing-cursor inline-block w-0.5 h-5 bg-mint ml-0.5 align-middle" />
+            {!audioReady ? (
+              <span className="ink-faint italic text-sm">老师正在准备…</span>
+            ) : (
+              <>
+                {currentSeg.text.slice(0, charIdx)}
+                {!paused && charIdx < currentSeg.text.length && (
+                  <span className="typing-cursor inline-block w-0.5 h-5 bg-mint ml-0.5 align-middle" />
+                )}
+              </>
             )}
           </p>
         </div>

@@ -375,7 +375,7 @@ export default function GaokaoReadingArticle() {
               stage: "senior", grade: 10, module: "reading",
               item_type: q.question_type || "mcq",
               item_id: q.id,
-              item_label: article.title_en?.slice(0, 40) || article.id,
+              item_label: ((article as any).title_en || (article as any).title || article.id).slice(0, 40),
               is_correct: answers[q.id] === q.correct_answer,
               user_answer: answers[q.id] ?? "",
               correct_answer: q.correct_answer ?? "",

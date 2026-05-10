@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak, prefetchTTSBatch } from "@/lib/speak";
 import { cn } from "@/lib/utils";
 import { awardCoins } from "@/lib/coins";
+import { sparkOnAnswer } from "@/lib/sparkAnswerFeedback";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import MasteryPath, { nextStepAfter } from "@/components/primary/MasteryPath";
 
@@ -147,6 +148,8 @@ async function saveScore(gameType: string, grade: number, score: number, accurac
 
 /** Update per-word mastery matrix (FSRS-lite). gameType ∈ quiz|listen|spell|match */
 async function recordWordResult(word: Word, gameType: "quiz"|"listen"|"spell"|"match", correct: boolean) {
+  // Phase 3 — Spark visibly reacts to every word result.
+  sparkOnAnswer(correct);
   // Unified mastery tracking — fire and forget
   import("@/hooks/useRecordAttempt").then(({ recordUnifiedAttempt }) => {
     recordUnifiedAttempt({

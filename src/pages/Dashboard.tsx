@@ -131,31 +131,54 @@ function StageView({ stage }: { stage: Stage }) {
       <section>
         <h3 className="mb-3 text-sm font-bold uppercase tracking-[0.15em] text-muted-foreground">各模块进度</h3>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {ov.modules.map((m) => (
-            <Link
-              key={m.key}
-              to={m.to}
-              className="group rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl">{m.emoji}</span>
-                  <span className="text-base font-bold">{m.label}</span>
+          {ov.modules.map((m) => {
+            if (m.comingSoon) {
+              return (
+                <div
+                  key={m.key}
+                  className="rounded-2xl border border-dashed border-border bg-muted/20 p-4 opacity-70"
+                  aria-label={`${m.label} 即将上线`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl grayscale">{m.emoji}</span>
+                      <span className="text-base font-bold text-muted-foreground">{m.label}</span>
+                    </div>
+                    <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                      即将上线
+                    </span>
+                  </div>
+                  <div className="mt-3 h-2 overflow-hidden rounded-full bg-muted/60" />
+                  <div className="mt-3 text-[11px] text-muted-foreground">本学段该模块正在筹备中</div>
                 </div>
-                <span className="text-xl font-extrabold tabular-nums text-primary">{m.percent}%</span>
-              </div>
-              <div className="mt-3 h-2 overflow-hidden rounded-full bg-muted">
-                <div className="h-full bg-gradient-to-r from-primary to-emerald-500 transition-all" style={{ width: `${m.percent}%` }} />
-              </div>
-              <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-muted-foreground">
-                <span>🌳 {m.mastered}</span>
-                <span>🌿 {m.learned}</span>
-                <span>🌱 {Math.max(0, m.total - m.mastered - m.learned)}</span>
-                {m.due > 0 && <span className="font-bold text-orange-600 dark:text-orange-400">⏰ {m.due}</span>}
-                <span className="ml-auto">/ {m.total}</span>
-              </div>
-            </Link>
-          ))}
+              );
+            }
+            return (
+              <Link
+                key={m.key}
+                to={m.to}
+                className="group rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">{m.emoji}</span>
+                    <span className="text-base font-bold">{m.label}</span>
+                  </div>
+                  <span className="text-xl font-extrabold tabular-nums text-primary">{m.percent}%</span>
+                </div>
+                <div className="mt-3 h-2 overflow-hidden rounded-full bg-muted">
+                  <div className="h-full bg-gradient-to-r from-primary to-emerald-500 transition-all" style={{ width: `${m.percent}%` }} />
+                </div>
+                <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-muted-foreground">
+                  <span>🌳 {m.mastered}</span>
+                  <span>🌿 {m.learned}</span>
+                  <span>🌱 {Math.max(0, m.total - m.mastered - m.learned)}</span>
+                  {m.due > 0 && <span className="font-bold text-orange-600 dark:text-orange-400">⏰ {m.due}</span>}
+                  <span className="ml-auto">/ {m.total}</span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
 

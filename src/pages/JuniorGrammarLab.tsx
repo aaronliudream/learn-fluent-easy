@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Check, Eye, EyeOff, Moon, RotateCw, Sparkles, St
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { awardForCorrect } from "@/lib/coins";
@@ -982,13 +983,19 @@ export default function JuniorGrammarLab() {
       return { ...s, streak, bestStreak, achievements: ach };
     });
     awardForCorrect(1, "junior_grammar_lab").catch(() => {});
-    if (id) recordJuniorGrammarAttempt({
-      pointId: id, questionType: "lab", isCorrect: true,
+    if (id) recordUnifiedAttempt({
+      stage: "junior", grade: 7, module: "grammar",
+      item_type: "lab", item_id: id, is_correct: true,
     }).catch(() => {});
   };
   const onMistake = (m: Mistake) => {
     setState((s) => ({ ...s, streak: 0, mistakes: [m, ...s.mistakes].slice(0, 50) }));
     if (id) recordJuniorGrammarAttempt({ pointId: id, questionType: "lab", isCorrect: false, errorReason: "rule_unknown" }).catch(() => {});
+    if (id) recordUnifiedAttempt({
+      stage: "junior", grade: 7, module: "grammar",
+      item_type: "lab", item_id: id, is_correct: false,
+      context: { mistake: m as any },
+    }).catch(() => {});
   };
 
   const completePhase = (phaseId: number, unlocks: string[] = []) => {

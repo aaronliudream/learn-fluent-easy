@@ -87,7 +87,10 @@ export default function JuniorGrammarPoint() {
           .order("sort_order"),
       ]);
       setPt(a.data as Pt);
-      setQs((b.data ?? []) as GrammarQuestion[]);
+      // 单次抽题上限 = 10（黄金注意力窗口 ≤10 分钟）。
+      // 题目按 sort_order 取前 10 道；后续可"再来一组"刷新。
+      const allQs = (b.data ?? []) as GrammarQuestion[];
+      setQs(allQs.slice(0, 10));
       setLoading(false);
     })();
   }, [id]);

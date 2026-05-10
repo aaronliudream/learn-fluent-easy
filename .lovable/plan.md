@@ -1,157 +1,131 @@
-# Big Moon English → AI 能力诊断系统升级方案
+# Phonics 学习引擎 v1
 
-你的判断完全正确：网站的真正壁垒不是题库，而是**学生能力建模 (Student Modeling)**。下面是分阶段、可落地的工程方案。核心思想：**先打通数据底座（视图化 + 知识点标签），再让 Dashboard 和"强化练习"自动消费这套底座。**
+把"陪 Spark 学拼读"从"内容陈列"升级为"学习引擎"，复用已经验证过的 `primary_word_mastery` 套路，但拼读音用独立的新表（避免和单词混淆，避免破坏现有词汇 SRS）。
 
 ---
 
-## 阶段 1：统一数据底座（视图化方案 B）
+## 数据层
 
-### 1.1 把 `unified_mastery` 改造为视图
+### 新表 `primary_phonics_mastery`（一次性迁移）
 
-将现有 13+ 张源表（`primary_word_mastery` / `primary_reading_progress` / `primary_lesson_progress` / `primary_speaking_attempts` / `junior_word_mastery` / `junior_listening_attempts` / `user_grammar_mastery` / `gaokao_user_mastery` / `gaokao_user_attempts` / `mastery_progress` / `card_attempts` / `slang_mastery` …）通过 `UNION ALL` 合并为一个**实时视图**，统一字段：
+字段（套用 `primary_word_mastery` 的 SRS 字段，去掉 grade —— 拼读不分年级）：
 
-```text
-user_id | stage | grade | module | item_type | item_id
-       | attempts | correct_count | accuracy
-       | last_attempt_at | last_correct_at
-       | knowledge_tag | subskill | difficulty
+```
+id              uuid PK
+user_id         uuid (FK auth.users)
+phonics_id      text  -- 例如 "p_a", "p_ai", "p_sh"
+quiz_correct    int default 0
+quiz_wrong      int default 0
+listen_correct  int default 0
+listen_wrong    int default 0
+mastery_level   smallint default 0   -- 0 未学 / 1 学过 / 2 熟练 / 3 掌握
+ease            real default 2.5
+interval_days   real default 0
+due_at          timestamptz default now()
+last_seen_at    timestamptz
+created_at / updated_at + touch trigger
+unique(user_id, phonics_id)
 ```
 
-好处：
-- 任何源表写入 → Dashboard 立即可见，**零同步成本**
-- 旧 `unified_mastery` 表里 24 行历史数据先备份再 DROP
-- 现有写入路径（`record-attempt` Edge Function 等）不变，但**只写源表**，不再写 unified_mastery
+RLS：完全照抄 pwm 的 4 条 own-row 策略。
 
-### 1.2 mastery 状态规则（写在视图里，全站统一）
+### 复用现有 SRS 工具
 
-| 状态 | 规则 |
-|---|---|
-| **master** | attempts ≥ 5 且 accuracy ≥ 90% |
-| **fluent** | attempts ≥ 3 且 accuracy 70–90% |
-| **weak** | accuracy < 70% **或** 最近一次答错 |
-| **none** | attempts = 0（通过题库 LEFT JOIN 得到） |
+`src/lib/fsrs.ts`（PrimaryVocab 在用的）保持原样，写一个轻薄的 `phonicsMastery.ts` wrapper，两件事：
+- `bumpPhonicsMastery(phonicsId, kind: "quiz"|"listen", correct: boolean)`
+- `getPhonicsMasteryMap()` → `Map<phonicsId, { level, dueAt, ... }>`
 
 ---
 
-## 阶段 2：知识点标签体系（真正的护城河）
+## 路由
 
-### 2.1 新建 `question_tags` 表
-
-把所有题目（语法点、阅读题、词汇、听力片段、完形…）打上多维标签：
-
-```text
-question_id | stage | grade | module
-            | skill         -- grammar / reading / vocab / listening / writing / cloze
-            | subskill      -- subjunctive / inference / phrasal_verb / numbers ...
-            | difficulty    -- 1–5
-            | knowledge_point -- 自由文本，用于面向学生的展示
+```
+/primary/phonics                    -- 新：拼读冒险仪表盘（替代 /primary/letters 的位置）
+/primary/phonics/learn/:phonicsId   -- 新：学单个音 + 自动 3-5 题小测
+/primary/phonics/quiz/:groupId      -- 新：整组挑战测试，全过解锁下一组
+/primary/letters                    -- 保留：A-Z 索引视图（家长 / 复习用）
 ```
 
-### 2.2 子技能字典（首批最小集）
-
-- **grammar**: subjunctive, relative_clause, tense, non_finite, inversion, conditionals
-- **reading**: main_idea, inference, detail, vocab_in_context, long_sentence, attitude
-- **vocab**: high_freq, academic, phrasal_verb, collocation, confusable
-- **listening**: numbers, liaison, scene_words, gist, detail
-- **writing**: grammar_error, sentence_variety, cohesion, task_response
-- **cloze**: logic, collocation, contrast, cohesion
-
-### 2.3 回填策略
-
-- 高考 / 初中语法已有的 grammar_point 字段直接映射
-- 阅读、完形、听力先跑一次 **AI 批量打标**（gemini-2.5-flash，便宜快），把结果写入 `question_tags`
-- 新生成的题目（generate-lesson / generate-grammar-content 等 Edge Function）从源头就写入 tags
+Adventure 第 1 步从 `/primary/letters` 改为 `/primary/phonics`。
 
 ---
 
-## 阶段 3：能力雷达视图
+## 三个新页面
 
-新建两个上层视图，**Dashboard 直接消费**：
+### 1. `PrimaryPhonics.tsx`（仪表盘）
 
-### 3.1 `mastery_by_skill`（雷达图数据）
+加载：`PHONICS_GROUPS` + `PHONICS_ITEMS` + 当前用户 mastery map。
 
-按 `user_id × skill` 聚合 → 每个用户在 grammar / reading / vocab / listening / writing / cloze 上的整体掌握百分比。
+显示从上到下：
+- Spark 顶卡："今天 Spark 想和你练 N 个音" —— N = 当前组里 level<3 的音数 + 到期复习数
+- **进度条**：7 组横排，每组显示 `⭐⭐⭐○○○ x/y 已掌握`，未解锁的组上锁
+- **3 个 CTA 卡**（按优先级）：
+  1. 「继续学新音 X」→ 当前组里第一个 mastery_level=0 的音
+  2. 「复习 N 个学过的音」→ `due_at <= now() AND level<3` 的音；点开进入 quiz 模式
+  3. 「挑战组 X 测试」→ 当前组所有音 level≥1 时才显示
 
-### 3.2 `mastery_by_subskill`（弱点诊断）
+组解锁规则：组 N 的所有音 mastery_level≥2 → 解锁组 N+1。
 
-按 `user_id × skill × subskill` 聚合 → 输出每个子技能的 accuracy + state，**按 weak 优先排序**，前端 `LIMIT 5` 即得"今日待突破"。
+### 2. `PrimaryPhonicsLearn.tsx`（学单个音）
 
-### 3.3 `coverage_gaps`（哪些还没做）
+复用 `PrimaryLetters.tsx` 的详情卡 UI（字母名 / 拼读音 / 口型 / 笔顺 / 儿歌 / 例词 / 小知识），不重写。
 
-`question_tags LEFT JOIN unified_mastery` → 列出 attempts=0 的题目数，按 subskill 分组，得到"阅读推理 还有 12 题没做"。
+学习完点「我学会了 ✓」 → 立即进入 **inline mini-quiz**（3 题）：
+- Q1 听音选字母：播放 `sound`，4 选 1（同组干扰）
+- Q2 看字母选音：显示字母，4 个 IPA 选项
+- Q3 选例词：播放例词，3 个 emoji 选 1
+（字母组合没有 letterNameIpa → 跳过 Q2 改成第二种听音题）
 
----
+每题 → `bumpPhonicsMastery(id, "quiz", correct)`。
+3 题全对 → `mastery_level += 1`（最高 3）+ Spark 庆祝。
+有错 → `due_at` 设为 1 天后再复习。
 
-## 阶段 4：Dashboard 改版
+完成后回 `/primary/phonics`，下一张 CTA 自动指向下一个 mastery_level=0 的音。
 
-```text
-┌────────────────────────────────────┐
-│  AI 能力雷达图（6 轴）             │
-│  Grammar 82  Reading 61  …         │
-└────────────────────────────────────┘
+### 3. `PrimaryPhonicsQuiz.tsx`（整组挑战 / 复习模式）
 
-┌─ 今日待突破（来自 mastery_by_subskill, weak top 3）─┐
-│ • 阅读推理     45%   [开始训练]                     │
-│ • 长难句       52%   [开始训练]                     │
-│ • 虚拟语气     58%   [开始训练]                     │
-└─────────────────────────────────────────────────────┘
+两种入口：
+- `/primary/phonics/quiz/g2` → 该组全部音，每个音随机 1 题，答错的最后再考一遍
+- `/primary/phonics/quiz/review` → SRS 到期的所有音
 
-┌─ 还没做（来自 coverage_gaps）─┐
-│ • 完形填空 12 篇未做           │
-│ • 听力数字题 8 段未做          │
-└────────────────────────────────┘
-
-点 Grammar → 子技能下钻表
-  虚拟语气  weak    [练]
-  定语从句  fluent  [复习]
-  时态     master  ✓
-```
-
-技术：雷达图用 `recharts` 的 `RadarChart`（已在依赖里）。
+题型同 mini-quiz。全部通过 → 该组所有音 `mastery_level = max(level, 2)` → 下一组解锁 + Spark 进化动画（复用 `celebratePet`）。
 
 ---
 
-## 阶段 5：智能抽题（"针对性测试"）
+## 改动 & 不改动
 
-新增 Edge Function `next-recommended-questions`：
+改：
+- `src/lib/dailyAdventure.ts` 第 1 步 `to: "/primary/phonics"`
+- 新建 3 个页面 + `phonicsMastery.ts` lib + 1 条迁移
+- `src/App.tsx` 加 3 条路由
 
-```text
-输入: user_id, skill (可选), limit=10
-逻辑:
-  1. 优先取 weak 子技能的题目（占 60%）
-  2. 其次取 none（从未做过）的题目（占 30%）
-  3. 最后取 fluent 但超过 7 天未复习的（占 10%）
-  4. 同一子技能不超过 3 题，避免疲劳
-返回: 题目列表 + 推荐理由（"因为你在虚拟语气上较弱"）
-```
-
-所有"强化练习 / 智能复习"按钮都走这个函数，**取代现有随机抽题**。
+不改：
+- `PrimaryLetters.tsx` 保持不动（A-Z 视图，作为字母索引备用）
+- `primaryPhonics.ts` 数据文件不动
+- 现有 `primary_word_mastery` 表不动
+- 不引入新依赖
 
 ---
 
-## 阶段 6：AI 学习路径（后续迭代）
+## 不在 v1 范围（下一轮再做）
 
-基于 `mastery_by_subskill`，让 `tutor-chat` Edge Function 在系统 prompt 里注入学生当前最弱的 3 个子技能，输出个性化建议：
-
-> 因为你：虚拟语气差、长难句差
-> 请先完成：1. 从句专项 2. 虚拟语气专项 3. 长难句拆解
-
----
-
-## 落地顺序（建议一步一步走，不要一次全做）
-
-1. **本轮先做**：阶段 1（视图化 unified_mastery）+ 阶段 3.1（mastery_by_skill 视图）+ 阶段 4 中的雷达图
-   - 这一步立即让 Dashboard 显示真实数据，所有现有 1200+ 行历史记录"一夜复活"
-2. **下一轮**：阶段 2（question_tags 表 + 首批 AI 打标）+ 阶段 3.2/3.3
-3. **再下一轮**：阶段 5 智能抽题 + 阶段 4 子技能下钻
-4. **最后**：阶段 6 AI 学习路径
+- 错题本独立页（v1 用 SRS 自然推送即可）
+- 家长周报里加 phonics 进度
+- 拼读真词练习页（CVC/Magic E 那 59 个词，已经在数据里，下一轮做 `PrimaryPhonicsBlend.tsx`）
+- 离线音频缓存
 
 ---
 
-## 需要你确认的 3 件事
+## 验收清单
 
-1. **mastery 阈值**：master = 5 次 & 90%、fluent = 3 次 & 70%、weak < 70%——这个数字 OK 吗？还是要更严（比如 master 要 95%）？
-2. **本轮范围**：是先只做"阶段 1 + 雷达图"（约 1 个工作单元，立竿见影），还是连阶段 2 知识点打标也一起做（约 3 个工作单元，需要跑 AI 批量任务）？
-3. **knowledge_tag 字典**：上面列的子技能字典够用吗？还是你想加 / 删某些（比如要不要加"音标 phonics"维度给小学）？
+孩子第一次进 `/primary/phonics` → 看到组 1 全部 0/6 + CTA「学新音 s」。
+学完 s 答对 3 题 → 回仪表盘显示 1/6，CTA 变成「学新音 a」。
+学完一组 6 个 → 「挑战组 1 测试」CTA 出现。
+全过 → 组 2 解锁 + Spark 进化弹窗。
+第二天打开 → 如果有到期复习，CTA 第二张显示「复习 N 个音」。
 
-确认后我就开始写迁移 SQL 和前端组件。
+---
+
+## 工作量预估
+
+约 4 个文件新建 + 2 个文件小改 + 1 条迁移 + 1 条路由更新。预计单轮做完，做完直接给你 yes/no 自审清单。

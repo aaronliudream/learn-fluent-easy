@@ -5488,6 +5488,39 @@ export type Database = {
         }
         Relationships: []
       }
+      quiz_streaks: {
+        Row: {
+          challenge_unlocked: boolean
+          consecutive_count: number
+          created_at: string
+          id: string
+          last_completed_at: string | null
+          scope_key: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          challenge_unlocked?: boolean
+          consecutive_count?: number
+          created_at?: string
+          id?: string
+          last_completed_at?: string | null
+          scope_key: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          challenge_unlocked?: boolean
+          consecutive_count?: number
+          created_at?: string
+          id?: string
+          last_completed_at?: string | null
+          scope_key?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       saved_phrases: {
         Row: {
           context_text: string | null

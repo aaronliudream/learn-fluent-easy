@@ -367,6 +367,22 @@ export default function GaokaoReadingArticle() {
         // 写入统一掌握度（5星 + 遗忘曲线）
         const pct = totalQ > 0 ? (correctCount / totalQ) * 100 : 0;
         await recordMastery({ module: "gaokao_reading", itemId: article.id, pct });
+        // 统一答题路由 — 每题一条
+        try {
+          const { recordUnifiedAttempt } = await import("@/hooks/useRecordAttempt");
+          await Promise.all(questions.map((q) =>
+            recordUnifiedAttempt({
+              stage: "senior", grade: 10, module: "reading",
+              item_type: q.question_type || "mcq",
+              item_id: q.id,
+              item_label: ((article as any).title_en || (article as any).title || article.id).slice(0, 40),
+              is_correct: answers[q.id] === q.correct_answer,
+              user_answer: answers[q.id] ?? "",
+              correct_answer: q.correct_answer ?? "",
+              context: { article_id: article.id },
+            }).catch(() => {})
+          ));
+        } catch {}
       }
     } catch (err) {
       console.error("save session error", err);

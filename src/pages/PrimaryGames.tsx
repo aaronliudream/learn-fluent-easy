@@ -144,6 +144,14 @@ async function saveScore(gameType: string, grade: number, score: number, accurac
 
 /** Update per-word mastery matrix (FSRS-lite). gameType ∈ quiz|listen|spell|match */
 async function recordWordResult(word: Word, gameType: "quiz"|"listen"|"spell"|"match", correct: boolean) {
+  // Unified mastery tracking — fire and forget
+  import("@/hooks/useRecordAttempt").then(({ recordUnifiedAttempt }) => {
+    recordUnifiedAttempt({
+      stage: "primary", grade: word.grade, module: "vocab",
+      item_type: `game_${gameType}`, item_id: word.id, item_label: word.word,
+      is_correct: correct,
+    }).catch(() => {});
+  }).catch(() => {});
   const { data: u } = await supabase.auth.getUser();
   const uid = u?.user?.id;
   if (!uid) return;

@@ -7,6 +7,7 @@ import {
   ArrowRight, Star, Printer, RefreshCw, Lightbulb, Target, ChevronRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 
 /* ============== Types ============== */
 type Mode = "challenge" | "checkup";
@@ -200,9 +201,17 @@ export default function PrimaryAssessment() {
   /* --- Pick handler --- */
   function onPick(optIdx: number) {
     if (showFeedback !== null) return;
-    const correct = optIdx === questions[idx].correctIdx;
+    const q = questions[idx];
+    const correct = optIdx === q.correctIdx;
     setShowFeedback(correct);
     setPicks(p => [...p, optIdx]);
+    recordUnifiedAttempt({
+      stage: "primary", grade, module: "vocab",
+      item_type: `assessment_${q.type}`, item_id: q.word.id, item_label: q.word.word,
+      is_correct: correct,
+      user_answer: q.options[optIdx],
+      correct_answer: q.options[q.correctIdx],
+    }).catch(() => {});
     setTimeout(() => {
       setShowFeedback(null);
       if (idx + 1 >= totalQ) finish([...picks, optIdx]);

@@ -8,6 +8,7 @@ import { awardForCorrect, awardCoins, notifyWrong } from "@/lib/coins";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 
 type Sentence = { en: string; cn: string };
 type Warm = { w: string; cn: string };
@@ -170,6 +171,16 @@ export default function PrimaryReadingPlay() {
               onWrong={(qSnap) => {
                 setStreak(0); notifyWrong();
                 logMistake(a, qSnap);
+              }}
+              onAnswer={(q, isCorrect, pickedIdx) => {
+                recordUnifiedAttempt({
+                  stage: "primary", grade: a.grade, module: "reading",
+                  item_type: "comprehension", item_id: `${a.id}:${q.q.slice(0,40)}`, item_label: a.title_cn,
+                  is_correct: isCorrect,
+                  user_answer: q.options[pickedIdx],
+                  correct_answer: q.options[q.answer],
+                  context: { article_id: a.id },
+                }).catch(() => {});
               }}
             />
           )}
@@ -379,8 +390,8 @@ function ReadStep({ sentences, onDone }: { sentences: Sentence[]; onDone: () => 
 
 // ---------- Step 4: Think (questions) ----------
 function ThinkStep({
-  questions, onDone, onCorrect, onWrong,
-}: { questions: Question[]; onDone: (correct: number) => void; onCorrect: () => void; onWrong: (q: Question) => void }) {
+  questions, onDone, onCorrect, onWrong, onAnswer,
+}: { questions: Question[]; onDone: (correct: number) => void; onCorrect: (qIdx?: number) => void; onWrong: (q: Question) => void; onAnswer?: (q: Question, isCorrect: boolean, pickedIdx: number) => void }) {
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [correct, setCorrect] = useState(0);
@@ -389,7 +400,9 @@ function ThinkStep({
   const choose = (i: number) => {
     if (picked !== null) return;
     setPicked(i);
-    if (i === q.answer) { setCorrect(c => c + 1); onCorrect(); }
+    const isC = i === q.answer;
+    onAnswer?.(q, isC, i);
+    if (isC) { setCorrect(c => c + 1); onCorrect(idx); }
     else { onWrong(q); }
     setTimeout(() => {
       if (idx + 1 >= questions.length) onDone(correct + (i === q.answer ? 1 : 0));

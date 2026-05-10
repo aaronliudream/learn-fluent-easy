@@ -166,6 +166,7 @@ const Lesson = () => {
     setFills({});
     setQuizPicks({});
     setListenInputs({});
+    recordedAttemptsRef.current = new Set();
     setOutput("");
     setFeedback(null);
     recordedQuizRef.current = false;

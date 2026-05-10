@@ -108,6 +108,7 @@ export default function Primary() {
   const [streak, setStreak] = useState<number>(0);
   const [recommendedGrade, setRecommendedGrade] = useState<number | null>(null);
   const [switchOpen, setSwitchOpen] = useState(false);
+  const [sparkEmojis, setSparkEmojis] = useState<SparkEmojis>(SPARK_FALLBACK);
   const [grade, setGrade] = useState<number | null>(() => {
     const saved = localStorage.getItem("primary:lastGrade");
     return saved ? Number(saved) : null;
@@ -143,6 +144,28 @@ export default function Primary() {
         else {
           const { data: created } = await supabase.from("pet_state").insert({ user_id: userId }).select().maybeSingle();
           if (created) setPet(created as Pet);
+        }
+        // 找用户当前激活的宠物 → 拿对应物种的四阶段 emoji。
+        // 没有激活宠物时回退到 fire_fox(Spark 的默认形象)。
+        const { data: activePet } = await supabase
+          .from("user_pets")
+          .select("species_id")
+          .eq("user_id", userId)
+          .eq("is_active", true)
+          .maybeSingle();
+        const speciesId = activePet?.species_id ?? "fire_fox";
+        const { data: sp } = await supabase
+          .from("pet_species")
+          .select("emoji_egg,emoji_baby,emoji_adult,emoji_legend")
+          .eq("id", speciesId)
+          .maybeSingle();
+        if (sp) {
+          setSparkEmojis({
+            egg: sp.emoji_egg ?? SPARK_FALLBACK.egg,
+            baby: sp.emoji_baby ?? SPARK_FALLBACK.baby,
+            adult: sp.emoji_adult ?? SPARK_FALLBACK.adult,
+            legend: sp.emoji_legend ?? SPARK_FALLBACK.legend,
+          });
         }
         // Pull parent-set recommended grade — drives the "推荐" tag in the
         // switch dialog and seeds the default grade for first-time visitors.
@@ -190,7 +213,7 @@ export default function Primary() {
   const bondNow = Math.max(0, Math.min(100, pet?.bond ?? 0));
   const bondHearts = Math.round(bondNow / 10);
   const bondToLevel = Math.max(0, 100 - bondNow);
-  const sparkEmoji = sparkFace(pet?.level ?? 1);
+  const sparkEmoji = sparkFace(pet?.level ?? 1, sparkEmojis);
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">

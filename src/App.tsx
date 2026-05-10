@@ -118,6 +118,8 @@ import GrowthLetter from "@/components/pet/GrowthLetter";
 import useActiveHeartbeat from "@/hooks/useActiveHeartbeat";
 import { AIAssistantProvider } from "@/contexts/AIAssistantContext";
 import GlobalAIAssistant from "@/components/assistant/GlobalAIAssistant";
+import RouteContextRegistrar from "@/components/assistant/RouteContextRegistrar";
+import UserAvatarMenu from "@/components/UserAvatarMenu";
 
 const queryClient = new QueryClient();
 
@@ -299,6 +301,8 @@ const App = () => (
         <InstallPrompt />
         <QuizKeyboardShortcuts />
         <GlobalAIAssistant />
+        <RouteContextRegistrar />
+        <UserAvatarMenu />
       </BrowserRouter>
     </TooltipProvider>
     </AIAssistantProvider>

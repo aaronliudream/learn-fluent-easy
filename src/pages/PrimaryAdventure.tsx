@@ -32,7 +32,6 @@ export default function PrimaryAdventure() {
     if (gradeParam) localStorage.setItem("primary:lastGrade", String(grade));
   }, [gradeParam, grade]);
   const [nextLessonId, setNextLessonId] = useState<string | null>(null);
-  const [nextReadingId, setNextReadingId] = useState<string | null>(null);
   const [pet, setPet] = useState<Pet | null>(null);
   const [progress, setProgress] = useState<Record<string, true>>(() => loadAdventureProgress());
   const [loading, setLoading] = useState(true);
@@ -53,17 +52,6 @@ export default function PrimaryAdventure() {
         (lessons ?? [])[0];
       setNextLessonId(nextLesson?.id ?? null);
 
-      // First reading article for this grade (best-effort; table may not exist for all grades)
-      try {
-        const { data: r } = await supabase
-          .from("primary_reading_articles")
-          .select("id")
-          .eq("grade", grade)
-          .order("sort_order")
-          .limit(1);
-        if (r && r[0]) setNextReadingId((r[0] as any).id);
-      } catch { /* table may not exist or be different schema; deeplink to library */ }
-
       if (uid) {
         const { data: p } = await supabase.from("pet_state").select("name,level,bond").eq("user_id", uid).maybeSingle();
         if (p) setPet(p as Pet);
@@ -73,8 +61,8 @@ export default function PrimaryAdventure() {
   }, [grade]);
 
   const steps: AdventureStep[] = useMemo(
-    () => buildDailyAdventure({ grade, nextLessonId, nextReadingId }),
-    [grade, nextLessonId, nextReadingId]
+    () => buildDailyAdventure({ grade, nextLessonId }),
+    [grade, nextLessonId]
   );
 
   const doneCount = steps.filter((s) => progress[s.kind]).length;

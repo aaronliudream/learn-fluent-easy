@@ -20,6 +20,7 @@ import AchievementBanner from "@/components/parent/AchievementBanner";
 import WeeklyDigest from "@/components/parent/WeeklyDigest";
 import GrowthReport from "@/components/parent/GrowthReport";
 import ProgressSnapshot from "@/components/parent/ProgressSnapshot";
+import RecommendedGradeCard from "@/components/parent/RecommendedGradeCard";
 import { T, useT } from "@/i18n/T";
 
 type Words = { mastered: number; proficient: number; familiar: number; touched: number };
@@ -209,6 +210,9 @@ export default function GlobalParent() {
 
       {/* 🚦 本周 vs 上周 — 一目了然进步/退步 */}
       <ProgressSnapshot />
+
+      {/* 🎒 孩子的推荐年级 — 决定 Spark 默认带孩子去哪个等级冒险 */}
+      <RecommendedGradeCard />
 
       {/* 折叠：详细数据（家长按需展开） */}
       <details className="group mb-4 rounded-3xl border-2 border-border bg-card shadow-tile open:shadow-lg">

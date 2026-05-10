@@ -22,6 +22,7 @@ export type ModuleStat = {
   learned: number;  // 接触过但未掌握
   due: number;      // 待复习
   percent: number;  // mastered/total
+  comingSoon?: boolean;
 };
 
 export type StageOverview = {
@@ -73,14 +74,45 @@ function emptyStat(stage: Stage, key: ModuleKey): ModuleStat {
   };
 }
 
+/** Full canonical module order shown on Dashboard for every stage. */
+const FULL_ORDER: ModuleKey[] = ["vocab", "listening", "reading", "writing", "grammar", "cloze", "lesson"];
+
+/** Modules that have an actual route + content for each stage. */
+const AVAILABLE: Record<Stage, Set<ModuleKey>> = {
+  primary: new Set<ModuleKey>(["vocab", "reading", "lesson"]),
+  junior:  new Set<ModuleKey>(["vocab", "reading", "listening", "writing", "grammar"]),
+  gaokao:  new Set<ModuleKey>(["vocab", "reading", "cloze", "grammar"]),
+};
+
+function comingSoonStat(stage: Stage, key: ModuleKey): ModuleStat {
+  return {
+    key,
+    ...MODULE_META[key],
+    to: "#",
+    total: 0,
+    mastered: 0,
+    learned: 0,
+    due: 0,
+    percent: 0,
+    comingSoon: true,
+  };
+}
+
+/** Pad the computed module list with coming-soon placeholders so every stage
+ *  shows the full 7-module grid. Keeps display order stable. */
+function padFullOrder(stage: Stage, computed: ModuleStat[]): ModuleStat[] {
+  const byKey = new Map(computed.map((m) => [m.key, m]));
+  return FULL_ORDER.map((k) => {
+    const existing = byKey.get(k);
+    if (existing) return existing;
+    if (AVAILABLE[stage].has(k)) return emptyStat(stage, k);
+    return comingSoonStat(stage, k);
+  });
+}
+
 export function useMasteryOverview(stage: Stage): StageOverview {
   const [state, setState] = useState<StageOverview>(() => {
-    const keys: ModuleKey[] = stage === "primary"
-      ? ["vocab", "reading", "lesson"]
-      : stage === "junior"
-      ? ["vocab", "reading", "listening", "writing", "grammar"]
-      : ["vocab", "reading", "cloze", "grammar"];
-    const modules = keys.map((k) => emptyStat(stage, k));
+    const modules = padFullOrder(stage, []);
     const total = modules.reduce((a, m) => a + m.total, 0);
     return { stage, loading: true, signedIn: false, modules, total, mastered: 0, learned: 0, untouched: total, due: 0, percent: 0 };
   });
@@ -137,13 +169,14 @@ export function useMasteryOverview(stage: Stage): StageOverview {
         lessonP.percent = lessonP.total ? Math.round((lessonP.mastered / lessonP.total) * 100) : 0;
 
         const modulesP = [vocabP, readP, lessonP];
+        const fullP = padFullOrder("primary", modulesP);
         const totalP = modulesP.reduce((a, m) => a + m.total, 0);
         const masteredP = modulesP.reduce((a, m) => a + m.mastered, 0);
         const learnedP = modulesP.reduce((a, m) => a + m.learned, 0);
         const dueP = modulesP.reduce((a, m) => a + m.due, 0);
         const untouchedP = Math.max(0, totalP - masteredP - learnedP);
         const pctP = totalP ? Math.round((masteredP / totalP) * 100) : 0;
-        if (!cancelled) setState({ stage, loading: false, signedIn: true, modules: modulesP, total: totalP, mastered: masteredP, learned: learnedP, untouched: untouchedP, due: dueP, percent: pctP });
+        if (!cancelled) setState({ stage, loading: false, signedIn: true, modules: fullP, total: totalP, mastered: masteredP, learned: learnedP, untouched: untouchedP, due: dueP, percent: pctP });
         return;
       }
 
@@ -268,17 +301,18 @@ export function useMasteryOverview(stage: Stage): StageOverview {
       const order: ModuleKey[] = stage === "junior"
         ? ["vocab", "reading", "listening", "writing", "grammar"]
         : ["vocab", "reading", "cloze", "grammar"];
-      const modules = order.map((k) => {
+      const computed = order.map((k) => {
         if (k === "vocab") return vocab;
         if (k === "grammar") return grammar;
         if (mpStats[k]) return mpStats[k];
         if (extras[k]) return extras[k]!;
         return emptyStat(stage, k);
       });
-      const total = modules.reduce((a, m) => a + m.total, 0);
-      const mastered = modules.reduce((a, m) => a + m.mastered, 0);
-      const learned = modules.reduce((a, m) => a + m.learned, 0);
-      const due = modules.reduce((a, m) => a + m.due, 0);
+      const modules = padFullOrder(stage, computed);
+      const total = computed.reduce((a, m) => a + m.total, 0);
+      const mastered = computed.reduce((a, m) => a + m.mastered, 0);
+      const learned = computed.reduce((a, m) => a + m.learned, 0);
+      const due = computed.reduce((a, m) => a + m.due, 0);
       const untouched = Math.max(0, total - mastered - learned);
       const percent = total ? Math.round((mastered / total) * 100) : 0;
       void nowIso;

@@ -152,12 +152,13 @@ export default function JuniorVocab() {
   if (mode === "review") {
     return <JuniorReviewLauncher pool={words} onExit={exit} />;
   }
+  const absGrade = rawGrade <= 3 ? rawGrade + 6 : rawGrade;
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
   if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
   if (mode === "duel") return <WordDuel pool={activePool} onExit={exit} />;
   if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} />;
-  if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} />;
-  if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} />;
+  if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} gradeNum={absGrade} />;
+  if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={absGrade} />;
 
   if (groupIdx >= 0 && groupIdx < groups.length) {
     return <JuniorWordGroup group={groups[groupIdx]} groupNumber={groupIdx + 1} grade={displayGrade} onExit={() => setParams({ grade })} onPractice={(m) => { const np = new URLSearchParams(params); np.set("mode", m); setParams(np); }} />;
@@ -510,7 +511,7 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+function ClassicQuiz({ pool, onExit, gradeNum }: { pool: Vocab[]; onExit: () => void; gradeNum: number }) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const queue = useMemo(() => shuffle(pool).slice(0, 20), [pool]);
@@ -579,7 +580,7 @@ function ClassicQuiz({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
       recordAttempt({ questionType: "vocab", questionId: cur.id, userAnswer: m, isCorrect: correct }).catch(() => {}),
       recordUnifiedAttempt({
         stage: "junior",
-        grade: (cur as any).grade ?? 7,
+        grade: gradeNum,
         module: "vocab",
         item_type: "word",
         item_id: cur.id,
@@ -731,7 +732,7 @@ function MemoryMatchWrapper({ pool, onExit }: { pool: Vocab[]; onExit: () => voi
 }
 
 /* -------------------- DICTATION -------------------- */
-function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+function DictationSession({ pool, onExit, gradeNum }: { pool: Vocab[]; onExit: () => void; gradeNum: number }) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const queue = useMemo(() => shuffle(pool.filter((v) => v.word && !/[\/\s]/.test(v.word))).slice(0, 15), [pool]);
@@ -775,7 +776,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       recordAttempt({ questionType: "vocab", questionId: cur.id, userAnswer: input, isCorrect: ok }).catch(() => {}),
       recordUnifiedAttempt({
         stage: "junior",
-        grade: (cur as any).grade ?? 7,
+        grade: gradeNum,
         module: "vocab",
         item_type: "word",
         item_id: cur.id,

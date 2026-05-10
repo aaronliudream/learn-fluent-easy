@@ -230,33 +230,8 @@ export default function PrimaryGrade() {
         </div>
       )}
 
-      {/* ⚡ 今日词汇挑战 — 智能抽词（优先未学/做错/掌握度低） */}
-      <Link
-        to={`/primary/vocab/${g}?focus=weak`}
-        className="mb-5 flex items-center gap-3 rounded-2xl border-2 border-amber-300 bg-gradient-to-r from-amber-50 to-orange-50 p-3.5 transition hover:-translate-y-0.5 hover:border-amber-400 dark:border-amber-700 dark:from-amber-950/30 dark:to-orange-950/30"
-      >
-        <div className="grid size-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-2xl text-white shadow">⚡</div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-1.5 text-sm font-extrabold">
-            今日 10 词挑战 <Sparkles className="size-3.5 text-amber-500" />
-          </div>
-          <div className="text-xs text-muted-foreground">
-            智能抽取「{weakCount > 0 ? `${weakCount} 个待攻克` : "新词"}」· 优先没学过 / 做错过的 / 掌握度低的
-          </div>
-        </div>
-        <div className="rounded-full bg-amber-500 px-3 py-1.5 text-xs font-extrabold text-white shadow">开始 →</div>
-      </Link>
-
-      {/* 🎯 6 个能力小入口 — 图标化，2 行 */}
-      <section className="mb-5 grid grid-cols-3 gap-2 sm:grid-cols-6">
-        {SKILLS.map((s) => (
-          <Link key={s.key} to={s.to}
-            className={`group flex flex-col items-center gap-1 rounded-2xl bg-gradient-to-br ${s.color} p-3.5 text-white shadow-sm transition hover:-translate-y-0.5`}>
-            <span className="text-3xl">{s.emoji}</span>
-            <span className="text-sm font-extrabold">{s.title}</span>
-          </Link>
-        ))}
-      </section>
+      {/* Phase 1: 删除"今日 10 词"独立卡 + 6 能力按钮 → 全部并入未来的冒险流。
+          这个页面现在只剩"完整学习地图"+"成就",作为详情页存在。 */}
 
       {/* 🗺 学习地图（按单元分岛） — 主要进度可视化 */}
       {!loading && units.length > 0 && (

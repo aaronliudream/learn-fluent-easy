@@ -237,6 +237,21 @@ export default function PrimaryChat() {
     const ok = oi === item.answer_index;
     setPicks((p) => ({ ...p, [qi]: oi }));
     speak(item.term).catch(() => {});
+    // Feed Spark vocab quiz into unified_mastery → Dashboard / SkillRadar
+    try {
+      const { recordUnifiedAttempt } = await import("@/lib/unifiedMastery");
+      recordUnifiedAttempt({
+        stage: "primary",
+        grade: 3,
+        module: "vocab",
+        item_type: "primary_chat_quiz",
+        item_id: `chat:${item.term.toLowerCase()}`,
+        item_label: item.term,
+        is_correct: ok,
+        user_answer: item.options_cn[oi],
+        correct_answer: item.options_cn[item.answer_index],
+      }).catch(() => {});
+    } catch { /* non-blocking */ }
     if (ok) {
       const newStreak = streak + 1;
       setStreak(newStreak);

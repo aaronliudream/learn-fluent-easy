@@ -14,6 +14,9 @@ export type QuotaStatus = QuotaResult;
 /** Consume one question quota. For guests (not signed in), always allow.
  *  Returns { allowed: false } if free user has exceeded today's 5-question limit. */
 export async function consumeQuestionQuota(): Promise<QuotaResult> {
+  // TEMP: daily 5-question free limit disabled. Always allow.
+  return { allowed: true, used: 0, limit: -1, tier: "free", remaining: -1 };
+  // eslint-disable-next-line no-unreachable
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) {
@@ -36,6 +39,9 @@ export async function consumeQuestionQuota(): Promise<QuotaResult> {
 }
 
 export async function getQuotaStatus(): Promise<QuotaStatus> {
+  // TEMP: daily 5-question free limit disabled. Report unlimited.
+  return { allowed: true, used: 0, limit: -1, tier: "free", remaining: -1 };
+  // eslint-disable-next-line no-unreachable
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return { allowed: true, used: 0, limit: 5, tier: "guest", remaining: 5 };

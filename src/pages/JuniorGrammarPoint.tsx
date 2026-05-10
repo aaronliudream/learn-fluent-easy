@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { supabase } from "@/integrations/supabase/client";
@@ -17,6 +17,12 @@ import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
 import { ImmersionCards, type ImmersionCard } from "@/components/grammar/ImmersionCards";
 import { GrammarQuestionCard, type GrammarQuestion, type AnswerResult } from "@/components/grammar/GrammarQuestionCard";
+import {
+  CHALLENGE_QUESTIONS_JUNIOR,
+  CHALLENGE_THRESHOLD,
+  recordGroupCompletion,
+  type Streak,
+} from "@/lib/challengeMode";
 
 /**
  * Junior grammar point — multi-stage data-driven learning flow.
@@ -49,6 +55,9 @@ type Stage = "lesson" | "immersion" | "practice" | "reflect";
 
 export default function JuniorGrammarPoint() {
   const { id } = useParams<{ id: string }>();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const isChallenge = searchParams.get("challenge") === "1";
+  const sessionSize = isChallenge ? CHALLENGE_QUESTIONS_JUNIOR : 10;
   const [pt, setPt] = useState<Pt | null>(null);
   const [qs, setQs] = useState<GrammarQuestion[]>([]);
   const [loading, setLoading] = useState(true);
@@ -68,6 +77,8 @@ export default function JuniorGrammarPoint() {
   const [stagesUnlocked, setStagesUnlocked] = useState<Set<Stage>>(new Set(["lesson"]));
 
   const celebratedRef = useRef(false);
+  const [groupStreak, setGroupStreak] = useState<Streak>({ consecutive_count: 0, challenge_unlocked: false });
+  const groupRecordedRef = useRef(false);
 
   // Fetch grammar point + questions
   useEffect(() => {
@@ -87,13 +98,12 @@ export default function JuniorGrammarPoint() {
           .order("sort_order"),
       ]);
       setPt(a.data as Pt);
-      // 单次抽题上限 = 10（黄金注意力窗口 ≤10 分钟）。
-      // 题目按 sort_order 取前 10 道；后续可"再来一组"刷新。
+      // 单次抽题上限：普通模式 10 题（≤10 分钟），挑战模式 20 题。
       const allQs = (b.data ?? []) as GrammarQuestion[];
-      setQs(allQs.slice(0, 10));
+      setQs(allQs.slice(0, sessionSize));
       setLoading(false);
     })();
-  }, [id]);
+  }, [id, sessionSize]);
 
   // Determine which stages have data → auto-skip empty ones
   const availableStages = useMemo<Stage[]>(() => {
@@ -127,7 +137,11 @@ export default function JuniorGrammarPoint() {
         fireEmojiConfetti({ vibrate: pct === 100, count: pct === 100 ? 60 : 36 });
       }
     }
-  }, [allDone, pct, stage]);
+    if (allDone && !groupRecordedRef.current && pt?.id) {
+      groupRecordedRef.current = true;
+      recordGroupCompletion(`junior_grammar:${pt.id}`, pct).then(setGroupStreak).catch(() => {});
+    }
+  }, [allDone, pct, stage, pt?.id]);
 
   // ─── Recording an answer (FSRS + coins) ───
   const onAnswered = async (q: GrammarQuestion, result: AnswerResult) => {
@@ -185,6 +199,7 @@ export default function JuniorGrammarPoint() {
     setResults({});
     setStreak(0);
     celebratedRef.current = false;
+    groupRecordedRef.current = false;
     if (availableStages.length > 0) {
       setStage(availableStages[0]);
       setStagesUnlocked(new Set([availableStages[0]]));
@@ -412,6 +427,33 @@ export default function JuniorGrammarPoint() {
               >
                 <RotateCw className="size-4" /> 再做一遍
               </button>
+              {/* 挑战模式入口 */}
+              {groupStreak.challenge_unlocked && !isChallenge && (
+                <button
+                  onClick={() => {
+                    const next = new URLSearchParams(searchParams);
+                    next.set("challenge", "1");
+                    setSearchParams(next);
+                    resetAll();
+                  }}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 px-5 py-2 text-sm font-extrabold text-white shadow"
+                >
+                  🏆 挑战模式（{CHALLENGE_QUESTIONS_JUNIOR} 题）
+                </button>
+              )}
+              {isChallenge && (
+                <button
+                  onClick={() => {
+                    const next = new URLSearchParams(searchParams);
+                    next.delete("challenge");
+                    setSearchParams(next);
+                    resetAll();
+                  }}
+                  className="inline-flex items-center gap-1.5 rounded-full border-2 border-violet-300 bg-card px-5 py-2 text-sm font-extrabold text-violet-700 shadow-sm hover:bg-violet-50 dark:hover:bg-violet-950/30"
+                >
+                  ↩️ 退出挑战模式
+                </button>
+              )}
               <Link
                 to="/junior/grammar"
                 className="inline-flex items-center gap-1.5 rounded-full border-2 border-indigo-300 bg-card px-5 py-2 text-sm font-extrabold text-indigo-600 shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-950/30"
@@ -425,6 +467,20 @@ export default function JuniorGrammarPoint() {
                 🏠 初中首页
               </Link>
             </div>
+
+            {/* 连胜进度提示 */}
+            {!groupStreak.challenge_unlocked && pct >= 70 && (
+              <p className="mt-4 text-xs font-bold text-violet-600 dark:text-violet-300">
+                🔥 连续完成 {groupStreak.consecutive_count}/{CHALLENGE_THRESHOLD} 组
+                {groupStreak.consecutive_count < CHALLENGE_THRESHOLD &&
+                  ` · 再 ${CHALLENGE_THRESHOLD - groupStreak.consecutive_count} 组解锁挑战模式 🏆`}
+              </p>
+            )}
+            {!groupStreak.challenge_unlocked && pct < 70 && groupStreak.consecutive_count === 0 && (
+              <p className="mt-4 text-xs text-muted-foreground">
+                💡 单组正确率 ≥70% 才计入连胜，加油！
+              </p>
+            )}
           </section>
         )}
       </div>

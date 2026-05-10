@@ -21,9 +21,19 @@ import { IDIOMS } from "../src/data/idioms";
 import { PLACEMENT_BANK } from "../src/data/placementBank";
 import { LEVELS, LESSON_CONTENT } from "../src/data/course";
 
-const TTS_URL = "https://fottntyhwolbsdvkwriq.supabase.co/functions/v1/tts";
+// Read from environment (mirrors Vite's .env names) so no secrets are
+// hard-coded in the repo. Run with:
+//   VITE_SUPABASE_URL=... VITE_SUPABASE_PUBLISHABLE_KEY=... bun run scripts/prewarm-tts.ts
+const SUPABASE_URL = process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL;
 const ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvdHRudHlod29sYnNkdmt3cmlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczMzg2NzUsImV4cCI6MjA5MjkxNDY3NX0.s7YXfJzG_DRIGWwrYmX4gehxwmPEXbWLOqrLEzAueM4";
+  process.env.VITE_SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
+if (!SUPABASE_URL || !ANON_KEY) {
+  console.error(
+    "Missing env vars. Set VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY (e.g. via a local .env) before running.",
+  );
+  process.exit(1);
+}
+const TTS_URL = `${SUPABASE_URL.replace(/\/$/, "")}/functions/v1/tts`;
 
 // Tunables.
 const CONCURRENCY = 6;       // parallel TTS requests

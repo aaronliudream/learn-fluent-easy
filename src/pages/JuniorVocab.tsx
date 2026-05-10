@@ -142,7 +142,7 @@ export default function JuniorVocab() {
         </main>
       );
     }
-    return <ClassicQuiz pool={srsPool} onExit={exit} />;
+    return <ClassicQuiz pool={srsPool} onExit={exit} gradeNum={rawGrade <= 3 ? rawGrade + 6 : rawGrade} />;
   }
   if (mode === "guided") {
     // Take the current group (or first 100) so we have a focused pool.

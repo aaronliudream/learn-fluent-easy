@@ -10,6 +10,7 @@ import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
 import { ShareButton } from "@/components/share/ShareButton";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 
 type Q = { type?: "choice" | "fill" | "judge"; q: string; options: string[]; answer: string; explanation?: string };
 type E = { id: string; title: string; transcript: string; translation_cn: string | null; questions: Q[]; key_vocab: { word: string; cn: string }[]; audio_url: string | null; kind?: string | null };
@@ -97,6 +98,18 @@ export default function JuniorListeningPlay() {
       const correctCount = Object.entries(picks).filter(([i, l]) => checkAnswer(e!.questions[Number(i)], l)).length + 1;
       if (correctCount % 5 === 0) await awardForBlock("junior_listening");
     } else { setStreak(0); notifyWrong(); }
+    recordUnifiedAttempt({
+      stage: "junior",
+      grade: 7,
+      module: "listening",
+      item_type: "listening_question",
+      item_id: `${id}:${idx}`,
+      item_label: e?.title,
+      is_correct: ok,
+      user_answer: letter,
+      correct_answer: String(e!.questions[idx].answer),
+      context: { exercise_id: id, question_idx: idx, explanation: e!.questions[idx].explanation },
+    }).catch(() => {});
     // If this was the last question answered, celebrate
     if (e && Object.keys(picks).length + 1 >= e.questions.length) {
       const updated = { ...picks, [idx]: letter };

@@ -409,12 +409,13 @@ function ModuleView({
           </div>
           <div className="divide-y divide-border">
             {STAGES.map((s) => {
+              // 课标限定：完形填空仅初中和高中开设，小学不显示
+              if (openModule === "cloze" && s.key === "primary") return null;
               const rows = scopes.filter((r) => r.module === openModule && r.stage === s.key);
               const agg = aggregate(rows);
               const noData = rows.length === 0;
               const expanded = openStage === s.key;
-              // 课标限定：完形填空 (cloze) 仅初中和高中开设，小学不开设
-              const notInCurriculum = openModule === "cloze" && s.key === "primary";
+              const notInCurriculum = false;
               return (
                 <div key={s.key}>
                   <button

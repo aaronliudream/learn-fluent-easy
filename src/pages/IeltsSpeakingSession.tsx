@@ -355,6 +355,29 @@ function IeltsSpeakingSessionContent() {
             f.celebrateScore(pct, { silent: true });
           }
         }
+        // Feed IELTS speaking → unified_mastery (one attempt per dimension)
+        try {
+          const { recordUnifiedAttempt } = await import("@/lib/unifiedMastery");
+          const tgt = Number(session?.target_band ?? 6);
+          if (scores && typeof scores === "object") {
+            for (const [dim, s] of Object.entries(scores as Record<string, any>)) {
+              const band = Number(s?.band);
+              if (!band || isNaN(band)) continue;
+              recordUnifiedAttempt({
+                stage: "senior",
+                grade: 12,
+                module: "speaking",
+                item_type: "ielts_speaking",
+                item_id: `ielts:${dim}:${session?.mode ?? "session"}`,
+                item_label: DIMENSION_LABEL[dim] ?? dim,
+                is_correct: band >= tgt,
+                user_answer: `Band ${band.toFixed(1)}`,
+                correct_answer: `Target ${tgt.toFixed(1)}`,
+                context: { dimension: dim, target_band: tgt, achieved_band: band },
+              }).catch(() => {});
+            }
+          }
+        } catch { /* non-blocking */ }
       } catch { /* ignore */ }
     } catch (e: any) {
       console.error(e);

@@ -58,6 +58,14 @@ import { AITalkDialog } from "@/components/AITalkDialog";
 import { Phone } from "lucide-react";
 import { fireConfetti } from "@/lib/feedback";
 import TutorChat from "@/components/tutor/TutorChat";
+import { recordUnifiedAttempt, type Stage, type ModuleKey } from "@/lib/unifiedMastery";
+
+/** Map main-course levelId (1..N) to stage/grade for unified_mastery. */
+function lessonStageGrade(levelId: number): { stage: Stage; grade: number } {
+  if (levelId <= 2) return { stage: "primary", grade: 3 };
+  if (levelId <= 4) return { stage: "junior", grade: 8 };
+  return { stage: "senior", grade: 11 };
+}
 
 const STEP_ICONS = {
   BookOpen,
@@ -158,6 +166,7 @@ const Lesson = () => {
     setFills({});
     setQuizPicks({});
     setListenInputs({});
+    recordedAttemptsRef.current = new Set();
     setOutput("");
     setFeedback(null);
     recordedQuizRef.current = false;
@@ -219,6 +228,32 @@ const Lesson = () => {
   const [fills, setFills] = useState<Record<number, string>>({});
   const [quizPicks, setQuizPicks] = useState<Record<number, number>>({});
   const [listenInputs, setListenInputs] = useState<Record<number, string>>({});
+  // Track which (module, idx) have already been reported to unified_mastery,
+  // so resetting state or re-rendering does not double-count attempts.
+  const recordedAttemptsRef = useRef<Set<string>>(new Set());
+  const lessonSG = lessonStageGrade(Number(levelId) || 1);
+  const lessonItemBase = `lesson:L${levelId}-U${unitId}-${lessonId}`;
+  const recordLessonAttempt = (
+    module: ModuleKey,
+    idx: number,
+    isCorrect: boolean,
+    label: string,
+    extra?: { user_answer?: string; correct_answer?: string },
+  ) => {
+    const key = `${module}:${idx}`;
+    if (recordedAttemptsRef.current.has(key)) return;
+    recordedAttemptsRef.current.add(key);
+    recordUnifiedAttempt({
+      stage: lessonSG.stage,
+      grade: lessonSG.grade,
+      module,
+      item_type: `lesson_${module}`,
+      item_id: `${lessonItemBase}:${module}:${idx}`,
+      item_label: label,
+      is_correct: isCorrect,
+      ...extra,
+    }).catch(() => { /* non-blocking */ });
+  };
   const [output, setOutput] = useState("");
   const [checking, setChecking] = useState(false);
   type Feedback = {
@@ -1147,6 +1182,17 @@ const Lesson = () => {
                     <input
                       value={v}
                       onChange={(e) => setListenInputs({ ...listenInputs, [i]: e.target.value })}
+                      onBlur={(e) => {
+                        const val = e.target.value.trim();
+                        if (!val) return;
+                        recordLessonAttempt(
+                          "listening",
+                          i,
+                          val.toLowerCase() === b.answer.toLowerCase(),
+                          `${b.before ?? ""} ___ ${b.after ?? ""}`.trim(),
+                          { user_answer: val, correct_answer: b.answer },
+                        );
+                      }}
                       className={`min-w-28 rounded-md border-b-2 bg-transparent px-2 py-1 text-center font-bold outline-none ${
                         v && showFeedback
                           ? correct

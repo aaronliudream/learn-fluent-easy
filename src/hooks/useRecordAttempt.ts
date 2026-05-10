@@ -9,6 +9,7 @@ export type AttemptModule =
   | "writing"
   | "listening"
   | "cloze"
+  | "speaking"
   | "phonics";
 
 export interface AttemptInput {

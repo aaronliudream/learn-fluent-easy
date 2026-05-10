@@ -14,6 +14,12 @@ import TutorChat from "@/components/tutor/TutorChat";
 import PaywallDialog from "@/components/PaywallDialog";
 import { consumeQuestionQuota } from "@/lib/quota";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import {
+  CHALLENGE_QUESTIONS_SENIOR,
+  CHALLENGE_THRESHOLD,
+  recordGroupCompletion,
+  type Streak,
+} from "@/lib/challengeMode";
 
 type Point = { id: string; title: string; slug: string };
 type Question = {

@@ -174,6 +174,8 @@ export default function PrimaryCulture() {
         setStamps(loadStamps());
         setJustStamped(true);
         setTimeout(() => setJustStamped(false), 2200);
+        // v2 Spark bond: culture stamp collected.
+        import("@/lib/petGrowth").then(({ bondOnCultureStamp }) => bondOnCultureStamp()).catch(() => {});
       }
     }
   }

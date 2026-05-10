@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Play, Star, Calendar, Heart } from "lucide-react";
+import { ArrowLeft, Play, Star, Calendar } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { StreakBanner } from "@/components/StreakBanner";
 import MonthlyPostcard from "@/components/pet/MonthlyPostcard";
@@ -23,16 +23,59 @@ const FALLBACK_GRADES: Grade[] = [
   { id: 6, name_cn: "六年级", name_en: "Grade 6", emoji: "🦉", gradient: "from-cyan-300 via-teal-300 to-emerald-300" },
 ];
 
-// Phase 1 — Spark greeting lines, picked from pet state. No LLM.
-function pickSparkLine(pet: Pet | null, streak: number): string {
-  if (!pet) return "嗨,我是 Spark。我们今天一起开始吧?";
-  const h = pet.hunger ?? 50;
-  if (h < 25) return "我有点想你了… 一起练 5 分钟好吗?";
-  if (streak >= 7) return `我们已经一起 ${streak} 天啦!今天也要继续吗?`;
+// Spark greeting — tries to make Spark feel like it knows the child.
+// Pure function over (pet, streak, daysSinceLastVisit, isFirstVisit, isWeekend).
+// Order matters: most "personal" signals win.
+function pickSparkLine(opts: {
+  pet: Pet | null;
+  streak: number;
+  daysSinceLastVisit: number | null; // null = first ever visit
+  isWeekend: boolean;
+}): string {
+  const { pet, streak, daysSinceLastVisit, isWeekend } = opts;
+
+  // 1. First time ever — warm intro
+  if (daysSinceLastVisit == null) {
+    return "嗨!我是 Spark,今天我们一起冒险吗?";
+  }
+  // 2. Long absence (7+ days) — guilt-free, missed-you tone
+  if (daysSinceLastVisit >= 7) {
+    return "我有点想你了… 你回来啦!";
+  }
+  // 3. Skipped yesterday — gentle nudge
+  if (daysSinceLastVisit >= 2) {
+    return "我昨天等你了一整天… 今天有空吗?";
+  }
+  // 4. About to level up — concrete next-step framing
+  if (pet && pet.bond >= 90) {
+    return "我快升级啦!再做一件事就行!";
+  }
+  // 5. Healthy streaks
+  if (streak >= 7) return `我们已经一起冒险 ${streak} 天啦,继续吗?`;
   if (streak >= 3) return `连续 ${streak} 天啦,我每天都在等你 ✨`;
-  if (pet.level >= 5) return "我变强好多!这都是你的功劳~";
-  if (pet.bond >= 80) return "再陪我一会儿,我马上就要升级了!";
+  // 6. Weekend variant
+  if (isWeekend) return "今天也要陪我吗?周末也别忘了我哦~";
+  // 7. Hunger fallback (pet exists but neglected today)
+  if (pet && (pet.hunger ?? 50) < 25) return "我有点饿啦,陪我学一会儿好吗?";
+  // 8. Level milestones
+  if (pet && pet.level >= 5) return "我变强好多!这都是你的功劳~";
+  // 9. Same-day return
+  if (daysSinceLastVisit === 0) return "你又回来啦!我们再做一件事?";
+  // 10. Default
   return "今天也要一起冒险吗?";
+}
+
+const LAST_VISIT_KEY = "primary:lastVisitDate";
+function readLastVisit(): string | null {
+  try { return localStorage.getItem(LAST_VISIT_KEY); } catch { return null; }
+}
+function writeLastVisit() {
+  try { localStorage.setItem(LAST_VISIT_KEY, new Date().toISOString().slice(0, 10)); } catch { /* noop */ }
+}
+function daysBetween(a: string, b: string): number {
+  const da = new Date(a + "T00:00:00").getTime();
+  const db = new Date(b + "T00:00:00").getTime();
+  return Math.round((db - da) / (24 * 3600 * 1000));
 }
 
 export default function Primary() {
@@ -44,6 +87,16 @@ export default function Primary() {
   const [grade, setGrade] = useState<number | null>(() => {
     const saved = localStorage.getItem("primary:lastGrade");
     return saved ? Number(saved) : null;
+  });
+  // Stable across the render — captured once when the page mounts so the
+  // greeting doesn't change mid-session after we mark today as visited.
+  const [visitContext] = useState(() => {
+    const today = new Date().toISOString().slice(0, 10);
+    const last = readLastVisit();
+    return {
+      daysSinceLastVisit: last ? Math.max(0, daysBetween(last, today)) : null,
+      isWeekend: [0, 6].includes(new Date().getDay()),
+    };
   });
 
   useEffect(() => {
@@ -68,6 +121,8 @@ export default function Primary() {
           if (created) setPet(created as Pet);
         }
       }
+      // Record this visit *after* we've captured visitContext above.
+      writeLastVisit();
     })();
   }, []);
 
@@ -83,8 +138,18 @@ export default function Primary() {
 
   // First-time visitor → inline grade picker, then immediately show CTA.
   const needsGrade = grade == null;
-  const sparkLine = pickSparkLine(pet, streak);
+  const sparkLine = pickSparkLine({
+    pet,
+    streak,
+    daysSinceLastVisit: visitContext.daysSinceLastVisit,
+    isWeekend: visitContext.isWeekend,
+  });
   const currentGradeName = grades.find(g => g.id === grade)?.name_cn ?? "";
+
+  // Visualize bond as 10 hearts so kids read it instantly.
+  const bondNow = Math.max(0, Math.min(100, pet?.bond ?? 0));
+  const bondHearts = Math.round(bondNow / 10);
+  const bondToLevel = Math.max(0, 100 - bondNow);
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
@@ -122,11 +187,21 @@ export default function Primary() {
                 🦊
               </div>
             </Link>
-            <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-bold text-rose-700 shadow-sm">
-              Spark · Lv.{pet?.level ?? 1}
-              <span className="text-rose-400">·</span>
-              <Heart className="size-3 fill-rose-500 stroke-rose-600" />
-              {pet?.bond ?? 0}/100
+            <div className="mt-4 inline-flex flex-col items-center gap-1 rounded-2xl bg-white/85 px-4 py-2 text-xs font-bold text-rose-700 shadow-sm">
+              <div className="flex items-center gap-2">
+                <span>Spark · Lv.{pet?.level ?? 1}</span>
+                <span className="text-rose-300">·</span>
+                <span aria-label={`亲密度 ${bondNow} / 100`} className="tracking-tight">
+                  {Array.from({ length: 10 }).map((_, i) => (
+                    <span key={i}>{i < bondHearts ? "❤️" : "🤍"}</span>
+                  ))}
+                </span>
+              </div>
+              <div className="text-[10px] font-semibold text-rose-500">
+                {bondToLevel === 0
+                  ? "马上就要升级啦!"
+                  : `距离升级还差 ${bondToLevel} ❤️`}
+              </div>
             </div>
             <p className="mx-auto mt-3 max-w-md text-lg font-extrabold leading-snug text-rose-900 dark:text-rose-100">
               "{sparkLine}"

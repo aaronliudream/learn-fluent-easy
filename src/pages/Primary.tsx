@@ -76,8 +76,7 @@ export default function Primary() {
 
   function goAdventure() {
     if (grade == null) return;
-    // Phase 2 will replace this with /primary/adventure/today.
-    nav(`/primary/grade/${grade}`);
+    nav(`/primary/adventure`);
   }
 
   // First-time visitor → inline grade picker, then immediately show CTA.

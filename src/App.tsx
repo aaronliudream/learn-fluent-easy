@@ -51,6 +51,7 @@ const PrimaryGrade = lazy(() => import("./pages/PrimaryGrade.tsx"));
 const PrimaryAssessment = lazy(() => import("./pages/PrimaryAssessment.tsx"));
 const PrimaryGames = lazy(() => import("./pages/PrimaryGames.tsx"));
 const PrimaryLesson = lazy(() => import("./pages/PrimaryLesson.tsx"));
+const PrimaryAdventure = lazy(() => import("./pages/PrimaryAdventure.tsx"));
 const PrimaryParent = lazy(() => import("./pages/PrimaryParent.tsx"));
 const PrimaryCulture = lazy(() => import("./pages/PrimaryCulture.tsx"));
 const PrimaryReading = lazy(() => import("./pages/PrimaryReading.tsx"));
@@ -233,6 +234,7 @@ const App = () => (
           <Route path="/primary/games/:grade" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
           <Route path="/primary/games/:grade/:type" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
           <Route path="/primary/lesson/:id" element={<ChineseOnlyRoute><PrimaryLesson /></ChineseOnlyRoute>} />
+          <Route path="/primary/adventure" element={<ChineseOnlyRoute><PrimaryAdventure /></ChineseOnlyRoute>} />
          <Route path="/primary/parent" element={<ChineseOnlyRoute><PrimaryParent /></ChineseOnlyRoute>} />
           <Route path="/primary/culture/:grade" element={<ChineseOnlyRoute><PrimaryCulture /></ChineseOnlyRoute>} />
           <Route path="/primary/reading/grade/:grade" element={<ChineseOnlyRoute><PrimaryReading /></ChineseOnlyRoute>} />

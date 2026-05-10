@@ -193,14 +193,39 @@ const Auth = () => {
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    // Capture any pre-existing guest session so we can migrate its data after sign-in.
+    const { data: pre } = await supabase.auth.getSession();
+    const guestUserId = pre?.session?.user?.id ?? null;
+
     const { error } = await supabase.auth.signInWithPassword({ email, password });
-    setLoading(false);
     if (error) {
+      setLoading(false);
       toast.error(error.message);
-    } else {
-      toast.success(t("登录成功"));
-      navigate("/", { replace: true });
+      return;
     }
+    // Force a fresh session so subsequent requests use the real user's JWT.
+    await supabase.auth.refreshSession();
+    const { data: post } = await supabase.auth.getUser();
+    const realUserId = post?.user?.id ?? null;
+
+    if (guestUserId && realUserId && guestUserId !== realUserId) {
+      try {
+        const { data: migrated, error: mErr } = await supabase.rpc("merge_guest_to_real_user", {
+          p_guest_user_id: guestUserId,
+          p_real_user_id: realUserId,
+        });
+        if (mErr) {
+          console.warn("[Auth] merge_guest_to_real_user failed", mErr);
+        } else if ((migrated ?? 0) > 0) {
+          toast.success(t("已迁移 ") + migrated + t(" 条学习进度到你的账号"));
+        }
+      } catch (e) {
+        console.warn("[Auth] merge exception", e);
+      }
+    }
+    setLoading(false);
+    toast.success(t("登录成功"));
+    navigate("/", { replace: true });
   };
 
   const handleGoogle = async () => {

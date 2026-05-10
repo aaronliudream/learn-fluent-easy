@@ -6070,7 +6070,7 @@ export type Database = {
         }
         Relationships: []
       }
-      unified_mastery: {
+      unified_mastery_manual: {
         Row: {
           attempt_count: number | null
           correct_count: number | null
@@ -6883,6 +6883,22 @@ export type Database = {
         }
         Relationships: []
       }
+      mastery_by_skill: {
+        Row: {
+          accuracy_pct: number | null
+          attempts: number | null
+          corrects: number | null
+          fluent_count: number | null
+          master_count: number | null
+          none_count: number | null
+          score_pct: number | null
+          skill: string | null
+          total: number | null
+          user_id: string | null
+          weak_count: number | null
+        }
+        Relationships: []
+      }
       mastery_by_stage: {
         Row: {
           fluent: number | null
@@ -6956,6 +6972,27 @@ export type Database = {
           user_total: number | null
           weak_count: number | null
           weak_pct: number | null
+        }
+        Relationships: []
+      }
+      unified_mastery: {
+        Row: {
+          accuracy_pct: number | null
+          attempt_count: number | null
+          correct_count: number | null
+          due_at: string | null
+          grade: number | null
+          id: string | null
+          item_id: string | null
+          item_label: string | null
+          item_type: string | null
+          last_review_at: string | null
+          module: string | null
+          stage: string | null
+          state: string | null
+          updated_at: string | null
+          user_id: string | null
+          wrong_count: number | null
         }
         Relationships: []
       }

@@ -277,8 +277,8 @@ const App = () => (
           <Route path="/admin/feedback" element={<AdminFeedback />} />
           <Route path="/admin/grammar-content" element={<AdminGrammarContent />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/learning-center" element={<LearningCenter />} />
+          <Route path="/dashboard" element={<LearningCenter />} />
+          <Route path="/learning-center" element={<Navigate to="/dashboard" replace />} />
           <Route path="/learning-center/list" element={<LearningCenterList />} />
           <Route path="/dashboard/grammar" element={<GrammarMastery />} />
           <Route path="/me" element={<Me />} />

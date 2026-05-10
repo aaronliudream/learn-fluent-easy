@@ -58,10 +58,10 @@ import { AITalkDialog } from "@/components/AITalkDialog";
 import { Phone } from "lucide-react";
 import { fireConfetti } from "@/lib/feedback";
 import TutorChat from "@/components/tutor/TutorChat";
-import { recordUnifiedAttempt, type AttemptModule, type AttemptStage } from "@/lib/unifiedMastery";
+import { recordUnifiedAttempt, type Stage, type ModuleKey } from "@/lib/unifiedMastery";
 
 /** Map main-course levelId (1..N) to stage/grade for unified_mastery. */
-function lessonStageGrade(levelId: number): { stage: AttemptStage; grade: number } {
+function lessonStageGrade(levelId: number): { stage: Stage; grade: number } {
   if (levelId <= 2) return { stage: "primary", grade: 3 };
   if (levelId <= 4) return { stage: "junior", grade: 8 };
   return { stage: "senior", grade: 11 };

@@ -159,7 +159,11 @@ const Auth = () => {
       return;
     }
     setLoading(true);
-    const { error } = await supabase.auth.signUp({
+    // Capture pre-existing guest session so we can migrate its data after sign-in.
+    const { data: pre } = await supabase.auth.getSession();
+    const guestUserId = pre?.session?.user?.id ?? null;
+
+    const { data: signUpData, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -167,27 +171,60 @@ const Auth = () => {
         data: { display_name: name || email.split("@")[0] },
       },
     });
-    setLoading(false);
     if (error) {
+      setLoading(false);
       toast.error(error.message);
-    } else {
-      // Persist age band + minor flag to profile (best-effort, after auth state lands)
-      const { data: u } = await supabase.auth.getUser();
-      if (u?.user?.id) {
-        await supabase.from("profiles").upsert({
-          user_id: u.user.id,
-          preferred_language: lang,
-          age_band: emailAgeBand,
-          is_minor: emailAgeBand === "child" || emailAgeBand === "teen",
-          data_minimization: emailAgeBand !== "adult",
-        }, { onConflict: "user_id" });
-      }
-      toast.success(t("注册成功！正在登录…"));
-      import("@/lib/funnel").then(m =>
-        m.trackFunnel("signup", "completed", { method: "email", age_band: emailAgeBand })
-      );
-      navigate("/", { replace: true });
+      return;
     }
+
+    // If the project requires email confirmation, signUp returns no session.
+    // Try a direct password sign-in so the user lands authenticated immediately.
+    let hasSession = !!signUpData?.session;
+    if (!hasSession) {
+      const { error: siErr } = await supabase.auth.signInWithPassword({ email, password });
+      if (siErr) {
+        setLoading(false);
+        toast.success(t("注册成功！请前往邮箱完成验证后再登录"), { duration: 8000 });
+        return;
+      }
+      hasSession = true;
+    }
+    // Force a fresh session so subsequent requests use the real user's JWT.
+    await supabase.auth.refreshSession();
+
+    // Migrate any prior guest progress
+    const { data: post } = await supabase.auth.getUser();
+    const realUserId = post?.user?.id ?? null;
+    if (guestUserId && realUserId && guestUserId !== realUserId) {
+      try {
+        const { data: migrated } = await supabase.rpc("merge_guest_to_real_user", {
+          p_guest_user_id: guestUserId,
+          p_real_user_id: realUserId,
+        });
+        if ((migrated ?? 0) > 0) {
+          toast.success(t("已迁移 ") + migrated + t(" 条学习进度到你的账号"));
+        }
+      } catch (e) {
+        console.warn("[Auth] merge exception", e);
+      }
+    }
+
+    // Persist age band + minor flag to profile
+    if (realUserId) {
+      await supabase.from("profiles").upsert({
+        user_id: realUserId,
+        preferred_language: lang,
+        age_band: emailAgeBand,
+        is_minor: emailAgeBand === "child" || emailAgeBand === "teen",
+        data_minimization: emailAgeBand !== "adult",
+      }, { onConflict: "user_id" });
+    }
+    setLoading(false);
+    toast.success(t("注册成功，已自动登录 🎉"));
+    import("@/lib/funnel").then(m =>
+      m.trackFunnel("signup", "completed", { method: "email", age_band: emailAgeBand })
+    );
+    navigate("/", { replace: true });
   };
 
   const handleSignIn = async (e: React.FormEvent) => {

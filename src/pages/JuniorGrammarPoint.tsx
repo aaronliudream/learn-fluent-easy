@@ -35,6 +35,7 @@ type Pt = {
   code: string | null;
   title: string;
   cefr: string;
+  grade: number | null;
   explanation_md: string;
   // New rich content fields (may be missing/empty for legacy points)
   teacher_script: LessonSegment[] | null;
@@ -75,7 +76,7 @@ export default function JuniorGrammarPoint() {
       const [a, b] = await Promise.all([
         supabase
           .from("junior_grammar_points")
-          .select("id,code,title,cefr,explanation_md,teacher_script,immersion_cards,mnemonic,content_depth")
+          .select("id,code,title,cefr,grade,explanation_md,teacher_script,immersion_cards,mnemonic,content_depth")
           .eq("id", id)
           .maybeSingle(),
         supabase
@@ -160,9 +161,11 @@ export default function JuniorGrammarPoint() {
     // Feed the cross-stage 语法掌握全景图
     if (pt?.code) recordPanoramaAttempt(`junior:${pt.code}`, isPositive);
     if (pt) {
+      const rawG = pt.grade ?? 1;
+      const absGrade = rawG >= 1 && rawG <= 3 ? rawG + 6 : rawG;
       recordUnifiedAttempt({
         stage: "junior",
-        grade: 7,
+        grade: absGrade,
         module: "grammar",
         item_type: q.question_type || "mcq",
         item_id: pt.id,

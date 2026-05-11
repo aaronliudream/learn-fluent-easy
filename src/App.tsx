@@ -52,6 +52,8 @@ const PrimarySightWords = lazy(() => import("./pages/PrimarySightWords.tsx"));
 const PrimarySightWordsLearn = lazy(() => import("./pages/PrimarySightWordsLearn.tsx"));
 const PrimarySightWordsQuiz = lazy(() => import("./pages/PrimarySightWordsQuiz.tsx"));
 const PrimaryRolePlays = lazy(() => import("./pages/PrimaryRolePlays.tsx"));
+const PrimaryListening = lazy(() => import("./pages/PrimaryListening.tsx"));
+const PrimaryListeningPlay = lazy(() => import("./pages/PrimaryListeningPlay.tsx"));
 const PrimaryVocab = lazy(() => import("./pages/PrimaryVocab.tsx"));
 const PrimaryChat = lazy(() => import("./pages/PrimaryChat.tsx"));
 const PrimaryGrade = lazy(() => import("./pages/PrimaryGrade.tsx"));
@@ -238,6 +240,8 @@ const App = () => (
           <Route path="/primary/sight-words/learn/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsLearn /></ChineseOnlyRoute>} />
           <Route path="/primary/sight-words/quiz/:groupId" element={<ChineseOnlyRoute><PrimarySightWordsQuiz /></ChineseOnlyRoute>} />
           <Route path="/primary/roleplays" element={<ChineseOnlyRoute><PrimaryRolePlays /></ChineseOnlyRoute>} />
+          <Route path="/primary/listening" element={<ChineseOnlyRoute><PrimaryListening /></ChineseOnlyRoute>} />
+          <Route path="/primary/listening/play/:id" element={<ChineseOnlyRoute><PrimaryListeningPlay /></ChineseOnlyRoute>} />
           {/* Legacy redirects */}
           <Route path="/primary/sightwords" element={<Navigate to="/primary/sight-words" replace />} />
           <Route path="/primary/sightwords/learn/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsLearn /></ChineseOnlyRoute>} />

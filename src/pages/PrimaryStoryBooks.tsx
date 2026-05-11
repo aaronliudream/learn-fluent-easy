@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, Lock, LockOpen, BookOpen, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import {
   PRIMARY_STORY_BOOKS,
-  getBooksSorted,
   type StoryBook,
 } from "@/data/primaryStoryBooks";
+import { PRIMARY_STORY_BOOKS_G2 } from "@/data/primaryStoryBooksG2";
 import { supabase } from "@/integrations/supabase/client";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
@@ -37,6 +37,10 @@ function loadLocal(): Record<string, CompRec> {
 }
 
 export default function PrimaryStoryBooks() {
+  const [sp] = useSearchParams();
+  const isG2 = sp.get("grade") === "2";
+  const DATA = isG2 ? PRIMARY_STORY_BOOKS_G2 : PRIMARY_STORY_BOOKS;
+  const gradeQ = isG2 ? "?grade=2" : "";
   const [completed, setCompleted] = useState<Record<string, CompRec>>(() => loadLocal());
   // 锁定卡片点击时弹的 Spark 气泡(指向当前可读的那本)
   const [lockedHint, setLockedHint] = useState<{ blocked: StoryBook; nextOpen: StoryBook | null } | null>(null);
@@ -71,7 +75,10 @@ export default function PrimaryStoryBooks() {
     })();
   }, []);
 
-  const sorted = useMemo(() => getBooksSorted(), []);
+  const sorted = useMemo(
+    () => [...DATA].sort((a, b) => a.sortOrder - b.sortOrder),
+    [DATA]
+  );
   const completedIds = useMemo(() => new Set(Object.keys(completed)), [completed]);
 
   // 让小月在书架页就能聊"这里是哪些书 / 哪本可读 / 该挑哪本"。
@@ -151,11 +158,11 @@ export default function PrimaryStoryBooks() {
     return ([1, 2, 3] as const).map(lv => ({
       lv,
       meta: LEVEL_META[lv],
-      items: PRIMARY_STORY_BOOKS
+      items: DATA
         .filter(b => b.level === lv)
         .sort((a, b) => a.sortOrder - b.sortOrder),
     }));
-  }, []);
+  }, [DATA]);
 
   return (
     <main

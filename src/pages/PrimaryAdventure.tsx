@@ -23,6 +23,8 @@ import { PRIMARY_STORY_BOOKS_G2 } from "@/data/primaryStoryBooksG2";
 import { PHONICS_ITEMS_G2 } from "@/data/primaryPhonicsG2";
 import { SIGHT_WORD_ITEMS_G2 } from "@/data/primarySightWordsG2";
 import { PRIMARY_LISTENING_DIALOGUES_G2 } from "@/data/primaryListeningDialoguesG2";
+import G2_LESSONS from "@/data/aiLessonsG2.json";
+const G2_LESSON_KEYS = Object.keys(G2_LESSONS as Record<string, unknown>);
 
 // 月亮称号 — 强化 Big Moon English 品牌
 function moonTitle(bond: number): { emoji: string; label: string } {
@@ -108,13 +110,31 @@ export default function PrimaryAdventure() {
         const countIn = (set: Set<string>, items: { id: string }[]) =>
           items.filter((it) => set.has(it.id)).length;
 
-        setMyProgress([
+        // G2: also pull AI lesson completions (30 节,只在 G2 显示)
+        let g2LessonDone = 0;
+        if (isG2) {
+          const { data: lessonRows } = await supabase
+            .from("primary_lesson_completion")
+            .select("lesson_key")
+            .eq("user_id", uid);
+          const doneKeys = new Set((lessonRows ?? []).map((r: any) => r.lesson_key as string));
+          g2LessonDone = G2_LESSON_KEYS.filter((k) => doneKeys.has(k)).length;
+        }
+
+        const baseRows: ProgressRow[] = [
           { emoji: "🔤", label: "字母拼读", done: countIn(phMastered, phonicsItems), total: phonicsItems.length, color: "from-sky-400 to-indigo-400" },
           { emoji: "🟣", label: "常见小词", done: countIn(swMastered, swItems),     total: swItems.length,     color: "from-violet-400 to-fuchsia-400" },
           { emoji: "🎧", label: "听一听",   done: countIn(lsDone, lsItems),         total: lsItems.length,     color: "from-amber-400 to-orange-400" },
           { emoji: "📚", label: "读绘本",   done: countIn(sbDone, sbItems), total: sbItems.length,  color: "from-emerald-400 to-teal-400" },
           { emoji: "🎭", label: "演故事",   done: countIn(rpDone, rpItems), total: rpItems.length,  color: "from-rose-400 to-pink-400" },
-        ]);
+        ];
+        if (isG2) {
+          baseRows.push({
+            emoji: "📝", label: "一节课", done: g2LessonDone, total: G2_LESSON_KEYS.length,
+            color: "from-indigo-400 to-purple-400",
+          });
+        }
+        setMyProgress(baseRows);
       }
       setLoading(false);
     })();

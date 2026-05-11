@@ -18,6 +18,9 @@ import { SIGHT_WORD_ITEMS } from "@/data/primarySightWords";
 import { PRIMARY_LISTENING_DIALOGUES } from "@/data/primaryListeningDialogues";
 import { PRIMARY_ROLE_PLAYS } from "@/data/primaryRolePlays";
 import { PRIMARY_STORY_BOOKS } from "@/data/primaryStoryBooks";
+import { PHONICS_ITEMS_G2 } from "@/data/primaryPhonicsG2";
+import { SIGHT_WORD_ITEMS_G2 } from "@/data/primarySightWordsG2";
+import { PRIMARY_LISTENING_DIALOGUES_G2 } from "@/data/primaryListeningDialoguesG2";
 
 // 月亮称号 — 强化 Big Moon English 品牌
 function moonTitle(bond: number): { emoji: string; label: string } {
@@ -27,7 +30,7 @@ function moonTitle(bond: number): { emoji: string; label: string } {
   return { emoji: "✨", label: "月光好朋友" };
 }
 
-type ProgressRow = { emoji: string; label: string; done: number; total: number; color: string };
+type ProgressRow = { emoji: string; label: string; done: number; total: number; color: string; comingSoon?: boolean };
 
 // Phase 2 — Daily Adventure.
 // One linear flow that strings vocab → lesson → reading → culture
@@ -74,20 +77,41 @@ export default function PrimaryAdventure() {
         const { data: p } = await supabase.from("pet_state").select("name,level,bond").eq("user_id", uid).maybeSingle();
         if (p) setPet(p as Pet);
 
-        // 各模块进度统计 — 用 head + count,避免拉数据
-        const [ph, sw, ls, rp, sb] = await Promise.all([
-          supabase.from("primary_phonics_mastery").select("phonics_id", { count: "exact", head: true }).eq("user_id", uid),
-          supabase.from("primary_sight_word_mastery").select("word_id", { count: "exact", head: true }).eq("user_id", uid),
-          supabase.from("primary_listening_completion").select("dialogue_id", { count: "exact", head: true }).eq("user_id", uid),
-          supabase.from("primary_roleplay_completion").select("roleplay_id", { count: "exact", head: true }).eq("user_id", uid),
-          supabase.from("primary_storybook_completion").select("book_id", { count: "exact", head: true }).eq("user_id", uid),
+        // 按 grade 切换数据池;mastery 用 level >= 2 口径,completion 用 row 存在即算
+        const isG2 = grade === 2;
+        const phonicsItems = isG2 ? PHONICS_ITEMS_G2 : PHONICS_ITEMS;
+        const swItems      = isG2 ? SIGHT_WORD_ITEMS_G2 : SIGHT_WORD_ITEMS;
+        const lsItems      = isG2 ? PRIMARY_LISTENING_DIALOGUES_G2 : PRIMARY_LISTENING_DIALOGUES;
+        const rpItems      = isG2 ? [] : PRIMARY_ROLE_PLAYS;     // G2 未接入
+        const sbItems      = isG2 ? [] : PRIMARY_STORY_BOOKS;    // G2 未接入
+
+        const [phRows, swRows, lsRows, rpRows, sbRows] = await Promise.all([
+          supabase.from("primary_phonics_mastery").select("phonics_id,mastery_level").eq("user_id", uid),
+          supabase.from("primary_sight_word_mastery").select("word_id,mastery_level").eq("user_id", uid),
+          supabase.from("primary_listening_completion").select("dialogue_id").eq("user_id", uid),
+          supabase.from("primary_roleplay_completion").select("roleplay_id").eq("user_id", uid),
+          supabase.from("primary_storybook_completion").select("book_id").eq("user_id", uid),
         ]);
+
+        const phMastered = new Set(
+          (phRows.data ?? []).filter((r: any) => (r.mastery_level ?? 0) >= 2).map((r: any) => r.phonics_id)
+        );
+        const swMastered = new Set(
+          (swRows.data ?? []).filter((r: any) => (r.mastery_level ?? 0) >= 2).map((r: any) => r.word_id)
+        );
+        const lsDone = new Set((lsRows.data ?? []).map((r: any) => r.dialogue_id));
+        const rpDone = new Set((rpRows.data ?? []).map((r: any) => r.roleplay_id));
+        const sbDone = new Set((sbRows.data ?? []).map((r: any) => r.book_id));
+
+        const countIn = (set: Set<string>, items: { id: string }[]) =>
+          items.filter((it) => set.has(it.id)).length;
+
         setMyProgress([
-          { emoji: "🔤", label: "字母拼读", done: ph.count ?? 0, total: PHONICS_ITEMS.length, color: "from-sky-400 to-indigo-400" },
-          { emoji: "🟣", label: "常见小词", done: sw.count ?? 0, total: SIGHT_WORD_ITEMS.length, color: "from-violet-400 to-fuchsia-400" },
-          { emoji: "🎧", label: "听一听",   done: ls.count ?? 0, total: PRIMARY_LISTENING_DIALOGUES.length, color: "from-amber-400 to-orange-400" },
-          { emoji: "📚", label: "读绘本",   done: sb.count ?? 0, total: PRIMARY_STORY_BOOKS.length, color: "from-emerald-400 to-teal-400" },
-          { emoji: "🎭", label: "演故事",   done: rp.count ?? 0, total: PRIMARY_ROLE_PLAYS.length, color: "from-rose-400 to-pink-400" },
+          { emoji: "🔤", label: "字母拼读", done: countIn(phMastered, phonicsItems), total: phonicsItems.length, color: "from-sky-400 to-indigo-400" },
+          { emoji: "🟣", label: "常见小词", done: countIn(swMastered, swItems),     total: swItems.length,     color: "from-violet-400 to-fuchsia-400" },
+          { emoji: "🎧", label: "听一听",   done: countIn(lsDone, lsItems),         total: lsItems.length,     color: "from-amber-400 to-orange-400" },
+          { emoji: "📚", label: "读绘本",   done: isG2 ? 0 : countIn(sbDone, sbItems), total: sbItems.length,  color: "from-emerald-400 to-teal-400", comingSoon: isG2 },
+          { emoji: "🎭", label: "演故事",   done: isG2 ? 0 : countIn(rpDone, rpItems), total: rpItems.length,  color: "from-rose-400 to-pink-400", comingSoon: isG2 },
         ]);
       }
       setLoading(false);
@@ -215,7 +239,9 @@ export default function PrimaryAdventure() {
                   <div className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
                     <div className={`h-full bg-gradient-to-r ${r.color} transition-all`} style={{ width: `${pct}%` }} />
                   </div>
-                  <span className="w-14 shrink-0 text-right tabular-nums font-bold text-muted-foreground">{r.done} / {r.total}</span>
+                  <span className="w-20 shrink-0 text-right tabular-nums font-bold text-muted-foreground">
+                    {r.comingSoon ? "📦 准备中" : `${r.done} / ${r.total}`}
+                  </span>
                 </li>
               );
             })}

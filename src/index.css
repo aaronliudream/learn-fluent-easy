@@ -440,3 +440,31 @@ All colors MUST be HSL.
 @media (prefers-reduced-motion: reduce) {
   .spark-bob, .spark-jump, .spark-pulse, .spark-tilt, .spark-spin { animation: none !important; }
 }
+
+/* ---------- Stage 4: Rocket assembly ---------- */
+@keyframes gear-pop {
+  0%   { transform: scale(0)   rotate(0deg);   opacity: 0; }
+  30%  { transform: scale(1.6) rotate(180deg); opacity: 1; }
+  70%  { transform: scale(1.4) rotate(270deg); opacity: 1; }
+  100% { transform: scale(0.4) rotate(360deg) translateY(-260px); opacity: 0; }
+}
+.gear-fly { animation: gear-pop 1.6s cubic-bezier(.55,-0.2,.55,1.4) forwards; }
+
+@keyframes liftoff {
+  0%   { transform: translateY(0)     scale(1);   }
+  20%  { transform: translateY(-10px) scale(1.05); }
+  100% { transform: translateY(-110vh) scale(1.2); }
+}
+.rocket-liftoff { animation: liftoff 3.2s cubic-bezier(.6,.05,.7,1) forwards; }
+
+@keyframes flame-flicker {
+  0%,100% { transform: scaleY(1)    translateX(0); opacity: 1; }
+  50%     { transform: scaleY(1.4)  translateX(2px); opacity: 0.85; }
+}
+.rocket-flame { animation: flame-flicker 0.18s ease-in-out infinite; transform-origin: top center; }
+
+@keyframes star-twinkle {
+  0%,100% { opacity: 0.3; transform: scale(1); }
+  50%     { opacity: 1;   transform: scale(1.4); }
+}
+.star-twinkle { animation: star-twinkle 1.6s ease-in-out infinite; }

@@ -20,6 +20,8 @@ import {
 import LessonStageEngine from "@/components/LessonStageEngine";
 import { G2_ALL_LESSON_STAGES } from "@/data/g2AllLessonStages";
 import { pickPhrase } from "@/data/sparkPhrases";
+import SparkBubble from "@/components/SparkBubble";
+import { pickGreetingByTime } from "@/data/sparkMoods";
 
 type Expr = { en: string; cn: string; scene?: string };
 type Vocab = { word: string; pron?: string; meaning?: string; example?: string; example_cn?: string };
@@ -99,6 +101,7 @@ function LessonList() {
   const [loading, setLoading] = useState(true);
   const [openChapter, setOpenChapter] = useState<number | null>(null);
   const [sparkLine] = useState(() => pickSparkLine());
+  const [greeting] = useState(() => pickGreetingByTime());
   const [showChapterModal, setShowChapterModal] = useState<G2Chapter | null>(null);
 
   const doneIds = useMemo(() => {
@@ -153,10 +156,10 @@ function LessonList() {
 
       <div className="mb-4 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-4 shadow-tile dark:border-amber-700 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
         <div className="flex items-start gap-3">
-          <div className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-3xl shadow-md">🦊</div>
+          <SparkBubble mood="default" size="lg" />
           <div className="min-w-0 flex-1">
             <div className="text-base font-extrabold">和 Spark 的英语冒险</div>
-            <div className="mt-0.5 text-sm text-amber-800 dark:text-amber-200">"{sparkLine}"</div>
+            <div className="mt-0.5 text-sm text-amber-800 dark:text-amber-200">"{greeting} {sparkLine}"</div>
             <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/60 dark:bg-amber-950/40">
               <div className="h-full bg-gradient-to-r from-amber-500 to-orange-500 transition-all" style={{ width: `${(totalDone / 30) * 100}%` }} />
             </div>

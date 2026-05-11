@@ -8,10 +8,25 @@ import Stage5FillBlank from "./lesson-stages/Stage5FillBlank";
 import { pickPhrase } from "@/data/sparkPhrases";
 import type { LessonStages } from "@/data/g2LessonStages";
 import { prefetchTTSBatch } from "@/lib/speak";
+import SparkBubble from "./SparkBubble";
+import { SparkMoodProvider, useSparkMood } from "@/contexts/SparkMoodContext";
 
 const STAGE_NAMES = ["看 + 听", "听音配图", "看图配词", "听句子", "填空小测"] as const;
 
-export default function LessonStageEngine({
+export default function LessonStageEngine(props: {
+  lesson_id: string;
+  stages: LessonStages;
+  onExit: () => void;
+  onComplete: () => void;
+}) {
+  return (
+    <SparkMoodProvider initial="curious">
+      <LessonStageEngineInner {...props} />
+    </SparkMoodProvider>
+  );
+}
+
+function LessonStageEngineInner({
   lesson_id,
   stages,
   onExit,
@@ -22,6 +37,7 @@ export default function LessonStageEngine({
   onExit: () => void;
   onComplete: () => void;
 }) {
+  const { mood, setMood } = useSparkMood();
   const [current, setCurrent] = useState<number>(() => {
     try {
       const v = sessionStorage.getItem(`lessonStage:${lesson_id}`);
@@ -52,7 +68,9 @@ export default function LessonStageEngine({
     try {
       sessionStorage.setItem(`lessonStage:${lesson_id}`, String(current));
     } catch { /* noop */ }
-  }, [current, lesson_id]);
+    // Stage opening: curious for 1.5s
+    setMood("curious", 1500);
+  }, [current, lesson_id, setMood]);
 
   useEffect(() => {
     if (muted && typeof window !== "undefined" && "speechSynthesis" in window) {
@@ -63,6 +81,7 @@ export default function LessonStageEngine({
   function nextStage() {
     setStageDoneToast(pickPhrase("stageComplete"));
     setTimeout(() => setStageDoneToast(null), 1200);
+    setMood("celebrating", 1400);
     if (current < 5) setCurrent(current + 1);
     else {
       try { sessionStorage.removeItem(`lessonStage:${lesson_id}`); } catch { /* noop */ }
@@ -79,9 +98,9 @@ export default function LessonStageEngine({
           <button onClick={onExit} aria-label="退出" className="rounded-full p-2 hover:bg-secondary">
             <ArrowLeft className="size-5" />
           </button>
+          <SparkBubble mood={mood} size="sm" />
           <div className="flex-1">
             <div className="flex items-center gap-2 text-xs font-bold">
-              <span className="text-lg">🦊</span>
               <span>关 {current}/5 · {STAGE_NAMES[current - 1]}</span>
             </div>
             <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-secondary">

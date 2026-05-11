@@ -7,6 +7,7 @@ import Stage4SentenceListen from "./lesson-stages/Stage4SentenceListen";
 import Stage5FillBlank from "./lesson-stages/Stage5FillBlank";
 import { pickPhrase } from "@/data/sparkPhrases";
 import type { LessonStages } from "@/data/g2LessonStages";
+import { prefetchTTSBatch } from "@/lib/speak";
 
 const STAGE_NAMES = ["看 + 听", "听音配图", "看图配词", "听句子", "填空小测"] as const;
 
@@ -31,6 +32,21 @@ export default function LessonStageEngine({
   });
   const [muted, setMuted] = useState(false);
   const [stageDoneToast, setStageDoneToast] = useState<string | null>(null);
+
+  // Warm the TTS cache for ALL audio in this lesson the moment the
+  // engine mounts. Otherwise the first auto-play in each stage waits
+  // on the edge-function round-trip (cold cache = 1-3s delay).
+  useEffect(() => {
+    const phrases: string[] = [];
+    stages.stage1.forEach((c) => {
+      phrases.push(c.word);
+      if (c.example_en) phrases.push(c.example_en);
+    });
+    stages.stage2.forEach((q) => phrases.push(q.audio_word));
+    stages.stage3.forEach((q) => phrases.push(q.correct_word));
+    stages.stage4.forEach((s) => phrases.push(s.en));
+    prefetchTTSBatch(phrases);
+  }, [stages]);
 
   useEffect(() => {
     try {

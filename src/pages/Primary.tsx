@@ -258,7 +258,7 @@ export default function Primary() {
                   )}
                   {phonicsOnly && !isRecommended && (
                     <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-emerald-700 shadow-sm">
-                      ✨ Phonics
+                      ✨ 2 模块
                     </span>
                   )}
                   {isPreview && !isRecommended && (
@@ -269,7 +269,7 @@ export default function Primary() {
                   <div className="absolute inset-x-3 bottom-3">
                     <div className="text-sm font-extrabold text-white drop-shadow">{g.name_cn}</div>
                     <div className="text-[10px] font-bold text-white/90 drop-shadow">
-                      {isPreview ? "📦 准备中" : phonicsOnly ? "✨ Phonics 已开放" : "✨ 完整开放"}
+                      {isPreview ? "📦 准备中" : phonicsOnly ? "✨ Phonics + 高频词" : "✨ 完整开放"}
                     </div>
                   </div>
                 </button>

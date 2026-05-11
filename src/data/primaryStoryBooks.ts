@@ -81,12 +81,12 @@ export const PRIMARY_STORY_BOOKS: StoryBook[] = [
     cover_emoji: "☀️🦊",
     reading_minutes: 2,
     pages: [
-      { page: 1, text_en: "Hi! I am Spark.", text_cn: "嗨!我是 Spark。", emoji: "🦊" },
-      { page: 2, text_en: "I see the sun.", text_cn: "我看见太阳。", emoji: "☀️" },
-      { page: 3, text_en: "The sun is up.", text_cn: "太阳升起来了。", emoji: "☀️⬆️" },
-      { page: 4, text_en: "The sun is hot.", text_cn: "太阳很热。", emoji: "☀️🔥" },
-      { page: 5, text_en: "I like the sun.", text_cn: "我喜欢太阳。", emoji: "☀️❤️" },
-      { page: 6, text_en: "Bye, sun!", text_cn: "再见,太阳!", emoji: "👋☀️" }
+      { page: 1, text_en: "Hi! I am Spark.", text_cn: "嗨!我是 Spark。", emoji: "🦊", speaker: "spark" },
+      { page: 2, text_en: "I see the sun.", text_cn: "我看见太阳。", emoji: "☀️", speaker: "spark" },
+      { page: 3, text_en: "The sun is up.", text_cn: "太阳升起来了。", emoji: "☀️⬆️", speaker: "spark" },
+      { page: 4, text_en: "The sun is hot.", text_cn: "太阳很热。", emoji: "☀️🔥", speaker: "spark" },
+      { page: 5, text_en: "I like the sun.", text_cn: "我喜欢太阳。", emoji: "☀️❤️", speaker: "spark" },
+      { page: 6, text_en: "Bye, sun!", text_cn: "再见,太阳!", emoji: "👋☀️", speaker: "spark" }
     ],
     questions: [
       {

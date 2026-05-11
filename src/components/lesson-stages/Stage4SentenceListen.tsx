@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { Volume2, Check } from "lucide-react";
+import { Volume2, ChevronRight, HelpCircle } from "lucide-react";
 import type { Stage4Sentence } from "@/data/g2LessonStages";
 import { speak, stopSpeaking } from "@/lib/speak";
+import QuizOverlay from "./QuizOverlay";
 
 /** Approximate per-word duration for Karaoke highlight when using MP3 TTS. */
 const MS_PER_WORD = 360;
@@ -9,7 +10,7 @@ const MS_PER_WORD = 360;
 export default function Stage4SentenceListen({ sentences, onComplete }: { sentences: Stage4Sentence[]; onComplete: () => void }) {
   const [i, setI] = useState(0);
   const [activeWord, setActiveWord] = useState(-1);
-  const [seen, setSeen] = useState<Set<number>>(new Set([0]));
+  const [phase, setPhase] = useState<"listen" | "quiz" | "revealed">("listen");
   const playedRef = useRef(false);
   const timersRef = useRef<number[]>([]);
   const s = sentences[i];
@@ -37,7 +38,7 @@ export default function Stage4SentenceListen({ sentences, onComplete }: { senten
   }
 
   useEffect(() => {
-    setSeen((prev) => new Set(prev).add(i));
+    setPhase("listen");
     setActiveWord(-1);
     playedRef.current = false;
     const t = setTimeout(() => {
@@ -70,7 +71,7 @@ export default function Stage4SentenceListen({ sentences, onComplete }: { senten
           · {s.scene_hint}
         </div>
       )}
-      <div className="w-full rounded-3xl border-2 border-border bg-card p-6 text-center shadow-tile">
+      <div className="relative w-full rounded-3xl border-2 border-border bg-card p-6 text-center shadow-tile">
         <div className="text-2xl font-extrabold leading-relaxed md:text-3xl">
           {words.map((w, k) => {
             if (/^\s+$/.test(w)) return <span key={k}>{w}</span>;
@@ -93,29 +94,40 @@ export default function Stage4SentenceListen({ sentences, onComplete }: { senten
             );
           })}
         </div>
-        <div className="mt-3 text-base text-muted-foreground">{s.cn}</div>
+        {phase === "revealed" && (
+          <div className="mt-3 text-base font-bold text-foreground">{s.cn}</div>
+        )}
         <button
           onClick={play}
           className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground shadow-tile"
         >
           <Volume2 className="size-4" /> 重听
         </button>
+        {phase === "quiz" && (
+          <QuizOverlay
+            question={s.quiz.question}
+            correct={s.quiz.correct}
+            options={s.quiz.options}
+            onCorrect={() => setPhase("revealed")}
+            onWrong={() => play()}
+          />
+        )}
       </div>
 
-      {i < sentences.length - 1 ? (
+      {phase === "listen" && (
         <button
-          onClick={() => setI(i + 1)}
-          className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2 text-sm font-extrabold"
+          onClick={() => setPhase("quiz")}
+          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-5 py-2 text-sm font-extrabold text-white shadow-tile"
         >
-          <Check className="size-4" /> 听完了 · 下一句
+          <HelpCircle className="size-4" /> 我听完了 → 答题
         </button>
-      ) : (
+      )}
+      {phase === "revealed" && (
         <button
-          onClick={onComplete}
-          disabled={seen.size < sentences.length}
-          className="rounded-full bg-gradient-to-r from-pink-500 to-amber-500 px-6 py-3 text-base font-extrabold text-white shadow-tile disabled:opacity-50"
+          onClick={() => (i < sentences.length - 1 ? setI(i + 1) : onComplete())}
+          className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-pink-500 to-amber-500 px-5 py-2 text-sm font-extrabold text-white shadow-tile"
         >
-          进入下一关 →
+          {i < sentences.length - 1 ? "下一句" : "进入下一关"} <ChevronRight className="size-4" />
         </button>
       )}
     </div>

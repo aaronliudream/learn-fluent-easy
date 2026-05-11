@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Volume2, ChevronLeft, ChevronRight } from "lucide-react";
+import { Volume2, ChevronRight, HelpCircle } from "lucide-react";
 import { speak } from "@/lib/speak";
 import type { Stage1Card } from "@/data/g2LessonStages";
+import QuizOverlay from "./QuizOverlay";
 
 const BG = [
   "from-sky-50 to-cyan-100 dark:from-sky-950/40 dark:to-cyan-950/40",
@@ -14,59 +15,73 @@ const BG = [
 
 export default function Stage1WatchListen({ cards, onComplete }: { cards: Stage1Card[]; onComplete: () => void }) {
   const [i, setI] = useState(0);
-  const [seen, setSeen] = useState<Set<number>>(new Set([0]));
+  const [phase, setPhase] = useState<"listen" | "quiz" | "revealed">("listen");
   const card = cards[i];
 
   useEffect(() => {
-    setSeen((s) => new Set(s).add(i));
+    setPhase("listen");
     const t = setTimeout(() => speak(card.word), 250);
     return () => clearTimeout(t);
   }, [i, card.word]);
 
-  const allSeen = seen.size >= cards.length;
+  function handleCorrect() {
+    setPhase("revealed");
+  }
+
+  function next() {
+    if (i < cards.length - 1) setI(i + 1);
+    else onComplete();
+  }
 
   return (
     <div className="flex flex-col items-center gap-5">
       <div className="text-xs font-bold text-muted-foreground">{i + 1} / {cards.length}</div>
-      <div className={`w-full rounded-3xl border-2 border-border bg-gradient-to-br ${BG[i % BG.length]} p-8 text-center shadow-tile`}>
+      <div className={`relative w-full rounded-3xl border-2 border-border bg-gradient-to-br ${BG[i % BG.length]} p-8 text-center shadow-tile`}>
         <div className="text-[110px] leading-none">{card.emoji}</div>
         <div className="mt-4 text-3xl font-black text-foreground">{card.word}</div>
         <div className="mt-1 text-sm text-muted-foreground">{card.ipa}</div>
-        <div className="mt-3 text-xl font-bold text-foreground">{card.meaning_cn}</div>
-        <div className="mt-4 rounded-xl bg-background/60 p-3 text-sm">
-          <div className="font-semibold">{card.example_en}</div>
-          <div className="text-muted-foreground">{card.example_cn}</div>
-        </div>
+        {phase === "revealed" && (
+          <>
+            <div className="mt-3 text-xl font-bold text-foreground">{card.meaning_cn}</div>
+            <div className="mt-4 rounded-xl bg-background/60 p-3 text-sm">
+              <div className="font-semibold">{card.example_en}</div>
+              <div className="text-muted-foreground">{card.example_cn}</div>
+            </div>
+          </>
+        )}
         <button
           onClick={() => speak(card.word)}
           className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground shadow-tile hover:-translate-y-0.5 transition"
         >
           <Volume2 className="size-4" /> 再听一次
         </button>
+
+        {phase === "quiz" && (
+          <QuizOverlay
+            question={card.quiz.question}
+            correct={card.quiz.correct}
+            options={card.quiz.options}
+            onCorrect={handleCorrect}
+            onWrong={() => speak(card.word)}
+          />
+        )}
       </div>
 
-      <div className="flex w-full items-center justify-between gap-3">
-        <button
-          onClick={() => setI((v) => Math.max(0, v - 1))}
-          disabled={i === 0}
-          className="inline-flex items-center gap-1 rounded-full border-2 border-border bg-card px-4 py-2 text-sm font-bold disabled:opacity-40"
-        >
-          <ChevronLeft className="size-4" /> 上一个
-        </button>
-        {i < cards.length - 1 ? (
+      <div className="flex w-full items-center justify-end gap-3">
+        {phase === "listen" && (
           <button
-            onClick={() => setI((v) => Math.min(cards.length - 1, v + 1))}
-            className="inline-flex items-center gap-1 rounded-full bg-secondary px-4 py-2 text-sm font-bold"
+            onClick={() => setPhase("quiz")}
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-5 py-2 text-sm font-extrabold text-white shadow-tile"
           >
-            下一个 <ChevronRight className="size-4" />
+            <HelpCircle className="size-4" /> 我听到了 → 答题
           </button>
-        ) : (
+        )}
+        {phase === "revealed" && (
           <button
-            onClick={onComplete}
-            disabled={!allSeen}
-            className="rounded-full bg-gradient-to-r from-pink-500 to-amber-500 px-6 py-2 text-sm font-extrabold text-white shadow-tile disabled:opacity-50"
+            onClick={next}
+            className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-pink-500 to-amber-500 px-5 py-2 text-sm font-extrabold text-white shadow-tile"
           >
-            进入下一关 →
+            {i < cards.length - 1 ? "下一个" : "进入下一关"} <ChevronRight className="size-4" />
           </button>
         )}
       </div>

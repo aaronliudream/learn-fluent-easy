@@ -290,7 +290,9 @@ export default function PrimaryStoryBookRead() {
                     <span className="grid size-6 shrink-0 place-items-center rounded-full bg-muted text-[11px] font-extrabold">{String.fromCharCode(65 + i)}</span>
                     <div className="flex-1">
                       <div className="text-sm font-bold">{opt.text_en}</div>
-                      <div className="text-[11px] text-muted-foreground">{opt.text_cn}</div>
+                      {opt.text_cn && opt.text_cn.trim() !== opt.text_en.trim() && (
+                        <div className="text-[11px] text-muted-foreground">{opt.text_cn}</div>
+                      )}
                     </div>
                     {showState && opt.correct && <span className="text-lg">✅</span>}
                     {isPicked && !opt.correct && <span className="text-lg">💭</span>}

@@ -30,6 +30,10 @@ export type StoryBookPage = {
   text_en: string;     // 英文句子
   text_cn: string;     // 中文翻译
   emoji: string;       // 视觉理解 emoji
+  // 朗读这一句时使用的声音角色。绘本里大部分句子都是孩子的视角,
+  // 默认 "kid"(更明亮的童声 + 略快语速)。当出现妈妈/爸爸/Spark
+  // 直接说话的句子时,可以指定不同的声音让孩子分清谁在讲话。
+  speaker?: "kid" | "mom" | "dad" | "spark" | "narrator";
 };
 
 export type StoryQuestionOption = {
@@ -77,12 +81,12 @@ export const PRIMARY_STORY_BOOKS: StoryBook[] = [
     cover_emoji: "☀️🦊",
     reading_minutes: 2,
     pages: [
-      { page: 1, text_en: "Hi! I am Spark.", text_cn: "嗨!我是 Spark。", emoji: "🦊" },
-      { page: 2, text_en: "I see the sun.", text_cn: "我看见太阳。", emoji: "☀️" },
-      { page: 3, text_en: "The sun is up.", text_cn: "太阳升起来了。", emoji: "☀️⬆️" },
-      { page: 4, text_en: "The sun is hot.", text_cn: "太阳很热。", emoji: "☀️🔥" },
-      { page: 5, text_en: "I like the sun.", text_cn: "我喜欢太阳。", emoji: "☀️❤️" },
-      { page: 6, text_en: "Bye, sun!", text_cn: "再见,太阳!", emoji: "👋☀️" }
+      { page: 1, text_en: "Hi! I am Spark.", text_cn: "嗨!我是 Spark。", emoji: "🦊", speaker: "spark" },
+      { page: 2, text_en: "I see the sun.", text_cn: "我看见太阳。", emoji: "☀️", speaker: "spark" },
+      { page: 3, text_en: "The sun is up.", text_cn: "太阳升起来了。", emoji: "☀️⬆️", speaker: "spark" },
+      { page: 4, text_en: "The sun is hot.", text_cn: "太阳很热。", emoji: "☀️🔥", speaker: "spark" },
+      { page: 5, text_en: "I like the sun.", text_cn: "我喜欢太阳。", emoji: "☀️❤️", speaker: "spark" },
+      { page: 6, text_en: "Bye, sun!", text_cn: "再见,太阳!", emoji: "👋☀️", speaker: "spark" }
     ],
     questions: [
       {

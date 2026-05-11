@@ -24,6 +24,9 @@ const ELEVENLABS_VOICE_MAP: Record<string, string> = {
   "el:lily":    "pFZP5JQG7iQjIQuC4Bku", // warm, soft female — best for K-G1
   "el:matilda": "XrExE9yKIg1WjnnlVkGX", // gentle storyteller female
   "el:sarah":   "EXAVITQu4vr4xnSDxMaL", // friendly female
+  "el:brian":   "nPczCjzI2devNBz1zQrb", // warm adult male — used for "Dad" lines
+  "el:george":  "JBFqnCBsd6RMkjVDRZzb", // mature male narrator
+  "el:callum":  "N2lVS1w4EtoT3dr4eOWO", // playful male — fits Spark the fox
 };
 
 // CosyVoice-v2 voice catalogue (all suffixed with _v2). Map our six OpenAI-style

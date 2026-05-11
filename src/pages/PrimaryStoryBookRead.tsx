@@ -4,7 +4,14 @@ import { ArrowLeft, Volume2, RotateCcw, Sparkles, ChevronLeft, ChevronRight } fr
 import BackLink from "@/components/BackLink";
 import { findBook } from "@/data/primaryStoryBooks";
 import { supabase } from "@/integrations/supabase/client";
-import { speakKid as speak, stopSpeaking } from "@/lib/speak";
+import { speak, stopSpeaking } from "@/lib/speak";
+import { pickStoryVoice } from "@/lib/storyVoice";
+import type { StoryBookPage } from "@/data/primaryStoryBooks";
+
+function speakPage(page: StoryBookPage) {
+  const v = pickStoryVoice(page.speaker);
+  return speak(page.text_en, { voiceId: v.voiceId, speed: v.speed });
+}
 
 const LOCAL_KEY = "primary_storybook_completion_v1";
 type CompRec = { questions_correct: number; questions_total: number; read_count: number };
@@ -38,7 +45,7 @@ export default function PrimaryStoryBookRead() {
     setQIdx(0);
     setPickedIdx(null);
     setCorrectCount(0);
-    const t = setTimeout(() => speak(book.pages[0].text_en), 350);
+    const t = setTimeout(() => speakPage(book.pages[0]), 350);
     return () => clearTimeout(t);
   }, [id, book]);
 
@@ -61,7 +68,7 @@ export default function PrimaryStoryBookRead() {
     if (next < 0 || next >= totalPages) return;
     stopSpeaking();
     setPageIdx(next);
-    setTimeout(() => speak(book.pages[next].text_en), 200);
+    setTimeout(() => speakPage(book.pages[next]), 200);
   }
 
   function startQuiz() {
@@ -119,7 +126,7 @@ export default function PrimaryStoryBookRead() {
     setQIdx(0);
     setPickedIdx(null);
     setCorrectCount(0);
-    setTimeout(() => speak(book.pages[0].text_en), 200);
+    setTimeout(() => speakPage(book.pages[0]), 200);
   }
 
   function onTouchStart(e: React.TouchEvent) { touchX.current = e.touches[0].clientX; }
@@ -173,7 +180,7 @@ export default function PrimaryStoryBookRead() {
                   <div className="text-2xl font-extrabold text-amber-900 dark:text-amber-100 md:text-3xl">{page.text_en}</div>
                   <div className="mt-1 text-sm font-bold text-amber-700 dark:text-amber-200">{page.text_cn}</div>
                   <button
-                    onClick={() => speak(page.text_en)}
+                    onClick={() => speakPage(page)}
                     className="mt-3 inline-flex items-center gap-1 rounded-full bg-amber-500 px-3 py-1.5 text-xs font-extrabold text-white shadow-sm hover:bg-amber-600"
                   >
                     <Volume2 className="size-3.5" /> 听 Spark 念

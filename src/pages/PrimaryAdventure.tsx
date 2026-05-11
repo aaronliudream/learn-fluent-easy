@@ -207,29 +207,27 @@ export default function PrimaryAdventure() {
       {/* 快捷探索工具栏 — 自由学习入口,不参与每日 4 步 */}
       <section className="mt-5">
         <div className="mb-2 flex items-center justify-between px-1">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+          <h2 className="text-sm font-bold tracking-wider text-muted-foreground">
             想玩什么?
           </h2>
         </div>
-        <div className="-mx-5 overflow-x-auto px-5 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex min-w-max items-stretch gap-2">
-            {[
-              { to: "/primary/phonics",    emoji: "🔤", label: "读字母", grad: "from-sky-400 to-indigo-400" },
-              { to: "/primary/sight-words",emoji: "🟣", label: "小词卡", grad: "from-violet-400 to-fuchsia-400" },
-              { to: "/primary/roleplays",  emoji: "🎭", label: "演一段", grad: "from-rose-400 to-pink-400" },
-              { to: "/primary/listening",  emoji: "🎧", label: "听聊天", grad: "from-amber-400 to-orange-400" },
-              { to: "/primary/reading",    emoji: "📚", label: "读绘本", grad: "from-emerald-400 to-teal-400" },
-            ].map((it) => (
-              <Link
-                key={it.to}
-                to={it.to}
-                className={`group flex w-20 shrink-0 flex-col items-center gap-1.5 rounded-2xl bg-gradient-to-br ${it.grad} p-2.5 text-white shadow-sm transition hover:-translate-y-0.5`}
-              >
-                <span className="grid size-10 place-items-center rounded-xl bg-white/25 text-2xl">{it.emoji}</span>
-                <span className="text-[12px] font-extrabold leading-none">{it.label}</span>
-              </Link>
-            ))}
-          </div>
+        <div className="grid grid-cols-5 gap-2 sm:gap-3">
+          {[
+            { to: "/primary/phonics",    emoji: "🔤", label: "读字母", grad: "from-sky-400 to-indigo-400" },
+            { to: "/primary/sight-words",emoji: "🟣", label: "小词卡", grad: "from-violet-400 to-fuchsia-400" },
+            { to: "/primary/roleplays",  emoji: "🎭", label: "演一段", grad: "from-rose-400 to-pink-400" },
+            { to: "/primary/listening",  emoji: "🎧", label: "听聊天", grad: "from-amber-400 to-orange-400" },
+            { to: "/primary/reading",    emoji: "📚", label: "读绘本", grad: "from-emerald-400 to-teal-400" },
+          ].map((it) => (
+            <Link
+              key={it.to}
+              to={it.to}
+              className={`group flex flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-br ${it.grad} px-2 py-3 text-white shadow-sm transition hover:-translate-y-0.5`}
+            >
+              <span className="grid size-12 place-items-center rounded-xl bg-white/25 text-3xl">{it.emoji}</span>
+              <span className="text-[15px] font-extrabold leading-none">{it.label}</span>
+            </Link>
+          ))}
         </div>
       </section>
 

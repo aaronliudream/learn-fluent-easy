@@ -22,6 +22,13 @@ import { G2_ALL_LESSON_STAGES } from "@/data/g2AllLessonStages";
 import { pickPhrase } from "@/data/sparkPhrases";
 import SparkBubble from "@/components/SparkBubble";
 import { pickGreetingByTime } from "@/data/sparkMoods";
+import RocketProgress, {
+  ROCKET_PARTS,
+  TOTAL_LESSONS,
+  detectUnlockedPart,
+  nextUnlockHint,
+} from "@/components/RocketProgress";
+import RocketLiftoff from "@/components/RocketLiftoff";
 
 type Expr = { en: string; cn: string; scene?: string };
 type Vocab = { word: string; pron?: string; meaning?: string; example?: string; example_cn?: string };
@@ -160,11 +167,14 @@ function LessonList() {
           <div className="min-w-0 flex-1">
             <div className="text-base font-extrabold">和 Spark 的英语冒险</div>
             <div className="mt-0.5 text-sm text-amber-800 dark:text-amber-200">"{greeting} {sparkLine}"</div>
+            <div className="mt-3">
+              <RocketProgress completedCount={totalDone} size="md" />
+            </div>
             <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/60 dark:bg-amber-950/40">
-              <div className="h-full bg-gradient-to-r from-amber-500 to-orange-500 transition-all" style={{ width: `${(totalDone / 30) * 100}%` }} />
+              <div className="h-full bg-gradient-to-r from-amber-500 to-orange-500 transition-all" style={{ width: `${(totalDone / TOTAL_LESSONS) * 100}%` }} />
             </div>
             <div className="mt-1.5 text-xs font-bold text-amber-900 dark:text-amber-200">
-              {loading ? "…" : `已走过 ${totalDone} / 30 站 · 完成 ${totalChapters} 个章节`}
+              {loading ? "…" : `已集齐 ${totalDone} / ${TOTAL_LESSONS} 个齿轮 · ${nextUnlockHint(totalDone)}`}
             </div>
           </div>
         </div>

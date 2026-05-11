@@ -1,11 +1,22 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, BookOpen, Check, Volume2, Sparkles, Lock } from "lucide-react";
+import { ArrowLeft, BookOpen, Check, Volume2, Sparkles, Lock, ChevronDown, ChevronUp } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { celebrateScore } from "@/lib/feedback";
 import G2_LESSONS from "@/data/aiLessonsG2.json";
+import {
+  G2_CHAPTERS,
+  type G2Chapter,
+  isChapterUnlocked,
+  isChapterCompleted,
+  isLessonUnlocked,
+  getCurrentChapter,
+  getChapterByLessonId,
+  lessonIdToIdx,
+  pickSparkLine,
+} from "@/data/g2LessonChapters";
 
 type Expr = { en: string; cn: string; scene?: string };
 type Vocab = { word: string; pron?: string; meaning?: string; example?: string; example_cn?: string };

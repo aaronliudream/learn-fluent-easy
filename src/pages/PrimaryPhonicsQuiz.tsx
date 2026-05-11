@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Check, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { speakKid as speak } from "@/lib/speak";
@@ -8,6 +8,7 @@ import {
   PHONICS_ITEMS,
   type PhonicsItem,
 } from "@/data/primaryPhonics";
+import { PHONICS_GROUPS_G2, PHONICS_ITEMS_G2 } from "@/data/primaryPhonicsG2";
 import {
   bumpPhonicsMastery,
   bumpPhonicsLevel,
@@ -25,9 +26,14 @@ import { celebratePet } from "@/components/pet/EvolutionCelebration";
  */
 export default function PrimaryPhonicsQuiz() {
   const { groupId } = useParams<{ groupId: string }>();
+  const [search] = useSearchParams();
   const nav = useNavigate();
   const isReview = groupId === "review";
-  const group = isReview ? null : PHONICS_GROUPS.find((g) => g.id === groupId);
+  const isG2 = search.get("grade") === "2" || !!groupId?.startsWith("g2_");
+  const GROUPS = isG2 ? PHONICS_GROUPS_G2 : PHONICS_GROUPS;
+  const ITEMS = isG2 ? PHONICS_ITEMS_G2 : PHONICS_ITEMS;
+  const phonicsHref = isG2 ? "/primary/phonics?grade=2" : "/primary/phonics";
+  const group = isReview ? null : GROUPS.find((g) => g.id === groupId);
 
   const [items, setItems] = useState<PhonicsItem[]>([]);
   // 每个 item 走 3 道题(轮换 3 种题型). retryArmed = 本题答错过 1 次,允许再答 1 次.
@@ -45,15 +51,15 @@ export default function PrimaryPhonicsQuiz() {
     (async () => {
       if (isReview) {
         const m = await getPhonicsMasteryMap();
-        const due = PHONICS_ITEMS.filter((it) => isDue(m.get(it.id)));
+        const due = ITEMS.filter((it) => isDue(m.get(it.id)));
         setItems(shuffle(due).slice(0, 6));
       } else if (group) {
-        const groupItems = PHONICS_ITEMS.filter((it) => it.groupId === group.id);
+        const groupItems = ITEMS.filter((it) => it.groupId === group.id);
         setItems(shuffle(groupItems));
       }
       setLoading(false);
     })();
-  }, [isReview, group]);
+  }, [isReview, group, ITEMS]);
 
   const totalItems = items.length;
   const totalQuestions = totalItems * 3;
@@ -72,7 +78,7 @@ export default function PrimaryPhonicsQuiz() {
     (async () => {
       const allCorrect = perfectItems === totalItems;
       if (!isReview && group && allCorrect) {
-        const groupItems = PHONICS_ITEMS.filter((it) => it.groupId === group.id);
+        const groupItems = ITEMS.filter((it) => it.groupId === group.id);
         await ensureGroupMastery(groupItems.map((it) => it.id), 2);
         if (cancel) return;
         celebratePet({
@@ -90,11 +96,11 @@ export default function PrimaryPhonicsQuiz() {
           subtitle: allCorrect ? "全部 3 题都对!太强啦" : "没全对的音明天会再考你哦",
         });
       }
-      const t = setTimeout(() => nav("/primary/phonics"), 1800);
+      const t = setTimeout(() => nav(phonicsHref), 1800);
       return () => clearTimeout(t);
     })();
     return () => { cancel = true; };
-  }, [isFinished, perfectItems, totalItems, isReview, group, nav]);
+  }, [isFinished, perfectItems, totalItems, isReview, group, ITEMS, nav, phonicsHref]);
 
   useEffect(() => {
     if (!q || !cur) return;
@@ -121,7 +127,7 @@ export default function PrimaryPhonicsQuiz() {
   if (!loading && totalItems === 0) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <BackLink to="/primary/phonics" className="text-sm text-muted-foreground">
+        <BackLink to={phonicsHref} className="text-sm text-muted-foreground">
           ← 返回拼读冒险
         </BackLink>
         <p className="mt-6 text-sm text-muted-foreground">
@@ -207,7 +213,7 @@ export default function PrimaryPhonicsQuiz() {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
       <BackLink
-        to="/primary/phonics"
+        to={phonicsHref}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> 返回拼读冒险

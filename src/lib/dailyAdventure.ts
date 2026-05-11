@@ -67,31 +67,64 @@ export function buildDailyAdventure(opts: {
 
   // Step 4 — Word Quest 单词奇旅(MVP:仅 G1/G2 接入,基于 Sight Words mastery)
   if (grade === 1 || grade === 2) {
-    const ready = sightWordsMasteredCount >= 6;
-    steps.push(
-      ready
-        ? {
-            kind: "game",
-            emoji: "🎮",
-            title: "和 Spark 玩单词游戏",
-            sparkLine: "今天我们玩单词奇旅吧,只要 4 分钟!",
-            cta: "开始单词奇旅",
-            to: `/primary/word-quest?grade=${grade}`,
-            estMinutes: 4,
-          }
-        : {
-            kind: "game",
-            emoji: "🎮",
-            title: "单词游戏准备中",
-            sparkLine: `再学几个单词就能玩游戏啦!现在 ${sightWordsMasteredCount}/6`,
-            cta: "去学单词",
-            to: `/primary/sight-words${gradeQ}`,
-            estMinutes: 4,
-            placeholder: true,
-            fallbackTo: `/primary/sight-words${gradeQ}`,
-            fallbackLabel: "先去学几个单词",
-          }
-    );
+    // 按星期轮换:Tue/Thu/Sat = Word Rush(节奏);其它天 = Word Quest(奇旅)。
+    // Rush 门槛 8 词,Quest 门槛 6 词。
+    const dow = new Date().getDay(); // 0=Sun..6=Sat
+    const isRushDay = dow === 2 || dow === 4 || dow === 6;
+    const game = isRushDay ? "rush" : "quest";
+    const need = isRushDay ? 8 : 6;
+    const ready = sightWordsMasteredCount >= need;
+    if (game === "rush") {
+      steps.push(
+        ready
+          ? {
+              kind: "game",
+              emoji: "⚡",
+              title: "和 Spark 玩节奏游戏",
+              sparkLine: "今天来 45 秒单词节奏挑战!",
+              cta: "开始单词节奏",
+              to: `/primary/word-rush?grade=${grade}`,
+              estMinutes: 4,
+            }
+          : {
+              kind: "game",
+              emoji: "⚡",
+              title: "节奏游戏准备中",
+              sparkLine: `再学几个单词就能玩节奏啦!现在 ${sightWordsMasteredCount}/${need}`,
+              cta: "去学单词",
+              to: `/primary/sight-words${gradeQ}`,
+              estMinutes: 4,
+              placeholder: true,
+              fallbackTo: `/primary/sight-words${gradeQ}`,
+              fallbackLabel: "先去学几个单词",
+            }
+      );
+    } else {
+      steps.push(
+        ready
+          ? {
+              kind: "game",
+              emoji: "🎮",
+              title: "和 Spark 玩单词游戏",
+              sparkLine: "今天我们玩单词奇旅吧,只要 4 分钟!",
+              cta: "开始单词奇旅",
+              to: `/primary/word-quest?grade=${grade}`,
+              estMinutes: 4,
+            }
+          : {
+              kind: "game",
+              emoji: "🎮",
+              title: "单词游戏准备中",
+              sparkLine: `再学几个单词就能玩游戏啦!现在 ${sightWordsMasteredCount}/${need}`,
+              cta: "去学单词",
+              to: `/primary/sight-words${gradeQ}`,
+              estMinutes: 4,
+              placeholder: true,
+              fallbackTo: `/primary/sight-words${gradeQ}`,
+              fallbackLabel: "先去学几个单词",
+            }
+      );
+    }
   }
 
   // Step 5 — Culture stamp / pet visit (light wind-down).

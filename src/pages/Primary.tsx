@@ -301,13 +301,13 @@ export default function Primary() {
                 </span>
               </div>
               <div className="text-[10px] font-semibold text-rose-500">
-                {bondToLevel === 0 ?
-              "马上就要升级啦!" :
-              `距离升级还差 ${bondToLevel} ❤️`}
+                <T>{bondToLevel === 0
+                  ? "马上就要升级啦!"
+                  : `距离升级还差 ${bondToLevel} ❤️`}</T>
               </div>
             </div>
             <p className="mx-auto mt-3 max-w-md text-lg font-extrabold leading-snug text-rose-900 dark:text-rose-100">
-              "{sparkLine}"
+              "<T>{sparkLine}</T>"
             </p>
             <button
             onClick={goAdventure}

@@ -329,6 +329,14 @@ export default function PrimaryAdventure() {
 
               {!done && (
                 <div className="mt-3 flex items-center justify-end gap-2">
+                  {step.placeholder && step.fallbackTo && (
+                    <Link
+                      to={step.fallbackTo}
+                      className="mr-auto text-[11px] font-bold text-amber-700 underline-offset-2 hover:underline dark:text-amber-300"
+                    >
+                      📦 {step.fallbackLabel ?? "去复习 G1 内容"} →
+                    </Link>
+                  )}
                   <button
                     onClick={() => confirmStep(step)}
                     className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-bold text-muted-foreground transition hover:text-foreground"
@@ -338,7 +346,7 @@ export default function PrimaryAdventure() {
                   </button>
                   <button
                     onClick={() => go(step)}
-                    disabled={!isCurrent}
+                    disabled={!isCurrent || step.placeholder}
                     className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 font-extrabold text-white shadow-md transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 ${
                       isMain ? "px-6 py-3 text-base" : "px-4 py-2 text-sm"
                     }`}

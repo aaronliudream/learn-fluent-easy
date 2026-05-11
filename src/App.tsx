@@ -262,6 +262,7 @@ const App = () => (
           <Route path="/primary/games/:grade/:type" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
           <Route path="/primary/lesson/:id" element={<ChineseOnlyRoute><PrimaryLesson /></ChineseOnlyRoute>} />
           <Route path="/lesson" element={<ChineseOnlyRoute><LessonG2 /></ChineseOnlyRoute>} />
+          <Route path="/primary/word-quest" element={<ChineseOnlyRoute><PrimaryWordQuest /></ChineseOnlyRoute>} />
           <Route path="/primary/adventure" element={<ChineseOnlyRoute><PrimaryAdventure /></ChineseOnlyRoute>} />
           <Route path="/primary/adventure/:grade" element={<ChineseOnlyRoute><PrimaryAdventure /></ChineseOnlyRoute>} />
          <Route path="/primary/parent" element={<Navigate to="/parent" replace />} />

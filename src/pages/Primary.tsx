@@ -395,7 +395,7 @@ export default function Primary() {
                   
                   <div className="text-3xl">{g.emoji}</div>
                   <div className="flex-1">
-                    <div className="text-sm font-extrabold">{g.name_cn}</div>
+                    <div className="text-sm font-extrabold"><T>{g.name_cn}</T></div>
                     <div className="mt-0.5 flex flex-wrap gap-1.5 text-[10px] font-bold">
                       {isCurrent &&
                       <span className="rounded bg-rose-500 px-1.5 py-0.5 text-white"><T>当前</T></span>

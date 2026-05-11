@@ -147,8 +147,15 @@ export default function PrimaryAdventure() {
         <ArrowLeft className="size-4" /> 回到主屏
       </BackLink>
 
-      {/* G2-G6 内容尚未补齐 — 给孩子一个温和的提示 + 返回一年级的快捷入口 */}
-      {grade > 1 && (
+      {/* G2 — Phonics 已开放,其他模块还在准备 */}
+      {grade === 2 && (
+        <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-emerald-300 bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 p-3 text-sm text-emerald-800 dark:border-emerald-800 dark:from-emerald-950/40 dark:via-teal-950/40 dark:to-cyan-950/40 dark:text-emerald-200">
+          <span>✨ 二年级 Phonics 已开放!(25 个新音)其他模块陆续开放中…</span>
+          <Link to="/primary/phonics?grade=2" className="font-bold underline">去 G2 Phonics →</Link>
+        </div>
+      )}
+      {/* G3-G6 内容尚未补齐 */}
+      {grade > 2 && (
         <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
           <span>✨ 这个年级的完整内容正在准备中。你可以先在一年级和 Spark 一起冒险!</span>
           <Link to="/primary/adventure/1" className="font-bold underline">返回一年级 →</Link>

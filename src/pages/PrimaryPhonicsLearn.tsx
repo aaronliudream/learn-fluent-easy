@@ -8,6 +8,7 @@ import {
   PHONICS_GROUPS,
   type PhonicsItem,
 } from "@/data/primaryPhonics";
+import { PHONICS_ITEMS_G2, PHONICS_GROUPS_G2 } from "@/data/primaryPhonicsG2";
 import {
   bumpPhonicsLevel,
   bumpPhonicsMastery,
@@ -20,11 +21,18 @@ export default function PrimaryPhonicsLearn() {
   const { phonicsId } = useParams<{ phonicsId: string }>();
   const nav = useNavigate();
   const item = useMemo(
-    () => PHONICS_ITEMS.find((it) => it.id === phonicsId) ?? null,
+    () =>
+      PHONICS_ITEMS.find((it) => it.id === phonicsId) ??
+      PHONICS_ITEMS_G2.find((it) => it.id === phonicsId) ??
+      null,
     [phonicsId]
   );
   const group = useMemo(
-    () => (item ? PHONICS_GROUPS.find((g) => g.id === item.groupId) : null),
+    () =>
+      item
+        ? PHONICS_GROUPS.find((g) => g.id === item.groupId) ??
+          PHONICS_GROUPS_G2.find((g) => g.id === item.groupId)
+        : null,
     [item]
   );
   const [phase, setPhase] = useState<"learn" | "quiz" | "done">("learn");

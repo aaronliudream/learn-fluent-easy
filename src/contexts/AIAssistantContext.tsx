@@ -30,6 +30,8 @@ export interface AssistantState {
   lockedHint?: string;
   /** Optional override for the drawer header. */
   pageTitle?: string;
+  /** Optional context-specific starter questions (overrides defaults). */
+  starters?: string[];
 }
 
 const DEFAULT_STATE: AssistantState = {
@@ -89,7 +91,7 @@ export function useRegisterAssistant(state: AssistantState | null) {
   const ctx = useContext(AIAssistantContext);
   // Stable signature so we don't thrash on every render.
   const sig = state
-    ? `${state.context}|${state.ref}|${state.mode}|${state.unlocked}|${state.topic}|${state.lockedHint ?? ""}|${state.pageTitle ?? ""}|${JSON.stringify(state.snapshot ?? {})}`
+    ? `${state.context}|${state.ref}|${state.mode}|${state.unlocked}|${state.topic}|${state.lockedHint ?? ""}|${state.pageTitle ?? ""}|${(state.starters ?? []).join("¦")}|${JSON.stringify(state.snapshot ?? {})}`
     : null;
 
   useEffect(() => {

@@ -83,6 +83,11 @@ export default function PrimaryStoryBooks() {
     mode: "free",
     unlocked: true,
     pageTitle: "💬 小月 · 绘本书架答疑",
+    starters: [
+      "我现在该读哪一本？",
+      "下一本怎么解锁？",
+      "这些绘本有什么不一样？",
+    ],
     snapshot: {
       page: "绘本书架(/primary/reading)",
       hint: "用户当前正在浏览绘本书架。请只回答和这个书架/这些绘本相关的问题(每本书讲了什么、难度差别、推荐先读哪一本、怎么解锁下一本等)。不要回答和绘本无关的英语问题。",

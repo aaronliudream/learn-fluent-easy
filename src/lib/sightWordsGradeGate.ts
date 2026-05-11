@@ -32,6 +32,11 @@ export function getSightWordsPolicy(grade: number): SightWordsGradePolicy {
   if (grade <= 1) return { visibleGroupCount: 2, reviewMode: false, showInMain: true };
   if (grade <= 2) return { visibleGroupCount: 4, reviewMode: false, showInMain: true };
   if (grade <= 4) return { visibleGroupCount: 4, reviewMode: true, showInMain: false };
-  // 5-6 年级:主路径完全淡化,但页面本身仍可访问(查漏)
-  return { visibleGroupCount: 4, reviewMode: true, showInMain: false };
+  // 5-6 年级:主路径完全淡化,页面也清空(应已掌握)
+  return { visibleGroupCount: 0, reviewMode: true, showInMain: false };
+}
+
+/** Phonics 底部 / Primary 主页是否显示 Sight Words 入口(grade<=4) */
+export function shouldShowSightWordsEntry(grade: number): boolean {
+  return grade <= 4;
 }

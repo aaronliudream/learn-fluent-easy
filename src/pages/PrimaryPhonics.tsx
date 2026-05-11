@@ -14,7 +14,7 @@ import {
   isGroupUnlocked,
   type PhonicsMasteryMap,
 } from "@/lib/phonicsMastery";
-import { getCurrentGrade, getSightWordsPolicy } from "@/lib/sightWordsGradeGate";
+import { getCurrentGrade, getSightWordsPolicy, shouldShowSightWordsEntry } from "@/lib/sightWordsGradeGate";
 
 /**
  * 拼读冒险仪表盘 — 替代直接进 /primary/letters。
@@ -27,7 +27,9 @@ export default function PrimaryPhonics() {
   const nav = useNavigate();
   const [mastery, setMastery] = useState<PhonicsMasteryMap>(new Map());
   const [loading, setLoading] = useState(true);
-  const swPolicy = getSightWordsPolicy(getCurrentGrade());
+  const grade = getCurrentGrade();
+  const swPolicy = getSightWordsPolicy(grade);
+  const showSwEntry = shouldShowSightWordsEntry(grade);
 
   // 按组分桶,顺序按 PHONICS_GROUPS.sortOrder
   const groupedItems = useMemo(() => {
@@ -275,7 +277,7 @@ export default function PrimaryPhonics() {
         >
           <BookOpen className="size-3.5" /> 想按 A-Z 浏览所有字母?去字母索引 →
         </Link>
-        {swPolicy.showInMain && (
+        {showSwEntry && swPolicy.showInMain && (
           <Link
             to="/primary/sight-words"
             className="inline-flex items-center gap-1 text-xs font-bold text-sky-600 underline-offset-2 hover:underline dark:text-sky-300"
@@ -283,7 +285,7 @@ export default function PrimaryPhonics() {
             📖 高频词 Sight Words →
           </Link>
         )}
-        {!swPolicy.showInMain && (
+        {showSwEntry && !swPolicy.showInMain && (
           <Link
             to="/primary/sight-words"
             className="inline-flex items-center gap-1 text-[11px] text-muted-foreground underline-offset-2 hover:underline"

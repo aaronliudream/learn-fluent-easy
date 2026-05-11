@@ -237,6 +237,7 @@ const App = () => (
           <Route path="/primary/sight-words" element={<ChineseOnlyRoute><PrimarySightWords /></ChineseOnlyRoute>} />
           <Route path="/primary/sight-words/learn/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsLearn /></ChineseOnlyRoute>} />
           <Route path="/primary/sight-words/quiz/:groupId" element={<ChineseOnlyRoute><PrimarySightWordsQuiz /></ChineseOnlyRoute>} />
+          <Route path="/primary/roleplays" element={<ChineseOnlyRoute><PrimaryRolePlays /></ChineseOnlyRoute>} />
           {/* Legacy redirects */}
           <Route path="/primary/sightwords" element={<Navigate to="/primary/sight-words" replace />} />
           <Route path="/primary/sightwords/learn/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsLearn /></ChineseOnlyRoute>} />

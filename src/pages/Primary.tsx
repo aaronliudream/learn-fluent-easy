@@ -10,6 +10,7 @@ import { PHONICS_ITEMS } from "@/data/primaryPhonics";
 import { SIGHT_WORD_ITEMS } from "@/data/primarySightWords";
 import { getPhonicsMasteryMap } from "@/lib/phonicsMastery";
 import { getSightWordMasteryMap } from "@/lib/sightWordMastery";
+import { getCurrentGrade, getSightWordsPolicy } from "@/lib/sightWordsGradeGate";
 import {
   Dialog,
   DialogContent,
@@ -410,6 +411,7 @@ export default function Primary() {
 function CumulativeMasteryCard() {
   const [phonics, setPhonics] = useState({ done: 0, total: PHONICS_ITEMS.length });
   const [sw, setSw] = useState({ done: 0, total: SIGHT_WORD_ITEMS.length });
+  const swPolicy = getSightWordsPolicy(getCurrentGrade());
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -429,15 +431,17 @@ function CumulativeMasteryCard() {
   return (
     <section className="mt-4 rounded-2xl border border-border bg-card p-4 shadow-sm">
       <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">📊 累计掌握</div>
-      <div className="mt-2 grid grid-cols-2 gap-3 text-sm">
+      <div className={`mt-2 grid gap-3 text-sm ${swPolicy.showInMain ? "grid-cols-2" : "grid-cols-1"}`}>
         <Link to="/primary/phonics" className="rounded-xl bg-gradient-to-br from-rose-50 to-amber-50 p-3 hover:-translate-y-0.5 transition dark:from-rose-950/30 dark:to-amber-950/30">
           <div className="font-bold">🔤 Phonics</div>
           <div className="mt-1 font-mono text-lg font-extrabold text-rose-600 dark:text-rose-300">{phonics.done}<span className="text-xs text-muted-foreground"> / {phonics.total}</span></div>
         </Link>
-        <Link to="/primary/sight-words" className="rounded-xl bg-gradient-to-br from-sky-50 to-emerald-50 p-3 hover:-translate-y-0.5 transition dark:from-sky-950/30 dark:to-emerald-950/30">
-          <div className="font-bold">📚 高频词</div>
-          <div className="mt-1 font-mono text-lg font-extrabold text-sky-600 dark:text-sky-300">{sw.done}<span className="text-xs text-muted-foreground"> / {sw.total}</span></div>
-        </Link>
+        {swPolicy.showInMain && (
+          <Link to="/primary/sight-words" className="rounded-xl bg-gradient-to-br from-sky-50 to-emerald-50 p-3 hover:-translate-y-0.5 transition dark:from-sky-950/30 dark:to-emerald-950/30">
+            <div className="font-bold">📚 高频词</div>
+            <div className="mt-1 font-mono text-lg font-extrabold text-sky-600 dark:text-sky-300">{sw.done}<span className="text-xs text-muted-foreground"> / {sw.total}</span></div>
+          </Link>
+        )}
       </div>
     </section>
   );

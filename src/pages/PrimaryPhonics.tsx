@@ -14,6 +14,7 @@ import {
   isGroupUnlocked,
   type PhonicsMasteryMap,
 } from "@/lib/phonicsMastery";
+import { getCurrentGrade, getSightWordsPolicy } from "@/lib/sightWordsGradeGate";
 
 /**
  * 拼读冒险仪表盘 — 替代直接进 /primary/letters。
@@ -26,6 +27,7 @@ export default function PrimaryPhonics() {
   const nav = useNavigate();
   const [mastery, setMastery] = useState<PhonicsMasteryMap>(new Map());
   const [loading, setLoading] = useState(true);
+  const swPolicy = getSightWordsPolicy(getCurrentGrade());
 
   // 按组分桶,顺序按 PHONICS_GROUPS.sortOrder
   const groupedItems = useMemo(() => {
@@ -273,12 +275,22 @@ export default function PrimaryPhonics() {
         >
           <BookOpen className="size-3.5" /> 想按 A-Z 浏览所有字母?去字母索引 →
         </Link>
-        <Link
-          to="/primary/sight-words"
-          className="inline-flex items-center gap-1 text-xs font-bold text-sky-600 underline-offset-2 hover:underline dark:text-sky-300"
-        >
-          📖 高频词 Sight Words →
-        </Link>
+        {swPolicy.showInMain && (
+          <Link
+            to="/primary/sight-words"
+            className="inline-flex items-center gap-1 text-xs font-bold text-sky-600 underline-offset-2 hover:underline dark:text-sky-300"
+          >
+            📖 高频词 Sight Words →
+          </Link>
+        )}
+        {!swPolicy.showInMain && (
+          <Link
+            to="/primary/sight-words"
+            className="inline-flex items-center gap-1 text-[11px] text-muted-foreground underline-offset-2 hover:underline"
+          >
+            🔁 高频词复习(查漏)→
+          </Link>
+        )}
       </div>
     </main>
   );

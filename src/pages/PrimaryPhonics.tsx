@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft, BookOpen, Lock, Play, RotateCw, Sparkles, Trophy } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
@@ -8,6 +8,7 @@ import {
   PHONICS_ITEMS,
   type PhonicsItem,
 } from "@/data/primaryPhonics";
+import { PHONICS_GROUPS_G2, PHONICS_ITEMS_G2 } from "@/data/primaryPhonicsG2";
 import {
   getPhonicsMasteryMap,
   isDue,
@@ -25,6 +26,11 @@ import { getCurrentGrade, getSightWordsPolicy, shouldShowSightWordsEntry } from 
  */
 export default function PrimaryPhonics() {
   const nav = useNavigate();
+  const [sp] = useSearchParams();
+  const gradeParam = Number(sp.get("grade") || "1");
+  const isG2 = gradeParam === 2;
+  const GROUPS = isG2 ? PHONICS_GROUPS_G2 : PHONICS_GROUPS;
+  const ITEMS = isG2 ? PHONICS_ITEMS_G2 : PHONICS_ITEMS;
   const [mastery, setMastery] = useState<PhonicsMasteryMap>(new Map());
   const [loading, setLoading] = useState(true);
   const grade = getCurrentGrade();
@@ -34,17 +40,17 @@ export default function PrimaryPhonics() {
   // 按组分桶,顺序按 PHONICS_GROUPS.sortOrder
   const groupedItems = useMemo(() => {
     const byGroup = new Map<string, PhonicsItem[]>();
-    PHONICS_ITEMS.forEach((it) => {
+    ITEMS.forEach((it) => {
       if (!byGroup.has(it.groupId)) byGroup.set(it.groupId, []);
       byGroup.get(it.groupId)!.push(it);
     });
     // 同组内按 sortOrder 排序,保证"下一个新音"稳定
     byGroup.forEach((arr) => arr.sort((a, b) => a.sortOrder - b.sortOrder));
-    return PHONICS_GROUPS.sort((a, b) => a.sortOrder - b.sortOrder).map((g) => ({
+    return [...GROUPS].sort((a, b) => a.sortOrder - b.sortOrder).map((g) => ({
       group: g,
       items: byGroup.get(g.id) ?? [],
     }));
-  }, []);
+  }, [ITEMS, GROUPS]);
 
   useEffect(() => {
     document.title = "Spark 的拼读冒险 | FluentPath";
@@ -92,8 +98,8 @@ export default function PrimaryPhonics() {
   // 到期复习的音
   const dueItems = useMemo(
     () =>
-      PHONICS_ITEMS.filter((it) => isDue(mastery.get(it.id))).slice(0, 50),
-    [mastery]
+      ITEMS.filter((it) => isDue(mastery.get(it.id))).slice(0, 50),
+    [mastery, ITEMS]
   );
 
   // 整组挑战是否可用(本组每个音至少 level=1)
@@ -106,9 +112,16 @@ export default function PrimaryPhonics() {
   );
 
   // 总掌握数(level≥2)
-  const masteredCount = PHONICS_ITEMS.filter(
+  const masteredCount = ITEMS.filter(
     (it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2
   ).length;
+
+  // G1 全部通关 → 显示 G2 入口(仅在 G1 主页上)
+  const allG1Mastered = !isG2 && PHONICS_ITEMS.every(
+    (it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2
+  );
+  const learnPath = (id: string) =>
+    isG2 ? `/primary/phonics/learn/${id}?grade=2` : `/primary/phonics/learn/${id}`;
   const todayPlanCount =
     (currentGroup?.items.filter(
       (it) => (mastery.get(it.id)?.mastery_level ?? 0) < 3
@@ -133,13 +146,13 @@ export default function PrimaryPhonics() {
             : `"今天 Spark 想和你练 ${todayPlanCount} 个音!"`}
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-rose-700 dark:text-rose-200">
-          <span>已掌握 {masteredCount} / {PHONICS_ITEMS.length}</span>
+          <span>已掌握 {masteredCount} / {ITEMS.length}{isG2 ? " · 二年级" : ""}</span>
           <span>当前 {currentGroup?.group.groupName}</span>
         </div>
         <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/60">
           <div
             className="h-full bg-gradient-to-r from-rose-500 via-amber-500 to-orange-500 transition-all"
-            style={{ width: `${(masteredCount / PHONICS_ITEMS.length) * 100}%` }}
+            style={{ width: `${(masteredCount / Math.max(1, ITEMS.length)) * 100}%` }}
           />
         </div>
       </section>
@@ -154,7 +167,7 @@ export default function PrimaryPhonics() {
             label="继续学新音"
             title={`学新音 ${nextNewItem.letter}`}
             sub={`你这组掌握了 ${currentGroup.items.filter((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2).length}/${currentGroup.items.length}`}
-            onClick={() => nav(`/primary/phonics/learn/${nextNewItem.id}`)}
+            onClick={() => nav(learnPath(nextNewItem.id))}
           />
         )}
 
@@ -185,7 +198,7 @@ export default function PrimaryPhonics() {
         {/* fallback */}
         {!nextNewItem && dueItems.length === 0 && !canChallengeGroup && !loading && (
           <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            🎉 你已经会了全部 {PHONICS_ITEMS.length} 个字母音!
+            🎉 你已经会了全部 {ITEMS.length} 个字母音!
           </div>
         )}
 
@@ -245,7 +258,7 @@ export default function PrimaryPhonics() {
                     <button
                       key={it.id}
                       disabled={!unlocked}
-                      onClick={() => nav(`/primary/phonics/learn/${it.id}`)}
+                      onClick={() => nav(learnPath(it.id))}
                       title={`${it.letter} · ${it.sound} · 掌握 ${lvl}/3`}
                       className={
                         "grid size-7 place-items-center rounded-md text-[11px] font-extrabold transition " +
@@ -268,6 +281,21 @@ export default function PrimaryPhonics() {
           );
         })}
       </section>
+
+      {/* G1 → G2 解锁入口 */}
+      {allG1Mastered && (
+        <section className="mt-6 rounded-3xl bg-gradient-to-br from-violet-200 via-fuchsia-200 to-rose-200 p-5 text-center shadow-tile dark:from-violet-950/40 dark:via-fuchsia-950/40 dark:to-rose-950/40">
+          <div className="text-sm font-extrabold text-fuchsia-900 dark:text-fuchsia-100">
+            🎉 G1 Phonics 全部通关!
+          </div>
+          <Link
+            to="/primary/phonics?grade=2"
+            className="mt-3 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-rose-500 px-6 py-3 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
+          >
+            <Sparkles className="size-4" /> 去解锁 G2 Phonics →
+          </Link>
+        </section>
+      )}
 
       {/* 退路:A-Z 索引 */}
       <div className="mt-6 flex flex-wrap items-center justify-center gap-4">

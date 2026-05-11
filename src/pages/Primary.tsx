@@ -242,17 +242,23 @@ export default function Primary() {
               // the national-curriculum default (G3, when English officially starts).
               const recId = recommendedGrade ?? 3;
               const isRecommended = g.id === recId;
-              const isPreview = g.id > 1; // G2-G6 内容尚在准备中
+              const phonicsOnly = g.id === 2; // G2: Phonics 已开放,其他模块准备中
+              const isPreview = g.id > 2;     // G3-G6 内容尚在准备中
               return (
                 <button
                   key={g.id}
                   onClick={() => pickGrade(g.id)}
-                  className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5 ${isPreview ? "saturate-50" : ""}`}
+                  className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5 ${isPreview ? "saturate-50" : phonicsOnly ? "saturate-[0.85]" : ""}`}
                 >
                   <div className="text-3xl">{g.emoji}</div>
                   {isRecommended && (
                     <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-rose-600 shadow-sm">
                       ⭐ 推荐
+                    </span>
+                  )}
+                  {phonicsOnly && !isRecommended && (
+                    <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-emerald-700 shadow-sm">
+                      ✨ Phonics
                     </span>
                   )}
                   {isPreview && !isRecommended && (
@@ -263,7 +269,7 @@ export default function Primary() {
                   <div className="absolute inset-x-3 bottom-3">
                     <div className="text-sm font-extrabold text-white drop-shadow">{g.name_cn}</div>
                     <div className="text-[10px] font-bold text-white/90 drop-shadow">
-                      {isPreview ? "📦 准备中" : "✨ 完整开放"}
+                      {isPreview ? "📦 准备中" : phonicsOnly ? "✨ Phonics 已开放" : "✨ 完整开放"}
                     </div>
                   </div>
                 </button>

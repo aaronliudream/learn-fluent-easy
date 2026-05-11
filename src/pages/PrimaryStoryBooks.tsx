@@ -302,7 +302,7 @@ export default function PrimaryStoryBooks() {
         ))}
       </section>
 
-      <p className="mt-8 flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
+      <p className="mt-8 flex items-center justify-center gap-1 text-[11px] text-amber-200/70">
         <BookOpen className="size-3" /> 顺序解锁:读完一本,下一本就会亮起
       </p>
 

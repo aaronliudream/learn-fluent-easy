@@ -47,6 +47,18 @@ export default function PrimaryStoryBookRead() {
           mode: "free",
           unlocked: true,
           pageTitle: `💬 小月 · 《${book.title_cn}》答疑`,
+          starters:
+            phase === "quiz"
+              ? [
+                  "这道题在问什么？",
+                  "给我一个小提示",
+                  "这几个选项分别是什么意思？",
+                ]
+              : [
+                  "这页里有不认识的单词",
+                  "这句话怎么读？",
+                  "这页讲了什么？",
+                ],
           snapshot: {
             hint:
               phase === "quiz"

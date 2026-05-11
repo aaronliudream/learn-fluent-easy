@@ -423,3 +423,20 @@ All colors MUST be HSL.
   pointer-events: none;
   animation: sparkleFloat linear infinite;
 }
+
+/* ---------- Spark mood animations (Stage 3) ---------- */
+@keyframes spark-bob   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes spark-jump  { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-10px) scale(1.1); } }
+@keyframes spark-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+@keyframes spark-tilt  { 0%,100% { transform: rotate(0); } 50% { transform: rotate(-8deg); } }
+@keyframes spark-spin  { 0% { transform: rotate(0); } 100% { transform: rotate(360deg); } }
+
+.spark-bob   { animation: spark-bob 2s ease-in-out infinite; }
+.spark-jump  { animation: spark-jump 0.5s ease-out 2; }
+.spark-pulse { animation: spark-pulse 1.2s ease-in-out infinite; }
+.spark-tilt  { animation: spark-tilt 1.2s ease-in-out infinite; }
+.spark-spin  { animation: spark-spin 0.8s linear 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .spark-bob, .spark-jump, .spark-pulse, .spark-tilt, .spark-spin { animation: none !important; }
+}

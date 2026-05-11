@@ -231,6 +231,15 @@ export default function PrimaryAdventure() {
   const totalDone = (myProgress ?? []).reduce((a, r) => a + r.done, 0);
   const totalAll = (myProgress ?? []).reduce((a, r) => a + r.total, 0);
 
+  // “想做点别的?” — Reading / Listening / Roleplay 三个模块的快捷入口,
+  // 防止主页改造后这 3 个模块失去入口。进度数字直接复用 myProgress。
+  const findRow = (label: string) => (myProgress ?? []).find((r) => r.label === label);
+  const exploreCards = [
+    { to: `/primary/reading${gradeQ}`,   emoji: "📚", label: "读绘本", row: findRow("读绘本") },
+    { to: `/primary/listening${gradeQ}`, emoji: "🎧", label: "听对话", row: findRow("听一听") },
+    { to: `/primary/roleplays${gradeQ}`, emoji: "🎭", label: "演角色", row: findRow("演故事") },
+  ];
+
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 pb-24">
       {/* 顶部:返回 + 🔊 + 🏅 + ⚙️ */}

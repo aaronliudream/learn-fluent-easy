@@ -131,7 +131,7 @@ export default function PrimaryAdventure() {
             ? '"我们今天一起做了好多事!"'
             : doneCount === 0
               ? '"我准备好啦,我们出发吧!"'
-              : `"已经做完 ${doneCount} 件啦,继续陪我!"`}
+              : `"已经完成 ${doneCount} 件啦,再陪 Spark 一下吧!"`}
         </p>
         <div className="mx-auto mt-4 max-w-xs">
           <div className="flex items-center justify-between text-xs font-bold text-rose-700 dark:text-rose-200">
@@ -151,17 +151,17 @@ export default function PrimaryAdventure() {
       <section className="mt-5">
         <div className="mb-2 flex items-center justify-between px-1">
           <h2 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-            快捷探索 · 自由学习
+            想玩什么?
           </h2>
         </div>
         <div className="-mx-5 overflow-x-auto px-5 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <div className="flex min-w-max items-stretch gap-2">
             {[
-              { to: "/primary/phonics",    emoji: "🔤", label: "拼读",     grad: "from-sky-400 to-indigo-400" },
-              { to: "/primary/sight-words",emoji: "🟣", label: "高频词",   grad: "from-violet-400 to-fuchsia-400" },
-              { to: "/primary/roleplays",  emoji: "🎭", label: "角色扮演", grad: "from-rose-400 to-pink-400" },
-              { to: "/primary/listening",  emoji: "🎧", label: "听对话",   grad: "from-amber-400 to-orange-400" },
-              { to: "/primary/reading",    emoji: "📚", label: "绘本",     grad: "from-emerald-400 to-teal-400" },
+              { to: "/primary/phonics",    emoji: "🔤", label: "读字母", grad: "from-sky-400 to-indigo-400" },
+              { to: "/primary/sight-words",emoji: "🟣", label: "小词卡", grad: "from-violet-400 to-fuchsia-400" },
+              { to: "/primary/roleplays",  emoji: "🎭", label: "演一段", grad: "from-rose-400 to-pink-400" },
+              { to: "/primary/listening",  emoji: "🎧", label: "听聊天", grad: "from-amber-400 to-orange-400" },
+              { to: "/primary/reading",    emoji: "📚", label: "读绘本", grad: "from-emerald-400 to-teal-400" },
             ].map((it) => (
               <Link
                 key={it.to}
@@ -247,11 +247,11 @@ export default function PrimaryAdventure() {
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 px-8 py-4 text-lg font-extrabold text-white shadow-tile transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0"
           >
             <Sparkles className="size-5" />
-            {allDone ? "完成今日冒险,喂饱 Spark!" : `还差 ${steps.length - doneCount} 步`}
+            {allDone ? "完成今日冒险,喂饱 Spark!" : `还有 ${steps.length - doneCount} 件事 ✨`}
           </button>
           {pet && (
             <p className="mt-2 text-xs text-muted-foreground">
-              Spark Lv.{pet.level} · 亲密度 {pet.bond}/100
+              Spark 等级 {pet.level} · 小心心 {pet.bond}/100
             </p>
           )}
         </div>

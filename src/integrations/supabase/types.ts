@@ -5165,12 +5165,16 @@ export type Database = {
       }
       primary_sight_word_mastery: {
         Row: {
+          context_correct: number | null
+          context_wrong: number | null
           created_at: string
           due_at: string
           ease: number
           id: string
           interval_days: number
           last_seen_at: string | null
+          listen_correct: number | null
+          listen_wrong: number | null
           mastery_level: number
           recognize_correct: number
           recognize_wrong: number
@@ -5181,12 +5185,16 @@ export type Database = {
           word_id: string
         }
         Insert: {
+          context_correct?: number | null
+          context_wrong?: number | null
           created_at?: string
           due_at?: string
           ease?: number
           id?: string
           interval_days?: number
           last_seen_at?: string | null
+          listen_correct?: number | null
+          listen_wrong?: number | null
           mastery_level?: number
           recognize_correct?: number
           recognize_wrong?: number
@@ -5197,12 +5205,16 @@ export type Database = {
           word_id: string
         }
         Update: {
+          context_correct?: number | null
+          context_wrong?: number | null
           created_at?: string
           due_at?: string
           ease?: number
           id?: string
           interval_days?: number
           last_seen_at?: string | null
+          listen_correct?: number | null
+          listen_wrong?: number | null
           mastery_level?: number
           recognize_correct?: number
           recognize_wrong?: number

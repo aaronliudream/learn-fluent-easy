@@ -274,7 +274,7 @@ export default function PrimaryPhonics() {
           <BookOpen className="size-3.5" /> 想按 A-Z 浏览所有字母?去字母索引 →
         </Link>
         <Link
-          to="/primary/sightwords"
+          to="/primary/sight-words"
           className="inline-flex items-center gap-1 text-xs font-bold text-sky-600 underline-offset-2 hover:underline dark:text-sky-300"
         >
           📖 高频词 Sight Words →

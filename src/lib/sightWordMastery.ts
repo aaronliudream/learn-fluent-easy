@@ -16,8 +16,10 @@ export type SightWordMastery = {
   last_seen_at: string | null;
   recognize_correct: number;
   recognize_wrong: number;
-  spell_correct: number;
-  spell_wrong: number;
+  listen_correct: number;
+  listen_wrong: number;
+  context_correct: number;
+  context_wrong: number;
 };
 
 export type SightWordMasteryMap = Map<string, SightWordMastery>;
@@ -30,7 +32,7 @@ export async function getSightWordMasteryMap(): Promise<SightWordMasteryMap> {
   const { data } = await supabase
     .from("primary_sight_word_mastery")
     .select(
-      "word_id,mastery_level,ease,interval_days,due_at,last_seen_at,recognize_correct,recognize_wrong,spell_correct,spell_wrong"
+      "word_id,mastery_level,ease,interval_days,due_at,last_seen_at,recognize_correct,recognize_wrong,listen_correct,listen_wrong,context_correct,context_wrong"
     )
     .eq("user_id", uid);
   (data ?? []).forEach((r: any) => map.set(r.word_id, r as SightWordMastery));
@@ -39,7 +41,7 @@ export async function getSightWordMasteryMap(): Promise<SightWordMasteryMap> {
 
 export async function bumpSightWordMastery(
   wordId: string,
-  kind: "recognize" | "spell",
+  kind: "recognize" | "listen" | "context",
   correct: boolean
 ): Promise<void> {
   const { data: u } = await supabase.auth.getUser();
@@ -61,11 +63,18 @@ export async function bumpSightWordMastery(
     interval_days: 0,
     recognize_correct: 0,
     recognize_wrong: 0,
-    spell_correct: 0,
-    spell_wrong: 0,
+    listen_correct: 0,
+    listen_wrong: 0,
+    context_correct: 0,
+    context_wrong: 0,
   };
   if (kind === "recognize") correct ? r.recognize_correct++ : r.recognize_wrong++;
-  else correct ? r.spell_correct++ : r.spell_wrong++;
+  else if (kind === "listen") correct ? r.listen_correct++ : r.listen_wrong++;
+  else correct ? r.context_correct++ : r.context_wrong++;
+
+  // 清理旧字段(spell_*),避免 upsert 把 undefined 写回
+  delete (r as any).spell_correct;
+  delete (r as any).spell_wrong;
 
   const srs = nextSrsState(r, correct);
   r.ease = srs.ease;

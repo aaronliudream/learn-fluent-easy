@@ -25,7 +25,7 @@ const THEME_ORDER: ListeningTheme[] = [
   "greetings", "colors", "numbers", "body", "family",
   "animals", "food", "school", "going_to_school",
 ];
-const DIFFICULTY_LABEL = { 1: "入门", 2: "中等", 3: "挑战" } as const;
+const DIFFICULTY_LABEL = { 1: "简单", 2: "一般", 3: "有点难" } as const;
 
 const LOCAL_KEY = "primary_listening_completion_v1";
 type CompRec = { questions_correct: number; questions_total: number; play_count: number };
@@ -95,7 +95,7 @@ export default function PrimaryListening() {
       <section className="rounded-3xl bg-gradient-to-br from-sky-200 via-cyan-200 to-emerald-200 p-5 text-center shadow-tile dark:from-sky-950/40 dark:via-cyan-950/40 dark:to-emerald-950/40">
         <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">🦊</div>
         <p className="mx-auto mt-3 max-w-md text-base font-extrabold leading-snug text-cyan-900 dark:text-cyan-100">
-          "和 Spark 听 {total} 个生活对话,练真实英语听力!"
+          "和 Spark 听 {total} 个生活里的对话,听听别人怎么说!"
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-cyan-700 dark:text-cyan-200">
           <span>已完成 {totalDone} / {total}</span>
@@ -170,7 +170,7 @@ export default function PrimaryListening() {
       </section>
 
       <p className="mt-8 flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
-        <Headphones className="size-3" /> 顺序解锁:听完一个对话,下一个就会亮起
+        <Headphones className="size-3" /> 一个一个听,下一个就会亮起来!
       </p>
     </main>
   );

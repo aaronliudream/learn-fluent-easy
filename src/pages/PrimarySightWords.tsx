@@ -166,7 +166,7 @@ export default function PrimarySightWords() {
             icon={<RotateCw className="size-5" />}
             label="今日复习"
             title={`复习 ${dueItems.length} 个学过的词`}
-            sub="这些词上次没答对 / 该再考一次啦"
+            sub="上次没答对的,再来一次吧!"
             onClick={() => nav("/primary/sight-words/quiz/review")}
           />
         )}
@@ -176,7 +176,7 @@ export default function PrimarySightWords() {
             icon={<Sparkles className="size-5" />}
             label="挑战测试"
             title={`挑战 ${currentGroup.group.groupName}`}
-            sub="✨ 全部通过解锁下一组"
+            sub="✨ 全部答对,就能玩下一关啦!"
             onClick={() => nav(`/primary/sight-words/quiz/${currentGroup.group.id}`)}
           />
         )}

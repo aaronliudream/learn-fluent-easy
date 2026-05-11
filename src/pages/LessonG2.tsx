@@ -17,6 +17,14 @@ import {
   lessonIdToIdx,
   pickSparkLine,
 } from "@/data/g2LessonChapters";
+import LessonStageEngine from "@/components/LessonStageEngine";
+import { G2_L01_STAGES } from "@/data/g2LessonStages";
+import { pickPhrase } from "@/data/sparkPhrases";
+
+// MVP: which lesson_ids have a 5-stage engine wired up
+const STAGE_LESSON_IDS: Record<string, typeof G2_L01_STAGES> = {
+  g2_l01: G2_L01_STAGES,
+};
 
 type Expr = { en: string; cn: string; scene?: string };
 type Vocab = { word: string; pron?: string; meaning?: string; example?: string; example_cn?: string };
@@ -308,6 +316,11 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
   const meta = parseKey(lessonKey);
   const [t0] = useState(Date.now());
   const [completing, setCompleting] = useState(false);
+  const [showCelebrate, setShowCelebrate] = useState(false);
+  const [celebratePhrase] = useState(() => pickPhrase("lessonComplete"));
+
+  const lessonId = `g2_l${String(meta.idx).padStart(2, "0")}`;
+  const stagedLesson = STAGE_LESSON_IDS[lessonId];
 
   useEffect(() => {
     document.title = `${meta.en} · 二年级 | FluentPath`;
@@ -322,7 +335,60 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
     );
   }
 
-  async function markDone() {
+  // 5-stage engine path (MVP: only g2_l01)
+  if (stagedLesson) {
+    const ch = getChapterByLessonId(lessonId);
+    const nextLessonId = ch ? ch.lesson_ids[ch.lesson_ids.indexOf(lessonId) + 1] : undefined;
+    const nextLessonKey = nextLessonId ? lessonIdToKey(nextLessonId) : null;
+    return (
+      <>
+        <LessonStageEngine
+          lesson_id={lessonId}
+          stages={stagedLesson}
+          onExit={() => nav("/lesson?grade=2")}
+          onComplete={async () => {
+            setShowCelebrate(true);
+            // Fire-and-forget DB write
+            try { await markDone({ navigateAfter: false }); } catch { /* noop */ }
+          }}
+        />
+        {showCelebrate && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-pink-500/95 via-rose-500/95 to-amber-500/95 p-6 text-white">
+            <div className="w-full max-w-sm rounded-3xl bg-white/10 p-8 text-center backdrop-blur">
+              <div className="text-7xl">🎉</div>
+              <div className="mt-4 text-2xl font-extrabold">{celebratePhrase}</div>
+              <div className="mt-2 text-sm opacity-90">Spark 的火箭离起飞更近了!</div>
+              {(() => {
+                const c = getChapterByLessonId(lessonId);
+                return c ? <div className="mt-6 text-6xl">{c.emoji}</div> : null;
+              })()}
+              <div className="mt-8 flex flex-col gap-3">
+                {nextLessonKey && (
+                  <button
+                    onClick={() => {
+                      setShowCelebrate(false);
+                      nav(`/lesson?grade=2&lesson=${encodeURIComponent(nextLessonKey)}`);
+                    }}
+                    className="rounded-full bg-white px-6 py-3 text-base font-extrabold text-rose-600 shadow-tile"
+                  >
+                    继续下一节 →
+                  </button>
+                )}
+                <button
+                  onClick={() => nav("/lesson?grade=2")}
+                  className="rounded-full border-2 border-white/60 px-6 py-3 text-base font-bold text-white"
+                >
+                  回到地图
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </>
+    );
+  }
+
+  async function markDone(opts: { navigateAfter?: boolean } = { navigateAfter: true }) {
     setCompleting(true);
     let returnUrl = "/lesson?grade=2";
     try {
@@ -374,7 +440,11 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
       }
       celebrateScore(100);
     } finally {
-      setTimeout(() => nav(returnUrl), 600);
+      if (opts.navigateAfter !== false) {
+        setTimeout(() => nav(returnUrl), 600);
+      } else {
+        setCompleting(false);
+      }
     }
   }
 
@@ -466,7 +536,7 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
 
       {/* 完成按钮 */}
       <button
-        onClick={markDone}
+        onClick={() => markDone()}
         disabled={completing}
         className="mt-8 w-full rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 py-4 text-base font-extrabold text-white shadow-tile transition hover:-translate-y-0.5 disabled:opacity-60"
       >

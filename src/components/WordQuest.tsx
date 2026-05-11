@@ -121,10 +121,31 @@ function emojiSummary(results: StageResult[]) {
 export default function WordQuest({
   pool,
   onExit,
+  variant = "gaokao",
+  maxStages,
+  wordsPerQuest: wordsPerQuestProp,
+  onComplete,
 }: {
   pool: Vocab[];
   onExit: () => void;
+  /** "gaokao" 走原写库 + RPC streak 流程;"primary" 完全跳过,把结果交给 onComplete 写入小学专表。 */
+  variant?: "gaokao" | "primary";
+  /** 总关卡数,默认 18(3 词 × 6 关)。小学版传 6 → 1 词 × 6 关。 */
+  maxStages?: number;
+  /** 当日选词数,默认 3。和 maxStages 配合,小学版传 1。 */
+  wordsPerQuest?: number;
+  /** 完成时回调,允许 wrapper 写入自己的统计表。 */
+  onComplete?: (info: {
+    score: number; perfect: boolean; passed: number; total: number;
+    durationMs: number; hintsUsed: number; words: string[];
+  }) => void | Promise<void>;
 }) {
+  const totalStages = Math.max(1, maxStages ?? TOTAL_STAGES);
+  const wordsPerQuest = Math.max(
+    1,
+    wordsPerQuestProp ?? Math.max(1, Math.ceil(totalStages / STAGES_PER_WORD))
+  );
+  const isPrimary = variant === "primary";
   const [phase, setPhase] = useState<"loading" | "intro" | "playing" | "done" | "already">("loading");
   const [targets, setTargets] = useState<Vocab[]>([]);
   const [stage, setStage] = useState(0); // 0..17 (=>18 关 = 3 词 × 6 关)
@@ -146,18 +167,22 @@ export default function WordQuest({
   // --- Bootstrap: pick daily, check today's status ---
   useEffect(() => {
     (async () => {
-      const vs = pickDailyVocabs(pool, WORDS_PER_QUEST);
+      const vs = pickDailyVocabs(pool, wordsPerQuest);
       setTargets(vs);
-      // streak
-      const { data } = await supabase.rpc("get_word_quest_streak");
-      const s = (data?.[0] ?? null) as StreakStats | null;
-      setStreak(s);
-      // leaderboard
-      const { data: lb } = await supabase.rpc("get_word_quest_daily_leaderboard");
-      setLeaderboard((lb ?? []) as LeaderRow[]);
-
-      if (s?.today_done) setPhase("already");
-      else setPhase("intro");
+      if (isPrimary) {
+        // 小学版不调高考专属 RPC,today_done 由 wrapper 自己拦截。
+        setStreak(null);
+        setLeaderboard([]);
+        setPhase("intro");
+      } else {
+        const { data } = await supabase.rpc("get_word_quest_streak");
+        const s = (data?.[0] ?? null) as StreakStats | null;
+        setStreak(s);
+        const { data: lb } = await supabase.rpc("get_word_quest_daily_leaderboard");
+        setLeaderboard((lb ?? []) as LeaderRow[]);
+        if (s?.today_done) setPhase("already");
+        else setPhase("intro");
+      }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pool.length]);

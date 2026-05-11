@@ -64,12 +64,48 @@ export default function LessonG2() {
 }
 
 /* ---------------- 列表 ---------------- */
+const LESSON_EMOJI: Record<number, string> = {
+  1: "☀️", 2: "🌧", 3: "⏰", 4: "📅", 5: "👕", 6: "🛏",
+  7: "⚽", 8: "🥎", 9: "👩‍⚕️", 10: "🚌",
+  11: "📞", 12: "💊", 13: "🧹", 14: "👫", 15: "🍱", 16: "🎂",
+  17: "🦒", 18: "🐰", 19: "➕", 20: "🎨",
+  21: "💰", 22: "🍪", 23: "🌸", 24: "🍂", 25: "👀",
+  26: "🌈", 27: "😊", 28: "💯", 29: "🎄", 30: "🧧",
+};
+
+function lessonIdToKey(lessonId: string): string | null {
+  const idx = lessonIdToIdx(lessonId);
+  if (!idx) return null;
+  for (const k of G2_KEYS) {
+    if (parseKey(k).idx === idx) return k;
+  }
+  return null;
+}
+
+function keyToLessonId(key: string): string {
+  const idx = parseKey(key).idx;
+  return `g2_l${String(idx).padStart(2, "0")}`;
+}
+
 function LessonList() {
-  const [done, setDone] = useState<Set<string>>(new Set());
+  const [params] = useSearchParams();
+  const nav = useNavigate();
+  const chapterDoneId = Number(params.get("chapter_done") || "0");
+
+  const [doneKeys, setDoneKeys] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
+  const [openChapter, setOpenChapter] = useState<number | null>(null);
+  const [sparkLine] = useState(() => pickSparkLine());
+  const [showChapterModal, setShowChapterModal] = useState<G2Chapter | null>(null);
+
+  const doneIds = useMemo(() => {
+    const s = new Set<string>();
+    doneKeys.forEach((k) => s.add(keyToLessonId(k)));
+    return s;
+  }, [doneKeys]);
 
   useEffect(() => {
-    document.title = "二年级 · 30 节 AI 课 | FluentPath";
+    document.title = "二年级 · 和 Spark 的英语冒险 | FluentPath";
     (async () => {
       const { data: u } = await supabase.auth.getUser();
       if (u?.user) {
@@ -77,18 +113,34 @@ function LessonList() {
           .from("primary_lesson_completion")
           .select("lesson_key")
           .eq("user_id", u.user.id);
-        setDone(new Set((data ?? []).map((r: any) => r.lesson_key as string)));
+        const set = new Set((data ?? []).map((r: any) => r.lesson_key as string));
+        setDoneKeys(set);
+        const ids = new Set<string>();
+        set.forEach((k) => ids.add(keyToLessonId(k)));
+        setOpenChapter(getCurrentChapter(ids).id);
+      } else {
+        setOpenChapter(1);
       }
       setLoading(false);
     })();
   }, []);
 
-  const items = useMemo(
-    () =>
-      G2_KEYS.map((k) => ({ key: k, ...parseKey(k) })).sort((a, b) => a.idx - b.idx),
-    []
-  );
-  const doneCount = items.filter((it) => done.has(it.key)).length;
+  useEffect(() => {
+    if (!chapterDoneId) return;
+    const c = G2_CHAPTERS.find((x) => x.id === chapterDoneId);
+    if (c) setShowChapterModal(c);
+  }, [chapterDoneId]);
+
+  const totalDone = doneIds.size;
+  const totalChapters = G2_CHAPTERS.filter((c) => isChapterCompleted(c, doneIds)).length;
+  const currentChapter = getCurrentChapter(doneIds);
+
+  function dismissModal() {
+    const next = showChapterModal ? showChapterModal.id + 1 : 0;
+    setShowChapterModal(null);
+    if (next && next <= G2_CHAPTERS.length) setOpenChapter(next);
+    nav("/lesson?grade=2", { replace: true });
+  }
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 pb-24">
@@ -96,45 +148,156 @@ function LessonList() {
         <ArrowLeft className="size-4" /> 返回二年级
       </BackLink>
 
-      <header className="mb-4">
-        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">G2 · AI Lesson</div>
-        <h1 className="text-grad-title text-2xl font-extrabold md:text-3xl">二年级的 30 节课</h1>
-        <p className="mt-1 text-sm text-muted-foreground">每节 5–8 分钟,跟 Spark 一起读句子、学单词、看语法。</p>
-      </header>
-
-      <div className="mb-3 rounded-2xl border border-emerald-300 bg-gradient-to-r from-emerald-50 to-teal-50 p-3 text-sm text-emerald-800 dark:border-emerald-800 dark:from-emerald-950/40 dark:to-teal-950/40 dark:text-emerald-200">
-        <div className="font-extrabold">📝 已完成 {loading ? "…" : doneCount} / 30</div>
+      <div className="mb-4 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-4 shadow-tile dark:border-amber-700 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
+        <div className="flex items-start gap-3">
+          <div className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-3xl shadow-md">🦊</div>
+          <div className="min-w-0 flex-1">
+            <div className="text-base font-extrabold">和 Spark 的英语冒险</div>
+            <div className="mt-0.5 text-sm text-amber-800 dark:text-amber-200">"{sparkLine}"</div>
+            <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/60 dark:bg-amber-950/40">
+              <div className="h-full bg-gradient-to-r from-amber-500 to-orange-500 transition-all" style={{ width: `${(totalDone / 30) * 100}%` }} />
+            </div>
+            <div className="mt-1.5 text-xs font-bold text-amber-900 dark:text-amber-200">
+              {loading ? "…" : `已走过 ${totalDone} / 30 站 · 完成 ${totalChapters} 个章节`}
+            </div>
+          </div>
+        </div>
       </div>
 
-      <ul className="space-y-2">
-        {items.map((it) => {
-          const isDone = done.has(it.key);
+      <div className="space-y-3">
+        {G2_CHAPTERS.map((ch) => {
+          const unlocked = isChapterUnlocked(ch, doneIds);
+          const completed = isChapterCompleted(ch, doneIds);
+          const isOpen = openChapter === ch.id;
+          const isCurrent = !completed && unlocked && currentChapter.id === ch.id;
+          const doneInChapter = ch.lesson_ids.filter((id) => doneIds.has(id)).length;
           return (
-            <li key={it.key}>
-              <Link
-                to={`/lesson?grade=2&lesson=${encodeURIComponent(it.key)}`}
-                className={`flex items-center gap-3 rounded-2xl border-2 p-3 shadow-tile transition hover:-translate-y-0.5 ${
-                  isDone
-                    ? "border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 dark:border-emerald-700 dark:from-emerald-950/30 dark:to-teal-950/30"
-                    : "border-border bg-card"
-                }`}
-              >
-                <div className={`grid size-12 shrink-0 place-items-center rounded-2xl text-lg font-black text-white shadow-sm ${
-                  isDone ? "bg-gradient-to-br from-emerald-400 to-teal-400" : "bg-gradient-to-br from-amber-300 to-rose-300"
-                }`}>
-                  {isDone ? <Check className="size-6 stroke-white" /> : it.idx || "·"}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="truncate text-base font-extrabold">{it.en}</div>
-                  <div className="truncate text-xs text-muted-foreground">{it.cn}</div>
-                </div>
-                <BookOpen className="size-5 shrink-0 text-muted-foreground" />
-              </Link>
-            </li>
+            <ChapterCard
+              key={ch.id}
+              chapter={ch}
+              unlocked={unlocked}
+              completed={completed}
+              isCurrent={isCurrent}
+              isOpen={isOpen}
+              doneInChapter={doneInChapter}
+              doneIds={doneIds}
+              onToggle={() => setOpenChapter(isOpen ? null : ch.id)}
+            />
           );
         })}
-      </ul>
+      </div>
+
+      {showChapterModal && (
+        <div className="fixed inset-0 z-50 grid place-items-center bg-black/60 p-4 animate-fade-in">
+          <div className="w-full max-w-sm rounded-3xl border-4 border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-6 text-center shadow-2xl dark:border-amber-600 dark:from-amber-950/60 dark:via-orange-950/60 dark:to-rose-950/60">
+            <div className="text-6xl">🎉</div>
+            <div className="mt-3 text-sm text-muted-foreground">恭喜你完成了</div>
+            <div className="text-xl font-extrabold">第 {showChapterModal.id} 章 · {showChapterModal.title_cn}</div>
+            <div className="mt-5 text-7xl">{showChapterModal.badge_emoji}</div>
+            <div className="mt-2 text-base font-bold">「{showChapterModal.badge_name}」</div>
+            {showChapterModal.id < G2_CHAPTERS.length && (
+              <div className="mt-4 rounded-2xl bg-white/70 px-3 py-2 text-sm font-bold text-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
+                解锁了下一章:第 {showChapterModal.id + 1} 章 · {G2_CHAPTERS[showChapterModal.id].title_cn}
+              </div>
+            )}
+            <button
+              onClick={dismissModal}
+              className="mt-5 w-full rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 py-3 text-base font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
+            >
+              继续探险 →
+            </button>
+          </div>
+        </div>
+      )}
     </main>
+  );
+}
+
+function ChapterCard({
+  chapter, unlocked, completed, isCurrent, isOpen, doneInChapter, doneIds, onToggle,
+}: {
+  chapter: G2Chapter; unlocked: boolean; completed: boolean; isCurrent: boolean;
+  isOpen: boolean; doneInChapter: number; doneIds: Set<string>; onToggle: () => void;
+}) {
+  const headerCls = completed
+    ? "border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 dark:border-emerald-700 dark:from-emerald-950/30 dark:to-teal-950/30"
+    : isCurrent
+    ? "border-orange-400 bg-gradient-to-br from-orange-50 to-amber-50 dark:border-orange-600 dark:from-orange-950/30 dark:to-amber-950/30"
+    : unlocked
+    ? "border-border bg-card"
+    : "border-muted bg-muted/30 opacity-70";
+
+  return (
+    <div className={`rounded-3xl border-2 p-4 shadow-tile transition ${headerCls}`}>
+      <button onClick={unlocked ? onToggle : undefined} className="flex w-full items-center gap-3 text-left">
+        <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white text-2xl shadow-sm dark:bg-background">
+          {completed ? "✅" : isCurrent ? "📍" : !unlocked ? "🔒" : chapter.emoji}
+        </div>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-2">
+            <div className="text-sm font-bold text-muted-foreground">第 {chapter.id} 章</div>
+            {completed && <span className="text-base">{chapter.badge_emoji}</span>}
+          </div>
+          <div className="truncate text-base font-extrabold">{chapter.title_cn}</div>
+          <div className="truncate text-xs text-muted-foreground">
+            {!unlocked ? `完成第 ${chapter.id - 1} 章解锁` : `"${chapter.narrative}" · ${doneInChapter}/${chapter.lesson_ids.length}`}
+          </div>
+        </div>
+        {unlocked && (isOpen ? <ChevronUp className="size-5 shrink-0 text-muted-foreground" /> : <ChevronDown className="size-5 shrink-0 text-muted-foreground" />)}
+        {!unlocked && <Lock className="size-5 shrink-0 text-muted-foreground" />}
+      </button>
+
+      {isOpen && unlocked && (
+        <div className="mt-4">
+          {chapter.lesson_ids.map((lid, i) => {
+            const idx = lessonIdToIdx(lid);
+            const key = lessonIdToKey(lid);
+            const lessonDone = doneIds.has(lid);
+            const lessonUnlocked = isLessonUnlocked(chapter, i, doneIds);
+            const isActive = lessonUnlocked && !lessonDone;
+            const meta = key ? parseKey(key) : { en: lid, cn: "", idx };
+            const emoji = LESSON_EMOJI[idx] || "📘";
+
+            const stationCls = lessonDone
+              ? "border-emerald-400 bg-gradient-to-br from-emerald-400 to-teal-500 text-white"
+              : isActive
+              ? "border-orange-500 bg-gradient-to-br from-orange-400 to-rose-500 text-white animate-pulse"
+              : !lessonUnlocked
+              ? "border-muted bg-muted text-muted-foreground"
+              : "border-amber-300 bg-gradient-to-br from-amber-100 to-rose-100 text-amber-900 dark:border-amber-700 dark:from-amber-950/40 dark:to-rose-950/40 dark:text-amber-200";
+
+            const inner = (
+              <div className={`flex items-center gap-3 rounded-2xl border-2 p-3 shadow-sm transition ${stationCls}`}>
+                <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-white/30 text-xl">
+                  {lessonDone ? <Check className="size-5" /> : !lessonUnlocked ? <Lock className="size-4" /> : emoji}
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="truncate text-sm font-extrabold">
+                    {emoji} {meta.cn.replace(/^.*?:/, "") || meta.en}
+                  </div>
+                  <div className="truncate text-[11px] opacity-80">{meta.en}</div>
+                </div>
+                {isActive && <span className="rounded-full bg-white px-3 py-1 text-xs font-extrabold text-orange-600 shadow-sm">开始 →</span>}
+                {lessonDone && <span className="text-sm">⭐⭐⭐</span>}
+              </div>
+            );
+
+            return (
+              <div key={lid}>
+                {key && lessonUnlocked ? (
+                  <Link to={`/lesson?grade=2&lesson=${encodeURIComponent(key)}`}>{inner}</Link>
+                ) : (
+                  <div className="cursor-not-allowed">{inner}</div>
+                )}
+                {i < chapter.lesson_ids.length - 1 && (
+                  <div className="my-1 ml-[2.5rem] h-3 w-0.5 bg-amber-300/60 dark:bg-amber-700/60" />
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
 }
 

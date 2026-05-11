@@ -369,6 +369,26 @@ export default function PrimaryAdventure() {
       </section>
 
       {/* === Adventure 5 步精简单行列表 === */}
+      {/* === 想做点别的? — Reading / Listening / Roleplay 入口 === */}
+      <section className="mt-5">
+        <div className="mb-2 px-1 text-xs font-bold text-muted-foreground">想做点别的?</div>
+        <div className="grid grid-cols-3 gap-2">
+          {exploreCards.map((c) => (
+            <Link
+              key={c.to}
+              to={c.to}
+              className="rounded-2xl border border-border bg-muted/40 p-3 text-center transition hover:-translate-y-0.5 hover:bg-muted"
+            >
+              <div className="text-2xl">{c.emoji}</div>
+              <div className="mt-1 text-sm font-bold text-foreground">{c.label}</div>
+              <div className="mt-0.5 text-[11px] text-muted-foreground">
+                {c.row ? `${c.row.done} / ${c.row.total}` : "—"}
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {!loading && steps.length > 0 && (
         <section className="mt-5 rounded-2xl border border-border bg-card p-3 shadow-sm">
           <div className="mb-2 px-1 text-xs font-bold text-muted-foreground">今天的冒险</div>

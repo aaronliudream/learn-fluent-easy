@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from "react";
+import { T } from "@/i18n/T";import { useEffect, useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 
 /**
@@ -9,12 +9,12 @@ import { cn } from "@/lib/utils";
 export default function SegmentedReader({
   text,
   minSecPerSentence = 4,
-  onAllRevealed,
-}: {
-  text: string;
-  minSecPerSentence?: number;
-  onAllRevealed?: () => void;
-}) {
+  onAllRevealed
+
+
+
+
+}: {text: string;minSecPerSentence?: number;onAllRevealed?: () => void;}) {
   // 按 . ? ! 或换行切分，保留分隔符
   const sentences = useMemo(() => {
     const arr: string[] = [];
@@ -22,14 +22,14 @@ export default function SegmentedReader({
     const parts = text.split(/\n+/);
     for (const p of parts) {
       const m = p.match(re);
-      if (m) arr.push(...m.map(s => s.trim()).filter(Boolean));
-      else if (p.trim()) arr.push(p.trim());
+      if (m) arr.push(...m.map((s) => s.trim()).filter(Boolean));else
+      if (p.trim()) arr.push(p.trim());
       arr.push("\n");
     }
     return arr;
   }, [text]);
 
-  const realCount = sentences.filter(s => s !== "\n").length;
+  const realCount = sentences.filter((s) => s !== "\n").length;
   const [revealed, setRevealed] = useState(1);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function SegmentedReader({
       onAllRevealed?.();
       return;
     }
-    const t = setTimeout(() => setRevealed(r => Math.min(realCount, r + 1)), minSecPerSentence * 1000);
+    const t = setTimeout(() => setRevealed((r) => Math.min(realCount, r + 1)), minSecPerSentence * 1000);
     return () => clearTimeout(t);
   }, [revealed, realCount, minSecPerSentence, onAllRevealed]);
 
@@ -45,9 +45,9 @@ export default function SegmentedReader({
   return (
     <div className="text-[15px] leading-8 font-serif">
       <div className="mb-2 flex items-center gap-2 text-[11px] font-bold text-muted-foreground">
-        <span>逐句解锁 {Math.min(revealed, realCount)}/{realCount}</span>
+        <span><T>逐句解锁</T> {Math.min(revealed, realCount)}/{realCount}</span>
         <div className="h-1 flex-1 rounded-full bg-muted overflow-hidden">
-          <div className="h-full bg-emerald-500 transition-all duration-500" style={{ width: `${(revealed/realCount)*100}%` }} />
+          <div className="h-full bg-emerald-500 transition-all duration-500" style={{ width: `${revealed / realCount * 100}%` }} />
         </div>
       </div>
       <p className="whitespace-pre-wrap">
@@ -58,10 +58,10 @@ export default function SegmentedReader({
           return (
             <span key={i} className={cn("transition-all", shown ? "" : "blur-md select-none text-muted-foreground/60")}>
               {s + " "}
-            </span>
-          );
+            </span>);
+
         })}
       </p>
-    </div>
-  );
+    </div>);
+
 }

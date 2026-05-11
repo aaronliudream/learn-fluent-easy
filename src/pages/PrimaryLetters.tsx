@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { Link } from "react-router-dom";
@@ -9,8 +9,8 @@ import {
   PHONICS_ITEMS,
   PHONICS_GROUPS,
   getLettersAlphaSorted,
-  type PhonicsItem,
-} from "@/data/primaryPhonics";
+  type PhonicsItem } from
+"@/data/primaryPhonics";
 
 export default function PrimaryLetters() {
   const letters = useMemo(() => getLettersAlphaSorted(), []);
@@ -23,10 +23,10 @@ export default function PrimaryLetters() {
     if (!active) return;
     const timer = window.setTimeout(() => {
       prefetchTTSBatch([
-        active.letterUpper ?? active.letter,
-        active.chantEn,
-        ...active.exampleWords.slice(0, 2).map((w) => w.word),
-      ].filter(Boolean) as string[]);
+      active.letterUpper ?? active.letter,
+      active.chantEn,
+      ...active.exampleWords.slice(0, 2).map((w) => w.word)].
+      filter(Boolean) as string[]);
     }, 1200);
     return () => window.clearTimeout(timer);
   }, [active]);
@@ -36,16 +36,16 @@ export default function PrimaryLetters() {
       <GuestBanner />
       <BackLink
         to="/primary"
-        className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="size-4" /> 返回小学专区
+        className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        
+        <ArrowLeft className="size-4" /> <T>返回小学专区</T>
       </BackLink>
       <div className="mb-5">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
           26 LETTERS · PHONICS
         </div>
         <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">
-          26 个字母 · 自然拼读
+          <T>26 个字母 · 自然拼读</T>
         </h1>
       </div>
 
@@ -53,28 +53,28 @@ export default function PrimaryLetters() {
         <div className="grid gap-6 md:grid-cols-[260px_1fr]">
           {/* 字母网格 */}
           <div className="grid grid-cols-6 gap-2 md:grid-cols-4">
-            {letters.map((l) => (
-              <button
-                key={l.id}
-                onClick={() => setActive(l)}
-                className={cn(
-                  "aspect-square rounded-xl border-2 text-lg font-extrabold transition-all",
-                  active?.id === l.id
-                    ? "border-primary bg-primary/10 text-primary scale-105 shadow-lg"
-                    : "border-border bg-card hover:border-primary/40"
-                )}
-              >
+            {letters.map((l) =>
+          <button
+            key={l.id}
+            onClick={() => setActive(l)}
+            className={cn(
+              "aspect-square rounded-xl border-2 text-lg font-extrabold transition-all",
+              active?.id === l.id ?
+              "border-primary bg-primary/10 text-primary scale-105 shadow-lg" :
+              "border-border bg-card hover:border-primary/40"
+            )}>
+            
                 {l.letterUpper}
                 <span className="ml-0.5 text-muted-foreground">{l.letter}</span>
               </button>
-            ))}
+          )}
           </div>
 
           {/* 字母详情 */}
           {active && <LetterCard letter={active} />}
         </div>
-    </main>
-  );
+    </main>);
+
 }
 
 function PhonicsDemoCard() {
@@ -85,7 +85,7 @@ function PhonicsDemoCard() {
   return (
     <div className="mb-6 rounded-3xl border-2 border-dashed border-primary/40 bg-gradient-to-br from-rose-50 via-amber-50 to-orange-50 p-5 dark:from-rose-950/30 dark:via-amber-950/20 dark:to-orange-950/20">
       <div className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
-        🧪 DEMO · 新 Phonics 体系
+        <T>🧪 DEMO · 新 Phonics 体系</T>
       </div>
       <h2 className="text-lg font-extrabold">{group1.groupName} · {group1.groupNameEn}</h2>
       <p className="mt-1 text-sm italic text-muted-foreground">{group1.sparkIntro}</p>
@@ -95,50 +95,50 @@ function PhonicsDemoCard() {
           <div className="text-6xl font-black text-primary">{sItem.letter}</div>
           <div className="font-mono text-lg text-muted-foreground">{sItem.sound}</div>
         </div>
-        <p className="mt-2 text-sm"><span className="font-bold">怎么发：</span>{sItem.soundDesc}</p>
-        <p className="mt-1 text-sm text-muted-foreground"><span className="font-bold">小窍门：</span>{sItem.trickHint}</p>
+        <p className="mt-2 text-sm"><span className="font-bold"><T>怎么发：</T></span>{sItem.soundDesc}</p>
+        <p className="mt-1 text-sm text-muted-foreground"><span className="font-bold"><T>小窍门：</T></span>{sItem.trickHint}</p>
 
         <div className="mt-3 flex flex-wrap gap-2">
-          {sItem.exampleWords.map((w) => (
-            <button
-              key={w.word}
-              onClick={() => speak(w.word)}
-              className="flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1.5 text-sm font-bold text-primary hover:bg-primary/20"
-            >
+          {sItem.exampleWords.map((w) =>
+          <button
+            key={w.word}
+            onClick={() => speak(w.word)}
+            className="flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1.5 text-sm font-bold text-primary hover:bg-primary/20">
+            
               <Volume2 className="size-3.5" /> {w.emoji ?? ""} {w.word}
             </button>
-          ))}
+          )}
         </div>
 
-        {sItem.exampleSentence && (
-          <div className="mt-3 rounded-xl bg-amber-50 p-3 dark:bg-amber-950/30">
+        {sItem.exampleSentence &&
+        <div className="mt-3 rounded-xl bg-amber-50 p-3 dark:bg-amber-950/30">
             <button
-              onClick={() => speak(sItem.exampleSentence!)}
-              className="flex items-center gap-1 text-sm font-bold text-amber-800 hover:underline dark:text-amber-300"
-            >
+            onClick={() => speak(sItem.exampleSentence!)}
+            className="flex items-center gap-1 text-sm font-bold text-amber-800 hover:underline dark:text-amber-300">
+            
               <Volume2 className="size-3.5" /> {sItem.exampleSentence}
             </button>
-            {sItem.exampleSentenceCn && (
-              <p className="mt-0.5 text-sm text-amber-700 dark:text-amber-400">{sItem.exampleSentenceCn}</p>
-            )}
+            {sItem.exampleSentenceCn &&
+          <p className="mt-0.5 text-sm text-amber-700 dark:text-amber-400">{sItem.exampleSentenceCn}</p>
+          }
           </div>
-        )}
+        }
 
-        {sItem.sparkLine && (
-          <p className="mt-3 text-sm italic text-rose-600 dark:text-rose-400">
+        {sItem.sparkLine &&
+        <p className="mt-3 text-sm italic text-rose-600 dark:text-rose-400">
             🦊 Spark：“{sItem.sparkLine}”
           </p>
-        )}
+        }
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
-function LetterCard({ letter: l }: { letter: PhonicsItem }) {
+function LetterCard({ letter: l }: {letter: PhonicsItem;}) {
   const upper = l.letterUpper ?? l.letter.toUpperCase();
   const sayName = () => speak(upper);
   const sayShort = () =>
-    l.exampleWords[0] ? speak(l.exampleWords[0].word) : speak(upper);
+  l.exampleWords[0] ? speak(l.exampleWords[0].word) : speak(upper);
 
   return (
     <div className="space-y-4">
@@ -150,92 +150,92 @@ function LetterCard({ letter: l }: { letter: PhonicsItem }) {
               {upper}
               <span className="text-white/80">{l.letter}</span>
             </div>
-            {l.letterNameIpa && (
-              <div className="mt-1 text-sm font-mono opacity-90">
-                字母名 {l.letterNameIpa}
+            {l.letterNameIpa &&
+            <div className="mt-1 text-sm font-mono opacity-90">
+                <T>字母名</T> {l.letterNameIpa}
               </div>
-            )}
+            }
           </div>
           <div className="flex flex-col gap-2">
             <button
               onClick={sayName}
-              className="flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-2 text-xs font-bold backdrop-blur-sm hover:bg-white/30"
-            >
-              <Volume2 className="size-4" /> 字母名
+              className="flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-2 text-xs font-bold backdrop-blur-sm hover:bg-white/30">
+              
+              <Volume2 className="size-4" /> <T>字母名</T>
             </button>
             <button
               onClick={sayShort}
-              className="flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-2 text-xs font-bold backdrop-blur-sm hover:bg-white/30"
-            >
-              <Sparkles className="size-4" /> 拼读音
+              className="flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-2 text-xs font-bold backdrop-blur-sm hover:bg-white/30">
+              
+              <Sparkles className="size-4" /> <T>拼读音</T>
             </button>
           </div>
         </div>
         <div className="mt-3 flex flex-wrap gap-2 text-xs">
-          {l.sound && (
-            <span className="rounded-full bg-white/25 px-3 py-1 font-mono">
-              短音 {l.sound}
+          {l.sound &&
+          <span className="rounded-full bg-white/25 px-3 py-1 font-mono">
+              <T>短音</T> {l.sound}
             </span>
-          )}
-          {l.longSound && (
-            <span className="rounded-full bg-white/25 px-3 py-1 font-mono">
-              长音 {l.longSound}
+          }
+          {l.longSound &&
+          <span className="rounded-full bg-white/25 px-3 py-1 font-mono">
+              <T>长音</T> {l.longSound}
             </span>
-          )}
+          }
         </div>
       </div>
 
       {/* 口型 + 笔顺 */}
       <div className="grid gap-3 sm:grid-cols-2">
-        {l.soundDesc && (
-          <div className="rounded-2xl border border-border/60 bg-card p-4">
-            <div className="text-xs font-bold text-muted-foreground">👄 发音口型</div>
+        {l.soundDesc &&
+        <div className="rounded-2xl border border-border/60 bg-card p-4">
+            <div className="text-xs font-bold text-muted-foreground"><T>👄 发音口型</T></div>
             <p className="mt-1 text-sm">{l.soundDesc}</p>
           </div>
-        )}
-        {l.strokeOrder && (
-          <div className="rounded-2xl border border-border/60 bg-card p-4">
-            <div className="text-xs font-bold text-muted-foreground">✍️ 书写笔顺</div>
+        }
+        {l.strokeOrder &&
+        <div className="rounded-2xl border border-border/60 bg-card p-4">
+            <div className="text-xs font-bold text-muted-foreground"><T>✍️ 书写笔顺</T></div>
             <p className="mt-1 text-sm">{l.strokeOrder}</p>
           </div>
-        )}
+        }
       </div>
 
       {/* 儿歌 */}
-      {(l.chantCn || l.chantEn) && (
-        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-950/30">
+      {(l.chantCn || l.chantEn) &&
+      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-950/30">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-1.5 text-xs font-bold text-amber-700 dark:text-amber-400">
-              <Music className="size-4" /> 字母儿歌
+              <Music className="size-4" /> <T>字母儿歌</T>
             </div>
-            {l.chantEn && (
-              <button
-                onClick={() => speak(l.chantEn!)}
-                className="flex items-center gap-1 rounded-full bg-amber-500 px-2 py-1 text-[11px] font-bold text-white hover:bg-amber-600"
-              >
-                <Volume2 className="size-3" /> 听
+            {l.chantEn &&
+          <button
+            onClick={() => speak(l.chantEn!)}
+            className="flex items-center gap-1 rounded-full bg-amber-500 px-2 py-1 text-[11px] font-bold text-white hover:bg-amber-600">
+            
+                <Volume2 className="size-3" /> <T>听</T>
               </button>
-            )}
+          }
           </div>
           {l.chantEn && <p className="mt-1.5 text-sm font-bold">{l.chantEn}</p>}
-          {l.chantCn && (
-            <p className="mt-0.5 text-sm text-amber-800 dark:text-amber-200">
+          {l.chantCn &&
+        <p className="mt-0.5 text-sm text-amber-800 dark:text-amber-200">
               {l.chantCn}
             </p>
-          )}
+        }
         </div>
-      )}
+      }
 
       {/* 例词 emoji 卡 */}
       <div>
-        <div className="mb-2 text-xs font-bold text-muted-foreground">🎴 拼读例词</div>
+        <div className="mb-2 text-xs font-bold text-muted-foreground"><T>🎴 拼读例词</T></div>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-          {l.exampleWords.map((w, i) => (
-            <button
-              key={i}
-              onClick={() => speak(w.word)}
-              className="group flex flex-col items-center gap-1 rounded-2xl border border-border/60 bg-card p-3 transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
-            >
+          {l.exampleWords.map((w, i) =>
+          <button
+            key={i}
+            onClick={() => speak(w.word)}
+            className="group flex flex-col items-center gap-1 rounded-2xl border border-border/60 bg-card p-3 transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">
+            
               <div className="text-3xl">{w.emoji}</div>
               <div className="text-base font-extrabold">{w.word}</div>
               <div className="text-[11px] font-mono text-muted-foreground">
@@ -244,16 +244,16 @@ function LetterCard({ letter: l }: { letter: PhonicsItem }) {
               <div className="text-sm text-muted-foreground">{w.meaningCn}</div>
               <Volume2 className="size-3 text-primary opacity-0 group-hover:opacity-100" />
             </button>
-          ))}
+          )}
         </div>
       </div>
 
-      {l.funFact && (
-        <div className="rounded-2xl bg-violet-50 p-3 text-sm text-violet-800 dark:bg-violet-950/30 dark:text-violet-300">
-          💡 <span className="font-bold">小知识：</span>
+      {l.funFact &&
+      <div className="rounded-2xl bg-violet-50 p-3 text-sm text-violet-800 dark:bg-violet-950/30 dark:text-violet-300">
+          💡 <span className="font-bold"><T>小知识：</T></span>
           {l.funFact}
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }

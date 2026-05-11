@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useParams, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, RotateCcw, BookOpen, MessageCircleQuestion } from "lucide-react";
@@ -18,10 +18,10 @@ import {
   CHALLENGE_QUESTIONS_SENIOR,
   CHALLENGE_THRESHOLD,
   recordGroupCompletion,
-  type Streak,
-} from "@/lib/challengeMode";
+  type Streak } from
+"@/lib/challengeMode";
 
-type Point = { id: string; title: string; slug: string };
+type Point = {id: string;title: string;slug: string;};
 type Question = {
   id: string;
   stem: string;
@@ -36,7 +36,7 @@ type Question = {
 };
 
 export default function GaokaoGrammarQuiz() {
-  const { slug, index } = useParams<{ slug: string; index: string }>();
+  const { slug, index } = useParams<{slug: string;index: string;}>();
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const isChallenge = searchParams.get("challenge") === "1";
@@ -51,7 +51,7 @@ export default function GaokaoGrammarQuiz() {
   const [startTs, setStartTs] = useState<number>(Date.now());
   const [stats, setStats] = useState({ correct: 0, wrong: 0 });
   const [tutorOpen, setTutorOpen] = useState(false);
-  const [paywall, setPaywall] = useState<{ open: boolean; used: number; limit: number }>({ open: false, used: 5, limit: 5 });
+  const [paywall, setPaywall] = useState<{open: boolean;used: number;limit: number;}>({ open: false, used: 5, limit: 5 });
   const [groupStreak, setGroupStreak] = useState<Streak>({ consecutive_count: 0, challenge_unlocked: false });
   const groupRecordedRef = useRef<string | null>(null);
 
@@ -59,47 +59,47 @@ export default function GaokaoGrammarQuiz() {
   // Locked until the user has answered (`picked` is set), preventing answer leakage.
   const currentQ = questions[idx];
   useRegisterAssistant(
-    currentQ
-      ? {
-          context: "gaokao_grammar",
-          ref: currentQ.id,
-          topic: point ? `高考语法 · ${point.title}` : "高考语法",
-          mode: "per-question",
-          unlocked: !!picked,
-          lockedHint: "请先选出你认为正确的选项，提交后我再来帮你解析 ✨",
-          pageTitle: "💬 小月 · 本题答疑",
-          snapshot: picked
-            ? {
-                point: point?.title,
-                stem: currentQ.stem,
-                options: { A: currentQ.option_a, B: currentQ.option_b, C: currentQ.option_c, D: currentQ.option_d },
-                correct_answer: currentQ.correct_answer,
-                user_answer: picked,
-                is_correct: picked === currentQ.correct_answer,
-                explanation: currentQ.explanation,
-              }
-            : undefined,
-        }
-      : null,
+    currentQ ?
+    {
+      context: "gaokao_grammar",
+      ref: currentQ.id,
+      topic: point ? `高考语法 · ${point.title}` : "高考语法",
+      mode: "per-question",
+      unlocked: !!picked,
+      lockedHint: "请先选出你认为正确的选项，提交后我再来帮你解析 ✨",
+      pageTitle: "💬 小月 · 本题答疑",
+      snapshot: picked ?
+      {
+        point: point?.title,
+        stem: currentQ.stem,
+        options: { A: currentQ.option_a, B: currentQ.option_b, C: currentQ.option_c, D: currentQ.option_d },
+        correct_answer: currentQ.correct_answer,
+        user_answer: picked,
+        is_correct: picked === currentQ.correct_answer,
+        explanation: currentQ.explanation
+      } :
+      undefined
+    } :
+    null
   );
 
   useEffect(() => {
     if (!slug) return;
     (async () => {
       setLoading(true);
-      const { data: pt } = await supabase
-        .from("gaokao_grammar_points")
-        .select("id, title, slug")
-        .eq("slug", slug)
-        .maybeSingle();
-      if (!pt) { setLoading(false); return; }
+      const { data: pt } = await supabase.
+      from("gaokao_grammar_points").
+      select("id, title, slug").
+      eq("slug", slug).
+      maybeSingle();
+      if (!pt) {setLoading(false);return;}
       setPoint(pt as Point);
-      const { data: qs } = await supabase
-        .from("gaokao_grammar_questions")
-        .select("id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, irt_difficulty, question_type")
-        .eq("point_id", pt.id);
+      const { data: qs } = await supabase.
+      from("gaokao_grammar_questions").
+      select("id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, irt_difficulty, question_type").
+      eq("point_id", pt.id);
       const sorted = ((qs ?? []) as Question[]).sort(
-        (a, b) => (a.irt_difficulty ?? 0) - (b.irt_difficulty ?? 0),
+        (a, b) => (a.irt_difficulty ?? 0) - (b.irt_difficulty ?? 0)
       );
       // 单次抽题：普通模式 12 题（≤10 分钟），挑战模式 24 题。
       setQuestions(sorted.slice(0, sessionSize));
@@ -121,20 +121,20 @@ export default function GaokaoGrammarQuiz() {
   const total = questions.length;
 
   if (loading) {
-    return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p className="text-sm text-muted-foreground">加载中...</p></main>;
+    return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p className="text-sm text-muted-foreground"><T>加载中...</T></p></main>;
   }
   if (!point) {
-    return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p>考点不存在。<BackLink to="/gaokao/grammar" className="text-primary underline">返回</BackLink></p></main>;
+    return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p><T>考点不存在。</T><BackLink to="/gaokao/grammar" className="text-primary underline"><T>返回</T></BackLink></p></main>;
   }
   if (!total) {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回语法地图
+          <ArrowLeft className="size-4" /> <T>返回语法地图</T>
         </BackLink>
-        <p className="text-muted-foreground">本考点暂无题目。</p>
-      </main>
-    );
+        <p className="text-muted-foreground"><T>本考点暂无题目。</T></p>
+      </main>);
+
   }
 
   // Finished
@@ -152,75 +152,75 @@ export default function GaokaoGrammarQuiz() {
     const recordKey = `${slug}-${stats.correct}-${stats.wrong}`;
     if (point?.id && groupRecordedRef.current !== recordKey) {
       groupRecordedRef.current = recordKey;
-      recordGroupCompletion(`senior_grammar:${point.id}`, Math.round(acc * 100))
-        .then(setGroupStreak)
-        .catch(() => {});
+      recordGroupCompletion(`senior_grammar:${point.id}`, Math.round(acc * 100)).
+      then(setGroupStreak).
+      catch(() => {});
     }
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回语法地图
+          <ArrowLeft className="size-4" /> <T>返回语法地图</T>
         </BackLink>
         <div className="rounded-2xl border bg-card p-8 text-center">
           <div className="text-5xl mb-3">🎉</div>
-          <h2 className="text-xl font-bold mb-2">本考点已刷完！</h2>
+          <h2 className="text-xl font-bold mb-2"><T>本考点已刷完！</T></h2>
           <p className="text-sm text-muted-foreground mb-6">
-            本轮 {stats.correct + stats.wrong} 题，✓ {stats.correct} · ✗ {stats.wrong}
-            {stats.correct + stats.wrong > 0 && <> · 正确率 {Math.round(acc * 100)}%</>}
+            <T>本轮</T> {stats.correct + stats.wrong} <T>题，✓</T> {stats.correct} · ✗ {stats.wrong}
+            {stats.correct + stats.wrong > 0 && <> <T>· 正确率</T> {Math.round(acc * 100)}%</>}
           </p>
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
-            <Button onClick={() => { setStats({ correct: 0, wrong: 0 }); navigate(`/gaokao/grammar/${slug}/quiz/0`); }}>
-              <RotateCcw className="size-4 mr-1" /> 再刷一轮
+            <Button onClick={() => {setStats({ correct: 0, wrong: 0 });navigate(`/gaokao/grammar/${slug}/quiz/0`);}}>
+              <RotateCcw className="size-4 mr-1" /> <T>再刷一轮</T>
             </Button>
-            {groupStreak.challenge_unlocked && !isChallenge && (
-              <Button
-                onClick={() => {
-                  setStats({ correct: 0, wrong: 0 });
-                  groupRecordedRef.current = null;
-                  const next = new URLSearchParams(searchParams);
-                  next.set("challenge", "1");
-                  setSearchParams(next);
-                  navigate(`/gaokao/grammar/${slug}/quiz/0?challenge=1`);
-                }}
-                className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700"
-              >
-                🏆 挑战模式 ({CHALLENGE_QUESTIONS_SENIOR} 题)
+            {groupStreak.challenge_unlocked && !isChallenge &&
+            <Button
+              onClick={() => {
+                setStats({ correct: 0, wrong: 0 });
+                groupRecordedRef.current = null;
+                const next = new URLSearchParams(searchParams);
+                next.set("challenge", "1");
+                setSearchParams(next);
+                navigate(`/gaokao/grammar/${slug}/quiz/0?challenge=1`);
+              }}
+              className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700">
+                <T>🏆 挑战模式 (</T>
+              {CHALLENGE_QUESTIONS_SENIOR} <T>题)</T>
               </Button>
-            )}
-            {isChallenge && (
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setStats({ correct: 0, wrong: 0 });
-                  groupRecordedRef.current = null;
-                  navigate(`/gaokao/grammar/${slug}/quiz/0`);
-                }}
-              >
-                ↩️ 退出挑战模式
-              </Button>
-            )}
+            }
+            {isChallenge &&
+            <Button
+              variant="outline"
+              onClick={() => {
+                setStats({ correct: 0, wrong: 0 });
+                groupRecordedRef.current = null;
+                navigate(`/gaokao/grammar/${slug}/quiz/0`);
+              }}>
+                <T>↩️ 退出挑战模式</T>
+              
+            </Button>
+            }
             <Button variant="outline" asChild>
-              <Link to={`/gaokao/grammar/${slug}`}><BookOpen className="size-4 mr-1" /> 看讲解</Link>
+              <Link to={`/gaokao/grammar/${slug}`}><BookOpen className="size-4 mr-1" /> <T>看讲解</T></Link>
             </Button>
             <Button variant="ghost" asChild>
-              <BackLink to="/gaokao/grammar">返回地图</BackLink>
+              <BackLink to="/gaokao/grammar"><T>返回地图</T></BackLink>
             </Button>
           </div>
-          {!groupStreak.challenge_unlocked && acc * 100 >= 70 && (
-            <p className="mt-5 text-xs font-bold text-violet-600 dark:text-violet-300">
-              🔥 连续完成 {groupStreak.consecutive_count}/{CHALLENGE_THRESHOLD} 组
+          {!groupStreak.challenge_unlocked && acc * 100 >= 70 &&
+          <p className="mt-5 text-xs font-bold text-violet-600 dark:text-violet-300">
+              <T>🔥 连续完成</T> {groupStreak.consecutive_count}/{CHALLENGE_THRESHOLD} <T>组</T>
               {groupStreak.consecutive_count < CHALLENGE_THRESHOLD &&
-                ` · 再 ${CHALLENGE_THRESHOLD - groupStreak.consecutive_count} 组解锁挑战模式 🏆`}
+            ` · 再 ${CHALLENGE_THRESHOLD - groupStreak.consecutive_count} 组解锁挑战模式 🏆`}
             </p>
-          )}
-          {!groupStreak.challenge_unlocked && acc * 100 < 70 && groupStreak.consecutive_count === 0 && (
-            <p className="mt-5 text-xs text-muted-foreground">
-              💡 单组正确率 ≥70% 才计入连胜，加油！
+          }
+          {!groupStreak.challenge_unlocked && acc * 100 < 70 && groupStreak.consecutive_count === 0 &&
+          <p className="mt-5 text-xs text-muted-foreground">
+              <T>💡 单组正确率 ≥70% 才计入连胜，加油！</T>
             </p>
-          )}
+          }
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   const onPick = async (letter: string) => {
@@ -234,8 +234,8 @@ export default function GaokaoGrammarQuiz() {
     setPicked(letter);
     const isCorrect = letter === q.correct_answer;
     setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), wrong: s.wrong + (isCorrect ? 0 : 1) }));
-    if (isCorrect) awardCoins(3, "gaokao_grammar_correct").catch(() => {});
-    else { import("@/lib/coins").then(m => m.notifyWrong()); }
+    if (isCorrect) awardCoins(3, "gaokao_grammar_correct").catch(() => {});else
+    {import("@/lib/coins").then((m) => m.notifyWrong());}
     const latencyMs = Date.now() - startTs;
     await recordAttempt({ questionType: "grammar", questionId: q.id, userAnswer: letter, isCorrect });
     recordUnifiedAttempt({
@@ -248,13 +248,13 @@ export default function GaokaoGrammarQuiz() {
       is_correct: isCorrect,
       user_answer: letter,
       correct_answer: q.correct_answer,
-      context: { point_id: point?.id, slug, explanation: q.explanation },
+      context: { point_id: point?.id, slug, explanation: q.explanation }
     }).catch(() => {});
     const res = await recordGrammarAttempt({
       pointId: point.id,
       questionType: q.question_type || "multiple_choice",
       isCorrect,
-      latencyMs,
+      latencyMs
     });
     if (res?.justMastered) {
       toast.success("🏆 恭喜！本考点已掌握 (Master)", { duration: 4000 });
@@ -263,14 +263,14 @@ export default function GaokaoGrammarQuiz() {
       toast(`${m.emoji} ${m.label} · ${res.intervalDays} 天后复习`, { duration: 1800 });
     }
     setMastery((prev) =>
-      prev
-        ? { ...prev, correct_count: prev.correct_count + (isCorrect ? 1 : 0), wrong_count: prev.wrong_count + (isCorrect ? 0 : 1), mastery_level: res?.newLevel ?? prev.mastery_level }
-        : prev,
+    prev ?
+    { ...prev, correct_count: prev.correct_count + (isCorrect ? 1 : 0), wrong_count: prev.wrong_count + (isCorrect ? 0 : 1), mastery_level: res?.newLevel ?? prev.mastery_level } :
+    prev
     );
   };
 
   const goNext = () => navigate(`/gaokao/grammar/${slug}/quiz/${idx + 1}`);
-  const goPrev = () => { if (idx > 0) navigate(`/gaokao/grammar/${slug}/quiz/${idx - 1}`); };
+  const goPrev = () => {if (idx > 0) navigate(`/gaokao/grammar/${slug}/quiz/${idx - 1}`);};
 
   const meta = LEVEL_META[mastery?.mastery_level ?? 0];
 
@@ -279,7 +279,7 @@ export default function GaokaoGrammarQuiz() {
       {/* 顶部返回 + 进度 */}
       <div className="mb-4 flex items-center justify-between gap-2">
         <BackLink to="/gaokao/grammar" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回
+          <ArrowLeft className="size-4" /> <T>返回</T>
         </BackLink>
         <div className="text-xs text-muted-foreground tabular-nums">
           {idx + 1} / {total} · ✓{stats.correct} ✗{stats.wrong}
@@ -289,11 +289,11 @@ export default function GaokaoGrammarQuiz() {
       <div className="mb-4 flex items-center gap-2 text-[11px] text-muted-foreground">
         <span>{meta.emoji} {meta.label}</span>
         <span>·</span>
-        <span>累计 ✓{mastery?.correct_count ?? 0} ✗{mastery?.wrong_count ?? 0}</span>
+        <span><T>累计 ✓</T>{mastery?.correct_count ?? 0} ✗{mastery?.wrong_count ?? 0}</span>
       </div>
       {/* 进度条 */}
       <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-muted">
-        <div className="h-full bg-primary transition-all" style={{ width: `${((idx) / total) * 100}%` }} />
+        <div className="h-full bg-primary transition-all" style={{ width: `${idx / total * 100}%` }} />
       </div>
 
       {/* 题干 */}
@@ -306,94 +306,94 @@ export default function GaokaoGrammarQuiz() {
             const isAnswer = q.correct_answer === letter;
             let cls = "border-border hover:border-primary/40 hover:bg-muted/30";
             if (picked) {
-              if (isAnswer) cls = "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30 ring-2 ring-emerald-500/40";
-              else if (isPicked) cls = "border-rose-500 bg-rose-50 dark:bg-rose-950/30";
-              else cls = "border-border opacity-60";
+              if (isAnswer) cls = "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30 ring-2 ring-emerald-500/40";else
+              if (isPicked) cls = "border-rose-500 bg-rose-50 dark:bg-rose-950/30";else
+              cls = "border-border opacity-60";
             }
             return (
               <button
                 key={letter}
                 onClick={() => onPick(letter)}
                 disabled={!!picked}
-                className={`flex w-full items-start gap-3 rounded-xl border-2 p-3.5 text-left text-sm transition sm:text-base ${cls}`}
-              >
+                className={`flex w-full items-start gap-3 rounded-xl border-2 p-3.5 text-left text-sm transition sm:text-base ${cls}`}>
+                
                 <span className="font-bold shrink-0">{letter}.</span>
                 <span className="flex-1">{text}</span>
                 {picked && isAnswer && <CheckCircle2 className="size-5 text-emerald-600 shrink-0" />}
                 {picked && isPicked && !isAnswer && <XCircle className="size-5 text-rose-600 shrink-0" />}
-              </button>
-            );
+              </button>);
+
           })}
         </div>
 
         {/* 解析 */}
-        {picked && (
-          <div className="mt-5 rounded-xl border-l-4 border-primary bg-muted/40 p-4">
+        {picked &&
+        <div className="mt-5 rounded-xl border-l-4 border-primary bg-muted/40 p-4">
             <div className="mb-1.5 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
-              {picked === q.correct_answer ? "✅ 答对了" : "❌ 答错了"} · 解析
+              {picked === q.correct_answer ? "✅ 答对了" : "❌ 答错了"} <T>· 解析</T>
             </div>
             <p className="text-sm leading-relaxed text-foreground/90 whitespace-pre-wrap">
-              <span className="font-bold">正确答案：{q.correct_answer}</span>
+              <span className="font-bold"><T>正确答案：</T>{q.correct_answer}</span>
               {"\n"}
               {q.explanation}
             </p>
             <div className="mt-3">
               <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setTutorOpen(true)}
-                className="rounded-full border-primary/40 text-primary hover:bg-primary/10"
-              >
+              variant="outline"
+              size="sm"
+              onClick={() => setTutorOpen(true)}
+              className="rounded-full border-primary/40 text-primary hover:bg-primary/10">
+              
                 <MessageCircleQuestion className="size-4 mr-1.5" />
-                问小月 / Ask Luna
+                <T>问小月 / Ask Luna</T>
               </Button>
             </div>
           </div>
-        )}
+        }
       </section>
 
       {/* 底部导航 */}
       <div className="mt-5 flex items-center gap-2">
         <Button variant="outline" onClick={goPrev} disabled={idx === 0}>
-          <ArrowLeft className="size-4 mr-1" /> 上一题
+          <ArrowLeft className="size-4 mr-1" /> <T>上一题</T>
         </Button>
         <div className="flex-1" />
-        {picked ? (
-          <Button onClick={goNext} size="lg" className="min-w-[140px]">
+        {picked ?
+        <Button onClick={goNext} size="lg" className="min-w-[140px]">
             {idx + 1 >= total ? "查看结果" : "下一题"} <ChevronRight className="size-4 ml-1" />
+          </Button> :
+
+        <Button variant="ghost" onClick={goNext} className="text-muted-foreground">
+            <T>跳过</T> <ChevronRight className="size-4 ml-0.5" />
           </Button>
-        ) : (
-          <Button variant="ghost" onClick={goNext} className="text-muted-foreground">
-            跳过 <ChevronRight className="size-4 ml-0.5" />
-          </Button>
-        )}
+        }
       </div>
 
-      {picked && (
-        <TutorChat
-          context="gaokao_grammar"
-          questionRef={q.id}
-          questionSnapshot={{
-            point: point.title,
-            stem: q.stem,
-            options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
-            correct_answer: q.correct_answer,
-            user_answer: picked,
-            is_correct: picked === q.correct_answer,
-            explanation: q.explanation,
-          }}
-          open={tutorOpen}
-          onClose={() => setTutorOpen(false)}
-        />
-      )}
+      {picked &&
+      <TutorChat
+        context="gaokao_grammar"
+        questionRef={q.id}
+        questionSnapshot={{
+          point: point.title,
+          stem: q.stem,
+          options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
+          correct_answer: q.correct_answer,
+          user_answer: picked,
+          is_correct: picked === q.correct_answer,
+          explanation: q.explanation
+        }}
+        open={tutorOpen}
+        onClose={() => setTutorOpen(false)} />
+
+      }
 
       <PaywallDialog
         open={paywall.open}
         onClose={() => setPaywall((p) => ({ ...p, open: false }))}
         trigger="daily_quota_exhausted"
         used={paywall.used}
-        limit={paywall.limit}
-      />
-    </main>
-  );
+        limit={paywall.limit} />
+      
+    </main>);
+
 }

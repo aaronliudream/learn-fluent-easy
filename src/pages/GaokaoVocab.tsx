@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useSearchParams } from "react-router-dom";
@@ -15,8 +15,8 @@ import { cn } from "@/lib/utils";
 import {
   awardCoins,
   evaluateMilestones,
-  type BadgeDef,
-} from "@/lib/coinsBadges";
+  type BadgeDef } from
+"@/lib/coinsBadges";
 import { CoinPill, BadgeUnlockOverlay } from "@/components/CoinsBadgesUi";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import MasteryDashboard from "@/components/MasteryDashboard";
@@ -67,22 +67,22 @@ function speakExample(v: Vocab) {
   return speak(v.example_en, acc ? { accent: acc } : undefined);
 }
 
-function AccentBadge({ accent }: { accent: Vocab["accent"] }) {
+function AccentBadge({ accent }: {accent: Vocab["accent"];}) {
   if (accent !== "UK" && accent !== "US") return null;
   const isUS = accent === "US";
   return (
     <span
       className={cn(
         "ml-2 inline-flex items-center rounded-md border px-1.5 py-0.5 text-[10px] font-bold tracking-wide",
-        isUS
-          ? "border-blue-500/40 bg-blue-500/10 text-blue-600 dark:text-blue-400"
-          : "border-rose-500/40 bg-rose-500/10 text-rose-600 dark:text-rose-400"
+        isUS ?
+        "border-blue-500/40 bg-blue-500/10 text-blue-600 dark:text-blue-400" :
+        "border-rose-500/40 bg-rose-500/10 text-rose-600 dark:text-rose-400"
       )}
-      title={isUS ? "美式发音" : "英式发音"}
-    >
+      title={isUS ? "美式发音" : "英式发音"}>
+      
       {isUS ? "🇺🇸 US" : "🇬🇧 UK"}
-    </span>
-  );
+    </span>);
+
 }
 
 const GROUP_SIZE = 20;
@@ -104,16 +104,16 @@ function comboLabel(streak: number): string | null {
 
 type Phase = "flashcard" | "quiz" | "done";
 type QuizKind =
-  | "en2cn"
-  | "cn2en"
-  | "listen"
-  | "cloze"
-  | "en2en"
-  | "en2word"
-  | "spell"
-  | "syn"
-  | "pos";
-type SynPack = { correct: string; distractors: string[] };
+"en2cn" |
+"cn2en" |
+"listen" |
+"cloze" |
+"en2en" |
+"en2word" |
+"spell" |
+"syn" |
+"pos";
+type SynPack = {correct: string;distractors: string[];};
 type QuizItem = {
   vocab: Vocab;
   kind: QuizKind;
@@ -142,7 +142,7 @@ function pickKind(v: Vocab): QuizKind {
   return kinds[Math.floor(Math.random() * kinds.length)];
 }
 
-function buildClozeBlank(sentence: string, word: string): { masked: string; answer: string } {
+function buildClozeBlank(sentence: string, word: string): {masked: string;answer: string;} {
   // Match the word ignoring case, prefer whole word
   const re = new RegExp(`\\b(${word.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}\\w*)\\b`, "i");
   const m = sentence.match(re);
@@ -171,7 +171,7 @@ async function ensureMeaningsEn(vocabs: Vocab[]): Promise<Record<string, string>
         try {
           const { data, error } = await supabase.functions.invoke(
             "vocab-meaning-en",
-            { body: { ids } },
+            { body: { ids } }
           );
           if (error) throw error;
           const results = (data?.results ?? {}) as Record<string, string>;
@@ -196,7 +196,7 @@ async function ensureMeaningsEn(vocabs: Vocab[]): Promise<Record<string, string>
 
 function useMeaningEn(v: Vocab | null | undefined): string | null {
   const [val, setVal] = useState<string | null>(
-    v ? meaningEnCache.get(v.id) ?? v.meaning_en ?? null : null,
+    v ? meaningEnCache.get(v.id) ?? v.meaning_en ?? null : null
   );
   useEffect(() => {
     if (!v) {
@@ -207,7 +207,7 @@ function useMeaningEn(v: Vocab | null | undefined): string | null {
     if (cached) {
       setVal(cached);
       if (v.meaning_en && !meaningEnCache.has(v.id))
-        meaningEnCache.set(v.id, v.meaning_en);
+      meaningEnCache.set(v.id, v.meaning_en);
       return;
     }
     setVal(null);
@@ -236,20 +236,20 @@ async function ensureSynonyms(vocabs: Vocab[]): Promise<Record<string, SynPack>>
         try {
           const { data, error } = await supabase.functions.invoke(
             "vocab-synonyms",
-            { body: { ids } },
+            { body: { ids } }
           );
           if (error) throw error;
           const results = (data?.results ?? {}) as Record<string, SynPack>;
           for (const [id, pack] of Object.entries(results)) {
             if (
-              pack &&
-              typeof pack.correct === "string" &&
-              Array.isArray(pack.distractors) &&
-              pack.distractors.length >= 3
-            ) {
+            pack &&
+            typeof pack.correct === "string" &&
+            Array.isArray(pack.distractors) &&
+            pack.distractors.length >= 3)
+            {
               synonymCache.set(id, {
                 correct: pack.correct,
-                distractors: pack.distractors.slice(0, 3),
+                distractors: pack.distractors.slice(0, 3)
               });
             }
           }
@@ -292,14 +292,14 @@ function normPos(p: string | null | undefined): string {
 function buildPosChoices(target: Vocab, pool: Vocab[]): Vocab[] {
   const targetPos = normPos(target.pos);
   const differentPos = pool.filter(
-    (p) => p.id !== target.id && normPos(p.pos) && normPos(p.pos) !== targetPos,
+    (p) => p.id !== target.id && normPos(p.pos) && normPos(p.pos) !== targetPos
   );
   let distractors = shuffle(differentPos).slice(0, 3);
   if (distractors.length < 3) {
     const fillers = shuffle(
       pool.filter(
-        (p) => p.id !== target.id && !distractors.find((d) => d.id === p.id),
-      ),
+        (p) => p.id !== target.id && !distractors.find((d) => d.id === p.id)
+      )
     ).slice(0, 3 - distractors.length);
     distractors = [...distractors, ...fillers];
   }
@@ -317,20 +317,20 @@ export default function GaokaoVocab() {
 
   useEffect(() => {
     (async () => {
-      const { data } = await supabase
-        .from("gaokao_vocab")
-        .select("*")
-        // 🇨🇳 仅取「中国高中生必须掌握」的核心高考词汇（教育部新课标 3500 词，gaokao_level 1-3）
-        // 排除 level 4 拓展/超纲词，确保游戏内出现的都是必考词
-        .lte("gaokao_level", 3)
-        .not("gaokao_level", "is", null)
-        // 🧠 科学排序（取代字母表）：词频↑ → 考频↓ → 难度↓
-        // 依据：Zipf 定律 + Nation 2013《Learning Vocabulary in Another Language》
-        .order("freq_rank", { ascending: true, nullsFirst: false })
-        .order("exam_frequency", { ascending: false, nullsFirst: false })
-        .order("star_level", { ascending: false, nullsFirst: false })
-        .order("word", { ascending: true })
-        .range(0, 4999);
+      const { data } = await supabase.
+      from("gaokao_vocab").
+      select("*")
+      // 🇨🇳 仅取「中国高中生必须掌握」的核心高考词汇（教育部新课标 3500 词，gaokao_level 1-3）
+      // 排除 level 4 拓展/超纲词，确保游戏内出现的都是必考词
+      .lte("gaokao_level", 3).
+      not("gaokao_level", "is", null)
+      // 🧠 科学排序（取代字母表）：词频↑ → 考频↓ → 难度↓
+      // 依据：Zipf 定律 + Nation 2013《Learning Vocabulary in Another Language》
+      .order("freq_rank", { ascending: true, nullsFirst: false }).
+      order("exam_frequency", { ascending: false, nullsFirst: false }).
+      order("star_level", { ascending: false, nullsFirst: false }).
+      order("word", { ascending: true }).
+      range(0, 4999);
       setAllVocab((data ?? []) as Vocab[]);
       setLoading(false);
     })();
@@ -343,7 +343,7 @@ export default function GaokaoVocab() {
     return out;
   }, [allVocab]);
 
-  if (loading) return <p className="p-8 text-sm text-muted-foreground">加载中...</p>;
+  if (loading) return <p className="p-8 text-sm text-muted-foreground"><T>加载中...</T></p>;
 
   if (mode === "srs") {
     const focus = params.get("focus") === "retention" ? "retention" : undefined;
@@ -398,9 +398,9 @@ export default function GaokaoVocab() {
         onOpenDash={() => setParams({ mode: "dash" })}
         onPickMode={(m) => setParams({ mode: m })}
         onStartGuided={() => setParams({ mode: "guided" })}
-        onStartReview={() => setParams({ mode: "review" })}
-      />
-    );
+        onStartReview={() => setParams({ mode: "review" })} />);
+
+
   }
 
   return (
@@ -408,9 +408,9 @@ export default function GaokaoVocab() {
       group={groups[groupIdx]}
       groupNumber={groupIdx + 1}
       pool={allVocab}
-      onExit={() => setParams({})}
-    />
-  );
+      onExit={() => setParams({})} />);
+
+
 }
 
 /* ---------- Group list ---------- */
@@ -427,22 +427,22 @@ function GroupList({
   onOpenDash,
   onPickMode,
   onStartGuided,
-  onStartReview,
-}: {
-  groups: Vocab[][];
-  pool: Vocab[];
-  onPick: (i: number) => void;
-  onStartSrs: () => void;
-  onStartRush: () => void;
-  onStartBento: () => void;
-  onStartQuest: () => void;
-  onStartDuel: () => void;
-  onStartDict: () => void;
-  onOpenDash: () => void;
-  onPickMode: (mode: string) => void;
-  onStartGuided: () => void;
-  onStartReview: () => void;
-}) {
+  onStartReview
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}: {groups: Vocab[][];pool: Vocab[];onPick: (i: number) => void;onStartSrs: () => void;onStartRush: () => void;onStartBento: () => void;onStartQuest: () => void;onStartDuel: () => void;onStartDict: () => void;onOpenDash: () => void;onPickMode: (mode: string) => void;onStartGuided: () => void;onStartReview: () => void;}) {
   const [dueCount, setDueCount] = useState<number | null>(null);
   const [studiedCount, setStudiedCount] = useState<number>(0);
   const [sp] = useSearchParams();
@@ -457,18 +457,18 @@ function GroupList({
         return;
       }
       const nowIso = new Date().toISOString();
-      const { data: due } = await supabase
-        .from("gaokao_user_mastery")
-        .select("item_id", { count: "exact" })
-        .eq("user_id", user.id)
-        .eq("item_type", "vocab")
-        .lte("next_review_at", nowIso);
+      const { data: due } = await supabase.
+      from("gaokao_user_mastery").
+      select("item_id", { count: "exact" }).
+      eq("user_id", user.id).
+      eq("item_type", "vocab").
+      lte("next_review_at", nowIso);
       setDueCount(due?.length ?? 0);
-      const { data: studied } = await supabase
-        .from("gaokao_user_mastery")
-        .select("item_id")
-        .eq("user_id", user.id)
-        .eq("item_type", "vocab");
+      const { data: studied } = await supabase.
+      from("gaokao_user_mastery").
+      select("item_id").
+      eq("user_id", user.id).
+      eq("item_type", "vocab");
       setStudiedCount(studied?.length ?? 0);
     })();
   }, [pool.length]);
@@ -479,44 +479,44 @@ function GroupList({
         <GuestBanner />
         <BackLink
           to="/gaokao"
-          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-        >
-          <ArrowLeft className="size-4" /> 返回高考英语
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          
+          <ArrowLeft className="size-4" /> <T>返回高考英语</T>
         </BackLink>
         <CoinPill />
       </div>
       <PageHeader
         hideReviewBanner
         title="高考词汇 3500"
-        subtitle={`${pool.length} 词 · 按词频/难度/主题科学分类 · 不再字母排序`}
-      />
+        subtitle={`${pool.length} 词 · 按词频/难度/主题科学分类 · 不再字母排序`} />
+      
 
-      {gradeNum && (
-        <div className="mt-4">
+      {gradeNum &&
+      <div className="mt-4">
           <ModuleStageTests segment="gaokao" grade={gradeNum} module="vocab" />
         </div>
-      )}
+      }
 
       {/* 🚀 引导通关入口（5 步走 + FSRS） */}
       <button
         onClick={onStartGuided}
-        className="mt-4 flex w-full items-center justify-between gap-3 rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-500 to-teal-600 px-5 py-4 text-left text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700"
-      >
+        className="mt-4 flex w-full items-center justify-between gap-3 rounded-2xl border border-emerald-300 bg-gradient-to-br from-emerald-500 to-teal-600 px-5 py-4 text-left text-white shadow-lg transition hover:from-emerald-600 hover:to-teal-700">
+        
         <div className="flex items-center gap-3">
           <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/20"><Rocket className="size-5" /></span>
           <div>
-            <p className="text-sm font-bold">开始本关通关 · 5 步走</p>
-            <p className="mt-0.5 text-[11px] text-white/85">看 → 认 → 想 → 拼 → 用，按级解锁，自动收进遗忘曲线</p>
+            <p className="text-sm font-bold"><T>开始本关通关 · 5 步走</T></p>
+            <p className="mt-0.5 text-[11px] text-white/85"><T>看 → 认 → 想 → 拼 → 用，按级解锁，自动收进遗忘曲线</T></p>
           </div>
         </div>
-        <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold">推荐 ★</span>
+        <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold"><T>推荐 ★</T></span>
       </button>
 
       <div className="mt-4">
         <ReviewPool
           pool={pool.map((v) => ({ id: v.id, word: v.word }))}
-          onStart={onStartReview}
-        />
+          onStart={onStartReview} />
+        
       </div>
 
       {/* ⭐ 彻底掌握 5 步走 */}
@@ -532,12 +532,12 @@ function GroupList({
               classic: onStartRush,
               quest: onStartQuest,
               bento: onStartBento,
-              duel: onStartDuel,
+              duel: onStartDuel
             };
             (map[m] ?? (() => onPickMode(m)))();
           }}
-          onBrowse={() => onPick(0)}
-        />
+          onBrowse={() => onPick(0)} />
+        
         <RetentionChallengeCard
           vocabIds={pool.map((v) => v.id)}
           onStart={() => {
@@ -545,8 +545,8 @@ function GroupList({
             url.searchParams.set("mode", "srs");
             url.searchParams.set("focus", "retention");
             window.location.assign(url.toString());
-          }}
-        />
+          }} />
+        
       </div>
 
       {/* 学习进度总览：掌握数、百分比、未完成、7 天到期、平均稳定天数 */}
@@ -568,11 +568,11 @@ function GroupList({
         }}
         className={cn(
           "mt-6 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          dueCount && dueCount > 0
-            ? "border-primary bg-gradient-to-br from-primary/15 via-primary/5 to-transparent hover:border-primary hover:shadow-md"
-            : "border-border bg-card hover:border-primary/40 hover:shadow-md"
-        )}
-      >
+          dueCount && dueCount > 0 ?
+          "border-primary bg-gradient-to-br from-primary/15 via-primary/5 to-transparent hover:border-primary hover:shadow-md" :
+          "border-border bg-card hover:border-primary/40 hover:shadow-md"
+        )}>
+        
         <div className="flex items-center gap-4">
           <div className={cn(
             "flex size-14 shrink-0 items-center justify-center rounded-2xl",
@@ -582,21 +582,21 @@ function GroupList({
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">🧠 智能复习</span>
-              {dueCount !== null && dueCount > 0 && (
-                <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[11px] font-bold text-primary-foreground">
-                  <Flame className="size-3" /> 今日 {dueCount} 词待复习
+              <span className="text-base font-extrabold"><T>🧠 智能复习</T></span>
+              {dueCount !== null && dueCount > 0 &&
+              <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[11px] font-bold text-primary-foreground">
+                  <Flame className="size-3" /> <T>今日</T> {dueCount} <T>词待复习</T>
                 </span>
-              )}
+              }
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              {dueCount === null
-                ? "加载中…"
-                : dueCount === 0
-                ? studiedCount === 0
-                  ? "点这里去学第一组单词，系统会按艾宾浩斯曲线安排复习 →"
-                  : `已学 ${studiedCount} 词 · 今日没有到期单词，明天再来`
-                : `已学 ${studiedCount} 词 · Anki SM-2 算法 · 答错重学，答对延后`}
+              {dueCount === null ?
+              "加载中…" :
+              dueCount === 0 ?
+              studiedCount === 0 ?
+              "点这里去学第一组单词，系统会按艾宾浩斯曲线安排复习 →" :
+              `已学 ${studiedCount} 词 · 今日没有到期单词，明天再来` :
+              `已学 ${studiedCount} 词 · Anki SM-2 算法 · 答错重学，答对延后`}
             </div>
           </div>
           <ChevronRight className={cn("size-5", dueCount && dueCount > 0 ? "text-primary" : "text-muted-foreground")} />
@@ -609,24 +609,24 @@ function GroupList({
         disabled={pool.length < 4}
         className={cn(
           "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.length >= 4
-            ? "border-fuchsia-500/60 bg-gradient-to-br from-fuchsia-500/15 via-purple-500/10 to-transparent hover:border-fuchsia-500 hover:shadow-md"
-            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}
-      >
+          pool.length >= 4 ?
+          "border-fuchsia-500/60 bg-gradient-to-br from-fuchsia-500/15 via-purple-500/10 to-transparent hover:border-fuchsia-500 hover:shadow-md" :
+          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}>
+        
         <div className="flex items-center gap-4">
           <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-fuchsia-500/20 text-fuchsia-600 dark:text-fuchsia-400">
             <Music className="size-7" />
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">⚡ Word Rush 节奏消除</span>
+              <span className="text-base font-extrabold"><T>⚡ Word Rush 节奏消除</T></span>
               <span className="inline-flex items-center gap-1 rounded-full bg-fuchsia-500 px-2 py-0.5 text-[11px] font-bold text-white">
                 NEW
               </span>
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              中文从天而降 · 60 秒内点对越多越快 · Combo 加倍 + 金币奖励
+              <T>中文从天而降 · 60 秒内点对越多越快 · Combo 加倍 + 金币奖励</T>
             </div>
           </div>
           <ChevronRight className="size-5 text-fuchsia-500" />
@@ -639,27 +639,27 @@ function GroupList({
         disabled={pool.length < 12}
         className={cn(
           "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.length >= 12
-            ? "border-amber-500/60 bg-gradient-to-br from-amber-500/15 via-orange-500/10 to-transparent hover:border-amber-500 hover:shadow-md"
-            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}
-      >
+          pool.length >= 12 ?
+          "border-amber-500/60 bg-gradient-to-br from-amber-500/15 via-orange-500/10 to-transparent hover:border-amber-500 hover:shadow-md" :
+          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}>
+        
         <div className="flex items-center gap-4">
           <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-amber-500/20 text-amber-600 dark:text-amber-400">
             <span className="text-2xl">🍱</span>
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">🍱 Word Bento 单词便当</span>
+              <span className="text-base font-extrabold"><T>🍱 Word Bento 单词便当</T></span>
               <span className="inline-flex items-center gap-1 rounded-full bg-amber-500 px-2 py-0.5 text-[11px] font-bold text-white">
                 NEW
               </span>
               <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-0.5 text-[10px] font-bold text-amber-700 dark:text-amber-300">
-                🏆 排行榜
+                <T>🏆 排行榜</T>
               </span>
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              拖拽配对消除 · 30 对单词 · 全对 + 极速双重奖励
+              <T>拖拽配对消除 · 30 对单词 · 全对 + 极速双重奖励</T>
             </div>
           </div>
           <ChevronRight className="size-5 text-amber-500" />
@@ -672,27 +672,27 @@ function GroupList({
         disabled={pool.length < 50}
         className={cn(
           "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.length >= 50
-            ? "border-indigo-500/60 bg-gradient-to-br from-indigo-500/15 via-sky-500/10 to-transparent hover:border-indigo-500 hover:shadow-md"
-            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}
-      >
+          pool.length >= 50 ?
+          "border-indigo-500/60 bg-gradient-to-br from-indigo-500/15 via-sky-500/10 to-transparent hover:border-indigo-500 hover:shadow-md" :
+          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}>
+        
         <div className="flex items-center gap-4">
           <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400">
             <span className="text-2xl">🗺️</span>
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">🗺️ Word Quest 单词奇旅</span>
+              <span className="text-base font-extrabold"><T>🗺️ Word Quest 单词奇旅</T></span>
               <span className="inline-flex items-center gap-1 rounded-full bg-indigo-500 px-2 py-0.5 text-[11px] font-bold text-white">
-                每日
+                <T>每日</T>
               </span>
               <span className="inline-flex items-center gap-1 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-2 py-0.5 text-[10px] font-bold text-indigo-700 dark:text-indigo-300">
-                🏆 速度榜
+                <T>🏆 速度榜</T>
               </span>
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              全球同款今日单词 · 6 关闯关 · 连续打卡解锁稀有徽章
+              <T>全球同款今日单词 · 6 关闯关 · 连续打卡解锁稀有徽章</T>
             </div>
           </div>
           <ChevronRight className="size-5 text-indigo-500" />
@@ -705,27 +705,27 @@ function GroupList({
         disabled={pool.length < 50}
         className={cn(
           "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.length >= 50
-            ? "border-rose-500/60 bg-gradient-to-br from-rose-500/15 via-orange-500/10 to-transparent hover:border-rose-500 hover:shadow-md"
-            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}
-      >
+          pool.length >= 50 ?
+          "border-rose-500/60 bg-gradient-to-br from-rose-500/15 via-orange-500/10 to-transparent hover:border-rose-500 hover:shadow-md" :
+          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}>
+        
         <div className="flex items-center gap-4">
           <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-600 dark:text-rose-400">
             <span className="text-2xl">⚔️</span>
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">⚔️ Word Duel 单词决斗</span>
+              <span className="text-base font-extrabold"><T>⚔️ Word Duel 单词决斗</T></span>
               <span className="inline-flex items-center gap-1 rounded-full bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white">
                 PVP
               </span>
               <span className="inline-flex items-center gap-1 rounded-full border border-rose-500/40 bg-rose-500/10 px-2 py-0.5 text-[10px] font-bold text-rose-700 dark:text-rose-300">
-                👑 段位
+                <T>👑 段位</T>
               </span>
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              真人 1v1 · 5 回合 8 秒题 · ELO 段位制 · 青铜→王者全球榜
+              <T>真人 1v1 · 5 回合 8 秒题 · ELO 段位制 · 青铜→王者全球榜</T>
             </div>
           </div>
           <ChevronRight className="size-5 text-rose-500" />
@@ -738,24 +738,24 @@ function GroupList({
         disabled={pool.filter((v) => v.example_en).length < 5}
         className={cn(
           "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.filter((v) => v.example_en).length >= 5
-            ? "border-emerald-500/60 bg-gradient-to-br from-emerald-500/15 via-teal-500/10 to-transparent hover:border-emerald-500 hover:shadow-md"
-            : "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}
-      >
+          pool.filter((v) => v.example_en).length >= 5 ?
+          "border-emerald-500/60 bg-gradient-to-br from-emerald-500/15 via-teal-500/10 to-transparent hover:border-emerald-500 hover:shadow-md" :
+          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
+        )}>
+        
         <div className="flex items-center gap-4">
           <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
             <Headphones className="size-7" />
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">🎧 句子听写</span>
+              <span className="text-base font-extrabold"><T>🎧 句子听写</T></span>
               <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500 px-2 py-0.5 text-[11px] font-bold text-white">
                 NEW
               </span>
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              听例句 → 输入 → AI 评分纠错 + 金币奖励
+              <T>听例句 → 输入 → AI 评分纠错 + 金币奖励</T>
             </div>
           </div>
           <ChevronRight className="size-5 text-emerald-500" />
@@ -765,21 +765,21 @@ function GroupList({
       {/* Mastery Dashboard entry */}
       <button
         onClick={onOpenDash}
-        className="mt-3 group block w-full rounded-3xl border-2 border-indigo-500/60 bg-gradient-to-br from-indigo-500/15 via-sky-500/10 to-transparent p-5 text-left shadow-tile transition hover:border-indigo-500 hover:shadow-md"
-      >
+        className="mt-3 group block w-full rounded-3xl border-2 border-indigo-500/60 bg-gradient-to-br from-indigo-500/15 via-sky-500/10 to-transparent p-5 text-left shadow-tile transition hover:border-indigo-500 hover:shadow-md">
+        
         <div className="flex items-center gap-4">
           <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400">
             <BarChart3 className="size-7" />
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">📊 掌握度仪表盘</span>
+              <span className="text-base font-extrabold"><T>📊 掌握度仪表盘</T></span>
               <span className="inline-flex items-center gap-1 rounded-full bg-indigo-500 px-2 py-0.5 text-[11px] font-bold text-white">
                 NEW
               </span>
             </div>
             <div className="mt-1 text-xs text-muted-foreground">
-              5 级分布 · 三维能力 · 易错词热区 · 大师词汇
+              <T>5 级分布 · 三维能力 · 易错词热区 · 大师词汇</T>
             </div>
           </div>
           <ChevronRight className="size-5 text-indigo-500" />
@@ -787,8 +787,8 @@ function GroupList({
       </button>
 
       <CurriculumBrowser pool={pool} groups={groups} onPick={onPick} />
-    </main>
-  );
+    </main>);
+
 }
 
 /* ============================================================
@@ -801,52 +801,52 @@ function GroupList({
    - 🧠 个性化：FSRS 智能复习入口（已存在于顶部"智能复习"卡片）
    ============================================================ */
 
-const THEME_META: Record<string, { emoji: string; cn: string; color: string }> = {
-  daily:        { emoji: "🏠", cn: "日常生活", color: "amber" },
-  abstract:     { emoji: "💭", cn: "抽象思维", color: "violet" },
-  feelings:     { emoji: "💖", cn: "情感心理", color: "rose" },
-  function:     { emoji: "🔗", cn: "功能虚词", color: "slate" },
-  work:         { emoji: "💼", cn: "职场工作", color: "blue" },
-  nature:       { emoji: "🌿", cn: "自然环境", color: "emerald" },
-  society:      { emoji: "🏛️", cn: "社会公民", color: "indigo" },
-  school:       { emoji: "🎓", cn: "校园学习", color: "sky" },
-  food:         { emoji: "🍎", cn: "饮食美食", color: "orange" },
-  health:       { emoji: "🩺", cn: "健康医疗", color: "teal" },
-  travel:       { emoji: "✈️", cn: "旅行交通", color: "cyan" },
-  media:        { emoji: "📱", cn: "媒体科技", color: "fuchsia" },
-  family:       { emoji: "👨‍👩‍👧", cn: "家庭亲情", color: "pink" },
-  science:      { emoji: "🔬", cn: "科学研究", color: "purple" },
-  tech:         { emoji: "💡", cn: "前沿科技", color: "fuchsia" },
-  city:         { emoji: "🏙️", cn: "城市生活", color: "zinc" },
-  shopping:     { emoji: "🛍️", cn: "购物消费", color: "amber" },
-  cross_culture:{ emoji: "🌐", cn: "跨文化",   color: "indigo" },
-  sports:       { emoji: "⚽", cn: "体育运动", color: "lime" },
-  history:      { emoji: "📜", cn: "历史人文", color: "stone" },
-  environment:  { emoji: "♻️", cn: "环境保护", color: "green" },
-  chinese:      { emoji: "🐉", cn: "中国文化", color: "red" },
+const THEME_META: Record<string, {emoji: string;cn: string;color: string;}> = {
+  daily: { emoji: "🏠", cn: "日常生活", color: "amber" },
+  abstract: { emoji: "💭", cn: "抽象思维", color: "violet" },
+  feelings: { emoji: "💖", cn: "情感心理", color: "rose" },
+  function: { emoji: "🔗", cn: "功能虚词", color: "slate" },
+  work: { emoji: "💼", cn: "职场工作", color: "blue" },
+  nature: { emoji: "🌿", cn: "自然环境", color: "emerald" },
+  society: { emoji: "🏛️", cn: "社会公民", color: "indigo" },
+  school: { emoji: "🎓", cn: "校园学习", color: "sky" },
+  food: { emoji: "🍎", cn: "饮食美食", color: "orange" },
+  health: { emoji: "🩺", cn: "健康医疗", color: "teal" },
+  travel: { emoji: "✈️", cn: "旅行交通", color: "cyan" },
+  media: { emoji: "📱", cn: "媒体科技", color: "fuchsia" },
+  family: { emoji: "👨‍👩‍👧", cn: "家庭亲情", color: "pink" },
+  science: { emoji: "🔬", cn: "科学研究", color: "purple" },
+  tech: { emoji: "💡", cn: "前沿科技", color: "fuchsia" },
+  city: { emoji: "🏙️", cn: "城市生活", color: "zinc" },
+  shopping: { emoji: "🛍️", cn: "购物消费", color: "amber" },
+  cross_culture: { emoji: "🌐", cn: "跨文化", color: "indigo" },
+  sports: { emoji: "⚽", cn: "体育运动", color: "lime" },
+  history: { emoji: "📜", cn: "历史人文", color: "stone" },
+  environment: { emoji: "♻️", cn: "环境保护", color: "green" },
+  chinese: { emoji: "🐉", cn: "中国文化", color: "red" }
 };
 
 /* 安全静态颜色映射（避免 Tailwind purge 动态 class） */
-const COLOR_CLASSES: Record<string, { border: string; bg: string; text: string; chip: string }> = {
-  amber:   { border: "border-amber-500/40",   bg: "bg-amber-500/15",   text: "text-amber-600 dark:text-amber-400",   chip: "bg-amber-500/15 text-amber-700 dark:text-amber-300" },
-  sky:     { border: "border-sky-500/40",     bg: "bg-sky-500/15",     text: "text-sky-600 dark:text-sky-400",       chip: "bg-sky-500/15 text-sky-700 dark:text-sky-300" },
+const COLOR_CLASSES: Record<string, {border: string;bg: string;text: string;chip: string;}> = {
+  amber: { border: "border-amber-500/40", bg: "bg-amber-500/15", text: "text-amber-600 dark:text-amber-400", chip: "bg-amber-500/15 text-amber-700 dark:text-amber-300" },
+  sky: { border: "border-sky-500/40", bg: "bg-sky-500/15", text: "text-sky-600 dark:text-sky-400", chip: "bg-sky-500/15 text-sky-700 dark:text-sky-300" },
   emerald: { border: "border-emerald-500/40", bg: "bg-emerald-500/15", text: "text-emerald-600 dark:text-emerald-400", chip: "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300" },
-  violet:  { border: "border-violet-500/40",  bg: "bg-violet-500/15",  text: "text-violet-600 dark:text-violet-400", chip: "bg-violet-500/15 text-violet-700 dark:text-violet-300" },
-  rose:    { border: "border-rose-500/40",    bg: "bg-rose-500/15",    text: "text-rose-600 dark:text-rose-400",     chip: "bg-rose-500/15 text-rose-700 dark:text-rose-300" },
-  blue:    { border: "border-blue-500/40",    bg: "bg-blue-500/15",    text: "text-blue-600 dark:text-blue-400",     chip: "bg-blue-500/15 text-blue-700 dark:text-blue-300" },
-  indigo:  { border: "border-indigo-500/40",  bg: "bg-indigo-500/15",  text: "text-indigo-600 dark:text-indigo-400", chip: "bg-indigo-500/15 text-indigo-700 dark:text-indigo-300" },
-  orange:  { border: "border-orange-500/40",  bg: "bg-orange-500/15",  text: "text-orange-600 dark:text-orange-400", chip: "bg-orange-500/15 text-orange-700 dark:text-orange-300" },
-  teal:    { border: "border-teal-500/40",    bg: "bg-teal-500/15",    text: "text-teal-600 dark:text-teal-400",     chip: "bg-teal-500/15 text-teal-700 dark:text-teal-300" },
-  cyan:    { border: "border-cyan-500/40",    bg: "bg-cyan-500/15",    text: "text-cyan-600 dark:text-cyan-400",     chip: "bg-cyan-500/15 text-cyan-700 dark:text-cyan-300" },
+  violet: { border: "border-violet-500/40", bg: "bg-violet-500/15", text: "text-violet-600 dark:text-violet-400", chip: "bg-violet-500/15 text-violet-700 dark:text-violet-300" },
+  rose: { border: "border-rose-500/40", bg: "bg-rose-500/15", text: "text-rose-600 dark:text-rose-400", chip: "bg-rose-500/15 text-rose-700 dark:text-rose-300" },
+  blue: { border: "border-blue-500/40", bg: "bg-blue-500/15", text: "text-blue-600 dark:text-blue-400", chip: "bg-blue-500/15 text-blue-700 dark:text-blue-300" },
+  indigo: { border: "border-indigo-500/40", bg: "bg-indigo-500/15", text: "text-indigo-600 dark:text-indigo-400", chip: "bg-indigo-500/15 text-indigo-700 dark:text-indigo-300" },
+  orange: { border: "border-orange-500/40", bg: "bg-orange-500/15", text: "text-orange-600 dark:text-orange-400", chip: "bg-orange-500/15 text-orange-700 dark:text-orange-300" },
+  teal: { border: "border-teal-500/40", bg: "bg-teal-500/15", text: "text-teal-600 dark:text-teal-400", chip: "bg-teal-500/15 text-teal-700 dark:text-teal-300" },
+  cyan: { border: "border-cyan-500/40", bg: "bg-cyan-500/15", text: "text-cyan-600 dark:text-cyan-400", chip: "bg-cyan-500/15 text-cyan-700 dark:text-cyan-300" },
   fuchsia: { border: "border-fuchsia-500/40", bg: "bg-fuchsia-500/15", text: "text-fuchsia-600 dark:text-fuchsia-400", chip: "bg-fuchsia-500/15 text-fuchsia-700 dark:text-fuchsia-300" },
-  pink:    { border: "border-pink-500/40",    bg: "bg-pink-500/15",    text: "text-pink-600 dark:text-pink-400",     chip: "bg-pink-500/15 text-pink-700 dark:text-pink-300" },
-  purple:  { border: "border-purple-500/40",  bg: "bg-purple-500/15",  text: "text-purple-600 dark:text-purple-400", chip: "bg-purple-500/15 text-purple-700 dark:text-purple-300" },
-  zinc:    { border: "border-zinc-500/40",    bg: "bg-zinc-500/15",    text: "text-zinc-600 dark:text-zinc-400",     chip: "bg-zinc-500/15 text-zinc-700 dark:text-zinc-300" },
-  lime:    { border: "border-lime-500/40",    bg: "bg-lime-500/15",    text: "text-lime-600 dark:text-lime-400",     chip: "bg-lime-500/15 text-lime-700 dark:text-lime-300" },
-  stone:   { border: "border-stone-500/40",   bg: "bg-stone-500/15",   text: "text-stone-600 dark:text-stone-400",   chip: "bg-stone-500/15 text-stone-700 dark:text-stone-300" },
-  green:   { border: "border-green-500/40",   bg: "bg-green-500/15",   text: "text-green-600 dark:text-green-400",   chip: "bg-green-500/15 text-green-700 dark:text-green-300" },
-  red:     { border: "border-red-500/40",     bg: "bg-red-500/15",     text: "text-red-600 dark:text-red-400",       chip: "bg-red-500/15 text-red-700 dark:text-red-300" },
-  slate:   { border: "border-slate-500/40",   bg: "bg-slate-500/15",   text: "text-slate-600 dark:text-slate-400",   chip: "bg-slate-500/15 text-slate-700 dark:text-slate-300" },
+  pink: { border: "border-pink-500/40", bg: "bg-pink-500/15", text: "text-pink-600 dark:text-pink-400", chip: "bg-pink-500/15 text-pink-700 dark:text-pink-300" },
+  purple: { border: "border-purple-500/40", bg: "bg-purple-500/15", text: "text-purple-600 dark:text-purple-400", chip: "bg-purple-500/15 text-purple-700 dark:text-purple-300" },
+  zinc: { border: "border-zinc-500/40", bg: "bg-zinc-500/15", text: "text-zinc-600 dark:text-zinc-400", chip: "bg-zinc-500/15 text-zinc-700 dark:text-zinc-300" },
+  lime: { border: "border-lime-500/40", bg: "bg-lime-500/15", text: "text-lime-600 dark:text-lime-400", chip: "bg-lime-500/15 text-lime-700 dark:text-lime-300" },
+  stone: { border: "border-stone-500/40", bg: "bg-stone-500/15", text: "text-stone-600 dark:text-stone-400", chip: "bg-stone-500/15 text-stone-700 dark:text-stone-300" },
+  green: { border: "border-green-500/40", bg: "bg-green-500/15", text: "text-green-600 dark:text-green-400", chip: "bg-green-500/15 text-green-700 dark:text-green-300" },
+  red: { border: "border-red-500/40", bg: "bg-red-500/15", text: "text-red-600 dark:text-red-400", chip: "bg-red-500/15 text-red-700 dark:text-red-300" },
+  slate: { border: "border-slate-500/40", bg: "bg-slate-500/15", text: "text-slate-600 dark:text-slate-400", chip: "bg-slate-500/15 text-slate-700 dark:text-slate-300" }
 };
 const cc = (c: string) => COLOR_CLASSES[c] || COLOR_CLASSES.slate;
 
@@ -855,42 +855,42 @@ type BrowseMode = "freq" | "cefr" | "theme" | "exam";
 function CurriculumBrowser({
   pool,
   groups,
-  onPick,
-}: {
-  pool: Vocab[];
-  groups: Vocab[][];
-  onPick: (i: number) => void;
-}) {
+  onPick
+
+
+
+
+}: {pool: Vocab[];groups: Vocab[][];onPick: (i: number) => void;}) {
   const [mode, setMode] = useState<BrowseMode>("freq");
   const [activeTheme, setActiveTheme] = useState<string | null>(null);
 
   // 🔥 高频分段（Top 1000 / 1001-2000 / 2001-3000 / 3001-4000 / 4000+）
   const freqBands = useMemo(() => {
     const bands = [
-      { key: "1000", label: "Top 1000 核心词", desc: "覆盖日常 80% 用语 · 必须 100% 掌握", emoji: "🥇", color: "amber" },
-      { key: "2000", label: "1001 – 2000 高频", desc: "覆盖度 ~92% · 高考阅读核心", emoji: "🥈", color: "sky" },
-      { key: "3000", label: "2001 – 3000 中频", desc: "覆盖度 ~96% · 完形填空必备", emoji: "🥉", color: "emerald" },
-      { key: "4000", label: "3001 – 4000 进阶", desc: "拉开分数线 · 写作亮点词", emoji: "💎", color: "violet" },
-      { key: "5000", label: "4000+ 拔尖", desc: "学霸专属 · 阅读 D 级题", emoji: "👑", color: "rose" },
-    ];
+    { key: "1000", label: "Top 1000 核心词", desc: "覆盖日常 80% 用语 · 必须 100% 掌握", emoji: "🥇", color: "amber" },
+    { key: "2000", label: "1001 – 2000 高频", desc: "覆盖度 ~92% · 高考阅读核心", emoji: "🥈", color: "sky" },
+    { key: "3000", label: "2001 – 3000 中频", desc: "覆盖度 ~96% · 完形填空必备", emoji: "🥉", color: "emerald" },
+    { key: "4000", label: "3001 – 4000 进阶", desc: "拉开分数线 · 写作亮点词", emoji: "💎", color: "violet" },
+    { key: "5000", label: "4000+ 拔尖", desc: "学霸专属 · 阅读 D 级题", emoji: "👑", color: "rose" }];
+
     return bands.map((b) => ({
       ...b,
-      words: pool.filter((v) => (v.freq_rank ?? 5000) === parseInt(b.key, 10)),
+      words: pool.filter((v) => (v.freq_rank ?? 5000) === parseInt(b.key, 10))
     }));
   }, [pool]);
 
   // 📚 CEFR / 高考难度阶梯
   const cefrLevels = useMemo(() => {
     const levels = [
-      { key: 1, label: "A1 入门", desc: "初中基础 · 零起点必学", emoji: "🌱", color: "emerald" },
-      { key: 2, label: "A2 基础", desc: "高一上学期 · 高考保底", emoji: "🌿", color: "sky" },
-      { key: 3, label: "B1 进阶", desc: "高二核心 · 高考主战场", emoji: "🌳", color: "amber" },
-      { key: 4, label: "B2 高阶", desc: "高三冲刺 · 阅读高分词", emoji: "🔥", color: "rose" },
-      { key: 5, label: "C1 拔尖", desc: "竞赛/留学 · 写作亮点", emoji: "👑", color: "violet" },
-    ];
+    { key: 1, label: "A1 入门", desc: "初中基础 · 零起点必学", emoji: "🌱", color: "emerald" },
+    { key: 2, label: "A2 基础", desc: "高一上学期 · 高考保底", emoji: "🌿", color: "sky" },
+    { key: 3, label: "B1 进阶", desc: "高二核心 · 高考主战场", emoji: "🌳", color: "amber" },
+    { key: 4, label: "B2 高阶", desc: "高三冲刺 · 阅读高分词", emoji: "🔥", color: "rose" },
+    { key: 5, label: "C1 拔尖", desc: "竞赛/留学 · 写作亮点", emoji: "👑", color: "violet" }];
+
     return levels.map((l) => ({
       ...l,
-      words: pool.filter((v) => (v.gaokao_level ?? v.star_level ?? 3) === l.key),
+      words: pool.filter((v) => (v.gaokao_level ?? v.star_level ?? 3) === l.key)
     }));
   }, [pool]);
 
@@ -902,152 +902,152 @@ function CurriculumBrowser({
       if (!map.has(t)) map.set(t, []);
       map.get(t)!.push(v);
     });
-    return Array.from(map.entries())
-      .filter(([k]) => THEME_META[k])
-      .sort((a, b) => b[1].length - a[1].length);
+    return Array.from(map.entries()).
+    filter(([k]) => THEME_META[k]).
+    sort((a, b) => b[1].length - a[1].length);
   }, [pool]);
 
   // 🎯 高考考点池
   const examHotPool = useMemo(
     () =>
-      pool.filter(
-        (v) => v.is_hot_topic === true || (v.exam_frequency ?? 0) >= 3,
-      ),
-    [pool],
+    pool.filter(
+      (v) => v.is_hot_topic === true || (v.exam_frequency ?? 0) >= 3
+    ),
+    [pool]
   );
 
   return (
     <section className="mt-8">
       <div className="mb-3 flex items-center gap-2">
         <Sparkles className="size-4 text-primary" />
-        <h2 className="text-base font-extrabold">科学词库浏览</h2>
+        <h2 className="text-base font-extrabold"><T>科学词库浏览</T></h2>
         <span className="rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-[10px] font-bold text-primary">
           CEFR · Nation · Zipf
         </span>
       </div>
       <p className="mb-4 text-xs text-muted-foreground">
-        告别字母表 — 按词频、难度、主题分类，永远在学最该学的词。
+        <T>告别字母表 — 按词频、难度、主题分类，永远在学最该学的词。</T>
       </p>
 
       {/* Tab bar */}
       <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1">
         {([
-          { k: "freq", label: "🔥 高频优先" },
-          { k: "cefr", label: "📚 难度阶梯" },
-          { k: "theme", label: "🎨 主题词群" },
-          { k: "exam", label: "🎯 高考考点" },
-        ] as const).map((t) => (
-          <button
-            key={t.k}
-            onClick={() => { setMode(t.k); setActiveTheme(null); }}
-            className={cn(
-              "shrink-0 rounded-full border-2 px-4 py-2 text-sm font-bold transition",
-              mode === t.k
-                ? "border-primary bg-primary text-primary-foreground shadow"
-                : "border-border bg-card text-muted-foreground hover:border-primary/40",
-            )}
-          >
+        { k: "freq", label: "🔥 高频优先" },
+        { k: "cefr", label: "📚 难度阶梯" },
+        { k: "theme", label: "🎨 主题词群" },
+        { k: "exam", label: "🎯 高考考点" }] as
+        const).map((t) =>
+        <button
+          key={t.k}
+          onClick={() => {setMode(t.k);setActiveTheme(null);}}
+          className={cn(
+            "shrink-0 rounded-full border-2 px-4 py-2 text-sm font-bold transition",
+            mode === t.k ?
+            "border-primary bg-primary text-primary-foreground shadow" :
+            "border-border bg-card text-muted-foreground hover:border-primary/40"
+          )}>
+          
             {t.label}
           </button>
-        ))}
+        )}
       </div>
 
       {/* === 🔥 Frequency mode === */}
-      {mode === "freq" && (
-        <div className="mt-4 space-y-3">
-          {freqBands.map((b) => (
-            <BandPanel
-              key={b.key}
-              emoji={b.emoji}
-              title={b.label}
-              subtitle={b.desc}
-              color={b.color}
-              words={b.words}
-              groups={groups}
-              onPick={onPick}
-            />
-          ))}
+      {mode === "freq" &&
+      <div className="mt-4 space-y-3">
+          {freqBands.map((b) =>
+        <BandPanel
+          key={b.key}
+          emoji={b.emoji}
+          title={b.label}
+          subtitle={b.desc}
+          color={b.color}
+          words={b.words}
+          groups={groups}
+          onPick={onPick} />
+
+        )}
         </div>
-      )}
+      }
 
       {/* === 📚 CEFR mode === */}
-      {mode === "cefr" && (
-        <div className="mt-4 space-y-3">
-          {cefrLevels.map((l) => (
-            <BandPanel
-              key={l.key}
-              emoji={l.emoji}
-              title={l.label}
-              subtitle={l.desc}
-              color={l.color}
-              words={l.words}
-              groups={groups}
-              onPick={onPick}
-            />
-          ))}
+      {mode === "cefr" &&
+      <div className="mt-4 space-y-3">
+          {cefrLevels.map((l) =>
+        <BandPanel
+          key={l.key}
+          emoji={l.emoji}
+          title={l.label}
+          subtitle={l.desc}
+          color={l.color}
+          words={l.words}
+          groups={groups}
+          onPick={onPick} />
+
+        )}
         </div>
-      )}
+      }
 
       {/* === 🎨 Theme mode === */}
-      {mode === "theme" && !activeTheme && (
-        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+      {mode === "theme" && !activeTheme &&
+      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
           {themeGroups.map(([key, words]) => {
-            const meta = THEME_META[key];
-            return (
-              <button
-                key={key}
-                onClick={() => setActiveTheme(key)}
-                className="group rounded-2xl border-2 bg-card p-4 text-left shadow-sm transition hover:border-primary hover:shadow-md"
-              >
+          const meta = THEME_META[key];
+          return (
+            <button
+              key={key}
+              onClick={() => setActiveTheme(key)}
+              className="group rounded-2xl border-2 bg-card p-4 text-left shadow-sm transition hover:border-primary hover:shadow-md">
+              
                 <div className="text-3xl">{meta.emoji}</div>
                 <div className="mt-2 text-sm font-extrabold">{meta.cn}</div>
                 <div className="mt-1 flex items-center justify-between text-[11px] text-muted-foreground">
-                  <span>{words.length} 词</span>
+                  <span>{words.length} <T>词</T></span>
                   <ChevronRight className="size-3 group-hover:text-primary" />
                 </div>
-              </button>
-            );
-          })}
+              </button>);
+
+        })}
         </div>
-      )}
-      {mode === "theme" && activeTheme && (
-        <div className="mt-4">
+      }
+      {mode === "theme" && activeTheme &&
+      <div className="mt-4">
           <button
-            onClick={() => setActiveTheme(null)}
-            className="mb-3 inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
-          >
-            <ArrowLeft className="size-3" /> 返回主题
+          onClick={() => setActiveTheme(null)}
+          className="mb-3 inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
+          
+            <ArrowLeft className="size-3" /> <T>返回主题</T>
           </button>
           <BandPanel
-            emoji={THEME_META[activeTheme].emoji}
-            title={THEME_META[activeTheme].cn}
-            subtitle="同语义场聚类 · 记忆效率提升 ~40%"
-            color={THEME_META[activeTheme].color}
-            words={pool.filter((v) => v.theme === activeTheme)}
-            groups={groups}
-            onPick={onPick}
-            defaultOpen
-          />
+          emoji={THEME_META[activeTheme].emoji}
+          title={THEME_META[activeTheme].cn}
+          subtitle="同语义场聚类 · 记忆效率提升 ~40%"
+          color={THEME_META[activeTheme].color}
+          words={pool.filter((v) => v.theme === activeTheme)}
+          groups={groups}
+          onPick={onPick}
+          defaultOpen />
+        
         </div>
-      )}
+      }
 
       {/* === 🎯 Exam-hot mode === */}
-      {mode === "exam" && (
-        <div className="mt-4">
+      {mode === "exam" &&
+      <div className="mt-4">
           <BandPanel
-            emoji="🎯"
-            title="高考真题高频词"
-            subtitle={`${examHotPool.length} 词 · 近 5 年真题反复出现 · 必拿分`}
-            color="rose"
-            words={examHotPool}
-            groups={groups}
-            onPick={onPick}
-            defaultOpen
-          />
+          emoji="🎯"
+          title="高考真题高频词"
+          subtitle={`${examHotPool.length} 词 · 近 5 年真题反复出现 · 必拿分`}
+          color="rose"
+          words={examHotPool}
+          groups={groups}
+          onPick={onPick}
+          defaultOpen />
+        
         </div>
-      )}
-    </section>
-  );
+      }
+    </section>);
+
 }
 
 /* 词组面板（折叠展开） — 把同一波词按 GROUP_SIZE 切组，跳到主词组索引 */
@@ -1059,22 +1059,22 @@ function BandPanel({
   words,
   groups,
   onPick,
-  defaultOpen = false,
-}: {
-  emoji: string;
-  title: string;
-  subtitle: string;
-  color: string;
-  words: Vocab[];
-  groups: Vocab[][];
-  onPick: (i: number) => void;
-  defaultOpen?: boolean;
-}) {
+  defaultOpen = false
+
+
+
+
+
+
+
+
+
+}: {emoji: string;title: string;subtitle: string;color: string;words: Vocab[];groups: Vocab[][];onPick: (i: number) => void;defaultOpen?: boolean;}) {
   const [open, setOpen] = useState(defaultOpen);
   // 找出这些词分散在主 groups 中的索引（以词组中第一个词的 id 为锚）
   const groupHits = useMemo(() => {
     const wordIds = new Set(words.map((w) => w.id));
-    const hits: { idx: number; preview: string; matched: number; total: number }[] = [];
+    const hits: {idx: number;preview: string;matched: number;total: number;}[] = [];
     groups.forEach((g, i) => {
       const matched = g.filter((v) => wordIds.has(v.id)).length;
       if (matched === 0) return;
@@ -1082,7 +1082,7 @@ function BandPanel({
         idx: i,
         preview: `${g[0]?.word} → ${g[g.length - 1]?.word}`,
         matched,
-        total: g.length,
+        total: g.length
       });
     });
     return hits;
@@ -1095,8 +1095,8 @@ function BandPanel({
     <div className={cn("rounded-2xl border-2 bg-card", c.border)}>
       <button
         onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-center gap-3 p-4 text-left"
-      >
+        className="flex w-full items-center gap-3 p-4 text-left">
+        
         <div className={cn("flex size-12 shrink-0 items-center justify-center rounded-xl text-2xl", c.bg)}>
           {emoji}
         </div>
@@ -1104,36 +1104,36 @@ function BandPanel({
           <div className="flex items-center gap-2">
             <span className="text-sm font-extrabold">{title}</span>
             <span className={cn("rounded-full px-2 py-0.5 text-[10px] font-bold", c.chip)}>
-              {words.length} 词
+              {words.length} <T>词</T>
             </span>
           </div>
           <div className="mt-0.5 truncate text-[11px] text-muted-foreground">{subtitle}</div>
         </div>
         <ChevronRight className={cn("size-4 text-muted-foreground transition", open && "rotate-90")} />
       </button>
-      {open && (
-        <div className="border-t bg-muted/30 p-3">
+      {open &&
+      <div className="border-t bg-muted/30 p-3">
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-            {groupHits.map((h) => (
-              <button
-                key={h.idx}
-                onClick={() => onPick(h.idx)}
-                className="group rounded-xl border bg-card p-3 text-left shadow-sm transition hover:border-primary hover:shadow"
-              >
+            {groupHits.map((h) =>
+          <button
+            key={h.idx}
+            onClick={() => onPick(h.idx)}
+            className="group rounded-xl border bg-card p-3 text-left shadow-sm transition hover:border-primary hover:shadow">
+            
                 <div className="flex items-center justify-between text-[10px] text-muted-foreground">
-                  <span>第 {h.idx + 1} 组</span>
+                  <span><T>第</T> {h.idx + 1} <T>组</T></span>
                   <span className={cn("font-bold", c.text)}>
                     {h.matched}/{h.total}
                   </span>
                 </div>
                 <div className="mt-1 truncate text-xs font-bold">{h.preview}</div>
               </button>
-            ))}
+          )}
           </div>
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
 /* ---------- Single group session ---------- */
@@ -1141,19 +1141,19 @@ function GroupSession({
   group,
   groupNumber,
   pool,
-  onExit,
-}: {
-  group: Vocab[];
-  groupNumber: number;
-  pool: Vocab[];
-  onExit: () => void;
-}) {
+  onExit
+
+
+
+
+
+}: {group: Vocab[];groupNumber: number;pool: Vocab[];onExit: () => void;}) {
   const [phase, setPhase] = useState<Phase>("flashcard");
   const [stats, setStats] = useState({ correct: 0, total: 0 });
   const [coinsRefreshKey, setCoinsRefreshKey] = useState(0);
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [coinsAwarded, setCoinsAwarded] = useState(0);
-  const [groupLevelUps, setGroupLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+  const [groupLevelUps, setGroupLevelUps] = useState<{word: string;level: MasteryLevel;}[]>([]);
   const [wrongWords, setWrongWords] = useState<Vocab[]>([]);
 
   return (
@@ -1161,9 +1161,9 @@ function GroupSession({
       <div className="mb-4 flex items-center justify-between">
         <button
           onClick={onExit}
-          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-        >
-          <ArrowLeft className="size-4" /> 返回组列表
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          
+          <ArrowLeft className="size-4" /> <T>返回组列表</T>
         </button>
         <CoinPill refreshKey={coinsRefreshKey} />
       </div>
@@ -1178,58 +1178,58 @@ function GroupSession({
 
       <PageHeader back="/gaokao/vocab" hideReviewBanner title={`第 ${groupNumber} 组 · ${group.length} 词`} subtitle={phaseSubtitle(phase)} />
 
-      {phase === "flashcard" && (
-        <FlashcardPhase group={group} onDone={() => setPhase("quiz")} />
-      )}
-      {phase === "quiz" && (
-        <QuizPhase
-          group={group}
-          pool={pool}
-          onDone={async (s) => {
-            setStats({ correct: s.correct, total: s.total });
-            setCoinsAwarded(s.score);
-            setGroupLevelUps(s.levelUps ?? []);
-            // Resolve wrong-vocab IDs back to full vocab objects (from current group)
-            const wrongSet = new Set(s.wrongVocabIds ?? []);
-            setWrongWords(group.filter((v) => wrongSet.has(v.id)));
-            setPhase("done");
-            const pct = s.total > 0 ? Math.round((s.correct / s.total) * 100) : 0;
-            celebrateScore(pct);
-            // Award coins and check milestone badges
-            const totals = await awardCoins(s.score);
-            setCoinsRefreshKey((k) => k + 1);
-            const perfect = s.total > 0 && s.correct === s.total;
-            const newly = await evaluateMilestones({
-              bestStreak: s.bestStreak,
-              spellCorrect: s.spellCorrect,
-              perfectGroup: perfect,
-              totalEarned: totals?.total_earned ?? 0,
-              attempted: s.total,
-            });
-            if (newly.length > 0) setUnlockedBadges(newly);
-          }}
-        />
-      )}
-      {phase === "done" && (
-        <DonePanel
-          stats={stats}
-          coinsAwarded={coinsAwarded}
-          onExit={onExit}
-          onRetry={() => setPhase("flashcard")}
-          levelUps={groupLevelUps}
-          group={group}
-          wrongWords={wrongWords}
-          poolIds={pool.map((v) => v.id)}
-        />
-      )}
-      {unlockedBadges.length > 0 && (
-        <BadgeUnlockOverlay
-          badges={unlockedBadges}
-          onDismiss={() => setUnlockedBadges([])}
-        />
-      )}
-    </main>
-  );
+      {phase === "flashcard" &&
+      <FlashcardPhase group={group} onDone={() => setPhase("quiz")} />
+      }
+      {phase === "quiz" &&
+      <QuizPhase
+        group={group}
+        pool={pool}
+        onDone={async (s) => {
+          setStats({ correct: s.correct, total: s.total });
+          setCoinsAwarded(s.score);
+          setGroupLevelUps(s.levelUps ?? []);
+          // Resolve wrong-vocab IDs back to full vocab objects (from current group)
+          const wrongSet = new Set(s.wrongVocabIds ?? []);
+          setWrongWords(group.filter((v) => wrongSet.has(v.id)));
+          setPhase("done");
+          const pct = s.total > 0 ? Math.round(s.correct / s.total * 100) : 0;
+          celebrateScore(pct);
+          // Award coins and check milestone badges
+          const totals = await awardCoins(s.score);
+          setCoinsRefreshKey((k) => k + 1);
+          const perfect = s.total > 0 && s.correct === s.total;
+          const newly = await evaluateMilestones({
+            bestStreak: s.bestStreak,
+            spellCorrect: s.spellCorrect,
+            perfectGroup: perfect,
+            totalEarned: totals?.total_earned ?? 0,
+            attempted: s.total
+          });
+          if (newly.length > 0) setUnlockedBadges(newly);
+        }} />
+
+      }
+      {phase === "done" &&
+      <DonePanel
+        stats={stats}
+        coinsAwarded={coinsAwarded}
+        onExit={onExit}
+        onRetry={() => setPhase("flashcard")}
+        levelUps={groupLevelUps}
+        group={group}
+        wrongWords={wrongWords}
+        poolIds={pool.map((v) => v.id)} />
+
+      }
+      {unlockedBadges.length > 0 &&
+      <BadgeUnlockOverlay
+        badges={unlockedBadges}
+        onDismiss={() => setUnlockedBadges([])} />
+
+      }
+    </main>);
+
 }
 
 function phaseSubtitle(p: Phase) {
@@ -1238,21 +1238,21 @@ function phaseSubtitle(p: Phase) {
   return "阶段 3：本组完成，已加入 SRS 复习队列";
 }
 
-function PhaseChip({ active, icon, label }: { active: boolean; icon: React.ReactNode; label: string }) {
+function PhaseChip({ active, icon, label }: {active: boolean;icon: React.ReactNode;label: string;}) {
   return (
     <span
       className={cn(
         "inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs",
         active ? "border-primary bg-primary/10 text-primary font-semibold" : "border-border text-muted-foreground"
-      )}
-    >
+      )}>
+      
       {icon} {label}
-    </span>
-  );
+    </span>);
+
 }
 
 /* ---------- Phase 1: Flashcards ---------- */
-function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void }) {
+function FlashcardPhase({ group, onDone }: {group: Vocab[];onDone: () => void;}) {
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const v = group[idx];
@@ -1272,8 +1272,8 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
   if (!v) return null;
 
   const next = () => {
-    if (idx + 1 >= group.length) onDone();
-    else setIdx(idx + 1);
+    if (idx + 1 >= group.length) onDone();else
+    setIdx(idx + 1);
   };
 
   // ⌨️ 回车键：继续下一个 / 进入测试
@@ -1295,44 +1295,44 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
     <div>
       <div className="mb-3 flex items-center justify-between text-xs text-muted-foreground">
         <span>{idx + 1} / {group.length}</span>
-        <button onClick={onDone} className="hover:text-foreground">跳过 →</button>
+        <button onClick={onDone} className="hover:text-foreground"><T>跳过 →</T></button>
       </div>
       <div
         className="min-h-[280px] cursor-pointer rounded-3xl border bg-card p-8 text-center shadow-tile transition hover:shadow-md"
-        onClick={() => setFlipped((f) => !f)}
-      >
+        onClick={() => setFlipped((f) => !f)}>
+        
         <button
-          onClick={(e) => { e.stopPropagation(); speakWord(v); }}
-          className="mx-auto inline-flex items-center gap-2 text-3xl font-extrabold tracking-tight"
-        >
+          onClick={(e) => {e.stopPropagation();speakWord(v);}}
+          className="mx-auto inline-flex items-center gap-2 text-3xl font-extrabold tracking-tight">
+          
           {v.word} <Volume2 className="size-5 text-primary" />
         </button>
-        {v.phonetic && (
-          <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
+        {v.phonetic &&
+        <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
             {v.phonetic}
             <AccentBadge accent={v.accent} />
           </div>
-        )}
+        }
         {v.pos && <div className="mt-1 text-xs text-muted-foreground">{v.pos}</div>}
 
-        {flipped ? (
-          <div className="mt-6 space-y-3 text-left">
+        {flipped ?
+        <div className="mt-6 space-y-3 text-left">
             <div className="rounded-xl bg-muted/50 p-3 text-base font-medium">{v.meaning_cn}</div>
             <div className="rounded-xl border border-primary/30 bg-primary/5 p-3 text-sm">
               <div className="mb-1 text-[10px] font-bold uppercase tracking-wider text-primary">
                 English definition
               </div>
-              {meaningEn ? (
-                <div className="italic">{meaningEn}</div>
-              ) : (
-                <div className="text-muted-foreground">Loading…</div>
-              )}
+              {meaningEn ?
+            <div className="italic">{meaningEn}</div> :
+
+            <div className="text-muted-foreground">Loading…</div>
+            }
             </div>
-            {v.example_en && (
-              <button
-                onClick={(e) => { e.stopPropagation(); speakExample(v); }}
-                className="block w-full rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
-              >
+            {v.example_en &&
+          <button
+            onClick={(e) => {e.stopPropagation();speakExample(v);}}
+            className="block w-full rounded-xl border p-3 text-left text-sm hover:bg-accent/30">
+            
                 <div className="flex items-start gap-2">
                   <Volume2 className="mt-0.5 size-4 shrink-0 text-primary" />
                   <div>
@@ -1341,17 +1341,17 @@ function FlashcardPhase({ group, onDone }: { group: Vocab[]; onDone: () => void 
                   </div>
                 </div>
               </button>
-            )}
-          </div>
-        ) : (
-          <div className="mt-10 text-xs text-muted-foreground">点卡片翻面查看释义和例句</div>
-        )}
+          }
+          </div> :
+
+        <div className="mt-10 text-xs text-muted-foreground"><T>点卡片翻面查看释义和例句</T></div>
+        }
       </div>
       <Button className="mt-4 w-full" size="lg" onClick={next}>
         {idx + 1 >= group.length ? "开始测试 →" : "下一个 →"}
       </Button>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ---------- Phase 2: Quiz ---------- */
@@ -1361,19 +1361,19 @@ export type QuizSessionResult = {
   bestStreak: number;
   score: number;
   spellCorrect: number;
-  levelUps?: { word: string; level: MasteryLevel }[];
+  levelUps?: {word: string;level: MasteryLevel;}[];
   wrongVocabIds?: string[];
 };
 
 function QuizPhase({
   group,
   pool,
-  onDone,
-}: {
-  group: Vocab[];
-  pool: Vocab[];
-  onDone: (s: QuizSessionResult) => void;
-}) {
+  onDone
+
+
+
+
+}: {group: Vocab[];pool: Vocab[];onDone: (s: QuizSessionResult) => void;}) {
   const [sp] = useSearchParams();
   const gradeNum = (() => {
     const raw = Number(sp.get("grade"));
@@ -1390,7 +1390,7 @@ function QuizPhase({
   const [floatBadge, setFloatBadge] = useState<string | null>(null);
   const [spellCorrect, setSpellCorrect] = useState(0);
   const questionShownAtRef = useRef<number>(Date.now());
-  const [levelUps, setLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+  const [levelUps, setLevelUps] = useState<{word: string;level: MasteryLevel;}[]>([]);
   const wrongIdsRef = useRef<Set<string>>(new Set());
 
   // Reset stopwatch every time we land on a new question
@@ -1429,13 +1429,13 @@ function QuizPhase({
       item_id: item.vocab.id,
       item_label: item.vocab.word,
       is_correct: isCorrect,
-      context: { kind: item.kind, latency_ms: latencyMs },
+      context: { kind: item.kind, latency_ms: latencyMs }
     }).catch(() => {});
     const update = await bumpVocabMastery({
       vocabId: item.vocab.id,
       kind: item.kind,
       isCorrect,
-      latencyMs,
+      latencyMs
     });
     if (update && update.newLevel > update.prevLevel) {
       setLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);
@@ -1479,11 +1479,11 @@ function QuizPhase({
       const finalTotal = stats.total + 1;
       const finalBestStreak = Math.max(
         bestStreak,
-        isCorrect ? streak + 1 : streak,
+        isCorrect ? streak + 1 : streak
       );
       const finalScore = score + (isCorrect ? 10 * comboMultiplier(streak + 1) : 0);
       const finalSpell =
-        spellCorrect + (isCorrect && item.kind === "spell" ? 1 : 0);
+      spellCorrect + (isCorrect && item.kind === "spell" ? 1 : 0);
       onDone({
         correct: finalCorrect,
         total: finalTotal,
@@ -1491,7 +1491,7 @@ function QuizPhase({
         score: finalScore,
         spellCorrect: finalSpell,
         levelUps,
-        wrongVocabIds: Array.from(wrongIdsRef.current),
+        wrongVocabIds: Array.from(wrongIdsRef.current)
       });
     } else {
       setPos(pos + 1);
@@ -1507,18 +1507,18 @@ function QuizPhase({
         attempted={stats.total}
         streak={streak}
         bestStreak={bestStreak}
-        score={score}
-      />
+        score={score} />
+      
       <div className="relative">
         <QuizQuestion
           key={`${item.vocab.id}-${pos}`}
           item={item}
-          onResult={handleResult}
-        />
+          onResult={handleResult} />
+        
         {floatBadge && <FloatingComboBadge label={floatBadge} />}
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 function buildChoices(target: Vocab, pool: Vocab[]): Vocab[] {
@@ -1529,7 +1529,7 @@ function buildChoices(target: Vocab, pool: Vocab[]): Vocab[] {
 function buildItem(v: Vocab, pool: Vocab[]): QuizItem {
   const kind = pickKind(v);
   const choices =
-    kind === "pos" ? buildPosChoices(v, pool) : buildChoices(v, pool);
+  kind === "pos" ? buildPosChoices(v, pool) : buildChoices(v, pool);
   return { vocab: v, kind, choices };
 }
 
@@ -1538,7 +1538,7 @@ function buildInitialQueue(group: Vocab[], pool: Vocab[]): QuizItem[] {
 }
 
 /* ---------- Quiz question renderer ---------- */
-function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boolean) => void }) {
+function QuizQuestion({ item, onResult }: {item: QuizItem;onResult: (ok: boolean) => void;}) {
   const [picked, setPicked] = useState<string | null>(null);
   const [clozeInput, setClozeInput] = useState("");
   const [clozeChecked, setClozeChecked] = useState<null | boolean>(null);
@@ -1547,12 +1547,12 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
   // Per-question countdown timer for choice-type questions.
   // Cloze and Spell are input-based and not timed (less stress, more accuracy).
   const isTimedKind =
-    item.kind === "en2cn" ||
-    item.kind === "cn2en" ||
-    item.kind === "listen" ||
-    item.kind === "en2en" ||
-    item.kind === "en2word" ||
-    item.kind === "pos";
+  item.kind === "en2cn" ||
+  item.kind === "cn2en" ||
+  item.kind === "listen" ||
+  item.kind === "en2en" ||
+  item.kind === "en2word" ||
+  item.kind === "pos";
   const [secondsLeft, setSecondsLeft] = useState(QUESTION_TIMEOUT_SEC);
   useEffect(() => {
     if (!isTimedKind) return;
@@ -1570,7 +1570,7 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
   // For en2en / en2word: ensure the target's English meaning is loaded;
   // and gather English meanings for distractor choices too.
   const targetMeaningEn = useMeaningEn(
-    item.kind === "en2en" || item.kind === "en2word" ? v : null,
+    item.kind === "en2en" || item.kind === "en2word" ? v : null
   );
   const [choiceMeaningsEn, setChoiceMeaningsEn] = useState<Record<string, string>>({});
   useEffect(() => {
@@ -1593,11 +1593,11 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     // Auto-play the word for English→Chinese & cloze questions so the
     // student hears the pronunciation as soon as the question appears.
     if (
-      item.kind === "en2cn" ||
-      item.kind === "cloze" ||
-      item.kind === "en2en" ||
-      item.kind === "spell"
-    ) {
+    item.kind === "en2cn" ||
+    item.kind === "cloze" ||
+    item.kind === "en2en" ||
+    item.kind === "spell")
+    {
       const t = setTimeout(() => speakWord(v), 200);
       return () => clearTimeout(t);
     }
@@ -1624,9 +1624,9 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     return (
       <div className="rounded-3xl border bg-card p-6 shadow-tile">
         <div className="flex items-center justify-between">
-          <div className="text-xs uppercase tracking-wider text-muted-foreground">例句填空</div>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground"><T>例句填空</T></div>
           <button onClick={() => speakWord(v)} className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs text-primary">
-            <Volume2 className="size-3" /> 听单词
+            <Volume2 className="size-3" /> <T>听单词</T>
             <AccentBadge accent={v.accent} />
           </button>
         </div>
@@ -1637,29 +1637,29 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
           autoFocus
           value={clozeInput}
           onChange={(e) => setClozeInput(e.target.value)}
-          onKeyDown={(e) => { if (e.key === "Enter" && clozeChecked === null) onCheck(); }}
+          onKeyDown={(e) => {if (e.key === "Enter" && clozeChecked === null) onCheck();}}
           disabled={clozeChecked !== null}
           placeholder="输入单词"
-          className="mt-4 w-full rounded-xl border bg-background px-4 py-3 text-base focus:border-primary focus:outline-none disabled:opacity-70"
-        />
-        {clozeChecked === null ? (
-          <Button className="mt-4 w-full" size="lg" onClick={onCheck} disabled={!clozeInput.trim()}>
-            检查
-          </Button>
-        ) : (
-          <div className="mt-4 space-y-3">
+          className="mt-4 w-full rounded-xl border bg-background px-4 py-3 text-base focus:border-primary focus:outline-none disabled:opacity-70" />
+        
+        {clozeChecked === null ?
+        <Button className="mt-4 w-full" size="lg" onClick={onCheck} disabled={!clozeInput.trim()}>
+            <T>检查</T>
+          </Button> :
+
+        <div className="mt-4 space-y-3">
             <div
-              className={cn(
-                "rounded-xl p-3 text-sm",
-                clozeChecked ? "bg-green-500/10 text-green-700 dark:text-green-400" : "bg-red-500/10 text-red-700 dark:text-red-400"
-              )}
-            >
+            className={cn(
+              "rounded-xl p-3 text-sm",
+              clozeChecked ? "bg-green-500/10 text-green-700 dark:text-green-400" : "bg-red-500/10 text-red-700 dark:text-red-400"
+            )}>
+            
               {clozeChecked ? "✓ 正确！正在朗读完整例句…" : `✗ 正确答案：${answer}`}
             </div>
             <button
-              onClick={() => speakExample(v)}
-              className="flex w-full items-start gap-2 rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
-            >
+            onClick={() => speakExample(v)}
+            className="flex w-full items-start gap-2 rounded-xl border p-3 text-left text-sm hover:bg-accent/30">
+            
               <Volume2 className="mt-0.5 size-4 shrink-0 text-primary" />
               <div>
                 <div>{v.example_en}</div>
@@ -1667,12 +1667,12 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
               </div>
             </button>
             <Button className="w-full" size="lg" onClick={() => onResult(clozeChecked)}>
-              继续 →
+              <T>继续 →</T>
             </Button>
           </div>
-        )}
-      </div>
-    );
+        }
+      </div>);
+
   }
 
   // Choice-based questions
@@ -1680,30 +1680,30 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
     if (item.kind === "en2cn") {
       return (
         <>
-          <div className="text-xs uppercase tracking-wider text-muted-foreground">选择中文释义</div>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground"><T>选择中文释义</T></div>
           <button
             onClick={() => speakWord(v)}
-            className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
-          >
+            className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold">
+            
             {v.word} <Volume2 className="size-5 text-primary" />
           </button>
-          {v.phonetic && (
-            <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
+          {v.phonetic &&
+          <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
               {v.phonetic}
               <AccentBadge accent={v.accent} />
             </div>
-          )}
-        </>
-      );
+          }
+        </>);
+
     }
     if (item.kind === "cn2en") {
       return (
         <>
-          <div className="text-xs uppercase tracking-wider text-muted-foreground">选择英文单词</div>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground"><T>选择英文单词</T></div>
           <div className="mt-3 text-2xl font-bold">{v.meaning_cn}</div>
           {v.pos && <div className="mt-1 text-xs text-muted-foreground">{v.pos}</div>}
-        </>
-      );
+        </>);
+
     }
     if (item.kind === "en2en") {
       return (
@@ -1713,18 +1713,18 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
           </div>
           <button
             onClick={() => speakWord(v)}
-            className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
-          >
+            className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold">
+            
             {v.word} <Volume2 className="size-5 text-primary" />
           </button>
-          {v.phonetic && (
-            <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
+          {v.phonetic &&
+          <div className="mt-1 inline-flex items-center text-sm text-muted-foreground">
               {v.phonetic}
               <AccentBadge accent={v.accent} />
             </div>
-          )}
-        </>
-      );
+          }
+        </>);
+
     }
     if (item.kind === "en2word") {
       return (
@@ -1736,35 +1736,35 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
             {targetMeaningEn ? `“${targetMeaningEn}”` : "Loading…"}
           </div>
           {v.pos && <div className="mt-1 text-xs text-muted-foreground">{v.pos}</div>}
-        </>
-      );
+        </>);
+
     }
     if (item.kind === "pos") {
       return (
         <>
           <div className="text-xs uppercase tracking-wider text-muted-foreground">
-            选择匹配此<span className="text-primary">词性</span>的单词
+            <T>选择匹配此</T><span className="text-primary"><T>词性</T></span><T>的单词</T>
           </div>
           <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary">
-            词性：{v.pos}
+            <T>词性：</T>{v.pos}
           </div>
           <div className="mt-3 text-2xl font-bold">{v.meaning_cn}</div>
-        </>
-      );
+        </>);
+
     }
     // listen
     return (
       <>
-        <div className="text-xs uppercase tracking-wider text-muted-foreground">听例句选单词</div>
+        <div className="text-xs uppercase tracking-wider text-muted-foreground"><T>听例句选单词</T></div>
         <button
           onClick={() => speakExample(v)}
-          className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-3 text-primary"
-        >
-          <Volume2 className="size-5" /> 再听一次
+          className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-3 text-primary">
+          
+          <Volume2 className="size-5" /> <T>再听一次</T>
         </button>
         <div className="mt-3 text-xs text-muted-foreground">{v.meaning_cn}</div>
-      </>
-    );
+      </>);
+
   };
 
   const renderChoiceLabel = (c: Vocab) => {
@@ -1776,13 +1776,13 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
       return (
         <span className="inline-flex items-baseline gap-2">
           <span className="font-semibold">{c.word}</span>
-          {c.pos && (
-            <span className="rounded-md border border-muted-foreground/30 bg-muted px-1.5 py-0.5 text-[10px] font-bold text-muted-foreground">
+          {c.pos &&
+          <span className="rounded-md border border-muted-foreground/30 bg-muted px-1.5 py-0.5 text-[10px] font-bold text-muted-foreground">
               {c.pos}
             </span>
-          )}
-        </span>
-      );
+          }
+        </span>);
+
     }
     return c.word;
   };
@@ -1797,21 +1797,21 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
 
   return (
     <div className="rounded-3xl border bg-card p-6 text-center shadow-tile">
-      {isTimedKind && (
-        <div className="mb-4 -mx-6 -mt-6 h-1.5 overflow-hidden rounded-t-3xl bg-muted">
+      {isTimedKind &&
+      <div className="mb-4 -mx-6 -mt-6 h-1.5 overflow-hidden rounded-t-3xl bg-muted">
           <div
-            className={cn(
-              "h-full transition-all duration-1000 ease-linear",
-              secondsLeft > 5
-                ? "bg-primary"
-                : secondsLeft > 2
-                ? "bg-amber-500"
-                : "bg-red-500 animate-pulse"
-            )}
-            style={{ width: `${(secondsLeft / QUESTION_TIMEOUT_SEC) * 100}%` }}
-          />
+          className={cn(
+            "h-full transition-all duration-1000 ease-linear",
+            secondsLeft > 5 ?
+            "bg-primary" :
+            secondsLeft > 2 ?
+            "bg-amber-500" :
+            "bg-red-500 animate-pulse"
+          )}
+          style={{ width: `${secondsLeft / QUESTION_TIMEOUT_SEC * 100}%` }} />
+        
         </div>
-      )}
+      }
       {renderPrompt()}
       <div className="mt-6 grid grid-cols-1 gap-2">
         {item.choices.map((c) => {
@@ -1829,20 +1829,20 @@ function QuizQuestion({ item, onResult }: { item: QuizItem; onResult: (ok: boole
                 showState && isCorrect && "border-green-500 bg-green-500/10",
                 showState && isPicked && !isCorrect && "border-red-500 bg-red-500/10",
                 showState && !isPicked && !isCorrect && "opacity-60"
-              )}
-            >
+              )}>
+              
               <span className="mr-2 inline-flex size-6 items-center justify-center rounded-full bg-muted text-xs font-bold">
                 {String.fromCharCode(65 + item.choices.indexOf(c))}
               </span>
               {renderChoiceLabel(c)}
               {showState && isCorrect && <Check className="ml-2 inline size-4 text-green-600" />}
               {showState && isPicked && !isCorrect && <X className="ml-2 inline size-4 text-red-600" />}
-            </button>
-          );
+            </button>);
+
         })}
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ---------- Done panel ---------- */
@@ -1854,149 +1854,149 @@ function DonePanel({
   levelUps,
   group,
   wrongWords,
-  poolIds,
-}: {
-  stats: { correct: number; total: number };
-  coinsAwarded?: number;
-  onExit: () => void;
-  onRetry: () => void;
-  levelUps?: { word: string; level: MasteryLevel }[];
-  group?: Vocab[];
-  wrongWords?: Vocab[];
-  poolIds?: string[];
-}) {
-  const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
+  poolIds
+
+
+
+
+
+
+
+
+
+}: {stats: {correct: number;total: number;};coinsAwarded?: number;onExit: () => void;onRetry: () => void;levelUps?: {word: string;level: MasteryLevel;}[];group?: Vocab[];wrongWords?: Vocab[];poolIds?: string[];}) {
+  const pct = stats.total === 0 ? 0 : Math.round(stats.correct / stats.total * 100);
   const [showGame, setShowGame] = useState(false);
   return (
     <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
       <Sparkles className="mx-auto size-10 text-primary" />
-      <div className="mt-3 text-xl font-extrabold">本组完成 🎉</div>
+      <div className="mt-3 text-xl font-extrabold"><T>本组完成 🎉</T></div>
       <div className="mt-2 text-sm text-muted-foreground">
-        正确率 <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
+        <T>正确率</T> <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
       </div>
-      {coinsAwarded !== undefined && coinsAwarded > 0 && (
-        <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
-          🪙 +{coinsAwarded} 金币
+      {coinsAwarded !== undefined && coinsAwarded > 0 &&
+      <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
+          🪙 +{coinsAwarded} <T>金币</T>
         </div>
-      )}
-      {poolIds && poolIds.length > 0 && (
-        <NextStepHint
-          vocabIds={poolIds}
-          onPickMode={(m) => {
-            // navigate via URL change so the parent picks up the mode
-            const url = new URL(window.location.href);
-            url.searchParams.set("mode", m);
-            url.searchParams.delete("group");
-            window.location.assign(url.toString());
-          }}
-        />
-      )}
-      {levelUps && levelUps.length > 0 && (
-        <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">
-          <div className="text-xs font-bold uppercase tracking-wider text-primary">📈 升级单词</div>
+      }
+      {poolIds && poolIds.length > 0 &&
+      <NextStepHint
+        vocabIds={poolIds}
+        onPickMode={(m) => {
+          // navigate via URL change so the parent picks up the mode
+          const url = new URL(window.location.href);
+          url.searchParams.set("mode", m);
+          url.searchParams.delete("group");
+          window.location.assign(url.toString());
+        }} />
+
+      }
+      {levelUps && levelUps.length > 0 &&
+      <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">
+          <div className="text-xs font-bold uppercase tracking-wider text-primary"><T>📈 升级单词</T></div>
           <div className="mt-2 flex flex-wrap gap-1.5">
             {levelUps.slice(0, 12).map((u, i) => {
-              const l = MASTERY_LABELS[u.level];
-              return (
-                <span
-                  key={i}
-                  className={cn(
-                    "inline-flex items-center gap-1 rounded-full border bg-card px-2 py-0.5 text-xs font-semibold",
-                    l.color,
-                  )}
-                >
+            const l = MASTERY_LABELS[u.level];
+            return (
+              <span
+                key={i}
+                className={cn(
+                  "inline-flex items-center gap-1 rounded-full border bg-card px-2 py-0.5 text-xs font-semibold",
+                  l.color
+                )}>
+                
                   {l.emoji} {u.word}
-                </span>
-              );
-            })}
-            {levelUps.length > 12 && (
-              <span className="text-xs text-muted-foreground">+{levelUps.length - 12} more</span>
-            )}
+                </span>);
+
+          })}
+            {levelUps.length > 12 &&
+          <span className="text-xs text-muted-foreground">+{levelUps.length - 12} more</span>
+          }
           </div>
         </div>
-      )}
-      <div className="mt-2 text-xs text-muted-foreground">答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</div>
-      {wrongWords && wrongWords.length > 0 && (
-        <div className="mt-5 text-left">
+      }
+      <div className="mt-2 text-xs text-muted-foreground"><T>答错的词已加入复习队列，将按艾宾浩斯曲线自动安排复习</T></div>
+      {wrongWords && wrongWords.length > 0 &&
+      <div className="mt-5 text-left">
           <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-bold text-amber-700 dark:text-amber-300">
-            ✏️ 本次答错 {wrongWords.length} 词 · 点开查看 AI 深度讲解
+            <T>✏️ 本次答错</T> {wrongWords.length} <T>词 · 点开查看 AI 深度讲解</T>
           </div>
-          {wrongWords.slice(0, 8).map((w) => (
-            <div key={w.id} className="mt-2 rounded-2xl border bg-background p-3">
+          {wrongWords.slice(0, 8).map((w) =>
+        <div key={w.id} className="mt-2 rounded-2xl border bg-background p-3">
               <div className="flex items-baseline justify-between gap-2">
                 <div>
                   <span className="text-base font-extrabold font-mono">{w.word}</span>
-                  {w.pos && (
-                    <span className="ml-2 rounded-md border border-muted-foreground/30 bg-muted px-1.5 py-0.5 text-[10px] font-bold text-muted-foreground">
+                  {w.pos &&
+              <span className="ml-2 rounded-md border border-muted-foreground/30 bg-muted px-1.5 py-0.5 text-[10px] font-bold text-muted-foreground">
                       {w.pos}
                     </span>
-                  )}
+              }
                 </div>
                 <button
-                  onClick={() => speakWord(w)}
-                  className="rounded-full bg-primary/10 p-1.5 text-primary hover:bg-primary/20"
-                  aria-label="朗读"
-                >
+              onClick={() => speakWord(w)}
+              className="rounded-full bg-primary/10 p-1.5 text-primary hover:bg-primary/20"
+              aria-label="朗读">
+              
                   <Volume2 className="size-3.5" />
                 </button>
               </div>
               <div className="mt-0.5 text-sm text-muted-foreground">{w.meaning_cn}</div>
               <MistakeExplainer
-                vocab={{
-                  id: w.id,
-                  word: w.word,
-                  meaning_cn: w.meaning_cn,
-                  pos: w.pos,
-                  example_en: w.example_en,
-                  example_cn: w.example_cn,
-                }}
-              />
+            vocab={{
+              id: w.id,
+              word: w.word,
+              meaning_cn: w.meaning_cn,
+              pos: w.pos,
+              example_en: w.example_en,
+              example_cn: w.example_cn
+            }} />
+          
             </div>
-          ))}
-          {wrongWords.length > 8 && (
-            <div className="mt-2 text-center text-xs text-muted-foreground">
-              还有 {wrongWords.length - 8} 词在 SRS 队列中
+        )}
+          {wrongWords.length > 8 &&
+        <div className="mt-2 text-center text-xs text-muted-foreground">
+              <T>还有</T> {wrongWords.length - 8} <T>词在 SRS 队列中</T>
             </div>
-          )}
+        }
         </div>
-      )}
-      {group && group.length >= 6 && !showGame && (
-        <div className="mt-5">
+      }
+      {group && group.length >= 6 && !showGame &&
+      <div className="mt-5">
           <button
-            onClick={() => setShowGame(true)}
-            className="group inline-flex items-center gap-2 rounded-full border-2 border-fuchsia-500/60 bg-gradient-to-r from-fuchsia-500/15 via-rose-500/10 to-amber-400/15 px-5 py-2.5 text-sm font-extrabold text-fuchsia-700 shadow-md transition hover:scale-105 hover:shadow-lg dark:text-fuchsia-300"
-          >
-            🎮 玩个配对消消乐放松一下 →
-          </button>
-          <div className="mt-1 text-[11px] text-muted-foreground">12 张卡 · 配对越快金币越多</div>
+          onClick={() => setShowGame(true)}
+          className="group inline-flex items-center gap-2 rounded-full border-2 border-fuchsia-500/60 bg-gradient-to-r from-fuchsia-500/15 via-rose-500/10 to-amber-400/15 px-5 py-2.5 text-sm font-extrabold text-fuchsia-700 shadow-md transition hover:scale-105 hover:shadow-lg dark:text-fuchsia-300">
+            <T>🎮 玩个配对消消乐放松一下 →</T>
+          
+        </button>
+          <div className="mt-1 text-[11px] text-muted-foreground"><T>12 张卡 · 配对越快金币越多</T></div>
         </div>
-      )}
-      {group && showGame && (
-        <div className="mt-5 text-left">
+      }
+      {group && showGame &&
+      <div className="mt-5 text-left">
           <MemoryMatch pool={group} onClose={() => setShowGame(false)} />
         </div>
-      )}
+      }
       <div className="mt-6 grid grid-cols-2 gap-3">
         <Button variant="outline" onClick={onRetry}>
-          <RotateCw className="mr-1 size-4" /> 再练一遍
+          <RotateCw className="mr-1 size-4" /> <T>再练一遍</T>
         </Button>
-        <Button onClick={onExit}>选下一组 →</Button>
+        <Button onClick={onExit}><T>选下一组 →</T></Button>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ---------- Synonym differentiation question ---------- */
 function SynQuestion({
   vocab,
-  onResult,
-}: {
-  vocab: Vocab;
-  onResult: (ok: boolean) => void;
-}) {
+  onResult
+
+
+
+}: {vocab: Vocab;onResult: (ok: boolean) => void;}) {
   const v = vocab;
   const [pack, setPack] = useState<SynPack | null>(
-    () => synonymCache.get(v.id) ?? null,
+    () => synonymCache.get(v.id) ?? null
   );
   const [picked, setPicked] = useState<string | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(QUESTION_TIMEOUT_SEC);
@@ -2042,13 +2042,13 @@ function SynQuestion({
     return (
       <div className="rounded-3xl border bg-card p-6 text-center shadow-tile">
         <div className="text-xs uppercase tracking-wider text-muted-foreground">
-          近义词辨析 · Synonym
+          <T>近义词辨析 · Synonym</T>
         </div>
         <div className="mt-6 inline-flex items-center gap-2 text-sm text-muted-foreground">
-          <Sparkles className="size-4 animate-pulse text-primary" /> AI 正在生成近义词…
+          <Sparkles className="size-4 animate-pulse text-primary" /> <T>AI 正在生成近义词…</T>
         </div>
-      </div>
-    );
+      </div>);
+
   }
 
   return (
@@ -2057,22 +2057,22 @@ function SynQuestion({
         <div
           className={cn(
             "h-full transition-all duration-1000 ease-linear",
-            secondsLeft > 5
-              ? "bg-primary"
-              : secondsLeft > 2
-              ? "bg-amber-500"
-              : "bg-red-500 animate-pulse",
+            secondsLeft > 5 ?
+            "bg-primary" :
+            secondsLeft > 2 ?
+            "bg-amber-500" :
+            "bg-red-500 animate-pulse"
           )}
-          style={{ width: `${(secondsLeft / QUESTION_TIMEOUT_SEC) * 100}%` }}
-        />
+          style={{ width: `${secondsLeft / QUESTION_TIMEOUT_SEC * 100}%` }} />
+        
       </div>
       <div className="text-xs uppercase tracking-wider text-muted-foreground">
-        选出 <span className="text-primary">近义词</span> · Synonym
+        <T>选出</T> <span className="text-primary"><T>近义词</T></span> · Synonym
       </div>
       <button
         onClick={() => speakWord(v)}
-        className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold"
-      >
+        className="mt-2 inline-flex items-center gap-2 text-3xl font-extrabold">
+        
         {v.word} <Volume2 className="size-5 text-primary" />
       </button>
       <div className="mt-1 text-sm text-muted-foreground">
@@ -2095,35 +2095,35 @@ function SynQuestion({
                 !showState && "hover:border-primary hover:bg-accent/30",
                 showState && isCorrect && "border-green-500 bg-green-500/10",
                 showState && isPicked && !isCorrect && "border-red-500 bg-red-500/10",
-                showState && !isPicked && !isCorrect && "opacity-60",
-              )}
-            >
+                showState && !isPicked && !isCorrect && "opacity-60"
+              )}>
+              
               <span className="mr-2 inline-flex size-6 items-center justify-center rounded-full bg-muted text-xs font-bold">
                 {String.fromCharCode(65 + i)}
               </span>
               <span className="font-semibold">{opt}</span>
-              {showState && isCorrect && (
-                <Check className="ml-2 inline size-4 text-green-600" />
-              )}
-              {showState && isPicked && !isCorrect && (
-                <X className="ml-2 inline size-4 text-red-600" />
-              )}
-            </button>
-          );
+              {showState && isCorrect &&
+              <Check className="ml-2 inline size-4 text-green-600" />
+              }
+              {showState && isPicked && !isCorrect &&
+              <X className="ml-2 inline size-4 text-red-600" />
+              }
+            </button>);
+
         })}
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ---------- Spelling Bee question ---------- */
 function SpellQuestion({
   vocab,
-  onResult,
-}: {
-  vocab: Vocab;
-  onResult: (ok: boolean) => void;
-}) {
+  onResult
+
+
+
+}: {vocab: Vocab;onResult: (ok: boolean) => void;}) {
   // Use the first form when the word stores variants like "a/an"
   const target = vocab.word.split("/")[0].trim();
   const chars = target.split("");
@@ -2199,13 +2199,13 @@ function SpellQuestion({
     <div className="rounded-3xl border bg-card p-6 shadow-tile">
       <div className="flex items-center justify-between">
         <div className="text-xs uppercase tracking-wider text-muted-foreground inline-flex items-center gap-1">
-          <Keyboard className="size-3" /> Spelling Bee · 听音拼写
+          <Keyboard className="size-3" /> <T>Spelling Bee · 听音拼写</T>
         </div>
         <button
           onClick={() => speakWord(vocab)}
-          className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary"
-        >
-          <Volume2 className="size-3" /> 再听一次
+          className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+          
+          <Volume2 className="size-3" /> <T>再听一次</T>
           <AccentBadge accent={vocab.accent} />
         </button>
       </div>
@@ -2214,16 +2214,16 @@ function SpellQuestion({
         <button
           onClick={() => speakWord(vocab)}
           className="mx-auto inline-flex size-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-tile transition hover:scale-105"
-          aria-label="play pronunciation"
-        >
+          aria-label="play pronunciation">
+          
           <Volume2 className="size-7" />
         </button>
         <div className="mt-3 text-sm text-muted-foreground">
           {vocab.meaning_cn}{vocab.pos ? ` · ${vocab.pos}` : ""}
         </div>
-        {vocab.phonetic && hintShown && (
-          <div className="mt-1 text-xs text-muted-foreground">{vocab.phonetic}</div>
-        )}
+        {vocab.phonetic && hintShown &&
+        <div className="mt-1 text-xs text-muted-foreground">{vocab.phonetic}</div>
+        }
       </div>
 
       {/* Letter slots */}
@@ -2232,8 +2232,8 @@ function SpellQuestion({
           "mt-6 flex flex-wrap justify-center gap-1.5 transition",
           errorFlash && "animate-pulse"
         )}
-        onClick={() => inputRef.current?.focus()}
-      >
+        onClick={() => inputRef.current?.focus()}>
+        
         {chars.map((ch, i) => {
           const isSpace = /[\s]/.test(ch);
           const isFilled = i < typed.length;
@@ -2254,11 +2254,11 @@ function SpellQuestion({
                 !isFilled && !isCursor && !isFirstHint && "border-border bg-muted/30 text-transparent",
                 !isFilled && isFirstHint && "border-amber-400 bg-amber-100/30 text-amber-700 dark:text-amber-400",
                 errorFlash && isCursor && "border-red-500 bg-red-500/20"
-              )}
-            >
+              )}>
+              
               {isFilled ? ch : isFirstHint ? ch : "·"}
-            </div>
-          );
+            </div>);
+
         })}
       </div>
 
@@ -2277,8 +2277,8 @@ function SpellQuestion({
         }}
         disabled={reveal !== null}
         className="sr-only"
-        aria-label="spell the word"
-      />
+        aria-label="spell the word" />
+      
 
       {/* Mobile fallback: visible input (since sr-only inputs sometimes don't trigger keyboard) */}
       <input
@@ -2291,67 +2291,67 @@ function SpellQuestion({
         onChange={(e) => handleInput(e.target.value)}
         disabled={reveal !== null}
         placeholder="Type the word…"
-        className="mt-5 w-full rounded-xl border bg-background px-4 py-3 text-center font-mono text-base focus:border-primary focus:outline-none disabled:opacity-70"
-      />
+        className="mt-5 w-full rounded-xl border bg-background px-4 py-3 text-center font-mono text-base focus:border-primary focus:outline-none disabled:opacity-70" />
+      
 
-      {!reveal && (
-        <div className="mt-3 flex items-center justify-between text-xs">
+      {!reveal &&
+      <div className="mt-3 flex items-center justify-between text-xs">
           <button
-            onClick={useHint}
-            disabled={hintShown}
-            className="text-muted-foreground hover:text-foreground disabled:opacity-50"
-          >
-            💡 提示（首字母 + 音标）
-          </button>
+          onClick={useHint}
+          disabled={hintShown}
+          className="text-muted-foreground hover:text-foreground disabled:opacity-50">
+            <T>💡 提示（首字母 + 音标）</T>
+          
+        </button>
           <button onClick={giveUp} className="text-muted-foreground hover:text-foreground">
-            放弃 · 看答案 →
+            <T>放弃 · 看答案 →</T>
           </button>
         </div>
-      )}
+      }
 
-      {reveal && (
-        <div className="mt-5 space-y-3">
+      {reveal &&
+      <div className="mt-5 space-y-3">
           <div
-            className={cn(
-              "rounded-xl p-3 text-sm font-semibold",
-              reveal === "correct"
-                ? "bg-green-500/10 text-green-700 dark:text-green-400"
-                : "bg-red-500/10 text-red-700 dark:text-red-400"
-            )}
-          >
-            {reveal === "correct" ? (
-              <span className="inline-flex items-center gap-2">
-                <Zap className="size-4" /> 拼写正确！
-              </span>
-            ) : (
-              <>
-                ✗ 正确拼写：<span className="font-mono">{target}</span>
+          className={cn(
+            "rounded-xl p-3 text-sm font-semibold",
+            reveal === "correct" ?
+            "bg-green-500/10 text-green-700 dark:text-green-400" :
+            "bg-red-500/10 text-red-700 dark:text-red-400"
+          )}>
+          
+            {reveal === "correct" ?
+          <span className="inline-flex items-center gap-2">
+                <Zap className="size-4" /> <T>拼写正确！</T>
+              </span> :
+
+          <>
+                <T>✗ 正确拼写：</T><span className="font-mono">{target}</span>
               </>
-            )}
+          }
           </div>
-          {vocab.example_en && (
-            <button
-              onClick={() => speakExample(vocab)}
-              className="flex w-full items-start gap-2 rounded-xl border p-3 text-left text-sm hover:bg-accent/30"
-            >
+          {vocab.example_en &&
+        <button
+          onClick={() => speakExample(vocab)}
+          className="flex w-full items-start gap-2 rounded-xl border p-3 text-left text-sm hover:bg-accent/30">
+          
               <Volume2 className="mt-0.5 size-4 shrink-0 text-primary" />
               <div>
                 <div>{vocab.example_en}</div>
                 <div className="mt-1 text-xs text-muted-foreground">{vocab.example_cn}</div>
               </div>
             </button>
-          )}
+        }
           <Button className="w-full" size="lg" onClick={() => onResult(reveal === "correct")}>
-            继续 →
+            <T>继续 →</T>
           </Button>
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
 /* ---------- SRS Smart Review Session ---------- */
-function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () => void; focus?: "retention" }) {
+function SrsReviewSession({ pool, onExit, focus }: {pool: Vocab[];onExit: () => void;focus?: "retention";}) {
   const [sp] = useSearchParams();
   const gradeNum = (() => {
     const raw = Number(sp.get("grade"));
@@ -2373,7 +2373,7 @@ function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () =
   const [coinsAwarded, setCoinsAwarded] = useState(0);
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
   const [milestonesEvaluated, setMilestonesEvaluated] = useState(false);
-  const [srsLevelUps, setSrsLevelUps] = useState<{ word: string; level: MasteryLevel }[]>([]);
+  const [srsLevelUps, setSrsLevelUps] = useState<{word: string;level: MasteryLevel;}[]>([]);
   const srsQuestionShownAtRef = useRef<number>(Date.now());
 
   // reset stopwatch each question
@@ -2393,29 +2393,29 @@ function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () =
       if (focus === "retention") {
         // 21 天保留测试：score≥0.85 + last_seen_at 21 天前 + 还没有 reached_master_at
         const cutoff = new Date(Date.now() - 21 * 24 * 3600 * 1000).toISOString();
-        const { data: rows } = await supabase
-          .from("gaokao_user_mastery")
-          .select("item_id, mastery_matrix, reached_master_at, last_seen_at")
-          .eq("user_id", user.id)
-          .eq("item_type", "vocab")
-          .lte("last_seen_at", cutoff)
-          .is("reached_master_at", null)
-          .limit(200);
+        const { data: rows } = await supabase.
+        from("gaokao_user_mastery").
+        select("item_id, mastery_matrix, reached_master_at, last_seen_at").
+        eq("user_id", user.id).
+        eq("item_type", "vocab").
+        lte("last_seen_at", cutoff).
+        is("reached_master_at", null).
+        limit(200);
         idSet = new Set(
-          (rows ?? [])
-            .filter((r: any) => _cms((r.mastery_matrix ?? {}) as _MM) >= 0.85)
-            .slice(0, 30)
-            .map((r: any) => r.item_id as string),
+          (rows ?? []).
+          filter((r: any) => _cms((r.mastery_matrix ?? {}) as _MM) >= 0.85).
+          slice(0, 30).
+          map((r: any) => r.item_id as string)
         );
       } else {
-        const { data: dueRows } = await supabase
-          .from("gaokao_user_mastery")
-          .select("item_id, wrong_count")
-          .eq("user_id", user.id)
-          .eq("item_type", "vocab")
-          .lte("next_review_at", nowIso)
-          .order("wrong_count", { ascending: false })
-          .limit(30);
+        const { data: dueRows } = await supabase.
+        from("gaokao_user_mastery").
+        select("item_id, wrong_count").
+        eq("user_id", user.id).
+        eq("item_type", "vocab").
+        lte("next_review_at", nowIso).
+        order("wrong_count", { ascending: false }).
+        limit(30);
         idSet = new Set((dueRows ?? []).map((r) => r.item_id as string));
       }
       const words = pool.filter((v) => idSet.has(v.id));
@@ -2432,25 +2432,25 @@ function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () =
   if (loading) {
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
-        <p className="text-sm text-muted-foreground">加载复习队列…</p>
-      </main>
-    );
+        <p className="text-sm text-muted-foreground"><T>加载复习队列…</T></p>
+      </main>);
+
   }
 
   if (dueWords.length === 0) {
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
         <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回
+          <ArrowLeft className="size-4" /> <T>返回</T>
         </button>
         <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
           <Sparkles className="mx-auto size-10 text-primary" />
-          <div className="mt-3 text-xl font-extrabold">今日无待复习 🎉</div>
-          <div className="mt-2 text-sm text-muted-foreground">回去学习新的词组吧</div>
-          <Button className="mt-6" onClick={onExit}>选词组学习 →</Button>
+          <div className="mt-3 text-xl font-extrabold"><T>今日无待复习 🎉</T></div>
+          <div className="mt-2 text-sm text-muted-foreground"><T>回去学习新的词组吧</T></div>
+          <Button className="mt-6" onClick={onExit}><T>选词组学习 →</T></Button>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   const item = queue[pos];
@@ -2464,78 +2464,78 @@ function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () =
         setCoinsAwarded(score);
         setCoinsRefreshKey((k) => k + 1);
         const pctNum =
-          stats.total === 0
-            ? 0
-            : Math.round((stats.correct / stats.total) * 100);
+        stats.total === 0 ?
+        0 :
+        Math.round(stats.correct / stats.total * 100);
         const newly = await evaluateMilestones({
           bestStreak,
           spellCorrect,
           perfectGroup: stats.total > 0 && stats.correct === stats.total,
           srsAccuracyPct: pctNum,
           totalEarned: totals?.total_earned ?? 0,
-          attempted: stats.total,
+          attempted: stats.total
         });
         if (newly.length > 0) setUnlockedBadges(newly);
       })();
     }
-    const pct = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
+    const pct = stats.total === 0 ? 0 : Math.round(stats.correct / stats.total * 100);
     return (
       <main className="mx-auto min-h-screen max-w-xl px-5 py-8">
         <div className="mb-4 flex items-center justify-between">
           <button
             onClick={onExit}
-            className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-          >
-            <ArrowLeft className="size-4" /> 返回
+            className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+            
+            <ArrowLeft className="size-4" /> <T>返回</T>
           </button>
           <CoinPill refreshKey={coinsRefreshKey} />
         </div>
         <div className="rounded-3xl border bg-card p-8 text-center shadow-tile">
           <Brain className="mx-auto size-10 text-primary" />
-          <div className="mt-3 text-xl font-extrabold">复习完成 🧠✨</div>
+          <div className="mt-3 text-xl font-extrabold"><T>复习完成 🧠✨</T></div>
           <div className="mt-2 text-sm text-muted-foreground">
-            正确率 <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
+            <T>正确率</T> <span className="font-bold text-foreground">{pct}%</span> · {stats.correct} / {stats.total}
           </div>
-          {coinsAwarded > 0 && (
-            <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
-              🪙 +{coinsAwarded} 金币
+          {coinsAwarded > 0 &&
+          <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-sm font-bold text-amber-800 dark:bg-amber-500/15 dark:text-amber-300">
+              🪙 +{coinsAwarded} <T>金币</T>
             </div>
-          )}
-          {srsLevelUps.length > 0 && (
-            <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">
-              <div className="text-xs font-bold uppercase tracking-wider text-primary">📈 升级单词</div>
+          }
+          {srsLevelUps.length > 0 &&
+          <div className="mt-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-3 text-left">
+              <div className="text-xs font-bold uppercase tracking-wider text-primary"><T>📈 升级单词</T></div>
               <div className="mt-2 flex flex-wrap gap-1.5">
                 {srsLevelUps.slice(0, 12).map((u, i) => {
-                  const l = MASTERY_LABELS[u.level];
-                  return (
-                    <span
-                      key={i}
-                      className={cn(
-                        "inline-flex items-center gap-1 rounded-full border bg-card px-2 py-0.5 text-xs font-semibold",
-                        l.color,
-                      )}
-                    >
+                const l = MASTERY_LABELS[u.level];
+                return (
+                  <span
+                    key={i}
+                    className={cn(
+                      "inline-flex items-center gap-1 rounded-full border bg-card px-2 py-0.5 text-xs font-semibold",
+                      l.color
+                    )}>
+                    
                       {l.emoji} {u.word}
-                    </span>
-                  );
-                })}
-                {srsLevelUps.length > 12 && (
-                  <span className="text-xs text-muted-foreground">+{srsLevelUps.length - 12} more</span>
-                )}
+                    </span>);
+
+              })}
+                {srsLevelUps.length > 12 &&
+              <span className="text-xs text-muted-foreground">+{srsLevelUps.length - 12} more</span>
+              }
               </div>
             </div>
-          )}
-          <div className="mt-1 text-xs text-muted-foreground">下次复习时间已自动调整</div>
-          <Button className="mt-6 w-full" onClick={onExit}>返回</Button>
+          }
+          <div className="mt-1 text-xs text-muted-foreground"><T>下次复习时间已自动调整</T></div>
+          <Button className="mt-6 w-full" onClick={onExit}><T>返回</T></Button>
         </div>
-        {unlockedBadges.length > 0 && (
-          <BadgeUnlockOverlay
-            badges={unlockedBadges}
-            onDismiss={() => setUnlockedBadges([])}
-          />
-        )}
-      </main>
-    );
+        {unlockedBadges.length > 0 &&
+        <BadgeUnlockOverlay
+          badges={unlockedBadges}
+          onDismiss={() => setUnlockedBadges([])} />
+
+        }
+      </main>);
+
   }
 
   const handleResult = async (isCorrect: boolean) => {
@@ -2550,13 +2550,13 @@ function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () =
       item_id: item.vocab.id,
       item_label: item.vocab.word,
       is_correct: isCorrect,
-      context: { kind: item.kind, mode: "srs", latency_ms: latencyMs },
+      context: { kind: item.kind, mode: "srs", latency_ms: latencyMs }
     }).catch(() => {});
     const update = await bumpVocabMastery({
       vocabId: item.vocab.id,
       kind: item.kind,
       isCorrect,
-      latencyMs,
+      latencyMs
     });
     if (update && update.newLevel > update.prevLevel) {
       setSrsLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);
@@ -2601,17 +2601,17 @@ function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () =
       <div className="mb-4 flex items-center justify-between">
         <button
           onClick={onExit}
-          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-        >
-          <ArrowLeft className="size-4" /> 退出复习
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          
+          <ArrowLeft className="size-4" /> <T>退出复习</T>
         </button>
         <CoinPill refreshKey={coinsRefreshKey} />
       </div>
       <div className="mb-4 flex items-center gap-2">
         <div className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-          <Brain className="size-3" /> 智能复习
+          <Brain className="size-3" /> <T>智能复习</T>
         </div>
-        <div className="text-xs text-muted-foreground">SM-2 间隔重复</div>
+        <div className="text-xs text-muted-foreground"><T>SM-2 间隔重复</T></div>
       </div>
       <PageHeader back="/gaokao/vocab" hideReviewBanner title="今日复习队列" subtitle="答对延后下次复习，答错明天再来" />
       <div className="mt-4">
@@ -2622,19 +2622,19 @@ function SrsReviewSession({ pool, onExit, focus }: { pool: Vocab[]; onExit: () =
           attempted={stats.total}
           streak={streak}
           bestStreak={bestStreak}
-          score={score}
-        />
+          score={score} />
+        
         <div className="relative">
           <QuizQuestion
             key={`${item.vocab.id}-${pos}`}
             item={item}
-            onResult={handleResult}
-          />
+            onResult={handleResult} />
+          
           {floatBadge && <FloatingComboBadge label={floatBadge} />}
         </div>
       </div>
-    </main>
-  );
+    </main>);
+
 }
 
 /* ---------- Combo & scoring UI ---------- */
@@ -2648,9 +2648,9 @@ function playComboChime(streak: number) {
     if (tier === 0) return;
     // Each tier: more notes, brighter
     const baseFreqs = [
-      [659.25, 880],                       // E5 → A5  (×2)
-      [659.25, 880, 1108.73],              // E5 → A5 → C#6 (×3)
-      [659.25, 880, 1108.73, 1318.51],     // ... → E6 (×5 ON FIRE)
+    [659.25, 880], // E5 → A5  (×2)
+    [659.25, 880, 1108.73], // E5 → A5 → C#6 (×3)
+    [659.25, 880, 1108.73, 1318.51] // ... → E6 (×5 ON FIRE)
     ];
     const notes = baseFreqs[tier - 1];
     const stepDur = 0.09;
@@ -2670,8 +2670,8 @@ function playComboChime(streak: number) {
     });
     setTimeout(() => ctx.close().catch(() => {}), 1000);
   } catch {
-    /* ignore — audio is best-effort */
-  }
+
+    /* ignore — audio is best-effort */}
 }
 
 function ComboHeader({
@@ -2681,16 +2681,16 @@ function ComboHeader({
   attempted,
   streak,
   bestStreak,
-  score,
-}: {
-  pos: number;
-  total: number;
-  correct: number;
-  attempted: number;
-  streak: number;
-  bestStreak: number;
-  score: number;
-}) {
+  score
+
+
+
+
+
+
+
+
+}: {pos: number;total: number;correct: number;attempted: number;streak: number;bestStreak: number;score: number;}) {
   const mult = comboMultiplier(streak);
   const tier = streak >= 10 ? 3 : streak >= 5 ? 2 : streak >= 2 ? 1 : 0;
   const onFire = tier >= 2;
@@ -2711,41 +2711,41 @@ function ComboHeader({
         tier >= 1 && "bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-fuchsia-500/10 ring-1 ring-amber-500/30",
         tier >= 2 && "ring-2 ring-rose-500/60 shadow-[0_0_24px_rgba(244,63,94,0.45)]",
         tier >= 3 && "ring-2 ring-fuchsia-500 shadow-[0_0_36px_rgba(217,70,239,0.7)] animate-pulse"
-      )}
-    >
+      )}>
+      
       <div className="text-xs text-muted-foreground">
         {pos} / {total} <span className="mx-1">·</span> ✓ {correct}/{attempted}
       </div>
       <div className="flex items-center gap-2">
-        {streak >= 2 && (
-          <span
-            key={`combo-${bump}`}
-            className={cn(
-              "inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-extrabold transition origin-center animate-scale-in",
-              tier === 1 && "bg-gradient-to-r from-amber-400 to-orange-500 text-white shadow-md",
-              tier === 2 && "bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500 text-white shadow-lg animate-pulse",
-              tier === 3 && "bg-gradient-to-r from-fuchsia-500 via-rose-500 to-amber-400 text-white shadow-2xl animate-pulse"
-            )}
-          >
+        {streak >= 2 &&
+        <span
+          key={`combo-${bump}`}
+          className={cn(
+            "inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-extrabold transition origin-center animate-scale-in",
+            tier === 1 && "bg-gradient-to-r from-amber-400 to-orange-500 text-white shadow-md",
+            tier === 2 && "bg-gradient-to-r from-orange-500 via-rose-500 to-pink-500 text-white shadow-lg animate-pulse",
+            tier === 3 && "bg-gradient-to-r from-fuchsia-500 via-rose-500 to-amber-400 text-white shadow-2xl animate-pulse"
+          )}>
+          
             <Flame className={cn("size-4", tier >= 2 && "drop-shadow-[0_0_6px_rgba(255,200,0,0.9)]")} />
             <span className="tabular-nums">{streak}</span>
             <span className="opacity-90">×{mult}</span>
           </span>
-        )}
+        }
         <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-xs font-bold">
           <Zap className="size-3 text-amber-500" /> {score}
         </span>
-        {bestStreak >= 3 && (
-          <span className="hidden text-[10px] text-muted-foreground sm:inline">
-            最佳 {bestStreak}
+        {bestStreak >= 3 &&
+        <span className="hidden text-[10px] text-muted-foreground sm:inline">
+            <T>最佳</T> {bestStreak}
           </span>
-        )}
+        }
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
-function FloatingComboBadge({ label }: { label: string }) {
+function FloatingComboBadge({ label }: {label: string;}) {
   // Burst sparkles arranged radially around the badge.
   const sparks = Array.from({ length: 10 });
   return (
@@ -2755,7 +2755,7 @@ function FloatingComboBadge({ label }: { label: string }) {
         <div className="absolute inset-0 -m-6 animate-ping rounded-full bg-rose-500/30" />
         {/* Sparks */}
         {sparks.map((_, i) => {
-          const angle = (i / sparks.length) * Math.PI * 2;
+          const angle = i / sparks.length * Math.PI * 2;
           const dx = Math.cos(angle) * 80;
           const dy = Math.sin(angle) * 80;
           return (
@@ -2766,10 +2766,10 @@ function FloatingComboBadge({ label }: { label: string }) {
                 animation: `combo-spark 700ms ease-out forwards`,
                 animationDelay: `${i * 20}ms`,
                 ["--dx" as any]: `${dx}px`,
-                ["--dy" as any]: `${dy}px`,
-              }}
-            />
-          );
+                ["--dy" as any]: `${dy}px`
+              }} />);
+
+
         })}
         {/* Main badge */}
         <div className="relative animate-scale-in rounded-2xl bg-gradient-to-r from-amber-400 via-rose-500 to-fuchsia-600 px-6 py-3 text-2xl font-black uppercase tracking-wider text-white shadow-[0_10px_40px_rgba(244,63,94,0.6)] ring-2 ring-white/40">
@@ -2782,8 +2782,8 @@ function FloatingComboBadge({ label }: { label: string }) {
           100% { opacity: 0; transform: translate(-50%, -50%) translate(var(--dx), var(--dy)) scale(0.3); }
         }
       `}</style>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ====================================================================== */
@@ -2791,11 +2791,11 @@ function FloatingComboBadge({ label }: { label: string }) {
 /* ====================================================================== */
 
 const RUSH_DURATION_SEC = 60;
-const RUSH_FALL_BASE_MS = 10000;  // initial fall duration (slower start)
-const RUSH_FALL_MIN_MS = 4500;    // fastest fall duration (still readable)
-const RUSH_SPAWN_BASE_MS = 2800;  // initial spawn interval
-const RUSH_SPAWN_MIN_MS = 1300;   // fastest spawn interval
-const RUSH_MAX_ACTIVE = 3;        // max simultaneous falling tiles
+const RUSH_FALL_BASE_MS = 10000; // initial fall duration (slower start)
+const RUSH_FALL_MIN_MS = 4500; // fastest fall duration (still readable)
+const RUSH_SPAWN_BASE_MS = 2800; // initial spawn interval
+const RUSH_SPAWN_MIN_MS = 1300; // fastest spawn interval
+const RUSH_MAX_ACTIVE = 3; // max simultaneous falling tiles
 
 type RushTile = {
   id: number;
@@ -2806,10 +2806,10 @@ type RushTile = {
   fallMs: number;
 };
 
-function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+function WordRushSession({ pool, onExit }: {pool: Vocab[];onExit: () => void;}) {
   const playable = useMemo(
     () => pool.filter((v) => v.meaning_cn && v.meaning_cn.trim().length > 0),
-    [pool],
+    [pool]
   );
 
   const [phase, setPhase] = useState<"intro" | "playing" | "done">("intro");
@@ -2822,7 +2822,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
   const [timeLeft, setTimeLeft] = useState(RUSH_DURATION_SEC);
   const [choices, setChoices] = useState<Vocab[]>([]);
   const [activeTileId, setActiveTileId] = useState<number | null>(null);
-  const [floatPop, setFloatPop] = useState<{ id: number; text: string; ok: boolean } | null>(null);
+  const [floatPop, setFloatPop] = useState<{id: number;text: string;ok: boolean;} | null>(null);
 
   const [coinRefresh, setCoinRefresh] = useState(0);
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
@@ -2901,7 +2901,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
       const elapsed = (Date.now() - startedAtRef.current) / 1000;
       const t = elapsed / RUSH_DURATION_SEC; // 0..1
       const interval =
-        RUSH_SPAWN_BASE_MS - (RUSH_SPAWN_BASE_MS - RUSH_SPAWN_MIN_MS) * Math.min(1, t);
+      RUSH_SPAWN_BASE_MS - (RUSH_SPAWN_BASE_MS - RUSH_SPAWN_MIN_MS) * Math.min(1, t);
       setTimeout(() => {
         if (stopped) return;
         spawn();
@@ -2923,7 +2923,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
       const elapsed = (Date.now() - startedAtRef.current) / 1000;
       const t = elapsed / RUSH_DURATION_SEC;
       const fallMs =
-        RUSH_FALL_BASE_MS - (RUSH_FALL_BASE_MS - RUSH_FALL_MIN_MS) * Math.min(1, t);
+      RUSH_FALL_BASE_MS - (RUSH_FALL_BASE_MS - RUSH_FALL_MIN_MS) * Math.min(1, t);
       const v = playable[Math.floor(Math.random() * playable.length)];
       // Avoid duplicate active words
       if (prev.some((p) => p.vocab.id === v.id)) return prev;
@@ -2932,7 +2932,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
         vocab: v,
         x: 0.1 + Math.random() * 0.8,
         spawnedAt: Date.now(),
-        fallMs,
+        fallMs
       };
       const next = [...prev, tile];
       // If no active tile, set this one
@@ -3019,7 +3019,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
       const totals = await awardCoins(coins);
       setCoinRefresh((k) => k + 1);
       const attempted = hits + misses;
-      const accuracy = attempted > 0 ? Math.round((hits / attempted) * 100) : 0;
+      const accuracy = attempted > 0 ? Math.round(hits / attempted * 100) : 0;
       const milestones: BadgeDef[] = [];
       // Standard milestones
       const m = await evaluateMilestones({
@@ -3027,7 +3027,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
         spellCorrect: 0,
         perfectGroup: false,
         totalEarned: totals?.total_earned ?? 0,
-        attempted,
+        attempted
       });
       milestones.push(...m);
       // WordRush-specific
@@ -3050,7 +3050,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <div className="mb-4 flex items-center justify-between">
           <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="size-4" /> 返回
+            <ArrowLeft className="size-4" /> <T>返回</T>
           </button>
           <CoinPill />
         </div>
@@ -3059,49 +3059,49 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
             <Music className="size-10" />
           </div>
           <h1 className="text-3xl font-extrabold">⚡ Word Rush</h1>
-          <p className="mt-2 text-sm text-muted-foreground">节奏消除 · 60 秒挑战</p>
+          <p className="mt-2 text-sm text-muted-foreground"><T>节奏消除 · 60 秒挑战</T></p>
 
           <div className="mt-6 grid grid-cols-1 gap-3 text-left text-sm sm:grid-cols-2">
             <div className="rounded-2xl border bg-card p-3">
-              <div className="font-bold">🎯 玩法</div>
-              <div className="text-xs text-muted-foreground mt-1">中文释义从顶部下落，从底部 4 个英文单词中选出对应词。</div>
+              <div className="font-bold"><T>🎯 玩法</T></div>
+              <div className="text-xs text-muted-foreground mt-1"><T>中文释义从顶部下落，从底部 4 个英文单词中选出对应词。</T></div>
             </div>
             <div className="rounded-2xl border bg-card p-3">
               <div className="font-bold">🔥 Combo</div>
-              <div className="text-xs text-muted-foreground mt-1">连对触发 ×2 / ×3 / ×5 倍率，分数飞涨。</div>
+              <div className="text-xs text-muted-foreground mt-1"><T>连对触发 ×2 / ×3 / ×5 倍率，分数飞涨。</T></div>
             </div>
             <div className="rounded-2xl border bg-card p-3">
-              <div className="font-bold">⏱ 越来越快</div>
-              <div className="text-xs text-muted-foreground mt-1">下落速度和出现频率会随时间递增。</div>
+              <div className="font-bold"><T>⏱ 越来越快</T></div>
+              <div className="text-xs text-muted-foreground mt-1"><T>下落速度和出现频率会随时间递增。</T></div>
             </div>
             <div className="rounded-2xl border bg-card p-3">
-              <div className="font-bold">🪙 奖励</div>
-              <div className="text-xs text-muted-foreground mt-1">每 10 分换 1 金币，得分 ≥ 300 解锁徽章。</div>
+              <div className="font-bold"><T>🪙 奖励</T></div>
+              <div className="text-xs text-muted-foreground mt-1"><T>每 10 分换 1 金币，得分 ≥ 300 解锁徽章。</T></div>
             </div>
           </div>
 
           <Button
             onClick={start}
             disabled={playable.length < 4}
-            className="mt-6 h-12 w-full rounded-2xl bg-gradient-to-r from-fuchsia-600 to-purple-600 text-base font-bold text-white hover:opacity-90"
-          >
-            <Zap className="mr-2 size-5" /> 开始挑战
+            className="mt-6 h-12 w-full rounded-2xl bg-gradient-to-r from-fuchsia-600 to-purple-600 text-base font-bold text-white hover:opacity-90">
+            
+            <Zap className="mr-2 size-5" /> <T>开始挑战</T>
           </Button>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   if (phase === "done") {
     const attempted = hits + misses;
-    const accuracy = attempted > 0 ? Math.round((hits / attempted) * 100) : 0;
+    const accuracy = attempted > 0 ? Math.round(hits / attempted * 100) : 0;
     const coins = Math.max(hits > 0 ? 5 : 0, Math.floor(score / 10));
     return (
       <>
         <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
           <div className="mb-4 flex items-center justify-between">
             <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-              <ArrowLeft className="size-4" /> 返回
+              <ArrowLeft className="size-4" /> <T>返回</T>
             </button>
             <CoinPill refreshKey={coinRefresh} />
           </div>
@@ -3111,38 +3111,38 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
             <div className="text-6xl font-extrabold tabular-nums">{score}</div>
             <div className="mt-4 grid grid-cols-3 gap-3 text-sm">
               <div className="rounded-xl border bg-card p-3">
-                <div className="text-xs text-muted-foreground">命中</div>
+                <div className="text-xs text-muted-foreground"><T>命中</T></div>
                 <div className="text-xl font-bold text-emerald-600">{hits}</div>
               </div>
               <div className="rounded-xl border bg-card p-3">
-                <div className="text-xs text-muted-foreground">最高连击</div>
+                <div className="text-xs text-muted-foreground"><T>最高连击</T></div>
                 <div className="text-xl font-bold text-fuchsia-600">{bestStreak}</div>
               </div>
               <div className="rounded-xl border bg-card p-3">
-                <div className="text-xs text-muted-foreground">准确率</div>
+                <div className="text-xs text-muted-foreground"><T>准确率</T></div>
                 <div className="text-xl font-bold">{accuracy}%</div>
               </div>
             </div>
-            {coins > 0 && (
-              <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-100 px-4 py-2 text-sm font-bold text-amber-900 dark:bg-amber-500/15 dark:text-amber-300">
-                +{coins} 🪙 金币入账
+            {coins > 0 &&
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-100 px-4 py-2 text-sm font-bold text-amber-900 dark:bg-amber-500/15 dark:text-amber-300">
+                +{coins} <T>🪙 金币入账</T>
               </div>
-            )}
+            }
             <div className="mt-6 flex gap-2">
               <Button onClick={start} className="h-12 flex-1 rounded-2xl bg-gradient-to-r from-fuchsia-600 to-purple-600 font-bold text-white hover:opacity-90">
-                <RotateCw className="mr-2 size-4" /> 再来一局
+                <RotateCw className="mr-2 size-4" /> <T>再来一局</T>
               </Button>
               <Button variant="outline" onClick={onExit} className="h-12 flex-1 rounded-2xl">
-                返回词组
+                <T>返回词组</T>
               </Button>
             </div>
           </div>
         </main>
-        {unlockedBadges.length > 0 && (
-          <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
-        )}
-      </>
-    );
+        {unlockedBadges.length > 0 &&
+        <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
+        }
+      </>);
+
   }
 
   /* Playing */
@@ -3151,7 +3151,7 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
       {/* Top bar */}
       <div className="mb-2 flex items-center justify-between gap-2">
         <button onClick={onExit} className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 退出
+          <ArrowLeft className="size-4" /> <T>退出</T>
         </button>
         <div className="flex items-center gap-2 text-sm font-bold">
           <span className="rounded-full bg-card px-3 py-1 tabular-nums shadow-sm border">
@@ -3160,11 +3160,11 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
           <span className="rounded-full bg-card px-3 py-1 tabular-nums shadow-sm border">
             🎯 {score}
           </span>
-          {streak >= 2 && (
-            <span className="rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-500 px-3 py-1 text-white tabular-nums shadow-sm">
+          {streak >= 2 &&
+          <span className="rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-500 px-3 py-1 text-white tabular-nums shadow-sm">
               🔥 ×{comboMultiplier(streak)}
             </span>
-          )}
+          }
         </div>
       </div>
 
@@ -3175,16 +3175,16 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
             "h-full transition-all duration-1000 ease-linear",
             timeLeft > 20 ? "bg-emerald-500" : timeLeft > 10 ? "bg-amber-500" : "bg-red-500"
           )}
-          style={{ width: `${(timeLeft / RUSH_DURATION_SEC) * 100}%` }}
-        />
+          style={{ width: `${timeLeft / RUSH_DURATION_SEC * 100}%` }} />
+        
       </div>
 
       {/* Falling area */}
       <div
         ref={containerRef}
         className="relative flex-1 overflow-hidden rounded-2xl border-2 border-fuchsia-500/30 bg-gradient-to-b from-purple-500/5 via-background to-fuchsia-500/5"
-        style={{ minHeight: "40vh" }}
-      >
+        style={{ minHeight: "40vh" }}>
+        
         {/* Ground line */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-red-500/60 to-transparent" />
 
@@ -3195,57 +3195,57 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
               key={t.id}
               className={cn(
                 "absolute -translate-x-1/2 rounded-2xl border-2 px-4 py-2.5 text-center text-lg font-extrabold shadow-md whitespace-nowrap max-w-[85%] truncate",
-                isActive
-                  ? "border-fuchsia-500 bg-fuchsia-500/15 text-fuchsia-700 dark:text-fuchsia-300 ring-2 ring-fuchsia-500/40"
-                  : "border-muted-foreground/30 bg-card/80 text-muted-foreground"
+                isActive ?
+                "border-fuchsia-500 bg-fuchsia-500/15 text-fuchsia-700 dark:text-fuchsia-300 ring-2 ring-fuchsia-500/40" :
+                "border-muted-foreground/30 bg-card/80 text-muted-foreground"
               )}
               style={{
                 left: `${t.x * 100}%`,
                 top: 0,
-                animation: `rush-fall ${t.fallMs}ms linear forwards`,
-              }}
-            >
+                animation: `rush-fall ${t.fallMs}ms linear forwards`
+              }}>
+              
               {t.vocab.meaning_cn}
-            </div>
-          );
+            </div>);
+
         })}
 
         {/* Floating feedback */}
-        {floatPop && (
-          <div
-            key={floatPop.id}
-            className={cn(
-              "pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 animate-fade-in text-2xl font-extrabold",
-              floatPop.ok ? "text-emerald-500" : "text-red-500"
-            )}
-          >
+        {floatPop &&
+        <div
+          key={floatPop.id}
+          className={cn(
+            "pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 animate-fade-in text-2xl font-extrabold",
+            floatPop.ok ? "text-emerald-500" : "text-red-500"
+          )}>
+          
             {floatPop.ok ? floatPop.text : `❌ ${floatPop.text}`}
           </div>
-        )}
+        }
 
-        {tiles.length === 0 && (
-          <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
-            准备…
+        {tiles.length === 0 &&
+        <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
+            <T>准备…</T>
           </div>
-        )}
+        }
       </div>
 
       {/* Choice buttons */}
       <div className="mt-2 grid grid-cols-2 gap-2 shrink-0">
-        {choices.map((c) => (
-          <button
-            key={c.id}
-            onClick={() => answer(c)}
-            className="rounded-2xl border-2 border-border bg-card px-3 py-4 text-xl font-extrabold shadow-sm transition active:scale-95 hover:border-fuchsia-500 hover:bg-fuchsia-500/5"
-          >
+        {choices.map((c) =>
+        <button
+          key={c.id}
+          onClick={() => answer(c)}
+          className="rounded-2xl border-2 border-border bg-card px-3 py-4 text-xl font-extrabold shadow-sm transition active:scale-95 hover:border-fuchsia-500 hover:bg-fuchsia-500/5">
+          
             {c.word}
           </button>
-        ))}
-        {choices.length === 0 && (
-          <div className="col-span-2 rounded-2xl border-2 border-dashed border-muted bg-muted/30 px-3 py-6 text-center text-sm text-muted-foreground">
-            等待第一个单词…
-          </div>
         )}
+        {choices.length === 0 &&
+        <div className="col-span-2 rounded-2xl border-2 border-dashed border-muted bg-muted/30 px-3 py-6 text-center text-sm text-muted-foreground">
+            <T>等待第一个单词…</T>
+          </div>
+        }
       </div>
 
       {/* Inline keyframes */}
@@ -3255,8 +3255,8 @@ function WordRushSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }
           to { transform: translate(-50%, calc(50vh - 3rem)); }
         }
       `}</style>
-    </main>
-  );
+    </main>);
+
 }
 
 /* ====================================================================== */
@@ -3268,11 +3268,11 @@ const DICT_QUESTION_COUNT = 5;
 type DictResult = {
   score: number;
   comment: string;
-  mistakes: { expected: string; got: string; hint: string }[];
+  mistakes: {expected: string;got: string;hint: string;}[];
   corrected: string;
 };
 
-function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+function DictationSession({ pool, onExit }: {pool: Vocab[];onExit: () => void;}) {
   const [sp] = useSearchParams();
   const gradeNum = (() => {
     const raw = Number(sp.get("grade"));
@@ -3281,13 +3281,13 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
   })();
   const playable = useMemo(
     () =>
-      pool.filter(
-        (v) =>
-          v.example_en &&
-          v.example_en.trim().split(/\s+/).length >= 4 &&
-          v.example_en.trim().split(/\s+/).length <= 18,
-      ),
-    [pool],
+    pool.filter(
+      (v) =>
+      v.example_en &&
+      v.example_en.trim().split(/\s+/).length >= 4 &&
+      v.example_en.trim().split(/\s+/).length <= 18
+    ),
+    [pool]
   );
 
   const [phase, setPhase] = useState<"intro" | "playing" | "done">("intro");
@@ -3331,7 +3331,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
     setGrading(true);
     try {
       const { data, error } = await supabase.functions.invoke("grade-dictation", {
-        body: { reference: current.example_en, attempt: input },
+        body: { reference: current.example_en, attempt: input }
       });
       if (error) throw error;
       const r = data as DictResult;
@@ -3345,7 +3345,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
         item_id: current.id,
         item_label: (current.example_en || current.word).slice(0, 60),
         is_correct: r.score >= 60,
-        context: { score: r.score, mode: "dictation" },
+        context: { score: r.score, mode: "dictation" }
       }).catch(() => {});
       if (r.score >= 80) {
         setStreak((s) => {
@@ -3362,7 +3362,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
         score: 0,
         comment: "评分失败，请重试",
         mistakes: [],
-        corrected: current.example_en,
+        corrected: current.example_en
       });
     } finally {
       setGrading(false);
@@ -3387,9 +3387,9 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
 
   async function finish() {
     setPhase("done");
-    const avg = scores.length > 0
-      ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
-      : 0;
+    const avg = scores.length > 0 ?
+    Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) :
+    0;
     // Coins: half of avg score, +5 per streak ≥3
     const coins = Math.max(0, Math.floor(avg / 2)) + (bestStreak >= 3 ? 10 : 0);
     if (coins > 0) {
@@ -3400,7 +3400,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
         spellCorrect: 0,
         perfectGroup: avg === 100,
         totalEarned: totals?.total_earned ?? 0,
-        attempted: scores.length,
+        attempted: scores.length
       });
       const extra: BadgeDef[] = [];
       if (avg >= 80 && scores.length >= DICT_QUESTION_COUNT) {
@@ -3418,7 +3418,7 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <div className="mb-4 flex items-center justify-between">
           <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="size-4" /> 返回
+            <ArrowLeft className="size-4" /> <T>返回</T>
           </button>
           <CoinPill />
         </div>
@@ -3426,92 +3426,92 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
           <div className="mx-auto mb-3 flex size-20 items-center justify-center rounded-3xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
             <Headphones className="size-10" />
           </div>
-          <h1 className="text-3xl font-extrabold">🎧 句子听写</h1>
-          <p className="mt-2 text-sm text-muted-foreground">5 句英文例句 · AI 智能评分</p>
+          <h1 className="text-3xl font-extrabold"><T>🎧 句子听写</T></h1>
+          <p className="mt-2 text-sm text-muted-foreground"><T>5 句英文例句 · AI 智能评分</T></p>
 
           <div className="mt-6 grid grid-cols-1 gap-3 text-left text-sm sm:grid-cols-2">
             <div className="rounded-2xl border bg-card p-3">
-              <div className="font-bold">🔊 播放</div>
-              <div className="text-xs text-muted-foreground mt-1">点击喇叭可重复听，没有听清没关系。</div>
+              <div className="font-bold"><T>🔊 播放</T></div>
+              <div className="text-xs text-muted-foreground mt-1"><T>点击喇叭可重复听，没有听清没关系。</T></div>
             </div>
             <div className="rounded-2xl border bg-card p-3">
-              <div className="font-bold">⌨️ 输入</div>
-              <div className="text-xs text-muted-foreground mt-1">写下你听到的句子（不需逐字一致，意思接近也算）。</div>
+              <div className="font-bold"><T>⌨️ 输入</T></div>
+              <div className="text-xs text-muted-foreground mt-1"><T>写下你听到的句子（不需逐字一致，意思接近也算）。</T></div>
             </div>
             <div className="rounded-2xl border bg-card p-3">
-              <div className="font-bold">🤖 AI 评分</div>
-              <div className="text-xs text-muted-foreground mt-1">0-100 分 · 自动指出拼写/漏词错误。</div>
+              <div className="font-bold"><T>🤖 AI 评分</T></div>
+              <div className="text-xs text-muted-foreground mt-1"><T>0-100 分 · 自动指出拼写/漏词错误。</T></div>
             </div>
             <div className="rounded-2xl border bg-card p-3">
-              <div className="font-bold">🪙 奖励</div>
-              <div className="text-xs text-muted-foreground mt-1">平均分 ≥ 80 解锁 🎧 听写达人徽章。</div>
+              <div className="font-bold"><T>🪙 奖励</T></div>
+              <div className="text-xs text-muted-foreground mt-1"><T>平均分 ≥ 80 解锁 🎧 听写达人徽章。</T></div>
             </div>
           </div>
 
           <Button
             onClick={start}
             disabled={playable.length < DICT_QUESTION_COUNT}
-            className="mt-6 h-12 w-full rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 text-base font-bold text-white hover:opacity-90"
-          >
-            <Headphones className="mr-2 size-5" /> 开始听写
+            className="mt-6 h-12 w-full rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 text-base font-bold text-white hover:opacity-90">
+            
+            <Headphones className="mr-2 size-5" /> <T>开始听写</T>
           </Button>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   if (phase === "done") {
-    const avg = scores.length > 0
-      ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
-      : 0;
+    const avg = scores.length > 0 ?
+    Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) :
+    0;
     const coins = Math.max(0, Math.floor(avg / 2)) + (bestStreak >= 3 ? 10 : 0);
     return (
       <>
         <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
           <div className="mb-4 flex items-center justify-between">
             <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-              <ArrowLeft className="size-4" /> 返回
+              <ArrowLeft className="size-4" /> <T>返回</T>
             </button>
             <CoinPill refreshKey={coinRefresh} />
           </div>
           <div className="rounded-3xl border-2 border-emerald-500/40 bg-gradient-to-br from-emerald-500/10 to-transparent p-8 text-center shadow-tile">
             <Trophy className="mx-auto size-14 text-amber-500" />
-            <div className="mt-2 text-sm uppercase tracking-wider text-muted-foreground">平均分</div>
+            <div className="mt-2 text-sm uppercase tracking-wider text-muted-foreground"><T>平均分</T></div>
             <div className="text-6xl font-extrabold tabular-nums">{avg}</div>
             <div className="mt-4 grid grid-cols-3 gap-3 text-sm">
               <div className="rounded-xl border bg-card p-3">
-                <div className="text-xs text-muted-foreground">完成</div>
+                <div className="text-xs text-muted-foreground"><T>完成</T></div>
                 <div className="text-xl font-bold">{scores.length}/{DICT_QUESTION_COUNT}</div>
               </div>
               <div className="rounded-xl border bg-card p-3">
-                <div className="text-xs text-muted-foreground">最佳连击</div>
+                <div className="text-xs text-muted-foreground"><T>最佳连击</T></div>
                 <div className="text-xl font-bold text-emerald-600">{bestStreak}</div>
               </div>
               <div className="rounded-xl border bg-card p-3">
-                <div className="text-xs text-muted-foreground">最高单题</div>
+                <div className="text-xs text-muted-foreground"><T>最高单题</T></div>
                 <div className="text-xl font-bold">{Math.max(0, ...scores)}</div>
               </div>
             </div>
-            {coins > 0 && (
-              <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-100 px-4 py-2 text-sm font-bold text-amber-900 dark:bg-amber-500/15 dark:text-amber-300">
-                +{coins} 🪙 金币入账
+            {coins > 0 &&
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-100 px-4 py-2 text-sm font-bold text-amber-900 dark:bg-amber-500/15 dark:text-amber-300">
+                +{coins} <T>🪙 金币入账</T>
               </div>
-            )}
+            }
             <div className="mt-6 flex gap-2">
               <Button onClick={start} className="h-12 flex-1 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white hover:opacity-90">
-                <RotateCw className="mr-2 size-4" /> 再来一组
+                <RotateCw className="mr-2 size-4" /> <T>再来一组</T>
               </Button>
               <Button variant="outline" onClick={onExit} className="h-12 flex-1 rounded-2xl">
-                返回
+                <T>返回</T>
               </Button>
             </div>
           </div>
         </main>
-        {unlockedBadges.length > 0 && (
-          <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
-        )}
-      </>
-    );
+        {unlockedBadges.length > 0 &&
+        <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
+        }
+      </>);
+
   }
 
   /* Playing */
@@ -3521,17 +3521,17 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
       <div className="mb-4 flex items-center justify-between">
         <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 退出
+          <ArrowLeft className="size-4" /> <T>退出</T>
         </button>
         <div className="flex items-center gap-2 text-xs font-bold">
           <span className="rounded-full bg-card px-3 py-1 tabular-nums shadow-sm border">
             {idx + 1}/{items.length}
           </span>
-          {streak >= 2 && (
-            <span className="rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-white tabular-nums shadow-sm">
+          {streak >= 2 &&
+          <span className="rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-white tabular-nums shadow-sm">
               🔥 ×{comboMultiplier(streak)}
             </span>
-          )}
+          }
         </div>
       </div>
 
@@ -3539,21 +3539,21 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
       <div className="mb-4 h-1.5 w-full overflow-hidden rounded-full bg-muted">
         <div
           className="h-full bg-emerald-500 transition-all"
-          style={{ width: `${((idx + (showResult ? 1 : 0)) / items.length) * 100}%` }}
-        />
+          style={{ width: `${(idx + (showResult ? 1 : 0)) / items.length * 100}%` }} />
+        
       </div>
 
       <div className="rounded-3xl border-2 border-emerald-500/30 bg-card p-6 shadow-tile">
         <div className="text-center">
-          <div className="text-xs uppercase tracking-wider text-muted-foreground">听音听写</div>
+          <div className="text-xs uppercase tracking-wider text-muted-foreground"><T>听音听写</T></div>
           <button
             onClick={() => speakExample(current)}
             className="mt-3 inline-flex size-20 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 transition hover:bg-emerald-500/25 dark:text-emerald-400"
-            title="重听"
-          >
+            title="重听">
+            
             <Volume2 className="size-10" />
           </button>
-          <div className="mt-2 text-xs text-muted-foreground">点击重听</div>
+          <div className="mt-2 text-xs text-muted-foreground"><T>点击重听</T></div>
         </div>
 
         <textarea
@@ -3569,73 +3569,73 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
               e.preventDefault();
               if (!showResult) submit();
             }
-          }}
-        />
+          }} />
+        
         <div className="mt-1 text-right text-[11px] text-muted-foreground">
-          ⌘/Ctrl + Enter 提交
+          <T>⌘/Ctrl + Enter 提交</T>
         </div>
 
-        {!showResult && (
-          <div className="mt-3 flex gap-2">
+        {!showResult &&
+        <div className="mt-3 flex gap-2">
             <Button
-              variant="outline"
-              className="h-11 flex-1 rounded-2xl"
-              onClick={() => setRevealed(true)}
-              disabled={revealed}
-            >
-              我不会，看答案
-            </Button>
+            variant="outline"
+            className="h-11 flex-1 rounded-2xl"
+            onClick={() => setRevealed(true)}
+            disabled={revealed}>
+              <T>我不会，看答案</T>
+            
+          </Button>
             <Button
-              onClick={submit}
-              disabled={grading || !input.trim()}
-              className="h-11 flex-1 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white hover:opacity-90"
-            >
-              {grading ? <><Loader2 className="mr-2 size-4 animate-spin" /> 评分中…</> : "提交"}
+            onClick={submit}
+            disabled={grading || !input.trim()}
+            className="h-11 flex-1 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white hover:opacity-90">
+            
+              {grading ? <><Loader2 className="mr-2 size-4 animate-spin" /> <T>评分中…</T></> : "提交"}
             </Button>
           </div>
-        )}
+        }
 
-        {revealed && !showResult && (
-          <div className="mt-3 rounded-2xl border bg-muted/40 p-3 text-sm">
-            <div className="text-xs text-muted-foreground">参考答案</div>
+        {revealed && !showResult &&
+        <div className="mt-3 rounded-2xl border bg-muted/40 p-3 text-sm">
+            <div className="text-xs text-muted-foreground"><T>参考答案</T></div>
             <div className="mt-1 font-bold">{current.example_en}</div>
-            {current.example_cn && (
-              <div className="mt-1 text-xs text-muted-foreground">{current.example_cn}</div>
-            )}
+            {current.example_cn &&
+          <div className="mt-1 text-xs text-muted-foreground">{current.example_cn}</div>
+          }
           </div>
-        )}
+        }
 
-        {showResult && result && (
-          <div className="mt-4 space-y-3">
+        {showResult && result &&
+        <div className="mt-4 space-y-3">
             <div
-              className={cn(
-                "rounded-2xl border-2 p-4 text-center",
-                result.score >= 80
-                  ? "border-emerald-500/40 bg-emerald-500/10"
-                  : result.score >= 50
-                  ? "border-amber-500/40 bg-amber-500/10"
-                  : "border-red-500/40 bg-red-500/10"
-              )}
-            >
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">得分</div>
+            className={cn(
+              "rounded-2xl border-2 p-4 text-center",
+              result.score >= 80 ?
+              "border-emerald-500/40 bg-emerald-500/10" :
+              result.score >= 50 ?
+              "border-amber-500/40 bg-amber-500/10" :
+              "border-red-500/40 bg-red-500/10"
+            )}>
+            
+              <div className="text-xs uppercase tracking-wider text-muted-foreground"><T>得分</T></div>
               <div className="text-4xl font-extrabold tabular-nums">{result.score}</div>
               <div className="mt-1 text-xs">{result.comment}</div>
             </div>
 
             <div className="rounded-2xl border bg-muted/30 p-3 text-sm">
-              <div className="text-xs text-muted-foreground">参考答案</div>
+              <div className="text-xs text-muted-foreground"><T>参考答案</T></div>
               <div className="mt-1 font-bold">{current.example_en}</div>
-              {current.example_cn && (
-                <div className="mt-1 text-xs text-muted-foreground">{current.example_cn}</div>
-              )}
+              {current.example_cn &&
+            <div className="mt-1 text-xs text-muted-foreground">{current.example_cn}</div>
+            }
             </div>
 
-            {result.mistakes.length > 0 && (
-              <div className="rounded-2xl border border-red-500/30 bg-red-500/5 p-3 text-sm">
-                <div className="mb-2 text-xs font-bold text-red-600 dark:text-red-400">错误点</div>
+            {result.mistakes.length > 0 &&
+          <div className="rounded-2xl border border-red-500/30 bg-red-500/5 p-3 text-sm">
+                <div className="mb-2 text-xs font-bold text-red-600 dark:text-red-400"><T>错误点</T></div>
                 <ul className="space-y-1.5">
-                  {result.mistakes.map((m, i) => (
-                    <li key={i} className="text-xs">
+                  {result.mistakes.map((m, i) =>
+              <li key={i} className="text-xs">
                       <span className="font-bold text-red-600 dark:text-red-400 line-through">
                         {m.got || "(漏)"}
                       </span>
@@ -3645,26 +3645,26 @@ function DictationSession({ pool, onExit }: { pool: Vocab[]; onExit: () => void 
                       </span>
                       <span className="ml-2 text-muted-foreground">{m.hint}</span>
                     </li>
-                  ))}
+              )}
                 </ul>
               </div>
-            )}
+          }
 
             <Button
-              onClick={nextItem}
-              className="h-12 w-full rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white hover:opacity-90"
-            >
+            onClick={nextItem}
+            className="h-12 w-full rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white hover:opacity-90">
+            
               {idx + 1 >= items.length ? "查看结果" : "下一题"}
               <ChevronRight className="ml-1 size-5" />
             </Button>
           </div>
-        )}
+        }
       </div>
-    </main>
-  );
+    </main>);
+
 }
 /* -------- FSRS review launcher: filters pool to due words, then runs GuidedSession in review mode -------- */
-function GaokaoReviewLauncher({ pool, onExit }: { pool: Vocab[]; onExit: () => void }) {
+function GaokaoReviewLauncher({ pool, onExit }: {pool: Vocab[];onExit: () => void;}) {
   const [duePool, setDuePool] = useState<Vocab[] | null>(null);
   useEffect(() => {
     (async () => {
@@ -3674,19 +3674,19 @@ function GaokaoReviewLauncher({ pool, onExit }: { pool: Vocab[]; onExit: () => v
     })();
   }, [pool]);
   if (duePool === null) {
-    return <main className="mx-auto flex min-h-[60dvh] max-w-2xl items-center justify-center text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> 加载到期单词…</main>;
+    return <main className="mx-auto flex min-h-[60dvh] max-w-2xl items-center justify-center text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> <T>加载到期单词…</T></main>;
   }
   if (duePool.length === 0) {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</button>
+        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>返回</T></button>
         <div className="rounded-3xl border border-border bg-card p-8 text-center">
           <Trophy className="mx-auto size-12 text-amber-500" />
-          <h3 className="mt-2 text-xl font-extrabold">今天没有到期复习的词 🎉</h3>
-          <p className="mt-1 text-sm text-muted-foreground">先去开启一关通关，复习池会按遗忘曲线自动安排。</p>
+          <h3 className="mt-2 text-xl font-extrabold"><T>今天没有到期复习的词 🎉</T></h3>
+          <p className="mt-1 text-sm text-muted-foreground"><T>先去开启一关通关，复习池会按遗忘曲线自动安排。</T></p>
         </div>
-      </main>
-    );
+      </main>);
+
   }
   return <GuidedSession pool={duePool} onExit={onExit} title="高考词汇 · 到期复习" mode="review" />;
 }

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { T } from "@/i18n/T";import { useMemo, useState } from "react";
 import { Loader2, Volume2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
@@ -27,7 +27,7 @@ const TYPE_LABEL: Record<string, string> = {
   fill: "填空",
   transform: "句型转换",
   translation: "翻译",
-  correction: "改错",
+  correction: "改错"
 };
 
 export type GrammarQuestion = {
@@ -43,16 +43,16 @@ export type GrammarQuestion = {
   accepted_answers: string[] | null;
   explanation: string;
   // New rich fields
-  distractors: { text: string; msg: string }[] | null;
+  distractors: {text: string;msg: string;}[] | null;
   natural_note: string | null;
   grammar_topic: string | null;
   use_ai_grading: boolean;
 };
 
 export type AnswerResult =
-  | { kind: "correct"; latencyMs: number }
-  | { kind: "acceptable"; latencyMs: number; betterPhrasing?: string }
-  | { kind: "wrong"; latencyMs: number; errorReason?: string };
+{kind: "correct";latencyMs: number;} |
+{kind: "acceptable";latencyMs: number;betterPhrasing?: string;} |
+{kind: "wrong";latencyMs: number;errorReason?: string;};
 
 interface Props {
   question: GrammarQuestion;
@@ -70,10 +70,10 @@ function normalize(s: string) {
 }
 
 function checkOpenAnswerLocal(input: string, q: GrammarQuestion): boolean {
-  const acc = (q.accepted_answers && q.accepted_answers.length
-    ? q.accepted_answers
-    : [q.correct_answer || ""]
-  ).filter(Boolean) as string[];
+  const acc = (q.accepted_answers && q.accepted_answers.length ?
+  q.accepted_answers :
+  [q.correct_answer || ""]).
+  filter(Boolean) as string[];
   const norm = normalize(input);
   return acc.some((a) => normalize(a) === norm);
 }
@@ -91,16 +91,16 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
   const shuffledChoices = useMemo(() => {
     if (!hasDistractors) return null;
     const all = [
-      { text: q.correct_answer || "", correct: true, msg: "" },
-      ...(q.distractors || []).map((d) => ({ text: d.text, correct: false, msg: d.msg })),
-    ];
+    { text: q.correct_answer || "", correct: true, msg: "" },
+    ...(q.distractors || []).map((d) => ({ text: d.text, correct: false, msg: d.msg }))];
+
     // Stable seed from id so re-renders don't reshuffle
     let seed = 0;
-    for (const ch of q.id) seed = (seed * 31 + ch.charCodeAt(0)) | 0;
+    for (const ch of q.id) seed = seed * 31 + ch.charCodeAt(0) | 0;
     const arr = [...all];
     for (let i = arr.length - 1; i > 0; i--) {
       seed = (seed * 9301 + 49297) % 233280;
-      const j = Math.floor((seed / 233280) * (i + 1));
+      const j = Math.floor(seed / 233280 * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
@@ -108,8 +108,8 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
 
   // ─── State across all modes ───
   const [shownAt] = useState<number>(() => Date.now());
-  const [picked, setPicked] = useState<string | null>(null);   // mcq letter or distractor text
-  const [picks, setPicks] = useState<{ text: string; correct: boolean; msg: string }[]>([]);
+  const [picked, setPicked] = useState<string | null>(null); // mcq letter or distractor text
+  const [picks, setPicks] = useState<{text: string;correct: boolean;msg: string;}[]>([]);
   const [input, setInput] = useState("");
   const [revealed, setRevealed] = useState(false);
   const [aiLoading, setAiLoading] = useState(false);
@@ -130,12 +130,12 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
     onAnswered({
       kind: ok ? "correct" : "wrong",
       latencyMs: Date.now() - shownAt,
-      errorReason: ok ? undefined : "rule_unknown",
+      errorReason: ok ? undefined : "rule_unknown"
     });
   };
 
   // ─── Multi-choice rewrite pick ───
-  const pickRewrite = (choice: { text: string; correct: boolean; msg: string }) => {
+  const pickRewrite = (choice: {text: string;correct: boolean;msg: string;}) => {
     if (picks.some((p) => p.text === choice.text)) return;
     if (picks.some((p) => p.correct)) return; // already locked on correct
     setPicks((p) => [...p, choice]);
@@ -150,7 +150,7 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
         onAnswered({
           kind: "wrong",
           latencyMs: Date.now() - shownAt,
-          errorReason: "rule_unknown",
+          errorReason: "rule_unknown"
         });
       }
     }
@@ -165,7 +165,7 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
     onAnswered({
       kind: ok ? "correct" : "wrong",
       latencyMs: Date.now() - shownAt,
-      errorReason: ok ? undefined : "rule_unknown",
+      errorReason: ok ? undefined : "rule_unknown"
     });
   };
 
@@ -183,8 +183,8 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
           promptCN: undefined,
           promptEN: q.stem,
           acceptedAnswers: q.accepted_answers || [],
-          feedbackLanguage: "Chinese",
-        },
+          feedbackLanguage: "Chinese"
+        }
       });
       if (error || !data) {
         // Fall back to local string match — never block the user
@@ -193,7 +193,7 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
         onAnswered({
           kind: ok ? "correct" : "wrong",
           latencyMs: Date.now() - shownAt,
-          errorReason: ok ? undefined : "rule_unknown",
+          errorReason: ok ? undefined : "rule_unknown"
         });
         return;
       }
@@ -213,8 +213,8 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
       onAnswered({
         kind,
         latencyMs: Date.now() - shownAt,
-        errorReason: kind === "wrong" ? (data.errorReason || "rule_unknown") : undefined,
-        ...(kind === "acceptable" ? { betterPhrasing: data.betterPhrasing } : {}),
+        errorReason: kind === "wrong" ? data.errorReason || "rule_unknown" : undefined,
+        ...(kind === "acceptable" ? { betterPhrasing: data.betterPhrasing } : {})
       });
     } catch {
       // Network failure → local fallback
@@ -223,7 +223,7 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
       onAnswered({
         kind: ok ? "correct" : "wrong",
         latencyMs: Date.now() - shownAt,
-        errorReason: ok ? undefined : "rule_unknown",
+        errorReason: ok ? undefined : "rule_unknown"
       });
     } finally {
       setAiLoading(false);
@@ -232,7 +232,7 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
 
   const playStem = () => {
     if (!q.stem) return;
-    speak(q.stem, { accent: "US" }).catch(() => { /* ignore */ });
+    speak(q.stem, { accent: "US" }).catch(() => {/* ignore */});
   };
 
   // ───────── Render ─────────
@@ -248,16 +248,16 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
         <div className="inline-block rounded-full bg-muted px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-muted-foreground">
           {TYPE_LABEL[qType] || qType}
         </div>
-        {enableTtsForStem && (
-          <button
-            onClick={playStem}
-            className="text-muted-foreground hover:text-emerald-600 transition"
-            title="朗读题目"
-            aria-label="朗读题目"
-          >
+        {enableTtsForStem &&
+        <button
+          onClick={playStem}
+          className="text-muted-foreground hover:text-emerald-600 transition"
+          title="朗读题目"
+          aria-label="朗读题目">
+          
             <Volume2 className="size-4" />
           </button>
-        )}
+        }
       </div>
 
       <div className="text-sm font-bold whitespace-pre-wrap leading-relaxed mb-3">
@@ -265,206 +265,206 @@ export function GrammarQuestionCard({ question, index, onAnswered, onAskTutor, e
       </div>
 
       {/* ─── Mode A: Multi-choice rewrite ─── */}
-      {hasDistractors && shuffledChoices && (
-        <div className="space-y-2">
+      {hasDistractors && shuffledChoices &&
+      <div className="space-y-2">
           {shuffledChoices.map((c, i) => {
-            const wasPicked = picks.some((p) => p.text === c.text);
-            const showCorrect = wasPicked && c.correct;
-            const showWrong = wasPicked && !c.correct;
-            const showRevealed = lockedRewrite && c.correct && !wasPicked;
-            return (
-              <button
-                key={c.text + i}
-                onClick={() => pickRewrite(c)}
-                disabled={isLocked || (wasPicked && !c.correct)}
-                className={cn(
-                  "w-full text-left px-3 py-2.5 rounded-xl border-2 transition flex items-baseline gap-2",
-                  showCorrect && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
-                  showRevealed && "border-emerald-400 bg-emerald-50/60 dark:bg-emerald-950/20",
-                  showWrong && "border-rose-400 bg-rose-50/60 dark:bg-rose-950/20 opacity-60",
-                  !wasPicked && !lockedRewrite && "border-border hover:border-emerald-400",
-                  lockedRewrite && !c.correct && !wasPicked && "opacity-40",
-                )}
-              >
+          const wasPicked = picks.some((p) => p.text === c.text);
+          const showCorrect = wasPicked && c.correct;
+          const showWrong = wasPicked && !c.correct;
+          const showRevealed = lockedRewrite && c.correct && !wasPicked;
+          return (
+            <button
+              key={c.text + i}
+              onClick={() => pickRewrite(c)}
+              disabled={isLocked || wasPicked && !c.correct}
+              className={cn(
+                "w-full text-left px-3 py-2.5 rounded-xl border-2 transition flex items-baseline gap-2",
+                showCorrect && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
+                showRevealed && "border-emerald-400 bg-emerald-50/60 dark:bg-emerald-950/20",
+                showWrong && "border-rose-400 bg-rose-50/60 dark:bg-rose-950/20 opacity-60",
+                !wasPicked && !lockedRewrite && "border-border hover:border-emerald-400",
+                lockedRewrite && !c.correct && !wasPicked && "opacity-40"
+              )}>
+              
                 <span
-                  className={cn(
-                    "font-mono text-xs flex-shrink-0 mt-0.5 w-5 text-center",
-                    showCorrect || showRevealed ? "text-emerald-600" : showWrong ? "text-rose-600" : "text-muted-foreground",
-                  )}
-                >
+                className={cn(
+                  "font-mono text-xs flex-shrink-0 mt-0.5 w-5 text-center",
+                  showCorrect || showRevealed ? "text-emerald-600" : showWrong ? "text-rose-600" : "text-muted-foreground"
+                )}>
+                
                   {showCorrect || showRevealed ? "✓" : showWrong ? "✗" : String.fromCharCode(65 + i)}
                 </span>
                 <span className="text-sm leading-snug">{c.text}</span>
-              </button>
-            );
-          })}
+              </button>);
+
+        })}
         </div>
-      )}
+      }
 
       {/* ─── Mode B: Legacy MCQ ─── */}
-      {isLegacyMcq && !hasDistractors && (
-        <div className="grid gap-2">
+      {isLegacyMcq && !hasDistractors &&
+      <div className="grid gap-2">
           {(["A", "B", "C", "D"] as const).map((L) => {
-            const txt = (q as Record<string, unknown>)["option_" + L.toLowerCase()] as string | null;
-            if (txt == null) return null;
-            const isPicked = picked === L;
-            const isAns = picked && L === q.correct_answer;
-            const isWrong = picked && isPicked && L !== q.correct_answer;
-            return (
-              <button
-                key={L}
-                disabled={!!picked}
-                onClick={() => pickMcq(L)}
-                className={cn(
-                  "rounded-xl border-2 px-3 py-2 text-left text-sm transition",
-                  !picked && "border-border hover:border-indigo-400",
-                  isAns && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
-                  isWrong && "border-rose-500 bg-rose-50 dark:bg-rose-950/30",
-                  picked && !isAns && !isWrong && "opacity-60",
-                )}
-              >
+          const txt = (q as Record<string, unknown>)["option_" + L.toLowerCase()] as string | null;
+          if (txt == null) return null;
+          const isPicked = picked === L;
+          const isAns = picked && L === q.correct_answer;
+          const isWrong = picked && isPicked && L !== q.correct_answer;
+          return (
+            <button
+              key={L}
+              disabled={!!picked}
+              onClick={() => pickMcq(L)}
+              className={cn(
+                "rounded-xl border-2 px-3 py-2 text-left text-sm transition",
+                !picked && "border-border hover:border-indigo-400",
+                isAns && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
+                isWrong && "border-rose-500 bg-rose-50 dark:bg-rose-950/30",
+                picked && !isAns && !isWrong && "opacity-60"
+              )}>
+              
                 <span className="mr-2 font-extrabold">{L}.</span>
                 {txt}
-              </button>
-            );
-          })}
+              </button>);
+
+        })}
         </div>
-      )}
+      }
 
       {/* ─── Mode C: Open-typed (string-match or AI) ─── */}
-      {!hasDistractors && !isLegacyMcq && (
-        <div className="space-y-2">
+      {!hasDistractors && !isLegacyMcq &&
+      <div className="space-y-2">
           <textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            disabled={revealed || aiLoading}
-            rows={qType === "translation" || qType === "transform" || qType === "correction" ? 2 : 1}
-            placeholder={
-              qType === "translation"
-                ? "请输入英文翻译…"
-                : qType === "correction"
-                ? "请输入改正后的句子…"
-                : qType === "transform"
-                ? "请输入转换后的句子…"
-                : "请填入答案…"
-            }
-            className={cn(
-              "w-full rounded-xl border-2 bg-background px-3 py-2 text-sm transition outline-none focus:border-indigo-400",
-              revealed && (aiResult ? aiResult.grammarOk : checkOpenAnswerLocal(input, q))
-                ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30"
-                : revealed
-                ? "border-rose-500 bg-rose-50 dark:bg-rose-950/30"
-                : "border-border",
-            )}
-          />
-          {!revealed ? (
-            <button
-              onClick={useAi ? submitOpenAI : submitOpenLocal}
-              disabled={!input.trim() || aiLoading}
-              className="rounded-full bg-emerald-500 px-4 py-1.5 text-xs font-extrabold text-white disabled:opacity-40 inline-flex items-center gap-1.5"
-            >
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          disabled={revealed || aiLoading}
+          rows={qType === "translation" || qType === "transform" || qType === "correction" ? 2 : 1}
+          placeholder={
+          qType === "translation" ?
+          "请输入英文翻译…" :
+          qType === "correction" ?
+          "请输入改正后的句子…" :
+          qType === "transform" ?
+          "请输入转换后的句子…" :
+          "请填入答案…"
+          }
+          className={cn(
+            "w-full rounded-xl border-2 bg-background px-3 py-2 text-sm transition outline-none focus:border-indigo-400",
+            revealed && (aiResult ? aiResult.grammarOk : checkOpenAnswerLocal(input, q)) ?
+            "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30" :
+            revealed ?
+            "border-rose-500 bg-rose-50 dark:bg-rose-950/30" :
+            "border-border"
+          )} />
+        
+          {!revealed ?
+        <button
+          onClick={useAi ? submitOpenAI : submitOpenLocal}
+          disabled={!input.trim() || aiLoading}
+          className="rounded-full bg-emerald-500 px-4 py-1.5 text-xs font-extrabold text-white disabled:opacity-40 inline-flex items-center gap-1.5">
+          
               {aiLoading && <Loader2 className="size-3 animate-spin" />}
               {aiLoading ? "AI 批改中…" : useAi ? "✨ 智能批改" : "提交答案"}
-            </button>
-          ) : (
-            <div className="rounded-lg bg-muted/60 p-2.5 text-xs">
-              <div className="font-bold mb-1">参考答案：</div>
+            </button> :
+
+        <div className="rounded-lg bg-muted/60 p-2.5 text-xs">
+              <div className="font-bold mb-1"><T>参考答案：</T></div>
               <div className="font-mono text-[13px]">{q.correct_answer}</div>
             </div>
-          )}
+        }
         </div>
-      )}
+      }
 
       {/* ─── AI feedback (3-layer) ─── */}
-      {aiResult && (
-        <div
-          className={cn(
-            "mt-3 rounded-lg p-3 text-xs space-y-1.5 border-2",
-            aiResult.grammarOk && aiResult.meaningOk && aiResult.naturalness !== "awkward"
-              ? "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/30"
-              : aiResult.grammarOk && aiResult.meaningOk
-              ? "border-amber-300 bg-amber-50 dark:bg-amber-950/30"
-              : "border-rose-300 bg-rose-50 dark:bg-rose-950/30",
-          )}
-        >
+      {aiResult &&
+      <div
+        className={cn(
+          "mt-3 rounded-lg p-3 text-xs space-y-1.5 border-2",
+          aiResult.grammarOk && aiResult.meaningOk && aiResult.naturalness !== "awkward" ?
+          "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/30" :
+          aiResult.grammarOk && aiResult.meaningOk ?
+          "border-amber-300 bg-amber-50 dark:bg-amber-950/30" :
+          "border-rose-300 bg-rose-50 dark:bg-rose-950/30"
+        )}>
+        
           <div className="flex flex-wrap gap-1.5 mb-1">
             <span className={cn("inline-block rounded px-1.5 py-0.5 text-[10px] font-bold", aiResult.grammarOk ? "bg-emerald-200 text-emerald-800" : "bg-rose-200 text-rose-800")}>
-              语法 {aiResult.grammarOk ? "✓" : "✗"}
+              <T>语法</T> {aiResult.grammarOk ? "✓" : "✗"}
             </span>
             <span className={cn("inline-block rounded px-1.5 py-0.5 text-[10px] font-bold", aiResult.meaningOk ? "bg-emerald-200 text-emerald-800" : "bg-rose-200 text-rose-800")}>
-              含义 {aiResult.meaningOk ? "✓" : "✗"}
+              <T>含义</T> {aiResult.meaningOk ? "✓" : "✗"}
             </span>
             <span className={cn(
-              "inline-block rounded px-1.5 py-0.5 text-[10px] font-bold",
-              aiResult.naturalness === "native" && "bg-emerald-200 text-emerald-800",
-              aiResult.naturalness === "ok" && "bg-amber-200 text-amber-800",
-              aiResult.naturalness === "awkward" && "bg-rose-200 text-rose-800",
-            )}>
-              地道度 {aiResult.naturalness === "native" ? "native" : aiResult.naturalness === "ok" ? "OK" : "awkward"}
+            "inline-block rounded px-1.5 py-0.5 text-[10px] font-bold",
+            aiResult.naturalness === "native" && "bg-emerald-200 text-emerald-800",
+            aiResult.naturalness === "ok" && "bg-amber-200 text-amber-800",
+            aiResult.naturalness === "awkward" && "bg-rose-200 text-rose-800"
+          )}>
+              <T>地道度</T> {aiResult.naturalness === "native" ? "native" : aiResult.naturalness === "ok" ? "OK" : "awkward"}
             </span>
           </div>
           <div className="leading-relaxed">
             {aiResult.feedback.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
-              part.startsWith("**") && part.endsWith("**") ? (
-                <strong key={i} className="font-bold">{part.slice(2, -2)}</strong>
-              ) : (
-                <span key={i}>{part}</span>
-              ),
-            )}
+          part.startsWith("**") && part.endsWith("**") ?
+          <strong key={i} className="font-bold">{part.slice(2, -2)}</strong> :
+
+          <span key={i}>{part}</span>
+
+          )}
           </div>
-          {aiResult.betterPhrasing && (
-            <div className="mt-2 pt-2 border-t border-current/10">
-              <div className="text-[10px] font-bold tracking-wider opacity-70 mb-0.5">💎 更地道的写法</div>
+          {aiResult.betterPhrasing &&
+        <div className="mt-2 pt-2 border-t border-current/10">
+              <div className="text-[10px] font-bold tracking-wider opacity-70 mb-0.5"><T>💎 更地道的写法</T></div>
               <div className="font-mono text-[12px]">{aiResult.betterPhrasing}</div>
             </div>
-          )}
+        }
         </div>
-      )}
+      }
 
       {/* ─── Multi-choice latest-pick feedback ─── */}
-      {hasDistractors && picks.length > 0 && !picks[picks.length - 1].correct && (
-        <div className="mt-3 rounded-lg p-3 text-xs border-2 border-rose-300 bg-rose-50 dark:bg-rose-950/30">
+      {hasDistractors && picks.length > 0 && !picks[picks.length - 1].correct &&
+      <div className="mt-3 rounded-lg p-3 text-xs border-2 border-rose-300 bg-rose-50 dark:bg-rose-950/30">
           {picks[picks.length - 1].msg.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
-            part.startsWith("**") && part.endsWith("**") ? (
-              <strong key={i} className="font-bold">{part.slice(2, -2)}</strong>
-            ) : (
-              <span key={i}>{part}</span>
-            ),
-          )}
+        part.startsWith("**") && part.endsWith("**") ?
+        <strong key={i} className="font-bold">{part.slice(2, -2)}</strong> :
+
+        <span key={i}>{part}</span>
+
+        )}
         </div>
-      )}
+      }
 
       {/* ─── Static explanation (after answered) ─── */}
-      {isLocked && q.explanation && (
-        <div className="mt-3 rounded-lg bg-muted/50 p-3 text-xs leading-relaxed">
+      {isLocked && q.explanation &&
+      <div className="mt-3 rounded-lg bg-muted/50 p-3 text-xs leading-relaxed">
           💡 {q.explanation.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
-            part.startsWith("**") && part.endsWith("**") ? (
-              <strong key={i} className="font-bold">{part.slice(2, -2)}</strong>
-            ) : (
-              <span key={i}>{part}</span>
-            ),
-          )}
+        part.startsWith("**") && part.endsWith("**") ?
+        <strong key={i} className="font-bold">{part.slice(2, -2)}</strong> :
+
+        <span key={i}>{part}</span>
+
+        )}
         </div>
-      )}
+      }
 
       {/* ─── Natural-note (only shown when grammar correct) ─── */}
-      {isLocked && q.natural_note && (lockedRewrite || (aiResult?.grammarOk && aiResult?.meaningOk)) && (
-        <div className="mt-2 rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900 p-3 text-xs leading-relaxed">
-          💎 <span className="font-bold">地道度提示：</span>{q.natural_note}
+      {isLocked && q.natural_note && (lockedRewrite || aiResult?.grammarOk && aiResult?.meaningOk) &&
+      <div className="mt-2 rounded-lg bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900 p-3 text-xs leading-relaxed">
+          💎 <span className="font-bold"><T>地道度提示：</T></span>{q.natural_note}
         </div>
-      )}
+      }
 
       {/* ─── Ask the tutor ─── */}
-      {isLocked && onAskTutor && (
-        <div className="mt-3">
+      {isLocked && onAskTutor &&
+      <div className="mt-3">
           <button
-            onClick={onAskTutor}
-            className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10"
-          >
-            💬 问小月 / Ask Luna
-          </button>
+          onClick={onAskTutor}
+          className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/10">
+            <T>💬 问小月 / Ask Luna</T>
+          
+        </button>
         </div>
-      )}
-    </section>
-  );
+      }
+    </section>);
+
 }

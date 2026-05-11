@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { T } from "@/i18n/T";import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Volume2 } from "lucide-react";
 import { speak } from "@/lib/speak";
 import { cn } from "@/lib/utils";
@@ -62,11 +62,11 @@ export function ImmersionCards({ cards, onContinue }: Props) {
   const canNext = idx < cards.length - 1;
   const allSeen = seen.size === cards.length;
 
-  const next = () => { if (canNext) setIdx((i) => i + 1); };
-  const prev = () => { if (canPrev) setIdx((i) => i - 1); };
+  const next = () => {if (canNext) setIdx((i) => i + 1);};
+  const prev = () => {if (canPrev) setIdx((i) => i - 1);};
 
   const playEnglish = () => {
-    speak(card.en, { accent: "US" }).catch(() => { /* ignore */ });
+    speak(card.en, { accent: "US" }).catch(() => {/* ignore */});
   };
 
   return (
@@ -74,8 +74,8 @@ export function ImmersionCards({ cards, onContinue }: Props) {
       {/* Top bar */}
       <div className="flex items-center justify-between mb-4">
         <div className="text-xs">
-          <span className="font-mono text-sky-600 dark:text-sky-400 tracking-widest">📚 沉浸训练</span>
-          <span className="text-muted-foreground"> · 看 {cards.length} 个真实场景</span>
+          <span className="font-mono text-sky-600 dark:text-sky-400 tracking-widest"><T>📚 沉浸训练</T></span>
+          <span className="text-muted-foreground"> <T>· 看</T> {cards.length} <T>个真实场景</T></span>
         </div>
         <div className="text-xs text-muted-foreground tabular-nums">
           {idx + 1} / {cards.length}
@@ -97,8 +97,8 @@ export function ImmersionCards({ cards, onContinue }: Props) {
               onClick={playEnglish}
               className="flex-shrink-0 w-9 h-9 rounded-full bg-sky-500 hover:bg-sky-600 transition flex items-center justify-center text-white shadow-sm"
               title="朗读英文"
-              aria-label="朗读英文"
-            >
+              aria-label="朗读英文">
+              
               <Volume2 className="size-4" />
             </button>
           </div>
@@ -107,17 +107,17 @@ export function ImmersionCards({ cards, onContinue }: Props) {
 
       {/* Card dots */}
       <div className="flex items-center justify-center gap-1.5 mb-4">
-        {cards.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIdx(i)}
-            className={cn(
-              "h-1.5 rounded-full transition-all",
-              i === idx ? "w-6 bg-sky-500" : seen.has(i) ? "w-1.5 bg-sky-300 dark:bg-sky-700" : "w-1.5 bg-muted",
-            )}
-            aria-label={`跳到第 ${i + 1} 张`}
-          />
-        ))}
+        {cards.map((_, i) =>
+        <button
+          key={i}
+          onClick={() => setIdx(i)}
+          className={cn(
+            "h-1.5 rounded-full transition-all",
+            i === idx ? "w-6 bg-sky-500" : seen.has(i) ? "w-1.5 bg-sky-300 dark:bg-sky-700" : "w-1.5 bg-muted"
+          )}
+          aria-label={`跳到第 ${i + 1} 张`} />
+
+        )}
       </div>
 
       {/* Nav controls */}
@@ -126,17 +126,17 @@ export function ImmersionCards({ cards, onContinue }: Props) {
           onClick={prev}
           disabled={!canPrev}
           className="rounded-full border-2 border-border h-10 px-4 inline-flex items-center gap-1 text-sm hover:border-sky-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
-          aria-label="上一张"
-        >
-          <ChevronLeft className="size-4" /> 上一张
+          aria-label="上一张">
+          
+          <ChevronLeft className="size-4" /> <T>上一张</T>
         </button>
         <button
           onClick={next}
           disabled={!canNext}
           className="rounded-full border-2 border-border h-10 px-4 inline-flex items-center gap-1 text-sm hover:border-sky-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
-          aria-label="下一张"
-        >
-          下一张 <ChevronRight className="size-4" />
+          aria-label="下一张">
+          <T>下一张</T> 
+          <ChevronRight className="size-4" />
         </button>
       </div>
 
@@ -146,15 +146,15 @@ export function ImmersionCards({ cards, onContinue }: Props) {
           onClick={onContinue}
           className={cn(
             "px-6 py-3 rounded-full text-sm font-extrabold transition inline-flex items-center gap-2",
-            allSeen
-              ? "bg-sky-500 text-white hover:bg-sky-600 shadow-md"
-              : "bg-muted text-muted-foreground hover:bg-muted/80",
-          )}
-        >
+            allSeen ?
+            "bg-sky-500 text-white hover:bg-sky-600 shadow-md" :
+            "bg-muted text-muted-foreground hover:bg-muted/80"
+          )}>
+          
           {allSeen ? "看完了，开始练习 →" : "够了，开始练习 →"}
         </button>
-        <p className="text-[11px] text-muted-foreground mt-2 italic">⌨ ←/→ 翻页 · 🔊 听英文</p>
+        <p className="text-[11px] text-muted-foreground mt-2 italic"><T>⌨ ←/→ 翻页 · 🔊 听英文</T></p>
       </div>
-    </section>
-  );
+    </section>);
+
 }

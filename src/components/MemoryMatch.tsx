@@ -1,4 +1,4 @@
-/**
+import { T } from "@/i18n/T"; /**
  * Memory Match — vocabulary pairing mini-game.
  * Tap a word, then tap its meaning (or vice versa) to clear the pair.
  * Played as a fun coda after finishing a group's quiz.
@@ -9,10 +9,10 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { awardCoins } from "@/lib/coinsBadges";
 
-type Pair = { id: string; word: string; meaning: string };
+type Pair = {id: string;word: string;meaning: string;};
 type Card = {
-  key: string;       // unique per card
-  pairId: string;    // which pair it belongs to
+  key: string; // unique per card
+  pairId: string; // which pair it belongs to
   text: string;
   side: "en" | "cn";
 };
@@ -28,7 +28,7 @@ function shuffle<T>(arr: T[]): T[] {
 
 export interface MemoryMatchProps {
   /** Vocabulary to play with — first 6 are used (12 cards in a 4×3 grid). */
-  pool: Array<{ id: string; word: string; meaning_cn: string }>;
+  pool: Array<{id: string;word: string;meaning_cn: string;}>;
   onClose: () => void;
 }
 
@@ -37,10 +37,10 @@ const MAX_PAIRS = 6;
 export default function MemoryMatch({ pool, onClose }: MemoryMatchProps) {
   const [round, setRound] = useState(0);
   const pairs = useMemo<Pair[]>(() => {
-    return shuffle(pool)
-      .slice(0, MAX_PAIRS)
-      .map((v) => ({ id: v.id, word: v.word, meaning: v.meaning_cn }));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    return shuffle(pool).
+    slice(0, MAX_PAIRS).
+    map((v) => ({ id: v.id, word: v.word, meaning: v.meaning_cn }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pool, round]);
 
   const cards = useMemo<Card[]>(() => {
@@ -92,7 +92,7 @@ export default function MemoryMatch({ pool, onClose }: MemoryMatchProps) {
     const reward = pairs.length * 3 + (perfect ? 15 : 0) + speedBonus;
     setCoins(reward);
     awardCoins(reward).catch(() => {});
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finished]);
 
   function pick(card: Card) {
@@ -132,7 +132,7 @@ export default function MemoryMatch({ pool, onClose }: MemoryMatchProps) {
       <div className="mb-3 flex items-center justify-between">
         <div className="inline-flex items-center gap-2">
           <Sparkles className="size-4 text-fuchsia-500" />
-          <span className="text-sm font-extrabold">趣味配对 · Memory Match</span>
+          <span className="text-sm font-extrabold"><T>趣味配对 · Memory Match</T></span>
         </div>
         <div className="flex items-center gap-3 text-xs font-bold text-muted-foreground tabular-nums">
           <span>⏱ {elapsed}s</span>
@@ -142,7 +142,7 @@ export default function MemoryMatch({ pool, onClose }: MemoryMatchProps) {
       </div>
 
       <p className="mb-3 text-xs text-muted-foreground">
-        点单词 → 点对应的中文释义。配对越快、错的越少，金币越多 🪙
+        <T>点单词 → 点对应的中文释义。配对越快、错的越少，金币越多 🪙</T>
       </p>
 
       <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
@@ -162,37 +162,37 @@ export default function MemoryMatch({ pool, onClose }: MemoryMatchProps) {
                 !isMatched && isPicked && "border-fuchsia-500 bg-fuchsia-500/15 scale-105 shadow-lg",
                 !isMatched && !isPicked && !isWrong && "border-border bg-card hover:border-primary/60 hover:scale-[1.02]",
                 isWrong && "border-rose-500 bg-rose-500/15 animate-pulse",
-                c.side === "en" && !isMatched && "font-mono",
-              )}
-            >
+                c.side === "en" && !isMatched && "font-mono"
+              )}>
+              
               {c.text}
-            </button>
-          );
+            </button>);
+
         })}
       </div>
 
-      {finished && (
-        <div className="mt-4 rounded-2xl border-2 border-amber-400/40 bg-amber-400/10 p-4 text-center animate-fade-in">
+      {finished &&
+      <div className="mt-4 rounded-2xl border-2 border-amber-400/40 bg-amber-400/10 p-4 text-center animate-fade-in">
           <Trophy className="mx-auto size-7 text-amber-500" />
           <div className="mt-1 text-base font-extrabold">
-            完美收尾！{mistakes === 0 ? "全对 🎯" : `${mistakes} 次失误`}
+            <T>完美收尾！</T>{mistakes === 0 ? "全对 🎯" : `${mistakes} 次失误`}
           </div>
           <div className="mt-1 text-xs text-muted-foreground">
-            用时 {elapsed}s · {moves} 次点击
+            <T>用时</T> {elapsed}s · {moves} <T>次点击</T>
           </div>
-          {coins !== null && coins > 0 && (
-            <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-amber-500/20 px-3 py-1 text-sm font-bold text-amber-700 dark:text-amber-300">
-              🪙 +{coins} 金币
+          {coins !== null && coins > 0 &&
+        <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-amber-500/20 px-3 py-1 text-sm font-bold text-amber-700 dark:text-amber-300">
+              🪙 +{coins} <T>金币</T>
             </div>
-          )}
+        }
           <div className="mt-4 grid grid-cols-2 gap-2">
             <Button variant="outline" onClick={() => setRound((r) => r + 1)}>
-              <RotateCw className="mr-1 size-4" /> 再来一局
+              <RotateCw className="mr-1 size-4" /> <T>再来一局</T>
             </Button>
-            <Button onClick={onClose}>完成 ✓</Button>
+            <Button onClick={onClose}><T>完成 ✓</T></Button>
           </div>
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }

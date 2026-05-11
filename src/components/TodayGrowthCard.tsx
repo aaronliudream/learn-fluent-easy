@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Flame, Target, BookOpen, Brain, Clock, TrendingUp, Sparkles } from "lucide-react";
 import { getDailyStats, type DailyStats } from "@/lib/dailyStats";
@@ -11,33 +11,33 @@ import { cn } from "@/lib/utils";
  *   ② 进度条直观显示日目标完成度
  *   ③ 连续天数 streak 制造正向驱动
  */
-export function TodayGrowthCard({ compact = false }: { compact?: boolean }) {
+export function TodayGrowthCard({ compact = false }: {compact?: boolean;}) {
   const [s, setS] = useState<DailyStats | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let mounted = true;
-    getDailyStats().then(d => { if (mounted) { setS(d); setLoading(false); } });
-    return () => { mounted = false; };
+    getDailyStats().then((d) => {if (mounted) {setS(d);setLoading(false);}});
+    return () => {mounted = false;};
   }, []);
 
   if (loading) {
     return (
       <div className="rounded-3xl border-2 border-dashed border-border bg-card p-4 text-center text-xs text-muted-foreground">
-        正在统计今日成长…
-      </div>
-    );
+        <T>正在统计今日成长…</T>
+      </div>);
+
   }
   if (!s) {
     return (
       <div className="rounded-3xl border-2 border-dashed border-border bg-card p-4 text-center text-xs text-muted-foreground">
-        登录后查看你的今日成长 ✨
-      </div>
-    );
+        <T>登录后查看你的今日成长 ✨</T>
+      </div>);
+
   }
 
-  const taskPct = Math.min(100, Math.round((s.tasks / Math.max(1, s.goalTasks)) * 100));
-  const minPct = Math.min(100, Math.round((s.minutes / Math.max(1, s.goalMinutes)) * 100));
+  const taskPct = Math.min(100, Math.round(s.tasks / Math.max(1, s.goalTasks) * 100));
+  const minPct = Math.min(100, Math.round(s.minutes / Math.max(1, s.goalMinutes) * 100));
   const goalReached = s.tasks >= s.goalTasks && s.minutes >= s.goalMinutes;
 
   return (
@@ -48,13 +48,13 @@ export function TodayGrowthCard({ compact = false }: { compact?: boolean }) {
       <span className="pointer-events-none absolute -right-12 -top-12 size-40 rounded-full bg-white/20 blur-3xl" />
       <div className="relative flex items-center justify-between">
         <div>
-          <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">TODAY · 今日成长</div>
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90"><T>TODAY · 今日成长</T></div>
           <div className="mt-1 text-xl font-extrabold">
             {goalReached ? "🎉 今日目标已达成！" : s.tasks === 0 ? "🌱 今天还没开始呢" : "💪 继续加油"}
           </div>
         </div>
         <div className="flex items-center gap-1 rounded-full bg-white/25 px-3 py-1.5 text-sm font-extrabold">
-          <Flame className="size-4 fill-orange-300 stroke-orange-300" /> {s.streakDays} 天
+          <Flame className="size-4 fill-orange-300 stroke-orange-300" /> {s.streakDays} <T>天</T>
         </div>
       </div>
 
@@ -75,17 +75,17 @@ export function TodayGrowthCard({ compact = false }: { compact?: boolean }) {
       <div className="relative mt-3 flex items-center justify-between text-[11px]">
         <div className="inline-flex items-center gap-1 opacity-90">
           <TrendingUp className="size-3" />
-          准确率 {Math.round(s.accuracy * 100)}% · 答对 {s.correct} 题
+          <T>准确率</T> {Math.round(s.accuracy * 100)}<T>% · 答对</T> {s.correct} <T>题</T>
         </div>
         <Link to="/parent" className="rounded-full bg-white/25 px-2.5 py-0.5 font-bold hover:bg-white/35">
-          家长报告 →
+          <T>家长报告 →</T>
         </Link>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
-function ProgressTile({ icon, label, value, pct }: { icon: React.ReactNode; label: string; value: string; pct: number }) {
+function ProgressTile({ icon, label, value, pct }: {icon: React.ReactNode;label: string;value: string;pct: number;}) {
   return (
     <div className="rounded-2xl bg-white/20 p-2.5">
       <div className="flex items-center justify-between text-[11px] font-bold opacity-95">
@@ -95,16 +95,16 @@ function ProgressTile({ icon, label, value, pct }: { icon: React.ReactNode; labe
       <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-white/25">
         <div className="h-full bg-white shadow-sm transition-all" style={{ width: `${pct}%` }} />
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
-function Stat({ icon, value, label }: { icon: React.ReactNode; value: number; label: string }) {
+function Stat({ icon, value, label }: {icon: React.ReactNode;value: number;label: string;}) {
   return (
     <div className="rounded-2xl bg-white/15 p-2.5 text-center">
       <div className="flex items-center justify-center gap-1 opacity-90">{icon}</div>
       <div className="text-xl font-black leading-none">{value}</div>
       <div className="mt-0.5 text-[10px] opacity-90">{label}</div>
-    </div>
-  );
+    </div>);
+
 }

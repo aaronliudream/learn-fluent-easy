@@ -1,4 +1,4 @@
-/**
+import { T } from "@/i18n/T"; /**
  * GuidedSession — 5-step guided vocab progression for gaokao & junior.
  *
  * Given a pool of words, walks the user through a session that picks the
@@ -17,8 +17,8 @@ import {
   stepFromMatrix,
   STEP_KIND,
   STEP_LABEL,
-  type GuideStep,
-} from "@/lib/vocabMastery";
+  type GuideStep } from
+"@/lib/vocabMastery";
 import type { MasteryMatrix } from "@/lib/masteryScore";
 
 export interface GuidedVocab {
@@ -64,10 +64,10 @@ function shuffle<T>(a: T[]): T[] {
   }
   return out;
 }
-function pickDistractors<T extends { id: string }>(pool: T[], excludeId: string, n = 3): T[] {
+function pickDistractors<T extends {id: string;}>(pool: T[], excludeId: string, n = 3): T[] {
   return shuffle(pool.filter((p) => p.id !== excludeId)).slice(0, n);
 }
-function blankExample(sentence: string, word: string): { masked: string; answer: string } {
+function blankExample(sentence: string, word: string): {masked: string;answer: string;} {
   const w = word.split("/")[0].trim();
   if (!w) return { masked: sentence, answer: w };
   const re = new RegExp(`\\b(${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\w*)\\b`, "i");
@@ -82,7 +82,7 @@ export default function GuidedSession({
   onExit,
   sessionSize = 8,
   title = "本关通关",
-  mode = "learn",
+  mode = "learn"
 }: Props) {
   const [loading, setLoading] = useState(true);
   const [cards, setCards] = useState<CardState[]>([]);
@@ -106,7 +106,7 @@ export default function GuidedSession({
         let step = stepFromMatrix(matrix);
         // In review mode: jump straight to review-style steps (2..4), pick one randomly
         if (mode === "review" && step < 5) {
-          step = (2 + Math.floor(Math.random() * 3)) as GuideStep;
+          step = 2 + Math.floor(Math.random() * 3) as GuideStep;
         }
         return { v, matrix, step, correctThisSession: 0, wrongThisSession: 0 };
       });
@@ -129,7 +129,7 @@ export default function GuidedSession({
 
   function advanceQueue(updated: CardState) {
     // Replace current card with updated copy.
-    const newCards = cards.map((c, i) => (i === activeIdx ? updated : c));
+    const newCards = cards.map((c, i) => i === activeIdx ? updated : c);
     // Find the next unfinished card (step < 5), starting AFTER active idx.
     const total = newCards.length;
     let nextIdx = -1;
@@ -168,7 +168,7 @@ export default function GuidedSession({
     } else {
       // Wrong: stay on same step, but rotate to next card so user gets variety.
       const updated = { ...active, wrongThisSession: active.wrongThisSession + 1 };
-      const newCards = cards.map((c, i) => (i === activeIdx ? updated : c));
+      const newCards = cards.map((c, i) => i === activeIdx ? updated : c);
       const total = newCards.length;
       let nextIdx = activeIdx;
       for (let off = 1; off <= total; off++) {
@@ -187,9 +187,9 @@ export default function GuidedSession({
   if (loading) {
     return (
       <main className="mx-auto flex min-h-[60dvh] max-w-2xl items-center justify-center px-5 py-10 text-muted-foreground">
-        <Loader2 className="mr-2 size-5 animate-spin" /> 准备本关单词…
-      </main>
-    );
+        <Loader2 className="mr-2 size-5 animate-spin" /> <T>准备本关单词…</T>
+      </main>);
+
   }
 
   if (done || !active) {
@@ -198,7 +198,7 @@ export default function GuidedSession({
 
   const totalCards = cards.length;
   const finishedCards = cards.filter((c) => c.step === 5).length;
-  const progressPct = Math.round((finishedCards / totalCards) * 100);
+  const progressPct = Math.round(finishedCards / totalCards * 100);
 
   return (
     <main className="mx-auto min-h-[80dvh] max-w-2xl px-5 py-6">
@@ -206,9 +206,9 @@ export default function GuidedSession({
       <div className="mb-4 flex items-center justify-between">
         <button
           onClick={onExit}
-          className="inline-flex items-center gap-1 text-sm text-muted-foreground transition hover:text-foreground"
-        >
-          <ArrowLeft className="size-4" /> 退出
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground transition hover:text-foreground">
+          
+          <ArrowLeft className="size-4" /> <T>退出</T>
         </button>
         <div className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
           {title} · {finishedCards}/{totalCards}
@@ -217,8 +217,8 @@ export default function GuidedSession({
       <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-muted">
         <div
           className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all"
-          style={{ width: `${progressPct}%` }}
-        />
+          style={{ width: `${progressPct}%` }} />
+        
       </div>
 
       <StepBadge step={active.step} />
@@ -226,50 +226,50 @@ export default function GuidedSession({
       <StepRunner
         card={active}
         pool={cards.map((c) => c.v)}
-        onAnswer={handleAnswer}
-      />
-    </main>
-  );
+        onAnswer={handleAnswer} />
+      
+    </main>);
+
 }
 
 /* ─────────────── step badge ─────────────── */
-function StepBadge({ step }: { step: GuideStep }) {
+function StepBadge({ step }: {step: GuideStep;}) {
   const colors: Record<GuideStep, string> = {
     0: "bg-slate-100 text-slate-700 border-slate-300 dark:bg-slate-800 dark:text-slate-200 dark:border-slate-600",
     1: "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800",
     2: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-200 dark:border-emerald-800",
     3: "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-200 dark:border-amber-800",
     4: "bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200 dark:bg-fuchsia-950/40 dark:text-fuchsia-200 dark:border-fuchsia-800",
-    5: "bg-emerald-100 text-emerald-700 border-emerald-300",
+    5: "bg-emerald-100 text-emerald-700 border-emerald-300"
   };
   return (
     <div className="mb-4 flex items-center gap-2">
-      {([1, 2, 3, 4] as GuideStep[]).map((s) => (
-        <div
-          key={s}
-          className={cn(
-            "h-2 flex-1 rounded-full transition-all",
-            s < step ? "bg-emerald-500" : s === step ? "bg-emerald-300" : "bg-muted",
-          )}
-        />
-      ))}
+      {([1, 2, 3, 4] as GuideStep[]).map((s) =>
+      <div
+        key={s}
+        className={cn(
+          "h-2 flex-1 rounded-full transition-all",
+          s < step ? "bg-emerald-500" : s === step ? "bg-emerald-300" : "bg-muted"
+        )} />
+
+      )}
       <span className={cn("ml-2 inline-flex items-center rounded-full border px-2.5 py-0.5 text-[11px] font-bold", colors[step])}>
         Step {step}/4 · {STEP_LABEL[step]}
       </span>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── per-step runners ─────────────── */
 function StepRunner({
   card,
   pool,
-  onAnswer,
-}: {
-  card: CardState;
-  pool: GuidedVocab[];
-  onAnswer: (correct: boolean) => void;
-}) {
+  onAnswer
+
+
+
+
+}: {card: CardState;pool: GuidedVocab[];onAnswer: (correct: boolean) => void;}) {
   const { v, step } = card;
   if (step === 0) return <FlashcardStep v={v} onNext={() => onAnswer(true)} />;
   if (step === 1) return <En2CnStep v={v} pool={pool} onAnswer={onAnswer} />;
@@ -279,38 +279,38 @@ function StepRunner({
   return null;
 }
 
-function FlashcardStep({ v, onNext }: { v: GuidedVocab; onNext: () => void }) {
+function FlashcardStep({ v, onNext }: {v: GuidedVocab;onNext: () => void;}) {
   useEffect(() => {
     speak(v.word.split("/")[0]).catch(() => {});
   }, [v.id]);
   return (
     <section className="rounded-3xl border border-border bg-card p-7">
-      <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">看一眼 · 不计分</p>
+      <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground"><T>看一眼 · 不计分</T></p>
       <h2 className="mt-2 text-4xl font-extrabold tracking-tight">{v.word}</h2>
       {v.phonetic && <p className="mt-1 text-sm text-muted-foreground">{v.phonetic}</p>}
       <p className="mt-4 text-lg">{v.meaning_cn}</p>
-      {v.example_en && (
-        <div className="mt-5 rounded-xl bg-muted/50 p-4 text-sm">
+      {v.example_en &&
+      <div className="mt-5 rounded-xl bg-muted/50 p-4 text-sm">
           <p className="leading-relaxed">{v.example_en}</p>
           {v.example_cn && <p className="mt-1 text-muted-foreground">{v.example_cn}</p>}
         </div>
-      )}
+      }
       <div className="mt-6 flex items-center gap-3">
         <button
           onClick={() => speak(v.word.split("/")[0]).catch(() => {})}
-          className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm hover:bg-muted"
-        >
-          <Volume2 className="size-4" /> 再听一次
+          className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm hover:bg-muted">
+          
+          <Volume2 className="size-4" /> <T>再听一次</T>
         </button>
         <button
           onClick={onNext}
-          className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-        >
-          知道了 <Sparkles className="size-4" />
+          className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+          <T>知道了</T> 
+          <Sparkles className="size-4" />
         </button>
       </div>
-    </section>
-  );
+    </section>);
+
 }
 
 function ChoiceCard({
@@ -319,18 +319,18 @@ function ChoiceCard({
   options,
   correct,
   onAnswer,
-  audio,
-}: {
-  prompt: string;
-  subPrompt?: string;
-  options: string[];
-  correct: string;
-  onAnswer: (isCorrect: boolean) => void;
-  audio?: () => void;
-}) {
+  audio
+
+
+
+
+
+
+
+}: {prompt: string;subPrompt?: string;options: string[];correct: string;onAnswer: (isCorrect: boolean) => void;audio?: () => void;}) {
   const [picked, setPicked] = useState<string | null>(null);
   // Reset when prompt changes
-  useEffect(() => { setPicked(null); }, [prompt]);
+  useEffect(() => {setPicked(null);}, [prompt]);
 
   function pick(opt: string) {
     if (picked) return;
@@ -346,14 +346,14 @@ function ChoiceCard({
           <h2 className="text-3xl font-extrabold tracking-tight">{prompt}</h2>
           {subPrompt && <p className="mt-1 text-sm text-muted-foreground">{subPrompt}</p>}
         </div>
-        {audio && (
-          <button
-            onClick={audio}
-            className="inline-flex shrink-0 items-center gap-1 rounded-full border border-border px-3 py-1.5 text-xs hover:bg-muted"
-          >
-            <Volume2 className="size-3.5" /> 听
+        {audio &&
+        <button
+          onClick={audio}
+          className="inline-flex shrink-0 items-center gap-1 rounded-full border border-border px-3 py-1.5 text-xs hover:bg-muted">
+          
+            <Volume2 className="size-3.5" /> <T>听</T>
           </button>
-        )}
+        }
       </div>
       <div className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         {options.map((opt) => {
@@ -370,23 +370,23 @@ function ChoiceCard({
                 showState && isCorrect && "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-200",
                 showState && isPicked && !isCorrect && "border-rose-500 bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-200",
                 !showState && "border-border hover:border-primary hover:bg-muted/50",
-                showState && !isPicked && !isCorrect && "border-border opacity-60",
-              )}
-            >
+                showState && !isPicked && !isCorrect && "border-border opacity-60"
+              )}>
+              
               <span className="flex items-center justify-between gap-2">
                 <span>{opt}</span>
                 {showState && isCorrect && <Check className="size-4 text-emerald-600" />}
                 {showState && isPicked && !isCorrect && <X className="size-4 text-rose-600" />}
               </span>
-            </button>
-          );
+            </button>);
+
         })}
       </div>
-    </section>
-  );
+    </section>);
+
 }
 
-function En2CnStep({ v, pool, onAnswer }: { v: GuidedVocab; pool: GuidedVocab[]; onAnswer: (c: boolean) => void }) {
+function En2CnStep({ v, pool, onAnswer }: {v: GuidedVocab;pool: GuidedVocab[];onAnswer: (c: boolean) => void;}) {
   const opts = useMemo(() => {
     const distractors = pickDistractors(pool, v.id, 3).map((d) => d.meaning_cn);
     return shuffle([v.meaning_cn, ...distractors]);
@@ -398,12 +398,12 @@ function En2CnStep({ v, pool, onAnswer }: { v: GuidedVocab; pool: GuidedVocab[];
       options={opts}
       correct={v.meaning_cn}
       onAnswer={onAnswer}
-      audio={() => speak(v.word.split("/")[0]).catch(() => {})}
-    />
-  );
+      audio={() => speak(v.word.split("/")[0]).catch(() => {})} />);
+
+
 }
 
-function Cn2EnStep({ v, pool, onAnswer }: { v: GuidedVocab; pool: GuidedVocab[]; onAnswer: (c: boolean) => void }) {
+function Cn2EnStep({ v, pool, onAnswer }: {v: GuidedVocab;pool: GuidedVocab[];onAnswer: (c: boolean) => void;}) {
   const opts = useMemo(() => {
     const distractors = pickDistractors(pool, v.id, 3).map((d) => d.word);
     return shuffle([v.word, ...distractors]);
@@ -414,12 +414,12 @@ function Cn2EnStep({ v, pool, onAnswer }: { v: GuidedVocab; pool: GuidedVocab[];
       subPrompt="选出对应的英文"
       options={opts}
       correct={v.word}
-      onAnswer={onAnswer}
-    />
-  );
+      onAnswer={onAnswer} />);
+
+
 }
 
-function SpellStep({ v, onAnswer }: { v: GuidedVocab; onAnswer: (c: boolean) => void }) {
+function SpellStep({ v, onAnswer }: {v: GuidedVocab;onAnswer: (c: boolean) => void;}) {
   const target = v.word.split("/")[0].trim();
   const [input, setInput] = useState("");
   const [checked, setChecked] = useState<null | boolean>(null);
@@ -442,52 +442,52 @@ function SpellStep({ v, onAnswer }: { v: GuidedVocab; onAnswer: (c: boolean) => 
   const hint = `${target[0]} ${"_ ".repeat(Math.max(0, target.length - 1)).trim()}`;
   return (
     <section className="rounded-3xl border border-border bg-card p-7">
-      <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">听音 · 拼出来</p>
+      <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground"><T>听音 · 拼出来</T></p>
       <h2 className="mt-2 text-3xl font-extrabold">{v.meaning_cn}</h2>
       <div className="mt-3 flex items-center gap-3">
         <button
           onClick={() => speak(target).catch(() => {})}
-          className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm hover:bg-muted"
-        >
-          <Volume2 className="size-4" /> 重听
+          className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm hover:bg-muted">
+          
+          <Volume2 className="size-4" /> <T>重听</T>
         </button>
-        <span className="font-mono text-sm text-muted-foreground">提示：{hint}</span>
+        <span className="font-mono text-sm text-muted-foreground"><T>提示：</T>{hint}</span>
       </div>
       <input
         ref={inputRef}
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => { if (e.key === "Enter") submit(); }}
+        onKeyDown={(e) => {if (e.key === "Enter") submit();}}
         disabled={checked !== null}
         placeholder="在这里拼写"
         className={cn(
           "mt-5 w-full rounded-xl border-2 bg-background px-4 py-3 text-lg outline-none transition",
           checked === null && "border-border focus:border-primary",
           checked === true && "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40",
-          checked === false && "border-rose-500 bg-rose-50 text-rose-700 dark:bg-rose-950/40",
+          checked === false && "border-rose-500 bg-rose-50 text-rose-700 dark:bg-rose-950/40"
         )}
         autoCapitalize="off"
         autoCorrect="off"
         autoComplete="off"
-        spellCheck={false}
-      />
-      {checked === false && (
-        <p className="mt-2 text-sm text-rose-600">正确：<span className="font-mono">{target}</span></p>
-      )}
+        spellCheck={false} />
+      
+      {checked === false &&
+      <p className="mt-2 text-sm text-rose-600"><T>正确：</T><span className="font-mono">{target}</span></p>
+      }
       <div className="mt-5 flex justify-end">
         <button
           onClick={submit}
           disabled={checked !== null || !input.trim()}
-          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-40"
-        >
-          提交
+          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-40">
+          <T>提交</T>
+        
         </button>
       </div>
-    </section>
-  );
+    </section>);
+
 }
 
-function ClozeStep({ v, onAnswer }: { v: GuidedVocab; onAnswer: (c: boolean) => void }) {
+function ClozeStep({ v, onAnswer }: {v: GuidedVocab;onAnswer: (c: boolean) => void;}) {
   const target = v.word.split("/")[0].trim();
   const sentence = v.example_en || `Please use the word ${target} in a sentence.`;
   const { masked, answer } = useMemo(() => blankExample(sentence, target), [v.id]);
@@ -510,54 +510,54 @@ function ClozeStep({ v, onAnswer }: { v: GuidedVocab; onAnswer: (c: boolean) => 
 
   return (
     <section className="rounded-3xl border border-border bg-card p-7">
-      <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">用起来 · 例句填空</p>
+      <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground"><T>用起来 · 例句填空</T></p>
       <p className="mt-3 text-lg leading-relaxed">{masked}</p>
       {v.example_cn && <p className="mt-1 text-sm text-muted-foreground">{v.example_cn}</p>}
-      <div className="mt-3 text-xs text-muted-foreground">提示：{v.meaning_cn} · 首字母 <span className="font-mono">{target[0]}</span></div>
+      <div className="mt-3 text-xs text-muted-foreground"><T>提示：</T>{v.meaning_cn} <T>· 首字母</T> <span className="font-mono">{target[0]}</span></div>
       <input
         ref={inputRef}
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => { if (e.key === "Enter") submit(); }}
+        onKeyDown={(e) => {if (e.key === "Enter") submit();}}
         disabled={checked !== null}
         placeholder="填入正确单词形式"
         className={cn(
           "mt-5 w-full rounded-xl border-2 bg-background px-4 py-3 text-lg outline-none transition",
           checked === null && "border-border focus:border-primary",
           checked === true && "border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40",
-          checked === false && "border-rose-500 bg-rose-50 text-rose-700 dark:bg-rose-950/40",
+          checked === false && "border-rose-500 bg-rose-50 text-rose-700 dark:bg-rose-950/40"
         )}
         autoCapitalize="off"
         autoCorrect="off"
         autoComplete="off"
-        spellCheck={false}
-      />
-      {checked === false && (
-        <p className="mt-2 text-sm text-rose-600">正确：<span className="font-mono">{answer}</span></p>
-      )}
+        spellCheck={false} />
+      
+      {checked === false &&
+      <p className="mt-2 text-sm text-rose-600"><T>正确：</T><span className="font-mono">{answer}</span></p>
+      }
       <div className="mt-5 flex justify-end">
         <button
           onClick={submit}
           disabled={checked !== null || !input.trim()}
-          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-40"
-        >
-          提交
+          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-40">
+          <T>提交</T>
+        
         </button>
       </div>
-    </section>
-  );
+    </section>);
+
 }
 
 /* ─────────────── completion screen ─────────────── */
 function SessionComplete({
   cards,
   startedAt,
-  onExit,
-}: {
-  cards: CardState[];
-  startedAt: number;
-  onExit: () => void;
-}) {
+  onExit
+
+
+
+
+}: {cards: CardState[];startedAt: number;onExit: () => void;}) {
   const totalCorrect = cards.reduce((s, c) => s + c.correctThisSession, 0);
   const totalWrong = cards.reduce((s, c) => s + c.wrongThisSession, 0);
   const masteredCount = cards.filter((c) => c.step === 5).length;
@@ -571,38 +571,38 @@ function SessionComplete({
     <main className="mx-auto min-h-[80dvh] max-w-2xl px-5 py-10">
       <div className="rounded-3xl border border-border bg-card p-8 text-center">
         <Trophy className="mx-auto size-14 text-amber-500" />
-        <h2 className="mt-3 text-2xl font-extrabold">本关结束 🎉</h2>
-        <p className="mt-1 text-sm text-muted-foreground">用时 {minutes} 分钟 · 答对 {totalCorrect} / 答错 {totalWrong}</p>
+        <h2 className="mt-3 text-2xl font-extrabold"><T>本关结束 🎉</T></h2>
+        <p className="mt-1 text-sm text-muted-foreground"><T>用时</T> {minutes} <T>分钟 · 答对</T> {totalCorrect} <T>/ 答错</T> {totalWrong}</p>
         <div className="mt-5 grid grid-cols-3 gap-3 text-sm">
           <Stat label="本关词" value={cards.length} />
           <Stat label="完全掌握" value={masteredCount} accent />
           <Stat label="待复习" value={cards.length - masteredCount} />
         </div>
         <div className="mt-6 max-h-60 overflow-auto rounded-xl border border-border/60">
-          {cards.map((c) => (
-            <div key={c.v.id} className="flex items-center justify-between border-b border-border/40 px-4 py-2 text-sm last:border-b-0">
+          {cards.map((c) =>
+          <div key={c.v.id} className="flex items-center justify-between border-b border-border/40 px-4 py-2 text-sm last:border-b-0">
               <span className="font-medium">{c.v.word}</span>
               <span className="text-xs text-muted-foreground">
                 {c.step === 5 ? "✅ 已掌握" : `进度 ${c.step}/4`}
               </span>
             </div>
-          ))}
+          )}
         </div>
         <button
           onClick={onExit}
-          className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-        >
-          完成
+          className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+          <T>完成</T>
+        
         </button>
       </div>
-    </main>
-  );
+    </main>);
+
 }
-function Stat({ label, value, accent }: { label: string; value: number; accent?: boolean }) {
+function Stat({ label, value, accent }: {label: string;value: number;accent?: boolean;}) {
   return (
     <div className={cn("rounded-xl border border-border bg-background p-3", accent && "border-emerald-300 bg-emerald-50 dark:bg-emerald-950/30")}>
       <p className="text-xs text-muted-foreground">{label}</p>
       <p className="mt-0.5 text-2xl font-extrabold">{value}</p>
-    </div>
-  );
+    </div>);
+
 }

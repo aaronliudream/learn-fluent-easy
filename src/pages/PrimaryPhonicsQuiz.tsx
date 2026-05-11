@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Check, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -6,16 +6,16 @@ import { speakKid as speak } from "@/lib/speak";
 import {
   PHONICS_GROUPS,
   PHONICS_ITEMS,
-  type PhonicsItem,
-} from "@/data/primaryPhonics";
+  type PhonicsItem } from
+"@/data/primaryPhonics";
 import { PHONICS_GROUPS_G2, PHONICS_ITEMS_G2 } from "@/data/primaryPhonicsG2";
 import {
   bumpPhonicsMastery,
   bumpPhonicsLevel,
   ensureGroupMastery,
   getPhonicsMasteryMap,
-  isDue,
-} from "@/lib/phonicsMastery";
+  isDue } from
+"@/lib/phonicsMastery";
 import { buildDistractorPool } from "@/lib/phonicsDistractors";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
 
@@ -25,7 +25,7 @@ import { celebratePet } from "@/components/pet/EvolutionCelebration";
  *  /primary/phonics/quiz/review → SRS 到期的所有音
  */
 export default function PrimaryPhonicsQuiz() {
-  const { groupId } = useParams<{ groupId: string }>();
+  const { groupId } = useParams<{groupId: string;}>();
   const [search] = useSearchParams();
   const nav = useNavigate();
   const isReview = groupId === "review";
@@ -37,8 +37,8 @@ export default function PrimaryPhonicsQuiz() {
 
   const [items, setItems] = useState<PhonicsItem[]>([]);
   // 每个 item 走 3 道题(轮换 3 种题型). retryArmed = 本题答错过 1 次,允许再答 1 次.
-  const [itemIdx, setItemIdx] = useState(0);     // 当前在第几个 item
-  const [subIdx, setSubIdx] = useState(0);       // 当前 item 的第几道(0..2)
+  const [itemIdx, setItemIdx] = useState(0); // 当前在第几个 item
+  const [subIdx, setSubIdx] = useState(0); // 当前 item 的第几道(0..2)
   const [picked, setPicked] = useState<string | null>(null);
   const [retryArmed, setRetryArmed] = useState(false); // 本题答错可重做一次
   const [itemCorrects, setItemCorrects] = useState(0); // 当前 item 累计答对数(0..3)
@@ -68,7 +68,7 @@ export default function PrimaryPhonicsQuiz() {
 
   // 当前题目: kind 由 subIdx 决定(0=听音选字, 1=看字选音, 2=听词选图)
   // 每个 item 预计算 3 道题(混 5 种题型),保持本 item 内 q 稳定.
-  const itemQuestions = useMemo(() => (cur ? buildItemQuestions(cur, ITEMS) : []), [cur, itemIdx, ITEMS]);
+  const itemQuestions = useMemo(() => cur ? buildItemQuestions(cur, ITEMS) : [], [cur, itemIdx, ITEMS]);
   const q = itemQuestions[subIdx] ?? null;
 
   // 全部答完 → 结算 + 跳转(放 effect 里,避免 render 期副作用)
@@ -85,7 +85,7 @@ export default function PrimaryPhonicsQuiz() {
           kind: "levelup",
           emoji: "🦊",
           title: `${group.groupName} 通关!`,
-          subtitle: "Spark 解锁了下一组~",
+          subtitle: "Spark 解锁了下一组~"
         });
       } else {
         if (cancel) return;
@@ -93,21 +93,21 @@ export default function PrimaryPhonicsQuiz() {
           kind: "levelup",
           emoji: "🦊",
           title: `做完啦!通过 ${perfectItems}/${totalItems} 个音`,
-          subtitle: allCorrect ? "全部 3 题都对!太强啦" : "没全对的音明天会再考你哦",
+          subtitle: allCorrect ? "全部 3 题都对!太强啦" : "没全对的音明天会再考你哦"
         });
       }
       const t = setTimeout(() => nav(phonicsHref), 1800);
       return () => clearTimeout(t);
     })();
-    return () => { cancel = true; };
+    return () => {cancel = true;};
   }, [isFinished, perfectItems, totalItems, isReview, group, ITEMS, nav, phonicsHref]);
 
   useEffect(() => {
     if (!q || !cur) return;
     const t = setTimeout(() => {
-      if (q.kind === "hearLetter") speak(cur.exampleWords[0]?.word ?? cur.letter);
-      else if (q.kind === "matchWord") speak(q.correctWord);
-      else if (q.kind === "blendCvc") {
+      if (q.kind === "hearLetter") speak(cur.exampleWords[0]?.word ?? cur.letter);else
+      if (q.kind === "matchWord") speak(q.correctWord);else
+      if (q.kind === "blendCvc") {
         // 自动连读三个音: /c/ - /a/ - /t/
         const sounds = q.sounds;
         sounds.forEach((s, i) => setTimeout(() => speak(s), i * 600));
@@ -119,44 +119,44 @@ export default function PrimaryPhonicsQuiz() {
   if (loading) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <p className="text-sm text-muted-foreground">准备中…</p>
-      </main>
-    );
+        <p className="text-sm text-muted-foreground"><T>准备中…</T></p>
+      </main>);
+
   }
 
   if (!loading && totalItems === 0) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <BackLink to={phonicsHref} className="text-sm text-muted-foreground">
-          ← 返回拼读冒险
+          <T>← 返回拼读冒险</T>
         </BackLink>
         <p className="mt-6 text-sm text-muted-foreground">
           {isReview ? "今天没有需要复习的音~" : "这一组还没有内容。"}
         </p>
-      </main>
-    );
+      </main>);
+
   }
 
   if (isFinished || !cur || !q) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <p className="text-lg font-bold">
-          做完啦!{perfectItems} / {totalItems} 个音通过(共答对 {totalCorrect} 题)
+          <T>做完啦!</T>{perfectItems} / {totalItems} <T>个音通过(共答对</T> {totalCorrect} <T>题)</T>
         </p>
-        <p className="mt-2 text-sm text-muted-foreground">回到拼读冒险…</p>
-      </main>
-    );
+        <p className="mt-2 text-sm text-muted-foreground"><T>回到拼读冒险…</T></p>
+      </main>);
+
   }
 
   function pick(opt: string) {
     if (picked || !q || !cur) return;
     setPicked(opt);
     let isCorrect = false;
-    if (q.kind === "hearLetter") isCorrect = opt === q.correct;
-    else if (q.kind === "seeLetter") isCorrect = opt === q.correct;
-    else if (q.kind === "matchWord") isCorrect = opt === q.correctWord;
-    else if (q.kind === "blendCvc") isCorrect = opt === q.correctWord;
-    else if (q.kind === "seeImagePickWord") isCorrect = opt === q.correctWord;
+    if (q.kind === "hearLetter") isCorrect = opt === q.correct;else
+    if (q.kind === "seeLetter") isCorrect = opt === q.correct;else
+    if (q.kind === "matchWord") isCorrect = opt === q.correctWord;else
+    if (q.kind === "blendCvc") isCorrect = opt === q.correctWord;else
+    if (q.kind === "seeImagePickWord") isCorrect = opt === q.correctWord;
 
     // SRS 计数(用于"今日复习"到期判定)
     void bumpPhonicsMastery(
@@ -214,9 +214,9 @@ export default function PrimaryPhonicsQuiz() {
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
       <BackLink
         to={phonicsHref}
-        className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="size-4" /> 返回拼读冒险
+        className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        
+        <ArrowLeft className="size-4" /> <T>返回拼读冒险</T>
       </BackLink>
 
       <div className="mb-3 flex items-center justify-between">
@@ -224,135 +224,135 @@ export default function PrimaryPhonicsQuiz() {
           {isReview ? "🔁 今日复习" : `✨ 挑战 ${group?.groupName}`}
         </h1>
         <div className="text-xs font-mono font-bold text-muted-foreground">
-          第 {Math.min(itemIdx + 1, totalItems)}/{totalItems} 个音 · 题 {subIdx + 1}/3
-          {retryArmed && <span className="ml-1 text-rose-600">· 再来一次</span>}
+          <T>第</T> {Math.min(itemIdx + 1, totalItems)}/{totalItems} <T>个音 · 题</T> {subIdx + 1}/3
+          {retryArmed && <span className="ml-1 text-rose-600"><T>· 再来一次</T></span>}
         </div>
       </div>
 
       <div className="mb-3 h-2 w-full overflow-hidden rounded-full bg-muted">
         <div
           className="h-full bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 transition-all"
-          style={{ width: `${(doneQuestions / Math.max(1, totalQuestions)) * 100}%` }}
-        />
+          style={{ width: `${doneQuestions / Math.max(1, totalQuestions) * 100}%` }} />
+        
       </div>
 
       <div className="space-y-4 rounded-3xl border-2 border-border bg-card p-5 shadow-tile">
-        {q.kind === "hearLetter" && (
-          <>
+        {q.kind === "hearLetter" &&
+        <>
             <p className="text-center text-sm font-bold text-muted-foreground">
-              听这个音,选出对应的字母
+              <T>听这个音,选出对应的字母</T>
             </p>
             <div className="flex justify-center">
               <button
-                onClick={() => speak(cur.exampleWords[0]?.word ?? cur.letter)}
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-lg font-bold text-primary-foreground shadow"
-              >
-                <Volume2 className="size-5" /> 再听一遍
+              onClick={() => speak(cur.exampleWords[0]?.word ?? cur.letter)}
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-lg font-bold text-primary-foreground shadow">
+              
+                <Volume2 className="size-5" /> <T>再听一遍</T>
               </button>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              {q.options.map((o) => (
-                <Opt key={o} label={o} big picked={picked} correct={q.correct} onPick={pick} />
-              ))}
+              {q.options.map((o) =>
+            <Opt key={o} label={o} big picked={picked} correct={q.correct} onPick={pick} />
+            )}
             </div>
           </>
-        )}
+        }
 
-        {q.kind === "seeLetter" && (
-          <>
+        {q.kind === "seeLetter" &&
+        <>
             <p className="text-center text-sm font-bold text-muted-foreground">
-              这个字母发什么音?
+              <T>这个字母发什么音?</T>
             </p>
             <div className="flex justify-center">
               <div className="text-7xl font-black text-primary">{q.letter}</div>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              {q.options.map((o) => (
-                <Opt key={o} label={o} mono picked={picked} correct={q.correct} onPick={pick} />
-              ))}
+              {q.options.map((o) =>
+            <Opt key={o} label={o} mono picked={picked} correct={q.correct} onPick={pick} />
+            )}
             </div>
           </>
-        )}
+        }
 
-        {q.kind === "matchWord" && (
-          <>
+        {q.kind === "matchWord" &&
+        <>
             <p className="text-center text-sm font-bold text-muted-foreground">
-              听这个词,选出对应的图
+              <T>听这个词,选出对应的图</T>
             </p>
             <div className="flex justify-center">
               <button
-                onClick={() => speak(q.correctWord)}
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-lg font-bold text-primary-foreground shadow"
-              >
-                <Volume2 className="size-5" /> 再听一遍
+              onClick={() => speak(q.correctWord)}
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-lg font-bold text-primary-foreground shadow">
+              
+                <Volume2 className="size-5" /> <T>再听一遍</T>
               </button>
             </div>
             <div className="grid grid-cols-3 gap-3">
-              {q.options.map((o) => (
-                <button
-                  key={o.word}
-                  disabled={!!picked}
-                  onClick={() => pick(o.word)}
-                  className={
-                    "flex flex-col items-center gap-1 rounded-2xl border-2 p-4 transition " +
-                    (picked === null
-                      ? "border-border bg-card hover:border-primary/50"
-                      : o.word === q.correctWord
-                      ? "border-emerald-400 bg-emerald-50 dark:bg-emerald-950/30"
-                      : picked === o.word
-                      ? "border-rose-400 bg-rose-50 dark:bg-rose-950/30"
-                      : "border-border bg-card opacity-60")
-                  }
-                >
+              {q.options.map((o) =>
+            <button
+              key={o.word}
+              disabled={!!picked}
+              onClick={() => pick(o.word)}
+              className={
+              "flex flex-col items-center gap-1 rounded-2xl border-2 p-4 transition " + (
+              picked === null ?
+              "border-border bg-card hover:border-primary/50" :
+              o.word === q.correctWord ?
+              "border-emerald-400 bg-emerald-50 dark:bg-emerald-950/30" :
+              picked === o.word ?
+              "border-rose-400 bg-rose-50 dark:bg-rose-950/30" :
+              "border-border bg-card opacity-60")
+              }>
+              
                   <span className="text-5xl">{o.emoji}</span>
-                  {picked && (
-                    <span className="text-xs font-bold text-muted-foreground">{o.word}</span>
-                  )}
+                  {picked &&
+              <span className="text-xs font-bold text-muted-foreground">{o.word}</span>
+              }
                 </button>
-              ))}
+            )}
             </div>
           </>
-        )}
+        }
 
-        {q.kind === "blendCvc" && (
-          <>
+        {q.kind === "blendCvc" &&
+        <>
             <p className="text-center text-sm font-bold text-muted-foreground">
-              听这三个音连起来,是哪个词?
+              <T>听这三个音连起来,是哪个词?</T>
             </p>
             <div className="flex justify-center gap-2">
-              {q.sounds.map((s, i) => (
-                <button
-                  key={i}
-                  onClick={() => speak(s)}
-                  className="grid size-14 place-items-center rounded-2xl bg-primary/10 text-xl font-extrabold text-primary shadow-sm hover:bg-primary/20"
-                  title="点击单独听这个音"
-                >
+              {q.sounds.map((s, i) =>
+            <button
+              key={i}
+              onClick={() => speak(s)}
+              className="grid size-14 place-items-center rounded-2xl bg-primary/10 text-xl font-extrabold text-primary shadow-sm hover:bg-primary/20"
+              title="点击单独听这个音">
+              
                   {s}
                 </button>
-              ))}
+            )}
             </div>
             <div className="flex justify-center">
               <button
-                onClick={() => {
-                  q.sounds.forEach((s, i) => setTimeout(() => speak(s), i * 600));
-                }}
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow"
-              >
-                <Volume2 className="size-4" /> 连读一遍
+              onClick={() => {
+                q.sounds.forEach((s, i) => setTimeout(() => speak(s), i * 600));
+              }}
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow">
+              
+                <Volume2 className="size-4" /> <T>连读一遍</T>
               </button>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              {q.options.map((o) => (
-                <Opt key={o} label={o} mono picked={picked} correct={q.correctWord} onPick={pick} />
-              ))}
+              {q.options.map((o) =>
+            <Opt key={o} label={o} mono picked={picked} correct={q.correctWord} onPick={pick} />
+            )}
             </div>
           </>
-        )}
+        }
 
-        {q.kind === "seeImagePickWord" && (
-          <>
+        {q.kind === "seeImagePickWord" &&
+        <>
             <p className="text-center text-sm font-bold text-muted-foreground">
-              这是什么?选出对应的英文词
+              <T>这是什么?选出对应的英文词</T>
             </p>
             <div className="flex justify-center">
               <div className="grid size-32 place-items-center rounded-3xl bg-amber-50 text-7xl shadow-sm dark:bg-amber-950/40">
@@ -360,24 +360,24 @@ export default function PrimaryPhonicsQuiz() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              {q.options.map((o) => (
-                <Opt key={o} label={o} mono picked={picked} correct={q.correctWord} onPick={pick} />
-              ))}
+              {q.options.map((o) =>
+            <Opt key={o} label={o} mono picked={picked} correct={q.correctWord} onPick={pick} />
+            )}
             </div>
           </>
-        )}
+        }
       </div>
-    </main>
-  );
+    </main>);
+
 }
 
 // ─── helpers ──
 type Q =
-  | { kind: "hearLetter"; correct: string; options: string[] }
-  | { kind: "seeLetter"; correct: string; options: string[]; letter: string }
-  | { kind: "matchWord"; correctWord: string; correctEmoji: string; options: { word: string; emoji: string }[] }
-  | { kind: "blendCvc"; correctWord: string; sounds: string[]; options: string[] }
-  | { kind: "seeImagePickWord"; correctWord: string; emoji: string; options: string[] };
+{kind: "hearLetter";correct: string;options: string[];} |
+{kind: "seeLetter";correct: string;options: string[];letter: string;} |
+{kind: "matchWord";correctWord: string;correctEmoji: string;options: {word: string;emoji: string;}[];} |
+{kind: "blendCvc";correctWord: string;sounds: string[];options: string[];} |
+{kind: "seeImagePickWord";correctWord: string;emoji: string;options: string[];};
 
 /**
  * 给一个 item 构造 3 道题: 从 5 种题型中随机挑 3 种(只用本 item 实际能出的题型).
@@ -388,12 +388,12 @@ type Q =
  */
 function buildItemQuestions(item: PhonicsItem, itemPool: PhonicsItem[]): Q[] {
   const candidates: Array<() => Q | null> = [
-    () => buildHearLetter(item, itemPool),
-    () => buildSeeLetter(item, itemPool),
-    () => buildMatchWord(item, itemPool),
-    () => buildSeeImagePickWord(item, itemPool),
-    () => buildBlendCvc(item, itemPool),
-  ];
+  () => buildHearLetter(item, itemPool),
+  () => buildSeeLetter(item, itemPool),
+  () => buildMatchWord(item, itemPool),
+  () => buildSeeImagePickWord(item, itemPool),
+  () => buildBlendCvc(item, itemPool)];
+
   const built = shuffle(candidates).map((f) => f()).filter((q): q is Q => q != null);
   // 至少保证前 2 种,补足 3 道
   while (built.length < 3) built.push(buildHearLetter(item, itemPool));
@@ -402,9 +402,9 @@ function buildItemQuestions(item: PhonicsItem, itemPool: PhonicsItem[]): Q[] {
 
 function poolDistractors(item: PhonicsItem, itemPool: PhonicsItem[]): PhonicsItem[] {
   const allIds = itemPool.map((p) => p.id);
-  return buildDistractorPool(item.id, allIds, 3)
-    .map((id) => itemPool.find((p) => p.id === id))
-    .filter(Boolean) as PhonicsItem[];
+  return buildDistractorPool(item.id, allIds, 3).
+  map((id) => itemPool.find((p) => p.id === id)).
+  filter(Boolean) as PhonicsItem[];
 }
 
 function buildHearLetter(item: PhonicsItem, itemPool: PhonicsItem[]): Q {
@@ -412,7 +412,7 @@ function buildHearLetter(item: PhonicsItem, itemPool: PhonicsItem[]): Q {
   return {
     kind: "hearLetter",
     correct: item.letter,
-    options: shuffle([item.letter, ...d.map((p) => p.letter)]),
+    options: shuffle([item.letter, ...d.map((p) => p.letter)])
   };
 }
 function buildSeeLetter(item: PhonicsItem, itemPool: PhonicsItem[]): Q {
@@ -421,7 +421,7 @@ function buildSeeLetter(item: PhonicsItem, itemPool: PhonicsItem[]): Q {
     kind: "seeLetter",
     letter: item.letterUpper ?? item.letter,
     correct: item.sound,
-    options: shuffle([item.sound, ...d.map((p) => p.sound)]),
+    options: shuffle([item.sound, ...d.map((p) => p.sound)])
   };
 }
 function buildMatchWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
@@ -430,7 +430,7 @@ function buildMatchWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
   const d = poolDistractors(item, itemPool);
   const otherWords = d.flatMap((p) => p.exampleWords.filter((w) => w.emoji && w.word));
   const fallback = itemPool.flatMap((p) =>
-    p.id === item.id ? [] : p.exampleWords.filter((w) => w.emoji && w.word)
+  p.id === item.id ? [] : p.exampleWords.filter((w) => w.emoji && w.word)
   );
   const wordPool = otherWords.length >= 2 ? otherWords : fallback;
   return {
@@ -438,9 +438,9 @@ function buildMatchWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
     correctWord: word0.word,
     correctEmoji: word0.emoji,
     options: shuffle([
-      { word: word0.word, emoji: word0.emoji },
-      ...shuffle(wordPool).slice(0, 2).map((w) => ({ word: w.word, emoji: w.emoji! })),
-    ]),
+    { word: word0.word, emoji: word0.emoji },
+    ...shuffle(wordPool).slice(0, 2).map((w) => ({ word: w.word, emoji: w.emoji! }))]
+    )
   };
 }
 function buildSeeImagePickWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
@@ -449,7 +449,7 @@ function buildSeeImagePickWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | 
   const d = poolDistractors(item, itemPool);
   const others = d.flatMap((p) => p.exampleWords.filter((w) => w.word));
   const fallback = itemPool.flatMap((p) =>
-    p.id === item.id ? [] : p.exampleWords.filter((w) => w.word)
+  p.id === item.id ? [] : p.exampleWords.filter((w) => w.word)
   );
   const pool = others.length >= 3 ? others : fallback;
   const distractorWords = shuffle(pool).slice(0, 3).map((w) => w.word);
@@ -457,7 +457,7 @@ function buildSeeImagePickWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | 
     kind: "seeImagePickWord",
     correctWord: word0.word,
     emoji: word0.emoji,
-    options: shuffle([word0.word, ...distractorWords]),
+    options: shuffle([word0.word, ...distractorWords])
   };
 }
 /**
@@ -475,14 +475,14 @@ function buildBlendCvc(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
   });
   // 干扰词: 同长度的其他 CVC 例词
   const allCvc = itemPool.flatMap((p) =>
-    p.exampleWords.filter((w) => w.word !== cvc.word && /^[bcdfghjklmnpqrstvwxyz][aeiou][bcdfghjklmnpqrstvwxyz]$/i.test(w.word))
+  p.exampleWords.filter((w) => w.word !== cvc.word && /^[bcdfghjklmnpqrstvwxyz][aeiou][bcdfghjklmnpqrstvwxyz]$/i.test(w.word))
   );
   const distractors = shuffle(allCvc).slice(0, 3).map((w) => w.word.toLowerCase());
   return {
     kind: "blendCvc",
     correctWord: cvc.word.toLowerCase(),
     sounds,
-    options: shuffle([cvc.word.toLowerCase(), ...distractors]),
+    options: shuffle([cvc.word.toLowerCase(), ...distractors])
   };
 }
 
@@ -501,15 +501,15 @@ function Opt({
   mono,
   picked,
   correct,
-  onPick,
-}: {
-  label: string;
-  big?: boolean;
-  mono?: boolean;
-  picked: string | null;
-  correct: string;
-  onPick: (label: string) => void;
-}) {
+  onPick
+
+
+
+
+
+
+
+}: {label: string;big?: boolean;mono?: boolean;picked: string | null;correct: string;onPick: (label: string) => void;}) {
   const isCorrect = label === correct;
   const isPicked = picked === label;
   return (
@@ -517,23 +517,23 @@ function Opt({
       disabled={!!picked}
       onClick={() => onPick(label)}
       className={
-        "rounded-2xl border-2 px-4 py-4 font-extrabold transition " +
-        (big ? "text-3xl " : "text-base ") +
-        (mono ? "font-mono " : "") +
-        (picked === null
-          ? "border-border bg-card hover:border-primary/50"
-          : isCorrect
-          ? "border-emerald-400 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300"
-          : isPicked
-          ? "border-rose-400 bg-rose-50 text-rose-700 dark:bg-rose-950/30 dark:text-rose-300"
-          : "border-border bg-card opacity-60")
-      }
-    >
+      "rounded-2xl border-2 px-4 py-4 font-extrabold transition " + (
+      big ? "text-3xl " : "text-base ") + (
+      mono ? "font-mono " : "") + (
+      picked === null ?
+      "border-border bg-card hover:border-primary/50" :
+      isCorrect ?
+      "border-emerald-400 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300" :
+      isPicked ?
+      "border-rose-400 bg-rose-50 text-rose-700 dark:bg-rose-950/30 dark:text-rose-300" :
+      "border-border bg-card opacity-60")
+      }>
+      
       <span className="inline-flex items-center gap-1.5">
         {label}
         {picked && isCorrect && <Check className="size-4" />}
         {picked && isPicked && !isCorrect && <X className="size-4" />}
       </span>
-    </button>
-  );
+    </button>);
+
 }

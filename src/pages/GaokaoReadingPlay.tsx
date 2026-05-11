@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useParams } from "react-router-dom";
@@ -14,22 +14,22 @@ import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
-type Passage = { id: string; title: string; body: string; structure_analysis: string | null };
+type Passage = {id: string;title: string;body: string;structure_analysis: string | null;};
 type Question = {
   id: string;
   stem: string;
-  option_a: string; option_b: string; option_c: string; option_d: string;
+  option_a: string;option_b: string;option_c: string;option_d: string;
   correct_answer: string;
-  explanation_a: string | null; explanation_b: string | null; explanation_c: string | null; explanation_d: string | null;
+  explanation_a: string | null;explanation_b: string | null;explanation_c: string | null;explanation_d: string | null;
   question_type: string;
 };
 
 const TYPE_LABEL: Record<string, string> = {
-  main_idea: "主旨题", detail: "细节题", inference: "推断题", vocabulary: "词义题",
+  main_idea: "主旨题", detail: "细节题", inference: "推断题", vocabulary: "词义题"
 };
 
 export default function GaokaoReadingPlay() {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{id: string;}>();
   const [passage, setPassage] = useState<Passage | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [picks, setPicks] = useState<Record<string, string>>({});
@@ -41,41 +41,41 @@ export default function GaokaoReadingPlay() {
   // Full-test lock: AI may only discuss the reading once every question is answered.
   const allAnswered = questions.length > 0 && questions.every((q) => picks[q.id]);
   useRegisterAssistant(
-    passage
-      ? {
-          context: "gaokao_reading",
-          ref: passage.id,
-          topic: `高考阅读 · ${passage.title}`,
-          mode: "full-test",
-          unlocked: allAnswered,
-          lockedHint: "请先做完本篇所有阅读题再来找我哦，避免提前看到答案 ✨",
-          pageTitle: "💬 小月 · 阅读复盘",
-          snapshot: allAnswered
-            ? {
-                title: passage.title,
-                passage_excerpt: passage.body.slice(0, 1200),
-                questions: questions.map((q) => ({
-                  id: q.id,
-                  type: q.question_type,
-                  stem: q.stem,
-                  options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
-                  correct_answer: q.correct_answer,
-                  user_answer: picks[q.id],
-                  is_correct: picks[q.id] === q.correct_answer,
-                })),
-              }
-            : undefined,
-        }
-      : null,
+    passage ?
+    {
+      context: "gaokao_reading",
+      ref: passage.id,
+      topic: `高考阅读 · ${passage.title}`,
+      mode: "full-test",
+      unlocked: allAnswered,
+      lockedHint: "请先做完本篇所有阅读题再来找我哦，避免提前看到答案 ✨",
+      pageTitle: "💬 小月 · 阅读复盘",
+      snapshot: allAnswered ?
+      {
+        title: passage.title,
+        passage_excerpt: passage.body.slice(0, 1200),
+        questions: questions.map((q) => ({
+          id: q.id,
+          type: q.question_type,
+          stem: q.stem,
+          options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
+          correct_answer: q.correct_answer,
+          user_answer: picks[q.id],
+          is_correct: picks[q.id] === q.correct_answer
+        }))
+      } :
+      undefined
+    } :
+    null
   );
 
   useEffect(() => {
     if (!id) return;
     (async () => {
       const [{ data: p }, { data: qs }] = await Promise.all([
-        supabase.from("gaokao_reading_passages").select("id, title, body, structure_analysis").eq("id", id).maybeSingle(),
-        supabase.from("gaokao_reading_questions").select("*").eq("passage_id", id).order("sort_order"),
-      ]);
+      supabase.from("gaokao_reading_passages").select("id, title, body, structure_analysis").eq("id", id).maybeSingle(),
+      supabase.from("gaokao_reading_questions").select("*").eq("passage_id", id).order("sort_order")]
+      );
       setPassage(p);
       setQuestions((qs ?? []) as Question[]);
       setLoading(false);
@@ -91,7 +91,7 @@ export default function GaokaoReadingPlay() {
     if (answered < questions.length) return;
     celebratedRef.current = true;
     const correct = questions.filter((q) => picks[q.id] === q.correct_answer).length;
-    celebrateScore(Math.round((correct / questions.length) * 100));
+    celebrateScore(Math.round(correct / questions.length * 100));
   }, [picks, questions]);
   const onPick = async (q: Question, letter: string) => {
     if (picks[q.id]) return;
@@ -115,7 +115,7 @@ export default function GaokaoReadingPlay() {
       questionType: "reading",
       questionId: q.id,
       userAnswer: letter,
-      isCorrect: ok,
+      isCorrect: ok
     });
     recordUnifiedAttempt({
       stage: "senior",
@@ -127,43 +127,43 @@ export default function GaokaoReadingPlay() {
       is_correct: ok,
       user_answer: letter,
       correct_answer: q.correct_answer,
-      context: { passage_id: passage?.id, qtype: q.question_type },
+      context: { passage_id: passage?.id, qtype: q.question_type }
     }).catch(() => {});
   };
 
-  if (loading) return <p className="p-8 text-sm text-muted-foreground">加载中...</p>;
-  if (!passage) return <p className="p-8">文章不存在。<BackLink to="/gaokao/reading" className="text-primary underline">返回</BackLink></p>;
+  if (loading) return <p className="p-8 text-sm text-muted-foreground"><T>加载中...</T></p>;
+  if (!passage) return <p className="p-8"><T>文章不存在。</T><BackLink to="/gaokao/reading" className="text-primary underline"><T>返回</T></BackLink></p>;
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
       <GuestBanner />
       <BackLink to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回阅读列表
+        <ArrowLeft className="size-4" /> <T>返回阅读列表</T>
       </BackLink>
       <PageHeader title={passage.title} hideReviewBanner />
 
       <article className="mb-6 rounded-2xl border bg-card p-5 text-sm leading-relaxed">
-        {passage.body.split("\n\n").map((para, i) => (
-          <p key={i} className="mb-3 last:mb-0">{para}</p>
-        ))}
+        {passage.body.split("\n\n").map((para, i) =>
+        <p key={i} className="mb-3 last:mb-0">{para}</p>
+        )}
       </article>
 
-      {passage.structure_analysis && (
-        <details className="mb-6 rounded-2xl border bg-muted/30 p-4" onToggle={(e) => setShowAnalysis((e.target as HTMLDetailsElement).open)}>
+      {passage.structure_analysis &&
+      <details className="mb-6 rounded-2xl border bg-muted/30 p-4" onToggle={(e) => setShowAnalysis((e.target as HTMLDetailsElement).open)}>
           <summary className="cursor-pointer text-sm font-bold text-primary">
-            {showAnalysis ? "收起" : "展开"}文章结构分析
+            {showAnalysis ? "收起" : "展开"}<T>文章结构分析</T>
           </summary>
           <div className="prose prose-sm mt-3 max-w-none dark:prose-invert">
             <ReactMarkdown>{passage.structure_analysis}</ReactMarkdown>
           </div>
         </details>
-      )}
+      }
 
       <div className="space-y-5">
         {questions.map((q, i) => {
           const picked = picks[q.id];
           const explanations: Record<string, string | null> = {
-            A: q.explanation_a, B: q.explanation_b, C: q.explanation_c, D: q.explanation_d,
+            A: q.explanation_a, B: q.explanation_b, C: q.explanation_c, D: q.explanation_d
           };
           return (
             <section key={q.id} className="rounded-2xl border bg-card p-5">
@@ -171,7 +171,7 @@ export default function GaokaoReadingPlay() {
                 <span className="rounded-full bg-violet-500/10 px-2 py-0.5 font-semibold text-violet-600">
                   {TYPE_LABEL[q.question_type] ?? q.question_type}
                 </span>
-                <span className="text-muted-foreground">第 {i + 1} 题</span>
+                <span className="text-muted-foreground"><T>第</T> {i + 1} <T>题</T></span>
               </div>
               <p className="mb-3 font-medium">{q.stem}</p>
               <div className="space-y-2">
@@ -181,46 +181,46 @@ export default function GaokaoReadingPlay() {
                   const isAnswer = q.correct_answer === letter;
                   let cls = "border-border hover:border-primary/40";
                   if (picked) {
-                    if (isAnswer) cls = "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30";
-                    else if (isPicked) cls = "border-rose-500 bg-rose-50 dark:bg-rose-950/30";
-                    else cls = "border-border opacity-60";
+                    if (isAnswer) cls = "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30";else
+                    if (isPicked) cls = "border-rose-500 bg-rose-50 dark:bg-rose-950/30";else
+                    cls = "border-border opacity-60";
                   }
                   return (
                     <button
                       key={letter}
                       onClick={() => onPick(q, letter)}
                       disabled={!!picked}
-                      className={`flex w-full items-start gap-3 rounded-xl border-2 p-3 text-left text-sm transition ${cls}`}
-                    >
+                      className={`flex w-full items-start gap-3 rounded-xl border-2 p-3 text-left text-sm transition ${cls}`}>
+                      
                       <span className="font-bold">{letter}.</span>
                       <span className="flex-1">{text}</span>
                       {picked && isAnswer && <CheckCircle2 className="size-5 text-emerald-600" />}
                       {picked && isPicked && !isAnswer && <XCircle className="size-5 text-rose-600" />}
-                    </button>
-                  );
+                    </button>);
+
                 })}
               </div>
 
-              {picked && (
-                <div className="mt-3 space-y-2 rounded-xl bg-muted/50 p-4 text-xs">
-                  <div className="font-bold">每个选项的讲解：</div>
-                  {(["A", "B", "C", "D"] as const).map((l) => (
-                    explanations[l] && (
-                      <div key={l}><span className="font-semibold">{l}.</span> {explanations[l]}</div>
-                    )
-                  ))}
+              {picked &&
+              <div className="mt-3 space-y-2 rounded-xl bg-muted/50 p-4 text-xs">
+                  <div className="font-bold"><T>每个选项的讲解：</T></div>
+                  {(["A", "B", "C", "D"] as const).map((l) =>
+                explanations[l] &&
+                <div key={l}><span className="font-semibold">{l}.</span> {explanations[l]}</div>
+
+                )}
                 </div>
-              )}
-            </section>
-          );
+              }
+            </section>);
+
         })}
       </div>
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
-        <Button asChild><BackLink to="/gaokao/reading">← 返回阅读列表</BackLink></Button>
-        <Button asChild variant="outline"><Link to="/gaokao">🎓 高考首页</Link></Button>
-        <Button asChild variant="outline"><Link to="/pets">🐾 宠物</Link></Button>
+        <Button asChild><BackLink to="/gaokao/reading"><T>← 返回阅读列表</T></BackLink></Button>
+        <Button asChild variant="outline"><Link to="/gaokao"><T>🎓 高考首页</T></Link></Button>
+        <Button asChild variant="outline"><Link to="/pets"><T>🐾 宠物</T></Link></Button>
       </div>
-    </main>
-  );
+    </main>);
+
 }

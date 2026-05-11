@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, RotateCw, Trophy, Sparkles, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -24,14 +24,14 @@ type Vocab = {
 };
 
 type Card = {
-  key: string;        // unique render key
-  pairId: string;     // vocab.id
+  key: string; // unique render key
+  pairId: string; // vocab.id
   side: "en" | "cn";
   text: string;
 };
 
-const TOTAL_PAIRS = 30;       // 一局共配对数
-const VISIBLE_PAIRS = 6;      // 屏幕上同时显示的 pair 数（=12 张卡）
+const TOTAL_PAIRS = 30; // 一局共配对数
+const VISIBLE_PAIRS = 6; // 屏幕上同时显示的 pair 数（=12 张卡）
 const BASE_POINT = 10;
 
 function shuffle<T>(arr: T[]): T[] {
@@ -57,11 +57,11 @@ function pickEnVoice(): SpeechSynthesisVoice | null {
   if (!voices.length) return null;
   // 优先 en-US > en-GB > en-*；优先 Google/Samantha 等高质量声音
   const preferred =
-    voices.find((v) => /en[-_]US/i.test(v.lang) && /google|samantha|natural/i.test(v.name)) ||
-    voices.find((v) => /en[-_]US/i.test(v.lang)) ||
-    voices.find((v) => /en[-_]GB/i.test(v.lang)) ||
-    voices.find((v) => /^en/i.test(v.lang)) ||
-    null;
+  voices.find((v) => /en[-_]US/i.test(v.lang) && /google|samantha|natural/i.test(v.name)) ||
+  voices.find((v) => /en[-_]US/i.test(v.lang)) ||
+  voices.find((v) => /en[-_]GB/i.test(v.lang)) ||
+  voices.find((v) => /^en/i.test(v.lang)) ||
+  null;
   _enVoice = preferred;
   return preferred;
 }
@@ -80,8 +80,8 @@ function speakInstant(text: string) {
     u.volume = 1.0;
     synth.speak(u);
   } catch {
-    /* ignore */
-  }
+
+    /* ignore */}
 }
 
 if (typeof window !== "undefined" && "speechSynthesis" in window) {
@@ -94,16 +94,16 @@ if (typeof window !== "undefined" && "speechSynthesis" in window) {
 
 export default function WordBento({
   pool,
-  onExit,
-}: {
-  pool: Vocab[];
-  onExit: () => void;
-}) {
+  onExit
+
+
+
+}: {pool: Vocab[];onExit: () => void;}) {
   const [phase, setPhase] = useState<"intro" | "playing" | "done">("intro");
 
   // Game state
-  const [queue, setQueue] = useState<Vocab[]>([]);   // 剩余还没上场的词
-  const [board, setBoard] = useState<Card[]>([]);    // 当前棋盘 12 张卡（视觉位置 = index）
+  const [queue, setQueue] = useState<Vocab[]>([]); // 剩余还没上场的词
+  const [board, setBoard] = useState<Card[]>([]); // 当前棋盘 12 张卡（视觉位置 = index）
   const [picked, setPicked] = useState<Card | null>(null);
   const [wrongPair, setWrongPair] = useState<[string, string] | null>(null);
   const [matchedPairs, setMatchedPairs] = useState<Set<string>>(new Set());
@@ -115,14 +115,14 @@ export default function WordBento({
   const [elapsed, setElapsed] = useState(0);
   const [coinRefresh, setCoinRefresh] = useState(0);
   const [unlockedBadges, setUnlockedBadges] = useState<BadgeDef[]>([]);
-  const lockRef = useRef(false);   // 错误反馈期间的输入锁
+  const lockRef = useRef(false); // 错误反馈期间的输入锁
 
   // -------- Helpers --------
   function makeCardsFromVocab(v: Vocab): [Card, Card] {
     return [
-      { key: `${v.id}-en-${Math.random().toString(36).slice(2, 8)}`, pairId: v.id, side: "en", text: v.word },
-      { key: `${v.id}-cn-${Math.random().toString(36).slice(2, 8)}`, pairId: v.id, side: "cn", text: v.meaning_cn },
-    ];
+    { key: `${v.id}-en-${Math.random().toString(36).slice(2, 8)}`, pairId: v.id, side: "en", text: v.word },
+    { key: `${v.id}-cn-${Math.random().toString(36).slice(2, 8)}`, pairId: v.id, side: "cn", text: v.meaning_cn }];
+
   }
 
   // -------- Game lifecycle --------
@@ -140,7 +140,7 @@ export default function WordBento({
         warm.rate = 1;
         synth.speak(warm);
       }
-    } catch { /* ignore */ }
+    } catch {/* ignore */}
     const sequence = shuffle(usable).slice(0, TOTAL_PAIRS);
     const initialPairs = sequence.slice(0, VISIBLE_PAIRS);
     const remainder = sequence.slice(VISIBLE_PAIRS);
@@ -282,7 +282,7 @@ export default function WordBento({
           duration_ms: finalElapsed,
           hits: matchedPairs.size,
           misses: mistakes,
-          metadata: { perfect, sub60 },
+          metadata: { perfect, sub60 }
         });
       }
     } catch (e) {
@@ -308,7 +308,7 @@ export default function WordBento({
       <main className="mx-auto max-w-2xl px-4 py-6">
         <div className="mb-4 flex items-center justify-between">
           <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="size-4" /> 返回
+            <ArrowLeft className="size-4" /> <T>返回</T>
           </button>
           <CoinPill refreshKey={coinRefresh} />
         </div>
@@ -317,46 +317,46 @@ export default function WordBento({
           <div className="flex items-center gap-3">
             <div className="text-4xl">🍱</div>
             <div>
-              <h1 className="text-2xl font-extrabold">Word Bento 单词便当</h1>
-              <p className="text-sm text-muted-foreground">拖拽配对消除 · 主动检索 + 双重编码</p>
+              <h1 className="text-2xl font-extrabold"><T>Word Bento 单词便当</T></h1>
+              <p className="text-sm text-muted-foreground"><T>拖拽配对消除 · 主动检索 + 双重编码</T></p>
             </div>
           </div>
 
           <ul className="mt-5 space-y-2 text-sm">
-            <li>🎯 屏幕上 12 张卡：6 个英文 + 6 个中文</li>
-            <li>👆 点一张英文 → 再点对应中文，配对成功消除</li>
-            <li>🔥 连击 3+ 倍率 ×1.5，5+ ×2，10+ ×3</li>
-            <li>💯 全程零失误：徽章 🍱 + 30 金币</li>
-            <li>⏱ 60 秒内通关：徽章 🏎️ + 20 金币</li>
-            <li>📊 共 {TOTAL_PAIRS} 对单词，配完即胜</li>
+            <li><T>🎯 屏幕上 12 张卡：6 个英文 + 6 个中文</T></li>
+            <li><T>👆 点一张英文 → 再点对应中文，配对成功消除</T></li>
+            <li><T>🔥 连击 3+ 倍率 ×1.5，5+ ×2，10+ ×3</T></li>
+            <li><T>💯 全程零失误：徽章 🍱 + 30 金币</T></li>
+            <li><T>⏱ 60 秒内通关：徽章 🏎️ + 20 金币</T></li>
+            <li><T>📊 共</T> {TOTAL_PAIRS} <T>对单词，配完即胜</T></li>
           </ul>
 
           <Button
             onClick={start}
             disabled={pool.length < VISIBLE_PAIRS + 1}
-            className="mt-5 h-12 w-full rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 text-base font-extrabold text-white hover:opacity-90"
-          >
-            <Sparkles className="mr-2 size-5" /> 开始游戏
+            className="mt-5 h-12 w-full rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 text-base font-extrabold text-white hover:opacity-90">
+            
+            <Sparkles className="mr-2 size-5" /> <T>开始游戏</T>
           </Button>
         </div>
 
         <div className="mt-4">
           <GameLeaderboard gameType="word_bento" title="单词便当" accent="amber" />
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   if (phase === "done") {
-    const accuracy = matchedPairs.size + mistakes > 0
-      ? Math.round((matchedPairs.size / (matchedPairs.size + mistakes)) * 100)
-      : 0;
+    const accuracy = matchedPairs.size + mistakes > 0 ?
+    Math.round(matchedPairs.size / (matchedPairs.size + mistakes) * 100) :
+    0;
     return (
       <>
         <main className="mx-auto max-w-2xl px-4 py-6">
           <div className="mb-4 flex items-center justify-between">
             <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-              <ArrowLeft className="size-4" /> 返回
+              <ArrowLeft className="size-4" /> <T>返回</T>
             </button>
             <CoinPill refreshKey={coinRefresh} />
           </div>
@@ -366,45 +366,45 @@ export default function WordBento({
             <div className="text-6xl font-extrabold tabular-nums">{score}</div>
             <div className="mt-4 grid grid-cols-4 gap-2 text-sm">
               <div className="rounded-xl border bg-card p-2">
-                <div className="text-[10px] text-muted-foreground">配对</div>
+                <div className="text-[10px] text-muted-foreground"><T>配对</T></div>
                 <div className="text-lg font-bold text-emerald-600">{matchedPairs.size}</div>
               </div>
               <div className="rounded-xl border bg-card p-2">
-                <div className="text-[10px] text-muted-foreground">错误</div>
+                <div className="text-[10px] text-muted-foreground"><T>错误</T></div>
                 <div className="text-lg font-bold text-red-500">{mistakes}</div>
               </div>
               <div className="rounded-xl border bg-card p-2">
-                <div className="text-[10px] text-muted-foreground">最高连击</div>
+                <div className="text-[10px] text-muted-foreground"><T>最高连击</T></div>
                 <div className="text-lg font-bold text-amber-600">{bestCombo}</div>
               </div>
               <div className="rounded-xl border bg-card p-2">
-                <div className="text-[10px] text-muted-foreground">用时</div>
+                <div className="text-[10px] text-muted-foreground"><T>用时</T></div>
                 <div className="text-lg font-bold tabular-nums">{formatMs(elapsed)}</div>
               </div>
             </div>
-            <div className="mt-3 text-sm text-muted-foreground">准确率 {accuracy}%</div>
+            <div className="mt-3 text-sm text-muted-foreground"><T>准确率</T> {accuracy}%</div>
 
-            {(mistakes === 0 || elapsed < 60_000) && (
-              <div className="mt-4 flex flex-wrap justify-center gap-2">
-                {mistakes === 0 && (
-                  <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/50 bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-300">
-                    💯 完美零失误 +30
+            {(mistakes === 0 || elapsed < 60_000) &&
+            <div className="mt-4 flex flex-wrap justify-center gap-2">
+                {mistakes === 0 &&
+              <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/50 bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-300">
+                    <T>💯 完美零失误 +30</T>
                   </span>
-                )}
-                {elapsed < 60_000 && (
-                  <span className="inline-flex items-center gap-1 rounded-full border border-fuchsia-500/50 bg-fuchsia-500/10 px-3 py-1 text-xs font-bold text-fuchsia-700 dark:text-fuchsia-300">
-                    🏎️ 极速通关 +20
+              }
+                {elapsed < 60_000 &&
+              <span className="inline-flex items-center gap-1 rounded-full border border-fuchsia-500/50 bg-fuchsia-500/10 px-3 py-1 text-xs font-bold text-fuchsia-700 dark:text-fuchsia-300">
+                    <T>🏎️ 极速通关 +20</T>
                   </span>
-                )}
+              }
               </div>
-            )}
+            }
 
             <div className="mt-6 flex gap-2">
               <Button onClick={start} className="h-12 flex-1 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 font-bold text-white hover:opacity-90">
-                <RotateCw className="mr-2 size-4" /> 再来一局
+                <RotateCw className="mr-2 size-4" /> <T>再来一局</T>
               </Button>
               <Button variant="outline" onClick={onExit} className="h-12 flex-1 rounded-2xl">
-                返回
+                <T>返回</T>
               </Button>
             </div>
           </div>
@@ -413,11 +413,11 @@ export default function WordBento({
             <GameLeaderboard gameType="word_bento" title="单词便当" accent="amber" />
           </div>
         </main>
-        {unlockedBadges.length > 0 && (
-          <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
-        )}
-      </>
-    );
+        {unlockedBadges.length > 0 &&
+        <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
+        }
+      </>);
+
   }
 
   /* Playing */
@@ -427,16 +427,16 @@ export default function WordBento({
       {/* Top bar */}
       <div className="mb-3 flex items-center justify-between gap-2">
         <button onClick={onExit} className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 退出
+          <ArrowLeft className="size-4" /> <T>退出</T>
         </button>
         <div className="flex items-center gap-2 text-sm font-bold">
           <span className="rounded-full bg-card px-3 py-1 tabular-nums shadow-sm border">⏱ {formatMs(elapsed)}</span>
           <span className="rounded-full bg-card px-3 py-1 tabular-nums shadow-sm border">🎯 {score}</span>
-          {combo >= 2 && (
-            <span className="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-3 py-1 text-white tabular-nums shadow-sm">
+          {combo >= 2 &&
+          <span className="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-3 py-1 text-white tabular-nums shadow-sm">
               🔥 ×{comboMultiplier(combo)}
             </span>
-          )}
+          }
         </div>
       </div>
 
@@ -445,8 +445,8 @@ export default function WordBento({
         <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-muted">
           <div
             className="h-full bg-gradient-to-r from-amber-500 to-orange-500 transition-all duration-300"
-            style={{ width: `${(matchedPairs.size / TOTAL_PAIRS) * 100}%` }}
-          />
+            style={{ width: `${matchedPairs.size / TOTAL_PAIRS * 100}%` }} />
+          
         </div>
         <span className="tabular-nums">{matchedPairs.size}/{TOTAL_PAIRS}</span>
       </div>
@@ -470,36 +470,36 @@ export default function WordBento({
                 !isMatched && isPicked && "border-amber-500 bg-amber-500/15 ring-2 ring-amber-500/50 scale-105 shadow-md",
                 !isMatched && isWrong && "border-red-500 bg-red-500/15 animate-pulse",
                 !isMatched && !isPicked && !isWrong && (
-                  isEn
-                    ? "border-sky-300/60 bg-gradient-to-br from-sky-500/10 to-blue-500/5 text-sky-700 dark:text-sky-300 hover:border-sky-500"
-                    : "border-rose-300/60 bg-gradient-to-br from-rose-500/10 to-pink-500/5 text-rose-700 dark:text-rose-300 hover:border-rose-500"
-                ),
+                isEn ?
+                "border-sky-300/60 bg-gradient-to-br from-sky-500/10 to-blue-500/5 text-sky-700 dark:text-sky-300 hover:border-sky-500" :
+                "border-rose-300/60 bg-gradient-to-br from-rose-500/10 to-pink-500/5 text-rose-700 dark:text-rose-300 hover:border-rose-500"),
+
                 "active:scale-95"
-              )}
-            >
+              )}>
+              
               <span className="break-words leading-tight">
                 {c.text}
               </span>
               <span className="absolute right-1 top-1 text-[9px] font-normal opacity-50">
                 {isEn ? "EN" : "中"}
               </span>
-            </button>
-          );
+            </button>);
+
         })}
       </div>
 
       {/* Combo banner */}
-      {combo >= 5 && (
-        <div className="mt-3 flex items-center justify-center">
+      {combo >= 5 &&
+      <div className="mt-3 flex items-center justify-center">
           <div className="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-1.5 text-sm font-extrabold text-white shadow-md animate-pulse">
             <Zap className="size-4" /> COMBO ×{combo} ON FIRE
           </div>
         </div>
-      )}
+      }
 
       <div className="mt-3 text-center text-[11px] text-muted-foreground">
-        剩余 {totalLeft} 对 · 错误 {mistakes} · 最佳连击 {bestCombo}
+        <T>剩余</T> {totalLeft} <T>对 · 错误</T> {mistakes} <T>· 最佳连击</T> {bestCombo}
       </div>
-    </main>
-  );
+    </main>);
+
 }

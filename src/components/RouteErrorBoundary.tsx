@@ -1,7 +1,7 @@
-import { Component, ReactNode } from "react";
+import { T } from "@/i18n/T";import { Component, ReactNode } from "react";
 
-type Props = { children: ReactNode };
-type State = { error: Error | null; isChunkError: boolean };
+type Props = {children: ReactNode;};
+type State = {error: Error | null;isChunkError: boolean;};
 
 // Detect Vite/webpack lazy-chunk load failures. After a deploy the old
 // index.html cached in the user's browser still points at hashed chunks
@@ -10,7 +10,7 @@ type State = { error: Error | null; isChunkError: boolean };
 // pick up the new index.html instead of leaving the user on a white screen.
 const isChunkLoadError = (err: unknown): boolean => {
   if (!err) return false;
-  const e = err as { name?: string; message?: string };
+  const e = err as {name?: string;message?: string;};
   const msg = `${e.name || ""} ${e.message || ""}`.toLowerCase();
   return (
     msg.includes("chunkloaderror") ||
@@ -18,8 +18,8 @@ const isChunkLoadError = (err: unknown): boolean => {
     msg.includes("loading css chunk") ||
     msg.includes("failed to fetch dynamically imported module") ||
     msg.includes("importing a module script failed") ||
-    msg.includes("dynamically imported module")
-  );
+    msg.includes("dynamically imported module"));
+
 };
 
 // Avoid an infinite reload loop if the chunk is genuinely broken.
@@ -67,41 +67,41 @@ export class RouteErrorBoundary extends Component<Props, State> {
       return (
         <main className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center gap-4 px-6 text-center">
           <div className="text-5xl">🔄</div>
-          <h1 className="text-xl font-bold">应用已更新</h1>
+          <h1 className="text-xl font-bold"><T>应用已更新</T></h1>
           <p className="text-sm text-muted-foreground">
-            检测到新版本，正在为你刷新页面…
+            <T>检测到新版本，正在为你刷新页面…</T>
           </p>
           <button
             onClick={() => location.reload()}
-            className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"
-          >
-            立即刷新
+            className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
+            <T>立即刷新</T>
+          
           </button>
-        </main>
-      );
+        </main>);
+
     }
     return (
       <main className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center gap-4 px-6 text-center">
         <div className="text-5xl">😵</div>
-        <h1 className="text-xl font-bold">页面加载出错</h1>
+        <h1 className="text-xl font-bold"><T>页面加载出错</T></h1>
         <p className="text-sm text-muted-foreground">
-          这个页面在你的浏览器里遇到了问题。可以刷新重试，或先返回首页。
+          <T>这个页面在你的浏览器里遇到了问题。可以刷新重试，或先返回首页。</T>
         </p>
         <div className="flex gap-2">
           <button
-            onClick={() => { this.reset(); location.reload(); }}
-            className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"
-          >
-            刷新页面
+            onClick={() => {this.reset();location.reload();}}
+            className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
+            <T>刷新页面</T>
+          
           </button>
           <a
             href="/"
-            className="rounded-full border border-border px-4 py-2 text-sm font-bold"
-          >
-            返回首页
+            className="rounded-full border border-border px-4 py-2 text-sm font-bold">
+            <T>返回首页</T>
+          
           </a>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 }

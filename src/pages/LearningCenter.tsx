@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Sparkles, ChevronDown, ChevronRight, Loader2, RefreshCw, Zap, MapPin } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -16,37 +16,37 @@ import { ItemListDrawer, type ItemState, type StageKey } from "@/components/lear
  */
 
 type StageK = StageKey;
-interface Counts { master: number; fluent: number; weak: number; none: number; total: number; score_pct: number }
-interface ProportionRow extends Counts { proportion_pct: number }
-interface StageProp extends ProportionRow { stage: StageK }
-interface ModuleProp extends ProportionRow { module: string }
-interface ScopeRow extends ProportionRow { stage: StageK; grade: number; module: string }
-interface Snap { snap_date: string; score_pct: number }
+interface Counts {master: number;fluent: number;weak: number;none: number;total: number;score_pct: number;}
+interface ProportionRow extends Counts {proportion_pct: number;}
+interface StageProp extends ProportionRow {stage: StageK;}
+interface ModuleProp extends ProportionRow {module: string;}
+interface ScopeRow extends ProportionRow {stage: StageK;grade: number;module: string;}
+interface Snap {snap_date: string;score_pct: number;}
 
-const STAGES: { key: StageK; label: string; grades: number[]; sub: string; route: string }[] = [
-  { key: "primary", label: "小学", grades: [1, 2, 3, 4, 5, 6], sub: "G1-G6", route: "/primary" },
-  { key: "junior",  label: "初中", grades: [7, 8, 9],          sub: "G7-G9 · 中考", route: "/junior" },
-  { key: "senior",  label: "高中", grades: [10, 11, 12],       sub: "G10-G12 · 高考", route: "/gaokao" },
-];
+const STAGES: {key: StageK;label: string;grades: number[];sub: string;route: string;}[] = [
+{ key: "primary", label: "小学", grades: [1, 2, 3, 4, 5, 6], sub: "G1-G6", route: "/primary" },
+{ key: "junior", label: "初中", grades: [7, 8, 9], sub: "G7-G9 · 中考", route: "/junior" },
+{ key: "senior", label: "高中", grades: [10, 11, 12], sub: "G10-G12 · 高考", route: "/gaokao" }];
+
 
 const MODULE_LABEL: Record<string, string> = {
   vocab: "词汇", grammar: "语法", reading: "阅读", listening: "听力",
-  writing: "写作", cloze: "完形", phonics: "拼读", lesson: "课文",
+  writing: "写作", cloze: "完形", phonics: "拼读", lesson: "课文"
 };
 const MODULE_EMOJI: Record<string, string> = {
   vocab: "📖", grammar: "🔤", reading: "📃", listening: "🎧",
-  writing: "✍️", cloze: "🧩", phonics: "🔠", lesson: "📚",
+  writing: "✍️", cloze: "🧩", phonics: "🔠", lesson: "📚"
 };
 const STATE_LABEL: Record<ItemState, string> = {
-  master: "已掌握", fluent: "熟练", weak: "薄弱（必练）", none: "未学",
+  master: "已掌握", fluent: "熟练", weak: "薄弱（必练）", none: "未学"
 };
 
 /** 按 2022 版义务教育 / 普通高中英语课程标准定义的模块清单。
  *  即使某模块尚无题库数据，也会在年级展开时显示为「未学」占位行。 */
 const CURRICULUM_MODULES: Record<StageK, string[]> = {
   primary: ["vocab", "phonics", "listening", "reading", "writing"],
-  junior:  ["vocab", "grammar", "listening", "reading", "cloze", "writing"],
-  senior:  ["vocab", "grammar", "listening", "reading", "cloze", "writing"],
+  junior: ["vocab", "grammar", "listening", "reading", "cloze", "writing"],
+  senior: ["vocab", "grammar", "listening", "reading", "cloze", "writing"]
 };
 
 function emptyScope(stage: StageK, grade: number, module: string): ScopeRow {
@@ -73,25 +73,25 @@ export default function LearningCenter() {
   const [signedIn, setSignedIn] = useState(true);
   const { data: diag, loading: diagLoading, refresh } = useDiagnostic(true);
 
-  const [drawer, setDrawer] = useState<{ stage: StageK; module: string; state: ItemState; grade?: number; title: string } | null>(null);
+  const [drawer, setDrawer] = useState<{stage: StageK;module: string;state: ItemState;grade?: number;title: string;} | null>(null);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       const { data: { user } } = await supabase.auth.getUser();
-      if (!user) { if (!cancelled) { setSignedIn(false); setLoading(false); } return; }
+      if (!user) {if (!cancelled) {setSignedIn(false);setLoading(false);}return;}
 
       const uid = user.id;
       const [ovR, spR, mpR, scR, snR] = await Promise.all([
-        supabase.from("mastery_overall").select("*").eq("user_id", uid).maybeSingle(),
-        supabase.from("mastery_stage_proportion").select("*").eq("user_id", uid),
-        supabase.from("mastery_module_proportion").select("*").eq("user_id", uid),
-        supabase.from("mastery_with_proportions").select("*").eq("user_id", uid),
-        supabase.from("mastery_snapshots").select("snap_date,score_pct,stage,grade,module")
-          .eq("user_id", uid)
-          .is("stage", null).is("grade", null).is("module", null)
-          .order("snap_date", { ascending: false }).limit(2000),
-      ]);
+      supabase.from("mastery_overall").select("*").eq("user_id", uid).maybeSingle(),
+      supabase.from("mastery_stage_proportion").select("*").eq("user_id", uid),
+      supabase.from("mastery_module_proportion").select("*").eq("user_id", uid),
+      supabase.from("mastery_with_proportions").select("*").eq("user_id", uid),
+      supabase.from("mastery_snapshots").select("snap_date,score_pct,stage,grade,module").
+      eq("user_id", uid).
+      is("stage", null).is("grade", null).is("module", null).
+      order("snap_date", { ascending: false }).limit(2000)]
+      );
       if (cancelled) return;
 
       setOverall(coerceOverall(ovR.data));
@@ -101,19 +101,19 @@ export default function LearningCenter() {
       setSnaps(((snR.data ?? []) as any[]).map((r) => ({ snap_date: r.snap_date, score_pct: Number(r.score_pct) || 0 })));
       setLoading(false);
     })();
-    return () => { cancelled = true; };
+    return () => {cancelled = true;};
   }, []);
 
   const timeline = useMemo(() => {
     const now = Date.now();
     const day = 86400000;
     const buckets = [
-      { key: "5y", label: "5 年前", cutoff: now - 5 * 365 * day },
-      { key: "1y", label: "1 年前", cutoff: now - 365 * day },
-      { key: "1mo",label: "1 月前", cutoff: now - 30 * day },
-      { key: "1w", label: "1 周前", cutoff: now - 7 * day },
-      { key: "last", label: "上次",  cutoff: now - day },
-    ];
+    { key: "5y", label: "5 年前", cutoff: now - 5 * 365 * day },
+    { key: "1y", label: "1 年前", cutoff: now - 365 * day },
+    { key: "1mo", label: "1 月前", cutoff: now - 30 * day },
+    { key: "1w", label: "1 周前", cutoff: now - 7 * day },
+    { key: "last", label: "上次", cutoff: now - day }];
+
     const sorted = [...snaps].sort((a, b) => +new Date(a.snap_date) - +new Date(b.snap_date));
     return buckets.map((b) => {
       const found = [...sorted].reverse().find((s) => +new Date(s.snap_date) <= b.cutoff);
@@ -124,17 +124,17 @@ export default function LearningCenter() {
   if (!signedIn && !loading) {
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 text-center">
-        <h1 className="text-2xl font-medium">学习中心</h1>
-        <p className="mt-3 text-sm text-muted-foreground">登录后查看你的 GPS Dashboard</p>
-        <Link to="/auth" className="mt-4 inline-block rounded-full border border-border px-4 py-2 text-sm font-medium">登录</Link>
-      </main>
-    );
+        <h1 className="text-2xl font-medium"><T>学习中心</T></h1>
+        <p className="mt-3 text-sm text-muted-foreground"><T>登录后查看你的 GPS Dashboard</T></p>
+        <Link to="/auth" className="mt-4 inline-block rounded-full border border-border px-4 py-2 text-sm font-medium"><T>登录</T></Link>
+      </main>);
+
   }
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 [font-variant-numeric:tabular-nums]">
       <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground">
-        ← 返回
+        <T>← 返回</T>
       </BackLink>
 
       {/* === AI 诊断卡 === */}
@@ -142,25 +142,25 @@ export default function LearningCenter() {
         <div className="flex items-center justify-between border-l-4 border-[hsl(210_70%_50%)] bg-[hsl(210_70%_97%)] px-4 py-2 dark:bg-[hsl(210_30%_15%)]">
           <div className="flex items-center gap-2">
             <Sparkles className="size-4 text-[hsl(210_70%_45%)]" />
-            <span className="text-sm font-medium">AI 学习诊断</span>
-            <span className="rounded-full bg-card px-2 py-0.5 text-[10px] text-muted-foreground">基于近 30 天</span>
+            <span className="text-sm font-medium"><T>AI 学习诊断</T></span>
+            <span className="rounded-full bg-card px-2 py-0.5 text-[10px] text-muted-foreground"><T>基于近 30 天</T></span>
           </div>
           <button
             onClick={() => refresh(true)}
             disabled={diagLoading}
-            className="inline-flex items-center gap-1 text-[11px] text-muted-foreground hover:text-foreground disabled:opacity-50"
-          >
+            className="inline-flex items-center gap-1 text-[11px] text-muted-foreground hover:text-foreground disabled:opacity-50">
+            
             {diagLoading ? <Loader2 className="size-3 animate-spin" /> : <RefreshCw className="size-3" />}
           </button>
         </div>
         <div className="divide-y divide-border">
-          {diag?.insights?.length ? (
-            diag.insights.slice(0, 4).map((line, i) => (<DiagnosticRow key={i} text={line} index={i} />))
-          ) : (
-            <div className="px-4 py-6 text-center text-xs text-muted-foreground">
+          {diag?.insights?.length ?
+          diag.insights.slice(0, 4).map((line, i) => <DiagnosticRow key={i} text={line} index={i} />) :
+
+          <div className="px-4 py-6 text-center text-xs text-muted-foreground">
               {diagLoading ? "诊断生成中…" : "做几道题后,AI 会给你 3 条最值得练的方向。"}
             </div>
-          )}
+          }
         </div>
       </section>
 
@@ -169,17 +169,17 @@ export default function LearningCenter() {
         <div className="flex items-center gap-5">
           <Ring size={110} stroke={12} score={overall.score_pct} c={overall} />
           <div className="flex-1 min-w-0">
-            <div className="text-sm font-bold">整个英语学习总进度</div>
+            <div className="text-sm font-bold"><T>整个英语学习总进度</T></div>
             <div className="mt-0.5 text-[11px] text-muted-foreground">
-              共 <strong className="font-medium text-foreground">{overall.total.toLocaleString()}</strong> 项 · 全部要学的内容
+              <T>共</T> <strong className="font-medium text-foreground">{overall.total.toLocaleString()}</strong> <T>项 · 全部要学的内容</T>
             </div>
             <div className="mt-2.5">
               <MasteryBar master={overall.master} fluent={overall.fluent} weak={overall.weak} none={overall.none} />
             </div>
             <MasteryCounts
               className="mt-2"
-              master={overall.master} fluent={overall.fluent} weak={overall.weak} none={overall.none}
-            />
+              master={overall.master} fluent={overall.fluent} weak={overall.weak} none={overall.none} />
+            
           </div>
         </div>
       </section>
@@ -195,8 +195,8 @@ export default function LearningCenter() {
                 <div className={`mt-0.5 text-base ${isNow ? "font-medium text-gps-master" : "text-foreground/80"}`}>{t.score}%</div>
                 {isNow && <MapPin className="mt-0.5 size-3 text-gps-master" />}
                 {!isNow && i < timeline.length - 1 && <ChevronRight className="mt-1 size-3 text-muted-foreground/40" />}
-              </div>
-            );
+              </div>);
+
           })}
         </div>
       </section>
@@ -204,56 +204,56 @@ export default function LearningCenter() {
       {/* === 双视图 Tabs === */}
       <Tabs defaultValue="stage" className="mt-5">
         <TabsList className="grid w-full max-w-sm grid-cols-2">
-          <TabsTrigger value="stage">按学段</TabsTrigger>
-          <TabsTrigger value="module">按模块</TabsTrigger>
+          <TabsTrigger value="stage"><T>按学段</T></TabsTrigger>
+          <TabsTrigger value="module"><T>按模块</T></TabsTrigger>
         </TabsList>
 
         <TabsContent value="stage" className="mt-3">
           <StageView
             stageProps={stageProps}
             scopes={scopes}
-            onOpenList={(p) => setDrawer(p)}
-          />
+            onOpenList={(p) => setDrawer(p)} />
+          
         </TabsContent>
 
         <TabsContent value="module" className="mt-3">
           <ModuleView
             moduleProps={moduleProps}
             scopes={scopes}
-            onOpenList={(p) => setDrawer(p)}
-          />
+            onOpenList={(p) => setDrawer(p)} />
+          
         </TabsContent>
       </Tabs>
 
-      {loading && (
-        <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-          <Loader2 className="size-3 animate-spin" /> 加载中…
+      {loading &&
+      <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+          <Loader2 className="size-3 animate-spin" /> <T>加载中…</T>
         </div>
-      )}
+      }
 
-      {drawer && (
-        <ItemListDrawer
-          open={!!drawer}
-          onOpenChange={(v) => { if (!v) setDrawer(null); }}
-          stage={drawer.stage}
-          module={drawer.module}
-          state={drawer.state}
-          grade={drawer.grade}
-          title={drawer.title}
-        />
-      )}
-    </main>
-  );
+      {drawer &&
+      <ItemListDrawer
+        open={!!drawer}
+        onOpenChange={(v) => {if (!v) setDrawer(null);}}
+        stage={drawer.stage}
+        module={drawer.module}
+        state={drawer.state}
+        grade={drawer.grade}
+        title={drawer.title} />
+
+      }
+    </main>);
+
 }
 
 /* ============ Stage View ============ */
 function StageView({
-  stageProps, scopes, onOpenList,
-}: {
-  stageProps: StageProp[];
-  scopes: ScopeRow[];
-  onOpenList: (p: { stage: StageK; module: string; state: ItemState; grade?: number; title: string }) => void;
-}) {
+  stageProps, scopes, onOpenList
+
+
+
+
+}: {stageProps: StageProp[];scopes: ScopeRow[];onOpenList: (p: {stage: StageK;module: string;state: ItemState;grade?: number;title: string;}) => void;}) {
   const [openStage, setOpenStage] = useState<StageK | null>(null);
   const [openGrade, setOpenGrade] = useState<string | null>(null);
 
@@ -269,11 +269,11 @@ function StageView({
           return (
             <button
               key={s.key}
-              onClick={() => { setOpenStage(isOpen ? null : s.key); setOpenGrade(null); }}
+              onClick={() => {setOpenStage(isOpen ? null : s.key);setOpenGrade(null);}}
               className={`flex flex-col gap-2 rounded-2xl border p-3 text-left transition ${
-                isOpen ? "border-foreground/40 bg-muted/40" : "border-border bg-card hover:bg-muted/20"
-              }`}
-            >
+              isOpen ? "border-foreground/40 bg-muted/40" : "border-border bg-card hover:bg-muted/20"}`
+              }>
+              
               <div className="flex items-center gap-3">
                 <Ring size={64} stroke={8} score={c.score_pct} c={c} />
                 <div className="min-w-0 flex-1">
@@ -283,36 +283,36 @@ function StageView({
               </div>
               <MasteryBar master={c.master} fluent={c.fluent} weak={c.weak} none={c.none} height={6} />
               <MasteryCounts master={c.master} fluent={c.fluent} weak={c.weak} none={c.none} className="text-[10px]" />
-            </button>
-          );
+            </button>);
+
         })}
       </div>
 
       {/* 展开学段 → 年级行 */}
-      {openStage && (
-        <div className="overflow-hidden rounded-2xl border border-border bg-card">
+      {openStage &&
+      <div className="overflow-hidden rounded-2xl border border-border bg-card">
           <div className="border-b border-border bg-muted/30 px-4 py-2 text-[11px] font-medium text-muted-foreground">
-            {STAGES.find((s) => s.key === openStage)!.label} · 各年级
+            {STAGES.find((s) => s.key === openStage)!.label} <T>· 各年级</T>
           </div>
           <div className="divide-y divide-border">
             {STAGES.find((s) => s.key === openStage)!.grades.map((g) => {
-              const stageScopes = scopes.filter((r) => r.stage === openStage && r.grade === g);
-              const agg = aggregate(stageScopes);
-              const stageTotal = stageProps.find((r) => r.stage === openStage)?.total ?? 0;
-              const inStagePct = stageTotal > 0 ? Math.round((agg.total / stageTotal) * 1000) / 10 : 0;
-              const gradeKey = `${openStage}-${g}`;
-              const expanded = openGrade === gradeKey;
-              return (
-                <div key={g}>
+            const stageScopes = scopes.filter((r) => r.stage === openStage && r.grade === g);
+            const agg = aggregate(stageScopes);
+            const stageTotal = stageProps.find((r) => r.stage === openStage)?.total ?? 0;
+            const inStagePct = stageTotal > 0 ? Math.round(agg.total / stageTotal * 1000) / 10 : 0;
+            const gradeKey = `${openStage}-${g}`;
+            const expanded = openGrade === gradeKey;
+            return (
+              <div key={g}>
                   <button
-                    onClick={() => setOpenGrade(expanded ? null : gradeKey)}
-                    className="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-muted/20"
-                  >
+                  onClick={() => setOpenGrade(expanded ? null : gradeKey)}
+                  className="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-muted/20">
+                  
                     <div className="w-10 shrink-0 text-[11px] font-bold text-muted-foreground">G{g}</div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline justify-between text-[11px]">
                         <span className="font-medium tabular-nums">{Math.round(agg.score_pct)}%</span>
-                        <span className="text-muted-foreground">占{STAGES.find((s) => s.key === openStage)!.label} {inStagePct}%</span>
+                        <span className="text-muted-foreground"><T>占</T>{STAGES.find((s) => s.key === openStage)!.label} {inStagePct}%</span>
                       </div>
                       <MasteryBar className="mt-1" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} height={6} />
                       <MasteryCounts className="mt-1 text-[10px]" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} />
@@ -320,69 +320,69 @@ function StageView({
                     <ChevronDown className={`size-4 text-muted-foreground transition ${expanded ? "rotate-180" : ""}`} />
                   </button>
 
-                  {expanded && (
-                    <div className="space-y-1.5 border-t border-border bg-muted/20 px-4 py-3">
+                  {expanded &&
+                <div className="space-y-1.5 border-t border-border bg-muted/20 px-4 py-3">
                       <p className="mb-1 text-[10px] text-muted-foreground">
-                        按 2022 新课标 · {STAGES.find((s) => s.key === openStage)!.label}英语模块
+                        <T>按 2022 新课标 ·</T> {STAGES.find((s) => s.key === openStage)!.label}<T>英语模块</T>
                       </p>
-                      {padCurriculum(openStage, g, stageScopes).map((m) => (
-                        <ModuleScopeRow
-                          key={m.module}
-                          stage={openStage}
-                          grade={g}
-                          row={m}
-                          onOpenList={onOpenList}
-                          titlePrefix={`${STAGES.find((s) => s.key === openStage)!.label} G${g} · ${MODULE_LABEL[m.module] ?? m.module}`}
-                        />
-                      ))}
-                    </div>
+                      {padCurriculum(openStage, g, stageScopes).map((m) =>
+                  <ModuleScopeRow
+                    key={m.module}
+                    stage={openStage}
+                    grade={g}
+                    row={m}
+                    onOpenList={onOpenList}
+                    titlePrefix={`${STAGES.find((s) => s.key === openStage)!.label} G${g} · ${MODULE_LABEL[m.module] ?? m.module}`} />
+
                   )}
-                </div>
-              );
-            })}
+                    </div>
+                }
+                </div>);
+
+          })}
           </div>
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
 /* ============ Module View ============ */
 function ModuleView({
-  moduleProps, scopes, onOpenList,
-}: {
-  moduleProps: ModuleProp[];
-  scopes: ScopeRow[];
-  onOpenList: (p: { stage: StageK; module: string; state: ItemState; grade?: number; title: string }) => void;
-}) {
+  moduleProps, scopes, onOpenList
+
+
+
+
+}: {moduleProps: ModuleProp[];scopes: ScopeRow[];onOpenList: (p: {stage: StageK;module: string;state: ItemState;grade?: number;title: string;}) => void;}) {
   const [openModule, setOpenModule] = useState<string | null>(null);
   const [openStage, setOpenStage] = useState<StageK | null>(null);
 
   if (moduleProps.length === 0) {
     return (
       <div className="rounded-2xl border border-dashed border-border bg-card p-6 text-center text-xs text-muted-foreground">
-        还没有任何模块数据，先去做几道题。
-      </div>
-    );
+        <T>还没有任何模块数据，先去做几道题。</T>
+      </div>);
+
   }
 
   return (
     <div className="space-y-3">
       <div className="grid gap-2 sm:grid-cols-2">
-        {moduleProps
-          .slice()
-          .sort((a, b) => b.total - a.total)
-          .map((m) => {
-            const c: Counts = m;
-            const isOpen = openModule === m.module;
-            return (
-              <button
-                key={m.module}
-                onClick={() => setOpenModule(isOpen ? null : m.module)}
-                className={`flex flex-col gap-2 rounded-2xl border p-3 text-left transition ${
-                  isOpen ? "border-foreground/40 bg-muted/40" : "border-border bg-card hover:bg-muted/20"
-                }`}
-              >
+        {moduleProps.
+        slice().
+        sort((a, b) => b.total - a.total).
+        map((m) => {
+          const c: Counts = m;
+          const isOpen = openModule === m.module;
+          return (
+            <button
+              key={m.module}
+              onClick={() => setOpenModule(isOpen ? null : m.module)}
+              className={`flex flex-col gap-2 rounded-2xl border p-3 text-left transition ${
+              isOpen ? "border-foreground/40 bg-muted/40" : "border-border bg-card hover:bg-muted/20"}`
+              }>
+              
                 <div className="flex items-center gap-3">
                   <Ring size={56} stroke={7} score={c.score_pct} c={c} />
                   <div className="min-w-0 flex-1">
@@ -391,161 +391,161 @@ function ModuleView({
                       {MODULE_LABEL[m.module] ?? m.module}
                     </div>
                     <div className="mt-0.5 text-[10px] text-muted-foreground">
-                      共 <strong className="font-medium text-foreground tabular-nums">{m.total}</strong> 项 · 点击看各年级掌握情况
+                      <T>共</T> <strong className="font-medium text-foreground tabular-nums">{m.total}</strong> <T>项 · 点击看各年级掌握情况</T>
                     </div>
                   </div>
                 </div>
                 <MasteryBar master={c.master} fluent={c.fluent} weak={c.weak} none={c.none} height={6} />
                 <MasteryCounts master={c.master} fluent={c.fluent} weak={c.weak} none={c.none} className="text-[10px]" />
-              </button>
-            );
-          })}
+              </button>);
+
+        })}
       </div>
 
-      {openModule && (
-        <div className="overflow-hidden rounded-2xl border border-border bg-card">
+      {openModule &&
+      <div className="overflow-hidden rounded-2xl border border-border bg-card">
           <div className="border-b border-border bg-muted/30 px-4 py-2 text-[11px] font-medium text-muted-foreground">
-            {MODULE_LABEL[openModule] ?? openModule} · 三学段分布
+            {MODULE_LABEL[openModule] ?? openModule} <T>· 三学段分布</T>
           </div>
           <div className="divide-y divide-border">
             {STAGES.map((s) => {
-              // 课标限定：完形填空仅初中和高中开设，小学不显示
-              if (openModule === "cloze" && s.key === "primary") return null;
-              const rows = scopes.filter((r) => r.module === openModule && r.stage === s.key);
-              const agg = aggregate(rows);
-              const noData = rows.length === 0;
-              const expanded = openStage === s.key;
-              const notInCurriculum = false;
-              return (
-                <div key={s.key}>
+            // 课标限定：完形填空仅初中和高中开设，小学不显示
+            if (openModule === "cloze" && s.key === "primary") return null;
+            const rows = scopes.filter((r) => r.module === openModule && r.stage === s.key);
+            const agg = aggregate(rows);
+            const noData = rows.length === 0;
+            const expanded = openStage === s.key;
+            const notInCurriculum = false;
+            return (
+              <div key={s.key}>
                   <button
-                    onClick={() => setOpenStage(expanded ? null : s.key)}
-                    disabled={notInCurriculum}
-                    className={`flex w-full items-center gap-3 px-4 py-3 text-left transition ${
-                      notInCurriculum ? "opacity-60" : "hover:bg-muted/20"
-                    }`}
-                  >
+                  onClick={() => setOpenStage(expanded ? null : s.key)}
+                  disabled={notInCurriculum}
+                  className={`flex w-full items-center gap-3 px-4 py-3 text-left transition ${
+                  notInCurriculum ? "opacity-60" : "hover:bg-muted/20"}`
+                  }>
+                  
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline justify-between text-[12px]">
                         <span className="font-bold">{s.label}</span>
-                        {notInCurriculum ? (
-                          <span className="rounded-full bg-muted px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
-                            课标未开设
+                        {notInCurriculum ?
+                      <span className="rounded-full bg-muted px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
+                            <T>课标未开设</T>
+                          </span> :
+
+                      <span className="text-[10px] text-muted-foreground">
+                            <T>掌握度</T> <span className="tabular-nums font-bold text-foreground">{Math.round(agg.score_pct)}%</span> <T>· 共</T> {agg.total} <T>项</T>
                           </span>
-                        ) : (
-                          <span className="text-[10px] text-muted-foreground">
-                            掌握度 <span className="tabular-nums font-bold text-foreground">{Math.round(agg.score_pct)}%</span> · 共 {agg.total} 项
-                          </span>
-                        )}
+                      }
                       </div>
-                      {!notInCurriculum && (
-                        <MasteryBar className="mt-1.5" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} height={6} />
-                      )}
+                      {!notInCurriculum &&
+                    <MasteryBar className="mt-1.5" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} height={6} />
+                    }
                     </div>
-                    {!notInCurriculum && (
-                      <ChevronDown className={`size-4 text-muted-foreground transition ${expanded ? "rotate-180" : ""}`} />
-                    )}
+                    {!notInCurriculum &&
+                  <ChevronDown className={`size-4 text-muted-foreground transition ${expanded ? "rotate-180" : ""}`} />
+                  }
                   </button>
-                  {expanded && !notInCurriculum && (
-                  <div className="space-y-1.5 border-t border-border bg-muted/20 px-4 py-3">
-                    <div className="text-[10px] font-medium text-muted-foreground">各年级掌握度</div>
+                  {expanded && !notInCurriculum &&
+                <div className="space-y-1.5 border-t border-border bg-muted/20 px-4 py-3">
+                    <div className="text-[10px] font-medium text-muted-foreground"><T>各年级掌握度</T></div>
                     {s.grades.map((g) => {
-                      const gRow = rows.find((r) => r.grade === g);
-                      const c: Counts = gRow ?? ZERO;
-                      const empty = c.total === 0;
-                      return (
-                        <div
-                          key={g}
-                          className={`flex items-center gap-2 rounded-lg border px-2 py-1.5 ${
-                            empty ? "border-dashed border-border/60 bg-muted/10" : "border-border bg-background"
-                          }`}
-                        >
+                    const gRow = rows.find((r) => r.grade === g);
+                    const c: Counts = gRow ?? ZERO;
+                    const empty = c.total === 0;
+                    return (
+                      <div
+                        key={g}
+                        className={`flex items-center gap-2 rounded-lg border px-2 py-1.5 ${
+                        empty ? "border-dashed border-border/60 bg-muted/10" : "border-border bg-background"}`
+                        }>
+                        
                           <span className="w-9 shrink-0 text-[10px] font-bold text-muted-foreground">G{g}</span>
                           <div className="min-w-0 flex-1">
                             <div className="flex items-baseline justify-between text-[10px]">
-                              {empty ? (
-                                <span className="text-muted-foreground">未学</span>
-                              ) : (
-                                <>
+                              {empty ?
+                            <span className="text-muted-foreground"><T>未学</T></span> :
+
+                            <>
                                   <span className="tabular-nums font-medium">{Math.round(c.score_pct)}%</span>
-                                  <span className="text-muted-foreground tabular-nums">{c.total} 项</span>
+                                  <span className="text-muted-foreground tabular-nums">{c.total} <T>项</T></span>
                                 </>
-                              )}
+                            }
                             </div>
                             <MasteryBar className="mt-1" master={c.master} fluent={c.fluent} weak={c.weak} none={c.none} height={4} />
                           </div>
                           <div className="hidden gap-1 sm:flex">
                             {(["master", "fluent", "weak", "none"] as ItemState[]).map((st) => {
-                              const n = (c as any)[st] as number;
-                              return (
-                                <button
-                                  key={st}
-                                  disabled={n === 0}
-                                  onClick={() => onOpenList({
-                                    stage: s.key, module: openModule, state: st, grade: g,
-                                    title: `${s.label} G${g} · ${MODULE_LABEL[openModule] ?? openModule} · ${STATE_LABEL[st]}`,
-                                  })}
-                                  className={`flex items-center gap-0.5 rounded px-1.5 py-0.5 text-[9px] transition hover:bg-muted ${
-                                    n === 0 ? "opacity-30" : ""
-                                  }`}
-                                  title={`${STATE_LABEL[st]}: ${n}`}
-                                >
+                            const n = (c as any)[st] as number;
+                            return (
+                              <button
+                                key={st}
+                                disabled={n === 0}
+                                onClick={() => onOpenList({
+                                  stage: s.key, module: openModule, state: st, grade: g,
+                                  title: `${s.label} G${g} · ${MODULE_LABEL[openModule] ?? openModule} · ${STATE_LABEL[st]}`
+                                })}
+                                className={`flex items-center gap-0.5 rounded px-1.5 py-0.5 text-[9px] transition hover:bg-muted ${
+                                n === 0 ? "opacity-30" : ""}`
+                                }
+                                title={`${STATE_LABEL[st]}: ${n}`}>
+                                
                                   <span className={`size-1.5 rounded-full bg-gps-${st}`} />
                                   <span className="tabular-nums">{n}</span>
-                                </button>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  )}
-                  {expanded && !notInCurriculum && (
-                  <div className="grid grid-cols-2 gap-1.5 border-t border-border bg-muted/10 px-4 py-3 sm:grid-cols-4">
-                    {(["master", "fluent", "weak", "none"] as ItemState[]).map((st) => {
-                      const n = (agg as any)[st] as number;
-                      const dot = `bg-gps-${st}`;
-                      return (
-                        <button
-                          key={st}
-                          disabled={n === 0}
-                          onClick={() => onOpenList({
-                            stage: s.key,
-                            module: openModule,
-                            state: st,
-                            title: `${s.label} · ${MODULE_LABEL[openModule] ?? openModule} · ${STATE_LABEL[st]}`,
+                                </button>);
+
                           })}
-                          className={`flex items-center justify-between rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] transition hover:bg-muted ${
-                            n === 0 ? "opacity-40" : ""
-                          }`}
-                        >
+                          </div>
+                        </div>);
+
+                  })}
+                  </div>
+                }
+                  {expanded && !notInCurriculum &&
+                <div className="grid grid-cols-2 gap-1.5 border-t border-border bg-muted/10 px-4 py-3 sm:grid-cols-4">
+                    {(["master", "fluent", "weak", "none"] as ItemState[]).map((st) => {
+                    const n = (agg as any)[st] as number;
+                    const dot = `bg-gps-${st}`;
+                    return (
+                      <button
+                        key={st}
+                        disabled={n === 0}
+                        onClick={() => onOpenList({
+                          stage: s.key,
+                          module: openModule,
+                          state: st,
+                          title: `${s.label} · ${MODULE_LABEL[openModule] ?? openModule} · ${STATE_LABEL[st]}`
+                        })}
+                        className={`flex items-center justify-between rounded-lg border border-border bg-background px-2.5 py-1.5 text-[11px] transition hover:bg-muted ${
+                        n === 0 ? "opacity-40" : ""}`
+                        }>
+                        
                           <span className="flex items-center gap-1.5">
                             <span className={`size-2 rounded-full ${dot}`} />
                             {STATE_LABEL[st]}
                           </span>
                           <span className="font-medium tabular-nums">{n}</span>
-                        </button>
-                      );
-                    })}
+                        </button>);
+
+                  })}
                   </div>
-                  )}
-                </div>
-              );
-            })}
+                }
+                </div>);
+
+          })}
           </div>
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
 function ModuleScopeRow({
-  stage, grade, row, titlePrefix, onOpenList,
-}: {
-  stage: StageK; grade: number; row: ScopeRow; titlePrefix: string;
-  onOpenList: (p: { stage: StageK; module: string; state: ItemState; grade?: number; title: string }) => void;
-}) {
+  stage, grade, row, titlePrefix, onOpenList
+
+
+
+}: {stage: StageK;grade: number;row: ScopeRow;titlePrefix: string;onOpenList: (p: {stage: StageK;module: string;state: ItemState;grade?: number;title: string;}) => void;}) {
   const [open, setOpen] = useState(false);
   const empty = row.total === 0;
   return (
@@ -553,128 +553,128 @@ function ModuleScopeRow({
       <button
         onClick={() => !empty && setOpen(!open)}
         disabled={empty}
-        className="flex w-full items-center gap-3 px-3 py-2 text-left"
-      >
+        className="flex w-full items-center gap-3 px-3 py-2 text-left">
+        
         <span className="text-base" aria-hidden>{MODULE_EMOJI[row.module] ?? "🧠"}</span>
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline justify-between text-[11px]">
             <span className={`font-bold ${empty ? "text-muted-foreground" : ""}`}>
               {MODULE_LABEL[row.module] ?? row.module}
             </span>
-            {empty ? (
-              <span className="rounded-full bg-muted px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
-                未开放
-              </span>
-            ) : (
-              <span className="text-muted-foreground tabular-nums">{Math.round(row.score_pct)}%</span>
-            )}
+            {empty ?
+            <span className="rounded-full bg-muted px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
+                <T>未开放</T>
+              </span> :
+
+            <span className="text-muted-foreground tabular-nums">{Math.round(row.score_pct)}%</span>
+            }
           </div>
           <MasteryBar className="mt-1" master={row.master} fluent={row.fluent} weak={row.weak} none={row.none} height={5} />
         </div>
         {!empty && <ChevronDown className={`size-3.5 text-muted-foreground transition ${open ? "rotate-180" : ""}`} />}
       </button>
-      {open && !empty && (
-        <div className="grid grid-cols-2 gap-1.5 border-t border-border bg-muted/20 px-3 py-2 sm:grid-cols-4">
+      {open && !empty &&
+      <div className="grid grid-cols-2 gap-1.5 border-t border-border bg-muted/20 px-3 py-2 sm:grid-cols-4">
           {(["master", "fluent", "weak", "none"] as ItemState[]).map((st) => {
-            const n = (row as any)[st] as number;
-            const dot = `bg-gps-${st}`;
-            return (
-              <button
-                key={st}
-                disabled={n === 0}
-                onClick={() => onOpenList({
-                  stage, module: row.module, state: st, grade,
-                  title: `${titlePrefix} · ${STATE_LABEL[st]}`,
-                })}
-                className={`flex items-center justify-between rounded-md border border-border bg-background px-2 py-1 text-[10px] hover:bg-muted ${
-                  n === 0 ? "opacity-40" : ""
-                }`}
-              >
+          const n = (row as any)[st] as number;
+          const dot = `bg-gps-${st}`;
+          return (
+            <button
+              key={st}
+              disabled={n === 0}
+              onClick={() => onOpenList({
+                stage, module: row.module, state: st, grade,
+                title: `${titlePrefix} · ${STATE_LABEL[st]}`
+              })}
+              className={`flex items-center justify-between rounded-md border border-border bg-background px-2 py-1 text-[10px] hover:bg-muted ${
+              n === 0 ? "opacity-40" : ""}`
+              }>
+              
                 <span className="flex items-center gap-1">
                   <span className={`size-1.5 rounded-full ${dot}`} />
                   {STATE_LABEL[st]}
                 </span>
                 <span className="font-medium tabular-nums">{n}</span>
-              </button>
-            );
-          })}
+              </button>);
+
+        })}
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
 /* ============ helpers ============ */
 
-function num(v: any) { return Number(v) || 0; }
+function num(v: any) {return Number(v) || 0;}
 
 function coerceOverall(r: any): Counts {
   if (!r) return ZERO;
   return { master: num(r.master), fluent: num(r.fluent), weak: num(r.weak), none: num(r.none),
-           total: num(r.total), score_pct: num(r.score_pct) };
+    total: num(r.total), score_pct: num(r.score_pct) };
 }
 function coerceStageProp(r: any): StageProp {
   return { stage: r.stage as StageK,
-           master: num(r.master_count), fluent: num(r.fluent_count), weak: num(r.weak_count), none: num(r.none_count),
-           total: num(r.stage_total), score_pct: num(r.score_pct), proportion_pct: num(r.proportion_pct) };
+    master: num(r.master_count), fluent: num(r.fluent_count), weak: num(r.weak_count), none: num(r.none_count),
+    total: num(r.stage_total), score_pct: num(r.score_pct), proportion_pct: num(r.proportion_pct) };
 }
 function coerceModuleProp(r: any): ModuleProp {
   return { module: r.module,
-           master: num(r.master_count), fluent: num(r.fluent_count), weak: num(r.weak_count), none: num(r.none_count),
-           total: num(r.module_total), score_pct: num(r.score_pct), proportion_pct: num(r.proportion_pct) };
+    master: num(r.master_count), fluent: num(r.fluent_count), weak: num(r.weak_count), none: num(r.none_count),
+    total: num(r.module_total), score_pct: num(r.score_pct), proportion_pct: num(r.proportion_pct) };
 }
 function coerceScope(r: any): ScopeRow {
   return { stage: r.stage as StageK, grade: num(r.grade), module: r.module,
-           master: num(r.master_count), fluent: num(r.fluent_count), weak: num(r.weak_count), none: num(r.none_count),
-           total: num(r.scope_total), score_pct: num(r.score_pct), proportion_pct: num(r.proportion_of_total) };
+    master: num(r.master_count), fluent: num(r.fluent_count), weak: num(r.weak_count), none: num(r.none_count),
+    total: num(r.scope_total), score_pct: num(r.score_pct), proportion_pct: num(r.proportion_of_total) };
 }
 function aggregate(rows: ScopeRow[]): Counts {
   const a = { master: 0, fluent: 0, weak: 0, none: 0, total: 0, score_pct: 0 };
-  for (const r of rows) { a.master += r.master; a.fluent += r.fluent; a.weak += r.weak; a.none += r.none; a.total += r.total; }
-  if (a.total > 0) a.score_pct = Math.round(((a.master + a.fluent * 0.7 + a.weak * 0.3) / a.total) * 1000) / 10;
+  for (const r of rows) {a.master += r.master;a.fluent += r.fluent;a.weak += r.weak;a.none += r.none;a.total += r.total;}
+  if (a.total > 0) a.score_pct = Math.round((a.master + a.fluent * 0.7 + a.weak * 0.3) / a.total * 1000) / 10;
   return a;
 }
 
 /* ---- Ring (SVG, 4-color segmented) ---- */
-function Ring({ size, stroke, score, c, hideLabel }: { size: number; stroke: number; score: number; c: Counts; hideLabel?: boolean }) {
+function Ring({ size, stroke, score, c, hideLabel }: {size: number;stroke: number;score: number;c: Counts;hideLabel?: boolean;}) {
   const r = (size - stroke) / 2;
   const C = 2 * Math.PI * r;
   const total = Math.max(1, c.total);
-  const seg = (n: number) => (n / total) * C;
+  const seg = (n: number) => n / total * C;
   const off = { master: 0, fluent: seg(c.master), weak: seg(c.master) + seg(c.fluent) };
   const cx = size / 2;
   return (
     <div className="relative shrink-0" style={{ width: size, height: size }}>
       <svg width={size} height={size} className="-rotate-90">
         <circle cx={cx} cy={cx} r={r} stroke="hsl(var(--gps-none))" strokeWidth={stroke} fill="none" />
-        {c.total > 0 && (
-          <>
+        {c.total > 0 &&
+        <>
             <circle cx={cx} cy={cx} r={r} stroke="hsl(var(--gps-master))" strokeWidth={stroke} fill="none"
-              strokeDasharray={`${seg(c.master)} ${C}`} strokeDashoffset={-off.master} />
+          strokeDasharray={`${seg(c.master)} ${C}`} strokeDashoffset={-off.master} />
             <circle cx={cx} cy={cx} r={r} stroke="hsl(var(--gps-fluent))" strokeWidth={stroke} fill="none"
-              strokeDasharray={`${seg(c.fluent)} ${C}`} strokeDashoffset={-off.fluent} />
+          strokeDasharray={`${seg(c.fluent)} ${C}`} strokeDashoffset={-off.fluent} />
             <circle cx={cx} cy={cx} r={r} stroke="hsl(var(--gps-weak))" strokeWidth={stroke} fill="none"
-              strokeDasharray={`${seg(c.weak)} ${C}`} strokeDashoffset={-off.weak} />
+          strokeDasharray={`${seg(c.weak)} ${C}`} strokeDashoffset={-off.weak} />
           </>
-        )}
+        }
       </svg>
-      {!hideLabel && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
+      {!hideLabel &&
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="text-base font-medium leading-none">{Math.round(score)}%</div>
-          <div className="mt-0.5 text-[9px] text-muted-foreground">掌握度</div>
+          <div className="mt-0.5 text-[9px] text-muted-foreground"><T>掌握度</T></div>
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
-function DiagnosticRow({ text, index }: { text: string; index: number }) {
+function DiagnosticRow({ text, index }: {text: string;index: number;}) {
   const tones = [
-    { bar: "bg-gps-master/15", icon: "📈", btn: "继续学" },
-    { bar: "bg-gps-weak/15",   icon: "⚠️",  btn: "立即训练" },
-    { bar: "bg-gps-fluent/15", icon: "⏰", btn: "5 分钟复习" },
-    { bar: "bg-muted",          icon: "💡", btn: "去看看" },
-  ];
+  { bar: "bg-gps-master/15", icon: "📈", btn: "继续学" },
+  { bar: "bg-gps-weak/15", icon: "⚠️", btn: "立即训练" },
+  { bar: "bg-gps-fluent/15", icon: "⏰", btn: "5 分钟复习" },
+  { bar: "bg-muted", icon: "💡", btn: "去看看" }];
+
   const t = tones[index] ?? tones[3];
   return (
     <div className={`flex items-center gap-3 px-4 py-3 ${t.bar}`}>
@@ -683,6 +683,6 @@ function DiagnosticRow({ text, index }: { text: string; index: number }) {
       <button className="shrink-0 rounded-md border border-border bg-card px-2.5 py-1 text-[11px] font-medium hover:bg-muted">
         {t.btn}
       </button>
-    </div>
-  );
+    </div>);
+
 }

@@ -68,7 +68,7 @@ export default function PrimaryPhonicsQuiz() {
 
   // 当前题目: kind 由 subIdx 决定(0=听音选字, 1=看字选音, 2=听词选图)
   // 每个 item 预计算 3 道题(混 5 种题型),保持本 item 内 q 稳定.
-  const itemQuestions = useMemo(() => (cur ? buildItemQuestions(cur) : []), [cur, itemIdx]);
+  const itemQuestions = useMemo(() => (cur ? buildItemQuestions(cur, ITEMS) : []), [cur, itemIdx, ITEMS]);
   const q = itemQuestions[subIdx] ?? null;
 
   // 全部答完 → 结算 + 跳转(放 effect 里,避免 render 期副作用)
@@ -386,37 +386,37 @@ type Q =
  *  - matchWord / seeImagePickWord: 例词带 emoji 才可用
  *  - blendCvc: 例词中存在 3 字母的 CVC 词才可用
  */
-function buildItemQuestions(item: PhonicsItem): Q[] {
+function buildItemQuestions(item: PhonicsItem, itemPool: PhonicsItem[]): Q[] {
   const candidates: Array<() => Q | null> = [
-    () => buildHearLetter(item),
-    () => buildSeeLetter(item),
-    () => buildMatchWord(item),
-    () => buildSeeImagePickWord(item),
-    () => buildBlendCvc(item),
+    () => buildHearLetter(item, itemPool),
+    () => buildSeeLetter(item, itemPool),
+    () => buildMatchWord(item, itemPool),
+    () => buildSeeImagePickWord(item, itemPool),
+    () => buildBlendCvc(item, itemPool),
   ];
   const built = shuffle(candidates).map((f) => f()).filter((q): q is Q => q != null);
   // 至少保证前 2 种,补足 3 道
-  while (built.length < 3) built.push(buildHearLetter(item));
+  while (built.length < 3) built.push(buildHearLetter(item, itemPool));
   return built.slice(0, 3);
 }
 
-function poolDistractors(item: PhonicsItem): PhonicsItem[] {
-  const allIds = PHONICS_ITEMS.map((p) => p.id);
+function poolDistractors(item: PhonicsItem, itemPool: PhonicsItem[]): PhonicsItem[] {
+  const allIds = itemPool.map((p) => p.id);
   return buildDistractorPool(item.id, allIds, 3)
-    .map((id) => PHONICS_ITEMS.find((p) => p.id === id))
+    .map((id) => itemPool.find((p) => p.id === id))
     .filter(Boolean) as PhonicsItem[];
 }
 
-function buildHearLetter(item: PhonicsItem): Q {
-  const d = poolDistractors(item);
+function buildHearLetter(item: PhonicsItem, itemPool: PhonicsItem[]): Q {
+  const d = poolDistractors(item, itemPool);
   return {
     kind: "hearLetter",
     correct: item.letter,
     options: shuffle([item.letter, ...d.map((p) => p.letter)]),
   };
 }
-function buildSeeLetter(item: PhonicsItem): Q {
-  const d = poolDistractors(item);
+function buildSeeLetter(item: PhonicsItem, itemPool: PhonicsItem[]): Q {
+  const d = poolDistractors(item, itemPool);
   return {
     kind: "seeLetter",
     letter: item.letterUpper ?? item.letter,

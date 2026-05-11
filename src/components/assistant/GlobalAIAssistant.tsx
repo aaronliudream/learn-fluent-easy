@@ -567,9 +567,11 @@ function AssistantDrawer({ state, onClose }: { state: AssistantState; onClose: (
 
   const starters = isHomeConcierge
     ? STARTERS_CONCIERGE
-    : isFree
-      ? (tutorLang === "zh" ? STARTERS_FREE_ZH : STARTERS_FREE_EN)
-      : (tutorLang === "zh" ? STARTERS_Q_ZH : STARTERS_Q_EN);
+    : (state.starters && state.starters.length > 0)
+      ? state.starters
+      : isFree
+        ? (tutorLang === "zh" ? STARTERS_FREE_ZH : STARTERS_FREE_EN)
+        : (tutorLang === "zh" ? STARTERS_Q_ZH : STARTERS_Q_EN);
 
   const headerTitle = isHomeConcierge
     ? "💬 小月 · AI 学习顾问"

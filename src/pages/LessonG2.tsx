@@ -29,6 +29,10 @@ import RocketProgress, {
   nextUnlockHint,
 } from "@/components/RocketProgress";
 import RocketLiftoff from "@/components/RocketLiftoff";
+import { earnBadge } from "@/lib/badges";
+import { badgeForChapter } from "@/data/badges";
+import { playSfx } from "@/lib/soundEffects";
+import { Award } from "lucide-react";
 
 type Expr = { en: string; cn: string; scene?: string };
 type Vocab = { word: string; pron?: string; meaning?: string; example?: string; example_cn?: string };
@@ -160,6 +164,14 @@ function LessonList() {
       <BackLink to="/primary/adventure/2" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回二年级
       </BackLink>
+      <div className="mb-3 flex justify-end">
+        <Link
+          to="/primary/badges"
+          className="inline-flex items-center gap-1.5 rounded-full border-2 border-amber-300 bg-amber-50 px-3 py-1.5 text-xs font-extrabold text-amber-800 shadow-sm transition hover:-translate-y-0.5 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-200"
+        >
+          <Award className="size-4" /> 我的徽章
+        </Link>
+      </div>
 
       <div className="mb-4 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-4 shadow-tile dark:border-amber-700 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
         <div className="flex items-start gap-3">
@@ -497,10 +509,19 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
                 { user_id: uid, grade: 2, chapter_id: ch.id, completed_at: new Date().toISOString() },
                 { onConflict: "user_id,grade,chapter_id" }
               );
+              // Award chapter badge + chapter fanfare
+              try {
+                await earnBadge(`chapter_${ch.id}`);
+                playSfx("chapter");
+              } catch { /* noop */ }
               returnUrl = `/lesson?grade=2&chapter_done=${ch.id}`;
             }
           }
         } catch { /* noop */ }
+        // All-30 badge
+        if (postCount >= TOTAL_LESSONS) {
+          try { await earnBadge("all_complete"); } catch { /* noop */ }
+        }
       }
       celebrateScore(100);
     } finally {

@@ -10,6 +10,8 @@ import type { LessonStages } from "@/data/g2LessonStages";
 import { prefetchTTSBatch } from "@/lib/speak";
 import SparkBubble from "./SparkBubble";
 import { SparkMoodProvider, useSparkMood } from "@/contexts/SparkMoodContext";
+import { ComboProvider } from "@/contexts/ComboContext";
+import { isSfxEnabled, setSfxEnabled, playSfx } from "@/lib/soundEffects";
 
 const STAGE_NAMES = ["看 + 听", "听音配图", "看图配词", "听句子", "填空小测"] as const;
 
@@ -21,7 +23,9 @@ export default function LessonStageEngine(props: {
 }) {
   return (
     <SparkMoodProvider initial="curious">
-      <LessonStageEngineInner {...props} />
+      <ComboProvider>
+        <LessonStageEngineInner {...props} />
+      </ComboProvider>
     </SparkMoodProvider>
   );
 }
@@ -46,7 +50,7 @@ function LessonStageEngineInner({
       return 1;
     }
   });
-  const [muted, setMuted] = useState(false);
+  const [muted, setMuted] = useState<boolean>(() => !isSfxEnabled());
   const [stageDoneToast, setStageDoneToast] = useState<string | null>(null);
 
   // Warm the TTS cache for ALL audio in this lesson the moment the
@@ -76,15 +80,18 @@ function LessonStageEngineInner({
     if (muted && typeof window !== "undefined" && "speechSynthesis" in window) {
       window.speechSynthesis.cancel();
     }
+    setSfxEnabled(!muted);
   }, [muted]);
 
   function nextStage() {
     setStageDoneToast(pickPhrase("stageComplete"));
     setTimeout(() => setStageDoneToast(null), 1200);
     setMood("celebrating", 1400);
+    playSfx(current >= 5 ? "complete" : "correct");
     if (current < 5) setCurrent(current + 1);
     else {
       try { sessionStorage.removeItem(`lessonStage:${lesson_id}`); } catch { /* noop */ }
+      playSfx("complete");
       onComplete();
     }
   }

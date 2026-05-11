@@ -24,7 +24,7 @@ function moonTitle(bond: number): { emoji: string; label: string } {
   if (bond <= 25) return { emoji: "🌑", label: "新月伙伴" };
   if (bond <= 50) return { emoji: "🌒", label: "银月小伙" };
   if (bond <= 75) return { emoji: "🌕", label: "满月好友" };
-  return { emoji: "✨", label: "月光挚友" };
+  return { emoji: "✨", label: "月光好朋友" };
 }
 
 type ProgressRow = { emoji: string; label: string; done: number; total: number; color: string };
@@ -55,7 +55,7 @@ export default function PrimaryAdventure() {
   const todayKey = new Date().toDateString();
 
   useEffect(() => {
-    document.title = "今日冒险 · 陪 Spark 出发 | FluentPath";
+    document.title = "今天的冒险 · 陪 Spark 出发 | FluentPath";
     (async () => {
       const { data: u } = await supabase.auth.getUser();
       const uid = u?.user?.id ?? null;
@@ -134,7 +134,7 @@ export default function PrimaryAdventure() {
       celebratePet({
         kind: "levelup",
         emoji: "🦊",
-        title: "今日冒险完成!",
+        title: "今天的冒险完成啦!",
         subtitle: `Spark +30 亲密度 · 经验 +100`,
       });
     }
@@ -163,11 +163,11 @@ export default function PrimaryAdventure() {
             ? '"我们今天一起做了好多事!"'
             : doneCount === 0
               ? '"我准备好啦,我们出发吧!"'
-              : `"已经完成 ${doneCount} 件啦,再陪 Spark 一下吧!"`}
+              : `"已经做了 ${doneCount} 件啦,再陪 Spark 一下吧!"`}
         </p>
         <div className="mx-auto mt-4 max-w-xs">
           <div className="flex items-center justify-between text-xs font-bold text-rose-700 dark:text-rose-200">
-            <span>今日冒险</span>
+            <span>今天的冒险</span>
             <span>{doneCount}/{steps.length}</span>
           </div>
           <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-white/60">
@@ -275,7 +275,7 @@ export default function PrimaryAdventure() {
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                    第 {idx + 1} 步 · 约 {step.estMinutes} 分钟
+                    第 {idx + 1} 步 · {step.estMinutes} 分钟左右
                   </div>
                   <h2 className={`font-extrabold leading-tight ${isMain && !done ? "text-xl" : "text-base"}`}>{step.title}</h2>
                   <p className={`mt-1 text-rose-700 dark:text-rose-300 ${isMain && !done ? "text-base" : "text-sm"}`}>"{step.sparkLine}"</p>
@@ -321,7 +321,7 @@ export default function PrimaryAdventure() {
             className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 px-8 py-4 text-lg font-extrabold text-white shadow-tile transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0"
           >
             <Sparkles className="size-5" />
-            {allDone ? "完成今日冒险,喂饱 Spark!" : `还有 ${steps.length - doneCount} 件事 ✨`}
+            {allDone ? "完成今天的冒险,喂饱 Spark!" : `还有 ${steps.length - doneCount} 件事 ✨`}
           </button>
           {pet && (
             <p className="mt-2 text-xs font-bold text-muted-foreground">
@@ -334,7 +334,7 @@ export default function PrimaryAdventure() {
       {/* 退路 — 偶尔孩子想自己挑 */}
       <div className="mt-6 text-center">
         <Link to={`/primary/grade/${grade}`} className="text-xs text-muted-foreground underline-offset-2 hover:underline">
-          想自己挑课程?去完整学习地图 →
+          想自己选?去看全部 →
         </Link>
       </div>
     </main>

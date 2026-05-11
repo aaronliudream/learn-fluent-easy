@@ -5163,6 +5163,30 @@ export type Database = {
           },
         ]
       }
+      primary_roleplay_completion: {
+        Row: {
+          completed_at: string
+          last_choice_correct: boolean | null
+          play_count: number
+          roleplay_id: string
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string
+          last_choice_correct?: boolean | null
+          play_count?: number
+          roleplay_id: string
+          user_id: string
+        }
+        Update: {
+          completed_at?: string
+          last_choice_correct?: boolean | null
+          play_count?: number
+          roleplay_id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       primary_sight_word_mastery: {
         Row: {
           context_correct: number | null

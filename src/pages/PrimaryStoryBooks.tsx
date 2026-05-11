@@ -144,7 +144,7 @@ export default function PrimaryStoryBooks() {
         ))}
       </div>
       <div className="relative">
-      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-amber-100/80 hover:text-amber-50">
         <ArrowLeft className="size-4" /> 返回小学专区
       </BackLink>
 

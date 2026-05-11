@@ -30,6 +30,10 @@ export type StoryBookPage = {
   text_en: string;     // 英文句子
   text_cn: string;     // 中文翻译
   emoji: string;       // 视觉理解 emoji
+  // 朗读这一句时使用的声音角色。绘本里大部分句子都是孩子的视角,
+  // 默认 "kid"(更明亮的童声 + 略快语速)。当出现妈妈/爸爸/Spark
+  // 直接说话的句子时,可以指定不同的声音让孩子分清谁在讲话。
+  speaker?: "kid" | "mom" | "dad" | "spark" | "narrator";
 };
 
 export type StoryQuestionOption = {

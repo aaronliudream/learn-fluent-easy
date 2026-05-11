@@ -29,6 +29,9 @@ type Phase = "read" | "quiz" | "done";
 export default function PrimaryStoryBookRead() {
   const { id = "" } = useParams();
   const book = useMemo(() => findBook(id) ?? findBookG2(id), [id]);
+  // G2 books have ids sb11..sb20 — keep return links scoped to the right shelf.
+  const isG2Book = !!book && !!findBookG2(id);
+  const shelfHref = isG2Book ? "/primary/reading?grade=2" : "/primary/reading";
 
   const [phase, setPhase] = useState<Phase>("read");
   const [pageIdx, setPageIdx] = useState(0); // 0-based
@@ -115,7 +118,7 @@ export default function PrimaryStoryBookRead() {
   if (!book) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-10">
-        <BackLink to="/primary/reading" className="text-sm text-muted-foreground">← 返回书架</BackLink>
+        <BackLink to={shelfHref} className="text-sm text-muted-foreground">← 返回书架</BackLink>
         <p className="mt-6 text-center text-sm text-muted-foreground">找不到这本绘本 ({id})</p>
       </main>
     );
@@ -206,7 +209,7 @@ export default function PrimaryStoryBookRead() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
-      <BackLink to="/primary/reading" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to={shelfHref} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回书架
       </BackLink>
 
@@ -403,7 +406,7 @@ export default function PrimaryStoryBookRead() {
             <button onClick={rereadBook} className="rounded-2xl border-2 border-border bg-card px-4 py-2 text-sm font-bold hover:bg-muted">
               再读一遍
             </button>
-            <Link to="/primary/reading" className="rounded-2xl bg-gradient-to-r from-amber-500 to-rose-500 px-4 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.02]">
+            <Link to={shelfHref} className="rounded-2xl bg-gradient-to-r from-amber-500 to-rose-500 px-4 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.02]">
               返回书架
             </Link>
           </div>

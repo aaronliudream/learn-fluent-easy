@@ -144,6 +144,12 @@ export default function PrimarySightWords() {
 
       {/* CTA 区 */}
       <section className="mt-4 space-y-3">
+        {policy.visibleGroupCount === 0 && (
+          <div className="rounded-2xl border-2 border-dashed border-border bg-muted/30 p-6 text-center text-sm text-muted-foreground">
+            🎓 {grade} 年级的孩子应该已经能流畅阅读这些高频词啦,
+            <br />Spark 建议把时间花在更有挑战的内容上 ✨
+          </div>
+        )}
         {nextNew && (
           <CtaCard
             color="from-sky-500 via-cyan-500 to-emerald-500"

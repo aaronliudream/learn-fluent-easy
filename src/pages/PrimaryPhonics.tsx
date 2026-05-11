@@ -129,7 +129,7 @@ export default function PrimaryPhonics() {
         <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">🦊</div>
         <p className="mx-auto mt-3 max-w-md text-base font-extrabold leading-snug text-rose-900 dark:text-rose-100">
           {todayPlanCount === 0
-            ? '"全部音都掌握啦!Spark 太骄傲了~"'
+            ? '"全部都会啦!Spark 太骄傲了~"'
             : `"今天 Spark 想和你练 ${todayPlanCount} 个音!"`}
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-rose-700 dark:text-rose-200">
@@ -165,7 +165,7 @@ export default function PrimaryPhonics() {
             icon={<RotateCw className="size-5" />}
             label="今日复习"
             title={`复习 ${dueItems.length} 个学过的音`}
-            sub="这些音上次没答对 / 该再考一次啦"
+            sub="上次没答对的,再来一次吧!"
             onClick={() => nav("/primary/phonics/quiz/review")}
           />
         )}
@@ -177,7 +177,7 @@ export default function PrimaryPhonics() {
             icon={<Sparkles className="size-5" />}
             label="挑战测试"
             title={`挑战 ${currentGroup.group.groupName}`}
-            sub="✨ 全部通过解锁下一组"
+            sub="✨ 全部答对,就能玩下一关啦!"
             onClick={() => nav(`/primary/phonics/quiz/${currentGroup.group.id}`)}
           />
         )}

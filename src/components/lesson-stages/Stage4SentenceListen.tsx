@@ -1,48 +1,39 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, Check } from "lucide-react";
 import type { Stage4Sentence } from "@/data/g2LessonStages";
+import { speak, stopSpeaking } from "@/lib/speak";
 
-/** Use native speechSynthesis directly so we get word-boundary events. */
-function speakWithBoundary(text: string, onWord: (idx: number) => void, onEnd: () => void) {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-    onEnd();
-    return;
-  }
-  try {
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US";
-    u.rate = 0.85;
-    u.pitch = 1.1;
-    u.onboundary = (ev: SpeechSynthesisEvent) => {
-      if (ev.name && ev.name !== "word") return;
-      const before = text.substring(0, ev.charIndex);
-      const idx = before.trim() === "" ? 0 : before.trim().split(/\s+/).length;
-      onWord(idx);
-    };
-    u.onend = onEnd;
-    u.onerror = onEnd;
-    window.speechSynthesis.speak(u);
-  } catch {
-    onEnd();
-  }
-}
+/** Approximate per-word duration for Karaoke highlight when using MP3 TTS. */
+const MS_PER_WORD = 360;
 
 export default function Stage4SentenceListen({ sentences, onComplete }: { sentences: Stage4Sentence[]; onComplete: () => void }) {
   const [i, setI] = useState(0);
   const [activeWord, setActiveWord] = useState(-1);
   const [seen, setSeen] = useState<Set<number>>(new Set([0]));
   const playedRef = useRef(false);
+  const timersRef = useRef<number[]>([]);
   const s = sentences[i];
   const words = s.en.split(/(\s+)/);
+  const wordCount = s.en.trim().split(/\s+/).length;
+
+  function clearTimers() {
+    timersRef.current.forEach((t) => clearTimeout(t));
+    timersRef.current = [];
+  }
 
   function play() {
+    clearTimers();
+    stopSpeaking();
     setActiveWord(0);
-    speakWithBoundary(
-      s.en,
-      (idx) => setActiveWord(idx),
-      () => setActiveWord(-1),
-    );
+    // Schedule per-word highlight progression. Approximate timing — good
+    // enough for 5–10 word sentences and lets us use high-quality MP3 TTS.
+    for (let w = 1; w < wordCount; w++) {
+      const id = window.setTimeout(() => setActiveWord(w), w * MS_PER_WORD);
+      timersRef.current.push(id);
+    }
+    const endId = window.setTimeout(() => setActiveWord(-1), wordCount * MS_PER_WORD + 400);
+    timersRef.current.push(endId);
+    void speak(s.en);
   }
 
   useEffect(() => {
@@ -55,9 +46,19 @@ export default function Stage4SentenceListen({ sentences, onComplete }: { senten
         play();
       }
     }, 300);
-    return () => clearTimeout(t);
+    return () => {
+      clearTimeout(t);
+      clearTimers();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i]);
+
+  useEffect(() => {
+    return () => {
+      clearTimers();
+      stopSpeaking();
+    };
+  }, []);
 
   let wordIdx = -1;
 

@@ -232,9 +232,13 @@ const App = () => (
           <Route path="/primary/phonics" element={<ChineseOnlyRoute><PrimaryPhonics /></ChineseOnlyRoute>} />
           <Route path="/primary/phonics/learn/:phonicsId" element={<ChineseOnlyRoute><PrimaryPhonicsLearn /></ChineseOnlyRoute>} />
           <Route path="/primary/phonics/quiz/:groupId" element={<ChineseOnlyRoute><PrimaryPhonicsQuiz /></ChineseOnlyRoute>} />
-          <Route path="/primary/sightwords" element={<ChineseOnlyRoute><PrimarySightWords /></ChineseOnlyRoute>} />
+          {/* New canonical hyphenated paths */}
+          <Route path="/primary/sight-words" element={<ChineseOnlyRoute><PrimarySightWords /></ChineseOnlyRoute>} />
+          <Route path="/primary/sight-words/learn/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsLearn /></ChineseOnlyRoute>} />
+          <Route path="/primary/sight-words/quiz/:groupId" element={<ChineseOnlyRoute><PrimarySightWordsQuiz /></ChineseOnlyRoute>} />
+          {/* Legacy redirects */}
+          <Route path="/primary/sightwords" element={<Navigate to="/primary/sight-words" replace />} />
           <Route path="/primary/sightwords/learn/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsLearn /></ChineseOnlyRoute>} />
-          <Route path="/primary/sightwords/quiz/word/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsQuiz /></ChineseOnlyRoute>} />
           <Route path="/primary/sightwords/quiz/:groupId" element={<ChineseOnlyRoute><PrimarySightWordsQuiz /></ChineseOnlyRoute>} />
           <Route path="/primary/vocab" element={<ChineseOnlyRoute><PrimaryVocab /></ChineseOnlyRoute>} />
          <Route path="/primary/vocab/:grade" element={<ChineseOnlyRoute><PrimaryVocab /></ChineseOnlyRoute>} />

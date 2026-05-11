@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Check, Sparkles, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { speakKid as speak, prefetchTTSBatchKid as prefetchTTSBatch } from "@/lib/speak";
@@ -19,6 +19,7 @@ import { bondOnSparkEcho, bondOnPhonicsLearnPass } from "@/lib/petGrowth";
 /** 学单个音 → 复习字母名/拼读音/口型/笔顺/儿歌/例词/小知识 → mini-quiz 3 题。 */
 export default function PrimaryPhonicsLearn() {
   const { phonicsId } = useParams<{ phonicsId: string }>();
+  const [search] = useSearchParams();
   const nav = useNavigate();
   const item = useMemo(
     () =>
@@ -35,6 +36,8 @@ export default function PrimaryPhonicsLearn() {
         : null,
     [item]
   );
+  const isG2 = search.get("grade") === "2" || PHONICS_ITEMS_G2.some((it) => it.id === phonicsId);
+  const phonicsHref = isG2 ? "/primary/phonics?grade=2" : "/primary/phonics";
   const [phase, setPhase] = useState<"learn" | "quiz" | "done">("learn");
 
   useEffect(() => {
@@ -55,7 +58,7 @@ export default function PrimaryPhonicsLearn() {
   if (!item) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <BackLink to="/primary/phonics" className="text-sm text-muted-foreground">
+        <BackLink to={phonicsHref} className="text-sm text-muted-foreground">
           ← 返回拼读冒险
         </BackLink>
         <p className="mt-6 text-sm text-muted-foreground">没找到这个音。</p>
@@ -66,7 +69,7 @@ export default function PrimaryPhonicsLearn() {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
       <BackLink
-        to="/primary/phonics"
+        to={phonicsHref}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> 返回拼读冒险
@@ -115,7 +118,7 @@ export default function PrimaryPhonicsLearn() {
               subtitle: allCorrect ? `${item.letter} +1 掌握度 · Spark +15 亲密度` : "下次再考一遍",
             });
             setPhase("done");
-            setTimeout(() => nav("/primary/phonics"), 1600);
+            setTimeout(() => nav(phonicsHref), 1600);
           }}
         />
       )}

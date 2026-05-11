@@ -301,13 +301,13 @@ export default function Primary() {
                 </span>
               </div>
               <div className="text-[10px] font-semibold text-rose-500">
-                {bondToLevel === 0 ?
-              "马上就要升级啦!" :
-              `距离升级还差 ${bondToLevel} ❤️`}
+                <T>{bondToLevel === 0
+                  ? "马上就要升级啦!"
+                  : `距离升级还差 ${bondToLevel} ❤️`}</T>
               </div>
             </div>
             <p className="mx-auto mt-3 max-w-md text-lg font-extrabold leading-snug text-rose-900 dark:text-rose-100">
-              "{sparkLine}"
+              "<T>{sparkLine}</T>"
             </p>
             <button
             onClick={goAdventure}
@@ -318,7 +318,7 @@ export default function Primary() {
             </button>
             <div className="mt-4 flex justify-center">
               <span className="inline-flex items-center rounded-full bg-rose-100/80 px-3 py-1 text-xs font-semibold text-rose-600 dark:bg-rose-900/40 dark:text-rose-300">
-                <T>当前 ·</T> {currentGradeName}
+                <T>当前 ·</T> <T>{currentGradeName}</T>
               </span>
             </div>
             <div className="mt-2 flex justify-center">
@@ -395,7 +395,7 @@ export default function Primary() {
                   
                   <div className="text-3xl">{g.emoji}</div>
                   <div className="flex-1">
-                    <div className="text-sm font-extrabold">{g.name_cn}</div>
+                    <div className="text-sm font-extrabold"><T>{g.name_cn}</T></div>
                     <div className="mt-0.5 flex flex-wrap gap-1.5 text-[10px] font-bold">
                       {isCurrent &&
                       <span className="rounded bg-rose-500 px-1.5 py-0.5 text-white"><T>当前</T></span>

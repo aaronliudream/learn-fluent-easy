@@ -46,7 +46,7 @@ export default function PrimaryReading() {
         to={`/primary/grade/${g}`}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         
-        <ArrowLeft className="size-4" /> <T>返回</T> {GRADE_NAMES[g - 1] ?? g}<T>年级</T>
+        <ArrowLeft className="size-4" /> <T>返回</T> <T>{`${GRADE_NAMES[g - 1] ?? g}年级`}</T>
       </BackLink>
 
       <div className="mb-5">
@@ -54,7 +54,7 @@ export default function PrimaryReading() {
           PRIMARY · READING · G{g}
         </div>
         <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl">
-          📖 {GRADE_NAMES[g - 1]}<T>年级 · 趣味阅读</T>
+          📖 <T>{`${GRADE_NAMES[g - 1]}年级 · 趣味阅读`}</T>
         </h1>
         <p className="mt-1 text-xs text-muted-foreground">
           <T>5 步通关：热身 · 听读 · 跟读 · 思考 · 宝藏关</T>

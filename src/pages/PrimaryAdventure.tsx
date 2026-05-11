@@ -304,11 +304,11 @@ export default function PrimaryAdventure() {
       <section className="rounded-3xl bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 p-6 text-center shadow-tile dark:from-pink-950/40 dark:via-rose-950/40 dark:to-amber-950/40">
         <div className="mx-auto grid size-24 place-items-center rounded-full bg-white/70 text-6xl shadow-md spark-bob">🦊</div>
         <p className="mx-auto mt-3 max-w-md text-lg font-extrabold leading-snug text-rose-900 dark:text-rose-100">
-          {allDone ?
-          '"我们今天一起做了好多事!"' :
-          nextStep ?
-          `"嘿!${nextStep.sparkLine}"` :
-          '"我准备好啦,我们出发吧!"'}
+          <T>{allDone
+            ? '"我们今天一起做了好多事!"'
+            : nextStep
+            ? `"嘿!${nextStep.sparkLine}"`
+            : '"我准备好啦,我们出发吧!"'}</T>
         </p>
 
         {!loading && nextStep && !allDone &&
@@ -327,7 +327,7 @@ export default function PrimaryAdventure() {
             disabled={nextStep.placeholder}
             className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 px-6 py-3 text-base font-extrabold text-white shadow-tile transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0">
             
-              <Play className="size-5 fill-white" /> {nextStep.cta} →
+              <Play className="size-5 fill-white" /> <T>{nextStep.cta}</T> →
             </button>
             <button
             onClick={() => confirmStep(nextStep)}
@@ -453,7 +453,7 @@ export default function PrimaryAdventure() {
                       <div className={`h-full bg-gradient-to-r ${r.color} transition-all`} style={{ width: `${pct}%` }} />
                     </div>
                     <span className="w-20 shrink-0 text-right tabular-nums font-bold text-muted-foreground">
-                      {r.comingSoon ? "📦 准备中" : `${r.done} / ${r.total}`}
+                      {r.comingSoon ? <T>📦 准备中</T> : `${r.done} / ${r.total}`}
                     </span>
                   </li>);
 

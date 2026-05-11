@@ -136,20 +136,20 @@ export default function PrimaryPhonics() {
         to={gradeHome}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         
-        <ArrowLeft className="size-4" /> {isG2 ? "返回二年级冒险" : "返回小学专区"}
+        <ArrowLeft className="size-4" /> <T>{isG2 ? "返回二年级冒险" : "返回小学专区"}</T>
       </BackLink>
 
       {/* Spark 顶卡 */}
       <section className="rounded-3xl bg-gradient-to-br from-rose-200 via-amber-200 to-orange-200 p-5 text-center shadow-tile dark:from-rose-950/40 dark:via-amber-950/40 dark:to-orange-950/40">
         <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">🦊</div>
         <p className="mx-auto mt-3 max-w-md text-base font-extrabold leading-snug text-rose-900 dark:text-rose-100">
-          {todayPlanCount === 0 ?
-          '"全部都会啦!Spark 太骄傲了~"' :
-          `"今天 Spark 想和你练 ${todayPlanCount} 个音!"`}
+          <T>{todayPlanCount === 0
+            ? '"全部都会啦!Spark 太骄傲了~"'
+            : `"今天 Spark 想和你练 ${todayPlanCount} 个音!"`}</T>
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-rose-700 dark:text-rose-200">
           <span><T>已掌握</T> {masteredCount} / {ITEMS.length}{isG2 ? " · 二年级" : ""}</span>
-          <span><T>当前</T> {currentGroup?.group.groupName}</span>
+          <span><T>当前</T> <T>{currentGroup?.group.groupName}</T></span>
         </div>
         <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/60">
           <div
@@ -242,7 +242,7 @@ export default function PrimaryPhonics() {
                   <div className="flex items-center gap-1.5 text-sm font-extrabold">
                     {!unlocked && <Lock className="size-3.5 text-muted-foreground" />}
                     {allDone && <Trophy className="size-3.5 text-emerald-600" />}
-                    <span className="truncate">{g.group.groupName}</span>
+                    <span className="truncate"><T>{g.group.groupName}</T></span>
                   </div>
                   <div className="text-[11px] text-muted-foreground">
                     {g.group.groupNameEn}
@@ -360,12 +360,12 @@ function CtaCard(props: {
       className={`w-full rounded-3xl bg-gradient-to-r ${props.color} p-4 text-left text-white shadow-tile transition hover:-translate-y-0.5`}>
       
       <div className="text-[11px] font-bold uppercase tracking-wider opacity-80">
-        {props.label}
+        <T>{props.label}</T>
       </div>
       <div className="mt-1 flex items-center justify-between gap-3">
         <div className="min-w-0">
-          <div className="truncate text-lg font-extrabold">{props.title}</div>
-          <div className="text-xs opacity-90">{props.sub}</div>
+          <div className="truncate text-lg font-extrabold"><T>{props.title}</T></div>
+          <div className="text-xs opacity-90"><T>{props.sub}</T></div>
         </div>
         <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm">
           {props.icon}

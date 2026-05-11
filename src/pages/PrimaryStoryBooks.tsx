@@ -194,7 +194,7 @@ export default function PrimaryStoryBooks() {
       </div>
       <div className="relative">
       <BackLink to={gradeHome} className="mb-3 inline-flex items-center gap-1 text-sm text-amber-100/80 hover:text-amber-50">
-        <ArrowLeft className="size-4" /> {isG2 ? "返回二年级冒险" : "返回小学专区"}
+        <ArrowLeft className="size-4" /> <T>{isG2 ? "返回二年级冒险" : "返回小学专区"}</T>
       </BackLink>
 
       {/* Spark 顶卡 — 暖橘色书页色调 */}
@@ -208,7 +208,7 @@ export default function PrimaryStoryBooks() {
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-amber-200/90">
           <span><T>已经读了</T> {totalDone} / {total}</span>
-          <span>{nextB ? `现在 · 第 ${nextB.level} 阶段` : "全部读完 ✨"}</span>
+          <span><T>{nextB ? `现在 · 第 ${nextB.level} 阶段` : "全部读完 ✨"}</T></span>
         </div>
         <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/20">
           <div className="h-full bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 transition-all" style={{ width: `${totalDone / Math.max(1, total) * 100}%` }} />
@@ -243,9 +243,9 @@ export default function PrimaryStoryBooks() {
             <div className="min-w-0">
               <div className="truncate text-lg font-extrabold"><T>和 Spark 读 "</T>{nextB.title_en}"</div>
               <div className="text-xs opacity-90">
-                {completedIds.has(nextB.id) ?
-                `重读一遍 · 约 ${nextB.reading_minutes} 分钟` :
-                `还没读过 · 约 ${nextB.reading_minutes} 分钟`}
+                <T>{completedIds.has(nextB.id)
+                  ? `重读一遍 · 约 ${nextB.reading_minutes} 分钟`
+                  : `还没读过 · 约 ${nextB.reading_minutes} 分钟`}</T>
               </div>
             </div>
             <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/20 text-2xl backdrop-blur-sm">▶</div>
@@ -321,7 +321,7 @@ export default function PrimaryStoryBooks() {
                           {b.title_en}
                         </div>
                         {unlocked ?
-                      <div className="line-clamp-1 text-[12px] opacity-95">{b.title_cn}</div> :
+                      <div className="line-clamp-1 text-[12px] opacity-95"><T>{b.title_cn}</T></div> :
                       <div className="line-clamp-1 text-[10px] font-bold text-white/90"><T>🔒 读完上一本解锁</T></div>}
                       </div>
                       {isJustUnlocked &&

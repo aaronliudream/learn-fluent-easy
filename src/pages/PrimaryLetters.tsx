@@ -119,13 +119,13 @@ function PhonicsDemoCard() {
               <Volume2 className="size-3.5" /> {sItem.exampleSentence}
             </button>
             {sItem.exampleSentenceCn && (
-              <p className="mt-0.5 text-xs text-amber-700 dark:text-amber-400">{sItem.exampleSentenceCn}</p>
+              <p className="mt-0.5 text-sm text-amber-700 dark:text-amber-400">{sItem.exampleSentenceCn}</p>
             )}
           </div>
         )}
 
         {sItem.sparkLine && (
-          <p className="mt-3 text-xs italic text-rose-600 dark:text-rose-400">
+          <p className="mt-3 text-sm italic text-rose-600 dark:text-rose-400">
             🦊 Spark：“{sItem.sparkLine}”
           </p>
         )}
@@ -237,11 +237,11 @@ function LetterCard({ letter: l }: { letter: PhonicsItem }) {
               className="group flex flex-col items-center gap-1 rounded-2xl border border-border/60 bg-card p-3 transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
             >
               <div className="text-3xl">{w.emoji}</div>
-              <div className="text-sm font-extrabold">{w.word}</div>
-              <div className="text-[10px] font-mono text-muted-foreground">
+              <div className="text-base font-extrabold">{w.word}</div>
+              <div className="text-[11px] font-mono text-muted-foreground">
                 {w.ipa}
               </div>
-              <div className="text-xs text-muted-foreground">{w.meaningCn}</div>
+              <div className="text-sm text-muted-foreground">{w.meaningCn}</div>
               <Volume2 className="size-3 text-primary opacity-0 group-hover:opacity-100" />
             </button>
           ))}
@@ -249,7 +249,7 @@ function LetterCard({ letter: l }: { letter: PhonicsItem }) {
       </div>
 
       {l.funFact && (
-        <div className="rounded-2xl bg-violet-50 p-3 text-xs text-violet-800 dark:bg-violet-950/30 dark:text-violet-300">
+        <div className="rounded-2xl bg-violet-50 p-3 text-sm text-violet-800 dark:bg-violet-950/30 dark:text-violet-300">
           💡 <span className="font-bold">小知识：</span>
           {l.funFact}
         </div>

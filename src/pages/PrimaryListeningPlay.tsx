@@ -163,9 +163,9 @@ export default function PrimaryListeningPlay() {
                 <div className={`max-w-[78%] rounded-2xl px-3 py-2 shadow-sm ${
                   line.side === "right" ? "rounded-br-sm bg-emerald-500 text-white" : "rounded-bl-sm bg-muted/40 border-2 border-border"
                 }`}>
-                  <div className="text-[10px] font-bold opacity-70">{line.speaker}</div>
-                  <div className="text-sm font-bold">{line.text_en}</div>
-                  <div className="mt-0.5 text-[11px] opacity-80">{line.text_cn}</div>
+                  <div className="text-[11px] font-bold opacity-70">{line.speaker}</div>
+                  <div className="text-base font-bold">{line.text_en}</div>
+                  <div className="mt-0.5 text-[14px] opacity-85">{line.text_cn}</div>
                   <button onClick={() => speak(line.text_en)} className={`mt-1 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold ${
                     line.side === "right" ? "bg-white/20 hover:bg-white/30" : "bg-card hover:bg-muted"
                   }`}>
@@ -201,8 +201,8 @@ export default function PrimaryListeningPlay() {
             <div className="text-xs font-bold text-emerald-600">已答对 {correctCount}</div>
           </div>
           <div className="rounded-2xl bg-muted/30 p-3">
-            <div className="text-base font-extrabold">{q.stem_cn}</div>
-            <div className="mt-1 text-xs font-bold text-muted-foreground">{q.stem_en}</div>
+            <div className="text-lg font-extrabold leading-snug">{q.stem_cn}</div>
+            <div className="mt-1 text-sm font-bold text-muted-foreground">{q.stem_en}</div>
           </div>
 
           <div className="mt-3 space-y-2">
@@ -225,8 +225,8 @@ export default function PrimaryListeningPlay() {
                   <div className="flex items-center gap-2">
                     <span className="grid size-6 shrink-0 place-items-center rounded-full bg-muted text-[11px] font-extrabold">{String.fromCharCode(65 + i)}</span>
                     <div className="flex-1">
-                      <div className="text-sm font-bold">{opt.text_en}</div>
-                      <div className="text-[11px] text-muted-foreground">{opt.text_cn}</div>
+                      <div className="text-base font-bold">{opt.text_en}</div>
+                      <div className="text-[14px] text-muted-foreground">{opt.text_cn}</div>
                     </div>
                     {showState && opt.correct && <span className="text-lg">✅</span>}
                     {isPicked && !opt.correct && <span className="text-lg">💭</span>}

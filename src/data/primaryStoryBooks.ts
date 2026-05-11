@@ -124,7 +124,7 @@ export const PRIMARY_STORY_BOOKS: StoryBook[] = [
     pages: [
       { page: 1, text_en: "I have a cat.", text_cn: "我有一只猫。", emoji: "🐱" },
       { page: 2, text_en: "My cat has a hat.", text_cn: "我的猫戴着帽子。", emoji: "🐱🎩" },
-      { page: 3, text_en: "My cat sat on a mat.", text_cn: "我的猫坐在垫子上。", emoji: "🐱🟦" },
+      { page: 3, text_en: "My cat sat on a mat.", text_cn: "我的猫坐在垫子上。", emoji: "🐱🟫" },
       { page: 4, text_en: "The hat is on the cat.", text_cn: "帽子在猫头上。", emoji: "🎩🐱" },
       { page: 5, text_en: "A cat in a hat!", text_cn: "戴帽子的猫!", emoji: "🐱🎩" },
       { page: 6, text_en: "My cat is funny!", text_cn: "我的猫真有趣!", emoji: "🐱😄" }

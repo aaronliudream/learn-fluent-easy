@@ -441,14 +441,14 @@ export default function WordQuest({
           </div>
           <div className={cn(
             "rounded-3xl border-2 p-6 text-center shadow-tile",
-            passed === TOTAL_STAGES ? "border-amber-500/50 bg-gradient-to-br from-amber-500/15 to-orange-500/5" : "border-indigo-500/40 bg-gradient-to-br from-indigo-500/15 to-sky-500/5"
+            passed === totalStages ? "border-amber-500/50 bg-gradient-to-br from-amber-500/15 to-orange-500/5" : "border-indigo-500/40 bg-gradient-to-br from-indigo-500/15 to-sky-500/5"
           )}>
-            <div className="text-5xl">{passed === TOTAL_STAGES ? "🏆" : passed >= 12 ? "🌟" : "📚"}</div>
+            <div className="text-5xl">{passed === totalStages ? "🏆" : passed >= Math.ceil(totalStages * 0.66) ? "🌟" : "📚"}</div>
             <h2 className="mt-3 text-xl font-extrabold">
-              {passed === TOTAL_STAGES ? "完美通关！" : `通关 ${passed}/${TOTAL_STAGES} 关`}
+              {passed === totalStages ? "完美通关！" : `通关 ${passed}/${totalStages} 关`}
             </h2>
             <div className="mt-1 text-sm text-muted-foreground">
-              今日 3 词 · {targets.map((t) => t.word).join(" · ")}
+              今日 {wordsPerQuest} 词 · {targets.map((t) => t.word).join(" · ")}
             </div>
             <div className="mt-1 flex flex-wrap justify-center gap-x-3 gap-y-0.5 text-[11px] text-muted-foreground italic">
               {targets.map((t) => (
@@ -500,13 +500,13 @@ export default function WordQuest({
           <ArrowLeft className="size-4" /> 退出（视为放弃）
         </button>
         <div className="text-xs font-bold text-muted-foreground">
-          📚 第 {wordIdx + 1}/{WORDS_PER_QUEST} 词 · {STAGES[subStage].emoji} 第 {subStage + 1}/{STAGES_PER_WORD} 关
+          📚 第 {wordIdx + 1}/{wordsPerQuest} 词 · {STAGES[subStage].emoji} 第 {subStage + 1}/{STAGES_PER_WORD} 关
         </div>
       </div>
 
-      {/* 18-stage progress: 3 groups of 6, separated by gap */}
+      {/* progress: wordsPerQuest groups of STAGES_PER_WORD */}
       <div className="mb-4 flex gap-2">
-        {Array.from({ length: WORDS_PER_QUEST }).map((_, gi) => (
+        {Array.from({ length: wordsPerQuest }).map((_, gi) => (
           <div key={gi} className="flex flex-1 gap-0.5">
             {Array.from({ length: STAGES_PER_WORD }).map((__, si) => {
               const i = gi * STAGES_PER_WORD + si;

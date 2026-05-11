@@ -7,7 +7,7 @@
 // Why so small: shipping a single linear path is the whole point.
 // Anything fancier would re-create the menu maze we just deleted.
 
-export type AdventureStepKind = "phonics" | "vocab" | "lesson" | "culture" | "roleplay";
+export type AdventureStepKind = "phonics" | "vocab" | "lesson" | "culture" | "roleplay" | "listening";
 
 export type AdventureStep = {
   kind: AdventureStepKind;
@@ -71,8 +71,7 @@ export function buildDailyAdventure(opts: {
 }
 
 /** Day-of-week rotation for Grade 1's Step 3.
- *  Mon/Thu = Lesson, Tue/Fri/Sat/Sun = Roleplay, Wed = Lesson (placeholder
- *  for future listening / picture-book content). */
+ *  Mon/Thu = Lesson, Tue/Fri/Sat = Roleplay, Wed/Sun = Listening. */
 function getThirdStepContent(
   grade: number,
   date: Date,
@@ -102,10 +101,22 @@ function getThirdStepContent(
     estMinutes: 5,
   };
 
+  const listeningStep: AdventureStep = {
+    kind: "listening",
+    emoji: "🎧",
+    title: "听 Spark 讲对话",
+    sparkLine: "今天我们听一段对话,你听 Spark 说什么!",
+    cta: "和 Spark 听对话",
+    to: `/primary/listening`,
+    estMinutes: 5,
+  };
+
   const dow = date.getDay(); // 0=Sun ... 6=Sat
-  // Tue(2), Fri(5), Sat(6), Sun(0) → Roleplay
-  if (dow === 0 || dow === 2 || dow === 5 || dow === 6) return roleplayStep;
-  // Mon(1), Wed(3), Thu(4) → Lesson; fall back to roleplay if no lesson
+  // Wed(3), Sun(0) → Listening
+  if (dow === 0 || dow === 3) return listeningStep;
+  // Tue(2), Fri(5), Sat(6) → Roleplay
+  if (dow === 2 || dow === 5 || dow === 6) return roleplayStep;
+  // Mon(1), Thu(4) → Lesson; fall back to roleplay if no lesson yet
   return lessonStep ?? roleplayStep;
 }
 

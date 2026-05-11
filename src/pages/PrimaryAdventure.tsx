@@ -147,8 +147,8 @@ export default function PrimaryAdventure() {
   }, [grade]);
 
   const steps: AdventureStep[] = useMemo(
-    () => buildDailyAdventure({ grade, nextLessonId }),
-    [grade, nextLessonId, todayKey]
+    () => buildDailyAdventure({ grade, nextLessonId, sightWordsMasteredCount: swMasteredCount }),
+    [grade, nextLessonId, swMasteredCount, todayKey]
   );
 
   const doneCount = steps.filter((s) => progress[s.kind]).length;

@@ -406,3 +406,39 @@ export default function Primary() {
     </main>
   );
 }
+
+function CumulativeMasteryCard() {
+  const [phonics, setPhonics] = useState({ done: 0, total: PHONICS_ITEMS.length });
+  const [sw, setSw] = useState({ done: 0, total: SIGHT_WORD_ITEMS.length });
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const [pm, sm] = await Promise.all([getPhonicsMasteryMap(), getSightWordMasteryMap()]);
+      if (cancelled) return;
+      setPhonics({
+        done: PHONICS_ITEMS.filter((it) => (pm.get(it.id)?.mastery_level ?? 0) >= 2).length,
+        total: PHONICS_ITEMS.length,
+      });
+      setSw({
+        done: SIGHT_WORD_ITEMS.filter((it) => (sm.get(it.id)?.mastery_level ?? 0) >= 2).length,
+        total: SIGHT_WORD_ITEMS.length,
+      });
+    })();
+    return () => { cancelled = true; };
+  }, []);
+  return (
+    <section className="mt-4 rounded-2xl border border-border bg-card p-4 shadow-sm">
+      <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">📊 累计掌握</div>
+      <div className="mt-2 grid grid-cols-2 gap-3 text-sm">
+        <Link to="/primary/phonics" className="rounded-xl bg-gradient-to-br from-rose-50 to-amber-50 p-3 hover:-translate-y-0.5 transition dark:from-rose-950/30 dark:to-amber-950/30">
+          <div className="font-bold">🔤 Phonics</div>
+          <div className="mt-1 font-mono text-lg font-extrabold text-rose-600 dark:text-rose-300">{phonics.done}<span className="text-xs text-muted-foreground"> / {phonics.total}</span></div>
+        </Link>
+        <Link to="/primary/sight-words" className="rounded-xl bg-gradient-to-br from-sky-50 to-emerald-50 p-3 hover:-translate-y-0.5 transition dark:from-sky-950/30 dark:to-emerald-950/30">
+          <div className="font-bold">📚 高频词</div>
+          <div className="mt-1 font-mono text-lg font-extrabold text-sky-600 dark:text-sky-300">{sw.done}<span className="text-xs text-muted-foreground"> / {sw.total}</span></div>
+        </Link>
+      </div>
+    </section>
+  );
+}

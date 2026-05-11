@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Volume2, RotateCcw, Sparkles } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { findDialogue } from "@/data/primaryListeningDialogues";
+import { PRIMARY_LISTENING_DIALOGUES_G2 } from "@/data/primaryListeningDialoguesG2";
 import { supabase } from "@/integrations/supabase/client";
 import { speakKid as speak, stopSpeaking } from "@/lib/speak";
 
@@ -20,7 +21,10 @@ type Phase = "play" | "quiz" | "done";
 export default function PrimaryListeningPlay() {
   const { id = "" } = useParams();
   const navigate = useNavigate();
-  const dialogue = useMemo(() => findDialogue(id), [id]);
+  const dialogue = useMemo(
+    () => findDialogue(id) ?? PRIMARY_LISTENING_DIALOGUES_G2.find(d => d.id === id) ?? null,
+    [id]
+  );
 
   const [phase, setPhase] = useState<Phase>("play");
   const [revealed, setRevealed] = useState(0);

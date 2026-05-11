@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft, Lock, Headphones } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import {
   PRIMARY_LISTENING_DIALOGUES,
@@ -8,6 +8,7 @@ import {
   type ListeningDialogue,
   type ListeningTheme,
 } from "@/data/primaryListeningDialogues";
+import { PRIMARY_LISTENING_DIALOGUES_G2 } from "@/data/primaryListeningDialoguesG2";
 import { supabase } from "@/integrations/supabase/client";
 
 const THEME_META: Record<ListeningTheme, { label: string; emoji: string }> = {
@@ -20,10 +21,19 @@ const THEME_META: Record<ListeningTheme, { label: string; emoji: string }> = {
   food:             { label: "食物",   emoji: "🍎" },
   school:           { label: "学校",   emoji: "🏫" },
   going_to_school:  { label: "去学校", emoji: "🚌" },
+  weather:          { label: "天气",   emoji: "☁️" },
+  time:             { label: "时间",   emoji: "⏰" },
+  clothes:          { label: "衣服",   emoji: "👕" },
+  rooms:            { label: "房间",   emoji: "🛏️" },
+  hobbies:          { label: "兴趣",   emoji: "🎨" },
+  sports:           { label: "运动",   emoji: "⚽" },
+  jobs:             { label: "职业",   emoji: "👩‍⚕️" },
+  transport:        { label: "交通",   emoji: "🚗" },
 };
 const THEME_ORDER: ListeningTheme[] = [
   "greetings", "colors", "numbers", "body", "family",
   "animals", "food", "school", "going_to_school",
+  "weather", "time", "clothes", "rooms", "hobbies", "sports", "jobs", "transport",
 ];
 const DIFFICULTY_LABEL = { 1: "简单", 2: "一般", 3: "有点难" } as const;
 
@@ -34,6 +44,13 @@ function loadLocal(): Record<string, CompRec> {
 }
 
 export default function PrimaryListening() {
+  const [search] = useSearchParams();
+  const gradeParam = search.get("grade");
+  const lastGrade = Number(typeof window !== "undefined" ? localStorage.getItem("primary:lastGrade") : "") || 1;
+  const isG2 = gradeParam === "2" || (gradeParam !== "1" && lastGrade >= 2);
+  const DATA = isG2 ? PRIMARY_LISTENING_DIALOGUES_G2 : PRIMARY_LISTENING_DIALOGUES;
+  const playPath = (id: string) =>
+    isG2 ? `/primary/listening/play/${id}?grade=2` : `/primary/listening/play/${id}`;
   const [completed, setCompleted] = useState<Record<string, CompRec>>(() => loadLocal());
 
   useEffect(() => {
@@ -62,7 +79,10 @@ export default function PrimaryListening() {
     })();
   }, []);
 
-  const sorted = useMemo(() => getDialoguesSorted(), []);
+  const sorted = useMemo(
+    () => [...DATA].sort((a, b) => a.sortOrder - b.sortOrder),
+    [DATA]
+  );
   const completedIds = useMemo(() => new Set(Object.keys(completed)), [completed]);
 
   function isUnlocked(d: ListeningDialogue): boolean {
@@ -79,11 +99,11 @@ export default function PrimaryListening() {
     return THEME_ORDER.map(t => ({
       t,
       meta: THEME_META[t],
-      items: PRIMARY_LISTENING_DIALOGUES
+      items: DATA
         .filter(d => d.theme === t)
         .sort((a, b) => a.sortOrder - b.sortOrder),
     })).filter(g => g.items.length > 0);
-  }, []);
+  }, [DATA]);
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6">
@@ -109,7 +129,7 @@ export default function PrimaryListening() {
       {/* 继续听 CTA */}
       {nextD && (
         <Link
-          to={`/primary/listening/play/${nextD.id}`}
+            to={playPath(nextD.id)}
           className="mt-4 block rounded-3xl bg-gradient-to-r from-sky-500 via-cyan-500 to-emerald-500 p-4 text-left text-white shadow-tile transition hover:-translate-y-0.5"
         >
           <div className="text-[11px] font-bold uppercase tracking-wider opacity-80">🎧 继续听新对话</div>
@@ -159,7 +179,7 @@ export default function PrimaryListening() {
                   </div>
                 );
                 return unlocked ? (
-                  <Link key={d.id} to={`/primary/listening/play/${d.id}`}>{card}</Link>
+                  <Link key={d.id} to={playPath(d.id)}>{card}</Link>
                 ) : (
                   <div key={d.id}>{card}</div>
                 );
@@ -172,6 +192,33 @@ export default function PrimaryListening() {
       <p className="mt-8 flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
         <Headphones className="size-3" /> 一个一个听,下一个就会亮起来!
       </p>
+
+      {/* G1 → G2 解锁入口 */}
+      {!isG2 && (() => {
+        const allG1Done = PRIMARY_LISTENING_DIALOGUES.every(d => completedIds.has(d.id));
+        if (!allG1Done) return null;
+        return (
+          <section className="mt-6 rounded-3xl border-2 border-violet-300 bg-gradient-to-br from-violet-100 via-fuchsia-100 to-pink-100 p-5 text-center shadow-tile dark:border-violet-700 dark:from-violet-950/40 dark:via-fuchsia-950/40 dark:to-pink-950/40">
+            <div className="text-2xl">🎉</div>
+            <p className="mt-1 text-base font-extrabold text-violet-900 dark:text-violet-100">
+              G1 听力对话全部完成!
+            </p>
+            <Link
+              to="/primary/listening?grade=2"
+              className="mt-3 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 px-5 py-2 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
+            >
+              去解锁 G2 听力对话 →
+            </Link>
+          </section>
+        );
+      })()}
+      {isG2 && (
+        <div className="mt-4 text-center">
+          <Link to="/primary/listening?grade=1" className="text-xs text-muted-foreground underline-offset-2 hover:underline">
+            ← 回到 G1 听力
+          </Link>
+        </div>
+      )}
     </main>
   );
 }

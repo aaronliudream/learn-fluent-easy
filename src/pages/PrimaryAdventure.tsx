@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, Check, Play, Sparkles } from "lucide-react";
+import { ArrowLeft, Check, Play, Sparkles, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import BackLink from "@/components/BackLink";
 import {
@@ -13,6 +13,21 @@ import {
 } from "@/lib/dailyAdventure";
 import { bondOnAdventureComplete } from "@/lib/petGrowth";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
+import { PHONICS_ITEMS } from "@/data/primaryPhonics";
+import { SIGHT_WORD_ITEMS } from "@/data/primarySightWords";
+import { PRIMARY_LISTENING_DIALOGUES } from "@/data/primaryListeningDialogues";
+import { PRIMARY_ROLE_PLAYS } from "@/data/primaryRolePlays";
+import { PRIMARY_STORY_BOOKS } from "@/data/primaryStoryBooks";
+
+// 月亮称号 — 强化 Big Moon English 品牌
+function moonTitle(bond: number): { emoji: string; label: string } {
+  if (bond <= 25) return { emoji: "🌑", label: "新月伙伴" };
+  if (bond <= 50) return { emoji: "🌒", label: "银月小伙" };
+  if (bond <= 75) return { emoji: "🌕", label: "满月好友" };
+  return { emoji: "✨", label: "月光挚友" };
+}
+
+type ProgressRow = { emoji: string; label: string; done: number; total: number; color: string };
 
 // Phase 2 — Daily Adventure.
 // One linear flow that strings vocab → lesson → reading → culture
@@ -35,6 +50,7 @@ export default function PrimaryAdventure() {
   const [pet, setPet] = useState<Pet | null>(null);
   const [progress, setProgress] = useState<Record<string, true>>(() => loadAdventureProgress());
   const [loading, setLoading] = useState(true);
+  const [myProgress, setMyProgress] = useState<ProgressRow[] | null>(null);
   // 用今天的日期做 memo key,避免页面跨午夜后还显示昨天的轮换步骤
   const todayKey = new Date().toDateString();
 
@@ -57,6 +73,22 @@ export default function PrimaryAdventure() {
       if (uid) {
         const { data: p } = await supabase.from("pet_state").select("name,level,bond").eq("user_id", uid).maybeSingle();
         if (p) setPet(p as Pet);
+
+        // 各模块进度统计 — 用 head + count,避免拉数据
+        const [ph, sw, ls, rp, sb] = await Promise.all([
+          supabase.from("primary_phonics_mastery").select("phonics_id", { count: "exact", head: true }).eq("user_id", uid),
+          supabase.from("primary_sight_word_mastery").select("word_id", { count: "exact", head: true }).eq("user_id", uid),
+          supabase.from("primary_listening_completion").select("dialogue_id", { count: "exact", head: true }).eq("user_id", uid),
+          supabase.from("primary_roleplay_completion").select("roleplay_id", { count: "exact", head: true }).eq("user_id", uid),
+          supabase.from("primary_storybook_completion").select("book_id", { count: "exact", head: true }).eq("user_id", uid),
+        ]);
+        setMyProgress([
+          { emoji: "🔤", label: "字母拼读", done: ph.count ?? 0, total: PHONICS_ITEMS.length, color: "from-sky-400 to-indigo-400" },
+          { emoji: "🟣", label: "单词识别", done: sw.count ?? 0, total: SIGHT_WORD_ITEMS.length, color: "from-violet-400 to-fuchsia-400" },
+          { emoji: "🎧", label: "听力理解", done: ls.count ?? 0, total: PRIMARY_LISTENING_DIALOGUES.length, color: "from-amber-400 to-orange-400" },
+          { emoji: "📚", label: "读绘本",   done: sb.count ?? 0, total: PRIMARY_STORY_BOOKS.length, color: "from-emerald-400 to-teal-400" },
+          { emoji: "🎭", label: "角色扮演", done: rp.count ?? 0, total: PRIMARY_ROLE_PLAYS.length, color: "from-rose-400 to-pink-400" },
+        ]);
       }
       setLoading(false);
     })();
@@ -147,6 +179,31 @@ export default function PrimaryAdventure() {
         </div>
       </section>
 
+      {/* 我的进度 — 5 个主路径模块 */}
+      {myProgress && (
+        <section className="mt-4 rounded-2xl border border-border bg-card p-3 shadow-sm">
+          <div className="mb-2 flex items-center gap-1.5 text-xs font-bold text-muted-foreground">
+            <span className="text-sm">📊</span>
+            <span>你的进度</span>
+          </div>
+          <ul className="space-y-1.5">
+            {myProgress.map((r) => {
+              const pct = r.total > 0 ? Math.min(100, (r.done / r.total) * 100) : 0;
+              return (
+                <li key={r.label} className="flex h-7 items-center gap-2 text-[12px]">
+                  <span className="w-4 text-center">{r.emoji}</span>
+                  <span className="w-16 shrink-0 font-bold">{r.label}</span>
+                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
+                    <div className={`h-full bg-gradient-to-r ${r.color} transition-all`} style={{ width: `${pct}%` }} />
+                  </div>
+                  <span className="w-14 shrink-0 text-right tabular-nums font-bold text-muted-foreground">{r.done} / {r.total}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+
       {/* 快捷探索工具栏 — 自由学习入口,不参与每日 4 步 */}
       <section className="mt-5">
         <div className="mb-2 flex items-center justify-between px-1">
@@ -186,27 +243,44 @@ export default function PrimaryAdventure() {
         {!loading && steps.map((step, idx) => {
           const done = !!progress[step.kind];
           const isCurrent = !done && steps.slice(0, idx).every((s) => progress[s.kind]);
+          const isMain = idx === 0; // 第 1 步:今日主任务大卡
           return (
             <article
               key={step.kind}
-              className={`rounded-3xl border-2 p-4 transition ${
+              className={`rounded-3xl border-2 transition ${
+                isMain && !done ? "p-5" : "p-4"
+              } ${
                 done
                   ? "border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 dark:border-emerald-700 dark:from-emerald-950/30 dark:to-teal-950/30"
-                  : isCurrent
-                    ? "border-rose-300 bg-card shadow-tile"
-                    : "border-border bg-card opacity-70"
+                  : isMain
+                    ? "border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 dark:border-amber-700 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30"
+                    : isCurrent
+                      ? "border-rose-300 bg-card shadow-tile"
+                      : "border-border bg-card opacity-70"
               }`}
+              style={
+                isMain && !done
+                  ? { boxShadow: "0 0 0 3px rgba(255, 214, 107, 0.4), 0 8px 24px -8px rgba(255, 180, 0, 0.35)", minHeight: 200 }
+                  : undefined
+              }
             >
+              {isMain && !done && (
+                <div className="mb-2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-sm">
+                  <Star className="size-3 fill-white" /> 今日主任务
+                </div>
+              )}
               <div className="flex items-start gap-3">
-                <div className={`grid size-12 shrink-0 place-items-center rounded-2xl text-2xl shadow-sm ${done ? "bg-gradient-to-br from-emerald-400 to-teal-400" : "bg-gradient-to-br from-amber-300 to-rose-300"}`}>
+                <div className={`grid shrink-0 place-items-center rounded-2xl shadow-sm ${
+                  isMain && !done ? "size-16 text-3xl" : "size-12 text-2xl"
+                } ${done ? "bg-gradient-to-br from-emerald-400 to-teal-400" : "bg-gradient-to-br from-amber-300 to-rose-300"}`}>
                   {done ? <Check className="size-6 stroke-white" /> : step.emoji}
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
                     第 {idx + 1} 步 · 约 {step.estMinutes} 分钟
                   </div>
-                  <h2 className="text-base font-extrabold leading-tight">{step.title}</h2>
-                  <p className="mt-1 text-sm text-rose-700 dark:text-rose-300">"{step.sparkLine}"</p>
+                  <h2 className={`font-extrabold leading-tight ${isMain && !done ? "text-xl" : "text-base"}`}>{step.title}</h2>
+                  <p className={`mt-1 text-rose-700 dark:text-rose-300 ${isMain && !done ? "text-base" : "text-sm"}`}>"{step.sparkLine}"</p>
                 </div>
               </div>
 
@@ -222,9 +296,11 @@ export default function PrimaryAdventure() {
                   <button
                     onClick={() => go(step)}
                     disabled={!isCurrent}
-                    className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 px-4 py-2 text-sm font-extrabold text-white shadow-md transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0"
+                    className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 font-extrabold text-white shadow-md transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 ${
+                      isMain ? "px-6 py-3 text-base" : "px-4 py-2 text-sm"
+                    }`}
                   >
-                    <Play className="size-4 fill-white" /> {step.cta}
+                    <Play className={`fill-white ${isMain ? "size-5" : "size-4"}`} /> {step.cta}
                   </button>
                 </div>
               )}
@@ -250,8 +326,8 @@ export default function PrimaryAdventure() {
             {allDone ? "完成今日冒险,喂饱 Spark!" : `还有 ${steps.length - doneCount} 件事 ✨`}
           </button>
           {pet && (
-            <p className="mt-2 text-xs text-muted-foreground">
-              Spark 等级 {pet.level} · 小心心 {pet.bond}/100
+            <p className="mt-2 text-xs font-bold text-muted-foreground">
+              {moonTitle(pet.bond).emoji} Spark · {moonTitle(pet.bond).label} · {pet.bond}/100
             </p>
           )}
         </div>

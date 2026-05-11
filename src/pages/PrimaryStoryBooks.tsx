@@ -127,7 +127,7 @@ export default function PrimaryStoryBooks() {
   return (
     <main
       className="relative mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6"
-      style={{ backgroundColor: "#f4f0fa" }}
+      style={{ backgroundColor: "#3a2f6b" }}
     >
       {/* 背景散落金色小星星 */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -144,21 +144,24 @@ export default function PrimaryStoryBooks() {
         ))}
       </div>
       <div className="relative">
-      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-amber-100/80 hover:text-amber-50">
         <ArrowLeft className="size-4" /> 返回小学专区
       </BackLink>
 
       {/* Spark 顶卡 — 暖橘色书页色调 */}
-      <section className="rounded-3xl bg-gradient-to-br from-amber-200 via-orange-200 to-rose-200 p-5 text-center shadow-tile dark:from-amber-950/40 dark:via-orange-950/40 dark:to-rose-950/40">
+      <section
+        className="rounded-3xl p-5 text-center shadow-tile"
+        style={{ backgroundColor: "#4a3d7a" }}
+      >
         <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">🦊</div>
-        <p className="mx-auto mt-3 max-w-md text-base font-extrabold leading-snug text-orange-900 dark:text-orange-100">
+        <p className="mx-auto mt-3 max-w-md text-base font-extrabold leading-snug text-amber-100">
           "和 Spark 一起读 {total} 本小绘本!"
         </p>
-        <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-orange-700 dark:text-orange-200">
+        <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-amber-200/90">
           <span>已读 {totalDone} / {total}</span>
-          <span>{nextB ? `当前 · ${DIFFICULTY_LABEL[nextB.level]}级` : "全部读完 ✨"}</span>
+          <span>{nextB ? `当前 · 第 ${nextB.level} 阶段` : "全部读完 ✨"}</span>
         </div>
-        <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/60">
+        <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/20">
           <div className="h-full bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 transition-all" style={{ width: `${(totalDone / Math.max(1, total)) * 100}%` }} />
         </div>
       </section>
@@ -199,12 +202,12 @@ export default function PrimaryStoryBooks() {
 
       {/* 书架 */}
       <section className="mt-6 space-y-6">
-        <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">📚 你的绘本书架</div>
+        <div className="text-xs font-bold uppercase tracking-wider text-amber-200/80">📚 你的绘本书架</div>
         {grouped.map(g => (
           <div key={g.lv}>
             <div className="mb-2 flex items-end gap-2">
-              <span className="text-sm font-extrabold">{g.meta.label}</span>
-              <span className="text-xs font-bold text-muted-foreground">· {g.items.length} 本 · {g.meta.sub}</span>
+              <span className="text-sm font-extrabold text-amber-100">{g.meta.label}</span>
+              <span className="text-xs font-bold text-amber-200/70">· {g.items.length} 本 · {g.meta.sub}</span>
             </div>
             {/* 书架样式:底部一条木色横条 + Spark 角落小头像 */}
             <div className="relative">
@@ -215,16 +218,19 @@ export default function PrimaryStoryBooks() {
                   const rec = completed[b.id];
                   const fullScore = rec && rec.questions_total > 0 && rec.questions_correct === rec.questions_total;
                   const isJustUnlocked = unlocked && !done && b.id === justUnlockedId;
+                  const isCurrent = unlocked && !done && b.id === nextB?.id;
                   const card = (
                     <div
                       className={`group relative aspect-[5/7] overflow-hidden rounded-xl rounded-l-sm border-l-4 border-amber-900/40 p-3 text-left transition bg-gradient-to-br ${b.bg} text-white ${
                         unlocked
                           ? `hover:-translate-y-1 ${isJustUnlocked ? "animate-scale-in ring-4 ring-amber-300" : ""}`
-                          : "opacity-40 saturate-75"
+                          : "opacity-[0.42]"
                       }`}
                       style={
-                        unlocked
-                          ? { boxShadow: "0 0 24px rgba(255, 214, 107, 0.5), 4px 4px 0 rgba(0,0,0,0.15)" }
+                        isCurrent
+                          ? { boxShadow: "0 0 0 3px #ffd66b, 0 0 24px rgba(255,214,107,0.55), 4px 4px 0 rgba(0,0,0,0.2)" }
+                          : unlocked
+                          ? { boxShadow: "0 0 18px rgba(255, 214, 107, 0.35), 4px 4px 0 rgba(0,0,0,0.18)" }
                           : { boxShadow: "4px 4px 0 rgba(0,0,0,0.15)" }
                       }
                     >
@@ -296,9 +302,15 @@ export default function PrimaryStoryBooks() {
         ))}
       </section>
 
-      <p className="mt-8 flex items-center justify-center gap-1 text-[11px] text-muted-foreground">
+      <p className="mt-8 flex items-center justify-center gap-1 text-[11px] text-amber-200/70">
         <BookOpen className="size-3" /> 顺序解锁:读完一本,下一本就会亮起
       </p>
+
+      {/* 书架底部 Spark 陪伴语 */}
+      <div className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-bold text-amber-100 backdrop-blur-sm">
+        <span className="grid size-8 shrink-0 place-items-center rounded-full bg-white text-xl shadow ring-2 ring-amber-300">🦊</span>
+        <span>Spark 也在看你读书呢~ 加油!</span>
+      </div>
 
       {/* 锁定卡片点击 → Spark 气泡 */}
       {lockedHint && (

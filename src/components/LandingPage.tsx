@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import LiveStatsTicker from "@/components/LiveStatsTicker";
 import UserAvatarMenu from "@/components/UserAvatarMenu";
 import { LangToggleEnZh } from "@/i18n/LangToggleEnZh";
+import { T } from "@/i18n/T";
 import { ArrowRight, Sparkles, Brain, GraduationCap, Users, BookOpen, Quote, TrendingUp, Clock, Target, ShieldCheck } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import moonBg from "@/assets/moon-hero-bg.jpg";
@@ -12,9 +13,9 @@ import moonBg from "@/assets/moon-hero-bg.jpg";
  */
 
 const NAV = [
-  { to: "/kids", label: "小学" },
-  { to: "/junior", label: "初中" },
-  { to: "/gaokao", label: "高中" },
+  { to: "/kids", label: "小学" as const },
+  { to: "/junior", label: "初中" as const },
+  { to: "/gaokao", label: "高中" as const },
 ];
 
 const STAGES = [
@@ -155,7 +156,7 @@ export default function LandingPage() {
                   to={n.to}
                   className="text-sm font-semibold text-[#3A3A3A] hover:text-[#1A1A1A]"
                 >
-                  {n.label}
+                  <T>{n.label}</T>
                 </Link>
               ))}
             </div>
@@ -163,7 +164,7 @@ export default function LandingPage() {
               href="#entries"
               className="rounded-full border border-[#1A1A1A]/15 bg-white/70 px-4 py-2 text-sm font-bold text-[#1A1A1A] backdrop-blur hover:bg-white"
             >
-              浏览课程
+              <T>浏览课程</T>
             </a>
             <LangToggleEnZh />
             <UserAvatarMenu variant="inline" />
@@ -173,22 +174,22 @@ export default function LandingPage() {
         {/* Hero copy */}
         <div className="relative z-10 mx-auto max-w-[1180px] px-6 pb-8 pt-10 text-center md:pb-12 md:pt-16 animate-hero-fade-up">
           <div className="text-sm font-bold tracking-[0.18em] text-[#7B3FF1] md:text-base">
-            陪伴中国孩子真正走进英语世界
+            <T>陪伴中国孩子真正走进英语世界</T>
           </div>
           <h1 className="mt-3 font-serif text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-            考试要拿分
+            <T>考试要拿分</T>
             <br />
-            英语要会用
+            <T>英语要会用</T>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-sm text-[#5A5A5A] md:text-base">
-            对照最新中考高考要求 · 同步最新大纲要求 — 让应试和能力同时长进。
+            <T>对照最新中考高考要求 · 同步最新大纲要求 — 让应试和能力同时长进。</T>
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <a
               href="#entries"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#7B3FF1] to-[#ED3F8C] px-7 py-3 text-sm font-bold text-white shadow-lg shadow-[#7B3FF1]/25 hover:-translate-y-0.5 transition"
             >
-              <Sparkles className="size-4" /> 浏览课程
+              <Sparkles className="size-4" /> <T>浏览课程</T>
             </a>
           </div>
 
@@ -243,9 +244,9 @@ export default function LandingPage() {
                   </span>
                   <div className="min-w-0 flex-1">
                     <h3 className="font-serif text-xl font-black tracking-tight md:text-2xl">
-                      {c.title}
+                      <T>{c.title}</T>
                     </h3>
-                    <p className="mt-1 text-sm opacity-90">{c.desc}</p>
+                    <p className="mt-1 text-sm opacity-90"><T>{c.desc}</T></p>
                   </div>
                   <ArrowRight className="size-5 shrink-0 opacity-70 transition group-hover:translate-x-1 group-hover:opacity-100" />
                 </div>
@@ -258,9 +259,9 @@ export default function LandingPage() {
       <section className="mx-auto max-w-[1180px] px-6 pt-10 md:pt-14">
         <div className="mb-8 text-center md:mb-10">
           <h2 className="font-serif text-2xl font-black leading-tight tracking-tight md:text-3xl">
-            为什么很多孩子学了多年英语，
+            <T>为什么很多孩子学了多年英语，</T>
             <br className="hidden md:block" />
-            依然不会真正使用英语？
+            <T>依然不会真正使用英语？</T>
           </h2>
         </div>
 
@@ -268,10 +269,10 @@ export default function LandingPage() {
           {/* Pain points */}
           <div className="rounded-3xl border border-[#1A1A1A]/10 bg-white/60 p-7 backdrop-blur md:p-9">
             <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9A9A9A]">
-              传统英语学习
+              <T>传统英语学习</T>
             </div>
             <h3 className="mt-2 font-serif text-xl font-black tracking-tight md:text-2xl">
-              问题出在哪里
+              <T>问题出在哪里</T>
             </h3>
             <ul className="mt-5 space-y-3 text-sm text-[#3A3A3A] md:text-base">
               {[
@@ -282,7 +283,7 @@ export default function LandingPage() {
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3">
                   <span className="mt-[7px] inline-block size-1.5 shrink-0 rounded-full bg-[#9A9A9A]" />
-                  <span>{t}</span>
+                  <span><T>{t}</T></span>
                 </li>
               ))}
             </ul>
@@ -300,7 +301,7 @@ export default function LandingPage() {
               Big Moon English
             </div>
             <h3 className="mt-2 font-serif text-xl font-black tracking-tight md:text-2xl">
-              我们希望帮助孩子
+              <T>我们希望帮助孩子</T>
             </h3>
             <ul className="relative mt-5 space-y-3 text-sm md:text-base">
               {[
@@ -313,7 +314,7 @@ export default function LandingPage() {
                   <span className="mt-[2px] inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-white/25 text-[11px] font-black">
                     ✓
                   </span>
-                  <span className="opacity-95">{t}</span>
+                  <span className="opacity-95"><T>{t}</T></span>
                 </li>
               ))}
             </ul>
@@ -330,26 +331,26 @@ export default function LandingPage() {
                 <Brain className="size-7" />
               </span>
               <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-white/70">
-                AI 解决方案
+                <T>AI 解决方案</T>
               </div>
             </div>
             <div>
               <h3 className="font-serif text-2xl font-black leading-tight tracking-tight md:text-4xl">
-                AI 持续分析孩子薄弱点，
+                <T>AI 持续分析孩子薄弱点，</T>
                 <br className="hidden md:block" />
                 <span className="bg-gradient-to-r from-[#FFD86B] via-[#ED3F8C] to-[#7B3FF1] bg-clip-text text-transparent">
-                  动态生成专属练习
+                  <T>动态生成专属练习</T>
                 </span>
-                ，不再盲目刷题。
+                <T>，不再盲目刷题。</T>
               </h3>
               <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-bold text-white/85 md:text-sm">
                 <span className="inline-flex items-center gap-1.5">
                   <span className="inline-flex size-5 items-center justify-center rounded-full bg-[#10B981]/25 text-[#5EEAD4]">✓</span>
-                  符合教育部英语新课标
+                  <T>符合教育部英语新课标</T>
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <span className="inline-flex size-5 items-center justify-center rounded-full bg-[#10B981]/25 text-[#5EEAD4]">✓</span>
-                  适合中国小学初高中学生
+                  <T>适合中国小学初高中学生</T>
                 </span>
               </div>
             </div>
@@ -366,7 +367,7 @@ export default function LandingPage() {
               WHO ARE YOU
             </div>
             <h2 className="mt-2 font-serif text-2xl font-black tracking-tight md:text-3xl">
-              你是谁？我们都为你准备好了
+              <T>你是谁？我们都为你准备好了</T>
             </h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
@@ -418,9 +419,9 @@ export default function LandingPage() {
                       </div>
                     </div>
                     <h3 className="mt-4 font-serif text-2xl font-black tracking-tight">{c.title}</h3>
-                    <p className="mt-1.5 text-sm opacity-90">{c.desc}</p>
+                    <p className="mt-1.5 text-sm opacity-90"><T>{c.desc}</T></p>
                     <div className="mt-5 inline-flex items-center gap-1 text-sm font-bold opacity-95 transition group-hover:translate-x-1">
-                      {c.cta}
+                      <T>{c.cta}</T>
                     </div>
                   </div>
                 </Link>
@@ -445,7 +446,7 @@ export default function LandingPage() {
                   {m.n}
                 </div>
                 <div className="mt-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#7A7A7A] md:text-xs">
-                  {m.label}
+                  <T>{m.label}</T>
                 </div>
               </div>
             );
@@ -461,9 +462,9 @@ export default function LandingPage() {
             REAL VOICES
           </div>
           <h2 className="mt-2 font-serif text-2xl font-black tracking-tight md:text-3xl">
-            他们在 Big Moon 找到了节奏
+              <T>他们在 Big Moon 找到了节奏</T>
           </h2>
-          <p className="mt-2 text-xs text-[#9A9A9A]">用户反馈节选 · 已隐去真实姓名</p>
+          <p className="mt-2 text-xs text-[#9A9A9A]"><T>用户反馈节选 · 已隐去真实姓名</T></p>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {[
@@ -492,15 +493,15 @@ export default function LandingPage() {
             >
               <Quote className="size-6 opacity-30" style={{ color: t.accent }} />
               <p className="mt-3 flex-1 text-sm leading-relaxed text-[#3A3A3A] md:text-base">
-                "{t.quote}"
+                "<T>{t.quote}</T>"
               </p>
               <div className="mt-5 flex items-center justify-between border-t border-[#1A1A1A]/10 pt-4">
-                <div className="text-xs font-semibold text-[#5A5A5A]">{t.who}</div>
+                <div className="text-xs font-semibold text-[#5A5A5A]"><T>{t.who}</T></div>
                 <div
                   className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-[11px] font-black text-white"
                   style={{ background: t.accent }}
                 >
-                  <TrendingUp className="size-3" /> {t.gain}
+                  <TrendingUp className="size-3" /> <T>{t.gain}</T>
                 </div>
               </div>
             </div>
@@ -514,11 +515,11 @@ export default function LandingPage() {
         <div className="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-4 px-6 text-xs text-[#7A7A7A] md:flex-row">
           <div>© {new Date().getFullYear()} Big Moon English</div>
           <div className="flex items-center gap-5">
-            <Link to="/auth" className="hover:text-[#1A1A1A]">登录 / 注册</Link>
-            <Link to="/about" className="hover:text-[#1A1A1A]">关于我们</Link>
-            <Link to="/slang" className="hover:text-[#1A1A1A]">美式俚语</Link>
-            <Link to="/privacy" className="hover:text-[#1A1A1A]">隐私</Link>
-            <Link to="/terms" className="hover:text-[#1A1A1A]">条款</Link>
+            <Link to="/auth" className="hover:text-[#1A1A1A]"><T>登录 / 注册</T></Link>
+            <Link to="/about" className="hover:text-[#1A1A1A]"><T>关于我们</T></Link>
+            <Link to="/slang" className="hover:text-[#1A1A1A]"><T>美式俚语</T></Link>
+            <Link to="/privacy" className="hover:text-[#1A1A1A]"><T>隐私</T></Link>
+            <Link to="/terms" className="hover:text-[#1A1A1A]"><T>条款</T></Link>
           </div>
         </div>
       </footer>

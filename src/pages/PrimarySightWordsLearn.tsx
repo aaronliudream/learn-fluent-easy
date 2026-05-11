@@ -9,6 +9,10 @@ import {
   type SightWordItem,
 } from "@/data/primarySightWords";
 import {
+  SIGHT_WORD_GROUPS_G2,
+  SIGHT_WORD_ITEMS_G2,
+} from "@/data/primarySightWordsG2";
+import {
   bumpSightWordLevel,
   bumpSightWordMastery,
 } from "@/lib/sightWordMastery";
@@ -33,11 +37,19 @@ export default function PrimarySightWordsLearn() {
   const { wordId } = useParams<{ wordId: string }>();
   const nav = useNavigate();
   const item = useMemo(
-    () => SIGHT_WORD_ITEMS.find((w) => w.id === wordId) ?? null,
+    () =>
+      SIGHT_WORD_ITEMS.find((w) => w.id === wordId) ??
+      SIGHT_WORD_ITEMS_G2.find((w) => w.id === wordId) ??
+      null,
     [wordId]
   );
   const group = useMemo(
-    () => (item ? SIGHT_WORD_GROUPS.find((g) => g.id === item.groupId) : null),
+    () =>
+      item
+        ? SIGHT_WORD_GROUPS.find((g) => g.id === item.groupId) ??
+          SIGHT_WORD_GROUPS_G2.find((g) => g.id === item.groupId) ??
+          null
+        : null,
     [item]
   );
   const [phase, setPhase] = useState<"learn" | "quiz" | "done">("learn");
@@ -188,9 +200,10 @@ type Q =
   | { kind: "context"; correctWord: string; sentenceParts: [string, string]; cn: string; options: string[] }; // 看句子选词
 
 function buildQuiz(item: SightWordItem): Q[] {
-  const pool = SIGHT_WORD_ITEMS.map((w) => ({ id: w.id, word: w.word }));
+  const allItems = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2];
+  const pool = allItems.map((w) => ({ id: w.id, word: w.word }));
   const distractors = buildSightWordDistractors(item.id, pool, 3);
-  const meaningPool = SIGHT_WORD_ITEMS.filter((w) => w.id !== item.id);
+  const meaningPool = allItems.filter((w) => w.id !== item.id);
   const meaningDistractors = shuffle(meaningPool).slice(0, 3).map((w) => w.meaningCn);
 
   const qs: Q[] = [];

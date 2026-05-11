@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Eye, Lock, Play, RotateCw, Sparkles, Trophy } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
@@ -8,6 +8,10 @@ import {
   SIGHT_WORD_ITEMS,
   type SightWordItem,
 } from "@/data/primarySightWords";
+import {
+  SIGHT_WORD_GROUPS_G2,
+  SIGHT_WORD_ITEMS_G2,
+} from "@/data/primarySightWordsG2";
 import {
   getSightWordMasteryMap,
   isSightWordDue,
@@ -22,23 +26,33 @@ import { getCurrentGrade, getSightWordsPolicy } from "@/lib/sightWordsGradeGate"
  */
 export default function PrimarySightWords() {
   const nav = useNavigate();
+  const [search] = useSearchParams();
+  const gradeParam = Number(search.get("grade") || "");
+  const isG2 = gradeParam === 2;
   const [mastery, setMastery] = useState<SightWordMasteryMap>(new Map());
   const [loading, setLoading] = useState(true);
-  const grade = getCurrentGrade();
+  const grade = isG2 ? 2 : getCurrentGrade();
   const policy = getSightWordsPolicy(grade);
+  const GROUPS = isG2 ? SIGHT_WORD_GROUPS_G2 : SIGHT_WORD_GROUPS;
+  const ITEMS = isG2 ? SIGHT_WORD_ITEMS_G2 : SIGHT_WORD_ITEMS;
+  const learnPath = (id: string) =>
+    isG2 ? `/primary/sight-words/learn/${id}?grade=2` : `/primary/sight-words/learn/${id}`;
+  const quizPath = (id: string) =>
+    isG2 ? `/primary/sight-words/quiz/${id}?grade=2` : `/primary/sight-words/quiz/${id}`;
 
   const groupedItems = useMemo(() => {
     const byGroup = new Map<string, SightWordItem[]>();
-    SIGHT_WORD_ITEMS.forEach((it) => {
+    ITEMS.forEach((it) => {
       if (!byGroup.has(it.groupId)) byGroup.set(it.groupId, []);
       byGroup.get(it.groupId)!.push(it);
     });
     byGroup.forEach((arr) => arr.sort((a, b) => a.sortOrder - b.sortOrder));
-    return [...SIGHT_WORD_GROUPS]
+    const visible = isG2 ? GROUPS.length : policy.visibleGroupCount;
+    return [...GROUPS]
       .sort((a, b) => a.sortOrder - b.sortOrder)
-      .slice(0, policy.visibleGroupCount)
+      .slice(0, visible)
       .map((g) => ({ group: g, items: byGroup.get(g.id) ?? [] }));
-  }, [policy.visibleGroupCount]);
+  }, [policy.visibleGroupCount, isG2]);
 
   // 年级范围内的全部词(用于进度统计 / 复习池)
   const visibleItems = useMemo(
@@ -47,7 +61,9 @@ export default function PrimarySightWords() {
   );
 
   useEffect(() => {
-    document.title = "Spark 的常见小词冒险 | FluentPath";
+    document.title = isG2
+      ? "G2 常见小词冒险 (Fry's 101-200) | FluentPath"
+      : "Spark 的常见小词冒险 | FluentPath";
     let cancelled = false;
     const refresh = async () => {
       const m = await getSightWordMasteryMap();
@@ -65,7 +81,7 @@ export default function PrimarySightWords() {
       window.removeEventListener("focus", refresh);
       document.removeEventListener("visibilitychange", onVis);
     };
-  }, []);
+  }, [isG2]);
 
   const isGroupUnlocked = (idx: number) => {
     if (idx === 0) return true;
@@ -157,7 +173,7 @@ export default function PrimarySightWords() {
             label="继续学新词"
             title={`学新词 ${nextNew.word}`}
             sub={`你这组掌握了 ${currentGroup.items.filter((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2).length}/${currentGroup.items.length}`}
-            onClick={() => nav(`/primary/sight-words/learn/${nextNew.id}`)}
+            onClick={() => nav(learnPath(nextNew.id))}
           />
         )}
         {dueItems.length > 0 && (
@@ -167,7 +183,7 @@ export default function PrimarySightWords() {
             label="今日复习"
             title={`复习 ${dueItems.length} 个学过的词`}
             sub="上次没答对的,再来一次吧!"
-            onClick={() => nav("/primary/sight-words/quiz/review")}
+            onClick={() => nav(isG2 ? "/primary/sight-words/quiz/review?grade=2" : "/primary/sight-words/quiz/review")}
           />
         )}
         {currentGroup && canChallengeGroup && (
@@ -177,7 +193,7 @@ export default function PrimarySightWords() {
             label="挑战测试"
             title={`挑战 ${currentGroup.group.groupName}`}
             sub="✨ 全部答对,就能玩下一关啦!"
-            onClick={() => nav(`/primary/sight-words/quiz/${currentGroup.group.id}`)}
+            onClick={() => nav(quizPath(currentGroup.group.id))}
           />
         )}
         {!nextNew && dueItems.length === 0 && !canChallengeGroup && !loading && (
@@ -240,7 +256,7 @@ export default function PrimarySightWords() {
                     <button
                       key={it.id}
                       disabled={!unlocked}
-                      onClick={() => nav(`/primary/sight-words/learn/${it.id}`)}
+                      onClick={() => nav(learnPath(it.id))}
                       title={`${it.word} · 掌握 ${lvl}/3`}
                       className={
                         "inline-flex h-6 items-center rounded-md px-1.5 text-[11px] font-extrabold transition " +
@@ -272,6 +288,40 @@ export default function PrimarySightWords() {
           ← 回到拼读冒险
         </Link>
       </div>
+
+      {/* G1 → G2 解锁入口:G1 全部 100 词 mastery_level >= 2 时显示 */}
+      {!isG2 && (() => {
+        const allG1 = SIGHT_WORD_ITEMS;
+        const masteredAll = allG1.length > 0 && allG1.every(
+          (w) => (mastery.get(w.id)?.mastery_level ?? 0) >= 2
+        );
+        if (!masteredAll) return null;
+        return (
+          <section className="mt-6 rounded-3xl border-2 border-violet-300 bg-gradient-to-br from-violet-100 via-fuchsia-100 to-pink-100 p-5 text-center shadow-tile dark:border-violet-700 dark:from-violet-950/40 dark:via-fuchsia-950/40 dark:to-pink-950/40">
+            <div className="text-2xl">🎉</div>
+            <p className="mt-1 text-base font-extrabold text-violet-900 dark:text-violet-100">
+              G1 高频词全部掌握!
+            </p>
+            <p className="mt-1 text-xs text-violet-700 dark:text-violet-300">
+              Spark 解锁了二年级 100 个新词,继续冒险吧~
+            </p>
+            <Link
+              to="/primary/sight-words?grade=2"
+              className="mt-3 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 px-5 py-2 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
+            >
+              去解锁 G2 高频词 →
+            </Link>
+          </section>
+        );
+      })()}
+
+      {isG2 && (
+        <div className="mt-4 text-center">
+          <Link to="/primary/sight-words" className="text-xs text-muted-foreground underline-offset-2 hover:underline">
+            ← 回到 G1 高频词
+          </Link>
+        </div>
+      )}
     </main>
   );
 }

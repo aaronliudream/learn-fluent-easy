@@ -149,9 +149,17 @@ export default function PrimaryAdventure() {
 
       {/* G2 — Phonics 已开放,其他模块还在准备 */}
       {grade === 2 && (
-        <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-emerald-300 bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 p-3 text-sm text-emerald-800 dark:border-emerald-800 dark:from-emerald-950/40 dark:via-teal-950/40 dark:to-cyan-950/40 dark:text-emerald-200">
-          <span>✨ 二年级 Phonics 已开放!(25 个新音)其他模块陆续开放中…</span>
-          <Link to="/primary/phonics?grade=2" className="font-bold underline">去 G2 Phonics →</Link>
+        <div className="mb-3 space-y-2 rounded-xl border border-emerald-300 bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 p-3 text-sm text-emerald-800 dark:border-emerald-800 dark:from-emerald-950/40 dark:via-teal-950/40 dark:to-cyan-950/40 dark:text-emerald-200">
+          <div className="font-extrabold">✨ 二年级已开放 2 个模块:</div>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>📖 Phonics(25 个新音)</span>
+            <Link to="/primary/phonics?grade=2" className="font-bold underline">去 G2 Phonics →</Link>
+          </div>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>🟣 Sight Words(100 个新词)</span>
+            <Link to="/primary/sight-words?grade=2" className="font-bold underline">去 G2 高频词 →</Link>
+          </div>
+          <div className="text-xs opacity-80">📦 其他模块陆续开放中…</div>
         </div>
       )}
       {/* G3-G6 内容尚未补齐 */}

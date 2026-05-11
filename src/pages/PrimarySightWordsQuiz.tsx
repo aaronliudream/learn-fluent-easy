@@ -9,6 +9,10 @@ import {
   type SightWordItem,
 } from "@/data/primarySightWords";
 import {
+  SIGHT_WORD_GROUPS_G2,
+  SIGHT_WORD_ITEMS_G2,
+} from "@/data/primarySightWordsG2";
+import {
   bumpSightWordLevel,
   bumpSightWordMastery,
   getSightWordMasteryMap,
@@ -26,7 +30,12 @@ export default function PrimarySightWordsQuiz() {
   const { groupId } = useParams<{ groupId: string }>();
   const nav = useNavigate();
   const isReview = groupId === "review";
-  const group = isReview ? null : SIGHT_WORD_GROUPS.find((g) => g.id === groupId);
+  const group = isReview
+    ? null
+    : SIGHT_WORD_GROUPS.find((g) => g.id === groupId) ??
+      SIGHT_WORD_GROUPS_G2.find((g) => g.id === groupId) ??
+      null;
+  const ALL_ITEMS = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2];
 
   const [items, setItems] = useState<SightWordItem[]>([]);
   const [itemIdx, setItemIdx] = useState(0);
@@ -44,10 +53,10 @@ export default function PrimarySightWordsQuiz() {
     (async () => {
       if (isReview) {
         const m = await getSightWordMasteryMap();
-        const due = SIGHT_WORD_ITEMS.filter((w) => isSightWordDue(m.get(w.id)));
+        const due = ALL_ITEMS.filter((w) => isSightWordDue(m.get(w.id)));
         setItems(shuffle(due).slice(0, 8));
       } else if (group) {
-        setItems(shuffle(SIGHT_WORD_ITEMS.filter((w) => w.groupId === group.id)));
+        setItems(shuffle(ALL_ITEMS.filter((w) => w.groupId === group.id)));
       }
       setLoading(false);
     })();
@@ -232,9 +241,9 @@ type Q =
   | { kind: "context"; correctWord: string; sentenceParts: [string, string]; cn: string; options: string[] };
 
 function buildItemQuestions(item: SightWordItem): Q[] {
-  const pool = SIGHT_WORD_ITEMS.map((w) => ({ id: w.id, word: w.word }));
+  const pool = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2].map((w) => ({ id: w.id, word: w.word }));
   const distractors = buildSightWordDistractors(item.id, pool, 3);
-  const meaningPool = SIGHT_WORD_ITEMS.filter((w) => w.id !== item.id);
+  const meaningPool = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2].filter((w) => w.id !== item.id);
   const meaningDistractors = shuffle(meaningPool).slice(0, 3).map((w) => w.meaningCn);
 
   const qs: Q[] = [

@@ -104,7 +104,7 @@ export default function Me() {
                 <Icon className="size-5" />
               </div>
               <div className="min-w-0 flex-1">
-                <div className="truncate text-sm font-bold">{t.label}</div>
+                <div className="truncate text-sm font-bold"><T>{t.label}</T></div>
                 <div className="truncate text-[11px] text-muted-foreground">{t.sub}</div>
               </div>
             </Link>);

@@ -257,7 +257,7 @@ export default function GaokaoGrammarPoint() {
             <div className="text-2xl">{meta.emoji}</div>
           </MasteryRing>
           <div className="flex-1 min-w-0">
-            <div className={`text-base font-bold ${meta.color}`}>{meta.label}</div>
+            <div className={`text-base font-bold ${meta.color}`}><T>{meta.label}</T></div>
             <div className="text-[11px] text-muted-foreground">
               <T>累计 ✓</T>{mastery?.correct_count ?? 0} · ✗{mastery?.wrong_count ?? 0}
               {mastery?.due_at && new Date(mastery.due_at).getTime() <= Date.now() &&
@@ -281,7 +281,7 @@ export default function GaokaoGrammarPoint() {
                 active ? "bg-primary text-primary-foreground" : done ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300" : "bg-muted text-muted-foreground hover:bg-muted/80"}`
                 }>
                 
-                <Icon className="size-3" /> {s.label}
+                <Icon className="size-3" /> <T>{s.label}</T>
               </button>);
 
           })}
@@ -490,7 +490,7 @@ export default function GaokaoGrammarPoint() {
           <div className="text-center py-4">
             <div className="text-4xl mb-2">{LEVEL_META[mastery?.mastery_level ?? 0].emoji}</div>
             <div className={`text-xl font-bold ${LEVEL_META[mastery?.mastery_level ?? 0].color}`}>
-              <T>当前等级：</T>{LEVEL_META[mastery?.mastery_level ?? 0].label}
+              <T>当前等级：</T><T>{LEVEL_META[mastery?.mastery_level ?? 0].label}</T>
             </div>
             <p className="text-xs text-muted-foreground mt-2">
               <T>累计 ✓</T>{mastery?.correct_count ?? 0} · ✗{mastery?.wrong_count ?? 0}

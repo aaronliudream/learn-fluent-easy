@@ -188,8 +188,8 @@ export default function Talk() {
             className={`rounded-2xl bg-gradient-to-br ${d.grad} p-4 text-white shadow-tile transition hover:-translate-y-0.5`}>
             
               <d.icon className="size-6" />
-              <div className="mt-2 text-base font-extrabold leading-tight">{d.title}</div>
-              <div className="mt-0.5 text-[11px] opacity-90">{d.desc}</div>
+              <div className="mt-2 text-base font-extrabold leading-tight"><T>{d.title}</T></div>
+              <div className="mt-0.5 text-[11px] opacity-90"><T>{d.desc}</T></div>
             </Link>
           )}
         </section>

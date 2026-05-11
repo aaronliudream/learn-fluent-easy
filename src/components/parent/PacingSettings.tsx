@@ -128,8 +128,8 @@ export default function PacingSettings() {
             <div className={cn("inline-flex rounded-full bg-gradient-to-r px-2 py-0.5 text-[10px] font-extrabold text-white", p.color)}>
               {p.n} <T>课/周</T>
             </div>
-            <div className="mt-1.5 text-sm font-extrabold">{p.label}</div>
-            <div className="text-[10px] text-muted-foreground">{p.hint}</div>
+            <div className="mt-1.5 text-sm font-extrabold"><T>{p.label}</T></div>
+            <div className="text-[10px] text-muted-foreground"><T>{p.hint}</T></div>
           </button>
         )}
       </div>
@@ -202,7 +202,7 @@ export default function PacingSettings() {
             {schedule.map((week) =>
           <div key={week.label} className="rounded-xl border border-border bg-card p-2.5">
                 <div className="mb-1.5 flex items-center justify-between text-[11px] font-bold">
-                  <span>{week.label}</span>
+                  <span><T>{week.label}</T></span>
                   <span className="text-muted-foreground">{week.items.length} <T>课 · 约</T> {week.items.reduce((a, x) => a + (x.lesson.estimated_minutes || 8), 0)} <T>分钟</T></span>
                 </div>
                 <div className="space-y-1">

@@ -117,8 +117,8 @@ export default function QuizPacingSettings() {
             )}>
             
               <div className="text-lg font-black text-pink-600">{p.n}</div>
-              <div className="text-xs font-extrabold">{p.label}</div>
-              <div className="text-[10px] text-muted-foreground">{p.hint}</div>
+              <div className="text-xs font-extrabold"><T>{p.label}</T></div>
+              <div className="text-[10px] text-muted-foreground"><T>{p.hint}</T></div>
             </button>
           )}
         </div>
@@ -143,8 +143,8 @@ export default function QuizPacingSettings() {
                 )}>
                 
                 <div className="text-lg">{p.emoji}</div>
-                <div className="text-xs font-extrabold">{p.label}</div>
-                <div className="text-[10px] text-muted-foreground">{p.hint}</div>
+                <div className="text-xs font-extrabold"><T>{p.label}</T></div>
+                <div className="text-[10px] text-muted-foreground"><T>{p.hint}</T></div>
               </button>);
 
           })}

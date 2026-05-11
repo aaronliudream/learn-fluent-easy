@@ -430,7 +430,7 @@ export default function GaokaoReadingArticle() {
             </Link>
             <div className="flex-1 min-w-0">
               <div className="text-xs text-muted-foreground">{article.sub_band} · {article.genre_label}</div>
-              <div className="text-sm font-semibold truncate">{article.title}</div>
+              <div className="text-sm font-semibold truncate"><T>{article.title}</T></div>
             </div>
             <div className={cn(
               "hidden sm:flex items-center gap-1 rounded-md border px-2 py-1 text-[11px] font-bold tabular-nums",
@@ -491,7 +491,7 @@ export default function GaokaoReadingArticle() {
                   A+</button>
               </div>
             </div>
-            <h1 className="mb-3 text-lg font-bold leading-snug">{article.title}</h1>
+            <h1 className="mb-3 text-lg font-bold leading-snug"><T>{article.title}</T></h1>
             <div
               className="prose prose-slate max-w-none space-y-3 leading-[1.85] text-foreground select-text"
               style={{ fontSize: `${fontScale}rem` }}>
@@ -663,8 +663,8 @@ export default function GaokaoReadingArticle() {
       <main className="mx-auto max-w-3xl px-5 py-8 min-h-screen">
         <div className="text-center mb-6">
           <div className="text-6xl mb-2">{feedback.emoji}</div>
-          <h1 className={cn("text-2xl font-bold", feedback.color)}>{feedback.title}</h1>
-          <p className="text-sm text-muted-foreground mt-1">{feedback.desc}</p>
+          <h1 className={cn("text-2xl font-bold", feedback.color)}><T>{feedback.title}</T></h1>
+          <p className="text-sm text-muted-foreground mt-1"><T>{feedback.desc}</T></p>
           <div className="mt-3 flex justify-center">
             <ShareButton
               variant="cta"
@@ -711,7 +711,7 @@ export default function GaokaoReadingArticle() {
                 <span className={cn("text-2xl font-bold tabular-nums", wpmTier.color)}>{wpm}</span>
                 <span className="text-xs text-muted-foreground">WPM</span>
               </div>
-              <div className={cn("text-[10px] mt-0.5 font-medium", wpmTier.color)}>{wpmTier.label}</div>
+              <div className={cn("text-[10px] mt-0.5 font-medium", wpmTier.color)}><T>{wpmTier.label}</T></div>
             </div>
             <div className="rounded-xl bg-card border p-3">
               <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
@@ -720,7 +720,7 @@ export default function GaokaoReadingArticle() {
               <div className="flex items-baseline gap-1">
                 <span className={cn("text-2xl font-bold tabular-nums", effTier.color)}>{efficiency}</span>
               </div>
-              <div className={cn("text-[10px] mt-0.5 font-medium", effTier.color)}>{effTier.label}</div>
+              <div className={cn("text-[10px] mt-0.5 font-medium", effTier.color)}><T>{effTier.label}</T></div>
             </div>
             <div className="rounded-xl bg-card border p-3 col-span-2 sm:col-span-1">
               <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-1">
@@ -871,7 +871,7 @@ function ReviewStage({
           </Link>
           <div className="flex-1 min-w-0">
             <div className="text-xs text-muted-foreground"><T>📖 精读复盘</T></div>
-            <div className="text-sm font-semibold truncate">{article.title}</div>
+            <div className="text-sm font-semibold truncate"><T>{article.title}</T></div>
           </div>
         </div>
         <div className="mx-auto max-w-5xl px-4 flex gap-1 -mb-px overflow-x-auto">
@@ -894,7 +894,7 @@ function ReviewStage({
                 )}>
                 
                 <Icon className="size-3.5" />
-                {t.label}
+                <T>{t.label}</T>
               </button>);
 
           })}

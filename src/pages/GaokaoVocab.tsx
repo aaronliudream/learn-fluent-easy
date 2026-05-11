@@ -947,7 +947,7 @@ function CurriculumBrowser({
             "border-border bg-card text-muted-foreground hover:border-primary/40"
           )}>
           
-            {t.label}
+            <T>{t.label}</T>
           </button>
         )}
       </div>

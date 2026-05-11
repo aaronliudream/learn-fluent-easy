@@ -155,7 +155,7 @@ export default function PrimaryReadingPlay() {
                 !done && !active && "bg-muted text-muted-foreground"
               )}>
                 <span>{s.emoji}</span>
-                <span className="hidden sm:inline">{s.title}</span>
+                <span className="hidden sm:inline"><T>{s.title}</T></span>
               </div>
               {i < STEPS.length - 1 && <ChevronRight className="size-3 text-muted-foreground" />}
             </div>);

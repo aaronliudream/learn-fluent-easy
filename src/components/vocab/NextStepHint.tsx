@@ -101,7 +101,7 @@ export default function NextStepHint({
         onClick={() => onPickMode(rec.mode)}
         className="mt-2 inline-flex w-full items-center justify-between gap-2 rounded-xl bg-rose-500 px-3 py-2 text-sm font-extrabold text-white transition hover:bg-rose-600">
         
-          <span>{rec.label}</span>
+          <span><T>{rec.label}</T></span>
           <ArrowRight className="size-4" />
         </button>
       }

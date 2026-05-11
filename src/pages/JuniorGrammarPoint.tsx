@@ -273,7 +273,7 @@ export default function JuniorGrammarPoint() {
                 )}>
                 
                   <span>{meta.emoji}</span>
-                  <span>{meta.label}</span>
+                  <span><T>{meta.label}</T></span>
                 </button>
                 {i < availableStages.length - 1 &&
               <span className="text-muted-foreground/40 text-xs">→</span>

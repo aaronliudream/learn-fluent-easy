@@ -78,7 +78,7 @@ export default function GaokaoGrade() {
                 <Icon className="size-6" />
               </div>
               <div className="relative flex-1 min-w-0">
-                <div className="text-base font-extrabold leading-tight">{s.title}</div>
+                <div className="text-base font-extrabold leading-tight"><T>{s.title}</T></div>
                 <div className="mt-0.5 text-xs opacity-90">{s.soon ? "敬请期待" : s.desc}</div>
               </div>
               {s.soon && <Lock className="size-4 opacity-80" />}

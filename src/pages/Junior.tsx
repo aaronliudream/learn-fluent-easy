@@ -85,7 +85,7 @@ export default function Junior() {
             "bg-muted text-muted-foreground hover:bg-muted/80"}`
             }>
             
-              {f.label}
+              <T>{f.label}</T>
             </button>
           )}
         </div>
@@ -105,8 +105,8 @@ export default function Junior() {
                 {Icon ? <Icon className="size-6" /> : <span>{m.icon as string}</span>}
               </div>
               <div className="relative flex-1 min-w-0">
-                <div className={`${m.hero ? "text-lg" : "text-base"} font-extrabold leading-tight`}>{m.title}</div>
-                <div className="mt-0.5 text-xs opacity-90">{m.desc}</div>
+                <div className={`${m.hero ? "text-lg" : "text-base"} font-extrabold leading-tight`}><T>{m.title}</T></div>
+                <div className="mt-0.5 text-xs opacity-90"><T>{m.desc}</T></div>
               </div>
             </Link>);
 

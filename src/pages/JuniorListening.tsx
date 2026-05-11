@@ -217,7 +217,7 @@ export default function JuniorListening() {
             <button key={f.key} onClick={() => setFilter(f.key)}
             className={cn("rounded-full border-2 px-3 py-1 text-xs font-bold transition",
             active ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/40")}>
-              <span className="mr-1">{f.emoji}</span>{f.label}
+              <span className="mr-1">{f.emoji}</span><T>{f.label}</T>
               <span className="ml-1 opacity-70">({n})</span>
             </button>);
 
@@ -258,8 +258,8 @@ export default function JuniorListening() {
             className="flex w-full items-baseline justify-between gap-2 text-left">
               <h2 className="text-base font-extrabold">
                 {isCollapsed ? <ChevronRight className="inline size-4" /> : <ChevronDown className="inline size-4" />}
-                {sec.emoji} {sec.label}
-                <span className="ml-2 text-[11px] font-normal text-muted-foreground">{list.length} <T>段 ·</T> {sec.desc}</span>
+                {sec.emoji} <T>{sec.label}</T>
+                <span className="ml-2 text-[11px] font-normal text-muted-foreground">{list.length} <T>段 ·</T> <T>{sec.desc}</T></span>
               </h2>
             </button>
 

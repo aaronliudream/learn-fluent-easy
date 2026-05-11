@@ -259,7 +259,7 @@ export default function PrimaryStoryBooks() {
         {grouped.map((g) =>
           <div key={g.lv}>
             <div className="mb-2 flex items-end gap-2">
-              <span className="text-sm font-extrabold text-amber-100">{g.meta.label}</span>
+              <span className="text-sm font-extrabold text-amber-100"><T>{g.meta.label}</T></span>
               <span className="text-xs font-bold text-amber-200/70">· {g.items.length} <T>本 ·</T> {g.meta.sub}</span>
             </div>
             {/* 书架样式:底部一条木色横条 + Spark 角落小头像 */}

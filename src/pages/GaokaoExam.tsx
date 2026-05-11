@@ -84,8 +84,8 @@ export default function GaokaoExam() {
                 <Icon className="size-6" />
               </div>
               <div className="relative flex-1 min-w-0">
-                <div className="text-base font-extrabold leading-tight">{s.title}</div>
-                <div className="mt-0.5 text-xs opacity-90">{s.desc}</div>
+                <div className="text-base font-extrabold leading-tight"><T>{s.title}</T></div>
+                <div className="mt-0.5 text-xs opacity-90"><T>{s.desc}</T></div>
               </div>
             </Link>);
 

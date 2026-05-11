@@ -358,7 +358,7 @@ function SkillCard({
           {customStats?.map((s) =>
         <div key={s.label}>
               <div className={s.color}>{s.value}</div>
-              <div className="text-[9px] font-normal text-muted-foreground">{s.label}</div>
+              <div className="text-[9px] font-normal text-muted-foreground"><T>{s.label}</T></div>
             </div>
         )}
         </div>

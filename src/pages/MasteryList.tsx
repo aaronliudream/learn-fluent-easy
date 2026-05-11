@@ -100,8 +100,8 @@ export default function MasteryList() {
       <header className="mb-4 flex items-center gap-3">
         <Icon className={cn("size-6", meta.tone)} />
         <div>
-          <h1 className="text-xl font-medium">{meta.title}</h1>
-          <p className="text-xs text-muted-foreground">{meta.subtitle}</p>
+          <h1 className="text-xl font-medium"><T>{meta.title}</T></h1>
+          <p className="text-xs text-muted-foreground"><T>{meta.subtitle}</T></p>
         </div>
       </header>
 
@@ -119,7 +119,7 @@ export default function MasteryList() {
           )}>
           
             <span className={cn("size-1.5 rounded-full", META[s].dot)} />
-            {META[s].title}
+            <T>{META[s].title}</T>
           </button>
         )}
       </div>

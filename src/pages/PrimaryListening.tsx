@@ -155,7 +155,7 @@ export default function PrimaryListening() {
         <div key={g.t}>
             <div className="mb-2 flex items-center gap-2 text-sm font-extrabold">
               <span className="text-lg">{g.meta.emoji}</span>
-              <span>{g.meta.label}</span>
+              <span><T>{g.meta.label}</T></span>
               <span className="text-xs font-bold text-muted-foreground">· {g.items.length} <T>个对话</T></span>
             </div>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">

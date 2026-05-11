@@ -339,10 +339,10 @@ function MistakeCard({
       {/* Module strip */}
       <div className={`flex items-center gap-2 bg-gradient-to-r ${meta.color} px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white/95`}>
         <span>{meta.emoji}</span>
-        <span>{meta.label}</span>
+        <span><T>{meta.label}</T></span>
         {m.source_label && <span className="ml-1 truncate font-normal opacity-80">· {m.source_label}</span>}
         <span className={`ml-auto rounded-full px-2 py-0.5 text-[10px] ${dueIn.urgent ? "bg-white text-rose-600" : "bg-white/20"}`}>
-          {dueIn.text}
+          <T>{dueIn.text}</T>
         </span>
       </div>
 
@@ -489,9 +489,9 @@ function TopicGroups({ items, onPick }: {items: Mistake[];onPick: (moduleKey: st
             className="group rounded-2xl border border-border bg-card p-4 text-left transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md">
             
             <div className={`mb-2 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r ${meta.color} px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white/95`}>
-              <span>{meta.emoji}</span><span>{meta.label}</span>
+              <span>{meta.emoji}</span><span><T>{meta.label}</T></span>
             </div>
-            <div className="text-base font-extrabold leading-snug">{g.label}</div>
+            <div className="text-base font-extrabold leading-snug"><T>{g.label}</T></div>
             <div className="mt-3 h-2 overflow-hidden rounded-full bg-muted">
               <div className="h-full bg-gradient-to-r from-primary to-emerald-500 transition-all" style={{ width: `${g.mastery}%` }} />
             </div>

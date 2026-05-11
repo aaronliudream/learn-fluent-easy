@@ -132,7 +132,7 @@ export default function PrimaryLesson() {
               active && `bg-gradient-to-r ${meta.color} text-white shadow`,
               !done && !active && "bg-muted text-muted-foreground"
               )}>
-                <meta.icon className="size-3.5" /> {meta.label}
+                <meta.icon className="size-3.5" /> <T>{meta.label}</T>
               </div>
             </div>);
 

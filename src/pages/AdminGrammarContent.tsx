@@ -508,7 +508,7 @@ export default function AdminGrammarContent() {
                           <div className="flex items-center gap-2 flex-wrap">
                             <span className="font-bold text-sm">{pt.title}</span>
                             <span className={cn("inline-block rounded px-1.5 py-0.5 text-[10px] font-bold tabular-nums", meta.color)}>
-                              {meta.label}
+                              <T>{meta.label}</T>
                             </span>
                             <span className="text-[10px] text-muted-foreground">
                               CEFR {pt.cefr} <T>· 初</T>{pt.grade - 6}

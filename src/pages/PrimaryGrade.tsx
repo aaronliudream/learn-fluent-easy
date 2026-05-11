@@ -84,7 +84,7 @@ function RadarChart({ scores }: {scores: {label: string;value: number;}[];}) {
         const [x, y] = [cx + Math.cos(angle(i)) * (r + 12), cy + Math.sin(angle(i)) * (r + 12)];
         return (
           <text key={i} x={x} y={y} textAnchor="middle" dominantBaseline="middle" className="fill-foreground text-[9px] font-bold">
-            {s.label}
+            <T>{s.label}</T>
           </text>);
 
       })}
@@ -216,7 +216,7 @@ export default function PrimaryGrade() {
       }
 
       {/* Phase 1: 删除"今日 10 词"独立卡 + 6 能力按钮 → 全部并入未来的冒险流。
-           这个页面现在只剩"完整学习地图"+"成就",作为详情页存在。 */}
+            这个页面现在只剩"完整学习地图"+"成就",作为详情页存在。 */}
 
       {/* 🗺 学习地图（按单元分岛） — 主要进度可视化 */}
       {!loading && units.length > 0 &&
@@ -288,8 +288,8 @@ export default function PrimaryGrade() {
               return (
                 <div key={b.key} title={b.hint} className={`rounded-xl border-2 p-2 text-center transition ${got ? "border-amber-300 bg-gradient-to-br from-amber-50 to-orange-50 dark:border-amber-700 dark:from-amber-950/30 dark:to-orange-950/30" : "border-border bg-muted/30 opacity-50 grayscale"}`}>
                   <div className="text-xl">{b.emoji}</div>
-                  <div className="mt-0.5 text-[10px] font-extrabold">{b.title}</div>
-                  <div className="text-[9px] text-muted-foreground leading-tight">{b.hint}</div>
+                  <div className="mt-0.5 text-[10px] font-extrabold"><T>{b.title}</T></div>
+                  <div className="text-[9px] text-muted-foreground leading-tight"><T>{b.hint}</T></div>
                 </div>);
 
             })}
@@ -303,7 +303,7 @@ export default function PrimaryGrade() {
               <div className="mt-1 grid grid-cols-5 gap-1 text-center">
                 {radarScores.map((s) =>
                 <div key={s.label} className="rounded bg-card px-0.5 py-0.5">
-                    <div className="text-[9px] font-bold text-muted-foreground">{s.label}</div>
+                    <div className="text-[9px] font-bold text-muted-foreground"><T>{s.label}</T></div>
                     <div className="text-[10px] font-extrabold text-primary">{Math.round(s.value * 100)}%</div>
                   </div>
                 )}

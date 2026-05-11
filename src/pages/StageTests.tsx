@@ -97,7 +97,7 @@ export default function StageTests() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-xs font-bold text-muted-foreground">{scope.name}</span>
+                        <span className="text-xs font-bold text-muted-foreground"><T>{scope.name}</T></span>
                         {t.pass_count > 0 &&
                       <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-700">
                             <CheckCircle2 className="size-3" /> <T>已通过</T> {t.pass_count} <T>次</T>

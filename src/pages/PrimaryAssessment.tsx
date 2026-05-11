@@ -358,7 +358,7 @@ export default function PrimaryAssessment() {
               <h1 className="mt-1 text-2xl font-black md:text-3xl">{childName}</h1>
               <div className={cn("mx-auto mt-3 inline-block rounded-2xl bg-gradient-to-br px-6 py-3 text-white shadow-md", m.tone)}>
                 <div className="text-5xl">{m.emoji}</div>
-                <div className="mt-1 text-sm font-extrabold">{m.label}</div>
+                <div className="mt-1 text-sm font-extrabold"><T>{m.label}</T></div>
               </div>
               <div className="mt-3 text-4xl font-black tabular-nums">{pct}<span className="text-xl text-muted-foreground">/100</span></div>
               <div className="mt-1 text-xs text-muted-foreground">
@@ -390,11 +390,11 @@ export default function PrimaryAssessment() {
                 className="block rounded-xl border-l-4 border-l-amber-500 bg-amber-50/60 p-3 transition hover:bg-amber-100/60 dark:bg-amber-950/30 dark:hover:bg-amber-900/30">
                       <div className="flex items-center justify-between gap-2">
                         <div>
-                          <div className="text-xs font-extrabold">{r.title}</div>
+                          <div className="text-xs font-extrabold"><T>{r.title}</T></div>
                           <div className="mt-0.5 text-[11px] text-muted-foreground">{r.reason}</div>
                         </div>
                         <span className="inline-flex items-center gap-1 text-[11px] font-extrabold text-amber-700 dark:text-amber-300">
-                          {r.cta} <ChevronRight className="size-3" />
+                          <T>{r.cta}</T> <ChevronRight className="size-3" />
                         </span>
                       </div>
                     </Link>

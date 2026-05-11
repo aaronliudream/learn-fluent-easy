@@ -398,7 +398,7 @@ export default function WordQuest({
               {STAGES.map((s) =>
               <li key={s.n} className="flex items-center gap-2 rounded-lg bg-background px-2 py-1.5">
                   <span className="text-base">{s.emoji}</span>
-                  <span className="font-bold">{s.name}</span>
+                  <span className="font-bold"><T>{s.name}</T></span>
                 </li>
               )}
             </ol>
@@ -632,8 +632,8 @@ function StagePlayer({
       <div className="mb-3 flex items-center gap-2">
         <span className="text-2xl">{stageMeta.emoji}</span>
         <div>
-          <div className="text-base font-extrabold">{stageMeta.name}</div>
-          <div className="text-[11px] text-muted-foreground">{stageMeta.hint}</div>
+          <div className="text-base font-extrabold"><T>{stageMeta.name}</T></div>
+          <div className="text-[11px] text-muted-foreground"><T>{stageMeta.hint}</T></div>
         </div>
         {stage === 5 &&
         <span className="ml-auto rounded-full bg-red-500 px-2 py-0.5 text-[11px] font-extrabold text-white tabular-nums">

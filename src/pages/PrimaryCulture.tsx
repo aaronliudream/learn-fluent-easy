@@ -241,7 +241,7 @@ export default function PrimaryCulture() {
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1 text-[10px] font-extrabold uppercase tracking-wider text-rose-600 dark:text-rose-300">
-              <CalendarDays className="size-3" /> <T>今日推荐 ·</T> {seasonal!.label}
+              <CalendarDays className="size-3" /> <T>今日推荐 ·</T> <T>{seasonal!.label}</T>
             </div>
             <div className="truncate text-base font-extrabold text-rose-900 dark:text-rose-100">
               📣 {seasonalCard.title_cn} · {seasonalCard.title_en}
@@ -294,7 +294,7 @@ export default function PrimaryCulture() {
               filter === key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-foreground hover:border-primary/50"}`
               }>
               
-              {cat.emoji} {cat.label} · {done}/{count}
+              {cat.emoji} <T>{cat.label}</T> · {done}/{count}
             </button>);
 
         })}
@@ -326,7 +326,7 @@ export default function PrimaryCulture() {
                 <div className="mt-2 text-sm font-extrabold leading-tight">{c.title_cn}</div>
                 <div className="mt-0.5 text-[11px] font-bold opacity-90">{c.title_en}</div>
                 <div className="mt-2 inline-block rounded-full bg-white/25 px-2 py-0.5 text-[9px] font-bold backdrop-blur-sm">
-                  {cat.emoji} {cat.label}
+                  {cat.emoji} <T>{cat.label}</T>
                 </div>
               </button>);
 
@@ -362,7 +362,7 @@ export default function PrimaryCulture() {
               </div>
               <div className="mt-2 flex items-center gap-1.5 text-base font-extrabold">
                 {(() => {const I = STEPS[stepIdx].icon;return <I className="size-5" />;})()}
-                {STEPS[stepIdx].label}
+                <T>{STEPS[stepIdx].label}</T>
               </div>
             </div>
 
@@ -411,7 +411,7 @@ export default function PrimaryCulture() {
                     <div className="rounded-2xl border-2 border-rose-200 bg-rose-50 p-3 text-center dark:border-rose-800 dark:bg-rose-950/30">
                       <div className="text-[10px] font-bold uppercase text-rose-600 dark:text-rose-400"><T>🇨🇳 中国</T></div>
                       <div className="mt-2 text-4xl">{openCard.cn_compare?.emoji}</div>
-                      <div className="mt-1 text-sm font-extrabold">{openCard.cn_compare?.label}</div>
+                      <div className="mt-1 text-sm font-extrabold"><T>{openCard.cn_compare?.label}</T></div>
                       <p className="mt-1 text-[11px] leading-snug text-rose-900 dark:text-rose-200">{openCard.cn_compare?.desc}</p>
                     </div>
                     <div className="rounded-2xl border-2 border-sky-200 bg-sky-50 p-3 text-center dark:border-sky-800 dark:bg-sky-950/30">

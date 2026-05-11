@@ -191,7 +191,7 @@ export default function LearningCenter() {
             const isNow = t.key === "now";
             return (
               <div key={t.key} className="flex flex-1 flex-col items-center px-1">
-                <div className={`text-[10px] ${isNow ? "font-medium text-foreground" : "text-muted-foreground"}`}>{t.label}</div>
+                <div className={`text-[10px] ${isNow ? "font-medium text-foreground" : "text-muted-foreground"}`}><T>{t.label}</T></div>
                 <div className={`mt-0.5 text-base ${isNow ? "font-medium text-gps-master" : "text-foreground/80"}`}>{t.score}%</div>
                 {isNow && <MapPin className="mt-0.5 size-3 text-gps-master" />}
                 {!isNow && i < timeline.length - 1 && <ChevronRight className="mt-1 size-3 text-muted-foreground/40" />}
@@ -277,7 +277,7 @@ function StageView({
               <div className="flex items-center gap-3">
                 <Ring size={64} stroke={8} score={c.score_pct} c={c} />
                 <div className="min-w-0 flex-1">
-                  <div className="text-sm font-bold">{s.label}</div>
+                  <div className="text-sm font-bold"><T>{s.label}</T></div>
                   <div className="text-[10px] text-muted-foreground">{s.sub}</div>
                 </div>
               </div>
@@ -292,7 +292,7 @@ function StageView({
       {openStage &&
       <div className="overflow-hidden rounded-2xl border border-border bg-card">
           <div className="border-b border-border bg-muted/30 px-4 py-2 text-[11px] font-medium text-muted-foreground">
-            {STAGES.find((s) => s.key === openStage)!.label} <T>· 各年级</T>
+            <T>{STAGES.find((s) => s.key === openStage)!.label}</T> <T>· 各年级</T>
           </div>
           <div className="divide-y divide-border">
             {STAGES.find((s) => s.key === openStage)!.grades.map((g) => {
@@ -312,7 +312,7 @@ function StageView({
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline justify-between text-[11px]">
                         <span className="font-medium tabular-nums">{Math.round(agg.score_pct)}%</span>
-                        <span className="text-muted-foreground"><T>占</T>{STAGES.find((s) => s.key === openStage)!.label} {inStagePct}%</span>
+                        <span className="text-muted-foreground"><T>占</T><T>{STAGES.find((s) => s.key === openStage)!.label}</T> {inStagePct}%</span>
                       </div>
                       <MasteryBar className="mt-1" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} height={6} />
                       <MasteryCounts className="mt-1 text-[10px]" master={agg.master} fluent={agg.fluent} weak={agg.weak} none={agg.none} />
@@ -323,7 +323,7 @@ function StageView({
                   {expanded &&
                 <div className="space-y-1.5 border-t border-border bg-muted/20 px-4 py-3">
                       <p className="mb-1 text-[10px] text-muted-foreground">
-                        <T>按 2022 新课标 ·</T> {STAGES.find((s) => s.key === openStage)!.label}<T>英语模块</T>
+                        <T>按 2022 新课标 ·</T> <T>{STAGES.find((s) => s.key === openStage)!.label}</T><T>英语模块</T>
                       </p>
                       {padCurriculum(openStage, g, stageScopes).map((m) =>
                   <ModuleScopeRow
@@ -427,7 +427,7 @@ function ModuleView({
                   
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline justify-between text-[12px]">
-                        <span className="font-bold">{s.label}</span>
+                        <span className="font-bold"><T>{s.label}</T></span>
                         {notInCurriculum ?
                       <span className="rounded-full bg-muted px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
                             <T>课标未开设</T>

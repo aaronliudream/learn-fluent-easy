@@ -530,7 +530,7 @@ export default function GaokaoReading() {
                   </div>
                 }
               </div>
-              <div className="font-bold text-base leading-tight">{b.label}</div>
+              <div className="font-bold text-base leading-tight"><T>{b.label}</T></div>
               <div className={cn("text-[10px] leading-tight", active ? "text-white/85" : "text-muted-foreground")}>{b.sub}</div>
 
               {/* 进度数字行 */}
@@ -581,7 +581,7 @@ export default function GaokaoReading() {
               statusFilter === s.k ? "bg-foreground text-background" : "bg-muted text-muted-foreground hover:bg-muted/80"
             )}>
               {s.dot && <span className={cn("size-1.5 rounded-full", s.dot)} />}
-              {s.label}
+              <T>{s.label}</T>
             </button>
             )}
         </div>
@@ -589,7 +589,7 @@ export default function GaokaoReading() {
 
       {/* 当前板块说明 */}
       <div className="mb-3 flex items-center justify-between">
-        <h2 className="text-base font-bold">{currentBand.label} · {currentBand.sub}</h2>
+        <h2 className="text-base font-bold"><T>{currentBand.label}</T> · {currentBand.sub}</h2>
         <span className="text-xs text-muted-foreground">{current.length} <T>篇</T></span>
       </div>
 
@@ -744,7 +744,7 @@ function EmptyHint({
             <div className="text-[11px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400">
               <T>你有</T> {totalTried} <T>篇需要重做</T>
             </div>
-            <div className="mt-0.5 text-base font-bold"><T>先攻克薄弱点 ·</T> {weakBand.label}</div>
+            <div className="mt-0.5 text-base font-bold"><T>先攻克薄弱点 ·</T> <T>{weakBand.label}</T></div>
             <div className="mt-0.5 text-xs text-muted-foreground"><T>这些题你只对了不到 60%，重做一次记得更牢</T></div>
           </div>
           <ChevronRight className="size-5 text-muted-foreground group-hover:translate-x-1 group-hover:text-orange-500 transition" />
@@ -765,7 +765,7 @@ function EmptyHint({
           </div>
           <div className="flex-1 min-w-0">
             <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><T>最近在练</T></div>
-            <div className="mt-0.5 text-base font-bold"><T>回到</T> {recentBand.label} · {recentBand.sub}</div>
+            <div className="mt-0.5 text-base font-bold"><T>回到</T> <T>{recentBand.label}</T> · {recentBand.sub}</div>
             <div className="mt-0.5 text-xs text-muted-foreground"><T>已完成</T> {bandStats[recentBand.id]?.done ?? 0} / {bandStats[recentBand.id]?.total ?? 0} <T>篇</T></div>
           </div>
           <ChevronRight className="size-5 text-muted-foreground group-hover:translate-x-1 group-hover:text-primary transition" />
@@ -792,7 +792,7 @@ function EmptyHint({
             b.gradient
           )}>
           
-            {b.label}
+            <T>{b.label}</T>
           </button>
         )}
       </div>

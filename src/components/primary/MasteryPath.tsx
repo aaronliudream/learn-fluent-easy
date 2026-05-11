@@ -129,8 +129,8 @@ export default function MasteryPath({ grade, isAll }: {grade: number;isAll?: boo
                   {st === "done" ? <Check className="size-3 text-emerald-600" /> : st === "locked" ? <Lock className="size-3" /> : i + 1}
                 </div>
                 <div className="text-2xl">{s.emoji}</div>
-                <div className="mt-1 text-sm font-extrabold">{s.label}</div>
-                <div className="text-[10px] text-muted-foreground">{s.desc}</div>
+                <div className="mt-1 text-sm font-extrabold"><T>{s.label}</T></div>
+                <div className="text-[10px] text-muted-foreground"><T>{s.desc}</T></div>
                 {skill && skill.attempts > 0 &&
                 <div className={cn(
                   "mt-1 text-[10px] font-bold",

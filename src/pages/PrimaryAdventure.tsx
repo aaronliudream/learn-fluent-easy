@@ -277,7 +277,7 @@ export default function PrimaryAdventure() {
               <DropdownMenuItem key={m.to} asChild>
                   <Link to={m.to} className="cursor-pointer">
                     <span className="mr-2">{m.emoji}</span>
-                    {m.label}
+                    <T>{m.label}</T>
                   </Link>
                 </DropdownMenuItem>
               )}
@@ -319,7 +319,7 @@ export default function PrimaryAdventure() {
             </div>
             <div className="mt-1 flex items-center gap-2">
               <span className="text-3xl">{nextStep.emoji}</span>
-              <h1 className="text-xl font-extrabold leading-tight text-rose-900 dark:text-rose-100">{nextStep.title}</h1>
+              <h1 className="text-xl font-extrabold leading-tight text-rose-900 dark:text-rose-100"><T>{nextStep.title}</T></h1>
             </div>
             <div className="mt-1 text-xs font-bold text-muted-foreground"><T>约</T> {nextStep.estMinutes} <T>分钟</T></div>
             <button
@@ -380,7 +380,7 @@ export default function PrimaryAdventure() {
             className="rounded-2xl border border-border bg-muted/40 p-3 text-center transition hover:-translate-y-0.5 hover:bg-muted">
             
               <div className="text-2xl">{c.emoji}</div>
-              <div className="mt-1 text-sm font-bold text-foreground">{c.label}</div>
+              <div className="mt-1 text-sm font-bold text-foreground"><T>{c.label}</T></div>
               <div className="mt-0.5 text-[11px] text-muted-foreground">
                 {c.row ? `${c.row.done} / ${c.row.total}` : "—"}
               </div>
@@ -415,7 +415,7 @@ export default function PrimaryAdventure() {
                     <span className="w-5 text-center">
                       {done ? <Check className="mx-auto size-4 stroke-emerald-600" /> : isCurrent ? "📍" : <span className="opacity-40">{step.emoji}</span>}
                     </span>
-                    <span className="flex-1 truncate">{step.title}</span>
+                    <span className="flex-1 truncate"><T>{step.title}</T></span>
                     {isCurrent && <span className="text-[10px] font-bold uppercase tracking-wider text-rose-500"><T>当前</T></span>}
                   </button>
                 </li>);
@@ -448,7 +448,7 @@ export default function PrimaryAdventure() {
             return (
               <li key={r.label} className="flex h-7 items-center gap-2 text-[12px]">
                     <span className="w-4 text-center">{r.emoji}</span>
-                    <span className="w-16 shrink-0 font-bold">{r.label}</span>
+                    <span className="w-16 shrink-0 font-bold"><T>{r.label}</T></span>
                     <div className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
                       <div className={`h-full bg-gradient-to-r ${r.color} transition-all`} style={{ width: `${pct}%` }} />
                     </div>
@@ -465,7 +465,7 @@ export default function PrimaryAdventure() {
 
       {pet &&
       <p className="mt-4 text-center text-xs font-bold text-muted-foreground">
-          {moonTitle(pet.bond).emoji} Spark · {moonTitle(pet.bond).label} · {pet.bond}/100
+          {moonTitle(pet.bond).emoji} Spark · <T>{moonTitle(pet.bond).label}</T> · {pet.bond}/100
         </p>
       }
 

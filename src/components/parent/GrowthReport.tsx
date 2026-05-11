@@ -386,7 +386,7 @@ export default function GrowthReport() {
             <div className={cn("rounded-2xl bg-gradient-to-br p-4 text-center text-white shadow-lg", grade5.tone)}>
               <div className="text-[10px] font-bold uppercase tracking-widest opacity-90"><T>总评等级</T></div>
               <div className="text-4xl font-black md:text-5xl">{grade5.letter}</div>
-              <div className="mt-0.5 text-[10px] font-bold opacity-90">{grade5.desc}</div>
+              <div className="mt-0.5 text-[10px] font-bold opacity-90"><T>{grade5.desc}</T></div>
             </div>
           </div>
         </header>

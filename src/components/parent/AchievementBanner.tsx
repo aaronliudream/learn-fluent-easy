@@ -59,7 +59,7 @@ export default function AchievementBanner({ defaultStage = "primary" as Stage }:
                   "inline-flex items-center gap-1 rounded-full border-2 px-3 py-1 text-xs font-extrabold transition",
                   s === stage ? "border-violet-500 bg-violet-500 text-white shadow" : "border-border bg-card hover:border-violet-300"
                 )}>
-                <M.icon className="size-3.5" /> {M.label}</button>);
+                <M.icon className="size-3.5" /> <T>{M.label}</T></button>);
 
           })}
         </div>

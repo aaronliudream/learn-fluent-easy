@@ -113,8 +113,8 @@ export default function LearningCenterList() {
       <header className="mb-4 flex items-center gap-3">
         <Icon className={cn("size-6", meta.tone)} />
         <div>
-          <h1 className="text-xl font-extrabold">{meta.title}</h1>
-          <p className="text-xs text-muted-foreground">{meta.subtitle}</p>
+          <h1 className="text-xl font-extrabold"><T>{meta.title}</T></h1>
+          <p className="text-xs text-muted-foreground"><T>{meta.subtitle}</T></p>
         </div>
       </header>
 
@@ -131,7 +131,7 @@ export default function LearningCenterList() {
             "border-border bg-card text-muted-foreground hover:bg-muted"
           )}>
           
-            {COHORTS[c].title}
+            <T>{COHORTS[c].title}</T>
           </button>
         )}
       </div>

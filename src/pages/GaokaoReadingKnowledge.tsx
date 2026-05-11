@@ -266,7 +266,7 @@ export default function GaokaoReadingKnowledge() {
           <div className="grid gap-3">
             <div className="flex items-center gap-2 flex-wrap">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-primary text-primary-foreground px-3 py-1 text-xs font-bold shadow-sm">
-                <Award className="size-3.5" /> <T>当前</T> {cefr.label} · {cefr.desc}
+                <Award className="size-3.5" /> <T>当前</T> <T>{cefr.label}</T> · <T>{cefr.desc}</T>
               </span>
               <span className="inline-flex items-center gap-1 rounded-full bg-card border px-2.5 py-1 text-[11px] text-muted-foreground">
                 <Flame className="size-3 text-orange-500" /> <T>共</T> {overall.total} <T>个核心知识点</T>
@@ -303,7 +303,7 @@ export default function GaokaoReadingKnowledge() {
                 <button key={k.id} onClick={() => {setActiveCat(k.category_code);setOpenKP(k);}}
                 className="text-left rounded-xl bg-card border hover:border-primary/50 hover:shadow-md transition p-3 group">
                     <div className="flex items-center gap-1.5 mb-1.5">
-                      {cat && <span className={cn("rounded-md bg-gradient-to-br text-white text-[10px] font-bold px-1.5 py-0.5", cat.gradient)}>{cat.name}</span>}
+                      {cat && <span className={cn("rounded-md bg-gradient-to-br text-white text-[10px] font-bold px-1.5 py-0.5", cat.gradient)}><T>{cat.name}</T></span>}
                       {k.exam_frequency && <span className={cn("rounded-full border px-1.5 py-0.5 text-[10px] font-semibold", FREQ_BADGE[k.exam_frequency] ?? "")}>{k.exam_frequency}<T>频</T></span>}
                     </div>
                     <div className="text-sm font-semibold leading-snug line-clamp-2 group-hover:text-primary transition">{k.level3}</div>
@@ -332,7 +332,7 @@ export default function GaokaoReadingKnowledge() {
             className={cn("rounded-xl border p-3 text-left transition",
             tab === t.k ? "bg-primary text-primary-foreground border-primary shadow-tile" : "bg-card border-border hover:border-primary/30")}>
               <div className="flex items-center gap-1.5 text-xs opacity-80"><Icon className="size-3.5" />{t.count} <T>条</T></div>
-              <div className="font-bold mt-0.5">{t.label}</div>
+              <div className="font-bold mt-0.5"><T>{t.label}</T></div>
             </button>);
 
         })}
@@ -377,7 +377,7 @@ export default function GaokaoReadingKnowledge() {
                       {s.mastered}/{s.total}
                     </div>
                   </div>
-                  <div className="font-bold text-sm leading-tight">{c.name}</div>
+                  <div className="font-bold text-sm leading-tight"><T>{c.name}</T></div>
                   <div className={cn("mt-1.5 h-1.5 rounded-full overflow-hidden", active ? "bg-white/25" : "bg-muted")}>
                     <div className={cn("h-full transition-all", active ? "bg-white" : "bg-gradient-to-r " + c.gradient)} style={{ width: `${pct}%` }} />
                   </div>
@@ -404,7 +404,7 @@ export default function GaokaoReadingKnowledge() {
             s.c && `before:size-1.5 before:rounded-full before:inline-block ${s.c}`,
             statusFilter === s.k ? "bg-foreground text-background" : "bg-muted text-muted-foreground hover:bg-muted/80"
           )}>
-                {s.label}
+                <T>{s.label}</T>
               </button>
           )}
             <span className="mx-1 h-3 w-px bg-border" />

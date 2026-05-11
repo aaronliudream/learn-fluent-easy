@@ -88,13 +88,13 @@ export default function BrandFamilyHero() {
                   {b.eyebrow}
                 </div>
                 <div className="mt-1 font-serif text-2xl font-extrabold leading-tight md:text-3xl">
-                  {b.title}
+                  <T>{b.title}</T>
                 </div>
               </div>
               <StatusPill status={b.status} />
             </div>
             <div className="relative mt-4">
-              <p className="text-sm leading-relaxed opacity-95 md:text-[15px]">{b.desc}</p>
+              <p className="text-sm leading-relaxed opacity-95 md:text-[15px]"><T>{b.desc}</T></p>
               <div className="mt-3 flex items-center justify-between gap-3">
                 <div className="text-[10px] font-bold uppercase tracking-[0.16em] opacity-70">
                   {b.tag}

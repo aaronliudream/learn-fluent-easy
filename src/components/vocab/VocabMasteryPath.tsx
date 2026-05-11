@@ -235,8 +235,8 @@ export default function VocabMasteryPath({
                   }
                 </div>
                 <div className="text-2xl">{s.emoji}</div>
-                <div className="mt-1 text-sm font-extrabold text-foreground">{s.label}</div>
-                <div className="text-[10px] text-muted-foreground">{s.desc}</div>
+                <div className="mt-1 text-sm font-extrabold text-foreground"><T>{s.label}</T></div>
+                <div className="text-[10px] text-muted-foreground"><T>{s.desc}</T></div>
                 {totalWords > 0 && s.key !== "browse" &&
                 <div
                   className={cn(
@@ -249,7 +249,7 @@ export default function VocabMasteryPath({
                 }
                 {st === "current" &&
                 <div className="mt-1.5 inline-flex items-center gap-1 rounded-full bg-rose-500 px-2 py-0.5 text-[10px] font-extrabold text-white">
-                    {rec.label} <ArrowRight className="size-3" />
+                    <T>{rec.label}</T> <ArrowRight className="size-3" />
                   </div>
                 }
               </button>

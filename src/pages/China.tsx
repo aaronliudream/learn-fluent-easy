@@ -97,7 +97,7 @@ const China = () => {
               <div className="relative flex-1 min-w-0">
                 <div className="flex items-center gap-2">
                   <div className="text-[10px] font-bold uppercase tracking-[0.16em] opacity-85">
-                    {s.eyebrow}
+                    <T>{s.eyebrow}</T>
                   </div>
                   {s.badge &&
                 <span className="rounded-full bg-white/25 px-2 py-0.5 text-[9px] font-bold tracking-wide backdrop-blur-sm">
@@ -105,8 +105,8 @@ const China = () => {
                     </span>
                 }
                 </div>
-                <div className="mt-1 text-base font-extrabold leading-tight md:text-lg">{s.title}</div>
-                <div className="mt-1 line-clamp-2 text-xs opacity-90 md:text-sm">{s.desc}</div>
+                <div className="mt-1 text-base font-extrabold leading-tight md:text-lg"><T>{s.title}</T></div>
+                <div className="mt-1 line-clamp-2 text-xs opacity-90 md:text-sm"><T>{s.desc}</T></div>
               </div>
               {s.locked ?
             <Lock className="relative size-4 shrink-0 opacity-80" /> :

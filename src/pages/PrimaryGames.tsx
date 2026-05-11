@@ -116,8 +116,8 @@ function GameMenu({ grade, count, isAll }: {grade: number;count: number;isAll?: 
         
           <span className="pointer-events-none absolute -right-10 -top-10 size-32 rounded-full bg-white/20 blur-2xl" />
           <g.icon className="size-7" />
-          <div className="mt-3 text-lg font-extrabold">{g.title}</div>
-          <div className="text-xs opacity-90">{g.desc}</div>
+          <div className="mt-3 text-lg font-extrabold"><T>{g.title}</T></div>
+          <div className="text-xs opacity-90"><T>{g.desc}</T></div>
           <div className="mt-3 inline-block rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-bold">
             <T>▶ 开始 · 共</T> {count} <T>词</T>
           </div>

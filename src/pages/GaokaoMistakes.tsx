@@ -115,7 +115,7 @@ export default function GaokaoMistakes() {
                   <div className={`mt-0.5 size-2 shrink-0 rounded-full bg-gradient-to-br ${meta.color}`} />
                   <div className="min-w-0 flex-1">
                     <div className="mb-0.5 flex items-center gap-2 text-[11px] text-muted-foreground">
-                      <span className="rounded bg-muted px-1.5 py-0.5">{meta.label}</span>
+                      <span className="rounded bg-muted px-1.5 py-0.5"><T>{meta.label}</T></span>
                       {m.wrong_count > 1 && <span className="text-rose-500">×{m.wrong_count}</span>}
                       <span className="ml-auto">{new Date(m.last_wrong_at).toLocaleDateString()}</span>
                     </div>

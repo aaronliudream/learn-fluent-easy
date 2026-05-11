@@ -125,7 +125,7 @@ export default function Pricing() {
               </span>
             }
             <div className="mb-1 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-              {p.name}
+              <T>{p.name}</T>
             </div>
             <div className="mb-1 flex items-baseline gap-1">
               <span className="text-4xl font-extrabold tabular-nums">{p.price}</span>

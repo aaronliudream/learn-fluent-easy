@@ -224,7 +224,7 @@ function PhaseRail({ active, done, onJump }: {active: number;done: number[];onJu
               )}>
               
               <span>{isDone ? "✓" : p.emoji}</span>
-              <span>{p.name}</span>
+              <span><T>{p.name}</T></span>
             </button>);
 
         })}
@@ -262,7 +262,7 @@ function BriefingScreen({ pt, onStart }: {pt: Pt;onStart: () => void;}) {
         {PHASES.slice(1, -1).map((p) =>
         <div key={p.id} className="glass-card rounded-xl p-4">
             <div className="text-3xl mb-1">{p.emoji}</div>
-            <div className="text-xs ink-dim">{p.name}</div>
+            <div className="text-xs ink-dim"><T>{p.name}</T></div>
           </div>
         )}
       </div>
@@ -859,7 +859,7 @@ function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPoi
                 <span className="text-2xl">{a.icon}</span>
                 <div>
                   <div className="font-semibold">{a.cn}</div>
-                  <div className="text-xs ink-dim">{a.desc}</div>
+                  <div className="text-xs ink-dim"><T>{a.desc}</T></div>
                 </div>
               </div>);
 

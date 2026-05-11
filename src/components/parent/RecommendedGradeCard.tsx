@@ -75,7 +75,7 @@ export default function RecommendedGradeCard() {
               }>
               
               <div className="text-2xl">{g.emoji}</div>
-              <div className="text-xs font-bold">{g.label}</div>
+              <div className="text-xs font-bold"><T>{g.label}</T></div>
               {isHard &&
               <div className="text-[9px] font-bold text-amber-600 dark:text-amber-400"><T>⚠️ 难度较高</T></div>
               }

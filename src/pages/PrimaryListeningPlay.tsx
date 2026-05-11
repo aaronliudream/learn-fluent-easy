@@ -4,7 +4,7 @@ import { ArrowLeft, Volume2, RotateCcw, Sparkles } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { findDialogue } from "@/data/primaryListeningDialogues";
 import { supabase } from "@/integrations/supabase/client";
-import { speak, stopSpeaking } from "@/lib/speak";
+import { speakKid as speak, stopSpeaking } from "@/lib/speak";
 
 const LOCAL_KEY = "primary_listening_completion_v1";
 type CompRec = { questions_correct: number; questions_total: number; play_count: number };

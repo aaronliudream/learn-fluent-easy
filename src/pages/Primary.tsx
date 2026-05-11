@@ -316,6 +316,9 @@ export default function Primary() {
             </div>
           </section>
 
+          {/* 累计掌握 — 让家长一眼看到 Phonics + Sight Words 的整体进度 */}
+          <CumulativeMasteryCard />
+
           {/* Streak 退到次要位置 */}
           {uid && <div className="mt-4"><StreakBanner userId={uid} /></div>}
 

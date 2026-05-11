@@ -80,12 +80,9 @@ export default function PrimaryRolePlays() {
     [completed, poolIds]
   );
 
-  // Unlock rule: first scene always unlocked; rp(N+1) unlocks when rp(N) completed.
-  function isUnlocked(rp: RolePlay): boolean {
-    const idx = sorted.findIndex(r => r.id === rp.id);
-    if (idx <= 0) return true;
-    const prev = sorted[idx - 1];
-    return completedIds.has(prev.id);
+  // Unlock rule: 角色扮演为开放式口语练习,全部解锁,顶部进度卡 + 推送卡负责引导顺序。
+  function isUnlocked(_rp: RolePlay): boolean {
+    return true;
   }
 
   const totalDone = completedIds.size;

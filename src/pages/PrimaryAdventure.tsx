@@ -113,6 +113,14 @@ export default function PrimaryAdventure() {
         <ArrowLeft className="size-4" /> 回到主屏
       </BackLink>
 
+      {/* G2-G6 内容尚未补齐 — 给孩子一个温和的提示 + 返回一年级的快捷入口 */}
+      {grade > 1 && (
+        <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
+          <span>✨ 这个年级的完整内容正在准备中。你可以先在一年级和 Spark 一起冒险!</span>
+          <Link to="/primary/adventure/1" className="font-bold underline">返回一年级 →</Link>
+        </div>
+      )}
+
       {/* Spark 顶栏 + 进度条 */}
       <section className="rounded-3xl bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 p-5 text-center shadow-tile dark:from-pink-950/40 dark:via-rose-950/40 dark:to-amber-950/40">
         <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">🦊</div>

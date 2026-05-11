@@ -172,10 +172,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "第一天上学",
     title_en: "First Day at School",
     scene_cn: "你第一天到新学校,在教室门口看到一个小朋友",
-    bg: "from-sky-400 to-blue-500",,
+    bg: "from-sky-400 to-blue-500",
     category: "school",
     difficulty: 1,
-    sortOrder: 6
+    sortOrder: 6,
     lines: [
       { speaker: "小朋友", emoji: "👧", side: "right", text_en: "Hi! Are you new?", text_cn: "嗨!你是新来的吗?" },
       { speaker: "你", emoji: "👦", side: "left", text_en: "Yes, I am.", text_cn: "是的,我是。" },
@@ -193,10 +193,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "借橡皮",
     title_en: "Borrow an Eraser",
     scene_cn: "你画错了一个字,但是橡皮忘带了。同桌的橡皮就在旁边",
-    bg: "from-yellow-400 to-orange-500",,
+    bg: "from-yellow-400 to-orange-500",
     category: "school",
     difficulty: 2,
-    sortOrder: 7
+    sortOrder: 7,
     lines: [
       { speaker: "你", emoji: "👦", side: "left", text_en: "Oh no, I forgot my eraser.", text_cn: "糟糕,我忘带橡皮了。" },
       { speaker: "同桌", emoji: "👧", side: "right", text_en: "What happened?", text_cn: "怎么啦?" }
@@ -213,10 +213,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "课堂回答问题",
     title_en: "Answer in Class",
     scene_cn: "老师在黑板上写了 '1 + 1 = ?',你知道答案,想举手回答",
-    bg: "from-violet-400 to-purple-500",,
+    bg: "from-violet-400 to-purple-500",
     category: "school",
     difficulty: 2,
-    sortOrder: 8
+    sortOrder: 8,
     lines: [
       { speaker: "老师", emoji: "👩‍🏫", side: "right", text_en: "Who knows the answer?", text_cn: "谁知道答案?" }
     ],
@@ -232,10 +232,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "下课玩游戏",
     title_en: "Recess Time",
     scene_cn: "下课了,你看到几个小朋友在操场上玩追人游戏",
-    bg: "from-emerald-400 to-green-500",,
+    bg: "from-emerald-400 to-green-500",
     category: "school",
     difficulty: 2,
-    sortOrder: 9
+    sortOrder: 9,
     lines: [
       { speaker: "Tom", emoji: "👦", side: "right", text_en: "We're playing tag! Want to play?", text_cn: "我们在玩追人!想一起玩吗?" }
     ],
@@ -251,10 +251,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "找洗手间",
     title_en: "Find the Bathroom",
     scene_cn: "上课的时候你想去洗手间,但是不知道在哪里",
-    bg: "from-cyan-400 to-sky-500",,
+    bg: "from-cyan-400 to-sky-500",
     category: "school",
     difficulty: 2,
-    sortOrder: 10
+    sortOrder: 10,
     lines: [
       { speaker: "老师", emoji: "👩‍🏫", side: "right", text_en: "Yes, what is it?", text_cn: "怎么了?" }
     ],
@@ -270,10 +270,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "早上起床",
     title_en: "Wake Up",
     scene_cn: "早晨阳光照进房间,妈妈走进来叫你起床",
-    bg: "from-yellow-300 to-amber-400",,
+    bg: "from-yellow-300 to-amber-400",
     category: "family",
     difficulty: 1,
-    sortOrder: 11
+    sortOrder: 11,
     lines: [
       { speaker: "妈妈", emoji: "👩", side: "right", text_en: "Good morning, honey! Time to wake up.", text_cn: "早上好,宝贝!该起床了。" }
     ],
@@ -289,10 +289,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "早餐时间",
     title_en: "Breakfast Time",
     scene_cn: "餐桌上摆着面包、牛奶和鸡蛋,妈妈问你想要什么",
-    bg: "from-orange-300 to-red-400",,
+    bg: "from-orange-300 to-red-400",
     category: "family",
     difficulty: 1,
-    sortOrder: 12
+    sortOrder: 12,
     lines: [
       { speaker: "妈妈", emoji: "👩", side: "right", text_en: "What would you like for breakfast?", text_cn: "你早餐想吃什么?" }
     ],
@@ -308,10 +308,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "睡前道晚安",
     title_en: "Good Night",
     scene_cn: "刷完牙穿好睡衣,爸爸来房间道晚安",
-    bg: "from-indigo-400 to-purple-600",,
+    bg: "from-indigo-400 to-purple-600",
     category: "family",
     difficulty: 1,
-    sortOrder: 13
+    sortOrder: 13,
     lines: [
       { speaker: "爸爸", emoji: "👨", side: "right", text_en: "Time for bed. Good night, sweetie.", text_cn: "该睡觉了。晚安,宝贝。" }
     ],
@@ -327,10 +327,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "周末出去玩",
     title_en: "Weekend Plans",
     scene_cn: "星期六早上,你穿好衣服下楼,看到全家人在准备出门",
-    bg: "from-teal-400 to-cyan-500",,
+    bg: "from-teal-400 to-cyan-500",
     category: "family",
     difficulty: 2,
-    sortOrder: 14
+    sortOrder: 14,
     lines: [
       { speaker: "你", emoji: "👦", side: "left", text_en: "Where are we going today?", text_cn: "我们今天要去哪?" },
       { speaker: "妈妈", emoji: "👩", side: "right", text_en: "We're going to the zoo!", text_cn: "我们要去动物园!" }
@@ -347,10 +347,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "第一次见面",
     title_en: "First Meeting",
     scene_cn: "妈妈带你去阿姨家,阿姨家有一个和你差不多大的小朋友",
-    bg: "from-pink-400 to-rose-500",,
+    bg: "from-pink-400 to-rose-500",
     category: "friends",
     difficulty: 2,
-    sortOrder: 15
+    sortOrder: 15,
     lines: [
       { speaker: "阿姨", emoji: "👩", side: "right", text_en: "This is my son, Jake. Jake, say hi!", text_cn: "这是我儿子杰克。杰克,打招呼!" },
       { speaker: "Jake", emoji: "👦", side: "right", text_en: "Hi! How old are you?", text_cn: "嗨!你几岁?" }
@@ -367,10 +367,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "分享玩具",
     title_en: "Share a Toy",
     scene_cn: "你拿出了最喜欢的玩具熊,小表弟眼巴巴地看着",
-    bg: "from-amber-400 to-yellow-500",,
+    bg: "from-amber-400 to-yellow-500",
     category: "friends",
     difficulty: 2,
-    sortOrder: 16
+    sortOrder: 16,
     lines: [
       { speaker: "表弟", emoji: "👶", side: "right", text_en: "Wow, your bear is so cute!", text_cn: "哇,你的熊好可爱!" },
       { speaker: "表弟", emoji: "👶", side: "right", text_en: "Can I play with it?", text_cn: "我能玩一下吗?" }
@@ -387,10 +387,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "道歉与原谅",
     title_en: "Sorry and OK",
     scene_cn: "你不小心撞到了 Lily,她手里的画本掉在地上",
-    bg: "from-rose-300 to-pink-500",,
+    bg: "from-rose-300 to-pink-500",
     category: "friends",
     difficulty: 3,
-    sortOrder: 17
+    sortOrder: 17,
     lines: [
       { speaker: "你", emoji: "👦", side: "left", text_en: "Oh no!", text_cn: "糟糕!" },
       { speaker: "Lily", emoji: "👧", side: "right", text_en: "My drawing!", text_cn: "我的画!" }
@@ -407,10 +407,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "餐厅点餐",
     title_en: "Order at a Restaurant",
     scene_cn: "你和妈妈去餐厅,服务员阿姨拿着菜单走过来",
-    bg: "from-red-400 to-rose-500",,
+    bg: "from-red-400 to-rose-500",
     category: "public",
     difficulty: 2,
-    sortOrder: 18
+    sortOrder: 18,
     lines: [
       { speaker: "服务员", emoji: "👩‍🍳", side: "right", text_en: "Hi! What would you like to eat?", text_cn: "你好!想吃什么?" }
     ],
@@ -426,10 +426,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "商店买东西",
     title_en: "At the Store",
     scene_cn: "你看上了商店里一个漂亮的小玩具,想知道多少钱",
-    bg: "from-purple-400 to-fuchsia-500",,
+    bg: "from-purple-400 to-fuchsia-500",
     category: "public",
     difficulty: 2,
-    sortOrder: 19
+    sortOrder: 19,
     lines: [
       { speaker: "店员", emoji: "🧑‍💼", side: "right", text_en: "Hi there! Can I help you?", text_cn: "你好!需要什么帮助吗?" }
     ],
@@ -445,10 +445,10 @@ export const PRIMARY_ROLE_PLAYS: RolePlay[] = [
     title_cn: "公园见新朋友",
     title_en: "Meet a Friend at the Park",
     scene_cn: "公园里有一个小朋友在堆沙堡,你也想玩沙子",
-    bg: "from-green-400 to-emerald-500",,
+    bg: "from-green-400 to-emerald-500",
     category: "public",
     difficulty: 3,
-    sortOrder: 20
+    sortOrder: 20,
     lines: [
       { speaker: "你", emoji: "👦", side: "left", text_en: "Wow, what a cool castle!", text_cn: "哇,好酷的城堡!" },
       { speaker: "小朋友", emoji: "👧", side: "right", text_en: "Thanks! I'm making a tower.", text_cn: "谢谢!我在做塔。" }

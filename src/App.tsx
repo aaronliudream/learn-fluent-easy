@@ -154,6 +154,7 @@ const FloatingPetGate = () => {
     pathname.startsWith("/auth") ||
     pathname.startsWith("/talk") ||      // 全屏语音对话
     pathname.startsWith("/pets") ||      // 宠物详情页本身
+    pathname.startsWith("/primary/adventure") || // 冒险主页 Spark 已是主角，避免抢戏
     pathname.startsWith("/placement");   // 评测专注模式
   if (hide) return null;
   return <FloatingPet />;

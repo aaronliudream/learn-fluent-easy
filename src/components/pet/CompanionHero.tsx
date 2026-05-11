@@ -98,7 +98,7 @@ export function CompanionHero() {
       </div>
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-muted-foreground">
-          <Sparkles className="size-3 text-primary" /> <X><T>学习伙伴</T></X>
+          <Sparkles className="size-3 text-primary" /> <X>学习伙伴</X>
           {pet && <span className="text-primary">· Lv.{pet.level}</span>}
         </div>
         <p className="mt-0.5 truncate text-[13px] font-semibold text-foreground sm:text-sm">

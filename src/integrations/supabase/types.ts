@@ -4809,6 +4809,30 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_lesson_chapter_progress: {
+        Row: {
+          chapter_id: number
+          completed_at: string
+          grade: number
+          id: string
+          user_id: string
+        }
+        Insert: {
+          chapter_id: number
+          completed_at?: string
+          grade: number
+          id?: string
+          user_id: string
+        }
+        Update: {
+          chapter_id?: number
+          completed_at?: string
+          grade?: number
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       primary_lesson_completion: {
         Row: {
           completed_at: string

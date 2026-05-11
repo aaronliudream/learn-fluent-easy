@@ -29,6 +29,10 @@ import RocketProgress, {
   nextUnlockHint,
 } from "@/components/RocketProgress";
 import RocketLiftoff from "@/components/RocketLiftoff";
+import { earnBadge } from "@/lib/badges";
+import { badgeForChapter } from "@/data/badges";
+import { playSfx } from "@/lib/soundEffects";
+import { Award } from "lucide-react";
 
 type Expr = { en: string; cn: string; scene?: string };
 type Vocab = { word: string; pron?: string; meaning?: string; example?: string; example_cn?: string };
@@ -497,10 +501,19 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
                 { user_id: uid, grade: 2, chapter_id: ch.id, completed_at: new Date().toISOString() },
                 { onConflict: "user_id,grade,chapter_id" }
               );
+              // Award chapter badge + chapter fanfare
+              try {
+                await earnBadge(`chapter_${ch.id}`);
+                playSfx("chapter");
+              } catch { /* noop */ }
               returnUrl = `/lesson?grade=2&chapter_done=${ch.id}`;
             }
           }
         } catch { /* noop */ }
+        // All-30 badge
+        if (postCount >= TOTAL_LESSONS) {
+          try { await earnBadge("all_complete"); } catch { /* noop */ }
+        }
       }
       celebrateScore(100);
     } finally {

@@ -288,12 +288,13 @@ type Q =
   | { kind: "matchWord"; correctWord: string; correctEmoji: string; options: { word: string; emoji: string }[] };
 
 function buildQuiz(item: PhonicsItem): Q[] {
-  const sameGroupOthers = PHONICS_ITEMS.filter(
+  const itemPool = PHONICS_ITEMS_G2.some((it) => it.id === item.id) ? PHONICS_ITEMS_G2 : PHONICS_ITEMS;
+  const sameGroupOthers = itemPool.filter(
     (p) => p.groupId === item.groupId && p.id !== item.id
   );
   const distractorPool = sameGroupOthers.length >= 3
     ? sameGroupOthers
-    : PHONICS_ITEMS.filter((p) => p.id !== item.id);
+    : itemPool.filter((p) => p.id !== item.id);
 
   const pickN = <T,>(arr: T[], n: number): T[] => {
     const c = [...arr];
@@ -330,7 +331,7 @@ function buildQuiz(item: PhonicsItem): Q[] {
   // Q3 选例词(听 word,选 emoji)
   const word0 = item.exampleWords[0];
   if (word0?.emoji && word0?.word) {
-    const otherWords = PHONICS_ITEMS.flatMap((p) =>
+    const otherWords = itemPool.flatMap((p) =>
       p.id === item.id ? [] : p.exampleWords.filter((w) => w.emoji && w.word)
     );
     qs.push({

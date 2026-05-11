@@ -536,7 +536,7 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
 
       {/* 完成按钮 */}
       <button
-        onClick={markDone}
+        onClick={() => markDone()}
         disabled={completing}
         className="mt-8 w-full rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 py-4 text-base font-extrabold text-white shadow-tile transition hover:-translate-y-0.5 disabled:opacity-60"
       >

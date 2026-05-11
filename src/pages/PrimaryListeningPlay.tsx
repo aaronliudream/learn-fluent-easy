@@ -4,15 +4,7 @@ import { ArrowLeft, Volume2, RotateCcw, Sparkles } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { findDialogue } from "@/data/primaryListeningDialogues";
 import { supabase } from "@/integrations/supabase/client";
-
-function speak(text: string, rate = 0.9) {
-  if (typeof window === "undefined" || !window.speechSynthesis) return;
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = "en-US";
-  u.rate = rate;
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(u);
-}
+import { speakKid as speak, stopSpeaking } from "@/lib/speak";
 
 const LOCAL_KEY = "primary_listening_completion_v1";
 type CompRec = { questions_correct: number; questions_total: number; play_count: number };
@@ -52,7 +44,7 @@ export default function PrimaryListeningPlay() {
   }, [id, dialogue]);
 
   useEffect(() => {
-    return () => { try { window.speechSynthesis?.cancel(); } catch { /* */ } };
+    return () => { stopSpeaking(); };
   }, []);
 
   if (!dialogue) {

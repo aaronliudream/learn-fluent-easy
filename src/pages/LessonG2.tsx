@@ -324,6 +324,7 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
 
   async function markDone() {
     setCompleting(true);
+    let returnUrl = "/lesson?grade=2";
     try {
       const { data: u } = await supabase.auth.getUser();
       const uid = u?.user?.id;
@@ -345,10 +346,35 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
           await c.awardCoins(10, "g2_lesson_complete");
           c.petReact("happy", { coins: 10 });
         } catch { /* noop */ }
+
+        // 章节通关检测:如果本节是某章节的最后未完成节,写入章节进度并触发弹窗
+        try {
+          const thisLessonId = `g2_l${String(meta.idx).padStart(2, "0")}`;
+          const ch = getChapterByLessonId(thisLessonId);
+          if (ch) {
+            const { data: doneRows } = await supabase
+              .from("primary_lesson_completion")
+              .select("lesson_key")
+              .eq("user_id", uid);
+            const doneIds = new Set<string>();
+            (doneRows ?? []).forEach((r: any) => {
+              const i = parseKey(r.lesson_key as string).idx;
+              if (i) doneIds.add(`g2_l${String(i).padStart(2, "0")}`);
+            });
+            const isComplete = ch.lesson_ids.every((id) => doneIds.has(id));
+            if (isComplete) {
+              await supabase.from("primary_lesson_chapter_progress").upsert(
+                { user_id: uid, grade: 2, chapter_id: ch.id, completed_at: new Date().toISOString() },
+                { onConflict: "user_id,grade,chapter_id" }
+              );
+              returnUrl = `/lesson?grade=2&chapter_done=${ch.id}`;
+            }
+          }
+        } catch { /* noop */ }
       }
       celebrateScore(100);
     } finally {
-      setTimeout(() => nav("/lesson?grade=2"), 600);
+      setTimeout(() => nav(returnUrl), 600);
     }
   }
 

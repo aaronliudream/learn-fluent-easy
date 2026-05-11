@@ -7,7 +7,7 @@
 // Why so small: shipping a single linear path is the whole point.
 // Anything fancier would re-create the menu maze we just deleted.
 
-export type AdventureStepKind = "phonics" | "vocab" | "lesson" | "culture";
+export type AdventureStepKind = "phonics" | "vocab" | "lesson" | "culture" | "roleplay";
 
 export type AdventureStep = {
   kind: AdventureStepKind;
@@ -50,18 +50,11 @@ export function buildDailyAdventure(opts: {
     estMinutes: 3,
   });
 
-  // Step 3 — A real lesson (the heavy engine).
-  if (nextLessonId) {
-    steps.push({
-      kind: "lesson",
-      emoji: "📚",
-      title: "今天的一节课",
-      sparkLine: "我准备好啦,我们开始今天这节课吧!",
-      cta: "开始今天这节课",
-      to: `/primary/lesson/${nextLessonId}`,
-      estMinutes: 8,
-    });
-  }
+  // Step 3 — rotates by day-of-week for Grade 1 so 29 lessons last 60+ days
+  // and the new 20 Roleplay scenes get woven into the main path.
+  // G2-G6 keep the original lesson-only behavior.
+  const third = getThirdStepContent(grade, new Date(), nextLessonId);
+  if (third) steps.push(third);
 
   // Step 4 — Culture stamp / pet visit (light wind-down).
   steps.push({
@@ -75,6 +68,45 @@ export function buildDailyAdventure(opts: {
   });
 
   return steps;
+}
+
+/** Day-of-week rotation for Grade 1's Step 3.
+ *  Mon/Thu = Lesson, Tue/Fri/Sat/Sun = Roleplay, Wed = Lesson (placeholder
+ *  for future listening / picture-book content). */
+function getThirdStepContent(
+  grade: number,
+  date: Date,
+  nextLessonId?: string | null
+): AdventureStep | null {
+  const lessonStep: AdventureStep | null = nextLessonId
+    ? {
+        kind: "lesson",
+        emoji: "📚",
+        title: "今天的一节课",
+        sparkLine: "我准备好啦,我们开始今天这节课吧!",
+        cta: "开始今天这节课",
+        to: `/primary/lesson/${nextLessonId}`,
+        estMinutes: 8,
+      }
+    : null;
+
+  if (grade !== 1) return lessonStep;
+
+  const roleplayStep: AdventureStep = {
+    kind: "roleplay",
+    emoji: "🎭",
+    title: "和 Spark 演一段",
+    sparkLine: "今天我们演个小剧场吧,练点真生活英语!",
+    cta: "去演一段",
+    to: `/primary/roleplays`,
+    estMinutes: 5,
+  };
+
+  const dow = date.getDay(); // 0=Sun ... 6=Sat
+  // Tue(2), Fri(5), Sat(6), Sun(0) → Roleplay
+  if (dow === 0 || dow === 2 || dow === 5 || dow === 6) return roleplayStep;
+  // Mon(1), Wed(3), Thu(4) → Lesson; fall back to roleplay if no lesson
+  return lessonStep ?? roleplayStep;
 }
 
 // ─── Per-day completion bookkeeping (localStorage) ────────────────────

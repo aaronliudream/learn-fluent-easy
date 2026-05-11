@@ -1,66 +1,97 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Check, Eye, Lock, Play, RotateCw, Trophy, Volume2, X } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { ArrowLeft, Eye, Lock, Play, RotateCw, Sparkles, Trophy } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
-import { speakKid } from "@/lib/speak";
 import {
-  SIGHT_WORDS,
-  SIGHT_WORD_LEVELS,
-  type SightWord,
-} from "@/data/sightWords";
+  SIGHT_WORD_GROUPS,
+  SIGHT_WORD_ITEMS,
+  type SightWordItem,
+} from "@/data/primarySightWords";
 import {
-  bumpSightWordLevel,
-  bumpSightWordMastery,
   getSightWordMasteryMap,
   isSightWordDue,
   type SightWordMasteryMap,
 } from "@/lib/sightWordMastery";
-import { celebratePet } from "@/components/pet/EvolutionCelebration";
 
 /**
- * Sight Words 主页 — 仪表盘 + 学新词 / 复习 / 整级挑战.
- * 学习与挑战逻辑与 PrimaryPhonicsQuiz 同构,但更简单(只有 2 种题型: 听音选词 / 看词读音).
+ * Sight Words 主页 — 100 词 / 4 组(Fry's),与 Phonics 主页同构.
+ *  • 学新词 / 复习 / 整组挑战
+ *  • 4 组路线图 + 解锁机制(前一组所有词 mastery_level >= 2)
  */
 export default function PrimarySightWords() {
   const nav = useNavigate();
   const [mastery, setMastery] = useState<SightWordMasteryMap>(new Map());
   const [loading, setLoading] = useState(true);
 
+  const groupedItems = useMemo(() => {
+    const byGroup = new Map<string, SightWordItem[]>();
+    SIGHT_WORD_ITEMS.forEach((it) => {
+      if (!byGroup.has(it.groupId)) byGroup.set(it.groupId, []);
+      byGroup.get(it.groupId)!.push(it);
+    });
+    byGroup.forEach((arr) => arr.sort((a, b) => a.sortOrder - b.sortOrder));
+    return [...SIGHT_WORD_GROUPS]
+      .sort((a, b) => a.sortOrder - b.sortOrder)
+      .map((g) => ({ group: g, items: byGroup.get(g.id) ?? [] }));
+  }, []);
+
   useEffect(() => {
-    document.title = "Sight Words 高频词 | FluentPath";
-    (async () => {
-      setMastery(await getSightWordMasteryMap());
-      setLoading(false);
-    })();
+    document.title = "Spark 的高频词冒险 | FluentPath";
+    let cancelled = false;
+    const refresh = async () => {
+      const m = await getSightWordMasteryMap();
+      if (!cancelled) {
+        setMastery(m);
+        setLoading(false);
+      }
+    };
+    refresh();
+    const onVis = () => { if (document.visibilityState === "visible") refresh(); };
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", onVis);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", onVis);
+    };
   }, []);
 
-  const grouped = useMemo(() => {
-    return SIGHT_WORD_LEVELS.map((lv) => ({
-      lv,
-      items: SIGHT_WORDS.filter((w) => w.level === lv.id),
-    }));
-  }, []);
+  const isGroupUnlocked = (idx: number) => {
+    if (idx === 0) return true;
+    const prev = groupedItems[idx - 1]?.items ?? [];
+    if (prev.length === 0) return true;
+    return prev.every((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2);
+  };
 
-  // 当前级 = 第一个未全掌握 (level<2) 的级
-  const currentLvIdx = useMemo(() => {
-    for (let i = 0; i < grouped.length; i++) {
-      const allDone = grouped[i].items.every(
+  const currentGroupIdx = useMemo(() => {
+    for (let i = 0; i < groupedItems.length; i++) {
+      if (!isGroupUnlocked(i)) return Math.max(0, i - 1);
+      const allDone = groupedItems[i].items.every(
         (it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2
       );
       if (!allDone) return i;
     }
-    return grouped.length - 1;
-  }, [grouped, mastery]);
+    return groupedItems.length - 1;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [groupedItems, mastery]);
 
-  const currentLv = grouped[currentLvIdx];
-  const nextNew = currentLv?.items.find(
+  const currentGroup = groupedItems[currentGroupIdx];
+  const nextNew = currentGroup?.items.find(
     (it) => (mastery.get(it.id)?.mastery_level ?? 0) === 0
   );
-  const dueItems = SIGHT_WORDS.filter((w) => isSightWordDue(mastery.get(w.id)));
-  const masteredCount = SIGHT_WORDS.filter(
+  const dueItems = SIGHT_WORD_ITEMS.filter((w) => isSightWordDue(mastery.get(w.id))).slice(0, 50);
+  const masteredCount = SIGHT_WORD_ITEMS.filter(
     (w) => (mastery.get(w.id)?.mastery_level ?? 0) >= 2
   ).length;
+  const canChallengeGroup =
+    !!currentGroup &&
+    currentGroup.items.length > 0 &&
+    currentGroup.items.every((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 1);
+  const todayPlanCount =
+    (currentGroup?.items.filter(
+      (it) => (mastery.get(it.id)?.mastery_level ?? 0) < 3
+    ).length ?? 0) + dueItems.length;
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6">
@@ -72,40 +103,91 @@ export default function PrimarySightWords() {
         <ArrowLeft className="size-4" /> 返回小学专区
       </BackLink>
 
+      {/* Spark 顶卡 */}
       <section className="rounded-3xl bg-gradient-to-br from-sky-200 via-cyan-200 to-emerald-200 p-5 text-center shadow-tile dark:from-sky-950/40 dark:via-cyan-950/40 dark:to-emerald-950/40">
-        <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">📖</div>
+        <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">🦊</div>
         <p className="mx-auto mt-3 max-w-md text-base font-extrabold leading-snug text-sky-900 dark:text-sky-100">
-          {masteredCount === SIGHT_WORDS.length
-            ? "全部高频词都认得啦!"
-            : `已认得 ${masteredCount} / ${SIGHT_WORDS.length} 个高频词`}
+          {todayPlanCount === 0
+            ? '"全部高频词都认识啦!Spark 太骄傲啦~"'
+            : `"今天 Spark 想和你学 ${Math.min(todayPlanCount, 5)} 个高频词!"`}
         </p>
-        <div className="mx-auto mt-3 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/60">
+        <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-sky-700 dark:text-sky-200">
+          <span>已掌握 {masteredCount} / {SIGHT_WORD_ITEMS.length}</span>
+          <span>当前 {currentGroup?.group.groupName}</span>
+        </div>
+        <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/60">
           <div
             className="h-full bg-gradient-to-r from-sky-500 via-cyan-500 to-emerald-500 transition-all"
-            style={{ width: `${(masteredCount / SIGHT_WORDS.length) * 100}%` }}
+            style={{ width: `${(masteredCount / SIGHT_WORD_ITEMS.length) * 100}%` }}
           />
         </div>
       </section>
 
-      <section className="mt-5 space-y-2">
+      {/* CTA 区 */}
+      <section className="mt-4 space-y-3">
+        {nextNew && (
+          <CtaCard
+            color="from-sky-500 via-cyan-500 to-emerald-500"
+            icon={<Play className="size-5 fill-white" />}
+            label="继续学新词"
+            title={`学新词 ${nextNew.word}`}
+            sub={`你这组掌握了 ${currentGroup.items.filter((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2).length}/${currentGroup.items.length}`}
+            onClick={() => nav(`/primary/sight-words/learn/${nextNew.id}`)}
+          />
+        )}
+        {dueItems.length > 0 && (
+          <CtaCard
+            color="from-rose-500 via-pink-500 to-amber-500"
+            icon={<RotateCw className="size-5" />}
+            label="今日复习"
+            title={`复习 ${dueItems.length} 个学过的词`}
+            sub="这些词上次没答对 / 该再考一次啦"
+            onClick={() => nav("/primary/sight-words/quiz/review")}
+          />
+        )}
+        {currentGroup && canChallengeGroup && (
+          <CtaCard
+            color="from-violet-500 via-fuchsia-500 to-pink-500"
+            icon={<Sparkles className="size-5" />}
+            label="挑战测试"
+            title={`挑战 ${currentGroup.group.groupName}`}
+            sub="✨ 全部通过解锁下一组"
+            onClick={() => nav(`/primary/sight-words/quiz/${currentGroup.group.id}`)}
+          />
+        )}
+        {!nextNew && dueItems.length === 0 && !canChallengeGroup && !loading && (
+          <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+            🎉 你已经掌握了全部 {SIGHT_WORD_ITEMS.length} 个高频词!
+          </div>
+        )}
+        {loading && (
+          <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+            Spark 正在准备今天的高频词冒险…
+          </div>
+        )}
+      </section>
+
+      {/* 4 组进度地图 */}
+      <section className="mt-6 space-y-2">
         <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
           📊 你的高频词地图
         </div>
-        {grouped.map((g, idx) => {
-          const masteredInLv = g.items.filter(
+        {groupedItems.map((g, idx) => {
+          const unlocked = isGroupUnlocked(idx);
+          const masteredInGroup = g.items.filter(
             (it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2
           ).length;
-          const allDone = masteredInLv === g.items.length;
-          const unlocked = idx === 0 || (grouped[idx - 1]?.items.every(
-            (it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2
-          ) ?? false);
+          const allDone = masteredInGroup === g.items.length;
+          const isCurrent = idx === currentGroupIdx && !allDone && unlocked;
           return (
             <div
-              key={g.lv.id}
+              key={g.group.id}
               className={
                 "rounded-2xl border-2 p-3 transition " +
                 (allDone
                   ? "border-emerald-300 bg-emerald-50 dark:border-emerald-700 dark:bg-emerald-950/30"
+                  : isCurrent
+                  ? "border-sky-300 bg-card shadow-sm"
                   : unlocked
                   ? "border-border bg-card"
                   : "border-dashed border-border bg-muted/30 opacity-60")
@@ -116,34 +198,39 @@ export default function PrimarySightWords() {
                   <div className="flex items-center gap-1.5 text-sm font-extrabold">
                     {!unlocked && <Lock className="size-3.5 text-muted-foreground" />}
                     {allDone && <Trophy className="size-3.5 text-emerald-600" />}
-                    <span className="truncate">{g.lv.name}</span>
+                    <span className="truncate">{g.group.groupName}</span>
                   </div>
-                  <div className="text-[11px] text-muted-foreground">{g.lv.sub}</div>
+                  <div className="text-[11px] text-muted-foreground">
+                    {g.group.rangeLabel} · {g.group.groupNameEn}
+                  </div>
                 </div>
                 <div className="text-xs font-mono font-bold text-muted-foreground">
-                  {masteredInLv}/{g.items.length}
+                  {masteredInGroup}/{g.items.length}
                 </div>
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {g.items.map((it) => {
                   const lvl = mastery.get(it.id)?.mastery_level ?? 0;
                   return (
-                    <span
+                    <button
                       key={it.id}
+                      disabled={!unlocked}
+                      onClick={() => nav(`/primary/sight-words/learn/${it.id}`)}
                       title={`${it.word} · 掌握 ${lvl}/3`}
                       className={
-                        "inline-flex h-6 items-center rounded-md px-1.5 text-[11px] font-extrabold " +
+                        "inline-flex h-6 items-center rounded-md px-1.5 text-[11px] font-extrabold transition " +
                         (lvl >= 3
                           ? "bg-amber-400 text-white shadow"
                           : lvl === 2
                           ? "bg-emerald-400 text-white"
                           : lvl === 1
                           ? "bg-rose-200 text-rose-800 dark:bg-rose-900 dark:text-rose-200"
-                          : "bg-muted text-muted-foreground")
+                          : "bg-muted text-muted-foreground") +
+                        (unlocked ? " hover:scale-110" : " cursor-not-allowed")
                       }
                     >
                       {it.word}
-                    </span>
+                    </button>
                   );
                 })}
               </div>
@@ -152,43 +239,14 @@ export default function PrimarySightWords() {
         })}
       </section>
 
-      <section className="mt-6 space-y-3">
-        {nextNew && (
-          <CtaCard
-            color="from-sky-500 via-cyan-500 to-emerald-500"
-            icon={<Play className="size-5 fill-white" />}
-            label="学新词"
-            title={`学 "${nextNew.word}"`}
-            sub={nextNew.cn}
-            onClick={() => nav(`/primary/sightwords/learn/${nextNew.id}`)}
-          />
-        )}
-        {dueItems.length > 0 && (
-          <CtaCard
-            color="from-rose-500 via-pink-500 to-amber-500"
-            icon={<RotateCw className="size-5" />}
-            label="今日复习"
-            title={`复习 ${dueItems.length} 个学过的词`}
-            sub="这些词上次没答对 / 该再考一次啦"
-            onClick={() => nav("/primary/sightwords/quiz/review")}
-          />
-        )}
-        {currentLv && nextNew == null && (
-          <CtaCard
-            color="from-violet-500 via-fuchsia-500 to-pink-500"
-            icon={<Eye className="size-5" />}
-            label="挑战测试"
-            title={`挑战 ${currentLv.lv.name}`}
-            sub="✨ 全部通过解锁下一级"
-            onClick={() => nav(`/primary/sightwords/quiz/${currentLv.lv.id}`)}
-          />
-        )}
-        {loading && (
-          <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            正在加载…
-          </div>
-        )}
-      </section>
+      <div className="mt-6 flex justify-center">
+        <Link
+          to="/primary/phonics"
+          className="text-xs text-muted-foreground underline-offset-2 hover:underline"
+        >
+          ← 回到拼读冒险
+        </Link>
+      </div>
     </main>
   );
 }

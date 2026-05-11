@@ -326,6 +326,9 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
   const [completing, setCompleting] = useState(false);
   const [showCelebrate, setShowCelebrate] = useState(false);
   const [celebratePhrase] = useState(() => pickPhrase("lessonComplete"));
+  const [newCount, setNewCount] = useState<number>(0);
+  const [unlockedPart, setUnlockedPart] = useState<typeof ROCKET_PARTS[number] | null>(null);
+  const [showLiftoff, setShowLiftoff] = useState(false);
 
   const lessonId = `g2_l${String(meta.idx).padStart(2, "0")}`;
   const stagedLesson = G2_ALL_LESSON_STAGES[lessonId];
@@ -363,13 +366,40 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
         {showCelebrate && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-pink-500/95 via-rose-500/95 to-amber-500/95 p-6 text-white">
             <div className="w-full max-w-sm rounded-3xl bg-white/10 p-8 text-center backdrop-blur">
-              <div className="text-7xl">🎉</div>
+              <div className="relative h-24">
+                <div className="text-7xl">🎉</div>
+                {/* Gear flies up to the rocket bar at top */}
+                <div
+                  key={`gear-${newCount}`}
+                  className="gear-fly pointer-events-none absolute left-1/2 top-2 -translate-x-1/2 text-5xl"
+                >
+                  ⚙️
+                </div>
+              </div>
               <div className="mt-4 text-2xl font-extrabold">{celebratePhrase}</div>
-              <div className="mt-2 text-sm opacity-90">Spark 的火箭离起飞更近了!</div>
-              {(() => {
-                const c = getChapterByLessonId(lessonId);
-                return c ? <div className="mt-6 text-6xl">{c.emoji}</div> : null;
-              })()}
+              <div className="mt-2 text-sm opacity-90">
+                {newCount > 0
+                  ? `已集齐 ${newCount} / ${TOTAL_LESSONS} 个齿轮 · ${nextUnlockHint(newCount)}`
+                  : "Spark 的火箭离起飞更近了!"}
+              </div>
+              {/* Live rocket strip */}
+              {newCount > 0 && (
+                <div className="mt-4 flex justify-center">
+                  <RocketProgress
+                    completedCount={newCount}
+                    highlightPart={unlockedPart?.name}
+                    size="md"
+                  />
+                </div>
+              )}
+              {/* Big part-unlock reveal */}
+              {unlockedPart && (
+                <div className="mt-5 rounded-2xl bg-white/20 p-4">
+                  <div className="text-xs font-bold uppercase tracking-wider opacity-90">解锁了新部件</div>
+                  <div className="mt-1 text-7xl spark-pulse">{unlockedPart.icon}</div>
+                  <div className="mt-1 text-base font-extrabold">「{unlockedPart.name}」</div>
+                </div>
+              )}
               <div className="mt-8 flex flex-col gap-3">
                 {nextLessonKey && (
                   <button
@@ -391,6 +421,12 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
               </div>
             </div>
           </div>
+        )}
+        {showLiftoff && (
+          <RocketLiftoff
+            onClose={() => setShowLiftoff(false)}
+            onBackToMap={() => nav("/lesson?grade=2")}
+          />
         )}
       </>
     );

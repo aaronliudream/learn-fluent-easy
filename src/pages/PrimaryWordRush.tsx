@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft, BookOpen, Loader2, RotateCw, Sparkles, Trophy, Zap } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 import { supabase } from "@/integrations/supabase/client";
 import {
   getMasteredSightWordsAsVocab,
-  getMasteredSightWordsCount,
-} from "@/lib/masteredSightWords";
+  getMasteredSightWordsCount } from
+"@/lib/masteredSightWords";
 import type { GameVocab } from "@/lib/wordGameAdapter";
 import { speak } from "@/lib/speak";
 
@@ -78,13 +78,13 @@ export default function PrimaryWordRush() {
         setBootPhase("empty");
         return;
       }
-      const { data: today } = await supabase
-        .from("primary_word_rush_attempts")
-        .select("id,score,best_streak")
-        .eq("user_id", userId)
-        .eq("grade", grade)
-        .eq("date", todayDate())
-        .maybeSingle();
+      const { data: today } = await supabase.
+      from("primary_word_rush_attempts").
+      select("id,score,best_streak").
+      eq("user_id", userId).
+      eq("grade", grade).
+      eq("date", todayDate()).
+      maybeSingle();
       if (today) {
         setBootPhase("already");
         return;
@@ -99,57 +99,57 @@ export default function PrimaryWordRush() {
     return (
       <main className="grid min-h-screen place-items-center">
         <Loader2 className="size-6 animate-spin text-muted-foreground" />
-      </main>
-    );
+      </main>);
+
   }
 
   if (bootPhase === "empty") {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
         <BackLink to={back} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回今天的冒险
+          <ArrowLeft className="size-4" /> <T>返回今天的冒险</T>
         </BackLink>
         <div className="rounded-3xl border-2 border-fuchsia-300 bg-gradient-to-br from-fuchsia-50 via-purple-50 to-rose-50 p-6 text-center shadow-tile dark:border-fuchsia-700 dark:from-fuchsia-950/30 dark:via-purple-950/30 dark:to-rose-950/30">
           <div className="text-5xl">⚡</div>
-          <h1 className="mt-3 text-xl font-extrabold">单词节奏准备中</h1>
+          <h1 className="mt-3 text-xl font-extrabold"><T>单词节奏准备中</T></h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            节奏游戏更紧张,需要先掌握至少 <b>{MIN_WORDS}</b> 个单词。
+            <T>节奏游戏更紧张,需要先掌握至少</T> <b>{MIN_WORDS}</b> <T>个单词。</T>
           </p>
           <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-bold text-fuchsia-700 shadow-sm dark:bg-fuchsia-950/30 dark:text-fuchsia-200">
-            🌟 当前已掌握:{masteredCount} 个
+            <T>🌟 当前已掌握:</T>{masteredCount} <T>个</T>
           </div>
           <div className="mt-5">
             <Link
               to={`/primary/sight-words${grade === 2 ? "?grade=2" : ""}`}
-              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-500 via-purple-500 to-rose-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
-            >
-              <BookOpen className="size-4" /> 去学单词 →
+              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-fuchsia-500 via-purple-500 to-rose-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5">
+              
+              <BookOpen className="size-4" /> <T>去学单词 →</T>
             </Link>
           </div>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   if (bootPhase === "already") {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
         <BackLink to={back} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回今天的冒险
+          <ArrowLeft className="size-4" /> <T>返回今天的冒险</T>
         </BackLink>
         <div className="rounded-3xl border-2 border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 p-6 text-center shadow-tile dark:border-emerald-700 dark:from-emerald-950/30 dark:to-teal-950/30">
           <div className="text-5xl">🏁</div>
-          <h1 className="mt-3 text-xl font-extrabold">今天的节奏挑战已完成!</h1>
-          <p className="mt-2 text-sm text-muted-foreground">明天继续来打分吧 🌙</p>
+          <h1 className="mt-3 text-xl font-extrabold"><T>今天的节奏挑战已完成!</T></h1>
+          <p className="mt-2 text-sm text-muted-foreground"><T>明天继续来打分吧 🌙</T></p>
           <Link
             to={back}
-            className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
-          >
-            <Sparkles className="size-4" /> 回去做今天的冒险
+            className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5">
+            
+            <Sparkles className="size-4" /> <T>回去做今天的冒险</T>
           </Link>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   return (
@@ -168,13 +168,13 @@ export default function PrimaryWordRush() {
             misses: info.misses,
             best_streak: info.bestStreak,
             duration_seconds: info.durationSeconds,
-            words: info.words,
+            words: info.words
           },
           { onConflict: "user_id,grade,date" }
         );
-      }}
-    />
-  );
+      }} />);
+
+
 }
 
 /* ---------- 真正的游戏循环 ---------- */
@@ -191,12 +191,12 @@ type RushDoneInfo = {
 function RushSession({
   pool,
   onExit,
-  onComplete,
-}: {
-  pool: GameVocab[];
-  onExit: () => void;
-  onComplete: (info: RushDoneInfo) => void;
-}) {
+  onComplete
+
+
+
+
+}: {pool: GameVocab[];onExit: () => void;onComplete: (info: RushDoneInfo) => void;}) {
   const playable = useMemo(
     () => pool.filter((v) => v.meaning_cn && v.meaning_cn.trim().length > 0),
     [pool]
@@ -212,7 +212,7 @@ function RushSession({
   const [timeLeft, setTimeLeft] = useState(RUSH_DURATION_SEC);
   const [choices, setChoices] = useState<GameVocab[]>([]);
   const [activeTileId, setActiveTileId] = useState<number | null>(null);
-  const [floatPop, setFloatPop] = useState<{ id: number; text: string; ok: boolean } | null>(null);
+  const [floatPop, setFloatPop] = useState<{id: number;text: string;ok: boolean;} | null>(null);
 
   const tileSeqRef = useRef(1);
   const startedAtRef = useRef<number>(0);
@@ -276,7 +276,7 @@ function RushSession({
         misses,
         bestStreak,
         durationSeconds: RUSH_DURATION_SEC,
-        words: Array.from(usedWordsRef.current),
+        words: Array.from(usedWordsRef.current)
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -291,7 +291,7 @@ function RushSession({
       const elapsed = (Date.now() - startedAtRef.current) / 1000;
       const t = elapsed / RUSH_DURATION_SEC;
       const interval =
-        RUSH_SPAWN_BASE_MS - (RUSH_SPAWN_BASE_MS - RUSH_SPAWN_MIN_MS) * Math.min(1, t);
+      RUSH_SPAWN_BASE_MS - (RUSH_SPAWN_BASE_MS - RUSH_SPAWN_MIN_MS) * Math.min(1, t);
       setTimeout(() => {
         if (stopped) return;
         spawn();
@@ -312,7 +312,7 @@ function RushSession({
       const elapsed = (Date.now() - startedAtRef.current) / 1000;
       const t = elapsed / RUSH_DURATION_SEC;
       const fallMs =
-        RUSH_FALL_BASE_MS - (RUSH_FALL_BASE_MS - RUSH_FALL_MIN_MS) * Math.min(1, t);
+      RUSH_FALL_BASE_MS - (RUSH_FALL_BASE_MS - RUSH_FALL_MIN_MS) * Math.min(1, t);
       const v = playable[Math.floor(Math.random() * playable.length)];
       if (prev.some((p) => p.vocab.id === v.id)) return prev;
       usedWordsRef.current.add(v.word);
@@ -321,7 +321,7 @@ function RushSession({
         vocab: v,
         x: 0.15 + Math.random() * 0.7,
         spawnedAt: Date.now(),
-        fallMs,
+        fallMs
       };
       const next = [...prev, tile];
       setTimeout(() => pickActive(next), 0);
@@ -338,8 +338,8 @@ function RushSession({
         const stillAlive: RushTile[] = [];
         let missed = 0;
         for (const t of prev) {
-          if (now - t.spawnedAt >= t.fallMs) missed++;
-          else stillAlive.push(t);
+          if (now - t.spawnedAt >= t.fallMs) missed++;else
+          stillAlive.push(t);
         }
         if (missed > 0) {
           setMisses((m) => m + missed);
@@ -357,7 +357,7 @@ function RushSession({
     if (phase !== "playing" || activeTileId == null) return;
     const active = tiles.find((p) => p.id === activeTileId);
     if (active && choice.id === active.vocab.id) {
-      try { void speak(choice.word); } catch {}
+      try {void speak(choice.word);} catch {}
     }
     setTiles((prev) => {
       const a = prev.find((p) => p.id === activeTileId);
@@ -395,66 +395,66 @@ function RushSession({
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回
+          <ArrowLeft className="size-4" /> <T>返回</T>
         </button>
         <div className="rounded-3xl border-2 border-fuchsia-300 bg-gradient-to-br from-fuchsia-50 via-purple-50 to-rose-50 p-8 text-center shadow-tile dark:border-fuchsia-700 dark:from-fuchsia-950/30 dark:via-purple-950/30 dark:to-rose-950/30">
           <div className="text-5xl">⚡</div>
-          <h1 className="mt-2 text-3xl font-extrabold">单词节奏</h1>
-          <p className="mt-2 text-sm text-muted-foreground">中文从天上掉下来,选对应的英文 · 45 秒</p>
+          <h1 className="mt-2 text-3xl font-extrabold"><T>单词节奏</T></h1>
+          <p className="mt-2 text-sm text-muted-foreground"><T>中文从天上掉下来,选对应的英文 · 45 秒</T></p>
           <div className="mt-5 grid grid-cols-1 gap-3 text-left text-sm sm:grid-cols-2">
-            <div className="rounded-2xl border bg-card p-3"><div className="font-bold">🎯 玩法</div><div className="mt-1 text-xs text-muted-foreground">中文释义会从顶部下落,从 4 个英文里点出对应的那个。</div></div>
-            <div className="rounded-2xl border bg-card p-3"><div className="font-bold">🔥 连对加倍</div><div className="mt-1 text-xs text-muted-foreground">连对越多分越高:×2 / ×3 / ×5。</div></div>
+            <div className="rounded-2xl border bg-card p-3"><div className="font-bold"><T>🎯 玩法</T></div><div className="mt-1 text-xs text-muted-foreground"><T>中文释义会从顶部下落,从 4 个英文里点出对应的那个。</T></div></div>
+            <div className="rounded-2xl border bg-card p-3"><div className="font-bold"><T>🔥 连对加倍</T></div><div className="mt-1 text-xs text-muted-foreground"><T>连对越多分越高:×2 / ×3 / ×5。</T></div></div>
           </div>
           <Button onClick={start} disabled={playable.length < 4} className="mt-6 h-12 w-full rounded-2xl bg-gradient-to-r from-fuchsia-600 to-purple-600 text-base font-bold text-white hover:opacity-90">
-            <Zap className="mr-2 size-5" /> 开始挑战
+            <Zap className="mr-2 size-5" /> <T>开始挑战</T>
           </Button>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   if (phase === "done") {
     const attempted = hits + misses;
-    const accuracy = attempted > 0 ? Math.round((hits / attempted) * 100) : 0;
+    const accuracy = attempted > 0 ? Math.round(hits / attempted * 100) : 0;
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
         <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回
+          <ArrowLeft className="size-4" /> <T>返回</T>
         </button>
         <div className="rounded-3xl border-2 border-fuchsia-300 bg-gradient-to-br from-fuchsia-50 to-purple-50 p-8 text-center shadow-tile dark:border-fuchsia-700 dark:from-fuchsia-950/30 dark:to-purple-950/30">
           <Trophy className="mx-auto size-14 text-amber-500" />
           <div className="mt-2 text-sm uppercase tracking-wider text-muted-foreground">Final Score</div>
           <div className="text-6xl font-extrabold tabular-nums">{score}</div>
           <div className="mt-4 grid grid-cols-3 gap-3 text-sm">
-            <div className="rounded-xl border bg-card p-3"><div className="text-xs text-muted-foreground">命中</div><div className="text-xl font-bold text-emerald-600">{hits}</div></div>
-            <div className="rounded-xl border bg-card p-3"><div className="text-xs text-muted-foreground">最高连击</div><div className="text-xl font-bold text-fuchsia-600">{bestStreak}</div></div>
-            <div className="rounded-xl border bg-card p-3"><div className="text-xs text-muted-foreground">准确率</div><div className="text-xl font-bold">{accuracy}%</div></div>
+            <div className="rounded-xl border bg-card p-3"><div className="text-xs text-muted-foreground"><T>命中</T></div><div className="text-xl font-bold text-emerald-600">{hits}</div></div>
+            <div className="rounded-xl border bg-card p-3"><div className="text-xs text-muted-foreground"><T>最高连击</T></div><div className="text-xl font-bold text-fuchsia-600">{bestStreak}</div></div>
+            <div className="rounded-xl border bg-card p-3"><div className="text-xs text-muted-foreground"><T>准确率</T></div><div className="text-xl font-bold">{accuracy}%</div></div>
           </div>
           <div className="mt-6 flex gap-2">
             <Button onClick={start} className="h-12 flex-1 rounded-2xl bg-gradient-to-r from-fuchsia-600 to-purple-600 font-bold text-white hover:opacity-90">
-              <RotateCw className="mr-2 size-4" /> 再来一局
+              <RotateCw className="mr-2 size-4" /> <T>再来一局</T>
             </Button>
-            <Button variant="outline" onClick={onExit} className="h-12 flex-1 rounded-2xl">回今天的冒险</Button>
+            <Button variant="outline" onClick={onExit} className="h-12 flex-1 rounded-2xl"><T>回今天的冒险</T></Button>
           </div>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   return (
     <main className="mx-auto flex h-[100dvh] max-w-2xl flex-col px-4 pt-2 pb-3 overflow-hidden">
       <div className="mb-2 flex items-center justify-between gap-2">
         <button onClick={onExit} className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 退出
+          <ArrowLeft className="size-4" /> <T>退出</T>
         </button>
         <div className="flex items-center gap-2 text-sm font-bold">
           <span className="rounded-full border bg-card px-3 py-1 tabular-nums shadow-sm">⏱ {timeLeft}s</span>
           <span className="rounded-full border bg-card px-3 py-1 tabular-nums shadow-sm">🎯 {score}</span>
-          {streak >= 2 && (
-            <span className="rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-500 px-3 py-1 text-white tabular-nums shadow-sm">
+          {streak >= 2 &&
+          <span className="rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-500 px-3 py-1 text-white tabular-nums shadow-sm">
               🔥 ×{comboMultiplier(streak)}
             </span>
-          )}
+          }
         </div>
       </div>
       <div className="mb-2 h-1.5 w-full overflow-hidden rounded-full bg-muted">
@@ -463,8 +463,8 @@ function RushSession({
             "h-full transition-all duration-1000 ease-linear",
             timeLeft > 20 ? "bg-emerald-500" : timeLeft > 10 ? "bg-amber-500" : "bg-red-500"
           )}
-          style={{ width: `${(timeLeft / RUSH_DURATION_SEC) * 100}%` }}
-        />
+          style={{ width: `${timeLeft / RUSH_DURATION_SEC * 100}%` }} />
+        
       </div>
       <div className="relative flex-1 overflow-hidden rounded-2xl border-2 border-fuchsia-500/30 bg-gradient-to-b from-purple-500/5 via-background to-fuchsia-500/5" style={{ minHeight: "40vh" }}>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-red-500/60 to-transparent" />
@@ -475,46 +475,46 @@ function RushSession({
               key={t.id}
               className={cn(
                 "absolute -translate-x-1/2 rounded-2xl border-2 px-4 py-2.5 text-center text-lg font-extrabold shadow-md whitespace-nowrap max-w-[85%] truncate",
-                isActive
-                  ? "border-fuchsia-500 bg-fuchsia-500/15 text-fuchsia-700 dark:text-fuchsia-300 ring-2 ring-fuchsia-500/40"
-                  : "border-muted-foreground/30 bg-card/80 text-muted-foreground"
+                isActive ?
+                "border-fuchsia-500 bg-fuchsia-500/15 text-fuchsia-700 dark:text-fuchsia-300 ring-2 ring-fuchsia-500/40" :
+                "border-muted-foreground/30 bg-card/80 text-muted-foreground"
               )}
-              style={{ left: `${t.x * 100}%`, top: 0, animation: `pwr-fall ${t.fallMs}ms linear forwards` }}
-            >
+              style={{ left: `${t.x * 100}%`, top: 0, animation: `pwr-fall ${t.fallMs}ms linear forwards` }}>
+              
               {t.vocab.meaning_cn}
-            </div>
-          );
+            </div>);
+
         })}
-        {floatPop && (
-          <div
-            key={floatPop.id}
-            className={cn(
-              "pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 animate-fade-in text-2xl font-extrabold",
-              floatPop.ok ? "text-emerald-500" : "text-red-500"
-            )}
-          >
+        {floatPop &&
+        <div
+          key={floatPop.id}
+          className={cn(
+            "pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 animate-fade-in text-2xl font-extrabold",
+            floatPop.ok ? "text-emerald-500" : "text-red-500"
+          )}>
+          
             {floatPop.ok ? floatPop.text : `❌ ${floatPop.text}`}
           </div>
-        )}
-        {tiles.length === 0 && (
-          <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">准备…</div>
-        )}
+        }
+        {tiles.length === 0 &&
+        <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground"><T>准备…</T></div>
+        }
       </div>
       <div className="mt-2 grid grid-cols-2 gap-2 shrink-0">
-        {choices.map((c) => (
-          <button
-            key={c.id}
-            onClick={() => answer(c)}
-            className="rounded-2xl border-2 border-border bg-card px-3 py-4 text-xl font-extrabold shadow-sm transition active:scale-95 hover:border-fuchsia-500 hover:bg-fuchsia-500/5"
-          >
+        {choices.map((c) =>
+        <button
+          key={c.id}
+          onClick={() => answer(c)}
+          className="rounded-2xl border-2 border-border bg-card px-3 py-4 text-xl font-extrabold shadow-sm transition active:scale-95 hover:border-fuchsia-500 hover:bg-fuchsia-500/5">
+          
             {c.word}
           </button>
-        ))}
-        {choices.length === 0 && (
-          <div className="col-span-2 rounded-2xl border-2 border-dashed border-muted bg-muted/30 px-3 py-6 text-center text-sm text-muted-foreground">
-            等待第一个单词…
-          </div>
         )}
+        {choices.length === 0 &&
+        <div className="col-span-2 rounded-2xl border-2 border-dashed border-muted bg-muted/30 px-3 py-6 text-center text-sm text-muted-foreground">
+            <T>等待第一个单词…</T>
+          </div>
+        }
       </div>
       <style>{`
         @keyframes pwr-fall {
@@ -522,6 +522,6 @@ function RushSession({
           to { transform: translate(-50%, calc(50vh - 3rem)); }
         }
       `}</style>
-    </main>
-  );
+    </main>);
+
 }

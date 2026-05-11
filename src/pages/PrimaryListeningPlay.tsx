@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import { useParams, Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2, RotateCcw, Sparkles } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -8,9 +8,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { speakKid as speak, stopSpeaking } from "@/lib/speak";
 
 const LOCAL_KEY = "primary_listening_completion_v1";
-type CompRec = { questions_correct: number; questions_total: number; play_count: number };
+type CompRec = {questions_correct: number;questions_total: number;play_count: number;};
 function loadLocal(): Record<string, CompRec> {
-  try { return JSON.parse(localStorage.getItem(LOCAL_KEY) || "{}"); } catch { return {}; }
+  try {return JSON.parse(localStorage.getItem(LOCAL_KEY) || "{}");} catch {return {};}
 }
 function saveLocal(map: Record<string, CompRec>) {
   localStorage.setItem(LOCAL_KEY, JSON.stringify(map));
@@ -23,10 +23,10 @@ export default function PrimaryListeningPlay() {
   const [search] = useSearchParams();
   const navigate = useNavigate();
   const dialogue = useMemo(
-    () => findDialogue(id) ?? PRIMARY_LISTENING_DIALOGUES_G2.find(d => d.id === id) ?? null,
+    () => findDialogue(id) ?? PRIMARY_LISTENING_DIALOGUES_G2.find((d) => d.id === id) ?? null,
     [id]
   );
-  const isG2 = search.get("grade") === "2" || PRIMARY_LISTENING_DIALOGUES_G2.some(d => d.id === id);
+  const isG2 = search.get("grade") === "2" || PRIMARY_LISTENING_DIALOGUES_G2.some((d) => d.id === id);
   const listeningHref = isG2 ? "/primary/listening?grade=2" : "/primary/listening";
 
   const [phase, setPhase] = useState<Phase>("play");
@@ -51,16 +51,16 @@ export default function PrimaryListeningPlay() {
   }, [id, dialogue]);
 
   useEffect(() => {
-    return () => { stopSpeaking(); };
+    return () => {stopSpeaking();};
   }, []);
 
   if (!dialogue) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-10">
-        <BackLink to={listeningHref} className="text-sm text-muted-foreground">← 返回听力地图</BackLink>
-        <p className="mt-6 text-center text-sm text-muted-foreground">找不到这个对话 ({id})</p>
-      </main>
-    );
+        <BackLink to={listeningHref} className="text-sm text-muted-foreground"><T>← 返回听力地图</T></BackLink>
+        <p className="mt-6 text-center text-sm text-muted-foreground"><T>找不到这个对话 (</T>{id})</p>
+      </main>);
+
   }
 
   function nextLine() {
@@ -82,7 +82,7 @@ export default function PrimaryListeningPlay() {
     if (pickedIdx !== null) return;
     setPickedIdx(i);
     const opt = dialogue.questions[qIdx].options[i];
-    if (opt.correct) setCorrectCount(c => c + 1);
+    if (opt.correct) setCorrectCount((c) => c + 1);
   }
 
   async function nextQuestion() {
@@ -99,7 +99,7 @@ export default function PrimaryListeningPlay() {
         const newRec: CompRec = {
           questions_correct: correctCount + (dialogue.questions[qIdx].options[pickedIdx ?? -1]?.correct ? 1 : 0),
           questions_total: total,
-          play_count: (prev?.play_count ?? 0) + 1,
+          play_count: (prev?.play_count ?? 0) + 1
         };
         // We've already added the last question's correct via setCorrectCount in pick(),
         // but state update is async — recompute using current pickedIdx for safety.
@@ -114,10 +114,10 @@ export default function PrimaryListeningPlay() {
             questions_correct: finalCorrect,
             questions_total: total,
             play_count: newRec.play_count,
-            completed_at: new Date().toISOString(),
+            completed_at: new Date().toISOString()
           });
         }
-      } catch { /* offline ok */ }
+      } catch {/* offline ok */}
       return;
     }
     setQIdx(qIdx + 1);
@@ -134,7 +134,7 @@ export default function PrimaryListeningPlay() {
     setQIdx(0);
     setPickedIdx(null);
     setCorrectCount(0);
-    setTimeout(() => { setRevealed(1); speak(dialogue.lines[0].text_en); }, 200);
+    setTimeout(() => {setRevealed(1);speak(dialogue.lines[0].text_en);}, 200);
   }
 
   const q = dialogue.questions[qIdx];
@@ -144,7 +144,7 @@ export default function PrimaryListeningPlay() {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
       <BackLink to={listeningHref} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回听力地图
+        <ArrowLeft className="size-4" /> <T>返回听力地图</T>
       </BackLink>
 
       {/* 标题条 */}
@@ -161,51 +161,51 @@ export default function PrimaryListeningPlay() {
       </div>
 
       {/* 阶段 1:播放对话 */}
-      {phase === "play" && (
-        <section className="mt-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
+      {phase === "play" &&
+      <section className="mt-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
           <div className="space-y-2.5">
-            {dialogue.lines.slice(0, revealed).map((line, i) => (
-              <div key={i} className={`flex items-end gap-2 ${line.side === "right" ? "flex-row-reverse" : ""}`}>
+            {dialogue.lines.slice(0, revealed).map((line, i) =>
+          <div key={i} className={`flex items-end gap-2 ${line.side === "right" ? "flex-row-reverse" : ""}`}>
                 <div className="grid size-9 place-items-center rounded-full bg-muted text-xl shadow-sm">{line.emoji}</div>
                 <div className={`max-w-[78%] rounded-2xl px-3 py-2 shadow-sm ${
-                  line.side === "right" ? "rounded-br-sm bg-emerald-500 text-white" : "rounded-bl-sm bg-muted/40 border-2 border-border"
-                }`}>
+            line.side === "right" ? "rounded-br-sm bg-emerald-500 text-white" : "rounded-bl-sm bg-muted/40 border-2 border-border"}`
+            }>
                   <div className="text-[11px] font-bold opacity-70">{line.speaker}</div>
                   <div className="text-base font-bold">{line.text_en}</div>
                   <div className="mt-0.5 text-[14px] opacity-85">{line.text_cn}</div>
                   <button onClick={() => speak(line.text_en)} className={`mt-1 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold ${
-                    line.side === "right" ? "bg-white/20 hover:bg-white/30" : "bg-card hover:bg-muted"
-                  }`}>
-                    <Volume2 className="size-2.5" /> 再听
+              line.side === "right" ? "bg-white/20 hover:bg-white/30" : "bg-card hover:bg-muted"}`
+              }>
+                    <Volume2 className="size-2.5" /> <T>再听</T>
                   </button>
                 </div>
               </div>
-            ))}
+          )}
           </div>
 
           <div className="mt-4 flex items-center gap-2">
             <button onClick={replayDialogue} className="inline-flex items-center gap-1 rounded-2xl border-2 border-border bg-card px-3 py-2 text-xs font-bold hover:bg-muted">
-              <RotateCcw className="size-3.5" /> 重听
+              <RotateCcw className="size-3.5" /> <T>重听</T>
             </button>
-            {!allRevealed ? (
-              <button onClick={nextLine} className="flex-1 rounded-2xl bg-primary py-2 text-sm font-extrabold text-primary-foreground hover:bg-primary/90">
-                下一句 →
+            {!allRevealed ?
+          <button onClick={nextLine} className="flex-1 rounded-2xl bg-primary py-2 text-sm font-extrabold text-primary-foreground hover:bg-primary/90">
+                <T>下一句 →</T>
+              </button> :
+
+          <button onClick={startQuiz} className="flex-1 rounded-2xl bg-gradient-to-r from-sky-500 to-emerald-500 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.01]">
+                <T>完成播放,开始测试 →</T>
               </button>
-            ) : (
-              <button onClick={startQuiz} className="flex-1 rounded-2xl bg-gradient-to-r from-sky-500 to-emerald-500 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.01]">
-                完成播放,开始测试 →
-              </button>
-            )}
+          }
           </div>
         </section>
-      )}
+      }
 
       {/* 阶段 2:测试 */}
-      {phase === "quiz" && q && (
-        <section className="mt-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
+      {phase === "quiz" && q &&
+      <section className="mt-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
           <div className="mb-3 flex items-center justify-between">
-            <div className="text-xs font-bold text-muted-foreground">第 {qIdx + 1} / {total} 题</div>
-            <div className="text-xs font-bold text-emerald-600">已答对 {correctCount}</div>
+            <div className="text-xs font-bold text-muted-foreground"><T>第</T> {qIdx + 1} / {total} <T>题</T></div>
+            <div className="text-xs font-bold text-emerald-600"><T>已答对</T> {correctCount}</div>
           </div>
           <div className="rounded-2xl bg-muted/30 p-3">
             <div className="text-lg font-extrabold leading-snug">{q.stem_cn}</div>
@@ -214,21 +214,21 @@ export default function PrimaryListeningPlay() {
 
           <div className="mt-3 space-y-2">
             {q.options.map((opt, i) => {
-              const isPicked = pickedIdx === i;
-              const showState = pickedIdx !== null;
-              return (
-                <button
-                  key={i}
-                  disabled={pickedIdx !== null && !isPicked && !opt.correct}
-                  onClick={() => pick(i)}
-                  className={`w-full rounded-xl border-2 p-3 text-left transition ${
-                    !showState ? "border-border bg-card hover:border-primary hover:bg-primary/5" :
-                    isPicked && opt.correct ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30" :
-                    isPicked && !opt.correct ? "border-rose-500 bg-rose-50 dark:bg-rose-950/30" :
-                    !isPicked && opt.correct ? "border-emerald-300 bg-emerald-50/60 dark:bg-emerald-950/20" :
-                    "border-border bg-card opacity-50"
-                  }`}
-                >
+            const isPicked = pickedIdx === i;
+            const showState = pickedIdx !== null;
+            return (
+              <button
+                key={i}
+                disabled={pickedIdx !== null && !isPicked && !opt.correct}
+                onClick={() => pick(i)}
+                className={`w-full rounded-xl border-2 p-3 text-left transition ${
+                !showState ? "border-border bg-card hover:border-primary hover:bg-primary/5" :
+                isPicked && opt.correct ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30" :
+                isPicked && !opt.correct ? "border-rose-500 bg-rose-50 dark:bg-rose-950/30" :
+                !isPicked && opt.correct ? "border-emerald-300 bg-emerald-50/60 dark:bg-emerald-950/20" :
+                "border-border bg-card opacity-50"}`
+                }>
+                
                   <div className="flex items-center gap-2">
                     <span className="grid size-6 shrink-0 place-items-center rounded-full bg-muted text-[11px] font-extrabold">{String.fromCharCode(65 + i)}</span>
                     <div className="flex-1">
@@ -238,57 +238,57 @@ export default function PrimaryListeningPlay() {
                     {showState && opt.correct && <span className="text-lg">✅</span>}
                     {isPicked && !opt.correct && <span className="text-lg">💭</span>}
                   </div>
-                </button>
-              );
-            })}
+                </button>);
+
+          })}
           </div>
 
-          {pickedIdx !== null && picked && (
-            <div className={`mt-3 rounded-2xl p-3 text-sm font-bold ${
-              picked.correct
-                ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200"
-                : "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200"
-            }`}>
+          {pickedIdx !== null && picked &&
+        <div className={`mt-3 rounded-2xl p-3 text-sm font-bold ${
+        picked.correct ?
+        "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200" :
+        "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200"}`
+        }>
               {picked.correct ? `🌟 完美! ${q.feedback_correct_cn}` : q.feedback_wrong_cn}
             </div>
-          )}
+        }
 
           <div className="mt-3 flex items-center gap-2">
-            {pickedIdx !== null && !picked?.correct && (
-              <button onClick={retryAnswer} className="inline-flex items-center gap-1 rounded-2xl border-2 border-border bg-card px-3 py-2 text-xs font-bold hover:bg-muted">
-                <RotateCcw className="size-3.5" /> 再试一次
+            {pickedIdx !== null && !picked?.correct &&
+          <button onClick={retryAnswer} className="inline-flex items-center gap-1 rounded-2xl border-2 border-border bg-card px-3 py-2 text-xs font-bold hover:bg-muted">
+                <RotateCcw className="size-3.5" /> <T>再试一次</T>
               </button>
-            )}
-            {pickedIdx !== null && picked?.correct && (
-              <button onClick={nextQuestion} className="flex-1 rounded-2xl bg-gradient-to-r from-sky-500 to-emerald-500 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.01]">
+          }
+            {pickedIdx !== null && picked?.correct &&
+          <button onClick={nextQuestion} className="flex-1 rounded-2xl bg-gradient-to-r from-sky-500 to-emerald-500 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.01]">
                 {qIdx + 1 >= total ? "查看结果 →" : "下一题 →"}
               </button>
-            )}
+          }
           </div>
         </section>
-      )}
+      }
 
       {/* 阶段 3:总结 */}
-      {phase === "done" && (
-        <section className="mt-4 rounded-3xl bg-gradient-to-br from-amber-100 via-orange-100 to-rose-100 p-6 text-center shadow-tile dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
+      {phase === "done" &&
+      <section className="mt-4 rounded-3xl bg-gradient-to-br from-amber-100 via-orange-100 to-rose-100 p-6 text-center shadow-tile dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
           <div className="mx-auto grid size-16 place-items-center rounded-full bg-white/80 text-4xl shadow-md">🎉</div>
-          <div className="mt-3 text-lg font-extrabold">完成 "{dialogue.title_cn}"</div>
+          <div className="mt-3 text-lg font-extrabold"><T>完成 "</T>{dialogue.title_cn}"</div>
           <div className="mt-2 inline-block rounded-full bg-white/70 px-4 py-1.5 text-sm font-bold">
-            测试结果:{correctCount} / {total} {correctCount === total ? "全对!" : ""}
+            <T>测试结果:</T>{correctCount} / {total} {correctCount === total ? "全对!" : ""}
           </div>
           <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-rose-200/70 px-3 py-1 text-xs font-bold text-rose-800">
-            <Sparkles className="size-3" /> +5 亲密度
+            <Sparkles className="size-3" /> <T>+5 亲密度</T>
           </div>
           <div className="mt-5 flex items-center justify-center gap-2">
             <button onClick={replayDialogue} className="rounded-2xl border-2 border-border bg-card px-4 py-2 text-sm font-bold hover:bg-muted">
-              再听一遍
+              <T>再听一遍</T>
             </button>
             <Link to={listeningHref} className="rounded-2xl bg-gradient-to-r from-sky-500 to-emerald-500 px-4 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.02]">
-              返回听力地图
+              <T>返回听力地图</T>
             </Link>
           </div>
         </section>
-      )}
-    </main>
-  );
+      }
+    </main>);
+
 }

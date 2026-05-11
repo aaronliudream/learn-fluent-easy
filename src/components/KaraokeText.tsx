@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import { Volume2, Gauge } from "lucide-react";
 import { speak, stopSpeaking } from "@/lib/speak";
 
@@ -34,7 +34,7 @@ function saveSpeed(v: number) {
   try {
     localStorage.setItem(SPEED_KEY, String(v));
     window.dispatchEvent(new CustomEvent(SPEED_EVENT, { detail: v }));
-  } catch { /* ignore */ }
+  } catch {/* ignore */}
 }
 
 export default function KaraokeText({
@@ -43,15 +43,15 @@ export default function KaraokeText({
   autoPlay = false,
   className = "",
   size = "md",
-  showSpeed = true,
-}: {
-  text: string;
-  cn?: string;
-  autoPlay?: boolean;
-  className?: string;
-  size?: "sm" | "md" | "lg";
-  showSpeed?: boolean;
-}) {
+  showSpeed = true
+
+
+
+
+
+
+
+}: {text: string;cn?: string;autoPlay?: boolean;className?: string;size?: "sm" | "md" | "lg";showSpeed?: boolean;}) {
   const [speed, setSpeed] = useState<number>(loadSpeed);
   const [activeWord, setActiveWord] = useState(-1);
   const [supported, setSupported] = useState(true);
@@ -135,49 +135,49 @@ export default function KaraokeText({
             <span
               key={k}
               className={`inline-block transition-all duration-150 ${
-                isActive
-                  ? "scale-110 text-orange-500"
-                  : isPast
-                  ? "text-foreground"
-                  : activeWord >= 0
-                  ? "text-muted-foreground/60"
-                  : "text-foreground"
-              }`}
-            >
+              isActive ?
+              "scale-110 text-orange-500" :
+              isPast ?
+              "text-foreground" :
+              activeWord >= 0 ?
+              "text-muted-foreground/60" :
+              "text-foreground"}`
+              }>
+              
               {tok}
-            </span>
-          );
+            </span>);
+
         })}
       </div>
       {cn && <div className="text-sm text-muted-foreground">{cn}</div>}
       <div className="flex items-center gap-2">
         <button
           onClick={play}
-          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground shadow-tile"
-        >
-          <Volume2 className="size-3.5" /> 跟读
+          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground shadow-tile">
+          
+          <Volume2 className="size-3.5" /> <T>跟读</T>
         </button>
-        {showSpeed && (
-          <div className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2 py-1 text-[11px] font-bold text-muted-foreground">
+        {showSpeed &&
+        <div className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2 py-1 text-[11px] font-bold text-muted-foreground">
             <Gauge className="size-3" />
-            {SPEED_OPTIONS.map((s) => (
-              <button
-                key={s}
-                onClick={() => {
-                  setSpeed(s);
-                  saveSpeed(s);
-                }}
-                className={`rounded-full px-2 py-0.5 transition ${
-                  speed === s ? "bg-primary text-primary-foreground" : "hover:bg-muted"
-                }`}
-                aria-label={`朗读速度 ${s}x`}
-              >
+            {SPEED_OPTIONS.map((s) =>
+          <button
+            key={s}
+            onClick={() => {
+              setSpeed(s);
+              saveSpeed(s);
+            }}
+            className={`rounded-full px-2 py-0.5 transition ${
+            speed === s ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`
+            }
+            aria-label={`朗读速度 ${s}x`}>
+            
                 {s}x
               </button>
-            ))}
+          )}
           </div>
-        )}
+        }
       </div>
-    </div>
-  );
+    </div>);
+
 }

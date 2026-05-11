@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Check, Sparkles, Volume2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -6,16 +6,16 @@ import { speakKid as speak } from "@/lib/speak";
 import {
   SIGHT_WORD_GROUPS,
   SIGHT_WORD_ITEMS,
-  type SightWordItem,
-} from "@/data/primarySightWords";
+  type SightWordItem } from
+"@/data/primarySightWords";
 import {
   SIGHT_WORD_GROUPS_G2,
-  SIGHT_WORD_ITEMS_G2,
-} from "@/data/primarySightWordsG2";
+  SIGHT_WORD_ITEMS_G2 } from
+"@/data/primarySightWordsG2";
 import {
   bumpSightWordLevel,
-  bumpSightWordMastery,
-} from "@/lib/sightWordMastery";
+  bumpSightWordMastery } from
+"@/lib/sightWordMastery";
 import { buildSightWordDistractors } from "@/lib/sightWordDistractors";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
 import { bondOnSparkEcho, bondOnPhonicsLearnPass } from "@/lib/petGrowth";
@@ -34,23 +34,23 @@ function speakWordKid(word: string) {
  *  大字 + IPA + 词性 + 中文 + 例句 + Spark 小知识 → "我学会了" → MiniQuiz 3 题轮换.
  */
 export default function PrimarySightWordsLearn() {
-  const { wordId } = useParams<{ wordId: string }>();
+  const { wordId } = useParams<{wordId: string;}>();
   const [search] = useSearchParams();
   const nav = useNavigate();
   const item = useMemo(
     () =>
-      SIGHT_WORD_ITEMS.find((w) => w.id === wordId) ??
-      SIGHT_WORD_ITEMS_G2.find((w) => w.id === wordId) ??
-      null,
+    SIGHT_WORD_ITEMS.find((w) => w.id === wordId) ??
+    SIGHT_WORD_ITEMS_G2.find((w) => w.id === wordId) ??
+    null,
     [wordId]
   );
   const group = useMemo(
     () =>
-      item
-        ? SIGHT_WORD_GROUPS.find((g) => g.id === item.groupId) ??
-          SIGHT_WORD_GROUPS_G2.find((g) => g.id === item.groupId) ??
-          null
-        : null,
+    item ?
+    SIGHT_WORD_GROUPS.find((g) => g.id === item.groupId) ??
+    SIGHT_WORD_GROUPS_G2.find((g) => g.id === item.groupId) ??
+    null :
+    null,
     [item]
   );
   const isG2 = search.get("grade") === "2" || SIGHT_WORD_ITEMS_G2.some((w) => w.id === wordId);
@@ -68,80 +68,80 @@ export default function PrimarySightWordsLearn() {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <BackLink to={sightWordsHref} className="text-sm text-muted-foreground">
-          ← 返回常见小词冒险
+          <T>← 返回常见小词冒险</T>
         </BackLink>
-        <p className="mt-6 text-sm text-muted-foreground">没找到这个词。</p>
-      </main>
-    );
+        <p className="mt-6 text-sm text-muted-foreground"><T>没找到这个词。</T></p>
+      </main>);
+
   }
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
       <BackLink
         to={sightWordsHref}
-        className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="size-4" /> 返回常见小词冒险
+        className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        
+        <ArrowLeft className="size-4" /> <T>返回常见小词冒险</T>
       </BackLink>
-      {group && (
-        <div className="mb-3 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+      {group &&
+      <div className="mb-3 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
           {group.groupName} · {item.word}
         </div>
-      )}
+      }
 
-      {phase === "learn" && (
-        <>
+      {phase === "learn" &&
+      <>
           <WordDetail item={item} />
           {item.sparkLine && <SparkLineCard line={item.sparkLine} />}
           <div className="mt-6 flex flex-col items-center gap-2">
             <button
-              onClick={() => setPhase("quiz")}
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-cyan-500 to-emerald-500 px-8 py-4 text-lg font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
-            >
-              <Check className="size-5" /> 我学会了,开始测试
+            onClick={() => setPhase("quiz")}
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-cyan-500 to-emerald-500 px-8 py-4 text-lg font-extrabold text-white shadow-tile transition hover:-translate-y-0.5">
+            
+              <Check className="size-5" /> <T>我学会了,开始测试</T>
             </button>
             <button
-              onClick={() => speakWordKid(item.word)}
-              className="text-xs text-muted-foreground underline-offset-2 hover:underline"
-            >
-              再听一遍 🔊
-            </button>
+            onClick={() => speakWordKid(item.word)}
+            className="text-xs text-muted-foreground underline-offset-2 hover:underline">
+              <T>再听一遍 🔊</T>
+            
+          </button>
           </div>
         </>
-      )}
+      }
 
-      {phase === "quiz" && (
-        <MiniQuiz
-          item={item}
-          onDone={async (allCorrect) => {
-            if (allCorrect) {
-              await bumpSightWordLevel(item.id, 1, 3);
-              try { bondOnPhonicsLearnPass(); } catch { /* noop */ }
-            }
-            celebratePet({
-              kind: "levelup",
-              emoji: "📖",
-              title: allCorrect ? "全对!Spark 学会啦~" : "练完啦,继续加油!",
-              subtitle: allCorrect
-                ? `${item.word} +1 掌握度 · Spark +15 亲密度`
-                : "下次再考一遍",
-            });
-            setPhase("done");
-            setTimeout(() => nav(sightWordsHref), 1600);
-          }}
-        />
-      )}
+      {phase === "quiz" &&
+      <MiniQuiz
+        item={item}
+        onDone={async (allCorrect) => {
+          if (allCorrect) {
+            await bumpSightWordLevel(item.id, 1, 3);
+            try {bondOnPhonicsLearnPass();} catch {/* noop */}
+          }
+          celebratePet({
+            kind: "levelup",
+            emoji: "📖",
+            title: allCorrect ? "全对!Spark 学会啦~" : "练完啦,继续加油!",
+            subtitle: allCorrect ?
+            `${item.word} +1 掌握度 · Spark +15 亲密度` :
+            "下次再考一遍"
+          });
+          setPhase("done");
+          setTimeout(() => nav(sightWordsHref), 1600);
+        }} />
 
-      {phase === "done" && (
-        <div className="rounded-3xl border-2 border-dashed border-border p-10 text-center text-sm text-muted-foreground">
-          回到常见小词冒险…
+      }
+
+      {phase === "done" &&
+      <div className="rounded-3xl border-2 border-dashed border-border p-10 text-center text-sm text-muted-foreground">
+          <T>回到常见小词冒险…</T>
         </div>
-      )}
-    </main>
-  );
+      }
+    </main>);
+
 }
 
-function WordDetail({ item }: { item: SightWordItem }) {
+function WordDetail({ item }: {item: SightWordItem;}) {
   return (
     <div className="space-y-4">
       <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-sky-400 via-cyan-400 to-emerald-400 p-6 text-white shadow-tile">
@@ -156,51 +156,51 @@ function WordDetail({ item }: { item: SightWordItem }) {
         <div className="mt-4 flex justify-center">
           <button
             onClick={() => speakWordKid(item.word)}
-            className="flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-2 text-xs font-bold backdrop-blur-sm hover:bg-white/30"
-          >
-            <Volume2 className="size-4" /> 听 Spark 念
+            className="flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-2 text-xs font-bold backdrop-blur-sm hover:bg-white/30">
+            
+            <Volume2 className="size-4" /> <T>听 Spark 念</T>
           </button>
         </div>
       </div>
 
       <div className="rounded-2xl border border-border/60 bg-card p-4">
-        <div className="text-xs font-bold text-muted-foreground">💡 这个词的意思</div>
+        <div className="text-xs font-bold text-muted-foreground"><T>💡 这个词的意思</T></div>
         <p className="mt-1 text-base font-bold">{item.meaningCn}</p>
       </div>
 
       <div className="rounded-2xl border border-border/60 bg-card p-4">
-        <div className="text-xs font-bold text-muted-foreground">📖 例句</div>
+        <div className="text-xs font-bold text-muted-foreground"><T>📖 例句</T></div>
         <button
           onClick={() => speak(item.exampleSentence)}
-          className="mt-1 inline-flex items-center gap-1.5 text-base font-bold hover:underline"
-        >
+          className="mt-1 inline-flex items-center gap-1.5 text-base font-bold hover:underline">
+          
           <Volume2 className="size-4 text-sky-600" /> {item.exampleSentence}
         </button>
         <p className="mt-1 text-sm text-muted-foreground">{item.exampleSentenceCn}</p>
-        {item.exampleSentenceEmoji && (
-          <div className="mt-1 text-2xl">{item.exampleSentenceEmoji}</div>
-        )}
+        {item.exampleSentenceEmoji &&
+        <div className="mt-1 text-2xl">{item.exampleSentenceEmoji}</div>
+        }
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
-function SparkLineCard({ line }: { line: string }) {
+function SparkLineCard({ line }: {line: string;}) {
   return (
     <div className="mt-5 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-5 shadow-tile dark:border-amber-900/40 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
       <div className="flex items-center gap-2 text-sm font-extrabold text-amber-700 dark:text-amber-300">
-        <span className="text-xl">🦊</span> Spark 想告诉你一个秘密
+        <span className="text-xl">🦊</span> <T>Spark 想告诉你一个秘密</T>
       </div>
       <p className="mt-2 text-sm leading-relaxed text-foreground/85">{line}</p>
-    </div>
-  );
+    </div>);
+
 }
 
 // ─── Mini Quiz: 3 道题轮换(recognize / listen / context) ──
 type Q =
-  | { kind: "recognize"; correct: string; options: string[] }   // 看词选中文
-  | { kind: "listen"; correct: string; options: string[] }      // 听词选写法
-  | { kind: "context"; correctWord: string; sentenceParts: [string, string]; cn: string; options: string[] }; // 看句子选词
+{kind: "recognize";correct: string;options: string[];} // 看词选中文
+| {kind: "listen";correct: string;options: string[];} // 听词选写法
+| {kind: "context";correctWord: string;sentenceParts: [string, string];cn: string;options: string[];}; // 看句子选词
 
 function buildQuiz(item: SightWordItem): Q[] {
   const allItems = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2];
@@ -214,13 +214,13 @@ function buildQuiz(item: SightWordItem): Q[] {
   qs.push({
     kind: "recognize",
     correct: item.meaningCn,
-    options: shuffle([item.meaningCn, ...meaningDistractors]),
+    options: shuffle([item.meaningCn, ...meaningDistractors])
   });
   // 2) listen: 听词选写法
   qs.push({
     kind: "listen",
     correct: item.word,
-    options: shuffle([item.word, ...distractors]),
+    options: shuffle([item.word, ...distractors])
   });
   // 3) context: 完形填空(把例句中的词挖掉)
   const ctxQ = buildContext(item, distractors);
@@ -229,7 +229,7 @@ function buildQuiz(item: SightWordItem): Q[] {
     qs.push({
       kind: "listen",
       correct: item.word,
-      options: shuffle([item.word, ...buildSightWordDistractors(item.id, pool, 3)]),
+      options: shuffle([item.word, ...buildSightWordDistractors(item.id, pool, 3)])
     });
   }
   return qs.slice(0, 3);
@@ -249,7 +249,7 @@ function buildContext(item: SightWordItem, distractors: string[]): Q | null {
     correctWord: item.word,
     sentenceParts: [before, after],
     cn: item.exampleSentenceCn,
-    options: shuffle([item.word, ...distractors]),
+    options: shuffle([item.word, ...distractors])
   };
 }
 
@@ -266,7 +266,7 @@ function shuffle<T>(arr: T[]): T[] {
   return c;
 }
 
-function MiniQuiz({ item, onDone }: { item: SightWordItem; onDone: (allCorrect: boolean) => void }) {
+function MiniQuiz({ item, onDone }: {item: SightWordItem;onDone: (allCorrect: boolean) => void;}) {
   const questions = useMemo(() => buildQuiz(item), [item]);
   const [idx, setIdx] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
@@ -289,9 +289,9 @@ function MiniQuiz({ item, onDone }: { item: SightWordItem; onDone: (allCorrect: 
     if (picked) return;
     setPicked(opt);
     let isCorrect = false;
-    if (q.kind === "recognize") isCorrect = opt === q.correct;
-    else if (q.kind === "listen") isCorrect = opt === q.correct;
-    else isCorrect = opt === q.correctWord;
+    if (q.kind === "recognize") isCorrect = opt === q.correct;else
+    if (q.kind === "listen") isCorrect = opt === q.correct;else
+    isCorrect = opt === q.correctWord;
 
     void bumpSightWordMastery(item.id, q.kind, isCorrect);
 
@@ -300,8 +300,8 @@ function MiniQuiz({ item, onDone }: { item: SightWordItem; onDone: (allCorrect: 
       setTimeout(() => {
         setPicked(null);
         setRetryArmed(false);
-        if (idx < questions.length - 1) setIdx(idx + 1);
-        else onDone(correctCount + 1 === questions.length);
+        if (idx < questions.length - 1) setIdx(idx + 1);else
+        onDone(correctCount + 1 === questions.length);
       }, 800);
     } else {
       setTimeout(() => {
@@ -310,8 +310,8 @@ function MiniQuiz({ item, onDone }: { item: SightWordItem; onDone: (allCorrect: 
           setRetryArmed(true); // 同题再来一次
         } else {
           setRetryArmed(false);
-          if (idx < questions.length - 1) setIdx(idx + 1);
-          else onDone(correctCount === questions.length);
+          if (idx < questions.length - 1) setIdx(idx + 1);else
+          onDone(correctCount === questions.length);
         }
       }, 1100);
     }
@@ -320,48 +320,48 @@ function MiniQuiz({ item, onDone }: { item: SightWordItem; onDone: (allCorrect: 
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between text-xs font-bold text-muted-foreground">
-        <span>第 {idx + 1} 题 / {questions.length}{retryArmed && <span className="ml-1 text-rose-600">· 再来一次</span>}</span>
+        <span><T>第</T> {idx + 1} <T>题 /</T> {questions.length}{retryArmed && <span className="ml-1 text-rose-600"><T>· 再来一次</T></span>}</span>
         <span>✓ {correctCount}</span>
       </div>
 
-      {q.kind === "recognize" && (
-        <QuizFrame
-          prompt="这个词的中文是什么?"
-          aux={<div className="text-6xl font-black text-sky-600 dark:text-sky-300">{item.word}</div>}
-        >
+      {q.kind === "recognize" &&
+      <QuizFrame
+        prompt="这个词的中文是什么?"
+        aux={<div className="text-6xl font-black text-sky-600 dark:text-sky-300">{item.word}</div>}>
+        
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {q.options.map((o) => (
-              <OptionBtn key={o} label={o} picked={picked} correct={q.correct} onPick={pick} />
-            ))}
+            {q.options.map((o) =>
+          <OptionBtn key={o} label={o} picked={picked} correct={q.correct} onPick={pick} />
+          )}
           </div>
         </QuizFrame>
-      )}
+      }
 
-      {q.kind === "listen" && (
-        <QuizFrame
-          prompt="听这个词,选出正确的写法"
-          aux={
-            <button
-              onClick={() => speakWordKid(item.word)}
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-lg font-bold text-primary-foreground shadow"
-            >
-              <Volume2 className="size-5" /> 再听一遍
+      {q.kind === "listen" &&
+      <QuizFrame
+        prompt="听这个词,选出正确的写法"
+        aux={
+        <button
+          onClick={() => speakWordKid(item.word)}
+          className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-lg font-bold text-primary-foreground shadow">
+          
+              <Volume2 className="size-5" /> <T>再听一遍</T>
             </button>
-          }
-        >
+        }>
+        
           <div className="grid grid-cols-2 gap-3">
-            {q.options.map((o) => (
-              <OptionBtn key={o} label={o} picked={picked} correct={q.correct} onPick={pick} big mono />
-            ))}
+            {q.options.map((o) =>
+          <OptionBtn key={o} label={o} picked={picked} correct={q.correct} onPick={pick} big mono />
+          )}
           </div>
         </QuizFrame>
-      )}
+      }
 
-      {q.kind === "context" && (
-        <QuizFrame
-          prompt="选出能填进句子里的词"
-          aux={
-            <div className="space-y-1 text-center">
+      {q.kind === "context" &&
+      <QuizFrame
+        prompt="选出能填进句子里的词"
+        aux={
+        <div className="space-y-1 text-center">
               <div className="text-xl font-bold">
                 {q.sentenceParts[0]}
                 <span className="mx-1 inline-block rounded-md bg-sky-100 px-3 text-sky-700 dark:bg-sky-950/40 dark:text-sky-300">____</span>
@@ -369,34 +369,34 @@ function MiniQuiz({ item, onDone }: { item: SightWordItem; onDone: (allCorrect: 
               </div>
               <div className="text-xs text-muted-foreground">{q.cn}</div>
             </div>
-          }
-        >
+        }>
+        
           <div className="grid grid-cols-2 gap-3">
-            {q.options.map((o) => (
-              <OptionBtn key={o} label={o} picked={picked} correct={q.correctWord} onPick={pick} big mono />
-            ))}
+            {q.options.map((o) =>
+          <OptionBtn key={o} label={o} picked={picked} correct={q.correctWord} onPick={pick} big mono />
+          )}
           </div>
         </QuizFrame>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
 function QuizFrame({
-  prompt, aux, children,
-}: { prompt: string; aux?: React.ReactNode; children: React.ReactNode }) {
+  prompt, aux, children
+}: {prompt: string;aux?: React.ReactNode;children: React.ReactNode;}) {
   return (
     <div className="space-y-4 rounded-3xl border-2 border-border bg-card p-5 shadow-tile">
       <p className="text-center text-sm font-bold text-muted-foreground">{prompt}</p>
       {aux && <div className="flex justify-center">{aux}</div>}
       {children}
-    </div>
-  );
+    </div>);
+
 }
 
 function OptionBtn({
-  label, picked, correct, onPick, big, mono,
-}: { label: string; picked: string | null; correct: string; onPick: (l: string) => void; big?: boolean; mono?: boolean }) {
+  label, picked, correct, onPick, big, mono
+}: {label: string;picked: string | null;correct: string;onPick: (l: string) => void;big?: boolean;mono?: boolean;}) {
   const isCorrect = label === correct;
   const isPicked = picked === label;
   return (
@@ -404,19 +404,19 @@ function OptionBtn({
       disabled={!!picked}
       onClick={() => onPick(label)}
       className={
-        "rounded-2xl border-2 px-4 py-4 font-extrabold transition " +
-        (big ? "text-2xl " : "text-base ") +
-        (mono ? "font-mono " : "") +
-        (picked === null
-          ? "border-border bg-card hover:border-primary/50"
-          : isCorrect
-          ? "border-emerald-400 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300"
-          : isPicked
-          ? "border-rose-400 bg-rose-50 text-rose-700 dark:bg-rose-950/30 dark:text-rose-300"
-          : "border-border bg-card opacity-60")
-      }
-    >
+      "rounded-2xl border-2 px-4 py-4 font-extrabold transition " + (
+      big ? "text-2xl " : "text-base ") + (
+      mono ? "font-mono " : "") + (
+      picked === null ?
+      "border-border bg-card hover:border-primary/50" :
+      isCorrect ?
+      "border-emerald-400 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300" :
+      isPicked ?
+      "border-rose-400 bg-rose-50 text-rose-700 dark:bg-rose-950/30 dark:text-rose-300" :
+      "border-border bg-card opacity-60")
+      }>
+      
       {label}
-    </button>
-  );
+    </button>);
+
 }

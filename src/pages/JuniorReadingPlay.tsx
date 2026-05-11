@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Lock, Clock, ShieldCheck, RotateCcw, ChevronRight } from "lucide-react";
@@ -15,12 +15,12 @@ import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
-type Q = { q: string; options: string[]; answer: string; explanation?: string };
-type R = { id: string; title: string; body: string; word_count: number | null; grade: number; questions: Q[]; vocab_notes: { word: string; cn: string }[] };
-type ListItem = { id: string; title: string };
+type Q = {q: string;options: string[];answer: string;explanation?: string;};
+type R = {id: string;title: string;body: string;word_count: number | null;grade: number;questions: Q[];vocab_notes: {word: string;cn: string;}[];};
+type ListItem = {id: string;title: string;};
 
 export default function JuniorReadingPlay() {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{id: string;}>();
   const nav = useNavigate();
   const [r, setR] = useState<R | null>(null);
   const [list, setList] = useState<ListItem[]>([]);
@@ -38,33 +38,33 @@ export default function JuniorReadingPlay() {
 
   // Full-test lock: AI may only discuss the reading after submission.
   useRegisterAssistant(
-    r
-      ? {
-          context: "junior_reading",
-          ref: r.id,
-          topic: `初中阅读 · ${r.title}`,
-          mode: "full-test",
-          unlocked: submitted,
-          lockedHint: "请先把所有阅读题做完并点「提交」之后再来找我答疑哦 ✨",
-          pageTitle: "💬 小月 · 阅读复盘",
-          snapshot: submitted
-            ? {
-                title: r.title,
-                passage_excerpt: r.body.slice(0, 1200),
-                vocab_notes: r.vocab_notes?.slice(0, 12),
-                questions: r.questions.map((q, i) => ({
-                  index: i + 1,
-                  stem: q.q,
-                  options: q.options,
-                  correct_answer: q.answer,
-                  user_answer: picks[i],
-                  is_correct: picks[i] === q.answer,
-                  explanation: q.explanation,
-                })),
-              }
-            : undefined,
-        }
-      : null,
+    r ?
+    {
+      context: "junior_reading",
+      ref: r.id,
+      topic: `初中阅读 · ${r.title}`,
+      mode: "full-test",
+      unlocked: submitted,
+      lockedHint: "请先把所有阅读题做完并点「提交」之后再来找我答疑哦 ✨",
+      pageTitle: "💬 小月 · 阅读复盘",
+      snapshot: submitted ?
+      {
+        title: r.title,
+        passage_excerpt: r.body.slice(0, 1200),
+        vocab_notes: r.vocab_notes?.slice(0, 12),
+        questions: r.questions.map((q, i) => ({
+          index: i + 1,
+          stem: q.q,
+          options: q.options,
+          correct_answer: q.answer,
+          user_answer: picks[i],
+          is_correct: picks[i] === q.answer,
+          explanation: q.explanation
+        }))
+      } :
+      undefined
+    } :
+    null
   );
 
   // 推荐阅读时长（秒）：单词数 / 1.8 词每秒（约100词/分钟），最少 30 秒
@@ -83,8 +83,8 @@ export default function JuniorReadingPlay() {
       }
       const grade = (data as any)?.grade;
       if (grade) {
-        const { data: items } = await supabase.from("junior_reading")
-          .select("id,title").eq("grade", grade).order("created_at", { ascending: true });
+        const { data: items } = await supabase.from("junior_reading").
+        select("id,title").eq("grade", grade).order("created_at", { ascending: true });
         setList((items ?? []) as ListItem[]);
       }
       startRef.current = Date.now();
@@ -105,7 +105,7 @@ export default function JuniorReadingPlay() {
 
   const nextItem = useMemo(() => {
     if (!r || !list.length) return null;
-    const idx = list.findIndex(x => x.id === r.id);
+    const idx = list.findIndex((x) => x.id === r.id);
     return idx >= 0 && idx < list.length - 1 ? list[idx + 1] : null;
   }, [r, list]);
 
@@ -113,12 +113,12 @@ export default function JuniorReadingPlay() {
     if (!r || picks[qi]) return;
     const ms = Date.now() - (qStartRef.current[qi] ?? Date.now());
     qStartRef.current[qi] = Date.now();
-    setPicks(p => ({ ...p, [qi]: letter }));
+    setPicks((p) => ({ ...p, [qi]: letter }));
     const ok = letter === r.questions[qi].answer;
     if (userId) {
       await supabase.from("junior_reading_attempts").insert({
         user_id: userId, reading_id: r.id, question_idx: qi,
-        user_answer: letter, is_correct: ok,
+        user_answer: letter, is_correct: ok
       });
     }
     if (ok) {
@@ -127,7 +127,7 @@ export default function JuniorReadingPlay() {
       await awardForCorrect(next, "junior_reading", `${r.id}:${qi}`, "junior_reading", ms);
       await bumpPetSkill("reading_owl", 1);
     } else {
-      setStreak(0); notifyWrong();
+      setStreak(0);notifyWrong();
     }
     recordUnifiedAttempt({
       stage: "junior",
@@ -139,22 +139,22 @@ export default function JuniorReadingPlay() {
       is_correct: ok,
       user_answer: letter,
       correct_answer: r.questions[qi].answer,
-      context: { reading_id: r.id, question_idx: qi, explanation: r.questions[qi].explanation },
+      context: { reading_id: r.id, question_idx: qi, explanation: r.questions[qi].explanation }
     }).catch(() => {});
   };
 
   const handleSubmit = async () => {
     if (!r) return;
-    if (!allAnswered) { toast.error("请先回答所有题目"); return; }
+    if (!allAnswered) {toast.error("请先回答所有题目");return;}
     setSubmitted(true);
-    const pct = Math.round((correctCount / r.questions.length) * 100);
+    const pct = Math.round(correctCount / r.questions.length * 100);
     if (timeOk) {
       // 写入完成 + 掌握度
       if (userId) {
-        await supabase.from("junior_reading_completions")
-          .upsert({ user_id: userId, reading_id: r.id, perfect: pct === 100, time_spent_sec: elapsed }, { onConflict: "user_id,reading_id" });
+        await supabase.from("junior_reading_completions").
+        upsert({ user_id: userId, reading_id: r.id, perfect: pct === 100, time_spent_sec: elapsed }, { onConflict: "user_id,reading_id" });
         const updated = await recordMastery({ module: "junior_reading", itemId: r.id, pct });
-        if (updated) setMastery(m => ({ ...m, [r.id]: updated }));
+        if (updated) setMastery((m) => ({ ...m, [r.id]: updated }));
       }
       if (pct === 100) {
         await awardForBlock("junior_reading");
@@ -173,14 +173,14 @@ export default function JuniorReadingPlay() {
     setPicks({});
     setSubmitted(false);
     setStreak(0);
-    setAttempt(a => a + 1);
+    setAttempt((a) => a + 1);
     startRef.current = Date.now();
   };
 
   // 检查当前篇是否被允许进入：上一篇 best_pct ≥ PASS_PCT
   useEffect(() => {
     if (!r || !list.length || !userId) return;
-    const idx = list.findIndex(x => x.id === r.id);
+    const idx = list.findIndex((x) => x.id === r.id);
     if (idx <= 0) return;
     const prev = list[idx - 1];
     const prevRow = mastery[prev.id];
@@ -190,152 +190,152 @@ export default function JuniorReadingPlay() {
     }
   }, [r, list, userId, mastery, nav]);
 
-  if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground">加载中…</main>;
+  if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground"><T>加载中…</T></main>;
 
   const currentRow = mastery[r.id];
   const passed = (currentRow?.best_pct ?? 0) >= PASS_PCT;
   const perfect = currentRow?.stars && currentRow.stars >= 1;
   const goNext = () => {
     if (!nextItem) return;
-    if (!passed) { toast.error("本篇得分需 ≥80% 才能进入下一篇"); return; }
+    if (!passed) {toast.error("本篇得分需 ≥80% 才能进入下一篇");return;}
     nav(`/junior/reading/${nextItem.id}`);
   };
 
-  const passage = (
-    <div className="relative">
+  const passage =
+  <div className="relative">
       <ReadingWatermark text={`${email} · ${new Date().toLocaleString()}`} />
       <article className="relative rounded-2xl border bg-card p-5">
         <div className="text-[15px] leading-8 font-serif whitespace-pre-wrap">{r.body}</div>
       </article>
-      {r.vocab_notes?.length > 0 && (
-        <div className="mt-4 rounded-xl bg-muted/40 p-3">
-          <div className="text-[11px] font-extrabold text-muted-foreground">📚 词汇</div>
+      {r.vocab_notes?.length > 0 &&
+    <div className="mt-4 rounded-xl bg-muted/40 p-3">
+          <div className="text-[11px] font-extrabold text-muted-foreground"><T>📚 词汇</T></div>
           <div className="mt-1 flex flex-wrap gap-2 text-xs">
             {r.vocab_notes.map((v, i) => <span key={i} className="rounded-full bg-card px-2 py-0.5 border">{v.word} · {v.cn}</span>)}
           </div>
         </div>
-      )}
-    </div>
-  );
+    }
+    </div>;
 
-  const qBlock = (
-    <div className="space-y-4">
+
+  const qBlock =
+  <div className="space-y-4">
       {r.questions.map((q, i) => {
-        const picked = picks[i];
-        return (
-          <section key={i} className="rounded-2xl border bg-card p-4">
+      const picked = picks[i];
+      return (
+        <section key={i} className="rounded-2xl border bg-card p-4">
             <div className="text-sm font-bold">{i + 1}. {q.q}</div>
             <div className="mt-3 grid gap-2">
               {q.options.map((opt, oi) => {
-                const L = ["A","B","C","D"][oi];
-                const isAns = picked && L === q.answer;
-                const isWrong = picked === L && L !== q.answer;
-                return (
-                  <button key={L} disabled={!!picked} onClick={() => pick(i, L)}
-                    className={cn("rounded-xl border-2 px-3 py-2 text-left text-sm transition",
-                      !picked && "border-border hover:border-emerald-400",
-                      isAns && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
-                      isWrong && "border-rose-500 bg-rose-50 dark:bg-rose-950/30",
-                      picked && !isAns && !isWrong && "opacity-60")}>
+              const L = ["A", "B", "C", "D"][oi];
+              const isAns = picked && L === q.answer;
+              const isWrong = picked === L && L !== q.answer;
+              return (
+                <button key={L} disabled={!!picked} onClick={() => pick(i, L)}
+                className={cn("rounded-xl border-2 px-3 py-2 text-left text-sm transition",
+                !picked && "border-border hover:border-emerald-400",
+                isAns && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
+                isWrong && "border-rose-500 bg-rose-50 dark:bg-rose-950/30",
+                picked && !isAns && !isWrong && "opacity-60")}>
                     <span className="mr-2 font-extrabold">{L}.</span>{opt}
-                  </button>
-                );
-              })}
+                  </button>);
+
+            })}
             </div>
-            {picked && (
-              <div className="mt-3 rounded-lg bg-muted/50 p-3 text-xs space-y-1">
-                <div><b>正确答案：</b>{q.answer}</div>
+            {picked &&
+          <div className="mt-3 rounded-lg bg-muted/50 p-3 text-xs space-y-1">
+                <div><b><T>正确答案：</T></b>{q.answer}</div>
                 {q.explanation && <div>💡 {q.explanation}</div>}
               </div>
-            )}
-          </section>
-        );
-      })}
-    </div>
-  );
+          }
+          </section>);
+
+    })}
+    </div>;
+
 
   const unlocked = passed;
 
   return (
     <main className="mx-auto min-h-screen max-w-7xl px-5 py-6">
       <NoCopyGuard />
-      <BackLink to="/junior/reading" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> 返回</BackLink>
+      <BackLink to="/junior/reading" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>返回</T></BackLink>
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h1 className="text-grad-title text-2xl font-extrabold">{r.title}</h1>
         <div className="flex items-center gap-2 text-[11px]">
           <span className={cn("inline-flex items-center gap-1 rounded-full border px-2 py-1 font-bold tabular-nums",
-            timeOk ? "border-emerald-400 text-emerald-600" : "border-amber-400 text-amber-600")}>
+          timeOk ? "border-emerald-400 text-emerald-600" : "border-amber-400 text-amber-600")}>
             <Clock className="size-3" /> {Math.min(elapsed, minSec)}/{minSec}s
           </span>
           {currentRow && <StarRating stars={currentRow.stars} size={14} />}
-          {attempt > 1 && <span className="rounded-full bg-orange-500/10 text-orange-600 px-2 py-1 font-bold">第 {attempt} 次尝试</span>}
+          {attempt > 1 && <span className="rounded-full bg-orange-500/10 text-orange-600 px-2 py-1 font-bold"><T>第</T> {attempt} <T>次尝试</T></span>}
         </div>
       </div>
 
       <div className="mt-4 grid gap-6 lg:grid-cols-2 lg:gap-8 lg:items-start">
         <div className="lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-2">
-          <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">Passage 阅读材料</div>
+          <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground"><T>Passage 阅读材料</T></div>
           {passage}
         </div>
         <div>
-          <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground">📝 Questions 阅读理解</div>
+          <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground"><T>📝 Questions 阅读理解</T></div>
           {qBlock}
 
           {/* 提交 / 重做 / 下一篇 */}
           <div className="mt-5 rounded-2xl border-2 border-dashed p-4">
-            {!submitted ? (
-              <button onClick={handleSubmit} disabled={!allAnswered}
-                className={cn("w-full rounded-xl px-5 py-3 text-sm font-extrabold transition",
-                  allAnswered ? "bg-primary text-primary-foreground hover:opacity-90" : "bg-muted text-muted-foreground cursor-not-allowed")}>
-                提交并判定解锁 ({correctCount}/{r.questions.length})
-              </button>
-            ) : (
-              <div className="space-y-3">
+            {!submitted ?
+            <button onClick={handleSubmit} disabled={!allAnswered}
+            className={cn("w-full rounded-xl px-5 py-3 text-sm font-extrabold transition",
+            allAnswered ? "bg-primary text-primary-foreground hover:opacity-90" : "bg-muted text-muted-foreground cursor-not-allowed")}>
+                <T>提交并判定解锁 (</T>{correctCount}/{r.questions.length})
+              </button> :
+
+            <div className="space-y-3">
                 <div className="text-sm font-bold">
-                  得分：{correctCount}/{r.questions.length} · 用时 {elapsed}s
+                  <T>得分：</T>{correctCount}/{r.questions.length} <T>· 用时</T> {elapsed}s
                 </div>
-                {!timeOk ? (
-                  <div className="rounded-lg bg-amber-500/10 text-amber-700 p-3 text-sm">
-                    ⏳ 阅读时长不足，请再认真读 {minSec - elapsed} 秒后再提交
+                {!timeOk ?
+              <div className="rounded-lg bg-amber-500/10 text-amber-700 p-3 text-sm">
+                    <T>⏳ 阅读时长不足，请再认真读</T> {minSec - elapsed} <T>秒后再提交</T>
+                  </div> :
+              allCorrect ?
+              <div className="rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 p-3 text-sm font-bold">
+                    <T>🌟 完美掌握！星级 +1 · 已解锁下一篇</T>
+                  </div> :
+              passed ?
+              <div className="rounded-lg bg-sky-500/10 text-sky-700 p-3 text-sm">
+                    <T>✅ 通过 (</T>{correctCount}/{r.questions.length}<T>)！已解锁下一篇 · 重做到 100% 可获得⭐</T>
+                  </div> :
+
+              <div className="rounded-lg bg-rose-500/10 text-rose-600 p-3 text-sm">
+                    <T>❌ 仅</T> {correctCount}/{r.questions.length}<T>，需 ≥</T>{Math.ceil(r.questions.length * PASS_PCT / 100)} <T>题正确才能解锁</T>
                   </div>
-                ) : allCorrect ? (
-                  <div className="rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 p-3 text-sm font-bold">
-                    🌟 完美掌握！星级 +1 · 已解锁下一篇
-                  </div>
-                ) : passed ? (
-                  <div className="rounded-lg bg-sky-500/10 text-sky-700 p-3 text-sm">
-                    ✅ 通过 ({correctCount}/{r.questions.length})！已解锁下一篇 · 重做到 100% 可获得⭐
-                  </div>
-                ) : (
-                  <div className="rounded-lg bg-rose-500/10 text-rose-600 p-3 text-sm">
-                    ❌ 仅 {correctCount}/{r.questions.length}，需 ≥{Math.ceil(r.questions.length * PASS_PCT / 100)} 题正确才能解锁
-                  </div>
-                )}
+              }
                 <div className="flex gap-2">
-                  {(!allCorrect) && (
-                    <button onClick={retry} className="flex-1 inline-flex items-center justify-center gap-1 rounded-xl border-2 px-4 py-2.5 text-sm font-extrabold hover:bg-muted">
-                      <RotateCcw className="size-4" /> 重做本篇
+                  {!allCorrect &&
+                <button onClick={retry} className="flex-1 inline-flex items-center justify-center gap-1 rounded-xl border-2 px-4 py-2.5 text-sm font-extrabold hover:bg-muted">
+                      <RotateCcw className="size-4" /> <T>重做本篇</T>
                     </button>
-                  )}
-                  {nextItem && (
-                    <button onClick={goNext} disabled={!unlocked}
-                      className={cn("flex-1 inline-flex items-center justify-center gap-1 rounded-xl px-4 py-2.5 text-sm font-extrabold",
-                        unlocked ? "bg-primary text-primary-foreground hover:opacity-90" : "bg-muted text-muted-foreground cursor-not-allowed")}>
-                      {unlocked ? <>下一篇 <ChevronRight className="size-4" /></> : <><Lock className="size-4" /> 解锁后进入下一篇</>}
+                }
+                  {nextItem &&
+                <button onClick={goNext} disabled={!unlocked}
+                className={cn("flex-1 inline-flex items-center justify-center gap-1 rounded-xl px-4 py-2.5 text-sm font-extrabold",
+                unlocked ? "bg-primary text-primary-foreground hover:opacity-90" : "bg-muted text-muted-foreground cursor-not-allowed")}>
+                      {unlocked ? <><T>下一篇</T> <ChevronRight className="size-4" /></> : <><Lock className="size-4" /> <T>解锁后进入下一篇</T></>}
                     </button>
-                  )}
+                }
                 </div>
               </div>
-            )}
+            }
           </div>
         </div>
       </div>
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
-        <Link to="/junior/reading" className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> 返回阅读列表</Link>
-        <Link to="/junior" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted">🏫 初中首页</Link>
-        <Link to="/pets" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted">🐾 宠物</Link>
+        <Link to="/junior/reading" className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>返回阅读列表</T></Link>
+        <Link to="/junior" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🏫 初中首页</T></Link>
+        <Link to="/pets" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🐾 宠物</T></Link>
       </div>
-    </main>
-  );
+    </main>);
+
 }

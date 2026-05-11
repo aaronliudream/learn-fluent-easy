@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2, Zap } from "lucide-react";
@@ -31,11 +31,11 @@ interface Row {
   updated_at: string | null;
 }
 
-const STATE_META: Record<ItemState, { dot: string; icon: string; label: string }> = {
+const STATE_META: Record<ItemState, {dot: string;icon: string;label: string;}> = {
   master: { dot: "bg-gps-master", icon: "✅", label: "已掌握" },
-  fluent: { dot: "bg-gps-fluent", icon: "✓",  label: "熟练" },
-  weak:   { dot: "bg-gps-weak",   icon: "⚠️", label: "薄弱" },
-  none:   { dot: "bg-gps-none",   icon: "○",  label: "未学" },
+  fluent: { dot: "bg-gps-fluent", icon: "✓", label: "熟练" },
+  weak: { dot: "bg-gps-weak", icon: "⚠️", label: "薄弱" },
+  none: { dot: "bg-gps-none", icon: "○", label: "未学" }
 };
 
 function fmtRel(iso: string | null): string {
@@ -57,11 +57,11 @@ function fmtRel(iso: string | null): string {
 
 function trainRoute(stage: StageKey, module: string, grade?: number): string {
   if (stage === "primary") return grade ? `/primary/grade/${grade}` : `/primary`;
-  if (stage === "junior")  return grade ? `/junior/g/${grade}`     : `/junior`;
-  if (module === "vocab")   return `/gaokao/vocab${grade ? `?grade=${grade - 9}` : ""}`;
+  if (stage === "junior") return grade ? `/junior/g/${grade}` : `/junior`;
+  if (module === "vocab") return `/gaokao/vocab${grade ? `?grade=${grade - 9}` : ""}`;
   if (module === "grammar") return `/gaokao/grammar`;
   if (module === "reading") return `/gaokao/reading`;
-  if (module === "cloze")   return `/gaokao/cloze`;
+  if (module === "cloze") return `/gaokao/cloze`;
   return `/gaokao`;
 }
 
@@ -76,19 +76,19 @@ export function ItemListDrawer(props: ItemListDrawerProps) {
     setError(null);
     (async () => {
       const { data: { user } } = await supabase.auth.getUser();
-      if (!user) { setError("请先登录"); setRows([]); return; }
-      let q = supabase
-        .from("unified_mastery")
-        .select("id,item_id,item_label,item_type,state,attempt_count,correct_count,wrong_count,due_at,last_review_at,updated_at")
-        .eq("user_id", user.id)
-        .eq("stage", stage)
-        .eq("module", module)
-        .eq("state", state)
-        .order("updated_at", { ascending: false })
-        .limit(500);
+      if (!user) {setError("请先登录");setRows([]);return;}
+      let q = supabase.
+      from("unified_mastery").
+      select("id,item_id,item_label,item_type,state,attempt_count,correct_count,wrong_count,due_at,last_review_at,updated_at").
+      eq("user_id", user.id).
+      eq("stage", stage).
+      eq("module", module).
+      eq("state", state).
+      order("updated_at", { ascending: false }).
+      limit(500);
       if (typeof grade === "number") q = q.eq("grade", grade);
       const { data, error: e } = await q;
-      if (e) { setError(e.message); setRows([]); return; }
+      if (e) {setError(e.message);setRows([]);return;}
       setRows((data ?? []) as Row[]);
     })();
   }, [open, stage, module, state, grade]);
@@ -104,34 +104,34 @@ export function ItemListDrawer(props: ItemListDrawerProps) {
             <SheetTitle className="text-lg font-bold">{title}</SheetTitle>
           </div>
           <p className="text-[11px] text-muted-foreground">
-            点击「再练一次」直接跳到对应练习
+            <T>点击「再练一次」直接跳到对应练习</T>
           </p>
         </SheetHeader>
 
-        {!rows && (
-          <div className="mt-10 flex items-center justify-center text-muted-foreground">
+        {!rows &&
+        <div className="mt-10 flex items-center justify-center text-muted-foreground">
             <Loader2 className="size-4 animate-spin" />
           </div>
-        )}
+        }
 
-        {error && (
-          <p className="mt-8 text-center text-xs text-destructive">{error}</p>
-        )}
+        {error &&
+        <p className="mt-8 text-center text-xs text-destructive">{error}</p>
+        }
 
-        {rows && rows.length === 0 && !error && (
-          <p className="mt-10 text-center text-sm text-muted-foreground">这个分类还没有内容。</p>
-        )}
+        {rows && rows.length === 0 && !error &&
+        <p className="mt-10 text-center text-sm text-muted-foreground"><T>这个分类还没有内容。</T></p>
+        }
 
-        {rows && rows.length > 0 && (
-          <>
-            <div className="mt-3 text-[11px] text-muted-foreground">共 {rows.length} 项</div>
+        {rows && rows.length > 0 &&
+        <>
+            <div className="mt-3 text-[11px] text-muted-foreground"><T>共</T> {rows.length} <T>项</T></div>
             <ul className="mt-2 space-y-2">
               {rows.map((r) => {
-                const att = r.attempt_count ?? 0;
-                const cor = r.correct_count ?? 0;
-                const acc = att > 0 ? Math.round((cor / att) * 100) : null;
-                return (
-                  <li key={r.id} className="rounded-xl border border-border bg-card p-3">
+              const att = r.attempt_count ?? 0;
+              const cor = r.correct_count ?? 0;
+              const acc = att > 0 ? Math.round(cor / att * 100) : null;
+              return (
+                <li key={r.id} className="rounded-xl border border-border bg-card p-3">
                     <div className="flex items-start justify-between gap-2">
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-1.5">
@@ -141,26 +141,26 @@ export function ItemListDrawer(props: ItemListDrawerProps) {
                           </span>
                         </div>
                         <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-[11px] text-muted-foreground tabular-nums">
-                          {acc !== null && <span>答对率 {acc}% ({cor}/{att})</span>}
-                          {r.last_review_at && <span>上次 {fmtRel(r.last_review_at)}</span>}
-                          {r.due_at && <span>下次 {fmtRel(r.due_at)}</span>}
+                          {acc !== null && <span><T>答对率</T> {acc}% ({cor}/{att})</span>}
+                          {r.last_review_at && <span><T>上次</T> {fmtRel(r.last_review_at)}</span>}
+                          {r.due_at && <span><T>下次</T> {fmtRel(r.due_at)}</span>}
                         </div>
                       </div>
                       <Link
-                        to={trainRoute(stage, module, grade)}
-                        onClick={() => onOpenChange(false)}
-                        className="inline-flex shrink-0 items-center gap-1 rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-medium hover:bg-muted"
-                      >
-                        <Zap className="size-3" /> 再练
+                      to={trainRoute(stage, module, grade)}
+                      onClick={() => onOpenChange(false)}
+                      className="inline-flex shrink-0 items-center gap-1 rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-medium hover:bg-muted">
+                      
+                        <Zap className="size-3" /> <T>再练</T>
                       </Link>
                     </div>
-                  </li>
-                );
-              })}
+                  </li>);
+
+            })}
             </ul>
           </>
-        )}
+        }
       </SheetContent>
-    </Sheet>
-  );
+    </Sheet>);
+
 }

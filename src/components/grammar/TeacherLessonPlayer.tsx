@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { T } from "@/i18n/T";import { useEffect, useRef, useState, useCallback } from "react";
 import { Play, Pause, RotateCw, SkipForward } from "lucide-react";
 import { speak, stopSpeaking } from "@/lib/speak";
 import { cn } from "@/lib/utils";
@@ -50,14 +50,14 @@ export function TeacherLessonPlayer({ segments, pointTitle, onContinue, onSkip }
   const currentSeg = segments[segIdx] || segments[segments.length - 1];
 
   const stopTTS = useCallback(() => {
-    try { stopSpeaking(); } catch { /* noop */ }
+    try {stopSpeaking();} catch {/* noop */}
   }, []);
 
   // Speak current segment text whenever it changes (and not paused).
   useEffect(() => {
     if (paused || allDone || !currentSeg) return;
-    speak(currentSeg.text, { voiceId: "shimmer", speed: 0.95 }).catch(() => { /* network errors are fine */ });
-    return () => { stopTTS(); };
+    speak(currentSeg.text, { voiceId: "shimmer", speed: 0.95 }).catch(() => {/* network errors are fine */});
+    return () => {stopTTS();};
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [segIdx, paused]);
 
@@ -65,7 +65,7 @@ export function TeacherLessonPlayer({ segments, pointTitle, onContinue, onSkip }
   useEffect(() => {
     if (paused || !currentSeg) return;
     if (charIdx >= currentSeg.text.length) return;
-    const charTimePerSeg = (currentSeg.duration * 1000 * 0.8) / currentSeg.text.length;
+    const charTimePerSeg = currentSeg.duration * 1000 * 0.8 / currentSeg.text.length;
     const t = window.setTimeout(() => setCharIdx((c) => c + 1), Math.max(20, charTimePerSeg));
     return () => window.clearTimeout(t);
   }, [charIdx, paused, segIdx, currentSeg]);
@@ -146,16 +146,16 @@ export function TeacherLessonPlayer({ segments, pointTitle, onContinue, onSkip }
     const parts = text.split(highlight);
     return (
       <span>
-        {parts.map((part, i) => (
-          <span key={i}>
+        {parts.map((part, i) =>
+        <span key={i}>
             {part}
-            {i < parts.length - 1 && (
-              <span className="font-bold text-emerald-600 dark:text-emerald-400">{highlight}</span>
-            )}
+            {i < parts.length - 1 &&
+          <span className="font-bold text-emerald-600 dark:text-emerald-400">{highlight}</span>
+          }
           </span>
-        ))}
-      </span>
-    );
+        )}
+      </span>);
+
   };
 
   return (
@@ -163,7 +163,7 @@ export function TeacherLessonPlayer({ segments, pointTitle, onContinue, onSkip }
       {/* Top bar */}
       <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
         <div className="flex items-center gap-2 text-xs">
-          <span className="font-mono text-emerald-600 dark:text-emerald-400 tracking-widest">🎓 老师讲解</span>
+          <span className="font-mono text-emerald-600 dark:text-emerald-400 tracking-widest"><T>🎓 老师讲解</T></span>
           <span className="text-muted-foreground">·</span>
           <span className="text-muted-foreground">{pointTitle}</span>
         </div>
@@ -182,14 +182,14 @@ export function TeacherLessonPlayer({ segments, pointTitle, onContinue, onSkip }
               return (
                 <strong key={i} className="text-emerald-700 dark:text-emerald-300 font-bold">
                   {part.slice(2, -2)}
-                </strong>
-              );
+                </strong>);
+
             }
             return <span key={i}>{part}</span>;
           })}
-          {!paused && charIdx < currentSeg.text.length && (
-            <span className="inline-block w-0.5 h-5 bg-emerald-500 ml-0.5 align-middle animate-pulse" />
-          )}
+          {!paused && charIdx < currentSeg.text.length &&
+          <span className="inline-block w-0.5 h-5 bg-emerald-500 ml-0.5 align-middle animate-pulse" />
+          }
         </p>
       </div>
 
@@ -206,31 +206,31 @@ export function TeacherLessonPlayer({ segments, pointTitle, onContinue, onSkip }
           onClick={() => setPaused((p) => !p)}
           className="w-10 h-10 rounded-full border-2 border-border hover:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 transition flex items-center justify-center"
           title={paused ? "继续" : "暂停"}
-          aria-label={paused ? "继续" : "暂停"}
-        >
+          aria-label={paused ? "继续" : "暂停"}>
+          
           {paused ? <Play className="size-4 text-emerald-600" /> : <Pause className="size-4 text-emerald-600" />}
         </button>
         <button
           onClick={replaySegment}
           className="w-10 h-10 rounded-full border-2 border-border hover:border-amber-400 hover:bg-amber-50 dark:hover:bg-amber-950/40 transition flex items-center justify-center"
           title="重听本段"
-          aria-label="重听本段"
-        >
+          aria-label="重听本段">
+          
           <RotateCw className="size-4 text-amber-600" />
         </button>
         <button
           onClick={nextSegment}
           className="w-10 h-10 rounded-full border-2 border-border hover:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 transition flex items-center justify-center"
           title="下一段"
-          aria-label="下一段"
-        >
+          aria-label="下一段">
+          
           <SkipForward className="size-4 text-emerald-600" />
         </button>
         <div className="flex-1 h-2 rounded-full bg-muted overflow-hidden">
           <div
             className="h-full bg-emerald-500 transition-all"
-            style={{ width: `${(elapsed / totalDuration) * 100}%` }}
-          />
+            style={{ width: `${elapsed / totalDuration * 100}%` }} />
+          
         </div>
       </div>
 
@@ -241,22 +241,22 @@ export function TeacherLessonPlayer({ segments, pointTitle, onContinue, onSkip }
           disabled={!canContinue}
           className={cn(
             "px-6 py-3 rounded-full text-sm font-extrabold transition inline-flex items-center gap-2",
-            canContinue
-              ? "bg-emerald-500 text-white hover:bg-emerald-600 shadow-md"
-              : "bg-muted text-muted-foreground cursor-not-allowed",
-          )}
-        >
+            canContinue ?
+            "bg-emerald-500 text-white hover:bg-emerald-600 shadow-md" :
+            "bg-muted text-muted-foreground cursor-not-allowed"
+          )}>
+          
           {allDone ? "✓ 听完了，开始练习" : canContinue ? "听够了，开始练习 →" : `还需 ${remaining}s · 继续听`}
         </button>
-        {onSkip && (
-          <div className="mt-2">
+        {onSkip &&
+        <div className="mt-2">
             <button onClick={onSkip} className="text-xs text-muted-foreground hover:text-foreground underline">
-              跳过讲解
+              <T>跳过讲解</T>
             </button>
           </div>
-        )}
-        <p className="text-[11px] text-muted-foreground mt-2 italic">⌨ 空格暂停 · ↻ 重听本段 · → 下一段</p>
+        }
+        <p className="text-[11px] text-muted-foreground mt-2 italic"><T>⌨ 空格暂停 · ↻ 重听本段 · → 下一段</T></p>
       </div>
-    </section>
-  );
+    </section>);
+
 }

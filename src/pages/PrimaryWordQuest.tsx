@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft, BookOpen, Loader2, Sparkles, Trophy } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -6,8 +6,8 @@ import { supabase } from "@/integrations/supabase/client";
 import WordQuest from "@/components/WordQuest";
 import {
   getMasteredSightWordsAsVocab,
-  getMasteredSightWordsCount,
-} from "@/lib/masteredSightWords";
+  getMasteredSightWordsCount } from
+"@/lib/masteredSightWords";
 import type { GameVocab } from "@/lib/wordGameAdapter";
 
 const MIN_WORDS = 6;
@@ -46,13 +46,13 @@ export default function PrimaryWordQuest() {
         return;
       }
       // 今日已玩?
-      const { data: today } = await supabase
-        .from("primary_word_quest_attempts")
-        .select("id,levels_completed,total_levels,perfect,score")
-        .eq("user_id", userId)
-        .eq("grade", grade)
-        .eq("date", todayDate())
-        .maybeSingle();
+      const { data: today } = await supabase.
+      from("primary_word_quest_attempts").
+      select("id,levels_completed,total_levels,perfect,score").
+      eq("user_id", userId).
+      eq("grade", grade).
+      eq("date", todayDate()).
+      maybeSingle();
       if (today) {
         setPhase("already");
         return;
@@ -69,57 +69,57 @@ export default function PrimaryWordQuest() {
     return (
       <main className="grid min-h-screen place-items-center">
         <Loader2 className="size-6 animate-spin text-muted-foreground" />
-      </main>
-    );
+      </main>);
+
   }
 
   if (phase === "empty") {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
         <BackLink to={back} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回今天的冒险
+          <ArrowLeft className="size-4" /> <T>返回今天的冒险</T>
         </BackLink>
         <div className="rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-6 text-center shadow-tile dark:border-amber-700 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
           <div className="text-5xl">🎮</div>
-          <h1 className="mt-3 text-xl font-extrabold">单词奇旅准备中</h1>
+          <h1 className="mt-3 text-xl font-extrabold"><T>单词奇旅准备中</T></h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            你需要先掌握至少 <b>{MIN_WORDS}</b> 个单词,才能进入游戏。
+            <T>你需要先掌握至少</T> <b>{MIN_WORDS}</b> <T>个单词,才能进入游戏。</T>
           </p>
           <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-bold text-rose-700 shadow-sm dark:bg-rose-950/30 dark:text-rose-200">
-            🌟 当前已掌握:{masteredCount} 个
+            <T>🌟 当前已掌握:</T>{masteredCount} <T>个</T>
           </div>
           <div className="mt-5">
             <Link
               to={`/primary/sight-words${grade === 2 ? "?grade=2" : ""}`}
-              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
-            >
-              <BookOpen className="size-4" /> 去学单词 →
+              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5">
+              
+              <BookOpen className="size-4" /> <T>去学单词 →</T>
             </Link>
           </div>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   if (phase === "already") {
     return (
       <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
         <BackLink to={back} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 返回今天的冒险
+          <ArrowLeft className="size-4" /> <T>返回今天的冒险</T>
         </BackLink>
         <div className="rounded-3xl border-2 border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 p-6 text-center shadow-tile dark:border-emerald-700 dark:from-emerald-950/30 dark:to-teal-950/30">
           <div className="text-5xl">🏁</div>
-          <h1 className="mt-3 text-xl font-extrabold">今天的奇旅已完成!</h1>
-          <p className="mt-2 text-sm text-muted-foreground">明天再来挑战新单词吧 🌙</p>
+          <h1 className="mt-3 text-xl font-extrabold"><T>今天的奇旅已完成!</T></h1>
+          <p className="mt-2 text-sm text-muted-foreground"><T>明天再来挑战新单词吧 🌙</T></p>
           <Link
             to={back}
-            className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
-          >
-            <Sparkles className="size-4" /> 回去做今天的冒险
+            className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5">
+            
+            <Sparkles className="size-4" /> <T>回去做今天的冒险</T>
           </Link>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   // ready
@@ -142,11 +142,11 @@ export default function PrimaryWordQuest() {
             perfect: info.perfect,
             duration_seconds: Math.round(info.durationMs / 1000),
             score: info.score,
-            words: info.words,
+            words: info.words
           },
           { onConflict: "user_id,grade,date" }
         );
-      }}
-    />
-  );
+      }} />);
+
+
 }

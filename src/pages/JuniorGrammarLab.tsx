@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Check, Eye, EyeOff, Moon, RotateCw, Sparkles, Star, Sun, Trophy, X, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -20,15 +20,15 @@ import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
      → 4 Drill → 5 Correction → 6 Exam → 7 Boss → 8 Done
    ────────────────────────────────────────────────────────────── */
 
-type ContrastRow = { lhs: string; rhs: string };
-type ReflexCard = { cn: string; en: string; keyword?: string };
-type DrillItem = { situation: string; cn: string; en: string; accepted?: string[] };
-type CorrectionTask = { wrong: string; model: string; hint: string; why: string };
-type BossQ = { stem: string; option_a: string; option_b: string; option_c: string; option_d: string; correct_answer: string; trap: string; why: string };
+type ContrastRow = {lhs: string;rhs: string;};
+type ReflexCard = {cn: string;en: string;keyword?: string;};
+type DrillItem = {situation: string;cn: string;en: string;accepted?: string[];};
+type CorrectionTask = {wrong: string;model: string;hint: string;why: string;};
+type BossQ = {stem: string;option_a: string;option_b: string;option_c: string;option_d: string;correct_answer: string;trap: string;why: string;};
 type ExamQ = {
-  id: string; stem: string;
-  option_a?: string | null; option_b?: string | null; option_c?: string | null; option_d?: string | null;
-  correct_answer?: string | null; explanation?: string | null;
+  id: string;stem: string;
+  option_a?: string | null;option_b?: string | null;option_c?: string | null;option_d?: string | null;
+  correct_answer?: string | null;explanation?: string | null;
 };
 
 type Pt = {
@@ -47,43 +47,43 @@ type Pt = {
   boss_questions: BossQ[] | null;
 };
 
-type Mistake = { phase: string; stem: string; picked: string; correct: string; why?: string };
+type Mistake = {phase: string;stem: string;picked: string;correct: string;why?: string;};
 
 type LabState = {
   xp: number;
   streak: number;
   bestStreak: number;
-  phasesDone: number[];   // phase indices completed
+  phasesDone: number[]; // phase indices completed
   achievements: string[];
   mistakes: Mistake[];
 };
 
 const PHASES = [
-  { id: 0, key: "brief", name: "情境钩子", emoji: "🎬" },
-  { id: 1, key: "lesson", name: "老师讲堂", emoji: "👩‍🏫" },
-  { id: 2, key: "foundation", name: "核心公式", emoji: "📐" },
-  { id: 3, key: "reflex", name: "反射卡", emoji: "⚡" },
-  { id: 4, key: "drill", name: "情境翻译", emoji: "✍️" },
-  { id: 5, key: "correction", name: "改错挑战", emoji: "🛠️" },
-  { id: 6, key: "exam", name: "真题练习", emoji: "📚" },
-  { id: 7, key: "boss", name: "Boss 冲刺", emoji: "👑" },
-  { id: 8, key: "done", name: "通关庆典", emoji: "🎉" },
-];
+{ id: 0, key: "brief", name: "情境钩子", emoji: "🎬" },
+{ id: 1, key: "lesson", name: "老师讲堂", emoji: "👩‍🏫" },
+{ id: 2, key: "foundation", name: "核心公式", emoji: "📐" },
+{ id: 3, key: "reflex", name: "反射卡", emoji: "⚡" },
+{ id: 4, key: "drill", name: "情境翻译", emoji: "✍️" },
+{ id: 5, key: "correction", name: "改错挑战", emoji: "🛠️" },
+{ id: 6, key: "exam", name: "真题练习", emoji: "📚" },
+{ id: 7, key: "boss", name: "Boss 冲刺", emoji: "👑" },
+{ id: 8, key: "done", name: "通关庆典", emoji: "🎉" }];
+
 
 const ACHIEVEMENTS = [
-  { id: "first_step",        icon: "🎯", cn: "迈出第一步",     desc: "完成情境钩子",                xp: 10 },
-  { id: "lesson_complete",   icon: "📖", cn: "听完一课",       desc: "听完老师全程",                xp: 30 },
-  { id: "reflex_master",     icon: "⚡", cn: "反射大师",       desc: "10 张反射卡全对",             xp: 60 },
-  { id: "drill_warrior",     icon: "✍️", cn: "翻译战士",       desc: "情境翻译正确率 ≥ 80%",        xp: 75 },
-  { id: "fix_it_pro",        icon: "🛠️", cn: "改错能手",       desc: "5 道改错全对",                xp: 80 },
-  { id: "exam_clear",        icon: "📚", cn: "真题闯关",       desc: "完成真题阶段",                xp: 50 },
-  { id: "boss_slayer",       icon: "👑", cn: "Boss 终结者",    desc: "击败 Boss 关卡",              xp: 150 },
-  { id: "perfect_run",       icon: "💯", cn: "完美通关",       desc: "全程零错通关",                xp: 200 },
-  { id: "streak_5",          icon: "🔥", cn: "5 连对",         desc: "答题 5 连对",                 xp: 25 },
-  { id: "streak_10",         icon: "🌟", cn: "10 连对",        desc: "答题 10 连对",                xp: 60 },
-  { id: "lab_complete",      icon: "🏆", cn: "Lab 通关",       desc: "全部 8 个阶段全部完成",       xp: 100 },
-  { id: "comeback",          icon: "💪", cn: "再战归来",       desc: "回头复盘一道错题",            xp: 20 },
-];
+{ id: "first_step", icon: "🎯", cn: "迈出第一步", desc: "完成情境钩子", xp: 10 },
+{ id: "lesson_complete", icon: "📖", cn: "听完一课", desc: "听完老师全程", xp: 30 },
+{ id: "reflex_master", icon: "⚡", cn: "反射大师", desc: "10 张反射卡全对", xp: 60 },
+{ id: "drill_warrior", icon: "✍️", cn: "翻译战士", desc: "情境翻译正确率 ≥ 80%", xp: 75 },
+{ id: "fix_it_pro", icon: "🛠️", cn: "改错能手", desc: "5 道改错全对", xp: 80 },
+{ id: "exam_clear", icon: "📚", cn: "真题闯关", desc: "完成真题阶段", xp: 50 },
+{ id: "boss_slayer", icon: "👑", cn: "Boss 终结者", desc: "击败 Boss 关卡", xp: 150 },
+{ id: "perfect_run", icon: "💯", cn: "完美通关", desc: "全程零错通关", xp: 200 },
+{ id: "streak_5", icon: "🔥", cn: "5 连对", desc: "答题 5 连对", xp: 25 },
+{ id: "streak_10", icon: "🌟", cn: "10 连对", desc: "答题 10 连对", xp: 60 },
+{ id: "lab_complete", icon: "🏆", cn: "Lab 通关", desc: "全部 8 个阶段全部完成", xp: 100 },
+{ id: "comeback", icon: "💪", cn: "再战归来", desc: "回头复盘一道错题", xp: 20 }];
+
 
 const XP = { reflex: 5, drill: 10, correction: 15, exam: 12, boss: 25, phase_clear: 20 };
 
@@ -100,11 +100,11 @@ const loadState = (id: string): LabState => {
 };
 
 const saveState = (id: string, s: LabState) => {
-  try { localStorage.setItem(storageKey(id), JSON.stringify(s)); } catch {}
+  try {localStorage.setItem(storageKey(id), JSON.stringify(s));} catch {}
 };
 
 const normalize = (s: string) =>
-  s.toLowerCase().replace(/[.,!?;:'"`]/g, "").replace(/\s+/g, " ").trim();
+s.toLowerCase().replace(/[.,!?;:'"`]/g, "").replace(/\s+/g, " ").trim();
 
 function fuzzyMatch(input: string, target: string, accepted: string[] = []): boolean {
   const n = normalize(input);
@@ -124,29 +124,29 @@ function fuzzyMatch(input: string, target: string, accepted: string[] = []): boo
 }
 
 /* ─────────────── Cosmic shell + theme ─────────────── */
-function CosmicShell({ children, theme, focus }: { children: React.ReactNode; theme: "dark" | "light"; focus: boolean }) {
+function CosmicShell({ children, theme, focus }: {children: React.ReactNode;theme: "dark" | "light";focus: boolean;}) {
   const dark = theme === "dark";
   return (
     <div
       className="min-h-screen relative overflow-x-hidden"
       style={{
-        background: dark
-          ? "radial-gradient(ellipse at 18% 12%, rgba(125,211,192,.10), transparent 55%), radial-gradient(ellipse at 82% 88%, rgba(232,181,106,.08), transparent 55%), radial-gradient(ellipse at 50% 50%, #1c0e3d 0%, #0a0a1f 75%)"
-          : "radial-gradient(ellipse at 18% 12%, rgba(43,169,145,.08), transparent 55%), radial-gradient(ellipse at 82% 88%, rgba(192,138,62,.06), transparent 55%), radial-gradient(ellipse at 50% 50%, #f3eee2 0%, #faf7f1 75%)",
+        background: dark ?
+        "radial-gradient(ellipse at 18% 12%, rgba(125,211,192,.10), transparent 55%), radial-gradient(ellipse at 82% 88%, rgba(232,181,106,.08), transparent 55%), radial-gradient(ellipse at 50% 50%, #1c0e3d 0%, #0a0a1f 75%)" :
+        "radial-gradient(ellipse at 18% 12%, rgba(43,169,145,.08), transparent 55%), radial-gradient(ellipse at 82% 88%, rgba(192,138,62,.06), transparent 55%), radial-gradient(ellipse at 50% 50%, #f3eee2 0%, #faf7f1 75%)",
         color: dark ? "#f0ebe0" : "#1a1820",
-        fontFamily: "'Inter', system-ui, sans-serif",
-      }}
-    >
-      {!focus && dark && (
-        <div className="pointer-events-none fixed inset-0 z-0 opacity-50"
-             style={{
-               backgroundImage:
-                 "radial-gradient(1px 1px at 12% 22%,#fff,transparent),radial-gradient(1px 1px at 67% 14%,#fff,transparent),radial-gradient(1.5px 1.5px at 84% 71%,#fff,transparent),radial-gradient(1px 1px at 33% 78%,#fff,transparent),radial-gradient(1px 1px at 92% 33%,#fff,transparent),radial-gradient(2px 2px at 8% 88%,#fff,transparent),radial-gradient(1px 1px at 48% 48%,#fff,transparent),radial-gradient(1px 1px at 22% 56%,#fff,transparent)",
-               backgroundSize: "700px 700px",
-               animation: "twinkle 9s ease-in-out infinite",
-             }}
-        />
-      )}
+        fontFamily: "'Inter', system-ui, sans-serif"
+      }}>
+      
+      {!focus && dark &&
+      <div className="pointer-events-none fixed inset-0 z-0 opacity-50"
+      style={{
+        backgroundImage:
+        "radial-gradient(1px 1px at 12% 22%,#fff,transparent),radial-gradient(1px 1px at 67% 14%,#fff,transparent),radial-gradient(1.5px 1.5px at 84% 71%,#fff,transparent),radial-gradient(1px 1px at 33% 78%,#fff,transparent),radial-gradient(1px 1px at 92% 33%,#fff,transparent),radial-gradient(2px 2px at 8% 88%,#fff,transparent),radial-gradient(1px 1px at 48% 48%,#fff,transparent),radial-gradient(1px 1px at 22% 56%,#fff,transparent)",
+        backgroundSize: "700px 700px",
+        animation: "twinkle 9s ease-in-out infinite"
+      }} />
+
+      }
       <style>{`
         @keyframes twinkle { 0%,100%{opacity:.30} 50%{opacity:.65} }
         .glass-card { background: ${dark ? "rgba(255,255,255,.03)" : "rgba(255,255,255,.7)"}; border: 1px solid ${dark ? "rgba(240,235,224,.10)" : "rgba(26,24,32,.10)"}; }
@@ -159,18 +159,18 @@ function CosmicShell({ children, theme, focus }: { children: React.ReactNode; th
         .bg-mint-soft { background: ${dark ? "rgba(125,211,192,.12)" : "rgba(43,169,145,.10)"}; }
         .bg-amber-soft { background: ${dark ? "rgba(232,181,106,.12)" : "rgba(192,138,62,.10)"}; }
         .bg-rose-soft { background: ${dark ? "rgba(232,122,122,.12)" : "rgba(196,61,61,.10)"}; }
-        .btn-primary { background:${dark?"#7dd3c0":"#2ba991"}; color:${dark?"#0a0a1f":"#faf7f1"}; font-weight:600; padding:.65rem 1.25rem; border-radius:.75rem; transition:transform .2s, box-shadow .2s; }
+        .btn-primary { background:${dark ? "#7dd3c0" : "#2ba991"}; color:${dark ? "#0a0a1f" : "#faf7f1"}; font-weight:600; padding:.65rem 1.25rem; border-radius:.75rem; transition:transform .2s, box-shadow .2s; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow:0 12px 30px rgba(125,211,192,.35); }
-        .btn-ghost { background:transparent; border:1px solid ${dark?"rgba(240,235,224,.20)":"rgba(26,24,32,.18)"}; color:${dark?"#9c9588":"#5a5469"}; padding:.55rem 1rem; border-radius:.7rem; transition:.2s; }
-        .btn-ghost:hover { color:${dark?"#f0ebe0":"#1a1820"}; }
-        .lab-input { background:${dark?"rgba(255,255,255,.04)":"rgba(255,255,255,.7)"}; border:1px solid ${dark?"rgba(240,235,224,.18)":"rgba(26,24,32,.15)"}; color:${dark?"#f0ebe0":"#1a1820"}; padding:.7rem 1rem; border-radius:.7rem; width:100%; font-size:1rem; }
-        .lab-input:focus { outline: 2px solid ${dark?"#7dd3c0":"#2ba991"}; outline-offset:2px; }
+        .btn-ghost { background:transparent; border:1px solid ${dark ? "rgba(240,235,224,.20)" : "rgba(26,24,32,.18)"}; color:${dark ? "#9c9588" : "#5a5469"}; padding:.55rem 1rem; border-radius:.7rem; transition:.2s; }
+        .btn-ghost:hover { color:${dark ? "#f0ebe0" : "#1a1820"}; }
+        .lab-input { background:${dark ? "rgba(255,255,255,.04)" : "rgba(255,255,255,.7)"}; border:1px solid ${dark ? "rgba(240,235,224,.18)" : "rgba(26,24,32,.15)"}; color:${dark ? "#f0ebe0" : "#1a1820"}; padding:.7rem 1rem; border-radius:.7rem; width:100%; font-size:1rem; }
+        .lab-input:focus { outline: 2px solid ${dark ? "#7dd3c0" : "#2ba991"}; outline-offset:2px; }
         .font-mono { font-family: 'JetBrains Mono', monospace; }
         .font-display { font-family: 'Fraunces', serif; font-optical-sizing:auto; }
       `}</style>
       <div className="relative z-10">{children}</div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── HUD ─────────────── */
@@ -178,7 +178,7 @@ function HUD({ state, theme, focus, onToggleTheme, onToggleFocus, onBack }: any)
   return (
     <div className="sticky top-0 z-40 backdrop-blur-md" style={{ background: theme === "dark" ? "rgba(10,10,31,.65)" : "rgba(250,247,241,.7)", borderBottom: "1px solid rgba(125,211,192,.15)" }}>
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3 flex-wrap">
-        <button onClick={onBack} className="btn-ghost text-sm flex items-center gap-1"><ArrowLeft size={14} /> 返回</button>
+        <button onClick={onBack} className="btn-ghost text-sm flex items-center gap-1"><ArrowLeft size={14} /> <T>返回</T></button>
         <div className="flex items-center gap-2 px-3 py-1.5 bg-mint-soft rounded-full text-sm">
           <Trophy size={14} className="text-mint" />
           <span className="font-semibold text-mint">Lv {lvlOf(state.xp)}</span>
@@ -187,7 +187,7 @@ function HUD({ state, theme, focus, onToggleTheme, onToggleFocus, onBack }: any)
         <div className="flex items-center gap-1.5 px-3 py-1.5 bg-amber-soft rounded-full text-sm">
           <Zap size={14} className="text-amber" />
           <span className="font-semibold text-amber">{state.streak}</span>
-          <span className="ink-faint text-xs">连对 · 最佳 {state.bestStreak}</span>
+          <span className="ink-faint text-xs"><T>连对 · 最佳</T> {state.bestStreak}</span>
         </div>
         <div className="flex items-center gap-1.5 px-3 py-1.5 glass-card rounded-full text-sm">
           <Star size={14} />
@@ -202,12 +202,12 @@ function HUD({ state, theme, focus, onToggleTheme, onToggleFocus, onBack }: any)
           </button>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── Phase progress dots ─────────────── */
-function PhaseRail({ active, done, onJump }: { active: number; done: number[]; onJump: (i: number) => void }) {
+function PhaseRail({ active, done, onJump }: {active: number;done: number[];onJump: (i: number) => void;}) {
   return (
     <div className="max-w-5xl mx-auto px-4 pt-4">
       <div className="flex items-center gap-1 overflow-x-auto pb-2">
@@ -220,81 +220,81 @@ function PhaseRail({ active, done, onJump }: { active: number; done: number[]; o
               onClick={() => onJump(p.id)}
               className={cn(
                 "flex items-center gap-1 px-3 py-1.5 rounded-full text-xs whitespace-nowrap transition",
-                isActive ? "bg-mint-soft text-mint font-semibold" : isDone ? "text-mint" : "ink-faint",
-              )}
-            >
+                isActive ? "bg-mint-soft text-mint font-semibold" : isDone ? "text-mint" : "ink-faint"
+              )}>
+              
               <span>{isDone ? "✓" : p.emoji}</span>
-              <span>{p.name}</span>
-            </button>
-          );
+              <span><T>{p.name}</T></span>
+            </button>);
+
         })}
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── Phase: Briefing ─────────────── */
-function BriefingScreen({ pt, onStart }: { pt: Pt; onStart: () => void }) {
+function BriefingScreen({ pt, onStart }: {pt: Pt;onStart: () => void;}) {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-8 animate-fade-in">
       <div className="text-center space-y-3">
-        <div className="text-xs uppercase tracking-widest ink-dim">本期主题</div>
+        <div className="text-xs uppercase tracking-widest ink-dim"><T>本期主题</T></div>
         <h1 className="font-display text-5xl md:text-6xl font-semibold">{pt.title}</h1>
         {pt.cefr && <div className="ink-dim text-sm">CEFR · {pt.cefr}</div>}
       </div>
 
-      {(pt.hook_line_cn || pt.hook_line) && (
-        <div className="glass-card-strong rounded-2xl p-8 space-y-3">
-          <div className="text-xs uppercase tracking-widest text-amber">情境钩子</div>
+      {(pt.hook_line_cn || pt.hook_line) &&
+      <div className="glass-card-strong rounded-2xl p-8 space-y-3">
+          <div className="text-xs uppercase tracking-widest text-amber"><T>情境钩子</T></div>
           {pt.hook_line_cn && <div className="text-2xl font-display leading-relaxed">{pt.hook_line_cn}</div>}
           {pt.hook_line && <div className="ink-dim italic text-lg">"{pt.hook_line}"</div>}
         </div>
-      )}
+      }
 
-      {pt.mnemonic && (
-        <div className="glass-card rounded-2xl p-6 text-center">
-          <div className="text-xs uppercase tracking-widest text-mint mb-2">核心口诀</div>
+      {pt.mnemonic &&
+      <div className="glass-card rounded-2xl p-6 text-center">
+          <div className="text-xs uppercase tracking-widest text-mint mb-2"><T>核心口诀</T></div>
           <div className="font-mono text-2xl">{pt.mnemonic}</div>
         </div>
-      )}
+      }
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
-        {PHASES.slice(1, -1).map((p) => (
-          <div key={p.id} className="glass-card rounded-xl p-4">
+        {PHASES.slice(1, -1).map((p) =>
+        <div key={p.id} className="glass-card rounded-xl p-4">
             <div className="text-3xl mb-1">{p.emoji}</div>
-            <div className="text-xs ink-dim">{p.name}</div>
+            <div className="text-xs ink-dim"><T>{p.name}</T></div>
           </div>
-        ))}
+        )}
       </div>
 
       <div className="text-center pt-4">
         <button onClick={onStart} className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-3">
-          <Sparkles size={18} /> 开始闯关
+          <Sparkles size={18} /> <T>开始闯关</T>
         </button>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── Phase: Foundation ─────────────── */
-function FoundationScreen({ pt, onContinue }: { pt: Pt; onContinue: () => void }) {
+function FoundationScreen({ pt, onContinue }: {pt: Pt;onContinue: () => void;}) {
   const rows = pt.contrast_table || [];
   return (
     <div className="max-w-3xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
       <div className="text-center space-y-2">
-        <div className="text-xs uppercase tracking-widest text-mint">核心公式 · Foundation</div>
+        <div className="text-xs uppercase tracking-widest text-mint"><T>核心公式 · Foundation</T></div>
         <h2 className="font-display text-4xl">{pt.title}</h2>
       </div>
-      {pt.mnemonic && (
-        <div className="glass-card-strong rounded-2xl p-6 text-center">
-          <div className="text-xs ink-dim mb-2">一句话记住</div>
+      {pt.mnemonic &&
+      <div className="glass-card-strong rounded-2xl p-6 text-center">
+          <div className="text-xs ink-dim mb-2"><T>一句话记住</T></div>
           <div className="font-mono text-2xl text-amber">{pt.mnemonic}</div>
         </div>
-      )}
-      {rows.length > 0 ? (
-        <div className="space-y-3">
-          {rows.map((r, i) => (
-            <div key={i} className="glass-card rounded-xl p-5 grid md:grid-cols-[160px,1fr] gap-3 items-start">
+      }
+      {rows.length > 0 ?
+      <div className="space-y-3">
+          {rows.map((r, i) =>
+        <div key={i} className="glass-card rounded-xl p-5 grid md:grid-cols-[160px,1fr] gap-3 items-start">
               <div className="font-semibold text-mint">
                 <ReactMarkdown>{r.lhs}</ReactMarkdown>
               </div>
@@ -302,26 +302,26 @@ function FoundationScreen({ pt, onContinue }: { pt: Pt; onContinue: () => void }
                 <ReactMarkdown>{r.rhs}</ReactMarkdown>
               </div>
             </div>
-          ))}
-        </div>
-      ) : pt.explanation_md ? (
-        <div className="glass-card rounded-xl p-6 prose prose-sm prose-invert max-w-none">
+        )}
+        </div> :
+      pt.explanation_md ?
+      <div className="glass-card rounded-xl p-6 prose prose-sm prose-invert max-w-none">
           <ReactMarkdown>{pt.explanation_md}</ReactMarkdown>
-        </div>
-      ) : (
-        <div className="ink-faint text-center py-6">这个语法点还没有对比表，先去看老师讲堂吧。</div>
-      )}
+        </div> :
+
+      <div className="ink-faint text-center py-6"><T>这个语法点还没有对比表，先去看老师讲堂吧。</T></div>
+      }
       <div className="text-center">
         <button onClick={onContinue} className="btn-primary inline-flex items-center gap-2">
-          继续 <ArrowRight size={16} />
+          <T>继续</T> <ArrowRight size={16} />
         </button>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── Phase: Reflex Cards ─────────────── */
-function ReflexScreen({ cards, onDone }: { cards: ReflexCard[]; onDone: (correct: number) => void }) {
+function ReflexScreen({ cards, onDone }: {cards: ReflexCard[];onDone: (correct: number) => void;}) {
   const [i, setI] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [correct, setCorrect] = useState(0);
@@ -331,50 +331,50 @@ function ReflexScreen({ cards, onDone }: { cards: ReflexCard[]; onDone: (correct
     return (
       <div className="max-w-2xl mx-auto px-4 py-12 text-center space-y-4">
         <div className="text-5xl">⚡</div>
-        <p className="ink-dim">还没有反射卡数据。</p>
-        <button onClick={() => onDone(0)} className="btn-ghost">跳过这一阶段</button>
-      </div>
-    );
+        <p className="ink-dim"><T>还没有反射卡数据。</T></p>
+        <button onClick={() => onDone(0)} className="btn-ghost"><T>跳过这一阶段</T></button>
+      </div>);
+
   }
   const card = cards[i];
-  const reveal = () => { setRevealed(true); };
+  const reveal = () => {setRevealed(true);};
   const score = (ok: boolean) => {
     const next = correct + (ok ? 1 : 0);
     setCorrect(next);
-    if (i + 1 >= cards.length) onDone(next);
-    else { setI(i + 1); setRevealed(false); setStart(Date.now()); }
+    if (i + 1 >= cards.length) onDone(next);else
+    {setI(i + 1);setRevealed(false);setStart(Date.now());}
   };
   return (
     <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
       <div className="flex items-center justify-between text-xs ink-dim">
-        <span>反射卡 · 看中文 → 秒说英文</span>
+        <span><T>反射卡 · 看中文 → 秒说英文</T></span>
         <span>{i + 1} / {cards.length}</span>
       </div>
       <div className="glass-card-strong rounded-3xl p-10 min-h-[280px] flex flex-col items-center justify-center text-center space-y-6">
-        <div className="text-xs uppercase tracking-widest text-amber">想一想怎么说</div>
+        <div className="text-xs uppercase tracking-widest text-amber"><T>想一想怎么说</T></div>
         <div className="font-display text-3xl md:text-4xl leading-snug">{card.cn}</div>
-        {!revealed ? (
-          <button onClick={reveal} className="btn-primary mt-4">显示答案</button>
-        ) : (
-          <div className="space-y-4 w-full">
+        {!revealed ?
+        <button onClick={reveal} className="btn-primary mt-4"><T>显示答案</T></button> :
+
+        <div className="space-y-4 w-full">
             <div className="font-mono text-2xl text-mint">
               {card.en}
-              {card.keyword && <div className="text-xs ink-dim mt-1">关键: <span className="text-amber">{card.keyword}</span></div>}
+              {card.keyword && <div className="text-xs ink-dim mt-1"><T>关键:</T> <span className="text-amber">{card.keyword}</span></div>}
             </div>
             <div className="flex gap-3 justify-center pt-2">
-              <button onClick={() => score(false)} className="btn-ghost"><X size={16} className="inline" /> 没反应过来</button>
-              <button onClick={() => score(true)} className="btn-primary"><Check size={16} className="inline" /> 我反应对了</button>
+              <button onClick={() => score(false)} className="btn-ghost"><X size={16} className="inline" /> <T>没反应过来</T></button>
+              <button onClick={() => score(true)} className="btn-primary"><Check size={16} className="inline" /> <T>我反应对了</T></button>
             </div>
           </div>
-        )}
+        }
       </div>
-      <div className="ink-faint text-xs text-center">已答对 {correct} / 已答 {revealed ? i + 1 : i}</div>
-    </div>
-  );
+      <div className="ink-faint text-xs text-center"><T>已答对</T> {correct} <T>/ 已答</T> {revealed ? i + 1 : i}</div>
+    </div>);
+
 }
 
 /* ─────────────── Phase: Drill (translation input) ─────────────── */
-function DrillScreen({ items, pointTitle, mnemonic, onDone, onMistake }: { items: DrillItem[]; pointTitle?: string; mnemonic?: string; onDone: (correct: number, total: number) => void; onMistake: (m: Mistake) => void }) {
+function DrillScreen({ items, pointTitle, mnemonic, onDone, onMistake }: {items: DrillItem[];pointTitle?: string;mnemonic?: string;onDone: (correct: number, total: number) => void;onMistake: (m: Mistake) => void;}) {
   const [i, setI] = useState(0);
   const [val, setVal] = useState("");
   const [result, setResult] = useState<null | "ok" | "ng">(null);
@@ -392,20 +392,20 @@ function DrillScreen({ items, pointTitle, mnemonic, onDone, onMistake }: { items
     if (!val.trim() || grading || result !== null) return;
     // Quick local pass: if it already matches, no need to spend AI credits.
     if (fuzzyMatch(val, it.en, it.accepted || [])) {
-      setResult("ok"); setCorrect((c) => c + 1); return;
+      setResult("ok");setCorrect((c) => c + 1);return;
     }
     setGrading(true);
     try {
       const { data, error } = await supabase.functions.invoke("grade-grammar-translation", {
-        body: { pointTitle, mnemonic, cn: it.cn, modelEn: it.en, userEn: val },
+        body: { pointTitle, mnemonic, cn: it.cn, modelEn: it.en, userEn: val }
       });
       if (error) throw error;
       const pass = !!(data as any)?.pass;
       setAiFocus((data as any)?.focus || "");
       setAiFix((data as any)?.fix || "");
       setResult(pass ? "ok" : "ng");
-      if (pass) setCorrect((c) => c + 1);
-      else onMistake({ phase: "drill", stem: it.cn, picked: val, correct: it.en });
+      if (pass) setCorrect((c) => c + 1);else
+      onMistake({ phase: "drill", stem: it.cn, picked: val, correct: it.en });
     } catch {
       // AI unavailable → fall back to fuzzy result (already failed above)
       setResult("ng");
@@ -416,14 +416,14 @@ function DrillScreen({ items, pointTitle, mnemonic, onDone, onMistake }: { items
   };
 
   const next = () => {
-    if (i + 1 >= items.length) onDone(correct + (result === "ok" ? 0 : 0), items.length);
-    else { setI(i + 1); setVal(""); setResult(null); setAiFocus(""); setAiFix(""); }
+    if (i + 1 >= items.length) onDone(correct + (result === "ok" ? 0 : 0), items.length);else
+    {setI(i + 1);setVal("");setResult(null);setAiFocus("");setAiFix("");}
   };
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
       <div className="flex items-center justify-between text-xs ink-dim">
-        <span>情境翻译 · {it.situation}</span>
+        <span><T>情境翻译 ·</T> {it.situation}</span>
         <span>{i + 1} / {items.length}</span>
       </div>
       <div className="glass-card-strong rounded-2xl p-8 space-y-5">
@@ -437,40 +437,40 @@ function DrillScreen({ items, pointTitle, mnemonic, onDone, onMistake }: { items
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
               e.preventDefault();
-              if (result === null) submit(); else next();
+              if (result === null) submit();else next();
             }
-          }}
-        />
-        {result === "ok" && (
-          <div className="bg-mint-soft rounded-xl p-4 text-mint space-y-1">
-            <div className="flex items-center gap-2"><Check size={16} /> 语法点用对了！</div>
+          }} />
+        
+        {result === "ok" &&
+        <div className="bg-mint-soft rounded-xl p-4 text-mint space-y-1">
+            <div className="flex items-center gap-2"><Check size={16} /> <T>语法点用对了！</T></div>
             {aiFocus && <div className="text-xs ink-dim">{aiFocus}</div>}
           </div>
-        )}
-        {result === "ng" && (
-          <div className="bg-rose-soft rounded-xl p-4 space-y-2">
-            <div className="text-rose flex items-center gap-2 font-semibold"><X size={16} /> 语法点还没用对</div>
+        }
+        {result === "ng" &&
+        <div className="bg-rose-soft rounded-xl p-4 space-y-2">
+            <div className="text-rose flex items-center gap-2 font-semibold"><X size={16} /> <T>语法点还没用对</T></div>
             {aiFocus && <div className="text-sm">{aiFocus}</div>}
-            {aiFix && <div className="font-mono text-mint text-sm">建议：{aiFix}</div>}
-            <div className="text-xs ink-dim">参考：<span className="font-mono">{it.en}</span></div>
+            {aiFix && <div className="font-mono text-mint text-sm"><T>建议：</T>{aiFix}</div>}
+            <div className="text-xs ink-dim"><T>参考：</T><span className="font-mono">{it.en}</span></div>
           </div>
-        )}
+        }
         <div className="flex justify-end gap-2">
-          {result === null ? (
-            <button onClick={submit} disabled={grading} className="btn-primary">
+          {result === null ?
+          <button onClick={submit} disabled={grading} className="btn-primary">
               {grading ? "AI 批改中…" : "提交 (Enter)"}
-            </button>
-          ) : (
-            <button onClick={next} className="btn-primary">下一题 (Enter) <ArrowRight size={14} className="inline" /></button>
-          )}
+            </button> :
+
+          <button onClick={next} className="btn-primary"><T>下一题 (Enter)</T> <ArrowRight size={14} className="inline" /></button>
+          }
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── Phase: Correction ─────────────── */
-function CorrectionScreen({ tasks, onDone, onMistake }: { tasks: CorrectionTask[]; onDone: (correct: number, total: number) => void; onMistake: (m: Mistake) => void }) {
+function CorrectionScreen({ tasks, onDone, onMistake }: {tasks: CorrectionTask[];onDone: (correct: number, total: number) => void;onMistake: (m: Mistake) => void;}) {
   const [i, setI] = useState(0);
   const [val, setVal] = useState("");
   const [showHint, setShowHint] = useState(false);
@@ -484,23 +484,23 @@ function CorrectionScreen({ tasks, onDone, onMistake }: { tasks: CorrectionTask[
     if (!val.trim()) return;
     const ok = fuzzyMatch(val, t.model);
     setResult(ok ? "ok" : "ng");
-    if (ok) setCorrect((c) => c + 1);
-    else onMistake({ phase: "correction", stem: t.wrong, picked: val, correct: t.model, why: t.why });
+    if (ok) setCorrect((c) => c + 1);else
+    onMistake({ phase: "correction", stem: t.wrong, picked: val, correct: t.model, why: t.why });
   };
   const next = () => {
-    if (i + 1 >= tasks.length) onDone(correct, tasks.length);
-    else { setI(i + 1); setVal(""); setShowHint(false); setResult(null); }
+    if (i + 1 >= tasks.length) onDone(correct, tasks.length);else
+    {setI(i + 1);setVal("");setShowHint(false);setResult(null);}
   };
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
       <div className="flex items-center justify-between text-xs ink-dim">
-        <span>改错 · 找出错误并改正</span>
+        <span><T>改错 · 找出错误并改正</T></span>
         <span>{i + 1} / {tasks.length}</span>
       </div>
       <div className="glass-card-strong rounded-2xl p-8 space-y-5">
         <div className="bg-rose-soft rounded-xl p-4">
-          <div className="text-xs ink-dim mb-1">错误句</div>
+          <div className="text-xs ink-dim mb-1"><T>错误句</T></div>
           <div className="font-mono text-lg line-through text-rose">{t.wrong}</div>
         </div>
         <textarea
@@ -508,43 +508,43 @@ function CorrectionScreen({ tasks, onDone, onMistake }: { tasks: CorrectionTask[
           onChange={(e) => setVal(e.target.value)}
           disabled={result !== null}
           placeholder="把它改正…"
-          className="lab-input min-h-[80px] resize-none"
-        />
-        {showHint && result === null && (
-          <div className="bg-amber-soft rounded-xl p-3 text-sm">
+          className="lab-input min-h-[80px] resize-none" />
+        
+        {showHint && result === null &&
+        <div className="bg-amber-soft rounded-xl p-3 text-sm">
             <ReactMarkdown>{t.hint}</ReactMarkdown>
           </div>
-        )}
-        {result === "ok" && (
-          <div className="bg-mint-soft rounded-xl p-4 text-mint flex items-center gap-2"><Check size={16} /> 完美修复！</div>
-        )}
-        {result === "ng" && (
-          <div className="bg-rose-soft rounded-xl p-4 space-y-2">
+        }
+        {result === "ok" &&
+        <div className="bg-mint-soft rounded-xl p-4 text-mint flex items-center gap-2"><Check size={16} /> <T>完美修复！</T></div>
+        }
+        {result === "ng" &&
+        <div className="bg-rose-soft rounded-xl p-4 space-y-2">
             <div className="font-mono text-mint">{t.model}</div>
             <div className="text-sm ink-dim"><ReactMarkdown>{t.why}</ReactMarkdown></div>
           </div>
-        )}
+        }
         <div className="flex justify-between">
-          <button onClick={() => setShowHint(true)} className="btn-ghost text-xs" disabled={showHint || result !== null}>💡 提示</button>
-          {result === null ? (
-            <button onClick={submit} className="btn-primary">提交</button>
-          ) : (
-            <button onClick={next} className="btn-primary">下一题 <ArrowRight size={14} className="inline" /></button>
-          )}
+          <button onClick={() => setShowHint(true)} className="btn-ghost text-xs" disabled={showHint || result !== null}><T>💡 提示</T></button>
+          {result === null ?
+          <button onClick={submit} className="btn-primary"><T>提交</T></button> :
+
+          <button onClick={next} className="btn-primary"><T>下一题</T> <ArrowRight size={14} className="inline" /></button>
+          }
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── Phase: MCQ runner (Exam + Boss) ─────────────── */
-function MCQRunner({ questions, label, onDone, onMistake, onCorrect }: {
-  questions: { stem: string; option_a?: string|null; option_b?: string|null; option_c?: string|null; option_d?: string|null; correct_answer?: string|null; explanation?: string|null; trap?: string; why?: string; }[];
-  label: string;
-  onDone: (correct: number, total: number) => void;
-  onMistake: (m: Mistake) => void;
-  onCorrect: () => void;
-}) {
+function MCQRunner({ questions, label, onDone, onMistake, onCorrect
+
+
+
+
+
+}: {questions: {stem: string;option_a?: string | null;option_b?: string | null;option_c?: string | null;option_d?: string | null;correct_answer?: string | null;explanation?: string | null;trap?: string;why?: string;}[];label: string;onDone: (correct: number, total: number) => void;onMistake: (m: Mistake) => void;onCorrect: () => void;}) {
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
   const [correct, setCorrect] = useState(0);
@@ -552,9 +552,9 @@ function MCQRunner({ questions, label, onDone, onMistake, onCorrect }: {
   if (!questions.length) return <SkipPhase emoji="📚" label={label} onSkip={() => onDone(0, 0)} />;
 
   const q = questions[i];
-  const opts: { k: string; v: string }[] = (
-    [["A", q.option_a], ["B", q.option_b], ["C", q.option_c], ["D", q.option_d]] as const
-  ).filter(([_, v]) => !!v).map(([k, v]) => ({ k, v: v as string }));
+  const opts: {k: string;v: string;}[] = (
+  [["A", q.option_a], ["B", q.option_b], ["C", q.option_c], ["D", q.option_d]] as const).
+  filter(([_, v]) => !!v).map(([k, v]) => ({ k, v: v as string }));
 
   const ans = (q.correct_answer || "").trim().toUpperCase();
   const pick = (k: string) => {
@@ -569,8 +569,8 @@ function MCQRunner({ questions, label, onDone, onMistake, onCorrect }: {
     }
   };
   const next = () => {
-    if (i + 1 >= questions.length) onDone(correct, questions.length);
-    else { setI(i + 1); setPicked(null); }
+    if (i + 1 >= questions.length) onDone(correct, questions.length);else
+    {setI(i + 1);setPicked(null);}
   };
 
   return (
@@ -595,46 +595,46 @@ function MCQRunner({ questions, label, onDone, onMistake, onCorrect }: {
                   "glass-card",
                   isCorrect && "bg-mint-soft text-mint border-mint",
                   isWrong && "bg-rose-soft text-rose",
-                  !picked && "hover:bg-mint-soft",
-                )}
-              >
+                  !picked && "hover:bg-mint-soft"
+                )}>
+                
                 <span className="font-mono text-xs ink-dim mr-2">{k}.</span>{v}
-              </button>
-            );
+              </button>);
+
           })}
         </div>
-        {picked && (
-          <div className="space-y-2 pt-2 text-sm">
-            {q.trap && <div className="bg-amber-soft rounded-lg p-3"><span className="text-amber font-semibold">陷阱：</span><ReactMarkdown>{q.trap}</ReactMarkdown></div>}
-            {(q.why || q.explanation) && <div className="bg-mint-soft rounded-lg p-3"><span className="text-mint font-semibold">解析：</span><ReactMarkdown>{q.why || q.explanation || ""}</ReactMarkdown></div>}
+        {picked &&
+        <div className="space-y-2 pt-2 text-sm">
+            {q.trap && <div className="bg-amber-soft rounded-lg p-3"><span className="text-amber font-semibold"><T>陷阱：</T></span><ReactMarkdown>{q.trap}</ReactMarkdown></div>}
+            {(q.why || q.explanation) && <div className="bg-mint-soft rounded-lg p-3"><span className="text-mint font-semibold"><T>解析：</T></span><ReactMarkdown>{q.why || q.explanation || ""}</ReactMarkdown></div>}
           </div>
-        )}
-        {picked && (
-          <div className="text-right">
+        }
+        {picked &&
+        <div className="text-right">
             <button onClick={next} className="btn-primary">{i + 1 >= questions.length ? "完成阶段" : "下一题"} <ArrowRight size={14} className="inline" /></button>
           </div>
-        )}
+        }
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
-function SkipPhase({ emoji, label, onSkip }: { emoji: string; label: string; onSkip: () => void }) {
+function SkipPhase({ emoji, label, onSkip }: {emoji: string;label: string;onSkip: () => void;}) {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12 text-center space-y-4">
       <div className="text-6xl">{emoji}</div>
       <h3 className="font-display text-2xl">{label}</h3>
-      <p className="ink-dim">这个语法点还没有该阶段的内容，去 /admin/grammar-content 重新生成可以补齐。</p>
-      <button onClick={onSkip} className="btn-ghost">跳过</button>
-    </div>
-  );
+      <p className="ink-dim"><T>这个语法点还没有该阶段的内容，去 /admin/grammar-content 重新生成可以补齐。</T></p>
+      <button onClick={onSkip} className="btn-ghost"><T>跳过</T></button>
+    </div>);
+
 }
 
 /* ─────────────── AI Wrong-Answer Explainer ─────────────── */
-function WrongAnswerAI({ question, userAnswer, correctAnswer, pointTitle, gradeLabel = "初中", explanation }: {
-  question: string; userAnswer: string; correctAnswer: string;
-  pointTitle?: string; gradeLabel?: string; explanation?: string;
-}) {
+function WrongAnswerAI({ question, userAnswer, correctAnswer, pointTitle, gradeLabel = "初中", explanation
+
+
+}: {question: string;userAnswer: string;correctAnswer: string;pointTitle?: string;gradeLabel?: string;explanation?: string;}) {
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState<string | null>(null);
@@ -643,7 +643,7 @@ function WrongAnswerAI({ question, userAnswer, correctAnswer, pointTitle, gradeL
     let aborted = false;
     (async () => {
       try {
-        setLoading(true); setErr(null); setText("");
+        setLoading(true);setErr(null);setText("");
         const projectId = (import.meta as any).env?.VITE_SUPABASE_PROJECT_ID;
         const url = `https://${projectId}.supabase.co/functions/v1/explain-wrong-answer`;
         const { data: { session } } = await supabase.auth.getSession();
@@ -651,9 +651,9 @@ function WrongAnswerAI({ question, userAnswer, correctAnswer, pointTitle, gradeL
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {}),
+            ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {})
           },
-          body: JSON.stringify({ question, userAnswer, correctAnswer, pointTitle, gradeLabel, explanation }),
+          body: JSON.stringify({ question, userAnswer, correctAnswer, pointTitle, gradeLabel, explanation })
         });
         if (!resp.ok || !resp.body) {
           const t = await resp.text();
@@ -679,7 +679,7 @@ function WrongAnswerAI({ question, userAnswer, correctAnswer, pointTitle, gradeL
               const json = JSON.parse(data);
               const delta = json.choices?.[0]?.delta?.content;
               if (delta) setText((prev) => prev + delta);
-            } catch { /* ignore */ }
+            } catch {/* ignore */}
           }
         }
       } catch (e: any) {
@@ -688,37 +688,37 @@ function WrongAnswerAI({ question, userAnswer, correctAnswer, pointTitle, gradeL
         if (!aborted) setLoading(false);
       }
     })();
-    return () => { aborted = true; };
+    return () => {aborted = true;};
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [question, userAnswer, correctAnswer]);
 
   return (
     <div className="rounded-xl border border-amber/40 bg-amber-soft/40 p-4 space-y-2">
       <div className="flex items-center gap-2 text-amber font-semibold text-sm">
-        <Lightbulb size={16} /> AI 老师为你专属讲解
+        <Lightbulb size={16} /> <T>AI 老师为你专属讲解</T>
       </div>
-      {err ? (
-        <div className="text-sm text-rose">{err}</div>
-      ) : (
-        <div className="prose prose-sm max-w-none">
+      {err ?
+      <div className="text-sm text-rose">{err}</div> :
+
+      <div className="prose prose-sm max-w-none">
           <ReactMarkdown>{text || (loading ? "正在思考..." : "")}</ReactMarkdown>
           {loading && <Loader2 size={14} className="inline animate-spin ink-dim" />}
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
 /* ─────────────── Boss Runner — must clear 100% to unlock next ─────────────── */
-function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, onPassed, onAnyAttempt }: {
-  questions: BossQ[];
-  pointTitle: string;
-  gradeLabel: string;
-  onCorrect: () => void;
-  onMistake: (m: Mistake) => void;
-  onPassed: (totalCorrectFirstTry: number, total: number) => void;
-  onAnyAttempt?: () => void;
-}) {
+function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, onPassed, onAnyAttempt
+
+
+
+
+
+
+
+}: {questions: BossQ[];pointTitle: string;gradeLabel: string;onCorrect: () => void;onMistake: (m: Mistake) => void;onPassed: (totalCorrectFirstTry: number, total: number) => void;onAnyAttempt?: () => void;}) {
   const [queue, setQueue] = useState<BossQ[]>(questions);
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState<string | null>(null);
@@ -730,8 +730,8 @@ function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, o
   if (!queue.length) return <SkipPhase emoji="👑" label="Boss 冲刺" onSkip={() => onPassed(0, 0)} />;
 
   const q = queue[i];
-  const opts = [["A", q.option_a], ["B", q.option_b], ["C", q.option_c], ["D", q.option_d]]
-    .filter(([, v]) => !!v) as [string, string][];
+  const opts = [["A", q.option_a], ["B", q.option_b], ["C", q.option_c], ["D", q.option_d]].
+  filter(([, v]) => !!v) as [string, string][];
   const ans = (q.correct_answer || "").trim().toUpperCase();
 
   const pick = (k: string) => {
@@ -750,7 +750,7 @@ function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, o
 
   const next = () => {
     if (i + 1 < queue.length) {
-      setI(i + 1); setPicked(null); return;
+      setI(i + 1);setPicked(null);return;
     }
     // round done
     if (redoList.length === 0) {
@@ -771,14 +771,14 @@ function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, o
   return (
     <div className="max-w-2xl mx-auto px-4 py-10 space-y-5 animate-fade-in">
       <div className="flex items-center justify-between text-xs ink-dim">
-        <span className="font-semibold text-amber">👑 Boss 冲刺 · 必须全部答对才能解锁下一关</span>
+        <span className="font-semibold text-amber"><T>👑 Boss 冲刺 · 必须全部答对才能解锁下一关</T></span>
         <span>R{round} · {i + 1} / {queue.length}</span>
       </div>
-      {round > 1 && (
-        <div className="rounded-lg bg-rose-soft text-rose text-xs px-3 py-2 flex items-center gap-2">
-          <Lock size={14} /> 上一轮有错题，已收集错题重做。全部改对即通关。
+      {round > 1 &&
+      <div className="rounded-lg bg-rose-soft text-rose text-xs px-3 py-2 flex items-center gap-2">
+          <Lock size={14} /> <T>上一轮有错题，已收集错题重做。全部改对即通关。</T>
         </div>
-      )}
+      }
       <div className="glass-card-strong rounded-2xl p-7 space-y-5">
         <div className="font-display text-xl leading-relaxed">{q.stem}</div>
         <div className="space-y-2">
@@ -794,63 +794,63 @@ function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, o
                   "w-full text-left rounded-xl px-4 py-3 transition border glass-card",
                   isCorrect && "bg-mint-soft text-mint border-mint",
                   wrongPick && "bg-rose-soft text-rose",
-                  !picked && "hover:bg-mint-soft",
-                )}
-              >
+                  !picked && "hover:bg-mint-soft"
+                )}>
+                
                 <span className="font-mono text-xs ink-dim mr-2">{k}.</span>{v}
-              </button>
-            );
+              </button>);
+
           })}
         </div>
-        {picked && (
-          <div className="space-y-3 pt-1 text-sm">
-            {q.trap && <div className="bg-amber-soft rounded-lg p-3"><span className="text-amber font-semibold">陷阱：</span><ReactMarkdown>{q.trap}</ReactMarkdown></div>}
-            {q.why && <div className="bg-mint-soft rounded-lg p-3"><span className="text-mint font-semibold">解析：</span><ReactMarkdown>{q.why}</ReactMarkdown></div>}
-            {isWrong && (
-              <WrongAnswerAI
-                question={q.stem}
-                userAnswer={`${picked}. ${opts.find(([kk]) => kk === picked)?.[1] || ""}`}
-                correctAnswer={`${ans}. ${opts.find(([kk]) => kk === ans)?.[1] || ""}`}
-                pointTitle={pointTitle}
-                gradeLabel={gradeLabel}
-                explanation={q.why}
-              />
-            )}
+        {picked &&
+        <div className="space-y-3 pt-1 text-sm">
+            {q.trap && <div className="bg-amber-soft rounded-lg p-3"><span className="text-amber font-semibold"><T>陷阱：</T></span><ReactMarkdown>{q.trap}</ReactMarkdown></div>}
+            {q.why && <div className="bg-mint-soft rounded-lg p-3"><span className="text-mint font-semibold"><T>解析：</T></span><ReactMarkdown>{q.why}</ReactMarkdown></div>}
+            {isWrong &&
+          <WrongAnswerAI
+            question={q.stem}
+            userAnswer={`${picked}. ${opts.find(([kk]) => kk === picked)?.[1] || ""}`}
+            correctAnswer={`${ans}. ${opts.find(([kk]) => kk === ans)?.[1] || ""}`}
+            pointTitle={pointTitle}
+            gradeLabel={gradeLabel}
+            explanation={q.why} />
+
+          }
           </div>
-        )}
-        {picked && (
-          <div className="text-right">
+        }
+        {picked &&
+        <div className="text-right">
             <button onClick={next} className="btn-primary">
-              {isLastInRound ? (redoList.length ? "进入错题重做" : "完成 Boss 关") : "下一题"}
+              {isLastInRound ? redoList.length ? "进入错题重做" : "完成 Boss 关" : "下一题"}
               <ArrowRight size={14} className="inline ml-1" />
             </button>
           </div>
-        )}
+        }
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── Phase: Done ─────────────── */
-function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPointId }: {
-  state: LabState; mistakes: Mistake[];
-  onReplay: () => void; onAskTutor: (m: Mistake) => void;
-  bossPassed?: boolean; nextPointId?: string | null;
-}) {
+function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPointId
+
+
+
+}: {state: LabState;mistakes: Mistake[];onReplay: () => void;onAskTutor: (m: Mistake) => void;bossPassed?: boolean;nextPointId?: string | null;}) {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-8 animate-fade-in">
       <div className="text-center space-y-3">
         <div className="text-7xl">🎉</div>
-        <h2 className="font-display text-4xl">通关庆典</h2>
-        <p className="ink-dim">本次累计 {state.xp} XP · 最佳连对 {state.bestStreak}</p>
-        {bossPassed && (
-          <div className="inline-flex items-center gap-2 rounded-full bg-mint-soft text-mint px-4 py-2 text-sm font-semibold">
-            <Check size={16} /> Boss 100% 通关 · 已解锁下一关
+        <h2 className="font-display text-4xl"><T>通关庆典</T></h2>
+        <p className="ink-dim"><T>本次累计</T> {state.xp} <T>XP · 最佳连对</T> {state.bestStreak}</p>
+        {bossPassed &&
+        <div className="inline-flex items-center gap-2 rounded-full bg-mint-soft text-mint px-4 py-2 text-sm font-semibold">
+            <Check size={16} /> <T>Boss 100% 通关 · 已解锁下一关</T>
           </div>
-        )}
+        }
       </div>
       <div className="glass-card-strong rounded-2xl p-6">
-        <div className="text-xs uppercase tracking-widest text-amber mb-3">已解锁成就</div>
+        <div className="text-xs uppercase tracking-widest text-amber mb-3"><T>已解锁成就</T></div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
           {ACHIEVEMENTS.map((a) => {
             const got = state.achievements.includes(a.id);
@@ -859,44 +859,44 @@ function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPoi
                 <span className="text-2xl">{a.icon}</span>
                 <div>
                   <div className="font-semibold">{a.cn}</div>
-                  <div className="text-xs ink-dim">{a.desc}</div>
+                  <div className="text-xs ink-dim"><T>{a.desc}</T></div>
                 </div>
-              </div>
-            );
+              </div>);
+
           })}
         </div>
       </div>
-      {mistakes.length > 0 && (
-        <div className="glass-card-strong rounded-2xl p-6 space-y-3">
-          <div className="text-xs uppercase tracking-widest text-rose mb-2">错题复盘 · {mistakes.length} 道</div>
-          {mistakes.map((m, i) => (
-            <div key={i} className="bg-rose-soft rounded-xl p-4 space-y-2">
+      {mistakes.length > 0 &&
+      <div className="glass-card-strong rounded-2xl p-6 space-y-3">
+          <div className="text-xs uppercase tracking-widest text-rose mb-2"><T>错题复盘 ·</T> {mistakes.length} <T>道</T></div>
+          {mistakes.map((m, i) =>
+        <div key={i} className="bg-rose-soft rounded-xl p-4 space-y-2">
               <div className="text-xs ink-dim">{m.phase}</div>
               <div className="font-display">{m.stem}</div>
-              <div className="text-sm"><span className="ink-dim">你的答：</span><span className="text-rose">{m.picked}</span></div>
-              <div className="text-sm"><span className="ink-dim">正确：</span><span className="text-mint font-mono">{m.correct}</span></div>
+              <div className="text-sm"><span className="ink-dim"><T>你的答：</T></span><span className="text-rose">{m.picked}</span></div>
+              <div className="text-sm"><span className="ink-dim"><T>正确：</T></span><span className="text-mint font-mono">{m.correct}</span></div>
               {m.why && <div className="text-xs ink-dim"><ReactMarkdown>{m.why}</ReactMarkdown></div>}
-              <button onClick={() => onAskTutor(m)} className="btn-ghost text-xs">🤖 问 AI 老师</button>
+              <button onClick={() => onAskTutor(m)} className="btn-ghost text-xs"><T>🤖 问 AI 老师</T></button>
             </div>
-          ))}
-        </div>
-      )}
-      <div className="text-center flex flex-wrap gap-3 justify-center">
-        <button onClick={onReplay} className="btn-ghost inline-flex items-center gap-2"><RotateCw size={16} /> 再来一次</button>
-        {bossPassed && nextPointId && (
-          <Link to={`/junior/grammar-lab/${nextPointId}`} className="btn-primary inline-flex items-center gap-2">
-            进入下一关 <ArrowRight size={16} />
-          </Link>
         )}
-        <Link to="/junior/grammar" className="btn-ghost inline-flex items-center gap-2">返回语法地图</Link>
+        </div>
+      }
+      <div className="text-center flex flex-wrap gap-3 justify-center">
+        <button onClick={onReplay} className="btn-ghost inline-flex items-center gap-2"><RotateCw size={16} /> <T>再来一次</T></button>
+        {bossPassed && nextPointId &&
+        <Link to={`/junior/grammar-lab/${nextPointId}`} className="btn-primary inline-flex items-center gap-2">
+            <T>进入下一关</T> <ArrowRight size={16} />
+          </Link>
+        }
+        <Link to="/junior/grammar" className="btn-ghost inline-flex items-center gap-2"><T>返回语法地图</T></Link>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ─────────────── Main ─────────────── */
 export default function JuniorGrammarLab() {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<{id: string;}>();
   const [pt, setPt] = useState<Pt | null>(null);
   const [examQs, setExamQs] = useState<ExamQ[]>([]);
   const [loading, setLoading] = useState(true);
@@ -912,33 +912,33 @@ export default function JuniorGrammarLab() {
   // Free-mode AI helper for this grammar point.
   // The system prompt forbids leaking specific test answers; users can ask conceptual questions anytime.
   useRegisterAssistant(
-    pt
-      ? {
-          context: "junior_grammar_lab",
-          ref: pt.id,
-          topic: `初中语法 · ${pt.title}`,
-          mode: "free",
-          unlocked: true,
-          pageTitle: "💬 小月 · 语法答疑",
-        }
-      : null,
+    pt ?
+    {
+      context: "junior_grammar_lab",
+      ref: pt.id,
+      topic: `初中语法 · ${pt.title}`,
+      mode: "free",
+      unlocked: true,
+      pageTitle: "💬 小月 · 语法答疑"
+    } :
+    null
   );
 
   useEffect(() => {
     if (!id) return;
     setState(loadState(id));
     (async () => {
-      const { data: p } = await supabase.from("junior_grammar_points")
-        .select("id,title,cefr,mnemonic,explanation_md,teacher_script,immersion_cards,hook_line,hook_line_cn,contrast_table,reflex_cards,situation_drills,correction_tasks,boss_questions")
-        .eq("id", id).maybeSingle();
+      const { data: p } = await supabase.from("junior_grammar_points").
+      select("id,title,cefr,mnemonic,explanation_md,teacher_script,immersion_cards,hook_line,hook_line_cn,contrast_table,reflex_cards,situation_drills,correction_tasks,boss_questions").
+      eq("id", id).maybeSingle();
       if (p) setPt(p as any);
-      const { data: qs } = await supabase.from("junior_grammar_questions")
-        .select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty")
-        .eq("point_id", id).eq("question_type", "mcq").order("difficulty").limit(8);
-      setExamQs((qs as any) || []);
+      const { data: qs } = await supabase.from("junior_grammar_questions").
+      select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty").
+      eq("point_id", id).eq("question_type", "mcq").order("difficulty").limit(8);
+      setExamQs(qs as any || []);
       // figure out next grammar point in same level by sort order
-      const { data: all } = await supabase.from("junior_grammar_points")
-        .select("id,sort_order,created_at").order("sort_order", { ascending: true }).order("created_at", { ascending: true });
+      const { data: all } = await supabase.from("junior_grammar_points").
+      select("id,sort_order,created_at").order("sort_order", { ascending: true }).order("created_at", { ascending: true });
       if (all && id) {
         const idx = all.findIndex((r: any) => r.id === id);
         if (idx >= 0 && idx + 1 < all.length) setNextPointId((all[idx + 1] as any).id);
@@ -956,9 +956,9 @@ export default function JuniorGrammarLab() {
     })();
   }, [id]);
 
-  useEffect(() => { if (id && initRef.current) saveState(id, state); else initRef.current = true; }, [id, state]);
+  useEffect(() => {if (id && initRef.current) saveState(id, state);else initRef.current = true;}, [id, state]);
 
-  const grant = (delta: Partial<LabState> & { addXp?: number; unlock?: string[] }) => {
+  const grant = (delta: Partial<LabState> & {addXp?: number;unlock?: string[];}) => {
     setState((s) => {
       const next = { ...s };
       if (delta.addXp) next.xp += delta.addXp;
@@ -985,7 +985,7 @@ export default function JuniorGrammarLab() {
     awardForCorrect(1, "junior_grammar_lab").catch(() => {});
     if (id) recordUnifiedAttempt({
       stage: "junior", grade: 7, module: "grammar",
-      item_type: "lab", item_id: id, is_correct: true,
+      item_type: "lab", item_id: id, is_correct: true
     }).catch(() => {});
   };
   const onMistake = (m: Mistake) => {
@@ -994,7 +994,7 @@ export default function JuniorGrammarLab() {
     if (id) recordUnifiedAttempt({
       stage: "junior", grade: 7, module: "grammar",
       item_type: "lab", item_id: id, is_correct: false,
-      context: { mistake: m as any },
+      context: { mistake: m as any }
     }).catch(() => {});
   };
 
@@ -1010,7 +1010,7 @@ export default function JuniorGrammarLab() {
     try {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
-      const score = total > 0 ? Math.round((firstTryCorrect / total) * 100) : 100;
+      const score = total > 0 ? Math.round(firstTryCorrect / total * 100) : 100;
       await supabase.from("grammar_lab_progress").upsert({
         user_id: user.id,
         point_id: id,
@@ -1018,113 +1018,113 @@ export default function JuniorGrammarLab() {
         boss_passed: true,
         best_score: score,
         attempts: 1,
-        completed_at: new Date().toISOString(),
+        completed_at: new Date().toISOString()
       } as any, { onConflict: "user_id,point_id,level" });
     } catch (e) {
       console.warn("persist boss progress failed", e);
     }
   };
 
-  if (loading) return <CosmicShell theme={theme} focus={focus}><div className="flex items-center justify-center min-h-screen ink-dim">加载中…</div></CosmicShell>;
-  if (!pt) return <CosmicShell theme={theme} focus={focus}><div className="text-center py-20 ink-dim">语法点不存在</div></CosmicShell>;
+  if (loading) return <CosmicShell theme={theme} focus={focus}><div className="flex items-center justify-center min-h-screen ink-dim"><T>加载中…</T></div></CosmicShell>;
+  if (!pt) return <CosmicShell theme={theme} focus={focus}><div className="text-center py-20 ink-dim"><T>语法点不存在</T></div></CosmicShell>;
 
   return (
     <CosmicShell theme={theme} focus={focus}>
       <HUD state={state} theme={theme} focus={focus} onToggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")} onToggleFocus={() => setFocus(!focus)} onBack={() => history.back()} />
       <PhaseRail active={phase} done={state.phasesDone} onJump={(i) => setPhase(i)} />
 
-      {phase === 0 && (
-        <BriefingScreen pt={pt} onStart={() => completePhase(0, ["first_step"])} />
-      )}
+      {phase === 0 &&
+      <BriefingScreen pt={pt} onStart={() => completePhase(0, ["first_step"])} />
+      }
       {phase === 1 && (
-        pt.teacher_script && pt.teacher_script.length > 0 ? (
-          <div className="max-w-3xl mx-auto px-4 py-6">
+      pt.teacher_script && pt.teacher_script.length > 0 ?
+      <div className="max-w-3xl mx-auto px-4 py-6">
             <TeacherLessonPlayer
-              segments={pt.teacher_script}
-              pointTitle={pt.title}
-              onContinue={() => completePhase(1, ["lesson_complete"])}
-              onSkip={() => completePhase(1)}
-            />
-          </div>
-        ) : <SkipPhase emoji="👩‍🏫" label="老师讲堂" onSkip={() => completePhase(1)} />
-      )}
-      {phase === 2 && (
-        <FoundationScreen pt={pt as any} onContinue={() => completePhase(2)} />
-      )}
-      {phase === 3 && (
-        <ReflexScreen
-          cards={pt.reflex_cards || []}
-          onDone={(correct) => {
-            grant({ addXp: correct * XP.reflex });
-            const unlocks = correct === (pt.reflex_cards?.length || 0) && correct > 0 ? ["reflex_master"] : [];
-            completePhase(3, unlocks);
-            if (correct > 0) fireEmojiConfetti({ emojis: ["⚡"] });
-          }}
-        />
-      )}
-      {phase === 4 && (
-        <DrillScreen
-          items={pt.situation_drills || []}
+          segments={pt.teacher_script}
           pointTitle={pt.title}
-          mnemonic={pt.mnemonic ?? undefined}
-          onMistake={onMistake}
-          onDone={(correct, total) => {
-            grant({ addXp: correct * XP.drill });
-            const pct = total ? correct / total : 0;
-            const unlocks = pct >= 0.8 ? ["drill_warrior"] : [];
-            completePhase(4, unlocks);
-          }}
-        />
-      )}
-      {phase === 5 && (
-        <CorrectionScreen
-          tasks={pt.correction_tasks || []}
-          onMistake={onMistake}
-          onDone={(correct, total) => {
-            grant({ addXp: correct * XP.correction });
-            const unlocks = correct === total && total > 0 ? ["fix_it_pro"] : [];
-            completePhase(5, unlocks);
-          }}
-        />
-      )}
-      {phase === 6 && (
-        <MCQRunner
-          label="真题练习"
-          questions={examQs.slice(0, 5)}
-          onCorrect={() => { onCorrect(); grant({ addXp: XP.exam }); }}
-          onMistake={onMistake}
-          onDone={() => completePhase(6, ["exam_clear"])}
-        />
-      )}
-      {phase === 7 && (
-        <BossRunner
-          questions={(pt.boss_questions || []) as BossQ[]}
-          pointTitle={pt.title}
-          gradeLabel={gradeLabel}
-          onCorrect={() => { onCorrect(); grant({ addXp: XP.boss }); }}
-          onMistake={onMistake}
-          onPassed={(firstTry, total) => {
-            const unlocks: string[] = ["boss_slayer", "lab_complete"];
-            if (firstTry === total && total > 0) unlocks.push("perfect_run");
-            persistBossPassed(firstTry, total);
-            completePhase(7, unlocks);
-            fireEmojiConfetti({ emojis: ["👑", "🏆", "✨"] });
-          }}
-        />
-      )}
-      {phase === 8 && (
-        <DoneScreen
-          state={state}
-          mistakes={state.mistakes}
-          bossPassed={bossPassed}
-          nextPointId={nextPointId}
-          onReplay={() => { setPhase(0); setState({ ...state, phasesDone: [], streak: 0, mistakes: [] }); }}
-          onAskTutor={(m) => {
-            const url = `/junior/grammar-point/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;
-            window.location.href = url;
-          }}
-        />
-      )}
-    </CosmicShell>
-  );
+          onContinue={() => completePhase(1, ["lesson_complete"])}
+          onSkip={() => completePhase(1)} />
+        
+          </div> :
+      <SkipPhase emoji="👩‍🏫" label="老师讲堂" onSkip={() => completePhase(1)} />)
+      }
+      {phase === 2 &&
+      <FoundationScreen pt={pt as any} onContinue={() => completePhase(2)} />
+      }
+      {phase === 3 &&
+      <ReflexScreen
+        cards={pt.reflex_cards || []}
+        onDone={(correct) => {
+          grant({ addXp: correct * XP.reflex });
+          const unlocks = correct === (pt.reflex_cards?.length || 0) && correct > 0 ? ["reflex_master"] : [];
+          completePhase(3, unlocks);
+          if (correct > 0) fireEmojiConfetti({ emojis: ["⚡"] });
+        }} />
+
+      }
+      {phase === 4 &&
+      <DrillScreen
+        items={pt.situation_drills || []}
+        pointTitle={pt.title}
+        mnemonic={pt.mnemonic ?? undefined}
+        onMistake={onMistake}
+        onDone={(correct, total) => {
+          grant({ addXp: correct * XP.drill });
+          const pct = total ? correct / total : 0;
+          const unlocks = pct >= 0.8 ? ["drill_warrior"] : [];
+          completePhase(4, unlocks);
+        }} />
+
+      }
+      {phase === 5 &&
+      <CorrectionScreen
+        tasks={pt.correction_tasks || []}
+        onMistake={onMistake}
+        onDone={(correct, total) => {
+          grant({ addXp: correct * XP.correction });
+          const unlocks = correct === total && total > 0 ? ["fix_it_pro"] : [];
+          completePhase(5, unlocks);
+        }} />
+
+      }
+      {phase === 6 &&
+      <MCQRunner
+        label="真题练习"
+        questions={examQs.slice(0, 5)}
+        onCorrect={() => {onCorrect();grant({ addXp: XP.exam });}}
+        onMistake={onMistake}
+        onDone={() => completePhase(6, ["exam_clear"])} />
+
+      }
+      {phase === 7 &&
+      <BossRunner
+        questions={(pt.boss_questions || []) as BossQ[]}
+        pointTitle={pt.title}
+        gradeLabel={gradeLabel}
+        onCorrect={() => {onCorrect();grant({ addXp: XP.boss });}}
+        onMistake={onMistake}
+        onPassed={(firstTry, total) => {
+          const unlocks: string[] = ["boss_slayer", "lab_complete"];
+          if (firstTry === total && total > 0) unlocks.push("perfect_run");
+          persistBossPassed(firstTry, total);
+          completePhase(7, unlocks);
+          fireEmojiConfetti({ emojis: ["👑", "🏆", "✨"] });
+        }} />
+
+      }
+      {phase === 8 &&
+      <DoneScreen
+        state={state}
+        mistakes={state.mistakes}
+        bossPassed={bossPassed}
+        nextPointId={nextPointId}
+        onReplay={() => {setPhase(0);setState({ ...state, phasesDone: [], streak: 0, mistakes: [] });}}
+        onAskTutor={(m) => {
+          const url = `/junior/grammar-point/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;
+          window.location.href = url;
+        }} />
+
+      }
+    </CosmicShell>);
+
 }

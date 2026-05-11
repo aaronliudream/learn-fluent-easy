@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useState } from "react";
 import { ArrowLeft, Volume2, VolumeX } from "lucide-react";
 import Stage1WatchListen from "./lesson-stages/Stage1WatchListen";
 import Stage2ListenMatch from "./lesson-stages/Stage2ListenMatch";
@@ -26,21 +26,21 @@ export default function LessonStageEngine(props: {
       <ComboProvider>
         <LessonStageEngineInner {...props} />
       </ComboProvider>
-    </SparkMoodProvider>
-  );
+    </SparkMoodProvider>);
+
 }
 
 function LessonStageEngineInner({
   lesson_id,
   stages,
   onExit,
-  onComplete,
-}: {
-  lesson_id: string;
-  stages: LessonStages;
-  onExit: () => void;
-  onComplete: () => void;
-}) {
+  onComplete
+
+
+
+
+
+}: {lesson_id: string;stages: LessonStages;onExit: () => void;onComplete: () => void;}) {
   const { mood, setMood } = useSparkMood();
   const [current, setCurrent] = useState<number>(() => {
     try {
@@ -71,7 +71,7 @@ function LessonStageEngineInner({
   useEffect(() => {
     try {
       sessionStorage.setItem(`lessonStage:${lesson_id}`, String(current));
-    } catch { /* noop */ }
+    } catch {/* noop */}
     // Stage opening: curious for 1.5s
     setMood("curious", 1500);
   }, [current, lesson_id, setMood]);
@@ -88,15 +88,15 @@ function LessonStageEngineInner({
     setTimeout(() => setStageDoneToast(null), 1200);
     setMood("celebrating", 1400);
     playSfx(current >= 5 ? "complete" : "correct");
-    if (current < 5) setCurrent(current + 1);
-    else {
-      try { sessionStorage.removeItem(`lessonStage:${lesson_id}`); } catch { /* noop */ }
+    if (current < 5) setCurrent(current + 1);else
+    {
+      try {sessionStorage.removeItem(`lessonStage:${lesson_id}`);} catch {/* noop */}
       playSfx("complete");
       onComplete();
     }
   }
 
-  const pct = Math.round(((current - 1) / 5) * 100);
+  const pct = Math.round((current - 1) / 5 * 100);
 
   return (
     <div className="min-h-screen bg-background">
@@ -108,20 +108,20 @@ function LessonStageEngineInner({
           <SparkBubble mood={mood} size="sm" />
           <div className="flex-1">
             <div className="flex items-center gap-2 text-xs font-bold">
-              <span>关 {current}/5 · {STAGE_NAMES[current - 1]}</span>
+              <span><T>关</T> {current}/5 · {STAGE_NAMES[current - 1]}</span>
             </div>
             <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-secondary">
               <div
                 className="h-full bg-gradient-to-r from-pink-500 to-amber-500 transition-all"
-                style={{ width: `${pct + 20}%` }}
-              />
+                style={{ width: `${pct + 20}%` }} />
+              
             </div>
           </div>
           <button
             onClick={() => setMuted((m) => !m)}
             aria-label={muted ? "取消静音" : "静音"}
-            className="rounded-full p-2 hover:bg-secondary"
-          >
+            className="rounded-full p-2 hover:bg-secondary">
+            
             {muted ? <VolumeX className="size-5" /> : <Volume2 className="size-5" />}
           </button>
         </div>
@@ -135,11 +135,11 @@ function LessonStageEngineInner({
         {current === 5 && <Stage5FillBlank questions={stages.stage5} onComplete={nextStage} />}
       </main>
 
-      {stageDoneToast && (
-        <div className="fixed left-1/2 top-20 z-40 -translate-x-1/2 rounded-full bg-foreground/90 px-5 py-2 text-sm font-extrabold text-background shadow-lg">
+      {stageDoneToast &&
+      <div className="fixed left-1/2 top-20 z-40 -translate-x-1/2 rounded-full bg-foreground/90 px-5 py-2 text-sm font-extrabold text-background shadow-lg">
           🦊 {stageDoneToast}
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }

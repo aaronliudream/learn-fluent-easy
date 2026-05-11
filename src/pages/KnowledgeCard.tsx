@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Card } from "@/components/ui/card";
@@ -31,7 +31,7 @@ function playTone(freq: number, duration = 0.1, type: OscillatorType = "sine") {
   } catch {}
 }
 
-type Quiz = { q: string; options: string[]; answer: number; explain?: string; difficulty?: number };
+type Quiz = {q: string;options: string[];answer: number;explain?: string;difficulty?: number;};
 type CardData = {
   id: string;
   slug: string;
@@ -74,11 +74,11 @@ export default function KnowledgeCard() {
   const shareUrl = qrUrl;
   // Progressive challenge: start with 3, can extend to 5, then 10.
   const [stage, setStage] = useState<3 | 5 | 10>(3);
-  const [stageDone, setStageDone] = useState<{ s3?: boolean; s5?: boolean; s10?: boolean }>({});
+  const [stageDone, setStageDone] = useState<{s3?: boolean;s5?: boolean;s10?: boolean;}>({});
   const [coinsEarned, setCoinsEarned] = useState(0);
   const [streak, setStreak] = useState(0);
   const [savedCTA, setSavedCTA] = useState(false); // shows "saved + sign-up" CTA after stage settle
-  const [cardStats, setCardStats] = useState<{ attempts: number; avgPct: number } | null>(null);
+  const [cardStats, setCardStats] = useState<{attempts: number;avgPct: number;} | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -88,12 +88,12 @@ export default function KnowledgeCard() {
       setAuthed(!!u?.user);
       setMyUserId(u?.user?.id ?? null);
 
-      const { data, error } = await supabase
-        .from("knowledge_cards")
-        .select("*")
-        .eq("slug", slug!)
-        .maybeSingle();
-      if (error || !data) { setLoading(false); return; }
+      const { data, error } = await supabase.
+      from("knowledge_cards").
+      select("*").
+      eq("slug", slug!).
+      maybeSingle();
+      if (error || !data) {setLoading(false);return;}
       setCard(data as any);
       setLoading(false);
 
@@ -105,37 +105,37 @@ export default function KnowledgeCard() {
       supabase.from("card_views").insert({
         card_id: data.id,
         viewer_id: u?.user?.id ?? null,
-        ref_user_id: refClean,
+        ref_user_id: refClean
       });
 
       if (u?.user) {
-        const { data: like } = await supabase
-          .from("card_likes")
-          .select("id")
-          .eq("card_id", data.id)
-          .eq("user_id", u.user.id)
-          .maybeSingle();
+        const { data: like } = await supabase.
+        from("card_likes").
+        select("id").
+        eq("card_id", data.id).
+        eq("user_id", u.user.id).
+        maybeSingle();
         setLiked(!!like);
       }
 
       // Lightweight aggregate: how many people tried + avg correct rate
       try {
-        const { data: aRows } = await supabase
-          .from("card_attempts")
-          .select("score_pct")
-          .eq("card_id", data.id)
-          .limit(500);
+        const { data: aRows } = await supabase.
+        from("card_attempts").
+        select("score_pct").
+        eq("card_id", data.id).
+        limit(500);
         if (aRows && aRows.length > 0) {
           const sum = aRows.reduce((n: number, r: any) => n + (r.score_pct ?? 0), 0);
           setCardStats({ attempts: aRows.length, avgPct: Math.round(sum / aRows.length) });
         }
       } catch {}
     })();
-    return () => { mounted = false; };
+    return () => {mounted = false;};
   }, [slug]);
 
   async function toggleLike() {
-    if (!authed || !card) { navigate(`/auth?redirect=/q/${slug}`); return; }
+    if (!authed || !card) {navigate(`/auth?redirect=/q/${slug}`);return;}
     const { data: u } = await supabase.auth.getUser();
     if (!u?.user) return;
     if (liked) {
@@ -156,7 +156,7 @@ export default function KnowledgeCard() {
         errorCorrectionLevel: "H",
         margin: 2,
         width: 720,
-        color: { dark: "#000000", light: "#ffffff" },
+        color: { dark: "#000000", light: "#ffffff" }
       });
       setQrDataUrl(dataUrl);
       setQrOpen(true);
@@ -197,8 +197,8 @@ export default function KnowledgeCard() {
     }
 
     try {
-      if (navigator.share) await navigator.share({ title: card?.question, text: card?.short_answer, url: shareUrl });
-      else await copyLink();
+      if (navigator.share) await navigator.share({ title: card?.question, text: card?.short_answer, url: shareUrl });else
+      await copyLink();
     } catch {
       await copyLink();
     }
@@ -207,10 +207,10 @@ export default function KnowledgeCard() {
   if (loading) return <main className="p-10 text-center text-muted-foreground">Loading…</main>;
   if (!card) return (
     <main className="p-10 text-center">
-      <p className="text-muted-foreground mb-4">这张卡片不存在或已删除。</p>
-      <Link to="/ask"><Button>提一个新问题</Button></Link>
-    </main>
-  );
+      <p className="text-muted-foreground mb-4"><T>这张卡片不存在或已删除。</T></p>
+      <Link to="/ask"><Button><T>提一个新问题</T></Button></Link>
+    </main>);
+
 
   // ===== Quiz logic (progressive) =====
   const visibleQuiz = card.quiz.slice(0, stage);
@@ -234,14 +234,14 @@ export default function KnowledgeCard() {
           picked_idx: optIdx,
           is_correct: isRight,
           user_id: u?.user?.id ?? null,
-          guest_token: u?.user ? null : getGuestCardToken(),
+          guest_token: u?.user ? null : getGuestCardToken()
         });
       });
     } catch {}
     if (isRight) {
       // Sound + tiny haptic on correct
-      try { playTone(880, 0.08); } catch {}
-      try { (navigator as any).vibrate?.(15); } catch {}
+      try {playTone(880, 0.08);} catch {}
+      try {(navigator as any).vibrate?.(15);} catch {}
       const newStreak = streak + 1;
       setStreak(newStreak);
       if (authed) {
@@ -253,8 +253,8 @@ export default function KnowledgeCard() {
       }
     } else {
       // Haptic + low tone on wrong
-      try { playTone(220, 0.12, "square"); } catch {}
-      try { (navigator as any).vibrate?.([30, 40, 30]); } catch {}
+      try {playTone(220, 0.12, "square");} catch {}
+      try {(navigator as any).vibrate?.([30, 40, 30]);} catch {}
       setStreak(0);
       notifyWrong();
       // Add to mistakes book (logged-in only)
@@ -277,13 +277,13 @@ export default function KnowledgeCard() {
                 question_idx: qIdx,
                 options: q.options,
                 answer: q.answer,
-                picked: optIdx,
+                picked: optIdx
               } as any,
               wrong_count: 1,
               is_resolved: false,
               is_starred: false,
               last_wrong_at: new Date().toISOString(),
-              next_review_at: new Date(Date.now() + 24 * 3600 * 1000).toISOString(),
+              next_review_at: new Date(Date.now() + 24 * 3600 * 1000).toISOString()
             }, { onConflict: "user_id,module,source_key" });
           }
         } catch (e) {
@@ -314,7 +314,7 @@ export default function KnowledgeCard() {
           _amount: 5,
           _source: "card_first_complete",
           _item_id: `${card.id}:first_complete`,
-          _module: "card_quiz",
+          _module: "card_quiz"
         });
         const row: any = Array.isArray(r2) ? r2[0] : r2;
         if (row?.awarded > 0) setCoinsEarned((c) => c + row.awarded);
@@ -325,7 +325,7 @@ export default function KnowledgeCard() {
           await supabase.rpc("award_referrer", {
             _ref_user_id: refUserId,
             _card_id: card.id,
-            _amount: 2,
+            _amount: 2
           });
         } catch {}
       }
@@ -339,20 +339,20 @@ export default function KnowledgeCard() {
         guest_token: u?.user ? null : getGuestCardToken(),
         total_questions: visibleQuiz.length,
         correct_count: correctCount,
-        score_pct: Math.round((correctCount / visibleQuiz.length) * 100),
+        score_pct: Math.round(correctCount / visibleQuiz.length * 100),
         coins_awarded: coinsEarned + bonus,
-        stage: `s${stage}`,
+        stage: `s${stage}`
       });
     } catch (e) {
       console.warn("[card_attempts] insert failed", e);
     }
     if (!authed) setSavedCTA(true);
-    const pct = visibleQuiz.length > 0 ? Math.round((correctCount / visibleQuiz.length) * 100) : 0;
+    const pct = visibleQuiz.length > 0 ? Math.round(correctCount / visibleQuiz.length * 100) : 0;
     import("@/lib/feedback").then((f) => f.celebrateScore(pct));
   }
 
   // Auto-settle the moment a stage is just completed
-  if (justSettled) { void settleStage(); }
+  if (justSettled) {void settleStage();}
 
   return (
     <main className="max-w-2xl mx-auto px-4 py-8 space-y-6">
@@ -363,51 +363,51 @@ export default function KnowledgeCard() {
         </div>
         <h1 className="text-2xl md:text-3xl font-bold leading-tight">{card.question}</h1>
         <p className="text-xs text-muted-foreground mt-2">
-          帮助了 {card.view_count} 人 · {card.like_count} ❤️
+          <T>帮助了</T> {card.view_count} <T>人 ·</T> {card.like_count} ❤️
         </p>
       </header>
 
       {/* Short answer */}
       <Card className="p-5 bg-primary/5 border-primary/30">
-        <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-1">✅ 简短答案</p>
+        <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-1"><T>✅ 简短答案</T></p>
         <p className="text-lg font-medium">{card.short_answer}</p>
       </Card>
 
       {/* Explanation */}
       <Card className="p-5">
-        <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">📖 详细解释</p>
+        <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2"><T>📖 详细解释</T></p>
         <p className="whitespace-pre-wrap leading-relaxed">{card.explanation}</p>
       </Card>
 
       {/* Examples */}
-      {card.examples?.length > 0 && (
-        <Card className="p-5">
-          <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-3">💬 例句</p>
+      {card.examples?.length > 0 &&
+      <Card className="p-5">
+          <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-3"><T>💬 例句</T></p>
           <ul className="space-y-2">
-            {card.examples.map((ex, i) => (
-              <li key={i} className="flex items-start gap-2">
+            {card.examples.map((ex, i) =>
+          <li key={i} className="flex items-start gap-2">
                 <span className="text-primary font-bold">{i + 1}.</span>
                 <span className="flex-1">{ex}</span>
               </li>
-            ))}
+          )}
           </ul>
         </Card>
-      )}
+      }
 
       {/* Common mistakes */}
-      {card.common_mistakes?.length > 0 && (
-        <Card className="p-5 border-destructive/30 bg-destructive/5">
-          <p className="text-xs uppercase tracking-wider text-destructive font-semibold mb-2">⚠️ 常见错误</p>
+      {card.common_mistakes?.length > 0 &&
+      <Card className="p-5 border-destructive/30 bg-destructive/5">
+          <p className="text-xs uppercase tracking-wider text-destructive font-semibold mb-2"><T>⚠️ 常见错误</T></p>
           <ul className="space-y-1.5 list-disc list-inside text-sm">
             {card.common_mistakes.map((m, i) => <li key={i}>{m}</li>)}
           </ul>
         </Card>
-      )}
+      }
 
       {/* Quiz — gated */}
       <section>
         <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-3 flex items-center gap-2">
-          🎯 挑战测试 · 第 {stage} 关
+          <T>🎯 挑战测试 · 第</T> {stage} <T>关</T>
           <span className="ml-auto text-[11px] normal-case tracking-normal text-primary font-bold">
             {coinsEarned > 0 && `💰 已获 ${coinsEarned} 金币`}
           </span>
@@ -419,130 +419,130 @@ export default function KnowledgeCard() {
           if (card.quiz.length === 0) return null;
           return (
             <div className="mb-3 px-3 py-2 rounded-md bg-muted/40 border border-border text-xs text-muted-foreground flex flex-wrap items-center gap-x-3 gap-y-1">
-              <span>📊 共 {card.quiz.length} 题</span>
-              {easy > 0 && <span>· {easy} 道简单</span>}
-              {hard > 0 && <span>· {hard} 道挑战</span>}
-              {cardStats && cardStats.attempts >= 3 && (
-                <span>· 已有 {cardStats.attempts} 人挑战，平均正确率 <strong className="text-foreground">{cardStats.avgPct}%</strong></span>
-              )}
-            </div>
-          );
+              <span><T>📊 共</T> {card.quiz.length} <T>题</T></span>
+              {easy > 0 && <span>· {easy} <T>道简单</T></span>}
+              {hard > 0 && <span>· {hard} <T>道挑战</T></span>}
+              {cardStats && cardStats.attempts >= 3 &&
+              <span><T>· 已有</T> {cardStats.attempts} <T>人挑战，平均正确率</T> <strong className="text-foreground">{cardStats.avgPct}%</strong></span>
+              }
+            </div>);
+
         })()}
         <div className="space-y-3">
-            {visibleQuiz.map((q, i) => (
-              <Card key={i} className="p-4">
+            {visibleQuiz.map((q, i) =>
+          <Card key={i} className="p-4">
                 <p className="font-medium mb-3">{i + 1}. {q.q}</p>
                 <div className="grid gap-2">
                   {q.options.map((opt, j) => {
-                    const chosen = picked[i];
-                    const isRight = j === q.answer;
-                    const isPicked = chosen === j;
-                    const showState = chosen !== undefined;
-                    return (
-                      <button
-                        key={j}
-                        onClick={() => pickAnswer(i, j)}
-                        className={`text-left px-3 py-2 rounded-md border text-sm transition-colors ${
-                          showState && isRight ? "border-green-500 bg-green-50 dark:bg-green-950/30"
-                          : showState && isPicked ? "border-destructive bg-destructive/10"
-                          : "border-border hover:bg-muted"
-                        }`}
-                      >
+                const chosen = picked[i];
+                const isRight = j === q.answer;
+                const isPicked = chosen === j;
+                const showState = chosen !== undefined;
+                return (
+                  <button
+                    key={j}
+                    onClick={() => pickAnswer(i, j)}
+                    className={`text-left px-3 py-2 rounded-md border text-sm transition-colors ${
+                    showState && isRight ? "border-green-500 bg-green-50 dark:bg-green-950/30" :
+                    showState && isPicked ? "border-destructive bg-destructive/10" :
+                    "border-border hover:bg-muted"}`
+                    }>
+                    
                         {String.fromCharCode(65 + j)}. {opt}
-                      </button>
-                    );
-                  })}
+                      </button>);
+
+              })}
                 </div>
-                {picked[i] !== undefined && (
-                  <div className="mt-3">
-                    {picked[i] === q.answer ? (
-                      <div className="flex items-center gap-2 px-3 py-2 rounded-md bg-gradient-to-r from-primary/10 to-transparent border border-primary/30 animate-in fade-in slide-in-from-bottom-1 duration-300">
+                {picked[i] !== undefined &&
+            <div className="mt-3">
+                    {picked[i] === q.answer ?
+              <div className="flex items-center gap-2 px-3 py-2 rounded-md bg-gradient-to-r from-primary/10 to-transparent border border-primary/30 animate-in fade-in slide-in-from-bottom-1 duration-300">
                         <BrandLogo size={22} />
-                        <span className="text-sm font-semibold text-primary">太棒了，答对了！</span>
-                      </div>
-                    ) : (
-                      <div className="flex items-start gap-2 px-3 py-2 rounded-md bg-muted/60 border border-border animate-in fade-in duration-300">
+                        <span className="text-sm font-semibold text-primary"><T>太棒了，答对了！</T></span>
+                      </div> :
+
+              <div className="flex items-start gap-2 px-3 py-2 rounded-md bg-muted/60 border border-border animate-in fade-in duration-300">
                         <span className="text-base leading-none mt-0.5">🌙</span>
                         <div className="flex-1">
-                          <p className="text-sm font-medium text-foreground">没关系，再看看～</p>
+                          <p className="text-sm font-medium text-foreground"><T>没关系，再看看～</T></p>
                           <p className="text-xs text-muted-foreground mt-0.5">
-                            正确答案是 <span className="font-semibold text-foreground">{String.fromCharCode(65 + q.answer)}. {q.options[q.answer]}</span>
+                            <T>正确答案是</T> <span className="font-semibold text-foreground">{String.fromCharCode(65 + q.answer)}. {q.options[q.answer]}</span>
                           </p>
                         </div>
                       </div>
-                    )}
-                    {q.explain && (
-                      <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{q.explain}</p>
-                    )}
+              }
+                    {q.explain &&
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{q.explain}</p>
+              }
                   </div>
-                )}
+            }
               </Card>
-            ))}
+          )}
         </div>
 
         {/* Stage settlement — appears the moment all visible questions are answered */}
-        {stageComplete && (
-          <Card className="mt-4 p-6 text-center bg-gradient-to-br from-primary/15 via-primary/5 to-background border-primary shadow-lg animate-in fade-in slide-in-from-bottom-2 duration-500">
+        {stageComplete &&
+        <Card className="mt-4 p-6 text-center bg-gradient-to-br from-primary/15 via-primary/5 to-background border-primary shadow-lg animate-in fade-in slide-in-from-bottom-2 duration-500">
             <Trophy className="w-12 h-12 mx-auto text-primary mb-2" />
             <p className="text-2xl font-extrabold mb-1">
               {correctCount === visibleQuiz.length ? "🎉 全部答对！" : `答对 ${correctCount}/${visibleQuiz.length}`}
             </p>
             <div className="flex justify-center gap-1 mb-2">
-              {Array.from({ length: visibleQuiz.length }).map((_, i) => (
-                <span key={i} className={`text-xl ${i < correctCount ? "" : "grayscale opacity-30"}`}>⭐</span>
-              ))}
-            </div>
-            {coinsEarned > 0 && (
-              <p className="text-base font-bold text-primary mb-3">💰 共获得 {coinsEarned} 金币</p>
+              {Array.from({ length: visibleQuiz.length }).map((_, i) =>
+            <span key={i} className={`text-xl ${i < correctCount ? "" : "grayscale opacity-30"}`}>⭐</span>
             )}
+            </div>
+            {coinsEarned > 0 &&
+          <p className="text-base font-bold text-primary mb-3"><T>💰 共获得</T> {coinsEarned} <T>金币</T></p>
+          }
 
             {/* Progression: stage 3 → 5 → 10 */}
-            {stage === 3 && card.quiz.length >= 5 && (
-              <Button
-                size="lg"
-                className="w-full h-12 text-base mt-2"
-                onClick={() => setStage(5)}
-              >
+            {stage === 3 && card.quiz.length >= 5 &&
+          <Button
+            size="lg"
+            className="w-full h-12 text-base mt-2"
+            onClick={() => setStage(5)}>
+            
                 <Sparkles className="w-4 h-4 mr-2" />
-                再战 2 题（全对再得 +10）→
+                <T>再战 2 题（全对再得 +10）→</T>
               </Button>
-            )}
-            {stage === 5 && card.quiz.length >= 10 && (
-              <Button
-                size="lg"
-                className="w-full h-12 text-base mt-2"
-                onClick={() => setStage(10)}
-              >
+          }
+            {stage === 5 && card.quiz.length >= 10 &&
+          <Button
+            size="lg"
+            className="w-full h-12 text-base mt-2"
+            onClick={() => setStage(10)}>
+            
                 <Trophy className="w-4 h-4 mr-2" />
-                冲刺 5 题精通章（全对 +20）🏆
+                <T>冲刺 5 题精通章（全对 +20）🏆</T>
               </Button>
-            )}
-            {stage === 10 && (
-              <p className="text-sm text-muted-foreground mt-1">
-                你已完成精通章，了不起！🏆
+          }
+            {stage === 10 &&
+          <p className="text-sm text-muted-foreground mt-1">
+                <T>你已完成精通章，了不起！🏆</T>
               </p>
-            )}
+          }
 
             {/* Guest CTA: register to keep score */}
-            {!authed && savedCTA && (
-              <div className="mt-4 pt-4 border-t border-primary/20">
-                <p className="text-sm font-semibold mb-2">想保留这 {coinsEarned} 金币 + 喂宠物吗？</p>
+            {!authed && savedCTA &&
+          <div className="mt-4 pt-4 border-t border-primary/20">
+                <p className="text-sm font-semibold mb-2"><T>想保留这</T> {coinsEarned} <T>金币 + 喂宠物吗？</T></p>
                 <Button
-                  variant="outline"
-                  className="w-full"
-                  onClick={() => navigate(`/auth?redirect=/q/${slug}`)}
-                >
+              variant="outline"
+              className="w-full"
+              onClick={() => navigate(`/auth?redirect=/q/${slug}`)}>
+              
                   <BookmarkPlus className="w-4 h-4 mr-2" />
-                  注册 1 秒领取金币 + 永久保存
+                  <T>注册 1 秒领取金币 + 永久保存</T>
                 </Button>
-                <p className="text-[11px] text-muted-foreground mt-2">注册后金币自动到账，可去给宠物买东西</p>
+                <p className="text-[11px] text-muted-foreground mt-2"><T>注册后金币自动到账，可去给宠物买东西</T></p>
               </div>
-            )}
-            {authed && (
-              <p className="text-[11px] text-muted-foreground mt-3">金币已入账，去 🐾 喂宠物吧</p>
-            )}
+          }
+            {authed &&
+          <p className="text-[11px] text-muted-foreground mt-3"><T>金币已入账，去 🐾 喂宠物吧</T></p>
+          }
           </Card>
-        )}
+        }
       </section>
 
       {/* Speak / Ask AI placeholders (locked for guests) */}
@@ -563,9 +563,9 @@ export default function KnowledgeCard() {
               console.error("speak failed", e);
               toast.error("发音播放失败，请稍后再试");
             }
-          }}
-        >
-          <Volume2 className="w-4 h-4 mr-2" />跟读发音
+          }}>
+          
+          <Volume2 className="w-4 h-4 mr-2" /><T>跟读发音</T>
         </Button>
         <Button
           variant="outline"
@@ -578,9 +578,9 @@ export default function KnowledgeCard() {
             }
             const seed = `请就这张知识卡继续讲解：\n问题：${card.question}\n要点：${card.short_answer}`;
             navigate(`/ask?q=${encodeURIComponent(seed)}`);
-          }}
-        >
-          <Sparkles className="w-4 h-4 mr-2" />追问 AI {!authed && <Lock className="w-3 h-3 ml-1" />}
+          }}>
+          
+          <Sparkles className="w-4 h-4 mr-2" /><T>追问 AI</T> {!authed && <Lock className="w-3 h-3 ml-1" />}
         </Button>
       </section>
 
@@ -591,51 +591,51 @@ export default function KnowledgeCard() {
           {liked ? "已点赞" : "点赞"} · {card.like_count}
         </Button>
         <Button onClick={share} variant="outline" className="flex-1">
-          <Share2 className="w-4 h-4 mr-2" />分享
+          <Share2 className="w-4 h-4 mr-2" /><T>分享</T>
         </Button>
       </div>
 
       <div className="text-center pt-4 border-t">
         <Link to="/ask">
-          <Button variant="ghost"><Sparkles className="w-4 h-4 mr-2" />提一个新问题</Button>
+          <Button variant="ghost"><Sparkles className="w-4 h-4 mr-2" /><T>提一个新问题</T></Button>
         </Link>
       </div>
 
       <Dialog open={qrOpen} onOpenChange={setQrOpen}>
         <DialogContent className="max-w-sm">
           <DialogHeader>
-            <DialogTitle className="text-center">扫码挑战 3 题</DialogTitle>
+            <DialogTitle className="text-center"><T>扫码挑战 3 题</T></DialogTitle>
             <DialogDescription className="text-center">
-              二维码和复制链接都使用 Big Moon English 主域名，方便微信扫码和分享
+              <T>二维码和复制链接都使用 Big Moon English 主域名，方便微信扫码和分享</T>
             </DialogDescription>
           </DialogHeader>
           <div className="flex flex-col items-center gap-4">
-            {qrDataUrl && (
-              <div className="rounded-2xl bg-white p-4 shadow-lg ring-1 ring-border">
+            {qrDataUrl &&
+            <div className="rounded-2xl bg-white p-4 shadow-lg ring-1 ring-border">
                 <img
-                  src={qrDataUrl}
-                  alt="分享二维码"
-                  className="block w-[280px] h-[280px]"
-                  style={{ imageRendering: "pixelated" }}
-                />
+                src={qrDataUrl}
+                alt="分享二维码"
+                className="block w-[280px] h-[280px]"
+                style={{ imageRendering: "pixelated" }} />
+              
               </div>
-            )}
-            {myUserId && (
-              <p className="text-[11px] text-center text-primary font-medium">
-                💡 朋友扫码答完题，你也能得金币（每张卡每人 +2）
+            }
+            {myUserId &&
+            <p className="text-[11px] text-center text-primary font-medium">
+                <T>💡 朋友扫码答完题，你也能得金币（每张卡每人 +2）</T>
               </p>
-            )}
+            }
             <p className="text-xs text-muted-foreground break-all text-center px-2">
               {shareUrl}
             </p>
-            {isWeChat && (
-              <p className="text-xs text-center text-muted-foreground px-2">
-                微信内网页按钮不能直接发出消息：点“复制链接”后粘贴到聊天窗口，或用右上角菜单分享。
+            {isWeChat &&
+            <p className="text-xs text-center text-muted-foreground px-2">
+                <T>微信内网页按钮不能直接发出消息：点“复制链接”后粘贴到聊天窗口，或用右上角菜单分享。</T>
               </p>
-            )}
+            }
             <div className="flex gap-2 w-full">
               <Button onClick={copyLink} variant="outline" className="flex-1">
-                <Copy className="w-4 h-4 mr-2" />复制链接
+                <Copy className="w-4 h-4 mr-2" /><T>复制链接</T>
               </Button>
               <Button onClick={nativeShare} className="flex-1">
                 <Share2 className="w-4 h-4 mr-2" />{isWeChat ? "复制去微信发" : "分享"}
@@ -644,6 +644,6 @@ export default function KnowledgeCard() {
           </div>
         </DialogContent>
       </Dialog>
-    </main>
-  );
+    </main>);
+
 }

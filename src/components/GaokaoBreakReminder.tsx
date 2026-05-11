@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -52,13 +52,13 @@ export function GaokaoBreakReminder() {
       lastActivityRef.current = Date.now();
     };
     const events: (keyof WindowEventMap)[] = [
-      "mousemove",
-      "mousedown",
-      "keydown",
-      "scroll",
-      "touchstart",
-      "click",
-    ];
+    "mousemove",
+    "mousedown",
+    "keydown",
+    "scroll",
+    "touchstart",
+    "click"];
+
     events.forEach((e) => window.addEventListener(e, mark, { passive: true }));
     const onVis = () => {
       if (document.visibilityState === "visible") {
@@ -121,32 +121,32 @@ export function GaokaoBreakReminder() {
   };
 
   return (
-    <Dialog open={showBreak} onOpenChange={(o) => { if (!o) close(); }}>
+    <Dialog open={showBreak} onOpenChange={(o) => {if (!o) close();}}>
       <DialogContent className="max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl">该休息一下啦 👀</DialogTitle>
+          <DialogTitle className="text-2xl"><T>该休息一下啦 👀</T></DialogTitle>
           <DialogDescription className="text-base pt-2">
-            你已经连续学习 45 分钟了。请休息 15 分钟，让眼睛和身体放松一下：
+            <T>你已经连续学习 45 分钟了。请休息 15 分钟，让眼睛和身体放松一下：</T>
           </DialogDescription>
         </DialogHeader>
         <ul className="space-y-2 text-sm text-foreground/90 pl-1">
-          <li>• 看向 6 米外的远方，放松眼睛 20 秒</li>
-          <li>• 起身伸伸胳膊、转转脖子和肩膀</li>
-          <li>• 做几个深蹲或原地走动</li>
-          <li>• 喝口水，深呼吸几次</li>
+          <li><T>• 看向 6 米外的远方，放松眼睛 20 秒</T></li>
+          <li><T>• 起身伸伸胳膊、转转脖子和肩膀</T></li>
+          <li><T>• 做几个深蹲或原地走动</T></li>
+          <li><T>• 喝口水，深呼吸几次</T></li>
         </ul>
         <div className="mt-4 rounded-xl bg-primary/10 border border-primary/20 p-4 text-center">
-          <div className="text-xs text-muted-foreground mb-1">休息倒计时</div>
+          <div className="text-xs text-muted-foreground mb-1"><T>休息倒计时</T></div>
           <div className="text-4xl font-bold tabular-nums text-primary">
             {fmt(breakRemaining)}
           </div>
         </div>
         <div className="flex justify-end pt-2">
-          <Button variant="outline" onClick={close}>关闭</Button>
+          <Button variant="outline" onClick={close}><T>关闭</T></Button>
         </div>
       </DialogContent>
-    </Dialog>
-  );
+    </Dialog>);
+
 }
 
 export default GaokaoBreakReminder;

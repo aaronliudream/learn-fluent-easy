@@ -1,21 +1,21 @@
-import { useEffect, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useState } from "react";
 import { Coins } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   fetchCoinTotals,
   type BadgeDef,
-  type CoinTotals,
-} from "@/lib/coinsBadges";
+  type CoinTotals } from
+"@/lib/coinsBadges";
 
 /** Tiny floating badge that shows the user's coin balance. */
 export function CoinPill({
   refreshKey,
-  className,
-}: {
-  /** Bump this number to force a re-fetch (e.g. after awarding coins). */
-  refreshKey?: number;
-  className?: string;
-}) {
+  className
+
+
+
+
+}: { /** Bump this number to force a re-fetch (e.g. after awarding coins). */refreshKey?: number;className?: string;}) {
   const [totals, setTotals] = useState<CoinTotals | null>(null);
   const [pulse, setPulse] = useState(false);
 
@@ -43,24 +43,24 @@ export function CoinPill({
       className={cn(
         "inline-flex items-center gap-1.5 rounded-full border border-amber-400/50 bg-gradient-to-r from-amber-100 to-yellow-100 px-3 py-1 text-sm font-bold text-amber-900 shadow-sm transition dark:from-amber-500/15 dark:to-yellow-500/15 dark:text-amber-300",
         pulse && "scale-110 ring-2 ring-amber-400/60",
-        className,
+        className
       )}
-      title={`累计获得 ${totals.total_earned} 金币`}
-    >
+      title={`累计获得 ${totals.total_earned} 金币`}>
+      
       <Coins className="size-4" />
       <span className="tabular-nums">{totals.balance.toLocaleString()}</span>
-    </div>
-  );
+    </div>);
+
 }
 
 /** A celebratory toast queue that pops badges in sequence. */
 export function BadgeUnlockOverlay({
   badges,
-  onDismiss,
-}: {
-  badges: BadgeDef[];
-  onDismiss: () => void;
-}) {
+  onDismiss
+
+
+
+}: {badges: BadgeDef[];onDismiss: () => void;}) {
   const [index, setIndex] = useState(0);
   const current = badges[index];
 
@@ -87,7 +87,7 @@ export function BadgeUnlockOverlay({
           </div>
           <div>
             <div className="text-[10px] font-bold uppercase tracking-widest text-amber-700 dark:text-amber-400">
-              新徽章解锁
+              <T>新徽章解锁</T>
             </div>
             <div className="text-base font-extrabold text-foreground">
               {current.title}
@@ -98,6 +98,6 @@ export function BadgeUnlockOverlay({
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 }

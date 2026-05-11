@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Lock } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -25,13 +25,13 @@ export default function PrimaryBadges() {
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 pb-24">
       <BackLink
         to="/lesson?grade=2"
-        className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="size-4" /> 返回 G2 课程
+        className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        
+        <ArrowLeft className="size-4" /> <T>返回 G2 课程</T>
       </BackLink>
 
       <div className="mb-5 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-5 shadow-tile dark:border-amber-700 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
-        <h1 className="text-xl font-extrabold">🏅 我的徽章</h1>
+        <h1 className="text-xl font-extrabold"><T>🏅 我的徽章</T></h1>
         <p className="mt-1 text-sm text-amber-800 dark:text-amber-200">
           {loading ? "加载中…" : `已收集 ${totalEarned} / ${BADGES.length} 个徽章`}
         </p>
@@ -45,39 +45,39 @@ export default function PrimaryBadges() {
             <div
               key={b.id}
               className={`flex flex-col items-center rounded-2xl border-2 p-4 text-center shadow-tile transition ${
-                got
-                  ? "border-amber-400 bg-gradient-to-br from-amber-50 to-orange-50 dark:border-amber-600 dark:from-amber-950/40 dark:to-orange-950/40"
-                  : "border-dashed border-muted bg-muted/30 opacity-70"
-              }`}
-            >
+              got ?
+              "border-amber-400 bg-gradient-to-br from-amber-50 to-orange-50 dark:border-amber-600 dark:from-amber-950/40 dark:to-orange-950/40" :
+              "border-dashed border-muted bg-muted/30 opacity-70"}`
+              }>
+              
               <div className={`text-5xl ${got ? "" : "grayscale"}`}>
                 {got ? b.emoji : "🔒"}
               </div>
               <div className="mt-2 text-sm font-extrabold">{b.name}</div>
               <div className="mt-1 text-[11px] text-muted-foreground">{b.desc}</div>
-              {got && date && (
-                <div className="mt-2 text-[10px] font-bold text-amber-700 dark:text-amber-300">
+              {got && date &&
+              <div className="mt-2 text-[10px] font-bold text-amber-700 dark:text-amber-300">
                   {new Date(date).toLocaleDateString("zh-CN")}
                 </div>
-              )}
-              {!got && (
-                <div className="mt-2 inline-flex items-center gap-1 text-[10px] text-muted-foreground">
-                  <Lock className="size-3" /> 未解锁
+              }
+              {!got &&
+              <div className="mt-2 inline-flex items-center gap-1 text-[10px] text-muted-foreground">
+                  <Lock className="size-3" /> <T>未解锁</T>
                 </div>
-              )}
-            </div>
-          );
+              }
+            </div>);
+
         })}
       </div>
 
       <div className="mt-6 text-center">
         <Link
           to="/lesson?grade=2"
-          className="inline-block rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 px-6 py-3 text-base font-extrabold text-white shadow-tile"
-        >
-          继续探险 →
+          className="inline-block rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 px-6 py-3 text-base font-extrabold text-white shadow-tile">
+          <T>继续探险 →</T>
+        
         </Link>
       </div>
-    </main>
-  );
+    </main>);
+
 }

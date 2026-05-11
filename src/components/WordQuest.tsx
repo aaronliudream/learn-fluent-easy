@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, Volume2, Sparkles, Loader2, Check, X, Lightbulb, Share2, Trophy, Flame, Crown, Medal } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -28,7 +28,7 @@ type Vocab = {
   accent?: "UK" | "US" | "BOTH" | null;
 };
 
-type StageResult = { stage: number; correct: boolean; latency_ms: number };
+type StageResult = {stage: number;correct: boolean;latency_ms: number;};
 
 type StreakStats = {
   current_streak: number;
@@ -54,7 +54,7 @@ function todayKey() {
 }
 function hashStr(s: string) {
   let h = 5381;
-  for (let i = 0; i < s.length; i++) h = ((h << 5) + h) ^ s.charCodeAt(i);
+  for (let i = 0; i < s.length; i++) h = (h << 5) + h ^ s.charCodeAt(i);
   return Math.abs(h);
 }
 function pickDailyVocabs(pool: Vocab[], n = 3): Vocab[] {
@@ -91,13 +91,13 @@ function speakWord(v: Vocab) {
 
 /* ---------- Stage definitions ---------- */
 const STAGES = [
-  { n: 1, emoji: "🔊", name: "听音猜词", hint: "听发音，输入英文单词" },
-  { n: 2, emoji: "💡", name: "看义猜词", hint: "根据中文释义，输入英文单词" },
-  { n: 3, emoji: "📝", name: "例句填空", hint: "在例句空白处填入正确单词" },
-  { n: 4, emoji: "🎭", name: "同义辨析", hint: "选出与今日词意思最接近的选项" },
-  { n: 5, emoji: "🔤", name: "字母重排", hint: "将打乱的字母拼成正确单词" },
-  { n: 6, emoji: "⏱", name: "BOSS 战", hint: "30 秒内综合作答" },
-];
+{ n: 1, emoji: "🔊", name: "听音猜词", hint: "听发音，输入英文单词" },
+{ n: 2, emoji: "💡", name: "看义猜词", hint: "根据中文释义，输入英文单词" },
+{ n: 3, emoji: "📝", name: "例句填空", hint: "在例句空白处填入正确单词" },
+{ n: 4, emoji: "🎭", name: "同义辨析", hint: "选出与今日词意思最接近的选项" },
+{ n: 5, emoji: "🔤", name: "字母重排", hint: "将打乱的字母拼成正确单词" },
+{ n: 6, emoji: "⏱", name: "BOSS 战", hint: "30 秒内综合作答" }];
+
 const STAGES_PER_WORD = STAGES.length;
 const WORDS_PER_QUEST = 3;
 const TOTAL_STAGES = STAGES_PER_WORD * WORDS_PER_QUEST; // 18
@@ -114,7 +114,7 @@ function shuffleStr(s: string) {
 }
 
 function emojiSummary(results: StageResult[]) {
-  return results.map((r) => (r.correct ? "🟩" : "🟥")).join("");
+  return results.map((r) => r.correct ? "🟩" : "🟥").join("");
 }
 
 /* =============================================================== */
@@ -124,22 +124,22 @@ export default function WordQuest({
   variant = "gaokao",
   maxStages,
   wordsPerQuest: wordsPerQuestProp,
-  onComplete,
-}: {
-  pool: Vocab[];
-  onExit: () => void;
-  /** "gaokao" 走原写库 + RPC streak 流程;"primary" 完全跳过,把结果交给 onComplete 写入小学专表。 */
-  variant?: "gaokao" | "primary";
-  /** 总关卡数,默认 18(3 词 × 6 关)。小学版传 6 → 1 词 × 6 关。 */
-  maxStages?: number;
-  /** 当日选词数,默认 3。和 maxStages 配合,小学版传 1。 */
-  wordsPerQuest?: number;
-  /** 完成时回调,允许 wrapper 写入自己的统计表。 */
-  onComplete?: (info: {
-    score: number; perfect: boolean; passed: number; total: number;
-    durationMs: number; hintsUsed: number; words: string[];
-  }) => void | Promise<void>;
-}) {
+  onComplete
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}: {pool: Vocab[];onExit: () => void; /** "gaokao" 走原写库 + RPC streak 流程;"primary" 完全跳过,把结果交给 onComplete 写入小学专表。 */variant?: "gaokao" | "primary"; /** 总关卡数,默认 18(3 词 × 6 关)。小学版传 6 → 1 词 × 6 关。 */maxStages?: number; /** 当日选词数,默认 3。和 maxStages 配合,小学版传 1。 */wordsPerQuest?: number; /** 完成时回调,允许 wrapper 写入自己的统计表。 */onComplete?: (info: {score: number;perfect: boolean;passed: number;total: number;durationMs: number;hintsUsed: number;words: string[];}) => void | Promise<void>;}) {
   const totalStages = Math.max(1, maxStages ?? TOTAL_STAGES);
   const wordsPerQuest = Math.max(
     1,
@@ -180,8 +180,8 @@ export default function WordQuest({
         setStreak(s);
         const { data: lb } = await supabase.rpc("get_word_quest_daily_leaderboard");
         setLeaderboard((lb ?? []) as LeaderRow[]);
-        if (s?.today_done) setPhase("already");
-        else setPhase("intro");
+        if (s?.today_done) setPhase("already");else
+        setPhase("intro");
       }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -235,9 +235,9 @@ export default function WordQuest({
         await onComplete?.({
           score, perfect, passed, total: totalStages,
           durationMs: totalDuration, hintsUsed,
-          words: targets.map((t) => t.word),
+          words: targets.map((t) => t.word)
         });
-      } catch (e) { console.error("primary quest onComplete", e); }
+      } catch (e) {console.error("primary quest onComplete", e);}
       const coins = Math.floor(score / 5);
       if (coins > 0) {
         await awardCoins(coins);
@@ -259,7 +259,7 @@ export default function WordQuest({
           total_duration_ms: totalDuration,
           perfect,
           hints_used: hintsUsed,
-          score,
+          score
         });
 
         // Game scores aggregate
@@ -271,7 +271,7 @@ export default function WordQuest({
           duration_ms: totalDuration,
           hits: passed,
           misses: totalStages - passed,
-          metadata: { perfect, hints_used: hintsUsed, words: targets.map((t) => t.word) },
+          metadata: { perfect, hints_used: hintsUsed, words: targets.map((t) => t.word) }
         });
       }
     } catch (e) {
@@ -333,17 +333,17 @@ export default function WordQuest({
     return (
       <main className="flex min-h-[60vh] items-center justify-center">
         <Loader2 className="size-6 animate-spin text-muted-foreground" />
-      </main>
-    );
+      </main>);
+
   }
 
   if (!targets.length) {
     return (
       <main className="mx-auto max-w-xl p-8 text-center">
-        <p className="text-sm text-muted-foreground">词库不足，无法开启今日挑战</p>
-        <Button variant="outline" onClick={onExit} className="mt-4">返回</Button>
-      </main>
-    );
+        <p className="text-sm text-muted-foreground"><T>词库不足，无法开启今日挑战</T></p>
+        <Button variant="outline" onClick={onExit} className="mt-4"><T>返回</T></Button>
+      </main>);
+
   }
 
   /* ---------- Already done today ---------- */
@@ -352,23 +352,23 @@ export default function WordQuest({
       <main className="mx-auto max-w-xl px-4 py-6">
         <div className="mb-4 flex items-center justify-between">
           <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="size-4" /> 返回
+            <ArrowLeft className="size-4" /> <T>返回</T>
           </button>
           <CoinPill refreshKey={coinRefresh} />
         </div>
         <div className="rounded-3xl border-2 border-emerald-500/40 bg-gradient-to-br from-emerald-500/15 to-teal-500/5 p-6 text-center shadow-tile">
           <div className="text-5xl">✅</div>
-          <h2 className="mt-3 text-xl font-extrabold">今日挑战已完成！</h2>
+          <h2 className="mt-3 text-xl font-extrabold"><T>今日挑战已完成！</T></h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            明天 04:00 全平台解锁新词。坚持每日打卡可解锁稀有徽章。
+            <T>明天 04:00 全平台解锁新词。坚持每日打卡可解锁稀有徽章。</T>
           </p>
           <StreakStrip streak={streak} className="mt-5" />
           <div className="mt-5">
             <DailyLeaderboard rows={leaderboard} />
           </div>
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   /* ---------- Intro ---------- */
@@ -377,7 +377,7 @@ export default function WordQuest({
       <main className="mx-auto max-w-xl px-4 py-6">
         <div className="mb-4 flex items-center justify-between">
           <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="size-4" /> 返回
+            <ArrowLeft className="size-4" /> <T>返回</T>
           </button>
           <CoinPill refreshKey={coinRefresh} />
         </div>
@@ -385,45 +385,45 @@ export default function WordQuest({
           <div className="flex items-center gap-3">
             <div className="text-4xl">🗺️</div>
             <div>
-              <h1 className="text-2xl font-extrabold">Word Quest 单词奇旅</h1>
-              <p className="text-sm text-muted-foreground">每日 3 词 · 每词 6 关 · 共 18 关</p>
+              <h1 className="text-2xl font-extrabold"><T>Word Quest 单词奇旅</T></h1>
+              <p className="text-sm text-muted-foreground"><T>每日 3 词 · 每词 6 关 · 共 18 关</T></p>
             </div>
           </div>
 
           <StreakStrip streak={streak} className="mt-5" />
 
           <div className="mt-5 rounded-2xl border bg-card/60 p-4">
-            <div className="text-[11px] uppercase tracking-wider text-muted-foreground">每个单词将通过 6 个不同关卡考察</div>
+            <div className="text-[11px] uppercase tracking-wider text-muted-foreground"><T>每个单词将通过 6 个不同关卡考察</T></div>
             <ol className="mt-2 grid grid-cols-2 gap-2 text-xs">
-              {STAGES.map((s) => (
-                <li key={s.n} className="flex items-center gap-2 rounded-lg bg-background px-2 py-1.5">
+              {STAGES.map((s) =>
+              <li key={s.n} className="flex items-center gap-2 rounded-lg bg-background px-2 py-1.5">
                   <span className="text-base">{s.emoji}</span>
-                  <span className="font-bold">{s.name}</span>
+                  <span className="font-bold"><T>{s.name}</T></span>
                 </li>
-              ))}
+              )}
             </ol>
             <div className="mt-2 text-[11px] text-muted-foreground">
-              📚 共 <b className="text-foreground">3 个单词</b>，连续打完一个再切下一个 · 总 <b className="text-foreground">18 关</b>
+              <T>📚 共</T> <b className="text-foreground"><T>3 个单词</T></b><T>，连续打完一个再切下一个 · 总</T> <b className="text-foreground"><T>18 关</T></b>
             </div>
           </div>
 
           <div className="mt-4 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3 text-xs text-amber-800 dark:text-amber-300">
-            ⚠️ 每天只有 <b>1 次机会</b>。专注作答，挑战自己 + 全球玩家。
+            <T>⚠️ 每天只有</T> <b><T>1 次机会</T></b><T>。专注作答，挑战自己 + 全球玩家。</T>
           </div>
 
           <Button
             onClick={start}
-            className="mt-5 h-12 w-full rounded-2xl bg-gradient-to-r from-indigo-600 to-sky-500 text-base font-extrabold text-white hover:opacity-90"
-          >
-            <Sparkles className="mr-2 size-5" /> 开始今日挑战
+            className="mt-5 h-12 w-full rounded-2xl bg-gradient-to-r from-indigo-600 to-sky-500 text-base font-extrabold text-white hover:opacity-90">
+            
+            <Sparkles className="mr-2 size-5" /> <T>开始今日挑战</T>
           </Button>
         </div>
 
         <div className="mt-4">
           <DailyLeaderboard rows={leaderboard} />
         </div>
-      </main>
-    );
+      </main>);
+
   }
 
   /* ---------- Done ---------- */
@@ -435,7 +435,7 @@ export default function WordQuest({
         <main className="mx-auto max-w-xl px-4 py-6">
           <div className="mb-4 flex items-center justify-between">
             <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-              <ArrowLeft className="size-4" /> 返回
+              <ArrowLeft className="size-4" /> <T>返回</T>
             </button>
             <CoinPill refreshKey={coinRefresh} />
           </div>
@@ -448,12 +448,12 @@ export default function WordQuest({
               {passed === totalStages ? "完美通关！" : `通关 ${passed}/${totalStages} 关`}
             </h2>
             <div className="mt-1 text-sm text-muted-foreground">
-              今日 {wordsPerQuest} 词 · {targets.map((t) => t.word).join(" · ")}
+              <T>今日</T> {wordsPerQuest} <T>词 ·</T> {targets.map((t) => t.word).join(" · ")}
             </div>
             <div className="mt-1 flex flex-wrap justify-center gap-x-3 gap-y-0.5 text-[11px] text-muted-foreground italic">
-              {targets.map((t) => (
-                <span key={t.id}><b className="not-italic text-foreground">{t.word}</b> {t.meaning_cn}</span>
-              ))}
+              {targets.map((t) =>
+              <span key={t.id}><b className="not-italic text-foreground">{t.word}</b> {t.meaning_cn}</span>
+              )}
             </div>
 
             <div className="mt-4 inline-flex items-center gap-2 rounded-full border bg-card px-4 py-2 text-2xl tracking-widest">
@@ -462,15 +462,15 @@ export default function WordQuest({
 
             <div className="mt-3 grid grid-cols-3 gap-2 text-sm">
               <div className="rounded-xl border bg-card p-2">
-                <div className="text-[10px] text-muted-foreground">用时</div>
+                <div className="text-[10px] text-muted-foreground"><T>用时</T></div>
                 <div className="text-base font-bold tabular-nums">{(totalDur / 1000).toFixed(1)}s</div>
               </div>
               <div className="rounded-xl border bg-card p-2">
-                <div className="text-[10px] text-muted-foreground">提示</div>
+                <div className="text-[10px] text-muted-foreground"><T>提示</T></div>
                 <div className="text-base font-bold">{hintsUsed}</div>
               </div>
               <div className="rounded-xl border bg-card p-2">
-                <div className="text-[10px] text-muted-foreground">连续</div>
+                <div className="text-[10px] text-muted-foreground"><T>连续</T></div>
                 <div className="text-base font-bold text-orange-600">🔥 {streak?.current_streak ?? 0}</div>
               </div>
             </div>
@@ -484,11 +484,11 @@ export default function WordQuest({
             <DailyLeaderboard rows={leaderboard} />
           </div>
         </main>
-        {unlockedBadges.length > 0 && (
-          <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
-        )}
-      </>
-    );
+        {unlockedBadges.length > 0 &&
+        <BadgeUnlockOverlay badges={unlockedBadges} onDismiss={() => setUnlockedBadges([])} />
+        }
+      </>);
+
   }
 
   /* ---------- Playing ---------- */
@@ -497,33 +497,33 @@ export default function WordQuest({
     <main className="mx-auto flex min-h-screen max-w-xl flex-col px-4 py-4">
       <div className="mb-3 flex items-center justify-between gap-2">
         <button onClick={onExit} className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> 退出（视为放弃）
+          <ArrowLeft className="size-4" /> <T>退出（视为放弃）</T>
         </button>
         <div className="text-xs font-bold text-muted-foreground">
-          📚 第 {wordIdx + 1}/{wordsPerQuest} 词 · {STAGES[subStage].emoji} 第 {subStage + 1}/{STAGES_PER_WORD} 关
+          <T>📚 第</T> {wordIdx + 1}/{wordsPerQuest} <T>词 ·</T> {STAGES[subStage].emoji} <T>第</T> {subStage + 1}/{STAGES_PER_WORD} <T>关</T>
         </div>
       </div>
 
       {/* progress: wordsPerQuest groups of STAGES_PER_WORD */}
       <div className="mb-4 flex gap-2">
-        {Array.from({ length: wordsPerQuest }).map((_, gi) => (
-          <div key={gi} className="flex flex-1 gap-0.5">
+        {Array.from({ length: wordsPerQuest }).map((_, gi) =>
+        <div key={gi} className="flex flex-1 gap-0.5">
             {Array.from({ length: STAGES_PER_WORD }).map((__, si) => {
-              const i = gi * STAGES_PER_WORD + si;
-              const r = results[i];
-              return (
-                <div
-                  key={si}
-                  className={cn(
-                    "h-2 flex-1 rounded-full transition-all",
-                    r ? (r.correct ? "bg-emerald-500" : "bg-red-500") :
-                    i === stage ? "bg-indigo-500" : "bg-muted"
-                  )}
-                />
-              );
-            })}
+            const i = gi * STAGES_PER_WORD + si;
+            const r = results[i];
+            return (
+              <div
+                key={si}
+                className={cn(
+                  "h-2 flex-1 rounded-full transition-all",
+                  r ? r.correct ? "bg-emerald-500" : "bg-red-500" :
+                  i === stage ? "bg-indigo-500" : "bg-muted"
+                )} />);
+
+
+          })}
           </div>
-        ))}
+        )}
       </div>
 
       <StagePlayer
@@ -531,10 +531,10 @@ export default function WordQuest({
         target={target}
         pool={pool}
         onResult={recordStage}
-        onHint={() => setHintsUsed((h) => h + 1)}
-      />
-    </main>
-  );
+        onHint={() => setHintsUsed((h) => h + 1)} />
+      
+    </main>);
+
 }
 
 /* ============================================================
@@ -545,14 +545,14 @@ function StagePlayer({
   target,
   pool,
   onResult,
-  onHint,
-}: {
-  stage: number;
-  target: Vocab;
-  pool: Vocab[];
-  onResult: (correct: boolean) => void;
-  onHint: () => void;
-}) {
+  onHint
+
+
+
+
+
+
+}: {stage: number;target: Vocab;pool: Vocab[];onResult: (correct: boolean) => void;onHint: () => void;}) {
   const [input, setInput] = useState("");
   const [submitted, setSubmitted] = useState<null | "ok" | "bad">(null);
   const [showHint, setShowHint] = useState(false);
@@ -632,247 +632,247 @@ function StagePlayer({
       <div className="mb-3 flex items-center gap-2">
         <span className="text-2xl">{stageMeta.emoji}</span>
         <div>
-          <div className="text-base font-extrabold">{stageMeta.name}</div>
-          <div className="text-[11px] text-muted-foreground">{stageMeta.hint}</div>
+          <div className="text-base font-extrabold"><T>{stageMeta.name}</T></div>
+          <div className="text-[11px] text-muted-foreground"><T>{stageMeta.hint}</T></div>
         </div>
-        {stage === 5 && (
-          <span className="ml-auto rounded-full bg-red-500 px-2 py-0.5 text-[11px] font-extrabold text-white tabular-nums">
+        {stage === 5 &&
+        <span className="ml-auto rounded-full bg-red-500 px-2 py-0.5 text-[11px] font-extrabold text-white tabular-nums">
             {bossLeft}s
           </span>
-        )}
+        }
       </div>
 
       <div className="flex flex-1 flex-col items-center justify-center gap-4">
         {/* Stage 1: 听音 */}
-        {stage === 0 && (
-          <>
+        {stage === 0 &&
+        <>
             <button
-              onClick={() => speakWord(target)}
-              className="flex size-24 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 text-white shadow-lg active:scale-95"
-            >
+            onClick={() => speakWord(target)}
+            className="flex size-24 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 text-white shadow-lg active:scale-95">
+            
               <Volume2 className="size-12" />
             </button>
-            <div className="text-center text-xs text-muted-foreground">点击重听 · 输入英文单词</div>
-            {showHint && (
-              <div className="text-center text-sm">
-                💡 释义：<b>{target.meaning_cn}</b>
+            <div className="text-center text-xs text-muted-foreground"><T>点击重听 · 输入英文单词</T></div>
+            {showHint &&
+          <div className="text-center text-sm">
+                <T>💡 释义：</T><b>{target.meaning_cn}</b>
                 {target.phonetic && <div className="text-xs text-muted-foreground">{target.phonetic}</div>}
               </div>
-            )}
+          }
           </>
-        )}
+        }
 
         {/* Stage 2: 看义 */}
-        {stage === 1 && (
-          <>
+        {stage === 1 &&
+        <>
             <div className="text-center">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">中文释义</div>
+              <div className="text-xs uppercase tracking-wider text-muted-foreground"><T>中文释义</T></div>
               <div className="mt-2 text-3xl font-extrabold">{target.meaning_cn}</div>
               {target.pos && <div className="mt-1 text-sm text-muted-foreground">{target.pos}</div>}
             </div>
-            {showHint && (
-              <div className="text-sm">💡 首字母：<b className="text-indigo-600">{target.word[0].toUpperCase()}</b> · 共 {target.word.length} 个字母</div>
-            )}
+            {showHint &&
+          <div className="text-sm"><T>💡 首字母：</T><b className="text-indigo-600">{target.word[0].toUpperCase()}</b> <T>· 共</T> {target.word.length} <T>个字母</T></div>
+          }
           </>
-        )}
+        }
 
         {/* Stage 3: 例句填空 */}
-        {stage === 2 && (
-          <>
+        {stage === 2 &&
+        <>
             <div className="text-center text-base leading-relaxed">
               {(() => {
-                const ex = target.example_en || `Please use the word in a sentence.`;
-                const re = new RegExp(`\\b${target.word}\\b`, "gi");
-                const blanked = ex.replace(re, "_____");
-                return <span>{blanked}</span>;
-              })()}
+              const ex = target.example_en || `Please use the word in a sentence.`;
+              const re = new RegExp(`\\b${target.word}\\b`, "gi");
+              const blanked = ex.replace(re, "_____");
+              return <span>{blanked}</span>;
+            })()}
             </div>
             {target.example_cn && <div className="text-xs text-muted-foreground">{target.example_cn}</div>}
-            {showHint && (
-              <div className="text-sm">💡 释义：<b>{target.meaning_cn}</b> · 首字母 <b>{target.word[0]}</b></div>
-            )}
+            {showHint &&
+          <div className="text-sm"><T>💡 释义：</T><b>{target.meaning_cn}</b> <T>· 首字母</T> <b>{target.word[0]}</b></div>
+          }
           </>
-        )}
+        }
 
         {/* Stage 4: 同义辨析 */}
-        {stage === 3 && (
-          <>
+        {stage === 3 &&
+        <>
             <div className="text-center">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">今日词</div>
+              <div className="text-xs uppercase tracking-wider text-muted-foreground"><T>今日词</T></div>
               <div className="mt-1 text-3xl font-extrabold">{target.word}</div>
               {target.phonetic && <div className="text-xs text-muted-foreground">{target.phonetic}</div>}
             </div>
             <div className="grid w-full grid-cols-1 gap-2">
-              {choices4.map((c) => (
-                <button
-                  key={c}
-                  disabled={!!submitted}
-                  onClick={() => submit(c)}
-                  className={cn(
-                    "rounded-2xl border-2 px-4 py-3 text-left text-sm font-bold transition active:scale-95",
-                    !submitted && "border-border bg-card hover:border-indigo-500 hover:bg-indigo-500/5",
-                    submitted && c === target.meaning_cn && "border-emerald-500 bg-emerald-500/15",
-                    submitted === "bad" && c !== target.meaning_cn && "opacity-50"
-                  )}
-                >
+              {choices4.map((c) =>
+            <button
+              key={c}
+              disabled={!!submitted}
+              onClick={() => submit(c)}
+              className={cn(
+                "rounded-2xl border-2 px-4 py-3 text-left text-sm font-bold transition active:scale-95",
+                !submitted && "border-border bg-card hover:border-indigo-500 hover:bg-indigo-500/5",
+                submitted && c === target.meaning_cn && "border-emerald-500 bg-emerald-500/15",
+                submitted === "bad" && c !== target.meaning_cn && "opacity-50"
+              )}>
+              
                   {c}
                 </button>
-              ))}
+            )}
             </div>
           </>
-        )}
+        }
 
         {/* Stage 5: 字母重排 */}
-        {stage === 4 && (
-          <>
+        {stage === 4 &&
+        <>
             <div className="text-center">
-              <div className="text-xs uppercase tracking-wider text-muted-foreground">字母乱序</div>
+              <div className="text-xs uppercase tracking-wider text-muted-foreground"><T>字母乱序</T></div>
               <div className="mt-2 flex flex-wrap justify-center gap-1">
-                {scrambled.split("").map((ch, i) => (
-                  <span key={i} className="inline-flex size-9 items-center justify-center rounded-lg border-2 border-indigo-500/40 bg-indigo-500/10 text-lg font-extrabold text-indigo-700 dark:text-indigo-300">
+                {scrambled.split("").map((ch, i) =>
+              <span key={i} className="inline-flex size-9 items-center justify-center rounded-lg border-2 border-indigo-500/40 bg-indigo-500/10 text-lg font-extrabold text-indigo-700 dark:text-indigo-300">
                     {ch}
                   </span>
-                ))}
+              )}
               </div>
               <div className="mt-3 text-sm text-muted-foreground">{target.meaning_cn}</div>
             </div>
-            {showHint && (
-              <div className="text-sm">💡 首字母：<b>{target.word[0]}</b></div>
-            )}
+            {showHint &&
+          <div className="text-sm"><T>💡 首字母：</T><b>{target.word[0]}</b></div>
+          }
           </>
-        )}
+        }
 
         {/* Stage 6: BOSS — 同时给 audio + 释义 + 例句填空 */}
-        {stage === 5 && (
-          <>
+        {stage === 5 &&
+        <>
             <div className="text-center">
-              <div className="text-xs uppercase tracking-wider text-red-600 font-bold animate-pulse">⚠ BOSS 综合题</div>
+              <div className="text-xs uppercase tracking-wider text-red-600 font-bold animate-pulse"><T>⚠ BOSS 综合题</T></div>
               <button
-                onClick={() => speakWord(target)}
-                className="mt-2 inline-flex size-14 items-center justify-center rounded-full bg-red-500 text-white shadow-md active:scale-95"
-              >
+              onClick={() => speakWord(target)}
+              className="mt-2 inline-flex size-14 items-center justify-center rounded-full bg-red-500 text-white shadow-md active:scale-95">
+              
                 <Volume2 className="size-6" />
               </button>
               <div className="mt-2 text-base font-bold">{target.meaning_cn}</div>
-              {target.example_en && (
-                <div className="mt-2 text-xs text-muted-foreground">
+              {target.example_en &&
+            <div className="mt-2 text-xs text-muted-foreground">
                   {target.example_en.replace(new RegExp(`\\b${target.word}\\b`, "gi"), "_____")}
                 </div>
-              )}
+            }
             </div>
           </>
-        )}
+        }
       </div>
 
       {/* Input + actions (stage != 4) */}
-      {stage !== 3 && (
-        <div className="mt-4 space-y-3">
+      {stage !== 3 &&
+      <div className="mt-4 space-y-3">
           <input
-            ref={inputRef}
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            disabled={!!submitted}
-            placeholder="输入英文单词…"
-            onKeyDown={(e) => { if (e.key === "Enter" && input.trim()) submit(input); }}
-            autoComplete="off"
-            spellCheck={false}
-            className={cn(
-              "h-12 w-full rounded-2xl border-2 bg-background px-4 text-center text-lg font-bold tracking-wide outline-none",
-              !submitted && "border-border focus:border-indigo-500",
-              submitted === "ok" && "border-emerald-500 bg-emerald-500/10 text-emerald-700",
-              submitted === "bad" && "border-red-500 bg-red-500/10 text-red-700"
-            )}
-          />
+          ref={inputRef}
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          disabled={!!submitted}
+          placeholder="输入英文单词…"
+          onKeyDown={(e) => {if (e.key === "Enter" && input.trim()) submit(input);}}
+          autoComplete="off"
+          spellCheck={false}
+          className={cn(
+            "h-12 w-full rounded-2xl border-2 bg-background px-4 text-center text-lg font-bold tracking-wide outline-none",
+            !submitted && "border-border focus:border-indigo-500",
+            submitted === "ok" && "border-emerald-500 bg-emerald-500/10 text-emerald-700",
+            submitted === "bad" && "border-red-500 bg-red-500/10 text-red-700"
+          )} />
+        
           <div className="flex gap-2">
             <Button
-              variant="outline"
-              onClick={pickHint}
-              disabled={showHint || !!submitted}
-              className="h-11 flex-1 rounded-2xl"
-            >
-              <Lightbulb className="mr-2 size-4" /> 提示 (-30 分)
+            variant="outline"
+            onClick={pickHint}
+            disabled={showHint || !!submitted}
+            className="h-11 flex-1 rounded-2xl">
+            
+              <Lightbulb className="mr-2 size-4" /> <T>提示 (-30 分)</T>
             </Button>
             <Button
-              onClick={() => submit(input)}
-              disabled={!input.trim() || !!submitted}
-              className="h-11 flex-[2] rounded-2xl bg-gradient-to-r from-indigo-600 to-sky-500 font-extrabold text-white hover:opacity-90"
-            >
-              {submitted === "ok" ? <><Check className="mr-2 size-4" /> 正确！</> :
-               submitted === "bad" ? <><X className="mr-2 size-4" /> 答案：{target.word}</> :
-               <>提交</>}
+            onClick={() => submit(input)}
+            disabled={!input.trim() || !!submitted}
+            className="h-11 flex-[2] rounded-2xl bg-gradient-to-r from-indigo-600 to-sky-500 font-extrabold text-white hover:opacity-90">
+            
+              {submitted === "ok" ? <><Check className="mr-2 size-4" /> <T>正确！</T></> :
+            submitted === "bad" ? <><X className="mr-2 size-4" /> <T>答案：</T>{target.word}</> :
+            <><T>提交</T></>}
             </Button>
           </div>
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }
 
 /* ============================================================
    Streak strip
    ============================================================ */
-function StreakStrip({ streak, className }: { streak: StreakStats | null; className?: string }) {
+function StreakStrip({ streak, className }: {streak: StreakStats | null;className?: string;}) {
   if (!streak) return null;
   return (
     <div className={cn("grid grid-cols-4 gap-2 text-center", className)}>
       <div className="rounded-xl border bg-card p-2">
         <div className="text-xl font-extrabold text-orange-600">🔥 {streak.current_streak}</div>
-        <div className="text-[10px] text-muted-foreground">连续天数</div>
+        <div className="text-[10px] text-muted-foreground"><T>连续天数</T></div>
       </div>
       <div className="rounded-xl border bg-card p-2">
         <div className="text-xl font-extrabold">{streak.longest_streak}</div>
-        <div className="text-[10px] text-muted-foreground">历史最长</div>
+        <div className="text-[10px] text-muted-foreground"><T>历史最长</T></div>
       </div>
       <div className="rounded-xl border bg-card p-2">
         <div className="text-xl font-extrabold">{streak.this_month_days}</div>
-        <div className="text-[10px] text-muted-foreground">本月天数</div>
+        <div className="text-[10px] text-muted-foreground"><T>本月天数</T></div>
       </div>
       <div className="rounded-xl border bg-card p-2">
         <div className="text-xl font-extrabold text-amber-600">💎 {streak.total_perfect}</div>
-        <div className="text-[10px] text-muted-foreground">完美次数</div>
+        <div className="text-[10px] text-muted-foreground"><T>完美次数</T></div>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 /* ============================================================
    Today's daily leaderboard
    ============================================================ */
-function DailyLeaderboard({ rows }: { rows: LeaderRow[] }) {
+function DailyLeaderboard({ rows }: {rows: LeaderRow[];}) {
   return (
     <div className="rounded-3xl border-2 border-indigo-500/30 bg-gradient-to-br from-indigo-500/10 to-sky-500/5 p-5 shadow-tile">
       <div className="mb-3 flex items-center gap-2">
         <Trophy className="size-5 text-indigo-600 dark:text-indigo-400" />
-        <h3 className="text-base font-extrabold">今日通关速度榜</h3>
+        <h3 className="text-base font-extrabold"><T>今日通关速度榜</T></h3>
       </div>
-      {rows.length === 0 ? (
-        <div className="py-4 text-center text-sm text-muted-foreground">还没有人通关，争夺榜首！</div>
-      ) : (
-        <ol className="space-y-1.5">
-          {rows.slice(0, 10).map((r) => (
-            <li
-              key={r.rank + r.alias}
-              className={cn(
-                "flex items-center gap-3 rounded-xl px-3 py-2 text-sm",
-                r.is_me ? "bg-primary/10 ring-2 ring-primary/40" : "bg-card/60"
-              )}
-            >
+      {rows.length === 0 ?
+      <div className="py-4 text-center text-sm text-muted-foreground"><T>还没有人通关，争夺榜首！</T></div> :
+
+      <ol className="space-y-1.5">
+          {rows.slice(0, 10).map((r) =>
+        <li
+          key={r.rank + r.alias}
+          className={cn(
+            "flex items-center gap-3 rounded-xl px-3 py-2 text-sm",
+            r.is_me ? "bg-primary/10 ring-2 ring-primary/40" : "bg-card/60"
+          )}>
+          
               <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-background text-xs font-extrabold tabular-nums">
                 {r.rank === 1 ? <Crown className="size-4 text-amber-500" /> :
-                 r.rank === 2 ? <Medal className="size-4 text-slate-400" /> :
-                 r.rank === 3 ? <Medal className="size-4 text-amber-700" /> :
-                 r.rank}
+            r.rank === 2 ? <Medal className="size-4 text-slate-400" /> :
+            r.rank === 3 ? <Medal className="size-4 text-amber-700" /> :
+            r.rank}
               </span>
               <span className="flex-1 truncate font-bold">
-                {r.alias} {r.is_me && <span className="text-xs text-primary">(我)</span>}
+                {r.alias} {r.is_me && <span className="text-xs text-primary"><T>(我)</T></span>}
                 {r.perfect && <span className="ml-1">💎</span>}
               </span>
               <span className="font-extrabold tabular-nums">{(r.duration_ms / 1000).toFixed(1)}s</span>
             </li>
-          ))}
+        )}
         </ol>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 }

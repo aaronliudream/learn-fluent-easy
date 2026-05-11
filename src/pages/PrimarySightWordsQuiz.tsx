@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
@@ -6,18 +6,18 @@ import { speakKid as speak } from "@/lib/speak";
 import {
   SIGHT_WORD_GROUPS,
   SIGHT_WORD_ITEMS,
-  type SightWordItem,
-} from "@/data/primarySightWords";
+  type SightWordItem } from
+"@/data/primarySightWords";
 import {
   SIGHT_WORD_GROUPS_G2,
-  SIGHT_WORD_ITEMS_G2,
-} from "@/data/primarySightWordsG2";
+  SIGHT_WORD_ITEMS_G2 } from
+"@/data/primarySightWordsG2";
 import {
   bumpSightWordLevel,
   bumpSightWordMastery,
   getSightWordMasteryMap,
-  isSightWordDue,
-} from "@/lib/sightWordMastery";
+  isSightWordDue } from
+"@/lib/sightWordMastery";
 import { buildSightWordDistractors } from "@/lib/sightWordDistractors";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
 
@@ -27,17 +27,17 @@ import { celebratePet } from "@/components/pet/EvolutionCelebration";
  *  /primary/sight-words/quiz/review  → SRS 到期的词
  */
 export default function PrimarySightWordsQuiz() {
-  const { groupId } = useParams<{ groupId: string }>();
+  const { groupId } = useParams<{groupId: string;}>();
   const [search] = useSearchParams();
   const nav = useNavigate();
   const isReview = groupId === "review";
   const isG2 = search.get("grade") === "2" || ["sg5", "sg6", "sg7", "sg8"].includes(groupId ?? "");
   const gradeItems = isG2 ? SIGHT_WORD_ITEMS_G2 : SIGHT_WORD_ITEMS;
   const sightWordsHref = isG2 ? "/primary/sight-words?grade=2" : "/primary/sight-words";
-  const group = isReview
-    ? null
-    : (isG2 ? SIGHT_WORD_GROUPS_G2 : SIGHT_WORD_GROUPS).find((g) => g.id === groupId) ??
-      null;
+  const group = isReview ?
+  null :
+  (isG2 ? SIGHT_WORD_GROUPS_G2 : SIGHT_WORD_GROUPS).find((g) => g.id === groupId) ??
+  null;
 
   const [items, setItems] = useState<SightWordItem[]>([]);
   const [itemIdx, setItemIdx] = useState(0);
@@ -49,9 +49,9 @@ export default function PrimarySightWordsQuiz() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.title = isReview
-      ? "常见小词复习 | FluentPath"
-      : `挑战 ${group?.groupName ?? ""} | FluentPath`;
+    document.title = isReview ?
+    "常见小词复习 | FluentPath" :
+    `挑战 ${group?.groupName ?? ""} | FluentPath`;
     (async () => {
       if (isReview) {
         const m = await getSightWordMasteryMap();
@@ -67,7 +67,7 @@ export default function PrimarySightWordsQuiz() {
   const totalItems = items.length;
   const cur = items[itemIdx];
   const isFinished = !loading && totalItems > 0 && itemIdx >= totalItems;
-  const itemQuestions = useMemo(() => (cur ? buildItemQuestions(cur) : []), [cur, itemIdx]);
+  const itemQuestions = useMemo(() => cur ? buildItemQuestions(cur) : [], [cur, itemIdx]);
   const q = itemQuestions[subIdx] ?? null;
 
   useEffect(() => {
@@ -77,7 +77,7 @@ export default function PrimarySightWordsQuiz() {
       kind: "levelup",
       emoji: "📖",
       title: `做完啦!通过 ${perfectItems}/${totalItems} 个词`,
-      subtitle: allCorrect ? "全部 3 题都对!太强啦" : "没全对的词明天会再考你哦",
+      subtitle: allCorrect ? "全部 3 题都对!太强啦" : "没全对的词明天会再考你哦"
     });
     const t = setTimeout(() => nav(sightWordsHref), 1800);
     return () => clearTimeout(t);
@@ -94,36 +94,36 @@ export default function PrimarySightWordsQuiz() {
   if (loading) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <p className="text-sm text-muted-foreground">准备中…</p>
-      </main>
-    );
+        <p className="text-sm text-muted-foreground"><T>准备中…</T></p>
+      </main>);
+
   }
   if (!loading && totalItems === 0) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <BackLink to={sightWordsHref} className="text-sm text-muted-foreground">← 返回常见小词</BackLink>
+        <BackLink to={sightWordsHref} className="text-sm text-muted-foreground"><T>← 返回常见小词</T></BackLink>
         <p className="mt-6 text-sm text-muted-foreground">
           {isReview ? "今天没有需要复习的词~" : "这一组还没有词。"}
         </p>
-      </main>
-    );
+      </main>);
+
   }
   if (isFinished || !cur || !q) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <p className="text-lg font-bold">做完啦!{perfectItems} / {totalItems} 个词通过</p>
-        <p className="mt-2 text-sm text-muted-foreground">回到常见小词冒险…</p>
-      </main>
-    );
+        <p className="text-lg font-bold"><T>做完啦!</T>{perfectItems} / {totalItems} <T>个词通过</T></p>
+        <p className="mt-2 text-sm text-muted-foreground"><T>回到常见小词冒险…</T></p>
+      </main>);
+
   }
 
   function pick(opt: string) {
     if (picked || !q || !cur) return;
     setPicked(opt);
     let isCorrect = false;
-    if (q.kind === "recognize") isCorrect = opt === q.correct;
-    else if (q.kind === "listen") isCorrect = opt === q.correct;
-    else isCorrect = opt === q.correctWord;
+    if (q.kind === "recognize") isCorrect = opt === q.correct;else
+    if (q.kind === "listen") isCorrect = opt === q.correct;else
+    isCorrect = opt === q.correctWord;
 
     void bumpSightWordMastery(cur.id, q.kind, isCorrect);
 
@@ -170,7 +170,7 @@ export default function PrimarySightWordsQuiz() {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
       <BackLink to={sightWordsHref} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回常见小词冒险
+        <ArrowLeft className="size-4" /> <T>返回常见小词冒险</T>
       </BackLink>
 
       <div className="mb-3 flex items-center justify-between">
@@ -178,22 +178,22 @@ export default function PrimarySightWordsQuiz() {
           {isReview ? "🔁 今日复习" : `✨ 挑战 ${group?.groupName}`}
         </h1>
         <div className="text-xs font-mono font-bold text-muted-foreground">
-          第 {Math.min(itemIdx + 1, totalItems)}/{totalItems} 个词 · 题 {subIdx + 1}/3
-          {retryArmed && <span className="ml-1 text-rose-600">· 再来</span>}
+          <T>第</T> {Math.min(itemIdx + 1, totalItems)}/{totalItems} <T>个词 · 题</T> {subIdx + 1}/3
+          {retryArmed && <span className="ml-1 text-rose-600"><T>· 再来</T></span>}
         </div>
       </div>
 
       <div className="mb-3 h-2 w-full overflow-hidden rounded-full bg-muted">
         <div
           className="h-full bg-gradient-to-r from-sky-500 via-cyan-500 to-emerald-500 transition-all"
-          style={{ width: `${(doneQuestions / Math.max(1, totalQuestions)) * 100}%` }}
-        />
+          style={{ width: `${doneQuestions / Math.max(1, totalQuestions) * 100}%` }} />
+        
       </div>
 
       <div className="space-y-4 rounded-3xl border-2 border-border bg-card p-5 shadow-tile">
-        {q.kind === "recognize" && (
-          <>
-            <p className="text-center text-sm font-bold text-muted-foreground">这个词的中文是什么?</p>
+        {q.kind === "recognize" &&
+        <>
+            <p className="text-center text-sm font-bold text-muted-foreground"><T>这个词的中文是什么?</T></p>
             <div className="flex justify-center">
               <div className="text-5xl font-black text-sky-600 dark:text-sky-300">{cur.word}</div>
             </div>
@@ -201,23 +201,23 @@ export default function PrimarySightWordsQuiz() {
               {q.options.map((o) => <Opt key={o} label={o} picked={picked} correct={q.correct} onPick={pick} />)}
             </div>
           </>
-        )}
-        {q.kind === "listen" && (
-          <>
-            <p className="text-center text-sm font-bold text-muted-foreground">听这个词,选出正确的写法</p>
+        }
+        {q.kind === "listen" &&
+        <>
+            <p className="text-center text-sm font-bold text-muted-foreground"><T>听这个词,选出正确的写法</T></p>
             <div className="flex justify-center">
               <button onClick={() => speak(cur.word)} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-lg font-bold text-primary-foreground shadow">
-                <Volume2 className="size-5" /> 再听一遍
+                <Volume2 className="size-5" /> <T>再听一遍</T>
               </button>
             </div>
             <div className="grid grid-cols-2 gap-3">
               {q.options.map((o) => <Opt key={o} label={o} picked={picked} correct={q.correct} onPick={pick} big mono />)}
             </div>
           </>
-        )}
-        {q.kind === "context" && (
-          <>
-            <p className="text-center text-sm font-bold text-muted-foreground">选出能填进句子里的词</p>
+        }
+        {q.kind === "context" &&
+        <>
+            <p className="text-center text-sm font-bold text-muted-foreground"><T>选出能填进句子里的词</T></p>
             <div className="space-y-1 text-center">
               <div className="text-xl font-bold">
                 {q.sentenceParts[0]}
@@ -230,17 +230,17 @@ export default function PrimarySightWordsQuiz() {
               {q.options.map((o) => <Opt key={o} label={o} picked={picked} correct={q.correctWord} onPick={pick} big mono />)}
             </div>
           </>
-        )}
+        }
       </div>
-    </main>
-  );
+    </main>);
+
 }
 
 // ─── helpers ──
 type Q =
-  | { kind: "recognize"; correct: string; options: string[] }
-  | { kind: "listen"; correct: string; options: string[] }
-  | { kind: "context"; correctWord: string; sentenceParts: [string, string]; cn: string; options: string[] };
+{kind: "recognize";correct: string;options: string[];} |
+{kind: "listen";correct: string;options: string[];} |
+{kind: "context";correctWord: string;sentenceParts: [string, string];cn: string;options: string[];};
 
 function buildItemQuestions(item: SightWordItem): Q[] {
   const pool = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2].map((w) => ({ id: w.id, word: w.word }));
@@ -249,9 +249,9 @@ function buildItemQuestions(item: SightWordItem): Q[] {
   const meaningDistractors = shuffle(meaningPool).slice(0, 3).map((w) => w.meaningCn);
 
   const qs: Q[] = [
-    { kind: "recognize", correct: item.meaningCn, options: shuffle([item.meaningCn, ...meaningDistractors]) },
-    { kind: "listen", correct: item.word, options: shuffle([item.word, ...distractors]) },
-  ];
+  { kind: "recognize", correct: item.meaningCn, options: shuffle([item.meaningCn, ...meaningDistractors]) },
+  { kind: "listen", correct: item.word, options: shuffle([item.word, ...distractors]) }];
+
   const ctx = buildContext(item, distractors);
   if (ctx) qs.push(ctx);
   while (qs.length < 3) qs.push({ kind: "listen", correct: item.word, options: shuffle([item.word, ...buildSightWordDistractors(item.id, pool, 3)]) });
@@ -269,11 +269,11 @@ function buildContext(item: SightWordItem, distractors: string[]): Q | null {
     correctWord: item.word,
     sentenceParts: [sent.slice(0, m.index), sent.slice(m.index + m[0].length)],
     cn: item.exampleSentenceCn,
-    options: shuffle([item.word, ...distractors]),
+    options: shuffle([item.word, ...distractors])
   };
 }
 
-function escapeRegex(s: string) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+function escapeRegex(s: string) {return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");}
 
 function shuffle<T>(arr: T[]): T[] {
   const c = [...arr];
@@ -285,8 +285,8 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function Opt({
-  label, picked, correct, onPick, big, mono,
-}: { label: string; picked: string | null; correct: string; onPick: (l: string) => void; big?: boolean; mono?: boolean }) {
+  label, picked, correct, onPick, big, mono
+}: {label: string;picked: string | null;correct: string;onPick: (l: string) => void;big?: boolean;mono?: boolean;}) {
   const isCorrect = label === correct;
   const isPicked = picked === label;
   return (
@@ -294,19 +294,19 @@ function Opt({
       disabled={!!picked}
       onClick={() => onPick(label)}
       className={
-        "rounded-2xl border-2 px-4 py-4 font-extrabold transition " +
-        (big ? "text-2xl " : "text-base ") +
-        (mono ? "font-mono " : "") +
-        (picked === null
-          ? "border-border bg-card hover:border-primary/50"
-          : isCorrect
-          ? "border-emerald-400 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300"
-          : isPicked
-          ? "border-rose-400 bg-rose-50 text-rose-700 dark:bg-rose-950/30 dark:text-rose-300"
-          : "border-border bg-card opacity-60")
-      }
-    >
+      "rounded-2xl border-2 px-4 py-4 font-extrabold transition " + (
+      big ? "text-2xl " : "text-base ") + (
+      mono ? "font-mono " : "") + (
+      picked === null ?
+      "border-border bg-card hover:border-primary/50" :
+      isCorrect ?
+      "border-emerald-400 bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300" :
+      isPicked ?
+      "border-rose-400 bg-rose-50 text-rose-700 dark:bg-rose-950/30 dark:text-rose-300" :
+      "border-border bg-card opacity-60")
+      }>
+      
       {label}
-    </button>
-  );
+    </button>);
+
 }

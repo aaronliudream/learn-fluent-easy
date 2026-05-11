@@ -40,6 +40,7 @@ function saveLocal(map: Record<string, { last_choice_correct: boolean; play_coun
 export default function PrimaryRolePlays() {
   const [params] = useSearchParams();
   const isG2 = params.get("grade") === "2";
+  const gradeHome = isG2 ? "/primary/adventure/2" : "/primary";
   const DATA = isG2 ? PRIMARY_ROLE_PLAYS_G2 : PRIMARY_ROLE_PLAYS;
   const [completed, setCompleted] = useState<Record<string, { last_choice_correct: boolean; play_count: number }>>(() => loadLocal());
   const [uid, setUid] = useState<string | null>(null);
@@ -73,7 +74,11 @@ export default function PrimaryRolePlays() {
   }, []);
 
   const sorted = useMemo(() => [...DATA].sort((a, b) => a.sortOrder - b.sortOrder), [DATA]);
-  const completedIds = useMemo(() => new Set(Object.keys(completed)), [completed]);
+  const poolIds = useMemo(() => new Set(DATA.map(rp => rp.id)), [DATA]);
+  const completedIds = useMemo(
+    () => new Set(Object.keys(completed).filter(id => poolIds.has(id))),
+    [completed, poolIds]
+  );
 
   // Unlock rule: first scene always unlocked; rp(N+1) unlocks when rp(N) completed.
   function isUnlocked(rp: RolePlay): boolean {
@@ -148,8 +153,8 @@ export default function PrimaryRolePlays() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6">
-      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回小学专区
+      <BackLink to={gradeHome} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> {isG2 ? "返回二年级冒险" : "返回小学专区"}
       </BackLink>
 
       {/* Spark 顶卡 */}

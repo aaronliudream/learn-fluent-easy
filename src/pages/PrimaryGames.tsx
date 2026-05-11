@@ -276,10 +276,10 @@ function ScoreCard({ correct, total, onRetry, gameType, grade, durationMs }: {
           <ArrowLeft className="size-4" /> 返回游戏中心
         </BackLink>
         <Link
-          to="/primary"
+          to={grade && grade !== 1 ? `/primary/adventure/${grade}` : "/primary"}
           className="inline-flex items-center gap-1.5 rounded-full border-2 border-amber-300 bg-white px-5 py-2 text-sm font-extrabold text-amber-700 shadow-sm hover:bg-amber-50"
         >
-          🏠 小学首页
+          🏠 {grade && grade !== 1 ? `${grade}年级冒险` : "小学首页"}
         </Link>
         <Link
           to="/pets"

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { speakKid as speak } from "@/lib/speak";
@@ -28,14 +28,16 @@ import { celebratePet } from "@/components/pet/EvolutionCelebration";
  */
 export default function PrimarySightWordsQuiz() {
   const { groupId } = useParams<{ groupId: string }>();
+  const [search] = useSearchParams();
   const nav = useNavigate();
   const isReview = groupId === "review";
+  const isG2 = search.get("grade") === "2" || ["sg5", "sg6", "sg7", "sg8"].includes(groupId ?? "");
+  const gradeItems = isG2 ? SIGHT_WORD_ITEMS_G2 : SIGHT_WORD_ITEMS;
+  const sightWordsHref = isG2 ? "/primary/sight-words?grade=2" : "/primary/sight-words";
   const group = isReview
     ? null
-    : SIGHT_WORD_GROUPS.find((g) => g.id === groupId) ??
-      SIGHT_WORD_GROUPS_G2.find((g) => g.id === groupId) ??
+    : (isG2 ? SIGHT_WORD_GROUPS_G2 : SIGHT_WORD_GROUPS).find((g) => g.id === groupId) ??
       null;
-  const ALL_ITEMS = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2];
 
   const [items, setItems] = useState<SightWordItem[]>([]);
   const [itemIdx, setItemIdx] = useState(0);
@@ -53,14 +55,14 @@ export default function PrimarySightWordsQuiz() {
     (async () => {
       if (isReview) {
         const m = await getSightWordMasteryMap();
-        const due = ALL_ITEMS.filter((w) => isSightWordDue(m.get(w.id)));
+        const due = gradeItems.filter((w) => isSightWordDue(m.get(w.id)));
         setItems(shuffle(due).slice(0, 8));
       } else if (group) {
-        setItems(shuffle(ALL_ITEMS.filter((w) => w.groupId === group.id)));
+        setItems(shuffle(gradeItems.filter((w) => w.groupId === group.id)));
       }
       setLoading(false);
     })();
-  }, [isReview, group]);
+  }, [isReview, group, gradeItems]);
 
   const totalItems = items.length;
   const cur = items[itemIdx];
@@ -77,9 +79,9 @@ export default function PrimarySightWordsQuiz() {
       title: `做完啦!通过 ${perfectItems}/${totalItems} 个词`,
       subtitle: allCorrect ? "全部 3 题都对!太强啦" : "没全对的词明天会再考你哦",
     });
-    const t = setTimeout(() => nav("/primary/sight-words"), 1800);
+    const t = setTimeout(() => nav(sightWordsHref), 1800);
     return () => clearTimeout(t);
-  }, [isFinished, perfectItems, totalItems, nav]);
+  }, [isFinished, perfectItems, totalItems, nav, sightWordsHref]);
 
   useEffect(() => {
     if (!q || !cur) return;
@@ -99,7 +101,7 @@ export default function PrimarySightWordsQuiz() {
   if (!loading && totalItems === 0) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <BackLink to="/primary/sight-words" className="text-sm text-muted-foreground">← 返回常见小词</BackLink>
+        <BackLink to={sightWordsHref} className="text-sm text-muted-foreground">← 返回常见小词</BackLink>
         <p className="mt-6 text-sm text-muted-foreground">
           {isReview ? "今天没有需要复习的词~" : "这一组还没有词。"}
         </p>
@@ -167,7 +169,7 @@ export default function PrimarySightWordsQuiz() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
-      <BackLink to="/primary/sight-words" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to={sightWordsHref} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回常见小词冒险
       </BackLink>
 

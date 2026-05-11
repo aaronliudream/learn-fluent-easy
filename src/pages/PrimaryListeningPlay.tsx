@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2, RotateCcw, Sparkles } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { findDialogue } from "@/data/primaryListeningDialogues";
@@ -20,11 +20,14 @@ type Phase = "play" | "quiz" | "done";
 
 export default function PrimaryListeningPlay() {
   const { id = "" } = useParams();
+  const [search] = useSearchParams();
   const navigate = useNavigate();
   const dialogue = useMemo(
     () => findDialogue(id) ?? PRIMARY_LISTENING_DIALOGUES_G2.find(d => d.id === id) ?? null,
     [id]
   );
+  const isG2 = search.get("grade") === "2" || PRIMARY_LISTENING_DIALOGUES_G2.some(d => d.id === id);
+  const listeningHref = isG2 ? "/primary/listening?grade=2" : "/primary/listening";
 
   const [phase, setPhase] = useState<Phase>("play");
   const [revealed, setRevealed] = useState(0);
@@ -54,7 +57,7 @@ export default function PrimaryListeningPlay() {
   if (!dialogue) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-10">
-        <BackLink to="/primary/listening" className="text-sm text-muted-foreground">← 返回听力地图</BackLink>
+        <BackLink to={listeningHref} className="text-sm text-muted-foreground">← 返回听力地图</BackLink>
         <p className="mt-6 text-center text-sm text-muted-foreground">找不到这个对话 ({id})</p>
       </main>
     );
@@ -140,7 +143,7 @@ export default function PrimaryListeningPlay() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
-      <BackLink to="/primary/listening" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to={listeningHref} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回听力地图
       </BackLink>
 
@@ -280,7 +283,7 @@ export default function PrimaryListeningPlay() {
             <button onClick={replayDialogue} className="rounded-2xl border-2 border-border bg-card px-4 py-2 text-sm font-bold hover:bg-muted">
               再听一遍
             </button>
-            <Link to="/primary/listening" className="rounded-2xl bg-gradient-to-r from-sky-500 to-emerald-500 px-4 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.02]">
+            <Link to={listeningHref} className="rounded-2xl bg-gradient-to-r from-sky-500 to-emerald-500 px-4 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.02]">
               返回听力地图
             </Link>
           </div>

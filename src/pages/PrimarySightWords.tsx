@@ -35,13 +35,14 @@ export default function PrimarySightWords() {
   const [mastery, setMastery] = useState<SightWordMasteryMap>(new Map());
   const [loading, setLoading] = useState(true);
   const grade = isG2 ? 2 : 1;
+  const gradeQ = isG2 ? "?grade=2" : "";
+  const gradeHome = isG2 ? "/primary/adventure/2" : "/primary";
+  const modulePath = (path: string) => `${path}${gradeQ}`;
   const policy = getSightWordsPolicy(grade);
   const GROUPS = isG2 ? SIGHT_WORD_GROUPS_G2 : SIGHT_WORD_GROUPS;
   const ITEMS = isG2 ? SIGHT_WORD_ITEMS_G2 : SIGHT_WORD_ITEMS;
-  const learnPath = (id: string) =>
-    isG2 ? `/primary/sight-words/learn/${id}?grade=2` : `/primary/sight-words/learn/${id}`;
-  const quizPath = (id: string) =>
-    isG2 ? `/primary/sight-words/quiz/${id}?grade=2` : `/primary/sight-words/quiz/${id}`;
+  const learnPath = (id: string) => modulePath(`/primary/sight-words/learn/${id}`);
+  const quizPath = (id: string) => modulePath(`/primary/sight-words/quiz/${id}`);
 
   const groupedItems = useMemo(() => {
     const byGroup = new Map<string, SightWordItem[]>();
@@ -126,10 +127,10 @@ export default function PrimarySightWords() {
     <main className="mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6">
       <GuestBanner />
       <BackLink
-        to="/primary"
+        to={gradeHome}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> 返回小学专区
+        <ArrowLeft className="size-4" /> {isG2 ? "返回二年级冒险" : "返回小学专区"}
       </BackLink>
 
       {/* Spark 顶卡 */}
@@ -186,7 +187,7 @@ export default function PrimarySightWords() {
             label="今日复习"
             title={`复习 ${dueItems.length} 个学过的词`}
             sub="上次没答对的,再来一次吧!"
-            onClick={() => nav(isG2 ? "/primary/sight-words/quiz/review?grade=2" : "/primary/sight-words/quiz/review")}
+            onClick={() => nav(modulePath("/primary/sight-words/quiz/review"))}
           />
         )}
         {currentGroup && canChallengeGroup && (
@@ -285,7 +286,7 @@ export default function PrimarySightWords() {
 
       <div className="mt-6 flex justify-center">
         <Link
-          to="/primary/phonics"
+          to={modulePath("/primary/phonics")}
           className="text-xs text-muted-foreground underline-offset-2 hover:underline"
         >
           ← 回到拼读冒险

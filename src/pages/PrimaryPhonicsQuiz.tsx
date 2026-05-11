@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Check, Volume2, X } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { speakKid as speak } from "@/lib/speak";
@@ -8,6 +8,7 @@ import {
   PHONICS_ITEMS,
   type PhonicsItem,
 } from "@/data/primaryPhonics";
+import { PHONICS_GROUPS_G2, PHONICS_ITEMS_G2 } from "@/data/primaryPhonicsG2";
 import {
   bumpPhonicsMastery,
   bumpPhonicsLevel,
@@ -25,9 +26,14 @@ import { celebratePet } from "@/components/pet/EvolutionCelebration";
  */
 export default function PrimaryPhonicsQuiz() {
   const { groupId } = useParams<{ groupId: string }>();
+  const [search] = useSearchParams();
   const nav = useNavigate();
   const isReview = groupId === "review";
-  const group = isReview ? null : PHONICS_GROUPS.find((g) => g.id === groupId);
+  const isG2 = search.get("grade") === "2" || !!groupId?.startsWith("g2_");
+  const GROUPS = isG2 ? PHONICS_GROUPS_G2 : PHONICS_GROUPS;
+  const ITEMS = isG2 ? PHONICS_ITEMS_G2 : PHONICS_ITEMS;
+  const phonicsHref = isG2 ? "/primary/phonics?grade=2" : "/primary/phonics";
+  const group = isReview ? null : GROUPS.find((g) => g.id === groupId);
 
   const [items, setItems] = useState<PhonicsItem[]>([]);
   // 每个 item 走 3 道题(轮换 3 种题型). retryArmed = 本题答错过 1 次,允许再答 1 次.
@@ -45,15 +51,15 @@ export default function PrimaryPhonicsQuiz() {
     (async () => {
       if (isReview) {
         const m = await getPhonicsMasteryMap();
-        const due = PHONICS_ITEMS.filter((it) => isDue(m.get(it.id)));
+        const due = ITEMS.filter((it) => isDue(m.get(it.id)));
         setItems(shuffle(due).slice(0, 6));
       } else if (group) {
-        const groupItems = PHONICS_ITEMS.filter((it) => it.groupId === group.id);
+        const groupItems = ITEMS.filter((it) => it.groupId === group.id);
         setItems(shuffle(groupItems));
       }
       setLoading(false);
     })();
-  }, [isReview, group]);
+  }, [isReview, group, ITEMS]);
 
   const totalItems = items.length;
   const totalQuestions = totalItems * 3;
@@ -62,7 +68,7 @@ export default function PrimaryPhonicsQuiz() {
 
   // 当前题目: kind 由 subIdx 决定(0=听音选字, 1=看字选音, 2=听词选图)
   // 每个 item 预计算 3 道题(混 5 种题型),保持本 item 内 q 稳定.
-  const itemQuestions = useMemo(() => (cur ? buildItemQuestions(cur) : []), [cur, itemIdx]);
+  const itemQuestions = useMemo(() => (cur ? buildItemQuestions(cur, ITEMS) : []), [cur, itemIdx, ITEMS]);
   const q = itemQuestions[subIdx] ?? null;
 
   // 全部答完 → 结算 + 跳转(放 effect 里,避免 render 期副作用)
@@ -72,7 +78,7 @@ export default function PrimaryPhonicsQuiz() {
     (async () => {
       const allCorrect = perfectItems === totalItems;
       if (!isReview && group && allCorrect) {
-        const groupItems = PHONICS_ITEMS.filter((it) => it.groupId === group.id);
+        const groupItems = ITEMS.filter((it) => it.groupId === group.id);
         await ensureGroupMastery(groupItems.map((it) => it.id), 2);
         if (cancel) return;
         celebratePet({
@@ -90,11 +96,11 @@ export default function PrimaryPhonicsQuiz() {
           subtitle: allCorrect ? "全部 3 题都对!太强啦" : "没全对的音明天会再考你哦",
         });
       }
-      const t = setTimeout(() => nav("/primary/phonics"), 1800);
+      const t = setTimeout(() => nav(phonicsHref), 1800);
       return () => clearTimeout(t);
     })();
     return () => { cancel = true; };
-  }, [isFinished, perfectItems, totalItems, isReview, group, nav]);
+  }, [isFinished, perfectItems, totalItems, isReview, group, ITEMS, nav, phonicsHref]);
 
   useEffect(() => {
     if (!q || !cur) return;
@@ -121,7 +127,7 @@ export default function PrimaryPhonicsQuiz() {
   if (!loading && totalItems === 0) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <BackLink to="/primary/phonics" className="text-sm text-muted-foreground">
+        <BackLink to={phonicsHref} className="text-sm text-muted-foreground">
           ← 返回拼读冒险
         </BackLink>
         <p className="mt-6 text-sm text-muted-foreground">
@@ -207,7 +213,7 @@ export default function PrimaryPhonicsQuiz() {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
       <BackLink
-        to="/primary/phonics"
+        to={phonicsHref}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> 返回拼读冒险
@@ -380,37 +386,37 @@ type Q =
  *  - matchWord / seeImagePickWord: 例词带 emoji 才可用
  *  - blendCvc: 例词中存在 3 字母的 CVC 词才可用
  */
-function buildItemQuestions(item: PhonicsItem): Q[] {
+function buildItemQuestions(item: PhonicsItem, itemPool: PhonicsItem[]): Q[] {
   const candidates: Array<() => Q | null> = [
-    () => buildHearLetter(item),
-    () => buildSeeLetter(item),
-    () => buildMatchWord(item),
-    () => buildSeeImagePickWord(item),
-    () => buildBlendCvc(item),
+    () => buildHearLetter(item, itemPool),
+    () => buildSeeLetter(item, itemPool),
+    () => buildMatchWord(item, itemPool),
+    () => buildSeeImagePickWord(item, itemPool),
+    () => buildBlendCvc(item, itemPool),
   ];
   const built = shuffle(candidates).map((f) => f()).filter((q): q is Q => q != null);
   // 至少保证前 2 种,补足 3 道
-  while (built.length < 3) built.push(buildHearLetter(item));
+  while (built.length < 3) built.push(buildHearLetter(item, itemPool));
   return built.slice(0, 3);
 }
 
-function poolDistractors(item: PhonicsItem): PhonicsItem[] {
-  const allIds = PHONICS_ITEMS.map((p) => p.id);
+function poolDistractors(item: PhonicsItem, itemPool: PhonicsItem[]): PhonicsItem[] {
+  const allIds = itemPool.map((p) => p.id);
   return buildDistractorPool(item.id, allIds, 3)
-    .map((id) => PHONICS_ITEMS.find((p) => p.id === id))
+    .map((id) => itemPool.find((p) => p.id === id))
     .filter(Boolean) as PhonicsItem[];
 }
 
-function buildHearLetter(item: PhonicsItem): Q {
-  const d = poolDistractors(item);
+function buildHearLetter(item: PhonicsItem, itemPool: PhonicsItem[]): Q {
+  const d = poolDistractors(item, itemPool);
   return {
     kind: "hearLetter",
     correct: item.letter,
     options: shuffle([item.letter, ...d.map((p) => p.letter)]),
   };
 }
-function buildSeeLetter(item: PhonicsItem): Q {
-  const d = poolDistractors(item);
+function buildSeeLetter(item: PhonicsItem, itemPool: PhonicsItem[]): Q {
+  const d = poolDistractors(item, itemPool);
   return {
     kind: "seeLetter",
     letter: item.letterUpper ?? item.letter,
@@ -418,12 +424,12 @@ function buildSeeLetter(item: PhonicsItem): Q {
     options: shuffle([item.sound, ...d.map((p) => p.sound)]),
   };
 }
-function buildMatchWord(item: PhonicsItem): Q | null {
+function buildMatchWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
   const word0 = item.exampleWords.find((w) => w.emoji && w.word);
   if (!word0?.emoji || !word0?.word) return null;
-  const d = poolDistractors(item);
+  const d = poolDistractors(item, itemPool);
   const otherWords = d.flatMap((p) => p.exampleWords.filter((w) => w.emoji && w.word));
-  const fallback = PHONICS_ITEMS.flatMap((p) =>
+  const fallback = itemPool.flatMap((p) =>
     p.id === item.id ? [] : p.exampleWords.filter((w) => w.emoji && w.word)
   );
   const wordPool = otherWords.length >= 2 ? otherWords : fallback;
@@ -437,12 +443,12 @@ function buildMatchWord(item: PhonicsItem): Q | null {
     ]),
   };
 }
-function buildSeeImagePickWord(item: PhonicsItem): Q | null {
+function buildSeeImagePickWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
   const word0 = item.exampleWords.find((w) => w.emoji && w.word);
   if (!word0?.emoji || !word0?.word) return null;
-  const d = poolDistractors(item);
+  const d = poolDistractors(item, itemPool);
   const others = d.flatMap((p) => p.exampleWords.filter((w) => w.word));
-  const fallback = PHONICS_ITEMS.flatMap((p) =>
+  const fallback = itemPool.flatMap((p) =>
     p.id === item.id ? [] : p.exampleWords.filter((w) => w.word)
   );
   const pool = others.length >= 3 ? others : fallback;
@@ -458,17 +464,17 @@ function buildSeeImagePickWord(item: PhonicsItem): Q | null {
  * CVC 拼读: 找到本 item 例词中 3 字母 (consonant-vowel-consonant) 的真词,
  * 把单词拆成 3 个音播放,让孩子拼出来.如果本 item 没有 CVC 例词则返回 null.
  */
-function buildBlendCvc(item: PhonicsItem): Q | null {
+function buildBlendCvc(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
   const cvc = item.exampleWords.find((w) => /^[bcdfghjklmnpqrstvwxyz][aeiou][bcdfghjklmnpqrstvwxyz]$/i.test(w.word));
   if (!cvc) return null;
   const letters = cvc.word.toLowerCase().split("");
   // 把每个字母映射回它的 phonics sound, 找不到就用字母本身
   const sounds = letters.map((ch) => {
-    const it = PHONICS_ITEMS.find((p) => p.letter.toLowerCase() === ch);
+    const it = itemPool.find((p) => p.letter.toLowerCase() === ch);
     return it?.sound ?? `/${ch}/`;
   });
   // 干扰词: 同长度的其他 CVC 例词
-  const allCvc = PHONICS_ITEMS.flatMap((p) =>
+  const allCvc = itemPool.flatMap((p) =>
     p.exampleWords.filter((w) => w.word !== cvc.word && /^[bcdfghjklmnpqrstvwxyz][aeiou][bcdfghjklmnpqrstvwxyz]$/i.test(w.word))
   );
   const distractors = shuffle(allCvc).slice(0, 3).map((w) => w.word.toLowerCase());

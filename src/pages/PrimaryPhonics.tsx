@@ -29,6 +29,9 @@ export default function PrimaryPhonics() {
   const [sp] = useSearchParams();
   const gradeParam = Number(sp.get("grade") || "1");
   const isG2 = gradeParam === 2;
+  const gradeQ = isG2 ? "?grade=2" : "";
+  const gradeHome = isG2 ? "/primary/adventure/2" : "/primary";
+  const modulePath = (path: string) => `${path}${gradeQ}`;
   const GROUPS = isG2 ? PHONICS_GROUPS_G2 : PHONICS_GROUPS;
   const ITEMS = isG2 ? PHONICS_ITEMS_G2 : PHONICS_ITEMS;
   const [mastery, setMastery] = useState<PhonicsMasteryMap>(new Map());
@@ -120,8 +123,7 @@ export default function PrimaryPhonics() {
   const allG1Mastered = !isG2 && PHONICS_ITEMS.every(
     (it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2
   );
-  const learnPath = (id: string) =>
-    isG2 ? `/primary/phonics/learn/${id}?grade=2` : `/primary/phonics/learn/${id}`;
+  const learnPath = (id: string) => modulePath(`/primary/phonics/learn/${id}`);
   const todayPlanCount =
     (currentGroup?.items.filter(
       (it) => (mastery.get(it.id)?.mastery_level ?? 0) < 3
@@ -131,10 +133,10 @@ export default function PrimaryPhonics() {
     <main className="mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6">
       <GuestBanner />
       <BackLink
-        to="/primary"
+        to={gradeHome}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> 返回小学专区
+        <ArrowLeft className="size-4" /> {isG2 ? "返回二年级冒险" : "返回小学专区"}
       </BackLink>
 
       {/* Spark 顶卡 */}
@@ -179,7 +181,7 @@ export default function PrimaryPhonics() {
             label="今日复习"
             title={`复习 ${dueItems.length} 个学过的音`}
             sub="上次没答对的,再来一次吧!"
-            onClick={() => nav("/primary/phonics/quiz/review")}
+            onClick={() => nav(modulePath("/primary/phonics/quiz/review"))}
           />
         )}
 
@@ -191,7 +193,7 @@ export default function PrimaryPhonics() {
             label="挑战测试"
             title={`挑战 ${currentGroup.group.groupName}`}
             sub="✨ 全部答对,就能玩下一关啦!"
-            onClick={() => nav(`/primary/phonics/quiz/${currentGroup.group.id}`)}
+            onClick={() => nav(modulePath(`/primary/phonics/quiz/${currentGroup.group.id}`))}
           />
         )}
 
@@ -307,7 +309,7 @@ export default function PrimaryPhonics() {
         </Link>
         {showSwEntry && swPolicy.showInMain && (
           <Link
-            to="/primary/sight-words"
+            to={modulePath("/primary/sight-words")}
             className="inline-flex items-center gap-1 text-xs font-bold text-sky-600 underline-offset-2 hover:underline dark:text-sky-300"
           >
             📖 常见小词 Sight Words →
@@ -315,26 +317,26 @@ export default function PrimaryPhonics() {
         )}
         {showSwEntry && !swPolicy.showInMain && (
           <Link
-            to="/primary/sight-words"
+            to={modulePath("/primary/sight-words")}
             className="inline-flex items-center gap-1 text-[11px] text-muted-foreground underline-offset-2 hover:underline"
           >
             🔁 常见小词复习(查漏)→
           </Link>
         )}
         <Link
-          to="/primary/roleplays"
+          to={modulePath("/primary/roleplays")}
           className="inline-flex items-center gap-1 text-xs font-bold text-fuchsia-600 underline-offset-2 hover:underline dark:text-fuchsia-300"
         >
           🎭 角色扮演 Roleplay →
         </Link>
         <Link
-          to="/primary/listening"
+          to={modulePath("/primary/listening")}
           className="inline-flex items-center gap-1 text-xs font-bold text-cyan-600 underline-offset-2 hover:underline dark:text-cyan-300"
         >
           🎧 听力对话 Listening →
         </Link>
         <Link
-          to="/primary/reading"
+          to={modulePath("/primary/reading")}
           className="inline-flex items-center gap-1 text-xs font-bold text-amber-600 underline-offset-2 hover:underline dark:text-amber-300"
         >
           📚 小绘本 Reading →

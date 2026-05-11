@@ -41,6 +41,8 @@ export default function PrimaryStoryBooks() {
   const isG2 = sp.get("grade") === "2";
   const DATA = isG2 ? PRIMARY_STORY_BOOKS_G2 : PRIMARY_STORY_BOOKS;
   const gradeQ = isG2 ? "?grade=2" : "";
+  const gradeHome = isG2 ? "/primary/adventure/2" : "/primary";
+  const readPath = (id: string) => `/primary/reading/read/${id}${gradeQ}`;
   const [completed, setCompleted] = useState<Record<string, CompRec>>(() => loadLocal());
   // 锁定卡片点击时弹的 Spark 气泡(指向当前可读的那本)
   const [lockedHint, setLockedHint] = useState<{ blocked: StoryBook; nextOpen: StoryBook | null } | null>(null);
@@ -191,8 +193,8 @@ export default function PrimaryStoryBooks() {
         ))}
       </div>
       <div className="relative">
-      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-amber-100/80 hover:text-amber-50">
-        <ArrowLeft className="size-4" /> 返回小学专区
+      <BackLink to={gradeHome} className="mb-3 inline-flex items-center gap-1 text-sm text-amber-100/80 hover:text-amber-50">
+        <ArrowLeft className="size-4" /> {isG2 ? "返回二年级冒险" : "返回小学专区"}
       </BackLink>
 
       {/* Spark 顶卡 — 暖橘色书页色调 */}
@@ -233,7 +235,7 @@ export default function PrimaryStoryBooks() {
       {/* 继续读 CTA */}
       {nextB && (
         <Link
-          to={`/primary/reading/read/${nextB.id}`}
+          to={readPath(nextB.id)}
           className="mt-4 block rounded-3xl bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 p-4 text-left text-white shadow-tile transition hover:-translate-y-0.5"
         >
           <div className="text-[11px] font-bold uppercase tracking-wider opacity-80">📖 继续读新绘本</div>
@@ -330,7 +332,7 @@ export default function PrimaryStoryBooks() {
                     </div>
                   );
                   return unlocked ? (
-                    <Link key={b.id} to={`/primary/reading/read/${b.id}`}>{card}</Link>
+                    <Link key={b.id} to={readPath(b.id)}>{card}</Link>
                   ) : (
                     <button
                       key={b.id}
@@ -407,7 +409,7 @@ export default function PrimaryStoryBooks() {
             </div>
             {lockedHint.nextOpen && (
               <Link
-                to={`/primary/reading/read/${lockedHint.nextOpen.id}`}
+                to={readPath(lockedHint.nextOpen.id)}
                 onClick={() => setLockedHint(null)}
                 className="mt-4 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 px-4 py-3 text-sm font-extrabold text-white shadow-md transition hover:-translate-y-0.5"
               >

@@ -185,7 +185,7 @@ export default function PrimaryPhonics() {
         {/* fallback */}
         {!nextNewItem && dueItems.length === 0 && !canChallengeGroup && !loading && (
           <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            🎉 你已经掌握了全部 {PHONICS_ITEMS.length} 个 Phonics 音!
+            🎉 你已经会了全部 {PHONICS_ITEMS.length} 个字母音!
           </div>
         )}
 

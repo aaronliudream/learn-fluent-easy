@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Check, X } from "lucide-react";
 import { pickPhrase } from "@/data/sparkPhrases";
 import { useSparkMood } from "@/contexts/SparkMoodContext";
+import { useCombo } from "@/contexts/ComboContext";
 
 type Props = {
   question: string;
@@ -21,6 +22,7 @@ export default function QuizOverlay({
   maxRetries = 2,
 }: Props) {
   const { setMood } = useSparkMood();
+  const { bump } = useCombo();
   const [picked, setPicked] = useState<string | null>(null);
   const [locked, setLocked] = useState(false);
   const [tries, setTries] = useState(0);
@@ -42,6 +44,7 @@ export default function QuizOverlay({
     if (opt === correct) {
       setFeedback(pickPhrase("correct"));
       setMood("excited", 1200);
+      bump(true);
       window.setTimeout(() => onCorrect(), 800);
       return;
     }
@@ -51,11 +54,13 @@ export default function QuizOverlay({
       setFeedback("正确答案是 👇");
       setForceReveal(true);
       setMood("encouraging", 1400);
+      bump(false);
       window.setTimeout(() => onCorrect(), 1400);
       return;
     }
     setFeedback("差一点,再听一次?");
     setMood("encouraging", 1500);
+    bump(false);
     onWrong?.();
     window.setTimeout(() => {
       setPicked(null);

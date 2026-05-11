@@ -65,26 +65,26 @@ export default function LiveStatsTicker() {
       <Stat
         icon={<Activity className="size-3.5" />}
         value={questions.toLocaleString("en-US")}
-        label="题 已练 / 今日"
+        label={<T>题 已练 / 今日</T>}
         tone="text-violet-700" />
       
       <Stat
         icon={<Users className="size-3.5" />}
         value={online.toLocaleString("en-US")}
-        label="人 在线学习"
+        label={<T>人 在线学习</T>}
         tone="text-sky-700" />
       
       <Stat
         icon={<Target className="size-3.5" />}
         value={`${mastery}%`}
-        label="平均掌握率"
+        label={<T>平均掌握率</T>}
         tone="text-amber-700" />
       
     </div>);
 
 }
 
-function Stat({ icon, value, label, tone }: {icon: React.ReactNode;value: string;label: string;tone: string;}) {
+function Stat({ icon, value, label, tone }: {icon: React.ReactNode;value: string;label: React.ReactNode;tone: string;}) {
   return (
     <span className="inline-flex items-baseline gap-1.5">
       <span className={`inline-flex translate-y-0.5 ${tone}`}>{icon}</span>

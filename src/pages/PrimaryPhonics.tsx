@@ -299,6 +299,12 @@ export default function PrimaryPhonics() {
         >
           🎭 角色扮演 Roleplay →
         </Link>
+        <Link
+          to="/primary/listening"
+          className="inline-flex items-center gap-1 text-xs font-bold text-cyan-600 underline-offset-2 hover:underline dark:text-cyan-300"
+        >
+          🎧 听力对话 Listening →
+        </Link>
       </div>
     </main>
   );

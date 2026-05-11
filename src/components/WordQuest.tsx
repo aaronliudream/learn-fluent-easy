@@ -206,7 +206,7 @@ export default function WordQuest({
 
     // brief pause then advance
     setTimeout(() => {
-      if (stage + 1 >= TOTAL_STAGES) {
+      if (stage + 1 >= totalStages) {
         finish(nextResults);
       } else {
         setStage(stage + 1);
@@ -219,7 +219,7 @@ export default function WordQuest({
     if (!targets.length) return;
     const totalDuration = Date.now() - questStartedAt;
     const passed = finalResults.filter((r) => r.correct).length;
-    const perfect = passed === TOTAL_STAGES && hintsUsed === 0;
+    const perfect = passed === totalStages && hintsUsed === 0;
 
     // Score: 100 base/stage * combo bonus, minus hint penalty
     let score = passed * 100;
@@ -229,6 +229,22 @@ export default function WordQuest({
     score = Math.max(0, score);
 
     setPhase("done");
+
+    if (isPrimary) {
+      try {
+        await onComplete?.({
+          score, perfect, passed, total: totalStages,
+          durationMs: totalDuration, hintsUsed,
+          words: targets.map((t) => t.word),
+        });
+      } catch (e) { console.error("primary quest onComplete", e); }
+      const coins = Math.floor(score / 5);
+      if (coins > 0) {
+        await awardCoins(coins);
+        setCoinRefresh((k) => k + 1);
+      }
+      return;
+    }
 
     try {
       const { data: u } = await supabase.auth.getUser();
@@ -254,7 +270,7 @@ export default function WordQuest({
           best_combo: passed,
           duration_ms: totalDuration,
           hits: passed,
-          misses: TOTAL_STAGES - passed,
+          misses: totalStages - passed,
           metadata: { perfect, hints_used: hintsUsed, words: targets.map((t) => t.word) },
         });
       }

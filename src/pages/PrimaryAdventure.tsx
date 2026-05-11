@@ -58,6 +58,7 @@ export default function PrimaryAdventure() {
   const [progress, setProgress] = useState<Record<string, true>>(() => loadAdventureProgress());
   const [loading, setLoading] = useState(true);
   const [myProgress, setMyProgress] = useState<ProgressRow[] | null>(null);
+  const [swMasteredCount, setSwMasteredCount] = useState(0);
   // 用今天的日期做 memo key,避免页面跨午夜后还显示昨天的轮换步骤
   const todayKey = new Date().toDateString();
 
@@ -103,6 +104,11 @@ export default function PrimaryAdventure() {
         const swMastered = new Set(
           (swRows.data ?? []).filter((r: any) => (r.mastery_level ?? 0) >= 2).map((r: any) => r.word_id)
         );
+        // 单词游戏冷启动门控:用 mastery_level >= 1 即视为「掌握」(更宽松,鼓励解锁)
+        const swReady = new Set(
+          (swRows.data ?? []).filter((r: any) => (r.mastery_level ?? 0) >= 1).map((r: any) => r.word_id)
+        );
+        setSwMasteredCount(swItems.filter((it) => swReady.has(it.id)).length);
         const lsDone = new Set((lsRows.data ?? []).map((r: any) => r.dialogue_id));
         const rpDone = new Set((rpRows.data ?? []).map((r: any) => r.roleplay_id));
         const sbDone = new Set((sbRows.data ?? []).map((r: any) => r.book_id));

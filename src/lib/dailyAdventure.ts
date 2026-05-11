@@ -128,18 +128,15 @@ function getThirdStepContent(
     estMinutes: 4,
   };
 
-  // G2 lesson 也没接入 — 用 lesson 占位 + 回退到 G1 lesson 列表
-  const g2LessonPlaceholder: AdventureStep = {
+  // G2 lesson 已接入 — 30 节 AI 课走 /lesson?grade=2 列表
+  const g2LessonStep: AdventureStep = {
     kind: "lesson",
     emoji: "📚",
-    title: "G2 课程准备中",
-    sparkLine: "G2 的课还在准备,先去复习一节 G1 的吧!",
-    cta: "去看 G1 的课",
-    to: `/primary/grade/1`,
+    title: "今天的一节 G2 课",
+    sparkLine: "我准备好啦,我们开始今天这节课吧!",
+    cta: "开始今天这节课",
+    to: `/lesson?grade=2`,
     estMinutes: 8,
-    placeholder: true,
-    fallbackTo: "/primary/grade/1",
-    fallbackLabel: "先去复习 G1 的课",
   };
 
   const dow = date.getDay(); // 0=Sun ... 6=Sat
@@ -148,7 +145,7 @@ function getThirdStepContent(
     if (dow === 6) return readingStep;
     if (dow === 0 || dow === 3) return listeningStep;
     if (dow === 2 || dow === 5) return roleplayStep;
-    return g2LessonPlaceholder;
+    return g2LessonStep;
   }
 
   // Sat(6) → Reading (storybooks)

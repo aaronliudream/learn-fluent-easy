@@ -7,7 +7,7 @@
 // Why so small: shipping a single linear path is the whole point.
 // Anything fancier would re-create the menu maze we just deleted.
 
-export type AdventureStepKind = "phonics" | "vocab" | "lesson" | "culture" | "roleplay" | "listening" | "reading";
+export type AdventureStepKind = "phonics" | "vocab" | "lesson" | "culture" | "roleplay" | "listening" | "reading" | "game";
 
 export type AdventureStep = {
   kind: AdventureStepKind;
@@ -29,8 +29,10 @@ export type AdventureStep = {
 export function buildDailyAdventure(opts: {
   grade: number;
   nextLessonId?: string | null;
+  /** 已掌握的 Sight Word 数(用于解锁单词游戏冷启动门控) */
+  sightWordsMasteredCount?: number;
 }): AdventureStep[] {
-  const { grade, nextLessonId } = opts;
+  const { grade, nextLessonId, sightWordsMasteredCount = 0 } = opts;
   const gradeQ = grade === 2 ? "?grade=2" : "";
 
   const steps: AdventureStep[] = [];

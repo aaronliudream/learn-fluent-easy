@@ -149,7 +149,7 @@ export default function PrimaryPhonics() {
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-rose-700 dark:text-rose-200">
           <span><T>已掌握</T> {masteredCount} / {ITEMS.length}{isG2 ? " · 二年级" : ""}</span>
-          <span><T>当前</T> {currentGroup?.group.groupName}</span>
+          <span><T>当前</T> <T>{currentGroup?.group.groupName}</T></span>
         </div>
         <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/60">
           <div
@@ -242,7 +242,7 @@ export default function PrimaryPhonics() {
                   <div className="flex items-center gap-1.5 text-sm font-extrabold">
                     {!unlocked && <Lock className="size-3.5 text-muted-foreground" />}
                     {allDone && <Trophy className="size-3.5 text-emerald-600" />}
-                    <span className="truncate">{g.group.groupName}</span>
+                    <span className="truncate"><T>{g.group.groupName}</T></span>
                   </div>
                   <div className="text-[11px] text-muted-foreground">
                     {g.group.groupNameEn}

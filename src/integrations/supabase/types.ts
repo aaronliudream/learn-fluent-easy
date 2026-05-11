@@ -5620,6 +5620,51 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_word_rush_attempts: {
+        Row: {
+          best_streak: number
+          created_at: string
+          date: string
+          duration_seconds: number
+          grade: number
+          hits: number
+          id: string
+          misses: number
+          score: number
+          updated_at: string
+          user_id: string
+          words: Json | null
+        }
+        Insert: {
+          best_streak?: number
+          created_at?: string
+          date: string
+          duration_seconds?: number
+          grade: number
+          hits?: number
+          id?: string
+          misses?: number
+          score?: number
+          updated_at?: string
+          user_id: string
+          words?: Json | null
+        }
+        Update: {
+          best_streak?: number
+          created_at?: string
+          date?: string
+          duration_seconds?: number
+          grade?: number
+          hits?: number
+          id?: string
+          misses?: number
+          score?: number
+          updated_at?: string
+          user_id?: string
+          words?: Json | null
+        }
+        Relationships: []
+      }
       pro_waitlist: {
         Row: {
           created_at: string

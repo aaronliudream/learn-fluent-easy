@@ -7,7 +7,7 @@
 // Why so small: shipping a single linear path is the whole point.
 // Anything fancier would re-create the menu maze we just deleted.
 
-export type AdventureStepKind = "phonics" | "vocab" | "lesson" | "culture" | "roleplay" | "listening";
+export type AdventureStepKind = "phonics" | "vocab" | "lesson" | "culture" | "roleplay" | "listening" | "reading";
 
 export type AdventureStep = {
   kind: AdventureStepKind;
@@ -71,7 +71,7 @@ export function buildDailyAdventure(opts: {
 }
 
 /** Day-of-week rotation for Grade 1's Step 3.
- *  Mon/Thu = Lesson, Tue/Fri/Sat = Roleplay, Wed/Sun = Listening. */
+ *  Mon/Thu = Lesson, Tue/Fri = Roleplay, Wed/Sun = Listening, Sat = Reading. */
 function getThirdStepContent(
   grade: number,
   date: Date,
@@ -111,11 +111,23 @@ function getThirdStepContent(
     estMinutes: 5,
   };
 
+  const readingStep: AdventureStep = {
+    kind: "reading",
+    emoji: "📖",
+    title: "和 Spark 读绘本",
+    sparkLine: "今天 Spark 想和你一起读一本小绘本!",
+    cta: "去读绘本",
+    to: `/primary/reading`,
+    estMinutes: 4,
+  };
+
   const dow = date.getDay(); // 0=Sun ... 6=Sat
+  // Sat(6) → Reading (storybooks)
+  if (dow === 6) return readingStep;
   // Wed(3), Sun(0) → Listening
   if (dow === 0 || dow === 3) return listeningStep;
-  // Tue(2), Fri(5), Sat(6) → Roleplay
-  if (dow === 2 || dow === 5 || dow === 6) return roleplayStep;
+  // Tue(2), Fri(5) → Roleplay
+  if (dow === 2 || dow === 5) return roleplayStep;
   // Mon(1), Thu(4) → Lesson; fall back to roleplay if no lesson yet
   return lessonStep ?? roleplayStep;
 }

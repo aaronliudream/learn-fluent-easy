@@ -305,6 +305,12 @@ export default function PrimaryPhonics() {
         >
           🎧 听力对话 Listening →
         </Link>
+        <Link
+          to="/primary/reading"
+          className="inline-flex items-center gap-1 text-xs font-bold text-amber-600 underline-offset-2 hover:underline dark:text-amber-300"
+        >
+          📚 小绘本 Reading →
+        </Link>
       </div>
     </main>
   );

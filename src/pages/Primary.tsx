@@ -318,7 +318,7 @@ export default function Primary() {
             </button>
             <div className="mt-4 flex justify-center">
               <span className="inline-flex items-center rounded-full bg-rose-100/80 px-3 py-1 text-xs font-semibold text-rose-600 dark:bg-rose-900/40 dark:text-rose-300">
-                <T>当前 ·</T> {currentGradeName}
+                <T>当前 ·</T> <T>{currentGradeName}</T>
               </span>
             </div>
             <div className="mt-2 flex justify-center">

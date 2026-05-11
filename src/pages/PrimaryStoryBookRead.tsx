@@ -1,0 +1,308 @@
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { ArrowLeft, Volume2, RotateCcw, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import BackLink from "@/components/BackLink";
+import { findBook } from "@/data/primaryStoryBooks";
+import { supabase } from "@/integrations/supabase/client";
+import { speakKid as speak, stopSpeaking } from "@/lib/speak";
+
+const LOCAL_KEY = "primary_storybook_completion_v1";
+type CompRec = { questions_correct: number; questions_total: number; read_count: number };
+function loadLocal(): Record<string, CompRec> {
+  try { return JSON.parse(localStorage.getItem(LOCAL_KEY) || "{}"); } catch { return {}; }
+}
+function saveLocal(map: Record<string, CompRec>) {
+  localStorage.setItem(LOCAL_KEY, JSON.stringify(map));
+}
+
+type Phase = "read" | "quiz" | "done";
+
+export default function PrimaryStoryBookRead() {
+  const { id = "" } = useParams();
+  const book = useMemo(() => findBook(id), [id]);
+
+  const [phase, setPhase] = useState<Phase>("read");
+  const [pageIdx, setPageIdx] = useState(0); // 0-based
+  const [qIdx, setQIdx] = useState(0);
+  const [pickedIdx, setPickedIdx] = useState<number | null>(null);
+  const [correctCount, setCorrectCount] = useState(0);
+
+  // swipe handling
+  const touchX = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (!book) return;
+    document.title = `${book.title_cn} · 绘本阅读 | FluentPath`;
+    setPhase("read");
+    setPageIdx(0);
+    setQIdx(0);
+    setPickedIdx(null);
+    setCorrectCount(0);
+    const t = setTimeout(() => speak(book.pages[0].text_en), 350);
+    return () => clearTimeout(t);
+  }, [id, book]);
+
+  useEffect(() => () => { stopSpeaking(); }, []);
+
+  if (!book) {
+    return (
+      <main className="mx-auto max-w-3xl px-4 py-10">
+        <BackLink to="/primary/reading" className="text-sm text-muted-foreground">← 返回书架</BackLink>
+        <p className="mt-6 text-center text-sm text-muted-foreground">找不到这本绘本 ({id})</p>
+      </main>
+    );
+  }
+
+  const totalPages = book.pages.length;
+  const page = book.pages[pageIdx];
+  const isLast = pageIdx === totalPages - 1;
+
+  function goPage(next: number) {
+    if (next < 0 || next >= totalPages) return;
+    stopSpeaking();
+    setPageIdx(next);
+    setTimeout(() => speak(book.pages[next].text_en), 200);
+  }
+
+  function startQuiz() {
+    stopSpeaking();
+    setPhase("quiz");
+    setQIdx(0);
+    setPickedIdx(null);
+  }
+
+  function pick(i: number) {
+    if (pickedIdx !== null) return;
+    setPickedIdx(i);
+    if (book.questions[qIdx].options[i].correct) setCorrectCount(c => c + 1);
+  }
+  function retryAnswer() { setPickedIdx(null); }
+
+  async function nextQuestion() {
+    const last = qIdx + 1 >= book.questions.length;
+    if (last) {
+      setPhase("done");
+      try {
+        const { data: u } = await supabase.auth.getUser();
+        const userId = u?.user?.id ?? null;
+        const total = book.questions.length;
+        const local = loadLocal();
+        const prev = local[book.id];
+        const finalCorrect = correctCount;
+        const newRec: CompRec = {
+          questions_correct: finalCorrect,
+          questions_total: total,
+          read_count: (prev?.read_count ?? 0) + 1,
+        };
+        local[book.id] = newRec;
+        saveLocal(local);
+        if (userId) {
+          await supabase.from("primary_storybook_completion").upsert({
+            user_id: userId,
+            book_id: book.id,
+            questions_correct: finalCorrect,
+            questions_total: total,
+            read_count: newRec.read_count,
+            completed_at: new Date().toISOString(),
+          });
+        }
+      } catch { /* offline ok */ }
+      return;
+    }
+    setQIdx(qIdx + 1);
+    setPickedIdx(null);
+  }
+
+  function rereadBook() {
+    setPhase("read");
+    setPageIdx(0);
+    setQIdx(0);
+    setPickedIdx(null);
+    setCorrectCount(0);
+    setTimeout(() => speak(book.pages[0].text_en), 200);
+  }
+
+  function onTouchStart(e: React.TouchEvent) { touchX.current = e.touches[0].clientX; }
+  function onTouchEnd(e: React.TouchEvent) {
+    if (touchX.current == null) return;
+    const dx = e.changedTouches[0].clientX - touchX.current;
+    touchX.current = null;
+    if (Math.abs(dx) < 50) return;
+    if (dx < 0) goPage(pageIdx + 1);
+    else goPage(pageIdx - 1);
+  }
+
+  const q = book.questions[qIdx];
+  const picked = pickedIdx !== null ? q?.options[pickedIdx] : null;
+  const totalQ = book.questions.length;
+
+  return (
+    <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
+      <BackLink to="/primary/reading" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> 返回书架
+      </BackLink>
+
+      {/* 标题条 */}
+      <div className={`rounded-3xl bg-gradient-to-r ${book.bg} px-5 py-4 text-white shadow-tile`}>
+        <div className="flex items-center gap-3">
+          <span className="text-3xl">{book.cover_emoji}</span>
+          <div className="min-w-0">
+            <div className="text-xs font-bold opacity-90">Level {book.level} · 约 {book.reading_minutes} 分钟</div>
+            <div className="truncate text-lg font-extrabold">{book.title_en}</div>
+            <div className="truncate text-[11px] font-bold opacity-90">{book.title_cn}</div>
+          </div>
+        </div>
+      </div>
+
+      {/* 阶段 1:翻页阅读 */}
+      {phase === "read" && (
+        <section className="mt-4">
+          <div
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
+            className="relative rounded-3xl border-2 border-amber-200 bg-gradient-to-b from-amber-50 to-yellow-50 p-6 shadow-tile dark:border-amber-900/40 dark:from-amber-950/20 dark:to-yellow-950/10"
+          >
+            <div className="grid min-h-[340px] place-items-center text-center">
+              <div>
+                <div className="text-[120px] leading-none md:text-[160px]" aria-hidden>{page.emoji}</div>
+                <div className="mx-auto mt-6 max-w-md rounded-2xl border-2 border-amber-200 bg-white/80 p-4 shadow-sm dark:border-amber-900/40 dark:bg-amber-950/30">
+                  <div className="text-2xl font-extrabold text-amber-900 dark:text-amber-100 md:text-3xl">{page.text_en}</div>
+                  <div className="mt-1 text-sm font-bold text-amber-700 dark:text-amber-200">{page.text_cn}</div>
+                  <button
+                    onClick={() => speak(page.text_en)}
+                    className="mt-3 inline-flex items-center gap-1 rounded-full bg-amber-500 px-3 py-1.5 text-xs font-extrabold text-white shadow-sm hover:bg-amber-600"
+                  >
+                    <Volume2 className="size-3.5" /> 听 Spark 念
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-4 flex items-center gap-2">
+            <button
+              onClick={() => goPage(pageIdx - 1)}
+              disabled={pageIdx === 0}
+              className="inline-flex items-center gap-1 rounded-2xl border-2 border-border bg-card px-3 py-2 text-xs font-bold disabled:opacity-40 hover:bg-muted"
+            >
+              <ChevronLeft className="size-4" /> 上一页
+            </button>
+            <div className="flex-1 text-center text-xs font-bold text-muted-foreground">
+              第 {pageIdx + 1} / {totalPages} 页
+            </div>
+            {!isLast ? (
+              <button
+                onClick={() => goPage(pageIdx + 1)}
+                className="inline-flex items-center gap-1 rounded-2xl bg-primary px-3 py-2 text-xs font-extrabold text-primary-foreground hover:bg-primary/90"
+              >
+                下一页 <ChevronRight className="size-4" />
+              </button>
+            ) : (
+              <button
+                onClick={startQuiz}
+                className="inline-flex items-center gap-1 rounded-2xl bg-gradient-to-r from-amber-500 to-rose-500 px-3 py-2 text-xs font-extrabold text-white shadow-md hover:scale-[1.02]"
+              >
+                完成,开始答题 →
+              </button>
+            )}
+          </div>
+
+          {/* 进度条 */}
+          <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+            <div className="h-full bg-gradient-to-r from-amber-500 to-rose-500 transition-all" style={{ width: `${((pageIdx + 1) / totalPages) * 100}%` }} />
+          </div>
+        </section>
+      )}
+
+      {/* 阶段 2:测试 */}
+      {phase === "quiz" && q && (
+        <section className="mt-4 rounded-3xl border-2 border-border bg-card p-4 shadow-tile">
+          <div className="mb-3 flex items-center justify-between">
+            <div className="text-xs font-bold text-muted-foreground">第 {qIdx + 1} / {totalQ} 题</div>
+            <div className="text-xs font-bold text-emerald-600">已答对 {correctCount}</div>
+          </div>
+          <div className="rounded-2xl bg-muted/30 p-3">
+            <div className="text-base font-extrabold">{q.stem_cn}</div>
+            <div className="mt-1 text-xs font-bold text-muted-foreground">{q.stem_en}</div>
+          </div>
+
+          <div className="mt-3 space-y-2">
+            {q.options.map((opt, i) => {
+              const isPicked = pickedIdx === i;
+              const showState = pickedIdx !== null;
+              return (
+                <button
+                  key={i}
+                  disabled={pickedIdx !== null && !isPicked && !opt.correct}
+                  onClick={() => pick(i)}
+                  className={`w-full rounded-xl border-2 p-3 text-left transition ${
+                    !showState ? "border-border bg-card hover:border-primary hover:bg-primary/5" :
+                    isPicked && opt.correct ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30" :
+                    isPicked && !opt.correct ? "border-rose-500 bg-rose-50 dark:bg-rose-950/30" :
+                    !isPicked && opt.correct ? "border-emerald-300 bg-emerald-50/60 dark:bg-emerald-950/20" :
+                    "border-border bg-card opacity-50"
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="grid size-6 shrink-0 place-items-center rounded-full bg-muted text-[11px] font-extrabold">{String.fromCharCode(65 + i)}</span>
+                    <div className="flex-1">
+                      <div className="text-sm font-bold">{opt.text_en}</div>
+                      <div className="text-[11px] text-muted-foreground">{opt.text_cn}</div>
+                    </div>
+                    {showState && opt.correct && <span className="text-lg">✅</span>}
+                    {isPicked && !opt.correct && <span className="text-lg">💭</span>}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
+          {pickedIdx !== null && picked && (
+            <div className={`mt-3 rounded-2xl p-3 text-sm font-bold ${
+              picked.correct
+                ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-200"
+                : "bg-amber-100 text-amber-800 dark:bg-amber-950/40 dark:text-amber-200"
+            }`}>
+              {picked.correct ? `🌟 完美! ${q.feedback_correct_cn}` : q.feedback_wrong_cn}
+            </div>
+          )}
+
+          <div className="mt-3 flex items-center gap-2">
+            {pickedIdx !== null && !picked?.correct && (
+              <button onClick={retryAnswer} className="inline-flex items-center gap-1 rounded-2xl border-2 border-border bg-card px-3 py-2 text-xs font-bold hover:bg-muted">
+                <RotateCcw className="size-3.5" /> 再试一次
+              </button>
+            )}
+            {pickedIdx !== null && picked?.correct && (
+              <button onClick={nextQuestion} className="flex-1 rounded-2xl bg-gradient-to-r from-amber-500 to-rose-500 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.01]">
+                {qIdx + 1 >= totalQ ? "查看结果 →" : "下一题 →"}
+              </button>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* 阶段 3:总结 */}
+      {phase === "done" && (
+        <section className="mt-4 rounded-3xl bg-gradient-to-br from-amber-100 via-orange-100 to-rose-100 p-6 text-center shadow-tile dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
+          <div className="mx-auto grid size-16 place-items-center rounded-full bg-white/80 text-4xl shadow-md">📖</div>
+          <div className="mt-3 text-lg font-extrabold">读完 "{book.title_en}"!</div>
+          <div className="mt-2 inline-block rounded-full bg-white/70 px-4 py-1.5 text-sm font-bold">
+            测试结果:{correctCount} / {totalQ} {correctCount === totalQ ? "全对!" : ""}
+          </div>
+          <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-rose-200/70 px-3 py-1 text-xs font-bold text-rose-800">
+            <Sparkles className="size-3" /> +5 亲密度 · +10 XP
+          </div>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+            <button onClick={rereadBook} className="rounded-2xl border-2 border-border bg-card px-4 py-2 text-sm font-bold hover:bg-muted">
+              再读一遍
+            </button>
+            <Link to="/primary/reading" className="rounded-2xl bg-gradient-to-r from-amber-500 to-rose-500 px-4 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.02]">
+              返回书架
+            </Link>
+          </div>
+        </section>
+      )}
+    </main>
+  );
+}

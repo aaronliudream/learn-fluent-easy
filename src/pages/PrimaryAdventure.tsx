@@ -206,44 +206,84 @@ export default function PrimaryAdventure() {
     setTimeout(() => nav("/primary"), 2400);
   }
 
+  // 找到当前需要做的下一步(=第一个未完成步骤)。
+  const nextStepIdx = steps.findIndex((s) => !progress[s.kind]);
+  const nextStep = nextStepIdx >= 0 ? steps[nextStepIdx] : null;
+
+  function toggleSfx() {
+    const v = !sfxOn;
+    setSfxEnabled(v);
+    setSfxOnState(v);
+  }
+
+  const isG2 = grade === 2;
+  const gradeQ = isG2 ? "?grade=2" : "";
+  const moduleLinks = [
+    { to: `/primary/phonics${gradeQ}`, emoji: "🔤", label: "字母拼读" },
+    { to: `/primary/sight-words${gradeQ}`, emoji: "🟣", label: "常见小词" },
+    { to: `/primary/listening${gradeQ}`, emoji: "🎧", label: "听一听" },
+    { to: `/primary/roleplays${gradeQ}`, emoji: "🎭", label: "演故事" },
+    { to: `/primary/reading${gradeQ}`, emoji: "📚", label: "读绘本" },
+    ...(isG2 ? [{ to: "/lesson?grade=2", emoji: "📝", label: "G2 课程(30 节)" }] : []),
+  ];
+
+  // 我的进度合计(用于折叠头部小字)
+  const totalDone = (myProgress ?? []).reduce((a, r) => a + r.done, 0);
+  const totalAll = (myProgress ?? []).reduce((a, r) => a + r.total, 0);
+
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 pb-24">
-      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 回到主屏
-      </BackLink>
-
-      {/* G2 — Phonics 已开放,其他模块还在准备 */}
-      {grade === 2 && (
-        <div className="mb-3 space-y-2 rounded-xl border border-emerald-300 bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 p-3 text-sm text-emerald-800 dark:border-emerald-800 dark:from-emerald-950/40 dark:via-teal-950/40 dark:to-cyan-950/40 dark:text-emerald-200">
-          <div className="font-extrabold">✨ 二年级已开放 6 个模块(全部完成!):</div>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>📖 Phonics(25 个新音)</span>
-            <Link to="/primary/phonics?grade=2" className="font-bold underline">去 G2 Phonics →</Link>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>🟣 Sight Words(100 个新词)</span>
-            <Link to="/primary/sight-words?grade=2" className="font-bold underline">去 G2 高频词 →</Link>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>🎧 Listening(20 个新对话)</span>
-            <Link to="/primary/listening?grade=2" className="font-bold underline">去 G2 听力 →</Link>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>🎭 Roleplay(15 个新场景)</span>
-            <Link to="/primary/roleplays?grade=2" className="font-bold underline">去 G2 角色扮演 →</Link>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>📚 Reading(10 本新绘本)</span>
-            <Link to="/primary/reading?grade=2" className="font-bold underline">去 G2 绘本 →</Link>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>📝 Lesson(30 节新课程)</span>
-            <Link to="/lesson?grade=2" className="font-bold underline">去 G2 课程 →</Link>
-          </div>
-          <div className="text-xs opacity-80">🎉 二年级全部就绪!</div>
+      {/* 顶部:返回 + 🔊 + 🏅 + ⚙️ */}
+      <div className="mb-3 flex items-center justify-between">
+        <BackLink to="/primary" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> 回到主屏
+        </BackLink>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={toggleSfx}
+            aria-label={sfxOn ? "关闭声音" : "打开声音"}
+            className="grid size-9 place-items-center rounded-full border border-border bg-card text-muted-foreground transition hover:text-foreground"
+          >
+            {sfxOn ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
+          </button>
+          {isG2 && (
+            <Link
+              to="/primary/badges"
+              aria-label="我的徽章"
+              className="grid size-9 place-items-center rounded-full border border-border bg-card text-muted-foreground transition hover:text-foreground"
+            >
+              <Award className="size-4" />
+            </Link>
+          )}
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              aria-label="设置"
+              className="grid size-9 place-items-center rounded-full border border-border bg-card text-muted-foreground transition hover:text-foreground"
+            >
+              <Settings className="size-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-56">
+              <DropdownMenuLabel>所有模块</DropdownMenuLabel>
+              {moduleLinks.map((m) => (
+                <DropdownMenuItem key={m.to} asChild>
+                  <Link to={m.to} className="cursor-pointer">
+                    <span className="mr-2">{m.emoji}</span>
+                    {m.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+              <DropdownMenuSeparator />
+              <DropdownMenuItem asChild>
+                <Link to={`/primary/grade/${grade}`} className="cursor-pointer">
+                  <span className="mr-2">🗺️</span>完整学习地图
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
-      )}
-      {/* G3-G6 内容尚未补齐 */}
+      </div>
+
+      {/* G3-G6 占位 */}
       {grade > 2 && (
         <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
           <span>✨ 这个年级的完整内容正在准备中。你可以先在一年级和 Spark 一起冒险!</span>
@@ -251,50 +291,104 @@ export default function PrimaryAdventure() {
         </div>
       )}
 
-      {/* Spark 顶栏 + 进度条 */}
-      <section className="rounded-3xl bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 p-5 text-center shadow-tile dark:from-pink-950/40 dark:via-rose-950/40 dark:to-amber-950/40">
-        <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">🦊</div>
-        <p className="mx-auto mt-3 max-w-md text-base font-extrabold leading-snug text-rose-900 dark:text-rose-100">
+      {/* === Spark 卡 + 今日任务主入口 === */}
+      <section className="rounded-3xl bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 p-6 text-center shadow-tile dark:from-pink-950/40 dark:via-rose-950/40 dark:to-amber-950/40">
+        <div className="mx-auto grid size-24 place-items-center rounded-full bg-white/70 text-6xl shadow-md spark-bob">🦊</div>
+        <p className="mx-auto mt-3 max-w-md text-lg font-extrabold leading-snug text-rose-900 dark:text-rose-100">
           {allDone
             ? '"我们今天一起做了好多事!"'
-            : doneCount === 0
-              ? '"我准备好啦,我们出发吧!"'
-              : `"已经做了 ${doneCount} 件啦,再陪 Spark 一下吧!"`}
+            : nextStep
+              ? `"嘿!${nextStep.sparkLine}"`
+              : '"我准备好啦,我们出发吧!"'}
         </p>
-        <div className="mx-auto mt-4 max-w-xs">
-          <div className="flex items-center justify-between text-xs font-bold text-rose-700 dark:text-rose-200">
-            <span>今天的冒险</span>
-            <span>{doneCount}/{steps.length}</span>
+
+        {!loading && nextStep && !allDone && (
+          <div className="mx-auto mt-4 max-w-sm rounded-2xl border-2 border-amber-300 bg-white/90 p-4 text-left shadow-md dark:border-amber-700 dark:bg-card/90">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300">
+              <Star className="mr-1 inline size-3 fill-current" />
+              今日主任务 · 第 {nextStepIdx + 1} 步 / {steps.length}
+            </div>
+            <div className="mt-1 flex items-center gap-2">
+              <span className="text-3xl">{nextStep.emoji}</span>
+              <h1 className="text-xl font-extrabold leading-tight text-rose-900 dark:text-rose-100">{nextStep.title}</h1>
+            </div>
+            <div className="mt-1 text-xs font-bold text-muted-foreground">约 {nextStep.estMinutes} 分钟</div>
+            <button
+              onClick={() => go(nextStep)}
+              disabled={nextStep.placeholder}
+              className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 px-6 py-3 text-base font-extrabold text-white shadow-tile transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0"
+            >
+              <Play className="size-5 fill-white" /> {nextStep.cta} →
+            </button>
+            <button
+              onClick={() => confirmStep(nextStep)}
+              className="mt-2 w-full text-[11px] font-bold text-muted-foreground hover:text-foreground"
+            >
+              我做完了 ✓
+            </button>
           </div>
-          <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-white/60">
-            <div
-              className="h-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 transition-all"
-              style={{ width: `${steps.length ? (doneCount / steps.length) * 100 : 0}%` }}
-            />
+        )}
+
+        {!loading && allDone && (
+          <div className="mx-auto mt-4 max-w-sm rounded-2xl border-2 border-emerald-300 bg-white/90 p-4 text-center shadow-md dark:border-emerald-700 dark:bg-card/90">
+            <div className="text-3xl">🎉</div>
+            <div className="mt-1 text-lg font-extrabold text-emerald-700 dark:text-emerald-300">今天的冒险完成啦!</div>
+            <div className="mt-3 flex flex-col gap-2">
+              <button
+                onClick={finishAdventure}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 px-5 py-2.5 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5"
+              >
+                <Sparkles className="size-4" /> 喂饱 Spark · 休息一下
+              </button>
+              {isG2 && (
+                <Link
+                  to="/lesson?grade=2"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-rose-300 bg-card px-5 py-2.5 text-sm font-extrabold text-rose-700 dark:text-rose-300"
+                >
+                  🚀 继续闯关挑战
+                </Link>
+              )}
+            </div>
           </div>
+        )}
+
+        {/* 副信息:今日冒险 + 火箭齿轮(G2) */}
+        <div className="mx-auto mt-4 text-xs font-bold text-rose-700 dark:text-rose-200">
+          今天的冒险 {doneCount} / {steps.length}
+          {isG2 && <> · 🚀 {g2LessonsDone} / 30 齿轮</>}
         </div>
       </section>
 
-      {/* 我的进度 — 5 个主路径模块 */}
-      {myProgress && (
-        <section className="mt-4 rounded-2xl border border-border bg-card p-3 shadow-sm">
-          <div className="mb-2 flex items-center gap-1.5 text-xs font-bold text-muted-foreground">
-            <span className="text-sm">📊</span>
-            <span>你的进度</span>
-          </div>
-          <ul className="space-y-1.5">
-            {myProgress.map((r) => {
-              const pct = r.total > 0 ? Math.min(100, (r.done / r.total) * 100) : 0;
+      {/* === Adventure 5 步精简单行列表 === */}
+      {!loading && steps.length > 0 && (
+        <section className="mt-5 rounded-2xl border border-border bg-card p-3 shadow-sm">
+          <div className="mb-2 px-1 text-xs font-bold text-muted-foreground">今天的冒险</div>
+          <ul className="divide-y divide-border">
+            {steps.map((step, idx) => {
+              const done = !!progress[step.kind];
+              const isCurrent = idx === nextStepIdx;
+              const clickable = isCurrent && !step.placeholder;
+              const handle = () => clickable && go(step);
               return (
-                <li key={r.label} className="flex h-7 items-center gap-2 text-[12px]">
-                  <span className="w-4 text-center">{r.emoji}</span>
-                  <span className="w-16 shrink-0 font-bold">{r.label}</span>
-                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
-                    <div className={`h-full bg-gradient-to-r ${r.color} transition-all`} style={{ width: `${pct}%` }} />
-                  </div>
-                  <span className="w-20 shrink-0 text-right tabular-nums font-bold text-muted-foreground">
-                    {r.comingSoon ? "📦 准备中" : `${r.done} / ${r.total}`}
-                  </span>
+                <li key={step.kind}>
+                  <button
+                    type="button"
+                    onClick={handle}
+                    disabled={!clickable}
+                    className={`flex w-full items-center gap-3 px-1 py-2 text-left text-sm transition ${
+                      done
+                        ? "text-emerald-700 dark:text-emerald-400"
+                        : isCurrent
+                          ? "font-extrabold text-rose-700 hover:bg-rose-50 dark:text-rose-300 dark:hover:bg-rose-950/30"
+                          : "text-muted-foreground"
+                    } ${clickable ? "cursor-pointer rounded-lg" : "cursor-default"}`}
+                  >
+                    <span className="w-5 text-center">
+                      {done ? <Check className="mx-auto size-4 stroke-emerald-600" /> : isCurrent ? "📍" : <span className="opacity-40">{step.emoji}</span>}
+                    </span>
+                    <span className="flex-1 truncate">{step.title}</span>
+                    {isCurrent && <span className="text-[10px] font-bold uppercase tracking-wider text-rose-500">当前</span>}
+                  </button>
                 </li>
               );
             })}
@@ -302,147 +396,55 @@ export default function PrimaryAdventure() {
         </section>
       )}
 
-      {/* 快捷探索工具栏 — 自由学习入口,不参与每日 4 步 */}
-      <section className="mt-5">
-        <div className="mb-2 flex items-center justify-between px-1">
-          <h2 className="text-sm font-bold tracking-wider text-muted-foreground">
-            想玩什么?
-          </h2>
-        </div>
-        <div className="grid grid-cols-5 gap-2 sm:gap-3">
-          {(() => { const gradeQ = grade === 2 ? "?grade=2" : ""; return [
-            { to: "/primary/phonics",    emoji: "🔤", label: "读字母", grad: "from-sky-400 to-indigo-400" },
-            { to: "/primary/sight-words",emoji: "🟣", label: "小词卡", grad: "from-violet-400 to-fuchsia-400" },
-            { to: "/primary/roleplays",  emoji: "🎭", label: "演一段", grad: "from-rose-400 to-pink-400" },
-            { to: "/primary/listening",  emoji: "🎧", label: "听聊天", grad: "from-amber-400 to-orange-400" },
-            { to: "/primary/reading",    emoji: "📚", label: "读绘本", grad: "from-emerald-400 to-teal-400" },
-          ].map((it) => ({ ...it, to: `${it.to}${gradeQ}` })); })().map((it) => (
-            <Link
-              key={it.to}
-              to={it.to}
-              className={`group flex flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-br ${it.grad} px-2 py-3 text-white shadow-sm transition hover:-translate-y-0.5`}
-            >
-              <span className="grid size-12 place-items-center rounded-xl bg-white/25 text-3xl">{it.emoji}</span>
-              <span className="text-[15px] font-extrabold leading-none">{it.label}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* 4 步剧情卡 */}
-      <section className="mt-5 space-y-3">
-        {loading && (
-          <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            Spark 正在准备今天的冒险…
-          </div>
-        )}
-        {!loading && steps.map((step, idx) => {
-          const done = !!progress[step.kind];
-          const isCurrent = !done && steps.slice(0, idx).every((s) => progress[s.kind]);
-          const isMain = idx === 0; // 第 1 步:今日主任务大卡
-          return (
-            <article
-              key={step.kind}
-              className={`rounded-3xl border-2 transition ${
-                isMain && !done ? "p-5" : "p-4"
-              } ${
-                done
-                  ? "border-emerald-300 bg-gradient-to-br from-emerald-50 to-teal-50 dark:border-emerald-700 dark:from-emerald-950/30 dark:to-teal-950/30"
-                  : isMain
-                    ? "border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 dark:border-amber-700 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30"
-                    : isCurrent
-                      ? "border-rose-300 bg-card shadow-tile"
-                      : "border-border bg-card opacity-70"
-              }`}
-              style={
-                isMain && !done
-                  ? { boxShadow: "0 0 0 3px rgba(255, 214, 107, 0.4), 0 8px 24px -8px rgba(255, 180, 0, 0.35)", minHeight: 200 }
-                  : undefined
-              }
-            >
-              {isMain && !done && (
-                <div className="mb-2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-sm">
-                  <Star className="size-3 fill-white" /> 今日主任务
-                </div>
-              )}
-              <div className="flex items-start gap-3">
-                <div className={`grid shrink-0 place-items-center rounded-2xl shadow-sm ${
-                  isMain && !done ? "size-16 text-3xl" : "size-12 text-2xl"
-                } ${done ? "bg-gradient-to-br from-emerald-400 to-teal-400" : "bg-gradient-to-br from-amber-300 to-rose-300"}`}>
-                  {done ? <Check className="size-6 stroke-white" /> : step.emoji}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                    第 {idx + 1} 步 · {step.estMinutes} 分钟左右
-                  </div>
-                  <h2 className={`font-extrabold leading-tight ${isMain && !done ? "text-xl" : "text-base"}`}>{step.title}</h2>
-                  <p className={`mt-1 text-rose-700 dark:text-rose-300 ${isMain && !done ? "text-base" : "text-sm"}`}>"{step.sparkLine}"</p>
-                </div>
-              </div>
-
-              {!done && (
-                <div className="mt-3 flex items-center justify-end gap-2">
-                  {step.placeholder && step.fallbackTo && (
-                    <Link
-                      to={step.fallbackTo}
-                      className="mr-auto text-[11px] font-bold text-amber-700 underline-offset-2 hover:underline dark:text-amber-300"
-                    >
-                      📦 {step.fallbackLabel ?? "去复习 G1 内容"} →
-                    </Link>
-                  )}
-                  <button
-                    onClick={() => confirmStep(step)}
-                    className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-bold text-muted-foreground transition hover:text-foreground"
-                    aria-label={`已经做完${step.title}`}
-                  >
-                    我做完了 ✓
-                  </button>
-                  <button
-                    onClick={() => go(step)}
-                    disabled={!isCurrent || step.placeholder}
-                    className={`inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 font-extrabold text-white shadow-md transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0 ${
-                      isMain ? "px-6 py-3 text-base" : "px-4 py-2 text-sm"
-                    }`}
-                  >
-                    <Play className={`fill-white ${isMain ? "size-5" : "size-4"}`} /> {step.cta}
-                  </button>
-                </div>
-              )}
-              {done && (
-                <div className="mt-2 text-right text-xs font-bold text-emerald-600 dark:text-emerald-400">
-                  已完成 ✓
-                </div>
-              )}
-            </article>
-          );
-        })}
-      </section>
-
-      {/* 收尾按钮 — 全部完成才能点 */}
-      {!loading && steps.length > 0 && (
-        <div className="mt-6 text-center">
+      {/* === 我的进度(默认折叠)=== */}
+      {myProgress && (
+        <section className="mt-4 rounded-2xl border border-border bg-card shadow-sm">
           <button
-            onClick={finishAdventure}
-            disabled={!allDone}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 px-8 py-4 text-lg font-extrabold text-white shadow-tile transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0"
+            type="button"
+            onClick={() => setProgressOpen((v) => !v)}
+            className="flex w-full items-center justify-between px-3 py-2.5 text-xs font-bold text-muted-foreground"
+            aria-expanded={progressOpen}
           >
-            <Sparkles className="size-5" />
-            {allDone ? "完成今天的冒险,喂饱 Spark!" : `还有 ${steps.length - doneCount} 件事 ✨`}
+            <span className="inline-flex items-center gap-1.5">
+              <span className="text-sm">📊</span>
+              我的进度
+              <span className="ml-1 text-muted-foreground/70">· {totalDone} / {totalAll}</span>
+            </span>
+            {progressOpen ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
           </button>
-          {pet && (
-            <p className="mt-2 text-xs font-bold text-muted-foreground">
-              {moonTitle(pet.bond).emoji} Spark · {moonTitle(pet.bond).label} · {pet.bond}/100
-            </p>
+          {progressOpen && (
+            <ul className="space-y-1.5 px-3 pb-3">
+              {myProgress.map((r) => {
+                const pct = r.total > 0 ? Math.min(100, (r.done / r.total) * 100) : 0;
+                return (
+                  <li key={r.label} className="flex h-7 items-center gap-2 text-[12px]">
+                    <span className="w-4 text-center">{r.emoji}</span>
+                    <span className="w-16 shrink-0 font-bold">{r.label}</span>
+                    <div className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
+                      <div className={`h-full bg-gradient-to-r ${r.color} transition-all`} style={{ width: `${pct}%` }} />
+                    </div>
+                    <span className="w-20 shrink-0 text-right tabular-nums font-bold text-muted-foreground">
+                      {r.comingSoon ? "📦 准备中" : `${r.done} / ${r.total}`}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
           )}
-        </div>
+        </section>
       )}
 
-      {/* 退路 — 偶尔孩子想自己挑 */}
-      <div className="mt-6 text-center">
-        <Link to={`/primary/grade/${grade}`} className="text-xs text-muted-foreground underline-offset-2 hover:underline">
-          想自己选?去看全部 →
-        </Link>
-      </div>
+      {pet && (
+        <p className="mt-4 text-center text-xs font-bold text-muted-foreground">
+          {moonTitle(pet.bond).emoji} Spark · {moonTitle(pet.bond).label} · {pet.bond}/100
+        </p>
+      )}
+
+      {loading && (
+        <div className="mt-5 rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
+          Spark 正在准备今天的冒险…
+        </div>
+      )}
     </main>
   );
 }

@@ -10,11 +10,22 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 
 const LEVEL_META: Record<1 | 2 | 3, { label: string; sub: string }> = {
-  1: { label: "Level 1 · 入门", sub: "每页 3-4 词" },
-  2: { label: "Level 2 · 中等", sub: "每页 5-6 词" },
-  3: { label: "Level 3 · 挑战", sub: "短句子" },
+  1: { label: "第 1 阶段 · 简单", sub: "每页 3-4 词" },
+  2: { label: "第 2 阶段 · 中等", sub: "每页 5-6 词" },
+  3: { label: "第 3 阶段 · 挑战", sub: "短句子" },
 };
-const DIFFICULTY_LABEL = { 1: "入门", 2: "中等", 3: "挑战" } as const;
+const DIFFICULTY_LABEL = { 1: "简单", 2: "中等", 3: "挑战" } as const;
+
+// 散落星星位置(克制装饰,不动画)
+const BG_STARS = [
+  { top: "8%", left: "6%", size: 14 },
+  { top: "22%", left: "92%", size: 10 },
+  { top: "40%", left: "4%", size: 12 },
+  { top: "55%", left: "88%", size: 16 },
+  { top: "70%", left: "10%", size: 10 },
+  { top: "82%", left: "94%", size: 14 },
+  { top: "92%", left: "20%", size: 12 },
+];
 
 const LOCAL_KEY = "primary_storybook_completion_v1";
 const HINT_DISMISSED_KEY = "primary_storybook_hint_dismissed_v1";
@@ -114,7 +125,25 @@ export default function PrimaryStoryBooks() {
   }, []);
 
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6">
+    <main
+      className="relative mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6"
+      style={{ backgroundColor: "#f4f0fa" }}
+    >
+      {/* 背景散落金色小星星 */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+        {BG_STARS.map((s, i) => (
+          <svg
+            key={i}
+            className="absolute opacity-30"
+            style={{ top: s.top, left: s.left, width: s.size, height: s.size }}
+            viewBox="0 0 24 24"
+            fill="#f5b400"
+          >
+            <path d="M12 2l2.6 6.6L21.5 9l-5.2 4.5L18 21l-6-3.6L6 21l1.7-7.5L2.5 9l6.9-.4L12 2z" />
+          </svg>
+        ))}
+      </div>
+      <div className="relative">
       <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> 返回小学专区
       </BackLink>
@@ -177,7 +206,7 @@ export default function PrimaryStoryBooks() {
               <span className="text-sm font-extrabold">{g.meta.label}</span>
               <span className="text-xs font-bold text-muted-foreground">· {g.items.length} 本 · {g.meta.sub}</span>
             </div>
-            {/* 书架样式:底部一条木色横条 */}
+            {/* 书架样式:底部一条木色横条 + Spark 角落小头像 */}
             <div className="relative">
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {g.items.map(b => {
@@ -187,25 +216,48 @@ export default function PrimaryStoryBooks() {
                   const fullScore = rec && rec.questions_total > 0 && rec.questions_correct === rec.questions_total;
                   const isJustUnlocked = unlocked && !done && b.id === justUnlockedId;
                   const card = (
-                    <div className={`group relative aspect-[3/4] overflow-hidden rounded-xl rounded-l-sm border-l-4 border-amber-900/40 p-3 text-left shadow-[4px_4px_0_rgba(0,0,0,0.15)] transition ${
-                      unlocked
-                        ? `bg-gradient-to-br ${b.bg} text-white hover:-translate-y-1 hover:shadow-[6px_6px_0_rgba(0,0,0,0.2)] ${isJustUnlocked ? "animate-scale-in ring-4 ring-amber-300" : ""}`
-                        : "bg-muted/70 text-muted-foreground"
-                    }`}>
+                    <div
+                      className={`group relative aspect-[5/7] overflow-hidden rounded-xl rounded-l-sm border-l-4 border-amber-900/40 p-3 text-left transition bg-gradient-to-br ${b.bg} text-white ${
+                        unlocked
+                          ? `hover:-translate-y-1 ${isJustUnlocked ? "animate-scale-in ring-4 ring-amber-300" : ""}`
+                          : "opacity-40 saturate-75"
+                      }`}
+                      style={
+                        unlocked
+                          ? { boxShadow: "0 0 24px rgba(255, 214, 107, 0.5), 4px 4px 0 rgba(0,0,0,0.15)" }
+                          : { boxShadow: "4px 4px 0 rgba(0,0,0,0.15)" }
+                      }
+                    >
                       <div className="flex items-start justify-between">
                         {!unlocked
-                          ? <Lock className="size-5 text-amber-700/70 dark:text-amber-300/70" strokeWidth={2.5} />
+                          ? <Lock className="size-5 text-white drop-shadow" strokeWidth={2.5} />
                           : isJustUnlocked
                             ? <LockOpen className="size-5 animate-scale-in" strokeWidth={2.5} />
                             : <span className="rounded-full bg-white/25 px-1.5 py-0.5 text-[9px] font-bold backdrop-blur-sm">Lv.{b.level}</span>}
-                        {done && <span className="text-base">{fullScore ? "🌟" : "✓"}</span>}
+                        {done && (
+                          <span
+                            className="grid size-6 place-items-center rounded-full bg-white/90 text-base shadow"
+                            title={fullScore ? "满分" : "已读完"}
+                          >
+                            ⭐
+                          </span>
+                        )}
                       </div>
-                      <div className={`mt-2 text-center text-3xl ${unlocked ? "" : "opacity-40 grayscale"}`}>{b.cover_emoji}</div>
-                      <div className="absolute inset-x-2 bottom-2">
-                        <div className="line-clamp-2 text-[11px] font-extrabold leading-tight">{b.title_en}</div>
+                      <div className="mt-2 text-center text-4xl drop-shadow-sm">{b.cover_emoji}</div>
+                      {/* 页数 + 时长 标签(右下,在书名上方,绝对定位避开重叠 → 改放卡片顶部右侧上方区域不够,放右下角与书名对齐) */}
+                      <div className="absolute bottom-14 right-2 rounded-full bg-white/70 px-1.5 py-0.5 text-[10px] font-bold text-amber-900 shadow-sm backdrop-blur-sm">
+                        {b.pages.length} 页 · {b.reading_minutes} 分钟
+                      </div>
+                      <div className="absolute inset-x-2 bottom-2 text-center">
+                        <div
+                          className="line-clamp-2 text-[17px] font-extrabold leading-tight drop-shadow-sm"
+                          style={{ fontFamily: 'Fredoka, Quicksand, "Comic Sans MS", system-ui, sans-serif' }}
+                        >
+                          {b.title_en}
+                        </div>
                         {unlocked
-                          ? <div className="line-clamp-1 text-[10px] opacity-90">{b.title_cn}</div>
-                          : <div className="line-clamp-1 text-[10px] font-bold text-amber-700/80 dark:text-amber-300/80">读完上一本解锁</div>}
+                          ? <div className="line-clamp-1 text-[13px] opacity-95">{b.title_cn}</div>
+                          : <div className="line-clamp-1 text-[11px] font-bold text-white/90">🔒 读完上一本解锁</div>}
                       </div>
                       {isJustUnlocked && (
                         <div className="absolute left-1/2 top-1 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-2 py-0.5 text-[10px] font-extrabold text-amber-700 shadow-md animate-fade-in">
@@ -226,8 +278,19 @@ export default function PrimaryStoryBooks() {
                   );
                 })}
               </div>
-              {/* 木色书架横条 */}
-              <div className="mt-1 h-2 rounded-b-md bg-gradient-to-b from-amber-700 to-amber-900 shadow-md" />
+              {/* 木色书架横条 + 木纹 + 角落 Spark */}
+              <div className="relative mt-1 h-3 rounded-b-md bg-gradient-to-b from-amber-700 to-amber-900 shadow-md overflow-hidden">
+                <div
+                  className="absolute inset-0 opacity-[0.05]"
+                  style={{
+                    backgroundImage:
+                      "repeating-linear-gradient(90deg, #000 0 1px, transparent 1px 6px), repeating-linear-gradient(90deg, transparent 0 24px, #000 24px 25px)",
+                  }}
+                />
+              </div>
+              <div className="pointer-events-none absolute -bottom-1 right-1 grid size-10 place-items-center rounded-full bg-white text-2xl shadow-md ring-2 ring-amber-300">
+                🦊
+              </div>
             </div>
           </div>
         ))}
@@ -274,6 +337,7 @@ export default function PrimaryStoryBooks() {
           </div>
         </div>
       )}
+      </div>
     </main>
   );
 }

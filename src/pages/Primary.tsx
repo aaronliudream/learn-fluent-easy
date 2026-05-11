@@ -6,6 +6,10 @@ import { supabase } from "@/integrations/supabase/client";
 import { StreakBanner } from "@/components/StreakBanner";
 import MonthlyPostcard from "@/components/pet/MonthlyPostcard";
 import EvolutionTree from "@/components/pet/EvolutionTree";
+import { PHONICS_ITEMS } from "@/data/primaryPhonics";
+import { SIGHT_WORD_ITEMS } from "@/data/primarySightWords";
+import { getPhonicsMasteryMap } from "@/lib/phonicsMastery";
+import { getSightWordMasteryMap } from "@/lib/sightWordMastery";
 import {
   Dialog,
   DialogContent,

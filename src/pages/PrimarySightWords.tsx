@@ -13,6 +13,7 @@ import {
   isSightWordDue,
   type SightWordMasteryMap,
 } from "@/lib/sightWordMastery";
+import { getCurrentGrade, getSightWordsPolicy } from "@/lib/sightWordsGradeGate";
 
 /**
  * Sight Words 主页 — 100 词 / 4 组(Fry's),与 Phonics 主页同构.
@@ -23,6 +24,8 @@ export default function PrimarySightWords() {
   const nav = useNavigate();
   const [mastery, setMastery] = useState<SightWordMasteryMap>(new Map());
   const [loading, setLoading] = useState(true);
+  const grade = getCurrentGrade();
+  const policy = getSightWordsPolicy(grade);
 
   const groupedItems = useMemo(() => {
     const byGroup = new Map<string, SightWordItem[]>();
@@ -33,8 +36,15 @@ export default function PrimarySightWords() {
     byGroup.forEach((arr) => arr.sort((a, b) => a.sortOrder - b.sortOrder));
     return [...SIGHT_WORD_GROUPS]
       .sort((a, b) => a.sortOrder - b.sortOrder)
+      .slice(0, policy.visibleGroupCount)
       .map((g) => ({ group: g, items: byGroup.get(g.id) ?? [] }));
-  }, []);
+  }, [policy.visibleGroupCount]);
+
+  // 年级范围内的全部词(用于进度统计 / 复习池)
+  const visibleItems = useMemo(
+    () => groupedItems.flatMap((g) => g.items),
+    [groupedItems]
+  );
 
   useEffect(() => {
     document.title = "Spark 的高频词冒险 | FluentPath";
@@ -80,8 +90,8 @@ export default function PrimarySightWords() {
   const nextNew = currentGroup?.items.find(
     (it) => (mastery.get(it.id)?.mastery_level ?? 0) === 0
   );
-  const dueItems = SIGHT_WORD_ITEMS.filter((w) => isSightWordDue(mastery.get(w.id))).slice(0, 50);
-  const masteredCount = SIGHT_WORD_ITEMS.filter(
+  const dueItems = visibleItems.filter((w) => isSightWordDue(mastery.get(w.id))).slice(0, 50);
+  const masteredCount = visibleItems.filter(
     (w) => (mastery.get(w.id)?.mastery_level ?? 0) >= 2
   ).length;
   const canChallengeGroup =
@@ -106,19 +116,28 @@ export default function PrimarySightWords() {
       {/* Spark 顶卡 */}
       <section className="rounded-3xl bg-gradient-to-br from-sky-200 via-cyan-200 to-emerald-200 p-5 text-center shadow-tile dark:from-sky-950/40 dark:via-cyan-950/40 dark:to-emerald-950/40">
         <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">🦊</div>
+        {policy.reviewMode && (
+          <div className="mx-auto mb-2 inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-amber-800 dark:bg-amber-950/60 dark:text-amber-200">
+            🔁 复习模块 · {grade} 年级
+          </div>
+        )}
         <p className="mx-auto mt-3 max-w-md text-base font-extrabold leading-snug text-sky-900 dark:text-sky-100">
           {todayPlanCount === 0
-            ? '"全部高频词都认识啦!Spark 太骄傲啦~"'
+            ? policy.reviewMode
+              ? '"这些词你都认识啦,继续保持!"'
+              : '"全部高频词都认识啦!Spark 太骄傲啦~"'
+            : policy.reviewMode
+            ? `"今天 Spark 想和你复习 ${Math.min(todayPlanCount, 5)} 个高频词!"`
             : `"今天 Spark 想和你学 ${Math.min(todayPlanCount, 5)} 个高频词!"`}
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-sky-700 dark:text-sky-200">
-          <span>已掌握 {masteredCount} / {SIGHT_WORD_ITEMS.length}</span>
+          <span>已掌握 {masteredCount} / {visibleItems.length}</span>
           <span>当前 {currentGroup?.group.groupName}</span>
         </div>
         <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/60">
           <div
             className="h-full bg-gradient-to-r from-sky-500 via-cyan-500 to-emerald-500 transition-all"
-            style={{ width: `${(masteredCount / SIGHT_WORD_ITEMS.length) * 100}%` }}
+            style={{ width: `${visibleItems.length ? (masteredCount / visibleItems.length) * 100 : 0}%` }}
           />
         </div>
       </section>
@@ -157,7 +176,7 @@ export default function PrimarySightWords() {
         )}
         {!nextNew && dueItems.length === 0 && !canChallengeGroup && !loading && (
           <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            🎉 你已经掌握了全部 {SIGHT_WORD_ITEMS.length} 个高频词!
+            🎉 你已经掌握了全部 {visibleItems.length} 个高频词!
           </div>
         )}
         {loading && (

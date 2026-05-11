@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { speak, stopSpeaking } from "@/lib/speak";
 import { pickStoryVoice } from "@/lib/storyVoice";
 import type { StoryBookPage } from "@/data/primaryStoryBooks";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 function speakPage(page: StoryBookPage) {
   const v = pickStoryVoice(page.speaker);
@@ -33,6 +34,53 @@ export default function PrimaryStoryBookRead() {
   const [qIdx, setQIdx] = useState(0);
   const [pickedIdx, setPickedIdx] = useState<number | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
+
+  // 让小月只回答"当前页/当前题"相关的问题。snapshot 随翻页/换题更新。
+  const currentPage = book?.pages[pageIdx];
+  const currentQuestion = phase === "quiz" ? book?.questions[qIdx] : null;
+  useRegisterAssistant(
+    book
+      ? {
+          context: "primary_storybook_read",
+          ref: `${book.id}:${phase}:${phase === "quiz" ? qIdx : pageIdx}`,
+          topic: `绘本《${book.title_cn}》${phase === "quiz" ? `· 第 ${qIdx + 1} 题` : `· 第 ${pageIdx + 1} 页`}`,
+          mode: "free",
+          unlocked: true,
+          pageTitle: `💬 小月 · 《${book.title_cn}》答疑`,
+          snapshot: {
+            hint:
+              phase === "quiz"
+                ? "用户正在做这本绘本的读后小测题。请只针对当前题目里的英文做解释(单词意思、读音、句子结构、为什么这个选项对/错),不要直接说出答案,可以用提示引导。"
+                : "用户正在读这本绘本的当前一页。请只回答和这一页内容相关的问题(单词意思、句子怎么读、画面表达的意思),不要回答和这页无关的英语问题,也不要剧透后面的页面。",
+            book: { id: book.id, title_cn: book.title_cn, title_en: book.title_en, total_pages: book.pages.length },
+            phase,
+            ...(currentPage
+              ? {
+                  current_page: {
+                    page_number: currentPage.page,
+                    text_en: currentPage.text_en,
+                    text_cn: currentPage.text_cn,
+                    speaker: currentPage.speaker ?? "kid",
+                  },
+                }
+              : {}),
+            ...(currentQuestion
+              ? {
+                  current_question: {
+                    stem_cn: currentQuestion.stem_cn,
+                    stem_en: currentQuestion.stem_en,
+                    options: currentQuestion.options.map((o) => ({
+                      en: o.text_en,
+                      cn: o.text_cn,
+                      correct: o.correct,
+                    })),
+                  },
+                }
+              : {}),
+          },
+        }
+      : null,
+  );
 
   // swipe handling
   const touchX = useRef<number | null>(null);

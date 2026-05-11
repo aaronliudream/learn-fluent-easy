@@ -202,12 +202,12 @@ export default function PrimaryStoryBooks() {
 
       {/* 书架 */}
       <section className="mt-6 space-y-6">
-        <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">📚 你的绘本书架</div>
+        <div className="text-xs font-bold uppercase tracking-wider text-amber-200/80">📚 你的绘本书架</div>
         {grouped.map(g => (
           <div key={g.lv}>
             <div className="mb-2 flex items-end gap-2">
-              <span className="text-sm font-extrabold">{g.meta.label}</span>
-              <span className="text-xs font-bold text-muted-foreground">· {g.items.length} 本 · {g.meta.sub}</span>
+              <span className="text-sm font-extrabold text-amber-100">{g.meta.label}</span>
+              <span className="text-xs font-bold text-amber-200/70">· {g.items.length} 本 · {g.meta.sub}</span>
             </div>
             {/* 书架样式:底部一条木色横条 + Spark 角落小头像 */}
             <div className="relative">

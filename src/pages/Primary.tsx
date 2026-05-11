@@ -242,11 +242,12 @@ export default function Primary() {
               // the national-curriculum default (G3, when English officially starts).
               const recId = recommendedGrade ?? 3;
               const isRecommended = g.id === recId;
+              const isPreview = g.id > 1; // G2-G6 内容尚在准备中
               return (
                 <button
                   key={g.id}
                   onClick={() => pickGrade(g.id)}
-                  className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5`}
+                  className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5 ${isPreview ? "saturate-50" : ""}`}
                 >
                   <div className="text-3xl">{g.emoji}</div>
                   {isRecommended && (
@@ -254,8 +255,16 @@ export default function Primary() {
                       ⭐ 推荐
                     </span>
                   )}
+                  {isPreview && !isRecommended && (
+                    <span className="absolute right-1.5 top-1.5 rounded-full bg-white/90 px-1.5 py-0.5 text-[10px] font-extrabold text-amber-700 shadow-sm">
+                      📦 准备中
+                    </span>
+                  )}
                   <div className="absolute inset-x-3 bottom-3">
                     <div className="text-sm font-extrabold text-white drop-shadow">{g.name_cn}</div>
+                    <div className="text-[10px] font-bold text-white/90 drop-shadow">
+                      {isPreview ? "📦 准备中" : "✨ 完整开放"}
+                    </div>
                   </div>
                 </button>
               );

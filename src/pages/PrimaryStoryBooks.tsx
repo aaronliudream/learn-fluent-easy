@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, Lock, LockOpen, BookOpen, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
 import {
   PRIMARY_STORY_BOOKS,
-  getBooksSorted,
   type StoryBook,
 } from "@/data/primaryStoryBooks";
+import { PRIMARY_STORY_BOOKS_G2 } from "@/data/primaryStoryBooksG2";
 import { supabase } from "@/integrations/supabase/client";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
@@ -37,6 +37,10 @@ function loadLocal(): Record<string, CompRec> {
 }
 
 export default function PrimaryStoryBooks() {
+  const [sp] = useSearchParams();
+  const isG2 = sp.get("grade") === "2";
+  const DATA = isG2 ? PRIMARY_STORY_BOOKS_G2 : PRIMARY_STORY_BOOKS;
+  const gradeQ = isG2 ? "?grade=2" : "";
   const [completed, setCompleted] = useState<Record<string, CompRec>>(() => loadLocal());
   // 锁定卡片点击时弹的 Spark 气泡(指向当前可读的那本)
   const [lockedHint, setLockedHint] = useState<{ blocked: StoryBook; nextOpen: StoryBook | null } | null>(null);
@@ -71,7 +75,10 @@ export default function PrimaryStoryBooks() {
     })();
   }, []);
 
-  const sorted = useMemo(() => getBooksSorted(), []);
+  const sorted = useMemo(
+    () => [...DATA].sort((a, b) => a.sortOrder - b.sortOrder),
+    [DATA]
+  );
   const completedIds = useMemo(() => new Set(Object.keys(completed)), [completed]);
 
   // 让小月在书架页就能聊"这里是哪些书 / 哪本可读 / 该挑哪本"。
@@ -151,11 +158,11 @@ export default function PrimaryStoryBooks() {
     return ([1, 2, 3] as const).map(lv => ({
       lv,
       meta: LEVEL_META[lv],
-      items: PRIMARY_STORY_BOOKS
+      items: DATA
         .filter(b => b.level === lv)
         .sort((a, b) => a.sortOrder - b.sortOrder),
     }));
-  }, []);
+  }, [DATA]);
 
   return (
     <main
@@ -344,6 +351,17 @@ export default function PrimaryStoryBooks() {
       <p className="mt-8 flex items-center justify-center gap-1 text-[11px] text-amber-200/70">
         <BookOpen className="size-3" /> 一本一本读,下一本就会亮起来!
       </p>
+
+      {/* G1 全部读完 → 解锁 G2 入口 */}
+      {!isG2 && totalDone >= sorted.length && sorted.length > 0 && (
+        <Link
+          to="/primary/reading?grade=2"
+          className="mt-4 block rounded-3xl bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 p-4 text-center text-white shadow-tile transition hover:-translate-y-0.5"
+        >
+          <div className="text-base font-extrabold">🎉 G1 绘本全部读完!</div>
+          <div className="mt-1 text-xs opacity-90">去解锁 G2 绘本 →</div>
+        </Link>
+      )}
 
       {/* 书架底部 Spark 陪伴语 */}
       <div className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-bold text-amber-100 backdrop-blur-sm">

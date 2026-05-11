@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Volume2, RotateCcw, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { findBook } from "@/data/primaryStoryBooks";
+import { findBookG2 } from "@/data/primaryStoryBooksG2";
 import { supabase } from "@/integrations/supabase/client";
 import { speak, stopSpeaking } from "@/lib/speak";
 import { pickStoryVoice } from "@/lib/storyVoice";
@@ -27,7 +28,7 @@ type Phase = "read" | "quiz" | "done";
 
 export default function PrimaryStoryBookRead() {
   const { id = "" } = useParams();
-  const book = useMemo(() => findBook(id), [id]);
+  const book = useMemo(() => findBook(id) ?? findBookG2(id), [id]);
 
   const [phase, setPhase] = useState<Phase>("read");
   const [pageIdx, setPageIdx] = useState(0); // 0-based

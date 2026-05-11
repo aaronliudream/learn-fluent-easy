@@ -84,10 +84,10 @@ export default function PrimaryAdventure() {
         ]);
         setMyProgress([
           { emoji: "🔤", label: "字母拼读", done: ph.count ?? 0, total: PHONICS_ITEMS.length, color: "from-sky-400 to-indigo-400" },
-          { emoji: "🟣", label: "单词识别", done: sw.count ?? 0, total: SIGHT_WORD_ITEMS.length, color: "from-violet-400 to-fuchsia-400" },
-          { emoji: "🎧", label: "听力理解", done: ls.count ?? 0, total: PRIMARY_LISTENING_DIALOGUES.length, color: "from-amber-400 to-orange-400" },
+          { emoji: "🟣", label: "常见小词", done: sw.count ?? 0, total: SIGHT_WORD_ITEMS.length, color: "from-violet-400 to-fuchsia-400" },
+          { emoji: "🎧", label: "听一听",   done: ls.count ?? 0, total: PRIMARY_LISTENING_DIALOGUES.length, color: "from-amber-400 to-orange-400" },
           { emoji: "📚", label: "读绘本",   done: sb.count ?? 0, total: PRIMARY_STORY_BOOKS.length, color: "from-emerald-400 to-teal-400" },
-          { emoji: "🎭", label: "角色扮演", done: rp.count ?? 0, total: PRIMARY_ROLE_PLAYS.length, color: "from-rose-400 to-pink-400" },
+          { emoji: "🎭", label: "演故事",   done: rp.count ?? 0, total: PRIMARY_ROLE_PLAYS.length, color: "from-rose-400 to-pink-400" },
         ]);
       }
       setLoading(false);

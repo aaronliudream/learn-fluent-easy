@@ -424,12 +424,12 @@ function buildSeeLetter(item: PhonicsItem, itemPool: PhonicsItem[]): Q {
     options: shuffle([item.sound, ...d.map((p) => p.sound)]),
   };
 }
-function buildMatchWord(item: PhonicsItem): Q | null {
+function buildMatchWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
   const word0 = item.exampleWords.find((w) => w.emoji && w.word);
   if (!word0?.emoji || !word0?.word) return null;
-  const d = poolDistractors(item);
+  const d = poolDistractors(item, itemPool);
   const otherWords = d.flatMap((p) => p.exampleWords.filter((w) => w.emoji && w.word));
-  const fallback = PHONICS_ITEMS.flatMap((p) =>
+  const fallback = itemPool.flatMap((p) =>
     p.id === item.id ? [] : p.exampleWords.filter((w) => w.emoji && w.word)
   );
   const wordPool = otherWords.length >= 2 ? otherWords : fallback;
@@ -443,12 +443,12 @@ function buildMatchWord(item: PhonicsItem): Q | null {
     ]),
   };
 }
-function buildSeeImagePickWord(item: PhonicsItem): Q | null {
+function buildSeeImagePickWord(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
   const word0 = item.exampleWords.find((w) => w.emoji && w.word);
   if (!word0?.emoji || !word0?.word) return null;
-  const d = poolDistractors(item);
+  const d = poolDistractors(item, itemPool);
   const others = d.flatMap((p) => p.exampleWords.filter((w) => w.word));
-  const fallback = PHONICS_ITEMS.flatMap((p) =>
+  const fallback = itemPool.flatMap((p) =>
     p.id === item.id ? [] : p.exampleWords.filter((w) => w.word)
   );
   const pool = others.length >= 3 ? others : fallback;
@@ -464,17 +464,17 @@ function buildSeeImagePickWord(item: PhonicsItem): Q | null {
  * CVC 拼读: 找到本 item 例词中 3 字母 (consonant-vowel-consonant) 的真词,
  * 把单词拆成 3 个音播放,让孩子拼出来.如果本 item 没有 CVC 例词则返回 null.
  */
-function buildBlendCvc(item: PhonicsItem): Q | null {
+function buildBlendCvc(item: PhonicsItem, itemPool: PhonicsItem[]): Q | null {
   const cvc = item.exampleWords.find((w) => /^[bcdfghjklmnpqrstvwxyz][aeiou][bcdfghjklmnpqrstvwxyz]$/i.test(w.word));
   if (!cvc) return null;
   const letters = cvc.word.toLowerCase().split("");
   // 把每个字母映射回它的 phonics sound, 找不到就用字母本身
   const sounds = letters.map((ch) => {
-    const it = PHONICS_ITEMS.find((p) => p.letter.toLowerCase() === ch);
+    const it = itemPool.find((p) => p.letter.toLowerCase() === ch);
     return it?.sound ?? `/${ch}/`;
   });
   // 干扰词: 同长度的其他 CVC 例词
-  const allCvc = PHONICS_ITEMS.flatMap((p) =>
+  const allCvc = itemPool.flatMap((p) =>
     p.exampleWords.filter((w) => w.word !== cvc.word && /^[bcdfghjklmnpqrstvwxyz][aeiou][bcdfghjklmnpqrstvwxyz]$/i.test(w.word))
   );
   const distractors = shuffle(allCvc).slice(0, 3).map((w) => w.word.toLowerCase());

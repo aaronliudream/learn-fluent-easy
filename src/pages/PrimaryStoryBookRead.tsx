@@ -147,7 +147,7 @@ export default function PrimaryStoryBookRead() {
         <div className="flex items-center gap-3">
           <span className="text-3xl">{book.cover_emoji}</span>
           <div className="min-w-0">
-            <div className="text-xs font-bold opacity-90">Level {book.level} · 约 {book.reading_minutes} 分钟</div>
+            <div className="text-xs font-bold opacity-90">第 {book.level} 阶段 · {book.reading_minutes} 分钟左右</div>
             <div className="truncate text-lg font-extrabold">{book.title_en}</div>
             <div className="truncate text-[11px] font-bold opacity-90">{book.title_cn}</div>
           </div>

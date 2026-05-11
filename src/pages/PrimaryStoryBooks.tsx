@@ -8,6 +8,7 @@ import {
   type StoryBook,
 } from "@/data/primaryStoryBooks";
 import { supabase } from "@/integrations/supabase/client";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 
 const LEVEL_META: Record<1 | 2 | 3, { label: string; sub: string }> = {
   1: { label: "第 1 阶段 · 简单", sub: "每页 3-4 词" },
@@ -72,6 +73,33 @@ export default function PrimaryStoryBooks() {
 
   const sorted = useMemo(() => getBooksSorted(), []);
   const completedIds = useMemo(() => new Set(Object.keys(completed)), [completed]);
+
+  // 让小月在书架页就能聊"这里是哪些书 / 哪本可读 / 该挑哪本"。
+  // 把整个书架的状态作为 snapshot 注入,小月就不会瞎答。
+  useRegisterAssistant({
+    context: "primary_storybooks_shelf",
+    ref: "shelf",
+    topic: "小学绘本书架(和 Spark 一起读绘本)",
+    mode: "free",
+    unlocked: true,
+    pageTitle: "💬 小月 · 绘本书架答疑",
+    snapshot: {
+      page: "绘本书架(/primary/reading)",
+      hint: "用户当前正在浏览绘本书架。请只回答和这个书架/这些绘本相关的问题(每本书讲了什么、难度差别、推荐先读哪一本、怎么解锁下一本等)。不要回答和绘本无关的英语问题。",
+      total_books: sorted.length,
+      books: sorted.map((b, i) => ({
+        order: i + 1,
+        id: b.id,
+        title_cn: b.title_cn,
+        title_en: b.title_en,
+        level: b.level,
+        description_cn: b.description_cn,
+        reading_minutes: b.reading_minutes,
+        unlocked: i === 0 || completedIds.has(sorted[i - 1].id),
+        completed: completedIds.has(b.id),
+      })),
+    },
+  });
 
   function isUnlocked(b: StoryBook): boolean {
     const idx = sorted.findIndex(x => x.id === b.id);

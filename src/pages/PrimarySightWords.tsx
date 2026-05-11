@@ -47,7 +47,7 @@ export default function PrimarySightWords() {
   );
 
   useEffect(() => {
-    document.title = "Spark 的高频词冒险 | FluentPath";
+    document.title = "Spark 的常见小词冒险 | FluentPath";
     let cancelled = false;
     const refresh = async () => {
       const m = await getSightWordMasteryMap();
@@ -125,10 +125,10 @@ export default function PrimarySightWords() {
           {todayPlanCount === 0
             ? policy.reviewMode
               ? '"这些词你都认识啦,继续保持!"'
-              : '"全部高频词都认识啦!Spark 太骄傲啦~"'
+              : '"全部常见小词都认识啦!Spark 太骄傲啦~"'
             : policy.reviewMode
-            ? `"今天 Spark 想和你复习 ${Math.min(todayPlanCount, 5)} 个高频词!"`
-            : `"今天 Spark 想和你学 ${Math.min(todayPlanCount, 5)} 个高频词!"`}
+            ? `"今天 Spark 想和你复习 ${Math.min(todayPlanCount, 5)} 个常见小词!"`
+            : `"今天 Spark 想和你学 ${Math.min(todayPlanCount, 5)} 个常见小词!"`}
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-sky-700 dark:text-sky-200">
           <span>已掌握 {masteredCount} / {visibleItems.length}</span>
@@ -146,7 +146,7 @@ export default function PrimarySightWords() {
       <section className="mt-4 space-y-3">
         {policy.visibleGroupCount === 0 && (
           <div className="rounded-2xl border-2 border-dashed border-border bg-muted/30 p-6 text-center text-sm text-muted-foreground">
-            🎓 {grade} 年级的孩子应该已经能流畅阅读这些高频词啦,
+            🎓 {grade} 年级的孩子应该已经能流畅阅读这些常见小词啦,
             <br />Spark 建议把时间花在更有挑战的内容上 ✨
           </div>
         )}
@@ -182,12 +182,12 @@ export default function PrimarySightWords() {
         )}
         {!nextNew && dueItems.length === 0 && !canChallengeGroup && !loading && (
           <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            🎉 你已经掌握了全部 {visibleItems.length} 个高频词!
+            🎉 你已经掌握了全部 {visibleItems.length} 个常见小词!
           </div>
         )}
         {loading && (
           <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            Spark 正在准备今天的高频词冒险…
+            Spark 正在准备今天的常见小词冒险…
           </div>
         )}
       </section>
@@ -195,7 +195,7 @@ export default function PrimarySightWords() {
       {/* 4 组进度地图 */}
       <section className="mt-6 space-y-2">
         <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-          📊 你的高频词地图
+          📊 你的常见小词地图
         </div>
         {groupedItems.map((g, idx) => {
           const unlocked = isGroupUnlocked(idx);

@@ -185,7 +185,7 @@ export default function PrimaryPhonics() {
         {/* fallback */}
         {!nextNewItem && dueItems.length === 0 && !canChallengeGroup && !loading && (
           <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
-            🎉 你已经掌握了全部 {PHONICS_ITEMS.length} 个 Phonics 音!
+            🎉 你已经会了全部 {PHONICS_ITEMS.length} 个字母音!
           </div>
         )}
 
@@ -282,7 +282,7 @@ export default function PrimaryPhonics() {
             to="/primary/sight-words"
             className="inline-flex items-center gap-1 text-xs font-bold text-sky-600 underline-offset-2 hover:underline dark:text-sky-300"
           >
-            📖 高频词 Sight Words →
+            📖 常见小词 Sight Words →
           </Link>
         )}
         {showSwEntry && !swPolicy.showInMain && (
@@ -290,7 +290,7 @@ export default function PrimaryPhonics() {
             to="/primary/sight-words"
             className="inline-flex items-center gap-1 text-[11px] text-muted-foreground underline-offset-2 hover:underline"
           >
-            🔁 高频词复习(查漏)→
+            🔁 常见小词复习(查漏)→
           </Link>
         )}
         <Link

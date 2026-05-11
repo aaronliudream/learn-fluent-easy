@@ -65,6 +65,7 @@ export type Stage5Question = {
 
 export type LessonStages = {
   lesson_id: string;
+  lesson_key?: string;
   total_stages: 5;
   stage1: Stage1Card[];
   stage2: Stage2Question[];

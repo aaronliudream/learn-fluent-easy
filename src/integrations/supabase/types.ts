@@ -5578,6 +5578,48 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_word_quest_attempts: {
+        Row: {
+          created_at: string
+          date: string
+          duration_seconds: number | null
+          grade: number
+          id: string
+          levels_completed: number
+          perfect: boolean | null
+          score: number | null
+          total_levels: number
+          user_id: string
+          words: string[] | null
+        }
+        Insert: {
+          created_at?: string
+          date: string
+          duration_seconds?: number | null
+          grade: number
+          id?: string
+          levels_completed?: number
+          perfect?: boolean | null
+          score?: number | null
+          total_levels?: number
+          user_id: string
+          words?: string[] | null
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          duration_seconds?: number | null
+          grade?: number
+          id?: string
+          levels_completed?: number
+          perfect?: boolean | null
+          score?: number | null
+          total_levels?: number
+          user_id?: string
+          words?: string[] | null
+        }
+        Relationships: []
+      }
       pro_waitlist: {
         Row: {
           created_at: string

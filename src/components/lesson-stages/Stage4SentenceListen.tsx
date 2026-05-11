@@ -1,32 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, Check } from "lucide-react";
 import type { Stage4Sentence } from "@/data/g2LessonStages";
+import { speak, stopSpeaking } from "@/lib/speak";
 
-/** Use native speechSynthesis directly so we get word-boundary events. */
-function speakWithBoundary(text: string, onWord: (idx: number) => void, onEnd: () => void) {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-    onEnd();
-    return;
-  }
-  try {
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US";
-    u.rate = 0.85;
-    u.pitch = 1.1;
-    u.onboundary = (ev: SpeechSynthesisEvent) => {
-      if (ev.name && ev.name !== "word") return;
-      const before = text.substring(0, ev.charIndex);
-      const idx = before.trim() === "" ? 0 : before.trim().split(/\s+/).length;
-      onWord(idx);
-    };
-    u.onend = onEnd;
-    u.onerror = onEnd;
-    window.speechSynthesis.speak(u);
-  } catch {
-    onEnd();
-  }
-}
+/** Approximate per-word duration for Karaoke highlight when using MP3 TTS. */
+const MS_PER_WORD = 360;
 
 export default function Stage4SentenceListen({ sentences, onComplete }: { sentences: Stage4Sentence[]; onComplete: () => void }) {
   const [i, setI] = useState(0);

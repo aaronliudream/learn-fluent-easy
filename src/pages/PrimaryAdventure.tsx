@@ -267,13 +267,13 @@ export default function PrimaryAdventure() {
           </h2>
         </div>
         <div className="grid grid-cols-5 gap-2 sm:gap-3">
-          {[
+          {(() => { const gradeQ = grade === 2 ? "?grade=2" : ""; return [
             { to: "/primary/phonics",    emoji: "🔤", label: "读字母", grad: "from-sky-400 to-indigo-400" },
             { to: "/primary/sight-words",emoji: "🟣", label: "小词卡", grad: "from-violet-400 to-fuchsia-400" },
             { to: "/primary/roleplays",  emoji: "🎭", label: "演一段", grad: "from-rose-400 to-pink-400" },
             { to: "/primary/listening",  emoji: "🎧", label: "听聊天", grad: "from-amber-400 to-orange-400" },
             { to: "/primary/reading",    emoji: "📚", label: "读绘本", grad: "from-emerald-400 to-teal-400" },
-          ].map((it) => (
+          ].map((it) => ({ ...it, to: `${it.to}${gradeQ}` })); })().map((it) => (
             <Link
               key={it.to}
               to={it.to}

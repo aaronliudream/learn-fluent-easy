@@ -79,7 +79,14 @@ export default function PrimaryStoryBooks() {
     () => [...DATA].sort((a, b) => a.sortOrder - b.sortOrder),
     [DATA]
   );
-  const completedIds = useMemo(() => new Set(Object.keys(completed)), [completed]);
+  // Only count books that belong to the current grade pool — local cache may
+  // contain ids from the other grade (G1 + G2 share localStorage), which would
+  // otherwise inflate totalDone past `total` (e.g. "11/10").
+  const poolIds = useMemo(() => new Set(DATA.map(b => b.id)), [DATA]);
+  const completedIds = useMemo(
+    () => new Set(Object.keys(completed).filter(id => poolIds.has(id))),
+    [completed, poolIds]
+  );
 
   // 让小月在书架页就能聊"这里是哪些书 / 哪本可读 / 该挑哪本"。
   // 把整个书架的状态作为 snapshot 注入,小月就不会瞎答。
@@ -233,7 +240,11 @@ export default function PrimaryStoryBooks() {
           <div className="mt-1 flex items-center justify-between gap-3">
             <div className="min-w-0">
               <div className="truncate text-lg font-extrabold">和 Spark 读 "{nextB.title_en}"</div>
-              <div className="text-xs opacity-90">你已经读了 {totalDone}/{total} · {nextB.reading_minutes} 分钟左右</div>
+              <div className="text-xs opacity-90">
+                {completedIds.has(nextB.id)
+                  ? `重读一遍 · 约 ${nextB.reading_minutes} 分钟`
+                  : `还没读过 · 约 ${nextB.reading_minutes} 分钟`}
+              </div>
             </div>
             <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/20 text-2xl backdrop-blur-sm">▶</div>
           </div>

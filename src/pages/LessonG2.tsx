@@ -439,17 +439,18 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
       const { data: u } = await supabase.auth.getUser();
       const uid = u?.user?.id;
       if (uid) {
-        // Capture pre-completion count for unlock detection
+        // Capture pre/post completion counts (distinct lessons) for rocket unlock detection
         let prevCount = 0;
+        let postCount = 0;
         try {
           const { data: priorRows } = await supabase
             .from("primary_lesson_completion")
             .select("lesson_key")
             .eq("user_id", uid);
-          prevCount = (priorRows ?? []).filter((r: any) => r.lesson_key !== lessonKey).length;
-          // If this lesson was already in the prior set, prevCount already excludes it via filter above; but if not present, we must subtract 0. The filter handles both.
-          const alreadyHad = (priorRows ?? []).some((r: any) => r.lesson_key === lessonKey);
-          if (!alreadyHad) prevCount = (priorRows ?? []).length;
+          const priorKeys = (priorRows ?? []).map((r: any) => r.lesson_key as string);
+          const alreadyHad = priorKeys.includes(lessonKey);
+          prevCount = alreadyHad ? priorKeys.length - 1 : priorKeys.length;
+          postCount = alreadyHad ? priorKeys.length : priorKeys.length + 1;
         } catch { /* noop */ }
         await supabase
           .from("primary_lesson_completion")
@@ -457,7 +458,6 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
             { user_id: uid, lesson_key: lessonKey, completed_at: new Date().toISOString() },
             { onConflict: "user_id,lesson_key" }
           );
-        const postCount = prevCount + 1;
         setNewCount(postCount);
         const part = detectUnlockedPart(prevCount, postCount);
         if (part) setUnlockedPart(part);

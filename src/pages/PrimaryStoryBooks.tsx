@@ -211,7 +211,10 @@ export default function PrimaryStoryBooks() {
             </div>
             {/* 书架样式:底部一条木色横条 + Spark 角落小头像 */}
             <div className="relative">
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              <div
+                className="grid gap-2 sm:gap-3"
+                style={{ gridTemplateColumns: `repeat(${g.items.length}, minmax(0, 1fr))` }}
+              >
                 {g.items.map(b => {
                   const unlocked = isUnlocked(b);
                   const done = completedIds.has(b.id);
@@ -249,21 +252,24 @@ export default function PrimaryStoryBooks() {
                           </span>
                         )}
                       </div>
-                      <div className="mt-2 text-center text-4xl drop-shadow-sm">{b.cover_emoji}</div>
-                      {/* 页数 + 时长 标签(右下,在书名上方,绝对定位避开重叠 → 改放卡片顶部右侧上方区域不够,放右下角与书名对齐) */}
-                      <div className="absolute bottom-14 right-2 rounded-full bg-white/70 px-1.5 py-0.5 text-[10px] font-bold text-amber-900 shadow-sm backdrop-blur-sm">
+                      {/* 封面 emoji 居中放大 */}
+                      <div className="absolute inset-x-0 top-1/2 -translate-y-[58%] text-center text-5xl drop-shadow-sm sm:text-6xl">
+                        {b.cover_emoji}
+                      </div>
+                      {/* 页数 + 时长 标签(顶部居中) */}
+                      <div className="absolute left-1/2 top-9 -translate-x-1/2 whitespace-nowrap rounded-full bg-white/70 px-1.5 py-0.5 text-[10px] font-bold text-amber-900 shadow-sm backdrop-blur-sm">
                         {b.pages.length} 页 · {b.reading_minutes} 分钟
                       </div>
-                      <div className="absolute inset-x-2 bottom-2 text-center">
+                      <div className="absolute inset-x-1.5 bottom-2 text-center">
                         <div
-                          className="line-clamp-2 text-[17px] font-extrabold leading-tight drop-shadow-sm"
+                          className="line-clamp-2 text-[15px] font-extrabold leading-tight drop-shadow-sm sm:text-[16px]"
                           style={{ fontFamily: 'Fredoka, Quicksand, "Comic Sans MS", system-ui, sans-serif' }}
                         >
                           {b.title_en}
                         </div>
                         {unlocked
-                          ? <div className="line-clamp-1 text-[13px] opacity-95">{b.title_cn}</div>
-                          : <div className="line-clamp-1 text-[11px] font-bold text-white/90">🔒 读完上一本解锁</div>}
+                          ? <div className="line-clamp-1 text-[12px] opacity-95">{b.title_cn}</div>
+                          : <div className="line-clamp-1 text-[10px] font-bold text-white/90">🔒 读完上一本解锁</div>}
                       </div>
                       {isJustUnlocked && (
                         <div className="absolute left-1/2 top-1 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-2 py-0.5 text-[10px] font-extrabold text-amber-700 shadow-md animate-fade-in">

@@ -35,6 +35,8 @@ export default function PrimaryAdventure() {
   const [pet, setPet] = useState<Pet | null>(null);
   const [progress, setProgress] = useState<Record<string, true>>(() => loadAdventureProgress());
   const [loading, setLoading] = useState(true);
+  // 用今天的日期做 memo key,避免页面跨午夜后还显示昨天的轮换步骤
+  const todayKey = new Date().toDateString();
 
   useEffect(() => {
     document.title = "今日冒险 · 陪 Spark 出发 | FluentPath";
@@ -62,7 +64,7 @@ export default function PrimaryAdventure() {
 
   const steps: AdventureStep[] = useMemo(
     () => buildDailyAdventure({ grade, nextLessonId }),
-    [grade, nextLessonId]
+    [grade, nextLessonId, todayKey]
   );
 
   const doneCount = steps.filter((s) => progress[s.kind]).length;
@@ -141,6 +143,35 @@ export default function PrimaryAdventure() {
               className="h-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 transition-all"
               style={{ width: `${steps.length ? (doneCount / steps.length) * 100 : 0}%` }}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* 快捷探索工具栏 — 自由学习入口,不参与每日 4 步 */}
+      <section className="mt-5">
+        <div className="mb-2 flex items-center justify-between px-1">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+            快捷探索 · 自由学习
+          </h2>
+        </div>
+        <div className="-mx-5 overflow-x-auto px-5 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex min-w-max items-stretch gap-2">
+            {[
+              { to: "/primary/phonics",    emoji: "🔤", label: "拼读",     grad: "from-sky-400 to-indigo-400" },
+              { to: "/primary/sight-words",emoji: "🟣", label: "高频词",   grad: "from-violet-400 to-fuchsia-400" },
+              { to: "/primary/roleplays",  emoji: "🎭", label: "角色扮演", grad: "from-rose-400 to-pink-400" },
+              { to: "/primary/listening",  emoji: "🎧", label: "听对话",   grad: "from-amber-400 to-orange-400" },
+              { to: "/primary/reading",    emoji: "📚", label: "绘本",     grad: "from-emerald-400 to-teal-400" },
+            ].map((it) => (
+              <Link
+                key={it.to}
+                to={it.to}
+                className={`group flex w-20 shrink-0 flex-col items-center gap-1.5 rounded-2xl bg-gradient-to-br ${it.grad} p-2.5 text-white shadow-sm transition hover:-translate-y-0.5`}
+              >
+                <span className="grid size-10 place-items-center rounded-xl bg-white/25 text-2xl">{it.emoji}</span>
+                <span className="text-[12px] font-extrabold leading-none">{it.label}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -230,19 +261,6 @@ export default function PrimaryAdventure() {
       <div className="mt-6 text-center">
         <Link to={`/primary/grade/${grade}`} className="text-xs text-muted-foreground underline-offset-2 hover:underline">
           想自己挑课程?去完整学习地图 →
-        </Link>
-      </div>
-
-      {/* 旁路入口 — 不管今天第 3 步是什么,都能直接进 */}
-      <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs">
-        <Link to="/primary/listening" className="text-muted-foreground underline-offset-2 hover:underline">
-          🎧 听力对话
-        </Link>
-        <Link to="/primary/reading" className="text-muted-foreground underline-offset-2 hover:underline">
-          📚 小绘本
-        </Link>
-        <Link to="/primary/phonics" className="text-muted-foreground underline-offset-2 hover:underline">
-          🔤 拼读 / 高频词
         </Link>
       </div>
     </main>

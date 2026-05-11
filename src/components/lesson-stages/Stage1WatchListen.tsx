@@ -3,6 +3,7 @@ import { Volume2, ChevronRight, HelpCircle } from "lucide-react";
 import { speak } from "@/lib/speak";
 import type { Stage1Card } from "@/data/g2LessonStages";
 import QuizOverlay from "./QuizOverlay";
+import KaraokeText from "@/components/KaraokeText";
 
 const BG = [
   "from-sky-50 to-cyan-100 dark:from-sky-950/40 dark:to-cyan-950/40",
@@ -43,9 +44,8 @@ export default function Stage1WatchListen({ cards, onComplete }: { cards: Stage1
         {phase === "revealed" && (
           <>
             <div className="mt-3 text-xl font-bold text-foreground">{card.meaning_cn}</div>
-            <div className="mt-4 rounded-xl bg-background/60 p-3 text-sm">
-              <div className="font-semibold">{card.example_en}</div>
-              <div className="text-muted-foreground">{card.example_cn}</div>
+            <div className="mt-4 rounded-xl bg-background/60 p-3">
+              <KaraokeText text={card.example_en} cn={card.example_cn} size="sm" />
             </div>
           </>
         )}

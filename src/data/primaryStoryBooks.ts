@@ -30,6 +30,13 @@ export type StoryBookPage = {
   text_en: string;     // 英文句子
   text_cn: string;     // 中文翻译
   emoji: string;       // 视觉理解 emoji
+  // 可选:更精细的视觉编排。如果提供,渲染层用它代替单串 emoji,
+  // 让我们能让"大狗"看起来真的比"小狗"大,或在角色脚下画一行
+  // 小脚印 🐾 表示在跑。每个 part:
+  //   char  - 显示的 emoji
+  //   scale - 相对默认大小的缩放(1 = 默认,1.4 偏大,0.55 偏小)
+  //   ground- true 时这一部分单独换到下一行,做成"地面"细节
+  emojiParts?: Array<{ char: string; scale?: number; ground?: boolean }>;
   // 朗读这一句时使用的声音角色。绘本里大部分句子都是孩子的视角,
   // 默认 "kid"(更明亮的童声 + 略快语速)。当出现妈妈/爸爸/Spark
   // 直接说话的句子时,可以指定不同的声音让孩子分清谁在讲话。
@@ -216,13 +223,44 @@ export const PRIMARY_STORY_BOOKS: StoryBook[] = [
     cover_emoji: "🐕🐶",
     reading_minutes: 3,
     pages: [
-      { page: 1, text_en: "Look! Two dogs!", text_cn: "看!两只狗!", emoji: "🐕🐶" },
-      { page: 2, text_en: "A big dog.", text_cn: "一只大狗。", emoji: "🐕" },
-      { page: 3, text_en: "A little dog.", text_cn: "一只小狗。", emoji: "🐶" },
-      { page: 4, text_en: "The big dog can run.", text_cn: "大狗会跑。", emoji: "🐕💨" },
-      { page: 5, text_en: "The little dog can run too!", text_cn: "小狗也会跑!", emoji: "🐶💨" },
-      { page: 6, text_en: "They run together.", text_cn: "他们一起跑。", emoji: "🐕🐶💨" },
-      { page: 7, text_en: "I love dogs!", text_cn: "我爱狗狗!", emoji: "❤️🐕" }
+      {
+        page: 1, text_en: "Look! Two dogs!", text_cn: "看!两只狗!", emoji: "🐕🐶",
+        emojiParts: [{ char: "🐕", scale: 1.4 }, { char: "🐶", scale: 0.6 }],
+      },
+      {
+        page: 2, text_en: "A big dog.", text_cn: "一只大狗。", emoji: "🐕",
+        emojiParts: [{ char: "🐕", scale: 1.5 }],
+      },
+      {
+        page: 3, text_en: "A little dog.", text_cn: "一只小狗。", emoji: "🐶",
+        emojiParts: [{ char: "🐶", scale: 0.55 }],
+      },
+      {
+        page: 4, text_en: "The big dog can run.", text_cn: "大狗会跑。", emoji: "🐕🐾",
+        emojiParts: [
+          { char: "🐕", scale: 1.4 },
+          { char: "🐾 🐾 🐾", scale: 0.45, ground: true },
+        ],
+      },
+      {
+        page: 5, text_en: "The little dog can run too!", text_cn: "小狗也会跑!", emoji: "🐶🐾",
+        emojiParts: [
+          { char: "🐶", scale: 0.6 },
+          { char: "🐾 🐾 🐾", scale: 0.4, ground: true },
+        ],
+      },
+      {
+        page: 6, text_en: "They run together.", text_cn: "他们一起跑。", emoji: "🐕🐶🐾",
+        emojiParts: [
+          { char: "🐕", scale: 1.4 },
+          { char: "🐶", scale: 0.6 },
+          { char: "🐾 🐾 🐾 🐾", scale: 0.4, ground: true },
+        ],
+      },
+      {
+        page: 7, text_en: "I love dogs!", text_cn: "我爱狗狗!", emoji: "❤️🐕",
+        emojiParts: [{ char: "❤️", scale: 0.7 }, { char: "🐕", scale: 1.3 }],
+      }
     ],
     questions: [
       {

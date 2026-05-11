@@ -439,12 +439,32 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
       const { data: u } = await supabase.auth.getUser();
       const uid = u?.user?.id;
       if (uid) {
+        // Capture pre-completion count for unlock detection
+        let prevCount = 0;
+        try {
+          const { data: priorRows } = await supabase
+            .from("primary_lesson_completion")
+            .select("lesson_key")
+            .eq("user_id", uid);
+          prevCount = (priorRows ?? []).filter((r: any) => r.lesson_key !== lessonKey).length;
+          // If this lesson was already in the prior set, prevCount already excludes it via filter above; but if not present, we must subtract 0. The filter handles both.
+          const alreadyHad = (priorRows ?? []).some((r: any) => r.lesson_key === lessonKey);
+          if (!alreadyHad) prevCount = (priorRows ?? []).length;
+        } catch { /* noop */ }
         await supabase
           .from("primary_lesson_completion")
           .upsert(
             { user_id: uid, lesson_key: lessonKey, completed_at: new Date().toISOString() },
             { onConflict: "user_id,lesson_key" }
           );
+        const postCount = prevCount + 1;
+        setNewCount(postCount);
+        const part = detectUnlockedPart(prevCount, postCount);
+        if (part) setUnlockedPart(part);
+        if (postCount >= TOTAL_LESSONS) {
+          // Trigger liftoff after a brief delay so users see the gear-fly first
+          window.setTimeout(() => setShowLiftoff(true), 1800);
+        }
         await supabase.from("learning_events").insert({
           user_id: uid,
           event_type: "lesson_complete",

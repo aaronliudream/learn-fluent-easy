@@ -16,6 +16,15 @@ import { buildSightWordDistractors } from "@/lib/sightWordDistractors";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
 import { bondOnSparkEcho, bondOnPhonicsLearnPass } from "@/lib/petGrowth";
 
+// 一些功能词在孤立朗读时,TTS 会读成强读音(如 "the" → /ðiː/)。
+// 在小学英语启蒙阶段我们想让孩子先听到自然语流里的弱读形式,
+// 所以这里用一个近似的拼写让 TTS 读出弱音 schwa。
+function speakWordKid(word: string) {
+  const w = word.trim().toLowerCase();
+  if (w === "the") return speak("thuh");
+  return speak(word);
+}
+
 /**
  * 单个 Sight Word 学习页 — 复用 Phonics 单音学习页的形态:
  *  大字 + IPA + 词性 + 中文 + 例句 + Spark 小知识 → "我学会了" → MiniQuiz 3 题轮换.
@@ -36,7 +45,7 @@ export default function PrimarySightWordsLearn() {
   useEffect(() => {
     if (!item) return;
     document.title = `学常见小词 ${item.word} | FluentPath`;
-    const t = window.setTimeout(() => speak(item.word), 350);
+    const t = window.setTimeout(() => speakWordKid(item.word), 350);
     return () => clearTimeout(t);
   }, [item]);
 
@@ -77,7 +86,7 @@ export default function PrimarySightWordsLearn() {
               <Check className="size-5" /> 我学会了,开始测试
             </button>
             <button
-              onClick={() => speak(item.word)}
+              onClick={() => speakWordKid(item.word)}
               className="text-xs text-muted-foreground underline-offset-2 hover:underline"
             >
               再听一遍 🔊
@@ -131,7 +140,7 @@ function WordDetail({ item }: { item: SightWordItem }) {
         </div>
         <div className="mt-4 flex justify-center">
           <button
-            onClick={() => speak(item.word)}
+            onClick={() => speakWordKid(item.word)}
             className="flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-2 text-xs font-bold backdrop-blur-sm hover:bg-white/30"
           >
             <Volume2 className="size-4" /> 听 Spark 念
@@ -253,7 +262,7 @@ function MiniQuiz({ item, onDone }: { item: SightWordItem; onDone: (allCorrect: 
   useEffect(() => {
     if (!q) return;
     if (q.kind === "listen") {
-      const t = setTimeout(() => speak(item.word), 250);
+      const t = setTimeout(() => speakWordKid(item.word), 250);
       return () => clearTimeout(t);
     }
   }, [q, item]);
@@ -317,7 +326,7 @@ function MiniQuiz({ item, onDone }: { item: SightWordItem; onDone: (allCorrect: 
           prompt="听这个词,选出正确的写法"
           aux={
             <button
-              onClick={() => speak(item.word)}
+              onClick={() => speakWordKid(item.word)}
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-lg font-bold text-primary-foreground shadow"
             >
               <Volume2 className="size-5" /> 再听一遍

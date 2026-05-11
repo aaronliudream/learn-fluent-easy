@@ -126,11 +126,6 @@ function getThirdStepContent(
     cta: "去读绘本",
     to: `/primary/reading${gradeQ}`,
     estMinutes: 4,
-    ...(isG2 && {
-      placeholder: true,
-      fallbackTo: "/primary/reading",
-      fallbackLabel: "先去复习 G1 的绘本吧",
-    }),
   };
 
   // G2 lesson 也没接入 — 用 lesson 占位 + 回退到 G1 lesson 列表

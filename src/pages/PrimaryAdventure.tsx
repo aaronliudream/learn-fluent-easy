@@ -68,6 +68,9 @@ export default function PrimaryAdventure() {
   const [loading, setLoading] = useState(true);
   const [myProgress, setMyProgress] = useState<ProgressRow[] | null>(null);
   const [swMasteredCount, setSwMasteredCount] = useState(0);
+  const [g2LessonsDone, setG2LessonsDone] = useState(0);
+  const [sfxOn, setSfxOnState] = useState<boolean>(() => isSfxEnabled());
+  const [progressOpen, setProgressOpen] = useState(false);
   // 用今天的日期做 memo key,避免页面跨午夜后还显示昨天的轮换步骤
   const todayKey = new Date().toDateString();
 
@@ -134,6 +137,7 @@ export default function PrimaryAdventure() {
             .eq("user_id", uid);
           const doneKeys = new Set((lessonRows ?? []).map((r: any) => r.lesson_key as string));
           g2LessonDone = G2_LESSON_KEYS.filter((k) => doneKeys.has(k)).length;
+          setG2LessonsDone(g2LessonDone);
         }
 
         const baseRows: ProgressRow[] = [

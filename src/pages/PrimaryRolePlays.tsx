@@ -10,14 +10,14 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 
 const CATEGORY_META: Record<RolePlayCategory, { label: string; emoji: string }> = {
-  festival: { label: "节日庆典", emoji: "🎉" },
-  school: { label: "学校生活", emoji: "🏫" },
-  family: { label: "家庭日常", emoji: "🏡" },
-  friends: { label: "朋友交流", emoji: "🧒" },
-  public: { label: "公共场所", emoji: "🌆" },
+  festival: { label: "过节",   emoji: "🎉" },
+  school:   { label: "在学校", emoji: "🏫" },
+  family:   { label: "在家里", emoji: "🏡" },
+  friends:  { label: "和朋友", emoji: "🧒" },
+  public:   { label: "在外面", emoji: "🌆" },
 };
 const CATEGORY_ORDER: RolePlayCategory[] = ["festival", "school", "family", "friends", "public"];
-const DIFFICULTY_LABEL = { 1: "简单", 2: "中等", 3: "挑战" } as const;
+const DIFFICULTY_LABEL = { 1: "简单", 2: "一般", 3: "有点难" } as const;
 
 function speak(text: string, rate = 0.9) {
   if (typeof window === "undefined" || !window.speechSynthesis) return;
@@ -149,7 +149,7 @@ export default function PrimaryRolePlays() {
       <section className="rounded-3xl bg-gradient-to-br from-fuchsia-200 via-rose-200 to-amber-200 p-5 text-center shadow-tile dark:from-fuchsia-950/40 dark:via-rose-950/40 dark:to-amber-950/40">
         <div className="mx-auto grid size-20 place-items-center rounded-full bg-white/70 text-5xl shadow-md">🦊</div>
         <p className="mx-auto mt-3 max-w-md text-base font-extrabold leading-snug text-rose-900 dark:text-rose-100">
-          "和 Spark 一起演 {total} 个场景,练真实生活英语!"
+          "和 Spark 一起演 {total} 个小故事,说说生活里的话!"
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-rose-700 dark:text-rose-200">
           <span>已完成 {totalDone} / {total}</span>
@@ -166,7 +166,7 @@ export default function PrimaryRolePlays() {
           onClick={() => start(nextRp)}
           className="mt-4 w-full rounded-3xl bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 p-4 text-left text-white shadow-tile transition hover:-translate-y-0.5"
         >
-          <div className="text-[11px] font-bold uppercase tracking-wider opacity-80">🎭 继续演新场景</div>
+          <div className="text-[11px] font-bold uppercase tracking-wider opacity-80">🎭 继续演新故事</div>
           <div className="mt-1 flex items-center justify-between gap-3">
             <div className="min-w-0">
               <div className="truncate text-lg font-extrabold">和 Spark 演 "{nextRp.title_cn}"</div>
@@ -185,7 +185,7 @@ export default function PrimaryRolePlays() {
             <div className="mb-2 flex items-center gap-2 text-sm font-extrabold">
               <span className="text-lg">{g.meta.emoji}</span>
               <span>{g.meta.label}</span>
-              <span className="text-xs font-bold text-muted-foreground">· {g.items.length} 个场景</span>
+              <span className="text-xs font-bold text-muted-foreground">· {g.items.length} 个小故事</span>
             </div>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {g.items.map(rp => {

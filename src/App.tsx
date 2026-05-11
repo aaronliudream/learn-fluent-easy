@@ -60,6 +60,7 @@ const PrimaryGrade = lazy(() => import("./pages/PrimaryGrade.tsx"));
 const PrimaryAssessment = lazy(() => import("./pages/PrimaryAssessment.tsx"));
 const PrimaryGames = lazy(() => import("./pages/PrimaryGames.tsx"));
 const PrimaryLesson = lazy(() => import("./pages/PrimaryLesson.tsx"));
+const LessonG2 = lazy(() => import("./pages/LessonG2.tsx"));
 const PrimaryAdventure = lazy(() => import("./pages/PrimaryAdventure.tsx"));
 const PrimaryCulture = lazy(() => import("./pages/PrimaryCulture.tsx"));
 const PrimaryReading = lazy(() => import("./pages/PrimaryReading.tsx"));

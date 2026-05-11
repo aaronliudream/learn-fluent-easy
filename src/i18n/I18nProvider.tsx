@@ -11,6 +11,12 @@ import { localizeProtagonist } from "./protagonistName";
 
 const STORAGE_LANG = "fluentpath.lang";
 const STORAGE_PICKED = "fluentpath.langPicked";
+// Session-only flag: true once the user manually picks a language in this
+// browser tab. While set, sign-in MUST push the local choice up to the
+// profile instead of pulling whatever stale value the profile holds — so
+// "I clicked EN before logging in" survives across the auth boundary on
+// every page, not just within a 5s race window.
+const SESSION_MANUAL_PICK = "fluentpath.langPickedThisSession";
 // v4: earlier versions persisted Chinese source text into non-Chinese
 // catalogs (ja/ko/etc.), so even after adding new keys the provider would
 // "find" a cached value and skip re-translating. Bump the prefix and add a
@@ -647,6 +653,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   const setLang = useCallback((l: LangCode) => {
     lastManualLangAtRef.current = Date.now();
+    try { sessionStorage.setItem(SESSION_MANUAL_PICK, "1"); } catch { /* ignore */ }
     setLangState(l);
     try { localStorage.setItem(STORAGE_LANG, l); } catch { /* ignore */ }
     supabase.auth.getUser().then(({ data }) => {
@@ -662,6 +669,15 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       const { data: { session } } = await supabase.auth.getSession();
       const uid = session?.user?.id;
       if (!uid || cancelled) return;
+      // If the user explicitly picked a language in this tab/session,
+      // their local choice always wins on sign-in. Push it up to the
+      // profile instead of overwriting it with the stored profile value.
+      let manualThisSession = false;
+      try { manualThisSession = sessionStorage.getItem(SESSION_MANUAL_PICK) === "1"; } catch { /* ignore */ }
+      if (manualThisSession) {
+        await supabase.from("profiles").update({ preferred_language: lang } as never).eq("user_id", uid);
+        return;
+      }
       const { data } = await supabase
         .from("profiles")
         .select("preferred_language")

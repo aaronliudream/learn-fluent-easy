@@ -4708,6 +4708,24 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_badges_earned: {
+        Row: {
+          badge_id: string
+          earned_at: string
+          user_id: string
+        }
+        Insert: {
+          badge_id: string
+          earned_at?: string
+          user_id: string
+        }
+        Update: {
+          badge_id?: string
+          earned_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       primary_game_scores: {
         Row: {
           accuracy: number | null

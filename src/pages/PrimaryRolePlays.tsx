@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Lock, Volume2, X, RotateCcw, Sparkles } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import {
   PRIMARY_ROLE_PLAYS,
-  getRolePlaysSorted,
   type RolePlay,
   type RolePlayCategory,
 } from "@/data/primaryRolePlays";
+import { PRIMARY_ROLE_PLAYS_G2 } from "@/data/primaryRolePlaysG2";
 import { supabase } from "@/integrations/supabase/client";
 
 const CATEGORY_META: Record<RolePlayCategory, { label: string; emoji: string }> = {
@@ -37,6 +38,9 @@ function saveLocal(map: Record<string, { last_choice_correct: boolean; play_coun
 }
 
 export default function PrimaryRolePlays() {
+  const [params] = useSearchParams();
+  const isG2 = params.get("grade") === "2";
+  const DATA = isG2 ? PRIMARY_ROLE_PLAYS_G2 : PRIMARY_ROLE_PLAYS;
   const [completed, setCompleted] = useState<Record<string, { last_choice_correct: boolean; play_count: number }>>(() => loadLocal());
   const [uid, setUid] = useState<string | null>(null);
   const [open, setOpen] = useState<RolePlay | null>(null);
@@ -68,7 +72,7 @@ export default function PrimaryRolePlays() {
     })();
   }, []);
 
-  const sorted = useMemo(() => getRolePlaysSorted(), []);
+  const sorted = useMemo(() => [...DATA].sort((a, b) => a.sortOrder - b.sortOrder), [DATA]);
   const completedIds = useMemo(() => new Set(Object.keys(completed)), [completed]);
 
   // Unlock rule: first scene always unlocked; rp(N+1) unlocks when rp(N) completed.
@@ -87,9 +91,12 @@ export default function PrimaryRolePlays() {
     return CATEGORY_ORDER.map(cat => ({
       cat,
       meta: CATEGORY_META[cat],
-      items: PRIMARY_ROLE_PLAYS.filter(rp => rp.category === cat).sort((a, b) => a.sortOrder - b.sortOrder),
+      items: DATA.filter(rp => rp.category === cat).sort((a, b) => a.sortOrder - b.sortOrder),
     })).filter(g => g.items.length > 0);
-  }, []);
+  }, [DATA]);
+
+  // G1 全部完成时,在 G1 主页底部显示 G2 解锁入口
+  const g1AllDone = !isG2 && PRIMARY_ROLE_PLAYS.every(rp => completedIds.has(rp.id));
 
   function start(rp: RolePlay) {
     if (!isUnlocked(rp)) return;
@@ -223,6 +230,18 @@ export default function PrimaryRolePlays() {
           </div>
         ))}
       </section>
+
+      {g1AllDone && (
+        <section className="mt-6 rounded-3xl border-2 border-fuchsia-300 bg-gradient-to-br from-fuchsia-100 via-violet-100 to-pink-100 p-4 text-center shadow-tile dark:border-fuchsia-800 dark:from-fuchsia-950/40 dark:via-violet-950/40 dark:to-pink-950/40">
+          <div className="text-base font-extrabold text-fuchsia-900 dark:text-fuchsia-100">🎉 G1 角色扮演全部完成!</div>
+          <Link
+            to="/primary/roleplays?grade=2"
+            className="mt-2 inline-block rounded-2xl bg-gradient-to-r from-fuchsia-500 to-pink-500 px-5 py-2 text-sm font-extrabold text-white shadow-md hover:scale-[1.02]"
+          >
+            去解锁 G2 角色扮演 →
+          </Link>
+        </section>
+      )}
 
       {/* 剧场弹窗 */}
       {open && (

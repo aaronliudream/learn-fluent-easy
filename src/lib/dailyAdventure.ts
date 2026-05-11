@@ -106,11 +106,6 @@ function getThirdStepContent(
     cta: "去演一段",
     to: `/primary/roleplays${gradeQ}`,
     estMinutes: 5,
-    ...(isG2 && {
-      placeholder: true,
-      fallbackTo: "/primary/roleplays",
-      fallbackLabel: "先去复习 G1 的 Roleplay 吧",
-    }),
   };
 
   const listeningStep: AdventureStep = {

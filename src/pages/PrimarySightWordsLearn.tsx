@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Check, Sparkles, Volume2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { speakKid as speak } from "@/lib/speak";
@@ -35,6 +35,7 @@ function speakWordKid(word: string) {
  */
 export default function PrimarySightWordsLearn() {
   const { wordId } = useParams<{ wordId: string }>();
+  const [search] = useSearchParams();
   const nav = useNavigate();
   const item = useMemo(
     () =>
@@ -52,6 +53,8 @@ export default function PrimarySightWordsLearn() {
         : null,
     [item]
   );
+  const isG2 = search.get("grade") === "2" || SIGHT_WORD_ITEMS_G2.some((w) => w.id === wordId);
+  const sightWordsHref = isG2 ? "/primary/sight-words?grade=2" : "/primary/sight-words";
   const [phase, setPhase] = useState<"learn" | "quiz" | "done">("learn");
 
   useEffect(() => {
@@ -64,7 +67,7 @@ export default function PrimarySightWordsLearn() {
   if (!item) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <BackLink to="/primary/sight-words" className="text-sm text-muted-foreground">
+        <BackLink to={sightWordsHref} className="text-sm text-muted-foreground">
           ← 返回常见小词冒险
         </BackLink>
         <p className="mt-6 text-sm text-muted-foreground">没找到这个词。</p>
@@ -75,7 +78,7 @@ export default function PrimarySightWordsLearn() {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
       <BackLink
-        to="/primary/sight-words"
+        to={sightWordsHref}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> 返回常见小词冒险
@@ -124,7 +127,7 @@ export default function PrimarySightWordsLearn() {
                 : "下次再考一遍",
             });
             setPhase("done");
-            setTimeout(() => nav("/primary/sight-words"), 1600);
+            setTimeout(() => nav(sightWordsHref), 1600);
           }}
         />
       )}

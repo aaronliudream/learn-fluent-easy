@@ -54,7 +54,16 @@ export type ListeningTheme =
   | "animals"          // 动物
   | "food"             // 食物
   | "school"           // 学校
-  | "going_to_school"; // 去学校
+  | "going_to_school"  // 去学校
+  // G2 新增主题
+  | "weather"
+  | "time"
+  | "clothes"
+  | "rooms"
+  | "hobbies"
+  | "sports"
+  | "jobs"
+  | "transport";
 
 export type ListeningDialogue = {
   id: string;

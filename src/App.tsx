@@ -51,6 +51,7 @@ const PrimaryPhonicsQuiz = lazy(() => import("./pages/PrimaryPhonicsQuiz.tsx"));
 const PrimarySightWords = lazy(() => import("./pages/PrimarySightWords.tsx"));
 const PrimarySightWordsLearn = lazy(() => import("./pages/PrimarySightWordsLearn.tsx"));
 const PrimarySightWordsQuiz = lazy(() => import("./pages/PrimarySightWordsQuiz.tsx"));
+const PrimaryRolePlays = lazy(() => import("./pages/PrimaryRolePlays.tsx"));
 const PrimaryVocab = lazy(() => import("./pages/PrimaryVocab.tsx"));
 const PrimaryChat = lazy(() => import("./pages/PrimaryChat.tsx"));
 const PrimaryGrade = lazy(() => import("./pages/PrimaryGrade.tsx"));

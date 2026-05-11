@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { PageHeader } from "@/components/PageHeader";
 import { getStreak, loadProgress, touchActive } from "@/lib/guestProgress";
 import { useI18n } from "@/i18n/I18nProvider";
-import { LanguageSwitcher } from "@/i18n/LanguageSwitcher";
+import { LangToggleEnZh } from "@/i18n/LangToggleEnZh";
 import { T } from "@/i18n/T";
 import { TodayTaskCard } from "@/components/TodayTaskCard";
 import CompanionHero from "@/components/pet/CompanionHero";
@@ -111,8 +111,7 @@ const Index = () => {
       {user && needsOnboarding && (
         <OnboardingWizard userId={user.id} onClose={() => setNeedsOnboarding(false)} />
       )}
-      <div className="sticky top-3 z-40 mb-4 flex justify-start md:static md:justify-end">
-        <LanguageSwitcher />
+      <div className="sticky top-3 z-40 mb-4 flex items-center justify-start md:static md:justify-end">
         <Button asChild variant="ghost" size="sm" className="mr-2 hidden md:inline-flex">
           <Link to="/stats">
             <BarChart3 className="size-4" /> {t("nav.myStats")}
@@ -128,6 +127,7 @@ const Index = () => {
             <Users className="size-4" /> <T>Parents / Teachers</T>
           </Link>
         </Button>
+        <LangToggleEnZh />
         {user ? (
           <div className="hidden items-center gap-3 md:flex">
             <span className="text-sm text-muted-foreground">

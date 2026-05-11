@@ -121,10 +121,31 @@ function emojiSummary(results: StageResult[]) {
 export default function WordQuest({
   pool,
   onExit,
+  variant = "gaokao",
+  maxStages,
+  wordsPerQuest: wordsPerQuestProp,
+  onComplete,
 }: {
   pool: Vocab[];
   onExit: () => void;
+  /** "gaokao" 走原写库 + RPC streak 流程;"primary" 完全跳过,把结果交给 onComplete 写入小学专表。 */
+  variant?: "gaokao" | "primary";
+  /** 总关卡数,默认 18(3 词 × 6 关)。小学版传 6 → 1 词 × 6 关。 */
+  maxStages?: number;
+  /** 当日选词数,默认 3。和 maxStages 配合,小学版传 1。 */
+  wordsPerQuest?: number;
+  /** 完成时回调,允许 wrapper 写入自己的统计表。 */
+  onComplete?: (info: {
+    score: number; perfect: boolean; passed: number; total: number;
+    durationMs: number; hintsUsed: number; words: string[];
+  }) => void | Promise<void>;
 }) {
+  const totalStages = Math.max(1, maxStages ?? TOTAL_STAGES);
+  const wordsPerQuest = Math.max(
+    1,
+    wordsPerQuestProp ?? Math.max(1, Math.ceil(totalStages / STAGES_PER_WORD))
+  );
+  const isPrimary = variant === "primary";
   const [phase, setPhase] = useState<"loading" | "intro" | "playing" | "done" | "already">("loading");
   const [targets, setTargets] = useState<Vocab[]>([]);
   const [stage, setStage] = useState(0); // 0..17 (=>18 关 = 3 词 × 6 关)
@@ -146,18 +167,22 @@ export default function WordQuest({
   // --- Bootstrap: pick daily, check today's status ---
   useEffect(() => {
     (async () => {
-      const vs = pickDailyVocabs(pool, WORDS_PER_QUEST);
+      const vs = pickDailyVocabs(pool, wordsPerQuest);
       setTargets(vs);
-      // streak
-      const { data } = await supabase.rpc("get_word_quest_streak");
-      const s = (data?.[0] ?? null) as StreakStats | null;
-      setStreak(s);
-      // leaderboard
-      const { data: lb } = await supabase.rpc("get_word_quest_daily_leaderboard");
-      setLeaderboard((lb ?? []) as LeaderRow[]);
-
-      if (s?.today_done) setPhase("already");
-      else setPhase("intro");
+      if (isPrimary) {
+        // 小学版不调高考专属 RPC,today_done 由 wrapper 自己拦截。
+        setStreak(null);
+        setLeaderboard([]);
+        setPhase("intro");
+      } else {
+        const { data } = await supabase.rpc("get_word_quest_streak");
+        const s = (data?.[0] ?? null) as StreakStats | null;
+        setStreak(s);
+        const { data: lb } = await supabase.rpc("get_word_quest_daily_leaderboard");
+        setLeaderboard((lb ?? []) as LeaderRow[]);
+        if (s?.today_done) setPhase("already");
+        else setPhase("intro");
+      }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pool.length]);
@@ -181,7 +206,7 @@ export default function WordQuest({
 
     // brief pause then advance
     setTimeout(() => {
-      if (stage + 1 >= TOTAL_STAGES) {
+      if (stage + 1 >= totalStages) {
         finish(nextResults);
       } else {
         setStage(stage + 1);
@@ -194,7 +219,7 @@ export default function WordQuest({
     if (!targets.length) return;
     const totalDuration = Date.now() - questStartedAt;
     const passed = finalResults.filter((r) => r.correct).length;
-    const perfect = passed === TOTAL_STAGES && hintsUsed === 0;
+    const perfect = passed === totalStages && hintsUsed === 0;
 
     // Score: 100 base/stage * combo bonus, minus hint penalty
     let score = passed * 100;
@@ -204,6 +229,22 @@ export default function WordQuest({
     score = Math.max(0, score);
 
     setPhase("done");
+
+    if (isPrimary) {
+      try {
+        await onComplete?.({
+          score, perfect, passed, total: totalStages,
+          durationMs: totalDuration, hintsUsed,
+          words: targets.map((t) => t.word),
+        });
+      } catch (e) { console.error("primary quest onComplete", e); }
+      const coins = Math.floor(score / 5);
+      if (coins > 0) {
+        await awardCoins(coins);
+        setCoinRefresh((k) => k + 1);
+      }
+      return;
+    }
 
     try {
       const { data: u } = await supabase.auth.getUser();
@@ -229,7 +270,7 @@ export default function WordQuest({
           best_combo: passed,
           duration_ms: totalDuration,
           hits: passed,
-          misses: TOTAL_STAGES - passed,
+          misses: totalStages - passed,
           metadata: { perfect, hints_used: hintsUsed, words: targets.map((t) => t.word) },
         });
       }
@@ -400,14 +441,14 @@ export default function WordQuest({
           </div>
           <div className={cn(
             "rounded-3xl border-2 p-6 text-center shadow-tile",
-            passed === TOTAL_STAGES ? "border-amber-500/50 bg-gradient-to-br from-amber-500/15 to-orange-500/5" : "border-indigo-500/40 bg-gradient-to-br from-indigo-500/15 to-sky-500/5"
+            passed === totalStages ? "border-amber-500/50 bg-gradient-to-br from-amber-500/15 to-orange-500/5" : "border-indigo-500/40 bg-gradient-to-br from-indigo-500/15 to-sky-500/5"
           )}>
-            <div className="text-5xl">{passed === TOTAL_STAGES ? "🏆" : passed >= 12 ? "🌟" : "📚"}</div>
+            <div className="text-5xl">{passed === totalStages ? "🏆" : passed >= Math.ceil(totalStages * 0.66) ? "🌟" : "📚"}</div>
             <h2 className="mt-3 text-xl font-extrabold">
-              {passed === TOTAL_STAGES ? "完美通关！" : `通关 ${passed}/${TOTAL_STAGES} 关`}
+              {passed === totalStages ? "完美通关！" : `通关 ${passed}/${totalStages} 关`}
             </h2>
             <div className="mt-1 text-sm text-muted-foreground">
-              今日 3 词 · {targets.map((t) => t.word).join(" · ")}
+              今日 {wordsPerQuest} 词 · {targets.map((t) => t.word).join(" · ")}
             </div>
             <div className="mt-1 flex flex-wrap justify-center gap-x-3 gap-y-0.5 text-[11px] text-muted-foreground italic">
               {targets.map((t) => (
@@ -459,13 +500,13 @@ export default function WordQuest({
           <ArrowLeft className="size-4" /> 退出（视为放弃）
         </button>
         <div className="text-xs font-bold text-muted-foreground">
-          📚 第 {wordIdx + 1}/{WORDS_PER_QUEST} 词 · {STAGES[subStage].emoji} 第 {subStage + 1}/{STAGES_PER_WORD} 关
+          📚 第 {wordIdx + 1}/{wordsPerQuest} 词 · {STAGES[subStage].emoji} 第 {subStage + 1}/{STAGES_PER_WORD} 关
         </div>
       </div>
 
-      {/* 18-stage progress: 3 groups of 6, separated by gap */}
+      {/* progress: wordsPerQuest groups of STAGES_PER_WORD */}
       <div className="mb-4 flex gap-2">
-        {Array.from({ length: WORDS_PER_QUEST }).map((_, gi) => (
+        {Array.from({ length: wordsPerQuest }).map((_, gi) => (
           <div key={gi} className="flex flex-1 gap-0.5">
             {Array.from({ length: STAGES_PER_WORD }).map((__, si) => {
               const i = gi * STAGES_PER_WORD + si;

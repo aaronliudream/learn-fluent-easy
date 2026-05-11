@@ -27,11 +27,14 @@ import { getCurrentGrade, getSightWordsPolicy } from "@/lib/sightWordsGradeGate"
 export default function PrimarySightWords() {
   const nav = useNavigate();
   const [search] = useSearchParams();
-  const gradeParam = Number(search.get("grade") || "");
-  const isG2 = gradeParam === 2;
+  const gradeParam = search.get("grade");
+  // 显式 ?grade=1 强制 G1;?grade=2 强制 G2;否则按当前年级自动选择
+  const currentGrade = getCurrentGrade();
+  const isG2 =
+    gradeParam === "2" || (gradeParam !== "1" && currentGrade >= 2);
   const [mastery, setMastery] = useState<SightWordMasteryMap>(new Map());
   const [loading, setLoading] = useState(true);
-  const grade = isG2 ? 2 : getCurrentGrade();
+  const grade = isG2 ? 2 : 1;
   const policy = getSightWordsPolicy(grade);
   const GROUPS = isG2 ? SIGHT_WORD_GROUPS_G2 : SIGHT_WORD_GROUPS;
   const ITEMS = isG2 ? SIGHT_WORD_ITEMS_G2 : SIGHT_WORD_ITEMS;

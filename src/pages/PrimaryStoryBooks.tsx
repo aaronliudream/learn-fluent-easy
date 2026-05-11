@@ -352,6 +352,17 @@ export default function PrimaryStoryBooks() {
         <BookOpen className="size-3" /> 一本一本读,下一本就会亮起来!
       </p>
 
+      {/* G1 全部读完 → 解锁 G2 入口 */}
+      {!isG2 && totalDone >= sorted.length && sorted.length > 0 && (
+        <Link
+          to="/primary/reading?grade=2"
+          className="mt-4 block rounded-3xl bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 p-4 text-center text-white shadow-tile transition hover:-translate-y-0.5"
+        >
+          <div className="text-base font-extrabold">🎉 G1 绘本全部读完!</div>
+          <div className="mt-1 text-xs opacity-90">去解锁 G2 绘本 →</div>
+        </Link>
+      )}
+
       {/* 书架底部 Spark 陪伴语 */}
       <div className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-bold text-amber-100 backdrop-blur-sm">
         <span className="grid size-8 shrink-0 place-items-center rounded-full bg-white text-xl shadow ring-2 ring-amber-300">🦊</span>

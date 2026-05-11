@@ -81,7 +81,7 @@ Deno.serve(async (req) => {
 
   // current state
   const { data: existing } = await supa
-    .from("unified_mastery")
+    .from("unified_mastery_manual")
     .select("*")
     .eq("user_id", user.id)
     .eq("stage", payload.stage)
@@ -122,7 +122,7 @@ Deno.serve(async (req) => {
   const oldState = existing?.state ?? "none";
 
   const { error: upsertErr } = await supa
-    .from("unified_mastery")
+    .from("unified_mastery_manual")
     .upsert({
       user_id: user.id,
       stage: payload.stage,

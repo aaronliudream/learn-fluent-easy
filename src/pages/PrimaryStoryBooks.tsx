@@ -12,9 +12,9 @@ import { supabase } from "@/integrations/supabase/client";
 const LEVEL_META: Record<1 | 2 | 3, { label: string; sub: string }> = {
   1: { label: "第 1 阶段 · 简单", sub: "每页 3-4 词" },
   2: { label: "第 2 阶段 · 中等", sub: "每页 5-6 词" },
-  3: { label: "第 3 阶段 · 挑战", sub: "短句子" },
+  3: { label: "第 3 阶段 · 有点难", sub: "短句子" },
 };
-const DIFFICULTY_LABEL = { 1: "简单", 2: "中等", 3: "挑战" } as const;
+const DIFFICULTY_LABEL = { 1: "简单", 2: "一般", 3: "有点难" } as const;
 
 // 散落星星位置(克制装饰,不动画)
 const BG_STARS = [
@@ -158,8 +158,8 @@ export default function PrimaryStoryBooks() {
           "和 Spark 一起读 {total} 本小绘本!"
         </p>
         <div className="mx-auto mt-3 flex max-w-xs items-center justify-between gap-3 text-xs font-bold text-amber-200/90">
-          <span>已读 {totalDone} / {total}</span>
-          <span>{nextB ? `当前 · 第 ${nextB.level} 阶段` : "全部读完 ✨"}</span>
+          <span>已经读了 {totalDone} / {total}</span>
+          <span>{nextB ? `现在 · 第 ${nextB.level} 阶段` : "全部读完 ✨"}</span>
         </div>
         <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/20">
           <div className="h-full bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 transition-all" style={{ width: `${(totalDone / Math.max(1, total)) * 100}%` }} />
@@ -193,7 +193,7 @@ export default function PrimaryStoryBooks() {
           <div className="mt-1 flex items-center justify-between gap-3">
             <div className="min-w-0">
               <div className="truncate text-lg font-extrabold">和 Spark 读 "{nextB.title_en}"</div>
-              <div className="text-xs opacity-90">你已读 {totalDone}/{total} · 约 {nextB.reading_minutes} 分钟</div>
+              <div className="text-xs opacity-90">你已经读了 {totalDone}/{total} · {nextB.reading_minutes} 分钟左右</div>
             </div>
             <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/20 text-2xl backdrop-blur-sm">▶</div>
           </div>
@@ -309,7 +309,7 @@ export default function PrimaryStoryBooks() {
       </section>
 
       <p className="mt-8 flex items-center justify-center gap-1 text-[11px] text-amber-200/70">
-        <BookOpen className="size-3" /> 顺序解锁:读完一本,下一本就会亮起
+        <BookOpen className="size-3" /> 一本一本读,下一本就会亮起来!
       </p>
 
       {/* 书架底部 Spark 陪伴语 */}

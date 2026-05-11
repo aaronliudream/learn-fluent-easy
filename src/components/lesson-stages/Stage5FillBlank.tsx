@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Check, X } from "lucide-react";
 import { pickPhrase } from "@/data/sparkPhrases";
 import type { Stage5Question } from "@/data/g2LessonStages";
+import KaraokeText from "@/components/KaraokeText";
 
 export default function Stage5FillBlank({ questions, onComplete }: { questions: Stage5Question[]; onComplete: () => void }) {
   const [i, setI] = useState(0);
@@ -25,7 +26,7 @@ export default function Stage5FillBlank({ questions, onComplete }: { questions: 
     setTimeout(() => {
       if (i < questions.length - 1) setI(i + 1);
       else onComplete();
-    }, ok ? 900 : 2000);
+    }, ok ? 1800 : 2400);
   }
 
   const display = revealed
@@ -48,6 +49,16 @@ export default function Stage5FillBlank({ questions, onComplete }: { questions: 
             display
           )}
         </div>
+        {revealed && (
+          <div className="mt-4">
+            <KaraokeText
+              key={`k-${i}`}
+              text={q.sentence_with_blank.replace("___", q.correct)}
+              autoPlay
+              size="sm"
+            />
+          </div>
+        )}
       </div>
 
       <div className="grid w-full grid-cols-2 gap-3">

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, Check, ChevronDown, ChevronUp, Play, Settings, Sparkles, Volume2, VolumeX, Award } from "lucide-react";
+import { ArrowLeft, Check, ChevronDown, ChevronUp, Play, Settings, Sparkles, Volume2, VolumeX, Award, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import BackLink from "@/components/BackLink";
 import { isSfxEnabled, setSfxEnabled } from "@/lib/soundEffects";

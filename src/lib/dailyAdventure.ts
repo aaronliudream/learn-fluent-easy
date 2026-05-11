@@ -17,6 +17,12 @@ export type AdventureStep = {
   cta: string;       // button text
   to: string;        // route to launch
   estMinutes: number;
+  /** G2 占位:该模块尚未接入,渲染时显示「准备中」+ G1 回退入口 */
+  placeholder?: boolean;
+  /** placeholder 时的 G1 回退路径 */
+  fallbackTo?: string;
+  /** placeholder 时的 G1 回退提示 */
+  fallbackLabel?: string;
 };
 
 /** Build today's 4-step plan. Pure function — same input, same output today. */
@@ -25,6 +31,7 @@ export function buildDailyAdventure(opts: {
   nextLessonId?: string | null;
 }): AdventureStep[] {
   const { grade, nextLessonId } = opts;
+  const gradeQ = grade === 2 ? "?grade=2" : "";
 
   const steps: AdventureStep[] = [];
 
@@ -32,10 +39,10 @@ export function buildDailyAdventure(opts: {
   steps.push({
     kind: "phonics",
     emoji: "🔤",
-    title: "和 Spark 学字母",
+    title: grade === 2 ? "和 Spark 学 G2 新音" : "和 Spark 学字母",
     sparkLine: "今天 Spark 想教你一个新字母,我们一起读!",
     cta: "和 Spark 读字母",
-    to: `/primary/phonics`,
+    to: `/primary/phonics${gradeQ}`,
     estMinutes: 3,
   });
 
@@ -52,7 +59,7 @@ export function buildDailyAdventure(opts: {
 
   // Step 3 — rotates by day-of-week for Grade 1 so 29 lessons last 60+ days
   // and the new 20 Roleplay scenes get woven into the main path.
-  // G2-G6 keep the original lesson-only behavior.
+  // G2 也轮换,但未接入的模块走 placeholder + G1 fallback。
   const third = getThirdStepContent(grade, new Date(), nextLessonId);
   if (third) steps.push(third);
 
@@ -77,6 +84,8 @@ function getThirdStepContent(
   date: Date,
   nextLessonId?: string | null
 ): AdventureStep | null {
+  const isG2 = grade === 2;
+  const gradeQ = isG2 ? "?grade=2" : "";
   const lessonStep: AdventureStep | null = nextLessonId
     ? {
         kind: "lesson",
@@ -89,25 +98,28 @@ function getThirdStepContent(
       }
     : null;
 
-  if (grade !== 1) return lessonStep;
-
   const roleplayStep: AdventureStep = {
     kind: "roleplay",
     emoji: "🎭",
     title: "和 Spark 演一段",
     sparkLine: "今天我们演个小故事吧,说说生活里的话!",
     cta: "去演一段",
-    to: `/primary/roleplays`,
+    to: `/primary/roleplays${gradeQ}`,
     estMinutes: 5,
+    ...(isG2 && {
+      placeholder: true,
+      fallbackTo: "/primary/roleplays",
+      fallbackLabel: "先去复习 G1 的 Roleplay 吧",
+    }),
   };
 
   const listeningStep: AdventureStep = {
     kind: "listening",
     emoji: "🎧",
-    title: "听 Spark 聊天",
+    title: isG2 ? "听 G2 新对话" : "听 Spark 聊天",
     sparkLine: "今天 Spark 要和小伙伴聊天啦,你来听听!",
     cta: "和 Spark 听聊天",
-    to: `/primary/listening`,
+    to: `/primary/listening${gradeQ}`,
     estMinutes: 5,
   };
 
@@ -117,11 +129,38 @@ function getThirdStepContent(
     title: "和 Spark 读绘本",
     sparkLine: "今天 Spark 想和你一起读一本小绘本!",
     cta: "去读绘本",
-    to: `/primary/reading`,
+    to: `/primary/reading${gradeQ}`,
     estMinutes: 4,
+    ...(isG2 && {
+      placeholder: true,
+      fallbackTo: "/primary/reading",
+      fallbackLabel: "先去复习 G1 的绘本吧",
+    }),
+  };
+
+  // G2 lesson 也没接入 — 用 lesson 占位 + 回退到 G1 lesson 列表
+  const g2LessonPlaceholder: AdventureStep = {
+    kind: "lesson",
+    emoji: "📚",
+    title: "G2 课程准备中",
+    sparkLine: "G2 的课还在准备,先去复习一节 G1 的吧!",
+    cta: "去看 G1 的课",
+    to: `/primary/grade/1`,
+    estMinutes: 8,
+    placeholder: true,
+    fallbackTo: "/primary/grade/1",
+    fallbackLabel: "先去复习 G1 的课",
   };
 
   const dow = date.getDay(); // 0=Sun ... 6=Sat
+
+  if (isG2) {
+    if (dow === 6) return readingStep;
+    if (dow === 0 || dow === 3) return listeningStep;
+    if (dow === 2 || dow === 5) return roleplayStep;
+    return g2LessonPlaceholder;
+  }
+
   // Sat(6) → Reading (storybooks)
   if (dow === 6) return readingStep;
   // Wed(3), Sun(0) → Listening

@@ -18,13 +18,8 @@ import {
   pickSparkLine,
 } from "@/data/g2LessonChapters";
 import LessonStageEngine from "@/components/LessonStageEngine";
-import { G2_L01_STAGES } from "@/data/g2LessonStages";
+import { G2_ALL_LESSON_STAGES } from "@/data/g2AllLessonStages";
 import { pickPhrase } from "@/data/sparkPhrases";
-
-// MVP: which lesson_ids have a 5-stage engine wired up
-const STAGE_LESSON_IDS: Record<string, typeof G2_L01_STAGES> = {
-  g2_l01: G2_L01_STAGES,
-};
 
 type Expr = { en: string; cn: string; scene?: string };
 type Vocab = { word: string; pron?: string; meaning?: string; example?: string; example_cn?: string };
@@ -320,7 +315,7 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
   const [celebratePhrase] = useState(() => pickPhrase("lessonComplete"));
 
   const lessonId = `g2_l${String(meta.idx).padStart(2, "0")}`;
-  const stagedLesson = STAGE_LESSON_IDS[lessonId];
+  const stagedLesson = G2_ALL_LESSON_STAGES[lessonId];
 
   useEffect(() => {
     document.title = `${meta.en} · 二年级 | FluentPath`;

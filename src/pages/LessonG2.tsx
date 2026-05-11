@@ -17,6 +17,14 @@ import {
   lessonIdToIdx,
   pickSparkLine,
 } from "@/data/g2LessonChapters";
+import LessonStageEngine from "@/components/LessonStageEngine";
+import { G2_L01_STAGES } from "@/data/g2LessonStages";
+import { pickPhrase } from "@/data/sparkPhrases";
+
+// MVP: which lesson_ids have a 5-stage engine wired up
+const STAGE_LESSON_IDS: Record<string, typeof G2_L01_STAGES> = {
+  g2_l01: G2_L01_STAGES,
+};
 
 type Expr = { en: string; cn: string; scene?: string };
 type Vocab = { word: string; pron?: string; meaning?: string; example?: string; example_cn?: string };

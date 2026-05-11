@@ -11,16 +11,29 @@ export default function Stage4SentenceListen({ sentences, onComplete }: { senten
   const [activeWord, setActiveWord] = useState(-1);
   const [seen, setSeen] = useState<Set<number>>(new Set([0]));
   const playedRef = useRef(false);
+  const timersRef = useRef<number[]>([]);
   const s = sentences[i];
   const words = s.en.split(/(\s+)/);
+  const wordCount = s.en.trim().split(/\s+/).length;
+
+  function clearTimers() {
+    timersRef.current.forEach((t) => clearTimeout(t));
+    timersRef.current = [];
+  }
 
   function play() {
+    clearTimers();
+    stopSpeaking();
     setActiveWord(0);
-    speakWithBoundary(
-      s.en,
-      (idx) => setActiveWord(idx),
-      () => setActiveWord(-1),
-    );
+    // Schedule per-word highlight progression. Approximate timing — good
+    // enough for 5–10 word sentences and lets us use high-quality MP3 TTS.
+    for (let w = 1; w < wordCount; w++) {
+      const id = window.setTimeout(() => setActiveWord(w), w * MS_PER_WORD);
+      timersRef.current.push(id);
+    }
+    const endId = window.setTimeout(() => setActiveWord(-1), wordCount * MS_PER_WORD + 400);
+    timersRef.current.push(endId);
+    void speak(s.en);
   }
 
   useEffect(() => {
@@ -33,9 +46,19 @@ export default function Stage4SentenceListen({ sentences, onComplete }: { senten
         play();
       }
     }, 300);
-    return () => clearTimeout(t);
+    return () => {
+      clearTimeout(t);
+      clearTimers();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i]);
+
+  useEffect(() => {
+    return () => {
+      clearTimers();
+      stopSpeaking();
+    };
+  }, []);
 
   let wordIdx = -1;
 

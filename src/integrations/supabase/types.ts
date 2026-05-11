@@ -5331,6 +5331,33 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_storybook_completion: {
+        Row: {
+          book_id: string
+          completed_at: string
+          questions_correct: number
+          questions_total: number
+          read_count: number
+          user_id: string
+        }
+        Insert: {
+          book_id: string
+          completed_at?: string
+          questions_correct?: number
+          questions_total?: number
+          read_count?: number
+          user_id: string
+        }
+        Update: {
+          book_id?: string
+          completed_at?: string
+          questions_correct?: number
+          questions_total?: number
+          read_count?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       primary_unit_challenges: {
         Row: {
           accuracy: number

@@ -293,6 +293,12 @@ export default function PrimaryPhonics() {
             🔁 高频词复习(查漏)→
           </Link>
         )}
+        <Link
+          to="/primary/roleplays"
+          className="inline-flex items-center gap-1 text-xs font-bold text-fuchsia-600 underline-offset-2 hover:underline dark:text-fuchsia-300"
+        >
+          🎭 角色扮演 Roleplay →
+        </Link>
       </div>
     </main>
   );

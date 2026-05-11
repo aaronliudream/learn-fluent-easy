@@ -35,7 +35,7 @@ export default function PrimarySightWordsLearn() {
 
   useEffect(() => {
     if (!item) return;
-    document.title = `学高频词 ${item.word} | FluentPath`;
+    document.title = `学常见小词 ${item.word} | FluentPath`;
     const t = window.setTimeout(() => speak(item.word), 350);
     return () => clearTimeout(t);
   }, [item]);
@@ -44,7 +44,7 @@ export default function PrimarySightWordsLearn() {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <BackLink to="/primary/sight-words" className="text-sm text-muted-foreground">
-          ← 返回高频词冒险
+          ← 返回常见小词冒险
         </BackLink>
         <p className="mt-6 text-sm text-muted-foreground">没找到这个词。</p>
       </main>
@@ -57,7 +57,7 @@ export default function PrimarySightWordsLearn() {
         to="/primary/sight-words"
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="size-4" /> 返回高频词冒险
+        <ArrowLeft className="size-4" /> 返回常见小词冒险
       </BackLink>
       {group && (
         <div className="mb-3 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
@@ -110,7 +110,7 @@ export default function PrimarySightWordsLearn() {
 
       {phase === "done" && (
         <div className="rounded-3xl border-2 border-dashed border-border p-10 text-center text-sm text-muted-foreground">
-          回到高频词冒险…
+          回到常见小词冒险…
         </div>
       )}
     </main>

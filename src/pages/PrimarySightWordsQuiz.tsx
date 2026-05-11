@@ -39,7 +39,7 @@ export default function PrimarySightWordsQuiz() {
 
   useEffect(() => {
     document.title = isReview
-      ? "高频词复习 | FluentPath"
+      ? "常见小词复习 | FluentPath"
       : `挑战 ${group?.groupName ?? ""} | FluentPath`;
     (async () => {
       if (isReview) {
@@ -90,7 +90,7 @@ export default function PrimarySightWordsQuiz() {
   if (!loading && totalItems === 0) {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
-        <BackLink to="/primary/sight-words" className="text-sm text-muted-foreground">← 返回高频词</BackLink>
+        <BackLink to="/primary/sight-words" className="text-sm text-muted-foreground">← 返回常见小词</BackLink>
         <p className="mt-6 text-sm text-muted-foreground">
           {isReview ? "今天没有需要复习的词~" : "这一组还没有词。"}
         </p>
@@ -101,7 +101,7 @@ export default function PrimarySightWordsQuiz() {
     return (
       <main className="mx-auto max-w-2xl px-5 py-10 text-center">
         <p className="text-lg font-bold">做完啦!{perfectItems} / {totalItems} 个词通过</p>
-        <p className="mt-2 text-sm text-muted-foreground">回到高频词冒险…</p>
+        <p className="mt-2 text-sm text-muted-foreground">回到常见小词冒险…</p>
       </main>
     );
   }
@@ -159,7 +159,7 @@ export default function PrimarySightWordsQuiz() {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-6 pb-24 md:px-6">
       <BackLink to="/primary/sight-words" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回高频词冒险
+        <ArrowLeft className="size-4" /> 返回常见小词冒险
       </BackLink>
 
       <div className="mb-3 flex items-center justify-between">

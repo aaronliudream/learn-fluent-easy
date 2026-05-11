@@ -49,8 +49,9 @@ export default function PrimaryListening() {
   const lastGrade = Number(typeof window !== "undefined" ? localStorage.getItem("primary:lastGrade") : "") || 1;
   const isG2 = gradeParam === "2" || (gradeParam !== "1" && lastGrade >= 2);
   const DATA = isG2 ? PRIMARY_LISTENING_DIALOGUES_G2 : PRIMARY_LISTENING_DIALOGUES;
-  const playPath = (id: string) =>
-    isG2 ? `/primary/listening/play/${id}?grade=2` : `/primary/listening/play/${id}`;
+  const gradeQ = isG2 ? "?grade=2" : "";
+  const gradeHome = isG2 ? "/primary/adventure/2" : "/primary";
+  const playPath = (id: string) => `/primary/listening/play/${id}${gradeQ}`;
   const [completed, setCompleted] = useState<Record<string, CompRec>>(() => loadLocal());
 
   useEffect(() => {
@@ -83,7 +84,11 @@ export default function PrimaryListening() {
     () => [...DATA].sort((a, b) => a.sortOrder - b.sortOrder),
     [DATA]
   );
-  const completedIds = useMemo(() => new Set(Object.keys(completed)), [completed]);
+  const poolIds = useMemo(() => new Set(DATA.map(d => d.id)), [DATA]);
+  const completedIds = useMemo(
+    () => new Set(Object.keys(completed).filter(id => poolIds.has(id))),
+    [completed, poolIds]
+  );
 
   function isUnlocked(d: ListeningDialogue): boolean {
     const idx = sorted.findIndex(x => x.id === d.id);
@@ -107,8 +112,8 @@ export default function PrimaryListening() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6">
-      <BackLink to="/primary" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> 返回小学专区
+      <BackLink to={gradeHome} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+        <ArrowLeft className="size-4" /> {isG2 ? "返回二年级冒险" : "返回小学专区"}
       </BackLink>
 
       {/* Spark 顶卡 — 蓝绿渐变,与 Roleplay 紫色区分 */}

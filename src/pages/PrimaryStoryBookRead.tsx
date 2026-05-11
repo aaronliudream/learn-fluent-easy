@@ -172,9 +172,41 @@ export default function PrimaryStoryBookRead() {
             <div className="grid min-h-[340px] place-items-center text-center">
               <div>
                 <div className="text-[120px] leading-[0.9] md:text-[160px]" aria-hidden>
-                  {page.emoji.split("\n").map((line, i) => (
-                    <div key={i}>{line}</div>
-                  ))}
+                  {page.emojiParts && page.emojiParts.length > 0 ? (
+                    <>
+                      <div className="flex items-end justify-center gap-3">
+                        {page.emojiParts
+                          .filter((p) => !p.ground)
+                          .map((p, i) => (
+                            <span
+                              key={i}
+                              style={{ fontSize: `${p.scale ?? 1}em`, lineHeight: 1 }}
+                            >
+                              {p.char}
+                            </span>
+                          ))}
+                      </div>
+                      {page.emojiParts.some((p) => p.ground) && (
+                        <div className="mt-1 flex items-center justify-center gap-2 tracking-widest">
+                          {page.emojiParts
+                            .filter((p) => p.ground)
+                            .map((p, i) => (
+                              <span
+                                key={i}
+                                style={{ fontSize: `${p.scale ?? 0.4}em`, lineHeight: 1 }}
+                                className="opacity-80"
+                              >
+                                {p.char}
+                              </span>
+                            ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    page.emoji.split("\n").map((line, i) => (
+                      <div key={i}>{line}</div>
+                    ))
+                  )}
                 </div>
                 <div className="mx-auto mt-6 max-w-md rounded-2xl border-2 border-amber-200 bg-white/80 p-4 shadow-sm dark:border-amber-900/40 dark:bg-amber-950/30">
                   <div className="text-2xl font-extrabold text-amber-900 dark:text-amber-100 md:text-3xl">{page.text_en}</div>

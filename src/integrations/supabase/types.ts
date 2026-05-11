@@ -4957,6 +4957,33 @@ export type Database = {
         }
         Relationships: []
       }
+      primary_listening_completion: {
+        Row: {
+          completed_at: string
+          dialogue_id: string
+          play_count: number
+          questions_correct: number
+          questions_total: number
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string
+          dialogue_id: string
+          play_count?: number
+          questions_correct?: number
+          questions_total?: number
+          user_id: string
+        }
+        Update: {
+          completed_at?: string
+          dialogue_id?: string
+          play_count?: number
+          questions_correct?: number
+          questions_total?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       primary_monthly_checkups: {
         Row: {
           cert_code: string

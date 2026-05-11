@@ -164,7 +164,7 @@ export default function PrimaryStoryBookRead() {
           >
             <div className="grid min-h-[340px] place-items-center text-center">
               <div>
-                <div className="text-[120px] leading-none md:text-[160px]" aria-hidden>{page.emoji}</div>
+                <div className="whitespace-pre-line text-[120px] leading-[0.95] md:text-[160px]" aria-hidden>{page.emoji}</div>
                 <div className="mx-auto mt-6 max-w-md rounded-2xl border-2 border-amber-200 bg-white/80 p-4 shadow-sm dark:border-amber-900/40 dark:bg-amber-950/30">
                   <div className="text-2xl font-extrabold text-amber-900 dark:text-amber-100 md:text-3xl">{page.text_en}</div>
                   <div className="mt-1 text-sm font-bold text-amber-700 dark:text-amber-200">{page.text_cn}</div>

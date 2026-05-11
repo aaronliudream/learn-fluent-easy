@@ -232,6 +232,19 @@ export default function PrimaryAdventure() {
           想自己挑课程?去完整学习地图 →
         </Link>
       </div>
+
+      {/* 旁路入口 — 不管今天第 3 步是什么,都能直接进 */}
+      <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs">
+        <Link to="/primary/listening" className="text-muted-foreground underline-offset-2 hover:underline">
+          🎧 听力对话
+        </Link>
+        <Link to="/primary/reading" className="text-muted-foreground underline-offset-2 hover:underline">
+          📚 小绘本
+        </Link>
+        <Link to="/primary/phonics" className="text-muted-foreground underline-offset-2 hover:underline">
+          🔤 拼读 / 高频词
+        </Link>
+      </div>
     </main>
   );
 }

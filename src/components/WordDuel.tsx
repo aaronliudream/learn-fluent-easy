@@ -596,7 +596,7 @@ function LobbyView({
 
       <div className="mt-4 rounded-2xl border bg-muted/40 p-4 text-xs leading-relaxed text-muted-foreground">
         <div className="mb-1 font-bold text-foreground"><T>📖 段位规则</T></div>
-        <T>🥉 青铜 < 1050 · 🥈 白银 1050+ · 🥇 黄金 1200+ · 💎 钻石 1400+ · 🏆 大师 1600+ · 👑 王者 1800+</T>
+        <T>{"🥉 青铜 < 1050 · 🥈 白银 1050+ · 🥇 黄金 1200+ · 💎 钻石 1400+ · 🏆 大师 1600+ · 👑 王者 1800+"}</T>
         <br />
         <T>ELO K 值 32：胜负影响 ±16~32 分；与高分对手交手胜利获得更多分。</T>
       </div>

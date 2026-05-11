@@ -269,7 +269,7 @@ export default function Primary() {
                   <div className="absolute inset-x-3 bottom-3">
                     <div className="text-sm font-extrabold text-white drop-shadow">{g.name_cn}</div>
                     <div className="text-[10px] font-bold text-white/90 drop-shadow">
-                      {isPreview ? "📦 准备中" : phonicsOnly ? "✨ 4 个模块已开放" : "✨ 完整开放"}
+                      {isPreview ? "📦 准备中" : phonicsOnly ? "✨ 5 个模块已开放" : "✨ 完整开放"}
                     </div>
                   </div>
                 </button>

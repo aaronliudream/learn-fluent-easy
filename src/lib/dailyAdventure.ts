@@ -95,7 +95,7 @@ function getThirdStepContent(
     kind: "roleplay",
     emoji: "🎭",
     title: "和 Spark 演一段",
-    sparkLine: "今天我们演个小剧场吧,练点真生活英语!",
+    sparkLine: "今天我们演个小故事吧,说说生活里的话!",
     cta: "去演一段",
     to: `/primary/roleplays`,
     estMinutes: 5,

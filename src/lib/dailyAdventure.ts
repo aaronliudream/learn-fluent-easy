@@ -32,9 +32,9 @@ export function buildDailyAdventure(opts: {
   steps.push({
     kind: "phonics",
     emoji: "🔤",
-    title: "Spark 教你拼读",
-    sparkLine: "今天 Spark 学了一个新音,你陪我念好不好?",
-    cta: "陪 Spark 学拼读",
+    title: "和 Spark 学字母",
+    sparkLine: "今天 Spark 想教你一个新字母,我们一起读!",
+    cta: "和 Spark 读字母",
     to: `/primary/phonics`,
     estMinutes: 3,
   });
@@ -43,9 +43,9 @@ export function buildDailyAdventure(opts: {
   steps.push({
     kind: "vocab",
     emoji: "🗣",
-    title: "和 Spark 念词",
-    sparkLine: "我想跟你念几个词,你念给我听好不好?",
-    cta: "陪 Spark 念词",
+    title: "和 Spark 读单词",
+    sparkLine: "我想跟你读几个单词,大声读给 Spark 听!",
+    cta: "和 Spark 读单词",
     to: `/primary/vocab/${grade}`,
     estMinutes: 3,
   });
@@ -61,8 +61,8 @@ export function buildDailyAdventure(opts: {
     kind: "culture",
     emoji: "🌍",
     title: "Spark 的小发现",
-    sparkLine: "学完别走~ 我们去看看今天的文化小卡片吧!",
-    cta: "看看文化小卡",
+    sparkLine: "学完别走~ 跟 Spark 看看今天的新鲜事吧!",
+    cta: "看看新鲜事",
     to: `/primary/culture/${grade}`,
     estMinutes: 2,
   });
@@ -104,9 +104,9 @@ function getThirdStepContent(
   const listeningStep: AdventureStep = {
     kind: "listening",
     emoji: "🎧",
-    title: "听 Spark 讲对话",
-    sparkLine: "今天我们听一段对话,你听 Spark 说什么!",
-    cta: "和 Spark 听对话",
+    title: "听 Spark 聊天",
+    sparkLine: "今天 Spark 要和小伙伴聊天啦,你来听听!",
+    cta: "和 Spark 听聊天",
     to: `/primary/listening`,
     estMinutes: 5,
   };

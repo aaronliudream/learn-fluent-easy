@@ -63,7 +63,36 @@ export function buildDailyAdventure(opts: {
   const third = getThirdStepContent(grade, new Date(), nextLessonId);
   if (third) steps.push(third);
 
-  // Step 4 — Culture stamp / pet visit (light wind-down).
+  // Step 4 — Word Quest 单词奇旅(MVP:仅 G1/G2 接入,基于 Sight Words mastery)
+  if (grade === 1 || grade === 2) {
+    const ready = sightWordsMasteredCount >= 6;
+    steps.push(
+      ready
+        ? {
+            kind: "game",
+            emoji: "🎮",
+            title: "和 Spark 玩单词游戏",
+            sparkLine: "今天我们玩单词奇旅吧,只要 4 分钟!",
+            cta: "开始单词奇旅",
+            to: `/primary/word-quest?grade=${grade}`,
+            estMinutes: 4,
+          }
+        : {
+            kind: "game",
+            emoji: "🎮",
+            title: "单词游戏准备中",
+            sparkLine: `再学几个单词就能玩游戏啦!现在 ${sightWordsMasteredCount}/6`,
+            cta: "去学单词",
+            to: `/primary/sight-words${gradeQ}`,
+            estMinutes: 4,
+            placeholder: true,
+            fallbackTo: `/primary/sight-words${gradeQ}`,
+            fallbackLabel: "先去学几个单词",
+          }
+    );
+  }
+
+  // Step 5 — Culture stamp / pet visit (light wind-down).
   steps.push({
     kind: "culture",
     emoji: "🌍",

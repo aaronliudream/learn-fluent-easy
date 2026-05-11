@@ -4,7 +4,14 @@ import { ArrowLeft, Volume2, RotateCcw, Sparkles, ChevronLeft, ChevronRight } fr
 import BackLink from "@/components/BackLink";
 import { findBook } from "@/data/primaryStoryBooks";
 import { supabase } from "@/integrations/supabase/client";
-import { speakKid as speak, stopSpeaking } from "@/lib/speak";
+import { speak, stopSpeaking } from "@/lib/speak";
+import { pickStoryVoice } from "@/lib/storyVoice";
+import type { StoryBookPage } from "@/data/primaryStoryBooks";
+
+function speakPage(page: StoryBookPage) {
+  const v = pickStoryVoice(page.speaker);
+  return speak(page.text_en, { voiceId: v.voiceId, speed: v.speed });
+}
 
 const LOCAL_KEY = "primary_storybook_completion_v1";
 type CompRec = { questions_correct: number; questions_total: number; read_count: number };
@@ -38,7 +45,7 @@ export default function PrimaryStoryBookRead() {
     setQIdx(0);
     setPickedIdx(null);
     setCorrectCount(0);
-    const t = setTimeout(() => speak(book.pages[0].text_en), 350);
+    const t = setTimeout(() => speakPage(book.pages[0]), 350);
     return () => clearTimeout(t);
   }, [id, book]);
 
@@ -61,7 +68,7 @@ export default function PrimaryStoryBookRead() {
     if (next < 0 || next >= totalPages) return;
     stopSpeaking();
     setPageIdx(next);
-    setTimeout(() => speak(book.pages[next].text_en), 200);
+    setTimeout(() => speakPage(book.pages[next]), 200);
   }
 
   function startQuiz() {

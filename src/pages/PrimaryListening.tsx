@@ -153,9 +153,9 @@ export default function PrimaryListening() {
                         </span>
                       </div>
                     </div>
-                    <div className="mt-2 text-sm font-extrabold">{d.title_cn}</div>
-                    <div className="text-[10px] font-bold opacity-90">{d.title_en}</div>
-                    <div className="mt-1 line-clamp-1 text-[11px] opacity-90">📖 {d.scene_cn}</div>
+                    <div className="mt-2 text-base font-extrabold">{d.title_cn}</div>
+                    <div className="text-[12px] font-bold opacity-90">{d.title_en}</div>
+                    <div className="mt-1 line-clamp-1 text-[14px] opacity-90">📖 {d.scene_cn}</div>
                   </div>
                 );
                 return unlocked ? (

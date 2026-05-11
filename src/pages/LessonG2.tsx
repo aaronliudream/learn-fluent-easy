@@ -22,6 +22,13 @@ import { G2_ALL_LESSON_STAGES } from "@/data/g2AllLessonStages";
 import { pickPhrase } from "@/data/sparkPhrases";
 import SparkBubble from "@/components/SparkBubble";
 import { pickGreetingByTime } from "@/data/sparkMoods";
+import RocketProgress, {
+  ROCKET_PARTS,
+  TOTAL_LESSONS,
+  detectUnlockedPart,
+  nextUnlockHint,
+} from "@/components/RocketProgress";
+import RocketLiftoff from "@/components/RocketLiftoff";
 
 type Expr = { en: string; cn: string; scene?: string };
 type Vocab = { word: string; pron?: string; meaning?: string; example?: string; example_cn?: string };
@@ -160,11 +167,14 @@ function LessonList() {
           <div className="min-w-0 flex-1">
             <div className="text-base font-extrabold">和 Spark 的英语冒险</div>
             <div className="mt-0.5 text-sm text-amber-800 dark:text-amber-200">"{greeting} {sparkLine}"</div>
+            <div className="mt-3">
+              <RocketProgress completedCount={totalDone} size="md" />
+            </div>
             <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/60 dark:bg-amber-950/40">
-              <div className="h-full bg-gradient-to-r from-amber-500 to-orange-500 transition-all" style={{ width: `${(totalDone / 30) * 100}%` }} />
+              <div className="h-full bg-gradient-to-r from-amber-500 to-orange-500 transition-all" style={{ width: `${(totalDone / TOTAL_LESSONS) * 100}%` }} />
             </div>
             <div className="mt-1.5 text-xs font-bold text-amber-900 dark:text-amber-200">
-              {loading ? "…" : `已走过 ${totalDone} / 30 站 · 完成 ${totalChapters} 个章节`}
+              {loading ? "…" : `已集齐 ${totalDone} / ${TOTAL_LESSONS} 个齿轮 · ${nextUnlockHint(totalDone)}`}
             </div>
           </div>
         </div>
@@ -316,6 +326,9 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
   const [completing, setCompleting] = useState(false);
   const [showCelebrate, setShowCelebrate] = useState(false);
   const [celebratePhrase] = useState(() => pickPhrase("lessonComplete"));
+  const [newCount, setNewCount] = useState<number>(0);
+  const [unlockedPart, setUnlockedPart] = useState<typeof ROCKET_PARTS[number] | null>(null);
+  const [showLiftoff, setShowLiftoff] = useState(false);
 
   const lessonId = `g2_l${String(meta.idx).padStart(2, "0")}`;
   const stagedLesson = G2_ALL_LESSON_STAGES[lessonId];
@@ -353,13 +366,40 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
         {showCelebrate && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-pink-500/95 via-rose-500/95 to-amber-500/95 p-6 text-white">
             <div className="w-full max-w-sm rounded-3xl bg-white/10 p-8 text-center backdrop-blur">
-              <div className="text-7xl">🎉</div>
+              <div className="relative h-24">
+                <div className="text-7xl">🎉</div>
+                {/* Gear flies up to the rocket bar at top */}
+                <div
+                  key={`gear-${newCount}`}
+                  className="gear-fly pointer-events-none absolute left-1/2 top-2 -translate-x-1/2 text-5xl"
+                >
+                  ⚙️
+                </div>
+              </div>
               <div className="mt-4 text-2xl font-extrabold">{celebratePhrase}</div>
-              <div className="mt-2 text-sm opacity-90">Spark 的火箭离起飞更近了!</div>
-              {(() => {
-                const c = getChapterByLessonId(lessonId);
-                return c ? <div className="mt-6 text-6xl">{c.emoji}</div> : null;
-              })()}
+              <div className="mt-2 text-sm opacity-90">
+                {newCount > 0
+                  ? `已集齐 ${newCount} / ${TOTAL_LESSONS} 个齿轮 · ${nextUnlockHint(newCount)}`
+                  : "Spark 的火箭离起飞更近了!"}
+              </div>
+              {/* Live rocket strip */}
+              {newCount > 0 && (
+                <div className="mt-4 flex justify-center">
+                  <RocketProgress
+                    completedCount={newCount}
+                    highlightPart={unlockedPart?.name}
+                    size="md"
+                  />
+                </div>
+              )}
+              {/* Big part-unlock reveal */}
+              {unlockedPart && (
+                <div className="mt-5 rounded-2xl bg-white/20 p-4">
+                  <div className="text-xs font-bold uppercase tracking-wider opacity-90">解锁了新部件</div>
+                  <div className="mt-1 text-7xl spark-pulse">{unlockedPart.icon}</div>
+                  <div className="mt-1 text-base font-extrabold">「{unlockedPart.name}」</div>
+                </div>
+              )}
               <div className="mt-8 flex flex-col gap-3">
                 {nextLessonKey && (
                   <button
@@ -382,6 +422,12 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
             </div>
           </div>
         )}
+        {showLiftoff && (
+          <RocketLiftoff
+            onClose={() => setShowLiftoff(false)}
+            onBackToMap={() => nav("/lesson?grade=2")}
+          />
+        )}
       </>
     );
   }
@@ -393,12 +439,32 @@ function LessonView({ lessonKey }: { lessonKey: string }) {
       const { data: u } = await supabase.auth.getUser();
       const uid = u?.user?.id;
       if (uid) {
+        // Capture pre/post completion counts (distinct lessons) for rocket unlock detection
+        let prevCount = 0;
+        let postCount = 0;
+        try {
+          const { data: priorRows } = await supabase
+            .from("primary_lesson_completion")
+            .select("lesson_key")
+            .eq("user_id", uid);
+          const priorKeys = (priorRows ?? []).map((r: any) => r.lesson_key as string);
+          const alreadyHad = priorKeys.includes(lessonKey);
+          prevCount = alreadyHad ? priorKeys.length - 1 : priorKeys.length;
+          postCount = alreadyHad ? priorKeys.length : priorKeys.length + 1;
+        } catch { /* noop */ }
         await supabase
           .from("primary_lesson_completion")
           .upsert(
             { user_id: uid, lesson_key: lessonKey, completed_at: new Date().toISOString() },
             { onConflict: "user_id,lesson_key" }
           );
+        setNewCount(postCount);
+        const part = detectUnlockedPart(prevCount, postCount);
+        if (part) setUnlockedPart(part);
+        if (postCount >= TOTAL_LESSONS) {
+          // Trigger liftoff after a brief delay so users see the gear-fly first
+          window.setTimeout(() => setShowLiftoff(true), 1800);
+        }
         await supabase.from("learning_events").insert({
           user_id: uid,
           event_type: "lesson_complete",

@@ -562,6 +562,50 @@ async function invokeTranslateWithTimeout(
   ]);
 }
 
+/**
+ * Preload the static UI catalog for a target language so we can swap atomically
+ * without rendering a half-translated UI. Returns a complete Catalog (all EN
+ * keys filled, falling back to EN source if the edge function fails).
+ */
+async function preloadCatalog(lang: LangCode): Promise<Catalog> {
+  const builtin = BUILTIN[lang];
+  if (builtin) return builtin;
+  const cached = loadCachedCatalog(lang);
+  const allKeys = Object.keys(EN) as StringKey[];
+  const missing = allKeys.filter((k) => !cached[k]);
+  if (missing.length === 0) return cached;
+  const items = missing.map((k) => ({
+    key: k,
+    text: (ZH as Record<string, string>)[k] || EN[k],
+  }));
+  const targetLanguage = getLanguageInfo(lang).englishName;
+  try {
+    const { data, error } = await invokeTranslateWithTimeout(targetLanguage, items);
+    if (!error) {
+      const translations: Record<string, string> = data?.translations || {};
+      const cleaned: Record<string, string> = {};
+      for (const [k, v] of Object.entries(translations)) {
+        if (typeof v === "string") cleaned[k] = stripHtml(v);
+      }
+      const merged: Catalog = { ...cached, ...(cleaned as Catalog) };
+      saveCachedCatalog(lang, merged);
+      return merged;
+    }
+  } catch (e) {
+    console.error("preloadCatalog failed", e);
+  }
+  // Fallback: fill missing with EN source so UI is at least monolingual.
+  const fallback: Catalog = { ...cached };
+  for (const k of missing) fallback[k] = EN[k];
+  return fallback;
+}
+
+function isCatalogComplete(lang: LangCode, cat: Catalog): boolean {
+  if (BUILTIN[lang]) return true;
+  const allKeys = Object.keys(EN) as StringKey[];
+  return allKeys.every((k) => !!cat[k]);
+}
+
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<LangCode>(() => {
     if (typeof window === "undefined") return DEFAULT_LANG;
@@ -579,6 +623,16 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     const builtin = BUILTIN[lang];
     if (builtin) return builtin;
     return loadCachedCatalog(lang);
+  });
+
+  // True once the static catalog for the current language is fully populated.
+  // Children render is gated on this flag so the first paint is never a
+  // mix of source-language and target-language strings.
+  const [ready, setReady] = useState<boolean>(() => {
+    if (typeof window === "undefined") return true;
+    const builtin = BUILTIN[lang];
+    if (builtin) return true;
+    return isCatalogComplete(lang, loadCachedCatalog(lang));
   });
 
   // Dynamic-text cache (translated content snippets).
@@ -605,8 +659,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     const builtin = BUILTIN[lang];
     if (builtin) {
       setCatalog(builtin);
+      setReady(true);
     } else {
-      setCatalog(loadCachedCatalog(lang));
+      const cached = loadCachedCatalog(lang);
+      setCatalog(cached);
+      setReady(isCatalogComplete(lang, cached));
     }
     dynCacheRef.current = lang === "zh" ? {} : loadDynCache(lang);
     dynEnCacheRef.current = loadDynCache("en" as LangCode);
@@ -616,7 +673,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (BUILTIN[lang]) return; // built-in catalog, no fetch needed
     const missingKeys = (Object.keys(EN) as StringKey[]).filter((k) => !catalog[k]);
-    if (missingKeys.length === 0) return;
+    if (missingKeys.length === 0) { setReady(true); return; }
     let cancelled = false;
     (async () => {
       // Prefer the Chinese source when available: the AI is much less likely
@@ -643,19 +700,35 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
         const merged: Catalog = { ...catalog, ...(cleaned as Catalog) };
         setCatalog(merged);
         saveCachedCatalog(lang, merged);
+        setReady(true);
       } catch (e) {
         console.error("translate invoke failed", e);
+        // Unblock UI even on error so the app stays usable (English fallback).
+        setReady(true);
       }
     })();
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang]);
 
-  const setLang = useCallback((l: LangCode) => {
+  const setLang = useCallback(async (l: LangCode) => {
     lastManualLangAtRef.current = Date.now();
     try { sessionStorage.setItem(SESSION_MANUAL_PICK, "1"); } catch { /* ignore */ }
-    setLangState(l);
     try { localStorage.setItem(STORAGE_LANG, l); } catch { /* ignore */ }
+    // Preload the target catalog BEFORE swapping `lang`, so the next render
+    // already has every UI string in the new language — no flash of mixed
+    // source / target text.
+    if (BUILTIN[l]) {
+      setCatalog(BUILTIN[l]!);
+      setLangState(l);
+      setReady(true);
+    } else {
+      setReady(false);
+      const next = await preloadCatalog(l);
+      setCatalog(next);
+      setLangState(l);
+      setReady(true);
+    }
     supabase.auth.getUser().then(({ data }) => {
       const uid = data.user?.id;
       if (!uid) return;
@@ -859,7 +932,41 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, tZh,
   }), [lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, tZh, dynVersion]);
 
-  return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
+  return (
+    <I18nContext.Provider value={value}>
+      {ready ? children : (
+        <div
+          aria-busy="true"
+          aria-live="polite"
+          style={{
+            position: "fixed",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "hsl(var(--background))",
+            color: "hsl(var(--muted-foreground))",
+            fontSize: 14,
+            zIndex: 9999,
+          }}
+        >
+          <span
+            style={{
+              width: 18,
+              height: 18,
+              borderRadius: "50%",
+              border: "2px solid currentColor",
+              borderTopColor: "transparent",
+              animation: "spin 0.8s linear infinite",
+              marginRight: 10,
+            }}
+          />
+          <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+          Loading…
+        </div>
+      )}
+    </I18nContext.Provider>
+  );
 }
 
 export function useI18n() {

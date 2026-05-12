@@ -562,6 +562,50 @@ async function invokeTranslateWithTimeout(
   ]);
 }
 
+/**
+ * Preload the static UI catalog for a target language so we can swap atomically
+ * without rendering a half-translated UI. Returns a complete Catalog (all EN
+ * keys filled, falling back to EN source if the edge function fails).
+ */
+async function preloadCatalog(lang: LangCode): Promise<Catalog> {
+  const builtin = BUILTIN[lang];
+  if (builtin) return builtin;
+  const cached = loadCachedCatalog(lang);
+  const allKeys = Object.keys(EN) as StringKey[];
+  const missing = allKeys.filter((k) => !cached[k]);
+  if (missing.length === 0) return cached;
+  const items = missing.map((k) => ({
+    key: k,
+    text: (ZH as Record<string, string>)[k] || EN[k],
+  }));
+  const targetLanguage = getLanguageInfo(lang).englishName;
+  try {
+    const { data, error } = await invokeTranslateWithTimeout(targetLanguage, items);
+    if (!error) {
+      const translations: Record<string, string> = data?.translations || {};
+      const cleaned: Record<string, string> = {};
+      for (const [k, v] of Object.entries(translations)) {
+        if (typeof v === "string") cleaned[k] = stripHtml(v);
+      }
+      const merged: Catalog = { ...cached, ...(cleaned as Catalog) };
+      saveCachedCatalog(lang, merged);
+      return merged;
+    }
+  } catch (e) {
+    console.error("preloadCatalog failed", e);
+  }
+  // Fallback: fill missing with EN source so UI is at least monolingual.
+  const fallback: Catalog = { ...cached };
+  for (const k of missing) fallback[k] = EN[k];
+  return fallback;
+}
+
+function isCatalogComplete(lang: LangCode, cat: Catalog): boolean {
+  if (BUILTIN[lang]) return true;
+  const allKeys = Object.keys(EN) as StringKey[];
+  return allKeys.every((k) => !!cat[k]);
+}
+
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<LangCode>(() => {
     if (typeof window === "undefined") return DEFAULT_LANG;

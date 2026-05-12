@@ -625,6 +625,16 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     return loadCachedCatalog(lang);
   });
 
+  // True once the static catalog for the current language is fully populated.
+  // Children render is gated on this flag so the first paint is never a
+  // mix of source-language and target-language strings.
+  const [ready, setReady] = useState<boolean>(() => {
+    if (typeof window === "undefined") return true;
+    const builtin = BUILTIN[lang];
+    if (builtin) return true;
+    return isCatalogComplete(lang, loadCachedCatalog(lang));
+  });
+
   // Dynamic-text cache (translated content snippets).
   const dynCacheRef = useRef<Record<string, string>>({});
   // Separate cache for English translations (used by bilingual UI when the
@@ -649,8 +659,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     const builtin = BUILTIN[lang];
     if (builtin) {
       setCatalog(builtin);
+      setReady(true);
     } else {
-      setCatalog(loadCachedCatalog(lang));
+      const cached = loadCachedCatalog(lang);
+      setCatalog(cached);
+      setReady(isCatalogComplete(lang, cached));
     }
     dynCacheRef.current = lang === "zh" ? {} : loadDynCache(lang);
     dynEnCacheRef.current = loadDynCache("en" as LangCode);
@@ -660,7 +673,7 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (BUILTIN[lang]) return; // built-in catalog, no fetch needed
     const missingKeys = (Object.keys(EN) as StringKey[]).filter((k) => !catalog[k]);
-    if (missingKeys.length === 0) return;
+    if (missingKeys.length === 0) { setReady(true); return; }
     let cancelled = false;
     (async () => {
       // Prefer the Chinese source when available: the AI is much less likely
@@ -687,19 +700,35 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
         const merged: Catalog = { ...catalog, ...(cleaned as Catalog) };
         setCatalog(merged);
         saveCachedCatalog(lang, merged);
+        setReady(true);
       } catch (e) {
         console.error("translate invoke failed", e);
+        // Unblock UI even on error so the app stays usable (English fallback).
+        setReady(true);
       }
     })();
     return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lang]);
 
-  const setLang = useCallback((l: LangCode) => {
+  const setLang = useCallback(async (l: LangCode) => {
     lastManualLangAtRef.current = Date.now();
     try { sessionStorage.setItem(SESSION_MANUAL_PICK, "1"); } catch { /* ignore */ }
-    setLangState(l);
     try { localStorage.setItem(STORAGE_LANG, l); } catch { /* ignore */ }
+    // Preload the target catalog BEFORE swapping `lang`, so the next render
+    // already has every UI string in the new language — no flash of mixed
+    // source / target text.
+    if (BUILTIN[l]) {
+      setCatalog(BUILTIN[l]!);
+      setLangState(l);
+      setReady(true);
+    } else {
+      setReady(false);
+      const next = await preloadCatalog(l);
+      setCatalog(next);
+      setLangState(l);
+      setReady(true);
+    }
     supabase.auth.getUser().then(({ data }) => {
       const uid = data.user?.id;
       if (!uid) return;

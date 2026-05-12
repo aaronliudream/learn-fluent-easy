@@ -94,12 +94,14 @@ Deno.serve(async (req) => {
     const data = await resp.json();
     const content: string = data?.choices?.[0]?.message?.content ?? "{}";
     let parsed: Record<string, string> = {};
-    try {
-      parsed = JSON.parse(content);
-    } catch {
-      // Try to salvage a JSON object from the content
-      const m = content.match(/\{[\s\S]*\}/);
-      if (m) parsed = JSON.parse(m[0]);
+    parsed = safeParseJsonObject(content);
+    if (!parsed || Object.keys(parsed).length === 0) {
+      // Fallback: passthrough so UI keeps working
+      parsed = Object.fromEntries(items.map((i) => [i.key, i.text]));
+      return new Response(
+        JSON.stringify({ translations: parsed, fallback: true, reason: "parse_error" }),
+        { headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      );
     }
 
     return new Response(JSON.stringify({ translations: parsed }), {
@@ -112,3 +114,28 @@ Deno.serve(async (req) => {
     });
   }
 });
+
+function safeParseJsonObject(raw: string): Record<string, string> {
+  if (!raw) return {};
+  // Strip markdown code fences
+  let s = raw.replace(/```json\s*/gi, "").replace(/```\s*/g, "").trim();
+  // Direct parse
+  try { const v = JSON.parse(s); return typeof v === "object" && v ? v : {}; } catch {}
+  // Extract outermost {...}
+  const start = s.indexOf("{");
+  const end = s.lastIndexOf("}");
+  if (start !== -1 && end !== -1 && end > start) {
+    s = s.slice(start, end + 1);
+  }
+  // Remove control chars and trailing commas
+  s = s.replace(/[\u0000-\u001F\u007F]/g, " ").replace(/,\s*}/g, "}").replace(/,\s*]/g, "]");
+  try { const v = JSON.parse(s); return typeof v === "object" && v ? v : {}; } catch {}
+  // Last resort: pull out "key":"value" pairs
+  const out: Record<string, string> = {};
+  const re = /"((?:\\.|[^"\\])*)"\s*:\s*"((?:\\.|[^"\\])*)"/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(s)) !== null) {
+    try { out[JSON.parse(`"${m[1]}"`)] = JSON.parse(`"${m[2]}"`); } catch {}
+  }
+  return out;
+}

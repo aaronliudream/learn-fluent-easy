@@ -932,7 +932,41 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, tZh,
   }), [lang, setLang, hasPicked, markPicked, t, tDynamic, tEn, tDynamicEn, tZh, dynVersion]);
 
-  return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
+  return (
+    <I18nContext.Provider value={value}>
+      {ready ? children : (
+        <div
+          aria-busy="true"
+          aria-live="polite"
+          style={{
+            position: "fixed",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "hsl(var(--background))",
+            color: "hsl(var(--muted-foreground))",
+            fontSize: 14,
+            zIndex: 9999,
+          }}
+        >
+          <span
+            style={{
+              width: 18,
+              height: 18,
+              borderRadius: "50%",
+              border: "2px solid currentColor",
+              borderTopColor: "transparent",
+              animation: "spin 0.8s linear infinite",
+              marginRight: 10,
+            }}
+          />
+          <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+          Loading…
+        </div>
+      )}
+    </I18nContext.Provider>
+  );
 }
 
 export function useI18n() {

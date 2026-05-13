@@ -1,5 +1,5 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2, RotateCcw, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { findBook } from "@/data/primaryStoryBooks";
@@ -9,6 +9,7 @@ import { speak, stopSpeaking } from "@/lib/speak";
 import { pickStoryVoice } from "@/lib/storyVoice";
 import type { StoryBookPage } from "@/data/primaryStoryBooks";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { markStoryBookReadToday } from "@/lib/phonicsJourney";
 
 function speakPage(page: StoryBookPage) {
   const v = pickStoryVoice(page.speaker);
@@ -28,6 +29,8 @@ type Phase = "read" | "quiz" | "done";
 
 export default function PrimaryStoryBookRead() {
   const { id = "" } = useParams();
+  const [sp] = useSearchParams();
+  const focusLetter = (sp.get("focus") || "").toLowerCase();
   const book = useMemo(() => findBook(id) ?? findBookG2(id), [id]);
   // G2 books have ids sb11..sb20 — keep return links scoped to the right shelf.
   const isG2Book = !!book && !!findBookG2(id);
@@ -128,6 +131,14 @@ export default function PrimaryStoryBookRead() {
   const page = book.pages[pageIdx];
   const isLast = pageIdx === totalPages - 1;
 
+  // 含 focus letter 的词,用作高亮 + 找一找环节
+  const focusWordsOnPage = useMemo(() => {
+    if (!focusLetter) return [] as string[];
+    return page.text_en.split(/\b/).filter((tok) =>
+      /[a-z]/i.test(tok) && tok.toLowerCase().includes(focusLetter)
+    );
+  }, [page, focusLetter]);
+
   function goPage(next: number) {
     if (next < 0 || next >= totalPages) return;
     stopSpeaking();
@@ -153,6 +164,7 @@ export default function PrimaryStoryBookRead() {
     const last = qIdx + 1 >= book.questions.length;
     if (last) {
       setPhase("done");
+      try { markStoryBookReadToday(); } catch {/* noop */}
       try {
         const { data: u } = await supabase.auth.getUser();
         const userId = u?.user?.id ?? null;

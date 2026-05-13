@@ -397,20 +397,24 @@ export default function GaokaoReadingArticle() {
 
   if (loading) {
     return (
-      <main className="mx-auto min-h-screen max-w-5xl px-5 py-8">
-        <p className="text-sm text-muted-foreground"><T>加载中...</T></p>
-      </main>);
+      <ExamPaper>
+        <ExamContainer max="5xl">
+          <p className="exam-mute text-sm"><T>加载中...</T></p>
+        </ExamContainer>
+      </ExamPaper>);
 
   }
 
   if (!article) {
     return (
-      <main className="mx-auto min-h-screen max-w-5xl px-5 py-8">
-        <BackLink to="/gaokao/reading" className="inline-flex items-center gap-1 text-sm text-muted-foreground">
-          <ArrowLeft className="size-4" /> <T>返回阅读列表</T>
-        </BackLink>
-        <p className="mt-8 text-center text-muted-foreground"><T>文章不存在</T></p>
-      </main>);
+      <ExamPaper>
+        <ExamContainer max="5xl">
+          <BackLink to="/gaokao/reading" className="inline-flex items-center gap-1 text-sm exam-soft">
+            <ArrowLeft className="size-4" /> <T>返回阅读列表</T>
+          </BackLink>
+          <p className="mt-8 text-center exam-mute"><T>文章不存在</T></p>
+        </ExamContainer>
+      </ExamPaper>);
 
   }
 

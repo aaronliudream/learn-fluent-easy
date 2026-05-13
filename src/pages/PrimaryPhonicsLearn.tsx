@@ -15,6 +15,14 @@ import {
 "@/lib/phonicsMastery";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
 import { bondOnSparkEcho, bondOnPhonicsLearnPass } from "@/lib/petGrowth";
+import {
+  nextActionAfterPhonicsLearn,
+  recordNewSoundLearned,
+  type NextAction,
+} from "@/lib/phonicsJourney";
+import { getPhonicsMasteryMap } from "@/lib/phonicsMastery";
+import { Link } from "react-router-dom";
+import { ArrowRight, BookOpen, Sparkles as SparklesIcon, Target } from "lucide-react";
 
 /** 学单个音 → 复习字母名/拼读音/口型/笔顺/儿歌/例词/小知识 → mini-quiz 3 题。 */
 export default function PrimaryPhonicsLearn() {
@@ -39,6 +47,7 @@ export default function PrimaryPhonicsLearn() {
   const isG2 = search.get("grade") === "2" || PHONICS_ITEMS_G2.some((it) => it.id === phonicsId);
   const phonicsHref = isG2 ? "/primary/phonics?grade=2" : "/primary/phonics";
   const [phase, setPhase] = useState<"learn" | "quiz" | "done">("learn");
+  const [nextAction, setNextAction] = useState<NextAction | null>(null);
 
   useEffect(() => {
     if (!item) return;
@@ -110,6 +119,7 @@ export default function PrimaryPhonicsLearn() {
           if (allCorrect) {
             await bumpPhonicsLevel(item.id, 1, 3);
             try {bondOnPhonicsLearnPass();} catch {/* noop */}
+            try { recordNewSoundLearned(item.id); } catch {/* noop */}
           }
           celebratePet({
             kind: "levelup",
@@ -117,19 +127,119 @@ export default function PrimaryPhonicsLearn() {
             title: allCorrect ? "全对!Spark 学会啦~" : "练完啦,继续加油!",
             subtitle: allCorrect ? `${item.letter} +1 掌握度 · Spark +15 亲密度` : "下次再考一遍"
           });
+          // 计算"下一步"卡片(用最新 mastery)
+          try {
+            const m = await getPhonicsMasteryMap();
+            const grade = isG2 ? 2 : 1;
+            const action = nextActionAfterPhonicsLearn({ item, mastery: m, grade });
+            setNextAction(action);
+          } catch {/* noop */}
           setPhase("done");
-          setTimeout(() => nav(phonicsHref), 1600);
         }} />
 
       }
 
       {phase === "done" &&
-      <div className="rounded-3xl border-2 border-dashed border-border p-10 text-center text-sm text-muted-foreground">
-          <T>回到拼读冒险…</T>
-        </div>
+      <NextStepCard action={nextAction} fallbackHref={phonicsHref} letterLabel={item.letter} />
       }
     </main>);
 
+}
+
+// ─── 学完之后的"下一步"卡片 ──────────────────────────────
+function NextStepCard({
+  action,
+  fallbackHref,
+  letterLabel,
+}: {
+  action: NextAction | null;
+  fallbackHref: string;
+  letterLabel: string;
+}) {
+  if (!action) {
+    return (
+      <div className="rounded-3xl border-2 border-dashed border-border p-8 text-center text-sm text-muted-foreground">
+        <T>正在为你挑下一步…</T>
+      </div>
+    );
+  }
+
+  const cards: Record<NextAction["kind"], { emoji: string; title: string; sub: string; cta: string; gradient: string; icon: React.ReactNode }> = {
+    useIt: {
+      emoji: "✨",
+      title: `用一下 ${letterLabel}`,
+      sub: "把刚学的音用到一个真词里,你就真的会啦!",
+      cta: "去用一下",
+      gradient: "from-amber-500 via-orange-500 to-rose-500",
+      icon: <SparklesIcon className="size-5" />,
+    },
+    readBook: {
+      emoji: "📖",
+      title: "去读今天的小绘本",
+      sub: `这本绘本里就藏着 ${letterLabel} 的音,我们一起把它找出来!`,
+      cta: "和 Spark 读绘本",
+      gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+      icon: <BookOpen className="size-5" />,
+    },
+    challenge: {
+      emoji: "🏆",
+      title: "整组挑战开始!",
+      sub: "本组每个音你都见过啦,来一次小挑战吧!",
+      cta: "开始挑战",
+      gradient: "from-violet-500 via-fuchsia-500 to-pink-500",
+      icon: <Target className="size-5" />,
+    },
+    review: {
+      emoji: "🔁",
+      title: "老朋友找你啦",
+      sub: "之前学过的音想再见你一面!",
+      cta: "去复习",
+      gradient: "from-sky-500 via-cyan-500 to-emerald-500",
+      icon: <Target className="size-5" />,
+    },
+    newSound: {
+      emoji: "🔤",
+      title: "继续学下一个新音",
+      sub: "Spark 想再教你一个~",
+      cta: "学新音",
+      gradient: "from-rose-500 via-pink-500 to-amber-500",
+      icon: <ArrowRight className="size-5" />,
+    },
+  };
+
+  const c = cards[action.kind];
+
+  return (
+    <div className="space-y-3">
+      <div className="rounded-2xl border-2 border-dashed border-emerald-300 bg-emerald-50/60 p-3 text-center text-sm font-bold text-emerald-700 dark:border-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300">
+        🌟 <T>太棒啦!这个音收下啦~</T>
+      </div>
+      <Link
+        to={action.href}
+        className={`block rounded-3xl bg-gradient-to-r ${c.gradient} p-5 text-left text-white shadow-tile transition hover:-translate-y-0.5`}
+      >
+        <div className="text-[11px] font-bold uppercase tracking-wider opacity-90"><T>下一步</T></div>
+        <div className="mt-1 flex items-center gap-3">
+          <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-white/25 text-2xl backdrop-blur-sm">
+            {c.emoji}
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="truncate text-lg font-extrabold"><T>{c.title}</T></div>
+            <div className="text-xs opacity-90"><T>{c.sub}</T></div>
+          </div>
+          {c.icon}
+        </div>
+        <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-1.5 text-sm font-extrabold backdrop-blur-sm">
+          <T>{c.cta}</T> →
+        </div>
+      </Link>
+      <div className="text-center">
+        <Link to={fallbackHref} className="text-xs text-muted-foreground underline-offset-2 hover:underline">
+          <T>← 返回拼读冒险</T>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
 // ─── 字母详情(精简版,从 PrimaryLetters.tsx 的 LetterCard 提炼) ──

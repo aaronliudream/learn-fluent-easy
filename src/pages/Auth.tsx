@@ -124,7 +124,8 @@ const Auth = () => {
     }, { onConflict: "user_id" });
     setLoading(false);
     toast.success(t("欢迎，") + n + " 🎉");
-    navigate("/", { replace: true });
+    const redirect1 = consumeRedirectPath();
+    navigate(redirect1 || "/", { replace: true });
   };
 
   const handleNickSignIn = async (e: React.FormEvent) => {
@@ -145,7 +146,8 @@ const Auth = () => {
     setLoading(false);
     if (error) { toast.error(t("PIN 不正确")); return; }
     toast.success(t("欢迎回来，") + n + " 👋");
-    navigate("/", { replace: true });
+    const redirect2 = consumeRedirectPath();
+    navigate(redirect2 || "/", { replace: true });
   };
 
   const handleSignUp = async (e: React.FormEvent) => {
@@ -228,7 +230,8 @@ const Auth = () => {
     import("@/lib/funnel").then(m =>
       m.trackFunnel("signup", "completed", { method: "email", age_band: emailAgeBand })
     );
-    navigate("/", { replace: true });
+    const redirect3 = consumeRedirectPath();
+    navigate(redirect3 || "/", { replace: true });
   };
 
   const handleSignIn = async (e: React.FormEvent) => {
@@ -266,7 +269,8 @@ const Auth = () => {
     }
     setLoading(false);
     toast.success(t("登录成功"));
-    navigate("/", { replace: true });
+    const redirect4 = consumeRedirectPath();
+    navigate(redirect4 || "/", { replace: true });
   };
 
   const handleGoogle = async () => {
@@ -280,7 +284,8 @@ const Auth = () => {
       return;
     }
     if (result.redirected) return;
-    navigate("/", { replace: true });
+    const redirect5 = consumeRedirectPath();
+    navigate(redirect5 || "/", { replace: true });
   };
 
   return (

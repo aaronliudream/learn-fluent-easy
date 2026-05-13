@@ -415,7 +415,7 @@ export default function JuniorReadingPlay() {
   });
 
   return (
-    <ExamPaper>
+    <ExamPaper className="pb-32">
       <NoCopyGuard />
       <ExamContainer max="7xl">
         {/* Top bar */}

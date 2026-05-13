@@ -93,7 +93,10 @@ function notifyGuestOnce() {
       duration: 7000,
       action: {
         label: "去登录",
-        onClick: () => { window.location.href = "/auth"; },
+        onClick: () => {
+          saveRedirectPath();
+          window.location.href = "/auth";
+        },
       },
     });
   } catch {

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { consumeRedirectPath } from "@/lib/authRedirect";
 import { lovable } from "@/integrations/lovable/index";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,8 +49,11 @@ const Auth = () => {
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
-      // 已登录用户进 /auth → 跳到学习面板（而不是首页，避免「点免费开始学习没反应」的死循环）
-      if (session) navigate("/dashboard", { replace: true });
+      // 已登录用户进 /auth → 优先回到之前的页面，否则跳到学习面板
+      if (session) {
+        const redirect = consumeRedirectPath();
+        navigate(redirect || "/dashboard", { replace: true });
+      }
     });
   }, [navigate]);
 

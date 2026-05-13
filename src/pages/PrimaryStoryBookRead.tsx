@@ -1,5 +1,5 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2, RotateCcw, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { findBook } from "@/data/primaryStoryBooks";
@@ -9,6 +9,7 @@ import { speak, stopSpeaking } from "@/lib/speak";
 import { pickStoryVoice } from "@/lib/storyVoice";
 import type { StoryBookPage } from "@/data/primaryStoryBooks";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { markStoryBookReadToday } from "@/lib/phonicsJourney";
 
 function speakPage(page: StoryBookPage) {
   const v = pickStoryVoice(page.speaker);
@@ -28,6 +29,8 @@ type Phase = "read" | "quiz" | "done";
 
 export default function PrimaryStoryBookRead() {
   const { id = "" } = useParams();
+  const [sp] = useSearchParams();
+  const focusLetter = (sp.get("focus") || "").toLowerCase();
   const book = useMemo(() => findBook(id) ?? findBookG2(id), [id]);
   // G2 books have ids sb11..sb20 — keep return links scoped to the right shelf.
   const isG2Book = !!book && !!findBookG2(id);
@@ -128,6 +131,14 @@ export default function PrimaryStoryBookRead() {
   const page = book.pages[pageIdx];
   const isLast = pageIdx === totalPages - 1;
 
+  // 含 focus letter 的词,用作高亮 + 找一找环节
+  const focusWordsOnPage = useMemo(() => {
+    if (!focusLetter) return [] as string[];
+    return page.text_en.split(/\b/).filter((tok) =>
+      /[a-z]/i.test(tok) && tok.toLowerCase().includes(focusLetter)
+    );
+  }, [page, focusLetter]);
+
   function goPage(next: number) {
     if (next < 0 || next >= totalPages) return;
     stopSpeaking();
@@ -153,6 +164,7 @@ export default function PrimaryStoryBookRead() {
     const last = qIdx + 1 >= book.questions.length;
     if (last) {
       setPhase("done");
+      try { markStoryBookReadToday(); } catch {/* noop */}
       try {
         const { data: u } = await supabase.auth.getUser();
         const userId = u?.user?.id ?? null;
@@ -273,7 +285,9 @@ export default function PrimaryStoryBookRead() {
                 }
                 </div>
                 <div className="mx-auto mt-6 max-w-md rounded-2xl border-2 border-amber-200 bg-white/80 p-4 shadow-sm dark:border-amber-900/40 dark:bg-amber-950/30">
-                  <div className="text-2xl font-extrabold text-amber-900 dark:text-amber-100 md:text-3xl">{page.text_en}</div>
+                  <div className="text-2xl font-extrabold text-amber-900 dark:text-amber-100 md:text-3xl">
+                    {focusLetter ? renderWithFocus(page.text_en, focusLetter) : page.text_en}
+                  </div>
                   <div className="mt-1 text-sm font-bold text-amber-700 dark:text-amber-200">{page.text_cn}</div>
                   <button
                   onClick={() => speakPage(page)}
@@ -281,6 +295,16 @@ export default function PrimaryStoryBookRead() {
                   
                     <Volume2 className="size-3.5" /> <T>听 Spark 念</T>
                   </button>
+                  {focusLetter && focusWordsOnPage.length > 0 && (
+                    <div className="mt-3 rounded-xl border border-dashed border-amber-300 bg-amber-50 px-3 py-2 text-[11px] font-bold text-amber-800 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+                      🔍 <T>找一找：这一页里"</T>{focusLetter}<T>"出现在</T>
+                      <span className="ml-1 font-mono">
+                        {focusWordsOnPage.map((w, i) => (
+                          <span key={i} className="ml-1 rounded bg-amber-200/60 px-1 py-0.5 dark:bg-amber-900/40">{w}</span>
+                        ))}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -414,4 +438,24 @@ export default function PrimaryStoryBookRead() {
       }
     </main>);
 
+}
+
+function renderWithFocus(text: string, letter: string) {
+  const k = letter.toLowerCase();
+  if (!k) return text;
+  return text.split(/(\s+)/).map((tok, i) => {
+    if (/^\s+$/.test(tok)) return <span key={i}>{tok}</span>;
+    const lower = tok.toLowerCase();
+    const idx = lower.indexOf(k);
+    if (idx === -1) return <span key={i}>{tok}</span>;
+    return (
+      <span key={i}>
+        {tok.slice(0, idx)}
+        <span className="rounded bg-amber-300/70 px-0.5 text-amber-900 dark:bg-amber-700/60 dark:text-amber-100">
+          {tok.slice(idx, idx + k.length)}
+        </span>
+        {tok.slice(idx + k.length)}
+      </span>
+    );
+  });
 }

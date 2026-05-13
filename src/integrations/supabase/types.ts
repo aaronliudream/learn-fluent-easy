@@ -8005,6 +8005,16 @@ export type Database = {
           read_ct: number
         }[]
       }
+      record_cohort_attempt: {
+        Args: {
+          p_cohort_id: string
+          p_correct: boolean
+          p_kind: string
+          p_mastery: Json
+          p_vocab_id: string
+        }
+        Returns: Json
+      }
       record_grammar_attempt: {
         Args: { p_correct: boolean; p_slug: string }
         Returns: {

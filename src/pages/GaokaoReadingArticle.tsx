@@ -10,6 +10,16 @@ import { recordMastery } from "@/lib/masteryProgress";
 import { celebrateScore } from "@/lib/feedback";
 import { ShareButton } from "@/components/share/ShareButton";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
+import { ExamStepper, type ExamStep } from "@/components/exam/ExamStepper";
+import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
+import {
+  DiagnosisTable,
+  MistakeBookCallout,
+  NextStepCards,
+  inferTrap,
+  buildNextStepsFromResult,
+  type DiagnosisRow,
+} from "@/components/exam/DiagnosisExtras";
 
 type Article = {
   id: string;
@@ -63,7 +73,7 @@ type VocabItem = {
   importance: number;
 };
 
-type Stage = "read" | "test" | "result" | "review";
+type Stage = "read" | "test" | "diagnosis" | "dialogue" | "review";
 
 const TYPE_COLOR: Record<string, string> = {
   main_idea: "bg-rose-500/10 text-rose-600 border-rose-500/20",
@@ -227,6 +237,10 @@ export default function GaokaoReadingArticle() {
   const [userEmail, setUserEmail] = useState<string>("user");
   const [minReadSec, setMinReadSec] = useState<number>(60);
   const [readSecLeft, setReadSecLeft] = useState<number>(60);
+  // 累计掌握度: 按 question_type 聚合该用户历史正确率
+  const [typeMastery, setTypeMastery] = useState<Record<string, number>>({});
+  // ④ 对话阶段的预填问题（从错题"和 AI 详谈"按钮带入）
+  const [tutorPrefill, setTutorPrefill] = useState<string>("");
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => {
@@ -247,6 +261,44 @@ export default function GaokaoReadingArticle() {
     const t = setInterval(() => setReadSecLeft((s) => Math.max(0, s - 1)), 1000);
     return () => clearInterval(t);
   }, [stage]);
+
+  // 进入诊断阶段时，加载该用户每个考点 (question_type) 的累计掌握度
+  useEffect(() => {
+    if (stage !== "diagnosis") return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) return;
+        const types = Array.from(new Set(questions.map((q) => q.question_type))).filter(Boolean);
+        if (types.length === 0) return;
+        const { data } = await supabase
+          .from("gaokao_reading_diagnostics")
+          .select("question_type,is_correct")
+          .eq("user_id", user.id)
+          .in("question_type", types)
+          .limit(1000);
+        if (cancelled || !data) return;
+        const acc: Record<string, { ok: number; total: number }> = {};
+        for (const row of data as { question_type: string; is_correct: boolean }[]) {
+          const k = row.question_type ?? "reading";
+          acc[k] = acc[k] || { ok: 0, total: 0 };
+          acc[k].total += 1;
+          if (row.is_correct) acc[k].ok += 1;
+        }
+        const m: Record<string, number> = {};
+        for (const [k, v] of Object.entries(acc)) {
+          m[k] = v.total > 0 ? Math.round((v.ok / v.total) * 100) : 0;
+        }
+        setTypeMastery(m);
+      } catch (e) {
+        console.warn("load typeMastery", e);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [stage, questions]);
 
   // Load
   useEffect(() => {
@@ -390,7 +442,7 @@ export default function GaokaoReadingArticle() {
     if (timeUp) toast.warning("时间到，已自动交卷");
     const finalPct = totalQ > 0 ? Math.round(correctCount / totalQ * 100) : 0;
     celebrateScore(finalPct);
-    setStage("review");
+    setStage("diagnosis");
   }
 
   if (loading) {
@@ -591,12 +643,16 @@ export default function GaokaoReadingArticle() {
             </button>
           </section>
         </div>
+        <ExamStepper
+          current="test"
+          reachable={["test"]}
+        />
       </ExamPaper>);
 
   }
 
-  // ============ STAGE 2: RESULT ============
-  if (stage === "result") {
+  // ============ STAGE 2: DIAGNOSIS (③) ============
+  if (stage === "diagnosis") {
     const pct = totalQ > 0 ? Math.round(correctCount / totalQ * 100) : 0;
     const usedSec = submittedAt ? Math.floor((submittedAt - startTime) / 1000) : 0;
     const usedMM = String(Math.floor(usedSec / 60)).padStart(2, "0");
@@ -804,25 +860,191 @@ export default function GaokaoReadingArticle() {
           </div>
         </div>
 
-        <button
-          className="exam-btn exam-btn-primary w-full h-12"
-          onClick={() => setStage("review")}>
-          <Eye className="size-4" />
-          <T>开始精读复盘 (查看答案 + 解析 + 文章分析)</T>
-        </button>
+        {/* === ③ 新增：考点掌握诊断表 === */}
+        <div className="mb-6">
+          <DiagnosisTable
+            rows={questions.map<DiagnosisRow>((q, i) => {
+              const isCorrect = answers[q.id] === q.correct_answer;
+              return {
+                index: i + 1,
+                point: q.question_type_cn ?? "阅读理解",
+                isCorrect,
+                trap: isCorrect ? null : inferTrap(q.question_type),
+                cumulativeMastery: typeMastery[q.question_type] ?? null,
+              };
+            })}
+          />
+        </div>
+
+        {/* === ③ 新增：错题本提示 === */}
+        <div className="mb-6">
+          <MistakeBookCallout
+            mistakeCount={totalQ - correctCount}
+            onAskAI={() => {
+              const firstWrong = questions.find((q) => answers[q.id] !== q.correct_answer);
+              if (firstWrong) {
+                const idx = questions.indexOf(firstWrong) + 1;
+                setTutorPrefill(
+                  `我不明白第 ${idx} 题为什么不选 ${answers[firstWrong.id] ?? "我的答案"}。能带我回原文找证据吗？`,
+                );
+              } else {
+                setTutorPrefill("帮我梳理一下这篇文章的主旨和结构。");
+              }
+              setStage("dialogue");
+            }}
+          />
+        </div>
+
+        {/* === ③ 新增：为你推荐的下一步 === */}
+        <div className="mb-8">
+          {(() => {
+            // 找出最弱考点
+            const weakest = Object.entries(typeBreakdown)
+              .map(([k, v]) => ({ k, cn: v.cn, pct: v.total > 0 ? v.correct / v.total : 1 }))
+              .sort((a, b) => a.pct - b.pct)[0];
+            const weakKey = weakest?.k ?? questions[0]?.question_type ?? "main_idea";
+            const weakCn = weakest?.cn ?? "细节定位";
+            const cards = buildNextStepsFromResult({
+              weakestPointKey: weakKey,
+              weakestPointCn: weakCn,
+              topicLabel: article.specific_topic ?? article.topic_group,
+              onWeakClick: () => navigate("/gaokao/reading"),
+              onMockClick: () => navigate("/gaokao/reading"),
+              onMicroLessonClick: () => navigate("/gaokao/reading/knowledge"),
+            });
+            return <NextStepCards cards={cards} />;
+          })()}
+        </div>
+
+        {/* === Action row === */}
+        <div className="flex flex-col sm:flex-row gap-3 mb-20">
+          <button
+            className="exam-btn exam-btn-primary flex-1 h-12"
+            onClick={() => {
+              setTutorPrefill("");
+              setStage("dialogue");
+            }}
+          >
+            <Sparkles className="size-4" />
+            <T>进入 ④ 对话 · 和译老师讨论</T>
+          </button>
+          <button
+            className="exam-btn exam-btn-ghost flex-1 h-12"
+            onClick={() => setStage("review")}
+          >
+            <Eye className="size-4" />
+            <T>查看精读复盘（解析 / 文章分析 / 生词）</T>
+          </button>
+        </div>
 
         <button
           onClick={() => navigate("/gaokao/reading")}
-          className="w-full mt-3 text-sm exam-mute hover:text-[hsl(var(--exam-ink))] py-2">
+          className="w-full text-sm exam-mute hover:text-[hsl(var(--exam-ink))] py-2"
+        >
           <T>先返回，稍后复盘</T>
-        
         </button>
         </ExamContainer>
+        <ExamStepper
+          current="diagnosis"
+          reachable={["test", "diagnosis", "dialogue"]}
+          onJump={(s) => setStage(s === "test" ? "test" : s === "dialogue" ? "dialogue" : "diagnosis")}
+        />
       </ExamPaper>);
 
   }
 
-  // ============ STAGE 3: REVIEW ============
+  // ============ STAGE 4: DIALOGUE (④) ============
+  if (stage === "dialogue") {
+    const snapshot = {
+      title: article.title,
+      topic: article.specific_topic,
+      sub_band: article.sub_band,
+      passage_excerpt: cleanArticleBody(article.body).slice(0, 2000),
+      questions: questions.map((q, i) => ({
+        index: i + 1,
+        type_cn: q.question_type_cn,
+        stem: q.stem,
+        options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
+        correct_answer: q.correct_answer,
+        user_answer: answers[q.id] ?? null,
+        is_correct: answers[q.id] === q.correct_answer,
+        explanations: {
+          A: q.explanation_a,
+          B: q.explanation_b,
+          C: q.explanation_c,
+          D: q.explanation_d,
+        },
+        general_explanation: q.general_explanation,
+      })),
+    };
+
+    const wrongIdx = questions
+      .map((q, i) => (answers[q.id] !== q.correct_answer ? i + 1 : null))
+      .filter((x): x is number => x !== null);
+    const starters = [
+      wrongIdx[0]
+        ? `我不明白第 ${wrongIdx[0]} 题为什么不选 ${answers[questions[wrongIdx[0] - 1].id] ?? "我的答案"}`
+        : "帮我梳理一下这篇文章的主旨脉络",
+      "文章里有哪个长难句？带我拆解一下",
+      "这道题的陷阱是怎么设的？下次怎么避开？",
+    ];
+
+    return (
+      <ExamPaper className="pb-32">
+        <NoCopyGuard />
+        <header className="sticky top-0 z-30 border-b exam-divider"
+          style={{ background: "hsl(var(--exam-paper) / 0.95)", backdropFilter: "blur(8px)" }}>
+          <div className="mx-auto max-w-5xl px-4 py-3 flex items-center gap-3">
+            <button
+              onClick={() => setStage("diagnosis")}
+              className="exam-soft hover:text-[hsl(var(--exam-ink))]"
+            >
+              <ArrowLeft className="size-5" />
+            </button>
+            <div className="flex-1 min-w-0">
+              <div className="exam-eyebrow">④ 对话 · Yi · AI 主教</div>
+              <div className="exam-display text-[16px] truncate"><T>{article.title}</T></div>
+            </div>
+            <span className="exam-skill-tag hidden sm:inline-flex">
+              {correctCount}/{totalQ}
+            </span>
+          </div>
+        </header>
+
+        <ExamContainer max="5xl">
+          <InlineTutorChat
+            sessionKey={`gaokao-reading:${article.id}`}
+            context="gaokao_reading"
+            questionRef={article.id}
+            questionSnapshot={snapshot}
+            title="译老师"
+            subtitle="苏格拉底式 AI 主教 · 不会直接给答案，会引导你回到原文找证据"
+            starters={starters}
+            prefill={tutorPrefill}
+          />
+        </ExamContainer>
+
+        <ExamStepper
+          current="dialogue"
+          reachable={["test", "diagnosis", "dialogue"]}
+          onJump={(s) =>
+            setStage(s === "test" ? "test" : s === "dialogue" ? "dialogue" : "diagnosis")
+          }
+          trailing={
+            <button
+              onClick={() => setStage("review")}
+              className="ml-1 inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[12px] font-medium text-white/85 hover:text-white"
+            >
+              <Eye className="size-3.5" />
+              精读复盘
+            </button>
+          }
+        />
+      </ExamPaper>
+    );
+  }
+
+  // ============ STAGE 5: REVIEW ============
   return <ReviewStage article={article} questions={questions} answers={answers} vocab={vocab} />;
 }
 

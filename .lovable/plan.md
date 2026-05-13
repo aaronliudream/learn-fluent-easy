@@ -1,131 +1,45 @@
-# Phonics 学习引擎 v1
-
-把"陪 Spark 学拼读"从"内容陈列"升级为"学习引擎"，复用已经验证过的 `primary_word_mastery` 套路，但拼读音用独立的新表（避免和单词混淆，避免破坏现有词汇 SRS）。
-
----
-
-## 数据层
-
-### 新表 `primary_phonics_mastery`（一次性迁移）
-
-字段（套用 `primary_word_mastery` 的 SRS 字段，去掉 grade —— 拼读不分年级）：
+## 范围
+为「高考阅读 / 初中阅读」补全两个被遗漏的步骤，并加上贯穿全程的步骤导航：
 
 ```
-id              uuid PK
-user_id         uuid (FK auth.users)
-phonics_id      text  -- 例如 "p_a", "p_ai", "p_sh"
-quiz_correct    int default 0
-quiz_wrong      int default 0
-listen_correct  int default 0
-listen_wrong    int default 0
-mastery_level   smallint default 0   -- 0 未学 / 1 学过 / 2 熟练 / 3 掌握
-ease            real default 2.5
-interval_days   real default 0
-due_at          timestamptz default now()
-last_seen_at    timestamptz
-created_at / updated_at + touch trigger
-unique(user_id, phonics_id)
+①准备  →  ②测试  →  ③诊断  →  ④对话
 ```
 
-RLS：完全照抄 pwm 的 4 条 own-row 策略。
+底部 sticky 步骤胶囊导航（参考截图样式）一直可见，已完成步骤可回跳。
 
-### 复用现有 SRS 工具
+## ③ 诊断（保留现有内容 + 新增 3 个模块）
+保留现有的：全球标准诊断 / 题型诊断 / 题目速览。
+**新增**：
+1. **考点掌握诊断表**：题号 · 原子考点（题型映射）· 结果 ✓/✗ · 陷阱类型（推理过度 / 偷换概念 / 过度归纳 / 字面理解…）· 该考点累计掌握度（基于 user_question_attempts 历史聚合）
+2. **错题入库提示卡**：「这道错题已加入错题本，将在 1/3/7/14 天后安排复习」+ "和 AI 详谈这道题" 按钮（直接跳到 ④ 并预填问题）
+3. **为你推荐的下一步（3 卡）**：薄弱点强化 / 真题对照 / 微课补漏，由 AI 基于本次答题结果生成（结构化输出）
 
-`src/lib/fsrs.ts`（PrimaryVocab 在用的）保持原样，写一个轻薄的 `phonicsMastery.ts` wrapper，两件事：
-- `bumpPhonicsMastery(phonicsId, kind: "quiz"|"listen", correct: boolean)`
-- `getPhonicsMasteryMap()` → `Map<phonicsId, { level, dueAt, ... }>`
+## ④ 对话（核心新增，必须真正可用）
+苏格拉底式 AI 辅导「译老师」：
+- 全屏聊天 UI（试卷主题），消息按 `parts` 渲染，markdown 支持
+- 系统提示包含**当前文章全文 + 题目 + 用户答案 + 正确答案 + 解析**，AI 才能真正回答"我为什么不该选 C"
+- Socratic 模式：不直接给答案，先反问引导学生回到原文
+- 多轮对话状态保存到 `localStorage`（按 article_id 分会话），刷新不丢
+- 支持快捷追问 chips：「再问一题」「换中文解释」「举个类似题」
+- 走 Edge Function `reading-tutor`（Lovable AI Gateway，`google/gemini-3-flash-preview`）
 
----
+## 技术细节
+- 新建 `src/components/exam/ExamStepper.tsx` — 4 步胶囊导航，受控
+- 新建 `src/components/exam/DiagnosisTable.tsx` — 考点掌握表 + 累计掌握度（查 `user_question_attempts`）
+- 新建 `src/components/exam/NextStepCards.tsx` — 推荐 3 卡（AI 结构化输出 + fallback 模板）
+- 新建 `src/components/exam/ReadingTutorChat.tsx` — Socratic 聊天（useState 多轮 + localStorage 持久化）
+- 新建 `supabase/functions/reading-tutor/index.ts` — `streamText` + 文章上下文系统提示
+- 改 `GaokaoReadingArticle.tsx`：stage 增加 `"diagnosis"` 与 `"dialogue"`，原 results 内容并入 diagnosis；ExamStepper 常驻底部
+- 改 `JuniorReadingPlay.tsx`：同样接入 ExamStepper + Diagnosis + Dialogue（初中版本简化考点表）
+- 试卷主题 token 已存在，直接复用 `--exam-paper / --exam-cinnabar / --exam-gold`
 
-## 路由
+## 不动的部分
+- 准备/测试两步的逻辑、计时、计分、错题写入数据库 — 全部保留
+- 试卷美学（米纸+朱红+金）继续用，仅扩展到诊断/对话
 
-```
-/primary/phonics                    -- 新：拼读冒险仪表盘（替代 /primary/letters 的位置）
-/primary/phonics/learn/:phonicsId   -- 新：学单个音 + 自动 3-5 题小测
-/primary/phonics/quiz/:groupId      -- 新：整组挑战测试，全过解锁下一组
-/primary/letters                    -- 保留：A-Z 索引视图（家长 / 复习用）
-```
-
-Adventure 第 1 步从 `/primary/letters` 改为 `/primary/phonics`。
-
----
-
-## 三个新页面
-
-### 1. `PrimaryPhonics.tsx`（仪表盘）
-
-加载：`PHONICS_GROUPS` + `PHONICS_ITEMS` + 当前用户 mastery map。
-
-显示从上到下：
-- Spark 顶卡："今天 Spark 想和你练 N 个音" —— N = 当前组里 level<3 的音数 + 到期复习数
-- **进度条**：7 组横排，每组显示 `⭐⭐⭐○○○ x/y 已掌握`，未解锁的组上锁
-- **3 个 CTA 卡**（按优先级）：
-  1. 「继续学新音 X」→ 当前组里第一个 mastery_level=0 的音
-  2. 「复习 N 个学过的音」→ `due_at <= now() AND level<3` 的音；点开进入 quiz 模式
-  3. 「挑战组 X 测试」→ 当前组所有音 level≥1 时才显示
-
-组解锁规则：组 N 的所有音 mastery_level≥2 → 解锁组 N+1。
-
-### 2. `PrimaryPhonicsLearn.tsx`（学单个音）
-
-复用 `PrimaryLetters.tsx` 的详情卡 UI（字母名 / 拼读音 / 口型 / 笔顺 / 儿歌 / 例词 / 小知识），不重写。
-
-学习完点「我学会了 ✓」 → 立即进入 **inline mini-quiz**（3 题）：
-- Q1 听音选字母：播放 `sound`，4 选 1（同组干扰）
-- Q2 看字母选音：显示字母，4 个 IPA 选项
-- Q3 选例词：播放例词，3 个 emoji 选 1
-（字母组合没有 letterNameIpa → 跳过 Q2 改成第二种听音题）
-
-每题 → `bumpPhonicsMastery(id, "quiz", correct)`。
-3 题全对 → `mastery_level += 1`（最高 3）+ Spark 庆祝。
-有错 → `due_at` 设为 1 天后再复习。
-
-完成后回 `/primary/phonics`，下一张 CTA 自动指向下一个 mastery_level=0 的音。
-
-### 3. `PrimaryPhonicsQuiz.tsx`（整组挑战 / 复习模式）
-
-两种入口：
-- `/primary/phonics/quiz/g2` → 该组全部音，每个音随机 1 题，答错的最后再考一遍
-- `/primary/phonics/quiz/review` → SRS 到期的所有音
-
-题型同 mini-quiz。全部通过 → 该组所有音 `mastery_level = max(level, 2)` → 下一组解锁 + Spark 进化动画（复用 `celebratePet`）。
-
----
-
-## 改动 & 不改动
-
-改：
-- `src/lib/dailyAdventure.ts` 第 1 步 `to: "/primary/phonics"`
-- 新建 3 个页面 + `phonicsMastery.ts` lib + 1 条迁移
-- `src/App.tsx` 加 3 条路由
-
-不改：
-- `PrimaryLetters.tsx` 保持不动（A-Z 视图，作为字母索引备用）
-- `primaryPhonics.ts` 数据文件不动
-- 现有 `primary_word_mastery` 表不动
-- 不引入新依赖
-
----
-
-## 不在 v1 范围（下一轮再做）
-
-- 错题本独立页（v1 用 SRS 自然推送即可）
-- 家长周报里加 phonics 进度
-- 拼读真词练习页（CVC/Magic E 那 59 个词，已经在数据里，下一轮做 `PrimaryPhonicsBlend.tsx`）
-- 离线音频缓存
-
----
-
-## 验收清单
-
-孩子第一次进 `/primary/phonics` → 看到组 1 全部 0/6 + CTA「学新音 s」。
-学完 s 答对 3 题 → 回仪表盘显示 1/6，CTA 变成「学新音 a」。
-学完一组 6 个 → 「挑战组 1 测试」CTA 出现。
-全过 → 组 2 解锁 + Spark 进化弹窗。
-第二天打开 → 如果有到期复习，CTA 第二张显示「复习 N 个音」。
-
----
-
-## 工作量预估
-
-约 4 个文件新建 + 2 个文件小改 + 1 条迁移 + 1 条路由更新。预计单轮做完，做完直接给你 yes/no 自审清单。
+## 验收
+- 4 步导航在所有阶段可见且可点
+- ③ 的考点表显示真实历史掌握度
+- ④ 提问"第 23 题为什么不选 C" → AI 回到原文反问，不直接给答案
+- 刷新对话页面，历史不丢
+- 移动端单列、桌面端两栏正常

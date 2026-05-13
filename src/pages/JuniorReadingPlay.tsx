@@ -14,6 +14,16 @@ import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
+import { ExamStepper } from "@/components/exam/ExamStepper";
+import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
+import {
+  DiagnosisTable,
+  MistakeBookCallout,
+  NextStepCards,
+  inferTrap,
+  buildNextStepsFromResult,
+} from "@/components/exam/DiagnosisExtras";
+import { Sparkles, Eye, ArrowLeft as BackIcon } from "lucide-react";
 
 type Q = {q: string;options: string[];answer: string;explanation?: string;};
 type R = {id: string;title: string;body: string;word_count: number | null;grade: number;questions: Q[];vocab_notes: {word: string;cn: string;}[];};
@@ -35,6 +45,9 @@ export default function JuniorReadingPlay() {
   const [now, setNow] = useState(Date.now());
   const [submitted, setSubmitted] = useState(false);
   const [attempt, setAttempt] = useState(1);
+  // 流程阶段：测试 → 诊断 → 对话
+  const [phase, setPhase] = useState<"test" | "diagnosis" | "dialogue">("test");
+  const [tutorPrefill, setTutorPrefill] = useState<string>("");
 
   // Full-test lock: AI may only discuss the reading after submission.
   useRegisterAssistant(
@@ -147,6 +160,7 @@ export default function JuniorReadingPlay() {
     if (!r) return;
     if (!allAnswered) {toast.error("请先回答所有题目");return;}
     setSubmitted(true);
+    setPhase("diagnosis");
     const pct = Math.round(correctCount / r.questions.length * 100);
     if (timeOk) {
       // 写入完成 + 掌握度
@@ -191,6 +205,128 @@ export default function JuniorReadingPlay() {
   }, [r, list, userId, mastery, nav]);
 
   if (!r) return <main className="grid min-h-screen place-items-center text-sm text-muted-foreground"><T>加载中…</T></main>;
+
+  // === ③ 诊断 / ④ 对话 阶段（提交后才进入） ===
+  if (phase === "diagnosis" || phase === "dialogue") {
+    const wrongIdx: number[] = r.questions
+      .map((q, i) => (picks[i] !== q.answer ? i + 1 : null))
+      .filter((x): x is number => x !== null);
+    const snapshot = {
+      title: r.title,
+      passage_excerpt: r.body.slice(0, 1800),
+      vocab_notes: r.vocab_notes?.slice(0, 12),
+      questions: r.questions.map((q, i) => ({
+        index: i + 1,
+        stem: q.q,
+        options: q.options,
+        correct_answer: q.answer,
+        user_answer: picks[i],
+        is_correct: picks[i] === q.answer,
+        explanation: q.explanation,
+      })),
+    };
+    const starters = [
+      wrongIdx[0]
+        ? `第 ${wrongIdx[0]} 题我选了 ${picks[wrongIdx[0] - 1]}，为什么不对？`
+        : "帮我梳理一下这篇文章讲了什么",
+      "文章里哪句话是关键句？带我看看",
+      "下次遇到同类题，我应该怎么避坑？",
+    ];
+
+    return (
+      <ExamPaper className="pb-32">
+        <ExamContainer max="5xl">
+          <div className="mb-6 flex items-center justify-between gap-3 pb-4 border-b exam-divider">
+            <button onClick={() => setPhase("test")} className="inline-flex items-center gap-1.5 text-[13px] exam-soft hover:text-[hsl(var(--exam-ink))]">
+              <BackIcon className="size-4" /> <T>返回题目</T>
+            </button>
+            <div className="exam-eyebrow">
+              {phase === "diagnosis" ? "③ 诊断" : "④ 对话"} · {correctCount}/{r.questions.length}
+            </div>
+          </div>
+
+          {phase === "diagnosis" ? (
+            <>
+              <header className="mb-6">
+                <div className="exam-eyebrow mb-2"><T>初中英语 · 阅读诊断</T></div>
+                <h1 className="exam-display text-[28px] leading-tight">{r.title}</h1>
+              </header>
+
+              <div className="mb-6">
+                <DiagnosisTable
+                  rows={r.questions.map((q, i) => ({
+                    index: i + 1,
+                    point: "阅读理解",
+                    isCorrect: picks[i] === q.answer,
+                    trap: picks[i] === q.answer ? null : inferTrap("reading"),
+                    cumulativeMastery: mastery[r.id]?.best_pct ?? null,
+                  }))}
+                />
+              </div>
+
+              <div className="mb-6">
+                <MistakeBookCallout
+                  mistakeCount={wrongIdx.length}
+                  onAskAI={() => {
+                    if (wrongIdx[0]) {
+                      setTutorPrefill(`我不明白第 ${wrongIdx[0]} 题为什么不选我那个，能带我看看吗？`);
+                    }
+                    setPhase("dialogue");
+                  }}
+                />
+              </div>
+
+              <div className="mb-8">
+                <NextStepCards
+                  cards={buildNextStepsFromResult({
+                    weakestPointKey: "reading",
+                    weakestPointCn: wrongIdx.length > 0 ? "细节定位" : "阅读理解",
+                    topicLabel: r.title,
+                    onWeakClick: () => nav("/junior/reading"),
+                    onMockClick: () => nav("/junior/reading"),
+                    onMicroLessonClick: () => nav("/junior/reading"),
+                  })}
+                />
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 mb-10">
+                <button
+                  className="exam-btn exam-btn-primary flex-1 h-12"
+                  onClick={() => { setTutorPrefill(""); setPhase("dialogue"); }}
+                >
+                  <Sparkles className="size-4" />
+                  <T>进入 ④ 对话 · 和译老师聊聊</T>
+                </button>
+                <button
+                  className="exam-btn exam-btn-ghost flex-1 h-12"
+                  onClick={() => setPhase("test")}
+                >
+                  <Eye className="size-4" />
+                  <T>回到题目看答案</T>
+                </button>
+              </div>
+            </>
+          ) : (
+            <InlineTutorChat
+              sessionKey={`junior-reading:${r.id}`}
+              context="junior_reading"
+              questionRef={r.id}
+              questionSnapshot={snapshot}
+              title="译老师"
+              subtitle="苏格拉底式 AI 主教 · 不会直接给答案，会引导你回原文找证据"
+              starters={starters}
+              prefill={tutorPrefill}
+            />
+          )}
+        </ExamContainer>
+        <ExamStepper
+          current={phase}
+          reachable={["test", "diagnosis", "dialogue"]}
+          onJump={(s) => setPhase(s === "test" ? "test" : s === "dialogue" ? "dialogue" : "diagnosis")}
+        />
+      </ExamPaper>
+    );
+  }
 
   const currentRow = mastery[r.id];
   const passed = (currentRow?.best_pct ?? 0) >= PASS_PCT;
@@ -279,7 +415,7 @@ export default function JuniorReadingPlay() {
   });
 
   return (
-    <ExamPaper>
+    <ExamPaper className="pb-32">
       <NoCopyGuard />
       <ExamContainer max="7xl">
         {/* Top bar */}
@@ -366,6 +502,11 @@ export default function JuniorReadingPlay() {
           <Link to="/pets" className="exam-btn exam-btn-ghost"><T>宠物</T></Link>
         </div>
       </ExamContainer>
+      <ExamStepper
+        current="test"
+        reachable={submitted ? ["test", "diagnosis", "dialogue"] : ["test"]}
+        onJump={(s) => setPhase(s === "test" ? "test" : s === "dialogue" ? "dialogue" : "diagnosis")}
+      />
     </ExamPaper>);
 
 }

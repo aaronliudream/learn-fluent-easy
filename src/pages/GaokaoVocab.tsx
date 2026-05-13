@@ -338,7 +338,12 @@ export default function GaokaoVocab() {
         ...((pri ?? []) as { word: string }[]).map((r) => lower(r.word)),
         ...((jr ?? []) as { word: string }[]).map((r) => lower(r.word)),
       ]);
-      const filtered = ((gk ?? []) as Vocab[]).filter((v) => !exclude.has(lower(v.word)));
+      const filtered = ((gk ?? []) as Vocab[]).filter((v) => {
+        // 拆分形如 "a/an"、"color/colour" 的合写词，任一部分命中小学/初中即剔除
+        const parts = v.word.split(/[/、,]/).map((p) => lower(p)).filter(Boolean);
+        if (parts.length === 0) return true;
+        return !parts.some((p) => exclude.has(p));
+      });
       setAllVocab(filtered);
       setLoading(false);
     })();

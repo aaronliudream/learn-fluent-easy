@@ -206,7 +206,7 @@ export default function LandingPage() {
             to: "/kids",
             emoji: "🎒",
             title: "小学英语",
-            desc: "自然拼读 · 趣味闯关",
+            desc: "启蒙 G1-G2 · 同步 G3-G6",
             bg: "linear-gradient(160deg,#F5A26B 0%,#ED5C8E 100%)"
           },
           {

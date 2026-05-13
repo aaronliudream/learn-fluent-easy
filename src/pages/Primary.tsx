@@ -132,8 +132,8 @@ export default function Primary() {
   useEffect(() => {
     (async () => {
       // SEO: title + meta description
-      document.title = "小学英语 G1-G6 · 自然拼读 · 词汇 · 听说读写 | FluentPath";
-      const desc = "教育部新课标小学英语 1-6 年级：自然拼读、核心词汇、听力对话、阅读闯关、AI 口语陪练，孩子每天 10 分钟。";
+      document.title = "小学英语 G1-G6 · 英语启蒙 & 教材同步 · 自然拼读 · 词汇 · 听说读写 | FluentPath";
+      const desc = "1-2年级英语启蒙(幼小衔接)：自然拼读、字母、听说、简单对话；3-6年级教材同步(人教/外研社)：核心词汇、听力对话、阅读闯关、AI口语陪练，每天10分钟。";
       let m = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
       if (!m) {m = document.createElement("meta");m.name = "description";document.head.appendChild(m);}
       m.content = desc;
@@ -242,13 +242,13 @@ export default function Primary() {
             // the national-curriculum default (G3, when English officially starts).
             const recId = recommendedGrade ?? 3;
             const isRecommended = g.id === recId;
-            const phonicsOnly = g.id === 2; // G2: Phonics 已开放,其他模块准备中
-            const isPreview = g.id > 2; // G3-G6 内容尚在准备中
+            const isFoundation = g.id <= 2;  // 1-2年级: 英语启蒙/幼小衔接
+            const isSync = g.id >= 3;        // 3-6年级: 教材同步
             return (
               <button
                 key={g.id}
                 onClick={() => pickGrade(g.id)}
-                className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5 ${isPreview ? "saturate-50" : phonicsOnly ? "saturate-[0.85]" : ""}`}>
+                className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5`}>
                 
                   <div className="text-3xl">{g.emoji}</div>
                   {isRecommended &&
@@ -256,20 +256,20 @@ export default function Primary() {
                       <T>⭐ 推荐</T>
                     </span>
                 }
-                  {phonicsOnly && !isRecommended &&
+                  {isFoundation && !isRecommended &&
                 <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-emerald-700 shadow-sm">
-                      <T>✨ 6 模块</T>
+                      <T>🌱 启蒙</T>
                     </span>
                 }
-                  {isPreview && !isRecommended &&
-                <span className="absolute right-1.5 top-1.5 rounded-full bg-white/90 px-1.5 py-0.5 text-[10px] font-extrabold text-amber-700 shadow-sm">
-                      <T>📦 准备中</T>
+                  {isSync && !isRecommended &&
+                <span className="absolute right-1.5 top-1.5 rounded-full bg-white/90 px-1.5 py-0.5 text-[10px] font-extrabold text-sky-700 shadow-sm">
+                      <T>📚 同步</T>
                     </span>
                 }
                   <div className="absolute inset-x-3 bottom-3">
                     <div className="text-sm font-extrabold text-white drop-shadow"><T>{g.name_cn}</T></div>
                     <div className="text-[10px] font-bold text-white/90 drop-shadow">
-                      <T>{isPreview ? "📦 准备中" : phonicsOnly ? "✨ 6 个模块(全)" : "✨ 完整开放"}</T>
+                      <T>{isFoundation ? "听说·字母·拼读" : "教材同步·主线"}</T>
                     </div>
                   </div>
                 </button>);
@@ -382,7 +382,8 @@ export default function Primary() {
             {grades.map((g) => {
               const isCurrent = g.id === grade;
               const isRecommended = recommendedGrade != null && g.id === recommendedGrade;
-              const isHard = g.id >= 5;
+              const isFoundation = g.id <= 2;
+              const isSync = g.id >= 3;
               return (
                 <button
                   key={g.id}
@@ -395,18 +396,25 @@ export default function Primary() {
                   
                   <div className="text-3xl">{g.emoji}</div>
                   <div className="flex-1">
-                    <div className="text-sm font-extrabold"><T>{g.name_cn}</T></div>
+                    <div className="flex items-center gap-2">
+                      <div className="text-sm font-extrabold"><T>{g.name_cn}</T></div>
+                      {isFoundation && (
+                        <span className="rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
+                          <T>🌱 英语启蒙</T>
+                        </span>
+                      )}
+                      {isSync && (
+                        <span className="rounded bg-sky-100 px-1.5 py-0.5 text-[10px] font-bold text-sky-700 dark:bg-sky-950/50 dark:text-sky-300">
+                          <T>📚 教材同步</T>
+                        </span>
+                      )}
+                    </div>
                     <div className="mt-0.5 flex flex-wrap gap-1.5 text-[10px] font-bold">
                       {isCurrent &&
                       <span className="rounded bg-rose-500 px-1.5 py-0.5 text-white"><T>当前</T></span>
                       }
                       {isRecommended && !isCurrent &&
                       <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-white"><T>推荐</T></span>
-                      }
-                      {isHard &&
-                      <span className="rounded bg-amber-100 px-1.5 py-0.5 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
-                          <T>⚠️ 难度较高</T>
-                        </span>
                       }
                     </div>
                   </div>

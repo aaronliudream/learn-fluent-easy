@@ -13,6 +13,9 @@ import { useActiveCohort } from "@/hooks/useActiveCohort";
 import { fetchCohortProgress } from "@/lib/cohortProgress";
 import CohortIntakeModal from "./CohortIntakeModal";
 
+/** 高考 3500 词 / 每批 10 词 = 350 批。常量化便于以后调整。 */
+const TOTAL_BATCHES = 350;
+
 /**
  * 「彻底掌握 5 步走」面板 (cohort-aware)。
  *
@@ -61,7 +64,7 @@ export default function VocabMasteryPath({
   onPickMode: (mode: string) => void;
   onBrowse?: () => void;
 }) {
-  const { active: cohort, dormant, activeLoading } = useActiveCohort();
+  const { active: cohort, dormant, activeLoading, resume } = useActiveCohort();
   const [intakeOpen, setIntakeOpen] = useState(false);
 
   const cohortMode = !!cohort;
@@ -213,9 +216,11 @@ export default function VocabMasteryPath({
             <Rocket className="size-4" /> <T>开始今天这一批 (10 词)</T>
           </button>
           {dormant.length > 0 && (
-            <div className="mt-3 text-[11px] text-muted-foreground">
-              <T>你还有</T> {dormant.length} <T>批未完成可以继续</T>
-            </div>
+            <DormantChips
+              dormant={dormant}
+              onResume={(id) => resume.mutate(id)}
+              busy={resume.isPending}
+            />
           )}
         </section>
         {intakeOpen && (
@@ -234,7 +239,7 @@ export default function VocabMasteryPath({
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div>
             <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-400">
-              {cohortMode ? <>第 {cohort!.sequence_no} 批 · MASTERY PATH</> : "MASTERY PATH"}
+              {cohortMode ? <>第 {cohort!.sequence_no} / {TOTAL_BATCHES} 批 · MASTERY PATH</> : "MASTERY PATH"}
             </div>
             <h2 className="text-lg font-extrabold md:text-xl bg-gradient-to-r from-amber-600 via-rose-600 to-fuchsia-600 bg-clip-text text-transparent">
               <T>⭐ 彻底掌握 5 步走</T>
@@ -350,6 +355,14 @@ export default function VocabMasteryPath({
             <span><T>未学</T> {Math.max(0, effectiveTotal - learnedCount)}</span>
           </div>
         )}
+        {cohortMode && dormant.length > 0 && (
+          <DormantChips
+            dormant={dormant}
+            onResume={(id) => resume.mutate(id)}
+            busy={resume.isPending}
+            compact
+          />
+        )}
       </section>
       {intakeOpen && (
         <CohortIntakeModal
@@ -358,5 +371,72 @@ export default function VocabMasteryPath({
         />
       )}
     </>
+  );
+}
+
+/* ---------- Dormant batches resume strip ---------- */
+
+function DormantChips({
+  dormant,
+  onResume,
+  busy,
+  compact = false,
+}: {
+  dormant: Array<{ id: string; sequence_no: number; cohort_word_ids: string[]; last_active_at: string }>;
+  onResume: (id: string) => void;
+  busy: boolean;
+  compact?: boolean;
+}) {
+  const visible = dormant.slice(0, 3);
+  return (
+    <div
+      className={cn(
+        "rounded-2xl border border-dashed border-amber-300/70 bg-background/60 p-3 dark:border-amber-700/40",
+        compact ? "mt-3" : "mt-4 text-left",
+      )}
+    >
+      <div className="text-[10px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">
+        <T>未完成的批次</T> · {dormant.length}
+      </div>
+      <ul className="mt-2 space-y-1.5">
+        {visible.map((c) => {
+          const days = Math.max(
+            0,
+            Math.floor((Date.now() - new Date(c.last_active_at).getTime()) / 86400000),
+          );
+          return (
+            <li
+              key={c.id}
+              className="flex items-center justify-between gap-2 rounded-xl bg-card px-2.5 py-1.5"
+            >
+              <div className="min-w-0 text-[11px]">
+                <span className="font-extrabold text-foreground">第 {c.sequence_no} 批</span>
+                <span className="ml-1.5 text-muted-foreground">
+                  {c.cohort_word_ids.length} 词 · {days} 天前
+                </span>
+              </div>
+              <button
+                type="button"
+                disabled={busy}
+                onClick={() => onResume(c.id)}
+                className={cn(
+                  "rounded-full px-2.5 py-1 text-[11px] font-extrabold text-white shadow-sm transition",
+                  busy
+                    ? "bg-muted text-muted-foreground"
+                    : "bg-amber-600 hover:bg-amber-700",
+                )}
+              >
+                <T>继续</T>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+      {dormant.length > visible.length && (
+        <div className="mt-1.5 text-center text-[10px] text-muted-foreground">
+          <T>还有</T> {dormant.length - visible.length} <T>批…</T>
+        </div>
+      )}
+    </div>
   );
 }

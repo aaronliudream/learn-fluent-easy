@@ -1407,6 +1407,7 @@ function QuizPhase({
   const questionShownAtRef = useRef<number>(Date.now());
   const [levelUps, setLevelUps] = useState<{word: string;level: MasteryLevel;}[]>([]);
   const wrongIdsRef = useRef<Set<string>>(new Set());
+  const cohortCtx = useCohortAttemptContext();
 
   // Reset stopwatch every time we land on a new question
   useEffect(() => {
@@ -1446,11 +1447,14 @@ function QuizPhase({
       is_correct: isCorrect,
       context: { kind: item.kind, latency_ms: latencyMs }
     }).catch(() => {});
-    const update = await bumpVocabMastery({
+    const update = await recordCohortAttempt({
       vocabId: item.vocab.id,
       kind: item.kind,
       isCorrect,
-      latencyMs
+      latencyMs,
+      source: pickPracticeSource(item.vocab.id, cohortCtx),
+      cohortId: cohortCtx.cohortId,
+      cohortWordIds: cohortCtx.cohortWordIds,
     });
     if (update && update.newLevel > update.prevLevel) {
       setLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);

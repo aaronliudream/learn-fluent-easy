@@ -5,7 +5,8 @@ import { useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
-import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { recordAttempt } from "@/lib/gaokaoMastery";
+import { recordCohortAttempt } from "@/lib/cohortProgress";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { awardCoins, notifyWrong } from "@/lib/coins";
 import { celebrateScore } from "@/lib/feedback";
@@ -579,7 +580,10 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     if (correct) awardCoins(2, "junior_vocab_correct").catch(() => {});else
     notifyWrong();
     await Promise.all([
-    bumpVocabMastery({ vocabId: cur.id, isCorrect: correct, kind: "en2cn" }).catch(() => {}),
+    recordCohortAttempt({
+      vocabId: cur.id, isCorrect: correct, kind: "en2cn",
+      source: "free_practice",
+    }).catch(() => {}),
     recordAttempt({ questionType: "vocab", questionId: cur.id, userAnswer: m, isCorrect: correct }).catch(() => {}),
     recordUnifiedAttempt({
       stage: "junior",
@@ -775,7 +779,10 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
     if (ok) awardCoins(3, "junior_vocab_dict").catch(() => {});else
     notifyWrong();
     await Promise.all([
-    bumpVocabMastery({ vocabId: cur.id, isCorrect: ok, kind: "spell" }).catch(() => {}),
+    recordCohortAttempt({
+      vocabId: cur.id, isCorrect: ok, kind: "spell",
+      source: "free_practice",
+    }).catch(() => {}),
     recordAttempt({ questionType: "vocab", questionId: cur.id, userAnswer: input, isCorrect: ok }).catch(() => {}),
     recordUnifiedAttempt({
       stage: "junior",

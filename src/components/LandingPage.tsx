@@ -219,7 +219,7 @@ export default function LandingPage() {
           {
             to: "/gaokao",
             emoji: "🎓",
-            title: "高考冲刺",
+            title: "高中英语",
             desc: "真题 · 押题 · 写作",
             bg: "linear-gradient(160deg,#5B6BE3 0%,#2A2F7A 100%)"
           },

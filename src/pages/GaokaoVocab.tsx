@@ -317,21 +317,29 @@ export default function GaokaoVocab() {
 
   useEffect(() => {
     (async () => {
-      const { data } = await supabase.
-      from("gaokao_vocab").
-      select("*")
       // 🇨🇳 仅取「中国高中生必须掌握」的核心高考词汇（教育部新课标 3500 词，gaokao_level 1-3）
-      // 排除 level 4 拓展/超纲词，确保游戏内出现的都是必考词
-      .lte("gaokao_level", 3).
-      not("gaokao_level", "is", null)
-      // 🧠 科学排序（取代字母表）：词频↑ → 考频↓ → 难度↓
-      // 依据：Zipf 定律 + Nation 2013《Learning Vocabulary in Another Language》
-      .order("freq_rank", { ascending: true, nullsFirst: false }).
-      order("exam_frequency", { ascending: false, nullsFirst: false }).
-      order("star_level", { ascending: false, nullsFirst: false }).
-      order("word", { ascending: true }).
-      range(0, 4999);
-      setAllVocab((data ?? []) as Vocab[]);
+      // 排除 level 4 拓展/超纲词；并剔除小学/初中阶段已掌握词，避免重复
+      const [{ data: gk }, { data: pri }, { data: jr }] = await Promise.all([
+        supabase
+          .from("gaokao_vocab")
+          .select("*")
+          .lte("gaokao_level", 3)
+          .not("gaokao_level", "is", null)
+          .order("freq_rank", { ascending: true, nullsFirst: false })
+          .order("exam_frequency", { ascending: false, nullsFirst: false })
+          .order("star_level", { ascending: false, nullsFirst: false })
+          .order("word", { ascending: true })
+          .range(0, 4999),
+        supabase.from("primary_vocab").select("word").range(0, 9999),
+        supabase.from("junior_vocab").select("word").range(0, 9999),
+      ]);
+      const lower = (s: string) => s.trim().toLowerCase();
+      const exclude = new Set<string>([
+        ...((pri ?? []) as { word: string }[]).map((r) => lower(r.word)),
+        ...((jr ?? []) as { word: string }[]).map((r) => lower(r.word)),
+      ]);
+      const filtered = ((gk ?? []) as Vocab[]).filter((v) => !exclude.has(lower(v.word)));
+      setAllVocab(filtered);
       setLoading(false);
     })();
   }, []);

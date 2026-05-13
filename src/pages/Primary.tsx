@@ -242,13 +242,13 @@ export default function Primary() {
             // the national-curriculum default (G3, when English officially starts).
             const recId = recommendedGrade ?? 3;
             const isRecommended = g.id === recId;
-            const phonicsOnly = g.id === 2; // G2: Phonics 已开放,其他模块准备中
-            const isPreview = g.id > 2; // G3-G6 内容尚在准备中
+            const isFoundation = g.id <= 2;  // 1-2年级: 英语启蒙/幼小衔接
+            const isSync = g.id >= 3;        // 3-6年级: 教材同步
             return (
               <button
                 key={g.id}
                 onClick={() => pickGrade(g.id)}
-                className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5 ${isPreview ? "saturate-50" : phonicsOnly ? "saturate-[0.85]" : ""}`}>
+                className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5`}>
                 
                   <div className="text-3xl">{g.emoji}</div>
                   {isRecommended &&
@@ -256,20 +256,20 @@ export default function Primary() {
                       <T>⭐ 推荐</T>
                     </span>
                 }
-                  {phonicsOnly && !isRecommended &&
+                  {isFoundation && !isRecommended &&
                 <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-emerald-700 shadow-sm">
-                      <T>✨ 6 模块</T>
+                      <T>🌱 启蒙</T>
                     </span>
                 }
-                  {isPreview && !isRecommended &&
-                <span className="absolute right-1.5 top-1.5 rounded-full bg-white/90 px-1.5 py-0.5 text-[10px] font-extrabold text-amber-700 shadow-sm">
-                      <T>📦 准备中</T>
+                  {isSync && !isRecommended &&
+                <span className="absolute right-1.5 top-1.5 rounded-full bg-white/90 px-1.5 py-0.5 text-[10px] font-extrabold text-sky-700 shadow-sm">
+                      <T>📚 同步</T>
                     </span>
                 }
                   <div className="absolute inset-x-3 bottom-3">
                     <div className="text-sm font-extrabold text-white drop-shadow"><T>{g.name_cn}</T></div>
                     <div className="text-[10px] font-bold text-white/90 drop-shadow">
-                      <T>{isPreview ? "📦 准备中" : phonicsOnly ? "✨ 6 个模块(全)" : "✨ 完整开放"}</T>
+                      <T>{isFoundation ? "听说·字母·拼读" : "教材同步·主线"}</T>
                     </div>
                   </div>
                 </button>);

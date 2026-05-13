@@ -502,6 +502,11 @@ export default function JuniorReadingPlay() {
           <Link to="/pets" className="exam-btn exam-btn-ghost"><T>宠物</T></Link>
         </div>
       </ExamContainer>
+      <ExamStepper
+        current="test"
+        reachable={submitted ? ["test", "diagnosis", "dialogue"] : ["test"]}
+        onJump={(s) => setPhase(s === "test" ? "test" : s === "dialogue" ? "dialogue" : "diagnosis")}
+      />
     </ExamPaper>);
 
 }

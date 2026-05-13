@@ -6,7 +6,8 @@ import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Head
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { speak } from "@/lib/speak";
-import { bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { recordAttempt } from "@/lib/gaokaoMastery";
+import { recordCohortAttempt } from "@/lib/cohortProgress";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { sparkOnAnswer, sparkOnWrong } from "@/lib/sparkAnswerFeedback";
 import { cn } from "@/lib/utils";
@@ -433,7 +434,10 @@ function QuizMode({ words }: {words: Vocab[];}) {
       setWrongIds((prev) => {const n = new Set(prev);n.add(cur.word.id);return n;});
       // Listen-question timeout = wrong, Spark reacts.
       sparkOnWrong();
-      bumpVocabMastery({ vocabId: cur.word.id, isCorrect: false, kind: "listen" }).catch(() => {});
+      recordCohortAttempt({
+        vocabId: cur.word.id, isCorrect: false, kind: "listen",
+        source: "free_practice",
+      }).catch(() => {});
       recordAttempt({ questionType: "vocab", questionId: cur.word.id, userAnswer: "(timeout)", isCorrect: false }).catch(() => {});
       recordUnifiedAttempt({
         stage: "primary", grade, module: "vocab",
@@ -551,10 +555,11 @@ function QuizMode({ words }: {words: Vocab[];}) {
     }
     if (cur.type !== "listen2en") speak(cur.word.word);
     await Promise.all([
-    bumpVocabMastery({
+    recordCohortAttempt({
       vocabId: cur.word.id,
       isCorrect: correct,
-      kind: cur.type === "listen2en" ? "listen" : cur.type
+      kind: cur.type === "listen2en" ? "listen" : cur.type,
+      source: "free_practice",
     }).catch(() => {}),
     recordAttempt({
       questionType: "vocab",

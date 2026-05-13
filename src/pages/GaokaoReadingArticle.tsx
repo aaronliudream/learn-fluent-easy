@@ -262,6 +262,44 @@ export default function GaokaoReadingArticle() {
     return () => clearInterval(t);
   }, [stage]);
 
+  // 进入诊断阶段时，加载该用户每个考点 (question_type) 的累计掌握度
+  useEffect(() => {
+    if (stage !== "diagnosis") return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) return;
+        const types = Array.from(new Set(questions.map((q) => q.question_type))).filter(Boolean);
+        if (types.length === 0) return;
+        const { data } = await supabase
+          .from("gaokao_reading_diagnostics")
+          .select("question_type,is_correct")
+          .eq("user_id", user.id)
+          .in("question_type", types)
+          .limit(1000);
+        if (cancelled || !data) return;
+        const acc: Record<string, { ok: number; total: number }> = {};
+        for (const row of data as { question_type: string; is_correct: boolean }[]) {
+          const k = row.question_type ?? "reading";
+          acc[k] = acc[k] || { ok: 0, total: 0 };
+          acc[k].total += 1;
+          if (row.is_correct) acc[k].ok += 1;
+        }
+        const m: Record<string, number> = {};
+        for (const [k, v] of Object.entries(acc)) {
+          m[k] = v.total > 0 ? Math.round((v.ok / v.total) * 100) : 0;
+        }
+        setTypeMastery(m);
+      } catch (e) {
+        console.warn("load typeMastery", e);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [stage, questions]);
+
   // Load
   useEffect(() => {
     if (!id) return;

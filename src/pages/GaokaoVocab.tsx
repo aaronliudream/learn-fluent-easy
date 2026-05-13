@@ -2394,6 +2394,7 @@ function SrsReviewSession({ pool, onExit, focus }: {pool: Vocab[];onExit: () => 
   const [milestonesEvaluated, setMilestonesEvaluated] = useState(false);
   const [srsLevelUps, setSrsLevelUps] = useState<{word: string;level: MasteryLevel;}[]>([]);
   const srsQuestionShownAtRef = useRef<number>(Date.now());
+  const cohortCtx = useCohortAttemptContext();
 
   // reset stopwatch each question
   useEffect(() => {
@@ -2571,11 +2572,16 @@ function SrsReviewSession({ pool, onExit, focus }: {pool: Vocab[];onExit: () => 
       is_correct: isCorrect,
       context: { kind: item.kind, mode: "srs", latency_ms: latencyMs }
     }).catch(() => {});
-    const update = await bumpVocabMastery({
+    const update = await recordCohortAttempt({
       vocabId: item.vocab.id,
       kind: item.kind,
       isCorrect,
-      latencyMs
+      latencyMs,
+      // SRS review session = words pulled from the FSRS due queue
+      // (`due_at <= now()`). Always `fsrs_due`, regardless of cohort.
+      source: "fsrs_due",
+      cohortId: cohortCtx.cohortId,
+      cohortWordIds: cohortCtx.cohortWordIds,
     });
     if (update && update.newLevel > update.prevLevel) {
       setSrsLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);

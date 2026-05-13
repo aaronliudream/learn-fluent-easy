@@ -11,6 +11,7 @@ import ReadingWatermark from "@/components/ReadingWatermark";
 import { recordMastery } from "@/lib/masteryProgress";
 import { celebrateScore } from "@/lib/feedback";
 import { ShareButton } from "@/components/share/ShareButton";
+import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
 
 type Article = {
   id: string;

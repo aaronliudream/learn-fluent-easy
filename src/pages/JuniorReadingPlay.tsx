@@ -10,7 +10,6 @@ import NoCopyGuard from "@/components/NoCopyGuard";
 import StarRating from "@/components/StarRating";
 import { recordMastery, loadMastery, MasteryRow, PASS_PCT } from "@/lib/masteryProgress";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
-import ReadingWatermark from "@/components/ReadingWatermark";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
@@ -204,7 +203,6 @@ export default function JuniorReadingPlay() {
 
   const passage = (
     <div className="relative">
-      <ReadingWatermark text={`${email} · ${new Date().toLocaleString()}`} />
       <article className="exam-card p-6 sm:p-8 relative">
         <div className="exam-eyebrow mb-2"><T>Passage 阅读材料</T></div>
         <div className="exam-passage-title">{r.title}</div>

@@ -382,7 +382,8 @@ export default function Primary() {
             {grades.map((g) => {
               const isCurrent = g.id === grade;
               const isRecommended = recommendedGrade != null && g.id === recommendedGrade;
-              const isHard = g.id >= 5;
+              const isFoundation = g.id <= 2;
+              const isSync = g.id >= 3;
               return (
                 <button
                   key={g.id}
@@ -395,18 +396,25 @@ export default function Primary() {
                   
                   <div className="text-3xl">{g.emoji}</div>
                   <div className="flex-1">
-                    <div className="text-sm font-extrabold"><T>{g.name_cn}</T></div>
+                    <div className="flex items-center gap-2">
+                      <div className="text-sm font-extrabold"><T>{g.name_cn}</T></div>
+                      {isFoundation && (
+                        <span className="rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
+                          <T>🌱 英语启蒙</T>
+                        </span>
+                      )}
+                      {isSync && (
+                        <span className="rounded bg-sky-100 px-1.5 py-0.5 text-[10px] font-bold text-sky-700 dark:bg-sky-950/50 dark:text-sky-300">
+                          <T>📚 教材同步</T>
+                        </span>
+                      )}
+                    </div>
                     <div className="mt-0.5 flex flex-wrap gap-1.5 text-[10px] font-bold">
                       {isCurrent &&
                       <span className="rounded bg-rose-500 px-1.5 py-0.5 text-white"><T>当前</T></span>
                       }
                       {isRecommended && !isCurrent &&
                       <span className="rounded bg-emerald-500 px-1.5 py-0.5 text-white"><T>推荐</T></span>
-                      }
-                      {isHard &&
-                      <span className="rounded bg-amber-100 px-1.5 py-0.5 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300">
-                          <T>⚠️ 难度较高</T>
-                        </span>
                       }
                     </div>
                   </div>

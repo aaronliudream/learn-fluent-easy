@@ -183,6 +183,34 @@ const RouteFallback = () => (
   </div>
 );
 
+/** 监听路由变化：当用户从非 auth 页面进入 /auth 时，自动保存上一页路径。 */
+const AuthRedirectGuard = () => {
+  const location = useLocation();
+  const prevPath = useRef<string>("");
+  useEffect(() => {
+    if (location.pathname === "/auth" && prevPath.current && !prevPath.current.startsWith("/auth")) {
+      saveRedirectPath(prevPath.current);
+    }
+    prevPath.current = location.pathname + location.search;
+  }, [location]);
+  return null;
+};
+
+/** OAuth 外部跳转回来后（通常在非 /auth 页面触发 SIGNED_IN），自动跳回之前的页面。 */
+const OAuthReturnRedirect = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === "SIGNED_IN" && session && window.location.pathname !== "/auth") {
+        const redirect = consumeRedirectPath();
+        if (redirect) navigate(redirect, { replace: true });
+      }
+    });
+    return () => subscription.unsubscribe();
+  }, [navigate]);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <I18nProvider>

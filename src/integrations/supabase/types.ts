@@ -1313,6 +1313,41 @@ export type Database = {
           },
         ]
       }
+      gaokao_cohort_events: {
+        Row: {
+          cohort_id: string
+          correct: boolean
+          kind: string
+          ts: string
+          user_id: string
+          vocab_id: string
+        }
+        Insert: {
+          cohort_id: string
+          correct: boolean
+          kind: string
+          ts?: string
+          user_id: string
+          vocab_id: string
+        }
+        Update: {
+          cohort_id?: string
+          correct?: boolean
+          kind?: string
+          ts?: string
+          user_id?: string
+          vocab_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_cohort_events_cohort_id_fkey"
+            columns: ["cohort_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_user_active_cohort"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       gaokao_diagnostic_sessions: {
         Row: {
           answered_question_ids: Json
@@ -2265,6 +2300,74 @@ export type Database = {
         }
         Relationships: []
       }
+      gaokao_theme_tags: {
+        Row: {
+          created_at: string
+          description: string | null
+          label_cn: string
+          tag: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          label_cn: string
+          tag: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          label_cn?: string
+          tag?: string
+        }
+        Relationships: []
+      }
+      gaokao_user_active_cohort: {
+        Row: {
+          cohort_word_ids: string[]
+          created_at: string
+          graduated_at: string | null
+          id: string
+          last_active_at: string
+          sequence_no: number
+          started_at: string
+          status: Database["public"]["Enums"]["cohort_status"]
+          theme_tag: string | null
+          user_id: string
+        }
+        Insert: {
+          cohort_word_ids: string[]
+          created_at?: string
+          graduated_at?: string | null
+          id?: string
+          last_active_at?: string
+          sequence_no: number
+          started_at?: string
+          status?: Database["public"]["Enums"]["cohort_status"]
+          theme_tag?: string | null
+          user_id: string
+        }
+        Update: {
+          cohort_word_ids?: string[]
+          created_at?: string
+          graduated_at?: string | null
+          id?: string
+          last_active_at?: string
+          sequence_no?: number
+          started_at?: string
+          status?: Database["public"]["Enums"]["cohort_status"]
+          theme_tag?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_user_active_cohort_theme_tag_fkey"
+            columns: ["theme_tag"]
+            isOneToOne: false
+            referencedRelation: "gaokao_theme_tags"
+            referencedColumns: ["tag"]
+          },
+        ]
+      }
       gaokao_user_attempts: {
         Row: {
           created_at: string
@@ -2304,6 +2407,7 @@ export type Database = {
           created_at: string
           difficulty: number
           due_at: string | null
+          hypercorrection: boolean
           id: string
           item_id: string
           item_type: string
@@ -2327,6 +2431,7 @@ export type Database = {
           created_at?: string
           difficulty?: number
           due_at?: string | null
+          hypercorrection?: boolean
           id?: string
           item_id: string
           item_type: string
@@ -2350,6 +2455,7 @@ export type Database = {
           created_at?: string
           difficulty?: number
           due_at?: string | null
+          hypercorrection?: boolean
           id?: string
           item_id?: string
           item_type?: string
@@ -2431,6 +2537,7 @@ export type Database = {
         Row: {
           accent: string | null
           cet_level: string | null
+          contrast_card: Json | null
           created_at: string
           exam_frequency: number | null
           example_cn: string | null
@@ -2444,6 +2551,7 @@ export type Database = {
           meaning_en: string | null
           phonetic: string | null
           pos: string | null
+          primary_gloss: string
           sort_order: number
           stage: string
           star_level: number
@@ -2451,11 +2559,13 @@ export type Database = {
           synonyms: Json | null
           tags: Json | null
           theme: string | null
+          theme_tag: string | null
           word: string
         }
         Insert: {
           accent?: string | null
           cet_level?: string | null
+          contrast_card?: Json | null
           created_at?: string
           exam_frequency?: number | null
           example_cn?: string | null
@@ -2469,6 +2579,7 @@ export type Database = {
           meaning_en?: string | null
           phonetic?: string | null
           pos?: string | null
+          primary_gloss: string
           sort_order?: number
           stage?: string
           star_level?: number
@@ -2476,11 +2587,13 @@ export type Database = {
           synonyms?: Json | null
           tags?: Json | null
           theme?: string | null
+          theme_tag?: string | null
           word: string
         }
         Update: {
           accent?: string | null
           cet_level?: string | null
+          contrast_card?: Json | null
           created_at?: string
           exam_frequency?: number | null
           example_cn?: string | null
@@ -2494,6 +2607,7 @@ export type Database = {
           meaning_en?: string | null
           phonetic?: string | null
           pos?: string | null
+          primary_gloss?: string
           sort_order?: number
           stage?: string
           star_level?: number
@@ -2501,9 +2615,18 @@ export type Database = {
           synonyms?: Json | null
           tags?: Json | null
           theme?: string | null
+          theme_tag?: string | null
           word?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_vocab_theme_tag_fk"
+            columns: ["theme_tag"]
+            isOneToOne: false
+            referencedRelation: "gaokao_theme_tags"
+            referencedColumns: ["tag"]
+          },
+        ]
       }
       gaokao_vocab_themes: {
         Row: {
@@ -7907,6 +8030,27 @@ export type Database = {
         Args: { _accept: boolean; _request_id: string }
         Returns: Json
       }
+      resume_cohort: {
+        Args: { p_cohort_id: string }
+        Returns: {
+          cohort_word_ids: string[]
+          created_at: string
+          graduated_at: string | null
+          id: string
+          last_active_at: string
+          sequence_no: number
+          started_at: string
+          status: Database["public"]["Enums"]["cohort_status"]
+          theme_tag: string | null
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "gaokao_user_active_cohort"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
       run_mastery_snapshot: { Args: { _snap_date: string }; Returns: number }
       send_gift: {
         Args: { _food_id: string; _to_user: string }
@@ -7929,6 +8073,27 @@ export type Database = {
           seeds: number
           starlight: number
         }[]
+      }
+      start_new_cohort: {
+        Args: { p_theme_tag?: string; p_word_ids: string[] }
+        Returns: {
+          cohort_word_ids: string[]
+          created_at: string
+          graduated_at: string | null
+          id: string
+          last_active_at: string
+          sequence_no: number
+          started_at: string
+          status: Database["public"]["Enums"]["cohort_status"]
+          theme_tag: string | null
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "gaokao_user_active_cohort"
+          isOneToOne: true
+          isSetofReturn: false
+        }
       }
       submit_cloze_session: {
         Args: {
@@ -8029,6 +8194,7 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
+      cohort_status: "active" | "dormant" | "graduated"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -8157,6 +8323,7 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "moderator", "user"],
+      cohort_status: ["active", "dormant", "graduated"],
     },
   },
 } as const

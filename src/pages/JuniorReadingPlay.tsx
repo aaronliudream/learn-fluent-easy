@@ -259,7 +259,7 @@ export default function JuniorReadingPlay() {
                     point: "阅读理解",
                     isCorrect: picks[i] === q.answer,
                     trap: picks[i] === q.answer ? null : inferTrap("reading"),
-                    cumulativeMastery: currentRow?.best_pct ?? null,
+                    cumulativeMastery: mastery[r.id]?.best_pct ?? null,
                   }))}
                 />
               </div>

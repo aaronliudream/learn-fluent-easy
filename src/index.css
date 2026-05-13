@@ -468,3 +468,302 @@ All colors MUST be HSL.
   50%     { opacity: 1;   transform: scale(1.4); }
 }
 .star-twinkle { animation: star-twinkle 1.6s ease-in-out infinite; }
+
+/* ============================================================
+   EXAM PAPER THEME — scoped to `.exam-paper`
+   Editorial "Chinese exam" feel for reading-practice pages.
+   米色纸张 + 朱红 + 金, 衬线显示字体, 仿试卷美学。
+   只在阅读练习页生效, 不影响全局主题。
+   All colors HSL.
+   ============================================================ */
+.exam-paper {
+  /* paper / surfaces */
+  --exam-paper:       38 56% 95%;     /* #FAF6EE warm ivory */
+  --exam-paper-soft:  37 41% 92%;     /* #F4EFE3 */
+  --exam-surface:     42 73% 98%;     /* #FEFCF7 — card */
+  /* ink / type */
+  --exam-ink:         28 18% 9%;      /* #1A1612 */
+  --exam-ink-soft:    25 16% 25%;     /* #4A4036 */
+  --exam-ink-mute:    28 11% 49%;     /* #8A7F71 */
+  /* rules / borders */
+  --exam-rule:        36 33% 85%;     /* #E5DDD0 */
+  --exam-rule-soft:   38 38% 90%;     /* #EFE9DC */
+  /* accents */
+  --exam-accent:        4  60% 41%;   /* #A8312A 朱红 */
+  --exam-accent-soft:  10 71% 95%;    /* #FAEEEC */
+  --exam-gold:         40 51% 48%;    /* #B8923E */
+  --exam-gold-soft:    44 70% 91%;    /* #F8EFD9 */
+  --exam-green:       139 33% 27%;    /* #2D5A3D */
+  --exam-green-soft:  130 22% 92%;    /* #E6EFE8 */
+
+  --exam-display: 'Fraunces', 'Noto Serif SC', Georgia, serif;
+  --exam-body:    'Lora', 'Noto Serif SC', Georgia, serif;
+  --exam-ui:      'Manrope', 'Noto Sans SC', system-ui, sans-serif;
+
+  background-color: hsl(var(--exam-paper));
+  background-image:
+    radial-gradient(ellipse at 15% 20%, hsl(var(--exam-gold) / 0.06) 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 80%, hsl(var(--exam-accent) / 0.04) 0%, transparent 45%);
+  color: hsl(var(--exam-ink));
+  font-family: var(--exam-ui);
+}
+.exam-paper ::selection { background: hsl(var(--exam-gold) / 0.35); }
+
+/* ───────── Typography helpers ───────── */
+.exam-display  { font-family: var(--exam-display); font-weight: 500; letter-spacing: -0.01em; }
+.exam-display-italic { font-family: var(--exam-display); font-style: italic; font-weight: 500; }
+.exam-body     { font-family: var(--exam-body); }
+.exam-body-italic { font-family: var(--exam-body); font-style: italic; }
+.exam-ui       { font-family: var(--exam-ui); }
+.exam-eyebrow {
+  font-family: var(--exam-ui);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: hsl(var(--exam-gold));
+  font-weight: 600;
+}
+.exam-mute     { color: hsl(var(--exam-ink-mute)); }
+.exam-soft     { color: hsl(var(--exam-ink-soft)); }
+
+/* ───────── Surfaces ───────── */
+.exam-card {
+  background: hsl(var(--exam-surface));
+  border: 1px solid hsl(var(--exam-rule));
+  border-radius: 4px;
+}
+.exam-divider { border-color: hsl(var(--exam-rule)); }
+
+/* ───────── Passage ───────── */
+.exam-passage {
+  font-family: var(--exam-body);
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: hsl(var(--exam-ink));
+}
+.exam-passage p { margin-bottom: 16px; }
+.exam-passage p:last-child { margin-bottom: 0; }
+.exam-passage .exam-para-num {
+  font-family: var(--exam-display);
+  font-style: italic;
+  font-size: 12px;
+  color: hsl(var(--exam-ink-mute) / 0.6);
+  margin-right: 8px;
+  user-select: none;
+}
+.exam-passage-title {
+  font-family: var(--exam-display);
+  font-weight: 500;
+  font-size: clamp(20px, 2.4vw, 28px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid hsl(var(--exam-rule));
+}
+
+/* ───────── Question num + skill tag ───────── */
+.exam-q-num {
+  display: inline-block;
+  padding: 4px 12px;
+  background: hsl(var(--exam-ink));
+  color: hsl(var(--exam-paper));
+  font-family: var(--exam-display);
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+}
+.exam-skill-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: hsl(var(--exam-gold-soft));
+  color: hsl(var(--exam-gold));
+  font-family: var(--exam-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+.exam-stem {
+  font-family: var(--exam-body);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: hsl(var(--exam-ink));
+}
+
+/* ───────── Options ───────── */
+.exam-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  padding: 14px 18px;
+  background: hsl(var(--exam-surface));
+  border: 1.5px solid hsl(var(--exam-rule));
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: var(--exam-body);
+  font-size: 15px;
+  line-height: 1.5;
+  color: hsl(var(--exam-ink));
+  text-align: left;
+}
+.exam-option:hover:not(:disabled):not(.exam-option-correct):not(.exam-option-wrong):not(.exam-option-dim) {
+  border-color: hsl(var(--exam-ink-soft));
+  background: hsl(var(--exam-paper-soft));
+}
+.exam-option-selected {
+  border-color: hsl(var(--exam-ink));
+  background: hsl(var(--exam-paper-soft));
+}
+.exam-option-correct {
+  border-color: hsl(var(--exam-green));
+  background: hsl(var(--exam-green-soft));
+}
+.exam-option-wrong {
+  border-color: hsl(var(--exam-accent));
+  background: hsl(var(--exam-accent-soft));
+}
+.exam-option-dim { opacity: 0.55; cursor: default; }
+.exam-option-letter {
+  font-family: var(--exam-display);
+  font-weight: 600;
+  font-size: 16px;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid hsl(var(--exam-rule));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.exam-option-selected .exam-option-letter {
+  background: hsl(var(--exam-ink));
+  color: hsl(var(--exam-paper));
+  border-color: hsl(var(--exam-ink));
+}
+.exam-option-correct .exam-option-letter {
+  background: hsl(var(--exam-green));
+  color: #fff;
+  border-color: hsl(var(--exam-green));
+}
+.exam-option-wrong .exam-option-letter {
+  background: hsl(var(--exam-accent));
+  color: #fff;
+  border-color: hsl(var(--exam-accent));
+}
+
+/* ───────── Buttons ───────── */
+.exam-btn {
+  font-family: var(--exam-ui);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.exam-btn-primary {
+  background: hsl(var(--exam-ink));
+  color: hsl(var(--exam-paper));
+}
+.exam-btn-primary:hover:not(:disabled) {
+  background: hsl(var(--exam-accent));
+}
+.exam-btn-primary:disabled {
+  background: hsl(var(--exam-ink-mute) / 0.3);
+  color: hsl(var(--exam-ink-mute));
+  cursor: not-allowed;
+}
+.exam-btn-ghost {
+  background: transparent;
+  border: 1px solid hsl(var(--exam-rule));
+  color: hsl(var(--exam-ink-soft));
+}
+.exam-btn-ghost:hover { border-color: hsl(var(--exam-ink)); color: hsl(var(--exam-ink)); }
+
+/* ───────── Progress dots ───────── */
+.exam-dot {
+  width: 22px; height: 4px; border-radius: 2px;
+  background: hsl(var(--exam-rule));
+  transition: background .25s ease;
+}
+.exam-dot-current  { background: hsl(var(--exam-ink)); }
+.exam-dot-correct  { background: hsl(var(--exam-green)); }
+.exam-dot-wrong    { background: hsl(var(--exam-accent)); }
+
+/* ───────── Feedback panel ───────── */
+.exam-feedback {
+  margin-top: 16px;
+  padding: 18px 20px;
+  border-radius: 4px;
+  border-left: 3px solid hsl(var(--exam-rule));
+  background: hsl(var(--exam-paper-soft));
+}
+.exam-feedback-correct { border-left-color: hsl(var(--exam-green)); background: hsl(var(--exam-green-soft)); }
+.exam-feedback-wrong   { border-left-color: hsl(var(--exam-accent)); background: hsl(var(--exam-accent-soft)); }
+.exam-fb-label {
+  font-family: var(--exam-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(var(--exam-ink-mute));
+  display: block;
+  margin-bottom: 4px;
+}
+.exam-evidence {
+  font-family: var(--exam-body);
+  font-style: italic;
+  padding: 10px 14px;
+  background: hsl(var(--exam-surface));
+  border-left: 2px solid hsl(var(--exam-gold));
+  color: hsl(var(--exam-ink-soft));
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+/* ───────── Highlight ───────── */
+.exam-highlight {
+  background: linear-gradient(180deg, transparent 60%, hsl(var(--exam-gold-soft)) 60%);
+  padding: 0 2px;
+}
+
+/* ───────── Vocab chips ───────── */
+.exam-vocab-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: hsl(var(--exam-surface));
+  border: 1px solid hsl(var(--exam-rule));
+  border-radius: 999px;
+  font-family: var(--exam-body);
+  font-size: 12.5px;
+  color: hsl(var(--exam-ink-soft));
+}
+
+/* ───────── Sticky passage scroll ───────── */
+.exam-passage-scroll::-webkit-scrollbar { width: 6px; }
+.exam-passage-scroll::-webkit-scrollbar-track { background: transparent; }
+.exam-passage-scroll::-webkit-scrollbar-thumb { background: hsl(var(--exam-rule)); border-radius: 3px; }
+
+/* timer */
+.exam-timer {
+  font-family: var(--exam-display);
+  font-variant-numeric: tabular-nums;
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(var(--exam-ink-soft));
+}

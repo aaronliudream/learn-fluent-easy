@@ -2,17 +2,16 @@ import { T } from "@/i18n/T";import { useEffect, useRef, useState } from "react"
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, CheckCircle2, XCircle } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { supabase } from "@/integrations/supabase/client";
-import { Button } from "@/components/ui/button";
-import { PageHeader } from "@/components/PageHeader";
 import { recordAttempt } from "@/lib/gaokaoMastery";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
 import { bumpPetSkill } from "@/lib/petSkills";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
 
 type Passage = {id: string;title: string;body: string;structure_analysis: string | null;};
 type Question = {
@@ -134,93 +133,144 @@ export default function GaokaoReadingPlay() {
   if (loading) return <p className="p-8 text-sm text-muted-foreground"><T>加载中...</T></p>;
   if (!passage) return <p className="p-8"><T>文章不存在。</T><BackLink to="/gaokao/reading" className="text-primary underline"><T>返回</T></BackLink></p>;
 
+  const progressStates = questions.map((q) => {
+    const pick = picks[q.id];
+    if (!pick) return "todo" as const;
+    return pick === q.correct_answer ? ("correct" as const) : ("wrong" as const);
+  });
+
   return (
-    <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-      <GuestBanner />
-      <BackLink to="/gaokao/reading" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> <T>返回阅读列表</T>
-      </BackLink>
-      <PageHeader title={passage.title} hideReviewBanner />
+    <ExamPaper>
+      <ExamContainer max="7xl">
+        <GuestBanner />
 
-      <article className="mb-6 rounded-2xl border bg-card p-5 text-sm leading-relaxed">
-        {passage.body.split("\n\n").map((para, i) =>
-        <p key={i} className="mb-3 last:mb-0">{para}</p>
-        )}
-      </article>
+        {/* Top bar */}
+        <div className="mb-6 flex items-center justify-between gap-4 pb-4 border-b exam-divider">
+          <BackLink to="/gaokao/reading" className="inline-flex items-center gap-1.5 text-[13px] exam-soft hover:exam-ink transition">
+            <ArrowLeft className="size-4" /> <T>返回阅读列表</T>
+          </BackLink>
+          <ExamProgress
+            states={progressStates}
+            label={`${progressStates.filter((s) => s !== "todo").length} / ${questions.length}`}
+          />
+        </div>
 
-      {passage.structure_analysis &&
-      <details className="mb-6 rounded-2xl border bg-muted/30 p-4" onToggle={(e) => setShowAnalysis((e.target as HTMLDetailsElement).open)}>
-          <summary className="cursor-pointer text-sm font-bold text-primary">
-            {showAnalysis ? "收起" : "展开"}<T>文章结构分析</T>
-          </summary>
-          <div className="prose prose-sm mt-3 max-w-none dark:prose-invert">
-            <ReactMarkdown>{passage.structure_analysis}</ReactMarkdown>
+        {/* Title block */}
+        <header className="mb-8">
+          <div className="exam-eyebrow mb-2"><T>高考英语 · 阅读理解</T></div>
+          <h1 className="exam-display text-[clamp(28px,4vw,44px)] leading-[1.1]">
+            {passage.title}
+          </h1>
+        </header>
+
+        <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-10 items-start">
+          {/* PASSAGE */}
+          <div className="lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto exam-passage-scroll">
+            <article className="exam-card p-7 sm:p-9">
+              <div className="exam-eyebrow mb-2"><T>Passage 阅读材料</T></div>
+              <div className="exam-passage-title">{passage.title}</div>
+              <div className="exam-passage">
+                {passage.body.split("\n\n").map((para, i) => (
+                  <p key={i}>
+                    <span className="exam-para-num">{i + 1}</span>
+                    {para}
+                  </p>
+                ))}
+              </div>
+
+              {passage.structure_analysis && (
+                <details
+                  className="mt-6 pt-5 border-t exam-divider"
+                  onToggle={(e) => setShowAnalysis((e.target as HTMLDetailsElement).open)}
+                >
+                  <summary className="cursor-pointer text-[13px] font-semibold exam-soft hover:exam-ink">
+                    <span className="exam-eyebrow mr-2">▸</span>
+                    {showAnalysis ? "收起" : "展开"}<T>文章结构分析</T>
+                  </summary>
+                  <div className="prose prose-sm mt-3 max-w-none">
+                    <ReactMarkdown>{passage.structure_analysis}</ReactMarkdown>
+                  </div>
+                </details>
+              )}
+            </article>
           </div>
-        </details>
-      }
 
-      <div className="space-y-5">
-        {questions.map((q, i) => {
-          const picked = picks[q.id];
-          const explanations: Record<string, string | null> = {
-            A: q.explanation_a, B: q.explanation_b, C: q.explanation_c, D: q.explanation_d
-          };
-          return (
-            <section key={q.id} className="rounded-2xl border bg-card p-5">
-              <div className="mb-2 flex items-center gap-2 text-xs">
-                <span className="rounded-full bg-violet-500/10 px-2 py-0.5 font-semibold text-violet-600">
-                  {TYPE_LABEL[q.question_type] ?? q.question_type}
-                </span>
-                <span className="text-muted-foreground"><T>第</T> {i + 1} <T>题</T></span>
-              </div>
-              <p className="mb-3 font-medium">{q.stem}</p>
-              <div className="space-y-2">
-                {(["A", "B", "C", "D"] as const).map((letter) => {
-                  const text = (q as any)[`option_${letter.toLowerCase()}`];
-                  const isPicked = picked === letter;
-                  const isAnswer = q.correct_answer === letter;
-                  let cls = "border-border hover:border-primary/40";
-                  if (picked) {
-                    if (isAnswer) cls = "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30";else
-                    if (isPicked) cls = "border-rose-500 bg-rose-50 dark:bg-rose-950/30";else
-                    cls = "border-border opacity-60";
-                  }
-                  return (
-                    <button
-                      key={letter}
-                      onClick={() => onPick(q, letter)}
-                      disabled={!!picked}
-                      className={`flex w-full items-start gap-3 rounded-xl border-2 p-3 text-left text-sm transition ${cls}`}>
-                      
-                      <span className="font-bold">{letter}.</span>
-                      <span className="flex-1">{text}</span>
-                      {picked && isAnswer && <CheckCircle2 className="size-5 text-emerald-600" />}
-                      {picked && isPicked && !isAnswer && <XCircle className="size-5 text-rose-600" />}
-                    </button>);
+          {/* QUESTIONS */}
+          <div className="space-y-5">
+            {questions.map((q, i) => {
+              const picked = picks[q.id];
+              const explanations: Record<string, string | null> = {
+                A: q.explanation_a, B: q.explanation_b, C: q.explanation_c, D: q.explanation_d
+              };
+              const isCorrect = picked === q.correct_answer;
+              return (
+                <ExamCard key={q.id}>
+                  <div className="mb-4 flex items-center gap-2 flex-wrap">
+                    <span className="exam-q-num">No. {String(i + 1).padStart(2, "0")}</span>
+                    <span className="exam-skill-tag">{TYPE_LABEL[q.question_type] ?? q.question_type}</span>
+                  </div>
+                  <p className="exam-stem mb-5">{q.stem}</p>
+                  <div className="flex flex-col gap-2.5">
+                    {(["A", "B", "C", "D"] as const).map((letter) => {
+                      const text = (q as any)[`option_${letter.toLowerCase()}`];
+                      let state: "idle" | "selected" | "correct" | "wrong" | "dim" = "idle";
+                      if (picked) {
+                        if (q.correct_answer === letter) state = "correct";
+                        else if (picked === letter) state = "wrong";
+                        else state = "dim";
+                      }
+                      return (
+                        <ExamOption
+                          key={letter}
+                          letter={letter}
+                          text={text}
+                          state={state}
+                          onClick={() => onPick(q, letter)}
+                          disabled={!!picked}
+                        />
+                      );
+                    })}
+                  </div>
 
-                })}
-              </div>
+                  {picked && (
+                    <div className={`exam-feedback ${isCorrect ? "exam-feedback-correct" : "exam-feedback-wrong"}`}>
+                      <div className="exam-display text-[16px] mb-2" style={{
+                        color: isCorrect ? "hsl(var(--exam-green))" : "hsl(var(--exam-accent))"
+                      }}>
+                        {isCorrect ? "✓ Correct" : "✗ Not quite"}
+                        <span className="ml-2 text-[13px] exam-mute font-normal exam-body-italic">
+                          正确答案：{q.correct_answer}
+                        </span>
+                      </div>
+                      <div className="space-y-2">
+                        {(["A", "B", "C", "D"] as const).map((l) =>
+                          explanations[l] ? (
+                            <div key={l} className="text-[13px] leading-relaxed exam-soft">
+                              <span className="exam-display-italic mr-1.5" style={{
+                                color: l === q.correct_answer ? "hsl(var(--exam-green))" : "hsl(var(--exam-ink-mute))"
+                              }}>{l}.</span>
+                              {explanations[l]}
+                            </div>
+                          ) : null
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </ExamCard>
+              );
+            })}
 
-              {picked &&
-              <div className="mt-3 space-y-2 rounded-xl bg-muted/50 p-4 text-xs">
-                  <div className="font-bold"><T>每个选项的讲解：</T></div>
-                  {(["A", "B", "C", "D"] as const).map((l) =>
-                explanations[l] &&
-                <div key={l}><span className="font-semibold">{l}.</span> {explanations[l]}</div>
-
-                )}
-                </div>
-              }
-            </section>);
-
-        })}
-      </div>
-
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
-        <Button asChild><BackLink to="/gaokao/reading"><T>← 返回阅读列表</T></BackLink></Button>
-        <Button asChild variant="outline"><Link to="/gaokao"><T>🎓 高考首页</T></Link></Button>
-        <Button asChild variant="outline"><Link to="/pets"><T>🐾 宠物</T></Link></Button>
-      </div>
-    </main>);
+            {/* Footer nav */}
+            <div className="mt-10 pt-6 border-t exam-divider flex flex-wrap gap-2 justify-center">
+              <BackLink to="/gaokao/reading" className="exam-btn exam-btn-primary">
+                <ArrowLeft className="size-4" /> <T>返回阅读列表</T>
+              </BackLink>
+              <Link to="/gaokao" className="exam-btn exam-btn-ghost"><T>高考首页</T></Link>
+              <Link to="/pets" className="exam-btn exam-btn-ghost"><T>宠物</T></Link>
+            </div>
+          </div>
+        </div>
+      </ExamContainer>
+    </ExamPaper>);
 
 }

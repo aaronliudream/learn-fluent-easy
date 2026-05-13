@@ -248,20 +248,6 @@ export default function GaokaoReadingArticle() {
     });
   }, []);
 
-  useEffect(() => {
-    if (!article) return;
-    // 最短阅读时长：单词数 / 3.3 词每秒（≈200词/分钟），最少60秒
-    const m = Math.max(60, Math.round(article.word_count / 3.3));
-    setMinReadSec(m);
-    setReadSecLeft(m);
-  }, [article]);
-
-  useEffect(() => {
-    if (stage !== "test") return;
-    const t = setInterval(() => setReadSecLeft((s) => Math.max(0, s - 1)), 1000);
-    return () => clearInterval(t);
-  }, [stage]);
-
   // 进入诊断阶段时，加载该用户每个考点 (question_type) 的累计掌握度
   useEffect(() => {
     if (stage !== "diagnosis") return;

@@ -609,8 +609,8 @@ export default function GaokaoReadingArticle() {
 
   }
 
-  // ============ STAGE 2: RESULT ============
-  if (stage === "result") {
+  // ============ STAGE 2: DIAGNOSIS (③) ============
+  if (stage === "diagnosis") {
     const pct = totalQ > 0 ? Math.round(correctCount / totalQ * 100) : 0;
     const usedSec = submittedAt ? Math.floor((submittedAt - startTime) / 1000) : 0;
     const usedMM = String(Math.floor(usedSec / 60)).padStart(2, "0");

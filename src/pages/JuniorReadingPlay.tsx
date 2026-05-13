@@ -14,6 +14,16 @@ import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
+import { ExamStepper } from "@/components/exam/ExamStepper";
+import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
+import {
+  DiagnosisTable,
+  MistakeBookCallout,
+  NextStepCards,
+  inferTrap,
+  buildNextStepsFromResult,
+} from "@/components/exam/DiagnosisExtras";
+import { Sparkles, Eye, ArrowLeft as BackIcon } from "lucide-react";
 
 type Q = {q: string;options: string[];answer: string;explanation?: string;};
 type R = {id: string;title: string;body: string;word_count: number | null;grade: number;questions: Q[];vocab_notes: {word: string;cn: string;}[];};
@@ -35,6 +45,9 @@ export default function JuniorReadingPlay() {
   const [now, setNow] = useState(Date.now());
   const [submitted, setSubmitted] = useState(false);
   const [attempt, setAttempt] = useState(1);
+  // 流程阶段：测试 → 诊断 → 对话
+  const [phase, setPhase] = useState<"test" | "diagnosis" | "dialogue">("test");
+  const [tutorPrefill, setTutorPrefill] = useState<string>("");
 
   // Full-test lock: AI may only discuss the reading after submission.
   useRegisterAssistant(

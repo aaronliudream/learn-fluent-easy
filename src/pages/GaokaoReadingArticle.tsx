@@ -347,10 +347,6 @@ export default function GaokaoReadingArticle() {
       toast.warning(timeUp ? "时间到，请补完所有题目后再查看答案和解析" : "请先完成所有题目，再查看答案和解析");
       return;
     }
-    if (!timeUp && readSecLeft > 0) {
-      toast.warning(`请认真阅读，还需 ${readSecLeft} 秒才能交卷`);
-      return;
-    }
 
     const now = Date.now();
     setSubmittedAt(now);
@@ -473,12 +469,6 @@ export default function GaokaoReadingArticle() {
             <div className="flex-1 min-w-0">
               <div className="exam-eyebrow">{article.sub_band} · {article.genre_label}</div>
               <div className="exam-display text-[16px] truncate"><T>{article.title}</T></div>
-            </div>
-            <div className={cn(
-              "hidden sm:flex items-center gap-1 rounded px-2 py-1 text-[11px] font-bold tabular-nums border",
-              readSecLeft > 0 ? "border-[hsl(var(--exam-gold))] text-[hsl(var(--exam-gold))]" : "border-[hsl(var(--exam-green))] text-[hsl(var(--exam-green))]"
-            )} title="最短阅读时长">
-              📖 {readSecLeft > 0 ? `${readSecLeft}s` : "可交卷"}
             </div>
             <div className={cn("flex items-center gap-1.5 px-3 py-1 exam-timer", lowTime && "animate-pulse")} style={lowTime ? { color: "hsl(var(--exam-accent))" } : undefined}>
               <Clock className="size-4" />

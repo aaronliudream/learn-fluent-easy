@@ -5,7 +5,6 @@ import { ArrowLeft, Clock, Send, CheckCircle2, XCircle, Sparkles, BookOpen, File
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
 import NoCopyGuard from "@/components/NoCopyGuard";
 import ReadingWatermark from "@/components/ReadingWatermark";
 import { recordMastery } from "@/lib/masteryProgress";

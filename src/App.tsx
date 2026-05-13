@@ -219,6 +219,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AuthRedirectGuard />
+        <OAuthReturnRedirect />
         <StopAudioOnRouteChange />
         <HeartbeatGate />
         <GuestCardClaimer />

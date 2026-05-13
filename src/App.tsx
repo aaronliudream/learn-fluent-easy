@@ -70,6 +70,7 @@ const PrimaryReading = lazy(() => import("./pages/PrimaryReading.tsx"));
 const PrimaryReadingPlay = lazy(() => import("./pages/PrimaryReadingPlay.tsx"));
 const PrimaryStoryBooks = lazy(() => import("./pages/PrimaryStoryBooks.tsx"));
 const PrimaryStoryBookRead = lazy(() => import("./pages/PrimaryStoryBookRead.tsx"));
+const PrimaryPhonicsUse = lazy(() => import("./pages/PrimaryPhonicsUse.tsx"));
 const StageTests = lazy(() => import("./pages/StageTests.tsx"));
 const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));

@@ -7844,6 +7844,27 @@ export type Database = {
         }
         Returns: boolean
       }
+      init_cohort_with_self_rate: {
+        Args: { p_seeds: Json; p_theme_tag?: string; p_word_ids: string[] }
+        Returns: {
+          cohort_word_ids: string[]
+          created_at: string
+          graduated_at: string | null
+          id: string
+          last_active_at: string
+          sequence_no: number
+          started_at: string
+          status: Database["public"]["Enums"]["cohort_status"]
+          theme_tag: string | null
+          user_id: string
+        }
+        SetofOptions: {
+          from: "*"
+          to: "gaokao_user_active_cohort"
+          isOneToOne: true
+          isSetofReturn: false
+        }
+      }
       is_current_user_minor: { Args: never; Returns: boolean }
       is_username_clean: { Args: { _name: string }; Returns: boolean }
       leaderboard_pets_week: {
@@ -8011,6 +8032,7 @@ export type Database = {
           p_correct: boolean
           p_kind: string
           p_mastery: Json
+          p_source: string
           p_vocab_id: string
         }
         Returns: Json

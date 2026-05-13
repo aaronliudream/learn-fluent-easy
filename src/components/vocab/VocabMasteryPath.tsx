@@ -241,7 +241,7 @@ export default function VocabMasteryPath({
             </h2>
             <p className="mt-0.5 text-xs text-muted-foreground">
               {cohortMode ? (
-                <T>本批 {effectiveTotal} 词 · 形 → 义 → 用 → FSRS 复习达 80% 即毕业</T>
+                <><T>本批</T> {effectiveTotal} <T>词 · 形 → 义 → 用 → FSRS 复习达 80% 即毕业</T></>
               ) : (
                 <T>按 形 → 义 → 用 三维评分 · 21 天后再对一次才升 👑 大师</T>
               )}

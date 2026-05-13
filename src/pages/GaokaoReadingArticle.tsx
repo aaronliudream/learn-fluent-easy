@@ -807,14 +807,12 @@ export default function GaokaoReadingArticle() {
           </div>
         </div>
 
-        <Button
-          size="lg"
-          className="w-full h-12 gap-2"
+        <button
+          className="exam-btn exam-btn-primary w-full h-12"
           onClick={() => setStage("review")}>
-          
           <Eye className="size-4" />
           <T>开始精读复盘 (查看答案 + 解析 + 文章分析)</T>
-        </Button>
+        </button>
 
         <button
           onClick={() => navigate("/gaokao/reading")}

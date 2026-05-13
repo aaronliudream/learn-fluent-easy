@@ -29,6 +29,7 @@ import NextStepHint from "@/components/vocab/NextStepHint";
 import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import CohortDictationSession from "@/components/vocab/CohortDictationSession";
+import { useActiveCohort } from "@/hooks/useActiveCohort";
 import ReviewPool from "@/components/vocab/ReviewPool";
 import { fetchDueReviewIds } from "@/lib/vocabMastery";
 import { Rocket } from "lucide-react";

@@ -14,6 +14,7 @@ import ReadingWatermark from "@/components/ReadingWatermark";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
 
 type Q = {q: string;options: string[];answer: string;explanation?: string;};
 type R = {id: string;title: string;body: string;word_count: number | null;grade: number;questions: Q[];vocab_notes: {word: string;cn: string;}[];};
@@ -201,141 +202,172 @@ export default function JuniorReadingPlay() {
     nav(`/junior/reading/${nextItem.id}`);
   };
 
-  const passage =
-  <div className="relative">
+  const passage = (
+    <div className="relative">
       <ReadingWatermark text={`${email} · ${new Date().toLocaleString()}`} />
-      <article className="relative rounded-2xl border bg-card p-5">
-        <div className="text-[15px] leading-8 font-serif whitespace-pre-wrap">{r.body}</div>
+      <article className="exam-card p-6 sm:p-8 relative">
+        <div className="exam-eyebrow mb-2"><T>Passage 阅读材料</T></div>
+        <div className="exam-passage-title">{r.title}</div>
+        <div className="exam-passage whitespace-pre-wrap">{r.body}</div>
       </article>
-      {r.vocab_notes?.length > 0 &&
-    <div className="mt-4 rounded-xl bg-muted/40 p-3">
-          <div className="text-[11px] font-extrabold text-muted-foreground"><T>📚 词汇</T></div>
-          <div className="mt-1 flex flex-wrap gap-2 text-xs">
-            {r.vocab_notes.map((v, i) => <span key={i} className="rounded-full bg-card px-2 py-0.5 border">{v.word} · {v.cn}</span>)}
+      {r.vocab_notes?.length > 0 && (
+        <div className="mt-4 exam-card p-4">
+          <div className="exam-eyebrow mb-2"><T>Vocabulary 词汇</T></div>
+          <div className="flex flex-wrap gap-2">
+            {r.vocab_notes.map((v, i) => (
+              <span key={i} className="exam-vocab-chip">
+                <strong className="exam-display-italic" style={{ color: "hsl(var(--exam-ink))" }}>{v.word}</strong>
+                <span className="exam-mute">·</span>
+                <span>{v.cn}</span>
+              </span>
+            ))}
           </div>
         </div>
-    }
-    </div>;
+      )}
+    </div>
+  );
 
-
-  const qBlock =
-  <div className="space-y-4">
+  const qBlock = (
+    <div className="space-y-5">
       {r.questions.map((q, i) => {
-      const picked = picks[i];
-      return (
-        <section key={i} className="rounded-2xl border bg-card p-4">
-            <div className="text-sm font-bold">{i + 1}. {q.q}</div>
-            <div className="mt-3 grid gap-2">
-              {q.options.map((opt, oi) => {
-              const L = ["A", "B", "C", "D"][oi];
-              const isAns = picked && L === q.answer;
-              const isWrong = picked === L && L !== q.answer;
-              return (
-                <button key={L} disabled={!!picked} onClick={() => pick(i, L)}
-                className={cn("rounded-xl border-2 px-3 py-2 text-left text-sm transition",
-                !picked && "border-border hover:border-emerald-400",
-                isAns && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30",
-                isWrong && "border-rose-500 bg-rose-50 dark:bg-rose-950/30",
-                picked && !isAns && !isWrong && "opacity-60")}>
-                    <span className="mr-2 font-extrabold">{L}.</span>{opt}
-                  </button>);
-
-            })}
+        const picked = picks[i];
+        const isCorrect = picked === q.answer;
+        return (
+          <ExamCard key={i}>
+            <div className="mb-3 flex items-center gap-2 flex-wrap">
+              <span className="exam-q-num">No. {String(i + 1).padStart(2, "0")}</span>
+              <span className="exam-skill-tag"><T>阅读理解</T></span>
             </div>
-            {picked &&
-          <div className="mt-3 rounded-lg bg-muted/50 p-3 text-xs space-y-1">
-                <div><b><T>正确答案：</T></b>{q.answer}</div>
-                {q.explanation && <div>💡 {q.explanation}</div>}
+            <p className="exam-stem mb-4">{q.q}</p>
+            <div className="flex flex-col gap-2.5">
+              {q.options.map((opt, oi) => {
+                const L = ["A", "B", "C", "D"][oi] as "A" | "B" | "C" | "D";
+                let state: "idle" | "selected" | "correct" | "wrong" | "dim" = "idle";
+                if (picked) {
+                  if (L === q.answer) state = "correct";
+                  else if (picked === L) state = "wrong";
+                  else state = "dim";
+                }
+                return (
+                  <ExamOption
+                    key={L}
+                    letter={L}
+                    text={opt}
+                    state={state}
+                    disabled={!!picked}
+                    onClick={() => pick(i, L)}
+                  />
+                );
+              })}
+            </div>
+            {picked && (
+              <div className={cn("exam-feedback", isCorrect ? "exam-feedback-correct" : "exam-feedback-wrong")}>
+                <span className="exam-fb-label">{isCorrect ? "✓ Correct" : `✗ Answer: ${q.answer}`}</span>
+                {q.explanation && <div className="text-[13.5px] leading-relaxed exam-soft">{q.explanation}</div>}
               </div>
-          }
-          </section>);
-
-    })}
-    </div>;
-
+            )}
+          </ExamCard>
+        );
+      })}
+    </div>
+  );
 
   const unlocked = passed;
 
+  const progressStates = r.questions.map((q, i) => {
+    const p = picks[i];
+    if (!p) return "todo" as const;
+    return p === q.answer ? ("correct" as const) : ("wrong" as const);
+  });
+
   return (
-    <main className="mx-auto min-h-screen max-w-7xl px-5 py-6">
+    <ExamPaper>
       <NoCopyGuard />
-      <BackLink to="/junior/reading" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>返回</T></BackLink>
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <h1 className="text-grad-title text-2xl font-extrabold">{r.title}</h1>
-        <div className="flex items-center gap-2 text-[11px]">
-          <span className={cn("inline-flex items-center gap-1 rounded-full border px-2 py-1 font-bold tabular-nums",
-          timeOk ? "border-emerald-400 text-emerald-600" : "border-amber-400 text-amber-600")}>
-            <Clock className="size-3" /> {Math.min(elapsed, minSec)}/{minSec}s
-          </span>
-          {currentRow && <StarRating stars={currentRow.stars} size={14} />}
-          {attempt > 1 && <span className="rounded-full bg-orange-500/10 text-orange-600 px-2 py-1 font-bold"><T>第</T> {attempt} <T>次尝试</T></span>}
+      <ExamContainer max="7xl">
+        {/* Top bar */}
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3 pb-4 border-b exam-divider">
+          <BackLink to="/junior/reading" className="inline-flex items-center gap-1.5 text-[13px] exam-soft hover:exam-ink transition">
+            <ArrowLeft className="size-4" /> <T>返回</T>
+          </BackLink>
+          <div className="flex items-center gap-3">
+            <ExamProgress
+              states={progressStates}
+              label={`${progressStates.filter((s) => s !== "todo").length} / ${r.questions.length}`}
+            />
+            <span className={cn("exam-timer flex items-center gap-1", !timeOk && "text-[hsl(var(--exam-accent))]")}>
+              <Clock className="size-4" /> {Math.min(elapsed, minSec)}/{minSec}s
+            </span>
+            {currentRow && <StarRating stars={currentRow.stars} size={14} />}
+            {attempt > 1 && <span className="exam-skill-tag" style={{ background: "hsl(var(--exam-accent-soft))", color: "hsl(var(--exam-accent))" }}><T>第</T> {attempt} <T>次</T></span>}
+          </div>
         </div>
-      </div>
 
-      <div className="mt-4 grid gap-6 lg:grid-cols-2 lg:gap-8 lg:items-start">
-        <div className="lg:sticky lg:top-4 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-2">
-          <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground"><T>Passage 阅读材料</T></div>
-          {passage}
-        </div>
-        <div>
-          <div className="mb-2 text-[11px] font-extrabold uppercase tracking-wider text-muted-foreground"><T>📝 Questions 阅读理解</T></div>
-          {qBlock}
+        {/* Title */}
+        <header className="mb-8">
+          <div className="exam-eyebrow mb-2"><T>初中英语 · 阅读理解</T></div>
+          <h1 className="exam-display text-[clamp(26px,3.6vw,40px)] leading-[1.1]">{r.title}</h1>
+        </header>
 
-          {/* 提交 / 重做 / 下一篇 */}
-          <div className="mt-5 rounded-2xl border-2 border-dashed p-4">
+        <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:gap-10 items-start">
+          <div className="lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto exam-passage-scroll">
+            {passage}
+          </div>
+          <div>
+            {qBlock}
+
+            {/* 提交 / 重做 / 下一篇 */}
+            <div className="mt-6 exam-card p-5">
             {!submitted ?
             <button onClick={handleSubmit} disabled={!allAnswered}
-            className={cn("w-full rounded-xl px-5 py-3 text-sm font-extrabold transition",
-            allAnswered ? "bg-primary text-primary-foreground hover:opacity-90" : "bg-muted text-muted-foreground cursor-not-allowed")}>
+            className="exam-btn exam-btn-primary w-full">
                 <T>提交并判定解锁 (</T>{correctCount}/{r.questions.length})
               </button> :
 
             <div className="space-y-3">
-                <div className="text-sm font-bold">
+                <div className="exam-display text-[18px]">
                   <T>得分：</T>{correctCount}/{r.questions.length} <T>· 用时</T> {elapsed}s
                 </div>
                 {!timeOk ?
-              <div className="rounded-lg bg-amber-500/10 text-amber-700 p-3 text-sm">
+              <div className="exam-feedback" style={{ borderLeftColor: "hsl(var(--exam-gold))", background: "hsl(var(--exam-gold-soft))" }}>
                     <T>⏳ 阅读时长不足，请再认真读</T> {minSec - elapsed} <T>秒后再提交</T>
                   </div> :
               allCorrect ?
-              <div className="rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 p-3 text-sm font-bold">
+              <div className="exam-feedback exam-feedback-correct">
                     <T>🌟 完美掌握！星级 +1 · 已解锁下一篇</T>
                   </div> :
               passed ?
-              <div className="rounded-lg bg-sky-500/10 text-sky-700 p-3 text-sm">
+              <div className="exam-feedback" style={{ borderLeftColor: "hsl(var(--exam-gold))", background: "hsl(var(--exam-gold-soft))" }}>
                     <T>✅ 通过 (</T>{correctCount}/{r.questions.length}<T>)！已解锁下一篇 · 重做到 100% 可获得⭐</T>
                   </div> :
 
-              <div className="rounded-lg bg-rose-500/10 text-rose-600 p-3 text-sm">
+              <div className="exam-feedback exam-feedback-wrong">
                     <T>❌ 仅</T> {correctCount}/{r.questions.length}<T>，需 ≥</T>{Math.ceil(r.questions.length * PASS_PCT / 100)} <T>题正确才能解锁</T>
                   </div>
               }
                 <div className="flex gap-2">
                   {!allCorrect &&
-                <button onClick={retry} className="flex-1 inline-flex items-center justify-center gap-1 rounded-xl border-2 px-4 py-2.5 text-sm font-extrabold hover:bg-muted">
+                <button onClick={retry} className="exam-btn exam-btn-ghost flex-1">
                       <RotateCcw className="size-4" /> <T>重做本篇</T>
                     </button>
                 }
                   {nextItem &&
-                <button onClick={goNext} disabled={!unlocked}
-                className={cn("flex-1 inline-flex items-center justify-center gap-1 rounded-xl px-4 py-2.5 text-sm font-extrabold",
-                unlocked ? "bg-primary text-primary-foreground hover:opacity-90" : "bg-muted text-muted-foreground cursor-not-allowed")}>
+                <button onClick={goNext} disabled={!unlocked} className="exam-btn exam-btn-primary flex-1">
                       {unlocked ? <><T>下一篇</T> <ChevronRight className="size-4" /></> : <><Lock className="size-4" /> <T>解锁后进入下一篇</T></>}
                     </button>
                 }
                 </div>
               </div>
             }
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
-        <Link to="/junior/reading" className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>返回阅读列表</T></Link>
-        <Link to="/junior" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🏫 初中首页</T></Link>
-        <Link to="/pets" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🐾 宠物</T></Link>
-      </div>
-    </main>);
+        <div className="mt-10 pt-6 border-t exam-divider flex flex-wrap items-center justify-center gap-2">
+          <Link to="/junior/reading" className="exam-btn exam-btn-primary"><ArrowLeft className="size-4" /> <T>返回阅读列表</T></Link>
+          <Link to="/junior" className="exam-btn exam-btn-ghost"><T>初中首页</T></Link>
+          <Link to="/pets" className="exam-btn exam-btn-ghost"><T>宠物</T></Link>
+        </div>
+      </ExamContainer>
+    </ExamPaper>);
 
 }

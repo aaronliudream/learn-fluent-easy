@@ -105,7 +105,7 @@ export default function Me() {
             <AlertCircle className="size-5 text-rose-600" />
             <h2 className="text-base font-extrabold"><T>待巩固考点</T></h2>
             <span className="ml-auto text-[11px] text-muted-foreground">
-              <T>按掉档次数排序 · 共 {weakKps.length} 个</T>
+              <T>按掉档次数排序</T> · {weakKps.length}
             </span>
           </div>
           <div className="space-y-2">

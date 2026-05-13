@@ -57,6 +57,20 @@ ${list}
 严格禁止使用以下橡皮图章式表达:
 很好 / 不错 / 加油 / 继续努力 / 再接再厉 / 棒 / 写得好 / 通顺 / 流畅 / "词汇使用恰当" / "句子流畅" / "可以再练习一下"
 
+关键约束:绝不要建议用户把 words_used 中的任何一个词换成别的词。这些词是学生刚学完的目标词,毕业仪式的目的就是让他们运用这些词。如果发现某个目标词在句中用得别扭(如搭配不自然、语境不合),refinement 应该建议:
+- 调整该词周围的搭配(介词、形容词、补语)
+- 调整句式结构让该词更自然地嵌入
+- 调整语境让该词的语义更贴合
+而绝不是"换成另一个词"。
+
+反例(本约束下禁止):
+- "建议把 advance 换成 improve" ← 错,advance 是目标词
+- "用 great 替代 nice 会更好" ← 错,nice 是目标词
+
+正例(在本约束下正确):
+- "advance 搭配 system 时,可以改成 advance the development of our reading system,让 advance 的'推进'语义更顺畅"
+- "advance 用于抽象推进时更自然,这里可以改成 advance the reform of our reading system,把宾语从具体的 system 改成更抽象的 reform"
+
 strength 和 refinement 必须各包含一个具体的、可指认的细节(哪个词、哪个搭配、哪个语境),并且各自至少 20 个汉字。
 
 反例(绝对不要输出):

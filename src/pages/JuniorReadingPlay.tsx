@@ -160,6 +160,7 @@ export default function JuniorReadingPlay() {
     if (!r) return;
     if (!allAnswered) {toast.error("请先回答所有题目");return;}
     setSubmitted(true);
+    setPhase("diagnosis");
     const pct = Math.round(correctCount / r.questions.length * 100);
     if (timeOk) {
       // 写入完成 + 掌握度

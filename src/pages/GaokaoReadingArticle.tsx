@@ -643,11 +643,12 @@ export default function GaokaoReadingArticle() {
     if (pct < 75) feedback = { emoji: "👍", title: "有潜力", desc: "稳扎稳打，看看每题的解析。", color: "text-amber-600" };
 
     return (
-      <main className="mx-auto max-w-3xl px-5 py-8 min-h-screen">
+      <ExamPaper>
+        <ExamContainer max="3xl">
         <div className="text-center mb-6">
           <div className="text-6xl mb-2">{feedback.emoji}</div>
-          <h1 className={cn("text-2xl font-bold", feedback.color)}><T>{feedback.title}</T></h1>
-          <p className="text-sm text-muted-foreground mt-1"><T>{feedback.desc}</T></p>
+          <h1 className={cn("exam-display text-[36px]", feedback.color)}><T>{feedback.title}</T></h1>
+          <p className="exam-body-italic text-[15px] exam-mute mt-2"><T>{feedback.desc}</T></p>
           <div className="mt-3 flex justify-center">
             <ShareButton
               variant="cta"
@@ -817,11 +818,12 @@ export default function GaokaoReadingArticle() {
 
         <button
           onClick={() => navigate("/gaokao/reading")}
-          className="w-full mt-3 text-sm text-muted-foreground hover:text-foreground py-2">
+          className="w-full mt-3 text-sm exam-mute hover:text-[hsl(var(--exam-ink))] py-2">
           <T>先返回，稍后复盘</T>
         
         </button>
-      </main>);
+        </ExamContainer>
+      </ExamPaper>);
 
   }
 
@@ -846,15 +848,15 @@ function ReviewStage({
   const [tab, setTab] = useState<"questions" | "analysis" | "vocab">("questions");
 
   return (
-    <main className="min-h-screen pb-12">
-      <header className="sticky top-0 z-30 border-b bg-card/95 backdrop-blur">
+    <ExamPaper className="pb-12">
+      <header className="sticky top-0 z-30 border-b exam-divider" style={{ background: "hsl(var(--exam-paper) / 0.95)", backdropFilter: "blur(8px)" }}>
         <div className="mx-auto max-w-5xl px-4 py-3 flex items-center gap-3">
-          <Link to="/gaokao/reading" className="text-muted-foreground hover:text-foreground">
+          <Link to="/gaokao/reading" className="exam-soft hover:text-[hsl(var(--exam-ink))]">
             <ArrowLeft className="size-5" />
           </Link>
           <div className="flex-1 min-w-0">
-            <div className="text-xs text-muted-foreground"><T>📖 精读复盘</T></div>
-            <div className="text-sm font-semibold truncate"><T>{article.title}</T></div>
+            <div className="exam-eyebrow"><T>精读复盘 · Review</T></div>
+            <div className="exam-display text-[16px] truncate"><T>{article.title}</T></div>
           </div>
         </div>
         <div className="mx-auto max-w-5xl px-4 flex gap-1 -mb-px overflow-x-auto">
@@ -872,8 +874,8 @@ function ReviewStage({
                 className={cn(
                   "px-4 py-2.5 text-sm font-medium border-b-2 inline-flex items-center gap-1.5 transition shrink-0",
                   active ?
-                  "border-primary text-primary" :
-                  "border-transparent text-muted-foreground hover:text-foreground"
+                  "border-[hsl(var(--exam-ink))] text-[hsl(var(--exam-ink))] exam-display" :
+                  "border-transparent exam-mute hover:text-[hsl(var(--exam-ink))]"
                 )}>
                 
                 <Icon className="size-3.5" />
@@ -1063,7 +1065,7 @@ function ReviewStage({
           </div>
         }
       </div>
-    </main>);
+    </ExamPaper>);
 
 }
 

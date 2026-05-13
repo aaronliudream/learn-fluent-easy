@@ -292,11 +292,10 @@ export default function PrimaryAdventure() {
         </div>
       </div>
 
-      {/* G3-G6 占位 */}
+      {/* G3-G6 教材同步提示 */}
       {grade > 2 &&
-      <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-200">
-          <span><T>✨ 这个年级的完整内容正在准备中。你可以先在一年级和 Spark 一起冒险!</T></span>
-          <Link to="/primary/adventure/1" className="font-bold underline"><T>返回一年级 →</T></Link>
+      <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-sky-200 bg-sky-50 p-3 text-sm text-sky-800 dark:border-sky-800 dark:bg-sky-950/40 dark:text-sky-200">
+          <span><T>📚 教材同步模式：对应人教/外研社版主线内容，Spark 带你一课一课过。</T></span>
         </div>
       }
 

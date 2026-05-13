@@ -237,8 +237,6 @@ export default function GaokaoReadingArticle() {
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [fontScale, setFontScale] = useState(1);
   const [userEmail, setUserEmail] = useState<string>("user");
-  const [minReadSec, setMinReadSec] = useState<number>(60);
-  const [readSecLeft, setReadSecLeft] = useState<number>(60);
   // 累计掌握度: 按 question_type 聚合该用户历史正确率
   const [typeMastery, setTypeMastery] = useState<Record<string, number>>({});
   // ④ 对话阶段的预填问题（从错题"和 AI 详谈"按钮带入）
@@ -249,20 +247,6 @@ export default function GaokaoReadingArticle() {
       if (data?.user) setUserEmail(data.user.email ?? data.user.id.slice(0, 8));
     });
   }, []);
-
-  useEffect(() => {
-    if (!article) return;
-    // 最短阅读时长：单词数 / 3.3 词每秒（≈200词/分钟），最少60秒
-    const m = Math.max(60, Math.round(article.word_count / 3.3));
-    setMinReadSec(m);
-    setReadSecLeft(m);
-  }, [article]);
-
-  useEffect(() => {
-    if (stage !== "test") return;
-    const t = setInterval(() => setReadSecLeft((s) => Math.max(0, s - 1)), 1000);
-    return () => clearInterval(t);
-  }, [stage]);
 
   // 进入诊断阶段时，加载该用户每个考点 (question_type) 的累计掌握度
   useEffect(() => {
@@ -361,10 +345,6 @@ export default function GaokaoReadingArticle() {
     if (!article) return;
     if (answeredCount < totalQ) {
       toast.warning(timeUp ? "时间到，请补完所有题目后再查看答案和解析" : "请先完成所有题目，再查看答案和解析");
-      return;
-    }
-    if (!timeUp && readSecLeft > 0) {
-      toast.warning(`请认真阅读，还需 ${readSecLeft} 秒才能交卷`);
       return;
     }
 
@@ -489,12 +469,6 @@ export default function GaokaoReadingArticle() {
             <div className="flex-1 min-w-0">
               <div className="exam-eyebrow">{article.sub_band} · {article.genre_label}</div>
               <div className="exam-display text-[16px] truncate"><T>{article.title}</T></div>
-            </div>
-            <div className={cn(
-              "hidden sm:flex items-center gap-1 rounded px-2 py-1 text-[11px] font-bold tabular-nums border",
-              readSecLeft > 0 ? "border-[hsl(var(--exam-gold))] text-[hsl(var(--exam-gold))]" : "border-[hsl(var(--exam-green))] text-[hsl(var(--exam-green))]"
-            )} title="最短阅读时长">
-              📖 {readSecLeft > 0 ? `${readSecLeft}s` : "可交卷"}
             </div>
             <div className={cn("flex items-center gap-1.5 px-3 py-1 exam-timer", lowTime && "animate-pulse")} style={lowTime ? { color: "hsl(var(--exam-accent))" } : undefined}>
               <Clock className="size-4" />

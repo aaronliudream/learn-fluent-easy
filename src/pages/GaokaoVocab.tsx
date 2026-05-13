@@ -28,6 +28,7 @@ import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import NextStepHint from "@/components/vocab/NextStepHint";
 import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
 import GuidedSession from "@/components/vocab/GuidedSession";
+import CohortDictationSession from "@/components/vocab/CohortDictationSession";
 import ReviewPool from "@/components/vocab/ReviewPool";
 import { fetchDueReviewIds } from "@/lib/vocabMastery";
 import { Rocket } from "lucide-react";
@@ -383,6 +384,15 @@ export default function GaokaoVocab() {
 
   if (mode === "dict") {
     return <DictationSession pool={allVocab} onExit={() => setParams({})} />;
+  }
+
+  if (mode === "cohort_dict") {
+    return (
+      <CohortDictRoute
+        allVocab={allVocab}
+        onExit={() => setParams({})}
+      />
+    );
   }
 
   if (mode === "dash") {

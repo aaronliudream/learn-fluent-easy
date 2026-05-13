@@ -3,6 +3,16 @@ import { Loader2, Check, Sparkles, AlertTriangle } from "lucide-react";
 import { useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { useInvalidateCohortRelated } from "@/hooks/useActiveCohort";
@@ -30,7 +40,12 @@ interface GradeResponse {
   graduated: true;
 }
 
-type Phase = "compose" | "grading" | "result" | "skipping";
+type Phase = "compose" | "grading" | "result" | "skipping" | "grade_error";
+
+interface GradeError {
+  status: number;
+  message: string;
+}
 
 interface Props {
   cohortId: string;
@@ -56,6 +71,8 @@ export default function EssayCeremonyModal({
   const [sentence, setSentence] = useState("");
   const [phase, setPhase] = useState<Phase>("compose");
   const [result, setResult] = useState<GradeResponse | null>(null);
+  const [gradeError, setGradeError] = useState<GradeError | null>(null);
+  const [confirmSkipOpen, setConfirmSkipOpen] = useState(false);
 
   useEffect(() => {
     let alive = true;
@@ -92,8 +109,9 @@ export default function EssayCeremonyModal({
   };
 
   const submit = async () => {
-    if (!canSubmit) return;
+    if (!canSubmit && phase !== "grade_error") return;
     setPhase("grading");
+    setGradeError(null);
     try {
       const { data, error } = await supabase.functions.invoke<GradeResponse | { error: string }>(
         "grade-cohort-essay",
@@ -105,45 +123,65 @@ export default function EssayCeremonyModal({
           },
         },
       );
-      if (error) throw error;
+      if (error) {
+        // FunctionsHttpError carries the underlying Response on `context`.
+        const ctx = (error as { context?: Response }).context;
+        const status = ctx?.status ?? 0;
+        const rawMsg = (error as Error).message ?? "grading_failed";
+        handleGradeFailure(status, rawMsg);
+        return;
+      }
       if (!data || (data as { error?: string }).error) {
-        throw new Error((data as { error?: string })?.error ?? "grading_failed");
+        handleGradeFailure(500, (data as { error?: string })?.error ?? "grading_failed");
+        return;
       }
       setResult(data as GradeResponse);
       setPhase("result");
       await invalidate(undefined);
     } catch (e) {
-      toast.error("批改失败:" + (e instanceof Error ? e.message : "未知错误"));
-      setPhase("compose");
+      handleGradeFailure(0, e instanceof Error ? e.message : "unknown");
     }
   };
 
-  const skip = () => {
-    toast("跳过后无法回头补做,确认吗?", {
-      action: {
-        label: "确认跳过",
-        onClick: async () => {
-          setPhase("skipping");
-          const { error } = await supabase.rpc("graduate_cohort_without_essay", {
-            p_cohort_id: cohortId,
-          });
-          if (error) {
-            toast.error("跳过失败:" + error.message);
-            setPhase("compose");
-            return;
-          }
-          await invalidate(undefined);
-          await qc.invalidateQueries({ queryKey: ["cohort", "active", "self"] });
-          await qc.invalidateQueries({ queryKey: ["cohort", "list", "self"] });
-          toast.success(`第 ${sequenceNo} 批已毕业`);
-          onStartNext();
-        },
-      },
-      duration: 6000,
+  const handleGradeFailure = (status: number, message: string) => {
+    let toastMsg: string;
+    if (status === 401 || status === 403) {
+      toastMsg = "登录状态异常,请刷新页面";
+    } else if (status === 502) {
+      toastMsg = "AI 评分服务繁忙,可以重试或选择跳过仪式直接毕业";
+    } else if (status === 500) {
+      toastMsg = "保存失败,请重试";
+    } else {
+      toastMsg = "未知错误,请截图反馈";
+    }
+    toast.error(toastMsg);
+    setGradeError({ status, message });
+    setPhase("grade_error");
+  };
+
+  const askSkip = () => setConfirmSkipOpen(true);
+
+  const confirmSkip = async () => {
+    setConfirmSkipOpen(false);
+    setPhase("skipping");
+    const { error } = await supabase.rpc("graduate_cohort_without_essay", {
+      p_cohort_id: cohortId,
     });
+    if (error) {
+      toast.error("跳过失败:" + error.message);
+      setPhase("compose");
+      return;
+    }
+    await invalidate(undefined);
+    await qc.invalidateQueries({ queryKey: ["cohort", "active", "self"] });
+    await qc.invalidateQueries({ queryKey: ["cohort", "list", "self"] });
+    toast.success(`第 ${sequenceNo} 批已毕业`);
+    onClose();
+    onStartNext();
   };
 
   return (
+    <>
     <Dialog open onOpenChange={(o) => !o && phase !== "grading" && phase !== "skipping" && onClose()}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         {phase !== "result" ? (
@@ -159,7 +197,8 @@ export default function EssayCeremonyModal({
             phase={phase}
             canSubmit={canSubmit}
             onSubmit={submit}
-            onSkip={skip}
+            onSkip={askSkip}
+            gradeError={gradeError}
           />
         ) : (
           <ResultView
@@ -175,6 +214,21 @@ export default function EssayCeremonyModal({
         )}
       </DialogContent>
     </Dialog>
+    <AlertDialog open={confirmSkipOpen} onOpenChange={setConfirmSkipOpen}>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>确定跳过毕业仪式?</AlertDialogTitle>
+          <AlertDialogDescription>
+            跳过后第 {sequenceNo} 批将被标记为未完成造句,且无法补做。
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>取消</AlertDialogCancel>
+          <AlertDialogAction onClick={confirmSkip}>确认跳过</AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+    </>
   );
 }
 
@@ -182,7 +236,7 @@ export default function EssayCeremonyModal({
 
 function ComposeView({
   sequenceNo, vocab, loadingVocab, picked, togglePick,
-  sentence, setSentence, len, phase, canSubmit, onSubmit, onSkip,
+  sentence, setSentence, len, phase, canSubmit, onSubmit, onSkip, gradeError,
 }: {
   sequenceNo: number;
   vocab: VocabRow[];
@@ -196,9 +250,12 @@ function ComposeView({
   canSubmit: boolean;
   onSubmit: () => void;
   onSkip: () => void;
+  gradeError: GradeError | null;
 }) {
   const grading = phase === "grading";
   const skipping = phase === "skipping";
+  const errored = phase === "grade_error" && gradeError !== null;
+  const canRetry = errored && (gradeError!.status === 502 || gradeError!.status === 500);
 
   return (
     <>
@@ -286,6 +343,15 @@ function ComposeView({
             老师在认真看你的句子...
           </div>
         )}
+        {errored && (
+          <div className="rounded-lg border-2 border-destructive/40 bg-destructive/10 p-3 text-sm text-destructive">
+            <div className="flex items-center gap-1.5 font-semibold">
+              <AlertTriangle className="size-4" />
+              评分失败({gradeError!.status || "?"})
+            </div>
+            <div className="mt-0.5 text-xs opacity-80 break-all">{gradeError!.message}</div>
+          </div>
+        )}
 
         <div className="flex flex-col-reverse sm:flex-row gap-2 sm:justify-between pt-2">
           <button
@@ -304,14 +370,14 @@ function ComposeView({
           <button
             type="button"
             onClick={onSubmit}
-            disabled={!canSubmit || grading || skipping}
+            disabled={(!canSubmit && !canRetry) || grading || skipping}
             className={cn(
               "inline-flex items-center justify-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground",
               "hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed",
             )}
           >
             {grading && <Loader2 className="size-4 animate-spin" />}
-            提交并毕业
+            {canRetry ? "重试" : "提交并毕业"}
           </button>
         </div>
       </div>
@@ -330,6 +396,13 @@ function ResultView({
   onHome: () => void;
 }) {
   const dots = useMemo(() => [1, 2, 3, 4, 5], []);
+  const score = result.score;
+  const tone =
+    score <= 2
+      ? { fill: "bg-red-400", border: "border-red-500" }
+      : score === 3
+        ? { fill: "bg-amber-400", border: "border-amber-500" }
+        : { fill: "bg-emerald-400", border: "border-emerald-500" };
   return (
     <>
       <DialogHeader>
@@ -349,14 +422,14 @@ function ResultView({
               key={d}
               className={cn(
                 "size-7 rounded-full border-2 transition-colors",
-                d <= result.score
-                  ? "bg-amber-400 border-amber-500"
+                d <= score
+                  ? cn(tone.fill, tone.border)
                   : "bg-transparent border-muted-foreground/30",
               )}
-              aria-label={d <= result.score ? "得分点" : "未得分"}
+              aria-label={d <= score ? "得分点" : "未得分"}
             />
           ))}
-          <span className="ml-2 text-2xl font-extrabold">{result.score}<span className="text-sm font-normal text-muted-foreground">/5</span></span>
+          <span className="ml-2 text-2xl font-extrabold">{score}<span className="text-sm font-normal text-muted-foreground">/5</span></span>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-3">

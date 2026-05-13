@@ -423,35 +423,33 @@ export default function GaokaoReadingArticle() {
     const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
     const ss = String(secondsLeft % 60).padStart(2, "0");
     const lowTime = secondsLeft < 60;
+    const progressStates = questions.map((q) => answers[q.id] ? ("answered" as const) : ("todo" as const));
 
     return (
-      <main className="min-h-screen bg-muted/30 pb-32">
+      <ExamPaper className="pb-32">
         <NoCopyGuard />
         {/* Sticky top bar */}
-        <header className="sticky top-0 z-30 border-b bg-card/95 backdrop-blur">
+        <header className="sticky top-0 z-30 border-b exam-divider" style={{ background: "hsl(var(--exam-paper) / 0.95)", backdropFilter: "blur(8px)" }}>
           <div className="mx-auto max-w-7xl px-4 py-3 flex items-center gap-3">
-            <Link to="/gaokao/reading" className="text-muted-foreground hover:text-foreground">
+            <Link to="/gaokao/reading" className="exam-soft hover:text-[hsl(var(--exam-ink))]">
               <ArrowLeft className="size-5" />
             </Link>
             <div className="flex-1 min-w-0">
-              <div className="text-xs text-muted-foreground">{article.sub_band} · {article.genre_label}</div>
-              <div className="text-sm font-semibold truncate"><T>{article.title}</T></div>
+              <div className="exam-eyebrow">{article.sub_band} · {article.genre_label}</div>
+              <div className="exam-display text-[16px] truncate"><T>{article.title}</T></div>
             </div>
             <div className={cn(
-              "hidden sm:flex items-center gap-1 rounded-md border px-2 py-1 text-[11px] font-bold tabular-nums",
-              readSecLeft > 0 ? "border-amber-400 text-amber-600" : "border-emerald-400 text-emerald-600"
+              "hidden sm:flex items-center gap-1 rounded px-2 py-1 text-[11px] font-bold tabular-nums border",
+              readSecLeft > 0 ? "border-[hsl(var(--exam-gold))] text-[hsl(var(--exam-gold))]" : "border-[hsl(var(--exam-green))] text-[hsl(var(--exam-green))]"
             )} title="最短阅读时长">
               📖 {readSecLeft > 0 ? `${readSecLeft}s` : "可交卷"}
             </div>
-            <div className={cn(
-              "flex items-center gap-1.5 rounded-lg px-3 py-1.5 font-mono font-bold tabular-nums text-sm",
-              lowTime ? "bg-rose-500/15 text-rose-600 animate-pulse" : "bg-primary/10 text-primary"
-            )}>
+            <div className={cn("flex items-center gap-1.5 px-3 py-1 exam-timer", lowTime && "animate-pulse")} style={lowTime ? { color: "hsl(var(--exam-accent))" } : undefined}>
               <Clock className="size-4" />
               {mm}:{ss}
             </div>
-            <div className="hidden sm:flex items-center gap-1 text-xs text-muted-foreground">
-              <span className="font-semibold text-foreground">{answeredCount}</span>/{totalQ}
+            <div className="hidden sm:flex">
+              <ExamProgress states={progressStates} label={`${answeredCount}/${totalQ}`} />
             </div>
             <ShareButton
               variant="icon"
@@ -463,47 +461,45 @@ export default function GaokaoReadingArticle() {
                 url: typeof window !== "undefined" ? window.location.href : ""
               }} />
             
-            <Button size="sm" onClick={() => handleSubmit(false)} className="gap-1.5">
+            <button onClick={() => handleSubmit(false)} className="exam-btn exam-btn-primary !py-2 !px-4 !text-[13px]">
               <Send className="size-3.5" /> <T>交卷</T>
-            </Button>
+            </button>
           </div>
           {/* progress bar */}
-          <div className="h-1 bg-muted">
+          <div className="h-[3px]" style={{ background: "hsl(var(--exam-rule))" }}>
             <div
-              className="h-full bg-primary transition-all duration-300"
-              style={{ width: `${answeredCount / Math.max(totalQ, 1) * 100}%` }} />
-            
+              className="h-full transition-all duration-300"
+              style={{ width: `${answeredCount / Math.max(totalQ, 1) * 100}%`, background: "hsl(var(--exam-ink))" }} />
           </div>
         </header>
 
         {/* Questions only */}
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 py-6 lg:grid-cols-[1.1fr_1fr]">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 py-8 lg:grid-cols-[1.3fr_1fr]">
           {/* 文章 — 左侧 (移动端在上方) */}
-          <article className="relative rounded-2xl border bg-card p-5 lg:p-7 lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto">
+          <article className="relative exam-card p-6 sm:p-9 lg:sticky lg:top-24 lg:self-start lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto exam-passage-scroll">
             <ReadingWatermark text={`${userEmail} · ${new Date().toLocaleDateString()}`} />
-            <div className="mb-3 flex items-center justify-between border-b pb-2">
-              <div className="text-xs text-muted-foreground">
+            <div className="mb-3 flex items-center justify-between border-b exam-divider pb-2">
+              <div className="exam-eyebrow">
                 {article.word_count} <T>词 ·</T> {article.sub_band} · {article.genre_label}
               </div>
               <div className="flex items-center gap-1">
                 <button
                   onClick={() => setFontScale((s) => Math.max(0.85, s - 0.1))}
-                  className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted">
+                  className="size-7 rounded border exam-divider exam-soft text-xs font-bold hover:bg-[hsl(var(--exam-paper-soft))]">
                   A-</button>
                 <button
                   onClick={() => setFontScale((s) => Math.min(1.4, s + 0.1))}
-                  className="size-7 rounded-md border bg-background text-xs font-bold hover:bg-muted">
+                  className="size-7 rounded border exam-divider exam-soft text-xs font-bold hover:bg-[hsl(var(--exam-paper-soft))]">
                   A+</button>
               </div>
             </div>
-            <h1 className="mb-3 text-lg font-bold leading-snug"><T>{article.title}</T></h1>
+            <h1 className="exam-passage-title"><T>{article.title}</T></h1>
             <div
-              className="prose prose-slate max-w-none space-y-3 leading-[1.85] text-foreground select-text"
-              style={{ fontSize: `${fontScale}rem` }}>
-              
+              className="exam-passage select-text"
+              style={{ fontSize: `${fontScale * 15.5}px` }}>
               {displayBody.split("\n\n").map((p, i) =>
               <p key={i} className="text-justify">
-                  <span className="mr-2 font-mono text-xs text-muted-foreground/40 select-none">{i + 1}</span>
+                  <span className="exam-para-num">{i + 1}</span>
                   {p}
                 </p>
               )}
@@ -511,63 +507,47 @@ export default function GaokaoReadingArticle() {
           </article>
 
           {/* 题目 — 右侧 */}
-          <section className="space-y-4">
-            <div className="rounded-xl border bg-primary/5 border-primary/20 p-3 flex gap-2 text-xs text-primary">
-              <Target className="size-4 shrink-0 mt-0.5" />
+          <section className="space-y-5">
+            <div className="exam-card p-4 flex gap-2 text-xs" style={{ background: "hsl(var(--exam-gold-soft))", borderColor: "hsl(var(--exam-gold) / 0.3)" }}>
+              <Target className="size-4 shrink-0 mt-0.5" style={{ color: "hsl(var(--exam-gold))" }} />
               <div>
-                <div className="font-semibold"><T>边读边答</T></div>
-                <div className="opacity-80 mt-0.5"><T>读完文章作答，全部完成并交卷后才会显示正确答案与解析。</T></div>
+                <div className="exam-display text-[14px]" style={{ color: "hsl(var(--exam-gold))" }}><T>边读边答</T></div>
+                <div className="exam-mute mt-0.5"><T>读完文章作答，全部完成并交卷后才会显示正确答案与解析。</T></div>
               </div>
             </div>
 
             {questions.map((q, idx) =>
-            <div key={q.id} className="rounded-2xl border bg-card p-5 shadow-sm">
-                <div className="flex items-start gap-2 mb-3">
-                  <span className="grid size-7 shrink-0 place-items-center rounded-lg bg-primary text-primary-foreground text-sm font-bold">
-                    {idx + 1}
-                  </span>
-                  <div className="flex-1">
-                    <p className="text-sm leading-snug font-medium">{q.stem}</p>
-                  </div>
+            <ExamCard key={q.id}>
+                <div className="mb-3 flex items-center gap-2 flex-wrap">
+                  <span className="exam-q-num">No. {String(idx + 1).padStart(2, "0")}</span>
+                  {q.question_type_cn && <span className="exam-skill-tag">{q.question_type_cn}</span>}
                 </div>
+                <p className="exam-stem mb-4">{q.stem}</p>
 
-                <div className="space-y-1.5">
+                <div className="flex flex-col gap-2.5">
                   {(["A", "B", "C", "D"] as const).map((opt) => {
                   const text = q[`option_${opt.toLowerCase()}` as "option_a"];
                   const selected = answers[q.id] === opt;
                   return (
-                    <button
+                    <ExamOption
                       key={opt}
+                      letter={opt}
+                      text={text}
+                      state={selected ? "selected" : "idle"}
                       onClick={() => {
                         setAnswers((prev) => ({ ...prev, [q.id]: opt }));
-                        // 标记阅读阶段结束于首次答题
                         if (readingEndAt === null) setReadingEndAt(Date.now());
                       }}
-                      className={cn(
-                        "w-full flex gap-3 items-start rounded-xl border p-3 text-left text-sm transition",
-                        selected ?
-                        "border-primary bg-primary/5 ring-2 ring-primary/20" :
-                        "border-border hover:border-primary/40 hover:bg-muted/40"
-                      )}>
-                      
-                        <span className={cn(
-                        "grid size-6 shrink-0 place-items-center rounded-md text-xs font-bold",
-                        selected ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
-                      )}>
-                          {opt}
-                        </span>
-                        <span className="flex-1 leading-snug">{text}</span>
-                      </button>);
-
+                    />);
                 })}
                 </div>
 
                 {/* 信心度评分 — 元认知训练 (PISA 金标准) */}
                 {answers[q.id] &&
-              <div className="mt-3 pt-3 border-t border-dashed">
+              <div className="mt-4 pt-3 border-t exam-divider">
                     <div className="flex items-center gap-2 mb-2">
-                      <Brain className="size-3.5 text-violet-500" />
-                      <span className="text-xs font-medium text-muted-foreground">
+                      <Brain className="size-3.5" style={{ color: "hsl(var(--exam-gold))" }} />
+                      <span className="exam-eyebrow">
                         <T>你对这个答案的把握？</T>
                       </span>
                     </div>
@@ -585,14 +565,14 @@ export default function GaokaoReadingArticle() {
                         setConfidences((p) => ({ ...p, [q.id]: v }))
                         }
                         className={cn(
-                          "flex items-center justify-center gap-1 rounded-lg border px-2 py-1.5 text-xs font-medium transition",
+                          "flex items-center justify-center gap-1 rounded border px-2 py-1.5 text-xs font-medium transition exam-ui",
                           active ?
                           color === "rose" ?
-                          "bg-rose-500/15 border-rose-500/40 text-rose-600" :
+                          "border-[hsl(var(--exam-accent))] bg-[hsl(var(--exam-accent-soft))] text-[hsl(var(--exam-accent))]" :
                           color === "amber" ?
-                          "bg-amber-500/15 border-amber-500/40 text-amber-600" :
-                          "bg-emerald-500/15 border-emerald-500/40 text-emerald-600" :
-                          "border-border text-muted-foreground hover:border-primary/30"
+                          "border-[hsl(var(--exam-gold))] bg-[hsl(var(--exam-gold-soft))] text-[hsl(var(--exam-gold))]" :
+                          "border-[hsl(var(--exam-green))] bg-[hsl(var(--exam-green-soft))] text-[hsl(var(--exam-green))]" :
+                          "exam-divider exam-mute hover:border-[hsl(var(--exam-ink))]"
                         )}>
                         
                             <Icon className="size-3" />
@@ -603,20 +583,18 @@ export default function GaokaoReadingArticle() {
                     </div>
                   </div>
               }
-              </div>
+              </ExamCard>
             )}
 
-            <Button
-              size="lg"
+            <button
               onClick={() => handleSubmit(false)}
-              className="w-full gap-2 h-12">
-              
+              className="exam-btn exam-btn-primary w-full h-12">
               <Send className="size-4" />
               <T>提交并查看成绩 (</T>{answeredCount}/{totalQ})
-            </Button>
+            </button>
           </section>
         </div>
-      </main>);
+      </ExamPaper>);
 
   }
 

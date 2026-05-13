@@ -9,6 +9,7 @@ import {
   type MasteryMatrix,
   type QuizKind,
 } from "@/lib/masteryScore";
+import { MASTERY_STEP_KINDS } from "@/lib/vocabMastery";
 import { useActiveCohort } from "@/hooks/useActiveCohort";
 import { fetchCohortProgress } from "@/lib/cohortProgress";
 import CohortIntakeModal from "./CohortIntakeModal";
@@ -32,16 +33,16 @@ const TOTAL_BATCHES = 350;
 export type Stage = "junior" | "gaokao";
 
 const STEPS = [
-  { key: "browse",  label: "认词", emoji: "📖", desc: "看一遍 + 听发音",          kinds: [] as QuizKind[],                              family: "intro" as const },
-  { key: "form",    label: "形",   emoji: "🔊", desc: "听辨 + 拼写",              kinds: ["listen", "spell"] as QuizKind[],             family: "form" as const },
-  { key: "meaning", label: "义",   emoji: "🎯", desc: "中英互选 · 同义辨析",      kinds: ["en2cn", "cn2en", "en2en", "en2word", "syn"] as QuizKind[], family: "meaning" as const },
-  { key: "use",     label: "用",   emoji: "✍️", desc: "完形 · 词性",              kinds: ["cloze", "pos"] as QuizKind[],                family: "use" as const },
-  { key: "master",  label: "大师", emoji: "👑", desc: "FSRS 复习达标",            kinds: [] as QuizKind[],                              family: "retention" as const },
+  { key: "browse",  label: "认词", emoji: "📖", desc: "看一遍 + 听发音",          kinds: MASTERY_STEP_KINDS.browse,  family: "intro" as const },
+  { key: "form",    label: "形",   emoji: "🔊", desc: "听辨 + 拼写",              kinds: MASTERY_STEP_KINDS.form,    family: "form" as const },
+  { key: "meaning", label: "义",   emoji: "🎯", desc: "中英互选 · 同义辨析",      kinds: MASTERY_STEP_KINDS.meaning, family: "meaning" as const },
+  { key: "use",     label: "用",   emoji: "✍️", desc: "完形 · 词性",              kinds: MASTERY_STEP_KINDS.use,     family: "use" as const },
+  { key: "master",  label: "大师", emoji: "👑", desc: "FSRS 复习达标",            kinds: MASTERY_STEP_KINDS.master,  family: "retention" as const },
 ];
 
 const RECOMMEND_MODE: Record<string, { mode: string; label: string }> = {
   browse:  { mode: "",        label: "去看清单" },
-  form:    { mode: "dict",    label: "去听写挑战" },
+  form:    { mode: "cohort_dict", label: "去单词听写" },
   meaning: { mode: "classic", label: "去智能选义" },
   use:     { mode: "quest",   label: "去单词任务" },
   master:  { mode: "srs",     label: "去今日复习" },

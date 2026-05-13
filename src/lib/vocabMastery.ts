@@ -30,6 +30,31 @@ export const STEP_KIND: Record<1 | 2 | 3 | 4, QuizKind> = {
   4: "cloze",
 };
 
+/**
+ * Authoritative 5-step → QuizKind[] table for the cohort Mastery Path UI.
+ *
+ * This is the canonical mapping that the 5-step progress bar reads (see
+ * `VocabMasteryPath.STAGES`). Per-word progression inside `GuidedSession`
+ * still uses `STEP_KIND` above — the two are intentionally different
+ * structures (per-word ladder vs cohort-step rollup).
+ *
+ *   ① browse  : 看一眼,无量化 kinds
+ *   ② form    : 听辨 + 拼写
+ *   ③ meaning : 中英互选 + 同义辨析
+ *   ④ use     : 完形 + 词性
+ *   ⑤ master  : FSRS 复习达标(由 fsrs_review 事件统计)
+ */
+export const MASTERY_STEP_KINDS: Record<
+  "browse" | "form" | "meaning" | "use" | "master",
+  QuizKind[]
+> = {
+  browse: [],
+  form: ["listen", "spell"],
+  meaning: ["en2cn", "cn2en", "en2en", "en2word", "syn"],
+  use: ["cloze", "pos"],
+  master: [],
+};
+
 export const STEP_LABEL: Record<GuideStep, string> = {
   0: "看一眼",
   1: "认意思",

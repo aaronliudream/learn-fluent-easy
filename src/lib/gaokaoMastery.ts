@@ -91,6 +91,13 @@ export interface VocabMasteryUpdate {
 }
 
 /**
+ * @deprecated Direct callers — use `recordCohortAttempt` from
+ *   `@/lib/cohortProgress` instead. It enforces an explicit `AttemptSource`
+ *   so the hypercorrection / cohort-event semantics stay consistent.
+ *   This function is kept ONLY as the internal fallback inside
+ *   `cohortProgress.ts` (when there is no active cohort and the source is
+ *   `free_practice` or `fsrs_due` outside the cohort word set).
+ *
  * Record a vocab attempt, updating:
  *  - the multi-dimensional Nation matrix
  *  - the FSRS difficulty/stability state

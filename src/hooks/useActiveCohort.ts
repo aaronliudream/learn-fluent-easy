@@ -149,3 +149,21 @@ export function useActiveCohort() {
     refetch: activeQuery.refetch,
   };
 }
+
+/**
+ * Lightweight read-only context object that callers spread into
+ * `recordCohortAttempt` so the lib can decide cohort-vs-fallback. Keeps the
+ * call site short and means there's only one query per page, not per attempt.
+ */
+export interface CohortAttemptContext {
+  cohortId: string | null;
+  cohortWordIds: string[] | null;
+}
+
+export function useCohortAttemptContext(): CohortAttemptContext {
+  const { active } = useActiveCohort();
+  return {
+    cohortId: active?.id ?? null,
+    cohortWordIds: active?.cohort_word_ids ?? null,
+  };
+}

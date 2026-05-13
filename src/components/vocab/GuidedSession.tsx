@@ -10,7 +10,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, Check, Loader2, Trophy, Volume2, X, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { speak } from "@/lib/speak";
-import { bumpVocabMastery } from "@/lib/gaokaoMastery";
+import { recordCohortAttempt, pickPracticeSource } from "@/lib/cohortProgress";
+import { useCohortAttemptContext } from "@/hooks/useActiveCohort";
 import { awardCoins } from "@/lib/coins";
 import {
   fetchMasteryMap,
@@ -90,6 +91,7 @@ export default function GuidedSession({
   const [done, setDone] = useState(false);
   const startedAt = useRef<number>(Date.now());
   const questionShownAt = useRef<number>(Date.now());
+  const cohortCtx = useCohortAttemptContext();
 
   // Initial pick: load mastery, sort by lowest step, take first N.
   useEffect(() => {
@@ -159,7 +161,19 @@ export default function GuidedSession({
     }
     const kind = STEP_KIND[stepNow as 1 | 2 | 3 | 4];
     const latency = Date.now() - questionShownAt.current;
-    bumpVocabMastery({ vocabId: active.v.id, kind, isCorrect, latencyMs: latency }).catch(() => {});
+    const source =
+      mode === "review"
+        ? "fsrs_due"
+        : pickPracticeSource(active.v.id, cohortCtx);
+    recordCohortAttempt({
+      vocabId: active.v.id,
+      kind,
+      isCorrect,
+      latencyMs: latency,
+      source,
+      cohortId: cohortCtx.cohortId,
+      cohortWordIds: cohortCtx.cohortWordIds,
+    }).catch(() => {});
     if (isCorrect) {
       awardCoins(2, `vocab_guided_${kind}`).catch(() => {});
       const newMatrix: MasteryMatrix = { ...active.matrix, [kind]: Math.min(4, (active.matrix[kind] ?? 0) + 1) };

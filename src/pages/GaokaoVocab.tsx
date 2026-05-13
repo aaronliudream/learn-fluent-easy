@@ -7,7 +7,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/PageHeader";
 import { speak } from "@/lib/speak";
-import { bumpMastery, bumpVocabMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { bumpMastery, recordAttempt } from "@/lib/gaokaoMastery";
+import { recordCohortAttempt, pickPracticeSource } from "@/lib/cohortProgress";
+import { useCohortAttemptContext } from "@/hooks/useActiveCohort";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { celebrateScore } from "@/lib/feedback";
 import { MASTERY_LABELS, type MasteryLevel } from "@/lib/masteryScore";
@@ -1405,6 +1407,7 @@ function QuizPhase({
   const questionShownAtRef = useRef<number>(Date.now());
   const [levelUps, setLevelUps] = useState<{word: string;level: MasteryLevel;}[]>([]);
   const wrongIdsRef = useRef<Set<string>>(new Set());
+  const cohortCtx = useCohortAttemptContext();
 
   // Reset stopwatch every time we land on a new question
   useEffect(() => {
@@ -1444,11 +1447,14 @@ function QuizPhase({
       is_correct: isCorrect,
       context: { kind: item.kind, latency_ms: latencyMs }
     }).catch(() => {});
-    const update = await bumpVocabMastery({
+    const update = await recordCohortAttempt({
       vocabId: item.vocab.id,
       kind: item.kind,
       isCorrect,
-      latencyMs
+      latencyMs,
+      source: pickPracticeSource(item.vocab.id, cohortCtx),
+      cohortId: cohortCtx.cohortId,
+      cohortWordIds: cohortCtx.cohortWordIds,
     });
     if (update && update.newLevel > update.prevLevel) {
       setLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);
@@ -2388,6 +2394,7 @@ function SrsReviewSession({ pool, onExit, focus }: {pool: Vocab[];onExit: () => 
   const [milestonesEvaluated, setMilestonesEvaluated] = useState(false);
   const [srsLevelUps, setSrsLevelUps] = useState<{word: string;level: MasteryLevel;}[]>([]);
   const srsQuestionShownAtRef = useRef<number>(Date.now());
+  const cohortCtx = useCohortAttemptContext();
 
   // reset stopwatch each question
   useEffect(() => {
@@ -2565,11 +2572,16 @@ function SrsReviewSession({ pool, onExit, focus }: {pool: Vocab[];onExit: () => 
       is_correct: isCorrect,
       context: { kind: item.kind, mode: "srs", latency_ms: latencyMs }
     }).catch(() => {});
-    const update = await bumpVocabMastery({
+    const update = await recordCohortAttempt({
       vocabId: item.vocab.id,
       kind: item.kind,
       isCorrect,
-      latencyMs
+      latencyMs,
+      // SRS review session = words pulled from the FSRS due queue
+      // (`due_at <= now()`). Always `fsrs_due`, regardless of cohort.
+      source: "fsrs_due",
+      cohortId: cohortCtx.cohortId,
+      cohortWordIds: cohortCtx.cohortWordIds,
     });
     if (update && update.newLevel > update.prevLevel) {
       setSrsLevelUps((prev) => [...prev, { word: item.vocab.word, level: update.newLevel }]);

@@ -31,6 +31,15 @@ import { bumpVocabMastery, type VocabMasteryUpdate } from "./gaokaoMastery";
  *  clear the hypercorrection flag (only on `fsrs_due`). */
 export type AttemptSource = "cohort" | "fsrs_due" | "free_practice";
 
+/**
+ * Legal values for `gaokao_cohort_events.kind`. Step ①-④ map to a `QuizKind`,
+ * step ⑤ maps to `'fsrs_review'`. Callers MUST NOT pass `'fsrs_review'`
+ * directly — pass `source: 'fsrs_due'` and the RPC remaps the event kind
+ * automatically. Keeping the type tight means a typo here breaks the build,
+ * not the step ⑤ progress query.
+ */
+export type CohortEventKind = QuizKind | "fsrs_review";
+
 export interface CohortAttemptOpts {
   vocabId: string;
   kind: QuizKind;
@@ -49,6 +58,21 @@ export interface CohortAttemptResult extends VocabMasteryUpdate {
   /** Whether the write went through the cohort RPC (vs fallback). */
   viaCohort: boolean;
   source: AttemptSource;
+}
+
+/**
+ * Helper for "I'm a normal practice attempt — figure out for me whether this
+ * counts as cohort progress or free practice." SRS / FSRS-due paths must
+ * NOT use this — they pass `source: 'fsrs_due'` explicitly.
+ */
+export function pickPracticeSource(
+  vocabId: string,
+  ctx: { cohortId: string | null; cohortWordIds: string[] | null },
+): Extract<AttemptSource, "cohort" | "free_practice"> {
+  if (ctx.cohortId && ctx.cohortWordIds && ctx.cohortWordIds.includes(vocabId)) {
+    return "cohort";
+  }
+  return "free_practice";
 }
 
 export async function recordCohortAttempt(

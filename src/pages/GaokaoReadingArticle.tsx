@@ -643,6 +643,10 @@ export default function GaokaoReadingArticle() {
             </button>
           </section>
         </div>
+        <ExamStepper
+          current="test"
+          reachable={["test"]}
+        />
       </ExamPaper>);
 
   }

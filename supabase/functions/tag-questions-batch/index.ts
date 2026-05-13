@@ -38,10 +38,15 @@ Deno.serve(async (req) => {
     // Pull untagged questions
     let questions: any[] = [];
     if (module === "gaokao_reading_article") {
-      const { data } = await sb
+      const { data, error: qErr } = await sb
         .from("gaokao_reading_article_questions")
-        .select("id, stem, option_a, option_b, option_c, option_d, correct_answer, general_explanation, question_type, question_type_cn, article_id, gaokao_reading_articles!inner(title, year, source)")
+        .select("id, stem, option_a, option_b, option_c, option_d, correct_answer, general_explanation, question_type, question_type_cn, article_id, gaokao_reading_articles!inner(title, source_label, theme_context, specific_topic)")
         .limit(500);
+      if (qErr) {
+        return new Response(JSON.stringify({ error: `db: ${qErr.message}` }), {
+          status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
       const all = (data || []) as any[];
       const { data: tagged } = await sb
         .from("question_exam_tags")
@@ -74,7 +79,8 @@ ${questions.map((q) => {
       const art = q.gaokao_reading_articles || {};
       return `---
 question_id: ${q.id}
-所属文章: ${art.title || ""} (${art.year || "?"} ${art.source || ""})
+所属文章: ${art.title || ""} (${art.source_label || "—"})
+主题: ${art.specific_topic || art.theme_context || ""}
 题型: ${q.question_type_cn || q.question_type}
 题干: ${q.stem}
 A. ${q.option_a}
@@ -114,8 +120,8 @@ D. ${q.option_d}
     for (const r0 of results) {
       if (!r0?.question_id) continue;
       const q = questions.find((x) => x.id === r0.question_id);
-      const fallbackYear = q?.gaokao_reading_articles?.year || null;
-      const fallbackSrc = q?.gaokao_reading_articles?.source || null;
+      const fallbackYear = null;
+      const fallbackSrc = q?.gaokao_reading_articles?.source_label || null;
       const upsert = {
         module,
         question_id: r0.question_id,

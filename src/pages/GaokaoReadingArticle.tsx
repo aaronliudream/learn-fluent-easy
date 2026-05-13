@@ -12,6 +12,8 @@ import { ShareButton } from "@/components/share/ShareButton";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
 import { ExamStepper, type ExamStep } from "@/components/exam/ExamStepper";
 import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
+import { QuestionExamBadge } from "@/components/exam/QuestionExamBadge";
+import { PracticeBooster } from "@/components/exam/PracticeBooster";
 import {
   DiagnosisTable,
   MistakeBookCallout,
@@ -894,6 +896,66 @@ export default function GaokaoReadingArticle() {
             }}
           />
         </div>
+
+        {/* === ③.5 新增：每道错题的「年份+考点徽章 + 问小月 + AI 练 3 题」 === */}
+        {questions.some((q) => answers[q.id] !== q.correct_answer) && (
+          <div className="mb-6 rounded-2xl border bg-card p-5">
+            <h2 className="font-bold mb-1"><T>逐题深挖 · 不懂就问 · 不会就练</T></h2>
+            <p className="text-xs text-muted-foreground mb-4">
+              <T>每道错题都标注了考查年份与考点。先问小月，听不懂就让 AI 出 3 道针对性练习；3 轮内仍未掌握会自动加入错题本。</T>
+            </p>
+            <div className="space-y-4">
+              {questions
+                .filter((q) => answers[q.id] !== q.correct_answer)
+                .map((q) => {
+                  const idx = questions.indexOf(q) + 1;
+                  const userAns = answers[q.id] ?? "";
+                  const userOptText = (q as any)[`option_${(userAns || "a").toLowerCase()}`] || "";
+                  return (
+                    <div key={q.id} className="rounded-xl border border-rose-500/20 bg-rose-500/[0.03] p-3">
+                      <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                        <div className="flex items-center gap-2">
+                          <span className="rounded-md bg-rose-500/15 px-1.5 py-0.5 text-[11px] font-bold text-rose-700">
+                            第 {idx} 题
+                          </span>
+                          <span className="text-[11px] text-muted-foreground">
+                            你选 <b className="text-rose-700">{userAns || "—"}</b> · 正确 <b className="text-emerald-700">{q.correct_answer}</b>
+                          </span>
+                        </div>
+                        <QuestionExamBadge
+                          module="gaokao_reading_article"
+                          questionId={q.id}
+                          fallbackLabel={q.question_type_cn}
+                        />
+                      </div>
+                      <div className="mb-3 text-xs leading-relaxed text-foreground/85 line-clamp-2">{q.stem}</div>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <button
+                          onClick={() => {
+                            setTutorPrefill(
+                              `第 ${idx} 题：${q.stem}\n我选了 ${userAns || "（未答）"}，正确答案是 ${q.correct_answer}。请用中文一步步带我回原文找证据，并解释我的思路哪里出错了。`,
+                            );
+                            setStage("dialogue");
+                          }}
+                          className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-bold text-primary hover:bg-primary/20"
+                        >
+                          <Sparkles className="size-3.5" />
+                          <T>问小月这道题</T>
+                        </button>
+                        <PracticeBooster
+                          module="gaokao_reading_article"
+                          sourceQuestionId={q.id}
+                          sourceQuestionStem={q.stem}
+                          fallbackKnowledgePointLabel={q.question_type_cn ?? "阅读理解"}
+                          userWrongOption={userAns ? `${userAns}. ${userOptText}` : undefined}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        )}
 
         {/* === ③ 新增：为你推荐的下一步 === */}
         <div className="mb-8">

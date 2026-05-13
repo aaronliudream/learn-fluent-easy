@@ -206,6 +206,51 @@ export type Database = {
         }
         Relationships: []
       }
+      ai_practice_sets: {
+        Row: {
+          created_at: string
+          id: string
+          knowledge_point_id: string | null
+          knowledge_point_label: string | null
+          module: string
+          passed: boolean
+          questions: Json
+          result: Json
+          round: number
+          source_question_id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          knowledge_point_id?: string | null
+          knowledge_point_label?: string | null
+          module: string
+          passed?: boolean
+          questions?: Json
+          result?: Json
+          round?: number
+          source_question_id: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          knowledge_point_id?: string | null
+          knowledge_point_label?: string | null
+          module?: string
+          passed?: boolean
+          questions?: Json
+          result?: Json
+          round?: number
+          source_question_id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       ai_quota_limits: {
         Row: {
           daily_call_limit: number
@@ -5832,6 +5877,56 @@ export type Database = {
           weekly_report_enabled?: boolean
         }
         Relationships: []
+      }
+      question_exam_tags: {
+        Row: {
+          confidence: number | null
+          created_at: string
+          exam_source: string | null
+          exam_year: number | null
+          id: string
+          knowledge_point_id: string | null
+          knowledge_point_label: string | null
+          module: string
+          question_id: string
+          raw: Json
+          updated_at: string
+        }
+        Insert: {
+          confidence?: number | null
+          created_at?: string
+          exam_source?: string | null
+          exam_year?: number | null
+          id?: string
+          knowledge_point_id?: string | null
+          knowledge_point_label?: string | null
+          module: string
+          question_id: string
+          raw?: Json
+          updated_at?: string
+        }
+        Update: {
+          confidence?: number | null
+          created_at?: string
+          exam_source?: string | null
+          exam_year?: number | null
+          id?: string
+          knowledge_point_id?: string | null
+          knowledge_point_label?: string | null
+          module?: string
+          question_id?: string
+          raw?: Json
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "question_exam_tags_knowledge_point_id_fkey"
+            columns: ["knowledge_point_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_reading_knowledge_points"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       quiz_streaks: {
         Row: {

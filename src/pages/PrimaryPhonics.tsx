@@ -16,6 +16,8 @@ import {
   type PhonicsMasteryMap } from
 "@/lib/phonicsMastery";
 import { getCurrentGrade, getSightWordsPolicy, shouldShowSightWordsEntry } from "@/lib/sightWordsGradeGate";
+import { pickDashboardCtas, hasReadBookToday, newSoundsLearnedToday } from "@/lib/phonicsJourney";
+import { BookOpen as BookOpenIcon, Target } from "lucide-react";
 
 /**
  * 拼读冒险仪表盘 — 替代直接进 /primary/letters。
@@ -129,6 +131,15 @@ export default function PrimaryPhonics() {
     (it) => (mastery.get(it.id)?.mastery_level ?? 0) < 3
   ).length ?? 0) + dueItems.length;
 
+  // 新版 CTA 优先级:复习 → 读绘本 → 整组挑战 → 学新音
+  // 不再让孩子永远停在"学新音"。
+  const dashboardCtas = useMemo(
+    () => pickDashboardCtas({ grade: isG2 ? 2 : 1, mastery }),
+    [isG2, mastery]
+  );
+  const learnedToday = newSoundsLearnedToday();
+  const readBookToday = hasReadBookToday();
+
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-4 py-6 pb-24 md:px-6">
       <GuestBanner />
@@ -161,41 +172,66 @@ export default function PrimaryPhonics() {
 
       {/* CTA 区(放在 Spark 下面,优先引导动作) */}
       <section className="mt-4 space-y-3">
-        {/* 1) 学新音 */}
-        {nextNewItem &&
-        <CtaCard
-          color="from-rose-500 via-pink-500 to-amber-500"
-          icon={<Play className="size-5 fill-white" />}
-          label="继续学新音"
-          title={`学新音 ${nextNewItem.letter}`}
-          sub={`你这组掌握了 ${currentGroup.items.filter((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2).length}/${currentGroup.items.length}`}
-          onClick={() => nav(learnPath(nextNewItem.id))} />
-
-        }
-
-        {/* 2) 复习 */}
-        {dueItems.length > 0 &&
-        <CtaCard
-          color="from-sky-500 via-cyan-500 to-emerald-500"
-          icon={<RotateCw className="size-5" />}
-          label="今日复习"
-          title={`复习 ${dueItems.length} 个学过的音`}
-          sub="上次没答对的,再来一次吧!"
-          onClick={() => nav(modulePath("/primary/phonics/quiz/review"))} />
-
-        }
-
-        {/* 3) 整组挑战 */}
-        {currentGroup && canChallengeGroup &&
-        <CtaCard
-          color="from-violet-500 via-fuchsia-500 to-pink-500"
-          icon={<Sparkles className="size-5" />}
-          label="挑战测试"
-          title={`挑战 ${currentGroup.group.groupName}`}
-          sub="✨ 全部答对,就能玩下一关啦!"
-          onClick={() => nav(modulePath(`/primary/phonics/quiz/${currentGroup.group.id}`))} />
-
-        }
+        {/* 新版编排:遗忘曲线 / 用今天的音 / 整组挑战 / 学新音
+              不再让孩子无限点"学新音" — 学过 2 个就引导"用一下"。 */}
+        {dashboardCtas.length > 0 && !loading && dashboardCtas.map((c, i) => {
+          if (c.kind === "review") {
+            return (
+              <CtaCard key={i}
+                color="from-sky-500 via-cyan-500 to-emerald-500"
+                icon={<RotateCw className="size-5" />}
+                label="🔁 老朋友找你啦"
+                title={`复习 ${c.count} 个学过的音`}
+                sub="一会儿再见就忘啦,这次就让它真的记住!"
+                onClick={() => nav(c.href)} />
+            );
+          }
+          if (c.kind === "readBook") {
+            return (
+              <CtaCard key={i}
+                color="from-emerald-500 via-teal-500 to-cyan-500"
+                icon={<BookOpenIcon className="size-5" />}
+                label="📖 今天的小绘本"
+                title={`读一本含 "${c.letter}" 的绘本`}
+                sub="把今天的音用到一个真故事里!"
+                onClick={() => nav(c.href)} />
+            );
+          }
+          if (c.kind === "challenge") {
+            return (
+              <CtaCard key={i}
+                color="from-violet-500 via-fuchsia-500 to-pink-500"
+                icon={<Target className="size-5" />}
+                label="🏆 整组挑战"
+                title="开始本组挑战"
+                sub="本组每个音都见过啦,通关就解锁下一组!"
+                onClick={() => nav(c.href)} />
+            );
+          }
+          if (c.kind === "useYesterday") {
+            return (
+              <CtaCard key={i}
+                color="from-amber-500 via-orange-500 to-rose-500"
+                icon={<Sparkles className="size-5" />}
+                label="✨ 用一下今天学的音"
+                title={`把 "${c.letter}" 用到真词里`}
+                sub={`你今天已经学了 ${learnedToday} 个新音,先用起来再继续!`}
+                onClick={() => nav(c.href)} />
+            );
+          }
+          if (c.kind === "newSound" && nextNewItem) {
+            return (
+              <CtaCard key={i}
+                color="from-rose-500 via-pink-500 to-amber-500"
+                icon={<Play className="size-5 fill-white" />}
+                label="🔤 学新音"
+                title={`学新音 ${nextNewItem.letter}`}
+                sub={`本组掌握 ${currentGroup?.items.filter((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2).length}/${currentGroup?.items.length}`}
+                onClick={() => nav(learnPath(nextNewItem.id))} />
+            );
+          }
+          return null;
+        })}
 
         {/* fallback */}
         {!nextNewItem && dueItems.length === 0 && !canChallengeGroup && !loading &&

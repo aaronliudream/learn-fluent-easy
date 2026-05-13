@@ -1313,6 +1313,50 @@ export type Database = {
           },
         ]
       }
+      gaokao_cohort_essays: {
+        Row: {
+          cohort_id: string
+          created_at: string
+          id: string
+          llm_refinement: string
+          llm_score: number
+          llm_strength: string
+          sentence: string
+          user_id: string
+          words_used: string[]
+        }
+        Insert: {
+          cohort_id: string
+          created_at?: string
+          id?: string
+          llm_refinement: string
+          llm_score: number
+          llm_strength: string
+          sentence: string
+          user_id: string
+          words_used: string[]
+        }
+        Update: {
+          cohort_id?: string
+          created_at?: string
+          id?: string
+          llm_refinement?: string
+          llm_score?: number
+          llm_strength?: string
+          sentence?: string
+          user_id?: string
+          words_used?: string[]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "gaokao_cohort_essays_cohort_id_fkey"
+            columns: ["cohort_id"]
+            isOneToOne: false
+            referencedRelation: "gaokao_user_active_cohort"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       gaokao_cohort_events: {
         Row: {
           cohort_id: string
@@ -2326,6 +2370,7 @@ export type Database = {
           cohort_word_ids: string[]
           created_at: string
           graduated_at: string | null
+          graduated_without_essay: boolean
           id: string
           last_active_at: string
           sequence_no: number
@@ -2338,6 +2383,7 @@ export type Database = {
           cohort_word_ids: string[]
           created_at?: string
           graduated_at?: string | null
+          graduated_without_essay?: boolean
           id?: string
           last_active_at?: string
           sequence_no: number
@@ -2350,6 +2396,7 @@ export type Database = {
           cohort_word_ids?: string[]
           created_at?: string
           graduated_at?: string | null
+          graduated_without_essay?: boolean
           id?: string
           last_active_at?: string
           sequence_no?: number
@@ -7835,6 +7882,10 @@ export type Database = {
           total_perfect: number
         }[]
       }
+      graduate_cohort_without_essay: {
+        Args: { p_cohort_id: string }
+        Returns: undefined
+      }
       guest_email_for_username: { Args: { _name: string }; Returns: string }
       has_active_subscription: { Args: { user_uuid: string }; Returns: boolean }
       has_role: {
@@ -7850,6 +7901,7 @@ export type Database = {
           cohort_word_ids: string[]
           created_at: string
           graduated_at: string | null
+          graduated_without_essay: boolean
           id: string
           last_active_at: string
           sequence_no: number
@@ -8068,6 +8120,7 @@ export type Database = {
           cohort_word_ids: string[]
           created_at: string
           graduated_at: string | null
+          graduated_without_essay: boolean
           id: string
           last_active_at: string
           sequence_no: number
@@ -8112,6 +8165,7 @@ export type Database = {
           cohort_word_ids: string[]
           created_at: string
           graduated_at: string | null
+          graduated_without_essay: boolean
           id: string
           last_active_at: string
           sequence_no: number
@@ -8139,6 +8193,17 @@ export type Database = {
           session_id: string
           total_blanks: number
         }[]
+      }
+      submit_cohort_essay: {
+        Args: {
+          p_cohort_id: string
+          p_refinement: string
+          p_score: number
+          p_sentence: string
+          p_strength: string
+          p_words_used: string[]
+        }
+        Returns: string
       }
       submit_duel_result: {
         Args: {

@@ -38,6 +38,13 @@ function hasBanned(text: string): boolean {
   return BANNED.some((b) => text.includes(b));
 }
 
+// Defensive post-filter: LLM may still suggest swapping target words.
+// If refinement matches any of these patterns, we treat it as invalid and retry once.
+const REPLACE_RE = /换成|替代|改成.*更好|建议使用/;
+function suggestsReplacement(text: string): boolean {
+  return REPLACE_RE.test(text);
+}
+
 function buildPrompt(sentence: string, wordsWithGlosses: { word: string; gloss: string }[]) {
   const list = wordsWithGlosses.map((w) => `- ${w.word}: ${w.gloss || "(无释义)"}`).join("\n");
   return `你是一位严格但鼓励学生的高中英语老师。学生学完一批高考词汇后,用其中 ${wordsWithGlosses.length} 个词写了 1 个句子。给出 1 句具体的肯定 + 1 句具体的改进建议 + 1-5 分评分。
@@ -114,6 +121,9 @@ function validateGrading(raw: unknown): { ok: true; data: z.infer<typeof Respons
   }
   if (hasBanned(parsed.data.refinement)) {
     return { ok: false, reason: "refinement 包含禁用的橡皮图章式表达" };
+  }
+  if (suggestsReplacement(parsed.data.refinement)) {
+    return { ok: false, reason: "refinement 建议替换目标词,违反 cohort 约束" };
   }
   return { ok: true, data: parsed.data };
 }

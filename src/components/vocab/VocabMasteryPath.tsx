@@ -12,6 +12,7 @@ import {
 import { useActiveCohort } from "@/hooks/useActiveCohort";
 import { fetchCohortProgress } from "@/lib/cohortProgress";
 import CohortIntakeModal from "./CohortIntakeModal";
+import EssayCeremonyModal from "./EssayCeremonyModal";
 
 /** 高考 3500 词 / 每批 10 词 = 350 批。常量化便于以后调整。 */
 const TOTAL_BATCHES = 350;
@@ -66,6 +67,7 @@ export default function VocabMasteryPath({
 }) {
   const { active: cohort, dormant, activeLoading, resume } = useActiveCohort();
   const [intakeOpen, setIntakeOpen] = useState(false);
+  const [ceremonyOpen, setCeremonyOpen] = useState(false);
 
   const cohortMode = !!cohort;
   const effectiveIds = cohortMode ? cohort!.cohort_word_ids : vocabIds;
@@ -331,10 +333,10 @@ export default function VocabMasteryPath({
             {cohortMode && (
               <button
                 type="button"
-                onClick={() => setIntakeOpen(true)}
+                onClick={() => setCeremonyOpen(true)}
                 className="mt-2 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-1.5 text-xs font-extrabold text-white shadow-sm hover:bg-emerald-700"
               >
-                <Rocket className="size-3.5" /> <T>开启下一批 10 词</T>
+                <Rocket className="size-3.5" /> <T>开始毕业仪式</T>
               </button>
             )}
           </div>
@@ -368,6 +370,18 @@ export default function VocabMasteryPath({
         <CohortIntakeModal
           vocabIds={vocabIds}
           onClose={() => setIntakeOpen(false)}
+        />
+      )}
+      {ceremonyOpen && cohort && (
+        <EssayCeremonyModal
+          cohortId={cohort.id}
+          sequenceNo={cohort.sequence_no}
+          cohortWordIds={cohort.cohort_word_ids}
+          onClose={() => setCeremonyOpen(false)}
+          onStartNext={() => {
+            setCeremonyOpen(false);
+            setIntakeOpen(true);
+          }}
         />
       )}
     </>

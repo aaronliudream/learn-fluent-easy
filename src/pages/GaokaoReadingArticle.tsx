@@ -237,8 +237,6 @@ export default function GaokaoReadingArticle() {
   const [secondsLeft, setSecondsLeft] = useState(0);
   const [fontScale, setFontScale] = useState(1);
   const [userEmail, setUserEmail] = useState<string>("user");
-  const [minReadSec, setMinReadSec] = useState<number>(60);
-  const [readSecLeft, setReadSecLeft] = useState<number>(60);
   // 累计掌握度: 按 question_type 聚合该用户历史正确率
   const [typeMastery, setTypeMastery] = useState<Record<string, number>>({});
   // ④ 对话阶段的预填问题（从错题"和 AI 详谈"按钮带入）

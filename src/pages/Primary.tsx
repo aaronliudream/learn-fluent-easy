@@ -132,8 +132,8 @@ export default function Primary() {
   useEffect(() => {
     (async () => {
       // SEO: title + meta description
-      document.title = "小学英语 G1-G6 · 自然拼读 · 词汇 · 听说读写 | FluentPath";
-      const desc = "教育部新课标小学英语 1-6 年级：自然拼读、核心词汇、听力对话、阅读闯关、AI 口语陪练，孩子每天 10 分钟。";
+      document.title = "小学英语 G1-G6 · 英语启蒙 & 教材同步 · 自然拼读 · 词汇 · 听说读写 | FluentPath";
+      const desc = "1-2年级英语启蒙(幼小衔接)：自然拼读、字母、听说、简单对话；3-6年级教材同步(人教/外研社)：核心词汇、听力对话、阅读闯关、AI口语陪练，每天10分钟。";
       let m = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
       if (!m) {m = document.createElement("meta");m.name = "description";document.head.appendChild(m);}
       m.content = desc;

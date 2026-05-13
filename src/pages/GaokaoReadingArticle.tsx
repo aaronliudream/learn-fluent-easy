@@ -12,6 +12,8 @@ import { ShareButton } from "@/components/share/ShareButton";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
 import { ExamStepper, type ExamStep } from "@/components/exam/ExamStepper";
 import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
+import { QuestionExamBadge } from "@/components/exam/QuestionExamBadge";
+import { PracticeBooster } from "@/components/exam/PracticeBooster";
 import {
   DiagnosisTable,
   MistakeBookCallout,

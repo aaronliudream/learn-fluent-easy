@@ -6,7 +6,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import NoCopyGuard from "@/components/NoCopyGuard";
-import ReadingWatermark from "@/components/ReadingWatermark";
 import { recordMastery } from "@/lib/masteryProgress";
 import { celebrateScore } from "@/lib/feedback";
 import { ShareButton } from "@/components/share/ShareButton";
@@ -476,7 +475,6 @@ export default function GaokaoReadingArticle() {
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 py-8 lg:grid-cols-[1.3fr_1fr]">
           {/* 文章 — 左侧 (移动端在上方) */}
           <article className="relative exam-card p-6 sm:p-9 lg:sticky lg:top-24 lg:self-start lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto exam-passage-scroll">
-            <ReadingWatermark text={`${userEmail} · ${new Date().toLocaleDateString()}`} />
             <div className="mb-3 flex items-center justify-between border-b exam-divider pb-2">
               <div className="exam-eyebrow">
                 {article.word_count} <T>词 ·</T> {article.sub_band} · {article.genre_label}

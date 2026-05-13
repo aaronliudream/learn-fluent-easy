@@ -10,6 +10,16 @@ import { recordMastery } from "@/lib/masteryProgress";
 import { celebrateScore } from "@/lib/feedback";
 import { ShareButton } from "@/components/share/ShareButton";
 import { ExamPaper, ExamContainer, ExamCard, ExamOption, ExamProgress } from "@/components/exam/ExamPaper";
+import { ExamStepper, type ExamStep } from "@/components/exam/ExamStepper";
+import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
+import {
+  DiagnosisTable,
+  MistakeBookCallout,
+  NextStepCards,
+  inferTrap,
+  buildNextStepsFromResult,
+  type DiagnosisRow,
+} from "@/components/exam/DiagnosisExtras";
 
 type Article = {
   id: string;
@@ -63,7 +73,7 @@ type VocabItem = {
   importance: number;
 };
 
-type Stage = "read" | "test" | "result" | "review";
+type Stage = "read" | "test" | "diagnosis" | "dialogue" | "review";
 
 const TYPE_COLOR: Record<string, string> = {
   main_idea: "bg-rose-500/10 text-rose-600 border-rose-500/20",
@@ -227,6 +237,10 @@ export default function GaokaoReadingArticle() {
   const [userEmail, setUserEmail] = useState<string>("user");
   const [minReadSec, setMinReadSec] = useState<number>(60);
   const [readSecLeft, setReadSecLeft] = useState<number>(60);
+  // 累计掌握度: 按 question_type 聚合该用户历史正确率
+  const [typeMastery, setTypeMastery] = useState<Record<string, number>>({});
+  // ④ 对话阶段的预填问题（从错题"和 AI 详谈"按钮带入）
+  const [tutorPrefill, setTutorPrefill] = useState<string>("");
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => {
@@ -390,7 +404,7 @@ export default function GaokaoReadingArticle() {
     if (timeUp) toast.warning("时间到，已自动交卷");
     const finalPct = totalQ > 0 ? Math.round(correctCount / totalQ * 100) : 0;
     celebrateScore(finalPct);
-    setStage("review");
+    setStage("diagnosis");
   }
 
   if (loading) {

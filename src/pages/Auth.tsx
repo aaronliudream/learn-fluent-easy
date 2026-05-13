@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { consumeRedirectPath } from "@/lib/authRedirect";
 import { lovable } from "@/integrations/lovable/index";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,8 +49,11 @@ const Auth = () => {
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
-      // 已登录用户进 /auth → 跳到学习面板（而不是首页，避免「点免费开始学习没反应」的死循环）
-      if (session) navigate("/dashboard", { replace: true });
+      // 已登录用户进 /auth → 优先回到之前的页面，否则跳到学习面板
+      if (session) {
+        const redirect = consumeRedirectPath();
+        navigate(redirect || "/dashboard", { replace: true });
+      }
     });
   }, [navigate]);
 
@@ -120,7 +124,8 @@ const Auth = () => {
     }, { onConflict: "user_id" });
     setLoading(false);
     toast.success(t("欢迎，") + n + " 🎉");
-    navigate("/", { replace: true });
+    const redirect1 = consumeRedirectPath();
+    navigate(redirect1 || "/", { replace: true });
   };
 
   const handleNickSignIn = async (e: React.FormEvent) => {
@@ -141,7 +146,8 @@ const Auth = () => {
     setLoading(false);
     if (error) { toast.error(t("PIN 不正确")); return; }
     toast.success(t("欢迎回来，") + n + " 👋");
-    navigate("/", { replace: true });
+    const redirect2 = consumeRedirectPath();
+    navigate(redirect2 || "/", { replace: true });
   };
 
   const handleSignUp = async (e: React.FormEvent) => {
@@ -224,7 +230,8 @@ const Auth = () => {
     import("@/lib/funnel").then(m =>
       m.trackFunnel("signup", "completed", { method: "email", age_band: emailAgeBand })
     );
-    navigate("/", { replace: true });
+    const redirect3 = consumeRedirectPath();
+    navigate(redirect3 || "/", { replace: true });
   };
 
   const handleSignIn = async (e: React.FormEvent) => {
@@ -262,7 +269,8 @@ const Auth = () => {
     }
     setLoading(false);
     toast.success(t("登录成功"));
-    navigate("/", { replace: true });
+    const redirect4 = consumeRedirectPath();
+    navigate(redirect4 || "/", { replace: true });
   };
 
   const handleGoogle = async () => {
@@ -276,7 +284,8 @@ const Auth = () => {
       return;
     }
     if (result.redirected) return;
-    navigate("/", { replace: true });
+    const redirect5 = consumeRedirectPath();
+    navigate(redirect5 || "/", { replace: true });
   };
 
   return (

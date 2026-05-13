@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { saveRedirectPath } from "@/lib/authRedirect";
 
 export type AttemptStage = "primary" | "junior" | "senior";
 export type AttemptModule =
@@ -92,7 +93,10 @@ function notifyGuestOnce() {
       duration: 7000,
       action: {
         label: "去登录",
-        onClick: () => { window.location.href = "/auth"; },
+        onClick: () => {
+          saveRedirectPath();
+          window.location.href = "/auth";
+        },
       },
     });
   } catch {

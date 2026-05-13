@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import { useEffect, lazy, Suspense } from "react";
+import { BrowserRouter, Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useRef, lazy, Suspense } from "react";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,6 +9,8 @@ import { I18nProvider } from "@/i18n/I18nProvider";
 import ChineseOnlyRoute from "@/components/ChineseOnlyRoute";
 import { GuestCardClaimer } from "@/components/GuestCardClaimer";
 import { RouteErrorBoundary } from "@/components/RouteErrorBoundary";
+import { saveRedirectPath, consumeRedirectPath } from "@/lib/authRedirect";
+import { supabase } from "@/integrations/supabase/client";
 // Eagerly load home + auth (most common entry points) to avoid first-paint chunk fetch
 import Index from "./pages/Index.tsx";
 import Auth from "./pages/Auth.tsx";
@@ -181,6 +183,34 @@ const RouteFallback = () => (
   </div>
 );
 
+/** 监听路由变化：当用户从非 auth 页面进入 /auth 时，自动保存上一页路径。 */
+const AuthRedirectGuard = () => {
+  const location = useLocation();
+  const prevPath = useRef<string>("");
+  useEffect(() => {
+    if (location.pathname === "/auth" && prevPath.current && !prevPath.current.startsWith("/auth")) {
+      saveRedirectPath(prevPath.current);
+    }
+    prevPath.current = location.pathname + location.search;
+  }, [location]);
+  return null;
+};
+
+/** OAuth 外部跳转回来后（通常在非 /auth 页面触发 SIGNED_IN），自动跳回之前的页面。 */
+const OAuthReturnRedirect = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === "SIGNED_IN" && session && window.location.pathname !== "/auth") {
+        const redirect = consumeRedirectPath();
+        if (redirect) navigate(redirect, { replace: true });
+      }
+    });
+    return () => subscription.unsubscribe();
+  }, [navigate]);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <I18nProvider>
@@ -189,6 +219,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AuthRedirectGuard />
+        <OAuthReturnRedirect />
         <StopAudioOnRouteChange />
         <HeartbeatGate />
         <GuestCardClaimer />

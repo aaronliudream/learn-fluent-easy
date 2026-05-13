@@ -276,6 +276,7 @@ const App = () => (
           <Route path="/primary/reading/read/:id" element={<ChineseOnlyRoute><PrimaryStoryBookRead /></ChineseOnlyRoute>} />
           <Route path="/primary/reading/grade/:grade" element={<ChineseOnlyRoute><PrimaryReading /></ChineseOnlyRoute>} />
           <Route path="/primary/reading/:id" element={<ChineseOnlyRoute><PrimaryReadingPlay /></ChineseOnlyRoute>} />
+          <Route path="/primary/phonics/use/:letter" element={<ChineseOnlyRoute><PrimaryPhonicsUse /></ChineseOnlyRoute>} />
           <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
           <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />
           <Route path="/junior" element={<ChineseOnlyRoute><Junior /></ChineseOnlyRoute>} />

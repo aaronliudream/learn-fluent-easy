@@ -439,3 +439,23 @@ export default function PrimaryStoryBookRead() {
     </main>);
 
 }
+
+function renderWithFocus(text: string, letter: string) {
+  const k = letter.toLowerCase();
+  if (!k) return text;
+  return text.split(/(\s+)/).map((tok, i) => {
+    if (/^\s+$/.test(tok)) return <span key={i}>{tok}</span>;
+    const lower = tok.toLowerCase();
+    const idx = lower.indexOf(k);
+    if (idx === -1) return <span key={i}>{tok}</span>;
+    return (
+      <span key={i}>
+        {tok.slice(0, idx)}
+        <span className="rounded bg-amber-300/70 px-0.5 text-amber-900 dark:bg-amber-700/60 dark:text-amber-100">
+          {tok.slice(idx, idx + k.length)}
+        </span>
+        {tok.slice(idx + k.length)}
+      </span>
+    );
+  });
+}

@@ -22,9 +22,9 @@ const STAGES = [
 {
   to: "/kids",
   eyebrow: "BIG MOON KIDS",
-  title: "小学",
+  title: "小学英语",
   range: "G1 — G6",
-  desc: "可爱卡通、安全感十足的英语启蒙。自然拼读、绘本朗读、AI 跟读评分。",
+  desc: "G1-G2 英语启蒙·幼小衔接：字母、自然拼读、听说、简单对话。G3-G6 教材同步·主线课程：对应人教/外研社版核心内容。",
   gradient: "linear-gradient(160deg,#F5A26B 0%,#ED5C8E 100%)"
 },
 {

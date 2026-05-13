@@ -22,6 +22,9 @@ import type { MasteryMatrix, QuizKind } from "./masteryScore";
 
 export type GuideStep = 0 | 1 | 2 | 3 | 4 | 5;
 
+// TODO: deprecate STEP_KIND. GuidedSession should derive its per-word
+// gradient from MASTERY_STEP_KINDS instead. Maintaining two sources
+// of truth for step→kinds mapping is a future bug.
 /** Map a step (1..4) to the QuizKind we'll record when the user answers. */
 export const STEP_KIND: Record<1 | 2 | 3 | 4, QuizKind> = {
   1: "en2cn",
@@ -31,28 +34,33 @@ export const STEP_KIND: Record<1 | 2 | 3 | 4, QuizKind> = {
 };
 
 /**
- * Authoritative 5-step → QuizKind[] table for the cohort Mastery Path UI.
+ * Authoritative 5-step → kind[] table for the cohort Mastery Path UI.
  *
  * This is the canonical mapping that the 5-step progress bar reads (see
  * `VocabMasteryPath.STAGES`). Per-word progression inside `GuidedSession`
  * still uses `STEP_KIND` above — the two are intentionally different
  * structures (per-word ladder vs cohort-step rollup).
  *
- *   ① browse  : 看一眼,无量化 kinds
- *   ② form    : 听辨 + 拼写
- *   ③ meaning : 中英互选 + 同义辨析
- *   ④ use     : 完形 + 词性
- *   ⑤ master  : FSRS 复习达标(由 fsrs_review 事件统计)
+ *   ① browse  : 看一遍 (event kind 'expose' — 进度由 localStorage 短路统计)
+ *   ② form    : 听辨 + 拼写       → CohortDictationSession
+ *   ③ meaning : 中英互选            → CohortMeaningSession
+ *   ④ use     : 完形                → CohortClozeSession
+ *   ⑤ master  : FSRS 复习达标       (由 fsrs_review 事件统计,stepProgress 短路)
+ *
+ * 列表里只放「真的有组件会写到 cohort_events 的 kind」,否则 80% 通过永远凑不齐。
+ * `expose` 和 `fsrs_review` 不是 QuizKind,而是 cohort_events 上的特殊事件 kind,
+ * stepProgress() 对 browse / master 走专用分支不依赖列表内容,这里保留它们仅作
+ * 文档用途。
  */
 export const MASTERY_STEP_KINDS: Record<
   "browse" | "form" | "meaning" | "use" | "master",
-  QuizKind[]
+  readonly string[]
 > = {
-  browse: [],
+  browse: ["expose"],
   form: ["listen", "spell"],
-  meaning: ["en2cn", "cn2en", "en2en", "en2word", "syn"],
-  use: ["cloze", "pos"],
-  master: [],
+  meaning: ["en2cn", "cn2en"],
+  use: ["cloze"],
+  master: ["fsrs_review"],
 };
 
 export const STEP_LABEL: Record<GuideStep, string> = {

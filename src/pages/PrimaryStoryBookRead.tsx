@@ -285,7 +285,9 @@ export default function PrimaryStoryBookRead() {
                 }
                 </div>
                 <div className="mx-auto mt-6 max-w-md rounded-2xl border-2 border-amber-200 bg-white/80 p-4 shadow-sm dark:border-amber-900/40 dark:bg-amber-950/30">
-                  <div className="text-2xl font-extrabold text-amber-900 dark:text-amber-100 md:text-3xl">{page.text_en}</div>
+                  <div className="text-2xl font-extrabold text-amber-900 dark:text-amber-100 md:text-3xl">
+                    {focusLetter ? renderWithFocus(page.text_en, focusLetter) : page.text_en}
+                  </div>
                   <div className="mt-1 text-sm font-bold text-amber-700 dark:text-amber-200">{page.text_cn}</div>
                   <button
                   onClick={() => speakPage(page)}
@@ -293,6 +295,16 @@ export default function PrimaryStoryBookRead() {
                   
                     <Volume2 className="size-3.5" /> <T>听 Spark 念</T>
                   </button>
+                  {focusLetter && focusWordsOnPage.length > 0 && (
+                    <div className="mt-3 rounded-xl border border-dashed border-amber-300 bg-amber-50 px-3 py-2 text-[11px] font-bold text-amber-800 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
+                      🔍 <T>找一找：这一页里"</T>{focusLetter}<T>"出现在</T>
+                      <span className="ml-1 font-mono">
+                        {focusWordsOnPage.map((w, i) => (
+                          <span key={i} className="ml-1 rounded bg-amber-200/60 px-1 py-0.5 dark:bg-amber-900/40">{w}</span>
+                        ))}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

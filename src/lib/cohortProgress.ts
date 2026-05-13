@@ -27,12 +27,18 @@ import {
 } from "./masteryScore";
 import { bumpVocabMastery, type VocabMasteryUpdate } from "./gaokaoMastery";
 
+/** Where the answer is coming from. Required so RPC can decide whether to
+ *  clear the hypercorrection flag (only on `fsrs_due`). */
+export type AttemptSource = "cohort" | "fsrs_due" | "free_practice";
+
 export interface CohortAttemptOpts {
   vocabId: string;
   kind: QuizKind;
   isCorrect: boolean;
   latencyMs?: number;
   targetMs?: number;
+  /** REQUIRED. */
+  source: AttemptSource;
   /** Active cohort id (caller usually reads from useActiveCohort). */
   cohortId?: string | null;
   /** Word ids in the active cohort — used to decide cohort vs fallback. */
@@ -42,19 +48,35 @@ export interface CohortAttemptOpts {
 export interface CohortAttemptResult extends VocabMasteryUpdate {
   /** Whether the write went through the cohort RPC (vs fallback). */
   viaCohort: boolean;
+  source: AttemptSource;
 }
 
 export async function recordCohortAttempt(
   opts: CohortAttemptOpts,
 ): Promise<CohortAttemptResult | null> {
+  // free_practice → never goes through cohort RPC. Just bump mastery directly.
+  if (opts.source === "free_practice") {
+    const r = await bumpVocabMastery(opts);
+    return r ? { ...r, viaCohort: false, source: "free_practice" } : null;
+  }
+
   const inCohort =
     !!opts.cohortId &&
     !!opts.cohortWordIds &&
     opts.cohortWordIds.includes(opts.vocabId);
 
-  if (!inCohort) {
+  // For source='cohort' we strictly require the word to be in the cohort.
+  // For source='fsrs_due' we allow either inside or outside the cohort:
+  //   - inside cohort  → goes through RPC, becomes a 'fsrs_review' event
+  //   - outside cohort → falls back to direct mastery write
+  if (opts.source === "cohort" && !inCohort) {
+    console.warn("[cohortProgress] cohort source but word not in cohort, falling back");
     const r = await bumpVocabMastery(opts);
-    return r ? { ...r, viaCohort: false } : null;
+    return r ? { ...r, viaCohort: false, source: opts.source } : null;
+  }
+  if (opts.source === "fsrs_due" && !inCohort) {
+    const r = await bumpVocabMastery(opts);
+    return r ? { ...r, viaCohort: false, source: opts.source } : null;
   }
 
   const { data: { user } } = await supabase.auth.getUser();
@@ -131,6 +153,7 @@ export async function recordCohortAttempt(
     p_kind: opts.kind,
     p_correct: opts.isCorrect,
     p_mastery: masteryPayload as any,
+    p_source: opts.source,
   });
 
   if (error) {
@@ -139,7 +162,7 @@ export async function recordCohortAttempt(
     // attempt, which is the strictly safer failure mode.
     console.warn("[cohortProgress] RPC failed, falling back:", error.message);
     const r = await bumpVocabMastery(opts);
-    return r ? { ...r, viaCohort: false } : null;
+    return r ? { ...r, viaCohort: false, source: opts.source } : null;
   }
 
   return {
@@ -149,6 +172,7 @@ export async function recordCohortAttempt(
     intervalDays: fsrs.intervalDays,
     reachedMaster: !!reachedMasterAt,
     viaCohort: true,
+    source: opts.source,
   };
 }
 

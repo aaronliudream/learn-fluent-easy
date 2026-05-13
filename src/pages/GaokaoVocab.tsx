@@ -3301,6 +3301,53 @@ function WordRushSession({ pool, onExit }: {pool: Vocab[];onExit: () => void;}) 
 
 const DICT_QUESTION_COUNT = 5;
 
+/* ---------- Cohort word-level dictation route wrapper ---------- */
+function CohortDictRoute({
+  allVocab,
+  onExit,
+}: {
+  allVocab: Vocab[];
+  onExit: () => void;
+}) {
+  const { active: cohort, activeLoading } = useActiveCohort();
+  const slice = useMemo(() => {
+    if (!cohort) return [];
+    const idSet = new Set(cohort.cohort_word_ids);
+    return allVocab.filter((v) => idSet.has(v.id));
+  }, [allVocab, cohort?.cohort_word_ids.join(",")]);
+
+  if (activeLoading) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <Loader2 className="mx-auto size-6 animate-spin text-muted-foreground" />
+      </main>
+    );
+  }
+  if (!cohort) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <button
+          onClick={onExit}
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="size-4" /> <T>返回</T>
+        </button>
+        <p className="mt-8 text-sm text-muted-foreground">
+          <T>请先在「5 步走」开启一批，再来听写。</T>
+        </p>
+      </main>
+    );
+  }
+  return (
+    <CohortDictationSession
+      pool={slice}
+      cohortId={cohort.id}
+      cohortWordIds={cohort.cohort_word_ids}
+      onExit={onExit}
+    />
+  );
+}
+
 type DictResult = {
   score: number;
   comment: string;

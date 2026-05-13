@@ -60,6 +60,21 @@ export interface CohortAttemptResult extends VocabMasteryUpdate {
   source: AttemptSource;
 }
 
+/**
+ * Helper for "I'm a normal practice attempt — figure out for me whether this
+ * counts as cohort progress or free practice." SRS / FSRS-due paths must
+ * NOT use this — they pass `source: 'fsrs_due'` explicitly.
+ */
+export function pickPracticeSource(
+  vocabId: string,
+  ctx: { cohortId: string | null; cohortWordIds: string[] | null },
+): Extract<AttemptSource, "cohort" | "free_practice"> {
+  if (ctx.cohortId && ctx.cohortWordIds && ctx.cohortWordIds.includes(vocabId)) {
+    return "cohort";
+  }
+  return "free_practice";
+}
+
 export async function recordCohortAttempt(
   opts: CohortAttemptOpts,
 ): Promise<CohortAttemptResult | null> {

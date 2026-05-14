@@ -397,8 +397,25 @@ function Grade1Page({ streak, coins, pet, displayName, tasks, weekly, days, kpSt
 
 /* ------------ G2 page ------------ */
 
-function Grade2Page({ streak, coins, pet }: { streak: number; coins: number; pet: any }) {
+function Grade2Page({
+  streak, coins, pet, displayName, tasks, weekly, days, kpStats, dims,
+  rxLoading, rxError, guidance, onRegen, regenPending,
+}: GradePageProps) {
   const navigate = useNavigate();
+  const finalsDays = days?.finals ?? 58;
+  const gaokaoDays = days?.gaokao ?? 510;
+  const total = kpStats?.total ?? 0;
+  const mastered = kpStats?.mastered ?? 0;
+  const readinessPct = total > 0 ? Math.round((mastered / total) * 100) : 0;
+  const targetPct = 80;
+  const dimEntries: [string, { score: number; max: number }][] = [
+    ["听力", dims?.listening ?? { score: 0, max: 30 }],
+    ["阅读", dims?.reading ?? { score: 0, max: 50 }],
+    ["词汇", dims?.vocab ?? { score: 0, max: 15 }],
+    ["语法", dims?.grammar ?? { score: 0, max: 15 }],
+    ["写作", dims?.writing ?? { score: 0, max: 40 }],
+  ];
+  const hasDims = dims && Object.keys(dims).length > 0;
   return (
     <>
       <GradeHeader grade="2" streak={streak} coins={coins} />
@@ -409,25 +426,18 @@ function Grade2Page({ streak, coins, pet }: { streak: number; coins: number; pet
       >
         <div className="grid grid-cols-3 gap-4 text-[11px]">
           <div>
-            <div className="opacity-75"><T>学情水平</T></div>
-            <div className="mt-1 text-[22px] font-bold leading-none">94<span className="text-[12px] ml-0.5">/150 ↑5</span></div>
-            <div className="mt-1 opacity-70"><T>预估当前高考分</T></div>
+            <div className="opacity-75"><T>高考备考度</T></div>
+            <div className="mt-1 text-[22px] font-bold leading-none">{readinessPct}<span className="text-[12px] ml-0.5">%</span></div>
+            <div className="mt-1 opacity-70">{mastered}/{total} <T>知识点</T></div>
           </div>
           <div>
             <div className="opacity-75"><T>距期末</T></div>
-            <div className="mt-1 text-[22px] font-bold leading-none">58<span className="text-[12px] ml-0.5"><T>天</T></span></div>
-            <div className="mt-1 opacity-70"><T>高二上学期</T></div>
+            <div className="mt-1 text-[22px] font-bold leading-none">{finalsDays}<span className="text-[12px] ml-0.5"><T>天</T></span></div>
+            <div className="mt-1 opacity-70"><T>高二阶段</T></div>
           </div>
           <div>
             <div className="opacity-75"><T>本周重点</T></div>
-            <div className="mt-1 space-y-1">
-              {["学定语从句", "突破完成时", "巩固宾从"].map((k) => (
-                <div key={k} className="flex items-center gap-1">
-                  <span className="rounded-sm bg-white/20 px-1.5 py-0.5 text-[9px] font-bold"><T>本周</T></span>
-                  <span className="text-[10px] truncate"><T>{k}</T></span>
-                </div>
-              ))}
-            </div>
+            <WeeklyChips weekly={weekly} fallback={["定语从句", "完成时态", "宾语从句"]} />
           </div>
         </div>
       </section>
@@ -436,93 +446,62 @@ function Grade2Page({ streak, coins, pet }: { streak: number; coins: number; pet
         <div className="flex items-baseline justify-between">
           <div className="text-[14px] font-bold" style={{ color: NAVY }}>
             <T>今日 AI 处方</T>
-            <span className="ml-2 text-[10px] font-normal opacity-60"><T>28 分钟 · 学 1 新 + 练 1 + 复习 1 · 🪙 ×25</T></span>
           </div>
-          <button className="text-[11px]" style={{ color: NAVY, opacity: 0.6 }}><T>换一组 ↻</T></button>
         </div>
-        <div className="mt-3 space-y-2">
-          <TaskCard num={1} title="学习 · 定语从句关系副词" sub="微课 → 规则 → 5 道引导题 · 学完掌握度 0% → 65%" meta="12 分钟" coin={15} active onClick={() => navigate(`/gaokao/grammar?grade=2`)} />
-          <TaskCard num={2} title="突破 · 完成时易错点（高频）" sub="上周新学 · 掌握度 48% · 完成后预计 70%+" meta="10 分钟" coin={8} onClick={() => navigate(`/gaokao/grammar?grade=2`)} />
-          <TaskCard num={3} title="复习 · 6 个词到了遗忘节点" sub="上次掌握 5 天前 · 不复习预计 2 天内遗忘" meta="6 分钟" coin={5} onClick={() => navigate(`/gaokao/vocab?grade=2&mode=srs`)} />
-        </div>
+        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending}
+          fallback={
+            <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-[#FAF8F1] p-4 text-[12px]" style={{ color: NAVY }}>
+              <T>做几道题后 AI 会为你定制处方 →</T>
+            </div>
+          } />
       </section>
 
-      {/* Ability map */}
       <section className="mt-6">
         <div className="flex items-baseline justify-between">
           <div className="text-[14px] font-bold" style={{ color: NAVY }}>
             <T>能力地图 · 高考备考度</T>
           </div>
           <div className="text-[11px]" style={{ color: NAVY, opacity: 0.6 }}>
-            <T>距高考 1 年 145 天</T>
+            <T>距高考</T> {gaokaoDays} <T>天</T>
           </div>
         </div>
 
-        <div
-          className="mt-3 rounded-xl p-5 text-white"
-          style={{ background: `linear-gradient(135deg, ${BLUE} 0%, #284c80 100%)` }}
-        >
+        <div className="mt-3 rounded-xl p-5 text-white" style={{ background: `linear-gradient(135deg, ${BLUE} 0%, #284c80 100%)` }}>
           <div className="flex items-baseline justify-between">
             <div>
               <div className="text-[11px] opacity-75"><T>高考备考度</T></div>
-              <div className="mt-1 text-[28px] font-bold leading-none">62%</div>
-              <div className="mt-1 text-[10px] opacity-70"><T>已掌握 67/286 知识点 · 本月 +12 个</T></div>
+              <div className="mt-1 text-[28px] font-bold leading-none">{readinessPct}%</div>
+              <div className="mt-1 text-[10px] opacity-70"><T>已掌握</T> {mastered}/{total} <T>知识点</T></div>
             </div>
             <div className="text-right">
               <div className="text-[10px] opacity-70"><T>高二结束目标</T></div>
-              <div className="mt-1 text-[18px] font-bold">≥80%</div>
-              <div className="text-[10px] opacity-70"><T>还差 18%</T></div>
+              <div className="mt-1 text-[18px] font-bold">≥{targetPct}%</div>
+              <div className="text-[10px] opacity-70"><T>还差</T> {Math.max(0, targetPct - readinessPct)}%</div>
             </div>
           </div>
           <div className="mt-3 h-2 rounded-full bg-white/15">
-            <div className="h-full rounded-full bg-white/85" style={{ width: "62%" }} />
+            <div className="h-full rounded-full bg-white/85" style={{ width: `${readinessPct}%` }} />
           </div>
           <div className="mt-1 flex justify-between text-[9px] opacity-60">
-            <span>0</span><span>▲ 当前</span><span>▲ 目标</span><span>100%</span>
+            <span>0</span><span>▲ <T>当前</T></span><span>▲ <T>目标</T></span><span>100%</span>
           </div>
         </div>
 
-        <div className="mt-3 grid grid-cols-5 gap-2">
-          <StatBox label="听力" value="22/30" sub="高一稳了" />
-          <StatBox label="阅读" value="26/50" sub="攻长难句" />
-          <StatBox label="词汇" value="9/15" sub="1840/3500" />
-          <StatBox label="语法" value="5/15" sub="本学期重点" highlight />
-          <StatBox label="写作" value="12/40" sub="高三决胜" />
-        </div>
+        {hasDims ? (
+          <div className="mt-3 grid grid-cols-5 gap-2">
+            {dimEntries.map(([label, d]) => (
+              <StatBox key={label} label={label} value={`${d.score}/${d.max}`} />
+            ))}
+          </div>
+        ) : (
+          <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-white p-3 text-[12px]" style={{ color: NAVY }}>
+            <T>完成入门快测后这里会显示你的 5 维分数 →</T>
+          </div>
+        )}
 
         <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-[#FAF8F1] p-3 text-[12px]" style={{ color: NAVY }}>
-          💡 <span className="font-bold"><T>本学期教学重点：</T></span>
+          💡 <span className="font-bold">{displayName}<T>，本学期重点：</T></span>
           <T>从句体系（语法）+ 长难句拆解（阅读）</T>
-          <div className="mt-1 opacity-75 text-[11px]">
-            <T>长线累积：词汇每周 80-120 词 · 写作每周 1 篇打底</T>
-          </div>
-        </div>
-
-        <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-white p-3 text-[11px]" style={{ color: NAVY }}>
-          <div className="opacity-60"><T>同期前 30% 学生轨迹 · 匿名</T></div>
-          <div className="mt-1.5">
-            <T>他们高二下学期末备考度通常 75%+ · 你目前 62%</T>
-          </div>
-          <div className="mt-1 opacity-75"><T>差距集中在 语法 / 写作</T></div>
-          <div className="mt-1 opacity-60">→ <T>AI 建议：未来 4 个月每周多投入 30 分钟在语法系统课</T></div>
-        </div>
-
-        <div className="mt-3 grid grid-cols-3 gap-2 text-[11px]" style={{ color: NAVY }}>
-          <div className="rounded-lg border border-[#E7E1D2] bg-white p-2.5">
-            <div className="opacity-60"><T>本月提分</T></div>
-            <div className="mt-0.5 text-[14px] font-bold">+12 <span className="text-[10px] font-normal"><T>分</T></span></div>
-            <div className="opacity-55 text-[10px]">82 → 94</div>
-          </div>
-          <div className="rounded-lg border border-[#E7E1D2] bg-white p-2.5">
-            <div className="opacity-60"><T>本月新学</T></div>
-            <div className="mt-0.5 text-[14px] font-bold">23 <span className="text-[10px] font-normal"><T>个知识点</T></span></div>
-            <div className="opacity-55 text-[10px]"><T>超额完成 +8</T></div>
-          </div>
-          <div className="rounded-lg border border-[#E7E1D2] bg-white p-2.5">
-            <div className="opacity-60">286 <T>知识点</T></div>
-            <div className="mt-0.5 text-[14px] font-bold"><T>已掌握 67</T> · 23%</div>
-            <div className="opacity-55 text-[10px]"><T>本周 +6 个</T></div>
-          </div>
         </div>
       </section>
 
@@ -534,8 +513,41 @@ function Grade2Page({ streak, coins, pet }: { streak: number; coins: number; pet
 
 /* ------------ G3 page ------------ */
 
-function Grade3Page({ streak, coins, pet }: { streak: number; coins: number; pet: any }) {
-  const navigate = useNavigate();
+function Grade3Page({
+  streak, coins, pet, displayName, tasks, weakTop3, days, kpStats, dims,
+  targetScore, rxLoading, rxError, guidance, onRegen, regenPending,
+}: GradePageProps) {
+  const gaokaoDays = days?.gaokao ?? 87;
+  const target = targetScore ?? 130;
+  const total = kpStats?.total ?? 0;
+  const mastered = kpStats?.mastered ?? 0;
+  // Estimated score: scale mastery to /150
+  const estimatedScore = total > 0 ? Math.round((mastered / total) * 150) : 0;
+  const scoreGap = Math.max(0, target - estimatedScore);
+  const dailyNeed = gaokaoDays > 0 ? (scoreGap / gaokaoDays).toFixed(2) : "0";
+
+  const dimEntries: [string, { score: number; max: number }, string][] = [
+    ["听力", dims?.listening ?? { score: 0, max: 30 }, "listening"],
+    ["阅读", dims?.reading ?? { score: 0, max: 50 }, "reading"],
+    ["词汇", dims?.vocab ?? { score: 0, max: 15 }, "vocab"],
+    ["语法", dims?.grammar ?? { score: 0, max: 15 }, "grammar"],
+    ["写作", dims?.writing ?? { score: 0, max: 40 }, "writing"],
+  ];
+  const hasDims = dims && Object.keys(dims).length > 0;
+
+  // ROI = score_gap_for_dim / current_mastery_pct (lower mastery + bigger gap = higher ROI)
+  const roiList = (weakTop3 ?? []).slice(0, 4).map((w, i) => {
+    const dim = w.skill_area && dims?.[w.skill_area];
+    const dimGap = dim ? Math.max(0, dim.max - dim.score) : 0;
+    const mPct = w.mastery ?? dim?.mastery_pct ?? 30;
+    const roi = (dimGap > 0 ? dimGap : 5) / Math.max(20, mPct) * 2;
+    return {
+      label: `${["①", "②", "③", "④"][i]} ${w.kp_title}`,
+      roi: `+${roi.toFixed(1)} 分/h`,
+      op: i < 2 ? 1 : i === 2 ? 0.7 : 0.45,
+    };
+  });
+
   return (
     <>
       <GradeHeader grade="3" streak={streak} coins={coins} />
@@ -547,24 +559,30 @@ function Grade3Page({ streak, coins, pet }: { streak: number; coins: number; pet
         <div className="grid grid-cols-3 gap-4 text-[11px]">
           <div>
             <div className="opacity-75"><T>AI 预估高考</T></div>
-            <div className="mt-1 text-[24px] font-bold leading-none">118<span className="text-[12px] ml-0.5">/150 ↑3</span></div>
-            <div className="mt-1 opacity-70"><T>目标 130 · 差 12 分</T></div>
+            <div className="mt-1 text-[24px] font-bold leading-none">{estimatedScore}<span className="text-[12px] ml-0.5">/150</span></div>
+            <div className="mt-1 opacity-70"><T>目标</T> {target} · <T>差</T> {scoreGap} <T>分</T></div>
           </div>
           <div>
             <div className="opacity-75"><T>距高考</T></div>
-            <div className="mt-1 text-[24px] font-bold leading-none">87<span className="text-[12px] ml-0.5"><T>天</T></span></div>
-            <div className="mt-1 opacity-70"><T>每日需提 0.14 分</T></div>
+            <div className="mt-1 text-[24px] font-bold leading-none">{gaokaoDays}<span className="text-[12px] ml-0.5"><T>天</T></span></div>
+            <div className="mt-1 opacity-70"><T>每日需提</T> {dailyNeed} <T>分</T></div>
           </div>
           <div>
             <div className="opacity-75"><T>AI 攻克 · 弱点 TOP 3</T></div>
-            <div className="mt-1 space-y-1">
-              {[["今日", "读后续写 38%"], ["明日", "虚拟语气 42%"], ["后日", "长难句 56%"]].map(([d, k]) => (
-                <div key={k} className="flex items-center gap-1">
-                  <span className="rounded-sm bg-white/20 px-1.5 py-0.5 text-[9px] font-bold"><T>{d}</T></span>
-                  <span className="text-[10px] truncate"><T>{k}</T></span>
-                </div>
-              ))}
-            </div>
+            {weakTop3 && weakTop3.length > 0 ? (
+              <div className="mt-1 space-y-1">
+                {weakTop3.slice(0, 3).map((w, i) => (
+                  <div key={w.kp_id} className="flex items-center gap-1">
+                    <span className="rounded-sm bg-white/20 px-1.5 py-0.5 text-[9px] font-bold">
+                      <T>{i === 0 ? "今日" : i === 1 ? "明日" : "后日"}</T>
+                    </span>
+                    <span className="text-[10px] truncate"><T>{w.kp_title}</T></span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-1 text-[10px] opacity-70"><T>做几套题 AI 即定位弱点 →</T></div>
+            )}
           </div>
         </div>
       </section>
@@ -573,15 +591,14 @@ function Grade3Page({ streak, coins, pet }: { streak: number; coins: number; pet
         <div className="flex items-baseline justify-between">
           <div className="text-[14px] font-bold" style={{ color: NAVY }}>
             <T>今日 AI 处方</T>
-            <span className="ml-2 text-[10px] font-normal opacity-60"><T>25 分钟 · 完成 +0.5 分 · 🪙 ×30</T></span>
           </div>
-          <button className="text-[11px]" style={{ color: NAVY, opacity: 0.6 }}><T>换一组 ↻</T></button>
         </div>
-        <div className="mt-3 space-y-2">
-          <TaskCard num={1} title="复习 · 5 个词到了遗忘节点" sub="上次掌握 4 周前 · 复习后下次出现在 9 天后" meta="5 分钟" coin={5} onClick={() => navigate(`/gaokao/vocab?grade=3&mode=srs`)} />
-          <TaskCard num={2} title="突破 · 针对你的 #1 弱点 · 读后续写情绪刻画" sub="完成后续写掌握度 38% → 55% · 预计提分 +0.3" meta="12 分钟" coin={15} active onClick={() => navigate(`/gaokao/exam`)} />
-          <TaskCard num={3} title='新知 · "倒装句"专题' sub="AI 判定你还未系统学过 · 近 3 年高考出现 7 次" meta="8 分钟" coin={10} onClick={() => navigate(`/gaokao/grammar?grade=3`)} />
-        </div>
+        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending}
+          fallback={
+            <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-[#FAF8F1] p-4 text-[12px]" style={{ color: NAVY }}>
+              <T>今日任务正在生成… 完成入门快测后即出处方</T>
+            </div>
+          } />
       </section>
 
       <section className="mt-6">
@@ -590,22 +607,31 @@ function Grade3Page({ streak, coins, pet }: { streak: number; coins: number; pet
             <T>能力地图 · 距目标分数</T>
           </div>
           <div className="text-[11px]" style={{ color: NAVY, opacity: 0.6 }}>
-            <T>总目标 130 · 距高考 87 天</T>
+            <T>总目标</T> {target} · <T>距高考</T> {gaokaoDays} <T>天</T>
           </div>
         </div>
 
         <div className="mt-3 rounded-xl p-3 text-white" style={{ background: "#9C2A1F" }}>
-          <div className="text-[12px] font-bold">⏰ <T>今日不练 = 预计损失 0.14 分</T><span className="opacity-80 font-normal text-[11px]"> （按 12 分差 ÷ 87 天均摊）</span></div>
-          <div className="mt-1 text-[10px] opacity-85"><T>连续 7 天打卡 · 比平均同学领先 8 天</T></div>
+          <div className="text-[12px] font-bold">⏰ <T>今日不练 = 预计损失</T> {dailyNeed} <T>分</T></div>
+          <div className="mt-1 text-[10px] opacity-85"><T>连续</T> {streak} <T>天打卡</T></div>
         </div>
 
-        <div className="mt-3 grid grid-cols-5 gap-2">
-          <StatBox label="听力" value="24/30" sub="✓ 已达标" />
-          <StatBox label="阅读" value="34/50" sub="差 9 分" />
-          <StatBox label="词汇" value="11/15" sub="差 2 分" />
-          <StatBox label="语法" value="8/15" sub="差 5 分" />
-          <StatBox label="写作" value="26/40" sub="差 8 分" alert />
-        </div>
+        {hasDims ? (
+          <div className="mt-3 grid grid-cols-5 gap-2">
+            {dimEntries.map(([label, d]) => {
+              const gap = Math.max(0, d.max - d.score);
+              return (
+                <StatBox key={label} label={label} value={`${d.score}/${d.max}`}
+                  sub={gap === 0 ? "✓ 已达标" : `差 ${gap} 分`}
+                  alert={gap > d.max * 0.5} />
+              );
+            })}
+          </div>
+        ) : (
+          <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-white p-3 text-[12px]" style={{ color: NAVY }}>
+            <T>完成入门快测后这里会显示你的 5 维分数 →</T>
+          </div>
+        )}
 
         <div className="mt-3 rounded-xl border-l-4 border-[#5BA374] bg-[#F1F8F2] p-3">
           <div className="flex items-baseline justify-between">
@@ -614,39 +640,22 @@ function Grade3Page({ streak, coins, pet }: { streak: number; coins: number; pet
             </div>
             <div className="text-[10px]" style={{ color: "#2E5238", opacity: 0.7 }}><T>每周更新</T></div>
           </div>
-          <ul className="mt-2 space-y-1.5 text-[11px]" style={{ color: "#2E5238" }}>
-            {[
-              ["① 写作情绪刻画 · 12→18 分（最薄弱）", "+0.8 分/h", 1],
-              ["② 完形限时训练 · 慢 78 秒/题", "+0.6 分/h", 1],
-              ["③ 长难句拆解 · 嵌套 3 层正确率 38%", "+0.5 分/h", 0.7],
-              ["④ 听力短对话 · 已掌握度高", "+0.1 分/h", 0.45],
-            ].map(([label, roi, op]) => (
-              <li key={label as string} className="flex items-center justify-between gap-2" style={{ opacity: op as number }}>
-                <span className="truncate"><T>{label as string}</T></span>
-                <span className="rounded bg-white px-2 py-0.5 font-mono font-bold">{roi as string}</span>
-              </li>
-            ))}
-          </ul>
+          {roiList.length > 0 ? (
+            <ul className="mt-2 space-y-1.5 text-[11px]" style={{ color: "#2E5238" }}>
+              {roiList.map((r) => (
+                <li key={r.label} className="flex items-center justify-between gap-2" style={{ opacity: r.op }}>
+                  <span className="truncate"><T>{r.label}</T></span>
+                  <span className="rounded bg-white px-2 py-0.5 font-mono font-bold">{r.roi}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="mt-2 text-[11px]" style={{ color: "#2E5238" }}>
+              <T>{displayName}，做几套题后 AI 会算出你的提分性价比 →</T>
+            </div>
+          )}
           <div className="mt-2 text-[10px]" style={{ color: "#2E5238", opacity: 0.65 }}>
-            <T>ROI = (距目标分差 × 学习速度) ÷ 当前已掌握度 · 高三剩余时间最稀缺，按性价比下手最划算</T>
-          </div>
-        </div>
-
-        <div className="mt-3 grid grid-cols-3 gap-2 text-[11px]" style={{ color: NAVY }}>
-          <div className="rounded-lg border border-[#E7E1D2] bg-white p-2.5">
-            <div className="opacity-60">30 <T>天提分</T></div>
-            <div className="mt-0.5 text-[14px] font-bold">+8 <T>分</T></div>
-            <div className="opacity-55 text-[10px]">110 → 118</div>
-          </div>
-          <div className="rounded-lg border border-[#E7E1D2] bg-white p-2.5">
-            <div className="opacity-60"><T>AI 帮你跳过</T></div>
-            <div className="mt-0.5 text-[14px] font-bold">47 <span className="text-[10px] font-normal"><T>已掌握的重复题</T></span></div>
-            <div className="opacity-55 text-[10px]"><T>约省 3.2 小时</T></div>
-          </div>
-          <div className="rounded-lg border border-[#E7E1D2] bg-white p-2.5">
-            <div className="opacity-60">286 <T>知识点</T></div>
-            <div className="mt-0.5 text-[14px] font-bold"><T>已掌握 142</T> · 50%</div>
-            <div className="opacity-55 text-[10px]"><T>本周 +9 个</T></div>
+            <T>ROI = 距目标分差 ÷ 当前掌握度 · 高三剩余时间最稀缺</T>
           </div>
         </div>
       </section>

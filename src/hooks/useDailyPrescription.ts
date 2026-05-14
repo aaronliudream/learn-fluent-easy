@@ -1,4 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
 export type PrescriptionTask = {
@@ -25,6 +26,8 @@ export type DailyPrescription = {
 };
 
 async function invokePrescription(force: boolean): Promise<DailyPrescription | null> {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (!session) return null;
   const { data, error } = await supabase.functions.invoke("generate-daily-prescription", {
     body: { force_regenerate: force },
   });
@@ -33,10 +36,23 @@ async function invokePrescription(force: boolean): Promise<DailyPrescription | n
 }
 
 export function useDailyPrescription() {
+  const [hasSession, setHasSession] = useState<boolean | null>(null);
+  useEffect(() => {
+    let mounted = true;
+    supabase.auth.getSession().then(({ data }) => {
+      if (mounted) setHasSession(!!data.session);
+    });
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => {
+      setHasSession(!!s);
+    });
+    return () => { mounted = false; sub.subscription.unsubscribe(); };
+  }, []);
   return useQuery<DailyPrescription | null>({
     queryKey: ["daily-prescription"],
     queryFn: () => invokePrescription(false),
     staleTime: 30 * 60 * 1000,
+    enabled: hasSession === true,
+    retry: 1,
   });
 }
 

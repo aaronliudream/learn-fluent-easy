@@ -229,6 +229,13 @@ export default function LandingPage() {
             title: "AI 对话练习",
             desc: "24h 外教，随时开口",
             bg: "linear-gradient(160deg,#7B3FF1 0%,#ED3F8C 100%)"
+          },
+          {
+            to: "/levels",
+            emoji: "🎯",
+            title: "成人英语",
+            desc: "A1 → C2 · CEFR 六级",
+            bg: "linear-gradient(160deg,#6366F1 0%,#8B5CF6 100%)"
           }].
           map((c) =>
           <Link

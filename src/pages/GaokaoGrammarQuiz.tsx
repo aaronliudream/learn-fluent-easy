@@ -253,23 +253,120 @@ export default function GaokaoGrammarQuiz() {
       <div className="mt-5 flex items-center justify-end gap-2">
         {!showExplanation ? (
           <Button
-            disabled={!selectedAnswer}
-            onClick={() => {
+            disabled={!selectedAnswer || submitting}
+            onClick={async () => {
+              if (!selectedAnswer || !q || !bundle) return;
+              setSubmitting(true);
               setShowExplanation(true);
-              if (!isCorrect && q.id) {
-                supabase.functions
-                  .invoke("classify-mistake-cause", {
-                    body: {
-                      attempt_id: q.id,
-                      question_text: q.stem,
-                      correct_answer: q.correct_answer,
-                      user_answer: selectedAnswer,
-                      time_spent_seconds: 0,
-                      kp_id: bundle.kpId,
-                      skill_area: "grammar",
-                    },
+              const correct = selectedAnswer === q.correct_answer;
+              const timeSpent = Math.max(1, Math.round((Date.now() - startTsRef.current) / 1000));
+
+              try {
+                const { data: { user } } = await supabase.auth.getUser();
+                if (!user) {
+                  console.warn("Not logged in — skipping persistence");
+                  return;
+                }
+                const kpId = bundle.kpId;
+
+                // 1. attempt
+                const { data: attempt, error: attemptErr } = await supabase
+                  .from("gaokao_user_attempts")
+                  .insert({
+                    user_id: user.id,
+                    question_type: "grammar",
+                    question_id: q.id,
+                    user_answer: selectedAnswer,
+                    is_correct: correct,
+                    time_spent_seconds: timeSpent,
                   })
-                  .catch((e) => console.error("classify-mistake-cause failed:", e));
+                  .select()
+                  .single();
+                if (attemptErr) console.error("attempt insert failed:", attemptErr);
+
+                // 2. mistake row (only on wrong)
+                if (!correct) {
+                  const { error: mistakeErr } = await supabase.from("user_mistakes").insert({
+                    user_id: user.id,
+                    module: "gaokao_grammar",
+                    source_key: `grammar:${kpId}:${q.id}`,
+                    source_label: bundle.kpTitle,
+                    question: q.stem,
+                    user_answer: selectedAnswer,
+                    correct_answer: q.correct_answer,
+                    explanation: q.explanation,
+                    snapshot: {
+                      kp_id: kpId,
+                      kp_title: bundle.kpTitle,
+                      item_id: q.id,
+                      item_source: q.source || "original",
+                      options: {
+                        A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d,
+                      },
+                    },
+                  });
+                  if (mistakeErr) console.error("mistake insert failed:", mistakeErr);
+                }
+
+                // 3. classify-mistake-cause (fire-and-forget) on wrong
+                if (!correct && attempt?.id) {
+                  supabase.functions
+                    .invoke("classify-mistake-cause", {
+                      body: {
+                        attempt_id: attempt.id,
+                        question_text: q.stem,
+                        correct_answer: q.correct_answer,
+                        user_answer: selectedAnswer,
+                        time_spent_seconds: timeSpent,
+                        kp_id: kpId,
+                        skill_area: "grammar",
+                      },
+                    })
+                    .catch((e) => console.error("classify-mistake-cause failed:", e));
+                }
+
+                // 4. mastery upsert (item_type=grammar_kp, item_id=kpId)
+                const { data: existing } = await supabase
+                  .from("gaokao_user_mastery")
+                  .select("correct_count, wrong_count, mastery_level")
+                  .eq("user_id", user.id)
+                  .eq("item_type", "grammar_kp")
+                  .eq("item_id", kpId)
+                  .maybeSingle();
+
+                const cc = (existing?.correct_count || 0) + (correct ? 1 : 0);
+                const wc = (existing?.wrong_count || 0) + (correct ? 0 : 1);
+                const oldLevel = existing?.mastery_level ?? 0;
+                const newLevel = Math.max(0, Math.min(100, oldLevel + (correct ? 5 : -3)));
+
+                const { error: masteryErr } = await supabase
+                  .from("gaokao_user_mastery")
+                  .upsert(
+                    {
+                      user_id: user.id,
+                      item_type: "grammar_kp",
+                      item_id: kpId,
+                      correct_count: cc,
+                      wrong_count: wc,
+                      last_result: correct ? "correct" : "wrong",
+                      last_seen_at: new Date().toISOString(),
+                      mastery_level: newLevel,
+                    },
+                    { onConflict: "user_id,item_type,item_id" },
+                  );
+                if (masteryErr) console.error("mastery upsert failed:", masteryErr);
+
+                // 5. bump used_count on AI question
+                if (q.source === "ai_cache" || q.source === "ai_realtime") {
+                  await supabase
+                    .from("ai_generated_questions")
+                    .update({ used_count: (q.used_count || 0) + 1 })
+                    .eq("id", q.id);
+                }
+              } catch (e) {
+                console.error("submit persistence error:", e);
+              } finally {
+                setSubmitting(false);
               }
             }}
           >

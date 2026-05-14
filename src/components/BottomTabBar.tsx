@@ -184,6 +184,14 @@ const STAGES = [
     gradient: "from-[#F59E0B] via-[#EF4444] to-[#EC4899]",
     glow: "shadow-[0_0_40px_-8px_rgba(236,72,153,0.7)]",
   },
+  {
+    to: "/levels",
+    label: "成人英语",
+    sub: "Adult · CEFR A1 – C2",
+    glyph: "A",
+    gradient: "from-[#6366F1] via-[#8B5CF6] to-[#EC4899]",
+    glow: "shadow-[0_0_40px_-8px_rgba(139,92,246,0.7)]",
+  },
 ];
 
 function CoursesPopover({ open, onClose }: { open: boolean; onClose: () => void }) {

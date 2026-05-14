@@ -241,10 +241,10 @@ type GradePageProps = {
   regenPending?: boolean;
 };
 
-function RxBlock({ tasks, rxLoading, rxError, guidance, onRegen, regenPending, fallback }: {
+function RxBlock({ tasks, rxLoading, rxError, guidance, onRegen, regenPending, fallback, currentYearBand }: {
   tasks?: PrescriptionTask[]; rxLoading?: boolean; rxError?: boolean;
   guidance?: string; onRegen?: () => void; regenPending?: boolean;
-  fallback: React.ReactNode;
+  fallback: React.ReactNode; currentYearBand?: string;
 }) {
   const navigate = useNavigate();
   if (rxLoading) return <div className="mt-3 h-32 animate-pulse rounded-xl bg-black/5" />;

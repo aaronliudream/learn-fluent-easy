@@ -359,7 +359,7 @@ function Grade1Page({ streak, coins, pet, displayName, tasks, weekly, days, kpSt
             <T>今日 AI 处方</T>
           </div>
         </div>
-        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending}
+        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending} currentYearBand="1"
           fallback={
             <div className="mt-3 space-y-2">
               <TaskCard num={1} title="学习 · 现在完成时 (have done)" sub="微课 3 分钟 → 规则卡 → 5 道引导题 → 评估" meta="15 分钟" coin={20} active onClick={() => navigate(`/gaokao/grammar?grade=1`)} />

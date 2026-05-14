@@ -336,6 +336,11 @@ export default function GaokaoGrammarQuiz() {
 
       {/* 题干 */}
       <section className="rounded-2xl border bg-card p-5 sm:p-6">
+        {q.is_ai && (
+          <span className="mb-2 inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary">
+            🤖 AI 实时生成
+          </span>
+        )}
         <p className="mb-5 text-base font-medium leading-relaxed sm:text-lg">{q.stem}</p>
         <div className="space-y-2.5">
           {(["A", "B", "C", "D"] as const).map((letter) => {

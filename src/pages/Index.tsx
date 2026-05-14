@@ -78,7 +78,7 @@ const Index = () => {
     return <LandingPage />;
   }
 
-  const sections = [
+const sections = [
     {
       to: "/slang",
       icon: Zap,
@@ -86,6 +86,14 @@ const Index = () => {
       title: "347 条地道俚语",
       desc: "从 'rizz' 到 'spill the tea'，认 / 听 / 想 / 用 四维掌握。",
       gradient: "from-rose-500 via-orange-500 to-amber-500",
+    },
+    {
+      to: "/levels",
+      icon: Award,
+      eyebrow: "Adult English",
+      title: "成人英语",
+      desc: "A1 → C2 六个级别系统课程，从入门到精通，按 CEFR 标准循序渐进。",
+      gradient: "from-indigo-500 via-violet-500 to-purple-500",
     },
     {
       to: "/leaderboard",

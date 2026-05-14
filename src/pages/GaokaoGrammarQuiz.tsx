@@ -283,7 +283,7 @@ export default function GaokaoGrammarQuiz() {
             <div className={`mb-2 font-bold ${isCorrect ? "text-green-600" : "text-red-600"}`}>
               {isCorrect ? "✓ 答对了" : `✗ 正确答案是 ${q.correct_answer}`}
             </div>
-            <p className="whitespace-pre-wrap text-sm leading-relaxed text-foreground/90">{q.explanation}</p>
+            <FormattedExplanation text={q.explanation} correct={q.correct_answer} />
           </div>
         )}
       </Card>

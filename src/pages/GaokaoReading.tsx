@@ -105,8 +105,10 @@ const STATUS_FILTERS: {k: ArticleStatus | "all";label: string;dot: string;}[] = 
 
 export default function GaokaoReading() {
   const [sp] = useSearchParams();
-  const gradeParam = sp.get("grade");
-  const gradeNum = gradeParam ? Number(gradeParam) : null;
+  const yearBandParam = sp.get("year_band") || sp.get("grade");
+  const gradeNum = yearBandParam ? Number(yearBandParam) : null;
+  const yearBandKey: GradeBand | null =
+    gradeNum === 1 ? "g1" : gradeNum === 2 ? "g2" : gradeNum === 3 ? "g3" : null;
   const [tab, setTab] = useState<GradeBand | null>(null);
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
@@ -121,11 +123,13 @@ export default function GaokaoReading() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const { data } = await supabase.
+      let q = supabase.
       from("gaokao_reading_articles").
       select("id, grade_band, sub_band, title, word_count, recommended_minutes, difficulty, cefr_level, genre_label, specific_topic, topic_group, theme_context, lexile_score").
       eq("is_published", true).
       order("sort_order");
+      if (yearBandKey) q = q.eq("grade_band", yearBandKey);
+      const { data } = await q;
       setArticles((data ?? []) as Article[]);
       setLoading(false);
 
@@ -277,6 +281,18 @@ export default function GaokaoReading() {
       {gradeNum &&
       <ModuleStageTests segment="gaokao" grade={gradeNum} module="reading" />
       }
+      {yearBandKey && (
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-bold text-primary">
+          <span>{gradeNum === 1 ? "高一" : gradeNum === 2 ? "高二" : "高三"}</span>
+          <span className="opacity-70"><T>阅读池</T></span>
+        </div>
+      )}
+      {yearBandKey && !loading && articles.length < 5 && (
+        <div className="mb-4 rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-800 dark:border-amber-700/40 dark:bg-amber-950/30 dark:text-amber-200">
+          📚 <T>当前年级文章池较小（</T>{articles.length}<T>篇）。可使用 AI 实时生成高质量阅读 →</T>
+          <Link to="/gaokao/exam" className="ml-2 font-bold underline"><T>去 AI 题型工坊</T></Link>
+        </div>
+      )}
 
       {/* ============= 继续阅读 Hero ============= */}
       {continueCard &&

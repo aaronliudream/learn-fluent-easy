@@ -97,11 +97,12 @@ function PetBar({ pet }: { pet: { nickname?: string; level?: number; species_id?
 
 function PracticeChips({ grade }: { grade: GradeKey }) {
   const navigate = useNavigate();
+  const yb = `?year_band=${grade}`;
   const chips: { label: string; to: string }[] = [
-    { label: grade === "1" ? "单元同步学习" : "AI 题型工坊", to: `/gaokao/grammar?grade=${grade}` },
-    { label: grade === "3" ? "AI 模拟卷生成" : "期中模拟", to: "/gaokao/exam" },
-    { label: "错题智能重组", to: "/gaokao/mistakes" },
-    { label: grade === "3" ? "3500 词情境记忆" : "3500 词从零开始", to: `/gaokao/vocab?grade=${grade}` },
+    { label: grade === "1" ? "单元同步学习" : "AI 题型工坊", to: `/gaokao/grammar${yb}` },
+    { label: grade === "3" ? "AI 模拟卷生成" : "期中模拟", to: `/gaokao/exam${yb}` },
+    { label: "错题智能重组", to: `/gaokao/g/${grade}/mistakes` },
+    { label: grade === "3" ? "3500 词情境记忆" : "3500 词从零开始", to: `/gaokao/vocab${yb}` },
   ];
   return (
     <div className="mt-5">
@@ -240,10 +241,10 @@ type GradePageProps = {
   regenPending?: boolean;
 };
 
-function RxBlock({ tasks, rxLoading, rxError, guidance, onRegen, regenPending, fallback }: {
+function RxBlock({ tasks, rxLoading, rxError, guidance, onRegen, regenPending, fallback, currentYearBand }: {
   tasks?: PrescriptionTask[]; rxLoading?: boolean; rxError?: boolean;
   guidance?: string; onRegen?: () => void; regenPending?: boolean;
-  fallback: React.ReactNode;
+  fallback: React.ReactNode; currentYearBand?: string;
 }) {
   const navigate = useNavigate();
   if (rxLoading) return <div className="mt-3 h-32 animate-pulse rounded-xl bg-black/5" />;
@@ -259,14 +260,7 @@ function RxBlock({ tasks, rxLoading, rxError, guidance, onRegen, regenPending, f
     </div>
   );
   if (!tasks || tasks.length === 0) return <>{fallback}</>;
-  const skillRoute = (s?: string) => {
-    if (s === "vocab") return "/gaokao/vocab";
-    if (s === "reading") return "/gaokao/reading";
-    if (s === "cloze") return "/gaokao/cloze";
-    if (s === "writing") return "/gaokao/exam";
-    if (s === "listening") return "/gaokao/exam";
-    return "/gaokao/grammar";
-  };
+  // Routing handled inline below to include year_band + kp_id
   const typeLabel = (t: string) => t === "learn" ? "学习" : t === "breakthrough" ? "突破" : t === "consolidate" ? "巩固" : "复习";
   return (
     <div className="mt-3 space-y-2">
@@ -279,7 +273,22 @@ function RxBlock({ tasks, rxLoading, rxError, guidance, onRegen, regenPending, f
           meta={`${t.est_minutes} 分钟`}
           coin={t.est_coins}
           active={i === 0}
-          onClick={() => navigate(skillRoute(t.skill_area))}
+          onClick={() => {
+            const routeMap: Record<string, string> = {
+              grammar: "/gaokao/grammar",
+              reading: "/gaokao/reading",
+              vocab: "/gaokao/vocab",
+              cloze: "/gaokao/cloze",
+              listening: "/gaokao/exam",
+              writing: "/gaokao/exam",
+            };
+            const path = routeMap[t.skill_area || ""] || "/gaokao/grammar";
+            const params = new URLSearchParams();
+            if (currentYearBand) params.set("year_band", currentYearBand);
+            if (t.kp_id) params.set("kp_id", t.kp_id);
+            if (t.type) params.set("task_type", t.type);
+            navigate(`${path}?${params.toString()}`);
+          }}
         />
       ))}
       {onRegen && (
@@ -350,7 +359,7 @@ function Grade1Page({ streak, coins, pet, displayName, tasks, weekly, days, kpSt
             <T>今日 AI 处方</T>
           </div>
         </div>
-        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending}
+        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending} currentYearBand="1"
           fallback={
             <div className="mt-3 space-y-2">
               <TaskCard num={1} title="学习 · 现在完成时 (have done)" sub="微课 3 分钟 → 规则卡 → 5 道引导题 → 评估" meta="15 分钟" coin={20} active onClick={() => navigate(`/gaokao/grammar?grade=1`)} />
@@ -450,7 +459,7 @@ function Grade2Page({
             <T>今日 AI 处方</T>
           </div>
         </div>
-        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending}
+        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending} currentYearBand="2"
           fallback={
             <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-[#FAF8F1] p-4 text-[12px]" style={{ color: NAVY }}>
               <T>做几道题后 AI 会为你定制处方 →</T>
@@ -595,7 +604,7 @@ function Grade3Page({
             <T>今日 AI 处方</T>
           </div>
         </div>
-        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending}
+        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending} currentYearBand="3"
           fallback={
             <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-[#FAF8F1] p-4 text-[12px]" style={{ color: NAVY }}>
               <T>今日任务正在生成… 完成入门快测后即出处方</T>

@@ -1,6 +1,6 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, BookOpenCheck, Clock, Target, ChevronRight, CheckCircle2, AlertCircle, BookMarked, Lock, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
@@ -32,6 +32,9 @@ const GROUP_COLOR: Record<string, string> = {
 };
 
 export default function GaokaoCloze() {
+  const [sp] = useSearchParams();
+  const yearBandParam = sp.get("year_band") || sp.get("grade");
+  const gradeNum = yearBandParam ? Number(yearBandParam) : null;
   const [list, setList] = useState<Passage[]>([]);
   const [stats, setStats] = useState<Record<string, SessionStat>>({});
   const [mistakeCount, setMistakeCount] = useState(0);
@@ -41,11 +44,13 @@ export default function GaokaoCloze() {
 
   useEffect(() => {
     (async () => {
-      const { data: passages } = await supabase.
+      let pq = supabase.
       from("gaokao_cloze_passages").
       select("id, passage_no, title, topic, topic_group, genre, difficulty, word_count, blank_count, recommended_minutes, source_book_label").
       eq("is_published", true).
       order("sort_order");
+      if (gradeNum) pq = pq.eq("year_band", gradeNum);
+      const { data: passages } = await pq;
       setList((passages || []) as Passage[]);
 
       const { data: { user } } = await supabase.auth.getUser();
@@ -166,6 +171,18 @@ export default function GaokaoCloze() {
         <ArrowLeft className="size-4" /> <T>返回高考英语</T>
       </BackLink>
       <PageHeader back="/gaokao" title="完形填空" subtitle="高一基础册 · 16 篇话题精讲（已上线 6 篇，更多陆续添加）" hideReviewBanner />
+      {gradeNum && (
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-bold text-primary">
+          <span>{gradeNum === 1 ? "高一" : gradeNum === 2 ? "高二" : "高三"}</span>
+          <span className="opacity-70"><T>完形池</T></span>
+        </div>
+      )}
+      {gradeNum && !loading && list.length < 5 && (
+        <div className="mb-4 rounded-xl border border-amber-300 bg-amber-50 p-3 text-xs text-amber-800 dark:border-amber-700/40 dark:bg-amber-950/30 dark:text-amber-200">
+          📚 <T>当前年级文章池较小（</T>{list.length}<T>篇）。可使用 AI 实时生成 →</T>
+          <Link to="/gaokao/exam" className="ml-2 font-bold underline"><T>去 AI 题型工坊</T></Link>
+        </div>
+      )}
 
       <Link
         to="/gaokao/mistakes"

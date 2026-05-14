@@ -55,8 +55,9 @@ const FREQ_LABEL: Record<string, string> = { high: "高频", medium: "中频", l
 
 export default function GaokaoGrammar() {
   const [searchParams] = useSearchParams();
-  const gradeParam = searchParams.get("grade");
-  const gradeNum = gradeParam ? Number(gradeParam) : null;
+  const yearBandParam = searchParams.get("year_band") || searchParams.get("grade");
+  const gradeNum = yearBandParam ? Number(yearBandParam) : null;
+  const kpIdParam = searchParams.get("kp_id");
   const [modules, setModules] = useState<Module[]>([]);
   const [cats, setCats] = useState<Category[]>([]);
   const [points, setPoints] = useState<Point[]>([]);
@@ -82,6 +83,13 @@ export default function GaokaoGrammar() {
       for (const r of all) map[r.item_id] = r;
       setMastery(map);
       setLoading(false);
+      // If kp_id passed from prescription, jump straight to that point
+      if (kpIdParam) {
+        const target = (ps ?? []).find((p: any) => p.id === kpIdParam) as Point | undefined;
+        if (target?.slug) {
+          window.location.assign(`/gaokao/grammar/${target.slug}/quiz`);
+        }
+      }
     })();
   }, []);
 
@@ -186,6 +194,12 @@ export default function GaokaoGrammar() {
         <ArrowLeft className="size-4" /> <T>返回高考英语</T>
       </BackLink>
       <PageHeader back="/gaokao" hideReviewBanner title="语法考点" subtitle="按掌握度学习 · 间隔复习 · 错因分析" />
+      {gradeNum && (
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-bold text-primary">
+          <span>{gradeNum === 1 ? "高一" : gradeNum === 2 ? "高二" : "高三"}</span>
+          <span className="opacity-70"><T>语法考点</T></span>
+        </div>
+      )}
 
       {gradeNum &&
       <ModuleStageTests segment="gaokao" grade={gradeNum} module="grammar" />

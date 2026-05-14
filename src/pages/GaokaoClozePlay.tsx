@@ -478,9 +478,6 @@ export default function GaokaoClozePlay() {
               <Link to="/gaokao/mistakes" className="inline-flex items-center gap-1 rounded-xl border border-border px-3 py-2.5 text-sm">
                 <BookMarked className="size-4" /> <T>错题本</T>
               </Link>
-              <BackLink to="/gaokao/cloze" className="inline-flex items-center justify-center rounded-xl border border-border px-3 py-2.5 text-sm">
-                <T>← 返回</T>
-              </BackLink>
               <Link to="/gaokao/cloze" className="flex flex-1 items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground">
                 <T>下一篇 →</T>
               </Link>

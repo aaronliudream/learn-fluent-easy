@@ -197,7 +197,8 @@ export default function GaokaoGrammar() {
       <PageHeader back="/gaokao" hideReviewBanner title="语法考点" subtitle="按掌握度学习 · 间隔复习 · 错因分析" />
       {gradeNum && (
         <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-bold text-primary">
-          <T>高{gradeNum === 1 ? "一" : gradeNum === 2 ? "二" : "三"}</T> <span className="opacity-70"><T>语法考点</T></span>
+          <span>{gradeNum === 1 ? "高一" : gradeNum === 2 ? "高二" : "高三"}</span>
+          <span className="opacity-70"><T>语法考点</T></span>
         </div>
       )}
 

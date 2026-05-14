@@ -116,6 +116,18 @@ export default function GaokaoReadingPlay() {
       userAnswer: letter,
       isCorrect: ok
     });
+    if (!ok) {
+      supabase.functions.invoke("classify-mistake-cause", {
+        body: {
+          question_text: q.stem,
+          correct_answer: q.correct_answer,
+          user_answer: letter,
+          time_spent_seconds: Math.round(ms / 1000),
+          kp_id: (q as any).point_id || null,
+          skill_area: "reading",
+        },
+      }).catch((e) => console.error("classify-mistake-cause failed:", e));
+    }
     recordUnifiedAttempt({
       stage: "senior",
       grade: 10,

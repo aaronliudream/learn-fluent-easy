@@ -123,11 +123,13 @@ export default function GaokaoReading() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const { data } = await supabase.
+      let q = supabase.
       from("gaokao_reading_articles").
       select("id, grade_band, sub_band, title, word_count, recommended_minutes, difficulty, cefr_level, genre_label, specific_topic, topic_group, theme_context, lexile_score").
       eq("is_published", true).
       order("sort_order");
+      if (yearBandKey) q = q.eq("grade_band", yearBandKey);
+      const { data } = await q;
       setArticles((data ?? []) as Article[]);
       setLoading(false);
 

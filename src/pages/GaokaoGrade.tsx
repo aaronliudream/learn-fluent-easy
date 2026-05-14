@@ -223,8 +223,97 @@ function useGradeData() {
 
 /* ------------ G1 page ------------ */
 
-function Grade1Page({ streak, coins, pet }: { streak: number; coins: number; pet: any }) {
+type GradePageProps = {
+  streak: number; coins: number; pet: any;
+  displayName?: string;
+  tasks?: PrescriptionTask[];
+  weekly?: Array<{ kp_id: string; kp_title: string; skill_area?: string }>;
+  weakTop3?: Array<{ kp_id: string; kp_title: string; mastery?: number; skill_area?: string }>;
+  days?: Record<string, number>;
+  kpStats?: { total: number; mastered: number; this_week_new: number };
+  dims?: Record<string, { score: number; max: number; mastery_pct: number }>;
+  targetScore?: number;
+  rxLoading?: boolean;
+  rxError?: boolean;
+  guidance?: string;
+  onRegen?: () => void;
+  regenPending?: boolean;
+};
+
+function RxBlock({ tasks, rxLoading, rxError, guidance, onRegen, regenPending, fallback }: {
+  tasks?: PrescriptionTask[]; rxLoading?: boolean; rxError?: boolean;
+  guidance?: string; onRegen?: () => void; regenPending?: boolean;
+  fallback: React.ReactNode;
+}) {
   const navigate = useNavigate();
+  if (rxLoading) return <div className="mt-3 h-32 animate-pulse rounded-xl bg-black/5" />;
+  if (rxError) return (
+    <div className="mt-3 rounded-xl border border-red-200 bg-red-50 p-3 text-[12px] text-red-700">
+      <T>处方加载失败</T>
+      {onRegen && <button onClick={onRegen} className="ml-2 underline"><T>重试</T></button>}
+    </div>
+  );
+  if (guidance) return (
+    <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-[#FBEDE3] p-4 text-[12px]" style={{ color: NAVY }}>
+      💡 {guidance}
+    </div>
+  );
+  if (!tasks || tasks.length === 0) return <>{fallback}</>;
+  const skillRoute = (s?: string) => {
+    if (s === "vocab") return "/gaokao/vocab";
+    if (s === "reading") return "/gaokao/reading";
+    if (s === "cloze") return "/gaokao/cloze";
+    if (s === "writing") return "/gaokao/exam";
+    if (s === "listening") return "/gaokao/exam";
+    return "/gaokao/grammar";
+  };
+  const typeLabel = (t: string) => t === "learn" ? "学习" : t === "breakthrough" ? "突破" : t === "consolidate" ? "巩固" : "复习";
+  return (
+    <div className="mt-3 space-y-2">
+      {tasks.slice(0, 3).map((t, i) => (
+        <TaskCard
+          key={t.kp_id || i}
+          num={i + 1}
+          title={`${typeLabel(t.type)} · ${t.kp_title}`}
+          sub={t.why_this || `掌握度 ${t.mastery_before}% → 预计 ${t.mastery_after_estimated}%`}
+          meta={`${t.est_minutes} 分钟`}
+          coin={t.est_coins}
+          active={i === 0}
+          onClick={() => navigate(skillRoute(t.skill_area))}
+        />
+      ))}
+      {onRegen && (
+        <button onClick={onRegen} disabled={regenPending}
+          className="mt-1 text-[11px] underline" style={{ color: NAVY, opacity: 0.6 }}>
+          {regenPending ? <T>生成中…</T> : <T>换一组 ↻</T>}
+        </button>
+      )}
+    </div>
+  );
+}
+
+function WeeklyChips({ weekly, fallback }: { weekly?: Array<{ kp_title: string }>; fallback: string[] }) {
+  const items = weekly && weekly.length > 0 ? weekly.slice(0, 3).map(w => w.kp_title) : fallback;
+  return (
+    <div className="mt-1 space-y-1">
+      {items.map((k, i) => (
+        <div key={k + i} className="flex items-center gap-1">
+          <span className="rounded-sm bg-white/20 px-1.5 py-0.5 text-[9px] font-bold">
+            <T>{i === 0 ? "今日" : "本周"}</T>
+          </span>
+          <span className="text-[10px] truncate"><T>{k}</T></span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Grade1Page({ streak, coins, pet, displayName, tasks, weekly, days, kpStats, rxLoading, rxError, guidance, onRegen, regenPending }: GradePageProps) {
+  const navigate = useNavigate();
+  const finalsDays = days?.finals ?? 42;
+  const mastered = kpStats?.mastered ?? 0;
+  const total = kpStats?.total ?? 0;
+  const thisWeek = kpStats?.this_week_new ?? 0;
   return (
     <>
       <GradeHeader grade="1" streak={streak} coins={coins} />
@@ -242,21 +331,12 @@ function Grade1Page({ streak, coins, pet }: { streak: number; coins: number; pet
           </div>
           <div>
             <div className="opacity-75"><T>距期末</T></div>
-            <div className="mt-1 text-[22px] font-bold leading-none">42<span className="text-[12px] ml-0.5"><T>天</T></span></div>
+            <div className="mt-1 text-[22px] font-bold leading-none">{finalsDays}<span className="text-[12px] ml-0.5"><T>天</T></span></div>
             <div className="mt-1 opacity-70"><T>每周目标 4 个新点</T></div>
           </div>
           <div>
             <div className="opacity-75"><T>本周新知重点</T></div>
-            <div className="mt-1 space-y-1">
-              {["现在完成时", "there be 句型", "情态推测"].map((k, i) => (
-                <div key={k} className="flex items-center gap-1">
-                  <span className="rounded-sm bg-white/20 px-1.5 py-0.5 text-[9px] font-bold">
-                    <T>{i === 0 ? "今日" : "本周"}</T>
-                  </span>
-                  <span className="text-[10px] truncate"><T>{k}</T></span>
-                </div>
-              ))}
-            </div>
+            <WeeklyChips weekly={weekly} fallback={["现在完成时", "there be 句型", "情态推测"]} />
           </div>
         </div>
       </section>
@@ -266,19 +346,16 @@ function Grade1Page({ streak, coins, pet }: { streak: number; coins: number; pet
         <div className="flex items-baseline justify-between">
           <div className="text-[14px] font-bold" style={{ color: NAVY }}>
             <T>今日 AI 处方</T>
-            <span className="ml-2 text-[10px] font-normal opacity-60">
-              <T>30 分钟 · 学 1 新 + 巩固 1 旧 · 🪙 ×35</T>
-            </span>
           </div>
-          <button className="text-[11px]" style={{ color: NAVY, opacity: 0.6 }}>
-            <T>换一组 ↻</T>
-          </button>
         </div>
-        <div className="mt-3 space-y-2">
-          <TaskCard num={1} title="学习 · 现在完成时 (have done)" sub="微课 3 分钟 → 规则卡 → 5 道引导题 → 评估" meta="15 分钟" coin={20} active onClick={() => navigate(`/gaokao/grammar?grade=1`)} />
-          <TaskCard num={2} title="突破 · 一般过去时易错点" sub="上周学过你错了 2 道，掌握度 52% · 完成后 70%+" meta="10 分钟" coin={10} onClick={() => navigate(`/gaokao/grammar?grade=1`)} />
-          <TaskCard num={3} title="复习 · 8 个词到了遗忘节点" sub="两周前掌握的高频词 · 不复习预计 2 天遗忘" meta="5 分钟" coin={5} onClick={() => navigate(`/gaokao/vocab?grade=1&mode=srs`)} />
-        </div>
+        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending}
+          fallback={
+            <div className="mt-3 space-y-2">
+              <TaskCard num={1} title="学习 · 现在完成时 (have done)" sub="微课 3 分钟 → 规则卡 → 5 道引导题 → 评估" meta="15 分钟" coin={20} active onClick={() => navigate(`/gaokao/grammar?grade=1`)} />
+              <TaskCard num={2} title="突破 · 一般过去时易错点" sub="上周学过你错了 2 道，掌握度 52% · 完成后 70%+" meta="10 分钟" coin={10} onClick={() => navigate(`/gaokao/grammar?grade=1`)} />
+              <TaskCard num={3} title="复习 · 8 个词到了遗忘节点" sub="两周前掌握的高频词 · 不复习预计 2 天遗忘" meta="5 分钟" coin={5} onClick={() => navigate(`/gaokao/vocab?grade=1&mode=srs`)} />
+            </div>
+          } />
       </section>
 
       {/* Knowledge map */}
@@ -292,9 +369,9 @@ function Grade1Page({ streak, coins, pet }: { streak: number; coins: number; pet
           </div>
         </div>
         <div className="mt-3 grid grid-cols-5 gap-2">
-          <StatBox label="已学" value="12" sub="本周 +3" />
-          <StatBox label="本周学" value="3" sub="进行中" />
-          <StatBox label="待学" value="80" sub="高一余 80" highlight />
+          <StatBox label="已学" value={String(mastered)} sub={`本周 +${thisWeek}`} />
+          <StatBox label="本周学" value={String(thisWeek)} sub="进行中" />
+          <StatBox label="待学" value={String(Math.max(0, total - mastered))} sub={`总 ${total}`} highlight />
           <StatBox label="词汇" value="412" sub="/3500 高频核心" />
           <StatBox label="连续" value={`${streak}`} sub="🔥" />
         </div>
@@ -304,8 +381,7 @@ function Grade1Page({ streak, coins, pet }: { streak: number; coins: number; pet
           style={{ background: "#EFEAFB", borderColor: "#D6CDF1" }}
         >
           <div className="text-[12px] font-bold" style={{ color: "#4A3E8C" }}>
-            <T>小明，你还在打基础阶段</T>
-            {/* TODO: 等 AI 处方引擎 prompt 后替换学生姓名 + 阶段判断 */}
+            {displayName}<T>，你还在打基础阶段</T>
           </div>
           <div className="mt-1 text-[11px] leading-relaxed" style={{ color: "#4A3E8C", opacity: 0.85 }}>
             <T>这里不和你聊高考分数——先把高一这学期的 23 个核心知识点稳稳学会。AI 会按你的节奏推内容，遇到难的我们慢下来。</T>

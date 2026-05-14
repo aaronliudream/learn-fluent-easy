@@ -193,7 +193,7 @@ export default function CohortMeaningSession({
       <div className="rounded-3xl border-2 border-fuchsia-300 bg-gradient-to-br from-fuchsia-50 via-rose-50 to-amber-50 p-6 shadow-sm dark:from-fuchsia-950/30 dark:via-rose-950/20 dark:to-amber-950/20 dark:border-fuchsia-700/40">
         <div className="text-center">
           <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-fuchsia-600 dark:text-fuchsia-400">
-            <T>步骤 ③「义」· {q.kind === "en2cn" ? "英 → 中" : "中 → 英"}</T>
+            <T>步骤 ③「义」</T> · {q.kind === "en2cn" ? <T>英 → 中</T> : <T>中 → 英</T>}
           </div>
           <div className="mt-4 flex items-center justify-center gap-2">
             <p className="text-2xl font-extrabold tracking-tight text-foreground md:text-3xl">

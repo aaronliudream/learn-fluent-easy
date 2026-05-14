@@ -44,6 +44,7 @@ const Talk = lazy(() => import("./pages/Talk.tsx"));
 const Gaokao = lazy(() => import("./pages/Gaokao.tsx"));
 const GaokaoGrade = lazy(() => import("./pages/GaokaoGrade.tsx"));
 const GaokaoExam = lazy(() => import("./pages/GaokaoExam.tsx"));
+const GaokaoDeepDiagnosis = lazy(() => import("./pages/GaokaoDeepDiagnosis.tsx"));
 const China = lazy(() => import("./pages/China.tsx"));
 const Primary = lazy(() => import("./pages/Primary.tsx"));
 const PrimaryLetters = lazy(() => import("./pages/PrimaryLetters.tsx"));

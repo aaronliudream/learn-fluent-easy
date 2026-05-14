@@ -66,6 +66,8 @@ function GradeHeader({ grade, streak, coins }: { grade: GradeKey; streak: number
 }
 
 function PetBar({ pet }: { pet: { nickname?: string; level?: number; species_id?: string } | null }) {
+  const exp = (pet as any)?.exp ?? 0;
+  const expToNext = Math.max(0, 100 - (exp % 100));
   return (
     <div className="mt-6 flex items-center justify-between rounded-xl border border-[#E7E1D2] bg-white p-3">
       <div className="flex items-center gap-3">
@@ -81,8 +83,11 @@ function PetBar({ pet }: { pet: { nickname?: string; level?: number; species_id?
             {pet?.nickname || <T>小鸡</T>} · Lv.{pet?.level ?? 2}
           </div>
           <div className="text-[11px]" style={{ color: NAVY, opacity: 0.6 }}>
-            <T>还差 30 经验升级 · 今日陪学 8 分钟</T>
-            {/* TODO: 等宠物经验/陪学时长接入后填充真实数据 */}
+            {pet ? (
+              <>还差 {expToNext} 经验升级</>
+            ) : (
+              <T>领养宠物后开始陪学</T>
+            )}
           </div>
         </div>
       </div>

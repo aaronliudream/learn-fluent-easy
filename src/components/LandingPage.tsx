@@ -177,9 +177,9 @@ export default function LandingPage() {
             <T>陪伴中国孩子真正走进英语世界</T>
           </div>
           <h1 className="mt-3 font-serif text-4xl font-black leading-[1.05] tracking-tight md:text-6xl">
-            <T>考好分数</T>
+            <T>考试要拿分</T>
             <br />
-            <T>用好英语</T>
+            <T>英语要会用</T>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-sm text-[#5A5A5A] md:text-base">
             <T>对照最新中考高考要求 · 同步最新大纲要求 — 让应试和能力同时长进。</T>

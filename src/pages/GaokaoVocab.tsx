@@ -316,6 +316,8 @@ export default function GaokaoVocab() {
   const [params, setParams] = useSearchParams();
   const groupParam = params.get("group");
   const mode = params.get("mode"); // "srs" for smart review
+  const yearBandParam = params.get("year_band") || params.get("grade");
+  const yearBand = yearBandParam ? Number(yearBandParam) : null;
   const groupIdx = groupParam ? parseInt(groupParam, 10) - 1 : -1;
 
   const [allVocab, setAllVocab] = useState<Vocab[]>([]);
@@ -326,16 +328,25 @@ export default function GaokaoVocab() {
       // 🇨🇳 仅取「中国高中生必须掌握」的核心高考词汇（教育部新课标 3500 词，gaokao_level 1-3）
       // 排除 level 4 拓展/超纲词；并剔除小学/初中阶段已掌握词，避免重复
       const [{ data: gk }, { data: pri }, { data: jr }] = await Promise.all([
-        supabase
-          .from("gaokao_vocab")
-          .select("*")
-          .lte("gaokao_level", 3)
-          .not("gaokao_level", "is", null)
-          .order("freq_rank", { ascending: true, nullsFirst: false })
-          .order("exam_frequency", { ascending: false, nullsFirst: false })
-          .order("star_level", { ascending: false, nullsFirst: false })
-          .order("word", { ascending: true })
-          .range(0, 4999),
+        (yearBand
+          ? supabase
+              .from("gaokao_vocab")
+              .select("*")
+              .eq("year_band", yearBand)
+              .order("freq_rank", { ascending: true, nullsFirst: false })
+              .order("exam_frequency", { ascending: false, nullsFirst: false })
+              .order("word", { ascending: true })
+              .range(0, 4999)
+          : supabase
+              .from("gaokao_vocab")
+              .select("*")
+              .lte("gaokao_level", 3)
+              .not("gaokao_level", "is", null)
+              .order("freq_rank", { ascending: true, nullsFirst: false })
+              .order("exam_frequency", { ascending: false, nullsFirst: false })
+              .order("star_level", { ascending: false, nullsFirst: false })
+              .order("word", { ascending: true })
+              .range(0, 4999)),
         supabase.from("primary_vocab").select("word").range(0, 9999),
         supabase.from("junior_vocab").select("word").range(0, 9999),
       ]);
@@ -353,7 +364,7 @@ export default function GaokaoVocab() {
       setAllVocab(filtered);
       setLoading(false);
     })();
-  }, []);
+  }, [yearBand]);
 
   // 默认 = 高频优先组（学生一进来就在学最该学的词）
   const groups = useMemo(() => {

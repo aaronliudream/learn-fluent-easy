@@ -26,6 +26,44 @@ interface QuizBundle {
   questions: Question[];
 }
 
+function isEnglishHeavy(text?: string | null) {
+  const value = (text || "").trim();
+  if (!value) return false;
+  const chineseChars = (value.match(/[\u4e00-\u9fff]/g) || []).length;
+  const englishChars = (value.match(/[A-Za-z]/g) || []).length;
+  return chineseChars < 20 && englishChars > 80 && englishChars > chineseChars * 3;
+}
+
+function chineseFallbackExplanation(q: Question, kpTitle: string) {
+  const correctOption = q[`option_${q.correct_answer.toLowerCase()}` as keyof Question] as string | undefined;
+  return `本题考查「${kpTitle}」。正确答案是 ${q.correct_answer}${correctOption ? `：“${correctOption}”` : ""}。做题时先看句子语境和关键词，再判断名词单复数、固定搭配或语法形式是否一致。你选择的选项不符合这里的语法/语义要求。下面保留原英文解析供对照：\n${q.explanation || ""}`;
+}
+
+async function withChineseFriendlyExplanations(questions: Question[], kpTitle: string): Promise<Question[]> {
+  const needTranslation = questions.filter((q) => isEnglishHeavy(q.explanation));
+  if (needTranslation.length === 0) return questions;
+
+  try {
+    const { data, error } = await supabase.functions.invoke("translate", {
+      body: {
+        sourceLanguage: "English",
+        targetLanguage: "Simplified Chinese for Chinese Gaokao students; keep English words/phrases in quotes",
+        items: needTranslation.map((q) => ({ key: q.id, text: q.explanation })),
+      },
+    });
+    if (error) throw error;
+    const translations = (data?.translations || {}) as Record<string, string>;
+    return questions.map((q) => {
+      if (!isEnglishHeavy(q.explanation)) return q;
+      const translated = translations[q.id];
+      return { ...q, explanation: translated && !isEnglishHeavy(translated) ? translated : chineseFallbackExplanation(q, kpTitle) };
+    });
+  } catch (e) {
+    console.error("Chinese explanation normalization failed:", e);
+    return questions.map((q) => isEnglishHeavy(q.explanation) ? { ...q, explanation: chineseFallbackExplanation(q, kpTitle) } : q);
+  }
+}
+
 export default function GaokaoGrammarQuiz() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -106,7 +144,7 @@ export default function GaokaoGrammarQuiz() {
             .catch((e) => console.error("generate-question-for-kp prewarm failed:", e));
         }
 
-        return { kpId, kpTitle, questions: combined };
+        return { kpId, kpTitle, questions: await withChineseFriendlyExplanations(combined, kpTitle) };
       }
 
       const { data: gen, error: genErr } = await supabase.functions.invoke("generate-question-for-kp", {
@@ -130,7 +168,7 @@ export default function GaokaoGrammarQuiz() {
 
       if (generated.length === 0) throw new Error("AI_RETURNED_EMPTY");
 
-      return { kpId, kpTitle, questions: generated };
+      return { kpId, kpTitle, questions: await withChineseFriendlyExplanations(generated, kpTitle) };
     },
     retry: false,
     staleTime: 60 * 60 * 1000,
@@ -308,6 +346,14 @@ export default function GaokaoGrammarQuiz() {
                   if (mistakeErr) console.error("mistake insert failed:", mistakeErr);
 
                   // also write to gaokao_user_mistakes (the table 我的错题本 reads)
+                  const { data: existingMistake } = await supabase
+                    .from("gaokao_user_mistakes")
+                    .select("wrong_count")
+                    .eq("user_id", user.id)
+                    .eq("module", "grammar")
+                    .eq("item_id", q.id)
+                    .maybeSingle();
+                  const now = new Date().toISOString();
                   const { error: gMistakeErr } = await supabase.from("gaokao_user_mistakes").upsert({
                     user_id: user.id,
                     module: "grammar",
@@ -316,17 +362,24 @@ export default function GaokaoGrammarQuiz() {
                     parent_label: bundle.kpTitle,
                     user_answer: selectedAnswer,
                     correct_answer: q.correct_answer,
+                    wrong_count: (existingMistake?.wrong_count || 0) + 1,
                     snapshot: {
                       kp_id: kpId,
                       kp_title: bundle.kpTitle,
                       stem: q.stem,
+                      question: q.stem,
+                      option_a: q.option_a,
+                      option_b: q.option_b,
+                      option_c: q.option_c,
+                      option_d: q.option_d,
+                      general_explanation: q.explanation,
                       explanation: q.explanation,
                       item_source: q.source || "original",
                       options: {
                         A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d,
                       },
                     },
-                    last_wrong_at: new Date().toISOString(),
+                    last_wrong_at: now,
                     next_review_at: new Date(Date.now() + 24 * 3600 * 1000).toISOString(),
                     is_resolved: false,
                   }, { onConflict: "user_id,module,item_id" });

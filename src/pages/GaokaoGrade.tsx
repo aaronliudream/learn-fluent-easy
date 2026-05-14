@@ -651,7 +651,7 @@ function Grade3Page({
             </ul>
           ) : (
             <div className="mt-2 text-[11px]" style={{ color: "#2E5238" }}>
-              <T>{displayName}，做几套题后 AI 会算出你的提分性价比 →</T>
+              {displayName}<T>，做几套题后 AI 会算出你的提分性价比 →</T>
             </div>
           )}
           <div className="mt-2 text-[10px]" style={{ color: "#2E5238", opacity: 0.65 }}>

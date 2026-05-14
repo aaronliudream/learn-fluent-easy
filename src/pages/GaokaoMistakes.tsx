@@ -71,7 +71,14 @@ export default function GaokaoMistakes() {
   };
   const getExplanation = (m: Mistake) => {
     const snap = m.snapshot || {};
-    return snap.general_explanation || snap.explanation || snap.explanation_general || null;
+    const raw = snap.general_explanation || snap.explanation || snap.explanation_general || null;
+    if (!raw) return null;
+    const chineseChars = (String(raw).match(/[\u4e00-\u9fff]/g) || []).length;
+    const englishChars = (String(raw).match(/[A-Za-z]/g) || []).length;
+    if (chineseChars < 20 && englishChars > 80 && englishChars > chineseChars * 3) {
+      return `这道题考查「${m.parent_label || "语法考点"}」。正确答案是 ${m.correct_answer}，你选了 ${m.user_answer || "—"}。先根据句子语境判断核心语法点，再排除不符合单复数、搭配或句意的选项。下面保留原英文解析，方便你对照关键词：\n${raw}`;
+    }
+    return raw;
   };
   const getOption = (snap: any, letter: "a" | "b" | "c" | "d") => {
     const upper = letter.toUpperCase();

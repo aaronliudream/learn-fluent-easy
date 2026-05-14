@@ -1,0 +1,1 @@
+ALTER VIEW public.v_gaokao_all_knowledge_points SET (security_invoker = true);

@@ -1179,6 +1179,63 @@ export type Database = {
           },
         ]
       }
+      gaokao_cloze_knowledge_points: {
+        Row: {
+          category_code: string
+          category_name: string
+          created_at: string
+          difficulty: number | null
+          exam_frequency: string | null
+          example: string | null
+          extra: Json | null
+          id: string
+          level1: string | null
+          level2: string | null
+          level3: string
+          pitfall: string | null
+          prerequisite: string | null
+          source_id: string
+          strategy: string | null
+          year_band: number | null
+        }
+        Insert: {
+          category_code: string
+          category_name: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          example?: string | null
+          extra?: Json | null
+          id?: string
+          level1?: string | null
+          level2?: string | null
+          level3: string
+          pitfall?: string | null
+          prerequisite?: string | null
+          source_id: string
+          strategy?: string | null
+          year_band?: number | null
+        }
+        Update: {
+          category_code?: string
+          category_name?: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          example?: string | null
+          extra?: Json | null
+          id?: string
+          level1?: string | null
+          level2?: string | null
+          level3?: string
+          pitfall?: string | null
+          prerequisite?: string | null
+          source_id?: string
+          strategy?: string | null
+          year_band?: number | null
+        }
+        Relationships: []
+      }
       gaokao_cloze_passages: {
         Row: {
           article_analysis: string | null
@@ -1711,6 +1768,63 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
+      }
+      gaokao_listening_knowledge_points: {
+        Row: {
+          category_code: string
+          category_name: string
+          created_at: string
+          difficulty: number | null
+          exam_frequency: string | null
+          example: string | null
+          extra: Json | null
+          id: string
+          level1: string | null
+          level2: string | null
+          level3: string
+          pitfall: string | null
+          prerequisite: string | null
+          source_id: string
+          strategy: string | null
+          year_band: number | null
+        }
+        Insert: {
+          category_code: string
+          category_name: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          example?: string | null
+          extra?: Json | null
+          id?: string
+          level1?: string | null
+          level2?: string | null
+          level3: string
+          pitfall?: string | null
+          prerequisite?: string | null
+          source_id: string
+          strategy?: string | null
+          year_band?: number | null
+        }
+        Update: {
+          category_code?: string
+          category_name?: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          example?: string | null
+          extra?: Json | null
+          id?: string
+          level1?: string | null
+          level2?: string | null
+          level3?: string
+          pitfall?: string | null
+          prerequisite?: string | null
+          source_id?: string
+          strategy?: string | null
+          year_band?: number | null
+        }
+        Relationships: []
       }
       gaokao_reading_article_questions: {
         Row: {
@@ -2720,6 +2834,63 @@ export type Database = {
           name_en?: string
           sort_order?: number
           stage?: string
+        }
+        Relationships: []
+      }
+      gaokao_writing_knowledge_points: {
+        Row: {
+          category_code: string
+          category_name: string
+          created_at: string
+          difficulty: number | null
+          exam_frequency: string | null
+          example: string | null
+          extra: Json | null
+          id: string
+          level1: string | null
+          level2: string | null
+          level3: string
+          pitfall: string | null
+          prerequisite: string | null
+          source_id: string
+          strategy: string | null
+          year_band: number | null
+        }
+        Insert: {
+          category_code: string
+          category_name: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          example?: string | null
+          extra?: Json | null
+          id?: string
+          level1?: string | null
+          level2?: string | null
+          level3: string
+          pitfall?: string | null
+          prerequisite?: string | null
+          source_id: string
+          strategy?: string | null
+          year_band?: number | null
+        }
+        Update: {
+          category_code?: string
+          category_name?: string
+          created_at?: string
+          difficulty?: number | null
+          exam_frequency?: string | null
+          example?: string | null
+          extra?: Json | null
+          id?: string
+          level1?: string | null
+          level2?: string | null
+          level3?: string
+          pitfall?: string | null
+          prerequisite?: string | null
+          source_id?: string
+          strategy?: string | null
+          year_band?: number | null
         }
         Relationships: []
       }
@@ -7481,6 +7652,25 @@ export type Database = {
           updated_at: string | null
           user_id: string | null
           wrong_count: number | null
+        }
+        Relationships: []
+      }
+      v_gaokao_all_knowledge_points: {
+        Row: {
+          category_code: string | null
+          category_name: string | null
+          difficulty: number | null
+          exam_frequency: string | null
+          example: string | null
+          id: string | null
+          level1: string | null
+          level2: string | null
+          level3: string | null
+          pitfall: string | null
+          skill_area: string | null
+          source_id: string | null
+          strategy: string | null
+          year_band: number | null
         }
         Relationships: []
       }

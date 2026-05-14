@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Sparkles, Target, Clock, FlaskConical, RefreshCw } from "lucide-react";
 import { useDeepDiagnosis } from "@/hooks/useDeepDiagnosis";
 import { Button } from "@/components/ui/button";
+import BackLink from "@/components/BackLink";
 
 const SKILL_LABEL: Record<string, string> = {
   reading: "阅读",
@@ -59,9 +60,9 @@ export default function GaokaoDeepDiagnosis() {
     return (
       <main className="min-h-screen bg-[#0E2746] text-white">
         <div className="mx-auto max-w-3xl px-5 py-10">
-          <button onClick={() => nav(-1)} className="mb-6 inline-flex items-center gap-1.5 text-xs text-white/60 hover:text-white">
+          <BackLink to="/gaokao" className="mb-6 inline-flex items-center gap-1.5 text-xs text-white/60 hover:text-white">
             <ArrowLeft className="size-3.5" /> 返回
-          </button>
+          </BackLink>
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
             <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-amber-300">数据不足</div>
             <h1 className="mt-2 font-serif text-2xl font-extrabold">先答 {Math.max(data.min_required - data.current_attempts, 0)} 道题，AI 才能给你靠谱诊断</h1>
@@ -91,9 +92,9 @@ export default function GaokaoDeepDiagnosis() {
       <div className="mx-auto max-w-3xl px-5 py-8">
         {/* Top bar */}
         <div className="mb-6 flex items-center justify-between">
-          <button onClick={() => nav(-1)} className="inline-flex items-center gap-1.5 text-xs text-white/60 hover:text-white">
+          <BackLink to="/gaokao" className="inline-flex items-center gap-1.5 text-xs text-white/60 hover:text-white">
             <ArrowLeft className="size-3.5" /> 返回
-          </button>
+          </BackLink>
           <button
             onClick={() => refetch()}
             disabled={isFetching}

@@ -328,6 +328,7 @@ const App = () => (
           <Route path="/gaokao/g/:grade" element={<ChineseOnlyRoute><GaokaoGrade /></ChineseOnlyRoute>} />
           <Route path="/gaokao/exam" element={<ChineseOnlyRoute><GaokaoExam /></ChineseOnlyRoute>} />
           <Route path="/gaokao/diagnostic" element={<ChineseOnlyRoute><GaokaoDiagnostic /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/deep-diagnosis" element={<ChineseOnlyRoute><GaokaoDeepDiagnosis /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar" element={<ChineseOnlyRoute><GaokaoGrammar /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar/:slug" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar/:slug/quiz" element={<ChineseOnlyRoute><GaokaoGrammarQuiz /></ChineseOnlyRoute>} />

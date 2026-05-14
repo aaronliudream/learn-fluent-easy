@@ -238,6 +238,19 @@ export default function GaokaoGrammarQuiz() {
     {import("@/lib/coins").then((m) => m.notifyWrong());}
     const latencyMs = Date.now() - startTs;
     await recordAttempt({ questionType: "grammar", questionId: q.id, userAnswer: letter, isCorrect });
+    // Fire-and-forget: AI 错因分类
+    if (!isCorrect) {
+      supabase.functions.invoke("classify-mistake-cause", {
+        body: {
+          question_text: q.stem,
+          correct_answer: q.correct_answer,
+          user_answer: letter,
+          time_spent_seconds: Math.round(latencyMs / 1000),
+          kp_id: point?.id,
+          skill_area: "grammar",
+        },
+      }).catch((e) => console.error("classify-mistake-cause failed:", e));
+    }
     recordUnifiedAttempt({
       stage: "senior",
       grade: 10,

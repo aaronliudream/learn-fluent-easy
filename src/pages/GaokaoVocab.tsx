@@ -3368,6 +3368,94 @@ function CohortDictRoute({
   );
 }
 
+/* ---------- Cohort meaning (step ③) route wrapper ---------- */
+function CohortMeaningRoute({
+  allVocab,
+  onExit,
+}: {
+  allVocab: Vocab[];
+  onExit: () => void;
+}) {
+  const { active: cohort, activeLoading } = useActiveCohort();
+  const slice = useMemo(() => {
+    if (!cohort) return [];
+    const idSet = new Set(cohort.cohort_word_ids);
+    return allVocab.filter((v) => idSet.has(v.id));
+  }, [allVocab, cohort?.cohort_word_ids.join(",")]);
+
+  if (activeLoading) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <Loader2 className="mx-auto size-6 animate-spin text-muted-foreground" />
+      </main>
+    );
+  }
+  if (!cohort) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> <T>返回</T>
+        </button>
+        <p className="mt-8 text-sm text-muted-foreground">
+          <T>请先在「5 步走」开启一批，再来做中英互选。</T>
+        </p>
+      </main>
+    );
+  }
+  return (
+    <CohortMeaningSession
+      pool={slice}
+      cohortId={cohort.id}
+      cohortWordIds={cohort.cohort_word_ids}
+      onExit={onExit}
+    />
+  );
+}
+
+/* ---------- Cohort cloze (step ④) route wrapper ---------- */
+function CohortClozeRoute({
+  allVocab,
+  onExit,
+}: {
+  allVocab: Vocab[];
+  onExit: () => void;
+}) {
+  const { active: cohort, activeLoading } = useActiveCohort();
+  const slice = useMemo(() => {
+    if (!cohort) return [];
+    const idSet = new Set(cohort.cohort_word_ids);
+    return allVocab.filter((v) => idSet.has(v.id));
+  }, [allVocab, cohort?.cohort_word_ids.join(",")]);
+
+  if (activeLoading) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <Loader2 className="mx-auto size-6 animate-spin text-muted-foreground" />
+      </main>
+    );
+  }
+  if (!cohort) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> <T>返回</T>
+        </button>
+        <p className="mt-8 text-sm text-muted-foreground">
+          <T>请先在「5 步走」开启一批，再来做完形。</T>
+        </p>
+      </main>
+    );
+  }
+  return (
+    <CohortClozeSession
+      pool={slice}
+      cohortId={cohort.id}
+      cohortWordIds={cohort.cohort_word_ids}
+      onExit={onExit}
+    />
+  );
+}
+
 type DictResult = {
   score: number;
   comment: string;

@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Flame } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useDashboardSummary } from "@/hooks/useDashboardSummary";
+import { DeepDiagnosisCard } from "@/components/DeepDiagnosisCard";
 import {
   useDailyPrescription,
   useRegeneratePrescription,

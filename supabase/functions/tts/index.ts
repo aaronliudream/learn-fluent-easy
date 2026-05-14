@@ -21,12 +21,17 @@ const OPENAI_VOICES = new Set(["alloy", "shimmer", "nova", "echo", "onyx", "fabl
 // the `el:<key>` namespace so it's obvious in logs and never collides with
 // OpenAI voice ids.
 const ELEVENLABS_VOICE_MAP: Record<string, string> = {
-  "el:lily":    "pFZP5JQG7iQjIQuC4Bku", // warm, soft female — best for K-G1
-  "el:matilda": "XrExE9yKIg1WjnnlVkGX", // gentle storyteller female
-  "el:sarah":   "EXAVITQu4vr4xnSDxMaL", // friendly female
-  "el:brian":   "nPczCjzI2devNBz1zQrb", // warm adult male — used for "Dad" lines
-  "el:george":  "JBFqnCBsd6RMkjVDRZzb", // mature male narrator
-  "el:callum":  "N2lVS1w4EtoT3dr4eOWO", // playful male — fits Spark the fox
+  "el:lily":    "pFZP5JQG7iQjIQuC4Bku", // warm, soft female (British) — kept for back-compat
+  "el:matilda": "XrExE9yKIg1WjnnlVkGX", // gentle storyteller female (US)
+  "el:sarah":   "EXAVITQu4vr4xnSDxMaL", // friendly female (US)
+  "el:brian":   "nPczCjzI2devNBz1zQrb", // warm adult male (US) — used for "Dad" lines
+  "el:george":  "JBFqnCBsd6RMkjVDRZzb", // mature male narrator (British)
+  "el:callum":  "N2lVS1w4EtoT3dr4eOWO", // playful male (Scottish) — kept for back-compat
+  // American voices preferred for primary kids (no British/Scottish accent):
+  "el:jessica": "cgSgspJ2msm6clMCkdW9", // bright friendly American female — kid/girl roles
+  "el:laura":   "FGY2WhTYpPnrIDTdsKH5", // warm American young female
+  "el:liam":    "TX3LPaxmHKxFdv7VOQHJ", // young American male — Spark / boy peers
+  "el:eric":    "cjVigY5qzO86Huf0OWal", // friendly American male
 };
 
 // CosyVoice-v2 voice catalogue (all suffixed with _v2). Map our six OpenAI-style

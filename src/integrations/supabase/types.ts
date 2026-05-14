@@ -1204,6 +1204,7 @@ export type Database = {
           updated_at: string
           vocab_notes: string | null
           word_count: number | null
+          year_band: number | null
         }
         Insert: {
           article_analysis?: string | null
@@ -1229,6 +1230,7 @@ export type Database = {
           updated_at?: string
           vocab_notes?: string | null
           word_count?: number | null
+          year_band?: number | null
         }
         Update: {
           article_analysis?: string | null
@@ -1254,6 +1256,7 @@ export type Database = {
           updated_at?: string
           vocab_notes?: string | null
           word_count?: number | null
+          year_band?: number | null
         }
         Relationships: []
       }
@@ -1647,6 +1650,7 @@ export type Database = {
           source_label: string | null
           source_qid: string | null
           stem: string
+          year_band: number | null
         }
         Insert: {
           blank_index?: number | null
@@ -1671,6 +1675,7 @@ export type Database = {
           source_label?: string | null
           source_qid?: string | null
           stem: string
+          year_band?: number | null
         }
         Update: {
           blank_index?: number | null
@@ -1695,6 +1700,7 @@ export type Database = {
           source_label?: string | null
           source_qid?: string | null
           stem?: string
+          year_band?: number | null
         }
         Relationships: [
           {
@@ -1880,6 +1886,7 @@ export type Database = {
           useful_sentences: Json | null
           word_count: number
           writing_techniques: string | null
+          year_band: number | null
         }
         Insert: {
           argumentation_logic?: string | null
@@ -1912,6 +1919,7 @@ export type Database = {
           useful_sentences?: Json | null
           word_count: number
           writing_techniques?: string | null
+          year_band?: number | null
         }
         Update: {
           argumentation_logic?: string | null
@@ -1944,6 +1952,7 @@ export type Database = {
           useful_sentences?: Json | null
           word_count?: number
           writing_techniques?: string | null
+          year_band?: number | null
         }
         Relationships: []
       }
@@ -2608,6 +2617,7 @@ export type Database = {
           theme: string | null
           theme_tag: string | null
           word: string
+          year_band: number | null
         }
         Insert: {
           accent?: string | null
@@ -2636,6 +2646,7 @@ export type Database = {
           theme?: string | null
           theme_tag?: string | null
           word: string
+          year_band?: number | null
         }
         Update: {
           accent?: string | null
@@ -2664,6 +2675,7 @@ export type Database = {
           theme?: string | null
           theme_tag?: string | null
           word?: string
+          year_band?: number | null
         }
         Relationships: [
           {

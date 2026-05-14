@@ -43,8 +43,8 @@ const STEPS = [
 const RECOMMEND_MODE: Record<string, { mode: string; label: string }> = {
   browse:  { mode: "",        label: "去看清单" },
   form:    { mode: "cohort_dict", label: "去单词听写" },
-  meaning: { mode: "classic", label: "去智能选义" },
-  use:     { mode: "quest",   label: "去单词任务" },
+  meaning: { mode: "cohort_meaning", label: "去中英互选" },
+  use:     { mode: "cohort_cloze",   label: "去完形填空" },
   master:  { mode: "srs",     label: "去今日复习" },
 };
 
@@ -177,7 +177,7 @@ export default function VocabMasteryPath({
     } else {
       rows.forEach((r) => {
         const m = (r.mastery_matrix ?? {}) as MasteryMatrix;
-        if (step.kinds.some((k) => (m[k] ?? 0) > 0)) wordsCovered += 1;
+      if (step.kinds.some((k) => ((m as Record<string, number | undefined>)[k] ?? 0) > 0)) wordsCovered += 1;
       });
     }
     const need = doneThreshold(total);

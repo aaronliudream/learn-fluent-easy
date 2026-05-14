@@ -29,6 +29,8 @@ import NextStepHint from "@/components/vocab/NextStepHint";
 import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import CohortDictationSession from "@/components/vocab/CohortDictationSession";
+import CohortMeaningSession from "@/components/vocab/CohortMeaningSession";
+import CohortClozeSession from "@/components/vocab/CohortClozeSession";
 import { useActiveCohort } from "@/hooks/useActiveCohort";
 import ReviewPool from "@/components/vocab/ReviewPool";
 import { fetchDueReviewIds } from "@/lib/vocabMastery";
@@ -390,6 +392,24 @@ export default function GaokaoVocab() {
   if (mode === "cohort_dict") {
     return (
       <CohortDictRoute
+        allVocab={allVocab}
+        onExit={() => setParams({})}
+      />
+    );
+  }
+
+  if (mode === "cohort_meaning") {
+    return (
+      <CohortMeaningRoute
+        allVocab={allVocab}
+        onExit={() => setParams({})}
+      />
+    );
+  }
+
+  if (mode === "cohort_cloze") {
+    return (
+      <CohortClozeRoute
         allVocab={allVocab}
         onExit={() => setParams({})}
       />
@@ -3340,6 +3360,94 @@ function CohortDictRoute({
   }
   return (
     <CohortDictationSession
+      pool={slice}
+      cohortId={cohort.id}
+      cohortWordIds={cohort.cohort_word_ids}
+      onExit={onExit}
+    />
+  );
+}
+
+/* ---------- Cohort meaning (step ③) route wrapper ---------- */
+function CohortMeaningRoute({
+  allVocab,
+  onExit,
+}: {
+  allVocab: Vocab[];
+  onExit: () => void;
+}) {
+  const { active: cohort, activeLoading } = useActiveCohort();
+  const slice = useMemo(() => {
+    if (!cohort) return [];
+    const idSet = new Set(cohort.cohort_word_ids);
+    return allVocab.filter((v) => idSet.has(v.id));
+  }, [allVocab, cohort?.cohort_word_ids.join(",")]);
+
+  if (activeLoading) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <Loader2 className="mx-auto size-6 animate-spin text-muted-foreground" />
+      </main>
+    );
+  }
+  if (!cohort) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> <T>返回</T>
+        </button>
+        <p className="mt-8 text-sm text-muted-foreground">
+          <T>请先在「5 步走」开启一批，再来做中英互选。</T>
+        </p>
+      </main>
+    );
+  }
+  return (
+    <CohortMeaningSession
+      pool={slice}
+      cohortId={cohort.id}
+      cohortWordIds={cohort.cohort_word_ids}
+      onExit={onExit}
+    />
+  );
+}
+
+/* ---------- Cohort cloze (step ④) route wrapper ---------- */
+function CohortClozeRoute({
+  allVocab,
+  onExit,
+}: {
+  allVocab: Vocab[];
+  onExit: () => void;
+}) {
+  const { active: cohort, activeLoading } = useActiveCohort();
+  const slice = useMemo(() => {
+    if (!cohort) return [];
+    const idSet = new Set(cohort.cohort_word_ids);
+    return allVocab.filter((v) => idSet.has(v.id));
+  }, [allVocab, cohort?.cohort_word_ids.join(",")]);
+
+  if (activeLoading) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <Loader2 className="mx-auto size-6 animate-spin text-muted-foreground" />
+      </main>
+    );
+  }
+  if (!cohort) {
+    return (
+      <main className="mx-auto min-h-screen max-w-xl px-5 py-10 text-center">
+        <button onClick={onExit} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> <T>返回</T>
+        </button>
+        <p className="mt-8 text-sm text-muted-foreground">
+          <T>请先在「5 步走」开启一批，再来做完形。</T>
+        </p>
+      </main>
+    );
+  }
+  return (
+    <CohortClozeSession
       pool={slice}
       cohortId={cohort.id}
       cohortWordIds={cohort.cohort_word_ids}

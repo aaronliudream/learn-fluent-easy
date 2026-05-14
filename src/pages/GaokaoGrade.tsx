@@ -459,7 +459,7 @@ function Grade2Page({
             <T>今日 AI 处方</T>
           </div>
         </div>
-        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending}
+        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending} currentYearBand="2"
           fallback={
             <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-[#FAF8F1] p-4 text-[12px]" style={{ color: NAVY }}>
               <T>做几道题后 AI 会为你定制处方 →</T>
@@ -604,7 +604,7 @@ function Grade3Page({
             <T>今日 AI 处方</T>
           </div>
         </div>
-        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending}
+        <RxBlock tasks={tasks} rxLoading={rxLoading} rxError={rxError} guidance={guidance} onRegen={onRegen} regenPending={regenPending} currentYearBand="3"
           fallback={
             <div className="mt-3 rounded-xl border border-[#E7E1D2] bg-[#FAF8F1] p-4 text-[12px]" style={{ color: NAVY }}>
               <T>今日任务正在生成… 完成入门快测后即出处方</T>

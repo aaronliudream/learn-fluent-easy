@@ -48,6 +48,8 @@ export default function GaokaoGrammarQuiz() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [mastery, setMastery] = useState<GrammarMastery | null>(null);
   const [loading, setLoading] = useState(true);
+  const [loadStage, setLoadStage] = useState<"init" | "ai_generating">("init");
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [picked, setPicked] = useState<string | null>(null);
   const [startTs, setStartTs] = useState<number>(Date.now());
   const [stats, setStats] = useState({ correct: 0, wrong: 0 });
@@ -88,12 +90,15 @@ export default function GaokaoGrammarQuiz() {
     if (!slug) return;
     (async () => {
       setLoading(true);
+      setLoadError(null);
+      setLoadStage("init");
+      try {
       const { data: pt } = await supabase.
       from("gaokao_grammar_points").
       select("id, title, slug, kp_id").
       eq("slug", slug).
       maybeSingle();
-      if (!pt) {setLoading(false);return;}
+      if (!pt) { setPoint(null); setLoading(false); return; }
       setPoint(pt as Point);
       const { data: qs } = await supabase.
       from("gaokao_grammar_questions").
@@ -103,34 +108,52 @@ export default function GaokaoGrammarQuiz() {
         (a, b) => (a.irt_difficulty ?? 0) - (b.irt_difficulty ?? 0)
       );
       let combined: Question[] = sorted.slice(0, sessionSize);
-      // Fallback chain when original bank is short: AI cache → live AI generation
-      if (combined.length < 3 && (pt as any).kp_id) {
-        const kpId = (pt as any).kp_id as string;
+      // Fallback chain when original bank is short. NOTE: ai_generated_questions.kp_id
+      // stores the gaokao_grammar_points.id (UUID), NOT the human-readable kp_id string.
+      const mapAi = (r: any): Question => ({
+        id: r.id, stem: r.stem,
+        option_a: r.option_a, option_b: r.option_b, option_c: r.option_c, option_d: r.option_d,
+        correct_answer: r.correct_answer, explanation: r.explanation,
+        irt_difficulty: 0, question_type: "single", is_ai: true,
+      } as any);
+      if (combined.length < 3) {
+        const kpUuid = pt.id; // matches ai_generated_questions.kp_id and v_gaokao_all_knowledge_points.id
         const { data: cached } = await supabase
           .from("ai_generated_questions")
           .select("id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation")
-          .eq("kp_id", kpId)
+          .eq("kp_id", kpUuid)
           .lt("used_count", 5)
           .limit(5);
-        const mapAi = (r: any): Question => ({
-          id: r.id, stem: r.stem,
-          option_a: r.option_a, option_b: r.option_b, option_c: r.option_c, option_d: r.option_d,
-          correct_answer: r.correct_answer, explanation: r.explanation,
-          irt_difficulty: 0, question_type: "single", is_ai: true,
-        } as any);
         combined = [...combined, ...((cached ?? []).map(mapAi))];
-        if (combined.length < 3) {
-          const need = Math.min(5, 5 - combined.length);
-          const { data: gen } = await supabase.functions.invoke("generate-question-for-kp", {
-            body: { kp_id: kpId, count: need },
-          });
-          combined = [...combined, ...(((gen as any)?.questions ?? []).map(mapAi))];
+
+        // If we have at least 1, start now and prewarm the rest in background.
+        if (combined.length >= 1 && combined.length < 5) {
+          supabase.functions.invoke("generate-question-for-kp", {
+            body: { kp_id: kpUuid, count: 5 - combined.length },
+          }).catch((e) => console.error("prewarm gen failed:", e));
+        }
+
+        // If still nothing, block on live generation.
+        if (combined.length === 0) {
+          setLoadStage("ai_generating");
+          const { data: gen, error: genErr } = await supabase.functions.invoke(
+            "generate-question-for-kp",
+            { body: { kp_id: kpUuid, count: 3 } }
+          );
+          if (genErr) throw new Error("AI 出题失败：" + genErr.message);
+          const list = (gen as any)?.questions ?? ((gen as any)?.question ? [(gen as any).question] : []);
+          combined = [...combined, ...list.map(mapAi)];
         }
       }
       setQuestions(combined.slice(0, sessionSize));
       const ms = await loadGrammarMastery(pt.id);
       setMastery(ms);
       setLoading(false);
+      } catch (e: any) {
+        console.error("[GrammarQuiz] load failed:", e);
+        setLoadError(String(e?.message || e));
+        setLoading(false);
+      }
     })();
   }, [slug, sessionSize]);
 
@@ -146,7 +169,26 @@ export default function GaokaoGrammarQuiz() {
   const total = questions.length;
 
   if (loading) {
-    return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p className="text-sm text-muted-foreground"><T>加载中...</T></p></main>;
+    return (
+      <main className="mx-auto flex min-h-screen max-w-2xl flex-col items-center justify-center gap-3 px-5 py-8">
+        <div className="text-5xl animate-pulse">🤖</div>
+        <div className="text-lg font-medium">
+          {loadStage === "ai_generating" ? "AI 正在为你出题..." : "加载中..."}
+        </div>
+        {loadStage === "ai_generating" && (
+          <div className="text-xs text-muted-foreground">通常 5-10 秒，请稍候</div>
+        )}
+      </main>
+    );
+  }
+  if (loadError) {
+    return (
+      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8 text-center">
+        <div className="text-lg font-medium mb-2">生成失败</div>
+        <div className="text-sm text-muted-foreground mb-4">{loadError}</div>
+        <Button onClick={() => navigate('/gaokao/grammar')}>返回语法地图</Button>
+      </main>
+    );
   }
   if (!point) {
     return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p><T>考点不存在。</T><BackLink to="/gaokao/grammar" className="text-primary underline"><T>返回</T></BackLink></p></main>;
@@ -157,7 +199,13 @@ export default function GaokaoGrammarQuiz() {
         <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
           <ArrowLeft className="size-4" /> <T>返回语法地图</T>
         </BackLink>
-        <p className="text-muted-foreground"><T>本考点暂无题目。</T></p>
+        <div className="rounded-2xl border bg-card p-6 text-center">
+          <div className="text-base font-medium mb-2">AI 暂时无法为这个考点出题</div>
+          <div className="text-sm text-muted-foreground mb-4">
+            可能是知识图谱缺少示例或 AI 服务繁忙。已记录，工程师会处理。
+          </div>
+          <Button onClick={() => navigate('/gaokao/grammar')}>返回选其他考点</Button>
+        </div>
       </main>);
 
   }

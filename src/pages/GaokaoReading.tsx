@@ -105,8 +105,10 @@ const STATUS_FILTERS: {k: ArticleStatus | "all";label: string;dot: string;}[] = 
 
 export default function GaokaoReading() {
   const [sp] = useSearchParams();
-  const gradeParam = sp.get("grade");
-  const gradeNum = gradeParam ? Number(gradeParam) : null;
+  const yearBandParam = sp.get("year_band") || sp.get("grade");
+  const gradeNum = yearBandParam ? Number(yearBandParam) : null;
+  const yearBandKey: GradeBand | null =
+    gradeNum === 1 ? "g1" : gradeNum === 2 ? "g2" : gradeNum === 3 ? "g3" : null;
   const [tab, setTab] = useState<GradeBand | null>(null);
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);

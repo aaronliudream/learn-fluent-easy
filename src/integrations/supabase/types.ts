@@ -206,6 +206,69 @@ export type Database = {
         }
         Relationships: []
       }
+      ai_generated_questions: {
+        Row: {
+          ai_model: string | null
+          context_scenario: string | null
+          correct_answer: string | null
+          created_at: string | null
+          difficulty: number | null
+          explanation: string
+          generated_at: string | null
+          id: string
+          kp_id: string
+          option_a: string | null
+          option_b: string | null
+          option_c: string | null
+          option_d: string | null
+          question_type: string | null
+          skill_area: string
+          stem: string
+          used_count: number | null
+          year_band: number | null
+        }
+        Insert: {
+          ai_model?: string | null
+          context_scenario?: string | null
+          correct_answer?: string | null
+          created_at?: string | null
+          difficulty?: number | null
+          explanation: string
+          generated_at?: string | null
+          id?: string
+          kp_id: string
+          option_a?: string | null
+          option_b?: string | null
+          option_c?: string | null
+          option_d?: string | null
+          question_type?: string | null
+          skill_area: string
+          stem: string
+          used_count?: number | null
+          year_band?: number | null
+        }
+        Update: {
+          ai_model?: string | null
+          context_scenario?: string | null
+          correct_answer?: string | null
+          created_at?: string | null
+          difficulty?: number | null
+          explanation?: string
+          generated_at?: string | null
+          id?: string
+          kp_id?: string
+          option_a?: string | null
+          option_b?: string | null
+          option_c?: string | null
+          option_d?: string | null
+          question_type?: string | null
+          skill_area?: string
+          stem?: string
+          used_count?: number | null
+          year_band?: number | null
+        }
+        Relationships: []
+      }
       ai_practice_sets: {
         Row: {
           created_at: string

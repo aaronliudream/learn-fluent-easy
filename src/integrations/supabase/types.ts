@@ -724,6 +724,39 @@ export type Database = {
         }
         Relationships: []
       }
+      daily_prescriptions: {
+        Row: {
+          generated_at: string
+          id: string
+          prescription_date: string
+          tasks: Json
+          user_id: string
+          weak_top3: Json
+          weekly_focus: Json
+          year_band: number
+        }
+        Insert: {
+          generated_at?: string
+          id?: string
+          prescription_date?: string
+          tasks?: Json
+          user_id: string
+          weak_top3?: Json
+          weekly_focus?: Json
+          year_band: number
+        }
+        Update: {
+          generated_at?: string
+          id?: string
+          prescription_date?: string
+          tasks?: Json
+          user_id?: string
+          weak_top3?: Json
+          weekly_focus?: Json
+          year_band?: number
+        }
+        Relationships: []
+      }
       daily_question_usage: {
         Row: {
           created_at: string
@@ -1509,6 +1542,33 @@ export type Database = {
           theta_se?: number
           user_id?: string
           weakest_kp_ids?: Json | null
+        }
+        Relationships: []
+      }
+      gaokao_exam_calendar: {
+        Row: {
+          created_at: string
+          event_date: string
+          event_type: string
+          id: string
+          label: string | null
+          year_band: number | null
+        }
+        Insert: {
+          created_at?: string
+          event_date: string
+          event_type: string
+          id?: string
+          label?: string | null
+          year_band?: number | null
+        }
+        Update: {
+          created_at?: string
+          event_date?: string
+          event_type?: string
+          id?: string
+          label?: string | null
+          year_band?: number | null
         }
         Relationships: []
       }
@@ -6136,10 +6196,12 @@ export type Database = {
         Row: {
           age_band: string | null
           created_at: string
+          current_year_band: number | null
           daily_goal_minutes: number
           data_minimization: boolean | null
           display_name: string | null
           email: string | null
+          gaokao_year: number | null
           id: string
           is_guest: boolean
           is_minor: boolean | null
@@ -6160,6 +6222,7 @@ export type Database = {
           streak_recall_sent_at: string | null
           study_days: number[]
           target_language: string
+          target_score: number | null
           updated_at: string
           user_id: string
           username: string | null
@@ -6168,10 +6231,12 @@ export type Database = {
         Insert: {
           age_band?: string | null
           created_at?: string
+          current_year_band?: number | null
           daily_goal_minutes?: number
           data_minimization?: boolean | null
           display_name?: string | null
           email?: string | null
+          gaokao_year?: number | null
           id?: string
           is_guest?: boolean
           is_minor?: boolean | null
@@ -6192,6 +6257,7 @@ export type Database = {
           streak_recall_sent_at?: string | null
           study_days?: number[]
           target_language?: string
+          target_score?: number | null
           updated_at?: string
           user_id: string
           username?: string | null
@@ -6200,10 +6266,12 @@ export type Database = {
         Update: {
           age_band?: string | null
           created_at?: string
+          current_year_band?: number | null
           daily_goal_minutes?: number
           data_minimization?: boolean | null
           display_name?: string | null
           email?: string | null
+          gaokao_year?: number | null
           id?: string
           is_guest?: boolean
           is_minor?: boolean | null
@@ -6224,6 +6292,7 @@ export type Database = {
           streak_recall_sent_at?: string | null
           study_days?: number[]
           target_language?: string
+          target_score?: number | null
           updated_at?: string
           user_id?: string
           username?: string | null
@@ -6860,6 +6929,42 @@ export type Database = {
           starlight?: number
           total_seeds_earned?: number
           updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_error_analysis: {
+        Row: {
+          attempt_id: string | null
+          confidence: number | null
+          created_at: string
+          error_type: string
+          evidence: string | null
+          id: string
+          kp_id: string | null
+          skill_area: string | null
+          user_id: string
+        }
+        Insert: {
+          attempt_id?: string | null
+          confidence?: number | null
+          created_at?: string
+          error_type: string
+          evidence?: string | null
+          id?: string
+          kp_id?: string | null
+          skill_area?: string | null
+          user_id: string
+        }
+        Update: {
+          attempt_id?: string | null
+          confidence?: number | null
+          created_at?: string
+          error_type?: string
+          evidence?: string | null
+          id?: string
+          kp_id?: string | null
+          skill_area?: string | null
           user_id?: string
         }
         Relationships: []
@@ -8012,6 +8117,7 @@ export type Database = {
           xp_awarded: number
         }[]
       }
+      get_user_dashboard_summary: { Args: { p_user_id: string }; Returns: Json }
       get_user_reading_lexile: {
         Args: never
         Returns: {

@@ -611,237 +611,92 @@ function GroupList({
         <GaokaoVocabProgress />
       </div>
 
-      {/* SRS Smart Review Card — top priority entry */}
-      <button
-        onClick={() => {
-          if (dueCount && dueCount > 0) {
-            onStartSrs();
-          } else if (studiedCount === 0) {
-            toast.info("还没有学过单词，先从下方第 1 组开始学吧 👇");
-            onPick(0);
-          } else {
-            toast.success(`已掌握 ${studiedCount} 词 · 今日没有到期单词，继续学新词巩固吧 ✨`);
-          }
-        }}
-        className={cn(
-          "mt-6 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          dueCount && dueCount > 0 ?
-          "border-primary bg-gradient-to-br from-primary/15 via-primary/5 to-transparent hover:border-primary hover:shadow-md" :
-          "border-border bg-card hover:border-primary/40 hover:shadow-md"
-        )}>
-        
-        <div className="flex items-center gap-4">
-          <div className={cn(
-            "flex size-14 shrink-0 items-center justify-center rounded-2xl",
-            dueCount && dueCount > 0 ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground"
-          )}>
-            <Brain className="size-7" />
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold"><T>🧠 智能复习</T></span>
-              {dueCount !== null && dueCount > 0 &&
-              <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[11px] font-bold text-primary-foreground">
-                  <Flame className="size-3" /> <T>今日</T> {dueCount} <T>词待复习</T>
-                </span>
-              }
+      {/* ============= 学习模式 · 顶部 3 卡 ============= */}
+      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+        {/* SRS 智能复习 (主卡, 占两列) */}
+        <button
+          onClick={() => {
+            if (dueCount && dueCount > 0) onStartSrs();
+            else if (studiedCount === 0) { toast.info("还没有学过单词，先从下方第 1 组开始学吧 👇"); onPick(0); }
+            else onStartSrs();
+          }}
+          className="group sm:col-span-2 rounded-2xl border-2 border-primary/40 bg-gradient-to-br from-primary/15 to-primary/5 p-4 text-left transition hover:border-primary hover:shadow-md">
+          <div className="flex items-center gap-3">
+            <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/20 text-primary">
+              <Brain className="size-6" />
             </div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              {dueCount === null ?
-              "加载中…" :
-              dueCount === 0 ?
-              studiedCount === 0 ?
-              "点这里去学第一组单词，系统会按艾宾浩斯曲线安排复习 →" :
-              `已学 ${studiedCount} 词 · 今日没有到期单词，明天再来` :
-              `已学 ${studiedCount} 词 · Anki SM-2 算法 · 答错重学，答对延后`}
+            <div className="flex-1 min-w-0">
+              <div className="text-sm font-extrabold"><T>🧠 SRS 智能复习</T> <span className="ml-1 rounded bg-primary/20 px-1.5 py-0.5 text-[10px] text-primary"><T>主推荐</T></span></div>
+              <div className="mt-0.5 text-[11px] text-muted-foreground">
+                {dueCount !== null && dueCount > 0 ? `${dueCount} 个词到了遗忘节点 · 5 分钟` : "按艾宾浩斯曲线复习 · 5 分钟"}
+              </div>
             </div>
           </div>
-          <ChevronRight className={cn("size-5", dueCount && dueCount > 0 ? "text-primary" : "text-muted-foreground")} />
-        </div>
-      </button>
+        </button>
+        {/* 引导学习 */}
+        <button onClick={onStartGuided}
+          className="rounded-2xl border-2 border-emerald-400/60 bg-gradient-to-br from-emerald-500/15 to-teal-500/5 p-4 text-left transition hover:border-emerald-500 hover:shadow-md">
+          <div className="flex items-center gap-3">
+            <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-600">
+              <Rocket className="size-6" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-sm font-extrabold"><T>🚀 引导学习</T></div>
+              <div className="mt-0.5 text-[11px] text-muted-foreground"><T>学新词 3 步法 · 15 分钟</T></div>
+            </div>
+          </div>
+        </button>
+        {/* 错题复习 */}
+        <button onClick={onStartReview}
+          className="rounded-2xl border-2 border-rose-400/60 bg-gradient-to-br from-rose-500/15 to-pink-500/5 p-4 text-left transition hover:border-rose-500 hover:shadow-md sm:col-span-3">
+          <div className="flex items-center gap-3">
+            <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-rose-500/20 text-rose-600">
+              <RotateCw className="size-6" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="text-sm font-extrabold"><T>📝 错题复习</T></div>
+              <div className="mt-0.5 text-[11px] text-muted-foreground"><T>最近错的词 · 8 分钟</T></div>
+            </div>
+          </div>
+        </button>
+      </div>
 
-      {/* Word Rush — fast-paced rhythm matching */}
-      <button
-        onClick={onStartRush}
-        disabled={pool.length < 4}
-        className={cn(
-          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.length >= 4 ?
-          "border-fuchsia-500/60 bg-gradient-to-br from-fuchsia-500/15 via-purple-500/10 to-transparent hover:border-fuchsia-500 hover:shadow-md" :
-          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}>
-        
-        <div className="flex items-center gap-4">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-fuchsia-500/20 text-fuchsia-600 dark:text-fuchsia-400">
-            <Music className="size-7" />
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold"><T>⚡ Word Rush 节奏消除</T></span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-fuchsia-500 px-2 py-0.5 text-[11px] font-bold text-white">
-                NEW
-              </span>
-            </div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              <T>中文从天而降 · 60 秒内点对越多越快 · Combo 加倍 + 金币奖励</T>
-            </div>
-          </div>
-          <ChevronRight className="size-5 text-fuchsia-500" />
+      {/* ============= 词汇游戏 · 中部 3 卡 ============= */}
+      <div className="mt-6">
+        <div className="mb-3 text-sm font-extrabold"><T>🎮 词汇游戏 · 让记忆更有趣</T></div>
+        <div className="grid grid-cols-3 gap-2">
+          <button onClick={onStartRush} disabled={pool.length < 4}
+            className="group rounded-2xl border-2 border-orange-400/60 bg-gradient-to-br from-orange-500/20 to-rose-500/10 p-3 text-left transition hover:border-orange-500 hover:shadow-md disabled:opacity-50">
+            <div className="text-2xl">🏃</div>
+            <div className="mt-1 text-[12px] font-extrabold">Word Rush</div>
+            <div className="mt-0.5 text-[10px] text-muted-foreground"><T>限时挑战 · 速度与准确</T></div>
+          </button>
+          <button onClick={onStartBento} disabled={pool.length < 12}
+            className="group rounded-2xl border-2 border-teal-400/60 bg-gradient-to-br from-teal-500/20 to-emerald-500/10 p-3 text-left transition hover:border-teal-500 hover:shadow-md disabled:opacity-50">
+            <div className="text-2xl">🍱</div>
+            <div className="mt-1 text-[12px] font-extrabold">Word Bento</div>
+            <div className="mt-0.5 text-[10px] text-muted-foreground"><T>多维呈现 · 看图记词</T></div>
+          </button>
+          <button onClick={onStartQuest} disabled={pool.length < 50}
+            className="group rounded-2xl border-2 border-indigo-400/60 bg-gradient-to-br from-indigo-500/20 to-violet-500/10 p-3 text-left transition hover:border-indigo-500 hover:shadow-md disabled:opacity-50">
+            <div className="text-2xl">⚔️</div>
+            <div className="mt-1 text-[12px] font-extrabold">Word Quest</div>
+            <div className="mt-0.5 text-[10px] text-muted-foreground"><T>闯关式学习 · 解锁成就</T></div>
+          </button>
         </div>
-      </button>
+      </div>
 
-      {/* Word Bento — drag/tap match */}
-      <button
-        onClick={onStartBento}
-        disabled={pool.length < 12}
-        className={cn(
-          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.length >= 12 ?
-          "border-amber-500/60 bg-gradient-to-br from-amber-500/15 via-orange-500/10 to-transparent hover:border-amber-500 hover:shadow-md" :
-          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}>
-        
-        <div className="flex items-center gap-4">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-amber-500/20 text-amber-600 dark:text-amber-400">
-            <span className="text-2xl">🍱</span>
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold"><T>🍱 Word Bento 单词便当</T></span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-amber-500 px-2 py-0.5 text-[11px] font-bold text-white">
-                NEW
-              </span>
-              <span className="inline-flex items-center gap-1 rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-0.5 text-[10px] font-bold text-amber-700 dark:text-amber-300">
-                <T>🏆 排行榜</T>
-              </span>
-            </div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              <T>拖拽配对消除 · 30 对单词 · 全对 + 极速双重奖励</T>
-            </div>
-          </div>
-          <ChevronRight className="size-5 text-amber-500" />
+      {/* ============= 更多练习方式 · 底部 chip 列 ============= */}
+      <div className="mt-5">
+        <div className="mb-2 text-[11px] text-muted-foreground"><T>更多练习方式</T></div>
+        <div className="flex flex-wrap gap-2">
+          <button onClick={onStartDict} className="rounded-full border border-border bg-card px-3 py-1.5 text-[11px] hover:border-primary/40">🎧 <T>听写</T></button>
+          <button onClick={() => onPickMode("cohort_dict")} className="rounded-full border border-border bg-card px-3 py-1.5 text-[11px] hover:border-primary/40"><T>同期听写</T></button>
+          <button onClick={() => onPickMode("cohort_meaning")} className="rounded-full border border-border bg-card px-3 py-1.5 text-[11px] hover:border-primary/40"><T>同期选义</T></button>
+          <button onClick={() => onPickMode("cohort_cloze")} className="rounded-full border border-border bg-card px-3 py-1.5 text-[11px] hover:border-primary/40"><T>同期完形</T></button>
+          <button onClick={onOpenDash} className="rounded-full border border-border bg-card px-3 py-1.5 text-[11px] hover:border-primary/40">📊 <T>掌握度仪表盘</T></button>
         </div>
-      </button>
-
-      {/* Word Quest — daily 1 word, 6 stages */}
-      <button
-        onClick={onStartQuest}
-        disabled={pool.length < 50}
-        className={cn(
-          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.length >= 50 ?
-          "border-indigo-500/60 bg-gradient-to-br from-indigo-500/15 via-sky-500/10 to-transparent hover:border-indigo-500 hover:shadow-md" :
-          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}>
-        
-        <div className="flex items-center gap-4">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400">
-            <span className="text-2xl">🗺️</span>
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold"><T>🗺️ Word Quest 单词奇旅</T></span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-indigo-500 px-2 py-0.5 text-[11px] font-bold text-white">
-                <T>每日</T>
-              </span>
-              <span className="inline-flex items-center gap-1 rounded-full border border-indigo-500/40 bg-indigo-500/10 px-2 py-0.5 text-[10px] font-bold text-indigo-700 dark:text-indigo-300">
-                <T>🏆 速度榜</T>
-              </span>
-            </div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              <T>全球同款今日单词 · 6 关闯关 · 连续打卡解锁稀有徽章</T>
-            </div>
-          </div>
-          <ChevronRight className="size-5 text-indigo-500" />
-        </div>
-      </button>
-
-      {/* Word Duel — PVP ELO duel */}
-      <button
-        onClick={onStartDuel}
-        disabled={pool.length < 50}
-        className={cn(
-          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.length >= 50 ?
-          "border-rose-500/60 bg-gradient-to-br from-rose-500/15 via-orange-500/10 to-transparent hover:border-rose-500 hover:shadow-md" :
-          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}>
-        
-        <div className="flex items-center gap-4">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-600 dark:text-rose-400">
-            <span className="text-2xl">⚔️</span>
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold"><T>⚔️ Word Duel 单词决斗</T></span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-rose-500 px-2 py-0.5 text-[11px] font-bold text-white">
-                PVP
-              </span>
-              <span className="inline-flex items-center gap-1 rounded-full border border-rose-500/40 bg-rose-500/10 px-2 py-0.5 text-[10px] font-bold text-rose-700 dark:text-rose-300">
-                <T>👑 段位</T>
-              </span>
-            </div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              <T>真人 1v1 · 5 回合 8 秒题 · ELO 段位制 · 青铜→王者全球榜</T>
-            </div>
-          </div>
-          <ChevronRight className="size-5 text-rose-500" />
-        </div>
-      </button>
-
-      {/* Dictation entry */}
-      <button
-        onClick={onStartDict}
-        disabled={pool.filter((v) => v.example_en).length < 5}
-        className={cn(
-          "mt-3 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          pool.filter((v) => v.example_en).length >= 5 ?
-          "border-emerald-500/60 bg-gradient-to-br from-emerald-500/15 via-teal-500/10 to-transparent hover:border-emerald-500 hover:shadow-md" :
-          "border-border bg-muted/30 opacity-70 cursor-not-allowed"
-        )}>
-        
-        <div className="flex items-center gap-4">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
-            <Headphones className="size-7" />
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold"><T>🎧 句子听写</T></span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500 px-2 py-0.5 text-[11px] font-bold text-white">
-                NEW
-              </span>
-            </div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              <T>听例句 → 输入 → AI 评分纠错 + 金币奖励</T>
-            </div>
-          </div>
-          <ChevronRight className="size-5 text-emerald-500" />
-        </div>
-      </button>
-
-      {/* Mastery Dashboard entry */}
-      <button
-        onClick={onOpenDash}
-        className="mt-3 group block w-full rounded-3xl border-2 border-indigo-500/60 bg-gradient-to-br from-indigo-500/15 via-sky-500/10 to-transparent p-5 text-left shadow-tile transition hover:border-indigo-500 hover:shadow-md">
-        
-        <div className="flex items-center gap-4">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400">
-            <BarChart3 className="size-7" />
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold"><T>📊 掌握度仪表盘</T></span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-indigo-500 px-2 py-0.5 text-[11px] font-bold text-white">
-                NEW
-              </span>
-            </div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              <T>5 级分布 · 三维能力 · 易错词热区 · 大师词汇</T>
-            </div>
-          </div>
-          <ChevronRight className="size-5 text-indigo-500" />
-        </div>
-      </button>
+      </div>
 
       <CurriculumBrowser pool={pool} groups={groups} onPick={onPick} />
     </main>);

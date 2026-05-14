@@ -39,6 +39,80 @@ function chineseFallbackExplanation(q: Question, kpTitle: string) {
   return `本题考查「${kpTitle}」。正确答案是 ${q.correct_answer}${correctOption ? `：“${correctOption}”` : ""}。做题时先看句子语境和关键词，再判断名词单复数、固定搭配或语法形式是否一致。你选择的选项不符合这里的语法/语义要求。下面保留原英文解析供对照：\n${q.explanation || ""}`;
 }
 
+/**
+ * Parse a free-text explanation into a "why correct" lead + per-option bullets.
+ * Handles common patterns produced by the AI (e.g. "选项 B，..." / "B. ..." / "B、...").
+ */
+function parseExplanation(text: string, correct: string) {
+  const clean = (text || "").replace(/\s+\n/g, "\n").trim();
+  if (!clean) return { lead: "", bullets: [] as { letter: string; body: string }[] };
+
+  // Split by sentence boundaries that introduce an option analysis.
+  // Match "选项X" or standalone "X，" / "X." / "X、" at sentence start.
+  const re = /(?:^|[。;；\n])\s*(?:选项\s*)?([ABCD])[，、,.．:：]\s*/g;
+  const matches: { letter: string; index: number; len: number }[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(clean)) !== null) {
+    matches.push({ letter: m[1], index: m.index + m[0].indexOf(m[1]), len: m[0].length - m[0].indexOf(m[1]) });
+  }
+
+  if (matches.length < 2) {
+    return { lead: clean, bullets: [] };
+  }
+
+  const lead = clean.slice(0, matches[0].index).replace(/[。\s]+$/, "").trim();
+  const bullets: { letter: string; body: string }[] = [];
+  for (let i = 0; i < matches.length; i++) {
+    const start = matches[i].index + matches[i].len;
+    const end = i + 1 < matches.length ? matches[i + 1].index : clean.length;
+    const body = clean.slice(start, end).replace(/^[，、,.．:：\s]+/, "").replace(/[。\s]+$/, "").trim();
+    if (body) bullets.push({ letter: matches[i].letter, body });
+  }
+
+  // De-dup: keep the longest body per letter.
+  const byLetter = new Map<string, string>();
+  for (const b of bullets) {
+    const prev = byLetter.get(b.letter);
+    if (!prev || b.body.length > prev.length) byLetter.set(b.letter, b.body);
+  }
+  const ordered = ["A", "B", "C", "D"]
+    .filter((l) => byLetter.has(l))
+    .map((l) => ({ letter: l, body: byLetter.get(l)! }));
+
+  return { lead, bullets: ordered };
+}
+
+function FormattedExplanation({ text, correct }: { text: string; correct: string }) {
+  const { lead, bullets } = parseExplanation(text, correct);
+  if (bullets.length === 0) {
+    return <p className="whitespace-pre-wrap text-sm leading-relaxed text-foreground/90">{text}</p>;
+  }
+  return (
+    <div className="space-y-3 text-sm leading-relaxed text-foreground/90">
+      {lead && <p>{lead}。</p>}
+      <ul className="space-y-2">
+        {bullets.map((b) => {
+          const isCorrect = b.letter === correct;
+          return (
+            <li key={b.letter} className="flex gap-2">
+              <span
+                className={`mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
+                  isCorrect
+                    ? "bg-green-500/15 text-green-600"
+                    : "bg-muted text-muted-foreground"
+                }`}
+              >
+                {b.letter}
+              </span>
+              <span className={isCorrect ? "text-foreground" : "text-foreground/80"}>{b.body}。</span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
 async function withChineseFriendlyExplanations(questions: Question[], kpTitle: string): Promise<Question[]> {
   const needTranslation = questions.filter((q) => isEnglishHeavy(q.explanation));
   if (needTranslation.length === 0) return questions;

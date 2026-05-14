@@ -1,8 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Sparkles, Target, Clock, FlaskConical, RefreshCw } from "lucide-react";
 import { useDeepDiagnosis } from "@/hooks/useDeepDiagnosis";
 import { Button } from "@/components/ui/button";
 import BackLink from "@/components/BackLink";
-import { Link } from "react-router-dom";
 
 const SKILL_LABEL: Record<string, string> = {
   reading: "阅读",

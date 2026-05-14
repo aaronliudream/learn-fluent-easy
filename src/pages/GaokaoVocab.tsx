@@ -29,6 +29,8 @@ import NextStepHint from "@/components/vocab/NextStepHint";
 import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import CohortDictationSession from "@/components/vocab/CohortDictationSession";
+import CohortMeaningSession from "@/components/vocab/CohortMeaningSession";
+import CohortClozeSession from "@/components/vocab/CohortClozeSession";
 import { useActiveCohort } from "@/hooks/useActiveCohort";
 import ReviewPool from "@/components/vocab/ReviewPool";
 import { fetchDueReviewIds } from "@/lib/vocabMastery";
@@ -390,6 +392,24 @@ export default function GaokaoVocab() {
   if (mode === "cohort_dict") {
     return (
       <CohortDictRoute
+        allVocab={allVocab}
+        onExit={() => setParams({})}
+      />
+    );
+  }
+
+  if (mode === "cohort_meaning") {
+    return (
+      <CohortMeaningRoute
+        allVocab={allVocab}
+        onExit={() => setParams({})}
+      />
+    );
+  }
+
+  if (mode === "cohort_cloze") {
+    return (
+      <CohortClozeRoute
         allVocab={allVocab}
         onExit={() => setParams({})}
       />

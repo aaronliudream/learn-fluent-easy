@@ -65,6 +65,18 @@ export default function GaokaoMistakes() {
   }
 
   const counts = list.reduce((acc, m) => {acc[m.module] = (acc[m.module] || 0) + 1;return acc;}, {} as Record<string, number>);
+  const getQuestionText = (m: Mistake) => {
+    const snap = m.snapshot || {};
+    return snap.stem || snap.question || snap.prompt || m.parent_label || "未命名题目";
+  };
+  const getExplanation = (m: Mistake) => {
+    const snap = m.snapshot || {};
+    return snap.general_explanation || snap.explanation || snap.explanation_general || null;
+  };
+  const getOption = (snap: any, letter: "a" | "b" | "c" | "d") => {
+    const upper = letter.toUpperCase();
+    return snap[`option_${letter}`] || snap.options?.[upper] || snap.options?.[letter] || null;
+  };
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
@@ -127,7 +139,8 @@ export default function GaokaoMistakes() {
                       {m.wrong_count > 1 && <span className="text-rose-500">×{m.wrong_count}</span>}
                       <span className="ml-auto">{new Date(m.last_wrong_at).toLocaleDateString()}</span>
                     </div>
-                    <div className="truncate text-sm font-medium">{m.parent_label || "未命名题目"}</div>
+                    <div className="line-clamp-2 text-sm font-medium leading-snug">{getQuestionText(m)}</div>
+                    {m.parent_label && <div className="mt-0.5 truncate text-[11px] text-muted-foreground">{m.parent_label}</div>}
                     <div className="mt-1 text-xs text-muted-foreground">
                       <T>你答</T> <span className="font-semibold text-rose-600">{m.user_answer || "—"}</span>
                       <span className="mx-1.5">·</span>
@@ -138,10 +151,16 @@ export default function GaokaoMistakes() {
                 </button>
                 {isOpen &&
               <div className="space-y-3 border-t border-border/50 bg-muted/20 px-4 py-3 text-sm">
-                    {snap.option_a &&
+                    {getQuestionText(m) &&
+                <div className="rounded-lg bg-background px-3 py-2 text-xs leading-relaxed">
+                        <div className="mb-0.5 font-semibold text-foreground"><T>原题</T></div>
+                        <div className="whitespace-pre-wrap text-foreground/90">{getQuestionText(m)}</div>
+                      </div>
+                }
+                    {getOption(snap, "a") &&
                 <div className="grid gap-1.5">
                         {(["a", "b", "c", "d"] as const).map((L) => {
-                    const opt = snap[`option_${L}`];
+                    const opt = getOption(snap, L);
                     if (!opt) return null;
                     const isCorrect = L.toUpperCase() === m.correct_answer;
                     const isUserPick = L.toUpperCase() === m.user_answer;
@@ -159,10 +178,10 @@ export default function GaokaoMistakes() {
                   })}
                       </div>
                 }
-                    {snap.general_explanation &&
+                    {getExplanation(m) &&
                 <div className="rounded-lg bg-background px-3 py-2 text-xs leading-relaxed">
                         <div className="mb-0.5 font-semibold text-amber-600"><T>解析</T></div>
-                        {snap.general_explanation}
+                        {getExplanation(m)}
                       </div>
                 }
                     <div className="flex flex-wrap gap-2 pt-1">

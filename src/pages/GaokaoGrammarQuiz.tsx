@@ -101,8 +101,32 @@ export default function GaokaoGrammarQuiz() {
       const sorted = ((qs ?? []) as Question[]).sort(
         (a, b) => (a.irt_difficulty ?? 0) - (b.irt_difficulty ?? 0)
       );
-      // 单次抽题：普通模式 12 题（≤10 分钟），挑战模式 24 题。
-      setQuestions(sorted.slice(0, sessionSize));
+      let combined: Question[] = sorted.slice(0, sessionSize);
+      // Fallback chain when original bank is short: AI cache → live AI generation
+      if (combined.length < 3 && (pt as any).kp_id) {
+        const kpId = (pt as any).kp_id as string;
+        const { data: cached } = await supabase
+          .from("ai_generated_questions")
+          .select("id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation")
+          .eq("kp_id", kpId)
+          .lt("used_count", 5)
+          .limit(5);
+        const mapAi = (r: any): Question => ({
+          id: r.id, stem: r.stem,
+          option_a: r.option_a, option_b: r.option_b, option_c: r.option_c, option_d: r.option_d,
+          correct_answer: r.correct_answer, explanation: r.explanation,
+          irt_difficulty: 0, question_type: "single", is_ai: true,
+        } as any);
+        combined = [...combined, ...((cached ?? []).map(mapAi))];
+        if (combined.length < 3) {
+          const need = Math.min(5, 5 - combined.length);
+          const { data: gen } = await supabase.functions.invoke("generate-question-for-kp", {
+            body: { kp_id: kpId, count: need },
+          });
+          combined = [...combined, ...(((gen as any)?.questions ?? []).map(mapAi))];
+        }
+      }
+      setQuestions(combined.slice(0, sessionSize));
       const ms = await loadGrammarMastery(pt.id);
       setMastery(ms);
       setLoading(false);

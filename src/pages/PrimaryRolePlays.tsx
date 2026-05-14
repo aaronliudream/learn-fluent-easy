@@ -29,9 +29,9 @@ function voiceFor(emoji?: string, speaker?: string): string {
   if (/(dad|爸爸|爷爷|grandpa|爸|teacher|ms\.|mr\.|smith)/.test(s)) return "el:brian";
   if (emoji === "👩" || emoji === "👵") return "el:matilda";
   if (emoji === "👨" || emoji === "👴") return "el:brian";
-  if (emoji === "👧") return "el:lily";
-  // 你 / boy peers / Spark → playful boy voice
-  return "el:callum";
+  if (emoji === "👧") return "el:jessica";
+  // 你 / boy peers / Spark → young American boy voice
+  return "el:liam";
 }
 function speak(text: string, opts?: { emoji?: string; speaker?: string }) {
   void speakNatural(text, { voiceId: voiceFor(opts?.emoji, opts?.speaker), speed: 0.95 });

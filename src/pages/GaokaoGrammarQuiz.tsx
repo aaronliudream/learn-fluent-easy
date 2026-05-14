@@ -209,11 +209,24 @@ export default function GaokaoGrammarQuiz() {
 
       const combined = [...original, ...cached];
 
+      const usedKeywords = combined
+        .map((q) => {
+          const letter = (q.correct_answer || "").toLowerCase();
+          if (!letter) return "";
+          const opt = q[`option_${letter}` as "option_a" | "option_b" | "option_c" | "option_d"];
+          return (opt || "").toString().trim();
+        })
+        .filter(Boolean);
+
       if (combined.length >= 1) {
         if (combined.length < 5) {
           supabase.functions
             .invoke("generate-question-for-kp", {
-              body: { kp_id: kpId, count: 5 - combined.length },
+              body: {
+                kp_id: kpId,
+                count: 5 - combined.length,
+                exclude_keywords: usedKeywords,
+              },
             })
             .catch((e) => console.error("generate-question-for-kp prewarm failed:", e));
         }
@@ -222,7 +235,7 @@ export default function GaokaoGrammarQuiz() {
       }
 
       const { data: gen, error: genErr } = await supabase.functions.invoke("generate-question-for-kp", {
-        body: { kp_id: kpId, count: 3 },
+        body: { kp_id: kpId, count: 3, exclude_keywords: usedKeywords },
       });
 
       if (genErr) throw new Error("AI_GENERATE_FAILED: " + genErr.message);

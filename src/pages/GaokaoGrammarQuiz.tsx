@@ -306,6 +306,31 @@ export default function GaokaoGrammarQuiz() {
                     },
                   });
                   if (mistakeErr) console.error("mistake insert failed:", mistakeErr);
+
+                  // also write to gaokao_user_mistakes (the table 我的错题本 reads)
+                  const { error: gMistakeErr } = await supabase.from("gaokao_user_mistakes").upsert({
+                    user_id: user.id,
+                    module: "grammar",
+                    item_id: q.id,
+                    parent_id: null,
+                    parent_label: bundle.kpTitle,
+                    user_answer: selectedAnswer,
+                    correct_answer: q.correct_answer,
+                    snapshot: {
+                      kp_id: kpId,
+                      kp_title: bundle.kpTitle,
+                      stem: q.stem,
+                      explanation: q.explanation,
+                      item_source: q.source || "original",
+                      options: {
+                        A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d,
+                      },
+                    },
+                    last_wrong_at: new Date().toISOString(),
+                    next_review_at: new Date(Date.now() + 24 * 3600 * 1000).toISOString(),
+                    is_resolved: false,
+                  }, { onConflict: "user_id,module,item_id" });
+                  if (gMistakeErr) console.error("gaokao_user_mistakes upsert failed:", gMistakeErr);
                 }
 
                 // 3. classify-mistake-cause (fire-and-forget) on wrong

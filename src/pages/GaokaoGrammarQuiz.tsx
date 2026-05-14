@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -17,6 +17,7 @@ interface Question {
   correct_answer: string;
   explanation: string;
   source?: "original" | "ai_cache" | "ai_realtime";
+  used_count?: number;
 }
 
 interface QuizBundle {
@@ -31,6 +32,12 @@ export default function GaokaoGrammarQuiz() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const startTsRef = useRef<number>(Date.now());
+
+  useEffect(() => {
+    startTsRef.current = Date.now();
+  }, [currentIdx]);
 
   const { data: bundle, isLoading, error, refetch } = useQuery<QuizBundle>({
     queryKey: ["grammar-quiz", slug],
@@ -85,6 +92,7 @@ export default function GaokaoGrammarQuiz() {
         correct_answer: q.correct_answer,
         explanation: q.explanation,
         source: "ai_cache" as const,
+        used_count: q.used_count ?? 0,
       }));
 
       const combined = [...original, ...cached];
@@ -117,6 +125,7 @@ export default function GaokaoGrammarQuiz() {
         correct_answer: q.correct_answer,
         explanation: q.explanation,
         source: "ai_realtime" as const,
+        used_count: q.used_count ?? 0,
       }));
 
       if (generated.length === 0) throw new Error("AI_RETURNED_EMPTY");

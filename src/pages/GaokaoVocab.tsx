@@ -544,8 +544,8 @@ function GroupList({
       </div>
       <PageHeader
         hideReviewBanner
-        title="高考词汇 3500"
-        subtitle={`${pool.length} 词 · 按词频/难度/主题科学分类 · 不再字母排序`} />
+        title={gradeNum ? `高${gradeNum === 1 ? "一" : gradeNum === 2 ? "二" : "三"} 词汇池` : "高考词汇 3500"}
+        subtitle={`${pool.length} 词 · 按词频/难度/主题科学分类`} />
       
 
       {gradeNum &&

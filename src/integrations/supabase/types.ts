@@ -7947,6 +7947,7 @@ export type Database = {
           opponent_rating: number
         }[]
       }
+      get_deep_diagnosis: { Args: { p_user_id: string }; Returns: Json }
       get_diagnostic_summary: { Args: { p_user_id: string }; Returns: Json }
       get_duel_leaderboard: {
         Args: { _scope?: string }

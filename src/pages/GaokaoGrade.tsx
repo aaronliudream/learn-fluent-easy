@@ -402,6 +402,7 @@ function Grade1Page({ streak, coins, pet, displayName, tasks, weekly, days, kpSt
 
       <PetBar pet={pet} />
       <PracticeChips grade="1" />
+      <DeepDiagnosisCard variant="secondary" />
     </>
   );
 }
@@ -518,6 +519,7 @@ function Grade2Page({
 
       <PetBar pet={pet} />
       <PracticeChips grade="2" />
+      <DeepDiagnosisCard variant="primary" />
     </>
   );
 }
@@ -673,6 +675,7 @@ function Grade3Page({
 
       <PetBar pet={pet} />
       <PracticeChips grade="3" />
+      <DeepDiagnosisCard variant="hero" />
     </>
   );
 }

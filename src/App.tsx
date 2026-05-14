@@ -44,6 +44,7 @@ const Talk = lazy(() => import("./pages/Talk.tsx"));
 const Gaokao = lazy(() => import("./pages/Gaokao.tsx"));
 const GaokaoGrade = lazy(() => import("./pages/GaokaoGrade.tsx"));
 const GaokaoExam = lazy(() => import("./pages/GaokaoExam.tsx"));
+const GaokaoDeepDiagnosis = lazy(() => import("./pages/GaokaoDeepDiagnosis.tsx"));
 const China = lazy(() => import("./pages/China.tsx"));
 const Primary = lazy(() => import("./pages/Primary.tsx"));
 const PrimaryLetters = lazy(() => import("./pages/PrimaryLetters.tsx"));
@@ -327,6 +328,7 @@ const App = () => (
           <Route path="/gaokao/g/:grade" element={<ChineseOnlyRoute><GaokaoGrade /></ChineseOnlyRoute>} />
           <Route path="/gaokao/exam" element={<ChineseOnlyRoute><GaokaoExam /></ChineseOnlyRoute>} />
           <Route path="/gaokao/diagnostic" element={<ChineseOnlyRoute><GaokaoDiagnostic /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/deep-diagnosis" element={<ChineseOnlyRoute><GaokaoDeepDiagnosis /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar" element={<ChineseOnlyRoute><GaokaoGrammar /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar/:slug" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar/:slug/quiz" element={<ChineseOnlyRoute><GaokaoGrammarQuiz /></ChineseOnlyRoute>} />

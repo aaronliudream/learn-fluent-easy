@@ -587,16 +587,62 @@ export default function GaokaoGrade() {
   const { grade } = useParams<{ grade: string }>();
   const g: GradeKey = grade === "2" ? "2" : grade === "3" ? "3" : "1";
   const { coins, streak, pet, loading } = useGradeData();
+  const { data: summary, isLoading: summaryLoading } = useDashboardSummary();
+  const {
+    data: prescription,
+    isLoading: rxLoading,
+    error: rxError,
+  } = useDailyPrescription();
+  const regen = useRegeneratePrescription();
+
+  const displayName = summary?.profile?.display_name || "同学";
+  const tasks: PrescriptionTask[] = (prescription?.tasks as PrescriptionTask[]) ?? [];
+  const weekly = prescription?.weekly_focus ?? [];
+  const days = summary?.days_remaining ?? {};
+  const dims = summary?.dimensions ?? {};
+  const kpStats = summary?.kp_stats ?? { total: 0, mastered: 0, this_week_new: 0 };
 
   return (
     <main className="min-h-screen" style={{ background: "linear-gradient(180deg, #F8F6EF 0%, #EFECDF 100%)" }}>
       <div className="mx-auto max-w-2xl px-5 py-5">
-        {loading && (
+        {(loading || summaryLoading) && (
           <div className="mb-3 h-8 animate-pulse rounded bg-black/5" />
         )}
-        {g === "1" && <Grade1Page streak={streak} coins={coins} pet={pet} />}
-        {g === "2" && <Grade2Page streak={streak} coins={coins} pet={pet} />}
-        {g === "3" && <Grade3Page streak={streak} coins={coins} pet={pet} />}
+        {g === "1" && (
+          <Grade1Page
+            streak={streak} coins={coins} pet={pet}
+            displayName={displayName} tasks={tasks} weekly={weekly}
+            days={days} kpStats={kpStats}
+            rxLoading={rxLoading} rxError={!!rxError}
+            guidance={prescription?.guidance}
+            onRegen={() => regen.mutate()}
+            regenPending={regen.isPending}
+          />
+        )}
+        {g === "2" && (
+          <Grade2Page
+            streak={streak} coins={coins} pet={pet}
+            displayName={displayName} tasks={tasks} weekly={weekly}
+            days={days} kpStats={kpStats} dims={dims}
+            rxLoading={rxLoading} rxError={!!rxError}
+            guidance={prescription?.guidance}
+            onRegen={() => regen.mutate()}
+            regenPending={regen.isPending}
+          />
+        )}
+        {g === "3" && (
+          <Grade3Page
+            streak={streak} coins={coins} pet={pet}
+            displayName={displayName} tasks={tasks} weekly={weekly}
+            weakTop3={prescription?.weak_top3 ?? []}
+            days={days} kpStats={kpStats} dims={dims}
+            targetScore={summary?.profile?.target_score ?? 130}
+            rxLoading={rxLoading} rxError={!!rxError}
+            guidance={prescription?.guidance}
+            onRegen={() => regen.mutate()}
+            regenPending={regen.isPending}
+          />
+        )}
       </div>
     </main>
   );

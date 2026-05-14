@@ -1,14 +1,19 @@
 import { T } from "@/i18n/T";import { useEffect, useState } from "react";
 import { Volume2, X, RotateCcw, Sparkles, ChevronRight } from "lucide-react";
 import { PRIMARY_ROLE_PLAYS, type RolePlay } from "@/data/primaryRolePlays";
+import { speak as speakNatural, stopSpeaking } from "@/lib/speak";
 
-function speak(text: string, rate = 0.9) {
-  if (typeof window === "undefined" || !window.speechSynthesis) return;
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = "en-US";
-  u.rate = rate;
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(u);
+function voiceFor(emoji?: string, speaker?: string): string {
+  const s = (speaker || "").toLowerCase();
+  if (/(mom|妈妈|奶奶|grandma|妈)/.test(s)) return "el:matilda";
+  if (/(dad|爸爸|爷爷|grandpa|爸|teacher|ms\.|mr\.|smith)/.test(s)) return "el:brian";
+  if (emoji === "👩" || emoji === "👵") return "el:matilda";
+  if (emoji === "👨" || emoji === "👴") return "el:brian";
+  if (emoji === "👧") return "el:lily";
+  return "el:callum";
+}
+function speak(text: string, opts?: { emoji?: string; speaker?: string }) {
+  void speakNatural(text, { voiceId: voiceFor(opts?.emoji, opts?.speaker), speed: 0.95 });
 }
 
 const STAR_KEY = "primary_roleplay_stars_v1";
@@ -34,7 +39,8 @@ export default function RolePlayTheater() {
     // 自动播放第一句
     setTimeout(() => {
       setRevealed(1);
-      speak(rp.lines[0].text_en);
+      const l = rp.lines[0];
+      speak(l.text_en, { emoji: l.emoji, speaker: l.speaker });
     }, 200);
   }
 
@@ -43,7 +49,7 @@ export default function RolePlayTheater() {
     if (revealed < open.lines.length) {
       const next = open.lines[revealed];
       setRevealed(revealed + 1);
-      speak(next.text_en);
+      speak(next.text_en, { emoji: next.emoji, speaker: next.speaker });
     }
   }
 
@@ -51,7 +57,7 @@ export default function RolePlayTheater() {
     if (!open || picked !== null) return;
     setPicked(idx);
     const c = open.choices[idx];
-    speak(c.text_en);
+    speak(c.text_en, { emoji: "👦", speaker: "你" });
     if (c.correct) {
       saveStar(open.id, 3);
       setStars(loadStars());
@@ -68,7 +74,7 @@ export default function RolePlayTheater() {
 
   // 关闭时停止朗读
   useEffect(() => {
-    if (!open && typeof window !== "undefined") window.speechSynthesis?.cancel();
+    if (!open) stopSpeaking();
   }, [open]);
 
   const allRevealed = open && revealed >= open.lines.length;
@@ -138,7 +144,7 @@ export default function RolePlayTheater() {
                     <div className="text-sm font-bold">{line.text_en}</div>
                     <div className="mt-0.5 text-[11px] opacity-80">{line.text_cn}</div>
                     <button
-                  onClick={() => speak(line.text_en)}
+                  onClick={() => speak(line.text_en, { emoji: line.emoji, speaker: line.speaker })}
                   className={`mt-1 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold ${
                   line.side === "right" ? "bg-white/20 hover:bg-white/30" : "bg-muted hover:bg-muted/70"}`
                   }>

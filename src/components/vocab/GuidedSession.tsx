@@ -471,7 +471,6 @@ function SpellStep({ v, onAnswer }: {v: GuidedVocab;onAnswer: (c: boolean) => vo
         ref={inputRef}
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => {if (e.key === "Enter") submit();}}
         disabled={checked !== null}
         placeholder="在这里拼写"
         className={cn(
@@ -532,7 +531,6 @@ function ClozeStep({ v, onAnswer }: {v: GuidedVocab;onAnswer: (c: boolean) => vo
         ref={inputRef}
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => {if (e.key === "Enter") submit();}}
         disabled={checked !== null}
         placeholder="填入正确单词形式"
         className={cn(

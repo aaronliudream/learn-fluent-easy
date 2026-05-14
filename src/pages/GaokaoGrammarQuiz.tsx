@@ -144,7 +144,7 @@ export default function GaokaoGrammarQuiz() {
             .catch((e) => console.error("generate-question-for-kp prewarm failed:", e));
         }
 
-        return { kpId, kpTitle, questions: combined };
+        return { kpId, kpTitle, questions: await withChineseFriendlyExplanations(combined, kpTitle) };
       }
 
       const { data: gen, error: genErr } = await supabase.functions.invoke("generate-question-for-kp", {
@@ -168,7 +168,7 @@ export default function GaokaoGrammarQuiz() {
 
       if (generated.length === 0) throw new Error("AI_RETURNED_EMPTY");
 
-      return { kpId, kpTitle, questions: generated };
+      return { kpId, kpTitle, questions: await withChineseFriendlyExplanations(generated, kpTitle) };
     },
     retry: false,
     staleTime: 60 * 60 * 1000,

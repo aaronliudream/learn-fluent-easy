@@ -346,6 +346,14 @@ export default function GaokaoGrammarQuiz() {
                   if (mistakeErr) console.error("mistake insert failed:", mistakeErr);
 
                   // also write to gaokao_user_mistakes (the table 我的错题本 reads)
+                  const { data: existingMistake } = await supabase
+                    .from("gaokao_user_mistakes")
+                    .select("wrong_count")
+                    .eq("user_id", user.id)
+                    .eq("module", "grammar")
+                    .eq("item_id", q.id)
+                    .maybeSingle();
+                  const now = new Date().toISOString();
                   const { error: gMistakeErr } = await supabase.from("gaokao_user_mistakes").upsert({
                     user_id: user.id,
                     module: "grammar",
@@ -354,17 +362,24 @@ export default function GaokaoGrammarQuiz() {
                     parent_label: bundle.kpTitle,
                     user_answer: selectedAnswer,
                     correct_answer: q.correct_answer,
+                    wrong_count: (existingMistake?.wrong_count || 0) + 1,
                     snapshot: {
                       kp_id: kpId,
                       kp_title: bundle.kpTitle,
                       stem: q.stem,
+                      question: q.stem,
+                      option_a: q.option_a,
+                      option_b: q.option_b,
+                      option_c: q.option_c,
+                      option_d: q.option_d,
+                      general_explanation: q.explanation,
                       explanation: q.explanation,
                       item_source: q.source || "original",
                       options: {
                         A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d,
                       },
                     },
-                    last_wrong_at: new Date().toISOString(),
+                    last_wrong_at: now,
                     next_review_at: new Date(Date.now() + 24 * 3600 * 1000).toISOString(),
                     is_resolved: false,
                   }, { onConflict: "user_id,module,item_id" });

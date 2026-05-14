@@ -21,7 +21,7 @@ import {
   type Streak } from
 "@/lib/challengeMode";
 
-type Point = {id: string;title: string;slug: string;};
+type Point = {id: string;title: string;slug: string;kp_id?: string | null;};
 type Question = {
   id: string;
   stem: string;
@@ -33,6 +33,7 @@ type Question = {
   explanation: string;
   irt_difficulty: number | null;
   question_type: string;
+  is_ai?: boolean;
 };
 
 export default function GaokaoGrammarQuiz() {
@@ -89,7 +90,7 @@ export default function GaokaoGrammarQuiz() {
       setLoading(true);
       const { data: pt } = await supabase.
       from("gaokao_grammar_points").
-      select("id, title, slug").
+      select("id, title, slug, kp_id").
       eq("slug", slug).
       maybeSingle();
       if (!pt) {setLoading(false);return;}

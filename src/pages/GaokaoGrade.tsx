@@ -157,8 +157,7 @@ function TaskCard({
       </div>
       <div className="flex-1 min-w-0">
         <div className="text-[13px] font-bold" style={{ color: NAVY }}>
-          ① ② ③ {/* placeholder removed */}
-          <span className="font-bold">{["①", "②", "③"][num - 1]} </span>
+          <span className="mr-1">{["①", "②", "③"][num - 1]}</span>
           <T>{title}</T>
         </div>
         <div className="mt-0.5 text-[11px]" style={{ color: NAVY, opacity: 0.65 }}>

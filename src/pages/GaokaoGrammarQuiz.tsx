@@ -26,6 +26,44 @@ interface QuizBundle {
   questions: Question[];
 }
 
+function isEnglishHeavy(text?: string | null) {
+  const value = (text || "").trim();
+  if (!value) return false;
+  const chineseChars = (value.match(/[\u4e00-\u9fff]/g) || []).length;
+  const englishChars = (value.match(/[A-Za-z]/g) || []).length;
+  return chineseChars < 20 && englishChars > 80 && englishChars > chineseChars * 3;
+}
+
+function chineseFallbackExplanation(q: Question, kpTitle: string) {
+  const correctOption = q[`option_${q.correct_answer.toLowerCase()}` as keyof Question] as string | undefined;
+  return `本题考查「${kpTitle}」。正确答案是 ${q.correct_answer}${correctOption ? `：“${correctOption}”` : ""}。做题时先看句子语境和关键词，再判断名词单复数、固定搭配或语法形式是否一致。你选择的选项不符合这里的语法/语义要求。下面保留原英文解析供对照：\n${q.explanation || ""}`;
+}
+
+async function withChineseFriendlyExplanations(questions: Question[], kpTitle: string): Promise<Question[]> {
+  const needTranslation = questions.filter((q) => isEnglishHeavy(q.explanation));
+  if (needTranslation.length === 0) return questions;
+
+  try {
+    const { data, error } = await supabase.functions.invoke("translate", {
+      body: {
+        sourceLanguage: "English",
+        targetLanguage: "Simplified Chinese for Chinese Gaokao students; keep English words/phrases in quotes",
+        items: needTranslation.map((q) => ({ key: q.id, text: q.explanation })),
+      },
+    });
+    if (error) throw error;
+    const translations = (data?.translations || {}) as Record<string, string>;
+    return questions.map((q) => {
+      if (!isEnglishHeavy(q.explanation)) return q;
+      const translated = translations[q.id];
+      return { ...q, explanation: translated && !isEnglishHeavy(translated) ? translated : chineseFallbackExplanation(q, kpTitle) };
+    });
+  } catch (e) {
+    console.error("Chinese explanation normalization failed:", e);
+    return questions.map((q) => isEnglishHeavy(q.explanation) ? { ...q, explanation: chineseFallbackExplanation(q, kpTitle) } : q);
+  }
+}
+
 export default function GaokaoGrammarQuiz() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();

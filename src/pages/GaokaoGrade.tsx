@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Flame } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { useDashboardSummary } from "@/hooks/useDashboardSummary";
+import {
+  useDailyPrescription,
+  useRegeneratePrescription,
+  type PrescriptionTask,
+} from "@/hooks/useDailyPrescription";
 
 const NAVY = "#0E2746";
 const BLUE = "#2D5896";

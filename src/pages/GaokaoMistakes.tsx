@@ -73,6 +73,14 @@ export default function GaokaoMistakes() {
       </BackLink>
       <PageHeader title="我的错题本" subtitle="刻意练习薄弱点 · 自动收录所有错题" hideReviewBanner />
 
+      {/* 紫色 AI 重组提示卡 */}
+      <div className="mb-4 rounded-2xl border-2 border-violet-300 bg-gradient-to-br from-violet-50 to-fuchsia-50 p-4 dark:border-violet-700/40 dark:from-violet-950/30 dark:to-fuchsia-950/20">
+        <div className="text-sm font-extrabold text-violet-700 dark:text-violet-300">💡 <T>这里不止让你重做原题</T></div>
+        <div className="mt-1 text-xs leading-relaxed text-violet-900/80 dark:text-violet-200/80">
+          <T>背答案 ≠ 学会知识点。AI 为你做错的每一个考点实时生成全新题目——题面、语境、干扰项都不同，但考的是同一个能力。学会才能做对。</T>
+        </div>
+      </div>
+
       {/* Filter chips */}
       <div className="mb-4 flex flex-wrap items-center gap-2">
         {(["all", "cloze", "grammar", "reading"] as const).map((k) =>

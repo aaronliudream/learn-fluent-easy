@@ -292,12 +292,14 @@ function RxBlock({ tasks, rxLoading, rxError, guidance, onRegen, regenPending, f
   );
 }
 
-function WeeklyChips({ weekly, fallback }: { weekly?: Array<{ kp_title: string }>; fallback: string[] }) {
-  const items = weekly && weekly.length > 0 ? weekly.slice(0, 3).map(w => w.kp_title) : fallback;
+function WeeklyChips({ weekly, fallback }: { weekly?: Array<{ kp_id?: string; kp_title?: string }>; fallback: string[] }) {
+  const items: string[] = weekly && weekly.length > 0
+    ? weekly.slice(0, 3).map((w) => w.kp_title || "—")
+    : fallback;
   return (
     <div className="mt-1 space-y-1">
       {items.map((k, i) => (
-        <div key={k + i} className="flex items-center gap-1">
+        <div key={`chip-${i}`} className="flex items-center gap-1">
           <span className="rounded-sm bg-white/20 px-1.5 py-0.5 text-[9px] font-bold">
             <T>{i === 0 ? "今日" : "本周"}</T>
           </span>

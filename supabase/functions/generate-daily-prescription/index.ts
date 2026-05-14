@@ -28,21 +28,66 @@ function ratioToTaskTypes(yearBand: number): string[] {
   return ["breakthrough", "review", "consolidate"];
 }
 
-function fallbackTasks(pool: any[], yearBand: number) {
-  const types = ratioToTaskTypes(yearBand);
-  return pool.slice(0, 3).map((kp, i) => ({
-    type: types[i] || "learn",
+function generateLocalFallback(candidatePool: any[], yearBand: number) {
+  const ratios: Record<number, string[]> = {
+    1: ["learn", "learn", "breakthrough"],
+    2: ["learn", "breakthrough", "breakthrough"],
+    3: ["breakthrough", "breakthrough", "review"],
+  };
+  const taskTypes = ratios[yearBand] || ratios[2];
+  const freqWeight: Record<string, number> = { "极高": 4, "高": 3, "中": 2, "低": 1 };
+  const sortedKps = [...candidatePool].sort((a, b) => {
+    const aScore = (100 - (a.mastery_pct ?? 0)) * (freqWeight[a.exam_frequency] || 2);
+    const bScore = (100 - (b.mastery_pct ?? 0)) * (freqWeight[b.exam_frequency] || 2);
+    return bScore - aScore;
+  });
+
+  const tasks = taskTypes.map((type, i) => {
+    const kp = sortedKps[i] || sortedKps[0];
+    return {
+      type,
+      kp_id: kp.id,
+      kp_title: kp.level3 || kp.source_id || "高考考点",
+      skill_area: kp.skill_area || "grammar",
+      est_minutes: type === "learn" ? 15 : type === "review" ? 5 : 10,
+      est_coins: type === "learn" ? 20 : type === "review" ? 5 : 10,
+      mastery_before: kp.mastery_pct ?? 0,
+      mastery_after_estimated: Math.min(100, (kp.mastery_pct ?? 0) + 15),
+      why_this:
+        type === "learn" ? "本年级核心考点，先打底"
+        : type === "review" ? "到了遗忘节点，5 分钟巩固"
+        : "上次答错过的弱点，今天攻克",
+    };
+  });
+
+  const weak_top3 = sortedKps.slice(0, 3).map((kp) => ({
     kp_id: kp.id,
-    kp_title: kp.level3 || kp.source_id,
-    skill_area: kp.skill_area,
-    est_minutes: 8 + i * 2,
-    est_coins: 10 + i * 5,
-    mastery_before: kp.mastery_pct ?? 0,
-    mastery_after_estimated: Math.min(100, (kp.mastery_pct ?? 0) + 15),
-    why_this: kp.exam_frequency === "极高"
-      ? "高考极高频考点，优先突破"
-      : "薄弱环节，建议今日加强",
+    kp_title: kp.level3 || kp.source_id || "考点",
+    skill_area: kp.skill_area || "grammar",
+    mastery: kp.mastery_pct ?? 0,
+    exam_frequency: kp.exam_frequency || "中",
   }));
+
+  const weekly_focus = sortedKps.slice(0, 3).map((kp, i) => ({
+    kp_id: kp.id,
+    kp_title: kp.level3 || kp.source_id || "考点",
+    skill_area: kp.skill_area || "grammar",
+    week_label: i === 0 ? "今日" : i === 1 ? "本周" : "下周",
+  }));
+
+  return { tasks, weak_top3, weekly_focus };
+}
+
+function validateAiResult(ai: any, poolIds: Set<string>): boolean {
+  if (!ai || !Array.isArray(ai.tasks) || ai.tasks.length !== 3) return false;
+  for (const t of ai.tasks) {
+    if (!t || typeof t !== "object") return false;
+    if (!t.kp_id || !t.kp_title || !t.type) return false;
+    if (!poolIds.has(t.kp_id)) return false;
+  }
+  if (!Array.isArray(ai.weak_top3) || ai.weak_top3.length < 1) return false;
+  if (!Array.isArray(ai.weekly_focus) || ai.weekly_focus.length < 1) return false;
+  return true;
 }
 
 Deno.serve(async (req) => {
@@ -158,6 +203,74 @@ Deno.serve(async (req) => {
           return null;
         })();
 
+        const tools = [{
+          type: "function",
+          function: {
+            name: "submit_prescription",
+            description: "为学生生成今日 3 张任务卡 + 弱点 TOP3 + 本周重点",
+            parameters: {
+              type: "object",
+              required: ["tasks", "weak_top3", "weekly_focus"],
+              properties: {
+                tasks: {
+                  type: "array",
+                  description: "3 张今日任务卡，按学习顺序排列",
+                  minItems: 3,
+                  maxItems: 3,
+                  items: {
+                    type: "object",
+                    required: ["type", "kp_id", "kp_title", "skill_area", "est_minutes", "est_coins", "mastery_before", "mastery_after_estimated", "why_this"],
+                    properties: {
+                      type: { type: "string", enum: ["learn", "breakthrough", "consolidate", "review"], description: "任务类型：learn=学习新点 / breakthrough=突破弱点 / consolidate=巩固 / review=艾宾浩斯复习" },
+                      kp_id: { type: "string", description: "从候选 KP 池里选一个，必须是 UUID 格式" },
+                      kp_title: { type: "string", description: "知识点的简洁标题，最多 15 个中文字" },
+                      skill_area: { type: "string", enum: ["listening", "reading", "grammar", "vocab", "writing", "cloze"], description: "考试领域" },
+                      est_minutes: { type: "integer", minimum: 3, maximum: 30, description: "预估完成时长（分钟）" },
+                      est_coins: { type: "integer", minimum: 5, maximum: 30, description: "预估金币奖励" },
+                      mastery_before: { type: "integer", minimum: 0, maximum: 100, description: "当前掌握度百分比" },
+                      mastery_after_estimated: { type: "integer", minimum: 0, maximum: 100, description: "预估完成后掌握度" },
+                      why_this: { type: "string", description: "用学生第二人称视角，30 字以内说人话解释为何今天选这个；不要 to improve your score 这种废话。" },
+                    },
+                  },
+                },
+                weak_top3: {
+                  type: "array",
+                  description: "3 个最弱知识点，按 mastery 升序",
+                  minItems: 3,
+                  maxItems: 3,
+                  items: {
+                    type: "object",
+                    required: ["kp_id", "kp_title", "skill_area", "mastery", "exam_frequency"],
+                    properties: {
+                      kp_id: { type: "string" },
+                      kp_title: { type: "string", description: "15 字内" },
+                      skill_area: { type: "string", enum: ["listening", "reading", "grammar", "vocab", "writing", "cloze"] },
+                      mastery: { type: "integer", minimum: 0, maximum: 100 },
+                      exam_frequency: { type: "string", enum: ["极高", "高", "中", "低"] },
+                    },
+                  },
+                },
+                weekly_focus: {
+                  type: "array",
+                  description: "本周重点学的 3 个 KP",
+                  minItems: 3,
+                  maxItems: 3,
+                  items: {
+                    type: "object",
+                    required: ["kp_id", "kp_title", "skill_area", "week_label"],
+                    properties: {
+                      kp_id: { type: "string" },
+                      kp_title: { type: "string", description: "15 字内" },
+                      skill_area: { type: "string", enum: ["listening", "reading", "grammar", "vocab", "writing", "cloze"] },
+                      week_label: { type: "string", enum: ["今日", "本周", "下周"] },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        }];
+
         const aiRes = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
           method: "POST",
           headers: {
@@ -170,7 +283,7 @@ Deno.serve(async (req) => {
               {
                 role: "system",
                 content:
-                  "你是高考英语智能学情教练。学生数据基于真实学习记录。你的任务：为这个学生生成今日的 3 张学习任务卡，目标是最大化高考提分效率。每张任务卡必须输出：type(learn/breakthrough/consolidate/review), kp_id, kp_title(<=15字), skill_area, est_minutes, est_coins(5-30), mastery_before, mastery_after_estimated, why_this(<=30字)。同时输出 weak_top3 和 weekly_focus。只输出 JSON，不要任何其他文字。",
+                  "你是高考英语智能学情教练。基于学生真实学情数据，为其生成今日 3 张学习任务卡 + 弱点 TOP3 + 本周重点，目标是最大化高考提分效率。kp_id 必须从候选 KP 池里选取，不能编造。所有字段都必须填写。",
               },
               {
                 role: "user",
@@ -179,23 +292,8 @@ Deno.serve(async (req) => {
                 }`,
               },
             ],
-            tools: [{
-              type: "function",
-              function: {
-                name: "emit_prescription",
-                description: "Output today's prescription as structured JSON.",
-                parameters: {
-                  type: "object",
-                  properties: {
-                    tasks: { type: "array", items: { type: "object" } },
-                    weak_top3: { type: "array", items: { type: "object" } },
-                    weekly_focus: { type: "array", items: { type: "object" } },
-                  },
-                  required: ["tasks", "weak_top3", "weekly_focus"],
-                },
-              },
-            }],
-            tool_choice: { type: "function", function: { name: "emit_prescription" } },
+            tools,
+            tool_choice: { type: "function", function: { name: "submit_prescription" } },
           }),
         });
         if (aiRes.ok) {
@@ -210,13 +308,13 @@ Deno.serve(async (req) => {
       }
     }
 
-    const tasks = aiResult?.tasks?.length ? aiResult.tasks.slice(0, 3) : fallbackTasks(filtered, yearBand);
-    const weak_top3 = aiResult?.weak_top3?.length
-      ? aiResult.weak_top3.slice(0, 3)
-      : filtered.slice(0, 3).map((k) => ({ kp_id: k.id, kp_title: k.level3, mastery: k.mastery_pct, skill_area: k.skill_area }));
-    const weekly_focus = aiResult?.weekly_focus?.length
-      ? aiResult.weekly_focus.slice(0, 3)
-      : filtered.slice(3, 6).map((k) => ({ kp_id: k.id, kp_title: k.level3, skill_area: k.skill_area }));
+    const poolIds = new Set<string>(filtered.map((k) => k.id));
+    const useAi = validateAiResult(aiResult, poolIds);
+    if (!useAi && aiResult) console.warn("AI result failed validation, using local fallback");
+    const fallback = generateLocalFallback(filtered, yearBand);
+    const tasks = useAi ? aiResult.tasks.slice(0, 3) : fallback.tasks;
+    const weak_top3 = useAi ? aiResult.weak_top3.slice(0, 3) : fallback.weak_top3;
+    const weekly_focus = useAi ? aiResult.weekly_focus.slice(0, 3) : fallback.weekly_focus;
 
     // 8) Upsert
     const payload = {

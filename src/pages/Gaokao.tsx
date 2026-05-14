@@ -86,13 +86,11 @@ export default function Gaokao() {
       style={{ background: "linear-gradient(180deg, #F8F6EF 0%, #EFECDF 100%)" }}
     >
       <div className="mx-auto max-w-2xl px-5 py-6">
-        <BackLink
-          to="/#stages"
-          className="mb-3 inline-flex items-center gap-1 text-xs hover:opacity-70"
-          style={{ color: NAVY, opacity: 0.7 }}
-        >
-          <ArrowLeft className="size-4" /> <T>返回学习阶段</T>
-        </BackLink>
+        <div className="mb-3" style={{ color: NAVY, opacity: 0.7 }}>
+          <BackLink to="/#stages" className="inline-flex items-center gap-1 text-xs hover:opacity-70">
+            <ArrowLeft className="size-4" /> <T>返回学习阶段</T>
+          </BackLink>
+        </div>
 
         {/* Hero card */}
         <section className="relative overflow-hidden rounded-3xl border border-[#E7E1D2] bg-white/80 p-7 sm:p-9 shadow-sm">

@@ -64,7 +64,6 @@ export default function GaokaoGrammar() {
   const [mastery, setMastery] = useState<Record<string, GrammarMastery>>({});
   const [loading, setLoading] = useState(true);
   const [activeModule, setActiveModule] = useState<string | null>(null);
-  const navigate = (path: string) => { window.location.assign(path); };
 
   useEffect(() => {
     (async () => {

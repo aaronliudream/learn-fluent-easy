@@ -1,28 +1,13 @@
-import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
-import BackLink from "@/components/BackLink";
-import { Link, useParams, useNavigate, useSearchParams } from "react-router-dom";
-import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, RotateCcw, BookOpen, MessageCircleQuestion } from "lucide-react";
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
-import { recordAttempt } from "@/lib/gaokaoMastery";
-import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
-import { celebrateScore } from "@/lib/feedback";
-import { awardCoins } from "@/lib/coins";
-import { recordGrammarAttempt, loadGrammarMastery, LEVEL_META, type GrammarMastery } from "@/lib/grammarFsrs";
-import { toast } from "sonner";
-import TutorChat from "@/components/tutor/TutorChat";
-import PaywallDialog from "@/components/PaywallDialog";
-import { consumeQuestionQuota } from "@/lib/quota";
-import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
-import {
-  CHALLENGE_QUESTIONS_SENIOR,
-  CHALLENGE_THRESHOLD,
-  recordGroupCompletion,
-  type Streak } from
-"@/lib/challengeMode";
+import { Progress } from "@/components/ui/progress";
+import { Card } from "@/components/ui/card";
+import BackLink from "@/components/BackLink";
 
-type Point = {id: string;title: string;slug: string;kp_id?: string | null;};
-type Question = {
+interface Question {
   id: string;
   stem: string;
   option_a: string;
@@ -31,460 +16,270 @@ type Question = {
   option_d: string;
   correct_answer: string;
   explanation: string;
-  irt_difficulty: number | null;
-  question_type: string;
-  is_ai?: boolean;
-};
+  source?: "original" | "ai_cache" | "ai_realtime";
+}
+
+interface QuizBundle {
+  kpId: string;
+  kpTitle: string;
+  questions: Question[];
+}
 
 export default function GaokaoGrammarQuiz() {
-  const { slug, index } = useParams<{slug: string;index: string;}>();
+  const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const isChallenge = searchParams.get("challenge") === "1";
-  const sessionSize = isChallenge ? CHALLENGE_QUESTIONS_SENIOR : 12;
-  const idx = Math.max(0, parseInt(index || "0", 10) || 0);
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [showExplanation, setShowExplanation] = useState(false);
 
-  const [point, setPoint] = useState<Point | null>(null);
-  const [questions, setQuestions] = useState<Question[]>([]);
-  const [mastery, setMastery] = useState<GrammarMastery | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [loadStage, setLoadStage] = useState<"init" | "ai_generating">("init");
-  const [loadError, setLoadError] = useState<string | null>(null);
-  const [picked, setPicked] = useState<string | null>(null);
-  const [startTs, setStartTs] = useState<number>(Date.now());
-  const [stats, setStats] = useState({ correct: 0, wrong: 0 });
-  const [tutorOpen, setTutorOpen] = useState(false);
-  const [paywall, setPaywall] = useState<{open: boolean;used: number;limit: number;}>({ open: false, used: 5, limit: 5 });
-  const [groupStreak, setGroupStreak] = useState<Streak>({ consecutive_count: 0, challenge_unlocked: false });
-  const groupRecordedRef = useRef<string | null>(null);
+  const { data: bundle, isLoading, error, refetch } = useQuery<QuizBundle>({
+    queryKey: ["grammar-quiz", slug],
+    enabled: !!slug,
+    queryFn: async () => {
+      if (!slug) throw new Error("NO_SLUG");
 
-  // Register the global AI assistant for this question.
-  // Locked until the user has answered (`picked` is set), preventing answer leakage.
-  const currentQ = questions[idx];
-  useRegisterAssistant(
-    currentQ ?
-    {
-      context: "gaokao_grammar",
-      ref: currentQ.id,
-      topic: point ? `高考语法 · ${point.title}` : "高考语法",
-      mode: "per-question",
-      unlocked: !!picked,
-      lockedHint: "请先选出你认为正确的选项，提交后我再来帮你解析 ✨",
-      pageTitle: "💬 小月 · 本题答疑",
-      snapshot: picked ?
-      {
-        point: point?.title,
-        stem: currentQ.stem,
-        options: { A: currentQ.option_a, B: currentQ.option_b, C: currentQ.option_c, D: currentQ.option_d },
-        correct_answer: currentQ.correct_answer,
-        user_answer: picked,
-        is_correct: picked === currentQ.correct_answer,
-        explanation: currentQ.explanation
-      } :
-      undefined
-    } :
-    null
-  );
+      const { data: kpData, error: kpErr } = await supabase
+        .from("gaokao_grammar_points")
+        .select("id, title")
+        .eq("slug", slug)
+        .maybeSingle();
 
-  useEffect(() => {
-    if (!slug) return;
-    (async () => {
-      setLoading(true);
-      setLoadError(null);
-      setLoadStage("init");
-      try {
-      const { data: pt } = await supabase.
-      from("gaokao_grammar_points").
-      select("id, title, slug, kp_id").
-      eq("slug", slug).
-      maybeSingle();
-      if (!pt) { setPoint(null); setLoading(false); return; }
-      setPoint(pt as Point);
-      const { data: qs } = await supabase.
-      from("gaokao_grammar_questions").
-      select("id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, irt_difficulty, question_type").
-      eq("point_id", pt.id);
-      const sorted = ((qs ?? []) as Question[]).sort(
-        (a, b) => (a.irt_difficulty ?? 0) - (b.irt_difficulty ?? 0)
-      );
-      let combined: Question[] = sorted.slice(0, sessionSize);
-      // Fallback chain when original bank is short. NOTE: ai_generated_questions.kp_id
-      // stores the gaokao_grammar_points.id (UUID), NOT the human-readable kp_id string.
-      const mapAi = (r: any): Question => ({
-        id: r.id, stem: r.stem,
-        option_a: r.option_a, option_b: r.option_b, option_c: r.option_c, option_d: r.option_d,
-        correct_answer: r.correct_answer, explanation: r.explanation,
-        irt_difficulty: 0, question_type: "single", is_ai: true,
-      } as any);
-      if (combined.length < 3) {
-        const kpUuid = pt.id; // matches ai_generated_questions.kp_id and v_gaokao_all_knowledge_points.id
-        const { data: cached } = await supabase
-          .from("ai_generated_questions")
-          .select("id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation")
-          .eq("kp_id", kpUuid)
-          .lt("used_count", 5)
-          .limit(5);
-        combined = [...combined, ...((cached ?? []).map(mapAi))];
+      if (kpErr || !kpData) {
+        throw new Error("KP_NOT_FOUND");
+      }
 
-        // If we have at least 1, start now and prewarm the rest in background.
-        if (combined.length >= 1 && combined.length < 5) {
-          supabase.functions.invoke("generate-question-for-kp", {
-            body: { kp_id: kpUuid, count: 5 - combined.length },
-          }).catch((e) => console.error("prewarm gen failed:", e));
+      const kpId = kpData.id;
+      const kpTitle = kpData.title;
+
+      const { data: originalRaw } = await supabase
+        .from("gaokao_grammar_questions")
+        .select("id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation")
+        .eq("point_id", kpId);
+
+      const original: Question[] = (originalRaw || []).map((q) => ({
+        id: q.id,
+        stem: q.stem,
+        option_a: q.option_a,
+        option_b: q.option_b,
+        option_c: q.option_c,
+        option_d: q.option_d,
+        correct_answer: q.correct_answer,
+        explanation: q.explanation,
+        source: "original" as const,
+      }));
+
+      const { data: cachedRaw } = await supabase
+        .from("ai_generated_questions")
+        .select("id, stem, option_a, option_b, option_c, option_d, correct_answer, explanation, used_count")
+        .eq("kp_id", kpId)
+        .lt("used_count", 5)
+        .limit(5);
+
+      const cached: Question[] = (cachedRaw || []).map((q) => ({
+        id: q.id,
+        stem: q.stem,
+        option_a: q.option_a,
+        option_b: q.option_b,
+        option_c: q.option_c,
+        option_d: q.option_d,
+        correct_answer: q.correct_answer,
+        explanation: q.explanation,
+        source: "ai_cache" as const,
+      }));
+
+      const combined = [...original, ...cached];
+
+      if (combined.length >= 1) {
+        if (combined.length < 5) {
+          supabase.functions
+            .invoke("generate-question-for-kp", {
+              body: { kp_id: kpId, count: 5 - combined.length },
+            })
+            .catch((e) => console.error("generate-question-for-kp prewarm failed:", e));
         }
 
-        // If still nothing, block on live generation.
-        if (combined.length === 0) {
-          setLoadStage("ai_generating");
-          const { data: gen, error: genErr } = await supabase.functions.invoke(
-            "generate-question-for-kp",
-            { body: { kp_id: kpUuid, count: 3 } }
-          );
-          if (genErr) throw new Error("AI 出题失败：" + genErr.message);
-          const list = (gen as any)?.questions ?? ((gen as any)?.question ? [(gen as any).question] : []);
-          combined = [...combined, ...list.map(mapAi)];
-        }
+        return { kpId, kpTitle, questions: combined };
       }
-      setQuestions(combined.slice(0, sessionSize));
-      const ms = await loadGrammarMastery(pt.id);
-      setMastery(ms);
-      setLoading(false);
-      } catch (e: any) {
-        console.error("[GrammarQuiz] load failed:", e);
-        setLoadError(String(e?.message || e));
-        setLoading(false);
-      }
-    })();
-  }, [slug, sessionSize]);
 
-  // Reset per-question state when index changes
-  useEffect(() => {
-    setPicked(null);
-    setStartTs(Date.now());
-    setTutorOpen(false);
-    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-  }, [idx]);
+      const { data: gen, error: genErr } = await supabase.functions.invoke("generate-question-for-kp", {
+        body: { kp_id: kpId, count: 3 },
+      });
 
-  const q = questions[idx];
-  const total = questions.length;
+      if (genErr) throw new Error("AI_GENERATE_FAILED: " + genErr.message);
 
-  if (loading) {
+      const generated: Question[] = (gen?.questions || (gen?.question ? [gen.question] : [])).map((q: any) => ({
+        id: q.id,
+        stem: q.stem,
+        option_a: q.option_a,
+        option_b: q.option_b,
+        option_c: q.option_c,
+        option_d: q.option_d,
+        correct_answer: q.correct_answer,
+        explanation: q.explanation,
+        source: "ai_realtime" as const,
+      }));
+
+      if (generated.length === 0) throw new Error("AI_RETURNED_EMPTY");
+
+      return { kpId, kpTitle, questions: generated };
+    },
+    retry: false,
+    staleTime: 60 * 60 * 1000,
+  });
+
+  if (isLoading) {
     return (
-      <main className="mx-auto flex min-h-screen max-w-2xl flex-col items-center justify-center gap-3 px-5 py-8">
+      <main className="mx-auto flex min-h-screen max-w-2xl flex-col items-center justify-center gap-4 px-5 py-8 text-center">
         <div className="text-5xl animate-pulse">🤖</div>
-        <div className="text-lg font-medium">
-          {loadStage === "ai_generating" ? "AI 正在为你出题..." : "加载中..."}
+        <div>
+          <h1 className="text-xl font-bold text-foreground">AI 正在为你出题…</h1>
+          <p className="mt-2 text-sm text-muted-foreground">通常 5-10 秒</p>
         </div>
-        {loadStage === "ai_generating" && (
-          <div className="text-xs text-muted-foreground">通常 5-10 秒，请稍候</div>
-        )}
+        <Progress value={62} className="h-2 max-w-xs" />
       </main>
     );
   }
-  if (loadError) {
+
+  if (error) {
+    const msg = (error as Error).message;
+    let userFacing = "AI 出题失败，请重试";
+    if (msg.includes("KP_NOT_FOUND")) userFacing = "考点不存在";
+    if (msg.includes("AI_RETURNED_EMPTY")) userFacing = "AI 暂时无法为这个考点出题";
+
     return (
-      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8 text-center">
-        <div className="text-lg font-medium mb-2">生成失败</div>
-        <div className="text-sm text-muted-foreground mb-4">{loadError}</div>
-        <Button onClick={() => navigate('/gaokao/grammar')}>返回语法地图</Button>
+      <main className="mx-auto flex min-h-screen max-w-2xl flex-col justify-center px-5 py-8">
+        <Card className="p-6 text-center">
+          <h1 className="text-xl font-bold text-foreground">{userFacing}</h1>
+          <p className="mt-2 break-words text-sm text-muted-foreground">{msg}</p>
+          <div className="mt-6 flex flex-col justify-center gap-2 sm:flex-row">
+            <Button onClick={() => refetch()}>重试</Button>
+            <Button variant="outline" onClick={() => navigate("/gaokao/grammar")}>返回语法地图</Button>
+          </div>
+        </Card>
       </main>
     );
   }
-  if (!point) {
-    return <main className="mx-auto min-h-screen max-w-2xl px-5 py-8"><p><T>考点不存在。</T><BackLink to="/gaokao/grammar" className="text-primary underline"><T>返回</T></BackLink></p></main>;
-  }
-  if (!total) {
+
+  if (!bundle || !bundle.questions || bundle.questions.length === 0) {
     return (
-      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-        <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> <T>返回语法地图</T>
-        </BackLink>
-        <div className="rounded-2xl border bg-card p-6 text-center">
-          <div className="text-base font-medium mb-2">AI 暂时无法为这个考点出题</div>
-          <div className="text-sm text-muted-foreground mb-4">
-            可能是知识图谱缺少示例或 AI 服务繁忙。已记录，工程师会处理。
-          </div>
-          <Button onClick={() => navigate('/gaokao/grammar')}>返回选其他考点</Button>
-        </div>
-      </main>);
-
-  }
-
-  // Finished
-  if (idx >= total) {
-    const acc = stats.correct + stats.wrong > 0 ? stats.correct / (stats.correct + stats.wrong) : 0;
-    // Fire celebration once per finish
-    if (typeof window !== "undefined") {
-      const key = `gk-grammar-quiz-${slug}-${stats.correct}-${stats.wrong}`;
-      if ((window as any).__celebrated !== key) {
-        (window as any).__celebrated = key;
-        celebrateScore(Math.round(acc * 100));
-      }
-    }
-    // 记录"组完成"驱动挑战模式连胜（同一轮只记一次）
-    const recordKey = `${slug}-${stats.correct}-${stats.wrong}`;
-    if (point?.id && groupRecordedRef.current !== recordKey) {
-      groupRecordedRef.current = recordKey;
-      recordGroupCompletion(`senior_grammar:${point.id}`, Math.round(acc * 100)).
-      then(setGroupStreak).
-      catch(() => {});
-    }
-    return (
-      <main className="mx-auto min-h-screen max-w-2xl px-5 py-8">
-        <BackLink to="/gaokao/grammar" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> <T>返回语法地图</T>
-        </BackLink>
-        <div className="rounded-2xl border bg-card p-8 text-center">
-          <div className="text-5xl mb-3">🎉</div>
-          <h2 className="text-xl font-bold mb-2"><T>本考点已刷完！</T></h2>
-          <p className="text-sm text-muted-foreground mb-6">
-            <T>本轮</T> {stats.correct + stats.wrong} <T>题，✓</T> {stats.correct} · ✗ {stats.wrong}
-            {stats.correct + stats.wrong > 0 && <> <T>· 正确率</T> {Math.round(acc * 100)}%</>}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-2 justify-center">
-            <Button onClick={() => {setStats({ correct: 0, wrong: 0 });navigate(`/gaokao/grammar/${slug}/quiz/0`);}}>
-              <RotateCcw className="size-4 mr-1" /> <T>再刷一轮</T>
-            </Button>
-            {groupStreak.challenge_unlocked && !isChallenge &&
-            <Button
-              onClick={() => {
-                setStats({ correct: 0, wrong: 0 });
-                groupRecordedRef.current = null;
-                const next = new URLSearchParams(searchParams);
-                next.set("challenge", "1");
-                setSearchParams(next);
-                navigate(`/gaokao/grammar/${slug}/quiz/0?challenge=1`);
-              }}
-              className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700">
-                <T>🏆 挑战模式 (</T>
-              {CHALLENGE_QUESTIONS_SENIOR} <T>题)</T>
-              </Button>
-            }
-            {isChallenge &&
-            <Button
-              variant="outline"
-              onClick={() => {
-                setStats({ correct: 0, wrong: 0 });
-                groupRecordedRef.current = null;
-                navigate(`/gaokao/grammar/${slug}/quiz/0`);
-              }}>
-                <T>↩️ 退出挑战模式</T>
-              
-            </Button>
-            }
-            <Button variant="outline" asChild>
-              <Link to={`/gaokao/grammar/${slug}`}><BookOpen className="size-4 mr-1" /> <T>看讲解</T></Link>
-            </Button>
-            <Button variant="ghost" asChild>
-              <BackLink to="/gaokao/grammar"><T>返回地图</T></BackLink>
-            </Button>
-          </div>
-          {!groupStreak.challenge_unlocked && acc * 100 >= 70 &&
-          <p className="mt-5 text-xs font-bold text-violet-600 dark:text-violet-300">
-              <T>🔥 连续完成</T> {groupStreak.consecutive_count}/{CHALLENGE_THRESHOLD} <T>组</T>
-              {groupStreak.consecutive_count < CHALLENGE_THRESHOLD &&
-            ` · 再 ${CHALLENGE_THRESHOLD - groupStreak.consecutive_count} 组解锁挑战模式 🏆`}
-            </p>
-          }
-          {!groupStreak.challenge_unlocked && acc * 100 < 70 && groupStreak.consecutive_count === 0 &&
-          <p className="mt-5 text-xs text-muted-foreground">
-              <T>💡 单组正确率 ≥70% 才计入连胜，加油！</T>
-            </p>
-          }
-        </div>
-      </main>);
-
-  }
-
-  const onPick = async (letter: string) => {
-    if (picked) return;
-    // Daily quota gate (free 用户每天 5 题)
-    const quota = await consumeQuestionQuota();
-    if (!quota.allowed) {
-      setPaywall({ open: true, used: quota.used, limit: quota.limit });
-      return;
-    }
-    setPicked(letter);
-    const isCorrect = letter === q.correct_answer;
-    setStats((s) => ({ correct: s.correct + (isCorrect ? 1 : 0), wrong: s.wrong + (isCorrect ? 0 : 1) }));
-    if (isCorrect) awardCoins(3, "gaokao_grammar_correct").catch(() => {});else
-    {import("@/lib/coins").then((m) => m.notifyWrong());}
-    const latencyMs = Date.now() - startTs;
-    await recordAttempt({ questionType: "grammar", questionId: q.id, userAnswer: letter, isCorrect });
-    // Fire-and-forget: AI 错因分类
-    if (!isCorrect) {
-      supabase.functions.invoke("classify-mistake-cause", {
-        body: {
-          question_text: q.stem,
-          correct_answer: q.correct_answer,
-          user_answer: letter,
-          time_spent_seconds: Math.round(latencyMs / 1000),
-          kp_id: point?.id,
-          skill_area: "grammar",
-        },
-      }).catch((e) => console.error("classify-mistake-cause failed:", e));
-    }
-    recordUnifiedAttempt({
-      stage: "senior",
-      grade: 10,
-      module: "grammar",
-      item_type: "grammar_question",
-      item_id: q.id,
-      item_label: point?.title ?? slug ?? undefined,
-      is_correct: isCorrect,
-      user_answer: letter,
-      correct_answer: q.correct_answer,
-      context: { point_id: point?.id, slug, explanation: q.explanation }
-    }).catch(() => {});
-    const res = await recordGrammarAttempt({
-      pointId: point.id,
-      questionType: q.question_type || "multiple_choice",
-      isCorrect,
-      latencyMs
-    });
-    if (res?.justMastered) {
-      toast.success("🏆 恭喜！本考点已掌握 (Master)", { duration: 4000 });
-    } else if (res && isCorrect) {
-      const m = LEVEL_META[res.newLevel];
-      toast(`${m.emoji} ${m.label} · ${res.intervalDays} 天后复习`, { duration: 1800 });
-    }
-    setMastery((prev) =>
-    prev ?
-    { ...prev, correct_count: prev.correct_count + (isCorrect ? 1 : 0), wrong_count: prev.wrong_count + (isCorrect ? 0 : 1), mastery_level: res?.newLevel ?? prev.mastery_level } :
-    prev
+      <main className="mx-auto flex min-h-screen max-w-2xl flex-col justify-center px-5 py-8">
+        <Card className="p-6 text-center">
+          <h1 className="text-xl font-bold text-foreground">无可用题目</h1>
+          <Button className="mt-6" onClick={() => navigate("/gaokao/grammar")}>返回语法地图</Button>
+        </Card>
+      </main>
     );
-  };
+  }
 
-  const goNext = () => navigate(`/gaokao/grammar/${slug}/quiz/${idx + 1}`);
-  const goPrev = () => {if (idx > 0) navigate(`/gaokao/grammar/${slug}/quiz/${idx - 1}`);};
-
-  const meta = LEVEL_META[mastery?.mastery_level ?? 0];
+  const q = bundle.questions[currentIdx];
+  const isCorrect = selectedAnswer === q.correct_answer;
+  const aiBadge = q.source === "ai_realtime" || q.source === "ai_cache";
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-4 py-5 pb-24 sm:px-5 sm:py-8">
-      {/* 顶部返回 + 进度 */}
-      <div className="mb-4 flex items-center justify-between gap-2">
-        <BackLink to="/gaokao/grammar" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ArrowLeft className="size-4" /> <T>返回</T>
-        </BackLink>
-        <div className="text-xs text-muted-foreground tabular-nums">
-          {idx + 1} / {total} · ✓{stats.correct} ✗{stats.wrong}
-        </div>
-      </div>
-      <div className="mb-1 text-base font-bold truncate">{point.title}</div>
-      <div className="mb-4 flex items-center gap-2 text-[11px] text-muted-foreground">
-        <span>{meta.emoji} {meta.label}</span>
-        <span>·</span>
-        <span><T>累计 ✓</T>{mastery?.correct_count ?? 0} ✗{mastery?.wrong_count ?? 0}</span>
-      </div>
-      {/* 进度条 */}
-      <div className="mb-5 h-1.5 w-full overflow-hidden rounded-full bg-muted">
-        <div className="h-full bg-primary transition-all" style={{ width: `${idx / total * 100}%` }} />
-      </div>
+      <BackLink to="/gaokao/grammar" className="mb-4 inline-flex text-sm text-muted-foreground hover:text-foreground">
+        返回语法地图
+      </BackLink>
 
-      {/* 题干 */}
-      <section className="rounded-2xl border bg-card p-5 sm:p-6">
-        {q.is_ai && (
-          <span className="mb-2 inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary">
+      <div className="mb-5 flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <h1 className="truncate text-lg font-bold text-foreground">{bundle.kpTitle}</h1>
+          <p className="mt-1 text-xs text-muted-foreground">
+            第 {currentIdx + 1} / {bundle.questions.length} 题
+          </p>
+        </div>
+        {aiBadge && (
+          <span className="shrink-0 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
             🤖 AI 实时生成
           </span>
         )}
-        <p className="mb-5 text-base font-medium leading-relaxed sm:text-lg">{q.stem}</p>
-        <div className="space-y-2.5">
-          {(["A", "B", "C", "D"] as const).map((letter) => {
-            const text = (q as any)[`option_${letter.toLowerCase()}`];
-            const isPicked = picked === letter;
-            const isAnswer = q.correct_answer === letter;
-            let cls = "border-border hover:border-primary/40 hover:bg-muted/30";
-            if (picked) {
-              if (isAnswer) cls = "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30 ring-2 ring-emerald-500/40";else
-              if (isPicked) cls = "border-rose-500 bg-rose-50 dark:bg-rose-950/30";else
-              cls = "border-border opacity-60";
+      </div>
+
+      <Progress value={((currentIdx + 1) / bundle.questions.length) * 100} className="mb-5 h-2" />
+
+      <Card className="p-5 sm:p-6">
+        <p className="mb-5 whitespace-pre-wrap text-base font-medium leading-relaxed text-foreground sm:text-lg">{q.stem}</p>
+
+        <div className="space-y-3">
+          {(["a", "b", "c", "d"] as const).map((letter) => {
+            const upper = letter.toUpperCase();
+            const text = q[`option_${letter}` as keyof Question] as string;
+            const isSelected = selectedAnswer === upper;
+            const isRevealed = showExplanation;
+            const isThisCorrect = q.correct_answer === upper;
+
+            let className = "w-full rounded-lg border p-3 text-left text-sm transition-colors sm:text-base ";
+            if (isRevealed) {
+              if (isThisCorrect) className += "border-green-500 bg-green-50 text-green-950";
+              else if (isSelected) className += "border-red-500 bg-red-50 text-red-950";
+              else className += "border-border text-foreground opacity-70";
+            } else {
+              className += isSelected ? "border-primary bg-primary/5 text-foreground" : "border-border text-foreground hover:bg-muted/50";
             }
+
             return (
               <button
-                key={letter}
-                onClick={() => onPick(letter)}
-                disabled={!!picked}
-                className={`flex w-full items-start gap-3 rounded-xl border-2 p-3.5 text-left text-sm transition sm:text-base ${cls}`}>
-                
-                <span className="font-bold shrink-0">{letter}.</span>
-                <span className="flex-1">{text}</span>
-                {picked && isAnswer && <CheckCircle2 className="size-5 text-emerald-600 shrink-0" />}
-                {picked && isPicked && !isAnswer && <XCircle className="size-5 text-rose-600 shrink-0" />}
-              </button>);
-
+                key={upper}
+                className={className}
+                onClick={() => !showExplanation && setSelectedAnswer(upper)}
+                disabled={showExplanation}
+              >
+                <span className="mr-2 font-bold">{upper}.</span>
+                {text}
+              </button>
+            );
           })}
         </div>
 
-        {/* 解析 */}
-        {picked &&
-        <div className="mt-5 rounded-xl border-l-4 border-primary bg-muted/40 p-4">
-            <div className="mb-1.5 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
-              {picked === q.correct_answer ? "✅ 答对了" : "❌ 答错了"} <T>· 解析</T>
+        {showExplanation && (
+          <div className="mt-5 rounded-lg border border-border bg-muted/40 p-4">
+            <div className={`mb-2 font-bold ${isCorrect ? "text-green-600" : "text-red-600"}`}>
+              {isCorrect ? "✓ 答对了" : `✗ 正确答案是 ${q.correct_answer}`}
             </div>
-            <p className="text-sm leading-relaxed text-foreground/90 whitespace-pre-wrap">
-              <span className="font-bold"><T>正确答案：</T>{q.correct_answer}</span>
-              {"\n"}
-              {q.explanation}
-            </p>
-            <div className="mt-3">
-              <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setTutorOpen(true)}
-              className="rounded-full border-primary/40 text-primary hover:bg-primary/10">
-              
-                <MessageCircleQuestion className="size-4 mr-1.5" />
-                <T>问小月 / Ask Luna</T>
-              </Button>
-            </div>
+            <p className="whitespace-pre-wrap text-sm leading-relaxed text-foreground/90">{q.explanation}</p>
           </div>
-        }
-      </section>
+        )}
+      </Card>
 
-      {/* 底部导航 */}
-      <div className="mt-5 flex items-center gap-2">
-        <Button variant="outline" onClick={goPrev} disabled={idx === 0}>
-          <ArrowLeft className="size-4 mr-1" /> <T>上一题</T>
-        </Button>
-        <div className="flex-1" />
-        {picked ?
-        <Button onClick={goNext} size="lg" className="min-w-[140px]">
-            {idx + 1 >= total ? "查看结果" : "下一题"} <ChevronRight className="size-4 ml-1" />
-          </Button> :
-
-        <Button variant="ghost" onClick={goNext} className="text-muted-foreground">
-            <T>跳过</T> <ChevronRight className="size-4 ml-0.5" />
+      <div className="mt-5 flex items-center justify-end gap-2">
+        {!showExplanation ? (
+          <Button
+            disabled={!selectedAnswer}
+            onClick={() => {
+              setShowExplanation(true);
+              if (!isCorrect && q.id) {
+                supabase.functions
+                  .invoke("classify-mistake-cause", {
+                    body: {
+                      attempt_id: q.id,
+                      question_text: q.stem,
+                      correct_answer: q.correct_answer,
+                      user_answer: selectedAnswer,
+                      time_spent_seconds: 0,
+                      kp_id: bundle.kpId,
+                      skill_area: "grammar",
+                    },
+                  })
+                  .catch((e) => console.error("classify-mistake-cause failed:", e));
+              }
+            }}
+          >
+            提交答案
           </Button>
-        }
+        ) : currentIdx < bundle.questions.length - 1 ? (
+          <Button
+            onClick={() => {
+              setCurrentIdx(currentIdx + 1);
+              setSelectedAnswer(null);
+              setShowExplanation(false);
+            }}
+          >
+            下一题 →
+          </Button>
+        ) : (
+          <Button onClick={() => navigate("/gaokao/grammar")}>返回考点地图</Button>
+        )}
       </div>
-
-      {picked &&
-      <TutorChat
-        context="gaokao_grammar"
-        questionRef={q.id}
-        questionSnapshot={{
-          point: point.title,
-          stem: q.stem,
-          options: { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d },
-          correct_answer: q.correct_answer,
-          user_answer: picked,
-          is_correct: picked === q.correct_answer,
-          explanation: q.explanation
-        }}
-        open={tutorOpen}
-        onClose={() => setTutorOpen(false)} />
-
-      }
-
-      <PaywallDialog
-        open={paywall.open}
-        onClose={() => setPaywall((p) => ({ ...p, open: false }))}
-        trigger="daily_quota_exhausted"
-        used={paywall.used}
-        limit={paywall.limit} />
-      
-    </main>);
-
+    </main>
+  );
 }

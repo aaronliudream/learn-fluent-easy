@@ -1,0 +1,1 @@
+DELETE FROM public.ai_generated_questions WHERE skill_area='grammar' AND stem ILIKE '%species%';

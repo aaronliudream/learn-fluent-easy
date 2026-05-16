@@ -46,6 +46,29 @@ const COSYVOICE_VOICE_MAP: Record<string, string> = {
   onyx:    "longshu_v2",      // deeper male
 };
 
+// Volcano Engine (火山引擎) bigtts voice map — used for mainland-China traffic.
+// These are English-capable "mars_bigtts" voices that also speak Chinese well,
+// so a single voice handles bilingual explanations cleanly.
+const VOLCANO_VOICE_MAP: Record<string, string> = {
+  shimmer: "en_female_anna_mars_bigtts",   // warm female (default)
+  alloy:   "en_female_anna_mars_bigtts",
+  nova:    "en_female_skye_emo_v2_mars_bigtts", // bright female
+  fable:   "en_female_sarah_mars_bigtts",  // gentle female narrator
+  echo:    "en_male_adam_mars_bigtts",     // calm male
+  onyx:    "en_male_smith_mars_bigtts",    // deeper male
+  // ElevenLabs handles map to a sensible Volcano equivalent
+  "el:lily":    "en_female_anna_mars_bigtts",
+  "el:matilda": "en_female_sarah_mars_bigtts",
+  "el:sarah":   "en_female_sarah_mars_bigtts",
+  "el:jessica": "en_female_anna_mars_bigtts",
+  "el:laura":   "en_female_anna_mars_bigtts",
+  "el:brian":   "en_male_adam_mars_bigtts",
+  "el:george":  "en_male_smith_mars_bigtts",
+  "el:callum":  "en_male_adam_mars_bigtts",
+  "el:liam":    "en_male_adam_mars_bigtts",
+  "el:eric":    "en_male_adam_mars_bigtts",
+};
+
 function isMainlandChina(req: Request): boolean {
   const country = (req.headers.get("cf-ipcountry") || req.headers.get("x-vercel-ip-country") || "").toUpperCase();
   if (country === "CN") return true;
@@ -204,6 +227,56 @@ async function synthesizeWithElevenLabs(text: string, voiceKey: string, speed: n
   return await response.arrayBuffer();
 }
 
+async function synthesizeWithVolcano(
+  text: string,
+  voiceType: string,
+  speed: number,
+  appId: string,
+  accessToken: string,
+  cluster: string,
+): Promise<ArrayBuffer> {
+  // Volcano Engine TTS — HTTP one-shot (non-streaming) endpoint.
+  // Docs: https://www.volcengine.com/docs/6561/79817
+  const url = "https://openspeech.bytedance.com/api/v1/tts";
+  const body = {
+    app: { appid: appId, token: accessToken, cluster },
+    user: { uid: "fluentpath-anon" },
+    audio: {
+      voice_type: voiceType,
+      encoding: "mp3",
+      speed_ratio: Math.min(2.0, Math.max(0.5, speed)),
+      rate: 24000,
+    },
+    request: {
+      reqid: crypto.randomUUID(),
+      text,
+      operation: "query",
+    },
+  };
+  const resp = await fetch(url, {
+    method: "POST",
+    headers: {
+      // Note the literal "Bearer;" — Volcano requires the semicolon, not a space.
+      Authorization: `Bearer;${accessToken}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+  if (!resp.ok) {
+    const t = await resp.text();
+    throw new Error(`Volcano ${resp.status}: ${t}`);
+  }
+  const j = await resp.json() as { code?: number; message?: string; data?: string };
+  if (!j.data || (j.code !== undefined && j.code !== 3000)) {
+    throw new Error(`Volcano code=${j.code} msg=${j.message || "no data"}`);
+  }
+  // data is base64-encoded MP3.
+  const bin = atob(j.data);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out.buffer;
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
@@ -225,13 +298,21 @@ serve(async (req) => {
     const safeSpeed = Math.min(1.2, Math.max(0.6, Number(speed) || 0.95));
     const safeText = String(text).slice(0, 4000);
     const isShort = safeText.length <= 40;
-    // Routing: OpenAI for ALL users (including mainland China). Aliyun CosyVoice
-    // disabled per user request — voice quality was unsatisfactory. The
-    // content-addressed Supabase Storage cache means each unique
-    // (voice, speed, text) is only synthesized ONCE; subsequent plays
-    // for ANY user worldwide are served from CDN (<200ms), so China
-    // users only pay the OpenAI round-trip on the very first play.
-    const provider: "aliyun" | "openai" | "elevenlabs" = isElevenLabs ? "elevenlabs" : "openai";
+    // Routing:
+    //   - Mainland-China traffic → Volcano Engine (火山引擎) bigtts, which is
+    //     reachable inside China and avoids the OpenAI / ElevenLabs round-trip
+    //     that often stalls on the Great Firewall.
+    //   - Everyone else → ElevenLabs for `el:` voices, OpenAI otherwise.
+    // Content-addressed Supabase Storage cache means each unique
+    // (provider, voice, speed, text) is only synthesized ONCE; subsequent
+    // plays for ANY user worldwide are served from CDN (<200ms).
+    const fromCN = isMainlandChina(req);
+    const provider: "volcano" | "aliyun" | "openai" | "elevenlabs" =
+      fromCN && Deno.env.get("VOLCANO_TTS_APP_ID") && Deno.env.get("VOLCANO_TTS_ACCESS_TOKEN")
+        ? "volcano"
+        : isElevenLabs
+        ? "elevenlabs"
+        : "openai";
 
     // Content-addressed cache key — same text+voice+speed always lands on the same file.
     const keyInput = `${provider}|${selectedVoice}|${safeSpeed}|${accentUpper}|${safeText}`;
@@ -265,6 +346,19 @@ serve(async (req) => {
           usedProvider = "elevenlabs";
         } catch (err) {
           console.error("ElevenLabs failed, falling back to OpenAI:", err);
+        }
+      }
+    } else if (provider === "volcano") {
+      const appId = Deno.env.get("VOLCANO_TTS_APP_ID");
+      const token = Deno.env.get("VOLCANO_TTS_ACCESS_TOKEN");
+      const cluster = Deno.env.get("VOLCANO_TTS_CLUSTER") || "volcano_tts";
+      if (appId && token) {
+        try {
+          const v = VOLCANO_VOICE_MAP[selectedVoice] || VOLCANO_VOICE_MAP[requestedVoice] || "en_female_anna_mars_bigtts";
+          bytes = await synthesizeWithVolcano(safeText, v, safeSpeed, appId, token, cluster);
+          usedProvider = "volcano" as typeof usedProvider;
+        } catch (err) {
+          console.error("Volcano TTS failed, falling back to OpenAI:", err);
         }
       }
     } else if (provider === "aliyun") {

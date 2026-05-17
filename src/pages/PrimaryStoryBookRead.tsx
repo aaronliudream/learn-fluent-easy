@@ -34,7 +34,7 @@ export default function PrimaryStoryBookRead() {
   const book = useMemo(() => findBook(id) ?? findBookG2(id), [id]);
   // G2 books have ids sb11..sb20 — keep return links scoped to the right shelf.
   const isG2Book = !!book && !!findBookG2(id);
-  const shelfHref = isG2Book ? "/primary/reading?grade=2" : "/primary/reading";
+  const shelfHref = isG2Book ? "/primary/storybooks?grade=2" : "/primary/storybooks";
 
   const [phase, setPhase] = useState<Phase>("read");
   const [pageIdx, setPageIdx] = useState(0); // 0-based

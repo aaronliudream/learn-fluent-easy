@@ -28,22 +28,30 @@ export default function PrimaryReading() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let cancelled = false;
     setLoading(true);
-    supabase.
-    from("primary_reading_articles").
-    select("id,grade,sort_order,theme,title_cn,title_en,emoji,cover_gradient,level,estimated_minutes,progress:primary_reading_progress(stars,completed_at)").
-    eq("grade", g).
-    order("sort_order").
-    then(({ data }) => {
-      setList((data ?? []) as any);
-      setLoading(false);
-    });
+    supabase
+      .from("primary_reading_articles")
+      .select(
+        "id,grade,sort_order,theme,title_cn,title_en,emoji,cover_gradient,level,estimated_minutes,progress:primary_reading_progress(stars,completed_at)"
+      )
+      .eq("grade", g)
+      .order("sort_order")
+      .then(({ data, error }) => {
+        if (cancelled) return;
+        if (error) console.error("[PrimaryReading] load articles:", error);
+        setList((data ?? []) as Article[]);
+        setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [g]);
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
       <BackLink
-        to={`/primary/grade/${g}`}
+        to={`/primary/adventure/${g}`}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         
         <ArrowLeft className="size-4" /> <T>返回</T> <T>{`${GRADE_NAMES[g - 1] ?? g}年级`}</T>

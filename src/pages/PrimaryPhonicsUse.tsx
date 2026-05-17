@@ -174,7 +174,7 @@ export default function PrimaryPhonicsUse() {
         <div className="rounded-2xl border-2 border-dashed border-border p-6 text-center text-sm text-muted-foreground">
           <T>暂时没有匹配的绘本,先去看看其它绘本吧</T>
           <div className="mt-2">
-            <Link to={`/primary/reading${gradeQ}`} className="text-primary underline"><T>去绘本书架 →</T></Link>
+            <Link to={`/primary/storybooks${gradeQ}`} className="text-primary underline"><T>去拼读绘本书架 →</T></Link>
           </div>
         </div>
       )}

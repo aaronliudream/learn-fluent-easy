@@ -194,6 +194,20 @@ export default function PrimaryGrade() {
         </Link>
       </div>
 
+      {/* 趣味阅读 — 数据库 primary_reading_articles */}
+      <Link
+        to={`/primary/reading/grade/${g}`}
+        className="mb-3 flex items-center gap-4 rounded-3xl border-2 border-rose-200 bg-gradient-to-br from-rose-50 to-amber-50 p-4 shadow-sm transition hover:-translate-y-0.5 dark:border-rose-800 dark:from-rose-950/40 dark:to-amber-950/40">
+        <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-rose-400 to-amber-400 text-3xl text-white">
+          📖
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="text-xs font-bold uppercase tracking-wider text-rose-600"><T>趣味阅读</T></div>
+          <div className="text-lg font-extrabold"><T>绘本闯关 · 10 篇</T></div>
+          <p className="mt-0.5 text-sm text-muted-foreground"><T>热身 · 听读 · 跟读 · 思考 · 宝藏关</T></p>
+        </div>
+      </Link>
+
       {/* 🌟 主 CTA — 今天的冒险 */}
       {nextLesson ?
       <Link to={`/primary/lesson/${nextLesson.id}`}

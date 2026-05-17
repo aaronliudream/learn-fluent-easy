@@ -73,6 +73,7 @@ const PrimaryReading = lazy(() => import("./pages/PrimaryReading.tsx"));
 const PrimaryReadingPlay = lazy(() => import("./pages/PrimaryReadingPlay.tsx"));
 const PrimaryStoryBooks = lazy(() => import("./pages/PrimaryStoryBooks.tsx"));
 const PrimaryStoryBookRead = lazy(() => import("./pages/PrimaryStoryBookRead.tsx"));
+const PrimaryReadingRedirect = lazy(() => import("./pages/PrimaryReadingRedirect.tsx"));
 const PrimaryPhonicsUse = lazy(() => import("./pages/PrimaryPhonicsUse.tsx"));
 const StageTests = lazy(() => import("./pages/StageTests.tsx"));
 const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
@@ -305,10 +306,13 @@ const App = () => (
           <Route path="/primary/adventure/:grade" element={<ChineseOnlyRoute><PrimaryAdventure /></ChineseOnlyRoute>} />
          <Route path="/primary/parent" element={<Navigate to="/parent" replace />} />
           <Route path="/primary/culture/:grade" element={<ChineseOnlyRoute><PrimaryCulture /></ChineseOnlyRoute>} />
-          <Route path="/primary/reading" element={<ChineseOnlyRoute><PrimaryStoryBooks /></ChineseOnlyRoute>} />
-          <Route path="/primary/reading/read/:id" element={<ChineseOnlyRoute><PrimaryStoryBookRead /></ChineseOnlyRoute>} />
+          <Route path="/primary/reading" element={<ChineseOnlyRoute><PrimaryReadingRedirect /></ChineseOnlyRoute>} />
           <Route path="/primary/reading/grade/:grade" element={<ChineseOnlyRoute><PrimaryReading /></ChineseOnlyRoute>} />
           <Route path="/primary/reading/:id" element={<ChineseOnlyRoute><PrimaryReadingPlay /></ChineseOnlyRoute>} />
+          <Route path="/primary/storybooks" element={<ChineseOnlyRoute><PrimaryStoryBooks /></ChineseOnlyRoute>} />
+          <Route path="/primary/storybooks/read/:id" element={<ChineseOnlyRoute><PrimaryStoryBookRead /></ChineseOnlyRoute>} />
+          {/* Legacy phonics storybook URLs */}
+          <Route path="/primary/reading/read/:id" element={<ChineseOnlyRoute><PrimaryStoryBookRead /></ChineseOnlyRoute>} />
           <Route path="/primary/phonics/use/:letter" element={<ChineseOnlyRoute><PrimaryPhonicsUse /></ChineseOnlyRoute>} />
           <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
           <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />

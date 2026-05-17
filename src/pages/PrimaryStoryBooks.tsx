@@ -42,7 +42,7 @@ export default function PrimaryStoryBooks() {
   const DATA = isG2 ? PRIMARY_STORY_BOOKS_G2 : PRIMARY_STORY_BOOKS;
   const gradeQ = isG2 ? "?grade=2" : "";
   const gradeHome = isG2 ? "/primary/adventure/2" : "/primary";
-  const readPath = (id: string) => `/primary/reading/read/${id}${gradeQ}`;
+  const readPath = (id: string) => `/primary/storybooks/read/${id}${gradeQ}`;
   const [completed, setCompleted] = useState<Record<string, CompRec>>(() => loadLocal());
   // 锁定卡片点击时弹的 Spark 气泡(指向当前可读的那本)
   const [lockedHint, setLockedHint] = useState<{blocked: StoryBook;nextOpen: StoryBook | null;} | null>(null);
@@ -368,7 +368,7 @@ export default function PrimaryStoryBooks() {
       {/* G1 全部读完 → 解锁 G2 入口 */}
       {!isG2 && totalDone >= sorted.length && sorted.length > 0 &&
         <Link
-          to="/primary/reading?grade=2"
+          to="/primary/storybooks?grade=2"
           className="mt-4 block rounded-3xl bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 p-4 text-center text-white shadow-tile transition hover:-translate-y-0.5">
           
           <div className="text-base font-extrabold"><T>🎉 G1 绘本全部读完!</T></div>

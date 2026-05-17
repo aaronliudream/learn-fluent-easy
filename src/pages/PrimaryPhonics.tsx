@@ -372,7 +372,7 @@ export default function PrimaryPhonics() {
         
         </Link>
         <Link
-          to={modulePath("/primary/reading")}
+          to={`/primary/reading/grade/${gradeParam}`}
           className="inline-flex items-center gap-1 text-xs font-bold text-amber-600 underline-offset-2 hover:underline dark:text-amber-300">
           <T>📚 小绘本 Reading →</T>
         

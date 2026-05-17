@@ -188,7 +188,7 @@ function getThirdStepContent(
     title: "和 Spark 读绘本",
     sparkLine: "今天 Spark 想和你一起读一本小绘本!",
     cta: "去读绘本",
-    to: `/primary/reading${gradeQ}`,
+    to: `/primary/reading/grade/${grade}`,
     estMinutes: 4,
   };
 

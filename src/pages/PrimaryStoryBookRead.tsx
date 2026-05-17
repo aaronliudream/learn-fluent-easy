@@ -11,6 +11,7 @@ import type { StoryBookPage } from "@/data/primaryStoryBooks";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { markStoryBookReadToday } from "@/lib/phonicsJourney";
 import { StoryBookHeader, StoryBookPageIllustration } from "@/components/storybook/StoryBookReadPanels";
+import { BarbecueCardReader, speakStoryLine } from "@/components/storybook/BarbecueCardReader";
 
 function speakPage(page: StoryBookPage) {
   const v = pickStoryVoice(page.speaker);
@@ -113,7 +114,10 @@ export default function PrimaryStoryBookRead() {
     setQIdx(0);
     setPickedIdx(null);
     setCorrectCount(0);
-    const t = setTimeout(() => speakPage(book.pages[0]), 350);
+    const t = setTimeout(() => {
+      if (book.reader_layout === "card_v1" && book.reader_cover) return;
+      speakPage(book.pages[0]);
+    }, 350);
     return () => clearTimeout(t);
   }, [id, book]);
 
@@ -128,17 +132,21 @@ export default function PrimaryStoryBookRead() {
 
   }
 
-  const totalPages = book.pages.length;
-  const page = book.pages[pageIdx];
+  const isCardReader = book.reader_layout === "card_v1";
+  const spreadCount = (book.reader_cover ? 1 : 0) + book.pages.length;
+  const totalPages = isCardReader ? spreadCount : book.pages.length;
+  const contentPageIdx =
+    isCardReader && book.reader_cover ? Math.max(0, pageIdx - 1) : pageIdx;
+  const page = book.pages[contentPageIdx] ?? book.pages[0];
   const isLast = pageIdx === totalPages - 1;
 
   // 含 focus letter 的词,用作高亮 + 找一找环节
   const focusWordsOnPage = useMemo(() => {
-    if (!focusLetter) return [] as string[];
+    if (!focusLetter || isCardReader) return [] as string[];
     return page.text_en.split(/\b/).filter((tok) =>
       /[a-z]/i.test(tok) && tok.toLowerCase().includes(focusLetter)
     );
-  }, [page, focusLetter]);
+  }, [page, focusLetter, isCardReader]);
 
   function goPage(next: number) {
     if (next < 0 || next >= totalPages) return;
@@ -226,10 +234,21 @@ export default function PrimaryStoryBookRead() {
         <ArrowLeft className="size-4" /> <T>返回书架</T>
       </BackLink>
 
-      {!book.cover_designed && <StoryBookHeader book={book} />}
+      {!isCardReader && !book.cover_designed && <StoryBookHeader book={book} />}
 
-      {/* 阶段 1:翻页阅读 */}
-      {phase === "read" &&
+      {/* 阶段 1:翻页阅读 — sb1 卡片式阅读器 */}
+      {phase === "read" && isCardReader &&
+      <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+        <BarbecueCardReader
+          book={book}
+          spreadIdx={pageIdx}
+          onSpreadChange={goPage}
+          onFinishRead={startQuiz}
+        />
+      </div>}
+
+      {/* 阶段 1:翻页阅读 — 其他绘本默认布局 */}
+      {phase === "read" && !isCardReader &&
       <section className="mt-4">
           <div
           onTouchStart={onTouchStart}

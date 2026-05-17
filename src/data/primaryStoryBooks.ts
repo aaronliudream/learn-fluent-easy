@@ -47,6 +47,18 @@ export type StoryBookPage = {
   // 默认 "kid"(更明亮的童声 + 略快语速)。当出现妈妈/爸爸/Spark
   // 直接说话的句子时,可以指定不同的声音让孩子分清谁在讲话。
   speaker?: "kid" | "mom" | "dad" | "spark" | "narrator";
+  /** 卡片阅读器：下半区插图（public 原图路径，构建时不内联） */
+  panel_image?: string;
+  /** 卡片阅读器：页卡片背景色 */
+  panel_bg?: string;
+};
+
+export type StoryBookCover = {
+  title_en: string;
+  author_line: string;
+  series_badge?: string;
+  image?: string;
+  bg?: string;
 };
 
 export type StoryQuestionOption = {
@@ -84,6 +96,10 @@ export type StoryBook = {
   reading_minutes: number;      // 估计阅读分钟数
   pages: StoryBookPage[];       // 6-8 页
   questions: StoryQuestion[];   // 读后 2 道题
+  /** 阅读器布局：card_v1 = 附图卡片式单页（仅 sb1 等显式启用） */
+  reader_layout?: "default" | "card_v1";
+  /** 可选封面 spread（翻页第一屏） */
+  reader_cover?: StoryBookCover;
 };
 
 // ─── 10 本绘本 ──────────────────────────────────────
@@ -98,17 +114,72 @@ export const PRIMARY_STORY_BOOKS: StoryBook[] = [
     sortOrder: 1,
     bg: "from-yellow-300 to-orange-400",
     cover_emoji: "☀️🦊",
-    cover_art: "/storybooks/sb1/cover.webp",
-    cover_designed: true,
+    cover_art: "/assets/books/barbecue/cover.png",
     ai_picture_book: true,
     reading_minutes: 2,
+    reader_layout: "card_v1",
+    reader_cover: {
+      title_en: "The Barbecue",
+      author_line: "by Roderick Hunt & Alex Brychta",
+      series_badge: "Oxford Reading Tree",
+      image: "/assets/books/barbecue/cover.png",
+      bg: "#ebe3d6",
+    },
     pages: [
-      { page: 1, text_en: "Hi! I am Spark.", text_cn: "嗨！我是 Spark。", emoji: "🦊", image: "/storybooks/sb1/p1.webp", image_designed: true, speaker: "spark" },
-      { page: 2, text_en: "I see the sun.", text_cn: "我看见太阳。", emoji: "☀️", image: "/storybooks/sb1/p2.webp", image_designed: true, speaker: "spark" },
-      { page: 3, text_en: "The sun is up.", text_cn: "太阳升起来了。", emoji: "☀️⬆️", image: "/storybooks/sb1/p3.webp", image_designed: true, speaker: "spark" },
-      { page: 4, text_en: "The sun is hot.", text_cn: "太阳很热。", emoji: "☀️🔥", image: "/storybooks/sb1/p4.webp", image_designed: true, speaker: "spark" },
-      { page: 5, text_en: "I like the sun.", text_cn: "我喜欢太阳。", emoji: "☀️❤️", image: "/storybooks/sb1/p5.webp", image_designed: true, speaker: "spark" },
-      { page: 6, text_en: "Bye, sun!", text_cn: "再见，太阳！", emoji: "👋☀️", image: "/storybooks/sb1/p6.webp", image_designed: true, speaker: "spark" }
+      {
+        page: 1,
+        text_en: "Hi! I am Spark.",
+        text_cn: "嗨！我是 Spark。",
+        emoji: "🦊",
+        speaker: "spark",
+        panel_image: "/assets/books/barbecue/page1.png",
+        panel_bg: "#F5E6C8",
+      },
+      {
+        page: 2,
+        text_en: "I see the sun.",
+        text_cn: "我看见太阳。",
+        emoji: "☀️",
+        speaker: "spark",
+        panel_image: "/assets/books/barbecue/page2.png",
+        panel_bg: "#E8F4FC",
+      },
+      {
+        page: 3,
+        text_en: "The sun is up.",
+        text_cn: "太阳升起来了。",
+        emoji: "☀️⬆️",
+        speaker: "spark",
+        panel_image: "/assets/books/barbecue/page3.png",
+        panel_bg: "#E8F4FC",
+      },
+      {
+        page: 4,
+        text_en: "The sun is hot.",
+        text_cn: "太阳很热。",
+        emoji: "☀️🔥",
+        speaker: "spark",
+        panel_image: "/assets/books/barbecue/page4.png",
+        panel_bg: "#FFF4D6",
+      },
+      {
+        page: 5,
+        text_en: "I like the sun.",
+        text_cn: "我喜欢太阳。",
+        emoji: "☀️❤️",
+        speaker: "spark",
+        panel_image: "/assets/books/barbecue/page5.png",
+        panel_bg: "#E8F4FC",
+      },
+      {
+        page: 6,
+        text_en: "Bye, sun!",
+        text_cn: "再见，太阳！",
+        emoji: "👋☀️",
+        speaker: "spark",
+        panel_image: "/assets/books/barbecue/page6.png",
+        panel_bg: "#FFE8D6",
+      },
     ],
     questions: [
       {

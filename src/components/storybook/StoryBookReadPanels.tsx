@@ -79,7 +79,7 @@ export function StoryBookPageIllustration({ page }: { page: StoryBookPage }) {
       <div
         className={
           designed ?
-            "overflow-hidden rounded-2xl border-2 border-amber-200/80 bg-[#fffef5] shadow-md"
+            "rounded-2xl border-2 border-amber-200/80 bg-[#fffef5] p-1 shadow-md"
           : "mb-4 overflow-hidden rounded-2xl border-[3px] border-amber-900/30 bg-[#fffef5] shadow-inner"
         }>
         <img
@@ -87,7 +87,7 @@ export function StoryBookPageIllustration({ page }: { page: StoryBookPage }) {
           alt={page.text_en}
           className={
             designed ?
-              "mx-auto w-full max-w-lg object-contain"
+              "mx-auto block h-auto w-full max-w-md rounded-xl"
             : "mx-auto w-full max-h-[280px] object-contain"
           }
           loading="lazy"

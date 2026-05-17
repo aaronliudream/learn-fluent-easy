@@ -234,10 +234,10 @@ export default function PrimaryStoryBookRead() {
           <div
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
-          className="relative rounded-3xl border-2 border-amber-200 bg-gradient-to-b from-amber-50 to-yellow-50 p-6 shadow-tile dark:border-amber-900/40 dark:from-amber-950/20 dark:to-yellow-950/10">
+          className="relative rounded-3xl border-2 border-amber-200 bg-gradient-to-b from-amber-50 to-yellow-50 p-4 shadow-tile dark:border-amber-900/40 dark:from-amber-950/20 dark:to-yellow-950/10 md:p-6">
           
-            <div className="grid min-h-[340px] place-items-center text-center">
-              <div className="w-full max-w-lg">
+            <div className="grid place-items-center text-center">
+              <div className="w-full max-w-md">
                 <StoryBookPageIllustration page={page} />
                 {page.image_designed ?
                 <button

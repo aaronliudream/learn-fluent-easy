@@ -194,3 +194,8 @@ export function BigMoonStoryIllustration({ id, className }: { id: string; classN
 export function hasBigMoonArt(id: string) {
   return id in ART_MAP;
 }
+
+/** public 或 CDN 上的绘本插图路径 */
+export function isStoryBookImagePath(ref: string) {
+  return ref.startsWith("/") || ref.startsWith("http://") || ref.startsWith("https://");
+}

@@ -32,6 +32,8 @@ export type StoryBookPage = {
   emoji: string;       // 视觉理解 emoji
   /** Big Moon AI 绘本插图 id，见 BigMoonStoryArt.tsx */
   illustration?: string;
+  /** 绘本页插图 URL（public 路径），优先于 illustration */
+  image?: string;
   // 可选:更精细的视觉编排。如果提供,渲染层用它代替单串 emoji,
   // 让我们能让"大狗"看起来真的比"小狗"大,或在角色脚下画一行
   // 小脚印 🐾 表示在跑。每个 part:
@@ -92,16 +94,16 @@ export const PRIMARY_STORY_BOOKS: StoryBook[] = [
     sortOrder: 1,
     bg: "from-yellow-300 to-orange-400",
     cover_emoji: "☀️🦊",
-    cover_art: "sb1-cover",
+    cover_art: "/storybooks/sb1/cover.webp",
     ai_picture_book: true,
     reading_minutes: 2,
     pages: [
-      { page: 1, text_en: "Hi! I am Spark.", text_cn: "嗨!我是 Spark。", emoji: "🦊", illustration: "sb1-p1", speaker: "spark" },
-      { page: 2, text_en: "I see the sun.", text_cn: "我看见太阳。", emoji: "☀️", illustration: "sb1-p2", speaker: "spark" },
-      { page: 3, text_en: "The sun is up.", text_cn: "太阳升起来了。", emoji: "☀️⬆️", illustration: "sb1-p3", speaker: "spark" },
-      { page: 4, text_en: "The sun is hot.", text_cn: "太阳很热。", emoji: "☀️🔥", illustration: "sb1-p4", speaker: "spark" },
-      { page: 5, text_en: "I like the sun.", text_cn: "我喜欢太阳。", emoji: "☀️❤️", illustration: "sb1-p5", speaker: "spark" },
-      { page: 6, text_en: "Bye, sun!", text_cn: "再见,太阳!", emoji: "👋☀️", illustration: "sb1-p6", speaker: "spark" }
+      { page: 1, text_en: "Hi! I am Spark.", text_cn: "嗨! 我是 Spark。", emoji: "🦊", image: "/storybooks/sb1/p1.webp", speaker: "spark" },
+      { page: 2, text_en: "I see the sun.", text_cn: "我看见太阳。", emoji: "☀️", image: "/storybooks/sb1/p2.webp", speaker: "spark" },
+      { page: 3, text_en: "The sun is up.", text_cn: "太阳升起来了。", emoji: "☀️⬆️", image: "/storybooks/sb1/p3.webp", speaker: "spark" },
+      { page: 4, text_en: "The sun is hot.", text_cn: "太阳很热。", emoji: "☀️🔥", image: "/storybooks/sb1/p4.webp", speaker: "spark" },
+      { page: 5, text_en: "I like the sun.", text_cn: "我喜欢太阳。", emoji: "☀️❤️", image: "/storybooks/sb1/p5.webp", speaker: "spark" },
+      { page: 6, text_en: "Bye, sun!", text_cn: "再见，太阳！", emoji: "👋☀️", image: "/storybooks/sb1/p6.webp", speaker: "spark" }
     ],
     questions: [
       {

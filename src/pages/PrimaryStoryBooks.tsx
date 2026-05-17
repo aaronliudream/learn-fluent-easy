@@ -10,7 +10,7 @@ import { PRIMARY_STORY_BOOKS_G2 } from "@/data/primaryStoryBooksG2";
 import { supabase } from "@/integrations/supabase/client";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { primaryAdventurePath, primaryReadingListPath } from "@/lib/primaryGrade";
-import { BigMoonStoryIllustration, hasBigMoonArt } from "@/components/storybook/BigMoonStoryArt";
+import { BigMoonStoryIllustration, hasBigMoonArt, isStoryBookImagePath } from "@/components/storybook/BigMoonStoryArt";
 
 const LEVEL_META: Record<1 | 2 | 3, {label: string;sub: string;}> = {
   1: { label: "第 1 阶段 · 简单", sub: "每页 3-4 词" },
@@ -317,7 +317,9 @@ export default function PrimaryStoryBooks() {
                       </div>
                       {/* 封面：AI 绘本插图 或 emoji */}
                       <div className="absolute inset-x-1 top-8 bottom-14 overflow-hidden rounded-md bg-white/90">
-                        {b.cover_art && hasBigMoonArt(b.cover_art) ?
+                        {b.cover_art && isStoryBookImagePath(b.cover_art) ?
+                        <img src={b.cover_art} alt={b.title_en} className="h-full w-full object-cover object-top" loading="lazy" /> :
+                        b.cover_art && hasBigMoonArt(b.cover_art) ?
                         <BigMoonStoryIllustration id={b.cover_art} className="h-full w-full object-cover" /> :
                         <div className="flex h-full items-center justify-center text-5xl drop-shadow-sm sm:text-6xl">
                           {b.cover_emoji}

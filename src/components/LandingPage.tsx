@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import UserAvatarMenu from "@/components/UserAvatarMenu";
 import { useI18n } from "@/i18n/I18nProvider";
 import { LangToggleEnZh } from "@/i18n/LangToggleEnZh";
@@ -243,7 +243,7 @@ function NavLink({
   onNavigate?: () => void;
 }) {
   const isHash = href.startsWith("#");
-  const className = "text-sm font-semibold text-white/85 transition hover:text-amber-300";
+  const className = "text-[13px] font-medium text-white/90 transition hover:text-[#e5b567]";
   if (isHash) {
     return (
       <a href={href} className={className} onClick={onNavigate}>
@@ -272,11 +272,38 @@ function AvatarImg({ src, alt }: { src: string; alt: string }) {
   );
 }
 
+function CourseCard({ c }: { c: (typeof COURSE_CARDS)[number] }) {
+  const Icon = c.icon;
+  const cta = c.to === "/talk" ? "去体验" : "去学习";
+  return (
+    <Link
+      to={c.to}
+      className="group flex flex-col rounded-xl border border-slate-200/90 bg-white p-4 shadow-[0_2px_14px_rgba(15,23,42,0.05)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
+      <span
+        className={`inline-flex size-10 shrink-0 items-center justify-center rounded-lg ${c.iconWrap}`}>
+        <Icon className="size-[18px] shrink-0" strokeWidth={2.2} aria-hidden />
+      </span>
+      <h3 className="mt-2.5 text-[15px] font-bold leading-snug text-slate-900">
+        <T>{c.title}</T>
+      </h3>
+      <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
+        <T>{c.desc}</T>
+      </p>
+      <span className="mt-2 inline-block w-fit rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">
+        {c.tag}
+      </span>
+      <span className="mt-2.5 inline-flex items-center gap-1 text-xs font-bold text-sky-600 group-hover:gap-1.5">
+        <T>{cta}</T> <ArrowRight className="size-3.5 shrink-0" />
+      </span>
+    </Link>
+  );
+}
+
 export default function LandingPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <main className="min-h-dvh bg-[#f4f6f9] text-slate-900 antialiased">
+    <main className="landing-page min-h-dvh bg-[#f4f6f9] font-sans text-slate-900 antialiased">
       {/* ═══ 深色导航 + Hero ═══ */}
       <section className="relative overflow-hidden bg-[#0a1628] text-white">
         <div
@@ -289,8 +316,8 @@ export default function LandingPage() {
         />
 
         <header className="relative z-20 border-b border-white/10">
-          <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3.5 md:px-6 md:py-4">
-            <Link to="/" className="shrink-0 text-base font-extrabold tracking-tight md:text-lg">
+          <nav className="mx-auto flex max-w-[1200px] items-center justify-between gap-3 px-4 py-3 md:px-6 md:py-3.5">
+            <Link to="/" className="shrink-0 text-[15px] font-bold tracking-tight md:text-base">
               <span className="text-white">Big Moon </span>
               <span className="text-[#e5b567]">English</span>
             </Link>
@@ -350,45 +377,45 @@ export default function LandingPage() {
           )}
         </header>
 
-        <div className="relative z-10 mx-auto grid max-w-7xl items-stretch gap-10 px-4 py-10 md:grid-cols-2 md:gap-10 md:px-6 md:py-14 lg:py-16">
+        <div className="relative z-10 mx-auto grid max-w-[1200px] items-stretch gap-8 px-4 py-8 md:grid-cols-2 md:gap-12 md:px-6 md:py-12 lg:py-14">
           <div className="order-1 flex flex-col justify-center text-center md:order-none md:text-left">
-            <p className="inline-flex items-center gap-1.5 rounded-full border border-[#e5b567]/40 bg-[#e5b567]/10 px-3 py-1 text-[11px] font-bold text-[#e5b567] md:text-xs">
+            <p className="inline-flex items-center gap-1.5 rounded-full border border-[#e5b567]/35 bg-[#e5b567]/10 px-3 py-1 text-[11px] font-semibold leading-none text-[#e5b567] md:text-xs">
               <Shield className="size-3.5 shrink-0" aria-hidden />
               <HeroCopy {...HERO_COPY.badge} />
             </p>
-            <h1 className="mt-4 text-2xl font-extrabold leading-tight tracking-tight text-white md:text-3xl lg:text-[2.35rem] lg:leading-[1.15]">
+            <h1 className="mt-5 text-[1.65rem] font-bold leading-[1.22] tracking-tight text-white sm:text-[1.85rem] md:mt-4 md:text-[2.15rem] lg:text-[2.5rem] lg:leading-[1.18]">
               <HeroCopy {...HERO_COPY.title1} />
               <br />
               <span className="text-[#e5b567]">
                 <HeroCopy {...HERO_COPY.title2} />
               </span>
             </h1>
-            <ul className="mx-auto mt-5 max-w-md space-y-2 md:mx-0">
+            <ul className="mx-auto mt-4 max-w-md space-y-1.5 md:mx-0 md:mt-5">
               {HERO_BULLETS.map((line) => (
                 <li
                   key={line.zh}
-                  className="flex items-start justify-center gap-2 text-sm text-white/90 md:justify-start">
-                  <Check className="mt-0.5 size-4 shrink-0 text-[#e5b567]" strokeWidth={3} aria-hidden />
+                  className="flex items-start justify-center gap-2 text-[13px] leading-snug text-white/92 md:justify-start md:text-sm">
+                  <Check className="mt-0.5 size-3.5 shrink-0 text-[#e5b567] md:size-4" strokeWidth={3} aria-hidden />
                   <HeroCopy {...line} />
                 </li>
               ))}
             </ul>
-            <p className="mx-auto mt-4 max-w-lg text-sm text-white/70 md:mx-0">
+            <p className="mx-auto mt-3 max-w-lg text-[13px] leading-relaxed text-white/72 md:mx-0 md:mt-4 md:text-sm">
               <HeroCopy {...HERO_COPY.subtitle} />
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3 md:justify-start">
               <Link
                 to="/auth"
-                className="inline-flex items-center justify-center rounded-full bg-[#e5b567] px-6 py-3 text-sm font-extrabold text-[#0a1628] shadow-lg hover:bg-[#f0c97d]">
+                className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-[#e5b567] px-6 py-2.5 text-[13px] font-bold text-[#0a1628] shadow-[0_8px_24px_rgba(229,181,103,0.35)] hover:bg-[#f0c97d] md:text-sm">
                 <HeroCopy {...HERO_COPY.ctaTrial} />
               </Link>
               <a
                 href="#courses"
-                className="inline-flex items-center justify-center rounded-full border-2 border-[#e5b567]/60 px-6 py-3 text-sm font-bold text-[#e5b567] hover:bg-[#e5b567]/10">
+                className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-[#e5b567]/70 bg-transparent px-6 py-2.5 text-[13px] font-semibold text-[#e5b567] hover:bg-[#e5b567]/10 md:text-sm">
                 <HeroCopy {...HERO_COPY.ctaLearn} />
               </a>
             </div>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5 md:mt-7 md:justify-start">
               <div className="flex -space-x-2">
                 {HERO_AVATARS.map((src, i) => (
                   <AvatarImg key={src} src={src} alt={`家长 ${i + 1}`} />
@@ -411,50 +438,29 @@ export default function LandingPage() {
       </section>
 
       {/* ═══ 课程卡（左）+ 为什么选择（右） ═══ */}
-      <section id="courses" className="scroll-mt-20 bg-[#f4f6f9] py-12 md:py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-[1.15fr_1fr] md:gap-8 md:px-6 lg:gap-12">
-          <div className="grid gap-4 sm:grid-cols-2">
-            {COURSE_CARDS.map((c) => {
-              const Icon = c.icon;
-              return (
-                <Link
-                  key={c.to}
-                  to={c.to}
-                  className="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_4px_20px_rgba(15,23,42,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(15,23,42,0.1)] last:sm:col-span-2 lg:last:col-span-1">
-                  <span
-                    className={`inline-flex size-11 shrink-0 aspect-square items-center justify-center rounded-xl ${c.iconWrap}`}>
-                    <Icon className="size-5 shrink-0" strokeWidth={2.2} aria-hidden />
-                  </span>
-                  <h3 className="mt-3 text-base font-extrabold text-slate-900">
-                    <T>{c.title}</T>
-                  </h3>
-                  <p className="mt-1 text-xs text-slate-500">
-                    <T>{c.desc}</T>
-                  </p>
-                  <span className="mt-2 inline-block w-fit rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">
-                    {c.tag}
-                  </span>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-extrabold text-sky-600 group-hover:gap-2">
-                    <T>去学习</T> <ArrowRight className="size-3.5 shrink-0" />
-                  </span>
-                </Link>
-              );
-            })}
+      <section id="courses" className="scroll-mt-20 bg-[#f4f6f9] py-10 md:py-12">
+        <div className="mx-auto grid max-w-[1200px] gap-8 px-4 md:grid-cols-[1.2fr_0.85fr] md:gap-7 md:px-6 lg:gap-9">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {COURSE_CARDS.slice(0, 4).map((c) => (
+              <CourseCard key={c.to} c={c} />
+            ))}
           </div>
 
-          <div id="why" className="scroll-mt-20">
-            <h2 className="text-lg font-extrabold text-slate-900 md:text-xl">
+          <div className="flex flex-col gap-5">
+            <CourseCard c={COURSE_CARDS[4]} />
+            <div id="why" className="scroll-mt-20">
+            <h2 className="text-base font-bold text-slate-900 md:text-lg">
               <T>为什么选择 Big Moon English?</T>
             </h2>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            <div className="mt-5 grid gap-5 sm:grid-cols-2">
               {WHY_ITEMS.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div key={item.title}>
-                    <span className="inline-flex size-12 shrink-0 aspect-square items-center justify-center rounded-full bg-[#e5b567]/15 text-[#c9922e] ring-4 ring-[#e5b567]/10">
-                      <Icon className="size-6 shrink-0" aria-hidden />
+                    <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-[#e5b567]/15 text-[#c9922e] ring-4 ring-[#e5b567]/10">
+                      <Icon className="size-5 shrink-0" aria-hidden />
                     </span>
-                    <h3 className="mt-3 text-sm font-extrabold text-slate-900">
+                    <h3 className="mt-2.5 text-sm font-bold text-slate-900">
                       <T>{item.title}</T>
                     </h3>
                     {item.lines.map((line) => (
@@ -467,17 +473,18 @@ export default function LandingPage() {
               })}
             </div>
           </div>
+          </div>
         </div>
       </section>
 
       {/* ═══ AI Banner（左）+ 家长反馈（右） ═══ */}
-      <section className="bg-white py-12 md:py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-2 lg:gap-8 md:px-6">
-          <div className="overflow-hidden rounded-3xl bg-[#0a1628] p-6 text-white shadow-xl md:p-8">
+      <section className="bg-white py-10 md:py-12">
+        <div className="mx-auto grid max-w-[1200px] gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-9">
+          <div className="overflow-hidden rounded-2xl bg-[#0a1628] p-5 text-white shadow-xl md:rounded-3xl md:p-7">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
               <AiDashboardMock />
               <div className="min-w-0 flex-1">
-                <h2 className="text-lg font-extrabold leading-snug md:text-xl">
+                <h2 className="text-base font-bold leading-snug md:text-lg">
                   <T>AI 持续分析孩子薄弱点，</T>
                   <span className="text-[#e5b567]">
                     <T>动态生成专属练习</T>
@@ -505,10 +512,10 @@ export default function LandingPage() {
           </div>
 
           <div id="testimonials" className="scroll-mt-20">
-            <h2 className="text-lg font-extrabold text-slate-900 md:text-xl">
+            <h2 className="text-base font-bold text-slate-900 md:text-lg">
               <T>家长们的真实反馈</T>
             </h2>
-            <div className="mt-6 space-y-4">
+            <div className="mt-5 space-y-3.5">
               {TESTIMONIALS.map((t) => (
                 <article
                   key={t.name}
@@ -534,8 +541,8 @@ export default function LandingPage() {
       </section>
 
       {/* ═══ 数据统计条 ═══ */}
-      <section className="border-y border-slate-200/80 bg-white py-12 md:py-14">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 md:grid-cols-4 md:px-6">
+      <section className="border-y border-slate-200/80 bg-white py-10 md:py-12">
+        <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-6 px-4 md:grid-cols-4 md:gap-8 md:px-6">
           {STATS.map((s) => {
             const Icon = s.icon;
             return (
@@ -555,7 +562,7 @@ export default function LandingPage() {
 
       {/* ═══ 底部深色 CTA（无合作伙伴） ═══ */}
       <footer className="bg-[#0a1628] py-10 text-white md:py-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-start gap-8 px-4 md:flex-row md:items-center md:justify-between md:px-6">
+        <div className="mx-auto flex max-w-[1200px] flex-col items-start gap-8 px-4 md:flex-row md:items-center md:justify-between md:px-6">
           <div className="flex gap-4">
             <span className="inline-flex size-12 shrink-0 aspect-square items-center justify-center rounded-xl bg-[#e5b567]/15 text-[#e5b567]">
               <Shield className="size-7 shrink-0" aria-hidden />
@@ -580,7 +587,7 @@ export default function LandingPage() {
             })}
           </div>
         </div>
-        <div className="mx-auto mt-8 flex max-w-7xl flex-col items-center justify-between gap-3 border-t border-white/10 px-4 pt-6 text-xs text-white/45 md:flex-row md:px-6">
+        <div className="mx-auto mt-8 flex max-w-[1200px] flex-col items-center justify-between gap-3 border-t border-white/10 px-4 pt-6 text-xs text-white/45 md:flex-row md:px-6">
           <div>© {new Date().getFullYear()} Big Moon English</div>
           <div className="flex flex-wrap justify-center gap-5">
             <Link to="/auth" className="hover:text-white">

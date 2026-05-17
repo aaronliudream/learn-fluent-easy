@@ -38,8 +38,41 @@ export function getSightWordsPolicy(grade: number): SightWordsGradePolicy {
   return { visibleGroupCount: 0, showPrepGroup: false, reviewMode: true, showInMain: false };
 }
 
-/** 单词游戏冷启动门控只计 Fry 组(不含预习组) */
+/** Fry 组 id(游戏门控在 G1 还会加上 sg_prep,见 getSightWordsForGameGate) */
 export const FRY_GROUP_IDS_FOR_GAMES = ["sg1", "sg2"] as const;
+
+type SightWordGroupLike = { id: string; sortOrder: number };
+type SightWordItemLike = { id: string; groupId: string };
+
+/** 按年级策略返回应在 UI / 解锁判断中计数的词(组内全部条目) */
+export function filterSightWordsByPolicy<T extends SightWordItemLike>(
+  grade: number,
+  groups: SightWordGroupLike[],
+  items: T[],
+): T[] {
+  const policy = getSightWordsPolicy(grade);
+  const fryGroups = [...groups]
+    .filter((g) => g.id !== "sg_prep")
+    .sort((a, b) => a.sortOrder - b.sortOrder)
+    .slice(0, policy.visibleGroupCount);
+  const groupIds = new Set<string>();
+  if (policy.showPrepGroup) {
+    const prep = groups.find((g) => g.id === "sg_prep");
+    if (prep) groupIds.add(prep.id);
+  }
+  for (const g of fryGroups) groupIds.add(g.id);
+  return items.filter((w) => groupIds.has(w.groupId));
+}
+
+/** G1 游戏冷启动门控:预习组 + Fry 第 1–2 组;G2+ 用传入的全部 items */
+export function getSightWordsForGameGate<T extends SightWordItemLike>(
+  grade: number,
+  groups: SightWordGroupLike[],
+  items: T[],
+): T[] {
+  if (grade >= 2) return items;
+  return filterSightWordsByPolicy(grade, groups, items);
+}
 
 /** Phonics 底部 / Primary 主页是否显示 Sight Words 入口(grade<=4) */
 export function shouldShowSightWordsEntry(grade: number): boolean {

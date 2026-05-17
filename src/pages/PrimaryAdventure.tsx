@@ -29,7 +29,11 @@ import {
 } from "@/lib/primaryGrade";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
 import { PHONICS_ITEMS } from "@/data/primaryPhonics";
-import { SIGHT_WORD_ITEMS } from "@/data/primarySightWords";
+import { SIGHT_WORD_GROUPS, SIGHT_WORD_ITEMS } from "@/data/primarySightWords";
+import {
+  filterSightWordsByPolicy,
+  getSightWordsForGameGate,
+} from "@/lib/sightWordsGradeGate";
 import { PRIMARY_LISTENING_DIALOGUES } from "@/data/primaryListeningDialogues";
 import { PRIMARY_ROLE_PLAYS } from "@/data/primaryRolePlays";
 import { PRIMARY_ROLE_PLAYS_G2 } from "@/data/primaryRolePlaysG2";
@@ -126,10 +130,13 @@ export default function PrimaryAdventure() {
         const swReady = new Set(
           (swRows.data ?? []).filter((r: any) => (r.mastery_level ?? 0) >= 1).map((r: any) => r.word_id)
         );
-        const fryForGames = isG2 ?
+        const swProgressItems = isG2 ?
         swItems :
-        swItems.filter((it) => it.groupId === "sg1" || it.groupId === "sg2");
-        setSwMasteredCount(fryForGames.filter((it) => swReady.has(it.id)).length);
+        filterSightWordsByPolicy(1, SIGHT_WORD_GROUPS, SIGHT_WORD_ITEMS);
+        const gameGateItems = isG2 ?
+        swItems :
+        getSightWordsForGameGate(1, SIGHT_WORD_GROUPS, SIGHT_WORD_ITEMS);
+        setSwMasteredCount(gameGateItems.filter((it) => swReady.has(it.id)).length);
         const lsDone = new Set((lsRows.data ?? []).map((r: any) => r.dialogue_id));
         const rpDone = new Set((rpRows.data ?? []).map((r: any) => r.roleplay_id));
         const sbDone = new Set((sbRows.data ?? []).map((r: any) => r.book_id));
@@ -151,7 +158,7 @@ export default function PrimaryAdventure() {
 
         const baseRows: ProgressRow[] = [
         { emoji: "🔤", label: "字母拼读", done: countIn(phMastered, phonicsItems), total: phonicsItems.length, color: "from-sky-400 to-indigo-400" },
-        { emoji: "🟣", label: "常见小词", done: countIn(swMastered, swItems), total: swItems.length, color: "from-violet-400 to-fuchsia-400" },
+        { emoji: "🟣", label: "常见小词", done: countIn(swMastered, swProgressItems), total: swProgressItems.length, color: "from-violet-400 to-fuchsia-400" },
         { emoji: "🎧", label: "听一听", done: countIn(lsDone, lsItems), total: lsItems.length, color: "from-amber-400 to-orange-400" },
         { emoji: "📚", label: "读绘本", done: countIn(sbDone, sbItems), total: sbItems.length, color: "from-emerald-400 to-teal-400" },
         { emoji: "🎭", label: "演故事", done: countIn(rpDone, rpItems), total: rpItems.length, color: "from-rose-400 to-pink-400" }];
@@ -311,7 +318,7 @@ export default function PrimaryAdventure() {
       {/* G3-G6 教材同步提示 */}
       {grade > 2 &&
       <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-sky-200 bg-sky-50 p-3 text-sm text-sky-800 dark:border-sky-800 dark:bg-sky-950/40 dark:text-sky-200">
-          <span><T>📚 教材同步模式：对应人教/外研社版主线内容，Spark 带你一课一课过。</T></span>
+          <span><T>📚 小学英语核心词汇与听说训练，Spark 带你一课一课过。</T></span>
         </div>
       }
 

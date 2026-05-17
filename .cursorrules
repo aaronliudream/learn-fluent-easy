@@ -1,0 +1,37 @@
+# BigMoonEnglish - Cursor Agent 规则
+
+## 项目
+- 网站：bigmoonenglish.com
+- React + Vite + TypeScript + Tailwind
+- 包管理：Bun（禁止用 npm 或 yarn）
+- UI：shadcn/ui（已安装，直接用）
+- 数据库：Supabase
+- AI：Claude API (claude-sonnet-4-20250514)
+- 移动端：Capacitor 已配置
+
+## 已完成功能（不要重复建）
+- 用户登录/注册（Supabase Auth）
+- 题目练习页面
+- 错题本
+- AI解析功能
+- 知识点分类导航
+
+## 目标用户
+中国中小学生，备考英语，人教版课标
+
+## 设计规范
+- 移动端优先
+- 简洁有成就感，适合学生
+- 主色蓝色系
+- 答对要有动画反馈
+
+## Agent 自主决定（不要问我）
+- UI细节、颜色深浅、间距、动画
+- 组件拆分和文件命名
+- TypeScript类型写法
+- 错误处理方式
+
+## 必须停下来问我
+- 修改或新增 Supabase 表结构
+- 删除现有页面或功能
+- 引入新的付费第三方服务

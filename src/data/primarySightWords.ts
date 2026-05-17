@@ -1503,7 +1503,7 @@ export function getUnlockedSightWords(completedGroupIds: string[]): SightWordIte
 /** 统计 */
 export const SIGHT_WORD_STATS = {
   totalGroups: SIGHT_WORD_GROUPS.length,
-  totalWords: 100,
+  totalWords: SIGHT_WORD_ITEMS.length,
   group1Count: 25,
   group2Count: 25,
   group3Count: 25,

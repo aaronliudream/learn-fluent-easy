@@ -17,7 +17,11 @@ import {
   isSightWordDue,
   type SightWordMasteryMap } from
 "@/lib/sightWordMastery";
-import { getCurrentGrade, getSightWordsPolicy } from "@/lib/sightWordsGradeGate";
+import {
+  filterSightWordsByPolicy,
+  getCurrentGrade,
+  getSightWordsPolicy,
+} from "@/lib/sightWordsGradeGate";
 
 /**
  * Sight Words 主页 — 100 词 / 4 组(Fry's),与 Phonics 主页同构.
@@ -304,10 +308,16 @@ export default function PrimarySightWords() {
 
       {/* G1 → G2 解锁入口:G1 全部 100 词 mastery_level >= 2 时显示 */}
       {!isG2 && (() => {
-        const allG1 = SIGHT_WORD_ITEMS;
-        const masteredAll = allG1.length > 0 && allG1.every(
-          (w) => (mastery.get(w.id)?.mastery_level ?? 0) >= 2
+        const visibleG1 = filterSightWordsByPolicy(
+          1,
+          SIGHT_WORD_GROUPS,
+          SIGHT_WORD_ITEMS,
         );
+        const masteredAll =
+          visibleG1.length > 0 &&
+          visibleG1.every(
+            (w) => (mastery.get(w.id)?.mastery_level ?? 0) >= 2,
+          );
         if (!masteredAll) return null;
         return (
           <section className="mt-6 rounded-3xl border-2 border-violet-300 bg-gradient-to-br from-violet-100 via-fuchsia-100 to-pink-100 p-5 text-center shadow-tile dark:border-violet-700 dark:from-violet-950/40 dark:via-fuchsia-950/40 dark:to-pink-950/40">

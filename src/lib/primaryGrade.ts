@@ -37,8 +37,26 @@ export function primaryAdventurePath(grade: number): string {
   return `/primary/adventure/${clampPrimaryGrade(grade)}`;
 }
 
+/** Supabase 趣味阅读列表（G1–G6 各 10 篇闯关） */
 export function primaryReadingListPath(grade: number): string {
   return `/primary/reading/grade/${clampPrimaryGrade(grade)}`;
+}
+
+/** G1/G2 拼读启蒙绘本书架（Spark 书架 UI） */
+export function primaryStorybookShelfPath(grade: number): string {
+  const g = clampPrimaryGrade(grade);
+  if (g === 2) return "/primary/storybooks?grade=2";
+  if (g === 1) return "/primary/storybooks";
+  return `/primary/storybooks?grade=${g}`;
+}
+
+/**
+ * 主入口「读绘本」：一二年级 → 书架；三年级及以上 → 趣味阅读列表。
+ */
+export function primaryReadingEntryPath(grade: number): string {
+  const g = clampPrimaryGrade(grade);
+  if (g <= 2) return primaryStorybookShelfPath(g);
+  return primaryReadingListPath(g);
 }
 
 export function primaryGradeMapPath(grade: number): string {

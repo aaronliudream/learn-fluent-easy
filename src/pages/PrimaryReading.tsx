@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, BookOpen, Clock, Sparkles, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
-import { primaryAdventurePath } from "@/lib/primaryGrade";
+import { primaryAdventurePath, primaryStorybookShelfPath } from "@/lib/primaryGrade";
 
 type Article = {
   id: string;
@@ -68,6 +68,13 @@ export default function PrimaryReading() {
         <p className="mt-1 text-xs text-muted-foreground">
           <T>5 步通关：热身 · 听读 · 跟读 · 思考 · 宝藏关</T>
         </p>
+        {g <= 2 &&
+        <p className="mt-2">
+          <Link to={primaryStorybookShelfPath(g)} className="text-sm font-bold text-primary underline-offset-2 hover:underline">
+            <T>← 返回拼读绘本书架（Spark 一本本解锁）</T>
+          </Link>
+        </p>
+        }
       </div>
 
       <ModuleStageTests segment="primary" grade={g} module="reading" />

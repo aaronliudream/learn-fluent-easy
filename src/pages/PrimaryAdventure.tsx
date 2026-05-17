@@ -23,7 +23,7 @@ import {
 import { bondOnAdventureComplete } from "@/lib/petGrowth";
 import {
   primaryGradeMapPath,
-  primaryReadingListPath,
+  primaryReadingEntryPath,
   resolvePrimaryGrade,
   writePrimaryGradeToStorage,
 } from "@/lib/primaryGrade";
@@ -229,7 +229,7 @@ export default function PrimaryAdventure() {
   { to: `/primary/sight-words${gradeQ}`, emoji: "🟣", label: "常见小词" },
   { to: `/primary/listening${gradeQ}`, emoji: "🎧", label: "听一听" },
   { to: `/primary/roleplays${gradeQ}`, emoji: "🎭", label: "演故事" },
-  { to: primaryReadingListPath(grade), emoji: "📚", label: "读绘本" },
+  { to: primaryReadingEntryPath(grade), emoji: "📚", label: "读绘本" },
   ...(isG2 ? [{ to: "/lesson?grade=2", emoji: "📝", label: "G2 课程(30 节)" }] : [])];
 
 
@@ -241,7 +241,7 @@ export default function PrimaryAdventure() {
   // 防止主页改造后这 3 个模块失去入口。进度数字直接复用 myProgress。
   const findRow = (label: string) => (myProgress ?? []).find((r) => r.label === label);
   const exploreCards = [
-  { to: primaryReadingListPath(grade), emoji: "📚", label: "读绘本", row: findRow("读绘本") },
+  { to: primaryReadingEntryPath(grade), emoji: "📚", label: "读绘本", row: findRow("读绘本") },
   { to: `/primary/listening${gradeQ}`, emoji: "🎧", label: "听对话", row: findRow("听一听") },
   { to: `/primary/roleplays${gradeQ}`, emoji: "🎭", label: "演角色", row: findRow("演故事") }];
 

@@ -1,5 +1,5 @@
 import { Navigate, useSearchParams } from "react-router-dom";
-import { primaryReadingListPath, resolvePrimaryGrade } from "@/lib/primaryGrade";
+import { primaryReadingEntryPath, resolvePrimaryGrade } from "@/lib/primaryGrade";
 
 /**
  * /primary/reading → Supabase 趣味阅读列表（按年级）。
@@ -8,5 +8,5 @@ import { primaryReadingListPath, resolvePrimaryGrade } from "@/lib/primaryGrade"
 export default function PrimaryReadingRedirect() {
   const [sp] = useSearchParams();
   const grade = resolvePrimaryGrade(sp.get("grade"));
-  return <Navigate to={primaryReadingListPath(grade)} replace />;
+  return <Navigate to={primaryReadingEntryPath(grade)} replace />;
 }

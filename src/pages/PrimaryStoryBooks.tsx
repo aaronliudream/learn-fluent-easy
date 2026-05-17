@@ -9,6 +9,7 @@ import {
 import { PRIMARY_STORY_BOOKS_G2 } from "@/data/primaryStoryBooksG2";
 import { supabase } from "@/integrations/supabase/client";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { primaryAdventurePath, primaryReadingListPath } from "@/lib/primaryGrade";
 
 const LEVEL_META: Record<1 | 2 | 3, {label: string;sub: string;}> = {
   1: { label: "第 1 阶段 · 简单", sub: "每页 3-4 词" },
@@ -41,7 +42,8 @@ export default function PrimaryStoryBooks() {
   const isG2 = sp.get("grade") === "2";
   const DATA = isG2 ? PRIMARY_STORY_BOOKS_G2 : PRIMARY_STORY_BOOKS;
   const gradeQ = isG2 ? "?grade=2" : "";
-  const gradeHome = isG2 ? "/primary/adventure/2" : "/primary";
+  const shelfGrade = isG2 ? 2 : 1;
+  const gradeHome = primaryAdventurePath(shelfGrade);
   const readPath = (id: string) => `/primary/storybooks/read/${id}${gradeQ}`;
   const [completed, setCompleted] = useState<Record<string, CompRec>>(() => loadLocal());
   // 锁定卡片点击时弹的 Spark 气泡(指向当前可读的那本)
@@ -213,6 +215,13 @@ export default function PrimaryStoryBooks() {
         <div className="mx-auto mt-1.5 h-2 w-full max-w-xs overflow-hidden rounded-full bg-white/20">
           <div className="h-full bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 transition-all" style={{ width: `${totalDone / Math.max(1, total) * 100}%` }} />
         </div>
+        <p className="mt-3">
+          <Link
+            to={primaryReadingListPath(shelfGrade)}
+            className="text-xs font-bold text-amber-100 underline-offset-2 hover:text-white hover:underline">
+            <T>也试试「趣味阅读」10 篇闯关 →</T>
+          </Link>
+        </p>
       </section>
 
       {/* 首次进入(0/10)时的 Spark 解锁规则提示 — 读过任意一本后自动消失 */}

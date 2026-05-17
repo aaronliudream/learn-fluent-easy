@@ -4,7 +4,11 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
-import { primaryReadingListPath, resolvePrimaryGrade } from "@/lib/primaryGrade";
+import {
+  primaryReadingListPath,
+  primaryStorybookShelfPath,
+  resolvePrimaryGrade,
+} from "@/lib/primaryGrade";
 
 // Phase 1 删除项:6 个能力按钮入口、"今日 10 词挑战"独立卡 — 都并入未来的冒险流(阶段 2)。
 // 这个页面降级为"完整学习地图"详情页,不再是默认入口。
@@ -195,6 +199,20 @@ export default function PrimaryGrade() {
         </Link>
       </div>
 
+      {g <= 2 &&
+      <Link
+        to={primaryStorybookShelfPath(g)}
+        className="mb-3 flex items-center gap-4 rounded-3xl border-2 border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50 p-4 shadow-sm transition hover:-translate-y-0.5 dark:border-amber-800 dark:from-amber-950/40 dark:to-orange-950/40">
+        <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-400 text-3xl text-white">
+          📚
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="text-xs font-bold uppercase tracking-wider text-amber-700"><T>和 Spark 读绘本</T></div>
+          <div className="text-lg font-extrabold"><T>拼读绘本书架</T></div>
+          <p className="mt-0.5 text-sm text-muted-foreground"><T>一本本解锁 · 跟读 · 小测验</T></p>
+        </div>
+      </Link>
+      }
       {/* 趣味阅读 — 数据库 primary_reading_articles */}
       <Link
         to={primaryReadingListPath(g)}

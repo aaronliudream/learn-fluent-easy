@@ -34,6 +34,8 @@ export type StoryBookPage = {
   illustration?: string;
   /** 绘本页插图 URL（public 路径），优先于 illustration */
   image?: string;
+  /** 设计稿整页图（含页码与版面文字），阅读页不再重复渲染句子 */
+  image_designed?: boolean;
   // 可选:更精细的视觉编排。如果提供,渲染层用它代替单串 emoji,
   // 让我们能让"大狗"看起来真的比"小狗"大,或在角色脚下画一行
   // 小脚印 🐾 表示在跑。每个 part:
@@ -77,6 +79,8 @@ export type StoryBook = {
   cover_art?: string;
   /** 显示「Big Moon AI 绘本」角标 */
   ai_picture_book?: boolean;
+  /** 封面为完整设计稿（含书名），书架/阅读页不叠字 */
+  cover_designed?: boolean;
   reading_minutes: number;      // 估计阅读分钟数
   pages: StoryBookPage[];       // 6-8 页
   questions: StoryQuestion[];   // 读后 2 道题
@@ -95,15 +99,16 @@ export const PRIMARY_STORY_BOOKS: StoryBook[] = [
     bg: "from-yellow-300 to-orange-400",
     cover_emoji: "☀️🦊",
     cover_art: "/storybooks/sb1/cover.webp",
+    cover_designed: true,
     ai_picture_book: true,
     reading_minutes: 2,
     pages: [
-      { page: 1, text_en: "Hi! I am Spark.", text_cn: "嗨! 我是 Spark。", emoji: "🦊", image: "/storybooks/sb1/p1.webp", speaker: "spark" },
-      { page: 2, text_en: "I see the sun.", text_cn: "我看见太阳。", emoji: "☀️", image: "/storybooks/sb1/p2.webp", speaker: "spark" },
-      { page: 3, text_en: "The sun is up.", text_cn: "太阳升起来了。", emoji: "☀️⬆️", image: "/storybooks/sb1/p3.webp", speaker: "spark" },
-      { page: 4, text_en: "The sun is hot.", text_cn: "太阳很热。", emoji: "☀️🔥", image: "/storybooks/sb1/p4.webp", speaker: "spark" },
-      { page: 5, text_en: "I like the sun.", text_cn: "我喜欢太阳。", emoji: "☀️❤️", image: "/storybooks/sb1/p5.webp", speaker: "spark" },
-      { page: 6, text_en: "Bye, sun!", text_cn: "再见，太阳！", emoji: "👋☀️", image: "/storybooks/sb1/p6.webp", speaker: "spark" }
+      { page: 1, text_en: "Hi! I am Spark.", text_cn: "嗨！我是 Spark。", emoji: "🦊", image: "/storybooks/sb1/p1.webp", image_designed: true, speaker: "spark" },
+      { page: 2, text_en: "I see the sun.", text_cn: "我看见太阳。", emoji: "☀️", image: "/storybooks/sb1/p2.webp", image_designed: true, speaker: "spark" },
+      { page: 3, text_en: "The sun is up.", text_cn: "太阳升起来了。", emoji: "☀️⬆️", image: "/storybooks/sb1/p3.webp", image_designed: true, speaker: "spark" },
+      { page: 4, text_en: "The sun is hot.", text_cn: "太阳很热。", emoji: "☀️🔥", image: "/storybooks/sb1/p4.webp", image_designed: true, speaker: "spark" },
+      { page: 5, text_en: "I like the sun.", text_cn: "我喜欢太阳。", emoji: "☀️❤️", image: "/storybooks/sb1/p5.webp", image_designed: true, speaker: "spark" },
+      { page: 6, text_en: "Bye, sun!", text_cn: "再见，太阳！", emoji: "👋☀️", image: "/storybooks/sb1/p6.webp", image_designed: true, speaker: "spark" }
     ],
     questions: [
       {

@@ -10,22 +10,28 @@ export function StoryBookHeader({ book }: { book: StoryBook }) {
           <img
             src={book.cover_art}
             alt={book.title_en}
-            className="h-36 w-full object-cover object-top md:h-44"
+            className={
+              book.cover_designed ?
+                "w-full object-contain"
+              : "h-36 w-full object-cover object-top md:h-44"
+            }
             loading="eager"
           />
-          {book.ai_picture_book && (
+          {book.ai_picture_book && !book.cover_designed && (
             <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-extrabold text-violet-700 shadow">
               Big Moon AI 绘本
             </span>
           )}
         </div>
-        <div className="border-t border-amber-100 bg-amber-50/80 px-4 py-2">
-          <div className="truncate text-sm font-extrabold text-amber-950">{book.title_en}</div>
-          <div className="truncate text-[11px] font-bold text-amber-800">{book.title_cn}</div>
-          <div className="mt-0.5 text-[10px] font-bold text-muted-foreground">
-            <T>第</T> {book.level} <T>阶段 ·</T> {book.reading_minutes} <T>分钟</T>
+        {!book.cover_designed && (
+          <div className="border-t border-amber-100 bg-amber-50/80 px-4 py-2">
+            <div className="truncate text-sm font-extrabold text-amber-950">{book.title_en}</div>
+            <div className="truncate text-[11px] font-bold text-amber-800">{book.title_cn}</div>
+            <div className="mt-0.5 text-[10px] font-bold text-muted-foreground">
+              <T>第</T> {book.level} <T>阶段 ·</T> {book.reading_minutes} <T>分钟</T>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     );
   }
@@ -68,12 +74,22 @@ export function StoryBookHeader({ book }: { book: StoryBook }) {
 
 export function StoryBookPageIllustration({ page }: { page: StoryBookPage }) {
   if (page.image && isStoryBookImagePath(page.image)) {
+    const designed = page.image_designed;
     return (
-      <div className="mb-4 overflow-hidden rounded-2xl border-[3px] border-amber-900/30 bg-[#fffef5] shadow-inner">
+      <div
+        className={
+          designed ?
+            "overflow-hidden rounded-2xl border-2 border-amber-200/80 bg-[#fffef5] shadow-md"
+          : "mb-4 overflow-hidden rounded-2xl border-[3px] border-amber-900/30 bg-[#fffef5] shadow-inner"
+        }>
         <img
           src={page.image}
           alt={page.text_en}
-          className="mx-auto w-full max-h-[280px] object-contain"
+          className={
+            designed ?
+              "mx-auto w-full max-w-lg object-contain"
+            : "mx-auto w-full max-h-[280px] object-contain"
+          }
           loading="lazy"
         />
       </div>

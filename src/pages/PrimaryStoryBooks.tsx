@@ -305,6 +305,7 @@ export default function PrimaryStoryBooks() {
                       <Lock className="size-5 text-white drop-shadow" strokeWidth={2.5} /> :
                       isJustUnlocked ?
                       <LockOpen className="size-5 animate-scale-in" strokeWidth={2.5} /> :
+                      !b.cover_designed &&
                       <span className="rounded-full bg-white/25 px-1.5 py-0.5 text-[9px] font-bold backdrop-blur-sm">Lv.{b.level}</span>}
                         {done &&
                       <span
@@ -316,25 +317,40 @@ export default function PrimaryStoryBooks() {
                       }
                       </div>
                       {/* 封面：AI 绘本插图 或 emoji */}
-                      <div className="absolute inset-x-1 top-8 bottom-14 overflow-hidden rounded-md bg-white/90">
+                      <div
+                      className={
+                        b.cover_designed ?
+                          "absolute inset-0 overflow-hidden rounded-md bg-white"
+                        : "absolute inset-x-1 top-8 bottom-14 overflow-hidden rounded-md bg-white/90"
+                      }>
                         {b.cover_art && isStoryBookImagePath(b.cover_art) ?
-                        <img src={b.cover_art} alt={b.title_en} className="h-full w-full object-cover object-top" loading="lazy" /> :
+                        <img
+                          src={b.cover_art}
+                          alt={b.title_en}
+                          className={
+                            b.cover_designed ?
+                              "h-full w-full object-contain"
+                            : "h-full w-full object-cover object-top"
+                          }
+                          loading="lazy" /> :
                         b.cover_art && hasBigMoonArt(b.cover_art) ?
                         <BigMoonStoryIllustration id={b.cover_art} className="h-full w-full object-cover" /> :
                         <div className="flex h-full items-center justify-center text-5xl drop-shadow-sm sm:text-6xl">
                           {b.cover_emoji}
                         </div>
                         }
-                        {b.ai_picture_book && unlocked &&
+                        {b.ai_picture_book && unlocked && !b.cover_designed &&
                         <span className="absolute left-1 top-1 rounded bg-violet-600/90 px-1 py-0.5 text-[8px] font-extrabold text-white">
                           AI
                         </span>
                         }
                       </div>
                       {/* 页数 + 时长 标签(顶部居中) */}
+                      {!b.cover_designed &&
                       <div className="absolute left-1/2 top-9 -translate-x-1/2 whitespace-nowrap rounded-full bg-white/70 px-1.5 py-0.5 text-[10px] font-bold text-amber-900 shadow-sm backdrop-blur-sm">
                         {b.pages.length} <T>页 ·</T> {b.reading_minutes} <T>分钟</T>
-                      </div>
+                      </div>}
+                      {!b.cover_designed &&
                       <div className="absolute inset-x-1.5 bottom-2 text-center">
                         <div
                         className="line-clamp-2 text-[15px] font-extrabold leading-tight drop-shadow-sm sm:text-[16px]"
@@ -345,7 +361,7 @@ export default function PrimaryStoryBooks() {
                         {unlocked ?
                       <div className="line-clamp-1 text-[12px] opacity-95"><T>{b.title_cn}</T></div> :
                       <div className="line-clamp-1 text-[10px] font-bold text-white/90"><T>🔒 读完上一本解锁</T></div>}
-                      </div>
+                      </div>}
                       {isJustUnlocked &&
                     <div className="absolute left-1/2 top-1 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-2 py-0.5 text-[10px] font-extrabold text-amber-700 shadow-md animate-fade-in">
                           <T>🦊 新绘本解锁啦!</T>

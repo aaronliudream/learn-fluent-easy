@@ -226,7 +226,7 @@ export default function PrimaryStoryBookRead() {
         <ArrowLeft className="size-4" /> <T>返回书架</T>
       </BackLink>
 
-      <StoryBookHeader book={book} />
+      {!book.cover_designed && <StoryBookHeader book={book} />}
 
       {/* 阶段 1:翻页阅读 */}
       {phase === "read" &&
@@ -237,8 +237,15 @@ export default function PrimaryStoryBookRead() {
           className="relative rounded-3xl border-2 border-amber-200 bg-gradient-to-b from-amber-50 to-yellow-50 p-6 shadow-tile dark:border-amber-900/40 dark:from-amber-950/20 dark:to-yellow-950/10">
           
             <div className="grid min-h-[340px] place-items-center text-center">
-              <div className="w-full max-w-md">
+              <div className="w-full max-w-lg">
                 <StoryBookPageIllustration page={page} />
+                {page.image_designed ?
+                <button
+                  type="button"
+                  onClick={() => speakPage(page)}
+                  className="mt-3 inline-flex items-center gap-1 rounded-full bg-amber-500 px-4 py-2 text-sm font-extrabold text-white shadow-sm hover:bg-amber-600">
+                  <Volume2 className="size-4" /> <T>听 Spark 念</T>
+                </button> :
                 <div
                   className="mx-auto mt-4 rounded-2xl border-2 border-amber-200 bg-white/80 p-4 shadow-sm dark:border-amber-900/40 dark:bg-amber-950/30"
                   style={{ fontFamily: 'Fredoka, "Comic Sans MS", system-ui, sans-serif' }}>
@@ -262,7 +269,7 @@ export default function PrimaryStoryBookRead() {
                       </span>
                     </div>
                   )}
-                </div>
+                </div>}
               </div>
             </div>
           </div>

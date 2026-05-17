@@ -3,9 +3,11 @@ import { supabase } from "@/integrations/supabase/client";
 import {
   DEFAULT_LANG,
   LANGUAGES,
+  detectBrowserLang,
   type LangCode,
   getLanguageInfo,
 } from "./languages";
+import { LANDING_EN_FALLBACKS } from "./landingEn";
 import { BUILTIN, EN, ZH, type StringKey, interpolate } from "./strings";
 import { localizeProtagonist } from "./protagonistName";
 
@@ -77,6 +79,7 @@ const JAPANESE_TEXT_RE = /[\u3040-\u30ff]/;
 const HAN_RE = /[\u3400-\u9fff]/;
 
 const EN_FALLBACKS: Record<string, string> = {
+  ...LANDING_EN_FALLBACKS,
   // Pets page
   "🏠 我家": "🏠 Home",
   "🛒 商店": "🛒 Shop",
@@ -606,13 +609,18 @@ function isCatalogComplete(lang: LangCode, cat: Catalog): boolean {
   return allKeys.every((k) => !!cat[k]);
 }
 
+/** First visit: zh browsers → Chinese UI; everyone else → English. */
+function resolveInitialLang(): LangCode {
+  if (typeof window === "undefined") return DEFAULT_LANG;
+  const saved = localStorage.getItem(STORAGE_LANG) as LangCode | null;
+  if (saved && LANGUAGES.some((l) => l.code === saved)) return saved;
+  const detected = detectBrowserLang();
+  if (detected === "zh" || detected === "zh-TW") return detected;
+  return DEFAULT_LANG;
+}
+
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<LangCode>(() => {
-    if (typeof window === "undefined") return DEFAULT_LANG;
-    const saved = localStorage.getItem(STORAGE_LANG) as LangCode | null;
-    if (saved && LANGUAGES.some((l) => l.code === saved)) return saved;
-    return DEFAULT_LANG;
-  });
+  const [lang, setLangState] = useState<LangCode>(resolveInitialLang);
   const [hasPicked, setHasPicked] = useState<boolean>(() => {
     if (typeof window === "undefined") return true;
     return localStorage.getItem(STORAGE_PICKED) === "1";
@@ -665,8 +673,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
       setCatalog(cached);
       setReady(isCatalogComplete(lang, cached));
     }
-    dynCacheRef.current = lang === "zh" ? {} : loadDynCache(lang);
-    dynEnCacheRef.current = loadDynCache("en" as LangCode);
+    const loadedDyn = lang === "zh" ? {} : loadDynCache(lang);
+    const loadedEnDyn = loadDynCache("en" as LangCode);
+    dynCacheRef.current =
+      lang === "en" ? { ...LANDING_EN_FALLBACKS, ...loadedDyn } : loadedDyn;
+    dynEnCacheRef.current = { ...LANDING_EN_FALLBACKS, ...loadedEnDyn };
   }, [lang]);
 
   // Fetch missing static-string translations from edge function.
@@ -858,12 +869,34 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     // saw raw Chinese on the home page (e.g. "今天已经开练了") because we
     // short-circuited here.
     if (lang === "en" && !CJK_TEXT_RE.test(text)) return localizeProtagonist(text, lang);
-    const cached = dynCacheRef.current[text];
+    const cached =
+      lang === "en"
+        ? dynCacheRef.current[text] || dynEnCacheRef.current[text]
+        : dynCacheRef.current[text];
     if (isUsableTranslation(lang, text, cached)) return localizeProtagonist(cached, lang);
+    if (lang === "en" && CJK_TEXT_RE.test(text)) {
+      const fb = englishFallbackFor(text);
+      if (fb) return fb;
+    }
     // Queue the request. Use a microtask-style 0ms timer so the *first*
     // render's strings ship in a single batch within the same tick — the
     // user perceives this as "instant" (only one network roundtrip per
     // page load instead of multiple debounced ones).
+    if (lang === "en" && CJK_TEXT_RE.test(text)) {
+      dynEnQueueRef.current.add(text);
+      if (dynEnTimerRef.current === null) {
+        dynEnTimerRef.current = window.setTimeout(() => {
+          dynEnTimerRef.current = null;
+          void flushDynEnQueue();
+        }, 0);
+      }
+      if (dynEnQueueRef.current.size >= 24 && dynEnTimerRef.current !== null) {
+        window.clearTimeout(dynEnTimerRef.current);
+        dynEnTimerRef.current = null;
+        void flushDynEnQueue();
+      }
+      return translateImmediately(text);
+    }
     dynQueueRef.current.add(text);
     if (dynTimerRef.current === null) {
       dynTimerRef.current = window.setTimeout(() => {
@@ -871,22 +904,11 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
         flushDynQueue(lang);
       }, 0);
     }
-    // If the queue is already big (e.g. a long lesson page just rendered),
-    // flush immediately without waiting for the timer.
     if (dynQueueRef.current.size >= 24 && dynTimerRef.current !== null) {
       window.clearTimeout(dynTimerRef.current);
       dynTimerRef.current = null;
-      // Fire and forget — flushDynQueue handles its own state.
       void flushDynQueue(lang);
     }
-    // For distant networks, never block the UI on AI translation. If the
-    // source is Chinese, show a readable fallback immediately and swap in the
-    // chosen-language translation only if it arrives quickly.
-    // Source contains CJK and we don't have a translation yet. Showing the
-    // raw Chinese to a non-Chinese user is the bug we're fixing — return an
-    // empty string so the UI shows nothing for one tick instead of leaking
-    // Chinese. The component re-renders as soon as the translation lands
-    // (dynVersion bumps).
     if (CJK_TEXT_RE.test(text)) return translateImmediately(text);
     // Source string contains no CJK — safe to show as-is while we wait
     // (e.g. an English helper string being translated into Spanish).

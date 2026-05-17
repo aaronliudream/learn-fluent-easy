@@ -227,9 +227,8 @@ const App = () => (
         <StopAudioOnRouteChange />
         <HeartbeatGate />
         <GuestCardClaimer />
-        {/* LanguagePickerModal removed — language is auto-defaulted to English
-            and switchable via the header LanguageSwitcher. Forcing a 23+ option
-            modal on first visit was a major bounce driver for global users. */}
+        {/* LanguagePickerModal removed — first visit defaults to 简体中文;
+            switchable via LangToggleEnZh / LanguageSwitcher in the header. */}
         <GaokaoBreakReminder />
         <FloatingPetGate />
         <EvolutionCelebration />

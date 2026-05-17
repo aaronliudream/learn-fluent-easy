@@ -179,52 +179,46 @@ const FOOTER_GUARANTEES = [
 
 const HERO_AVATARS = ["/landing/avatar1.png", "/landing/avatar2.png", "/landing/avatar3.png"] as const;
 
-/** 人物配图路径 — 覆盖 public/landing/hero.png 即可，无需改代码 */
+/** Hero 配图 — 覆盖 public/landing/hero.png 即可，无需改代码 */
 const HERO_IMAGE_SRC = "/landing/hero.png";
 
-/** 竖版人物图宽高比上限，用于拒绝误放的整页横版截图 */
-const HERO_MAX_ASPECT = 1.15;
-
 function HeroVisual() {
-  const [showPhoto, setShowPhoto] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const [natural, setNatural] = useState<{ w: number; h: number } | null>(null);
 
   const onHeroLoad = (e: SyntheticEvent<HTMLImageElement>) => {
     const { naturalWidth: w, naturalHeight: h } = e.currentTarget;
-    if (w < 320 || h < 320) return;
-    if (w / h > HERO_MAX_ASPECT) return;
+    if (w < 200 || h < 200) return;
     setNatural({ w, h });
-    setShowPhoto(true);
+    setLoaded(true);
   };
 
   return (
-    <div className="relative flex h-full w-full max-w-md justify-center md:max-w-none md:justify-end">
-      {/*
-        Hero 右侧视觉区：默认深蓝黑→金渐变占位；放入竖版 hero.png 后自动显示。
-        占位渐变块 — 见下方 absolute inset-0 bg-gradient-to-br
-      */}
+    <div className="relative flex w-full min-w-0 justify-center md:justify-end">
       <div
-        className="relative w-full min-h-[300px] overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.35)] ring-1 ring-white/10 sm:min-h-[340px] md:h-full md:min-h-[380px]"
+        className="relative w-full max-w-full overflow-hidden rounded-2xl bg-[#0a1628] shadow-[0_20px_50px_rgba(0,0,0,0.35)] ring-1 ring-white/10"
         style={
           natural
-            ? { aspectRatio: `${natural.w} / ${natural.h}`, maxWidth: `min(100%, ${natural.w}px)` }
-            : { aspectRatio: "4 / 5", maxHeight: "min(520px, 78vh)" }
+            ? { aspectRatio: `${natural.w} / ${natural.h}` }
+            : { aspectRatio: "16 / 9", maxHeight: "min(440px, 52vh)" }
         }>
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0f2238] to-[#c9922e]/60"
-          aria-hidden
-        />
+        {!loaded && (
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0f2238] to-[#c9922e]/50"
+            aria-hidden
+          />
+        )}
         <img
           src={HERO_IMAGE_SRC}
           alt=""
-          className={`absolute inset-0 size-full max-w-none object-cover object-center transition-opacity duration-300 ${
-            showPhoto ? "opacity-100" : "pointer-events-none opacity-0"
+          className={`block size-full object-contain object-center transition-opacity duration-300 ${
+            loaded ? "opacity-100" : "opacity-0"
           }`}
           loading="eager"
           decoding="async"
           onLoad={onHeroLoad}
           onError={() => {
-            setShowPhoto(false);
+            setLoaded(false);
             setNatural(null);
           }}
         />
@@ -431,7 +425,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="order-2 flex min-h-0 w-full items-stretch md:order-none md:justify-end">
+          <div className="order-2 flex min-h-0 w-full min-w-0 items-stretch overflow-hidden md:order-none md:justify-end">
             <HeroVisual />
           </div>
         </div>

@@ -609,7 +609,7 @@ function isCatalogComplete(lang: LangCode, cat: Catalog): boolean {
   return allKeys.every((k) => !!cat[k]);
 }
 
-/** First visit: zh browsers → Chinese UI; everyone else → English. */
+/** First visit: 默认简体中文；已保存偏好优先；繁体浏览器保留 zh-TW。 */
 function resolveInitialLang(): LangCode {
   if (typeof window === "undefined") return DEFAULT_LANG;
   const saved = localStorage.getItem(STORAGE_LANG) as LangCode | null;

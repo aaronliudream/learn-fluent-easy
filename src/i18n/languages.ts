@@ -50,7 +50,8 @@ export const LANGUAGES: LanguageInfo[] = [
   { code: "bn",  englishName: "Bengali",         nativeName: "বাংলা",        flag: "🇧🇩" },
 ];
 
-export const DEFAULT_LANG: LangCode = "en";
+/** 首次打开站点（无已保存语言偏好）时的默认界面语言 */
+export const DEFAULT_LANG: LangCode = "zh";
 
 export function detectBrowserLang(): LangCode {
   if (typeof navigator === "undefined") return DEFAULT_LANG;

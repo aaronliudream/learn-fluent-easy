@@ -95,6 +95,7 @@ function FloatingButton({ onClick, unlocked }: {onClick: () => void;unlocked: bo
         </div>
       }
       <button
+        type="button"
         onClick={() => {setShowHint(false);try {localStorage.setItem("xiaoyue_hint_seen", "1");} catch {}onClick();}}
         aria-label="AI 学习助手 小月"
         className="group relative flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-indigo-400 via-violet-500 to-amber-300 p-0.5 shadow-2xl ring-2 ring-background transition-transform hover:scale-105 active:scale-95">

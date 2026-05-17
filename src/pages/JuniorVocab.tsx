@@ -820,7 +820,13 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
             autoFocus
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {if (e.key === "Enter") submit();}}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                e.stopPropagation();
+                submit();
+              }
+            }}
             disabled={!!feedback}
             placeholder={zh ? "拼写单词后回车" : "Type the spelling, then press Enter"}
             className={cn(

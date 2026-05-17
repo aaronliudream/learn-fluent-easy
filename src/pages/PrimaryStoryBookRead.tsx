@@ -10,6 +10,7 @@ import { pickStoryVoice } from "@/lib/storyVoice";
 import type { StoryBookPage } from "@/data/primaryStoryBooks";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { markStoryBookReadToday } from "@/lib/phonicsJourney";
+import { StoryBookHeader, StoryBookPageIllustration } from "@/components/storybook/StoryBookReadPanels";
 
 function speakPage(page: StoryBookPage) {
   const v = pickStoryVoice(page.speaker);
@@ -225,17 +226,7 @@ export default function PrimaryStoryBookRead() {
         <ArrowLeft className="size-4" /> <T>返回书架</T>
       </BackLink>
 
-      {/* 标题条 */}
-      <div className={`rounded-3xl bg-gradient-to-r ${book.bg} px-5 py-4 text-white shadow-tile`}>
-        <div className="flex items-center gap-3">
-          <span className="text-3xl">{book.cover_emoji}</span>
-          <div className="min-w-0">
-            <div className="text-xs font-bold opacity-90"><T>第</T> {book.level} <T>阶段 ·</T> {book.reading_minutes} <T>分钟左右</T></div>
-            <div className="truncate text-lg font-extrabold">{book.title_en}</div>
-            <div className="truncate text-[11px] font-bold opacity-90">{book.title_cn}</div>
-          </div>
-        </div>
-      </div>
+      <StoryBookHeader book={book} />
 
       {/* 阶段 1:翻页阅读 */}
       {phase === "read" &&
@@ -246,45 +237,11 @@ export default function PrimaryStoryBookRead() {
           className="relative rounded-3xl border-2 border-amber-200 bg-gradient-to-b from-amber-50 to-yellow-50 p-6 shadow-tile dark:border-amber-900/40 dark:from-amber-950/20 dark:to-yellow-950/10">
           
             <div className="grid min-h-[340px] place-items-center text-center">
-              <div>
-                <div className="text-[120px] leading-[0.9] md:text-[160px]" aria-hidden>
-                  {page.emojiParts && page.emojiParts.length > 0 ?
-                <>
-                      <div className="flex items-end justify-center gap-3">
-                        {page.emojiParts.
-                    filter((p) => !p.ground).
-                    map((p, i) =>
-                    <span
-                      key={i}
-                      style={{ fontSize: `${p.scale ?? 1}em`, lineHeight: 1 }}>
-                      
-                              {p.char}
-                            </span>
-                    )}
-                      </div>
-                      {page.emojiParts.some((p) => p.ground) &&
-                  <div className="mt-1 flex items-center justify-center gap-2 tracking-widest">
-                          {page.emojiParts.
-                    filter((p) => p.ground).
-                    map((p, i) =>
-                    <span
-                      key={i}
-                      style={{ fontSize: `${p.scale ?? 0.4}em`, lineHeight: 1 }}
-                      className="opacity-80">
-                      
-                                {p.char}
-                              </span>
-                    )}
-                        </div>
-                  }
-                    </> :
-
-                page.emoji.split("\n").map((line, i) =>
-                <div key={i}>{line}</div>
-                )
-                }
-                </div>
-                <div className="mx-auto mt-6 max-w-md rounded-2xl border-2 border-amber-200 bg-white/80 p-4 shadow-sm dark:border-amber-900/40 dark:bg-amber-950/30">
+              <div className="w-full max-w-md">
+                <StoryBookPageIllustration page={page} />
+                <div
+                  className="mx-auto mt-4 rounded-2xl border-2 border-amber-200 bg-white/80 p-4 shadow-sm dark:border-amber-900/40 dark:bg-amber-950/30"
+                  style={{ fontFamily: 'Fredoka, "Comic Sans MS", system-ui, sans-serif' }}>
                   <div className="text-2xl font-extrabold text-amber-900 dark:text-amber-100 md:text-3xl">
                     {focusLetter ? renderWithFocus(page.text_en, focusLetter) : page.text_en}
                   </div>

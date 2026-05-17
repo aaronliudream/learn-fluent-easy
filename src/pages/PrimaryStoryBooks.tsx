@@ -10,6 +10,7 @@ import { PRIMARY_STORY_BOOKS_G2 } from "@/data/primaryStoryBooksG2";
 import { supabase } from "@/integrations/supabase/client";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { primaryAdventurePath, primaryReadingListPath } from "@/lib/primaryGrade";
+import { BigMoonStoryIllustration, hasBigMoonArt } from "@/components/storybook/BigMoonStoryArt";
 
 const LEVEL_META: Record<1 | 2 | 3, {label: string;sub: string;}> = {
   1: { label: "第 1 阶段 · 简单", sub: "每页 3-4 词" },
@@ -314,9 +315,19 @@ export default function PrimaryStoryBooks() {
                           </span>
                       }
                       </div>
-                      {/* 封面 emoji 居中放大 */}
-                      <div className="absolute inset-x-0 top-1/2 -translate-y-[58%] text-center text-5xl drop-shadow-sm sm:text-6xl">
-                        {b.cover_emoji}
+                      {/* 封面：AI 绘本插图 或 emoji */}
+                      <div className="absolute inset-x-1 top-8 bottom-14 overflow-hidden rounded-md bg-white/90">
+                        {b.cover_art && hasBigMoonArt(b.cover_art) ?
+                        <BigMoonStoryIllustration id={b.cover_art} className="h-full w-full object-cover" /> :
+                        <div className="flex h-full items-center justify-center text-5xl drop-shadow-sm sm:text-6xl">
+                          {b.cover_emoji}
+                        </div>
+                        }
+                        {b.ai_picture_book && unlocked &&
+                        <span className="absolute left-1 top-1 rounded bg-violet-600/90 px-1 py-0.5 text-[8px] font-extrabold text-white">
+                          AI
+                        </span>
+                        }
                       </div>
                       {/* 页数 + 时长 标签(顶部居中) */}
                       <div className="absolute left-1/2 top-9 -translate-x-1/2 whitespace-nowrap rounded-full bg-white/70 px-1.5 py-0.5 text-[10px] font-bold text-amber-900 shadow-sm backdrop-blur-sm">

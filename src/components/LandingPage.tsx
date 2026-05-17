@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import UserAvatarMenu from "@/components/UserAvatarMenu";
+import { useI18n } from "@/i18n/I18nProvider";
 import { LangToggleEnZh } from "@/i18n/LangToggleEnZh";
 import { T } from "@/i18n/T";
 import AiDashboardMock from "@/components/landing/AiDashboardMock";
@@ -39,11 +40,35 @@ const NAV_LINKS = [
   { href: "/about", label: "关于我们" as const },
 ] as const;
 
+/** Hero 文案：同步中英切换，避免英文界面下 <T> 在翻译未返回前渲染空字符串 */
 const HERO_BULLETS = [
-  "AI 个性化学习路径",
-  "真题大数据分析",
-  "专业教研团队",
+  { zh: "AI 个性化学习路径", en: "AI-personalized learning paths" },
+  { zh: "真题大数据分析", en: "Real-exam big-data insights" },
+  { zh: "专业教研团队", en: "Expert curriculum team" },
 ] as const;
+
+const HERO_COPY = {
+  badge: {
+    zh: "专为中国孩子打造的智能英语学习平台",
+    en: "An intelligent English platform built for Chinese learners",
+  },
+  title1: { zh: "让孩子自信开口说英语，", en: "Help your child speak English with confidence," },
+  title2: { zh: "赢在未来每一步", en: "winning every step of the future" },
+  subtitle: {
+    zh: "科学规划，高效提分，让英语学习更轻松",
+    en: "Smart planning, faster progress, easier English learning",
+  },
+  ctaTrial: { zh: "免费试用", en: "Free trial" },
+  ctaLearn: { zh: "了解学习方案", en: "See learning plans" },
+  trustParents: { zh: "家长的信赖之选", en: "parents trust us" },
+  trustSatisfaction: { zh: "家长满意度", en: "parent satisfaction" },
+} as const;
+
+function HeroCopy({ zh, en, className }: { zh: string; en: string; className?: string }) {
+  const { lang } = useI18n();
+  const isZh = lang === "zh" || lang === "zh-TW";
+  return <span className={className}>{isZh ? zh : en}</span>;
+}
 
 const COURSE_CARDS = [
   {
@@ -326,39 +351,41 @@ export default function LandingPage() {
         </header>
 
         <div className="relative z-10 mx-auto grid max-w-7xl items-stretch gap-10 px-4 py-10 md:grid-cols-2 md:gap-10 md:px-6 md:py-14 lg:py-16">
-          <div className="flex flex-col justify-center text-center md:text-left">
+          <div className="order-1 flex flex-col justify-center text-center md:order-none md:text-left">
             <p className="inline-flex items-center gap-1.5 rounded-full border border-[#e5b567]/40 bg-[#e5b567]/10 px-3 py-1 text-[11px] font-bold text-[#e5b567] md:text-xs">
               <Shield className="size-3.5 shrink-0" aria-hidden />
-              <T>专为中国孩子打造的智能英语学习平台</T>
+              <HeroCopy {...HERO_COPY.badge} />
             </p>
-            <h1 className="mt-4 text-2xl font-extrabold leading-tight tracking-tight md:text-3xl lg:text-[2.35rem] lg:leading-[1.15]">
-              <T>让孩子自信开口说英语，</T>
+            <h1 className="mt-4 text-2xl font-extrabold leading-tight tracking-tight text-white md:text-3xl lg:text-[2.35rem] lg:leading-[1.15]">
+              <HeroCopy {...HERO_COPY.title1} />
               <br />
               <span className="text-[#e5b567]">
-                <T>赢在未来每一步</T>
+                <HeroCopy {...HERO_COPY.title2} />
               </span>
             </h1>
             <ul className="mx-auto mt-5 max-w-md space-y-2 md:mx-0">
               {HERO_BULLETS.map((line) => (
-                <li key={line} className="flex items-start justify-center gap-2 text-sm text-white/85 md:justify-start">
+                <li
+                  key={line.zh}
+                  className="flex items-start justify-center gap-2 text-sm text-white/90 md:justify-start">
                   <Check className="mt-0.5 size-4 shrink-0 text-[#e5b567]" strokeWidth={3} aria-hidden />
-                  <T>{line}</T>
+                  <HeroCopy {...line} />
                 </li>
               ))}
             </ul>
             <p className="mx-auto mt-4 max-w-lg text-sm text-white/70 md:mx-0">
-              <T>科学规划，高效提分，让英语学习更轻松</T>
+              <HeroCopy {...HERO_COPY.subtitle} />
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3 md:justify-start">
               <Link
                 to="/auth"
                 className="inline-flex items-center justify-center rounded-full bg-[#e5b567] px-6 py-3 text-sm font-extrabold text-[#0a1628] shadow-lg hover:bg-[#f0c97d]">
-                <T>免费试用</T>
+                <HeroCopy {...HERO_COPY.ctaTrial} />
               </Link>
               <a
                 href="#courses"
                 className="inline-flex items-center justify-center rounded-full border-2 border-[#e5b567]/60 px-6 py-3 text-sm font-bold text-[#e5b567] hover:bg-[#e5b567]/10">
-                <T>了解学习方案</T>
+                <HeroCopy {...HERO_COPY.ctaLearn} />
               </a>
             </div>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
@@ -368,14 +395,16 @@ export default function LandingPage() {
                 ))}
               </div>
               <p className="text-left text-xs leading-relaxed text-white/80">
-                <span className="font-extrabold text-white">1,087,452+</span> <T>家长的信赖之选</T>
+                <span className="font-extrabold text-white">1,087,452+</span>{" "}
+                <HeroCopy {...HERO_COPY.trustParents} />
                 <span className="mx-1.5 text-white/40">|</span>
-                <span className="font-bold text-[#e5b567]">98.3%</span> <T>家长满意度</T>
+                <span className="font-bold text-[#e5b567]">98.3%</span>{" "}
+                <HeroCopy {...HERO_COPY.trustSatisfaction} />
               </p>
             </div>
           </div>
 
-          <div className="flex min-h-0 w-full items-stretch md:justify-end">
+          <div className="order-2 flex min-h-0 w-full items-stretch md:order-none md:justify-end">
             <HeroVisual />
           </div>
         </div>

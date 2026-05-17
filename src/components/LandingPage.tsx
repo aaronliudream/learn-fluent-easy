@@ -26,7 +26,7 @@ import {
   X,
   Zap,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, type SyntheticEvent } from "react";
 
 /** 首页营销落地页（新版式）— 仅用于 `/`，旧学习中枢见 `/?hub=1` */
 
@@ -154,11 +154,59 @@ const FOOTER_GUARANTEES = [
 
 const HERO_AVATARS = ["/landing/avatar1.png", "/landing/avatar2.png", "/landing/avatar3.png"] as const;
 
-const HERO_FLOATS = [
-  { label: "智能诊断", className: "left-[4%] top-[12%] md:left-[8%] md:top-[18%]" },
-  { label: "个性化学习", className: "right-[4%] top-[22%] md:right-[12%] md:top-[28%]" },
-  { label: "学情报告", className: "right-[8%] bottom-[18%] md:right-[18%] md:bottom-[22%]" },
-];
+/** 人物配图路径 — 覆盖 public/landing/hero.png 即可，无需改代码 */
+const HERO_IMAGE_SRC = "/landing/hero.png";
+
+/** 竖版人物图宽高比上限，用于拒绝误放的整页横版截图 */
+const HERO_MAX_ASPECT = 1.15;
+
+function HeroVisual() {
+  const [showPhoto, setShowPhoto] = useState(false);
+  const [natural, setNatural] = useState<{ w: number; h: number } | null>(null);
+
+  const onHeroLoad = (e: SyntheticEvent<HTMLImageElement>) => {
+    const { naturalWidth: w, naturalHeight: h } = e.currentTarget;
+    if (w < 320 || h < 320) return;
+    if (w / h > HERO_MAX_ASPECT) return;
+    setNatural({ w, h });
+    setShowPhoto(true);
+  };
+
+  return (
+    <div className="relative flex h-full w-full max-w-md justify-center md:max-w-none md:justify-end">
+      {/*
+        Hero 右侧视觉区：默认深蓝黑→金渐变占位；放入竖版 hero.png 后自动显示。
+        占位渐变块 — 见下方 absolute inset-0 bg-gradient-to-br
+      */}
+      <div
+        className="relative w-full min-h-[300px] overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.35)] ring-1 ring-white/10 sm:min-h-[340px] md:h-full md:min-h-[380px]"
+        style={
+          natural
+            ? { aspectRatio: `${natural.w} / ${natural.h}`, maxWidth: `min(100%, ${natural.w}px)` }
+            : { aspectRatio: "4 / 5", maxHeight: "min(520px, 78vh)" }
+        }>
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0f2238] to-[#c9922e]/60"
+          aria-hidden
+        />
+        <img
+          src={HERO_IMAGE_SRC}
+          alt=""
+          className={`absolute inset-0 size-full max-w-none object-cover object-center transition-opacity duration-300 ${
+            showPhoto ? "opacity-100" : "pointer-events-none opacity-0"
+          }`}
+          loading="eager"
+          decoding="async"
+          onLoad={onHeroLoad}
+          onError={() => {
+            setShowPhoto(false);
+            setNatural(null);
+          }}
+        />
+      </div>
+    </div>
+  );
+}
 
 function NavLink({
   href,
@@ -277,8 +325,8 @@ export default function LandingPage() {
           )}
         </header>
 
-        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-4 py-10 md:grid-cols-2 md:gap-10 md:px-6 md:py-14 lg:py-16">
-          <div className="text-center md:text-left">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-stretch gap-10 px-4 py-10 md:grid-cols-2 md:gap-10 md:px-6 md:py-14 lg:py-16">
+          <div className="flex flex-col justify-center text-center md:text-left">
             <p className="inline-flex items-center gap-1.5 rounded-full border border-[#e5b567]/40 bg-[#e5b567]/10 px-3 py-1 text-[11px] font-bold text-[#e5b567] md:text-xs">
               <Shield className="size-3.5 shrink-0" aria-hidden />
               <T>专为中国孩子打造的智能英语学习平台</T>
@@ -327,28 +375,8 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-lg shrink-0 md:max-w-none">
-            <div className="relative flex items-center justify-center rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/80 p-3 ring-1 ring-white/10">
-              <img
-                src="/landing/hero.png"
-                alt=""
-                className="block h-auto max-h-[min(440px,72vh)] w-full max-w-full object-contain object-center"
-                loading="eager"
-                decoding="async"
-              />
-              <span
-                className="pointer-events-none absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 text-4xl font-black tracking-tighter text-[#e5b567]/30 md:text-5xl"
-                aria-hidden>
-                AI
-              </span>
-              {HERO_FLOATS.map((f) => (
-                <span
-                  key={f.label}
-                  className={`absolute ${f.className} rounded-lg border border-[#e5b567]/50 bg-[#0a1628]/90 px-2 py-1 text-[10px] font-bold text-[#e5b567] shadow-lg backdrop-blur-sm md:text-xs`}>
-                  <T>{f.label}</T>
-                </span>
-              ))}
-            </div>
+          <div className="flex min-h-0 w-full items-stretch md:justify-end">
+            <HeroVisual />
           </div>
         </div>
       </section>

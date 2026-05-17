@@ -57,6 +57,18 @@ export default function PrimaryRolePlays() {
   const [picked, setPicked] = useState<number | null>(null);
 
   useEffect(() => {
+    const openId = params.get("open");
+    if (openId) {
+      const rp = DATA.find((r) => r.id === openId);
+      if (rp) {
+        setOpen(rp);
+        setRevealed(rp.lines.length);
+        setPicked(null);
+      }
+    }
+  }, [params, DATA]);
+
+  useEffect(() => {
     document.title = "和 Spark 演一段 · 角色扮演 | FluentPath";
     (async () => {
       const { data: u } = await supabase.auth.getUser();

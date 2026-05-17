@@ -1,5 +1,31 @@
 import { primaryReadingEntryPath } from "@/lib/primaryGrade";
 
+/** G1 开学前 8 周预热：外研三上 M1–2 问候 + 自我介绍 */
+export const G1_WARMUP_LISTENING_IDS = ["ld1", "ld2", "ld3", "ld4"] as const;
+export const G1_WARMUP_ROLEPLAY_IDS = ["rp1", "rp2", "rp3", "rp4"] as const;
+
+const G1_WARMUP_WEEKS = 8;
+const G1_LISTENING_DOW = [1, 3, 5] as const; // Mon, Wed, Fri
+const G1_ROLEPLAY_DOW = [2, 4, 6] as const;  // Tue, Thu, Sat
+
+/** 学年起始 9 月 1 日算起第几周(1-based);开学前返回 0 */
+export function getG1SchoolWeek(date: Date): number {
+  const y = date.getMonth() >= 8 ? date.getFullYear() : date.getFullYear() - 1;
+  const sept1 = new Date(y, 8, 1);
+  sept1.setHours(0, 0, 0, 0);
+  const d = new Date(date);
+  d.setHours(0, 0, 0, 0);
+  const diff = d.getTime() - sept1.getTime();
+  if (diff < 0) return 0;
+  return Math.floor(diff / (7 * 24 * 60 * 60 * 1000)) + 1;
+}
+
+function g1WarmupCycleIndex(schoolWeek: number, dow: number, slots: readonly number[]): number {
+  const slot = slots.indexOf(dow);
+  if (slot < 0) return 0;
+  return (schoolWeek - 1) * slots.length + slot;
+}
+
 // Daily Adventure — Phase 2 of the Spark world realignment.
 //
 // What this is: a small, deterministic "today's plan" the child runs
@@ -214,13 +240,36 @@ function getThirdStepContent(
     return g2LessonStep;
   }
 
-  // Sat(6) → Reading (storybooks)
+  // G1 开学后前 8 周：Mon/Wed/Fri 听力预热, Tue/Thu/Sat 角色扮演, Sun 绘本
+  const schoolWeek = getG1SchoolWeek(date);
+  if (schoolWeek >= 1 && schoolWeek <= G1_WARMUP_WEEKS) {
+    if (dow === 0) return readingStep;
+    if (G1_LISTENING_DOW.includes(dow as (typeof G1_LISTENING_DOW)[number])) {
+      const idx = g1WarmupCycleIndex(schoolWeek, dow, G1_LISTENING_DOW);
+      const id = G1_WARMUP_LISTENING_IDS[idx % G1_WARMUP_LISTENING_IDS.length];
+      return {
+        ...listeningStep,
+        title: "听 Spark 聊天",
+        sparkLine: "今天听一段上学打招呼的对话,你来听听!",
+        to: `/primary/listening/play/${id}`,
+      };
+    }
+    if (G1_ROLEPLAY_DOW.includes(dow as (typeof G1_ROLEPLAY_DOW)[number])) {
+      const idx = g1WarmupCycleIndex(schoolWeek, dow, G1_ROLEPLAY_DOW);
+      const id = G1_WARMUP_ROLEPLAY_IDS[idx % G1_WARMUP_ROLEPLAY_IDS.length];
+      return {
+        ...roleplayStep,
+        title: "和 Spark 演一段",
+        sparkLine: "今天演一段学校里的话,选一句最礼貌的!",
+        to: `/primary/roleplays?open=${id}`,
+      };
+    }
+  }
+
+  // 第 9 周起：Mon/Thu 课, Tue/Fri 角色扮演, Wed/Sun 听力, Sat 绘本
   if (dow === 6) return readingStep;
-  // Wed(3), Sun(0) → Listening
   if (dow === 0 || dow === 3) return listeningStep;
-  // Tue(2), Fri(5) → Roleplay
   if (dow === 2 || dow === 5) return roleplayStep;
-  // Mon(1), Thu(4) → Lesson; fall back to roleplay if no lesson yet
   return lessonStep ?? roleplayStep;
 }
 

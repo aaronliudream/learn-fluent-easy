@@ -126,7 +126,10 @@ export default function PrimaryAdventure() {
         const swReady = new Set(
           (swRows.data ?? []).filter((r: any) => (r.mastery_level ?? 0) >= 1).map((r: any) => r.word_id)
         );
-        setSwMasteredCount(swItems.filter((it) => swReady.has(it.id)).length);
+        const fryForGames = isG2 ?
+        swItems :
+        swItems.filter((it) => it.groupId === "sg1" || it.groupId === "sg2");
+        setSwMasteredCount(fryForGames.filter((it) => swReady.has(it.id)).length);
         const lsDone = new Set((lsRows.data ?? []).map((r: any) => r.dialogue_id));
         const rpDone = new Set((rpRows.data ?? []).map((r: any) => r.roleplay_id));
         const sbDone = new Set((sbRows.data ?? []).map((r: any) => r.book_id));
@@ -297,6 +300,13 @@ export default function PrimaryAdventure() {
           </DropdownMenu>
         </div>
       </div>
+
+      {/* G1 启蒙跑道说明 */}
+      {grade === 1 &&
+      <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-100">
+          <span><T>🌱 启蒙跑道：为三年级外研课本 Module 1–2（问候、自我介绍）做准备。</T></span>
+        </div>
+      }
 
       {/* G3-G6 教材同步提示 */}
       {grade > 2 &&

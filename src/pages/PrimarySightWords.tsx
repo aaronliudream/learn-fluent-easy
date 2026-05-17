@@ -51,12 +51,17 @@ export default function PrimarySightWords() {
       byGroup.get(it.groupId)!.push(it);
     });
     byGroup.forEach((arr) => arr.sort((a, b) => a.sortOrder - b.sortOrder));
-    const visible = isG2 ? GROUPS.length : policy.visibleGroupCount;
-    return [...GROUPS].
+    const fryVisible = isG2 ? GROUPS.length : policy.visibleGroupCount;
+    const fryGroups = [...GROUPS].
+    filter((g) => g.id !== "sg_prep").
     sort((a, b) => a.sortOrder - b.sortOrder).
-    slice(0, visible).
-    map((g) => ({ group: g, items: byGroup.get(g.id) ?? [] }));
-  }, [policy.visibleGroupCount, isG2]);
+    slice(0, fryVisible);
+    const prepGroup = !isG2 && policy.showPrepGroup ?
+    GROUPS.find((g) => g.id === "sg_prep") :
+    undefined;
+    const ordered = prepGroup ? [prepGroup, ...fryGroups] : fryGroups;
+    return ordered.map((g) => ({ group: g, items: byGroup.get(g.id) ?? [] }));
+  }, [policy.visibleGroupCount, policy.showPrepGroup, isG2, GROUPS, ITEMS]);
 
   // 年级范围内的全部词(用于进度统计 / 复习池)
   const visibleItems = useMemo(
@@ -88,8 +93,12 @@ export default function PrimarySightWords() {
   }, [isG2]);
 
   const isGroupUnlocked = (idx: number) => {
+    if (groupedItems[idx]?.group.id === "sg_prep") return true;
     if (idx === 0) return true;
     const prev = groupedItems[idx - 1]?.items ?? [];
+    if (groupedItems[idx - 1]?.group.id === "sg_prep") {
+      return true;
+    }
     if (prev.length === 0) return true;
     return prev.every((it) => (mastery.get(it.id)?.mastery_level ?? 0) >= 2);
   };

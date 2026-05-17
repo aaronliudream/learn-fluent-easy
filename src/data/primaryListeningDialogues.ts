@@ -89,41 +89,42 @@ export const PRIMARY_LISTENING_DIALOGUES: ListeningDialogue[] = [
     themeCn: "打招呼",
     difficulty: 1,
     sortOrder: 1,
-    title_cn: "早上好,妈妈",
-    title_en: "Good Morning, Mom",
-    scene_cn: "早上起床,小明走进厨房看到妈妈在做早餐",
-    emoji: "☀️",
+    title_cn: "早上到校问候",
+    title_en: "Morning at School",
+    scene_cn: "早上到校门口,同学向你打招呼",
+    emoji: "🏫",
     bg: "from-yellow-300 to-amber-400",
     lines: [
-      { speaker: "妈妈", emoji: "👩", side: "left", text_en: "Good morning, sweetie!", text_cn: "早上好,宝贝!" },
-      { speaker: "小明", emoji: "👦", side: "right", text_en: "Good morning, Mom!", text_cn: "早上好,妈妈!" },
-      { speaker: "妈妈", emoji: "👩", side: "left", text_en: "How are you today?", text_cn: "你今天好吗?" },
-      { speaker: "小明", emoji: "👦", side: "right", text_en: "I'm good. I'm hungry!", text_cn: "我很好。我饿了!" }
+      { speaker: "同学", emoji: "👧", side: "left", text_en: "Hello! Good morning!", text_cn: "你好!早上好!" },
+      { speaker: "你", emoji: "👦", side: "right", text_en: "Hi! Good morning!", text_cn: "嗨!早上好!" },
+      { speaker: "同学", emoji: "👧", side: "left", text_en: "How are you?", text_cn: "你好吗?" },
+      { speaker: "你", emoji: "👦", side: "right", text_en: "I'm fine, thank you.", text_cn: "我很好,谢谢。" },
+      { speaker: "同学", emoji: "👧", side: "left", text_en: "Goodbye! See you!", text_cn: "再见!待会见!" }
     ],
     questions: [
       {
         type: "listen_choose",
-        stem_cn: "妈妈对小明说什么?",
-        stem_en: "What does Mom say?",
+        stem_cn: "你怎么回答 How are you?",
+        stem_en: "How do you answer How are you?",
         options: [
-        { text_en: "Good morning!", text_cn: "早上好!", correct: true },
-        { text_en: "Good night!", text_cn: "晚安!", correct: false },
-        { text_en: "Goodbye!", text_cn: "再见!", correct: false }
+        { text_en: "I'm fine, thank you.", text_cn: "我很好,谢谢。", correct: true },
+        { text_en: "Good morning!", text_cn: "早上好!", correct: false },
+        { text_en: "My name is Amy.", text_cn: "我叫 Amy。", correct: false }
         ],
-        feedback_correct_cn: "🌟 没错!Good morning 是早上的问候",
-        feedback_wrong_cn: "再听一遍开头那句话,Good morning 是早上好~",
+        feedback_correct_cn: "🌟 对!How are you 要答 I'm fine, thank you",
+        feedback_wrong_cn: "再听一遍,问你好不好要答 I'm fine, thank you~",
       },
       {
         type: "comprehension",
-        stem_cn: "小明现在感觉怎么样?",
-        stem_en: "How does the boy feel?",
+        stem_cn: "这段对话在哪里?",
+        stem_en: "Where does this talk happen?",
         options: [
-        { text_en: "He is hungry.", text_cn: "他饿了。", correct: true },
-        { text_en: "He is tired.", text_cn: "他累了。", correct: false },
-        { text_en: "He is sad.", text_cn: "他难过。", correct: false }
+        { text_en: "At school in the morning", text_cn: "早上在学校", correct: true },
+        { text_en: "At home at night", text_cn: "晚上在家", correct: false },
+        { text_en: "At the zoo", text_cn: "在动物园", correct: false }
         ],
-        feedback_correct_cn: "🌟 对!小明说 I'm hungry",
-        feedback_wrong_cn: "小明最后说 I'm hungry,意思是他饿了~",
+        feedback_correct_cn: "🌟 对!早上到校,大家互道 Good morning",
+        feedback_wrong_cn: "这是早上到校的问候,不是在家或动物园哦~",
       }
     ],
   },
@@ -133,129 +134,129 @@ export const PRIMARY_LISTENING_DIALOGUES: ListeningDialogue[] = [
     themeCn: "打招呼",
     difficulty: 1,
     sortOrder: 2,
-    title_cn: "见到老师",
-    title_en: "Meet the Teacher",
-    scene_cn: "早上到学校,小红在门口看到 Smith 老师",
-    emoji: "🏫",
+    title_cn: "认识新同学",
+    title_en: "Meet a New Friend",
+    scene_cn: "教室里,新同学想认识你",
+    emoji: "👋",
     bg: "from-emerald-400 to-teal-500",
     lines: [
-      { speaker: "Smith 老师", emoji: "👩‍🏫", side: "left", text_en: "Hi, Lily! Good morning.", text_cn: "嗨 Lily!早上好。" },
-      { speaker: "Lily", emoji: "👧", side: "right", text_en: "Good morning, Ms. Smith.", text_cn: "早上好,Smith 老师。" },
-      { speaker: "Smith 老师", emoji: "👩‍🏫", side: "left", text_en: "Are you ready for class?", text_cn: "上课准备好了吗?" },
-      { speaker: "Lily", emoji: "👧", side: "right", text_en: "Yes, I am ready!", text_cn: "是的,我准备好了!" }
+      { speaker: "新同学", emoji: "👧", side: "left", text_en: "Hi! What's your name?", text_cn: "嗨!你叫什么?" },
+      { speaker: "你", emoji: "👦", side: "right", text_en: "My name is Amy.", text_cn: "我叫 Amy。" },
+      { speaker: "新同学", emoji: "👧", side: "left", text_en: "Nice to meet you!", text_cn: "很高兴认识你!" },
+      { speaker: "你", emoji: "👦", side: "right", text_en: "Nice to meet you too!", text_cn: "我也很高兴认识你!" }
     ],
     questions: [
       {
         type: "listen_choose",
-        stem_cn: "Lily 怎么称呼老师?",
-        stem_en: "What does Lily call the teacher?",
+        stem_cn: "新同学问你什么?",
+        stem_en: "What does the new friend ask?",
         options: [
-        { text_en: "Ms. Smith", text_cn: "Smith 老师", correct: true },
-        { text_en: "Mr. Smith", text_cn: "Smith 先生", correct: false },
-        { text_en: "Hi Smith", text_cn: "你好 Smith", correct: false }
+        { text_en: "What's your name?", text_cn: "你叫什么?", correct: true },
+        { text_en: "How old are you?", text_cn: "你几岁?", correct: false },
+        { text_en: "How are you?", text_cn: "你好吗?", correct: false }
         ],
-        feedback_correct_cn: "🌟 没错!对女老师要叫 Ms. + 姓",
-        feedback_wrong_cn: "再听一遍,Lily 说的是 Ms. Smith~",
+        feedback_correct_cn: "🌟 对!第一次见面常问 What's your name?",
+        feedback_wrong_cn: "再听第一句,新同学问的是 What's your name?~",
       },
       {
         type: "comprehension",
-        stem_cn: "Lily 准备好上课了吗?",
-        stem_en: "Is Lily ready for class?",
+        stem_cn: "你怎么礼貌回应?",
+        stem_en: "What is a polite reply?",
         options: [
-        { text_en: "Yes, she is.", text_cn: "是的,她准备好了。", correct: true },
-        { text_en: "No, she is not.", text_cn: "不,她没准备好。", correct: false },
-        { text_en: "Maybe.", text_cn: "也许吧。", correct: false }
+        { text_en: "Nice to meet you too!", text_cn: "我也很高兴认识你!", correct: true },
+        { text_en: "Goodbye!", text_cn: "再见!", correct: false },
+        { text_en: "I am fine.", text_cn: "我很好。", correct: false }
         ],
-        feedback_correct_cn: "🌟 对!Lily 说 Yes, I am ready",
-        feedback_wrong_cn: "Lily 最后说 Yes, I am ready,她准备好啦~",
+        feedback_correct_cn: "🌟 对!别人说 Nice to meet you,你要说 too",
+        feedback_wrong_cn: "认识新朋友要说 Nice to meet you too!~",
       }
     ],
   },
   {
     id: "ld3",
-    theme: "colors",
-    themeCn: "颜色",
+    theme: "school",
+    themeCn: "学校",
     difficulty: 1,
     sortOrder: 3,
-    title_cn: "你穿什么颜色?",
-    title_en: "What Color Do You Wear?",
-    scene_cn: "两个小朋友比较今天的衣服",
-    emoji: "👕",
+    title_cn: "老师点名",
+    title_en: "Roll Call in Class",
+    scene_cn: "上课前,老师在教室里点名",
+    emoji: "✏️",
     bg: "from-red-400 to-pink-500",
     lines: [
-      { speaker: "Tom", emoji: "👦", side: "left", text_en: "I like your shirt!", text_cn: "我喜欢你的衬衫!" },
-      { speaker: "Mia", emoji: "👧", side: "right", text_en: "Thanks! It's red.", text_cn: "谢谢!是红色的。" },
-      { speaker: "Tom", emoji: "👦", side: "left", text_en: "Look at my shoes. They are blue.", text_cn: "看我的鞋。它们是蓝色的。" },
-      { speaker: "Mia", emoji: "👧", side: "right", text_en: "Blue is my favorite color!", text_cn: "蓝色是我最喜欢的颜色!" }
+      { speaker: "老师", emoji: "👩‍🏫", side: "left", text_en: "Good morning, class!", text_cn: "早上好,同学们!" },
+      { speaker: "同学们", emoji: "👶", side: "right", text_en: "Good morning, teacher!", text_cn: "早上好,老师!" },
+      { speaker: "老师", emoji: "👩‍🏫", side: "left", text_en: "Amy? Are you here?", text_cn: "Amy?你在吗?" },
+      { speaker: "Amy", emoji: "👧", side: "right", text_en: "Yes, I am here.", text_cn: "在,我在这里。" }
     ],
     questions: [
       {
         type: "listen_choose",
-        stem_cn: "Mia 的衬衫是什么颜色?",
-        stem_en: "What color is Mia's shirt?",
+        stem_cn: "Amy 怎么回答点名?",
+        stem_en: "How does Amy answer roll call?",
         options: [
-        { text_en: "Red", text_cn: "红色", correct: true },
-        { text_en: "Blue", text_cn: "蓝色", correct: false },
-        { text_en: "Yellow", text_cn: "黄色", correct: false }
+        { text_en: "Yes, I am here.", text_cn: "在,我在这里。", correct: true },
+        { text_en: "Goodbye!", text_cn: "再见!", correct: false },
+        { text_en: "My name is Tom.", text_cn: "我叫 Tom。", correct: false }
         ],
-        feedback_correct_cn: "🌟 对!Mia 说 It's red",
-        feedback_wrong_cn: "Mia 说她的衬衫是 red 红色~",
+        feedback_correct_cn: "🌟 对!被点名要说 Yes, I am here",
+        feedback_wrong_cn: "老师点名时要说 Yes, I am here~",
       },
       {
         type: "comprehension",
-        stem_cn: "Tom 的鞋是什么颜色?",
-        stem_en: "What color are Tom's shoes?",
+        stem_cn: "这段对话在做什么?",
+        stem_en: "What is happening in class?",
         options: [
-        { text_en: "Blue", text_cn: "蓝色", correct: true },
-        { text_en: "Red", text_cn: "红色", correct: false },
-        { text_en: "Green", text_cn: "绿色", correct: false }
+        { text_en: "The teacher takes roll call", text_cn: "老师在点名", correct: true },
+        { text_en: "They eat lunch", text_cn: "他们在吃午饭", correct: false },
+        { text_en: "They go home", text_cn: "他们回家了", correct: false }
         ],
-        feedback_correct_cn: "🌟 对!Tom 说 They are blue",
-        feedback_wrong_cn: "Tom 的鞋是 blue 蓝色~",
+        feedback_correct_cn: "🌟 对!老师在问 Amy? Are you here?",
+        feedback_wrong_cn: "这是上课前的点名,不是吃饭或回家~",
       }
     ],
   },
   {
     id: "ld4",
-    theme: "colors",
-    themeCn: "颜色",
-    difficulty: 2,
+    theme: "greetings",
+    themeCn: "打招呼",
+    difficulty: 1,
     sortOrder: 4,
-    title_cn: "彩虹有几个颜色",
-    title_en: "Colors of the Rainbow",
-    scene_cn: "雨后小朋友们看到天上的彩虹",
-    emoji: "🌈",
+    title_cn: "放学道别",
+    title_en: "Goodbye After School",
+    scene_cn: "放学了,你和同学在校门口道别",
+    emoji: "👋",
     bg: "from-purple-400 to-pink-400",
     lines: [
-      { speaker: "Anna", emoji: "👧", side: "left", text_en: "Look! A rainbow!", text_cn: "看!一道彩虹!" },
-      { speaker: "Ben", emoji: "👦", side: "right", text_en: "Wow! I see red and orange.", text_cn: "哇!我看到红色和橙色。" },
-      { speaker: "Anna", emoji: "👧", side: "left", text_en: "I see green and blue too!", text_cn: "我也看到绿色和蓝色!" },
-      { speaker: "Ben", emoji: "👦", side: "right", text_en: "Rainbows are so pretty!", text_cn: "彩虹真漂亮!" }
+      { speaker: "同学", emoji: "👧", side: "left", text_en: "School is over!", text_cn: "放学啦!" },
+      { speaker: "你", emoji: "👦", side: "right", text_en: "Yes! Goodbye!", text_cn: "对!再见!" },
+      { speaker: "同学", emoji: "👧", side: "left", text_en: "See you tomorrow!", text_cn: "明天见!" },
+      { speaker: "你", emoji: "👦", side: "right", text_en: "See you! Bye!", text_cn: "明天见!拜拜!" }
     ],
     questions: [
       {
         type: "listen_choose",
-        stem_cn: "Ben 看到了什么颜色?",
-        stem_en: "What colors does Ben see?",
+        stem_cn: "同学最后说什么?",
+        stem_en: "What does the friend say last?",
         options: [
-        { text_en: "Red and orange", text_cn: "红色和橙色", correct: true },
-        { text_en: "Blue and green", text_cn: "蓝色和绿色", correct: false },
-        { text_en: "Yellow and white", text_cn: "黄色和白色", correct: false }
+        { text_en: "See you tomorrow!", text_cn: "明天见!", correct: true },
+        { text_en: "Good morning!", text_cn: "早上好!", correct: false },
+        { text_en: "What's your name?", text_cn: "你叫什么?", correct: false }
         ],
-        feedback_correct_cn: "🌟 对!Ben 说 I see red and orange",
-        feedback_wrong_cn: "Ben 看到 red and orange 红色和橙色~",
+        feedback_correct_cn: "🌟 对!放学要说 See you tomorrow",
+        feedback_wrong_cn: "放学道别要说 See you tomorrow,不是早上好~",
       },
       {
         type: "comprehension",
-        stem_cn: "他们在看什么?",
-        stem_en: "What are they looking at?",
+        stem_cn: "什么时候说 Goodbye?",
+        stem_en: "When do you say Goodbye?",
         options: [
-        { text_en: "A rainbow", text_cn: "彩虹", correct: true },
-        { text_en: "A flower", text_cn: "花", correct: false },
-        { text_en: "A bird", text_cn: "鸟", correct: false }
+        { text_en: "When school is over", text_cn: "放学的时候", correct: true },
+        { text_en: "When you meet", text_cn: "见面的时候", correct: false },
+        { text_en: "In the morning", text_cn: "早上到校时", correct: false }
         ],
-        feedback_correct_cn: "🌟 对!Anna 一开始就喊 Look! A rainbow!",
-        feedback_wrong_cn: "他们在看 a rainbow 彩虹~",
+        feedback_correct_cn: "🌟 对!放学离开时说 Goodbye",
+        feedback_wrong_cn: "Goodbye 是告别,见面要说 Hello 或 Hi~",
       }
     ],
   },
@@ -1020,14 +1021,14 @@ export function getAllThemes(): { theme: ListeningTheme; themeCn: string; count:
 export const LISTENING_STATS = {
   total: 20,
   byTheme: {
-    greetings: 2,
-    colors: 2,
+    greetings: 3,
+    colors: 0,
     numbers: 2,
     body: 2,
     family: 3,
     animals: 3,
     food: 2,
-    school: 2,
+    school: 3,
     going_to_school: 2,
   },
   byDifficulty: {

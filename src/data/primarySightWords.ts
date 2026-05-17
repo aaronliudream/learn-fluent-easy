@@ -59,6 +59,16 @@ export type SightWordItem = {
 
 export const SIGHT_WORD_GROUPS: SightWordGroup[] = [
   {
+    id: "sg_prep",
+    groupName: "三年级预习 · 问候与自我介绍",
+    groupNameEn: "Grade 3 Preview — Hello & Names",
+    rangeLabel: "外研三上 Module 1–2",
+    sparkIntro: "这些是三年级课本里最先学的词!先认一认,以后上课会更轻松~",
+    sparkOutro: "预习完成!等三年级学到问候和自我介绍,你会觉得很熟悉~",
+    unlockReq: "随时可学 · 与 Fry 第 1–2 组并行",
+    sortOrder: 0,
+  },
+  {
     id: "sg1",
     groupName: "第 1 组 · 最最常见的词",
     groupNameEn: "Group 1 — Top 25 Most Common",
@@ -1220,7 +1230,230 @@ export const SIGHT_WORD_ITEMS: SightWordItem[] = [
     exampleSentenceEmoji: "🎂",
     difficulty: 2,
     sortOrder: 100,
-  }
+  },
+
+  // ── 三年级预习组(外研三上 M1–2,与 Fry 并行) ──────────────────────────
+
+  {
+    id: "sw_prep_hello", groupId: "sg_prep", rank: 1001,
+    word: "hello", ipa: "/həˈloʊ/",
+    meaningCn: "你好",
+    pos: "interj.", posCn: "感叹词",
+    exampleSentence: "Hello! I am Amy.",
+    exampleSentenceCn: "你好!我是 Amy。",
+    exampleSentenceEmoji: "👋",
+    difficulty: 1,
+    sortOrder: 1,
+  },
+  {
+    id: "sw_prep_hi", groupId: "sg_prep", rank: 1002,
+    word: "hi", ipa: "/haɪ/",
+    meaningCn: "嗨;你好",
+    pos: "interj.", posCn: "感叹词",
+    exampleSentence: "Hi! How are you?",
+    exampleSentenceCn: "嗨!你好吗?",
+    exampleSentenceEmoji: "👋",
+    difficulty: 1,
+    sortOrder: 2,
+  },
+  {
+    id: "sw_prep_i", groupId: "sg_prep", rank: 1003,
+    word: "I", ipa: "/aɪ/",
+    meaningCn: "我",
+    pos: "pron.", posCn: "代词",
+    exampleSentence: "I am fine.",
+    exampleSentenceCn: "我很好。",
+    exampleSentenceEmoji: "👦",
+    difficulty: 1,
+    sortOrder: 3,
+  },
+  {
+    id: "sw_prep_am", groupId: "sg_prep", rank: 1004,
+    word: "am", ipa: "/æm/",
+    meaningCn: "是(用在 I 后面)",
+    pos: "v.", posCn: "动词",
+    exampleSentence: "I am Amy.",
+    exampleSentenceCn: "我是 Amy。",
+    exampleSentenceEmoji: "👧",
+    difficulty: 1,
+    sortOrder: 4,
+  },
+  {
+    id: "sw_prep_you", groupId: "sg_prep", rank: 1005,
+    word: "you", ipa: "/juː/",
+    meaningCn: "你;你们",
+    pos: "pron.", posCn: "代词",
+    exampleSentence: "How are you?",
+    exampleSentenceCn: "你好吗?",
+    exampleSentenceEmoji: "👋",
+    difficulty: 1,
+    sortOrder: 5,
+  },
+  {
+    id: "sw_prep_are", groupId: "sg_prep", rank: 1006,
+    word: "are", ipa: "/ɑːr/",
+    meaningCn: "是(用在 you 后面)",
+    pos: "v.", posCn: "动词",
+    exampleSentence: "How are you?",
+    exampleSentenceCn: "你好吗?",
+    exampleSentenceEmoji: "❓",
+    difficulty: 1,
+    sortOrder: 6,
+  },
+  {
+    id: "sw_prep_fine", groupId: "sg_prep", rank: 1007,
+    word: "fine", ipa: "/faɪn/",
+    meaningCn: "好的;不错",
+    pos: "adj.", posCn: "形容词",
+    exampleSentence: "I am fine.",
+    exampleSentenceCn: "我很好。",
+    exampleSentenceEmoji: "😊",
+    difficulty: 1,
+    sortOrder: 7,
+  },
+  {
+    id: "sw_prep_thank", groupId: "sg_prep", rank: 1008,
+    word: "thank", ipa: "/θæŋk/",
+    meaningCn: "谢谢",
+    pos: "v.", posCn: "动词",
+    exampleSentence: "Thank you!",
+    exampleSentenceCn: "谢谢!",
+    exampleSentenceEmoji: "🙏",
+    difficulty: 1,
+    sortOrder: 8,
+  },
+  {
+    id: "sw_prep_goodbye", groupId: "sg_prep", rank: 1009,
+    word: "goodbye", ipa: "/ˌɡʊdˈbaɪ/",
+    meaningCn: "再见",
+    pos: "interj.", posCn: "感叹词",
+    exampleSentence: "Goodbye! See you!",
+    exampleSentenceCn: "再见!待会见!",
+    exampleSentenceEmoji: "👋",
+    difficulty: 1,
+    sortOrder: 9,
+  },
+  {
+    id: "sw_prep_what", groupId: "sg_prep", rank: 1010,
+    word: "what", ipa: "/wʌt/",
+    meaningCn: "什么",
+    pos: "pron.", posCn: "代词",
+    exampleSentence: "What is your name?",
+    exampleSentenceCn: "你叫什么?",
+    exampleSentenceEmoji: "❓",
+    difficulty: 1,
+    sortOrder: 10,
+  },
+  {
+    id: "sw_prep_is", groupId: "sg_prep", rank: 1011,
+    word: "is", ipa: "/ɪz/",
+    meaningCn: "是",
+    pos: "v.", posCn: "动词",
+    exampleSentence: "My name is Amy.",
+    exampleSentenceCn: "我叫 Amy。",
+    exampleSentenceEmoji: "👧",
+    difficulty: 1,
+    sortOrder: 11,
+  },
+  {
+    id: "sw_prep_your", groupId: "sg_prep", rank: 1012,
+    word: "your", ipa: "/jɔːr/",
+    meaningCn: "你的",
+    pos: "pron.", posCn: "代词",
+    exampleSentence: "What is your name?",
+    exampleSentenceCn: "你叫什么?",
+    exampleSentenceEmoji: "❓",
+    difficulty: 1,
+    sortOrder: 12,
+  },
+  {
+    id: "sw_prep_name", groupId: "sg_prep", rank: 1013,
+    word: "name", ipa: "/neɪm/",
+    meaningCn: "名字",
+    pos: "n.", posCn: "名词",
+    exampleSentence: "My name is Tom.",
+    exampleSentenceCn: "我叫 Tom。",
+    exampleSentenceEmoji: "📛",
+    difficulty: 1,
+    sortOrder: 13,
+  },
+  {
+    id: "sw_prep_my", groupId: "sg_prep", rank: 1014,
+    word: "my", ipa: "/maɪ/",
+    meaningCn: "我的",
+    pos: "pron.", posCn: "代词",
+    exampleSentence: "My name is Lily.",
+    exampleSentenceCn: "我叫 Lily。",
+    exampleSentenceEmoji: "👧",
+    difficulty: 1,
+    sortOrder: 14,
+  },
+  {
+    id: "sw_prep_nice", groupId: "sg_prep", rank: 1015,
+    word: "nice", ipa: "/naɪs/",
+    meaningCn: "好的;令人愉快的",
+    pos: "adj.", posCn: "形容词",
+    exampleSentence: "Nice to meet you!",
+    exampleSentenceCn: "很高兴认识你!",
+    exampleSentenceEmoji: "🤝",
+    difficulty: 1,
+    sortOrder: 15,
+  },
+  {
+    id: "sw_prep_meet", groupId: "sg_prep", rank: 1016,
+    word: "meet", ipa: "/miːt/",
+    meaningCn: "遇见;认识",
+    pos: "v.", posCn: "动词",
+    exampleSentence: "Nice to meet you!",
+    exampleSentenceCn: "很高兴认识你!",
+    exampleSentenceEmoji: "🤝",
+    difficulty: 1,
+    sortOrder: 16,
+  },
+  {
+    id: "sw_prep_too", groupId: "sg_prep", rank: 1017,
+    word: "too", ipa: "/tuː/",
+    meaningCn: "也",
+    pos: "adv.", posCn: "副词",
+    exampleSentence: "Nice to meet you too!",
+    exampleSentenceCn: "我也很高兴认识你!",
+    exampleSentenceEmoji: "😊",
+    difficulty: 1,
+    sortOrder: 17,
+  },
+  {
+    id: "sw_prep_yes", groupId: "sg_prep", rank: 1018,
+    word: "yes", ipa: "/jes/",
+    meaningCn: "是的",
+    pos: "adv.", posCn: "副词",
+    exampleSentence: "Yes, I am here.",
+    exampleSentenceCn: "在,我在这里。",
+    exampleSentenceEmoji: "✋",
+    difficulty: 1,
+    sortOrder: 18,
+  },
+  {
+    id: "sw_prep_no", groupId: "sg_prep", rank: 1019,
+    word: "no", ipa: "/noʊ/",
+    meaningCn: "不;没有",
+    pos: "adv.", posCn: "副词",
+    exampleSentence: "No, thank you.",
+    exampleSentenceCn: "不,谢谢。",
+    exampleSentenceEmoji: "🙅",
+    difficulty: 1,
+    sortOrder: 19,
+  },
+  {
+    id: "sw_prep_and", groupId: "sg_prep", rank: 1020,
+    word: "and", ipa: "/ænd/",
+    meaningCn: "和;还有",
+    pos: "conj.", posCn: "连词",
+    exampleSentence: "You and me.",
+    exampleSentenceCn: "你和我。",
+    exampleSentenceEmoji: "👫",
+    difficulty: 1,
+    sortOrder: 20,
+  },
 ];
 
 
@@ -1252,15 +1485,19 @@ export function getWordsInGroup(groupId: string): number {
   return SIGHT_WORD_ITEMS.filter(w => w.groupId === groupId).length;
 }
 
-/** 取所有已解锁的词(根据用户完成到第几组) */
+/** Fry 组顺序(不含预习组,用于解锁链) */
+export const FRY_SIGHT_WORD_GROUP_IDS = ["sg1", "sg2", "sg3", "sg4"] as const;
+
+/** 取所有已解锁的词(根据用户完成到第几组;预习组始终可选) */
 export function getUnlockedSightWords(completedGroupIds: string[]): SightWordItem[] {
-  if (completedGroupIds.length === 0) {
-    return getSightWordsByGroup("sg1");
+  const fryOrder = [...FRY_SIGHT_WORD_GROUP_IDS];
+  const fryCompleted = completedGroupIds.filter((g) => fryOrder.includes(g as (typeof fryOrder)[number]));
+  if (fryCompleted.length === 0) {
+    return SIGHT_WORD_ITEMS.filter((w) => w.groupId === "sg1" || w.groupId === "sg_prep");
   }
-  const groupOrder = SIGHT_WORD_GROUPS.map(g => g.id);
-  const highestCompletedIdx = Math.max(...completedGroupIds.map(g => groupOrder.indexOf(g)));
-  const accessibleGroups = groupOrder.slice(0, highestCompletedIdx + 2);
-  return SIGHT_WORD_ITEMS.filter(w => accessibleGroups.includes(w.groupId));
+  const highestCompletedIdx = Math.max(...fryCompleted.map((g) => fryOrder.indexOf(g as (typeof fryOrder)[number])));
+  const accessibleFry = fryOrder.slice(0, highestCompletedIdx + 2);
+  return SIGHT_WORD_ITEMS.filter((w) => accessibleFry.includes(w.groupId) || w.groupId === "sg_prep");
 }
 
 /** 统计 */

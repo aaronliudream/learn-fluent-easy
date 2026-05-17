@@ -12,8 +12,10 @@
  */
 
 export type SightWordsGradePolicy = {
-  /** 在 /primary/sight-words 内可见的组数(按 sortOrder 取前 N 组) */
+  /** 在 /primary/sight-words 内可见的 Fry 组数(按 sortOrder,不含预习组) */
   visibleGroupCount: number;
+  /** G1:显示「三年级预习」组,与 Fry 1–2 并行,不卡游戏门槛 */
+  showPrepGroup: boolean;
   /** 是否标注为"复习模块"(3-4 年级) */
   reviewMode: boolean;
   /** 是否在主路径(Primary 主页累计卡 / Phonics 底部入口)显示入口 */
@@ -29,12 +31,15 @@ export function getCurrentGrade(): number {
 }
 
 export function getSightWordsPolicy(grade: number): SightWordsGradePolicy {
-  if (grade <= 1) return { visibleGroupCount: 2, reviewMode: false, showInMain: true };
-  if (grade <= 2) return { visibleGroupCount: 4, reviewMode: false, showInMain: true };
-  if (grade <= 4) return { visibleGroupCount: 4, reviewMode: true, showInMain: false };
+  if (grade <= 1) return { visibleGroupCount: 2, showPrepGroup: true, reviewMode: false, showInMain: true };
+  if (grade <= 2) return { visibleGroupCount: 4, showPrepGroup: false, reviewMode: false, showInMain: true };
+  if (grade <= 4) return { visibleGroupCount: 4, showPrepGroup: false, reviewMode: true, showInMain: false };
   // 5-6 年级:主路径完全淡化,页面也清空(应已掌握)
-  return { visibleGroupCount: 0, reviewMode: true, showInMain: false };
+  return { visibleGroupCount: 0, showPrepGroup: false, reviewMode: true, showInMain: false };
 }
+
+/** 单词游戏冷启动门控只计 Fry 组(不含预习组) */
+export const FRY_GROUP_IDS_FOR_GAMES = ["sg1", "sg2"] as const;
 
 /** Phonics 底部 / Primary 主页是否显示 Sight Words 入口(grade<=4) */
 export function shouldShowSightWordsEntry(grade: number): boolean {

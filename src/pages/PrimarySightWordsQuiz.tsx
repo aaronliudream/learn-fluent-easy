@@ -3,15 +3,13 @@ import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Volume2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { speakKid as speak } from "@/lib/speak";
+import { PEP_SIGHT_WORD_ITEMS } from "@/data/pepSightWords";
+import type { SightWordItem } from "@/data/primarySightWords";
 import {
-  SIGHT_WORD_GROUPS,
-  SIGHT_WORD_ITEMS,
-  type SightWordItem } from
-"@/data/primarySightWords";
-import {
-  SIGHT_WORD_GROUPS_G2,
-  SIGHT_WORD_ITEMS_G2 } from
-"@/data/primarySightWordsG2";
+  findSightWordGroup,
+  getSightWordsCatalog,
+  resolveSightWordsGrade,
+} from "@/lib/primarySightWordsCatalog";
 import {
   bumpSightWordLevel,
   bumpSightWordMastery,
@@ -31,13 +29,11 @@ export default function PrimarySightWordsQuiz() {
   const [search] = useSearchParams();
   const nav = useNavigate();
   const isReview = groupId === "review";
-  const isG2 = search.get("grade") === "2" || ["sg5", "sg6", "sg7", "sg8"].includes(groupId ?? "");
-  const gradeItems = isG2 ? SIGHT_WORD_ITEMS_G2 : SIGHT_WORD_ITEMS;
-  const sightWordsHref = isG2 ? "/primary/sight-words?grade=2" : "/primary/sight-words";
-  const group = isReview ?
-  null :
-  (isG2 ? SIGHT_WORD_GROUPS_G2 : SIGHT_WORD_GROUPS).find((g) => g.id === groupId) ??
-  null;
+  const grade = resolveSightWordsGrade(search.get("grade"));
+  const gradeQ = search.get("grade") ? `?grade=${grade}` : "";
+  const { items: gradeItems } = useMemo(() => getSightWordsCatalog(grade), [grade]);
+  const sightWordsHref = `/primary/sight-words${gradeQ}`;
+  const group = isReview ? null : findSightWordGroup(groupId);
 
   const [items, setItems] = useState<SightWordItem[]>([]);
   const [itemIdx, setItemIdx] = useState(0);
@@ -49,9 +45,9 @@ export default function PrimarySightWordsQuiz() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.title = isReview ?
-    "常见小词复习 | FluentPath" :
-    `挑战 ${group?.groupName ?? ""} | FluentPath`;
+    document.title = isReview
+      ? "PEP 词汇复习 | FluentPath"
+      : `PEP 单元挑战 ${group?.groupNameEn ?? ""} | FluentPath`;
     (async () => {
       if (isReview) {
         const m = await getSightWordMasteryMap();
@@ -243,9 +239,9 @@ type Q =
 {kind: "context";correctWord: string;sentenceParts: [string, string];cn: string;options: string[];};
 
 function buildItemQuestions(item: SightWordItem): Q[] {
-  const pool = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2].map((w) => ({ id: w.id, word: w.word }));
+  const pool = PEP_SIGHT_WORD_ITEMS.map((w) => ({ id: w.id, word: w.word }));
   const distractors = buildSightWordDistractors(item.id, pool, 3);
-  const meaningPool = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2].filter((w) => w.id !== item.id);
+  const meaningPool = PEP_SIGHT_WORD_ITEMS.filter((w) => w.id !== item.id);
   const meaningDistractors = shuffle(meaningPool).slice(0, 3).map((w) => w.meaningCn);
 
   const qs: Q[] = [

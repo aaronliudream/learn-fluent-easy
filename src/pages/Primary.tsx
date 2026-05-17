@@ -1,4 +1,4 @@
-import { T } from "@/i18n/T";import { useEffect, useState } from "react";
+import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Play, Star } from "lucide-react";
@@ -7,7 +7,7 @@ import { StreakBanner } from "@/components/StreakBanner";
 import MonthlyPostcard from "@/components/pet/MonthlyPostcard";
 import EvolutionTree from "@/components/pet/EvolutionTree";
 import { PHONICS_ITEMS } from "@/data/primaryPhonics";
-import { SIGHT_WORD_ITEMS } from "@/data/primarySightWords";
+import { getSightWordsCatalog } from "@/lib/primarySightWordsCatalog";
 import { getPhonicsMasteryMap } from "@/lib/phonicsMastery";
 import { getSightWordMasteryMap } from "@/lib/sightWordMastery";
 import { getCurrentGrade, getSightWordsPolicy } from "@/lib/sightWordsGradeGate";
@@ -447,8 +447,10 @@ export default function Primary() {
 
 function CumulativeMasteryCard() {
   const [phonics, setPhonics] = useState({ done: 0, total: PHONICS_ITEMS.length });
-  const [sw, setSw] = useState({ done: 0, total: SIGHT_WORD_ITEMS.length });
-  const swPolicy = getSightWordsPolicy(getCurrentGrade());
+  const grade = getCurrentGrade();
+  const swCatalog = useMemo(() => getSightWordsCatalog(grade), [grade]);
+  const [sw, setSw] = useState({ done: 0, total: swCatalog.items.length });
+  const swPolicy = getSightWordsPolicy(grade);
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -459,8 +461,8 @@ function CumulativeMasteryCard() {
         total: PHONICS_ITEMS.length
       });
       setSw({
-        done: SIGHT_WORD_ITEMS.filter((it) => (sm.get(it.id)?.mastery_level ?? 0) >= 2).length,
-        total: SIGHT_WORD_ITEMS.length
+        done: swCatalog.items.filter((it) => (sm.get(it.id)?.mastery_level ?? 0) >= 2).length,
+        total: swCatalog.items.length,
       });
     })();
     return () => {cancelled = true;};
@@ -484,7 +486,7 @@ function CumulativeMasteryCard() {
           to="/primary/sight-words"
           className="flex flex-col items-center rounded-xl bg-gradient-to-br from-sky-50 to-emerald-50 p-3 text-center hover:-translate-y-0.5 transition dark:from-sky-950/30 dark:to-emerald-950/30">
           
-            <div className="font-bold"><T>📚 常见小词</T></div>
+            <div className="font-bold"><T>📚 PEP 词汇</T></div>
             <div className="mt-1 font-mono text-lg font-extrabold text-sky-600 dark:text-sky-300">
               {sw.done}
               <span className="text-xs text-muted-foreground"> / {sw.total}</span>

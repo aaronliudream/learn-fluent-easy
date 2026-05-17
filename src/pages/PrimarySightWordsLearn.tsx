@@ -3,15 +3,13 @@ import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Check, Sparkles, Volume2 } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { speakKid as speak } from "@/lib/speak";
+import { PEP_SIGHT_WORD_ITEMS } from "@/data/pepSightWords";
+import type { SightWordItem } from "@/data/primarySightWords";
 import {
-  SIGHT_WORD_GROUPS,
-  SIGHT_WORD_ITEMS,
-  type SightWordItem } from
-"@/data/primarySightWords";
-import {
-  SIGHT_WORD_GROUPS_G2,
-  SIGHT_WORD_ITEMS_G2 } from
-"@/data/primarySightWordsG2";
+  findSightWordGroup,
+  findSightWordItem,
+  resolveSightWordsGrade,
+} from "@/lib/primarySightWordsCatalog";
 import {
   bumpSightWordLevel,
   bumpSightWordMastery } from
@@ -37,24 +35,14 @@ export default function PrimarySightWordsLearn() {
   const { wordId } = useParams<{wordId: string;}>();
   const [search] = useSearchParams();
   const nav = useNavigate();
-  const item = useMemo(
-    () =>
-    SIGHT_WORD_ITEMS.find((w) => w.id === wordId) ??
-    SIGHT_WORD_ITEMS_G2.find((w) => w.id === wordId) ??
-    null,
-    [wordId]
-  );
+  const grade = resolveSightWordsGrade(search.get("grade"));
+  const gradeQ = search.get("grade") ? `?grade=${grade}` : "";
+  const item = useMemo(() => findSightWordItem(wordId), [wordId]);
   const group = useMemo(
-    () =>
-    item ?
-    SIGHT_WORD_GROUPS.find((g) => g.id === item.groupId) ??
-    SIGHT_WORD_GROUPS_G2.find((g) => g.id === item.groupId) ??
-    null :
-    null,
+    () => (item ? findSightWordGroup(item.groupId) : null),
     [item]
   );
-  const isG2 = search.get("grade") === "2" || SIGHT_WORD_ITEMS_G2.some((w) => w.id === wordId);
-  const sightWordsHref = isG2 ? "/primary/sight-words?grade=2" : "/primary/sight-words";
+  const sightWordsHref = `/primary/sight-words${gradeQ}`;
   const [phase, setPhase] = useState<"learn" | "quiz" | "done">("learn");
 
   useEffect(() => {
@@ -203,7 +191,7 @@ type Q =
 | {kind: "context";correctWord: string;sentenceParts: [string, string];cn: string;options: string[];}; // 看句子选词
 
 function buildQuiz(item: SightWordItem): Q[] {
-  const allItems = [...SIGHT_WORD_ITEMS, ...SIGHT_WORD_ITEMS_G2];
+  const allItems = PEP_SIGHT_WORD_ITEMS;
   const pool = allItems.map((w) => ({ id: w.id, word: w.word }));
   const distractors = buildSightWordDistractors(item.id, pool, 3);
   const meaningPool = allItems.filter((w) => w.id !== item.id);

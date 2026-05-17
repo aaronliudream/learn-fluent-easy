@@ -1,22 +1,16 @@
 /**
- * Sight Words 年级渐进网关
+ * Sight Words / PEP 词汇年级网关
  * ----------------------------------------
- * 教学法依据(Fry's 渐进表 EFL 调整):
- *   一年级:Fry's 1-50  → 只显示组 1+组 2,后两组锁住
- *   二年级:Fry's 1-100 → 全部 4 组
- *   三年级:Fry's 1-100 已学过,转为"复习模块"
- *   四年级:同三年级,主路径淡出
- *   五-六年级:孩子应能流畅阅读,主路径不显示 Sight Words
- *
- * 单一数据源:`localStorage["primary:lastGrade"]`(由 Primary.tsx 写入)
+ * 一年级–二年级:三年级上册 PEP 预习
+ * 三年级–六年级:对应上下册全部单元
  */
 
 export type SightWordsGradePolicy = {
-  /** 在 /primary/sight-words 内可见的组数(按 sortOrder 取前 N 组) */
+  /** 可见单元组数；999 表示当前年级全部 PEP 单元 */
   visibleGroupCount: number;
-  /** 是否标注为"复习模块"(3-4 年级) */
+  /** 是否标注为复习模块(3–4 年级) */
   reviewMode: boolean;
-  /** 是否在主路径(Primary 主页累计卡 / Phonics 底部入口)显示入口 */
+  /** 是否在 Primary 主页累计卡显示入口 */
   showInMain: boolean;
 };
 
@@ -29,14 +23,12 @@ export function getCurrentGrade(): number {
 }
 
 export function getSightWordsPolicy(grade: number): SightWordsGradePolicy {
-  if (grade <= 1) return { visibleGroupCount: 2, reviewMode: false, showInMain: true };
-  if (grade <= 2) return { visibleGroupCount: 4, reviewMode: false, showInMain: true };
-  if (grade <= 4) return { visibleGroupCount: 4, reviewMode: true, showInMain: false };
-  // 5-6 年级:主路径完全淡化,页面也清空(应已掌握)
-  return { visibleGroupCount: 0, reviewMode: true, showInMain: false };
+  if (grade <= 2) return { visibleGroupCount: 999, reviewMode: false, showInMain: true };
+  if (grade <= 4) return { visibleGroupCount: 999, reviewMode: true, showInMain: false };
+  return { visibleGroupCount: 999, reviewMode: false, showInMain: true };
 }
 
-/** Phonics 底部 / Primary 主页是否显示 Sight Words 入口(grade<=4) */
+/** Primary 主页 / Phonics 底部是否显示 PEP 词汇入口 */
 export function shouldShowSightWordsEntry(grade: number): boolean {
-  return grade <= 4;
+  return grade <= 6;
 }

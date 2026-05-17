@@ -16,6 +16,7 @@ import {
   type PhonicsMasteryMap } from
 "@/lib/phonicsMastery";
 import { getCurrentGrade, getSightWordsPolicy, shouldShowSightWordsEntry } from "@/lib/sightWordsGradeGate";
+import { primaryReadingListPath } from "@/lib/primaryGrade";
 import { pickDashboardCtas, hasReadBookToday, newSoundsLearnedToday } from "@/lib/phonicsJourney";
 import { BookOpen as BookOpenIcon, Target } from "lucide-react";
 
@@ -372,7 +373,7 @@ export default function PrimaryPhonics() {
         
         </Link>
         <Link
-          to={`/primary/reading/grade/${gradeParam}`}
+          to={primaryReadingListPath(gradeParam)}
           className="inline-flex items-center gap-1 text-xs font-bold text-amber-600 underline-offset-2 hover:underline dark:text-amber-300">
           <T>📚 小绘本 Reading →</T>
         

@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, BookOpen, Clock, Sparkles, Star } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
+import { primaryAdventurePath } from "@/lib/primaryGrade";
 
 type Article = {
   id: string;
@@ -51,7 +52,7 @@ export default function PrimaryReading() {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-6">
       <BackLink
-        to={`/primary/adventure/${g}`}
+        to={primaryAdventurePath(g)}
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         
         <ArrowLeft className="size-4" /> <T>返回</T> <T>{`${GRADE_NAMES[g - 1] ?? g}年级`}</T>

@@ -21,6 +21,12 @@ import {
   type AdventureStep } from
 "@/lib/dailyAdventure";
 import { bondOnAdventureComplete } from "@/lib/petGrowth";
+import {
+  primaryGradeMapPath,
+  primaryReadingListPath,
+  resolvePrimaryGrade,
+  writePrimaryGradeToStorage,
+} from "@/lib/primaryGrade";
 import { celebratePet } from "@/components/pet/EvolutionCelebration";
 import { PHONICS_ITEMS } from "@/data/primaryPhonics";
 import { SIGHT_WORD_ITEMS } from "@/data/primarySightWords";
@@ -58,10 +64,10 @@ export default function PrimaryAdventure() {
   // direct visits / refresh. Writing back to localStorage keeps the rest of
   // the app in sync if the kid deep-linked into a different grade.
   const { grade: gradeParam } = useParams<{grade?: string;}>();
-  const grade = Number(gradeParam || localStorage.getItem("primary:lastGrade") || "1");
+  const grade = resolvePrimaryGrade(gradeParam);
   useEffect(() => {
-    if (gradeParam) localStorage.setItem("primary:lastGrade", String(grade));
-  }, [gradeParam, grade]);
+    writePrimaryGradeToStorage(grade);
+  }, [grade]);
   const [nextLessonId, setNextLessonId] = useState<string | null>(null);
   const [pet, setPet] = useState<Pet | null>(null);
   const [progress, setProgress] = useState<Record<string, true>>(() => loadAdventureProgress());
@@ -223,7 +229,7 @@ export default function PrimaryAdventure() {
   { to: `/primary/sight-words${gradeQ}`, emoji: "🟣", label: "常见小词" },
   { to: `/primary/listening${gradeQ}`, emoji: "🎧", label: "听一听" },
   { to: `/primary/roleplays${gradeQ}`, emoji: "🎭", label: "演故事" },
-  { to: `/primary/reading/grade/${grade}`, emoji: "📚", label: "读绘本" },
+  { to: primaryReadingListPath(grade), emoji: "📚", label: "读绘本" },
   ...(isG2 ? [{ to: "/lesson?grade=2", emoji: "📝", label: "G2 课程(30 节)" }] : [])];
 
 
@@ -235,7 +241,7 @@ export default function PrimaryAdventure() {
   // 防止主页改造后这 3 个模块失去入口。进度数字直接复用 myProgress。
   const findRow = (label: string) => (myProgress ?? []).find((r) => r.label === label);
   const exploreCards = [
-  { to: `/primary/reading/grade/${grade}`, emoji: "📚", label: "读绘本", row: findRow("读绘本") },
+  { to: primaryReadingListPath(grade), emoji: "📚", label: "读绘本", row: findRow("读绘本") },
   { to: `/primary/listening${gradeQ}`, emoji: "🎧", label: "听对话", row: findRow("听一听") },
   { to: `/primary/roleplays${gradeQ}`, emoji: "🎭", label: "演角色", row: findRow("演故事") }];
 
@@ -283,7 +289,7 @@ export default function PrimaryAdventure() {
               )}
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
-                <Link to={`/primary/grade/${grade}`} className="cursor-pointer">
+                <Link to={primaryGradeMapPath(grade)} className="cursor-pointer">
                   <span className="mr-2">🗺️</span><T>完整学习地图</T>
                 </Link>
               </DropdownMenuItem>

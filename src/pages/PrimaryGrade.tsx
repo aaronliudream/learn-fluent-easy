@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
+import { primaryReadingListPath, resolvePrimaryGrade } from "@/lib/primaryGrade";
 
 // Phase 1 删除项:6 个能力按钮入口、"今日 10 词挑战"独立卡 — 都并入未来的冒险流(阶段 2)。
 // 这个页面降级为"完整学习地图"详情页,不再是默认入口。
@@ -94,7 +95,7 @@ function RadarChart({ scores }: {scores: {label: string;value: number;}[];}) {
 
 export default function PrimaryGrade() {
   const { grade } = useParams<{grade: string;}>();
-  const g = Number(grade ?? "3");
+  const g = resolvePrimaryGrade(grade);
   const [lessons, setLessons] = useState<LessonRow[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -196,7 +197,7 @@ export default function PrimaryGrade() {
 
       {/* 趣味阅读 — 数据库 primary_reading_articles */}
       <Link
-        to={`/primary/reading/grade/${g}`}
+        to={primaryReadingListPath(g)}
         className="mb-3 flex items-center gap-4 rounded-3xl border-2 border-rose-200 bg-gradient-to-br from-rose-50 to-amber-50 p-4 shadow-sm transition hover:-translate-y-0.5 dark:border-rose-800 dark:from-rose-950/40 dark:to-amber-950/40">
         <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-rose-400 to-amber-400 text-3xl text-white">
           📖

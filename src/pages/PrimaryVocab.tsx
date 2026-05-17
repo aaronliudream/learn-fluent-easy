@@ -13,6 +13,7 @@ import { sparkOnAnswer, sparkOnWrong } from "@/lib/sparkAnswerFeedback";
 import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
 import { markBrowseDone } from "@/components/primary/MasteryPath";
+import { primaryReadingListPath } from "@/lib/primaryGrade";
 
 type Vocab = {
   id: string;
@@ -520,7 +521,7 @@ function QuizMode({ words }: {words: Vocab[];}) {
             <Headphones className="size-4" /> <T>听力游戏</T>
           </Link>
           <Link
-            to={`/primary/reading/grade/${grade}`}
+            to={primaryReadingListPath(grade)}
             className="flex items-center justify-center gap-1.5 rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-3 text-sm font-extrabold text-emerald-700 transition hover:-translate-y-0.5 dark:bg-emerald-950/30 dark:text-emerald-300">
             
             <BookOpen className="size-4" /> <T>去阅读</T>

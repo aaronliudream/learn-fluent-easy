@@ -1,3 +1,5 @@
+import { primaryReadingListPath } from "@/lib/primaryGrade";
+
 // Daily Adventure — Phase 2 of the Spark world realignment.
 //
 // What this is: a small, deterministic "today's plan" the child runs
@@ -188,7 +190,7 @@ function getThirdStepContent(
     title: "和 Spark 读绘本",
     sparkLine: "今天 Spark 想和你一起读一本小绘本!",
     cta: "去读绘本",
-    to: `/primary/reading/grade/${grade}`,
+    to: primaryReadingListPath(grade),
     estMinutes: 4,
   };
 

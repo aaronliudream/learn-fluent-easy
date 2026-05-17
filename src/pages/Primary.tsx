@@ -18,6 +18,13 @@ import {
   DialogTitle,
   DialogDescription } from
 "@/components/ui/dialog";
+import {
+  primaryAdventurePath,
+  primaryGradeMapPath,
+  primaryReadingListPath,
+  PRIMARY_LAST_GRADE_KEY,
+  writePrimaryGradeToStorage,
+} from "@/lib/primaryGrade";
 
 type Grade = {
   id: number;name_cn: string;name_en: string;
@@ -115,7 +122,7 @@ export default function Primary() {
   const [switchOpen, setSwitchOpen] = useState(false);
   const [sparkEmojis, setSparkEmojis] = useState<SparkEmojis>(SPARK_FALLBACK);
   const [grade, setGrade] = useState<number | null>(() => {
-    const saved = localStorage.getItem("primary:lastGrade");
+    const saved = localStorage.getItem(PRIMARY_LAST_GRADE_KEY);
     return saved ? Number(saved) : null;
   });
   // Stable across the render — captured once when the page mounts so the
@@ -182,9 +189,9 @@ export default function Primary() {
         const rg = (prof as any)?.recommended_grade ?? null;
         if (rg) {
           setRecommendedGrade(rg);
-          if (!localStorage.getItem("primary:lastGrade")) {
+          if (!localStorage.getItem(PRIMARY_LAST_GRADE_KEY)) {
             setGrade(rg);
-            localStorage.setItem("primary:lastGrade", String(rg));
+            writePrimaryGradeToStorage(rg);
           }
         }
       }
@@ -195,13 +202,14 @@ export default function Primary() {
 
   function pickGrade(id: number) {
     setGrade(id);
-    localStorage.setItem("primary:lastGrade", String(id));
+    writePrimaryGradeToStorage(id);
     setSwitchOpen(false);
   }
 
   function goAdventure() {
     if (grade == null) return;
-    nav(`/primary/adventure/${grade}`);
+    writePrimaryGradeToStorage(grade);
+    nav(primaryAdventurePath(grade));
   }
 
   // First-time visitor → inline grade picker, then immediately show CTA.
@@ -357,10 +365,16 @@ export default function Primary() {
             
           </Link>
             <Link
-            to={`/primary/grade/${grade}`}
+            to={primaryGradeMapPath(grade)}
             className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 font-bold text-muted-foreground transition hover:text-foreground">
             
               <Star className="size-3.5" /> <T>完整学习地图</T>
+            </Link>
+            <Link
+            to={primaryReadingListPath(grade)}
+            className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 font-bold text-muted-foreground transition hover:text-foreground">
+            
+              📖 <T>读绘本</T>
             </Link>
           </div>
         </>

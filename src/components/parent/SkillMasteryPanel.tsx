@@ -7,6 +7,7 @@ import {
 "lucide-react";
 import { cn } from "@/lib/utils";
 import { speak } from "@/lib/speak";
+import { primaryReadingListPath } from "@/lib/primaryGrade";
 
 type Vocab = {
   id: string;word: string;meaning_cn: string;theme: string | null;
@@ -181,7 +182,7 @@ export default function SkillMasteryPanel() {
           { label: "未读", value: `${Math.max(0, readingStat.total - readingStat.done)}`, color: "text-rose-600" }]
           }
           ctaLabel={readingStat.done < readingStat.total ? "📖 继续阅读 →" : "🌟 全部读完"}
-          ctaTo={`/primary/reading/grade/${grade}`}
+          ctaTo={primaryReadingListPath(grade)}
           extraNote={readingStat.total === 0 ? "本年级暂无阅读篇目" : "按完成度排序"} />
         
 

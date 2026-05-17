@@ -200,7 +200,7 @@ export default function LandingPage() {
               "radial-gradient(ellipse 80% 60% at 70% 40%, rgba(229,181,103,0.25) 0%, transparent 55%), radial-gradient(ellipse 50% 40% at 20% 80%, rgba(59,130,246,0.15) 0%, transparent 50%)",
           }}
         />
-        <div className="pointer-events-none absolute inset-0 bg-[url('/landing/hero-v2.webp')] bg-cover bg-top opacity-20" />
+        <div className="pointer-events-none absolute inset-0 bg-[url('/landing/hero-v2.webp')] bg-contain bg-center bg-no-repeat opacity-20" />
 
         <header className="relative z-20 border-b border-white/10">
           <nav className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3.5 md:px-6 md:py-4">
@@ -299,7 +299,7 @@ export default function LandingPage() {
                 {["A", "B", "C"].map((c) => (
                   <span
                     key={c}
-                    className="grid size-8 place-items-center rounded-full border-2 border-[#0a1628] bg-[#e5b567] text-[10px] font-bold text-[#0a1628]">
+                    className="grid size-8 shrink-0 aspect-square place-items-center rounded-full border-2 border-[#0a1628] bg-[#e5b567] text-[10px] font-bold text-[#0a1628]">
                     {c}
                   </span>
                 ))}
@@ -313,15 +313,18 @@ export default function LandingPage() {
           </div>
 
           {/* 右侧配图占位 — 后续可替换为 /landing/hero-student.webp */}
-          <div className="relative mx-auto w-full max-w-md md:max-w-none">
-            <div className="relative aspect-[4/5] max-h-[420px] overflow-hidden rounded-2xl bg-gradient-to-br from-slate-700/80 to-slate-900/90 ring-1 ring-white/10 md:aspect-auto md:min-h-[360px]">
+          <div className="relative mx-auto w-full max-w-md shrink-0 md:max-w-none">
+            <div className="relative flex items-center justify-center rounded-2xl bg-gradient-to-br from-slate-700/80 to-slate-900/90 p-2 ring-1 ring-white/10">
               <img
                 src="/landing/hero-student-placeholder.webp"
                 alt=""
-                className="h-full w-full object-cover object-top"
+                width={376}
+                height={368}
+                className="block h-auto max-h-[min(420px,70vh)] w-full max-w-full object-contain object-center"
                 loading="eager"
+                decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/60 via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 rounded-b-2xl bg-gradient-to-t from-[#0a1628]/50 to-transparent" />
               {HERO_FLOATS.map((f) => (
                 <span
                   key={f.label}
@@ -345,8 +348,8 @@ export default function LandingPage() {
                 to={c.to}
                 className="group flex flex-col rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_4px_24px_rgba(15,23,42,0.06)] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(15,23,42,0.1)]">
                 <span
-                  className={`inline-flex size-12 items-center justify-center rounded-xl ${c.iconWrap}`}>
-                  <Icon className="size-6" strokeWidth={2.2} />
+                  className={`inline-flex size-12 shrink-0 aspect-square items-center justify-center rounded-xl ${c.iconWrap}`}>
+                  <Icon className="size-6 shrink-0" strokeWidth={2.2} />
                 </span>
                 <h3 className="mt-4 text-base font-extrabold text-slate-900">
                   <T>{c.title}</T>
@@ -383,8 +386,8 @@ export default function LandingPage() {
               const Icon = item.icon;
               return (
                 <div key={item.title} className="text-center">
-                  <span className="mx-auto inline-flex size-14 items-center justify-center rounded-full bg-[#e5b567]/15 text-[#c9922e] ring-4 ring-[#e5b567]/10">
-                    <Icon className="size-7" />
+                  <span className="mx-auto inline-flex size-14 shrink-0 aspect-square items-center justify-center rounded-full bg-[#e5b567]/15 text-[#c9922e] ring-4 ring-[#e5b567]/10">
+                    <Icon className="size-7 shrink-0" />
                   </span>
                   <h3 className="mt-4 text-sm font-extrabold text-slate-900">
                     <T>{item.title}</T>
@@ -405,12 +408,15 @@ export default function LandingPage() {
       <section id="ai" className="scroll-mt-20 mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-12">
         <div className="overflow-hidden rounded-3xl bg-[#0a1628] text-white shadow-xl">
           <div className="grid items-center gap-8 p-6 md:grid-cols-[1fr,1.2fr] md:p-10 lg:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl bg-white/5">
+            <div className="flex items-center justify-center rounded-2xl bg-white/5 p-2 md:p-3">
               <img
                 src="/landing/ai-banner-v2.webp"
                 alt=""
-                className="w-full object-cover"
+                width={682}
+                height={102}
+                className="block h-auto w-full max-w-full object-contain object-center"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div>
@@ -447,8 +453,8 @@ export default function LandingPage() {
             const Icon = s.icon;
             return (
               <div key={s.label} className="text-center">
-                <span className="mx-auto inline-flex size-12 items-center justify-center rounded-full bg-[#e5b567]/10 text-[#c9922e]">
-                  <Icon className="size-5" />
+                <span className="mx-auto inline-flex size-12 shrink-0 aspect-square items-center justify-center rounded-full bg-[#e5b567]/10 text-[#c9922e]">
+                  <Icon className="size-5 shrink-0" />
                 </span>
                 <div className="mt-3 text-2xl font-extrabold text-slate-900 md:text-3xl">{s.value}</div>
                 <div className="mt-1 text-xs font-semibold text-slate-500">
@@ -487,7 +493,7 @@ export default function LandingPage() {
                         &ldquo;<T>{t.quote}</T>&rdquo;
                       </p>
                       <div className="mt-5 flex items-center gap-3 border-t border-slate-100 pt-4">
-                        <span className="grid size-10 place-items-center rounded-full bg-[#0a1628] text-sm font-bold text-[#e5b567]">
+                        <span className="grid size-10 shrink-0 aspect-square place-items-center rounded-full bg-[#0a1628] text-sm font-bold text-[#e5b567]">
                           {t.avatar}
                         </span>
                         <div>
@@ -554,8 +560,8 @@ export default function LandingPage() {
       <footer className="bg-[#0a1628] py-12 text-white md:py-14">
         <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 md:grid-cols-2 md:px-6">
           <div className="flex gap-4">
-            <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-2xl bg-[#e5b567]/15 text-[#e5b567]">
-              <Shield className="size-8" />
+            <span className="inline-flex size-14 shrink-0 aspect-square items-center justify-center rounded-2xl bg-[#e5b567]/15 text-[#e5b567]">
+              <Shield className="size-8 shrink-0" />
             </span>
             <div>
               <h3 className="text-lg font-extrabold md:text-xl">
@@ -571,7 +577,9 @@ export default function LandingPage() {
               const Icon = g.icon;
               return (
                 <div key={g.label} className="text-center">
-                  <Icon className="mx-auto size-6 text-[#e5b567]" />
+                  <span className="mx-auto inline-flex size-12 shrink-0 aspect-square items-center justify-center rounded-xl bg-[#e5b567]/10 text-[#e5b567]">
+                    <Icon className="size-6 shrink-0" />
+                  </span>
                   <div className="mt-2 text-[11px] font-bold leading-snug text-white/85">
                     <T>{g.label}</T>
                   </div>

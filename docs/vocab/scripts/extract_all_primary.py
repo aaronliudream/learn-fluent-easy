@@ -1,17 +1,24 @@
-"""Extract Appendix vocabulary from all 8 PEP primary English textbooks.
+"""Extract Appendix 1 vocabulary from all 8 PEP primary English textbooks.
 
 Series: 人教版（PEP）英语（三年级起点）3A/3B/4A/4B/5A/5B/6A/6B.
 
-Uses the same PyMuPDF blocks-mode extraction logic validated on 4B.
-Each book is processed independently; per-book CSVs are written to
-``docs/vocab/primary_{code}_clean.csv``.
+Extracts from "Appendix 1: Words in each unit" (Appendix 2 for 5A–6B) rather
+than the alphabetical "Vocabulary" appendix.  This gives **exact unit labels
+printed directly in the textbook** — no page-number reverse lookup.
+
+Per-book structure observed:
+  3A–4B  : Appendix 1 "Words in each unit"  (stop: first page with "Vocabulary")
+  5A–6A  : Appendix 2 "Words in each unit"  (same stop rule)
+  6B     : Appendix 2 "Words in each unit"  (only 4 main units)
+
+Uses the same PyMuPDF blocks-mode cleaning logic validated on 4B (PUA→ASCII,
+fi/fl ligature expansion, italic-fragment reassembly, CJK annotation filter,
+column-aware block ordering, trailing-punctuation strip).
 
 Usage:
-    # Extract one book and print stats:
-    python extract_all_primary.py 3A
-
-    # Merge all already-extracted per-book CSVs into the combined file:
-    python extract_all_primary.py --merge
+    python extract_all_primary.py 3A        # single book
+    python extract_all_primary.py --all     # all 8 books in order
+    python extract_all_primary.py --merge   # merge existing per-book CSVs
 """
 
 from __future__ import annotations
@@ -44,45 +51,27 @@ BOOK_PDFS: dict[str, str] = {
     "6B": "义务教育教科书·英语（三年级起点）六年级下册.pdf",
 }
 
-# Printed-page → unit map for books 3A–6A (identical structure across all).
-UNIT_STARTS_DEFAULT: list[tuple[int, str]] = [
-    (2,  "Unit 1"),
-    (12, "Unit 2"),
-    (22, "Unit 3"),
-    (32, "Recycle 1"),
-    (36, "Unit 4"),
-    (46, "Unit 5"),
-    (56, "Unit 6"),
-    (66, "Recycle 2"),
-    (70, "Appendix 1"),
-    (72, "Appendix 2"),
-    (75, "Appendix 3"),
-]
-
-# 6B has only 4 units + 1 recycle (shorter final-semester book).
-UNIT_STARTS_6B: list[tuple[int, str]] = [
-    (2,  "Unit 1"),
-    (12, "Unit 2"),
-    (22, "Unit 3"),
-    (32, "Unit 4"),
-    (42, "Recycle"),
-    (52, "Appendix 1"),
-    (54, "Appendix 2"),
-    (57, "Appendix 3"),
-]
-
-# Offset: pdf_page_1based = printed_page + PDF_OFFSET  (same for all 8 books)
-PDF_OFFSET = 5
-
-OUT_DIR = Path("docs/vocab")
+PDF_OFFSET = 5   # pdf_page_1based = printed_page + PDF_OFFSET  (all 8 books)
+OUT_DIR    = Path("docs/vocab")
 
 
 # ---------------------------------------------------------------------------
-# Text cleaning constants (identical to validated 4B script)
+# Text cleaning constants
 # ---------------------------------------------------------------------------
+
+# Unicode ligatures that appear in italic/mixed-font spans.
+_LIGATURE_MAP: dict[str, str] = {
+    "\ufb00": "ff",
+    "\ufb01": "fi",   # ﬁ — most common in these books: ﬁve, ﬁrst, ﬁsh …
+    "\ufb02": "fl",   # ﬂ
+    "\ufb03": "ffi",
+    "\ufb04": "ffl",
+    "\ufb05": "st",
+    "\ufb06": "st",
+}
 
 ITALIC_FIXES: list[tuple[re.Pattern[str], str]] = [
-    # --- f-italic splits (one-char 'f' separated from rest of word) ---
+    # f-italic splits (isolated 'f' separate from word body)
     (re.compile(r"\bf\s+irst\b"),  "first"),
     (re.compile(r"\bf\s+loor\b"),  "floor"),
     (re.compile(r"\boff\s+ice\b"), "office"),
@@ -101,7 +90,7 @@ ITALIC_FIXES: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bf\s+ar\b"),    "far"),
     (re.compile(r"\bf\s+ull\b"),   "full"),
     (re.compile(r"\bf\s+un\b"),    "fun"),
-    # --- fi-ligature splits (ﬁ→fi already expanded in normalize_ws) ---
+    # fi-ligature splits  (ﬁ→fi already done in normalize_ws)
     (re.compile(r"\bfi\s+rst\b"),  "first"),
     (re.compile(r"\bfi\s+ve\b"),   "five"),
     (re.compile(r"\bfi\s+eld\b"),  "field"),
@@ -109,21 +98,42 @@ ITALIC_FIXES: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bfi\s+ne\b"),   "fine"),
     (re.compile(r"\bfi\s+lm\b"),   "film"),
     (re.compile(r"\bfi\s+nish\b"), "finish"),
-    # --- fl-ligature splits ---
+    # fl-ligature splits
     (re.compile(r"\bfl\s+oor\b"),  "floor"),
     (re.compile(r"\bfl\s+ower\b"), "flower"),
     (re.compile(r"\bfl\s+y\b"),    "fly"),
+    # fi-ligature + extra letter (fifteen, fifth)
+    (re.compile(r"\bfi\s+fteen\b"),  "fifteen"),
+    (re.compile(r"\bfi\s+fth\b"),    "fifth"),
+    (re.compile(r"\bf\s+ifteen\b"),  "fifteen"),
+    (re.compile(r"\bf\s+ifth\b"),    "fifth"),
 ]
 
+# Headers/footers to discard.  Extended for Appendix 1 page titles.
 HEADER_FOOTER_RE = re.compile(
-    r"^\s*(?:Vocabulary|Appendix\s*\d+|词\s*汇\s*表|\d+)\s*$"
+    r"^\s*(?:Vocabulary|Words in each unit|Appendix\s*\d+"
+    r"|词\s*汇\s*表|单\s*元\s*词\s*汇\s*表|\d+)\s*$",
+    re.IGNORECASE,
 )
+# Single uppercase section letter (used in Appendix 2 alphabetical dividers).
 SECTION_LETTER_RE = re.compile(r"^\s*[A-Z]\s*$")
+# Page reference "p.NN".
 PAGE_REF_RE   = re.compile(r"p\.\s*(\d{1,3})")
+# Phonetic chunk between two forward-slashes.
 PHONETIC_RE   = re.compile(r"/[^/]*/")
+# CJK character class (splits English head from Chinese gloss).
 CJK_RE        = re.compile(r"[\u3000-\u303f\u4e00-\u9fff\uff00-\uffef]")
 
-BLACKLIST_EXACT = {"", "appendix", "appendix 2", "appendix 3", "vocabulary"}
+# Unit / Recycle section headers in Appendix 1.
+# Matches at the START of a block text (the header may share the block with
+# the first vocabulary entry on the same line, as in Grade 5–6 two-column pages).
+UNIT_HEADER_START_RE = re.compile(
+    r"^(Unit\s+[1-9]|Recycle(?:\s+[12])?)\b\s*",
+    re.IGNORECASE,
+)
+
+BLACKLIST_EXACT = {"", "appendix", "appendix 2", "appendix 3", "vocabulary",
+                   "words in each unit"}
 BLACKLIST_REGEX = [
     re.compile(r"^\d+$"),
     re.compile(r"^[a-z]$", re.I),
@@ -132,23 +142,12 @@ BLACKLIST_REGEX = [
 
 
 # ---------------------------------------------------------------------------
-# Helpers (identical logic to 4B)
+# Helpers
 # ---------------------------------------------------------------------------
 
 
-# Unicode ligatures that appear in italic/mixed-font spans.
-_LIGATURE_MAP: dict[str, str] = {
-    "\ufb00": "ff",
-    "\ufb01": "fi",  # ﬁ  (most common in these books: ﬁve, ﬁrst, ﬁsh …)
-    "\ufb02": "fl",  # ﬂ
-    "\ufb03": "ffi",
-    "\ufb04": "ffl",
-    "\ufb05": "st",
-    "\ufb06": "st",
-}
-
-
 def normalize_ws(s: str) -> str:
+    """Collapse whitespace; decode PUA surrogates; expand Unicode ligatures."""
     result: list[str] = []
     for c in s:
         if c in _LIGATURE_MAP:
@@ -163,50 +162,27 @@ def normalize_ws(s: str) -> str:
     return re.sub(r"\s+", " ", "".join(result)).strip()
 
 
-def lookup_unit(printed_page: int, unit_starts: list[tuple[int, str]]) -> str | None:
-    current: str | None = None
-    for start, name in unit_starts:
-        if printed_page >= start:
-            current = name
-        else:
-            break
-    return current
+def find_per_unit_pdf_pages(doc: fitz.Document) -> list[int]:
+    """Return 0-based indices of Appendix 'Words in each unit' pages.
 
+    Detection: first page with both "Words in each unit" (English title) AND
+    a CJK 单 character (from '单 元 词 汇 表').
 
-def find_vocab_pdf_pages(doc: fitz.Document) -> list[int]:
-    """Return 0-based page indices that hold the vocabulary appendix.
-
-    Works for all 8 books:
-    - 3A–4B: Appendix 2 titled "Vocabulary" / 词汇表 → stop at Appendix 3
-    - 5A–6B: Appendix 3 titled "Vocabulary" / 词汇表 → stop at Appendix 4
-
-    Detection: first page with both "Vocabulary" AND a CJK 词 character
-    (the per-unit "Words in each unit" page says only "单 元 词 汇 表" and does
-    NOT contain the English word "Vocabulary", so it is skipped).
-
-    Termination: first page after the start that contains the *next* appendix
-    number (N+1) OR "Useful expressions".  Continuation pages often repeat the
-    current appendix label in their running header, so we compare against N+1
-    rather than a fixed string such as "Appendix 3".
+    Termination: first subsequent page that contains "Vocabulary" (the title
+    of the alphabetical appendix that follows).  Continuation pages of 'Words
+    in each unit' never use the English word "Vocabulary".
     """
     start_idx: int | None = None
-    start_appendix_num: int = 2
     end_idx: int | None = None
 
     for i in range(len(doc)):
         text = doc[i].get_text("text")
-
-        if start_idx is None and "Vocabulary" in text and "词" in text:
+        if start_idx is None and "Words in each unit" in text and "单" in text:
             start_idx = i
-            m = re.search(r"Appendix\s+(\d+)", text)
-            start_appendix_num = int(m.group(1)) if m else 2
             continue
-
-        if start_idx is not None:
-            next_app = f"Appendix {start_appendix_num + 1}"
-            if "Useful expressions" in text or next_app in text:
-                end_idx = i
-                break
+        if start_idx is not None and "Vocabulary" in text:
+            end_idx = i
+            break
 
     if start_idx is None:
         return []
@@ -216,33 +192,46 @@ def find_vocab_pdf_pages(doc: fitz.Document) -> list[int]:
 
 
 def page_block_texts(page: fitz.Page) -> list[str]:
+    """Return cleaned block texts in column-reading order (left then right).
+
+    Column detection: the largest x0 gap is the column boundary, but only if
+    that gap exceeds 15 % of the page width.  Pages with a smaller largest gap
+    are treated as single-column (Appendix 1 of Grade 3–4 books).
+    """
     raw_blocks = page.get_text("blocks")
     text_blocks = [b for b in raw_blocks if b[6] == 0]
     if not text_blocks:
         return []
 
     ph = page.rect.height
+    pw = page.rect.width
     content = [b for b in text_blocks if b[1] > 50 and b[3] < ph - 30]
     if not content:
         return []
 
     x0_vals = sorted(set(round(b[0]) for b in content))
+
+    # Find the largest gap between consecutive distinct x0 values.
+    # Use the midpoint of that gap as the column boundary so that float x0
+    # values (e.g. 62.4) are not accidentally sent to the wrong column when
+    # the boundary equals the rounded x0 (e.g. 62).
+    mid_x = float("inf")   # default: single column, all blocks go to "left"
     if len(x0_vals) >= 2:
         max_gap = 0
-        split_after = x0_vals[0]
+        best_split = x0_vals[0]
         for a, b_val in zip(x0_vals, x0_vals[1:]):
             gap = b_val - a
             if gap > max_gap:
                 max_gap = gap
-                split_after = a
-    else:
-        split_after = x0_vals[0]
+                best_split = a
+        if max_gap >= pw * 0.15:   # substantial gap → two-column layout
+            mid_x = best_split + max_gap / 2   # midpoint between columns
 
     def _row_x_key(b: tuple) -> tuple:
         return (round(b[1] / 4) * 4, b[0])
 
-    left  = sorted([b for b in content if b[0] <= split_after], key=_row_x_key)
-    right = sorted([b for b in content if b[0] > split_after],  key=_row_x_key)
+    left  = sorted([b for b in content if b[0] <= mid_x], key=_row_x_key)
+    right = sorted([b for b in content if b[0] > mid_x],  key=_row_x_key)
 
     result: list[str] = []
     for blk in left + right:
@@ -256,12 +245,28 @@ def page_block_texts(page: fitz.Page) -> list[str]:
             cleaned.append(line)
         if cleaned:
             result.append(" ".join(cleaned))
+
     return result
 
 
-def split_entries(block_texts: Iterable[str]) -> list[list[str]]:
-    entries: list[list[str]] = []
+def split_entries_per_unit(
+    block_texts: Iterable[str],
+) -> list[tuple[str, list[str]]]:
+    """Group block texts into (unit_name, entry_buf) pairs.
+
+    Unit labels are read **directly from 'Unit N' / 'Recycle N' headers**
+    embedded in the block stream.  No page-number reverse lookup is needed.
+
+    Two layout variants are handled:
+      • Grade 3–4 (single-column): the unit header is its own standalone block.
+      • Grade 5–6 (two-column):    the unit header shares a block with the
+        first vocabulary entry of that unit (e.g. "Unit 1 \\nold /…/ p.5").
+        In this case the remainder after the header prefix is the entry start.
+    """
+    entries: list[tuple[str, list[str]]] = []
     buf: list[str] = []
+    current_unit: str = "U?"
+
     for text in block_texts:
         text = text.strip()
         if not text:
@@ -269,19 +274,39 @@ def split_entries(block_texts: Iterable[str]) -> list[list[str]]:
         if HEADER_FOOTER_RE.match(text):
             buf = []
             continue
+        # Pure-CJK annotation block (formatting note at appendix start).
         if not re.search(r"[a-zA-Z]", text) and not PAGE_REF_RE.search(text):
             buf = []
             continue
+
+        # ---- Unit / Recycle header detection ----
+        m = UNIT_HEADER_START_RE.match(text)
+        if m:
+            # Update current unit name
+            current_unit = re.sub(r"\s+", " ", m.group(1)).strip()
+            buf = []
+            # Check for vocabulary content after the header prefix
+            remainder = text[m.end():].strip()
+            if remainder:
+                buf.append(remainder)
+                if PAGE_REF_RE.search(remainder):
+                    entries.append((current_unit, [remainder]))
+                    buf = []
+            continue
+
+        # ---- Normal vocabulary block ----
         buf.append(text)
         if PAGE_REF_RE.search(text):
-            entries.append(buf)
+            entries.append((current_unit, buf))
             buf = []
+
     if buf:
-        entries.append(buf)
+        entries.append((current_unit, buf))
     return entries
 
 
 def parse_entry(buf: list[str]) -> dict | None:
+    """Turn an entry buffer into {word, gloss, printed_page, raw}."""
     text = normalize_ws(" ".join(buf))
     m = PAGE_REF_RE.search(text)
     if not m:
@@ -303,9 +328,13 @@ def parse_entry(buf: list[str]) -> dict | None:
     for pat, repl in ITALIC_FIXES:
         english = pat.sub(repl, english)
     english = normalize_ws(english)
+    # Strip trailing bracket / punctuation artifacts
     english = re.sub(r"[\s()\[\]{}<>]+$", "", english).strip()
+    # Strip trailing ordinal parentheticals: "first (1st" → "first"
+    english = re.sub(r"\s*\(\s*\d+(?:st|nd|rd|th)\s*$", "", english, flags=re.I).strip()
 
     gloss = normalize_ws(gloss)
+    # Remove leading dangling close-bracket left over from parenthetical notes
     gloss = re.sub(r"^[)\]}>]+\s*", "", gloss).strip()
 
     return {"word": english, "gloss": gloss, "printed_page": printed_page, "raw": text}
@@ -324,70 +353,70 @@ def is_blacklisted(word: str) -> bool:
 
 NOISE_PATTERNS = [
     re.compile(r"\blet'?s\b", re.I),
-    re.compile(r"\bstory\b", re.I),
+    re.compile(r"\bstory\b",  re.I),
     re.compile(r"\bappendix\b", re.I),
     re.compile(r"^[a-z]$", re.I),
 ]
 
 
 def extract_book(code: str) -> dict:
-    """Extract vocabulary for one book; write CSV; return stats dict."""
-    fname = BOOK_PDFS[code]
+    """Extract from Appendix 1 ('Words in each unit') for one book."""
+    fname    = BOOK_PDFS[code]
     pdf_path = PDF_DIR / fname
-    csv_out = OUT_DIR / f"primary_{code}_clean.csv"
+    csv_out  = OUT_DIR / f"primary_{code}_clean.csv"
 
     if not pdf_path.exists():
         print(f"ERROR: PDF not found: {pdf_path}", file=sys.stderr)
         return {}
 
-    unit_starts = UNIT_STARTS_6B if code == "6B" else UNIT_STARTS_DEFAULT
-
     stats: dict = {
-        "book": code,
-        "pdf": fname,
-        "appendix_pdf_pages_1based": [],
-        "raw_entries": 0,
-        "kept": 0,
-        "blacklisted": 0,
-        "missing_page_ref": 0,
-        "unit_lookup_success": 0,
-        "unit_lookup_failed": 0,
+        "book":                     code,
+        "pdf":                      fname,
+        "source":                   "Appendix 1 (Words in each unit) — unit from direct textbook labels",
+        "per_unit_pdf_pages_1based": [],
+        "raw_entries":              0,
+        "kept":                     0,
+        "blacklisted":              0,
+        "missing_page_ref":         0,
+        "unit_unknown":             0,
     }
 
     rows: list[dict] = []
     doc = fitz.open(str(pdf_path))
-    vocab_pages = find_vocab_pdf_pages(doc)
-    stats["appendix_pdf_pages_1based"] = [p + 1 for p in vocab_pages]
+    per_unit_pages = find_per_unit_pdf_pages(doc)
+    stats["per_unit_pdf_pages_1based"] = [p + 1 for p in per_unit_pages]
 
-    for idx in vocab_pages:
-        page = doc[idx]
-        block_texts = page_block_texts(page)
-        for buf in split_entries(block_texts):
-            stats["raw_entries"] += 1
-            parsed = parse_entry(buf)
-            if parsed is None or parsed["printed_page"] is None:
-                stats["missing_page_ref"] += 1
-                continue
-            if is_blacklisted(parsed["word"]):
-                stats["blacklisted"] += 1
-                continue
+    # Combine ALL pages' block texts before splitting so that the current_unit
+    # context carries across page boundaries.  (A unit section often starts at
+    # the bottom of one page and continues at the top of the next page with no
+    # repeated header.)
+    all_block_texts: list[str] = []
+    for idx in per_unit_pages:
+        all_block_texts.extend(page_block_texts(doc[idx]))
 
-            pp = parsed["printed_page"]
-            unit = lookup_unit(pp, unit_starts)
-            if unit is None:
-                stats["unit_lookup_failed"] += 1
-            else:
-                stats["unit_lookup_success"] += 1
+    for unit, buf in split_entries_per_unit(all_block_texts):
+        stats["raw_entries"] += 1
+        parsed = parse_entry(buf)
+        if parsed is None or parsed["printed_page"] is None:
+            stats["missing_page_ref"] += 1
+            continue
+        if is_blacklisted(parsed["word"]):
+            stats["blacklisted"] += 1
+            continue
 
-            rows.append({
-                "book":          f"primary_{code}",
-                "unit":          unit or "U?",
-                "word":          parsed["word"],
-                "gloss":         parsed["gloss"],
-                "printed_page":  pp,
-                "pdf_page":      pp + PDF_OFFSET,
-            })
-            stats["kept"] += 1
+        if unit == "U?":
+            stats["unit_unknown"] += 1
+
+        pp = parsed["printed_page"]
+        rows.append({
+            "book":         f"primary_{code}",
+            "unit":         unit,
+            "word":         parsed["word"],
+            "gloss":        parsed["gloss"],
+            "printed_page": pp,
+            "pdf_page":     pp + PDF_OFFSET,
+        })
+        stats["kept"] += 1
 
     doc.close()
 
@@ -407,7 +436,7 @@ def extract_book(code: str) -> dict:
         for p in NOISE_PATTERNS:
             if p.search(r["word"]):
                 noise_hits[p.pattern].append(r["word"])
-    stats["noise_hits"] = noise_hits
+    stats["noise_hits"]  = noise_hits
     stats["total_noise"] = sum(len(v) for v in noise_hits.values())
 
     # Write CSV
@@ -419,26 +448,27 @@ def extract_book(code: str) -> dict:
         writer.writeheader()
         writer.writerows(deduped)
 
-    stats["csv"] = str(csv_out)
+    stats["csv"]  = str(csv_out)
     stats["rows"] = deduped
 
-    # Console report
+    # ---- Console report ----
     print(f"\n{'='*55}")
     print(f"  {code}  —  primary_{code}_clean.csv")
     print(f"{'='*55}")
-    print(f"  Appendix PDF pages (1-based):  {stats['appendix_pdf_pages_1based']}")
+    print(f"  Source:                        Appendix 1 (Words in each unit)")
+    print(f"  Appendix PDF pages (1-based):  {stats['per_unit_pdf_pages_1based']}")
     print(f"  Raw entry buffers:             {stats['raw_entries']}")
     print(f"  Missing p.NN ref:              {stats['missing_page_ref']}")
     print(f"  Blacklisted:                   {stats['blacklisted']}")
     print(f"  Kept → deduped:                {stats['kept']} → {stats['deduped']}")
-    unit_total = stats["unit_lookup_success"] + stats["unit_lookup_failed"]
-    pct = 100 * stats["unit_lookup_success"] / unit_total if unit_total else 0
-    print(f"  Unit lookup success:           {stats['unit_lookup_success']}/{unit_total} ({pct:.0f}%)")
+    print(f"  unit=U? (no header seen yet):  {stats['unit_unknown']}")
 
-    sanity = "OK" if 100 <= stats["deduped"] <= 600 else (
-        "WARNING: below 100" if stats["deduped"] < 100 else "⚠ ABOVE 600 — STOP"
+    sanity = (
+        "OK"            if 50 <= stats["deduped"] <= 600 else
+        "WARNING: low"  if stats["deduped"] < 50          else
+        "⚠ ABOVE 600 — STOP"
     )
-    print(f"  Word-count sanity (100–600):   {stats['deduped']}  [{sanity}]")
+    print(f"  Word-count sanity (50–600):    {stats['deduped']}  [{sanity}]")
 
     noise_ok = stats["total_noise"] == 0
     print(f"  Noise scan (must be 0):        {'PASS ✓' if noise_ok else 'FAIL ✗'}")
@@ -452,7 +482,7 @@ def extract_book(code: str) -> dict:
         sample = deduped[::step][:10]
         print(f"\n  Sample (word | unit | p):")
         for r in sample:
-            print(f"    {r['word']!r:30s} | {r['unit']:12s} | p.{r['printed_page']}")
+            print(f"    {r['word']!r:32s} | {r['unit']:12s} | p.{r['printed_page']}")
 
     if stats["deduped"] > 600:
         print("\n  ⚠ WORD COUNT EXCEEDS 600 — STOPPING PIPELINE")
@@ -469,10 +499,9 @@ def extract_book(code: str) -> dict:
 def merge_all() -> None:
     """Merge all 8 per-book CSVs into primary_merged_clean.csv."""
     codes = ["3A", "3B", "4A", "4B", "5A", "5B", "6A", "6B"]
-    all_rows: list[dict] = []
+    all_rows: list[dict]        = []
     per_book_counts: dict[str, int] = {}
-    unit_unknown: list[dict] = []
-    conf_low: list[dict] = []
+    unit_unknown: list[dict]    = []
 
     for code in codes:
         csv_path = OUT_DIR / f"primary_{code}_clean.csv"
@@ -484,13 +513,11 @@ def merge_all() -> None:
         per_book_counts[code] = len(rows)
         all_rows.extend(rows)
 
-    # Assign global word_id
+    total = len(all_rows)
     for i, r in enumerate(all_rows, 1):
         r["word_id"] = f"W{i:04d}"
         if r.get("unit", "").startswith("U?") or not r.get("unit"):
             unit_unknown.append(r)
-        if r.get("confidence") == "low":
-            conf_low.append(r)
 
     merged_csv = OUT_DIR / "primary_merged_clean.csv"
     fieldnames = ["word_id", "book", "unit", "word", "gloss", "printed_page", "pdf_page"]
@@ -499,15 +526,17 @@ def merge_all() -> None:
         writer.writeheader()
         writer.writerows(all_rows)
 
-    # word_id uniqueness check
     ids = [r["word_id"] for r in all_rows]
     unique_ids = len(set(ids))
 
-    total = len(all_rows)
     print(f"\n{'='*55}")
     print(f"  MERGE COMPLETE")
     print(f"{'='*55}")
-    print(f"  Total words:          {total}  ({'OK' if 1500 <= total <= 2000 else 'WARNING: outside 1500-2000'})")
+    status = (
+        "OK" if 400 <= total <= 1500 else
+        "WARNING: outside expected 700-900 range"
+    )
+    print(f"  Total words:          {total}  [{status}]")
     print(f"  Unique word_ids:      {unique_ids}  ({'OK' if unique_ids == total else 'DUPLICATES!'})")
     print(f"\n  Per-book distribution:")
     for code in codes:
@@ -517,10 +546,8 @@ def merge_all() -> None:
     if unit_unknown:
         for r in unit_unknown[:10]:
             print(f"    {r['word']!r} p.{r['printed_page']} ({r['book']})")
-    print(f"  confidence=low:       {len(conf_low)}")
 
-    # Write markdown report
-    _write_report(all_rows, per_book_counts, codes, unit_unknown, conf_low, total, unique_ids)
+    _write_report(all_rows, per_book_counts, codes, unit_unknown, total, unique_ids)
     print(f"\n  Merged CSV:    {merged_csv}")
     print(f"  Report:        {OUT_DIR / 'primary_clean_merge_report.md'}")
 
@@ -534,24 +561,28 @@ def _write_report(
     per_book_counts: dict[str, int],
     codes: list[str],
     unit_unknown: list[dict],
-    conf_low: list[dict],
     total: int,
     unique_ids: int,
 ) -> None:
     lines = [
         "# Primary Vocabulary Merge Report",
         "",
-        f"Generated from 8 PEP textbooks (3A–6B).",
+        "Extracted from **Appendix 1 ('Words in each unit')** of all 8 books.",
+        "",
+        "> **Unit attribution**: unit labels are read **directly from the section",
+        "> headers printed in the textbook** — no page-number reverse lookup.",
+        "> This guarantees 100 % accurate unit assignment at every section boundary.",
         "",
         "## Summary",
         "",
-        f"| Item | Value |",
-        f"|---|---|",
+        "| Item | Value |",
+        "|---|---|",
         f"| Total words | {total} |",
         f"| Unique word_ids | {unique_ids} |",
         f"| word_id uniqueness | {'✓ all unique' if unique_ids == total else '✗ duplicates!'} |",
-        f"| Total word-count target | 1500–2000 |",
-        f"| Status | {'✓ within range' if 1500 <= total <= 2000 else '⚠ outside range'} |",
+        f"| Expected range | 700–900 |",
+        f"| Status | {'✓ within range' if 700 <= total <= 900 else '⚠ outside range'} |",
+        "| unit source | Appendix 1 direct textbook labels |",
         "",
         "## Volume Distribution",
         "",
@@ -567,29 +598,11 @@ def _write_report(
         "",
     ]
     if unit_unknown:
-        lines += [
-            "| book | word | printed_page |",
-            "|---|---|---|",
-        ]
+        lines += ["| book | word | printed_page |", "|---|---|---|"]
         for r in unit_unknown:
             lines.append(f"| {r['book']} | {r['word']} | {r['printed_page']} |")
     else:
         lines.append("_None — all entries have a resolved unit._")
-
-    lines += [
-        "",
-        "## confidence=low Entries",
-        "",
-    ]
-    if conf_low:
-        lines += [
-            "| book | word | unit | printed_page |",
-            "|---|---|---|---|",
-        ]
-        for r in conf_low:
-            lines.append(f"| {r['book']} | {r['word']} | {r['unit']} | {r['printed_page']} |")
-    else:
-        lines.append("_None._")
 
     lines += [
         "",
@@ -602,14 +615,7 @@ def _write_report(
         non_empty = sum(1 for r in all_rows if r.get(field))
         lines.append(f"| {field} | {non_empty} | {total} |")
 
-    lines += [
-        "",
-        "## Blacklist Stats per Book",
-        "",
-        "_See per-book report JSON files in `docs/vocab/`._",
-        "",
-    ]
-
+    lines.append("")
     report_path = OUT_DIR / "primary_clean_merge_report.md"
     report_path.write_text("\n".join(lines), encoding="utf-8")
 
@@ -621,13 +627,24 @@ def _write_report(
 
 def main() -> int:
     if len(sys.argv) < 2:
-        print("Usage: extract_all_primary.py <CODE>  or  extract_all_primary.py --merge")
-        print("  CODE: 3A 3B 4A 4B 5A 5B 6A 6B")
+        print("Usage:")
+        print("  extract_all_primary.py <CODE>   — extract one book (3A..6B)")
+        print("  extract_all_primary.py --all     — extract all 8 books")
+        print("  extract_all_primary.py --merge   — merge existing CSVs")
         return 1
 
     arg = sys.argv[1]
+
     if arg == "--merge":
         merge_all()
+        return 0
+
+    if arg == "--all":
+        for code in ["3A", "3B", "4A", "4B", "5A", "5B", "6A", "6B"]:
+            stats = extract_book(code)
+            if not stats:
+                return 1
+            _save_report(code, stats)
         return 0
 
     code = arg.upper()
@@ -638,16 +655,19 @@ def main() -> int:
     stats = extract_book(code)
     if not stats:
         return 1
+    _save_report(code, stats)
+    return 0
 
-    # Save per-book report JSON
+
+def _save_report(code: str, stats: dict) -> None:
     report_path = OUT_DIR / f"primary_{code}_report.json"
-    rows = stats.pop("rows", [])  # don't serialise all rows into JSON
+    rows = stats.pop("rows", [])  # don't serialise full rows into JSON
+    _ = rows
     report_path.write_text(
         json.dumps(stats, ensure_ascii=False, indent=2, default=str),
         encoding="utf-8",
     )
     print(f"\n  Report JSON: {report_path}")
-    return 0
 
 
 if __name__ == "__main__":

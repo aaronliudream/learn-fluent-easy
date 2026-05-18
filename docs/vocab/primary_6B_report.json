@@ -7,12 +7,12 @@
     60,
     61
   ],
-  "raw_entries": 90,
-  "kept": 90,
+  "raw_entries": 91,
+  "kept": 91,
   "blacklisted": 0,
   "missing_page_ref": 0,
   "unit_unknown": 0,
-  "deduped": 90,
+  "deduped": 91,
   "noise_hits": {
     "\\blet'?s\\b": [],
     "\\bstory\\b": [],

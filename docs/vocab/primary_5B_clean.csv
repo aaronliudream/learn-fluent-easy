@@ -38,7 +38,8 @@ primary_5B,Unit 1,win,获胜,9,14
 primary_5B,Unit 2,spring,春天,15,20
 primary_5B,Unit 2,summer,夏天,15,20
 primary_5B,Unit 2,autumn,秋天,15,20
-primary_5B,Unit 2,winter,冬天 season 季节 p.15,15,20
+primary_5B,Unit 2,winter,冬天,15,20
+primary_5B,Unit 2,season,季节,15,20
 primary_5B,Unit 2,picnic,野餐,18,23
 primary_5B,Unit 2,go on a picnic,去野餐,18,23
 primary_5B,Unit 2,pick,摘；采集,18,23
@@ -104,7 +105,8 @@ primary_5B,Unit 4,thirtieth,第三十（的）,42,47
 primary_5B,Unit 4,other,其他,38,43
 primary_5B,Unit 4,special,特殊的；特别的,38,43
 primary_5B,Unit 4,show,展览,38,43
-primary_5B,Unit 4,festival,节日 kitten 小猫 p.43,38,43
+primary_5B,Unit 4,festival,节日,38,43
+primary_5B,Unit 4,kitten,小猫,43,48
 primary_5B,Unit 4,diary,日记,43,48
 primary_5B,Unit 4,still,仍然；依旧；还是,43,48
 primary_5B,Unit 4,noise,声音；响声；噪音,43,48

@@ -262,46 +262,76 @@ def split_entries_per_unit(
       • Grade 5–6 (two-column):    the unit header shares a block with the
         first vocabulary entry of that unit (e.g. "Unit 1 \\nold /…/ p.5").
         In this case the remainder after the header prefix is the entry start.
+
+    Root-cause fix for gloss-swallowing:
+      Some PDF blocks contain multiple vocabulary entries (e.g. two entries that
+      share the same printed page, laid out on consecutive lines in the source
+      column).  Each entry ends at its own "p.NN" marker.  By splitting every
+      incoming text at EVERY p.NN boundary we ensure each entry is flushed
+      independently — preventing the classic pattern where:
+        "salad 蔬菜沙拉；混合沙拉 p.25 hamburger 汉堡包 p.25"
+      would otherwise swallow 'hamburger' into 'salad's gloss.
     """
     entries: list[tuple[str, list[str]]] = []
     buf: list[str] = []
     current_unit: str = "U?"
+
+    def _flush_buf() -> None:
+        if buf:
+            entries.append((current_unit, list(buf)))
+            buf.clear()
+
+    def _ingest(text: str) -> None:
+        """Add text to buf, flushing at every p.NN boundary found in text."""
+        refs = list(PAGE_REF_RE.finditer(text))
+        if not refs:
+            # No page ref — accumulate as part of current entry
+            buf.append(text)
+            return
+        # One or more page refs: each marks the end of one entry
+        pos = 0
+        for ref_m in refs:
+            segment = text[pos : ref_m.end()].strip()
+            if segment:
+                buf.append(segment)
+            _flush_buf()
+            pos = ref_m.end()
+        # Any text after the last page ref is the start of the next entry —
+        # but ONLY if it starts with an English letter.  Trailing fragments
+        # like ",28" (a second-page cross-reference printed as "p.25,28")
+        # are NOT new entries and must be discarded to prevent them from
+        # contaminating the following entry's word field.
+        tail = text[pos:].strip()
+        if tail and re.match(r"[a-zA-Z]", tail):
+            buf.append(tail)
 
     for text in block_texts:
         text = text.strip()
         if not text:
             continue
         if HEADER_FOOTER_RE.match(text):
-            buf = []
+            buf.clear()
             continue
         # Pure-CJK annotation block (formatting note at appendix start).
         if not re.search(r"[a-zA-Z]", text) and not PAGE_REF_RE.search(text):
-            buf = []
+            buf.clear()
             continue
 
         # ---- Unit / Recycle header detection ----
         m = UNIT_HEADER_START_RE.match(text)
         if m:
-            # Update current unit name
             current_unit = re.sub(r"\s+", " ", m.group(1)).strip()
-            buf = []
-            # Check for vocabulary content after the header prefix
+            buf.clear()
             remainder = text[m.end():].strip()
             if remainder:
-                buf.append(remainder)
-                if PAGE_REF_RE.search(remainder):
-                    entries.append((current_unit, [remainder]))
-                    buf = []
+                _ingest(remainder)
             continue
 
         # ---- Normal vocabulary block ----
-        buf.append(text)
-        if PAGE_REF_RE.search(text):
-            entries.append((current_unit, buf))
-            buf = []
+        _ingest(text)
 
     if buf:
-        entries.append((current_unit, buf))
+        entries.append((current_unit, list(buf)))
     return entries
 
 
@@ -626,36 +656,32 @@ def _write_report(
 
 
 def main() -> int:
-    if len(sys.argv) < 2:
+    args = sys.argv[1:]
+    if not args:
         print("Usage:")
-        print("  extract_all_primary.py <CODE>   — extract one book (3A..6B)")
-        print("  extract_all_primary.py --all     — extract all 8 books")
-        print("  extract_all_primary.py --merge   — merge existing CSVs")
+        print("  extract_all_primary.py <CODE> [CODE ...]  — one or more books")
+        print("  extract_all_primary.py --all               — all 8 books")
+        print("  extract_all_primary.py --merge             — merge existing CSVs")
         return 1
 
-    arg = sys.argv[1]
-
-    if arg == "--merge":
+    if args == ["--merge"]:
         merge_all()
         return 0
 
-    if arg == "--all":
-        for code in ["3A", "3B", "4A", "4B", "5A", "5B", "6A", "6B"]:
-            stats = extract_book(code)
-            if not stats:
-                return 1
-            _save_report(code, stats)
-        return 0
+    if args == ["--all"]:
+        run_codes = ["3A", "3B", "4A", "4B", "5A", "5B", "6A", "6B"]
+    else:
+        run_codes = [a.upper() for a in args]
+        invalid = [c for c in run_codes if c not in BOOK_PDFS]
+        if invalid:
+            print(f"Unknown book code(s): {invalid}. Valid: {list(BOOK_PDFS)}")
+            return 1
 
-    code = arg.upper()
-    if code not in BOOK_PDFS:
-        print(f"Unknown book code: {code!r}. Valid: {list(BOOK_PDFS)}")
-        return 1
-
-    stats = extract_book(code)
-    if not stats:
-        return 1
-    _save_report(code, stats)
+    for code in run_codes:
+        stats = extract_book(code)
+        if not stats:
+            return 1
+        _save_report(code, stats)
     return 0
 
 

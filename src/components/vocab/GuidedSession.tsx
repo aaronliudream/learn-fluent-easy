@@ -21,6 +21,7 @@ import {
   type GuideStep } from
 "@/lib/vocabMastery";
 import type { MasteryMatrix } from "@/lib/masteryScore";
+import { juniorKindFromQuizKind, recordJuniorWordMastery } from "@/lib/juniorWordMastery";
 
 export interface GuidedVocab {
   id: string;
@@ -44,6 +45,9 @@ interface Props {
    * cards. Used by the FSRS review pool so users get tested, not re-taught.
    */
   mode?: "learn" | "review";
+  /** When set with trackJuniorMastery, also writes junior_word_mastery (JuniorVocab hub / SRS). */
+  grade?: number;
+  trackJuniorMastery?: boolean;
 }
 
 interface CardState {
@@ -83,7 +87,9 @@ export default function GuidedSession({
   onExit,
   sessionSize = 8,
   title = "本关通关",
-  mode = "learn"
+  mode = "learn",
+  grade,
+  trackJuniorMastery = false,
 }: Props) {
   const [loading, setLoading] = useState(true);
   const [cards, setCards] = useState<CardState[]>([]);
@@ -173,7 +179,15 @@ export default function GuidedSession({
       source,
       cohortId: cohortCtx.cohortId,
       cohortWordIds: cohortCtx.cohortWordIds,
-    }).catch(() => {});
+    }).catch((e) => console.error("[GuidedSession] recordCohortAttempt", e));
+    if (trackJuniorMastery && grade != null) {
+      void recordJuniorWordMastery({
+        wordId: active.v.id,
+        grade,
+        kind: juniorKindFromQuizKind(kind),
+        isCorrect,
+      });
+    }
     if (isCorrect) {
       awardCoins(2, `vocab_guided_${kind}`).catch(() => {});
       const newMatrix: MasteryMatrix = { ...active.matrix, [kind]: Math.min(4, (active.matrix[kind] ?? 0) + 1) };

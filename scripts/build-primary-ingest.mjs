@@ -1,0 +1,207 @@
+/**
+ * Reads docs/vocab/primary_merged_clean.csv and writes:
+ *   - docs/vocab/primary_ingest_ready.csv
+ *   - docs/vocab/primary_ingest_report.md
+ *   - supabase/migrations/__generated_primary_vocab_inserts.sql
+ *
+ * Run: node scripts/build-primary-ingest.mjs
+ */
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, "..");
+
+/** Must match migration: extensions.uuid_generate_v5(...::uuid, word_id text). */
+export const PRIMARY_VOCAB_WORD_ID_NAMESPACE = "c3bc49a6-5f2d-523e-a89e-0a9b8c7d6e5f";
+
+const SRC = join(ROOT, "docs/vocab/primary_merged_clean.csv");
+const OUT_CSV = join(ROOT, "docs/vocab/primary_ingest_ready.csv");
+const OUT_REPORT = join(ROOT, "docs/vocab/primary_ingest_report.md");
+const OUT_SQL_FRAG = join(
+  ROOT,
+  "supabase/migrations/__generated_primary_vocab_inserts.sql",
+);
+
+function parseRow(line) {
+  const m = line.match(
+    /^(W\d+),(primary_\d+[AB]),(Unit \d+),(.+),(\d+),(\d+)$/,
+  );
+  if (!m) return null;
+  const [, word_id, book, unit, wordAndGloss, printed_page, pdf_page] = m;
+  const ig = wordAndGloss.indexOf(",");
+  if (ig === -1) return null;
+  const word = wordAndGloss.slice(0, ig);
+  const gloss = wordAndGloss.slice(ig + 1);
+  return {
+    word_id,
+    book,
+    unit,
+    word,
+    gloss,
+    printed_page,
+    pdf_page,
+  };
+}
+
+function csvEscape(s) {
+  if (s.includes('"') || s.includes(",") || s.includes("\n")) {
+    return `"${String(s).replace(/"/g, '""')}"`;
+  }
+  return s;
+}
+
+function gradeFromBook(book) {
+  const d = book.match(/primary_(\d+)/);
+  return d ? Number(d[1]) : NaN;
+}
+
+function volumeFromBook(book) {
+  return book.replace(/^primary_/, "");
+}
+
+function sqlStr(s) {
+  return "'" + String(s).replace(/'/g, "''") + "'";
+}
+
+function main() {
+  const raw = readFileSync(SRC, "utf8").replace(/^\uFEFF/, "");
+  const lines = raw.split(/\r?\n/).filter((l) => l.trim());
+  const header = lines[0];
+  if (!header.startsWith("word_id,")) {
+    throw new Error("Unexpected header");
+  }
+  const dataLines = lines.slice(1);
+
+  const rows = [];
+  for (const line of dataLines) {
+    const r = parseRow(line);
+    if (!r) throw new Error(`Parse failed: ${line.slice(0, 120)}`);
+    rows.push(r);
+  }
+
+  const byVol = new Map();
+  const byUnit = new Map();
+  const ids = new Set();
+  let commaInGloss = 0;
+
+  const outLines = [
+    "word_id,word,pos,meaning_cn,stage,grade,volume,unit,source_type,source_page,confidence",
+  ];
+
+  /** Raw rows for INSERT … SELECT uuid_generate_v5(…, word_id). */
+  const valueTuples = [];
+
+  for (const r of rows) {
+    if (ids.has(r.word_id)) throw new Error(`dup word_id ${r.word_id}`);
+    ids.add(r.word_id);
+
+    const grade = gradeFromBook(r.book);
+    if (grade < 3 || grade > 6 || Number.isNaN(grade)) {
+      throw new Error(`bad grade for ${r.word_id} ${r.book}`);
+    }
+    const volume = volumeFromBook(r.book);
+    const meaning_cn = r.gloss.replace(/,/g, "、");
+    if (r.gloss.includes(",")) commaInGloss++;
+
+    byVol.set(volume, (byVol.get(volume) ?? 0) + 1);
+    const uk = `${volume}|${r.unit}`;
+    byUnit.set(uk, (byUnit.get(uk) ?? 0) + 1);
+
+    const source_page = r.printed_page;
+    outLines.push(
+      [
+        r.word_id,
+        r.word,
+        "",
+        meaning_cn,
+        "primary",
+        String(grade),
+        volume,
+        r.unit,
+        "wordlist",
+        source_page,
+        "high",
+      ]
+        .map((x) => csvEscape(x))
+        .join(","),
+    );
+
+    valueTuples.push(
+      `(${sqlStr(r.word_id)}, ${sqlStr(r.word)}, ${sqlStr(meaning_cn)}, ${grade}, ${sqlStr(volume)}, ${sqlStr(r.unit)}, ${sqlStr(source_page)})`,
+    );
+  }
+
+  writeFileSync(OUT_CSV, `${outLines.join("\n")}\n`, "utf8");
+
+  const volSort = [...byVol.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  const unitSort = [...byUnit.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+
+  const report = `# 小学词表灌库前校验（primary_ingest_report）
+
+- **来源**: \`docs/vocab/primary_merged_clean.csv\`
+- **数据行数**: ${rows.length}（预期 846）
+- **word_id 唯一**: 是（${ids.size}）
+
+## 按 volume 分布
+
+${volSort.map(([k, v]) => `- ${k}: ${v}`).join("\n")}
+
+## 按 volume + unit 分布（共 ${unitSort.length} 个组合）
+
+${unitSort.map(([k, v]) => `- ${k}: ${v}`).join("\n")}
+
+## 字段完整性
+
+- word / meaning_cn / grade / volume / unit / source_type / source_page / confidence 均有值
+- pos 留空（无来源）
+- 释义中原含英文逗号 \`,\` 的行数: **${commaInGloss}**（已替换为中文顿号 \`、\` 写入 meaning_cn）
+
+## UUID v5
+
+- 命名空间（与 migration 一致）: \`${PRIMARY_VOCAB_WORD_ID_NAMESPACE}\`
+- 名称: 业务键 \`word_id\`（如 W0001）
+
+`;
+
+  writeFileSync(OUT_REPORT, report, "utf8");
+
+  const fragDir = dirname(OUT_SQL_FRAG);
+  if (!existsSync(fragDir)) mkdirSync(fragDir, { recursive: true });
+
+  const frag = `-- GENERATED by scripts/build-primary-ingest.mjs — do not edit by hand
+INSERT INTO public.primary_vocab (
+  id, word, pos, meaning_cn, example_en, example_cn, theme, tip, grade, ipa,
+  word_id, volume, unit, source_type, source_page, confidence, stage
+)
+SELECT
+  extensions.uuid_generate_v5('${PRIMARY_VOCAB_WORD_ID_NAMESPACE}'::uuid, v.word_id),
+  v.word,
+  NULL,
+  v.meaning_cn,
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  v.grade,
+  NULL,
+  v.word_id,
+  v.volume,
+  v.unit,
+  'wordlist',
+  v.source_page,
+  'high',
+  'primary'
+FROM (VALUES
+${valueTuples.join(",\n")}
+) AS v(word_id, word, meaning_cn, grade, volume, unit, source_page)
+;
+`;
+
+  writeFileSync(OUT_SQL_FRAG, frag, "utf8");
+
+  console.log("Wrote", OUT_CSV, OUT_REPORT, OUT_SQL_FRAG);
+}
+
+main();

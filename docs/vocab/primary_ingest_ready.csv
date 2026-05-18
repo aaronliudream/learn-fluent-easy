@@ -1,0 +1,847 @@
+word_id,word,pos,meaning_cn,stage,grade,volume,unit,source_type,source_page,confidence
+W0001,ruler,,尺子,primary,3,3A,Unit 1,wordlist,5,high
+W0002,pencil,,铅笔,primary,3,3A,Unit 1,wordlist,5,high
+W0003,eraser,,橡皮,primary,3,3A,Unit 1,wordlist,5,high
+W0004,crayon,,蜡笔,primary,3,3A,Unit 1,wordlist,5,high
+W0005,bag,,包,primary,3,3A,Unit 1,wordlist,8,high
+W0006,pen,,钢笔,primary,3,3A,Unit 1,wordlist,8,high
+W0007,pencil box,,铅笔盒,primary,3,3A,Unit 1,wordlist,8,high
+W0008,book,,书,primary,3,3A,Unit 1,wordlist,8,high
+W0009,no,,不,primary,3,3A,Unit 1,wordlist,8,high
+W0010,your,,你（们）的,primary,3,3A,Unit 1,wordlist,8,high
+W0011,red,,红色；红色的,primary,3,3A,Unit 2,wordlist,15,high
+W0012,green,,绿色；绿色的,primary,3,3A,Unit 2,wordlist,15,high
+W0013,yellow,,黄色；黄色的,primary,3,3A,Unit 2,wordlist,15,high
+W0014,blue,,蓝色；蓝色的,primary,3,3A,Unit 2,wordlist,15,high
+W0015,black,,黑色；黑色的,primary,3,3A,Unit 2,wordlist,18,high
+W0016,brown,,棕色；棕色的,primary,3,3A,Unit 2,wordlist,18,high
+W0017,white,,白色；白色的,primary,3,3A,Unit 2,wordlist,18,high
+W0018,orange,,橙色；橙色的,primary,3,3A,Unit 2,wordlist,18,high
+W0019,OK,,好；行,primary,3,3A,Unit 2,wordlist,18,high
+W0020,mum,,妈妈 (美式英语：mom ),primary,3,3A,Unit 2,wordlist,17,high
+W0021,face,,脸,primary,3,3A,Unit 3,wordlist,25,high
+W0022,ear,,耳朵,primary,3,3A,Unit 3,wordlist,25,high
+W0023,eye,,眼睛,primary,3,3A,Unit 3,wordlist,25,high
+W0024,nose,,鼻子,primary,3,3A,Unit 3,wordlist,25,high
+W0025,mouth,,嘴,primary,3,3A,Unit 3,wordlist,25,high
+W0026,arm,,胳膊,primary,3,3A,Unit 3,wordlist,28,high
+W0027,hand,,手,primary,3,3A,Unit 3,wordlist,28,high
+W0028,head,,头,primary,3,3A,Unit 3,wordlist,28,high
+W0029,body,,身体,primary,3,3A,Unit 3,wordlist,28,high
+W0030,leg,,腿,primary,3,3A,Unit 3,wordlist,28,high
+W0031,foot,,脚,primary,3,3A,Unit 3,wordlist,28,high
+W0032,school,,学校,primary,3,3A,Unit 3,wordlist,24,high
+W0033,duck,,鸭子,primary,3,3A,Unit 4,wordlist,39,high
+W0034,pig,,猪,primary,3,3A,Unit 4,wordlist,39,high
+W0035,cat,,猫,primary,3,3A,Unit 4,wordlist,39,high
+W0036,bear,,熊,primary,3,3A,Unit 4,wordlist,39,high
+W0037,dog,,狗,primary,3,3A,Unit 4,wordlist,39,high
+W0038,elephant,,大象,primary,3,3A,Unit 4,wordlist,42,high
+W0039,monkey,,猴子,primary,3,3A,Unit 4,wordlist,42,high
+W0040,bird,,鸟,primary,3,3A,Unit 4,wordlist,42,high
+W0041,tiger,,老虎,primary,3,3A,Unit 4,wordlist,42,high
+W0042,panda,,大熊猫,primary,3,3A,Unit 4,wordlist,42,high
+W0043,zoo,,动物园,primary,3,3A,Unit 4,wordlist,42,high
+W0044,funny,,滑稽的；好笑的,primary,3,3A,Unit 4,wordlist,41,high
+W0045,bread,,面包,primary,3,3A,Unit 5,wordlist,49,high
+W0046,juice,,果汁,primary,3,3A,Unit 5,wordlist,49,high
+W0047,egg,,蛋,primary,3,3A,Unit 5,wordlist,49,high
+W0048,milk,,牛奶,primary,3,3A,Unit 5,wordlist,49,high
+W0049,water,,水,primary,3,3A,Unit 5,wordlist,52,high
+W0050,cake,,蛋糕,primary,3,3A,Unit 5,wordlist,52,high
+W0051,fish,,鱼肉；鱼,primary,3,3A,Unit 5,wordlist,52,high
+W0052,rice,,米饭,primary,3,3A,Unit 5,wordlist,52,high
+W0053,one,,一,primary,3,3A,Unit 6,wordlist,59,high
+W0054,two,,二,primary,3,3A,Unit 6,wordlist,59,high
+W0055,three,,三,primary,3,3A,Unit 6,wordlist,59,high
+W0056,four,,四,primary,3,3A,Unit 6,wordlist,59,high
+W0057,five,,五,primary,3,3A,Unit 6,wordlist,59,high
+W0058,six,,六,primary,3,3A,Unit 6,wordlist,62,high
+W0059,seven,,七,primary,3,3A,Unit 6,wordlist,62,high
+W0060,eight,,八,primary,3,3A,Unit 6,wordlist,62,high
+W0061,nine,,九,primary,3,3A,Unit 6,wordlist,62,high
+W0062,ten,,十,primary,3,3A,Unit 6,wordlist,62,high
+W0063,brother,,兄；弟,primary,3,3A,Unit 6,wordlist,61,high
+W0064,plate,,盘子,primary,3,3A,Unit 6,wordlist,58,high
+W0065,UK,,英国,primary,3,3B,Unit 1,wordlist,5,high
+W0066,Canada,,加拿大,primary,3,3B,Unit 1,wordlist,5,high
+W0067,USA,,美国,primary,3,3B,Unit 1,wordlist,5,high
+W0068,China,,中国,primary,3,3B,Unit 1,wordlist,5,high
+W0069,she,,她,primary,3,3B,Unit 1,wordlist,8,high
+W0070,student,,学生,primary,3,3B,Unit 1,wordlist,8,high
+W0071,pupil,,学生； （尤指）小学生,primary,3,3B,Unit 1,wordlist,8,high
+W0072,he,,他,primary,3,3B,Unit 1,wordlist,8,high
+W0073,teacher,,教师,primary,3,3B,Unit 1,wordlist,8,high
+W0074,boy,,男孩,primary,3,3B,Unit 1,wordlist,4,high
+W0075,and,,和；与,primary,3,3B,Unit 1,wordlist,4,high
+W0076,girl,,女孩,primary,3,3B,Unit 1,wordlist,4,high
+W0077,new,,新的,primary,3,3B,Unit 1,wordlist,4,high
+W0078,friend,,朋友,primary,3,3B,Unit 1,wordlist,4,high
+W0079,today,,今天,primary,3,3B,Unit 1,wordlist,4,high
+W0080,father,,父亲；爸爸,primary,3,3B,Unit 2,wordlist,15,high
+W0081,dad,,（口语）爸爸；爹爹,primary,3,3B,Unit 2,wordlist,15,high
+W0082,man,,男人,primary,3,3B,Unit 2,wordlist,15,high
+W0083,woman,,女人,primary,3,3B,Unit 2,wordlist,15,high
+W0084,mother,,母亲；妈妈,primary,3,3B,Unit 2,wordlist,15,high
+W0085,sister,,姐；妹,primary,3,3B,Unit 2,wordlist,18,high
+W0086,brother,,兄；弟,primary,3,3B,Unit 2,wordlist,18,high
+W0087,grandmother,,（外）祖母,primary,3,3B,Unit 2,wordlist,18,high
+W0088,grandma,,（口语）（外）祖母,primary,3,3B,Unit 2,wordlist,18,high
+W0089,grandfather,,（外）祖父,primary,3,3B,Unit 2,wordlist,18,high
+W0090,grandpa,,（口语）（外）祖父,primary,3,3B,Unit 2,wordlist,18,high
+W0091,family,,家；家庭,primary,3,3B,Unit 2,wordlist,18,high
+W0092,thin,,瘦的,primary,3,3B,Unit 3,wordlist,25,high
+W0093,fat,,胖的；肥的,primary,3,3B,Unit 3,wordlist,25,high
+W0094,tall,,高的,primary,3,3B,Unit 3,wordlist,25,high
+W0095,short,,矮的；短的,primary,3,3B,Unit 3,wordlist,25,high
+W0096,long,,长的,primary,3,3B,Unit 3,wordlist,28,high
+W0097,small,,小的,primary,3,3B,Unit 3,wordlist,28,high
+W0098,big,,大的,primary,3,3B,Unit 3,wordlist,28,high
+W0099,giraffe,,长颈鹿,primary,3,3B,Unit 3,wordlist,24,high
+W0100,so,,这么；那么,primary,3,3B,Unit 3,wordlist,24,high
+W0101,children,,（child 的复数）儿童,primary,3,3B,Unit 3,wordlist,27,high
+W0102,tail,,尾巴,primary,3,3B,Unit 3,wordlist,27,high
+W0103,on,,在⋯⋯上,primary,3,3B,Unit 4,wordlist,39,high
+W0104,in,,在⋯⋯里,primary,3,3B,Unit 4,wordlist,39,high
+W0105,under,,在⋯⋯下面,primary,3,3B,Unit 4,wordlist,39,high
+W0106,chair,,椅子,primary,3,3B,Unit 4,wordlist,39,high
+W0107,desk,,书桌,primary,3,3B,Unit 4,wordlist,39,high
+W0108,cap,,帽子,primary,3,3B,Unit 4,wordlist,42,high
+W0109,ball,,球,primary,3,3B,Unit 4,wordlist,42,high
+W0110,car,,小汽车,primary,3,3B,Unit 4,wordlist,42,high
+W0111,boat,,小船,primary,3,3B,Unit 4,wordlist,42,high
+W0112,map,,地图,primary,3,3B,Unit 4,wordlist,42,high
+W0113,toy,,玩具,primary,3,3B,Unit 4,wordlist,41,high
+W0114,box,,盒；箱,primary,3,3B,Unit 4,wordlist,41,high
+W0115,pear,,梨,primary,3,3B,Unit 5,wordlist,49,high
+W0116,apple,,苹果,primary,3,3B,Unit 5,wordlist,49,high
+W0117,orange,,橙子,primary,3,3B,Unit 5,wordlist,49,high
+W0118,banana,,香蕉,primary,3,3B,Unit 5,wordlist,49,high
+W0119,watermelon,,西瓜,primary,3,3B,Unit 5,wordlist,52,high
+W0120,strawberry,,草莓,primary,3,3B,Unit 5,wordlist,52,high
+W0121,grape,,葡萄,primary,3,3B,Unit 5,wordlist,52,high
+W0122,buy,,买,primary,3,3B,Unit 5,wordlist,48,high
+W0123,fruit,,水果,primary,3,3B,Unit 5,wordlist,48,high
+W0124,eleven,,十一,primary,3,3B,Unit 6,wordlist,59,high
+W0125,twelve,,十二,primary,3,3B,Unit 6,wordlist,59,high
+W0126,thirteen,,十三,primary,3,3B,Unit 6,wordlist,59,high
+W0127,fourteen,,十四,primary,3,3B,Unit 6,wordlist,59,high
+W0128,fifteen,,十五,primary,3,3B,Unit 6,wordlist,59,high
+W0129,sixteen,,十六,primary,3,3B,Unit 6,wordlist,62,high
+W0130,seventeen,,十七,primary,3,3B,Unit 6,wordlist,62,high
+W0131,eighteen,,十八,primary,3,3B,Unit 6,wordlist,62,high
+W0132,nineteen,,十九,primary,3,3B,Unit 6,wordlist,62,high
+W0133,twenty,,二十,primary,3,3B,Unit 6,wordlist,62,high
+W0134,kite,,风筝,primary,3,3B,Unit 6,wordlist,58,high
+W0135,beautiful,,美丽的,primary,3,3B,Unit 6,wordlist,58,high
+W0136,classroom,,教室,primary,4,4A,Unit 1,wordlist,5,high
+W0137,window,,窗户,primary,4,4A,Unit 1,wordlist,5,high
+W0138,blackboard,,黑板,primary,4,4A,Unit 1,wordlist,5,high
+W0139,light,,电灯,primary,4,4A,Unit 1,wordlist,5,high
+W0140,picture,,图画,primary,4,4A,Unit 1,wordlist,5,high
+W0141,door,,门,primary,4,4A,Unit 1,wordlist,5,high
+W0142,teacher's desk,,讲台,primary,4,4A,Unit 1,wordlist,8,high
+W0143,computer,,计算机,primary,4,4A,Unit 1,wordlist,8,high
+W0144,fan,,风扇,primary,4,4A,Unit 1,wordlist,8,high
+W0145,wall,,墙壁,primary,4,4A,Unit 1,wordlist,8,high
+W0146,floor,,地板,primary,4,4A,Unit 1,wordlist,8,high
+W0147,really,,（表示兴趣或惊讶） 真的,primary,4,4A,Unit 1,wordlist,4,high
+W0148,near,,距离近,primary,4,4A,Unit 1,wordlist,4,high
+W0149,TV,,电视,primary,4,4A,Unit 1,wordlist,5,high
+W0150,clean,,打扫,primary,4,4A,Unit 1,wordlist,7,high
+W0151,help,,帮助,primary,4,4A,Unit 1,wordlist,7,high
+W0152,schoolbag,,书包,primary,4,4A,Unit 2,wordlist,15,high
+W0153,maths book,,数学书,primary,4,4A,Unit 2,wordlist,15,high
+W0154,English book,,英语书,primary,4,4A,Unit 2,wordlist,15,high
+W0155,Chinese book,,语文书,primary,4,4A,Unit 2,wordlist,15,high
+W0156,storybook,,故事书,primary,4,4A,Unit 2,wordlist,15,high
+W0157,candy,,糖果,primary,4,4A,Unit 2,wordlist,18,high
+W0158,notebook,,笔记本,primary,4,4A,Unit 2,wordlist,18,high
+W0159,toy,,玩具,primary,4,4A,Unit 2,wordlist,18,high
+W0160,key,,钥匙,primary,4,4A,Unit 2,wordlist,18,high
+W0161,wow,,哇；呀,primary,4,4A,Unit 2,wordlist,14,high
+W0162,lost,,丢失 （lose的过去式形式）,primary,4,4A,Unit 2,wordlist,17,high
+W0163,so much,,非常地,primary,4,4A,Unit 2,wordlist,17,high
+W0164,cute,,可爱的,primary,4,4A,Unit 2,wordlist,19,high
+W0165,strong,,强壮的,primary,4,4A,Unit 3,wordlist,25,high
+W0166,friendly,,友好的,primary,4,4A,Unit 3,wordlist,25,high
+W0167,quiet,,安静的,primary,4,4A,Unit 3,wordlist,25,high
+W0168,hair,,头发,primary,4,4A,Unit 3,wordlist,28,high
+W0169,shoe,,鞋,primary,4,4A,Unit 3,wordlist,28,high
+W0170,glasses,,眼镜,primary,4,4A,Unit 3,wordlist,28,high
+W0171,his,,他的,primary,4,4A,Unit 3,wordlist,24,high
+W0172,or,,或者,primary,4,4A,Unit 3,wordlist,27,high
+W0173,right,,正确的; 对的,primary,4,4A,Unit 3,wordlist,27,high
+W0174,hat,,常指带檐的) 帽子,primary,4,4A,Unit 3,wordlist,29,high
+W0175,her,,她的,primary,4,4A,Unit 3,wordlist,29,high
+W0176,bedroom,,卧室,primary,4,4A,Unit 4,wordlist,39,high
+W0177,living room,,客厅；起居室,primary,4,4A,Unit 4,wordlist,39,high
+W0178,study,,书房,primary,4,4A,Unit 4,wordlist,39,high
+W0179,kitchen,,厨房,primary,4,4A,Unit 4,wordlist,39,high
+W0180,bathroom,,浴室； 洗手间,primary,4,4A,Unit 4,wordlist,39,high
+W0181,bed,,床,primary,4,4A,Unit 4,wordlist,42,high
+W0182,phone,,电话,primary,4,4A,Unit 4,wordlist,42,high
+W0183,table,,桌子,primary,4,4A,Unit 4,wordlist,42,high
+W0184,sofa,,长沙发,primary,4,4A,Unit 4,wordlist,42,high
+W0185,fridge,,冰箱,primary,4,4A,Unit 4,wordlist,42,high
+W0186,find,,找到,primary,4,4A,Unit 4,wordlist,43,high
+W0187,them,,他（她、它）们,primary,4,4A,Unit 4,wordlist,43,high
+W0188,beef,,牛肉,primary,4,4A,Unit 5,wordlist,49,high
+W0189,chicken,,鸡肉,primary,4,4A,Unit 5,wordlist,49,high
+W0190,noodles,,面条,primary,4,4A,Unit 5,wordlist,49,high
+W0191,soup,,汤,primary,4,4A,Unit 5,wordlist,49,high
+W0192,vegetable,,蔬菜,primary,4,4A,Unit 5,wordlist,49,high
+W0193,chopsticks,,筷子,primary,4,4A,Unit 5,wordlist,52,high
+W0194,bowl,,碗,primary,4,4A,Unit 5,wordlist,52,high
+W0195,fork,,餐叉,primary,4,4A,Unit 5,wordlist,52,high
+W0196,knife,,刀,primary,4,4A,Unit 5,wordlist,52,high
+W0197,spoon,,勺,primary,4,4A,Unit 5,wordlist,52,high
+W0198,dinner,,（中午或晚上吃的） 正餐,primary,4,4A,Unit 5,wordlist,48,high
+W0199,ready,,准备好,primary,4,4A,Unit 5,wordlist,48,high
+W0200,help yourself,,为（自己）取用,primary,4,4A,Unit 5,wordlist,51,high
+W0201,pass,,给；递,primary,4,4A,Unit 5,wordlist,52,high
+W0202,try,,试；尝试,primary,4,4A,Unit 5,wordlist,53,high
+W0203,parents,,父母,primary,4,4A,Unit 6,wordlist,59,high
+W0204,cousin,,同辈表亲 （或堂亲）,primary,4,4A,Unit 6,wordlist,59,high
+W0205,uncle,,舅父；叔父；伯父； 姑父；姨夫,primary,4,4A,Unit 6,wordlist,59,high
+W0206,aunt,,姑母；姨母,primary,4,4A,Unit 6,wordlist,59,high
+W0207,baby brother,,婴儿小弟弟,primary,4,4A,Unit 6,wordlist,59,high
+W0208,doctor,,医生,primary,4,4A,Unit 6,wordlist,62,high
+W0209,cook,,厨师,primary,4,4A,Unit 6,wordlist,62,high
+W0210,driver,,司机,primary,4,4A,Unit 6,wordlist,62,high
+W0211,farmer,,农民,primary,4,4A,Unit 6,wordlist,62,high
+W0212,nurse,,护士,primary,4,4A,Unit 6,wordlist,62,high
+W0213,people,,人们,primary,4,4A,Unit 6,wordlist,58,high
+W0214,but,,但是,primary,4,4A,Unit 6,wordlist,58,high
+W0215,little,,小的,primary,4,4A,Unit 6,wordlist,58,high
+W0216,puppy,,小狗,primary,4,4A,Unit 6,wordlist,58,high
+W0217,football player,,足球运动员,primary,4,4A,Unit 6,wordlist,61,high
+W0218,job,,工作,primary,4,4A,Unit 6,wordlist,62,high
+W0219,basketball,,篮球,primary,4,4A,Unit 6,wordlist,63,high
+W0220,first floor,,一楼,primary,4,4B,Unit 1,wordlist,5,high
+W0221,second floor,,二楼,primary,4,4B,Unit 1,wordlist,5,high
+W0222,teachers‛ office,,教师办公室,primary,4,4B,Unit 1,wordlist,5,high
+W0223,library,,图书馆,primary,4,4B,Unit 1,wordlist,5,high
+W0224,playground,,操场,primary,4,4B,Unit 1,wordlist,8,high
+W0225,computer room,,计算机房,primary,4,4B,Unit 1,wordlist,8,high
+W0226,art room,,美术教室,primary,4,4B,Unit 1,wordlist,8,high
+W0227,music room,,音乐教室,primary,4,4B,Unit 1,wordlist,8,high
+W0228,next to,,紧邻；在⋯⋯近旁,primary,4,4B,Unit 1,wordlist,4,high
+W0229,homework,,作业,primary,4,4B,Unit 1,wordlist,4,high
+W0230,class,,班；班级,primary,4,4B,Unit 1,wordlist,7,high
+W0231,forty,,四十,primary,4,4B,Unit 1,wordlist,7,high
+W0232,way,,方向,primary,4,4B,Unit 1,wordlist,7,high
+W0233,breakfast,,早餐；早饭,primary,4,4B,Unit 2,wordlist,15,high
+W0234,English class,,英语课,primary,4,4B,Unit 2,wordlist,15,high
+W0235,lunch,,午餐；午饭,primary,4,4B,Unit 2,wordlist,15,high
+W0236,music class,,音乐课,primary,4,4B,Unit 2,wordlist,15,high
+W0237,PE class,,体育课,primary,4,4B,Unit 2,wordlist,15,high
+W0238,dinner,,（中午或晚上吃的）正餐,primary,4,4B,Unit 2,wordlist,15,high
+W0239,get up,,起床,primary,4,4B,Unit 2,wordlist,18,high
+W0240,go to school,,去上学,primary,4,4B,Unit 2,wordlist,18,high
+W0241,go home,,回家,primary,4,4B,Unit 2,wordlist,18,high
+W0242,go to bed,,上床睡觉,primary,4,4B,Unit 2,wordlist,18,high
+W0243,over,,结束,primary,4,4B,Unit 2,wordlist,14,high
+W0244,now,,现在；目前,primary,4,4B,Unit 2,wordlist,14,high
+W0245,o’clock,,（表示整点） ⋯⋯点钟,primary,4,4B,Unit 2,wordlist,14,high
+W0246,kid,,小孩,primary,4,4B,Unit 2,wordlist,14,high
+W0247,thirty,,三十,primary,4,4B,Unit 2,wordlist,17,high
+W0248,hurry up,,快点,primary,4,4B,Unit 2,wordlist,17,high
+W0249,come on,,快；加油,primary,4,4B,Unit 2,wordlist,19,high
+W0250,just a minute,,稍等一会儿,primary,4,4B,Unit 2,wordlist,19,high
+W0251,cold,,寒冷的；冷的,primary,4,4B,Unit 3,wordlist,25,high
+W0252,cool,,凉的；凉爽的,primary,4,4B,Unit 3,wordlist,25,high
+W0253,warm,,温暖的；暖和的,primary,4,4B,Unit 3,wordlist,25,high
+W0254,hot,,热的; 烫的,primary,4,4B,Unit 3,wordlist,25,high
+W0255,sunny,,阳光充足的,primary,4,4B,Unit 3,wordlist,28,high
+W0256,windy,,多风的；风大的,primary,4,4B,Unit 3,wordlist,28,high
+W0257,cloudy,,阴天的；多云的,primary,4,4B,Unit 3,wordlist,28,high
+W0258,snowy,,下雪（多）的,primary,4,4B,Unit 3,wordlist,28,high
+W0259,rainy,,阴雨的；多雨的,primary,4,4B,Unit 3,wordlist,28,high
+W0260,outside,,在户外,primary,4,4B,Unit 3,wordlist,24,high
+W0261,be careful,,小心,primary,4,4B,Unit 3,wordlist,24,high
+W0262,weather,,天气,primary,4,4B,Unit 3,wordlist,25,high
+W0263,New York,,纽约,primary,4,4B,Unit 3,wordlist,27,high
+W0264,how about … ⋯⋯,,怎么样？⋯⋯情况如何？,primary,4,4B,Unit 3,wordlist,27,high
+W0265,degree,,度；度数,primary,4,4B,Unit 3,wordlist,27,high
+W0266,world,,世界,primary,4,4B,Unit 3,wordlist,28,high
+W0267,London,,伦敦,primary,4,4B,Unit 3,wordlist,28,high
+W0268,Moscow,,莫斯科,primary,4,4B,Unit 3,wordlist,28,high
+W0269,Singapore,,新加坡（市）,primary,4,4B,Unit 3,wordlist,28,high
+W0270,Sydney,,悉尼,primary,4,4B,Unit 3,wordlist,28,high
+W0271,fly,,放（风筝等）,primary,4,4B,Unit 3,wordlist,29,high
+W0272,love,,（写信结尾的热情问候语） 爱你的,primary,4,4B,Unit 3,wordlist,29,high
+W0273,tomato,,西红柿,primary,4,4B,Unit 4,wordlist,39,high
+W0274,potato,,马铃薯；土豆,primary,4,4B,Unit 4,wordlist,39,high
+W0275,green beans,,豆角；四季豆,primary,4,4B,Unit 4,wordlist,39,high
+W0276,carrot,,胡萝卜,primary,4,4B,Unit 4,wordlist,39,high
+W0277,horse,,马,primary,4,4B,Unit 4,wordlist,42,high
+W0278,cow,,母牛；奶牛,primary,4,4B,Unit 4,wordlist,42,high
+W0279,sheep,,羊；绵羊,primary,4,4B,Unit 4,wordlist,42,high
+W0280,hen,,母鸡,primary,4,4B,Unit 4,wordlist,42,high
+W0281,these,,（this 的复数形式） 这些,primary,4,4B,Unit 4,wordlist,38,high
+W0282,yum,,（表示味道或气味非常好）,primary,4,4B,Unit 4,wordlist,38,high
+W0283,animal,,兽；动物,primary,4,4B,Unit 4,wordlist,41,high
+W0284,those,,（that 的复数形式）,primary,4,4B,Unit 4,wordlist,41,high
+W0285,garden,,花园；菜园,primary,4,4B,Unit 4,wordlist,43,high
+W0286,farm,,农场,primary,4,4B,Unit 4,wordlist,43,high
+W0287,goat,,山羊,primary,4,4B,Unit 4,wordlist,43,high
+W0288,eat,,吃,primary,4,4B,Unit 4,wordlist,43,high
+W0289,clothes,,衣服；服装,primary,4,4B,Unit 5,wordlist,49,high
+W0290,pants,,裤子,primary,4,4B,Unit 5,wordlist,49,high
+W0291,hat,,（常指带檐的）帽子,primary,4,4B,Unit 5,wordlist,49,high
+W0292,dress,,连衣裙,primary,4,4B,Unit 5,wordlist,49,high
+W0293,skirt,,女裙,primary,4,4B,Unit 5,wordlist,49,high
+W0294,coat,,外衣；大衣,primary,4,4B,Unit 5,wordlist,52,high
+W0295,sweater,,毛衣,primary,4,4B,Unit 5,wordlist,52,high
+W0296,sock,,短袜,primary,4,4B,Unit 5,wordlist,52,high
+W0297,shorts,,短裤,primary,4,4B,Unit 5,wordlist,52,high
+W0298,jacket,,夹克衫,primary,4,4B,Unit 5,wordlist,52,high
+W0299,shirt,,（尤指男士）衬衫,primary,4,4B,Unit 5,wordlist,52,high
+W0300,yours,,你的；你们的,primary,4,4B,Unit 5,wordlist,48,high
+W0301,whose,,谁的,primary,4,4B,Unit 5,wordlist,51,high
+W0302,mine,,我的,primary,4,4B,Unit 5,wordlist,51,high
+W0303,pack,,收拾（行李）,primary,4,4B,Unit 5,wordlist,53,high
+W0304,wait,,等待,primary,4,4B,Unit 5,wordlist,53,high
+W0305,glove,,（分手指的）手套,primary,4,4B,Unit 6,wordlist,59,high
+W0306,scarf,,围巾；披巾,primary,4,4B,Unit 6,wordlist,59,high
+W0307,umbrella,,伞；雨伞,primary,4,4B,Unit 6,wordlist,59,high
+W0308,sunglasses,,太阳镜,primary,4,4B,Unit 6,wordlist,59,high
+W0309,pretty,,美观的；精致的,primary,4,4B,Unit 6,wordlist,62,high
+W0310,expensive,,昂贵的； 花钱多的,primary,4,4B,Unit 6,wordlist,62,high
+W0311,cheap,,花钱少的；便宜的,primary,4,4B,Unit 6,wordlist,62,high
+W0312,nice,,好的,primary,4,4B,Unit 6,wordlist,62,high
+W0313,try on,,试穿,primary,4,4B,Unit 6,wordlist,58,high
+W0314,size,,尺码；号,primary,4,4B,Unit 6,wordlist,58,high
+W0315,of course,,当然,primary,4,4B,Unit 6,wordlist,58,high
+W0316,too,,太；过于,primary,4,4B,Unit 6,wordlist,58,high
+W0317,just,,正好；恰好,primary,4,4B,Unit 6,wordlist,58,high
+W0318,how much,,多少钱,primary,4,4B,Unit 6,wordlist,61,high
+W0319,eighty,,八十,primary,4,4B,Unit 6,wordlist,61,high
+W0320,dollar,,元 （美国、加拿大等国的货币单位）,primary,4,4B,Unit 6,wordlist,61,high
+W0321,sale,,特价销售; 大减价,primary,4,4B,Unit 6,wordlist,63,high
+W0322,more,,更多的,primary,4,4B,Unit 6,wordlist,63,high
+W0323,us,,我们,primary,4,4B,Unit 6,wordlist,63,high
+W0324,old,,老的；年纪大的,primary,5,5A,Unit 1,wordlist,5,high
+W0325,young,,年轻的；岁数不大的,primary,5,5A,Unit 1,wordlist,5,high
+W0326,funny,,滑稽的；可笑的,primary,5,5A,Unit 1,wordlist,5,high
+W0327,kind,,体贴的；慈祥的； 宽容的,primary,5,5A,Unit 1,wordlist,5,high
+W0328,strict,,要求严格的；严厉的,primary,5,5A,Unit 1,wordlist,5,high
+W0329,polite,,有礼貌的；客气的,primary,5,5A,Unit 1,wordlist,8,high
+W0330,hard-working,,工作努力的；辛勤的,primary,5,5A,Unit 1,wordlist,8,high
+W0331,helpful,,有用的； 愿意帮忙的,primary,5,5A,Unit 1,wordlist,8,high
+W0332,clever,,聪明的；聪颖的,primary,5,5A,Unit 1,wordlist,8,high
+W0333,shy,,羞怯的；腼腆的；怕生的,primary,5,5A,Unit 1,wordlist,8,high
+W0334,know,,知道；了解,primary,5,5A,Unit 1,wordlist,4,high
+W0335,our,,我们的,primary,5,5A,Unit 1,wordlist,4,high
+W0336,Ms,,（用于女子的姓氏或姓 名前，不指明婚否）女士,primary,5,5A,Unit 1,wordlist,7,high
+W0337,will,,（谈及将来）将要,primary,5,5A,Unit 1,wordlist,7,high
+W0338,sometimes,,有时； 间或,primary,5,5A,Unit 1,wordlist,7,high
+W0339,robot,,机器人,primary,5,5A,Unit 1,wordlist,9,high
+W0340,him,,（用作宾语或表语）他,primary,5,5A,Unit 1,wordlist,9,high
+W0341,speak,,会说；会讲（某种 语言）；用（某种语言）说话,primary,5,5A,Unit 1,wordlist,9,high
+W0342,finish,,完成；做好,primary,5,5A,Unit 1,wordlist,9,high
+W0343,Monday,,星期一,primary,5,5A,Unit 2,wordlist,15,high
+W0344,Tuesday,,星期二,primary,5,5A,Unit 2,wordlist,15,high
+W0345,Wednesday,,星期三,primary,5,5A,Unit 2,wordlist,15,high
+W0346,Thursday,,星期四,primary,5,5A,Unit 2,wordlist,15,high
+W0347,Friday,,星期五,primary,5,5A,Unit 2,wordlist,15,high
+W0348,Saturday,,星期六,primary,5,5A,Unit 2,wordlist,15,high
+W0349,Sunday,,星期日,primary,5,5A,Unit 2,wordlist,15,high
+W0350,weekend,,周末,primary,5,5A,Unit 2,wordlist,15,high
+W0351,wash,,洗,primary,5,5A,Unit 2,wordlist,18,high
+W0352,wash my clothes,,洗我的衣服,primary,5,5A,Unit 2,wordlist,18,high
+W0353,watch,,看,primary,5,5A,Unit 2,wordlist,18,high
+W0354,watch TV,,看电视,primary,5,5A,Unit 2,wordlist,18,high
+W0355,do,,做；干,primary,5,5A,Unit 2,wordlist,18,high
+W0356,do homework,,做作业,primary,5,5A,Unit 2,wordlist,18,high
+W0357,read,,看；读,primary,5,5A,Unit 2,wordlist,18,high
+W0358,read books,,看书,primary,5,5A,Unit 2,wordlist,18,high
+W0359,play,,踢；玩；参加（体育 运动）,primary,5,5A,Unit 2,wordlist,18,high
+W0360,play football,,踢足球,primary,5,5A,Unit 2,wordlist,18,high
+W0361,cooking,,烹饪；烹调,primary,5,5A,Unit 2,wordlist,14,high
+W0362,often,,时常；常常,primary,5,5A,Unit 2,wordlist,17,high
+W0363,park,,公园,primary,5,5A,Unit 2,wordlist,17,high
+W0364,tired,,疲倦的,primary,5,5A,Unit 2,wordlist,19,high
+W0365,sport,,体育运动,primary,5,5A,Unit 2,wordlist,19,high
+W0366,play sports,,做体育运动,primary,5,5A,Unit 2,wordlist,19,high
+W0367,should,,（常用于纠正别 人）应该，应当,primary,5,5A,Unit 2,wordlist,19,high
+W0368,every,,每一个，每个,primary,5,5A,Unit 2,wordlist,19,high
+W0369,day,,一天；一日,primary,5,5A,Unit 2,wordlist,19,high
+W0370,schedule,,工作计划； 日程安排,primary,5,5A,Unit 2,wordlist,19,high
+W0371,sandwich,,三明治,primary,5,5A,Unit 3,wordlist,25,high
+W0372,salad,,蔬菜沙拉；混合沙 拉,primary,5,5A,Unit 3,wordlist,25,high
+W0373,hamburger,,汉堡包,primary,5,5A,Unit 3,wordlist,25,high
+W0374,ice cream,,冰激凌,primary,5,5A,Unit 3,wordlist,25,high
+W0375,tea,,茶；茶水,primary,5,5A,Unit 3,wordlist,25,high
+W0376,fresh,,新鲜的；刚摘的,primary,5,5A,Unit 3,wordlist,28,high
+W0377,healthy,,健康的,primary,5,5A,Unit 3,wordlist,28,high
+W0378,delicious,,美味的；可口的,primary,5,5A,Unit 3,wordlist,28,high
+W0379,hot,,辣的；辛辣的,primary,5,5A,Unit 3,wordlist,28,high
+W0380,sweet,,含糖的；甜的,primary,5,5A,Unit 3,wordlist,28,high
+W0381,drink,,喝；饮,primary,5,5A,Unit 3,wordlist,24,high
+W0382,thirsty,,渴的；口渴的,primary,5,5A,Unit 3,wordlist,24,high
+W0383,favourite,,特别喜爱的,primary,5,5A,Unit 3,wordlist,27,high
+W0384,food,,食物,primary,5,5A,Unit 3,wordlist,27,high
+W0385,Dear,,（用于信函抬头的名字 或头衔前）亲爱的,primary,5,5A,Unit 3,wordlist,29,high
+W0386,onion,,洋葱；葱头,primary,5,5A,Unit 3,wordlist,29,high
+W0387,sing,,唱；唱歌,primary,5,5A,Unit 4,wordlist,39,high
+W0388,song,,歌曲,primary,5,5A,Unit 4,wordlist,39,high
+W0389,sing English songs,,唱英文歌曲,primary,5,5A,Unit 4,wordlist,39,high
+W0390,play the pipa,,弹琵琶,primary,5,5A,Unit 4,wordlist,39,high
+W0391,kung fu,,功夫；武术,primary,5,5A,Unit 4,wordlist,39,high
+W0392,do kung fu,,练武术,primary,5,5A,Unit 4,wordlist,39,high
+W0393,dance,,跳舞,primary,5,5A,Unit 4,wordlist,39,high
+W0394,draw,,画,primary,5,5A,Unit 4,wordlist,39,high
+W0395,cartoon,,漫画,primary,5,5A,Unit 4,wordlist,39,high
+W0396,draw cartoons,,画漫画,primary,5,5A,Unit 4,wordlist,39,high
+W0397,cook,,烹调；烹饪,primary,5,5A,Unit 4,wordlist,42,high
+W0398,swim,,游泳,primary,5,5A,Unit 4,wordlist,42,high
+W0399,play basketball,,打篮球,primary,5,5A,Unit 4,wordlist,42,high
+W0400,ping-pong,,乒乓球,primary,5,5A,Unit 4,wordlist,42,high
+W0401,play ping-pong,,打乒乓球,primary,5,5A,Unit 4,wordlist,42,high
+W0402,speak English,,说英语,primary,5,5A,Unit 4,wordlist,42,high
+W0403,we’ll = we will,,we will 的缩写形式,primary,5,5A,Unit 4,wordlist,38,high
+W0404,party,,聚会；派对,primary,5,5A,Unit 4,wordlist,38,high
+W0405,next,,下一个的；紧接着的； 接下来的,primary,5,5A,Unit 4,wordlist,38,high
+W0406,wonderful,,极好的； 了不起的,primary,5,5A,Unit 4,wordlist,38,high
+W0407,learn,,学；学习；学会,primary,5,5A,Unit 4,wordlist,41,high
+W0408,any,,任何的；任一的,primary,5,5A,Unit 4,wordlist,41,high
+W0409,problem,,问题,primary,5,5A,Unit 4,wordlist,41,high
+W0410,no problem,,没问题,primary,5,5A,Unit 4,wordlist,41,high
+W0411,want,,要；想要,primary,5,5A,Unit 4,wordlist,43,high
+W0412,send,,邮寄；发送,primary,5,5A,Unit 4,wordlist,43,high
+W0413,email,,电子邮件,primary,5,5A,Unit 4,wordlist,43,high
+W0414,at,,（后面接邮件地址）,primary,5,5A,Unit 4,wordlist,43,high
+W0415,clock,,时钟；钟,primary,5,5A,Unit 5,wordlist,49,high
+W0416,plant,,植物,primary,5,5A,Unit 5,wordlist,49,high
+W0417,bottle,,瓶子,primary,5,5A,Unit 5,wordlist,49,high
+W0418,water bottle,,水瓶,primary,5,5A,Unit 5,wordlist,49,high
+W0419,bike,,自行车；脚踏车,primary,5,5A,Unit 5,wordlist,49,high
+W0420,photo,,照片；相片,primary,5,5A,Unit 5,wordlist,49,high
+W0421,front,,正面,primary,5,5A,Unit 5,wordlist,52,high
+W0422,in front of,,在⋯⋯前面,primary,5,5A,Unit 5,wordlist,52,high
+W0423,between,,在⋯⋯中间,primary,5,5A,Unit 5,wordlist,52,high
+W0424,above,,在（或向）⋯⋯上面,primary,5,5A,Unit 5,wordlist,52,high
+W0425,beside,,在旁边（附近）,primary,5,5A,Unit 5,wordlist,52,high
+W0426,behind,,在（或向）⋯⋯ 后面,primary,5,5A,Unit 5,wordlist,52,high
+W0427,there,,（表示存在或发生）,primary,5,5A,Unit 5,wordlist,48,high
+W0428,grandparent,,祖父； 祖母；外祖父；外祖母,primary,5,5A,Unit 5,wordlist,51,high
+W0429,their,,他们的；她们的； 它们的,primary,5,5A,Unit 5,wordlist,51,high
+W0430,house,,房屋；房子；住宅,primary,5,5A,Unit 5,wordlist,51,high
+W0431,lot,,大量；许多,primary,5,5A,Unit 5,wordlist,51,high
+W0432,lots of,,大量；许多,primary,5,5A,Unit 5,wordlist,51,high
+W0433,flower,,花；花朵,primary,5,5A,Unit 5,wordlist,51,high
+W0434,move,,搬家,primary,5,5A,Unit 5,wordlist,53,high
+W0435,dirty,,肮脏的,primary,5,5A,Unit 5,wordlist,53,high
+W0436,everywhere,,处处； 到处,primary,5,5A,Unit 5,wordlist,53,high
+W0437,mouse,,老鼠,primary,5,5A,Unit 5,wordlist,53,high
+W0438,live,,住；居住,primary,5,5A,Unit 5,wordlist,53,high
+W0439,nature,,自然界；大自然,primary,5,5A,Unit 5,wordlist,53,high
+W0440,forest,,森林；林区,primary,5,5A,Unit 6,wordlist,59,high
+W0441,river,,河；江,primary,5,5A,Unit 6,wordlist,59,high
+W0442,lake,,湖；湖泊,primary,5,5A,Unit 6,wordlist,59,high
+W0443,mountain,,高山；山岳,primary,5,5A,Unit 6,wordlist,59,high
+W0444,hill,,山丘；小山,primary,5,5A,Unit 6,wordlist,59,high
+W0445,tree,,树；树木；乔木,primary,5,5A,Unit 6,wordlist,62,high
+W0446,bridge,,桥,primary,5,5A,Unit 6,wordlist,62,high
+W0447,building,,建筑物；房子； 楼房,primary,5,5A,Unit 6,wordlist,62,high
+W0448,village,,村庄；村镇,primary,5,5A,Unit 6,wordlist,62,high
+W0449,house,,房屋；房子；住宅,primary,5,5A,Unit 6,wordlist,62,high
+W0450,boating,,划船,primary,5,5A,Unit 6,wordlist,58,high
+W0451,go boating,,去划船,primary,5,5A,Unit 6,wordlist,58,high
+W0452,aren’t = are not,,are not 的缩写形式,primary,5,5A,Unit 6,wordlist,61,high
+W0453,rabbit,,兔；野兔,primary,5,5A,Unit 6,wordlist,61,high
+W0454,high,,高的,primary,5,5A,Unit 6,wordlist,63,high
+W0455,eat breakfast,,吃早饭,primary,5,5B,Unit 1,wordlist,5,high
+W0456,have … class,,上⋯⋯课,primary,5,5B,Unit 1,wordlist,5,high
+W0457,play sports,,进行体育运动,primary,5,5B,Unit 1,wordlist,5,high
+W0458,exercise,,活动；运动,primary,5,5B,Unit 1,wordlist,5,high
+W0459,do morning exercises,,做早操,primary,5,5B,Unit 1,wordlist,5,high
+W0460,eat dinner,,吃晚饭,primary,5,5B,Unit 1,wordlist,5,high
+W0461,clean my room,,打扫我的房间,primary,5,5B,Unit 1,wordlist,8,high
+W0462,go for a walk,,散步,primary,5,5B,Unit 1,wordlist,8,high
+W0463,go shopping,,去买东西；购物,primary,5,5B,Unit 1,wordlist,8,high
+W0464,take,,学习；上（课）,primary,5,5B,Unit 1,wordlist,8,high
+W0465,dancing,,跳舞；舞蹈,primary,5,5B,Unit 1,wordlist,8,high
+W0466,take a dancing class,,上舞蹈课,primary,5,5B,Unit 1,wordlist,8,high
+W0467,when,,什么时候；何时,primary,5,5B,Unit 1,wordlist,4,high
+W0468,after,,在（时间）后,primary,5,5B,Unit 1,wordlist,4,high
+W0469,start,,开始,primary,5,5B,Unit 1,wordlist,4,high
+W0470,usually,,通常地；惯常地,primary,5,5B,Unit 1,wordlist,4,high
+W0471,Spain,,西班牙,primary,5,5B,Unit 1,wordlist,4,high
+W0472,late,,晚；迟,primary,5,5B,Unit 1,wordlist,4,high
+W0473,a.m.,,午前；上午,primary,5,5B,Unit 1,wordlist,5,high
+W0474,p.m.,,午后；下午,primary,5,5B,Unit 1,wordlist,5,high
+W0475,why,,为什么,primary,5,5B,Unit 1,wordlist,7,high
+W0476,shop,,去买东西；购物,primary,5,5B,Unit 1,wordlist,7,high
+W0477,work,,工作,primary,5,5B,Unit 1,wordlist,7,high
+W0478,last,,上一个的；刚过去的,primary,5,5B,Unit 1,wordlist,7,high
+W0479,sound,,听起来好像,primary,5,5B,Unit 1,wordlist,7,high
+W0480,also,,还；也,primary,5,5B,Unit 1,wordlist,7,high
+W0481,busy,,忙的,primary,5,5B,Unit 1,wordlist,7,high
+W0482,need,,需要,primary,5,5B,Unit 1,wordlist,7,high
+W0483,play,,戏剧；剧本,primary,5,5B,Unit 1,wordlist,9,high
+W0484,letter,,信,primary,5,5B,Unit 1,wordlist,9,high
+W0485,live,,居住,primary,5,5B,Unit 1,wordlist,9,high
+W0486,island,,岛,primary,5,5B,Unit 1,wordlist,9,high
+W0487,always,,总是；一直,primary,5,5B,Unit 1,wordlist,9,high
+W0488,cave,,山洞；洞穴,primary,5,5B,Unit 1,wordlist,9,high
+W0489,go swimming,,去游泳,primary,5,5B,Unit 1,wordlist,9,high
+W0490,win,,获胜,primary,5,5B,Unit 1,wordlist,9,high
+W0491,spring,,春天,primary,5,5B,Unit 2,wordlist,15,high
+W0492,summer,,夏天,primary,5,5B,Unit 2,wordlist,15,high
+W0493,autumn,,秋天,primary,5,5B,Unit 2,wordlist,15,high
+W0494,winter,,冬天,primary,5,5B,Unit 2,wordlist,15,high
+W0495,season,,季节,primary,5,5B,Unit 2,wordlist,15,high
+W0496,picnic,,野餐,primary,5,5B,Unit 2,wordlist,18,high
+W0497,go on a picnic,,去野餐,primary,5,5B,Unit 2,wordlist,18,high
+W0498,pick,,摘；采集,primary,5,5B,Unit 2,wordlist,18,high
+W0499,pick apples,,摘苹果,primary,5,5B,Unit 2,wordlist,18,high
+W0500,snowman,,雪人,primary,5,5B,Unit 2,wordlist,18,high
+W0501,make a snowman,,堆雪人,primary,5,5B,Unit 2,wordlist,18,high
+W0502,go swimming,,去游泳,primary,5,5B,Unit 2,wordlist,18,high
+W0503,which,,哪一个,primary,5,5B,Unit 2,wordlist,14,high
+W0504,best,,最；最高程度地,primary,5,5B,Unit 2,wordlist,14,high
+W0505,snow,,雪,primary,5,5B,Unit 2,wordlist,14,high
+W0506,good job,,做得好,primary,5,5B,Unit 2,wordlist,17,high
+W0507,because,,因为,primary,5,5B,Unit 2,wordlist,17,high
+W0508,vacation,,假期,primary,5,5B,Unit 2,wordlist,17,high
+W0509,all,,全；完全,primary,5,5B,Unit 2,wordlist,19,high
+W0510,pink,,粉色；粉色的,primary,5,5B,Unit 2,wordlist,19,high
+W0511,lovely,,可爱的；美丽的,primary,5,5B,Unit 2,wordlist,19,high
+W0512,leaf,,叶子 （复数 leaves ）,primary,5,5B,Unit 2,wordlist,19,high
+W0513,fall,,落下；【美】秋天,primary,5,5B,Unit 2,wordlist,19,high
+W0514,paint,,用颜料绘画,primary,5,5B,Unit 2,wordlist,19,high
+W0515,January,,一月,primary,5,5B,Unit 3,wordlist,25,high
+W0516,February,,二月,primary,5,5B,Unit 3,wordlist,25,high
+W0517,March,,三月,primary,5,5B,Unit 3,wordlist,25,high
+W0518,April,,四月,primary,5,5B,Unit 3,wordlist,25,high
+W0519,May,,五月,primary,5,5B,Unit 3,wordlist,25,high
+W0520,June,,六月,primary,5,5B,Unit 3,wordlist,25,high
+W0521,July,,七月,primary,5,5B,Unit 3,wordlist,28,high
+W0522,August,,八月,primary,5,5B,Unit 3,wordlist,28,high
+W0523,September,,九月,primary,5,5B,Unit 3,wordlist,28,high
+W0524,October,,十月,primary,5,5B,Unit 3,wordlist,28,high
+W0525,November,,十一月,primary,5,5B,Unit 3,wordlist,28,high
+W0526,December,,十二月,primary,5,5B,Unit 3,wordlist,28,high
+W0527,few,,不多；很少,primary,5,5B,Unit 3,wordlist,24,high
+W0528,a few,,一些,primary,5,5B,Unit 3,wordlist,24,high
+W0529,thing,,事情,primary,5,5B,Unit 3,wordlist,24,high
+W0530,meet,,集会；开会,primary,5,5B,Unit 3,wordlist,24,high
+W0531,sports meet,,运动会,primary,5,5B,Unit 3,wordlist,24,high
+W0532,trip,,旅行,primary,5,5B,Unit 3,wordlist,24,high
+W0533,year,,年,primary,5,5B,Unit 3,wordlist,25,high
+W0534,plant,,种植,primary,5,5B,Unit 3,wordlist,25,high
+W0535,contest,,比赛；竞赛,primary,5,5B,Unit 3,wordlist,25,high
+W0536,the Great Wall,,长城,primary,5,5B,Unit 3,wordlist,27,high
+W0537,national,,国家的,primary,5,5B,Unit 3,wordlist,28,high
+W0538,National Day,,国庆日,primary,5,5B,Unit 3,wordlist,28,high
+W0539,American,,美国的,primary,5,5B,Unit 3,wordlist,28,high
+W0540,Thanksgiving,,感恩节,primary,5,5B,Unit 3,wordlist,28,high
+W0541,Christmas,,圣诞节,primary,5,5B,Unit 3,wordlist,28,high
+W0542,game,,游戏,primary,5,5B,Unit 3,wordlist,29,high
+W0543,riddle,,谜；谜语,primary,5,5B,Unit 3,wordlist,29,high
+W0544,act,,扮演,primary,5,5B,Unit 3,wordlist,29,high
+W0545,act out,,把……表演出来,primary,5,5B,Unit 3,wordlist,29,high
+W0546,RSVP,,（尤用于请柬）请赐复,primary,5,5B,Unit 3,wordlist,29,high
+W0547,by,,在……之前,primary,5,5B,Unit 3,wordlist,29,high
+W0548,first,,第一（的）,primary,5,5B,Unit 4,wordlist,39,high
+W0549,second,,第二（的）,primary,5,5B,Unit 4,wordlist,39,high
+W0550,third,,第三（的）,primary,5,5B,Unit 4,wordlist,39,high
+W0551,fourth,,第四（的）,primary,5,5B,Unit 4,wordlist,39,high
+W0552,fifth,,第五（的）,primary,5,5B,Unit 4,wordlist,39,high
+W0553,twelfth,,第十二（的）,primary,5,5B,Unit 4,wordlist,42,high
+W0554,twentieth,,第二十（的）,primary,5,5B,Unit 4,wordlist,42,high
+W0555,twenty-first,,第二十一（的）,primary,5,5B,Unit 4,wordlist,42,high
+W0556,twenty-third,,第二十三（的）,primary,5,5B,Unit 4,wordlist,42,high
+W0557,thirtieth,,第三十（的）,primary,5,5B,Unit 4,wordlist,42,high
+W0558,other,,其他,primary,5,5B,Unit 4,wordlist,38,high
+W0559,special,,特殊的；特别的,primary,5,5B,Unit 4,wordlist,38,high
+W0560,show,,展览,primary,5,5B,Unit 4,wordlist,38,high
+W0561,festival,,节日,primary,5,5B,Unit 4,wordlist,38,high
+W0562,kitten,,小猫,primary,5,5B,Unit 4,wordlist,43,high
+W0563,diary,,日记,primary,5,5B,Unit 4,wordlist,43,high
+W0564,still,,仍然；依旧；还是,primary,5,5B,Unit 4,wordlist,43,high
+W0565,noise,,声音；响声；噪音,primary,5,5B,Unit 4,wordlist,43,high
+W0566,fur,,（某些动物的）浓密的 软毛,primary,5,5B,Unit 4,wordlist,43,high
+W0567,open,,开着的,primary,5,5B,Unit 4,wordlist,43,high
+W0568,walk,,行走,primary,5,5B,Unit 4,wordlist,43,high
+W0569,mine,,我的,primary,5,5B,Unit 5,wordlist,49,high
+W0570,yours,,你（们）的,primary,5,5B,Unit 5,wordlist,49,high
+W0571,his,,他的,primary,5,5B,Unit 5,wordlist,49,high
+W0572,hers,,她的,primary,5,5B,Unit 5,wordlist,49,high
+W0573,theirs,,他们的；她们的； 它们的,primary,5,5B,Unit 5,wordlist,49,high
+W0574,ours,,我们的,primary,5,5B,Unit 5,wordlist,49,high
+W0575,climbing,,（climb 的-ing形式）（正在）攀登；攀爬,primary,5,5B,Unit 5,wordlist,52,high
+W0576,eating,,（eat的-ing形式） （正在）吃,primary,5,5B,Unit 5,wordlist,52,high
+W0577,playing,,（play的-ing形式） （正在）玩耍,primary,5,5B,Unit 5,wordlist,52,high
+W0578,jumping,,（jump 的-ing形式）（正在）跳,primary,5,5B,Unit 5,wordlist,52,high
+W0579,drinking,,（drink的-ing 形式）（正在）喝（水）,primary,5,5B,Unit 5,wordlist,52,high
+W0580,sleeping,,（sleep 的-ing形式）（正在）睡觉,primary,5,5B,Unit 5,wordlist,52,high
+W0581,each,,每一；各个,primary,5,5B,Unit 5,wordlist,52,high
+W0582,each other,,相互,primary,5,5B,Unit 5,wordlist,52,high
+W0583,excited,,兴奋的；激动的,primary,5,5B,Unit 5,wordlist,53,high
+W0584,like,,像……那样,primary,5,5B,Unit 5,wordlist,53,high
+W0585,doing morning exercises,,（正在）做早操,primary,5,5B,Unit 6,wordlist,59,high
+W0586,having … class,,（正在）上……课,primary,5,5B,Unit 6,wordlist,59,high
+W0587,eating lunch,,（正在）吃午饭,primary,5,5B,Unit 6,wordlist,59,high
+W0588,reading a book,,（正在）看书,primary,5,5B,Unit 6,wordlist,59,high
+W0589,listening to music,,（正在） 听音乐,primary,5,5B,Unit 6,wordlist,59,high
+W0590,keep,,保持某种状态,primary,5,5B,Unit 6,wordlist,62,high
+W0591,keep to the right,,靠右,primary,5,5B,Unit 6,wordlist,62,high
+W0592,keep your desk clean,,保持你 的课桌干净,primary,5,5B,Unit 6,wordlist,62,high
+W0593,talk quietly,,小声讲话,primary,5,5B,Unit 6,wordlist,62,high
+W0594,turn,,顺序,primary,5,5B,Unit 6,wordlist,62,high
+W0595,take turns,,按顺序来,primary,5,5B,Unit 6,wordlist,62,high
+W0596,bamboo,,竹子,primary,5,5B,Unit 6,wordlist,58,high
+W0597,its,,（指事物、动物或幼儿） 它的；他的；她的,primary,5,5B,Unit 6,wordlist,58,high
+W0598,show,,给人看,primary,5,5B,Unit 6,wordlist,61,high
+W0599,anything,,任何事物,primary,5,5B,Unit 6,wordlist,61,high
+W0600,else,,另外；其他,primary,5,5B,Unit 6,wordlist,61,high
+W0601,exhibition,,展览,primary,5,5B,Unit 6,wordlist,63,high
+W0602,say,,说；讲,primary,5,5B,Unit 6,wordlist,63,high
+W0603,have a look,,看一看,primary,5,5B,Unit 6,wordlist,63,high
+W0604,sushi,,寿司,primary,5,5B,Unit 6,wordlist,63,high
+W0605,teach,,教,primary,5,5B,Unit 6,wordlist,63,high
+W0606,sure,,（表示同意）当然,primary,5,5B,Unit 6,wordlist,63,high
+W0607,Canadian,,加拿大的,primary,5,5B,Unit 6,wordlist,63,high
+W0608,Spanish,,西班牙的,primary,5,5B,Unit 6,wordlist,63,high
+W0609,science,,科学,primary,6,6A,Unit 1,wordlist,5,high
+W0610,museum,,博物馆,primary,6,6A,Unit 1,wordlist,5,high
+W0611,post office,,邮局,primary,6,6A,Unit 1,wordlist,5,high
+W0612,bookstore,,书店,primary,6,6A,Unit 1,wordlist,5,high
+W0613,cinema,,电影院,primary,6,6A,Unit 1,wordlist,5,high
+W0614,hospital,,医院,primary,6,6A,Unit 1,wordlist,5,high
+W0615,crossing,,十字路口,primary,6,6A,Unit 1,wordlist,7,high
+W0616,turn,,转弯,primary,6,6A,Unit 1,wordlist,7,high
+W0617,left,,左,primary,6,6A,Unit 1,wordlist,7,high
+W0618,straight,,笔直地,primary,6,6A,Unit 1,wordlist,7,high
+W0619,right,,右,primary,6,6A,Unit 1,wordlist,7,high
+W0620,ask,,问,primary,6,6A,Unit 1,wordlist,4,high
+W0621,sir,,（对男子的礼貌称呼） 先生,primary,6,6A,Unit 1,wordlist,4,high
+W0622,interesting,,有趣的,primary,6,6A,Unit 1,wordlist,6,high
+W0623,Italian,,意大利的,primary,6,6A,Unit 1,wordlist,6,high
+W0624,restaurant,,餐馆,primary,6,6A,Unit 1,wordlist,6,high
+W0625,pizza,,比萨饼,primary,6,6A,Unit 1,wordlist,6,high
+W0626,street,,大街；街道,primary,6,6A,Unit 1,wordlist,6,high
+W0627,get,,到达,primary,6,6A,Unit 1,wordlist,6,high
+W0628,BDS,,北斗卫星导航系统,primary,6,6A,Unit 1,wordlist,8,high
+W0629,gave,,（give 的过去式） 提供；交给,primary,6,6A,Unit 1,wordlist,8,high
+W0630,feature,,特点,primary,6,6A,Unit 1,wordlist,8,high
+W0631,follow,,跟着,primary,6,6A,Unit 1,wordlist,8,high
+W0632,far,,远的,primary,6,6A,Unit 1,wordlist,8,high
+W0633,tell,,告诉,primary,6,6A,Unit 1,wordlist,8,high
+W0634,on foot,,步行,primary,6,6A,Unit 2,wordlist,15,high
+W0635,by,,（表示方式）乘,primary,6,6A,Unit 2,wordlist,15,high
+W0636,bus,,公共汽车,primary,6,6A,Unit 2,wordlist,15,high
+W0637,plane,,飞机,primary,6,6A,Unit 2,wordlist,15,high
+W0638,taxi,,出租汽车,primary,6,6A,Unit 2,wordlist,15,high
+W0639,ship,,（大）船,primary,6,6A,Unit 2,wordlist,15,high
+W0640,subway,,地铁,primary,6,6A,Unit 2,wordlist,15,high
+W0641,train,,火车,primary,6,6A,Unit 2,wordlist,15,high
+W0642,slow,,（使）放慢速度；慢的,primary,6,6A,Unit 2,wordlist,17,high
+W0643,down,,减少；降低,primary,6,6A,Unit 2,wordlist,17,high
+W0644,slow down,,慢下来,primary,6,6A,Unit 2,wordlist,17,high
+W0645,stop,,停下,primary,6,6A,Unit 2,wordlist,17,high
+W0646,Mrs,,夫人,primary,6,6A,Unit 2,wordlist,14,high
+W0647,early,,早到的,primary,6,6A,Unit 2,wordlist,14,high
+W0648,helmet,,头盔,primary,6,6A,Unit 2,wordlist,16,high
+W0649,must,,必须,primary,6,6A,Unit 2,wordlist,16,high
+W0650,wear,,戴,primary,6,6A,Unit 2,wordlist,16,high
+W0651,attention,,注意,primary,6,6A,Unit 2,wordlist,16,high
+W0652,pay attention to,,注意,primary,6,6A,Unit 2,wordlist,16,high
+W0653,traffic,,交通,primary,6,6A,Unit 2,wordlist,16,high
+W0654,traffic lights,,交通信号灯,primary,6,6A,Unit 2,wordlist,16,high
+W0655,Munich,,慕尼黑（德国 城市）,primary,6,6A,Unit 2,wordlist,18,high
+W0656,Germany,,德国,primary,6,6A,Unit 2,wordlist,18,high
+W0657,Alaska,,阿拉斯加州（美国 州名）,primary,6,6A,Unit 2,wordlist,18,high
+W0658,sled,,雪橇,primary,6,6A,Unit 2,wordlist,18,high
+W0659,fast,,快,primary,6,6A,Unit 2,wordlist,18,high
+W0660,ferry,,轮渡,primary,6,6A,Unit 2,wordlist,18,high
+W0661,Papa Westray,,帕帕韦斯特雷岛,primary,6,6A,Unit 2,wordlist,18,high
+W0662,Scotland,,苏格兰,primary,6,6A,Unit 2,wordlist,18,high
+W0663,visit,,拜访,primary,6,6A,Unit 3,wordlist,25,high
+W0664,film,,电影,primary,6,6A,Unit 3,wordlist,25,high
+W0665,see a film,,看电影,primary,6,6A,Unit 3,wordlist,25,high
+W0666,trip,,旅行,primary,6,6A,Unit 3,wordlist,25,high
+W0667,take a trip,,去旅行,primary,6,6A,Unit 3,wordlist,25,high
+W0668,supermarket,,超市,primary,6,6A,Unit 3,wordlist,25,high
+W0669,evening,,晚上；傍晚,primary,6,6A,Unit 3,wordlist,25,high
+W0670,tonight,,在今晚,primary,6,6A,Unit 3,wordlist,25,high
+W0671,tomorrow,,明天,primary,6,6A,Unit 3,wordlist,25,high
+W0672,next week,,下周,primary,6,6A,Unit 3,wordlist,25,high
+W0673,dictionary,,词典,primary,6,6A,Unit 3,wordlist,27,high
+W0674,comic,,滑稽的,primary,6,6A,Unit 3,wordlist,27,high
+W0675,comic book,,（儿童的）连环画册,primary,6,6A,Unit 3,wordlist,27,high
+W0676,word,,单词,primary,6,6A,Unit 3,wordlist,27,high
+W0677,word book,,单词书,primary,6,6A,Unit 3,wordlist,27,high
+W0678,postcard,,明信片,primary,6,6A,Unit 3,wordlist,27,high
+W0679,lesson,,课,primary,6,6A,Unit 3,wordlist,24,high
+W0680,space,,太空,primary,6,6A,Unit 3,wordlist,26,high
+W0681,travel,,（尤指长途）旅行,primary,6,6A,Unit 3,wordlist,26,high
+W0682,half,,一半,primary,6,6A,Unit 3,wordlist,26,high
+W0683,price,,价格,primary,6,6A,Unit 3,wordlist,26,high
+W0684,Mid-Autumn Festival,,中秋节,primary,6,6A,Unit 3,wordlist,28,high
+W0685,together,,一起,primary,6,6A,Unit 3,wordlist,28,high
+W0686,get together,,聚会,primary,6,6A,Unit 3,wordlist,28,high
+W0687,mooncake,,月饼,primary,6,6A,Unit 3,wordlist,28,high
+W0688,poem,,诗,primary,6,6A,Unit 3,wordlist,28,high
+W0689,moon,,月亮,primary,6,6A,Unit 3,wordlist,28,high
+W0690,studies,,（study 的第三 人称单数形式）学习,primary,6,6A,Unit 4,wordlist,41,high
+W0691,puzzle,,谜,primary,6,6A,Unit 4,wordlist,41,high
+W0692,hiking,,远足,primary,6,6A,Unit 4,wordlist,41,high
+W0693,pen pal,,笔友,primary,6,6A,Unit 4,wordlist,38,high
+W0694,hobby,,业余爱好,primary,6,6A,Unit 4,wordlist,38,high
+W0695,jasmine,,茉莉,primary,6,6A,Unit 4,wordlist,38,high
+W0696,idea,,想法；主意,primary,6,6A,Unit 4,wordlist,38,high
+W0697,Canberra,,堪培拉（澳 大利亚首都）,primary,6,6A,Unit 4,wordlist,40,high
+W0698,amazing,,令人惊奇的,primary,6,6A,Unit 4,wordlist,40,high
+W0699,shall,,表示征求意见,primary,6,6A,Unit 4,wordlist,42,high
+W0700,goal,,射门,primary,6,6A,Unit 4,wordlist,42,high
+W0701,join,,加入,primary,6,6A,Unit 4,wordlist,42,high
+W0702,club,,俱乐部,primary,6,6A,Unit 4,wordlist,42,high
+W0703,share,,分享,primary,6,6A,Unit 4,wordlist,42,high
+W0704,factory,,工厂,primary,6,6A,Unit 5,wordlist,49,high
+W0705,worker,,工人,primary,6,6A,Unit 5,wordlist,49,high
+W0706,postman,,邮递员,primary,6,6A,Unit 5,wordlist,49,high
+W0707,businessman,,商人； 企业家,primary,6,6A,Unit 5,wordlist,49,high
+W0708,police officer,,警察,primary,6,6A,Unit 5,wordlist,49,high
+W0709,fisherman,,渔民,primary,6,6A,Unit 5,wordlist,51,high
+W0710,scientist,,科学家,primary,6,6A,Unit 5,wordlist,51,high
+W0711,pilot,,飞行员,primary,6,6A,Unit 5,wordlist,51,high
+W0712,coach,,教练,primary,6,6A,Unit 5,wordlist,51,high
+W0713,country,,国家,primary,6,6A,Unit 5,wordlist,48,high
+W0714,head teacher,,校长,primary,6,6A,Unit 5,wordlist,48,high
+W0715,sea,,大海,primary,6,6A,Unit 5,wordlist,50,high
+W0716,stay,,保持,primary,6,6A,Unit 5,wordlist,50,high
+W0717,university,,大学,primary,6,6A,Unit 5,wordlist,51,high
+W0718,gym,,体育馆,primary,6,6A,Unit 5,wordlist,52,high
+W0719,if,,如果,primary,6,6A,Unit 5,wordlist,52,high
+W0720,reporter,,记者,primary,6,6A,Unit 5,wordlist,52,high
+W0721,use,,使用,primary,6,6A,Unit 5,wordlist,52,high
+W0722,type,,打字,primary,6,6A,Unit 5,wordlist,52,high
+W0723,quickly,,迅速地,primary,6,6A,Unit 5,wordlist,52,high
+W0724,secretary,,秘书,primary,6,6A,Unit 5,wordlist,52,high
+W0725,angry,,生气的,primary,6,6A,Unit 6,wordlist,59,high
+W0726,afraid,,害怕,primary,6,6A,Unit 6,wordlist,59,high
+W0727,sad,,难过的,primary,6,6A,Unit 6,wordlist,59,high
+W0728,worried,,担心的；发愁的,primary,6,6A,Unit 6,wordlist,59,high
+W0729,happy,,高兴的,primary,6,6A,Unit 6,wordlist,59,high
+W0730,see a doctor,,看病,primary,6,6A,Unit 6,wordlist,61,high
+W0731,wear,,穿,primary,6,6A,Unit 6,wordlist,61,high
+W0732,more,,更多的,primary,6,6A,Unit 6,wordlist,61,high
+W0733,deep,,深的,primary,6,6A,Unit 6,wordlist,61,high
+W0734,breath,,呼吸,primary,6,6A,Unit 6,wordlist,61,high
+W0735,take a deep breath,,深深吸一口气,primary,6,6A,Unit 6,wordlist,61,high
+W0736,count,,数数,primary,6,6A,Unit 6,wordlist,61,high
+W0737,count to ten,,数到十,primary,6,6A,Unit 6,wordlist,61,high
+W0738,chase,,追赶,primary,6,6A,Unit 6,wordlist,58,high
+W0739,mice,,（mouse 的复数） 老鼠,primary,6,6A,Unit 6,wordlist,58,high
+W0740,bad,,邪恶的；坏的,primary,6,6A,Unit 6,wordlist,58,high
+W0741,hurt,,（使）受伤,primary,6,6A,Unit 6,wordlist,58,high
+W0742,ill,,有病；不舒服,primary,6,6A,Unit 6,wordlist,59,high
+W0743,wrong,,有毛病,primary,6,6A,Unit 6,wordlist,60,high
+W0744,should,,应该,primary,6,6A,Unit 6,wordlist,60,high
+W0745,feel,,觉得；感到,primary,6,6A,Unit 6,wordlist,60,high
+W0746,well,,健康；身体好,primary,6,6A,Unit 6,wordlist,60,high
+W0747,sit,,坐,primary,6,6A,Unit 6,wordlist,62,high
+W0748,grass,,草坪,primary,6,6A,Unit 6,wordlist,62,high
+W0749,hear,,听见,primary,6,6A,Unit 6,wordlist,62,high
+W0750,ant,,蚂蚁,primary,6,6A,Unit 6,wordlist,62,high
+W0751,worry,,担心；担忧,primary,6,6A,Unit 6,wordlist,62,high
+W0752,stuck,,陷住；无法移动,primary,6,6A,Unit 6,wordlist,62,high
+W0753,mud,,泥,primary,6,6A,Unit 6,wordlist,62,high
+W0754,pull,,拉；拽,primary,6,6A,Unit 6,wordlist,62,high
+W0755,everyone,,每人,primary,6,6A,Unit 6,wordlist,62,high
+W0756,younger,,（young 的比较 级）更年轻的,primary,6,6B,Unit 1,wordlist,5,high
+W0757,older,,（old 的比较级） 更年长的,primary,6,6B,Unit 1,wordlist,5,high
+W0758,taller,,（tall 的比较级） 更高的,primary,6,6B,Unit 1,wordlist,5,high
+W0759,shorter,,（short 的比较 级）更矮的；更短的,primary,6,6B,Unit 1,wordlist,5,high
+W0760,longer,,（long 的比较级） 更长的,primary,6,6B,Unit 1,wordlist,5,high
+W0761,thinner,,（thin 的比较级） 更瘦的,primary,6,6B,Unit 1,wordlist,7,high
+W0762,heavier,,（heavy 的比较级）更重的,primary,6,6B,Unit 1,wordlist,7,high
+W0763,bigger,,（big 的比较级） 更大的,primary,6,6B,Unit 1,wordlist,7,high
+W0764,smaller,,（small 的比较 级）更小的,primary,6,6B,Unit 1,wordlist,7,high
+W0765,stronger,,（strong 的 比较级）更强壮的,primary,6,6B,Unit 1,wordlist,7,high
+W0766,dinosaur,,恐龙,primary,6,6B,Unit 1,wordlist,4,high
+W0767,hall,,大厅,primary,6,6B,Unit 1,wordlist,4,high
+W0768,metre,,米（美式英语： meter ）,primary,6,6B,Unit 1,wordlist,4,high
+W0769,than,,比,primary,6,6B,Unit 1,wordlist,4,high
+W0770,both,,两个都,primary,6,6B,Unit 1,wordlist,4,high
+W0771,kilogram,,千克；公斤,primary,6,6B,Unit 1,wordlist,6,high
+W0772,countryside,,乡村,primary,6,6B,Unit 1,wordlist,8,high
+W0773,lower,,（low 的比较级） 更低地,primary,6,6B,Unit 1,wordlist,8,high
+W0774,shadow,,阴影；影子,primary,6,6B,Unit 1,wordlist,8,high
+W0775,smarter,,（smart 的比较级）更聪明的,primary,6,6B,Unit 1,wordlist,8,high
+W0776,become,,开始变得；变成,primary,6,6B,Unit 1,wordlist,8,high
+W0777,cleaned,,（clean 的过去式） 打扫,primary,6,6B,Unit 2,wordlist,15,high
+W0778,stayed,,（stay 的过去式） 停留；待,primary,6,6B,Unit 2,wordlist,15,high
+W0779,washed,,（wash 的过去式） 洗,primary,6,6B,Unit 2,wordlist,15,high
+W0780,watched,,（watch 的过去式） 看,primary,6,6B,Unit 2,wordlist,15,high
+W0781,had,,（have 的过去式） 患病；得病,primary,6,6B,Unit 2,wordlist,17,high
+W0782,had a cold,,感冒,primary,6,6B,Unit 2,wordlist,17,high
+W0783,slept,,（sleep 的过去式） 睡觉,primary,6,6B,Unit 2,wordlist,17,high
+W0784,read,,（read 的过去式） 读,primary,6,6B,Unit 2,wordlist,17,high
+W0785,saw,,（see 的过去式）看见,primary,6,6B,Unit 2,wordlist,17,high
+W0786,last,,最近的；上一个的,primary,6,6B,Unit 2,wordlist,17,high
+W0787,yesterday,,昨天,primary,6,6B,Unit 2,wordlist,17,high
+W0788,before,,在⋯⋯之前,primary,6,6B,Unit 2,wordlist,17,high
+W0789,drank,,（drink 的过去式） 喝,primary,6,6B,Unit 2,wordlist,14,high
+W0790,show,,演出,primary,6,6B,Unit 2,wordlist,14,high
+W0791,magazine,,杂志,primary,6,6B,Unit 2,wordlist,16,high
+W0792,better,,（well 的比较级） 更好的,primary,6,6B,Unit 2,wordlist,16,high
+W0793,faster,,（fast 的比较级） 更快的,primary,6,6B,Unit 2,wordlist,16,high
+W0794,hotel,,旅馆,primary,6,6B,Unit 2,wordlist,18,high
+W0795,fixed,,（fix 的过去式） 修理,primary,6,6B,Unit 2,wordlist,18,high
+W0796,broken,,破损的,primary,6,6B,Unit 2,wordlist,18,high
+W0797,lamp,,台灯,primary,6,6B,Unit 2,wordlist,18,high
+W0798,loud,,喧闹的；大声的,primary,6,6B,Unit 2,wordlist,18,high
+W0799,enjoy,,享受⋯⋯乐趣； 喜爱,primary,6,6B,Unit 2,wordlist,18,high
+W0800,stay,,暂住；逗留,primary,6,6B,Unit 2,wordlist,18,high
+W0801,went,,（go 的过去式）去,primary,6,6B,Unit 3,wordlist,25,high
+W0802,camp,,野营,primary,6,6B,Unit 3,wordlist,25,high
+W0803,went camping,,（尤指在假日） 野营,primary,6,6B,Unit 3,wordlist,25,high
+W0804,fish,,钓鱼；捕鱼,primary,6,6B,Unit 3,wordlist,25,high
+W0805,went fishing,,去钓鱼,primary,6,6B,Unit 3,wordlist,25,high
+W0806,rode,,（ride 的过去式） 骑（马；自行车）,primary,6,6B,Unit 3,wordlist,25,high
+W0807,hurt,,（hurt 的过去式） （使）受伤,primary,6,6B,Unit 3,wordlist,25,high
+W0808,ate,,（eat 的过去式）吃,primary,6,6B,Unit 3,wordlist,27,high
+W0809,took,,（take 的过去式）拍照,primary,6,6B,Unit 3,wordlist,27,high
+W0810,took pictures,,照相,primary,6,6B,Unit 3,wordlist,27,high
+W0811,bought,,（buy 的过去式）买,primary,6,6B,Unit 3,wordlist,27,high
+W0812,gift,,礼物,primary,6,6B,Unit 3,wordlist,27,high
+W0813,fell,,（fall的过去式）摔倒,primary,6,6B,Unit 3,wordlist,24,high
+W0814,off,,从（某处）落下,primary,6,6B,Unit 3,wordlist,24,high
+W0815,Labour Day,,劳动节,primary,6,6B,Unit 3,wordlist,24,high
+W0816,mule,,骡子,primary,6,6B,Unit 3,wordlist,24,high
+W0817,Turpan,,吐鲁番,primary,6,6B,Unit 3,wordlist,24,high
+W0818,could,,（can 的过去式） 能,primary,6,6B,Unit 3,wordlist,24,high
+W0819,till,,直到,primary,6,6B,Unit 3,wordlist,24,high
+W0820,beach,,海滩；沙滩,primary,6,6B,Unit 3,wordlist,26,high
+W0821,basket,,篮；筐,primary,6,6B,Unit 3,wordlist,28,high
+W0822,part,,角色,primary,6,6B,Unit 3,wordlist,28,high
+W0823,licked,,（lick 的过去式） 舔,primary,6,6B,Unit 3,wordlist,28,high
+W0824,laughed,,（laugh 的 过去式）笑,primary,6,6B,Unit 3,wordlist,28,high
+W0825,dining hall,,饭厅,primary,6,6B,Unit 4,wordlist,35,high
+W0826,grass,,草坪,primary,6,6B,Unit 4,wordlist,35,high
+W0827,gym,,体育馆,primary,6,6B,Unit 4,wordlist,35,high
+W0828,ago,,以前,primary,6,6B,Unit 4,wordlist,35,high
+W0829,cycling,,骑自行车运动 （或活动）,primary,6,6B,Unit 4,wordlist,37,high
+W0830,go cycling,,去骑自行车,primary,6,6B,Unit 4,wordlist,37,high
+W0831,ice-skate,,滑冰,primary,6,6B,Unit 4,wordlist,37,high
+W0832,badminton,,羽毛球运动,primary,6,6B,Unit 4,wordlist,37,high
+W0833,star,,星,primary,6,6B,Unit 4,wordlist,34,high
+W0834,easy,,容易的,primary,6,6B,Unit 4,wordlist,34,high
+W0835,look up,,（在词典中或通过电脑） 查阅,primary,6,6B,Unit 4,wordlist,34,high
+W0836,Internet,,互联网,primary,6,6B,Unit 4,wordlist,34,high
+W0837,different,,不同的,primary,6,6B,Unit 4,wordlist,36,high
+W0838,active,,积极的；活跃的,primary,6,6B,Unit 4,wordlist,36,high
+W0839,race,,赛跑,primary,6,6B,Unit 4,wordlist,38,high
+W0840,nothing,,没有什么,primary,6,6B,Unit 4,wordlist,38,high
+W0841,thought,,（think 的过去式） 想,primary,6,6B,Unit 4,wordlist,38,high
+W0842,felt,,（feel 的过去式）感觉,primary,6,6B,Unit 4,wordlist,38,high
+W0843,cheetah,,猎豹,primary,6,6B,Unit 4,wordlist,38,high
+W0844,trip,,绊倒,primary,6,6B,Unit 4,wordlist,38,high
+W0845,woke,,（wake 的过去式） 醒,primary,6,6B,Unit 4,wordlist,38,high
+W0846,dream,,梦,primary,6,6B,Unit 4,wordlist,38,high

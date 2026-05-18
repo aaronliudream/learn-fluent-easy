@@ -115,7 +115,8 @@ export default function JuniorVocab() {
   const exit = () => {
     const np = new URLSearchParams(params);
     np.delete("mode");
-    setParams(np);
+    np.delete("group");
+    setParams(np, { replace: true });
   };
 
   if (loading) {
@@ -163,7 +164,7 @@ export default function JuniorVocab() {
   if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={absGrade} />;
 
   if (groupIdx >= 0 && groupIdx < groups.length) {
-    return <JuniorWordGroup group={groups[groupIdx]} groupNumber={groupIdx + 1} grade={displayGrade} onExit={() => setParams({ grade })} onPractice={(m) => {const np = new URLSearchParams(params);np.set("mode", m);setParams(np);}} />;
+    return <JuniorWordGroup group={groups[groupIdx]} groupNumber={groupIdx + 1} grade={displayGrade} onExit={() => setParams({ grade }, { replace: true })} onPractice={(m) => {const np = new URLSearchParams(params);np.set("mode", m);setParams(np);}} />;
   }
 
   return <JuniorVocabHub words={words} groups={groups} grade={displayGrade} gradeNum={rawGrade <= 3 ? rawGrade + 6 : rawGrade} onPick={(m) => {const np = new URLSearchParams(params);np.set("mode", m);setParams(np);}} onPickGroup={(i) => setParams({ grade, group: String(i + 1) })} />;

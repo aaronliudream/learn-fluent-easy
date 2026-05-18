@@ -174,7 +174,6 @@ const FOOTER_GUARANTEES = [
   { icon: LineChart, label: "学习效果跟踪体系" },
   { icon: BookOpen, label: "定期学习报告" },
   { icon: Headphones, label: "专属学习顾问" },
-  { icon: Shield, label: "不满意退款保障" },
 ];
 
 const HERO_AVATARS = ["/landing/avatar1.png", "/landing/avatar2.png", "/landing/avatar3.png"] as const;
@@ -565,7 +564,7 @@ export default function LandingPage() {
               <T>效果看得见，家长更放心</T>
             </h3>
           </div>
-          <div className="grid w-full grid-cols-2 gap-6 sm:grid-cols-4 md:w-auto md:gap-8">
+          <div className="grid w-full grid-cols-3 gap-10 sm:grid-cols-3 md:w-auto md:gap-14">
             {FOOTER_GUARANTEES.map((g) => {
               const Icon = g.icon;
               return (

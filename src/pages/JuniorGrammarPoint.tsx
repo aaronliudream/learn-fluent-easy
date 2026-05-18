@@ -59,6 +59,7 @@ export default function JuniorGrammarPoint() {
   const isChallenge = searchParams.get("challenge") === "1";
   const sessionSize = isChallenge ? CHALLENGE_QUESTIONS_JUNIOR : 10;
   const [pt, setPt] = useState<Pt | null>(null);
+  const grammarBackTo = pt?.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
   const [qs, setQs] = useState<GrammarQuestion[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -228,6 +229,7 @@ export default function JuniorGrammarPoint() {
           <ArrowLeft className="size-4" /> <T>返回考点列表</T>
         </BackLink>
         <p className="text-sm text-muted-foreground"><T>考点未找到</T></p>
+
       </main>);
 
   }
@@ -244,7 +246,7 @@ export default function JuniorGrammarPoint() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-      <BackLink to="/junior/grammar" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to={grammarBackTo} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> <T>返回考点列表</T>
       </BackLink>
 

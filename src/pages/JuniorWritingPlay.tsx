@@ -14,6 +14,7 @@ type ErrorPair = {wrong: string;correct: string;note?: string;};
 type P = {
   id: string;
   topic: string;
+  grade?: number | null;
   prompt_cn: string;
   prompt_en: string;
   requirements: string[];
@@ -55,7 +56,7 @@ export default function JuniorWritingPlay() {
   useEffect(() => {
     if (!id) return;
     (supabase as any).from("junior_writing_prompts").
-    select("id,topic,prompt_cn,prompt_en,requirements,min_words,max_words,sample_answer,scoring_rubric,title_en,high_sentences,error_pairs,paragraph_template").
+    select("id,topic,grade,prompt_cn,prompt_en,requirements,min_words,max_words,sample_answer,scoring_rubric,title_en,high_sentences,error_pairs,paragraph_template").
     eq("id", id).maybeSingle().then(({ data }: any) => setP(data as any));
     (supabase as any).from("junior_writing_drills").
     select("id,difficulty_label,prompt,hint,sort_order").
@@ -111,7 +112,7 @@ export default function JuniorWritingPlay() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
-      <BackLink to="/junior/writing" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>返回</T></BackLink>
+      <BackLink to={p?.grade ? `/junior/writing?grade=${p.grade}` : "/junior/writing"} className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>返回</T></BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold">{p.topic}</h1>
       <div className="mt-3 rounded-2xl border bg-card p-4 text-sm">
         <div className="font-bold"><T>📌 题目</T></div>
@@ -252,7 +253,7 @@ export default function JuniorWritingPlay() {
         </section>
       }
       <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
-        <BackLink to="/junior/writing" className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>返回写作题库</T></BackLink>
+        <BackLink to={p?.grade ? `/junior/writing?grade=${p.grade}` : "/junior/writing"} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"><ArrowLeft className="size-4" /> <T>返回写作题库</T></BackLink>
         <Link to="/junior" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🏫 初中首页</T></Link>
         <Link to="/pets" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted"><T>🐾 宠物</T></Link>
       </div>

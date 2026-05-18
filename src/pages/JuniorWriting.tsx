@@ -10,7 +10,8 @@ type P = {id: string;topic: string;prompt_cn: string;grade: number;min_words: nu
 export default function JuniorWriting() {
   const [params] = useSearchParams();
   const grade = params.get("grade");
-  const backTo = grade ? `/junior/g/${grade}` : "/junior";
+  const gradeDisplay = grade ? String(Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)) : null;
+  const backTo = gradeDisplay ? `/junior/g/${gradeDisplay}` : "/junior";
   const [items, setItems] = useState<P[]>([]);
   useEffect(() => {
     let q: any = (supabase as any).from("junior_writing_prompts").
@@ -21,7 +22,7 @@ export default function JuniorWriting() {
   }, [grade]);
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {grade ? `返回初${grade}` : "返回初中专区"}</BackLink>
+      <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {gradeDisplay ? `返回初${gradeDisplay}` : "返回初中专区"}</BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold"><T>✍️ 初中写作训练</T></h1>
       <p className="mt-1 text-sm text-muted-foreground"><T>命题作文 · AI 评分 · 范文对比 · 提交奖星币</T></p>
       {grade &&

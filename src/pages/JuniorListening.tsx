@@ -50,7 +50,8 @@ function pctOf(agg: AttemptAgg | undefined) {
 export default function JuniorListening() {
   const [params] = useSearchParams();
   const grade = params.get("grade");
-  const backTo = grade ? `/junior/g/${grade}` : "/junior";
+  const gradeDisplay = grade ? String(Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)) : null;
+  const backTo = gradeDisplay ? `/junior/g/${gradeDisplay}` : "/junior";
   const [items, setItems] = useState<E[]>([]);
   const [aggMap, setAggMap] = useState<Map<string, AttemptAgg>>(new Map());
   const [filter, setFilter] = useState<FilterKey>("all");
@@ -143,7 +144,7 @@ export default function JuniorListening() {
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-5 py-8">
       <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> {grade ? `返回初${grade}` : "返回初中专区"}
+        <ArrowLeft className="size-4" /> {gradeDisplay ? `返回初${gradeDisplay}` : "返回初中专区"}
       </BackLink>
       <div className="flex items-baseline justify-between gap-4">
         <div>

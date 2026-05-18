@@ -354,6 +354,7 @@ const App = () => (
           <Route path="/admin/feedback" element={<AdminFeedback />} />
           <Route path="/admin/grammar-content" element={<AdminGrammarContent />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/hub" element={<Dashboard />} />
           <Route path="/dashboard" element={<LearningCenter />} />
           <Route path="/learning-center" element={<Navigate to="/dashboard" replace />} />
           <Route path="/learning-center/list" element={<LearningCenterList />} />

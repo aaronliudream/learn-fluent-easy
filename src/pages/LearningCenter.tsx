@@ -1,9 +1,10 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { Sparkles, ChevronDown, ChevronRight, Loader2, RefreshCw, Zap, MapPin } from "lucide-react";
+import { Sparkles, ChevronDown, ChevronRight, Loader2, RefreshCw, Zap, MapPin, Calendar } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { supabase } from "@/integrations/supabase/client";
 import { useDiagnostic } from "@/hooks/useDiagnostic";
+import { useStreakStats } from "@/hooks/useStreakStats";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { MasteryBar, MasteryCounts } from "@/components/learning-center/MasteryBar";
 import { ItemListDrawer, type ItemState, type StageKey } from "@/components/learning-center/ItemListDrawer";
@@ -71,7 +72,9 @@ export default function LearningCenter() {
   const [snaps, setSnaps] = useState<Snap[]>([]);
   const [loading, setLoading] = useState(true);
   const [signedIn, setSignedIn] = useState(true);
+  const [userId, setUserId] = useState<string | null>(null);
   const { data: diag, loading: diagLoading, refresh } = useDiagnostic(true);
+  const { stats: streak } = useStreakStats(userId);
 
   const [drawer, setDrawer] = useState<{stage: StageK;module: string;state: ItemState;grade?: number;title: string;} | null>(null);
 
@@ -79,9 +82,10 @@ export default function LearningCenter() {
     let cancelled = false;
     (async () => {
       const { data: { user } } = await supabase.auth.getUser();
-      if (!user) {if (!cancelled) {setSignedIn(false);setLoading(false);}return;}
+      if (!user) {if (!cancelled) {setSignedIn(false);setLoading(false);setUserId(null);}return;}
 
       const uid = user.id;
+      if (!cancelled) setUserId(uid);
       const [ovR, spR, mpR, scR, snR] = await Promise.all([
       supabase.from("mastery_overall").select("*").eq("user_id", uid).maybeSingle(),
       supabase.from("mastery_stage_proportion").select("*").eq("user_id", uid),
@@ -136,6 +140,25 @@ export default function LearningCenter() {
       <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground">
         <T>← 返回</T>
       </BackLink>
+
+      {/* === 打卡 & 活跃数据 === */}
+      {streak && (
+        <div className="mb-4 flex flex-wrap gap-2">
+          <div className="flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5 text-sm font-bold text-orange-700 dark:border-orange-500/30 dark:bg-orange-500/10 dark:text-orange-300">
+            🔥 <span className="tabular-nums">{streak.current_streak}</span> <T>天连续打卡</T>
+          </div>
+          <div className="flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-3 py-1.5 text-sm font-medium">
+            <Calendar className="size-3.5 text-muted-foreground" />
+            <span className="tabular-nums">{streak.active_days_this_month}</span>
+            <span className="text-xs text-muted-foreground"><T>天本月活跃</T></span>
+          </div>
+          <div className="flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-3 py-1.5 text-sm font-medium">
+            <Zap className="size-3.5 text-muted-foreground" />
+            <span className="tabular-nums">{streak.minutes_this_month}</span>
+            <span className="text-xs text-muted-foreground"><T>分钟本月学习</T></span>
+          </div>
+        </div>
+      )}
 
       {/* === AI 诊断卡 === */}
       <section className="overflow-hidden rounded-2xl border border-border bg-card">

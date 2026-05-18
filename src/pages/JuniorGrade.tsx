@@ -1,5 +1,4 @@
 import { T } from "@/i18n/T";import { Link, useParams } from "react-router-dom";
-import BackLink from "@/components/BackLink";
 import { ArrowLeft, Sparkles, BookOpen, Target, Headphones, PenLine } from "lucide-react";
 import OnlineWidget from "@/components/social/OnlineWidget";
 
@@ -49,9 +48,9 @@ export default function JuniorGrade() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <Link to="/junior" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> <T>返回初中专区</T>
-      </BackLink>
+      </Link>
 
       {/* 🎮 游戏化词汇 — 最吸引学生的入口，放最前面 */}
       <Link

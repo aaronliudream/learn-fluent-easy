@@ -38,9 +38,11 @@ function shuffle<T>(arr: T[]): T[] {
 export default function CohortIntakeModal({
   vocabIds,
   onClose,
+  stage = "gaokao",
 }: {
   vocabIds: string[];
   onClose: () => void;
+  stage?: "gaokao" | "junior";
 }) {
   const { toast } = useToast();
   const qc = useQueryClient();
@@ -66,9 +68,10 @@ export default function CohortIntakeModal({
         onClose();
         return;
       }
+      const isJunior = stage === "junior";
       const { data, error } = await supabase
-        .from("gaokao_vocab")
-        .select("id, word, primary_gloss")
+        .from(isJunior ? "junior_vocab" : "gaokao_vocab")
+        .select(isJunior ? "id, word, meaning_cn" : "id, word, primary_gloss")
         .in("id", pool)
         .limit(COHORT_SIZE);
       if (error || !data || data.length < COHORT_SIZE) {
@@ -76,7 +79,11 @@ export default function CohortIntakeModal({
         onClose();
         return;
       }
-      const words = (data as PickedWord[]).slice(0, COHORT_SIZE);
+      const words = (data as any[]).slice(0, COHORT_SIZE).map((d) => ({
+        id: d.id,
+        word: d.word,
+        primary_gloss: isJunior ? d.meaning_cn : d.primary_gloss,
+      })) as PickedWord[];
       setPicked(words);
       setRatings(Array(words.length).fill(null));
       setHyperFlags(Array(words.length).fill(false));

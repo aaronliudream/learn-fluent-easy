@@ -1,0 +1,23 @@
+{
+  "book": "4A",
+  "pdf": "义务教育教科书·英语（PEP）（三年级起点）四年级上册.pdf",
+  "appendix_pdf_pages_1based": [
+    77,
+    78
+  ],
+  "raw_entries": 33,
+  "kept": 33,
+  "blacklisted": 0,
+  "missing_page_ref": 0,
+  "unit_lookup_success": 33,
+  "unit_lookup_failed": 0,
+  "deduped": 33,
+  "noise_hits": {
+    "\\blet'?s\\b": [],
+    "\\bstory\\b": [],
+    "\\bappendix\\b": [],
+    "^[a-z]$": []
+  },
+  "total_noise": 0,
+  "csv": "docs\\vocab\\primary_4A_clean.csv"
+}

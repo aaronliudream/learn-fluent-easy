@@ -747,9 +747,14 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
   const [input, setInput] = useState("");
   const [feedback, setFeedback] = useState<"" | "right" | "wrong">("");
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  const inputRef = useRef<HTMLInputElement>(null);
   const cur = queue[idx];
 
   useEffect(() => {if (cur) speak(cur.word);}, [cur?.id]);
+  useEffect(() => {
+    const t = setTimeout(() => inputRef.current?.focus(), 100);
+    return () => clearTimeout(t);
+  }, [idx]);
 
   if (!cur) return <main className="p-8"><p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p></main>;
 
@@ -817,7 +822,7 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
         </div>
         <div className="space-y-2">
           <input
-            autoFocus
+            ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {

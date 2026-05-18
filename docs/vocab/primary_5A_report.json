@@ -1,0 +1,24 @@
+{
+  "book": "5A",
+  "pdf": "义务教育教科书·英语（PEP）（三年级起点）五年级上册.pdf",
+  "source": "Appendix 1 (Words in each unit) — unit from direct textbook labels",
+  "per_unit_pdf_pages_1based": [
+    77,
+    78,
+    79
+  ],
+  "raw_entries": 131,
+  "kept": 131,
+  "blacklisted": 0,
+  "missing_page_ref": 0,
+  "unit_unknown": 0,
+  "deduped": 131,
+  "noise_hits": {
+    "\\blet'?s\\b": [],
+    "\\bstory\\b": [],
+    "\\bappendix\\b": [],
+    "^[a-z]$": []
+  },
+  "total_noise": 0,
+  "csv": "docs\\vocab\\primary_5A_clean.csv"
+}

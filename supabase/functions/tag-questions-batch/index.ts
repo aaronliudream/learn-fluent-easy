@@ -12,11 +12,11 @@ type KP = { id: string; level3: string; category_name: string };
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
   try {
-    const apiKey = Deno.env.get("LOVABLE_API_KEY");
+    const apiKey = Deno.env.get("GOOGLE_AI_API_KEY");
     const sbUrl = Deno.env.get("SUPABASE_URL")!;
     const sbSrv = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     if (!apiKey) {
-      return new Response(JSON.stringify({ error: "missing LOVABLE_API_KEY" }), {
+      return new Response(JSON.stringify({ error: "missing GOOGLE_AI_API_KEY" }), {
         status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
@@ -91,11 +91,11 @@ D. ${q.option_d}
 解析: ${(q.general_explanation || "").slice(0, 300)}`;
     }).join("\n")}`;
 
-    const r = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+    const r = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
       method: "POST",
       headers: { "Authorization": `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
+        model: "gemini-2.5-flash",
         messages: [
           { role: "system", content: sys },
           { role: "user", content: userMsg },

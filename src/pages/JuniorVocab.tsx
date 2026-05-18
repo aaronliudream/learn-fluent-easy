@@ -116,7 +116,8 @@ export default function JuniorVocab() {
   const exit = () => {
     const np = new URLSearchParams(params);
     np.delete("mode");
-    setParams(np);
+    np.delete("group");
+    setParams(np, { replace: true });
   };
 
   if (loading) {
@@ -171,7 +172,7 @@ export default function JuniorVocab() {
   if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={absGrade} />;
 
   if (groupIdx >= 0 && groupIdx < groups.length) {
-    return <JuniorWordGroup group={groups[groupIdx]} groupNumber={groupIdx + 1} grade={displayGrade} onExit={() => setParams({ grade })} onPractice={(m) => {const np = new URLSearchParams(params);np.set("mode", m);setParams(np);}} />;
+    return <JuniorWordGroup group={groups[groupIdx]} groupNumber={groupIdx + 1} grade={displayGrade} onExit={() => setParams({ grade }, { replace: true })} onPractice={(m) => {const np = new URLSearchParams(params);np.set("mode", m);setParams(np);}} />;
   }
 
   return <JuniorVocabHub words={words} groups={groups} grade={displayGrade} gradeNum={rawGrade <= 3 ? rawGrade + 6 : rawGrade} onPick={(m) => {const np = new URLSearchParams(params);np.set("mode", m);setParams(np);}} onPickGroup={(i) => setParams({ grade, group: String(i + 1) })} />;
@@ -781,9 +782,14 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
   const [input, setInput] = useState("");
   const [feedback, setFeedback] = useState<"" | "right" | "wrong">("");
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  const inputRef = useRef<HTMLInputElement>(null);
   const cur = queue[idx];
 
   useEffect(() => {if (cur) speak(cur.word);}, [cur?.id]);
+  useEffect(() => {
+    const t = setTimeout(() => inputRef.current?.focus(), 100);
+    return () => clearTimeout(t);
+  }, [idx]);
 
   if (!cur) return <main className="p-8"><p className="text-sm text-muted-foreground">{zh ? "暂无可用单词" : "No words available"}</p></main>;
 
@@ -867,7 +873,7 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
         </div>
         <div className="space-y-2">
           <input
-            autoFocus
+            ref={inputRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {

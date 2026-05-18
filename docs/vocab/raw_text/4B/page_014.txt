@@ -1,0 +1,28 @@
+.
+.
+Computer
+Room
+Gym
+Classroom
+2
+Music Room
+Do you have a library?
+Yes. The library is on the 
+second f
+ loor. 
+Do you have an art room?
+Yes. The art room is next to 
+the gym.
+Where is the teachers’ off
+ ice?
+The teachers’ off
+ ice is next 
+to the library.
+Where is Classroom 1? 
+Classroom 1 is under the 
+teachers’ off
+ ice.
+Look and write. 
+Read and fill in the table.
+Read and write
+9

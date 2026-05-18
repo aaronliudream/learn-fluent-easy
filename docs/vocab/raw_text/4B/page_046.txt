@@ -1,0 +1,32 @@
+B
+Wow! You have
+a lot of animals!
+What are those? 
+What about
+those? Are
+they hens? 
+Cool! How
+many horses
+do you have? 
+They’re
+horses.  
+What are those?
+Are they horses?
+Yes, they are.
+Mmm ...
+Seventeen. 
+No, they aren’t. 
+They’re ducks. 
+cat: 
+meow
+duck: quack
+dog: 
+woof
+hen: 
+cluck
+cow:  
+moo
+horse: neigh
+Let’s talk
+Let’s play 
+41

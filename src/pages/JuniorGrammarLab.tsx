@@ -1,5 +1,5 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Check, Eye, EyeOff, Moon, RotateCw, Sparkles, Star, Sun, Trophy, X, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -35,6 +35,7 @@ type Pt = {
   id: string;
   title: string;
   cefr: string | null;
+  grade: number | null;
   mnemonic: string | null;
   explanation_md: string | null;
   hook_line: string | null;
@@ -832,11 +833,11 @@ function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, o
 }
 
 /* ─────────────── Phase: Done ─────────────── */
-function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPointId
+function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPointId, grammarHref
 
 
 
-}: {state: LabState;mistakes: Mistake[];onReplay: () => void;onAskTutor: (m: Mistake) => void;bossPassed?: boolean;nextPointId?: string | null;}) {
+}: {state: LabState;mistakes: Mistake[];onReplay: () => void;onAskTutor: (m: Mistake) => void;bossPassed?: boolean;nextPointId?: string | null;grammarHref?: string;}) {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-8 animate-fade-in">
       <div className="text-center space-y-3">
@@ -888,7 +889,7 @@ function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPoi
             <T>进入下一关</T> <ArrowRight size={16} />
           </Link>
         }
-        <Link to="/junior/grammar" className="btn-ghost inline-flex items-center gap-2"><T>返回语法地图</T></Link>
+        <Link to={grammarHref ?? "/junior/grammar"} className="btn-ghost inline-flex items-center gap-2"><T>返回语法地图</T></Link>
       </div>
     </div>);
 
@@ -897,6 +898,7 @@ function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPoi
 /* ─────────────── Main ─────────────── */
 export default function JuniorGrammarLab() {
   const { id } = useParams<{id: string;}>();
+  const nav = useNavigate();
   const [pt, setPt] = useState<Pt | null>(null);
   const [examQs, setExamQs] = useState<ExamQ[]>([]);
   const [loading, setLoading] = useState(true);
@@ -929,7 +931,7 @@ export default function JuniorGrammarLab() {
     setState(loadState(id));
     (async () => {
       const { data: p } = await supabase.from("junior_grammar_points").
-      select("id,title,cefr,mnemonic,explanation_md,teacher_script,immersion_cards,hook_line,hook_line_cn,contrast_table,reflex_cards,situation_drills,correction_tasks,boss_questions").
+      select("id,title,cefr,grade,mnemonic,explanation_md,teacher_script,immersion_cards,hook_line,hook_line_cn,contrast_table,reflex_cards,situation_drills,correction_tasks,boss_questions").
       eq("id", id).maybeSingle();
       if (p) setPt(p as any);
       const { data: qs } = await supabase.from("junior_grammar_questions").
@@ -1030,7 +1032,7 @@ export default function JuniorGrammarLab() {
 
   return (
     <CosmicShell theme={theme} focus={focus}>
-      <HUD state={state} theme={theme} focus={focus} onToggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")} onToggleFocus={() => setFocus(!focus)} onBack={() => history.back()} />
+      <HUD state={state} theme={theme} focus={focus} onToggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")} onToggleFocus={() => setFocus(!focus)} onBack={() => { const g = pt?.grade; const fb = g ? `/junior/grammar?grade=${g}` : "/junior/grammar"; if (window.history.state?.idx > 0) nav(-1); else nav(fb); }} />
       <PhaseRail active={phase} done={state.phasesDone} onJump={(i) => setPhase(i)} />
 
       {phase === 0 &&
@@ -1118,9 +1120,10 @@ export default function JuniorGrammarLab() {
         mistakes={state.mistakes}
         bossPassed={bossPassed}
         nextPointId={nextPointId}
+        grammarHref={pt?.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar"}
         onReplay={() => {setPhase(0);setState({ ...state, phasesDone: [], streak: 0, mistakes: [] });}}
         onAskTutor={(m) => {
-          const url = `/junior/grammar-point/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;
+          const url = `/junior/grammar/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;
           window.location.href = url;
         }} />
 

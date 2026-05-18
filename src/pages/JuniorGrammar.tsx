@@ -29,7 +29,8 @@ type Pt = {
 export default function JuniorGrammar() {
   const [params] = useSearchParams();
   const grade = params.get("grade");
-  const backTo = grade ? `/junior/g/${grade}` : "/junior";
+  const gradeDisplay = grade ? String(Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)) : null;
+  const backTo = gradeDisplay ? `/junior/g/${gradeDisplay}` : "/junior";
   const [cats, setCats] = useState<Cat[]>([]);
   const [pts, setPts] = useState<Pt[]>([]);
   const [mastery, setMastery] = useState<Record<string, JuniorGrammarMastery>>({});
@@ -151,7 +152,7 @@ export default function JuniorGrammar() {
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
       <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> {grade ? `返回初${grade}` : "返回初中专区"}
+        <ArrowLeft className="size-4" /> {gradeDisplay ? `返回初${gradeDisplay}` : "返回初中专区"}
       </BackLink>
       <div className="mb-6">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">JUNIOR · GRAMMAR</div>

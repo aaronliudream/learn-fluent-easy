@@ -23,6 +23,31 @@ const guestEmail = (username: string) =>
   `${slugify(username)}.${Math.random().toString(36).slice(2, 8)}@${GUEST_DOMAIN}`;
 const pinToPassword = (pin: string) => `pin:${pin}:bigmoon-2026`;
 
+/** Supabase rate-limits signUp/sign-in per IP; guest nickname flow still uses signUp so the same cap applies. */
+function isSupabaseAuthRateLimited(error: { message?: string; status?: number } | null | undefined): boolean {
+  const msg = (error?.message ?? "").toLowerCase();
+  const st = error?.status;
+  return (
+    st === 429 ||
+    msg.includes("rate limit") ||
+    msg.includes("too many requests") ||
+    msg.includes("over_email_send_rate_limit")
+  );
+}
+
+function supabaseAuthToastMessage(
+  error: { message?: string; status?: number } | null | undefined,
+  t: (text: string) => string,
+  fallback: string,
+): string {
+  if (isSupabaseAuthRateLimited(error)) {
+    return t(
+      "当前访问较多，服务器暂时限制了注册，请几分钟后再试。这与是否填写邮箱无关，您也可稍后改用邮箱注册。",
+    );
+  }
+  return (error?.message?.trim()) || fallback;
+}
+
 const Auth = () => {
   const navigate = useNavigate();
   const t = useT();
@@ -107,7 +132,7 @@ const Auth = () => {
     });
     if (error || !data.user) {
       setLoading(false);
-      toast.error(error?.message ?? t("注册失败"));
+      toast.error(supabaseAuthToastMessage(error, t, t("注册失败")));
       return;
     }
     // Update profile with username + is_guest
@@ -144,7 +169,14 @@ const Auth = () => {
       password: pinToPassword(pin),
     });
     setLoading(false);
-    if (error) { toast.error(t("PIN 不正确")); return; }
+    if (error) {
+      toast.error(
+        isSupabaseAuthRateLimited(error)
+          ? supabaseAuthToastMessage(error, t, t("登录失败"))
+          : t("PIN 不正确"),
+      );
+      return;
+    }
     toast.success(t("欢迎回来，") + n + " 👋");
     const redirect2 = consumeRedirectPath();
     navigate(redirect2 || "/", { replace: true });
@@ -179,7 +211,7 @@ const Auth = () => {
     });
     if (error) {
       setLoading(false);
-      toast.error(error.message);
+      toast.error(supabaseAuthToastMessage(error, t, error.message));
       return;
     }
 
@@ -190,7 +222,11 @@ const Auth = () => {
       const { error: siErr } = await supabase.auth.signInWithPassword({ email, password });
       if (siErr) {
         setLoading(false);
-        toast.success(t("注册成功！请前往邮箱完成验证后再登录"), { duration: 8000 });
+        if (isSupabaseAuthRateLimited(siErr)) {
+          toast.error(supabaseAuthToastMessage(siErr, t, siErr.message));
+        } else {
+          toast.success(t("注册成功！请前往邮箱完成验证后再登录"), { duration: 8000 });
+        }
         return;
       }
       hasSession = true;
@@ -244,7 +280,7 @@ const Auth = () => {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) {
       setLoading(false);
-      toast.error(error.message);
+      toast.error(supabaseAuthToastMessage(error, t, error.message));
       return;
     }
     // Force a fresh session so subsequent requests use the real user's JWT.

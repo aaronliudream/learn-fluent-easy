@@ -229,6 +229,7 @@ export default function VocabMasteryPath({
         {intakeOpen && (
           <CohortIntakeModal
             vocabIds={vocabIds}
+            stage={stage}
             onClose={() => setIntakeOpen(false)}
           />
         )}

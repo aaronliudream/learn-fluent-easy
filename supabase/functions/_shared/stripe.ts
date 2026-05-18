@@ -19,7 +19,7 @@ export function getConnectionApiKey(env: StripeEnv): string {
 
 export function createStripeClient(env: StripeEnv): Stripe {
   const connectionApiKey = getConnectionApiKey(env);
-  const lovableApiKey = getEnv("LOVABLE_API_KEY");
+  const lovableApiKey = getEnv("GOOGLE_AI_API_KEY");
 
   return new Stripe(connectionApiKey, {
     apiVersion: "2026-03-25.dahlia",

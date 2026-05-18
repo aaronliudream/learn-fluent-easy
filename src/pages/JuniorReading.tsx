@@ -14,7 +14,8 @@ type R = {id: string;title: string;topic: string | null;word_count: number | nul
 export default function JuniorReading() {
   const [params] = useSearchParams();
   const grade = params.get("grade");
-  const backTo = grade ? `/junior/g/${grade}` : "/junior";
+  const gradeDisplay = grade ? String(Number(grade) >= 7 ? Number(grade) - 6 : Number(grade)) : null;
+  const backTo = gradeDisplay ? `/junior/g/${gradeDisplay}` : "/junior";
   const [items, setItems] = useState<R[]>([]);
   const [mastery, setMastery] = useState<Record<string, MasteryRow>>({});
   const [showMastered, setShowMastered] = useState(false);
@@ -95,7 +96,7 @@ export default function JuniorReading() {
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {grade ? `返回初${grade}` : "返回初中专区"}</BackLink>
+      <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> {gradeDisplay ? `返回初${gradeDisplay}` : "返回初中专区"}</BackLink>
       <h1 className="text-grad-title text-2xl font-extrabold"><T>📖 初中阅读训练</T></h1>
       <p className="mt-1 text-sm text-muted-foreground"><T>闯关式阅读 · ≥80% 解锁下一篇 · 100% 升一星 · 5⭐ 永久掌握</T></p>
 

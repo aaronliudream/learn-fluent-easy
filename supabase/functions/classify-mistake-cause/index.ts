@@ -10,7 +10,7 @@ const corsHeaders = {
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
-const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY");
 
 interface Body {
   attempt_id?: string;
@@ -51,16 +51,16 @@ Deno.serve(async (req) => {
       evidence: isFast ? "用时明显偏快，疑似粗心" : "默认归为知识缺口",
     };
 
-    if (LOVABLE_API_KEY) {
+    if (GOOGLE_AI_API_KEY) {
       try {
-        const aiRes = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+        const aiRes = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
           method: "POST",
           headers: {
-            Authorization: `Bearer ${LOVABLE_API_KEY}`,
+            Authorization: `Bearer ${GOOGLE_AI_API_KEY}`,
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            model: "google/gemini-2.5-flash",
+            model: "gemini-2.5-flash",
             messages: [
               {
                 role: "system",

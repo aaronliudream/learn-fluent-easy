@@ -90,14 +90,14 @@ function qualityCheck(raw: string): { ok: boolean; reason?: string } {
 }
 
 async function aiModerate(message: string): Promise<{ is_relevant: boolean; is_safe: boolean; reason: string } | null> {
-  const key = Deno.env.get('LOVABLE_API_KEY')
+  const key = Deno.env.get('GOOGLE_AI_API_KEY')
   if (!key) return null
   try {
-    const r = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+    const r = await fetch('https://generativelanguage.googleapis.com/v1beta/openai/chat/completions', {
       method: 'POST',
       headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'google/gemini-2.5-flash-lite',
+        model: 'gemini-2.5-flash-lite',
         messages: [
           {
             role: 'system',

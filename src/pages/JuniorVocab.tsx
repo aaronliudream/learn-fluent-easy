@@ -22,7 +22,7 @@ import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
 import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
 import GuidedSession from "@/components/vocab/GuidedSession";
 import ReviewPool from "@/components/vocab/ReviewPool";
-import { fetchDueReviewIds } from "@/lib/vocabMastery";
+import { fetchJuniorDueWordIds, recordJuniorWordMastery } from "@/lib/juniorWordMastery";
 import { Rocket } from "lucide-react";
 
 type Vocab = {
@@ -85,6 +85,7 @@ export default function JuniorVocab() {
   }, [grade]);
 
   const rawGrade = Number(grade);
+  const absGrade = rawGrade <= 3 ? rawGrade + 6 : rawGrade;
   const displayGrade = rawGrade <= 3 ? rawGrade : rawGrade - 6;
   const groups = useMemo(() => {
     const out: Vocab[][] = [];
@@ -149,16 +150,23 @@ export default function JuniorVocab() {
   if (mode === "guided") {
     // Take the current group (or first 100) so we have a focused pool.
     const focused = activePool.slice(0, 100);
-    return <GuidedSession pool={focused} onExit={exit} title={zh ? `初${displayGrade} · 本关通关` : `Guided round`} />;
+    return (
+      <GuidedSession
+        pool={focused}
+        onExit={exit}
+        title={zh ? `初${displayGrade} · 本关通关` : `Guided round`}
+        grade={absGrade}
+        trackJuniorMastery
+      />
+    );
   }
   if (mode === "review") {
-    return <JuniorReviewLauncher pool={words} onExit={exit} />;
+    return <JuniorReviewLauncher pool={words} onExit={exit} gradeNum={absGrade} />;
   }
-  const absGrade = rawGrade <= 3 ? rawGrade + 6 : rawGrade;
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
   if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
   if (mode === "duel") return <WordDuel pool={activePool} onExit={exit} />;
-  if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} />;
+  if (mode === "match") return <MemoryMatchWrapper pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "dict") return <DictationSession pool={activePool} onExit={exit} gradeNum={absGrade} />;
   if (mode === "classic") return <ClassicQuiz pool={activePool} onExit={exit} gradeNum={absGrade} />;
 
@@ -506,6 +514,10 @@ function JuniorWordGroup({ group, groupNumber, grade, onExit, onPractice }: {gro
 }
 
 /* -------------------- CLASSIC QUIZ -------------------- */
+function logJuniorVocabSideEffect(label: string, err: unknown) {
+  console.error(`[JuniorVocab] ${label}`, err);
+}
+
 function shuffle<T>(arr: T[]): T[] {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -579,24 +591,40 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
     speak(cur.word);
     if (correct) awardCoins(2, "junior_vocab_correct").catch(() => {});else
     notifyWrong();
-    await Promise.all([
-    recordCohortAttempt({
-      vocabId: cur.id, isCorrect: correct, kind: "en2cn",
-      source: "free_practice",
-    }).catch(() => {}),
-    recordAttempt({ questionType: "vocab", questionId: cur.id, userAnswer: m, isCorrect: correct }).catch(() => {}),
-    recordUnifiedAttempt({
-      stage: "junior",
-      grade: gradeNum,
-      module: "vocab",
-      item_type: "word",
-      item_id: cur.id,
-      item_label: cur.word,
-      is_correct: correct,
-      user_answer: m,
-      correct_answer: meaningForUi(cur, zh)
-    }).catch(() => {})]
-    );
+    const [, , unifiedRes] = await Promise.all([
+      recordCohortAttempt({
+        vocabId: cur.id,
+        isCorrect: correct,
+        kind: "en2cn",
+        source: "free_practice",
+      }).catch((e) => logJuniorVocabSideEffect("recordCohortAttempt", e)),
+      recordAttempt({
+        questionType: "vocab",
+        questionId: cur.id,
+        userAnswer: m,
+        isCorrect: correct,
+      }).catch((e) => logJuniorVocabSideEffect("recordAttempt", e)),
+      recordUnifiedAttempt({
+        stage: "junior",
+        grade: gradeNum,
+        module: "vocab",
+        item_type: "word",
+        item_id: cur.id,
+        item_label: cur.word,
+        is_correct: correct,
+        user_answer: m,
+        correct_answer: meaningForUi(cur, zh),
+      }),
+      recordJuniorWordMastery({
+        wordId: cur.id,
+        grade: gradeNum,
+        kind: "quiz",
+        isCorrect: correct,
+      }),
+    ]);
+    if (unifiedRes && !unifiedRes.success) {
+      logJuniorVocabSideEffect("recordUnifiedAttempt", unifiedRes.reason ?? "failed");
+    }
     setTimeout(() => {setPicked(null);setIdx((i) => i + 1);}, 900);
   };
 
@@ -655,7 +683,7 @@ function ClassicQuiz({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => vo
 
 /* -------------------- MEMORY MATCH WRAPPER --------------------
    MemoryMatch 组件签名可能不同；用一个简化的本地实现保证可用 */
-function MemoryMatchWrapper({ pool, onExit }: {pool: Vocab[];onExit: () => void;}) {
+function MemoryMatchWrapper({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
   const { lang } = useI18n();
   const zh = isChineseUi(lang);
   const PAIRS = 8;
@@ -685,7 +713,13 @@ function MemoryMatchWrapper({ pool, onExit }: {pool: Vocab[];onExit: () => void;
         setMatched((s) => new Set(s).add(a.pairId));
         setOpened([]);
         speak(cards.find((c) => c.pairId === a.pairId && c.side === "en")!.text);
-        awardCoins(3, "junior_match").catch(() => {});
+        awardCoins(3, "junior_match").catch((e) => logJuniorVocabSideEffect("awardCoins", e));
+        void recordJuniorWordMastery({
+          wordId: a.pairId,
+          grade: gradeNum,
+          kind: "match",
+          isCorrect: true,
+        });
       } else {
         lock.current = true;
         setTimeout(() => {setOpened([]);lock.current = false;}, 700);
@@ -778,24 +812,40 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
     setScore((s) => ({ correct: s.correct + (ok ? 1 : 0), total: s.total + 1 }));
     if (ok) awardCoins(3, "junior_vocab_dict").catch(() => {});else
     notifyWrong();
-    await Promise.all([
-    recordCohortAttempt({
-      vocabId: cur.id, isCorrect: ok, kind: "spell",
-      source: "free_practice",
-    }).catch(() => {}),
-    recordAttempt({ questionType: "vocab", questionId: cur.id, userAnswer: input, isCorrect: ok }).catch(() => {}),
-    recordUnifiedAttempt({
-      stage: "junior",
-      grade: gradeNum,
-      module: "vocab",
-      item_type: "word",
-      item_id: cur.id,
-      item_label: cur.word,
-      is_correct: ok,
-      user_answer: input,
-      correct_answer: cur.word
-    }).catch(() => {})]
-    );
+    const [, , unifiedRes] = await Promise.all([
+      recordCohortAttempt({
+        vocabId: cur.id,
+        isCorrect: ok,
+        kind: "spell",
+        source: "free_practice",
+      }).catch((e) => logJuniorVocabSideEffect("recordCohortAttempt", e)),
+      recordAttempt({
+        questionType: "vocab",
+        questionId: cur.id,
+        userAnswer: input,
+        isCorrect: ok,
+      }).catch((e) => logJuniorVocabSideEffect("recordAttempt", e)),
+      recordUnifiedAttempt({
+        stage: "junior",
+        grade: gradeNum,
+        module: "vocab",
+        item_type: "word",
+        item_id: cur.id,
+        item_label: cur.word,
+        is_correct: ok,
+        user_answer: input,
+        correct_answer: cur.word,
+      }),
+      recordJuniorWordMastery({
+        wordId: cur.id,
+        grade: gradeNum,
+        kind: "spell",
+        isCorrect: ok,
+      }),
+    ]);
+    if (unifiedRes && !unifiedRes.success) {
+      logJuniorVocabSideEffect("recordUnifiedAttempt", unifiedRes.reason ?? "failed");
+    }
     setTimeout(() => {setInput("");setFeedback("");setIdx((i) => i + 1);}, 1200);
   };
 
@@ -849,11 +899,11 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
 }
 
 /* -------- FSRS review launcher: filters pool to due words, then runs GuidedSession in review mode -------- */
-function JuniorReviewLauncher({ pool, onExit }: {pool: Vocab[];onExit: () => void;}) {
+function JuniorReviewLauncher({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
   const [duePool, setDuePool] = useState<Vocab[] | null>(null);
   useEffect(() => {
     (async () => {
-      const ids = await fetchDueReviewIds(pool.map((p) => p.id));
+      const ids = await fetchJuniorDueWordIds(pool.map((p) => p.id));
       const set = new Set(ids);
       setDuePool(pool.filter((p) => set.has(p.id)));
     })();
@@ -873,5 +923,14 @@ function JuniorReviewLauncher({ pool, onExit }: {pool: Vocab[];onExit: () => voi
       </main>);
 
   }
-  return <GuidedSession pool={duePool} onExit={onExit} title="到期复习" mode="review" />;
+  return (
+    <GuidedSession
+      pool={duePool}
+      onExit={onExit}
+      title="到期复习"
+      mode="review"
+      grade={gradeNum}
+      trackJuniorMastery
+    />
+  );
 }

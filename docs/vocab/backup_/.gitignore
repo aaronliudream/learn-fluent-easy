@@ -1,0 +1,4 @@
+# Exported DB snapshots — regenerate with scripts/export_junior_db_backup.py
+*.csv
+*.json
+!export_meta_*.json

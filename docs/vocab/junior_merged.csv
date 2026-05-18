@@ -1,0 +1,2374 @@
+word_id,word,pos,meaning_cn,stage,grade,volume,unit,source_type,source_page,confidence
+jr-7B-U1-0001,guitar,n.,吉他,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0002,sing,v.,唱歌,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0003,swim,v. & n.,游泳,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0004,dance,v. n.,跳舞;舞蹈,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0005,draw,v.,画,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0006,chess,n.,国际象棋,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0007,play chess,,下国际象棋,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0008,speak,v.,说(某种语言);说话,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0009,speak English,,说英语,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0010,join,v.,参加;加入,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0011,club,n.,俱乐部;社团,junior,7,7B,U1,wordlist,p.1,high
+jr-7B-U1-0012,be good at ...,,擅长于……,junior,7,7B,U1,wordlist,p.2,high
+jr-7B-U1-0013,tell,v.,讲述;告诉,junior,7,7B,U1,wordlist,p.2,high
+jr-7B-U1-0014,story,n.,故事;小说,junior,7,7B,U1,wordlist,p.2,high
+jr-7B-U1-0015,write,v.,写作;写字,junior,7,7B,U1,wordlist,p.3,high
+jr-7B-U1-0016,show,n. v.,演出;节目;给……看;展示,junior,7,7B,U1,wordlist,p.3,high
+jr-7B-U1-0017,or,conj.,或者;也不(用于否定句),junior,7,7B,U1,wordlist,p.3,high
+jr-7B-U1-0018,talk,v. & n.,说话;交谈,junior,7,7B,U1,wordlist,p.3,high
+jr-7B-U1-0019,talk to ...,,跟……说,junior,7,7B,U1,wordlist,p.3,high
+jr-7B-U1-0020,kung fu,n.,(中国)功夫,junior,7,7B,U1,wordlist,p.3,high
+jr-7B-U1-0021,drum,n.,鼓,junior,7,7B,U1,wordlist,p.4,high
+jr-7B-U1-0022,play the drums,,敲鼓,junior,7,7B,U1,wordlist,p.4,high
+jr-7B-U1-0023,piano,n.,钢琴,junior,7,7B,U1,wordlist,p.4,high
+jr-7B-U1-0024,play the piano,,弹钢琴,junior,7,7B,U1,wordlist,p.4,high
+jr-7B-U1-0025,violin,n.,小提琴,junior,7,7B,U1,wordlist,p.4,high
+jr-7B-U1-0026,play the violin,,拉小提琴,junior,7,7B,U1,wordlist,p.4,high
+jr-7B-U1-0027,also,adv.,也;而且,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0028,people,n.,人;人们,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0029,home,n. adv.,家;活动本部;到家;在家,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0030,be good with ...,,善于应付……的;对……有办法,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0031,make,v.,使成为;制造,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0032,make friends,,结交朋友,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0033,today,adv.,在今天,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0034,help (sb.) with sth.,,在某方面帮助(某人),junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0035,center,n.,中心;中央(= centre),junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0036,weekend,n.,周末,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0037,on the weekend,,(在)周末,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0038,teach,v.,教;讲授,junior,7,7B,U1,wordlist,p.5,high
+jr-7B-U1-0039,musician,n.,音乐家,junior,7,7B,U1,wordlist,p.6,high
+jr-7B-U1-0040,Lisa,,莉萨(女名),junior,7,7B,U1,recognize,p.2,high
+jr-7B-U1-0041,Jill,,吉尔(女名),junior,7,7B,U1,recognize,p.3,high
+jr-7B-U1-0042,Peter,,彼得(男名),junior,7,7B,U1,recognize,p.5,high
+jr-7B-U2-0001,up,adv.,向上,junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0002,get up,,起床;站起,junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0003,dress,v. n.,穿衣服;连衣裙,junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0004,get dressed,,穿上衣服,junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0005,brush,v. n.,刷;刷净;刷子,junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0006,tooth,n.,牙齿(pl. teeth),junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0007,shower,n. & v.,淋浴;淋浴器(间),junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0008,take a shower,,洗淋浴,junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0009,usually,adv.,通常地;一般地,junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0010,forty,num.,四十,junior,7,7B,U2,wordlist,p.7,high
+jr-7B-U2-0011,wow,interj.,(表示惊奇或敬佩)哇;呀,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0012,never,adv.,从不;绝不,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0013,early,adv. & adj.,早(的),junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0014,fifty,num.,五十,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0015,job,n.,工作;职业,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0016,work,v. & n.,工作,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0017,station,n.,电(视)台;车站,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0018,radio station,,广播电台,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0019,o'clock,adv.,(表示整点)……点钟,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0020,night,n.,晚上;夜晚,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0021,funny,adj.,奇怪的;滑稽好笑的,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0022,exercise,v. & n.,锻炼;练习,junior,7,7B,U2,wordlist,p.8,high
+jr-7B-U2-0023,on weekends,,(在)周末,junior,7,7B,U2,wordlist,p.9,high
+jr-7B-U2-0024,best,adj. adv.,最好的;最好地;最,junior,7,7B,U2,wordlist,p.9,high
+jr-7B-U2-0025,group,n.,组;群,junior,7,7B,U2,wordlist,p.9,high
+jr-7B-U2-0026,half,n. & pron.,一半;半数,junior,7,7B,U2,wordlist,p.10,high
+jr-7B-U2-0027,past,prep. adj.,晚于;过(时间);过去的,junior,7,7B,U2,wordlist,p.10,high
+jr-7B-U2-0028,quarter,n.,一刻钟;四分之一,junior,7,7B,U2,wordlist,p.10,high
+jr-7B-U2-0029,homework,n.,家庭作业,junior,7,7B,U2,wordlist,p.10,high
+jr-7B-U2-0030,do (one's) homework,,做作业,junior,7,7B,U2,wordlist,p.10,high
+jr-7B-U2-0031,run,v.,跑;奔,junior,7,7B,U2,wordlist,p.10,high
+jr-7B-U2-0032,clean,v. adj.,打扫;弄干净;干净的,junior,7,7B,U2,wordlist,p.10,high
+jr-7B-U2-0033,walk,v. & n.,走路;步行,junior,7,7B,U2,wordlist,p.10,high
+jr-7B-U2-0034,take a walk,,散步;走一走,junior,7,7B,U2,wordlist,p.10,high
+jr-7B-U2-0035,quickly,adv.,很快地,junior,7,7B,U2,wordlist,p.11,high
+jr-7B-U2-0036,either,conj. adv.,或者;也(用于否定词组后),junior,7,7B,U2,wordlist,p.11,high
+jr-7B-U2-0037,either ... or ...,,要么……要么……;或者……或者……,junior,7,7B,U2,wordlist,p.11,high
+jr-7B-U2-0038,lot,pron.,大量;许多,junior,7,7B,U2,wordlist,p.11,high
+jr-7B-U2-0039,lots of,,大量;许多,junior,7,7B,U2,wordlist,p.11,high
+jr-7B-U2-0040,sometimes,adv.,有时,junior,7,7B,U2,wordlist,p.11,high
+jr-7B-U2-0041,taste,v. n.,有……的味道;品尝;味道;滋味,junior,7,7B,U2,wordlist,p.11,high
+jr-7B-U2-0042,life,n.,生活;生命(pl. lives),junior,7,7B,U2,wordlist,p.12,high
+jr-7B-U2-0043,Rick,,里克(男名),junior,7,7B,U2,recognize,p.7,high
+jr-7B-U2-0044,Jim,,吉姆(男名),junior,7,7B,U2,recognize,p.8,high
+jr-7B-U2-0045,Scott,,斯科特(男名),junior,7,7B,U2,recognize,p.8,high
+jr-7B-U2-0046,Tony,,托尼(男名),junior,7,7B,U2,recognize,p.11,high
+jr-7B-U3-0001,get to,,到达,junior,7,7B,U3,wordlist,p.13,high
+jr-7B-U3-0002,train,n.,火车,junior,7,7B,U3,wordlist,p.13,high
+jr-7B-U3-0003,bus,n.,公共汽车,junior,7,7B,U3,wordlist,p.13,high
+jr-7B-U3-0004,subway,n.,地铁,junior,7,7B,U3,wordlist,p.13,high
+jr-7B-U3-0005,take the subway,,乘地铁,junior,7,7B,U3,wordlist,p.13,high
+jr-7B-U3-0006,ride,v. n.,骑;旅程,junior,7,7B,U3,wordlist,p.13,high
+jr-7B-U3-0007,bike,n.,自行车,junior,7,7B,U3,wordlist,p.13,high
+jr-7B-U3-0008,ride a bike,,骑自行车,junior,7,7B,U3,wordlist,p.13,high
+jr-7B-U3-0009,sixty,num.,六十,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0010,seventy,num.,七十,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0011,eighty,num.,八十,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0012,ninety,num.,九十,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0013,hundred,num.,一百,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0014,minute,n.,分钟,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0015,far,adv. & adj.,远;远的,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0016,kilometer,n.,千米;公里(= kilometre; abbr. km),junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0017,new,adj.,新的;刚出现的,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0018,every,adj.,每一;每个,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0019,every day,,每天,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0020,by,prep.,(表示方式)乘(交通工具),junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0021,by bike,,骑自行车,junior,7,7B,U3,wordlist,p.14,high
+jr-7B-U3-0022,drive,v.,开车,junior,7,7B,U3,wordlist,p.15,high
+jr-7B-U3-0023,car,n.,小汽车;轿车,junior,7,7B,U3,wordlist,p.15,high
+jr-7B-U3-0024,live,v.,居住;生活,junior,7,7B,U3,wordlist,p.15,high
+jr-7B-U3-0025,stop,n. v.,车站;停止,junior,7,7B,U3,wordlist,p.16,high
+jr-7B-U3-0026,think of,,认为;想起,junior,7,7B,U3,wordlist,p.16,high
+jr-7B-U3-0027,cross,v.,横过;越过,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0028,river,n.,河;江,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0029,many,adj. & pron.,许多,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0030,village,n.,村庄;村镇,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0031,between,prep.,介于……之间,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0032,between ... and ...,,在……和……之间,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0033,bridge,n.,桥,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0034,boat,n.,小船,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0035,ropeway,n.,索道,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0036,year,n.,年;岁,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0037,afraid,adj.,害怕;畏惧,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0038,like,prep.,像;怎么样,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0039,villager,n.,村民,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0040,leave,v.,离开;留下,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0041,dream,n. v.,梦想;睡梦;做梦,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0042,true,adj.,真的;符合事实的,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0043,come true,,实现;成为现实,junior,7,7B,U3,wordlist,p.17,high
+jr-7B-U3-0044,Dave,,戴夫(男名),junior,7,7B,U3,recognize,p.13,high
+jr-7B-U4-0001,rule,n.,规则;规章,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0002,arrive,v.,到达,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0003,(be) on time,,准时,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0004,hallway,n.,走廊;过道,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0005,hall,n.,大厅;礼堂,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0006,dining hall,,餐厅,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0007,listen,v.,听;倾听,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0008,listen to ...,,听……,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0009,fight,v. & n.,打架;战斗,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0010,sorry,adj.,抱歉的;难过的;惋惜的,junior,7,7B,U4,wordlist,p.19,high
+jr-7B-U4-0011,outside,adv. adj.,在外面;外面的,junior,7,7B,U4,wordlist,p.20,high
+jr-7B-U4-0012,wear,v.,穿;戴,junior,7,7B,U4,wordlist,p.20,high
+jr-7B-U4-0013,important,adj.,重要的,junior,7,7B,U4,wordlist,p.20,high
+jr-7B-U4-0014,bring,v.,带来;取来,junior,7,7B,U4,wordlist,p.20,high
+jr-7B-U4-0015,have to,,必须;不得不,junior,7,7B,U4,wordlist,p.20,high
+jr-7B-U4-0016,uniform,n.,校服;制服,junior,7,7B,U4,wordlist,p.20,high
+jr-7B-U4-0017,quiet,adj.,安静的,junior,7,7B,U4,wordlist,p.20,high
+jr-7B-U4-0018,out,adv.,外出,junior,7,7B,U4,wordlist,p.22,high
+jr-7B-U4-0019,go out,,外出(娱乐),junior,7,7B,U4,wordlist,p.22,high
+jr-7B-U4-0020,practice,v. & n.,练习,junior,7,7B,U4,wordlist,p.22,high
+jr-7B-U4-0021,dish,n.,碟;盘,junior,7,7B,U4,wordlist,p.22,high
+jr-7B-U4-0022,do the dishes,,清洗餐具,junior,7,7B,U4,wordlist,p.22,high
+jr-7B-U4-0023,before,prep. & conj. adv.,在……以前;以前,junior,7,7B,U4,wordlist,p.22,high
+jr-7B-U4-0024,make one's bed,,铺床,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0025,dirty,adj.,脏的,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0026,kitchen,n.,厨房,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0027,more,adj. & pron.,更多(的),junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0028,noisy,adj.,吵闹的,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0029,relax,v.,放松;休息,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0030,read,v.,读;阅读,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0031,terrible,adj.,非常讨厌的;可怕的,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0032,feel,v.,感受;觉得,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0033,strict,adj.,严格的;严厉的,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0034,be strict (with sb.),,(对某人)要求严格,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0035,remember,v.,记住;记起,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0036,follow,v.,遵循;跟随,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0037,follow the rules,,遵守规则,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0038,luck,n.,幸运;运气,junior,7,7B,U4,wordlist,p.23,high
+jr-7B-U4-0039,keep,v.,保持;保留,junior,7,7B,U4,wordlist,p.24,high
+jr-7B-U4-0040,hair,n.,头发;毛发,junior,7,7B,U4,wordlist,p.24,high
+jr-7B-U4-0041,learn,v.,学习;学会,junior,7,7B,U4,wordlist,p.24,high
+jr-7B-U4-0042,Clark,,克拉克(姓;男名),junior,7,7B,U4,recognize,p.19,high
+jr-7B-U4-0043,Amy,,埃米(女名),junior,7,7B,U4,recognize,p.19,high
+jr-7B-U4-0044,Molly,,莫莉(女名),junior,7,7B,U4,recognize,p.23,high
+jr-7B-U4-0045,New York,,纽约,junior,7,7B,U4,recognize,p.23,high
+jr-7B-U5-0001,panda,n.,熊猫,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0002,zoo,n.,动物园,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0003,tiger,n.,老虎,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0004,elephant,n.,大象,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0005,koala,n.,树袋熊;考拉,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0006,lion,n.,狮子,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0007,giraffe,n.,长颈鹿,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0008,animal,n.,动物,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0009,cute,adj.,可爱的;机灵的,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0010,lazy,adj.,懒散的;懒惰的,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0011,smart,adj.,聪明的,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0012,beautiful,adj.,美丽的;美好的,junior,7,7B,U5,wordlist,p.25,high
+jr-7B-U5-0013,scary,adj.,吓人的;恐怖的,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0014,kind,n.,种类,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0015,kind of,,稍微;有点儿,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0016,Australia,n.,澳大利亚,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0017,south,adj. n.,南方的;南;南方,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0018,Africa,n.,非洲,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0019,South Africa,,南非,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0020,pet,n.,宠物,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0021,leg,n.,腿,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0022,cat,n.,猫,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0023,sleep,v. & n.,睡觉,junior,7,7B,U5,wordlist,p.26,high
+jr-7B-U5-0024,friendly,adj.,友好的,junior,7,7B,U5,wordlist,p.28,high
+jr-7B-U5-0025,shy,adj.,羞怯的;腼腆的,junior,7,7B,U5,wordlist,p.28,high
+jr-7B-U5-0026,save,v.,救;救助,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0027,symbol,n.,象征,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0028,flag,n.,旗;旗帜,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0029,forget,v.,忘记;遗忘,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0030,get lost,,迷路,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0031,place,n.,地点;位置,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0032,water,n.,水,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0033,danger,n.,危险,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0034,be in (great) danger,,处于(极大)危险之中,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0035,cut,v.,砍;切,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0036,down,adv. prep.,(坐、躺、倒)下;向下;沿着,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0037,cut down,,砍倒,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0038,tree,n.,树,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0039,kill,v.,杀死;弄死,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0040,ivory,n.,象牙,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0041,over,prep.,超过;多于;在……上方,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0042,(be) made of,,由……制成的,junior,7,7B,U5,wordlist,p.29,high
+jr-7B-U5-0043,Julie,,朱莉(女名),junior,7,7B,U5,recognize,p.26,high
+jr-7B-U5-0044,Becky,,贝姬(女名),junior,7,7B,U5,recognize,p.30,high
+jr-7B-U5-0045,Thailand,n.,泰国,junior,7,7B,U5,recognize,p.29,high
+jr-7B-U5-0046,Thai,adj. & n.,泰国人(的);泰语(的),junior,7,7B,U5,recognize,p.29,high
+jr-7B-U6-0001,newspaper,n.,报纸,junior,7,7B,U6,wordlist,p.31,high
+jr-7B-U6-0002,read a newspaper,,看报纸,junior,7,7B,U6,wordlist,p.31,high
+jr-7B-U6-0003,use,v.,使用;运用,junior,7,7B,U6,wordlist,p.31,high
+jr-7B-U6-0004,soup,n.,汤,junior,7,7B,U6,wordlist,p.31,high
+jr-7B-U6-0005,make soup,,做汤,junior,7,7B,U6,wordlist,p.31,high
+jr-7B-U6-0006,wash,v.,洗,junior,7,7B,U6,wordlist,p.31,high
+jr-7B-U6-0007,movie,n.,电影,junior,7,7B,U6,wordlist,p.32,high
+jr-7B-U6-0008,go to the movies,,去电影院,junior,7,7B,U6,wordlist,p.32,high
+jr-7B-U6-0009,just,adv.,只是;恰好,junior,7,7B,U6,wordlist,p.32,high
+jr-7B-U6-0010,eat out,,出去吃饭,junior,7,7B,U6,wordlist,p.32,high
+jr-7B-U6-0011,house,n.,房子,junior,7,7B,U6,wordlist,p.33,high
+jr-7B-U6-0012,drink,v.,喝;饮料,junior,7,7B,U6,wordlist,p.33,high
+jr-7B-U6-0013,tea,n.,茶;茶叶,junior,7,7B,U6,wordlist,p.33,high
+jr-7B-U6-0014,drink tea,,喝茶,junior,7,7B,U6,wordlist,p.33,high
+jr-7B-U6-0015,tomorrow,adv. n.,在明天;明天;未来,junior,7,7B,U6,wordlist,p.33,high
+jr-7B-U6-0016,pool,n.,游泳池;水池,junior,7,7B,U6,wordlist,p.34,high
+jr-7B-U6-0017,shop,v.,购物;商店,junior,7,7B,U6,wordlist,p.34,high
+jr-7B-U6-0018,supermarket,n.,超市,junior,7,7B,U6,wordlist,p.34,high
+jr-7B-U6-0019,man,n.,男人;人,junior,7,7B,U6,wordlist,p.34,high
+jr-7B-U6-0020,race,n.,竞赛,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0021,host,n.,主人;东道主,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0022,study,v. & n.,学习;研究,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0023,state,n.,州,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0024,the United States,,美国;美利坚合众国(abbr. the US/the USA),junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0025,American,adj. n.,美国的;美洲的;美国人;美洲人,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0026,dragon,n.,龙,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0027,Dragon Boat Festival,,端午节,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0028,any,adj. pron.,任何的;任一;任何;任一,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0029,other,adj. pron.,另外的;其他的;另外的人(或物),junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0030,young,adj.,幼小的;年轻的,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0031,child,n.,儿童(pl. children),junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0032,miss,v.,怀念;思念;错过,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0033,wish,v.,希望,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0034,delicious,adj.,可口的;美味的,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0035,still,adv.,还;仍然,junior,7,7B,U6,wordlist,p.35,high
+jr-7B-U6-0036,living room,,客厅,junior,7,7B,U6,wordlist,p.36,high
+jr-7B-U6-0037,Steve,,史蒂夫(男名),junior,7,7B,U6,recognize,p.32,high
+jr-7B-U6-0038,Laura,,劳拉(女名),junior,7,7B,U6,recognize,p.32,high
+jr-7B-U7-0001,rain,v. n.,下雨;雨水,junior,7,7B,U7,wordlist,p.37,high
+jr-7B-U7-0002,windy,adj.,多风的,junior,7,7B,U7,wordlist,p.37,high
+jr-7B-U7-0003,cloudy,adj.,多云的,junior,7,7B,U7,wordlist,p.37,high
+jr-7B-U7-0004,sunny,adj.,晴朗的,junior,7,7B,U7,wordlist,p.37,high
+jr-7B-U7-0005,snow,v. n.,下雪;雪,junior,7,7B,U7,wordlist,p.37,high
+jr-7B-U7-0006,weather,n.,天气,junior,7,7B,U7,wordlist,p.37,high
+jr-7B-U7-0007,cook,v.,做饭,junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0008,bad,adj.,坏的;糟的,junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0009,park,n.,公园,junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0010,message,n.,信息;消息,junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0011,take a message,,捎个口信;传话,junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0012,him,pron.,他(he的宾格),junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0013,could,modal v.,能;可以,junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0014,back,adv.,回来;回原处,junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0015,call (sb.) back,,(给某人)回电话,junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0016,problem,n.,困难;难题,junior,7,7B,U7,wordlist,p.38,high
+jr-7B-U7-0017,right now,,此刻;马上,junior,7,7B,U7,wordlist,p.39,high
+jr-7B-U7-0018,again,adv.,再一次;又一次,junior,7,7B,U7,wordlist,p.39,high
+jr-7B-U7-0019,dry,adj.,干燥的,junior,7,7B,U7,wordlist,p.40,high
+jr-7B-U7-0020,cold,adj.,寒冷的;冷的,junior,7,7B,U7,wordlist,p.40,high
+jr-7B-U7-0021,hot,adj.,热的,junior,7,7B,U7,wordlist,p.40,high
+jr-7B-U7-0022,warm,adj.,温暖的,junior,7,7B,U7,wordlist,p.40,high
+jr-7B-U7-0023,visit,v.,拜访;参观,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0024,Canada,n.,加拿大,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0025,summer,n.,夏天;夏季,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0026,sit,v.,坐,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0027,juice,n.,果汁;饮料,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0028,soon,adv.,不久;很快,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0029,vacation,n.,假期,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0030,on (a) vacation,,度假,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0031,hard,adv. adj.,努力地;困难的,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0032,Europe,n.,欧洲,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0033,mountain,n.,高山,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0034,country,n.,国;国家,junior,7,7B,U7,wordlist,p.41,high
+jr-7B-U7-0035,skate,v.,滑冰,junior,7,7B,U7,wordlist,p.42,high
+jr-7B-U7-0036,snowy,adj.,下雪的,junior,7,7B,U7,wordlist,p.42,high
+jr-7B-U7-0037,winter,n.,冬天;冬季,junior,7,7B,U7,wordlist,p.42,high
+jr-7B-U7-0038,Russian,adj. n.,俄罗斯的;俄罗斯人;俄语,junior,7,7B,U7,wordlist,p.42,high
+jr-7B-U7-0039,snowman,n.,雪人,junior,7,7B,U7,wordlist,p.42,high
+jr-7B-U7-0040,rainy,adj.,阴雨的;多雨的,junior,7,7B,U7,wordlist,p.42,high
+jr-7B-U7-0041,Joe,,乔(男名),junior,7,7B,U7,recognize,p.38,high
+jr-7B-U7-0042,Jeff,,杰夫(男名),junior,7,7B,U7,recognize,p.38,high
+jr-7B-U7-0043,Moscow,,莫斯科,junior,7,7B,U7,recognize,p.37,high
+jr-7B-U7-0044,Toronto,,多伦多,junior,7,7B,U7,recognize,p.37,high
+jr-7B-U7-0045,Boston,,波士顿,junior,7,7B,U7,recognize,p.37,high
+jr-7B-U8-0001,post,n.,邮政,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0002,office,n.,办公室,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0003,post office,,邮局,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0004,police,n.,警察,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0005,police station,,警察局,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0006,hotel,n.,旅馆;酒店,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0007,restaurant,n.,餐馆,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0008,bank,n.,银行,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0009,hospital,n.,医院,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0010,street,n.,大街,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0011,pay,v. & n.,付费,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0012,pay phone,,付费电话,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0013,near,prep.,在……附近,junior,7,7B,U8,wordlist,p.43,high
+jr-7B-U8-0014,across,adv. & prep.,过;穿过,junior,7,7B,U8,wordlist,p.44,high
+jr-7B-U8-0015,across from,,在……对面,junior,7,7B,U8,wordlist,p.44,high
+jr-7B-U8-0016,front,n.,前面,junior,7,7B,U8,wordlist,p.44,high
+jr-7B-U8-0017,in front of,,在……前面,junior,7,7B,U8,wordlist,p.44,high
+jr-7B-U8-0018,behind,prep.,在……的后面,junior,7,7B,U8,wordlist,p.44,high
+jr-7B-U8-0019,town,n.,镇;市镇,junior,7,7B,U8,wordlist,p.44,high
+jr-7B-U8-0020,around,prep. adv.,在……周围;在周围;大约,junior,7,7B,U8,wordlist,p.44,high
+jr-7B-U8-0021,north,n. adj.,北;北方;北方的,junior,7,7B,U8,wordlist,p.45,high
+jr-7B-U8-0022,along,prep.,沿着,junior,7,7B,U8,wordlist,p.46,high
+jr-7B-U8-0023,go along (the street),,沿着(这条街)走,junior,7,7B,U8,wordlist,p.46,high
+jr-7B-U8-0024,turn,v.,转向;翻,junior,7,7B,U8,wordlist,p.46,high
+jr-7B-U8-0025,right,adv. n.,向右边;右边,junior,7,7B,U8,wordlist,p.46,high
+jr-7B-U8-0026,left,adv. n.,向左边;左边,junior,7,7B,U8,wordlist,p.46,high
+jr-7B-U8-0027,turn right/left,,向右/左转,junior,7,7B,U8,wordlist,p.46,high
+jr-7B-U8-0028,crossing,n.,十字路口,junior,7,7B,U8,wordlist,p.46,high
+jr-7B-U8-0029,neighborhood,n.,街区;街坊(= neighbourhood),junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0030,spend,v.,花(时间、钱等),junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0031,spend time,,花时间,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0032,monkey,n.,猴子,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0033,climb,v.,爬,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0034,road,n.,路,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0035,often,adv.,时常;常常,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0036,air,n.,空气,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0037,sunshine,n.,阳光,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0038,free,adj.,免费的,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0039,enjoy,v.,享受;喜爱,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0040,enjoy reading,,喜欢阅读,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0041,easily,adv.,容易地,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U8-0042,money,n.,钱,junior,7,7B,U8,wordlist,p.47,high
+jr-7B-U9-0001,curly,adj.,卷曲的,junior,7,7B,U9,wordlist,p.49,high
+jr-7B-U9-0002,straight,adj.,直的,junior,7,7B,U9,wordlist,p.49,high
+jr-7B-U9-0003,tall,adj.,高的,junior,7,7B,U9,wordlist,p.49,high
+jr-7B-U9-0004,medium,adj.,中等的,junior,7,7B,U9,wordlist,p.49,high
+jr-7B-U9-0005,height,n.,身高;高度,junior,7,7B,U9,wordlist,p.49,high
+jr-7B-U9-0006,(be) of medium height,,中等身高,junior,7,7B,U9,wordlist,p.49,high
+jr-7B-U9-0007,thin,adj.,瘦的,junior,7,7B,U9,wordlist,p.49,high
+jr-7B-U9-0008,heavy,adj.,重的,junior,7,7B,U9,wordlist,p.49,high
+jr-7B-U9-0009,tonight,adv. & n.,(在)今晚;(在)今夜,junior,7,7B,U9,wordlist,p.50,high
+jr-7B-U9-0010,little,adj.,小的,junior,7,7B,U9,wordlist,p.50,high
+jr-7B-U9-0011,a little,,一点;少量,junior,7,7B,U9,wordlist,p.50,high
+jr-7B-U9-0012,may,modal v.,也许;可能;可以,junior,7,7B,U9,wordlist,p.50,high
+jr-7B-U9-0013,cinema,n.,电影院,junior,7,7B,U9,wordlist,p.50,high
+jr-7B-U9-0014,glasses,n.,眼镜(pl.),junior,7,7B,U9,wordlist,p.50,high
+jr-7B-U9-0015,later,adv.,以后,junior,7,7B,U9,wordlist,p.50,high
+jr-7B-U9-0016,handsome,adj.,英俊的,junior,7,7B,U9,wordlist,p.51,high
+jr-7B-U9-0017,actor,n.,演员,junior,7,7B,U9,wordlist,p.51,high
+jr-7B-U9-0018,actress,n.,女演员,junior,7,7B,U9,wordlist,p.51,high
+jr-7B-U9-0019,person,n.,人,junior,7,7B,U9,wordlist,p.51,high
+jr-7B-U9-0020,nose,n.,鼻子,junior,7,7B,U9,wordlist,p.52,high
+jr-7B-U9-0021,blonde,adj.,(blond)(头发)金黄色的,junior,7,7B,U9,wordlist,p.52,high
+jr-7B-U9-0022,mouth,n.,嘴,junior,7,7B,U9,wordlist,p.52,high
+jr-7B-U9-0023,round,adj.,圆形的,junior,7,7B,U9,wordlist,p.52,high
+jr-7B-U9-0024,face,n.,脸,junior,7,7B,U9,wordlist,p.52,high
+jr-7B-U9-0025,eye,n.,眼睛,junior,7,7B,U9,wordlist,p.52,high
+jr-7B-U9-0026,singer,n.,歌手,junior,7,7B,U9,wordlist,p.52,high
+jr-7B-U9-0027,artist,n.,艺术家,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0028,crime,n.,犯罪活动,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0029,criminal,n.,罪犯,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0030,put,v.,放,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0031,each,adj. & pron.,每个;各自,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0032,way,n.,方式;路线,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0033,describe,v.,描述,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0034,differently,adv.,不同地,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0035,another,adj. & pron.,另一;又一,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0036,end,n.,结尾;尽头,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0037,in the end,,最后,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0038,real,adj.,真正的;真实的,junior,7,7B,U9,wordlist,p.53,high
+jr-7B-U9-0039,jeans,n.,牛仔裤,junior,7,7B,U9,wordlist,p.54,high
+jr-7B-U9-0040,Johnny,,约翰尼(男名),junior,7,7B,U9,recognize,p.52,high
+jr-7B-U9-0041,Dean,,迪安(姓),junior,7,7B,U9,recognize,p.52,high
+jr-7B-U9-0042,Tina,,蒂娜(女名),junior,7,7B,U9,recognize,p.52,high
+jr-7B-U9-0043,Jackson,,杰克逊(姓),junior,7,7B,U9,recognize,p.52,high
+jr-7B-U10-0001,noodle,n.,面条(常用复数形式),junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0002,mutton,n.,羊肉,junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0003,beef,n.,牛肉,junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0004,cabbage,n.,卷心菜;洋白菜,junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0005,potato,n.,土豆;马铃薯,junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0006,special,n. adj.,特色菜;特价品;特别的;特殊的,junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0007,would,modal v.,(表示意愿)愿意,junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0008,would like,,(表示意愿)愿意;喜欢,junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0009,yet,adv.,(常用于否定句或疑问句)还;仍然,junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0010,large,adj.,大号的;大的,junior,7,7B,U10,wordlist,p.55,high
+jr-7B-U10-0011,order,n. & v.,点菜;命令,junior,7,7B,U10,wordlist,p.56,high
+jr-7B-U10-0012,take one's order,,点菜,junior,7,7B,U10,wordlist,p.56,high
+jr-7B-U10-0013,size,n.,大小;尺码,junior,7,7B,U10,wordlist,p.56,high
+jr-7B-U10-0014,bowl,n.,碗,junior,7,7B,U10,wordlist,p.56,high
+jr-7B-U10-0015,one (large) bowl of ...,,一(大)碗……,junior,7,7B,U10,wordlist,p.56,high
+jr-7B-U10-0016,tofu,n.,豆腐,junior,7,7B,U10,wordlist,p.56,high
+jr-7B-U10-0017,meat,n.,(可食用的)肉,junior,7,7B,U10,wordlist,p.57,high
+jr-7B-U10-0018,dumpling,n.,饺子,junior,7,7B,U10,wordlist,p.58,high
+jr-7B-U10-0019,porridge,n.,粥;面糊,junior,7,7B,U10,wordlist,p.58,high
+jr-7B-U10-0020,onion,n.,洋葱,junior,7,7B,U10,wordlist,p.58,high
+jr-7B-U10-0021,fish,n.,鱼;鱼肉,junior,7,7B,U10,wordlist,p.58,high
+jr-7B-U10-0022,pancake,n.,烙饼;薄饼,junior,7,7B,U10,wordlist,p.58,high
+jr-7B-U10-0023,world,n.,世界,junior,7,7B,U10,wordlist,p.59,high
+jr-7B-U10-0024,around the world,,世界各地,junior,7,7B,U10,wordlist,p.59,high
+jr-7B-U10-0025,answer,n. v.,答案;回答,junior,7,7B,U10,wordlist,p.59,high
+jr-7B-U10-0026,different,adj.,不同的,junior,7,7B,U10,wordlist,p.59,high
+jr-7B-U10-0027,cake,n.,蛋糕,junior,7,7B,U10,wordlist,p.59,high
+jr-7B-U10-0028,candle,n.,蜡烛,junior,7,7B,U10,wordlist,p.59,high
+jr-7B-U10-0029,age,n.,年龄,junior,7,7B,U10,wordlist,p.59,high
+jr-7B-U11-0001,make a wish,,许愿,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0002,blow,v.,吹,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0003,blow out,,吹灭,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0004,if,conj.,如果,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0005,will,v.,将要;会,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0006,the UK,n.,(= the United Kingdom)英国,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0007,candy,n.,糖果,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0008,lucky,adj.,幸运的,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0009,popular,adj.,受欢迎的;普遍的,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0010,get popular,,受欢迎;流行,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0011,cut up,,切碎,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0012,idea,n.,想法;主意,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0013,bring good luck to ...,,给……带来好运,junior,7,7B,U11,wordlist,p.59,high
+jr-7B-U11-0014,milk,v.,挤奶,junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0015,cow,n.,奶牛,junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0016,milk a cow,,给奶牛挤奶,junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0017,horse,n.,马,junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0018,ride a horse,,骑马,junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0019,feed,v.,喂养;饲养(fed/fed),junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0020,feed chickens,,喂鸡,junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0021,farmer,n.,农民;农场主,junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0022,quite,adv.,相当;完全,junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0023,quite a lot (of ...),,许多,junior,7,7B,U11,wordlist,p.61,high
+jr-7B-U11-0024,anything,pron.,(常用于否定句或疑问句)任何东西;任何事物,junior,7,7B,U11,wordlist,p.62,high
+jr-7B-U11-0025,grow,v.,种植;生长;发育,junior,7,7B,U11,wordlist,p.62,high
+jr-7B-U11-0026,farm,n. v.,农场;务农;种田,junior,7,7B,U11,wordlist,p.62,high
+jr-7B-U11-0027,pick,v.,采;摘,junior,7,7B,U11,wordlist,p.62,high
+jr-7B-U11-0028,excellent,adj.,极好的;优秀的,junior,7,7B,U11,wordlist,p.62,high
+jr-7B-U11-0029,countryside,n.,乡村;农村,junior,7,7B,U11,wordlist,p.62,high
+jr-7B-U11-0030,in the countryside,,在乡下;在农村,junior,7,7B,U11,wordlist,p.62,high
+jr-7B-U11-0031,yesterday,adv.,昨天,junior,7,7B,U11,wordlist,p.63,high
+jr-7B-U11-0032,flower,n.,花,junior,7,7B,U11,wordlist,p.63,high
+jr-7B-U11-0033,worry,v. & n.,担心;担忧,junior,7,7B,U11,wordlist,p.63,high
+jr-7B-U11-0034,luckily,adv.,幸运地;好运地,junior,7,7B,U11,wordlist,p.63,high
+jr-7B-U11-0035,sun,n.,太阳,junior,7,7B,U11,wordlist,p.63,high
+jr-7B-U11-0036,museum,n.,博物馆,junior,7,7B,U11,wordlist,p.64,high
+jr-7B-U11-0037,fire,n.,火;火灾,junior,7,7B,U11,wordlist,p.64,high
+jr-7B-U11-0038,fire station,,消防站,junior,7,7B,U11,wordlist,p.64,high
+jr-7B-U11-0039,painting,n.,油画;绘画,junior,7,7B,U11,wordlist,p.64,high
+jr-7B-U11-0040,exciting,adj.,使人兴奋的;令人激动的,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0041,lovely,adj.,可爱的,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0042,expensive,adj.,昂贵的,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0043,cheap,adj.,廉价的;便宜的,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0044,slow,adj.,缓慢的;迟缓的,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0045,fast,adv. & adj.,快地(的),junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0046,robot,n.,机器人,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0047,guide,n.,导游;向导,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0048,gift,n.,礼物;赠品,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0049,all in all,,总的说来,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0050,everything,pron.,所有事物;一切,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0051,interested,adj.,感兴趣的,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0052,be interested in,,对……感兴趣,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0053,dark,adj.,黑暗的;昏暗的,junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0054,hear,v.,听到;听见(heard/heard),junior,7,7B,U11,wordlist,p.65,high
+jr-7B-U11-0055,Carol,,卡萝尔(女名),junior,7,7B,U11,recognize,p.61,high
+jr-7B-U12-0001,camp,v.,扎营;搭帐篷,junior,7,7B,U12,wordlist,p.67,high
+jr-7B-U12-0002,lake,n.,湖;湖泊,junior,7,7B,U12,wordlist,p.67,high
+jr-7B-U12-0003,beach,n.,海滩;沙滩,junior,7,7B,U12,wordlist,p.67,high
+jr-7B-U12-0004,badminton,n.,羽毛球运动,junior,7,7B,U12,wordlist,p.67,high
+jr-7B-U12-0005,sheep,n.,羊;绵羊,junior,7,7B,U12,wordlist,p.68,high
+jr-7B-U12-0006,as,prep.,作为;当作,junior,7,7B,U12,wordlist,p.68,high
+jr-7B-U12-0007,natural,adj.,自然的,junior,7,7B,U12,wordlist,p.68,high
+jr-7B-U12-0008,butterfly,n.,蝴蝶,junior,7,7B,U12,wordlist,p.68,high
+jr-7B-U12-0009,visitor,n.,游客;访问者,junior,7,7B,U12,wordlist,p.68,high
+jr-7B-U12-0010,tired,adj.,疲倦的;疲劳的,junior,7,7B,U12,wordlist,p.68,high
+jr-7B-U12-0011,stay,v.,停留;待,junior,7,7B,U12,wordlist,p.68,high
+jr-7B-U12-0012,stay up late,,深夜不睡;熬夜,junior,7,7B,U12,wordlist,p.68,high
+jr-7B-U12-0013,away,adv.,离开;远离,junior,7,7B,U12,wordlist,p.69,high
+jr-7B-U12-0014,run away,,跑开,junior,7,7B,U12,wordlist,p.69,high
+jr-7B-U12-0015,mouse,n.,老鼠;耗子(pl. mice),junior,7,7B,U12,wordlist,p.69,high
+jr-7B-U12-0016,baby,n. adj.,婴儿;幼小的,junior,7,7B,U12,wordlist,p.69,high
+jr-7B-U12-0017,shout,v.,呼叫;喊叫,junior,7,7B,U12,wordlist,p.69,high
+jr-7B-U12-0018,shout at ...,,冲……大声叫嚷,junior,7,7B,U12,wordlist,p.69,high
+jr-7B-U12-0019,woof,interj.,(狗叫声)汪汪,junior,7,7B,U12,wordlist,p.69,high
+jr-7B-U12-0020,language,n.,语言,junior,7,7B,U12,wordlist,p.69,high
+jr-7B-U12-0021,fly,v.,飞(flew/flew),junior,7,7B,U12,wordlist,p.70,high
+jr-7B-U12-0022,kite,n.,风筝,junior,7,7B,U12,wordlist,p.70,high
+jr-7B-U12-0023,fly a kite,,放风筝,junior,7,7B,U12,wordlist,p.70,high
+jr-7B-U12-0024,high,adj. & adv.,高的(地),junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0025,high school,,中学,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0026,ago,adv.,以前,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0027,India,n.,印度,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0028,tent,n.,帐篷,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0029,put up,,搭起;举起,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0030,moon,n.,月亮,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0031,each other,,互相;彼此,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0032,surprise,n. v.,惊奇;惊讶;使吃惊,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0033,get a surprise,,吃惊,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0034,snake,n.,蛇,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0035,scared,adj.,惊慌的;吓坏了的,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0036,move,v.,移动,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0037,shout to ...,,对……大声喊叫,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0038,start,v.,开始;着手,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0039,jump,v.,跳;跃,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0040,up and down,,上上下下;起伏,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0041,wake,v.,弄醒;醒(woke/woke),junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0042,wake ... up,,把……弄醒,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0043,into,prep.,到……里面;进入,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0044,forest,n.,森林,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0045,ear,n.,耳朵,junior,7,7B,U12,wordlist,p.71,high
+jr-7B-U12-0046,Lucy,,露西(女名),junior,7,7B,U12,recognize,p.67,high
+jr-8B-U1-0001,matter,n.,问题;事情,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0002,What's the matter?,,怎么了?出什么事了?,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0003,sore,adj.,疼痛的;酸痛的,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0004,have a cold,,感冒,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0005,stomachache,n.,胃痛;腹痛,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0006,have a stomachache,,胃痛,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0007,foot,n.,脚;足,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0008,neck,n.,颈;脖子,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0009,stomach,n.,胃;腹部,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0010,throat,n.,咽喉;喉咙,junior,8,8B,U1,wordlist,p.1,high
+jr-8B-U1-0011,fever,n.,发烧,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0012,lie,v.,躺;平躺(lay),junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0013,lie down,,躺下,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0014,rest,v. & n.,放松;休息,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0015,cough,n. & v.,咳嗽,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0016,X-ray,n.,X射线;X光,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0017,toothache,n.,牙痛,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0018,take one's temperature,,量体温,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0019,headache,n.,头痛,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0020,have a fever,,发烧,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0021,break,n.,间歇;休息,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0022,take breaks (take a break),,休息,junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0023,hurt,v.,(使)疼痛;受伤(hurt/hurt),junior,8,8B,U1,wordlist,p.2,high
+jr-8B-U1-0024,passenger,n.,乘客;旅客,junior,8,8B,U1,wordlist,p.3,high
+jr-8B-U1-0025,off,adv. & prep.,离开(某处);不工作;从……去掉,junior,8,8B,U1,wordlist,p.3,high
+jr-8B-U1-0026,get off,,下车,junior,8,8B,U1,wordlist,p.3,high
+jr-8B-U1-0027,to one's surprise,,使……惊讶的是;出乎……的意料,junior,8,8B,U1,wordlist,p.3,high
+jr-8B-U1-0028,onto,prep.,向;朝,junior,8,8B,U1,wordlist,p.3,high
+jr-8B-U1-0029,trouble,n.,问题;苦恼,junior,8,8B,U1,wordlist,p.3,high
+jr-8B-U1-0030,hit,v.,击;打(hit/hit)(用手或器具),junior,8,8B,U1,wordlist,p.3,high
+jr-8B-U1-0031,right away,,立即;马上,junior,8,8B,U1,wordlist,p.3,high
+jr-8B-U1-0032,get into,,陷入;参与,junior,8,8B,U1,wordlist,p.3,high
+jr-8B-U1-0033,herself,pron.,(she的反身代词)她自己,junior,8,8B,U1,wordlist,p.4,high
+jr-8B-U1-0034,bandage,n. v.,绷带;用绷带包扎,junior,8,8B,U1,wordlist,p.5,high
+jr-8B-U1-0035,press,v.,压;挤;按,junior,8,8B,U1,wordlist,p.5,high
+jr-8B-U1-0036,sick,adj.,生病的;有病的,junior,8,8B,U1,wordlist,p.5,high
+jr-8B-U1-0037,knee,n.,膝;膝盖,junior,8,8B,U1,wordlist,p.5,high
+jr-8B-U1-0038,nosebleed,n.,鼻出血,junior,8,8B,U1,wordlist,p.5,high
+jr-8B-U1-0039,breathe,v.,呼吸,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0040,sunburned,adj.,晒伤的,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0041,ourselves,pron.,(we的反身代词)我们自己,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0042,climber,n.,登山者;攀登者,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0043,be used to,,习惯于……;适应于……,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0044,risk,n. & v.,危险;风险;冒险,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0045,take risks (take a risk),,冒险,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0046,accident,n.,(交通)事故;意外遭遇,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0047,situation,n.,情况;状况,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0048,kilo,n.,千克;公斤(= kilogram),junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0049,rock,n.,岩石,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0050,run out (of),,用尽;耗尽,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0051,knife,n.,刀(pl. knives),junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0052,cut off,,切除,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0053,blood,n.,血,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0054,mean,v.,意思是;打算;意欲(meant/meant),junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0055,get out of,,离开;从……出来,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0056,importance,n.,重要性;重要,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0057,decision,n.,决定;抉择,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0058,control,n. & v.,限制;约束;管理,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0059,be in control of,,掌管;管理,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0060,spirit,n.,勇气;意志,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0061,death,n.,死;死亡,junior,8,8B,U1,wordlist,p.6,high
+jr-8B-U1-0062,give up,,放弃,junior,8,8B,U1,wordlist,p.7,high
+jr-8B-U1-0063,nurse,n.,护士,junior,8,8B,U1,wordlist,p.8,high
+jr-8B-U1-0064,Judy,,朱迪(女名),junior,8,8B,U1,recognize,p.1,high
+jr-8B-U1-0065,Nancy,,南希(女名),junior,8,8B,U1,recognize,p.1,high
+jr-8B-U1-0066,Mandy,,曼迪(女名),junior,8,8B,U1,recognize,p.2,high
+jr-8B-U1-0067,Aron Ralston,,阿伦·罗尔斯顿,junior,8,8B,U1,recognize,p.6,high
+jr-8B-U1-0068,Utah,,犹他州(美国),junior,8,8B,U1,recognize,p.6,high
+jr-8B-U2-0001,clean up,,打扫(或清除)干净,junior,8,8B,U2,wordlist,p.9,high
+jr-8B-U2-0002,cheer,v.,欢呼;喝彩,junior,8,8B,U2,wordlist,p.9,high
+jr-8B-U2-0003,cheer up,,(使)变得更高兴;振奋起来,junior,8,8B,U2,wordlist,p.9,high
+jr-8B-U2-0004,give out,,分发;散发,junior,8,8B,U2,wordlist,p.9,high
+jr-8B-U2-0005,volunteer,v. n.,义务做;自愿做;志愿者,junior,8,8B,U2,wordlist,p.9,high
+jr-8B-U2-0006,come up with,,想出;提出(主意、计划、回答等),junior,8,8B,U2,wordlist,p.10,high
+jr-8B-U2-0007,put off,,推迟,junior,8,8B,U2,wordlist,p.10,high
+jr-8B-U2-0008,sign,n.,标志;信号,junior,8,8B,U2,wordlist,p.10,high
+jr-8B-U2-0009,notice,n. v.,通知;通告;注意;注意到;意识到,junior,8,8B,U2,wordlist,p.10,high
+jr-8B-U2-0010,hand out,,分发,junior,8,8B,U2,wordlist,p.10,high
+jr-8B-U2-0011,call up,,打电话给(某人);征召,junior,8,8B,U2,wordlist,p.10,high
+jr-8B-U2-0012,used to,,曾经……;过去……,junior,8,8B,U2,wordlist,p.10,high
+jr-8B-U2-0013,lonely,adj.,孤独的;寂寞的,junior,8,8B,U2,wordlist,p.10,high
+jr-8B-U2-0014,care for,,照顾;非常喜欢,junior,8,8B,U2,wordlist,p.10,high
+jr-8B-U2-0015,several,pron.,几个;数个;一些,junior,8,8B,U2,wordlist,p.11,high
+jr-8B-U2-0016,strong,adj.,强烈的;强壮的,junior,8,8B,U2,wordlist,p.11,high
+jr-8B-U2-0017,feeling,n.,感觉;感触,junior,8,8B,U2,wordlist,p.11,high
+jr-8B-U2-0018,satisfaction,n.,满足;满意,junior,8,8B,U2,wordlist,p.11,high
+jr-8B-U2-0019,joy,n.,高兴;愉快,junior,8,8B,U2,wordlist,p.11,high
+jr-8B-U2-0020,owner,n.,物主;主人,junior,8,8B,U2,wordlist,p.11,high
+jr-8B-U2-0021,try out,,参加……选拔;试用,junior,8,8B,U2,wordlist,p.11,high
+jr-8B-U2-0022,journey,n.,(尤指长途)旅行;行程,junior,8,8B,U2,wordlist,p.11,high
+jr-8B-U2-0023,raise,v.,募集;征集,junior,8,8B,U2,wordlist,p.12,high
+jr-8B-U2-0024,midnight,n.,午夜;子夜,junior,8,8B,U2,wordlist,p.12,high
+jr-8B-U2-0025,alone,adv.,独自;单独,junior,8,8B,U2,wordlist,p.12,high
+jr-8B-U2-0026,repair,v.,修理;修补,junior,8,8B,U2,wordlist,p.13,high
+jr-8B-U2-0027,fix,v.,修理;安装,junior,8,8B,U2,wordlist,p.13,high
+jr-8B-U2-0028,fix up,,修理;装饰,junior,8,8B,U2,wordlist,p.13,high
+jr-8B-U2-0029,give away,,赠送;捐赠,junior,8,8B,U2,wordlist,p.13,high
+jr-8B-U2-0030,take after,,(外貌或行为)像,junior,8,8B,U2,wordlist,p.13,high
+jr-8B-U2-0031,broken,adj.,破损的;残缺的,junior,8,8B,U2,wordlist,p.13,high
+jr-8B-U2-0032,wheel,n.,车轮;轮子,junior,8,8B,U2,wordlist,p.13,high
+jr-8B-U2-0033,letter,n.,信;函,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0034,Miss,n.,女士;小姐,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0035,set up,,建起;设立,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0036,disabled,adj.,丧失能力的;有残疾的,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0037,make a difference,,影响;有作用,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0038,blind,adj.,瞎的;失明的,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0039,deaf,adj.,聋的,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0040,imagine,v.,想象;设想,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0041,difficulty,n.,困难;难题,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0042,open,v.,开;打开,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0043,door,n.,门,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0044,carry,v.,拿;提;扛,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0045,train,v.,训练;培训,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0046,excited,adj.,激动的;兴奋的,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0047,training,n.,训练;培训,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0048,kindness,n.,仁慈;善良,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0049,clever,adj.,聪明的;聪颖的,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0050,understand,v.,理解;领会(understood/understood),junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0051,change,v. & n.,变化;改变,junior,8,8B,U2,wordlist,p.14,high
+jr-8B-U2-0052,interest,n. v.,兴趣;关注;使感兴趣;使关注,junior,8,8B,U2,wordlist,p.16,high
+jr-8B-U2-0053,sir,n.,先生(用于正式信函中对不知名男性收信人的称呼;写为Sir),junior,8,8B,U2,wordlist,p.16,high
+jr-8B-U2-0054,madam,n.,夫人;女士(用于正式信函中对不知名女性收信人的称呼;写为Madam),junior,8,8B,U2,wordlist,p.16,high
+jr-8B-U2-0055,Mario,,马里奥(男名),junior,8,8B,U2,recognize,p.11,high
+jr-8B-U2-0056,Jimmy,,吉米(男名),junior,8,8B,U2,recognize,p.13,high
+jr-8B-U3-0001,rubbish,n.,垃圾;废弃物,junior,8,8B,U3,wordlist,p.17,high
+jr-8B-U3-0002,take out the rubbish,,倒垃圾,junior,8,8B,U3,wordlist,p.17,high
+jr-8B-U3-0003,fold,v.,折叠;对折,junior,8,8B,U3,wordlist,p.17,high
+jr-8B-U3-0004,sweep,v.,扫;打扫(swept/swept),junior,8,8B,U3,wordlist,p.17,high
+jr-8B-U3-0005,floor,n.,地板,junior,8,8B,U3,wordlist,p.17,high
+jr-8B-U3-0006,mess,n.,杂乱;不整洁,junior,8,8B,U3,wordlist,p.18,high
+jr-8B-U3-0007,throw,v.,扔;掷(threw/thrown),junior,8,8B,U3,wordlist,p.19,high
+jr-8B-U3-0008,all the time,,频繁;反复,junior,8,8B,U3,wordlist,p.19,high
+jr-8B-U3-0009,neither,adv. pron.,也不;两者都不,junior,8,8B,U3,wordlist,p.19,high
+jr-8B-U3-0010,shirt,n.,衬衫,junior,8,8B,U3,wordlist,p.19,high
+jr-8B-U3-0011,as soon as,,一……就……,junior,8,8B,U3,wordlist,p.19,high
+jr-8B-U3-0012,pass,v.,给;递;走过;通过,junior,8,8B,U3,wordlist,p.20,high
+jr-8B-U3-0013,borrow,v.,借;借用,junior,8,8B,U3,wordlist,p.20,high
+jr-8B-U3-0014,lend,v.,借给;借出(lent/lent),junior,8,8B,U3,wordlist,p.20,high
+jr-8B-U3-0015,finger,n.,手指,junior,8,8B,U3,wordlist,p.20,high
+jr-8B-U3-0016,hate,v.,厌恶;讨厌,junior,8,8B,U3,wordlist,p.20,high
+jr-8B-U3-0017,chore,n.,杂务;乏味无聊的工作,junior,8,8B,U3,wordlist,p.20,high
+jr-8B-U3-0018,while,conj.,与……同时;当……的时候;而;然而,junior,8,8B,U3,wordlist,p.20,high
+jr-8B-U3-0019,snack,n.,点心;小吃;快餐,junior,8,8B,U3,wordlist,p.21,high
+jr-8B-U3-0020,stress,n.,精神压力;心理负担,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0021,waste,n. v.,浪费;垃圾;滥用,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0022,in order to,,目的是;为了,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0023,provide,v.,提供;供应,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0024,anyway,adv.,而且;加之,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0025,depend,v.,依靠;信赖,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0026,depend on,,依靠;信赖,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0027,develop,v.,发展;壮大,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0028,independence,n.,独立,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0029,fairness,n.,公正性;合理性,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0030,since,prep. conj. & adv.,因为;既然;从……以后;自……以来,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0031,neighbor,n.,邻居(=neighbour),junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0032,take care of,,照顾;处理,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0033,ill,adj.,有病;不舒服,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0034,drop,v.,落下;掉下,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0035,independent,adj.,独立的;自主的,junior,8,8B,U3,wordlist,p.22,high
+jr-8B-U3-0036,fair,adj.,合理的;公正的,junior,8,8B,U3,wordlist,p.24,high
+jr-8B-U3-0037,unfair,adj.,不合理的;不公正的,junior,8,8B,U3,wordlist,p.24,high
+jr-8B-U3-0038,Sandy,,桑迪(女名),junior,8,8B,U3,recognize,p.21,high
+jr-8B-U4-0001,allow,v.,允许;准许,junior,8,8B,U4,wordlist,p.25,high
+jr-8B-U4-0002,wrong,adj.,有毛病;错误的,junior,8,8B,U4,wordlist,p.25,high
+jr-8B-U4-0003,What's wrong?,,哪儿不舒服?,junior,8,8B,U4,wordlist,p.25,high
+jr-8B-U4-0004,look through,,快速查看;浏览,junior,8,8B,U4,wordlist,p.26,high
+jr-8B-U4-0005,guess,v.,猜测;估计,junior,8,8B,U4,wordlist,p.26,high
+jr-8B-U4-0006,deal,n.,协议;交易,junior,8,8B,U4,wordlist,p.26,high
+jr-8B-U4-0007,big deal,,重要的事,junior,8,8B,U4,wordlist,p.26,high
+jr-8B-U4-0008,work out,,成功地发展;解决,junior,8,8B,U4,wordlist,p.26,high
+jr-8B-U4-0009,get on with,,和睦相处;关系良好,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0010,relation,n.,关系;联系;交往,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0011,communication,n.,交流;沟通,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0012,argue,v.,争吵;争论,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0013,cloud,n.,云;云朵,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0014,elder,adj.,年纪较长的,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0015,instead,adv.,代替;反而;却,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0016,whatever,pron.,任何;每一,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0017,nervous,adj.,焦虑的;担忧的,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0018,offer,v.,主动提出;自愿给予,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0019,proper,adj.,正确的;恰当的,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0020,secondly,adv.,第二;其次,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0021,communicate,v.,交流;沟通,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0022,explain,v.,解释;说明,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0023,clear,adj.,清楚易懂的;晴朗的,junior,8,8B,U4,wordlist,p.27,high
+jr-8B-U4-0024,copy,v.,抄袭;模仿;复制;复印,junior,8,8B,U4,wordlist,p.28,high
+jr-8B-U4-0025,return,v.,归还;回来;返回,junior,8,8B,U4,wordlist,p.28,high
+jr-8B-U4-0026,anymore,adv.,(常用于否定句和疑问句末)再也(不);(不)再,junior,8,8B,U4,wordlist,p.28,high
+jr-8B-U4-0027,member,n.,成员;分子,junior,8,8B,U4,wordlist,p.29,high
+jr-8B-U4-0028,pressure,n.,压力,junior,8,8B,U4,wordlist,p.29,high
+jr-8B-U4-0029,compete,v.,竞争;对抗,junior,8,8B,U4,wordlist,p.29,high
+jr-8B-U4-0030,opinion,n.,意见;想法;看法,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0031,skill,n.,技艺;技巧,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0032,typical,adj.,典型的,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0033,football,n.,(美式)橄榄球;足球,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0034,cut out,,删除;删去,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0035,quick,adj.,快的;迅速的;时间短暂的,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0036,continue,v.,持续;继续存在,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0037,compare,v.,比较,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0038,compare ... with,,比较;对比,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0039,crazy,adj.,不理智的;疯狂的,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0040,push,v.,鞭策;督促;推动,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0041,development,n.,发展;发育;成长,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0042,cause,v.,造成;引起,junior,8,8B,U4,wordlist,p.30,high
+jr-8B-U4-0043,usual,adj.,通常的;寻常的,junior,8,8B,U4,wordlist,p.31,high
+jr-8B-U4-0044,in one's opinion,,依……看,junior,8,8B,U4,wordlist,p.32,high
+jr-8B-U4-0045,perhaps,adv.,可能;大概;也许,junior,8,8B,U4,wordlist,p.32,high
+jr-8B-U4-0046,Cathy,,凯茜(女名),junior,8,8B,U4,recognize,p.30,high
+jr-8B-U4-0047,Taylor,,泰勒(姓),junior,8,8B,U4,recognize,p.30,high
+jr-8B-U5-0001,rainstorm,n.,暴风雨,junior,8,8B,U5,wordlist,p.33,high
+jr-8B-U5-0002,alarm,n.,闹钟,junior,8,8B,U5,wordlist,p.34,high
+jr-8B-U5-0003,go off,,(闹钟)发出响声,junior,8,8B,U5,wordlist,p.34,high
+jr-8B-U5-0004,begin,v.,开始(began/begun),junior,8,8B,U5,wordlist,p.34,high
+jr-8B-U5-0005,heavily,adv.,在很大程度上;大量地,junior,8,8B,U5,wordlist,p.34,high
+jr-8B-U5-0006,suddenly,adv.,突然;忽然,junior,8,8B,U5,wordlist,p.34,high
+jr-8B-U5-0007,pick up (= pick up the phone),,接电话,junior,8,8B,U5,wordlist,p.34,high
+jr-8B-U5-0008,strange,adj.,奇特的;奇怪的,junior,8,8B,U5,wordlist,p.34,high
+jr-8B-U5-0009,storm,n.,暴风雨,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0010,wind,n.,风,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0011,light,n.,光;光线;光亮,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0012,report,v. & n.,报道;公布,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0013,area,n.,地域;地区,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0014,wood,n.,木;木头,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0015,window,n.,窗;窗户,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0016,flashlight,n.,手电筒,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0017,match,n.,火柴,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0018,beat,v.,敲打;打败(beat/beaten),junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0019,against,prep.,倚;碰;撞,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0020,at first,,起初;起先,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0021,asleep,adj.,睡着的,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0022,fall asleep,,进入梦乡;睡着,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0023,die down,,逐渐变弱;逐渐消失,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0024,rise,v. & n.,升起;增加;提高(rose/risen),junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0025,fallen,adj.,倒下的;落下的,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0026,apart,adv.,分离;分开,junior,8,8B,U5,wordlist,p.35,high
+jr-8B-U5-0027,have a look,,看一看,junior,8,8B,U5,wordlist,p.36,high
+jr-8B-U5-0028,icy,adj.,覆盖着冰的;冰冷的,junior,8,8B,U5,wordlist,p.36,high
+jr-8B-U5-0029,kid,v.,开玩笑;欺骗,junior,8,8B,U5,wordlist,p.36,high
+jr-8B-U5-0030,realize,v.,理解;领会;认识到,junior,8,8B,U5,wordlist,p.37,high
+jr-8B-U5-0031,make one's way,,前往;费力地前进,junior,8,8B,U5,wordlist,p.37,high
+jr-8B-U5-0032,passage,n.,章节;段落,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0033,pupil,n.,学生,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0034,completely,adv.,彻底地;完全地,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0035,shocked,adj.,惊愕的;受震惊的,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0036,silence,n.,沉默;缄默;无声,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0037,in silence,,沉默;无声,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0038,recently,adv.,不久前;最近,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0039,take down,,拆除;往下拽;记录,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0040,terrorist,n.,恐怖主义者;恐怖分子,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0041,date,n.,日期;日子,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0042,tower,n.,塔;塔楼,junior,8,8B,U5,wordlist,p.38,high
+jr-8B-U5-0043,truth,n.,实情;事实,junior,8,8B,U5,wordlist,p.39,high
+jr-8B-U5-0044,Allen,,艾伦(姓),junior,8,8B,U5,recognize,p.38,high
+jr-8B-U5-0045,Martin Luther King,,马丁·路德·金,junior,8,8B,U5,recognize,p.38,high
+jr-8B-U5-0046,Alabama,,亚拉巴马州(美国),junior,8,8B,U5,recognize,p.35,high
+jr-8B-U5-0047,Animal Helpline,,动物保护热线,junior,8,8B,U5,recognize,p.37,high
+jr-8B-U5-0048,World Trade Center,,世贸大楼(美国纽约),junior,8,8B,U5,recognize,p.38,high
+jr-8B-U6-0001,shoot,v.,射击;发射(shot/shot),junior,8,8B,U6,wordlist,p.41,high
+jr-8B-U6-0002,stone,n.,石头,junior,8,8B,U6,wordlist,p.41,high
+jr-8B-U6-0003,weak,adj.,虚弱的;无力的,junior,8,8B,U6,wordlist,p.42,high
+jr-8B-U6-0004,god,n.,神;上帝(God),junior,8,8B,U6,wordlist,p.42,high
+jr-8B-U6-0005,remind,v.,提醒;使想起,junior,8,8B,U6,wordlist,p.42,high
+jr-8B-U6-0006,bit,n.,一点;小块,junior,8,8B,U6,wordlist,p.42,high
+jr-8B-U6-0007,a little bit,,有点儿;稍微,junior,8,8B,U6,wordlist,p.42,high
+jr-8B-U6-0008,silly,adj.,愚蠢的;不明事理的,junior,8,8B,U6,wordlist,p.42,high
+jr-8B-U6-0009,instead of,,代替;反而,junior,8,8B,U6,wordlist,p.42,high
+jr-8B-U6-0010,turn ... into,,变成,junior,8,8B,U6,wordlist,p.43,high
+jr-8B-U6-0011,object,n.,物体;物品,junior,8,8B,U6,wordlist,p.43,high
+jr-8B-U6-0012,hide,v.,隐藏;隐蔽(hid/hidden),junior,8,8B,U6,wordlist,p.43,high
+jr-8B-U6-0013,tail,n.,尾巴,junior,8,8B,U6,wordlist,p.43,high
+jr-8B-U6-0014,magic,adj.,有魔力的;有神奇力量的,junior,8,8B,U6,wordlist,p.43,high
+jr-8B-U6-0015,stick,n.,棍;条,junior,8,8B,U6,wordlist,p.43,high
+jr-8B-U6-0016,excite,v.,使激动;使兴奋,junior,8,8B,U6,wordlist,p.43,high
+jr-8B-U6-0017,Western,adj.,西方国家的;(尤指)欧美的;西方的(w可以小写),junior,8,8B,U6,wordlist,p.43,high
+jr-8B-U6-0018,once upon a time,,从前,junior,8,8B,U6,wordlist,p.44,high
+jr-8B-U6-0019,stepsister,n.,继姐(妹),junior,8,8B,U6,wordlist,p.44,high
+jr-8B-U6-0020,prince,n.,王子,junior,8,8B,U6,wordlist,p.44,high
+jr-8B-U6-0021,fall in love,,爱上;喜欢上,junior,8,8B,U6,wordlist,p.44,high
+jr-8B-U6-0022,fit,v.,适合;合身,junior,8,8B,U6,wordlist,p.44,high
+jr-8B-U6-0023,couple,n.,(尤指)夫妻;两人;两件事物,junior,8,8B,U6,wordlist,p.44,high
+jr-8B-U6-0024,smile,v. & n.,笑;微笑,junior,8,8B,U6,wordlist,p.44,high
+jr-8B-U6-0025,marry,v.,结婚,junior,8,8B,U6,wordlist,p.44,high
+jr-8B-U6-0026,get married,,结婚,junior,8,8B,U6,wordlist,p.44,high
+jr-8B-U6-0027,gold,n. adj.,金子;金币;金色的,junior,8,8B,U6,wordlist,p.45,high
+jr-8B-U6-0028,emperor,n.,皇帝,junior,8,8B,U6,wordlist,p.45,high
+jr-8B-U6-0029,silk,n.,丝绸;丝织物,junior,8,8B,U6,wordlist,p.45,high
+jr-8B-U6-0030,underwear,n.,内衣,junior,8,8B,U6,wordlist,p.45,high
+jr-8B-U6-0031,nobody,pron. n.,没有人;小人物,junior,8,8B,U6,wordlist,p.45,high
+jr-8B-U6-0032,stupid,adj.,愚蠢的,junior,8,8B,U6,wordlist,p.45,high
+jr-8B-U6-0033,cheat,v. n.,欺骗;蒙骗;骗子,junior,8,8B,U6,wordlist,p.45,high
+jr-8B-U6-0034,stepmother,n.,继母,junior,8,8B,U6,wordlist,p.46,high
+jr-8B-U6-0035,wife,n.,妻子;太太,junior,8,8B,U6,wordlist,p.46,high
+jr-8B-U6-0036,husband,n.,丈夫,junior,8,8B,U6,wordlist,p.46,high
+jr-8B-U6-0037,whole,adj.,全部的;整体的,junior,8,8B,U6,wordlist,p.46,high
+jr-8B-U6-0038,scene,n.,(戏剧或歌剧的)场;场景,junior,8,8B,U6,wordlist,p.46,high
+jr-8B-U6-0039,moonlight,n.,月光,junior,8,8B,U6,wordlist,p.46,high
+jr-8B-U6-0040,shine,v.,发光;照耀(shone/shone),junior,8,8B,U6,wordlist,p.46,high
+jr-8B-U6-0041,bright,adv. adj.,光亮地;明亮的;光线充足的,junior,8,8B,U6,wordlist,p.46,high
+jr-8B-U6-0042,ground,n.,地;地面,junior,8,8B,U6,wordlist,p.47,high
+jr-8B-U6-0043,lead,v.,带路;领路(led/led),junior,8,8B,U6,wordlist,p.47,high
+jr-8B-U6-0044,voice,n.,声音,junior,8,8B,U6,wordlist,p.47,high
+jr-8B-U6-0045,brave,adj.,勇敢的;无畏的,junior,8,8B,U6,wordlist,p.47,high
+jr-8B-U6-0046,Allen,,艾伦(姓),junior,8,8B,U6,recognize,p.38,high
+jr-8B-U6-0047,Claudia,,克劳迪娅(女名),junior,8,8B,U6,recognize,p.42,high
+jr-8B-U6-0048,Journey to the West,,《西游记》,junior,8,8B,U6,recognize,p.41,high
+jr-8B-U6-0049,the Monkey King,,美猴王,junior,8,8B,U6,recognize,p.43,high
+jr-8B-U6-0050,Sleeping Beauty,,《睡美人》,junior,8,8B,U6,recognize,p.46,high
+jr-8B-U6-0051,Cinderella,,《灰姑娘》,junior,8,8B,U6,recognize,p.46,high
+jr-8B-U6-0052,Little Red Riding Hood,,《小红帽》,junior,8,8B,U6,recognize,p.46,high
+jr-8B-U6-0053,Hansel and Gretel,,《韩塞尔与葛雷特》(《糖果屋》),junior,8,8B,U6,recognize,p.46,high
+jr-8B-U7-0001,square,n.,平方;正方形,junior,8,8B,U7,wordlist,p.49,high
+jr-8B-U7-0002,meter,n.,米;公尺(=metre),junior,8,8B,U7,wordlist,p.49,high
+jr-8B-U7-0003,deep,adj.,深的;纵深的,junior,8,8B,U7,wordlist,p.49,high
+jr-8B-U7-0004,desert,n.,沙漠,junior,8,8B,U7,wordlist,p.49,high
+jr-8B-U7-0005,population,n.,人口;人口数量,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0006,Asia,n.,亚洲,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0007,feel free,,(可以)随便(做某事),junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0008,tour,n. & v.,旅行;旅游,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0009,tourist,n.,旅行者;观光者,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0010,wall,n.,墙,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0011,amazing,adj.,令人大为惊奇的;令人惊喜(或惊叹)的,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0012,ancient,adj.,古代的;古老的,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0013,protect,v.,保护;防护,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0014,wide,adj.,宽的;宽阔的,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0015,as far as I know,,就我所知,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0016,man-made,adj.,人造的,junior,8,8B,U7,wordlist,p.50,high
+jr-8B-U7-0017,achievement,n.,成就;成绩,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0018,southwestern,adj.,西南的;西南方向的,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0019,thick,adj.,厚的;浓的,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0020,include,v.,包括;包含,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0021,freezing,adj.,极冷的;冰冻的,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0022,condition,n.,条件;状况,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0023,take in,,吸入;吞入(体内),junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0024,succeed,v.,实现目标;成功,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0025,challenge,v. & n.,挑战;考验,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0026,in the face of,,面对(问题、困难等),junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0027,achieve,v.,达到;完成;成功,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0028,force,n.,力;力量,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0029,nature,n.,自然界;大自然,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0030,even though (= even if),,即使;虽然,junior,8,8B,U7,wordlist,p.51,high
+jr-8B-U7-0031,ocean,n.,大海;海洋,junior,8,8B,U7,wordlist,p.52,high
+jr-8B-U7-0032,the Pacific Ocean,,太平洋,junior,8,8B,U7,wordlist,p.52,high
+jr-8B-U7-0033,cm (=centimeter/centimetre),,厘米,junior,8,8B,U7,wordlist,p.53,high
+jr-8B-U7-0034,weigh,v.,重量是……;称……的重量,junior,8,8B,U7,wordlist,p.53,high
+jr-8B-U7-0035,birth,n.,出生;诞生,junior,8,8B,U7,wordlist,p.53,high
+jr-8B-U7-0036,at birth,,出生时,junior,8,8B,U7,wordlist,p.53,high
+jr-8B-U7-0037,up to,,到达(某数量、程度等);至多有;不多于,junior,8,8B,U7,wordlist,p.53,high
+jr-8B-U7-0038,adult,adj. n.,成年的;成人的;成人;成年动物,junior,8,8B,U7,wordlist,p.53,high
+jr-8B-U7-0039,bamboo,n.,竹子,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0040,endangered,adj.,濒危的,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0041,research,n. & v.,研究;调查(用作名词时;重音可放在第一个音节),junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0042,keeper,n.,饲养员;保管人,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0043,awake,adj.,醒着,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0044,excitement,n.,激动;兴奋,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0045,walk into,,走路时撞着,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0046,fall over,,绊倒,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0047,or so,,大约,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0048,illness,n.,疾病;病,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0049,wild,adj.,野生的,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0050,government,n.,政府;内阁,junior,8,8B,U7,wordlist,p.54,high
+jr-8B-U7-0051,whale,n.,鲸,junior,8,8B,U7,wordlist,p.55,high
+jr-8B-U7-0052,oil,n.,油;食用油;石油,junior,8,8B,U7,wordlist,p.55,high
+jr-8B-U7-0053,protection,n.,保护;保卫,junior,8,8B,U7,wordlist,p.55,high
+jr-8B-U7-0054,huge,adj.,巨大的;极多的,junior,8,8B,U7,wordlist,p.55,high
+jr-8B-U7-0055,Tenzing Norgay,,丹增·诺尔盖,junior,8,8B,U7,recognize,p.51,high
+jr-8B-U7-0056,Edmund Hillary,,埃德蒙·希拉里,junior,8,8B,U7,recognize,p.51,high
+jr-8B-U7-0057,Junko Tabei,,田部井淳子,junior,8,8B,U7,recognize,p.51,high
+jr-8B-U7-0058,Qomolangma,,珠穆朗玛峰,junior,8,8B,U7,recognize,p.49,high
+jr-8B-U7-0059,the Nile,,尼罗河,junior,8,8B,U7,recognize,p.49,high
+jr-8B-U7-0060,the Caspian Sea,,里海,junior,8,8B,U7,recognize,p.49,high
+jr-8B-U7-0061,the Sahara,,撒哈拉沙漠,junior,8,8B,U7,recognize,p.49,high
+jr-8B-U7-0062,the Yangtze River,,长江,junior,8,8B,U7,recognize,p.50,high
+jr-8B-U7-0063,the Yellow River,,黄河,junior,8,8B,U7,recognize,p.50,high
+jr-8B-U7-0064,the Ming Dynasty,,明朝,junior,8,8B,U7,recognize,p.50,high
+jr-8B-U7-0065,the Ming Great Wall,,明长城,junior,8,8B,U7,recognize,p.50,high
+jr-8B-U7-0066,the Himalayas,,喜马拉雅山脉,junior,8,8B,U7,recognize,p.51,high
+jr-8B-U7-0067,the Amazon River,,亚马孙河,junior,8,8B,U7,recognize,p.52,high
+jr-8B-U7-0068,Chengdu Research Base,,成都研究基地,junior,8,8B,U7,recognize,p.54,high
+jr-8B-U8-0001,treasure,n.,珠宝;财富,junior,8,8B,U8,wordlist,p.57,high
+jr-8B-U8-0002,island,n.,岛,junior,8,8B,U8,wordlist,p.57,high
+jr-8B-U8-0003,full of,,满是……的;(有)大量的;(有)丰富的,junior,8,8B,U8,wordlist,p.58,high
+jr-8B-U8-0004,classic,n.,经典作品;名著,junior,8,8B,U8,wordlist,p.58,high
+jr-8B-U8-0005,page,n.,(书刊或纸张的)页;面;张,junior,8,8B,U8,wordlist,p.58,high
+jr-8B-U8-0006,hurry,v.,匆忙;赶快,junior,8,8B,U8,wordlist,p.58,high
+jr-8B-U8-0007,hurry up,,赶快;急忙(做某事),junior,8,8B,U8,wordlist,p.58,high
+jr-8B-U8-0008,due,adj.,预期;预定,junior,8,8B,U8,wordlist,p.58,high
+jr-8B-U8-0009,ship,n.,船,junior,8,8B,U8,wordlist,p.59,high
+jr-8B-U8-0010,tool,n.,工具,junior,8,8B,U8,wordlist,p.59,high
+jr-8B-U8-0011,gun,n.,枪;炮,junior,8,8B,U8,wordlist,p.59,high
+jr-8B-U8-0012,mark,n. v.,迹象;记号;分数;做记号;打分,junior,8,8B,U8,wordlist,p.59,high
+jr-8B-U8-0013,sand,n.,沙滩;沙,junior,8,8B,U8,wordlist,p.59,high
+jr-8B-U8-0014,cannibal,n.,食人肉者,junior,8,8B,U8,wordlist,p.59,high
+jr-8B-U8-0015,towards,prep.,朝;向;对着,junior,8,8B,U8,wordlist,p.59,high
+jr-8B-U8-0016,land,n.,陆地;大地,junior,8,8B,U8,wordlist,p.59,high
+jr-8B-U8-0017,fiction,n.,小说,junior,8,8B,U8,wordlist,p.60,high
+jr-8B-U8-0018,science fiction,,科幻小说(或影片等),junior,8,8B,U8,wordlist,p.60,high
+jr-8B-U8-0019,technology,n.,科技;工艺,junior,8,8B,U8,wordlist,p.60,high
+jr-8B-U8-0020,French,n.,法语,junior,8,8B,U8,wordlist,p.60,high
+jr-8B-U8-0021,pop,n.,流行音乐;流行乐曲,junior,8,8B,U8,wordlist,p.61,high
+jr-8B-U8-0022,rock,n.,摇滚乐,junior,8,8B,U8,wordlist,p.61,high
+jr-8B-U8-0023,band,n.,乐队,junior,8,8B,U8,wordlist,p.61,high
+jr-8B-U8-0024,country music (也作 country),,乡村音乐,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0025,forever,adv.,永远,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0026,abroad,adv.,在国外;到国外,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0027,actually,adv.,真实地;事实上,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0028,ever since,,自从,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0029,fan,n.,迷;狂热爱好者,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0030,southern,adj.,南方的,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0031,modern,adj.,现代的;当代的,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0032,success,n.,成功,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0033,belong,v.,属于;归属,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0034,one another,,互相,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0035,laughter,n.,笑;笑声,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0036,beauty,n.,美;美丽,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0037,million,num.,一百万,junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0038,record,n. v.,唱片;记录;录制;录(音),junior,8,8B,U8,wordlist,p.62,high
+jr-8B-U8-0039,introduce,v.,介绍;引见,junior,8,8B,U8,wordlist,p.63,high
+jr-8B-U8-0040,line,n.,行;排,junior,8,8B,U8,wordlist,p.64,high
+jr-8B-U8-0041,Alex,,亚历克斯(男名),junior,8,8B,U8,recognize,p.61,high
+jr-8B-U8-0042,Garth Brooks,,加思·布鲁克斯,junior,8,8B,U8,recognize,p.62,high
+jr-8B-U8-0043,The Beatles,,披头士乐队(英国),junior,8,8B,U8,recognize,p.64,high
+jr-8B-U8-0044,Treasure Island,,《金银岛》,junior,8,8B,U8,recognize,p.57,high
+jr-8B-U9-0001,whether,conj.,不管(还是);或者……(或者);是否,junior,8,8B,U9,wordlist,p.70,high
+jr-8B-U9-0002,Indian,adj. n.,印度的;印度人,junior,8,8B,U9,wordlist,p.70,high
+jr-8B-U9-0003,Japanese,adj. n.,日本的;日本人的;日语的;日本人;日语,junior,8,8B,U9,wordlist,p.70,high
+jr-8B-U9-0004,fox,n.,狐狸,junior,8,8B,U9,wordlist,p.70,high
+jr-8B-U9-0005,all year round,,全年,junior,8,8B,U9,wordlist,p.70,high
+jr-8B-U9-0006,equator,n.,赤道,junior,8,8B,U9,wordlist,p.70,high
+jr-8B-U9-0007,whenever,conj.,在任何……的时候;无论何时,junior,8,8B,U9,wordlist,p.70,high
+jr-8B-U9-0008,spring,n.,春天,junior,8,8B,U9,wordlist,p.70,high
+jr-8B-U9-0009,mostly,adv.,主要地;通常,junior,8,8B,U9,wordlist,p.71,high
+jr-8B-U9-0010,location,n.,地点;位置,junior,8,8B,U9,wordlist,p.71,high
+jr-8B-U9-0011,National Science Museum,,国家科学博物馆,junior,8,8B,U9,recognize,p.65,high
+jr-8B-U9-0012,International Museum of Toilets,,国际厕所博物馆,junior,8,8B,U9,recognize,p.67,high
+jr-8B-U9-0013,Hangzhou National Tea Museum,,杭州国家茶博物馆,junior,8,8B,U9,recognize,p.67,high
+jr-8B-U9-0014,Donald Duck,,唐老鸭,junior,8,8B,U9,recognize,p.68,high
+jr-8B-U9-0015,Disneyland,,迪斯尼乐园,junior,8,8B,U9,recognize,p.68,high
+jr-8B-U9-0016,Disney Cruise,,迪斯尼游轮,junior,8,8B,U9,recognize,p.68,high
+jr-8B-U9-0017,the Terracotta Army,,兵马俑,junior,8,8B,U9,recognize,p.69,high
+jr-8B-U9-0018,the Bird's Nest,,鸟巢,junior,8,8B,U9,recognize,p.69,high
+jr-8B-U9-0019,Singapore,,新加坡,junior,8,8B,U9,recognize,p.70,high
+jr-8B-U9-0020,Southeast Asia,,东南亚,junior,8,8B,U9,recognize,p.70,high
+jr-8B-U9-0021,Night Safari,,夜间野生动物园,junior,8,8B,U9,recognize,p.70,high
+jr-8B-U9-0022,honest,adj.,诚实的;老实的,junior,8,8B,U9,wordlist,p.75,high
+jr-8B-U9-0023,to be honest,,说实在的,junior,8,8B,U9,wordlist,p.75,high
+jr-8B-U9-0024,while,n.,一段时间;一会儿,junior,8,8B,U9,wordlist,p.75,high
+jr-8B-U9-0025,truthful,adj.,诚实的;真实的,junior,8,8B,U9,wordlist,p.75,high
+jr-8B-U9-0026,hometown,n.,家乡;故乡,junior,8,8B,U9,wordlist,p.76,high
+jr-8B-U9-0027,nowadays,adv.,现今;现在;目前,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0028,search,v. & n.,搜索;搜查,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0029,among,prep.,在(其)中;……之一,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0030,crayon,n.,彩色铅笔(或粉笔、蜡笔),junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0031,shame,n.,羞耻;羞愧;惭愧,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0032,regard,v.,将……认为;把……视为;看待,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0033,count,v.,数数,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0034,century,n.,百年;世纪,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0035,according to,,依据;按照,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0036,opposite,prep. adj.,与……相对;在……对面;对面的;另一边的,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0037,especially,adv.,尤其;特别;格外,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0038,childhood,n.,童年;幼年,junior,8,8B,U9,wordlist,p.78,high
+jr-8B-U9-0039,consider,v.,注视;仔细考虑,junior,8,8B,U9,wordlist,p.79,high
+jr-8B-U9-0040,close to,,几乎;接近,junior,8,8B,U9,wordlist,p.79,high
+jr-8B-U9-0041,hold,v.,拥有;抓住(held/held),junior,8,8B,U9,wordlist,p.79,high
+jr-8B-U10-0001,yard,n.,院子,junior,8,8B,U10,wordlist,p.73,high
+jr-8B-U10-0002,yard sale,,庭院拍卖会,junior,8,8B,U10,wordlist,p.73,high
+jr-8B-U10-0003,sweet,adj.,甜蜜的;甜的;含糖的,junior,8,8B,U10,wordlist,p.73,high
+jr-8B-U10-0004,memory,n.,记忆;回忆,junior,8,8B,U10,wordlist,p.73,high
+jr-8B-U10-0005,cent,n.,分;分币,junior,8,8B,U10,wordlist,p.73,high
+jr-8B-U10-0006,toy,n.,玩具,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0007,bear,n.,熊,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0008,maker,n.,生产者;制订者,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0009,bread maker,,面包机,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0010,scarf,n.,围巾;披巾;头巾,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0011,soft,adj.,软的;柔软的,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0012,soft toy,,软体玩具;布绒玩具,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0013,check,v. & n.,检查;审查,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0014,check out,,察看;观察,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0015,board,n.,板;木板,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0016,board game,,棋类游戏,junior,8,8B,U10,wordlist,p.74,high
+jr-8B-U10-0017,junior,adj.,地位(或职位、级别)低下的,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0018,junior high school,,初级中学,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0019,clear,v.,清理;清除,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0020,clear out,,清理;丢掉,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0021,bedroom,n.,卧室,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0022,no longer,,不再;不复,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0023,own,v.,拥有;有,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0024,railway,n.,铁路;铁道,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0025,part,v.,离开;分开,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0026,part with,,放弃;交出(尤指不舍得的东西),junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0027,certain,adj.,某种;某事;某人,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0028,as for,,至于;关于,junior,8,8B,U10,wordlist,p.75,high
+jr-8B-U10-0029,owner,n.,物主;主人,junior,8,8B,U10,wordlist,p.11,high
+jr-7A-SU1-0001,afernoon,,、 /{ft@rnu:n/ n. 下午 p.S3 Good afternoon! 下午好！,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0002,Alice,,艾丽斯（女名）,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0003,am,v.,是,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0004,are,v.,是,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0005,BBC,,英国广播公司,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0006,Bob,,、 /bA:b/ 鲍勃（男名）,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0007,CD,,光盘；激光唱片,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0008,Cindy,,辛迪（女名）,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0009,Dale,,戴尔（男名）,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0010,Eric,,埃里克（男名）,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0011,evening,n.,晚上；傍晚 p.S3 Good evening! 晚上好！,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0012,fine,adj.,健康的；美好的,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0013,Frank,,弗兰克（男名）,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0014,good,adj.,好的,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0015,Grace,,格雷丝（女名）,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0016,HB,,（铅笔芯）硬黑,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0017,Helen,,海伦（女名）,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0018,hello,interj.,你好；喂,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0019,hi,interj.,（用于打招呼）嗨；喂,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0020,how,adv.,怎样；如何,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0021,I,pron.,我,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0022,morning,n.,早晨；上午 p.S1 Good morning! 早上好！,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0023,OK,adj.,& adv. 安然无恙,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0024,thanks,interj.,& n. 感谢；谢谢,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU1-0025,you,pron.,你；你们 p.S3 How are you? 你好吗？,junior,7,7A,SU1,wordlist,117,high
+jr-7A-SU2-0001,a,,（an /{n; @n/） art. （用于单数可数名词前，表示 未曾提到的）一（人、事、物）,junior,7,7A,SU2,wordlist,117,low
+jr-7A-SU2-0002,cup,n.,杯子,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0003,English,n.,英语 adj. 英格兰的；英语的 p.S5 in English  用英语,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0004,in,prep.,（表示使用语言、材料等） 用；以,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0005,is,v.,是,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0006,it,pron.,它,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0007,jacket,n.,夹克衫；短上衣,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0008,key,n.,钥匙,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0009,kg,,千克；公斤,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0010,map,n.,地图,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0011,NBA,,（美国）全国篮球协会,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0012,orange,,、 /O:rIndZ/ n. 橙子,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0013,P,,停车场；停车位,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0014,pen,n.,笔；钢笔,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0015,please,interj.,（用于客气地请 求或吩咐）请,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0016,quilt,n.,被子；床罩,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0017,ruler,n.,尺；直尺,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0018,spell,v.,用字母拼；拼写 p.S7 在英式发音和美式发音有区别时，英式发音在前，美式发音在后。） 95,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0019,that,pron.,那；那个,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0020,this,pron.,这；这个,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU2-0021,what,,、 /wA:t/ pron. & adj. 什么,junior,7,7A,SU2,wordlist,117,high
+jr-7A-SU3-0001,black,adj.,& n. 黑色（的）,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0002,blue,adj.,& n. 蓝色（的）,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0003,brown,adj.,& n. 棕色（的）；褐色（的）,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0004,can,modal v.,能；会,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0005,CCTV,,中国中央电视台,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0006,color,n.,（= colour）颜色,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0007,green,adj.,& n. 绿色（的）,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0008,L,,（尤指服装的尺码）大号的,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0009,M,,（尤指服装的尺码）中号的,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0010,my,pron.,我的,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0011,now,adv.,现在；目前,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0012,purple,adj.,& n. 紫色（的）,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0013,red,adj.,& n. 红色（的）,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0014,S,,（尤指服装的尺码）小号的,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0015,say,v.,说；讲,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0016,see,v.,理解；明白,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0017,the,art.,指已提到或易领会 到的人或事物,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0018,UFO,,不明飞行物,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0019,white,adj.,& n. 白色（的）,junior,7,7A,SU3,wordlist,117,high
+jr-7A-SU3-0020,yellow,adj.,& n. 黄色 （的）,junior,7,7A,SU3,wordlist,117,high
+jr-7A-U1-0001,Alan,,艾伦（男名）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0002,and,conj.,和；又；而,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0003,Brown,,布朗（姓）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0004,China,,中国,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0005,eight,num.,八,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0006,first,adj.,第一 p.5 96 first name 名字,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0007,five,num.,五,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0008,four,num.,四,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0009,friend,n.,朋友,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0010,Gina,,吉娜（女名）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0011,Green,,格林（姓）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0012,he,pron.,他,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0013,her,pron.,她的,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0014,his,pron.,他的,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0015,Jack,,杰克（男名）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0016,Jane,,简（女名）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0017,Jenny,,珍妮（女名）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0018,last,,、 /l{st/ adj. 最后的；末尾的 p.5 last name 姓,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0019,Linda,,琳达（女名）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0020,Mary,,、 /meri/ 玛丽（女名）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0021,meet,v.,遇见；相逢,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0022,middle,adj.,中间的  n. 中间,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0023,Mike,,迈克（男名）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0024,Miller,,米勒（姓）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0025,Ms.,,（用于女子的姓氏或姓名前， 不指明婚否）女士,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0026,name,n.,名字；名称,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0027,nice,adj.,令人愉快的；宜人的,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0028,nine,num.,九,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0029,no,adv.,& adj. 不；没有；不是,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0030,not,,、 /nA:t/ adv. 不；没有,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0031,number,n.,号码；数字,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0032,one,num.,一,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0033,phone,n.,电话；电话机 p.4 telephone/phone number 电话号码,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0034,school,n.,学校 p.6 middle school  中学；初中,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0035,seven,num.,七,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0036,she,pron.,她,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0037,six,num.,六,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0038,Smith,,史密斯（姓）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0039,telephone,n.,电话；电话机,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0040,three,num.,三,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0041,to,,常用于原形动词之前，表 示该动词为不定式,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0042,Tom,,、 /tA:m/ 汤姆（男名）,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0043,too,adv.,也；又；太,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0044,two,num.,二,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0045,yes,interj.,是的；可以,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0046,your,pron.,你的；你们的,junior,7,7A,U1,wordlist,117,high
+jr-7A-U1-0047,zero,,、 /zIr@U/ num. 零,junior,7,7A,U1,wordlist,117,high
+jr-7A-U2-0001,aunt,,、 /{nt/ n. 姑母；姨母； 伯母；婶母；舅母,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0002,brother,n.,兄；弟,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0003,bye,interj.,(= goodbye) 再见,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0004,cousin,n.,堂兄（弟、姊、 妹）；表兄（弟、姊、妹）,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0005,dad,n.,爸爸,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0006,daughter,n.,女儿,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0007,day,n.,一天；一日；白天 p.8 Have a good day! （表示祝愿）过得愉快！,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0008,dog,,、 /dO:g/ n. 狗,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0009,family,n.,家；家庭,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0010,father,n.,父亲；爸爸,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0011,girl,n.,女孩,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0012,grandfather,n.,（外）祖父；爷爷；外公；姥爷,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0013,grandma,n.,（外）祖母；奶奶；外婆；姥姥,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0014,grandmother,n.,（外）祖母；奶奶；外婆；姥姥,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0015,grandpa,n.,（外）祖父；爷爷；外公；姥爷,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0016,grandparent,,、,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0017,have,v.,经受；经历,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0018,here,,、 /hIr/ adv. （用以介绍 某人或某物）这就是；在这里,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0019,Kate,,凯特（女名）,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0020,mom,,、 /mA:m/ n. （= mum）妈妈,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0021,mother,n.,母亲；妈妈,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0022,next,adj.,& n. 下一个（的）； 接下来（的）,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0023,of,,、 /v; @v/ prep. 属于（某 人或某物）； 关于（某人或某物）  p.11 97,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0024,oh,interj.,哦；啊,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0025,parent,,、 /per@nt/ n. 父（母）亲,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0026,Paul,,保罗（男名）,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0027,photo,n.,照片,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0028,picture,n.,照片；图画,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0029,Sally,,萨莉（女名）,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0030,sister,n.,姐；妹,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0031,son,n.,儿子,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0032,these,pron.,这些,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0033,they,pron.,他（她、它）们,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0034,those,pron.,那些,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0035,uncle,n.,舅父；叔父；伯父； 姑父；姨父,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0036,well,interj.,嗯；好吧,junior,7,7A,U2,wordlist,117,high
+jr-7A-U2-0037,who,pron.,谁；什么人,junior,7,7A,U2,wordlist,117,high
+jr-7A-U3-0001,about,prep.,关于  adv. 大约 p.14 What about ...? （询问消息或提出建议） ……怎么样？……好吗？,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0002,Anna,,安娜（女名）,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0003,ask,,、 /{sk/ v. 请求；要求； 询问 p.17 ask ... for ...  请求；恳求（给予）,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0004,at,prep.,（提供电话号码等时使用） 按照；根据；在（某处、某时间 或时刻）,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0005,bag,n.,袋；包,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0006,baseball,n.,棒球,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0007,book,n.,书,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0008,box,,、 /bA:ks/ n. 箱；盒 p.13 pencil box  铅笔盒；文具盒,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0009,call,v.,（给……）打电话,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0010,card,n.,卡片 p.16 ID card  学生卡；身份证,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0011,classroom,,、 /kl{sru:m/ n. 教室,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0012,computer,n.,计算机；电脑,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0013,David,,戴维（男名）,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0014,dictionary,,、 /dIkS@neri/ n. 词典；字典,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0015,e-mail,,（= email） v. 给……发电子邮件；用电邮发送 n. 电子邮件,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0016,eraser,,、 /IreIs@r/ n. 橡皮,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0017,excuse,v.,原谅；宽恕,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0018,find,v.,（过去式、过去分词,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0019,for,prep.,为了；给；对 p.14 thank you for ... 为……而感谢你（们）,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0020,found,,）  找到；发现,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0021,game,n.,游戏；运动；比赛,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0022,help,v.,& n. 帮助；援助,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0023,hers,pron.,她的,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0024,his,pron.,他的,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0025,in,prep.,在……里,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0026,John,,、 /dZA:n/ 约翰（男名）,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0027,library,,、 /laIbreri/ n. 图书馆,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0028,lost,,、 /lA:st/ v.（动词lose,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0029,me,pron.,（I的宾格）我 p.14 excuse me  劳驾；请原谅,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0030,mine,pron.,我的,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0031,must,modal v.,必须,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0032,notebook,n.,笔记本,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0033,pencil,n.,铅笔,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0034,ring,n.,戒指,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0035,schoolbag,n.,书包,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0036,set,n.,一套；一副；一组 p.18 98 a set of  一套；一副；一组,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0037,some,adj.,一些；某些 pron. 有些；有的,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0038,teacher,n.,老师；教师,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0039,thank,v.,感谢；谢谢,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0040,watch,,、 /wA:tS/ n. 表；手表,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0041,welcome,adj.,受欢迎的 p.14 You’re welcome.  别客气。,junior,7,7A,U3,wordlist,117,high
+jr-7A-U3-0042,yours,pron.,你的；你们的,junior,7,7A,U3,wordlist,117,high
+jr-7A-U4-0001,always,adv.,总是,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0002,bed,n.,床,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0003,bookcase,n.,书架；书柜,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0004,but,conj.,但是,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0005,chair,,、 /tSer/ n. 椅子,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0006,clock,,、 /klA:k/ n. 时钟,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0007,come,v.,来；来到 p.20 come on  快点儿,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0008,desk,n.,书桌,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0009,everywhere,,、 /evriwer/ adv. 处处；到处；各个地方,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0010,hat,n.,帽子,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0011,head,n.,头,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0012,know,v.,知道；了解,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0013,model,,、 /mA:dl/ n. 模型,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0014,on,,、 /A:n/ prep. 在……上,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0015,our,pron.,我们的,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0016,plane,n.,飞机 p.22 model plane 飞机模型,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0017,player,n.,播放机 p.22 tape player 磁带播放机,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0018,radio,n.,收音机；无线电广播,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0019,room,n.,房间,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0020,sofa,n.,沙发,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0021,table,n.,桌子,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0022,tape,n.,磁带；录音带；录像带,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0023,their,,、 /Der/ pron. 他（她、它）们的,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0024,think,v.,认为；想；思考,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0025,tidy,adj.,整洁的；井井有条的,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0026,under,prep.,在……下,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0027,where,,、 /wer/ adv. 在哪里；到哪里,junior,7,7A,U4,wordlist,117,high
+jr-7A-U4-0028,yeah,interj.,是的；对,junior,7,7A,U4,wordlist,117,high
+jr-7A-U5-0001,afer,,、 /{ft@(r)/ prep. & conj. 在……以后,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0002,ball,n.,球,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0003,basketball,,、 /b{skItbO:l/ n. 篮球,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0004,bat,n.,球棒；球拍,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0005,Bill,,比尔（男名）,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0006,boring,adj.,没趣的；令人厌倦的,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0007,class,,、 /kl{s/ n. 班级；课,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0008,classmate,,、 /kl{smeIt/ n. 同班同学,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0009,difficult,adj.,困难的,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0010,do,,（第三人称单数形式,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0011,does,,）aux v. & v. 用于构成 否定句和疑问句；做；干,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0012,easy,adj.,容易的；不费力的,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0013,fun,adj.,有趣的；使人快乐的 n. 乐趣；快乐,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0014,get,v.,去取（或带来）；得到,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0015,go,v.,去；走,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0016,great,adj.,美妙的；伟大的,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0017,has,v.,（have的第三人称 单数形式）有 p.26 99,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0018,have,v.,有,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0019,hey,interj.,嘿；喂,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0020,interesting,adj.,有趣的,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0021,late,adj.,迟到,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0022,let,v.,允许；让,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0023,like,v.,喜欢；喜爱,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0024,love,v.,& n. 爱；喜爱,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0025,only,adv.,只；仅,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0026,ping-pong,,、 /pINpA:N/ n. 乒乓球,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0027,play,v.,参加（比赛或运动）；玩耍,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0028,relaxing,adj.,轻松的；令人放松的,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0029,same,adj.,相同的,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0030,soccer,,、 /sA:k@(r)/ n. （英式）足球 p.25 soccer ball  （英式）足球,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0031,sound,v.,听起来好像,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0032,sport,n.,体育运动,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0033,tennis,n.,网球,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0034,them,pron.,（they 的宾格） 他（她、它）们,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0035,TV,n.,（= television /telIvIZn/） 电视；电视机 p.28 watch TV  看电视,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0036,us,pron.,（we 的宾格）我们 p.26 let’s = let us  让我们（一起）,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0037,volleyball,,、 /vA:libO:l/ n. 排球,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0038,watch,,、 /wA:tS/ v. 注视；观看,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0039,we,pron.,我们,junior,7,7A,U5,wordlist,117,high
+jr-7A-U5-0040,with,prep.,和……在一起； 带有；使用,junior,7,7A,U5,wordlist,117,high
+jr-7A-U6-0001,apple,n.,苹果,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0002,banana,,、 /b@n{n@/ n.香蕉,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0003,be,v.,变成,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0004,birthday,n.,生日,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0005,bread,n.,面包,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0006,breakfast,n.,早餐；早饭,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0007,burger,n.,（= hamburger）汉堡包,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0008,carrot,n.,胡萝卜,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0009,chicken,n.,鸡肉,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0010,dinner,n.,（中午或晚上吃的） 正餐,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0011,eat,v.,吃,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0012,egg,n.,蛋；鸡蛋,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0013,fat,adj.,肥的；肥胖的,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0014,food,n.,食物,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0015,fruit,n.,水果,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0016,habit,n.,习惯,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0017,hamburger,n.,汉堡包,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0018,healthy,adj.,健康的,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0019,ice-cream,n.,冰激凌,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0020,lunch,n.,午餐,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0021,milk,n.,牛奶,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0022,pear,,、 /per/ n.梨,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0023,question,n.,问题,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0024,really,adv.,真正地,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0025,rice,n.,大米；米饭,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0026,right,adj.,正确的；适当的,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0027,salad,n.,沙拉,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0028,so,conj.,（引出评论或问题）那么,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0029,star,n.,明星；星星,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0030,strawberry,,、 /strO:beri/ n.草莓,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0031,sure,,、 /SUr/ adv. 当然；肯定；一定 p.32 How about ...? （提出建议）……怎么样？,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0032,then,adv.,那么 p.32 100,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0033,tomato,,、 /t@meItU/ n.西红柿,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0034,vegetable,n.,蔬菜,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0035,want,,、 /wA:nt/ v. 需要；想要,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0036,week,n.,周；星期 p.32 think about  思考；思索,junior,7,7A,U6,wordlist,117,high
+jr-7A-U6-0037,well,adv.,好；令人满意地,junior,7,7A,U6,wordlist,117,high
+jr-7A-U7-0001,all,adj.,所有的；全部的,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0002,big,adj.,大的；大号的,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0003,boy,n.,男孩 p.41 a pair of  一双,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0004,buy,v.,购买；买,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0005,clothes,n.,(pl.) 衣服；服装,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0006,dollar,,、 /dA:l@r/ n. 元（美国、 加拿大等国的货币单位，符号为$）,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0007,eighteen,num.,十八,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0008,eleven,num.,十一,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0009,fifteen,num.,十五,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0010,long,,、 /lO:N/ adj. 长的,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0011,look,v.,看；看上去,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0012,Mr.,,（用于男子的姓氏或 姓名前）先生,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0013,much,pron.,& adj. 许多； 大量；多少 p.37 How much ...?  （购物时）……多少钱？,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0014,need,v.,需要,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0015,pair,,、 /per/ n. 一双；一对,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0016,price,n.,价格,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0017,sale,n.,特价销售；出售,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0018,sell,v.,出售；销售；卖,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0019,shoe,n.,鞋,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0020,short,adj.,短的；矮的,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0021,shorts,n.,(pl.) 短裤,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0022,skirt,n.,裙子,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0023,small,adj.,小的；小号的,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0024,sock,,、 /sA:k/ n. 短袜,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0025,store,n.,商店,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0026,sweater,n.,毛衣,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0027,T-shirt,n.,T恤衫,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0028,take,v.,买下；拿；取 p.38 Here you are.  给你。,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0029,ten,num.,十,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0030,thirteen,num.,十三,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0031,thirty,num.,三十,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0032,trousers,n.,(pl.) 裤子,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0033,twelve,num.,十二,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0034,twenty,num.,二十,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0035,very,adv.,很；非常,junior,7,7A,U7,wordlist,117,high
+jr-7A-U7-0036,woman,n.,(pl. women,junior,7,7A,U7,wordlist,117,high
+jr-7A-U8-0001,April,n.,四月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0002,art,n.,艺术；美术,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0003,August,n.,八月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0004,busy,adj.,忙碌的；无暇的,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0005,dear,,、 /dIr/ adj. 亲爱的,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0006,December,n.,十二月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0007,eighth,num.,第八,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0008,February,,、 /febjueri/ n. 二月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0009,festival,n.,（音乐、戏剧等 的）会演节；节日,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0010,fifth,num.,第五,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0011,first,num.,第一,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0012,happy,adj.,愉快的；高兴的  p.44 Happy birthday! 生日快乐！,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0013,January,,、 /dZ{njueri/ n.一月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0014,July,n.,七月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0015,June,n.,六月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0016,March,n.,三月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0017,May,n.,五月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0018,month,n.,月；月份 p.43 101,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0019,ninth,num.,第九,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0020,November,n.,十一月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0021,October,,、 /A:ktUb@r/ n. 十月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0022,old,adj.,年老的；旧的 p.44 How old ...? ……多大年纪？……几岁了？,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0023,party,n.,聚会 p.44 See you!  再见！,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0024,second,num.,第二,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0025,September,n.,九月,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0026,student,,、 /stu:dnt/ n. 学生,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0027,term,n.,学期,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0028,test,n.,测验；检查,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0029,there,,、 /Der/ adv. （在）那里,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0030,thing,n.,东西；事情,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0031,third,num.,第三,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0032,time,n.,时间 p.47 Have a good time! （表示祝愿）过得愉快！,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0033,trip,n.,旅游；旅行,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0034,twelfh,num.,第十二,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0035,twentieth,num.,第二十,junior,7,7A,U8,wordlist,117,high
+jr-7A-U8-0036,when,adv.,（疑问副词） 什么时候,junior,7,7A,U8,wordlist,117,high
+jr-7A-U9-0001,A.M.,,（= a.m.）上午,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0002,because,,、 /bIkO:z/ conj. 因为,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0003,Chinese,n.,语文；汉语 adj. 汉语的；中国的,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0004,cool,adj.,妙极的；酷的,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0005,favorite,adj.,& n. （= favourite）特别喜爱的 (人或事物),junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0006,finish,v.,完成；做好,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0007,free,adj.,空闲的,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0008,Friday,n.,星期五,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0009,from,,、 /frA:m/ prep.（表示 开始的时间）从……开始 p.53 from ... to ...  从……到……,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0010,geography,,、 /dZiA:gr@fi/ n. 地理（学）,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0011,history,n.,历史,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0012,hour,n.,小时 p.53 103,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0013,lesson,n.,课 ；一节课,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0014,math,n.,（= maths）数学,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0015,Monday,n.,星期一,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0016,Mrs.,,（用于女子的姓氏或 姓名前）太太；夫人,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0017,music,n.,音乐；乐曲,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0018,P.E.,n.,（= physical education）体育,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0019,P.M.,,（=,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0020,Saturday,n.,星期六 p.50 for sure  无疑；肯定 p.50 102 102,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0021,science,n.,科学,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0022,subject,n.,学科；科目,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0023,Sunday,n.,星期日,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0024,Tuesday,,、 /tu:zdeI/ n. 星期二,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0025,Tursday,n.,星期四,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0026,useful,adj.,有用的；有益的,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0027,Wednesday,n.,星期三,junior,7,7A,U9,wordlist,117,high
+jr-7A-U9-0028,why,adv.,为什么,junior,7,7A,U9,wordlist,117,high
+jr-8A-U1-0001,activity,n.,活动,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0002,anyone,pron.,任何人,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0003,anywhere,,、 / / adv. 在任何地方,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0004,as,adv.,像……一样；如同 conj. 当⋯⋯时；如同,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0005,below,prep.,& adv. 在……下面；到……下面,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0006,bicycle,n.,自行车；脚踏车,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0007,bird,n.,鸟,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0008,bored,adj.,厌倦的； 烦闷的,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0009,building,n.,建筑物；房子,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0010,decide,v.,决定；选定,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0011,diary,n.,日记；记事簿,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0012,dislike,v.,& n. 不喜爱（的事物）；厌恶（的事物） p.7 122 Central Park  中央公园（美国纽约）,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0013,diﬀerence,n.,差别；差异,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0014,duck,n.,鸭,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0015,enjoyable,adj.,有乐趣的； 令人愉快的,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0016,enough,adj.,& adv. 足够的（地）； 充足的（地）；充分的（地）,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0017,everyone,pron.,每人； 人人；所有人,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0018,few,adj.,& pron. 不多；很少 p.2 quite a few  相当多；不少,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0019,Georgetown,,乔治市（马来西亚）,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0020,hen,n.,母鸡,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0021,hill,n.,小山；山丘,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0022,Hong Kong,,、 /  / 香港（中华人民共和国特别行政区）,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0023,Huangguoshu Waterfall,,黄果树瀑布（贵州）,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0024,hungry,adj.,饥饿的,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0025,Malaysia,,马来西亚,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0026,Malaysian,adj.,马来西亚的 n. 马来西亚人,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0027,Mark,,马克（男名）,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0028,most,adj.,、 adv. & pron. 最多；大多数,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0029,myself,pron.,我自己；我本人,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0030,nothing,pron.,没有什么； 没有一件东西,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0031,of course,,当然；自然,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0032,paragliding,n.,滑翔伞运动 p.5 feel like  给……的感觉；感受到,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0033,Penang,,Hill  槟城山 （马来西亚）,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0034,pig,n.,猪,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0035,seem,v.,好像；似乎；看来,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0036,someone,pron.,某人,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0037,something,pron.,某事；某物,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0038,the Palace,,Museum 故宫博物院,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0039,top,,、 // n. 顶部；表面,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0040,trader,n.,商人,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0041,try,v.,& n. 尝试；设法；努力,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0042,umbrella,n.,伞；雨伞,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0043,wait,v.,等待；等候,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0044,Weld,,Quay //  海 街,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0045,wet,adj.,湿的；潮湿的； 下雨的 p.5 because of   因为,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0046,wonder,v.,想知道；琢磨,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0047,wonderful,adj.,精彩的； 绝妙的,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0048,yourself,pron.,,junior,8,8A,U1,wordlist,132,high
+jr-8A-U1-0049,（pl. yourselves,,） 你自己；您自己,junior,8,8A,U1,wordlist,132,high
+jr-8A-U10-0001,advice,n.,劝告；建议,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0002,advise,v.,劝告；建议,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0003,agent,n.,代理人；经纪人,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0004,angry,adj.,发怒的；生气的,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0005,Ben,,本（男名）,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0006,careful,,、 / / adj. 小心的； 细致的；精心的；慎重的,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0007,careless,,、 / / adj. 粗心的；不小心的,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0008,certainly,adv.,无疑；肯定；当然；行,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0009,chocolate,,、 / / n. 巧克力,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0010,else,adv.,别的；其他的,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0011,experience,,、,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0012,expert,n.,专家 p.77 keep ... to oneself   保守秘密,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0013,halfway,,、 / / adj. & adv. 在中途；部分地做 （或达到）,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0014,himself,pron.,他自己,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0015,Hunt,,亨特（姓） p. 77 132,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0016,Karen,,卡伦（女名）,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0017,Laura,,劳拉（女名）,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0018,meeting,n.,会议；集会； 会面,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0019,Michael,,迈克尔（男名）,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0020,mile,n.,英里,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0021,Mills,,米尔斯（姓） p. 77,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0022,mistake,n.,错误；失误,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0023,normal,adj.,正常的；一般的  p.77 131,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0024,organize,v.,（= organise）组织；筹备,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0025,potato chips,,炸土豆片； 炸薯条,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0026,Robert,,、 / / 罗伯特（男名） p. 77,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0027,solve,,、 // v. 解决；解答,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0028,step,n.,步；步骤,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0029,taxi,n.,出租汽车；的士,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0030,teenager,n.,（13~19岁的）青少年,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0031,travel,v.,& n. 旅行；游历,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0032,trust,v.,相信；信任,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0033,understanding,adj.,善解人意的；体谅人的,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0034,unless,conj.,除非；如果不,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0035,upset,adj.,难过；失望；沮丧,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0036,video,n.,录像带；录像,junior,8,8A,U10,wordlist,132,high
+jr-8A-U10-0037,wallet,,、 / / n. 钱包,junior,8,8A,U10,wordlist,132,high
+jr-8A-U2-0001,almost,adv.,几乎；差不多,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0002,although,conj.,虽然；尽管； 即使,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0003,American Teenager,,《美国青少年》（文中为虚构的 杂志名称）,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0004,body,,、 / / n. 身体,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0005,Claire,,、 // 克莱尔（女名）,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0006,coﬀee,,、 / / n. 咖啡,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0007,dentist,n.,牙科医生,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0008,die,v.,消失；灭亡；死亡 p.13 123,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0009,ever,adv.,在任何时候；从来；曾经 p.9 hardly ever  几乎从不,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0010,full,adj.,忙的；满的；充满的,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0011,hardly,adv.,几乎不； 几乎没有,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0012,health,n.,健康；人的身体 （或精神）状态,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0013,housework,n.,家务劳动；家务事,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0014,however,adv.,然而； 不过,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0015,Internet,n.,（国际）互联网；因特网,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0016,junk,n.,无用的东西；无价值的东西 p.12 junk food  垃圾食品,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0017,least,adv.,最小；最少 adj. & pron. 最小的；最少的 p.11 at least  至少；不少于；起码,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0018,less,adv.,较少；较小 adj. & pron. 较少的；更少的 p.16 less than   少于,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0019,magazine,,、,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0020,maybe,adv.,大概；或许； 可能,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0021,mind,n.,头脑；心智,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0022,none,pron.,没有一个；毫无,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0023,once,adv.,一次；曾经,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0024,online,,、 / / adj. & adv. 在线（的）；联网（的）,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0025,percent,n.,（=per cent） 百分之……,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0026,point,n.,得分；点 v. 指；指向,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0027,program,n.,（=programme）节目,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0028,result,n.,结果；后果,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0029,such,adj.,& pron. 这样的；那样的；类似的 p.13 such as  例如；像……这样,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0030,Sue,,休（女名）,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0031,swing,n.,摆动；秋千,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0032,television,n.,电视节目； 电视机,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0033,than,prep.,& conj. （用以引出比较的第二部分）比 p.15 more than  多于,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0034,through,prep.,以；凭借；穿过,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0035,together,adv.,在一起； 共同,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0036,twice,adv.,两次；两倍,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0037,v. （swung,,）（使）摆动； 摇摆 p.10 swing dance  摇摆舞,junior,8,8A,U2,wordlist,132,high
+jr-8A-U2-0038,writer,n.,作者；作家,junior,8,8A,U2,wordlist,132,high
+jr-8A-U3-0001,arm,n.,手臂；上肢,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0002,beter,adj.,& adv. （good和well的比较级） 较好的（地）；更好的（地）,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0003,both,adj.,& pron. 两个； 两个都,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0004,break,v.,（broke //） （使）破；裂；碎；损坏,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0005,care,,、 // v. 在意；担忧；关心 p.20 care about   关心；在意,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0006,clearly,,、 / / adv. 清楚地；清晰地；明白地,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0007,competition,,、,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0008,fact,n.,现实；事实 p.21 in fact   确切地说；事实上；实际上,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0009,fantastic,adj.,极好的；了不起的,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0010,grade,n.,成绩等级；评分等级,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0011,hand,n.,手,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0012,hard-working,adj.,工作努力的；辛勤的,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0013,heart,n.,内心；心脏,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0014,information,n.,信息；消息,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0015,kid,n.,小孩；年轻人 p.21 as long as  只要；既然,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0016,Larry,,拉里（男名）,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0017,laugh,,、 // v. 笑；发笑 n. 笑声,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0018,loud,adj.,响亮的；大声的,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0019,loudly,adv.,喧闹地；大声地；响亮地,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0020,mirror,n.,镜子,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0021,necessary,,、 / / adj. 必需的；必要的 p.21 be different from  与……不同； 与……有差异 p.21 bring out   使显现；使表现出 p.21 124,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0022,Nelly,,内莉（女名）,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0023,outgoing,adj.,爱交际的； 友好的；外向的,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0024,primary,,、 / / adj. 最初的；最早的 p.24 primary school  小学,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0025,quietly,adv.,轻声地； 轻柔地；安静地,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0026,reach,v.,伸手；到达；抵达,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0027,Sam,,萨姆（男名）,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0028,saying,n.,谚语；格言；警句,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0029,serious,,、 / / adj. 严肃的；稳重的,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0030,share,,、 // v. 分享；共享； 共用；分摊,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0031,should,modal v.,应该；应当；可以 p.21 the same as  和……相同；与……一致,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0032,similar,adj.,相像的； 类似的 p.22 be similar to  与……相像的、类似的,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0033,talented,adj.,有才能的；有才干的,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0034,Tara,,、 / / 塔拉（女名）,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0035,though,adv.,不过；可是；然而 conj. 虽然；尽管；不过,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0036,touch,v.,感动；触摸,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0037,truly,adv.,真正；确实,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0038,which,pron.,& adj. 哪一个； 哪一些,junior,8,8A,U3,wordlist,132,high
+jr-8A-U3-0039,win,v.,（won //） 获胜；赢；赢得,junior,8,8A,U3,wordlist,132,high
+jr-8A-U4-0001,act,v.,扮演  n. 表演者,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0002,American Idol,,美国偶像 （文中为电视节目名称） p.29 America’s Got Talent  美国达人秀 （文中为电视节目名称） p.29 China’s Got Talent  中国达人秀 （文中为电视节目名称）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0003,beautifully,adv.,美好地； 漂亮地 p.29 be up to  是……的职责；由……决定,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0004,carefully,,、 / / adv. 细致地；小心地；谨慎地,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0005,cheaply,adv.,便宜地； 低廉地,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0006,choose,v.,（chose //） 选择；挑选,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0007,close,adj.,（在空间、时间上） 接近,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0008,comfortable,adj.,使人舒服的；舒适的,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0009,comfortably,adv.,舒服地；舒适地,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0010,creative,adj.,有创造力的；创造性的,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0011,crowded,adj.,人多的；拥挤的；挤满的,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0012,Danny,,丹尼（男名）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0013,Dennis,,丹尼斯（男名）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0014,DJ,n.,（电台、电视台、 俱乐部的）音乐节目主持人,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0015,Eliza,,伊丽莎（女名）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0016,everybody,,、 / / pron. 每人；人人；所有人 p.29 make up  编造（故事、谎言等）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0017,example,,、 // n. 实例；范例 p.29 for example  例如,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0018,fresh,adj.,新鲜的；清新的,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0019,give,v.,（gave /e/）提供；给,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0020,Greg,,格雷格（男名）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0021,magician,n.,魔术师 p.29 all kinds of   各种类型的；各种各样的,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0022,meal,n.,早（或午、晚）餐； 一餐所吃的食物 p.27 125,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0023,menu,n.,菜单,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0024,performer,n.,表演者；演员,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0025,poor,,、 // adj. 贫穷的；清贫的,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0026,prety,adv.,相当；十分；很 adj. 漂亮的,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0027,prize,n.,奖；奖品；奖金,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0028,reporter,n.,记者 p.26 so far   到目前为止；迄今为止,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0029,role,n.,作用；职能；角色 p.29 play a role  发挥作用；有影响,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0030,screen,n.,银幕；屏幕,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0031,seat,n.,座位；坐处（如椅子等）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0032,seriously,,、 / / adv. 严重地；严肃地；认真地 p.29 take ... seriously   认真对待……,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0033,service,n.,接待；服务,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0034,song,,、 // n. 歌；歌曲,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0035,talent,n.,天资；天赋 p.29 have ... in common  有相同特征； （想法、兴趣等方面）相同,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0036,theater,,、 / / n.  （=theatre）戏院；剧场,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0037,ticket,n.,票；入场券,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0038,Vera,,、 / vr/ 薇拉（女名）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0039,winner,n.,获胜者； 优胜者,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0040,worse,adj.,& adv. （bad和badly的比较级）更差（的）； 更坏（的）；更糟（的）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U4-0041,worst,adj.,& adv. （bad和badly的最高级）最差（的）； 最坏（的）；最糟（的）,junior,8,8A,U4,wordlist,132,high
+jr-8A-U5-0001,action,n.,行动 p.36 action movie   动作影片,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0002,appear,,、 // v. 出现,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0003,army,n.,陆军；陆军部队 p.39 do a good job   干得好,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0004,become,v.,（became,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0005,cartoon,n.,动画片； 卡通片,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0006,character,n.,人物； 角色,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0007,comedy,,、 / / n. 喜剧；喜剧片 p.35 126,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0008,common,,、 / / adj.  普通的；常见的,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0009,culture,n.,文化；文明,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0010,discussion,n.,讨论；商量,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0011,educational,adj.,教育的；有教育意义的,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0012,expect,v.,预料；期待,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0013,famous,adj.,著名的； 出名的,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0014,film,n.,（= movie）电影,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0015,girlfriend,n.,女朋友,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0016,happen,v.,发生；出现,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0017,Hollywood,,、 / / 好莱坞；美国电影业,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0018,hope,v.,& n. 希望 p.34 find out   查明；弄清,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0019,joke,n.,笑话；玩笑,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0020,lose,v.,（lost //、 //） 失去；丢失,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0021,main,adj.,主要的；最重要的,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0022,meaningless,adj.,毫无意义的；意思不明确的,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0023,Mickey Mouse,,米老鼠,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0024,might,modal v.,可能；可以,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0025,mind,v.,介意；对（某事） 烦恼,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0026,Minnie,,明妮（女名）,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0027,news,,、 // n.  新闻节目； 新闻,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0028,plan,v.,& n. 打算；计划,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0029,ready,adj.,愿意的；准备好的 p.37 be ready to  准备好（做某事）； 愿意（做某事）,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0030,reason,n.,原因；理由,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0031,rich,adj.,富有的,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0032,Sarah,,、 / / 萨拉（女名）,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0033,simple,adj.,简单的； 易做的 p.37 dress up   装扮；乔装打扮 p.39 take sb.’s place   代替；替换,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0034,sitcom,,、 / / n.  （=situation comedy）情景喜剧,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0035,soap,,opera / /、 / / 肥皂剧,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0036,stand,v.,（stood //） 忍受；站立,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0037,Steamboat Willie,,迪斯尼公司制作的全球第一部 有声动画片《威利号汽船》,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0038,successful,adj.,获得成功的；有成就的,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0039,the Hollywood Walk of Fame,,好莱坞星光大道（美国）,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0040,unlucky,adj.,不幸的； 不吉利的,junior,8,8A,U5,wordlist,132,high
+jr-8A-U5-0041,Walt,,Disney / / 沃尔特· 迪斯尼,junior,8,8A,U5,wordlist,132,high
+jr-8A-U6-0001,able,adj.,能够 p.45 be able to   能够做某事,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0002,Andy,,安迪（男名）,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0003,article,n.,文章；论文,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0004,beginning,n.,开头；开端  p.45 at the beginning of  在……开始,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0005,college,,、 / / n. 学院；大学；高等专科学校,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0006,cook,n.,厨师   v. 烹饪；煮,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0007,discuss,v.,讨论；商量,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0008,doctor,,、 / / n. 医生,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0009,driver,n.,驾驶员；司机,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0010,education,n.,教育,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0011,engineer,,、 / / n. 工程师,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0012,foreign,,、 / / adj. 外国的,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0013,Hemingway,,海明威（姓）,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0014,hobby,,、 / / n. 业余爱好,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0015,improve,v.,改进；改善 p.45 write down   写下；记录下,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0016,Kelly,,凯莉（女名） p.43 The Old Man and the Sea  《老人与海》 （美国作家海明威的小说 ）,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0017,Ken,,肯（男名）,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0018,London,,伦敦,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0019,meaning,n.,意义；意思,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0020,medicine,n.,药；医学,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0021,own,adj.,& pron. 自己的； 本人的,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0022,paint,v.,用颜料画； 在⋯⋯上刷油漆,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0023,personal,adj.,个人的；私人的,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0024,physical,adj.,身体的,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0025,pianist,n.,钢琴家,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0026,pilot,n.,飞行员,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0027,promise,,、 / / n. 承诺；诺言  v. 许诺；承诺,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0028,question,v.,表示疑问； 怀疑；提问； 质询,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0029,relationship,n.,关系； 联系,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0030,resolution,n.,决心；决定,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0031,schoolwork,n.,学校作业；功课,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0032,scientist,n.,科学家 p.41 be sure about   确信；对……有把握 p.42 127 make sure   确保；查明,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0033,self-improvement,n.,自我改进；自我提高 p.45 take up   （尤指为消遣）学着做； 开始做,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0034,send,v.,（sent /t/） 邮寄；发送,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0035,team,n.,队；组 p.44 make the soccer team 成为足球队的一员,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0036,themselves,pron.,他（她、它）们自己 p.45 have to do with  关于；与……有关系,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0037,university,n.,（综合性）大学；高等学府,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0038,violinist,n.,小提琴手,junior,8,8A,U6,wordlist,132,high
+jr-8A-U6-0039,weekly,adj.,& adv. 每周的（地）,junior,8,8A,U6,wordlist,132,high
+jr-8A-U7-0001,agree,v.,同意；赞成；应允 p.53 hundreds of   许多；大量,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0002,already,adv.,已经；早已,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0003,apartment,n.,公寓套房,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0004,astronaut,n.,宇航员； 航天员,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0005,believe,v.,相信；认为有可能,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0006,build,v.,（built /blt/） 建筑；建造,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0007,dangerous,adj.,有危险的；不安全的,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0008,disagree,v.,不同意； 持不同意见；有分歧,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0009,during,,、 / / prep. 在……期间,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0010,earth,n.,地球；世界,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0011,environment,n.,环境 p.50 128,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0012,even,adv.,甚至；连；愈加,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0013,factory,n.,工厂 p.53 over and over again   多次；反复地,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0014,fall,v.,（fell //）& n.倒塌； 跌倒；掉落   n.（美式）秋天 p.53 fall down   突然倒下；跌倒；倒塌,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0015,future,n.,将来；未来,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0016,holiday,,、 / / n. 假期；假日,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0017,human,adj.,人的  n. 人,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0018,impossible,,、 // adj. 不可能存在或发生的； 不可能的,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0019,inside,adv.,& prep. 在……里面 p.53 look for   寻找；寻求,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0020,James,,詹姆斯（男名）,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0021,Japan,,日本,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0022,Nick,,尼克（男名）,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0023,paper,n.,纸；纸张,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0024,part,n.,部分 p.50 play a part   参与；发挥作用,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0025,peace,n.,和平,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0026,planet,n.,行星,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0027,plant,,、 // v. 种植 n. 植物,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0028,pollute,v.,污染,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0029,pollution,n.,污染；污染物,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0030,possible,,、 / / adj. 可能存在或发生的；可能的,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0031,prediction,n.,预言；预测,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0032,probably,,、 / / adv. 很可能；大概,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0033,rocket,,、 / / n. 火箭,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0034,sea,n.,海；海洋,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0035,servant,n.,仆人,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0036,shape,n.,形状；外形,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0037,side,n.,一方（的意见、态度、 立场）,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0038,sky,n.,天空,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0039,space,n.,太空；空间 p.52 space station   太空站；宇宙空间站,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0040,White,,怀特（姓）,junior,8,8A,U7,wordlist,132,high
+jr-8A-U7-0041,word,n.,单词；词,junior,8,8A,U7,wordlist,132,high
+jr-8A-U8-0001,add,v.,增加；添加,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0002,autumn,n.,秋天；秋季,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0003,blender,n.,食物搅拌器 p.57 turn on   接通（电流、煤气、水等）； 打开,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0004,buter,n.,黄油；奶油,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0005,celebrate,v.,庆祝；庆贺,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0006,cheese,n.,干酪；奶酪,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0007,corn,n.,玉米；谷物 p59,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0008,cover,v.,遮盖；覆盖 n. 覆盖物；盖子,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0009,dig,v.,（dug /dg/）掘（地）； 凿（洞）；挖（土）,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0010,fill,v.,（使）充满；装满,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0011,finally,adv.,最后；最终,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0012,gravy,n.,（调味）肉汁,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0013,hole,n.,洞；孔；坑,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0014,honey,n.,蜂蜜,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0015,lettuce,n.,莴苣；生菜,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0016,machine,n.,机器； 机械装置,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0017,mashed,adj.,捣烂的,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0018,mix,n.,混合配料 v. （使）混合；融合,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0019,oven,n.,烤箱；烤炉,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0020,peel,v.,剥皮；去皮,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0021,pepper,n.,胡椒粉；柿子椒,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0022,pie,n.,果馅饼；果馅派,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0023,piece,n.,片；块；段,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0024,plate,n.,盘子；碟子,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0025,popcorn,,、 / / n. 爆米花,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0026,pot,,、 // n. 锅,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0027,pour,v.,倒出；倾倒,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0028,prepare,,、 /' / v. 使做好准备；把……准备好,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0029,pumpkin,n.,南瓜,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0030,salt,n.,食盐,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0031,sandwich,n.,夹心面包片；三明治,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0032,serve,v.,接待；服务；提供,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0033,shake,n.,& v.  （shook //） 摇动；抖动 p.57 milk shake   奶昔,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0034,spoon,n.,勺；调羹,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0035,sugar,n.,食糖,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0036,temperature,n.,温度；气温；体温,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0037,Thanksgiving,n.,感恩节,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0038,traditional,adj.,传统的； 惯例的,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0039,turkey,n.,火鸡,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0040,watermelon,n.,西瓜,junior,8,8A,U8,wordlist,132,high
+jr-8A-U8-0041,yogurt,,、 / / n.  （=yoghurt）酸奶 p.58 129,junior,8,8A,U8,wordlist,132,high
+jr-8A-U9-0001,accept,v.,接受,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0002,available,adj.,有空的； 可获得的 p.66 another time   其他时间；别的时间,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0003,calendar,n.,日历； 日程表,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0004,catch,v.,（caught /:t/） 及时赶上；接住；抓住,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0005,concert,,、 / / n. 音乐会；演奏会,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0006,daytime,n.,白天；日间,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0007,delete,v.,删除,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0008,event,n.,大事；公开活动； 比赛项目,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0009,exam,n.,（=examination） 考试 p.65 go to the/a doctor   去看医生,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0010,flu,n.,流行性感冒；流感,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0011,forward,v.,转寄；发送  adv. 向前；前进,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0012,glad,adj.,高兴；愿意 p.69 help out  （帮助⋯⋯）分担工作、 解决难题,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0013,glue,n.,胶水,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0014,goodbye,interj.,& n. 再见 p.69 take a trip   去旅行,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0015,guest,n.,客人；宾客,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0016,hang,v.,（hung /hN/） 悬挂；垂下 p.66 hang out  闲逛；常去某处,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0017,headmaster,,、,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0018,housewarming,n.,乔迁聚会,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0019,invitation,n.,邀请；请柬	p.69 turn down  拒绝,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0020,invite,v.,邀请,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0021,Jake,,杰克（男名）,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0022,May,,梅（女名）,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0023,opening,n.,开幕式； 落成典礼,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0024,preparation,n.,准备；准备工作,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0025,print,v.,打印；印刷,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0026,refuse,v.,拒绝 p.67 the day before yesterday   前天 p.68 the day after tomorrow   后天 p.68 130,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0027,reply,v.,回答；答复,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0028,sad,adj.,（令人）悲哀的； （令人）难过的,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0029,Steen,,斯蒂恩（姓）,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0030,surprised,adj.,惊奇的；感觉意外的 p.69 look forward to  盼望；期待 p.69 hear from  接到（某人的）信、电话等,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0031,Susan,,苏珊（女名）,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0032,Ted,,特德（男名）,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0033,until,conj.,& prep. 到……时； 直到……为止,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0034,Vince,,文斯（男名）,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0035,weekday,n.,工作日 （星期一至星期五的任何一天） p.68 look after   照料；照顾,junior,8,8A,U9,wordlist,132,high
+jr-8A-U9-0036,without,prep.,没有； 不（做某事）,junior,8,8A,U9,wordlist,132,high
+jr-9-U1-0001,/greI@m/ Bell,,亚历山大· 格雷厄姆· 贝尔 p.6 157,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0002,ability,n.,能力；才能,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0003,active,adj.,活跃的；积极的,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0004,Alexander,,Graham,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0005,aloud,adv.,大声地；出声地,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0006,Annie,,安妮（女名）,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0007,atention,n.,注意；关注 p.6 pay attention to 注意；关注,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0008,born,v.,出生  adj. 天生的 p.6 be born with  天生具有,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0009,brain,n.,大脑,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0010,chemistry,n.,化学,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0011,connect,v.,（使）连接；与⋯⋯有联系 p.6 connect … with 把⋯⋯和⋯⋯连接或联系起来,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0012,conversation,,、,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0013,create,v.,创造；创建,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0014,discover,v.,发现；发觉,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0015,expression,n.,表情；表示；表达方式,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0016,grammar,n.,语法,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0017,increase,v.,增加；增长,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0018,knowledge,,、 /nA:lIdZ/ n. 知识；学问,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0019,lifelong,adj.,终身的；毕生的,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0020,memorize,v.,记忆；记住,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0021,note,n.,笔记；记录 v. 注意；指出,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0022,overnight,adv.,一夜之间；在夜间,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0023,pal,n.,朋友；伙伴,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0024,partner,n.,搭档；同伴,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0025,patient,adj.,有耐心的 n.病人,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0026,pattern,,、 /p{t@rn/ n. 模式；方式,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0027,physics,n.,物理；物理学,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0028,pronounce,v.,发音 p.5 在英式和美式发音有区别时，英式发音在前，美式发音在后。）,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0029,pronunciation,n.,发音；读音,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0030,repeat,v.,重复；重做,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0031,review,v.,& n. 回顾；复习,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0032,secret,n.,秘密；秘诀 adj. 秘密的；保密的 p.3 look up  （在词典、参考书中或通过 电脑）查阅；抬头看,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0033,sentence,n.,句子,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0034,speed,n.,速度,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0035,textbook,n.,教科书；课本,junior,9,9,U1,wordlist,170,high
+jr-9-U1-0036,wisely,adv.,明智地；聪明地,junior,9,9,U1,wordlist,170,high
+jr-9-U10-0001,basic,adj.,基本的；基础的,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0002,behave,v.,表现；举止,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0003,blackboard,n.,黑板,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0004,bow,v.,& n. 鞠躬,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0005,Brazil,,巴西,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0006,Cali,,卡利（哥伦比亚城市）,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0007,capital,n.,首都；国都 p.75 after all  毕竟；终归,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0008,chalk,n.,粉笔,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0009,coast,n.,海岸；海滨,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0010,Colombia,,哥伦比亚（南美洲国家）,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0011,custom,n.,风俗；习俗,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0012,eastern,adj.,东方的； 东部的 p.76 take off  脱下（衣服）； （飞机等）起飞,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0013,effort,n.,努力；尽力 p.75 make an effort 作出努力,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0014,elbow,n.,肘；胳膊,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0015,empty,adj.,空的；空洞的,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0016,except,prep.,除⋯⋯之外 conj. 除了；只是,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0017,exchange,n.,& v. 交换  p.78 go out of one’s way 特地；格外努力 p.78 make ... feel at home 使（某人）感到宾至如归 p.78 166,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0018,gradually,adv.,逐步地；渐进地 p.78 get used to  习惯于,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0019,granddaughter,n.,（外）孙女,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0020,greet,v.,和⋯⋯打招呼；迎接,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0021,Katie,,凯蒂（女名）,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0022,kiss,v.,& n. 亲吻；接吻,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0023,knock,,、 /nA:k/ v. 敲；击 n. 敲击声；敲击,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0024,Lausanne,,、 /l@UzA:n/ 洛桑（瑞士城市）,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0025,Lopez,,特蕾莎· 洛佩斯,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0026,mad,adj.,很生气；疯的 p.75 get mad 大动肝火；气愤,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0027,manner,n.,方式；方法 (pl.) 礼貌；礼仪,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0028,Marc,,LeBlanc /l@blA:N/ 马克· 勒布朗,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0029,Maria,,玛丽亚（女名）,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0030,Marie,,玛丽（女名）,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0031,Mexico,,墨西哥,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0032,noon,n.,正午；中午,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0033,northern,adj.,北方的；北部的,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0034,Norway,,挪威,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0035,passport,,、 /p{spO:rt/ n. 护照 p.76 clean ... off  把……擦掉,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0036,relaxed,adj.,放松的； 自在的,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0037,Sato,,佐藤（日本姓氏）,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0038,season,n.,季；季节,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0039,suggestion,n.,建议,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0040,teenage,adj.,十几岁的； 青少年的,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0041,Teresa,,、 /t@reIz@/,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0042,value,v.,重视；珍视 n. 价值 p.75 drop by 顺便访问；随便进入,junior,9,9,U10,wordlist,170,high
+jr-9-U10-0043,worth,adj.,值得； 有⋯⋯价值（的）,junior,9,9,U10,wordlist,170,high
+jr-9-U11-0001,agreement,n.,（意见或看法）一致；同意,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0002,banker,n.,银行家,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0003,Bert,,伯特（男名）,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0004,besides,adv.,而且,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0005,coach,n.,教练；私人教师,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0006,courage,,、 /k3:rIdZ/ n. 勇敢；勇气 p.86 rather than 而不是,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0007,disappoint,v.,使失望,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0008,drive,v.,迫使,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0009,examine,v.,（仔细地）检查； 检验,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0010,fame,n.,名声；声誉,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0011,fault,n.,过失；缺点,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0012,friendship,n.,友谊；友情,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0013,goal,n.,球门；射门；目标 p.86 let ... down  使失望,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0014,grey,adj.,（天空）阴沉的； 昏暗的；灰色的,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0015,guy,n.,（非正式）家伙 (pl.) 伙计们,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0016,Holly,,、 /hA:li/ 霍莉（女名）,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0017,kick,v.,踢；踹 p.86 kick sb. off  开除某人 p.86 be hard on sb.  对某人苛刻；对某人 要求严厉,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0018,king,n.,国王；君主,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0019,lately,adv.,最近；不久前 p.82 be friends with sb.  成为某人的朋友 	p.82 leave out  忽略；不提及；不包括,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0020,lemon,n.,柠檬,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0021,minister,n.,大臣；部长 p.83 prime minister  首相；大臣,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0022,nod,,、 /nA:d/ v. 点头,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0023,nor,conj.,& adv. 也不 p.83 neither ... nor ...  既不⋯⋯也不……,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0024,palace,n.,王宫；宫殿,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0025,pale,adj.,苍白的；灰白的,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0026,power,n.,权力；力量,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0027,prime,adj.,首要的；基本的,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0028,pull,v.,拉；拖 p.86 pull together  齐心协力；通力合作,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0029,queen,n.,王后；女王 p.83 call in 召来；叫来,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0030,rather,,、 /rr/ adv. 相当； 相反 p.81 would rather （通常缩写为’d rather） 宁愿,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0031,relief,n.,轻松；解脱,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0032,shoulder,n.,肩；肩膀  	 p.86 167,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0033,teammate,n.,同队队员； 队友,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0034,uncomfortable,adj.,使人不舒服的；令人不舒适的,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0035,wealth,n.,财富 p.83 to start with  起初；开始时,junior,9,9,U11,wordlist,170,high
+jr-9-U11-0036,weight,n.,重量；分量,junior,9,9,U11,wordlist,170,high
+jr-9-U12-0001,(overslept,,、 overslept) 睡过头； 睡得太久 p.89 give ... a lift  捎……一程,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0002,above,prep.,在⋯⋯上面 adv. 在上面,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0003,airport,n.,机场,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0004,alive,adj.,活着；有生气的,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0005,announce,v.,宣布；宣告,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0006,backpack,n.,背包； 旅行包,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0007,bean,n.,豆；豆荚,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0008,believable,adj.,可相信的；可信任的,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0009,block,,、 /blA:k/ n. 街区 p.91 in line with 与……成一排,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0010,burn,v.,(burnt /b:(r)nt/、,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0011,burning,adj.,着火的；燃烧的,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0012,burnt; burned,,、 burned)  着火；燃烧,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0013,cancel,v.,取消；终止,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0014,Carl,,卡尔（男名）,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0015,costume,,、 /kA:stu:m/ n. （特定场合穿的）服装；装束 p.93 168,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0016,cream,n.,奶油；乳脂,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0017,disappear,v.,消失；不见,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0018,disbelief,n.,不信；怀疑,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0019,discovery,n.,发现； 发觉,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0020,embarrassed,adj.,窘迫的；害羞的 p.93 costume party  化装舞会,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0021,embarrassing,adj.,使人害羞的（难堪的或 惭愧的）,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0022,fool,n.,蠢人；傻瓜   v. 愚弄,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0023,hoax,n.,骗局；恶作剧 p.94 sell out  卖光,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0024,Italy,,意大利,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0025,Kevin,,凯文（男名）,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0026,lady,n.,女士；女子,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0027,market,n.,市场；集市 p.92 by the end of  在（某时间点）以前,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0028,Mars,,火星,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0029,Matt,,马特（男名）,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0030,New Zealand,,新西兰,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0031,officer,,、 /A:fIs@r/ n. 军官；官员,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0032,Orson,,Welles /welz/ 奥森· 韦尔斯,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0033,oversleep,v.,,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0034,spaghetti,n.,意大利面条,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0035,stare,,、 /ster/ v. 盯着看；凝视,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0036,till,prep.,& conj. 到；直到,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0037,unexpected,adj.,出乎意料的；始料不及的 p.89 by the time ...  在……以前,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0038,west,adv.,向西；朝西 adj. 向西的；西部的 n. 西；西方,junior,9,9,U12,wordlist,170,high
+jr-9-U12-0039,worker,n.,工作者； 工人,junior,9,9,U12,wordlist,170,high
+jr-9-U13-0001,advantage,,、 /@dv{ntIdZ/ n. 优点；有利条件,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0002,aﬀord,v.,承担得起（后 果）；买得起 p.100 turn off  关掉,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0003,bin,n.,垃圾箱,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0004,botle,,、 /b:tl/ n. 瓶子,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0005,botom,,、 /bA:t@m/ n. 底部；最下部,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0006,chain,n.,链子；链条 p.99 the food chain  食物链,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0007,coal,n.,煤；煤块,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0008,cost,,、 /kO:st/ v. (cost、 cost)花费 n. 花费；价钱,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0009,creativity,n.,创造力； 独创性,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0010,cruel,adj.,残酷的；残忍的,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0011,ecosystem,n.,生态系统,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0012,fin,n.,（鱼）鳍,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0013,fisherman,n.,渔民； 钓鱼的人,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0014,gate,n.,大门,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0015,harmful,adj.,有害的 p.99 be harmful to  对……有害 p.99 at the top of  在……顶部或顶端,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0016,Hayes,,海斯（姓）,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0017,industry,n.,工业；行业,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0018,inspiration,n.,灵感； 鼓舞人心的人（或事物）,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0019,iron,n.,铁,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0020,Jason,,贾森（男名）,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0021,Jessica,,杰西卡（女名）,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0022,law,n.,法律；法规,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0023,liter,v.,乱扔 n. 垃圾；废弃物,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0024,metal,n.,金属 p.102 bring back  恢复；使想起；归还,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0025,napkin,n.,餐巾；餐巾纸 p.101 throw away  扔掉；抛弃 p.102 put sth. to good use  好好利用某物 p.102 pull ... down  拆下；摧毁,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0026,plastic,adj.,塑料的 n.  塑料；塑胶,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0027,president,n.,负责人； 主席；总统,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0028,recycle,v.,回收利用； 再利用,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0029,reusable,adj.,可重复使用的；可再次使用的  p.100 pay for  付费；付出代价 p.100 169 take action  采取行动,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0030,scientific,adj.,科学上的；科学的 p.99 take part in  参加,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0031,shark,n.,鲨鱼,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0032,takeaway,n.,外卖食物,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0033,transportation,n.,运输业；交通运输,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0034,ugly,adj.,丑陋的；难看的,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0035,upside,,down  上下颠倒； 倒转,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0036,WildAid,,野生救援协会（美国） p.99 WWF  (World Wide Fund for Nature) 世界自然基金会,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0037,wooden,adj.,木制的；木头的,junior,9,9,U13,wordlist,170,high
+jr-9-U13-0038,work,n.,（音乐、艺术）作品,junior,9,9,U13,wordlist,170,high
+jr-9-U14-0001,(overcame,,、 overcome) 克服；战胜 p.107 make a mess  弄得一团糟（一塌糊涂）,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0002,ahead,adv.,向前面；在前面 p.110 ahead of  在……前面 p.110 along with  连同；除……以外还,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0003,Brian,,布赖恩（男名）,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0004,caring,adj.,体贴人的； 关心他人的,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0005,ceremony,n.,典礼； 仪式 p.110 first of all  首先,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0006,congratulate,v.,祝贺,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0007,degree,n.,（大学）学位； 度数；程度,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0008,double,v.,加倍；是⋯⋯的两倍 adj. 两倍的；加倍的,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0009,gentleman,n.,先生； 绅士,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0010,graduate,v.,毕业； 获得学位 p.107 keep one’s cool  沉住气；保持冷静,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0011,graduation,n.,毕业,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0012,Griffin,,格里芬（姓）,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0013,instruction,n.,指示； 命令,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0014,keyboard,n.,键盘式 电子乐器；键盘,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0015,lastly,,、 /lstli/ adv. 最后,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0016,level,n.,水平 p.108 170,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0017,Luke,,卢克（男名）,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0018,manager,n.,经理； 经营者 p.109 believe in 信任；信赖,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0019,method,n.,方法；措施,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0020,ours,pron.,我们的,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0021,overcome,v.,,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0022,responsible,,、,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0023,row,n.,一排；一列；一行 p.105 in a row  连续几次地,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0024,senior,adj.,级别（或地位）高的 p.108 senior high (school)  高中,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0025,separate,adj.,单独的；分离的,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0026,shall,modal v.,将要；将会	p.106 look back at  回首（往事）；回忆； 回顾,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0027,standard,n.,标准；水平,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0028,survey,n.,调查,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0029,task,,、 /t{sk/ n. 任务；工作,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0030,text,n.,课文；文本 p.108 go by  （时间）逝去；过去,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0031,thankful,adj.,感谢； 感激 p.110 be thankful to sb.  对某人心存感激,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0032,thirsty,adj.,渴望的； 口渴的 p.110 be thirsty for  渴望；渴求,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0033,Trent,,特伦特（姓）,junior,9,9,U14,wordlist,170,high
+jr-9-U14-0034,wing,n.,翅膀；翼,junior,9,9,U14,wordlist,170,high
+jr-9-U2-0001,A Christmas Carol,,《圣诞欢歌》 （小说名）,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0002,admire,v.,欣赏；仰慕,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0003,business,n.,生意；商业,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0004,Charles,,Dickens /dIkInz/ 查尔斯· 狄更斯 （英国作家）,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0005,Chiang Mai,,清迈（泰国城市） p.10 Water Festival 泼水节,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0006,Christmas,n.,圣诞节,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0007,Clara,,、 /kler@/克拉拉（女名）,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0008,dead,adj.,死的；失去生命的,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0009,dessert,n.,（饭后）甜点； 甜食,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0010,Easter,,复活节,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0011,eve,n.,前夕；前夜,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0012,folk,adj.,民间的；民俗的,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0013,garden,n.,花园；园子,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0014,ghost,n.,鬼；鬼魂,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0015,goddess,,、 /gA:d@s/ n. 女神,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0016,Halloween,,万圣节前夕,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0017,haunted,adj.,有鬼魂出没的； 闹鬼的,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0018,Jacob,,Marley /mA:(r)li/ 雅各布· 马利 p.14 158,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0019,lantern,n.,灯笼,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0020,lay,v.,(laid /leId/、 laid) 放置；安放；产（卵）；下（蛋） p.11 lay out 摆开；布置,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0021,lie,v.,(lay /leI/、 lain /leIn/) 存在；平躺；处于,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0022,Macao,,澳门,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0023,Mid-Autumn,,Festival 中秋节 p.11 Mother’s Day 母亲节 p.12 Father’s Day 父亲节,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0024,mooncake,n.,月饼,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0025,novel,,、 /nA:vl/ n. （长篇）小说,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0026,pound,n.,磅（重量单位）； 英镑（英国货币单位）,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0027,present,n.,现在；礼物 adj. 现在的,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0028,punish,v.,处罚；惩罚,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0029,relative,n.,亲属；亲戚 p.10 put on 增加（体重）；发胖,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0030,Santa,,Claus /klO:z/ 圣诞老人,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0031,Scrooge,,斯克鲁奇 n. （非正式）吝啬鬼,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0032,spider,n.,蜘蛛,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0033,spread,v.,(spread、 spread) 传播；展开 n.蔓延；传播,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0034,steal,v.,(stole /stl/、,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0035,stolen,,)偷；窃取,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0036,stranger,n.,陌生人,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0037,tie,n.,领带  v. 捆；束,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0038,tradition,n.,传统,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0039,treat,n.,款待；招待 v.招待；请（客）,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0040,trick,n.,花招；把戏,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0041,warmth,n.,温暖；暖和,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0042,warn,v.,警告；告诫 p.14 end up  最终成为；最后处于,junior,9,9,U2,wordlist,170,high
+jr-9-U2-0043,whoever,pron.,无论谁； 不管什么人,junior,9,9,U2,wordlist,170,high
+jr-9-U3-0001,address,,、 /{dres/ n. 住址； 地址；通信处,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0002,bathroom,,、 /b{Tru:m/ n. 浴室；洗手间,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0003,beside,prep.,在……旁边； 在……附近,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0004,bookstore,n.,书店,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0005,central,adj.,中心的； 中央的,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0006,clerk,,、 /kl3:rk/ n. 职员,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0007,convenient,adj.,便利的；方便的,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0008,corner,n.,拐角；角落,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0009,correct,adj.,正确的； 恰当的,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0010,course,n.,课程；学科,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0011,direct,adj.,直接的； 直率的,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0012,direction,n.,方向；方位,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0013,east,adj.,东方的；东部的 adv. 向东；朝东  n. 东；东方,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0014,fascinating,adj.,迷人的；极有吸引力的,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0015,grape,n.,葡萄,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0016,impolite,adj.,不礼貌的；粗鲁的,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0017,inexpensive,adj.,不昂贵的,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0018,Italian,adj.,意大利（人）的 n. 意大利人；意大利语 p.20 159,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0019,mail,v.,邮寄；发电子邮件 n. 邮件；信件,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0020,mall,n.,商场；购物中心,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0021,nearby,adj.,附近的；邻近的 adv. 在附近；附近 p.20 pardon me  抱歉，对不起；什么， 请再说一遍,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0022,normally,adv.,通常； 正常情况下,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0023,pardon,v.,原谅 interj. 请再说一遍,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0024,polite,adj.,有礼貌的； 客气的,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0025,politely,adv.,礼貌地； 客气地,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0026,postcard,n.,明信片,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0027,request,n.,& v. 要求；请求,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0028,restroom,n.,（美）洗手间；公共厕所,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0029,rush,v.,& n. 仓促；急促,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0030,speaker,n.,讲（某种语言）的人；发言者,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0031,staff,,、 /st{f/ n. 管理人员； 职工,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0032,stamp,n.,邮票；印章,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0033,suggest,v.,建议；提议 p.19 pass by  路过；经过,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0034,Tim,,蒂姆（男名）,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0035,uncrowded,adj.,不拥挤的；人少的,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0036,underground,adj.,地下的 n. 地铁 p.22 parking lot  停车场；停车区,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0037,washroom,,、  /wA:Sru:m/ n. 洗手间；厕所,junior,9,9,U3,wordlist,170,high
+jr-9-U3-0038,whom,pron.,谁；什么人,junior,9,9,U3,wordlist,170,high
+jr-9-U4-0001,absent,adj.,缺席；不在,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0002,African,adj.,非洲（人）的 n. 非洲人,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0003,Alfred,,艾尔弗雷德（男名）,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0004,ant,n.,蚂蚁,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0005,Asian,adj.,亚洲（人）的 n. 亚洲人,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0006,background,n.,背景,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0007,Billy,,比利（男名）,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0008,boarding,,school 寄宿学校 p.30 in person 亲身；亲自,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0009,British,adj.,英国（人）的,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0010,Candy,,坎迪 （女名）,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0011,crowd,n.,人群；观众,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0012,dare,,、 /der/  v.  敢于；胆敢,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0013,deal,v.,（dealt /delt/、 dealt） 对付；对待 p.27 deal with  应对；处理,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0014,Emily,,埃米莉（女名） p.28 160,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0015,European,adj.,欧洲（人）的  n. 欧洲人,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0016,exactly,adv.,确切地； 精确地,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0017,examination,n.,考试；审查,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0018,fail,v.,不及格；失败； 未能（做到）,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0019,general,adj.,总的；普遍的； 常规的  n. 将军,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0020,guard,n.,警卫；看守 v.  守卫；保卫,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0021,helpful,adj.,有用的； 有帮助的 p.26 from time to time  时常；有时,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0022,humorous,adj.,有幽默感的；滑稽有趣的,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0023,influence,v.,& n. 影响,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0024,insect,n.,昆虫,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0025,interview,v.,采访；面试 n. 面试；访谈,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0026,introduction,n.,介绍,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0027,Jerry,,杰里（男名）； 杰丽（女名）,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0028,Paula,,葆拉 （女名）,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0029,pride,n.,自豪；骄傲 p.30 take pride in  为⋯⋯感到自豪,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0030,private,adj.,私人的； 私密的,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0031,proud,adj.,自豪的；骄傲的	p.30 be proud of  为⋯⋯骄傲；感到自豪,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0032,public,n.,民众 adj. 公开的；公众的 p.28 in public  公开地；在别人（尤指生人） 面前,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0033,require,v.,需要；要求,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0034,score,n.,& v. 得分；进球,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0035,seldom,adv.,不常；很少,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0036,shyness,n.,害羞；腼腆,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0037,silent,adj.,不说话的； 沉默的,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0038,speech,n.,讲话；发言,junior,9,9,U4,wordlist,170,high
+jr-9-U4-0039,ton,n.,吨；(pl.) 大量；许多,junior,9,9,U4,wordlist,170,high
+jr-9-U5-0001,avoid,v.,避免；回避,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0002,balloon,n.,气球 p.38 paper cutting  剪纸,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0003,blouse,,、 /blaUs/ n. （女式）短上衣；衬衫,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0004,boss,,、 /b:s/ n. 老板；上司,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0005,brand,n.,品牌；牌子,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0006,cap,n.,（尤指有帽舌的）帽子,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0007,celebration,n.,庆典； 庆祝活动,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0008,chopstick,,、  /tSA:pstIk/ n. 筷子,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0009,clay,n.,黏土；陶土,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0010,coin,n.,硬币,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0011,competitor,n.,参赛者；竞争者,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0012,complete,v.,完成,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0013,coton,,"、 /""kA:tn/ n. 棉；棉花",junior,9,9,U5,wordlist,170,high
+jr-9-U5-0014,environmental,adj.,自然环境的；有关环境的,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0015,everyday,adj.,每天的； 日常的,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0016,fair,,、 /fer/ n. 展览会； 交易会,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0017,fairy,,、 /feri/ tale /teIl/ 童话故事,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0018,fork,n.,餐叉；叉子,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0019,form,n.,形式；类型,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0020,France,,、 /fr{ns/ 法国 p.35 no matter 不论；无论,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0021,Germany,,德国,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0022,glass,,、 /gls/ n. 玻璃,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0023,glove,n.,（分手指的）手套,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0024,grass,,、 /gr{s/ n. 草；草地,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0025,handbag,n.,小手提包,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0026,heat,n.,热；高温 v. 加热；变热 p.38 161,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0027,historical,,、 /hstO:rIkl/ adj. （有关）历史的,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0028,international,adj.,国际的,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0029,its,pron.,它的,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0030,Korea,,朝鲜；韩国,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0031,leaf,n.,（pl. leaves /li:vz/） 叶；叶子,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0032,lively,adj.,生气勃勃的； （色彩）鲜艳的,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0033,local,adj.,当地的；本地的,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0034,Marcus,,马库斯（男名）,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0035,material,n.,材料；原料,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0036,mobile,,、 /m@Ubl/ adj. 可移动的；非固定的,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0037,pack,v.,包装；装箱,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0038,Pam,,帕姆 （女名）,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0039,polish,,、 /pA:lIS/ v. 磨光；修改；润色,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0040,postman,n.,邮递员,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0041,process,v.,加工；处理 n. 过程,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0042,produce,,、 /pr@du:s/ v. 生产；制造；出产,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0043,product,,、 /prA:dVkt/ n. 产品；制品,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0044,San Francisco,,圣弗朗西斯科 （旧金山，美国城市）,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0045,scissors,n.,(pl.) 剪刀,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0046,silver,n.,银；银器 adj. 银色的,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0047,steel,n.,钢；钢铁,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0048,surface,n.,表面；表层,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0049,Switzerland,,瑞士,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0050,traffic,n.,交通；路上行驶的 车辆,junior,9,9,U5,wordlist,170,high
+jr-9-U5-0051,widely,adv.,广泛地； 普遍地 p.34 be known for  以……闻名；为人知晓,junior,9,9,U5,wordlist,170,high
+jr-9-U6-0001,accidental,adj.,意外的； 偶然的 p.43 by accident  偶然；意外地,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0002,basket,,、 /b{skIt/ n. 篮；筐 p.46 not only ... but also ... 不但……而且…… p.46 look up to 钦佩；仰慕,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0003,bell,n.,钟（声）；铃（声）,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0004,Berlin,,柏林（德国城市） p.46 NBA (National Basketball Association)国家篮球协会 （美国职业篮球联赛） p.46 CBA (China Basketball Association) 中国篮球协会 （中国职业篮球联赛）,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0005,biscuit,n.,饼干,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0006,boil,v.,煮沸；烧开,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0007,Canadian,adj.,加拿大的； 加拿大人的  n. 加拿大人,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0008,cookie,n.,曲奇饼,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0009,crispy,adj.,脆的；酥脆的,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0010,customer,n.,顾客； 客户,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0011,daily,adj.,每日的；日常的 p.42 have a point  有道理,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0012,divide,v.,分开；分散 p.46 divide ... into 把⋯⋯分开,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0013,doubt,n.,疑惑；疑问 v. 怀疑 p.43 without doubt  毫无疑问；的确,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0014,earthquake,n.,地震,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0015,electricity,n.,电；电能,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0016,fridge,n.,冰箱,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0017,George,,Crum /krVm/ 乔治· 克拉姆,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0018,heel,n.,鞋跟；足跟,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0019,hero,,、 /hIr@U/ n. 英雄； 男主角,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0020,instrument,n.,器械； 仪器；工具,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0021,James,,Naismith /neIsmIT/ 詹姆斯· 奈史密斯,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0022,list,v.,列表；列清单 n. 名单；清单,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0023,lock,,、 /lA:k/ v. 锁上；锁住 n. 锁,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0024,low,adj.,低的；矮的,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0025,mention,v.,提到；说到,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0026,musical,adj.,音乐的； 有音乐天赋的 p.44 162,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0027,national,adj.,国家的； 民族的,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0028,nearly,,、 /nIrli/ adv. 几乎,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0029,pioneer,,、 /paI@nIr/ n. 先锋；先驱,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0030,pleasure,n.,高兴；愉快,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0031,popularity,,、,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0032,professional,adj.,职业的；专业的,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0033,project,,、 /prA:dZekt/ n. 项目；工程,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0034,remain,v.,保持不变；剩余,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0035,ring,v.,（rang /rN/、 rung /rN/） （使）发出钟声或铃声；打电话,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0036,Roy,,罗伊（男名）,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0037,Ruby,,鲁比（女名）,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0038,ruler,n.,统治者；支配者,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0039,saint,n.,圣人；圣徒,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0040,salty,adj.,咸的,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0041,scoop,n.,勺；铲子,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0042,smell,n.,气味,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0043,somebody,pron.,某人  n. 重要人物,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0044,sour,adj.,酸的；有酸味的 	p.45 by mistake  错误地；无意中,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0045,style,n.,样式；款式,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0046,sudden,adj.,突然（的） p.44 all of a sudden 突然；猛地,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0047,the Olympics,,奥林匹克运动会,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0048,Thomas,,Watson /wQts@n/ 托马斯· 沃森,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0049,trade,n.,贸易；交易 v. 做买卖；从事贸易 p.43 take place 发生；出现,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0050,translate,v.,翻译,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0051,v. （smelt,,、 smelt; smelled、 smelled）发出⋯⋯气味；闻到,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0052,website,n.,网站,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0053,Whitcomb,,Judson /dZVds@n/ 惠特科姆· 贾德森,junior,9,9,U6,wordlist,170,high
+jr-9-U6-0054,zipper,n.,(= zip) 拉链； 拉锁,junior,9,9,U6,wordlist,170,high
+jr-9-U7-0001,awful,adj.,很坏的；讨厌的,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0002,badly,adv.,严重地；差； 非常 p.51 talk back 回嘴；顶嘴,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0003,chance,,、 /tS{ns/ n. 机会； 可能性 p.52 make one’s own decision 自己做决定,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0004,choice,n.,选择；挑选,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0005,community,n.,社区； 社团 p.52 keep ... away from 避免接近；远离,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0006,cry,v.,& n. 哭；叫喊,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0007,earring,,、 /IrIN/ n. 耳环；耳饰,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0008,educate,v.,教育；教导,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0009,enter,v.,进来；进去,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0010,field,n.,田野；场地,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0011,flash,n.,闪光灯；闪光 v. 闪耀；闪光,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0012,hug,n.,& v. 拥抱；搂抱,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0013,license,n.,(= licence) 证； 证件,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0014,lif,v.,举起；抬高 n. 电梯；搭便车,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0015,manage,v.,完成（困难的 事）；应付（困难局面）,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0016,part-time,adj.,& adv. 兼职（的）,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0017,Picasso,,、 /pIkA:s@U/ 毕加索（西班牙画家）,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0018,pierce,,、 /pIrs/ v. 扎；刺破； 穿透,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0019,poem,n.,诗；韵文,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0020,regret,v.,& n. 感到遗憾； 懊悔 p.51 163,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0021,safety,n.,安全；安全性,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0022,smoke,v.,吸烟；冒烟 n. 烟,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0023,society,n.,社会 p.52 get in the way of  挡⋯⋯的路；妨碍,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0024,support,v.,& n. 支持,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0025,teen,n.,（13至19岁之间的） 青少年,junior,9,9,U7,wordlist,170,high
+jr-9-U7-0026,tiny,adj.,极小的；微小的,junior,9,9,U7,wordlist,170,high
+jr-9-U8-0001,alien,n.,外星人 p.61 run after 追逐；追赶,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0002,ancestor,n.,祖宗；祖先,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0003,anybody,,、 /enib:di/ pron. 任何人,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0004,atend,v.,出席；参加,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0005,Britain,,(= Great Britain) 大不列颠,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0006,burial,n.,埋葬；安葬,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0007,Carla,,卡拉（女名）,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0008,circle,n.,圆圈  v. 圈出,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0009,coat,n.,外套；外衣,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0010,enemy,n.,敌人；仇人,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0011,energy,n.,力量；精力,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0012,express,v.,表示；表达 p.62 at the same time 同时；一起,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0013,happening,n.,事件； 发生的事情（常指不寻常的）,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0014,historian,n.,历史学家； 史学工作者,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0015,honor,,、 /A:n@r/ (= honour) v. 尊重；表示敬意  n. 荣幸；荣誉,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0016,J. K. Rowling,,J. K. 罗琳 （英国作家）,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0017,Jean,,琼（女名）,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0018,laboratory,,、 /l{br@tO:ri/ n. 实验室,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0019,land,v.,着陆；降落,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0020,leader,n.,领导；领袖,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0021,medical,adj.,医疗的； 医学的,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0022,midsummer,n.,仲夏；中夏,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0023,mystery,n.,奥秘；神秘事物,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0024,noise,n.,声音；噪音,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0025,outdoors,adv.,在户外； 在野外,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0026,Paul Stoker,,保罗· 斯托克,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0027,period,,、 /pIri@d/ n. 一段时间；时期,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0028,picnic,n.,野餐,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0029,pink,adj.,粉红色的 n. 粉红色,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0030,policeman,n.,（pl. policemen）男警察,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0031,position,n.,位置；地方 p.62 164,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0032,prevent,v.,阻止；阻挠,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0033,purpose,n.,目的；目标,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0034,rabbit,n.,兔；野兔,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0035,receive,v.,接待；接受；收到,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0036,sleepy,adj.,困倦的；瞌睡的,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0037,Stonehenge,,巨石阵,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0038,suit,,、 /su:t/ n. 西服；套装 v. 适合,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0039,temple,n.,庙宇；寺院；圣殿,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0040,truck,n.,卡车；货车,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0041,uneasy,adj.,担心的；不安的,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0042,valuable,adj.,贵重的； 很有用的；宝贵的,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0043,Victor,,维克托（男名）,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0044,victory,n.,胜利；成功,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0045,whose,adj.,& pron. 谁的,junior,9,9,U8,wordlist,170,high
+jr-9-U8-0046,wolf,n.,狼,junior,9,9,U8,wordlist,170,high
+jr-9-U9-0001,Australian,adj.,澳大利亚（人）的 n. 澳大利亚人,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0002,Carmen,,卡门（女名）,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0003,case,n.,情况；实情 p.66 in that case 既然那样；假使那样的话,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0004,Dan,,Dervish /d3:(r)vIS/ 丹· 德维什,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0005,dialog,,、 /daI@l:g/ n. (=dialogue) 对话；对白,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0006,director,n.,导演；部门负责人,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0007,documentary,,、,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0008,down,adj.,悲哀；沮丧,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0009,drama,n.,戏；剧,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0010,electronic,,、 /IlektrA:nIk/ adj. 电子的；电子设备的,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0011,ending,n.,（故事、电影等的） 结尾；结局,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0012,intelligent,adj.,有才智的；聪明的,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0013,lifetime,n.,一生； 有生之年,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0014,lyrics,n.,(pl.) 歌词,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0015,March of the Penguins,,《帝企鹅日记》（电影名） p.67 Spider-Man 《蜘蛛侠》（电影名）,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0016,master,,、 /m{st@r/ n. 大师；能手；主人  v. 掌握,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0017,moving,adj.,动人的； 令人感动的,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0018,pain,n.,痛苦；疼痛；苦恼,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0019,painful,adj.,令人痛苦的； 令人疼痛的 p.70 World War II 第二次世界大战 p.66 Men in Black 《黑衣人》（电影名） p.67 Kung Fu Panda 《功夫熊猫》（电影名）,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0020,perform,v.,表演； 执行,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0021,pity,n.,遗憾；怜悯 v. 同情；怜悯 p.70 165,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0022,plenty,pron.,大量；众多 p.67 plenty of  大量；充足,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0023,praise,v.,& n.  表扬；赞扬,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0024,prefer,v.,更喜欢,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0025,recall,v.,回忆起；回想起,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0026,reflect,v.,反映；映出,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0027,sadness,n.,悲伤；悲痛,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0028,sense,v.,感觉到；意识到 n. 感觉；意识,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0029,shut,v.,(shut、 shut) 关闭；关上  p.67 shut off  关闭；停止运转,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0030,smooth,adj.,悦耳的；平滑的,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0031,spare,,、 /sper/ adj. 空闲的； 不用的  v. 抽出；留出,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0032,stick,v.,(stuck /stk/、 stuck) 粘贴；将……刺入 p.67 stick to  坚持；固守,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0033,superhero,n.,超级英雄 p.67 once in a while  偶尔地；间或,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0034,suppose,v.,推断；料想,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0035,Titanic,,《泰坦尼克号》（电影名）,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0036,total,n.,总数；合计 adj. 总的；全体的 p.70 in total  总共；合计,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0037,war,n.,战争；战争状态,junior,9,9,U9,wordlist,170,high
+jr-9-U9-0038,wound,n.,伤；伤口；创伤 v. 使（身体）受伤；伤害,junior,9,9,U9,wordlist,170,high

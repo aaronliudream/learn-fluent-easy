@@ -75,7 +75,8 @@ export default function CohortIntakeModal({
         .in("id", pool)
         .limit(COHORT_SIZE);
       if (error || !data || data.length < COHORT_SIZE) {
-        toast({ title: "加载失败", description: error?.message ?? "请稍后重试", variant: "destructive" });
+        console.error("[CohortIntakeModal] load failed", { error, dataLen: data?.length, stage, poolLen: pool.length });
+        toast({ title: "加载失败", description: error?.message ?? `返回 ${data?.length ?? 0} 词（需 ${COHORT_SIZE}）`, variant: "destructive" });
         onClose();
         return;
       }

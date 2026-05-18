@@ -19,7 +19,7 @@ Deno.serve(async (req) => {
     }
     const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
     const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
+    const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY")!;
     const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
 
     const limited = ids.slice(0, 30);
@@ -56,15 +56,15 @@ Deno.serve(async (req) => {
     const prompt = `For each English word below, write ONE concise English definition (max 12 words, plain dictionary style, no examples, no Chinese). Use the Chinese hint to disambiguate the intended sense. Respond as JSON via the function call.\n\n${list}`;
 
     const aiResp = await fetch(
-      "https://ai.gateway.lovable.dev/v1/chat/completions",
+      "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
       {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${LOVABLE_API_KEY}`,
+          Authorization: `Bearer ${GOOGLE_AI_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "google/gemini-3-flash-preview",
+          model: "gemini-3-flash-preview",
           messages: [
             {
               role: "system",

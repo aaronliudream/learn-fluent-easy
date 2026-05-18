@@ -33,16 +33,16 @@ async function generateAiInsights(
   lang: string,
   name: string,
 ): Promise<{ highlight: string; suggestion: string } | null> {
-  const apiKey = Deno.env.get('LOVABLE_API_KEY')
+  const apiKey = Deno.env.get('GOOGLE_AI_API_KEY')
   if (!apiKey) return null
   const langName = LANG_NAME[lang] || 'English'
   const accuracy = stats.quizTotal > 0 ? Math.round((stats.quizCorrect / stats.quizTotal) * 100) : 0
   try {
-    const resp = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+    const resp = await fetch('https://generativelanguage.googleapis.com/v1beta/openai/chat/completions', {
       method: 'POST',
       headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'google/gemini-3-flash-preview',
+        model: 'gemini-3-flash-preview',
         messages: [
           { role: 'system', content: `You write short, warm parent-facing weekly summaries about a child's English learning. Output ONLY in ${langName}. Be specific, concrete, encouraging. No emojis. Each field 1-2 sentences max.` },
           { role: 'user', content: `Learner${name ? `: ${name}` : ''}\nThis week: ${stats.lessonsCompleted} lessons, ${stats.vocabLearned} new words, ${stats.studyMinutes} study minutes, ${accuracy}% quiz accuracy (${stats.quizTotal} questions), ${stats.streak}-day streak.\n\nReturn JSON with two fields: "highlight" (本周亮点) and "suggestion" (下周建议).` },

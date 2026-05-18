@@ -6,7 +6,7 @@ const corsHeaders = {
 };
 
 const SEED_TOKEN = "sk_seed_8f3a92c1d4e57b6a";
-const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
+const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY")!;
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
@@ -107,11 +107,11 @@ ${point.explanation ? `Reference notes:\n${point.explanation}\n` : ""}
 ${point.typical_example ? `Typical example: ${point.typical_example}\n` : ""}
 ${point.common_mistake ? `Common mistake: ${point.common_mistake}\n` : ""}
 Generate the full learning corpus JSON now.`;
-  const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+  const res = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
     method: "POST",
-    headers: { Authorization: `Bearer ${LOVABLE_API_KEY}`, "Content-Type": "application/json" },
+    headers: { Authorization: `Bearer ${GOOGLE_AI_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "google/gemini-2.5-flash-lite",
+      model: "gemini-2.5-flash-lite",
       messages: [
         { role: "system", content: SYSTEM },
         { role: "user", content: userPrompt },

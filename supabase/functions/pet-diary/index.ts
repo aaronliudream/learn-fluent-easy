@@ -5,7 +5,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const LOVABLE_KEY = Deno.env.get("LOVABLE_API_KEY");
+const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY");
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
@@ -87,7 +87,7 @@ Deno.serve(async (req) => {
       persona = traits?.ai_persona_prompt || "";
     }
 
-    if (!LOVABLE_KEY) return new Response(JSON.stringify({ error: "LOVABLE_API_KEY missing" }), { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+    if (!GOOGLE_AI_API_KEY) return new Response(JSON.stringify({ error: "GOOGLE_AI_API_KEY missing" }), { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
 
     const safetyRules = `
 SAFETY RULES (must follow strictly):
@@ -106,11 +106,11 @@ SAFETY RULES (must follow strictly):
 
 请生成今日宠物日记，并提炼 3 条亮点（短语，每条 6-10 字）。`;
 
-    const r = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+    const r = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
       method: "POST",
-      headers: { Authorization: `Bearer ${LOVABLE_KEY}`, "Content-Type": "application/json" },
+      headers: { Authorization: `Bearer ${GOOGLE_AI_API_KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
+        model: "gemini-2.5-flash",
         messages: [{ role: "system", content: sys }, { role: "user", content: user }],
         tools: [{ type: "function", function: { name: "diary", parameters: { type: "object", properties: { body_cn: { type: "string" }, highlights: { type: "array", items: { type: "string" } } }, required: ["body_cn", "highlights"] } } }],
         tool_choice: { type: "function", function: { name: "diary" } },

@@ -9,8 +9,8 @@ const corsHeaders = {
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY")!;
-const MODEL = "google/gemini-2.5-flash";
+const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY")!;
+const MODEL = "gemini-2.5-flash";
 
 // In-memory rate limit: same KP per process, 5 minutes
 const recentGen = new Map<string, number>();
@@ -93,9 +93,9 @@ ${excludeThemeLine}
 输出 JSON：
 {"stem":"...","option_a":"...","option_b":"...","option_c":"...","option_d":"...","correct_answer":"A|B|C|D","explanation":"中文解析 100-200 字","context_scenario":"≤15字情境","tested_keyword":"本题考的核心词或短语"}`;
 
-  const r = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+  const r = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
     method: "POST",
-    headers: { Authorization: `Bearer ${LOVABLE_API_KEY}`, "Content-Type": "application/json" },
+    headers: { Authorization: `Bearer ${GOOGLE_AI_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       model: MODEL,
       messages: [{ role: "system", content: sys }, { role: "user", content: user }],

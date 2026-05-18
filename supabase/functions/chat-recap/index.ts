@@ -163,8 +163,8 @@ serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
 
   try {
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) return json({ error: "AI gateway not configured" }, 503);
+    const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY");
+    if (!GOOGLE_AI_API_KEY) return json({ error: "AI gateway not configured" }, 503);
 
     const { transcript, lessonTitle, part: partFromBody, targets, avoidWords } = await req.json();
     const part: Part =
@@ -198,7 +198,7 @@ serve(async (req) => {
       // Flash-lite is much faster than 2.5-flash and plenty good enough for
       // a vocabulary quiz / line-by-line translation. Falls back gracefully
       // since the same gateway endpoint serves both.
-      model: part === "quiz" ? "google/gemini-2.5-flash" : "google/gemini-2.5-flash-lite",
+      model: part === "quiz" ? "gemini-2.5-flash" : "gemini-2.5-flash-lite",
       messages: [
         { role: "system", content: buildSystemPrompt(part) },
         {
@@ -210,10 +210,10 @@ serve(async (req) => {
       tool_choice: { type: "function", function: { name: toolName } },
     };
 
-    const r = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+    const r = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        Authorization: `Bearer ${GOOGLE_AI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),

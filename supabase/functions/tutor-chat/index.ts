@@ -16,9 +16,9 @@ const corsHeaders = {
 
 // Tier-specific daily limits + model + max_tokens (cost control)
 const TIER = {
-  guest:       { limit: 3,   model: "google/gemini-2.5-flash-lite", maxTokens: 600  },
-  registered:  { limit: 30,  model: "google/gemini-2.5-flash",      maxTokens: 1200 },
-  premium:     { limit: 200, model: "google/gemini-2.5-pro",        maxTokens: 2000 },
+  guest:       { limit: 3,   model: "gemini-2.5-flash-lite", maxTokens: 600  },
+  registered:  { limit: 30,  model: "gemini-2.5-flash",      maxTokens: 1200 },
+  premium:     { limit: 200, model: "gemini-2.5-pro",        maxTokens: 2000 },
 } as const;
 type Tier = keyof typeof TIER;
 
@@ -204,8 +204,8 @@ Deno.serve(async (req) => {
     const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
     const SUPABASE_ANON = Deno.env.get("SUPABASE_ANON_KEY")!;
     const SUPABASE_SERVICE = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) {
+    const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY");
+    if (!GOOGLE_AI_API_KEY) {
       return new Response(JSON.stringify({ error: "AI not configured" }), {
         status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
@@ -364,10 +364,10 @@ Deno.serve(async (req) => {
     }
 
     // --- Call Lovable AI Gateway (streaming) — model + max_tokens depend on tier ---
-    const aiRes = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+    const aiRes = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        Authorization: `Bearer ${GOOGLE_AI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

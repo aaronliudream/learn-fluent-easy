@@ -15,7 +15,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-const LOVABLE_KEY = Deno.env.get("LOVABLE_API_KEY");
+const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY");
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
@@ -90,7 +90,7 @@ Deno.serve(async (req) => {
       .select("role,content").eq("user_id", uid).order("created_at", { ascending: false }).limit(10);
     const past = (history || []).reverse().map((m: any) => ({ role: m.role, content: m.content }));
 
-    if (!LOVABLE_KEY) return new Response(JSON.stringify({ error: "LOVABLE_API_KEY missing" }), { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+    if (!GOOGLE_AI_API_KEY) return new Response(JSON.stringify({ error: "GOOGLE_AI_API_KEY missing" }), { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } });
 
     const safetyRules = `
 SAFETY RULES (must follow strictly):
@@ -102,11 +102,11 @@ SAFETY RULES (must follow strictly):
 - Stay in character as ${nickname}.`;
     const sys = `${persona || "你是一只温暖、积极、可爱的电子学习宠物。"}\n${safetyRules}`;
 
-    const r = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+    const r = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
       method: "POST",
-      headers: { Authorization: `Bearer ${LOVABLE_KEY}`, "Content-Type": "application/json" },
+      headers: { Authorization: `Bearer ${GOOGLE_AI_API_KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
+        model: "gemini-2.5-flash",
         messages: [
           { role: "system", content: sys },
           ...past,

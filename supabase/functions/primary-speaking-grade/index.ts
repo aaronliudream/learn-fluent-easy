@@ -11,7 +11,7 @@ const corsHeaders = {
 // Output: scores, gentle correction, kid-friendly encouragement, 3 scenario replacements.
 
 const ELEVEN_KEY = Deno.env.get("ELEVENLABS_API_KEY");
-const LOVABLE_KEY = Deno.env.get("LOVABLE_API_KEY");
+const GOOGLE_AI_API_KEY = Deno.env.get("GOOGLE_AI_API_KEY");
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
@@ -44,7 +44,7 @@ async function transcribe(audioB64: string, mime: string): Promise<string> {
 }
 
 async function evaluate(target: string, transcript: string, grade: number, scenario: string) {
-  if (!LOVABLE_KEY) throw new Error("LOVABLE_API_KEY missing");
+  if (!GOOGLE_AI_API_KEY) throw new Error("GOOGLE_AI_API_KEY missing");
   const sys = `You are a warm, encouraging English teacher for Chinese primary school students (G1-G6).
 CRITICAL RULES:
 - Always be positive and gentle. Never shame the child.
@@ -66,11 +66,11 @@ Score 0-100 generously (kid voice tolerant):
 
 Then return: encouragement (Chinese, warm, 1 short sentence), corrections (array of {word, tip_cn} for at most 2 trickiest sounds, empty if perfect), replacements (3 English sentences using the same pattern, scenario-driven & meaningful for a kid + pet).`;
 
-  const r = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+  const r = await fetch("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", {
     method: "POST",
-    headers: { Authorization: `Bearer ${LOVABLE_KEY}`, "Content-Type": "application/json" },
+    headers: { Authorization: `Bearer ${GOOGLE_AI_API_KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "google/gemini-2.5-flash",
+      model: "gemini-2.5-flash",
       messages: [
         { role: "system", content: sys },
         { role: "user", content: user },

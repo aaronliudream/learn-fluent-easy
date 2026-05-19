@@ -17,8 +17,8 @@ const STAGE_META: Record<Stage, {label: string;icon: any;route: string;}> = {
 };
 
 // === Junior / Gaokao corpus totals (keep in sync with useMasteryOverview) ===
-const JUNIOR_TOTALS = { vocab: 2043, reading: 91, listening: 209, grammar: 52, writing: 30 };
-const GAOKAO_TOTALS = { vocab: 4141, reading: 65, grammar: 298, cloze: 40 };
+const JUNIOR_TOTALS = { vocab: 2373, reading: 91, listening: 209, grammar: 52, writing: 30 };
+const GAOKAO_TOTALS = { vocab: 2921, reading: 65, grammar: 298, cloze: 40 };
 
 // ===== PRIMARY =====
 type PrimaryMastery = {word_id: string;mastery_level: number | null;interval_days: number | null;listen_correct: number | null;listen_wrong: number | null;};

@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { isPrimaryWordDue } from "@/lib/primaryMasteryStats";
+import {
+  primaryAdventurePath,
+  primaryReadingListPath,
+  readPrimaryGradeFromStorage,
+} from "@/lib/primaryGrade";
 
 export type Stage = "primary" | "junior" | "gaokao";
 
@@ -40,9 +46,9 @@ export type StageOverview = {
 
 /** Module totals (seed corpus size). Keep in sync with DB seed counts. */
 const TOTALS: Record<Stage, Record<ModuleKey, number>> = {
-  primary: { vocab: 1038, reading: 60, listening: 0, writing: 0, grammar: 0, cloze: 0, lesson: 35 },
+  primary: { vocab: 846, reading: 60, listening: 0, writing: 0, grammar: 0, cloze: 0, lesson: 35 },
   junior:  { vocab: 2373, reading: 91, listening: 209, writing: 143, grammar: 56, cloze: 0, lesson: 0 },
-  gaokao:  { vocab: 4141, reading: 65, listening: 0,   writing: 0,   grammar: 298, cloze: 16, lesson: 0 },
+  gaokao:  { vocab: 2921, reading: 65, listening: 0,   writing: 0,   grammar: 298, cloze: 16, lesson: 0 },
 };
 
 const MODULE_META: Record<ModuleKey, { label: string; emoji: string }> = {
@@ -57,7 +63,13 @@ const MODULE_META: Record<ModuleKey, { label: string; emoji: string }> = {
 
 function routeFor(stage: Stage, key: ModuleKey): string {
   const base = stage === "primary" ? "/primary" : stage === "junior" ? "/junior" : "/gaokao";
-  if (stage === "primary" && key === "lesson") return "/primary";
+  if (stage === "primary") {
+    const g = readPrimaryGradeFromStorage();
+    if (key === "vocab") return `/primary/vocab/${g}`;
+    if (key === "reading") return primaryReadingListPath(g);
+    if (key === "lesson" || key === "listening" || key === "writing") return primaryAdventurePath(g);
+    return primaryAdventurePath(g);
+  }
   return `${base}/${key}`;
 }
 
@@ -138,7 +150,7 @@ export function useMasteryOverview(stage: Stage): StageOverview {
           const lvl = (r as any).mastery_level ?? 0;
           if (lvl >= 3) vocabP.mastered += 1;
           else if (lvl >= 1) vocabP.learned += 1;
-          if ((r as any).due_at && new Date((r as any).due_at).getTime() <= Date.now() && lvl < 3) vocabP.due += 1;
+          if (isPrimaryWordDue(r as any)) vocabP.due += 1;
         }
         vocabP.percent = vocabP.total ? Math.round((vocabP.mastered / vocabP.total) * 100) : 0;
 
@@ -336,7 +348,7 @@ export type ContinuePick = {
 
 export function pickContinue(stage: Stage, ov: StageOverview): ContinuePick {
   const live = ov.modules.filter((m) => !m.comingSoon);
-  const dueModule = live.find((m) => m.due > 0);
+  const dueModule = [...live].sort((a, b) => b.due - a.due).find((m) => m.due > 0);
   if (dueModule) {
     return {
       module: dueModule.key,

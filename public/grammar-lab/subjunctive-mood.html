@@ -405,7 +405,7 @@ const softSpring = REDUCED_MOTION ? { duration: 0.01 } : { type: "spring", dampi
    finishes (or fallback completes). Used by `speak` (English) and
    `playTTS` (Chinese teacher narration). ─── */
 const TTS_ENDPOINT = "https://degqpiiddkxcuzwombwp.supabase.co/functions/v1/tts";
-const TTS_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvdHRudHlod29sYnNkdmt3cmlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczMzg2NzUsImV4cCI6MjA5MjkxNDY3NX0.s7YXfJzG_DRIGWwrYmX4gehxwmPEXbWLOqrLEzAueM4";
+const TTS_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRlZ3FwaWlkZGt4Y3V6d29tYndwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg5NTQ1MDksImV4cCI6MjA5NDUzMDUwOX0.PMZhguoZVWNKBxUCTggKGoKkgf9xiKOd8dZ27r4N_qU";
 const TTS_CACHE = new Map(); // text|voice|speed → blob URL
 let _ttsAudio = null;
 let _hasZhVoice = null; // null=unknown, true/false after detection

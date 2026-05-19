@@ -311,19 +311,20 @@ const Auth = () => {
 
   const handleGoogle = async () => {
     setLoading(true);
-    const result = await lovable.auth.signInWithOAuth("google", {
-      redirect_uri: window.location.origin,
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: window.location.origin,
+      },
     });
-    if (result.error) {
+    if (error) {
       setLoading(false);
       toast.error(t("Google 登录失败"));
       return;
     }
-    if (result.redirected) return;
-    const redirect5 = consumeRedirectPath();
-    navigate(redirect5 || "/", { replace: true });
+    // Supabase 会自动跳转到 Google 授权页，授权后回到 redirectTo 地址
   };
-
+    
   return (
     <main className="mx-auto flex min-h-screen max-w-md items-center px-5 py-10">
       <div className="relative w-full rounded-2xl border bg-card p-8 shadow-tile">

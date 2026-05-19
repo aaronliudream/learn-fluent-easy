@@ -42,7 +42,7 @@ function wrap(text: string, perLine: number, maxLines: number): string[] {
 }
 
 const SITE = "https://bigmoonenglish.com";
-const SUPABASE_URL = Deno.env.get("SUPABASE_URL") ?? "https://fottntyhwolbsdvkwriq.supabase.co";
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL") ?? "https://degqpiiddkxcuzwombwp.supabase.co";
 
 async function buildQrSvg(text: string, size: number): Promise<string> {
   // Returns just the inner <path> elements positioned at (x,y)=(0,0); we wrap with <g transform>.

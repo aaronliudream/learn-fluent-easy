@@ -404,7 +404,7 @@ const softSpring = REDUCED_MOTION ? { duration: 0.01 } : { type: "spring", dampi
    the network call fails. Returns a Promise that resolves when audio
    finishes (or fallback completes). Used by `speak` (English) and
    `playTTS` (Chinese teacher narration). ─── */
-const TTS_ENDPOINT = "https://fottntyhwolbsdvkwriq.supabase.co/functions/v1/tts";
+const TTS_ENDPOINT = "https://degqpiiddkxcuzwombwp.supabase.co/functions/v1/tts";
 const TTS_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvdHRudHlod29sYnNkdmt3cmlxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczMzg2NzUsImV4cCI6MjA5MjkxNDY3NX0.s7YXfJzG_DRIGWwrYmX4gehxwmPEXbWLOqrLEzAueM4";
 const TTS_CACHE = new Map(); // text|voice|speed → blob URL
 let _ttsAudio = null;

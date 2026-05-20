@@ -1,7 +1,18 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, BookOpen, Sparkles, Flame, Target, ChevronRight, TrendingUp } from "lucide-react";
+import { ArrowLeft, Sparkles, Flame, Target, ChevronRight, TrendingUp, Gamepad2, Map, ChevronDown, Zap } from "lucide-react";
+import { cn } from "@/lib/utils";
+import {
+  hasLabContent,
+  juniorGrammarPlayPath,
+  pickTodayAdventure,
+} from "@/lib/juniorGrammarNav";
+import {
+  countPendingRevengeMistakes,
+  pickBestRevengePoint,
+  rankWeakPoints,
+} from "@/lib/juniorGrammarRevenge";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
@@ -35,6 +46,7 @@ export default function JuniorGrammar() {
   const [pts, setPts] = useState<Pt[]>([]);
   const [mastery, setMastery] = useState<Record<string, JuniorGrammarMastery>>({});
   const [loading, setLoading] = useState(true);
+  const [showMap, setShowMap] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -134,9 +146,28 @@ export default function JuniorGrammar() {
     return null;
   }, [cats, pts, catStats, mastery]);
 
+  const todayAdventure = useMemo(
+    () => pickTodayAdventure(pts, mastery, recommendNext),
+    [pts, mastery, recommendNext],
+  );
+
+  const todayIsDue = useMemo(() => {
+    if (!todayAdventure) return false;
+    const ms = mastery[todayAdventure.id];
+    return !!(ms?.due_at && new Date(ms.due_at).getTime() <= Date.now());
+  }, [todayAdventure, mastery]);
+
   // ─── Error aggregation ───
   const errorAgg = useMemo(() => aggregateJuniorGrammarErrors(Object.values(mastery)), [mastery]);
   const totalErrors = Object.values(errorAgg).reduce((a: number, b) => a + (b as number), 0);
+  const pendingRevenge = useMemo(() => countPendingRevengeMistakes(), [pts, mastery]);
+  const weakPoints = useMemo(() => rankWeakPoints(pts, mastery).slice(0, 5), [pts, mastery]);
+  const bestRevenge = useMemo(() => pickBestRevengePoint(pts, mastery), [pts, mastery]);
+  const topErrorReason = useMemo(() => {
+    const sorted = (Object.entries(errorAgg) as [JuniorGrammarErrorReason, number][])
+      .sort((a, b) => (b[1] as number) - (a[1] as number));
+    return sorted[0]?.[1] ? sorted[0][0] : null;
+  }, [errorAgg]);
 
   const ringColorByScore = (s: number) =>
   s >= 0.85 ? "stroke-yellow-500" : s >= 0.6 ? "stroke-amber-500" : s >= 0.3 ? "stroke-emerald-500" : s >= 0.1 ? "stroke-sky-500" : "stroke-muted";
@@ -156,9 +187,46 @@ export default function JuniorGrammar() {
       </BackLink>
       <div className="mb-6">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">JUNIOR · GRAMMAR</div>
-        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl"><T>中考语法专项</T></h1>
-        <p className="mt-1 text-sm text-muted-foreground"><T>按 CEFR 分级 · 间隔复习 · AI 智能批改</T></p>
+        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl"><T>语法冒险</T></h1>
+        <p className="mt-1 text-sm text-muted-foreground"><T>每天一关 · 闯关赚 XP · 间隔复习不掉队</T></p>
       </div>
+
+      {todayAdventure &&
+      <Link
+        to={juniorGrammarPlayPath(todayAdventure.id, todayAdventure)}
+        className="mb-6 block rounded-2xl bg-gradient-to-br from-violet-600 via-fuchsia-600 to-rose-500 p-5 text-white shadow-lg hover:shadow-xl transition group">
+        <div className="flex items-start gap-4">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-white/20 backdrop-blur">
+            <Gamepad2 className="size-8" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+                <T>今日冒险</T>
+              </span>
+              {todayIsDue &&
+              <span className="rounded-full bg-amber-300/90 px-2.5 py-0.5 text-[10px] font-bold text-amber-950">
+                <T>待复习</T>
+              </span>
+              }
+              {hasLabContent(todayAdventure) &&
+              <span className="rounded-full bg-white/15 px-2.5 py-0.5 text-[10px] font-bold">
+                <T>闯关模式</T>
+              </span>
+              }
+            </div>
+            <div className="mt-2 text-lg font-extrabold leading-snug line-clamp-2">{todayAdventure.title}</div>
+            <p className="mt-2 text-xs text-white/85">
+              <T>约 8 分钟 · 钩子 → 反射 → 改错 → Boss</T>
+            </p>
+            <div className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold">
+              <T>开始闯关</T>
+              <ChevronRight className="size-4 group-hover:translate-x-0.5 transition-transform" />
+            </div>
+          </div>
+        </div>
+      </Link>
+      }
 
       {grade &&
       <ModuleStageTests
@@ -241,7 +309,7 @@ export default function JuniorGrammar() {
               return (
                 <li key={p.id}>
                       <Link
-                    to={`/junior/grammar/${p.id}`}
+                    to={juniorGrammarPlayPath(p.id, p)}
                     className="flex items-center justify-between gap-2 rounded-lg p-1.5 text-xs hover:bg-muted/50">
                     
                         <span className="truncate">{meta.emoji} {p.title}</span>
@@ -260,7 +328,7 @@ export default function JuniorGrammar() {
               <Sparkles className="size-3.5" /> <T>智能推荐</T>
             </div>
             {recommendNext ?
-          <Link to={`/junior/grammar/${recommendNext.point.id}`} className="block group">
+          <Link to={juniorGrammarPlayPath(recommendNext.point.id, recommendNext.point)} className="block group">
                 <div className="text-xs text-muted-foreground"><T>从最薄弱模块开始</T></div>
                 <div className="text-base font-bold mt-0.5 group-hover:text-primary transition line-clamp-2">
                   {recommendNext.category.emoji} {recommendNext.point.title}
@@ -277,19 +345,30 @@ export default function JuniorGrammar() {
         </section>
       }
 
-      {/* ===== 错因雷达 ===== */}
-      {totalErrors > 0 &&
+      {/* ===== 错因雷达 + 复仇入口 ===== */}
+      {(totalErrors > 0 || pendingRevenge > 0) &&
       <section className="mb-6 rounded-2xl border bg-card p-5">
           <div className="flex items-center justify-between mb-3">
             <div>
               <div className="text-base font-bold flex items-center gap-1.5">
-                <Target className="size-4 text-primary" /> <T>你的错因分布</T>
+                <Target className="size-4 text-primary" /> <T>错因雷达 · 弱点专攻</T>
               </div>
               <div className="text-xs text-muted-foreground mt-0.5">
-                <T>基于</T> {totalErrors} <T>次错题分析，针对性弥补弱点</T>
+                <T>累计</T> {totalErrors} <T>次错因 · </T>
+                <Link to="/junior/grammar/revenge" className="font-bold text-rose-600 hover:underline"><T>点此处复仇冲刺 →</T></Link>
               </div>
             </div>
           </div>
+          {pendingRevenge > 0 &&
+          <Link
+            to="/junior/grammar/revenge"
+            className="mb-3 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-rose-600 to-orange-500 py-3 text-sm font-bold text-white shadow">
+            <Zap className="size-4" />
+            <T>错题复仇冲刺</T>
+            <span className="rounded-full bg-white/25 px-2 tabular-nums">{pendingRevenge}</span>
+          </Link>
+          }
+          {totalErrors > 0 &&
           <div className="flex flex-col md:flex-row items-center gap-4">
             <ErrorRadar data={errorAgg} size={200} />
             <div className="flex-1 grid gap-2 text-xs w-full">
@@ -309,14 +388,44 @@ export default function JuniorGrammar() {
             })}
             </div>
           </div>
+          }
+          {weakPoints.length > 0 &&
+          <div className="border-t pt-3 mt-3">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-2"><T>薄弱考点</T></div>
+            <ul className="space-y-1">
+              {weakPoints.map((w) => (
+                <li key={w.point.id}>
+                  <Link
+                    to={w.mistakeCount > 0 ? `/junior/grammar/revenge?point=${w.point.id}` : juniorGrammarPlayPath(w.point.id, w.point)}
+                    className="flex items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-xs hover:bg-muted/50">
+                    <span className="truncate font-medium">{w.point.title}</span>
+                    <span className="shrink-0 text-rose-600 font-bold">
+                      {w.mistakeCount > 0 ? `${w.mistakeCount} 题` : w.isDue ? "待复习" : `${w.wrongCount} 错`}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          }
         </section>
       }
 
-      {/* ===== Category list with progress ===== */}
-      <h2 className="mb-3 text-base font-bold flex items-center gap-1.5">
-        <BookOpen className="size-4 text-primary" /> <T>语法考点</T>
-      </h2>
-      <div className="space-y-6">
+      {/* ===== 关卡地图（默认收起） ===== */}
+      <button
+        type="button"
+        onClick={() => setShowMap((v) => !v)}
+        className="mb-3 flex w-full items-center justify-between gap-2 rounded-xl border bg-card px-4 py-3 text-left text-sm font-bold hover:bg-muted/50 transition">
+        <span className="flex items-center gap-2">
+          <Map className="size-4 text-primary" />
+          <T>关卡地图</T>
+          <span className="text-xs font-normal text-muted-foreground">({pts.length} <T>个考点</T>)</span>
+        </span>
+        <ChevronDown className={cn("size-4 text-muted-foreground transition", showMap && "rotate-180")} />
+      </button>
+
+      {showMap &&
+      <div className="space-y-6 mb-6">
         {cats.map((c) => {
           const catPts = pts.filter((p) => p.category_id === c.id);
           if (catPts.length === 0) return null;
@@ -372,11 +481,9 @@ export default function JuniorGrammar() {
                   const hasRichContent = (p.content_depth ?? 0) >= 1;
                   return (
                     <li key={p.id}>
-                      <div className="flex items-stretch gap-1.5">
                       <Link
-                          to={`/junior/grammar/${p.id}`}
-                          className="flex flex-1 min-w-0 items-center gap-2 rounded-xl border bg-card px-3 py-2.5 text-sm transition hover:border-primary hover:shadow-sm">
-                          
+                        to={juniorGrammarPlayPath(p.id, p)}
+                        className="flex min-w-0 items-center gap-2 rounded-xl border bg-card px-3 py-2.5 text-sm transition hover:border-primary hover:shadow-sm">
                         <span className="text-lg flex-shrink-0" title={meta.label}>
                           {meta.emoji}
                         </span>
@@ -385,8 +492,8 @@ export default function JuniorGrammar() {
                           <span className="block text-[10px] text-muted-foreground mt-0.5 flex items-center gap-1.5 flex-wrap">
                             <span>CEFR {p.cefr}</span>
                             {hasRichContent &&
-                              <span className="inline-block px-1 py-0.5 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-bold text-[9px]">
-                                <T>✨ 升级版</T>
+                              <span className="inline-block px-1 py-0.5 rounded bg-violet-500/15 text-violet-700 dark:text-violet-300 font-bold text-[9px]">
+                                <T>🎮 闯关</T>
                               </span>
                               }
                             {isDue &&
@@ -398,14 +505,6 @@ export default function JuniorGrammar() {
                         </span>
                         <ChevronRight className="size-3.5 text-muted-foreground flex-shrink-0" />
                       </Link>
-                      <Link
-                          to={`/junior/grammar-lab/${p.id}`}
-                          title="全攻克 Lab — 闯关模式"
-                          className="flex items-center justify-center px-2.5 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white text-xs font-extrabold shadow-sm hover:shadow-md transition flex-shrink-0">
-                          
-                        🚀
-                      </Link>
-                      </div>
                     </li>);
 
                 })}
@@ -414,6 +513,7 @@ export default function JuniorGrammar() {
 
         })}
       </div>
+      }
 
       {/* ===== Legend ===== */}
       <div className="mt-8 rounded-2xl border bg-muted/30 p-4">

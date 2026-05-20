@@ -1,13 +1,28 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Zap } from "lucide-react";
 import type { Stage } from "@/hooks/useMasteryOverview";
 import { useMasteryOverview, pickContinue } from "@/hooks/useMasteryOverview";
+import { useJuniorGrammarContinue } from "@/hooks/useJuniorGrammarContinue";
+import { pickPrimaryContinue } from "@/lib/primaryDailyPlan";
+import { readPrimaryGradeFromStorage } from "@/lib/primaryGrade";
+import { countPendingRevengeMistakes } from "@/lib/juniorGrammarRevenge";
 
 /** Smart "continue learning" card. Drops in any module/stage page header. */
-export function ContinueCard({ stage }: { stage: Stage }) {
+export function ContinueCard({ stage, grade }: { stage: Stage; grade?: number }) {
   const ov = useMasteryOverview(stage);
-  if (!ov.signedIn || ov.loading) return null;
-  const pick = pickContinue(stage, ov);
+  const { pick: juniorGrammarPick } = useJuniorGrammarContinue(stage === "junior" && ov.signedIn && !ov.loading);
+
+  const pick = useMemo(() => {
+    if (stage === "primary") {
+      return pickPrimaryContinue(ov, grade ?? readPrimaryGradeFromStorage());
+    }
+    const base = pickContinue(stage, ov);
+    if (stage !== "junior" || !juniorGrammarPick) return base;
+    if (countPendingRevengeMistakes() > 0) return juniorGrammarPick;
+    if (base.module === "grammar") return juniorGrammarPick;
+    return base;
+  }, [stage, ov, grade, juniorGrammarPick]);
   const tone =
     pick.kind === "due"
       ? "from-orange-500 to-rose-500"

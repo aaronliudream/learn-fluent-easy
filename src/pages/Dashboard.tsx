@@ -4,10 +4,12 @@ import { ArrowRight, Sparkles, Clock, Calendar } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { supabase } from "@/integrations/supabase/client";
 import { MasteryBar, MasteryCounts } from "@/components/learning-center/MasteryBar";
+import { enrichMasteryGpsData } from "@/lib/enrichMasteryGps";
 import { SkillRadar } from "@/components/mastery/SkillRadar";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ShareButton } from "@/components/share/ShareButton";
 import { useStreakStats } from "@/hooks/useStreakStats";
+import { StageContinueCta } from "@/components/mastery/StageContinueCta";
 
 /**
  * Hub Dashboard — reads from the same GPS views as LearningCenter (mastery_stage_proportion
@@ -194,17 +196,14 @@ function StageView({ stage, stat, modules }: { stage: StageKey; stat: GPSStat; m
 
       {/* Continue CTA */}
       {continueMod && (
-        <Link
-          to={continueRoute}
-          className={`group flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${continueTone} p-5 text-white shadow-tile transition-all hover:-translate-y-0.5`}>
-          <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm text-2xl">▶</div>
-          <div className="flex-1 min-w-0">
-            <div className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-85"><T>📍 从这里继续</T></div>
-            <div className="mt-1 text-lg font-extrabold leading-tight">{continueTitle}</div>
-            <div className="mt-0.5 text-xs opacity-90">{continueSubtitle}</div>
-          </div>
-          <ArrowRight className="size-6 transition-transform group-hover:translate-x-1" />
-        </Link>
+        <StageContinueCta
+          stage={stage}
+          continueModule={continueMod.module}
+          defaultTo={continueRoute}
+          defaultTitle={continueTitle}
+          defaultSubtitle={continueSubtitle}
+          defaultTone={continueTone}
+        />
       )}
 
       {/* Grammar panorama */}
@@ -276,32 +275,49 @@ export default function Dashboard() {
       const uid = user.id;
 
       // Fetch the same views LearningCenter uses
-      const [spR, scR] = await Promise.all([
-        supabase.from("mastery_stage_proportion").select("*").eq("user_id", uid),
-        supabase.from("mastery_with_proportions").select("*").eq("user_id", uid),
-      ]);
+      const { data: scopeRows } = await supabase
+        .from("mastery_with_proportions")
+        .select("*")
+        .eq("user_id", uid);
       if (cancelled) return;
 
-      // Stage-level stats (direct from view)
+      const rawScopes = ((scopeRows ?? []) as Record<string, unknown>[]).map((r) => ({
+        stage: r.stage as string,
+        grade: num(r.grade),
+        module: r.module as string,
+        master: num(r.master_count),
+        fluent: num(r.fluent_count),
+        weak: num(r.weak_count),
+        none: num(r.none_count),
+        total: num(r.scope_total),
+        score_pct: num(r.score_pct),
+        proportion_pct: num(r.proportion_of_total),
+      }));
+      const enriched = await enrichMasteryGpsData(uid, rawScopes);
+
       const newStageMap = new Map<StageKey, GPSStat>();
-      for (const r of (spR.data ?? []) as Record<string, unknown>[]) {
-        const stage = r.stage as StageKey;
-        newStageMap.set(stage, {
-          master:    num(r.master_count),
-          fluent:    num(r.fluent_count),
-          weak:      num(r.weak_count),
-          none:      num(r.none_count),
-          total:     num(r.stage_total),
-          score_pct: num(r.score_pct),
+      for (const r of enriched.stageProps) {
+        newStageMap.set(r.stage, {
+          master: r.master,
+          fluent: r.fluent,
+          weak: r.weak,
+          none: r.none,
+          total: r.total,
+          score_pct: r.score_pct,
         });
       }
 
-      // Per-module stats: aggregate mastery_with_proportions by (stage, module)
-      const accum = new Map<string, Record<string, unknown>[]>(); // "stage:module" → rows
-      for (const r of (scR.data ?? []) as Record<string, unknown>[]) {
+      const accum = new Map<string, Record<string, unknown>[]>();
+      for (const r of enriched.scopes) {
         const k = `${r.stage}:${r.module}`;
         const arr = accum.get(k) ?? [];
-        arr.push(r);
+        arr.push({
+          master_count: r.master,
+          fluent_count: r.fluent,
+          weak_count: r.weak,
+          none_count: r.none,
+          scope_total: r.total,
+        });
         accum.set(k, arr);
       }
       const newModuleMap = new Map<StageKey, GPSModuleStat[]>();

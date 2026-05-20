@@ -1,7 +1,8 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { hasLabContent, juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
 import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { supabase } from "@/integrations/supabase/client";
@@ -17,6 +18,7 @@ import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
 import { ImmersionCards, type ImmersionCard } from "@/components/grammar/ImmersionCards";
 import { GrammarQuestionCard, type GrammarQuestion, type AnswerResult } from "@/components/grammar/GrammarQuestionCard";
+import { JuniorCheckpoint } from "@/components/assessment/JuniorCheckpoint";
 import {
   CHALLENGE_QUESTIONS_JUNIOR,
   CHALLENGE_THRESHOLD,
@@ -55,8 +57,10 @@ type Stage = "lesson" | "immersion" | "practice" | "reflect";
 
 export default function JuniorGrammarPoint() {
   const { id } = useParams<{id: string;}>();
+  const nav = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const isChallenge = searchParams.get("challenge") === "1";
+  const isClassic = searchParams.get("classic") === "1";
   const sessionSize = isChallenge ? CHALLENGE_QUESTIONS_JUNIOR : 10;
   const [pt, setPt] = useState<Pt | null>(null);
   const grammarBackTo = pt?.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
@@ -105,6 +109,14 @@ export default function JuniorGrammarPoint() {
       setLoading(false);
     })();
   }, [id, sessionSize]);
+
+  // Rich points default to Lab (闯关); ?classic=1 keeps this page for quick drill.
+  useEffect(() => {
+    if (!id || loading || isClassic || isChallenge) return;
+    if (pt && hasLabContent(pt)) {
+      nav(juniorGrammarPlayPath(id, pt), { replace: true });
+    }
+  }, [id, loading, pt, isClassic, isChallenge, nav]);
 
   // Determine which stages have data → auto-skip empty ones
   const availableStages = useMemo<Stage[]>(() => {
@@ -421,6 +433,16 @@ export default function JuniorGrammarPoint() {
                 </div>
               </div>
           }
+
+            {id && pt && qs.length > 0 && (
+              <div className="mt-4 flex justify-center">
+                <JuniorCheckpoint
+                  pointId={id}
+                  pointTitle={pt.title}
+                  grade={pt.grade ?? 7}
+                />
+              </section>
+            )}
 
             <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
               <button

@@ -441,7 +441,7 @@ export default function JuniorGrammarPoint() {
                   pointTitle={pt.title}
                   grade={pt.grade ?? 7}
                 />
-              </section>
+              </div>
             )}
 
             <div className="mt-5 flex flex-wrap items-center justify-center gap-2">

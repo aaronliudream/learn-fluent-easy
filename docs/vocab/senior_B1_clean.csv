@@ -1,0 +1,259 @@
+word_id,word,pos,phonetic,meaning_cn,stage,year_band,volume,volume_label,source_type,source_page,source_ref,confidence
+sr-B1-0001,actually,adv.,"/""{ktSU@li/",事实上；的确,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0002,addict,n.,"/""{dIkt/",对……入迷的人；吸毒成瘾的人,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0003,addicted to,,,对……很入迷,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0004,admire,vt.,"/@d""maI@(r)/",钦佩；赞赏,senior,1,B1,必修第一册,vocabulary,125,2,high
+sr-B1-0005,adult,n.,"/""{dVlt/",成年人adj成年的；成熟的,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0006,advance,n.,"/@d""vA:ns/",前进；发展vi前进；发展vt发展；促进,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0007,adventure,n.,"/@d""ventS@(r)/",冒险；奇遇,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0008,affair,n.,"/@""fe@(r)/",公共事务；事件；关系,senior,1,B1,必修第一册,vocabulary,125,5,high
+sr-B1-0009,affect,vt.,"/@""fekt/",影响；（疾病）侵袭；深深打动,senior,1,B1,必修第一册,vocabulary,125,4,high
+sr-B1-0010,aid,n.,/eId/,援助；帮助；救援物资vi帮助；援助,senior,1,B1,必修第一册,vocabulary,125,4,high
+sr-B1-0011,a.m.,,"/%eI""em/",源自拉丁语）上午；午前；午夜至正午,senior,1,B1,必修第一册,vocabulary,125,w,high
+sr-B1-0012,amazing,adj.,"/@""meIzIN/",令人惊奇的；令人惊喜的,senior,1,B1,必修第一册,vocabulary,125,2,high
+sr-B1-0013,annoy,vt.,"/@""nOI/",使恼怒；打扰,senior,1,B1,必修第一册,vocabulary,125,w,high
+sr-B1-0014,anxious,adj.,"/""{NkS@s/",焦虑的；不安的,senior,1,B1,必修第一册,vocabulary,125,w,high
+sr-B1-0015,apart,adv.,"/@""pA:t/",分离；分开；成碎片,senior,1,B1,必修第一册,vocabulary,125,3,high
+sr-B1-0016,apartment,,"/@""pA:tm@nt/",公寓套房,senior,1,B1,必修第一册,vocabulary,125,5,high
+sr-B1-0017,apply,vt.,"/@""plaI/",申请；请求vt应用；涂（油漆、乳剂）(2)118,senior,1,B1,必修第一册,vocabulary,125,2,high
+sr-B1-0018,appreciate,vt.,"/@""pri:SieIt/",欣赏；重视；感激；领会vi增值,senior,1,B1,必修第一册,vocabulary,125,5,high
+sr-B1-0019,architect,n.,"/""A:kItekt/",建筑设计师,senior,1,B1,必修第一册,vocabulary,125,2,high
+sr-B1-0020,arrangement,n.,"/@""reIndZm@nt/",安排；筹备,senior,1,B1,必修第一册,vocabulary,125,2,high
+sr-B1-0021,as if,,,似乎；好像；仿佛,senior,1,B1,必修第一册,vocabulary,125,4,high
+sr-B1-0022,at last,,,终于；最终,senior,1,B1,必修第一册,vocabulary,125,w,high
+sr-B1-0023,athlete,n.,"/""{Tli:t/",运动员；运动健儿,senior,1,B1,必修第一册,vocabulary,125,3,high
+sr-B1-0024,attitude,n.,"/""{tItju:d;NAmE""{tItu:d/",态度；看法,senior,1,B1,必修第一册,vocabulary,125,5,high
+sr-B1-0025,attract,vt.,"/@""tr{kt/",吸引；引起……的注意（或兴趣）,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0026,be attracted to,,,喜爱,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0027,audience,n.,"/""O:di@ns/",观众；听众,senior,1,B1,必修第一册,vocabulary,125,3,high
+sr-B1-0028,awkward,adj.,"/""O:kw@d/",令人尴尬的；难对付的,senior,1,B1,必修第一册,vocabulary,125,w,high
+sr-B1-0029,ballet,n.,"/""b{leI;NAmEb{""leI/",芭蕾舞,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0030,base,vt.,/beIs/,以……为据点；以……为基础n底部；根据,senior,1,B1,必修第一册,vocabulary,125,5,high
+sr-B1-0031,bce,,"/%bi: si: ""i:/",公元前,senior,1,B1,必修第一册,vocabulary,125,2,high
+sr-B1-0032,beg,vt.,/beg/,恳求；祈求；哀求,senior,1,B1,必修第一册,vocabulary,125,5,high
+sr-B1-0033,behaviour,n.,"/bI""heIvj@(r)/",行为；举止,senior,1,B1,必修第一册,vocabulary,125,1,high
+sr-B1-0034,billion,n.,"/""bIlj@n/",十亿,senior,1,B1,必修第一册,vocabulary,125,5,high
+sr-B1-0035,bone,n.,/b@Un/,骨头；骨（质）,senior,1,B1,必修第一册,vocabulary,125,5,high
+sr-B1-0036,boxing,n.,"/""bQksIN/",拳击（运动）,senior,1,B1,必修第一册,vocabulary,125,3,high
+sr-B1-0037,breathe,vt.,/bri:D/,呼吸,senior,1,B1,必修第一册,vocabulary,125,4,high
+sr-B1-0038,brick,n.,/brIk/,砖；砖块,senior,1,B1,必修第一册,vocabulary,125,4,high
+sr-B1-0039,brochure,n.,"/""br@US@(r);NAmEbroU""Sur/",资料（或广告）手册,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0040,bury,vt.,"/""beri/",埋葬；安葬,senior,1,B1,必修第一册,vocabulary,126,4,high
+sr-B1-0041,calm,adj.,/kA:m/,镇静的；沉着的vt使平静；使镇静,senior,1,B1,必修第一册,vocabulary,126,4,high
+sr-B1-0042,campus,n.,"/""k{mp@s/",校园；校区,senior,1,B1,必修第一册,vocabulary,126,w,high
+sr-B1-0043,captain,,"/""k{ptIn/",运动队）队长；船长；机长,senior,1,B1,必修第一册,vocabulary,126,3,high
+sr-B1-0044,carve,vi.,/kA:v/,雕刻,senior,1,B1,必修第一册,vocabulary,126,5,high
+sr-B1-0045,castle,n.,"/""kA:sl/",城堡；堡垒,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0046,ce,,"/%si: ""i:/",公元,senior,1,B1,必修第一册,vocabulary,126,5,high
+sr-B1-0047,challenge,n.,"/""tS{lIndZ/",挑战；艰巨任务vt怀疑；向……挑战,senior,1,B1,必修第一册,vocabulary,126,1,high
+sr-B1-0048,champion,n.,"/""tS{mpi@n/",冠军；优胜者,senior,1,B1,必修第一册,vocabulary,126,3,high
+sr-B1-0049,character,n.,"/""k{r@kt@(r)/",文字；符号；角色；品质；特点,senior,1,B1,必修第一册,vocabulary,126,5,high
+sr-B1-0050,cheat,vi.,/tSi:t/,作弊；舞弊vt欺骗；蒙骗n欺骗手段；骗子,senior,1,B1,必修第一册,vocabulary,126,3,high
+sr-B1-0051,check in,,,在旅馆、机场等）登记,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0052,check out,,,结账离开（旅馆等）,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0053,civilisation,n.,"/%sIv@laI""zeISn/",文明；文明世界,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0054,classic,adj.,"/""kl{sIk/",传统的；最优秀的；典型的n经典作品；名著,senior,1,B1,必修第一册,vocabulary,126,5,high
+sr-B1-0055,clean up,,,打扫（或清除）干净,senior,1,B1,必修第一册,vocabulary,126,1,high
+sr-B1-0056,come along,,,跟随；到达；进步；赶快,senior,1,B1,必修第一册,vocabulary,126,3,high
+sr-B1-0057,comment,n. vt.,"/""kQment/",议论；评论vi发表意见；评论,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0058,company,n.,"/""kVmp@ni/",公司；商行；陪伴,senior,1,B1,必修第一册,vocabulary,126,w,high
+sr-B1-0059,compare … with/to …,,,与……比较,senior,1,B1,必修第一册,vocabulary,126,3,high
+sr-B1-0060,compete,vi.,"/k@m""pi:t/",竞争；对抗,senior,1,B1,必修第一册,vocabulary,126,3,high
+sr-B1-0061,concentrate,vt.,"/""kQnsntreIt/",集中（注意力）；聚精会神,senior,1,B1,必修第一册,vocabulary,126,w,high
+sr-B1-0062,concentrate on,,,集中精力于,senior,1,B1,必修第一册,vocabulary,126,w,high
+sr-B1-0063,confidence,n.,"/""kQnfId@ns/",信心；信任,senior,1,B1,必修第一册,vocabulary,126,w,high
+sr-B1-0064,confused,adj.,"/k@n""fju:zd/",糊涂的；迷惑的,senior,1,B1,必修第一册,vocabulary,126,1,high
+sr-B1-0065,contact,vt.,"/""kQnt{kt/",联络；联系n联系；接触,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0066,content,n.,"/""kQntent/",内容；目录；（书、讲话、 节目等的）主题,senior,1,B1,必修第一册,vocabulary,126,1,high
+sr-B1-0067,context,n.,"/""kQntekst/",上下文；语境；背景,senior,1,B1,必修第一册,vocabulary,126,4,high
+sr-B1-0068,crash,vt.,/kr{S/,碰撞；撞击n撞车；碰撞,senior,1,B1,必修第一册,vocabulary,126,4,high
+sr-B1-0069,credit,n.,"/""kredIt/",借款；信用；称赞；学分,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0070,credit card,,,信用卡,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0071,curious,adj.,"/""kjU@ri@s/",好奇的；求知欲强的,senior,1,B1,必修第一册,vocabulary,126,w,high
+sr-B1-0072,cut … out,,,停止做（或使用、食用）；剪下,senior,1,B1,必修第一册,vocabulary,126,3,high
+sr-B1-0073,date back (to …),,,追溯到,senior,1,B1,必修第一册,vocabulary,126,5,high
+sr-B1-0074,death,n.,/deT/,死；死亡,senior,1,B1,必修第一册,vocabulary,126,4,high
+sr-B1-0075,debate,n. vi.,"/dI""beIt/",辩论；争论vt辩论；争论,senior,1,B1,必修第一册,vocabulary,126,1,high
+sr-B1-0076,deliver,vi.,"/dI""lIv@(r)/",递送；传达vt发表,senior,1,B1,必修第一册,vocabulary,126,4,high
+sr-B1-0077,demand,n.,"/dI""mA:nd/",要求；需求vt强烈要求；需要vi查问,senior,1,B1,必修第一册,vocabulary,126,5,high
+sr-B1-0078,description,n.,"/dI""skrIpSn/",描写（文字）；形容,senior,1,B1,必修第一册,vocabulary,126,5,high
+sr-B1-0079,design,n.,"/dI""zaIn/",设计；设计方案vt设计；筹划,senior,1,B1,必修第一册,vocabulary,126,w,high
+sr-B1-0080,despite,prep.,"/dI""spaIt/",即使；尽管,senior,1,B1,必修第一册,vocabulary,126,5,high
+sr-B1-0081,destination,n.,"/%destI""neISn/",目的地；终点,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0082,destroy,vt.,"/dI""strOI/",摧毁；毁灭,senior,1,B1,必修第一册,vocabulary,126,4,high
+sr-B1-0083,detail,n.,"/""di:teIl/",细节；详情；细微之处,senior,1,B1,必修第一册,vocabulary,126,2,high
+sr-B1-0084,diet,n.,"/""daI@t/",规定饮食；日常饮食vi节食,senior,1,B1,必修第一册,vocabulary,126,3,high
+sr-B1-0085,disaster,n.,"/dI""zA:st@(r)/",灾难；灾害,senior,1,B1,必修第一册,vocabulary,126,4,high
+sr-B1-0086,drought,n.,/draUt/,旱灾；久旱,senior,1,B1,必修第一册,vocabulary,127,4,high
+sr-B1-0087,dynasty,n.,"/""dIn@sti;NAmE""daI-/",王朝；朝代,senior,1,B1,必修第一册,vocabulary,127,5,high
+sr-B1-0088,editor,n.,"/""edIt@(r)/",主编；编辑；编者,senior,1,B1,必修第一册,vocabulary,127,1,high
+sr-B1-0089,effect,n.,"/I""fekt/",影响；结果；效果,senior,1,B1,必修第一册,vocabulary,127,4,high
+sr-B1-0090,effort,n.,"/""ef@t/",努力；艰难的尝试；尽力,senior,1,B1,必修第一册,vocabulary,127,4,high
+sr-B1-0091,electricity,n.,"/I%lek""trIs@ti/",电；电能,senior,1,B1,必修第一册,vocabulary,127,4,high
+sr-B1-0092,emergency,n.,"/i""m3:dZ@nsi/",突发事件；紧急情况,senior,1,B1,必修第一册,vocabulary,127,4,high
+sr-B1-0093,emperor,n.,"/""emp@r@(r)/",皇帝,senior,1,B1,必修第一册,vocabulary,127,2,high
+sr-B1-0094,equal,n.,"/""i:kw@l/",同等的人；相等物adj相同的；同样的,senior,1,B1,必修第一册,vocabulary,127,5,high
+sr-B1-0095,error,n.,"/""er@(r)/",错误；差错,senior,1,B1,必修第一册,vocabulary,127,3,high
+sr-B1-0096,erupt,,"/I""rVpt/",火山）爆发；（岩浆、烟等）喷出,senior,1,B1,必修第一册,vocabulary,127,4,high
+sr-B1-0097,even if/though,,,即使；虽然,senior,1,B1,必修第一册,vocabulary,127,3,high
+sr-B1-0098,event,n.,"/I""vent/",比赛项目；大事；公开活动,senior,1,B1,必修第一册,vocabulary,127,3,high
+sr-B1-0099,exchange,n.,"/Iks""tSeIndZ/",交换；交流vt交换；交流；交易；兑换,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0100,experiment,n.,"/Ik""sperIm@nt/",实验；试验,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0101,expert,n.,"/""eksp3:t/",专家；行家adj熟练的；内行的；专家的,senior,1,B1,必修第一册,vocabulary,127,1,high
+sr-B1-0102,explore,vi.,"/Ik""splO:(r)/",探索；勘探,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0103,extra,adj.,"/""ekstr@/",额外的；附加的,senior,1,B1,必修第一册,vocabulary,127,1,high
+sr-B1-0104,extremely,adv.,"/Ik""stri:mli/",极其；非常,senior,1,B1,必修第一册,vocabulary,127,2,high
+sr-B1-0105,failure,n.,"/""feIlj@(r)/",失败；失败的人（或事物）,senior,1,B1,必修第一册,vocabulary,127,3,high
+sr-B1-0106,fall apart,,,破裂；破碎；崩溃,senior,1,B1,必修第一册,vocabulary,127,3,high
+sr-B1-0107,female,adj.,"/""fi:meIl/",女（性）的；雌的n雌性动（植）物；女子,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0108,male,adj. n.,/meIl/,男（性）的；雄的n雄性动（植）物；男子(w)120fitness健康；健壮；适合,senior,1,B1,必修第一册,vocabulary,127,3,high
+sr-B1-0109,flash,n.,/fl{S/,光；信号vi闪耀；闪光；发出信号vt使闪耀；发出（信号）,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0110,flash card,,,教学卡片；识字卡,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0111,flat,adj.,/fl{t/,平坦的；扁平的n公寓；单元房,senior,1,B1,必修第一册,vocabulary,127,2,high
+sr-B1-0112,flight,n.,/flaIt/,空中航行；航班；航程,senior,1,B1,必修第一册,vocabulary,127,2,high
+sr-B1-0113,flood,n.,/flVd/,洪水；大量vi淹没；大量涌入vt使灌满水；淹没,senior,1,B1,必修第一册,vocabulary,127,4,high
+sr-B1-0114,fluent,,"/""flu:@nt/",尤指外语）流利的；熟练的,senior,1,B1,必修第一册,vocabulary,127,1,high
+sr-B1-0115,focus,vt.,"/""f@Uk@s/",集中（精力、注意力等）；（使）调节焦距n中心；重点；焦点,senior,1,B1,必修第一册,vocabulary,127,1,high
+sr-B1-0116,focus on,,,集中；特别关注,senior,1,B1,必修第一册,vocabulary,127,1,high
+sr-B1-0117,formal,adj.,"/""fO:ml/",正式的；正规的,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0118,forward,,"/""fO:w@d/",向前；前进adj向前的；前进的,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0119,look forward to,,,盼望；期待,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0120,frightened,adj.,"/""fraItnd/",惊吓的；害怕的,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0121,gas,n.,/g{s/,气体；燃气；汽油,senior,1,B1,必修第一册,vocabulary,127,4,high
+sr-B1-0122,generation,n.,"/%dZen@""reISn/",一代（人）,senior,1,B1,必修第一册,vocabulary,127,1,high
+sr-B1-0123,give up,,,放弃；投降,senior,1,B1,必修第一册,vocabulary,127,3,high
+sr-B1-0124,global,adj.,"/""gl@Ubl/",全球的；全世界的,senior,1,B1,必修第一册,vocabulary,127,5,high
+sr-B1-0125,goal,n.,/g@Ul/,目标；球门；射门,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0126,graduate,vt. n.,"/""gr{dZueIt/",毕业；获得学位毕业生,senior,1,B1,必修第一册,vocabulary,127,1,high
+sr-B1-0127,greenhouse,n.,"/""gri:nhaUs/",温室；暖房,senior,1,B1,必修第一册,vocabulary,127,1,high
+sr-B1-0128,guy,n.,/gaI/,小伙子；男人；家伙,senior,1,B1,必修第一册,vocabulary,127,w,high
+sr-B1-0129,gym,n.,/dZIm/,健身房；体育馆,senior,1,B1,必修第一册,vocabulary,127,3,high
+sr-B1-0130,gymnastics,n.,"/dZIm""n{stIks/",体操（训练）,senior,1,B1,必修第一册,vocabulary,127,3,high
+sr-B1-0131,hike,vi.,/haIk/,徒步旅行vt去……远足n远足；徒步旅行,senior,1,B1,必修第一册,vocabulary,128,2,high
+sr-B1-0132,honour,n.,"/""Qn@(r)/",荣誉；尊敬；荣幸,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0133,host,vt.,/h@Ust/,主办；主持n主人；东道主；节目主持人,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0134,hurricane,,"/""hVrIk@n/",尤指西大西洋的）飓风,senior,1,B1,必修第一册,vocabulary,128,4,high
+sr-B1-0135,impress,vt.,"/Im""pres/",使钦佩；给……留下深刻的好印象vi留下印象；引人注目,senior,1,B1,必修第一册,vocabulary,128,w,high
+sr-B1-0136,impression,n.,"/Im""preSn/",印象；感想,senior,1,B1,必修第一册,vocabulary,128,w,high
+sr-B1-0137,make an impression,,,留下好印象,senior,1,B1,必修第一册,vocabulary,128,w,high
+sr-B1-0138,improve,vt.,"/Im""pru:v/",改进；改善,senior,1,B1,必修第一册,vocabulary,128,1,high
+sr-B1-0139,in the open air,,,露天；在户外,senior,1,B1,必修第一册,vocabulary,128,4,high
+sr-B1-0140,injury,n.,"/""IndZ@ri/",伤害；损伤,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0141,junior,adj.,"/""dZu:nI@(r)/",地位（或职位、级别）低下的n职位较低者；（体育运动中）青少年,senior,1,B1,必修第一册,vocabulary,128,w,high
+sr-B1-0142,junior high school,,,美国）初级中学,senior,1,B1,必修第一册,vocabulary,128,w,high
+sr-B1-0143,first aid kit,,,急救箱,senior,1,B1,必修第一册,vocabulary,128,4,high
+sr-B1-0144,leave ... alone,,,不打扰；不惊动,senior,1,B1,必修第一册,vocabulary,128,w,high
+sr-B1-0145,lecture,n.,"/""lektS@(r)/",讲座；讲课；教训vi开）讲座；讲课vt训斥,senior,1,B1,必修第一册,vocabulary,128,w,high
+sr-B1-0146,length,n.,/leNT/,长；长度,senior,1,B1,必修第一册,vocabulary,128,4,high
+sr-B1-0147,literature,n.,"/""lItr@tS@(r)/",文学；文学作品,senior,1,B1,必修第一册,vocabulary,128,1,high
+sr-B1-0148,lose heart,,,丧失信心；泄气,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0149,major,adj.,"/""meIdZ@(r)/",主要的；重要的；大的n主修课程；主修学生vi主修；专门研究,senior,1,B1,必修第一册,vocabulary,128,5,high
+sr-B1-0150,make a difference,,,有作用或影响,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0151,make it,,,获得成功；准时到达,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0152,make sense,,,有道理；合乎情理；表述清楚,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0153,make up,,,构成；形成,senior,1,B1,必修第一册,vocabulary,128,2,high
+sr-B1-0154,marathon,n.,"/""m{r@T@n/",马拉松赛跑,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0155,master,n.,"/""mA:st@(r)/",高手；主人vt精通；掌握,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0156,means,n.,/mi:nz/,方式；方法；途径,senior,1,B1,必修第一册,vocabulary,128,5,high
+sr-B1-0157,medal,n.,"/""medl/",奖章；勋章,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0158,metal,n.,"/""metl/",金属,senior,1,B1,必修第一册,vocabulary,128,4,high
+sr-B1-0159,million,num.,"/""mIlj@n/",一百万,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0160,movement,n.,"/""mu:vm@nt/",动作；运动；活动,senior,1,B1,必修第一册,vocabulary,128,1,high
+sr-B1-0161,nation,n.,"/""neISn/",国家；民族；国民,senior,1,B1,必修第一册,vocabulary,128,w,high
+sr-B1-0162,nationality,n.,"/%n{S@""n{l@ti/",国籍；民族,senior,1,B1,必修第一册,vocabulary,128,w,high
+sr-B1-0163,native,adj.,"/""neItIv/",出生地的；本地的；土著的n本地人,senior,1,B1,必修第一册,vocabulary,128,5,high
+sr-B1-0164,"no matter where, who, what, etc.",,,不论……；不管……,senior,1,B1,必修第一册,vocabulary,128,5,high
+sr-B1-0165,now and then,,,有时；偶尔,senior,1,B1,必修第一册,vocabulary,128,3,high
+sr-B1-0166,official,adj.,"/@""fISl/",官方的；正式的；公务的n官员；要员(2)121,senior,1,B1,必修第一册,vocabulary,128,,high
+sr-B1-0167,on hand,,,现有（尤指帮助）,senior,1,B1,必修第一册,vocabulary,129,4,high
+sr-B1-0168,organisation,n.,"/%O:g@naI""zeISn/",组织；团体；机构,senior,1,B1,必修第一册,vocabulary,129,w,high
+sr-B1-0169,other than,,,除……以外,senior,1,B1,必修第一册,vocabulary,129,2,high
+sr-B1-0170,outgoing,adj.,"/""aUtg@UIN/",爱交际的；外向的,senior,1,B1,必修第一册,vocabulary,129,w,high
+sr-B1-0171,package,n.,"/""p{kIdZ/",包裹；包装盒vt将……包装好,senior,1,B1,必修第一册,vocabulary,129,2,high
+sr-B1-0172,package tour,,,包价旅游,senior,1,B1,必修第一册,vocabulary,129,2,high
+sr-B1-0173,partner,n.,"/""pA:tn@(r)/",同伴；配偶；合伙人,senior,1,B1,必修第一册,vocabulary,129,w,high
+sr-B1-0174,path,n.,/pA:T/,小路；路线；道路,senior,1,B1,必修第一册,vocabulary,129,2,high
+sr-B1-0175,percent,n. adv.,"/p@""sent/",百分之……adj每一百中,senior,1,B1,必修第一册,vocabulary,129,4,high
+sr-B1-0176,personality,n.,"/%p3:s@""n{l@ti/",性格；个性,senior,1,B1,必修第一册,vocabulary,129,w,high
+sr-B1-0177,petrol,,"/""petr@l/",汽油,senior,1,B1,必修第一册,vocabulary,129,5,high
+sr-B1-0178,pipe,n.,/paIp/,管子；管道,senior,1,B1,必修第一册,vocabulary,129,4,high
+sr-B1-0179,plate,n.,/pleIt/,盘子；碟子,senior,1,B1,必修第一册,vocabulary,129,1,high
+sr-B1-0180,p.m.,,"/%pi:""em/",源自拉丁语）下午；午后,senior,1,B1,必修第一册,vocabulary,129,w,high
+sr-B1-0181,point of view,,,观点；看法,senior,1,B1,必修第一册,vocabulary,129,5,high
+sr-B1-0182,positive,adj.,"/""pQz@tIv/",积极的；正面的；乐观的；肯定的,senior,1,B1,必修第一册,vocabulary,129,3,high
+sr-B1-0183,power,n.,"/""paU@(r)/",电力供应；能量；力量；控制力,senior,1,B1,必修第一册,vocabulary,129,4,high
+sr-B1-0184,prefer,vt.,"/prI""f3:(r)/",较喜欢,senior,1,B1,必修第一册,vocabulary,129,1,high
+sr-B1-0185,prefer … to …,,,喜欢……多于……,senior,1,B1,必修第一册,vocabulary,129,1,high
+sr-B1-0186,pretend,vt.,"/prI""tend/",假装；装扮,senior,1,B1,必修第一册,vocabulary,129,3,high
+sr-B1-0187,pretend to do sth,,,假装做某事,senior,1,B1,必修第一册,vocabulary,129,3,high
+sr-B1-0188,rather than,,,而不是,senior,1,B1,必修第一册,vocabulary,129,3,high
+sr-B1-0189,recognise,vt.,"/""rek@gnaIz/",辨别出；承认；认可,senior,1,B1,必修第一册,vocabulary,129,2,high
+sr-B1-0190,recommend,vt.,"/%rek@""mend/",建议；推荐；介绍,senior,1,B1,必修第一册,vocabulary,129,1,high
+sr-B1-0191,refer,vi.,"/rI""f3:(r)/",提到；参考；查阅vt查询；叫……求助于,senior,1,B1,必修第一册,vocabulary,129,5,high
+sr-B1-0192,refer to,,,指的是；描述；提到；查阅,senior,1,B1,必修第一册,vocabulary,129,5,high
+sr-B1-0193,reference,n.,"/""refr@ns/",指称关系；参考,senior,1,B1,必修第一册,vocabulary,129,5,high
+sr-B1-0194,regard,n.,"/rI""gA:d/",尊重；关注vt把……视为；看待,senior,1,B1,必修第一册,vocabulary,129,5,high
+sr-B1-0195,register,vi.,"/""redZIst@(r)/",登记；注册,senior,1,B1,必修第一册,vocabulary,129,w,high
+sr-B1-0196,relate,vt.,"/rI""leIt/",联系；讲述,senior,1,B1,必修第一册,vocabulary,129,5,high
+sr-B1-0197,relate to,,,与……相关；涉及；谈到,senior,1,B1,必修第一册,vocabulary,129,5,high
+sr-B1-0198,rent,vt.,/rent/,租用；出租vi租用；租金为n租金,senior,1,B1,必修第一册,vocabulary,129,2,high
+sr-B1-0199,request,,"/rI""kwest/",正式或礼貌的）要求；请求vt正式或礼貌地）要求；请求,senior,1,B1,必修第一册,vocabulary,129,2,high
+sr-B1-0200,rescue,vt.,"/""reskju:/",营救；救援,senior,1,B1,必修第一册,vocabulary,129,4,high
+sr-B1-0201,responsible,adj.,"/rI""spQns@bl/",负责的；有责任的,senior,1,B1,必修第一册,vocabulary,129,1,high
+sr-B1-0202,responsibility,n.,"/rI%spQns@""bIl@ti/",责任；义务,senior,1,B1,必修第一册,vocabulary,129,1,high
+sr-B1-0203,be responsible for,,,对……负责,senior,1,B1,必修第一册,vocabulary,129,1,high
+sr-B1-0204,revise,vi.,"/rI""vaIz/",修改；修订；复习,senior,1,B1,必修第一册,vocabulary,129,w,high
+sr-B1-0205,ruin,vt.,"/""ru:In/",破坏；毁坏,senior,1,B1,必修第一册,vocabulary,129,4,high
+sr-B1-0206,in ruins,,,严重受损；破败不堪,senior,1,B1,必修第一册,vocabulary,129,4,high
+sr-B1-0207,senior,adj.,"/""si:nI@(r)/",级别（或地位）高的n较年长的人,senior,1,B1,必修第一册,vocabulary,129,w,high
+sr-B1-0208,senior high school,,,美国）高中,senior,1,B1,必修第一册,vocabulary,129,w,high
+sr-B1-0209,set an example,,,树立榜样,senior,1,B1,必修第一册,vocabulary,129,3,high
+sr-B1-0210,sex,n.,/seks/,性别,senior,1,B1,必修第一册,vocabulary,130,w,high
+sr-B1-0211,shelter,n.,"/""Selt@(r)/",避难处；居所；庇护supply供应（量）；补给；补给品vt供应；供给,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0212,survive,vi.,"/s@""vaIv/",生存；存活vt幸存；艰难度过,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0213,sweat,vt.,/swet/,使出汗；出汗弄湿vi出汗；流汗vt保护；掩蔽vi躲避（风雨或危险）,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0214,shock,n.,/SQk/,震惊；令人震惊的事；休克vt使）震惊,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0215,sweep,,/swi:p/,打扫；清扫,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0216,sweep away,,,消灭；彻底消除,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0217,symbol,n.,"/""sImbl/",符号；象征,senior,1,B1,必修第一册,vocabulary,130,5,high
+sr-B1-0218,system,n.,"/""sIst@m/",体系；制度；系统,senior,1,B1,必修第一册,vocabulary,130,5,high
+sr-B1-0219,in shock,,,震惊；吃惊,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0220,sight,n.,/saIt/,景象；视野；视力,senior,1,B1,必修第一册,vocabulary,130,2,high
+sr-B1-0221,sign up (for sth),,,报名（参加课程）,senior,1,B1,必修第一册,vocabulary,130,1,high
+sr-B1-0222,site,n.,/saIt/,地点；位置；现场,senior,1,B1,必修第一册,vocabulary,130,2,high
+sr-B1-0223,ski,adj.,/ski:/,滑雪的vi滑雪,senior,1,B1,必修第一册,vocabulary,130,3,high
+sr-B1-0224,slide,,/slaId/,使） 滑行；滑动,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0225,slim,adj.,/slIm/,苗条的；单薄的,senior,1,B1,必修第一册,vocabulary,130,3,high
+sr-B1-0226,soccer,n.,"/""sQk@(r)/",足球；足球运动,senior,1,B1,必修第一册,vocabulary,130,3,high
+sr-B1-0227,soldier,n.,"/""s@UldZ@(r)/",士兵；军人,senior,1,B1,必修第一册,vocabulary,130,2,high
+sr-B1-0228,solution,n.,"/s@""lu:Sn/",解决办法；答案,senior,1,B1,必修第一册,vocabulary,130,1,high
+sr-B1-0229,source,n.,/sO:s/,来源；出处,senior,1,B1,必修第一册,vocabulary,130,2,high
+sr-B1-0230,take notes,,,记笔记,senior,1,B1,必修第一册,vocabulary,130,w,high
+sr-B1-0231,teenager,,"/""ti:neIdZ@(r)/",至19 岁之间的）青少年,senior,1,B1,必修第一册,vocabulary,130,1,high
+sr-B1-0232,specific,adj.,"/sp@""sIfIk/",特定的；明确的；具体的,senior,1,B1,必修第一册,vocabulary,130,5,high
+sr-B1-0233,stadium,,"/""steIdi@m/",安第斯山脉,senior,1,B1,必修第一册,vocabulary,130,2,high
+sr-B1-0234,statue,n.,"/""st{tSu:/",雕塑；雕像,senior,1,B1,必修第一册,vocabulary,130,2,high
+sr-B1-0235,strategy,n.,"/""str{t@dZi/",策略；策划,senior,1,B1,必修第一册,vocabulary,130,w,high
+sr-B1-0236,strength,n.,/streNT/,力量；体力,senior,1,B1,必修第一册,vocabulary,130,3,high
+sr-B1-0237,stress,n.,/stres/,压力；紧张；重音印加帝国,senior,1,B1,必修第一册,vocabulary,130,2,high
+sr-B1-0238,title,,"/""taItl/",书、诗歌等的）名称；标题；职称；头衔,senior,1,B1,必修第一册,vocabulary,130,1,high
+sr-B1-0239,topic,n.,"/""tQpIk/",话题；标题,senior,1,B1,必修第一册,vocabulary,130,1,high
+sr-B1-0240,strike,,/straIk/,侵袭；突击；击打n罢工；罢课；袭击,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0241,track,n. vi.,/tr{k/,跑道；足迹；铁路轨道struggle斗争；奋斗；搏斗,senior,1,B1,必修第一册,vocabulary,130,5,high
+sr-B1-0242,style,n.,/staIl/,方式；作风,senior,1,B1,必修第一册,vocabulary,130,w,high
+sr-B1-0243,subway,,"/""sVbweI/",地铁,senior,1,B1,必修第一册,vocabulary,130,5,high
+sr-B1-0244,suffer,vt. vi.,"/""sVf@/",遭受；蒙受vt追踪；跟踪,senior,1,B1,必修第一册,vocabulary,130,3,high
+sr-B1-0245,track and field,,,田径,senior,1,B1,必修第一册,vocabulary,130,3,high
+sr-B1-0246,transport,adj.,"/""tr{nspO:t/",因疾病、痛苦、悲伤等）受苦(4)（NAmEusuallytransportation）交通运输系统suitable合适的；适用的,senior,1,B1,必修第一册,vocabulary,130,1,high
+sr-B1-0247,suitable for,vt.,"/tr{n""spO:t/",对……适合的(1)vt运输；运送,senior,1,B1,必修第一册,vocabulary,130,2,high
+sr-B1-0248,trap,vt.,/tr{p/,使落入险境；使陷入圈套n险境；陷阱,senior,1,B1,必修第一册,vocabulary,130,4,high
+sr-B1-0249,summary,n.,"/""sVm@ri/",总结；概括；概要(4)123,senior,1,B1,必修第一册,vocabulary,130,,high
+sr-B1-0250,type,n. vt.,/taIp/,类型；种类vi打字,senior,1,B1,必修第一册,vocabulary,131,2,high
+sr-B1-0251,typhoon,n.,"/taI""fu:n/",台风,senior,1,B1,必修第一册,vocabulary,131,4,high
+sr-B1-0252,unique,adj.,"/ju""ni:k/",唯一的；独特的；特有的,senior,1,B1,必修第一册,vocabulary,131,2,high
+sr-B1-0253,ups and downs,,,浮沉；兴衰；荣辱,senior,1,B1,必修第一册,vocabulary,131,5,high
+sr-B1-0254,view,n.,/vju:/,视野；景色；看法,senior,1,B1,必修第一册,vocabulary,131,2,high
+sr-B1-0255,volunteer,n.,"/%vQl@n""tI@(r)/",志愿者,senior,1,B1,必修第一册,vocabulary,131,1,high
+sr-B1-0256,wisdom,n.,"/""wIzd@m/",智慧；才智,senior,1,B1,必修第一册,vocabulary,131,4,high
+sr-B1-0257,what if,,,要是……会怎么样呢,senior,1,B1,必修第一册,vocabulary,131,w,high
+sr-B1-0258,work out,,,锻炼；计算出；解决,senior,1,B1,必修第一册,vocabulary,131,3,high

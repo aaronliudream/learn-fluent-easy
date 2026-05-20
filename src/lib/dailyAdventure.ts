@@ -1,4 +1,10 @@
 import { primaryReadingEntryPath } from "@/lib/primaryGrade";
+import {
+  buildStandardDailySteps,
+  isPrepGrade,
+  type PrimaryTrackSnapshot,
+} from "@/lib/primaryDailyPlan";
+import type { ContinuePick } from "@/hooks/useMasteryOverview";
 
 // Daily Adventure — Phase 2 of the Spark world realignment.
 //
@@ -33,8 +39,16 @@ export function buildDailyAdventure(opts: {
   nextLessonId?: string | null;
   /** 已掌握的 Sight Word 数(用于解锁单词游戏冷启动门控) */
   sightWordsMasteredCount?: number;
+  /** G3+ 教材同步轨道（与家长中心一致） */
+  track?: PrimaryTrackSnapshot | null;
+  continuePick?: ContinuePick | null;
 }): AdventureStep[] {
-  const { grade, nextLessonId, sightWordsMasteredCount = 0 } = opts;
+  const { grade, nextLessonId, sightWordsMasteredCount = 0, track, continuePick } = opts;
+
+  if (!isPrepGrade(grade) && track) {
+    return buildStandardDailySteps({ grade, track, continuePick });
+  }
+
   const gradeQ = grade === 2 ? "?grade=2" : "";
 
   const steps: AdventureStep[] = [];

@@ -8,6 +8,7 @@ import { useStreakStats } from "@/hooks/useStreakStats";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { MasteryBar, MasteryCounts } from "@/components/learning-center/MasteryBar";
 import { ItemListDrawer, type ItemState, type StageKey } from "@/components/learning-center/ItemListDrawer";
+import { enrichMasteryGpsData } from "@/lib/enrichMasteryGps";
 
 /**
  * GPS Dashboard · v8 (Completion v3)
@@ -98,10 +99,35 @@ export default function LearningCenter() {
       );
       if (cancelled) return;
 
-      setOverall(coerceOverall(ovR.data));
-      setStageProps(((spR.data ?? []) as any[]).map(coerceStageProp));
-      setModuleProps(((mpR.data ?? []) as any[]).map(coerceModuleProp));
-      setScopes(((scR.data ?? []) as any[]).map(coerceScope));
+      const rawScopes = ((scR.data ?? []) as any[]).map(coerceScope);
+      const enriched = await enrichMasteryGpsData(uid, rawScopes);
+
+      setOverall(enriched.overall);
+      setStageProps(
+        enriched.stageProps.map((r) => ({
+          stage: r.stage,
+          master: r.master,
+          fluent: r.fluent,
+          weak: r.weak,
+          none: r.none,
+          total: r.total,
+          score_pct: r.score_pct,
+          proportion_pct: r.proportion_pct,
+        })),
+      );
+      setModuleProps(
+        enriched.moduleProps.map((r) => ({
+          module: r.module,
+          master: r.master,
+          fluent: r.fluent,
+          weak: r.weak,
+          none: r.none,
+          total: r.total,
+          score_pct: r.score_pct,
+          proportion_pct: r.proportion_pct,
+        })),
+      );
+      setScopes(enriched.scopes);
       setSnaps(((snR.data ?? []) as any[]).map((r) => ({ snap_date: r.snap_date, score_pct: Number(r.score_pct) || 0 })));
       setLoading(false);
     })();

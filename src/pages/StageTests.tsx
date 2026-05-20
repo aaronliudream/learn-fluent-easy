@@ -4,11 +4,12 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Lock, Trophy, Clock, CheckCircle2, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { stageTestPlayPath } from "@/lib/stageTestNav";
 
 type Test = {
   id: string;scope: string;unit_index: number | null;title: string;description: string | null;
   required_lessons: number;total_questions: number;pass_threshold: number;
-  base_coins: number;base_exp: number;
+  base_coins: number;base_exp: number;module?: string | null;question_source?: string | null;
   completed_lessons: number;unlocked: boolean;
   pass_count: number;attempt_count: number;
   cooldown_until: string | null;best_score: number;
@@ -127,7 +128,14 @@ export default function StageTests() {
                       </div> :
 
                   <button
-                    onClick={() => nav(`/stage-test/${segment}/${grade}/${t.id}`)}
+                    onClick={() =>
+                      nav(
+                        stageTestPlayPath(segment, Number(grade), t.id, {
+                          module: t.module,
+                          question_source: t.question_source,
+                        }),
+                      )
+                    }
                     className={`w-full rounded-xl bg-gradient-to-r ${scope.color} py-2.5 text-sm font-extrabold text-white shadow-tile transition hover:-translate-y-0.5`}>
                     
                         {t.pass_count > 0 ? "再次挑战 →" : "开始测试 →"}

@@ -25,6 +25,21 @@ import {
   PRIMARY_LAST_GRADE_KEY,
   writePrimaryGradeToStorage,
 } from "@/lib/primaryGrade";
+import {
+  PEP_VOLUMES,
+  PRIMARY_ONBOARDED_KEY,
+  defaultVolumeForGrade,
+  fetchPrimaryTrackSnapshot,
+  formatPrimaryTrackLabel,
+  isPrepGrade,
+  readPepVolumeFromStorage,
+  writePepVolumeToStorage,
+  type PepVolume,
+  stepKindLabel,
+  type PrimaryTrackSnapshot,
+} from "@/lib/primaryDailyPlan";
+import { PEP_VOLUME_GRADE } from "@/lib/primaryPepVocab";
+import { buildDailyAdventure, loadAdventureProgress } from "@/lib/dailyAdventure";
 
 type Grade = {
   id: number;name_cn: string;name_en: string;
@@ -120,6 +135,8 @@ export default function Primary() {
   const [streak, setStreak] = useState<number>(0);
   const [recommendedGrade, setRecommendedGrade] = useState<number | null>(null);
   const [switchOpen, setSwitchOpen] = useState(false);
+  const [volumeOpen, setVolumeOpen] = useState(false);
+  const [track, setTrack] = useState<PrimaryTrackSnapshot | null>(null);
   const [sparkEmojis, setSparkEmojis] = useState<SparkEmojis>(SPARK_FALLBACK);
   const [grade, setGrade] = useState<number | null>(() => {
     const saved = localStorage.getItem(PRIMARY_LAST_GRADE_KEY);
@@ -204,7 +221,43 @@ export default function Primary() {
     setGrade(id);
     writePrimaryGradeToStorage(id);
     setSwitchOpen(false);
+    if (id >= 3) {
+      try {
+        if (!localStorage.getItem(PRIMARY_ONBOARDED_KEY)) setVolumeOpen(true);
+      } catch {
+        setVolumeOpen(true);
+      }
+    }
   }
+
+  function confirmVolume(vol: PepVolume) {
+    writePepVolumeToStorage(vol);
+    const syncGrade = PEP_VOLUME_GRADE[vol];
+    setGrade(syncGrade);
+    writePrimaryGradeToStorage(syncGrade);
+    try {
+      localStorage.setItem(PRIMARY_ONBOARDED_KEY, "1");
+    } catch {
+      /* ignore */
+    }
+    setVolumeOpen(false);
+    if (uid) fetchPrimaryTrackSnapshot(uid, syncGrade).then(setTrack);
+  }
+
+  useEffect(() => {
+    if (grade == null || isPrepGrade(grade)) {
+      setTrack(null);
+      return;
+    }
+    let cancelled = false;
+    (async () => {
+      const snap = await fetchPrimaryTrackSnapshot(uid, grade);
+      if (!cancelled) setTrack(snap);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [grade, uid]);
 
   function goAdventure() {
     if (grade == null) return;
@@ -221,6 +274,16 @@ export default function Primary() {
     isWeekend: visitContext.isWeekend
   });
   const currentGradeName = grades.find((g) => g.id === grade)?.name_cn ?? "";
+  const adventureSteps =
+    grade != null && !isPrepGrade(grade) && track
+      ? buildDailyAdventure({ grade, track })
+      : [];
+  const adventureProgress = loadAdventureProgress();
+  const nextAdventureStep = adventureSteps.find((s) => !adventureProgress[s.kind]);
+  const ctaSubline =
+    grade != null && track && !isPrepGrade(grade)
+      ? `${formatPrimaryTrackLabel(track)} · 今日第 ${nextAdventureStep ? stepKindLabel(nextAdventureStep.kind) : "复习"}`
+      : currentGradeName;
 
   // Visualize bond as 10 hearts so kids read it instantly.
   const bondNow = Math.max(0, Math.min(100, pet?.bond ?? 0));
@@ -326,7 +389,7 @@ export default function Primary() {
             </button>
             <div className="mt-4 flex justify-center">
               <span className="inline-flex items-center rounded-full bg-rose-100/80 px-3 py-1 text-xs font-semibold text-rose-600 dark:bg-rose-900/40 dark:text-rose-300">
-                <T>当前 ·</T> <T>{currentGradeName}</T>
+                {grade != null && !isPrepGrade(grade) && track ? ctaSubline : <><T>当前 ·</T> <T>{currentGradeName}</T></>}
               </span>
             </div>
             <div className="mt-2 flex justify-center">
@@ -438,6 +501,36 @@ export default function Primary() {
           </div>
           <p className="mt-1 text-center text-[11px] text-muted-foreground">
             <T>下次进来会回到</T>{recommendedGrade ? "你的推荐等级" : "你上次选的等级"}。
+          </p>
+        </DialogContent>
+      </Dialog>
+
+      {/* G3+ 首次定轨：选 PEP 册别，与家长中心词汇册一致 */}
+      <Dialog open={volumeOpen} onOpenChange={setVolumeOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center"><T>课本学到哪了？</T></DialogTitle>
+            <DialogDescription className="text-center">
+              <T>选你正在学的人教 PEP 册别，Spark 会从这里带你听故事、认单词。</T>
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-3 grid grid-cols-4 gap-2">
+            {PEP_VOLUMES.map((vol) => (
+              <button
+                key={vol}
+                onClick={() => confirmVolume(vol)}
+                className={`rounded-xl border-2 px-2 py-3 text-sm font-extrabold transition hover:-translate-y-0.5 ${
+                  readPepVolumeFromStorage(grade ?? 3) === vol
+                    ? "border-rose-400 bg-rose-50 text-rose-700"
+                    : "border-border bg-card"
+                }`}
+              >
+                {vol}
+              </button>
+            ))}
+          </div>
+          <p className="mt-3 text-center text-[11px] text-muted-foreground">
+            <T>默认推荐</T> {defaultVolumeForGrade(grade ?? 3)} · <T>随时可在学习地图修改</T>
           </p>
         </DialogContent>
       </Dialog>

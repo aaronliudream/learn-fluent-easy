@@ -1,0 +1,278 @@
+word_id,word,pos,phonetic,meaning_cn,stage,year_band,volume,volume_label,source_type,source_page,source_ref,confidence
+sr-B3-0001,attach,vt.,"/@""t{tS/",系；绑；贴,senior,3,B3,必修第三册,vocabulary,116,4,high
+sr-B3-0002,autonomous,adj.,"/O:""tQn@m@s/",自治的；有自治权的,senior,3,B3,必修第三册,vocabulary,116,1,high
+sr-B3-0003,(at) first hand,,,第一手；亲自,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0004,a great deal (of),,,大量,senior,3,B3,必修第三册,vocabulary,116,2,high
+sr-B3-0005,absolutely,adv.,"/""{bs@lu:tli/",绝对地；完全地,senior,3,B3,必修第三册,vocabulary,116,1,high
+sr-B3-0006,accident,n.,"/""{ksId@nt/",事故；车祸；失事,senior,3,B3,必修第三册,vocabulary,116,2,high
+sr-B3-0007,by accident,,,偶然地；意外地,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0008,admit,vt.,"/@d""mIt/",承认B广东银行,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0009,bar,n.,/bA:(r)/,酒吧；小吃店；小馆子,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0010,basis,n.,"/""beIsIs/",基础；根据；基点,senior,3,B3,必修第三册,vocabulary,116,5,high
+sr-B3-0011,on the basis of,,,在某事的基础上；根据某事,senior,3,B3,必修第三册,vocabulary,116,5,high
+sr-B3-0012,be about to do sth,,,即将或正要（做某事）,senior,3,B3,必修第三册,vocabulary,116,5,high
+sr-B3-0013,belief,n.,"/bI""li:f/",信仰；信心；信任,senior,3,B3,必修第三册,vocabulary,116,1,high
+sr-B3-0014,beneath,prep.,"/bI""ni:T/",在（或往）……下面；在……的表面之下,senior,3,B3,必修第三册,vocabulary,116,5,high
+sr-B3-0015,bet,n.,/bet/,打赌；赌注vt准许进入（或加入）,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0016,after all,,,毕竟；别忘了,senior,3,B3,必修第三册,vocabulary,116,1,high
+sr-B3-0017,afterwards,adv.,"/""A:ft@w@dz/",以后；后来,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0018,agency,,"/""eIdZ@nsi/",政府的）专门机构；服务机构；代理处,senior,3,B3,必修第三册,vocabulary,116,4,high
+sr-B3-0019,agriculture,n.,"/""{grIkVltS@(r)/",农业；农艺,senior,3,B3,必修第三册,vocabulary,116,1,high
+sr-B3-0020,make a bet,,,打个赌,senior,3,B3,必修第三册,vocabulary,116,5,high
+sr-B3-0021,beyond,prep.,"/bI""jQnd/",在更远处；超出,senior,3,B3,必修第三册,vocabulary,116,4,high
+sr-B3-0022,bite,,/baIt/,咬；叮；蜇n咬；（咬下的）一口；咬伤,senior,3,B3,必修第三册,vocabulary,116,2,high
+sr-B3-0023,boot,n.,/bu:t/,靴子,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0024,branch,n.,/brA:ntS/,树枝；分支；支流,senior,3,B3,必修第三册,vocabulary,116,1,high
+sr-B3-0025,brief,adj.,/bri:f/,简洁的；简单的；短暂的,senior,3,B3,必修第三册,vocabulary,116,1,high
+sr-B3-0026,bring about,,,导致；引起,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0027,broad,adj.,/brO:d/,宽阔的；广阔的；广泛的(5)（对事物的）分析；分析结果,senior,3,B3,必修第三册,vocabulary,116,4,high
+sr-B3-0028,apart from,,,除了……外（还）；此外,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0029,apologise,vi.,"/@""pQl@dZaIz/",道歉；谢罪,senior,3,B3,必修第三册,vocabulary,116,5,high
+sr-B3-0030,argue,vi.,"/""A:gju:/",论证；争辩；争论,senior,3,B3,必修第三册,vocabulary,116,4,high
+sr-B3-0031,as a matter of fact,,,事实上；其实；说真的,senior,3,B3,必修第三册,vocabulary,116,5,high
+sr-B3-0032,as a result,,,所以；结果（是）,senior,3,B3,必修第三册,vocabulary,116,4,high
+sr-B3-0033,aside,adv.,"/@""saId/",到旁边；在旁边；留；存,senior,3,B3,必修第三册,vocabulary,116,5,high
+sr-B3-0034,astronaut,n.,"/""{str@nO:t/",宇航员；太空人,senior,3,B3,必修第三册,vocabulary,116,4,high
+sr-B3-0035,atlantic,adj.,"/@t""l{ntIk/",大西洋的,senior,3,B3,必修第三册,vocabulary,116,3,high
+sr-B3-0036,carry on,,,继续做，坚持干,senior,3,B3,必修第三册,vocabulary,117,4,high
+sr-B3-0037,carry sb through sth,,,帮助某人渡过难关,senior,3,B3,必修第三册,vocabulary,117,2,high
+sr-B3-0038,chain,n.,/tSeIn/,一连串（人或事）；链子；链条,senior,3,B3,必修第三册,vocabulary,117,2,high
+sr-B3-0039,chairman,n.,"/""tSe@m@n/",主席；主持人；董事长,senior,3,B3,必修第三册,vocabulary,117,2,high
+sr-B3-0040,cheese,n.,/tSi:z/,干酪；奶酪,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0041,china,n.,"/""tSaIn@/",瓷；瓷器,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0042,christmas carol,,"/""k{r@l/",圣诞颂歌,senior,3,B3,必修第三册,vocabulary,117,1,high
+sr-B3-0043,church,,/tS3:tS/,基督教的）教堂；礼拜堂,senior,3,B3,必修第三册,vocabulary,117,1,high
+sr-B3-0044,claim,,/kleIm/,夺取（生命）；宣称；断言,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0045,clap,vt.,/kl{p/,鼓掌；拍手；击掌n鼓掌；拍手；掌声,senior,3,B3,必修第三册,vocabulary,117,1,high
+sr-B3-0046,clerk,n.,/klA:k;NAmEkl3:rk/,职员；文书；店员,senior,3,B3,必修第三册,vocabulary,117,5,high
+sr-B3-0047,climate,n.,"/""klaIm@t/",气候,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0048,clinic,n.,"/""klInIk/",诊所；门诊部,senior,3,B3,必修第三册,vocabulary,117,2,high
+sr-B3-0049,in closing,,,最后,senior,3,B3,必修第三册,vocabulary,117,4,high
+sr-B3-0050,collection,n.,"/k@""lekSn/",作品集；收集物；收藏品,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0051,comic,n.,"/""kQmIk/",连环画杂志；漫画杂志；喜剧演员adj滑稽的；使人发笑的,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0052,commercial,adj.,"/k@""m3:Sl/",商业（化）的；以获利为目的的,senior,3,B3,必修第三册,vocabulary,117,1,high
+sr-B3-0053,complain,vt.,"/k@m""pleIn/",抱怨；发牢骚,senior,3,B3,必修第三册,vocabulary,117,2,high
+sr-B3-0054,congratulation,n.,"/k@n%gr{tSu""leISn/",祝贺；恭喜,senior,3,B3,必修第三册,vocabulary,117,1,high
+sr-B3-0055,construction,n.,"/k@n""strVkSn/",建筑；建造；建造物；（句子、短语等的）结构,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0056,contain,vt.,"/k@n""teIn/",包含；含有；容纳(3)110costume某地或某历史时期的）服装；戏装,senior,3,B3,必修第三册,vocabulary,117,1,high
+sr-B3-0057,court,,/kO:t/,网球等的）球场；法院；法庭,senior,3,B3,必修第三册,vocabulary,117,2,high
+sr-B3-0058,crop,n.,/krQp/,庄稼；作物；一季的收成,senior,3,B3,必修第三册,vocabulary,117,1,high
+sr-B3-0059,current,adj.,"/""kVr@nt/",当前的；现在的n水流；电流；思潮,senior,3,B3,必修第三册,vocabulary,117,4,high
+sr-B3-0060,data,,"/""deIt@/",资料；数据,senior,3,B3,必修第三册,vocabulary,117,4,high
+sr-B3-0061,decade,n.,"/""dekeId/",十年；十年期,senior,3,B3,必修第三册,vocabulary,117,2,high
+sr-B3-0062,decorate,vt.,"/""dek@reIt/",装饰；装潢,senior,3,B3,必修第三册,vocabulary,117,1,high
+sr-B3-0063,definitely,adv.,"/""defIn@tli/",肯定；确实,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0064,desire,n.,"/dI""zaI@(r)/",渴望；欲望vt渴望；期望,senior,3,B3,必修第三册,vocabulary,117,4,high
+sr-B3-0065,in despair,,,处于绝望中,senior,3,B3,必修第三册,vocabulary,117,2,high
+sr-B3-0066,determine,vt.,"/dI""t3:mIn/",查明；确定；决定,senior,3,B3,必修第三册,vocabulary,117,4,high
+sr-B3-0067,diagram,n.,"/""daI@gr{m/",简图；图解；图表；示意图,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0068,dinosaur,n.,"/""daIn@sO:(r)/",恐龙,senior,3,B3,必修第三册,vocabulary,117,5,high
+sr-B3-0069,disappointed,adj.,"/%dIs@""pOIntId/",失望的；沮丧的,senior,3,B3,必修第三册,vocabulary,117,4,high
+sr-B3-0070,district,n.,"/""dIstrIkt/",地区；区域,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0071,diverse,adj.,"/daI""v3:s/",不同的；多种多样的,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0072,downstairs,adv.,"/%daUn""ste@z/",顺楼梯而下；在楼下；往楼下,senior,3,B3,必修第三册,vocabulary,117,5,high
+sr-B3-0073,downtown,adv.,"/%daUn""taUn/",在市中心；往市中心,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0074,dress (sb) up,,,穿上盛装；装扮,senior,3,B3,必修第三册,vocabulary,117,1,high
+sr-B3-0075,duty,n.,"/""dju:ti;NAmE""du:ti/",责任；义务；职责；值班,senior,3,B3,必修第三册,vocabulary,117,5,high
+sr-B3-0076,on duty,,,值班；值勤,senior,3,B3,必修第三册,vocabulary,117,5,high
+sr-B3-0077,earn,vi.,/3:n/,挣得；赚得；赢得；博得,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0078,earn a living,,,谋生,senior,3,B3,必修第三册,vocabulary,117,3,high
+sr-B3-0079,election,n.,"/I""lekSn/",选举；推选；当选,senior,3,B3,必修第三册,vocabulary,118,2,high
+sr-B3-0080,element,n.,"/""elIm@nt/",要素；基本部分,senior,3,B3,必修第三册,vocabulary,118,5,high
+sr-B3-0081,elsewhere,adv.,"/%els""we@(r)/",在别处；去别处,senior,3,B3,必修第三册,vocabulary,118,2,high
+sr-B3-0082,energetic,adj.,"/%en@""dZetIk/",精力充沛的；充满活力的,senior,3,B3,必修第三册,vocabulary,118,2,high
+sr-B3-0083,envelope,n.,"/""env@l@Up/",信封；塑料封套,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0084,escape,vt.,"/I""skeIp/",逃走；逃脱；避开n逃跑；逃脱；解脱,senior,3,B3,必修第三册,vocabulary,118,3,high
+sr-B3-0085,eve,n.,/i:v/,前夕；前一天,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0086,eventually,adv.,"/I""ventSu@li/",最后；终于,senior,3,B3,必修第三册,vocabulary,118,5,high
+sr-B3-0087,except for,,,除……之外,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0088,export,n. vt.,"/""ekspO:t/",出口；出口商品出口；输出；传播,senior,3,B3,必修第三册,vocabulary,118,2,high
+sr-B3-0089,extent,n.,"/Ik""stent/",程度；限度；大小；范围,senior,3,B3,必修第三册,vocabulary,118,5,high
+sr-B3-0090,to … extent,,,到……程度；在……程度上,senior,3,B3,必修第三册,vocabulary,118,5,high
+sr-B3-0091,external,adj.,"/Ik""st3:nl/",外部的；外面的；外界的；外来的,senior,3,B3,必修第三册,vocabulary,118,5,high
+sr-B3-0092,facility,n.,"/f@""sIl@ti/",设施；设备,senior,3,B3,必修第三册,vocabulary,118,4,high
+sr-B3-0093,fade away,,,逐渐消失；（身体）变得虚弱,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0094,faith,n.,/feIT/,宗教信仰；信任；相信,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0095,fancy,adj.,"/""f{nsi/",花哨的；精致的；昂贵的vt想要；倾慕；自认为是,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0096,feature,n.,"/""fi:tS@(r)/",特色；特征；特点vt以……为特色,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0097,fee,n.,/fi:/,专业服务费；报酬,senior,3,B3,必修第三册,vocabulary,118,2,high
+sr-B3-0098,figure,vt.,"/""fIg@(r)/",认为；认定n数字；人物；身材,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0099,figure out,,,弄懂；弄清楚；弄明白,senior,3,B3,必修第三册,vocabulary,118,4,high
+sr-B3-0100,financial,adj.,"/faI""n{nSl/",财政的；财务的；金融的,senior,3,B3,必修第三册,vocabulary,118,3,high
+sr-B3-0101,first aid,,,急救,senior,3,B3,必修第三册,vocabulary,118,2,high
+sr-B3-0102,flexible,adj.,"/""fleks@bl/",灵活的；可变通的,senior,3,B3,必修第三册,vocabulary,118,2,high
+sr-B3-0103,fold,vt.,/f@Uld/,包；裹；折叠vt可）折小；（可）叠平,senior,3,B3,必修第三册,vocabulary,118,3,high
+sr-B3-0104,fortune cookie,,,幸运曲奇,senior,3,B3,必修第三册,vocabulary,118,3,high
+sr-B3-0105,frank,adj.,/fr{Nk/,坦率的；直率的,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0106,to be frank,,,坦白说；坦率地说,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0107,frontier,n.,"/""frVntI@(r)/",边境；国界；边远地区,senior,3,B3,必修第三册,vocabulary,118,4,high
+sr-B3-0108,globe,n.,/gl@Ub/,地球；世界；地球仪,senior,3,B3,必修第三册,vocabulary,118,4,high
+sr-B3-0109,go off,,,爆炸；走火；离开,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0110,grateful,adj.,"/""greItfl/",感激的；表示感谢的,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0111,gravity,n.,"/""gr{v@ti/",重力；引力,senior,3,B3,必修第三册,vocabulary,118,4,high
+sr-B3-0112,harm,vt.,/hA:m/,伤害；损害,senior,3,B3,必修第三册,vocabulary,118,2,high
+sr-B3-0113,harvest,n. vt.,"/""hA:vIst/",收获季节；收获；收成vi收割（庄稼）；捕猎（动物、鱼）,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0114,have sth in common,,,兴趣、想法等方面）相同；有相同的特征,senior,3,B3,必修第三册,vocabulary,118,1,high
+sr-B3-0115,head to,,,朝……）前进；（向……）去,senior,3,B3,必修第三册,vocabulary,118,3,high
+sr-B3-0116,hesitate,vi.,"/""hezIteIt/",犹豫；迟疑；顾虑,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0117,hire,vt.,/haI@(r)/,聘任；雇用；租用n租借；租用,senior,3,B3,必修第三册,vocabulary,119,2,high
+sr-B3-0118,horrible,adj.,"/""hQr@bl/",令人震惊的；恐怖的；极坏的,senior,3,B3,必修第三册,vocabulary,119,1,high
+sr-B3-0119,hug,vi.,/hVg/,拥抱；抱紧,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0120,illustrate,,"/""Il@streIt/",举例）说明；阐明；给（书或文章）加插图,senior,3,B3,必修第三册,vocabulary,119,2,high
+sr-B3-0121,import,n. vt.,"/""ImpO:t/",进口；进口商品进口；输入；引进,senior,3,B3,必修第三册,vocabulary,119,2,high
+sr-B3-0122,in case,,,以防；以防万一,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0123,in return,,,作为回报；作为回应,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0124,in spite,,/spaIt/,不管；尽管,senior,3,B3,必修第三册,vocabulary,119,1,high
+sr-B3-0125,in that case,,,既然那样；假使那样的话,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0126,in the hope of doing sth,,,抱着……的希望,senior,3,B3,必修第三册,vocabulary,119,4,high
+sr-B3-0127,income,n.,"/""InkVm/",收入；收益,senior,3,B3,必修第三册,vocabulary,119,2,high
+sr-B3-0128,indeed,adv.,"/In""di:d/",其实；实际上；当然；确实,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0129,independent,adj.,"/%IndI""pend@nt/",独立的；自立的,senior,3,B3,必修第三册,vocabulary,119,4,high
+sr-B3-0130,indicate,vi.,"/""IndIkeIt/",表明；显示vt象征；暗示,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0131,inner,adj.,"/""In@(r)/",内部的；里面的；内心的,senior,3,B3,必修第三册,vocabulary,119,1,high
+sr-B3-0132,insurance,n.,"/In""SU@r@ns/",保险；保险业,senior,3,B3,必修第三册,vocabulary,119,2,high
+sr-B3-0133,intelligent,adj.,"/In""telIdZ@nt/",有智慧的；聪明的；有智力的,senior,3,B3,必修第三册,vocabulary,119,4,high
+sr-B3-0134,intention,n.,"/In""tenSn/",打算；计划；意图；目的,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0135,item,n.,"/""aIt@m/",项目；一件商品（或物品）；一条（新闻）,senior,3,B3,必修第三册,vocabulary,119,3,high
+sr-B3-0136,jazz,n.,/dZ{z/,爵士乐(1)112jeans牛仔裤,senior,3,B3,必修第三册,vocabulary,119,3,high
+sr-B3-0137,journal,n.,"/""dZ3:nl/",日志；日记；报纸；刊物,senior,3,B3,必修第三册,vocabulary,119,3,high
+sr-B3-0138,joy,n.,/dZOI/,高兴；喜悦,senior,3,B3,必修第三册,vocabulary,119,1,high
+sr-B3-0139,judge,vi.,/dZVdZ/,评价；评判；判断n法官；审判员；裁判员,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0140,kindergarten,n.,"/""kInd@gA:tn/",学前班；幼儿园,senior,3,B3,必修第三册,vocabulary,119,2,high
+sr-B3-0141,lack,n.,/l{k/,缺乏；短缺vt没有；缺乏,senior,3,B3,必修第三册,vocabulary,119,4,high
+sr-B3-0142,lantern,n.,"/""l{nt@n/",灯笼；提灯,senior,3,B3,必修第三册,vocabulary,119,1,high
+sr-B3-0143,lap,,/l{p/,坐着时的）大腿部；（跑道等的）一圈,senior,3,B3,必修第三册,vocabulary,119,2,high
+sr-B3-0144,launch,n.,/lO:ntS/,发射；发起；上市,senior,3,B3,必修第三册,vocabulary,119,4,high
+sr-B3-0145,limited,adj.,"/""lImItId/",有限的,senior,3,B3,必修第三册,vocabulary,119,4,high
+sr-B3-0146,loan,n.,/l@Un/,贷款；借款,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0147,take out a loan,,,取得贷款,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0148,lunar,adj.,"/""lu:n@(r)/",阴历的；月球的；月亮的,senior,3,B3,必修第三册,vocabulary,119,1,high
+sr-B3-0149,majority,n.,"/m@""dZQr@ti/",大部分；大多数,senior,3,B3,必修第三册,vocabulary,119,2,high
+sr-B3-0150,mankind,n.,"/%m{n""kaInd/",人类,senior,3,B3,必修第三册,vocabulary,119,4,high
+sr-B3-0151,manner,n.,"/""m{n@(r)/",举止；行为方式；方法；礼貌；礼仪,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0152,in a … manner,,,以一种……的方式；带着一副……的样子,senior,3,B3,必修第三册,vocabulary,119,5,high
+sr-B3-0153,march,n.,/mA:tS/,行进；前进；示威游行,senior,3,B3,必修第三册,vocabulary,119,1,high
+sr-B3-0154,marriage,n.,"/""m{rIdZ/",结婚；婚姻,senior,3,B3,必修第三册,vocabulary,119,2,high
+sr-B3-0155,material,n.,"/m@""tI@ri@l/",材料；布料；素材adj物质的；实际的,senior,3,B3,必修第三册,vocabulary,120,3,high
+sr-B3-0156,medium,,"/""mi:di@m/",媒介；手段；方法adj中等的；中号的,senior,3,B3,必修第三册,vocabulary,120,1,high
+sr-B3-0157,the media,,,大众传播媒介,senior,3,B3,必修第三册,vocabulary,120,1,high
+sr-B3-0158,memory,n.,"/""mem@ri/",记忆力；回忆,senior,3,B3,必修第三册,vocabulary,120,2,high
+sr-B3-0159,in memory of,,,作为对……的纪念,senior,3,B3,必修第三册,vocabulary,120,2,high
+sr-B3-0160,mental,adj.,"/""mentl/",精神的；思想的,senior,3,B3,必修第三册,vocabulary,120,4,high
+sr-B3-0161,merry,adj.,"/""meri/",愉快的；高兴的,senior,3,B3,必修第三册,vocabulary,120,1,high
+sr-B3-0162,merry christmas!,,,圣诞快乐,senior,3,B3,必修第三册,vocabulary,120,1,high
+sr-B3-0163,midnight,n.,"/""mIdnaIt/",子夜；午夜,senior,3,B3,必修第三册,vocabulary,120,2,high
+sr-B3-0164,mild,adj.,/maIld/,温和的；和善的；轻微的,senior,3,B3,必修第三册,vocabulary,120,3,high
+sr-B3-0165,minority,n.,"/maI""nQr@ti/",少数民族；少数派；少数人,senior,3,B3,必修第三册,vocabulary,120,3,high
+sr-B3-0166,mission,n.,"/""mISn/",传教,senior,3,B3,必修第三册,vocabulary,120,3,high
+sr-B3-0167,moment,n.,"/""m@Um@nt/",片刻；瞬间,senior,3,B3,必修第三册,vocabulary,120,1,high
+sr-B3-0168,monitor,n.,"/""mQnIt@(r)/",监视器；监测仪vt监视；监测；监控,senior,3,B3,必修第三册,vocabulary,120,4,high
+sr-B3-0169,moral,adj.,"/""mQr@l/",道德的；道义上的n品行；道德；寓意,senior,3,B3,必修第三册,vocabulary,120,2,high
+sr-B3-0170,moral dilemma,,,道德困境,senior,3,B3,必修第三册,vocabulary,120,2,high
+sr-B3-0171,muscle,n.,"/""mVsl/",肌肉；实力；影响力,senior,3,B3,必修第三册,vocabulary,120,4,high
+sr-B3-0172,mushroom,n.,"/""mVSrUm/",蘑菇；蕈,senior,3,B3,必修第三册,vocabulary,120,3,high
+sr-B3-0173,neat,adj.,/ni:t/,极好的；整洁的；整齐的,senior,3,B3,必修第三册,vocabulary,120,3,high
+sr-B3-0174,normal,adj.,"/""nO:ml/",典型的；正常的；一般的；精神正常的n常态；通常标准；一般水平,senior,3,B3,必修第三册,vocabulary,120,5,high
+sr-B3-0175,nowhere,adv.,"/""n@Uwe@(r)/",无处；哪里都不,senior,3,B3,必修第三册,vocabulary,120,5,high
+sr-B3-0176,occasion,n.,"/@""keIZn/",特别的事情（或仪式、庆典）；（适当的）机会,senior,3,B3,必修第三册,vocabulary,120,1,high
+sr-B3-0177,occur,vi.,"/@""k3:(r)/",发生；出现,senior,3,B3,必修第三册,vocabulary,120,3,high
+sr-B3-0178,odd,adj.,/Qd/,奇怪的；怪异的；反常的,senior,3,B3,必修第三册,vocabulary,120,5,high
+sr-B3-0179,on board,,,在宇宙飞船上；在船上；在飞机上,senior,3,B3,必修第三册,vocabulary,120,4,high
+sr-B3-0180,opera,n.,"/""Qpr@/",歌剧,senior,3,B3,必修第三册,vocabulary,120,5,high
+sr-B3-0181,operation,n.,"/%Qp@""reISn/",手术；企业；经营,senior,3,B3,必修第三册,vocabulary,120,2,high
+sr-B3-0182,option,n.,"/""QpSn/",可选择的事物；选择；选择权,senior,3,B3,必修第三册,vocabulary,120,5,high
+sr-B3-0183,orbit,vi.,"/""O:bIt/",环绕地球、太阳等运行的）轨道；势力范围vt沿轨道运行；环绕……运行,senior,3,B3,必修第三册,vocabulary,120,4,high
+sr-B3-0184,origin,n.,"/""QrIdZIn/",起源；起因；出身,senior,3,B3,必修第三册,vocabulary,120,1,high
+sr-B3-0185,otherwise,adv.,"/""VD@waIz/",否则；要不然,senior,3,B3,必修第三册,vocabulary,120,4,high
+sr-B3-0186,ought,,/O:t/,应该；应当,senior,3,B3,必修第三册,vocabulary,120,5,high
+sr-B3-0187,oxygen,n.,"/""QksIdZ@n/",氧；氧气,senior,3,B3,必修第三册,vocabulary,120,4,high
+sr-B3-0188,passive,adj.,"/""p{sIv/",被动的；顺从的,senior,3,B3,必修第三册,vocabulary,120,2,high
+sr-B3-0189,patience,n.,"/""peISns/",耐心；忍耐力；毅力,senior,3,B3,必修第三册,vocabulary,120,5,high
+sr-B3-0190,pattern,n.,"/""p{tn/",模式；图案；模范,senior,3,B3,必修第三册,vocabulary,120,4,high
+sr-B3-0191,per,prep.,/p@(r); p3(r):/,每；每一,senior,3,B3,必修第三册,vocabulary,120,2,high
+sr-B3-0192,percentage,n.,"/p@""sentIdZ/",百分率；百分比,senior,3,B3,必修第三册,vocabulary,120,3,high
+sr-B3-0193,permit,vt. vi.,"/p@""mIt/",允许；准许vt允许；使有可能,senior,3,B3,必修第三册,vocabulary,120,5,high
+sr-B3-0194,physician,n.,"/fI""zISn/",医师；（尤指）内科医生,senior,3,B3,必修第三册,vocabulary,120,2,high
+sr-B3-0195,resident physician,,,住院医师(2)113,senior,3,B3,必修第三册,vocabulary,120,,high
+sr-B3-0196,plastic,n.,"/""pl{stIk/",塑料adj塑料制的；塑料的,senior,3,B3,必修第三册,vocabulary,121,5,high
+sr-B3-0197,plot,n.,/plQt/,故事情节；布局；阴谋,senior,3,B3,必修第三册,vocabulary,121,5,high
+sr-B3-0198,poetry,n.,"/""p@U@tri/",诗集；诗歌；诗作,senior,3,B3,必修第三册,vocabulary,121,3,high
+sr-B3-0199,poison,n.,"/""pOIzn/",毒物；毒药；毒素vt毒死；毒害,senior,3,B3,必修第三册,vocabulary,121,3,high
+sr-B3-0200,pole,,/p@Ul/,行星的）极；地极,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0201,postpone,vt.,"/p@""sp@Un/",延迟；延期；延缓,senior,3,B3,必修第三册,vocabulary,121,5,high
+sr-B3-0202,pot,n.,/pQt/,罐；壶；锅,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0203,precious,adj.,"/""preS@s/",珍稀的；宝贵的,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0204,principle,n.,"/""prIns@pl/",道德原则；法则；原则,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0205,procedure,n.,"/pr@""si:dZ@(r)/",程序；步骤；手续,senior,3,B3,必修第三册,vocabulary,121,4,high
+sr-B3-0206,provide for sb,,,提供生活所需,senior,3,B3,必修第三册,vocabulary,121,4,high
+sr-B3-0207,publish,vt.,"/""pVblIS/",发表（作品）；出版,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0208,pudding,n.,"/""pUdIN/",布丁；（餐末的）甜食,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0209,pursue,vt.,"/p@""sju:/",追求；致力于,senior,3,B3,必修第三册,vocabulary,121,5,high
+sr-B3-0210,range from ... to ...,,,包括从……到……之间,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0211,recycle,vt.,"/%ri:""saIkl/",回收利用；再利用,senior,3,B3,必修第三册,vocabulary,121,4,high
+sr-B3-0212,reflect,vt.,"/rI""flekt/",显示；反映；反射,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0213,region,n.,"/""ri:dZ@n/",地区；区域；地方,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0214,regular,adj.,"/""regj@l@(r)/",定期的；经常的；正常的,senior,3,B3,必修第三册,vocabulary,121,4,high
+sr-B3-0215,reject,vt.,"/rI""dZekt/",拒绝接受；不录用,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0216,replace,vt.,"/rI""pleIs/",接替；取代；更换(2)114represent象征；代表；相当于,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0217,resource,n.,"/rI""sO:s/",资源；财力；物力,senior,3,B3,必修第三册,vocabulary,121,4,high
+sr-B3-0218,respect,vt.,"/rIs""pekt/",尊敬；尊重,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0219,respond,vt.,"/rI""spQnd/",回答；回复vi做出反应；回应,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0220,response,n.,"/rI""spQns/",反应；回答；回复,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0221,result in,,,导致；造成,senior,3,B3,必修第三册,vocabulary,121,4,high
+sr-B3-0222,retire,vt.,"/rI""taI@(r)/",退休；退职；退出,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0223,riddle,n.,"/""rIdl/",谜语；神秘事件,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0224,roast,adj. vt.,/r@Ust/,烤的；焙的vi烘烤；焙,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0225,roast turkey,,,烤火鸡肉,senior,3,B3,必修第三册,vocabulary,121,1,high
+sr-B3-0226,rocket,n.,"/""rQkIt/",火箭；火箭弹,senior,3,B3,必修第三册,vocabulary,121,4,high
+sr-B3-0227,run out,,,用完；耗尽,senior,3,B3,必修第三册,vocabulary,121,4,high
+sr-B3-0228,satellite,n.,"/""s{t@laIt/",人造卫星；卫星,senior,3,B3,必修第三册,vocabulary,121,4,high
+sr-B3-0229,saving,n.,"/""seIvIN/",节省物；节省；节约；储蓄金；存款,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0230,saying,n.,"/""seIIN/",谚语；格言；警句,senior,3,B3,必修第三册,vocabulary,121,5,high
+sr-B3-0231,scare,vt.,/ske@(r)/,惊吓；使害怕vi受惊吓,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0232,scene,,/si:n/,戏剧或歌剧的）场；现场；场面,senior,3,B3,必修第三册,vocabulary,121,5,high
+sr-B3-0233,scholarship,n.,"/""skQl@SIp/",奖学金,senior,3,B3,必修第三册,vocabulary,121,2,high
+sr-B3-0234,seek,,/si:k/,寻找；寻求,senior,3,B3,必修第三册,vocabulary,121,3,high
+sr-B3-0235,seek one’s fortune,,,寻找成功致富之路；闯世界,senior,3,B3,必修第三册,vocabulary,121,3,high
+sr-B3-0236,select,vt.,"/sI""lekt/",选择；挑选；选拔,senior,3,B3,必修第三册,vocabulary,121,3,high
+sr-B3-0237,series,n.,"/""sI@ri:z/",一系列；连续；接连,senior,3,B3,必修第三册,vocabulary,122,3,high
+sr-B3-0238,servant,n.,"/""s3:v@nt/",仆人；用人,senior,3,B3,必修第三册,vocabulary,122,5,high
+sr-B3-0239,set off,,,出发；动身；启程,senior,3,B3,必修第三册,vocabulary,122,1,high
+sr-B3-0240,settle,vt.,"/""setl/",解决（分歧）；确定；安排好vi和解；定居,senior,3,B3,必修第三册,vocabulary,122,3,high
+sr-B3-0241,shallow,adj.,"/""S{l@U/",肤浅的；浅的,senior,3,B3,必修第三册,vocabulary,122,4,high
+sr-B3-0242,sharp,,/SA:p/,增长、下跌等）急剧的；锋利的；明显的,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0243,signal,vi.,"/""sIgn@l/",标志着；标明；发信号n信号；标志,senior,3,B3,必修第三册,vocabulary,122,4,high
+sr-B3-0244,significant,adj.,"/sIg""nIfIk@nt/",有重大意义的；显著的,senior,3,B3,必修第三册,vocabulary,122,1,high
+sr-B3-0245,so as to (do sth),,,为了；以便,senior,3,B3,必修第三册,vocabulary,122,4,high
+sr-B3-0246,solar,adj.,"/""s@Ul@(r)/",太阳的；太阳能的,senior,3,B3,必修第三册,vocabulary,122,4,high
+sr-B3-0247,solar system,,,太阳系；类太阳系,senior,3,B3,必修第三册,vocabulary,122,4,high
+sr-B3-0248,sort,n.,/sO:t/,种类；类别；品种,senior,3,B3,必修第三册,vocabulary,122,5,high
+sr-B3-0249,spot,vt.,/spQt/,看见；注意到；发现n地点；处所；斑点；污迹,senior,3,B3,必修第三册,vocabulary,122,5,high
+sr-B3-0250,staff,n.,/stA:f/,员工；全体职员,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0251,stair,n.,/ste@(r)/,楼梯；梯级,senior,3,B3,必修第三册,vocabulary,122,5,high
+sr-B3-0252,sufficient,adj.,"/s@""fISnt/",足够的；充足的,senior,3,B3,必修第三册,vocabulary,122,4,high
+sr-B3-0253,suit,n.,/su:t;BrEalsosju:t/,西服；套装vt适合；满足……需要；相配；合身,senior,3,B3,必修第三册,vocabulary,122,3,high
+sr-B3-0254,super,adj.,"/""su:p@(r);BrEalso""sju:p@(r)/",顶好的；超级的,senior,3,B3,必修第三册,vocabulary,122,3,high
+sr-B3-0255,tailor,,"/""teIl@(r)/",男装）裁缝vt专门制作；定做,senior,3,B3,必修第三册,vocabulary,122,5,high
+sr-B3-0256,take advantage of,,,利用；欺骗；占……的便宜,senior,3,B3,必修第三册,vocabulary,122,1,high
+sr-B3-0257,tear,n.,/tI@(r)/,眼泪；泪水,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0258,in tears,,,流着泪；含着泪,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0259,tend,vt.,/tend/,照顾；照料vi倾向；趋于,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0260,tend to do sth,,,易于做某事；往往会发生某事,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0261,tension,n.,"/""tenSn/",紧张关系；紧张；焦虑,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0262,therefore,adv.,"/""De@fO:(r)/",因此；所以,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0263,tissue,n.,"/""tISu:；""tIsju:/",纸巾；（人、动植物细胞的）组织,senior,3,B3,必修第三册,vocabulary,122,4,high
+sr-B3-0264,to be honest,,,说实话；坦率地说,senior,3,B3,必修第三册,vocabulary,122,5,high
+sr-B3-0265,to name but a few,,,仅举几例,senior,3,B3,必修第三册,vocabulary,122,3,high
+sr-B3-0266,towel,n.,"/""taU@l/",毛巾；抹布,senior,3,B3,必修第三册,vocabulary,122,4,high
+sr-B3-0267,trip over,,,被……绊倒,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0268,tuition fees,,,学费,senior,3,B3,必修第三册,vocabulary,122,2,high
+sr-B3-0269,turkey,n.,"/""t3:ki/",火鸡；火鸡肉,senior,3,B3,必修第三册,vocabulary,122,1,high
+sr-B3-0270,typical,adj.,"/""tIpIkl/",典型的；有代表性的；平常的,senior,3,B3,必修第三册,vocabulary,122,1,high
+sr-B3-0271,universe,n.,"/""ju:nIv3:s/",宇宙；天地万物(4)115,senior,3,B3,必修第三册,vocabulary,122,,high
+sr-B3-0272,upper,adj.,"/""Vp@(r)/",上面的；上层的；靠上部的,senior,3,B3,必修第三册,vocabulary,123,5,high
+sr-B3-0273,the upper class,,,上流社会；上等阶层,senior,3,B3,必修第三册,vocabulary,123,5,high
+sr-B3-0274,virtue,n.,"/""v3:tSu:/",高尚的道德；美德；优秀品质,senior,3,B3,必修第三册,vocabulary,123,2,high
+sr-B3-0275,wedding,n. vt.,"/""wedIN/",婚礼；结婚庆典(1)116whisper悄声说；耳语；低语n耳语（声）；低语（声）；传言；谣传,senior,3,B3,必修第三册,vocabulary,123,2,high
+sr-B3-0276,be willing to do sth,,,愿意或乐意做某事,senior,3,B3,必修第三册,vocabulary,123,5,high
+sr-B3-0277,wrestle,vt.,"/""resl/",摔跤；奋力对付,senior,3,B3,必修第三册,vocabulary,123,1,high

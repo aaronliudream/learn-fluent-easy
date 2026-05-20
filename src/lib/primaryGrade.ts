@@ -1,11 +1,14 @@
 /** Shared grade selection for Primary (G1–G6). Written by Primary.tsx pickGrade / adventure URL. */
 export const PRIMARY_LAST_GRADE_KEY = "primary:lastGrade";
 
+/** Default G3 — 人教 PEP 三年级起点 */
+export const PRIMARY_DEFAULT_GRADE = 3;
+
 export function readPrimaryGradeFromStorage(): number {
-  if (typeof window === "undefined") return 1;
+  if (typeof window === "undefined") return PRIMARY_DEFAULT_GRADE;
   const raw = window.localStorage.getItem(PRIMARY_LAST_GRADE_KEY);
   const n = raw ? Number(raw) : NaN;
-  return Number.isFinite(n) && n >= 1 && n <= 6 ? n : 1;
+  return Number.isFinite(n) && n >= 1 && n <= 6 ? n : PRIMARY_DEFAULT_GRADE;
 }
 
 export function writePrimaryGradeToStorage(grade: number): void {

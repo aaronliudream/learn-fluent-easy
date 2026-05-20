@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { recordUnifiedAttempt } from "@/lib/unifiedMastery";
+import { stageTestPlayPath } from "@/lib/stageTestNav";
 
 type Q = {id: string;word: string;meaning_cn: string;options: string[];isNew: boolean;};
 
@@ -72,12 +73,20 @@ export default function StageTestPlay() {
       // load test meta
       const { data: t } = await supabase.
       from("stage_tests").
-      select("title,total_questions,pass_threshold").
+      select("title,total_questions,pass_threshold,module,question_source").
       eq("id", testId).
       maybeSingle();
       if (!t) {
         toast.error("测试不存在");
         nav(-1);
+        return;
+      }
+      const aiPath = stageTestPlayPath(segment as string, Number(grade), testId, {
+        module: (t as { module?: string }).module,
+        question_source: (t as { question_source?: string }).question_source,
+      });
+      if (aiPath.includes("/junior/stage-assessment/")) {
+        nav(aiPath, { replace: true });
         return;
       }
       setMeta({ title: t.title, total: t.total_questions, threshold: t.pass_threshold });

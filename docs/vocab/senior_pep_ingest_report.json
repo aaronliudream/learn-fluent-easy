@@ -1,0 +1,10 @@
+{
+  "total": 652,
+  "by_book": {
+    "B1": 199,
+    "B2": 217,
+    "B3": 236
+  },
+  "skipped_primary_junior": 145,
+  "skipped_cross_book": 0
+}

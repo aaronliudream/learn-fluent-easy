@@ -34,6 +34,11 @@ BOOK_PDFS: dict[str, str] = {
     "B1": "普通高中教科书·英语必修 第一册.pdf",
     "B2": "普通高中教科书·英语必修 第二册.pdf",
     "B3": "普通高中教科书·英语必修 第三册.pdf",
+    # Elective / selective-compulsory — add PDF filenames here when available:
+    # "X1": "普通高中教科书·英语选择性必修 第一册.pdf",
+    # "X2": "普通高中教科书·英语选择性必修 第二册.pdf",
+    # "X3": "普通高中教科书·英语选择性必修 第三册.pdf",
+    # "X4": "普通高中教科书·英语选择性必修 第四册.pdf",
 }
 BOOK_YEAR_BAND: dict[str, int] = {"B1": 1, "B2": 2, "B3": 3}
 BOOK_LABEL: dict[str, str] = {

@@ -19,7 +19,7 @@ import {
   isAutoGraded,
   questionNum,
   formatTimer,
-  READING_PASSAGE_BLOCKS,
+  getReadingBlocks,
   readingBlockQuestions,
   questionsInUnit,
   isUnitComplete,
@@ -166,7 +166,7 @@ export default function SuzhouExamPlay() {
     if (mode !== "practice") return null;
     const done = isUnitComplete(unitQs, answers);
     const started = unitQs.some((q) => !!answers[q.id]?.trim());
-    const label = unitQs[0] ? unitLabelForQuestion(unitQs[0]) : "";
+    const label = unitQs[0] ? unitLabelForQuestion(exam, unitQs[0]) : "";
     if (done) {
       return (
         <p className="rounded-lg border border-emerald-200 bg-emerald-50/80 px-3 py-2 text-center text-xs text-emerald-800">
@@ -385,20 +385,22 @@ export default function SuzhouExamPlay() {
 
   const renderReadingSection = (questions: ExamQuestion[]) => (
     <div className="space-y-8">
-      {READING_PASSAGE_BLOCKS.map((block) => {
+      {getReadingBlocks(exam).map((block) => {
         const blockQs = readingBlockQuestions(questions, block.from, block.to);
+        if (!blockQs.length) return null;
+        const passageKey = block.passageKey ?? `reading_${block.label}`;
         return (
           <div key={block.label} className="space-y-5">
             <ExamCard>
               <div className="exam-eyebrow mb-2">
                 <T>Passage {block.label}</T>
-                {"title" in block && block.title ? ` · ${block.title}` : ""}
+                {block.title ? ` · ${block.title}` : ""}
               </div>
-              {"kind" in block && block.kind === "poster" ? (
+              {block.kind === "poster" ? (
                 <MusicFestivalPoster data={(exam.resources?.poster_A ?? {}) as Record<string, unknown>} />
               ) : (
-                "passageKey" in block && exam.passages[block.passageKey] && (
-                  <div className="exam-passage whitespace-pre-wrap">{exam.passages[block.passageKey]}</div>
+                exam.passages[passageKey] && (
+                  <div className="exam-passage whitespace-pre-wrap">{exam.passages[passageKey]}</div>
                 )
               )}
             </ExamCard>

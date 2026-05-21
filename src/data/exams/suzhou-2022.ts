@@ -1,63 +1,11 @@
 /**
  * 2022 苏州市初中学业水平考试英语试卷
  * Source: 苏州教育考试院
- *
- * 数据结构与项目 junior_reading.questions JSON 字段兼容，但因试卷题型多样，
- * 这里使用更丰富的 schema：
- *
- *   sections: 大题数组，每个大题含若干 question
- *   每题包含：id, type, stem, options?, answer, explanation, knowledge_point
  */
 
-export type ExamSection =
-  | "cloze"          // 完形填空
-  | "reading"        // 阅读理解
-  | "restore"        // 信息还原
-  | "vocab_fill"     // 词汇运用 第一节
-  | "vocab_bank"     // 词汇运用 第二节
-  | "passage_fill"   // 短文填空
-  | "response"       // 阅读表达
-  | "writing";       // 书面表达
+import type { ExamPaper } from "./types";
 
-export type QuestionType =
-  | "multiple_choice"   // 四选一（ABCD）
-  | "letter_choice"     // 七选五（A~G）
-  | "fill_blank"        // 单空格填词
-  | "short_answer"      // 简答题
-  | "essay";            // 作文
-
-export interface ExamQuestion {
-  /** q1, q2, ..., q57 */
-  id: string;
-  type: QuestionType;
-  section: ExamSection;
-  /** 题干文本（cloze 题为空字符串） */
-  stem: string;
-  /** ABCD 或 A~G 的选项；fill_blank/short_answer/essay 不需要 */
-  options?: Record<string, string>;
-  /** 正确答案：字母/单词/参考答案文本 */
-  answer: string;
-  /** 中文为主、英文术语保留的解析，含考点分析、错误选项辨析 */
-  explanation: string;
-  /** 知识点标签：用于 AI 上下文 + 收藏分类 */
-  knowledge_point: string;
-}
-
-export interface ExamPaper {
-  id: string;
-  title: string;
-  province: string;
-  city: string;
-  year: number;
-  total_score: number;
-  duration_seconds: number;
-  /** 原卷阅读材料（passage_id -> text），完形/阅读/信息还原/短文填空 共用 */
-  passages: Record<string, string>;
-  /** 海报、词库等富文本资源 */
-  resources?: Record<string, unknown>;
-  /** 试题主数组，按题号顺序 */
-  questions: ExamQuestion[];
-}
+export type { ExamPaper, ExamQuestion, ExamSection, QuestionType, ReadingBlock } from "./types";
 
 /** ============ 2022 苏州中考英语 完整数据 ============ */
 export const SUZHOU_2022: ExamPaper = {
@@ -68,6 +16,13 @@ export const SUZHOU_2022: ExamPaper = {
   year: 2022,
   total_score: 100,
   duration_seconds: 6000, // 100 分钟（不含听力口语 30 分）
+
+  reading_blocks: [
+    { label: "A", from: 11, to: 13, kind: "poster", title: "Music Festival" },
+    { label: "B", from: 14, to: 17, kind: "passage", passageKey: "reading_B" },
+    { label: "C", from: 18, to: 21, kind: "passage", passageKey: "reading_C" },
+    { label: "D", from: 22, to: 25, kind: "passage", passageKey: "reading_D" },
+  ],
 
   passages: {
     cloze: `Like most children growing up in the countryside, Mike loved being outdoors and traveled around every inch of the area.

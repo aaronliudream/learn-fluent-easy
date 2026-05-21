@@ -1,4 +1,4 @@
-import type { ExamPaper, ExamQuestion, ExamSection } from "@/data/exams";
+import type { ExamPaper, ExamQuestion, ExamSection, ReadingBlock } from "@/data/exams";
 
 export type ExamMode = "exam" | "practice" | "review";
 
@@ -6,6 +6,12 @@ export const SECTION_META: Record<
   ExamSection,
   { title: string; instruction: string; scoreLabel: string; pointsPerQuestion: number }
 > = {
+  grammar: {
+    title: "第一部分 · 单项填空",
+    instruction: "请认真阅读下面各题，从题中所给的 A、B、C、D 四个选项中，选出最佳选项。",
+    scoreLabel: "共 10 小题 · 每小题 1 分 · 满分 10 分",
+    pointsPerQuestion: 1,
+  },
   cloze: {
     title: "第一部分 · 完形填空",
     instruction: "请认真阅读下面短文，从短文后各题所给的 A、B、C、D 四个选项中，选出最佳选项。",
@@ -54,6 +60,12 @@ export const SECTION_META: Record<
     scoreLabel: "共 1 题 · 满分 25 分",
     pointsPerQuestion: 25,
   },
+  translation: {
+    title: "第六部分 · 句子翻译",
+    instruction: "将下列句子译成英语。",
+    scoreLabel: "共 5 小题 · 每小题 3 分 · 满分 15 分",
+    pointsPerQuestion: 3,
+  },
 };
 
 const RESPONSE_POINTS: Record<string, number> = { q54: 2, q55: 2, q56: 3 };
@@ -83,7 +95,8 @@ export function checkCorrect(q: ExamQuestion, userAnswer: string | undefined): b
 
 export function groupQuestionsBySection(exam: ExamPaper): { section: ExamSection; questions: ExamQuestion[] }[] {
   const order: ExamSection[] = [
-    "cloze", "reading", "restore", "vocab_fill", "vocab_bank", "passage_fill", "response", "writing",
+    "grammar", "cloze", "reading", "restore", "vocab_fill", "vocab_bank",
+    "passage_fill", "translation", "response", "writing",
   ];
   return order
     .map((section) => ({
@@ -125,13 +138,20 @@ export function questionNum(id: string): number {
   return parseInt(id.replace("q", ""), 10);
 }
 
-/** 阅读理解按篇章分组：材料 + 对应题号 */
-export const READING_PASSAGE_BLOCKS = [
-  { label: "A", title: "Music Festival", kind: "poster" as const, from: 11, to: 13 },
-  { label: "B", passageKey: "reading_B" as const, from: 14, to: 17 },
-  { label: "C", passageKey: "reading_C" as const, from: 18, to: 21 },
-  { label: "D", passageKey: "reading_D" as const, from: 22, to: 25 },
+/** 阅读理解按篇章分组：材料 + 对应题号（2022 默认） */
+export const DEFAULT_READING_BLOCKS: ReadingBlock[] = [
+  { label: "A", from: 11, to: 13, kind: "poster", title: "Music Festival" },
+  { label: "B", from: 14, to: 17, kind: "passage", passageKey: "reading_B" },
+  { label: "C", from: 18, to: 21, kind: "passage", passageKey: "reading_C" },
+  { label: "D", from: 22, to: 25, kind: "passage", passageKey: "reading_D" },
 ];
+
+/** @deprecated use getReadingBlocks(exam) */
+export const READING_PASSAGE_BLOCKS = DEFAULT_READING_BLOCKS;
+
+export function getReadingBlocks(exam: ExamPaper): ReadingBlock[] {
+  return exam.reading_blocks?.length ? exam.reading_blocks : DEFAULT_READING_BLOCKS;
+}
 
 export function readingBlockQuestions(questions: ExamQuestion[], from: number, to: number): ExamQuestion[] {
   return questions.filter((q) => {
@@ -144,7 +164,7 @@ export function readingBlockQuestions(questions: ExamQuestion[], from: number, t
 export function questionsInUnit(exam: ExamPaper, q: ExamQuestion): ExamQuestion[] {
   if (q.section === "reading") {
     const n = questionNum(q.id);
-    const block = READING_PASSAGE_BLOCKS.find((b) => n >= b.from && n <= b.to);
+    const block = getReadingBlocks(exam).find((b) => n >= b.from && n <= b.to);
     if (!block) return [q];
     return exam.questions.filter(
       (qq) => qq.section === "reading" && questionNum(qq.id) >= block.from && questionNum(qq.id) <= block.to,
@@ -158,10 +178,10 @@ export function isUnitComplete(unitQuestions: ExamQuestion[], answers: Record<st
   return unitQuestions.every((q) => !!answers[q.id]?.trim());
 }
 
-export function unitLabelForQuestion(q: ExamQuestion): string {
+export function unitLabelForQuestion(exam: ExamPaper, q: ExamQuestion): string {
   if (q.section === "reading") {
     const n = questionNum(q.id);
-    const block = READING_PASSAGE_BLOCKS.find((b) => n >= b.from && n <= b.to);
+    const block = getReadingBlocks(exam).find((b) => n >= b.from && n <= b.to);
     return block ? `Passage ${block.label}` : "阅读理解";
   }
   return SECTION_META[q.section].title.split("·")[0]?.trim() ?? q.section;

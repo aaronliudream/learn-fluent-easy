@@ -2,7 +2,8 @@ import { T } from "@/i18n/T";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Navigate, useParams, useSearchParams } from "react-router-dom";
-import { ArrowLeft, CheckCircle2, Clock, LayoutGrid, MessageCircle, RotateCcw, Sparkles, XCircle } from "lucide-react";
+import { ArrowLeft, CheckCircle2, ChevronDown, ChevronRight, Clock, LayoutGrid, MessageCircle, RotateCcw, Sparkles, XCircle } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
@@ -68,6 +69,103 @@ function buildBlankMap(questions: ExamQuestion[]): Record<number, string> {
   return map;
 }
 
+/** Persist expand/collapse state per question across page refreshes. */
+const EXPLANATION_OPEN_KEY = "suzhou-exam-explanation-open";
+
+function getOpenState(qid: string): boolean {
+  try {
+    const raw = localStorage.getItem(EXPLANATION_OPEN_KEY);
+    if (!raw) return false;
+    const map = JSON.parse(raw) as Record<string, boolean>;
+    return !!map[qid];
+  } catch {
+    return false;
+  }
+}
+
+function setOpenState(qid: string, open: boolean) {
+  try {
+    const raw = localStorage.getItem(EXPLANATION_OPEN_KEY);
+    const map = (raw ? JSON.parse(raw) : {}) as Record<string, boolean>;
+    if (open) map[qid] = true;
+    else delete map[qid];
+    localStorage.setItem(EXPLANATION_OPEN_KEY, JSON.stringify(map));
+  } catch {
+    /* ignore */
+  }
+}
+
+/**
+ * Collapsible explanation card.
+ * Collapsed by default; click "展开详细讲解" to reveal the full Markdown explanation.
+ * Open/closed state is persisted per question id across page refreshes.
+ */
+function CollapsibleExplanation({
+  q,
+  userAnswer,
+}: {
+  q: ExamQuestion;
+  userAnswer: string;
+}) {
+  const ok = checkCorrect(q, userAnswer);
+  const [open, setOpen] = useState<boolean>(() => getOpenState(q.id));
+
+  const toggle = () => {
+    const next = !open;
+    setOpen(next);
+    setOpenState(q.id, next);
+  };
+
+  const hasDetailedExplanation =
+    !!q.explanation && q.explanation.trim().length > 0;
+
+  return (
+    <div className="exam-explanation rounded-xl bg-amber-50 dark:bg-amber-950/30 p-4 border-l-4 border-amber-400">
+      <div className="flex flex-wrap items-center gap-2 text-sm font-bold">
+        {ok ? (
+          <CheckCircle2 className="size-4 text-emerald-500" />
+        ) : (
+          <XCircle className="size-4 text-rose-500" />
+        )}
+        <span>
+          <T>正确答案：</T>
+          {q.answer}
+        </span>
+        <span className="text-xs text-muted-foreground font-normal">
+          <T>你的答案：</T>
+          {userAnswer || "未作答"}
+        </span>
+      </div>
+      {hasDetailedExplanation && (
+        <>
+          <button
+            type="button"
+            onClick={toggle}
+            className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-amber-700 dark:text-amber-300 hover:text-amber-800 dark:hover:text-amber-200"
+            aria-expanded={open}>
+            {open ? (
+              <>
+                <ChevronDown className="size-4" />
+                <T>收起讲解</T>
+              </>
+            ) : (
+              <>
+                <ChevronRight className="size-4" />
+                <T>展开详细讲解</T>
+              </>
+            )}
+          </button>
+          {open && (
+            <div className="mt-3 prose prose-sm dark:prose-invert max-w-none exam-soft">
+              <ReactMarkdown>{q.explanation}</ReactMarkdown>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+}
+
 function InlineExplanation({
   q,
   userAnswer,
@@ -83,10 +181,10 @@ function InlineExplanation({
   exam: ExamPaper;
   onAskAi: (q: ExamQuestion) => void;
 }) {
-  const ok = checkCorrect(q, userAnswer);
   return (
     <ExamCard>
       <div data-qid={q.id}>
+        {/* Header row: question number + skill tag + actions */}
         <div className="mb-2 flex flex-wrap items-center gap-2">
           <span className="exam-q-num">No. {String(questionNum(q.id)).padStart(2, "0")}</span>
           <span className="exam-skill-tag">{q.knowledge_point}</span>
@@ -101,15 +199,17 @@ function InlineExplanation({
             </button>
           </div>
         </div>
-        <div className="exam-explanation rounded-xl bg-amber-50 dark:bg-amber-950/30 p-4 border-l-4 border-amber-400">
-          <div className="flex flex-wrap items-center gap-2 text-sm font-bold">
-            {ok ? <CheckCircle2 className="size-4 text-emerald-500" /> : <XCircle className="size-4 text-rose-500" />}
-            <span><T>正确答案：</T>{q.answer}</span>
-            <span className="text-xs text-muted-foreground font-normal"><T>你的答案：</T>{userAnswer || "未作答"}</span>
+
+        {/* Two-column on desktop (left: practice booster, right: collapsible explanation).
+            Stacks vertically on mobile so the explanation is always reachable. */}
+        <div className="grid gap-4 md:grid-cols-[1fr_minmax(280px,360px)] items-start">
+          <div className="min-w-0">
+            <SuzhouPracticeBooster exam={exam} question={q} userAnswer={userAnswer} />
           </div>
-          <div className="mt-2 text-sm leading-relaxed whitespace-pre-line exam-soft">{q.explanation}</div>
+          <div className="min-w-0">
+            <CollapsibleExplanation q={q} userAnswer={userAnswer} />
+          </div>
         </div>
-        <SuzhouPracticeBooster exam={exam} question={q} userAnswer={userAnswer} />
       </div>
     </ExamCard>
   );
@@ -451,7 +551,7 @@ export default function SuzhouExamPlay() {
     const passage = exam.passages[sectionKey];
     if (!passage) return null;
 
-if (sectionKey === "cloze") {
+    if (sectionKey === "cloze") {
       const qMap = Object.fromEntries(questions.map((q) => [q.id, q]));
       const passageText = normalizePassageBlanks(passage);
       const blankMap = buildBlankMap(questions);

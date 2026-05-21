@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { listExamFavorites, removeExamFavorite, type ExamFavorite } from "@/lib/examFavorites";
 import { getExam, listExams } from "@/data/exams";
+import { isReviewUnlocked } from "@/lib/suzhouExamProgress";
 import { SECTION_META, questionNum } from "@/lib/suzhouExamUtils";
 
 export default function SuzhouFavorites() {
@@ -136,7 +137,11 @@ export default function SuzhouFavorites() {
                         </div>
                         <p className="text-sm leading-relaxed line-clamp-2">{labelFor(item)}</p>
                         <Link
-                          to={`/junior/suzhou/${item.exam_id}?mode=review&q=${item.question_id}`}
+                          to={
+                            isReviewUnlocked(item.exam_id)
+                              ? `/junior/suzhou/${item.exam_id}?mode=review&q=${item.question_id}`
+                              : `/junior/suzhou/${item.exam_id}?mode=practice&q=${item.question_id}`
+                          }
                           className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-primary">
                           <T>查看原题</T> <ArrowRight className="size-3" />
                         </Link>

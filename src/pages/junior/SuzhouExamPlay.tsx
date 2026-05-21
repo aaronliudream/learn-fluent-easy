@@ -33,6 +33,7 @@ import {
   isAssistantUnlocked,
   SUZHOU_TUTOR_STARTERS,
 } from "@/lib/suzhouExamAi";
+import { isReviewUnlocked, markSuzhouModeComplete } from "@/lib/suzhouExamProgress";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { ExamPaper as ExamPaperShell, ExamContainer, ExamCard, ExamProgress } from "@/components/exam/ExamPaper";
 import { DiagnosisTable } from "@/components/exam/DiagnosisExtras";
@@ -166,12 +167,18 @@ export default function SuzhouExamPlay() {
     if (mode !== "exam" || submitted || !exam) return;
     if (remainingSec <= 0) {
       setSubmitted(true);
+      markSuzhouModeComplete(exam.id, "exam");
       toast.warning("考试时间到，已自动提交");
       return;
     }
     const t = setInterval(() => setRemainingSec((s) => s - 1), 1000);
     return () => clearInterval(t);
   }, [mode, submitted, remainingSec, exam]);
+
+  useEffect(() => {
+    if (!exam || !mode || mode === "review" || !submitted) return;
+    markSuzhouModeComplete(exam.id, mode);
+  }, [exam, mode, submitted]);
 
   /** IntersectionObserver：threshold 0.5，追踪当前视窗内题目 */
   useEffect(() => {
@@ -219,6 +226,10 @@ export default function SuzhouExamPlay() {
   }
 
   if (!mode) {
+    return <Navigate to={`/junior/suzhou/${exam.id}/mode`} replace />;
+  }
+
+  if (mode === "review" && !isReviewUnlocked(exam.id)) {
     return <Navigate to={`/junior/suzhou/${exam.id}/mode`} replace />;
   }
 

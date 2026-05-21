@@ -1,8 +1,13 @@
 import { T } from "@/i18n/T";
 import { Link, useParams } from "react-router-dom";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, BookOpen, Clock, Eye, GraduationCap } from "lucide-react";
+import { ArrowLeft, BookOpen, CheckCircle2, Clock, Eye, GraduationCap, Lock } from "lucide-react";
 import { getExam } from "@/data/exams";
+import {
+  getSuzhouExamProgress,
+  isReviewUnlocked,
+  reviewLockedHint,
+} from "@/lib/suzhouExamProgress";
 
 const MODES = [
   {
@@ -31,6 +36,9 @@ const MODES = [
 export default function SuzhouExamModeSelect() {
   const { examId } = useParams<{ examId: string }>();
   const exam = examId ? getExam(examId) : undefined;
+  const progress = examId ? getSuzhouExamProgress(examId) : {};
+  const reviewUnlocked = examId ? isReviewUnlocked(examId) : false;
+  const reviewHint = examId ? reviewLockedHint(examId) : "";
 
   if (!exam) {
     return (
@@ -57,19 +65,53 @@ export default function SuzhouExamModeSelect() {
       <section className="grid gap-3">
         {MODES.map((m) => {
           const Icon = m.icon;
+          const locked = m.key === "review" && !reviewUnlocked;
+          const modeDone =
+            m.key === "exam"
+              ? Boolean(progress.exam?.completedAt)
+              : m.key === "practice"
+                ? Boolean(progress.practice?.completedAt)
+                : reviewUnlocked;
+
+          const inner = (
+            <>
+              <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
+              <div className="relative grid size-12 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
+                {locked ? <Lock className="size-6" /> : <Icon className="size-6" />}
+              </div>
+              <div className="relative flex-1 min-w-0">
+                <div className="flex flex-wrap items-center gap-2">
+                  <div className="text-base font-extrabold leading-tight"><T>{m.title}</T></div>
+                  {modeDone && !locked && (
+                    <span className="inline-flex items-center gap-0.5 rounded-full bg-white/25 px-2 py-0.5 text-[10px] font-bold">
+                      <CheckCircle2 className="size-3" /> <T>已完成</T>
+                    </span>
+                  )}
+                </div>
+                <div className="mt-0.5 text-xs opacity-90">
+                  {locked ? <T>{reviewHint}</T> : <T>{m.desc}</T>}
+                </div>
+              </div>
+            </>
+          );
+
+          if (locked) {
+            return (
+              <div
+                key={m.key}
+                aria-disabled
+                className={`relative flex cursor-not-allowed items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${m.gradient} p-4 text-white opacity-75 shadow-tile`}>
+                {inner}
+              </div>
+            );
+          }
+
           return (
             <Link
               key={m.key}
               to={`/junior/suzhou/${exam.id}?mode=${m.key}`}
               className={`relative flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${m.gradient} p-4 text-white shadow-tile transition hover:-translate-y-0.5`}>
-              <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
-              <div className="relative grid size-12 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
-                <Icon className="size-6" />
-              </div>
-              <div className="relative flex-1 min-w-0">
-                <div className="text-base font-extrabold leading-tight"><T>{m.title}</T></div>
-                <div className="mt-0.5 text-xs opacity-90"><T>{m.desc}</T></div>
-              </div>
+              {inner}
             </Link>
           );
         })}

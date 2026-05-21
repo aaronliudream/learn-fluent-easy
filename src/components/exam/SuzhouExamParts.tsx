@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { T } from "@/i18n/T";
 import { cn } from "@/lib/utils";
 
 /** 将 passage 中的 __N__ 占位符替换成 inline 控件 */

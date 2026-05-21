@@ -1,8 +1,8 @@
 import { T } from "@/i18n/T";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Navigate, useParams, useSearchParams } from "react-router-dom";
-import { ArrowLeft, CheckCircle2, Clock, LayoutGrid, RotateCcw, Sparkles, XCircle } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Clock, LayoutGrid, MessageCircle, RotateCcw, Sparkles, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
@@ -26,11 +26,21 @@ import {
   unitLabelForQuestion,
   shouldShowExplanation,
 } from "@/lib/suzhouExamUtils";
+import {
+  assistantLockedHint,
+  buildExamSnapshot,
+  buildQuestionSnapshot,
+  isAssistantUnlocked,
+  SUZHOU_TUTOR_STARTERS,
+} from "@/lib/suzhouExamAi";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { ExamPaper as ExamPaperShell, ExamContainer, ExamCard, ExamProgress } from "@/components/exam/ExamPaper";
 import { DiagnosisTable } from "@/components/exam/DiagnosisExtras";
 import QuestionRenderer from "@/components/exam/QuestionRenderer";
+import FavoriteButton from "@/components/exam/FavoriteButton";
+import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
+import TutorChat from "@/components/tutor/TutorChat";
 import { PassageWithBlanks, MusicFestivalPoster, AnswerSheet } from "@/components/exam/SuzhouExamParts";
-import { supabase } from "@/integrations/supabase/client";
 
 const VALID_MODES: ExamMode[] = ["exam", "practice", "review"];
 
@@ -42,14 +52,36 @@ function buildBlankMap(questions: ExamQuestion[]): Record<number, string> {
   return map;
 }
 
-function InlineExplanation({ q, userAnswer }: { q: ExamQuestion; userAnswer: string }) {
+function InlineExplanation({
+  q,
+  userAnswer,
+  examId,
+  examTitle,
+  onAskAi,
+}: {
+  q: ExamQuestion;
+  userAnswer: string;
+  examId: string;
+  examTitle: string;
+  onAskAi: (q: ExamQuestion) => void;
+}) {
   const ok = checkCorrect(q, userAnswer);
   return (
     <ExamCard>
       <div data-qid={q.id}>
-        <div className="mb-2 flex items-center gap-2">
+        <div className="mb-2 flex flex-wrap items-center gap-2">
           <span className="exam-q-num">No. {String(questionNum(q.id)).padStart(2, "0")}</span>
           <span className="exam-skill-tag">{q.knowledge_point}</span>
+          <div className="ml-auto flex items-center gap-1">
+            <FavoriteButton examId={examId} examTitle={examTitle} question={q} />
+            <button
+              type="button"
+              className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-indigo-600 hover:bg-indigo-50"
+              onClick={() => onAskAi(q)}>
+              <Sparkles className="size-3.5" />
+              <T>问 AI</T>
+            </button>
+          </div>
         </div>
         <div className="exam-explanation rounded-xl bg-amber-50 dark:bg-amber-950/30 p-4 border-l-4 border-amber-400">
           <div className="flex flex-wrap items-center gap-2 text-sm font-bold">
@@ -68,6 +100,7 @@ export default function SuzhouExamPlay() {
   const { examId } = useParams<{ examId: string }>();
   const [searchParams] = useSearchParams();
   const modeParam = searchParams.get("mode") as ExamMode | null;
+  const jumpQ = searchParams.get("q");
   const exam = examId ? getExam(examId) : undefined;
 
   const mode: ExamMode | null = modeParam && VALID_MODES.includes(modeParam) ? modeParam : null;
@@ -77,9 +110,35 @@ export default function SuzhouExamPlay() {
   const [remainingSec, setRemainingSec] = useState(exam?.duration_seconds ?? 6000);
   const [currentQid, setCurrentQid] = useState<string | null>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
-  const [aiGrading, setAiGrading] = useState<string | null>(null);
+  const [tutorFor, setTutorFor] = useState<ExamQuestion | null>(null);
+  const [showReviewChat, setShowReviewChat] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const assistantUnlocked = exam && mode
+    ? isAssistantUnlocked(exam, mode, submitted, answers)
+    : false;
+
+  const examSnapshot = useMemo(() => {
+    if (!exam || !mode || !assistantUnlocked) return undefined;
+    return buildExamSnapshot(exam, answers, mode, submitted);
+  }, [exam, mode, assistantUnlocked, answers, submitted]);
+
+  useRegisterAssistant(
+    exam && mode
+      ? {
+          context: "junior_suzhou_exam",
+          ref: `${exam.id}:${mode}`,
+          topic: `苏州中考真题 · ${exam.title} · ${MODE_LABELS[mode]}`,
+          mode: "full-test",
+          unlocked: assistantUnlocked,
+          lockedHint: assistantLockedHint(mode),
+          pageTitle: "💬 小月 · 苏州真题复盘",
+          starters: SUZHOU_TUTOR_STARTERS,
+          snapshot: examSnapshot,
+        }
+      : null,
+  );
 
   useEffect(() => {
     if (!exam || mode !== "review") return;
@@ -94,6 +153,14 @@ export default function SuzhouExamPlay() {
     setAnswers(prefilled);
     setSubmitted(true);
   }, [exam, mode]);
+
+  useEffect(() => {
+    if (!jumpQ || !exam) return;
+    const t = setTimeout(() => {
+      document.querySelector(`[data-qid="${jumpQ}"]`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 400);
+    return () => clearTimeout(t);
+  }, [jumpQ, exam?.id]);
 
   useEffect(() => {
     if (mode !== "exam" || submitted || !exam) return;
@@ -221,28 +288,16 @@ export default function SuzhouExamPlay() {
     setSheetOpen(false);
   };
 
-  const askAiGrade = async (q: ExamQuestion) => {
-    const userAns = answers[q.id] ?? "";
-    if (!userAns.trim()) {
-      toast.error("请先填写答案");
+  const openTutor = (q: ExamQuestion) => {
+    if (!showExplanationFor(q)) {
+      toast.error(mode === "exam" ? "请先提交试卷后再问 AI" : "请先完成本题所在题组");
       return;
     }
-    setAiGrading(q.id);
-    try {
-      const { data, error } = await supabase.functions.invoke("tutor-chat", {
-        body: {
-          messages: [{ role: "user", content: `请点评我的答案（${q.stem}）\n\n我的答案：${userAns}\n\n参考答案：${q.answer}` }],
-          context: "general",
-        },
-      });
-      if (error) throw error;
-      const reply = (data as { reply?: string })?.reply ?? "AI 暂时无法点评，请稍后再试";
-      toast.message("AI 点评", { description: reply.slice(0, 200) });
-    } catch {
-      toast.error("AI 点评请求失败");
-    } finally {
-      setAiGrading(null);
+    if (!answers[q.id]?.trim() && mode !== "review") {
+      toast.error("请先作答后再问 AI");
+      return;
     }
+    setTutorFor(q);
   };
 
   const sheetGroups = sections.map((g) => ({
@@ -358,8 +413,23 @@ export default function SuzhouExamPlay() {
 
   const renderQuestionCard = (q: ExamQuestion) => {
     const num = questionNum(q.id);
+    const canAsk = showExplanationFor(q);
     return (
       <ExamCard key={q.id}>
+        <div className="mb-2 flex flex-wrap items-center justify-end gap-1">
+          {canAsk && (
+            <>
+              <FavoriteButton examId={exam.id} examTitle={exam.title} question={q} />
+              <button
+                type="button"
+                className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-indigo-600 hover:bg-indigo-50"
+                onClick={() => openTutor(q)}>
+                <Sparkles className="size-3.5" />
+                <T>问 AI</T>
+              </button>
+            </>
+          )}
+        </div>
         <QuestionRenderer
           question={q}
           qNum={num}
@@ -367,18 +437,8 @@ export default function SuzhouExamPlay() {
           submitted={submitted}
           value={answers[q.id] ?? ""}
           onChange={(v) => setAnswer(q.id, v)}
-          showExplanation={showExplanationFor(q)}
+          showExplanation={canAsk}
         />
-        {!isAutoGraded(q) && showExplanationFor(q) && answers[q.id]?.trim() && (
-          <button
-            type="button"
-            disabled={aiGrading === q.id}
-            className="mt-3 exam-btn exam-btn-ghost h-9 text-sm"
-            onClick={() => askAiGrade(q)}>
-            <Sparkles className="size-4" />
-            {aiGrading === q.id ? <T>AI 点评中…</T> : <T>让 AI 点评我的答案</T>}
-          </button>
-        )}
       </ExamCard>
     );
   };
@@ -548,7 +608,16 @@ export default function SuzhouExamPlay() {
 
                           if (isInlineSection) {
                             if (!showExplanationFor(q)) return null;
-                            return <InlineExplanation key={q.id} q={q} userAnswer={answers[q.id] ?? ""} />;
+                            return (
+                              <InlineExplanation
+                                key={q.id}
+                                q={q}
+                                userAnswer={answers[q.id] ?? ""}
+                                examId={exam.id}
+                                examTitle={exam.title}
+                                onAskAi={openTutor}
+                              />
+                            );
                           }
 
                           return renderQuestionCard(q);
@@ -597,6 +666,46 @@ export default function SuzhouExamPlay() {
           </div>
         )}
       </ExamContainer>
+
+      {(submitted || mode === "review") && examSnapshot && (
+        <ExamContainer max="7xl" className="mt-8 pb-8">
+          {!showReviewChat ? (
+            <ExamCard className="text-center">
+              <MessageCircle className="mx-auto mb-2 size-8 text-indigo-500" />
+              <p className="mb-3 text-sm exam-soft"><T>想和小月复盘整张试卷？苏格拉底式讲解 + 同类小测</T></p>
+              <button
+                type="button"
+                className="exam-btn exam-btn-primary h-10 px-5"
+                onClick={() => setShowReviewChat(true)}>
+                <Sparkles className="size-4" />
+                <T>开始 AI 复盘对话</T>
+              </button>
+            </ExamCard>
+          ) : (
+            <InlineTutorChat
+              sessionKey={`junior-suzhou:${exam.id}:${mode}`}
+              context="junior_suzhou_exam"
+              questionRef={exam.id}
+              questionSnapshot={examSnapshot}
+              mode="free"
+              title="小月"
+              subtitle="苏州真题复盘 · 可追问错题、要同类小测"
+              starters={SUZHOU_TUTOR_STARTERS}
+            />
+          )}
+        </ExamContainer>
+      )}
+
+      {tutorFor && mode && (
+        <TutorChat
+          context="junior_suzhou_exam"
+          questionRef={`${exam.id}:${tutorFor.id}`}
+          questionSnapshot={buildQuestionSnapshot(exam, tutorFor, answers, mode)}
+          open={!!tutorFor}
+          onClose={() => setTutorFor(null)}
+          title="小月 · 本题答疑"
+        />
+      )}
     </ExamPaperShell>
   );
 }

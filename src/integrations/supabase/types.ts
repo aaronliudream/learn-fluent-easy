@@ -6446,6 +6446,42 @@ export type Database = {
         }
         Relationships: []
       }
+      exam_favorites: {
+        Row: {
+          created_at: string
+          exam_id: string
+          id: string
+          note: string | null
+          question_id: string
+          section: string | null
+          snapshot: Json
+          source_path: string | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          exam_id: string
+          id?: string
+          note?: string | null
+          question_id: string
+          section?: string | null
+          snapshot?: Json
+          source_path?: string | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          exam_id?: string
+          id?: string
+          note?: string | null
+          question_id?: string
+          section?: string | null
+          snapshot?: Json
+          source_path?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       saved_phrases: {
         Row: {
           context_text: string | null

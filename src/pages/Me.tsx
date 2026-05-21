@@ -5,7 +5,7 @@ import type { User } from "@supabase/supabase-js";
 import { PageHeader } from "@/components/PageHeader";
 import {
   BarChart3, BookMarked, Bookmark, Heart, Trophy, Users, Settings, Crown,
-  LogIn, LogOut, GraduationCap, Sparkles, ClipboardList, Target } from
+  LogIn, LogOut, GraduationCap, Sparkles, ClipboardList, Target, Star } from
 "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fetchWeakKnowledgePoints } from "@/lib/knowledgePointMastery";
@@ -18,6 +18,7 @@ const TILES: Tile[] = [
 { to: "/dashboard/grammar", label: "语法掌握全景", sub: "按考点查看强弱", icon: GraduationCap, tone: "from-violet-500 to-fuchsia-500" },
 { to: "/review", label: "复习与错题", sub: "FSRS 智能安排今日复习", icon: Target, tone: "from-orange-500 to-rose-500" },
 { to: "/mistakes", label: "我的错题本", sub: "回看做错的题", icon: ClipboardList, tone: "from-amber-500 to-orange-500" },
+{ to: "/junior/suzhou/favorites", label: "真题收藏", sub: "苏州中考收藏的题目", icon: Star, tone: "from-stone-500 to-amber-600" },
 { to: "/saved", label: "收藏的句子", sub: "随时复习好用的表达", icon: Bookmark, tone: "from-sky-500 to-indigo-500" },
 { to: "/stats", label: "详细数据", sub: "学习时长、连胜、勋章", icon: Trophy, tone: "from-yellow-500 to-amber-500" },
 { to: "/leaderboard", label: "排行榜", sub: "和大家一起竞争", icon: Users, tone: "from-pink-500 to-rose-500" },

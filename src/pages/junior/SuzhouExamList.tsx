@@ -1,7 +1,7 @@
 import { T } from "@/i18n/T";
 import { Link } from "react-router-dom";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, FileText, Clock, MapPin } from "lucide-react";
+import { ArrowLeft, FileText, Clock, MapPin, Star } from "lucide-react";
 import { listExams } from "@/data/exams";
 
 export default function SuzhouExamList() {
@@ -34,7 +34,15 @@ export default function SuzhouExamList() {
       </div>
 
       <section className="grid gap-3">
-        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground"><T>真题试卷</T></div>
+        <div className="flex items-center justify-between gap-2">
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground"><T>真题试卷</T></div>
+          <Link
+            to="/junior/suzhou/favorites"
+            className="inline-flex items-center gap-1 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-bold text-amber-800 hover:bg-amber-100">
+            <Star className="size-3.5" />
+            <T>我的收藏</T>
+          </Link>
+        </div>
         {exams.map((exam) => (
           <Link
             key={exam.id}

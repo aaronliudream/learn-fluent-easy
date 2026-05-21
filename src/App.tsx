@@ -95,6 +95,7 @@ const JuniorWritingPlay = lazy(() => import("./pages/JuniorWritingPlay.tsx"));
 const SuzhouExamList = lazy(() => import("./pages/junior/SuzhouExamList.tsx"));
 const SuzhouExamModeSelect = lazy(() => import("./pages/junior/SuzhouExamModeSelect.tsx"));
 const SuzhouExamPlay = lazy(() => import("./pages/junior/SuzhouExamPlay.tsx"));
+const SuzhouFavorites = lazy(() => import("./pages/junior/SuzhouFavorites.tsx"));
 const GaokaoGrammar = lazy(() => import("./pages/GaokaoGrammar.tsx"));
 const GaokaoGrammarPoint = lazy(() => import("./pages/GaokaoGrammarPoint.tsx"));
 const GaokaoGrammarQuiz = lazy(() => import("./pages/GaokaoGrammarQuiz.tsx"));
@@ -336,6 +337,7 @@ const App = () => (
           <Route path="/junior/writing" element={<ChineseOnlyRoute><JuniorWriting /></ChineseOnlyRoute>} />
           <Route path="/junior/writing/:id" element={<ChineseOnlyRoute><JuniorWritingPlay /></ChineseOnlyRoute>} />
           <Route path="/junior/suzhou" element={<ChineseOnlyRoute><SuzhouExamList /></ChineseOnlyRoute>} />
+          <Route path="/junior/suzhou/favorites" element={<ChineseOnlyRoute><SuzhouFavorites /></ChineseOnlyRoute>} />
           <Route path="/junior/suzhou/:examId/mode" element={<ChineseOnlyRoute><SuzhouExamModeSelect /></ChineseOnlyRoute>} />
           <Route path="/junior/suzhou/:examId" element={<ChineseOnlyRoute><SuzhouExamPlay /></ChineseOnlyRoute>} />
           <Route path="/gaokao" element={<ChineseOnlyRoute><Gaokao /></ChineseOnlyRoute>} />

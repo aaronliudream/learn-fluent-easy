@@ -106,6 +106,15 @@ export default function AdminFeedback() {
       <h1 className="text-2xl font-extrabold"><T>📨 反馈与邮件后台</T></h1>
       <p className="mt-1 text-xs text-muted-foreground"><T>用户反馈（最近 200 条）· 邮件投递日志（最近 500 封）</T></p>
 
+      <div className="mt-4 flex flex-wrap items-center gap-2">
+        <Link
+          to="/admin/users"
+          className="inline-flex items-center gap-1 rounded-xl border bg-card px-3 py-2 text-xs font-bold text-purple-700 hover:bg-purple-50"
+        >
+          <User className="size-3.5" /> <T>用户学习后台</T>
+        </Link>
+      </div>
+
       <div className="mt-4 inline-flex rounded-xl border bg-card p-1">
         <button
           onClick={() => setTab("feedback")}

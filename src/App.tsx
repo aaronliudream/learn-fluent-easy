@@ -27,6 +27,7 @@ const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
 const AdminFeedback = lazy(() => import("./pages/AdminFeedback.tsx"));
 const AdminGrammarContent = lazy(() => import("./pages/AdminGrammarContent.tsx"));
+const AdminUserDashboard = lazy(() => import("./pages/AdminUserDashboard.tsx"));
 const Placement = lazy(() => import("./pages/Placement.tsx"));
 const Slang = lazy(() => import("./pages/Slang.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
@@ -365,6 +366,7 @@ const App = () => (
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />
           <Route path="/admin/feedback" element={<AdminFeedback />} />
           <Route path="/admin/grammar-content" element={<AdminGrammarContent />} />
+          <Route path="/admin/users" element={<AdminUserDashboard />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/hub" element={<Dashboard />} />
           <Route path="/dashboard" element={<LearningCenter />} />

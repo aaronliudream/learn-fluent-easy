@@ -451,21 +451,42 @@ export default function SuzhouExamPlay() {
     const passage = exam.passages[sectionKey];
     if (!passage) return null;
 
-    if (sectionKey === "cloze") {
+if (sectionKey === "cloze") {
       const qMap = Object.fromEntries(questions.map((q) => [q.id, q]));
       const passageText = normalizePassageBlanks(passage);
+      const blankMap = buildBlankMap(questions);
+      // Sort blanks by question number so options list matches the passage order
+      const orderedBlanks = Object.entries(blankMap)
+        .map(([num, qid]) => ({ num: Number(num), qid }))
+        .sort((a, b) => a.num - b.num);
       return (
         <ExamCard className="mb-6">
           <div className="exam-eyebrow mb-2"><T>完形填空 · 阅读材料</T></div>
           <PassageWithBlanks
             text={passageText}
-            blankIds={buildBlankMap(questions)}
+            blankIds={blankMap}
             answers={answers}
             onChange={setAnswer}
             disabled={inputsDisabled}
             inputType="select"
             getSelectOptions={(qid) => qMap[qid]?.options ?? {}}
           />
+          <div className="mt-4 pt-4 border-t exam-divider space-y-1 text-sm exam-soft">
+            {orderedBlanks.map(({ num, qid }) => {
+              const opts = qMap[qid]?.options as Record<string, string> | undefined;
+              if (!opts) return null;
+              return (
+                <div key={qid} className="flex flex-wrap gap-x-4 gap-y-1">
+                  <strong className="tabular-nums">{num}.</strong>
+                  {Object.keys(opts).sort().map((letter) => (
+                    <span key={letter}>
+                      <strong>{letter}.</strong> {opts[letter]}
+                    </span>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
         </ExamCard>
       );
     }

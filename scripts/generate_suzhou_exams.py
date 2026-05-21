@@ -137,6 +137,79 @@ def parse_answer_key(lines: list[str]) -> dict[int, str]:
     return answers
 
 
+def count_abcd_options(line: str) -> int:
+    return len(re.findall(r"(?:^|\s)([A-D])\.\s", line.strip()))
+
+
+def line_is_option_row(line: str) -> bool:
+    s = line.strip()
+    if not s:
+        return False
+    if MCQ_OPTION.match(s):
+        return True
+    parts = [p.strip() for p in re.split(r"\s{2,}|\t", s) if p.strip()]
+    single_opts = [p for p in parts if MCQ_OPTION_SINGLE.match(p)]
+    if len(single_opts) >= 2:
+        return True
+    if count_abcd_options(s) >= 2:
+        return True
+    if re.match(r"^[A-D]\.\s", s) and len(s) < 220:
+        # Multi-line MCQ option rows (e.g. "A. Because the classes...")
+        if count_abcd_options(s) == 1 and (
+            s.startswith(("A. Because", "B. Because", "C. Because", "D. Because"))
+            or s.startswith(("A. To ", "B. To ", "C. To ", "D. To "))
+            or s.startswith(("A. Some ", "B. Some ", "C. Some ", "D. Some "))
+            or s.startswith(("A. The ", "B. The ", "C. The ", "D. The "))
+            or s.startswith(("A. How ", "B. How ", "C. How ", "D. How "))
+            or s.startswith(("A. Kids ", "B. Kids ", "C. Kids ", "D. Kids "))
+            or s.startswith(("A. Cans ", "B. Cans ", "C. Cans ", "D. Cans "))
+            or s.startswith(("A. Old ", "B. Old ", "C. Old ", "D. Old "))
+            or s.startswith(("A. We ", "B. We ", "C. We ", "D. We "))
+            or s.startswith(("A. bench ", "B. places ", "C. green ", "D. recycling "))
+        ):
+            return True
+    return False
+
+
+def is_stem_continuation(line: str, qnum: int) -> bool:
+    if re.match(r"^\d+\.", line.strip()):
+        return False
+    return not line_is_option_row(line)
+
+
+def collect_letter_options(lines: list[str]) -> dict[str, str]:
+    opts: dict[str, str] = {}
+    for line in lines:
+        m = re.match(r"^([A-G])\.\s*(.+)$", line.strip())
+        if m:
+            opts[m.group(1)] = m.group(2).strip()
+    return opts
+
+
+def parse_numbered_stem_from_lines(lines: list[str], qnum: int) -> str:
+    for i, line in enumerate(lines):
+        m = re.match(rf"^{qnum}\.\s*(.*)$", line)
+        if not m:
+            continue
+        parts: list[str] = []
+        if m.group(1).strip():
+            parts.append(m.group(1).strip())
+        j = i + 1
+        while j < len(lines):
+            nxt = lines[j].strip()
+            if not nxt:
+                j += 1
+                continue
+            if re.match(r"^\d+\.", nxt):
+                break
+            if re.match(r"^第[一二三四五六七八]部分", nxt):
+                break
+            parts.append(nxt)
+            j += 1
+        return "\n".join(parts)
+    return ""
+
+
 def parse_mcq_options_from_lines(lines: list[str], qnum: int) -> tuple[str, dict[str, str]] | None:
     """Find question qnum stem + ABCD options in following lines."""
     stem = ""
@@ -210,6 +283,10 @@ def parse_mcq_options_from_lines(lines: list[str], qnum: int) -> tuple[str, dict
                         ]:
                             if letter and text:
                                 opts[letter.strip()] = text.strip()
+                if not opts and is_stem_continuation(nxt, qnum):
+                    stem = f"{stem}\n{nxt.strip()}" if stem else nxt.strip()
+                    j += 1
+                    continue
                 j += 1
             if len(opts) >= 4:
                 return stem, opts
@@ -439,14 +516,8 @@ def build_exam(year: int, path: Path) -> dict[str, Any]:
 
         # Vocab 31-38, bank 39-43
         vocab_sec = extract_section(content, "第四部分", ["第五部分"])
-        vocab_lines = [l for l in vocab_sec if re.match(r"^3[1-8]\.", l) or ("(" in l and re.match(r"^3[1-8]", l))]
         for n in range(31, 39):
-            stem = ""
-            for line in vocab_sec:
-                m = re.match(rf"^{n}\.\s*(.+)$", line)
-                if m:
-                    stem = m.group(1).strip()
-                    break
+            stem = parse_numbered_stem_from_lines(vocab_sec, n)
             ans = answers.get(n, "")
             questions.append({
                 "id": f"q{n}", "type": "fill_blank", "section": "vocab_fill",
@@ -582,6 +653,8 @@ def build_exam(year: int, path: Path) -> dict[str, Any]:
         for line in c_sec:
             if re.match(r"^11\.\s*[A-D]\.", line):
                 break
+            if line.startswith("请认真阅读"):
+                continue
             cloze_lines.append(line)
         exam["passages"]["cloze"] = normalize_passage_blanks("\n\n".join(cloze_lines))
         for n in range(11, 21):
@@ -616,6 +689,8 @@ def build_exam(year: int, path: Path) -> dict[str, Any]:
             if m and 21 <= int(m.group(1)) <= 32:
                 q_stems[int(m.group(1))] = m.group(2).strip()
                 continue
+            if cur and line_is_option_row(line):
+                continue
             if cur:
                 passages[f"reading_{cur}"].append(line)
         for k, v in passages.items():
@@ -635,9 +710,12 @@ def build_exam(year: int, path: Path) -> dict[str, Any]:
         # Restore 33-37
         rest_sec = extract_section(content, "第四部分", ["第五部分"])
         exam["passages"]["restore"] = normalize_passage_blanks("\n\n".join(
-            [l for l in rest_sec if not re.match(r"^[A-G]\.", l) and not l.startswith("选项")]
+            [l for l in rest_sec
+             if not re.match(r"^[A-G]\.", l)
+             and not l.startswith("选项")
+             and not l.startswith("根据对话")]
         ))
-        exam["resources"]["restore_options"] = parse_restore_options(rest_sec)
+        exam["resources"]["restore_options"] = parse_restore_options(rest_sec) or collect_letter_options(rest_sec)
         for n in range(33, 38):
             ans = answers.get(n, "")
             questions.append({
@@ -650,12 +728,7 @@ def build_exam(year: int, path: Path) -> dict[str, Any]:
         # Vocab 38-47
         v_sec = extract_section(content, "第五部分", ["第六部分"])
         for n in range(38, 48):
-            stem = ""
-            for line in v_sec:
-                m = re.match(rf"^{n}\.\s*(.+)$", line)
-                if m:
-                    stem = m.group(1).strip()
-                    break
+            stem = parse_numbered_stem_from_lines(v_sec, n)
             ans = answers.get(n, "")
             section = "vocab_fill"
             questions.append({

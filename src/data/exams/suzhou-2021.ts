@@ -49,7 +49,15 @@ export const SUZHOU_2021: ExamPaper = {
     response: "A two-week-old baby hippo sat alone on the bank of the Zambezi River in Zambia, a country in Africa. His mother was dead. The morning sun rose and with every passing minute he lost more strength. Without his mother, the baby probably wouldn't make it through the night.\n\nLuckily, Ian Stevenson and his friends saw the baby hippo. They took him back, fed him milk and eggs. The young animal was saved and soon doubled his weight. He seemed happy and healthy.\n\nLater, the hippo, now called Douglas, was moved to an ideal home at Chipembele, a wildlife center owned by Anna and Steve Tolan. They built a sleeping place for Douglas by a pool where he liked to swim. They fed him every three hours. Douglas enjoyed playing with the Tolans' pet dogs and swimming in the pool. Sometimes at night, other hippos came from the nearby river to eat grass. At first, Douglas would walk into his pool to hide. \"But he soon fought against his shyness and played with them,\" Tolan says. Douglas remained at Chipembele for about five years before he was moved to another part of Zambia.",
   },
   resources: {
-    restore_options: {},
+    restore_options: {
+    A: "I will never trust them again.",
+    B: "A thought suddenly came into my mind.",
+    C: "Out of curiosity, I followed Timothy and Jenna.",
+    D: "Timothy was only collecting money from Jenna for the comic book.",
+    E: "I will never jump to conclusions again.",
+    F: "I saw what the two of you had done.",
+    G: "Luckily, they invited me to join them.",
+  },
     writing_prompt: {
     body: "在日常生活中,冲突难免发生。请以\"A conflict with...\"为题,用英语写下你与他人(如:家人、老师、同学等)或自己内心发生过的冲突故事。故事需包括冲突的发生和解决。\n注意:1. 词数:100左右;\n2. 请先将标题填写完整,再写文章;\n3. 文中不得出现与考生相关的真实姓名、校名等信息;\n4. 照抄阅读语篇不得分。\n参考词汇:conflict n. 冲突\nA conflict with _______________\n2021年苏州市初中毕业暨升学考试试卷",
   },
@@ -161,7 +169,7 @@ export const SUZHOU_2021: ExamPaper = {
     },
     {
       id: "q9", type: "multiple_choice", section: "grammar",
-      stem: "— Amy, I wonder ______ in the street when I come to pick you up.",
+      stem: "— Amy, I wonder ______ in the street when I come to pick you up.\n— Well, there's a big tree by the front gate and it's covered in lovely white flowers at the moment.",
       options: {
     A: "how will I find your house",
     B: "how I will find your house",
@@ -174,7 +182,7 @@ export const SUZHOU_2021: ExamPaper = {
     },
     {
       id: "q10", type: "multiple_choice", section: "grammar",
-      stem: "— Hi, Jack! I'm just going to the practice for the concert. Are you coming to play your violin?",
+      stem: "— Hi, Jack! I'm just going to the practice for the concert. Are you coming to play your violin?\n— ______, Carl. I have to finish my report today.",
       options: {
     A: "You'd better not",
     B: "It doesn't matter",

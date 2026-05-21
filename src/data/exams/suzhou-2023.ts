@@ -483,7 +483,7 @@ export const SUZHOU_2023: ExamPaper = {
     },
     {
       id: "q38", type: "fill_blank", section: "vocab_fill",
-      stem: "We all look f__________ to the day when scientists discover more secrets of outer space.",
+      stem: "We all look f__________ to the day when scientists discover more secrets of outer space.\n第二节  选词填空\n请认真阅读下面短文,从方框中选择适当的单词或短语,在答题卡标有题号的横线上,填入其正确形式。每个单词或短语仅用一次。\nin front of\nmove\nmember\nhappy\ncomplete\nThe Shenzhou XV mission (飞行任务) crew (乘组) returned to Earth on June 4 after a six-month mission. The crew __39__ are Fei Junlong, Deng Qingming and Zhang Lu.\nAfter everything was ready, the astronauts were carried out of the capsule (返回舱) one by one and placed on chairs __40__ the capsule. Then, the astronauts shared their feelings and thoughts with a reporter from CCTV in a live program. Fei said, \"We have __41__ our tasks before returning safely to Earth. We are all in good condition.\" Deng said, \"I expected the chance to fly into space for twenty-five years. It was the __42__ moment of my life to know that I could be in the mission.\" Zhang said, \"We will go back to training as soon as possible. We will always be ready to return to space.\"\nAfter the interview, the astronauts were __43__ away for health checks.",
       answer: "forward",
       explanation: "第 38 题考查词汇运用相关知识点。正确答案：。",
       knowledge_point: "词汇运用",

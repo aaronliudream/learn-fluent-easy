@@ -17,6 +17,9 @@ EXTRACT = Path(__file__).parent / "suzhou-extract"
 ANSWER_KEYS = json.loads((Path(__file__).parent / "suzhou-answer-keys.json").read_text(encoding="utf-8"))
 
 OPTION_LINE = re.compile(r"^[A-D]\.\s.+\s+[A-D]\.\s")
+OPTION_START = re.compile(
+    r"^([A-D])\.\s+(Because|To |Some |The |How |Kids |Cans |Old |We |bench |places |green |recycling )"
+)
 
 
 def split_compact_answers(raw: str) -> dict[int, str]:
@@ -67,6 +70,8 @@ def clean_passage(text: str) -> str:
     for line in lines:
         s = line.strip()
         if OPTION_LINE.match(s):
+            continue
+        if OPTION_START.match(s):
             continue
         if re.match(r"^[A-D]\.\s", s) and len(s) < 200:
             continue

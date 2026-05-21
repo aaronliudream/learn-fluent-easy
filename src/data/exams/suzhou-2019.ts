@@ -49,7 +49,15 @@ export const SUZHOU_2019: ExamPaper = {
     response: "An interview with Andy Griffiths\n\nAndy Griffiths is well known as a writer of children's books. Here are some interesting things you might not know about him!\n\nWhat do you like to do after a long day of writing?\n\nI go for long runs and bike rides beside the beach. An hour of exercise after a long day of writing gives me energy. Then I'm ready to write some more.\n\nDo you write using a computer or by hand?\n\nAt first I write the stories by hand, and then I transfer (转录) them onto a computer. I like to write by hand when I travel. I find it very easy to lose myself in my diary when I am away from my usual activities.\n\nWhat super power would you like to have?\n\nX-ray vision (影像) if I can control it.\n\nWhat is your favourite food?\n\nI'm never happier than when I'm drinking banana milkshakes. And I love fish. But I don't like drinking fish milkshakes—they are just terrible!\n\nWhat is your favourite book?\n\nAlice in Wonderland. It has so many surprises and such silliness in it.\n\nDo you write for adults too?\n\nOnly if I really have to. I much prefer the freedom and fun of writing for children.\n\nWhat do you say to kids who say, \"Why should I read?\"\n\nAs Dr. Seuss says, \"The more you read, the more things you will know. The more you learn, the more places you'll go.\"",
   },
   resources: {
-    restore_options: {},
+    restore_options: {
+    A: "He's huge!",
+    B: "And he's very funny too.",
+    C: "We have a big house now.",
+    D: "He likes lying under the tree.",
+    E: "What's his name?",
+    F: "When did you buy him?",
+    G: "How long have you had him?",
+  },
     writing_prompt: {
     body: "假定你是苏华，最近你的澳大利亚笔友Nathan犯了一些错误，倍感懊恼，写了一封邮件向你诉说。为帮助他排解困惑，请你根据他的邮件内容并结合自身经历，用英语回信开导他。\nTo: suhua@china.com\nFrom: nathan@australia.com\nSubject: Learning from mistakes\nDear Su Hua,\nI'm unhappy that I've made some mistakes recently. They're troubling me a lot these days. I really need your help. Would you please share your experience with me?\n● Do you agree that everyone makes mistakes?\n● Can you tell me one of your mistakes?\n● How did you deal with your problem?\n● What have you learned from the mistake?\nI'm looking forward to hearing from you soon.\nAll the best,\nNathan\n注意：1. 词数90左右，开头和结尾已经写好，不计入总词数；\n2. 回复须包括所有要点，可适当发挥，使短文连贯、通顺；\n3. 文中不得提及真实的人名、校名等相关信息。\nDear Nathan,\nI'm sorry to know that you are not happy these days. ____________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\nI hope my experience can help you out.\nBest wishes,\nSu Hua",
   },
@@ -57,7 +65,7 @@ export const SUZHOU_2019: ExamPaper = {
   questions: [
     {
       id: "q1", type: "multiple_choice", section: "grammar",
-      stem: "— Hello, are you Mr. Morrison?",
+      stem: "— Hello, are you Mr. Morrison?\n— Yes. That's ______.",
       options: {
     A: "him",
     B: "me",
@@ -70,7 +78,7 @@ export const SUZHOU_2019: ExamPaper = {
     },
     {
       id: "q2", type: "multiple_choice", section: "grammar",
-      stem: "— Please stay with me this weekend.",
+      stem: "— Please stay with me this weekend.\n— I'm sorry, but my father and I planned ______ Beijing a long time ago.",
       options: {
     A: "visit",
     B: "visiting",
@@ -83,7 +91,7 @@ export const SUZHOU_2019: ExamPaper = {
     },
     {
       id: "q3", type: "multiple_choice", section: "grammar",
-      stem: "— Keep quiet, son! I need complete ______ when I'm working.",
+      stem: "— Keep quiet, son! I need complete ______ when I'm working.\n— Sorry, dad. I won't make any noise again.",
       options: {
     A: "trust",
     B: "silence",
@@ -96,7 +104,7 @@ export const SUZHOU_2019: ExamPaper = {
     },
     {
       id: "q4", type: "multiple_choice", section: "grammar",
-      stem: "— Some people don't show their talents at the very beginning.",
+      stem: "— Some people don't show their talents at the very beginning.\n— I agree. Even Einstein ______ read until he was seven.",
       options: {
     A: "can't",
     B: "mustn't",
@@ -174,7 +182,7 @@ export const SUZHOU_2019: ExamPaper = {
     },
     {
       id: "q10", type: "multiple_choice", section: "grammar",
-      stem: "— Simon, where do you want to eat?",
+      stem: "— Simon, where do you want to eat?\n— ______. I eat anything.",
       options: {
     A: "I don't mind",
     B: "My pleasure",
@@ -557,21 +565,21 @@ export const SUZHOU_2019: ExamPaper = {
     },
     {
       id: "q45", type: "fill_blank", section: "vocab_fill",
-      stem: "— Tickets for today?",
+      stem: "— Tickets for today?\n— Sorry, we've got ______ left, but we have a few for tomorrow.",
       answer: "none",
       explanation: "第 45 题考查词汇检测相关知识点。正确答案：。",
       knowledge_point: "词汇检测",
     },
     {
       id: "q46", type: "fill_blank", section: "vocab_fill",
-      stem: "— Have you ever been to the Summer Palace?",
+      stem: "— Have you ever been to the Summer Palace?\n— Yes. I have visited it many times ______ 2009.",
       answer: "since",
       explanation: "第 46 题考查词汇检测相关知识点。正确答案：。",
       knowledge_point: "词汇检测",
     },
     {
       id: "q47", type: "fill_blank", section: "vocab_fill",
-      stem: "— I hear your grandpa has got an eye problem. Is it serious?",
+      stem: "— I hear your grandpa has got an eye problem. Is it serious?\n— Yes. He can't see anything now. He has gone ______.",
       answer: "blind",
       explanation: "第 47 题考查词汇检测相关知识点。正确答案：。",
       knowledge_point: "词汇检测",

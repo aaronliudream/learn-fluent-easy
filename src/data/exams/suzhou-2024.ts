@@ -485,7 +485,7 @@ export const SUZHOU_2024: ExamPaper = {
     },
     {
       id: "q38", type: "fill_blank", section: "vocab_fill",
-      stem: "As the host city, Suzhou will m ▲   to make the 2026 ISF Football World Cup a great success.",
+      stem: "As the host city, Suzhou will m ▲   to make the 2026 ISF Football World Cup a great success.\n第二节  请认真阅读下面短文,从方框中选择适当的单词或短语,在答题卡标有题号的横线上,填入其正确形式。每个单词或短语仅用一次。\nspeed     since     plenty of     pollute     such as\nFrogs are an environmental warning system. They have skin which takes in whatever is in the environment. This means that if the environment is __39__, a frog's skin takes in the pollution and the frog dies. For this reason, if there's something wrong in the environment, frogs are the first to die. If there are __40__ frogs, it's a good sign that the environment is healthy.\nFrog numbers around the world have been dropping at a faster __41__ in recent years than ever before. Up to 200 kinds of frogs have died out __42__ 1980. This is a disaster. Frogs are needed in the food chain as food for animals like snakes, birds and fish. Frogs are also needed in the food chain to eat insects __43__ grasshoppers.\nThe world needs frogs.",
       answer: "manage",
       explanation: "第 38 题考查词汇运用相关知识点。正确答案：manage。",
       knowledge_point: "词汇运用",

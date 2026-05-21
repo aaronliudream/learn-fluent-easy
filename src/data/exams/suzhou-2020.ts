@@ -49,7 +49,15 @@ export const SUZHOU_2020: ExamPaper = {
     response: "Hi, Tom,\n\nThanks for your message and I am glad that you wrote to me for ideas.\n\nI remember when I was learning English, I felt uncomfortable about speaking. I could remember lots of words and knew grammar rules, but speaking was difficult. I now feel a lot more confident about speaking, so here are some ideas that I have taken from my own experience.\n\nDon’t worry about making mistakes. Other people will still know your meaning and they probably won’t notice your mistakes.\n\nUse every chance you get to speak. For example, it’s a good idea to use only English in class and not to speak to your classmates in your own language. At home, you should also try practicing new words and grammar learnt in class.\n\nThink about what extra speaking practice outside the classroom. You can join a conversation group, such as the chat groups in the study centre. They are free to join.\n\nPractice speaking online. There are lots of websites where you can communicate with someone from all around the world.\n\nI hope this helps you and please come to me if you have other problems.\n\nBest wishes,\n\nEliza",
   },
   resources: {
-    restore_options: {},
+    restore_options: {
+    A: "Tourists make money for a city.",
+    B: "Can you give us an example?",
+    C: "Now they begin to do more sports outside.",
+    D: "Do you play a lot of sports?",
+    E: "How can the Olympics change them?",
+    F: "Many people think the Olympics cost a lot of money.",
+    G: "Now it has become a popular place for people to visit.",
+  },
     writing_prompt: {
     body: "下周一些英国学生将来你校交流学习，他们想了解你校各个俱乐部的情况。假定你是林涛，是学校绿色星球俱乐部的负责人，请你根据你们俱乐部的海报内容，用英语写一篇发言稿来作介绍。\n【海报内容】\n绿色星球俱乐部  JOIN US!\n时间：每周五下午\n活动：◆ DIY工作坊——旧物改造（旧衣服、旧木头……）\n◆ 志愿者工作——分发环保传单、宣传绿色生活、\n帮助垃圾分类、清理公园街道……\n注意：\n1. 词数90左右。开头和结尾已为你写好，不计入总词数；\n2. 文中须包括所有要点，每个要点可适当发挥，使文章连贯、通顺；\n3. 文中不得提及真实的人名、校名等相关信息。\n参考词汇：workshop  n. 工作坊\nWelcome to our school. I’m Lin Tao. I’m glad to introduce our Green Planet Club to you.\nLet’s work together for a green planet. Thank you!",
   },
@@ -57,7 +65,7 @@ export const SUZHOU_2020: ExamPaper = {
   questions: [
     {
       id: "q1", type: "multiple_choice", section: "grammar",
-      stem: "— Did you go on the Silk Road trip by train?",
+      stem: "— Did you go on the Silk Road trip by train?\n— Yes. The train was great, just like a hotel ______ wheels — it had all that I needed.",
       options: {
     A: "in",
     B: "at",
@@ -70,7 +78,7 @@ export const SUZHOU_2020: ExamPaper = {
     },
     {
       id: "q2", type: "multiple_choice", section: "grammar",
-      stem: "— Wow, you’ve made so much progress in drawing.",
+      stem: "— Wow, you’ve made so much progress in drawing.\n— Thanks. I ______ two online courses this winter holiday.",
       options: {
     A: "took",
     B: "will take",
@@ -83,7 +91,7 @@ export const SUZHOU_2020: ExamPaper = {
     },
     {
       id: "q3", type: "multiple_choice", section: "grammar",
-      stem: "— I don’t really like big cities.",
+      stem: "— I don’t really like big cities.\n— Neither do I. I feel much ______ in the countryside.",
       options: {
     A: "free",
     B: "freer",
@@ -122,7 +130,7 @@ export const SUZHOU_2020: ExamPaper = {
     },
     {
       id: "q6", type: "multiple_choice", section: "grammar",
-      stem: "— Mum, why do I have to wash hands so many times a day?",
+      stem: "— Mum, why do I have to wash hands so many times a day?\n— For your health, you ______ be too careful.",
       options: {
     A: "can’t",
     B: "can",
@@ -135,7 +143,7 @@ export const SUZHOU_2020: ExamPaper = {
     },
     {
       id: "q7", type: "multiple_choice", section: "grammar",
-      stem: "— Tony, come over. What do the letters “KIT” mean in the text message?",
+      stem: "— Tony, come over. What do the letters “KIT” mean in the text message?\n— Don’t you know that, Amy? They ______ “keep in touch”.",
       options: {
     A: "search for",
     B: "ask for",
@@ -174,7 +182,7 @@ export const SUZHOU_2020: ExamPaper = {
     },
     {
       id: "q10", type: "multiple_choice", section: "grammar",
-      stem: "— Through 5G, people in two different cities can even “shake hands” on the same screen.",
+      stem: "— Through 5G, people in two different cities can even “shake hands” on the same screen.\n— ______",
       options: {
     A: "What a mess!",
     B: "Don’t mention it.",
@@ -557,21 +565,21 @@ export const SUZHOU_2020: ExamPaper = {
     },
     {
       id: "q45", type: "fill_blank", section: "vocab_fill",
-      stem: "— I love pizza and sweet food. I seldom have vegetables.",
+      stem: "— I love pizza and sweet food. I seldom have vegetables.\n— Your eating ______▲______ are not so good. You need to change them.",
       answer: "habits",
       explanation: "第 45 题考查词汇检测相关知识点。正确答案：。",
       knowledge_point: "词汇检测",
     },
     {
       id: "q46", type: "fill_blank", section: "vocab_fill",
-      stem: "— Where’s Sam? I can’t find him anywhere.",
+      stem: "— Where’s Sam? I can’t find him anywhere.\n— Oh, he has two weeks ______▲______ for a vacation.",
       answer: "off",
       explanation: "第 46 题考查词汇检测相关知识点。正确答案：。",
       knowledge_point: "词汇检测",
     },
     {
       id: "q47", type: "fill_blank", section: "vocab_fill",
-      stem: "— Would you please tell me something about ______▲______?",
+      stem: "— Would you please tell me something about ______▲______?\n— OK. My name is Simon. I am studying at Sunshine Middle School.",
       answer: "yourself",
       explanation: "第 47 题考查词汇检测相关知识点。正确答案：。",
       knowledge_point: "词汇检测",

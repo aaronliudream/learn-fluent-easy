@@ -309,7 +309,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "cold",
   }, 
       answer: "C",
-      explanation: "第 11 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **C. good**\n作者说\"无论餐厅的菜吃起来多么好\"——即便菜很美味，人们还是会想去隔壁试试。只有 good 能让转折\"However, I've found the answer\"成立。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **taste good** = \"吃起来好吃\"；taste 是连系动词 (linking verb)，后跟形容词不跟副词，所以不是 \"taste well\"。\n- 同类搭配：**look beautiful**, **sound great**, **smell nice**, **feel soft**。\n- 例句：*The soup tastes really good today.* 这汤今天真好喝。\n\n### 🧱 语法 / 句法 (Grammar)\n- 句式：**No matter how + 形容词 + 主语 + 动词**，表示\"无论多么……\"。\n- 形容词紧跟在 how 后面，修饰主语 the food 的状态。\n- 判定思路：先把句子精简成 \"the food tastes ___\"。tastes 是连系动词，空格只能填形容词；再结合下文转折，选褒义词 good。\n\n### ❌ 为什么其他选项不行\n- **A. bad** — 词性对，但语义反。如果菜难吃，作者就没必要\"还想找更好\"了。\n- **B. hot** — 描述温度/辣，与\"在一家餐厅之间犹豫\"无关。\n- **D. cold** — 同 B，温度词不符合上下文逻辑。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 误以为 \"how\" 后面跟副词，写成 \"how well\"。记住：how 后跟形容词或副词，要看主句动词类型 — 连系动词 (taste/look/feel...) 后必须用形容词。\n- 只看选项单词意思，不结合后文 \"However\" 的转折。完形填空必须**先读完整段**再回头填。\n\n### 🧠 一句口诀\n**连系动词后跟形容词，转折选项看语境**",
       knowledge_point: "完形填空",
     },
     {
@@ -322,7 +322,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "distance",
   }, 
       answer: "C",
-      explanation: "第 12 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **C. answer**\n前文提到\"人们总在想：隔壁是不是更好？\"——这是一个问题 (this question)；作者说\"我找到了答案 (the answer to this question)\"。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **the answer to + 问题** = \"……的答案\"。注意介词是 **to**，不是 of 或 for。\n- 同类固定搭配：**the key to** (……的关键)、**the solution to** (……的解决方案)、**the way to** (……的方法)。\n- 例句：*Do you know the answer to this maths problem?* 你知道这道数学题的答案吗？\n\n### 🧱 语法 / 句法 (Grammar)\n- 关键判定：句中出现 **\"this question\"**（问题），并且空格前有定冠词 **the**，说明要找一个特指的事物来\"回应\"这个问题。\n- 转折词 **However** 提示这句话与上文形成对照：上文是\"还在犹豫/还在问\"，这一句必须是\"找到了解法/答案\"，逻辑才闭环。\n\n### ❌ 为什么其他选项不行\n- **A. attention** — pay attention to 是固定搭配，但 attention 不\"回应\"question，意思不通。\n- **B. excuse** — \"借口\"。对一个真心想吃好的人不需要找借口，与原文情感不符。\n- **D. distance** — \"距离\"。语境完全无关。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到介词 to，条件反射写成 attention（受 pay attention to 的影响）。记住：**词义要先服务于上下文**，搭配只是次要线索。\n- 忽略 However 的指向作用。转折后必有\"反差答案\"，这一题反差点是 \"wonder → found the answer\"。\n\n### 🧠 一句口诀\n**问题对答案，to 字最常见**",
       knowledge_point: "完形填空",
     },
     {
@@ -335,7 +335,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "over there",
   }, 
       answer: "A",
-      explanation: "第 13 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **A. right away**\n\"我会立刻回答：松鹤楼。\"作者对松鹤楼的喜爱毫不犹豫——这种\"被问就脱口而出\"的语气，只有 **right away** (立刻、马上) 能体现。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **right away** = immediately = at once，表\"立刻、毫不犹豫\"。\n- **in surprise** = \"惊讶地\"；**at most** = \"至多、最多\"；**over there** = \"在那边\"。这三个短语意思完全不同，要分开记忆。\n- 例句：*I knew the answer right away.* 我立刻就知道答案。\n\n### 🧱 语法 / 句法 (Grammar)\n- 空格在动词 **reply**(回答) 后面，需要一个**副词性短语**修饰动作。\n- 四个选项都是介词短语/副词短语，词性都对，所以判断点完全在**语义**。\n- 判定思路：作者用 will reply (将会回答) 表示对自己回答方式的确定——这种\"被问到就毫不犹豫\"的态度对应\"立刻\"。\n\n### ❌ 为什么其他选项不行\n- **B. in surprise** — \"惊讶地回答\"，但作者是被问到自己最爱的餐厅，没有任何惊讶元素。\n- **C. at most** — \"至多\"，常用于数量 (e.g., at most 10 people)，不修饰\"回答\"的方式。\n- **D. over there** — \"在那边\"，表地点，不能修饰回答的方式。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到 reply 就硬套 \"in surprise\"（惊讶地回答），但忽略上下文情感。**reply 后的副词要描述说话人的态度或速度，必须与心情匹配**。\n- right away 是高频短语，初中阶段务必积累；同义替换：immediately / at once / without delay。\n\n### 🧠 一句口诀\n**毫不犹豫 right away，惊讶才用 in surprise**",
       knowledge_point: "完形填空",
     },
     {
@@ -348,7 +348,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "beyond",
   }, 
       answer: "C",
-      explanation: "第 14 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **C. among**\n\"在数百家餐厅之中 (among hundreds of restaurants)，松鹤楼为什么这么特别？\"——\"在三者及以上的群体之中\"用 among。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **among** = 在三者或多者之中。常用于群体或不可数事物中。\n- **between** = 在两者之间（也可用于多者明确成对比较）。\n- **against** = 反对 / 靠着；**beyond** = 超出。\n- 例句：*She is the tallest among the girls in her class.* 她是班上女生中最高的。\n\n### 🧱 语法 / 句法 (Grammar)\n- 介词选择题，看后面**宾语的数量**：hundreds of restaurants (数百家餐厅) ——明显是\"三者以上的群体\"，用 **among**。\n- 经典区分：**between you and me** (两个人之间) vs **among the students** (学生们之中)。\n- 判定思路：见到复数+不可数群体 → 优先 among；见到 \"X and Y\" 两个明确个体 → between。\n\n### ❌ 为什么其他选项不行\n- **A. between** — 用于两者之间，但这里是 hundreds (上百家)，不只两家。\n- **B. against** — \"反对……\"或\"靠着……\"，与\"在……之中比较\"无关。\n- **D. beyond** — \"超出……的范围\"，意思不对。\"超出数百家餐厅\"逻辑讲不通。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到比较句就条件反射写 between。**between 只用于两者**；只要数量 ≥ 3 或对象是群体名词 (people, students, books)，就用 among。\n- 误把 among 拼成 amoung 或 amongst — among 是正确拼写（amongst 是英式书面变体，初中阶段不推荐）。\n\n### 🧠 一句口诀\n**两者 between，三者 among**",
       knowledge_point: "完形填空",
     },
     {
@@ -361,7 +361,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "supported",
   }, 
       answer: "B",
-      explanation: "第 15 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **B. warned**\n\"我被外地朋友**警告**说苏州菜可能太甜了。\"warn sb that... = \"提醒/警告某人某事\"，是固定结构。这里朋友是好意提醒——苏州菜偏甜，外地人可能不适应。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **warn sb (that) + 从句** / **warn sb of/about sth** = 警告、提醒。\n- **change** = 改变；**encourage sb to do** = 鼓励某人做某事；**support** = 支持。\n- 这四个动词都有被动用法 (was changed / warned / encouraged / supported)，所以词性都对，**靠语义判断**。\n- 例句：*The teacher warned us that the test would be hard.* 老师警告我们考试会很难。\n\n### 🧱 语法 / 句法 (Grammar)\n- 句子结构：**主语 + was + 过去分词 + by + 施动者 + that 从句**。\n- 这是 warn / tell / inform 这类\"信息传递动词\"的典型被动句型，可以接 that 从句作宾语。\n- 判定思路：看到 \"I was ___ by sb that....\" 立刻锁定能接 that 从句的动词。warn / tell / inform 都可以；encourage / support 不能这样用。\n\n### ❌ 为什么其他选项不行\n- **A. changed** — \"我被朋友改变了\"，语义荒谬。changed 也不接 that 从句。\n- **C. encouraged** — encourage sb **to do sth**，结构是不定式，不是 that 从句。\n- **D. supported** — \"支持\"。朋友说菜可能太甜，是提醒不是支持。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 只看单词意思，忽略**搭配结构**。encourage 虽然意思接近\"鼓励朋友\"，但它后面跟 to do，不能直接接 that 从句。\n- 误以为 warn 总是负面警告。warn 也可以是**善意的提醒**——朋友提醒\"你可能不习惯\"也是 warn。\n\n### 🧠 一句口诀\n**warn 接 that，encourage 接 to**",
       knowledge_point: "完形填空",
     },
     {
@@ -374,7 +374,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "frozen",
   }, 
       answer: "B",
-      explanation: "第 16 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **B. local**\n\"前几个月我选择吃川菜或湘菜，而不是多吃**本地** (苏州) 菜。\"川菜湘菜不是本地菜，与 local food (本地菜) 形成对比。下文 \"real local style food\" 也直接印证这个词。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **local** = 本地的、当地的。**local food / local culture / local people** 都是高频搭配。\n- **fresh** = 新鲜的；**Chinese** = 中国的；**frozen** = 冷冻的。\n- 例句：*When you travel, try the local food.* 旅行时一定要尝尝当地美食。\n\n### 🧱 语法 / 句法 (Grammar)\n- **instead of + 名词/动名词** = \"而不是……\"，表对比。\n- 判定思路：找出 instead of 前后的**对比关系**。前面是 \"Sichuan or Hunan style restaurants\"(外地菜系)，后面应该是\"本地菜系\"才形成完整对比。\n- 这种**对比逻辑**是完形填空最常考的线索，比单纯认词更有效。\n\n### ❌ 为什么其他选项不行\n- **A. fresh** — \"新鲜的\"。川菜湘菜也可以新鲜，没有对比关系。\n- **C. Chinese** — \"中国的\"。川菜、湘菜本身就是中国菜，逻辑自相矛盾。\n- **D. frozen** — \"冷冻的\"。与原文毫无对比关系，且语义突兀。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到 food 就想 fresh、Chinese，忽略 **instead of** 提示的对比逻辑。\n- 不读全文就填空。下文 \"real local style food\" 是这一题的直接答案钥匙——**完形填空一定要把段落读完再回填**。\n\n### 🧠 一句口诀\n**instead of 前后必成对，对比才是关键钥**",
       knowledge_point: "完形填空",
     },
     {
@@ -387,7 +387,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "charged",
   }, 
       answer: "A",
-      explanation: "第 17 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **A. connected**\n\"我意识到食物和当地文化是如此**紧密相连**。\"**be connected with** = \"与……相联系\"，是固定搭配。作者爱上苏州后才发现：苏州菜与苏州文化密不可分。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **be connected with/to** = 与……有关联、相连。\n- **be covered with** = 被……覆盖；**be compared with** = 与……比较；**be charged with** = 被指控/收费。\n- 同义替换：**be linked with / be related to / be associated with**。\n- 例句：*Health is closely connected with diet.* 健康与饮食紧密相关。\n\n### 🧱 语法 / 句法 (Grammar)\n- 句式：**so + 副词 + 过去分词 + with**。closely (副词) 修饰 connected (过去分词)。\n- 判定思路：看到空格后面的 **with**，回想哪个动词与 with 搭配最自然、并且符合语义——\"食物与文化\"的关系是\"相连\"，不是\"覆盖\"也不是\"比较\"。\n- **介词是这类题的钥匙**：connect → with，cover → with，compare → with/to，charge → with，介词都对，但只有 connect 在语义上贴合。\n\n### ❌ 为什么其他选项不行\n- **B. covered** — \"被覆盖\"，食物不能\"被文化覆盖\"，意思不通。\n- **C. compared** — \"比较\"。\"食物与文化相比\"逻辑很怪，作者不是在做对比。\n- **D. charged** — \"被收费/指控\"。完全无关。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到 closely 就猜 \"closely covered\"(紧密覆盖)，但 covered with 通常配合具体事物（被雪覆盖、被灰尘覆盖），不与抽象事物搭配。\n- 不重视 **with** 这个介词信号。其实只要看介词，就能秒杀很多\"动词被动态 + 介词\"的题。\n\n### 🧠 一句口诀\n**connect with 是相连，covered with 多具体**",
       knowledge_point: "完形填空",
     },
     {
@@ -400,7 +400,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "So",
   }, 
       answer: "D",
-      explanation: "第 18 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **D. So**\n\"食物和当地文化密切相关，**所以**我请本地朋友推荐最棒的店。\"前后是**因果关系**：因为意识到食物和文化挂钩 → 所以请本地朋友推荐。**So** = \"因此、所以\"。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **So** (连词) = \"因此、所以\"，引出**结果**。\n- **Or** = 或者 / 否则；**But** = 但是；**Yet** = 然而（与 but 类似，转折）。\n- 这四个都是高频连词，区分关键看**前后句的逻辑关系**：因果用 so，转折用 but / yet，选择/警告用 or。\n\n### 🧱 语法 / 句法 (Grammar)\n- 完形填空的连词题考查的是**句间逻辑**，不是语法。\n- 判定思路三步走：\n  1. 看前一句：作者意识到食物与文化相关。\n  2. 看后一句：作者去找本地朋友帮忙推荐。\n  3. 问自己：后一句是前一句的**结果**？还是**反面**？还是**选项**？这里明显是结果 → so。\n\n### ❌ 为什么其他选项不行\n- **A. Or** — \"或者/否则\"。前后不是选择关系，也没有警告语气。\n- **B. But** — \"但是\"。前后没有反差，\"意识到食物=文化\" 和 \"去问本地朋友\"在逻辑上是顺承，不是相反。\n- **C. Yet** — \"然而\"，与 but 同类型，也表转折，同样不符合。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到长句就慌，乱填连词。**连词题永远靠两句之间的逻辑关系**，先读懂两句话的意思，再判断是因果、转折、还是并列。\n- 忽视句首大写。空格在句首 + 首字母大写 → 一定是**连接两个句子**的连词，不是连接句子内部成分。\n\n### 🧠 一句口诀\n**因果用 so，反差用 but / yet**",
       knowledge_point: "完形填空",
     },
     {
@@ -413,7 +413,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "design",
   }, 
       answer: "A",
-      explanation: "第 19 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **A. suggestion**\n\"她**提议**了松鹤楼。\"上一句作者请朋友推荐 (asked... to recommend)，这一句朋友\"提出建议\"——recommend 和 suggestion 形成完美的呼应。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **come up with + 名词** = \"想出、提出（主意、建议、方案）\"，是高频固定搭配。\n- **suggestion** = 建议（名词，来自动词 suggest）。\n- **way** = 方法、方式；**money** = 钱；**design** = 设计。\n- 例句：*Can you come up with a better suggestion?* 你能提出更好的建议吗？\n\n### 🧱 语法 / 句法 (Grammar)\n- 空格在 **the ___ of Song He Lou** 中，需要一个**名词**。四个选项都是名词，所以判断点在语义。\n- 判定思路：上一句关键动词是 **recommend** (推荐)，与之最匹配的名词是 **suggestion** (建议) ——动词和名词形成语义呼应是完形填空的常见线索。\n- 同类替换：**advice / recommendation / idea / proposal** 都可以填这个空。\n\n### ❌ 为什么其他选项不行\n- **B. way** — \"松鹤楼的方法/方式\"，搭配怪异。\"the way of Song He Lou\" 不像中文里\"松鹤楼的做法\"那么自然。\n- **C. money** — \"松鹤楼的钱\"？完全无关。\n- **D. design** — \"松鹤楼的设计\"？朋友又不是建筑师，与\"推荐餐厅\"无关。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 不熟悉 **come up with** 这个高频短语。这是初中阶段必背的动词短语，类似的还有 **put up with** (容忍)、**catch up with** (赶上)、**keep up with** (跟上)。\n- 没有把这一句与上一句的 recommend 连起来看。**完形填空就是上下文呼应**，单看一句话往往四个选项都\"沾边\"。\n\n### 🧠 一句口诀\n**come up with 想主意，recommend 配 suggestion**",
       knowledge_point: "完形填空",
     },
     {
@@ -426,7 +426,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "choices",
   }, 
       answer: "D",
-      explanation: "第 20 题考查完形填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **D. choices**\n\"对初次来的游客来说，'松鼠桂鱼'和'蟹粉豆腐'是绝佳的**选择**。\"游客在很多菜中挑两道——这正是 choices (选择/选项) 的语义。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **choice** = 选择（可数名词）。**a good/excellent/wise choice** = 一个好/明智的选择。\n- **condition** = 条件、状况；**habit** = 习惯；**challenge** = 挑战。\n- 例句：*This restaurant is an excellent choice for a family dinner.* 这家餐厅是家庭聚餐的绝佳选择。\n\n### 🧱 语法 / 句法 (Grammar)\n- 主语是 **two dishes** (两道菜)，谓语 are excellent ___，空格要填**复数可数名词**作表语，与主语相呼应。\n- 四个选项都是可数名词复数形式，所以词性都对，**语义是关键**。\n- 判定思路：把句子换成中文\"对游客来说，这两道菜是绝佳的____\"——空格里填\"选择\"最自然。也可以试着替换：condition (条件)、habit (习惯)、challenge (挑战) 都说不通。\n\n### ❌ 为什么其他选项不行\n- **A. conditions** — \"条件、状况\"。两道菜是\"条件\"逻辑不通。\n- **B. habits** — \"习惯\"。菜不是习惯。\n- **C. challenges** — \"挑战\"。\"绝佳的挑战\"和\"对游客推荐美食\"语境不符；如果是难学/难吃才可能用 challenge。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 不懂 **a choice (选择/选项)** 的可数性。它既指\"做选择的动作\"，也指\"被选中的对象\"，本题用的是后者。\n- 把 choices 与 chooses (动词第三人称单数) 混淆。choices 是名词复数，chooses 是动词形式，**词性不同不可混用**。\n\n### 🧠 一句口诀\n**菜是 choice，事是 challenge**",
       knowledge_point: "完形填空",
     },
     {

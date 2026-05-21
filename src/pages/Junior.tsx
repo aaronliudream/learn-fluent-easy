@@ -1,7 +1,7 @@
 import { T } from "@/i18n/T";import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine, Rocket, Sparkles, Mic, MessageSquare } from "lucide-react";
+import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine, Rocket, Sparkles, Mic, MessageSquare, Landmark } from "lucide-react";
 import { ContinueCard } from "@/components/mastery/ContinueCard";
 
 const GRADE_FILTERS = [
@@ -28,7 +28,8 @@ export default function Junior() {
   { to: `/junior/grammar${q}`, icon: BookOpen, title: "语法冒险", desc: "每天一关闯关 · 反射改错 Boss · 间隔复习", gradient: "from-emerald-500 via-teal-500 to-cyan-500" },
   { to: `/junior/reading${q}`, icon: Target, title: "阅读训练", desc: "主题阅读 · 答题解析 · 答对喂宠物", gradient: "from-amber-500 via-orange-500 to-rose-500" },
   { to: `/junior/listening${q}`, icon: Headphones, title: "听力短文训练", desc: "对话/短文 · 听音答题 · 中考听力题型", gradient: "from-sky-500 via-blue-500 to-indigo-500" },
-  { to: `/junior/writing${q}`, icon: PenLine, title: "中考写作训练", desc: "命题作文 · AI 批改 · 高分范文对比", gradient: "from-fuchsia-500 via-pink-500 to-rose-500" }];
+  { to: `/junior/writing${q}`, icon: PenLine, title: "中考写作训练", desc: "命题作文 · AI 批改 · 高分范文对比", gradient: "from-fuchsia-500 via-pink-500 to-rose-500" },
+  { to: "/junior/suzhou", icon: Landmark, title: "🏛️ 苏州中考真题", desc: "历年真题模考 · AI 答疑 · 错题收藏", gradient: "from-stone-500 via-amber-600 to-orange-600" }];
 
 
   return (

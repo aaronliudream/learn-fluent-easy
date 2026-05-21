@@ -35,9 +35,20 @@ import {
   SUZHOU_TUTOR_STARTERS,
 } from "@/lib/suzhouExamAi";
 import { isReviewUnlocked, markSuzhouModeComplete, getSuzhouExamDraft, saveSuzhouExamDraft, clearSuzhouExamDraft } from "@/lib/suzhouExamProgress";
+import {
+  buildReportPayload,
+  findFirstWrongQuestion,
+  saveSuzhouMistakes,
+} from "@/lib/suzhouExamDiagnosis";
+import {
+  buildSuzhouReport,
+  getLatestLocalReport,
+  persistSuzhouReport,
+  type SuzhouExamReport,
+} from "@/lib/suzhouExamReports";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { ExamPaper as ExamPaperShell, ExamContainer, ExamCard, ExamProgress } from "@/components/exam/ExamPaper";
-import { DiagnosisTable } from "@/components/exam/DiagnosisExtras";
+import { SuzhouExamReportPanel } from "@/components/exam/SuzhouExamReportPanel";
 import QuestionRenderer from "@/components/exam/QuestionRenderer";
 import FavoriteButton from "@/components/exam/FavoriteButton";
 import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
@@ -122,9 +133,11 @@ export default function SuzhouExamPlay() {
   const [showReviewChat, setShowReviewChat] = useState(false);
   const [draftLoaded, setDraftLoaded] = useState(false);
   const [lastSavedAt, setLastSavedAt] = useState<string | null>(null);
+  const [savedReport, setSavedReport] = useState<SuzhouExamReport | null>(null);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const reportPersistedRef = useRef(false);
 
   const assistantUnlocked = exam && mode
     ? isAssistantUnlocked(exam, mode, submitted, answers)
@@ -207,23 +220,78 @@ export default function SuzhouExamPlay() {
     return () => clearTimeout(t);
   }, [jumpQ, exam?.id]);
 
+  const finalizeSubmit = useCallback(async (timedOut = false) => {
+    if (!exam || !mode || mode === "review" || reportPersistedRef.current) return;
+
+    const score = examAutoScore(exam, answers);
+    const pctNow = score.max ? Math.round((score.earned / score.max) * 100) : 0;
+    const unanswered = exam.questions.filter((q) => !answers[q.id]?.trim()).length;
+
+    setSubmitted(true);
+    reportPersistedRef.current = true;
+
+    saveSuzhouExamDraft(exam.id, mode, {
+      answers,
+      submitted: true,
+      remainingSec: mode === "exam" ? (timedOut ? 0 : remainingSec) : undefined,
+    });
+    markSuzhouModeComplete(exam.id, mode);
+
+    const payload = buildReportPayload({ exam, answers, mode, autoScore: score });
+    const report = buildSuzhouReport(payload);
+    const stored = await persistSuzhouReport(report);
+    setSavedReport(stored);
+    await saveSuzhouMistakes(exam, answers);
+
+    celebrateScore(pctNow);
+    if (timedOut) {
+      toast.warning(`考试时间到，已自动提交 · 客观题 ${score.earned}/${score.max}`);
+    } else {
+      toast.success(
+        unanswered > 0
+          ? `已提交（${unanswered} 题未作答）· 客观题 ${score.earned}/${score.max} · 诊断报告已生成`
+          : `提交成功 · 客观题 ${score.earned}/${score.max} · 诊断报告已生成`,
+      );
+    }
+
+    requestAnimationFrame(() => {
+      document.getElementById("suzhou-diagnosis-report")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, [exam, mode, answers, remainingSec]);
+
   useEffect(() => {
     if (mode !== "exam" || submitted || !exam) return;
     if (remainingSec <= 0) {
-      setSubmitted(true);
-      saveSuzhouExamDraft(exam.id, "exam", { answers, submitted: true, remainingSec: 0 });
-      markSuzhouModeComplete(exam.id, "exam");
-      toast.warning("考试时间到，已自动提交");
+      void finalizeSubmit(true);
       return;
     }
     const t = setInterval(() => setRemainingSec((s) => s - 1), 1000);
     return () => clearInterval(t);
-  }, [mode, submitted, remainingSec, exam, answers]);
+  }, [mode, submitted, remainingSec, exam, finalizeSubmit]);
 
   useEffect(() => {
-    if (!exam || !mode || mode === "review" || !submitted) return;
-    markSuzhouModeComplete(exam.id, mode);
-  }, [exam, mode, submitted]);
+    if (!exam || !mode || mode === "review" || !submitted || savedReport) return;
+
+    const existing = getLatestLocalReport(exam.id, mode);
+    if (existing) {
+      setSavedReport(existing);
+      reportPersistedRef.current = true;
+      return;
+    }
+
+    const score = examAutoScore(exam, answers);
+    const report = buildSuzhouReport(buildReportPayload({ exam, answers, mode, autoScore: score }));
+    setSavedReport(report);
+    reportPersistedRef.current = true;
+    void persistSuzhouReport(report).then(setSavedReport);
+    void saveSuzhouMistakes(exam, answers);
+  }, [exam, mode, submitted, answers, savedReport]);
+
+  useEffect(() => {
+    if (!exam || !mode || mode === "review") return;
+    reportPersistedRef.current = false;
+    setSavedReport(null);
+  }, [exam?.id, mode]);
 
   /** IntersectionObserver：threshold 0.5，追踪当前视窗内题目 */
   useEffect(() => {
@@ -322,21 +390,7 @@ export default function SuzhouExamPlay() {
   });
 
   const doSubmit = () => {
-    setSubmitted(true);
-    if (mode && mode !== "review") {
-      saveSuzhouExamDraft(exam.id, mode, {
-        answers,
-        submitted: true,
-        remainingSec: mode === "exam" ? remainingSec : undefined,
-      });
-      markSuzhouModeComplete(exam.id, mode);
-    }
-    celebrateScore(pct);
-    toast.success(
-      unansweredCount > 0
-        ? `已提交（${unansweredCount} 题未作答）· 客观题 ${autoScore.earned}/${autoScore.max}`
-        : `提交成功 · 客观题 ${autoScore.earned}/${autoScore.max}`,
-    );
+    void finalizeSubmit(false);
   };
 
   const handleSubmit = () => {
@@ -353,9 +407,21 @@ export default function SuzhouExamPlay() {
     if (mode && mode !== "review") clearSuzhouExamDraft(exam.id, mode);
     setAnswers({});
     setSubmitted(false);
+    setSavedReport(null);
+    reportPersistedRef.current = false;
     setRemainingSec(exam.duration_seconds);
     setLastSavedAt(null);
     toast.info("已清空作答，重新开始");
+  };
+
+  const openReportAi = () => {
+    const wrong = findFirstWrongQuestion(exam, answers);
+    if (wrong) {
+      setTutorFor(wrong);
+      return;
+    }
+    setShowReviewChat(true);
+    document.getElementById("suzhou-ai-review")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const jumpToQuestion = (qid: string) => {
@@ -672,8 +738,14 @@ export default function SuzhouExamPlay() {
           <h1 className="exam-display text-[clamp(22px,3vw,32px)] leading-tight">{exam.title}</h1>
         </header>
 
-        {/* 总分卡片 */}
-        {(submitted || mode === "review") && (
+        {/* 诊断报告（交卷后） */}
+        {submitted && savedReport && mode !== "review" && (
+          <div className="mb-10">
+            <SuzhouExamReportPanel report={savedReport} onAskAI={openReportAi} />
+          </div>
+        )}
+
+        {(mode === "review" || (submitted && !savedReport)) && (
           <div className="mb-8 exam-card p-5 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
@@ -685,32 +757,20 @@ export default function SuzhouExamPlay() {
                   {autoScore.correct}/{autoScore.total} <T>题正确 ·</T> {pct}%
                 </div>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-                {sections.filter((s) => s.questions.some(isAutoGraded)).map((g) => {
-                  const sc = sectionScore(g.questions.filter(isAutoGraded), answers, exam);
-                  return (
-                    <div key={g.section} className="rounded-lg bg-white/60 dark:bg-black/20 px-3 py-2">
-                      <div className="exam-mute truncate">{getSectionMeta(exam, g.section).title.split("·")[0]?.trim()}</div>
-                      <div className="font-bold">{sc.earned}/{sc.max}</div>
-                    </div>
-                  );
-                })}
-              </div>
+              {mode === "review" && (
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                  {sections.filter((s) => s.questions.some(isAutoGraded)).map((g) => {
+                    const sc = sectionScore(g.questions.filter(isAutoGraded), answers, exam);
+                    return (
+                      <div key={g.section} className="rounded-lg bg-white/60 dark:bg-black/20 px-3 py-2">
+                        <div className="exam-mute truncate">{getSectionMeta(exam, g.section).title.split("·")[0]?.trim()}</div>
+                        <div className="font-bold">{sc.earned}/{sc.max}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
-          </div>
-        )}
-
-        {submitted && (
-          <div className="mb-8">
-            <DiagnosisTable
-              rows={exam.questions.filter(isAutoGraded).map((q) => ({
-                index: questionNum(q.id),
-                point: q.knowledge_point,
-                isCorrect: checkCorrect(q, answers[q.id]) === true,
-                trap: checkCorrect(q, answers[q.id]) === false ? "知识盲区" : null,
-              }))}
-              subtitle="各题考点对错一览（仅客观题）"
-            />
           </div>
         )}
 
@@ -840,7 +900,7 @@ export default function SuzhouExamPlay() {
       )}
 
       {(submitted || mode === "review") && examSnapshot && (
-        <ExamContainer max="7xl" className="mt-8 pb-8">
+        <ExamContainer max="7xl" className="mt-8 pb-8" id="suzhou-ai-review">
           {!showReviewChat ? (
             <ExamCard className="text-center">
               <MessageCircle className="mx-auto mb-2 size-8 text-indigo-500" />

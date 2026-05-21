@@ -5,11 +5,12 @@ import type { User } from "@supabase/supabase-js";
 import { PageHeader } from "@/components/PageHeader";
 import {
   BarChart3, BookMarked, Bookmark, Heart, Trophy, Users, Settings, Crown,
-  LogIn, LogOut, GraduationCap, Sparkles, ClipboardList, Target, Star } from
+  LogIn, LogOut, GraduationCap, Sparkles, ClipboardList, Target, Star, FileText } from
 "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fetchWeakKnowledgePoints } from "@/lib/knowledgePointMastery";
 import { AlertCircle } from "lucide-react";
+import { listRecentSuzhouReports, type SuzhouExamReport } from "@/lib/suzhouExamReports";
 
 type Tile = {to: string;label: string;sub: string;icon: React.ComponentType<{className?: string;}>;tone: string;};
 
@@ -32,6 +33,7 @@ export default function Me() {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<{display_name?: string | null;} | null>(null);
   const [weakKps, setWeakKps] = useState<any[]>([]);
+  const [recentReports, setRecentReports] = useState<SuzhouExamReport[]>([]);
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_e, s) => setUser(s?.user ?? null));
@@ -49,6 +51,10 @@ export default function Me() {
       maybeSingle();
       setProfile(data ?? null);
     })();
+  }, [user]);
+
+  useEffect(() => {
+    listRecentSuzhouReports(6).then(setRecentReports).catch(() => setRecentReports([]));
   }, [user]);
 
   useEffect(() => {
@@ -132,6 +138,40 @@ export default function Me() {
                 </div>
               );
             })}
+          </div>
+        </section>
+      )}
+
+      {/* 最近测验报告（苏州真题） */}
+      {recentReports.length > 0 && (
+        <section className="mt-4 rounded-2xl border border-indigo-300/40 bg-gradient-to-br from-indigo-50/80 to-violet-50/50 p-5 dark:from-indigo-950/20 dark:to-violet-950/10">
+          <div className="mb-3 flex items-center gap-2">
+            <FileText className="size-5 text-indigo-600" />
+            <h2 className="text-base font-extrabold"><T>最近测验报告</T></h2>
+            <span className="ml-auto text-[11px] text-muted-foreground"><T>苏州中考真题</T></span>
+          </div>
+          <div className="space-y-2">
+            {recentReports.map((r) => (
+              <Link
+                key={r.id}
+                to={`/junior/suzhou/report/${r.id}`}
+                className="flex items-center gap-3 rounded-xl border bg-card p-3 transition hover:border-indigo-400 hover:shadow-sm"
+              >
+                <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 text-sm font-extrabold text-white">
+                  {r.scorePct}%
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="truncate text-sm font-bold">{r.examTitle}</div>
+                  <div className="mt-0.5 text-[11px] text-muted-foreground">
+                    {r.mode === "exam" ? "考试模式" : "练习模式"} · {r.earned}/{r.maxScore} 分
+                    {r.mistakeCount > 0 ? ` · ${r.mistakeCount} 错题` : " · 客观题全对"}
+                    {" · "}
+                    {new Date(r.submittedAt).toLocaleDateString("zh-CN")}
+                  </div>
+                </div>
+                <span className="shrink-0 text-xs font-bold text-indigo-600"><T>查看报告 →</T></span>
+              </Link>
+            ))}
           </div>
         </section>
       )}

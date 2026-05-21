@@ -2,6 +2,37 @@ import { ReactNode } from "react";
 import { T } from "@/i18n/T";
 import { cn } from "@/lib/utils";
 
+/** 文中空格：左侧阿拉伯数字 + 答题控件（贴近纸质试卷体验） */
+function BlankSlot({
+  num,
+  qid,
+  disabled,
+  children,
+}: {
+  num: number;
+  qid: string;
+  disabled?: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <span
+      data-qid={qid}
+      className={cn(
+        "mx-0.5 inline-flex items-baseline gap-1 align-baseline",
+        "rounded-md border border-amber-300/70 bg-amber-50/90 px-1 py-0.5",
+        "shadow-[0_1px_0_rgba(180,83,9,0.12)]",
+        disabled && "opacity-75",
+      )}>
+      <span
+        className="inline-flex min-w-[1.1rem] shrink-0 items-center justify-center text-[11px] font-extrabold tabular-nums text-amber-800"
+        aria-label={`第 ${num} 空`}>
+        {num}
+      </span>
+      {children}
+    </span>
+  );
+}
+
 /** 将 passage 中的 __N__ 占位符替换成 inline 控件 */
 export function PassageWithBlanks({
   text,
@@ -41,31 +72,33 @@ export function PassageWithBlanks({
       const opts = getSelectOptions?.(qid) ?? selectOptions;
       if (inputType === "select" && opts) {
         parts.push(
-          <span key={key++} data-qid={qid} className="inline">
+          <BlankSlot key={key++} num={num} qid={qid} disabled={disabled}>
             <select
               value={val}
               disabled={disabled}
               onChange={(e) => onChange(qid, e.target.value)}
-              className="mx-0.5 inline-block min-w-[3rem] rounded border border-amber-400/60 bg-amber-50 px-1 py-0.5 text-sm font-bold text-amber-900 align-baseline focus:outline-none focus:ring-1 focus:ring-amber-400">
-              <option value="">—</option>
+              aria-label={`第 ${num} 空`}
+              className="inline-block min-w-[2.75rem] max-w-[4rem] rounded border-0 bg-transparent py-0.5 text-sm font-bold text-amber-900 align-baseline focus:outline-none focus:ring-1 focus:ring-amber-400">
+              <option value="">{val ? "—" : "选择"}</option>
               {Object.keys(opts).sort().map((letter) => (
                 <option key={letter} value={letter}>{letter}</option>
               ))}
             </select>
-          </span>,
+          </BlankSlot>,
         );
       } else {
         parts.push(
-          <span key={key++} data-qid={qid} className="inline">
+          <BlankSlot key={key++} num={num} qid={qid} disabled={disabled}>
             <input
               type="text"
               value={val}
               disabled={disabled}
               onChange={(e) => onChange(qid, e.target.value)}
-              className="mx-0.5 inline-block w-24 rounded border border-amber-400/60 bg-amber-50 px-1.5 py-0.5 text-sm font-semibold text-amber-900 align-baseline focus:outline-none focus:ring-1 focus:ring-amber-400"
-              placeholder={`${num}`}
+              aria-label={`第 ${num} 空`}
+              placeholder="填写"
+              className="inline-block w-[5.5rem] border-0 bg-transparent px-0.5 py-0.5 text-sm font-semibold text-amber-900 align-baseline placeholder:font-normal placeholder:text-amber-600/50 focus:outline-none focus:ring-1 focus:ring-amber-400 rounded-sm"
             />
-          </span>,
+          </BlankSlot>,
         );
       }
     } else {

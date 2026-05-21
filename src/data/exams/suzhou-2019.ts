@@ -14,15 +14,15 @@ export const SUZHOU_2019: ExamPaper = {
     label: "A",
     from: 21,
     to: 23,
-    kind: "passage",
-    passageKey: "reading_A",
+    kind: "library_poster",
+    resourceKey: "library_poster_A",
   },
     {
     label: "B",
     from: 24,
     to: 26,
-    kind: "passage",
-    passageKey: "reading_B",
+    kind: "egg_article",
+    resourceKey: "egg_article_B",
   },
     {
     label: "C",
@@ -40,7 +40,7 @@ export const SUZHOU_2019: ExamPaper = {
   },
   ],
   passages: {
-    cloze: "Sometimes choosing where to eat in Suzhou is something of a challenge. No matter how  11  the food tastes at a chosen restaurant, one may always wonder, \"Is there anything better on the next street?\" However, I've found the  12  to this question. When I'm asked to name my favourite place to eat in Suzhou, I will reply  13 , \"Song He Lou Restaurant\". Why is Song He Lou so special  14  hundreds of restaurants? Well, for me it comes down to a perfect balance of delicious food, pleasant atmosphere (氛围) and a near-perfect location.\n\nBefore coming to Suzhou, I was  15  by my friends from other cities in China that the food could be too sweet. For the first few months I chose to eat in Sichuan or Hunan style restaurants instead of eating much  16  food. However, after falling in love with the city, I came to realize that the food is so closely  17  with its local culture.  18  I asked a local friend to recommend the best place to try real local style food. She came up with the  19  of Song He Lou.\n\nFor a first-time visitor, \"Song Shu Gui Yu\" and \"Xie Fen Tofu\" are excellent  20 . Suzhou has now become my home and I have a lifetime to enjoy each and every dish on the menu.",
+    cloze: "Sometimes choosing where to eat in Suzhou is something of a challenge. No matter how __11__ the food tastes at a chosen restaurant, one may always wonder, \"Is there anything better on the next street?\" However, I've found the __12__ to this question. When I'm asked to name my favourite place to eat in Suzhou, I will reply __13__, \"Song He Lou Restaurant\". Why is Song He Lou so special __14__ hundreds of restaurants? Well, for me it comes down to a perfect balance of delicious food, pleasant atmosphere (氛围) and a near-perfect location.\n\nBefore coming to Suzhou, I was __15__ by my friends from other cities in China that the food could be too sweet. For the first few months I chose to eat in Sichuan or Hunan style restaurants instead of eating much __16__ food. However, after falling in love with the city, I came to realize that the food is so closely __17__ with its local culture. __18__ I asked a local friend to recommend the best place to try real local style food. She came up with the __19__ of Song He Lou.\n\nFor a first-time visitor, \"Song Shu Gui Yu\" and \"Xie Fen Tofu\" are excellent __20__. Suzhou has now become my home and I have a lifetime to enjoy each and every dish on the menu.",
     reading_A: "School holiday activities at the library\n\nActivity\n\nCartooning with Eva Leung\n\nWhen\n\nTuesday 7 June, 9–11 a.m.\n\nCost\n\n$3.00 to cover the cost of art paper and pencils\n\nWho\n\n5 to 8-year-olds\n\nActivity\n\nCartooning with Eva Leung\n\nWhen\n\nWednesday 8 June, 9–11 a.m.\n\nCost\n\n$3.00 to cover the cost of art paper and pencils\n\nWho\n\n9 to 10-year-olds\n\n*Eva Leung is famous for her cartoons published regularly in KIDStime magazine.\n\nActivity\n\nKite-making\n\nWhen\n\nWednesday 8 June, 2–4 p.m.\n\nCost\n\n$3.00 to cover the cost of paper, string and other materials\n\nWho\n\n5 to 10-year-olds\n\nActivity\n\nKite-making\n\nWhen\n\nThursday 9 June, 2–4 p.m.\n\nCost\n\n$3.00 to cover the cost of paper, string and other materials\n\nWho\n\n5 to 10-year-olds",
     reading_B: "People all over the world eat eggs. Most of the eggs we eat come from hens. Eggs are easy to cook. They can be cooked in lots of ways such as fried or hard-boiled. Eggs can be used with other things to make cakes and ice-cream.\n\nParts of an egg:\n\nShell — The shell protects the egg. Shells can be brown or white.\n\nWhite (albumen) — The eggwhite is mostly water, protein and some minerals. Before it is cooked, the white is not white; it is clear.\n\nYolk — The yolk has most of the egg's vitamins and minerals. The yolk can be pale yellow to dark orange. The colour depends on what the hen eats.\n\nThe fresh test\n\nPut your egg in a pan of water and use the guide below to find out how old your egg is.\n\nWhat happens to the egg\n\nAge of the egg\n\nSinks (下沉) to the bottom of the pan and stays there\n\n3–6 days old\n\nSinks, but floats at an angle (角度)\n\nJust over 1 week old\n\nSinks, and then stands on end\n\nAbout 2 weeks old\n\nFloats on top or just under the surface\n\nOver 2 weeks old\n\nEggs last a long time. You can keep them for about four weeks in your fridge.",
     reading_C: "Every day there is less and less space on Earth for rubbish. Yet every day we make more and more rubbish. What can we do? We can recycle some of our rubbish. Recycling means that the rubbish will be made into something that can be used again.\n\nRecycling helps Earth. And it saves space in rubbish dumps. Half of everything that we put into landfills could be recycled instead. In fact, most things made of paper, metal, glass and plastic can be recycled.\n\nPaper can be broken into small pieces and made into new paper. Steel and aluminum cans (金属罐) can be melted down (熔化) and made into new cans. The same is true of glass bottles. This can be done over and over again. Recycling doesn't take as much energy as making these things the first time. So we can use less of Earth's fuel resources.\n\nPlastic can be melted down, too. Then it can be formed into park benches, playgrounds and so on. Some people call plastic the \"wood\" of the future. Things made of plastic will last about 400 years—even if they stay outside in the weather. No wood can do that!",
@@ -49,6 +49,74 @@ export const SUZHOU_2019: ExamPaper = {
     response: "An interview with Andy Griffiths\n\nAndy Griffiths is well known as a writer of children's books. Here are some interesting things you might not know about him!\n\nWhat do you like to do after a long day of writing?\n\nI go for long runs and bike rides beside the beach. An hour of exercise after a long day of writing gives me energy. Then I'm ready to write some more.\n\nDo you write using a computer or by hand?\n\nAt first I write the stories by hand, and then I transfer (转录) them onto a computer. I like to write by hand when I travel. I find it very easy to lose myself in my diary when I am away from my usual activities.\n\nWhat super power would you like to have?\n\nX-ray vision (影像) if I can control it.\n\nWhat is your favourite food?\n\nI'm never happier than when I'm drinking banana milkshakes. And I love fish. But I don't like drinking fish milkshakes—they are just terrible!\n\nWhat is your favourite book?\n\nAlice in Wonderland. It has so many surprises and such silliness in it.\n\nDo you write for adults too?\n\nOnly if I really have to. I much prefer the freedom and fun of writing for children.\n\nWhat do you say to kids who say, \"Why should I read?\"\n\nAs Dr. Seuss says, \"The more you read, the more things you will know. The more you learn, the more places you'll go.\"",
   },
   resources: {
+    library_poster_A: {
+      title: "School holiday activities at the library",
+      sessions: [
+        {
+          activity: "Cartooning with Eva Leung",
+          when: "Tuesday 7 June, 9–11 a.m.",
+          cost: "$3.00 to cover the cost of art paper and pencils",
+          who: "5 to 8-year-olds",
+        },
+        {
+          activity: "Cartooning with Eva Leung",
+          when: "Wednesday 8 June, 9–11 a.m.",
+          cost: "$3.00 to cover the cost of art paper and pencils",
+          who: "9 to 10-year-olds",
+        },
+        {
+          activity: "Kite-making",
+          when: "Wednesday 8 June, 2–4 p.m.",
+          cost: "$3.00 to cover the cost of paper, string and other materials",
+          who: "5 to 10-year-olds",
+        },
+        {
+          activity: "Kite-making",
+          when: "Thursday 9 June, 2–4 p.m.",
+          cost: "$3.00 to cover the cost of paper, string and other materials",
+          who: "5 to 10-year-olds",
+        },
+      ],
+      footnote: "*Eva Leung is famous for her cartoons published regularly in KIDStime magazine.",
+    },
+    egg_article_B: {
+      intro: "People all over the world eat eggs. Most of the eggs we eat come from hens. Eggs are easy to cook. They can be cooked in lots of ways such as fried or hard-boiled. Eggs can be used with other things to make cakes and ice-cream.",
+      parts: [
+        {
+          title: "Shell",
+          text: "The shell protects the egg. Shells can be brown or white.",
+        },
+        {
+          title: "White (albumen)",
+          text: "The eggwhite is mostly water, protein and some minerals. Before it is cooked, the white is not white; it is clear.",
+        },
+        {
+          title: "Yolk",
+          text: "The yolk has most of the egg's vitamins and minerals. The yolk can be pale yellow to dark orange. The colour depends on what the hen eats.",
+        },
+      ],
+      freshTitle: "The fresh test",
+      freshIntro: "Put your egg in a pan of water and use the guide below to find out how old your egg is.",
+      freshRows: [
+        {
+          observation: "Sinks (下沉) to the bottom of the pan and stays there",
+          age: "3–6 days old",
+        },
+        {
+          observation: "Sinks, but floats at an angle (角度)",
+          age: "Just over 1 week old",
+        },
+        {
+          observation: "Sinks, and then stands on end",
+          age: "About 2 weeks old",
+        },
+        {
+          observation: "Floats on top or just under the surface",
+          age: "Over 2 weeks old",
+        },
+      ],
+      freshOutro: "Eggs last a long time. You can keep them for about four weeks in your fridge.",
+    },
     restore_options: {
     A: "He's huge!",
     B: "And he's very funny too.",

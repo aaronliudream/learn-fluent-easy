@@ -1,6 +1,67 @@
 import type { ExamPaper, ExamQuestion, ExamSection, ReadingBlock } from "@/data/exams";
 
 export type ExamMode = "exam" | "practice" | "review";
+export type ExamFormat = "legacy8" | "modern7";
+
+/** 2019–2021：单项填空 1–10 → 完形 11–20 → 阅读 21–32 … */
+export function getExamFormat(exam: ExamPaper): ExamFormat {
+  return exam.year <= 2021 ? "legacy8" : "modern7";
+}
+
+/** 完形/还原文中「 11 」→ __11__，便于 inline 选题 */
+export function normalizePassageBlanks(text: string): string {
+  let out = text.replace(/__\s*(\d{1,2})\s*__/g, "__$1__");
+  out = out.replace(/(?<=[\w"'(，。！？；：])\s+(\d{1,2})\s+(?=[\w"'(，。！？；：])/g, " __$1__ ");
+  return out;
+}
+
+const LEGACY8_SECTION_OVERRIDES: Partial<
+  Record<ExamSection, Partial<{ title: string; instruction: string; scoreLabel: string }>>
+> = {
+  cloze: {
+    title: "第二部分 · 完形填空",
+    scoreLabel: "共 10 小题 · 每小题 1 分 · 满分 10 分",
+  },
+  reading: {
+    title: "第三部分 · 阅读理解",
+    scoreLabel: "共 12 小题 · 每小题 2 分 · 满分 24 分",
+  },
+  restore: {
+    title: "第四部分 · 信息还原",
+    scoreLabel: "共 5 小题 · 每小题 1 分 · 满分 5 分",
+  },
+  vocab_fill: {
+    title: "第五部分 · 词汇检测",
+    scoreLabel: "共 10 小题 · 每小题 1 分 · 满分 10 分",
+  },
+  translation: {
+    title: "第六部分 · 句子翻译",
+    scoreLabel: "共 5 小题 · 每小题 3 分 · 满分 15 分",
+  },
+  response: {
+    title: "第七部分 · 阅读表达",
+    scoreLabel: "共 3 小题 · 53 题 1 分 · 54 题 2 分 · 55 题 3 分 · 满分 6 分",
+  },
+  writing: {
+    title: "第八部分 · 书面表达",
+    scoreLabel: "共 1 题 · 满分 20 分",
+  },
+};
+
+export function getSectionMeta(
+  exam: ExamPaper,
+  section: ExamSection,
+): { title: string; instruction: string; scoreLabel: string; pointsPerQuestion: number } {
+  const base = SECTION_META[section];
+  if (getExamFormat(exam) !== "legacy8") return base;
+  const override = LEGACY8_SECTION_OVERRIDES[section];
+  return {
+    ...base,
+    ...override,
+    pointsPerQuestion:
+      section === "writing" ? 20 : base.pointsPerQuestion,
+  };
+}
 
 export const SECTION_META: Record<
   ExamSection,
@@ -70,9 +131,11 @@ export const SECTION_META: Record<
 
 const RESPONSE_POINTS: Record<string, number> = { q54: 2, q55: 2, q56: 3 };
 
-export function questionPoints(q: ExamQuestion): number {
+export function questionPoints(q: ExamQuestion, exam?: ExamPaper): number {
   if (q.section === "response") return RESPONSE_POINTS[q.id] ?? 2;
-  if (q.section === "writing") return 25;
+  if (q.section === "writing") {
+    return exam && getExamFormat(exam) === "legacy8" ? 20 : 25;
+  }
   return SECTION_META[q.section].pointsPerQuestion;
 }
 
@@ -109,15 +172,16 @@ export function groupQuestionsBySection(exam: ExamPaper): { section: ExamSection
 export function sectionScore(
   questions: ExamQuestion[],
   answers: Record<string, string>,
+  exam?: ExamPaper,
 ): { earned: number; max: number; correct: number; total: number } {
   let earned = 0;
   let max = 0;
   let correct = 0;
   for (const q of questions) {
-    max += questionPoints(q);
+    max += questionPoints(q, exam);
     const ok = checkCorrect(q, answers[q.id]);
     if (ok === true) {
-      earned += questionPoints(q);
+      earned += questionPoints(q, exam);
       correct += 1;
     }
   }
@@ -127,9 +191,9 @@ export function sectionScore(
 export function examAutoScore(exam: ExamPaper, answers: Record<string, string>) {
   const auto = exam.questions.filter(isAutoGraded);
   const earned = auto.reduce((sum, q) => {
-    return checkCorrect(q, answers[q.id]) ? sum + questionPoints(q) : sum;
+    return checkCorrect(q, answers[q.id]) ? sum + questionPoints(q, exam) : sum;
   }, 0);
-  const max = auto.reduce((sum, q) => sum + questionPoints(q), 0);
+  const max = auto.reduce((sum, q) => sum + questionPoints(q, exam), 0);
   const correct = auto.filter((q) => checkCorrect(q, answers[q.id])).length;
   return { earned, max, correct, total: auto.length };
 }
@@ -184,7 +248,7 @@ export function unitLabelForQuestion(exam: ExamPaper, q: ExamQuestion): string {
     const block = getReadingBlocks(exam).find((b) => n >= b.from && n <= b.to);
     return block ? `Passage ${block.label}` : "阅读理解";
   }
-  return SECTION_META[q.section].title.split("·")[0]?.trim() ?? q.section;
+  return getSectionMeta(exam, q.section).title.split("·")[0]?.trim() ?? q.section;
 }
 
 export function shouldShowExplanation(

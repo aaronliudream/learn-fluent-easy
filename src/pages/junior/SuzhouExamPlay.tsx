@@ -10,7 +10,7 @@ import NoCopyGuard from "@/components/NoCopyGuard";
 import { getExam, type ExamQuestion } from "@/data/exams";
 import {
   type ExamMode,
-  SECTION_META,
+  getSectionMeta,
   MODE_LABELS,
   groupQuestionsBySection,
   examAutoScore,
@@ -25,6 +25,7 @@ import {
   isUnitComplete,
   unitLabelForQuestion,
   shouldShowExplanation,
+  normalizePassageBlanks,
 } from "@/lib/suzhouExamUtils";
 import {
   assistantLockedHint,
@@ -41,7 +42,7 @@ import QuestionRenderer from "@/components/exam/QuestionRenderer";
 import FavoriteButton from "@/components/exam/FavoriteButton";
 import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
 import TutorChat from "@/components/tutor/TutorChat";
-import { PassageWithBlanks, MusicFestivalPoster, AnswerSheet } from "@/components/exam/SuzhouExamParts";
+import { PassageWithBlanks, MusicFestivalPoster, LibraryHolidayPoster, EggReadingArticle, AnswerSheet } from "@/components/exam/SuzhouExamParts";
 
 const VALID_MODES: ExamMode[] = ["exam", "practice", "review"];
 
@@ -313,7 +314,7 @@ export default function SuzhouExamPlay() {
 
   const sheetGroups = sections.map((g) => ({
     section: g.section,
-    label: SECTION_META[g.section].title.split("·")[0]?.trim() ?? g.section,
+    label: getSectionMeta(exam, g.section).title.split("·")[0]?.trim() ?? g.section,
     questions: g.questions.map((q) => ({ id: q.id, num: questionNum(q.id) })),
   }));
 
@@ -323,11 +324,12 @@ export default function SuzhouExamPlay() {
 
     if (sectionKey === "cloze") {
       const qMap = Object.fromEntries(questions.map((q) => [q.id, q]));
+      const passageText = normalizePassageBlanks(passage);
       return (
         <ExamCard className="mb-6">
           <div className="exam-eyebrow mb-2"><T>完形填空 · 阅读材料</T></div>
           <PassageWithBlanks
-            text={passage}
+            text={passageText}
             blankIds={buildBlankMap(questions)}
             answers={answers}
             onChange={setAnswer}
@@ -335,14 +337,6 @@ export default function SuzhouExamPlay() {
             inputType="select"
             getSelectOptions={(qid) => qMap[qid]?.options ?? {}}
           />
-          <div className="mt-4 space-y-2 border-t exam-divider pt-4">
-            {questions.map((q) => (
-              <div key={q.id} className="text-sm exam-soft">
-                <strong>{questionNum(q.id)}.</strong>{" "}
-                {q.options && Object.entries(q.options).map(([k, v]) => `${k}. ${v}`).join("  ")}
-              </div>
-            ))}
-          </div>
         </ExamCard>
       );
     }
@@ -469,6 +463,14 @@ export default function SuzhouExamPlay() {
               </div>
               {block.kind === "poster" ? (
                 <MusicFestivalPoster data={(exam.resources?.poster_A ?? {}) as Record<string, unknown>} />
+              ) : block.kind === "library_poster" ? (
+                <LibraryHolidayPoster
+                  data={(exam.resources?.[block.resourceKey ?? "library_poster_A"] ?? {}) as Record<string, unknown>}
+                />
+              ) : block.kind === "egg_article" ? (
+                <EggReadingArticle
+                  data={(exam.resources?.[block.resourceKey ?? "egg_article_B"] ?? {}) as Record<string, unknown>}
+                />
               ) : (
                 exam.passages[passageKey] && (
                   <div className="exam-passage whitespace-pre-wrap">{exam.passages[passageKey]}</div>
@@ -542,10 +544,10 @@ export default function SuzhouExamPlay() {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
                 {sections.filter((s) => s.questions.some(isAutoGraded)).map((g) => {
-                  const sc = sectionScore(g.questions.filter(isAutoGraded), answers);
+                  const sc = sectionScore(g.questions.filter(isAutoGraded), answers, exam);
                   return (
                     <div key={g.section} className="rounded-lg bg-white/60 dark:bg-black/20 px-3 py-2">
-                      <div className="exam-mute truncate">{SECTION_META[g.section].title.split("·")[0]?.trim()}</div>
+                      <div className="exam-mute truncate">{getSectionMeta(exam, g.section).title.split("·")[0]?.trim()}</div>
                       <div className="font-bold">{sc.earned}/{sc.max}</div>
                     </div>
                   );
@@ -572,7 +574,7 @@ export default function SuzhouExamPlay() {
         <div ref={containerRef} className="grid gap-8 lg:grid-cols-[1fr_240px] items-start">
           <div className="space-y-10 min-w-0">
             {sections.map(({ section, questions }) => {
-              const meta = SECTION_META[section];
+              const meta = getSectionMeta(exam, section);
               const passageKey =
                 section === "reading" ? null :
                 section === "writing" ? null :

@@ -317,6 +317,12 @@ def extract_section(lines: list[str], start_pat: str, end_pats: list[str]) -> li
 def normalize_passage_blanks(text: str) -> str:
     text = re.sub(r"__\s*(\d{1,2})\s*__", r"__\1__", text)
     text = re.sub(r"▲", lambda m: "__BLANK__", text)
+    # Legacy cloze: bare spaced numbers like "how  11  the" → "how __11__ the"
+    text = re.sub(
+        r"(?<=[\w\"'(\u4e00-\u9fff，。！？；：])\s+(\d{1,2})\s+(?=[\w\"'(\u4e00-\u9fff，。！？；：])",
+        r" __\1__ ",
+        text,
+    )
     return text
 
 

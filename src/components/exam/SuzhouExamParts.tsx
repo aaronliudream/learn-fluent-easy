@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { T } from "@/i18n/T";
 import { cn } from "@/lib/utils";
 
-/** 文中空格：左侧阿拉伯数字 + 答题控件（贴近纸质试卷体验） */
+/** 文中空格：下划线 + 阿拉伯数字 + 答题控件（贴近纸质试卷） */
 function BlankSlot({
   num,
   qid,
@@ -18,15 +18,15 @@ function BlankSlot({
     <span
       data-qid={qid}
       className={cn(
-        "mx-0.5 inline-flex items-baseline gap-1 align-baseline",
-        "rounded-md border border-amber-300/70 bg-amber-50/90 px-1 py-0.5",
-        "shadow-[0_1px_0_rgba(180,83,9,0.12)]",
+        "mx-0.5 inline-flex items-baseline gap-0.5 align-baseline",
         disabled && "opacity-75",
       )}>
-      <span
-        className="inline-flex min-w-[1.1rem] shrink-0 items-center justify-center text-[11px] font-extrabold tabular-nums text-amber-800"
-        aria-label={`第 ${num} 空`}>
-        {num}
+      <span className="inline-block min-w-[1.75rem] border-b-2 border-amber-700/80 px-0.5 text-center align-baseline">
+        <span
+          className="text-[11px] font-extrabold tabular-nums text-amber-900"
+          aria-label={`第 ${num} 空`}>
+          {num}
+        </span>
       </span>
       {children}
     </span>
@@ -126,6 +126,113 @@ export function MusicFestivalPoster({ data }: { data: Record<string, unknown> })
         </div>
       ))}
       <div className="text-xs exam-mute">{String(data.contact ?? "")}</div>
+    </div>
+  );
+}
+
+type ActivitySession = {
+  activity: string;
+  when: string;
+  cost: string;
+  who: string;
+};
+
+function ActivityTable({ session }: { session: ActivitySession }) {
+  const rows: [string, string][] = [
+    ["Activity", session.activity],
+    ["When", session.when],
+    ["Cost", session.cost],
+    ["Who", session.who],
+  ];
+  return (
+    <table className="w-full border-collapse border border-[hsl(var(--exam-rule))] text-sm">
+      <tbody>
+        {rows.map(([label, value]) => (
+          <tr key={label}>
+            <td className="w-[5.5rem] border border-[hsl(var(--exam-rule))] bg-[hsl(var(--exam-paper-soft))] px-2 py-1.5 font-semibold align-top">
+              {label}
+            </td>
+            <td className="border border-[hsl(var(--exam-rule))] px-2 py-1.5 align-top">
+              {label === "When" ? <strong>{value}</strong> : value}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+/** 2019 阅读 A：图书馆假期活动海报（四格表格） */
+export function LibraryHolidayPoster({ data }: { data: Record<string, unknown> }) {
+  const sessions = (data.sessions as ActivitySession[]) ?? [];
+  const footnote = String(data.footnote ?? "");
+  return (
+    <div className="exam-passage space-y-4">
+      <div className="font-bold text-center text-base">{String(data.title ?? "")}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {sessions.map((s, i) => (
+          <ActivityTable key={i} session={s} />
+        ))}
+      </div>
+      {footnote && <p className="text-sm exam-soft">{footnote}</p>}
+    </div>
+  );
+}
+
+type EggPart = { title: string; text: string };
+type EggFreshRow = { observation: string; age: string };
+
+/** 2019 阅读 B：鸡蛋科普 + The fresh test 表格 */
+export function EggReadingArticle({ data }: { data: Record<string, unknown> }) {
+  const intro = String(data.intro ?? "");
+  const parts = (data.parts as EggPart[]) ?? [];
+  const freshTitle = String(data.freshTitle ?? "The fresh test");
+  const freshIntro = String(data.freshIntro ?? "");
+  const freshRows = (data.freshRows as EggFreshRow[]) ?? [];
+  const freshOutro = String(data.freshOutro ?? "");
+
+  return (
+    <div className="exam-passage space-y-4 text-sm leading-relaxed">
+      {intro.split(/\n\n+/).map((p, i) => (
+        <p key={`intro-${i}`}>{p}</p>
+      ))}
+      {parts.length > 0 && (
+        <div className="space-y-2">
+          <p className="font-semibold">Parts of an egg:</p>
+          {parts.map((part) => (
+            <p key={part.title}>
+              <strong>{part.title}</strong> — {part.text}
+            </p>
+          ))}
+        </div>
+      )}
+      <div className="space-y-2">
+        <p className="font-bold text-center">{freshTitle}</p>
+        <p>{freshIntro}</p>
+        {freshRows.length > 0 && (
+          <table className="w-full border-collapse border border-[hsl(var(--exam-rule))] text-sm">
+            <thead>
+              <tr className="bg-[hsl(var(--exam-paper-soft))]">
+                <th className="border border-[hsl(var(--exam-rule))] px-2 py-1.5 text-left font-semibold">
+                  What happens to the egg
+                </th>
+                <th className="border border-[hsl(var(--exam-rule))] px-2 py-1.5 text-left font-semibold">
+                  Age of the egg
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {freshRows.map((row, i) => (
+                <tr key={i}>
+                  <td className="border border-[hsl(var(--exam-rule))] px-2 py-1.5 align-top">{row.observation}</td>
+                  <td className="border border-[hsl(var(--exam-rule))] px-2 py-1.5 align-top whitespace-nowrap">{row.age}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+        {freshOutro && <p>{freshOutro}</p>}
+      </div>
     </div>
   );
 }

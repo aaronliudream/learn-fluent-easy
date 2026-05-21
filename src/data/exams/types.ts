@@ -32,8 +32,10 @@ export interface ReadingBlock {
   label: string;
   from: number;
   to: number;
-  kind?: "passage" | "poster";
+  kind?: "passage" | "poster" | "library_poster" | "egg_article";
   passageKey?: string;
+  /** resources 中的结构化材料键，如 library_poster_A */
+  resourceKey?: string;
   title?: string;
 }
 

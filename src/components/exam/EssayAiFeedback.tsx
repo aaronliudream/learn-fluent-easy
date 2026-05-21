@@ -70,7 +70,7 @@ export function EssayAiFeedback({
   if (!canGrade && !result) {
     return (
       <p className={cn("text-xs exam-mute rounded-lg border border-dashed exam-divider px-3 py-2", className)}>
-        <T>提交后可使用 AI 批改、查看错误分析与参考范文</T>
+        <T>写完作文后，请滚动到页面顶部点击「提交试卷」按钮。提交后可使用 AI 批改、查看错误分析与参考范文。</T>
       </p>
     );
   }

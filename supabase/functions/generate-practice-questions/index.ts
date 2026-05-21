@@ -23,12 +23,34 @@ Deno.serve(async (req) => {
       user_explanation_attempt,
       round = 1,
       previous_wrong = [],
+      exam_level = "gaokao",
+      section = "",
     } = await req.json();
 
     const r0 = Math.max(1, Math.min(3, Number(round) || 1));
     const difficultyHint = r0 === 1 ? "中等" : r0 === 2 ? "中等偏难" : "较难（陷阱密度高）";
+    const isJunior = exam_level === "junior_suzhou";
 
-    const sys = `你是一位顶级高考英语命题专家。任务：围绕"同一个考点"，生成 3 道全新的英语阅读理解小题（含 80~120 词的英文小段落 + 单选 4 项 ABCD），帮助学生彻底掌握。
+    const sectionHints: Record<string, string> = {
+      grammar: "单项填空：一个含空格的英文句子 + 四选项 A/B/C/D（passage 可留空或给整句语境）",
+      cloze: "完形填空：80~120 词短文节选 + 单句题干 + A/B/C/D",
+      reading: "阅读理解：80~120 词英文段落 + 单选 A/B/C/D",
+      restore: "信息还原：对话上下文节选 + 选最佳答句 A/B/C/D",
+    };
+    const sectionHint = sectionHints[String(section)] || (isJunior
+      ? "苏州中考英语单选题 A/B/C/D"
+      : "阅读理解单选 A/B/C/D");
+
+    const sys = isJunior
+      ? `你是一位苏州市中考英语命题专家。任务：围绕"同一个考点"，生成 3 道全新的针对性练习题，帮助初三学生彻底掌握。
+严格遵守：
+- 3 题题型一致、考查同一知识点，难度对标苏州中考（${difficultyHint}）。
+- 题型要求：${sectionHint}
+- 必须避免与"已用错项"语义重复。
+- 每题给出 correct (A/B/C/D)、中文解析 explanation（≤80字）、陷阱 trap（一句话）。
+- 语言地道，符合中国初中英语水平。
+严格只输出 JSON：{"items":[{"passage":"...","stem":"...","options":{"A":"...","B":"...","C":"...","D":"..."},"correct":"A","explanation":"...","trap":"..."}]}`
+      : `你是一位顶级高考英语命题专家。任务：围绕"同一个考点"，生成 3 道全新的英语阅读理解小题（含 80~120 词的英文小段落 + 单选 4 项 ABCD），帮助学生彻底掌握。
 严格遵守：
 - 3 题题型一致、考查同一知识点。
 - 难度：${difficultyHint}。

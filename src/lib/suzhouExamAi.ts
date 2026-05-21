@@ -105,5 +105,5 @@ export function assistantLockedHint(mode: ExamMode): string {
 export const SUZHOU_TUTOR_STARTERS = [
   "为什么我错了？",
   "帮我讲讲这道题的思路",
-  "再出 3 道同类小测练练",
+  "再出 3 道同类小测练练（也可点下方「练 3 道同类题」按钮）",
 ];

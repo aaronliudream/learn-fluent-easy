@@ -1,6 +1,7 @@
 import type { ExamMode } from "@/lib/suzhouExamUtils";
 
 const STORAGE_KEY = "suzhou_exam_progress_v1";
+const DRAFT_STORAGE_KEY = "suzhou_exam_draft_v1";
 
 type ModeProgress = {
   completedAt: string;
@@ -12,6 +13,20 @@ export type SuzhouExamProgress = {
 };
 
 type ProgressStore = Record<string, SuzhouExamProgress>;
+
+/** 进行中的答卷草稿（按试卷 + 模式分别保存） */
+export type SuzhouExamDraft = {
+  answers: Record<string, string>;
+  submitted?: boolean;
+  remainingSec?: number;
+  savedAt: string;
+};
+
+type DraftStore = Record<string, SuzhouExamDraft>;
+
+function draftKey(examId: string, mode: Exclude<ExamMode, "review">): string {
+  return `${examId}:${mode}`;
+}
 
 function readStore(): ProgressStore {
   try {
@@ -61,4 +76,48 @@ export function markSuzhouModeComplete(examId: string, mode: Exclude<ExamMode, "
     [mode]: { completedAt: new Date().toISOString() },
   };
   writeStore(store);
+}
+
+function readDraftStore(): DraftStore {
+  try {
+    const raw = localStorage.getItem(DRAFT_STORAGE_KEY);
+    if (!raw) return {};
+    return JSON.parse(raw) as DraftStore;
+  } catch {
+    return {};
+  }
+}
+
+function writeDraftStore(store: DraftStore) {
+  try {
+    localStorage.setItem(DRAFT_STORAGE_KEY, JSON.stringify(store));
+  } catch {
+    /* ignore quota errors */
+  }
+}
+
+export function getSuzhouExamDraft(
+  examId: string,
+  mode: Exclude<ExamMode, "review">,
+): SuzhouExamDraft | null {
+  return readDraftStore()[draftKey(examId, mode)] ?? null;
+}
+
+export function saveSuzhouExamDraft(
+  examId: string,
+  mode: Exclude<ExamMode, "review">,
+  draft: Omit<SuzhouExamDraft, "savedAt">,
+) {
+  const store = readDraftStore();
+  store[draftKey(examId, mode)] = {
+    ...draft,
+    savedAt: new Date().toISOString(),
+  };
+  writeDraftStore(store);
+}
+
+export function clearSuzhouExamDraft(examId: string, mode: Exclude<ExamMode, "review">) {
+  const store = readDraftStore();
+  delete store[draftKey(examId, mode)];
+  writeDraftStore(store);
 }

@@ -127,8 +127,46 @@ export const SUZHOU_2019: ExamPaper = {
     G: "How long have you had him?",
   },
     writing_prompt: {
-    body: "假定你是苏华，最近你的澳大利亚笔友Nathan犯了一些错误，倍感懊恼，写了一封邮件向你诉说。为帮助他排解困惑，请你根据他的邮件内容并结合自身经历，用英语回信开导他。\nTo: suhua@china.com\nFrom: nathan@australia.com\nSubject: Learning from mistakes\nDear Su Hua,\nI'm unhappy that I've made some mistakes recently. They're troubling me a lot these days. I really need your help. Would you please share your experience with me?\n● Do you agree that everyone makes mistakes?\n● Can you tell me one of your mistakes?\n● How did you deal with your problem?\n● What have you learned from the mistake?\nI'm looking forward to hearing from you soon.\nAll the best,\nNathan\n注意：1. 词数90左右，开头和结尾已经写好，不计入总词数；\n2. 回复须包括所有要点，可适当发挥，使短文连贯、通顺；\n3. 文中不得提及真实的人名、校名等相关信息。\nDear Nathan,\nI'm sorry to know that you are not happy these days. ____________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\n_____________________________________________________________________________________\nI hope my experience can help you out.\nBest wishes,\nSu Hua",
-  },
+      format: "email_reply",
+      scenario: "假定你是苏华，最近你的澳大利亚笔友 Nathan 犯了一些错误，倍感懊恼，写了一封邮件向你诉说。为帮助他排解困惑，请你根据他的邮件内容并结合自身经历，用英语回信开导他。",
+      email: {
+        to: "suhua@china.com",
+        from: "nathan@australia.com",
+        subject: "Learning from mistakes",
+        greeting: "Dear Su Hua,",
+        paragraphs: [
+          "I'm unhappy that I've made some mistakes recently. They're troubling me a lot these days. I really need your help. Would you please share your experience with me?",
+        ],
+        bullets: [
+          "Do you agree that everyone makes mistakes?",
+          "Can you tell me one of your mistakes?",
+          "How did you deal with your problem?",
+          "What have you learned from the mistake?",
+        ],
+        closing: [
+          "I'm looking forward to hearing from you soon.",
+          "All the best,",
+          "Nathan",
+        ],
+      },
+      notes: [
+        "词数 90 左右，开头和结尾已经写好，不计入总词数；",
+        "回复须包括所有要点，可适当发挥，使短文连贯、通顺；",
+        "文中不得提及真实的人名、校名等相关信息。",
+      ],
+      template: {
+        opening: [
+          "Dear Nathan,",
+          "I'm sorry to know that you are not happy these days.",
+        ],
+        closing: [
+          "I hope my experience can help you out.",
+          "Best wishes,",
+          "Su Hua",
+        ],
+        bodyLines: 7,
+      },
+    },
   },
   questions: [
     {
@@ -710,7 +748,7 @@ export const SUZHOU_2019: ExamPaper = {
     },
     {
       id: "q56", type: "essay", section: "writing",
-      stem: "假定你是苏华，最近你的澳大利亚笔友Nathan犯了一些错误，倍感懊恼，写了一封邮件向你诉说。为帮助他排解困惑，请你根据他的邮件内容并结合自身经历，用英语回信开导他。\nTo: suhua@china.com\nFrom: nathan@australia.com\nSubject: Learning from mistakes\nDear Su Hua,\nI'm unhappy that I've made some mistakes recently. They're troubling me a lot these days. I really need your help. Would you please share your experience with me?\n● Do you agree that everyone makes mistakes?\n● Can you tell me one of your mistakes?\n● How did you deal with your problem?\n● What have you learned from the mistake?\nI'm looking forward to hearing from you soon.\nAll the best,\nNathan\n注意：1. 词数90左右，开头和结尾已经写好，不计入总词数；\n2. 回复须包括所有要点，可适当发挥，使短文连贯、通顺；\n3. 文中不得提及真实的人名、校名等相关信息。\nDear Nathan,\nI'm sorry to know that you are not happy these days. ____________________________________\n___________________________________________",
+      stem: "",
       answer: "（略）",
       explanation: "书面表达需结合题目要求完成作文。",
       knowledge_point: "书面表达",

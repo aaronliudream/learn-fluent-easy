@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { celebrateScore } from "@/lib/feedback";
 import NoCopyGuard from "@/components/NoCopyGuard";
-import { getExam, type ExamQuestion } from "@/data/exams";
+import { getExam, type ExamQuestion, type ExamPaper } from "@/data/exams";
 import {
   type ExamMode,
   getSectionMeta,
@@ -34,7 +34,7 @@ import {
   isAssistantUnlocked,
   SUZHOU_TUTOR_STARTERS,
 } from "@/lib/suzhouExamAi";
-import { isReviewUnlocked, markSuzhouModeComplete } from "@/lib/suzhouExamProgress";
+import { isReviewUnlocked, markSuzhouModeComplete, getSuzhouExamDraft, saveSuzhouExamDraft, clearSuzhouExamDraft } from "@/lib/suzhouExamProgress";
 import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
 import { ExamPaper as ExamPaperShell, ExamContainer, ExamCard, ExamProgress } from "@/components/exam/ExamPaper";
 import { DiagnosisTable } from "@/components/exam/DiagnosisExtras";
@@ -43,6 +43,9 @@ import FavoriteButton from "@/components/exam/FavoriteButton";
 import { InlineTutorChat } from "@/components/exam/InlineTutorChat";
 import TutorChat from "@/components/tutor/TutorChat";
 import { PassageWithBlanks, MusicFestivalPoster, LibraryHolidayPoster, EggReadingArticle, AnswerSheet } from "@/components/exam/SuzhouExamParts";
+import { WritingTaskPanel, EssayWritingArea, getWritingTemplate, type WritingPromptData } from "@/components/exam/WritingTaskPanel";
+import { EssayAiFeedback, buildWritingAiPrompt } from "@/components/exam/EssayAiFeedback";
+import { SuzhouPracticeBooster } from "@/components/exam/SuzhouPracticeBooster";
 
 const VALID_MODES: ExamMode[] = ["exam", "practice", "review"];
 
@@ -59,12 +62,14 @@ function InlineExplanation({
   userAnswer,
   examId,
   examTitle,
+  exam,
   onAskAi,
 }: {
   q: ExamQuestion;
   userAnswer: string;
   examId: string;
   examTitle: string;
+  exam: ExamPaper;
   onAskAi: (q: ExamQuestion) => void;
 }) {
   const ok = checkCorrect(q, userAnswer);
@@ -93,6 +98,7 @@ function InlineExplanation({
           </div>
           <div className="mt-2 text-sm leading-relaxed whitespace-pre-line exam-soft">{q.explanation}</div>
         </div>
+        <SuzhouPracticeBooster exam={exam} question={q} userAnswer={userAnswer} />
       </div>
     </ExamCard>
   );
@@ -114,8 +120,11 @@ export default function SuzhouExamPlay() {
   const [sheetOpen, setSheetOpen] = useState(false);
   const [tutorFor, setTutorFor] = useState<ExamQuestion | null>(null);
   const [showReviewChat, setShowReviewChat] = useState(false);
+  const [draftLoaded, setDraftLoaded] = useState(false);
+  const [lastSavedAt, setLastSavedAt] = useState<string | null>(null);
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const assistantUnlocked = exam && mode
     ? isAssistantUnlocked(exam, mode, submitted, answers)
@@ -143,6 +152,40 @@ export default function SuzhouExamPlay() {
   );
 
   useEffect(() => {
+    if (!exam || !mode || mode === "review") {
+      setDraftLoaded(true);
+      return;
+    }
+    const draft = getSuzhouExamDraft(exam.id, mode);
+    if (draft?.answers && Object.keys(draft.answers).length > 0) {
+      setAnswers(draft.answers);
+      if (draft.submitted) setSubmitted(true);
+      if (typeof draft.remainingSec === "number" && mode === "exam") {
+        setRemainingSec(draft.remainingSec);
+      }
+      setLastSavedAt(draft.savedAt);
+      toast.info("已恢复上次未提交的作答进度", { duration: 2500 });
+    }
+    setDraftLoaded(true);
+  }, [exam?.id, mode]);
+
+  useEffect(() => {
+    if (!exam || !mode || mode === "review" || !draftLoaded) return;
+    if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
+    saveTimerRef.current = setTimeout(() => {
+      saveSuzhouExamDraft(exam.id, mode, {
+        answers,
+        submitted,
+        remainingSec: mode === "exam" ? remainingSec : undefined,
+      });
+      setLastSavedAt(new Date().toISOString());
+    }, 400);
+    return () => {
+      if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
+    };
+  }, [exam?.id, mode, answers, submitted, remainingSec, draftLoaded]);
+
+  useEffect(() => {
     if (!exam || mode !== "review") return;
     const prefilled: Record<string, string> = {};
     for (const q of exam.questions) {
@@ -168,13 +211,14 @@ export default function SuzhouExamPlay() {
     if (mode !== "exam" || submitted || !exam) return;
     if (remainingSec <= 0) {
       setSubmitted(true);
+      saveSuzhouExamDraft(exam.id, "exam", { answers, submitted: true, remainingSec: 0 });
       markSuzhouModeComplete(exam.id, "exam");
       toast.warning("考试时间到，已自动提交");
       return;
     }
     const t = setInterval(() => setRemainingSec((s) => s - 1), 1000);
     return () => clearInterval(t);
-  }, [mode, submitted, remainingSec, exam]);
+  }, [mode, submitted, remainingSec, exam, answers]);
 
   useEffect(() => {
     if (!exam || !mode || mode === "review" || !submitted) return;
@@ -265,10 +309,8 @@ export default function SuzhouExamPlay() {
 
   const inputsDisabled = mode === "review" || (mode === "exam" && submitted);
 
-  const allRequiredAnswered = exam.questions.every((q) => {
-    if (mode === "review") return true;
-    return !!answers[q.id]?.trim();
-  });
+  const answeredCount = exam.questions.filter((q) => !!answers[q.id]?.trim()).length;
+  const unansweredCount = exam.questions.length - answeredCount;
 
   const progressStates = exam.questions.map((q) => {
     const a = answers[q.id];
@@ -279,20 +321,41 @@ export default function SuzhouExamPlay() {
     return ok ? ("correct" as const) : ("wrong" as const);
   });
 
-  const handleSubmit = () => {
-    if (!allRequiredAnswered) {
-      toast.error("请先完成所有题目");
-      return;
-    }
+  const doSubmit = () => {
     setSubmitted(true);
+    if (mode && mode !== "review") {
+      saveSuzhouExamDraft(exam.id, mode, {
+        answers,
+        submitted: true,
+        remainingSec: mode === "exam" ? remainingSec : undefined,
+      });
+      markSuzhouModeComplete(exam.id, mode);
+    }
     celebrateScore(pct);
-    toast.success(`客观题得分 ${autoScore.earned}/${autoScore.max}`);
+    toast.success(
+      unansweredCount > 0
+        ? `已提交（${unansweredCount} 题未作答）· 客观题 ${autoScore.earned}/${autoScore.max}`
+        : `提交成功 · 客观题 ${autoScore.earned}/${autoScore.max}`,
+    );
+  };
+
+  const handleSubmit = () => {
+    if (unansweredCount > 0) {
+      const ok = window.confirm(
+        `还有 ${unansweredCount} 道题未作答（含书面表达/翻译等），确定现在提交吗？\n\n已作答内容会自动保存，可随时返回继续。`,
+      );
+      if (!ok) return;
+    }
+    doSubmit();
   };
 
   const handleRetry = () => {
+    if (mode && mode !== "review") clearSuzhouExamDraft(exam.id, mode);
     setAnswers({});
     setSubmitted(false);
     setRemainingSec(exam.duration_seconds);
+    setLastSavedAt(null);
+    toast.info("已清空作答，重新开始");
   };
 
   const jumpToQuestion = (qid: string) => {
@@ -416,6 +479,62 @@ export default function SuzhouExamPlay() {
     );
   };
 
+  const renderEssayCard = (q: ExamQuestion) => {
+    const num = questionNum(q.id);
+    const canAsk = showExplanationFor(q);
+    const writingPrompt = exam.resources?.writing_prompt;
+    const template = getWritingTemplate(writingPrompt);
+    const { promptEn, promptCn } = buildWritingAiPrompt(writingPrompt, exam.title);
+    const locked = mode === "review";
+    const disabled = locked || (mode === "exam" && submitted);
+    const essayText = answers[q.id] ?? "";
+    const canGradeEssay = Boolean(
+      essayText.trim() && (submitted || (mode === "practice" && canAsk)),
+    );
+
+    return (
+      <ExamCard key={q.id}>
+        <div data-qid={q.id} className="mb-3 flex items-center gap-2 flex-wrap">
+          <span className="exam-q-num">No. {String(num).padStart(2, "0")}</span>
+          <span className="exam-skill-tag">{q.knowledge_point}</span>
+          <div className="ml-auto flex items-center gap-1">
+            {canAsk && (
+              <>
+                <FavoriteButton examId={exam.id} examTitle={exam.title} question={q} />
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-indigo-600 hover:bg-indigo-50"
+                  onClick={() => openTutor(q)}>
+                  <Sparkles className="size-3.5" />
+                  <T>问 AI 讲解</T>
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+        <EssayWritingArea
+          value={essayText}
+          onChange={(v) => setAnswer(q.id, v)}
+          disabled={disabled}
+          template={template}
+        />
+        <EssayAiFeedback
+          className="mt-4"
+          text={essayText}
+          promptEn={promptEn}
+          promptCn={promptCn}
+          lessonTitle={`${exam.title} · 书面表达`}
+          canGrade={canGradeEssay}
+        />
+        {canAsk && q.explanation && (
+          <div className="exam-explanation mt-4 rounded-xl bg-amber-50 dark:bg-amber-950/30 p-4 border-l-4 border-amber-400">
+            <div className="text-sm leading-relaxed whitespace-pre-line exam-soft">{q.explanation}</div>
+          </div>
+        )}
+      </ExamCard>
+    );
+  };
+
   const renderQuestionCard = (q: ExamQuestion) => {
     const num = questionNum(q.id);
     const canAsk = showExplanationFor(q);
@@ -444,6 +563,13 @@ export default function SuzhouExamPlay() {
           onChange={(v) => setAnswer(q.id, v)}
           showExplanation={canAsk}
         />
+        {canAsk && (
+          <SuzhouPracticeBooster
+            exam={exam}
+            question={q}
+            userAnswer={answers[q.id] ?? ""}
+          />
+        )}
       </ExamCard>
     );
   };
@@ -510,9 +636,16 @@ export default function SuzhouExamPlay() {
                 states={progressStates}
                 label={`${progressStates.filter((s) => s !== "todo").length}/${exam.questions.length}`}
               />
+              {lastSavedAt && mode !== "review" && !submitted && (
+                <span className="hidden sm:inline text-[11px] exam-mute">
+                  <T>已自动保存</T>
+                </span>
+              )}
               {mode !== "review" && !submitted && (
                 <button type="button" className="exam-btn exam-btn-primary h-9 px-4" onClick={handleSubmit}>
-                  <CheckCircle2 className="size-4" /> <T>提交</T>
+                  <CheckCircle2 className="size-4" />
+                  <T>提交试卷</T>
+                  <span className="text-[11px] opacity-80">({answeredCount}/{exam.questions.length})</span>
                 </button>
               )}
               {submitted && mode !== "review" && (
@@ -523,6 +656,16 @@ export default function SuzhouExamPlay() {
             </div>
           </div>
         </div>
+
+        {submitted && mode !== "review" && (
+          <div className="mb-6 rounded-xl border border-emerald-300/80 bg-emerald-50/80 px-4 py-3 text-sm text-emerald-900 dark:bg-emerald-950/30 dark:text-emerald-200">
+            <CheckCircle2 className="mr-1.5 inline size-4" />
+            <T>试卷已提交并保存。</T>
+            {unansweredCount > 0 && (
+              <span className="ml-1"><T>仍有 {unansweredCount} 题未作答，可在「重做」后补完。</T></span>
+            )}
+          </div>
+        )}
 
         <header className="mb-6">
           <div className="exam-eyebrow mb-2"><T>苏州中考英语真题</T></div>
@@ -596,20 +739,8 @@ export default function SuzhouExamPlay() {
 
                       {section === "writing" && exam.resources?.writing_prompt && (
                         <ExamCard className="mb-6">
-                          <div className="exam-eyebrow mb-2"><T>书面表达 · 题目要求</T></div>
-                          {(() => {
-                            const wp = exam.resources!.writing_prompt as Record<string, unknown>;
-                            return (
-                              <div className="space-y-2 text-sm exam-soft">
-                                <div className="font-bold text-base exam-display">{String(wp.title)}</div>
-                                <ul className="list-decimal list-inside">
-                                  {(wp.requirements as string[] ?? []).map((r, i) => <li key={i}>{r}</li>)}
-                                </ul>
-                                <p className="text-xs exam-mute">{String(wp.notes)}</p>
-                                <p className="italic exam-passage">{String(wp.opening)}</p>
-                              </div>
-                            );
-                          })()}
+                          <div className="exam-eyebrow mb-4"><T>书面表达 · 题目要求</T></div>
+                          <WritingTaskPanel data={exam.resources.writing_prompt as WritingPromptData} />
                         </ExamCard>
                       )}
 
@@ -628,9 +759,14 @@ export default function SuzhouExamPlay() {
                                 userAnswer={answers[q.id] ?? ""}
                                 examId={exam.id}
                                 examTitle={exam.title}
+                                exam={exam}
                                 onAskAi={openTutor}
                               />
                             );
+                          }
+
+                          if (section === "writing" && q.type === "essay") {
+                            return renderEssayCard(q);
                           }
 
                           return renderQuestionCard(q);
@@ -657,7 +793,10 @@ export default function SuzhouExamPlay() {
         </div>
 
         {/* 移动浮窗答题卡 */}
-        <div className="lg:hidden fixed bottom-4 right-4 z-30">
+        <div className={cn(
+          "lg:hidden fixed right-4 z-30",
+          mode !== "review" && !submitted ? "bottom-[5.5rem]" : "bottom-4",
+        )}>
           <button
             type="button"
             onClick={() => setSheetOpen((o) => !o)}
@@ -679,6 +818,26 @@ export default function SuzhouExamPlay() {
           </div>
         )}
       </ExamContainer>
+
+      {/* 移动端底部提交栏 */}
+      {mode !== "review" && !submitted && (
+        <div className="fixed inset-x-0 bottom-0 z-30 border-t exam-divider bg-[hsl(var(--exam-paper))]/98 backdrop-blur px-4 py-3 lg:hidden">
+          <div className="mx-auto flex max-w-7xl items-center gap-3">
+            <div className="min-w-0 flex-1 text-xs exam-soft">
+              <div className="font-semibold exam-display">
+                <T>已完成</T> {answeredCount}/{exam.questions.length}
+                {unansweredCount > 0 && (
+                  <span className="ml-1 font-normal exam-mute">· {unansweredCount} <T>题未答</T></span>
+                )}
+              </div>
+              {lastSavedAt && <div className="exam-mute"><T>作答已自动保存</T></div>}
+            </div>
+            <button type="button" className="exam-btn exam-btn-primary h-10 shrink-0 px-5" onClick={handleSubmit}>
+              <CheckCircle2 className="size-4" /> <T>提交试卷</T>
+            </button>
+          </div>
+        </div>
+      )}
 
       {(submitted || mode === "review") && examSnapshot && (
         <ExamContainer max="7xl" className="mt-8 pb-8">

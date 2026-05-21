@@ -140,6 +140,45 @@ export function readingBlockQuestions(questions: ExamQuestion[], from: number, t
   });
 }
 
+/** 同一「题组」内的题目：阅读=一篇材料；其他大题=整个部分 */
+export function questionsInUnit(exam: ExamPaper, q: ExamQuestion): ExamQuestion[] {
+  if (q.section === "reading") {
+    const n = questionNum(q.id);
+    const block = READING_PASSAGE_BLOCKS.find((b) => n >= b.from && n <= b.to);
+    if (!block) return [q];
+    return exam.questions.filter(
+      (qq) => qq.section === "reading" && questionNum(qq.id) >= block.from && questionNum(qq.id) <= block.to,
+    );
+  }
+  return exam.questions.filter((qq) => qq.section === q.section);
+}
+
+export function isUnitComplete(unitQuestions: ExamQuestion[], answers: Record<string, string>): boolean {
+  if (!unitQuestions.length) return false;
+  return unitQuestions.every((q) => !!answers[q.id]?.trim());
+}
+
+export function unitLabelForQuestion(q: ExamQuestion): string {
+  if (q.section === "reading") {
+    const n = questionNum(q.id);
+    const block = READING_PASSAGE_BLOCKS.find((b) => n >= b.from && n <= b.to);
+    return block ? `Passage ${block.label}` : "阅读理解";
+  }
+  return SECTION_META[q.section].title.split("·")[0]?.trim() ?? q.section;
+}
+
+export function shouldShowExplanation(
+  mode: ExamMode,
+  exam: ExamPaper,
+  q: ExamQuestion,
+  answers: Record<string, string>,
+  submitted: boolean,
+): boolean {
+  if (mode === "review") return true;
+  if (mode === "exam") return submitted;
+  return isUnitComplete(questionsInUnit(exam, q), answers);
+}
+
 export function formatTimer(seconds: number): string {
   const m = Math.floor(seconds / 60);
   const s = seconds % 60;

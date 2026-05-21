@@ -21,6 +21,10 @@ import {
   formatTimer,
   READING_PASSAGE_BLOCKS,
   readingBlockQuestions,
+  questionsInUnit,
+  isUnitComplete,
+  unitLabelForQuestion,
+  shouldShowExplanation,
 } from "@/lib/suzhouExamUtils";
 import { ExamPaper as ExamPaperShell, ExamContainer, ExamCard, ExamProgress } from "@/components/exam/ExamPaper";
 import { DiagnosisTable } from "@/components/exam/DiagnosisExtras";
@@ -155,10 +159,29 @@ export default function SuzhouExamPlay() {
   const autoScore = examAutoScore(exam, answers);
   const pct = autoScore.max ? Math.round((autoScore.earned / autoScore.max) * 100) : 0;
 
-  const showExplanationFor = (q: ExamQuestion) => {
-    if (mode === "review") return true;
-    if (mode === "exam") return submitted;
-    return !!answers[q.id]?.trim();
+  const showExplanationFor = (q: ExamQuestion) =>
+    shouldShowExplanation(mode, exam, q, answers, submitted);
+
+  const unitPracticeHint = (unitQs: ExamQuestion[]) => {
+    if (mode !== "practice") return null;
+    const done = isUnitComplete(unitQs, answers);
+    const started = unitQs.some((q) => !!answers[q.id]?.trim());
+    const label = unitQs[0] ? unitLabelForQuestion(unitQs[0]) : "";
+    if (done) {
+      return (
+        <p className="rounded-lg border border-emerald-200 bg-emerald-50/80 px-3 py-2 text-center text-xs text-emerald-800">
+          <T>✓ {label} 已全部作答，下方为答案与解析</T>
+        </p>
+      );
+    }
+    if (started) {
+      return (
+        <p className="rounded-lg border border-amber-200/80 bg-amber-50/50 px-3 py-2 text-center text-xs exam-soft">
+          <T>答完 {label} 全部 {unitQs.length} 小题后，才会显示答案与解析</T>
+        </p>
+      );
+    }
+    return null;
   };
 
   const inputsDisabled = mode === "review" || (mode === "exam" && submitted);
@@ -382,6 +405,7 @@ export default function SuzhouExamPlay() {
             <div className="space-y-5">
               {blockQs.map(renderQuestionCard)}
             </div>
+            {unitPracticeHint(blockQs)}
           </div>
         );
       })}
@@ -431,7 +455,7 @@ export default function SuzhouExamPlay() {
         </header>
 
         {/* 总分卡片 */}
-        {(submitted || mode === "review" || (mode === "practice" && Object.keys(answers).length > 0)) && (
+        {(submitted || mode === "review") && (
           <div className="mb-8 exam-card p-5 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
@@ -527,6 +551,7 @@ export default function SuzhouExamPlay() {
 
                           return renderQuestionCard(q);
                         })}
+                        {unitPracticeHint(questions)}
                       </div>
                     </>
                   )}

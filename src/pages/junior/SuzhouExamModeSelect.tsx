@@ -9,7 +9,7 @@ const MODES = [
     key: "practice" as const,
     icon: BookOpen,
     title: "练习模式",
-    desc: "不限时 · 答完每题立即看解析 · 适合逐题精学",
+    desc: "不限时 · 按题组（如一篇阅读）全部答完才出解析 · 适合分段精练",
     gradient: "from-emerald-500 to-teal-600",
   },
   {

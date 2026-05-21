@@ -19,6 +19,8 @@ import {
   isAutoGraded,
   questionNum,
   formatTimer,
+  READING_PASSAGE_BLOCKS,
+  readingBlockQuestions,
 } from "@/lib/suzhouExamUtils";
 import { ExamPaper as ExamPaperShell, ExamContainer, ExamCard, ExamProgress } from "@/components/exam/ExamPaper";
 import { DiagnosisTable } from "@/components/exam/DiagnosisExtras";
@@ -331,6 +333,61 @@ export default function SuzhouExamPlay() {
     );
   };
 
+  const renderQuestionCard = (q: ExamQuestion) => {
+    const num = questionNum(q.id);
+    return (
+      <ExamCard key={q.id}>
+        <QuestionRenderer
+          question={q}
+          qNum={num}
+          mode={mode}
+          submitted={submitted}
+          value={answers[q.id] ?? ""}
+          onChange={(v) => setAnswer(q.id, v)}
+          showExplanation={showExplanationFor(q)}
+        />
+        {!isAutoGraded(q) && showExplanationFor(q) && answers[q.id]?.trim() && (
+          <button
+            type="button"
+            disabled={aiGrading === q.id}
+            className="mt-3 exam-btn exam-btn-ghost h-9 text-sm"
+            onClick={() => askAiGrade(q)}>
+            <Sparkles className="size-4" />
+            {aiGrading === q.id ? <T>AI 点评中…</T> : <T>让 AI 点评我的答案</T>}
+          </button>
+        )}
+      </ExamCard>
+    );
+  };
+
+  const renderReadingSection = (questions: ExamQuestion[]) => (
+    <div className="space-y-8">
+      {READING_PASSAGE_BLOCKS.map((block) => {
+        const blockQs = readingBlockQuestions(questions, block.from, block.to);
+        return (
+          <div key={block.label} className="space-y-5">
+            <ExamCard>
+              <div className="exam-eyebrow mb-2">
+                <T>Passage {block.label}</T>
+                {"title" in block && block.title ? ` · ${block.title}` : ""}
+              </div>
+              {"kind" in block && block.kind === "poster" ? (
+                <MusicFestivalPoster data={(exam.resources?.poster_A ?? {}) as Record<string, unknown>} />
+              ) : (
+                "passageKey" in block && exam.passages[block.passageKey] && (
+                  <div className="exam-passage whitespace-pre-wrap">{exam.passages[block.passageKey]}</div>
+                )
+              )}
+            </ExamCard>
+            <div className="space-y-5">
+              {blockQs.map(renderQuestionCard)}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+
   return (
     <ExamPaperShell className="pb-28">
       <NoCopyGuard />
@@ -432,80 +489,47 @@ export default function SuzhouExamPlay() {
                     <p className="text-[12px] exam-mute">{meta.scoreLabel}</p>
                   </div>
 
-                  {section === "reading" && (
-                    <ExamCard className="mb-6">
-                      <div className="exam-eyebrow mb-2"><T>Passage A · Music Festival</T></div>
-                      <MusicFestivalPoster data={(exam.resources?.poster_A ?? {}) as Record<string, unknown>} />
-                    </ExamCard>
-                  )}
+                  {section === "reading" ? (
+                    renderReadingSection(questions)
+                  ) : (
+                    <>
+                      {passageKey && renderSectionPassage(passageKey, questions)}
 
-                  {passageKey && renderSectionPassage(passageKey, questions)}
-
-                  {section === "reading" && ["reading_B", "reading_C", "reading_D"].map((key) => (
-                    exam.passages[key] && (
-                      <ExamCard key={key} className="mb-6">
-                        <div className="exam-eyebrow mb-2">{key.replace("reading_", "Passage ")}</div>
-                        <div className="exam-passage whitespace-pre-wrap">{exam.passages[key]}</div>
-                      </ExamCard>
-                    )
-                  ))}
-
-                  {section === "writing" && exam.resources?.writing_prompt && (
-                    <ExamCard className="mb-6">
-                      <div className="exam-eyebrow mb-2"><T>书面表达 · 题目要求</T></div>
-                      {(() => {
-                        const wp = exam.resources!.writing_prompt as Record<string, unknown>;
-                        return (
-                          <div className="space-y-2 text-sm exam-soft">
-                            <div className="font-bold text-base exam-display">{String(wp.title)}</div>
-                            <ul className="list-decimal list-inside">
-                              {(wp.requirements as string[] ?? []).map((r, i) => <li key={i}>{r}</li>)}
-                            </ul>
-                            <p className="text-xs exam-mute">{String(wp.notes)}</p>
-                            <p className="italic exam-passage">{String(wp.opening)}</p>
-                          </div>
-                        );
-                      })()}
-                    </ExamCard>
-                  )}
-
-                  <div className="space-y-5">
-                    {questions.map((q) => {
-                      const num = questionNum(q.id);
-                      const isInlineSection =
-                        section === "cloze" || section === "restore" ||
-                        section === "vocab_bank" || section === "passage_fill";
-
-                      if (isInlineSection) {
-                        if (!showExplanationFor(q)) return null;
-                        return <InlineExplanation key={q.id} q={q} userAnswer={answers[q.id] ?? ""} />;
-                      }
-
-                      return (
-                        <ExamCard key={q.id}>
-                          <QuestionRenderer
-                            question={q}
-                            qNum={num}
-                            mode={mode}
-                            submitted={submitted}
-                            value={answers[q.id] ?? ""}
-                            onChange={(v) => setAnswer(q.id, v)}
-                            showExplanation={showExplanationFor(q)}
-                          />
-                          {!isAutoGraded(q) && showExplanationFor(q) && answers[q.id]?.trim() && (
-                            <button
-                              type="button"
-                              disabled={aiGrading === q.id}
-                              className="mt-3 exam-btn exam-btn-ghost h-9 text-sm"
-                              onClick={() => askAiGrade(q)}>
-                              <Sparkles className="size-4" />
-                              {aiGrading === q.id ? <T>AI 点评中…</T> : <T>让 AI 点评我的答案</T>}
-                            </button>
-                          )}
+                      {section === "writing" && exam.resources?.writing_prompt && (
+                        <ExamCard className="mb-6">
+                          <div className="exam-eyebrow mb-2"><T>书面表达 · 题目要求</T></div>
+                          {(() => {
+                            const wp = exam.resources!.writing_prompt as Record<string, unknown>;
+                            return (
+                              <div className="space-y-2 text-sm exam-soft">
+                                <div className="font-bold text-base exam-display">{String(wp.title)}</div>
+                                <ul className="list-decimal list-inside">
+                                  {(wp.requirements as string[] ?? []).map((r, i) => <li key={i}>{r}</li>)}
+                                </ul>
+                                <p className="text-xs exam-mute">{String(wp.notes)}</p>
+                                <p className="italic exam-passage">{String(wp.opening)}</p>
+                              </div>
+                            );
+                          })()}
                         </ExamCard>
-                      );
-                    })}
-                  </div>
+                      )}
+
+                      <div className="space-y-5">
+                        {questions.map((q) => {
+                          const isInlineSection =
+                            section === "cloze" || section === "restore" ||
+                            section === "vocab_bank" || section === "passage_fill";
+
+                          if (isInlineSection) {
+                            if (!showExplanationFor(q)) return null;
+                            return <InlineExplanation key={q.id} q={q} userAnswer={answers[q.id] ?? ""} />;
+                          }
+
+                          return renderQuestionCard(q);
+                        })}
+                      </div>
+                    </>
+                  )}
                 </section>
               );
             })}

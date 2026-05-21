@@ -125,6 +125,21 @@ export function questionNum(id: string): number {
   return parseInt(id.replace("q", ""), 10);
 }
 
+/** 阅读理解按篇章分组：材料 + 对应题号 */
+export const READING_PASSAGE_BLOCKS = [
+  { label: "A", title: "Music Festival", kind: "poster" as const, from: 11, to: 13 },
+  { label: "B", passageKey: "reading_B" as const, from: 14, to: 17 },
+  { label: "C", passageKey: "reading_C" as const, from: 18, to: 21 },
+  { label: "D", passageKey: "reading_D" as const, from: 22, to: 25 },
+];
+
+export function readingBlockQuestions(questions: ExamQuestion[], from: number, to: number): ExamQuestion[] {
+  return questions.filter((q) => {
+    const n = questionNum(q.id);
+    return n >= from && n <= to;
+  });
+}
+
 export function formatTimer(seconds: number): string {
   const m = Math.floor(seconds / 60);
   const s = seconds % 60;

@@ -179,7 +179,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "us",
   }, 
       answer: "B",
-      explanation: "第 1 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **B. me**\n回答 \"Are you Mr. Morrison?\" 时，说话人确认\"那就是我\"——这里 me 等于 \"I am Mr. Morrison\" 的口语简化形式。**That's me** 是日常英语中确认身份的固定说法。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **That's me** = \"就是我\"，是英语口语回应身份/被点名时的高频表达。\n- **him / me / you / us** 都是**宾格代词**——出现在动词或介词后面。\n- 类似表达：That's him.(那是他。) That's us in the photo.(照片里那个是我们。)\n- 例句：*\"Who's John?\" — \"That's me!\"* \"谁是 John？\"\"就是我！\"\n\n### 🧱 语法 / 句法 (Grammar)\n- 系动词 **is/am/are** 后理论上应跟主格 (I am he)，但**英语口语**中绝大多数说 **That's me / That's him**，宾格已成为标准用法。\n- 判定思路：被问 \"Are you X?\"，肯定回答 → 用 **That's me**（指自己）。如果别人指着照片问 \"Is that John?\"，则回答 **That's him**。\n- 这一题的关键人称：问的是 \"you (Mr. Morrison)\"，被问的人确认 → 用 me。\n\n### ❌ 为什么其他选项不行\n- **A. him** — \"那是他\"，但被问的人是 \"you\"，本人在场，不能用 him 指自己。\n- **C. you** — \"那是你\"。Mr. Morrison 不能对问话人说\"那是你\"，逻辑错位。\n- **D. us** — \"那是我们\"。只有一个 Mr. Morrison，不是复数。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 听到 \"Are you...?\" 就想填 I (主格)，但 That's 后必须用宾格 **me**，不能写 That's I。\n- 混淆人称视角：题目里的 \"you\" = \"Mr. Morrison\" = 被问的人 = 第一人称视角下的 \"me\"。**抓住\"谁在说话\"**就不会错。\n\n### 🧠 一句口诀\n**确认身份 That's me，主格宾格莫颠倒**",
       knowledge_point: "单项填空",
     },
     {
@@ -192,7 +192,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "visited",
   }, 
       answer: "C",
-      explanation: "第 2 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **C. to visit**\n**plan to do sth** = \"计划做某事\"，固定搭配，后面必须接**不定式 (to + 动词原形)**。\"我和爸爸早就计划好要去北京了\" → planned **to visit** Beijing。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **plan to do sth** = 计划做某事。同类还有 **decide to do**, **hope to do**, **want to do**, **promise to do**。\n- **visit** = 参观、拜访（动词），visit Beijing 是动宾结构。\n- 反例：**enjoy / finish / mind / practice + doing**（这些跟动名词 -ing）。\n- 例句：*We planned to travel to Japan next summer.* 我们计划明年夏天去日本旅行。\n\n### 🧱 语法 / 句法 (Grammar)\n- 核心规则：英语动词后接什么形式（to do / doing / 动词原形）由**前面的主动词**决定，没有逻辑可言，**必须记搭配**。\n- 判定思路三步：\n  1. 找空格前的动词：**planned**。\n  2. 想这个动词后面跟什么：**plan + to do**（固定搭配）。\n  3. 选项里选 **to visit**。\n- **time ago** 这种过去时间状语只决定主句时态 (planned)，不影响后面 to do 的形式。\n\n### ❌ 为什么其他选项不行\n- **A. visit** — 动词原形不能直接跟在 planned 后面。\n- **B. visiting** — plan 不跟 -ing 形式。注意：enjoy/finish 才跟 -ing。\n- **D. visited** — planned 已经是过去时，后面不能再用过去时 visited，会变成两个谓语动词，语法错误。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到 planned 是过去式，就硬塞 visited，犯\"两个谓语\"的错。**英语一个分句只能有一个谓语**，第二个动词必须变形式（to do / doing / 分词）。\n- 混淆 plan 和 enjoy 的搭配。死记：\"**plan / hope / want / decide → to do**；**enjoy / finish / practice / mind → doing**\"。\n\n### 🧠 一句口诀\n**plan to do 是搭配，原形过去都不对**",
       knowledge_point: "单项填空",
     },
     {
@@ -205,7 +205,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "strength",
   }, 
       answer: "B",
-      explanation: "第 3 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **B. silence**\n爸爸要求孩子保持安静 (Keep quiet)，他工作时需要\"完全的**安静**\"。silence (寂静、无声) 与上文 quiet 直接呼应。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **silence** = 安静、寂静（名词）；**silent** = 安静的（形容词）；**quiet** 既可作形容词也作名词。\n- 词族扩展：**in silence** = 沉默地；**silence is golden** = 沉默是金。\n- 其他选项词义：trust (信任), control (控制), strength (力量)。\n- 例句：*The teacher asked for complete silence during the test.* 老师要求考试时保持绝对安静。\n\n### 🧱 语法 / 句法 (Grammar)\n- 空格前是形容词 **complete** (完全的) + 不定冠词省略，需要一个**抽象名词**作宾语。四个选项都是抽象名词，**靠语义判断**。\n- 判定思路：句首的 **\"Keep quiet\"** 是关键暗示词——前后必然有逻辑呼应。quiet → silence 形成\"近义重复强调\"，这是完形/单选题常用的考点。\n- 抽象名词与 complete 搭配：**complete silence / complete trust / complete control** 都成立，但只有 silence 与上文 quiet 完美呼应。\n\n### ❌ 为什么其他选项不行\n- **A. trust** — \"完全的信任\"，搭配自然，但与\"keep quiet\"无关。\n- **C. control** — \"完全的控制\"，与上下文场景（工作时安静）不符。\n- **D. strength** — \"完全的力量\"，搭配本身怪异，与上下文也无关。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到 complete 就乱选，忽略**上下文呼应词**。Keep quiet 直接锁定 silence——这种\"同义词复现\"是单选题最常考的线索。\n- 把 silence (名词) 和 silent (形容词) 搞混。这里空格需要**名词**作宾语，所以选 silence 不是 silent。\n\n### 🧠 一句口诀\n**quiet 配 silence，complete 后必抽象**",
       knowledge_point: "单项填空",
     },
     {
@@ -218,7 +218,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "needn't",
   }, 
       answer: "C",
-      explanation: "第 4 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **C. couldn't**\n\"连爱因斯坦在 7 岁前都**不会**读书\"——讲过去某个时期的\"能力缺失\"，必须用 **couldn't** (could 的过去式)。这与上文 \"Some people don't show their talents at the very beginning\" 形成完美举例。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **can / could** = \"能、会\"（表能力）；**could** 是 can 的过去式。\n- **must / mustn't** = 必须 / 一定不要（强烈禁止）。\n- **need / needn't** = 需要 / 不需要。\n- 例句：*She couldn't swim until she was ten.* 她到 10 岁才学会游泳。\n\n### 🧱 语法 / 句法 (Grammar)\n- 关键时间标记：**until he was seven** —— \"直到他 7 岁\"，用了 **was** (过去式)，说明整个句子的时态是**过去时**。\n- 情态动词的过去式：\n  - can → could\n  - may → might\n  - will → would\n  - must → had to（特殊，无对应过去式）\n- 判定思路：看到 **was/were** 等过去时标记 → 情态动词也必须用过去式 → can't 变 couldn't。\n\n### ❌ 为什么其他选项不行\n- **A. can't** — \"不能\"。表能力没错，但是**现在时**，与下文 was (过去式) 时态不一致。\n- **B. mustn't** — \"一定不要\"，表禁止，含义太强。爱因斯坦不是\"被禁止读书\"，是\"还没学会\"。\n- **D. needn't** — \"不需要\"，与\"能力\"无关，逻辑不通。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 忽略时间状语，闭眼选 can't。**情态动词的时态必须与句子整体时态一致**——这是隐形的高频考点。\n- 把 mustn't 和 don't have to 混淆。mustn't = 禁止 (绝对不能做)；don't have to = 不需要 (不强求做)，两者意思完全不同。\n\n### 🧠 一句口诀\n**过去时配 couldn't，禁止才用 mustn't**",
       knowledge_point: "单项填空",
     },
     {
@@ -231,7 +231,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "the strangest",
   }, 
       answer: "D",
-      explanation: "第 5 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **D. the strangest**\n**one of the + 最高级 + 复数名词** = \"最……之一\"，是英语高频固定句式。\"飞鼠可能是你旅途中能遇到的**最奇怪的**动物之一\"。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **strange** (奇怪的) — 形容词原级；**stranger** — 比较级；**strangest** — 最高级。\n- 形容词三级变化：原级 / 比较级 / 最高级，最高级前通常加 **the**。\n- 同类句式：**one of the best / largest / oldest / most beautiful + N 复数**。\n- 例句：*This is one of the best movies I've ever seen.* 这是我看过的最好的电影之一。\n\n### 🧱 语法 / 句法 (Grammar)\n- 句式：**one of the + 形容词最高级 + 复数名词**。\n- 看到 **one of** + 后面有复数名词 (**animals**)，立刻锁定\"最高级\"结构。\n- 判定思路三步：\n  1. 找到 one of：信号词。\n  2. 看后面名词：animals (复数)，确认\"……之一\"结构。\n  3. 最高级前必须加 **the** → 选 **the strangest**。\n\n### ❌ 为什么其他选项不行\n- **A. strange** — 原级，不能用在 \"one of\" 句式中。\n- **B. stranger** — 比较级，one of 后不接比较级，没有这种用法。\n- **C. strangest** — 最高级形式对，但**缺了定冠词 the**——最高级前必须加 the（除非有 my/your 等代词替代）。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 选 C strangest 漏掉 the。**最高级前 90% 的情况要加 the**——只有形容词作表语并用 my/her/his/our 等代词时才不用 the。\n- 忘记 one of 后必须接**复数名词**。如果题目里写 \"one of the strangest animal\"（单数），那是错题。\n\n### 🧠 一句口诀\n**one of the 最高级，复数名词不能丢**",
       knowledge_point: "单项填空",
     },
     {
@@ -244,7 +244,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "unless",
   }, 
       answer: "A",
-      explanation: "第 6 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **A. while**\n\"**趁着**你父母在世的时候去爱他们\"——while 在这里 = \"在……期间、趁着\"。下文 \"Don't wait until it is too late\"（别等到来不及）正是 while 的语义补充。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **while** = 在……期间、当……时候 / 趁着……。\n- **though** = 虽然、尽管；**because** = 因为；**unless** = 除非。\n- 这四个都是**从属连词**——后面跟从句。区别在于**逻辑关系**：时间、转折、原因、条件。\n- 例句：*Make hay while the sun shines.* 趁着阳光好赶紧晒草。（趁热打铁。）\n\n### 🧱 语法 / 句法 (Grammar)\n- 关键判定：连词题永远看**两个分句的逻辑关系**。\n- 前句：\"Love your parents ___ they are alive.\"（爱父母 ___ 他们还活着）\n- 后句：\"Don't wait until it is too late.\"（别等到来不及）\n- 后句明确暗示**时间限制**：要趁早。所以前句也是**时间逻辑** → while (趁着……)。\n- 判定思路：看到 \"Don't wait until...\" → 立刻意识到本题考\"时间紧迫\" → 选 while。\n\n### ❌ 为什么其他选项不行\n- **B. though** — \"虽然父母还活着\"，表转折，与\"要去爱他们\"逻辑不通。\n- **C. because** — \"因为父母还活着所以爱他们\"，把爱父母变成了条件交换，**情感上和文化上都不对**。\n- **D. unless** — \"除非父母还活着\"，把\"活着\"变成爱的前提条件，逻辑荒谬。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到 because 就想选——但 because 表达\"理性原因\"，与本句的\"时间提醒\"语境不符。\n- 没注意下文 **\"Don't wait until...\"** 这个时间暗示词。**连词题一定要结合上下两句话整体读**，不能只看空格周围。\n\n### 🧠 一句口诀\n**趁着用 while，提醒别错过**",
       knowledge_point: "单项填空",
     },
     {
@@ -257,7 +257,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "turn around",
   }, 
       answer: "B",
-      explanation: "第 7 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **B. turn off**\n\"开着灯 (with it on) 我睡不好\"——所以请对方**关灯**。**turn off** = 关掉（电器、灯、水龙头）。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **turn off** = 关掉（电器/开关）；反义词 **turn on** = 打开。\n- **turn to (sb/sth)** = 求助于 / 翻到（书页）；**turn around** = 转身、转向。\n- \"turn + 介词\"是英语中超高频的动词短语，每一个都要分开记忆。\n- 例句：*Please turn off the TV before you leave.* 离开前请关电视。\n\n### 🧱 语法 / 句法 (Grammar)\n- **Would you please + 动词原形** = 礼貌请求\"请你做……\"。空格里需要一个动词短语作谓语。\n- 判定思路：**先读完整句**再选——前半句是请求，后半句 \"I can't sleep with it on\" 说明原因。\n- 关键暗示词：**\"with it on\"** = \"灯开着的状态\"。既然开着灯睡不好，那就要关掉它。\n\n### ❌ 为什么其他选项不行\n- **A. turn on** — \"打开\"，但灯已经开着 (with it on)，再开就重复了。\n- **C. turn to** — \"求助于灯/翻到灯\"？语义荒谬。\n- **D. turn around** — \"把灯转个方向\"？灯又不是椅子，不需要转向。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 没读完后半句就乱选 turn on。**完整句子是关键**：with it on 暗示状态，请求一定是要改变这个状态 → 关灯。\n- 把 turn off / turn on / turn down / turn up 弄混。**turn down = 调低音量**；**turn up = 调高音量**；turn off / on = 关 / 开。\n\n### 🧠 一句口诀\n**关电用 off，调音用 down up**",
       knowledge_point: "单项填空",
     },
     {
@@ -270,7 +270,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "has sailed",
   }, 
       answer: "C",
-      explanation: "第 8 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **C. was sailing**\n\"当一条巨鱼跃出海面时，Amon **正在**暴风雨中航行。\"——\"过去某一刻正在做某事\"用**过去进行时 was/were + doing**。这是 when 引导的过去时间从句的典型搭配。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **sail** = 航行（动词）；**a ship sails** = 船在航行；**sail a ship** = 驾驶船。\n- 句中 \"in a big storm\" = 在暴风雨中（伴随状态）。\n- 例句：*She was reading when the phone rang.* 电话响时她正在看书。\n\n### 🧱 语法 / 句法 (Grammar)\n- 关键句式：**主句过去进行时 + when + 过去时从句** = \"正在做 A 时，B 发生了\"。\n- 时态分析：\n  - 后半句 \"came out\" 是**一般过去时**，表示一个突然发生的动作。\n  - 前半句必然是\"正在进行的背景动作\" → **过去进行时 was sailing**。\n- 判定思路：见到 \"when + 过去式短动作\" → 前面常用过去进行时来作\"背景\"。\n\n### ❌ 为什么其他选项不行\n- **A. will sail** — 一般将来时，与下文 came (过去式) 时态不匹配。\n- **B. is sailing** — 现在进行时，时态错误（整个故事是过去发生的）。\n- **D. has sailed** — 现在完成时，强调动作的完成或结果，但这里需要\"正在进行的背景\"，不是\"已完成\"。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到 in a big storm 等环境描述就乱选时态——其实关键看后半句 **came** (过去式)，与前面必须时态匹配。\n- 混淆\"过去进行 vs 一般过去\"：\n  - **was sailing** = 当时正在航行（持续动作做背景）\n  - **sailed** = 航行了（已完成的动作）\n  - 本题需要\"背景\"，不是\"已完成\"。\n\n### 🧠 一句口诀\n**when 接过去式，主句常进行**",
       knowledge_point: "单项填空",
     },
     {
@@ -283,7 +283,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "clearly",
   }, 
       answer: "D",
-      explanation: "第 9 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **D. clearly**\n\"请大声点说，这样我就能**清楚地**听到你。\"前因后果：大声 → 清楚 (clearly)。**clearly** 修饰 hear 的动作\"清楚地听到\"。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **clearly** = 清楚地（副词）；**clear** = 清楚的（形容词）。\n- 其他选项：quickly (快速地), happily (高兴地), slowly (慢慢地)——都是副词，词性都对。\n- 副词修饰动词时表\"动作方式\"：hear clearly (清楚地听见) / speak slowly (慢慢地说) / run quickly (跑得快)。\n- 例句：*Could you speak more clearly? I can't hear you.* 你能说清楚一点吗？我听不见。\n\n### 🧱 语法 / 句法 (Grammar)\n- 关键结构：**so that** = \"以便、为了\"，引导**目的状语从句**——前句的动作是为了达到后句的目的。\n- 判定思路：\n  1. 前句：\"speak in a loud voice\" (大声说话)\n  2. 后句目的：让对方能 hear ___（听见怎么样）？\n  3. 大声说话的目的不是\"快\"、\"开心\"、\"慢\"——而是\"**清楚**\"。\n- 这一题考的不是语法，而是**因果逻辑判断**。\n\n### ❌ 为什么其他选项不行\n- **A. quickly** — 大声说话的目的不是为了\"听得快\"，逻辑不通。\n- **B. happily** — \"听得开心\"？这与\"大声说话\"的目的无关。\n- **C. slowly** — \"听得慢\"？听是瞬间动作，不存在\"听得慢\"。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到副词题就猜，不分析前后**因果关系**。**so that** 一出现就要立刻找\"目的\"——前后两句必须形成因果链。\n- 把 clear (形容词) 和 clearly (副词) 搞混。这里空格修饰动词 **hear**，必须用副词形式 **clearly**。\n\n### 🧠 一句口诀\n**so that 找目的，大声配 clearly**",
       knowledge_point: "单项填空",
     },
     {
@@ -296,7 +296,7 @@ export const SUZHOU_2019: ExamPaper = {
     D: "Certainly not",
   }, 
       answer: "A",
-      explanation: "第 10 题考查单项填空相关知识点。正确答案：。",
+      explanation: "### 📖 答案是 **A. I don't mind**\n被问\"想去哪吃\"，Simon 回答\"我**不在意 / 随便**——我什么都吃\"。**I don't mind** = \"我不在乎、都可以\"，是英语中表\"无所谓\"的标准回答。\n\n### 🔍 词汇 / 短语 (Vocabulary)\n- **I don't mind** = 我不介意 / 我都行 / 随便。用于被问\"想要什么/选哪个\"时表达\"无所谓\"。\n- **My pleasure** = \"不客气\"——回应别人 \"Thank you\" 时用。\n- **Good idea** = \"好主意\"——同意别人的提议。\n- **Certainly not** = \"当然不\"——强烈否定，常用于拒绝。\n- 例句：*\"Tea or coffee?\" — \"I don't mind. Either is fine.\"* \"茶还是咖啡？\"\"都行，哪个都可以。\"\n\n### 🧱 语法 / 句法 (Grammar)\n- 情景对话题考的是**英语口语习惯**，不是语法。\n- 判定思路：先读后半句 \"**I eat anything**\"（什么都吃）—— 这是关键暗示，说话人是\"无所谓\"的态度。\n- 四个选项中表达\"无所谓 / 随便\"的只有 **I don't mind**。其他三个表达完全不同的语用功能（回应感谢、同意、拒绝）。\n\n### ❌ 为什么其他选项不行\n- **B. My pleasure** — 回应别人的感谢，不是回答\"去哪吃\"。\n- **C. Good idea** — 同意对方的具体提议，但 Simon 没提出任何提议，无从同意。\n- **D. Certainly not** — \"当然不\"，强烈拒绝。但这是朋友请吃饭，没必要拒绝。\n\n### ⚠️ 学生常犯错误 (Common Mistakes)\n- 看到 mind 就想到\"介意\"，但忽略 **I don't mind** 是一个**整体习语**，表\"随便、都行\"。\n- 不读后半句 \"I eat anything\" 就乱选。**情景对话题的关键往往在第二句**——它提供态度/情感线索。\n\n### 🧠 一句口诀\n**随便都行 don't mind，回应感谢 my pleasure**",
       knowledge_point: "单项填空",
     },
     {

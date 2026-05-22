@@ -1106,13 +1106,16 @@ export default function JuniorGrammarLab() {
   // correction/translation). Lab's exam phase is MCQ-only (limit 8, NULL options
   // render as "nan") so we'd lose 8 of the 12 gold-standard questions here.
   const isQuick = searchParams.get("quick") === "1";
+  // ?legacy=1 lets power users opt back into the classic Lab flow.
+  const wantLegacy = searchParams.get("legacy") === "1";
   const nav = useNavigate();
-  // Redirect to the point page (universal renderer) when in quick mode.
+  // Redirect to the new adaptive 5-level mastery test by default. The Lab's
+  // legacy multi-phase flow is still available via ?legacy=1 for compat.
+  // ?quick=1 also lands on the mastery test (it's already test-focused).
   useEffect(() => {
-    if (isQuick && id) {
-      nav(`/junior/grammar/${id}?quick=1`, { replace: true });
-    }
-  }, [isQuick, id, nav]);
+    if (!id || wantLegacy) return;
+    nav(`/junior/grammar/${id}/mastery`, { replace: true });
+  }, [id, wantLegacy, nav]);
   const [pt, setPt] = useState<Pt | null>(null);
   const [examQs, setExamQs] = useState<ExamQ[]>([]);
   const [loading, setLoading] = useState(true);

@@ -20,8 +20,18 @@ import { T } from "@/i18n/T";
    mastery thresholds. Wrong answers are spaced-retried later in the same
    level. Locks open in order; you can't skip ahead.
 
-   Question source: junior_grammar_questions, sort_order 9000-9099 only
-   (gold-standard set).
+   ── Adaptive difficulty ──
+   Each level tracks a `targetDifficulty` 1 (easy) → 2 (med) → 3 (hard).
+     • Starts at 2.
+     • Correct answer → target++ (capped at 3).
+     • Wrong answer   → target-- (floored at 1), and the question is re-queued
+       2 positions later for a spaced retry.
+   Next-question pick prefers a question whose difficulty matches the current
+   target; falls back to the nearest available difficulty in the same bucket.
+
+   Question source: junior_grammar_questions, sort_order 9000-9199
+     • 9000-9099 = original gold-standard 12 (per point)
+     • 9100-9199 = adaptive expansion bank (varied difficulties)
    ────────────────────────────────────────────────────────────────────────── */
 
 type LevelKey = "mcq" | "fill" | "correction" | "transform" | "translation";
@@ -88,12 +98,15 @@ type Pt = {
   mnemonic: string | null;
 };
 
+type Difficulty = 1 | 2 | 3;
+
 type LevelState = {
   asked: number[]; // indices of questions already shown
   correct: number;
   answered: number;
   retryQueue: number[]; // indices to re-ask (spaced retry)
   status: LevelStatus;
+  targetDifficulty: Difficulty; // adaptive: starts at 2, ±1 on each result
 };
 
 function makeInitialState(): Record<number, LevelState> {
@@ -106,9 +119,32 @@ function makeInitialState(): Record<number, LevelState> {
         answered: 0,
         retryQueue: [],
         status: l.id === 1 ? "active" : "locked",
+        targetDifficulty: 2 as Difficulty,
       } as LevelState,
     ]),
   );
+}
+
+/**
+ * Pick the next question index from `pool`, preferring:
+ *   1. Unasked questions matching `targetDifficulty`,
+ *   2. Unasked questions at the nearest difficulty (|d - target| ascending),
+ *   3. Any unasked question.
+ * Returns null when every question in the pool has already been asked.
+ */
+function pickByTargetDifficulty(
+  pool: GrammarQuestion[],
+  asked: number[],
+  targetDifficulty: Difficulty,
+): number | null {
+  const unaskedIdx = pool.map((_, i) => i).filter((i) => !asked.includes(i));
+  if (unaskedIdx.length === 0) return null;
+  const exact = unaskedIdx.filter((i) => (pool[i].difficulty ?? 2) === targetDifficulty);
+  if (exact.length > 0) return exact[0];
+  // nearest by absolute difficulty distance
+  return unaskedIdx
+    .map((i) => ({ i, d: Math.abs((pool[i].difficulty ?? 2) - targetDifficulty) }))
+    .sort((a, b) => a.d - b.d)[0].i;
 }
 
 function isMastered(state: LevelState, cfg: LevelConfig): boolean {
@@ -149,11 +185,12 @@ export default function JuniorGrammarMastery() {
         supabase
           .from("junior_grammar_questions")
           .select(
-            "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,sort_order",
+            "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order",
           )
           .eq("point_id", id)
           .gte("sort_order", 9000)
-          .lte("sort_order", 9099)
+          .lte("sort_order", 9199)
+          .order("difficulty", { ascending: true })
           .order("sort_order"),
       ]);
       setPt(pRes.data as Pt);
@@ -192,19 +229,18 @@ export default function JuniorGrammarMastery() {
     }
     // Already have a queued question? leave it.
     if (activeQuestionIdx !== null) return;
-    // Prefer retry queue
+    // Prefer retry queue (spaced retry of wrong answers)
     if (ls.retryQueue.length > 0) {
       setActiveQuestionIdx(ls.retryQueue[0]);
       return;
     }
-    // First unasked
-    for (let i = 0; i < pool.length; i++) {
-      if (!ls.asked.includes(i)) {
-        setActiveQuestionIdx(i);
-        return;
-      }
+    // Adaptive pick: prefer a question at the current target difficulty.
+    const next = pickByTargetDifficulty(pool, ls.asked, ls.targetDifficulty);
+    if (next !== null) {
+      setActiveQuestionIdx(next);
+      return;
     }
-    // Exhausted pool — if not mastered yet, loop back through any wrong-answered
+    // Exhausted pool — if not mastered yet, loop back to the first question
     if (!isMastered(ls, cfg) && pool.length > 0) {
       setActiveQuestionIdx(0); // replay from start
     }
@@ -232,6 +268,12 @@ export default function JuniorGrammarMastery() {
       const updatedRetry = isOk
         ? newRetry
         : [...newRetry.slice(0, 2), activeQuestionIdx, ...newRetry.slice(2)];
+      // Adaptive difficulty: correct → harder; wrong → easier (clamped 1..3)
+      const nextTarget = (
+        isOk
+          ? Math.min(3, prev.targetDifficulty + 1)
+          : Math.max(1, prev.targetDifficulty - 1)
+      ) as Difficulty;
       return {
         ...s,
         [currentLevel]: {
@@ -240,6 +282,7 @@ export default function JuniorGrammarMastery() {
           correct: prev.correct + (isOk ? 1 : 0),
           answered: prev.answered + 1,
           retryQueue: updatedRetry,
+          targetDifficulty: nextTarget,
         },
       };
     });
@@ -405,9 +448,27 @@ export default function JuniorGrammarMastery() {
             <span className="rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 px-2.5 py-0.5 font-bold">
               <T>Level</T> {cfg.id} · {cfg.name}
             </span>
-            <span className="text-muted-foreground tabular-nums">
-              {lvlState.answered + 1} · {cfg.minQ}–{cfg.maxQ} <T>题</T>
-            </span>
+            <div className="flex items-center gap-2">
+              {(() => {
+                const d = (activeQ.difficulty ?? 2) as Difficulty;
+                const meta = d === 1
+                  ? { label: "易", cn: "易", cls: "bg-sky-500/15 text-sky-700 dark:text-sky-300" }
+                  : d === 3
+                  ? { label: "难", cn: "难", cls: "bg-rose-500/15 text-rose-700 dark:text-rose-300" }
+                  : { label: "中", cn: "中", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300" };
+                return (
+                  <span
+                    title="adaptive difficulty — 答对会升级，答错会下调"
+                    className={cn("rounded-full px-2 py-0.5 font-bold", meta.cls)}
+                  >
+                    {meta.cn}
+                  </span>
+                );
+              })()}
+              <span className="text-muted-foreground tabular-nums">
+                {lvlState.answered + 1} · {cfg.minQ}–{cfg.maxQ} <T>题</T>
+              </span>
+            </div>
           </div>
           <GrammarQuestionCard
             key={activeQ.id}
@@ -444,10 +505,15 @@ export default function JuniorGrammarMastery() {
       )}
 
       {/* ─── Mastery hint (low-key) ─── */}
-      <div className="text-[11px] text-center text-muted-foreground">
-        <T>当前关卡通关条件</T>：<T>至少答 {cfg.minQ} 题，正确率 ≥ {Math.round(cfg.threshold * 100)}%</T>
-        {" · "}
-        <T>答错的题会稍后重做</T>
+      <div className="text-[11px] text-center text-muted-foreground space-y-0.5">
+        <div>
+          <T>当前关卡通关条件</T>：<T>至少答 {cfg.minQ} 题，正确率 ≥ {Math.round(cfg.threshold * 100)}%</T>
+          {" · "}
+          <T>答错的题会稍后重做</T>
+        </div>
+        <div className="text-[10px] opacity-80">
+          <T>智能调节：答对升级（易 → 中 → 难），答错降级（难 → 中 → 易）</T>
+        </div>
       </div>
     </main>
   );

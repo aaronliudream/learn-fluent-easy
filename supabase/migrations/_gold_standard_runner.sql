@@ -1,7 +1,6 @@
 -- =====================================================================
--- COMBINED GOLD-STANDARD RUNNER · 23 grammar points
--- Fixes applied: distractors NOT NULL, embedded JSON quotes escaped,
--- 2 typos (' instead of ") in option_c fields.
+-- COMBINED GOLD-STANDARD RUNNER · ALL 30 grammar points
+-- Complete middle-school G8 curriculum at content_depth=3.
 -- =====================================================================
 
 
@@ -8585,5 +8584,1129 @@ BEGIN
     RAISE EXCEPTION 'Gold-standard migration failed: expected 12 questions for g8.30, got %.', v_q_count;
   END IF;
   RAISE NOTICE 'Gold-standard migration for g8.30 verified: content_depth=3, % questions seeded.', v_q_count;
+END $$;
+
+
+-- ╔════════════════════════════════════════════════════════════════════╗
+-- ║ FILE: 20260525120000_g8_02_present_continuous_vs_simple_gold_standard.sql
+-- ╚════════════════════════════════════════════════════════════════════╝
+-- =====================================================================
+-- Gold-standard content for G8 · 现在进行时 vs 一般现在时
+-- Code: g8.02   Category: tense
+-- =====================================================================
+
+UPDATE junior_grammar_points
+SET
+  summary = '"我正在做" vs "我天天做" — 中考阅读区分"此刻"和"常态"的关键时态对比。',
+  hook_line_cn = '现在进行 = 此刻；一般现在 = 习惯。看到 now / look / listen 用进行时；看到 every / usually 用一般现在。',
+  hook_line = 'be doing (right now) vs do/does (always) — the most-tested present-tense pair in 中考.',
+  mnemonic = '此刻正在做 = am/is/are + V-ing；天天经常做 = 动词原形（he/she 加 -s）。',
+  content_depth = 3,
+
+  explanation_md = E'## 🎯 一句话搞定\n\n**现在正在发生 / 此刻这一段** → 现在进行时（**be + V-ing**）  \n**习惯 / 常态 / 客观事实** → 一般现在时（**动词原形 / -s**）\n\n---\n\n## 📐 一图秒分两种时态\n\n| 维度 | 现在进行时 | 一般现在时 |\n|---|---|---|\n| **公式** | 主语 + **am/is/are + V-ing** | 主语 + 动词原形（he/she/it + V-s） |\n| **含义** | 此刻 / 这段时间正在做 | 习惯 / 经常 / 客观事实 |\n| **典型信号词** | now, right now, **look!**, **listen!**, at the moment, these days | every day / week, usually, often, always, sometimes |\n| **例子** | She **is reading** now. | She **reads** every day. |\n\n> ⚠️ **铁律**：look! / listen! 开头几乎一定要用进行时。\n\n---\n\n## 🔥 现在进行时的 3 大用法\n\n### ① 此刻正在做\n- **Look!** The kids **are playing** football.\n\n### ② 当前这段时间（不一定此刻）\n- I **am studying** English **these days**.（这段时间）\n\n### ③ 已计划好的将来（少数动词如 go/come/leave）\n- I **am leaving** for Beijing tomorrow.\n\n---\n\n## 🔥 一般现在时的 3 大用法\n\n### ① 习惯 / 经常做\n- He **plays** basketball every weekend.\n\n### ② 客观真理 / 自然规律\n- The earth **goes** around the sun.\n\n### ③ 时刻表（确定的将来事件）\n- The train **leaves** at 7 a.m. tomorrow.\n\n---\n\n## ⏰ 关键信号词清单（背下来 = 拿分）\n\n### 现在进行时信号\n- **now / right now / at the moment / at present**\n- **Look! / Listen! / Be careful!**（祈使开头）\n- **these days / this week / this year**（这段时间）\n- It is + 时刻 + ... is doing（强调那一刻）\n\n### 一般现在时信号\n- **every day / week / month / morning**\n- **usually / often / always / sometimes / seldom / never**\n- **on Mondays / on weekends**\n- 客观事实陈述（无时间状语，描述真理）\n\n---\n\n## ⚠️ Top 5 易错点（中考批卷红笔常出现）\n\n1. **状态动词用进行时**（最致命）：~~I am knowing the answer.~~ → **I know the answer.**（know/like/love/want/have-表所有不用进行时）\n2. **Look! / Listen! 用了一般现在时**：~~Look! He plays football.~~ → **Look! He is playing football.**\n3. **every day 用进行时**：~~He is going to school every day.~~ → **He goes to school every day.**\n4. **第三人称单数 -s 漏了**：~~She play piano every day.~~ → **She plays piano every day.**\n5. **V-ing 拼写错**：~~runing~~ → **running**（双写）；~~comeing~~ → **coming**（去 e）\n\n---\n\n## 🧠 三秒判断口诀\n\n> ① 看时间词：**every / usually / always** → 一般现在；**now / look / these days** → 进行时  \n> ② **状态动词不用进行时**（know/like/want/have...）  \n> ③ 第三人称单数 → 一般现在加 -s；进行时则改 is 不变动词形式',
+
+  immersion_cards = $jsonb$[
+    {"situation": "Mom asks where you are during a call", "cn": "我正在做作业。", "en": "I am doing my homework."},
+    {"situation": "Telling a friend your daily routine", "cn": "我每天 6:30 起床。", "en": "I get up at 6:30 every day."},
+    {"situation": "Pointing out a scene in the park", "cn": "看！那个男孩正在喂鸽子。", "en": "Look! That boy is feeding the pigeons."},
+    {"situation": "Talking about a long-term plan", "cn": "我最近在准备中考。", "en": "I am preparing for 中考 these days."},
+    {"situation": "Stating a science fact", "cn": "水沸腾时温度是 100 度。", "en": "Water boils at 100 degrees Celsius."},
+    {"situation": "Asking a classmate at recess", "cn": "你现在听什么呢？", "en": "What are you listening to right now?"}
+  ]$jsonb$::jsonb,
+
+  contrast_table = $jsonb$[
+    {"lhs": "I am knowing the answer.",                  "rhs": "I know the answer."},
+    {"lhs": "Look! He plays football over there.",        "rhs": "Look! He is playing football over there."},
+    {"lhs": "He is going to school every day.",           "rhs": "He goes to school every day."},
+    {"lhs": "She play piano every day.",                  "rhs": "She plays piano every day."},
+    {"lhs": "They are study English now.",                "rhs": "They are studying English now."},
+    {"lhs": "The sun is going around the earth.",         "rhs": "The earth goes around the sun."}
+  ]$jsonb$::jsonb,
+
+  reflex_cards = $jsonb$[
+    {"cn": "他每天都跑步。",                  "en": "He runs every day.",                            "keyword": "runs every day"},
+    {"cn": "她正在弹钢琴。",                  "en": "She is playing the piano.",                     "keyword": "is playing"},
+    {"cn": "看！他们正在跳舞。",              "en": "Look! They are dancing.",                       "keyword": "Look! ... are dancing"},
+    {"cn": "我妈妈每周三去超市。",            "en": "My mom goes to the supermarket on Wednesdays.", "keyword": "goes ... on Wednesdays"},
+    {"cn": "我现在正在看一本好书。",          "en": "I am reading a good book now.",                 "keyword": "am reading ... now"},
+    {"cn": "他不喜欢香菜。",                  "en": "He doesn't like coriander.",                    "keyword": "doesn''t like"},
+    {"cn": "Lin 这个学期在学法语。",          "en": "Lin is studying French this term.",             "keyword": "is studying ... this term"},
+    {"cn": "他们从不迟到。",                  "en": "They never arrive late.",                       "keyword": "never arrive"}
+  ]$jsonb$::jsonb,
+
+  situation_drills = $jsonb$[
+    {
+      "situation": "Phone call from your friend asking what you''re doing.",
+      "cn": "我正在帮妈妈洗碗。",
+      "en": "I am helping my mom with the dishes.",
+      "accepted": [
+        "I''m doing the dishes with my mom.",
+        "I''m helping my mom wash the dishes."
+      ]
+    },
+    {
+      "situation": "Telling a new pen pal about your daily routine.",
+      "cn": "我每天 7 点起床，6 点回家。",
+      "en": "I get up at 7 every day and come home at 6.",
+      "accepted": [
+        "Every day I wake up at 7 and get home at 6.",
+        "I usually get up at 7 and arrive home around 6."
+      ]
+    },
+    {
+      "situation": "Walking your foreign friend through a busy school day.",
+      "cn": "看！同学们正在做眼保健操。",
+      "en": "Look! The students are doing eye exercises.",
+      "accepted": [
+        "Look at them — they''re doing eye exercises.",
+        "See? They are doing eye exercises now."
+      ]
+    },
+    {
+      "situation": "Explaining a change in your study habits this term.",
+      "cn": "我这学期每天放学后多学一小时英语。",
+      "en": "I am studying English for an extra hour after school every day this term.",
+      "accepted": [
+        "This term I study an extra hour of English after school every day.",
+        "I''ve been doing one extra hour of English daily this term."
+      ]
+    }
+  ]$jsonb$::jsonb,
+
+  correction_tasks = $jsonb$[
+    {
+      "wrong": "I am knowing the answer to this question.",
+      "model": "I know the answer to this question.",
+      "hint":  "know 不用进行时",
+      "why":   "**know / like / love / want / have（表所有）/ believe** 等**状态动词**不用进行时。"
+    },
+    {
+      "wrong": "Look! He plays basketball over there.",
+      "model": "Look! He is playing basketball over there.",
+      "hint":  "Look! 开头要进行时",
+      "why":   "**Look! / Listen!** 开头几乎一定接进行时（此刻正在发生）。"
+    },
+    {
+      "wrong": "He is going to school every day.",
+      "model": "He goes to school every day.",
+      "hint":  "every day 是习惯",
+      "why":   "**every day = 习惯** → 一般现在时；第三人称单数加 -s → goes。"
+    },
+    {
+      "wrong": "She play piano every day after dinner.",
+      "model": "She plays piano every day after dinner.",
+      "hint":  "第三人称单数加 -s",
+      "why":   "**She** 第三人称单数，一般现在时动词加 **-s** → plays。"
+    },
+    {
+      "wrong": "They are study English in the library now.",
+      "model": "They are studying English in the library now.",
+      "hint":  "be + V-ing",
+      "why":   "**现在进行时公式：be + V-ing**。study → studying（不变 y）。"
+    },
+    {
+      "wrong": "The sun is going around the earth every day.",
+      "model": "The earth goes around the sun.",
+      "hint":  "客观真理用一般现在时",
+      "why":   "**客观真理 / 自然规律**永远用一般现在时；而且常识：是地球绕太阳，不是反过来。"
+    }
+  ]$jsonb$::jsonb,
+
+  boss_questions = $jsonb$[
+    {
+      "stem": "Look! The kids ___ in the park.",
+      "option_a": "play",
+      "option_b": "plays",
+      "option_c": "are playing",
+      "option_d": "is playing",
+      "correct_answer": "C",
+      "trap": "选 A/B 没看到 Look! 信号。选 D 主谓不一致（kids 复数用 are）。",
+      "why":  "**Look!** 开头 → 进行时；kids 复数 → **are playing**。"
+    },
+    {
+      "stem": "Tom usually ___ to school by bike, but today he ___ a taxi.",
+      "option_a": "goes / takes",
+      "option_b": "is going / takes",
+      "option_c": "goes / is taking",
+      "option_d": "is going / is taking",
+      "correct_answer": "C",
+      "trap": "选 A 第二空错（today 暗示打破常规，此刻）。选 B/D 第一空错。",
+      "why":  "**usually = 习惯** → 一般现在时 goes；**today (打破常规)** + 此刻 → 进行时 is taking。"
+    },
+    {
+      "stem": "— What is your mom doing now?\n— She ___ a phone call.",
+      "option_a": "makes",
+      "option_b": "is making",
+      "option_c": "make",
+      "option_d": "made",
+      "correct_answer": "B",
+      "trap": "选 A/C 一般现在时，但 now 提示进行时。",
+      "why":  "**now** + 此刻动作 → 进行时 **is making**。"
+    },
+    {
+      "stem": "I ___ that the answer ___ wrong. Let me think again.",
+      "option_a": "am thinking / is",
+      "option_b": "think / is",
+      "option_c": "am thinking / is being",
+      "option_d": "think / is being",
+      "correct_answer": "B",
+      "trap": "选 A/C 把 think（表\"认为\"时）当成动作。选 D be 表状态不用进行时。",
+      "why":  "**think 表\"认为\"时是状态动词**，用一般现在时；**is = 状态**，也用一般现在时。"
+    }
+  ]$jsonb$::jsonb
+
+WHERE code = 'g8.02';
+
+
+UPDATE junior_grammar_points SET teacher_script = $jsonb$[
+  {
+    "text": "今天解锁**现在进行 vs 一般现在**。中考阅读高频对比 — 看错时态整段意思都变。",
+    "show": "🎯 Today: be doing  vs  do/does",
+    "duration": 10
+  },
+  {
+    "text": "**现在进行时** = 此刻正在做。公式：**am/is/are + V-ing**。",
+    "show": "She is reading now.",
+    "highlight": "is reading",
+    "duration": 10
+  },
+  {
+    "text": "**一般现在时** = 习惯 / 经常做。公式：**动词原形**，第三人称单数加 **-s**。",
+    "show": "She reads every day.",
+    "highlight": "reads",
+    "duration": 10
+  },
+  {
+    "text": "**信号词决定时态**：now / Look! / these days → 进行时；every / usually / always → 一般现在。",
+    "show": "now / Look! → be V-ing   |   every / usually → V/Vs",
+    "highlight": "Look!",
+    "duration": 13
+  },
+  {
+    "text": "**铁律 ①**：Look! / Listen! 开头几乎一定是进行时。",
+    "show": "Look! He is playing football.",
+    "highlight": "is playing",
+    "duration": 11
+  },
+  {
+    "text": "**铁律 ②**：状态动词 **know / like / love / want / have（所有）** **不用进行时**！",
+    "show": "✗ am knowing   ✓ know",
+    "highlight": "know",
+    "duration": 12
+  },
+  {
+    "text": "**铁律 ③**：客观真理 / 自然规律永远用一般现在时。The earth **goes** around the sun.",
+    "show": "The earth goes around the sun.",
+    "highlight": "goes",
+    "duration": 11
+  },
+  {
+    "text": "理论讲完。下一关 6 个真实场景。",
+    "show": "Next → 6 Real-life Scenarios 📚",
+    "duration": 7
+  }
+]$jsonb$::jsonb
+WHERE code = 'g8.02';
+
+
+DELETE FROM junior_grammar_questions
+WHERE point_id = (SELECT id FROM junior_grammar_points WHERE code = 'g8.02')
+  AND sort_order BETWEEN 9000 AND 9099;
+
+WITH p AS (SELECT id FROM junior_grammar_points WHERE code = 'g8.02')
+INSERT INTO junior_grammar_questions
+  (point_id, stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
+   accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,
+   difficulty, sort_order)
+SELECT p.id, q.stem, q.question_type, q.option_a, q.option_b, q.option_c, q.option_d,
+       q.correct_answer, q.accepted_answers, q.explanation, q.distractors,
+       q.natural_note, q.grammar_topic, q.use_ai_grading, q.difficulty, q.sort_order
+FROM p, (VALUES
+  ('Listen! Mom ___ a song in the kitchen.', 'mcq', 'sings', 'is singing', 'sing', 'sang', 'B',
+   NULL::text[], 'Listen! 开头 → 进行时；Mom 单数 → is + V-ing。', '{}'::jsonb, NULL, 'continuous_listen', false, 1, 9000),
+  ('My brother ___ basketball every Saturday afternoon.', 'mcq', 'is playing', 'plays', 'play', 'played', 'B',
+   NULL::text[], 'every Saturday = 习惯 → 一般现在时；my brother 第三人称单数 → plays。', '{}'::jsonb, NULL, 'simple_present_habit', false, 1, 9001),
+  ('I ___ tired right now. I think I need a break.', 'mcq', 'am feeling', 'feel', 'feels', 'am feel', 'B',
+   NULL::text[], 'feel 表状态（感觉如何）→ 一般现在时；I → 动词原形 feel。', '{}'::jsonb, NULL, 'state_verb_feel', false, 2, 9002),
+  ('Look at those clouds! It ___ rain soon.', 'mcq', 'goes to', 'is going to', 'is going', 'going to', 'B',
+   NULL::text[], 'Look + 现有迹象（黑云）→ be going to + 动词原形 = 进行时表将来。', '{}'::jsonb, NULL, 'continuous_evidence', false, 2, 9003),
+  ('Tom ____ (read) a comic book in his bedroom right now.', 'fill', NULL, NULL, NULL, NULL, 'is reading',
+   ARRAY['is reading']::text[], 'right now → 进行时 is reading。', '{}'::jsonb, NULL, 'continuous_now', false, 1, 9004),
+  ('Lin ____ (go) swimming twice a week.', 'fill', NULL, NULL, NULL, NULL, 'goes',
+   ARRAY['goes']::text[], 'twice a week = 习惯 → 一般现在；Lin 第三人称 → goes。', '{}'::jsonb, NULL, 'simple_present_third', false, 1, 9005),
+  ('The earth ____ (move) around the sun once a year.', 'fill', NULL, NULL, NULL, NULL, 'moves',
+   ARRAY['moves']::text[], '客观真理 → 一般现在时；the earth 单数 → moves。', '{}'::jsonb, NULL, 'simple_present_truth', false, 2, 9006),
+  ('改写为现在进行时（提示：now）：  "I read an English book."',
+   'transform', NULL, NULL, NULL, NULL, 'I am reading an English book now.',
+   ARRAY['I am reading an English book now.']::text[], 'read → am reading + now。', '{}'::jsonb, NULL, 'continuous_transform', true, 2, 9007),
+  ('改写为一般现在时（提示：every weekend）：  "I am visiting my grandma."',
+   'transform', NULL, NULL, NULL, NULL, 'I visit my grandma every weekend.',
+   ARRAY['I visit my grandma every weekend.']::text[], 'am visiting → visit + every weekend。', '{}'::jsonb, NULL, 'simple_present_transform', true, 2, 9008),
+  ('改错：  "Look! The boy plays the violin so well."',
+   'correction', NULL, NULL, NULL, NULL, 'Look! The boy is playing the violin so well.',
+   ARRAY['Look! The boy is playing the violin so well.']::text[], 'Look! 开头 → 进行时 is playing。', '{}'::jsonb, NULL, 'continuous_look_error', true, 1, 9009),
+  ('改错：  "She is liking her new English teacher very much."',
+   'correction', NULL, NULL, NULL, NULL, 'She likes her new English teacher very much.',
+   ARRAY['She likes her new English teacher very much.']::text[], 'like 是状态动词，不用进行时 → likes。', '{}'::jsonb, NULL, 'state_verb_like', true, 2, 9010),
+  ('把这句话译成英文：我每天 7 点起床，但今天早上我 8 点才起。',
+   'translation', NULL, NULL, NULL, NULL, 'I get up at 7 every day, but this morning I got up at 8.',
+   ARRAY[
+     'I get up at 7 every day, but this morning I got up at 8.',
+     'I usually get up at 7, but this morning I got up at 8 instead.',
+     'I get up at 7 daily, but today I didn''t get up until 8.'
+   ]::text[], '考点：① every day → 一般现在 get up；② this morning + 已发生 → 一般过去 got up。', '{}'::jsonb, '更地道：but this morning 引导对比；didn''t get up until 8 表"直到 8 点才起"。', 'present_vs_past_translation', true, 3, 9011)
+) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
+       accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,
+       difficulty, sort_order);
+
+
+DO $$
+DECLARE
+  v_point_id   uuid;
+  v_q_count    int;
+  v_depth      int;
+BEGIN
+  SELECT id, content_depth INTO v_point_id, v_depth FROM junior_grammar_points WHERE code = 'g8.02';
+  IF v_point_id IS NULL THEN RAISE EXCEPTION 'Missing g8.02'; END IF;
+  IF v_depth <> 3 THEN RAISE EXCEPTION 'g8.02 depth %, expected 3', v_depth; END IF;
+  SELECT count(*) INTO v_q_count FROM junior_grammar_questions
+    WHERE point_id = v_point_id AND sort_order BETWEEN 9000 AND 9099;
+  IF v_q_count <> 12 THEN RAISE EXCEPTION 'g8.02 expected 12 questions, got %', v_q_count; END IF;
+  RAISE NOTICE 'g8.02 verified: depth=3, %=12 questions seeded.', v_q_count;
+END $$;
+
+
+-- ╔════════════════════════════════════════════════════════════════════╗
+-- ║ FILE: 20260525130000_g8_07_frequency_adverbs_gold_standard.sql
+-- ╚════════════════════════════════════════════════════════════════════╝
+-- =====================================================================
+-- Gold-standard content for G8 · 频度副词 · Frequency Adverbs
+-- Code: g8.07   Category: other
+-- =====================================================================
+
+UPDATE junior_grammar_points
+SET
+  summary = '"总是 / 通常 / 经常 / 有时 / 从不" — 描述习惯频率的副词，位置错了整句就错。',
+  hook_line_cn = '中考高频考点：频度副词放哪里？三个铁律 — 实义动词前、be 动词后、助动词后。',
+  hook_line = 'always / usually / often / sometimes / never — placement rules that 中考 graders love testing.',
+  mnemonic = '频度副词位置：实义动词前 · be 动词后 · 助/情态动词后。',
+  content_depth = 3,
+
+  explanation_md = E'## 🎯 一句话搞定\n\n描述"多频繁做某事" → 用 **频度副词**：从 always（100%）到 never（0%）。位置要放对，否则中考扣分。\n\n---\n\n## 📐 频度光谱（100% → 0%）\n\n| 频率 | 副词 | 大致 % |\n|---|---|---|\n| 100% | **always** 总是 | 100% |\n| 90% | **usually** 通常 | 80–90% |\n| 70% | **often** 经常 | 60–80% |\n| 50% | **sometimes** 有时 | 30–50% |\n| 10% | **seldom / rarely** 很少 | 5–15% |\n| 0% | **never** 从不 | 0% |\n\n---\n\n## 🔥 三大位置规则（必背）\n\n### ① 在**实义动词前**\n- I **always read** before bed.（实义动词 read）\n- She **often visits** her grandma.\n\n### ② 在 **be 动词后**\n- Tom **is never late** for class.\n- They **are usually busy** on weekends.\n\n### ③ 在**助动词 / 情态动词后**\n- I **have always wanted** to visit Beijing.（助动词 have）\n- You **should always wash** your hands.（情态动词 should）\n- She **doesn''t often eat** fast food.（否定句：在 don''t / doesn''t 后）\n\n---\n\n## 🔥 sometimes 的特殊位置（中考常考）\n\n**sometimes** 比较灵活，可以放：\n- 句首：**Sometimes** I go to the park.\n- 实义动词前：I **sometimes** go to the park.\n- 句末：I go to the park **sometimes**.\n\n其他频度副词通常**不能放句首/句末**，sometimes 是例外。\n\n---\n\n## ⏰ 看到这些 = 频度副词题\n\n- always / usually / often / sometimes / seldom / rarely / never\n- 询问句 How often + do/does + 主语 + 动词原形?\n- 中考写作描述习惯 / 日常 / 个人喜好\n\n---\n\n## ⚠️ Top 5 易错点（中考批卷红笔常出现）\n\n1. **always 放在 be 动词前**：~~I always am late.~~ → **I am always late.**（be 后）\n2. **often 放在实义动词后**：~~He plays often basketball.~~ → **He often plays basketball.**（实义动词前）\n3. **never 配 doesn''t**（双重否定）：~~He doesn''t never come.~~ → **He never comes.** 或 **He doesn''t come.**\n4. **频度副词放句末**（除了 sometimes）：~~I go to school always.~~ → **I always go to school.**\n5. **助动词后位置错**：~~I always have wanted to go.~~ → **I have always wanted to go.**（助动词 have 之后）\n\n---\n\n## 🧠 三秒判断口诀\n\n> ① 看主动词是什么？**实义动词** → 副词放**前面**；**be 动词** → 副词放**后面**  \n> ② 有助动词 / 情态动词？副词放**助动词后 + 实义动词前**  \n> ③ never 已含否定，**不能再加 don''t**',
+
+  immersion_cards = $jsonb$[
+    {"situation": "Sharing your healthy habit with a friend", "cn": "我总是 6 点起床去跑步。", "en": "I always get up at six to go running."},
+    {"situation": "Talking about your weekend routine", "cn": "周末我通常和朋友一起打篮球。", "en": "I usually play basketball with friends on weekends."},
+    {"situation": "Describing a classmate''s punctuality", "cn": "Tom 上课从不迟到。", "en": "Tom is never late for class."},
+    {"situation": "Mom''s reminder about hand washing", "cn": "你饭前应该一直洗手。", "en": "You should always wash your hands before meals."},
+    {"situation": "Telling about something rare", "cn": "我很少吃快餐。", "en": "I seldom eat fast food."},
+    {"situation": "A flexible scheduling word", "cn": "有时我会熬夜读小说。", "en": "Sometimes I stay up reading novels."}
+  ]$jsonb$::jsonb,
+
+  contrast_table = $jsonb$[
+    {"lhs": "I always am late for class.",                "rhs": "I am always late for class."},
+    {"lhs": "He plays often basketball after school.",     "rhs": "He often plays basketball after school."},
+    {"lhs": "Tom doesn''t never go to bed early.",          "rhs": "Tom never goes to bed early."},
+    {"lhs": "I go to the gym always after work.",          "rhs": "I always go to the gym after work."},
+    {"lhs": "I always have wanted to be a singer.",         "rhs": "I have always wanted to be a singer."},
+    {"lhs": "She is sometime quiet in class.",              "rhs": "She is sometimes quiet in class."}
+  ]$jsonb$::jsonb,
+
+  reflex_cards = $jsonb$[
+    {"cn": "我经常迟到。",                      "en": "I am often late.",                            "keyword": "am often"},
+    {"cn": "她总是帮助同学。",                  "en": "She always helps her classmates.",            "keyword": "always helps"},
+    {"cn": "我从不熬夜。",                      "en": "I never stay up late.",                       "keyword": "never stay up"},
+    {"cn": "Tom 通常 6 点回家。",               "en": "Tom usually gets home at six.",               "keyword": "usually gets"},
+    {"cn": "我们有时去看电影。",                "en": "We sometimes go to the movies.",              "keyword": "sometimes go"},
+    {"cn": "他很少打游戏。",                    "en": "He seldom plays video games.",                "keyword": "seldom plays"},
+    {"cn": "你应该总是诚实。",                  "en": "You should always be honest.",                "keyword": "should always be"},
+    {"cn": "我一直想去日本。",                  "en": "I have always wanted to visit Japan.",        "keyword": "have always wanted"}
+  ]$jsonb$::jsonb,
+
+  situation_drills = $jsonb$[
+    {
+      "situation": "Telling a pen pal about your morning routine.",
+      "cn": "我总是 6 点起床，然后通常吃一碗粥当早餐。",
+      "en": "I always get up at 6 and usually have a bowl of porridge for breakfast.",
+      "accepted": [
+        "I''m always up at 6 and I usually eat porridge for breakfast.",
+        "Every morning I get up at 6 and tend to have porridge."
+      ]
+    },
+    {
+      "situation": "Describing a punctual classmate to your teacher.",
+      "cn": "Lin 从不迟到，每天总是早 5 分钟到教室。",
+      "en": "Lin is never late and always arrives in the classroom 5 minutes early.",
+      "accepted": [
+        "Lin never comes late; she''s always 5 minutes early to class.",
+        "Lin always arrives 5 minutes early — she''s never late."
+      ]
+    },
+    {
+      "situation": "Defending a friend who rarely makes mistakes.",
+      "cn": "他很少出错，所以这次答题失误肯定有原因。",
+      "en": "He rarely makes mistakes, so there must be a reason he slipped this time.",
+      "accepted": [
+        "He almost never makes mistakes, so there''s definitely a reason this time.",
+        "He seldom gets things wrong; something must have happened."
+      ]
+    },
+    {
+      "situation": "Sharing flexibility about your weekend plans.",
+      "cn": "周末我有时去公园，有时呆在家看书。",
+      "en": "On weekends I sometimes go to the park and sometimes stay home reading.",
+      "accepted": [
+        "Sometimes I go to the park on weekends, other times I just stay home and read.",
+        "On weekends I''ll either go to the park or stay home reading."
+      ]
+    }
+  ]$jsonb$::jsonb,
+
+  correction_tasks = $jsonb$[
+    {"wrong": "I always am late for school.", "model": "I am always late for school.", "hint": "频度副词放 be 后", "why": "**频度副词在 be 动词后**：I am always ..."},
+    {"wrong": "He plays often basketball.", "model": "He often plays basketball.", "hint": "实义动词前", "why": "**频度副词在实义动词前**：He often plays ..."},
+    {"wrong": "Tom doesn''t never come to school late.", "model": "Tom never comes to school late.", "hint": "never 已含否定", "why": "**never 自带否定**，不能再加 doesn''t（双重否定）。"},
+    {"wrong": "I go to the cinema always with my friends.", "model": "I always go to the cinema with my friends.", "hint": "不能放句末", "why": "**频度副词通常不放句末**（sometimes 例外）。always 必须放在实义动词前。"},
+    {"wrong": "I always have wanted to be a doctor.", "model": "I have always wanted to be a doctor.", "hint": "助动词后", "why": "**助动词 have 之后** → I have **always** wanted ..."},
+    {"wrong": "She is sometime quiet in class.", "model": "She is sometimes quiet in class.", "hint": "sometimes 有 s", "why": "**sometimes**（有时，副词，结尾有 s）≠ sometime（某时）≠ some time（一段时间）。"}
+  ]$jsonb$::jsonb,
+
+  boss_questions = $jsonb$[
+    {"stem": "I ___ late for the school bus, but I''m on time today.", "option_a": "am usually", "option_b": "usually am", "option_c": "am usually being", "option_d": "usually be", "correct_answer": "A",
+     "trap": "选 B 把副词放 be 前 — 错。选 C/D 形式错。", "why": "**be 动词 + 频度副词** → am usually。"},
+    {"stem": "He ___ to school by subway every weekday.", "option_a": "always goes", "option_b": "goes always", "option_c": "is going always", "option_d": "go always", "correct_answer": "A",
+     "trap": "选 B 副词放实义动词后 — 错。选 C 时态错。选 D 漏 -s。", "why": "**频度副词在实义动词前** + 第三人称单数 → always goes。"},
+    {"stem": "I ___ wanted to learn the piano, but never had the chance.", "option_a": "always have", "option_b": "have always", "option_c": "have wanted always", "option_d": "always wanted have", "correct_answer": "B",
+     "trap": "选 A 副词放助动词前 — 错。选 C 副词放句末 — 错。选 D 完全乱。", "why": "**助动词 have 之后** → have **always** wanted。"},
+    {"stem": "Tom is a careful boy. He ___ makes mistakes in his homework.", "option_a": "always", "option_b": "usually", "option_c": "never", "option_d": "rarely", "correct_answer": "D",
+     "trap": "选 A/B 意思相反（粗心）。选 C never 太绝对（careful 不等于完美）。",
+     "why": "**careful 但不完美** → rarely / seldom 最合适（很少出错）。never 太绝对，与\"细心男孩\"略不匹配。"}
+  ]$jsonb$::jsonb
+
+WHERE code = 'g8.07';
+
+
+UPDATE junior_grammar_points SET teacher_script = $jsonb$[
+  {"text": "今天解锁**频度副词**。中考爱考的位置题 — 放错地方一句话直接判错。", "show": "🎯 always / usually / often / sometimes / never", "duration": 10},
+  {"text": "**频度光谱**：always (100%) → usually → often → sometimes → seldom → never (0%)。", "show": "100% → 0%   always → never", "highlight": "always ... never", "duration": 11},
+  {"text": "**规则 ①**：**实义动词前**。He **often plays** football.", "show": "He often plays football.", "highlight": "often plays", "duration": 10},
+  {"text": "**规则 ②**：**be 动词后**。Tom **is never late**.", "show": "Tom is never late.", "highlight": "is never", "duration": 10},
+  {"text": "**规则 ③**：**助动词 / 情态动词后**。I have **always** wanted to。", "show": "I have always wanted ...", "highlight": "have always", "duration": 11},
+  {"text": "**坑 ①**：never 已含否定，**不能再加 don''t / doesn''t**！", "show": "✗ doesn''t never   ✓ never", "highlight": "never", "duration": 11},
+  {"text": "**坑 ②**：除 sometimes 外，频度副词**不放句末**。always、never 都不行。", "show": "✗ I go always.   ✓ I always go.", "highlight": "always go", "duration": 12},
+  {"text": "**sometimes 灵活**：可放句首、动词前、句末。其他副词只能放规定位置。下一关进入实战。", "show": "sometimes: flexible position", "highlight": "sometimes", "duration": 11}
+]$jsonb$::jsonb
+WHERE code = 'g8.07';
+
+
+DELETE FROM junior_grammar_questions WHERE point_id = (SELECT id FROM junior_grammar_points WHERE code = 'g8.07') AND sort_order BETWEEN 9000 AND 9099;
+
+WITH p AS (SELECT id FROM junior_grammar_points WHERE code = 'g8.07')
+INSERT INTO junior_grammar_questions
+  (point_id, stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order)
+SELECT p.id, q.stem, q.question_type, q.option_a, q.option_b, q.option_c, q.option_d, q.correct_answer, q.accepted_answers, q.explanation, q.distractors, q.natural_note, q.grammar_topic, q.use_ai_grading, q.difficulty, q.sort_order
+FROM p, (VALUES
+  ('Lin ___ wakes up before 7 a.m. on weekdays.', 'mcq', 'is usually', 'usually is', 'usually', 'always', 'C',
+   NULL::text[], '实义动词 wakes up 前用副词 usually（"通常"）。', '{}'::jsonb, NULL, 'frequency_before_verb', false, 1, 9000),
+  ('She ___ angry — she''s the most patient person I know.', 'mcq', 'is never', 'never is', 'is always', 'is sometimes', 'A',
+   NULL::text[], 'be 动词后 + 上下文"最有耐心"= 从不生气 → is never。', '{}'::jsonb, NULL, 'frequency_be_after', false, 2, 9001),
+  ('My grandparents ___ play chess in the park after dinner.', 'mcq', 'always', 'be always', 'always be', 'are always', 'A',
+   NULL::text[], '实义动词 play 前 + grandparents 复数 → always play。', '{}'::jsonb, NULL, 'frequency_plural', false, 1, 9002),
+  ('I ___ taken the subway to school — I always take the bus.', 'mcq', 'never have', 'have never', 'have ever', 'never am', 'B',
+   NULL::text[], '助动词 have 之后 → have never。意思"我从没坐过地铁"。', '{}'::jsonb, NULL, 'frequency_perfect', false, 3, 9003),
+  ('My dad ____ (always, drink) coffee in the morning.', 'fill', NULL, NULL, NULL, NULL, 'always drinks',
+   ARRAY['always drinks']::text[], '实义动词前 + 第三人称 → always drinks。', '{}'::jsonb, NULL, 'frequency_third_person', false, 1, 9004),
+  ('Our English teacher ____ (be, often) late for class.', 'fill', NULL, NULL, NULL, NULL, 'is often',
+   ARRAY['is often']::text[], 'be 动词后用副词 → is often。', '{}'::jsonb, NULL, 'frequency_be', false, 1, 9005),
+  ('I ____ (have, never) seen so much snow before.', 'fill', NULL, NULL, NULL, NULL, 'have never',
+   ARRAY['have never']::text[], '助动词 have 之后 → have never。', '{}'::jsonb, NULL, 'frequency_perfect', false, 2, 9006),
+  ('改写：把 always 加到合适位置。  "He is happy."',
+   'transform', NULL, NULL, NULL, NULL, 'He is always happy.',
+   ARRAY['He is always happy.']::text[], 'be 动词后 → is always happy。', '{}'::jsonb, NULL, 'frequency_be_position', true, 1, 9007),
+  ('改写：把 often 加到合适位置。  "She watches movies with her sister."',
+   'transform', NULL, NULL, NULL, NULL, 'She often watches movies with her sister.',
+   ARRAY['She often watches movies with her sister.']::text[], '实义动词前 → often watches。', '{}'::jsonb, NULL, 'frequency_verb_position', true, 2, 9008),
+  ('改错：  "I always am the first one to arrive."',
+   'correction', NULL, NULL, NULL, NULL, 'I am always the first one to arrive.',
+   ARRAY['I am always the first one to arrive.']::text[], '频度副词在 be 动词后。', '{}'::jsonb, NULL, 'frequency_be_after_error', true, 1, 9009),
+  ('改错：  "Tom never doesn''t do his homework on time."',
+   'correction', NULL, NULL, NULL, NULL, 'Tom never does his homework on time.',
+   ARRAY[
+     'Tom never does his homework on time.',
+     'Tom doesn''t do his homework on time.'
+   ]::text[], 'never 已含否定，不能加 doesn''t。', '{}'::jsonb, NULL, 'frequency_double_negative', true, 2, 9010),
+  ('把这句话译成英文：我妈妈总是在我做作业的时候做晚饭。',
+   'translation', NULL, NULL, NULL, NULL, 'My mom always cooks dinner while I am doing my homework.',
+   ARRAY[
+     'My mom always cooks dinner while I am doing my homework.',
+     'My mother always makes dinner while I do my homework.',
+     'My mom always prepares dinner when I''m doing homework.'
+   ]::text[], '考点：① always 在实义动词 cooks 前；② while 引导同时进行的两个动作。', '{}'::jsonb, '更地道：always cooks dinner 比 is always cooking 更自然（常态而非进行）。', 'frequency_translation', true, 3, 9011)
+) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order);
+
+
+DO $$
+DECLARE v_point_id uuid; v_q_count int; v_depth int;
+BEGIN
+  SELECT id, content_depth INTO v_point_id, v_depth FROM junior_grammar_points WHERE code = 'g8.07';
+  IF v_point_id IS NULL THEN RAISE EXCEPTION 'Missing g8.07'; END IF;
+  IF v_depth <> 3 THEN RAISE EXCEPTION 'g8.07 depth %, expected 3', v_depth; END IF;
+  SELECT count(*) INTO v_q_count FROM junior_grammar_questions WHERE point_id = v_point_id AND sort_order BETWEEN 9000 AND 9099;
+  IF v_q_count <> 12 THEN RAISE EXCEPTION 'g8.07 expected 12 questions, got %', v_q_count; END IF;
+  RAISE NOTICE 'g8.07 verified: depth=3, %=12 questions seeded.', v_q_count;
+END $$;
+
+
+-- ╔════════════════════════════════════════════════════════════════════╗
+-- ║ FILE: 20260525140000_g8_08_how_often_gold_standard.sql
+-- ╚════════════════════════════════════════════════════════════════════╝
+-- =====================================================================
+-- Gold-standard content for G8 · how often + 频率回答
+-- Code: g8.08   Category: other
+-- =====================================================================
+
+UPDATE junior_grammar_points
+SET
+  summary = '"How often ...?" — 询问频率的固定句型，回答用 once / twice / three times a week 等。',
+  hook_line_cn = '中考听力 + 单选必考：How often 问的是次数，答的是"几次 / 隔几天"。一组固定搭配，背完不丢分。',
+  hook_line = 'How often — the question that unlocks half the daily-routine 中考 listening prompts.',
+  mnemonic = 'How often + do/does + 主语 + 动词原形 ?  答：once a week / twice a month / X times a year。',
+  content_depth = 3,
+
+  explanation_md = E'## 🎯 一句话搞定\n\n**问"多久一次"** → 用 **How often + do/does + 主语 + 动词原形 ?**  \n**回答**用次数 + 单位时间。\n\n---\n\n## 📐 核心公式\n\n| 用法 | 公式 | 例子 |\n|---|---|---|\n| 提问 | **How often + do/does + 主语 + 动词原形 ?** | **How often do you exercise?** |\n| 回答 (次数) | **once / twice / three times / four times + a/an/per + 单位时间** | **Twice a week.** |\n| 回答 (频度副词) | **always / usually / often / sometimes / seldom / never** | **I sometimes go.** |\n| 回答 (间隔) | **every + 时间单位 / every + 数字 + 复数** | **Every Sunday. / Every two weeks.** |\n\n> ⚠️ **铁律**：**once / twice** = 1/2 次（不能说 one time / two times — 不地道）；3 次以上才用 **three / four times**。\n\n---\n\n## 🔥 高频答语清单（必背）\n\n### 频度副词答语\n- **always / usually / often / sometimes / hardly ever / never**\n\n### 次数答语\n- **once a day / week / month / year**（一天/周/月/年一次）\n- **twice a week**（一周两次）\n- **three / four / five times a month**（一个月 N 次）\n\n### 间隔答语\n- **every day / every weekend**（每天 / 每周末）\n- **every other day**（每隔一天）\n- **every two days**（每两天）\n\n### 习惯答语\n- **on Mondays**（每周一）\n- **at weekends / on weekends**\n- **from time to time**（偶尔）\n\n---\n\n## ⏰ 看到这些 = how often 题\n\n- 问句开头 **How often**\n- 答语含 a week / a month / times / every\n- 询问运动 / 阅读 / 看电影 / 上课等习惯频率\n- 中考听力对话开头常用"How often do you ...?"\n\n---\n\n## ⚠️ Top 5 易错点（中考批卷红笔常出现）\n\n1. **how often vs how long 混用**：~~How long do you exercise?~~（多久＝多长时间）→ **How often do you exercise?**（多频繁）\n2. **回答用 one time**：~~one time a week~~ → **once a week**（地道说法）\n3. **a 漏了**：~~twice week~~ → **twice a week**（必须有 a/per）\n4. **every day vs everyday**：副词"每天"是 **every day**（两个词）；形容词"日常的"是 **everyday**（一个词，如 everyday life）\n5. **第三人称问句用 do**：~~How often do she go ...?~~ → **How often does she go ...?**（第三人称用 does）\n\n---\n\n## 🧠 三秒判断口诀\n\n> ① 问"多久一次" → **How often + do/does + 主语 + V 原形 ?**  \n> ② 1 次用 **once**, 2 次用 **twice**, 3+ 次用 **N times**  \n> ③ 必带 **a / per** 接时间单位（a week / per month）',
+
+  immersion_cards = $jsonb$[
+    {"situation": "First-day interview at a new gym", "cn": "你多久锻炼一次？", "en": "How often do you exercise?"},
+    {"situation": "Telling your teacher about your reading habit", "cn": "我每天读半小时英文。", "en": "I read English for 30 minutes every day."},
+    {"situation": "Mom asks about your eye-exercise routine", "cn": "我们每天做两次眼保健操。", "en": "We do eye exercises twice a day."},
+    {"situation": "Friend asks about cinema visits", "cn": "我大约一个月去看一次电影。", "en": "I go to the movies about once a month."},
+    {"situation": "Talking about a sports star", "cn": "他一周训练 5 次。", "en": "He trains five times a week."},
+    {"situation": "Casual chat about junk food", "cn": "我很少吃快餐。", "en": "I hardly ever eat fast food."}
+  ]$jsonb$::jsonb,
+
+  contrast_table = $jsonb$[
+    {"lhs": "How long do you exercise?  (想问频率)",       "rhs": "How often do you exercise?"},
+    {"lhs": "I go to the gym one time a week.",            "rhs": "I go to the gym once a week."},
+    {"lhs": "Twice week, I have piano lessons.",            "rhs": "Twice a week, I have piano lessons."},
+    {"lhs": "I take everyday a shower.",                    "rhs": "I take a shower every day."},
+    {"lhs": "How often do she go swimming?",                "rhs": "How often does she go swimming?"},
+    {"lhs": "Three time a month I visit grandma.",          "rhs": "Three times a month I visit grandma."}
+  ]$jsonb$::jsonb,
+
+  reflex_cards = $jsonb$[
+    {"cn": "你多久去看一次电影？",            "en": "How often do you go to the movies?",            "keyword": "How often"},
+    {"cn": "我一周去图书馆两次。",            "en": "I go to the library twice a week.",             "keyword": "twice a week"},
+    {"cn": "他多久打一次篮球？",              "en": "How often does he play basketball?",            "keyword": "How often does"},
+    {"cn": "她每天都背单词。",                "en": "She memorizes words every day.",                "keyword": "every day"},
+    {"cn": "我每月去一次外婆家。",            "en": "I visit my grandma once a month.",              "keyword": "once a month"},
+    {"cn": "我几乎从不吃糖。",                "en": "I hardly ever eat candy.",                      "keyword": "hardly ever"},
+    {"cn": "我们每隔一天打扫房间。",          "en": "We clean the room every other day.",            "keyword": "every other day"},
+    {"cn": "Lin 一年看 50 本书。",            "en": "Lin reads 50 books a year.",                    "keyword": "books a year"}
+  ]$jsonb$::jsonb,
+
+  situation_drills = $jsonb$[
+    {"situation": "Asking a new classmate about their reading habit.", "cn": "你多久读一本课外书？", "en": "How often do you read an extracurricular book?", "accepted": ["How often do you read a non-textbook book?", "How frequently do you read for fun?"]},
+    {"situation": "Telling your tutor how often you practice English speaking.", "cn": "我每天和同学练习 20 分钟英语口语。", "en": "I practice English speaking with classmates for 20 minutes every day.", "accepted": ["Every day I practice English speaking with classmates for 20 min.", "I do 20 minutes of English speaking practice daily with my classmates."]},
+    {"situation": "Asking your friend about their weekend exercise.", "cn": "你周末多久去一次健身房？", "en": "How often do you go to the gym on weekends?", "accepted": ["How frequently do you hit the gym on weekends?", "How many times a weekend do you work out at the gym?"]},
+    {"situation": "Describing your family movie tradition.", "cn": "我们家每两周看一次电影。", "en": "Our family watches a movie every two weeks.", "accepted": ["My family has a movie night once every two weeks.", "We have a family movie every other week."]}
+  ]$jsonb$::jsonb,
+
+  correction_tasks = $jsonb$[
+    {"wrong": "How long do you read English every day?  (想问\"多频繁\")", "model": "How often do you read English every day?", "hint": "How often = 频率", "why": "**how long** 问时长（多长时间）；**how often** 问频率（多久一次）。"},
+    {"wrong": "I go to the cinema one time a month.", "model": "I go to the cinema once a month.", "hint": "1 次用 once", "why": "**1 次 = once**（不是 one time）；**2 次 = twice**；**3 次以上 = N times**。"},
+    {"wrong": "Twice week I have art class.", "model": "Twice a week I have art class.", "hint": "必须有 a", "why": "**twice / once / N times + a/per + 时间**。a 不能省。"},
+    {"wrong": "I take everyday a 30-minute walk.", "model": "I take a 30-minute walk every day.", "hint": "every day 是两个词", "why": "**every day**（两个词）= 副词\"每天\"；**everyday**（一个词）= 形容词\"日常的\"。"},
+    {"wrong": "How often do she go swimming?", "model": "How often does she go swimming?", "hint": "she 用 does", "why": "**第三人称单数**疑问用 does，不是 do。"},
+    {"wrong": "Three time a month I visit my grandma.", "model": "Three times a month I visit my grandma.", "hint": "3 次以上用 times", "why": "**3 次及以上加复数 times**（three times / four times / five times ...）。"}
+  ]$jsonb$::jsonb,
+
+  boss_questions = $jsonb$[
+    {"stem": "— ___ do you play basketball?\n— Three times a week.", "option_a": "How long", "option_b": "How often", "option_c": "How much", "option_d": "How many", "correct_answer": "B",
+     "trap": "选 A 问时长；C 问不可数量；D 问可数数量。答语 Three times a week 锁定频率。", "why": "**回答用 three times a week** 是频率 → 提问用 **How often**。"},
+    {"stem": "Tom ___ his teeth ___ a day.", "option_a": "brushes / two times", "option_b": "brush / twice", "option_c": "brushes / twice", "option_d": "is brushing / twice", "correct_answer": "C",
+     "trap": "选 A 用 two times（不地道）。选 B 第三人称漏 s。选 D 时态错。", "why": "**Tom 单数 → brushes** + **2 次 = twice**。"},
+    {"stem": "— ___ ?\n— I read for half an hour every night.", "option_a": "How long do you read every night?", "option_b": "How often do you read?", "option_c": "When do you read?", "option_d": "Where do you read?", "correct_answer": "A",
+     "trap": "选 B 问频率，但答语 half an hour 是时长。", "why": "**答语 for half an hour = 时长** → 提问用 **How long**。"},
+    {"stem": "She visits the dentist ___ a year.", "option_a": "twice", "option_b": "two times", "option_c": "two time", "option_d": "second time", "correct_answer": "A",
+     "trap": "选 B 不地道（中考标准用 twice）。选 C 漏 s。选 D second 是序数词，意思错。",
+     "why": "**2 次的标准地道说法 = twice**。two times 中考不算最佳。"}
+  ]$jsonb$::jsonb
+
+WHERE code = 'g8.08';
+
+
+UPDATE junior_grammar_points SET teacher_script = $jsonb$[
+  {"text": "今天解锁 **how often + 频率回答**。中考听力对话开头必考。", "show": "🎯 How often + frequency answers", "duration": 9},
+  {"text": "公式：**How often + do/does + 主语 + 动词原形 ?**", "show": "How often do/does + S + V ?", "highlight": "How often", "duration": 10},
+  {"text": "**1 次 = once, 2 次 = twice, 3+ 次 = N times**。后面 + a/per + 时间单位。", "show": "once / twice / three times + a week", "highlight": "once / twice", "duration": 12},
+  {"text": "**间隔表达**：every day / every other day（每隔一天）/ every two days。", "show": "every other day = 每隔一天", "highlight": "every other day", "duration": 11},
+  {"text": "**坑 ①**：how long ≠ how often。how long = 时长；how often = 频率。", "show": "how long (时长) ≠ how often (频率)", "highlight": "≠", "duration": 12},
+  {"text": "**坑 ②**：one time → **once**；two times → **twice**（地道说法）。", "show": "✗ one time   ✓ once", "highlight": "once", "duration": 10},
+  {"text": "**坑 ③**：every day（两词，副词）≠ everyday（一词，形容词）。", "show": "every day (adv) ≠ everyday (adj)", "highlight": "every day", "duration": 11},
+  {"text": "下一关进入实战。", "show": "Next → 6 Real-life Scenarios 📚", "duration": 6}
+]$jsonb$::jsonb
+WHERE code = 'g8.08';
+
+
+DELETE FROM junior_grammar_questions WHERE point_id = (SELECT id FROM junior_grammar_points WHERE code = 'g8.08') AND sort_order BETWEEN 9000 AND 9099;
+
+WITH p AS (SELECT id FROM junior_grammar_points WHERE code = 'g8.08')
+INSERT INTO junior_grammar_questions
+  (point_id, stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order)
+SELECT p.id, q.stem, q.question_type, q.option_a, q.option_b, q.option_c, q.option_d, q.correct_answer, q.accepted_answers, q.explanation, q.distractors, q.natural_note, q.grammar_topic, q.use_ai_grading, q.difficulty, q.sort_order
+FROM p, (VALUES
+  ('— ___ do you exercise?\n— Three times a week.', 'mcq', 'How long', 'How often', 'When', 'How much', 'B', NULL::text[], '答语 Three times a week 是频率 → How often。', '{}'::jsonb, NULL, 'how_often_basic', false, 1, 9000),
+  ('I go to the gym ___ a week.', 'mcq', 'twice', 'two times', 'two time', 'second', 'A', NULL::text[], '2 次的标准说法 = twice。', '{}'::jsonb, NULL, 'how_often_twice', false, 1, 9001),
+  ('— How often ___ Tom ___ piano?\n— Every other day.', 'mcq', 'do / practice', 'does / practices', 'does / practice', 'is / practicing', 'C', NULL::text[], '第三人称 → does + 动词原形。', '{}'::jsonb, NULL, 'how_often_third_person', false, 2, 9002),
+  ('She does her eye exercises ___ a day.', 'mcq', 'twice', 'two times', 'every', 'sometime', 'A', NULL::text[], '2 次 = twice + a day。', '{}'::jsonb, NULL, 'how_often_eye_exercises', false, 1, 9003),
+  ('How often ____ (do, you, brush) your teeth?', 'fill', NULL, NULL, NULL, NULL, 'do you brush', ARRAY['do you brush']::text[], 'How often + do + 主语 + 动词原形。', '{}'::jsonb, NULL, 'how_often_question', false, 1, 9004),
+  ('I read English novels ____ (three, times) a month.', 'fill', NULL, NULL, NULL, NULL, 'three times', ARRAY['three times']::text[], '3 次 = three times（复数）。', '{}'::jsonb, NULL, 'how_often_times', false, 1, 9005),
+  ('We have an English class ____ (every, day) at 8 a.m.', 'fill', NULL, NULL, NULL, NULL, 'every day', ARRAY['every day']::text[], 'every day（两词）= 每天。', '{}'::jsonb, NULL, 'how_often_every_day', false, 1, 9006),
+  ('用 How often 提问：  "I go swimming twice a week."', 'transform', NULL, NULL, NULL, NULL, 'How often do you go swimming?', ARRAY['How often do you go swimming?']::text[], '把陈述句改成 How often 问句。', '{}'::jsonb, NULL, 'how_often_transform', true, 2, 9007),
+  ('改写：用 once 替代 one time。  "I see my cousin one time a year."', 'transform', NULL, NULL, NULL, NULL, 'I see my cousin once a year.', ARRAY['I see my cousin once a year.']::text[], 'one time → once（地道）。', '{}'::jsonb, NULL, 'how_often_once', true, 1, 9008),
+  ('改错：  "How long do you exercise? — Three times a week."', 'correction', NULL, NULL, NULL, NULL, 'How often do you exercise? — Three times a week.', ARRAY['How often do you exercise? — Three times a week.']::text[], 'three times a week 是频率，问句应是 How often。', '{}'::jsonb, NULL, 'how_often_vs_how_long', true, 2, 9009),
+  ('改错：  "I take everyday a 20-minute walk."', 'correction', NULL, NULL, NULL, NULL, 'I take a 20-minute walk every day.', ARRAY['I take a 20-minute walk every day.']::text[], 'every day（两词）是副词，放句末。everyday（一词）是形容词。', '{}'::jsonb, NULL, 'how_often_every_day_vs_everyday', true, 2, 9010),
+  ('把这句话译成英文：你多久和爷爷奶奶视频通话一次？',
+   'translation', NULL, NULL, NULL, NULL, 'How often do you have a video call with your grandparents?',
+   ARRAY[
+     'How often do you have a video call with your grandparents?',
+     'How often do you video-chat with your grandparents?',
+     'How often do you call your grandparents on video?'
+   ]::text[], '考点：① How often + do + 主语 + 动词原形；② "视频通话"= have a video call / video-chat。', '{}'::jsonb, '更地道：have a video call 比 video chat 更正式；video-chat 也接受。', 'how_often_translation', true, 3, 9011)
+) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order);
+
+
+DO $$
+DECLARE v_point_id uuid; v_q_count int; v_depth int;
+BEGIN
+  SELECT id, content_depth INTO v_point_id, v_depth FROM junior_grammar_points WHERE code = 'g8.08';
+  IF v_point_id IS NULL THEN RAISE EXCEPTION 'Missing g8.08'; END IF;
+  IF v_depth <> 3 THEN RAISE EXCEPTION 'g8.08 depth %, expected 3', v_depth; END IF;
+  SELECT count(*) INTO v_q_count FROM junior_grammar_questions WHERE point_id = v_point_id AND sort_order BETWEEN 9000 AND 9099;
+  IF v_q_count <> 12 THEN RAISE EXCEPTION 'g8.08 expected 12 questions, got %', v_q_count; END IF;
+  RAISE NOTICE 'g8.08 verified.';
+END $$;
+
+
+-- ╔════════════════════════════════════════════════════════════════════╗
+-- ║ FILE: 20260525150000_g8_10_sense_verbs_gold_standard.sql
+-- ╚════════════════════════════════════════════════════════════════════╝
+-- =====================================================================
+-- Gold-standard content for G8 · 感官动词 + 形容词
+-- Code: g8.10   Category: verb
+-- =====================================================================
+
+UPDATE junior_grammar_points
+SET
+  summary = '"看起来香 / 听起来好 / 尝起来甜" — look / sound / smell / taste / feel 后面接形容词，不是副词。',
+  hook_line_cn = '中考改错最爱挖的坑：感官动词后接形容词，不接副词。一句口诀终生记。',
+  hook_line = 'Sense verbs (look/sound/smell/taste/feel) take adjectives, NOT adverbs — a classic 中考 trap.',
+  mnemonic = '感官动词 + 形容词；感官动词 + like + 名词。',
+  content_depth = 3,
+
+  explanation_md = E'## 🎯 一句话搞定\n\n**5 个感官系动词** (look / sound / smell / taste / feel) + **形容词**作表语；接名词时用 **+ like + 名词**。\n\n---\n\n## 📐 核心公式\n\n| 公式 | 例子 |\n|---|---|\n| 感官动词 + **形容词** | The cake **looks delicious**. |\n| 感官动词 + **like + 名词** | She **looks like** her mom. |\n| 感官动词 + **like + 从句** | It **looks like it''s going to rain**. |\n\n> ⚠️ **铁律**：感官动词后接**形容词**，**不接副词**！~~looks deliciously~~ ✗\n\n---\n\n## 🔥 5 个感官动词怎么用\n\n### look（看起来）\n- The flower **looks beautiful**.\n- She **looks like** her sister.\n\n### sound（听起来）\n- Your idea **sounds great**!\n- It **sounds like** a good plan.\n\n### smell（闻起来）\n- The soup **smells wonderful**.\n- It **smells like** chocolate.\n\n### taste（尝起来）\n- The cake **tastes sweet**.\n- This **tastes like** apple juice.\n\n### feel（摸起来 / 感觉）\n- The fabric **feels soft**.\n- I **feel tired**.\n- It **feels like** velvet.\n\n---\n\n## ⏰ 看到这些 = 感官动词题\n\n- look / sound / smell / taste / feel 作动词\n- 后面有形容词或名词\n- 描述食物 / 物体 / 情绪 / 外貌\n- 中考改错题常用此处挖坑\n\n---\n\n## ⚠️ Top 5 易错点（中考批卷红笔常出现）\n\n1. **用副词替换形容词**（最致命）：~~The cake looks deliciously.~~ → **The cake looks delicious.**\n2. **接名词漏 like**：~~She looks her mom.~~ → **She looks like her mom.**\n3. **第三人称单数 -s 漏**：~~The flower smell sweet.~~ → **The flower smells sweet.**\n4. **进行时滥用**：~~The food is tasting good.~~（感官动词通常不用进行时）→ **The food tastes good.**\n5. **lovely 当副词错用**：~~lovely 是形容词不是副词~~ —"a lovely girl" / "she looks lovely" 都对。\n\n---\n\n## 🧠 三秒判断口诀\n\n> ① 感官动词 (look/sound/smell/taste/feel) + **形容词**（不接副词）  \n> ② 接名词必须用 **+ like + 名词**  \n> ③ 感官动词通常**不用进行时**（状态动词）',
+
+  immersion_cards = $jsonb$[
+    {"situation": "Friend brings homemade cookies", "cn": "这些饼干看起来真香！", "en": "These cookies look delicious!"},
+    {"situation": "Mom tries a new recipe", "cn": "这汤尝起来很好喝。", "en": "This soup tastes wonderful."},
+    {"situation": "Pet store visit", "cn": "这只小狗摸起来好软。", "en": "This puppy feels so soft."},
+    {"situation": "Hearing a friend''s idea", "cn": "你的主意听起来不错！", "en": "Your idea sounds great!"},
+    {"situation": "Looking at a clear sky", "cn": "看起来要下雨了。", "en": "It looks like it''s going to rain."},
+    {"situation": "Meeting your friend''s sibling", "cn": "你和你姐长得真像。", "en": "You look like your sister."}
+  ]$jsonb$::jsonb,
+
+  contrast_table = $jsonb$[
+    {"lhs": "The cake looks deliciously.",                "rhs": "The cake looks delicious."},
+    {"lhs": "She looks her mother.",                       "rhs": "She looks like her mother."},
+    {"lhs": "The flower smell sweet.",                     "rhs": "The flower smells sweet."},
+    {"lhs": "The food is tasting good.",                   "rhs": "The food tastes good."},
+    {"lhs": "Your voice sounds beautifully.",              "rhs": "Your voice sounds beautiful."},
+    {"lhs": "The blanket feels softly.",                   "rhs": "The blanket feels soft."}
+  ]$jsonb$::jsonb,
+
+  reflex_cards = $jsonb$[
+    {"cn": "这花闻起来很香。",                "en": "The flower smells sweet.",                      "keyword": "smells sweet"},
+    {"cn": "这衣服摸起来很舒服。",            "en": "This shirt feels comfortable.",                 "keyword": "feels comfortable"},
+    {"cn": "你看起来很累。",                  "en": "You look tired.",                               "keyword": "look tired"},
+    {"cn": "这首歌听起来像摇篮曲。",          "en": "This song sounds like a lullaby.",              "keyword": "sounds like"},
+    {"cn": "这道菜尝起来有点辣。",            "en": "This dish tastes a bit spicy.",                 "keyword": "tastes a bit spicy"},
+    {"cn": "她长得像她爸爸。",                "en": "She looks like her dad.",                       "keyword": "looks like"},
+    {"cn": "天气感觉要变凉了。",              "en": "It feels like it''s going to get cold.",        "keyword": "feels like"},
+    {"cn": "你的计划听起来不错。",            "en": "Your plan sounds good.",                        "keyword": "sounds good"}
+  ]$jsonb$::jsonb,
+
+  situation_drills = $jsonb$[
+    {"situation": "Visiting a Chinese New Year dinner.", "cn": "这道鱼看起来很香，闻起来更香！", "en": "This fish looks delicious, and it smells even better!", "accepted": ["The fish looks great and smells even better.", "This fish looks tasty and smells fantastic."]},
+    {"situation": "Trying on a new sweater at the store.", "cn": "这件毛衣摸起来好舒服，看上去也很好看。", "en": "This sweater feels really comfortable, and it looks nice too.", "accepted": ["This sweater is comfy to the touch and looks great.", "The sweater feels soft and looks nice."]},
+    {"situation": "Listening to your friend''s weekend plan.", "cn": "你的周末计划听起来挺有趣的。", "en": "Your weekend plan sounds quite interesting.", "accepted": ["Your weekend plan sounds fun.", "That sounds like an interesting weekend."]},
+    {"situation": "Comforting a tired classmate.", "cn": "你看起来很累，要不要先去休息一下？", "en": "You look tired. Why don''t you take a rest first?", "accepted": ["You seem tired — maybe rest a bit first.", "You look exhausted, take a break."]}
+  ]$jsonb$::jsonb,
+
+  correction_tasks = $jsonb$[
+    {"wrong": "The cake looks deliciously.", "model": "The cake looks delicious.", "hint": "感官动词后接形容词", "why": "**look + 形容词**（不是副词）。delicious 是形容词，deliciously 是副词。"},
+    {"wrong": "She looks her mother.", "model": "She looks like her mother.", "hint": "接名词加 like", "why": "**感官动词 + like + 名词**（看起来像谁/什么）。"},
+    {"wrong": "The flower smell sweet.", "model": "The flower smells sweet.", "hint": "单数加 -s", "why": "**flower 单数 → smells**（第三人称单数加 -s）。"},
+    {"wrong": "The pizza is tasting good.", "model": "The pizza tastes good.", "hint": "感官动词不用进行时", "why": "**感官动词是状态动词，不用进行时**。直接用一般现在时 tastes。"},
+    {"wrong": "Your voice sounds beautifully.", "model": "Your voice sounds beautiful.", "hint": "sound + 形容词", "why": "**sound 是感官系动词，后接形容词** beautiful（不是 beautifully）。"},
+    {"wrong": "The fabric feels softly to the touch.", "model": "The fabric feels soft to the touch.", "hint": "feel + 形容词", "why": "**feel 表\"摸起来\"= 感官动词 → 形容词** soft。softly 是副词。"}
+  ]$jsonb$::jsonb,
+
+  boss_questions = $jsonb$[
+    {"stem": "The fish ___ very fresh. Let''s buy some.", "option_a": "looks", "option_b": "look", "option_c": "is looking", "option_d": "looks like", "correct_answer": "A",
+     "trap": "选 B 主谓不一致。选 C 进行时错。选 D fresh 是形容词不该用 like。", "why": "**fish 单数 → looks** + 形容词 fresh。"},
+    {"stem": "Mom, the soup ___ a little bit salty. Maybe add more water?", "option_a": "tastes", "option_b": "taste", "option_c": "is tasting", "option_d": "tastes like", "correct_answer": "A",
+     "trap": "选 D salty 是形容词不用 like。", "why": "**taste + 形容词** salty；the soup 单数。"},
+    {"stem": "Tom ___ his father a lot. They have the same eyes.", "option_a": "looks", "option_b": "looks like", "option_c": "is looking like", "option_d": "looks as", "correct_answer": "B",
+     "trap": "选 A his father 是名词，需要 like。", "why": "**look + like + 名词**（长得像某人）。"},
+    {"stem": "It ___ rain this afternoon. The sky is getting dark.", "option_a": "looks", "option_b": "looks like", "option_c": "is looking", "option_d": "is looking like", "correct_answer": "B",
+     "trap": "选 A 接的是 rain 后省略的从句。",
+     "why": "**look like + 从句**（look like + it''s going to rain，常省略为 look like rain）。"}
+  ]$jsonb$::jsonb
+
+WHERE code = 'g8.10';
+
+
+UPDATE junior_grammar_points SET teacher_script = $jsonb$[
+  {"text": "今天解锁 **感官动词**：look / sound / smell / taste / feel。中考改错最爱挖的坑。", "show": "🎯 5 sense verbs", "duration": 10},
+  {"text": "**核心**：感官动词 + **形容词**作表语（不接副词）！", "show": "sense verb + adj", "highlight": "+ adj", "duration": 10},
+  {"text": "**举例**：The cake **looks delicious**.（不是 deliciously）", "show": "The cake looks delicious.", "highlight": "looks delicious", "duration": 11},
+  {"text": "接**名词**时必须加 **like**：She **looks like** her mom.", "show": "+ like + noun", "highlight": "looks like", "duration": 11},
+  {"text": "**5 个感官动词**：**look 看 / sound 听 / smell 闻 / taste 尝 / feel 摸感**", "show": "look · sound · smell · taste · feel", "highlight": "feel", "duration": 11},
+  {"text": "**最大坑**：用副词代替形容词。~~looks deliciously~~ → **looks delicious**", "show": "✗ deliciously   ✓ delicious", "highlight": "delicious", "duration": 12},
+  {"text": "**坑 ②**：感官动词通常**不用进行时**（状态动词）。", "show": "✗ is tasting   ✓ tastes", "highlight": "tastes", "duration": 11},
+  {"text": "下一关进入实战。", "show": "Next → 6 Real-life Scenarios 📚", "duration": 6}
+]$jsonb$::jsonb
+WHERE code = 'g8.10';
+
+
+DELETE FROM junior_grammar_questions WHERE point_id = (SELECT id FROM junior_grammar_points WHERE code = 'g8.10') AND sort_order BETWEEN 9000 AND 9099;
+
+WITH p AS (SELECT id FROM junior_grammar_points WHERE code = 'g8.10')
+INSERT INTO junior_grammar_questions
+  (point_id, stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order)
+SELECT p.id, q.stem, q.question_type, q.option_a, q.option_b, q.option_c, q.option_d, q.correct_answer, q.accepted_answers, q.explanation, q.distractors, q.natural_note, q.grammar_topic, q.use_ai_grading, q.difficulty, q.sort_order
+FROM p, (VALUES
+  ('Your perfume ___ nice. What''s the name?', 'mcq', 'smells', 'smell', 'is smelling', 'smells like', 'A', NULL::text[], 'smell + 形容词 nice。perfume 单数 → smells。', '{}'::jsonb, NULL, 'sense_smell', false, 1, 9000),
+  ('Tom ___ his grandpa. They have the same nose.', 'mcq', 'looks', 'looks like', 'is looking', 'looks as', 'B', NULL::text[], '接名词 his grandpa → looks like。', '{}'::jsonb, NULL, 'sense_look_like', false, 1, 9001),
+  ('— Try this orange juice. — Wow, it ___ delicious!', 'mcq', 'tastes', 'is tasting', 'tastes like', 'taste', 'A', NULL::text[], 'taste + 形容词 delicious。', '{}'::jsonb, NULL, 'sense_taste', false, 1, 9002),
+  ('The silk scarf ___ smooth and ___ a flower.', 'mcq', 'feels / smells like', 'feel / smell like', 'is feeling / smells', 'feels like / smells', 'A', NULL::text[], 'feel + 形容词 smooth；smell + like + 名词 a flower。', '{}'::jsonb, NULL, 'sense_feel_smell', false, 2, 9003),
+  ('That cake ____ (look) wonderful. Where did you buy it?', 'fill', NULL, NULL, NULL, NULL, 'looks', ARRAY['looks']::text[], 'cake 单数 → looks + 形容词。', '{}'::jsonb, NULL, 'sense_look', false, 1, 9004),
+  ('Your idea ____ (sound) interesting. Tell me more.', 'fill', NULL, NULL, NULL, NULL, 'sounds', ARRAY['sounds']::text[], 'idea 单数 → sounds + 形容词。', '{}'::jsonb, NULL, 'sense_sound', false, 1, 9005),
+  ('This soup ____ (taste, like) my grandma''s recipe.', 'fill', NULL, NULL, NULL, NULL, 'tastes like', ARRAY['tastes like']::text[], '接名词 recipe → tastes like。', '{}'::jsonb, NULL, 'sense_taste_like', false, 2, 9006),
+  ('改写：把副词换成形容词。  "The flower looks beautifully."', 'transform', NULL, NULL, NULL, NULL, 'The flower looks beautiful.', ARRAY['The flower looks beautiful.']::text[], 'beautifully → beautiful。', '{}'::jsonb, NULL, 'sense_adj_fix', true, 1, 9007),
+  ('改写：加 like。  "She sounds her sister on the phone."', 'transform', NULL, NULL, NULL, NULL, 'She sounds like her sister on the phone.', ARRAY['She sounds like her sister on the phone.']::text[], '接名词 her sister → sounds like。', '{}'::jsonb, NULL, 'sense_add_like', true, 2, 9008),
+  ('改错：  "These cookies are smelling very nice."', 'correction', NULL, NULL, NULL, NULL, 'These cookies smell very nice.', ARRAY['These cookies smell very nice.']::text[], '感官动词不用进行时。cookies 复数 → smell。', '{}'::jsonb, NULL, 'sense_no_continuous', true, 2, 9009),
+  ('改错：  "You look tiredly. Did you sleep well last night?"', 'correction', NULL, NULL, NULL, NULL, 'You look tired. Did you sleep well last night?', ARRAY['You look tired. Did you sleep well last night?']::text[], 'look + 形容词 tired（tiredly 不是标准副词）。', '{}'::jsonb, NULL, 'sense_adj_after', true, 1, 9010),
+  ('把这句话译成英文：你新做的发型看起来真好看，闻起来还有股淡淡的果香。',
+   'translation', NULL, NULL, NULL, NULL, 'Your new hairstyle looks great, and it even smells slightly fruity.',
+   ARRAY[
+     'Your new hairstyle looks great, and it even smells slightly fruity.',
+     'Your new hair looks lovely, and it smells like fruit.',
+     'Your new hairdo looks really nice and smells faintly of fruit.'
+   ]::text[], '考点：① look + 形容词 great；② smell + 形容词 fruity（或 + like + 名词 fruit）；③ "淡淡的"= slightly / faintly。', '{}'::jsonb, '更地道：smells slightly fruity / faintly of fruit 都自然。fruity 直接用形容词最简洁。', 'sense_translation', true, 3, 9011)
+) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order);
+
+
+DO $$
+DECLARE v_point_id uuid; v_q_count int; v_depth int;
+BEGIN
+  SELECT id, content_depth INTO v_point_id, v_depth FROM junior_grammar_points WHERE code = 'g8.10';
+  IF v_point_id IS NULL THEN RAISE EXCEPTION 'Missing g8.10'; END IF;
+  IF v_depth <> 3 THEN RAISE EXCEPTION 'g8.10 depth %, expected 3', v_depth; END IF;
+  SELECT count(*) INTO v_q_count FROM junior_grammar_questions WHERE point_id = v_point_id AND sort_order BETWEEN 9000 AND 9099;
+  IF v_q_count <> 12 THEN RAISE EXCEPTION 'g8.10 expected 12 questions, got %', v_q_count; END IF;
+  RAISE NOTICE 'g8.10 verified.';
+END $$;
+
+
+-- ╔════════════════════════════════════════════════════════════════════╗
+-- ║ FILE: 20260525160000_g8_14_reflexive_pronouns_gold_standard.sql
+-- ╚════════════════════════════════════════════════════════════════════╝
+-- =====================================================================
+-- Gold-standard content for G8 · 反身代词
+-- Code: g8.14   Category: other
+-- =====================================================================
+
+UPDATE junior_grammar_points
+SET
+  summary = '"自己" — myself / yourself / himself ... 描述动作回到自己身上，或加强语气。',
+  hook_line_cn = '中考阅读高频出现：take care of yourself / by oneself / enjoy yourself — 8 个固定搭配背完不再丢分。',
+  hook_line = 'Reflexive pronouns — the "myself" family, must-know fixed phrases for 中考 daily-life passages.',
+  mnemonic = '反身代词 8 个：myself · yourself · himself · herself · itself · ourselves · yourselves · themselves。',
+  content_depth = 3,
+
+  explanation_md = E'## 🎯 一句话搞定\n\n**反身代词** = "自己"。用于：① 动作回到自己身上 ② 加强语气 ③ 一组固定搭配。\n\n---\n\n## 📐 8 个反身代词全表（必背）\n\n| 人称 | 单数 | 复数 |\n|---|---|---|\n| 1 | **myself** 我自己 | **ourselves** 我们自己 |\n| 2 | **yourself** 你自己 | **yourselves** 你们自己 |\n| 3 (男) | **himself** 他自己 | — |\n| 3 (女) | **herself** 她自己 | — |\n| 3 (物) | **itself** 它自己 | — |\n| 3 (复) | — | **themselves** 他们自己 |\n\n> ⚠️ **拼写陷阱**：~~theirselves~~ → **themselves**；~~hisself~~ → **himself**\n\n---\n\n## 🔥 3 大用法（中考考点）\n\n### ① 作宾语（动作回到自己身上）\n- I cut **myself** while cooking.\n- She introduced **herself** to the class.\n- Take care of **yourself**.\n\n### ② 加强语气（"亲自" / "本人"）\n- I made the cake **myself**.（强调"我亲自做的"）\n- The president **himself** answered the question.\n\n### ③ 固定搭配（必背 8 个）\n- **by oneself** = alone（独自）\n- **enjoy oneself** = have a good time（玩得开心）\n- **help oneself to** = 自取（食物）\n- **teach oneself** = 自学\n- **take care of oneself** = 照顾自己\n- **make oneself at home** = 别拘束\n- **hurt oneself** = 弄伤自己\n- **dress oneself** = 穿衣服（自己穿）\n\n---\n\n## ⏰ 看到这些 = 反身代词题\n\n- enjoy / introduce / hurt / cut / kill / teach / take care of + 反身代词\n- by + 反身代词\n- 形容词 myself 后用于加强语气\n- 主语和宾语指同一个人/物\n\n---\n\n## ⚠️ Top 5 易错点（中考批卷红笔常出现）\n\n1. **拼写错**：~~theirselves~~ → **themselves**；~~yourselfs~~ → **yourselves**\n2. **enjoy 后用宾格**：~~Enjoy you!~~ → **Enjoy yourself!**（enjoy 后宾语和主语同一人 → 反身代词）\n3. **take care of 漏反身**：~~Take care of you.~~ → **Take care of yourself.**\n4. **by oneself 表"独自"用错**：~~He did it by him.~~ → **He did it by himself.**\n5. **myself 当主语**：~~Myself made the cake.~~ → **I made the cake myself.**（反身代词不作主语）\n\n---\n\n## 🧠 三秒判断口诀\n\n> ① 主语和宾语是**同一个人** → 宾语用反身代词  \n> ② "亲自做某事" → 在动词后或句末加 **反身代词**  \n> ③ "独自" = **by oneself**；"自学" = **teach oneself**',
+
+  immersion_cards = $jsonb$[
+    {"situation": "Mom dropping you off at school for a long trip", "cn": "好好照顾自己。", "en": "Take good care of yourself."},
+    {"situation": "Welcoming a guest at home", "cn": "请别客气，自己拿东西吃。", "en": "Please help yourself to anything in the fridge."},
+    {"situation": "Telling a friend about your skill", "cn": "我自学了吉他。", "en": "I taught myself the guitar."},
+    {"situation": "Encouraging a shy classmate to enjoy a party", "cn": "好好玩，别紧张。", "en": "Enjoy yourself and relax."},
+    {"situation": "Reporting back from a solo trip", "cn": "我一个人去爬了山。", "en": "I went hiking by myself."},
+    {"situation": "Praising someone''s independence", "cn": "孩子已经会自己穿衣服了。", "en": "The child can dress himself now."}
+  ]$jsonb$::jsonb,
+
+  contrast_table = $jsonb$[
+    {"lhs": "They enjoyed theirselves at the party.",       "rhs": "They enjoyed themselves at the party."},
+    {"lhs": "Enjoy you on the trip!",                        "rhs": "Enjoy yourself on the trip!"},
+    {"lhs": "Take care of you.",                             "rhs": "Take care of yourself."},
+    {"lhs": "He did the project by him.",                    "rhs": "He did the project by himself."},
+    {"lhs": "Myself made the dumplings.",                    "rhs": "I made the dumplings myself."},
+    {"lhs": "She cut her finger by sheself.",                "rhs": "She cut herself."}
+  ]$jsonb$::jsonb,
+
+  reflex_cards = $jsonb$[
+    {"cn": "好好照顾你自己。",                  "en": "Take care of yourself.",                       "keyword": "Take care of yourself"},
+    {"cn": "他们玩得很开心。",                  "en": "They enjoyed themselves.",                     "keyword": "enjoyed themselves"},
+    {"cn": "我自己做的蛋糕。",                  "en": "I made the cake myself.",                      "keyword": "myself"},
+    {"cn": "她一个人住。",                      "en": "She lives by herself.",                        "keyword": "by herself"},
+    {"cn": "请随意吃水果。",                    "en": "Help yourself to the fruit.",                  "keyword": "Help yourself"},
+    {"cn": "Tom 是自学的法语。",                "en": "Tom taught himself French.",                   "keyword": "taught himself"},
+    {"cn": "小猫给自己舔毛。",                  "en": "The kitten cleaned itself.",                   "keyword": "itself"},
+    {"cn": "别勉强自己。",                      "en": "Don''t push yourself too hard.",               "keyword": "Don''t push yourself"}
+  ]$jsonb$::jsonb,
+
+  situation_drills = $jsonb$[
+    {"situation": "Mom sees you off at the train station.", "cn": "在大学要好好照顾自己。", "en": "Take good care of yourself at university.", "accepted": ["Look after yourself well at uni.", "Make sure to take care of yourself in college."]},
+    {"situation": "Inviting your foreign friend to relax in your kitchen.", "cn": "厨房里有水果和零食，自己随便吃。", "en": "There''s fruit and snacks in the kitchen — help yourself.", "accepted": ["There''s fruit and snacks in the kitchen — feel free to help yourself.", "Help yourself to anything in the kitchen."]},
+    {"situation": "Praising a self-taught classmate to your teacher.", "cn": "她完全是自学的钢琴。", "en": "She taught herself the piano completely.", "accepted": ["She taught herself piano from scratch.", "She''s totally self-taught on the piano."]},
+    {"situation": "Reporting a small accident in PE class.", "cn": "他不小心弄伤了自己的膝盖。", "en": "He accidentally hurt himself on the knee.", "accepted": ["He hurt his knee by accident.", "He accidentally injured himself on the knee."]}
+  ]$jsonb$::jsonb,
+
+  correction_tasks = $jsonb$[
+    {"wrong": "They enjoyed theirselves at the picnic.", "model": "They enjoyed themselves at the picnic.", "hint": "theirselves 不存在", "why": "**正确拼写 = themselves**（不是 theirselves）。"},
+    {"wrong": "Take care of you when I''m away.", "model": "Take care of yourself when I''m away.", "hint": "take care of + 反身", "why": "主语和宾语是同一人 → 用反身代词 **yourself**。"},
+    {"wrong": "He cooked dinner by him last night.", "model": "He cooked dinner by himself last night.", "hint": "by + 反身代词", "why": "**by oneself = 独自**：by him**self**（不是 by him）。"},
+    {"wrong": "Myself baked a cake for my mom.", "model": "I baked a cake for my mom myself.", "hint": "反身代词不作主语", "why": "**反身代词不能作主语**。主语用 I，把 myself 放在句末加强语气。"},
+    {"wrong": "Enjoy you on your vacation!", "model": "Enjoy yourself on your vacation!", "hint": "enjoy + 反身", "why": "**enjoy 后接反身代词**（enjoy oneself = 玩得开心）。"},
+    {"wrong": "She introduced she to the class.", "model": "She introduced herself to the class.", "hint": "主宾同一人", "why": "主语 She 和宾语是同一人 → 用反身代词 **herself**。"}
+  ]$jsonb$::jsonb,
+
+  boss_questions = $jsonb$[
+    {"stem": "Don''t worry, Mom. I can take care of ___ when you''re away.", "option_a": "me", "option_b": "myself", "option_c": "my", "option_d": "mine", "correct_answer": "B",
+     "trap": "选 A 是宾格，但主宾同一人时必须反身。", "why": "**主语 I = 宾语**（自己照顾自己）→ 反身代词 **myself**。"},
+    {"stem": "We had a wonderful time. We really enjoyed ___ at the festival.", "option_a": "us", "option_b": "ourselves", "option_c": "ourself", "option_d": "we", "correct_answer": "B",
+     "trap": "选 A 宾格错。选 C ourself 拼写错。", "why": "**enjoy + 反身代词** + 复数 we → **ourselves**。"},
+    {"stem": "Tom is so amazing — he taught ___ to play the violin in just one year.", "option_a": "him", "option_b": "his", "option_c": "himself", "option_d": "he", "correct_answer": "C",
+     "trap": "选 A 是宾格，但 teach + 反身代词 = 自学。", "why": "**teach + 反身代词 = 自学**（taught himself = 自学）。"},
+    {"stem": "The little boy can dress ___ now. He''s growing up so fast!", "option_a": "him", "option_b": "his", "option_c": "himself", "option_d": "he", "correct_answer": "C",
+     "trap": "选 A 是宾格。dress oneself = 自己穿衣服。", "why": "**dress + 反身代词** = 给自己穿衣服。the little boy → himself。"}
+  ]$jsonb$::jsonb
+
+WHERE code = 'g8.14';
+
+
+UPDATE junior_grammar_points SET teacher_script = $jsonb$[
+  {"text": "今天解锁**反身代词**。\"自己\" 的 8 个版本，中考阅读高频出现。", "show": "🎯 myself / yourself / himself / ...", "duration": 10},
+  {"text": "**8 个必背**：myself · yourself · himself · herself · itself · ourselves · yourselves · themselves。", "show": "8 reflexive pronouns", "highlight": "themselves", "duration": 13},
+  {"text": "**用法 ①**：主宾**同一个人** → 宾语用反身。I hurt **myself**。", "show": "subject = object → reflexive", "highlight": "myself", "duration": 11},
+  {"text": "**用法 ②**：加强语气 \"亲自/本人\"。I made it **myself**。", "show": "I made it myself.", "highlight": "myself", "duration": 10},
+  {"text": "**用法 ③**：固定搭配。**by oneself** 独自 / **enjoy oneself** 玩得开心 / **teach oneself** 自学 / **help yourself to** 自取。", "show": "by oneself · enjoy oneself · teach oneself", "highlight": "by oneself", "duration": 14},
+  {"text": "**最大坑 ①**：拼写。**themselves**（不是 theirselves）；**himself**（不是 hisself）。", "show": "✗ theirselves   ✓ themselves", "highlight": "themselves", "duration": 12},
+  {"text": "**最大坑 ②**：反身代词**不能作主语**。~~Myself made it~~ → **I made it myself**。", "show": "✗ Myself ...   ✓ I ... myself", "highlight": "I ... myself", "duration": 12},
+  {"text": "下一关进入实战。", "show": "Next → 6 Real-life Scenarios 📚", "duration": 6}
+]$jsonb$::jsonb
+WHERE code = 'g8.14';
+
+
+DELETE FROM junior_grammar_questions WHERE point_id = (SELECT id FROM junior_grammar_points WHERE code = 'g8.14') AND sort_order BETWEEN 9000 AND 9099;
+
+WITH p AS (SELECT id FROM junior_grammar_points WHERE code = 'g8.14')
+INSERT INTO junior_grammar_questions
+  (point_id, stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order)
+SELECT p.id, q.stem, q.question_type, q.option_a, q.option_b, q.option_c, q.option_d, q.correct_answer, q.accepted_answers, q.explanation, q.distractors, q.natural_note, q.grammar_topic, q.use_ai_grading, q.difficulty, q.sort_order
+FROM p, (VALUES
+  ('Please make ___ at home. I''ll get you some tea.', 'mcq', 'you', 'yourself', 'your', 'yours', 'B', NULL::text[], 'make oneself at home = 别拘束（固定搭配）。', '{}'::jsonb, NULL, 'reflexive_at_home', false, 1, 9000),
+  ('She walks to school by ___ every day.', 'mcq', 'she', 'her', 'herself', 'hers', 'C', NULL::text[], 'by + 反身代词 = 独自。', '{}'::jsonb, NULL, 'reflexive_by_self', false, 1, 9001),
+  ('My little brother is so independent — he can wash ___ now.', 'mcq', 'him', 'his', 'himself', 'he', 'C', NULL::text[], 'wash oneself = 给自己洗澡（主宾同一人）。', '{}'::jsonb, NULL, 'reflexive_wash', false, 1, 9002),
+  ('The students enjoyed ___ at the summer camp.', 'mcq', 'them', 'theirselves', 'themselves', 'theirs', 'C', NULL::text[], 'enjoy + 反身代词；复数 students → themselves。', '{}'::jsonb, NULL, 'reflexive_enjoy', false, 2, 9003),
+  ('She introduced ____ (her) to all the new classmates.', 'fill', NULL, NULL, NULL, NULL, 'herself', ARRAY['herself']::text[], '主宾同一人 → herself。', '{}'::jsonb, NULL, 'reflexive_introduce', false, 1, 9004),
+  ('You should not push ____ (you) too hard during exams.', 'fill', NULL, NULL, NULL, NULL, 'yourself', ARRAY['yourself']::text[], '主宾同一人 → yourself。', '{}'::jsonb, NULL, 'reflexive_push', false, 2, 9005),
+  ('He taught ____ (he) French during the holidays.', 'fill', NULL, NULL, NULL, NULL, 'himself', ARRAY['himself']::text[], 'teach + 反身代词 = 自学。', '{}'::jsonb, NULL, 'reflexive_teach', false, 1, 9006),
+  ('改写为反身代词句：  "She did her homework alone."', 'transform', NULL, NULL, NULL, NULL, 'She did her homework by herself.', ARRAY['She did her homework by herself.']::text[], 'alone = by oneself。', '{}'::jsonb, NULL, 'reflexive_by_self_transform', true, 2, 9007),
+  ('加强语气：  "I painted the picture."（强调"我亲自"）', 'transform', NULL, NULL, NULL, NULL, 'I painted the picture myself.', ARRAY['I painted the picture myself.']::text[], '强调"亲自"在句末加 myself。', '{}'::jsonb, NULL, 'reflexive_emphasis', true, 2, 9008),
+  ('改错：  "They enjoyed theirselves at the New Year''s party."', 'correction', NULL, NULL, NULL, NULL, 'They enjoyed themselves at the New Year''s party.', ARRAY['They enjoyed themselves at the New Year''s party.']::text[], 'theirselves → themselves。', '{}'::jsonb, NULL, 'reflexive_spelling', true, 1, 9009),
+  ('改错：  "Take care of you while I''m on the business trip."', 'correction', NULL, NULL, NULL, NULL, 'Take care of yourself while I''m on the business trip.', ARRAY['Take care of yourself while I''m on the business trip.']::text[], 'take care of + 反身代词。', '{}'::jsonb, NULL, 'reflexive_take_care', true, 1, 9010),
+  ('把这句话译成英文：我哥哥完全是自学的编程，现在已经能做出小游戏了。',
+   'translation', NULL, NULL, NULL, NULL, 'My brother taught himself programming completely, and now he can even make small games.',
+   ARRAY[
+     'My brother taught himself programming completely, and now he can even make small games.',
+     'My brother is completely self-taught in programming; he can now build small games.',
+     'My brother learned programming entirely by himself, and now he makes small games.'
+   ]::text[], '考点：① teach himself programming（自学）；② now he can ... 表现阶段能力。', '{}'::jsonb, '更地道：be self-taught 也是不错的同义说法，比 teach oneself 更书面。', 'reflexive_translation', true, 3, 9011)
+) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order);
+
+
+DO $$
+DECLARE v_point_id uuid; v_q_count int; v_depth int;
+BEGIN
+  SELECT id, content_depth INTO v_point_id, v_depth FROM junior_grammar_points WHERE code = 'g8.14';
+  IF v_point_id IS NULL THEN RAISE EXCEPTION 'Missing g8.14'; END IF;
+  IF v_depth <> 3 THEN RAISE EXCEPTION 'g8.14 depth %, expected 3', v_depth; END IF;
+  SELECT count(*) INTO v_q_count FROM junior_grammar_questions WHERE point_id = v_point_id AND sort_order BETWEEN 9000 AND 9099;
+  IF v_q_count <> 12 THEN RAISE EXCEPTION 'g8.14 expected 12 questions, got %', v_q_count; END IF;
+  RAISE NOTICE 'g8.14 verified.';
+END $$;
+
+
+-- ╔════════════════════════════════════════════════════════════════════╗
+-- ║ FILE: 20260525170000_g8_15_how_adjective_gold_standard.sql
+-- ╚════════════════════════════════════════════════════════════════════╝
+-- =====================================================================
+-- Gold-standard content for G8 · how + 形容词 提问
+-- Code: g8.15   Category: other
+-- =====================================================================
+
+UPDATE junior_grammar_points
+SET
+  summary = '"How long / How far / How tall / How much..." — 用 how + 形容词询问长度、距离、身高、重量、价格。',
+  hook_line_cn = '中考听力 + 完形里"问数据"的题全靠它。一组 8 个 how + adj 搭配，背熟就稳。',
+  hook_line = 'How + adj — the question family that 中考 asks about distance, height, age, price.',
+  mnemonic = 'How long 时长/长度 · How far 距离 · How tall 人高 · How high 物高 · How much 不可数/价钱 · How many 可数 · How often 频率 · How old 年龄。',
+  content_depth = 3,
+
+  explanation_md = E'## 🎯 一句话搞定\n\n**问具体数据**（长度、距离、高度、价钱、数量、年龄...） → 用 **how + 形容词 + 问句**。\n\n---\n\n## 📐 8 大 how + adj 全表（必背）\n\n| 问什么 | 公式 | 例子 | 典型答语 |\n|---|---|---|---|\n| 时长 / 长度 | **How long** | How long is the bridge? | 2 km / 3 hours |\n| 距离 | **How far** | How far is your school? | 5 minutes'' walk |\n| 人身高 | **How tall** | How tall is Yao Ming? | 2.26 m |\n| 建筑/山高 | **How high** | How high is Mount Tai? | 1,545 m |\n| 不可数量 / 价钱 | **How much** | How much is this book? | $5 / 50 yuan |\n| 可数数量 | **How many** | How many books do you have? | Five. |\n| 频率 | **How often** | How often do you exercise? | Twice a week. |\n| 年龄 | **How old** | How old is your sister? | 12. |\n\n> ⚠️ **铁律**：how long 问**时长 / 长度**；how far 问**距离**；how tall 问**人**；how high 问**山 / 建筑**。\n\n---\n\n## 🔥 易混对比（中考最爱考）\n\n### how long vs how far\n- **how long** = 多久 / 多长（时间或物体长度）  \n  → How long is the river?（多长）\n  → How long did you wait?（多久）\n- **how far** = 多远（距离）  \n  → How far is your school from home?\n\n### how tall vs how high\n- **how tall** = 多高（**人 / 树 / 楼**等"立着的"东西，强调高度）  \n  → How tall is your dad?\n- **how high** = 多高（**山 / 建筑物 / 飞高度**，强调离地高度）  \n  → How high is the wall?\n\n### how much vs how many\n- **how much** = 多少钱 / 多少（**不可数名词** + 价钱）  \n  → How much is this shirt? / How much water?\n- **how many** = 多少（**可数名词复数**）  \n  → How many apples?\n\n---\n\n## ⏰ 看到这些 = how + adj 题\n\n- 问句以 **How long / far / tall / high / much / many / often / old** 开头\n- 答语含数字 + 单位（meters / hours / yuan / times）\n- 中考听力对话开头：How long / How much / How old\n\n---\n\n## ⚠️ Top 5 易错点（中考批卷红笔常出现）\n\n1. **how long vs how tall 混用**：~~How long is your father?~~（问身高用 how tall）→ **How tall is your father?**\n2. **how much 问可数**：~~How much apples?~~ → **How many apples?**（可数复数）\n3. **how many 问钱**：~~How many is this bag?~~ → **How much is this bag?**（钱用 how much）\n4. **how far 问时间**：~~How far did you wait?~~ → **How long did you wait?**\n5. **how high 问人**：~~How high are you?~~ → **How tall are you?**（人用 tall）\n\n---\n\n## 🧠 三秒判断口诀\n\n> ① 问**时间 / 物体长度** → how long  \n> ② 问**距离** → how far  \n> ③ 问**人/树/楼的"高"** → how tall；问**山 / 飞行/建筑高度** → how high  \n> ④ 问**钱 / 不可数量** → how much；问**可数量** → how many',
+
+  immersion_cards = $jsonb$[
+    {"situation": "Stranger asks about the time spent on a trip", "cn": "你在北京呆了多久？", "en": "How long did you stay in Beijing?"},
+    {"situation": "Asking a classmate about the distance to their place", "cn": "你家离学校多远？", "en": "How far is your home from school?"},
+    {"situation": "Pediatrician''s height measurement", "cn": "你 13 岁，多高了？", "en": "How tall are you at 13?"},
+    {"situation": "Shopping for a backpack", "cn": "这个书包多少钱？", "en": "How much is this backpack?"},
+    {"situation": "Asking your foreign friend about their family", "cn": "你妹妹多大了？", "en": "How old is your sister?"},
+    {"situation": "Tourist asking about Mount Tai", "cn": "泰山多高？", "en": "How high is Mount Tai?"}
+  ]$jsonb$::jsonb,
+
+  contrast_table = $jsonb$[
+    {"lhs": "How long is your father?  (想问身高)",         "rhs": "How tall is your father?"},
+    {"lhs": "How much apples do you want?",                  "rhs": "How many apples do you want?"},
+    {"lhs": "How many is this bag?",                         "rhs": "How much is this bag?"},
+    {"lhs": "How far did you wait for the bus?",             "rhs": "How long did you wait for the bus?"},
+    {"lhs": "How high are you?  (问人)",                      "rhs": "How tall are you?"},
+    {"lhs": "How long is the school from your home?",        "rhs": "How far is the school from your home?"}
+  ]$jsonb$::jsonb,
+
+  reflex_cards = $jsonb$[
+    {"cn": "你学英语多久了？",                "en": "How long have you been learning English?",      "keyword": "How long have"},
+    {"cn": "你家有多远？",                    "en": "How far is your home?",                         "keyword": "How far"},
+    {"cn": "Lin 多高？",                      "en": "How tall is Lin?",                              "keyword": "How tall"},
+    {"cn": "这条围巾多少钱？",                "en": "How much is this scarf?",                       "keyword": "How much"},
+    {"cn": "你有多少本书？",                  "en": "How many books do you have?",                   "keyword": "How many books"},
+    {"cn": "你妹妹几岁了？",                  "en": "How old is your sister?",                       "keyword": "How old"},
+    {"cn": "你多久去看一次电影？",            "en": "How often do you go to the movies?",            "keyword": "How often"},
+    {"cn": "珠穆朗玛峰有多高？",              "en": "How high is Mount Everest?",                    "keyword": "How high"}
+  ]$jsonb$::jsonb,
+
+  situation_drills = $jsonb$[
+    {"situation": "First-day conversation with a foreign exchange student.", "cn": "你来中国多久了？", "en": "How long have you been in China?", "accepted": ["How long have you stayed in China?", "How long have you been here in China?"]},
+    {"situation": "Comparing routes to school with classmates.", "cn": "从你家到学校多远？", "en": "How far is it from your home to school?", "accepted": ["How far is your school from your home?", "What''s the distance from your home to school?"]},
+    {"situation": "Shopping for school supplies with Mom.", "cn": "这套笔多少钱？", "en": "How much is this set of pens?", "accepted": ["How much does this pen set cost?", "What''s the price for this set of pens?"]},
+    {"situation": "Asking your friend about their family.", "cn": "你弟弟多大了？他多高？", "en": "How old is your brother and how tall is he?", "accepted": ["How old and how tall is your younger brother?", "What''s your brother''s age and height?"]}
+  ]$jsonb$::jsonb,
+
+  correction_tasks = $jsonb$[
+    {"wrong": "How long is your father?  (想问身高)", "model": "How tall is your father?", "hint": "问人身高用 tall", "why": "**人 / 树 / 楼的身高** → **how tall**；how long 问时长或物体长度。"},
+    {"wrong": "How much apples are there in the basket?", "model": "How many apples are there in the basket?", "hint": "apples 是可数复数", "why": "**how many + 可数名词复数**（apples）；how much 配不可数 / 价钱。"},
+    {"wrong": "How many is this notebook?", "model": "How much is this notebook?", "hint": "问钱用 how much", "why": "**how much + is/are + 主语** = 多少钱。how many 问数量。"},
+    {"wrong": "How far did you study for the exam?", "model": "How long did you study for the exam?", "hint": "问时长用 how long", "why": "**how long** = 多久（时间）；how far 问距离。"},
+    {"wrong": "How high are you, Tom?", "model": "How tall are you, Tom?", "hint": "人用 tall", "why": "**人的身高 → how tall**；how high 用于山 / 建筑 / 飞行高度。"},
+    {"wrong": "How long is the school from your home?", "model": "How far is the school from your home?", "hint": "from 提示距离", "why": "**距离 → how far**（from X to Y）。"}
+  ]$jsonb$::jsonb,
+
+  boss_questions = $jsonb$[
+    {"stem": "— ___ is the bridge?\n— About 5 km long.", "option_a": "How tall", "option_b": "How high", "option_c": "How long", "option_d": "How far", "correct_answer": "C",
+     "trap": "选 D 问距离不对（5 km long 强调长度而非距离）。", "why": "**5 km long** 是桥的长度 → **how long**。"},
+    {"stem": "— ___ is your school from your home?\n— About 15 minutes by bus.", "option_a": "How long", "option_b": "How far", "option_c": "How much", "option_d": "How tall", "correct_answer": "B",
+     "trap": "选 A 也能问时间，但 from your home 锁定距离。", "why": "**from X = 距离** → **how far**。"},
+    {"stem": "— ___ is this dictionary?\n— 32 yuan.", "option_a": "How many", "option_b": "How much", "option_c": "How long", "option_d": "How big", "correct_answer": "B",
+     "trap": "选 A 问可数数量。", "why": "**价钱 = how much**。"},
+    {"stem": "— ___ is the Great Wall of China?\n— About 6,700 km long.", "option_a": "How tall", "option_b": "How high", "option_c": "How long", "option_d": "How far", "correct_answer": "C",
+     "trap": "选 A/B 都不对（长城是水平长度，不是高度）。",
+     "why": "**6,700 km long = 长度** → **how long**。"}
+  ]$jsonb$::jsonb
+
+WHERE code = 'g8.15';
+
+
+UPDATE junior_grammar_points SET teacher_script = $jsonb$[
+  {"text": "今天解锁 **how + 形容词** 问句家族。8 个固定搭配中考必考。", "show": "🎯 How + long / far / tall / high / much / many / old / often", "duration": 12},
+  {"text": "**how long** = 时长 / 物体长度。How long is the bridge?", "show": "How long = 时长 / 长度", "highlight": "How long", "duration": 11},
+  {"text": "**how far** = 距离。How far is your school?", "show": "How far = 距离", "highlight": "How far", "duration": 10},
+  {"text": "**how tall** = 人 / 树 / 楼的身高。How tall is Yao Ming?", "show": "How tall = 人 / 树 / 楼", "highlight": "How tall", "duration": 11},
+  {"text": "**how high** = 山 / 建筑 / 飞行高度。How high is Mount Tai?", "show": "How high = 山 / 建筑", "highlight": "How high", "duration": 11},
+  {"text": "**how much / how many**：钱和不可数用 much；可数用 many。", "show": "how much (钱/不可数)   vs   how many (可数)", "highlight": "how much ... how many", "duration": 12},
+  {"text": "**最大坑**：how long 问身高 / how high 问人 — 中考改错最爱挖。", "show": "✗ How long is your dad   ✓ How tall is your dad", "highlight": "How tall", "duration": 12},
+  {"text": "下一关进入实战。", "show": "Next → 6 Real-life Scenarios 📚", "duration": 6}
+]$jsonb$::jsonb
+WHERE code = 'g8.15';
+
+
+DELETE FROM junior_grammar_questions WHERE point_id = (SELECT id FROM junior_grammar_points WHERE code = 'g8.15') AND sort_order BETWEEN 9000 AND 9099;
+
+WITH p AS (SELECT id FROM junior_grammar_points WHERE code = 'g8.15')
+INSERT INTO junior_grammar_questions
+  (point_id, stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order)
+SELECT p.id, q.stem, q.question_type, q.option_a, q.option_b, q.option_c, q.option_d, q.correct_answer, q.accepted_answers, q.explanation, q.distractors, q.natural_note, q.grammar_topic, q.use_ai_grading, q.difficulty, q.sort_order
+FROM p, (VALUES
+  ('— ___ is this skirt?\n— 99 yuan.', 'mcq', 'How long', 'How many', 'How much', 'How big', 'C', NULL::text[], '99 yuan = 价钱 → how much。', '{}'::jsonb, NULL, 'how_much_price', false, 1, 9000),
+  ('— ___ books are there in the bookcase?\n— Over 200.', 'mcq', 'How much', 'How many', 'How long', 'How far', 'B', NULL::text[], 'books 可数复数 → how many。', '{}'::jsonb, NULL, 'how_many_books', false, 1, 9001),
+  ('— ___ is the Yellow River?\n— About 5,464 km long.', 'mcq', 'How tall', 'How high', 'How long', 'How far', 'C', NULL::text[], '河流的长度 → how long。', '{}'::jsonb, NULL, 'how_long_river', false, 2, 9002),
+  ('— ___ is your father?\n— He is 1.78 m.', 'mcq', 'How long', 'How tall', 'How high', 'How big', 'B', NULL::text[], '人的身高 → how tall。', '{}'::jsonb, NULL, 'how_tall_person', false, 1, 9003),
+  ('____ (how, far) is the train station from here?', 'fill', NULL, NULL, NULL, NULL, 'How far', ARRAY['How far']::text[], '问距离 → how far。', '{}'::jsonb, NULL, 'how_far_station', false, 1, 9004),
+  ('____ (how, old) was your grandma when she got married?', 'fill', NULL, NULL, NULL, NULL, 'How old', ARRAY['How old']::text[], '问年龄 → how old。', '{}'::jsonb, NULL, 'how_old', false, 1, 9005),
+  ('____ (how, much) water do you drink a day?', 'fill', NULL, NULL, NULL, NULL, 'How much', ARRAY['How much']::text[], 'water 不可数 → how much。', '{}'::jsonb, NULL, 'how_much_water', false, 2, 9006),
+  ('改写为 how 问句：  "The bridge is about 2 km."', 'transform', NULL, NULL, NULL, NULL, 'How long is the bridge?', ARRAY['How long is the bridge?']::text[], '陈述长度 → How long 问句。', '{}'::jsonb, NULL, 'how_long_transform', true, 2, 9007),
+  ('改写为 how 问句：  "My sister is 13 years old."', 'transform', NULL, NULL, NULL, NULL, 'How old is your sister?', ARRAY['How old is your sister?']::text[], '年龄 → How old。', '{}'::jsonb, NULL, 'how_old_transform', true, 1, 9008),
+  ('改错：  "How long is your dad? — 1.8 m."', 'correction', NULL, NULL, NULL, NULL, 'How tall is your dad? — 1.8 m.', ARRAY['How tall is your dad? — 1.8 m.']::text[], '问人身高 → how tall。', '{}'::jsonb, NULL, 'how_long_vs_tall', true, 1, 9009),
+  ('改错：  "How many is this jacket? — 200 yuan."', 'correction', NULL, NULL, NULL, NULL, 'How much is this jacket? — 200 yuan.', ARRAY['How much is this jacket? — 200 yuan.']::text[], '问钱 → how much。', '{}'::jsonb, NULL, 'how_much_vs_many', true, 1, 9010),
+  ('把这句话译成英文：你弟弟多大了？他长多高了？',
+   'translation', NULL, NULL, NULL, NULL, 'How old is your brother and how tall is he?',
+   ARRAY[
+     'How old is your brother and how tall is he?',
+     'How old and how tall is your brother?',
+     'How old is your little brother? And how tall is he now?'
+   ]::text[], '考点：① 年龄 → how old；② 身高 → how tall。', '{}'::jsonb, '更地道：把两个 how 问句连起来用 and；中文"长多高了"暗示成长，用 now 强化。', 'how_translation', true, 3, 9011)
+) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order);
+
+
+DO $$
+DECLARE v_point_id uuid; v_q_count int; v_depth int;
+BEGIN
+  SELECT id, content_depth INTO v_point_id, v_depth FROM junior_grammar_points WHERE code = 'g8.15';
+  IF v_point_id IS NULL THEN RAISE EXCEPTION 'Missing g8.15'; END IF;
+  IF v_depth <> 3 THEN RAISE EXCEPTION 'g8.15 depth %, expected 3', v_depth; END IF;
+  SELECT count(*) INTO v_q_count FROM junior_grammar_questions WHERE point_id = v_point_id AND sort_order BETWEEN 9000 AND 9099;
+  IF v_q_count <> 12 THEN RAISE EXCEPTION 'g8.15 expected 12 questions, got %', v_q_count; END IF;
+  RAISE NOTICE 'g8.15 verified.';
+END $$;
+
+
+-- ╔════════════════════════════════════════════════════════════════════╗
+-- ║ FILE: 20260525180000_g8_29_present_perfect_continuous_gold_standard.sql
+-- ╚════════════════════════════════════════════════════════════════════╝
+-- =====================================================================
+-- Gold-standard content for G8 · 现在完成进行时
+-- Code: g8.29   Category: tense
+-- =====================================================================
+
+UPDATE junior_grammar_points
+SET
+  summary = '"have been doing" — 强调动作从过去持续到现在并仍在进行，中考-高考衔接的进阶时态。',
+  hook_line_cn = '现在完成 vs 现在完成进行：前者强调"结果"，后者强调"持续过程"。学会一句话搞定 9 年级阅读。',
+  hook_line = 'have been doing — emphasises the process, not the result.',
+  mnemonic = '现在完成进行 = have/has + been + V-ing；强调"过程 / 持续"；状态动词不用。',
+  content_depth = 3,
+
+  explanation_md = E'## 🎯 一句话搞定\n\n**动作从过去持续到现在，并且仍在进行** → 用 **have/has + been + V-ing**，强调**过程 / 持续**。\n\n---\n\n## 📐 核心公式\n\n| 句型 | 公式 | 例子 |\n|---|---|---|\n| 肯定 | 主语 + **have/has + been + V-ing** | I **have been learning** English for 5 years. |\n| 否定 | 主语 + **haven''t/hasn''t + been + V-ing** | She **hasn''t been studying** lately. |\n| 一般疑问 | **Have/Has** + 主语 + **been + V-ing** ? | **Have you been waiting** long? |\n| 特殊疑问 | 疑问词 + **have/has** + 主语 + **been + V-ing** ? | How long **have you been learning** English? |\n\n> ⚠️ **铁律**：he / she / it / 单数 → **has**；其他 → **have**。\n\n---\n\n## 🔥 与现在完成时的关键区别（中考必考）\n\n| 维度 | 现在完成时 (have done) | 现在完成进行时 (have been doing) |\n|---|---|---|\n| **强调** | **结果** | **过程 / 持续** |\n| 例子 | I **have read** the book.（看完了）| I **have been reading** the book.（一直在看，可能没看完）|\n| 暗示 | 动作完成，强调影响 | 动作持续，可能还没结束 |\n\n→ **判断时**：问"做完了吗"用完成时；问"做多久了 / 还在做吗"用完成进行时。\n\n---\n\n## ⏰ 看到这些 = 现在完成进行时\n\n- **for + 时长**：for 5 years, for 3 hours\n- **since + 时间点**：since 2020, since I was 5\n- **all + 时段**：all morning, all day, all week\n- **recently / lately**\n- 强调动作**仍在进行**或**刚刚停止**（结果显示在外）\n\n---\n\n## 🔥 经典对比例句\n\n### 强调结果 → 完成时\n- She **has cleaned** the room.（房间现在很干净）\n\n### 强调过程 → 完成进行时\n- She **has been cleaning** the room **all morning**.（一上午都在打扫，可能还没完）\n\n### 同时表达：完成时 + 完成进行时\n- I **have been studying** for 3 hours, but I **haven''t finished** yet.（学了 3 小时 + 还没完成）\n\n---\n\n## ⚠️ Top 5 易错点（中考批卷红笔常出现）\n\n1. **状态动词用完成进行时**（最致命）：~~I have been knowing him for 10 years.~~ → **I have known him for 10 years.**（know/like/love/believe 是状态动词，用完成时）\n2. **漏掉 been**：~~I have learning English for 5 years.~~ → **I have been learning English for 5 years.**\n3. **第三人称用 have**：~~He have been waiting.~~ → **He has been waiting.**\n4. **强调结果时误用进行**：~~I have been reading this book.（说话人意思是"看完了"）~~ → **I have read this book.**\n5. **配 yesterday / last year**：~~I have been studying since yesterday.（错语境）~~ → 完成进行时不与过去具体时间点+完成动作搭配。"since yesterday" 接 + still 是 OK，要看上下文。\n\n---\n\n## 🧠 三秒判断口诀\n\n> ① 强调**过程 / 一直在做** → have been + V-ing  \n> ② 强调**结果 / 做完了** → have + V-ed  \n> ③ **状态动词不用进行时**（know/like/love/want/have-表所有）  \n> ④ 配 **for / since / all + 时段** 是高频信号',
+
+  immersion_cards = $jsonb$[
+    {"situation": "Friend visits and you''re mid-chore", "cn": "我已经收拾了整整一个上午。", "en": "I have been cleaning all morning."},
+    {"situation": "Tutor asks about your English progress", "cn": "我学英语 6 年了，还在继续学。", "en": "I have been learning English for six years and I''m still going."},
+    {"situation": "Mom is worried you''re tired", "cn": "你看起来累，等多久了？", "en": "You look tired — how long have you been waiting?"},
+    {"situation": "Reaching a milestone with friends", "cn": "我们一直在为这个项目努力，终于做完了。", "en": "We have been working on this project, and we''ve finally finished."},
+    {"situation": "Describing relentless weather", "cn": "已经下了一整天的雨了。", "en": "It has been raining all day."},
+    {"situation": "Telling about a recent hobby", "cn": "她最近在学钢琴。", "en": "She has been learning the piano recently."}
+  ]$jsonb$::jsonb,
+
+  contrast_table = $jsonb$[
+    {"lhs": "I have been knowing him for 10 years.",         "rhs": "I have known him for 10 years."},
+    {"lhs": "I have learning English for 5 years.",           "rhs": "I have been learning English for 5 years."},
+    {"lhs": "He have been waiting at the gate.",              "rhs": "He has been waiting at the gate."},
+    {"lhs": "I have been finished my homework.",              "rhs": "I have finished my homework."},
+    {"lhs": "She have been liking ice cream since she was 5.","rhs": "She has liked ice cream since she was 5."},
+    {"lhs": "It has been rain all morning.",                  "rhs": "It has been raining all morning."}
+  ]$jsonb$::jsonb,
+
+  reflex_cards = $jsonb$[
+    {"cn": "我已经等了一个小时。",            "en": "I have been waiting for an hour.",              "keyword": "have been waiting"},
+    {"cn": "她一上午都在看书。",              "en": "She has been reading all morning.",             "keyword": "has been reading"},
+    {"cn": "他们 2018 年以来一直在做这个项目。","en": "They have been working on this project since 2018.","keyword": "have been working since"},
+    {"cn": "你来这里多久了？",                "en": "How long have you been here?",                  "keyword": "How long have you been"},
+    {"cn": "下了一整天的雨。",                "en": "It has been raining all day.",                  "keyword": "has been raining"},
+    {"cn": "我学钢琴 3 年了。",               "en": "I have been learning the piano for 3 years.",   "keyword": "have been learning"},
+    {"cn": "Lin 最近一直在准备考试。",        "en": "Lin has been preparing for the exam recently.", "keyword": "has been preparing"},
+    {"cn": "你最近过得怎么样？",              "en": "How have you been lately?",                     "keyword": "How have you been"}
+  ]$jsonb$::jsonb,
+
+  situation_drills = $jsonb$[
+    {"situation": "Talking to a new English tutor about your background.", "cn": "我学英语已经 7 年了，但我觉得自己还需要练口语。", "en": "I have been learning English for seven years, but I feel I still need to practice speaking.", "accepted": ["I''ve studied English for 7 years, but I still need speaking practice.", "After 7 years of English, I still feel my speaking needs work."]},
+    {"situation": "Apologizing to a friend you kept waiting.", "cn": "对不起让你久等了，你等多久了？", "en": "Sorry to keep you waiting — how long have you been waiting?", "accepted": ["Sorry I''m late — how long have you been here?", "Sorry for the wait — how long have you been waiting for me?"]},
+    {"situation": "Explaining why your eyes are red.", "cn": "我学习了一整天，眼睛有点累。", "en": "I have been studying all day; my eyes are a bit tired.", "accepted": ["I''ve been at my books all day, so my eyes are tired.", "My eyes are tired because I''ve been studying all day."]},
+    {"situation": "Asking your foreign friend how they''ve been lately.", "cn": "最近怎么样？你都在忙什么？", "en": "How have you been lately? What have you been up to?", "accepted": ["How''ve you been recently? What''ve you been doing?", "How have things been? What have you been working on?"]}
+  ]$jsonb$::jsonb,
+
+  correction_tasks = $jsonb$[
+    {"wrong": "I have been knowing him for 10 years.", "model": "I have known him for 10 years.", "hint": "know 是状态动词", "why": "**状态动词** (know / like / love / want / believe) **不用进行时**。改用完成时 have known。"},
+    {"wrong": "I have learning English for 5 years.", "model": "I have been learning English for 5 years.", "hint": "缺 been", "why": "**现在完成进行时公式 = have/has + been + V-ing**。漏 been 错。"},
+    {"wrong": "He have been waiting at the bus stop.", "model": "He has been waiting at the bus stop.", "hint": "第三人称用 has", "why": "**He = 第三人称单数 → has**（不是 have）。"},
+    {"wrong": "I have been finished my homework.", "model": "I have finished my homework.", "hint": "finish 强调结果", "why": "**finish 强调结果 / 完成** → 用完成时 have finished，不用完成进行时。"},
+    {"wrong": "She have been liking ice cream since she was 5.", "model": "She has liked ice cream since she was 5.", "hint": "like 不用进行时", "why": "**like 是状态动词**，且 has（she 第三人称）。用完成时 has liked。"},
+    {"wrong": "It has been rain all morning.", "model": "It has been raining all morning.", "hint": "用 V-ing", "why": "**been 后接 V-ing**：rain → raining。"}
+  ]$jsonb$::jsonb,
+
+  boss_questions = $jsonb$[
+    {"stem": "Tom looks exhausted. He ___ all afternoon.", "option_a": "has played football", "option_b": "has been playing football", "option_c": "is playing football", "option_d": "played football", "correct_answer": "B",
+     "trap": "选 A 强调结果（看不出\"累\"的原因）；上下文 exhausted + all afternoon 提示持续过程。", "why": "**强调持续过程 + all afternoon** → 现在完成进行时 has been playing。"},
+    {"stem": "— You look tired. — Yes, I ___ for 3 hours.", "option_a": "have walked", "option_b": "have been walking", "option_c": "am walking", "option_d": "walked", "correct_answer": "B",
+     "trap": "选 A 强调\"走完了\"，与\"看起来累\"对话场景不匹配。", "why": "**you look tired + for 3 hours** = 强调持续 → has/have been + V-ing。"},
+    {"stem": "Lin ___ this novel for two days. She''s nearly finished.", "option_a": "has read", "option_b": "has been reading", "option_c": "is reading", "option_d": "reads", "correct_answer": "B",
+     "trap": "选 A 强调结果（读完）；but she''s nearly finished 暗示还没完成。", "why": "**还没读完 + 持续 2 天** → 现在完成进行时 has been reading。"},
+    {"stem": "I ___ Mr. Smith since 2020. He''s my best friend.", "option_a": "have been knowing", "option_b": "have known", "option_c": "am knowing", "option_d": "know", "correct_answer": "B",
+     "trap": "选 A 中考陷阱 — know 是状态动词，永远不用进行时。",
+     "why": "**状态动词 know 不用进行时** → 用完成时 have known。"}
+  ]$jsonb$::jsonb
+
+WHERE code = 'g8.29';
+
+
+UPDATE junior_grammar_points SET teacher_script = $jsonb$[
+  {"text": "今天解锁**现在完成进行时**。中考-高考衔接的进阶时态，强调\"一直在做\"。", "show": "🎯 have / has + been + V-ing", "duration": 10},
+  {"text": "公式：**have/has + been + V-ing**。he/she/it → has；其他 → have。", "show": "have/has + been + V-ing", "highlight": "been + V-ing", "duration": 11},
+  {"text": "**核心**：强调动作从过去**持续到现在**，并且**仍在进行**或**刚停止**。", "show": "in progress / just stopped", "highlight": "still going", "duration": 12},
+  {"text": "**对比完成时**：have done = 强调**结果**；have been doing = 强调**过程**。", "show": "have done (result)   vs   have been doing (process)", "highlight": "process", "duration": 13},
+  {"text": "**举例**：She **has cleaned** the room.（已干净）vs She **has been cleaning** all morning.（一上午在打扫）", "show": "has cleaned ≠ has been cleaning", "highlight": "has been cleaning", "duration": 14},
+  {"text": "**典型信号词**：**for + 时长** / **since + 时间点** / **all morning** / **recently**。", "show": "for / since / all morning / recently", "highlight": "for / since", "duration": 12},
+  {"text": "**最大坑 ①**：**状态动词不用进行时**！know / like / love / want / believe → 用完成时。", "show": "✗ have been knowing   ✓ have known", "highlight": "have known", "duration": 13},
+  {"text": "**最大坑 ②**：漏 been。have **been** + V-ing。少了 been 就不是这个时态。", "show": "✗ have learning   ✓ have been learning", "highlight": "have been learning", "duration": 12}
+]$jsonb$::jsonb
+WHERE code = 'g8.29';
+
+
+DELETE FROM junior_grammar_questions WHERE point_id = (SELECT id FROM junior_grammar_points WHERE code = 'g8.29') AND sort_order BETWEEN 9000 AND 9099;
+
+WITH p AS (SELECT id FROM junior_grammar_points WHERE code = 'g8.29')
+INSERT INTO junior_grammar_questions
+  (point_id, stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order)
+SELECT p.id, q.stem, q.question_type, q.option_a, q.option_b, q.option_c, q.option_d, q.correct_answer, q.accepted_answers, q.explanation, q.distractors, q.natural_note, q.grammar_topic, q.use_ai_grading, q.difficulty, q.sort_order
+FROM p, (VALUES
+  ('I ___ for the bus for half an hour. Where is it?', 'mcq', 'have waited', 'have been waiting', 'am waiting', 'wait', 'B', NULL::text[], '强调持续过程 + 还在等 → have been waiting。', '{}'::jsonb, NULL, 'perfect_continuous_wait', false, 1, 9000),
+  ('Lin ___ the piano since she was 6 years old.', 'mcq', 'has been learning', 'has learning', 'is learning', 'has been learn', 'A', NULL::text[], 'since + 时间点 + 持续到现在 → has been learning。', '{}'::jsonb, NULL, 'perfect_continuous_since', false, 1, 9001),
+  ('How long ___ you ___ in this city?', 'mcq', 'have / been living', 'have / lived', 'do / live', 'are / living', 'A', NULL::text[], '问"住了多久" + 持续 → have been living。', '{}'::jsonb, NULL, 'perfect_continuous_question', false, 2, 9002),
+  ('Tom ___ Mary since they were classmates in primary school.', 'mcq', 'has been knowing', 'has known', 'is knowing', 'knows', 'B', NULL::text[], 'know 是状态动词，不用进行时 → has known。', '{}'::jsonb, NULL, 'perfect_continuous_state_verb', false, 3, 9003),
+  ('It ____ (rain) since last night. The streets are wet.', 'fill', NULL, NULL, NULL, NULL, 'has been raining', ARRAY['has been raining']::text[], 'since + 时间点 + 持续 → has been raining。', '{}'::jsonb, NULL, 'perfect_continuous_rain', false, 2, 9004),
+  ('They ____ (work) on this project for two weeks.', 'fill', NULL, NULL, NULL, NULL, 'have been working', ARRAY['have been working']::text[], 'for + 时长 + 持续 → have been working。', '{}'::jsonb, NULL, 'perfect_continuous_work', false, 2, 9005),
+  ('I ____ (know) him for over 10 years.', 'fill', NULL, NULL, NULL, NULL, 'have known', ARRAY['have known']::text[], 'know 是状态动词 → have known（完成时，不是完成进行）。', '{}'::jsonb, NULL, 'perfect_continuous_know_trap', false, 3, 9006),
+  ('合并成完成进行时：  "I started studying English 5 years ago. I''m still studying."', 'transform', NULL, NULL, NULL, NULL, 'I have been studying English for 5 years.', ARRAY['I have been studying English for 5 years.']::text[], '从过去开始 + 仍在进行 → have been studying。', '{}'::jsonb, NULL, 'perfect_continuous_combine', true, 2, 9007),
+  ('改成完成时（强调结果）：  "I have been finishing my homework."', 'transform', NULL, NULL, NULL, NULL, 'I have finished my homework.', ARRAY['I have finished my homework.']::text[], 'finish 强调结果 → 完成时。', '{}'::jsonb, NULL, 'perfect_continuous_to_perfect', true, 3, 9008),
+  ('改错：  "I have been knowing Mr. Wang since I was a child."', 'correction', NULL, NULL, NULL, NULL, 'I have known Mr. Wang since I was a child.', ARRAY['I have known Mr. Wang since I was a child.']::text[], 'know 不用进行时 → have known。', '{}'::jsonb, NULL, 'perfect_continuous_state_verb_error', true, 2, 9009),
+  ('改错：  "She have been studying French for 3 years."', 'correction', NULL, NULL, NULL, NULL, 'She has been studying French for 3 years.', ARRAY['She has been studying French for 3 years.']::text[], 'She 第三人称单数 → has。', '{}'::jsonb, NULL, 'perfect_continuous_third_person', true, 1, 9010),
+  ('把这句话译成英文：自从去年九月以来，我一直在准备这次中考。',
+   'translation', NULL, NULL, NULL, NULL, 'I have been preparing for the 中考 since last September.',
+   ARRAY[
+     'I have been preparing for the 中考 since last September.',
+     'I have been preparing for the senior-high entrance exam since last September.',
+     'Since last September, I have been preparing for the 中考.'
+   ]::text[], '考点：① since + 时间点 → 现在完成进行时；② "中考" = the 中考 / senior-high entrance exam。', '{}'::jsonb, '更地道：在英文里直接保留 "中考" 表名词；正式翻译可写 the senior-high entrance exam。', 'perfect_continuous_translation', true, 3, 9011)
+) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer, accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading, difficulty, sort_order);
+
+
+DO $$
+DECLARE v_point_id uuid; v_q_count int; v_depth int;
+BEGIN
+  SELECT id, content_depth INTO v_point_id, v_depth FROM junior_grammar_points WHERE code = 'g8.29';
+  IF v_point_id IS NULL THEN RAISE EXCEPTION 'Missing g8.29'; END IF;
+  IF v_depth <> 3 THEN RAISE EXCEPTION 'g8.29 depth %, expected 3', v_depth; END IF;
+  SELECT count(*) INTO v_q_count FROM junior_grammar_questions WHERE point_id = v_point_id AND sort_order BETWEEN 9000 AND 9099;
+  IF v_q_count <> 12 THEN RAISE EXCEPTION 'g8.29 expected 12 questions, got %', v_q_count; END IF;
+  RAISE NOTICE 'g8.29 verified.';
 END $$;
 

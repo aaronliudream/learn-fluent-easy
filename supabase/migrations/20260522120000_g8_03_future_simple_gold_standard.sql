@@ -130,7 +130,7 @@ SET
       "option_c": "would",
       "option_d": "am",
       "correct_answer": "B",
-      "trap": "选 A 暗示"已经计划好"，但敲门是**当场情况、当场决定** — 用 will 才自然。",
+      "trap": "选 A 暗示\"已经计划好\"，但敲门是**当场情况、当场决定** — 用 will 才自然。",
       "why":  "**will = 当场决定**。be going to 用于已经计划好的事。"
     },
     {
@@ -140,7 +140,7 @@ SET
       "option_c": "is",
       "option_d": "rains",
       "correct_answer": "B",
-      "trap": "选 A 也表"会下雨"，但**眼前已有迹象**（黑云）→ 更准用 be going to。中考最常考的细分场景。",
+      "trap": "选 A 也表\"会下雨\"，但**眼前已有迹象**（黑云）→ 更准用 be going to。中考最常考的细分场景。",
       "why":  "**be going to = 基于现有迹象的预测**。看到黑云就知道要下雨。"
     },
     {
@@ -161,7 +161,7 @@ SET
       "option_d": "Are / watching",
       "correct_answer": "C",
       "trap": "选 A 也对，但已经买票 → 是**计划好的事**，用 be going to 更准。选 B/D 时态错。",
-      "why":  "**"已经买票"= 已有计划** → be going to。疑问句 be 动词提前：**Are you going to watch ...?**"
+      "why":  "**\"已经买票\"= 已有计划** → be going to。疑问句 be 动词提前：**Are you going to watch ...?**"
     }
   ]$jsonb$::jsonb
 
@@ -170,7 +170,7 @@ WHERE code = 'g8.03';
 
 UPDATE junior_grammar_points SET teacher_script = $jsonb$[
   {
-    "text": "今天解锁**一般将来时**。中考写作里"明天会怎样""我打算干什么"全靠它。",
+    "text": "今天解锁**一般将来时**。中考写作里\"明天会怎样\"\"我打算干什么\"全靠它。",
     "show": "🎯 Today: will + V  vs  be going to + V",
     "duration": 9
   },
@@ -237,28 +237,28 @@ FROM p, (VALUES
     'mcq', 'do', 'will', 'am going', 'am', 'B',
     NULL::text[],
     '当场决定帮忙 → 用 will。简短回答 = I will。',
-    NULL::jsonb, NULL, 'future_will_decision', false, 1, 9000
+    '{}'::jsonb, NULL, 'future_will_decision', false, 1, 9000
   ),
   (
     'Look! The cat ___ jump off the wall.',
     'mcq', 'will', 'is going to', 'is', 'jumps', 'B',
     NULL::text[],
     '眼前有迹象（猫准备跳）→ be going to。',
-    NULL::jsonb, NULL, 'future_going_to_evidence', false, 2, 9001
+    '{}'::jsonb, NULL, 'future_going_to_evidence', false, 2, 9001
   ),
   (
     'If you ___ early tomorrow, please ___ me.',
     'mcq', 'will arrive / call', 'arrive / will call', 'arrive / call', 'will arrive / will call', 'B',
     NULL::text[],
     'if 从句一般现在时 (arrive) + 主句祈使句（call）— please 后接动词原形，但因为是主句"请你打电话给我"，是命令 / 请求语气，用动词原形即可。',
-    NULL::jsonb, '提示：祈使句作主句也算"将来语境"，但句子结构是 please + 动词原形。', 'future_subordinate_clause', false, 2, 9002
+    '{}'::jsonb, '提示：祈使句作主句也算"将来语境"，但句子结构是 please + 动词原形。', 'future_subordinate_clause', false, 2, 9002
   ),
   (
     'Tom ___ a doctor when he grows up. He always says so.',
     'mcq', 'is going to be', 'will be', 'is', 'be', 'A',
     NULL::text[],
     '"always says so"提示这是 Tom **已经决定好**的志向 → be going to。当然 will 也能勉强用，但 be going to 更准。',
-    NULL::jsonb, NULL, 'future_going_to_plan', false, 3, 9003
+    '{}'::jsonb, NULL, 'future_going_to_plan', false, 3, 9003
   ),
 
   (
@@ -266,21 +266,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'are going to have',
     ARRAY['are going to have', '''re going to have', 'will have']::text[],
     '已经计划好的派对 → be going to have；当然 will have 也接受。',
-    NULL::jsonb, NULL, 'future_going_to', false, 1, 9004
+    '{}'::jsonb, NULL, 'future_going_to', false, 1, 9004
   ),
   (
     'I think Lin ____ (win) the singing contest.',
     'fill', NULL, NULL, NULL, NULL, 'will win',
     ARRAY['will win']::text[],
     '"I think"是主观判断 → **will**。',
-    NULL::jsonb, NULL, 'future_will_predict', false, 1, 9005
+    '{}'::jsonb, NULL, 'future_will_predict', false, 1, 9005
   ),
   (
     'As soon as the rain ____ (stop), we will go out for a walk.',
     'fill', NULL, NULL, NULL, NULL, 'stops',
     ARRAY['stops']::text[],
     '主将从现：as soon as 从句一般现在时 + 第三人称单数 → **stops**。',
-    NULL::jsonb, NULL, 'future_subordinate_clause', false, 2, 9006
+    '{}'::jsonb, NULL, 'future_subordinate_clause', false, 2, 9006
   ),
 
   (
@@ -291,7 +291,7 @@ FROM p, (VALUES
       'I''m going to visit my grandma this weekend.'
     ]::text[],
     'plan to do = be going to do。',
-    NULL::jsonb, NULL, 'future_going_to_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'future_going_to_transform', true, 2, 9007
   ),
   (
     '把句子改成一般将来时（提示：tomorrow）：  "I do my homework after dinner."',
@@ -301,7 +301,7 @@ FROM p, (VALUES
       'I am going to do my homework after dinner tomorrow.'
     ]::text[],
     'tomorrow → 将来时。可用 will 或 be going to。',
-    NULL::jsonb, NULL, 'future_transform_basic', true, 2, 9008
+    '{}'::jsonb, NULL, 'future_transform_basic', true, 2, 9008
   ),
 
   (
@@ -311,7 +311,7 @@ FROM p, (VALUES
       'If it is sunny tomorrow, we will play football.'
     ]::text[],
     'if 从句不能用 will，必须用一般现在时 **is**。',
-    NULL::jsonb, NULL, 'future_no_will_in_if', true, 2, 9009
+    '{}'::jsonb, NULL, 'future_no_will_in_if', true, 2, 9009
   ),
   (
     '改错：  "Do you going to the new shopping mall this Sunday?"',
@@ -320,7 +320,7 @@ FROM p, (VALUES
       'Are you going to the new shopping mall this Sunday?'
     ]::text[],
     'be going to 的疑问句用 **Are/Is + 主语 + going to**，不用 do/does。',
-    NULL::jsonb, NULL, 'future_going_to_question', true, 2, 9010
+    '{}'::jsonb, NULL, 'future_going_to_question', true, 2, 9010
   ),
 
   (
@@ -333,7 +333,7 @@ FROM p, (VALUES
       'My dad and I are going hiking tomorrow.'
     ]::text[],
     '考点：① "打算"= 已有计划 → be going to；② "我和爸爸"用 my dad and I（注意 I 放后面）；③ "去爬山"= climb the mountain / go hiking。',
-    NULL::jsonb, '更地道：go hiking 比 climb the mountain 更日常；语序 "my dad and I" 比 "I and my dad" 更礼貌（自己放后面）。', 'future_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：go hiking 比 climb the mountain 更日常；语序 "my dad and I" 比 "I and my dad" 更礼貌（自己放后面）。', 'future_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

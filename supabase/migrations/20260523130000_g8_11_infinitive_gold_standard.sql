@@ -113,7 +113,7 @@ SET
       "wrong": "I want a doctor when I grow up.",
       "model": "I want to be a doctor when I grow up.",
       "hint":  "want + to be + 名词",
-      "why":   "表"想成为某种身份" → 必须用 **to be + 名词**。want 后面直接接名词意思是"想要这个人/物"。"
+      "why":   "表\"想成为某种身份\" → 必须用 **to be + 名词**。want 后面直接接名词意思是\"想要这个人/物\"。"
     },
     {
       "wrong": "She decided staying at home today.",
@@ -142,7 +142,7 @@ SET
       "option_d": "bought",
       "correct_answer": "B",
       "trap": "选 A 漏 to。选 C/D 时态错。",
-      "why":  "表"为了……" = **to + 动词原形**（目的状语）。"
+      "why":  "表\"为了……\" = **to + 动词原形**（目的状语）。"
     },
     {
       "stem": "It''s important ___ regularly to stay healthy.",
@@ -239,28 +239,28 @@ FROM p, (VALUES
     'mcq', 'be', 'to be', 'being', 'is', 'B',
     NULL::text[],
     'hope + to do；"成为老师"= to be a teacher。',
-    NULL::jsonb, NULL, 'infinitive_object', false, 1, 9000
+    '{}'::jsonb, NULL, 'infinitive_object', false, 1, 9000
   ),
   (
     'I''m going to the library ___ a book about Suzhou.',
     'mcq', 'borrow', 'to borrow', 'borrowing', 'borrowed', 'B',
     NULL::text[],
     '"为了借书"= 目的状语 to borrow。',
-    NULL::jsonb, NULL, 'infinitive_purpose', false, 1, 9001
+    '{}'::jsonb, NULL, 'infinitive_purpose', false, 1, 9001
   ),
   (
     'It is easy ___ the new English app on your phone.',
     'mcq', 'use', 'to use', 'using', 'uses', 'B',
     NULL::text[],
     'It is + 形容词 + **to do something** 是固定句式。',
-    NULL::jsonb, NULL, 'infinitive_formal_subject', false, 2, 9002
+    '{}'::jsonb, NULL, 'infinitive_formal_subject', false, 2, 9002
   ),
   (
     'Mom let me ___ TV after I ___ my homework.',
     'mcq', 'watch / finish', 'to watch / finish', 'watch / finished', 'to watch / finished', 'C',
     NULL::text[],
     'let + sb + 动词原形（watch）；过去时 "做完作业" finished。',
-    NULL::jsonb, NULL, 'infinitive_let_past', false, 3, 9003
+    '{}'::jsonb, NULL, 'infinitive_let_past', false, 3, 9003
   ),
 
   (
@@ -268,21 +268,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'to be',
     ARRAY['to be']::text[],
     'want + to do；"成为医生"= to be a doctor。',
-    NULL::jsonb, NULL, 'infinitive_basic', false, 1, 9004
+    '{}'::jsonb, NULL, 'infinitive_basic', false, 1, 9004
   ),
   (
     'Tom went to the supermarket ____ (buy) some fruit.',
     'fill', NULL, NULL, NULL, NULL, 'to buy',
     ARRAY['to buy']::text[],
     '目的状语 → to + 动词原形。',
-    NULL::jsonb, NULL, 'infinitive_purpose', false, 1, 9005
+    '{}'::jsonb, NULL, 'infinitive_purpose', false, 1, 9005
   ),
   (
     'It''s important ____ (have) breakfast every morning.',
     'fill', NULL, NULL, NULL, NULL, 'to have',
     ARRAY['to have']::text[],
     'It is + adj + to do = 固定句式。',
-    NULL::jsonb, NULL, 'infinitive_formal_subject', false, 2, 9006
+    '{}'::jsonb, NULL, 'infinitive_formal_subject', false, 2, 9006
   ),
 
   (
@@ -292,7 +292,7 @@ FROM p, (VALUES
       'I went to the cinema to watch the new film.'
     ]::text[],
     '合并为目的状语 to watch。',
-    NULL::jsonb, NULL, 'infinitive_combine_purpose', true, 2, 9007
+    '{}'::jsonb, NULL, 'infinitive_combine_purpose', true, 2, 9007
   ),
   (
     '用 It is ... to do 句型改写：  "Speaking English every day is helpful."',
@@ -301,7 +301,7 @@ FROM p, (VALUES
       'It is helpful to speak English every day.'
     ]::text[],
     '形式主语 It is + adj + to do。',
-    NULL::jsonb, NULL, 'infinitive_formal_subject_transform', true, 3, 9008
+    '{}'::jsonb, NULL, 'infinitive_formal_subject_transform', true, 3, 9008
   ),
 
   (
@@ -311,7 +311,7 @@ FROM p, (VALUES
       'I want to learn Japanese next year.'
     ]::text[],
     'want + to do（不接 V-ing）。',
-    NULL::jsonb, NULL, 'infinitive_want_to_do', true, 1, 9009
+    '{}'::jsonb, NULL, 'infinitive_want_to_do', true, 1, 9009
   ),
   (
     '改错：  "Mom let me to go to the party last Saturday."',
@@ -320,7 +320,7 @@ FROM p, (VALUES
       'Mom let me go to the party last Saturday.'
     ]::text[],
     'let + sb + **动词原形**（不带 to）。',
-    NULL::jsonb, NULL, 'infinitive_no_to_after_let', true, 2, 9010
+    '{}'::jsonb, NULL, 'infinitive_no_to_after_let', true, 2, 9010
   ),
 
   (
@@ -332,7 +332,7 @@ FROM p, (VALUES
       'It''s a good habit to read English half an hour every morning.'
     ]::text[],
     '考点：① It is + 名词短语 + to do 固定句式；② "半小时"= for half an hour；③ 不定式 to read 作真主语。',
-    NULL::jsonb, '更地道：It is a good habit to ... 比 Reading ... is a good habit 更常用，开头形式主语更英语。', 'infinitive_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：It is a good habit to ... 比 Reading ... is a good habit 更常用，开头形式主语更英语。', 'infinitive_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

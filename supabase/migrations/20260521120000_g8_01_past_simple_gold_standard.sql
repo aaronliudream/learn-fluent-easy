@@ -248,28 +248,28 @@ FROM p, (VALUES
     'mcq', 'finish', 'finished', 'finishing', 'will finish', 'B',
     NULL::text[],
     '**yesterday** = 过去时信号词，finish 是规则动词，过去式是 **finished**。',
-    NULL::jsonb, NULL, 'past_simple_regular', false, 1, 9000
+    '{}'::jsonb, NULL, 'past_simple_regular', false, 1, 9000
   ),
   (
     'My brother ___ go to bed until 11 last night.',
     'mcq', 'don''t', 'doesn''t', 'didn''t', 'wasn''t', 'C',
     NULL::text[],
     '**last night** → 过去时；否定句用 **didn''t** + 动词原形。',
-    NULL::jsonb, NULL, 'past_simple_negative', false, 1, 9001
+    '{}'::jsonb, NULL, 'past_simple_negative', false, 1, 9001
   ),
   (
     '— ___ your sister ___ to the museum with you last Sunday?  — Yes, she did.',
     'mcq', 'Did / go', 'Did / went', 'Does / go', 'Was / go', 'A',
     NULL::text[],
     '一般疑问句：**Did + 主语 + 动词原形**。go 不能变成 went。',
-    NULL::jsonb, NULL, 'past_simple_question', false, 2, 9002
+    '{}'::jsonb, NULL, 'past_simple_question', false, 2, 9002
   ),
   (
     'The film ___ really exciting. We ___ a lot from start to finish.',
     'mcq', 'is / laugh', 'was / laughed', 'was / laugh', 'is / laughed', 'B',
     NULL::text[],
     '两个动词都对应过去：be 动词 → **was**，laugh → **laughed**。',
-    NULL::jsonb, NULL, 'past_simple_mixed', false, 2, 9003
+    '{}'::jsonb, NULL, 'past_simple_mixed', false, 2, 9003
   ),
 
   -- ─── 3 fill-in ───
@@ -278,14 +278,14 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'visited',
     ARRAY['visited']::text[],
     'visit 是规则动词，过去式直接加 **-ed** → visited。',
-    NULL::jsonb, NULL, 'past_simple_regular', false, 1, 9004
+    '{}'::jsonb, NULL, 'past_simple_regular', false, 1, 9004
   ),
   (
     'A: Where is Tom?  B: He ____ (go) to the library twenty minutes ago.',
     'fill', NULL, NULL, NULL, NULL, 'went',
     ARRAY['went']::text[],
     'twenty minutes **ago** → 过去时；go 的过去式是 **went**（不规则）。',
-    NULL::jsonb, NULL, 'past_simple_irregular', false, 1, 9005
+    '{}'::jsonb, NULL, 'past_simple_irregular', false, 1, 9005
   ),
   (
     'When the bell ____ (ring), all the students ____ (stand) up quickly.',
@@ -298,7 +298,7 @@ FROM p, (VALUES
       'rang and stood'
     ]::text[],
     '两个都不规则：ring → **rang**，stand → **stood**。',
-    NULL::jsonb, '中考阅卷里这两个不规则动词常被一起考。', 'past_simple_irregular', false, 2, 9006
+    '{}'::jsonb, '中考阅卷里这两个不规则动词常被一起考。', 'past_simple_irregular', false, 2, 9006
   ),
 
   -- ─── 2 transform ───
@@ -307,14 +307,14 @@ FROM p, (VALUES
     'transform', NULL, NULL, NULL, NULL, 'I watched TV last night.',
     ARRAY['I watched TV last night.', 'Last night, I watched TV.']::text[],
     'every evening → last night；watch 加 -ed。',
-    NULL::jsonb, NULL, 'past_simple_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'past_simple_transform', true, 2, 9007
   ),
   (
     '改写为否定句（保留 last week）：  "She bought vegetables last week."',
     'transform', NULL, NULL, NULL, NULL, 'She didn''t buy vegetables last week.',
     ARRAY['She didn''t buy vegetables last week.', 'She did not buy vegetables last week.']::text[],
     '否定句：bought → didn''t buy。didn''t 后用原形。',
-    NULL::jsonb, '别忘了把 bought 改回原形 buy。', 'past_simple_negative', true, 2, 9008
+    '{}'::jsonb, '别忘了把 bought 改回原形 buy。', 'past_simple_negative', true, 2, 9008
   ),
 
   -- ─── 2 correction ───
@@ -323,14 +323,14 @@ FROM p, (VALUES
     'correction', NULL, NULL, NULL, NULL, 'He didn''t go home until 9 p.m. last Friday.',
     ARRAY['He didn''t go home until 9 p.m. last Friday.', 'He did not go home until 9 p.m. last Friday.']::text[],
     '两处错：① don''t → **didn''t** （last Friday 是过去）；② went → **go** （didn''t 后用原形）。',
-    NULL::jsonb, NULL, 'past_simple_correction', true, 2, 9009
+    '{}'::jsonb, NULL, 'past_simple_correction', true, 2, 9009
   ),
   (
     '改错：  "What time did the meeting started yesterday?"',
     'correction', NULL, NULL, NULL, NULL, 'What time did the meeting start yesterday?',
     ARRAY['What time did the meeting start yesterday?']::text[],
     'Did 后必须用动词**原形**：started → **start**。',
-    NULL::jsonb, NULL, 'past_simple_correction', true, 2, 9010
+    '{}'::jsonb, NULL, 'past_simple_correction', true, 2, 9010
   ),
 
   -- ─── 1 translation ───
@@ -347,7 +347,7 @@ FROM p, (VALUES
       'We went to Sanya for winter break last year.'
     ]::text[],
     '考点：① 去年寒假 → "last year" + winter break/vacation；② go 的不规则过去式 **went**；③ "一家" → my family / my family and I / we。',
-    NULL::jsonb, '地道写法：英文里"去年寒假"常拆成 "winter break/vacation … last year"，不说 "last winter vacation" — 那个像中式英语。', 'past_simple_translation', true, 3, 9011
+    '{}'::jsonb, '地道写法：英文里"去年寒假"常拆成 "winter break/vacation … last year"，不说 "last winter vacation" — 那个像中式英语。', 'past_simple_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

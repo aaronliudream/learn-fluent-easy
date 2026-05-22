@@ -250,28 +250,28 @@ FROM p, (VALUES
     'mcq', 'plant', 'are planted', 'is planted', 'are planting', 'B',
     NULL::text[],
     '主语 trees 复数 + 客观事实（一般现在时） → **are planted**。',
-    NULL::jsonb, NULL, 'passive_present', false, 1, 9000
+    '{}'::jsonb, NULL, 'passive_present', false, 1, 9000
   ),
   (
     'The Forbidden City ___ over 600 years ago.',
     'mcq', 'built', 'was built', 'is built', 'was building', 'B',
     NULL::text[],
     'over 600 years ago = 过去时间 + 主语 City 被建造 → **was built**（过去时被动）。',
-    NULL::jsonb, NULL, 'passive_past', false, 1, 9001
+    '{}'::jsonb, NULL, 'passive_past', false, 1, 9001
   ),
   (
     'Mobile phones ___ off before the exam begins.',
     'mcq', 'must turn', 'must be turn', 'must be turned', 'must turning', 'C',
     NULL::text[],
     '情态被动公式：**must + be + V-ed**。turn → turned（过去分词）。',
-    NULL::jsonb, NULL, 'passive_modal', false, 2, 9002
+    '{}'::jsonb, NULL, 'passive_modal', false, 2, 9002
   ),
   (
     'My homework ___ already. I can play games now.',
     'mcq', 'has done', 'has been done', 'is done', 'was done', 'B',
     NULL::text[],
     '主语 homework 是被做的 + 时间 already → 现在完成时被动 = **has been + V-ed**。漏掉 been 是最常见错误。',
-    NULL::jsonb, NULL, 'passive_perfect', false, 2, 9003
+    '{}'::jsonb, NULL, 'passive_perfect', false, 2, 9003
   ),
 
   -- ─── 3 fill-in ───
@@ -280,21 +280,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'is spoken',
     ARRAY['is spoken']::text[],
     '客观事实（一般现在时）+ 主语 English 被说 → **is spoken**。',
-    NULL::jsonb, NULL, 'passive_present', false, 1, 9004
+    '{}'::jsonb, NULL, 'passive_present', false, 1, 9004
   ),
   (
     'The new bridge ____ (open) to the public next Monday.',
     'fill', NULL, NULL, NULL, NULL, 'will be opened',
     ARRAY['will be opened', 'is going to be opened']::text[],
     'next Monday = 将来 + 主语 bridge 被开通 → **will be opened**（或 is going to be opened）。',
-    NULL::jsonb, NULL, 'passive_future', false, 2, 9005
+    '{}'::jsonb, NULL, 'passive_future', false, 2, 9005
   ),
   (
     'The window ____ (break) by Tom yesterday afternoon.',
     'fill', NULL, NULL, NULL, NULL, 'was broken',
     ARRAY['was broken']::text[],
     'yesterday afternoon = 过去 + window 被打破 → **was broken**。注意 break 的过去分词是 **broken**，不是 broke。',
-    NULL::jsonb, '中考阅卷里 "was broke" 是最高频错误之一。', 'passive_past', false, 2, 9006
+    '{}'::jsonb, '中考阅卷里 "was broke" 是最高频错误之一。', 'passive_past', false, 2, 9006
   ),
 
   -- ─── 2 transform (主动 → 被动) ───
@@ -306,7 +306,7 @@ FROM p, (VALUES
       'This novel was written in 1921 by Lu Xun.'
     ]::text[],
     '主动 → 被动：宾语 (this novel) 变主语 + was written + by + 原主语 (Lu Xun)。',
-    NULL::jsonb, NULL, 'passive_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'passive_transform', true, 2, 9007
   ),
   (
     '改写为被动语态：  "They will build a new park here next year."',
@@ -316,7 +316,7 @@ FROM p, (VALUES
       'A new park is going to be built here next year.'
     ]::text[],
     '将来时被动 = **will be + V-ed**。a new park 提前作主语，by them 通常省略（执行者不重要）。',
-    NULL::jsonb, '将来时被动里很多同学漏掉 "be"，记住公式：will + be + V-ed。', 'passive_transform', true, 2, 9008
+    '{}'::jsonb, '将来时被动里很多同学漏掉 "be"，记住公式：will + be + V-ed。', 'passive_transform', true, 2, 9008
   ),
 
   -- ─── 2 correction ───
@@ -327,7 +327,7 @@ FROM p, (VALUES
       'Many trees were planted in our city last spring.'
     ]::text[],
     '主语 trees 是复数，be 动词过去式必须用 **were**，不是 was。',
-    NULL::jsonb, NULL, 'passive_subject_verb', true, 2, 9009
+    '{}'::jsonb, NULL, 'passive_subject_verb', true, 2, 9009
   ),
   (
     '改错：  "The accident was happened on a busy road yesterday."',
@@ -336,7 +336,7 @@ FROM p, (VALUES
       'The accident happened on a busy road yesterday.'
     ]::text[],
     '**happen** 是不及物动词，没有被动形式。直接用一般过去时 **happened**。',
-    NULL::jsonb, '常见同类陷阱：take place / appear / arrive / belong to — 都不能被动。', 'passive_intransitive', true, 3, 9010
+    '{}'::jsonb, '常见同类陷阱：take place / appear / arrive / belong to — 都不能被动。', 'passive_intransitive', true, 3, 9010
   ),
 
   -- ─── 1 translation ───
@@ -350,7 +350,7 @@ FROM p, (VALUES
       'This song was written during the Beijing Olympic Games in 2008.'
     ]::text[],
     '考点：① 主语 "歌" 是被写的 → 被动；② 2008 年 → 过去时；③ write 的过去分词是 **written** 不是 wrote。',
-    NULL::jsonb, '"during + 事件" 比 "in + 事件" 更地道，强调时间段而不是时间点。', 'passive_translation', true, 3, 9011
+    '{}'::jsonb, '"during + 事件" 比 "in + 事件" 更地道，强调时间段而不是时间点。', 'passive_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

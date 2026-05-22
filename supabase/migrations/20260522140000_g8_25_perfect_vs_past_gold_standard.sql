@@ -95,7 +95,7 @@ SET
       "wrong": "When have you finished your project?",
       "model": "When did you finish your project?",
       "hint":  "When 配过去式",
-      "why":   "**When 引导疑问句问"什么时候"** → 必须用**一般过去时**。问"做了多久"才用 How long + 完成时。"
+      "why":   "**When 引导疑问句问\"什么时候\"** → 必须用**一般过去时**。问\"做了多久\"才用 How long + 完成时。"
     },
     {
       "wrong": "She has known me since 10 years.",
@@ -107,13 +107,13 @@ SET
       "wrong": "He has gone to Tokyo twice.",
       "model": "He has been to Tokyo twice.",
       "hint":  "twice = 经历",
-      "why":   "**twice 表"经历过几次"** → 用 **been to**（去过然后回来了）。**gone to** 表示"去了还没回"。"
+      "why":   "**twice 表\"经历过几次\"** → 用 **been to**（去过然后回来了）。**gone to** 表示\"去了还没回\"。"
     },
     {
       "wrong": "I lived in Suzhou for 5 years, and I''m still here.",
       "model": "I have lived in Suzhou for 5 years, and I''m still here.",
       "hint":  "仍住在 → 完成时",
-      "why":   "**"现在仍住在这里"= 持续到现在** → 用现在完成时 **have lived**。一般过去时暗示"已经不住了"。"
+      "why":   "**\"现在仍住在这里\"= 持续到现在** → 用现在完成时 **have lived**。一般过去时暗示\"已经不住了\"。"
     },
     {
       "wrong": "She has bought a new phone two days ago.",
@@ -141,7 +141,7 @@ SET
       "option_c": "have known / went",
       "option_d": "knew / went",
       "correct_answer": "C",
-      "trap": "since 后必须用具体过去时间点 + 一般过去时 (went)。主句"从那时知道到现在" → 现在完成时 (have known)。",
+      "trap": "since 后必须用具体过去时间点 + 一般过去时 (went)。主句\"从那时知道到现在\" → 现在完成时 (have known)。",
       "why":  "**since 从句用过去式 + 主句用现在完成时** 是完成时最经典搭配。"
     },
     {
@@ -151,7 +151,7 @@ SET
       "option_c": "Have / seen / saw",
       "option_d": "Have / seen / have seen",
       "correct_answer": "C",
-      "trap": "前问"经历"用完成时；回答"去年看到"是具体过去时间 → 必须切换到一般过去时。中考极爱考的切换。",
+      "trap": "前问\"经历\"用完成时；回答\"去年看到\"是具体过去时间 → 必须切换到一般过去时。中考极爱考的切换。",
       "why":  "**Have you ever seen ...?**（经历）→ **saw last year**（具体过去时间）。同一对话切换时态是高分点。"
     },
     {
@@ -161,7 +161,7 @@ SET
       "option_c": "has taught / for",
       "option_d": "taught / for",
       "correct_answer": "A",
-      "trap": "选 B 没看出"持续到现在"。选 C 把 2018 当成时长。选 D 双错。",
+      "trap": "选 B 没看出\"持续到现在\"。选 C 把 2018 当成时长。选 D 双错。",
       "why":  "**2018 = 时间点 → since** + 持续到现在 → 现在完成时 **has taught**。"
     }
   ]$jsonb$::jsonb
@@ -238,28 +238,28 @@ FROM p, (VALUES
     'mcq', 'have finished', 'finished', 'have finish', 'finishes', 'B',
     NULL::text[],
     'three days ago = 具体过去时间 → 一般过去时 **finished**。',
-    NULL::jsonb, NULL, 'past_vs_perfect_signal', false, 1, 9000
+    '{}'::jsonb, NULL, 'past_vs_perfect_signal', false, 1, 9000
   ),
   (
     'Tom ___ in this school ___ 2019.',
     'mcq', 'studied / since', 'has studied / for', 'has studied / since', 'studies / since', 'C',
     NULL::text[],
     '2019 = 时间点 → since；持续到现在 → 现在完成时 **has studied**。',
-    NULL::jsonb, NULL, 'past_vs_perfect_since', false, 2, 9001
+    '{}'::jsonb, NULL, 'past_vs_perfect_since', false, 2, 9001
   ),
   (
     '— ___ you ever ___ to Hong Kong?\n— Yes, I ___ there last summer.',
     'mcq', 'Did / go / went', 'Have / been / went', 'Have / gone / went', 'Have / been / have been', 'B',
     NULL::text[],
     '问经历 (ever) → 完成时 + been to；回答 last summer → 一般过去时 went。',
-    NULL::jsonb, NULL, 'past_vs_perfect_switch', false, 3, 9002
+    '{}'::jsonb, NULL, 'past_vs_perfect_switch', false, 3, 9002
   ),
   (
     'My mother ___ to Beijing. She''ll be back next Monday.',
     'mcq', 'has gone', 'has been', 'went', 'goes', 'A',
     NULL::text[],
     '"She''ll be back next Monday"暗示**人还没回** → has gone to。',
-    NULL::jsonb, NULL, 'past_vs_perfect_been_gone', false, 2, 9003
+    '{}'::jsonb, NULL, 'past_vs_perfect_been_gone', false, 2, 9003
   ),
 
   (
@@ -267,21 +267,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'saw',
     ARRAY['saw']::text[],
     'last week = 具体过去时间 → **saw**。',
-    NULL::jsonb, NULL, 'past_simple_signal', false, 1, 9004
+    '{}'::jsonb, NULL, 'past_simple_signal', false, 1, 9004
   ),
   (
     'My grandpa ____ (live) here ____ 1980.',
     'fill', NULL, NULL, NULL, NULL, 'has lived / since',
     ARRAY['has lived / since', 'has lived since']::text[],
     '1980 是时间点 → since；持续 → has lived。',
-    NULL::jsonb, NULL, 'past_vs_perfect_since', false, 2, 9005
+    '{}'::jsonb, NULL, 'past_vs_perfect_since', false, 2, 9005
   ),
   (
     'Lin ____ (be) to Suzhou three times. The first time was when she ____ (be) 8.',
     'fill', NULL, NULL, NULL, NULL, 'has been / was',
     ARRAY['has been / was']::text[],
     'three times = 经历 → has been to；"when she was 8" 具体时间 → was。',
-    NULL::jsonb, NULL, 'past_vs_perfect_switch', false, 3, 9006
+    '{}'::jsonb, NULL, 'past_vs_perfect_switch', false, 3, 9006
   ),
 
   (
@@ -292,7 +292,7 @@ FROM p, (VALUES
       'I have already bought this phone.'
     ]::text[],
     '去掉具体过去时间 → 可改成现在完成时；buy → bought (过去分词)。',
-    NULL::jsonb, NULL, 'past_vs_perfect_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'past_vs_perfect_transform', true, 2, 9007
   ),
   (
     '合并：  "Mom started cooking at 6. She is still cooking now."',
@@ -302,7 +302,7 @@ FROM p, (VALUES
       'Mom has cooked since 6.'
     ]::text[],
     '从过去某时持续到现在 → 现在完成时（或完成进行时）+ since 6。',
-    NULL::jsonb, NULL, 'past_vs_perfect_combine', true, 3, 9008
+    '{}'::jsonb, NULL, 'past_vs_perfect_combine', true, 3, 9008
   ),
 
   (
@@ -312,7 +312,7 @@ FROM p, (VALUES
       'I visited my uncle yesterday.'
     ]::text[],
     'yesterday 是具体过去时间，不能配现在完成时 → 用一般过去时 **visited**。',
-    NULL::jsonb, NULL, 'past_vs_perfect_signal_error', true, 2, 9009
+    '{}'::jsonb, NULL, 'past_vs_perfect_signal_error', true, 2, 9009
   ),
   (
     '改错：  "When have you started learning the piano?"',
@@ -321,7 +321,7 @@ FROM p, (VALUES
       'When did you start learning the piano?'
     ]::text[],
     'When 提问"什么时候开始" → 必须用一般过去时 **did ... start**。',
-    NULL::jsonb, NULL, 'past_vs_perfect_when', true, 2, 9010
+    '{}'::jsonb, NULL, 'past_vs_perfect_when', true, 2, 9010
   ),
 
   (
@@ -334,7 +334,7 @@ FROM p, (VALUES
       'I have read 5 English books since last September.'
     ]::text[],
     '考点：① "自从去年九月以来" → since last September；② "已经读了五本"持续到现在 → 现在完成时 have read。',
-    NULL::jsonb, 'since 后接的过去时间点常用 last + 月/年，比 from + 时间 更地道。', 'past_vs_perfect_translation', true, 3, 9011
+    '{}'::jsonb, 'since 后接的过去时间点常用 last + 月/年，比 from + 时间 更地道。', 'past_vs_perfect_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

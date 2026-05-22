@@ -23,6 +23,7 @@ import { Switch } from "@/components/ui/switch";
 import { loadProgress } from "@/lib/guestProgress";
 import { T, useT } from "@/i18n/T";
 import { SupportButton } from "@/components/SupportButton";
+import { MyClassesSection } from "@/components/student/MyClassesSection";
 
 const Account = () => {
   const navigate = useNavigate();
@@ -282,6 +283,9 @@ const Account = () => {
           </div>
         </section>
       )}
+
+      {/* My classes — join by code + list memberships (only for signed-in users) */}
+      {user && <MyClassesSection />}
 
       {/* Export */}
       <section className="mb-6 rounded-2xl bg-card p-6 shadow-card">

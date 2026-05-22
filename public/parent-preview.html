@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>📊 家长中心 — Redesign Preview · Big Moon English</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#FAF7F2',
+          ink: '#1F2440',
+          'brand-violet':  '#7B3FF1',
+          'brand-magenta': '#ED3F8C',
+          'brand-coral':   '#F47C45',
+          'brand-amber':   '#F59E0B',
+        },
+        fontFamily: { sans: ['"PingFang SC"','"Hiragino Sans GB"','"Microsoft YaHei"','system-ui','sans-serif'] },
+        boxShadow: {
+          tile:  '0 6px 18px -8px rgba(15,23,42,0.18)',
+          brand: '0 18px 40px -14px rgba(237,63,140,0.45)',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body { background: #FAF7F2; }
+  .grad-brand { background-image: linear-gradient(135deg,#7B3FF1 0%,#ED3F8C 55%,#F47C45 100%); }
+  .grad-warm  { background-image: linear-gradient(135deg,#F97316 0%,#F43F5E 100%); }
+  .grad-cool  { background-image: linear-gradient(135deg,#6366F1 0%,#8B5CF6 100%); }
+  .grad-mint  { background-image: linear-gradient(135deg,#10B981 0%,#14B8A6 100%); }
+  .grad-sky   { background-image: linear-gradient(135deg,#0EA5E9 0%,#06B6D4 100%); }
+  .grad-amber { background-image: linear-gradient(135deg,#F59E0B 0%,#F97316 100%); }
+  .tabular    { font-variant-numeric: tabular-nums; }
+  .panel.hidden { display:none; }
+  .annot { position:relative; }
+  .annot::after {
+    content:attr(data-note);
+    position:absolute; right:-6px; top:-10px;
+    background:#1F2440; color:#fff;
+    font-size:10px; font-weight:700;
+    padding:2px 6px; border-radius:999px;
+    box-shadow:0 4px 10px rgba(0,0,0,.18);
+    white-space:nowrap;
+  }
+  /* Tab styles */
+  .tab-btn { padding: 0.6rem 1.1rem; border-radius: 0.75rem; font-weight: 800; font-size: 0.875rem; }
+  .tab-btn[aria-selected="true"] { background:#1F2440; color:#fff; }
+  .tab-btn[aria-selected="false"] { background:#fff; color:#64748b; border:2px solid rgba(0,0,0,.06); }
+  .tab-panel.hidden { display: none; }
+</style>
+</head>
+<body class="text-ink min-h-screen">
+
+<div class="sticky top-0 z-20 backdrop-blur bg-bg/85 border-b border-black/5">
+  <div class="mx-auto max-w-6xl px-5 py-3 flex items-center gap-4">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-7 h-7 rounded-lg grad-brand"></span>
+      <strong class="tracking-tight">Big Moon English</strong>
+      <span class="text-xs text-slate-500">· Parent Dashboard preview</span>
+    </div>
+    <div class="ml-auto flex items-center gap-2 text-sm">
+      <button id="btnNew" class="px-3 py-1.5 rounded-full bg-ink text-white font-semibold">✨ New design</button>
+      <button id="btnOld" class="px-3 py-1.5 rounded-full border border-black/10 font-semibold text-slate-600 hover:bg-white">Current</button>
+      <button id="btnAnnot" class="px-3 py-1.5 rounded-full border border-black/10 font-semibold text-slate-600 hover:bg-white">🏷️ Annotations</button>
+    </div>
+  </div>
+</div>
+
+<main class="mx-auto max-w-6xl px-5 py-8 md:px-8 md:py-10">
+
+  <!-- ================================================================ -->
+  <!--   PANEL: CURRENT                                                   -->
+  <!-- ================================================================ -->
+  <section id="panelOld" class="panel hidden">
+
+    <a class="mb-3 inline-flex items-center gap-1 text-sm text-slate-500">← 返回</a>
+
+    <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+      <div>
+        <div class="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500">LEARNING CENTER</div>
+        <h1 class="mt-1 text-2xl md:text-3xl font-extrabold" style="background: linear-gradient(90deg,#7B3FF1,#ED3F8C 55%,#F47C45); -webkit-background-clip:text; background-clip:text; color:transparent">📊 学习中心 / Learning Center</h1>
+        <p class="annot mt-1 text-xs text-slate-500" data-note="ANNO: tiny mixed-data sentence">
+          主修：<b>高中 / Upper Secondary</b> · 近 30 天 有效学习 <b>4 小时 32 分</b> · 连续学习 <b>7</b> 天 🔥
+        </p>
+      </div>
+      <div class="inline-flex items-center gap-2 rounded-full grad-amber px-4 py-2 text-sm font-extrabold text-white">🪙 240 星币</div>
+      <button class="inline-flex items-center gap-1.5 rounded-full border-2 bg-white px-4 py-2 text-sm font-bold">📥 导出 PDF</button>
+    </div>
+
+    <!-- AchievementBanner placeholder -->
+    <div class="mb-4 rounded-3xl border-2 bg-gradient-to-br from-amber-50 to-orange-50 p-5">
+      <div class="flex items-center gap-3">
+        <div class="grid w-12 h-12 place-items-center rounded-2xl grad-amber text-2xl text-white shadow">🎯</div>
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-amber-700">AchievementBanner</div>
+          <div class="text-lg font-extrabold">Mei 高考词汇主题 5 已掌握 80%</div>
+          <div class="text-xs text-slate-600">下个里程碑：主题 6 · 还差 23 词</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ProgressSnapshot placeholder -->
+    <div class="mb-4 rounded-3xl border-2 bg-white p-5 shadow-tile">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-500">ProgressSnapshot</div>
+      <div class="mt-1 text-base font-extrabold">本周比上周 ↑ +18%</div>
+    </div>
+
+    <!-- RecommendedGradeCard placeholder -->
+    <div class="mb-4 rounded-3xl border-2 bg-white p-5 shadow-tile">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-500">RecommendedGradeCard</div>
+      <div class="mt-1 text-base font-extrabold">推荐年级：高二 G11</div>
+    </div>
+
+    <!-- The big collapsed details accordion -->
+    <div class="annot mb-4 rounded-3xl border-2 bg-white shadow-tile" data-note="❌ HIDDEN: all 10+ sections live below this collapsible">
+      <div class="flex items-center justify-between gap-2 px-5 py-4 hover:bg-slate-50 cursor-pointer">
+        <div class="flex items-center gap-2">
+          <span>✨</span>
+          <span class="text-sm font-extrabold md:text-base">📂 查看详细数据</span>
+          <span class="text-[11px] text-slate-500">· 成长报告 / 本周快报 / 学段足迹 / 雷达 / 提升方向 / 趋势</span>
+        </div>
+        <span class="text-xs font-bold text-violet-600">展开 ▾</span>
+      </div>
+    </div>
+
+    <!-- Show what's INSIDE if expanded (faded) -->
+    <div class="rounded-3xl border-2 border-dashed border-slate-300 bg-slate-50/50 p-4 opacity-60">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2">↓ Hidden by default — collapsed inside the details above</div>
+      <div class="grid grid-cols-4 gap-2 mb-3">
+        <div class="rounded-xl border bg-white p-2 text-center text-xs"><div class="font-extrabold">4h 32m</div><div class="text-slate-500">本周专注</div></div>
+        <div class="rounded-xl border bg-white p-2 text-center text-xs"><div class="font-extrabold">7 天</div><div class="text-slate-500">连续学习</div></div>
+        <div class="rounded-xl border bg-white p-2 text-center text-xs"><div class="font-extrabold">125</div><div class="text-slate-500">掌握单词</div></div>
+        <div class="rounded-xl border bg-white p-2 text-center text-xs"><div class="font-extrabold">8</div><div class="text-slate-500">待攻克薄弱</div></div>
+      </div>
+      <div class="text-xs text-slate-500">
+        GrowthReport · WeeklyDigest · CardLearningSection · SkillMasteryPanel · PacingSettings · QuizPacingSettings ·
+        学习足迹 % bars · 各主题正确率 · 各模块掌握度 radar · 本周需要关注 Top 5 · 学段详情 cards · 14-day daily minutes chart · 数据说明...
+      </div>
+    </div>
+
+    <!-- Settings always visible at bottom -->
+    <div class="annot mt-4 rounded-3xl border-2 bg-white p-5 shadow-tile" data-note="ANNO: settings clutter the main page">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-500">DelaySettings</div>
+      <div class="mt-1 text-sm">⏱ 学习间隔时间设置...</div>
+    </div>
+    <div class="mt-4 rounded-3xl border-2 bg-white p-5 shadow-tile">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-500">FamilyGoalSettings</div>
+      <div class="mt-1 text-sm">🎯 家庭学习目标设置...</div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!--   PANEL: NEW DESIGN                                                -->
+  <!-- ================================================================ -->
+  <section id="panelNew" class="panel">
+
+    <!-- 1. THIS WEEK HERO -->
+    <section class="annot relative overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-brand grad-brand" data-note="NEW: This week hero — replaces tiny header sentence">
+      <div class="pointer-events-none absolute -right-12 -top-12 w-56 h-56 rounded-full bg-white/15 blur-xl"></div>
+      <div class="pointer-events-none absolute right-8 top-6 w-24 h-24 rounded-full bg-white/25"></div>
+
+      <div class="relative flex items-start justify-between gap-4">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-[0.25em] opacity-85">家长中心 · 2026 / 05 / 21 · 周四</div>
+          <div class="mt-1 text-2xl md:text-3xl font-extrabold leading-tight">👋 Mei 这周表现很棒！</div>
+          <div class="mt-1 text-sm opacity-90">主修高考 · 高二 G11 · 7 天连续打卡</div>
+        </div>
+        <div class="flex flex-col items-center gap-1 shrink-0">
+          <div class="text-3xl">🔥</div>
+          <div class="text-2xl font-extrabold tabular leading-none">7</div>
+          <div class="text-[10px] uppercase tracking-widest opacity-85">day streak</div>
+        </div>
+      </div>
+
+      <!-- Headline number -->
+      <div class="relative mt-6 grid md:grid-cols-3 gap-4">
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-85">本周累计学习</div>
+          <div class="mt-1 text-3xl md:text-4xl font-extrabold tabular leading-none">4<span class="text-xl opacity-90">h</span> 32<span class="text-xl opacity-90">m</span></div>
+          <div class="mt-1 text-xs font-bold opacity-95">↑ +18% vs 上周</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-85">今日目标</div>
+          <div class="mt-2 h-3 rounded-full bg-white/20 overflow-hidden">
+            <div class="h-full bg-white rounded-full" style="width:72%"></div>
+          </div>
+          <div class="mt-1 text-xs"><b class="tabular">18 / 25</b> 分钟 · 还差 7 分钟</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-85">本月活跃</div>
+          <div class="mt-1 text-3xl md:text-4xl font-extrabold tabular leading-none">18<span class="text-xl opacity-90">天</span></div>
+          <div class="mt-1 text-xs opacity-90">30 天里有 18 天学习</div>
+        </div>
+      </div>
+
+      <!-- chips -->
+      <div class="relative mt-5 grid grid-cols-2 md:grid-cols-4 gap-2">
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-2 flex items-center gap-2">
+          <div class="text-2xl">🪙</div>
+          <div><div class="text-lg font-extrabold tabular leading-none">240</div><div class="text-[10px] opacity-85 uppercase tracking-wider">coins</div></div>
+        </div>
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-2 flex items-center gap-2">
+          <div class="text-2xl">🏆</div>
+          <div><div class="text-lg font-extrabold tabular leading-none">12</div><div class="text-[10px] opacity-85 uppercase tracking-wider">badges</div></div>
+        </div>
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-2 flex items-center gap-2">
+          <div class="text-2xl">🐉</div>
+          <div><div class="text-lg font-extrabold leading-none">Lv.5</div><div class="text-[10px] opacity-85 uppercase tracking-wider">pet · 小龙</div></div>
+        </div>
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-2 flex items-center gap-2">
+          <div class="text-2xl">🥇</div>
+          <div><div class="text-lg font-extrabold leading-none">#3</div><div class="text-[10px] opacity-85 uppercase tracking-wider">本周排名</div></div>
+        </div>
+      </div>
+
+      <!-- export / share row -->
+      <div class="relative mt-5 flex flex-wrap gap-2">
+        <button class="rounded-full bg-white/95 text-ink text-sm font-bold px-4 py-2">📥 导出 PDF</button>
+        <button class="rounded-full bg-white/20 text-white text-sm font-bold px-4 py-2 backdrop-blur">📤 分享给家人</button>
+      </div>
+    </section>
+
+    <!-- 2. PARENT SUGGESTIONS -->
+    <section class="annot mt-5 rounded-3xl border bg-white p-5 shadow-tile" data-note="NEW: Parent's 3 weekly suggestions — what to DO with the data">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-base font-extrabold">💡 本周建议家长这样陪伴</h3>
+        <span class="text-xs text-slate-500">AI 根据 Mei 的数据自动推荐</span>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-orange-50 to-rose-50 border border-orange-200 p-3">
+          <div class="grid w-11 h-11 place-items-center rounded-xl grad-warm text-white text-xl">1️⃣</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold leading-tight">Mei 有 5 个语法薄弱点 — 周末一起练？</div>
+            <div class="text-xs text-slate-600 mt-0.5">现在完成时 / would 与 used to / 状语从句 等 · 预计 20 分钟</div>
+          </div>
+          <button class="rounded-full bg-rose-600 text-white text-xs font-bold px-3 py-1.5">陪练 →</button>
+        </div>
+        <div class="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-violet-50 to-indigo-50 border border-violet-200 p-3">
+          <div class="grid w-11 h-11 place-items-center rounded-xl grad-cool text-white text-xl">2️⃣</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold leading-tight">阅读正确率从 78% 降到 58% — 今晚一起读 1 篇？</div>
+            <div class="text-xs text-slate-600 mt-0.5">建议读议论文 · 1 篇约 10 分钟 · 一起讨论中心思想</div>
+          </div>
+          <button class="rounded-full bg-indigo-600 text-white text-xs font-bold px-3 py-1.5">推荐 →</button>
+        </div>
+        <div class="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 p-3">
+          <div class="grid w-11 h-11 place-items-center rounded-xl grad-mint text-white text-xl">3️⃣</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold leading-tight">Mei 已经 3 天没练词汇 — 温柔提醒一下？</div>
+            <div class="text-xs text-slate-600 mt-0.5">温馨提示：词汇是阅读和写作的基础，建议保持每日 8 分钟</div>
+          </div>
+          <button class="rounded-full bg-emerald-600 text-white text-xs font-bold px-3 py-1.5">提醒 →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TABS -->
+    <div class="annot mt-6 flex flex-wrap gap-2" data-note="NEW: 4 tabs replace the giant accordion">
+      <button class="tab-btn" aria-selected="true"  data-tab="overview">📊 概览</button>
+      <button class="tab-btn" aria-selected="false" data-tab="skills">🎯 各项能力</button>
+      <button class="tab-btn" aria-selected="false" data-tab="stages">📚 学段</button>
+      <button class="tab-btn" aria-selected="false" data-tab="settings">⚙️ 设置</button>
+    </div>
+
+    <!-- TAB: OVERVIEW -->
+    <div id="tab-overview" class="tab-panel mt-4 space-y-5">
+      <!-- Progress snapshot + Achievement banner side by side -->
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="rounded-3xl border-2 bg-gradient-to-br from-emerald-50 to-teal-50 p-5 shadow-tile">
+          <div class="text-xs font-bold uppercase tracking-wider text-emerald-700">PROGRESS SNAPSHOT · 本周 vs 上周</div>
+          <div class="mt-2 grid grid-cols-3 gap-2 text-sm">
+            <div><div class="text-[10px] text-slate-500">学习时长</div><div class="font-extrabold text-emerald-700">+18% ↑</div></div>
+            <div><div class="text-[10px] text-slate-500">掌握词数</div><div class="font-extrabold text-emerald-700">+12 ↑</div></div>
+            <div><div class="text-[10px] text-slate-500">正确率</div><div class="font-extrabold text-rose-600">-3% ↓</div></div>
+          </div>
+        </div>
+        <div class="rounded-3xl border-2 bg-gradient-to-br from-amber-50 to-orange-50 p-5 shadow-tile">
+          <div class="text-xs font-bold uppercase tracking-wider text-amber-700">本周成就</div>
+          <div class="mt-2 flex items-center gap-3">
+            <div class="grid w-12 h-12 place-items-center rounded-2xl grad-amber text-2xl text-white shadow">🎯</div>
+            <div>
+              <div class="text-base font-extrabold leading-tight">高考词汇主题 5 已掌握 80%</div>
+              <div class="text-xs text-slate-600 mt-0.5">下个里程碑：主题 6 · 还差 23 词</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14-day minutes chart with weekly average overlay -->
+      <section class="annot rounded-3xl border-2 bg-white p-5 shadow-tile" data-note="ENHANCE: + weekly average overlay">
+        <div class="flex items-baseline justify-between mb-3">
+          <h3 class="text-base font-extrabold">📈 近 14 天 每日学习时长</h3>
+          <span class="text-xs text-slate-500">平均 18 分钟/天 · 目标 25 分钟</span>
+        </div>
+        <svg viewBox="0 0 700 180" class="w-full h-40">
+          <defs>
+            <linearGradient id="pg" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line x1="0" y1="100" x2="700" y2="100" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+          <text x="690" y="95" text-anchor="end" font-size="10" fill="#64748b" font-weight="700">目标 25m</text>
+          <path d="M0,140 L50,135 L100,128 L150,120 L200,118 L250,90 L300,85 L350,70 L400,75 L450,60 L500,55 L550,50 L600,40 L650,38 L700,30 L700,180 L0,180 Z" fill="url(#pg)"/>
+          <path d="M0,140 L50,135 L100,128 L150,120 L200,118 L250,90 L300,85 L350,70 L400,75 L450,60 L500,55 L550,50 L600,40 L650,38 L700,30" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="700" cy="30" r="5" fill="#10b981" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <div class="mt-1 flex justify-between text-[10px] text-slate-400 tabular">
+          <span>05/08</span><span>05/11</span><span>05/14</span><span>05/17</span><span>05/20</span>
+        </div>
+      </section>
+
+      <!-- Weakness top 5 -->
+      <section class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-base font-extrabold">⚠️ 本周需要关注</h3>
+          <span class="text-xs text-slate-500">近 14 天未解决错题 · Top 5</span>
+        </div>
+        <ul class="space-y-2">
+          <li class="flex items-center justify-between gap-2 rounded-2xl border p-3">
+            <div>
+              <div class="text-sm font-bold"><span class="mr-2 inline-block rounded bg-rose-100 px-1.5 text-[10px] text-rose-700">语法</span>现在完成时 vs 一般过去时</div>
+              <div class="mt-0.5 text-[11px] text-slate-500 tabular">错 8 次 · 2026-05-19</div>
+            </div>
+            <button class="shrink-0 rounded-full bg-rose-500 px-3 py-1 text-[11px] font-extrabold text-white">陪练 10 分钟 →</button>
+          </li>
+          <li class="flex items-center justify-between gap-2 rounded-2xl border p-3">
+            <div>
+              <div class="text-sm font-bold"><span class="mr-2 inline-block rounded bg-rose-100 px-1.5 text-[10px] text-rose-700">语法</span>would 与 used to</div>
+              <div class="mt-0.5 text-[11px] text-slate-500 tabular">错 5 次 · 2026-05-20</div>
+            </div>
+            <button class="shrink-0 rounded-full bg-rose-500 px-3 py-1 text-[11px] font-extrabold text-white">陪练 10 分钟 →</button>
+          </li>
+          <li class="flex items-center justify-between gap-2 rounded-2xl border p-3">
+            <div>
+              <div class="text-sm font-bold"><span class="mr-2 inline-block rounded bg-blue-100 px-1.5 text-[10px] text-blue-700">单词</span>distinguish 的搭配用法</div>
+              <div class="mt-0.5 text-[11px] text-slate-500 tabular">错 4 次 · 2026-05-17</div>
+            </div>
+            <button class="shrink-0 rounded-full bg-rose-500 px-3 py-1 text-[11px] font-extrabold text-white">陪练 10 分钟 →</button>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- TAB: SKILLS -->
+    <div id="tab-skills" class="tab-panel hidden mt-4 space-y-5">
+      <!-- SkillMasteryPanel-style content -->
+      <section class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <h3 class="text-base font-extrabold mb-3">🎯 各项技能掌握度（按年级）</h3>
+        <div class="text-xs text-slate-500 mb-3">SkillMasteryPanel — kept as-is, just promoted out of the accordion</div>
+        <div class="grid gap-2 sm:grid-cols-2">
+          <Card module="📖 单词" pct="65" tone="emerald"></Card>
+          <Card module="🔤 语法" pct="71" tone="emerald"></Card>
+          <Card module="📃 阅读" pct="58" tone="amber"></Card>
+          <Card module="🎧 听力" pct="52" tone="amber"></Card>
+          <Card module="✍️ 写作" pct="48" tone="amber"></Card>
+          <Card module="🗣️ 口语" pct="38" tone="rose"></Card>
+        </div>
+      </section>
+
+      <!-- Radar -->
+      <section class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <h3 class="text-base font-extrabold mb-3">📊 五维能力雷达</h3>
+        <div class="grid place-items-center">
+          <svg viewBox="0 0 240 240" class="w-56 h-56">
+            <polygon points="120,24 210,84 180,192 60,192 30,84" fill="none" stroke="#e2e8f0"/>
+            <polygon points="120,60 175,94 158,160 82,160 65,94" fill="none" stroke="#e2e8f0"/>
+            <polygon points="120,40 195,90 165,180 75,180 45,90" fill="rgba(237,63,140,0.18)" stroke="#ED3F8C" stroke-width="2.5"/>
+            <text x="120" y="18" text-anchor="middle" font-size="12" font-weight="700">单词 65%</text>
+            <text x="220" y="84" text-anchor="middle" font-size="12" font-weight="700">语法 71%</text>
+            <text x="190" y="210" text-anchor="middle" font-size="12" font-weight="700">阅读 58%</text>
+            <text x="50" y="210" text-anchor="middle" font-size="12" font-weight="700">听力 52%</text>
+            <text x="20" y="84" text-anchor="middle" font-size="12" font-weight="700">写作 48%</text>
+          </svg>
+        </div>
+      </section>
+    </div>
+
+    <!-- TAB: STAGES -->
+    <div id="tab-stages" class="tab-panel hidden mt-4 space-y-5">
+      <!-- RecommendedGradeCard -->
+      <section class="rounded-3xl border-2 bg-gradient-to-br from-violet-50 to-sky-50 p-5 shadow-tile">
+        <div class="flex items-center gap-3">
+          <div class="grid w-12 h-12 place-items-center rounded-2xl grad-cool text-2xl text-white shadow">🎒</div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-violet-700">RecommendedGradeCard</div>
+            <div class="text-lg font-extrabold">推荐年级：高二 G11</div>
+            <div class="text-xs text-slate-600">根据 Mei 的掌握度，Spark 默认会带她去 G11 难度</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footprint by minutes -->
+      <section class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <h3 class="text-base font-extrabold mb-3">📚 学习足迹（按有效时长占比）</h3>
+        <div class="space-y-2.5">
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1"><span>🎓 高中 / Upper Secondary <span class="ml-1 rounded bg-amber-100 px-1.5 text-[10px] text-amber-700">主修</span></span><span class="text-slate-500">3h 12m · 71%</span></div>
+            <div class="h-2 rounded-full bg-slate-100 overflow-hidden"><div class="h-full grad-warm" style="width:71%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1"><span>📓 初中 / Lower Secondary</span><span class="text-slate-500">52m · 19%</span></div>
+            <div class="h-2 rounded-full bg-slate-100 overflow-hidden"><div class="h-full grad-cool" style="width:19%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs font-bold mb-1"><span>🎒 小学 / Primary</span><span class="text-slate-500">28m · 10%</span></div>
+            <div class="h-2 rounded-full bg-slate-100 overflow-hidden"><div class="h-full grad-sky" style="width:10%"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stage detail cards -->
+      <section class="grid gap-3 md:grid-cols-3">
+        <SegCard stage="高中" mastered="125" sessions="48" acc="76%"></SegCard>
+        <SegCard stage="初中" mastered="89" sessions="22" acc="82%"></SegCard>
+        <SegCard stage="小学" mastered="56" sessions="14" acc="88%"></SegCard>
+      </section>
+    </div>
+
+    <!-- TAB: SETTINGS -->
+    <div id="tab-settings" class="tab-panel hidden mt-4 space-y-4">
+      <div class="annot rounded-3xl border-2 bg-white p-5 shadow-tile" data-note="REORG: all settings live in one tab">
+        <h3 class="text-base font-extrabold mb-2">⏱ 学习节奏 · DelaySettings</h3>
+        <div class="text-sm text-slate-600">控制 Spark 推送复习题的间隔时间。建议根据孩子的注意力调整。</div>
+      </div>
+      <div class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <h3 class="text-base font-extrabold mb-2">🎯 家庭学习目标 · FamilyGoalSettings</h3>
+        <div class="text-sm text-slate-600">设置每日学习时长目标、提醒时间、奖励规则。</div>
+      </div>
+      <div class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <h3 class="text-base font-extrabold mb-2">📅 测验节奏 · PacingSettings + QuizPacingSettings</h3>
+        <div class="text-sm text-slate-600">控制每周测验频率和题型比例（语法/阅读/听力）。</div>
+      </div>
+    </div>
+
+    <!-- Compare callout footer -->
+    <div class="mt-10 rounded-3xl border bg-white p-5 text-center text-xs text-slate-500">
+      <strong class="text-ink">这是 Preview — 没有触碰真实代码。</strong>
+      切换上方按钮可对比。点击 4 个 tab 可看不同 section。
+      满意后告诉 Claude "go ahead"，我会按这个设计重做 <code class="bg-slate-100 px-1 rounded">src/pages/GlobalParent.tsx</code>。
+    </div>
+
+  </section>
+</main>
+
+<script>
+  const $ = (s) => document.querySelector(s);
+  const panelOld = $('#panelOld'), panelNew = $('#panelNew');
+  const btnOld = $('#btnOld'), btnNew = $('#btnNew'), btnAnnot = $('#btnAnnot');
+  let annotOn = false;
+
+  function setActive(btn) {
+    [btnOld, btnNew].forEach(b => {
+      b.classList.remove('bg-ink','text-white');
+      b.classList.add('border','border-black/10','text-slate-600');
+    });
+    btn.classList.add('bg-ink','text-white');
+    btn.classList.remove('border','border-black/10','text-slate-600');
+  }
+  btnOld.onclick = () => { panelOld.classList.remove('hidden'); panelNew.classList.add('hidden'); setActive(btnOld); };
+  btnNew.onclick = () => { panelNew.classList.remove('hidden'); panelOld.classList.add('hidden'); setActive(btnNew); };
+  btnAnnot.onclick = () => {
+    annotOn = !annotOn;
+    btnAnnot.classList.toggle('bg-ink');
+    btnAnnot.classList.toggle('text-white');
+    document.body.classList.toggle('show-annot', annotOn);
+  };
+
+  // Tab logic
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.setAttribute('aria-selected', 'false'));
+      btn.setAttribute('aria-selected', 'true');
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+      document.getElementById('tab-' + btn.dataset.tab).classList.remove('hidden');
+    };
+  });
+
+  // Web Components for the stage cards & skill cards (lightweight, no JSX)
+  customElements.define('card-x', class extends HTMLElement {
+    connectedCallback() {
+      const pct = +this.getAttribute('pct');
+      const tone = this.getAttribute('tone');
+      const colors = { emerald: 'text-emerald-700 bg-emerald-500', amber: 'text-amber-700 bg-amber-500', rose: 'text-rose-700 bg-rose-500' };
+      const c = colors[tone] || colors.amber;
+      const [textC, barC] = c.split(' ');
+      this.innerHTML = `
+        <div class="rounded-2xl border p-3">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold">${this.getAttribute('module')}</span>
+            <span class="font-extrabold ${textC}">${pct}%</span>
+          </div>
+          <div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-100">
+            <div class="h-full ${barC}" style="width:${pct}%"></div>
+          </div>
+        </div>`;
+    }
+  });
+  customElements.define('seg-card', class extends HTMLElement {
+    connectedCallback() {
+      this.innerHTML = `
+        <div class="rounded-3xl border-2 bg-white p-4 shadow-tile">
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-500">${this.getAttribute('stage')}</div>
+          <div class="mt-2 text-2xl font-black">${this.getAttribute('mastered')}<span class="text-xs font-bold text-slate-500 ml-1">词已掌握</span></div>
+          <div class="mt-2 text-xs text-slate-600 flex justify-between"><span>做题</span><span class="font-bold">${this.getAttribute('sessions')}</span></div>
+          <div class="text-xs text-slate-600 flex justify-between"><span>正确率</span><span class="font-bold">${this.getAttribute('acc')}</span></div>
+        </div>`;
+    }
+  });
+  // Substitute the JSX-like placeholder tags
+  document.querySelectorAll('Card').forEach(el => {
+    const m = el.getAttribute('module'); const pct = el.getAttribute('pct'); const tone = el.getAttribute('tone');
+    const c = document.createElement('card-x');
+    c.setAttribute('module', m); c.setAttribute('pct', pct); c.setAttribute('tone', tone);
+    el.replaceWith(c);
+  });
+  document.querySelectorAll('SegCard').forEach(el => {
+    const c = document.createElement('seg-card');
+    ['stage','mastered','sessions','acc'].forEach(a => c.setAttribute(a, el.getAttribute(a)));
+    el.replaceWith(c);
+  });
+
+  // Annotation pseudo-element visibility
+  const style = document.createElement('style');
+  style.textContent = `.annot::after { display:none; } body.show-annot .annot::after { display:inline-block; }`;
+  document.head.appendChild(style);
+</script>
+
+</body>
+</html>

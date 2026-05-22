@@ -91,7 +91,7 @@ SET
       "wrong": "The boy which is wearing glasses is my brother.",
       "model": "The boy who is wearing glasses is my brother.",
       "hint":  "先行词是人",
-      "why":   "先行词 **the boy** 是"人"，关系词必须用 **who** 或 **that**，不能用 which。which 只修饰物。"
+      "why":   "先行词 **the boy** 是\"人\"，关系词必须用 **who** 或 **that**，不能用 which。which 只修饰物。"
     },
     {
       "wrong": "This is the book that I bought it yesterday.",
@@ -103,7 +103,7 @@ SET
       "wrong": "I have a friend who''s name is Tony.",
       "model": "I have a friend whose name is Tony.",
       "hint":  "所有格用 whose",
-      "why":   "**who''s = who is**（缩写），用在"是谁"的场景。所有格"谁的"必须用 **whose**。形似但意义完全不同。"
+      "why":   "**who''s = who is**（缩写），用在\"是谁\"的场景。所有格\"谁的\"必须用 **whose**。形似但意义完全不同。"
     },
     {
       "wrong": "He is the only one which can help us.",
@@ -115,7 +115,7 @@ SET
       "wrong": "The girl is sitting next to me is my cousin.",
       "model": "The girl who is sitting next to me is my cousin.",
       "hint":  "缺关系词",
-      "why":   "关系词在从句中作**主语**时**不能省略**。这里 "is sitting" 缺主语，必须补上 **who** 或 **that**。"
+      "why":   "关系词在从句中作**主语**时**不能省略**。这里 \"is sitting\" 缺主语，必须补上 **who** 或 **that**。"
     },
     {
       "wrong": "The teacher who I met him this morning is very kind.",
@@ -133,7 +133,7 @@ SET
       "option_c": "who",
       "option_d": "what",
       "correct_answer": "C",
-      "trap": "选 A 把人当成了物。选 B（whose）是所有格，但后面不是"谁的什么"。选 D（what）不能引导定语从句。",
+      "trap": "选 A 把人当成了物。选 B（whose）是所有格，但后面不是\"谁的什么\"。选 D（what）不能引导定语从句。",
       "why":  "先行词 the man 是人 + 关系词在从句作主语 → 必须用 **who**（或 that）。"
     },
     {
@@ -143,8 +143,8 @@ SET
       "option_c": "who''s",
       "option_d": "that",
       "correct_answer": "B",
-      "trap": "选 C（who''s = who is）是中考改错最爱挖的坑 — 看似对，意思变成"是谁的爸爸"。选 A/D 都漏了"所有格"含义。",
-      "why":  "father 前面缺一个"她的/他的" → 所有格 → **whose**。a friend whose father = 朋友的爸爸。"
+      "trap": "选 C（who''s = who is）是中考改错最爱挖的坑 — 看似对，意思变成\"是谁的爸爸\"。选 A/D 都漏了\"所有格\"含义。",
+      "why":  "father 前面缺一个\"她的/他的\" → 所有格 → **whose**。a friend whose father = 朋友的爸爸。"
     },
     {
       "stem": "This is the most interesting story ___ I have ever read.",
@@ -173,7 +173,7 @@ WHERE code = 'g8.28';
 
 UPDATE junior_grammar_points SET teacher_script = $jsonb$[
   {
-    "text": "今天解锁**定语从句**。它是中考阅读长难句的"骨架"，看懂它，长句直接降两个难度。",
+    "text": "今天解锁**定语从句**。它是中考阅读长难句的\"骨架\"，看懂它，长句直接降两个难度。",
     "show": "🎯 Today: Relative Clauses = sentence with a tail",
     "duration": 9
   },
@@ -196,13 +196,13 @@ UPDATE junior_grammar_points SET teacher_script = $jsonb$[
     "duration": 10
   },
   {
-    "text": "**所有格"谁的"** → 用 **whose**（人物都可以）：a friend **whose father** ...",
+    "text": "**所有格\"谁的\"** → 用 **whose**（人物都可以）：a friend **whose father** ...",
     "show": "''s → whose",
     "highlight": "whose",
     "duration": 10
   },
   {
-    "text": "**铁律**：关系词在从句中作**主语**时**绝对不能省**！"The boy is reading is Tom." 不完整，必须加 who。",
+    "text": "**铁律**：关系词在从句中作**主语**时**绝对不能省**！\"The boy is reading is Tom.\" 不完整，必须加 who。",
     "show": "✗ The boy is reading is Tom.   ✓ The boy who is reading is Tom.",
     "highlight": "who is reading",
     "duration": 12
@@ -242,28 +242,28 @@ FROM p, (VALUES
     'mcq', 'which', 'who', 'whose', 'whom', 'B',
     NULL::text[],
     '先行词 the girl 是人 + 关系词在从句作主语 → **who**。',
-    NULL::jsonb, NULL, 'relative_who_subject', false, 1, 9000
+    '{}'::jsonb, NULL, 'relative_who_subject', false, 1, 9000
   ),
   (
     'This is the museum ___ we visited last weekend.',
     'mcq', 'who', 'whose', 'which', 'where', 'C',
     NULL::text[],
     '先行词 the museum 是物 + 在从句中作 visited 的宾语 → **which** (或 that)。注意：这里宾语关系，所以不用 where。',
-    NULL::jsonb, NULL, 'relative_which_object', false, 2, 9001
+    '{}'::jsonb, NULL, 'relative_which_object', false, 2, 9001
   ),
   (
     'I have a classmate ___ mother is a famous singer.',
     'mcq', 'who', 'whose', 'whom', 'that', 'B',
     NULL::text[],
     'mother 前面缺所有格"她的" → **whose**。a classmate whose mother = 这位同学的妈妈。',
-    NULL::jsonb, NULL, 'relative_whose', false, 2, 9002
+    '{}'::jsonb, NULL, 'relative_whose', false, 2, 9002
   ),
   (
     'This is the best lesson ___ I have ever had.',
     'mcq', 'which', 'who', 'that', 'whose', 'C',
     NULL::text[],
     '先行词 the best lesson 被**形容词最高级 best** 修饰 → 关系词只能用 **that**。',
-    NULL::jsonb, NULL, 'relative_that_only', false, 2, 9003
+    '{}'::jsonb, NULL, 'relative_that_only', false, 2, 9003
   ),
 
   -- ─── 3 fill-in ───
@@ -272,21 +272,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'who',
     ARRAY['who', 'that']::text[],
     '人 + 主语 → who 或 that。',
-    NULL::jsonb, NULL, 'relative_who_subject', false, 1, 9004
+    '{}'::jsonb, NULL, 'relative_who_subject', false, 1, 9004
   ),
   (
     'I have a dog ____ legs are very short.',
     'fill', NULL, NULL, NULL, NULL, 'whose',
     ARRAY['whose']::text[],
     '"狗的腿"= 所有格 → **whose**。whose 既可用于人也可用于物。',
-    NULL::jsonb, NULL, 'relative_whose_thing', false, 2, 9005
+    '{}'::jsonb, NULL, 'relative_whose_thing', false, 2, 9005
   ),
   (
     'This is the only book ____ can help you pass the exam.',
     'fill', NULL, NULL, NULL, NULL, 'that',
     ARRAY['that']::text[],
     'the only 后面只能用 **that**，不用 which。',
-    NULL::jsonb, NULL, 'relative_that_only', false, 2, 9006
+    '{}'::jsonb, NULL, 'relative_that_only', false, 2, 9006
   ),
 
   -- ─── 2 transform ───
@@ -298,7 +298,7 @@ FROM p, (VALUES
       'The man that is talking to my dad is my uncle.'
     ]::text[],
     '重复的 the man → 用 who/that 代替；who is talking to my dad 嵌入主句作定语修饰 the man。',
-    NULL::jsonb, NULL, 'relative_combine', true, 2, 9007
+    '{}'::jsonb, NULL, 'relative_combine', true, 2, 9007
   ),
   (
     '把两个句子合并：  "I have a friend. His father works in Suzhou Industrial Park."',
@@ -307,7 +307,7 @@ FROM p, (VALUES
       'I have a friend whose father works in Suzhou Industrial Park.'
     ]::text[],
     '"His father" 表所有格 → 用 **whose father** 引导定语从句。',
-    NULL::jsonb, NULL, 'relative_combine_whose', true, 3, 9008
+    '{}'::jsonb, NULL, 'relative_combine_whose', true, 3, 9008
   ),
 
   -- ─── 2 correction ───
@@ -319,7 +319,7 @@ FROM p, (VALUES
       'The book that I read yesterday is interesting.'
     ]::text[],
     'which 已经代替了 the book，从句里**不能再出现 it**。',
-    NULL::jsonb, NULL, 'relative_double_object', true, 2, 9009
+    '{}'::jsonb, NULL, 'relative_double_object', true, 2, 9009
   ),
   (
     '改错：  "The man which lives next door is a doctor."',
@@ -329,7 +329,7 @@ FROM p, (VALUES
       'The man that lives next door is a doctor.'
     ]::text[],
     '先行词 the man 是人 → 用 **who** 或 that，不能用 which。',
-    NULL::jsonb, NULL, 'relative_which_for_person', true, 2, 9010
+    '{}'::jsonb, NULL, 'relative_which_for_person', true, 2, 9010
   ),
 
   -- ─── 1 translation ───
@@ -343,7 +343,7 @@ FROM p, (VALUES
       'The girl who helped me find my phone yesterday is in our class.'
     ]::text[],
     '考点：① 先行词 the girl 是人 → who/that；② "昨天帮我"嵌入主句作定语；③ "我们班的" = is in our class / is from our class。',
-    NULL::jsonb, '更地道：helped me pick up / helped me find 都自然；写作时把"帮我"对应成 "help + sb + do" 而不是 "help me to do"。', 'relative_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：helped me pick up / helped me find 都自然；写作时把"帮我"对应成 "help + sb + do" 而不是 "help me to do"。', 'relative_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

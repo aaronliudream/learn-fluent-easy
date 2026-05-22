@@ -5,10 +5,12 @@ import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { supabase } from "@/integrations/supabase/client";
 import { MasteryBar, MasteryCounts } from "@/components/learning-center/MasteryBar";
+import { enrichMasteryGpsData } from "@/lib/enrichMasteryGps";
 import { SkillRadar } from "@/components/mastery/SkillRadar";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ShareButton } from "@/components/share/ShareButton";
 import { useStreakStats } from "@/hooks/useStreakStats";
+import { StageContinueCta } from "@/components/mastery/StageContinueCta";
 import { useDashboardExtras, type StageKey, type ModuleActivity } from "@/hooks/useDashboardExtras";
 import { TodayHero } from "@/components/dashboard/TodayHero";
 import { TodayTasks } from "@/components/dashboard/TodayTasks";
@@ -28,11 +30,11 @@ import { TrendChart } from "@/components/dashboard/TrendChart";
  *   5. Grammar panorama link (footer)
  *
  * Data sources:
- *   - useStreakStats   (streak, today-active, month minutes)
- *   - useDashboardExtras (everything else: hero chips, weak spots, trend,
- *                         per-module activity, suggested stage)
- *   - GPS views        (mastery_stage_proportion + mastery_with_proportions)
- *     — UNCHANGED from before so numbers stay identical to LearningCenter.
+ *   - useStreakStats          (streak, today-active, month minutes)
+ *   - useDashboardExtras      (hero chips, weak spots, trend, per-module
+ *                              activity, suggested stage, today minutes)
+ *   - enrichMasteryGpsData    (mastery_with_proportions enriched with corpus
+ *                              vocab stats — identical to LearningCenter)
  */
 
 interface GPSStat {
@@ -44,7 +46,7 @@ interface GPSModuleStat extends GPSStat { module: string; }
 const ZERO: GPSStat = { master: 0, fluent: 0, weak: 0, none: 0, total: 0, score_pct: 0 };
 
 const STAGES = [
-  { key: "primary", label: "小学", sub: "G3-G6",          route: "/primary" },
+  { key: "primary", label: "小学", sub: "G1-G6",          route: "/primary" },
   { key: "junior",  label: "初中", sub: "G7-G9 · 中考",   route: "/junior"  },
   { key: "senior",  label: "高中", sub: "G10-G12 · 高考", route: "/gaokao"  },
 ] as const;
@@ -220,19 +222,16 @@ function StageView({
         </div>
       </section>
 
-      {/* Continue CTA */}
+      {/* Continue CTA (uses the project's enhanced component) */}
       {continueMod && (
-        <Link
-          to={continueRoute}
-          className={`group flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${continueTone} p-5 text-white shadow-tile transition-all hover:-translate-y-0.5`}>
-          <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm text-2xl">▶</div>
-          <div className="flex-1 min-w-0">
-            <div className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-85"><T>📍 从这里继续</T></div>
-            <div className="mt-1 text-lg font-extrabold leading-tight">{continueTitle}</div>
-            <div className="mt-0.5 text-xs opacity-90">{continueSubtitle}</div>
-          </div>
-          <ArrowRight className="size-6 transition-transform group-hover:translate-x-1" />
-        </Link>
+        <StageContinueCta
+          stage={stage}
+          continueModule={continueMod.module}
+          defaultTo={continueRoute}
+          defaultTitle={continueTitle}
+          defaultSubtitle={continueSubtitle}
+          defaultTone={continueTone}
+        />
       )}
 
       {/* Module grid (enhanced with last-seen + next-due) */}
@@ -297,7 +296,7 @@ export default function Dashboard() {
     }
   }, [extras.loading, extras.suggestedStage, stageTab]);
 
-  // Fetch GPS views (unchanged from previous implementation)
+  // Fetch GPS views (same approach as LearningCenter — uses enrichMasteryGpsData)
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -309,30 +308,49 @@ export default function Dashboard() {
       if (!cancelled) setUserId(user.id);
       const uid = user.id;
 
-      const [spR, scR] = await Promise.all([
-        supabase.from("mastery_stage_proportion").select("*").eq("user_id", uid),
-        supabase.from("mastery_with_proportions").select("*").eq("user_id", uid),
-      ]);
+      const { data: scopeRows } = await supabase
+        .from("mastery_with_proportions")
+        .select("*")
+        .eq("user_id", uid);
       if (cancelled) return;
 
+      const rawScopes = ((scopeRows ?? []) as Record<string, unknown>[]).map((r) => ({
+        stage: r.stage as string,
+        grade: num(r.grade),
+        module: r.module as string,
+        master: num(r.master_count),
+        fluent: num(r.fluent_count),
+        weak: num(r.weak_count),
+        none: num(r.none_count),
+        total: num(r.scope_total),
+        score_pct: num(r.score_pct),
+        proportion_pct: num(r.proportion_of_total),
+      }));
+      const enriched = await enrichMasteryGpsData(uid, rawScopes);
+
       const newStageMap = new Map<StageKey, GPSStat>();
-      for (const r of (spR.data ?? []) as Record<string, unknown>[]) {
-        const stage = r.stage as StageKey;
-        newStageMap.set(stage, {
-          master:    num(r.master_count),
-          fluent:    num(r.fluent_count),
-          weak:      num(r.weak_count),
-          none:      num(r.none_count),
-          total:     num(r.stage_total),
-          score_pct: num(r.score_pct),
+      for (const r of enriched.stageProps) {
+        newStageMap.set(r.stage, {
+          master: r.master,
+          fluent: r.fluent,
+          weak: r.weak,
+          none: r.none,
+          total: r.total,
+          score_pct: r.score_pct,
         });
       }
 
       const accum = new Map<string, Record<string, unknown>[]>();
-      for (const r of (scR.data ?? []) as Record<string, unknown>[]) {
+      for (const r of enriched.scopes) {
         const k = `${r.stage}:${r.module}`;
         const arr = accum.get(k) ?? [];
-        arr.push(r);
+        arr.push({
+          master_count: r.master,
+          fluent_count: r.fluent,
+          weak_count: r.weak,
+          none_count: r.none,
+          scope_total: r.total,
+        });
         accum.set(k, arr);
       }
       const newModuleMap = new Map<StageKey, GPSModuleStat[]>();
@@ -392,6 +410,15 @@ export default function Dashboard() {
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 md:px-8 md:py-12">
       <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back="/" />
+
+      {/* Cross-link to parent view (same account, parent-friendly layout) */}
+      <div className="mt-3 flex justify-end">
+        <Link
+          to="/parent"
+          className="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-3 py-1.5 text-xs font-bold text-muted-foreground transition hover:bg-muted hover:text-foreground">
+          <span>👨‍👩‍👧</span> <T>家长视图</T> <span aria-hidden>→</span>
+        </Link>
+      </div>
 
       {/* 1. Today hero */}
       <div className="mt-5">

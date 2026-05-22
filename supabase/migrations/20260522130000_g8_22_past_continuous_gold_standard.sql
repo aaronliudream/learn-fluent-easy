@@ -94,14 +94,14 @@ SET
     {
       "wrong": "At 9 last night I read a novel.",
       "model": "At 9 last night I was reading a novel.",
-      "hint":  "强调"正在"",
-      "why":   "时间是过去**某一刻**（at 9 last night）→ 强调"那一刻正在做" → 用 **was reading**。"
+      "hint":  "强调\"正在\"",
+      "why":   "时间是过去**某一刻**（at 9 last night）→ 强调\"那一刻正在做\" → 用 **was reading**。"
     },
     {
       "wrong": "When the phone was ringing, I was cooking.",
       "model": "When the phone rang, I was cooking.",
       "hint":  "短动作用过去式",
-      "why":   "**when 通常接短突发动作** → 用一般过去时 **rang**。"长动作"被打断 → 进行时 was cooking。"
+      "why":   "**when 通常接短突发动作** → 用一般过去时 **rang**。\"长动作\"被打断 → 进行时 was cooking。"
     },
     {
       "wrong": "While I was watching TV, Mom cooked dinner.",
@@ -131,7 +131,7 @@ SET
       "option_c": "were having",
       "option_d": "are having",
       "correct_answer": "C",
-      "trap": "选 B 也是过去时，但**at 7:30 yesterday evening** 是过去某一刻 → 用进行时强调"那一刻正在吃"。",
+      "trap": "选 B 也是过去时，但**at 7:30 yesterday evening** 是过去某一刻 → 用进行时强调\"那一刻正在吃\"。",
       "why":  "时间 = 过去某一刻 → **过去进行时**。we 复数 → were + V-ing = **were having**。"
     },
     {
@@ -151,7 +151,7 @@ SET
       "option_c": "was taking / rang",
       "option_d": "took / was ringing",
       "correct_answer": "C",
-      "trap": "选 A 两边都过去式 → 没体现"被打断"。选 B/D 哪个长哪个短弄反。",
+      "trap": "选 A 两边都过去式 → 没体现\"被打断\"。选 B/D 哪个长哪个短弄反。",
       "why":  "**长动作（洗澡）被短动作（门铃响）打断** → 长用进行时 (was taking)，短用过去式 (rang)。"
     },
     {
@@ -161,7 +161,7 @@ SET
       "option_c": "did / doing / was watching",
       "option_d": "were / do / watched",
       "correct_answer": "B",
-      "trap": "选 A 完全过去式 — 没体现"那段时间持续在做"。选 C/D 助动词搭配混乱。",
+      "trap": "选 A 完全过去式 — 没体现\"那段时间持续在做\"。选 C/D 助动词搭配混乱。",
       "why":  "**from 8 to 10 yesterday** = 过去一段时间持续 → 过去进行时。疑问句：**Were you doing ...?**"
     }
   ]$jsonb$::jsonb
@@ -171,12 +171,12 @@ WHERE code = 'g8.22';
 
 UPDATE junior_grammar_points SET teacher_script = $jsonb$[
   {
-    "text": "今天解锁**过去进行时**。中考阅读最爱用的"当时正在……"句式。",
+    "text": "今天解锁**过去进行时**。中考阅读最爱用的\"当时正在……\"句式。",
     "show": "🎯 Today: was / were + V-ing",
     "duration": 8
   },
   {
-    "text": "公式：**was / were + 动词 -ing**。强调"过去某一刻正在做"。",
+    "text": "公式：**was / were + 动词 -ing**。强调\"过去某一刻正在做\"。",
     "show": "I was reading at 8 last night.",
     "highlight": "was reading",
     "duration": 10
@@ -238,28 +238,28 @@ FROM p, (VALUES
     'mcq', 'reads', 'read', 'was reading', 'is reading', 'C',
     NULL::text[],
     'at 9 last night = 过去某一刻 → 过去进行时 = **was reading**。',
-    NULL::jsonb, NULL, 'past_continuous_basic', false, 1, 9000
+    '{}'::jsonb, NULL, 'past_continuous_basic', false, 1, 9000
   ),
   (
     'When the earthquake hit, the students ___ in class.',
     'mcq', 'studied', 'were studying', 'are studying', 'was studying', 'B',
     NULL::text[],
     'when 引导短动作 hit + 长动作正在进行 → 过去进行时 = **were studying**（students 复数）。',
-    NULL::jsonb, NULL, 'past_continuous_when', false, 2, 9001
+    '{}'::jsonb, NULL, 'past_continuous_when', false, 2, 9001
   ),
   (
     'While I ___ in the park yesterday afternoon, I ___ an old friend.',
     'mcq', 'was walking / met', 'walked / was meeting', 'was walking / was meeting', 'walked / met', 'A',
     NULL::text[],
     'while 引导的长动作（散步）+ 突发动作（碰到朋友）→ 长进行时 + 短过去式。',
-    NULL::jsonb, NULL, 'past_continuous_while_when', false, 3, 9002
+    '{}'::jsonb, NULL, 'past_continuous_while_when', false, 3, 9002
   ),
   (
     'At this time yesterday, we ___ a Chinese class.',
     'mcq', 'had', 'were having', 'have', 'are having', 'B',
     NULL::text[],
     'at this time yesterday = 过去某一刻 → 进行时 **were having**。',
-    NULL::jsonb, NULL, 'past_continuous_time_marker', false, 1, 9003
+    '{}'::jsonb, NULL, 'past_continuous_time_marker', false, 1, 9003
   ),
 
   (
@@ -267,21 +267,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'was doing',
     ARRAY['was doing']::text[],
     'when came home 打断"正在做作业" → was doing。',
-    NULL::jsonb, NULL, 'past_continuous_interrupted', false, 1, 9004
+    '{}'::jsonb, NULL, 'past_continuous_interrupted', false, 1, 9004
   ),
   (
     'My parents ____ (talk) about my study when I walked in.',
     'fill', NULL, NULL, NULL, NULL, 'were talking',
     ARRAY['were talking']::text[],
     'parents 复数 + 被打断 → **were talking**。',
-    NULL::jsonb, NULL, 'past_continuous_plural', false, 2, 9005
+    '{}'::jsonb, NULL, 'past_continuous_plural', false, 2, 9005
   ),
   (
     'From 7 to 10 yesterday evening, Tom ____ (practice) the violin.',
     'fill', NULL, NULL, NULL, NULL, 'was practicing',
     ARRAY['was practicing', 'was practising']::text[],
     'from 7 to 10 = 过去一段时间 → 进行时 **was practicing**（美式拼写）。',
-    NULL::jsonb, 'practicing 是美式，practising 是英式；中考两种拼写都接受。', 'past_continuous_duration', false, 2, 9006
+    '{}'::jsonb, 'practicing 是美式，practising 是英式；中考两种拼写都接受。', 'past_continuous_duration', false, 2, 9006
   ),
 
   (
@@ -292,7 +292,7 @@ FROM p, (VALUES
       'While I was walking in the park, I saw a bird.'
     ]::text[],
     '长动作（散步）被短动作（看见鸟）打断 → 用 when 或 while 引导。',
-    NULL::jsonb, NULL, 'past_continuous_combine', true, 2, 9007
+    '{}'::jsonb, NULL, 'past_continuous_combine', true, 2, 9007
   ),
   (
     '改写为过去进行时（提示：at 8 last night）：  "He did his homework."',
@@ -301,7 +301,7 @@ FROM p, (VALUES
       'He was doing his homework at 8 last night.'
     ]::text[],
     'did → was doing；加上时间状语。',
-    NULL::jsonb, NULL, 'past_continuous_transform', true, 2, 9008
+    '{}'::jsonb, NULL, 'past_continuous_transform', true, 2, 9008
   ),
 
   (
@@ -311,7 +311,7 @@ FROM p, (VALUES
       'Tom was sleeping when his alarm clock rang.'
     ]::text[],
     '主语 Tom 单数 → was，不是 were。',
-    NULL::jsonb, NULL, 'past_continuous_subject_verb', true, 2, 9009
+    '{}'::jsonb, NULL, 'past_continuous_subject_verb', true, 2, 9009
   ),
   (
     '改错：  "While Mom was cooking, I read a book."',
@@ -320,7 +320,7 @@ FROM p, (VALUES
       'While Mom was cooking, I was reading a book.'
     ]::text[],
     'while 引导两个长动作同时进行 → 两边都用进行时。',
-    NULL::jsonb, NULL, 'past_continuous_while', true, 3, 9010
+    '{}'::jsonb, NULL, 'past_continuous_while', true, 3, 9010
   ),
 
   (
@@ -333,7 +333,7 @@ FROM p, (VALUES
       'When the earthquake hit, my whole family was at dinner.'
     ]::text[],
     '考点：① 长动作（吃饭）+ 短动作（地震发生）→ 长进行时 + 短过去式；② family 可视为单数 was 或集体复数 were。',
-    NULL::jsonb, 'family 在英美用法略有不同：美式偏单数（was），英式可单可复（was/were）。中考两种都接受。', 'past_continuous_translation', true, 3, 9011
+    '{}'::jsonb, 'family 在英美用法略有不同：美式偏单数（was），英式可单可复（was/were）。中考两种都接受。', 'past_continuous_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

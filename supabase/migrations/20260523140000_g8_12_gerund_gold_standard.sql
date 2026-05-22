@@ -119,7 +119,7 @@ SET
       "wrong": "Mom is busy to cook dinner.",
       "model": "Mom is busy cooking dinner.",
       "hint":  "be busy + V-ing",
-      "why":   "**be busy + V-ing** 是固定搭配（"忙着做某事"）。"
+      "why":   "**be busy + V-ing** 是固定搭配（\"忙着做某事\"）。"
     }
   ]$jsonb$::jsonb,
 
@@ -162,7 +162,7 @@ SET
       "option_d": "stops smoking",
       "correct_answer": "B",
       "trap": "选 A 完全反义（停下来去抽）。选 C/D 时态错（3 年前 = 过去时）。",
-      "why":  "**stop smoking** = 戒烟；语境提到健康改善确认是"戒掉"，不是"停下手头事去抽"。"
+      "why":  "**stop smoking** = 戒烟；语境提到健康改善确认是\"戒掉\"，不是\"停下手头事去抽\"。"
     }
   ]$jsonb$::jsonb
 
@@ -238,28 +238,28 @@ FROM p, (VALUES
     'mcq', 'to tell', 'telling', 'tell', 'told', 'B',
     NULL::text[],
     'enjoy + V-ing。',
-    NULL::jsonb, NULL, 'gerund_enjoy', false, 1, 9000
+    '{}'::jsonb, NULL, 'gerund_enjoy', false, 1, 9000
   ),
   (
     'She is good at ___ math problems quickly.',
     'mcq', 'to solve', 'solve', 'solving', 'solved', 'C',
     NULL::text[],
     'be good at + V-ing（介词 at 后用 V-ing）。',
-    NULL::jsonb, NULL, 'gerund_preposition', false, 1, 9001
+    '{}'::jsonb, NULL, 'gerund_preposition', false, 1, 9001
   ),
   (
     'Look forward to ___ from you soon.',
     'mcq', 'hear', 'hearing', 'to hear', 'heard', 'B',
     NULL::text[],
     'look forward to 的 to 是介词 → V-ing。中考最大陷阱。',
-    NULL::jsonb, NULL, 'gerund_look_forward_to', false, 2, 9002
+    '{}'::jsonb, NULL, 'gerund_look_forward_to', false, 2, 9002
   ),
   (
     'My dad ___ smoking five years ago, and now he is much healthier.',
     'mcq', 'stopped to', 'stopped', 'stop', 'stops', 'B',
     NULL::text[],
     '语境是戒烟 → stop + V-ing；过去时 5 years ago → stopped。',
-    NULL::jsonb, NULL, 'gerund_stop_doing', false, 3, 9003
+    '{}'::jsonb, NULL, 'gerund_stop_doing', false, 3, 9003
   ),
 
   (
@@ -267,21 +267,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'closing',
     ARRAY['closing']::text[],
     'mind + V-ing。',
-    NULL::jsonb, NULL, 'gerund_mind', false, 1, 9004
+    '{}'::jsonb, NULL, 'gerund_mind', false, 1, 9004
   ),
   (
     'Tom is busy ____ (prepare) for the entrance exam.',
     'fill', NULL, NULL, NULL, NULL, 'preparing',
     ARRAY['preparing']::text[],
     'be busy + V-ing。',
-    NULL::jsonb, NULL, 'gerund_be_busy', false, 2, 9005
+    '{}'::jsonb, NULL, 'gerund_be_busy', false, 2, 9005
   ),
   (
     '____ (read) English novels has helped me a lot.',
     'fill', NULL, NULL, NULL, NULL, 'Reading',
     ARRAY['Reading']::text[],
     '动名词作主语 → Reading。注意单数动词 has。',
-    NULL::jsonb, NULL, 'gerund_subject', false, 2, 9006
+    '{}'::jsonb, NULL, 'gerund_subject', false, 2, 9006
   ),
 
   (
@@ -291,7 +291,7 @@ FROM p, (VALUES
       'I am interested in playing computer games every day.'
     ]::text[],
     'be interested in + V-ing 合并两句。',
-    NULL::jsonb, NULL, 'gerund_combine', true, 2, 9007
+    '{}'::jsonb, NULL, 'gerund_combine', true, 2, 9007
   ),
   (
     '改写为动名词作主语：  "It is fun to play volleyball with friends."',
@@ -300,7 +300,7 @@ FROM p, (VALUES
       'Playing volleyball with friends is fun.'
     ]::text[],
     'It is + adj + to do = 动名词作主语 + is + adj。',
-    NULL::jsonb, NULL, 'gerund_subject_transform', true, 3, 9008
+    '{}'::jsonb, NULL, 'gerund_subject_transform', true, 3, 9008
   ),
 
   (
@@ -310,7 +310,7 @@ FROM p, (VALUES
       'Thank you for helping me with my English.'
     ]::text[],
     '介词 for 后用 V-ing。',
-    NULL::jsonb, NULL, 'gerund_preposition_for', true, 1, 9009
+    '{}'::jsonb, NULL, 'gerund_preposition_for', true, 1, 9009
   ),
   (
     '改错：  "I am looking forward to meet you next Sunday."',
@@ -319,7 +319,7 @@ FROM p, (VALUES
       'I am looking forward to meeting you next Sunday.'
     ]::text[],
     'look forward to 的 to 是介词 → meeting。',
-    NULL::jsonb, NULL, 'gerund_look_forward_to_trap', true, 2, 9010
+    '{}'::jsonb, NULL, 'gerund_look_forward_to_trap', true, 2, 9010
   ),
 
   (
@@ -331,7 +331,7 @@ FROM p, (VALUES
       'Writing an English diary every day has helped me improve my writing skills.'
     ]::text[],
     '考点：① keep + V-ing（继续做）；② "帮助我提高"= help me improve（help 后可省 to）；③ 现在完成时表持续影响 has helped。',
-    NULL::jsonb, '更地道：keep doing 比 keep on doing 更常用；help me (to) improve 中 to 常省略。', 'gerund_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：keep doing 比 keep on doing 更常用；help me (to) improve 中 to 常省略。', 'gerund_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

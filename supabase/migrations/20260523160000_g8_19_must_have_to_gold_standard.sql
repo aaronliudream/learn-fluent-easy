@@ -89,19 +89,19 @@ SET
       "wrong": "You mustn''t come to the party — it''s optional.",
       "model": "You don''t have to come to the party — it''s optional.",
       "hint":  "mustn''t = 禁止",
-      "why":   "**mustn''t** = "绝对禁止"（强烈不可）；**don''t have to** = "不必"（无义务）。语境是"可选 / 不强求" → 必须用 don''t have to。"
+      "why":   "**mustn''t** = \"绝对禁止\"（强烈不可）；**don''t have to** = \"不必\"（无义务）。语境是\"可选 / 不强求\" → 必须用 don''t have to。"
     },
     {
       "wrong": "Children don''t have to play with fire — it''s very dangerous.",
       "model": "Children mustn''t play with fire — it''s very dangerous.",
       "hint":  "禁止 = mustn''t",
-      "why":   "玩火**绝对禁止** → 用 **mustn''t**。don''t have to 意思变成"不必"，逻辑就错了。"
+      "why":   "玩火**绝对禁止** → 用 **mustn''t**。don''t have to 意思变成\"不必\"，逻辑就错了。"
     },
     {
       "wrong": "I musted go to the dentist yesterday afternoon.",
       "model": "I had to go to the dentist yesterday afternoon.",
       "hint":  "must 没有过去式",
-      "why":   "**must 没有过去式**！表过去的"必须" → 用 **had to**。"
+      "why":   "**must 没有过去式**！表过去的\"必须\" → 用 **had to**。"
     },
     {
       "wrong": "He musts finish his homework before he can play.",
@@ -119,7 +119,7 @@ SET
       "wrong": "Does Tom must come to school tomorrow?",
       "model": "Does Tom have to come to school tomorrow?",
       "hint":  "must 不能跟 do/does",
-      "why":   "**must 没有疑问句助动词形式**；表"必须"的疑问句用 **Does/Do + sb + have to + 动词原形**。"
+      "why":   "**must 没有疑问句助动词形式**；表\"必须\"的疑问句用 **Does/Do + sb + have to + 动词原形**。"
     }
   ]$jsonb$::jsonb,
 
@@ -141,7 +141,7 @@ SET
       "option_c": "mustn''t",
       "option_d": "shouldn''t to",
       "correct_answer": "C",
-      "trap": "选 A/B 意思变成"不必"。选 D 加 to 错。",
+      "trap": "选 A/B 意思变成\"不必\"。选 D 加 to 错。",
       "why":  "玩刀**绝对禁止** → **mustn''t**。后半句的 dangerous 进一步锁定。"
     },
     {
@@ -152,17 +152,17 @@ SET
       "option_d": "musted",
       "correct_answer": "C",
       "trap": "选 A must 没过去式。选 B 时态错。选 D musted 不存在。",
-      "why":  "**过去的"必须" → had to**（must 没有过去式）。"
+      "why":  "**过去的\"必须\" → had to**（must 没有过去式）。"
     },
     {
       "stem": "Lin ___ wear a school uniform every weekday, but she ___ wear it on weekends.",
       "option_a": "have to / mustn''t",
       "option_b": "has to / doesn''t have to",
-      "option_c": "must to / don''t have to',
+      "option_c": "must to / don''t have to",
       "option_d": "has to / mustn''t",
       "correct_answer": "B",
-      "trap": "选 D 第二空 mustn''t 意思错（变成"周末禁止穿"）— 但周末是"不必穿"。选 A/C 第一空错。",
-      "why":  "第一空：第三人称 → **has to**；第二空：周末"不必"→ **doesn''t have to**（不是 mustn''t）。"
+      "trap": "选 D 第二空 mustn''t 意思错（变成\"周末禁止穿\"）— 但周末是\"不必穿\"。选 A/C 第一空错。",
+      "why":  "第一空：第三人称 → **has to**；第二空：周末\"不必\"→ **doesn''t have to**（不是 mustn''t）。"
     }
   ]$jsonb$::jsonb
 
@@ -171,7 +171,7 @@ WHERE code = 'g8.19';
 
 UPDATE junior_grammar_points SET teacher_script = $jsonb$[
   {
-    "text": "今天解锁**must / have to**。中考最爱挖的"假双胞胎"陷阱：mustn''t ≠ don''t have to。",
+    "text": "今天解锁**must / have to**。中考最爱挖的\"假双胞胎\"陷阱：mustn''t ≠ don''t have to。",
     "show": "🎯 Today: must / have to + their reversed negatives",
     "duration": 10
   },
@@ -206,7 +206,7 @@ UPDATE junior_grammar_points SET teacher_script = $jsonb$[
     "duration": 12
   },
   {
-    "text": "**must 没有过去式**！表过去的"必须"必须用 **had to**。~~musted~~ → **had to**。",
+    "text": "**must 没有过去式**！表过去的\"必须\"必须用 **had to**。~~musted~~ → **had to**。",
     "show": "✗ musted   ✓ had to",
     "highlight": "had to",
     "duration": 11
@@ -239,28 +239,28 @@ FROM p, (VALUES
     'mcq', 'has to', 'have to', 'must to', 'have', 'B',
     NULL::text[],
     '主语 Students 复数 → have to。',
-    NULL::jsonb, NULL, 'have_to_plural', false, 1, 9000
+    '{}'::jsonb, NULL, 'have_to_plural', false, 1, 9000
   ),
   (
     'You ___ drive when you have been drinking. It''s very dangerous.',
     'mcq', 'mustn''t', 'don''t have to', 'don''t must', 'haven''t to', 'A',
     NULL::text[],
     '酒驾绝对禁止 → mustn''t。',
-    NULL::jsonb, NULL, 'must_not_forbidden', false, 1, 9001
+    '{}'::jsonb, NULL, 'must_not_forbidden', false, 1, 9001
   ),
   (
     '— Must I finish the test now?\n— No, you ___. You can take it home.',
     'mcq', 'mustn''t', 'don''t have to', 'don''t must', 'haven''t to', 'B',
     NULL::text[],
     'Must I ... 否定回答 = No, sb don''t have to（不必）。选 A 意思错。',
-    NULL::jsonb, NULL, 'must_not_have_to_trap', false, 2, 9002
+    '{}'::jsonb, NULL, 'must_not_have_to_trap', false, 2, 9002
   ),
   (
     'Yesterday Tom ___ stay at school for an extra hour to help the teacher.',
     'mcq', 'must', 'musted', 'had to', 'has to', 'C',
     NULL::text[],
     '过去时"不得不" → had to。must 没过去式。',
-    NULL::jsonb, NULL, 'must_past_form', false, 2, 9003
+    '{}'::jsonb, NULL, 'must_past_form', false, 2, 9003
   ),
 
   (
@@ -268,21 +268,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'mustn''t play',
     ARRAY['mustn''t play', 'must not play']::text[],
     '玩火柴绝对禁止 → mustn''t + 动词原形。',
-    NULL::jsonb, NULL, 'must_not_forbid', false, 1, 9004
+    '{}'::jsonb, NULL, 'must_not_forbid', false, 1, 9004
   ),
   (
     'My sister ____ (have to, get up) early because her school is far away.',
     'fill', NULL, NULL, NULL, NULL, 'has to get up',
     ARRAY['has to get up']::text[],
     'My sister = 第三人称单数 → has to + 动词原形。',
-    NULL::jsonb, NULL, 'have_to_third_person', false, 2, 9005
+    '{}'::jsonb, NULL, 'have_to_third_person', false, 2, 9005
   ),
   (
     'Last summer, I ____ (have to, work) at the family store for two weeks.',
     'fill', NULL, NULL, NULL, NULL, 'had to work',
     ARRAY['had to work']::text[],
     '过去时"不得不" → had to + 动词原形。',
-    NULL::jsonb, NULL, 'have_to_past', false, 2, 9006
+    '{}'::jsonb, NULL, 'have_to_past', false, 2, 9006
   ),
 
   (
@@ -292,7 +292,7 @@ FROM p, (VALUES
       'I have to take a bus to school.'
     ]::text[],
     'It is necessary for sb to do = sb have to do。',
-    NULL::jsonb, NULL, 'have_to_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'have_to_transform', true, 2, 9007
   ),
   (
     '改写为 don''t have to 句：  "It is not necessary for you to bring lunch — the school provides it."',
@@ -301,7 +301,7 @@ FROM p, (VALUES
       'You don''t have to bring lunch — the school provides it.'
     ]::text[],
     'It is not necessary = sb don''t have to do（不必）。',
-    NULL::jsonb, NULL, 'have_to_negative_transform', true, 3, 9008
+    '{}'::jsonb, NULL, 'have_to_negative_transform', true, 3, 9008
   ),
 
   (
@@ -311,7 +311,7 @@ FROM p, (VALUES
       'I had to clean my room yesterday afternoon.'
     ]::text[],
     'must 没有过去式，过去的"必须" → had to。',
-    NULL::jsonb, NULL, 'must_no_past', true, 2, 9009
+    '{}'::jsonb, NULL, 'must_no_past', true, 2, 9009
   ),
   (
     '改错：  "Children don''t have to play with electric outlets — it''s dangerous."',
@@ -320,7 +320,7 @@ FROM p, (VALUES
       'Children mustn''t play with electric outlets — it''s dangerous.'
     ]::text[],
     '危险事物绝对禁止 → mustn''t；don''t have to = 不必（逻辑错）。',
-    NULL::jsonb, NULL, 'must_not_vs_dont_have_to', true, 3, 9010
+    '{}'::jsonb, NULL, 'must_not_vs_dont_have_to', true, 3, 9010
   ),
 
   (
@@ -332,7 +332,7 @@ FROM p, (VALUES
       'Chinese students are required to wear uniforms, but not on weekends.'
     ]::text[],
     '考点：① "必须"= have to（客观规定）；② "不必"= don''t have to（关键！不能用 mustn''t）；③ 第三人称复数 students 用 have to / don''t have to。',
-    NULL::jsonb, '更地道：are required to / don''t have to 是英文里描述规则的标准搭配。注意 mustn''t 意思相反，千万不能用。', 'must_have_to_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：are required to / don''t have to 是英文里描述规则的标准搭配。注意 mustn''t 意思相反，千万不能用。', 'must_have_to_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

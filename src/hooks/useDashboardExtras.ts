@@ -219,11 +219,8 @@ export function useDashboardExtras(userId: string | null | undefined): Dashboard
         const slot = modAcc[m] ?? {
           module: m, lastSeenAt: null, dueNow: 0, nextDueAt: null,
         };
-        // Last seen = max of last_wrong_at
         if (!slot.lastSeenAt || r.last_wrong_at > slot.lastSeenAt) slot.lastSeenAt = r.last_wrong_at;
-        // Due now
         if (new Date(r.next_review_at).getTime() <= nowMs) slot.dueNow += 1;
-        // Earliest upcoming due
         if (!slot.nextDueAt || r.next_review_at < slot.nextDueAt) slot.nextDueAt = r.next_review_at;
         modAcc[m] = slot;
       }

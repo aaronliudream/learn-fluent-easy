@@ -161,8 +161,8 @@ SET
       "option_c": "nothing / Something",
       "option_d": "anything / Anything",
       "correct_answer": "A",
-      "trap": "选 D 回答用 Anything 意思不对（"任何"）。其他选项词头匹配错。",
-      "why":  "疑问句用 **anything**；回答"没事"用 **Nothing**（自带否定，简短回答固定搭配）。"
+      "trap": "选 D 回答用 Anything 意思不对（\"任何\"）。其他选项词头匹配错。",
+      "why":  "疑问句用 **anything**；回答\"没事\"用 **Nothing**（自带否定，简短回答固定搭配）。"
     }
   ]$jsonb$::jsonb
 
@@ -238,28 +238,28 @@ FROM p, (VALUES
     'mcq', 'cold something', 'something cold', 'anything cold', 'cold anything', 'B',
     NULL::text[],
     '形容词必须放在不定代词后面 → something cold。礼貌请求用 some-。',
-    NULL::jsonb, NULL, 'indefinite_adj_after', false, 1, 9000
+    '{}'::jsonb, NULL, 'indefinite_adj_after', false, 1, 9000
   ),
   (
     '— Did you see ___ on your way to school?\n— No, I saw ___.',
     'mcq', 'anybody / nobody', 'somebody / anybody', 'anybody / anybody', 'nobody / anybody', 'A',
     NULL::text[],
     '疑问句用 anybody；回答"没看到任何人"用 nobody（自带否定，简短回答常用）。',
-    NULL::jsonb, NULL, 'indefinite_question_negative', false, 2, 9001
+    '{}'::jsonb, NULL, 'indefinite_question_negative', false, 2, 9001
   ),
   (
     '___ in our class likes the new English teacher.',
     'mcq', 'Everybody', 'Anybody', 'Somebody', 'Nobody', 'A',
     NULL::text[],
     '"全班都喜欢"→ Everybody。likes 单数动词体现 Everybody 视为单数。',
-    NULL::jsonb, NULL, 'indefinite_every', false, 1, 9002
+    '{}'::jsonb, NULL, 'indefinite_every', false, 1, 9002
   ),
   (
     'There isn''t ___ interesting on TV tonight.',
     'mcq', 'something', 'anything', 'nothing', 'everything', 'B',
     NULL::text[],
     '否定句 isn''t → 用 **anything**；不能用 nothing（双重否定）。',
-    NULL::jsonb, NULL, 'indefinite_negative_any', false, 2, 9003
+    '{}'::jsonb, NULL, 'indefinite_negative_any', false, 2, 9003
   ),
 
   (
@@ -267,21 +267,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'something',
     ARRAY['something']::text[],
     '肯定句 → some-；告诉秘密 = something。',
-    NULL::jsonb, NULL, 'indefinite_positive', false, 1, 9004
+    '{}'::jsonb, NULL, 'indefinite_positive', false, 1, 9004
   ),
   (
     '____ knows where Tom went. Maybe he is at home.',
     'fill', NULL, NULL, NULL, NULL, 'Nobody',
     ARRAY['Nobody', 'No one']::text[],
     '"没人知道"= Nobody / No one；后接单数动词 knows。',
-    NULL::jsonb, NULL, 'indefinite_negative_subject', false, 2, 9005
+    '{}'::jsonb, NULL, 'indefinite_negative_subject', false, 2, 9005
   ),
   (
     'Look outside. Is there ____ wrong with the bus?',
     'fill', NULL, NULL, NULL, NULL, 'anything',
     ARRAY['anything']::text[],
     '疑问句 → anything；询问"有什么不对" = Is there anything wrong。',
-    NULL::jsonb, NULL, 'indefinite_question', false, 1, 9006
+    '{}'::jsonb, NULL, 'indefinite_question', false, 1, 9006
   ),
 
   (
@@ -292,7 +292,7 @@ FROM p, (VALUES
       'I got something hot to drink.'
     ]::text[],
     '形容词 hot 后置；to drink 作定语后置。',
-    NULL::jsonb, NULL, 'indefinite_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'indefinite_transform', true, 2, 9007
   ),
   (
     '改写为否定句：  "Everybody likes the new song."',
@@ -302,7 +302,7 @@ FROM p, (VALUES
       'No one likes the new song.'
     ]::text[],
     'Everybody → Nobody（反义）；动词保持单数 likes。',
-    NULL::jsonb, NULL, 'indefinite_opposite', true, 2, 9008
+    '{}'::jsonb, NULL, 'indefinite_opposite', true, 2, 9008
   ),
 
   (
@@ -312,7 +312,7 @@ FROM p, (VALUES
       'I want something delicious for lunch.'
     ]::text[],
     '形容词必须放在不定代词**后面**。',
-    NULL::jsonb, NULL, 'indefinite_adj_position', true, 1, 9009
+    '{}'::jsonb, NULL, 'indefinite_adj_position', true, 1, 9009
   ),
   (
     '改错：  "Nobody didn''t see the accident yesterday."',
@@ -321,7 +321,7 @@ FROM p, (VALUES
       'Nobody saw the accident yesterday.'
     ]::text[],
     'Nobody 已含否定，不能再加 didn''t（双重否定）。',
-    NULL::jsonb, NULL, 'indefinite_double_negative', true, 2, 9010
+    '{}'::jsonb, NULL, 'indefinite_double_negative', true, 2, 9010
   ),
 
   (
@@ -333,7 +333,7 @@ FROM p, (VALUES
       'Has each person prepared something fun for the trip?'
     ]::text[],
     '考点：① 每个人 = everyone / everybody（单数）；② 礼貌的疑问语境用 something；③ 形容词 interesting 放后面。',
-    NULL::jsonb, '注意：has everyone（不是 have everyone）— everyone 视为单数。', 'indefinite_translation', true, 3, 9011
+    '{}'::jsonb, '注意：has everyone（不是 have everyone）— everyone 视为单数。', 'indefinite_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

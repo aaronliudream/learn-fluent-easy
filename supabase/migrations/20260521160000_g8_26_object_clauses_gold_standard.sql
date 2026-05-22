@@ -113,13 +113,13 @@ SET
       "wrong": "I don''t know is he at home now.",
       "model": "I don''t know if / whether he is at home now.",
       "hint":  "缺连接词",
-      "why":   "原句是一般疑问句"Is he at home?" → 宾语从句要加连接词 **if / whether**，再改成陈述语序。"
+      "why":   "原句是一般疑问句\"Is he at home?\" → 宾语从句要加连接词 **if / whether**，再改成陈述语序。"
     },
     {
       "wrong": "Could you tell me what time is it now?",
       "model": "Could you tell me what time it is now?",
       "hint":  "陈述语序",
-      "why":   "原句 "What time is it?" 是疑问语序。宾语从句要还原为 **what time it is**（主语 it 在前）。"
+      "why":   "原句 \"What time is it?\" 是疑问语序。宾语从句要还原为 **what time it is**（主语 it 在前）。"
     }
   ]$jsonb$::jsonb,
 
@@ -151,7 +151,7 @@ SET
       "option_c": "whether",
       "option_d": "what",
       "correct_answer": "C",
-      "trap": "选 A (if) 在普通场景可以，但**当后面紧接 "or not" 时只能用 whether**。中考高频考点。",
+      "trap": "选 A (if) 在普通场景可以，但**当后面紧接 \"or not\" 时只能用 whether**。中考高频考点。",
       "why":  "**whether ... or not** 是固定搭配，if 不能与 or not 直接连用（必须分开：if he will agree ... or not）。"
     },
     {
@@ -194,7 +194,7 @@ UPDATE junior_grammar_points SET teacher_script = $jsonb$[
     "duration": 10
   },
   {
-    "text": "**例外**：客观真理永远是一般现在时。老师过去说"地球绕太阳转"，从句还是用 goes。",
+    "text": "**例外**：客观真理永远是一般现在时。老师过去说\"地球绕太阳转\"，从句还是用 goes。",
     "show": "The teacher said the earth goes around the sun.",
     "highlight": "goes",
     "duration": 11
@@ -206,7 +206,7 @@ UPDATE junior_grammar_points SET teacher_script = $jsonb$[
     "duration": 10
   },
   {
-    "text": "**坑点 2**：if 后面紧跟 "or not" 不行，要用 whether。**whether ... or not** 是固定搭配。",
+    "text": "**坑点 2**：if 后面紧跟 \"or not\" 不行，要用 whether。**whether ... or not** 是固定搭配。",
     "show": "whether you agree or not   ✓",
     "highlight": "whether ... or not",
     "duration": 11
@@ -239,28 +239,28 @@ FROM p, (VALUES
     'mcq', 'where is the post office', 'where the post office is', 'where does the post office', 'is where the post office', 'B',
     NULL::text[],
     '宾语从句陈述语序：where + 主语 (the post office) + 动词 (is)。',
-    NULL::jsonb, NULL, 'object_clause_word_order', false, 1, 9000
+    '{}'::jsonb, NULL, 'object_clause_word_order', false, 1, 9000
   ),
   (
     'I don''t know ___ he will come tomorrow or not.',
     'mcq', 'if', 'that', 'whether', 'what', 'C',
     NULL::text[],
     '后面紧跟 "or not" → 只能用 **whether**，if 不行。',
-    NULL::jsonb, NULL, 'object_clause_whether_or_not', false, 2, 9001
+    '{}'::jsonb, NULL, 'object_clause_whether_or_not', false, 2, 9001
   ),
   (
     'Our science teacher told us light ___ faster than sound.',
     'mcq', 'traveled', 'travels', 'is traveling', 'will travel', 'B',
     NULL::text[],
     '客观真理（光速）在宾语从句中**永远用一般现在时** → travels。',
-    NULL::jsonb, NULL, 'object_clause_truth', false, 2, 9002
+    '{}'::jsonb, NULL, 'object_clause_truth', false, 2, 9002
   ),
   (
     'The headteacher asked me ___ then.',
     'mcq', 'why was I crying', 'why I was crying', 'why am I crying', 'why I am crying', 'B',
     NULL::text[],
     '主句过去 (asked) + 陈述语序 → **why I was crying**。',
-    NULL::jsonb, NULL, 'object_clause_tense_order', false, 3, 9003
+    '{}'::jsonb, NULL, 'object_clause_tense_order', false, 3, 9003
   ),
 
   -- ─── 3 fill-in ───
@@ -269,21 +269,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'where lives',
     ARRAY['where lives', 'how lives', 'who lives']::text[],
     '这是宾语从句中关系/疑问词的练习。提示：句中是"man"作主语 → who lives。',
-    NULL::jsonb, '提示：填的是连接词 + 动词的合体（陈述语序里的），考查对宾语从句结构的灵活理解。', 'object_clause_word_order', true, 2, 9004
+    '{}'::jsonb, '提示：填的是连接词 + 动词的合体（陈述语序里的），考查对宾语从句结构的灵活理解。', 'object_clause_word_order', true, 2, 9004
   ),
   (
     'Mom asked me ____ I had finished my homework.',
     'fill', NULL, NULL, NULL, NULL, 'if',
     ARRAY['if', 'whether']::text[],
     '原句是 "Have you finished?" 一般疑问句 → 连接词用 **if** 或 **whether**。',
-    NULL::jsonb, NULL, 'object_clause_if_whether', false, 1, 9005
+    '{}'::jsonb, NULL, 'object_clause_if_whether', false, 1, 9005
   ),
   (
     'I think the new film ____ (be) really exciting. You should see it.',
     'fill', NULL, NULL, NULL, NULL, 'is',
     ARRAY['is']::text[],
     '主句 I think 是现在时 → 从句按事实选时态。电影现在还在上映 → 现在时 **is**。',
-    NULL::jsonb, NULL, 'object_clause_tense', false, 1, 9006
+    '{}'::jsonb, NULL, 'object_clause_tense', false, 1, 9006
   ),
 
   -- ─── 2 transform ───
@@ -295,7 +295,7 @@ FROM p, (VALUES
       'Could you tell me when the bus leaves?'
     ]::text[],
     '陈述语序 + 第三人称单数加 -s：does leave → **leaves**。',
-    NULL::jsonb, NULL, 'object_clause_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'object_clause_transform', true, 2, 9007
   ),
   (
     '改写为宾语从句（用 I wonder 开头）：  "Will it rain tomorrow?"',
@@ -306,7 +306,7 @@ FROM p, (VALUES
       'I wonder if / whether it will rain tomorrow.'
     ]::text[],
     '一般疑问句 → 用 if/whether；陈述语序 it will rain。',
-    NULL::jsonb, NULL, 'object_clause_transform', true, 2, 9008
+    '{}'::jsonb, NULL, 'object_clause_transform', true, 2, 9008
   ),
 
   -- ─── 2 correction ───
@@ -317,7 +317,7 @@ FROM p, (VALUES
       'I want to know how I can get to the bookstore.'
     ]::text[],
     '陈述语序：how + 主语 (I) + 助动词 (can) + 动词 (get)。',
-    NULL::jsonb, NULL, 'object_clause_word_order', true, 2, 9009
+    '{}'::jsonb, NULL, 'object_clause_word_order', true, 2, 9009
   ),
   (
     '改错：  "He said the sun rose in the east every morning."',
@@ -326,7 +326,7 @@ FROM p, (VALUES
       'He said the sun rises in the east every morning.'
     ]::text[],
     '客观真理（日出东方）在宾语从句中**永远用一般现在时** → rises。',
-    NULL::jsonb, NULL, 'object_clause_truth', true, 3, 9010
+    '{}'::jsonb, NULL, 'object_clause_truth', true, 3, 9010
   ),
 
   -- ─── 1 translation ───
@@ -340,7 +340,7 @@ FROM p, (VALUES
       'Could you please tell me what today''s homework is?'
     ]::text[],
     '考点：① "你能告诉我"→ Could you tell me（更礼貌）；② 宾语从句陈述语序：what + 主语 + 动词 (is)；③ "今天的作业" → today''s homework。',
-    NULL::jsonb, '中考阅卷里，写成 "what is today''s homework" 是高频扣分点，记住宾语从句要倒回陈述语序。', 'object_clause_translation', true, 3, 9011
+    '{}'::jsonb, '中考阅卷里，写成 "what is today''s homework" 是高频扣分点，记住宾语从句要倒回陈述语序。', 'object_clause_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

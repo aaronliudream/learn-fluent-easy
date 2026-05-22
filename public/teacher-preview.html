@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>👨‍🏫 老师中心 — Redesign Preview · Big Moon English</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#FAF7F2',
+          ink: '#1F2440',
+          'brand-violet':  '#7B3FF1',
+          'brand-magenta': '#ED3F8C',
+          'brand-coral':   '#F47C45',
+          'brand-amber':   '#F59E0B',
+        },
+        fontFamily: { sans: ['"PingFang SC"','"Hiragino Sans GB"','"Microsoft YaHei"','system-ui','sans-serif'] },
+        boxShadow: {
+          tile:  '0 6px 18px -8px rgba(15,23,42,0.18)',
+          brand: '0 18px 40px -14px rgba(237,63,140,0.45)',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body { background: #FAF7F2; }
+  .grad-brand { background-image: linear-gradient(135deg,#7B3FF1 0%,#ED3F8C 55%,#F47C45 100%); }
+  .grad-warm  { background-image: linear-gradient(135deg,#F97316 0%,#F43F5E 100%); }
+  .grad-cool  { background-image: linear-gradient(135deg,#6366F1 0%,#8B5CF6 100%); }
+  .grad-mint  { background-image: linear-gradient(135deg,#10B981 0%,#14B8A6 100%); }
+  .grad-sky   { background-image: linear-gradient(135deg,#0EA5E9 0%,#06B6D4 100%); }
+  .grad-amber { background-image: linear-gradient(135deg,#F59E0B 0%,#F97316 100%); }
+  .grad-rose  { background-image: linear-gradient(135deg,#F43F5E 0%,#EC4899 100%); }
+  .tabular    { font-variant-numeric: tabular-nums; }
+  .panel.hidden { display:none; }
+  .annot { position:relative; }
+  .annot::after {
+    content:attr(data-note);
+    position:absolute; right:-6px; top:-10px;
+    background:#1F2440; color:#fff;
+    font-size:10px; font-weight:700;
+    padding:2px 6px; border-radius:999px;
+    box-shadow:0 4px 10px rgba(0,0,0,.18);
+    white-space:nowrap;
+  }
+  .tab-btn { padding: 0.55rem 1rem; border-radius: 0.75rem; font-weight: 800; font-size: 0.875rem; }
+  .tab-btn[aria-selected="true"] { background:#1F2440; color:#fff; }
+  .tab-btn[aria-selected="false"] { background:#fff; color:#64748b; border:2px solid rgba(0,0,0,.06); }
+  .tab-panel.hidden { display: none; }
+  .row-hover:hover { background: rgba(123,63,241,0.04); }
+</style>
+</head>
+<body class="text-ink min-h-screen">
+
+<!-- Top nav -->
+<div class="sticky top-0 z-20 backdrop-blur bg-bg/85 border-b border-black/5">
+  <div class="mx-auto max-w-7xl px-5 py-3 flex items-center gap-4 flex-wrap">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-7 h-7 rounded-lg grad-brand"></span>
+      <strong class="tracking-tight">Big Moon English</strong>
+      <span class="text-xs text-slate-500">· Teacher Dashboard preview</span>
+    </div>
+
+    <!-- View switcher -->
+    <div class="flex items-center gap-1 ml-auto text-xs">
+      <span class="text-slate-500 mr-2">View:</span>
+      <button id="btnOldCards" class="px-2.5 py-1 rounded-full border border-black/10 text-slate-600 font-semibold">Current · /teacher/cards</button>
+      <button id="btnNewHub"   class="px-2.5 py-1 rounded-full bg-ink text-white font-semibold">✨ New · /teacher</button>
+      <button id="btnNewClass" class="px-2.5 py-1 rounded-full border border-black/10 text-slate-600 font-semibold">✨ New · /teacher/class/:id</button>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button id="btnAnnot" class="px-2.5 py-1 rounded-full border border-black/10 text-xs font-semibold text-slate-600">🏷️ Annotations</button>
+    </div>
+  </div>
+</div>
+
+<main class="mx-auto max-w-7xl px-5 py-8 md:px-8 md:py-10">
+
+  <!-- ================================================================ -->
+  <!--   VIEW 1: CURRENT /teacher/cards                                   -->
+  <!-- ================================================================ -->
+  <section id="viewOldCards" class="panel hidden max-w-3xl mx-auto">
+    <a class="mb-3 inline-flex items-center gap-1 text-sm text-slate-500">← 返回</a>
+    <header>
+      <h1 class="text-2xl md:text-3xl font-bold flex items-center gap-2">
+        ✨ 我的知识卡数据
+      </h1>
+      <p class="text-sm text-slate-500 mt-1">看看你创作的卡片帮助了多少人，他们答得怎么样</p>
+    </header>
+
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-5">
+      <Tile icon="✨" label="卡片" value="12"></Tile>
+      <Tile icon="👁️" label="扫码次数" value="346"></Tile>
+      <Tile icon="👥" label="答题人次" value="124" accent></Tile>
+      <Tile icon="🎯" label="平均正确率" value="68%" accent></Tile>
+    </section>
+
+    <h2 class="mt-6 text-sm font-bold uppercase tracking-wider text-slate-500">
+      卡片列表 · 按最近创建排序
+    </h2>
+    <div class="mt-3 space-y-3">
+      <div class="rounded-2xl border bg-white p-4 shadow-tile">
+        <p class="font-semibold">中考语法 · 现在完成时 vs 一般过去时</p>
+        <div class="mt-2 text-xs text-slate-500 flex flex-wrap gap-3">
+          <span>👁️ 78 扫码</span><span>👥 32 人答题</span><span>🎯 62% 正确率</span>
+          <span class="rounded bg-slate-100 px-1.5 text-[10px]">🏆 3 次满分</span>
+        </div>
+        <p class="mt-2 text-[11px] text-amber-600">💡 有人扫码但没答题 — 试着重新分享</p>
+      </div>
+      <div class="rounded-2xl border bg-white p-4 shadow-tile">
+        <p class="font-semibold">高考词汇 · distinguish 的搭配用法</p>
+        <div class="mt-2 text-xs text-slate-500 flex flex-wrap gap-3">
+          <span>👁️ 124 扫码</span><span>👥 56 人答题</span><span>🎯 47% 正确率</span>
+        </div>
+        <p class="mt-2 text-[11px] text-rose-600">⚠️ 正确率偏低，可能题目偏难或讲解不够清晰</p>
+      </div>
+    </div>
+
+    <div class="annot mt-8 rounded-3xl border-2 border-dashed border-rose-300 bg-rose-50 p-5 text-center" data-note="❌ MISSING: no class roster, no per-student view, no oversight">
+      <div class="text-2xl">🚫</div>
+      <div class="mt-1 text-base font-extrabold">这里 ↑ 是「内容创作者面板」</div>
+      <div class="mt-1 text-sm text-slate-600">无法看到「我的学生」、「我教的班级」、或任何具体学生的学习进度。</div>
+      <div class="mt-2 text-xs text-slate-500">你最初的需求是「老师可以管理多个学生」— 这部分目前完全没有。</div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!--   VIEW 2: NEW /teacher                                             -->
+  <!-- ================================================================ -->
+  <section id="viewNewHub" class="panel">
+
+    <a class="mb-3 inline-flex items-center gap-1 text-sm text-slate-500">← 返回</a>
+
+    <!-- HERO -->
+    <section class="annot relative overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-brand grad-brand" data-note="NEW: Teacher hub with class oversight + cards combined">
+      <div class="pointer-events-none absolute -right-12 -top-12 w-56 h-56 rounded-full bg-white/15 blur-xl"></div>
+      <div class="pointer-events-none absolute right-8 top-6 w-24 h-24 rounded-full bg-white/25"></div>
+
+      <div class="relative flex items-start justify-between gap-4">
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.25em] opacity-85">老师中心 · 2026/05/21 · 周四</div>
+          <div class="mt-1 text-2xl md:text-3xl font-extrabold">👨‍🏫 王老师，欢迎回来！</div>
+          <div class="mt-1 text-sm opacity-90">你正在带 3 个班级 · 共 86 名学生</div>
+        </div>
+        <button class="rounded-full bg-white/95 text-ink text-sm font-bold px-4 py-2">+ 新建班级</button>
+      </div>
+
+      <!-- 4 quick stats -->
+      <div class="relative mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-3">
+          <div class="text-2xl mb-1">🏫</div>
+          <div class="text-2xl font-extrabold tabular leading-none">3</div>
+          <div class="text-[10px] opacity-85 uppercase tracking-wider mt-1">班级</div>
+        </div>
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-3">
+          <div class="text-2xl mb-1">👥</div>
+          <div class="text-2xl font-extrabold tabular leading-none">86</div>
+          <div class="text-[10px] opacity-85 uppercase tracking-wider mt-1">学生</div>
+        </div>
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-3">
+          <div class="text-2xl mb-1">📈</div>
+          <div class="text-2xl font-extrabold tabular leading-none">72%</div>
+          <div class="text-[10px] opacity-85 uppercase tracking-wider mt-1">本周平均掌握度</div>
+        </div>
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-3">
+          <div class="text-2xl mb-1">⚠️</div>
+          <div class="text-2xl font-extrabold tabular leading-none">9</div>
+          <div class="text-[10px] opacity-85 uppercase tracking-wider mt-1">需要关注的学生</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <div class="annot mt-6 flex flex-wrap gap-2" data-note="NEW: tabs combine class oversight + existing cards">
+      <button class="tab-btn" aria-selected="true"  data-tab="classes">🏫 我的班级</button>
+      <button class="tab-btn" aria-selected="false" data-tab="cards">📇 我的卡片</button>
+      <button class="tab-btn" aria-selected="false" data-tab="assignments">📋 作业</button>
+      <button class="tab-btn" aria-selected="false" data-tab="settings">⚙️ 设置</button>
+    </div>
+
+    <!-- TAB: CLASSES -->
+    <div id="tab-classes" class="tab-panel mt-5">
+      <div class="grid gap-4 md:grid-cols-3">
+        <ClassCard
+          name="高三 (1) 班 · 高考冲刺"
+          students="32"
+          weak="4"
+          avgMastery="68"
+          lastActive="刚刚"
+          tone="warm"
+          code="MOON-A47K"></ClassCard>
+        <ClassCard
+          name="高二 (3) 班 · 系统课"
+          students="28"
+          weak="3"
+          avgMastery="74"
+          lastActive="5 分钟前"
+          tone="cool"
+          code="MOON-B89D"></ClassCard>
+        <ClassCard
+          name="初三 (2) 班 · 中考"
+          students="26"
+          weak="2"
+          avgMastery="71"
+          lastActive="1 小时前"
+          tone="mint"
+          code="MOON-C12F"></ClassCard>
+
+        <!-- Add new -->
+        <a class="annot rounded-3xl border-2 border-dashed border-slate-300 bg-white p-6 grid place-items-center text-center hover:border-brand-violet hover:bg-violet-50/40 transition cursor-pointer" data-note="NEW: Create class action">
+          <div class="text-3xl">+</div>
+          <div class="mt-2 text-sm font-bold">新建班级</div>
+          <div class="text-xs text-slate-500 mt-1">生成 6 位邀请码，学生输入即可加入</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- TAB: CARDS (the existing analytics) -->
+    <div id="tab-cards" class="tab-panel hidden mt-5">
+      <div class="rounded-3xl border bg-white p-5 shadow-tile">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-500">已有功能 · TeacherCards.tsx</div>
+        <h3 class="mt-1 text-lg font-extrabold">我的知识卡数据</h3>
+        <div class="mt-3 grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div class="rounded-xl border p-3"><div class="text-xs text-slate-500">卡片</div><div class="text-2xl font-extrabold mt-1">12</div></div>
+          <div class="rounded-xl border p-3"><div class="text-xs text-slate-500">扫码次数</div><div class="text-2xl font-extrabold mt-1">346</div></div>
+          <div class="rounded-xl border bg-violet-50/40 border-violet-200 p-3"><div class="text-xs text-slate-500">答题人次</div><div class="text-2xl font-extrabold mt-1">124</div></div>
+          <div class="rounded-xl border bg-violet-50/40 border-violet-200 p-3"><div class="text-xs text-slate-500">平均正确率</div><div class="text-2xl font-extrabold mt-1">68%</div></div>
+        </div>
+        <div class="mt-4 text-xs text-slate-500"><strong class="text-ink">→ Phase A polish:</strong> existing card list, but visually consistent with the new hub.</div>
+      </div>
+    </div>
+
+    <!-- TAB: ASSIGNMENTS (placeholder for Phase D) -->
+    <div id="tab-assignments" class="tab-panel hidden mt-5">
+      <div class="rounded-3xl border-2 border-dashed bg-white p-8 text-center">
+        <div class="text-4xl">📋</div>
+        <div class="mt-2 text-lg font-extrabold">作业功能 · Phase D</div>
+        <div class="text-sm text-slate-500 mt-1 max-w-md mx-auto">
+          推送知识卡 / 阅读 / 听力作业给班级，跟踪完成进度。本阶段先不开发，留位置在这里。
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: SETTINGS -->
+    <div id="tab-settings" class="tab-panel hidden mt-5 space-y-4">
+      <div class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <h3 class="text-base font-extrabold mb-2">📧 邮件通知</h3>
+        <div class="text-sm text-slate-600">学生加入班级 / 完成作业 / 每周班级摘要邮件设置</div>
+      </div>
+      <div class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <h3 class="text-base font-extrabold mb-2">📤 导出报告</h3>
+        <div class="text-sm text-slate-600">导出班级周报 PDF / 学生个人报告 PDF</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ -->
+  <!--   VIEW 3: NEW /teacher/class/:id                                   -->
+  <!-- ================================================================ -->
+  <section id="viewNewClass" class="panel hidden">
+    <a class="mb-3 inline-flex items-center gap-1 text-sm text-slate-500">← 返回老师中心</a>
+
+    <!-- CLASS HEADER -->
+    <section class="annot relative overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-brand grad-cool" data-note="NEW: Single class detail page">
+      <div class="pointer-events-none absolute -right-12 -top-12 w-56 h-56 rounded-full bg-white/15 blur-xl"></div>
+
+      <div class="relative flex flex-wrap items-start justify-between gap-4">
+        <div class="min-w-0">
+          <div class="text-[10px] font-bold uppercase tracking-[0.25em] opacity-85">班级详情 · 王老师</div>
+          <div class="mt-1 text-2xl md:text-3xl font-extrabold">🏫 高三 (1) 班 · 高考冲刺</div>
+          <div class="mt-2 text-sm opacity-90 flex flex-wrap items-center gap-3">
+            <span><span class="font-bold tabular">32</span> 名学生</span>
+            <span class="opacity-60">·</span>
+            <span>本周平均掌握度 <span class="font-bold tabular">68%</span></span>
+            <span class="opacity-60">·</span>
+            <span class="font-bold">⚠️ 4 个学生需要关注</span>
+          </div>
+        </div>
+
+        <!-- Join code chip -->
+        <div class="rounded-2xl bg-white/15 backdrop-blur px-4 py-3 min-w-[200px]">
+          <div class="text-[10px] opacity-85 uppercase tracking-wider">邀请码 · 学生输入即可加入</div>
+          <div class="mt-1 text-2xl font-extrabold tracking-widest tabular">MOON-A47K</div>
+          <button class="mt-2 text-xs font-bold underline opacity-90">📋 复制 · 分享</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 class KPIs -->
+    <section class="mt-5 grid gap-3 grid-cols-2 md:grid-cols-4">
+      <div class="rounded-2xl border bg-white p-4 shadow-tile">
+        <div class="text-xs text-slate-500">本周活跃学生</div>
+        <div class="mt-1 text-2xl font-extrabold tabular">28 / 32</div>
+        <div class="text-[11px] text-emerald-600 font-bold">87% 活跃率</div>
+      </div>
+      <div class="rounded-2xl border bg-white p-4 shadow-tile">
+        <div class="text-xs text-slate-500">本周总学习时长</div>
+        <div class="mt-1 text-2xl font-extrabold tabular">68h 24m</div>
+        <div class="text-[11px] text-emerald-600 font-bold">↑ +12% vs 上周</div>
+      </div>
+      <div class="rounded-2xl border bg-white p-4 shadow-tile">
+        <div class="text-xs text-slate-500">班级平均正确率</div>
+        <div class="mt-1 text-2xl font-extrabold tabular">74%</div>
+        <div class="text-[11px] text-rose-600 font-bold">↓ -3% vs 上周</div>
+      </div>
+      <div class="rounded-2xl border bg-white p-4 shadow-tile">
+        <div class="text-xs text-slate-500">班级共同薄弱点</div>
+        <div class="mt-1 text-2xl font-extrabold tabular">7</div>
+        <div class="text-[11px] text-amber-600 font-bold">语法 / 阅读</div>
+      </div>
+    </section>
+
+    <!-- TABS for class detail -->
+    <div class="annot mt-6 flex flex-wrap gap-2" data-note="NEW: 4 tabs inside the class page">
+      <button class="tab-btn class-tab" aria-selected="true"  data-tab="roster">👥 学生 (32)</button>
+      <button class="tab-btn class-tab" aria-selected="false" data-tab="weakness">🎯 班级薄弱点</button>
+      <button class="tab-btn class-tab" aria-selected="false" data-tab="skills">📊 整体能力</button>
+      <button class="tab-btn class-tab" aria-selected="false" data-tab="csettings">⚙️ 班级设置</button>
+    </div>
+
+    <!-- TAB: ROSTER -->
+    <div id="ctab-roster" class="class-tab-panel mt-5 rounded-3xl border-2 bg-white shadow-tile overflow-hidden">
+      <div class="px-5 py-3 border-b flex items-center justify-between bg-slate-50/50">
+        <div class="text-sm font-extrabold">👥 学生名单</div>
+        <div class="flex items-center gap-2">
+          <input class="rounded-full border px-3 py-1.5 text-xs" placeholder="🔍 搜索学生..." />
+          <select class="rounded-full border px-3 py-1.5 text-xs bg-white">
+            <option>排序：最近活跃</option>
+            <option>排序：掌握度</option>
+            <option>排序：薄弱点数量</option>
+          </select>
+        </div>
+      </div>
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50/60 text-[11px] uppercase tracking-wider text-slate-500">
+          <tr>
+            <th class="text-left py-2 px-4">学生</th>
+            <th class="text-left py-2">学段</th>
+            <th class="text-right py-2">本周时长</th>
+            <th class="text-right py-2">掌握度</th>
+            <th class="text-right py-2">薄弱</th>
+            <th class="text-right py-2">连续</th>
+            <th class="text-right py-2 px-4">最近活跃</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <StudentRow name="陈小明" stage="高三" mins="3h 12m" mastery="82%" weak="2" streak="14" active="刚刚" status="ok"></StudentRow>
+          <StudentRow name="李美" stage="高三" mins="2h 48m" mastery="78%" weak="3" streak="7" active="2 小时前" status="ok"></StudentRow>
+          <StudentRow name="王浩" stage="高三" mins="1h 22m" mastery="58%" weak="8" streak="2" active="昨天" status="warn"></StudentRow>
+          <StudentRow name="张芳" stage="高三" mins="2h 5m" mastery="72%" weak="4" streak="5" active="3 小时前" status="ok"></StudentRow>
+          <StudentRow name="刘强" stage="高三" mins="0h 14m" mastery="43%" weak="12" streak="0" active="4 天前" status="alert"></StudentRow>
+          <StudentRow name="赵丽" stage="高三" mins="4h 02m" mastery="91%" weak="1" streak="21" active="刚刚" status="great"></StudentRow>
+          <StudentRow name="周杰" stage="高三" mins="1h 48m" mastery="65%" weak="6" streak="3" active="昨天" status="warn"></StudentRow>
+        </tbody>
+      </table>
+      <div class="px-5 py-3 text-xs text-slate-500 border-t bg-slate-50/50">显示 7 / 32 · <a class="text-brand-magenta font-bold">查看全部 →</a></div>
+    </div>
+
+    <!-- TAB: WEAKNESS -->
+    <div id="ctab-weakness" class="class-tab-panel hidden mt-5 rounded-3xl border-2 bg-white p-5 shadow-tile">
+      <h3 class="text-base font-extrabold mb-3">🎯 班级共同薄弱点（按错的人数排序）</h3>
+      <div class="text-xs text-slate-500 mb-3">这些题目至少 30% 的学生答错过 — 可考虑在课堂上重点讲解</div>
+      <ol class="space-y-2">
+        <li class="flex items-center gap-3 rounded-xl border border-orange-200 bg-orange-50/60 p-3">
+          <span class="grid w-7 h-7 place-items-center rounded-lg bg-orange-200 text-orange-800 font-extrabold">1</span>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-sm">现在完成时 vs 一般过去时</div>
+            <div class="text-[11px] text-slate-500">语法 · 22/32 学生错过 · 平均错 2.4 次</div>
+          </div>
+          <button class="rounded-full bg-ink text-white text-xs font-bold px-3 py-1.5">推送讲解 →</button>
+        </li>
+        <li class="flex items-center gap-3 rounded-xl border border-orange-200 bg-orange-50/60 p-3">
+          <span class="grid w-7 h-7 place-items-center rounded-lg bg-orange-200 text-orange-800 font-extrabold">2</span>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-sm">阅读理解 · 议论文推断题</div>
+            <div class="text-[11px] text-slate-500">阅读 · 18/32 学生平均得分 52%</div>
+          </div>
+          <button class="rounded-full bg-ink text-white text-xs font-bold px-3 py-1.5">推送讲解 →</button>
+        </li>
+        <li class="flex items-center gap-3 rounded-xl border border-orange-200 bg-orange-50/60 p-3">
+          <span class="grid w-7 h-7 place-items-center rounded-lg bg-orange-200 text-orange-800 font-extrabold">3</span>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-sm">would 与 used to 区别</div>
+            <div class="text-[11px] text-slate-500">语法 · 14/32 学生错过 · 平均错 1.8 次</div>
+          </div>
+          <button class="rounded-full bg-ink text-white text-xs font-bold px-3 py-1.5">推送讲解 →</button>
+        </li>
+      </ol>
+    </div>
+
+    <!-- TAB: SKILLS -->
+    <div id="ctab-skills" class="class-tab-panel hidden mt-5 rounded-3xl border-2 bg-white p-5 shadow-tile">
+      <h3 class="text-base font-extrabold mb-3">📊 班级整体能力雷达</h3>
+      <div class="grid place-items-center">
+        <svg viewBox="0 0 240 240" class="w-64 h-64">
+          <polygon points="120,24 210,84 180,192 60,192 30,84" fill="none" stroke="#e2e8f0"/>
+          <polygon points="120,60 175,94 158,160 82,160 65,94" fill="none" stroke="#e2e8f0"/>
+          <polygon points="120,40 195,90 165,180 75,180 45,90" fill="rgba(99,102,241,0.18)" stroke="#6366F1" stroke-width="2.5"/>
+          <text x="120" y="18" text-anchor="middle" font-size="12" font-weight="700">单词 78%</text>
+          <text x="220" y="84" text-anchor="middle" font-size="12" font-weight="700">语法 62%</text>
+          <text x="190" y="210" text-anchor="middle" font-size="12" font-weight="700">阅读 71%</text>
+          <text x="50" y="210" text-anchor="middle" font-size="12" font-weight="700">听力 68%</text>
+          <text x="20" y="84" text-anchor="middle" font-size="12" font-weight="700">写作 55%</text>
+        </svg>
+      </div>
+      <div class="mt-3 text-xs text-slate-500 text-center">数据基于本班级 32 名学生的实际答题</div>
+    </div>
+
+    <!-- TAB: CLASS SETTINGS -->
+    <div id="ctab-csettings" class="class-tab-panel hidden mt-5 space-y-3">
+      <div class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <h3 class="text-base font-extrabold mb-2">✏️ 班级信息</h3>
+        <div class="space-y-3">
+          <div><label class="text-xs text-slate-500">班级名称</label><input class="mt-1 w-full rounded-lg border px-3 py-2 text-sm" value="高三 (1) 班 · 高考冲刺"/></div>
+          <div><label class="text-xs text-slate-500">学段</label><input class="mt-1 w-full rounded-lg border px-3 py-2 text-sm" value="高中 (Senior)"/></div>
+        </div>
+      </div>
+      <div class="rounded-3xl border-2 bg-white p-5 shadow-tile">
+        <h3 class="text-base font-extrabold mb-2">🔑 邀请码管理</h3>
+        <div class="flex items-center gap-3">
+          <code class="rounded-lg bg-slate-100 px-3 py-2 font-mono text-lg tracking-widest">MOON-A47K</code>
+          <button class="rounded-full border px-3 py-1.5 text-xs font-bold">重新生成</button>
+        </div>
+      </div>
+      <div class="rounded-3xl border-2 border-rose-200 bg-rose-50/40 p-5">
+        <h3 class="text-base font-extrabold mb-2 text-rose-700">🗑 归档班级</h3>
+        <p class="text-sm text-slate-600">归档后学生仍可访问，但你不再看到此班级。</p>
+        <button class="mt-2 rounded-full bg-rose-600 text-white text-xs font-bold px-3 py-1.5">归档此班级</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="mt-10 rounded-3xl border bg-white p-5 text-center text-xs text-slate-500">
+    <strong class="text-ink">这是 Preview — 没有触碰真实代码。</strong>
+    在右上方切换 3 个 view: 当前 / 老师 Hub / 班级详情。点击 tabs 可看不同 sections。
+  </div>
+</main>
+
+<script>
+  const $ = (s) => document.querySelector(s);
+  const views = { old: $('#viewOldCards'), hub: $('#viewNewHub'), cls: $('#viewNewClass') };
+  const btns  = { old: $('#btnOldCards'), hub: $('#btnNewHub'), cls: $('#btnNewClass') };
+
+  function show(which) {
+    Object.values(views).forEach(v => v.classList.add('hidden'));
+    Object.values(btns).forEach(b => {
+      b.classList.remove('bg-ink','text-white');
+      b.classList.add('border','border-black/10','text-slate-600');
+    });
+    views[which].classList.remove('hidden');
+    btns[which].classList.add('bg-ink','text-white');
+    btns[which].classList.remove('border','border-black/10','text-slate-600');
+  }
+  btns.old.onclick = () => show('old');
+  btns.hub.onclick = () => show('hub');
+  btns.cls.onclick = () => show('cls');
+
+  // Annotations toggle
+  const btnAnnot = $('#btnAnnot');
+  let annotOn = false;
+  btnAnnot.onclick = () => {
+    annotOn = !annotOn;
+    btnAnnot.classList.toggle('bg-ink');
+    btnAnnot.classList.toggle('text-white');
+    document.body.classList.toggle('show-annot', annotOn);
+  };
+  const style = document.createElement('style');
+  style.textContent = `.annot::after { display:none; } body.show-annot .annot::after { display:inline-block; }`;
+  document.head.appendChild(style);
+
+  // Hub-level tabs
+  document.querySelectorAll('.tab-btn:not(.class-tab)').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('.tab-btn:not(.class-tab)').forEach(b => b.setAttribute('aria-selected', 'false'));
+      btn.setAttribute('aria-selected', 'true');
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+      document.getElementById('tab-' + btn.dataset.tab).classList.remove('hidden');
+    };
+  });
+  // Class-level tabs
+  document.querySelectorAll('.class-tab').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('.class-tab').forEach(b => b.setAttribute('aria-selected', 'false'));
+      btn.setAttribute('aria-selected', 'true');
+      document.querySelectorAll('.class-tab-panel').forEach(p => p.classList.add('hidden'));
+      document.getElementById('ctab-' + btn.dataset.tab).classList.remove('hidden');
+    };
+  });
+
+  /* ---------- Lightweight custom components for the mockup ---------- */
+  customElements.define('tile-x', class extends HTMLElement {
+    connectedCallback() {
+      const accent = this.hasAttribute('accent');
+      this.innerHTML = `
+        <div class="rounded-2xl border bg-white p-3 ${accent ? 'bg-violet-50/40 border-violet-200' : ''}">
+          <div class="flex items-center gap-1.5 text-xs text-slate-500">
+            <span>${this.getAttribute('icon')}</span><span>${this.getAttribute('label')}</span>
+          </div>
+          <p class="mt-1 text-2xl font-extrabold tabular">${this.getAttribute('value')}</p>
+        </div>`;
+    }
+  });
+
+  customElements.define('class-card', class extends HTMLElement {
+    connectedCallback() {
+      const tones = {
+        warm: 'grad-warm',
+        cool: 'grad-cool',
+        mint: 'grad-mint',
+      };
+      const tone = tones[this.getAttribute('tone')] || 'grad-cool';
+      this.innerHTML = `
+        <a class="block rounded-3xl border-2 bg-white shadow-tile hover:-translate-y-0.5 transition cursor-pointer overflow-hidden">
+          <div class="${tone} h-2"></div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2">
+              <h3 class="font-extrabold text-base">${this.getAttribute('name')}</h3>
+              <span class="text-[10px] font-mono tabular bg-slate-100 px-2 py-0.5 rounded">${this.getAttribute('code')}</span>
+            </div>
+            <div class="mt-3 grid grid-cols-3 gap-2 text-center">
+              <div>
+                <div class="text-lg font-extrabold tabular">${this.getAttribute('students')}</div>
+                <div class="text-[10px] text-slate-500 uppercase tracking-wider">学生</div>
+              </div>
+              <div>
+                <div class="text-lg font-extrabold tabular text-emerald-600">${this.getAttribute('avgMastery')}%</div>
+                <div class="text-[10px] text-slate-500 uppercase tracking-wider">掌握度</div>
+              </div>
+              <div>
+                <div class="text-lg font-extrabold tabular text-rose-600">${this.getAttribute('weak')}</div>
+                <div class="text-[10px] text-slate-500 uppercase tracking-wider">需关注</div>
+              </div>
+            </div>
+            <div class="mt-3 flex items-center justify-between text-[11px]">
+              <span class="text-slate-500">⏱ 最后活跃: ${this.getAttribute('lastActive')}</span>
+              <span class="text-brand-magenta font-bold">进入 →</span>
+            </div>
+          </div>
+        </a>`;
+    }
+  });
+
+  customElements.define('student-row', class extends HTMLElement {
+    connectedCallback() {
+      const statusColors = {
+        great: 'text-emerald-600',
+        ok: 'text-slate-600',
+        warn: 'text-amber-600',
+        alert: 'text-rose-600',
+      };
+      const statusEmoji = {
+        great: '🌟',
+        ok: '✓',
+        warn: '⚠️',
+        alert: '🔴',
+      };
+      const s = this.getAttribute('status');
+      const name = this.getAttribute('name');
+      const initial = name.charAt(0);
+      this.innerHTML = `
+        <tr class="border-t row-hover cursor-pointer">
+          <td class="py-3 px-4">
+            <div class="flex items-center gap-2">
+              <span class="grid size-8 place-items-center rounded-full bg-violet-100 text-violet-700 font-bold text-sm">${initial}</span>
+              <span class="font-semibold">${name}</span>
+              <span>${statusEmoji[s]}</span>
+            </div>
+          </td>
+          <td class="text-xs text-slate-500">${this.getAttribute('stage')}</td>
+          <td class="text-right tabular">${this.getAttribute('mins')}</td>
+          <td class="text-right">
+            <span class="font-bold tabular ${statusColors[s]}">${this.getAttribute('mastery')}</span>
+          </td>
+          <td class="text-right tabular">${this.getAttribute('weak')}</td>
+          <td class="text-right tabular">🔥 ${this.getAttribute('streak')}</td>
+          <td class="text-right text-[11px] text-slate-500 px-4">${this.getAttribute('active')}</td>
+          <td class="pr-3 text-slate-400">→</td>
+        </tr>`;
+    }
+  });
+
+  // Replace JSX-like placeholder tags
+  document.querySelectorAll('Tile').forEach(el => {
+    const c = document.createElement('tile-x');
+    ['icon','label','value'].forEach(a => c.setAttribute(a, el.getAttribute(a) ?? ''));
+    if (el.hasAttribute('accent')) c.setAttribute('accent', '');
+    el.replaceWith(c);
+  });
+  document.querySelectorAll('ClassCard').forEach(el => {
+    const c = document.createElement('class-card');
+    ['name','students','weak','avgMastery','lastActive','tone','code'].forEach(a => c.setAttribute(a, el.getAttribute(a) ?? ''));
+    el.replaceWith(c);
+  });
+  document.querySelectorAll('StudentRow').forEach(el => {
+    const c = document.createElement('student-row');
+    ['name','stage','mins','mastery','weak','streak','active','status'].forEach(a => c.setAttribute(a, el.getAttribute(a) ?? ''));
+    el.replaceWith(c);
+  });
+</script>
+
+</body>
+</html>

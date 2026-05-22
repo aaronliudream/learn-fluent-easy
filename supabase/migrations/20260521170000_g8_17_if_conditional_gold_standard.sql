@@ -238,28 +238,28 @@ FROM p, (VALUES
     'mcq', 'will rain / cancel', 'rains / will cancel', 'rains / cancel', 'will rain / will cancel', 'B',
     NULL::text[],
     '主将从现：if 从句一般现在时 (rains) + 主句 will + 原形 (will cancel)。',
-    NULL::jsonb, NULL, 'conditional_basic', false, 1, 9000
+    '{}'::jsonb, NULL, 'conditional_basic', false, 1, 9000
   ),
   (
     'You ___ the bus unless you ___ now.',
     'mcq', 'will miss / hurry', 'miss / hurry', 'will miss / will hurry', 'miss / will hurry', 'A',
     NULL::text[],
     'unless 等于 if not，从句用一般现在时 (hurry)，主句用 will (will miss)。',
-    NULL::jsonb, NULL, 'conditional_unless', false, 2, 9001
+    '{}'::jsonb, NULL, 'conditional_unless', false, 2, 9001
   ),
   (
     'If she ___ early, we ___ together to the airport.',
     'mcq', 'come / go', 'comes / will go', 'will come / go', 'will come / will go', 'B',
     NULL::text[],
     'if 从句一般现在时 + 第三人称单数加 -s (comes) + 主句 will go。',
-    NULL::jsonb, NULL, 'conditional_third_person', false, 2, 9002
+    '{}'::jsonb, NULL, 'conditional_third_person', false, 2, 9002
   ),
   (
     '— What will you do this weekend?\n— I ___ at home if it ___.',
     'mcq', 'will stay / will rain', 'stay / rains', 'will stay / rains', 'will stay / will rain', 'C',
     NULL::text[],
     '主句答 will stay（将来）+ if 从句 rains（一般现在时）。',
-    NULL::jsonb, NULL, 'conditional_dialogue', false, 2, 9003
+    '{}'::jsonb, NULL, 'conditional_dialogue', false, 2, 9003
   ),
 
   (
@@ -267,21 +267,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'study',
     ARRAY['study']::text[],
     'if 从句一般现在时；主语 you → 动词原形 **study**。',
-    NULL::jsonb, NULL, 'conditional_basic', false, 1, 9004
+    '{}'::jsonb, NULL, 'conditional_basic', false, 1, 9004
   ),
   (
     'Unless Tom ____ (come) tomorrow, the meeting will be put off.',
     'fill', NULL, NULL, NULL, NULL, 'comes',
     ARRAY['comes']::text[],
     'unless 从句一般现在时 + 第三人称单数 Tom → **comes**。',
-    NULL::jsonb, NULL, 'conditional_unless', false, 2, 9005
+    '{}'::jsonb, NULL, 'conditional_unless', false, 2, 9005
   ),
   (
     'I ____ (call) you as soon as I get home tonight.',
     'fill', NULL, NULL, NULL, NULL, 'will call',
     ARRAY['will call', '''ll call']::text[],
     'as soon as 也遵循"主将从现"原则；主句用 **will call**。',
-    NULL::jsonb, '注意：as soon as 是时间状语从句，规则和 if 一样 — 主句将来，从句现在。', 'conditional_main', false, 2, 9006
+    '{}'::jsonb, '注意：as soon as 是时间状语从句，规则和 if 一样 — 主句将来，从句现在。', 'conditional_main', false, 2, 9006
   ),
 
   (
@@ -292,7 +292,7 @@ FROM p, (VALUES
       'Unless you practice every day, you will not improve.'
     ]::text[],
     'If ... not = Unless。改写时把 don''t 去掉，换成 Unless。',
-    NULL::jsonb, NULL, 'conditional_unless_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'conditional_unless_transform', true, 2, 9007
   ),
   (
     '合并成条件句：  "It may rain tomorrow. We will stay at home in that case."',
@@ -302,7 +302,7 @@ FROM p, (VALUES
       'We will stay at home if it rains tomorrow.'
     ]::text[],
     'in that case 提示"在那种情况下" → 用 if 条件句合并；从句一般现在时。',
-    NULL::jsonb, NULL, 'conditional_combine', true, 3, 9008
+    '{}'::jsonb, NULL, 'conditional_combine', true, 3, 9008
   ),
 
   (
@@ -312,7 +312,7 @@ FROM p, (VALUES
       'If it is sunny tomorrow, we will go hiking.'
     ]::text[],
     'if 从句不能用 will be，应该用一般现在时 **is**。',
-    NULL::jsonb, NULL, 'conditional_no_will_in_if', true, 2, 9009
+    '{}'::jsonb, NULL, 'conditional_no_will_in_if', true, 2, 9009
   ),
   (
     '改错：  "Unless you don''t finish your homework, you can''t watch TV."',
@@ -321,7 +321,7 @@ FROM p, (VALUES
       'Unless you finish your homework, you can''t watch TV.'
     ]::text[],
     'unless 已含否定，后面用肯定形式 finish，不能加 don''t。',
-    NULL::jsonb, NULL, 'conditional_unless_double_negative', true, 2, 9010
+    '{}'::jsonb, NULL, 'conditional_unless_double_negative', true, 2, 9010
   ),
 
   (
@@ -334,7 +334,7 @@ FROM p, (VALUES
       'If the weather is good tomorrow, we''ll play basketball together.'
     ]::text[],
     '考点：① 主将从现 — if 从句 the weather is (现在时) + 主句 will play；② "天气好" 可以是 weather is fine/good/nice。',
-    NULL::jsonb, '更地道：If it''s nice / If the weather is good 都自然，避免逐字翻译 "weather is good"。', 'conditional_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：If it''s nice / If the weather is good 都自然，避免逐字翻译 "weather is good"。', 'conditional_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

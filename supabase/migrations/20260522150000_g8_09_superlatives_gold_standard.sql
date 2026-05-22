@@ -141,7 +141,7 @@ SET
       "option_d": "most difficult",
       "correct_answer": "B",
       "trap": "选 D 漏 the；选 C 不存在。Of all... 提示最高级语境。",
-      "why":  "Of all the subjects = "在所有科目里" → 最高级。difficult 多音节 → **the most difficult**。"
+      "why":  "Of all the subjects = \"在所有科目里\" → 最高级。difficult 多音节 → **the most difficult**。"
     },
     {
       "stem": "The Great Wall is ___ tourist attractions in China.",
@@ -150,7 +150,7 @@ SET
       "option_c": "one of the most famous",
       "option_d": "one of the most famous of",
       "correct_answer": "C",
-      "trap": "选 A 漏了 "one of"（语境暗示长城是"之一"）。选 B 漏 the。选 D 多余 of。",
+      "trap": "选 A 漏了 \"one of\"（语境暗示长城是\"之一\"）。选 B 漏 the。选 D 多余 of。",
       "why":  "**one of the + 最高级 + 复数名词** 是固定高分句型。tourist attractions 是复数。"
     },
     {
@@ -161,7 +161,7 @@ SET
       "option_d": "tallest",
       "correct_answer": "B",
       "trap": "选 C/D 都用了最高级 — 但**两个人**对比应该用**比较级**。",
-      "why":  "**两人对比 → 比较级 taller**。问题里 "Who is taller" 已经用比较级，回答保持一致。"
+      "why":  "**两人对比 → 比较级 taller**。问题里 \"Who is taller\" 已经用比较级，回答保持一致。"
     }
   ]$jsonb$::jsonb
 
@@ -238,28 +238,28 @@ FROM p, (VALUES
     'mcq', 'long', 'longer', 'the longest', 'longest', 'C',
     NULL::text[],
     '全中国范围 + 最长 → 最高级 + the = **the longest**。',
-    NULL::jsonb, NULL, 'superlative_basic', false, 1, 9000
+    '{}'::jsonb, NULL, 'superlative_basic', false, 1, 9000
   ),
   (
     'Beijing is one of ___ cities in China.',
     'mcq', 'the bigger', 'big', 'the biggest', 'biggest', 'C',
     NULL::text[],
     '"one of the + 最高级 + 复数" 固定句型 → the biggest。',
-    NULL::jsonb, NULL, 'superlative_one_of', false, 2, 9001
+    '{}'::jsonb, NULL, 'superlative_one_of', false, 2, 9001
   ),
   (
     'Of the three subjects, English is ___ for me.',
     'mcq', 'easier', 'the easier', 'the easiest', 'easiest', 'C',
     NULL::text[],
     '三科目比较 + 最 → the easiest（y → i + est）。',
-    NULL::jsonb, NULL, 'superlative_of_three', false, 2, 9002
+    '{}'::jsonb, NULL, 'superlative_of_three', false, 2, 9002
   ),
   (
     'Who is ___ student in our class? — Lin, I think.',
     'mcq', 'the cleverer', 'cleverest', 'the cleverest', 'more clever', 'C',
     NULL::text[],
     '全班范围 + 最 → 最高级 + the = **the cleverest**。',
-    NULL::jsonb, NULL, 'superlative_class', false, 2, 9003
+    '{}'::jsonb, NULL, 'superlative_class', false, 2, 9003
   ),
 
   (
@@ -267,21 +267,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'the most interesting',
     ARRAY['the most interesting']::text[],
     'interesting 多音节 → the most interesting。',
-    NULL::jsonb, NULL, 'superlative_most', false, 2, 9004
+    '{}'::jsonb, NULL, 'superlative_most', false, 2, 9004
   ),
   (
     'Tom is one of ____ (good) singers in our school.',
     'fill', NULL, NULL, NULL, NULL, 'the best',
     ARRAY['the best']::text[],
     'one of the + best + singers（复数）；good 不规则 → best。',
-    NULL::jsonb, NULL, 'superlative_one_of', false, 2, 9005
+    '{}'::jsonb, NULL, 'superlative_one_of', false, 2, 9005
   ),
   (
     'The bag is ____ (heavy) of all.',
     'fill', NULL, NULL, NULL, NULL, 'the heaviest',
     ARRAY['the heaviest']::text[],
     'heavy（辅音+y）→ heaviest；of all → 用 of。',
-    NULL::jsonb, NULL, 'superlative_y_to_i', false, 1, 9006
+    '{}'::jsonb, NULL, 'superlative_y_to_i', false, 1, 9006
   ),
 
   (
@@ -291,7 +291,7 @@ FROM p, (VALUES
       'Mount Everest is the highest mountain in the world.'
     ]::text[],
     'No other X is + 比较级 + than Y = Y is + 最高级。',
-    NULL::jsonb, NULL, 'superlative_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'superlative_transform', true, 2, 9007
   ),
   (
     '改成 one of 句型：  "Suzhou is a very beautiful city in China."',
@@ -300,7 +300,7 @@ FROM p, (VALUES
       'Suzhou is one of the most beautiful cities in China.'
     ]::text[],
     'one of the + 最高级 + 复数名词；city → cities。',
-    NULL::jsonb, NULL, 'superlative_one_of_transform', true, 3, 9008
+    '{}'::jsonb, NULL, 'superlative_one_of_transform', true, 3, 9008
   ),
 
   (
@@ -310,7 +310,7 @@ FROM p, (VALUES
       'He is the tallest student in our class.'
     ]::text[],
     '最高级前面必须加 **the**。',
-    NULL::jsonb, NULL, 'superlative_missing_the', true, 1, 9009
+    '{}'::jsonb, NULL, 'superlative_missing_the', true, 1, 9009
   ),
   (
     '改错：  "Suzhou is one of the most beautiful city in China."',
@@ -319,7 +319,7 @@ FROM p, (VALUES
       'Suzhou is one of the most beautiful cities in China.'
     ]::text[],
     '"one of the + 最高级 + **复数**名词"。city → cities。',
-    NULL::jsonb, NULL, 'superlative_one_of_plural', true, 2, 9010
+    '{}'::jsonb, NULL, 'superlative_one_of_plural', true, 2, 9010
   ),
 
   (
@@ -332,7 +332,7 @@ FROM p, (VALUES
       'The Great Wall is among the longest man-made structures in the world.'
     ]::text[],
     '考点：① "之一"= one of the + 最高级 + 复数；② "人造建筑"= man-made structures / buildings；③ 范围"世界上"= in the world。',
-    NULL::jsonb, '更地道：用 structures 比 buildings 更准确（长城不是楼）。one of the longest 是中考写作高分句型。', 'superlative_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：用 structures 比 buildings 更准确（长城不是楼）。one of the longest 是中考写作高分句型。', 'superlative_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

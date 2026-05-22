@@ -161,7 +161,7 @@ SET
       "option_d": "should being",
       "correct_answer": "B",
       "trap": "选 A is 是变形动词。选 C shoulds 多 s。选 D being 用了 ing。",
-      "why":  "**should + be**（动词原形）= 按理应该。表"按理推测"。"
+      "why":  "**should + be**（动词原形）= 按理应该。表\"按理推测\"。"
     }
   ]$jsonb$::jsonb
 
@@ -170,7 +170,7 @@ WHERE code = 'g8.18';
 
 UPDATE junior_grammar_points SET teacher_script = $jsonb$[
   {
-    "text": "今天解锁**should**。中考"给建议"作文的必背动词，三秒搞定它。",
+    "text": "今天解锁**should**。中考\"给建议\"作文的必背动词，三秒搞定它。",
     "show": "🎯 Today: should + 动词原形",
     "duration": 9
   },
@@ -238,28 +238,28 @@ FROM p, (VALUES
     'mcq', 'should to eat', 'should eat', 'shoulds eat', 'should eats', 'B',
     NULL::text[],
     'should + 动词原形（eat），无人称变化。',
-    NULL::jsonb, NULL, 'should_basic', false, 1, 9000
+    '{}'::jsonb, NULL, 'should_basic', false, 1, 9000
   ),
   (
     'You ___ play computer games for so long every day.',
     'mcq', 'should',  'shouldn''t', 'should to', 'shouldn''t to', 'B',
     NULL::text[],
     '"不应该长时间打游戏"→ shouldn''t + 动词原形。',
-    NULL::jsonb, NULL, 'should_negative', false, 1, 9001
+    '{}'::jsonb, NULL, 'should_negative', false, 1, 9001
   ),
   (
     '___ we walk to the cinema or take a taxi?',
     'mcq', 'Should', 'Are', 'Do', 'Will', 'A',
     NULL::text[],
     '提建议 / 询问对方意见用 Should + 主语 + 动词原形。',
-    NULL::jsonb, NULL, 'should_suggestion', false, 1, 9002
+    '{}'::jsonb, NULL, 'should_suggestion', false, 1, 9002
   ),
   (
     'It''s already 7:30. Mom ___ home by now.',
     'mcq', 'should is', 'should be', 'shoulds be', 'should being', 'B',
     NULL::text[],
     'should + be（原形）表"按理应该"。',
-    NULL::jsonb, NULL, 'should_deduction', false, 2, 9003
+    '{}'::jsonb, NULL, 'should_deduction', false, 2, 9003
   ),
 
   (
@@ -267,21 +267,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'should respect',
     ARRAY['should respect']::text[],
     'should + 动词原形。',
-    NULL::jsonb, NULL, 'should_obligation', false, 1, 9004
+    '{}'::jsonb, NULL, 'should_obligation', false, 1, 9004
   ),
   (
     'You look pale. You ____ (see) a doctor.',
     'fill', NULL, NULL, NULL, NULL, 'should see',
     ARRAY['should see']::text[],
     '给建议 → You should see ...',
-    NULL::jsonb, NULL, 'should_advice', false, 1, 9005
+    '{}'::jsonb, NULL, 'should_advice', false, 1, 9005
   ),
   (
     'Children ____ (not, play) with fire.',
     'fill', NULL, NULL, NULL, NULL, 'shouldn''t play',
     ARRAY['shouldn''t play', 'should not play']::text[],
     'should not 缩写 shouldn''t + 动词原形。',
-    NULL::jsonb, NULL, 'should_negative', false, 2, 9006
+    '{}'::jsonb, NULL, 'should_negative', false, 2, 9006
   ),
 
   (
@@ -291,7 +291,7 @@ FROM p, (VALUES
       'You should go to bed early.'
     ]::text[],
     'It''s a good idea to do = You should do。',
-    NULL::jsonb, NULL, 'should_advice_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'should_advice_transform', true, 2, 9007
   ),
   (
     '改写为否定建议：  "You should play computer games late at night."',
@@ -300,7 +300,7 @@ FROM p, (VALUES
       'You shouldn''t play computer games late at night.'
     ]::text[],
     'should → shouldn''t；其他不变。',
-    NULL::jsonb, NULL, 'should_negative_transform', true, 2, 9008
+    '{}'::jsonb, NULL, 'should_negative_transform', true, 2, 9008
   ),
 
   (
@@ -310,7 +310,7 @@ FROM p, (VALUES
       'You should drink more water on hot days.'
     ]::text[],
     'should + 动词原形（不加 to）。',
-    NULL::jsonb, NULL, 'should_no_to', true, 1, 9009
+    '{}'::jsonb, NULL, 'should_no_to', true, 1, 9009
   ),
   (
     '改错：  "He shoulds finish his homework before 10 p.m."',
@@ -319,7 +319,7 @@ FROM p, (VALUES
       'He should finish his homework before 10 p.m.'
     ]::text[],
     '情态动词无人称变化，shoulds 错。',
-    NULL::jsonb, NULL, 'should_no_s', true, 2, 9010
+    '{}'::jsonb, NULL, 'should_no_s', true, 2, 9010
   ),
 
   (
@@ -331,7 +331,7 @@ FROM p, (VALUES
       'You should exercise more often and stop sitting and using your phone all day.'
     ]::text[],
     '考点：① should + exercise more（动词原形）；② shouldn''t + always sit + play；③ "玩手机"= play with your phone / use your phone。',
-    NULL::jsonb, '更地道：exercise more 比 do more exercises 更自然；play with your phone 比 play your phone 更地道。', 'should_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：exercise more 比 do more exercises 更自然；play with your phone 比 play your phone 更地道。', 'should_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

@@ -98,7 +98,7 @@ SET
       "wrong": "He has went to Shanghai twice.",
       "model": "He has been to Shanghai twice.",
       "hint":  "twice 表经历，人已回来",
-      "why":   "**have been to**（去过，回来了）vs **have gone to**（去了，还没回来）。twice 表"次数"必须用 been to。另外，went 是过去式，过去分词是 **gone**。"
+      "why":   "**have been to**（去过，回来了）vs **have gone to**（去了，还没回来）。twice 表\"次数\"必须用 been to。另外，went 是过去式，过去分词是 **gone**。"
     },
     {
       "wrong": "She has lived here since 5 years.",
@@ -134,7 +134,7 @@ SET
       "option_c": "Have / gone",
       "option_d": "Are / going",
       "correct_answer": "B",
-      "trap": "选 C 的同学忽略了：问的是经历（ever），回答说"我去过"，人现在不在那 → 必须用 **been to**。gone to 表示"人还在那儿没回来"。",
+      "trap": "选 C 的同学忽略了：问的是经历（ever），回答说\"我去过\"，人现在不在那 → 必须用 **been to**。gone to 表示\"人还在那儿没回来\"。",
       "why":  "**Have you ever been to ...?** 是问经历的固定句型。回答虽然用过去时（climbed last summer），但问句必须用现在完成时。"
     },
     {
@@ -145,7 +145,7 @@ SET
       "option_d": "lives / since",
       "correct_answer": "B",
       "trap": "选 C 的同学把 since 看成了 for — 2018 是**时间点**，必须搭配 **since**。选 A 时态错（持续到现在用完成时）。",
-      "why":  "①"持续到现在"用现在完成时；② **since + 时间点**（2018 是年份），**for + 时长**（5 years）。"
+      "why":  "①\"持续到现在\"用现在完成时；② **since + 时间点**（2018 是年份），**for + 时长**（5 years）。"
     },
     {
       "stem": "— Where''s Mom?\n— She ___ to the supermarket. She''ll be back soon.",
@@ -154,8 +154,8 @@ SET
       "option_c": "went",
       "option_d": "goes",
       "correct_answer": "B",
-      "trap": "选 A 的同学没看到 "She''ll be back soon"（她马上回来）— 说明妈妈**还没回**，必须用 **has gone**。",
-      "why":  "**has been to**：去过然后回来了。**has gone to**：去了还没回。看后半句 "She''ll be back soon" 就锁定 gone。"
+      "trap": "选 A 的同学没看到 \"She''ll be back soon\"（她马上回来）— 说明妈妈**还没回**，必须用 **has gone**。",
+      "why":  "**has been to**：去过然后回来了。**has gone to**：去了还没回。看后半句 \"She''ll be back soon\" 就锁定 gone。"
     },
     {
       "stem": "— ___ you ___ the new film yet?\n— No, not ___.",
@@ -165,7 +165,7 @@ SET
       "option_d": "Do / see / yet",
       "correct_answer": "C",
       "trap": "选 B 的同学把过去式 saw 用进了完成时（必须是 seen）。yet 出现在疑问/否定句末；already 用在肯定句。",
-      "why":  "**yet** = 还，专用在否定/疑问句末。回答 "Not yet." 是固定搭配。see → saw → **seen**。"
+      "why":  "**yet** = 还，专用在否定/疑问句末。回答 \"Not yet.\" 是固定搭配。see → saw → **seen**。"
     }
   ]$jsonb$::jsonb
 
@@ -242,28 +242,28 @@ FROM p, (VALUES
     'mcq', 'have', 'have had', 'had', 'have having', 'B',
     NULL::text[],
     'for three years = 持续到现在 → 现在完成时 = **have + 过去分词**。have 的过去分词是 had，所以是 **have had**。',
-    NULL::jsonb, NULL, 'present_perfect_for', false, 1, 9000
+    '{}'::jsonb, NULL, 'present_perfect_for', false, 1, 9000
   ),
   (
     '— Where is your father?\n— He ___ to Beijing on business. He''ll come back next week.',
     'mcq', 'has been', 'has gone', 'went', 'goes', 'B',
     NULL::text[],
     '"He''ll come back next week"（下周才回）= 人还没回 → **has gone to**。',
-    NULL::jsonb, NULL, 'present_perfect_been_gone', false, 2, 9001
+    '{}'::jsonb, NULL, 'present_perfect_been_gone', false, 2, 9001
   ),
   (
     'My family ___ in Suzhou ___ I was born.',
     'mcq', 'lived / for', 'has lived / since', 'lives / since', 'has lived / for', 'B',
     NULL::text[],
     '持续动作用现在完成时 = has lived；"I was born"是时间点 → **since**。',
-    NULL::jsonb, NULL, 'present_perfect_since', false, 2, 9002
+    '{}'::jsonb, NULL, 'present_perfect_since', false, 2, 9002
   ),
   (
     '— ___ Tom ___ his homework yet?\n— Yes, he ___ it twenty minutes ago.',
     'mcq', 'Has / done / has finished', 'Has / done / finished', 'Did / done / did', 'Has / did / finished', 'B',
     NULL::text[],
     '疑问 = Has + V-ed = **Has done**；回答里 "20 minutes ago" 是过去时间点 → 必须用一般过去时 **finished**，不是现在完成时。',
-    NULL::jsonb, '这题是高频陷阱：问句用完成时，但回答出现具体过去时间就必须切换到一般过去时。', 'present_perfect_vs_past', false, 3, 9003
+    '{}'::jsonb, '这题是高频陷阱：问句用完成时，但回答出现具体过去时间就必须切换到一般过去时。', 'present_perfect_vs_past', false, 3, 9003
   ),
 
   -- ─── 3 fill-in ───
@@ -272,21 +272,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'have read',
     ARRAY['have read', 'have already read']::text[],
     'three times = 经历 → 现在完成时 = **have read**（read 的过去分词还是 read，但读音变成 /red/）。',
-    NULL::jsonb, NULL, 'present_perfect_experience', false, 2, 9004
+    '{}'::jsonb, NULL, 'present_perfect_experience', false, 2, 9004
   ),
   (
     'Lin ____ (not finish) her project yet. She needs more time.',
     'fill', NULL, NULL, NULL, NULL, 'hasn''t finished',
     ARRAY['hasn''t finished', 'has not finished']::text[],
     'yet 出现在否定句末 → 现在完成时否定 = **hasn''t + 过去分词**。',
-    NULL::jsonb, NULL, 'present_perfect_negative', false, 2, 9005
+    '{}'::jsonb, NULL, 'present_perfect_negative', false, 2, 9005
   ),
   (
     'My grandma ____ (live) in this town since 1980.',
     'fill', NULL, NULL, NULL, NULL, 'has lived',
     ARRAY['has lived', 'has been living']::text[],
     'since 1980 = 1980 年起持续到现在 → **has lived**（或 has been living，都对）。',
-    NULL::jsonb, NULL, 'present_perfect_since', false, 2, 9006
+    '{}'::jsonb, NULL, 'present_perfect_since', false, 2, 9006
   ),
 
   -- ─── 2 transform ───
@@ -298,7 +298,7 @@ FROM p, (VALUES
       'Tom has already had his lunch.'
     ]::text[],
     '现在完成时 = has + 过去分词。already 通常放在 has 和过去分词之间。',
-    NULL::jsonb, NULL, 'present_perfect_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'present_perfect_transform', true, 2, 9007
   ),
   (
     '把句子改成否定句（用 yet）：  "She has answered the message."',
@@ -308,7 +308,7 @@ FROM p, (VALUES
       'She has not answered the message yet.'
     ]::text[],
     '否定句 = has not / hasn''t + V-ed；yet 放在句末。',
-    NULL::jsonb, NULL, 'present_perfect_negative', true, 2, 9008
+    '{}'::jsonb, NULL, 'present_perfect_negative', true, 2, 9008
   ),
 
   -- ─── 2 correction ───
@@ -319,7 +319,7 @@ FROM p, (VALUES
       'I saw this movie last weekend.'
     ]::text[],
     '**last weekend** 是具体过去时间，现在完成时不能与之连用，必须用一般过去时 **saw**。',
-    NULL::jsonb, NULL, 'present_perfect_vs_past', true, 2, 9009
+    '{}'::jsonb, NULL, 'present_perfect_vs_past', true, 2, 9009
   ),
   (
     '改错：  "Tom has went to the library and is studying there now."',
@@ -328,7 +328,7 @@ FROM p, (VALUES
       'Tom has gone to the library and is studying there now.'
     ]::text[],
     '①go 的过去分词是 **gone**，不是 went；② 人还在图书馆 → 用 **has gone to**（不是 been to）。',
-    NULL::jsonb, NULL, 'present_perfect_been_gone', true, 3, 9010
+    '{}'::jsonb, NULL, 'present_perfect_been_gone', true, 3, 9010
   ),
 
   -- ─── 1 translation ───
@@ -342,7 +342,7 @@ FROM p, (VALUES
       'I have studied vocabulary every day since September last year.'
     ]::text[],
     '考点：① "自从……以来"=since + 时间点 → **since last September**；② "一直/每天" 持续到现在 → 现在完成时（或现在完成进行时）。',
-    NULL::jsonb, '更地道：since last September 比 from last September 更自然；memorize / learn / study 三个动词在中考写作里都可接受。', 'present_perfect_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：since last September 比 from last September 更自然；memorize / learn / study 三个动词在中考写作里都可接受。', 'present_perfect_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

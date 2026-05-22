@@ -132,7 +132,7 @@ SET
       "option_c": "was doing / was ringing",
       "option_d": "did / was ringing",
       "correct_answer": "B",
-      "trap": "选 A 两边都过去式 — 没体现"被打断"。选 C 两边进行时 — 门铃是短突发不能用进行时。",
+      "trap": "选 A 两边都过去式 — 没体现\"被打断\"。选 C 两边进行时 — 门铃是短突发不能用进行时。",
       "why":  "**长动作（做作业）被短动作（门铃响）打断** → 长用进行时，短用过去式。"
     },
     {
@@ -152,7 +152,7 @@ SET
       "option_c": "were / do",
       "option_d": "did / doing",
       "correct_answer": "B",
-      "trap": "选 A 完全过去式 — 没体现"那一刻正在做"。选 C/D 助动词搭配错。",
+      "trap": "选 A 完全过去式 — 没体现\"那一刻正在做\"。选 C/D 助动词搭配错。",
       "why":  "**at 10 last night = 过去某一刻 → 进行时**。疑问句：**Were you doing ...?**"
     },
     {
@@ -240,28 +240,28 @@ FROM p, (VALUES
     'mcq', 'watched / rang', 'was watching / rang', 'was watching / was ringing', 'watched / was ringing', 'B',
     NULL::text[],
     '长动作（看电视）被短突发（门铃）打断 → 长用进行时 was watching，短用过去式 rang。',
-    NULL::jsonb, NULL, 'when_short_action', false, 1, 9000
+    '{}'::jsonb, NULL, 'when_short_action', false, 1, 9000
   ),
   (
     '___ I ___ along the river, I ___ a beautiful bird.',
     'mcq', 'When / walked / saw', 'While / was walking / saw', 'While / walked / saw', 'When / was walking / was seeing', 'B',
     NULL::text[],
     'while 引导长动作（散步）+ 主句短动作（看到鸟）→ while + was walking + saw。',
-    NULL::jsonb, NULL, 'while_long_action', false, 2, 9001
+    '{}'::jsonb, NULL, 'while_long_action', false, 2, 9001
   ),
   (
     '___ Mom ___ supper, Dad ___ a newspaper.',
     'mcq', 'When / cooked / read', 'While / was cooking / was reading', 'While / cooked / was reading', 'When / was cooking / read', 'B',
     NULL::text[],
     '两个长动作同时进行 → while 引导 + 两边都进行时。',
-    NULL::jsonb, NULL, 'while_parallel_actions', false, 2, 9002
+    '{}'::jsonb, NULL, 'while_parallel_actions', false, 2, 9002
   ),
   (
     'My little sister ___ when our dog suddenly ___ into the room.',
     'mcq', 'slept / ran', 'was sleeping / was running', 'was sleeping / ran', 'slept / was running', 'C',
     NULL::text[],
     '长（睡觉）被短（突然跑进来）打断 → was sleeping + ran。',
-    NULL::jsonb, NULL, 'when_interrupted', false, 2, 9003
+    '{}'::jsonb, NULL, 'when_interrupted', false, 2, 9003
   ),
 
   (
@@ -269,21 +269,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'was reading / called',
     ARRAY['was reading / called']::text[],
     'while 长动作（读书）+ 短突发（叫名字）→ was reading + called。',
-    NULL::jsonb, NULL, 'while_short_break', false, 2, 9004
+    '{}'::jsonb, NULL, 'while_short_break', false, 2, 9004
   ),
   (
     'When the earthquake ____ (happen), the students ____ (study) in the classroom.',
     'fill', NULL, NULL, NULL, NULL, 'happened / were studying',
     ARRAY['happened / were studying']::text[],
     '地震发生（短突发）+ 学生学习（长动作）→ happened + were studying。',
-    NULL::jsonb, NULL, 'when_short_long', false, 2, 9005
+    '{}'::jsonb, NULL, 'when_short_long', false, 2, 9005
   ),
   (
     'At 8 last night, Lin and her sister ____ (watch) a film together.',
     'fill', NULL, NULL, NULL, NULL, 'were watching',
     ARRAY['were watching']::text[],
     'at 8 last night = 过去某一刻 + 主语复数 → were watching。',
-    NULL::jsonb, NULL, 'past_continuous_time', false, 1, 9006
+    '{}'::jsonb, NULL, 'past_continuous_time', false, 1, 9006
   ),
 
   (
@@ -294,7 +294,7 @@ FROM p, (VALUES
       'When the phone rang, I was reading.'
     ]::text[],
     '长（读书）+ 短（电话响）→ when 引导短动作。',
-    NULL::jsonb, NULL, 'when_combine', true, 2, 9007
+    '{}'::jsonb, NULL, 'when_combine', true, 2, 9007
   ),
   (
     '合并成一句（用 while）：  "Mom was cooking. I was doing my homework."',
@@ -304,7 +304,7 @@ FROM p, (VALUES
       'Mom was cooking while I was doing my homework.'
     ]::text[],
     '两个长动作同时进行 → while 引导其中一个。',
-    NULL::jsonb, NULL, 'while_combine', true, 2, 9008
+    '{}'::jsonb, NULL, 'while_combine', true, 2, 9008
   ),
 
   (
@@ -314,7 +314,7 @@ FROM p, (VALUES
       'While I was reading a book, Tom was watching TV.'
     ]::text[],
     'while 引导两个长动作同时进行 → 两边都用过去进行时。',
-    NULL::jsonb, NULL, 'while_both_continuous', true, 2, 9009
+    '{}'::jsonb, NULL, 'while_both_continuous', true, 2, 9009
   ),
   (
     '改错：  "When the phone was ringing, I was cooking dinner."',
@@ -323,7 +323,7 @@ FROM p, (VALUES
       'When the phone rang, I was cooking dinner.'
     ]::text[],
     'when 后接短突发动作（电话响）→ 用一般过去时 rang。',
-    NULL::jsonb, NULL, 'when_no_continuous', true, 3, 9010
+    '{}'::jsonb, NULL, 'when_no_continuous', true, 3, 9010
   ),
 
   (
@@ -336,7 +336,7 @@ FROM p, (VALUES
       'I was eating lunch in the school cafeteria when the earthquake hit.'
     ]::text[],
     '考点：① 地震发生（短突发）+ 我在吃饭（长动作）→ when + happened + was having；② "学校食堂"= school cafeteria / dining hall。',
-    NULL::jsonb, '更地道：have lunch 比 eat lunch 更标准；school cafeteria 是美式，dining hall 是英式。', 'when_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：have lunch 比 eat lunch 更标准；school cafeteria 是美式，dining hall 是英式。', 'when_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

@@ -101,8 +101,8 @@ SET
     {
       "wrong": "My hair is longer than her.",
       "model": "My hair is longer than hers.",
-      "hint":  "比的是"她的头发"",
-      "why":   "比较对象要**一致**：比的是"我的头发"和"她的头发"。her = 她（人），**hers = 她的（头发）**。"
+      "hint":  "比的是\"她的头发\"",
+      "why":   "比较对象要**一致**：比的是\"我的头发\"和\"她的头发\"。her = 她（人），**hers = 她的（头发）**。"
     },
     {
       "wrong": "Math is gooder than physics.",
@@ -152,8 +152,8 @@ SET
       "option_c": "more nicer / hers",
       "option_d": "nice / hers",
       "correct_answer": "B",
-      "trap": "选 A 比较对象错（应该是"她的字"hers）；选 C 双重比较级；选 D 漏比较级。",
-      "why":  "nice → **nicer**；比的是"我的字"和"她的字" → 用 **hers**（= her handwriting）。"
+      "trap": "选 A 比较对象错（应该是\"她的字\"hers）；选 C 双重比较级；选 D 漏比较级。",
+      "why":  "nice → **nicer**；比的是\"我的字\"和\"她的字\" → 用 **hers**（= her handwriting）。"
     },
     {
       "stem": "— Which subject is ___, math or English?\n— English. It''s ___ for me.",
@@ -162,7 +162,7 @@ SET
       "option_c": "easier / a little easier",
       "option_d": "the easiest / much easier",
       "correct_answer": "A",
-      "trap": "选 B/D 多余的 the 或最高级（只两个科目用比较级）。选 C 在第二空"几乎不可能更简单"语境里太弱。",
+      "trap": "选 B/D 多余的 the 或最高级（只两个科目用比较级）。选 C 在第二空\"几乎不可能更简单\"语境里太弱。",
       "why":  "两科目对比 → 比较级 **easier**；答案补充说明 → 用 much 加强 → **much easier**。"
     }
   ]$jsonb$::jsonb
@@ -240,28 +240,28 @@ FROM p, (VALUES
     'mcq', 'more heavy', 'heavier', 'more heavier', 'heavyer', 'B',
     NULL::text[],
     'heavy（y 结尾）→ **heavier**。选 A/C/D 都是常见错误。',
-    NULL::jsonb, NULL, 'comparative_y_to_i', false, 1, 9000
+    '{}'::jsonb, NULL, 'comparative_y_to_i', false, 1, 9000
   ),
   (
     'This new game is ___ exciting than the old one.',
     'mcq', 'more', 'much', 'very', 'so', 'A',
     NULL::text[],
     'exciting 是多音节形容词 → 用 **more exciting**。',
-    NULL::jsonb, NULL, 'comparative_more', false, 1, 9001
+    '{}'::jsonb, NULL, 'comparative_more', false, 1, 9001
   ),
   (
     'The hot soup is ___ than I expected.',
     'mcq', 'a lot hotter', 'a lot more hot', 'very hotter', 'more hot', 'A',
     NULL::text[],
     'hot 单音节双写末辅音 → hotter；修饰用 **a lot**。',
-    NULL::jsonb, NULL, 'comparative_modifier', false, 2, 9002
+    '{}'::jsonb, NULL, 'comparative_modifier', false, 2, 9002
   ),
   (
     'Lin''s pronunciation is ___ than ___.',
     'mcq', 'better / me', 'gooder / mine', 'better / mine', 'more good / mine', 'C',
     NULL::text[],
     '①good 不规则 → **better**；② 比的是"她的发音"和"我的发音" → **mine**。',
-    NULL::jsonb, NULL, 'comparative_irregular_object', false, 3, 9003
+    '{}'::jsonb, NULL, 'comparative_irregular_object', false, 3, 9003
   ),
 
   (
@@ -269,21 +269,21 @@ FROM p, (VALUES
     'fill', NULL, NULL, NULL, NULL, 'colder',
     ARRAY['colder']::text[],
     'cold 单音节 + er = **colder**；much 修饰比较级。',
-    NULL::jsonb, NULL, 'comparative_basic', false, 1, 9004
+    '{}'::jsonb, NULL, 'comparative_basic', false, 1, 9004
   ),
   (
     'This math problem is ____ (difficult) than the last one.',
     'fill', NULL, NULL, NULL, NULL, 'more difficult',
     ARRAY['more difficult']::text[],
     'difficult 多音节 → **more difficult**。',
-    NULL::jsonb, NULL, 'comparative_more', false, 2, 9005
+    '{}'::jsonb, NULL, 'comparative_more', false, 2, 9005
   ),
   (
     'Her grade in English is ____ (good) than mine.',
     'fill', NULL, NULL, NULL, NULL, 'better',
     ARRAY['better']::text[],
     'good 不规则 → **better**。',
-    NULL::jsonb, NULL, 'comparative_irregular', false, 1, 9006
+    '{}'::jsonb, NULL, 'comparative_irregular', false, 1, 9006
   ),
 
   (
@@ -294,7 +294,7 @@ FROM p, (VALUES
       'Beijing is much bigger than Suzhou.'
     ]::text[],
     'A is not as big as B → B is bigger than A（注意比较关系翻转）。',
-    NULL::jsonb, NULL, 'comparative_transform', true, 2, 9007
+    '{}'::jsonb, NULL, 'comparative_transform', true, 2, 9007
   ),
   (
     '用 much 修饰比较级，合并：  "Today is cold. Yesterday was not so cold."',
@@ -304,7 +304,7 @@ FROM p, (VALUES
       'Today is a lot colder than yesterday.'
     ]::text[],
     'much / a lot 都是修饰比较级的常用副词。',
-    NULL::jsonb, NULL, 'comparative_modifier', true, 2, 9008
+    '{}'::jsonb, NULL, 'comparative_modifier', true, 2, 9008
   ),
 
   (
@@ -314,7 +314,7 @@ FROM p, (VALUES
       'He is much taller than his brother.'
     ]::text[],
     '双重比较级（more + -er）是中考最高频改错点。要加强用 **much / a lot / even**。',
-    NULL::jsonb, NULL, 'comparative_double', true, 2, 9009
+    '{}'::jsonb, NULL, 'comparative_double', true, 2, 9009
   ),
   (
     '改错：  "My hair is longer than her."',
@@ -323,7 +323,7 @@ FROM p, (VALUES
       'My hair is longer than hers.'
     ]::text[],
     '比较对象要**对等**：比的是"我的头发"和"她的头发" → **hers**（her hair 的缩写）。',
-    NULL::jsonb, NULL, 'comparative_pronoun_match', true, 3, 9010
+    '{}'::jsonb, NULL, 'comparative_pronoun_match', true, 3, 9010
   ),
 
   (
@@ -336,7 +336,7 @@ FROM p, (VALUES
       'This summer is far hotter than last summer.'
     ]::text[],
     '考点：① hot 单音节双写 → hotter；② "得多"用 much / a lot / far 修饰比较级；③ 比较对象 last summer。',
-    NULL::jsonb, '更地道：It is much hotter this summer than last summer 是英语母语者更常用的句式（it 形式主语开头）。', 'comparative_translation', true, 3, 9011
+    '{}'::jsonb, '更地道：It is much hotter this summer than last summer 是英语母语者更常用的句式（it 形式主语开头）。', 'comparative_translation', true, 3, 9011
   )
 ) AS q(stem, question_type, option_a, option_b, option_c, option_d, correct_answer,
        accepted_answers, explanation, distractors, natural_note, grammar_topic, use_ai_grading,

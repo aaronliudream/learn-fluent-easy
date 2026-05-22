@@ -62,16 +62,19 @@ type LabState = {
   mistakes: Mistake[];
 };
 
+// Test-focused Lab: removed the 5 "lecture-style" phases (brief / teacher
+// lesson / foundation / reflex / drill) per user request. The Lab now opens
+// directly into the correction challenge and works through to the final
+// celebration. Phase IDs stay the same as before (5..8) so the existing
+// render blocks (phase === 5/6/7/8) continue to work unchanged.
 const PHASES = [
-{ id: 0, key: "brief", name: "情境钩子", emoji: "🎬" },
-{ id: 1, key: "lesson", name: "老师讲堂", emoji: "👩‍🏫" },
-{ id: 2, key: "foundation", name: "核心公式", emoji: "📐" },
-{ id: 3, key: "reflex", name: "反射卡", emoji: "⚡" },
-{ id: 4, key: "drill", name: "情境翻译", emoji: "✍️" },
 { id: 5, key: "correction", name: "改错挑战", emoji: "🛠️" },
 { id: 6, key: "exam", name: "真题练习", emoji: "📚" },
 { id: 7, key: "boss", name: "Boss 冲刺", emoji: "👑" },
 { id: 8, key: "done", name: "通关庆典", emoji: "🎉" }];
+
+const MAX_PHASE = 8;
+const INITIAL_PHASE = 5;
 
 
 const ACHIEVEMENTS = [
@@ -1032,7 +1035,7 @@ export default function JuniorGrammarLab() {
   const [pt, setPt] = useState<Pt | null>(null);
   const [examQs, setExamQs] = useState<ExamQ[]>([]);
   const [loading, setLoading] = useState(true);
-  const [phase, setPhase] = useState(0);
+  const [phase, setPhase] = useState(INITIAL_PHASE);
   const [state, setState] = useState<LabState>({ xp: 0, streak: 0, bestStreak: 0, phasesDone: [], achievements: [], mistakes: [] });
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [focus, setFocus] = useState(false);
@@ -1160,7 +1163,9 @@ export default function JuniorGrammarLab() {
   const completePhase = (phaseId: number, unlocks: string[] = []) => {
     setState((s) => ({ ...s, phasesDone: Array.from(new Set([...s.phasesDone, phaseId])) }));
     grant({ addXp: XP.phase_clear, unlock: unlocks });
-    setPhase((p) => Math.min(p + 1, PHASES.length - 1));
+    // Cap on the highest phase id (8 = done), not PHASES.length - 1 — the
+    // PHASES array now has only 4 visible entries (5..8) so length-1 would be 3.
+    setPhase((p) => Math.min(p + 1, MAX_PHASE));
   };
 
   const persistBossPassed = async (firstTryCorrect: number, total: number) => {
@@ -1297,7 +1302,7 @@ export default function JuniorGrammarLab() {
         nextPointTitle={nextPointTitle}
         grammarHref={pt?.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar"}
         onRevenge={() => setPhase(REVENGE_PHASE)}
-        onReplay={() => {setPhase(0);setState({ ...state, phasesDone: [], streak: 0, mistakes: [] });}}
+        onReplay={() => {setPhase(INITIAL_PHASE);setState({ ...state, phasesDone: [], streak: 0, mistakes: [] });}}
         onAskTutor={(m) => {
           const url = `/junior/grammar/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;
           window.location.href = url;

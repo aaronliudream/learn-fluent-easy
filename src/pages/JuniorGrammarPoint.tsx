@@ -129,9 +129,13 @@ export default function JuniorGrammarPoint() {
 
   // Determine which stages have data → auto-skip empty ones.
   // ?quick=1 (测试模式) forces practice-only: skip lesson + immersion entirely.
+  // NOTE: in quick mode we ALWAYS include "practice" even before qs loads, so the
+  // initial-stage effect doesn't accidentally land on "reflect" during the brief
+  // window between mount and DB response (which would then "stick" there because
+  // "reflect" stays in availableStages once questions arrive).
   const availableStages = useMemo<Stage[]>(() => {
     if (isQuick) {
-      return qs.length > 0 ? ["practice", "reflect"] : ["reflect"];
+      return ["practice", "reflect"];
     }
     if (!pt) return ["practice", "reflect"];
     const stages: Stage[] = [];

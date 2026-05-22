@@ -1069,9 +1069,18 @@ export default function JuniorGrammarLab() {
       select("id,title,cefr,grade,mnemonic,explanation_md,teacher_script,immersion_cards,hook_line,hook_line_cn,contrast_table,reflex_cards,situation_drills,correction_tasks,boss_questions").
       eq("id", id).maybeSingle();
       if (p) setPt(p as any);
+      // Gold-standard MCQs only (sort_order 9000-9099). The Lab's MCQRunner
+      // can only render MCQ rows — older seed rows in sort_order 1-99 have NULL
+      // option columns and render as "nan", so we scope to the gold-standard
+      // range where I guarantee all 4 option columns are filled.
       const { data: qs } = await supabase.from("junior_grammar_questions").
-      select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty").
-      eq("point_id", id).eq("question_type", "mcq").order("difficulty").limit(8);
+      select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty,sort_order").
+      eq("point_id", id).
+      eq("question_type", "mcq").
+      gte("sort_order", 9000).
+      lte("sort_order", 9099).
+      order("sort_order").
+      limit(12);
       setExamQs(qs as any || []);
       const [{ data: allPts }, masteryRows] = await Promise.all([
         supabase
@@ -1271,7 +1280,7 @@ export default function JuniorGrammarLab() {
       {phase === 6 &&
       <MCQRunner
         label="真题练习"
-        questions={examQs.slice(0, 5)}
+        questions={examQs}
         onCorrect={() => {onCorrect();grant({ addXp: XP.exam });}}
         onMistake={onMistake}
         onDone={() => completePhase(6, ["exam_clear"])} />

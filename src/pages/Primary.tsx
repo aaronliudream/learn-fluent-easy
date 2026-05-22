@@ -229,7 +229,7 @@ export default function Primary() {
 
   return (
     <main className="mx-auto min-h-screen max-w-2xl md:max-w-3xl px-5 py-6">
-      <BackLink to="/#stages" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/#courses" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> <T>返回学习阶段</T>
       </BackLink>
 

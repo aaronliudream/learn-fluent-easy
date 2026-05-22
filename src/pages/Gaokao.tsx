@@ -87,7 +87,7 @@ export default function Gaokao() {
     >
       <div className="mx-auto max-w-2xl px-5 py-6">
         <div className="mb-3" style={{ color: NAVY, opacity: 0.7 }}>
-          <BackLink to="/#stages" className="inline-flex items-center gap-1 text-xs hover:opacity-70">
+          <BackLink to="/#courses" className="inline-flex items-center gap-1 text-xs hover:opacity-70">
             <ArrowLeft className="size-4" /> <T>返回学习阶段</T>
           </BackLink>
         </div>

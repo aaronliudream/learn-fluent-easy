@@ -23,7 +23,9 @@ export function juniorGrammarPlayPath(
   opts?: { classic?: boolean },
 ): string {
   if (opts?.classic) return `/junior/grammar/${pointId}?classic=1`;
-  if (p && hasLabContent(p)) return `/junior/grammar-lab/${pointId}`;
+  // Gold-standard points (content_depth >= 1) → adaptive 5-level mastery test.
+  // Legacy multi-phase Lab still accessible via /junior/grammar-lab/<id>?legacy=1.
+  if (p && hasLabContent(p)) return `/junior/grammar/${pointId}/mastery`;
   return `/junior/grammar/${pointId}`;
 }
 

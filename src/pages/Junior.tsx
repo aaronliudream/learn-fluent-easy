@@ -30,6 +30,9 @@ export default function Junior() {
   { to: `/junior/listening${q}`, icon: Headphones, title: "听力短文训练", desc: "对话/短文 · 听音答题 · 中考听力题型", gradient: "from-sky-500 via-blue-500 to-indigo-500" },
   { to: `/junior/writing${q}`, icon: PenLine, title: "中考写作训练", desc: "命题作文 · AI 批改 · 高分范文对比", gradient: "from-fuchsia-500 via-pink-500 to-rose-500" }];
 
+  const PAST_PAPERS = [
+  { to: "/junior/suzhou", icon: "🏛️", title: "苏州中考真题", desc: "2019-2024 · 6 套真题 · 三种模式 · AI 答疑", gradient: "from-stone-500 via-amber-600 to-orange-600" }];
+
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
@@ -91,6 +94,12 @@ export default function Junior() {
         </div>
       </div>
 
+      <div className="mb-3 mt-2 flex items-baseline justify-between">
+        <h2 className="text-lg font-extrabold tracking-tight"><T>📚 词汇 · 语法 · 听 · 说 · 读 · 写</T></h2>
+        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+          <T>Skills</T>
+        </span>
+      </div>
       <section className="grid gap-3">
         {MODULES.map((m) => {
           const Icon = typeof m.icon === "string" ? null : m.icon;
@@ -111,6 +120,38 @@ export default function Junior() {
             </Link>);
 
         })}
+      </section>
+
+      <section className="mt-8">
+        <div className="mb-3 flex items-baseline justify-between">
+          <h2 className="text-lg font-extrabold tracking-tight"><T>📋 中考真题</T></h2>
+          <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+            <T>Zhongkao Past Papers</T>
+          </span>
+        </div>
+        <p className="mb-3 text-xs text-muted-foreground">
+          <T>历年真题模考 · 限时 · 自动判分 · 错题进复习</T>
+        </p>
+        <div className="grid gap-3">
+          {PAST_PAPERS.map((p) =>
+          <Link
+            key={p.title}
+            to={p.to}
+            className={`relative flex items-center gap-4 overflow-hidden rounded-2xl p-4 bg-gradient-to-br ${p.gradient} text-white shadow-tile transition hover:-translate-y-0.5`}>
+            <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
+            <div className="relative grid size-12 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm text-2xl">
+              <span>{p.icon}</span>
+            </div>
+            <div className="relative flex-1 min-w-0">
+              <div className="text-base font-extrabold leading-tight"><T>{p.title}</T></div>
+              <div className="mt-0.5 text-xs opacity-90"><T>{p.desc}</T></div>
+            </div>
+          </Link>
+          )}
+          <div className="grid place-items-center rounded-2xl border-2 border-dashed border-border/60 p-4 text-xs text-muted-foreground">
+            <T>更多城市真题陆续上线（上海 · 北京 · 广州 …）</T>
+          </div>
+        </div>
       </section>
 
       <div className="mt-8 rounded-2xl border border-border/60 bg-card p-4">

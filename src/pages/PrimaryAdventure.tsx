@@ -20,15 +20,6 @@ import {
   takeCelebrationOnce,
   type AdventureStep } from
 "@/lib/dailyAdventure";
-import {
-  fetchPrimaryTrackSnapshot,
-  formatPrimaryTrackLabel,
-  isPrepGrade,
-  primaryVocabPath,
-  type PrimaryTrackSnapshot,
-} from "@/lib/primaryDailyPlan";
-import { useMasteryOverview } from "@/hooks/useMasteryOverview";
-import { pickPrimaryContinue } from "@/lib/primaryDailyPlan";
 import { bondOnAdventureComplete } from "@/lib/petGrowth";
 import {
   primaryGradeMapPath,
@@ -84,8 +75,6 @@ export default function PrimaryAdventure() {
   const [myProgress, setMyProgress] = useState<ProgressRow[] | null>(null);
   const [swMasteredCount, setSwMasteredCount] = useState(0);
   const [g2LessonsDone, setG2LessonsDone] = useState(0);
-  const [track, setTrack] = useState<PrimaryTrackSnapshot | null>(null);
-  const masteryOv = useMasteryOverview("primary");
   const [sfxOn, setSfxOnState] = useState<boolean>(() => isSfxEnabled());
   const [progressOpen, setProgressOpen] = useState(false);
   // 用今天的日期做 memo key,避免页面跨午夜后还显示昨天的轮换步骤
@@ -106,8 +95,6 @@ export default function PrimaryAdventure() {
       (lessons ?? []).find((l: any) => !l.progress?.[0]?.completed_at) ??
       (lessons ?? [])[0];
       setNextLessonId(nextLesson?.id ?? null);
-      const snap = await fetchPrimaryTrackSnapshot(uid, grade);
-      setTrack(snap);
 
       if (uid) {
         const { data: p } = await supabase.from("pet_state").select("name,level,bond").eq("user_id", uid).maybeSingle();
@@ -178,21 +165,9 @@ export default function PrimaryAdventure() {
     })();
   }, [grade]);
 
-  const continuePick = useMemo(() => {
-    if (masteryOv.loading || !masteryOv.signedIn) return null;
-    return pickPrimaryContinue(masteryOv, grade);
-  }, [masteryOv, grade]);
-
   const steps: AdventureStep[] = useMemo(
-    () =>
-      buildDailyAdventure({
-        grade,
-        nextLessonId,
-        sightWordsMasteredCount: swMasteredCount,
-        track: isPrepGrade(grade) ? null : track,
-        continuePick,
-      }),
-    [grade, nextLessonId, swMasteredCount, todayKey, track, continuePick]
+    () => buildDailyAdventure({ grade, nextLessonId, sightWordsMasteredCount: swMasteredCount }),
+    [grade, nextLessonId, swMasteredCount, todayKey]
   );
 
   const doneCount = steps.filter((s) => progress[s.kind]).length;
@@ -265,41 +240,10 @@ export default function PrimaryAdventure() {
   // “想做点别的?” — Reading / Listening / Roleplay 三个模块的快捷入口,
   // 防止主页改造后这 3 个模块失去入口。进度数字直接复用 myProgress。
   const findRow = (label: string) => (myProgress ?? []).find((r) => r.label === label);
-  const exploreCards = isPrepGrade(grade)
-    ? [
-        { to: primaryReadingEntryPath(grade), emoji: "📚", label: "读绘本", row: findRow("读绘本") },
-        { to: `/primary/listening${gradeQ}`, emoji: "🎧", label: "听对话", row: findRow("听一听") },
-        { to: `/primary/roleplays${gradeQ}`, emoji: "🎭", label: "演角色", row: findRow("演故事") },
-      ]
-    : [
-        {
-          to: track?.nextReadingArticleId
-            ? `/primary/reading/play/${track.nextReadingArticleId}`
-            : primaryReadingListPath(grade),
-          emoji: "📖",
-          label: "读故事",
-          row: track ? { done: track.readingDone, total: track.readingTotal } : undefined,
-        },
-        {
-          to: track?.nextListeningLessonId
-            ? `/primary/lesson/${track.nextListeningLessonId}`
-            : primaryGradeMapPath(grade),
-          emoji: "🎧",
-          label: "听力课",
-          row: undefined,
-        },
-        {
-          to: track
-            ? primaryVocabPath(grade, {
-                volume: track.pepVolume,
-                focus: track.dueVocabCount > 0 ? "due" : undefined,
-              })
-            : `/primary/vocab/${grade}`,
-          emoji: "📚",
-          label: track && track.dueVocabCount > 0 ? `复习 ${track.dueVocabCount} 词` : "认单词",
-          row: undefined,
-        },
-      ];
+  const exploreCards = [
+  { to: primaryReadingEntryPath(grade), emoji: "📚", label: "读绘本", row: findRow("读绘本") },
+  { to: `/primary/listening${gradeQ}`, emoji: "🎧", label: "听对话", row: findRow("听一听") },
+  { to: `/primary/roleplays${gradeQ}`, emoji: "🎭", label: "演角色", row: findRow("演故事") }];
 
 
   return (
@@ -355,16 +299,9 @@ export default function PrimaryAdventure() {
       </div>
 
       {/* G3-G6 教材同步提示 */}
-      {grade > 2 && track &&
+      {grade > 2 &&
       <div className="mb-3 flex flex-wrap items-center gap-2 rounded-xl border border-sky-200 bg-sky-50 p-3 text-sm text-sky-800 dark:border-sky-800 dark:bg-sky-950/40 dark:text-sky-200">
-          <span>
-            <T>📚 今日主线：</T> {formatPrimaryTrackLabel(track)}
-            {track && track.dueVocabCount > 0 && (
-              <span className="ml-2 rounded-full bg-orange-200 px-2 py-0.5 text-[11px] font-bold text-orange-800">
-                <T>待复习</T> {track.dueVocabCount}
-              </span>
-            )}
-          </span>
+          <span><T>📚 教材同步模式：对应人教/外研社版主线内容，Spark 带你一课一课过。</T></span>
         </div>
       }
 

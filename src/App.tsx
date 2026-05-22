@@ -122,6 +122,8 @@ const FriendPet = lazy(() => import("./pages/FriendPet.tsx"));
 const GlobalParent = lazy(() => import("./pages/GlobalParent.tsx"));
 const Social = lazy(() => import("./pages/Social.tsx"));
 const Ask = lazy(() => import("./pages/Ask.tsx"));
+const Teacher = lazy(() => import("./pages/Teacher.tsx"));
+const TeacherClass = lazy(() => import("./pages/TeacherClass.tsx"));
 const TeacherCards = lazy(() => import("./pages/TeacherCards.tsx"));
 const TeacherCardStats = lazy(() => import("./pages/TeacherCardStats.tsx"));
 const KnowledgeCard = lazy(() => import("./pages/KnowledgeCard.tsx"));
@@ -271,6 +273,8 @@ const App = () => (
           <Route path="/social" element={<Social />} />
           <Route path="/ask" element={<Ask />} />
           <Route path="/q/:slug" element={<KnowledgeCard />} />
+          <Route path="/teacher" element={<Teacher />} />
+          <Route path="/teacher/class/:id" element={<TeacherClass />} />
           <Route path="/teacher/cards" element={<TeacherCards />} />
           <Route path="/teacher/cards/:slug" element={<TeacherCardStats />} />
           <Route path="/scenes/:catKey" element={<ScenesCategory />} />

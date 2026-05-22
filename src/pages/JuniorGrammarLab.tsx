@@ -1017,7 +1017,18 @@ export default function JuniorGrammarLab() {
   const { id } = useParams<{id: string;}>();
   const [searchParams] = useSearchParams();
   const wantRevenge = searchParams.get("revenge") === "1";
+  // 测试模式 (?quick=1): redirect to JuniorGrammarPoint, which uses the universal
+  // GrammarQuestionCard renderer (handles all 5 question types — mcq/fill/transform/
+  // correction/translation). Lab's exam phase is MCQ-only (limit 8, NULL options
+  // render as "nan") so we'd lose 8 of the 12 gold-standard questions here.
+  const isQuick = searchParams.get("quick") === "1";
   const nav = useNavigate();
+  // Redirect to the point page (universal renderer) when in quick mode.
+  useEffect(() => {
+    if (isQuick && id) {
+      nav(`/junior/grammar/${id}?quick=1`, { replace: true });
+    }
+  }, [isQuick, id, nav]);
   const [pt, setPt] = useState<Pt | null>(null);
   const [examQs, setExamQs] = useState<ExamQ[]>([]);
   const [loading, setLoading] = useState(true);

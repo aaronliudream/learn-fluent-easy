@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>📊 学习中心 — Redesign Preview · Big Moon English</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#FAF7F2',
+          ink: '#1F2440',
+          'brand-violet':  '#7B3FF1',
+          'brand-magenta': '#ED3F8C',
+          'brand-coral':   '#F47C45',
+          'brand-amber':   '#F59E0B',
+          gps: {
+            master: '#10b981',
+            fluent: '#3b82f6',
+            weak:   '#f97316',
+            none:   '#cbd5e1',
+          },
+        },
+        fontFamily: {
+          sans: ['"PingFang SC"','"Hiragino Sans GB"','"Microsoft YaHei"','system-ui','sans-serif'],
+        },
+        boxShadow: {
+          tile:  '0 6px 18px -8px rgba(15,23,42,0.18)',
+          brand: '0 18px 40px -14px rgba(237,63,140,0.45)',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body { background: #FAF7F2; }
+  .grad-brand    { background-image: linear-gradient(135deg,#7B3FF1 0%,#ED3F8C 55%,#F47C45 100%); }
+  .grad-warm     { background-image: linear-gradient(135deg,#F97316 0%,#F43F5E 100%); }
+  .grad-cool     { background-image: linear-gradient(135deg,#6366F1 0%,#8B5CF6 100%); }
+  .grad-mint     { background-image: linear-gradient(135deg,#10B981 0%,#14B8A6 100%); }
+  .grad-violet   { background-image: linear-gradient(135deg,#8B5CF6 0%,#D946EF 100%); }
+  .tabular       { font-variant-numeric: tabular-nums; }
+  /* "Old vs New" toggle */
+  .panel.hidden  { display:none; }
+  .annot         { position:relative; }
+  .annot::after  {
+    content:attr(data-note);
+    position:absolute; right:-6px; top:-10px;
+    background:#1F2440; color:#fff;
+    font-size:10px; font-weight:700;
+    padding:2px 6px; border-radius:999px;
+    box-shadow:0 4px 10px rgba(0,0,0,.18);
+    white-space:nowrap;
+  }
+  /* Trend chart styles */
+  .sparkline path { fill: none; stroke: #ED3F8C; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .sparkline .area { fill: url(#sparkgrad); stroke: none; }
+</style>
+</head>
+<body class="text-ink min-h-screen">
+
+<!-- ============================ HEADER ============================ -->
+<div class="sticky top-0 z-20 backdrop-blur bg-bg/85 border-b border-black/5">
+  <div class="mx-auto max-w-6xl px-5 py-3 flex items-center gap-4">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-7 h-7 rounded-lg grad-brand"></span>
+      <strong class="tracking-tight">Big Moon English</strong>
+      <span class="text-xs text-slate-500">· Dashboard preview</span>
+    </div>
+    <div class="ml-auto flex items-center gap-2 text-sm">
+      <button id="btnNew" class="px-3 py-1.5 rounded-full bg-ink text-white font-semibold">✨ New design</button>
+      <button id="btnOld" class="px-3 py-1.5 rounded-full border border-black/10 font-semibold text-slate-600 hover:bg-white">Current</button>
+      <button id="btnAnnot" class="px-3 py-1.5 rounded-full border border-black/10 font-semibold text-slate-600 hover:bg-white">🏷️ Annotations</button>
+    </div>
+  </div>
+</div>
+
+<main class="mx-auto max-w-6xl px-5 py-8 md:px-8 md:py-10">
+
+  <!-- ================================================================ -->
+  <!--   PANEL: CURRENT (what's live now)                                 -->
+  <!-- ================================================================ -->
+  <section id="panelOld" class="panel hidden">
+    <header class="mb-5">
+      <div class="text-2xl font-extrabold">📊 学习中心</div>
+      <div class="text-sm text-slate-500">一目了然知道掌握了什么、下一步学什么</div>
+    </header>
+
+    <!-- streak chips -->
+    <div class="flex flex-wrap gap-2 mb-4">
+      <div class="annot" data-note="ANNO: tiny chips, low visual priority">
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-orange-200 bg-orange-50 px-3 py-1.5 text-sm font-bold text-orange-700">🔥 <span class="tabular">7</span> 天连续打卡</span>
+      </div>
+      <span class="inline-flex items-center gap-1.5 rounded-full border bg-white px-3 py-1.5 text-sm font-medium">📅 <span class="tabular">18</span> <span class="text-xs text-slate-500">天本月活跃</span></span>
+      <span class="inline-flex items-center gap-1.5 rounded-full border bg-white px-3 py-1.5 text-sm font-medium">✨ <span class="tabular">240</span> <span class="text-xs text-slate-500">分钟本月学习</span></span>
+    </div>
+
+    <!-- broken GPS link -->
+    <div class="annot mb-4" data-note="BUG: links to /dashboard — i.e. this page itself">
+      <a class="flex items-center justify-between rounded-2xl border-2 border-ink bg-white p-4">
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">GPS · 掌握度地图</div>
+          <div class="mt-0.5 text-base font-extrabold">学习地图（统一掌握度）</div>
+          <div class="text-xs text-slate-500">按教育部新课标 2022 · 4 色诊断 · AI 建议</div>
+        </div>
+        <span class="rounded-full bg-ink px-3 py-1.5 text-xs font-bold text-white">进入 →</span>
+      </a>
+    </div>
+
+    <!-- today review -->
+    <a class="mb-4 flex items-center gap-4 rounded-2xl grad-warm p-5 text-white shadow-tile">
+      <div class="grid w-14 h-14 place-items-center rounded-xl bg-white/20">⏰</div>
+      <div class="flex-1">
+        <div class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-85">⏰ 今日复习</div>
+        <div class="mt-1 text-lg font-extrabold">今日待复习 12 道 · 预计 6 分钟</div>
+        <div class="mt-0.5 text-xs opacity-90">按记忆曲线推送，刷掉就不再忘</div>
+      </div>
+      <span class="rounded-full bg-white/95 px-4 py-2 text-xs font-extrabold text-rose-600">开始 →</span>
+    </a>
+
+    <!-- skill radar (floating, unlabeled) -->
+    <div class="annot mb-4" data-note="ANNO: floating, no label, hard to interpret">
+      <div class="rounded-2xl border bg-white p-6 grid place-items-center">
+        <div class="w-48 h-48 relative">
+          <svg viewBox="0 0 200 200" class="w-full h-full">
+            <polygon points="100,20 175,70 150,160 50,160 25,70" fill="none" stroke="#cbd5e1" />
+            <polygon points="100,55 145,80 130,135 70,135 55,80" fill="none" stroke="#cbd5e1" />
+            <polygon points="100,40 160,76 138,150 60,150 40,76" fill="rgba(123,63,241,0.18)" stroke="#7B3FF1" stroke-width="2"/>
+          </svg>
+          <div class="absolute inset-0 grid place-items-center text-xs text-slate-400">SkillRadar?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- stage tab -->
+    <div class="annot mb-4" data-note="BUG: defaults to 小学 even if user is 高中">
+      <div class="flex gap-2 max-w-md">
+        <button class="flex-1 rounded-md bg-white border-2 border-ink py-2 text-sm font-bold">🎒 小学</button>
+        <button class="flex-1 rounded-md bg-white py-2 text-sm font-bold text-slate-500">📓 初中</button>
+        <button class="flex-1 rounded-md bg-white py-2 text-sm font-bold text-slate-500">🎓 高中</button>
+      </div>
+    </div>
+
+    <!-- overview -->
+    <section class="flex flex-col md:flex-row md:items-center gap-4 rounded-3xl border bg-white p-5 mb-5">
+      <div class="flex flex-col items-center">
+        <div class="text-4xl font-extrabold tabular text-brand-violet">68%</div>
+        <div class="text-[11px] font-semibold text-slate-500">小学 总掌握度</div>
+      </div>
+      <div class="flex-1 space-y-3">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+          <div class="rounded-xl border bg-white p-3 text-center"><div class="text-xl font-extrabold text-emerald-600 tabular">125</div><div class="text-[11px] text-slate-500">已掌握</div></div>
+          <div class="rounded-xl border bg-white p-3 text-center"><div class="text-xl font-extrabold text-blue-600 tabular">89</div><div class="text-[11px] text-slate-500">熟练</div></div>
+          <div class="rounded-xl border bg-white p-3 text-center"><div class="text-xl font-extrabold text-orange-600 tabular">34</div><div class="text-[11px] text-slate-500">需强化</div></div>
+          <div class="rounded-xl border bg-white p-3 text-center"><div class="text-xl font-extrabold text-slate-400 tabular">200</div><div class="text-[11px] text-slate-500">未学</div></div>
+        </div>
+        <div class="h-2 rounded-full overflow-hidden flex">
+          <div class="bg-gps-master" style="width:28%"></div>
+          <div class="bg-gps-fluent" style="width:20%"></div>
+          <div class="bg-gps-weak"   style="width:8%"></div>
+          <div class="bg-gps-none"   style="width:44%"></div>
+        </div>
+      </div>
+      <button class="rounded-full bg-white border px-4 py-2 text-xs font-bold">📤 分享</button>
+    </section>
+
+    <!-- continue cta -->
+    <a class="mb-4 flex items-center gap-4 rounded-2xl grad-warm p-5 text-white shadow-tile">
+      <div class="grid w-14 h-14 place-items-center rounded-xl bg-white/20 text-2xl">▶</div>
+      <div class="flex-1">
+        <div class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-85">📍 从这里继续</div>
+        <div class="mt-1 text-lg font-extrabold">📖 词汇 · 薄弱 34 项</div>
+        <div class="mt-0.5 text-xs opacity-90">需要强化训练，先攻最薄弱的</div>
+      </div>
+      <span>→</span>
+    </a>
+
+    <!-- module grid -->
+    <section>
+      <h3 class="mb-3 text-sm font-bold uppercase tracking-[0.15em] text-slate-500">各模块进度</h3>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border bg-white p-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="text-2xl">📖</span><span class="font-bold">词汇</span></div>
+            <span class="text-xl font-extrabold text-brand-violet tabular">65%</span>
+          </div>
+          <div class="mt-3 h-2 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:30%"></div>
+            <div class="bg-gps-fluent" style="width:25%"></div>
+            <div class="bg-gps-weak"   style="width:10%"></div>
+            <div class="bg-gps-none"   style="width:35%"></div>
+          </div>
+        </div>
+        <div class="rounded-2xl border bg-white p-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="text-2xl">🔤</span><span class="font-bold">语法</span></div>
+            <span class="text-xl font-extrabold text-brand-violet tabular">71%</span>
+          </div>
+          <div class="mt-3 h-2 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:38%"></div>
+            <div class="bg-gps-fluent" style="width:22%"></div>
+            <div class="bg-gps-weak"   style="width:11%"></div>
+            <div class="bg-gps-none"   style="width:29%"></div>
+          </div>
+        </div>
+        <div class="rounded-2xl border bg-white p-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="text-2xl">📃</span><span class="font-bold">阅读</span></div>
+            <span class="text-xl font-extrabold text-brand-violet tabular">58%</span>
+          </div>
+          <div class="mt-3 h-2 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:22%"></div>
+            <div class="bg-gps-fluent" style="width:18%"></div>
+            <div class="bg-gps-weak"   style="width:18%"></div>
+            <div class="bg-gps-none"   style="width:42%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ================================================================ -->
+  <!--   PANEL: NEW DESIGN                                                -->
+  <!-- ================================================================ -->
+  <section id="panelNew" class="panel">
+
+    <!-- HERO -->
+    <section class="annot relative overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-brand grad-brand" data-note="NEW: Today hero — greeting, today's goal, gamification chips">
+      <!-- backdrop moon -->
+      <div class="pointer-events-none absolute -right-12 -top-12 w-56 h-56 rounded-full bg-white/15 blur-xl"></div>
+      <div class="pointer-events-none absolute right-8 top-6 w-24 h-24 rounded-full bg-white/25"></div>
+
+      <div class="relative flex items-start justify-between gap-4">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-[0.25em] opacity-85">2026 · 05 · 21 · 周四</div>
+          <div class="mt-1 text-2xl md:text-3xl font-extrabold leading-tight">🌙 晚上好，小明 <span class="opacity-80 font-bold">·</span> 准备好今天的学习吗？</div>
+        </div>
+        <div class="flex flex-col items-center gap-1 shrink-0">
+          <div class="text-3xl">🔥</div>
+          <div class="text-2xl font-extrabold tabular leading-none">7</div>
+          <div class="text-[10px] uppercase tracking-widest opacity-85">day streak</div>
+        </div>
+      </div>
+
+      <!-- today goal -->
+      <div class="relative mt-6">
+        <div class="flex items-baseline justify-between">
+          <div class="text-sm font-bold opacity-95">今日目标</div>
+          <div class="text-sm font-bold tabular"><span class="text-base">18</span> / 25 <span class="opacity-80">分钟</span></div>
+        </div>
+        <div class="mt-2 h-3 rounded-full bg-white/20 overflow-hidden">
+          <div class="h-full bg-white rounded-full" style="width:72%"></div>
+        </div>
+        <div class="mt-1 text-xs opacity-90">还差 7 分钟，今天就能保住连胜！</div>
+      </div>
+
+      <!-- chips -->
+      <div class="relative mt-5 grid grid-cols-2 md:grid-cols-4 gap-2">
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-2 flex items-center gap-2">
+          <div class="text-2xl">🪙</div>
+          <div><div class="text-lg font-extrabold tabular leading-none">240</div><div class="text-[10px] opacity-85 uppercase tracking-wider">coins</div></div>
+        </div>
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-2 flex items-center gap-2">
+          <div class="text-2xl">🏆</div>
+          <div><div class="text-lg font-extrabold tabular leading-none">12</div><div class="text-[10px] opacity-85 uppercase tracking-wider">badges</div></div>
+        </div>
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-2 flex items-center gap-2">
+          <div class="text-2xl">🐉</div>
+          <div><div class="text-lg font-extrabold leading-none">Lv.5</div><div class="text-[10px] opacity-85 uppercase tracking-wider">pet · 小龙</div></div>
+        </div>
+        <div class="rounded-xl bg-white/15 backdrop-blur px-3 py-2 flex items-center gap-2">
+          <div class="text-2xl">🥇</div>
+          <div><div class="text-lg font-extrabold leading-none">#3</div><div class="text-[10px] opacity-85 uppercase tracking-wider">本周排名</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROW 2: TODAY'S TASKS + WEAK SPOTS -->
+    <div class="mt-5 grid gap-5 lg:grid-cols-5">
+
+      <!-- Today's 3 Tasks -->
+      <section class="annot lg:col-span-3 rounded-3xl border bg-white p-5 shadow-tile" data-note="NEW: Today's 3 tasks — review + vocab + reading">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-base font-extrabold">📋 今天要做的 3 件事</h3>
+          <span class="text-xs text-slate-500">预计 ~24 分钟</span>
+        </div>
+        <div class="space-y-2.5">
+          <a class="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-orange-50 to-rose-50 border border-orange-200 p-3 hover:translate-x-0.5 transition">
+            <div class="grid w-11 h-11 place-items-center rounded-xl grad-warm text-white text-xl">⏰</div>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold">复习今天的错题</div>
+              <div class="text-xs text-slate-600 tabular">12 道 · 预计 6 分钟 · 按记忆曲线推送</div>
+            </div>
+            <div class="rounded-full bg-rose-600 text-white text-xs font-bold px-3 py-1.5">开始 →</div>
+          </a>
+          <a class="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-violet-50 to-indigo-50 border border-violet-200 p-3 hover:translate-x-0.5 transition">
+            <div class="grid w-11 h-11 place-items-center rounded-xl grad-cool text-white text-xl">📖</div>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold">词汇巩固 — 高中 3500 词 · 主题 12</div>
+              <div class="text-xs text-slate-600 tabular">20 词 · 预计 8 分钟 · 8 个薄弱 · 12 个待温习</div>
+            </div>
+            <div class="rounded-full bg-indigo-600 text-white text-xs font-bold px-3 py-1.5">开始 →</div>
+          </a>
+          <a class="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 p-3 hover:translate-x-0.5 transition">
+            <div class="grid w-11 h-11 place-items-center rounded-xl grad-mint text-white text-xl">📃</div>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold">阅读训练 — 议论文 · 中等</div>
+              <div class="text-xs text-slate-600 tabular">1 篇 · 预计 10 分钟 · 上次正确率 78%</div>
+            </div>
+            <div class="rounded-full bg-emerald-600 text-white text-xs font-bold px-3 py-1.5">开始 →</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Weak spots -->
+      <section class="annot lg:col-span-2 rounded-3xl border bg-white p-5 shadow-tile" data-note="NEW: Top-3 weak spots from user_mistakes — one-tap practice">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-base font-extrabold">🎯 最近常错</h3>
+          <a class="text-xs text-brand-magenta font-bold">全部错题 →</a>
+        </div>
+        <ol class="space-y-2">
+          <li class="flex items-center gap-2.5 rounded-xl border border-orange-200 bg-orange-50/60 p-2.5">
+            <span class="grid w-6 h-6 place-items-center rounded-lg bg-orange-200 text-orange-800 text-xs font-extrabold">1</span>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-sm truncate">现在完成时 vs 一般过去时</div>
+              <div class="text-[11px] text-slate-500 tabular">错 8 次 · 上次 2 天前</div>
+            </div>
+            <button class="text-xs font-bold rounded-full bg-ink text-white px-2.5 py-1">练 →</button>
+          </li>
+          <li class="flex items-center gap-2.5 rounded-xl border border-orange-200 bg-orange-50/60 p-2.5">
+            <span class="grid w-6 h-6 place-items-center rounded-lg bg-orange-200 text-orange-800 text-xs font-extrabold">2</span>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-sm truncate">would 与 used to</div>
+              <div class="text-[11px] text-slate-500 tabular">错 5 次 · 上次 昨天</div>
+            </div>
+            <button class="text-xs font-bold rounded-full bg-ink text-white px-2.5 py-1">练 →</button>
+          </li>
+          <li class="flex items-center gap-2.5 rounded-xl border border-orange-200 bg-orange-50/60 p-2.5">
+            <span class="grid w-6 h-6 place-items-center rounded-lg bg-orange-200 text-orange-800 text-xs font-extrabold">3</span>
+            <div class="flex-1 min-w-0">
+              <div class="font-bold text-sm truncate">distinguish 的搭配用法</div>
+              <div class="text-[11px] text-slate-500 tabular">错 4 次 · 上次 4 天前</div>
+            </div>
+            <button class="text-xs font-bold rounded-full bg-ink text-white px-2.5 py-1">练 →</button>
+          </li>
+        </ol>
+      </section>
+    </div>
+
+    <!-- ROW 3: 30-DAY TREND -->
+    <section class="annot mt-5 rounded-3xl border bg-white p-5 shadow-tile" data-note="NEW: 30-day mastery trend with week-over-week delta">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-[0.25em] text-slate-500">近 30 天</div>
+          <div class="mt-0.5 flex items-baseline gap-2">
+            <div class="text-2xl font-extrabold tabular">+4.2%</div>
+            <div class="text-xs text-emerald-600 font-bold">本周进步 ↑</div>
+          </div>
+          <div class="text-xs text-slate-500 mt-0.5">掌握度本周比上周提升 4.2 分（68.0 → 72.2）</div>
+        </div>
+        <div class="flex gap-1.5">
+          <button class="px-2.5 py-1 rounded-full bg-ink text-white text-xs font-bold">掌握度</button>
+          <button class="px-2.5 py-1 rounded-full border text-xs font-bold text-slate-500">分钟</button>
+          <button class="px-2.5 py-1 rounded-full border text-xs font-bold text-slate-500">正确率</button>
+        </div>
+      </div>
+      <!-- sparkline -->
+      <div class="mt-4">
+        <svg viewBox="0 0 700 140" class="sparkline w-full h-32">
+          <defs>
+            <linearGradient id="sparkgrad" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%"  stop-color="#ED3F8C" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#ED3F8C" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <!-- area + line -->
+          <path class="area" d="M0,95 L25,90 L50,92 L75,85 L100,87 L125,80 L150,82 L175,78 L200,73 L225,77 L250,70 L275,72 L300,65 L325,60 L350,63 L375,55 L400,58 L425,50 L450,55 L475,45 L500,48 L525,40 L550,42 L575,35 L600,38 L625,30 L650,28 L675,22 L700,18 L700,140 L0,140 Z"/>
+          <path d="M0,95 L25,90 L50,92 L75,85 L100,87 L125,80 L150,82 L175,78 L200,73 L225,77 L250,70 L275,72 L300,65 L325,60 L350,63 L375,55 L400,58 L425,50 L450,55 L475,45 L500,48 L525,40 L550,42 L575,35 L600,38 L625,30 L650,28 L675,22 L700,18"/>
+          <!-- dot at end -->
+          <circle cx="700" cy="18" r="5" fill="#ED3F8C" stroke="#fff" stroke-width="2"/>
+        </svg>
+        <div class="mt-1 flex justify-between text-[10px] text-slate-400 tabular">
+          <span>04-22</span><span>04-29</span><span>05-06</span><span>05-13</span><span>05-20</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROW 4: STAGE TABS -->
+    <div class="annot mt-6" data-note="FIX: defaults to user's actual stage from profiles">
+      <div class="flex gap-2 max-w-md">
+        <button class="flex-1 rounded-xl bg-white border-2 border-black/10 py-2.5 text-sm font-bold text-slate-500">🎒 小学</button>
+        <button class="flex-1 rounded-xl bg-white border-2 border-black/10 py-2.5 text-sm font-bold text-slate-500">📓 初中</button>
+        <button class="flex-1 rounded-xl bg-ink border-2 border-ink py-2.5 text-sm font-bold text-white">🎓 高中</button>
+      </div>
+    </div>
+
+    <!-- ROW 5: STAGE OVERVIEW + RADAR (merged) -->
+    <section class="annot mt-4 rounded-3xl border bg-white p-5 md:p-6 shadow-tile" data-note="REORG: floating SkillRadar absorbed into stage overview, properly labeled">
+      <div class="grid gap-6 md:grid-cols-[1fr_auto]">
+        <div>
+          <div class="flex items-baseline gap-3">
+            <div class="text-5xl font-extrabold tabular text-brand-violet">68%</div>
+            <div>
+              <div class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">高中 总掌握度</div>
+              <div class="text-xs text-emerald-600 font-bold">+4.2% 本周</div>
+            </div>
+            <button class="ml-auto rounded-full bg-white border px-3 py-1.5 text-xs font-bold">📤 分享</button>
+          </div>
+          <div class="mt-4 grid grid-cols-4 gap-2">
+            <div class="rounded-xl border bg-white p-3 text-center"><div class="text-xl font-extrabold text-emerald-600 tabular">125</div><div class="text-[11px] text-slate-500">已掌握</div></div>
+            <div class="rounded-xl border bg-white p-3 text-center"><div class="text-xl font-extrabold text-blue-600 tabular">89</div><div class="text-[11px] text-slate-500">熟练</div></div>
+            <div class="rounded-xl border bg-white p-3 text-center"><div class="text-xl font-extrabold text-orange-600 tabular">34</div><div class="text-[11px] text-slate-500">需强化</div></div>
+            <div class="rounded-xl border bg-white p-3 text-center"><div class="text-xl font-extrabold text-slate-400 tabular">200</div><div class="text-[11px] text-slate-500">未学</div></div>
+          </div>
+          <div class="mt-3 h-2.5 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:28%"></div>
+            <div class="bg-gps-fluent" style="width:20%"></div>
+            <div class="bg-gps-weak"   style="width:8%"></div>
+            <div class="bg-gps-none"   style="width:44%"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="text-xs font-bold uppercase tracking-[0.2em] text-slate-500 mb-2">五维能力</div>
+          <svg viewBox="0 0 200 200" class="w-48 h-48">
+            <polygon points="100,20 175,70 150,160 50,160 25,70" fill="none" stroke="#e2e8f0" />
+            <polygon points="100,55 145,80 130,135 70,135 55,80" fill="none" stroke="#e2e8f0" />
+            <polygon points="100,40 160,76 138,150 60,150 40,76" fill="rgba(123,63,241,0.20)" stroke="#7B3FF1" stroke-width="2.5"/>
+            <text x="100" y="14" text-anchor="middle" font-size="11" font-weight="700" fill="#1F2440">词汇</text>
+            <text x="184" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#1F2440">语法</text>
+            <text x="158" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#1F2440">阅读</text>
+            <text x="42" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#1F2440">听力</text>
+            <text x="16" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#1F2440">写作</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROW 6: MODULE GRID (enhanced) -->
+    <section class="mt-5">
+      <div class="flex items-baseline justify-between mb-3">
+        <h3 class="text-sm font-bold uppercase tracking-[0.15em] text-slate-500">各模块进度</h3>
+        <span class="text-xs text-slate-400">点击进入对应训练</span>
+      </div>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- vocab -->
+        <a class="annot group rounded-2xl border bg-white p-4 hover:-translate-y-0.5 transition shadow-tile" data-note="NEW: shows 上次 + 下次复习">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="text-2xl">📖</span><span class="font-bold">词汇</span></div>
+            <span class="text-xl font-extrabold tabular text-brand-violet">65%</span>
+          </div>
+          <div class="mt-3 h-2 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:30%"></div>
+            <div class="bg-gps-fluent" style="width:25%"></div>
+            <div class="bg-gps-weak"   style="width:10%"></div>
+            <div class="bg-gps-none"   style="width:35%"></div>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-500 tabular">
+            <span>掌握 248</span> · <span>熟 207</span> · <span class="text-orange-600 font-semibold">弱 82</span> · <span>未学 290</span>
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[11px]">
+            <span class="text-slate-500">⏱ 上次: 2 小时前</span>
+            <span class="text-rose-600 font-bold">🔴 下次复习: 今天</span>
+          </div>
+        </a>
+
+        <!-- grammar -->
+        <a class="group rounded-2xl border bg-white p-4 hover:-translate-y-0.5 transition shadow-tile">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="text-2xl">🔤</span><span class="font-bold">语法</span></div>
+            <span class="text-xl font-extrabold tabular text-brand-violet">71%</span>
+          </div>
+          <div class="mt-3 h-2 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:38%"></div>
+            <div class="bg-gps-fluent" style="width:22%"></div>
+            <div class="bg-gps-weak"   style="width:11%"></div>
+            <div class="bg-gps-none"   style="width:29%"></div>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-500 tabular">
+            <span>掌握 36</span> · <span>熟 21</span> · <span class="text-orange-600 font-semibold">弱 10</span> · <span>未学 27</span>
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[11px]">
+            <span class="text-slate-500">⏱ 上次: 昨天</span>
+            <span class="text-amber-600 font-bold">🟡 下次复习: 明天</span>
+          </div>
+        </a>
+
+        <!-- reading -->
+        <a class="group rounded-2xl border bg-white p-4 hover:-translate-y-0.5 transition shadow-tile">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="text-2xl">📃</span><span class="font-bold">阅读</span></div>
+            <span class="text-xl font-extrabold tabular text-brand-violet">58%</span>
+          </div>
+          <div class="mt-3 h-2 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:22%"></div>
+            <div class="bg-gps-fluent" style="width:18%"></div>
+            <div class="bg-gps-weak"   style="width:18%"></div>
+            <div class="bg-gps-none"   style="width:42%"></div>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-500 tabular">
+            <span>掌握 14</span> · <span>熟 11</span> · <span class="text-orange-600 font-semibold">弱 11</span> · <span>未学 26</span>
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[11px]">
+            <span class="text-slate-500">⏱ 上次: 4 天前</span>
+            <span class="text-rose-600 font-bold">🔴 下次复习: 已过期</span>
+          </div>
+        </a>
+
+        <!-- listening -->
+        <a class="group rounded-2xl border bg-white p-4 hover:-translate-y-0.5 transition shadow-tile">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="text-2xl">🎧</span><span class="font-bold">听力</span></div>
+            <span class="text-xl font-extrabold tabular text-brand-violet">52%</span>
+          </div>
+          <div class="mt-3 h-2 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:18%"></div>
+            <div class="bg-gps-fluent" style="width:16%"></div>
+            <div class="bg-gps-weak"   style="width:18%"></div>
+            <div class="bg-gps-none"   style="width:48%"></div>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-500 tabular">
+            <span>掌握 9</span> · <span>熟 8</span> · <span class="text-orange-600 font-semibold">弱 9</span> · <span>未学 24</span>
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[11px]">
+            <span class="text-slate-500">⏱ 上次: 一周前</span>
+            <span class="text-slate-500">⚪ 推荐: 本周</span>
+          </div>
+        </a>
+
+        <!-- writing -->
+        <a class="group rounded-2xl border bg-white p-4 hover:-translate-y-0.5 transition shadow-tile">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="text-2xl">✍️</span><span class="font-bold">写作</span></div>
+            <span class="text-xl font-extrabold tabular text-brand-violet">48%</span>
+          </div>
+          <div class="mt-3 h-2 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:14%"></div>
+            <div class="bg-gps-fluent" style="width:18%"></div>
+            <div class="bg-gps-weak"   style="width:16%"></div>
+            <div class="bg-gps-none"   style="width:52%"></div>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-500 tabular">
+            <span>掌握 7</span> · <span>熟 9</span> · <span class="text-orange-600 font-semibold">弱 8</span> · <span>未学 26</span>
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[11px]">
+            <span class="text-slate-500">⏱ 上次: 3 天前</span>
+            <span class="text-amber-600 font-bold">🟡 下次复习: 今天</span>
+          </div>
+        </a>
+
+        <!-- cloze -->
+        <a class="group rounded-2xl border bg-white p-4 hover:-translate-y-0.5 transition shadow-tile">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2"><span class="text-2xl">🧩</span><span class="font-bold">完形</span></div>
+            <span class="text-xl font-extrabold tabular text-brand-violet">62%</span>
+          </div>
+          <div class="mt-3 h-2 rounded-full overflow-hidden flex">
+            <div class="bg-gps-master" style="width:26%"></div>
+            <div class="bg-gps-fluent" style="width:22%"></div>
+            <div class="bg-gps-weak"   style="width:14%"></div>
+            <div class="bg-gps-none"   style="width:38%"></div>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-500 tabular">
+            <span>掌握 13</span> · <span>熟 11</span> · <span class="text-orange-600 font-semibold">弱 7</span> · <span>未学 19</span>
+          </div>
+          <div class="mt-2 flex items-center justify-between text-[11px]">
+            <span class="text-slate-500">⏱ 上次: 今天</span>
+            <span class="text-emerald-600 font-bold">🟢 已完成今日</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- footer link to grammar map -->
+    <a class="mt-5 flex items-center gap-4 rounded-2xl border bg-white p-4 hover:-translate-y-0.5 transition shadow-tile">
+      <div class="grid w-12 h-12 place-items-center rounded-xl grad-violet text-2xl text-white">📊</div>
+      <div class="flex-1">
+        <div class="text-base font-extrabold">语法掌握全景图</div>
+        <div class="text-xs text-slate-500">按考点查看每一项语法的强弱 · AI 自动诊断</div>
+      </div>
+      <span class="text-slate-400">→</span>
+    </a>
+
+    <!-- Compare callout footer -->
+    <div class="mt-10 rounded-3xl border bg-white p-5 text-center text-xs text-slate-500">
+      <strong class="text-ink">这是 Preview — 没有触碰真实代码。</strong>
+      切换上方 <span class="font-bold text-ink">Current / New design / Annotations</span> 按钮可对比。
+      满意后告诉 Claude "go ahead"，我会按这个设计修改 <code class="bg-slate-100 px-1 rounded">src/pages/Dashboard.tsx</code>。
+    </div>
+
+  </section>
+</main>
+
+<script>
+  const $ = (s) => document.querySelector(s);
+  const panelOld = $('#panelOld'), panelNew = $('#panelNew');
+  const btnOld = $('#btnOld'), btnNew = $('#btnNew'), btnAnnot = $('#btnAnnot');
+  let annotOn = false;
+
+  function setActive(btn) {
+    [btnOld, btnNew].forEach(b => {
+      b.classList.remove('bg-ink','text-white');
+      b.classList.add('border','border-black/10','text-slate-600');
+    });
+    btn.classList.add('bg-ink','text-white');
+    btn.classList.remove('border','border-black/10','text-slate-600');
+  }
+  btnOld.onclick = () => { panelOld.classList.remove('hidden'); panelNew.classList.add('hidden'); setActive(btnOld); };
+  btnNew.onclick = () => { panelNew.classList.remove('hidden'); panelOld.classList.add('hidden'); setActive(btnNew); };
+
+  // Annotation toggle
+  function applyAnnots() {
+    document.querySelectorAll('.annot').forEach(el => {
+      if (annotOn) el.style.outline = '2px dashed #ED3F8C';
+      else el.style.outline = '';
+      const after = el.querySelector('::after'); // not real, but we re-set CSS visibility via class
+    });
+    document.body.classList.toggle('show-annot', annotOn);
+  }
+  btnAnnot.onclick = () => {
+    annotOn = !annotOn;
+    btnAnnot.classList.toggle('bg-ink');
+    btnAnnot.classList.toggle('text-white');
+    applyAnnots();
+  };
+
+  // Default: hide annot pseudo until toggled
+  const style = document.createElement('style');
+  style.textContent = `.annot::after { display:none; } body.show-annot .annot::after { display:inline-block; }`;
+  document.head.appendChild(style);
+</script>
+
+</body>
+</html>

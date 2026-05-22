@@ -26,7 +26,7 @@ type Role = "user" | "assistant" | "system";
 interface ChatMsg { role: Role; content: string }
 
 interface Body {
-  context: string;                   // e.g. 'junior_grammar' | 'junior_suzhou_exam' | 'gaokao_grammar' | ...
+  context: string;                   // e.g. 'junior_grammar' | 'gaokao_grammar' | 'mistakes' | 'gaokao_mistakes' | 'lesson' | 'workplace' | 'free'
   question_ref?: string;             // stable ID (required for question mode)
   question_snapshot?: Record<string, unknown>;
   user_message: string;
@@ -103,29 +103,6 @@ ${snap}
 `;
 
   return isZh ? zh : en;
-}
-
-function buildSuzhouSystemPrompt(language: "zh" | "en", snapshot: Record<string, unknown>, hintLevel: number) {
-  const base = buildSystemPrompt(language, snapshot, hintLevel);
-  const isZh = language !== "en";
-  const mode = String(snapshot.exam_mode ?? "");
-  const extra = isZh
-    ? `
-
-【苏州中考英语真题 · 专属规则】
-• 这是苏州市初中学业水平考试英语真题，题型含完形、阅读、信息还原、词汇、翻译、书面表达等。
-• 当前模式：${mode || "练习"}。${mode === "exam" ? "若快照显示尚未提交，不得泄露其他未作答题的答案。" : ""}
-• 讲解时结合 passage_excerpt（如有）定位证据，强调中考常见陷阱与考纲词汇。
-• 当学生已基本理解本题，在回复末尾附 **3 道同类小测**（选择题给 A/B/C/D，填空/翻译给英文句子），先不公布答案；等学生作答后再逐题反馈对错与简要解析。
-• 小测难度与当前题相当，不要偏难怪。`
-    : `
-
-【Suzhou Zhongkao English — extra rules】
-• This is an official-style Suzhou junior-high English exam (cloze, reading, restore, vocab, writing, etc.).
-• Mode: ${mode || "practice"}. Do not leak answers to unanswered items if the exam is not submitted.
-• Cite passage_excerpt when available. Highlight typical exam traps and syllabus vocabulary.
-• After the learner grasps the point, add **3 mini quiz items** of similar difficulty (MCQ with A–D or short fill/translate). Do not reveal answers until the learner tries; then give brief feedback.`;
-  return base + extra;
 }
 
 function buildFreeSystemPrompt(language: "zh" | "en", topic: string) {
@@ -366,9 +343,7 @@ Deno.serve(async (req) => {
         ? buildConciergeSystemPrompt()
         : mode === "free"
           ? buildFreeSystemPrompt(language, body.topic || body.context)
-          : body.context === "junior_suzhou_exam"
-            ? buildSuzhouSystemPrompt(language, questionSnapshot, hintLevel)
-            : buildSystemPrompt(language, questionSnapshot, hintLevel);
+          : buildSystemPrompt(language, questionSnapshot, hintLevel);
     const messages: ChatMsg[] = [
       { role: "system", content: systemPrompt },
       ...history.map(h => ({ role: h.role as Role, content: h.content })),

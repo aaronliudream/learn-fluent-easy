@@ -6,17 +6,6 @@ import {
   primaryReadingListPath,
   readPrimaryGradeFromStorage,
 } from "@/lib/primaryGrade";
-import { readPepVolumeFromStorage, type PepVolume } from "@/lib/primaryDailyPlan";
-import {
-  aggregateVolumeMastery,
-  fetchPrimaryVocabByVolume,
-  PEP_VOLUME_TOTALS,
-} from "@/lib/primaryPepVocab";
-import {
-  fetchStageVocabMasteryStats,
-  vocabSnapshotToModuleFields,
-} from "@/lib/stageVocabStats";
-import { GAOKAO_VOCAB_FALLBACK, JUNIOR_VOCAB_FALLBACK } from "@/lib/corpusTotals";
 
 export type Stage = "primary" | "junior" | "gaokao";
 
@@ -58,8 +47,8 @@ export type StageOverview = {
 /** Module totals (seed corpus size). Keep in sync with DB seed counts. */
 const TOTALS: Record<Stage, Record<ModuleKey, number>> = {
   primary: { vocab: 846, reading: 60, listening: 0, writing: 0, grammar: 0, cloze: 0, lesson: 35 },
-  junior:  { vocab: JUNIOR_VOCAB_FALLBACK, reading: 91, listening: 209, writing: 143, grammar: 56, cloze: 0, lesson: 0 },
-  gaokao:  { vocab: GAOKAO_VOCAB_FALLBACK, reading: 65, listening: 0, writing: 0, grammar: 298, cloze: 16, lesson: 0 },
+  junior:  { vocab: 2373, reading: 91, listening: 209, writing: 143, grammar: 56, cloze: 0, lesson: 0 },
+  gaokao:  { vocab: 2921, reading: 65, listening: 0,   writing: 0,   grammar: 298, cloze: 16, lesson: 0 },
 };
 
 const MODULE_META: Record<ModuleKey, { label: string; emoji: string }> = {
@@ -152,22 +141,17 @@ export function useMasteryOverview(stage: Stage): StageOverview {
 
       // === PRIMARY stage: vocab + reading + lesson ===
       if (stage === "primary") {
-        const g = readPrimaryGradeFromStorage();
-        const vol = readPepVolumeFromStorage(g) as PepVolume;
-        const vocabRows = await fetchPrimaryVocabByVolume(vol);
-        const vocabIds = new Set(vocabRows.map((v) => v.id));
         const vocabP = emptyStat("primary", "vocab");
-        vocabP.total = PEP_VOLUME_TOTALS[vol] ?? vocabIds.size;
-
         const { data: pwm } = await supabase
           .from("primary_word_mastery")
-          .select("word_id,mastery_level,due_at")
+          .select("mastery_level,due_at")
           .eq("user_id", user.id);
-        const scoped = (pwm ?? []).filter((r) => vocabIds.has((r as any).word_id));
-        const agg = aggregateVolumeMastery(vocabIds, scoped as any[]);
-        vocabP.mastered = agg.mastered;
-        vocabP.learned = agg.learned;
-        vocabP.due = agg.due;
+        for (const r of pwm ?? []) {
+          const lvl = (r as any).mastery_level ?? 0;
+          if (lvl >= 3) vocabP.mastered += 1;
+          else if (lvl >= 1) vocabP.learned += 1;
+          if (isPrimaryWordDue(r as any)) vocabP.due += 1;
+        }
         vocabP.percent = vocabP.total ? Math.round((vocabP.mastered / vocabP.total) * 100) : 0;
 
         const readP = emptyStat("primary", "reading");
@@ -208,16 +192,35 @@ export function useMasteryOverview(stage: Stage): StageOverview {
         return;
       }
 
-      // === Vocab (corpus total + unified_mastery — same as 家长中心 / 学习中心) ===
+      // === Vocab ===
+      const vocabKeys = stage === "junior" ? ["junior_word_mastery"] : ["gaokao_user_mastery"];
       const vocab = emptyStat(stage, "vocab");
-      const corpusStage = stage === "junior" ? "junior" : "senior";
-      const vocabSnap = await fetchStageVocabMasteryStats(corpusStage, user.id);
-      const vf = vocabSnapshotToModuleFields(vocabSnap);
-      vocab.total = vf.total;
-      vocab.mastered = vf.mastered;
-      vocab.learned = vf.learned;
-      vocab.due = vf.due;
-      vocab.percent = vf.percent;
+      if (stage === "junior") {
+        const { data } = await supabase
+          .from("junior_word_mastery")
+          .select("mastery_level,due_at")
+          .eq("user_id", user.id);
+        for (const r of data ?? []) {
+          const lvl = (r as any).mastery_level ?? 0;
+          if (lvl >= 3) vocab.mastered += 1;
+          else if (lvl >= 1) vocab.learned += 1;
+          if ((r as any).due_at && new Date((r as any).due_at).getTime() <= Date.now()) vocab.due += 1;
+        }
+      } else {
+        const { data } = await supabase
+          .from("gaokao_user_mastery")
+          .select("mastery_level,next_review_at,item_type")
+          .eq("user_id", user.id)
+          .eq("item_type", "vocab");
+        for (const r of data ?? []) {
+          const lvl = (r as any).mastery_level ?? 0;
+          if (lvl >= 3) vocab.mastered += 1;
+          else if (lvl >= 1) vocab.learned += 1;
+          if ((r as any).next_review_at && new Date((r as any).next_review_at).getTime() <= Date.now()) vocab.due += 1;
+        }
+      }
+      vocab.percent = vocab.total ? Math.round((vocab.mastered / vocab.total) * 100) : 0;
+      void vocabKeys;
 
       // === mastery_progress modules (reading / cloze) ===
       const mpModules: { key: ModuleKey; module: string }[] = stage === "junior"

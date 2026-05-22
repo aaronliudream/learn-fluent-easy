@@ -1,276 +1,209 @@
 /**
- * TTS pre-warm script — pushes high-frequency phrases into Supabase Storage
- * via the `tts` edge function (same cache keys as production speak()).
+ * TTS pre-warm script.
+ *
+ * Iterates through all high-frequency English sentences across the project
+ * and calls the `tts` edge function once for each, forcing a cold synthesis
+ * and pushing the resulting MP3 into Supabase Storage. After this runs,
+ * every new user gets an instant CDN hit (≈50–200 ms) instead of paying the
+ * 1–3 s cold-path latency.
  *
  * Usage:
- *   bun run scripts/prewarm-tts.ts                         # all datasets
- *   bun run scripts/prewarm-tts.ts --only=primary-vocab
- *   bun run scripts/prewarm-tts.ts --only=junior-vocab,gaokao-vocab
- *   bun run scripts/prewarm-tts.ts --skip=storybooks,suzhou-exam
- *   bun run scripts/prewarm-tts.ts --dry-run               # count only, no API
+ *   bun run scripts/prewarm-tts.ts                # all datasets, voice=alloy
+ *   bun run scripts/prewarm-tts.ts slang          # only one dataset
+ *   bun run scripts/prewarm-tts.ts slang lesson   # multiple datasets
  *
- * Legacy positional args still work: `bun run scripts/prewarm-tts.ts slang course`
- *
- * Env: VITE_SUPABASE_URL + VITE_SUPABASE_PUBLISHABLE_KEY (or SUPABASE_* aliases)
+ * Datasets: slang | lesson | placement | course | ielts | all (default)
+ * Voices warmed: alloy (US default), fable (UK).
  */
 
-import { createClient } from "@supabase/supabase-js";
-import {
-  DATASET_BUILDERS,
-  dedupeJobs,
-  estimateChars,
-  splitJobsByProvider,
-  type DatasetBuilder,
-  type JobSpec,
-} from "./prewarm-collectors";
+import { LESSON_OUTPUT_SAMPLES } from "../src/data/lessonSamples";
+import { IDIOMS } from "../src/data/idioms";
+import { PLACEMENT_BANK } from "../src/data/placementBank";
+import { LEVELS, LESSON_CONTENT } from "../src/data/course";
 
+// Read from environment (mirrors Vite's .env names) so no secrets are
+// hard-coded in the repo. Run with:
+//   VITE_SUPABASE_URL=... VITE_SUPABASE_PUBLISHABLE_KEY=... bun run scripts/prewarm-tts.ts
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL;
 const ANON_KEY =
   process.env.VITE_SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_ANON_KEY;
-
 if (!SUPABASE_URL || !ANON_KEY) {
   console.error(
-    "Missing env vars. Set VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY before running.",
+    "Missing env vars. Set VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY (e.g. via a local .env) before running.",
   );
   process.exit(1);
 }
-
 const TTS_URL = `${SUPABASE_URL.replace(/\/$/, "")}/functions/v1/tts`;
-const CONCURRENCY = 8;
 
-type WarmResult = "hit" | "miss" | "fail";
+// Tunables.
+const CONCURRENCY = 6;       // parallel TTS requests
+const SPEED = 0.95;          // matches client default in src/lib/voice.ts
+const VOICES: Array<{ voiceId: string; accent: string }> = [
+  { voiceId: "alloy", accent: "US" },
+  // Uncomment to also pre-warm UK accent (doubles cost):
+  // { voiceId: "fable", accent: "UK" },
+];
 
-function parseArgs(argv: string[]) {
-  let only: string[] | null = null;
-  let skip: string[] = [];
-  let dryRun = false;
-  const positional: string[] = [];
+type Job = { text: string; voiceId: string; accent: string; tag: string };
 
-  for (const arg of argv) {
-    if (arg === "--dry-run") {
-      dryRun = true;
-    } else if (arg.startsWith("--only=")) {
-      only = arg
-        .slice("--only=".length)
-        .split(",")
-        .map((s) => s.trim())
-        .filter(Boolean);
-    } else if (arg.startsWith("--skip=")) {
-      skip = arg
-        .slice("--skip=".length)
-        .split(",")
-        .map((s) => s.trim())
-        .filter(Boolean);
-    } else if (arg.startsWith("-")) {
-      console.warn(`Unknown flag: ${arg}`);
-    } else {
-      positional.push(arg);
+function uniq(arr: string[]): string[] {
+  return Array.from(new Set(arr.map((s) => s.trim()).filter(Boolean)));
+}
+
+// Skip strings that are mostly Chinese / non-Latin — TTS for those would
+// just be wasted bytes since the app only plays English audio.
+function isEnglish(s: string): boolean {
+  if (!s || s.length < 2) return false;
+  const ascii = s.replace(/[^A-Za-z]/g, "").length;
+  return ascii >= Math.max(3, s.length * 0.4);
+}
+
+// Split a long passage into sentence-ish chunks the way the client's
+// SegmentedReader splits them, so the cache keys match real playback.
+function splitSentences(text: string): string[] {
+  return text
+    .split(/(?<=[.!?])\s+/)
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0 && s.length <= 400);
+}
+
+function collectSlang(): string[] {
+  return uniq(IDIOMS.flatMap((i) => [i.example, i.phrase])).filter(isEnglish);
+}
+
+function collectLessonSamples(): string[] {
+  // Each "Output sample" is a short paragraph — pre-warm both the whole
+  // paragraph and each sentence (clients play either depending on the view).
+  const out: string[] = [];
+  for (const sample of Object.values(LESSON_OUTPUT_SAMPLES)) {
+    out.push(sample);
+    out.push(...splitSentences(sample));
+  }
+  return uniq(out).filter(isEnglish);
+}
+
+function collectPlacement(): string[] {
+  const out: string[] = [];
+  for (const q of PLACEMENT_BANK) {
+    if (q.context) out.push(...splitSentences(q.context));
+    if (q.prompt) out.push(q.prompt);
+  }
+  return uniq(out).filter(isEnglish);
+}
+
+function collectCourse(): string[] {
+  const out: string[] = [];
+  // Walk every lesson's reading + expressions + vocab examples.
+  for (const level of LEVELS) {
+    for (const unit of level.units) {
+      for (const lesson of unit.lessons) {
+        const c = LESSON_CONTENT[lesson.title];
+        if (!c) continue;
+        for (const r of c.reading || []) if (r.en) out.push(r.en);
+        for (const e of c.expressions || []) if (e.en) out.push(e.en);
+        for (const v of c.vocab || []) if (v.example) out.push(v.example);
+      }
     }
   }
-
-  if (positional.includes("all")) {
-    only = null;
-  } else if (positional.length > 0 && !only) {
-    only = positional;
-  }
-
-  return { only, skip, dryRun };
+  return uniq(out).filter(isEnglish);
 }
 
-function selectBuilders(only: string[] | null, skip: string[]): DatasetBuilder[] {
-  const skipSet = new Set(skip);
-  let list = DATASET_BUILDERS.filter((d) => !skipSet.has(d.id));
-
-  if (only && only.length > 0) {
-    const onlySet = new Set(only);
-    list = list.filter((d) => onlySet.has(d.id));
-    const missing = only.filter((id) => !DATASET_BUILDERS.some((d) => d.id === id));
-    if (missing.length) {
-      console.warn(`Unknown dataset id(s): ${missing.join(", ")}`);
-    }
-  }
-
-  return list;
+// IELTS examiner Part 1 / 2 / 3 prompts are loaded dynamically by the
+// session page from an edge function, so we skip them here. If you want to
+// pre-warm specific IELTS sentences, drop them into this array.
+function collectIelts(): string[] {
+  return [];
 }
 
-function etaMinutes(jobCount: number, secondsPerJob = 1.8): string {
-  const sec = (jobCount / CONCURRENCY) * secondsPerJob;
-  if (sec < 60) return `~${Math.ceil(sec)}s`;
-  return `~${Math.ceil(sec / 60)}min`;
-}
-
-async function warmOne(job: JobSpec, dataset: string): Promise<WarmResult> {
+async function warmOne(job: Job): Promise<"hit" | "miss" | "fail"> {
   try {
     const res = await fetch(TTS_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        apikey: ANON_KEY!,
+        apikey: ANON_KEY,
         Authorization: `Bearer ${ANON_KEY}`,
       },
       body: JSON.stringify({
         text: job.text,
         voiceId: job.voiceId,
-        speed: job.speed,
         accent: job.accent,
+        speed: SPEED,
         format: "url",
       }),
     });
-
     if (!res.ok) {
-      const body = (await res.text()).slice(0, 200);
-      console.error(
-        `[prewarm] ✗ ${dataset} ${res.status} "${job.text.slice(0, 60)}…" — ${body}`,
-      );
+      console.warn(`  ✗ ${job.tag} ${res.status}: ${(await res.text()).slice(0, 120)}`);
       return "fail";
     }
-
     const cacheHeader = res.headers.get("x-cache");
     if (cacheHeader === "MISS") return "miss";
-
+    // Cached responses come back as JSON with cached:true.
     const ct = res.headers.get("content-type") || "";
     if (ct.includes("application/json")) {
-      const j = (await res.json()) as { cached?: boolean };
+      const j = await res.json();
       return j.cached ? "hit" : "miss";
     }
     return "miss";
   } catch (err) {
-    console.error(
-      `[prewarm] ✗ ${dataset} error "${job.text.slice(0, 60)}…" —`,
-      err instanceof Error ? err.message : err,
-    );
+    console.warn(`  ✗ ${job.tag} error:`, err instanceof Error ? err.message : err);
     return "fail";
   }
 }
 
-async function runPool(jobs: JobSpec[], dataset: string) {
+async function runPool(jobs: Job[]) {
   let i = 0;
-  let hit = 0;
-  let miss = 0;
-  let fail = 0;
+  let hit = 0, miss = 0, fail = 0;
   const start = Date.now();
-
   const workers = Array.from({ length: CONCURRENCY }, async () => {
     while (true) {
       const idx = i++;
       if (idx >= jobs.length) return;
-      const r = await warmOne(jobs[idx], dataset);
+      const r = await warmOne(jobs[idx]);
       if (r === "hit") hit++;
       else if (r === "miss") miss++;
       else fail++;
-
-      if ((idx + 1) % 50 === 0 || idx + 1 === jobs.length) {
+      if ((idx + 1) % 25 === 0 || idx + 1 === jobs.length) {
         const elapsed = ((Date.now() - start) / 1000).toFixed(1);
         console.log(
-          `  [${dataset}] ${idx + 1}/${jobs.length} hit=${hit} new=${miss} fail=${fail} (${elapsed}s)`,
+          `  [${idx + 1}/${jobs.length}] hit=${hit} miss=${miss} fail=${fail} (${elapsed}s)`,
         );
       }
     }
   });
-
   await Promise.all(workers);
   return { hit, miss, fail };
 }
 
-async function buildAllJobs(
-  builders: DatasetBuilder[],
-): Promise<Array<{ builder: DatasetBuilder; jobs: JobSpec[] }>> {
-  const supabase = createClient(SUPABASE_URL!, ANON_KEY!);
-  const out: Array<{ builder: DatasetBuilder; jobs: JobSpec[] }> = [];
-
-  for (const builder of builders) {
-    const raw = await builder.build(supabase);
-    out.push({ builder, jobs: dedupeJobs(raw) });
-  }
-  return out;
-}
-
-function printDryRunSummary(
-  datasets: Array<{ builder: DatasetBuilder; jobs: JobSpec[] }>,
-) {
-  console.log("\n=== DRY RUN — job counts & cost estimate ===\n");
-
-  let totalJobs = 0;
-  let totalChars = 0;
-  const allJobs: JobSpec[] = [];
-
-  for (const { builder, jobs } of datasets) {
-    totalJobs += jobs.length;
-    totalChars += estimateChars(jobs);
-    allJobs.push(...jobs);
-    console.log(
-      `[prewarm] ${builder.label}: ${jobs.length} audio jobs, ${estimateChars(jobs).toLocaleString()} chars, ETA ${etaMinutes(jobs.length)} (cold)`,
-    );
-  }
-
-  const { openai, elevenlabs } = splitJobsByProvider(allJobs);
-  const openaiChars = estimateChars(openai);
-  const elChars = estimateChars(elevenlabs);
-
-  console.log("\n--- Totals ---");
-  console.log(`Jobs: ${totalJobs.toLocaleString()}`);
-  console.log(`Characters: ${totalChars.toLocaleString()}`);
-  console.log(`OpenAI jobs: ${openai.length.toLocaleString()} (${openaiChars.toLocaleString()} chars)`);
-  console.log(`ElevenLabs jobs: ${elevenlabs.length.toLocaleString()} (${elChars.toLocaleString()} chars)`);
-  console.log(
-    `Est. OpenAI @ $0.015/1K chars: $${((openaiChars / 1000) * 0.015).toFixed(2)} (if all cold)`,
-  );
-  console.log(
-    `Est. ElevenLabs @ ~$0.30/1K chars*: $${((elChars / 1000) * 0.3).toFixed(2)} (if all cold)`,
-  );
-  console.log(
-    "* ElevenLabs pricing varies by plan; adjust multiplier before running.",
-  );
-  console.log("\nNo API calls made (--dry-run).\n");
-}
-
 async function main() {
-  const { only, skip, dryRun } = parseArgs(process.argv.slice(2));
-  const builders = selectBuilders(only, skip);
+  const args = process.argv.slice(2);
+  const want = args.length === 0 ? ["all"] : args;
+  const all = want.includes("all");
 
-  if (builders.length === 0) {
-    console.error("No datasets selected. Available ids:");
-    console.error(DATASET_BUILDERS.map((d) => d.id).join(", "));
-    process.exit(1);
-  }
+  const sets: Array<{ name: string; texts: string[] }> = [];
+  if (all || want.includes("slang"))     sets.push({ name: "slang",     texts: collectSlang() });
+  if (all || want.includes("lesson"))    sets.push({ name: "lesson",    texts: collectLessonSamples() });
+  if (all || want.includes("placement")) sets.push({ name: "placement", texts: collectPlacement() });
+  if (all || want.includes("course"))    sets.push({ name: "course",    texts: collectCourse() });
+  if (all || want.includes("ielts"))     sets.push({ name: "ielts",     texts: collectIelts() });
 
-  console.log(`[prewarm] datasets: ${builders.map((b) => b.id).join(", ")}`);
-  if (dryRun) console.log("[prewarm] mode: DRY RUN (no API calls)");
-
-  const datasets = await buildAllJobs(builders);
-
-  if (dryRun) {
-    printDryRunSummary(datasets);
-    return;
-  }
-
-  let grandHit = 0;
-  let grandMiss = 0;
-  let grandFail = 0;
-
-  for (const { builder, jobs } of datasets) {
-    if (jobs.length === 0) {
-      console.log(`\n[prewarm] ${builder.label}: (empty, skipped)`);
+  for (const s of sets) {
+    if (s.texts.length === 0) {
+      console.log(`\n→ ${s.name}: (empty, skipped)`);
       continue;
     }
-
-    console.log(
-      `\n[prewarm] ${builder.label}: ${jobs.length} items, cold start assumed, ETA ${etaMinutes(jobs.length)}`,
-    );
-
-    const r = await runPool(jobs, builder.label);
-    grandHit += r.hit;
-    grandMiss += r.miss;
-    grandFail += r.fail;
-
-    console.log(
-      `[prewarm] ${builder.label}: ✓ done, ${r.miss} new, ${r.hit} cached, ${r.fail} errors`,
-    );
+    const jobs: Job[] = [];
+    for (const v of VOICES) {
+      for (const text of s.texts) {
+        jobs.push({ text, voiceId: v.voiceId, accent: v.accent, tag: `${s.name}/${v.accent}` });
+      }
+    }
+    console.log(`\n→ ${s.name}: ${s.texts.length} unique sentences × ${VOICES.length} voice(s) = ${jobs.length} requests`);
+    const r = await runPool(jobs);
+    console.log(`  ✓ done — hit=${r.hit} miss(new)=${r.miss} fail=${r.fail}`);
   }
 
-  console.log(
-    `\n✅ Pre-warm complete — new=${grandMiss} cached=${grandHit} errors=${grandFail}`,
-  );
+  console.log("\n✅ Pre-warm complete. New users now hit CDN on first play.");
 }
 
 main().catch((e) => {

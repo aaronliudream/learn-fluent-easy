@@ -411,6 +411,15 @@ export default function Dashboard() {
     <main className="mx-auto min-h-screen max-w-5xl px-5 py-8 md:px-8 md:py-12">
       <PageHeader title="📊 学习中心" subtitle="一目了然知道掌握了什么、下一步学什么" back="/" />
 
+      {/* Cross-link to parent view (same account, parent-friendly layout) */}
+      <div className="mt-3 flex justify-end">
+        <Link
+          to="/parent"
+          className="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-3 py-1.5 text-xs font-bold text-muted-foreground transition hover:bg-muted hover:text-foreground">
+          <span>👨‍👩‍👧</span> <T>家长视图</T> <span aria-hidden>→</span>
+        </Link>
+      </div>
+
       {/* 1. Today hero */}
       <div className="mt-5">
         <TodayHero

@@ -27,9 +27,6 @@ export function PracticeBooster({
   sourceQuestionStem,
   fallbackKnowledgePointLabel,
   userWrongOption,
-  section,
-  examLevel,
-  startLabel = "我还是不懂，给我练 3 题",
   onMastered,
   onFailedFinal,
 }: {
@@ -38,11 +35,6 @@ export function PracticeBooster({
   sourceQuestionStem: string;
   fallbackKnowledgePointLabel?: string;
   userWrongOption?: string;
-  /** 苏州卷题型 section，传给 AI 以匹配出题格式 */
-  section?: string;
-  /** gaokao | junior_suzhou */
-  examLevel?: string;
-  startLabel?: string;
   onMastered?: () => void;
   onFailedFinal?: () => void;
 }) {
@@ -59,9 +51,8 @@ export function PracticeBooster({
   const [kpPitfall, setKpPitfall] = useState<string>("");
   const [phase, setPhase] = useState<"idle" | "answering" | "passed" | "failed-continue" | "failed-final">("idle");
 
-  // Pre-fetch knowledge point context once (gaokao reading only)
+  // Pre-fetch knowledge point context once
   useEffect(() => {
-    if (module === "junior_suzhou_exam") return;
     (async () => {
       const tag = await getQuestionExamTag(module, sourceQuestionId);
       if (tag?.knowledge_point_id) {
@@ -97,8 +88,6 @@ export function PracticeBooster({
           user_wrong_option: userWrongOption ?? "",
           round: currentRound,
           previous_wrong: previousWrong,
-          exam_level: examLevel ?? (module === "junior_suzhou_exam" ? "junior_suzhou" : "gaokao"),
-          section: section ?? "",
         },
       });
       if (error) throw error;
@@ -190,7 +179,7 @@ export function PracticeBooster({
         className="inline-flex items-center gap-1.5 rounded-full border border-rose-500/30 bg-rose-500/5 px-3 py-1.5 text-xs font-bold text-rose-700 hover:bg-rose-500/10 transition-colors"
       >
         <Sparkles className="size-3.5" />
-        {startLabel}
+        我还是不懂，给我练 3 题
       </button>
     );
   }

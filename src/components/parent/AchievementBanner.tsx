@@ -7,8 +7,6 @@ import {
   Mic, PenLine, FileText, Clock } from
 "lucide-react";
 import { cn } from "@/lib/utils";
-import { fetchStageVocabMasteryStats } from "@/lib/stageVocabStats";
-import { GAOKAO_VOCAB_FALLBACK, JUNIOR_VOCAB_FALLBACK } from "@/lib/corpusTotals";
 
 type Stage = "primary" | "junior" | "gaokao";
 
@@ -18,9 +16,9 @@ const STAGE_META: Record<Stage, {label: string;icon: any;route: string;}> = {
   gaokao: { label: "高中", icon: GraduationCap, route: "/gaokao" }
 };
 
-// === Junior / Gaokao corpus totals (vocab loaded live; others static until DB-backed) ===
-const JUNIOR_TOTALS = { vocab: JUNIOR_VOCAB_FALLBACK, reading: 91, listening: 209, grammar: 52, writing: 30 };
-const GAOKAO_TOTALS = { vocab: GAOKAO_VOCAB_FALLBACK, reading: 65, grammar: 298, cloze: 40 };
+// === Junior / Gaokao corpus totals (keep in sync with useMasteryOverview) ===
+const JUNIOR_TOTALS = { vocab: 2373, reading: 91, listening: 209, grammar: 52, writing: 30 };
+const GAOKAO_TOTALS = { vocab: 2921, reading: 65, grammar: 298, cloze: 40 };
 
 // ===== PRIMARY =====
 type PrimaryMastery = {word_id: string;mastery_level: number | null;interval_days: number | null;listen_correct: number | null;listen_wrong: number | null;};
@@ -241,7 +239,6 @@ function PrimaryBlock() {
  * ============================================================ */
 function JuniorBlock() {
   const [loading, setLoading] = useState(true);
-  const [vocabTotal, setVocabTotal] = useState(JUNIOR_TOTALS.vocab);
   const [vocabMastered, setVocabMastered] = useState(0);
   const [vocabLearning, setVocabLearning] = useState(0);
   const [readingMastered, setReadingMastered] = useState(0);
@@ -254,16 +251,19 @@ function JuniorBlock() {
     (async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) {setLoading(false);return;}
-      const [vocabSnap, mp, la, jum, wa] = await Promise.all([
-      fetchStageVocabMasteryStats("junior", user.id),
+      const [vm, mp, la, jum, wa] = await Promise.all([
+      supabase.from("junior_word_mastery").select("mastery_level").eq("user_id", user.id),
       supabase.from("mastery_progress").select("module,stars,best_pct").eq("user_id", user.id).eq("module", "junior_reading"),
       supabase.from("junior_listening_attempts").select("is_correct").eq("user_id", user.id),
       supabase.from("junior_user_mastery").select("mastery_level,item_type").eq("user_id", user.id).eq("item_type", "grammar_point"),
       supabase.from("junior_writing_attempts").select("overall_score").eq("user_id", user.id)]
       );
-      setVocabTotal(vocabSnap.total);
-      setVocabMastered(vocabSnap.mastered);
-      setVocabLearning(vocabSnap.fluent + vocabSnap.weak);
+      let mast = 0,learn = 0;
+      for (const r of vm.data ?? []) {
+        const lvl = (r as any).mastery_level ?? 0;
+        if (lvl >= 3) mast += 1;else if (lvl >= 1) learn += 1;
+      }
+      setVocabMastered(mast);setVocabLearning(learn);
       let rd = 0;
       for (const r of mp.data ?? []) {
         if ((r as any).stars >= 5 || ((r as any).best_pct ?? 0) >= 80) rd += 1;
@@ -286,7 +286,7 @@ function JuniorBlock() {
 
   if (loading) return <LoadingRow />;
 
-  const vocabPct = vocabTotal ? Math.round(vocabMastered / vocabTotal * 100) : 0;
+  const vocabPct = Math.round(vocabMastered / JUNIOR_TOTALS.vocab * 100);
   const readingPct = Math.round(readingMastered / JUNIOR_TOTALS.reading * 100);
   const listenPct = listenAcc.tot ? Math.round(listenAcc.ok / listenAcc.tot * 100) : 0;
   const grammarPct = Math.round(grammarMastered / JUNIOR_TOTALS.grammar * 100);
@@ -300,8 +300,8 @@ function JuniorBlock() {
       </div>
       <div className="grid gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 md:p-5">
         <BigMetric icon={BookOpen} tone="from-emerald-500 to-teal-500" label="📚 中考词汇"
-        numerator={vocabMastered} denominator={vocabTotal} delta={null}
-        remaining={Math.max(0, vocabTotal - vocabMastered)}
+        numerator={vocabMastered} denominator={JUNIOR_TOTALS.vocab} delta={null}
+        remaining={Math.max(0, JUNIOR_TOTALS.vocab - vocabMastered)}
         subtext={`${vocabLearning} 个学习中`} />
         <BigMetric icon={FileText} tone="from-sky-500 to-blue-500" label="📖 阅读篇章"
         numerator={readingMastered} denominator={JUNIOR_TOTALS.reading} delta={null}
@@ -338,7 +338,6 @@ function JuniorBlock() {
  * ============================================================ */
 function GaokaoBlock() {
   const [loading, setLoading] = useState(true);
-  const [vocabTotal, setVocabTotal] = useState(GAOKAO_TOTALS.vocab);
   const [vocabMastered, setVocabMastered] = useState(0);
   const [vocabLearning, setVocabLearning] = useState(0);
   const [grammarMastered, setGrammarMastered] = useState(0);
@@ -351,22 +350,22 @@ function GaokaoBlock() {
     (async () => {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) {setLoading(false);return;}
-      const [vocabSnap, um, mp, cz] = await Promise.all([
-      fetchStageVocabMasteryStats("senior", user.id),
+      const [um, mp, cz] = await Promise.all([
       supabase.from("gaokao_user_mastery").select("mastery_level,item_type").eq("user_id", user.id),
       supabase.from("mastery_progress").select("module,stars,best_pct").eq("user_id", user.id).in("module", ["gaokao_reading", "gaokao_cloze"]),
       supabase.from("gaokao_cloze_sessions").select("score_pct,status").eq("user_id", user.id).eq("status", "submitted")]
       );
-      setVocabTotal(vocabSnap.total);
-      setVocabMastered(vocabSnap.mastered);
-      setVocabLearning(vocabSnap.fluent + vocabSnap.weak);
-      let gMast = 0;
+      let vMast = 0,vLearn = 0,gMast = 0;
       for (const r of um.data ?? []) {
         const lvl = (r as any).mastery_level ?? 0;
         const type = (r as any).item_type;
-        if (type === "grammar_point" && lvl >= 3) gMast += 1;
+        if (type === "vocab") {
+          if (lvl >= 3) vMast += 1;else if (lvl >= 1) vLearn += 1;
+        } else if (type === "grammar_point") {
+          if (lvl >= 3) gMast += 1;
+        }
       }
-      setGrammarMastered(gMast);
+      setVocabMastered(vMast);setVocabLearning(vLearn);setGrammarMastered(gMast);
       let rd = 0;
       for (const r of mp.data ?? []) {
         if ((r as any).stars >= 5 || ((r as any).best_pct ?? 0) >= 80) rd += 1;
@@ -382,7 +381,7 @@ function GaokaoBlock() {
 
   if (loading) return <LoadingRow />;
 
-  const vocabPct = vocabTotal ? Math.round(vocabMastered / vocabTotal * 100) : 0;
+  const vocabPct = Math.round(vocabMastered / GAOKAO_TOTALS.vocab * 100);
   const grammarPct = Math.round(grammarMastered / GAOKAO_TOTALS.grammar * 100);
   const readingPct = Math.round(readingMastered / GAOKAO_TOTALS.reading * 100);
   const clozePct = clozeCount ? clozeAvg : 0;
@@ -395,8 +394,8 @@ function GaokaoBlock() {
       </div>
       <div className="grid gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 md:p-5">
         <BigMetric icon={BookOpen} tone="from-emerald-500 to-teal-500" label="📚 高考词汇"
-        numerator={vocabMastered} denominator={vocabTotal} delta={null}
-        remaining={Math.max(0, vocabTotal - vocabMastered)}
+        numerator={vocabMastered} denominator={GAOKAO_TOTALS.vocab} delta={null}
+        remaining={Math.max(0, GAOKAO_TOTALS.vocab - vocabMastered)}
         subtext={`${vocabLearning} 个学习中`} />
         <BigMetric icon={Target} tone="from-indigo-500 to-violet-500" label="🧩 语法考点"
         numerator={grammarMastered} denominator={GAOKAO_TOTALS.grammar} delta={null}

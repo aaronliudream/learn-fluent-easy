@@ -1,27 +1,14 @@
 import { T } from "@/i18n/T";import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Play, Star, Flame, Trophy, Map as MapIcon, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import {
-  primaryAdventurePath,
-  primaryGradeMapPath,
   primaryReadingListPath,
   primaryStorybookShelfPath,
   resolvePrimaryGrade,
-  writePrimaryGradeToStorage,
 } from "@/lib/primaryGrade";
-import {
-  formatPrimaryTrackLabel,
-  fetchPrimaryTrackSnapshot,
-  isPrepGrade,
-  PEP_VOLUMES,
-  readPepVolumeFromStorage,
-  writePepVolumeToStorage,
-  type PepVolume,
-} from "@/lib/primaryDailyPlan";
-import { PEP_VOLUME_GRADE } from "@/lib/primaryPepVocab";
 
 // Phase 1 删除项:6 个能力按钮入口、"今日 10 词挑战"独立卡 — 都并入未来的冒险流(阶段 2)。
 // 这个页面降级为"完整学习地图"详情页,不再是默认入口。
@@ -111,23 +98,14 @@ function RadarChart({ scores }: {scores: {label: string;value: number;}[];}) {
 }
 
 export default function PrimaryGrade() {
-  const nav = useNavigate();
   const { grade } = useParams<{grade: string;}>();
   const g = resolvePrimaryGrade(grade);
   const [lessons, setLessons] = useState<LessonRow[]>([]);
   const [loading, setLoading] = useState(true);
-  const [trackLabel, setTrackLabel] = useState<string | null>(null);
-  const [pepVolume, setPepVolume] = useState<PepVolume>(() => readPepVolumeFromStorage(g));
 
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const { data: u } = await supabase.auth.getUser();
-      const snap = await fetchPrimaryTrackSnapshot(u?.user?.id ?? null, g);
-      if (!isPrepGrade(g)) {
-        setTrackLabel(formatPrimaryTrackLabel(snap));
-        setPepVolume(snap.pepVolume);
-      }
       const { data } = await supabase.
       from("primary_lessons").
       select("id,title_cn,title_en,estimated_minutes,primary_skill,sort_order,unit:primary_units!inner(id,title_cn,emoji,sort_order,grade),progress:primary_lesson_progress(stars,completed_at)").
@@ -235,33 +213,6 @@ export default function PrimaryGrade() {
         </div>
       </Link>
       }
-      {!isPrepGrade(g) &&
-      <div className="mb-3 rounded-2xl border border-sky-200 bg-sky-50/80 p-3 dark:border-sky-800 dark:bg-sky-950/30">
-        <div className="mb-2 text-xs font-bold text-sky-800 dark:text-sky-200"><T>📚 人教 PEP 册别（与词表同步）</T></div>
-        <div className="flex flex-wrap gap-1.5">
-          {PEP_VOLUMES.map((vol) => (
-            <button
-              key={vol}
-              type="button"
-              onClick={() => {
-                writePepVolumeToStorage(vol);
-                setPepVolume(vol);
-                const syncG = PEP_VOLUME_GRADE[vol];
-                writePrimaryGradeToStorage(syncG);
-                nav(primaryGradeMapPath(syncG));
-              }}
-              className={`rounded-full px-2.5 py-1 text-[11px] font-extrabold transition ${
-                pepVolume === vol
-                  ? "bg-sky-500 text-white shadow"
-                  : "bg-white text-sky-700 hover:bg-sky-100 dark:bg-card dark:text-sky-300"
-              }`}
-            >
-              {vol}
-            </button>
-          ))}
-        </div>
-      </div>
-      }
       {/* 趣味阅读 — 数据库 primary_reading_articles */}
       <Link
         to={primaryReadingListPath(g)}
@@ -276,21 +227,8 @@ export default function PrimaryGrade() {
         </div>
       </Link>
 
-      {/* 🌟 主 CTA — G3+ 今日四步冒险；G1-2 单课 */}
-      {!isPrepGrade(g) ?
-      <Link to={primaryAdventurePath(g)}
-      className="mb-3 flex items-center gap-4 rounded-3xl bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:scale-[1.01]">
-          <div className="grid size-16 shrink-0 place-items-center rounded-3xl bg-white/25 text-4xl backdrop-blur-sm">🦊</div>
-          <div className="flex-1 min-w-0">
-            <div className="text-xs font-bold uppercase tracking-wider opacity-90"><T>今日 4 件事 · 听→故事→词→说</T></div>
-            <div className="truncate text-2xl font-extrabold leading-tight"><T>陪 Spark 出发</T></div>
-            {trackLabel && <div className="mt-1 text-sm opacity-90">{trackLabel}</div>}
-          </div>
-          <div className="grid size-12 shrink-0 place-items-center rounded-full bg-white/30 backdrop-blur-sm">
-            <Play className="size-6 fill-white" />
-          </div>
-        </Link> :
-      nextLesson ?
+      {/* 🌟 主 CTA — 今天的冒险 */}
+      {nextLesson ?
       <Link to={`/primary/lesson/${nextLesson.id}`}
       className="mb-3 flex items-center gap-4 rounded-3xl bg-gradient-to-br from-pink-500 via-rose-500 to-amber-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:scale-[1.01]">
           <div className="grid size-16 shrink-0 place-items-center rounded-3xl bg-white/25 text-4xl backdrop-blur-sm">{nextLesson.unit.emoji ?? "🏝️"}</div>

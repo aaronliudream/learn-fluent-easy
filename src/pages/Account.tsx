@@ -18,7 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Download, Trash2, Shield, FileText, LogIn, LogOut, UserCog, Trophy, Save, BookMarked, Bookmark, Sparkles, Mail, MessageSquare, Users } from "lucide-react";
+import { Download, Trash2, Shield, FileText, LogIn, LogOut, UserCog, Trophy, Save, BookMarked, Bookmark, Sparkles, Mail, MessageSquare } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { loadProgress } from "@/lib/guestProgress";
 import { T, useT } from "@/i18n/T";
@@ -274,17 +274,12 @@ const Account = () => {
                 <h3 className="text-base font-extrabold"><T>管理后台</T></h3>
               </div>
               <p className="mt-1 text-sm text-purple-900/70">
-                <T>查看用户学习与错题、处理反馈（仅管理员可见）</T>
+                <T>查看与处理用户反馈（仅管理员可见）</T>
               </p>
             </div>
-            <div className="flex flex-wrap gap-2">
-              <Button asChild className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
-                <Link to="/admin/users"><Users className="size-4" /> <T>用户学习</T></Link>
-              </Button>
-              <Button asChild variant="outline" className="border-purple-300">
-                <Link to="/admin/feedback"><MessageSquare className="size-4" /> <T>反馈管理</T></Link>
-              </Button>
-            </div>
+            <Button asChild className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
+              <Link to="/admin/feedback"><MessageSquare className="size-4" /> <T>反馈管理</T></Link>
+            </Button>
           </div>
         </section>
       )}

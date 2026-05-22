@@ -25,21 +25,6 @@ import {
   PRIMARY_LAST_GRADE_KEY,
   writePrimaryGradeToStorage,
 } from "@/lib/primaryGrade";
-import {
-  PEP_VOLUMES,
-  PRIMARY_ONBOARDED_KEY,
-  defaultVolumeForGrade,
-  fetchPrimaryTrackSnapshot,
-  formatPrimaryTrackLabel,
-  isPrepGrade,
-  readPepVolumeFromStorage,
-  writePepVolumeToStorage,
-  type PepVolume,
-  stepKindLabel,
-  type PrimaryTrackSnapshot,
-} from "@/lib/primaryDailyPlan";
-import { PEP_VOLUME_GRADE } from "@/lib/primaryPepVocab";
-import { buildDailyAdventure, loadAdventureProgress } from "@/lib/dailyAdventure";
 
 type Grade = {
   id: number;name_cn: string;name_en: string;
@@ -64,8 +49,6 @@ function sparkFace(level: number, emojis: SparkEmojis): string {
 }
 
 const FALLBACK_GRADES: Grade[] = [
-{ id: 1, name_cn: "一年级", name_en: "Grade 1", emoji: "🐣", gradient: "from-amber-300 via-yellow-300 to-orange-300" },
-{ id: 2, name_cn: "二年级", name_en: "Grade 2", emoji: "🐥", gradient: "from-orange-300 via-pink-300 to-rose-300" },
 { id: 3, name_cn: "三年级", name_en: "Grade 3", emoji: "🦊", gradient: "from-rose-300 via-fuchsia-300 to-violet-300" },
 { id: 4, name_cn: "四年级", name_en: "Grade 4", emoji: "🐼", gradient: "from-violet-300 via-indigo-300 to-blue-300" },
 { id: 5, name_cn: "五年级", name_en: "Grade 5", emoji: "🦁", gradient: "from-blue-300 via-sky-300 to-cyan-300" },
@@ -135,8 +118,6 @@ export default function Primary() {
   const [streak, setStreak] = useState<number>(0);
   const [recommendedGrade, setRecommendedGrade] = useState<number | null>(null);
   const [switchOpen, setSwitchOpen] = useState(false);
-  const [volumeOpen, setVolumeOpen] = useState(false);
-  const [track, setTrack] = useState<PrimaryTrackSnapshot | null>(null);
   const [sparkEmojis, setSparkEmojis] = useState<SparkEmojis>(SPARK_FALLBACK);
   const [grade, setGrade] = useState<number | null>(() => {
     const saved = localStorage.getItem(PRIMARY_LAST_GRADE_KEY);
@@ -156,14 +137,15 @@ export default function Primary() {
   useEffect(() => {
     (async () => {
       // SEO: title + meta description
-      document.title = "小学英语 G1-G6 · 英语启蒙 & 教材同步 · 自然拼读 · 词汇 · 听说读写 | FluentPath";
-      const desc = "1-2年级英语启蒙(幼小衔接)：自然拼读、字母、听说、简单对话；3-6年级教材同步(人教/外研社)：核心词汇、听力对话、阅读闯关、AI口语陪练，每天10分钟。";
+      document.title = "小学英语 G3-G6 · 教材同步 · 词汇 · 听说读写 | FluentPath";
+      const desc = "3-6年级英语教材同步(人教/外研社)：核心词汇、听力对话、阅读闯关、AI口语陪练，每天10分钟。";
       let m = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
       if (!m) {m = document.createElement("meta");m.name = "description";document.head.appendChild(m);}
       m.content = desc;
 
       const { data } = await supabase.from("primary_grades").select("*").order("sort_order");
-      if (data && data.length) setGrades(data as Grade[]);
+      // 3 年级才正式开始小学英语，过滤掉历史遗留的一/二年级行。
+      if (data && data.length) setGrades((data as Grade[]).filter((g) => g.id >= 3));
       const { data: u } = await supabase.auth.getUser();
       const userId = u?.user?.id ?? null;
       setUid(userId);
@@ -221,43 +203,7 @@ export default function Primary() {
     setGrade(id);
     writePrimaryGradeToStorage(id);
     setSwitchOpen(false);
-    if (id >= 3) {
-      try {
-        if (!localStorage.getItem(PRIMARY_ONBOARDED_KEY)) setVolumeOpen(true);
-      } catch {
-        setVolumeOpen(true);
-      }
-    }
   }
-
-  function confirmVolume(vol: PepVolume) {
-    writePepVolumeToStorage(vol);
-    const syncGrade = PEP_VOLUME_GRADE[vol];
-    setGrade(syncGrade);
-    writePrimaryGradeToStorage(syncGrade);
-    try {
-      localStorage.setItem(PRIMARY_ONBOARDED_KEY, "1");
-    } catch {
-      /* ignore */
-    }
-    setVolumeOpen(false);
-    if (uid) fetchPrimaryTrackSnapshot(uid, syncGrade).then(setTrack);
-  }
-
-  useEffect(() => {
-    if (grade == null || isPrepGrade(grade)) {
-      setTrack(null);
-      return;
-    }
-    let cancelled = false;
-    (async () => {
-      const snap = await fetchPrimaryTrackSnapshot(uid, grade);
-      if (!cancelled) setTrack(snap);
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [grade, uid]);
 
   function goAdventure() {
     if (grade == null) return;
@@ -274,16 +220,6 @@ export default function Primary() {
     isWeekend: visitContext.isWeekend
   });
   const currentGradeName = grades.find((g) => g.id === grade)?.name_cn ?? "";
-  const adventureSteps =
-    grade != null && !isPrepGrade(grade) && track
-      ? buildDailyAdventure({ grade, track })
-      : [];
-  const adventureProgress = loadAdventureProgress();
-  const nextAdventureStep = adventureSteps.find((s) => !adventureProgress[s.kind]);
-  const ctaSubline =
-    grade != null && track && !isPrepGrade(grade)
-      ? `${formatPrimaryTrackLabel(track)} · 今日第 ${nextAdventureStep ? stepKindLabel(nextAdventureStep.kind) : "复习"}`
-      : currentGradeName;
 
   // Visualize bond as 10 hearts so kids read it instantly.
   const bondNow = Math.max(0, Math.min(100, pet?.bond ?? 0));
@@ -292,55 +228,43 @@ export default function Primary() {
   const sparkEmoji = sparkFace(pet?.level ?? 1, sparkEmojis);
 
   return (
-    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+    <main className="mx-auto min-h-screen max-w-2xl md:max-w-3xl px-5 py-6">
       <BackLink to="/#stages" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> <T>返回学习阶段</T>
       </BackLink>
 
       {/* === Phase 1: Spark 主屏 === 单一中心 = Spark + 一句话 + 一个 CTA === */}
       {needsGrade ?
-      <section className="mt-6 rounded-3xl border-2 border-border bg-card p-6 text-center shadow-tile">
+      <section className="mt-6 rounded-3xl border-2 border-border bg-card p-6 md:p-8 text-center shadow-tile">
           {/* P0 — Spark shows up. Big face + small wave so the first impression is a *who*, not a punctuation mark. */}
-          <div className="relative mx-auto grid size-24 place-items-center rounded-full bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 text-6xl shadow-md">
+          <div className="relative mx-auto grid size-24 md:size-32 place-items-center rounded-full bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 text-6xl md:text-7xl shadow-md">
             {sparkEmoji}
-            <span className="absolute -right-1 -top-1 grid size-9 place-items-center rounded-full bg-white text-2xl shadow-sm">👋</span>
+            <span className="absolute -right-1 -top-1 grid size-9 md:size-11 place-items-center rounded-full bg-white text-2xl md:text-3xl shadow-sm">👋</span>
           </div>
-          <h1 className="mt-3 text-xl font-extrabold"><T>嗨!我是 Spark,想认识你!</T></h1>
-          <p className="mt-1 text-sm text-muted-foreground"><T>先告诉我你在几年级,我会按你的进度陪你学。</T></p>
-          <div className="mt-5 grid grid-cols-3 gap-3">
+          <h1 className="mt-3 md:mt-4 text-xl md:text-2xl font-extrabold"><T>嗨!我是 Spark,想认识你!</T></h1>
+          <p className="mt-1 text-sm md:text-base text-muted-foreground"><T>先告诉我你在几年级,我会按你的进度陪你学。</T></p>
+          <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
             {grades.map((g) => {
             // P1 — gentle "推荐" tag. Uses parent-set grade if any, otherwise
             // the national-curriculum default (G3, when English officially starts).
             const recId = recommendedGrade ?? 3;
             const isRecommended = g.id === recId;
-            const isFoundation = g.id <= 2;  // 1-2年级: 英语启蒙/幼小衔接
-            const isSync = g.id >= 3;        // 3-6年级: 教材同步
             return (
               <button
                 key={g.id}
                 onClick={() => pickGrade(g.id)}
                 className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5`}>
-                
-                  <div className="text-3xl">{g.emoji}</div>
+
+                  <div className="text-3xl md:text-4xl">{g.emoji}</div>
                   {isRecommended &&
                 <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-rose-600 shadow-sm">
                       <T>⭐ 推荐</T>
                     </span>
                 }
-                  {isFoundation && !isRecommended &&
-                <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-emerald-700 shadow-sm">
-                      <T>🌱 启蒙</T>
-                    </span>
-                }
-                  {isSync && !isRecommended &&
-                <span className="absolute right-1.5 top-1.5 rounded-full bg-white/90 px-1.5 py-0.5 text-[10px] font-extrabold text-sky-700 shadow-sm">
-                      <T>📚 同步</T>
-                    </span>
-                }
                   <div className="absolute inset-x-3 bottom-3">
                     <div className="text-sm font-extrabold text-white drop-shadow"><T>{g.name_cn}</T></div>
                     <div className="text-[10px] font-bold text-white/90 drop-shadow">
-                      <T>{isFoundation ? "听说·字母·拼读" : "教材同步·主线"}</T>
+                      <T>教材同步 · 词汇·听·读·说</T>
                     </div>
                   </div>
                 </button>);
@@ -348,8 +272,8 @@ export default function Primary() {
           })}
           </div>
           {/* P1 — lower decision pressure: tell parents/kids switching is easy. */}
-          <p className="mt-4 text-center text-xs text-muted-foreground">
-            <T>选错了也没关系,Spark 随时陪你换 →</T>
+          <p className="mt-4 text-center text-sm text-muted-foreground">
+            <T>✨ 选错了也没关系,Spark 随时陪你换 →</T>
           </p>
         </section> :
 
@@ -389,7 +313,7 @@ export default function Primary() {
             </button>
             <div className="mt-4 flex justify-center">
               <span className="inline-flex items-center rounded-full bg-rose-100/80 px-3 py-1 text-xs font-semibold text-rose-600 dark:bg-rose-900/40 dark:text-rose-300">
-                {grade != null && !isPrepGrade(grade) && track ? ctaSubline : <><T>当前 ·</T> <T>{currentGradeName}</T></>}
+                <T>当前 ·</T> <T>{currentGradeName}</T>
               </span>
             </div>
             <div className="mt-2 flex justify-center">
@@ -459,8 +383,6 @@ export default function Primary() {
             {grades.map((g) => {
               const isCurrent = g.id === grade;
               const isRecommended = recommendedGrade != null && g.id === recommendedGrade;
-              const isFoundation = g.id <= 2;
-              const isSync = g.id >= 3;
               return (
                 <button
                   key={g.id}
@@ -470,21 +392,14 @@ export default function Primary() {
                   "border-rose-400 bg-rose-50 dark:bg-rose-950/30" :
                   "border-border bg-card hover:bg-muted"}`
                   }>
-                  
+
                   <div className="text-3xl">{g.emoji}</div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <div className="text-sm font-extrabold"><T>{g.name_cn}</T></div>
-                      {isFoundation && (
-                        <span className="rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
-                          <T>🌱 英语启蒙</T>
-                        </span>
-                      )}
-                      {isSync && (
-                        <span className="rounded bg-sky-100 px-1.5 py-0.5 text-[10px] font-bold text-sky-700 dark:bg-sky-950/50 dark:text-sky-300">
-                          <T>📚 教材同步</T>
-                        </span>
-                      )}
+                      <span className="rounded bg-sky-100 px-1.5 py-0.5 text-[10px] font-bold text-sky-700 dark:bg-sky-950/50 dark:text-sky-300">
+                        <T>📚 教材同步</T>
+                      </span>
                     </div>
                     <div className="mt-0.5 flex flex-wrap gap-1.5 text-[10px] font-bold">
                       {isCurrent &&
@@ -501,36 +416,6 @@ export default function Primary() {
           </div>
           <p className="mt-1 text-center text-[11px] text-muted-foreground">
             <T>下次进来会回到</T>{recommendedGrade ? "你的推荐等级" : "你上次选的等级"}。
-          </p>
-        </DialogContent>
-      </Dialog>
-
-      {/* G3+ 首次定轨：选 PEP 册别，与家长中心词汇册一致 */}
-      <Dialog open={volumeOpen} onOpenChange={setVolumeOpen}>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle className="text-center"><T>课本学到哪了？</T></DialogTitle>
-            <DialogDescription className="text-center">
-              <T>选你正在学的人教 PEP 册别，Spark 会从这里带你听故事、认单词。</T>
-            </DialogDescription>
-          </DialogHeader>
-          <div className="mt-3 grid grid-cols-4 gap-2">
-            {PEP_VOLUMES.map((vol) => (
-              <button
-                key={vol}
-                onClick={() => confirmVolume(vol)}
-                className={`rounded-xl border-2 px-2 py-3 text-sm font-extrabold transition hover:-translate-y-0.5 ${
-                  readPepVolumeFromStorage(grade ?? 3) === vol
-                    ? "border-rose-400 bg-rose-50 text-rose-700"
-                    : "border-border bg-card"
-                }`}
-              >
-                {vol}
-              </button>
-            ))}
-          </div>
-          <p className="mt-3 text-center text-[11px] text-muted-foreground">
-            <T>默认推荐</T> {defaultVolumeForGrade(grade ?? 3)} · <T>随时可在学习地图修改</T>
           </p>
         </DialogContent>
       </Dialog>

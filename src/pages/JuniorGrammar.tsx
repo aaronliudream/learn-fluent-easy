@@ -16,6 +16,7 @@ import {
   type JuniorGrammarMastery,
   type JuniorGrammarErrorReason } from
 "@/lib/juniorGrammarFsrs";
+import { juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
 
 type Cat = {id: string;name_cn: string;emoji: string;sort_order: number;};
 type Pt = {
@@ -287,7 +288,7 @@ export default function JuniorGrammar() {
               return (
                 <li key={p.id}>
                       <Link
-                    to={`/junior/grammar/${p.id}`}
+                    to={juniorGrammarPlayPath(p.id, p)}
                     className="flex items-center justify-between gap-2 rounded-lg p-1.5 text-xs hover:bg-muted/50">
                     
                         <span className="truncate">{meta.emoji} {p.title}</span>
@@ -306,7 +307,7 @@ export default function JuniorGrammar() {
               <Sparkles className="size-3.5" /> <T>智能推荐</T>
             </div>
             {recommendNext ?
-          <Link to={`/junior/grammar/${recommendNext.point.id}`} className="block group">
+          <Link to={juniorGrammarPlayPath(recommendNext.point.id, recommendNext.point)} className="block group">
                 <div className="text-xs text-muted-foreground"><T>从最薄弱模块开始</T></div>
                 <div className="text-base font-bold mt-0.5 group-hover:text-primary transition line-clamp-2">
                   {recommendNext.category.emoji} {recommendNext.point.title}
@@ -417,13 +418,20 @@ export default function JuniorGrammar() {
                   const meta = JUNIOR_LEVEL_META[lvl];
                   const isDue = ms?.due_at && new Date(ms.due_at).getTime() <= Date.now();
                   const hasRichContent = (p.content_depth ?? 0) >= 1;
+                  // Gold-standard points → single CTA to adaptive mastery test (no duplicate Lab button).
+                  // Legacy points → keep the old lesson page link (no Lab button — Lab now requires gold content).
+                  const playPath = juniorGrammarPlayPath(p.id, p);
                   return (
                     <li key={p.id}>
-                      <div className="flex items-stretch gap-1.5">
                       <Link
-                          to={`/junior/grammar/${p.id}`}
-                          className="flex flex-1 min-w-0 items-center gap-2 rounded-xl border bg-card px-3 py-2.5 text-sm transition hover:border-primary hover:shadow-sm">
-                          
+                          to={playPath}
+                          className={cn(
+                            "flex items-center gap-2 rounded-xl border px-3 py-2.5 text-sm transition hover:shadow-sm",
+                            hasRichContent
+                              ? "bg-gradient-to-br from-emerald-50 via-card to-emerald-50/40 dark:from-emerald-950/20 dark:via-card dark:to-emerald-950/10 border-emerald-300/60 dark:border-emerald-800/60 hover:border-emerald-500"
+                              : "bg-card hover:border-primary",
+                          )}>
+
                         <span className="text-lg flex-shrink-0" title={meta.label}>
                           {meta.emoji}
                         </span>
@@ -433,7 +441,7 @@ export default function JuniorGrammar() {
                             <span>CEFR {p.cefr}</span>
                             {hasRichContent &&
                               <span className="inline-block px-1 py-0.5 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-bold text-[9px]">
-                                <T>✨ 升级版</T>
+                                <T>🎯 闯关测试</T>
                               </span>
                               }
                             {isDue &&
@@ -445,14 +453,6 @@ export default function JuniorGrammar() {
                         </span>
                         <ChevronRight className="size-3.5 text-muted-foreground flex-shrink-0" />
                       </Link>
-                      <Link
-                          to={`/junior/grammar-lab/${p.id}`}
-                          title="全攻克 Lab — 闯关模式"
-                          className="flex items-center justify-center px-2.5 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white text-xs font-extrabold shadow-sm hover:shadow-md transition flex-shrink-0">
-                          
-                        🚀
-                      </Link>
-                      </div>
                     </li>);
 
                 })}

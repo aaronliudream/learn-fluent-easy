@@ -47,6 +47,8 @@ export type GrammarQuestion = {
   natural_note: string | null;
   grammar_topic: string | null;
   use_ai_grading: boolean;
+  // Adaptive difficulty (1=easy, 2=medium, 3=hard). Optional for backward compat.
+  difficulty?: number | null;
 };
 
 export type AnswerResult =

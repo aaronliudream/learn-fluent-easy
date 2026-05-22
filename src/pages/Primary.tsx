@@ -228,55 +228,43 @@ export default function Primary() {
   const sparkEmoji = sparkFace(pet?.level ?? 1, sparkEmojis);
 
   return (
-    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+    <main className="mx-auto min-h-screen max-w-2xl md:max-w-3xl px-5 py-6">
       <BackLink to="/#stages" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> <T>返回学习阶段</T>
       </BackLink>
 
       {/* === Phase 1: Spark 主屏 === 单一中心 = Spark + 一句话 + 一个 CTA === */}
       {needsGrade ?
-      <section className="mt-6 rounded-3xl border-2 border-border bg-card p-6 text-center shadow-tile">
+      <section className="mt-6 rounded-3xl border-2 border-border bg-card p-6 md:p-8 text-center shadow-tile">
           {/* P0 — Spark shows up. Big face + small wave so the first impression is a *who*, not a punctuation mark. */}
-          <div className="relative mx-auto grid size-24 place-items-center rounded-full bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 text-6xl shadow-md">
+          <div className="relative mx-auto grid size-24 md:size-32 place-items-center rounded-full bg-gradient-to-br from-pink-200 via-rose-200 to-amber-200 text-6xl md:text-7xl shadow-md">
             {sparkEmoji}
-            <span className="absolute -right-1 -top-1 grid size-9 place-items-center rounded-full bg-white text-2xl shadow-sm">👋</span>
+            <span className="absolute -right-1 -top-1 grid size-9 md:size-11 place-items-center rounded-full bg-white text-2xl md:text-3xl shadow-sm">👋</span>
           </div>
-          <h1 className="mt-3 text-xl font-extrabold"><T>嗨!我是 Spark,想认识你!</T></h1>
-          <p className="mt-1 text-sm text-muted-foreground"><T>先告诉我你在几年级,我会按你的进度陪你学。</T></p>
-          <div className="mt-5 grid grid-cols-2 gap-3">
+          <h1 className="mt-3 md:mt-4 text-xl md:text-2xl font-extrabold"><T>嗨!我是 Spark,想认识你!</T></h1>
+          <p className="mt-1 text-sm md:text-base text-muted-foreground"><T>先告诉我你在几年级,我会按你的进度陪你学。</T></p>
+          <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
             {grades.map((g) => {
             // P1 — gentle "推荐" tag. Uses parent-set grade if any, otherwise
             // the national-curriculum default (G3, when English officially starts).
             const recId = recommendedGrade ?? 3;
             const isRecommended = g.id === recId;
-            const isFoundation = g.id <= 2;  // 1-2年级: 英语启蒙/幼小衔接
-            const isSync = g.id >= 3;        // 3-6年级: 教材同步
             return (
               <button
                 key={g.id}
                 onClick={() => pickGrade(g.id)}
                 className={`relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient ?? "from-slate-200 to-slate-300"} p-3 text-left shadow-tile transition hover:-translate-y-0.5`}>
-                
-                  <div className="text-3xl">{g.emoji}</div>
+
+                  <div className="text-3xl md:text-4xl">{g.emoji}</div>
                   {isRecommended &&
                 <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-rose-600 shadow-sm">
                       <T>⭐ 推荐</T>
                     </span>
                 }
-                  {isFoundation && !isRecommended &&
-                <span className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-1.5 py-0.5 text-[10px] font-extrabold text-emerald-700 shadow-sm">
-                      <T>🌱 启蒙</T>
-                    </span>
-                }
-                  {isSync && !isRecommended &&
-                <span className="absolute right-1.5 top-1.5 rounded-full bg-white/90 px-1.5 py-0.5 text-[10px] font-extrabold text-sky-700 shadow-sm">
-                      <T>📚 同步</T>
-                    </span>
-                }
                   <div className="absolute inset-x-3 bottom-3">
                     <div className="text-sm font-extrabold text-white drop-shadow"><T>{g.name_cn}</T></div>
                     <div className="text-[10px] font-bold text-white/90 drop-shadow">
-                      <T>{isFoundation ? "听说·字母·拼读" : "教材同步·主线"}</T>
+                      <T>教材同步 · 词汇·听·读·说</T>
                     </div>
                   </div>
                 </button>);
@@ -284,8 +272,8 @@ export default function Primary() {
           })}
           </div>
           {/* P1 — lower decision pressure: tell parents/kids switching is easy. */}
-          <p className="mt-4 text-center text-xs text-muted-foreground">
-            <T>选错了也没关系,Spark 随时陪你换 →</T>
+          <p className="mt-4 text-center text-sm text-muted-foreground">
+            <T>✨ 选错了也没关系,Spark 随时陪你换 →</T>
           </p>
         </section> :
 
@@ -395,8 +383,6 @@ export default function Primary() {
             {grades.map((g) => {
               const isCurrent = g.id === grade;
               const isRecommended = recommendedGrade != null && g.id === recommendedGrade;
-              const isFoundation = g.id <= 2;
-              const isSync = g.id >= 3;
               return (
                 <button
                   key={g.id}
@@ -406,21 +392,14 @@ export default function Primary() {
                   "border-rose-400 bg-rose-50 dark:bg-rose-950/30" :
                   "border-border bg-card hover:bg-muted"}`
                   }>
-                  
+
                   <div className="text-3xl">{g.emoji}</div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <div className="text-sm font-extrabold"><T>{g.name_cn}</T></div>
-                      {isFoundation && (
-                        <span className="rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">
-                          <T>🌱 英语启蒙</T>
-                        </span>
-                      )}
-                      {isSync && (
-                        <span className="rounded bg-sky-100 px-1.5 py-0.5 text-[10px] font-bold text-sky-700 dark:bg-sky-950/50 dark:text-sky-300">
-                          <T>📚 教材同步</T>
-                        </span>
-                      )}
+                      <span className="rounded bg-sky-100 px-1.5 py-0.5 text-[10px] font-bold text-sky-700 dark:bg-sky-950/50 dark:text-sky-300">
+                        <T>📚 教材同步</T>
+                      </span>
                     </div>
                     <div className="mt-0.5 flex flex-wrap gap-1.5 text-[10px] font-bold">
                       {isCurrent &&

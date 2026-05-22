@@ -374,9 +374,13 @@ const App = () => (
           <Route path="/admin/grammar-content" element={<AdminGrammarContent />} />
           <Route path="/admin/users" element={<AdminUserDashboard />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/hub" element={<Dashboard />} />
-          <Route path="/dashboard" element={<LearningCenter />} />
-          <Route path="/learning-center" element={<Navigate to="/dashboard" replace />} />
+          {/* /dashboard is the canonical Student Hub (redesigned 2026-05). */}
+          <Route path="/dashboard" element={<Dashboard />} />
+          {/* /hub kept as an alias so any existing bookmarks still resolve. */}
+          <Route path="/hub" element={<Navigate to="/dashboard" replace />} />
+          {/* LearningCenter remains reachable at its own URL for users who
+              prefer the AI-diagnosis + time-travel slider view. */}
+          <Route path="/learning-center" element={<LearningCenter />} />
           <Route path="/learning-center/list" element={<LearningCenterList />} />
           <Route path="/dashboard/list/:stage/:state" element={<MasteryList />} />
           <Route path="/dashboard/grammar" element={<GrammarMastery />} />

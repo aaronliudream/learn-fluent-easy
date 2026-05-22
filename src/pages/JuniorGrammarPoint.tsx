@@ -61,6 +61,9 @@ export default function JuniorGrammarPoint() {
   const [searchParams, setSearchParams] = useSearchParams();
   const isChallenge = searchParams.get("challenge") === "1";
   const isClassic = searchParams.get("classic") === "1";
+  // 测试模式 (?quick=1): skip Lab redirect AND skip lesson/immersion stages.
+  // Drops the user straight into the quiz questions for fast content evaluation.
+  const isQuick = searchParams.get("quick") === "1";
   const sessionSize = isChallenge ? CHALLENGE_QUESTIONS_JUNIOR : 10;
   const [pt, setPt] = useState<Pt | null>(null);
   const grammarBackTo = pt?.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
@@ -110,16 +113,20 @@ export default function JuniorGrammarPoint() {
     })();
   }, [id, sessionSize]);
 
-  // Rich points default to Lab (闯关); ?classic=1 keeps this page for quick drill.
+  // Rich points default to Lab (闯关); ?classic=1 or ?quick=1 keeps this page.
   useEffect(() => {
-    if (!id || loading || isClassic || isChallenge) return;
+    if (!id || loading || isClassic || isChallenge || isQuick) return;
     if (pt && hasLabContent(pt)) {
       nav(juniorGrammarPlayPath(id, pt), { replace: true });
     }
-  }, [id, loading, pt, isClassic, isChallenge, nav]);
+  }, [id, loading, pt, isClassic, isChallenge, isQuick, nav]);
 
-  // Determine which stages have data → auto-skip empty ones
+  // Determine which stages have data → auto-skip empty ones.
+  // ?quick=1 (测试模式) forces practice-only: skip lesson + immersion entirely.
   const availableStages = useMemo<Stage[]>(() => {
+    if (isQuick) {
+      return qs.length > 0 ? ["practice", "reflect"] : ["reflect"];
+    }
     if (!pt) return ["practice", "reflect"];
     const stages: Stage[] = [];
     if (Array.isArray(pt.teacher_script) && pt.teacher_script.length > 0) stages.push("lesson");
@@ -127,7 +134,7 @@ export default function JuniorGrammarPoint() {
     if (qs.length > 0) stages.push("practice");
     stages.push("reflect");
     return stages;
-  }, [pt, qs]);
+  }, [pt, qs, isQuick]);
 
   // Set initial stage to first available
   useEffect(() => {

@@ -1017,11 +1017,14 @@ export default function JuniorGrammarLab() {
   const { id } = useParams<{id: string;}>();
   const [searchParams] = useSearchParams();
   const wantRevenge = searchParams.get("revenge") === "1";
+  // 测试模式 (?quick=1): skip phases 0-5 (lecture/foundation/reflex/drill/correction),
+  // jump straight to phase 6 (exam — pure quiz questions) for fast content testing.
+  const isQuick = searchParams.get("quick") === "1";
   const nav = useNavigate();
   const [pt, setPt] = useState<Pt | null>(null);
   const [examQs, setExamQs] = useState<ExamQ[]>([]);
   const [loading, setLoading] = useState(true);
-  const [phase, setPhase] = useState(0);
+  const [phase, setPhase] = useState(isQuick ? 6 : 0);
   const [state, setState] = useState<LabState>({ xp: 0, streak: 0, bestStreak: 0, phasesDone: [], achievements: [], mistakes: [] });
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [focus, setFocus] = useState(false);

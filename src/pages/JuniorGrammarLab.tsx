@@ -9,6 +9,7 @@ import { clearRevengeForPoint, enqueueLabMistake } from "@/lib/juniorGrammarReve
 import { GrammarRevengeRunner } from "@/components/grammar/GrammarRevengeRunner";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
+import { GrammarQuestionCard, type GrammarQuestion, type AnswerResult } from "@/components/grammar/GrammarQuestionCard";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { awardForCorrect } from "@/lib/coins";
 import ReactMarkdown from "react-markdown";
@@ -28,11 +29,10 @@ type ReflexCard = {cn: string;en: string;keyword?: string;};
 type DrillItem = {situation: string;cn: string;en: string;accepted?: string[];};
 type CorrectionTask = {wrong: string;model: string;hint: string;why: string;};
 type BossQ = {stem: string;option_a: string;option_b: string;option_c: string;option_d: string;correct_answer: string;trap: string;why: string;};
-type ExamQ = {
-  id: string;stem: string;
-  option_a?: string | null;option_b?: string | null;option_c?: string | null;option_d?: string | null;
-  correct_answer?: string | null;explanation?: string | null;
-};
+// Exam questions use the universal GrammarQuestion type so the Lab's exam
+// phase can render every question_type (mcq / fill / transform / correction /
+// translation) via GrammarQuestionCard — not just MCQ.
+type ExamQ = GrammarQuestion;
 
 type Pt = {
   id: string;
@@ -544,7 +544,88 @@ function CorrectionScreen({ tasks, onDone, onMistake }: {tasks: CorrectionTask[]
 
 }
 
-/* ─────────────── Phase: MCQ runner (Exam + Boss) ─────────────── */
+/* ─────────────── Phase: Universal exam runner (uses GrammarQuestionCard) ─────────────── */
+/**
+ * Drives the Lab's 真题练习 (exam) phase using the universal
+ * GrammarQuestionCard component, which auto-selects the right UI based on
+ * question_type:
+ *   - mcq          → 4-button picker
+ *   - fill         → typed input matched against accepted_answers
+ *   - transform    → typed sentence-rewrite (AI-graded if use_ai_grading)
+ *   - correction   → typed correction (AI-graded if use_ai_grading)
+ *   - translation  → typed translation (AI-graded if use_ai_grading)
+ *
+ * Replaces the legacy MCQRunner which only rendered MCQ rows and choked on
+ * NULL option columns from older seed data.
+ */
+function UniversalExamRunner({ questions, label, onDone, onMistake, onCorrect }: {
+  questions: GrammarQuestion[];
+  label: string;
+  onDone: (correct: number, total: number) => void;
+  onMistake: (m: Mistake) => void;
+  onCorrect: () => void;
+}) {
+  const [i, setI] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [answered, setAnswered] = useState(false);
+
+  if (!questions.length) return <SkipPhase emoji="📚" label={label} onSkip={() => onDone(0, 0)} />;
+
+  const q = questions[i];
+
+  const handleAnswered = (result: AnswerResult) => {
+    if (answered) return;
+    setAnswered(true);
+    const isOk = result.kind === "correct" || result.kind === "acceptable";
+    if (isOk) {
+      setCorrectCount((c) => c + 1);
+      onCorrect();
+    } else {
+      onMistake({
+        phase: label,
+        stem: q.stem,
+        picked: "", // GrammarQuestionCard handles its own answer display
+        correct: q.correct_answer || (q.accepted_answers?.[0] ?? ""),
+        why: q.explanation || "",
+      });
+    }
+  };
+
+  const next = () => {
+    if (i + 1 >= questions.length) {
+      onDone(correctCount, questions.length);
+    } else {
+      setI(i + 1);
+      setAnswered(false);
+    }
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
+      <div className="flex items-center justify-between text-xs ink-dim">
+        <span>{label}</span>
+        <span>{i + 1} / {questions.length}</span>
+      </div>
+      <div className="glass-card-strong rounded-2xl p-6">
+        {/* key={q.id} forces GrammarQuestionCard to reset its internal state per question */}
+        <GrammarQuestionCard
+          key={q.id}
+          question={q}
+          index={i}
+          onAnswered={handleAnswered}
+        />
+      </div>
+      {answered &&
+        <div className="text-right">
+          <button onClick={next} className="btn-primary">
+            {i + 1 >= questions.length ? "完成阶段" : "下一题"} <ArrowRight size={14} className="inline" />
+          </button>
+        </div>
+      }
+    </div>);
+}
+
+/* ─────────────── Phase: MCQ runner (Boss only — legacy kept for backward compat) ─────────────── */
 function MCQRunner({ questions, label, onDone, onMistake, onCorrect
 
 
@@ -1069,14 +1150,14 @@ export default function JuniorGrammarLab() {
       select("id,title,cefr,grade,mnemonic,explanation_md,teacher_script,immersion_cards,hook_line,hook_line_cn,contrast_table,reflex_cards,situation_drills,correction_tasks,boss_questions").
       eq("id", id).maybeSingle();
       if (p) setPt(p as any);
-      // Gold-standard MCQs only (sort_order 9000-9099). The Lab's MCQRunner
-      // can only render MCQ rows — older seed rows in sort_order 1-99 have NULL
-      // option columns and render as "nan", so we scope to the gold-standard
-      // range where I guarantee all 4 option columns are filled.
+      // Gold-standard questions only (sort_order 9000-9099). We pull ALL types
+      // (mcq / fill / transform / correction / translation) and render them
+      // through GrammarQuestionCard, which auto-selects the right UI per type.
+      // Old seed rows in sort_order 1-99 are skipped — they have NULL columns
+      // that previously rendered as "nan" inside MCQRunner.
       const { data: qs } = await supabase.from("junior_grammar_questions").
-      select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty,sort_order").
+      select("id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,sort_order").
       eq("point_id", id).
-      eq("question_type", "mcq").
       gte("sort_order", 9000).
       lte("sort_order", 9099).
       order("sort_order").
@@ -1278,7 +1359,7 @@ export default function JuniorGrammarLab() {
 
       }
       {phase === 6 &&
-      <MCQRunner
+      <UniversalExamRunner
         label="真题练习"
         questions={examQs}
         onCorrect={() => {onCorrect();grant({ addXp: XP.exam });}}

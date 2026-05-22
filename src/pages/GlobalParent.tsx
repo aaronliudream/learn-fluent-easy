@@ -441,9 +441,17 @@ export default function GlobalParent() {
   /* ───────────── Layout ───────────── */
   return (
     <main className="mx-auto min-h-screen max-w-5xl px-4 py-6 md:px-6 md:py-10">
-      <BackLink to="/" className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-4" /> <T>返回</T>
-      </BackLink>
+      <div className="mb-3 flex items-center justify-between gap-2">
+        <BackLink to="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <ArrowLeft className="size-4" /> <T>返回</T>
+        </BackLink>
+        {/* Cross-link to student view (same account, kid-facing layout) */}
+        <Link
+          to="/dashboard"
+          className="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/40 px-3 py-1.5 text-xs font-bold text-muted-foreground transition hover:bg-muted hover:text-foreground">
+          <span>👦</span> <T>学生视图</T> <span aria-hidden>→</span>
+        </Link>
+      </div>
 
       {/* 1. This-week hero */}
       <ThisWeekHero

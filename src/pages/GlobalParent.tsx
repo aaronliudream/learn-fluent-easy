@@ -195,11 +195,14 @@ export default function GlobalParent() {
   /* ───────────── Tab content blocks ───────────── */
   const overviewTab = (
     <div className="space-y-5">
-      {/* Snapshot + Achievement side by side */}
-      <div className="grid gap-4 md:grid-cols-2">
-        <ProgressSnapshot />
-        <AchievementBanner defaultStage={mainSeg ?? "primary"} />
-      </div>
+      {/* Progress snapshot — full width so the 6 delta tiles (3-col grid)
+          have room. Previously this lived in a 2-col flex with the
+          AchievementBanner, which compressed each tile to ~150px and made
+          the "上周 X 分钟" sub-label wrap into a vertical character column. */}
+      <ProgressSnapshot />
+
+      {/* Achievement banner — also full width below */}
+      <AchievementBanner defaultStage={mainSeg ?? "primary"} />
 
       {/* GrowthReport + WeeklyDigest — keep visible (no longer hidden in accordion) */}
       <GrowthReport />

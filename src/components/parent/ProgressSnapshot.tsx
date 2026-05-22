@@ -160,12 +160,12 @@ function DeltaCard({
       </div>
       <div className="flex items-baseline gap-1">
         <span className="text-3xl font-black tabular-nums md:text-4xl">{now}</span>
-        <span className="text-base font-bold text-muted-foreground">{unit}</span>
+        <span className="text-lg font-bold text-muted-foreground">{unit}</span>
       </div>
-      <div className="mt-2 flex items-center justify-between gap-2">
-        <span className="text-[11px] text-muted-foreground"><T>上周</T> <b className="text-foreground">{prev}{unit}</b></span>
+      <div className="mt-2 flex flex-wrap items-center justify-between gap-1.5">
+        <span className="text-xs text-muted-foreground"><T>上周</T> <b className="text-foreground tabular-nums">{prev}{unit}</b></span>
         <span className={cn(
-          "inline-flex items-center gap-0.5 rounded-full px-2 py-0.5 text-xs font-extrabold",
+          "inline-flex items-center gap-0.5 rounded-full px-2 py-0.5 text-xs font-extrabold tabular-nums",
           good && "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200",
           bad  && "bg-rose-100 text-rose-800 dark:bg-rose-900/40 dark:text-rose-200",
           flat && "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-200",

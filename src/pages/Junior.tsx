@@ -1,7 +1,7 @@
 import { T } from "@/i18n/T";import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine, Rocket, Sparkles, Mic, MessageSquare, Landmark } from "lucide-react";
+import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine, Rocket, Sparkles, Mic, MessageSquare } from "lucide-react";
 import { ContinueCard } from "@/components/mastery/ContinueCard";
 
 const GRADE_FILTERS = [
@@ -25,11 +25,10 @@ export default function Junior() {
   { to: `/junior/vocab${q}`, icon: "🎮", title: "核心词汇 · 5 种游戏", desc: "单词便当 / 任务 / 对决 / 听写 · 边玩边背", gradient: "from-violet-500 via-indigo-500 to-blue-500", hero: true },
   { to: `/talk?stage=junior`, icon: Mic, title: "AI 口语对话 · 中考话题", desc: "和 Alex 真人语音聊天 · 校园 / 兴趣 / 旅行 / 节日", gradient: "from-rose-500 via-pink-500 to-fuchsia-600" },
   { to: `/primary/chat`, icon: MessageSquare, title: "AI 文字陪练 · 不限次数", desc: "用完语音也能继续练 · 词汇语法即时纠错", gradient: "from-teal-500 via-cyan-500 to-sky-500" },
-  { to: `/junior/grammar${q}`, icon: BookOpen, title: "语法冒险", desc: "每天一关闯关 · 反射改错 Boss · 间隔复习", gradient: "from-emerald-500 via-teal-500 to-cyan-500" },
+  { to: `/junior/grammar${q}`, icon: BookOpen, title: "中考语法专项", desc: "时态 · 从句 · 非谓语 · 中考考点直击", gradient: "from-emerald-500 via-teal-500 to-cyan-500" },
   { to: `/junior/reading${q}`, icon: Target, title: "阅读训练", desc: "主题阅读 · 答题解析 · 答对喂宠物", gradient: "from-amber-500 via-orange-500 to-rose-500" },
   { to: `/junior/listening${q}`, icon: Headphones, title: "听力短文训练", desc: "对话/短文 · 听音答题 · 中考听力题型", gradient: "from-sky-500 via-blue-500 to-indigo-500" },
-  { to: `/junior/writing${q}`, icon: PenLine, title: "中考写作训练", desc: "命题作文 · AI 批改 · 高分范文对比", gradient: "from-fuchsia-500 via-pink-500 to-rose-500" },
-  { to: "/junior/suzhou", icon: Landmark, title: "🏛️ 苏州中考真题", desc: "历年真题模考 · AI 答疑 · 错题收藏", gradient: "from-stone-500 via-amber-600 to-orange-600" }];
+  { to: `/junior/writing${q}`, icon: PenLine, title: "中考写作训练", desc: "命题作文 · AI 批改 · 高分范文对比", gradient: "from-fuchsia-500 via-pink-500 to-rose-500" }];
 
 
   return (

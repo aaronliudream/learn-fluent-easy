@@ -8,8 +8,6 @@ import {
 import { cn } from "@/lib/utils";
 import { speak } from "@/lib/speak";
 import { primaryReadingEntryPath, primaryReadingListPath } from "@/lib/primaryGrade";
-import { isPrepGrade, primaryVocabPath, readPepVolumeFromStorage, type PepVolume } from "@/lib/primaryDailyPlan";
-import { PEP_VOLUME_GRADE, PRIMARY_VOCAB_SELECT } from "@/lib/primaryPepVocab";
 
 type Vocab = {
   id: string;word: string;meaning_cn: string;theme: string | null;
@@ -40,8 +38,8 @@ const GRADES = [1, 2, 3, 4, 5, 6] as const;
 
 export default function SkillMasteryPanel() {
   const [grade, setGrade] = useState<number>(() => {
-    const v = Number(localStorage.getItem("primary:lastGrade") ?? "3");
-    return GRADES.includes(v as any) ? v : 3;
+    const v = Number(localStorage.getItem("primary:lastGrade") ?? "1");
+    return GRADES.includes(v as any) ? v : 1;
   });
   const [loading, setLoading] = useState(true);
   const [words, setWords] = useState<WordRow[]>([]);
@@ -49,7 +47,6 @@ export default function SkillMasteryPanel() {
   const [listeningStat, setListeningStat] = useState<{done: number;total: number;acc: number;}>({ done: 0, total: 0, acc: 0 });
   const [writingStat, setWritingStat] = useState<{done: number;total: number;acc: number;}>({ done: 0, total: 0, acc: 0 });
   const [speakingStat, setSpeakingStat] = useState<{attempts: number;avg: number;}>({ attempts: 0, avg: 0 });
-  const [activePepVolume, setActivePepVolume] = useState<PepVolume | null>(null);
 
   const [openSkill, setOpenSkill] = useState<null | "vocab" | "reading" | "listening" | "writing" | "speaking">(null);
   const [vocabFilter, setVocabFilter] = useState<"all" | "mastered" | "learning" | "unmastered" | "untouched">("unmastered");
@@ -62,23 +59,15 @@ export default function SkillMasteryPanel() {
       const uid = u?.user?.id;
       if (!uid) {setLoading(false);return;}
 
-      const pepVol = !isPrepGrade(grade) ? readPepVolumeFromStorage(grade) as PepVolume : null;
-      if (!cancelled) setActivePepVolume(pepVol);
-      const dataGrade = pepVol ? PEP_VOLUME_GRADE[pepVol] : grade;
-
-      // Vocab: G3+ 按 PEP 册；G1-2 按年级
-      const vocabQuery = pepVol
-        ? supabase.from("primary_vocab").select(`${PRIMARY_VOCAB_SELECT}`).eq("volume", pepVol).order("word_id")
-        : supabase.from("primary_vocab").select("id,word,meaning_cn,theme").eq("grade", grade);
-
+      // Vocab: 全量 + mastery
       const [vocabRes, masteryRes, articlesRes, readingProgRes, lessonsRes, lessonProgRes, speakRes] = await Promise.all([
-      vocabQuery,
-      supabase.from("primary_word_mastery").select("word_id,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong,last_seen_at").eq("user_id", uid).eq("grade", dataGrade),
-      supabase.from("primary_reading_articles").select("id").eq("grade", dataGrade),
+      supabase.from("primary_vocab").select("id,word,meaning_cn,theme").eq("grade", grade),
+      supabase.from("primary_word_mastery").select("word_id,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong,last_seen_at").eq("user_id", uid).eq("grade", grade),
+      supabase.from("primary_reading_articles").select("id").eq("grade", grade),
       supabase.from("primary_reading_progress").select("article_id,score,completed_at").eq("user_id", uid),
-      supabase.from("primary_lessons").select("id,primary_skill,unit_id,primary_units!inner(grade)").eq("primary_units.grade", dataGrade),
+      supabase.from("primary_lessons").select("id,primary_skill,unit_id,primary_units!inner(grade)").eq("primary_units.grade", grade),
       supabase.from("primary_lesson_progress").select("lesson_id,accuracy,completed_at").eq("user_id", uid),
-      supabase.from("primary_speaking_attempts").select("overall_score").eq("user_id", uid).eq("grade", dataGrade)]
+      supabase.from("primary_speaking_attempts").select("overall_score").eq("user_id", uid).eq("grade", grade)]
       );
       if (cancelled) return;
 
@@ -178,15 +167,9 @@ export default function SkillMasteryPanel() {
           title="词汇 Vocabulary"
           stat={vocabStat}
           ctaLabel={vocabStat.unmastered + vocabStat.untouched > 0 ? `🎯 只练没掌握的 ${vocabStat.unmastered + vocabStat.untouched} 个 →` : "🌟 全部掌握"}
-          ctaTo={activePepVolume ? primaryVocabPath(grade, { volume: activePepVolume }) : `/primary/vocab/${grade}`}
+          ctaTo={`/primary/vocab/${grade}`}
           onDetail={() => {setVocabFilter("unmastered");setOpenSkill(openSkill === "vocab" ? null : "vocab");}}
-          extraNote={
-            vocabStat.total === 0
-              ? "本年级暂无词汇数据"
-              : activePepVolume
-              ? `人教 PEP ${activePepVolume} · 共 ${vocabStat.total} 词`
-              : `共 ${vocabStat.total} 词`
-          } />
+          extraNote={vocabStat.total === 0 ? "本年级暂无词汇数据" : `共 ${vocabStat.total} 词`} />
         
 
           <SkillCard
@@ -213,7 +196,7 @@ export default function SkillMasteryPanel() {
           { label: "未练", value: `${Math.max(0, listeningStat.total - listeningStat.done)}`, color: "text-rose-600" }]
           }
           ctaLabel={listeningStat.total === 0 ? "进入小学专区 →" : "🎧 继续听力 →"}
-          ctaTo={grade >= 3 ? `/primary/adventure/${grade}` : `/primary/grade/${grade}`}
+          ctaTo={`/primary/grade/${grade}`}
           extraNote={listeningStat.total === 0 ? "本年级暂无听力课程" : ""} />
         
 

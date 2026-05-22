@@ -14,19 +14,6 @@ import { cn } from "@/lib/utils";
 import { celebrateScore } from "@/lib/feedback";
 import { markBrowseDone } from "@/components/primary/MasteryPath";
 import { primaryReadingEntryPath } from "@/lib/primaryGrade";
-import { isPrimaryWordDue } from "@/lib/primaryMasteryStats";
-import {
-  isPrepGrade,
-  readPepVolumeFromStorage,
-  type PepVolume,
-} from "@/lib/primaryDailyPlan";
-import {
-  filterVocabByUnit,
-  PEP_VOLUME_TOTALS,
-  PEP_VOLUME_GRADE,
-  PRIMARY_VOCAB_SELECT,
-  type PrimaryPepVocabRow,
-} from "@/lib/primaryPepVocab";
 
 type Vocab = {
   id: string;
@@ -45,18 +32,15 @@ type Mode = "browse" | "quiz";
 export default function PrimaryVocab() {
   const { grade: gradeParam } = useParams<{grade?: string;}>();
   const [sp] = useSearchParams();
-  const focus = sp.get("focus"); // "weak" | "due" → 薄弱词 / 今日到期复习
-  const volumeParam = sp.get("volume") as PepVolume | null;
-  const unitParam = sp.get("unit");
+  const focus = sp.get("focus"); // "weak" → 智能抽取薄弱词
   const lockedGrade = gradeParam ? Number(gradeParam) : null;
   const [words, setWords] = useState<Vocab[]>([]);
-  const [pepVolume, setPepVolume] = useState<PepVolume | null>(null);
   const [grade, setGrade] = useState<number>(() =>
-  lockedGrade ?? Number(localStorage.getItem("primary:lastGrade") ?? "3")
+  lockedGrade ?? Number(localStorage.getItem("primary:lastGrade") ?? "1")
   );
   useEffect(() => {if (lockedGrade) setGrade(lockedGrade);}, [lockedGrade]);
   const [activeTheme, setActiveTheme] = useState<string>("all");
-  const [mode, setMode] = useState<Mode>(focus === "weak" || focus === "due" ? "quiz" : "browse");
+  const [mode, setMode] = useState<Mode>(focus === "weak" ? "quiz" : "browse");
   // 进入词汇浏览即视为完成「① 认词」这一步
   useEffect(() => {if (mode === "browse") markBrowseDone(grade);}, [mode, grade]);
   const [loading, setLoading] = useState(true);
@@ -65,60 +49,24 @@ export default function PrimaryVocab() {
   useEffect(() => {
     setLoading(true);
     (async () => {
-      const usePep = !isPrepGrade(grade);
-      const vol =
-        volumeParam && PEP_VOLUME_TOTALS[volumeParam as PepVolume]
-          ? (volumeParam as PepVolume)
-          : usePep
-          ? readPepVolumeFromStorage(grade)
-          : null;
-      setPepVolume(vol);
-
-      let all: Vocab[];
-      if (vol) {
-        const { data, error } = await supabase
-          .from("primary_vocab")
-          .select(PRIMARY_VOCAB_SELECT)
-          .eq("volume", vol)
-          .order("word_id");
-        if (error) console.error("[PrimaryVocab] pep volume load:", error);
-        let rows = (data ?? []) as PrimaryPepVocabRow[];
-        if (unitParam) rows = filterVocabByUnit(rows, unitParam);
-        all = rows as Vocab[];
-        const syncG = PEP_VOLUME_GRADE[vol];
-        if (syncG !== grade) setGrade(syncG);
-      } else {
-        const { data } = await supabase
-          .from("primary_vocab")
-          .select("id,word,pos,ipa,meaning_cn,example_en,example_cn,theme,grade")
-          .eq("grade", grade);
-        all = (data ?? []) as Vocab[];
-      }
+      const { data } = await supabase.
+      from("primary_vocab").
+      select("id,word,pos,ipa,meaning_cn,example_en,example_cn,theme,grade").
+      eq("grade", grade);
+      const all = (data ?? []) as Vocab[];
       setWords(all);
       setActiveTheme("all");
 
-      if (focus === "due" || focus === "weak") {
+      if (focus === "weak") {
         const { data: u } = await supabase.auth.getUser();
         const uid = u?.user?.id;
         if (uid && all.length) {
           const { data: m } = await supabase.
           from("primary_word_mastery").
-          select("word_id,mastery_level,due_at,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong").
+          select("word_id,mastery_level,quiz_correct,quiz_wrong,listen_correct,listen_wrong,spell_correct,spell_wrong,match_correct,match_wrong").
           eq("user_id", uid).eq("grade", grade);
           const mMap = new Map<string, any>();
           (m ?? []).forEach((r: any) => mMap.set(r.word_id, r));
-          if (focus === "due") {
-            const dueIds = new Set(
-              all.filter((w) => {
-                const r = mMap.get(w.id);
-                return r && isPrimaryWordDue(r);
-              }).map((w) => w.id)
-            );
-            setWeakIds(dueIds);
-            setMode("quiz");
-            setLoading(false);
-            return;
-          }
           // 评分：未学=100，做错过=80+错率*20，掌握度低 = 50-(level*10)，已掌握=0
           const scored = all.map((w) => {
             const r = mMap.get(w.id);
@@ -141,7 +89,7 @@ export default function PrimaryVocab() {
       }
       setLoading(false);
     })();
-  }, [grade, volumeParam, unitParam, focus]);
+  }, [grade]);
 
   const themes = useMemo(() => {
     const m = new Map<string, number>();
@@ -175,18 +123,7 @@ export default function PrimaryVocab() {
             <T>小学核心词汇</T>
           </h1>
           <p className="mt-1 text-xs text-muted-foreground">
-            {pepVolume ? (
-              <>
-                <T>人教 PEP</T> {pepVolume}
-                {unitParam ? ` · ${unitParam}` : ""}
-                <T> · 本册</T> {words.length} <T>词</T>
-                {focus === "due" && <span className="font-bold text-orange-600"> · <T>仅到期复习</T></span>}
-              </>
-            ) : (
-              <>
-                {["一", "二", "三", "四", "五", "六"][grade - 1]}<T>年级 · 共</T> {words.length} <T>词 · 已选</T> {filtered.length} <T>词</T>
-              </>
-            )}
+            {["一", "二", "三", "四", "五", "六"][grade - 1]}<T>年级 · 共</T> {words.length} <T>词 · 已选</T> {filtered.length} <T>词</T>
           </p>
         </div>
         <div className="inline-flex rounded-full bg-secondary p-1 text-xs font-bold">

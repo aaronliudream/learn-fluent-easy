@@ -27,8 +27,6 @@ const WeeklyReport = lazy(() => import("./pages/WeeklyReport.tsx"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe.tsx"));
 const AdminFeedback = lazy(() => import("./pages/AdminFeedback.tsx"));
 const AdminGrammarContent = lazy(() => import("./pages/AdminGrammarContent.tsx"));
-const AdminUserDashboard = lazy(() => import("./pages/AdminUserDashboard.tsx"));
-const SuzhouExamReportView = lazy(() => import("./pages/junior/SuzhouExamReportView.tsx"));
 const Placement = lazy(() => import("./pages/Placement.tsx"));
 const Slang = lazy(() => import("./pages/Slang.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
@@ -66,7 +64,6 @@ const PrimaryGrade = lazy(() => import("./pages/PrimaryGrade.tsx"));
 const PrimaryAssessment = lazy(() => import("./pages/PrimaryAssessment.tsx"));
 const PrimaryGames = lazy(() => import("./pages/PrimaryGames.tsx"));
 const PrimaryLesson = lazy(() => import("./pages/PrimaryLesson.tsx"));
-const LessonG2 = lazy(() => import("./pages/LessonG2.tsx"));
 const PrimaryWordQuest = lazy(() => import("./pages/PrimaryWordQuest.tsx"));
 const PrimaryWordRush = lazy(() => import("./pages/PrimaryWordRush.tsx"));
 const PrimaryAdventure = lazy(() => import("./pages/PrimaryAdventure.tsx"));
@@ -80,24 +77,18 @@ const PrimaryAdventureRedirect = lazy(() => import("./pages/PrimaryAdventureRedi
 const PrimaryPhonicsUse = lazy(() => import("./pages/PrimaryPhonicsUse.tsx"));
 const StageTests = lazy(() => import("./pages/StageTests.tsx"));
 const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
-const JuniorStageAssessmentPlay = lazy(() => import("./pages/JuniorStageAssessmentPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
 const JuniorGrade = lazy(() => import("./pages/JuniorGrade.tsx"));
 const JuniorVocab = lazy(() => import("./pages/JuniorVocab.tsx"));
 const JuniorGrammar = lazy(() => import("./pages/JuniorGrammar.tsx"));
 const JuniorGrammarPoint = lazy(() => import("./pages/JuniorGrammarPoint.tsx"));
 const JuniorGrammarLab = lazy(() => import("./pages/JuniorGrammarLab.tsx"));
-const JuniorGrammarRevenge = lazy(() => import("./pages/JuniorGrammarRevenge.tsx"));
 const JuniorReading = lazy(() => import("./pages/JuniorReading.tsx"));
 const JuniorReadingPlay = lazy(() => import("./pages/JuniorReadingPlay.tsx"));
 const JuniorListening = lazy(() => import("./pages/JuniorListening.tsx"));
 const JuniorListeningPlay = lazy(() => import("./pages/JuniorListeningPlay.tsx"));
 const JuniorWriting = lazy(() => import("./pages/JuniorWriting.tsx"));
 const JuniorWritingPlay = lazy(() => import("./pages/JuniorWritingPlay.tsx"));
-const SuzhouExamList = lazy(() => import("./pages/junior/SuzhouExamList.tsx"));
-const SuzhouExamModeSelect = lazy(() => import("./pages/junior/SuzhouExamModeSelect.tsx"));
-const SuzhouExamPlay = lazy(() => import("./pages/junior/SuzhouExamPlay.tsx"));
-const SuzhouFavorites = lazy(() => import("./pages/junior/SuzhouFavorites.tsx"));
 const GaokaoGrammar = lazy(() => import("./pages/GaokaoGrammar.tsx"));
 const GaokaoGrammarPoint = lazy(() => import("./pages/GaokaoGrammarPoint.tsx"));
 const GaokaoGrammarQuiz = lazy(() => import("./pages/GaokaoGrammarQuiz.tsx"));
@@ -307,7 +298,6 @@ const App = () => (
           <Route path="/primary/games/:grade" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
           <Route path="/primary/games/:grade/:type" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
           <Route path="/primary/lesson/:id" element={<ChineseOnlyRoute><PrimaryLesson /></ChineseOnlyRoute>} />
-          <Route path="/lesson" element={<ChineseOnlyRoute><LessonG2 /></ChineseOnlyRoute>} />
           <Route path="/primary/word-quest" element={<ChineseOnlyRoute><PrimaryWordQuest /></ChineseOnlyRoute>} />
           <Route path="/primary/word-rush" element={<ChineseOnlyRoute><PrimaryWordRush /></ChineseOnlyRoute>} />
           <Route path="/primary/adventure" element={<ChineseOnlyRoute><PrimaryAdventureRedirect /></ChineseOnlyRoute>} />
@@ -324,12 +314,10 @@ const App = () => (
           <Route path="/primary/phonics/use/:letter" element={<ChineseOnlyRoute><PrimaryPhonicsUse /></ChineseOnlyRoute>} />
           <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
           <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />
-          <Route path="/junior/stage-assessment/:grade/:testId" element={<JuniorStageAssessmentPlay />} />
           <Route path="/junior" element={<ChineseOnlyRoute><Junior /></ChineseOnlyRoute>} />
           <Route path="/junior/g/:grade" element={<ChineseOnlyRoute><JuniorGrade /></ChineseOnlyRoute>} />
           <Route path="/junior/vocab" element={<ChineseOnlyRoute><JuniorVocab /></ChineseOnlyRoute>} />
           <Route path="/junior/grammar" element={<ChineseOnlyRoute><JuniorGrammar /></ChineseOnlyRoute>} />
-          <Route path="/junior/grammar/revenge" element={<ChineseOnlyRoute><JuniorGrammarRevenge /></ChineseOnlyRoute>} />
           <Route path="/junior/grammar/:id" element={<ChineseOnlyRoute><JuniorGrammarPoint /></ChineseOnlyRoute>} />
           <Route path="/junior/grammar-lab/:id" element={<ChineseOnlyRoute><JuniorGrammarLab /></ChineseOnlyRoute>} />
           <Route path="/junior/reading" element={<ChineseOnlyRoute><JuniorReading /></ChineseOnlyRoute>} />
@@ -338,11 +326,6 @@ const App = () => (
           <Route path="/junior/listening/:id" element={<ChineseOnlyRoute><JuniorListeningPlay /></ChineseOnlyRoute>} />
           <Route path="/junior/writing" element={<ChineseOnlyRoute><JuniorWriting /></ChineseOnlyRoute>} />
           <Route path="/junior/writing/:id" element={<ChineseOnlyRoute><JuniorWritingPlay /></ChineseOnlyRoute>} />
-          <Route path="/junior/suzhou" element={<ChineseOnlyRoute><SuzhouExamList /></ChineseOnlyRoute>} />
-          <Route path="/junior/suzhou/favorites" element={<ChineseOnlyRoute><SuzhouFavorites /></ChineseOnlyRoute>} />
-          <Route path="/junior/suzhou/:examId/mode" element={<ChineseOnlyRoute><SuzhouExamModeSelect /></ChineseOnlyRoute>} />
-          <Route path="/junior/suzhou/:examId" element={<ChineseOnlyRoute><SuzhouExamPlay /></ChineseOnlyRoute>} />
-          <Route path="/junior/suzhou/report/:reportId" element={<ChineseOnlyRoute><SuzhouExamReportView /></ChineseOnlyRoute>} />
           <Route path="/gaokao" element={<ChineseOnlyRoute><Gaokao /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade" element={<ChineseOnlyRoute><GaokaoGrade /></ChineseOnlyRoute>} />
           <Route path="/gaokao/exam" element={<ChineseOnlyRoute><GaokaoExam /></ChineseOnlyRoute>} />
@@ -368,7 +351,6 @@ const App = () => (
           <Route path="/level/:levelId/unit/:unitId/lesson/:lessonId" element={<Lesson />} />
           <Route path="/admin/feedback" element={<AdminFeedback />} />
           <Route path="/admin/grammar-content" element={<AdminGrammarContent />} />
-          <Route path="/admin/users" element={<AdminUserDashboard />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/hub" element={<Dashboard />} />
           <Route path="/dashboard" element={<LearningCenter />} />

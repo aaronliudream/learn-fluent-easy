@@ -1,12 +1,9 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Check, Eye, EyeOff, Moon, RotateCw, Sparkles, Star, Sun, Trophy, X, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
-import { loadJuniorGrammarMasteryAll, recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
-import { juniorGrammarPlayPath, pickNextLabPoint, type JuniorPointNav } from "@/lib/juniorGrammarNav";
-import { clearRevengeForPoint, enqueueLabMistake } from "@/lib/juniorGrammarRevenge";
-import { GrammarRevengeRunner } from "@/components/grammar/GrammarRevengeRunner";
+import { recordJuniorGrammarAttempt } from "@/lib/juniorGrammarFsrs";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
 import { fireEmojiConfetti } from "@/lib/feedback";
@@ -835,117 +832,12 @@ function BossRunner({ questions, pointTitle, gradeLabel, onCorrect, onMistake, o
 
 }
 
-/* ─────────────── Revenge: retry session mistakes only ─────────────── */
-function RevengeScreen({
-  mistakes,
-  onDone,
-  onCorrect,
-}: {
-  mistakes: Mistake[];
-  onDone: (correct: number, total: number) => void;
-  onCorrect: () => void;
-}) {
-  const queue = useMemo(() => {
-    const seen = new Set<string>();
-    return mistakes.filter((m) => {
-      const key = `${m.phase}|${m.stem}|${m.correct}`;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
-  }, [mistakes]);
-
-  const [i, setI] = useState(0);
-  const [val, setVal] = useState("");
-  const [result, setResult] = useState<null | "ok" | "ng">(null);
-  const [correct, setCorrect] = useState(0);
-
-  if (!queue.length) {
-    return (
-      <div className="max-w-2xl mx-auto px-4 py-12 text-center">
-        <p className="ink-dim"><T>没有可复仇的错题</T></p>
-        <button type="button" onClick={() => onDone(0, 0)} className="btn-ghost mt-4"><T>返回</T></button>
-      </div>
-    );
-  }
-
-  const m = queue[i];
-  const submit = () => {
-    if (!val.trim() || result !== null) return;
-    const ok = fuzzyMatch(val, m.correct);
-    setResult(ok ? "ok" : "ng");
-    if (ok) {
-      setCorrect((c) => c + 1);
-      onCorrect();
-    }
-  };
-  const next = () => {
-    if (i + 1 >= queue.length) onDone(correct + (result === "ok" ? 0 : 0), queue.length);
-    else {
-      setI(i + 1);
-      setVal("");
-      setResult(null);
-    }
-  };
-
-  return (
-    <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
-      <div className="text-center space-y-2">
-        <div className="text-5xl">⚔️</div>
-        <h2 className="font-display text-3xl"><T>复仇模式</T></h2>
-        <p className="text-sm ink-dim"><T>只刷本关错题 · 全部改对解锁「再战归来」</T></p>
-      </div>
-      <div className="flex items-center justify-between text-xs ink-dim">
-        <span className="rounded-full bg-rose-soft text-rose px-2 py-0.5 font-bold">{m.phase}</span>
-        <span>{i + 1} / {queue.length}</span>
-      </div>
-      <div className="glass-card-strong rounded-2xl p-8 space-y-5">
-        <div className="font-display text-xl leading-relaxed">{m.stem}</div>
-        <div className="text-xs ink-dim"><T>上次你的答法：</T> <span className="text-rose line-through">{m.picked}</span></div>
-        <textarea
-          value={val}
-          onChange={(e) => setVal(e.target.value)}
-          disabled={result !== null}
-          placeholder="这次写对…"
-          className="lab-input min-h-[80px] resize-none"
-          onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
-              e.preventDefault();
-              if (result === null) submit();
-              else next();
-            }
-          }}
-        />
-        {result === "ok" &&
-        <div className="bg-mint-soft rounded-xl p-4 text-mint flex items-center gap-2"><Check size={16} /> <T>复仇成功！</T></div>
-        }
-        {result === "ng" &&
-        <div className="bg-rose-soft rounded-xl p-4 space-y-2">
-          <div className="text-rose font-semibold"><T>还没对，参考：</T></div>
-          <div className="font-mono text-mint">{m.correct}</div>
-          {m.why && <div className="text-xs ink-dim"><ReactMarkdown>{m.why}</ReactMarkdown></div>}
-        </div>
-        }
-        <div className="flex justify-end">
-          {result === null ?
-          <button type="button" onClick={submit} className="btn-primary bg-gradient-to-r from-rose-600 to-amber-600"><T>提交复仇</T></button> :
-          <button type="button" onClick={next} className="btn-primary">
-            {i + 1 >= queue.length ? <T>完成复仇</T> : <T>下一题</T>}
-            <ArrowRight size={14} className="inline ml-1" />
-          </button>
-          }
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* ─────────────── Phase: Done ─────────────── */
-function DoneScreen({ state, mistakes, onReplay, onRevenge, onAskTutor, bossPassed, nextPointId, nextPointTitle, grammarHref
+function DoneScreen({ state, mistakes, onReplay, onAskTutor, bossPassed, nextPointId, grammarHref
 
 
 
-}: {state: LabState;mistakes: Mistake[];onReplay: () => void;onRevenge?: () => void;onAskTutor: (m: Mistake) => void;bossPassed?: boolean;nextPointId?: string | null;nextPointTitle?: string | null;grammarHref?: string;}) {
+}: {state: LabState;mistakes: Mistake[];onReplay: () => void;onAskTutor: (m: Mistake) => void;bossPassed?: boolean;nextPointId?: string | null;grammarHref?: string;}) {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-8 animate-fade-in">
       <div className="text-center space-y-3">
@@ -991,19 +883,10 @@ function DoneScreen({ state, mistakes, onReplay, onRevenge, onAskTutor, bossPass
         </div>
       }
       <div className="text-center flex flex-wrap gap-3 justify-center">
-        {mistakes.length > 0 && onRevenge &&
-        <button
-          type="button"
-          onClick={onRevenge}
-          className="btn-primary inline-flex items-center gap-2 bg-gradient-to-r from-rose-600 to-orange-600">
-          <Zap size={16} /> <T>复仇模式</T> ({mistakes.length})
-        </button>
-        }
-        <button type="button" onClick={onReplay} className="btn-ghost inline-flex items-center gap-2"><RotateCw size={16} /> <T>再来一次</T></button>
+        <button onClick={onReplay} className="btn-ghost inline-flex items-center gap-2"><RotateCw size={16} /> <T>再来一次</T></button>
         {bossPassed && nextPointId &&
-        <Link to={juniorGrammarPlayPath(nextPointId, { id: nextPointId, title: nextPointTitle ?? "", content_depth: 1 })} className="btn-primary inline-flex items-center gap-2">
-            <T>下一关</T>{nextPointTitle ? ` · ${nextPointTitle}` : ""}
-            <ArrowRight size={16} />
+        <Link to={`/junior/grammar-lab/${nextPointId}`} className="btn-primary inline-flex items-center gap-2">
+            <T>进入下一关</T> <ArrowRight size={16} />
           </Link>
         }
         <Link to={grammarHref ?? "/junior/grammar"} className="btn-ghost inline-flex items-center gap-2"><T>返回语法地图</T></Link>
@@ -1015,8 +898,6 @@ function DoneScreen({ state, mistakes, onReplay, onRevenge, onAskTutor, bossPass
 /* ─────────────── Main ─────────────── */
 export default function JuniorGrammarLab() {
   const { id } = useParams<{id: string;}>();
-  const [searchParams] = useSearchParams();
-  const wantRevenge = searchParams.get("revenge") === "1";
   const nav = useNavigate();
   const [pt, setPt] = useState<Pt | null>(null);
   const [examQs, setExamQs] = useState<ExamQ[]>([]);
@@ -1026,9 +907,7 @@ export default function JuniorGrammarLab() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [focus, setFocus] = useState(false);
   const [nextPointId, setNextPointId] = useState<string | null>(null);
-  const [nextPointTitle, setNextPointTitle] = useState<string | null>(null);
   const [bossPassed, setBossPassed] = useState(false);
-  const REVENGE_PHASE = 99;
   const [gradeLabel, setGradeLabel] = useState<string>("初中");
   const initRef = useRef(false);
 
@@ -1059,30 +938,12 @@ export default function JuniorGrammarLab() {
       select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty").
       eq("point_id", id).eq("question_type", "mcq").order("difficulty").limit(8);
       setExamQs(qs as any || []);
-      const [{ data: allPts }, masteryRows] = await Promise.all([
-        supabase
-          .from("junior_grammar_points")
-          .select("id,title,grade,content_depth,sort_order,category_id")
-          .order("sort_order", { ascending: true })
-          .order("created_at", { ascending: true }),
-        loadJuniorGrammarMasteryAll(),
-      ]);
-      if (allPts && id) {
-        const masteryMap: Record<string, { due_at?: string | null; mastery_level?: number }> = {};
-        for (const r of masteryRows) {
-          masteryMap[r.item_id] = { due_at: r.due_at, mastery_level: r.mastery_level };
-        }
-        const current = (p as Pt & { grade?: number | null }) ?? null;
-        const next = pickNextLabPoint(id, allPts as JuniorPointNav[], masteryMap, {
-          grade: current?.grade ?? null,
-        });
-        if (next) {
-          setNextPointId(next.id);
-          setNextPointTitle(next.title);
-        } else {
-          setNextPointId(null);
-          setNextPointTitle(null);
-        }
+      // figure out next grammar point in same level by sort order
+      const { data: all } = await supabase.from("junior_grammar_points").
+      select("id,sort_order,created_at").order("sort_order", { ascending: true }).order("created_at", { ascending: true });
+      if (all && id) {
+        const idx = all.findIndex((r: any) => r.id === id);
+        if (idx >= 0 && idx + 1 < all.length) setNextPointId((all[idx + 1] as any).id);
       }
       // detect grade label from profile if available
       try {
@@ -1098,12 +959,6 @@ export default function JuniorGrammarLab() {
   }, [id]);
 
   useEffect(() => {if (id && initRef.current) saveState(id, state);else initRef.current = true;}, [id, state]);
-
-  useEffect(() => {
-    if (!loading && wantRevenge && state.mistakes.length > 0) {
-      setPhase(REVENGE_PHASE);
-    }
-  }, [loading, wantRevenge, state.mistakes.length]);
 
   const grant = (delta: Partial<LabState> & {addXp?: number;unlock?: string[];}) => {
     setState((s) => {
@@ -1137,7 +992,6 @@ export default function JuniorGrammarLab() {
   };
   const onMistake = (m: Mistake) => {
     setState((s) => ({ ...s, streak: 0, mistakes: [m, ...s.mistakes].slice(0, 50) }));
-    if (id && pt) enqueueLabMistake(id, pt.title, m);
     if (id) recordJuniorGrammarAttempt({ pointId: id, questionType: "lab", isCorrect: false, errorReason: "rule_unknown" }).catch(() => {});
     if (id) recordUnifiedAttempt({
       stage: "junior", grade: 7, module: "grammar",
@@ -1179,24 +1033,7 @@ export default function JuniorGrammarLab() {
   return (
     <CosmicShell theme={theme} focus={focus}>
       <HUD state={state} theme={theme} focus={focus} onToggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")} onToggleFocus={() => setFocus(!focus)} onBack={() => { const g = pt?.grade; const fb = g ? `/junior/grammar?grade=${g}` : "/junior/grammar"; if (window.history.state?.idx > 0) nav(-1); else nav(fb); }} />
-      {phase !== REVENGE_PHASE &&
       <PhaseRail active={phase} done={state.phasesDone} onJump={(i) => setPhase(i)} />
-      }
-
-      {phase === REVENGE_PHASE &&
-      <GrammarRevengeRunner
-        items={state.mistakes}
-        onCorrect={() => { onCorrect(); grant({ addXp: 8 }); }}
-        onDone={(correct, total) => {
-          const perfect = total > 0 && correct === total;
-          grant({ addXp: correct * 8, unlock: perfect ? ["comeback"] : [] });
-          if (perfect) {
-            fireEmojiConfetti({ emojis: ["⚔️", "💪"] });
-            if (id) clearRevengeForPoint(id);
-          }
-          setPhase(8);
-        }} />
-      }
 
       {phase === 0 &&
       <BriefingScreen pt={pt} onStart={() => completePhase(0, ["first_step"])} />
@@ -1283,9 +1120,7 @@ export default function JuniorGrammarLab() {
         mistakes={state.mistakes}
         bossPassed={bossPassed}
         nextPointId={nextPointId}
-        nextPointTitle={nextPointTitle}
         grammarHref={pt?.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar"}
-        onRevenge={() => setPhase(REVENGE_PHASE)}
         onReplay={() => {setPhase(0);setState({ ...state, phasesDone: [], streak: 0, mistakes: [] });}}
         onAskTutor={(m) => {
           const url = `/junior/grammar/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;

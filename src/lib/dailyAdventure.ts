@@ -1,10 +1,4 @@
 import { primaryReadingEntryPath } from "@/lib/primaryGrade";
-import {
-  buildStandardDailySteps,
-  isPrepGrade,
-  type PrimaryTrackSnapshot,
-} from "@/lib/primaryDailyPlan";
-import type { ContinuePick } from "@/hooks/useMasteryOverview";
 
 // Daily Adventure — Phase 2 of the Spark world realignment.
 //
@@ -39,16 +33,8 @@ export function buildDailyAdventure(opts: {
   nextLessonId?: string | null;
   /** 已掌握的 Sight Word 数(用于解锁单词游戏冷启动门控) */
   sightWordsMasteredCount?: number;
-  /** G3+ 教材同步轨道（与家长中心一致） */
-  track?: PrimaryTrackSnapshot | null;
-  continuePick?: ContinuePick | null;
 }): AdventureStep[] {
-  const { grade, nextLessonId, sightWordsMasteredCount = 0, track, continuePick } = opts;
-
-  if (!isPrepGrade(grade) && track) {
-    return buildStandardDailySteps({ grade, track, continuePick });
-  }
-
+  const { grade, nextLessonId, sightWordsMasteredCount = 0 } = opts;
   const gradeQ = grade === 2 ? "?grade=2" : "";
 
   const steps: AdventureStep[] = [];
@@ -164,8 +150,9 @@ function getThirdStepContent(
   date: Date,
   nextLessonId?: string | null
 ): AdventureStep | null {
-  const isG2 = grade === 2;
-  const gradeQ = isG2 ? "?grade=2" : "";
+  // G1/G2 已下线 — isG2 永远为 false。保留命名仅为兼容下方分支。
+  const isG2 = false;
+  const gradeQ = "";
   const lessonStep: AdventureStep | null = nextLessonId
     ? {
         kind: "lesson",
@@ -208,25 +195,8 @@ function getThirdStepContent(
     estMinutes: 4,
   };
 
-  // G2 lesson 已接入 — 30 节 AI 课走 /lesson?grade=2 列表
-  const g2LessonStep: AdventureStep = {
-    kind: "lesson",
-    emoji: "📚",
-    title: "今天的一节 G2 课",
-    sparkLine: "我准备好啦,我们开始今天这节课吧!",
-    cta: "开始今天这节课",
-    to: `/lesson?grade=2`,
-    estMinutes: 8,
-  };
-
+  // G1/G2 已下线，原 g2LessonStep 与 isG2 分支整体移除。
   const dow = date.getDay(); // 0=Sun ... 6=Sat
-
-  if (isG2) {
-    if (dow === 6) return readingStep;
-    if (dow === 0 || dow === 3) return listeningStep;
-    if (dow === 2 || dow === 5) return roleplayStep;
-    return g2LessonStep;
-  }
 
   // Sat(6) → Reading (storybooks)
   if (dow === 6) return readingStep;

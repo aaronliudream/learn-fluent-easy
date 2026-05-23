@@ -1,8 +1,9 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { findUnit } from "@/lib/primaryHub/courseData";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { hubSpeak } from "@/lib/primaryHub/speech";
+import { prefetchTTSBatchKid } from "@/lib/speak";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/primaryHub/types";
 
 type Props = {
@@ -769,6 +770,36 @@ export default function PrimaryHubStagePlay({ unitId, stageIdx, onComplete, onBa
   const finalQuizQuestions = useMemo(() => {
     if (!unit) return [];
     return shuffleArray([...unit.quizQuestions]).slice(0, 10);
+  }, [unit]);
+
+  // Prefetch every English audio clip this unit will ever need, in the
+  // background, as soon as the unit loads. Storage is content-addressed and
+  // shared across all users, so on a warm bucket this is just a string of
+  // ~50ms HEAD requests against the CDN; on a cold bucket the Edge Function
+  // synthesizes once and parks the MP3 in Storage for everyone forever.
+  // Result: taps on 🔊 buttons play instantly with no perceived latency.
+  useEffect(() => {
+    if (!unit) return;
+    const texts: string[] = [];
+    // Vocabulary words — used in VocabStage, MatchStage, WriteStage.
+    for (const v of unit.vocabulary) texts.push(v.en);
+    // Listening-comprehension prompts.
+    for (const q of unit.listeningQuestions) {
+      if (q.audio) texts.push(q.audio);
+    }
+    // Dialogue lines used in SentenceStage (only the first 4 patterns are shown).
+    for (const dialogue of unit.dialogues) {
+      const lines = dialogue.lines;
+      for (let i = 0; i < lines.length && i < 8; i++) {
+        const text = lines[i]?.text;
+        if (text) texts.push(text);
+      }
+    }
+    // Final-quiz question stems that get spoken aloud.
+    for (const q of unit.quizQuestions) {
+      if (q.audio) texts.push(q.audio);
+    }
+    prefetchTTSBatchKid(texts);
   }, [unit]);
 
   if (!unit || !stage) return null;

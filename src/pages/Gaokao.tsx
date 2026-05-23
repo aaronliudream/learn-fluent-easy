@@ -1,282 +1,177 @@
 import { T } from "@/i18n/T";
-import { useNavigate } from "react-router-dom";
-import BackLink from "@/components/BackLink";
-import { ArrowLeft, Mic, MessageSquare } from "lucide-react";
-import { ContinueCard } from "@/components/mastery/ContinueCard";
+import { useEffect, useMemo, useState } from "react";
+import { GaokaoHero } from "@/components/gaokao/GaokaoHero";
+import { GaokaoModuleCard } from "@/components/gaokao/GaokaoModuleCard";
+import {
+  GAOKAO_GRADE_LABELS,
+  GaokaoGradeFilter,
+  gaokaoGradeParams,
+  type GaokaoGradeKey,
+} from "@/components/gaokao/GaokaoGradeFilter";
+import { useMasteryOverview } from "@/hooks/useMasteryOverview";
 
-const NAVY = "#0E2746";
-const TERRA = "#C8896A";
+const LS_KEY = "gaokao:gradeFilter";
 
-function MoonDecor() {
-  return (
-    <svg viewBox="0 0 200 200" className="absolute right-3 top-4 h-[150px] w-[150px] sm:h-[170px] sm:w-[170px] pointer-events-none" aria-hidden="true">
-      <defs>
-        <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#F0DDA8" stopOpacity="0.45" />
-          <stop offset="60%" stopColor="#F0DDA8" stopOpacity="0.08" />
-          <stop offset="100%" stopColor="#F0DDA8" stopOpacity="0" />
-        </radialGradient>
-        <radialGradient id="moonBody" cx="40%" cy="35%" r="65%">
-          <stop offset="0%" stopColor="#F4E2B0" />
-          <stop offset="70%" stopColor="#D9B872" />
-          <stop offset="100%" stopColor="#A8884A" />
-        </radialGradient>
-      </defs>
-      <circle cx="100" cy="100" r="90" fill="url(#moonGlow)" />
-      <circle cx="100" cy="100" r="62" fill="url(#moonBody)" />
-      <circle cx="78" cy="86" r="6" fill="#000" opacity="0.08" />
-      <circle cx="118" cy="78" r="3.5" fill="#000" opacity="0.08" />
-      <circle cx="124" cy="118" r="8" fill="#000" opacity="0.08" />
-      <circle cx="92" cy="128" r="4" fill="#000" opacity="0.08" />
-    </svg>
-  );
-}
+const MODULES = [
+  {
+    id: "vocabulary",
+    key: "vocab" as const,
+    icon: "vocabulary" as const,
+    title: "词汇",
+    subtitle: "高考核心词汇 · 3500+",
+    description: "词根词缀 / 语境记忆 / 高频考词 · 系统突破",
+    path: (q: string) => `/gaokao/vocab${q}`,
+  },
+  {
+    id: "grammar",
+    key: "grammar" as const,
+    icon: "grammar" as const,
+    title: "语法",
+    subtitle: "高考语法专项",
+    description: "语法填空 · 短文改错 · 从句/非谓语/虚拟语气",
+    path: (q: string) => `/gaokao/grammar${q}`,
+  },
+  {
+    id: "reading",
+    key: "reading" as const,
+    icon: "reading" as const,
+    title: "阅读",
+    subtitle: "阅读理解训练",
+    description: "四篇阅读 · 七选五 · 长难句分析 · 快速定位",
+    path: (q: string) => `/gaokao/reading${q}`,
+  },
+  {
+    id: "listening",
+    key: null,
+    icon: "listening" as const,
+    title: "听力",
+    subtitle: "高考听力专练",
+    description: "对话理解 · 独白听力 · 高考真题模拟",
+    path: (_q: string, pathGrade: string | null) =>
+      pathGrade ? `/gaokao/g/${pathGrade}` : "/gaokao/g/1",
+  },
+  {
+    id: "writing",
+    key: null,
+    icon: "writing" as const,
+    title: "写作",
+    subtitle: "高考写作训练",
+    description: "应用文 · 读后续写 · AI批改 · 范文精析",
+    path: (_q: string, pathGrade: string | null) =>
+      pathGrade ? `/gaokao/g/${pathGrade}` : "/gaokao/g/1",
+  },
+  {
+    id: "exam",
+    key: "exam" as const,
+    icon: "exam" as const,
+    title: "高考真题",
+    subtitle: "历年高考真题",
+    description: "全国卷 · 新高考卷 · 地方卷 · 限时模考",
+    path: () => "/gaokao/exam",
+  },
+];
 
-function Star({ className }: { className?: string }) {
-  return (
-    <span className={`absolute select-none text-[10px] ${className ?? ""}`} style={{ color: NAVY, opacity: 0.45 }}>✦</span>
-  );
-}
-
-function GradeCard({
-  num, code, badge, title, sub, onClick, dark,
-}: { num: string; code: string; badge?: string; title: string; sub: string; onClick: () => void; dark?: boolean }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`relative w-full overflow-hidden rounded-2xl border px-5 py-5 text-left transition hover:-translate-y-0.5 hover:shadow-lg ${
-        dark
-          ? "border-transparent text-white"
-          : "border-[#E7E1D2] bg-white text-[#0E2746] hover:border-[#0E2746]/30"
-      }`}
-      style={dark ? { background: `linear-gradient(135deg, ${NAVY} 0%, #1a3760 100%)` } : undefined}
-    >
-      {badge && (
-        <span
-          className="absolute right-4 top-3 rounded-full px-2.5 py-0.5 text-[10px] font-bold text-white"
-          style={{ background: TERRA }}
-        >
-          <T>{badge}</T>
-        </span>
-      )}
-      <div className="flex items-baseline gap-2">
-        <span className="font-serif text-[24px] font-bold tracking-wide" style={{ fontFamily: "'Noto Serif SC', serif" }}>
-          <T>{num}</T>
-        </span>
-        <span className={`text-[11px] font-mono uppercase tracking-[0.18em] ${dark ? "text-white/60" : "text-[#0E2746]/55"}`}>
-          {code}
-        </span>
-        <span className={`text-[11px] ${dark ? "text-white/60" : "text-[#0E2746]/55"}`}>·</span>
-        <span className={`text-[11px] ${dark ? "text-white/70" : "text-[#0E2746]/65"}`}><T>{sub.split("·")[0].trim()}</T></span>
-      </div>
-      <div className={`mt-1.5 text-[13px] ${dark ? "text-white/85" : "text-[#0E2746]/70"}`}>
-        <T>{title}</T>
-      </div>
-      <span className={`absolute right-5 top-1/2 -translate-y-1/2 text-[20px] ${dark ? "text-white/80" : "text-[#0E2746]/60"}`}>→</span>
-    </button>
-  );
+function readSavedGrade(): GaokaoGradeKey {
+  try {
+    const saved = localStorage.getItem(LS_KEY);
+    if (saved === "g1" || saved === "g2" || saved === "g3" || saved === "all") return saved;
+  } catch {
+    /* ignore */
+  }
+  return "all";
 }
 
 export default function Gaokao() {
-  const navigate = useNavigate();
+  const [grade, setGrade] = useState<GaokaoGradeKey>(() => readSavedGrade());
+  const overview = useMasteryOverview("gaokao");
+
+  useEffect(() => {
+    localStorage.setItem(LS_KEY, grade);
+  }, [grade]);
+
+  const { query, pathGrade } = gaokaoGradeParams(grade);
+
+  const progressByKey = useMemo(() => {
+    const map: Record<string, number> = {};
+    for (const m of overview.modules) {
+      if (!m.comingSoon) map[m.key] = m.percent;
+    }
+    const reading = map.reading ?? 0;
+    const cloze = map.cloze ?? 0;
+    map.readingCombined =
+      reading || cloze ? Math.round((reading + cloze) / (reading && cloze ? 2 : 1)) : 0;
+    map.exam = Math.round(((map.readingCombined ?? 0) + (map.grammar ?? 0)) / 2);
+    map.listening = 0;
+    map.writing = 0;
+    return map;
+  }, [overview.modules]);
+
+  const classroomPercent = useMemo(() => {
+    const parts = [
+      progressByKey.vocab ?? 0,
+      progressByKey.grammar ?? 0,
+      progressByKey.readingCombined ?? 0,
+    ];
+    return Math.round(parts.reduce((a, b) => a + b, 0) / parts.length);
+  }, [progressByKey]);
+
+  const classroomSubtitle =
+    grade === "all"
+      ? "教材配套学习 · 全部年级"
+      : `教材配套学习 · ${GAOKAO_GRADE_LABELS[grade]}`;
+
+  const classroomTo = pathGrade ? `/gaokao/g/${pathGrade}` : "/gaokao/g/1";
 
   return (
-    <main
-      className="min-h-screen"
-      style={{ background: "linear-gradient(180deg, #F8F6EF 0%, #EFECDF 100%)" }}
-    >
-      <div className="mx-auto max-w-2xl px-5 py-6">
-        <div className="mb-3" style={{ color: NAVY, opacity: 0.7 }}>
-          <BackLink to="/#courses" className="inline-flex items-center gap-1 text-xs hover:opacity-70">
-            <ArrowLeft className="size-4" /> <T>返回学习阶段</T>
-          </BackLink>
+    <main className="min-h-screen bg-background">
+      <GaokaoHero />
+
+      <div className="relative z-10 mx-auto -mt-8 max-w-4xl px-4 pb-8 sm:px-6 lg:px-8">
+        <GaokaoGradeFilter value={grade} onChange={setGrade} className="mb-8" />
+
+        <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
+          {MODULES.map((module) => {
+            let progress = 0;
+            if (module.key === "vocab") progress = progressByKey.vocab ?? 0;
+            else if (module.key === "grammar") progress = progressByKey.grammar ?? 0;
+            else if (module.key === "reading") progress = progressByKey.readingCombined ?? 0;
+            else if (module.id === "listening") progress = progressByKey.listening ?? 0;
+            else if (module.id === "writing") progress = progressByKey.writing ?? 0;
+            else if (module.id === "exam") progress = progressByKey.exam ?? 0;
+
+            const to =
+              module.id === "listening" || module.id === "writing"
+                ? module.path(query, pathGrade)
+                : module.path(query);
+
+            return (
+              <GaokaoModuleCard
+                key={module.id}
+                title={module.title}
+                subtitle={module.subtitle}
+                description={module.description}
+                icon={module.icon}
+                progress={progress}
+                to={to}
+              />
+            );
+          })}
         </div>
 
-        {/* Hero card */}
-        <section className="relative overflow-hidden rounded-3xl border border-[#E7E1D2] bg-white/80 p-7 sm:p-9 shadow-sm">
-          <MoonDecor />
-          <Star className="left-[40%] top-6" />
-          <Star className="left-[55%] top-12" />
-          <Star className="left-[28%] top-20" />
+        <GaokaoModuleCard
+          title="课堂同步"
+          subtitle={classroomSubtitle}
+          description="同步课本单元 · 知识点精讲 · 课后练习巩固"
+          icon="classroom"
+          progress={classroomPercent}
+          to={classroomTo}
+          className="mt-5 min-h-[192px]"
+        />
 
-          {/* Logo lockup */}
-          <div className="relative flex items-center gap-3">
-            <div
-              className="grid size-10 place-items-center rounded-full text-base"
-              style={{ background: NAVY, color: "#F0DDA8" }}
-              aria-hidden
-            >
-              🌙
-            </div>
-            <div>
-              <div
-                className="text-[17px] font-bold leading-tight"
-                style={{ color: NAVY, fontFamily: "'Noto Serif SC', serif" }}
-              >
-                Big Moon English
-              </div>
-              <div className="text-[11px]" style={{ color: NAVY, opacity: 0.55 }}>
-                <T>海上生明月 · 学海有伴</T>
-              </div>
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="mt-8 h-[2px] w-9" style={{ background: NAVY }} />
-
-          {/* Eyebrow */}
-          <div
-            className="mt-4 text-[10px] font-bold uppercase"
-            style={{ color: NAVY, opacity: 0.65, letterSpacing: "0.22em" }}
-          >
-            HIGH SCHOOL · <T>AI 学情系统</T>
-          </div>
-
-          {/* Headline */}
-          <h1
-            className="mt-4 text-[34px] leading-[1.18] font-bold"
-            style={{ color: NAVY, fontFamily: "'Noto Serif SC', serif" }}
-          >
-            <T>不刷题海</T>
-            <br />
-            <T>刷</T>
-            <span className="relative inline-block">
-              <span
-                className="absolute inset-x-0 bottom-1 h-3 -z-0"
-                style={{ background: "#F0DDA8" }}
-              />
-              <span className="relative"><T>你的</T></span>
-            </span>
-            <T>薄弱点</T>
-          </h1>
-
-          {/* Body */}
-          <p className="mt-5 max-w-md text-[13px] leading-relaxed" style={{ color: NAVY, opacity: 0.75 }}>
-            <T>每一题都是 AI 为你新生成的——根据弱点、阶段、上次错题实时调整。</T>
-            <span className="font-bold"><T>永不重复，背不下答案。</T></span>
+        <footer className="mt-12 border-t border-border pt-8 text-center">
+          <p className="text-sm italic text-muted-foreground font-['Noto_Serif_SC',serif]">
+            <T>更多省份高考真题陆续上线（全国卷 · 新高考 · 地方卷 ...）</T>
           </p>
-
-          {/* 3 numbered points */}
-          <ul className="mt-7 space-y-5">
-            {[
-              { n: "01", t: "精准定位 4 类错因", d: "知识漏洞 / 速度 / 策略 / 粗心——AI 替你分类每道错题，对症下药" },
-              { n: "02", t: "题目实时 AI 生成", d: "不依赖固定题库——每题为你的水平和兴趣量身定制，永不重复" },
-              { n: "03", t: "比刷题海高效 3 倍", d: "省下的时间留给打篮球 / 看小说 / 谈恋爱——青春不止英语" },
-            ].map((row) => (
-              <li key={row.n} className="flex gap-4">
-                <span className="font-mono text-[12px] font-bold pt-0.5" style={{ color: TERRA }}>
-                  {row.n}
-                </span>
-                <div className="flex-1 border-b border-[#E7E1D2] pb-4">
-                  <div
-                    className="text-[15px] font-bold"
-                    style={{ color: NAVY, fontFamily: "'Noto Serif SC', serif" }}
-                  >
-                    <T>{row.t}</T>
-                  </div>
-                  <div className="mt-1 text-[12px]" style={{ color: NAVY, opacity: 0.65 }}>
-                    <T>{row.d}</T>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-
-          {/* Continue card (if any) */}
-          <div className="mt-6">
-            <ContinueCard stage="gaokao" />
-          </div>
-
-          {/* Divider */}
-          <div className="mt-8 h-[2px] w-9" style={{ background: NAVY }} />
-
-          {/* Grade selector */}
-          <div
-            className="mt-4 text-[11px] font-bold uppercase"
-            style={{ color: NAVY, opacity: 0.65, letterSpacing: "0.18em" }}
-          >
-            <T>选你现在的年级</T>
-          </div>
-
-          <div className="mt-4 space-y-3">
-            <GradeCard
-              num="高一"
-              code="G-10"
-              sub="打基础"
-              title="学完 95 个本年级核心考点"
-              onClick={() => navigate("/gaokao/g/1")}
-            />
-            <GradeCard
-              num="高二"
-              code="G-11"
-              sub="学练并行"
-              title="高考备考度冲 80%+"
-              onClick={() => navigate("/gaokao/g/2")}
-            />
-            <GradeCard
-              num="高三"
-              code="G-12"
-              sub="高考冲刺"
-              title="每分必争 · AI 按性价比排弱点"
-              badge="最常见"
-              dark
-              onClick={() => navigate("/gaokao/g/3")}
-            />
-          </div>
-
-          {/* Next-step card */}
-          <div className="mt-6 flex items-start gap-3 rounded-xl border border-[#E7E1D2] bg-[#FAF8F1] p-4">
-            <span className="text-lg leading-none" aria-hidden>🌒</span>
-            <div className="text-[12px] leading-relaxed" style={{ color: NAVY }}>
-              <div className="font-bold">
-                <T>下一步 · 6-8 分钟入门快测（15 道适应性测题）</T>
-              </div>
-              <div className="mt-1 opacity-65">
-                <T>AI 据此搭建初始学情画像 · 1-2 周日常练习自动校准</T>
-              </div>
-            </div>
-          </div>
-
-          {/* Direct entries (kept but de-emphasized) */}
-          <div className="mt-6">
-            <div
-              className="text-[10px] font-bold uppercase"
-              style={{ color: NAVY, opacity: 0.55, letterSpacing: "0.18em" }}
-            >
-              <T>或者直接进入功能</T>
-            </div>
-            <div className="mt-2 flex flex-wrap gap-2 text-[12px]">
-              <button
-                onClick={() => navigate("/talk?stage=gaokao")}
-                className="inline-flex items-center gap-1.5 rounded-full border border-[#E7E1D2] bg-white px-3 py-1.5 hover:border-[#0E2746]/30"
-                style={{ color: NAVY }}
-              >
-                <Mic className="size-3.5" /> <T>AI 口语对话</T>
-              </button>
-              <button
-                onClick={() => navigate("/primary/chat")}
-                className="inline-flex items-center gap-1.5 rounded-full border border-[#E7E1D2] bg-white px-3 py-1.5 hover:border-[#0E2746]/30"
-                style={{ color: NAVY }}
-              >
-                <MessageSquare className="size-3.5" /> <T>AI 文字陪练</T>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="mt-6 flex items-center justify-between text-[11px]" style={{ color: NAVY, opacity: 0.55 }}>
-          <span>© Big Moon Studio · 2024</span>
-          <span className="inline-flex items-center gap-1.5">
-            <span
-              className="grid size-5 place-items-center rounded-sm font-serif text-[10px] font-bold text-white"
-              style={{ background: "#B8442C", fontFamily: "'Noto Serif SC', serif" }}
-              aria-hidden
-            >
-              月
-            </span>
-            <T>明月知我</T>
-          </span>
         </footer>
       </div>
     </main>

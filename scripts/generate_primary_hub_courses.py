@@ -6,10 +6,41 @@ import csv
 import json
 import random
 import re
+import sys
 from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from primary_pep_patterns import (  # noqa: E402
+    THEME_POOLS,
+    make_unit_dialogues,
+    make_unit_quiz_extras,
+    similar_sentence_distractors,
+    theme_for_book_unit,
+    themed_distractors,
+)
+
+THEME_POOLS_CN: dict[str, list[str]] = {
+    "school_place": THEME_POOLS["room_cn"] + ["教师办公室", "操场", "计算机房"],
+    "school_item": ["书包", "铅笔", "尺子", "笔记本", "故事书"],
+    "room": THEME_POOLS["room_cn"],
+    "food": ["面包", "牛奶", "鸡蛋", "面条", "汤", "鸡肉", "牛肉"],
+    "fruit": ["苹果", "梨", "香蕉", "橙子", "西瓜"],
+    "animal": ["猫", "狗", "鸭子", "猪", "熊", "熊猫", "老虎", "猴子"],
+    "colour": ["红色", "蓝色", "绿色", "黄色", "黑色", "白色", "棕色", "橙色"],
+    "body": ["头", "眼睛", "耳朵", "鼻子", "嘴", "胳膊", "手", "腿"],
+    "family": ["父亲", "母亲", "兄弟", "姐妹", "叔叔", "阿姨", "表亲"],
+    "job": ["医生", "护士", "司机", "农民", "厨师", "老师"],
+    "weather": THEME_POOLS["weather_cn"],
+    "farm": ["西红柿", "土豆", "胡萝卜", "马", "牛", "羊", "母鸡", "山羊"],
+    "clothes": ["衬衫", "连衣裙", "裙子", "外套", "夹克", "裤子", "短裤", "帽子"],
+    "time": ["早餐", "午餐", "晚餐", "起床", "去上学", "上床睡觉"],
+    "transport": ["公共汽车", "自行车", "汽车", "飞机", "轮船", "地铁", "火车"],
+    "feeling": ["开心", "难过", "生气", "累", "饿", "担心"],
+    "season": ["春天", "夏天", "秋天", "冬天"],
+}
 VOCAB_DIR = ROOT / "docs" / "vocab"
 OUT_DIR = ROOT / "src" / "data" / "primaryHub"
 LEGACY_G4_U1 = ROOT / "src" / "data" / "primaryHub" / "legacy_g4v2_u1.json"
@@ -184,70 +215,70 @@ def _mcq(q: str, correct: str, pool: list[str], point: str = "词汇", dim: str 
     return {"q": q, "opts": opts, "answer": opts.index(correct), "point": point, "dim": dim}
 
 
-def make_quiz(vocab: list[dict], unit_cn: str) -> list[dict]:
+def make_quiz(vocab: list[dict], unit_cn: str, book: str, unit_num: int) -> list[dict]:
     if not vocab:
         return []
+    theme = theme_for_book_unit(book, unit_num)
     qs: list[dict] = []
     all_cn = [v["cn"] for v in vocab]
     all_en = [v["en"] for v in vocab]
+    cn_pool = themed_distractors(theme, "", all_cn, THEME_POOLS_CN.get(theme, []))
     for v in vocab:
-        qs.append(_mcq(f"「{v['en']}」是什么意思？", v["cn"], all_cn))
+        pool = [x for x in all_cn if x != v["cn"]] + [x for x in cn_pool if x != v["cn"]]
+        qs.append(_mcq(f"「{v['en']}」是什么意思？", v["cn"], pool))
     if len(vocab) >= 2:
         v0, v1 = vocab[0], vocab[1]
-        qs.append(
-            _mcq(
-                f"哪个是「{v0['cn']}」？",
-                v0["en"],
-                all_en,
-            )
-        )
-        qs.append(
-            _mcq(
-                f"「{v1['en']}」的中文是？",
-                v1["cn"],
-                all_cn,
-            )
-        )
+        en_pool = themed_distractors(theme, v0["en"], all_en)
+        qs.append(_mcq(f"哪个是「{v0['cn']}」？", v0["en"], en_pool + all_en))
+        qs.append(_mcq(f"「{v1['en']}」的中文是？", v1["cn"], [x for x in all_cn if x != v1["cn"]] + cn_pool))
+    theme_en = themed_distractors(theme, vocab[0]["en"], all_en)
     qs.append(
         _mcq(
             f"本单元「{unit_cn}」核心词是？",
             vocab[0]["en"],
-            all_en + ["apple", "dog", "book", "school"],
+            theme_en + all_en,
         )
     )
+    qs.extend(make_unit_quiz_extras(book, unit_num, vocab, unit_cn))
     return qs[:15]
 
 
-def make_listening(vocab: list[dict]) -> list[dict]:
+def make_listening(vocab: list[dict], dialogues: list[dict]) -> list[dict]:
     out: list[dict] = []
-    for v in vocab[:6]:
-        audio = v["en"] if " " not in v["en"] else f"This is {v['en']}."
+    sentences: list[str] = []
+    for d in dialogues:
+        for line in d.get("lines", []):
+            text = line.get("text", "").strip()
+            if len(text) > 4 and text not in sentences:
+                sentences.append(text)
+    all_en = [v["en"] for v in vocab]
+    for audio in sentences[:6]:
         opts = [audio]
+        for alt in similar_sentence_distractors(audio, all_en):
+            if alt not in opts and len(opts) < 4:
+                opts.append(alt)
         for other in vocab:
-            if other["en"] != v["en"] and len(opts) < 4:
-                alt = other["en"] if " " not in other["en"] else f"This is {other['en']}."
-                if alt not in opts:
-                    opts.append(alt)
+            if len(opts) >= 4:
+                break
+            alt = other["en"] if " " not in other["en"] else f"It's {other['en']}."
+            if alt not in opts and alt != audio:
+                opts.append(alt)
         while len(opts) < 4:
             opts.append(f"Option {len(opts)}")
         out.append({"audio": audio, "opts": opts[:4], "answer": 0})
+    if not out:
+        for v in vocab[:6]:
+            audio = v["en"] if len(v["en"]) > 8 else f"This is {v['en']}."
+            opts = [audio]
+            for other in vocab:
+                if other["en"] != v["en"] and len(opts) < 4:
+                    alt = other["en"] if " " not in other["en"] else f"This is {other['en']}."
+                    if alt not in opts:
+                        opts.append(alt)
+            while len(opts) < 4:
+                opts.append(f"Option {len(opts)}")
+            out.append({"audio": audio, "opts": opts[:4], "answer": 0})
     return out
-
-
-def make_dialogues(vocab: list[dict], title: str) -> list[dict]:
-    if len(vocab) < 2:
-        return []
-    a, b = vocab[0], vocab[1]
-    return [
-        {
-            "title": "Let's talk",
-            "lines": [
-                {"role": "A", "text": f"Look! A {a['en']}.", "cn": f"看！一个{a['cn']}。"},
-                {"role": "B", "text": f"Yes! And a {b['en']}.", "cn": f"对！还有一个{b['cn']}。"},
-                {"role": "A", "text": f"We love {title}!", "cn": f"我们喜欢「{title}」！"},
-            ],
-        }
-    ]
 
 
 def strip_storybook(unit: dict) -> dict:
@@ -276,6 +307,7 @@ def build_unit(book: str, unit_key: str, num: int, rows: list[dict], grade: int,
         stages[0]["subtitle"] = f"{len(vocab)}个核心单词"
     uid = unit_id(grade, sem_id, num)
     available = len(vocab) > 0
+    dialogues = make_unit_dialogues(book, num, vocab, title, cn) if available else []
     return {
         "id": uid,
         "num": num,
@@ -284,10 +316,10 @@ def build_unit(book: str, unit_key: str, num: int, rows: list[dict], grade: int,
         "emoji": emoji,
         "available": available,
         "vocabulary": vocab,
-        "dialogues": make_dialogues(vocab, title) if available else [],
+        "dialogues": dialogues,
         "stages": stages,
-        "quizQuestions": make_quiz(vocab, cn) if available else [],
-        "listeningQuestions": make_listening(vocab) if available else [],
+        "quizQuestions": make_quiz(vocab, cn, book, num) if available else [],
+        "listeningQuestions": make_listening(vocab, dialogues) if available else [],
     }
 
 
@@ -307,6 +339,7 @@ def load_g4_u1_full() -> dict | None:
 
 
 def main() -> None:
+    random.seed(42)
     grades: dict[int, dict] = {}
     g4_u1 = load_g4_u1_full()
 

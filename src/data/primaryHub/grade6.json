@@ -57,22 +57,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A science.",
-                    "cn": "看！一个科学。"
+                    "role": "Robin",
+                    "text": "Where is the museum shop?",
+                    "cn": "博物馆的商店在哪里？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a museum.",
-                    "cn": "对！还有一个博物馆。"
+                    "role": "Wu Binbin",
+                    "text": "It's near the door.",
+                    "cn": "在大门附近。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Robin",
+                    "text": "How can I get to the science museum?",
+                    "cn": "我怎么去科学博物馆？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love How can I get there?!",
-                    "cn": "我们喜欢「How can I get there?」！"
+                    "role": "Wu Binbin",
+                    "text": "Turn left at the bookstore.",
+                    "cn": "在书店左转。"
                   }
                 ]
               }
@@ -139,9 +149,9 @@
               {
                 "q": "「science」是什么意思？",
                 "opts": [
-                  "转弯",
-                  "电影院",
-                  "邮局",
+                  "subway",
+                  "十字路口",
+                  "自行车",
                   "科学"
                 ],
                 "answer": 3,
@@ -151,33 +161,33 @@
               {
                 "q": "「museum」是什么意思？",
                 "opts": [
+                  "十字路口",
+                  "飞机",
                   "博物馆",
-                  "医院",
-                  "科学",
-                  "电影院"
+                  "plane"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「post office」是什么意思？",
                 "opts": [
+                  "car",
+                  "bike",
                   "邮局",
-                  "博物馆",
-                  "书店",
-                  "电影院"
+                  "医院"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「bookstore」是什么意思？",
                 "opts": [
-                  "博物馆",
-                  "转弯",
-                  "电影院",
+                  "subway",
+                  "bike",
+                  "plane",
                   "书店"
                 ],
                 "answer": 3,
@@ -187,9 +197,33 @@
               {
                 "q": "「cinema」是什么意思？",
                 "opts": [
-                  "电影院",
-                  "博物馆",
                   "书店",
+                  "地铁",
+                  "汽车",
+                  "电影院"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「hospital」是什么意思？",
+                "opts": [
+                  "car",
+                  "医院",
+                  "火车",
+                  "邮局"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「crossing」是什么意思？",
+                "opts": [
+                  "十字路口",
+                  "subway",
+                  "电影院",
                   "科学"
                 ],
                 "answer": 0,
@@ -197,60 +231,36 @@
                 "dim": "vocab"
               },
               {
-                "q": "「hospital」是什么意思？",
+                "q": "「turn」是什么意思？",
                 "opts": [
-                  "医院",
-                  "博物馆",
-                  "邮局",
-                  "转弯"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「crossing」是什么意思？",
-                "opts": [
-                  "电影院",
+                  "car",
+                  "转弯",
                   "十字路口",
-                  "科学",
-                  "博物馆"
+                  "train"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「turn」是什么意思？",
-                "opts": [
-                  "书店",
-                  "十字路口",
-                  "电影院",
-                  "转弯"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "哪个是「科学」？",
                 "opts": [
-                  "science",
                   "turn",
-                  "museum",
-                  "cinema"
+                  "science",
+                  "crossing",
+                  "post office"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「museum」的中文是？",
                 "opts": [
-                  "邮局",
-                  "转弯",
+                  "汽车",
+                  "公共汽车",
                   "博物馆",
-                  "书店"
+                  "科学"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -259,74 +269,66 @@
               {
                 "q": "本单元「怎么去那里」核心词是？",
                 "opts": [
-                  "school",
-                  "science",
-                  "book",
-                  "bookstore"
+                  "hospital",
+                  "ship",
+                  "bike",
+                  "science"
                 ],
-                "answer": 1,
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「post office」的意思是？",
+                "opts": [
+                  "电影院",
+                  "科学",
+                  "邮局",
+                  "医院"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "science",
+                "audio": "Where is the museum shop?",
                 "opts": [
-                  "science",
-                  "museum",
-                  "This is post office.",
-                  "bookstore"
+                  "Where is the museum shop?",
+                  "Where is the post office shop?",
+                  "Where is the museum shop.",
+                  "science"
                 ],
                 "answer": 0
               },
               {
-                "audio": "museum",
+                "audio": "It's near the door.",
                 "opts": [
-                  "museum",
+                  "It's near the door.",
+                  "It is near the door.",
                   "science",
-                  "This is post office.",
-                  "bookstore"
+                  "museum"
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is post office.",
+                "audio": "How can I get to the science museum?",
                 "opts": [
-                  "This is post office.",
-                  "science",
-                  "museum",
-                  "bookstore"
+                  "How can I get to the science museum?",
+                  "How can I get to the museum museum?",
+                  "How can I get to the science post office?",
+                  "How can I get to the science museum."
                 ],
                 "answer": 0
               },
               {
-                "audio": "bookstore",
+                "audio": "Turn left at the bookstore.",
                 "opts": [
-                  "bookstore",
+                  "Turn left at the bookstore.",
+                  "Turn left at the cinema.",
                   "science",
-                  "museum",
-                  "This is post office."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "cinema",
-                "opts": [
-                  "cinema",
-                  "science",
-                  "museum",
-                  "This is post office."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "hospital",
-                "opts": [
-                  "hospital",
-                  "science",
-                  "museum",
-                  "This is post office."
+                  "museum"
                 ],
                 "answer": 0
               }
@@ -383,22 +385,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A on foot.",
-                    "cn": "看！一个步行。"
+                    "role": "Amy",
+                    "text": "How do you come to school?",
+                    "cn": "你怎么来上学？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a by.",
-                    "cn": "对！还有一个乘。"
+                    "role": "Mike",
+                    "text": "Usually, I come on foot.",
+                    "cn": "通常我走路来。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Mrs Smith",
+                    "text": "Don't go at the red light!",
+                    "cn": "别闯红灯！"
                   },
                   {
-                    "role": "A",
-                    "text": "We love Ways to go to school!",
-                    "cn": "我们喜欢「Ways to go to school」！"
+                    "role": "Amy",
+                    "text": "I must pay attention to the traffic lights!",
+                    "cn": "我必须注意交通信号灯！"
                   }
                 ]
               }
@@ -465,10 +477,10 @@
               {
                 "q": "「on foot」是什么意思？",
                 "opts": [
-                  "船",
+                  "轮船",
                   "飞机",
                   "步行",
-                  "火车"
+                  "car"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -479,8 +491,8 @@
                 "opts": [
                   "飞机",
                   "乘",
-                  "步行",
-                  "船"
+                  "ship",
+                  "car"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -489,58 +501,58 @@
               {
                 "q": "「bus」是什么意思？",
                 "opts": [
-                  "船",
-                  "火车",
-                  "步行",
-                  "公共汽车"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「plane」是什么意思？",
-                "opts": [
-                  "乘",
                   "公共汽车",
-                  "飞机",
-                  "步行"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「taxi」是什么意思？",
-                "opts": [
-                  "公共汽车",
-                  "步行",
-                  "船",
-                  "出租汽车"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「ship」是什么意思？",
-                "opts": [
-                  "船",
-                  "火车",
-                  "步行",
-                  "出租汽车"
+                  "car",
+                  "地铁",
+                  "bike"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「plane」是什么意思？",
+                "opts": [
+                  "飞机",
+                  "subway",
+                  "乘",
+                  "步行"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「taxi」是什么意思？",
+                "opts": [
+                  "bus",
+                  "ship",
+                  "出租汽车",
+                  "船"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ship」是什么意思？",
+                "opts": [
+                  "ship",
+                  "bike",
+                  "train",
+                  "船"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「subway」是什么意思？",
                 "opts": [
-                  "公共汽车",
                   "乘",
+                  "公共汽车",
                   "地铁",
-                  "火车"
+                  "car"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -549,108 +561,100 @@
               {
                 "q": "「train」是什么意思？",
                 "opts": [
-                  "步行",
+                  "公共汽车",
+                  "ship",
                   "火车",
-                  "船",
                   "出租汽车"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「步行」？",
                 "opts": [
+                  "on foot",
                   "subway",
-                  "by",
                   "plane",
-                  "on foot"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「by」的中文是？",
-                "opts": [
-                  "乘",
-                  "火车",
-                  "步行",
-                  "公共汽车"
+                  "ship"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「by」的中文是？",
+                "opts": [
+                  "火车",
+                  "飞机",
+                  "地铁",
+                  "乘"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "本单元「上学的方式」核心词是？",
                 "opts": [
-                  "train",
+                  "car",
                   "on foot",
-                  "school",
+                  "train",
                   "by"
                 ],
                 "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bus」的意思是？",
+                "opts": [
+                  "飞机",
+                  "火车",
+                  "公共汽车",
+                  "地铁"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "This is on foot.",
+                "audio": "How do you come to school?",
                 "opts": [
-                  "This is on foot.",
-                  "by",
-                  "bus",
-                  "plane"
+                  "How do you come to school?",
+                  "How do you come to school.",
+                  "It's on foot.",
+                  "by"
                 ],
                 "answer": 0
               },
               {
-                "audio": "by",
+                "audio": "Usually, I come on foot.",
                 "opts": [
-                  "by",
-                  "This is on foot.",
-                  "bus",
-                  "plane"
+                  "Usually, I come on foot.",
+                  "Usually, I come by.",
+                  "It's on foot.",
+                  "by"
                 ],
                 "answer": 0
               },
               {
-                "audio": "bus",
+                "audio": "Don't go at the red light!",
                 "opts": [
-                  "bus",
-                  "This is on foot.",
-                  "by",
-                  "plane"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "plane",
-                "opts": [
-                  "plane",
-                  "This is on foot.",
+                  "Don't go at the red light!",
+                  "It's on foot.",
                   "by",
                   "bus"
                 ],
                 "answer": 0
               },
               {
-                "audio": "taxi",
+                "audio": "I must pay attention to the traffic lights!",
                 "opts": [
-                  "taxi",
-                  "This is on foot.",
-                  "by",
-                  "bus"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "ship",
-                "opts": [
-                  "ship",
-                  "This is on foot.",
+                  "I must pay attention to the traffic lights!",
+                  "It's on foot.",
                   "by",
                   "bus"
                 ],
@@ -709,22 +713,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A visit.",
-                    "cn": "看！一个拜访。"
+                    "role": "Mike",
+                    "text": "What are you going to do tomorrow?",
+                    "cn": "你明天打算做什么？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a film.",
-                    "cn": "对！还有一个电影。"
+                    "role": "Sarah",
+                    "text": "I'm going to have an art lesson.",
+                    "cn": "我打算上美术课。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Mike",
+                    "text": "When are you going?",
+                    "cn": "你什么时候去？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love My weekend plan!",
-                    "cn": "我们喜欢「My weekend plan」！"
+                    "role": "Sarah",
+                    "text": "At 3 o'clock.",
+                    "cn": "3点。"
                   }
                 ]
               }
@@ -791,9 +805,9 @@
               {
                 "q": "「visit」是什么意思？",
                 "opts": [
-                  "超市",
-                  "去旅行",
-                  "晚上",
+                  "在今晚",
+                  "电影",
+                  "旅行",
                   "拜访"
                 ],
                 "answer": 3,
@@ -803,182 +817,186 @@
               {
                 "q": "「film」是什么意思？",
                 "opts": [
-                  "旅行",
-                  "去旅行",
-                  "晚上",
-                  "电影"
+                  "在今晚",
+                  "看电影",
+                  "电影",
+                  "拜访"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「see a film」是什么意思？",
                 "opts": [
-                  "在今晚",
-                  "看电影",
+                  "get up",
                   "旅行",
-                  "拜访"
+                  "看电影",
+                  "去旅行"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「trip」是什么意思？",
                 "opts": [
-                  "拜访",
-                  "在今晚",
                   "旅行",
-                  "晚上"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「take a trip」是什么意思？",
-                "opts": [
-                  "电影",
-                  "去旅行",
-                  "晚上",
-                  "拜访"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「supermarket」是什么意思？",
-                "opts": [
-                  "在今晚",
                   "超市",
-                  "旅行",
-                  "去旅行"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「evening」是什么意思？",
-                "opts": [
-                  "看电影",
-                  "旅行",
-                  "晚上",
-                  "超市"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「tonight」是什么意思？",
-                "opts": [
-                  "看电影",
-                  "晚上",
-                  "在今晚",
-                  "电影"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「拜访」？",
-                "opts": [
-                  "evening",
-                  "take a trip",
-                  "visit",
-                  "film"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「film」的中文是？",
-                "opts": [
-                  "电影",
-                  "拜访",
-                  "看电影",
-                  "去旅行"
+                  "go to bed",
+                  "拜访"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「周末计划」核心词是？",
+                "q": "「take a trip」是什么意思？",
                 "opts": [
-                  "book",
-                  "film",
-                  "visit",
-                  "school"
+                  "超市",
+                  "拜访",
+                  "去旅行",
+                  "go to school"
                 ],
                 "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「supermarket」是什么意思？",
+                "opts": [
+                  "get up",
+                  "电影",
+                  "超市",
+                  "旅行"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「evening」是什么意思？",
+                "opts": [
+                  "去旅行",
+                  "起床",
+                  "晚餐",
+                  "晚上"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「tonight」是什么意思？",
+                "opts": [
+                  "早餐",
+                  "旅行",
+                  "拜访",
+                  "在今晚"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「拜访」？",
+                "opts": [
+                  "visit",
+                  "supermarket",
+                  "get up",
+                  "film"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「film」的中文是？",
+                "opts": [
+                  "超市",
+                  "晚上",
+                  "电影",
+                  "lunch"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「周末计划」核心词是？",
+                "opts": [
+                  "go to school",
+                  "visit",
+                  "get up",
+                  "take a trip"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "What time is it? 的意思是？",
+                "opts": [
+                  "什么时间",
+                  "几点钟了",
+                  "什么时候",
+                  "几点了"
+                ],
+                "answer": 3,
+                "point": "句型",
+                "dim": "sentence"
+              },
+              {
+                "q": "「see a film」的意思是？",
+                "opts": [
+                  "看电影",
+                  "晚上",
+                  "旅行",
+                  "电影"
+                ],
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "visit",
+                "audio": "What are you going to do tomorrow?",
                 "opts": [
+                  "What are you going to do tomorrow?",
+                  "What are you going to do tomorrow.",
                   "visit",
-                  "film",
-                  "This is see a film.",
-                  "trip"
+                  "film"
                 ],
                 "answer": 0
               },
               {
-                "audio": "film",
+                "audio": "I'm going to have an art lesson.",
                 "opts": [
-                  "film",
+                  "I'm going to have an art lesson.",
                   "visit",
-                  "This is see a film.",
-                  "trip"
+                  "film",
+                  "It's see a film."
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is see a film.",
+                "audio": "When are you going?",
                 "opts": [
-                  "This is see a film.",
+                  "When are you going?",
+                  "When are you going.",
                   "visit",
-                  "film",
-                  "trip"
+                  "film"
                 ],
                 "answer": 0
               },
               {
-                "audio": "trip",
+                "audio": "At 3 o'clock.",
                 "opts": [
-                  "trip",
+                  "At 3 o'clock.",
                   "visit",
                   "film",
-                  "This is see a film."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is take a trip.",
-                "opts": [
-                  "This is take a trip.",
-                  "visit",
-                  "film",
-                  "This is see a film."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "supermarket",
-                "opts": [
-                  "supermarket",
-                  "visit",
-                  "film",
-                  "This is see a film."
+                  "It's see a film."
                 ],
                 "answer": 0
               }
@@ -1035,22 +1053,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A studies.",
-                    "cn": "看！一个学习。"
+                    "role": "Oliver",
+                    "text": "What are your hobbies?",
+                    "cn": "你的爱好是什么？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a puzzle.",
-                    "cn": "对！还有一个谜。"
+                    "role": "Wu Binbin",
+                    "text": "I like singing and doing kung fu.",
+                    "cn": "我喜欢唱歌和练武术。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Oliver",
+                    "text": "Does he live in Sydney?",
+                    "cn": "他住在悉尼吗？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love I have a pen pal!",
-                    "cn": "我们喜欢「I have a pen pal」！"
+                    "role": "Wu Binbin",
+                    "text": "No, he doesn't.",
+                    "cn": "不，他不住在悉尼。"
                   }
                 ]
               }
@@ -1117,12 +1145,12 @@
               {
                 "q": "「studies」是什么意思？",
                 "opts": [
-                  "学习",
-                  "堪培拉",
-                  "远足",
-                  "谜"
+                  "叔叔",
+                  "姐妹",
+                  "茉莉",
+                  "学习"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1130,8 +1158,8 @@
                 "q": "「puzzle」是什么意思？",
                 "opts": [
                   "业余爱好",
-                  "堪培拉",
-                  "茉莉",
+                  "远足",
+                  "uncle",
                   "谜"
                 ],
                 "answer": 3,
@@ -1141,24 +1169,24 @@
               {
                 "q": "「hiking」是什么意思？",
                 "opts": [
+                  "表亲",
                   "远足",
-                  "笔友",
-                  "想法",
-                  "堪培拉"
+                  "sister",
+                  "uncle"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pen pal」是什么意思？",
                 "opts": [
-                  "笔友",
-                  "堪培拉",
                   "茉莉",
-                  "谜"
+                  "学习",
+                  "笔友",
+                  "母亲"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1167,8 +1195,8 @@
                 "opts": [
                   "业余爱好",
                   "想法",
-                  "笔友",
-                  "学习"
+                  "谜",
+                  "uncle"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1177,111 +1205,103 @@
               {
                 "q": "「jasmine」是什么意思？",
                 "opts": [
-                  "业余爱好",
-                  "茉莉",
-                  "堪培拉",
-                  "笔友"
+                  "远足",
+                  "想法",
+                  "cousin",
+                  "茉莉"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「idea」是什么意思？",
                 "opts": [
+                  "谜",
+                  "父亲",
                   "想法",
-                  "远足",
-                  "茉莉",
-                  "学习"
+                  "母亲"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「Canberra」是什么意思？",
                 "opts": [
+                  "茉莉",
+                  "堪培拉",
                   "远足",
-                  "学习",
-                  "想法",
-                  "堪培拉"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「学习」？",
-                "opts": [
-                  "hobby",
-                  "studies",
-                  "pen pal",
-                  "Canberra"
+                  "谜"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "哪个是「学习」？",
+                "opts": [
+                  "studies",
+                  "jasmine",
+                  "pen pal",
+                  "hiking"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「puzzle」的中文是？",
                 "opts": [
-                  "业余爱好",
-                  "学习",
-                  "笔友",
-                  "谜"
+                  "茉莉",
+                  "表亲",
+                  "谜",
+                  "学习"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「我有个笔友」核心词是？",
                 "opts": [
-                  "puzzle",
-                  "jasmine",
-                  "apple",
-                  "studies"
+                  "studies",
+                  "hiking",
+                  "sister",
+                  "Canberra"
                 ],
-                "answer": 3,
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「hiking」的意思是？",
+                "opts": [
+                  "想法",
+                  "远足",
+                  "学习",
+                  "业余爱好"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "studies",
+                "audio": "What are your hobbies?",
                 "opts": [
+                  "What are your hobbies?",
+                  "What are your hobbies.",
                   "studies",
-                  "puzzle",
-                  "hiking",
-                  "This is pen pal."
+                  "puzzle"
                 ],
                 "answer": 0
               },
               {
-                "audio": "puzzle",
+                "audio": "I like singing and doing kung fu.",
                 "opts": [
-                  "puzzle",
-                  "studies",
-                  "hiking",
-                  "This is pen pal."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "hiking",
-                "opts": [
-                  "hiking",
-                  "studies",
-                  "puzzle",
-                  "This is pen pal."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is pen pal.",
-                "opts": [
-                  "This is pen pal.",
+                  "I like singing and doing kung fu.",
                   "studies",
                   "puzzle",
                   "hiking"
@@ -1289,19 +1309,19 @@
                 "answer": 0
               },
               {
-                "audio": "hobby",
+                "audio": "Does he live in Sydney?",
                 "opts": [
-                  "hobby",
+                  "Does he live in Sydney?",
+                  "Does he live in Sydney.",
                   "studies",
-                  "puzzle",
-                  "hiking"
+                  "puzzle"
                 ],
                 "answer": 0
               },
               {
-                "audio": "jasmine",
+                "audio": "No, he doesn't.",
                 "opts": [
-                  "jasmine",
+                  "No, he doesn't.",
                   "studies",
                   "puzzle",
                   "hiking"
@@ -1361,22 +1381,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A factory.",
-                    "cn": "看！一个工厂。"
+                    "role": "Oliver",
+                    "text": "What does he do?",
+                    "cn": "他是做什么的？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a worker.",
-                    "cn": "对！还有一个工人。"
+                    "role": "Wu Binbin",
+                    "text": "He's a businessman.",
+                    "cn": "他是商人。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Oliver",
+                    "text": "Where does he work?",
+                    "cn": "他在哪里工作？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love What does he do?!",
-                    "cn": "我们喜欢「What does he do?」！"
+                    "role": "Wu Binbin",
+                    "text": "He works at sea.",
+                    "cn": "他在海上工作。"
                   }
                 ]
               }
@@ -1443,22 +1473,22 @@
               {
                 "q": "「factory」是什么意思？",
                 "opts": [
-                  "飞行员",
-                  "邮递员",
                   "科学家",
-                  "工厂"
+                  "工厂",
+                  "商人",
+                  "doctor"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「worker」是什么意思？",
                 "opts": [
-                  "工厂",
-                  "工人",
                   "飞行员",
-                  "商人"
+                  "工人",
+                  "农民",
+                  "厨师"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1467,70 +1497,70 @@
               {
                 "q": "「postman」是什么意思？",
                 "opts": [
+                  "工人",
+                  "渔民",
                   "邮递员",
-                  "警察",
-                  "飞行员",
-                  "商人"
+                  "警察"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「businessman」是什么意思？",
                 "opts": [
-                  "警察",
-                  "商人",
+                  "老师",
                   "邮递员",
-                  "工厂"
+                  "商人",
+                  "农民"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「police officer」是什么意思？",
                 "opts": [
-                  "工人",
-                  "飞行员",
-                  "科学家",
-                  "警察"
+                  "商人",
+                  "农民",
+                  "警察",
+                  "farmer"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fisherman」是什么意思？",
                 "opts": [
-                  "警察",
+                  "医生",
+                  "厨师",
                   "渔民",
-                  "飞行员",
-                  "商人"
+                  "老师"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「scientist」是什么意思？",
                 "opts": [
+                  "司机",
                   "科学家",
-                  "商人",
-                  "飞行员",
-                  "警察"
+                  "工人",
+                  "driver"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pilot」是什么意思？",
                 "opts": [
-                  "警察",
+                  "医生",
                   "飞行员",
-                  "工人",
-                  "科学家"
+                  "农民",
+                  "商人"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1539,20 +1569,20 @@
               {
                 "q": "哪个是「工厂」？",
                 "opts": [
+                  "cook",
+                  "factory",
                   "businessman",
-                  "postman",
-                  "scientist",
-                  "factory"
+                  "worker"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「worker」的中文是？",
                 "opts": [
-                  "警察",
-                  "商人",
+                  "厨师",
+                  "driver",
                   "飞行员",
                   "工人"
                 ],
@@ -1563,10 +1593,22 @@
               {
                 "q": "本单元「他做什么工作」核心词是？",
                 "opts": [
+                  "farmer",
                   "factory",
-                  "businessman",
-                  "fisherman",
-                  "apple"
+                  "teacher",
+                  "postman"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「postman」的意思是？",
+                "opts": [
+                  "邮递员",
+                  "cook",
+                  "farmer",
+                  "科学家"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1575,59 +1617,39 @@
             ],
             "listeningQuestions": [
               {
-                "audio": "factory",
+                "audio": "What does he do?",
                 "opts": [
+                  "What does he do?",
+                  "What does he do.",
                   "factory",
-                  "worker",
-                  "postman",
-                  "businessman"
+                  "worker"
                 ],
                 "answer": 0
               },
               {
-                "audio": "worker",
+                "audio": "He's a businessman.",
                 "opts": [
-                  "worker",
+                  "He's a businessman.",
+                  "He's a police officer.",
                   "factory",
-                  "postman",
-                  "businessman"
+                  "worker"
                 ],
                 "answer": 0
               },
               {
-                "audio": "postman",
+                "audio": "Where does he work?",
                 "opts": [
-                  "postman",
+                  "Where does he work?",
+                  "Where does he work.",
                   "factory",
-                  "worker",
-                  "businessman"
+                  "worker"
                 ],
                 "answer": 0
               },
               {
-                "audio": "businessman",
+                "audio": "He works at sea.",
                 "opts": [
-                  "businessman",
-                  "factory",
-                  "worker",
-                  "postman"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is police officer.",
-                "opts": [
-                  "This is police officer.",
-                  "factory",
-                  "worker",
-                  "postman"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "fisherman",
-                "opts": [
-                  "fisherman",
+                  "He works at sea.",
                   "factory",
                   "worker",
                   "postman"
@@ -1687,22 +1709,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A angry.",
-                    "cn": "看！一个生气的。"
+                    "role": "Sarah",
+                    "text": "How do you feel?",
+                    "cn": "你感觉怎么样？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a afraid.",
-                    "cn": "对！还有一个害怕。"
+                    "role": "Sam",
+                    "text": "I'm happy.",
+                    "cn": "我很开心。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Mum",
+                    "text": "What's wrong?",
+                    "cn": "怎么了？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love How do you feel?!",
-                    "cn": "我们喜欢「How do you feel?」！"
+                    "role": "Sarah",
+                    "text": "I have a cold.",
+                    "cn": "我感冒了。"
                   }
                 ]
               }
@@ -1770,8 +1802,56 @@
                 "q": "「angry」是什么意思？",
                 "opts": [
                   "更多的",
-                  "穿",
                   "生气的",
+                  "angry",
+                  "饿"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「afraid」是什么意思？",
+                "opts": [
+                  "开心",
+                  "sad",
+                  "害怕",
+                  "看病"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「sad」是什么意思？",
+                "opts": [
+                  "难过的",
+                  "饿",
+                  "穿",
+                  "tired"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「worried」是什么意思？",
+                "opts": [
+                  "担心的",
+                  "sad",
+                  "害怕",
+                  "担心"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「happy」是什么意思？",
+                "opts": [
+                  "饿",
+                  "穿",
+                  "高兴的",
                   "担心的"
                 ],
                 "answer": 2,
@@ -1779,120 +1859,84 @@
                 "dim": "vocab"
               },
               {
-                "q": "「afraid」是什么意思？",
-                "opts": [
-                  "高兴的",
-                  "更多的",
-                  "看病",
-                  "害怕"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「sad」是什么意思？",
-                "opts": [
-                  "害怕",
-                  "高兴的",
-                  "穿",
-                  "难过的"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「worried」是什么意思？",
-                "opts": [
-                  "看病",
-                  "难过的",
-                  "担心的",
-                  "高兴的"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「happy」是什么意思？",
-                "opts": [
-                  "高兴的",
-                  "害怕",
-                  "难过的",
-                  "穿"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「see a doctor」是什么意思？",
                 "opts": [
                   "害怕",
-                  "穿",
-                  "难过的",
-                  "看病"
+                  "看病",
+                  "worried",
+                  "生气的"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「wear」是什么意思？",
                 "opts": [
-                  "生气的",
+                  "worried",
                   "更多的",
-                  "穿",
-                  "害怕"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「more」是什么意思？",
-                "opts": [
-                  "生气的",
-                  "看病",
-                  "高兴的",
-                  "更多的"
+                  "开心",
+                  "穿"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「more」是什么意思？",
+                "opts": [
+                  "更多的",
+                  "难过",
+                  "sad",
+                  "看病"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "哪个是「生气的」？",
                 "opts": [
+                  "see a doctor",
                   "happy",
-                  "sad",
-                  "angry",
-                  "more"
+                  "afraid",
+                  "angry"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「afraid」的中文是？",
                 "opts": [
-                  "高兴的",
-                  "更多的",
                   "害怕",
-                  "生气的"
+                  "生气的",
+                  "看病",
+                  "生气"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「你感觉怎么样」核心词是？",
                 "opts": [
-                  "apple",
-                  "angry",
-                  "afraid",
-                  "wear"
+                  "more",
+                  "see a doctor",
+                  "happy",
+                  "angry"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「sad」的意思是？",
+                "opts": [
+                  "高兴的",
+                  "难过的",
+                  "tired",
+                  "hungry"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1901,59 +1945,39 @@
             ],
             "listeningQuestions": [
               {
-                "audio": "angry",
+                "audio": "How do you feel?",
                 "opts": [
+                  "How do you feel?",
+                  "How do you feel.",
                   "angry",
-                  "afraid",
-                  "sad",
-                  "worried"
+                  "afraid"
                 ],
                 "answer": 0
               },
               {
-                "audio": "afraid",
+                "audio": "I'm happy.",
                 "opts": [
-                  "afraid",
+                  "I'm happy.",
+                  "I'm see a doctor.",
                   "angry",
-                  "sad",
-                  "worried"
+                  "afraid"
                 ],
                 "answer": 0
               },
               {
-                "audio": "sad",
+                "audio": "What's wrong?",
                 "opts": [
-                  "sad",
-                  "angry",
-                  "afraid",
-                  "worried"
+                  "What's wrong?",
+                  "What's wrong.",
+                  "What is wrong?",
+                  "angry"
                 ],
                 "answer": 0
               },
               {
-                "audio": "worried",
+                "audio": "I have a cold.",
                 "opts": [
-                  "worried",
-                  "angry",
-                  "afraid",
-                  "sad"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "happy",
-                "opts": [
-                  "happy",
-                  "angry",
-                  "afraid",
-                  "sad"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is see a doctor.",
-                "opts": [
-                  "This is see a doctor.",
+                  "I have a cold.",
                   "angry",
                   "afraid",
                   "sad"
@@ -2019,22 +2043,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A younger.",
-                    "cn": "看！一个更年轻的。"
+                    "role": "Mike",
+                    "text": "How tall are you?",
+                    "cn": "你多高？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a older.",
-                    "cn": "对！还有一个更年长的。"
+                    "role": "Wu Binbin",
+                    "text": "I'm 1.65 metres.",
+                    "cn": "我1.65米。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Mike",
+                    "text": "What size are your shoes?",
+                    "cn": "你穿多大号的鞋？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love How tall are you?!",
-                    "cn": "我们喜欢「How tall are you?」！"
+                    "role": "Wu Binbin",
+                    "text": "Size 7.",
+                    "cn": "7号。"
                   }
                 ]
               }
@@ -2101,22 +2135,22 @@
               {
                 "q": "「younger」是什么意思？",
                 "opts": [
+                  "更年轻的",
                   "更长的",
-                  "更矮的",
-                  "更瘦的",
-                  "更年轻的"
+                  "姐妹",
+                  "father"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「older」是什么意思？",
                 "opts": [
-                  "更长的",
+                  "brother",
                   "更年长的",
                   "更重的",
-                  "更大的"
+                  "更瘦的"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -2126,21 +2160,21 @@
                 "q": "「taller」是什么意思？",
                 "opts": [
                   "更长的",
-                  "更大的",
                   "更高的",
-                  "更瘦的"
+                  "更瘦的",
+                  "更年长的"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「shorter」是什么意思？",
                 "opts": [
-                  "更年轻的",
-                  "更重的",
+                  "aunt",
+                  "母亲",
                   "更矮的",
-                  "更大的"
+                  "表亲"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2149,21 +2183,21 @@
               {
                 "q": "「longer」是什么意思？",
                 "opts": [
-                  "更年长的",
+                  "cousin",
+                  "叔叔",
                   "更长的",
-                  "更大的",
-                  "更年轻的"
+                  "brother"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「thinner」是什么意思？",
                 "opts": [
-                  "更高的",
-                  "更长的",
-                  "更矮的",
+                  "brother",
+                  "兄弟",
+                  "姐妹",
                   "更瘦的"
                 ],
                 "answer": 3,
@@ -2173,99 +2207,91 @@
               {
                 "q": "「heavier」是什么意思？",
                 "opts": [
-                  "更长的",
-                  "更瘦的",
-                  "更重的",
-                  "更高的"
+                  "更年轻的",
+                  "mother",
+                  "cousin",
+                  "更重的"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「bigger」是什么意思？",
                 "opts": [
-                  "更大的",
-                  "更长的",
-                  "更矮的",
-                  "更年轻的"
+                  "更重的",
+                  "brother",
+                  "更高的",
+                  "更大的"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「更年轻的」？",
                 "opts": [
-                  "older",
-                  "shorter",
-                  "longer",
-                  "younger"
+                  "thinner",
+                  "taller",
+                  "younger",
+                  "uncle"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「older」的中文是？",
                 "opts": [
-                  "更重的",
+                  "更大的",
+                  "兄弟",
                   "更年长的",
-                  "更长的",
-                  "更年轻的"
+                  "更长的"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「你有多高」核心词是？",
                 "opts": [
-                  "school",
-                  "longer",
-                  "book",
-                  "younger"
+                  "younger",
+                  "bigger",
+                  "aunt",
+                  "longer"
                 ],
-                "answer": 3,
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「taller」的意思是？",
+                "opts": [
+                  "更高的",
+                  "uncle",
+                  "cousin",
+                  "更矮的"
+                ],
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "younger",
+                "audio": "How tall are you?",
                 "opts": [
+                  "How tall are you?",
+                  "How tall are you.",
                   "younger",
-                  "older",
-                  "taller",
-                  "shorter"
+                  "older"
                 ],
                 "answer": 0
               },
               {
-                "audio": "older",
+                "audio": "I'm 1.65 metres.",
                 "opts": [
-                  "older",
-                  "younger",
-                  "taller",
-                  "shorter"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "taller",
-                "opts": [
-                  "taller",
-                  "younger",
-                  "older",
-                  "shorter"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "shorter",
-                "opts": [
-                  "shorter",
+                  "I'm 1.65 metres.",
                   "younger",
                   "older",
                   "taller"
@@ -2273,19 +2299,19 @@
                 "answer": 0
               },
               {
-                "audio": "longer",
+                "audio": "What size are your shoes?",
                 "opts": [
-                  "longer",
+                  "What size are your shoes?",
+                  "What size are your shoes.",
                   "younger",
-                  "older",
-                  "taller"
+                  "older"
                 ],
                 "answer": 0
               },
               {
-                "audio": "thinner",
+                "audio": "Size 7.",
                 "opts": [
-                  "thinner",
+                  "Size 7.",
                   "younger",
                   "older",
                   "taller"
@@ -2345,22 +2371,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A cleaned.",
-                    "cn": "看！一个打扫。"
+                    "role": "Mike",
+                    "text": "What did you do last weekend?",
+                    "cn": "你上周末做了什么？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a stayed.",
-                    "cn": "对！还有一个停留。"
+                    "role": "Amy",
+                    "text": "I cleaned my room.",
+                    "cn": "我打扫了房间。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Mike",
+                    "text": "Did you see a film?",
+                    "cn": "你看电影了吗？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love Last weekend!",
-                    "cn": "我们喜欢「Last weekend」！"
+                    "role": "Amy",
+                    "text": "Yes, I did.",
+                    "cn": "是的，我看了。"
                   }
                 ]
               }
@@ -2427,46 +2463,46 @@
               {
                 "q": "「cleaned」是什么意思？",
                 "opts": [
-                  "看",
                   "打扫",
-                  "睡觉",
-                  "读"
+                  "洗",
+                  "读",
+                  "睡觉"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「stayed」是什么意思？",
                 "opts": [
-                  "患病",
-                  "看",
-                  "停留",
-                  "睡觉"
+                  "打扫",
+                  "dinner",
+                  "go to bed",
+                  "停留"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「washed」是什么意思？",
                 "opts": [
-                  "打扫",
-                  "停留",
+                  "午餐",
                   "洗",
-                  "感冒"
+                  "上床睡觉",
+                  "打扫"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「watched」是什么意思？",
                 "opts": [
-                  "患病",
                   "睡觉",
+                  "打扫",
                   "看",
-                  "感冒"
+                  "患病"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2475,46 +2511,46 @@
               {
                 "q": "「had」是什么意思？",
                 "opts": [
-                  "读",
+                  "睡觉",
+                  "停留",
                   "患病",
-                  "看",
-                  "打扫"
+                  "go to bed"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「had a cold」是什么意思？",
                 "opts": [
-                  "看",
+                  "早餐",
+                  "go to bed",
                   "感冒",
-                  "打扫",
-                  "读"
+                  "睡觉"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「slept」是什么意思？",
                 "opts": [
+                  "睡觉",
                   "停留",
-                  "患病",
-                  "感冒",
-                  "睡觉"
+                  "去上学",
+                  "午餐"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「read」是什么意思？",
                 "opts": [
-                  "洗",
-                  "读",
                   "睡觉",
-                  "看"
+                  "读",
+                  "感冒",
+                  "晚餐"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -2523,34 +2559,58 @@
               {
                 "q": "哪个是「打扫」？",
                 "opts": [
-                  "cleaned",
-                  "had a cold",
-                  "stayed",
-                  "read"
+                  "watched",
+                  "had",
+                  "go to school",
+                  "cleaned"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「stayed」的中文是？",
                 "opts": [
-                  "看",
-                  "打扫",
                   "停留",
-                  "读"
+                  "打扫",
+                  "洗",
+                  "晚餐"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「上个周末」核心词是？",
                 "opts": [
-                  "had a cold",
-                  "cleaned",
+                  "lunch",
                   "stayed",
-                  "dog"
+                  "go to school",
+                  "cleaned"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "What time is it? 的意思是？",
+                "opts": [
+                  "什么时候",
+                  "几点钟了",
+                  "几点了",
+                  "什么时间"
+                ],
+                "answer": 2,
+                "point": "句型",
+                "dim": "sentence"
+              },
+              {
+                "q": "「washed」的意思是？",
+                "opts": [
+                  "停留",
+                  "洗",
+                  "感冒",
+                  "睡觉"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -2559,59 +2619,39 @@
             ],
             "listeningQuestions": [
               {
-                "audio": "cleaned",
+                "audio": "What did you do last weekend?",
                 "opts": [
+                  "What did you do last weekend?",
+                  "What did you do last weekend.",
                   "cleaned",
-                  "stayed",
-                  "washed",
-                  "watched"
+                  "stayed"
                 ],
                 "answer": 0
               },
               {
-                "audio": "stayed",
+                "audio": "I cleaned my room.",
                 "opts": [
-                  "stayed",
+                  "I cleaned my room.",
+                  "I stayed my room.",
                   "cleaned",
-                  "washed",
-                  "watched"
+                  "stayed"
                 ],
                 "answer": 0
               },
               {
-                "audio": "washed",
+                "audio": "Did you see a film?",
                 "opts": [
-                  "washed",
+                  "Did you see a film?",
+                  "Did you see a film.",
                   "cleaned",
-                  "stayed",
-                  "watched"
+                  "stayed"
                 ],
                 "answer": 0
               },
               {
-                "audio": "watched",
+                "audio": "Yes, I did.",
                 "opts": [
-                  "watched",
-                  "cleaned",
-                  "stayed",
-                  "washed"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "had",
-                "opts": [
-                  "had",
-                  "cleaned",
-                  "stayed",
-                  "washed"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is had a cold.",
-                "opts": [
-                  "This is had a cold.",
+                  "Yes, I did.",
                   "cleaned",
                   "stayed",
                   "washed"
@@ -2671,22 +2711,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A went.",
-                    "cn": "看！一个去。"
+                    "role": "John",
+                    "text": "Where did you go?",
+                    "cn": "你去哪儿了？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a camp.",
-                    "cn": "对！还有一个野营。"
+                    "role": "Amy",
+                    "text": "We went to Sanya.",
+                    "cn": "我们去了三亚。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "John",
+                    "text": "How did you go there?",
+                    "cn": "你们怎么去的？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love Where did you go?!",
-                    "cn": "我们喜欢「Where did you go?」！"
+                    "role": "Amy",
+                    "text": "We went there by plane.",
+                    "cn": "我们坐飞机去的。"
                   }
                 ]
               }
@@ -2753,10 +2803,10 @@
               {
                 "q": "「went」是什么意思？",
                 "opts": [
-                  "吃",
+                  "火车",
                   "去",
-                  "去钓鱼",
-                  "骑（马"
+                  "野营",
+                  "吃"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -2765,58 +2815,58 @@
               {
                 "q": "「camp」是什么意思？",
                 "opts": [
+                  "野营",
                   "骑（马",
-                  "去钓鱼",
-                  "钓鱼",
-                  "野营"
+                  "plane",
+                  "火车"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「went camping」是什么意思？",
                 "opts": [
-                  "吃",
-                  "钓鱼",
-                  "去钓鱼",
-                  "野营"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「fish」是什么意思？",
-                "opts": [
-                  "去",
-                  "去钓鱼",
-                  "钓鱼",
-                  "吃"
+                  "train",
+                  "car",
+                  "野营",
+                  "钓鱼"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「went fishing」是什么意思？",
+                "q": "「fish」是什么意思？",
                 "opts": [
-                  "受伤",
-                  "去钓鱼",
+                  "汽车",
                   "野营",
+                  "bike",
                   "钓鱼"
                 ],
-                "answer": 1,
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「went fishing」是什么意思？",
+                "opts": [
+                  "去钓鱼",
+                  "去",
+                  "野营",
+                  "轮船"
+                ],
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「rode」是什么意思？",
                 "opts": [
+                  "野营",
                   "受伤",
-                  "钓鱼",
                   "骑（马",
-                  "去"
+                  "火车"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2826,9 +2876,9 @@
                 "q": "「hurt」是什么意思？",
                 "opts": [
                   "受伤",
-                  "野营",
                   "去钓鱼",
-                  "钓鱼"
+                  "subway",
+                  "地铁"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2837,9 +2887,9 @@
               {
                 "q": "「ate」是什么意思？",
                 "opts": [
+                  "飞机",
                   "受伤",
-                  "去",
-                  "野营",
+                  "地铁",
                   "吃"
                 ],
                 "answer": 3,
@@ -2850,9 +2900,9 @@
                 "q": "哪个是「去」？",
                 "opts": [
                   "went",
-                  "camp",
-                  "fish",
-                  "went camping"
+                  "train",
+                  "rode",
+                  "hurt"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2861,10 +2911,10 @@
               {
                 "q": "「camp」的中文是？",
                 "opts": [
-                  "受伤",
-                  "去钓鱼",
+                  "吃",
+                  "地铁",
                   "野营",
-                  "钓鱼"
+                  "ship"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2873,74 +2923,66 @@
               {
                 "q": "本单元「你去哪儿了」核心词是？",
                 "opts": [
-                  "went camping",
                   "went",
-                  "rode",
-                  "fish"
+                  "plane",
+                  "car",
+                  "went camping"
                 ],
-                "answer": 1,
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「went camping」的意思是？",
+                "opts": [
+                  "野营",
+                  "去",
+                  "钓鱼",
+                  "bus"
+                ],
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "went",
+                "audio": "Where did you go?",
                 "opts": [
+                  "Where did you go?",
+                  "Where did you go.",
                   "went",
-                  "camp",
-                  "This is went camping.",
-                  "fish"
+                  "camp"
                 ],
                 "answer": 0
               },
               {
-                "audio": "camp",
+                "audio": "We went to Sanya.",
                 "opts": [
-                  "camp",
+                  "We went to Sanya.",
+                  "We camp to Sanya.",
                   "went",
-                  "This is went camping.",
-                  "fish"
+                  "camp"
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is went camping.",
+                "audio": "How did you go there?",
                 "opts": [
-                  "This is went camping.",
+                  "How did you go there?",
+                  "How did you go there.",
                   "went",
-                  "camp",
-                  "fish"
+                  "camp"
                 ],
                 "answer": 0
               },
               {
-                "audio": "fish",
+                "audio": "We went there by plane.",
                 "opts": [
-                  "fish",
+                  "We went there by plane.",
+                  "We camp there by plane.",
                   "went",
-                  "camp",
-                  "This is went camping."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is went fishing.",
-                "opts": [
-                  "This is went fishing.",
-                  "went",
-                  "camp",
-                  "This is went camping."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "rode",
-                "opts": [
-                  "rode",
-                  "went",
-                  "camp",
-                  "This is went camping."
+                  "camp"
                 ],
                 "answer": 0
               }
@@ -2997,22 +3039,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A dining hall.",
-                    "cn": "看！一个饭厅。"
+                    "role": "Grandpa",
+                    "text": "There was no library in my old school.",
+                    "cn": "我以前的学校里没有图书馆。"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a grass.",
-                    "cn": "对！还有一个草坪。"
+                    "role": "Mike",
+                    "text": "There is one now.",
+                    "cn": "现在有了。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Grandpa",
+                    "text": "I was short.",
+                    "cn": "我以前很矮。"
                   },
                   {
-                    "role": "A",
-                    "text": "We love Then and now!",
-                    "cn": "我们喜欢「Then and now」！"
+                    "role": "Mike",
+                    "text": "Now I'm tall.",
+                    "cn": "现在我长高了。"
                   }
                 ]
               }
@@ -3079,60 +3131,60 @@
               {
                 "q": "「dining hall」是什么意思？",
                 "opts": [
+                  "brother",
+                  "骑自行车运动",
                   "饭厅",
-                  "去骑自行车",
-                  "以前",
-                  "骑自行车运动"
+                  "叔叔"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「grass」是什么意思？",
                 "opts": [
-                  "草坪",
-                  "体育馆",
+                  "以前",
                   "滑冰",
-                  "羽毛球运动"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「gym」是什么意思？",
-                "opts": [
-                  "骑自行车运动",
-                  "饭厅",
                   "羽毛球运动",
-                  "体育馆"
+                  "草坪"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「ago」是什么意思？",
+                "q": "「gym」是什么意思？",
                 "opts": [
-                  "饭厅",
-                  "以前",
-                  "去骑自行车",
-                  "草坪"
+                  "aunt",
+                  "体育馆",
+                  "uncle",
+                  "羽毛球运动"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「ago」是什么意思？",
+                "opts": [
+                  "体育馆",
+                  "uncle",
+                  "饭厅",
+                  "以前"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「cycling」是什么意思？",
                 "opts": [
-                  "羽毛球运动",
-                  "滑冰",
+                  "aunt",
                   "骑自行车运动",
-                  "草坪"
+                  "饭厅",
+                  "sister"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3140,9 +3192,9 @@
                 "q": "「go cycling」是什么意思？",
                 "opts": [
                   "去骑自行车",
-                  "体育馆",
-                  "骑自行车运动",
-                  "饭厅"
+                  "sister",
+                  "母亲",
+                  "以前"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3152,8 +3204,8 @@
                 "q": "「ice-skate」是什么意思？",
                 "opts": [
                   "羽毛球运动",
-                  "去骑自行车",
-                  "以前",
+                  "兄弟",
+                  "cousin",
                   "滑冰"
                 ],
                 "answer": 3,
@@ -3163,108 +3215,100 @@
               {
                 "q": "「badminton」是什么意思？",
                 "opts": [
-                  "体育馆",
                   "羽毛球运动",
-                  "草坪",
-                  "以前"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「饭厅」？",
-                "opts": [
-                  "ice-skate",
-                  "badminton",
-                  "dining hall",
-                  "grass"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「grass」的中文是？",
-                "opts": [
-                  "草坪",
-                  "去骑自行车",
-                  "饭厅",
-                  "骑自行车运动"
+                  "骑自行车运动",
+                  "sister",
+                  "去骑自行车"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「那时和现在」核心词是？",
+                "q": "哪个是「饭厅」？",
                 "opts": [
-                  "ago",
-                  "cycling",
-                  "ice-skate",
-                  "dining hall"
+                  "dining hall",
+                  "sister",
+                  "mother",
+                  "cycling"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「grass」的中文是？",
+                "opts": [
+                  "mother",
+                  "姐妹",
+                  "aunt",
+                  "草坪"
                 ],
                 "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「那时和现在」核心词是？",
+                "opts": [
+                  "dining hall",
+                  "grass",
+                  "ice-skate",
+                  "go cycling"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「gym」的意思是？",
+                "opts": [
+                  "mother",
+                  "体育馆",
+                  "aunt",
+                  "草坪"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "This is dining hall.",
+                "audio": "There was no library in my old school.",
                 "opts": [
-                  "This is dining hall.",
-                  "grass",
-                  "gym",
-                  "ago"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "grass",
-                "opts": [
-                  "grass",
-                  "This is dining hall.",
-                  "gym",
-                  "ago"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "gym",
-                "opts": [
-                  "gym",
-                  "This is dining hall.",
-                  "grass",
-                  "ago"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "ago",
-                "opts": [
-                  "ago",
-                  "This is dining hall.",
+                  "There was no library in my old school.",
+                  "It's dining hall.",
                   "grass",
                   "gym"
                 ],
                 "answer": 0
               },
               {
-                "audio": "cycling",
+                "audio": "There is one now.",
                 "opts": [
-                  "cycling",
-                  "This is dining hall.",
+                  "There is one now.",
+                  "It's dining hall.",
                   "grass",
                   "gym"
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is go cycling.",
+                "audio": "I was short.",
                 "opts": [
-                  "This is go cycling.",
-                  "This is dining hall.",
+                  "I was short.",
+                  "It's dining hall.",
+                  "grass",
+                  "gym"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Now I'm tall.",
+                "opts": [
+                  "Now I'm tall.",
+                  "It's dining hall.",
                   "grass",
                   "gym"
                 ],

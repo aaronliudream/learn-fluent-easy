@@ -57,22 +57,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A old.",
-                    "cn": "看！一个老的。"
+                    "role": "Wu Binbin",
+                    "text": "Who's your art teacher?",
+                    "cn": "你的美术老师是谁？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a young.",
-                    "cn": "对！还有一个年轻的。"
+                    "role": "Oliver",
+                    "text": "Mr Jones.",
+                    "cn": "琼斯老师。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Wu Binbin",
+                    "text": "What's he like?",
+                    "cn": "他什么样？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love What's he like?!",
-                    "cn": "我们喜欢「What's he like?」！"
+                    "role": "Oliver",
+                    "text": "He's tall and strong.",
+                    "cn": "他又高又壮。"
                   }
                 ]
               }
@@ -139,24 +149,24 @@
               {
                 "q": "「old」是什么意思？",
                 "opts": [
-                  "体贴的",
-                  "有用的",
-                  "老的",
-                  "工作努力的"
+                  "要求严格的",
+                  "阿姨",
+                  "aunt",
+                  "老的"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「young」是什么意思？",
                 "opts": [
+                  "表亲",
                   "年轻的",
-                  "工作努力的",
-                  "滑稽的",
-                  "体贴的"
+                  "老的",
+                  "father"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -164,9 +174,9 @@
                 "q": "「funny」是什么意思？",
                 "opts": [
                   "滑稽的",
+                  "brother",
                   "工作努力的",
-                  "年轻的",
-                  "老的"
+                  "father"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -175,46 +185,46 @@
               {
                 "q": "「kind」是什么意思？",
                 "opts": [
-                  "有用的",
-                  "工作努力的",
-                  "老的",
-                  "体贴的"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「strict」是什么意思？",
-                "opts": [
-                  "要求严格的",
-                  "老的",
-                  "滑稽的",
-                  "体贴的"
+                  "体贴的",
+                  "年轻的",
+                  "brother",
+                  "要求严格的"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「polite」是什么意思？",
+                "q": "「strict」是什么意思？",
                 "opts": [
-                  "工作努力的",
+                  "父亲",
                   "有礼貌的",
                   "要求严格的",
-                  "老的"
+                  "aunt"
                 ],
-                "answer": 1,
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「polite」是什么意思？",
+                "opts": [
+                  "mother",
+                  "老的",
+                  "有礼貌的",
+                  "兄弟"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「hard-working」是什么意思？",
                 "opts": [
-                  "老的",
+                  "叔叔",
                   "工作努力的",
-                  "年轻的",
-                  "有用的"
+                  "有礼貌的",
+                  "mother"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -223,12 +233,12 @@
               {
                 "q": "「helpful」是什么意思？",
                 "opts": [
+                  "工作努力的",
                   "滑稽的",
-                  "有用的",
-                  "有礼貌的",
-                  "体贴的"
+                  "要求严格的",
+                  "有用的"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -236,9 +246,9 @@
                 "q": "哪个是「老的」？",
                 "opts": [
                   "old",
-                  "kind",
-                  "young",
-                  "funny"
+                  "funny",
+                  "polite",
+                  "uncle"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -247,63 +257,55 @@
               {
                 "q": "「young」的中文是？",
                 "opts": [
-                  "体贴的",
-                  "年轻的",
                   "有礼貌的",
-                  "有用的"
+                  "工作努力的",
+                  "uncle",
+                  "年轻的"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「他什么样」核心词是？",
                 "opts": [
-                  "helpful",
-                  "hard-working",
+                  "strict",
+                  "funny",
                   "old",
-                  "kind"
+                  "sister"
                 ],
                 "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「funny」的意思是？",
+                "opts": [
+                  "滑稽的",
+                  "有用的",
+                  "aunt",
+                  "工作努力的"
+                ],
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "old",
+                "audio": "Who's your art teacher?",
                 "opts": [
+                  "Who's your art teacher?",
+                  "Who's your art teacher.",
                   "old",
-                  "young",
-                  "funny",
-                  "kind"
+                  "young"
                 ],
                 "answer": 0
               },
               {
-                "audio": "young",
+                "audio": "Mr Jones.",
                 "opts": [
-                  "young",
-                  "old",
-                  "funny",
-                  "kind"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "funny",
-                "opts": [
-                  "funny",
-                  "old",
-                  "young",
-                  "kind"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "kind",
-                "opts": [
-                  "kind",
+                  "Mr Jones.",
                   "old",
                   "young",
                   "funny"
@@ -311,19 +313,19 @@
                 "answer": 0
               },
               {
-                "audio": "strict",
+                "audio": "What's he like?",
                 "opts": [
-                  "strict",
-                  "old",
-                  "young",
-                  "funny"
+                  "What's he like?",
+                  "What's he like.",
+                  "What is he like?",
+                  "old"
                 ],
                 "answer": 0
               },
               {
-                "audio": "polite",
+                "audio": "He's tall and strong.",
                 "opts": [
-                  "polite",
+                  "He's tall and strong.",
                   "old",
                   "young",
                   "funny"
@@ -383,22 +385,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A Monday.",
-                    "cn": "看！一个星期一。"
+                    "role": "Zhang Peng",
+                    "text": "What do you have on Mondays?",
+                    "cn": "你星期一有什么课？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a Tuesday.",
-                    "cn": "对！还有一个星期二。"
+                    "role": "John",
+                    "text": "I have Chinese, English and music.",
+                    "cn": "我有语文、英语和音乐。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "John",
+                    "text": "Do you often play ping-pong on Thursdays?",
+                    "cn": "你星期四经常打乒乓球吗？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love My week!",
-                    "cn": "我们喜欢「My week」！"
+                    "role": "Zhang Peng",
+                    "text": "No, I don't.",
+                    "cn": "不，我不经常。"
                   }
                 ]
               }
@@ -465,24 +477,24 @@
               {
                 "q": "「Monday」是什么意思？",
                 "opts": [
-                  "星期二",
-                  "星期一",
+                  "星期六",
+                  "星期三",
                   "周末",
-                  "星期五"
+                  "星期一"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「Tuesday」是什么意思？",
                 "opts": [
+                  "星期二",
+                  "起床",
                   "星期日",
-                  "星期四",
-                  "周末",
-                  "星期二"
+                  "go to school"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -490,9 +502,9 @@
                 "q": "「Wednesday」是什么意思？",
                 "opts": [
                   "星期三",
-                  "星期一",
-                  "星期四",
-                  "星期六"
+                  "lunch",
+                  "午餐",
+                  "星期四"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -501,21 +513,21 @@
               {
                 "q": "「Thursday」是什么意思？",
                 "opts": [
-                  "周末",
+                  "去上学",
+                  "星期日",
                   "星期四",
-                  "星期一",
                   "星期三"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「Friday」是什么意思？",
                 "opts": [
-                  "星期三",
-                  "星期二",
-                  "星期六",
+                  "go to bed",
+                  "星期日",
+                  "breakfast",
                   "星期五"
                 ],
                 "answer": 3,
@@ -526,56 +538,56 @@
                 "q": "「Saturday」是什么意思？",
                 "opts": [
                   "星期四",
+                  "星期二",
                   "星期六",
-                  "星期三",
-                  "星期日"
+                  "go to school"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「Sunday」是什么意思？",
                 "opts": [
-                  "星期二",
-                  "星期六",
                   "星期日",
-                  "周末"
+                  "breakfast",
+                  "周末",
+                  "星期一"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「weekend」是什么意思？",
                 "opts": [
-                  "星期四",
-                  "星期一",
-                  "周末",
-                  "星期日"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「星期一」？",
-                "opts": [
-                  "Saturday",
-                  "Sunday",
-                  "Friday",
-                  "Monday"
+                  "晚餐",
+                  "去上学",
+                  "星期五",
+                  "周末"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "哪个是「星期一」？",
+                "opts": [
+                  "Sunday",
+                  "Tuesday",
+                  "Monday",
+                  "Wednesday"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「Tuesday」的中文是？",
                 "opts": [
-                  "星期三",
+                  "go to bed",
                   "星期二",
-                  "星期一",
+                  "go to school",
                   "周末"
                 ],
                 "answer": 1,
@@ -586,50 +598,54 @@
                 "q": "本单元「我的一周」核心词是？",
                 "opts": [
                   "Monday",
-                  "Tuesday",
                   "Friday",
-                  "Sunday"
+                  "Saturday",
+                  "lunch"
                 ],
                 "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "What time is it? 的意思是？",
+                "opts": [
+                  "几点了",
+                  "什么时间",
+                  "什么时候",
+                  "几点钟了"
+                ],
+                "answer": 0,
+                "point": "句型",
+                "dim": "sentence"
+              },
+              {
+                "q": "「Wednesday」的意思是？",
+                "opts": [
+                  "get up",
+                  "星期三",
+                  "星期五",
+                  "周末"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Monday",
+                "audio": "What do you have on Mondays?",
                 "opts": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday"
+                  "What do you have on Mondays?",
+                  "What do you have on Tuesdays?",
+                  "What do you have on Mondays.",
+                  "Monday"
                 ],
                 "answer": 0
               },
               {
-                "audio": "Tuesday",
+                "audio": "I have Chinese, English and music.",
                 "opts": [
-                  "Tuesday",
-                  "Monday",
-                  "Wednesday",
-                  "Thursday"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Wednesday",
-                "opts": [
-                  "Wednesday",
-                  "Monday",
-                  "Tuesday",
-                  "Thursday"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Thursday",
-                "opts": [
-                  "Thursday",
+                  "I have Chinese, English and music.",
                   "Monday",
                   "Tuesday",
                   "Wednesday"
@@ -637,19 +653,19 @@
                 "answer": 0
               },
               {
-                "audio": "Friday",
+                "audio": "Do you often play ping-pong on Thursdays?",
                 "opts": [
-                  "Friday",
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday"
+                  "Do you often play ping-pong on Thursdays?",
+                  "Do you often play ping-pong on Fridays?",
+                  "Do you often play ping-pong on Thursdays.",
+                  "Monday"
                 ],
                 "answer": 0
               },
               {
-                "audio": "Saturday",
+                "audio": "No, I don't.",
                 "opts": [
-                  "Saturday",
+                  "No, I don't.",
                   "Monday",
                   "Tuesday",
                   "Wednesday"
@@ -709,22 +725,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A sandwich.",
-                    "cn": "看！一个三明治。"
+                    "role": "Sarah",
+                    "text": "What would you like to eat?",
+                    "cn": "你想吃什么？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a salad.",
-                    "cn": "对！还有一个蔬菜沙拉。"
+                    "role": "Mike",
+                    "text": "I'd like a sandwich, please.",
+                    "cn": "请给我一个三明治。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Sarah",
+                    "text": "What would you like to drink?",
+                    "cn": "你想喝什么？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love What would you like?!",
-                    "cn": "我们喜欢「What would you like?」！"
+                    "role": "Mike",
+                    "text": "I'd like some water.",
+                    "cn": "我想喝点水。"
                   }
                 ]
               }
@@ -791,21 +817,21 @@
               {
                 "q": "「sandwich」是什么意思？",
                 "opts": [
-                  "茶",
-                  "冰激凌",
-                  "健康的",
-                  "三明治"
+                  "三明治",
+                  "牛肉",
+                  "美味的",
+                  "milk"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「salad」是什么意思？",
                 "opts": [
-                  "冰激凌",
-                  "三明治",
-                  "新鲜的",
+                  "美味的",
+                  "牛奶",
+                  "汉堡包",
                   "蔬菜沙拉"
                 ],
                 "answer": 3,
@@ -815,12 +841,12 @@
               {
                 "q": "「hamburger」是什么意思？",
                 "opts": [
-                  "冰激凌",
-                  "茶",
-                  "三明治",
-                  "汉堡包"
+                  "汉堡包",
+                  "bread",
+                  "新鲜的",
+                  "三明治"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -828,8 +854,8 @@
                 "q": "「ice cream」是什么意思？",
                 "opts": [
                   "冰激凌",
-                  "茶",
-                  "蔬菜沙拉",
+                  "noodles",
+                  "美味的",
                   "健康的"
                 ],
                 "answer": 0,
@@ -839,24 +865,24 @@
               {
                 "q": "「tea」是什么意思？",
                 "opts": [
-                  "冰激凌",
-                  "新鲜的",
-                  "蔬菜沙拉",
-                  "茶"
+                  "bread",
+                  "鸡蛋",
+                  "茶",
+                  "牛奶"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fresh」是什么意思？",
                 "opts": [
-                  "蔬菜沙拉",
                   "冰激凌",
-                  "三明治",
-                  "新鲜的"
+                  "汤",
+                  "新鲜的",
+                  "三明治"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -865,8 +891,8 @@
                 "opts": [
                   "茶",
                   "健康的",
-                  "美味的",
-                  "新鲜的"
+                  "蔬菜沙拉",
+                  "bread"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -875,107 +901,111 @@
               {
                 "q": "「delicious」是什么意思？",
                 "opts": [
+                  "新鲜的",
+                  "beef",
                   "美味的",
-                  "汉堡包",
-                  "健康的",
-                  "茶"
+                  "汉堡包"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「三明治」？",
                 "opts": [
-                  "healthy",
+                  "sandwich",
                   "ice cream",
-                  "delicious",
-                  "sandwich"
+                  "tea",
+                  "milk"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「salad」的中文是？",
                 "opts": [
-                  "冰激凌",
+                  "rice",
+                  "蔬菜沙拉",
                   "汉堡包",
-                  "茶",
-                  "蔬菜沙拉"
+                  "milk"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「你想吃什么」核心词是？",
                 "opts": [
+                  "delicious",
                   "sandwich",
-                  "book",
-                  "salad",
-                  "healthy"
+                  "fresh",
+                  "soup"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Do you like sandwich? 喜欢怎么回答？",
+                "opts": [
+                  "Yes, I do.",
+                  "No, I am.",
+                  "Yes, it is.",
+                  "No, it isn't."
                 ],
                 "answer": 0,
+                "point": "句型",
+                "dim": "sentence"
+              },
+              {
+                "q": "「hamburger」的意思是？",
+                "opts": [
+                  "美味的",
+                  "蔬菜沙拉",
+                  "汉堡包",
+                  "beef"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "sandwich",
+                "audio": "What would you like to eat?",
                 "opts": [
+                  "What would you like to eat?",
+                  "What would you like to eat.",
                   "sandwich",
-                  "salad",
-                  "hamburger",
-                  "This is ice cream."
+                  "salad"
                 ],
                 "answer": 0
               },
               {
-                "audio": "salad",
+                "audio": "I'd like a sandwich, please.",
                 "opts": [
-                  "salad",
+                  "I'd like a sandwich, please.",
+                  "I'd like a salad, please.",
                   "sandwich",
-                  "hamburger",
-                  "This is ice cream."
+                  "salad"
                 ],
                 "answer": 0
               },
               {
-                "audio": "hamburger",
+                "audio": "What would you like to drink?",
                 "opts": [
-                  "hamburger",
+                  "What would you like to drink?",
+                  "What would you like to drink.",
                   "sandwich",
-                  "salad",
-                  "This is ice cream."
+                  "salad"
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is ice cream.",
+                "audio": "I'd like some water.",
                 "opts": [
-                  "This is ice cream.",
-                  "sandwich",
-                  "salad",
-                  "hamburger"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "tea",
-                "opts": [
-                  "tea",
-                  "sandwich",
-                  "salad",
-                  "hamburger"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "fresh",
-                "opts": [
-                  "fresh",
+                  "I'd like some water.",
                   "sandwich",
                   "salad",
                   "hamburger"
@@ -1035,22 +1065,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A sing.",
-                    "cn": "看！一个唱。"
+                    "role": "Teacher",
+                    "text": "What can you do for the party, children?",
+                    "cn": "孩子们，你们能为派对做什么？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a song.",
-                    "cn": "对！还有一个歌曲。"
+                    "role": "Zhang Peng",
+                    "text": "I can sing English songs.",
+                    "cn": "我会唱英文歌。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Mike",
+                    "text": "Can you do any kung fu, John?",
+                    "cn": "约翰，你会武术吗？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love What can you do?!",
-                    "cn": "我们喜欢「What can you do?」！"
+                    "role": "John",
+                    "text": "Yes, I can.",
+                    "cn": "是的，我会。"
                   }
                 ]
               }
@@ -1117,48 +1157,48 @@
               {
                 "q": "「sing」是什么意思？",
                 "opts": [
-                  "歌曲",
+                  "跳舞",
+                  "唱英文歌曲",
                   "唱",
-                  "功夫",
-                  "弹琵琶"
+                  "歌曲"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「song」是什么意思？",
                 "opts": [
-                  "唱英文歌曲",
                   "歌曲",
-                  "唱",
-                  "功夫"
+                  "唱英文歌曲",
+                  "练武术",
+                  "跳舞"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「sing English songs」是什么意思？",
                 "opts": [
-                  "唱",
                   "唱英文歌曲",
-                  "功夫",
-                  "跳舞"
+                  "跳舞",
+                  "练武术",
+                  "画"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「play the pipa」是什么意思？",
                 "opts": [
-                  "弹琵琶",
-                  "唱",
+                  "画",
                   "唱英文歌曲",
-                  "练武术"
+                  "跳舞",
+                  "弹琵琶"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1166,9 +1206,9 @@
                 "q": "「kung fu」是什么意思？",
                 "opts": [
                   "功夫",
-                  "画",
                   "唱英文歌曲",
-                  "歌曲"
+                  "练武术",
+                  "跳舞"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1177,57 +1217,57 @@
               {
                 "q": "「do kung fu」是什么意思？",
                 "opts": [
-                  "功夫",
-                  "练武术",
-                  "唱",
-                  "跳舞"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「dance」是什么意思？",
-                "opts": [
                   "弹琵琶",
-                  "跳舞",
-                  "画",
-                  "功夫"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「draw」是什么意思？",
-                "opts": [
-                  "跳舞",
                   "唱英文歌曲",
-                  "画",
-                  "弹琵琶"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「唱」？",
-                "opts": [
-                  "dance",
-                  "kung fu",
-                  "draw",
-                  "sing"
+                  "功夫",
+                  "练武术"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「dance」是什么意思？",
+                "opts": [
+                  "歌曲",
+                  "唱英文歌曲",
+                  "练武术",
+                  "跳舞"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「draw」是什么意思？",
+                "opts": [
+                  "唱",
+                  "画",
+                  "跳舞",
+                  "弹琵琶"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「唱」？",
+                "opts": [
+                  "draw",
+                  "play the pipa",
+                  "sing",
+                  "do kung fu"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「song」的中文是？",
                 "opts": [
-                  "唱英文歌曲",
+                  "功夫",
                   "歌曲",
-                  "练武术",
+                  "弹琵琶",
                   "画"
                 ],
                 "answer": 1,
@@ -1237,74 +1277,66 @@
               {
                 "q": "本单元「你能做什么」核心词是？",
                 "opts": [
-                  "draw",
-                  "dance",
+                  "song",
+                  "sing English songs",
                   "sing",
-                  "apple"
+                  "play the pipa"
                 ],
                 "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「sing English songs」的意思是？",
+                "opts": [
+                  "唱英文歌曲",
+                  "练武术",
+                  "功夫",
+                  "唱"
+                ],
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "sing",
+                "audio": "What can you do for the party, children?",
                 "opts": [
+                  "What can you do for the party, children?",
+                  "What can you do for the party, children.",
                   "sing",
-                  "song",
-                  "This is sing English songs.",
-                  "This is play the pipa."
+                  "song"
                 ],
                 "answer": 0
               },
               {
-                "audio": "song",
+                "audio": "I can sing English songs.",
                 "opts": [
-                  "song",
-                  "sing",
-                  "This is sing English songs.",
-                  "This is play the pipa."
+                  "I can sing English songs.",
+                  "I can song English songs.",
+                  "I can sing English sing English songss.",
+                  "I can play the pipa."
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is sing English songs.",
+                "audio": "Can you do any kung fu, John?",
                 "opts": [
-                  "This is sing English songs.",
-                  "sing",
-                  "song",
-                  "This is play the pipa."
+                  "Can you do any kung fu, John?",
+                  "Can you do any do kung fu, John?",
+                  "Can you do any kung fu, John.",
+                  "sing"
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is play the pipa.",
+                "audio": "Yes, I can.",
                 "opts": [
-                  "This is play the pipa.",
+                  "Yes, I can.",
                   "sing",
                   "song",
-                  "This is sing English songs."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is kung fu.",
-                "opts": [
-                  "This is kung fu.",
-                  "sing",
-                  "song",
-                  "This is sing English songs."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is do kung fu.",
-                "opts": [
-                  "This is do kung fu.",
-                  "sing",
-                  "song",
-                  "This is sing English songs."
+                  "It's sing English songs."
                 ],
                 "answer": 0
               }
@@ -1361,22 +1393,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A clock.",
-                    "cn": "看！一个时钟。"
+                    "role": "Sarah",
+                    "text": "There is a big bed.",
+                    "cn": "有一张大床。"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a plant.",
-                    "cn": "对！还有一个植物。"
+                    "role": "Chen Jie",
+                    "text": "There is a nice photo, too.",
+                    "cn": "还有一张漂亮的照片。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Sarah",
+                    "text": "This is my bedroom.",
+                    "cn": "这是我的卧室。"
                   },
                   {
-                    "role": "A",
-                    "text": "We love There is a big bed!",
-                    "cn": "我们喜欢「There is a big bed」！"
+                    "role": "Chen Jie",
+                    "text": "Wow! You look cool!",
+                    "cn": "哇！你看起来很酷！"
                   }
                 ]
               }
@@ -1443,21 +1485,33 @@
               {
                 "q": "「clock」是什么意思？",
                 "opts": [
-                  "自行车",
-                  "时钟",
-                  "瓶子",
-                  "在⋯⋯前面"
+                  "教室",
+                  "植物",
+                  "正面",
+                  "时钟"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「plant」是什么意思？",
                 "opts": [
-                  "植物",
-                  "照片",
-                  "水瓶",
+                  "瓶子",
+                  "时钟",
+                  "正面",
+                  "植物"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bottle」是什么意思？",
+                "opts": [
+                  "瓶子",
+                  "bathroom",
+                  "厨房",
                   "正面"
                 ],
                 "answer": 0,
@@ -1465,24 +1519,12 @@
                 "dim": "vocab"
               },
               {
-                "q": "「bottle」是什么意思？",
-                "opts": [
-                  "照片",
-                  "正面",
-                  "瓶子",
-                  "植物"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「water bottle」是什么意思？",
                 "opts": [
-                  "植物",
+                  "照片",
                   "水瓶",
-                  "自行车",
-                  "正面"
+                  "正面",
+                  "bathroom"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1491,12 +1533,12 @@
               {
                 "q": "「bike」是什么意思？",
                 "opts": [
-                  "水瓶",
+                  "瓶子",
+                  "study",
                   "时钟",
-                  "自行车",
-                  "正面"
+                  "自行车"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1504,9 +1546,9 @@
                 "q": "「photo」是什么意思？",
                 "opts": [
                   "照片",
-                  "正面",
-                  "时钟",
-                  "在⋯⋯前面"
+                  "植物",
+                  "水瓶",
+                  "卧室"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1515,45 +1557,45 @@
               {
                 "q": "「front」是什么意思？",
                 "opts": [
-                  "水瓶",
                   "正面",
-                  "瓶子",
+                  "自行车",
+                  "教室",
                   "照片"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「in front of」是什么意思？",
                 "opts": [
+                  "浴室",
+                  "bathroom",
                   "在⋯⋯前面",
-                  "照片",
-                  "瓶子",
                   "植物"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「时钟」？",
                 "opts": [
-                  "clock",
-                  "photo",
+                  "water bottle",
                   "plant",
-                  "water bottle"
+                  "clock",
+                  "front"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「plant」的中文是？",
                 "opts": [
-                  "时钟",
-                  "在⋯⋯前面",
-                  "瓶子",
+                  "bedroom",
+                  "水瓶",
+                  "正面",
                   "植物"
                 ],
                 "answer": 3,
@@ -1563,51 +1605,33 @@
               {
                 "q": "本单元「大床在哪里」核心词是？",
                 "opts": [
-                  "plant",
                   "clock",
-                  "apple",
-                  "bottle"
+                  "front",
+                  "plant",
+                  "photo"
                 ],
-                "answer": 1,
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bottle」的意思是？",
+                "opts": [
+                  "自行车",
+                  "时钟",
+                  "瓶子",
+                  "在⋯⋯前面"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "clock",
+                "audio": "There is a big bed.",
                 "opts": [
-                  "clock",
-                  "plant",
-                  "bottle",
-                  "This is water bottle."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "plant",
-                "opts": [
-                  "plant",
-                  "clock",
-                  "bottle",
-                  "This is water bottle."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "bottle",
-                "opts": [
-                  "bottle",
-                  "clock",
-                  "plant",
-                  "This is water bottle."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is water bottle.",
-                "opts": [
-                  "This is water bottle.",
+                  "There is a big bed.",
                   "clock",
                   "plant",
                   "bottle"
@@ -1615,9 +1639,19 @@
                 "answer": 0
               },
               {
-                "audio": "bike",
+                "audio": "There is a nice photo, too.",
                 "opts": [
-                  "bike",
+                  "There is a nice photo, too.",
+                  "There is a nice front, too.",
+                  "clock",
+                  "plant"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is my bedroom.",
+                "opts": [
+                  "This is my bedroom.",
                   "clock",
                   "plant",
                   "bottle"
@@ -1625,9 +1659,9 @@
                 "answer": 0
               },
               {
-                "audio": "photo",
+                "audio": "Wow! You look cool!",
                 "opts": [
-                  "photo",
+                  "Wow! You look cool!",
                   "clock",
                   "plant",
                   "bottle"
@@ -1687,22 +1721,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A forest.",
-                    "cn": "看！一个森林。"
+                    "role": "Robin",
+                    "text": "Is there a river in the forest, Miss White?",
+                    "cn": "怀特老师，森林里有河吗？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a river.",
-                    "cn": "对！还有一个河。"
+                    "role": "Miss White",
+                    "text": "Yes, there is.",
+                    "cn": "是的，有。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Robin",
+                    "text": "Are there any lakes on the mountain?",
+                    "cn": "山上有湖吗？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love In a nature park!",
-                    "cn": "我们喜欢「In a nature park」！"
+                    "role": "Miss White",
+                    "text": "No, there aren't.",
+                    "cn": "不，没有。"
                   }
                 ]
               }
@@ -1769,45 +1813,9 @@
               {
                 "q": "「forest」是什么意思？",
                 "opts": [
-                  "建筑物",
                   "山丘",
-                  "高山",
-                  "森林"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「river」是什么意思？",
-                "opts": [
-                  "湖",
-                  "桥",
-                  "树",
-                  "河"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「lake」是什么意思？",
-                "opts": [
-                  "高山",
                   "森林",
-                  "湖",
-                  "树"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「mountain」是什么意思？",
-                "opts": [
-                  "湖",
                   "高山",
-                  "河",
                   "桥"
                 ],
                 "answer": 1,
@@ -1815,11 +1823,59 @@
                 "dim": "vocab"
               },
               {
-                "q": "「hill」是什么意思？",
+                "q": "「river」是什么意思？",
+                "opts": [
+                  "高山",
+                  "湖",
+                  "河",
+                  "桥"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「lake」是什么意思？",
                 "opts": [
                   "树",
                   "山丘",
+                  "森林",
+                  "湖"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「mountain」是什么意思？",
+                "opts": [
+                  "山丘",
                   "建筑物",
+                  "高山",
+                  "桥"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「hill」是什么意思？",
+                "opts": [
+                  "森林",
+                  "树",
+                  "河",
+                  "山丘"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「tree」是什么意思？",
+                "opts": [
+                  "高山",
+                  "树",
+                  "山丘",
                   "湖"
                 ],
                 "answer": 1,
@@ -1827,38 +1883,26 @@
                 "dim": "vocab"
               },
               {
-                "q": "「tree」是什么意思？",
-                "opts": [
-                  "湖",
-                  "山丘",
-                  "森林",
-                  "树"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「bridge」是什么意思？",
                 "opts": [
-                  "高山",
-                  "桥",
                   "建筑物",
+                  "湖",
+                  "桥",
                   "山丘"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「building」是什么意思？",
                 "opts": [
-                  "树",
+                  "建筑物",
                   "桥",
-                  "森林",
-                  "建筑物"
+                  "树",
+                  "河"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1866,7 +1910,7 @@
                 "q": "哪个是「森林」？",
                 "opts": [
                   "forest",
-                  "tree",
+                  "building",
                   "river",
                   "bridge"
                 ],
@@ -1877,63 +1921,55 @@
               {
                 "q": "「river」的中文是？",
                 "opts": [
+                  "树",
+                  "高山",
                   "山丘",
-                  "河",
-                  "森林",
-                  "湖"
+                  "河"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「在自然公园」核心词是？",
                 "opts": [
+                  "hill",
+                  "lake",
                   "forest",
-                  "tree",
-                  "apple",
-                  "book"
+                  "building"
                 ],
-                "answer": 0,
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「lake」的意思是？",
+                "opts": [
+                  "树",
+                  "湖",
+                  "山丘",
+                  "高山"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "forest",
+                "audio": "Is there a river in the forest, Miss White?",
                 "opts": [
-                  "forest",
-                  "river",
-                  "lake",
-                  "mountain"
+                  "Is there a river in the forest, Miss White?",
+                  "Is there a river in the river, Miss White?",
+                  "Is there a lake in the forest, Miss White?",
+                  "Is there a river in the forest, Miss White."
                 ],
                 "answer": 0
               },
               {
-                "audio": "river",
+                "audio": "Yes, there is.",
                 "opts": [
-                  "river",
-                  "forest",
-                  "lake",
-                  "mountain"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "lake",
-                "opts": [
-                  "lake",
-                  "forest",
-                  "river",
-                  "mountain"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "mountain",
-                "opts": [
-                  "mountain",
+                  "Yes, there is.",
                   "forest",
                   "river",
                   "lake"
@@ -1941,19 +1977,19 @@
                 "answer": 0
               },
               {
-                "audio": "hill",
+                "audio": "Are there any lakes on the mountain?",
                 "opts": [
-                  "hill",
-                  "forest",
-                  "river",
-                  "lake"
+                  "Are there any lakes on the mountain?",
+                  "Are there any mountains on the mountain?",
+                  "Are there any lakes on the hill?",
+                  "Are there any lakes on the mountain."
                 ],
                 "answer": 0
               },
               {
-                "audio": "tree",
+                "audio": "No, there aren't.",
                 "opts": [
-                  "tree",
+                  "No, there aren't.",
                   "forest",
                   "river",
                   "lake"
@@ -2019,22 +2055,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A eat breakfast.",
-                    "cn": "看！一个吃早饭。"
+                    "role": "Mike",
+                    "text": "When is the party?",
+                    "cn": "派对什么时候？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a have … class.",
-                    "cn": "对！还有一个上⋯⋯课。"
+                    "role": "Zhang Peng",
+                    "text": "It's in April.",
+                    "cn": "在四月。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Mike",
+                    "text": "When is Dragon Boat Festival?",
+                    "cn": "端午节是什么时候？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love When is Easter?!",
-                    "cn": "我们喜欢「When is Easter?」！"
+                    "role": "Zhang Peng",
+                    "text": "It's usually in June.",
+                    "cn": "通常在六月。"
                   }
                 ]
               }
@@ -2102,35 +2148,35 @@
                 "q": "「eat breakfast」是什么意思？",
                 "opts": [
                   "进行体育运动",
-                  "活动",
-                  "吃晚饭",
-                  "吃早饭"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「have … class」是什么意思？",
-                "opts": [
-                  "吃晚饭",
-                  "上⋯⋯课",
+                  "吃早饭",
                   "打扫我的房间",
-                  "吃早饭"
+                  "winter"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「play sports」是什么意思？",
+                "q": "「have … class」是什么意思？",
                 "opts": [
+                  "summer",
+                  "冬天",
                   "进行体育运动",
-                  "做早操",
-                  "散步",
                   "上⋯⋯课"
                 ],
-                "answer": 0,
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「play sports」是什么意思？",
+                "opts": [
+                  "autumn",
+                  "summer",
+                  "上⋯⋯课",
+                  "进行体育运动"
+                ],
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2138,9 +2184,9 @@
                 "q": "「exercise」是什么意思？",
                 "opts": [
                   "活动",
-                  "打扫我的房间",
-                  "做早操",
-                  "散步"
+                  "上⋯⋯课",
+                  "spring",
+                  "autumn"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2149,146 +2195,138 @@
               {
                 "q": "「do morning exercises」是什么意思？",
                 "opts": [
-                  "活动",
                   "进行体育运动",
-                  "做早操",
-                  "吃早饭"
+                  "spring",
+                  "活动",
+                  "做早操"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eat dinner」是什么意思？",
                 "opts": [
+                  "冬天",
+                  "散步",
                   "吃晚饭",
-                  "进行体育运动",
-                  "上⋯⋯课",
-                  "做早操"
+                  "打扫我的房间"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「clean my room」是什么意思？",
                 "opts": [
-                  "打扫我的房间",
                   "进行体育运动",
-                  "吃早饭",
-                  "做早操"
+                  "打扫我的房间",
+                  "上⋯⋯课",
+                  "散步"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「go for a walk」是什么意思？",
                 "opts": [
-                  "活动",
-                  "做早操",
-                  "散步",
-                  "吃晚饭"
+                  "吃早饭",
+                  "进行体育运动",
+                  "夏天",
+                  "散步"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「吃早饭」？",
                 "opts": [
-                  "eat breakfast",
                   "have … class",
                   "play sports",
-                  "exercise"
+                  "do morning exercises",
+                  "eat breakfast"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「have … class」的中文是？",
                 "opts": [
-                  "吃晚饭",
-                  "散步",
                   "上⋯⋯课",
-                  "吃早饭"
+                  "冬天",
+                  "做早操",
+                  "散步"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「复活节是什么时候」核心词是？",
                 "opts": [
-                  "school",
+                  "spring",
+                  "clean my room",
                   "eat breakfast",
-                  "have … class",
-                  "eat dinner"
+                  "go for a walk"
                 ],
-                "answer": 1,
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「play sports」的意思是？",
+                "opts": [
+                  "进行体育运动",
+                  "吃早饭",
+                  "散步",
+                  "上⋯⋯课"
+                ],
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "This is eat breakfast.",
+                "audio": "When is the party?",
                 "opts": [
-                  "This is eat breakfast.",
-                  "This is have … class.",
-                  "This is play sports.",
-                  "exercise"
+                  "When is the party?",
+                  "When is the party.",
+                  "It's eat breakfast.",
+                  "It's have … class."
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is have … class.",
+                "audio": "It's in April.",
                 "opts": [
-                  "This is have … class.",
-                  "This is eat breakfast.",
-                  "This is play sports.",
-                  "exercise"
+                  "It's in April.",
+                  "It is in April.",
+                  "It's eat breakfast.",
+                  "It's have … class."
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is play sports.",
+                "audio": "When is Dragon Boat Festival?",
                 "opts": [
-                  "This is play sports.",
-                  "This is eat breakfast.",
-                  "This is have … class.",
-                  "exercise"
+                  "When is Dragon Boat Festival?",
+                  "When is Dragon Boat Festival.",
+                  "It's eat breakfast.",
+                  "It's have … class."
                 ],
                 "answer": 0
               },
               {
-                "audio": "exercise",
+                "audio": "It's usually in June.",
                 "opts": [
-                  "exercise",
-                  "This is eat breakfast.",
-                  "This is have … class.",
-                  "This is play sports."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is do morning exercises.",
-                "opts": [
-                  "This is do morning exercises.",
-                  "This is eat breakfast.",
-                  "This is have … class.",
-                  "This is play sports."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is eat dinner.",
-                "opts": [
-                  "This is eat dinner.",
-                  "This is eat breakfast.",
-                  "This is have … class.",
-                  "This is play sports."
+                  "It's usually in June.",
+                  "It is usually in June.",
+                  "It's eat breakfast.",
+                  "It's have … class."
                 ],
                 "answer": 0
               }
@@ -2345,22 +2383,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A spring.",
-                    "cn": "看！一个春天。"
+                    "role": "Miss White",
+                    "text": "Which season do you like best, Mike?",
+                    "cn": "迈克，你最喜欢哪个季节？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a summer.",
-                    "cn": "对！还有一个夏天。"
+                    "role": "Mike",
+                    "text": "Winter.",
+                    "cn": "冬天。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Amy",
+                    "text": "Do you like summer?",
+                    "cn": "你喜欢夏天吗？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love My favourite season!",
-                    "cn": "我们喜欢「My favourite season」！"
+                    "role": "Miss White",
+                    "text": "No, I don't. I like spring.",
+                    "cn": "不，我不喜欢。我喜欢春天。"
                   }
                 ]
               }
@@ -2427,58 +2475,58 @@
               {
                 "q": "「spring」是什么意思？",
                 "opts": [
-                  "冬天",
-                  "去野餐",
-                  "野餐",
-                  "春天"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「summer」是什么意思？",
-                "opts": [
-                  "野餐",
-                  "夏天",
-                  "去野餐",
-                  "春天"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「autumn」是什么意思？",
-                "opts": [
-                  "夏天",
-                  "摘",
+                  "summer",
                   "秋天",
-                  "春天"
+                  "春天",
+                  "摘"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「winter」是什么意思？",
+                "q": "「summer」是什么意思？",
                 "opts": [
-                  "春天",
+                  "冬天",
+                  "野餐",
                   "夏天",
-                  "去野餐",
-                  "冬天"
+                  "winter"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「autumn」是什么意思？",
+                "opts": [
+                  "摘",
+                  "冬天",
+                  "野餐",
+                  "秋天"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「winter」是什么意思？",
+                "opts": [
+                  "winter",
+                  "季节",
+                  "冬天",
+                  "摘"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「season」是什么意思？",
                 "opts": [
-                  "野餐",
-                  "春天",
+                  "秋天",
+                  "夏天",
                   "季节",
-                  "秋天"
+                  "野餐"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2487,10 +2535,10 @@
               {
                 "q": "「picnic」是什么意思？",
                 "opts": [
-                  "摘",
-                  "季节",
+                  "winter",
+                  "去野餐",
                   "野餐",
-                  "春天"
+                  "夏天"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2499,24 +2547,24 @@
               {
                 "q": "「go on a picnic」是什么意思？",
                 "opts": [
-                  "去野餐",
-                  "夏天",
+                  "春天",
                   "摘",
-                  "季节"
+                  "季节",
+                  "去野餐"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pick」是什么意思？",
                 "opts": [
-                  "去野餐",
                   "摘",
                   "春天",
-                  "冬天"
+                  "秋天",
+                  "spring"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2524,9 +2572,9 @@
                 "q": "哪个是「春天」？",
                 "opts": [
                   "spring",
+                  "go on a picnic",
                   "season",
-                  "winter",
-                  "autumn"
+                  "picnic"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2536,62 +2584,54 @@
                 "q": "「summer」的中文是？",
                 "opts": [
                   "季节",
+                  "autumn",
                   "夏天",
-                  "冬天",
-                  "春天"
+                  "秋天"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「我最喜欢的季节」核心词是？",
                 "opts": [
+                  "pick",
                   "spring",
-                  "autumn",
-                  "apple",
-                  "dog"
+                  "summer",
+                  "winter"
                 ],
-                "answer": 0,
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「autumn」的意思是？",
+                "opts": [
+                  "autumn",
+                  "摘",
+                  "春天",
+                  "秋天"
+                ],
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "spring",
+                "audio": "Which season do you like best, Mike?",
                 "opts": [
-                  "spring",
-                  "summer",
-                  "autumn",
-                  "winter"
+                  "Which season do you like best, Mike?",
+                  "Which picnic do you like best, Mike?",
+                  "Which season do you like best, Mike.",
+                  "spring"
                 ],
                 "answer": 0
               },
               {
-                "audio": "summer",
+                "audio": "Winter.",
                 "opts": [
-                  "summer",
-                  "spring",
-                  "autumn",
-                  "winter"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "autumn",
-                "opts": [
-                  "autumn",
-                  "spring",
-                  "summer",
-                  "winter"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "winter",
-                "opts": [
-                  "winter",
+                  "Winter.",
                   "spring",
                   "summer",
                   "autumn"
@@ -2599,22 +2639,22 @@
                 "answer": 0
               },
               {
-                "audio": "season",
+                "audio": "Do you like summer?",
                 "opts": [
-                  "season",
-                  "spring",
-                  "summer",
-                  "autumn"
+                  "Do you like summer?",
+                  "Do you like autumn?",
+                  "Do you like summer.",
+                  "spring"
                 ],
                 "answer": 0
               },
               {
-                "audio": "picnic",
+                "audio": "No, I don't. I like spring.",
                 "opts": [
-                  "picnic",
+                  "No, I don't. I like spring.",
+                  "No, I don't. I like summer.",
                   "spring",
-                  "summer",
-                  "autumn"
+                  "summer"
                 ],
                 "answer": 0
               }
@@ -2671,22 +2711,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A January.",
-                    "cn": "看！一个一月。"
+                    "role": "Mike",
+                    "text": "When is the school trip?",
+                    "cn": "学校郊游是什么时候？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a February.",
-                    "cn": "对！还有一个二月。"
+                    "role": "Oliver",
+                    "text": "It's in May.",
+                    "cn": "在五月。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Mike",
+                    "text": "When is the sports meet?",
+                    "cn": "运动会是什么时候？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love My school calendar!",
-                    "cn": "我们喜欢「My school calendar」！"
+                    "role": "Oliver",
+                    "text": "It's in April.",
+                    "cn": "在四月。"
                   }
                 ]
               }
@@ -2753,12 +2803,12 @@
               {
                 "q": "「January」是什么意思？",
                 "opts": [
-                  "六月",
-                  "五月",
                   "一月",
-                  "八月"
+                  "春天",
+                  "spring",
+                  "二月"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2766,8 +2816,8 @@
                 "q": "「February」是什么意思？",
                 "opts": [
                   "二月",
-                  "三月",
-                  "八月",
+                  "冬天",
+                  "一月",
                   "六月"
                 ],
                 "answer": 0,
@@ -2777,57 +2827,9 @@
               {
                 "q": "「March」是什么意思？",
                 "opts": [
-                  "五月",
-                  "四月",
                   "三月",
-                  "七月"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「April」是什么意思？",
-                "opts": [
                   "六月",
-                  "四月",
-                  "二月",
-                  "八月"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「May」是什么意思？",
-                "opts": [
-                  "二月",
-                  "四月",
-                  "七月",
-                  "五月"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「June」是什么意思？",
-                "opts": [
-                  "五月",
-                  "六月",
-                  "八月",
-                  "七月"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「July」是什么意思？",
-                "opts": [
-                  "七月",
-                  "四月",
-                  "八月",
+                  "夏天",
                   "五月"
                 ],
                 "answer": 0,
@@ -2835,38 +2837,86 @@
                 "dim": "vocab"
               },
               {
-                "q": "「August」是什么意思？",
+                "q": "「April」是什么意思？",
                 "opts": [
+                  "二月",
+                  "六月",
+                  "三月",
+                  "四月"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「May」是什么意思？",
+                "opts": [
+                  "八月",
+                  "五月",
+                  "冬天",
+                  "四月"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「June」是什么意思？",
+                "opts": [
+                  "autumn",
                   "七月",
                   "六月",
-                  "八月",
-                  "五月"
+                  "summer"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "哪个是「一月」？",
+                "q": "「July」是什么意思？",
                 "opts": [
-                  "July",
-                  "March",
-                  "May",
-                  "January"
+                  "winter",
+                  "五月",
+                  "七月",
+                  "二月"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「August」是什么意思？",
+                "opts": [
+                  "五月",
+                  "一月",
+                  "秋天",
+                  "八月"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "哪个是「一月」？",
+                "opts": [
+                  "June",
+                  "January",
+                  "May",
+                  "February"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「February」的中文是？",
                 "opts": [
+                  "二月",
                   "四月",
-                  "一月",
-                  "五月",
-                  "二月"
+                  "六月",
+                  "summer"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2874,73 +2924,65 @@
                 "q": "本单元「校历」核心词是？",
                 "opts": [
                   "January",
-                  "June",
-                  "May",
+                  "April",
+                  "July",
                   "March"
                 ],
                 "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「March」的意思是？",
+                "opts": [
+                  "七月",
+                  "三月",
+                  "四月",
+                  "一月"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "January",
+                "audio": "When is the school trip?",
                 "opts": [
+                  "When is the school trip?",
+                  "When is the school trip.",
                   "January",
-                  "February",
-                  "March",
-                  "April"
+                  "February"
                 ],
                 "answer": 0
               },
               {
-                "audio": "February",
+                "audio": "It's in May.",
                 "opts": [
-                  "February",
-                  "January",
-                  "March",
-                  "April"
+                  "It's in May.",
+                  "It's in June.",
+                  "It is in May.",
+                  "January"
                 ],
                 "answer": 0
               },
               {
-                "audio": "March",
+                "audio": "When is the sports meet?",
                 "opts": [
-                  "March",
+                  "When is the sports meet?",
+                  "When is the sports meet.",
                   "January",
-                  "February",
-                  "April"
+                  "February"
                 ],
                 "answer": 0
               },
               {
-                "audio": "April",
+                "audio": "It's in April.",
                 "opts": [
-                  "April",
-                  "January",
-                  "February",
-                  "March"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "May",
-                "opts": [
-                  "May",
-                  "January",
-                  "February",
-                  "March"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "June",
-                "opts": [
-                  "June",
-                  "January",
-                  "February",
-                  "March"
+                  "It's in April.",
+                  "It's in May.",
+                  "It is in April.",
+                  "January"
                 ],
                 "answer": 0
               }
@@ -2997,22 +3039,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A first.",
-                    "cn": "看！一个第一。"
+                    "role": "Saleswoman",
+                    "text": "Can I help you?",
+                    "cn": "我能帮你吗？"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a second.",
-                    "cn": "对！还有一个第二。"
+                    "role": "Sarah",
+                    "text": "Yes. Can I try these on?",
+                    "cn": "是的。我可以试穿这些吗？"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Sarah",
+                    "text": "How much are these shoes?",
+                    "cn": "这双鞋多少钱？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love Shopping!",
-                    "cn": "我们喜欢「Shopping」！"
+                    "role": "Saleswoman",
+                    "text": "They're ninety-nine yuan.",
+                    "cn": "99元。"
                   }
                 ]
               }
@@ -3080,11 +3132,11 @@
                 "q": "「first」是什么意思？",
                 "opts": [
                   "第十二",
-                  "第五",
-                  "第二",
-                  "第一"
+                  "连衣裙",
+                  "第一",
+                  "第二"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3092,33 +3144,33 @@
                 "q": "「second」是什么意思？",
                 "opts": [
                   "第四",
-                  "第二十",
-                  "第一",
-                  "第二"
+                  "jacket",
+                  "第二",
+                  "裤子"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「third」是什么意思？",
                 "opts": [
-                  "第二十",
+                  "裙子",
+                  "第二十一",
                   "第三",
-                  "第一",
-                  "第十二"
+                  "第二"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fourth」是什么意思？",
                 "opts": [
-                  "第一",
+                  "衬衫",
                   "第四",
-                  "第十二",
-                  "第二"
+                  "hat",
+                  "第十二"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -3127,70 +3179,70 @@
               {
                 "q": "「fifth」是什么意思？",
                 "opts": [
-                  "第一",
-                  "第十二",
-                  "第五",
-                  "第二十一"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「twelfth」是什么意思？",
-                "opts": [
-                  "第十二",
+                  "shorts",
+                  "第二",
                   "第三",
-                  "第五",
-                  "第四"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「twentieth」是什么意思？",
-                "opts": [
-                  "第三",
-                  "第二十",
-                  "第一",
-                  "第十二"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「twenty-first」是什么意思？",
-                "opts": [
-                  "第四",
-                  "第五",
-                  "第二十",
-                  "第二十一"
+                  "第五"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "哪个是「第一」？",
+                "q": "「twelfth」是什么意思？",
                 "opts": [
-                  "twentieth",
-                  "third",
-                  "first",
-                  "twenty-first"
+                  "skirt",
+                  "连衣裙",
+                  "第十二",
+                  "coat"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「twentieth」是什么意思？",
+                "opts": [
+                  "外套",
+                  "jacket",
+                  "第四",
+                  "第二十"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「twenty-first」是什么意思？",
+                "opts": [
+                  "第二十一",
+                  "夹克",
+                  "第二十",
+                  "帽子"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「第一」？",
+                "opts": [
+                  "first",
+                  "twelfth",
+                  "third",
+                  "dress"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「second」的中文是？",
                 "opts": [
-                  "第十二",
-                  "第三",
+                  "shorts",
+                  "skirt",
                   "第二",
-                  "第四"
+                  "第五"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -3200,70 +3252,74 @@
                 "q": "本单元「去购物」核心词是？",
                 "opts": [
                   "first",
-                  "apple",
-                  "dog",
-                  "school"
+                  "fourth",
+                  "dress",
+                  "twentieth"
                 ],
                 "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Whose coat is this? 在问什么？",
+                "opts": [
+                  "多少钱",
+                  "这是谁的外套",
+                  "在哪里",
+                  "什么颜色"
+                ],
+                "answer": 1,
+                "point": "句型",
+                "dim": "sentence"
+              },
+              {
+                "q": "「third」的意思是？",
+                "opts": [
+                  "第二十一",
+                  "skirt",
+                  "dress",
+                  "第三"
+                ],
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "first",
+                "audio": "Can I help you?",
                 "opts": [
+                  "Can I help you?",
+                  "Can I help you.",
                   "first",
-                  "second",
-                  "third",
-                  "fourth"
+                  "second"
                 ],
                 "answer": 0
               },
               {
-                "audio": "second",
+                "audio": "Yes. Can I try these on?",
                 "opts": [
-                  "second",
+                  "Yes. Can I try these on?",
+                  "Yes. Can I try these on.",
                   "first",
-                  "third",
-                  "fourth"
+                  "second"
                 ],
                 "answer": 0
               },
               {
-                "audio": "third",
+                "audio": "How much are these shoes?",
                 "opts": [
-                  "third",
+                  "How much are these shoes?",
+                  "How much are these shoes.",
                   "first",
-                  "second",
-                  "fourth"
+                  "second"
                 ],
                 "answer": 0
               },
               {
-                "audio": "fourth",
+                "audio": "They're ninety-nine yuan.",
                 "opts": [
-                  "fourth",
-                  "first",
-                  "second",
-                  "third"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "fifth",
-                "opts": [
-                  "fifth",
-                  "first",
-                  "second",
-                  "third"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "twelfth",
-                "opts": [
-                  "twelfth",
+                  "They're ninety-nine yuan.",
                   "first",
                   "second",
                   "third"
@@ -3323,22 +3379,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A mine.",
-                    "cn": "看！一个我的。"
+                    "role": "Chen Jie",
+                    "text": "The dog is yours.",
+                    "cn": "这只狗是你的。"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a yours.",
-                    "cn": "对！还有一个你的。"
+                    "role": "Mike",
+                    "text": "No! It's his.",
+                    "cn": "不！是他的。"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Chen Jie",
+                    "text": "Is the dog eating?",
+                    "cn": "那只狗在吃东西吗？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love Whose dog is it?!",
-                    "cn": "我们喜欢「Whose dog is it?」！"
+                    "role": "Mike",
+                    "text": "Yes, he is.",
+                    "cn": "是的，它在吃。"
                   }
                 ]
               }
@@ -3405,36 +3471,36 @@
               {
                 "q": "「mine」是什么意思？",
                 "opts": [
-                  "他的",
+                  "鸭子",
                   "你的",
-                  "我的",
-                  "攀登"
+                  "dog",
+                  "我的"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「yours」是什么意思？",
                 "opts": [
-                  "我的",
-                  "我们的",
                   "你的",
-                  "他们的"
+                  "他们的",
+                  "猴子",
+                  "攀登"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「his」是什么意思？",
                 "opts": [
-                  "他们的",
-                  "你的",
-                  "他的",
-                  "我的"
+                  "鸭子",
+                  "吃",
+                  "猴子",
+                  "他的"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3442,9 +3508,9 @@
                 "q": "「hers」是什么意思？",
                 "opts": [
                   "她的",
+                  "你的",
                   "他的",
-                  "我们的",
-                  "你的"
+                  "他们的"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3453,9 +3519,9 @@
               {
                 "q": "「theirs」是什么意思？",
                 "opts": [
-                  "她的",
+                  "你的",
                   "他们的",
-                  "攀登",
+                  "我们的",
                   "他的"
                 ],
                 "answer": 1,
@@ -3465,24 +3531,24 @@
               {
                 "q": "「ours」是什么意思？",
                 "opts": [
-                  "攀登",
-                  "她的",
-                  "他的",
-                  "我们的"
+                  "猴子",
+                  "我们的",
+                  "你的",
+                  "bear"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「climbing」是什么意思？",
                 "opts": [
+                  "他们的",
                   "攀登",
-                  "他的",
-                  "吃",
-                  "他们的"
+                  "你的",
+                  "我们的"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3490,20 +3556,20 @@
                 "q": "「eating」是什么意思？",
                 "opts": [
                   "我的",
-                  "他的",
-                  "你的",
-                  "吃"
+                  "老虎",
+                  "吃",
+                  "dog"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「我的」？",
                 "opts": [
-                  "his",
+                  "panda",
                   "mine",
-                  "theirs",
+                  "yours",
                   "climbing"
                 ],
                 "answer": 1,
@@ -3513,83 +3579,75 @@
               {
                 "q": "「yours」的中文是？",
                 "opts": [
+                  "熊",
                   "你的",
-                  "攀登",
-                  "吃",
-                  "她的"
+                  "panda",
+                  "cat"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「这是谁的狗」核心词是？",
                 "opts": [
-                  "dog",
+                  "tiger",
                   "eating",
-                  "mine",
-                  "theirs"
+                  "his",
+                  "mine"
                 ],
-                "answer": 2,
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「his」的意思是？",
+                "opts": [
+                  "我们的",
+                  "攀登",
+                  "duck",
+                  "他的"
+                ],
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "mine",
+                "audio": "The dog is yours.",
                 "opts": [
-                  "mine",
-                  "yours",
-                  "his",
-                  "hers"
+                  "The dog is yours.",
+                  "The dog is his.",
+                  "The dog is yclimbing.",
+                  "mine"
                 ],
                 "answer": 0
               },
               {
-                "audio": "yours",
+                "audio": "No! It's his.",
                 "opts": [
-                  "yours",
-                  "mine",
-                  "his",
-                  "hers"
+                  "No! It's his.",
+                  "No! It's hers.",
+                  "No! It is his.",
+                  "mine"
                 ],
                 "answer": 0
               },
               {
-                "audio": "his",
+                "audio": "Is the dog eating?",
                 "opts": [
-                  "his",
-                  "mine",
-                  "yours",
-                  "hers"
+                  "Is the dog eating?",
+                  "Is the dog mine?",
+                  "Is the dog eating.",
+                  "mine"
                 ],
                 "answer": 0
               },
               {
-                "audio": "hers",
+                "audio": "Yes, he is.",
                 "opts": [
-                  "hers",
-                  "mine",
-                  "yours",
-                  "his"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "theirs",
-                "opts": [
-                  "theirs",
-                  "mine",
-                  "yours",
-                  "his"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "ours",
-                "opts": [
-                  "ours",
+                  "Yes, he is.",
                   "mine",
                   "yours",
                   "his"
@@ -3649,22 +3707,32 @@
             ],
             "dialogues": [
               {
-                "title": "Let's talk",
+                "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "A",
-                    "text": "Look! A doing morning exercises.",
-                    "cn": "看！一个做早操。"
+                    "role": "Mike",
+                    "text": "Look at the pandas.",
+                    "cn": "看那些熊猫。"
                   },
                   {
-                    "role": "B",
-                    "text": "Yes! And a having … class.",
-                    "cn": "对！还有一个上……课。"
+                    "role": "Chen Jie",
+                    "text": "They're so cute!",
+                    "cn": "它们真可爱！"
+                  }
+                ]
+              },
+              {
+                "title": "B Let's talk",
+                "lines": [
+                  {
+                    "role": "Mike",
+                    "text": "What's the little monkey doing?",
+                    "cn": "那只小猴子在干什么？"
                   },
                   {
-                    "role": "A",
-                    "text": "We love Work quietly!!",
-                    "cn": "我们喜欢「Work quietly!」！"
+                    "role": "Chen Jie",
+                    "text": "It's playing with its mother!",
+                    "cn": "它在和妈妈玩！"
                   }
                 ]
               }
@@ -3731,120 +3799,120 @@
               {
                 "q": "「doing morning exercises」是什么意思？",
                 "opts": [
-                  "看书",
-                  "听音乐",
-                  "保持你 的课桌干净",
-                  "做早操"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「having … class」是什么意思？",
-                "opts": [
-                  "上……课",
-                  "保持你 的课桌干净",
+                  "卧室",
+                  "做早操",
                   "靠右",
-                  "看书"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「eating lunch」是什么意思？",
-                "opts": [
-                  "上……课",
-                  "保持某种状态",
-                  "吃午饭",
-                  "靠右"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「reading a book」是什么意思？",
-                "opts": [
-                  "吃午饭",
-                  "上……课",
-                  "看书",
-                  "保持某种状态"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「listening to music」是什么意思？",
-                "opts": [
-                  "吃午饭",
-                  "上……课",
-                  "听音乐",
-                  "做早操"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「keep」是什么意思？",
-                "opts": [
-                  "上……课",
-                  "保持某种状态",
-                  "保持你 的课桌干净",
-                  "靠右"
+                  "computer room"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「keep to the right」是什么意思？",
+                "q": "「having … class」是什么意思？",
                 "opts": [
-                  "吃午饭",
-                  "做早操",
-                  "靠右",
-                  "听音乐"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「keep your desk clean」是什么意思？",
-                "opts": [
-                  "保持某种状态",
-                  "靠右",
-                  "保持你 的课桌干净",
-                  "听音乐"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「做早操」？",
-                "opts": [
-                  "keep",
-                  "having … class",
-                  "keep your desk clean",
-                  "doing morning exercises"
+                  "计算机房",
+                  "卧室",
+                  "library",
+                  "上……课"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「having … class」的中文是？",
+                "q": "「eating lunch」是什么意思？",
+                "opts": [
+                  "教室",
+                  "computer room",
+                  "厨房",
+                  "吃午饭"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「reading a book」是什么意思？",
                 "opts": [
                   "上……课",
+                  "靠右",
+                  "library",
+                  "看书"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「listening to music」是什么意思？",
+                "opts": [
+                  "听音乐",
                   "做早操",
-                  "看书",
-                  "保持某种状态"
+                  "吃午饭",
+                  "library"
                 ],
                 "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「keep」是什么意思？",
+                "opts": [
+                  "保持某种状态",
+                  "吃午饭",
+                  "computer room",
+                  "保持你 的课桌干净"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「keep to the right」是什么意思？",
+                "opts": [
+                  "computer room",
+                  "靠右",
+                  "浴室",
+                  "教室"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「keep your desk clean」是什么意思？",
+                "opts": [
+                  "art room",
+                  "保持你 的课桌干净",
+                  "教室",
+                  "classroom"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「做早操」？",
+                "opts": [
+                  "keep to the right",
+                  "doing morning exercises",
+                  "having … class",
+                  "keep your desk clean"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「having … class」的中文是？",
+                "opts": [
+                  "靠右",
+                  "吃午饭",
+                  "上……课",
+                  "书房"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3852,73 +3920,77 @@
                 "q": "本单元「安静地工作」核心词是？",
                 "opts": [
                   "doing morning exercises",
-                  "keep your desk clean",
-                  "school",
-                  "eating lunch"
+                  "keep to the right",
+                  "playground",
+                  "keep"
                 ],
                 "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "Where's the library? 在问什么？",
+                "opts": [
+                  "图书馆大吗",
+                  "图书馆在哪",
+                  "图书馆有什么",
+                  "是图书馆吗"
+                ],
+                "answer": 1,
+                "point": "句型",
+                "dim": "sentence"
+              },
+              {
+                "q": "「eating lunch」的意思是？",
+                "opts": [
+                  "保持某种状态",
+                  "靠右",
+                  "吃午饭",
+                  "playground"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "This is doing morning exercises.",
+                "audio": "Look at the pandas.",
                 "opts": [
-                  "This is doing morning exercises.",
-                  "This is having … class.",
-                  "This is eating lunch.",
-                  "This is reading a book."
+                  "Look at the pandas.",
+                  "It's doing morning exercises.",
+                  "It's having … class.",
+                  "It's eating lunch."
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is having … class.",
+                "audio": "They're so cute!",
                 "opts": [
-                  "This is having … class.",
-                  "This is doing morning exercises.",
-                  "This is eating lunch.",
-                  "This is reading a book."
+                  "They're so cute!",
+                  "It's doing morning exercises.",
+                  "It's having … class.",
+                  "It's eating lunch."
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is eating lunch.",
+                "audio": "What's the little monkey doing?",
                 "opts": [
-                  "This is eating lunch.",
-                  "This is doing morning exercises.",
-                  "This is having … class.",
-                  "This is reading a book."
+                  "What's the little monkey doing?",
+                  "What's the little monkey doing.",
+                  "What is the little monkey doing?",
+                  "It's doing morning exercises."
                 ],
                 "answer": 0
               },
               {
-                "audio": "This is reading a book.",
+                "audio": "It's playing with its mother!",
                 "opts": [
-                  "This is reading a book.",
-                  "This is doing morning exercises.",
-                  "This is having … class.",
-                  "This is eating lunch."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "This is listening to music.",
-                "opts": [
-                  "This is listening to music.",
-                  "This is doing morning exercises.",
-                  "This is having … class.",
-                  "This is eating lunch."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "keep",
-                "opts": [
-                  "keep",
-                  "This is doing morning exercises.",
-                  "This is having … class.",
-                  "This is eating lunch."
+                  "It's playing with its mother!",
+                  "It is playing with its mother!",
+                  "It's doing morning exercises.",
+                  "It's having … class."
                 ],
                 "answer": 0
               }

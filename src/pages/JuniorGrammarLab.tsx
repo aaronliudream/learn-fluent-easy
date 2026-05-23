@@ -1287,7 +1287,7 @@ export default function JuniorGrammarLab() {
 
   return (
     <CosmicShell theme={theme} focus={focus}>
-      <HUD state={state} theme={theme} focus={focus} onToggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")} onToggleFocus={() => setFocus(!focus)} onBack={() => { const g = pt?.grade; const fb = g ? `/junior/grammar?grade=${g}` : "/junior/grammar"; if (window.history.state?.idx > 0) nav(-1); else nav(fb); }} />
+      <HUD state={state} theme={theme} focus={focus} onToggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")} onToggleFocus={() => setFocus(!focus)} onBack={() => { const g = pt?.grade; const fb = g ? `/junior/grammar?grade=${g}` : "/junior/grammar"; nav(fb, { replace: true }); }} />
       {phase !== REVENGE_PHASE &&
       <PhaseRail active={phase} done={state.phasesDone} onJump={(i) => setPhase(i)} />
       }

@@ -1,5 +1,6 @@
 ﻿import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import BackLink from "@/components/BackLink";
 import { ArrowLeft, Lock, Check, Sparkles, RotateCw, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -159,7 +160,6 @@ function maxedOut(state: LevelState, cfg: LevelConfig): boolean {
 
 export default function JuniorGrammarMastery() {
   const { id } = useParams<{ id: string }>();
-  const nav = useNavigate();
   const [pt, setPt] = useState<Pt | null>(null);
   const [byType, setByType] = useState<Record<LevelKey, GrammarQuestion[]>>({
     mcq: [], fill: [], correction: [], transform: [], translation: [],
@@ -176,24 +176,33 @@ export default function JuniorGrammarMastery() {
     if (!id) return;
     (async () => {
       setLoading(true);
-      const [pRes, qRes] = await Promise.all([
-        supabase
+      const pointSelect =
+        "id,title,code,cefr,grade,hook_line,hook_line_cn,mnemonic" as const;
+      let pointRes = await supabase
+        .from("junior_grammar_points")
+        .select(pointSelect)
+        .eq("id", id)
+        .maybeSingle();
+      if (!pointRes.data) {
+        pointRes = await supabase
           .from("junior_grammar_points")
-          .select("id,title,code,cefr,grade,hook_line,hook_line_cn,mnemonic")
-          .eq("id", id)
-          .maybeSingle(),
-        supabase
-          .from("junior_grammar_questions")
-          .select(
-            "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order",
-          )
-          .eq("point_id", id)
-          .gte("sort_order", 9000)
-          .lte("sort_order", 9199)
-          .order("difficulty", { ascending: true })
-          .order("sort_order"),
-      ]);
-      setPt(pRes.data as Pt);
+          .select(pointSelect)
+          .eq("code", id)
+          .maybeSingle();
+      }
+      const resolved = pointRes.data as Pt | null;
+      const pointId = resolved?.id ?? id;
+      const qRes = await supabase
+        .from("junior_grammar_questions")
+        .select(
+          "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order",
+        )
+        .eq("point_id", pointId)
+        .gte("sort_order", 9000)
+        .lte("sort_order", 9199)
+        .order("difficulty", { ascending: true })
+        .order("sort_order");
+      setPt(resolved);
       const allQs = (qRes.data ?? []) as GrammarQuestion[];
       const buckets: Record<LevelKey, GrammarQuestion[]> = {
         mcq: [], fill: [], correction: [], transform: [], translation: [],
@@ -365,9 +374,26 @@ export default function JuniorGrammarMastery() {
   }
 
   if (!pt) {
+    const looksLikePlaceholder = !id || id === "id" || id === ":id";
     return (
-      <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-10 text-center">
-        <p className="text-sm text-muted-foreground"><T>语法点不存在</T></p>
+      <main className="playful-shell mx-auto grid min-h-screen max-w-3xl place-items-center px-5 py-10">
+        <div className="playful-card w-full max-w-md px-6 py-8 text-center">
+          <p className="text-lg font-extrabold text-foreground"><T>语法点不存在</T></p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            {looksLikePlaceholder ? (
+              <T>请从语法地图进入，不要直接打开带占位符 id 的链接。</T>
+            ) : (
+              <T>未找到该考点，请确认链接是否正确。</T>
+            )}
+          </p>
+          <BackLink
+            to="/junior/grammar"
+            className="playful-btn playful-btn-cyan mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-sky-400 px-6 py-2.5 text-sm text-white"
+          >
+            <ArrowLeft className="size-4" />
+            <T>返回语法地图</T>
+          </BackLink>
+        </div>
       </main>
     );
   }
@@ -386,12 +412,12 @@ export default function JuniorGrammarMastery() {
 
   return (
     <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-4">
-      <Link
+      <BackLink
         to={backTo}
         className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> <T>返回考点列表</T>
-      </Link>
+      </BackLink>
 
       <header className="playful-card relative overflow-hidden p-5">
         <span className="pointer-events-none absolute -right-6 -top-6 size-24 rounded-full bg-pink-200/40 blur-2xl" />
@@ -574,12 +600,12 @@ function CompletionScreen({
         >
           <RotateCw className="size-4" /> <T>再做一遍</T>
         </button>
-        <Link
+        <BackLink
           to={backTo}
           className="playful-btn playful-btn-cyan inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-500 to-teal-400 px-5 py-2.5 text-sm text-white"
         >
           <T>返回考点列表</T>
-        </Link>
+        </BackLink>
       </div>
     </main>
   );

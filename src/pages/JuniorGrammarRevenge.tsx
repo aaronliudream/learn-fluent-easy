@@ -216,9 +216,9 @@ export default function JuniorGrammarRevenge() {
             className="rounded-full border px-4 py-2 text-sm font-bold hover:bg-muted">
             <T>再刷一遍</T>
           </button>
-          <Link to="/junior/grammar" className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground inline-flex items-center gap-1">
+          <BackLink to="/junior/grammar" className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground inline-flex items-center gap-1">
             <T>返回语法冒险</T> <ChevronRight className="size-3.5" />
-          </Link>
+          </BackLink>
         </div>
       </section>
       }

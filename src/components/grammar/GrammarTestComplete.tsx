@@ -1,5 +1,5 @@
 import { T } from "@/i18n/T";
-import { Link } from "react-router-dom";
+import BackLink from "@/components/BackLink";
 import { RotateCw, Sparkles, Trophy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { JuniorCheckpoint } from "@/components/assessment/JuniorCheckpoint";
@@ -148,19 +148,19 @@ export function GrammarTestComplete({
           </button>
         )}
 
-        <Link
+        <BackLink
           to={grammarBackTo}
           className="playful-btn playful-btn-cyan inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-sky-400 px-6 py-2.5 text-sm text-white"
         >
           <T>📚 下一个考点</T>
-        </Link>
+        </BackLink>
 
-        <Link
+        <BackLink
           to="/junior"
           className="playful-btn inline-flex items-center gap-2 border-2 border-cyan-200 bg-white px-6 py-2.5 text-sm text-cyan-700 dark:border-cyan-800 dark:bg-card dark:text-cyan-300"
         >
           <T>🏠 初中首页</T>
-        </Link>
+        </BackLink>
       </div>
 
       {!groupStreak.challenge_unlocked && pct >= 70 && (

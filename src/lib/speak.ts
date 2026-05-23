@@ -332,23 +332,32 @@ const fetchTTS = async (text: string, voiceId: string, speed: number, accent?: s
       console.warn("[tts] edge function status:", res.status);
       return null;
     }
-    const ct = res.headers.get("content-type") || "";
+    // Edge function always responds with JSON containing a CDN URL.
+    // (Previously it could return raw audio/mpeg bytes on cold path; that
+    // bypassed the CDN and made first plays slow for mainland-China users.)
     let url: string | null = null;
-    if (ct.startsWith("audio/")) {
-      // Cold path → raw MP3 bytes. Wrap in a Blob URL for instant playback.
-      const blob = await res.blob();
-      url = URL.createObjectURL(blob);
-    } else {
-      // Cache hit → JSON with CDN URL.
+    const ct = res.headers.get("content-type") || "";
+    if (ct.includes("application/json")) {
       const data = await res.json();
       if (data?.audioUrl) {
         url = data.audioUrl as string;
       } else if (data?.audioContent) {
+        // Legacy base64 envelope — kept for back-compat only.
         url = `data:${data.mimeType || "audio/mpeg"};base64,${data.audioContent}`;
       } else {
         console.warn("[tts] no audio returned");
         return null;
       }
+    } else if (ct.startsWith("audio/")) {
+      // Defensive fallback: an older deployment of the edge function might
+      // still stream raw bytes. Wrap them in a blob URL so playback works,
+      // but this path means CDN is being bypassed — surface a console hint.
+      console.warn("[tts] edge function returned raw audio bytes — CDN bypassed. Redeploy the tts function.");
+      const blob = await res.blob();
+      url = URL.createObjectURL(blob);
+    } else {
+      console.warn("[tts] unexpected content-type:", ct);
+      return null;
     }
     if (audioCache.size >= MAX_CACHE) {
       const firstKey = audioCache.keys().next().value;

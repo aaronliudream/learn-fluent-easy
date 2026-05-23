@@ -5,18 +5,44 @@ import { ArrowLeft } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { writePrimaryGradeToStorage } from "@/lib/primaryGrade";
 import type { PrimaryHubGrade } from "@/lib/primaryHub/types";
+import { cn } from "@/lib/utils";
 import "@/lib/primaryHub/styles";
 
 const GRADES: Array<{
   id: PrimaryHubGrade;
   name_cn: string;
-  emoji: string;
-  gradient: string;
+  image: string;
+  imageAlt: string;
+  overlay: string;
 }> = [
-  { id: 3, name_cn: "三年级", emoji: "🦊", gradient: "from-rose-300 via-fuchsia-300 to-violet-300" },
-  { id: 4, name_cn: "四年级", emoji: "🐼", gradient: "from-violet-300 via-indigo-300 to-blue-300" },
-  { id: 5, name_cn: "五年级", emoji: "🦁", gradient: "from-blue-300 via-sky-300 to-cyan-300" },
-  { id: 6, name_cn: "六年级", emoji: "🦉", gradient: "from-cyan-300 via-teal-300 to-emerald-300" },
+  {
+    id: 3,
+    name_cn: "三年级",
+    image: "/images/primary/grade3-fox.jpg",
+    imageAlt: "可爱的红狐狸",
+    overlay: "from-rose-950/90 via-fuchsia-900/50 to-black/20",
+  },
+  {
+    id: 4,
+    name_cn: "四年级",
+    image: "/images/primary/grade4-panda.jpg",
+    imageAlt: "可爱的大熊猫",
+    overlay: "from-indigo-950/90 via-violet-900/50 to-black/20",
+  },
+  {
+    id: 5,
+    name_cn: "五年级",
+    image: "/images/primary/grade5-lion.jpg",
+    imageAlt: "可爱的幼狮",
+    overlay: "from-sky-950/90 via-blue-900/50 to-black/20",
+  },
+  {
+    id: 6,
+    name_cn: "六年级",
+    image: "/images/primary/grade6-owl.jpg",
+    imageAlt: "可爱的猫头鹰",
+    overlay: "from-emerald-950/90 via-teal-900/50 to-black/20",
+  },
 ];
 
 export default function Primary() {
@@ -50,11 +76,21 @@ export default function Primary() {
             key={g.id}
             type="button"
             onClick={() => enterGrade(g.id)}
-            className={`relative aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br ${g.gradient} p-4 text-left shadow-sm transition hover:-translate-y-0.5`}
+            className={cn(
+              "group relative aspect-[4/3] overflow-hidden rounded-2xl text-left shadow-sm",
+              "transition hover:-translate-y-0.5 hover:shadow-md",
+              "focus:outline-none focus:ring-2 focus:ring-[#FF6B35]/60 focus:ring-offset-2",
+            )}
           >
-            <div className="text-4xl">{g.emoji}</div>
-            <div className="absolute inset-x-4 bottom-4">
-              <div className="text-lg font-extrabold text-white drop-shadow">{g.name_cn}</div>
+            <img
+              src={g.image}
+              alt={g.imageAlt}
+              className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className={cn("absolute inset-0 bg-gradient-to-t", g.overlay)} />
+            <div className="relative z-10 flex h-full flex-col justify-end p-4">
+              <div className="text-lg font-extrabold text-white drop-shadow-md">{g.name_cn}</div>
               <div className="text-[11px] font-bold text-white/90">上册 · 下册</div>
             </div>
           </button>

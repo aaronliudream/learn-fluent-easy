@@ -1,9 +1,9 @@
 import type { ExamPaper } from "./types";
 
-/** 苏州市2020年初中毕业暨升学考试试卷 */
+/** 2020年苏州市初中毕业暨升学考试英语试卷 */
 export const SUZHOU_2020: ExamPaper = {
   id: "suzhou-2020",
-  title: "苏州市2020年初中毕业暨升学考试试卷",
+  title: "2020年苏州市初中毕业暨升学考试英语试卷",
   province: "江苏",
   city: "苏州",
   year: 2020,

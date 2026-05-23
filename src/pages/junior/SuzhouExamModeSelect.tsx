@@ -49,7 +49,8 @@ export default function SuzhouExamModeSelect() {
   }
 
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
+    <div className="min-h-screen w-full bg-background">
+    <main className="mx-auto w-full min-h-screen max-w-3xl px-4 py-8 sm:px-6 lg:max-w-4xl">
       <BackLink to="/junior/suzhou" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> <T>返回试卷列表</T>
       </BackLink>
@@ -57,8 +58,15 @@ export default function SuzhouExamModeSelect() {
       <div className="mb-6">
         <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground"><T>选择模式</T></div>
         <h1 className="mt-1 text-xl font-extrabold leading-tight"><T>{exam.title}</T></h1>
-        <p className="mt-1 flex items-center gap-1 text-xs text-muted-foreground">
-          <Clock className="size-3" /> {Math.round(exam.duration_seconds / 60)} <T>分钟 ·</T> {exam.questions.length} <T>题</T>
+        <p className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground [font-variant-numeric:tabular-nums]">
+          <span className="inline-flex items-center gap-1 whitespace-nowrap">
+            <Clock className="size-3.5 shrink-0" aria-hidden />
+            {Math.round(exam.duration_seconds / 60)} <T>分钟</T>
+          </span>
+          <span aria-hidden className="opacity-50">·</span>
+          <span className="whitespace-nowrap">
+            {exam.questions.length} <T>题</T>
+          </span>
         </p>
       </div>
 
@@ -76,10 +84,10 @@ export default function SuzhouExamModeSelect() {
           const inner = (
             <>
               <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
-              <div className="relative grid size-12 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur-sm">
-                {locked ? <Lock className="size-6" /> : <Icon className="size-6" />}
+              <div className="relative grid size-12 shrink-0 place-items-center self-center rounded-xl bg-white/20 backdrop-blur-sm">
+                {locked ? <Lock className="size-6" aria-hidden /> : <Icon className="size-6" aria-hidden />}
               </div>
-              <div className="relative flex-1 min-w-0">
+              <div className="relative min-w-0 flex-1 text-left">
                 <div className="flex flex-wrap items-center gap-2">
                   <div className="text-base font-extrabold leading-tight"><T>{m.title}</T></div>
                   {modeDone && !locked && (
@@ -100,7 +108,7 @@ export default function SuzhouExamModeSelect() {
               <div
                 key={m.key}
                 aria-disabled
-                className={`relative flex cursor-not-allowed items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${m.gradient} p-4 text-white opacity-75 shadow-tile`}>
+                className={`relative flex cursor-not-allowed items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${m.gradient} px-4 py-4 text-white opacity-75 shadow-tile`}>
                 {inner}
               </div>
             );
@@ -110,12 +118,13 @@ export default function SuzhouExamModeSelect() {
             <Link
               key={m.key}
               to={`/junior/suzhou/${exam.id}?mode=${m.key}`}
-              className={`relative flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${m.gradient} p-4 text-white shadow-tile transition hover:-translate-y-0.5`}>
+              className={`relative flex items-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br ${m.gradient} px-4 py-4 text-white shadow-tile transition hover:-translate-y-0.5`}>
               {inner}
             </Link>
           );
         })}
       </section>
     </main>
+    </div>
   );
 }

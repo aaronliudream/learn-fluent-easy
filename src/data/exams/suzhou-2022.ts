@@ -1,5 +1,5 @@
 /**
- * 2022 苏州市初中学业水平考试英语试卷
+ * 2022年苏州市初中学业水平考试英语试卷
  * Source: 苏州教育考试院
  */
 
@@ -10,7 +10,7 @@ export type { ExamPaper, ExamQuestion, ExamSection, QuestionType, ReadingBlock }
 /** ============ 2022 苏州中考英语 完整数据 ============ */
 export const SUZHOU_2022: ExamPaper = {
   id: "suzhou-2022",
-  title: "2022 年苏州市初中学业水平考试英语试卷",
+  title: "2022年苏州市初中学业水平考试英语试卷",
   province: "江苏",
   city: "苏州",
   year: 2022,

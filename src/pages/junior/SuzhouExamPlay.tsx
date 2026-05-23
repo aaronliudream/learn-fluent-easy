@@ -69,6 +69,31 @@ function buildBlankMap(questions: ExamQuestion[]): Record<number, string> {
   return map;
 }
 
+/** Readable passage column: paragraph breaks when present, otherwise pre-wrap. */
+function PassageParagraphs({ text }: { text: string }) {
+  const paragraphs = text.includes("\n\n")
+    ? text.split(/\n\n+/).map((p) => p.trim()).filter(Boolean)
+    : null;
+
+  if (!paragraphs || paragraphs.length <= 1) {
+    return (
+      <div className="exam-passage whitespace-pre-wrap text-[15.5px] leading-[1.85]">
+        {text}
+      </div>
+    );
+  }
+
+  return (
+    <div className="exam-passage space-y-4">
+      {paragraphs.map((p, i) => (
+        <p key={i} className="text-[15.5px] leading-[1.85] text-justify">
+          {p}
+        </p>
+      ))}
+    </div>
+  );
+}
+
 /** Persist expand/collapse state per question across page refreshes. */
 const EXPLANATION_OPEN_KEY = "suzhou-exam-explanation-open";
 
@@ -761,39 +786,51 @@ export default function SuzhouExamPlay() {
     );
   };
 
+  const renderReadingPassage = (block: ReturnType<typeof getReadingBlocks>[number]) => {
+    const passageKey = block.passageKey ?? `reading_${block.label}`;
+    const passageText = exam.passages[passageKey];
+
+    return (
+      <>
+        <div className="exam-eyebrow mb-3">
+          <T>Passage {block.label}</T>
+          {block.title ? ` · ${block.title}` : ""}
+        </div>
+        {block.kind === "poster" ? (
+          <MusicFestivalPoster data={(exam.resources?.poster_A ?? {}) as Record<string, unknown>} />
+        ) : block.kind === "library_poster" ? (
+          <LibraryHolidayPoster
+            data={(exam.resources?.[block.resourceKey ?? "library_poster_A"] ?? {}) as Record<string, unknown>}
+          />
+        ) : block.kind === "egg_article" ? (
+          <EggReadingArticle
+            data={(exam.resources?.[block.resourceKey ?? "egg_article_B"] ?? {}) as Record<string, unknown>}
+          />
+        ) : (
+          passageText && <PassageParagraphs text={passageText} />
+        )}
+      </>
+    );
+  };
+
   const renderReadingSection = (questions: ExamQuestion[]) => (
-    <div className="space-y-8">
+    <div className="space-y-10">
       {getReadingBlocks(exam).map((block) => {
         const blockQs = readingBlockQuestions(questions, block.from, block.to);
         if (!blockQs.length) return null;
-        const passageKey = block.passageKey ?? `reading_${block.label}`;
         return (
-          <div key={block.label} className="space-y-5">
-            <ExamCard>
-              <div className="exam-eyebrow mb-2">
-                <T>Passage {block.label}</T>
-                {block.title ? ` · ${block.title}` : ""}
+          <div
+            key={block.label}
+            className="border-t border-[hsl(var(--exam-rule))] pt-8 first:border-0 first:pt-0">
+            <div className="mx-auto flex w-full max-w-[48rem] flex-col gap-6">
+              <ExamCard className="exam-reading-passage w-full">
+                {renderReadingPassage(block)}
+              </ExamCard>
+              <div className="w-full space-y-5">
+                {blockQs.map(renderQuestionCard)}
+                {unitPracticeHint(blockQs)}
               </div>
-              {block.kind === "poster" ? (
-                <MusicFestivalPoster data={(exam.resources?.poster_A ?? {}) as Record<string, unknown>} />
-              ) : block.kind === "library_poster" ? (
-                <LibraryHolidayPoster
-                  data={(exam.resources?.[block.resourceKey ?? "library_poster_A"] ?? {}) as Record<string, unknown>}
-                />
-              ) : block.kind === "egg_article" ? (
-                <EggReadingArticle
-                  data={(exam.resources?.[block.resourceKey ?? "egg_article_B"] ?? {}) as Record<string, unknown>}
-                />
-              ) : (
-                exam.passages[passageKey] && (
-                  <div className="exam-passage whitespace-pre-wrap">{exam.passages[passageKey]}</div>
-                )
-              )}
-            </ExamCard>
-            <div className="space-y-5">
-              {blockQs.map(renderQuestionCard)}
             </div>
-            {unitPracticeHint(blockQs)}
           </div>
         );
       })}
@@ -804,9 +841,9 @@ export default function SuzhouExamPlay() {
     <ExamPaperShell className="pb-28">
       <NoCopyGuard />
       <ExamContainer max="7xl">
-        {/* 粘性顶栏 */}
-        <div className="sticky top-0 z-20 -mx-4 px-4 py-3 mb-4 bg-[hsl(var(--exam-paper))]/95 backdrop-blur border-b exam-divider">
-          <div className="flex flex-wrap items-center justify-between gap-3">
+        {/* 粘性顶栏 — 与正文同宽对齐 */}
+        <div className="sticky top-0 z-20 -mx-4 sm:-mx-6 px-4 sm:px-6 py-3 mb-4 bg-[hsl(var(--exam-paper))]/95 backdrop-blur border-b exam-divider">
+          <div className="mx-auto flex w-full max-w-[72rem] flex-wrap items-center justify-between gap-3">
             <BackLink
               to={`/junior/suzhou/${exam.id}/mode`}
               className="inline-flex items-center gap-1.5 text-[13px] exam-soft hover:text-[hsl(var(--exam-ink))]">
@@ -895,24 +932,29 @@ export default function SuzhouExamPlay() {
           </div>
         )}
 
-        <div ref={containerRef} className="grid gap-8 lg:grid-cols-[1fr_240px] items-start">
-          <div className="space-y-10 min-w-0">
+        <div
+          ref={containerRef}
+          className="mx-auto grid w-full max-w-[72rem] gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(200px,220px)] lg:justify-center items-start">
+          <div className="min-w-0 space-y-10">
             {sections.map(({ section, questions }) => {
               const meta = getSectionMeta(exam, section);
               const passageKey =
                 section === "reading" ? null :
                 section === "writing" ? null :
                 section;
+              const isReading = section === "reading";
 
               return (
                 <section key={section} id={`section-${section}`}>
-                  <div className="mb-4">
+                  <div className={cn("mb-5", isReading && "max-w-3xl")}>
                     <h2 className="exam-display text-xl">{meta.title}</h2>
-                    <p className="mt-1 text-[13px] exam-soft">{meta.instruction}</p>
-                    <p className="text-[12px] exam-mute">{meta.scoreLabel}</p>
+                    <p className="mt-2 text-[14px] leading-relaxed exam-body exam-soft">
+                      {meta.instruction}
+                    </p>
+                    <p className="mt-1.5 text-[12px] exam-mute">{meta.scoreLabel}</p>
                   </div>
 
-                  {section === "reading" ? (
+                  {isReading ? (
                     renderReadingSection(questions)
                   ) : (
                     <>

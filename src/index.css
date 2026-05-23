@@ -811,6 +811,11 @@ All colors MUST be HSL.
   color: hsl(var(--exam-ink-soft));
 }
 
+/* ───────── Reading practice: comfortable measure (~70ch) ───────── */
+.exam-reading-passage {
+  max-width: 42rem;
+}
+
 /* ───────── Sticky passage scroll ───────── */
 .exam-passage-scroll::-webkit-scrollbar { width: 6px; }
 .exam-passage-scroll::-webkit-scrollbar-track { background: transparent; }

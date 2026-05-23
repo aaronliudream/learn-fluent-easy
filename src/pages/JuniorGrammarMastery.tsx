@@ -355,9 +355,9 @@ export default function JuniorGrammarMastery() {
 
   if (loading) {
     return (
-      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10">
+      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 bg-gradient-to-br from-pink-50 via-white to-cyan-50 dark:from-pink-950/20 dark:via-background dark:to-cyan-950/20">
         <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-          <RotateCw className="size-4 animate-spin" />
+          <RotateCw className="size-4 animate-spin text-pink-500" />
           <T>加载中...</T>
         </div>
       </main>
@@ -366,7 +366,7 @@ export default function JuniorGrammarMastery() {
 
   if (!pt) {
     return (
-      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 text-center">
+      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 text-center bg-gradient-to-br from-pink-50 via-white to-cyan-50 dark:from-pink-950/20 dark:via-background dark:to-cyan-950/20">
         <p className="text-sm text-muted-foreground"><T>语法点不存在</T></p>
       </main>
     );
@@ -385,27 +385,27 @@ export default function JuniorGrammarMastery() {
   const backTo = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
 
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-4">
+    <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-5 bg-gradient-to-br from-pink-50 via-white to-cyan-50 dark:from-pink-950/20 dark:via-background dark:to-cyan-950/20">
       <Link
         to={backTo}
-        className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        className="inline-flex items-center gap-1.5 text-sm text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 transition-colors font-medium"
       >
         <ArrowLeft className="size-4" /> <T>返回考点列表</T>
       </Link>
 
-      {/* ─── Header card ─── */}
-      <div className="rounded-2xl border bg-gradient-to-br from-emerald-50 via-white to-emerald-50 dark:from-emerald-950/40 dark:via-background dark:to-emerald-950/40 p-5">
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 px-2.5 py-0.5 text-xs font-bold">
+      {/* ─── Header card — Playful style ─── */}
+      <div className="rounded-3xl border-2 border-pink-200/60 dark:border-pink-800/40 bg-gradient-to-br from-pink-100/80 via-white to-cyan-100/80 dark:from-pink-950/50 dark:via-background dark:to-cyan-950/50 p-6 shadow-lg shadow-pink-200/30 dark:shadow-pink-900/20">
+        <div className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-pink-500 to-cyan-500 text-white px-3 py-1 text-xs font-bold shadow-sm">
           <Sparkles className="size-3" /> {pt.code ?? "G8"} · {pt.cefr ?? "B1"}
         </div>
-        <h1 className="mt-2 text-2xl font-extrabold tracking-tight">{pt.title}</h1>
-        <p className="mt-1 text-xs text-muted-foreground">
-          <T>自适应学习 · 答对才能进阶！</T> · Master through adaptive learning — answer correctly to advance.
+        <h1 className="mt-3 text-2xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 via-purple-500 to-cyan-500 bg-clip-text text-transparent">{pt.title}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          ✨ <T>自适应学习 · 答对才能进阶！</T>
         </p>
       </div>
 
-      {/* ─── Level rail ─── */}
-      <div className="grid grid-cols-5 gap-2">
+      {/* ─── Level rail — Playful cards ─── */}
+      <div className="grid grid-cols-5 gap-3">
         {LEVELS.map((l) => {
           const s = state[l.id];
           const isActive = l.id === currentLevel && s.status === "active";
@@ -415,24 +415,33 @@ export default function JuniorGrammarMastery() {
             <div
               key={l.id}
               className={cn(
-                "rounded-xl border p-3 flex flex-col items-center gap-1.5 transition",
-                isActive && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 ring-2 ring-emerald-500/40",
-                isCompleted && "border-emerald-300 bg-emerald-50/60 dark:bg-emerald-950/20",
-                isLocked && "border-muted bg-muted/30 opacity-60",
+                "rounded-2xl border-2 p-3 flex flex-col items-center gap-1.5 transition-all duration-300 transform hover:scale-[1.02]",
+                isActive && "border-pink-400 bg-gradient-to-br from-pink-100 to-cyan-100 dark:from-pink-950/60 dark:to-cyan-950/60 ring-2 ring-pink-400/50 shadow-lg shadow-pink-200/40",
+                isCompleted && "border-cyan-300 bg-gradient-to-br from-cyan-50 to-pink-50 dark:from-cyan-950/30 dark:to-pink-950/30",
+                isLocked && "border-gray-200 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30 opacity-50",
               )}
             >
-              <div className="relative grid size-10 place-items-center rounded-xl bg-white dark:bg-background shadow-sm">
-                {isLocked ? <Lock className="size-4 text-muted-foreground" /> : <span className="text-xl">{l.emoji}</span>}
+              <div className={cn(
+                "relative grid size-11 place-items-center rounded-2xl shadow-md transition-transform",
+                isActive && "bg-gradient-to-br from-pink-400 to-cyan-400 animate-pulse",
+                isCompleted && "bg-gradient-to-br from-cyan-400 to-pink-400",
+                isLocked && "bg-gray-100 dark:bg-gray-800",
+                !isLocked && !isActive && !isCompleted && "bg-white dark:bg-background"
+              )}>
+                {isLocked ? <Lock className="size-4 text-gray-400" /> : <span className="text-xl">{l.emoji}</span>}
                 {isCompleted && (
-                  <span className="absolute -right-1 -top-1 grid size-5 place-items-center rounded-full bg-emerald-500 text-white text-[10px]">
+                  <span className="absolute -right-1 -top-1 grid size-5 place-items-center rounded-full bg-gradient-to-br from-pink-500 to-cyan-500 text-white text-[10px] shadow-sm">
                     <Check className="size-3" />
                   </span>
                 )}
               </div>
-              <div className="text-[10px] font-bold text-muted-foreground">Level {l.id}</div>
+              <div className={cn(
+                "text-[10px] font-bold",
+                isActive ? "text-pink-600 dark:text-pink-400" : "text-muted-foreground"
+              )}>Level {l.id}</div>
               <div className="text-[11px] font-bold leading-tight text-center">{l.name}</div>
               {isActive && (
-                <div className="text-[9px] tabular-nums text-emerald-700 dark:text-emerald-300">
+                <div className="text-[9px] tabular-nums font-bold text-cyan-600 dark:text-cyan-400 bg-cyan-100 dark:bg-cyan-900/40 rounded-full px-2 py-0.5">
                   {s.correct} / {s.answered} ✓
                 </div>
               )}
@@ -441,32 +450,32 @@ export default function JuniorGrammarMastery() {
         })}
       </div>
 
-      {/* ─── Active question card ─── */}
+      {/* ─── Active question card — Playful style ─── */}
       {activeQ ? (
-        <div className="rounded-2xl border bg-card p-5 space-y-3">
+        <div className="rounded-3xl border-2 border-pink-200/60 dark:border-pink-800/40 bg-white/90 dark:bg-card/90 backdrop-blur-sm p-6 space-y-4 shadow-xl shadow-pink-200/20 dark:shadow-pink-900/10">
           <div className="flex items-center justify-between text-xs">
-            <span className="rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 px-2.5 py-0.5 font-bold">
+            <span className="rounded-full bg-gradient-to-r from-pink-500 to-purple-500 text-white px-3 py-1 font-bold shadow-sm">
               <T>Level</T> {cfg.id} · {cfg.name}
             </span>
             <div className="flex items-center gap-2">
               {(() => {
                 const d = (activeQ.difficulty ?? 2) as Difficulty;
                 const meta = d === 1
-                  ? { label: "易", cn: "易", cls: "bg-sky-500/15 text-sky-700 dark:text-sky-300" }
+                  ? { label: "易", cn: "易", cls: "bg-gradient-to-r from-cyan-400 to-blue-400 text-white" }
                   : d === 3
-                  ? { label: "难", cn: "难", cls: "bg-rose-500/15 text-rose-700 dark:text-rose-300" }
-                  : { label: "中", cn: "中", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300" };
+                  ? { label: "难", cn: "难", cls: "bg-gradient-to-r from-pink-500 to-rose-500 text-white" }
+                  : { label: "中", cn: "中", cls: "bg-gradient-to-r from-amber-400 to-orange-400 text-white" };
                 return (
                   <span
                     title="adaptive difficulty — 答对会升级，答错会下调"
-                    className={cn("rounded-full px-2 py-0.5 font-bold", meta.cls)}
+                    className={cn("rounded-full px-2.5 py-1 font-bold text-[11px] shadow-sm", meta.cls)}
                   >
                     {meta.cn}
                   </span>
                 );
               })()}
-              <span className="text-muted-foreground tabular-nums">
-                {lvlState.answered + 1} · {cfg.minQ}–{cfg.maxQ} <T>题</T>
+              <span className="text-muted-foreground tabular-nums bg-gray-100 dark:bg-gray-800 rounded-full px-2.5 py-1">
+                {lvlState.answered + 1} / {cfg.minQ}–{cfg.maxQ}
               </span>
             </div>
           </div>
@@ -477,20 +486,20 @@ export default function JuniorGrammarMastery() {
             onAnswered={handleAnswered}
           />
           {answered && (
-            <div className="flex items-center justify-between gap-3 pt-1">
+            <div className="flex items-center justify-between gap-4 pt-2 border-t border-pink-100 dark:border-pink-900/30">
               <div className="text-xs text-muted-foreground">
-                <span className="font-bold text-foreground">{cfg.skillFocusCn}</span>
+                <span className="font-bold text-pink-600 dark:text-pink-400">{cfg.skillFocusCn}</span>
                 <br />
-                {cfg.skillFocus}
+                <span className="text-[11px]">{cfg.skillFocus}</span>
               </div>
               <button
                 onClick={handleNext}
-                className="shrink-0 inline-flex items-center gap-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-sm font-bold"
+                className="shrink-0 inline-flex items-center gap-1.5 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 hover:from-pink-600 hover:via-purple-600 hover:to-cyan-600 text-white px-5 py-2.5 text-sm font-bold shadow-lg shadow-pink-300/40 dark:shadow-pink-900/30 transition-all duration-300 transform hover:scale-105 active:scale-95"
               >
                 {(() => {
                   const ls = lvlState;
                   if (isMastered(ls, cfg)) {
-                    return currentLevel >= LEVELS.length ? "完成 🎉" : "进入 Level " + (currentLevel + 1) + " →";
+                    return currentLevel >= LEVELS.length ? "🎉 完成！" : "进入 Level " + (currentLevel + 1) + " →";
                   }
                   return "下一题 →";
                 })()}
@@ -499,27 +508,30 @@ export default function JuniorGrammarMastery() {
           )}
         </div>
       ) : (
-        <div className="rounded-2xl border bg-card p-8 text-center space-y-2">
-          <p className="text-sm text-muted-foreground"><T>加载题目中...</T></p>
+        <div className="rounded-3xl border-2 border-pink-200/60 dark:border-pink-800/40 bg-white/90 dark:bg-card/90 p-8 text-center space-y-2">
+          <div className="inline-flex items-center gap-2">
+            <RotateCw className="size-4 animate-spin text-pink-500" />
+            <p className="text-sm text-muted-foreground"><T>加载题目中...</T></p>
+          </div>
         </div>
       )}
 
-      {/* ─── Mastery hint (low-key) ─── */}
-      <div className="text-[11px] text-center text-muted-foreground space-y-0.5">
-        <div>
-          <T>当前关卡通关条件</T>：<T>至少答 {cfg.minQ} 题，正确率 ≥ {Math.round(cfg.threshold * 100)}%</T>
+      {/* ─── Mastery hint — Playful style ─── */}
+      <div className="rounded-2xl bg-gradient-to-r from-pink-50 to-cyan-50 dark:from-pink-950/30 dark:to-cyan-950/30 border border-pink-200/50 dark:border-pink-800/30 p-4 text-center space-y-1">
+        <div className="text-xs text-pink-700 dark:text-pink-300 font-medium">
+          🎯 <T>当前关卡通关条件</T>：<T>至少答 {cfg.minQ} 题，正确率 ≥ {Math.round(cfg.threshold * 100)}%</T>
           {" · "}
           <T>答错的题会稍后重做</T>
         </div>
-        <div className="text-[10px] opacity-80">
-          <T>智能调节：答对升级（易 → 中 → 难），答错降级（难 → 中 → 易）</T>
+        <div className="text-[11px] text-cyan-600 dark:text-cyan-400">
+          ⚡ <T>智能调节：答对升级（易 → 中 → 难），答错降级（难 → 中 → 易）</T>
         </div>
       </div>
     </main>
   );
 }
 
-/* ─────────────── Completion Screen ─────────────── */
+/* ─────────────── Completion Screen — Playful Cards ─────────────── */
 function CompletionScreen({
   pt,
   state,
@@ -535,46 +547,68 @@ function CompletionScreen({
   const backTo = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
 
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 space-y-6 text-center">
-      <div className="rounded-2xl border bg-gradient-to-br from-amber-50 via-white to-emerald-50 dark:from-amber-950/30 dark:via-background dark:to-emerald-950/30 p-8 space-y-3">
-        <div className="text-5xl">🎉</div>
-        <h1 className="text-3xl font-extrabold tracking-tight">
+    <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 space-y-6 text-center bg-gradient-to-br from-pink-50 via-white to-cyan-50 dark:from-pink-950/20 dark:via-background dark:to-cyan-950/20">
+      {/* Hero celebration card */}
+      <div className="rounded-3xl border-2 border-pink-300/60 dark:border-pink-800/40 bg-gradient-to-br from-pink-100 via-white to-cyan-100 dark:from-pink-950/50 dark:via-background dark:to-cyan-950/50 p-8 space-y-4 shadow-2xl shadow-pink-200/30 dark:shadow-pink-900/20 animate-hero-fade-up">
+        <div className="text-6xl animate-pop-bounce">🎉</div>
+        <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
           <T>通关成功！</T>
         </h1>
         <p className="text-base text-muted-foreground">
-          <T>你已经掌握了</T> <span className="font-bold text-foreground">{pt.title}</span>
+          <T>你已经掌握了</T> <span className="font-bold bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">{pt.title}</span>
         </p>
-        <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 px-4 py-1.5 text-sm font-bold">
-          <Trophy className="size-4" />
+        <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-cyan-500 text-white px-5 py-2 text-sm font-bold shadow-lg shadow-pink-300/40">
+          <Trophy className="size-5" />
           <T>总正确率</T> {pct}% · {totalCorrect} / {totalAnswered}
         </div>
       </div>
 
-      <div className="grid grid-cols-5 gap-2">
+      {/* Level results — Playful cards */}
+      <div className="grid grid-cols-5 gap-3">
         {LEVELS.map((l) => {
           const s = state[l.id];
+          const isPerfect = s.answered > 0 && s.correct === s.answered;
           return (
-            <div key={l.id} className="rounded-xl border bg-card p-3 space-y-1">
-              <div className="text-xl">{l.emoji}</div>
-              <div className="text-[10px] font-bold">{l.name}</div>
-              <div className="text-[10px] tabular-nums text-muted-foreground">{s.correct} / {s.answered}</div>
+            <div 
+              key={l.id} 
+              className={cn(
+                "rounded-2xl border-2 p-4 space-y-2 transition-all duration-300 transform hover:scale-105",
+                isPerfect 
+                  ? "border-cyan-400 bg-gradient-to-br from-cyan-100 to-pink-100 dark:from-cyan-950/40 dark:to-pink-950/40 shadow-lg shadow-cyan-200/40" 
+                  : "border-pink-200/60 dark:border-pink-800/40 bg-white/80 dark:bg-card/80"
+              )}
+            >
+              <div className={cn(
+                "text-2xl rounded-xl p-2",
+                isPerfect && "animate-pop-bounce"
+              )}>{l.emoji}</div>
+              <div className="text-[11px] font-bold text-pink-600 dark:text-pink-400">{l.name}</div>
+              <div className={cn(
+                "text-xs tabular-nums font-bold rounded-full px-2 py-0.5",
+                isPerfect 
+                  ? "bg-gradient-to-r from-cyan-500 to-pink-500 text-white" 
+                  : "bg-gray-100 dark:bg-gray-800 text-muted-foreground"
+              )}>
+                {s.correct} / {s.answered}
+              </div>
             </div>
           );
         })}
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-2">
+      {/* Action buttons — Playful style */}
+      <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
         <button
           onClick={onRestart}
-          className="inline-flex items-center gap-1.5 rounded-xl border bg-card hover:bg-muted px-4 py-2 text-sm font-bold"
+          className="inline-flex items-center gap-2 rounded-2xl border-2 border-pink-300 dark:border-pink-700 bg-white dark:bg-card hover:bg-pink-50 dark:hover:bg-pink-950/30 px-5 py-2.5 text-sm font-bold text-pink-600 dark:text-pink-400 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-md"
         >
           <RotateCw className="size-4" /> <T>再做一遍</T>
         </button>
         <Link
           to={backTo}
-          className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-sm font-bold"
+          className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 hover:from-pink-600 hover:via-purple-600 hover:to-cyan-600 text-white px-6 py-2.5 text-sm font-bold shadow-lg shadow-pink-300/40 dark:shadow-pink-900/30 transition-all duration-300 transform hover:scale-105 active:scale-95"
         >
-          <T>返回考点列表</T>
+          <T>返回考点列表</T> →
         </Link>
       </div>
     </main>

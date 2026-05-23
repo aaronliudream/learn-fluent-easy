@@ -1,0 +1,3889 @@
+{
+  "grade6": {
+    "name": "六年级",
+    "semesters": {
+      "grade6_volume1": {
+        "name": "上册",
+        "available": true,
+        "units": [
+          {
+            "id": "g6v1_u1",
+            "num": 1,
+            "title": "How can I get there?",
+            "cn": "怎么去那里",
+            "emoji": "🗺️",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "science",
+                "cn": "科学",
+                "emoji": "📘"
+              },
+              {
+                "en": "museum",
+                "cn": "博物馆",
+                "emoji": "📘"
+              },
+              {
+                "en": "post office",
+                "cn": "邮局",
+                "emoji": "📘"
+              },
+              {
+                "en": "bookstore",
+                "cn": "书店",
+                "emoji": "📘"
+              },
+              {
+                "en": "cinema",
+                "cn": "电影院",
+                "emoji": "📘"
+              },
+              {
+                "en": "hospital",
+                "cn": "医院",
+                "emoji": "📘"
+              },
+              {
+                "en": "crossing",
+                "cn": "十字路口",
+                "emoji": "📘"
+              },
+              {
+                "en": "turn",
+                "cn": "转弯",
+                "emoji": "📘"
+              },
+              {
+                "en": "left",
+                "cn": "左",
+                "emoji": "📘"
+              },
+              {
+                "en": "straight",
+                "cn": "笔直地",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A science.",
+                    "cn": "看！一个科学。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a museum.",
+                    "cn": "对！还有一个博物馆。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love How can I get there?!",
+                    "cn": "我们喜欢「How can I get there?」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: How can I get there?",
+              "titleCn": "Spark：怎么去那里",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about How can I get there?!",
+                  "cn": "一起来学「怎么去那里」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a science.",
+                  "cn": "我看见科学。",
+                  "hint": "单词 science"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a museum.",
+                  "cn": "我看见博物馆。",
+                  "hint": "单词 museum"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a post office.",
+                  "cn": "我看见邮局。",
+                  "hint": "单词 post office"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a bookstore.",
+                  "cn": "我看见书店。",
+                  "hint": "单词 bookstore"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a cinema.",
+                  "cn": "我看见电影院。",
+                  "hint": "单词 cinema"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a hospital.",
+                  "cn": "我看见医院。",
+                  "hint": "单词 hospital"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: science?",
+                  "opts": [
+                    "science",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「science」是什么意思？",
+                "opts": [
+                  "科学",
+                  "博物馆",
+                  "邮局",
+                  "书店"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「museum」是什么意思？",
+                "opts": [
+                  "博物馆",
+                  "科学",
+                  "邮局",
+                  "书店"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「post office」是什么意思？",
+                "opts": [
+                  "邮局",
+                  "科学",
+                  "博物馆",
+                  "书店"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bookstore」是什么意思？",
+                "opts": [
+                  "书店",
+                  "科学",
+                  "博物馆",
+                  "邮局"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「cinema」是什么意思？",
+                "opts": [
+                  "电影院",
+                  "科学",
+                  "博物馆",
+                  "邮局"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「hospital」是什么意思？",
+                "opts": [
+                  "医院",
+                  "科学",
+                  "博物馆",
+                  "邮局"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「crossing」是什么意思？",
+                "opts": [
+                  "十字路口",
+                  "科学",
+                  "博物馆",
+                  "邮局"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「turn」是什么意思？",
+                "opts": [
+                  "转弯",
+                  "科学",
+                  "博物馆",
+                  "邮局"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「怎么去那里」学过的词是？",
+                "opts": [
+                  "science",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "science",
+                "opts": [
+                  "science",
+                  "museum",
+                  "This is post office.",
+                  "bookstore"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "museum",
+                "opts": [
+                  "museum",
+                  "science",
+                  "This is post office.",
+                  "bookstore"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is post office.",
+                "opts": [
+                  "This is post office.",
+                  "science",
+                  "museum",
+                  "bookstore"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "bookstore",
+                "opts": [
+                  "bookstore",
+                  "science",
+                  "museum",
+                  "This is post office."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "cinema",
+                "opts": [
+                  "cinema",
+                  "science",
+                  "museum",
+                  "This is post office."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "hospital",
+                "opts": [
+                  "hospital",
+                  "science",
+                  "museum",
+                  "This is post office."
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g6v1_u2",
+            "num": 2,
+            "title": "Ways to go to school",
+            "cn": "上学的方式",
+            "emoji": "🚌",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "on foot",
+                "cn": "步行",
+                "emoji": "📘"
+              },
+              {
+                "en": "by",
+                "cn": "乘",
+                "emoji": "📘"
+              },
+              {
+                "en": "bus",
+                "cn": "公共汽车",
+                "emoji": "🚌"
+              },
+              {
+                "en": "plane",
+                "cn": "飞机",
+                "emoji": "🚌"
+              },
+              {
+                "en": "taxi",
+                "cn": "出租汽车",
+                "emoji": "📘"
+              },
+              {
+                "en": "ship",
+                "cn": "船",
+                "emoji": "🚌"
+              },
+              {
+                "en": "subway",
+                "cn": "地铁",
+                "emoji": "📘"
+              },
+              {
+                "en": "train",
+                "cn": "火车",
+                "emoji": "🚌"
+              },
+              {
+                "en": "slow",
+                "cn": "放慢速度",
+                "emoji": "📘"
+              },
+              {
+                "en": "down",
+                "cn": "减少",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A on foot.",
+                    "cn": "看！一个步行。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a by.",
+                    "cn": "对！还有一个乘。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love Ways to go to school!",
+                    "cn": "我们喜欢「Ways to go to school」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: Ways to go to school",
+              "titleCn": "Spark：上学的方式",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about Ways to go to school!",
+                  "cn": "一起来学「上学的方式」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a on foot.",
+                  "cn": "我看见步行。",
+                  "hint": "单词 on foot"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a by.",
+                  "cn": "我看见乘。",
+                  "hint": "单词 by"
+                },
+                {
+                  "emoji": "🚌",
+                  "en": "I see a bus.",
+                  "cn": "我看见公共汽车。",
+                  "hint": "单词 bus"
+                },
+                {
+                  "emoji": "🚌",
+                  "en": "I see a plane.",
+                  "cn": "我看见飞机。",
+                  "hint": "单词 plane"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a taxi.",
+                  "cn": "我看见出租汽车。",
+                  "hint": "单词 taxi"
+                },
+                {
+                  "emoji": "🚌",
+                  "en": "I see a ship.",
+                  "cn": "我看见船。",
+                  "hint": "单词 ship"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: on foot?",
+                  "opts": [
+                    "on foot",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「on foot」是什么意思？",
+                "opts": [
+                  "步行",
+                  "乘",
+                  "公共汽车",
+                  "飞机"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「by」是什么意思？",
+                "opts": [
+                  "乘",
+                  "步行",
+                  "公共汽车",
+                  "飞机"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bus」是什么意思？",
+                "opts": [
+                  "公共汽车",
+                  "步行",
+                  "乘",
+                  "飞机"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「plane」是什么意思？",
+                "opts": [
+                  "飞机",
+                  "步行",
+                  "乘",
+                  "公共汽车"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「taxi」是什么意思？",
+                "opts": [
+                  "出租汽车",
+                  "步行",
+                  "乘",
+                  "公共汽车"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ship」是什么意思？",
+                "opts": [
+                  "船",
+                  "步行",
+                  "乘",
+                  "公共汽车"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「subway」是什么意思？",
+                "opts": [
+                  "地铁",
+                  "步行",
+                  "乘",
+                  "公共汽车"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「train」是什么意思？",
+                "opts": [
+                  "火车",
+                  "步行",
+                  "乘",
+                  "公共汽车"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「上学的方式」学过的词是？",
+                "opts": [
+                  "on foot",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "This is on foot.",
+                "opts": [
+                  "This is on foot.",
+                  "by",
+                  "bus",
+                  "plane"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "by",
+                "opts": [
+                  "by",
+                  "This is on foot.",
+                  "bus",
+                  "plane"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "bus",
+                "opts": [
+                  "bus",
+                  "This is on foot.",
+                  "by",
+                  "plane"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "plane",
+                "opts": [
+                  "plane",
+                  "This is on foot.",
+                  "by",
+                  "bus"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "taxi",
+                "opts": [
+                  "taxi",
+                  "This is on foot.",
+                  "by",
+                  "bus"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "ship",
+                "opts": [
+                  "ship",
+                  "This is on foot.",
+                  "by",
+                  "bus"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g6v1_u3",
+            "num": 3,
+            "title": "My weekend plan",
+            "cn": "周末计划",
+            "emoji": "📋",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "visit",
+                "cn": "拜访",
+                "emoji": "📘"
+              },
+              {
+                "en": "film",
+                "cn": "电影",
+                "emoji": "📘"
+              },
+              {
+                "en": "see a film",
+                "cn": "看电影",
+                "emoji": "📘"
+              },
+              {
+                "en": "trip",
+                "cn": "旅行",
+                "emoji": "📘"
+              },
+              {
+                "en": "take a trip",
+                "cn": "去旅行",
+                "emoji": "📘"
+              },
+              {
+                "en": "supermarket",
+                "cn": "超市",
+                "emoji": "📘"
+              },
+              {
+                "en": "evening",
+                "cn": "晚上",
+                "emoji": "📘"
+              },
+              {
+                "en": "tonight",
+                "cn": "在今晚",
+                "emoji": "📘"
+              },
+              {
+                "en": "tomorrow",
+                "cn": "明天",
+                "emoji": "📘"
+              },
+              {
+                "en": "next week",
+                "cn": "下周",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A visit.",
+                    "cn": "看！一个拜访。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a film.",
+                    "cn": "对！还有一个电影。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love My weekend plan!",
+                    "cn": "我们喜欢「My weekend plan」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: My weekend plan",
+              "titleCn": "Spark：周末计划",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about My weekend plan!",
+                  "cn": "一起来学「周末计划」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a visit.",
+                  "cn": "我看见拜访。",
+                  "hint": "单词 visit"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a film.",
+                  "cn": "我看见电影。",
+                  "hint": "单词 film"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a see a film.",
+                  "cn": "我看见看电影。",
+                  "hint": "单词 see a film"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a trip.",
+                  "cn": "我看见旅行。",
+                  "hint": "单词 trip"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a take a trip.",
+                  "cn": "我看见去旅行。",
+                  "hint": "单词 take a trip"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a supermarket.",
+                  "cn": "我看见超市。",
+                  "hint": "单词 supermarket"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: visit?",
+                  "opts": [
+                    "visit",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「visit」是什么意思？",
+                "opts": [
+                  "拜访",
+                  "电影",
+                  "看电影",
+                  "旅行"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「film」是什么意思？",
+                "opts": [
+                  "电影",
+                  "拜访",
+                  "看电影",
+                  "旅行"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「see a film」是什么意思？",
+                "opts": [
+                  "看电影",
+                  "拜访",
+                  "电影",
+                  "旅行"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「trip」是什么意思？",
+                "opts": [
+                  "旅行",
+                  "拜访",
+                  "电影",
+                  "看电影"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「take a trip」是什么意思？",
+                "opts": [
+                  "去旅行",
+                  "拜访",
+                  "电影",
+                  "看电影"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「supermarket」是什么意思？",
+                "opts": [
+                  "超市",
+                  "拜访",
+                  "电影",
+                  "看电影"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「evening」是什么意思？",
+                "opts": [
+                  "晚上",
+                  "拜访",
+                  "电影",
+                  "看电影"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「tonight」是什么意思？",
+                "opts": [
+                  "在今晚",
+                  "拜访",
+                  "电影",
+                  "看电影"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「周末计划」学过的词是？",
+                "opts": [
+                  "visit",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "visit",
+                "opts": [
+                  "visit",
+                  "film",
+                  "This is see a film.",
+                  "trip"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "film",
+                "opts": [
+                  "film",
+                  "visit",
+                  "This is see a film.",
+                  "trip"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is see a film.",
+                "opts": [
+                  "This is see a film.",
+                  "visit",
+                  "film",
+                  "trip"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "trip",
+                "opts": [
+                  "trip",
+                  "visit",
+                  "film",
+                  "This is see a film."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is take a trip.",
+                "opts": [
+                  "This is take a trip.",
+                  "visit",
+                  "film",
+                  "This is see a film."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "supermarket",
+                "opts": [
+                  "supermarket",
+                  "visit",
+                  "film",
+                  "This is see a film."
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g6v1_u4",
+            "num": 4,
+            "title": "I have a pen pal",
+            "cn": "我有个笔友",
+            "emoji": "✉️",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "studies",
+                "cn": "学习",
+                "emoji": "📘"
+              },
+              {
+                "en": "puzzle",
+                "cn": "谜",
+                "emoji": "📘"
+              },
+              {
+                "en": "hiking",
+                "cn": "远足",
+                "emoji": "📘"
+              },
+              {
+                "en": "pen pal",
+                "cn": "笔友",
+                "emoji": "📘"
+              },
+              {
+                "en": "hobby",
+                "cn": "业余爱好",
+                "emoji": "📘"
+              },
+              {
+                "en": "jasmine",
+                "cn": "茉莉",
+                "emoji": "📘"
+              },
+              {
+                "en": "idea",
+                "cn": "想法",
+                "emoji": "📘"
+              },
+              {
+                "en": "Canberra",
+                "cn": "堪培拉",
+                "emoji": "📘"
+              },
+              {
+                "en": "amazing",
+                "cn": "令人惊奇的",
+                "emoji": "📘"
+              },
+              {
+                "en": "shall",
+                "cn": "表示征求意见",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A studies.",
+                    "cn": "看！一个学习。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a puzzle.",
+                    "cn": "对！还有一个谜。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love I have a pen pal!",
+                    "cn": "我们喜欢「I have a pen pal」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: I have a pen pal",
+              "titleCn": "Spark：我有个笔友",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about I have a pen pal!",
+                  "cn": "一起来学「我有个笔友」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a studies.",
+                  "cn": "我看见学习。",
+                  "hint": "单词 studies"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a puzzle.",
+                  "cn": "我看见谜。",
+                  "hint": "单词 puzzle"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a hiking.",
+                  "cn": "我看见远足。",
+                  "hint": "单词 hiking"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a pen pal.",
+                  "cn": "我看见笔友。",
+                  "hint": "单词 pen pal"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a hobby.",
+                  "cn": "我看见业余爱好。",
+                  "hint": "单词 hobby"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a jasmine.",
+                  "cn": "我看见茉莉。",
+                  "hint": "单词 jasmine"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: studies?",
+                  "opts": [
+                    "studies",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「studies」是什么意思？",
+                "opts": [
+                  "学习",
+                  "谜",
+                  "远足",
+                  "笔友"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「puzzle」是什么意思？",
+                "opts": [
+                  "谜",
+                  "学习",
+                  "远足",
+                  "笔友"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「hiking」是什么意思？",
+                "opts": [
+                  "远足",
+                  "学习",
+                  "谜",
+                  "笔友"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「pen pal」是什么意思？",
+                "opts": [
+                  "笔友",
+                  "学习",
+                  "谜",
+                  "远足"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「hobby」是什么意思？",
+                "opts": [
+                  "业余爱好",
+                  "学习",
+                  "谜",
+                  "远足"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「jasmine」是什么意思？",
+                "opts": [
+                  "茉莉",
+                  "学习",
+                  "谜",
+                  "远足"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「idea」是什么意思？",
+                "opts": [
+                  "想法",
+                  "学习",
+                  "谜",
+                  "远足"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Canberra」是什么意思？",
+                "opts": [
+                  "堪培拉",
+                  "学习",
+                  "谜",
+                  "远足"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「我有个笔友」学过的词是？",
+                "opts": [
+                  "studies",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "studies",
+                "opts": [
+                  "studies",
+                  "puzzle",
+                  "hiking",
+                  "This is pen pal."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "puzzle",
+                "opts": [
+                  "puzzle",
+                  "studies",
+                  "hiking",
+                  "This is pen pal."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "hiking",
+                "opts": [
+                  "hiking",
+                  "studies",
+                  "puzzle",
+                  "This is pen pal."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is pen pal.",
+                "opts": [
+                  "This is pen pal.",
+                  "studies",
+                  "puzzle",
+                  "hiking"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "hobby",
+                "opts": [
+                  "hobby",
+                  "studies",
+                  "puzzle",
+                  "hiking"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "jasmine",
+                "opts": [
+                  "jasmine",
+                  "studies",
+                  "puzzle",
+                  "hiking"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g6v1_u5",
+            "num": 5,
+            "title": "What does he do?",
+            "cn": "他做什么工作",
+            "emoji": "👷",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "factory",
+                "cn": "工厂",
+                "emoji": "📘"
+              },
+              {
+                "en": "worker",
+                "cn": "工人",
+                "emoji": "📘"
+              },
+              {
+                "en": "postman",
+                "cn": "邮递员",
+                "emoji": "📘"
+              },
+              {
+                "en": "businessman",
+                "cn": "商人",
+                "emoji": "📘"
+              },
+              {
+                "en": "police officer",
+                "cn": "警察",
+                "emoji": "📘"
+              },
+              {
+                "en": "fisherman",
+                "cn": "渔民",
+                "emoji": "📘"
+              },
+              {
+                "en": "scientist",
+                "cn": "科学家",
+                "emoji": "📘"
+              },
+              {
+                "en": "pilot",
+                "cn": "飞行员",
+                "emoji": "📘"
+              },
+              {
+                "en": "coach",
+                "cn": "教练",
+                "emoji": "📘"
+              },
+              {
+                "en": "country",
+                "cn": "国家",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A factory.",
+                    "cn": "看！一个工厂。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a worker.",
+                    "cn": "对！还有一个工人。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love What does he do?!",
+                    "cn": "我们喜欢「What does he do?」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: What does he do?",
+              "titleCn": "Spark：他做什么工作",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about What does he do?!",
+                  "cn": "一起来学「他做什么工作」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a factory.",
+                  "cn": "我看见工厂。",
+                  "hint": "单词 factory"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a worker.",
+                  "cn": "我看见工人。",
+                  "hint": "单词 worker"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a postman.",
+                  "cn": "我看见邮递员。",
+                  "hint": "单词 postman"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a businessman.",
+                  "cn": "我看见商人。",
+                  "hint": "单词 businessman"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a police officer.",
+                  "cn": "我看见警察。",
+                  "hint": "单词 police officer"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a fisherman.",
+                  "cn": "我看见渔民。",
+                  "hint": "单词 fisherman"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: factory?",
+                  "opts": [
+                    "factory",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「factory」是什么意思？",
+                "opts": [
+                  "工厂",
+                  "工人",
+                  "邮递员",
+                  "商人"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「worker」是什么意思？",
+                "opts": [
+                  "工人",
+                  "工厂",
+                  "邮递员",
+                  "商人"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「postman」是什么意思？",
+                "opts": [
+                  "邮递员",
+                  "工厂",
+                  "工人",
+                  "商人"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「businessman」是什么意思？",
+                "opts": [
+                  "商人",
+                  "工厂",
+                  "工人",
+                  "邮递员"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「police officer」是什么意思？",
+                "opts": [
+                  "警察",
+                  "工厂",
+                  "工人",
+                  "邮递员"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「fisherman」是什么意思？",
+                "opts": [
+                  "渔民",
+                  "工厂",
+                  "工人",
+                  "邮递员"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「scientist」是什么意思？",
+                "opts": [
+                  "科学家",
+                  "工厂",
+                  "工人",
+                  "邮递员"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「pilot」是什么意思？",
+                "opts": [
+                  "飞行员",
+                  "工厂",
+                  "工人",
+                  "邮递员"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「他做什么工作」学过的词是？",
+                "opts": [
+                  "factory",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "factory",
+                "opts": [
+                  "factory",
+                  "worker",
+                  "postman",
+                  "businessman"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "worker",
+                "opts": [
+                  "worker",
+                  "factory",
+                  "postman",
+                  "businessman"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "postman",
+                "opts": [
+                  "postman",
+                  "factory",
+                  "worker",
+                  "businessman"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "businessman",
+                "opts": [
+                  "businessman",
+                  "factory",
+                  "worker",
+                  "postman"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is police officer.",
+                "opts": [
+                  "This is police officer.",
+                  "factory",
+                  "worker",
+                  "postman"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "fisherman",
+                "opts": [
+                  "fisherman",
+                  "factory",
+                  "worker",
+                  "postman"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g6v1_u6",
+            "num": 6,
+            "title": "How do you feel?",
+            "cn": "你感觉怎么样",
+            "emoji": "😊",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "angry",
+                "cn": "生气的",
+                "emoji": "📘"
+              },
+              {
+                "en": "afraid",
+                "cn": "害怕",
+                "emoji": "📘"
+              },
+              {
+                "en": "sad",
+                "cn": "难过的",
+                "emoji": "📘"
+              },
+              {
+                "en": "worried",
+                "cn": "担心的",
+                "emoji": "📘"
+              },
+              {
+                "en": "happy",
+                "cn": "高兴的",
+                "emoji": "📘"
+              },
+              {
+                "en": "see a doctor",
+                "cn": "看病",
+                "emoji": "📘"
+              },
+              {
+                "en": "wear",
+                "cn": "穿",
+                "emoji": "📘"
+              },
+              {
+                "en": "more",
+                "cn": "更多的",
+                "emoji": "📘"
+              },
+              {
+                "en": "deep",
+                "cn": "深的",
+                "emoji": "📘"
+              },
+              {
+                "en": "breath",
+                "cn": "呼吸",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A angry.",
+                    "cn": "看！一个生气的。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a afraid.",
+                    "cn": "对！还有一个害怕。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love How do you feel?!",
+                    "cn": "我们喜欢「How do you feel?」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: How do you feel?",
+              "titleCn": "Spark：你感觉怎么样",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about How do you feel?!",
+                  "cn": "一起来学「你感觉怎么样」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a angry.",
+                  "cn": "我看见生气的。",
+                  "hint": "单词 angry"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a afraid.",
+                  "cn": "我看见害怕。",
+                  "hint": "单词 afraid"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a sad.",
+                  "cn": "我看见难过的。",
+                  "hint": "单词 sad"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a worried.",
+                  "cn": "我看见担心的。",
+                  "hint": "单词 worried"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a happy.",
+                  "cn": "我看见高兴的。",
+                  "hint": "单词 happy"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a see a doctor.",
+                  "cn": "我看见看病。",
+                  "hint": "单词 see a doctor"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: angry?",
+                  "opts": [
+                    "angry",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「angry」是什么意思？",
+                "opts": [
+                  "生气的",
+                  "害怕",
+                  "难过的",
+                  "担心的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「afraid」是什么意思？",
+                "opts": [
+                  "害怕",
+                  "生气的",
+                  "难过的",
+                  "担心的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「sad」是什么意思？",
+                "opts": [
+                  "难过的",
+                  "生气的",
+                  "害怕",
+                  "担心的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「worried」是什么意思？",
+                "opts": [
+                  "担心的",
+                  "生气的",
+                  "害怕",
+                  "难过的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「happy」是什么意思？",
+                "opts": [
+                  "高兴的",
+                  "生气的",
+                  "害怕",
+                  "难过的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「see a doctor」是什么意思？",
+                "opts": [
+                  "看病",
+                  "生气的",
+                  "害怕",
+                  "难过的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「wear」是什么意思？",
+                "opts": [
+                  "穿",
+                  "生气的",
+                  "害怕",
+                  "难过的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「more」是什么意思？",
+                "opts": [
+                  "更多的",
+                  "生气的",
+                  "害怕",
+                  "难过的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「你感觉怎么样」学过的词是？",
+                "opts": [
+                  "angry",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "angry",
+                "opts": [
+                  "angry",
+                  "afraid",
+                  "sad",
+                  "worried"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "afraid",
+                "opts": [
+                  "afraid",
+                  "angry",
+                  "sad",
+                  "worried"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "sad",
+                "opts": [
+                  "sad",
+                  "angry",
+                  "afraid",
+                  "worried"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "worried",
+                "opts": [
+                  "worried",
+                  "angry",
+                  "afraid",
+                  "sad"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "happy",
+                "opts": [
+                  "happy",
+                  "angry",
+                  "afraid",
+                  "sad"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is see a doctor.",
+                "opts": [
+                  "This is see a doctor.",
+                  "angry",
+                  "afraid",
+                  "sad"
+                ],
+                "answer": 0
+              }
+            ]
+          }
+        ]
+      },
+      "grade6_volume2": {
+        "name": "下册",
+        "available": true,
+        "units": [
+          {
+            "id": "g6v2_u1",
+            "num": 1,
+            "title": "How tall are you?",
+            "cn": "你有多高",
+            "emoji": "📏",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "younger",
+                "cn": "更年轻的",
+                "emoji": "📘"
+              },
+              {
+                "en": "older",
+                "cn": "更年长的",
+                "emoji": "📘"
+              },
+              {
+                "en": "taller",
+                "cn": "更高的",
+                "emoji": "📘"
+              },
+              {
+                "en": "shorter",
+                "cn": "更矮的",
+                "emoji": "📘"
+              },
+              {
+                "en": "longer",
+                "cn": "更长的",
+                "emoji": "📘"
+              },
+              {
+                "en": "thinner",
+                "cn": "更瘦的",
+                "emoji": "📘"
+              },
+              {
+                "en": "heavier",
+                "cn": "更重的",
+                "emoji": "📘"
+              },
+              {
+                "en": "bigger",
+                "cn": "更大的",
+                "emoji": "📘"
+              },
+              {
+                "en": "smaller",
+                "cn": "更小的",
+                "emoji": "📘"
+              },
+              {
+                "en": "stronger",
+                "cn": "更强壮的",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A younger.",
+                    "cn": "看！一个更年轻的。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a older.",
+                    "cn": "对！还有一个更年长的。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love How tall are you?!",
+                    "cn": "我们喜欢「How tall are you?」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: How tall are you?",
+              "titleCn": "Spark：你有多高",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about How tall are you?!",
+                  "cn": "一起来学「你有多高」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a younger.",
+                  "cn": "我看见更年轻的。",
+                  "hint": "单词 younger"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a older.",
+                  "cn": "我看见更年长的。",
+                  "hint": "单词 older"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a taller.",
+                  "cn": "我看见更高的。",
+                  "hint": "单词 taller"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a shorter.",
+                  "cn": "我看见更矮的。",
+                  "hint": "单词 shorter"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a longer.",
+                  "cn": "我看见更长的。",
+                  "hint": "单词 longer"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a thinner.",
+                  "cn": "我看见更瘦的。",
+                  "hint": "单词 thinner"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: younger?",
+                  "opts": [
+                    "younger",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「younger」是什么意思？",
+                "opts": [
+                  "更年轻的",
+                  "更年长的",
+                  "更高的",
+                  "更矮的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「older」是什么意思？",
+                "opts": [
+                  "更年长的",
+                  "更年轻的",
+                  "更高的",
+                  "更矮的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「taller」是什么意思？",
+                "opts": [
+                  "更高的",
+                  "更年轻的",
+                  "更年长的",
+                  "更矮的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「shorter」是什么意思？",
+                "opts": [
+                  "更矮的",
+                  "更年轻的",
+                  "更年长的",
+                  "更高的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「longer」是什么意思？",
+                "opts": [
+                  "更长的",
+                  "更年轻的",
+                  "更年长的",
+                  "更高的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「thinner」是什么意思？",
+                "opts": [
+                  "更瘦的",
+                  "更年轻的",
+                  "更年长的",
+                  "更高的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「heavier」是什么意思？",
+                "opts": [
+                  "更重的",
+                  "更年轻的",
+                  "更年长的",
+                  "更高的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bigger」是什么意思？",
+                "opts": [
+                  "更大的",
+                  "更年轻的",
+                  "更年长的",
+                  "更高的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「你有多高」学过的词是？",
+                "opts": [
+                  "younger",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "younger",
+                "opts": [
+                  "younger",
+                  "older",
+                  "taller",
+                  "shorter"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "older",
+                "opts": [
+                  "older",
+                  "younger",
+                  "taller",
+                  "shorter"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "taller",
+                "opts": [
+                  "taller",
+                  "younger",
+                  "older",
+                  "shorter"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "shorter",
+                "opts": [
+                  "shorter",
+                  "younger",
+                  "older",
+                  "taller"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "longer",
+                "opts": [
+                  "longer",
+                  "younger",
+                  "older",
+                  "taller"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "thinner",
+                "opts": [
+                  "thinner",
+                  "younger",
+                  "older",
+                  "taller"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g6v2_u2",
+            "num": 2,
+            "title": "Last weekend",
+            "cn": "上个周末",
+            "emoji": "📅",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "cleaned",
+                "cn": "打扫",
+                "emoji": "📘"
+              },
+              {
+                "en": "stayed",
+                "cn": "停留",
+                "emoji": "📘"
+              },
+              {
+                "en": "washed",
+                "cn": "洗",
+                "emoji": "📘"
+              },
+              {
+                "en": "watched",
+                "cn": "看",
+                "emoji": "📘"
+              },
+              {
+                "en": "had",
+                "cn": "患病",
+                "emoji": "📘"
+              },
+              {
+                "en": "had a cold",
+                "cn": "感冒",
+                "emoji": "☀️"
+              },
+              {
+                "en": "slept",
+                "cn": "睡觉",
+                "emoji": "📘"
+              },
+              {
+                "en": "read",
+                "cn": "读",
+                "emoji": "📚"
+              },
+              {
+                "en": "saw",
+                "cn": "看见",
+                "emoji": "📘"
+              },
+              {
+                "en": "last",
+                "cn": "最近的",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A cleaned.",
+                    "cn": "看！一个打扫。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a stayed.",
+                    "cn": "对！还有一个停留。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love Last weekend!",
+                    "cn": "我们喜欢「Last weekend」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: Last weekend",
+              "titleCn": "Spark：上个周末",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about Last weekend!",
+                  "cn": "一起来学「上个周末」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a cleaned.",
+                  "cn": "我看见打扫。",
+                  "hint": "单词 cleaned"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a stayed.",
+                  "cn": "我看见停留。",
+                  "hint": "单词 stayed"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a washed.",
+                  "cn": "我看见洗。",
+                  "hint": "单词 washed"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a watched.",
+                  "cn": "我看见看。",
+                  "hint": "单词 watched"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a had.",
+                  "cn": "我看见患病。",
+                  "hint": "单词 had"
+                },
+                {
+                  "emoji": "☀️",
+                  "en": "I see a had a cold.",
+                  "cn": "我看见感冒。",
+                  "hint": "单词 had a cold"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: cleaned?",
+                  "opts": [
+                    "cleaned",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「cleaned」是什么意思？",
+                "opts": [
+                  "打扫",
+                  "停留",
+                  "洗",
+                  "看"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「stayed」是什么意思？",
+                "opts": [
+                  "停留",
+                  "打扫",
+                  "洗",
+                  "看"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「washed」是什么意思？",
+                "opts": [
+                  "洗",
+                  "打扫",
+                  "停留",
+                  "看"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「watched」是什么意思？",
+                "opts": [
+                  "看",
+                  "打扫",
+                  "停留",
+                  "洗"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「had」是什么意思？",
+                "opts": [
+                  "患病",
+                  "打扫",
+                  "停留",
+                  "洗"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「had a cold」是什么意思？",
+                "opts": [
+                  "感冒",
+                  "打扫",
+                  "停留",
+                  "洗"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「slept」是什么意思？",
+                "opts": [
+                  "睡觉",
+                  "打扫",
+                  "停留",
+                  "洗"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「read」是什么意思？",
+                "opts": [
+                  "读",
+                  "打扫",
+                  "停留",
+                  "洗"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「上个周末」学过的词是？",
+                "opts": [
+                  "cleaned",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "cleaned",
+                "opts": [
+                  "cleaned",
+                  "stayed",
+                  "washed",
+                  "watched"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "stayed",
+                "opts": [
+                  "stayed",
+                  "cleaned",
+                  "washed",
+                  "watched"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "washed",
+                "opts": [
+                  "washed",
+                  "cleaned",
+                  "stayed",
+                  "watched"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "watched",
+                "opts": [
+                  "watched",
+                  "cleaned",
+                  "stayed",
+                  "washed"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "had",
+                "opts": [
+                  "had",
+                  "cleaned",
+                  "stayed",
+                  "washed"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is had a cold.",
+                "opts": [
+                  "This is had a cold.",
+                  "cleaned",
+                  "stayed",
+                  "washed"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g6v2_u3",
+            "num": 3,
+            "title": "Where did you go?",
+            "cn": "你去哪儿了",
+            "emoji": "🏕️",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "went",
+                "cn": "去",
+                "emoji": "📘"
+              },
+              {
+                "en": "camp",
+                "cn": "野营",
+                "emoji": "📘"
+              },
+              {
+                "en": "went camping",
+                "cn": "野营",
+                "emoji": "📘"
+              },
+              {
+                "en": "fish",
+                "cn": "钓鱼",
+                "emoji": "📘"
+              },
+              {
+                "en": "went fishing",
+                "cn": "去钓鱼",
+                "emoji": "📘"
+              },
+              {
+                "en": "rode",
+                "cn": "骑（马",
+                "emoji": "📘"
+              },
+              {
+                "en": "hurt",
+                "cn": "受伤",
+                "emoji": "📘"
+              },
+              {
+                "en": "ate",
+                "cn": "吃",
+                "emoji": "📘"
+              },
+              {
+                "en": "took",
+                "cn": "拍照",
+                "emoji": "📘"
+              },
+              {
+                "en": "took pictures",
+                "cn": "照相",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A went.",
+                    "cn": "看！一个去。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a camp.",
+                    "cn": "对！还有一个野营。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love Where did you go?!",
+                    "cn": "我们喜欢「Where did you go?」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: Where did you go?",
+              "titleCn": "Spark：你去哪儿了",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about Where did you go?!",
+                  "cn": "一起来学「你去哪儿了」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a went.",
+                  "cn": "我看见去。",
+                  "hint": "单词 went"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a camp.",
+                  "cn": "我看见野营。",
+                  "hint": "单词 camp"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a went camping.",
+                  "cn": "我看见野营。",
+                  "hint": "单词 went camping"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a fish.",
+                  "cn": "我看见钓鱼。",
+                  "hint": "单词 fish"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a went fishing.",
+                  "cn": "我看见去钓鱼。",
+                  "hint": "单词 went fishing"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a rode.",
+                  "cn": "我看见骑（马。",
+                  "hint": "单词 rode"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: went?",
+                  "opts": [
+                    "went",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「went」是什么意思？",
+                "opts": [
+                  "去",
+                  "野营",
+                  "钓鱼",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「camp」是什么意思？",
+                "opts": [
+                  "野营",
+                  "去",
+                  "钓鱼",
+                  "去钓鱼"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「went camping」是什么意思？",
+                "opts": [
+                  "野营",
+                  "去",
+                  "钓鱼",
+                  "去钓鱼"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「fish」是什么意思？",
+                "opts": [
+                  "钓鱼",
+                  "去",
+                  "野营",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「went fishing」是什么意思？",
+                "opts": [
+                  "去钓鱼",
+                  "去",
+                  "野营",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「rode」是什么意思？",
+                "opts": [
+                  "骑（马",
+                  "去",
+                  "野营",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「hurt」是什么意思？",
+                "opts": [
+                  "受伤",
+                  "去",
+                  "野营",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ate」是什么意思？",
+                "opts": [
+                  "吃",
+                  "去",
+                  "野营",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「你去哪儿了」学过的词是？",
+                "opts": [
+                  "went",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "went",
+                "opts": [
+                  "went",
+                  "camp",
+                  "This is went camping.",
+                  "fish"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "camp",
+                "opts": [
+                  "camp",
+                  "went",
+                  "This is went camping.",
+                  "fish"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is went camping.",
+                "opts": [
+                  "This is went camping.",
+                  "went",
+                  "camp",
+                  "fish"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "fish",
+                "opts": [
+                  "fish",
+                  "went",
+                  "camp",
+                  "This is went camping."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is went fishing.",
+                "opts": [
+                  "This is went fishing.",
+                  "went",
+                  "camp",
+                  "This is went camping."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "rode",
+                "opts": [
+                  "rode",
+                  "went",
+                  "camp",
+                  "This is went camping."
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g6v2_u4",
+            "num": 4,
+            "title": "Then and now",
+            "cn": "那时和现在",
+            "emoji": "⏳",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "dining hall",
+                "cn": "饭厅",
+                "emoji": "📘"
+              },
+              {
+                "en": "grass",
+                "cn": "草坪",
+                "emoji": "📘"
+              },
+              {
+                "en": "gym",
+                "cn": "体育馆",
+                "emoji": "📘"
+              },
+              {
+                "en": "ago",
+                "cn": "以前",
+                "emoji": "📘"
+              },
+              {
+                "en": "cycling",
+                "cn": "骑自行车运动",
+                "emoji": "📘"
+              },
+              {
+                "en": "go cycling",
+                "cn": "去骑自行车",
+                "emoji": "📘"
+              },
+              {
+                "en": "ice-skate",
+                "cn": "滑冰",
+                "emoji": "📘"
+              },
+              {
+                "en": "badminton",
+                "cn": "羽毛球运动",
+                "emoji": "📘"
+              },
+              {
+                "en": "star",
+                "cn": "星",
+                "emoji": "📘"
+              },
+              {
+                "en": "easy",
+                "cn": "容易的",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Let's talk",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Look! A dining hall.",
+                    "cn": "看！一个饭厅。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes! And a grass.",
+                    "cn": "对！还有一个草坪。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "We love Then and now!",
+                    "cn": "我们喜欢「Then and now」！"
+                  }
+                ]
+              }
+            ],
+            "storybook": {
+              "title": "Spark: Then and now",
+              "titleCn": "Spark：那时和现在",
+              "cover": "🐻",
+              "pages": [
+                {
+                  "emoji": "📘",
+                  "en": "Let's learn about Then and now!",
+                  "cn": "一起来学「那时和现在」！",
+                  "hint": "故事开始"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a dining hall.",
+                  "cn": "我看见饭厅。",
+                  "hint": "单词 dining hall"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a grass.",
+                  "cn": "我看见草坪。",
+                  "hint": "单词 grass"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a gym.",
+                  "cn": "我看见体育馆。",
+                  "hint": "单词 gym"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a ago.",
+                  "cn": "我看见以前。",
+                  "hint": "单词 ago"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a cycling.",
+                  "cn": "我看见骑自行车运动。",
+                  "hint": "单词 cycling"
+                },
+                {
+                  "emoji": "📘",
+                  "en": "I see a go cycling.",
+                  "cn": "我看见去骑自行车。",
+                  "hint": "单词 go cycling"
+                },
+                {
+                  "emoji": "⭐",
+                  "en": "Great job! You finished the story.",
+                  "cn": "太棒了！故事读完了。",
+                  "hint": "完成"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "What did we learn: dining hall?",
+                  "opts": [
+                    "dining hall",
+                    "apple",
+                    "dog",
+                    "book"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            "stages": [
+              {
+                "id": "s1",
+                "title": "认识单词",
+                "subtitle": "10个核心单词",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "5分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力训练",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "5分钟"
+              },
+              {
+                "id": "s3",
+                "title": "单词配对",
+                "subtitle": "巩固词义",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "趣味绘本",
+                "subtitle": "故事中学习",
+                "icon": "📖",
+                "type": "storybook",
+                "time": "8分钟"
+              },
+              {
+                "id": "s5",
+                "title": "学习句型",
+                "subtitle": "核心句型",
+                "icon": "💬",
+                "type": "sentence",
+                "time": "5分钟"
+              },
+              {
+                "id": "s6",
+                "title": "默写挑战",
+                "subtitle": "动手拼写",
+                "icon": "✏️",
+                "type": "write",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "听力测试",
+                "subtitle": "听句选答案",
+                "icon": "🎯",
+                "type": "listenSent",
+                "time": "6分钟"
+              },
+              {
+                "id": "s8",
+                "title": "最终通关",
+                "subtitle": "综合挑战",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分钟"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "「dining hall」是什么意思？",
+                "opts": [
+                  "饭厅",
+                  "草坪",
+                  "体育馆",
+                  "以前"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「grass」是什么意思？",
+                "opts": [
+                  "草坪",
+                  "饭厅",
+                  "体育馆",
+                  "以前"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「gym」是什么意思？",
+                "opts": [
+                  "体育馆",
+                  "饭厅",
+                  "草坪",
+                  "以前"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ago」是什么意思？",
+                "opts": [
+                  "以前",
+                  "饭厅",
+                  "草坪",
+                  "体育馆"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「cycling」是什么意思？",
+                "opts": [
+                  "骑自行车运动",
+                  "饭厅",
+                  "草坪",
+                  "体育馆"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「go cycling」是什么意思？",
+                "opts": [
+                  "去骑自行车",
+                  "饭厅",
+                  "草坪",
+                  "体育馆"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ice-skate」是什么意思？",
+                "opts": [
+                  "滑冰",
+                  "饭厅",
+                  "草坪",
+                  "体育馆"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「badminton」是什么意思？",
+                "opts": [
+                  "羽毛球运动",
+                  "饭厅",
+                  "草坪",
+                  "体育馆"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「那时和现在」学过的词是？",
+                "opts": [
+                  "dining hall",
+                  "apple",
+                  "dog",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "This is dining hall.",
+                "opts": [
+                  "This is dining hall.",
+                  "grass",
+                  "gym",
+                  "ago"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "grass",
+                "opts": [
+                  "grass",
+                  "This is dining hall.",
+                  "gym",
+                  "ago"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "gym",
+                "opts": [
+                  "gym",
+                  "This is dining hall.",
+                  "grass",
+                  "ago"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "ago",
+                "opts": [
+                  "ago",
+                  "This is dining hall.",
+                  "grass",
+                  "gym"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "cycling",
+                "opts": [
+                  "cycling",
+                  "This is dining hall.",
+                  "grass",
+                  "gym"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "This is go cycling.",
+                "opts": [
+                  "This is go cycling.",
+                  "This is dining hall.",
+                  "grass",
+                  "gym"
+                ],
+                "answer": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

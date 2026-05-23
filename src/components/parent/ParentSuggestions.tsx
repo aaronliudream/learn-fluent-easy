@@ -100,7 +100,7 @@ function deriveSuggestions(d: ParentSuggestionInput): Suggestion[] {
   const accCandidates: { label: string; acc: number; to: string; module: "reading" | "grammar" }[] = [];
   if (d.gaokao.attempts > 5)  accCandidates.push({ label: "高考", acc: d.gaokao.correct / Math.max(1, d.gaokao.attempts), to: "/gaokao/reading",  module: "reading" });
   if (d.junior.sessions > 5)  accCandidates.push({ label: "初中", acc: d.junior.accuracy, to: "/junior/reading", module: "reading" });
-  if (d.primary.sessions > 5) accCandidates.push({ label: "小学", acc: d.primary.accuracy, to: "/primary/reading", module: "reading" });
+  if (d.primary.sessions > 5) accCandidates.push({ label: "小学", acc: d.primary.accuracy, to: "/primary", module: "reading" });
   const lowest = accCandidates.sort((a, b) => a.acc - b.acc)[0];
   if (lowest && lowest.acc < 0.65) {
     out.push({

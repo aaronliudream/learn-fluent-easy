@@ -1,4 +1,4 @@
-/** Shared grade selection for Primary (G3–G6). Written by Primary.tsx pickGrade / adventure URL. */
+/** Shared grade selection for Primary (G3–G6). Written by Primary.tsx pickGrade / hub URL. */
 export const PRIMARY_LAST_GRADE_KEY = "primary:lastGrade";
 
 /** 小学英语从三年级开始(新课标)。一/二年级已下线，遗留值会被归一到 G3。 */
@@ -40,32 +40,32 @@ function clampPrimaryGrade(grade: number): number {
   return Math.min(MAX_GRADE, Math.max(MIN_GRADE, n));
 }
 
+/** Primary hub home for the given grade. */
+export function primaryHubPath(grade: number): string {
+  return `/primary/hub/${clampPrimaryGrade(grade)}`;
+}
+
+/** @deprecated Use primaryHubPath — legacy adventure URLs redirect to hub. */
 export function primaryAdventurePath(grade: number): string {
-  return `/primary/adventure/${clampPrimaryGrade(grade)}`;
+  return primaryHubPath(grade);
 }
 
-/** Supabase 趣味阅读列表（G1–G6 各 10 篇闯关） */
+/** @deprecated Hub storybook stage replaces separate reading list. */
 export function primaryReadingListPath(grade: number): string {
-  return `/primary/reading/grade/${clampPrimaryGrade(grade)}`;
+  return primaryHubPath(grade);
 }
 
-/** G1/G2 拼读启蒙绘本书架（Spark 书架 UI） */
+/** @deprecated */
 export function primaryStorybookShelfPath(grade: number): string {
-  const g = clampPrimaryGrade(grade);
-  if (g === 2) return "/primary/storybooks?grade=2";
-  if (g === 1) return "/primary/storybooks";
-  return `/primary/storybooks?grade=${g}`;
+  return primaryHubPath(grade);
 }
 
-/**
- * 主入口「读绘本」：一二年级 → 书架；三年级及以上 → 趣味阅读列表。
- */
+/** @deprecated */
 export function primaryReadingEntryPath(grade: number): string {
-  const g = clampPrimaryGrade(grade);
-  if (g <= 2) return primaryStorybookShelfPath(g);
-  return primaryReadingListPath(g);
+  return primaryHubPath(grade);
 }
 
+/** @deprecated */
 export function primaryGradeMapPath(grade: number): string {
-  return `/primary/grade/${clampPrimaryGrade(grade)}`;
+  return primaryHubPath(grade);
 }

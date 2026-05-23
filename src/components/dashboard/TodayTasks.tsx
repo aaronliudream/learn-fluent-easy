@@ -11,7 +11,7 @@ import type { StageKey } from "@/hooks/useDashboardExtras";
  * Routes adapt to the user's most-recent stage.
  */
 const ROUTES: Record<StageKey, { vocab: string; reading: string }> = {
-  primary: { vocab: "/primary/vocab", reading: "/primary/reading" },
+  primary: { vocab: "/primary", reading: "/primary" },
   junior:  { vocab: "/junior/vocab",  reading: "/junior/reading"  },
   senior:  { vocab: "/gaokao/vocab",  reading: "/gaokao/reading"  },
 };

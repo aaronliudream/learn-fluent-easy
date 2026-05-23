@@ -1,10 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import type { AdventureStep } from "@/lib/dailyAdventure";
-import {
-  primaryAdventurePath,
-  primaryReadingListPath,
-  readPrimaryGradeFromStorage,
-} from "@/lib/primaryGrade";
+import { primaryHubPath, readPrimaryGradeFromStorage } from "@/lib/primaryGrade";
 import { countPrimaryDue, isPrimaryWordMastered } from "@/lib/primaryMasteryStats";
 import {
   fetchPrimaryVocabByVolume,
@@ -196,15 +192,31 @@ export function formatPrimaryTrackLabel(snap: PrimaryTrackSnapshot): string {
   return unitPart ? `人教 PEP ${snap.pepVolume} · ${unitPart}` : `人教 PEP ${snap.pepVolume}`;
 }
 
+const VOLUME_SEMESTER: Record<PepVolume, string> = {
+  "3A": "grade3_volume1",
+  "3B": "grade3_volume2",
+  "4A": "grade4_volume1",
+  "4B": "grade4_volume2",
+  "5A": "grade5_volume1",
+  "5B": "grade5_volume2",
+  "6A": "grade6_volume1",
+  "6B": "grade6_volume2",
+};
+
+function pepUnitId(volume: PepVolume, pepUnit: string | null): string {
+  const g = PEP_VOLUME_GRADE[volume];
+  const v = volume.endsWith("B") ? "v2" : "v1";
+  const n = pepUnit ? parseInt(pepUnit.replace(/\D/g, ""), 10) || 1 : 1;
+  return `g${g}${v}_u${n}`;
+}
+
 export function primaryVocabPath(grade: number, opts?: { focus?: "due" | "weak"; volume?: PepVolume; unit?: string | null }): string {
   const vol = opts?.volume ?? readPepVolumeFromStorage(grade);
-  const g = PEP_VOLUME_GRADE[vol];
-  const q = new URLSearchParams();
-  q.set("volume", vol);
-  if (opts?.unit) q.set("unit", opts.unit);
-  if (opts?.focus) q.set("focus", opts.focus);
-  const qs = q.toString();
-  return `/primary/vocab/${g}${qs ? `?${qs}` : ""}`;
+  const sem = VOLUME_SEMESTER[vol];
+  const unitId = pepUnitId(vol, opts?.unit ?? null);
+  const base = `/primary/hub/${grade}/semester/${sem}/unit/${unitId}`;
+  if (opts?.focus === "due") return `${base}/stage/0`;
+  return base;
 }
 
 /** Child-facing subtitle for the next adventure step kind. */
@@ -234,8 +246,8 @@ export function buildStandardDailySteps(opts: BuildStandardOpts): AdventureStep[
   const steps: AdventureStep[] = [];
 
   const listenTo = track.nextListeningLessonId
-    ? `/primary/lesson/${track.nextListeningLessonId}`
-    : primaryAdventurePath(grade);
+    ? primaryHubPath(grade)
+    : primaryHubPath(grade);
 
   steps.push({
     kind: "listening",
@@ -247,9 +259,7 @@ export function buildStandardDailySteps(opts: BuildStandardOpts): AdventureStep[
     estMinutes: 5,
   });
 
-  const readTo = track.nextReadingArticleId
-    ? `/primary/reading/play/${track.nextReadingArticleId}`
-    : primaryReadingListPath(grade);
+  const readTo = primaryHubPath(grade);
 
   steps.push({
     kind: "reading",
@@ -290,7 +300,7 @@ export function buildStandardDailySteps(opts: BuildStandardOpts): AdventureStep[
       title: "开口说一说",
       sparkLine: "听懂了、读过了,现在轮到你开口啦!",
       cta: "开始口语",
-      to: `/primary/lesson/${track.nextSpeakingLessonId}`,
+      to: primaryHubPath(grade),
       estMinutes: 5,
     });
   } else {
@@ -300,7 +310,7 @@ export function buildStandardDailySteps(opts: BuildStandardOpts): AdventureStep[
       title: "跟 Spark 练口语",
       sparkLine: "跟 Spark 说几句今天学的,我会帮你纠错!",
       cta: "去练口语",
-      to: `/primary/chat`,
+      to: primaryHubPath(grade),
       estMinutes: 4,
     });
   }
@@ -321,10 +331,10 @@ export function pickPrimaryContinue(ov: StageOverview, grade?: number): Continue
     return { ...pick, to };
   }
   if (pick.module === "reading") {
-    return { ...pick, to: primaryReadingListPath(g) };
+    return { ...pick, to: primaryHubPath(g) };
   }
   if (pick.module === "lesson") {
-    return { ...pick, to: primaryAdventurePath(g) };
+    return { ...pick, to: primaryHubPath(g) };
   }
-  return { ...pick, to: primaryAdventurePath(g) };
+  return { ...pick, to: primaryHubPath(g) };
 }

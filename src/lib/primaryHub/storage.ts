@@ -1,10 +1,21 @@
 import type { PrimaryHubGrade, PrimaryHubPersist, UnitState } from "./types";
-import { semesterIdsForGrade } from "./courseData";
+import { getGradeCourse, semesterIdsForGrade } from "./courseData";
 
 const STORAGE_PREFIX = "primary_hub_v1_";
 
-export function defaultPersist(grade: PrimaryHubGrade): PrimaryHubPersist {
+function defaultCurrentForGrade(grade: PrimaryHubGrade): { unitId: string; semesterId: string } {
   const [v1, v2] = semesterIdsForGrade(grade);
+  const course = getGradeCourse(grade);
+  for (const semId of [v1, v2]) {
+    const sem = course.semesters[semId];
+    const unit = sem?.units.find((u) => u.available && u.vocabulary.length > 0);
+    if (unit) return { unitId: unit.id, semesterId: semId };
+  }
+  return { unitId: "", semesterId: v1 };
+}
+
+export function defaultPersist(grade: PrimaryHubGrade): PrimaryHubPersist {
+  const { unitId, semesterId } = defaultCurrentForGrade(grade);
   return {
     user: { name: "小朋友", avatar: "🐻" },
     units: {},
@@ -12,8 +23,8 @@ export function defaultPersist(grade: PrimaryHubGrade): PrimaryHubPersist {
     lastAITest: null,
     aiTestCount: 0,
     aiTestHistory: [],
-    currentUnit: grade === 4 ? "g4v2_u1" : "",
-    currentSemester: grade === 4 ? v2 : v1,
+    currentUnit: unitId,
+    currentSemester: semesterId,
   };
 }
 

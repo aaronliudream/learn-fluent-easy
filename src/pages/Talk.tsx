@@ -152,10 +152,10 @@ export default function Talk() {
   // 教学目标。这里把入口收敛到几个已存在的结构化模块。
   if (stage === "primary") {
     const drills = [
-    { to: "/primary/chat", icon: Repeat2, title: "跟 Spark 跟读复述", desc: "句句跟读 · 即时反馈", grad: "from-pink-400 to-rose-400" },
-    { to: "/primary/letters", icon: BookA, title: "情景句子 · 自然拼读", desc: "26 字母 + 高频句", grad: "from-amber-400 to-orange-400" },
-    { to: "/primary/vocab", icon: ListChecks, title: "选择题 · 词汇巩固", desc: "1000+ 核心词测验", grad: "from-sky-400 to-cyan-400" },
-    { to: "/primary/games/all", icon: Gamepad2, title: "单词游戏 · 玩中学", desc: "4 款互动游戏", grad: "from-fuchsia-500 to-purple-500" }];
+    { to: "/primary", icon: Repeat2, title: "PEP 单元学习", desc: "词汇 · 听力 · 8 关闯关", grad: "from-pink-400 to-rose-400" },
+    { to: "/primary/hub/3", icon: BookA, title: "三年级课程", desc: "人教版上下册", grad: "from-amber-400 to-orange-400" },
+    { to: "/primary/hub/4", icon: ListChecks, title: "四年级课程", desc: "人教版上下册", grad: "from-sky-400 to-cyan-400" },
+    { to: "/primary/hub/5", icon: Gamepad2, title: "五六年级课程", desc: "人教版上下册", grad: "from-fuchsia-500 to-purple-500" }];
 
     return (
       <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 md:px-8 md:py-14">

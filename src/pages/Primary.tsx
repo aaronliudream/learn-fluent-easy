@@ -1,6 +1,6 @@
 import { T } from "@/i18n/T";
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import BackLink from "@/components/BackLink";
 import { writePrimaryGradeToStorage } from "@/lib/primaryGrade";
@@ -57,22 +57,10 @@ export default function Primary() {
               <div className="text-lg font-extrabold text-white drop-shadow">{g.name_cn}</div>
               <div className="text-[11px] font-bold text-white/90">上册 · 下册</div>
             </div>
-            {g.id === 4 && (
-              <span className="absolute right-2 top-2 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-extrabold text-[#FF6B35]">
-                内容最多
-              </span>
-            )}
           </button>
         ))}
       </div>
 
-      <p className="mt-6 text-center text-xs text-[#888780]">
-        旧版 Spark 冒险等内容仍可从
-        <Link to="/primary/adventure/4" className="mx-1 text-[#FF6B35] font-semibold">
-          这里
-        </Link>
-        访问（过渡期）
-      </p>
     </main>
   );
 }

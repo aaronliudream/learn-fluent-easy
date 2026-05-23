@@ -47,34 +47,7 @@ const GaokaoExam = lazy(() => import("./pages/GaokaoExam.tsx"));
 const GaokaoDeepDiagnosis = lazy(() => import("./pages/GaokaoDeepDiagnosis.tsx"));
 const China = lazy(() => import("./pages/China.tsx"));
 const Primary = lazy(() => import("./pages/Primary.tsx"));
-const PrimaryLetters = lazy(() => import("./pages/PrimaryLetters.tsx"));
-const PrimaryPhonics = lazy(() => import("./pages/PrimaryPhonics.tsx"));
-const PrimaryPhonicsLearn = lazy(() => import("./pages/PrimaryPhonicsLearn.tsx"));
-const PrimaryPhonicsQuiz = lazy(() => import("./pages/PrimaryPhonicsQuiz.tsx"));
-const PrimarySightWords = lazy(() => import("./pages/PrimarySightWords.tsx"));
-const PrimaryBadges = lazy(() => import("./pages/PrimaryBadges.tsx"));
-const PrimarySightWordsLearn = lazy(() => import("./pages/PrimarySightWordsLearn.tsx"));
-const PrimarySightWordsQuiz = lazy(() => import("./pages/PrimarySightWordsQuiz.tsx"));
-const PrimaryRolePlays = lazy(() => import("./pages/PrimaryRolePlays.tsx"));
-const PrimaryListening = lazy(() => import("./pages/PrimaryListening.tsx"));
-const PrimaryListeningPlay = lazy(() => import("./pages/PrimaryListeningPlay.tsx"));
-const PrimaryVocab = lazy(() => import("./pages/PrimaryVocab.tsx"));
-const PrimaryChat = lazy(() => import("./pages/PrimaryChat.tsx"));
-const PrimaryGrade = lazy(() => import("./pages/PrimaryGrade.tsx"));
-const PrimaryAssessment = lazy(() => import("./pages/PrimaryAssessment.tsx"));
-const PrimaryGames = lazy(() => import("./pages/PrimaryGames.tsx"));
-const PrimaryLesson = lazy(() => import("./pages/PrimaryLesson.tsx"));
-const PrimaryWordQuest = lazy(() => import("./pages/PrimaryWordQuest.tsx"));
-const PrimaryWordRush = lazy(() => import("./pages/PrimaryWordRush.tsx"));
-const PrimaryAdventure = lazy(() => import("./pages/PrimaryAdventure.tsx"));
-const PrimaryCulture = lazy(() => import("./pages/PrimaryCulture.tsx"));
-const PrimaryReading = lazy(() => import("./pages/PrimaryReading.tsx"));
-const PrimaryReadingPlay = lazy(() => import("./pages/PrimaryReadingPlay.tsx"));
-const PrimaryStoryBooks = lazy(() => import("./pages/PrimaryStoryBooks.tsx"));
-const PrimaryStoryBookRead = lazy(() => import("./pages/PrimaryStoryBookRead.tsx"));
-const PrimaryReadingRedirect = lazy(() => import("./pages/PrimaryReadingRedirect.tsx"));
-const PrimaryAdventureRedirect = lazy(() => import("./pages/PrimaryAdventureRedirect.tsx"));
-const PrimaryPhonicsUse = lazy(() => import("./pages/PrimaryPhonicsUse.tsx"));
+const PrimaryLegacyRedirect = lazy(() => import("./pages/PrimaryLegacyRedirect.tsx"));
 const PrimaryHubLayout = lazy(() => import("./pages/primaryHub/PrimaryHubLayout.tsx"));
 const PrimaryHubHome = lazy(() => import("./pages/primaryHub/PrimaryHubHome.tsx"));
 const PrimaryHubCourse = lazy(() => import("./pages/primaryHub/PrimaryHubCourse.tsx"));
@@ -182,7 +155,7 @@ const FloatingPetGate = () => {
     pathname.startsWith("/auth") ||
     pathname.startsWith("/talk") ||      // 全屏语音对话
     pathname.startsWith("/pets") ||      // 宠物详情页本身
-    pathname.startsWith("/primary/adventure") || // 冒险主页 Spark 已是主角，避免抢戏
+    pathname.startsWith("/primary/hub") ||
     pathname.startsWith("/placement");   // 评测专注模式
   if (hide) return null;
   return <FloatingPet />;
@@ -304,46 +277,8 @@ const App = () => (
             <Route path="aitest" element={<PrimaryHubAITest />} />
             <Route path="aihistory" element={<PrimaryHubAIHistory />} />
           </Route>
-          <Route path="/primary/letters" element={<ChineseOnlyRoute><PrimaryLetters /></ChineseOnlyRoute>} />
-          <Route path="/primary/phonics" element={<ChineseOnlyRoute><PrimaryPhonics /></ChineseOnlyRoute>} />
-          <Route path="/primary/phonics/learn/:phonicsId" element={<ChineseOnlyRoute><PrimaryPhonicsLearn /></ChineseOnlyRoute>} />
-          <Route path="/primary/phonics/quiz/:groupId" element={<ChineseOnlyRoute><PrimaryPhonicsQuiz /></ChineseOnlyRoute>} />
-          {/* New canonical hyphenated paths */}
-          <Route path="/primary/sight-words" element={<ChineseOnlyRoute><PrimarySightWords /></ChineseOnlyRoute>} />
-          <Route path="/primary/badges" element={<ChineseOnlyRoute><PrimaryBadges /></ChineseOnlyRoute>} />
-          <Route path="/primary/sight-words/learn/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsLearn /></ChineseOnlyRoute>} />
-          <Route path="/primary/sight-words/quiz/:groupId" element={<ChineseOnlyRoute><PrimarySightWordsQuiz /></ChineseOnlyRoute>} />
-          <Route path="/primary/roleplays" element={<ChineseOnlyRoute><PrimaryRolePlays /></ChineseOnlyRoute>} />
-          <Route path="/primary/listening" element={<ChineseOnlyRoute><PrimaryListening /></ChineseOnlyRoute>} />
-          <Route path="/primary/listening/play/:id" element={<ChineseOnlyRoute><PrimaryListeningPlay /></ChineseOnlyRoute>} />
-          {/* Legacy redirects */}
-          <Route path="/primary/sightwords" element={<Navigate to="/primary/sight-words" replace />} />
-          <Route path="/primary/sightwords/learn/:wordId" element={<ChineseOnlyRoute><PrimarySightWordsLearn /></ChineseOnlyRoute>} />
-          <Route path="/primary/sightwords/quiz/:groupId" element={<ChineseOnlyRoute><PrimarySightWordsQuiz /></ChineseOnlyRoute>} />
-          <Route path="/primary/vocab" element={<ChineseOnlyRoute><PrimaryVocab /></ChineseOnlyRoute>} />
-         <Route path="/primary/vocab/:grade" element={<ChineseOnlyRoute><PrimaryVocab /></ChineseOnlyRoute>} />
-          <Route path="/primary/chat" element={<ChineseOnlyRoute><PrimaryChat /></ChineseOnlyRoute>} />
-          <Route path="/primary/grade/:grade" element={<ChineseOnlyRoute><PrimaryGrade /></ChineseOnlyRoute>} />
-         <Route path="/primary/challenge/:grade/:unitId" element={<ChineseOnlyRoute><PrimaryAssessment /></ChineseOnlyRoute>} />
-         <Route path="/primary/checkup/:grade" element={<ChineseOnlyRoute><PrimaryAssessment /></ChineseOnlyRoute>} />
-          <Route path="/primary/games" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
-          <Route path="/primary/games/:grade" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
-          <Route path="/primary/games/:grade/:type" element={<ChineseOnlyRoute><PrimaryGames /></ChineseOnlyRoute>} />
-          <Route path="/primary/lesson/:id" element={<ChineseOnlyRoute><PrimaryLesson /></ChineseOnlyRoute>} />
-          <Route path="/primary/word-quest" element={<ChineseOnlyRoute><PrimaryWordQuest /></ChineseOnlyRoute>} />
-          <Route path="/primary/word-rush" element={<ChineseOnlyRoute><PrimaryWordRush /></ChineseOnlyRoute>} />
-          <Route path="/primary/adventure" element={<ChineseOnlyRoute><PrimaryAdventureRedirect /></ChineseOnlyRoute>} />
-          <Route path="/primary/adventure/:grade" element={<ChineseOnlyRoute><PrimaryAdventure /></ChineseOnlyRoute>} />
-         <Route path="/primary/parent" element={<Navigate to="/parent" replace />} />
-          <Route path="/primary/culture/:grade" element={<ChineseOnlyRoute><PrimaryCulture /></ChineseOnlyRoute>} />
-          <Route path="/primary/reading" element={<ChineseOnlyRoute><PrimaryReadingRedirect /></ChineseOnlyRoute>} />
-          <Route path="/primary/reading/grade/:grade" element={<ChineseOnlyRoute><PrimaryReading /></ChineseOnlyRoute>} />
-          <Route path="/primary/reading/:id" element={<ChineseOnlyRoute><PrimaryReadingPlay /></ChineseOnlyRoute>} />
-          <Route path="/primary/storybooks" element={<ChineseOnlyRoute><PrimaryStoryBooks /></ChineseOnlyRoute>} />
-          <Route path="/primary/storybooks/read/:id" element={<ChineseOnlyRoute><PrimaryStoryBookRead /></ChineseOnlyRoute>} />
-          {/* Legacy phonics storybook URLs */}
-          <Route path="/primary/reading/read/:id" element={<ChineseOnlyRoute><PrimaryStoryBookRead /></ChineseOnlyRoute>} />
-          <Route path="/primary/phonics/use/:letter" element={<ChineseOnlyRoute><PrimaryPhonicsUse /></ChineseOnlyRoute>} />
+          <Route path="/primary/parent" element={<Navigate to="/parent" replace />} />
+          <Route path="/primary/*" element={<ChineseOnlyRoute><PrimaryLegacyRedirect /></ChineseOnlyRoute>} />
           <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
           <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />
           <Route path="/junior" element={<ChineseOnlyRoute><Junior /></ChineseOnlyRoute>} />

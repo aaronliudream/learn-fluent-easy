@@ -61,7 +61,7 @@ const MODULE_EMOJI: Record<string, string> = {
 };
 
 const MODULE_ROUTES: Record<StageKey, Record<string, string>> = {
-  primary: { vocab: "/primary/vocab", reading: "/primary/reading", lesson: "/primary", phonics: "/primary", listening: "/primary", writing: "/primary" },
+  primary: { vocab: "/primary", reading: "/primary", lesson: "/primary", phonics: "/primary", listening: "/primary", writing: "/primary" },
   junior:  { vocab: "/junior/vocab",  reading: "/junior/reading",  grammar: "/junior/grammar", listening: "/junior/listening", writing: "/junior/writing", cloze: "/junior/cloze" },
   senior:  { vocab: "/gaokao/vocab",  reading: "/gaokao/reading",  grammar: "/gaokao/grammar", cloze: "/gaokao/cloze" },
 };

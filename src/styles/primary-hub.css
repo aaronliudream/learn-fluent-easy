@@ -1,0 +1,63 @@
+@keyframes aiPulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(180, 94, 255, 0.35); }
+  50% { box-shadow: 0 4px 24px rgba(255, 224, 98, 0.6), 0 4px 16px rgba(180, 94, 255, 0.5); }
+}
+
+.primary-hub-root {
+  background: #f7f4ed;
+  min-height: 100vh;
+  color: #2c2c2a;
+  padding-bottom: 80px;
+}
+
+.ai-card-v5.ready {
+  animation: aiPulse 1.6s ease-in-out infinite;
+}
+
+.quiz-opt.correct {
+  border-color: #6fa92a !important;
+  background: #eaf3de !important;
+}
+
+.quiz-opt.wrong {
+  border-color: #e0623f !important;
+  background: #fff0eb !important;
+}
+
+.quiz-opt.dimmed {
+  opacity: 0.45;
+}
+
+.match-btn.selected {
+  border-color: #378add;
+  background: #e6f1fb;
+}
+
+.match-btn.matched {
+  border-color: #6fa92a;
+  background: #eaf3de;
+  opacity: 0.65;
+}
+
+.match-btn.wrong {
+  border-color: #e0623f;
+  background: #fff0eb;
+}
+
+.feedback-box {
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.feedback-box.success {
+  background: #eaf3de;
+  color: #3b6d11;
+}
+
+.feedback-box.warning {
+  background: #fff4d6;
+  color: #854f0b;
+}

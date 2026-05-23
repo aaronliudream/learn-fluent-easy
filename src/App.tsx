@@ -75,6 +75,16 @@ const PrimaryStoryBookRead = lazy(() => import("./pages/PrimaryStoryBookRead.tsx
 const PrimaryReadingRedirect = lazy(() => import("./pages/PrimaryReadingRedirect.tsx"));
 const PrimaryAdventureRedirect = lazy(() => import("./pages/PrimaryAdventureRedirect.tsx"));
 const PrimaryPhonicsUse = lazy(() => import("./pages/PrimaryPhonicsUse.tsx"));
+const PrimaryHubLayout = lazy(() => import("./pages/primaryHub/PrimaryHubLayout.tsx"));
+const PrimaryHubHome = lazy(() => import("./pages/primaryHub/PrimaryHubHome.tsx"));
+const PrimaryHubCourse = lazy(() => import("./pages/primaryHub/PrimaryHubCourse.tsx"));
+const PrimaryHubSemester = lazy(() => import("./pages/primaryHub/PrimaryHubSemester.tsx"));
+const PrimaryHubUnit = lazy(() => import("./pages/primaryHub/PrimaryHubUnit.tsx"));
+const PrimaryHubStage = lazy(() => import("./pages/primaryHub/PrimaryHubStage.tsx"));
+const PrimaryHubMistakes = lazy(() => import("./pages/primaryHub/PrimaryHubMistakes.tsx"));
+const PrimaryHubProfile = lazy(() => import("./pages/primaryHub/PrimaryHubProfile.tsx"));
+const PrimaryHubAITest = lazy(() => import("./pages/primaryHub/PrimaryHubAITest.tsx"));
+const PrimaryHubAIHistory = lazy(() => import("./pages/primaryHub/PrimaryHubAIHistory.tsx"));
 const StageTests = lazy(() => import("./pages/StageTests.tsx"));
 const StageTestPlay = lazy(() => import("./pages/StageTestPlay.tsx"));
 const Junior = lazy(() => import("./pages/Junior.tsx"));
@@ -283,6 +293,17 @@ const App = () => (
           <Route path="/talk" element={<Talk />} />
           <Route path="/china" element={<ChineseOnlyRoute><China /></ChineseOnlyRoute>} />
           <Route path="/primary" element={<ChineseOnlyRoute><Primary /></ChineseOnlyRoute>} />
+          <Route path="/primary/hub/:grade" element={<ChineseOnlyRoute><PrimaryHubLayout /></ChineseOnlyRoute>}>
+            <Route index element={<PrimaryHubHome />} />
+            <Route path="course" element={<PrimaryHubCourse />} />
+            <Route path="semester/:semId" element={<PrimaryHubSemester />} />
+            <Route path="semester/:semId/unit/:unitId" element={<PrimaryHubUnit />} />
+            <Route path="semester/:semId/unit/:unitId/stage/:stageIdx" element={<PrimaryHubStage />} />
+            <Route path="mistakes" element={<PrimaryHubMistakes />} />
+            <Route path="profile" element={<PrimaryHubProfile />} />
+            <Route path="aitest" element={<PrimaryHubAITest />} />
+            <Route path="aihistory" element={<PrimaryHubAIHistory />} />
+          </Route>
           <Route path="/primary/letters" element={<ChineseOnlyRoute><PrimaryLetters /></ChineseOnlyRoute>} />
           <Route path="/primary/phonics" element={<ChineseOnlyRoute><PrimaryPhonics /></ChineseOnlyRoute>} />
           <Route path="/primary/phonics/learn/:phonicsId" element={<ChineseOnlyRoute><PrimaryPhonicsLearn /></ChineseOnlyRoute>} />

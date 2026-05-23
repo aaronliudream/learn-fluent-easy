@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 VOCAB_DIR = ROOT / "docs" / "vocab"
 OUT_DIR = ROOT / "src" / "data" / "primaryHub"
-LEGACY_G4_U1 = ROOT / "src" / "data" / "primaryHub" / "courseData.json"
+LEGACY_G4_U1 = ROOT / "src" / "data" / "primaryHub" / "legacy_g4v2_u1.json"
 
 BOOK_TO_SEM = {
     "3A": ("grade3", "grade3_volume1"),
@@ -303,12 +303,7 @@ def load_csv(book: str) -> dict[str, list[dict]]:
 def load_g4_u1_full() -> dict | None:
     if not LEGACY_G4_U1.exists():
         return None
-    data = json.loads(LEGACY_G4_U1.read_text(encoding="utf-8"))
-    units = data.get("grade4", {}).get("semesters", {}).get("grade4_volume2", {}).get("units", [])
-    for u in units:
-        if u.get("id") == "g4v2_u1":
-            return u
-    return None
+    return json.loads(LEGACY_G4_U1.read_text(encoding="utf-8"))
 
 
 def main() -> None:

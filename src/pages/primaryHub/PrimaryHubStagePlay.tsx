@@ -12,40 +12,7 @@ type Props = {
   onBack: () => void;
 };
 
-const SENTENCE_PATTERNS = [
-  {
-    type: "询问位置",
-    q: "Where's the library?",
-    qCn: "图书馆在哪里？",
-    a: "It's on the second floor.",
-    aCn: "它在二楼。",
-    color: "blue" as const,
-  },
-  {
-    type: "确认询问",
-    q: "Is this the teachers' office?",
-    qCn: "这是教师办公室吗？",
-    a: "No, it isn't.",
-    aCn: "不，不是。",
-    color: "yellow" as const,
-  },
-  {
-    type: "询问拥有",
-    q: "Do you have a music room?",
-    qCn: "你们有音乐教室吗？",
-    a: "Yes, we do.",
-    aCn: "是的，有。",
-    color: "green" as const,
-  },
-  {
-    type: "描述位置",
-    q: "It's next to the art room.",
-    qCn: "它紧挨着美术教室。",
-    a: "",
-    aCn: "",
-    color: "pink" as const,
-  },
-];
+const SENTENCE_COLORS = ["blue", "yellow", "green", "pink"] as const;
 
 const sentenceColorClass = {
   blue: "border-l-4 border-[#378ADD] bg-[#E6F1FB]",
@@ -460,22 +427,57 @@ function MatchStage({
   );
 }
 
-function SentenceStage({ onFinish }: { onFinish: () => void }) {
+function SentenceStage({
+  dialogues,
+  onFinish,
+}: {
+  dialogues: UnitDef["dialogues"];
+  onFinish: () => void;
+}) {
   const [expanded, setExpanded] = useState<Set<number>>(() => new Set());
+
+  const patterns = useMemo(() => {
+    const out: Array<{ title: string; q: string; qCn: string; a: string; aCn: string; color: (typeof SENTENCE_COLORS)[number] }> = [];
+    for (const dialogue of dialogues) {
+      const lines = dialogue.lines;
+      for (let i = 0; i < lines.length && out.length < 4; i += 2) {
+        const qLine = lines[i];
+        const aLine = lines[i + 1];
+        out.push({
+          title: dialogue.title,
+          q: qLine.text,
+          qCn: qLine.cn,
+          a: aLine?.text ?? "",
+          aCn: aLine?.cn ?? "",
+          color: SENTENCE_COLORS[out.length % SENTENCE_COLORS.length],
+        });
+      }
+    }
+    return out;
+  }, [dialogues]);
 
   const expand = (i: number) => {
     setExpanded((prev) => new Set(prev).add(i));
   };
 
-  const allExpanded = expanded.size === SENTENCE_PATTERNS.length;
+  const allExpanded = patterns.length === 0 || expanded.size === patterns.length;
+
+  if (patterns.length === 0) {
+    return (
+      <div className="rounded-2xl bg-white p-4 text-center shadow-sm">
+        <div className="text-sm text-[#888780]">本单元暂无句型对话，可直接进入下一关</div>
+        <PrimaryButton onClick={onFinish}>进入下一关 →</PrimaryButton>
+      </div>
+    );
+  }
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <div className="mb-3 text-sm">💬 学会 4 个核心句型，点击 🔊 听发音，展开看中文</div>
-      {SENTENCE_PATTERNS.map((s, i) => (
-        <div key={s.q} className={`mb-3 rounded-xl p-3 ${sentenceColorClass[s.color]}`}>
+      <div className="mb-3 text-sm">💬 学会 {patterns.length} 个核心句型，点击 🔊 听发音，展开看中文</div>
+      {patterns.map((s, i) => (
+        <div key={`${s.q}-${i}`} className={`mb-3 rounded-xl p-3 ${sentenceColorClass[s.color]}`}>
           <div className="mb-1.5 text-xs font-semibold">
-            句型 {i + 1}：{s.type}
+            句型 {i + 1}：{s.title}
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -799,7 +801,7 @@ export default function PrimaryHubStagePlay({ unitId, stageIdx, onComplete, onBa
       case "match":
         return <MatchStage vocabulary={unit.vocabulary} onFinish={handleFinish} onMatch={addStar} />;
       case "sentence":
-        return <SentenceStage onFinish={handleFinish} />;
+        return <SentenceStage dialogues={unit.dialogues} onFinish={handleFinish} />;
       case "write":
         return (
           <WriteStage

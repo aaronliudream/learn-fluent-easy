@@ -531,40 +531,1300 @@
             "id": "g4v2_u2",
             "num": 2,
             "title": "What time is it?",
-            "cn": "现在几点？",
-            "emoji": "⏰",
-            "available": false,
-            "vocabulary": [],
-            "dialogues": [],
-            "stages": [],
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "cn": "几点了",
+            "emoji": "🕐",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "time",
+                "cn": "时间",
+                "emoji": "⏰"
+              },
+              {
+                "en": "o'clock",
+                "cn": "……点钟",
+                "emoji": "🕐"
+              },
+              {
+                "en": "get up",
+                "cn": "起床",
+                "emoji": "🛏️"
+              },
+              {
+                "en": "go to school",
+                "cn": "去上学",
+                "emoji": "🏫"
+              },
+              {
+                "en": "go home",
+                "cn": "回家",
+                "emoji": "🏠"
+              },
+              {
+                "en": "go to bed",
+                "cn": "上床睡觉",
+                "emoji": "😴"
+              },
+              {
+                "en": "hurry up",
+                "cn": "快点",
+                "emoji": "🏃"
+              },
+              {
+                "en": "ready",
+                "cn": "准备好的",
+                "emoji": "✅"
+              },
+              {
+                "en": "come on",
+                "cn": "快点；加油",
+                "emoji": "👋"
+              },
+              {
+                "en": "breakfast",
+                "cn": "早餐",
+                "emoji": "🥣"
+              },
+              {
+                "en": "lunch",
+                "cn": "午餐",
+                "emoji": "🍱"
+              },
+              {
+                "en": "dinner",
+                "cn": "晚餐",
+                "emoji": "🍽️"
+              },
+              {
+                "en": "English class",
+                "cn": "英语课",
+                "emoji": "📘"
+              },
+              {
+                "en": "music class",
+                "cn": "音乐课",
+                "emoji": "🎵"
+              },
+              {
+                "en": "PE class",
+                "cn": "体育课",
+                "emoji": "⚽"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Dialogue 1",
+                "lines": [
+                  {
+                    "speaker": "A",
+                    "en": "Look! time.",
+                    "cn": "看！时间。"
+                  },
+                  {
+                    "speaker": "B",
+                    "en": "Yes. And o'clock.",
+                    "cn": "是的。还有……点钟。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "单词学习",
+                "subtitle": "15个核心词",
+                "icon": "📖",
+                "type": "vocab",
+                "time": "5分"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听音选词",
+                "icon": "👂",
+                "type": "listenWord",
+                "time": "5分"
+              },
+              {
+                "id": "s3",
+                "title": "中英配对",
+                "subtitle": "连线配对",
+                "icon": "🔗",
+                "type": "match",
+                "time": "5分"
+              },
+              {
+                "id": "s4",
+                "title": "绘本阅读",
+                "subtitle": "情景故事",
+                "icon": "📚",
+                "type": "storybook",
+                "time": "8分"
+              },
+              {
+                "id": "s5",
+                "title": "句型练习",
+                "subtitle": "重点句型",
+                "icon": "✏️",
+                "type": "sentence",
+                "time": "5分"
+              },
+              {
+                "id": "s6",
+                "title": "默写练习",
+                "subtitle": "看中文写英文",
+                "icon": "📝",
+                "type": "write",
+                "time": "8分"
+              },
+              {
+                "id": "s7",
+                "title": "听句理解",
+                "subtitle": "听句子选答案",
+                "icon": "🎧",
+                "type": "listenSent",
+                "time": "6分"
+              },
+              {
+                "id": "s8",
+                "title": "单元测验",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "What is 'time' in Chinese?",
+                "opts": [
+                  "时间",
+                  "……点钟",
+                  "起床",
+                  "去上学"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'o'clock' in Chinese?",
+                "opts": [
+                  "……点钟",
+                  "时间",
+                  "起床",
+                  "去上学"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'get up' in Chinese?",
+                "opts": [
+                  "起床",
+                  "时间",
+                  "……点钟",
+                  "去上学"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'go to school' in Chinese?",
+                "opts": [
+                  "去上学",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'go home' in Chinese?",
+                "opts": [
+                  "回家",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'go to bed' in Chinese?",
+                "opts": [
+                  "上床睡觉",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'hurry up' in Chinese?",
+                "opts": [
+                  "快点",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'ready' in Chinese?",
+                "opts": [
+                  "准备好的",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'come on' in Chinese?",
+                "opts": [
+                  "快点；加油",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'breakfast' in Chinese?",
+                "opts": [
+                  "早餐",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'lunch' in Chinese?",
+                "opts": [
+                  "午餐",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'dinner' in Chinese?",
+                "opts": [
+                  "晚餐",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'English class' in Chinese?",
+                "opts": [
+                  "英语课",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'music class' in Chinese?",
+                "opts": [
+                  "音乐课",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'PE class' in Chinese?",
+                "opts": [
+                  "体育课",
+                  "时间",
+                  "……点钟",
+                  "起床"
+                ],
+                "answer": 0
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "time",
+                "opts": [
+                  "time",
+                  "o'clock",
+                  "get up",
+                  "go to school"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "o'clock",
+                "opts": [
+                  "o'clock",
+                  "time",
+                  "get up",
+                  "go to school"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "get up",
+                "opts": [
+                  "get up",
+                  "time",
+                  "o'clock",
+                  "go to school"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "go to school",
+                "opts": [
+                  "go to school",
+                  "time",
+                  "o'clock",
+                  "get up"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "go home",
+                "opts": [
+                  "go home",
+                  "time",
+                  "o'clock",
+                  "get up"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "go to bed",
+                "opts": [
+                  "go to bed",
+                  "time",
+                  "o'clock",
+                  "get up"
+                ],
+                "answer": 0
+              }
+            ],
+            "storybook": {
+              "title": "What time is it? Story",
+              "pages": [
+                {
+                  "emoji": "⏰",
+                  "en": "This is about time.",
+                  "cn": "本课学习：时间（time）",
+                  "hint": "What time is it?"
+                },
+                {
+                  "emoji": "🕐",
+                  "en": "This is about o'clock.",
+                  "cn": "本课学习：……点钟（o'clock）",
+                  "hint": "What time is it?"
+                },
+                {
+                  "emoji": "🛏️",
+                  "en": "This is about get up.",
+                  "cn": "本课学习：起床（get up）",
+                  "hint": "What time is it?"
+                },
+                {
+                  "emoji": "🏫",
+                  "en": "This is about go to school.",
+                  "cn": "本课学习：去上学（go to school）",
+                  "hint": "What time is it?"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "Which word is in this unit?",
+                  "opts": [
+                    "time",
+                    "o'clock",
+                    "get up",
+                    "go to school"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "What does 'time' mean?",
+                  "opts": [
+                    "时间",
+                    "o'clock",
+                    "再见",
+                    "谢谢"
+                  ],
+                  "answer": 0
+                }
+              ]
+            }
           },
           {
             "id": "g4v2_u3",
             "num": 3,
             "title": "Weather",
             "cn": "天气",
-            "emoji": "☀️",
-            "available": false,
-            "vocabulary": [],
-            "dialogues": [],
-            "stages": [],
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "emoji": "🌤️",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "cold",
+                "cn": "冷的",
+                "emoji": "🥶"
+              },
+              {
+                "en": "cool",
+                "cn": "凉的",
+                "emoji": "😎"
+              },
+              {
+                "en": "warm",
+                "cn": "温暖的",
+                "emoji": "🌡️"
+              },
+              {
+                "en": "hot",
+                "cn": "热的",
+                "emoji": "🔥"
+              },
+              {
+                "en": "sunny",
+                "cn": "阳光充足的",
+                "emoji": "☀️"
+              },
+              {
+                "en": "windy",
+                "cn": "多风的",
+                "emoji": "💨"
+              },
+              {
+                "en": "cloudy",
+                "cn": "多云的",
+                "emoji": "☁️"
+              },
+              {
+                "en": "snowy",
+                "cn": "下雪的",
+                "emoji": "❄️"
+              },
+              {
+                "en": "rainy",
+                "cn": "阴雨的",
+                "emoji": "🌧️"
+              },
+              {
+                "en": "outside",
+                "cn": "在户外",
+                "emoji": "🌳"
+              },
+              {
+                "en": "be careful",
+                "cn": "小心",
+                "emoji": "⚠️"
+              },
+              {
+                "en": "weather",
+                "cn": "天气",
+                "emoji": "🌈"
+              },
+              {
+                "en": "New York",
+                "cn": "纽约",
+                "emoji": "🗽"
+              },
+              {
+                "en": "London",
+                "cn": "伦敦",
+                "emoji": "🇬🇧"
+              },
+              {
+                "en": "Sydney",
+                "cn": "悉尼",
+                "emoji": "🇦🇺"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Dialogue 1",
+                "lines": [
+                  {
+                    "speaker": "A",
+                    "en": "Look! cold.",
+                    "cn": "看！冷的。"
+                  },
+                  {
+                    "speaker": "B",
+                    "en": "Yes. And cool.",
+                    "cn": "是的。还有凉的。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "单词学习",
+                "subtitle": "15个核心词",
+                "icon": "📖",
+                "type": "vocab",
+                "time": "5分"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听音选词",
+                "icon": "👂",
+                "type": "listenWord",
+                "time": "5分"
+              },
+              {
+                "id": "s3",
+                "title": "中英配对",
+                "subtitle": "连线配对",
+                "icon": "🔗",
+                "type": "match",
+                "time": "5分"
+              },
+              {
+                "id": "s4",
+                "title": "绘本阅读",
+                "subtitle": "情景故事",
+                "icon": "📚",
+                "type": "storybook",
+                "time": "8分"
+              },
+              {
+                "id": "s5",
+                "title": "句型练习",
+                "subtitle": "重点句型",
+                "icon": "✏️",
+                "type": "sentence",
+                "time": "5分"
+              },
+              {
+                "id": "s6",
+                "title": "默写练习",
+                "subtitle": "看中文写英文",
+                "icon": "📝",
+                "type": "write",
+                "time": "8分"
+              },
+              {
+                "id": "s7",
+                "title": "听句理解",
+                "subtitle": "听句子选答案",
+                "icon": "🎧",
+                "type": "listenSent",
+                "time": "6分"
+              },
+              {
+                "id": "s8",
+                "title": "单元测验",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "What is 'cold' in Chinese?",
+                "opts": [
+                  "冷的",
+                  "凉的",
+                  "温暖的",
+                  "热的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'cool' in Chinese?",
+                "opts": [
+                  "凉的",
+                  "冷的",
+                  "温暖的",
+                  "热的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'warm' in Chinese?",
+                "opts": [
+                  "温暖的",
+                  "冷的",
+                  "凉的",
+                  "热的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'hot' in Chinese?",
+                "opts": [
+                  "热的",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'sunny' in Chinese?",
+                "opts": [
+                  "阳光充足的",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'windy' in Chinese?",
+                "opts": [
+                  "多风的",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'cloudy' in Chinese?",
+                "opts": [
+                  "多云的",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'snowy' in Chinese?",
+                "opts": [
+                  "下雪的",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'rainy' in Chinese?",
+                "opts": [
+                  "阴雨的",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'outside' in Chinese?",
+                "opts": [
+                  "在户外",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'be careful' in Chinese?",
+                "opts": [
+                  "小心",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'weather' in Chinese?",
+                "opts": [
+                  "天气",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'New York' in Chinese?",
+                "opts": [
+                  "纽约",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'London' in Chinese?",
+                "opts": [
+                  "伦敦",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'Sydney' in Chinese?",
+                "opts": [
+                  "悉尼",
+                  "冷的",
+                  "凉的",
+                  "温暖的"
+                ],
+                "answer": 0
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "cold",
+                "opts": [
+                  "cold",
+                  "cool",
+                  "warm",
+                  "hot"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "cool",
+                "opts": [
+                  "cool",
+                  "cold",
+                  "warm",
+                  "hot"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "warm",
+                "opts": [
+                  "warm",
+                  "cold",
+                  "cool",
+                  "hot"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "hot",
+                "opts": [
+                  "hot",
+                  "cold",
+                  "cool",
+                  "warm"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "sunny",
+                "opts": [
+                  "sunny",
+                  "cold",
+                  "cool",
+                  "warm"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "windy",
+                "opts": [
+                  "windy",
+                  "cold",
+                  "cool",
+                  "warm"
+                ],
+                "answer": 0
+              }
+            ],
+            "storybook": {
+              "title": "Weather Story",
+              "pages": [
+                {
+                  "emoji": "🥶",
+                  "en": "This is about cold.",
+                  "cn": "本课学习：冷的（cold）",
+                  "hint": "Weather"
+                },
+                {
+                  "emoji": "😎",
+                  "en": "This is about cool.",
+                  "cn": "本课学习：凉的（cool）",
+                  "hint": "Weather"
+                },
+                {
+                  "emoji": "🌡️",
+                  "en": "This is about warm.",
+                  "cn": "本课学习：温暖的（warm）",
+                  "hint": "Weather"
+                },
+                {
+                  "emoji": "🔥",
+                  "en": "This is about hot.",
+                  "cn": "本课学习：热的（hot）",
+                  "hint": "Weather"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "Which word is in this unit?",
+                  "opts": [
+                    "cold",
+                    "cool",
+                    "warm",
+                    "hot"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "What does 'cold' mean?",
+                  "opts": [
+                    "冷的",
+                    "cool",
+                    "再见",
+                    "谢谢"
+                  ],
+                  "answer": 0
+                }
+              ]
+            }
           },
           {
             "id": "g4v2_u4",
             "num": 4,
             "title": "At the farm",
             "cn": "在农场",
-            "emoji": "🐮",
-            "available": false,
-            "vocabulary": [],
-            "dialogues": [],
-            "stages": [],
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "emoji": "🐄",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "horse",
+                "cn": "马",
+                "emoji": "🐴"
+              },
+              {
+                "en": "cow",
+                "cn": "母牛；奶牛",
+                "emoji": "🐄"
+              },
+              {
+                "en": "sheep",
+                "cn": "羊；绵羊",
+                "emoji": "🐑"
+              },
+              {
+                "en": "hen",
+                "cn": "母鸡",
+                "emoji": "🐔"
+              },
+              {
+                "en": "goat",
+                "cn": "山羊",
+                "emoji": "🐐"
+              },
+              {
+                "en": "tomato",
+                "cn": "西红柿",
+                "emoji": "🍅"
+              },
+              {
+                "en": "potato",
+                "cn": "马铃薯；土豆",
+                "emoji": "🥔"
+              },
+              {
+                "en": "green beans",
+                "cn": "豆角；四季豆",
+                "emoji": "🫛"
+              },
+              {
+                "en": "carrot",
+                "cn": "胡萝卜",
+                "emoji": "🥕"
+              },
+              {
+                "en": "these",
+                "cn": "这些",
+                "emoji": "👆"
+              },
+              {
+                "en": "those",
+                "cn": "那些",
+                "emoji": "👉"
+              },
+              {
+                "en": "farm",
+                "cn": "农场",
+                "emoji": "🌾"
+              },
+              {
+                "en": "garden",
+                "cn": "花园；菜园",
+                "emoji": "🌻"
+              },
+              {
+                "en": "animal",
+                "cn": "兽；动物",
+                "emoji": "🐾"
+              },
+              {
+                "en": "eat",
+                "cn": "吃",
+                "emoji": "😋"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Dialogue 1",
+                "lines": [
+                  {
+                    "speaker": "A",
+                    "en": "Look! horse.",
+                    "cn": "看！马。"
+                  },
+                  {
+                    "speaker": "B",
+                    "en": "Yes. And cow.",
+                    "cn": "是的。还有母牛；奶牛。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "单词学习",
+                "subtitle": "15个核心词",
+                "icon": "📖",
+                "type": "vocab",
+                "time": "5分"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听音选词",
+                "icon": "👂",
+                "type": "listenWord",
+                "time": "5分"
+              },
+              {
+                "id": "s3",
+                "title": "中英配对",
+                "subtitle": "连线配对",
+                "icon": "🔗",
+                "type": "match",
+                "time": "5分"
+              },
+              {
+                "id": "s4",
+                "title": "绘本阅读",
+                "subtitle": "情景故事",
+                "icon": "📚",
+                "type": "storybook",
+                "time": "8分"
+              },
+              {
+                "id": "s5",
+                "title": "句型练习",
+                "subtitle": "重点句型",
+                "icon": "✏️",
+                "type": "sentence",
+                "time": "5分"
+              },
+              {
+                "id": "s6",
+                "title": "默写练习",
+                "subtitle": "看中文写英文",
+                "icon": "📝",
+                "type": "write",
+                "time": "8分"
+              },
+              {
+                "id": "s7",
+                "title": "听句理解",
+                "subtitle": "听句子选答案",
+                "icon": "🎧",
+                "type": "listenSent",
+                "time": "6分"
+              },
+              {
+                "id": "s8",
+                "title": "单元测验",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "What is 'horse' in Chinese?",
+                "opts": [
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊",
+                  "母鸡"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'cow' in Chinese?",
+                "opts": [
+                  "母牛；奶牛",
+                  "马",
+                  "羊；绵羊",
+                  "母鸡"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'sheep' in Chinese?",
+                "opts": [
+                  "羊；绵羊",
+                  "马",
+                  "母牛；奶牛",
+                  "母鸡"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'hen' in Chinese?",
+                "opts": [
+                  "母鸡",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'goat' in Chinese?",
+                "opts": [
+                  "山羊",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'tomato' in Chinese?",
+                "opts": [
+                  "西红柿",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'potato' in Chinese?",
+                "opts": [
+                  "马铃薯；土豆",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'green beans' in Chinese?",
+                "opts": [
+                  "豆角；四季豆",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'carrot' in Chinese?",
+                "opts": [
+                  "胡萝卜",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'these' in Chinese?",
+                "opts": [
+                  "这些",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'those' in Chinese?",
+                "opts": [
+                  "那些",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'farm' in Chinese?",
+                "opts": [
+                  "农场",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'garden' in Chinese?",
+                "opts": [
+                  "花园；菜园",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'animal' in Chinese?",
+                "opts": [
+                  "兽；动物",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'eat' in Chinese?",
+                "opts": [
+                  "吃",
+                  "马",
+                  "母牛；奶牛",
+                  "羊；绵羊"
+                ],
+                "answer": 0
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "horse",
+                "opts": [
+                  "horse",
+                  "cow",
+                  "sheep",
+                  "hen"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "cow",
+                "opts": [
+                  "cow",
+                  "horse",
+                  "sheep",
+                  "hen"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "sheep",
+                "opts": [
+                  "sheep",
+                  "horse",
+                  "cow",
+                  "hen"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "hen",
+                "opts": [
+                  "hen",
+                  "horse",
+                  "cow",
+                  "sheep"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "goat",
+                "opts": [
+                  "goat",
+                  "horse",
+                  "cow",
+                  "sheep"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "tomato",
+                "opts": [
+                  "tomato",
+                  "horse",
+                  "cow",
+                  "sheep"
+                ],
+                "answer": 0
+              }
+            ],
+            "storybook": {
+              "title": "At the farm Story",
+              "pages": [
+                {
+                  "emoji": "🐴",
+                  "en": "This is about horse.",
+                  "cn": "本课学习：马（horse）",
+                  "hint": "At the farm"
+                },
+                {
+                  "emoji": "🐄",
+                  "en": "This is about cow.",
+                  "cn": "本课学习：母牛；奶牛（cow）",
+                  "hint": "At the farm"
+                },
+                {
+                  "emoji": "🐑",
+                  "en": "This is about sheep.",
+                  "cn": "本课学习：羊；绵羊（sheep）",
+                  "hint": "At the farm"
+                },
+                {
+                  "emoji": "🐔",
+                  "en": "This is about hen.",
+                  "cn": "本课学习：母鸡（hen）",
+                  "hint": "At the farm"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "Which word is in this unit?",
+                  "opts": [
+                    "horse",
+                    "cow",
+                    "sheep",
+                    "hen"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "What does 'horse' mean?",
+                  "opts": [
+                    "马",
+                    "cow",
+                    "再见",
+                    "谢谢"
+                  ],
+                  "answer": 0
+                }
+              ]
+            }
           },
           {
             "id": "g4v2_u5",
@@ -572,12 +1832,432 @@
             "title": "My clothes",
             "cn": "我的衣服",
             "emoji": "👕",
-            "available": false,
-            "vocabulary": [],
-            "dialogues": [],
-            "stages": [],
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "clothes",
+                "cn": "衣服；服装",
+                "emoji": "👔"
+              },
+              {
+                "en": "pants",
+                "cn": "裤子",
+                "emoji": "👖"
+              },
+              {
+                "en": "hat",
+                "cn": "帽子",
+                "emoji": "🎩"
+              },
+              {
+                "en": "dress",
+                "cn": "连衣裙",
+                "emoji": "👗"
+              },
+              {
+                "en": "skirt",
+                "cn": "女裙",
+                "emoji": "👗"
+              },
+              {
+                "en": "coat",
+                "cn": "外衣；大衣",
+                "emoji": "🧥"
+              },
+              {
+                "en": "sweater",
+                "cn": "毛衣",
+                "emoji": "🧶"
+              },
+              {
+                "en": "sock",
+                "cn": "短袜",
+                "emoji": "🧦"
+              },
+              {
+                "en": "shorts",
+                "cn": "短裤",
+                "emoji": "🩳"
+              },
+              {
+                "en": "jacket",
+                "cn": "夹克衫",
+                "emoji": "🧥"
+              },
+              {
+                "en": "shirt",
+                "cn": "衬衫",
+                "emoji": "👔"
+              },
+              {
+                "en": "whose",
+                "cn": "谁的",
+                "emoji": "❓"
+              },
+              {
+                "en": "mine",
+                "cn": "我的",
+                "emoji": "📦"
+              },
+              {
+                "en": "pack",
+                "cn": "收拾（行李）",
+                "emoji": "🎒"
+              },
+              {
+                "en": "wait",
+                "cn": "等待",
+                "emoji": "⏳"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Dialogue 1",
+                "lines": [
+                  {
+                    "speaker": "A",
+                    "en": "Look! clothes.",
+                    "cn": "看！衣服；服装。"
+                  },
+                  {
+                    "speaker": "B",
+                    "en": "Yes. And pants.",
+                    "cn": "是的。还有裤子。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "单词学习",
+                "subtitle": "15个核心词",
+                "icon": "📖",
+                "type": "vocab",
+                "time": "5分"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听音选词",
+                "icon": "👂",
+                "type": "listenWord",
+                "time": "5分"
+              },
+              {
+                "id": "s3",
+                "title": "中英配对",
+                "subtitle": "连线配对",
+                "icon": "🔗",
+                "type": "match",
+                "time": "5分"
+              },
+              {
+                "id": "s4",
+                "title": "绘本阅读",
+                "subtitle": "情景故事",
+                "icon": "📚",
+                "type": "storybook",
+                "time": "8分"
+              },
+              {
+                "id": "s5",
+                "title": "句型练习",
+                "subtitle": "重点句型",
+                "icon": "✏️",
+                "type": "sentence",
+                "time": "5分"
+              },
+              {
+                "id": "s6",
+                "title": "默写练习",
+                "subtitle": "看中文写英文",
+                "icon": "📝",
+                "type": "write",
+                "time": "8分"
+              },
+              {
+                "id": "s7",
+                "title": "听句理解",
+                "subtitle": "听句子选答案",
+                "icon": "🎧",
+                "type": "listenSent",
+                "time": "6分"
+              },
+              {
+                "id": "s8",
+                "title": "单元测验",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "What is 'clothes' in Chinese?",
+                "opts": [
+                  "衣服；服装",
+                  "裤子",
+                  "帽子",
+                  "连衣裙"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'pants' in Chinese?",
+                "opts": [
+                  "裤子",
+                  "衣服；服装",
+                  "帽子",
+                  "连衣裙"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'hat' in Chinese?",
+                "opts": [
+                  "帽子",
+                  "衣服；服装",
+                  "裤子",
+                  "连衣裙"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'dress' in Chinese?",
+                "opts": [
+                  "连衣裙",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'skirt' in Chinese?",
+                "opts": [
+                  "女裙",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'coat' in Chinese?",
+                "opts": [
+                  "外衣；大衣",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'sweater' in Chinese?",
+                "opts": [
+                  "毛衣",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'sock' in Chinese?",
+                "opts": [
+                  "短袜",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'shorts' in Chinese?",
+                "opts": [
+                  "短裤",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'jacket' in Chinese?",
+                "opts": [
+                  "夹克衫",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'shirt' in Chinese?",
+                "opts": [
+                  "衬衫",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'whose' in Chinese?",
+                "opts": [
+                  "谁的",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'mine' in Chinese?",
+                "opts": [
+                  "我的",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'pack' in Chinese?",
+                "opts": [
+                  "收拾（行李）",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'wait' in Chinese?",
+                "opts": [
+                  "等待",
+                  "衣服；服装",
+                  "裤子",
+                  "帽子"
+                ],
+                "answer": 0
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "clothes",
+                "opts": [
+                  "clothes",
+                  "pants",
+                  "hat",
+                  "dress"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "pants",
+                "opts": [
+                  "pants",
+                  "clothes",
+                  "hat",
+                  "dress"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "hat",
+                "opts": [
+                  "hat",
+                  "clothes",
+                  "pants",
+                  "dress"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "dress",
+                "opts": [
+                  "dress",
+                  "clothes",
+                  "pants",
+                  "hat"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "skirt",
+                "opts": [
+                  "skirt",
+                  "clothes",
+                  "pants",
+                  "hat"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "coat",
+                "opts": [
+                  "coat",
+                  "clothes",
+                  "pants",
+                  "hat"
+                ],
+                "answer": 0
+              }
+            ],
+            "storybook": {
+              "title": "My clothes Story",
+              "pages": [
+                {
+                  "emoji": "👔",
+                  "en": "This is about clothes.",
+                  "cn": "本课学习：衣服；服装（clothes）",
+                  "hint": "My clothes"
+                },
+                {
+                  "emoji": "👖",
+                  "en": "This is about pants.",
+                  "cn": "本课学习：裤子（pants）",
+                  "hint": "My clothes"
+                },
+                {
+                  "emoji": "🎩",
+                  "en": "This is about hat.",
+                  "cn": "本课学习：帽子（hat）",
+                  "hint": "My clothes"
+                },
+                {
+                  "emoji": "👗",
+                  "en": "This is about dress.",
+                  "cn": "本课学习：连衣裙（dress）",
+                  "hint": "My clothes"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "Which word is in this unit?",
+                  "opts": [
+                    "clothes",
+                    "pants",
+                    "hat",
+                    "dress"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "What does 'clothes' mean?",
+                  "opts": [
+                    "衣服；服装",
+                    "pants",
+                    "再见",
+                    "谢谢"
+                  ],
+                  "answer": 0
+                }
+              ]
+            }
           },
           {
             "id": "g4v2_u6",
@@ -585,12 +2265,432 @@
             "title": "Shopping",
             "cn": "购物",
             "emoji": "🛍️",
-            "available": false,
-            "vocabulary": [],
-            "dialogues": [],
-            "stages": [],
-            "quizQuestions": [],
-            "listeningQuestions": []
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "glove",
+                "cn": "手套",
+                "emoji": "🧤"
+              },
+              {
+                "en": "scarf",
+                "cn": "围巾；披巾",
+                "emoji": "🧣"
+              },
+              {
+                "en": "umbrella",
+                "cn": "伞；雨伞",
+                "emoji": "☂️"
+              },
+              {
+                "en": "sunglasses",
+                "cn": "太阳镜",
+                "emoji": "🕶️"
+              },
+              {
+                "en": "pretty",
+                "cn": "美观的；精致的",
+                "emoji": "✨"
+              },
+              {
+                "en": "expensive",
+                "cn": "昂贵的；花钱多的",
+                "emoji": "💎"
+              },
+              {
+                "en": "cheap",
+                "cn": "花钱少的；便宜的",
+                "emoji": "🏷️"
+              },
+              {
+                "en": "nice",
+                "cn": "好的",
+                "emoji": "👍"
+              },
+              {
+                "en": "try on",
+                "cn": "试穿",
+                "emoji": "👗"
+              },
+              {
+                "en": "size",
+                "cn": "尺码；号",
+                "emoji": "📏"
+              },
+              {
+                "en": "of course",
+                "cn": "当然",
+                "emoji": "✅"
+              },
+              {
+                "en": "too",
+                "cn": "太；过于",
+                "emoji": "⚠️"
+              },
+              {
+                "en": "just",
+                "cn": "正好；恰好",
+                "emoji": "👌"
+              },
+              {
+                "en": "dollar",
+                "cn": "元（美国货币）",
+                "emoji": "💵"
+              },
+              {
+                "en": "sale",
+                "cn": "特价销售；大减价",
+                "emoji": "🛒"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Dialogue 1",
+                "lines": [
+                  {
+                    "speaker": "A",
+                    "en": "Look! glove.",
+                    "cn": "看！手套。"
+                  },
+                  {
+                    "speaker": "B",
+                    "en": "Yes. And scarf.",
+                    "cn": "是的。还有围巾；披巾。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "单词学习",
+                "subtitle": "15个核心词",
+                "icon": "📖",
+                "type": "vocab",
+                "time": "5分"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听音选词",
+                "icon": "👂",
+                "type": "listenWord",
+                "time": "5分"
+              },
+              {
+                "id": "s3",
+                "title": "中英配对",
+                "subtitle": "连线配对",
+                "icon": "🔗",
+                "type": "match",
+                "time": "5分"
+              },
+              {
+                "id": "s4",
+                "title": "绘本阅读",
+                "subtitle": "情景故事",
+                "icon": "📚",
+                "type": "storybook",
+                "time": "8分"
+              },
+              {
+                "id": "s5",
+                "title": "句型练习",
+                "subtitle": "重点句型",
+                "icon": "✏️",
+                "type": "sentence",
+                "time": "5分"
+              },
+              {
+                "id": "s6",
+                "title": "默写练习",
+                "subtitle": "看中文写英文",
+                "icon": "📝",
+                "type": "write",
+                "time": "8分"
+              },
+              {
+                "id": "s7",
+                "title": "听句理解",
+                "subtitle": "听句子选答案",
+                "icon": "🎧",
+                "type": "listenSent",
+                "time": "6分"
+              },
+              {
+                "id": "s8",
+                "title": "单元测验",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "10分"
+              }
+            ],
+            "quizQuestions": [
+              {
+                "q": "What is 'glove' in Chinese?",
+                "opts": [
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞",
+                  "太阳镜"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'scarf' in Chinese?",
+                "opts": [
+                  "围巾；披巾",
+                  "手套",
+                  "伞；雨伞",
+                  "太阳镜"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'umbrella' in Chinese?",
+                "opts": [
+                  "伞；雨伞",
+                  "手套",
+                  "围巾；披巾",
+                  "太阳镜"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'sunglasses' in Chinese?",
+                "opts": [
+                  "太阳镜",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'pretty' in Chinese?",
+                "opts": [
+                  "美观的；精致的",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'expensive' in Chinese?",
+                "opts": [
+                  "昂贵的；花钱多的",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'cheap' in Chinese?",
+                "opts": [
+                  "花钱少的；便宜的",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'nice' in Chinese?",
+                "opts": [
+                  "好的",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'try on' in Chinese?",
+                "opts": [
+                  "试穿",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'size' in Chinese?",
+                "opts": [
+                  "尺码；号",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'of course' in Chinese?",
+                "opts": [
+                  "当然",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'too' in Chinese?",
+                "opts": [
+                  "太；过于",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'just' in Chinese?",
+                "opts": [
+                  "正好；恰好",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'dollar' in Chinese?",
+                "opts": [
+                  "元（美国货币）",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              },
+              {
+                "q": "What is 'sale' in Chinese?",
+                "opts": [
+                  "特价销售；大减价",
+                  "手套",
+                  "围巾；披巾",
+                  "伞；雨伞"
+                ],
+                "answer": 0
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "glove",
+                "opts": [
+                  "glove",
+                  "scarf",
+                  "umbrella",
+                  "sunglasses"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "scarf",
+                "opts": [
+                  "scarf",
+                  "glove",
+                  "umbrella",
+                  "sunglasses"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "umbrella",
+                "opts": [
+                  "umbrella",
+                  "glove",
+                  "scarf",
+                  "sunglasses"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "sunglasses",
+                "opts": [
+                  "sunglasses",
+                  "glove",
+                  "scarf",
+                  "umbrella"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "pretty",
+                "opts": [
+                  "pretty",
+                  "glove",
+                  "scarf",
+                  "umbrella"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "expensive",
+                "opts": [
+                  "expensive",
+                  "glove",
+                  "scarf",
+                  "umbrella"
+                ],
+                "answer": 0
+              }
+            ],
+            "storybook": {
+              "title": "Shopping Story",
+              "pages": [
+                {
+                  "emoji": "🧤",
+                  "en": "This is about glove.",
+                  "cn": "本课学习：手套（glove）",
+                  "hint": "Shopping"
+                },
+                {
+                  "emoji": "🧣",
+                  "en": "This is about scarf.",
+                  "cn": "本课学习：围巾；披巾（scarf）",
+                  "hint": "Shopping"
+                },
+                {
+                  "emoji": "☂️",
+                  "en": "This is about umbrella.",
+                  "cn": "本课学习：伞；雨伞（umbrella）",
+                  "hint": "Shopping"
+                },
+                {
+                  "emoji": "🕶️",
+                  "en": "This is about sunglasses.",
+                  "cn": "本课学习：太阳镜（sunglasses）",
+                  "hint": "Shopping"
+                }
+              ],
+              "questions": [
+                {
+                  "q": "Which word is in this unit?",
+                  "opts": [
+                    "glove",
+                    "scarf",
+                    "umbrella",
+                    "sunglasses"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "What does 'glove' mean?",
+                  "opts": [
+                    "手套",
+                    "scarf",
+                    "再见",
+                    "谢谢"
+                  ],
+                  "answer": 0
+                }
+              ]
+            }
           }
         ]
       }

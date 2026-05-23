@@ -205,33 +205,6 @@ export default function JuniorGrammar() {
 
       }
 
-      {/* ===== 选学专题 · 虚拟语气 (preserve from previous integration) ===== */}
-      <a
-        href="/grammar-lab/subjunctive"
-        className="block mb-6 rounded-2xl border bg-gradient-to-br from-amber-500/10 via-rose-500/5 to-primary/10 p-5 hover:shadow-tile transition group">
-        
-        <div className="flex items-start gap-4">
-          <div className="text-4xl flex-shrink-0">🎯</div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber-700 dark:text-amber-300 bg-amber-500/15 px-2 py-0.5 rounded">
-                <T>选学专题</T>
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 px-2 py-0.5 rounded">
-                <T>中考 + 高考衔接</T>
-              </span>
-            </div>
-            <div className="font-bold text-lg mt-2"><T>虚拟语气全攻克</T></div>
-            <div className="text-xs text-muted-foreground mt-1 leading-relaxed">
-              <T>前 3 关（If I were you · I wish 现在 · I wish 过去）正好对应中考要求，后面 6 关是高考扩展，提前预习</T>
-            </div>
-            <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-primary group-hover:gap-2 transition-all">
-              <T>进入专题 →</T>
-            </div>
-          </div>
-        </div>
-      </a>
-
       {/* ===== Map view ===== */}
       {view === "map" && pts.length > 0 && (
         <GrammarMasteryMap
@@ -242,90 +215,164 @@ export default function JuniorGrammar() {
         />
       )}
 
-      {/* ===== Hero: 总掌握度 / 待复习 / 智能推荐 (list view only) ===== */}
-      {view === "list" && pts.length > 0 &&
-      <section className="mb-6 grid gap-4 md:grid-cols-3">
-          {/* 总掌握度 */}
-          <div className="rounded-2xl border bg-gradient-to-br from-primary/5 to-primary/10 p-5">
-            <div className="flex items-center gap-4">
-              <MasteryRing
-              value={totalStats.score}
-              size={84}
-              stroke={8}
-              colorClass={ringColorByScore(totalStats.score)}>
-              
-                <div className="text-center">
-                  <div className="text-xl font-extrabold leading-none">
-                    {Math.round(totalStats.score * 100)}<span className="text-xs">%</span>
+      {/* ===== HERO: today's single decisive CTA (list view only) =====
+           Logic:
+             - If anything is due → "今日待复习" card (rose, urgent)
+             - Else if a recommend exists → "今日推荐" card (emerald, exploratory)
+             - Else → small empty state
+           Only ONE big card so the user knows exactly what to do next. */}
+      {view === "list" && pts.length > 0 && (() => {
+        const top = dueList[0];
+        if (top) {
+          const meta = JUNIOR_LEVEL_META[top.ms.mastery_level ?? 0];
+          return (
+            <section className="mb-5">
+              <Link
+                to={juniorGrammarPlayPath(top.p.id, top.p)}
+                className="block rounded-2xl border border-rose-300/60 dark:border-rose-800/60 bg-gradient-to-br from-rose-50 via-card to-rose-50/40 dark:from-rose-950/30 dark:via-card dark:to-rose-950/10 p-5 hover:shadow-md transition group">
+                <div className="flex items-center gap-4">
+                  <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-rose-500/15 text-2xl">🔥</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-rose-700 dark:text-rose-300 bg-rose-500/15 px-1.5 py-0.5 rounded">
+                        <T>今日待复习</T>
+                      </span>
+                      <span className="text-[10px] font-bold text-rose-600 tabular-nums">
+                        × {totalStats.dueNow}
+                      </span>
+                    </div>
+                    <div className="mt-1.5 font-extrabold text-lg leading-tight truncate">
+                      {meta.emoji} {top.p.title}
+                    </div>
+                    <div className="text-[11px] text-muted-foreground mt-0.5">
+                      <T>抢在遗忘曲线之前重做</T> · CEFR {top.p.cefr}
+                    </div>
                   </div>
-                  <div className="text-[9px] text-muted-foreground mt-0.5"><T>总掌握</T></div>
+                  <div className="shrink-0 inline-flex items-center gap-1 rounded-xl bg-rose-600 text-white px-4 py-2 text-sm font-bold group-hover:bg-rose-700 transition">
+                    <T>立即复习</T> <ChevronRight className="size-4" />
+                  </div>
                 </div>
-              </MasteryRing>
-              <div className="flex-1 min-w-0">
-                <div className="text-xs text-muted-foreground"><T>已掌握考点</T></div>
-                <div className="text-2xl font-extrabold tabular-nums">
-                  {totalStats.mastered}<span className="text-base font-normal text-muted-foreground"> / {totalStats.total}</span>
+              </Link>
+            </section>
+          );
+        }
+        if (recommendNext) {
+          return (
+            <section className="mb-5">
+              <Link
+                to={juniorGrammarPlayPath(recommendNext.point.id, recommendNext.point)}
+                className="block rounded-2xl border border-emerald-300/60 dark:border-emerald-800/60 bg-gradient-to-br from-emerald-50 via-card to-emerald-50/40 dark:from-emerald-950/30 dark:via-card dark:to-emerald-950/10 p-5 hover:shadow-md transition group">
+                <div className="flex items-center gap-4">
+                  <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-emerald-500/15 text-2xl">
+                    {recommendNext.category.emoji}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 px-1.5 py-0.5 rounded inline-flex items-center gap-1">
+                        <Sparkles className="size-3" /> <T>今日推荐</T>
+                      </span>
+                      <span className="text-[10px] text-muted-foreground">
+                        <T>从最薄弱模块开始</T>
+                      </span>
+                    </div>
+                    <div className="mt-1.5 font-extrabold text-lg leading-tight truncate">
+                      {recommendNext.point.title}
+                    </div>
+                    <div className="text-[11px] text-muted-foreground mt-0.5">
+                      {recommendNext.category.name_cn} · CEFR {recommendNext.point.cefr}
+                    </div>
+                  </div>
+                  <div className="shrink-0 inline-flex items-center gap-1 rounded-xl bg-emerald-600 text-white px-4 py-2 text-sm font-bold group-hover:bg-emerald-700 transition">
+                    <T>立即开始</T> <ChevronRight className="size-4" />
+                  </div>
                 </div>
-                <div className="mt-1 text-[11px] text-muted-foreground"><T>👑 = 抗遗忘 21 天</T></div>
-              </div>
+              </Link>
+            </section>
+          );
+        }
+        return null;
+      })()}
+
+      {/* ===== Compact 4-tile stat strip (list view only) ===== */}
+      {view === "list" && pts.length > 0 && (
+        <section className="mb-6 grid grid-cols-2 gap-2 md:grid-cols-4">
+          {/* 总掌握度 */}
+          <div className="rounded-xl border bg-card p-3">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground"><T>总掌握度</T></div>
+            <div className="mt-1 text-2xl font-extrabold tabular-nums">
+              {Math.round(totalStats.score * 100)}<span className="text-sm font-normal text-muted-foreground">%</span>
+            </div>
+            <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+              <div
+                className={cn("h-full transition-all", totalStats.score >= 0.85 ? "bg-yellow-500" : totalStats.score >= 0.6 ? "bg-amber-500" : totalStats.score >= 0.3 ? "bg-emerald-500" : "bg-sky-500")}
+                style={{ width: `${Math.max(2, totalStats.score * 100)}%` }}
+              />
             </div>
           </div>
-
-          {/* 今日待复习 */}
-          <div className="rounded-2xl border bg-card p-5">
-            <div className="flex items-center justify-between mb-2">
-              <div className="text-xs font-bold uppercase tracking-wider text-rose-600 flex items-center gap-1">
-                <Flame className="size-3.5" /> <T>今日待复习</T>
-              </div>
-              <span className="text-2xl font-extrabold tabular-nums text-rose-600">{totalStats.dueNow}</span>
+          {/* 已掌握 */}
+          <div className="rounded-xl border bg-card p-3">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground inline-flex items-center gap-1">
+              👑 <T>已掌握</T>
             </div>
-            {dueList.length === 0 ?
-          <p className="text-xs text-muted-foreground mt-2"><T>今日无到期复习 — 学个新考点吧 ✨</T></p> :
-
-          <ul className="space-y-1.5 mt-2">
-                {dueList.map(({ p, ms }) => {
-              const meta = JUNIOR_LEVEL_META[ms.mastery_level ?? 0];
-              return (
-                <li key={p.id}>
-                      <Link
-                    to={juniorGrammarPlayPath(p.id, p)}
-                    className="flex items-center justify-between gap-2 rounded-lg p-1.5 text-xs hover:bg-muted/50">
-                    
-                        <span className="truncate">{meta.emoji} {p.title}</span>
-                        <ChevronRight className="size-3.5 text-muted-foreground shrink-0" />
-                      </Link>
-                    </li>);
-
-            })}
-              </ul>
-          }
+            <div className="mt-1 text-2xl font-extrabold tabular-nums">
+              {totalStats.mastered}<span className="text-sm font-normal text-muted-foreground"> / {totalStats.total}</span>
+            </div>
+            <div className="mt-1 text-[10px] text-muted-foreground"><T>抗遗忘 21 天</T></div>
           </div>
-
-          {/* 智能推荐 */}
-          <div className="rounded-2xl border bg-card p-5">
-            <div className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1 mb-2">
-              <Sparkles className="size-3.5" /> <T>智能推荐</T>
+          {/* 待复习 */}
+          <div className={cn(
+            "rounded-xl border p-3",
+            totalStats.dueNow > 0 ? "bg-rose-50/60 dark:bg-rose-950/20 border-rose-300/60 dark:border-rose-800/60" : "bg-card",
+          )}>
+            <div className={cn(
+              "text-[10px] font-bold uppercase tracking-wider inline-flex items-center gap-1",
+              totalStats.dueNow > 0 ? "text-rose-700 dark:text-rose-300" : "text-muted-foreground",
+            )}>
+              <Flame className="size-3" /> <T>待复习</T>
             </div>
-            {recommendNext ?
-          <Link to={juniorGrammarPlayPath(recommendNext.point.id, recommendNext.point)} className="block group">
-                <div className="text-xs text-muted-foreground"><T>从最薄弱模块开始</T></div>
-                <div className="text-base font-bold mt-0.5 group-hover:text-primary transition line-clamp-2">
-                  {recommendNext.category.emoji} {recommendNext.point.title}
-                </div>
-                <div className="mt-2 text-[10px] text-muted-foreground">CEFR {recommendNext.point.cefr}</div>
-                <div className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-primary">
-                  <T>立即开始</T> <ChevronRight className="size-3" />
-                </div>
-              </Link> :
-
-          <p className="text-xs text-muted-foreground"><T>暂无推荐</T></p>
-          }
+            <div className={cn(
+              "mt-1 text-2xl font-extrabold tabular-nums",
+              totalStats.dueNow > 0 ? "text-rose-600" : "",
+            )}>
+              {totalStats.dueNow}
+            </div>
+            <div className="mt-1 text-[10px] text-muted-foreground">
+              {totalStats.dueNow > 0 ? <T>今天到期</T> : <T>暂无到期</T>}
+            </div>
+          </div>
+          {/* 错题分析 */}
+          <div className="rounded-xl border bg-card p-3">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground inline-flex items-center gap-1">
+              <Target className="size-3" /> <T>错题数</T>
+            </div>
+            <div className="mt-1 text-2xl font-extrabold tabular-nums">
+              {totalErrors}
+            </div>
+            <div className="mt-1 text-[10px] text-muted-foreground">
+              {totalErrors >= 5 ? <T>查看错因分布 ↓</T> : <T>需更多数据</T>}
+            </div>
           </div>
         </section>
-      }
+      )}
 
-      {/* ===== 错因雷达 (list view only) ===== */}
-      {view === "list" && totalErrors > 0 &&
+      {/* ===== 错因分布 (list view only) =====
+           Sparse data (< 5 errors) → thin inline strip (no radar — looks empty)
+           Rich data (≥ 5 errors)    → full radar + bar list */}
+      {view === "list" && totalErrors > 0 && totalErrors < 5 && (
+        <section className="mb-6 rounded-xl border bg-card px-4 py-3 flex items-center gap-3 text-xs">
+          <Target className="size-3.5 text-primary shrink-0" />
+          <span className="font-bold"><T>错因分布</T></span>
+          <span className="text-muted-foreground">
+            {(Object.entries(errorAgg) as [JuniorGrammarErrorReason, number][])
+              .filter(([, v]) => (v as number) > 0)
+              .sort((a, b) => (b[1] as number) - (a[1] as number))
+              .map(([k, v]) => `${JUNIOR_ERROR_REASON_LABELS[k]} ${v}`)
+              .join(" · ")}
+          </span>
+          <span className="ml-auto text-[10px] text-muted-foreground"><T>错满 5 题后展开雷达图</T></span>
+        </section>
+      )}
+      {view === "list" && totalErrors >= 5 &&
       <section className="mb-6 rounded-2xl border bg-card p-5">
           <div className="flex items-center justify-between mb-3">
             <div>
@@ -462,19 +509,40 @@ export default function JuniorGrammar() {
         })}
       </div>
 
-      {/* ===== Legend ===== */}
-      <div className="mt-8 rounded-2xl border bg-muted/30 p-4">
-        <div className="text-xs font-bold mb-2 flex items-center gap-1.5">
-          <TrendingUp className="size-3.5" /> <T>掌握等级说明</T>
-        </div>
-        <div className="grid gap-1.5 text-[11px] sm:grid-cols-2 md:grid-cols-5">
-          <div><T>🌱 未开始 — 还没练过</T></div>
-          <div><T>🌿 初学 — 见过题</T></div>
-          <div><T>🌳 熟悉 — 4 题正确率 ≥60%</T></div>
-          <div><T>⭐ 熟练 — 8 题 ≥80% 抗遗忘 7 天</T></div>
-          <div><T>👑 掌握 — 12 题多题型 ≥85% 抗遗忘 21 天</T></div>
-        </div>
+      {/* ===== Slim legend ===== */}
+      <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border bg-muted/30 px-4 py-2.5 text-[11px] text-muted-foreground">
+        <span className="font-bold text-foreground inline-flex items-center gap-1">
+          <TrendingUp className="size-3" /> <T>掌握等级</T>
+        </span>
+        <span>🌱 <T>未开始</T></span>
+        <span>·</span>
+        <span>🌿 <T>初学</T></span>
+        <span>·</span>
+        <span>🌳 <T>熟悉</T> ≥60%</span>
+        <span>·</span>
+        <span>⭐ <T>熟练</T> ≥80% · 7d</span>
+        <span>·</span>
+        <span>👑 <T>掌握</T> ≥85% · 21d</span>
       </div>
+
+      {/* ===== 选学专题 · 虚拟语气 (relegated to footer banner) ===== */}
+      <a
+        href="/grammar-lab/subjunctive"
+        className="mt-4 flex items-center gap-3 rounded-xl border bg-gradient-to-r from-amber-500/5 via-card to-primary/5 px-4 py-3 hover:shadow-sm transition group">
+        <span className="text-xl shrink-0">🎯</span>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-1.5 flex-wrap text-[10px] font-bold uppercase tracking-widest">
+            <span className="text-amber-700 dark:text-amber-300 bg-amber-500/15 px-1.5 py-0.5 rounded">
+              <T>选学专题</T>
+            </span>
+            <span className="text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 px-1.5 py-0.5 rounded">
+              <T>中考 + 高考衔接</T>
+            </span>
+          </div>
+          <div className="font-bold text-sm mt-1 truncate"><T>虚拟语气全攻克 · 9 关</T></div>
+        </div>
+        <ChevronRight className="size-4 text-muted-foreground group-hover:text-primary transition" />
+      </a>
       </>)}
     </main>);
 

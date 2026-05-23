@@ -1,9 +1,9 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { hasLabContent, juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
-import { ArrowLeft, RotateCw, Trophy } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -18,10 +18,9 @@ import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
 import { ImmersionCards, type ImmersionCard } from "@/components/grammar/ImmersionCards";
 import { GrammarQuestionCard, type GrammarQuestion, type AnswerResult } from "@/components/grammar/GrammarQuestionCard";
-import { JuniorCheckpoint } from "@/components/assessment/JuniorCheckpoint";
+import { GrammarTestComplete } from "@/components/grammar/GrammarTestComplete";
 import {
   CHALLENGE_QUESTIONS_JUNIOR,
-  CHALLENGE_THRESHOLD,
   recordGroupCompletion,
   type Streak } from
 "@/lib/challengeMode";
@@ -399,7 +398,7 @@ export default function JuniorGrammarPoint() {
           <div className="mt-6 text-center">
                 <button
               onClick={() => goToStage("reflect")}
-              className="rounded-full bg-gradient-to-r from-amber-500 to-rose-500 px-6 py-3 text-sm font-extrabold text-white shadow-md hover:shadow-lg transition">
+              className="playful-btn bg-gradient-to-r from-pink-500 via-rose-400 to-cyan-400 px-8 py-3 text-sm text-white">
                   <T>✨ 看看本次表现 →</T>
                 
             </button>
@@ -410,119 +409,31 @@ export default function JuniorGrammarPoint() {
 
         {/* Stage 4: Reflect (always) */}
         {stage === "reflect" &&
-        <section className="rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-rose-50 p-6 sm:p-8 text-center shadow-sm dark:from-amber-950/30 dark:to-rose-950/30">
-            <Trophy className="mx-auto size-12 text-amber-500" />
-            <h3 className="mt-2 text-xl font-extrabold">
-              {pct === 100 ? "🌟 满分通关！" : pct >= 90 ? "🌟 太厉害啦！" : pct >= 70 ? "👍 不错哦！" : "💪 再来一次会更好！"}
-            </h3>
-            {qs.length > 0 ?
-          <p className="mt-1 text-sm text-muted-foreground">
-                <T>答对</T> {correctCount} / {qs.length} <T>· 正确率</T>{" "}
-                <span className="font-extrabold text-amber-600">{pct}%</span>
-              </p> :
-
-          <p className="mt-1 text-sm text-muted-foreground"><T>已完成本考点的学习</T></p>
-          }
-
-            {/* Per-question quick review */}
-            {answeredCount > 0 &&
-          <div className="mt-4 mx-auto max-w-md rounded-2xl bg-card/80 p-3 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-2"><T>本次答题概览</T></div>
-                <div className="flex flex-wrap gap-1.5">
-                  {qs.map((q, i) => {
-                const r = results[q.id];
-                const ok = r && (r.kind === "correct" || r.kind === "acceptable");
-                return (
-                  <span
-                    key={q.id}
-                    className={cn(
-                      "inline-flex items-center justify-center w-7 h-7 rounded-md text-[11px] font-bold",
-                      ok && "bg-emerald-500 text-white",
-                      r && !ok && "bg-rose-500 text-white",
-                      !r && "bg-muted text-muted-foreground"
-                    )}
-                    title={`第 ${i + 1} 题`}>
-                    
-                        {i + 1}
-                      </span>);
-
-              })}
-                </div>
-              </div>
-          }
-
-            {id && pt && qs.length > 0 && (
-              <div className="mt-4 flex justify-center">
-                <JuniorCheckpoint
-                  pointId={id}
-                  pointTitle={pt.title}
-                  grade={pt.grade ?? 7}
-                />
-              </div>
-            )}
-
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
-              <button
-              onClick={resetAll}
-              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-rose-500 to-amber-500 px-5 py-2 text-sm font-extrabold text-white shadow">
-              
-                <RotateCw className="size-4" /> <T>再做一遍</T>
-              </button>
-              {/* 挑战模式入口 */}
-              {groupStreak.challenge_unlocked && !isChallenge &&
-            <button
-              onClick={() => {
-                const next = new URLSearchParams(searchParams);
-                next.set("challenge", "1");
-                setSearchParams(next);
-                resetAll();
-              }}
-              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 px-5 py-2 text-sm font-extrabold text-white shadow">
-                  <T>🏆 挑战模式（</T>
-              {CHALLENGE_QUESTIONS_JUNIOR} <T>题）</T>
-                </button>
-            }
-              {isChallenge &&
-            <button
-              onClick={() => {
-                const next = new URLSearchParams(searchParams);
-                next.delete("challenge");
-                setSearchParams(next);
-                resetAll();
-              }}
-              className="inline-flex items-center gap-1.5 rounded-full border-2 border-violet-300 bg-card px-5 py-2 text-sm font-extrabold text-violet-700 shadow-sm hover:bg-violet-50 dark:hover:bg-violet-950/30">
-                  <T>↩️ 退出挑战模式</T>
-                
-            </button>
-            }
-              <Link
-              to="/junior/grammar"
-              className="inline-flex items-center gap-1.5 rounded-full border-2 border-indigo-300 bg-card px-5 py-2 text-sm font-extrabold text-indigo-600 shadow-sm hover:bg-indigo-50 dark:hover:bg-indigo-950/30">
-                <T>📚 下一个考点</T>
-              
-            </Link>
-              <Link
-              to="/junior"
-              className="inline-flex items-center gap-1.5 rounded-full border-2 border-amber-300 bg-card px-5 py-2 text-sm font-extrabold text-amber-700 shadow-sm hover:bg-amber-50 dark:hover:bg-amber-950/30">
-                <T>🏠 初中首页</T>
-              
-            </Link>
-            </div>
-
-            {/* 连胜进度提示 */}
-            {!groupStreak.challenge_unlocked && pct >= 70 &&
-          <p className="mt-4 text-xs font-bold text-violet-600 dark:text-violet-300">
-                <T>🔥 连续完成</T> {groupStreak.consecutive_count}/{CHALLENGE_THRESHOLD} <T>组</T>
-                {groupStreak.consecutive_count < CHALLENGE_THRESHOLD &&
-            ` · 再 ${CHALLENGE_THRESHOLD - groupStreak.consecutive_count} 组解锁挑战模式 🏆`}
-              </p>
-          }
-            {!groupStreak.challenge_unlocked && pct < 70 && groupStreak.consecutive_count === 0 &&
-          <p className="mt-4 text-xs text-muted-foreground">
-                <T>💡 单组正确率 ≥70% 才计入连胜，加油！</T>
-              </p>
-          }
-          </section>
+        <GrammarTestComplete
+          pointId={id!}
+          pointTitle={pt.title}
+          grade={pt.grade ?? 7}
+          qs={qs}
+          results={results}
+          correctCount={correctCount}
+          pct={pct}
+          grammarBackTo={grammarBackTo}
+          isChallenge={isChallenge}
+          groupStreak={groupStreak}
+          onReset={resetAll}
+          onEnterChallenge={() => {
+            const next = new URLSearchParams(searchParams);
+            next.set("challenge", "1");
+            setSearchParams(next);
+            resetAll();
+          }}
+          onExitChallenge={() => {
+            const next = new URLSearchParams(searchParams);
+            next.delete("challenge");
+            setSearchParams(next);
+            resetAll();
+          }}
+        />
         }
       </div>
 

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Lock, Check, Sparkles, RotateCw, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -355,10 +355,10 @@ export default function JuniorGrammarMastery() {
 
   if (loading) {
     return (
-      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10">
-        <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-          <RotateCw className="size-4 animate-spin" />
-          <T>加载中...</T>
+      <main className="playful-shell grid min-h-screen place-items-center">
+        <div className="playful-card px-8 py-6 text-center">
+          <RotateCw className="mx-auto size-8 animate-spin text-pink-400" />
+          <p className="mt-3 text-sm font-bold text-muted-foreground"><T>加载中...</T></p>
         </div>
       </main>
     );
@@ -366,7 +366,7 @@ export default function JuniorGrammarMastery() {
 
   if (!pt) {
     return (
-      <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 text-center">
+      <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-10 text-center">
         <p className="text-sm text-muted-foreground"><T>语法点不存在</T></p>
       </main>
     );
@@ -385,7 +385,7 @@ export default function JuniorGrammarMastery() {
   const backTo = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
 
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-4">
+    <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-4">
       <Link
         to={backTo}
         className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
@@ -393,18 +393,20 @@ export default function JuniorGrammarMastery() {
         <ArrowLeft className="size-4" /> <T>返回考点列表</T>
       </Link>
 
-      {/* ─── Header card ─── */}
-      <div className="rounded-2xl border bg-gradient-to-br from-emerald-50 via-white to-emerald-50 dark:from-emerald-950/40 dark:via-background dark:to-emerald-950/40 p-5">
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 px-2.5 py-0.5 text-xs font-bold">
+      <header className="playful-card relative overflow-hidden p-5">
+        <span className="pointer-events-none absolute -right-6 -top-6 size-24 rounded-full bg-pink-200/40 blur-2xl" />
+        <span className="pointer-events-none absolute -bottom-4 -left-4 size-20 rounded-full bg-cyan-200/40 blur-2xl" />
+        <div className="relative inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-pink-100 to-cyan-100 px-2.5 py-0.5 text-xs font-bold text-pink-600 dark:from-pink-950/60 dark:to-cyan-950/60 dark:text-pink-300">
           <Sparkles className="size-3" /> {pt.code ?? "G8"} · {pt.cefr ?? "B1"}
         </div>
-        <h1 className="mt-2 text-2xl font-extrabold tracking-tight">{pt.title}</h1>
-        <p className="mt-1 text-xs text-muted-foreground">
-          <T>自适应学习 · 答对才能进阶！</T> · Master through adaptive learning — answer correctly to advance.
+        <h1 className="relative mt-2 text-2xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">
+          {pt.title}
+        </h1>
+        <p className="relative mt-1 text-xs text-muted-foreground">
+          <T>自适应学习 · 答对才能进阶！</T>
         </p>
-      </div>
+      </header>
 
-      {/* ─── Level rail ─── */}
       <div className="grid grid-cols-5 gap-2">
         {LEVELS.map((l) => {
           const s = state[l.id];
@@ -415,9 +417,9 @@ export default function JuniorGrammarMastery() {
             <div
               key={l.id}
               className={cn(
-                "rounded-xl border p-3 flex flex-col items-center gap-1.5 transition",
-                isActive && "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 ring-2 ring-emerald-500/40",
-                isCompleted && "border-emerald-300 bg-emerald-50/60 dark:bg-emerald-950/20",
+                "rounded-2xl border-2 p-3 flex flex-col items-center gap-1.5 transition",
+                isActive && "border-pink-400 bg-gradient-to-br from-pink-50 to-cyan-50 dark:from-pink-950/40 dark:to-cyan-950/30 ring-2 ring-pink-300/40",
+                isCompleted && "border-cyan-300 bg-cyan-50/60 dark:bg-cyan-950/20",
                 isLocked && "border-muted bg-muted/30 opacity-60",
               )}
             >
@@ -432,7 +434,7 @@ export default function JuniorGrammarMastery() {
               <div className="text-[10px] font-bold text-muted-foreground">Level {l.id}</div>
               <div className="text-[11px] font-bold leading-tight text-center">{l.name}</div>
               {isActive && (
-                <div className="text-[9px] tabular-nums text-emerald-700 dark:text-emerald-300">
+                <div className="text-[9px] tabular-nums text-pink-600 dark:text-pink-300">
                   {s.correct} / {s.answered} ✓
                 </div>
               )}
@@ -443,9 +445,9 @@ export default function JuniorGrammarMastery() {
 
       {/* ─── Active question card ─── */}
       {activeQ ? (
-        <div className="rounded-2xl border bg-card p-5 space-y-3">
-          <div className="flex items-center justify-between text-xs">
-            <span className="rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 px-2.5 py-0.5 font-bold">
+        <div className="space-y-3">
+          <div className="flex items-center justify-between text-xs px-1">
+            <span className="rounded-full bg-gradient-to-r from-pink-100 to-cyan-100 px-2.5 py-0.5 font-bold text-pink-600 dark:from-pink-950/50 dark:to-cyan-950/50 dark:text-pink-300">
               <T>Level</T> {cfg.id} · {cfg.name}
             </span>
             <div className="flex items-center gap-2">
@@ -485,7 +487,7 @@ export default function JuniorGrammarMastery() {
               </div>
               <button
                 onClick={handleNext}
-                className="shrink-0 inline-flex items-center gap-1 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-sm font-bold"
+                className="playful-btn playful-btn-cyan shrink-0 inline-flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-teal-400 px-4 py-2 text-sm text-white"
               >
                 {(() => {
                   const ls = lvlState;
@@ -499,7 +501,7 @@ export default function JuniorGrammarMastery() {
           )}
         </div>
       ) : (
-        <div className="rounded-2xl border bg-card p-8 text-center space-y-2">
+        <div className="playful-card p-8 text-center space-y-2">
           <p className="text-sm text-muted-foreground"><T>加载题目中...</T></p>
         </div>
       )}
@@ -535,26 +537,28 @@ function CompletionScreen({
   const backTo = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
 
   return (
-    <main className="mx-auto min-h-screen max-w-3xl px-5 py-10 space-y-6 text-center">
-      <div className="rounded-2xl border bg-gradient-to-br from-amber-50 via-white to-emerald-50 dark:from-amber-950/30 dark:via-background dark:to-emerald-950/30 p-8 space-y-3">
-        <div className="text-5xl">🎉</div>
-        <h1 className="text-3xl font-extrabold tracking-tight">
+    <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-10 space-y-6 text-center">
+      <section className="relative overflow-hidden rounded-[2rem] border-2 border-pink-200/80 bg-gradient-to-br from-pink-100 via-white to-cyan-100 p-8 space-y-3 dark:border-pink-900/50 dark:from-pink-950/40 dark:via-background dark:to-cyan-950/40">
+        <div className="relative mx-auto grid size-20 place-items-center rounded-full bg-gradient-to-br from-pink-400 to-cyan-400 text-white shadow-lg spark-bob">
+          <Trophy className="size-10" />
+        </div>
+        <h1 className="relative text-3xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">
           <T>通关成功！</T>
         </h1>
-        <p className="text-base text-muted-foreground">
+        <p className="relative text-base text-muted-foreground">
           <T>你已经掌握了</T> <span className="font-bold text-foreground">{pt.title}</span>
         </p>
-        <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 px-4 py-1.5 text-sm font-bold">
+        <div className="relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500/15 to-cyan-500/15 px-4 py-1.5 text-sm font-bold text-pink-700 dark:text-pink-300">
           <Trophy className="size-4" />
           <T>总正确率</T> {pct}% · {totalCorrect} / {totalAnswered}
         </div>
-      </div>
+      </section>
 
       <div className="grid grid-cols-5 gap-2">
         {LEVELS.map((l) => {
           const s = state[l.id];
           return (
-            <div key={l.id} className="rounded-xl border bg-card p-3 space-y-1">
+            <div key={l.id} className="playful-card p-3 space-y-1">
               <div className="text-xl">{l.emoji}</div>
               <div className="text-[10px] font-bold">{l.name}</div>
               <div className="text-[10px] tabular-nums text-muted-foreground">{s.correct} / {s.answered}</div>
@@ -563,16 +567,16 @@ function CompletionScreen({
         })}
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-2">
+      <div className="flex flex-wrap items-center justify-center gap-3">
         <button
           onClick={onRestart}
-          className="inline-flex items-center gap-1.5 rounded-xl border bg-card hover:bg-muted px-4 py-2 text-sm font-bold"
+          className="playful-btn inline-flex items-center gap-1.5 bg-gradient-to-r from-pink-500 to-rose-400 px-5 py-2.5 text-sm text-white"
         >
           <RotateCw className="size-4" /> <T>再做一遍</T>
         </button>
         <Link
           to={backTo}
-          className="inline-flex items-center gap-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 text-sm font-bold"
+          className="playful-btn playful-btn-cyan inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-500 to-teal-400 px-5 py-2.5 text-sm text-white"
         >
           <T>返回考点列表</T>
         </Link>

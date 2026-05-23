@@ -441,6 +441,63 @@ All colors MUST be HSL.
   .spark-bob, .spark-jump, .spark-pulse, .spark-tilt, .spark-spin { animation: none !important; }
 }
 
+/* ---------- Playful Cards — grammar test UI ---------- */
+.playful-shell {
+  background: linear-gradient(160deg, hsl(330 100% 97%) 0%, hsl(0 0% 100%) 42%, hsl(186 100% 97%) 100%);
+}
+.dark .playful-shell {
+  background: linear-gradient(160deg, hsl(330 40% 8%) 0%, hsl(230 25% 10%) 45%, hsl(186 40% 8%) 100%);
+}
+.playful-card {
+  border-radius: 1.5rem;
+  border: 2px solid hsl(330 80% 90% / 0.7);
+  background: hsl(0 0% 100% / 0.92);
+  box-shadow: 0 10px 28px -12px hsl(330 70% 60% / 0.25), 0 4px 0 0 hsl(330 60% 92%);
+  backdrop-filter: blur(8px);
+}
+.dark .playful-card {
+  border-color: hsl(330 40% 22% / 0.8);
+  background: hsl(230 25% 12% / 0.92);
+  box-shadow: 0 10px 28px -12px hsl(330 60% 20% / 0.5), 0 4px 0 0 hsl(330 30% 18%);
+}
+.playful-btn {
+  border-radius: 9999px;
+  font-weight: 800;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 0 0 hsl(330 70% 72%);
+}
+.playful-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 0 hsl(330 70% 68%);
+}
+.playful-btn:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 hsl(330 70% 72%);
+}
+.playful-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.playful-btn-cyan {
+  box-shadow: 0 4px 0 0 hsl(186 70% 62%);
+}
+.playful-btn-cyan:hover:not(:disabled) {
+  box-shadow: 0 6px 0 0 hsl(186 70% 58%);
+}
+.playful-btn-cyan:active:not(:disabled) {
+  box-shadow: 0 2px 0 0 hsl(186 70% 62%);
+}
+.playful-progress {
+  background: linear-gradient(90deg, hsl(330 85% 65%), hsl(350 90% 70%) 45%, hsl(186 80% 55%) 100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .playful-btn:hover:not(:disabled),
+  .playful-btn:active:not(:disabled) {
+    transform: none;
+  }
+}
+
 /* ---------- Stage 4: Rocket assembly ---------- */
 @keyframes gear-pop {
   0%   { transform: scale(0)   rotate(0deg);   opacity: 0; }

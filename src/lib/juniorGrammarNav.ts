@@ -22,7 +22,7 @@ export function juniorGrammarPlayPath(
   p?: Pick<JuniorPointNav, "content_depth"> | null,
   opts?: { classic?: boolean },
 ): string {
-  if (opts?.classic) return `/junior/grammar/${pointId}?classic=1`;
+  if (opts?.classic) return `/junior/grammar/${pointId}/mastery`;
   if (p && hasLabContent(p)) return `/junior/grammar-lab/${pointId}`;
   return `/junior/grammar/${pointId}`;
 }

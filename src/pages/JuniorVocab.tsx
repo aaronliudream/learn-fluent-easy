@@ -2,7 +2,7 @@ import { T } from "@/i18n/T";import { useEffect, useMemo, useRef, useState } fro
 import BackLink from "@/components/BackLink";
 import { GuestBanner } from "@/components/GuestBanner";
 import { useSearchParams } from "react-router-dom";
-import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight } from "lucide-react";
+import { ArrowLeft, Volume2, Check, X, Loader2, Sparkles, Trophy, RotateCw, Zap, Brain, Headphones, Music, Keyboard, BarChart3, Crown, Clock, Flame, ChevronRight, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { speak } from "@/lib/speak";
 import { recordAttempt } from "@/lib/gaokaoMastery";
@@ -19,10 +19,8 @@ import { useI18n } from "@/i18n/I18nProvider";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { toast } from "sonner";
 import VocabMasteryPath from "@/components/vocab/VocabMasteryPath";
-import RetentionChallengeCard from "@/components/vocab/RetentionChallengeCard";
 import GuidedSession from "@/components/vocab/GuidedSession";
-import ReviewPool from "@/components/vocab/ReviewPool";
-import { fetchJuniorDueWordIds, recordJuniorWordMastery } from "@/lib/juniorWordMastery";
+import { recordJuniorWordMastery } from "@/lib/juniorWordMastery";
 import { Rocket } from "lucide-react";
 
 type Vocab = {
@@ -39,7 +37,7 @@ type Vocab = {
   freq_rank: number | null;
 };
 
-type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs" | "guided" | "review";
+type Mode = null | "classic" | "bento" | "quest" | "duel" | "match" | "dict" | "srs" | "guided";
 const GROUP_SIZE = 20;
 
 const isChineseUi = (lang: string) => lang === "zh" || lang === "zh-TW";
@@ -161,9 +159,6 @@ export default function JuniorVocab() {
       />
     );
   }
-  if (mode === "review") {
-    return <JuniorReviewLauncher pool={words} onExit={exit} gradeNum={absGrade} />;
-  }
   if (mode === "bento") return <WordBento pool={activePool} onExit={exit} />;
   if (mode === "quest") return <WordQuest pool={activePool} onExit={exit} />;
   if (mode === "duel") return <WordDuel pool={activePool} onExit={exit} />;
@@ -186,6 +181,7 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
   const levelName = gradeLabel(grade, zh);
   const [masteryMap, setMasteryMap] = useState<Map<string, WordMasteryRow>>(new Map());
   const [loadedMastery, setLoadedMastery] = useState(false);
+  const [wordListOpen, setWordListOpen] = useState(false);
   const games: {mode: Exclude<Mode, null>;icon: any;title: string;desc: string;gradient: string;badge?: string;}[] = [
   { mode: "classic", icon: Brain, title: zh ? "智能选义" : "Smart meanings", desc: zh ? "听音辨义 · 自动接入复习曲线" : "Listen, choose meaning · feeds the review curve", gradient: "from-emerald-500 to-teal-500", badge: zh ? "推荐" : "Recommended" },
   { mode: "bento", icon: Sparkles, title: zh ? "单词便当" : "Word Bento", desc: zh ? "6×4 翻牌速配 · 训练反应力" : "6×4 fast matching · reaction training", gradient: "from-rose-500 to-orange-500" },
@@ -257,12 +253,71 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
         <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold">{zh ? "推荐 ★" : "Top pick ★"}</span>
       </button>
 
-      <div className="mb-4">
-        <ReviewPool
-          pool={words.map((w) => ({ id: w.id, word: w.word }))}
-          onStart={() => onPick("review")} />
-        
-      </div>
+      {/* 智能复习 — 读本年级 junior_word_mastery，与下方掌握度统计同源 */}
+      <button
+        onClick={() => {
+          if (dueCount > 0) {
+            onPick("srs");
+          } else if (studied === 0) {
+            toast.info(zh ? "还没有学过单词，先从第 1 组开始学吧 👇" : "No words learned yet — start with group 1 below 👇");
+            onPickGroup(0);
+          } else {
+            toast.success(zh ? `已学 ${studied} 词 · 今日没有到期单词，继续学新词巩固吧 ✨` : `${studied} words learned · nothing due today — keep learning new ones ✨`);
+          }
+        }}
+        className={cn(
+          "mb-4 group flex w-full items-center justify-between gap-3 rounded-2xl border px-5 py-4 text-left transition",
+          dueCount > 0
+            ? "border-amber-300 bg-amber-50 hover:bg-amber-100 dark:border-amber-700 dark:bg-amber-950/30 dark:hover:bg-amber-900/40"
+            : "border-border bg-card hover:border-primary/40",
+        )}
+      >
+        <div className="flex items-center gap-3">
+          <span
+            className={cn(
+              "flex size-10 shrink-0 items-center justify-center rounded-full",
+              dueCount > 0 ? "bg-amber-200 text-amber-700 dark:bg-amber-800 dark:text-amber-200" : "bg-muted text-muted-foreground",
+            )}
+          >
+            {dueCount > 0 ? <Clock className="size-5" /> : <Brain className="size-5" />}
+          </span>
+          <div>
+            <p className={cn("text-sm font-bold", dueCount > 0 ? "text-amber-900 dark:text-amber-100" : "text-foreground")}>
+              {dueCount > 0
+                ? zh
+                  ? `今天有 ${dueCount} 个词到了复习时间`
+                  : `${dueCount} words due for review today`
+                : zh
+                  ? "🧠 智能复习"
+                  : "🧠 Smart review"}
+            </p>
+            <p className={cn("mt-0.5 text-xs", dueCount > 0 ? "text-amber-700 dark:text-amber-300" : "text-muted-foreground")}>
+              {!loadedMastery
+                ? zh
+                  ? "加载中…"
+                  : "Loading…"
+                : dueCount > 0
+                  ? zh
+                    ? "按遗忘曲线安排 · 现在复习能记得最久"
+                    : "Spaced repetition · review now for best retention"
+                  : studied === 0
+                    ? zh
+                      ? "点这里去学第一组单词，系统会按艾宾浩斯曲线安排复习"
+                      : "Start group 1; reviews will be scheduled automatically"
+                    : zh
+                      ? `已学 ${studied} 词 · 今日没有到期单词`
+                      : `${studied} words studied · nothing due today`}
+            </p>
+          </div>
+        </div>
+        {dueCount > 0 ? (
+          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-amber-600 px-3 py-1.5 text-xs font-bold text-white transition group-hover:bg-amber-700">
+            {zh ? "立即复习" : "Review now"} <Sparkles className="size-3.5" />
+          </span>
+        ) : (
+          <ChevronRight className="size-4 shrink-0 text-muted-foreground" />
+        )}
+      </button>
 
       {/* ⭐ 彻底掌握 5 步走 */}
       <VocabMasteryPath
@@ -271,11 +326,6 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
         vocabIds={words.map((w) => w.id)}
         onPickMode={(m) => onPick(m as Exclude<Mode, null>)}
         onBrowse={() => onPickGroup(0)} />
-      
-
-      <RetentionChallengeCard
-        vocabIds={words.map((w) => w.id)}
-        onStart={() => onPick("srs")} />
       
 
       {/* 学习进度总览（高考同款风格，复用 junior_word_mastery） */}
@@ -307,48 +357,6 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
           <MiniStat icon={<Flame className="size-3.5" />} label={zh ? "📈 平均稳定" : "📈 Avg stability"} value={Math.round(avgStability * 10) / 10} tone="from-emerald-500 to-teal-500" hint={zh ? "天" : "d"} />
         </div>
       </section>
-
-      {/* SRS 智能复习入口（高考同款） */}
-      <button
-        onClick={() => {
-          if (dueCount > 0) {
-            onPick("srs");
-          } else if (studied === 0) {
-            toast.info(zh ? "还没有学过单词，先从第 1 组开始学吧 👇" : "No words learned yet — start with group 1 below 👇");
-            onPickGroup(0);
-          } else {
-            toast.success(zh ? `已学 ${studied} 词 · 今日没有到期单词，继续学新词巩固吧 ✨` : `${studied} words learned · nothing due today — keep learning new ones ✨`);
-          }
-        }}
-        className={cn(
-          "mb-5 group block w-full rounded-3xl border-2 p-5 text-left shadow-tile transition",
-          dueCount > 0 ? "border-primary bg-gradient-to-br from-primary/15 via-primary/5 to-transparent hover:border-primary" :
-          "border-border bg-card hover:border-primary/40"
-        )}>
-        
-        <div className="flex items-center gap-4">
-          <div className={cn("flex size-14 shrink-0 items-center justify-center rounded-2xl", dueCount > 0 ? "bg-primary/20 text-primary" : "bg-muted text-muted-foreground")}>
-            <Brain className="size-7" />
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <span className="text-base font-extrabold">🧠 {zh ? "智能复习" : "Smart review"}</span>
-              {dueCount > 0 &&
-              <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[11px] font-bold text-primary-foreground">
-                  <Flame className="size-3" /> {zh ? `今日 ${dueCount} 词待复习` : `${dueCount} due today`}
-                </span>
-              }
-            </div>
-            <div className="mt-1 text-xs text-muted-foreground">
-              {!loadedMastery ? zh ? "加载中…" : "Loading…" : dueCount === 0 ?
-              studied === 0 ? zh ? "点这里去学第一组单词，系统会按艾宾浩斯曲线安排复习 →" : "Tap to start group 1; reviews will be scheduled automatically →" :
-              zh ? `已学 ${studied} 词 · 今日没有到期单词，明天再来` : `${studied} words studied · nothing due today` :
-              zh ? `已学 ${studied} 词 · SM-2 算法 · 答错重学，答对延后` : `${studied} words studied · SM-2 schedule · wrong answers come back sooner`}
-            </div>
-          </div>
-          <ChevronRight className={cn("size-5", dueCount > 0 ? "text-primary" : "text-muted-foreground")} />
-        </div>
-      </button>
 
       {/* 辅助训练（提到清单上方，移动端不必滑到底） */}
       <div className="mb-3 mt-2 flex items-end justify-between">
@@ -397,13 +405,34 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
       </div>
 
       <section className="mb-6 mt-6">
-        <div className="mb-3 flex items-end justify-between gap-3">
-          <div>
-            <h2 className="text-base font-extrabold">{zh ? "单词清单" : "Word list"}</h2>
-            <p className="text-xs text-muted-foreground">{zh ? "和高中一样，先按清单逐组学习，再进入游戏强化。" : "Learn each 20-word group in order, then use games to reinforce it."}</p>
+        <button
+          type="button"
+          onClick={() => setWordListOpen((open) => !open)}
+          className="mb-3 flex w-full items-end justify-between gap-3 text-left"
+          aria-expanded={wordListOpen}
+        >
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-2">
+              <h2 className="text-base font-extrabold">{zh ? "单词清单" : "Word list"}</h2>
+              <ChevronDown
+                className={cn("size-4 shrink-0 text-muted-foreground transition-transform", wordListOpen && "rotate-180")}
+              />
+            </div>
+            <p className="text-xs text-muted-foreground">
+              {wordListOpen
+                ? zh
+                  ? "和高中一样，先按清单逐组学习，再进入游戏强化。"
+                  : "Learn each 20-word group in order, then use games to reinforce it."
+                : zh
+                  ? `共 ${groups.length} 组 · 点击展开逐组学习`
+                  : `${groups.length} groups · tap to expand`}
+            </p>
           </div>
-          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">{groups.length} {zh ? "组" : "groups"}</span>
-        </div>
+          <span className="shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">
+            {groups.length} {zh ? "组" : "groups"}
+          </span>
+        </button>
+        {wordListOpen && (
         <div className="grid gap-2">
           {groups.map((group, i) => {
             let gMastered = 0,gDue = 0,gTouched = 0;
@@ -450,6 +479,7 @@ function JuniorVocabHub({ words, groups, grade, gradeNum, onPick, onPickGroup }:
 
           })}
         </div>
+        )}
       </section>
 
     </main>);
@@ -902,41 +932,4 @@ function DictationSession({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () 
       </div>
     </main>);
 
-}
-
-/* -------- FSRS review launcher: filters pool to due words, then runs GuidedSession in review mode -------- */
-function JuniorReviewLauncher({ pool, onExit, gradeNum }: {pool: Vocab[];onExit: () => void;gradeNum: number;}) {
-  const [duePool, setDuePool] = useState<Vocab[] | null>(null);
-  useEffect(() => {
-    (async () => {
-      const ids = await fetchJuniorDueWordIds(pool.map((p) => p.id));
-      const set = new Set(ids);
-      setDuePool(pool.filter((p) => set.has(p.id)));
-    })();
-  }, [pool]);
-  if (duePool === null) {
-    return <main className="mx-auto flex min-h-[60dvh] max-w-2xl items-center justify-center text-muted-foreground"><Loader2 className="mr-2 size-5 animate-spin" /> <T>加载到期单词…</T></main>;
-  }
-  if (duePool.length === 0) {
-    return (
-      <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-        <button onClick={onExit} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"><ArrowLeft className="size-4" /> <T>返回</T></button>
-        <div className="rounded-3xl border border-border bg-card p-8 text-center">
-          <Trophy className="mx-auto size-12 text-amber-500" />
-          <h3 className="mt-2 text-xl font-extrabold"><T>今天没有到期复习的词 🎉</T></h3>
-          <p className="mt-1 text-sm text-muted-foreground"><T>先去开启一关通关，复习池会按遗忘曲线自动安排。</T></p>
-        </div>
-      </main>);
-
-  }
-  return (
-    <GuidedSession
-      pool={duePool}
-      onExit={onExit}
-      title="到期复习"
-      mode="review"
-      grade={gradeNum}
-      trackJuniorMastery
-    />
-  );
 }

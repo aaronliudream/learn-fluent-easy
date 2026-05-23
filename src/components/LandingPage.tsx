@@ -13,7 +13,6 @@ import {
   Brain,
   Check,
   Clock,
-  Cpu,
   Database,
   GraduationCap,
   Headphones,
@@ -74,44 +73,40 @@ const COURSE_CARDS = [
   {
     to: "/kids",
     icon: Backpack,
-    iconWrap: "bg-rose-100 text-rose-500",
     title: "小学英语",
     desc: "趣味启蒙 打好基础",
     tag: "三年级 - 六年级",
+    image: "/landing/universities/stanford.jpg",
+    university: "斯坦福大学",
   },
   {
     to: "/junior",
     icon: BookOpen,
-    iconWrap: "bg-sky-100 text-sky-600",
     title: "初中英语",
     desc: "中考同步 高效提分",
     tag: "七年级 - 九年级",
+    image: "/landing/universities/harvard.jpg",
+    university: "哈佛大学",
   },
   {
     to: "/gaokao",
     icon: GraduationCap,
-    iconWrap: "bg-indigo-100 text-indigo-600",
     title: "高中英语",
     desc: "高考冲刺 真题训练",
     tag: "高一 - 高三",
-  },
-  {
-    to: "/talk",
-    icon: Cpu,
-    iconWrap: "bg-amber-100 text-amber-600",
-    title: "AI 智能练习",
-    desc: "24 小时 AI 助教",
-    tag: "智能诊断 · 个性推题",
+    image: "/landing/universities/oxford.jpg",
+    university: "牛津大学",
   },
   {
     to: "/levels",
     icon: Target,
-    iconWrap: "bg-emerald-100 text-emerald-600",
     title: "成人英语",
     desc: "职场口语 CEFR 分级",
     tag: "A1 - C2",
+    image: "/landing/universities/tsinghua.jpg",
+    university: "清华大学",
   },
-];
+] as const;
 
 const WHY_ITEMS = [
   {
@@ -267,27 +262,43 @@ function AvatarImg({ src, alt }: { src: string; alt: string }) {
 
 function CourseCard({ c }: { c: (typeof COURSE_CARDS)[number] }) {
   const Icon = c.icon;
-  const cta = c.to === "/talk" ? "去体验" : "去学习";
   return (
     <Link
       to={c.to}
-      className="group flex flex-col rounded-xl border border-slate-200/90 bg-white p-4 shadow-[0_2px_14px_rgba(15,23,42,0.05)] transition hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(15,23,42,0.08)]">
-      <span
-        className={`inline-flex size-10 shrink-0 items-center justify-center rounded-lg ${c.iconWrap}`}>
-        <Icon className="size-[18px] shrink-0" strokeWidth={2.2} aria-hidden />
-      </span>
-      <h3 className="mt-2.5 text-[15px] font-bold leading-snug text-slate-900">
-        <T>{c.title}</T>
-      </h3>
-      <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
-        <T>{c.desc}</T>
-      </p>
-      <span className="mt-2 inline-block w-fit rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-600">
-        {c.tag}
-      </span>
-      <span className="mt-2.5 inline-flex items-center gap-1 text-xs font-bold text-sky-600 group-hover:gap-1.5">
-        <T>{cta}</T> <ArrowRight className="size-3.5 shrink-0" />
-      </span>
+      className="group relative flex min-h-[168px] flex-col overflow-hidden rounded-xl shadow-[0_2px_14px_rgba(15,23,42,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(15,23,42,0.14)]">
+      <img
+        src={c.image}
+        alt={c.university}
+        className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-105 saturate-110"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/50 to-slate-900/20" />
+
+      <div className="relative z-10 flex h-full flex-col p-4 text-white">
+        <div className="flex items-start justify-between gap-2">
+          <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm">
+            <Icon className="size-[18px] shrink-0" strokeWidth={2.2} aria-hidden />
+          </span>
+          <span className="rounded-full bg-black/30 px-2 py-0.5 text-[10px] font-medium backdrop-blur-sm">
+            {c.university}
+          </span>
+        </div>
+
+        <div className="mt-auto space-y-1.5">
+          <h3 className="text-[15px] font-bold leading-snug">
+            <T>{c.title}</T>
+          </h3>
+          <p className="text-xs leading-relaxed text-white/85">
+            <T>{c.desc}</T>
+          </p>
+          <span className="inline-block w-fit rounded-md bg-white/15 px-2 py-0.5 text-[10px] font-semibold text-white/90">
+            {c.tag}
+          </span>
+          <span className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-[#fcd98a] group-hover:gap-1.5">
+            <T>去学习</T> <ArrowRight className="size-3.5 shrink-0" />
+          </span>
+        </div>
+      </div>
     </Link>
   );
 }
@@ -434,14 +445,12 @@ export default function LandingPage() {
       <section id="courses" className="scroll-mt-20 bg-[#f4f6f9] py-10 md:py-12">
         <div className="mx-auto grid max-w-[1200px] gap-8 px-4 md:grid-cols-[1.2fr_0.85fr] md:gap-7 md:px-6 lg:gap-9">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {COURSE_CARDS.slice(0, 4).map((c) => (
+            {COURSE_CARDS.map((c) => (
               <CourseCard key={c.to} c={c} />
             ))}
           </div>
 
-          <div className="flex flex-col gap-5">
-            <CourseCard c={COURSE_CARDS[4]} />
-            <div id="why" className="scroll-mt-20">
+          <div id="why" className="scroll-mt-20">
             <h2 className="text-base font-bold text-slate-900 md:text-lg">
               <T>为什么选择 Big Moon English?</T>
             </h2>
@@ -465,7 +474,6 @@ export default function LandingPage() {
                 );
               })}
             </div>
-          </div>
           </div>
         </div>
       </section>

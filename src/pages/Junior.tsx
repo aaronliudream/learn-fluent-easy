@@ -1,7 +1,6 @@
 import { T } from "@/i18n/T";
 import { useEffect, useMemo, useState } from "react";
-import BackLink from "@/components/BackLink";
-import { ArrowLeft } from "lucide-react";
+import { JuniorHero } from "@/components/junior/JuniorHero";
 import { JuniorModuleCard } from "@/components/junior/JuniorModuleCard";
 import {
   GRADE_LABELS,
@@ -127,27 +126,9 @@ export default function Junior() {
 
   return (
     <main className="min-h-screen bg-background">
-      <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 lg:px-8">
-        <BackLink
-          to="/#courses"
-          className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary font-['Noto_Serif_SC',serif]"
-        >
-          <ArrowLeft className="size-4" />
-          <T>返回学习阶段</T>
-        </BackLink>
+      <JuniorHero />
 
-        <header className="mb-10">
-          <p className="font-display mb-3 text-sm italic tracking-[0.2em] text-primary">
-            Junior High English
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl font-['Noto_Serif_SC',serif]">
-            <T>初中英语专区</T>
-          </h1>
-          <p className="mt-4 text-base text-muted-foreground font-['Noto_Serif_SC',serif]">
-            <T>用世界名画开启你的英语学习之旅</T>
-          </p>
-        </header>
-
+      <div className="relative z-10 mx-auto -mt-8 max-w-4xl px-4 pb-8 sm:px-6 lg:px-8">
         <JuniorGradeFilter value={grade} onChange={setGrade} className="mb-8" />
 
         <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">

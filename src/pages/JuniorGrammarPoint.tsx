@@ -111,11 +111,13 @@ export default function JuniorGrammarPoint() {
 
   // Rich points default to Lab (闯关); ?classic=1 → Playful mastery test page.
   useEffect(() => {
-    if (!id || loading || isChallenge) return;
+    if (!id || loading) return;
     if (isClassic) {
-      nav(`/junior/grammar/${id}/mastery`, { replace: true });
+      const q = isChallenge ? "?challenge=1" : "";
+      nav(`/junior/grammar/${id}/mastery${q}`, { replace: true });
       return;
     }
+    if (isChallenge) return;
     if (pt && hasLabContent(pt)) {
       nav(juniorGrammarPlayPath(id, pt), { replace: true });
     }

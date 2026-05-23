@@ -10,6 +10,7 @@ import {
   type JuniorGradeKey,
 } from "@/components/junior/JuniorGradeFilter";
 import { useMasteryOverview } from "@/hooks/useMasteryOverview";
+import { useJuniorClassroomSync } from "@/hooks/useJuniorClassroomSync";
 import { listExams } from "@/data/exams";
 import { isReviewUnlocked } from "@/lib/suzhouExamProgress";
 
@@ -95,6 +96,7 @@ function examProgressPercent(): number {
 export default function Junior() {
   const [grade, setGrade] = useState<JuniorGradeKey>(() => readSavedGrade());
   const overview = useMasteryOverview("junior");
+  const classroom = useJuniorClassroomSync(grade);
 
   useEffect(() => {
     localStorage.setItem(LS_KEY, grade);
@@ -108,20 +110,20 @@ export default function Junior() {
       if (!m.comingSoon) map[m.key] = m.percent;
     }
     map.exam = examProgressPercent();
-    const skillKeys = ["vocab", "grammar", "reading", "listening", "writing"] as const;
-    const values = skillKeys.map((k) => map[k] ?? 0);
-    map.classroom = values.length
-      ? Math.round(values.reduce((a, b) => a + b, 0) / values.length)
-      : 0;
     return map;
   }, [overview.modules]);
 
   const classroomSubtitle =
     grade === "all"
-      ? "教材配套学习 · 全部年级"
+      ? "教材配套学习 · 初一至初三综合"
       : `教材配套学习 · ${GRADE_LABELS[grade]}`;
 
-  const classroomTo = pathGrade ? `/junior/g/${pathGrade}` : "/junior/g/2";
+  const classroomTo = pathGrade ? `/junior/g/${pathGrade}` : "/junior/g/1";
+
+  const classroomDescription =
+    grade === "all"
+      ? `词汇 · 语法 · 阅读 · 听力 · 写作 · 阶段测试 · 已掌握 ${classroom.mastered}/${classroom.total} 项`
+      : `${GRADE_LABELS[grade]}课本同步 · 五模块练习 + 阶段测试 · ${classroom.mastered}/${classroom.total} 项已掌握`;
 
   return (
     <main className="min-h-screen bg-background">
@@ -165,9 +167,9 @@ export default function Junior() {
         <JuniorModuleCard
           title="课堂同步"
           subtitle={classroomSubtitle}
-          description="同步课本单元 · 知识点精讲 · 课后练习巩固"
+          description={classroomDescription}
           icon="classroom"
-          progress={progressByKey.classroom}
+          progress={classroom.loading ? 0 : classroom.percent}
           to={classroomTo}
           className="mt-5 min-h-[192px]"
         />

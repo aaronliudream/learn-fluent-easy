@@ -43,6 +43,7 @@ Current mapping:
 - Directory: `public/landing/universities/`
 - Filenames: `stanford.jpg`, `harvard.jpg`, `oxford.jpg`, `tsinghua.jpg`
 - Prefer Unsplash download URLs or design zip assets; verify file size &gt; 50KB
+- Iconic landmarks (Unsplash IDs): Stanford Hoover Tower `f5OO7rL6OD8`, Harvard Langdell Hall `T-tVt4xsCdE`, Oxford Radcliffe Camera `mT-D4OLaBHw`, Tsinghua gate `Rph9CCc2P1c`
 
 ## Related junior patterns
 

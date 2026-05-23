@@ -60,6 +60,9 @@ export default function JuniorGrammarPoint() {
   const [searchParams, setSearchParams] = useSearchParams();
   const isChallenge = searchParams.get("challenge") === "1";
   const isClassic = searchParams.get("classic") === "1";
+  // 测试模式 (?quick=1): skip Lab redirect AND skip lesson/immersion stages.
+  // Drops the user straight into the quiz questions for fast content evaluation.
+  const isQuick = searchParams.get("quick") === "1";
   const sessionSize = isChallenge ? CHALLENGE_QUESTIONS_JUNIOR : 10;
   const [pt, setPt] = useState<Pt | null>(null);
   const grammarBackTo = pt?.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
@@ -89,42 +92,50 @@ export default function JuniorGrammarPoint() {
     if (!id) return;
     (async () => {
       setLoading(true);
+      // 测试模式 (?quick=1) 限定金标准题库 (sort_order 9000-9099, 12 题, 五种题型齐全)。
+      // 普通模式按 sort_order 升序取前 sessionSize 题（兼容旧题库）。
+      const baseQ = supabase.
+        from("junior_grammar_questions").
+        select("id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading").
+        eq("point_id", id);
+      const scopedQ = isQuick
+        ? baseQ.gte("sort_order", 9000).lte("sort_order", 9099).order("sort_order")
+        : baseQ.order("sort_order");
       const [a, b] = await Promise.all([
       supabase.
       from("junior_grammar_points").
       select("id,code,title,cefr,grade,explanation_md,teacher_script,immersion_cards,mnemonic,content_depth").
       eq("id", id).
       maybeSingle(),
-      supabase.
-      from("junior_grammar_questions").
-      select("id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading").
-      eq("point_id", id).
-      order("sort_order")]
+      scopedQ]
       );
       setPt(a.data as Pt);
-      // 单次抽题上限：普通模式 10 题（≤10 分钟），挑战模式 20 题。
+      // 测试模式抽 12 题（全套金标准）；其它模式遵守 sessionSize 上限
       const allQs = (b.data ?? []) as GrammarQuestion[];
-      setQs(allQs.slice(0, sessionSize));
+      const cap = isQuick ? 12 : sessionSize;
+      setQs(allQs.slice(0, cap));
       setLoading(false);
     })();
-  }, [id, sessionSize]);
+  }, [id, sessionSize, isQuick]);
 
-  // Rich points default to Lab (闯关); ?classic=1 → Playful mastery test page.
+  // Rich points default to Lab (闯关); ?classic=1 or ?quick=1 keeps this page.
   useEffect(() => {
-    if (!id || loading) return;
-    if (isClassic) {
-      const q = isChallenge ? "?challenge=1" : "";
-      nav(`/junior/grammar/${id}/mastery${q}`, { replace: true });
-      return;
-    }
-    if (isChallenge) return;
+    if (!id || loading || isClassic || isChallenge || isQuick) return;
     if (pt && hasLabContent(pt)) {
       nav(juniorGrammarPlayPath(id, pt), { replace: true });
     }
-  }, [id, loading, pt, isClassic, isChallenge, nav]);
+  }, [id, loading, pt, isClassic, isChallenge, isQuick, nav]);
 
-  // Determine which stages have data → auto-skip empty ones
+  // Determine which stages have data → auto-skip empty ones.
+  // ?quick=1 (测试模式) forces practice-only: skip lesson + immersion entirely.
+  // NOTE: in quick mode we ALWAYS include "practice" even before qs loads, so the
+  // initial-stage effect doesn't accidentally land on "reflect" during the brief
+  // window between mount and DB response (which would then "stick" there because
+  // "reflect" stays in availableStages once questions arrive).
   const availableStages = useMemo<Stage[]>(() => {
+    if (isQuick) {
+      return ["practice", "reflect"];
+    }
     if (!pt) return ["practice", "reflect"];
     const stages: Stage[] = [];
     if (Array.isArray(pt.teacher_script) && pt.teacher_script.length > 0) stages.push("lesson");
@@ -132,7 +143,7 @@ export default function JuniorGrammarPoint() {
     if (qs.length > 0) stages.push("practice");
     stages.push("reflect");
     return stages;
-  }, [pt, qs]);
+  }, [pt, qs, isQuick]);
 
   // Set initial stage to first available
   useEffect(() => {

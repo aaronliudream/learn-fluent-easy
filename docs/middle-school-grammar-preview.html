@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>初中语法学习地图 · Mastery Loop</title>
+<style>
+  :root{
+    --bg:#0b1024; --bg2:#0f1638; --panel:#121b3f; --panel2:#162151;
+    --ink:#e7ecff; --muted:#94a3c4; --line:rgba(255,255,255,.08);
+    --accent:#7c5cff; --accent2:#22d3ee;
+    --unlearned:#3b4773; --learning:#f59e0b; --familiar:#3b82f6; --mastered:#22c55e;
+    --current:#a855f7;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:
+    radial-gradient(1100px 700px at 8% -10%, #1a2255 0%, transparent 60%),
+    radial-gradient(900px 600px at 105% 5%, #0e3b5a 0%, transparent 60%),
+    var(--bg);
+    color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei",ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.5;
+  }
+  .wrap{max-width:1280px;margin:0 auto;padding:28px 22px 80px}
+
+  /* ============ TOP DASHBOARD ============ */
+  .top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:14px;align-items:stretch}
+  .card-bg{background:linear-gradient(180deg,var(--panel),#101a3d);border:1px solid var(--line);border-radius:18px;padding:16px 18px;position:relative;overflow:hidden}
+  .title-card h1{font-size:22px;margin:0 0 4px;background:linear-gradient(135deg,#fff,#bcd0ff 60%,#9be7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .title-card p{margin:0;color:var(--muted);font-size:13px}
+  .stat{display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+  .stat .k{font-size:12px;color:var(--muted);letter-spacing:.4px;text-transform:uppercase}
+  .stat .v{font-size:28px;font-weight:700;margin-top:4px}
+  .stat .sub{font-size:12px;color:var(--muted);margin-top:2px}
+  .ring{--p:42; --size:64px; width:var(--size);height:var(--size);border-radius:50%;
+    background:conic-gradient(var(--mastered) calc(var(--p)*1%), rgba(255,255,255,.08) 0);
+    display:grid;place-items:center;position:absolute;right:14px;top:14px}
+  .ring::after{content:"";width:calc(var(--size) - 14px);height:calc(var(--size) - 14px);border-radius:50%;background:var(--panel)}
+  .ring span{position:absolute;font-size:13px;font-weight:700;color:#fff}
+
+  /* ============ YOU-ARE-HERE BANNER ============ */
+  .here{margin-top:14px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;
+    background:linear-gradient(135deg,rgba(168,85,247,.22),rgba(34,211,238,.10));
+    border:1px solid rgba(168,85,247,.35);border-radius:18px;padding:14px 18px}
+  .here .label{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:#e9d5ff;letter-spacing:.4px;text-transform:uppercase}
+  .here .label::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--current);box-shadow:0 0 0 0 rgba(168,85,247,.7);animation:pulse 1.6s infinite}
+  .here h2{margin:6px 0 2px;font-size:20px}
+  .here .meta{color:#c9b8ff;font-size:13px}
+  .here .cta{display:flex;gap:8px}
+  .btn{cursor:pointer;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;padding:9px 14px;border-radius:10px;font-size:13px}
+  .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#0b1020;font-weight:700}
+  .btn:hover{transform:translateY(-1px)}
+
+  /* ============ FILTERS ============ */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px;align-items:center}
+  .chip{cursor:pointer;font-size:12.5px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cbd5ff;user-select:none}
+  .chip[aria-pressed="true"]{background:linear-gradient(135deg,rgba(124,92,255,.35),rgba(34,211,238,.18));border-color:rgba(124,92,255,.6);color:#fff}
+  .chip .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+  .dot.unlearned{background:var(--unlearned)} .dot.learning{background:var(--learning)} .dot.familiar{background:var(--familiar)} .dot.mastered{background:var(--mastered)} .dot.current{background:var(--current)}
+
+  /* ============ MAIN GRID ============ */
+  .main{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:6px}
+  @media(max-width:980px){.main{grid-template-columns:1fr} .top{grid-template-columns:1fr 1fr} }
+
+  /* ============ SKILL MAP ============ */
+  .map{padding:14px 8px 18px}
+  .lane{position:relative;padding:18px 14px 22px;border-bottom:1px dashed var(--line)}
+  .lane:last-child{border-bottom:none}
+  .lane-h{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-left:6px}
+  .lane-h .badge{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b1020;font-weight:800}
+  .lane-h h3{margin:0;font-size:16px}
+  .lane-h .cefr{color:var(--muted);font-size:12px}
+  .lane-h .progress{margin-left:auto;font-size:12px;color:var(--muted)}
+
+  .track{position:relative;display:flex;flex-wrap:wrap;gap:14px 22px;padding:6px 6px 8px;
+    background:
+      radial-gradient(circle at 12px 50%, rgba(124,92,255,.18) 0 4px, transparent 5px) 0 0/40px 100% repeat-x;
+  }
+  .node{position:relative;width:74px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;transition:transform .15s ease}
+  .node:hover{transform:translateY(-3px)}
+  .hex{
+    width:60px;height:60px;border-radius:18px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:16px;
+    border:2px solid transparent;background:var(--unlearned);
+    box-shadow:inset 0 -6px 0 rgba(0,0,0,.18), 0 2px 6px rgba(0,0,0,.25);
+    transition:transform .15s ease, box-shadow .15s ease;position:relative;
+  }
+  .node small{font-size:11px;color:#cbd5ff;text-align:center;max-width:84px;line-height:1.25}
+  .node[data-state="unlearned"] .hex{background:#1d264c;border-color:rgba(255,255,255,.08);color:#9fb0d6}
+  .node[data-state="unlearned"] .hex::after{content:"";position:absolute;inset:0;border-radius:18px;border:2px dashed rgba(255,255,255,.12)}
+  .node[data-state="learning"] .hex{background:linear-gradient(180deg,#f59e0b,#b45309)}
+  .node[data-state="familiar"] .hex{background:linear-gradient(180deg,#3b82f6,#1d4ed8)}
+  .node[data-state="mastered"] .hex{background:linear-gradient(180deg,#22c55e,#15803d);box-shadow:0 0 0 4px rgba(34,197,94,.18), inset 0 -6px 0 rgba(0,0,0,.18)}
+  .node.current .hex{outline:3px solid var(--current);outline-offset:3px;animation:pulseRing 1.6s infinite}
+  .node.current::before{content:"YOU ARE HERE";position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:1px;color:#fff;background:var(--current);padding:3px 8px;border-radius:999px;white-space:nowrap;box-shadow:0 0 18px rgba(168,85,247,.6)}
+  .node .corner{position:absolute;top:-4px;right:-4px;width:22px;height:22px;border-radius:50%;background:#0b1024;display:grid;place-items:center;font-size:12px;color:#fff;border:2px solid var(--panel)}
+  .node[data-state="mastered"] .corner{background:var(--mastered)}
+  .node[data-state="familiar"] .corner{background:var(--familiar)}
+  .node[data-state="learning"] .corner{background:var(--learning)}
+  .node[data-state="unlearned"] .corner{display:none}
+
+  .dim{opacity:.18;pointer-events:none;filter:saturate(.4)}
+
+  /* ============ SIDE PANEL ============ */
+  .side h4{margin:0 0 10px;font-size:13px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase}
+  .cat{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line);margin-bottom:8px}
+  .cat .mini{--p:40;--c:var(--accent);width:42px;height:42px;border-radius:50%;background:conic-gradient(var(--c) calc(var(--p)*1%), rgba(255,255,255,.08) 0);display:grid;place-items:center;position:relative;flex-shrink:0}
+  .cat .mini::after{content:"";width:30px;height:30px;border-radius:50%;background:var(--panel);position:absolute}
+  .cat .mini b{position:relative;font-size:11px;font-weight:700;color:#fff}
+  .cat .name{font-size:13px;font-weight:600}
+  .cat .breakdown{font-size:11px;color:var(--muted);margin-top:2px}
+  .legend{display:flex;flex-direction:column;gap:6px;margin-top:10px;font-size:12px;color:var(--muted)}
+  .legend .row{display:flex;align-items:center;gap:8px}
+
+  /* ============ DETAIL DRAWER ============ */
+  .drawer{position:fixed;top:0;right:-460px;width:440px;height:100vh;background:linear-gradient(180deg,#121a3d,#0c1330);border-left:1px solid var(--line);padding:24px;transition:right .3s ease;z-index:100;overflow-y:auto;box-shadow:-30px 0 60px rgba(0,0,0,.5)}
+  .drawer.open{right:0}
+  .drawer .close{position:absolute;top:14px;right:14px;background:transparent;border:1px solid var(--line);color:#fff;border-radius:8px;width:32px;height:32px;cursor:pointer}
+  .drawer h3{margin:0 0 4px;font-size:20px}
+  .drawer .en{color:var(--muted);font-size:13px}
+  .drawer .state-pill{display:inline-block;margin:12px 0;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:700;color:#0b1024}
+  .drawer .ex{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;background:rgba(0,0,0,.25);border:1px dashed rgba(255,255,255,.1);border-radius:10px;padding:10px 12px;color:#cfe1ff;margin:8px 0 14px;white-space:pre-line}
+  .drawer .game{background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(124,92,255,.12));border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:12px}
+  .drawer .game .gname{font-weight:700;font-size:14px;margin-bottom:4px}
+  .drawer .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+  .drawer .actions .btn{justify-content:center;text-align:center}
+
+  /* ============ TOOLS SECTION ============ */
+  .tools{margin-top:32px;padding:20px 22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#101736,#0c1230)}
+  .tools h3{margin:0 0 12px;font-size:16px}
+  .tools .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+  .tools .grid div{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03)}
+  .tools .grid div b{display:block;color:#fff;font-size:13px;margin-bottom:2px}
+  .tools .grid div small{color:var(--muted);font-size:12px}
+
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(168,85,247,.6)} 70%{box-shadow:0 0 0 10px rgba(168,85,247,0)} 100%{box-shadow:0 0 0 0 rgba(168,85,247,0)}}
+  @keyframes pulseRing{0%,100%{outline-offset:3px} 50%{outline-offset:7px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ TOP DASHBOARD ============ -->
+  <div class="top">
+    <div class="card-bg title-card">
+      <div style="font-size:11px;color:#bcd0ff;letter-spacing:1px">初中英语 · 语法学习地图</div>
+      <h1>Grammar Mastery Map</h1>
+      <p>对标《义务教育英语课程标准 2022》· 7–9 年级 · 共 36 个核心语法点</p>
+    </div>
+    <div class="card-bg stat">
+      <span class="k">Overall mastery</span>
+      <span class="v">11<span style="color:var(--muted);font-size:18px"> / 36</span></span>
+      <span class="sub">31% 已掌握 · 距离中考 240 天</span>
+      <div class="ring" style="--p:31"><span>31%</span></div>
+    </div>
+    <div class="card-bg stat">
+      <span class="k">7-day streak</span>
+      <span class="v">🔥 6 days</span>
+      <span class="sub">再练 1 天解锁周徽章</span>
+    </div>
+    <div class="card-bg stat">
+      <span class="k">XP this week</span>
+      <span class="v">1,240</span>
+      <span class="sub">班级排名 #4 / 38</span>
+    </div>
+  </div>
+
+  <!-- ============ YOU ARE HERE ============ -->
+  <div class="here">
+    <div>
+      <span class="label">📍 you are here</span>
+      <h2>G8 · ① 一般过去时（Simple Past）</h2>
+      <div class="meta">学习中 · 进度 65% · 上次 5 个 BOSS 战错 2 道不规则变化（go/went, take/took）</div>
+    </div>
+    <div class="cta">
+      <button class="btn primary" onclick="open_('g8-1')">继续学习 →</button>
+      <button class="btn" onclick="open_('g8-1')">看详情</button>
+    </div>
+  </div>
+
+  <!-- ============ FILTERS ============ -->
+  <div class="filters">
+    <span style="font-size:12px;color:var(--muted);margin-right:4px">筛选状态：</span>
+    <span class="chip" data-filter="all" aria-pressed="true">全部 (36)</span>
+    <span class="chip" data-filter="mastered"><span class="dot mastered"></span>已掌握 (11)</span>
+    <span class="chip" data-filter="familiar"><span class="dot familiar"></span>熟悉 (8)</span>
+    <span class="chip" data-filter="learning"><span class="dot learning"></span>学习中 (4)</span>
+    <span class="chip" data-filter="unlearned"><span class="dot unlearned"></span>未学 (13)</span>
+    <span style="flex:1"></span>
+    <span class="chip" id="resetView">↺ 重置筛选</span>
+  </div>
+
+  <!-- ============ MAIN: MAP + SIDE ============ -->
+  <div class="main">
+
+    <!-- SKILL MAP -->
+    <div class="card-bg map" id="map">
+      <!-- Lanes injected by JS for compactness -->
+    </div>
+
+    <!-- SIDE PANEL -->
+    <aside class="card-bg side">
+      <h4>按主题熟练度</h4>
+      <div class="cat"><div class="mini" style="--p:80;--c:var(--mastered)"><b>80%</b></div>
+        <div><div class="name">🕰️ 时态 Tenses</div><div class="breakdown">5 mastered · 2 familiar · 1 learning</div></div>
+      </div>
+      <div class="cat"><div class="mini" style="--p:55;--c:var(--familiar)"><b>55%</b></div>
+        <div><div class="name">🧱 句子结构 Sentence Patterns</div><div class="breakdown">2 mastered · 3 familiar · 1 unlearned</div></div>
+      </div>
+      <div class="cat"><div class="mini" style="--p:40;--c:var(--learning)"><b>40%</b></div>
+        <div><div class="name">🔗 从句 Clauses</div><div class="breakdown">1 mastered · 1 familiar · 2 learning · 3 unlearned</div></div>
+      </div>
+      <div class="cat"><div class="mini" style="--p:70;--c:var(--familiar)"><b>70%</b></div>
+        <div><div class="name">🎩 情态/语态 Modals &amp; Voice</div><div class="breakdown">2 mastered · 1 familiar · 1 unlearned</div></div>
+      </div>
+      <div class="cat"><div class="mini" style="--p:25;--c:var(--unlearned)"><b>25%</b></div>
+        <div><div class="name">🎯 非谓语/特殊句式</div><div class="breakdown">1 familiar · 5 unlearned</div></div>
+      </div>
+
+      <h4 style="margin-top:18px">状态图例</h4>
+      <div class="legend">
+        <div class="row"><span class="dot mastered"></span>已掌握 · 正确率 ≥ 90%，进入长间隔复习</div>
+        <div class="row"><span class="dot familiar"></span>熟悉 · 正确率 70–89%</div>
+        <div class="row"><span class="dot learning"></span>学习中 · 进度 &lt; 70%，每日复现</div>
+        <div class="row"><span class="dot unlearned"></span>未学 · 可随时点击开始</div>
+        <div class="row"><span class="dot current"></span>当前焦点 · 你正在这里</div>
+      </div>
+
+      <h4 style="margin-top:18px">本周建议路线</h4>
+      <div style="font-size:12.5px;color:#cbd5ff;line-height:1.7">
+        ① 完成 G8 · 一般过去时（剩 35%）<br/>
+        ② 复习 G7 · 现在进行时（熟悉 → 掌握）<br/>
+        ③ 试学 G8 · 现在完成时（解锁新章节）
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ============ TOOLS ============ -->
+  <div class="tools">
+    <h3>🛠️ 这种"语法学习地图 + Mastery Loop"在 React 中可以用哪些工具构建？</h3>
+    <div class="grid">
+      <div><b>React Flow / Reaflow</b><small>节点 + 自动连线 + 拖拽，做技能树/路线图首选</small></div>
+      <div><b>Framer Motion</b><small>节点 pulse / 卡片飞入 / 状态切换动画</small></div>
+      <div><b>Tailwind + shadcn/ui</b><small>统一卡片、徽章、Drawer、Toast 等 UI 原子</small></div>
+      <div><b>Recharts / visx</b><small>进度环、班级对比柱状图、错题热力图</small></div>
+      <div><b>Lottie</b><small>掌握/连胜时的爆炸庆祝小动画</small></div>
+      <div><b>TanStack Query + Supabase</b><small>把 mastery 状态同步到云端，跨设备进度</small></div>
+      <div><b>Zustand</b><small>本地 mastery store，避免 props drilling</small></div>
+      <div><b>FSRS / SM-2 算法</b><small>间隔重复决定何时把节点从 familiar → mastered</small></div>
+      <div><b>react-confetti</b><small>每升一级洒纸屑，正向反馈</small></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============ DETAIL DRAWER ============ -->
+<div class="drawer" id="drawer">
+  <button class="close" onclick="close_()">✕</button>
+  <h3 id="d_title">—</h3>
+  <div class="en" id="d_en">—</div>
+  <span class="state-pill" id="d_state" style="background:#f59e0b">学习中</span>
+
+  <h4 style="margin:6px 0 4px;color:var(--muted);font-size:12px;text-transform:uppercase">例句</h4>
+  <div class="ex" id="d_ex">—</div>
+
+  <h4 style="margin:6px 0 4px;color:var(--muted);font-size:12px;text-transform:uppercase">推荐游戏 / 测验</h4>
+  <div class="game"><div class="gname" id="d_gname">—</div><div id="d_gdesc" style="font-size:13px;color:#d6def7">—</div></div>
+
+  <h4 style="margin:6px 0 4px;color:var(--muted);font-size:12px;text-transform:uppercase">教学循环</h4>
+  <div style="font-size:13px;color:#cbd5ff;line-height:1.7">
+    📥 输入：3 分钟动画讲解 → 🎮 练习：游戏化测验 ×5 → 🔁 间隔复习：1d/3d/7d/21d → ✅ 正确率 ≥ 90% → 标记为<b>掌握</b>
+  </div>
+
+  <div class="actions">
+    <button class="btn primary" onclick="markState('learning')">开始 / 继续学习</button>
+    <button class="btn" onclick="markState('familiar')">标记为熟悉</button>
+    <button class="btn" onclick="markState('mastered')">标记为掌握</button>
+    <button class="btn" onclick="markState('unlearned')">重置为未学</button>
+  </div>
+</div>
+
+<script>
+  // ===== Data =====
+  const data = {
+    g7: { label:"七年级", cefr:"CEFR A1 · 入门", items:[
+      ["g7-1","be 动词","Verb to be","I am / He is / They are.","🎯 Spin the Wheel · 人称转盘","转盘随机出现人称代词，3 秒内点出正确 be 动词","mastered"],
+      ["g7-2","名词单复数","Plurals C/U","a book→books · water","🛒 Supermarket Sort","商品图片飞出，拖到可数/不可数货架","mastered"],
+      ["g7-3","代词体系","Pronouns","I—my—mine · this/that","🃏 Memory Match","16 张牌：8 对主/宾/物主互相配对","mastered"],
+      ["g7-4","冠词 a/an/the","Articles","an apple · the sun","🚦 Article Traffic Light","句子滚动而过，按 A/AN/THE/Ø 按键放行","familiar"],
+      ["g7-5","一般现在时","Simple Present","He plays football every day.","📅 Daily Routine Builder","角色一天用 8 个动作拼出","mastered"],
+      ["g7-6","现在进行时","Present Continuous","Look! She is dancing.","📸 Snap & Say","3 秒闪现图片 → 5 秒说出 is/are V-ing","familiar"],
+      ["g7-7","祈使句/感叹句","Imperative/Exclamation","Open the door. What a nice day!","🤖 Simon Says","用祈使句指挥屏幕机器人闯关","mastered"],
+      ["g7-8","There be 句型","There is/are","There is a cat under the chair.","🔍 大家来找茬","两幅图找不同，用 There be 描述","familiar"],
+      ["g7-9","数词与时间","Numerals/Time","half past seven","⏰ Clock Detective","听时间拨钟，或看钟说时间","mastered"],
+      ["g7-10","介词","Prepositions","on the wall · in May","🐱 Where's the Cat","小猫换位置，准确描述位置","mastered"],
+      ["g7-11","频度副词","Frequency adverbs","always / never","📊 Habit Bar Chart","拖动百分比 + 整句描述","mastered"],
+      ["g7-12","can / can't","Modal: can","I can swim.","🦸 Superpower Match","设计英雄卡 3 个 can + 2 个 can't","mastered"],
+    ]},
+    g8: { label:"八年级", cefr:"CEFR A2 · 进阶", items:[
+      ["g8-1","一般过去时","Simple Past","She visited her grandma last weekend.","⏪ Time Machine","原形给定，从干扰项中选过去式","learning",true],
+      ["g8-2","过去进行时","Past Continuous","I was reading at 8 p.m.","🕵️ Alibi Game","编不在场证明，警察提问对照","unlearned"],
+      ["g8-3","一般将来时","Future Simple","It will rain tomorrow.","🔮 Fortune Teller","抽塔罗卡用 will / be going to 预言","learning"],
+      ["g8-4","现在完成时","Present Perfect","I have been to the Great Wall.","🏆 Bucket List Bingo","Have you ever…? 找签名 BINGO","familiar"],
+      ["g8-5","比较级/最高级","Comparatives","taller than · the most beautiful","🥇 Top Trumps","卡牌 5 项数值 PK","familiar"],
+      ["g8-6","情态动词","Modals","must/should/may/might","👨‍⚖️ Dear Abby","为烦恼信给 3 条 should 建议","unlearned"],
+      ["g8-7","不定式/动名词","Infin./Gerund","want to do · enjoy doing","🍱 Verb Bento Box","三盒分类：to/ing/两可","learning"],
+      ["g8-8","反义疑问句","Tag Questions","You are…, aren't you?","🎤 Talk Show Tag","主持人念前半，抢答反问尾巴","unlearned"],
+      ["g8-9","连词与并列句","Conjunctions","so / because / but","🧱 Sentence Brick","两短句 + 连词砖块拼合","familiar"],
+      ["g8-10","宾语从句基础","Object Clauses","I think (that) he is right.","🕵️ Reporter Mode","听对白用宾语从句写新闻稿","unlearned"],
+      ["g8-11","直接/间接引语","Direct/Indirect","She said she was tired.","🗣️ Gossip Chain","小组传话，直接 → 间接","unlearned"],
+      ["g8-12","状语从句","Adverbial Clauses","if / when / because / so…that","🌳 Choose Your Adventure","if 引导剧情分支续写","unlearned"],
+    ]},
+    g9: { label:"九年级 · 中考冲刺", cefr:"CEFR A2–B1", items:[
+      ["g9-1","被动语态","Passive Voice","The window was broken.","🔁 Active⇄Passive Flip","主宾互换 + 选对 be 形式","unlearned"],
+      ["g9-2","完成时进阶","Perfect since/for","I have lived here for 10 years.","📜 Lifeline Storyboard","名人时间线 + since/for 造句","unlearned"],
+      ["g9-3","过去完成时","Past Perfect","The train had left when I arrived.","🎬 Plot Twist","剧情卡按 had done 排序","unlearned"],
+      ["g9-4","定语从句","Relative Clauses","The boy who is wearing glasses…","🧩 Who-Is-It 剧本杀","用定语从句描述嫌疑人","unlearned"],
+      ["g9-5","宾语从句进阶","Object Clauses+","Could you tell me where the bank is?","🗺️ Information Desk","游客 ↔ 询问处角色扮演","unlearned"],
+      ["g9-6","状语从句进阶","Adv. Clauses+","so/such…that · though","🧨 Domino Cause&Effect","因果卡用连词连接多米诺","unlearned"],
+      ["g9-7","虚拟语气","Subjunctive","If I were you, I would…","🌈 Parallel Universe","写 3 条 if I were 的平行宇宙","unlearned"],
+      ["g9-8","非谓语动词","Non-finite","The book written by him sold well.","🎨 Caption This","图配 4 个标题，选对解锁高清","unlearned"],
+      ["g9-9","倒装句","Inversion","Here comes the bus!","🎭 Me Too","So do I / Neither do I 抢答","unlearned"],
+      ["g9-10","强调句","Cleft","It was yesterday that I met him.","🔦 Spotlight","点高亮成分自动改写强调句","unlearned"],
+      ["g9-11","构词法","Word Formation","unhappy / classroom","⚗️ Word Lab","词根+词缀炼金生成新词","familiar"],
+      ["g9-12","中考综合","Exam Drill","单选/完形/阅读/改错/写作","🏰 Boss Rush","5 个 BOSS 战分别对应题型","unlearned"],
+    ]},
+  };
+
+  // ===== Build map =====
+  const map = document.getElementById("map");
+  const stateLabel = {unlearned:"未学", learning:"学习中", familiar:"熟悉", mastered:"已掌握"};
+  const stateColor = {unlearned:"#3b4773", learning:"#f59e0b", familiar:"#3b82f6", mastered:"#22c55e"};
+  const stateIcon  = {learning:"📖", familiar:"⭐", mastered:"✓"};
+
+  Object.entries(data).forEach(([gk, g])=>{
+    const total = g.items.length;
+    const mastered = g.items.filter(i=>i[6]==="mastered").length;
+    const lane = document.createElement("div");
+    lane.className="lane";
+    lane.innerHTML = `
+      <div class="lane-h">
+        <div class="badge">${gk[1]}</div>
+        <div><h3>${g.label}</h3><div class="cefr">${g.cefr}</div></div>
+        <div class="progress">${mastered} / ${total} mastered · ${Math.round(mastered/total*100)}%</div>
+      </div>
+      <div class="track"></div>`;
+    const track = lane.querySelector(".track");
+    g.items.forEach((it,i)=>{
+      const [id,zh,en,ex,gname,gdesc,state,isCurrent] = it;
+      const node = document.createElement("div");
+      node.className = "node" + (isCurrent?" current":"");
+      node.dataset.state = state;
+      node.dataset.id = id;
+      node.innerHTML = `
+        <div class="hex">${String(i+1).padStart(2,"0")}</div>
+        <div class="corner">${stateIcon[state]||""}</div>
+        <small>${zh}</small>`;
+      node.onclick = ()=>open_(id);
+      track.appendChild(node);
+    });
+    map.appendChild(lane);
+  });
+
+  // ===== Drawer =====
+  let currentId = null;
+  function open_(id){
+    currentId = id;
+    const item = findItem(id); if(!item) return;
+    const [_id,zh,en,ex,gname,gdesc,state] = item;
+    document.getElementById("d_title").textContent = zh;
+    document.getElementById("d_en").textContent = en;
+    const sp = document.getElementById("d_state");
+    sp.textContent = stateLabel[state]; sp.style.background = stateColor[state]; sp.style.color = state==="unlearned"?"#fff":"#0b1024";
+    document.getElementById("d_ex").textContent = ex;
+    document.getElementById("d_gname").textContent = gname;
+    document.getElementById("d_gdesc").textContent = gdesc;
+    document.getElementById("drawer").classList.add("open");
+  }
+  function close_(){document.getElementById("drawer").classList.remove("open")}
+  function findItem(id){
+    for(const g of Object.values(data)){
+      const f = g.items.find(i=>i[0]===id);
+      if(f) return f;
+    }
+    return null;
+  }
+  function markState(newState){
+    const item = findItem(currentId); if(!item) return;
+    item[6] = newState;
+    const node = document.querySelector(`.node[data-id="${currentId}"]`);
+    if(node){
+      node.dataset.state = newState;
+      node.querySelector(".corner").textContent = stateIcon[newState]||"";
+    }
+    open_(currentId);
+  }
+
+  // ===== Filters =====
+  const chips = document.querySelectorAll(".chip[data-filter]");
+  chips.forEach(c=>c.addEventListener("click",()=>{
+    chips.forEach(x=>x.setAttribute("aria-pressed","false"));
+    c.setAttribute("aria-pressed","true");
+    const f = c.dataset.filter;
+    document.querySelectorAll(".node").forEach(n=>{
+      n.classList.toggle("dim", f!=="all" && n.dataset.state!==f);
+    });
+  }));
+  document.getElementById("resetView").onclick = ()=>{
+    chips.forEach(x=>x.setAttribute("aria-pressed",x.dataset.filter==="all"?"true":"false"));
+    document.querySelectorAll(".node").forEach(n=>n.classList.remove("dim"));
+  };
+
+  // Close drawer with Esc
+  document.addEventListener("keydown",e=>{if(e.key==="Escape") close_();});
+</script>
+</body>
+</html>

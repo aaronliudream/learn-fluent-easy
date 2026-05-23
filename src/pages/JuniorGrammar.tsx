@@ -1,22 +1,13 @@
 import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react";
 import BackLink from "@/components/BackLink";
 import { Link, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Sparkles, Flame, Target, ChevronRight, TrendingUp, Gamepad2, Map, ChevronDown, Zap } from "lucide-react";
-import { cn } from "@/lib/utils";
-import {
-  hasLabContent,
-  juniorGrammarPlayPath,
-  pickTodayAdventure,
-} from "@/lib/juniorGrammarNav";
-import {
-  countPendingRevengeMistakes,
-  pickBestRevengePoint,
-  rankWeakPoints,
-} from "@/lib/juniorGrammarRevenge";
+import { ArrowLeft, BookOpen, Sparkles, Flame, Target, ChevronRight, TrendingUp, List, Map as MapIcon } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import ModuleStageTests from "@/components/ModuleStageTests";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import { ErrorRadar } from "@/components/grammar/ErrorRadar";
+import { GrammarMasteryMap } from "@/components/grammar/GrammarMasteryMap";
+import { cn } from "@/lib/utils";
 import {
   loadJuniorGrammarMasteryAll,
   aggregateJuniorGrammarErrors,
@@ -25,6 +16,7 @@ import {
   type JuniorGrammarMastery,
   type JuniorGrammarErrorReason } from
 "@/lib/juniorGrammarFsrs";
+import { juniorGrammarPlayPath } from "@/lib/juniorGrammarNav";
 
 type Cat = {id: string;name_cn: string;emoji: string;sort_order: number;};
 type Pt = {
@@ -46,7 +38,16 @@ export default function JuniorGrammar() {
   const [pts, setPts] = useState<Pt[]>([]);
   const [mastery, setMastery] = useState<Record<string, JuniorGrammarMastery>>({});
   const [loading, setLoading] = useState(true);
-  const [showMap, setShowMap] = useState(false);
+  const [view, setView] = useState<"list" | "map">(() => {
+    if (typeof window === "undefined") return "list";
+    return (localStorage.getItem("junior_grammar_view") as "list" | "map") || "list";
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("junior_grammar_view", view);
+    }
+  }, [view]);
 
   useEffect(() => {
     (async () => {
@@ -146,28 +147,9 @@ export default function JuniorGrammar() {
     return null;
   }, [cats, pts, catStats, mastery]);
 
-  const todayAdventure = useMemo(
-    () => pickTodayAdventure(pts, mastery, recommendNext),
-    [pts, mastery, recommendNext],
-  );
-
-  const todayIsDue = useMemo(() => {
-    if (!todayAdventure) return false;
-    const ms = mastery[todayAdventure.id];
-    return !!(ms?.due_at && new Date(ms.due_at).getTime() <= Date.now());
-  }, [todayAdventure, mastery]);
-
   // ─── Error aggregation ───
   const errorAgg = useMemo(() => aggregateJuniorGrammarErrors(Object.values(mastery)), [mastery]);
   const totalErrors = Object.values(errorAgg).reduce((a: number, b) => a + (b as number), 0);
-  const pendingRevenge = useMemo(() => countPendingRevengeMistakes(), [pts, mastery]);
-  const weakPoints = useMemo(() => rankWeakPoints(pts, mastery).slice(0, 5), [pts, mastery]);
-  const bestRevenge = useMemo(() => pickBestRevengePoint(pts, mastery), [pts, mastery]);
-  const topErrorReason = useMemo(() => {
-    const sorted = (Object.entries(errorAgg) as [JuniorGrammarErrorReason, number][])
-      .sort((a, b) => (b[1] as number) - (a[1] as number));
-    return sorted[0]?.[1] ? sorted[0][0] : null;
-  }, [errorAgg]);
 
   const ringColorByScore = (s: number) =>
   s >= 0.85 ? "stroke-yellow-500" : s >= 0.6 ? "stroke-amber-500" : s >= 0.3 ? "stroke-emerald-500" : s >= 0.1 ? "stroke-sky-500" : "stroke-muted";
@@ -185,48 +167,35 @@ export default function JuniorGrammar() {
       <BackLink to={backTo} className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> {gradeDisplay ? `返回初${gradeDisplay}` : "返回初中专区"}
       </BackLink>
-      <div className="mb-6">
-        <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">JUNIOR · GRAMMAR</div>
-        <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl"><T>语法冒险</T></h1>
-        <p className="mt-1 text-sm text-muted-foreground"><T>每天一关 · 闯关赚 XP · 间隔复习不掉队</T></p>
-      </div>
-
-      {todayAdventure &&
-      <Link
-        to={juniorGrammarPlayPath(todayAdventure.id, todayAdventure)}
-        className="mb-6 block rounded-2xl bg-gradient-to-br from-violet-600 via-fuchsia-600 to-rose-500 p-5 text-white shadow-lg hover:shadow-xl transition group">
-        <div className="flex items-start gap-4">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-white/20 backdrop-blur">
-            <Gamepad2 className="size-8" />
-          </div>
-          <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider">
-                <T>今日冒险</T>
-              </span>
-              {todayIsDue &&
-              <span className="rounded-full bg-amber-300/90 px-2.5 py-0.5 text-[10px] font-bold text-amber-950">
-                <T>待复习</T>
-              </span>
-              }
-              {hasLabContent(todayAdventure) &&
-              <span className="rounded-full bg-white/15 px-2.5 py-0.5 text-[10px] font-bold">
-                <T>闯关模式</T>
-              </span>
-              }
-            </div>
-            <div className="mt-2 text-lg font-extrabold leading-snug line-clamp-2">{todayAdventure.title}</div>
-            <p className="mt-2 text-xs text-white/85">
-              <T>约 8 分钟 · 钩子 → 反射 → 改错 → Boss</T>
-            </p>
-            <div className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold">
-              <T>开始闯关</T>
-              <ChevronRight className="size-4 group-hover:translate-x-0.5 transition-transform" />
-            </div>
-          </div>
+      <div className="mb-6 flex items-end justify-between gap-3">
+        <div>
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">JUNIOR · GRAMMAR</div>
+          <h1 className="text-grad-title mt-1 text-2xl font-extrabold md:text-3xl"><T>中考语法专项</T></h1>
+          <p className="mt-1 text-sm text-muted-foreground"><T>按 CEFR 分级 · 间隔复习 · AI 智能批改</T></p>
         </div>
-      </Link>
-      }
+        <div className="inline-flex shrink-0 rounded-xl border bg-card p-1 text-xs">
+          <button
+            type="button"
+            onClick={() => setView("list")}
+            aria-pressed={view === "list"}
+            className={cn(
+              "inline-flex items-center gap-1 rounded-lg px-3 py-1.5 transition",
+              view === "list" ? "bg-primary font-bold text-primary-foreground" : "text-muted-foreground hover:text-foreground",
+            )}>
+            <List className="size-3.5" /> <T>列表</T>
+          </button>
+          <button
+            type="button"
+            onClick={() => setView("map")}
+            aria-pressed={view === "map"}
+            className={cn(
+              "inline-flex items-center gap-1 rounded-lg px-3 py-1.5 transition",
+              view === "map" ? "bg-primary font-bold text-primary-foreground" : "text-muted-foreground hover:text-foreground",
+            )}>
+            <MapIcon className="size-3.5" /> <T>地图</T>
+          </button>
+        </div>
+      </div>
 
       {grade &&
       <ModuleStageTests
@@ -236,139 +205,185 @@ export default function JuniorGrammar() {
 
       }
 
-      {/* ===== 选学专题 · 虚拟语气 (preserve from previous integration) ===== */}
-      <a
-        href="/grammar-lab/subjunctive"
-        className="block mb-6 rounded-2xl border bg-gradient-to-br from-amber-500/10 via-rose-500/5 to-primary/10 p-5 hover:shadow-tile transition group">
-        
-        <div className="flex items-start gap-4">
-          <div className="text-4xl flex-shrink-0">🎯</div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-amber-700 dark:text-amber-300 bg-amber-500/15 px-2 py-0.5 rounded">
-                <T>选学专题</T>
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 px-2 py-0.5 rounded">
-                <T>中考 + 高考衔接</T>
-              </span>
-            </div>
-            <div className="font-bold text-lg mt-2"><T>虚拟语气全攻克</T></div>
-            <div className="text-xs text-muted-foreground mt-1 leading-relaxed">
-              <T>前 3 关（If I were you · I wish 现在 · I wish 过去）正好对应中考要求，后面 6 关是高考扩展，提前预习</T>
-            </div>
-            <div className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-primary group-hover:gap-2 transition-all">
-              <T>进入专题 →</T>
-            </div>
-          </div>
-        </div>
-      </a>
+      {/* ===== Map view ===== */}
+      {view === "map" && pts.length > 0 && (
+        <GrammarMasteryMap
+          categories={cats}
+          points={pts}
+          mastery={mastery}
+          currentPointId={recommendNext?.point.id ?? null}
+        />
+      )}
 
-      {/* ===== Hero: 总掌握度 / 待复习 / 智能推荐 ===== */}
-      {pts.length > 0 &&
-      <section className="mb-6 grid gap-4 md:grid-cols-3">
-          {/* 总掌握度 */}
-          <div className="rounded-2xl border bg-gradient-to-br from-primary/5 to-primary/10 p-5">
-            <div className="flex items-center gap-4">
-              <MasteryRing
-              value={totalStats.score}
-              size={84}
-              stroke={8}
-              colorClass={ringColorByScore(totalStats.score)}>
-              
-                <div className="text-center">
-                  <div className="text-xl font-extrabold leading-none">
-                    {Math.round(totalStats.score * 100)}<span className="text-xs">%</span>
+      {/* ===== HERO: today's single decisive CTA (list view only) =====
+           Logic:
+             - If anything is due → "今日待复习" card (rose, urgent)
+             - Else if a recommend exists → "今日推荐" card (emerald, exploratory)
+             - Else → small empty state
+           Only ONE big card so the user knows exactly what to do next. */}
+      {view === "list" && pts.length > 0 && (() => {
+        const top = dueList[0];
+        if (top) {
+          const meta = JUNIOR_LEVEL_META[top.ms.mastery_level ?? 0];
+          return (
+            <section className="mb-5">
+              <Link
+                to={juniorGrammarPlayPath(top.p.id, top.p)}
+                className="block rounded-2xl border border-rose-300/60 dark:border-rose-800/60 bg-gradient-to-br from-rose-50 via-card to-rose-50/40 dark:from-rose-950/30 dark:via-card dark:to-rose-950/10 p-5 hover:shadow-md transition group">
+                <div className="flex items-center gap-4">
+                  <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-rose-500/15 text-2xl">🔥</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-rose-700 dark:text-rose-300 bg-rose-500/15 px-1.5 py-0.5 rounded">
+                        <T>今日待复习</T>
+                      </span>
+                      <span className="text-[10px] font-bold text-rose-600 tabular-nums">
+                        × {totalStats.dueNow}
+                      </span>
+                    </div>
+                    <div className="mt-1.5 font-extrabold text-lg leading-tight truncate">
+                      {meta.emoji} {top.p.title}
+                    </div>
+                    <div className="text-[11px] text-muted-foreground mt-0.5">
+                      <T>抢在遗忘曲线之前重做</T> · CEFR {top.p.cefr}
+                    </div>
                   </div>
-                  <div className="text-[9px] text-muted-foreground mt-0.5"><T>总掌握</T></div>
+                  <div className="shrink-0 inline-flex items-center gap-1 rounded-xl bg-rose-600 text-white px-4 py-2 text-sm font-bold group-hover:bg-rose-700 transition">
+                    <T>立即复习</T> <ChevronRight className="size-4" />
+                  </div>
                 </div>
-              </MasteryRing>
-              <div className="flex-1 min-w-0">
-                <div className="text-xs text-muted-foreground"><T>已掌握考点</T></div>
-                <div className="text-2xl font-extrabold tabular-nums">
-                  {totalStats.mastered}<span className="text-base font-normal text-muted-foreground"> / {totalStats.total}</span>
+              </Link>
+            </section>
+          );
+        }
+        if (recommendNext) {
+          return (
+            <section className="mb-5">
+              <Link
+                to={juniorGrammarPlayPath(recommendNext.point.id, recommendNext.point)}
+                className="block rounded-2xl border border-emerald-300/60 dark:border-emerald-800/60 bg-gradient-to-br from-emerald-50 via-card to-emerald-50/40 dark:from-emerald-950/30 dark:via-card dark:to-emerald-950/10 p-5 hover:shadow-md transition group">
+                <div className="flex items-center gap-4">
+                  <div className="grid size-14 shrink-0 place-items-center rounded-xl bg-emerald-500/15 text-2xl">
+                    {recommendNext.category.emoji}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 px-1.5 py-0.5 rounded inline-flex items-center gap-1">
+                        <Sparkles className="size-3" /> <T>今日推荐</T>
+                      </span>
+                      <span className="text-[10px] text-muted-foreground">
+                        <T>从最薄弱模块开始</T>
+                      </span>
+                    </div>
+                    <div className="mt-1.5 font-extrabold text-lg leading-tight truncate">
+                      {recommendNext.point.title}
+                    </div>
+                    <div className="text-[11px] text-muted-foreground mt-0.5">
+                      {recommendNext.category.name_cn} · CEFR {recommendNext.point.cefr}
+                    </div>
+                  </div>
+                  <div className="shrink-0 inline-flex items-center gap-1 rounded-xl bg-emerald-600 text-white px-4 py-2 text-sm font-bold group-hover:bg-emerald-700 transition">
+                    <T>立即开始</T> <ChevronRight className="size-4" />
+                  </div>
                 </div>
-                <div className="mt-1 text-[11px] text-muted-foreground"><T>👑 = 抗遗忘 21 天</T></div>
-              </div>
+              </Link>
+            </section>
+          );
+        }
+        return null;
+      })()}
+
+      {/* ===== Compact 4-tile stat strip (list view only) ===== */}
+      {view === "list" && pts.length > 0 && (
+        <section className="mb-6 grid grid-cols-2 gap-2 md:grid-cols-4">
+          {/* 总掌握度 */}
+          <div className="rounded-xl border bg-card p-3">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground"><T>总掌握度</T></div>
+            <div className="mt-1 text-2xl font-extrabold tabular-nums">
+              {Math.round(totalStats.score * 100)}<span className="text-sm font-normal text-muted-foreground">%</span>
+            </div>
+            <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+              <div
+                className={cn("h-full transition-all", totalStats.score >= 0.85 ? "bg-yellow-500" : totalStats.score >= 0.6 ? "bg-amber-500" : totalStats.score >= 0.3 ? "bg-emerald-500" : "bg-sky-500")}
+                style={{ width: `${Math.max(2, totalStats.score * 100)}%` }}
+              />
             </div>
           </div>
-
-          {/* 今日待复习 */}
-          <div className="rounded-2xl border bg-card p-5">
-            <div className="flex items-center justify-between mb-2">
-              <div className="text-xs font-bold uppercase tracking-wider text-rose-600 flex items-center gap-1">
-                <Flame className="size-3.5" /> <T>今日待复习</T>
-              </div>
-              <span className="text-2xl font-extrabold tabular-nums text-rose-600">{totalStats.dueNow}</span>
+          {/* 已掌握 */}
+          <div className="rounded-xl border bg-card p-3">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground inline-flex items-center gap-1">
+              👑 <T>已掌握</T>
             </div>
-            {dueList.length === 0 ?
-          <p className="text-xs text-muted-foreground mt-2"><T>今日无到期复习 — 学个新考点吧 ✨</T></p> :
-
-          <ul className="space-y-1.5 mt-2">
-                {dueList.map(({ p, ms }) => {
-              const meta = JUNIOR_LEVEL_META[ms.mastery_level ?? 0];
-              return (
-                <li key={p.id}>
-                      <Link
-                    to={juniorGrammarPlayPath(p.id, p)}
-                    className="flex items-center justify-between gap-2 rounded-lg p-1.5 text-xs hover:bg-muted/50">
-                    
-                        <span className="truncate">{meta.emoji} {p.title}</span>
-                        <ChevronRight className="size-3.5 text-muted-foreground shrink-0" />
-                      </Link>
-                    </li>);
-
-            })}
-              </ul>
-          }
+            <div className="mt-1 text-2xl font-extrabold tabular-nums">
+              {totalStats.mastered}<span className="text-sm font-normal text-muted-foreground"> / {totalStats.total}</span>
+            </div>
+            <div className="mt-1 text-[10px] text-muted-foreground"><T>抗遗忘 21 天</T></div>
           </div>
-
-          {/* 智能推荐 */}
-          <div className="rounded-2xl border bg-card p-5">
-            <div className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1 mb-2">
-              <Sparkles className="size-3.5" /> <T>智能推荐</T>
+          {/* 待复习 */}
+          <div className={cn(
+            "rounded-xl border p-3",
+            totalStats.dueNow > 0 ? "bg-rose-50/60 dark:bg-rose-950/20 border-rose-300/60 dark:border-rose-800/60" : "bg-card",
+          )}>
+            <div className={cn(
+              "text-[10px] font-bold uppercase tracking-wider inline-flex items-center gap-1",
+              totalStats.dueNow > 0 ? "text-rose-700 dark:text-rose-300" : "text-muted-foreground",
+            )}>
+              <Flame className="size-3" /> <T>待复习</T>
             </div>
-            {recommendNext ?
-          <Link to={juniorGrammarPlayPath(recommendNext.point.id, recommendNext.point)} className="block group">
-                <div className="text-xs text-muted-foreground"><T>从最薄弱模块开始</T></div>
-                <div className="text-base font-bold mt-0.5 group-hover:text-primary transition line-clamp-2">
-                  {recommendNext.category.emoji} {recommendNext.point.title}
-                </div>
-                <div className="mt-2 text-[10px] text-muted-foreground">CEFR {recommendNext.point.cefr}</div>
-                <div className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-primary">
-                  <T>立即开始</T> <ChevronRight className="size-3" />
-                </div>
-              </Link> :
-
-          <p className="text-xs text-muted-foreground"><T>暂无推荐</T></p>
-          }
+            <div className={cn(
+              "mt-1 text-2xl font-extrabold tabular-nums",
+              totalStats.dueNow > 0 ? "text-rose-600" : "",
+            )}>
+              {totalStats.dueNow}
+            </div>
+            <div className="mt-1 text-[10px] text-muted-foreground">
+              {totalStats.dueNow > 0 ? <T>今天到期</T> : <T>暂无到期</T>}
+            </div>
+          </div>
+          {/* 错题分析 */}
+          <div className="rounded-xl border bg-card p-3">
+            <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground inline-flex items-center gap-1">
+              <Target className="size-3" /> <T>错题数</T>
+            </div>
+            <div className="mt-1 text-2xl font-extrabold tabular-nums">
+              {totalErrors}
+            </div>
+            <div className="mt-1 text-[10px] text-muted-foreground">
+              {totalErrors >= 5 ? <T>查看错因分布 ↓</T> : <T>需更多数据</T>}
+            </div>
           </div>
         </section>
-      }
+      )}
 
-      {/* ===== 错因雷达 + 复仇入口 ===== */}
-      {(totalErrors > 0 || pendingRevenge > 0) &&
+      {/* ===== 错因分布 (list view only) =====
+           Sparse data (< 5 errors) → thin inline strip (no radar — looks empty)
+           Rich data (≥ 5 errors)    → full radar + bar list */}
+      {view === "list" && totalErrors > 0 && totalErrors < 5 && (
+        <section className="mb-6 rounded-xl border bg-card px-4 py-3 flex items-center gap-3 text-xs">
+          <Target className="size-3.5 text-primary shrink-0" />
+          <span className="font-bold"><T>错因分布</T></span>
+          <span className="text-muted-foreground">
+            {(Object.entries(errorAgg) as [JuniorGrammarErrorReason, number][])
+              .filter(([, v]) => (v as number) > 0)
+              .sort((a, b) => (b[1] as number) - (a[1] as number))
+              .map(([k, v]) => `${JUNIOR_ERROR_REASON_LABELS[k]} ${v}`)
+              .join(" · ")}
+          </span>
+          <span className="ml-auto text-[10px] text-muted-foreground"><T>错满 5 题后展开雷达图</T></span>
+        </section>
+      )}
+      {view === "list" && totalErrors >= 5 &&
       <section className="mb-6 rounded-2xl border bg-card p-5">
           <div className="flex items-center justify-between mb-3">
             <div>
               <div className="text-base font-bold flex items-center gap-1.5">
-                <Target className="size-4 text-primary" /> <T>错因雷达 · 弱点专攻</T>
+                <Target className="size-4 text-primary" /> <T>你的错因分布</T>
               </div>
               <div className="text-xs text-muted-foreground mt-0.5">
-                <T>累计</T> {totalErrors} <T>次错因 · </T>
-                <Link to="/junior/grammar/revenge" className="font-bold text-rose-600 hover:underline"><T>点此处复仇冲刺 →</T></Link>
+                <T>基于</T> {totalErrors} <T>次错题分析，针对性弥补弱点</T>
               </div>
             </div>
           </div>
-          {pendingRevenge > 0 &&
-          <Link
-            to="/junior/grammar/revenge"
-            className="mb-3 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-rose-600 to-orange-500 py-3 text-sm font-bold text-white shadow">
-            <Zap className="size-4" />
-            <T>错题复仇冲刺</T>
-            <span className="rounded-full bg-white/25 px-2 tabular-nums">{pendingRevenge}</span>
-          </Link>
-          }
-          {totalErrors > 0 &&
           <div className="flex flex-col md:flex-row items-center gap-4">
             <ErrorRadar data={errorAgg} size={200} />
             <div className="flex-1 grid gap-2 text-xs w-full">
@@ -388,44 +403,15 @@ export default function JuniorGrammar() {
             })}
             </div>
           </div>
-          }
-          {weakPoints.length > 0 &&
-          <div className="border-t pt-3 mt-3">
-            <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-2"><T>薄弱考点</T></div>
-            <ul className="space-y-1">
-              {weakPoints.map((w) => (
-                <li key={w.point.id}>
-                  <Link
-                    to={w.mistakeCount > 0 ? `/junior/grammar/revenge?point=${w.point.id}` : juniorGrammarPlayPath(w.point.id, w.point)}
-                    className="flex items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-xs hover:bg-muted/50">
-                    <span className="truncate font-medium">{w.point.title}</span>
-                    <span className="shrink-0 text-rose-600 font-bold">
-                      {w.mistakeCount > 0 ? `${w.mistakeCount} 题` : w.isDue ? "待复习" : `${w.wrongCount} 错`}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          }
         </section>
       }
 
-      {/* ===== 关卡地图（默认收起） ===== */}
-      <button
-        type="button"
-        onClick={() => setShowMap((v) => !v)}
-        className="mb-3 flex w-full items-center justify-between gap-2 rounded-xl border bg-card px-4 py-3 text-left text-sm font-bold hover:bg-muted/50 transition">
-        <span className="flex items-center gap-2">
-          <Map className="size-4 text-primary" />
-          <T>关卡地图</T>
-          <span className="text-xs font-normal text-muted-foreground">({pts.length} <T>个考点</T>)</span>
-        </span>
-        <ChevronDown className={cn("size-4 text-muted-foreground transition", showMap && "rotate-180")} />
-      </button>
-
-      {showMap &&
-      <div className="space-y-6 mb-6">
+      {/* ===== Category list with progress (list view only) ===== */}
+      {view === "list" && (<>
+      <h2 className="mb-3 text-base font-bold flex items-center gap-1.5">
+        <BookOpen className="size-4 text-primary" /> <T>语法考点</T>
+      </h2>
+      <div className="space-y-6">
         {cats.map((c) => {
           const catPts = pts.filter((p) => p.category_id === c.id);
           if (catPts.length === 0) return null;
@@ -479,11 +465,20 @@ export default function JuniorGrammar() {
                   const meta = JUNIOR_LEVEL_META[lvl];
                   const isDue = ms?.due_at && new Date(ms.due_at).getTime() <= Date.now();
                   const hasRichContent = (p.content_depth ?? 0) >= 1;
+                  // Gold-standard points → single CTA to adaptive mastery test (no duplicate Lab button).
+                  // Legacy points → keep the old lesson page link (no Lab button — Lab now requires gold content).
+                  const playPath = juniorGrammarPlayPath(p.id, p);
                   return (
                     <li key={p.id}>
                       <Link
-                        to={juniorGrammarPlayPath(p.id, p)}
-                        className="flex min-w-0 items-center gap-2 rounded-xl border bg-card px-3 py-2.5 text-sm transition hover:border-primary hover:shadow-sm">
+                          to={playPath}
+                          className={cn(
+                            "flex items-center gap-2 rounded-xl border px-3 py-2.5 text-sm transition hover:shadow-sm",
+                            hasRichContent
+                              ? "bg-gradient-to-br from-emerald-50 via-card to-emerald-50/40 dark:from-emerald-950/20 dark:via-card dark:to-emerald-950/10 border-emerald-300/60 dark:border-emerald-800/60 hover:border-emerald-500"
+                              : "bg-card hover:border-primary",
+                          )}>
+
                         <span className="text-lg flex-shrink-0" title={meta.label}>
                           {meta.emoji}
                         </span>
@@ -492,8 +487,8 @@ export default function JuniorGrammar() {
                           <span className="block text-[10px] text-muted-foreground mt-0.5 flex items-center gap-1.5 flex-wrap">
                             <span>CEFR {p.cefr}</span>
                             {hasRichContent &&
-                              <span className="inline-block px-1 py-0.5 rounded bg-violet-500/15 text-violet-700 dark:text-violet-300 font-bold text-[9px]">
-                                <T>🎮 闯关</T>
+                              <span className="inline-block px-1 py-0.5 rounded bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-bold text-[9px]">
+                                <T>🎯 闯关测试</T>
                               </span>
                               }
                             {isDue &&
@@ -513,21 +508,42 @@ export default function JuniorGrammar() {
 
         })}
       </div>
-      }
 
-      {/* ===== Legend ===== */}
-      <div className="mt-8 rounded-2xl border bg-muted/30 p-4">
-        <div className="text-xs font-bold mb-2 flex items-center gap-1.5">
-          <TrendingUp className="size-3.5" /> <T>掌握等级说明</T>
-        </div>
-        <div className="grid gap-1.5 text-[11px] sm:grid-cols-2 md:grid-cols-5">
-          <div><T>🌱 未开始 — 还没练过</T></div>
-          <div><T>🌿 初学 — 见过题</T></div>
-          <div><T>🌳 熟悉 — 4 题正确率 ≥60%</T></div>
-          <div><T>⭐ 熟练 — 8 题 ≥80% 抗遗忘 7 天</T></div>
-          <div><T>👑 掌握 — 12 题多题型 ≥85% 抗遗忘 21 天</T></div>
-        </div>
+      {/* ===== Slim legend ===== */}
+      <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border bg-muted/30 px-4 py-2.5 text-[11px] text-muted-foreground">
+        <span className="font-bold text-foreground inline-flex items-center gap-1">
+          <TrendingUp className="size-3" /> <T>掌握等级</T>
+        </span>
+        <span>🌱 <T>未开始</T></span>
+        <span>·</span>
+        <span>🌿 <T>初学</T></span>
+        <span>·</span>
+        <span>🌳 <T>熟悉</T> ≥60%</span>
+        <span>·</span>
+        <span>⭐ <T>熟练</T> ≥80% · 7d</span>
+        <span>·</span>
+        <span>👑 <T>掌握</T> ≥85% · 21d</span>
       </div>
+
+      {/* ===== 选学专题 · 虚拟语气 (relegated to footer banner) ===== */}
+      <a
+        href="/grammar-lab/subjunctive"
+        className="mt-4 flex items-center gap-3 rounded-xl border bg-gradient-to-r from-amber-500/5 via-card to-primary/5 px-4 py-3 hover:shadow-sm transition group">
+        <span className="text-xl shrink-0">🎯</span>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-1.5 flex-wrap text-[10px] font-bold uppercase tracking-widest">
+            <span className="text-amber-700 dark:text-amber-300 bg-amber-500/15 px-1.5 py-0.5 rounded">
+              <T>选学专题</T>
+            </span>
+            <span className="text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 px-1.5 py-0.5 rounded">
+              <T>中考 + 高考衔接</T>
+            </span>
+          </div>
+          <div className="font-bold text-sm mt-1 truncate"><T>虚拟语气全攻克 · 9 关</T></div>
+        </div>
+        <ChevronRight className="size-4 text-muted-foreground group-hover:text-primary transition" />
+      </a>
+      </>)}
     </main>);
 
 }

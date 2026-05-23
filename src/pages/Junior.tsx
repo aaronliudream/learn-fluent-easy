@@ -1,7 +1,7 @@
 import { T } from "@/i18n/T";import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BackLink from "@/components/BackLink";
-import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine, Rocket, Sparkles, Mic, MessageSquare, Landmark } from "lucide-react";
+import { ArrowLeft, Trophy, BookOpen, Target, Headphones, PenLine, Rocket, Sparkles, Mic, MessageSquare } from "lucide-react";
 import { ContinueCard } from "@/components/mastery/ContinueCard";
 
 const GRADE_FILTERS = [
@@ -25,16 +25,18 @@ export default function Junior() {
   { to: `/junior/vocab${q}`, icon: "🎮", title: "核心词汇 · 5 种游戏", desc: "单词便当 / 任务 / 对决 / 听写 · 边玩边背", gradient: "from-violet-500 via-indigo-500 to-blue-500", hero: true },
   { to: `/talk?stage=junior`, icon: Mic, title: "AI 口语对话 · 中考话题", desc: "和 Alex 真人语音聊天 · 校园 / 兴趣 / 旅行 / 节日", gradient: "from-rose-500 via-pink-500 to-fuchsia-600" },
   { to: `/primary/chat`, icon: MessageSquare, title: "AI 文字陪练 · 不限次数", desc: "用完语音也能继续练 · 词汇语法即时纠错", gradient: "from-teal-500 via-cyan-500 to-sky-500" },
-  { to: `/junior/grammar${q}`, icon: BookOpen, title: "语法冒险", desc: "每天一关闯关 · 反射改错 Boss · 间隔复习", gradient: "from-emerald-500 via-teal-500 to-cyan-500" },
+  { to: `/junior/grammar${q}`, icon: BookOpen, title: "中考语法专项", desc: "时态 · 从句 · 非谓语 · 中考考点直击", gradient: "from-emerald-500 via-teal-500 to-cyan-500" },
   { to: `/junior/reading${q}`, icon: Target, title: "阅读训练", desc: "主题阅读 · 答题解析 · 答对喂宠物", gradient: "from-amber-500 via-orange-500 to-rose-500" },
   { to: `/junior/listening${q}`, icon: Headphones, title: "听力短文训练", desc: "对话/短文 · 听音答题 · 中考听力题型", gradient: "from-sky-500 via-blue-500 to-indigo-500" },
-  { to: `/junior/writing${q}`, icon: PenLine, title: "中考写作训练", desc: "命题作文 · AI 批改 · 高分范文对比", gradient: "from-fuchsia-500 via-pink-500 to-rose-500" },
-  { to: "/junior/suzhou", icon: Landmark, title: "🏛️ 苏州中考真题", desc: "历年真题模考 · AI 答疑 · 错题收藏", gradient: "from-stone-500 via-amber-600 to-orange-600" }];
+  { to: `/junior/writing${q}`, icon: PenLine, title: "中考写作训练", desc: "命题作文 · AI 批改 · 高分范文对比", gradient: "from-fuchsia-500 via-pink-500 to-rose-500" }];
+
+  const PAST_PAPERS = [
+  { to: "/junior/suzhou", icon: "🏛️", title: "苏州中考真题", desc: "2019-2024 · 6 套真题 · 三种模式 · AI 答疑", gradient: "from-stone-500 via-amber-600 to-orange-600" }];
 
 
   return (
     <main className="mx-auto min-h-screen max-w-3xl px-5 py-8">
-      <BackLink to="/#stages" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+      <BackLink to="/#courses" className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" /> <T>返回学习阶段</T>
       </BackLink>
       <div className="mb-6">
@@ -92,6 +94,12 @@ export default function Junior() {
         </div>
       </div>
 
+      <div className="mb-3 mt-2 flex items-baseline justify-between">
+        <h2 className="text-lg font-extrabold tracking-tight"><T>📚 词汇 · 语法 · 听 · 说 · 读 · 写</T></h2>
+        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+          <T>Skills</T>
+        </span>
+      </div>
       <section className="grid gap-3">
         {MODULES.map((m) => {
           const Icon = typeof m.icon === "string" ? null : m.icon;
@@ -112,6 +120,38 @@ export default function Junior() {
             </Link>);
 
         })}
+      </section>
+
+      <section className="mt-8">
+        <div className="mb-3 flex items-baseline justify-between">
+          <h2 className="text-lg font-extrabold tracking-tight"><T>📋 中考真题</T></h2>
+          <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+            <T>Zhongkao Past Papers</T>
+          </span>
+        </div>
+        <p className="mb-3 text-xs text-muted-foreground">
+          <T>历年真题模考 · 限时 · 自动判分 · 错题进复习</T>
+        </p>
+        <div className="grid gap-3">
+          {PAST_PAPERS.map((p) =>
+          <Link
+            key={p.title}
+            to={p.to}
+            className={`relative flex items-center gap-4 overflow-hidden rounded-2xl p-4 bg-gradient-to-br ${p.gradient} text-white shadow-tile transition hover:-translate-y-0.5`}>
+            <span className="pointer-events-none absolute -right-8 -top-8 size-28 rounded-full bg-white/15 blur-2xl" />
+            <div className="relative grid size-12 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur-sm text-2xl">
+              <span>{p.icon}</span>
+            </div>
+            <div className="relative flex-1 min-w-0">
+              <div className="text-base font-extrabold leading-tight"><T>{p.title}</T></div>
+              <div className="mt-0.5 text-xs opacity-90"><T>{p.desc}</T></div>
+            </div>
+          </Link>
+          )}
+          <div className="grid place-items-center rounded-2xl border-2 border-dashed border-border/60 p-4 text-xs text-muted-foreground">
+            <T>更多城市真题陆续上线（上海 · 北京 · 广州 …）</T>
+          </div>
+        </div>
       </section>
 
       <div className="mt-8 rounded-2xl border border-border/60 bg-card p-4">

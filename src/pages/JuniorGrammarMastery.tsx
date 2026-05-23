@@ -1,193 +1,364 @@
-import { T } from "@/i18n/T";
-import { useEffect, useMemo, useRef, useState } from "react";
-import BackLink from "@/components/BackLink";
-import { GuestBanner } from "@/components/GuestBanner";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { ArrowLeft, Sparkles, Zap } from "lucide-react";
-import ReactMarkdown from "react-markdown";
+﻿import { useEffect, useMemo, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { ArrowLeft, Lock, Check, Sparkles, RotateCw, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
-import { awardForCorrect, notifyWrong, awardForBlock } from "@/lib/coins";
-import TutorChat from "@/components/tutor/TutorChat";
-import PaywallDialog from "@/components/PaywallDialog";
-import { consumeQuestionQuota } from "@/lib/quota";
-import { fireEmojiConfetti } from "@/lib/feedback";
-import {
-  recordJuniorGrammarAttempt,
-  type JuniorGrammarErrorReason,
-} from "@/lib/juniorGrammarFsrs";
-import { recordGrammarAttempt as recordPanoramaAttempt } from "@/lib/grammarMastery";
-import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import {
   GrammarQuestionCard,
   type GrammarQuestion,
   type AnswerResult,
 } from "@/components/grammar/GrammarQuestionCard";
-import { GrammarTestComplete } from "@/components/grammar/GrammarTestComplete";
-import {
-  CHALLENGE_QUESTIONS_JUNIOR,
-  recordGroupCompletion,
-  type Streak,
-} from "@/lib/challengeMode";
+import { recordJuniorGrammarAttempt, type JuniorGrammarErrorReason } from "@/lib/juniorGrammarFsrs";
+import { awardForCorrect, notifyWrong } from "@/lib/coins";
+import { fireEmojiConfetti } from "@/lib/feedback";
+import { T } from "@/i18n/T";
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Adaptive 5-Level Mastery Test (per grammar point)
+
+   Each level tests ONE question type. Levels unlock progressively based on
+   mastery thresholds. Wrong answers are spaced-retried later in the same
+   level. Locks open in order; you can't skip ahead.
+
+   ── Adaptive difficulty ──
+   Each level tracks a `targetDifficulty` 1 (easy) → 2 (med) → 3 (hard).
+     • Starts at 2.
+     • Correct answer → target++ (capped at 3).
+     • Wrong answer   → target-- (floored at 1), and the question is re-queued
+       2 positions later for a spaced retry.
+   Next-question pick prefers a question whose difficulty matches the current
+   target; falls back to the nearest available difficulty in the same bucket.
+
+   Question source: junior_grammar_questions, sort_order 9000-9199
+     • 9000-9099 = original gold-standard 12 (per point)
+     • 9100-9199 = adaptive expansion bank (varied difficulties)
+   ────────────────────────────────────────────────────────────────────────── */
+
+type LevelKey = "mcq" | "fill" | "correction" | "transform" | "translation";
+type LevelStatus = "locked" | "active" | "completed";
+
+type LevelConfig = {
+  id: number;
+  key: LevelKey;
+  name: string;
+  emoji: string;
+  skillFocus: string;
+  skillFocusCn: string;
+  minQ: number;
+  maxQ: number;
+  /** Fraction 0..1; how many of `minQ` must be correct to unlock the next level. */
+  threshold: number;
+};
+
+// Thresholds tuned to the current 12-question gold-standard bank
+// (4 mcq / 3 fill / 2 correction / 2 transform / 1 translation per point).
+// Once more questions are authored (target 21–33 per point), raise these
+// to 80/80/75/75 per the spec.
+const LEVELS: LevelConfig[] = [
+  {
+    id: 1, key: "mcq", name: "选择题", emoji: "🎯",
+    skillFocus: "Recognition · Can you identify the correct form?",
+    skillFocusCn: "识别能力 · 你能识别出正确的形式吗？",
+    minQ: 4, maxQ: 8, threshold: 0.75,
+  },
+  {
+    id: 2, key: "fill", name: "填空题", emoji: "✏️",
+    skillFocus: "Recall · Can you produce the right form from memory?",
+    skillFocusCn: "回忆能力 · 你能凭记忆写出正确形式吗？",
+    minQ: 3, maxQ: 6, threshold: 0.67,
+  },
+  {
+    id: 3, key: "correction", name: "改错题", emoji: "🔧",
+    skillFocus: "Debugging · Can you spot and fix an error?",
+    skillFocusCn: "纠错能力 · 你能发现并改正错误吗？",
+    minQ: 2, maxQ: 4, threshold: 0.5,
+  },
+  {
+    id: 4, key: "transform", name: "句型转换", emoji: "🔄",
+    skillFocus: "Manipulation · Can you rewrite the sentence correctly?",
+    skillFocusCn: "转换能力 · 你能正确地改写句子吗？",
+    minQ: 2, maxQ: 4, threshold: 0.5,
+  },
+  {
+    id: 5, key: "translation", name: "造句 / 写作", emoji: "✍️",
+    skillFocus: "Production · Can you build the sentence from Chinese?",
+    skillFocusCn: "产出能力 · 你能根据中文造出整句吗？",
+    minQ: 1, maxQ: 3, threshold: 1.0,
+  },
+];
 
 type Pt = {
   id: string;
-  code: string | null;
   title: string;
-  cefr: string;
+  code: string | null;
+  cefr: string | null;
   grade: number | null;
-  explanation_md: string;
+  hook_line: string | null;
+  hook_line_cn: string | null;
   mnemonic: string | null;
 };
+
+type Difficulty = 1 | 2 | 3;
+
+type LevelState = {
+  asked: number[]; // indices of questions already shown
+  correct: number;
+  answered: number;
+  retryQueue: number[]; // indices to re-ask (spaced retry)
+  status: LevelStatus;
+  targetDifficulty: Difficulty; // adaptive: starts at 2, ±1 on each result
+};
+
+function makeInitialState(): Record<number, LevelState> {
+  return Object.fromEntries(
+    LEVELS.map((l) => [
+      l.id,
+      {
+        asked: [],
+        correct: 0,
+        answered: 0,
+        retryQueue: [],
+        status: l.id === 1 ? "active" : "locked",
+        targetDifficulty: 2 as Difficulty,
+      } as LevelState,
+    ]),
+  );
+}
+
+/**
+ * Pick the next question index from `pool`, preferring:
+ *   1. Unasked questions matching `targetDifficulty`,
+ *   2. Unasked questions at the nearest difficulty (|d - target| ascending),
+ *   3. Any unasked question.
+ * Returns null when every question in the pool has already been asked.
+ */
+function pickByTargetDifficulty(
+  pool: GrammarQuestion[],
+  asked: number[],
+  targetDifficulty: Difficulty,
+): number | null {
+  const unaskedIdx = pool.map((_, i) => i).filter((i) => !asked.includes(i));
+  if (unaskedIdx.length === 0) return null;
+  const exact = unaskedIdx.filter((i) => (pool[i].difficulty ?? 2) === targetDifficulty);
+  if (exact.length > 0) return exact[0];
+  // nearest by absolute difficulty distance
+  return unaskedIdx
+    .map((i) => ({ i, d: Math.abs((pool[i].difficulty ?? 2) - targetDifficulty) }))
+    .sort((a, b) => a.d - b.d)[0].i;
+}
+
+function isMastered(state: LevelState, cfg: LevelConfig): boolean {
+  if (state.answered < cfg.minQ) return false;
+  if (state.retryQueue.length > 0) return false; // can't master with pending retries
+  return state.correct / state.answered >= cfg.threshold;
+}
+
+function maxedOut(state: LevelState, cfg: LevelConfig): boolean {
+  return state.answered >= cfg.maxQ && !isMastered(state, cfg);
+}
 
 export default function JuniorGrammarMastery() {
   const { id } = useParams<{ id: string }>();
   const nav = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const isChallenge = searchParams.get("challenge") === "1";
-  const sessionSize = isChallenge ? CHALLENGE_QUESTIONS_JUNIOR : 10;
-
   const [pt, setPt] = useState<Pt | null>(null);
-  const [qs, setQs] = useState<GrammarQuestion[]>([]);
+  const [byType, setByType] = useState<Record<LevelKey, GrammarQuestion[]>>({
+    mcq: [], fill: [], correction: [], transform: [], translation: [],
+  });
   const [loading, setLoading] = useState(true);
-  const [results, setResults] = useState<Record<string, AnswerResult>>({});
-  const [streak, setStreak] = useState(0);
-  const [tutorFor, setTutorFor] = useState<GrammarQuestion | null>(null);
-  const [showComplete, setShowComplete] = useState(false);
-  const [paywall, setPaywall] = useState<{ open: boolean; used: number; limit: number }>({
-    open: false,
-    used: 5,
-    limit: 5,
-  });
+  const [currentLevel, setCurrentLevel] = useState(1);
+  const [state, setState] = useState<Record<number, LevelState>>(() => makeInitialState());
+  const [activeQuestionIdx, setActiveQuestionIdx] = useState<number | null>(null);
+  const [answered, setAnswered] = useState(false);
+  const [showCelebration, setShowCelebration] = useState(false);
 
-  const celebratedRef = useRef(false);
-  const groupRecordedRef = useRef(false);
-  const [groupStreak, setGroupStreak] = useState<Streak>({
-    consecutive_count: 0,
-    challenge_unlocked: false,
-  });
-
-  const grammarBackTo = pt?.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
-
+  // ─── Fetch grammar point + gold-standard questions ───
   useEffect(() => {
     if (!id) return;
     (async () => {
       setLoading(true);
-      const [a, b] = await Promise.all([
+      const [pRes, qRes] = await Promise.all([
         supabase
           .from("junior_grammar_points")
-          .select("id,code,title,cefr,grade,explanation_md,mnemonic")
+          .select("id,title,code,cefr,grade,hook_line,hook_line_cn,mnemonic")
           .eq("id", id)
           .maybeSingle(),
         supabase
           .from("junior_grammar_questions")
           .select(
-            "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading",
+            "id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,difficulty,sort_order",
           )
           .eq("point_id", id)
+          .gte("sort_order", 9000)
+          .lte("sort_order", 9199)
+          .order("difficulty", { ascending: true })
           .order("sort_order"),
       ]);
-      setPt(a.data as Pt);
-      setQs(((b.data ?? []) as GrammarQuestion[]).slice(0, sessionSize));
+      setPt(pRes.data as Pt);
+      const allQs = (qRes.data ?? []) as GrammarQuestion[];
+      const buckets: Record<LevelKey, GrammarQuestion[]> = {
+        mcq: [], fill: [], correction: [], transform: [], translation: [],
+      };
+      for (const q of allQs) {
+        const t = (q.question_type || "mcq") as LevelKey;
+        if (buckets[t]) buckets[t].push(q);
+      }
+      setByType(buckets);
       setLoading(false);
     })();
-  }, [id, sessionSize]);
+  }, [id]);
 
-  const correctCount = Object.values(results).filter(
-    (r) => r.kind === "correct" || r.kind === "acceptable",
-  ).length;
-  const answeredCount = Object.keys(results).length;
-  const allDone = qs.length > 0 && answeredCount === qs.length;
-  const pct = qs.length ? Math.round((correctCount / qs.length) * 100) : 0;
-  const progressPct = qs.length ? Math.round((answeredCount / qs.length) * 100) : 0;
-
+  // ─── Pick the next question for the current level ───
   useEffect(() => {
-    if (allDone && !celebratedRef.current) {
-      celebratedRef.current = true;
-      if (pct >= 70) {
-        fireEmojiConfetti({ vibrate: pct === 100, count: pct === 100 ? 60 : 36 });
+    if (loading || showCelebration) return;
+    const cfg = LEVELS.find((l) => l.id === currentLevel);
+    if (!cfg) return;
+    const ls = state[currentLevel];
+    const pool = byType[cfg.key];
+    if (!pool || pool.length === 0) {
+      // No questions in this bucket — auto-complete this level so the user can move on.
+      if (ls.status !== "completed") {
+        setState((s) => ({
+          ...s,
+          [currentLevel]: { ...s[currentLevel], status: "completed" },
+          ...(currentLevel < LEVELS.length
+            ? { [currentLevel + 1]: { ...s[currentLevel + 1], status: "active" } }
+            : {}),
+        }));
       }
-      setShowComplete(true);
-    }
-    if (allDone && !groupRecordedRef.current && pt?.id) {
-      groupRecordedRef.current = true;
-      recordGroupCompletion(`junior_grammar:${pt.id}`, pct).then(setGroupStreak).catch(() => {});
-    }
-  }, [allDone, pct, pt?.id]);
-
-  const onAnswered = async (q: GrammarQuestion, result: AnswerResult) => {
-    if (results[q.id]) return;
-
-    const quota = await consumeQuestionQuota();
-    if (!quota.allowed) {
-      setPaywall({ open: true, used: quota.used, limit: quota.limit });
       return;
     }
+    // Already have a queued question? leave it.
+    if (activeQuestionIdx !== null) return;
+    // Prefer retry queue (spaced retry of wrong answers)
+    if (ls.retryQueue.length > 0) {
+      setActiveQuestionIdx(ls.retryQueue[0]);
+      return;
+    }
+    // Adaptive pick: prefer a question at the current target difficulty.
+    const next = pickByTargetDifficulty(pool, ls.asked, ls.targetDifficulty);
+    if (next !== null) {
+      setActiveQuestionIdx(next);
+      return;
+    }
+    // Exhausted pool — if not mastered yet, loop back to the first question
+    if (!isMastered(ls, cfg) && pool.length > 0) {
+      setActiveQuestionIdx(0); // replay from start
+    }
+  }, [loading, currentLevel, state, byType, activeQuestionIdx, showCelebration]);
 
-    setResults((prev) => ({ ...prev, [q.id]: result }));
+  // ─── Handle an answer ───
+  const cfg = useMemo(() => LEVELS.find((l) => l.id === currentLevel)!, [currentLevel]);
+  const pool = byType[cfg.key];
+  const activeQ = activeQuestionIdx !== null && pool ? pool[activeQuestionIdx] : null;
+  const lvlState = state[currentLevel];
 
-    const isPositive = result.kind === "correct" || result.kind === "acceptable";
-    if (isPositive) {
-      const next = streak + 1;
-      setStreak(next);
-      await awardForCorrect(next, "junior_grammar", q.id, "junior_grammar", result.latencyMs);
-      const cc = correctCount + 1;
-      if (cc % 5 === 0) await awardForBlock("junior_grammar");
+  const handleAnswered = (result: AnswerResult) => {
+    if (answered || activeQuestionIdx === null || !activeQ) return;
+    setAnswered(true);
+    const isOk = result.kind === "correct" || result.kind === "acceptable";
+
+    setState((s) => {
+      const prev = s[currentLevel];
+      const newAsked = prev.asked.includes(activeQuestionIdx)
+        ? prev.asked
+        : [...prev.asked, activeQuestionIdx];
+      // Pull this idx out of the retry queue if it was there
+      const newRetry = prev.retryQueue.filter((i) => i !== activeQuestionIdx);
+      // Wrong → re-queue this question for a later spaced retry (after 2 others)
+      const updatedRetry = isOk
+        ? newRetry
+        : [...newRetry.slice(0, 2), activeQuestionIdx, ...newRetry.slice(2)];
+      // Adaptive difficulty: correct → harder; wrong → easier (clamped 1..3)
+      const nextTarget = (
+        isOk
+          ? Math.min(3, prev.targetDifficulty + 1)
+          : Math.max(1, prev.targetDifficulty - 1)
+      ) as Difficulty;
+      return {
+        ...s,
+        [currentLevel]: {
+          ...prev,
+          asked: newAsked,
+          correct: prev.correct + (isOk ? 1 : 0),
+          answered: prev.answered + 1,
+          retryQueue: updatedRetry,
+          targetDifficulty: nextTarget,
+        },
+      };
+    });
+
+    // Coins + FSRS + feedback
+    if (isOk) {
+      awardForCorrect(0, "junior_grammar", activeQ.id, "junior_grammar", result.latencyMs);
     } else {
-      setStreak(0);
       notifyWrong();
     }
-
-    await recordJuniorGrammarAttempt({
-      pointId: pt!.id,
-      questionType: q.question_type || "mcq",
-      isCorrect: isPositive,
-      latencyMs: result.latencyMs,
-      errorReason:
-        result.kind === "wrong"
-          ? (result.errorReason as JuniorGrammarErrorReason | undefined)
-          : undefined,
-    });
-    if (pt?.code) recordPanoramaAttempt(`junior:${pt.code}`, isPositive);
-    if (pt) {
-      const rawG = pt.grade ?? 1;
-      const absGrade = rawG >= 1 && rawG <= 3 ? rawG + 6 : rawG;
-      recordUnifiedAttempt({
-        stage: "junior",
-        grade: absGrade,
-        module: "grammar",
-        item_type: q.question_type || "mcq",
-        item_id: pt.id,
-        item_label: pt.title,
-        is_correct: isPositive,
-        context: { code: pt.code, cefr: pt.cefr, qid: q.id },
-      }).catch(() => {});
+    if (pt?.id) {
+      recordJuniorGrammarAttempt({
+        pointId: pt.id,
+        questionType: activeQ.question_type || cfg.key,
+        isCorrect: isOk,
+        latencyMs: result.latencyMs,
+        errorReason:
+          result.kind === "wrong"
+            ? (result.errorReason as JuniorGrammarErrorReason | undefined)
+            : undefined,
+      });
     }
   };
 
-  const resetAll = () => {
-    setResults({});
-    setStreak(0);
-    setShowComplete(false);
-    celebratedRef.current = false;
-    groupRecordedRef.current = false;
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const handleNext = () => {
+    if (!cfg) return;
+    setAnswered(false);
+    setActiveQuestionIdx(null);
 
-  const streakLabel = useMemo(() => {
-    if (streak >= 5) return { text: "超神连击！", color: "from-rose-500 to-pink-500" };
-    if (streak >= 3) return { text: "连对中！", color: "from-pink-500 to-fuchsia-500" };
-    return null;
-  }, [streak]);
+    // Check mastery after the answer is in state — use a microtask to read fresh state.
+    setTimeout(() => {
+      setState((s) => {
+        const ls = s[currentLevel];
+        const mastered = isMastered(ls, cfg);
+        const maxed = maxedOut(ls, cfg);
+        if (mastered) {
+          // Unlock next level (or finish)
+          if (currentLevel >= LEVELS.length) {
+            setShowCelebration(true);
+            fireEmojiConfetti({ vibrate: true, count: 80 });
+            return {
+              ...s,
+              [currentLevel]: { ...ls, status: "completed" },
+            };
+          }
+          fireEmojiConfetti({ vibrate: false, count: 24 });
+          setCurrentLevel(currentLevel + 1);
+          return {
+            ...s,
+            [currentLevel]: { ...ls, status: "completed" },
+            [currentLevel + 1]: { ...s[currentLevel + 1], status: "active" },
+          };
+        }
+        if (maxed && ls.retryQueue.length === 0) {
+          // Hit max but didn't master and nothing to retry — gentle progression
+          // (let them move on; UI shows incomplete badge)
+          if (currentLevel < LEVELS.length) {
+            setCurrentLevel(currentLevel + 1);
+            return {
+              ...s,
+              [currentLevel]: { ...ls, status: "completed" },
+              [currentLevel + 1]: { ...s[currentLevel + 1], status: "active" },
+            };
+          }
+        }
+        return s;
+      });
+    }, 0);
+  };
 
   if (loading) {
     return (
       <main className="playful-shell grid min-h-screen place-items-center">
         <div className="playful-card px-8 py-6 text-center">
-          <Sparkles className="mx-auto size-8 animate-pulse text-pink-400" />
-          <p className="mt-3 text-sm font-bold text-muted-foreground">
-            <T>加载题目中…</T>
-          </p>
+          <RotateCw className="mx-auto size-8 animate-spin text-pink-400" />
+          <p className="mt-3 text-sm font-bold text-muted-foreground"><T>加载中...</T></p>
         </div>
       </main>
     );
@@ -195,193 +366,221 @@ export default function JuniorGrammarMastery() {
 
   if (!pt) {
     return (
-      <main className="playful-shell mx-auto min-h-screen max-w-2xl px-5 py-8">
-        <BackLink to="/junior/grammar" className="mb-3 inline-flex items-center gap-1 text-sm">
-          <ArrowLeft className="size-4" /> <T>返回考点列表</T>
-        </BackLink>
-        <p className="text-sm text-muted-foreground">
-          <T>考点未找到</T>
-        </p>
+      <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-10 text-center">
+        <p className="text-sm text-muted-foreground"><T>语法点不存在</T></p>
       </main>
     );
   }
 
+  if (showCelebration) {
+    return <CompletionScreen pt={pt} state={state} onRestart={() => {
+      setState(makeInitialState());
+      setCurrentLevel(1);
+      setShowCelebration(false);
+      setActiveQuestionIdx(null);
+      setAnswered(false);
+    }} />;
+  }
+
+  const backTo = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
+
   return (
-    <main className="playful-shell mx-auto min-h-screen max-w-2xl px-5 py-6">
-      <BackLink
-        to={grammarBackTo}
-        className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+    <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-6 space-y-4">
+      <Link
+        to={backTo}
+        className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" /> <T>返回考点列表</T>
-      </BackLink>
+      </Link>
 
-      <GuestBanner />
-
-      {/* Header card */}
-      <header className="playful-card relative overflow-hidden p-5 mb-5">
+      <header className="playful-card relative overflow-hidden p-5">
         <span className="pointer-events-none absolute -right-6 -top-6 size-24 rounded-full bg-pink-200/40 blur-2xl" />
         <span className="pointer-events-none absolute -bottom-4 -left-4 size-20 rounded-full bg-cyan-200/40 blur-2xl" />
-        <div className="relative flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-pink-100 to-cyan-100 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-pink-600 dark:from-pink-950/60 dark:to-cyan-950/60 dark:text-pink-300">
-              <Sparkles className="size-3" />
-              <T>语法掌握测试</T>
-            </div>
-            <h1 className="mt-2 text-xl font-extrabold leading-snug bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">
-              {pt.title}
-            </h1>
-            <p className="mt-1 text-xs text-muted-foreground">CEFR {pt.cefr}</p>
-          </div>
-          {streakLabel && (
-            <div
-              className={cn(
-                "shrink-0 rounded-2xl bg-gradient-to-br px-3 py-2 text-center text-white shadow-md spark-pulse",
-                streakLabel.color,
-              )}
-            >
-              <Zap className="mx-auto size-4" />
-              <div className="mt-0.5 text-[10px] font-extrabold">{streak}</div>
-            </div>
-          )}
+        <div className="relative inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-pink-100 to-cyan-100 px-2.5 py-0.5 text-xs font-bold text-pink-600 dark:from-pink-950/60 dark:to-cyan-950/60 dark:text-pink-300">
+          <Sparkles className="size-3" /> {pt.code ?? "G8"} · {pt.cefr ?? "B1"}
         </div>
-
-        {/* Progress bar */}
-        <div className="relative mt-4">
-          <div className="mb-1.5 flex items-center justify-between text-[11px] font-bold">
-            <span className="text-pink-600">
-              <T>进度</T> {answeredCount}/{qs.length}
-            </span>
-            <span className="text-cyan-600">
-              <T>正确</T> {correctCount}
-            </span>
-          </div>
-          <div className="h-3 overflow-hidden rounded-full bg-pink-100 dark:bg-pink-950/40">
-            <div
-              className="playful-progress h-full rounded-full transition-all duration-500 ease-out"
-              style={{ width: `${progressPct}%` }}
-            />
-          </div>
-        </div>
+        <h1 className="relative mt-2 text-2xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">
+          {pt.title}
+        </h1>
+        <p className="relative mt-1 text-xs text-muted-foreground">
+          <T>自适应学习 · 答对才能进阶！</T>
+        </p>
       </header>
 
-      {showComplete && allDone ? (
-        <GrammarTestComplete
-          pointId={id!}
-          pointTitle={pt.title}
-          grade={pt.grade ?? 7}
-          qs={qs}
-          results={results}
-          correctCount={correctCount}
-          pct={pct}
-          grammarBackTo={grammarBackTo}
-          isChallenge={isChallenge}
-          groupStreak={groupStreak}
-          onReset={resetAll}
-          onEnterChallenge={() => {
-            const next = new URLSearchParams(searchParams);
-            next.set("challenge", "1");
-            setSearchParams(next);
-            resetAll();
-          }}
-          onExitChallenge={() => {
-            const next = new URLSearchParams(searchParams);
-            next.delete("challenge");
-            setSearchParams(next);
-            resetAll();
-          }}
-        />
-      ) : (
-        <>
-          {pt.mnemonic && (
-            <div className="mb-4 rounded-2xl border-2 border-pink-200/70 bg-gradient-to-br from-pink-50 to-cyan-50 p-4 text-center dark:border-pink-900/40 dark:from-pink-950/30 dark:to-cyan-950/20">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-pink-500 mb-1">
-                <T>🔑 一句话记住</T>
+      <div className="grid grid-cols-5 gap-2">
+        {LEVELS.map((l) => {
+          const s = state[l.id];
+          const isActive = l.id === currentLevel && s.status === "active";
+          const isCompleted = s.status === "completed";
+          const isLocked = s.status === "locked";
+          return (
+            <div
+              key={l.id}
+              className={cn(
+                "rounded-2xl border-2 p-3 flex flex-col items-center gap-1.5 transition",
+                isActive && "border-pink-400 bg-gradient-to-br from-pink-50 to-cyan-50 dark:from-pink-950/40 dark:to-cyan-950/30 ring-2 ring-pink-300/40",
+                isCompleted && "border-cyan-300 bg-cyan-50/60 dark:bg-cyan-950/20",
+                isLocked && "border-muted bg-muted/30 opacity-60",
+              )}
+            >
+              <div className="relative grid size-10 place-items-center rounded-xl bg-white dark:bg-background shadow-sm">
+                {isLocked ? <Lock className="size-4 text-muted-foreground" /> : <span className="text-xl">{l.emoji}</span>}
+                {isCompleted && (
+                  <span className="absolute -right-1 -top-1 grid size-5 place-items-center rounded-full bg-emerald-500 text-white text-[10px]">
+                    <Check className="size-3" />
+                  </span>
+                )}
               </div>
-              <div className="text-sm font-bold text-pink-800 dark:text-pink-200">{pt.mnemonic}</div>
-            </div>
-          )}
-
-          {pt.explanation_md && (
-            <article className="prose prose-sm mb-4 max-w-none rounded-2xl border-2 border-cyan-100 bg-white/80 p-4 dark:prose-invert dark:border-cyan-900/40 dark:bg-card/80">
-              <ReactMarkdown>{pt.explanation_md}</ReactMarkdown>
-            </article>
-          )}
-
-          {qs.length === 0 ? (
-            <div className="playful-card p-8 text-center text-sm text-muted-foreground">
-              <T>这个考点暂无练习题</T>
-              <button
-                type="button"
-                onClick={() => nav(grammarBackTo)}
-                className="playful-btn playful-btn-cyan mt-4 bg-gradient-to-r from-cyan-500 to-teal-400 px-5 py-2 text-xs text-white"
-              >
-                <T>返回列表</T>
-              </button>
-            </div>
-          ) : (
-            <div className="space-y-4">
-              {qs.map((q, i) => (
-                <GrammarQuestionCard
-                  key={q.id}
-                  question={q}
-                  index={i}
-                  onAnswered={(r) => onAnswered(q, r)}
-                  onAskTutor={() => setTutorFor(q)}
-                  enableTtsForStem={false}
-                />
-              ))}
-
-              {allDone && (
-                <div className="text-center pt-2">
-                  <button
-                    type="button"
-                    onClick={() => setShowComplete(true)}
-                    className="playful-btn bg-gradient-to-r from-pink-500 via-rose-400 to-cyan-400 px-8 py-3 text-sm text-white"
-                  >
-                    <T>✨ 查看本次成绩</T>
-                  </button>
+              <div className="text-[10px] font-bold text-muted-foreground">Level {l.id}</div>
+              <div className="text-[11px] font-bold leading-tight text-center">{l.name}</div>
+              {isActive && (
+                <div className="text-[9px] tabular-nums text-pink-600 dark:text-pink-300">
+                  {s.correct} / {s.answered} ✓
                 </div>
               )}
             </div>
-          )}
-        </>
-      )}
+          );
+        })}
+      </div>
 
-      {tutorFor && (
-        <TutorChat
-          context="junior_grammar"
-          questionRef={tutorFor.id}
-          questionSnapshot={{
-            point: pt.title,
-            cefr: pt.cefr,
-            stem: tutorFor.stem,
-            question_type: tutorFor.question_type,
-            options:
-              tutorFor.question_type === "mcq"
-                ? {
-                    A: tutorFor.option_a,
-                    B: tutorFor.option_b,
-                    C: tutorFor.option_c,
-                    D: tutorFor.option_d,
+      {/* ─── Active question card ─── */}
+      {activeQ ? (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between text-xs px-1">
+            <span className="rounded-full bg-gradient-to-r from-pink-100 to-cyan-100 px-2.5 py-0.5 font-bold text-pink-600 dark:from-pink-950/50 dark:to-cyan-950/50 dark:text-pink-300">
+              <T>Level</T> {cfg.id} · {cfg.name}
+            </span>
+            <div className="flex items-center gap-2">
+              {(() => {
+                const d = (activeQ.difficulty ?? 2) as Difficulty;
+                const meta = d === 1
+                  ? { label: "易", cn: "易", cls: "bg-sky-500/15 text-sky-700 dark:text-sky-300" }
+                  : d === 3
+                  ? { label: "难", cn: "难", cls: "bg-rose-500/15 text-rose-700 dark:text-rose-300" }
+                  : { label: "中", cn: "中", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300" };
+                return (
+                  <span
+                    title="adaptive difficulty — 答对会升级，答错会下调"
+                    className={cn("rounded-full px-2 py-0.5 font-bold", meta.cls)}
+                  >
+                    {meta.cn}
+                  </span>
+                );
+              })()}
+              <span className="text-muted-foreground tabular-nums">
+                {lvlState.answered + 1} · {cfg.minQ}–{cfg.maxQ} <T>题</T>
+              </span>
+            </div>
+          </div>
+          <GrammarQuestionCard
+            key={activeQ.id}
+            question={activeQ}
+            index={lvlState.answered}
+            onAnswered={handleAnswered}
+          />
+          {answered && (
+            <div className="flex items-center justify-between gap-3 pt-1">
+              <div className="text-xs text-muted-foreground">
+                <span className="font-bold text-foreground">{cfg.skillFocusCn}</span>
+                <br />
+                {cfg.skillFocus}
+              </div>
+              <button
+                onClick={handleNext}
+                className="playful-btn playful-btn-cyan shrink-0 inline-flex items-center gap-1 bg-gradient-to-r from-cyan-500 to-teal-400 px-4 py-2 text-sm text-white"
+              >
+                {(() => {
+                  const ls = lvlState;
+                  if (isMastered(ls, cfg)) {
+                    return currentLevel >= LEVELS.length ? "完成 🎉" : "进入 Level " + (currentLevel + 1) + " →";
                   }
-                : undefined,
-            correct_answer: tutorFor.correct_answer,
-            accepted_answers: tutorFor.accepted_answers,
-            user_result: results[tutorFor.id]?.kind,
-            explanation: tutorFor.explanation,
-          }}
-          open={!!tutorFor}
-          onClose={() => setTutorFor(null)}
-        />
+                  return "下一题 →";
+                })()}
+              </button>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="playful-card p-8 text-center space-y-2">
+          <p className="text-sm text-muted-foreground"><T>加载题目中...</T></p>
+        </div>
       )}
 
-      <PaywallDialog
-        open={paywall.open}
-        onClose={() => setPaywall((p) => ({ ...p, open: false }))}
-        trigger="daily_quota_exhausted"
-        used={paywall.used}
-        limit={paywall.limit}
-      />
+      {/* ─── Mastery hint (low-key) ─── */}
+      <div className="text-[11px] text-center text-muted-foreground space-y-0.5">
+        <div>
+          <T>当前关卡通关条件</T>：<T>至少答 {cfg.minQ} 题，正确率 ≥ {Math.round(cfg.threshold * 100)}%</T>
+          {" · "}
+          <T>答错的题会稍后重做</T>
+        </div>
+        <div className="text-[10px] opacity-80">
+          <T>智能调节：答对升级（易 → 中 → 难），答错降级（难 → 中 → 易）</T>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+/* ─────────────── Completion Screen ─────────────── */
+function CompletionScreen({
+  pt,
+  state,
+  onRestart,
+}: {
+  pt: Pt;
+  state: Record<number, LevelState>;
+  onRestart: () => void;
+}) {
+  const totalAnswered = Object.values(state).reduce((a, s) => a + s.answered, 0);
+  const totalCorrect = Object.values(state).reduce((a, s) => a + s.correct, 0);
+  const pct = totalAnswered ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
+  const backTo = pt.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar";
+
+  return (
+    <main className="playful-shell mx-auto min-h-screen max-w-3xl px-5 py-10 space-y-6 text-center">
+      <section className="relative overflow-hidden rounded-[2rem] border-2 border-pink-200/80 bg-gradient-to-br from-pink-100 via-white to-cyan-100 p-8 space-y-3 dark:border-pink-900/50 dark:from-pink-950/40 dark:via-background dark:to-cyan-950/40">
+        <div className="relative mx-auto grid size-20 place-items-center rounded-full bg-gradient-to-br from-pink-400 to-cyan-400 text-white shadow-lg spark-bob">
+          <Trophy className="size-10" />
+        </div>
+        <h1 className="relative text-3xl font-extrabold tracking-tight bg-gradient-to-r from-pink-600 to-cyan-600 bg-clip-text text-transparent">
+          <T>通关成功！</T>
+        </h1>
+        <p className="relative text-base text-muted-foreground">
+          <T>你已经掌握了</T> <span className="font-bold text-foreground">{pt.title}</span>
+        </p>
+        <div className="relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500/15 to-cyan-500/15 px-4 py-1.5 text-sm font-bold text-pink-700 dark:text-pink-300">
+          <Trophy className="size-4" />
+          <T>总正确率</T> {pct}% · {totalCorrect} / {totalAnswered}
+        </div>
+      </section>
+
+      <div className="grid grid-cols-5 gap-2">
+        {LEVELS.map((l) => {
+          const s = state[l.id];
+          return (
+            <div key={l.id} className="playful-card p-3 space-y-1">
+              <div className="text-xl">{l.emoji}</div>
+              <div className="text-[10px] font-bold">{l.name}</div>
+              <div className="text-[10px] tabular-nums text-muted-foreground">{s.correct} / {s.answered}</div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <button
+          onClick={onRestart}
+          className="playful-btn inline-flex items-center gap-1.5 bg-gradient-to-r from-pink-500 to-rose-400 px-5 py-2.5 text-sm text-white"
+        >
+          <RotateCw className="size-4" /> <T>再做一遍</T>
+        </button>
+        <Link
+          to={backTo}
+          className="playful-btn playful-btn-cyan inline-flex items-center gap-1.5 bg-gradient-to-r from-cyan-500 to-teal-400 px-5 py-2.5 text-sm text-white"
+        >
+          <T>返回考点列表</T>
+        </Link>
+      </div>
     </main>
   );
 }

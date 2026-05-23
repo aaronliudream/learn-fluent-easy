@@ -9,6 +9,7 @@ import { clearRevengeForPoint, enqueueLabMistake } from "@/lib/juniorGrammarReve
 import { GrammarRevengeRunner } from "@/components/grammar/GrammarRevengeRunner";
 import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
 import { TeacherLessonPlayer, type LessonSegment } from "@/components/grammar/TeacherLessonPlayer";
+import { GrammarQuestionCard, type GrammarQuestion, type AnswerResult } from "@/components/grammar/GrammarQuestionCard";
 import { fireEmojiConfetti } from "@/lib/feedback";
 import { awardForCorrect } from "@/lib/coins";
 import ReactMarkdown from "react-markdown";
@@ -28,11 +29,10 @@ type ReflexCard = {cn: string;en: string;keyword?: string;};
 type DrillItem = {situation: string;cn: string;en: string;accepted?: string[];};
 type CorrectionTask = {wrong: string;model: string;hint: string;why: string;};
 type BossQ = {stem: string;option_a: string;option_b: string;option_c: string;option_d: string;correct_answer: string;trap: string;why: string;};
-type ExamQ = {
-  id: string;stem: string;
-  option_a?: string | null;option_b?: string | null;option_c?: string | null;option_d?: string | null;
-  correct_answer?: string | null;explanation?: string | null;
-};
+// Exam questions use the universal GrammarQuestion type so the Lab's exam
+// phase can render every question_type (mcq / fill / transform / correction /
+// translation) via GrammarQuestionCard — not just MCQ.
+type ExamQ = GrammarQuestion;
 
 type Pt = {
   id: string;
@@ -62,16 +62,19 @@ type LabState = {
   mistakes: Mistake[];
 };
 
+// Test-focused Lab: removed the 5 "lecture-style" phases (brief / teacher
+// lesson / foundation / reflex / drill) per user request. The Lab now opens
+// directly into the correction challenge and works through to the final
+// celebration. Phase IDs stay the same as before (5..8) so the existing
+// render blocks (phase === 5/6/7/8) continue to work unchanged.
 const PHASES = [
-{ id: 0, key: "brief", name: "情境钩子", emoji: "🎬" },
-{ id: 1, key: "lesson", name: "老师讲堂", emoji: "👩‍🏫" },
-{ id: 2, key: "foundation", name: "核心公式", emoji: "📐" },
-{ id: 3, key: "reflex", name: "反射卡", emoji: "⚡" },
-{ id: 4, key: "drill", name: "情境翻译", emoji: "✍️" },
 { id: 5, key: "correction", name: "改错挑战", emoji: "🛠️" },
 { id: 6, key: "exam", name: "真题练习", emoji: "📚" },
 { id: 7, key: "boss", name: "Boss 冲刺", emoji: "👑" },
 { id: 8, key: "done", name: "通关庆典", emoji: "🎉" }];
+
+const MAX_PHASE = 8;
+const INITIAL_PHASE = 5;
 
 
 const ACHIEVEMENTS = [
@@ -541,7 +544,88 @@ function CorrectionScreen({ tasks, onDone, onMistake }: {tasks: CorrectionTask[]
 
 }
 
-/* ─────────────── Phase: MCQ runner (Exam + Boss) ─────────────── */
+/* ─────────────── Phase: Universal exam runner (uses GrammarQuestionCard) ─────────────── */
+/**
+ * Drives the Lab's 真题练习 (exam) phase using the universal
+ * GrammarQuestionCard component, which auto-selects the right UI based on
+ * question_type:
+ *   - mcq          → 4-button picker
+ *   - fill         → typed input matched against accepted_answers
+ *   - transform    → typed sentence-rewrite (AI-graded if use_ai_grading)
+ *   - correction   → typed correction (AI-graded if use_ai_grading)
+ *   - translation  → typed translation (AI-graded if use_ai_grading)
+ *
+ * Replaces the legacy MCQRunner which only rendered MCQ rows and choked on
+ * NULL option columns from older seed data.
+ */
+function UniversalExamRunner({ questions, label, onDone, onMistake, onCorrect }: {
+  questions: GrammarQuestion[];
+  label: string;
+  onDone: (correct: number, total: number) => void;
+  onMistake: (m: Mistake) => void;
+  onCorrect: () => void;
+}) {
+  const [i, setI] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [answered, setAnswered] = useState(false);
+
+  if (!questions.length) return <SkipPhase emoji="📚" label={label} onSkip={() => onDone(0, 0)} />;
+
+  const q = questions[i];
+
+  const handleAnswered = (result: AnswerResult) => {
+    if (answered) return;
+    setAnswered(true);
+    const isOk = result.kind === "correct" || result.kind === "acceptable";
+    if (isOk) {
+      setCorrectCount((c) => c + 1);
+      onCorrect();
+    } else {
+      onMistake({
+        phase: label,
+        stem: q.stem,
+        picked: "", // GrammarQuestionCard handles its own answer display
+        correct: q.correct_answer || (q.accepted_answers?.[0] ?? ""),
+        why: q.explanation || "",
+      });
+    }
+  };
+
+  const next = () => {
+    if (i + 1 >= questions.length) {
+      onDone(correctCount, questions.length);
+    } else {
+      setI(i + 1);
+      setAnswered(false);
+    }
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto px-4 py-10 space-y-6 animate-fade-in">
+      <div className="flex items-center justify-between text-xs ink-dim">
+        <span>{label}</span>
+        <span>{i + 1} / {questions.length}</span>
+      </div>
+      <div className="glass-card-strong rounded-2xl p-6">
+        {/* key={q.id} forces GrammarQuestionCard to reset its internal state per question */}
+        <GrammarQuestionCard
+          key={q.id}
+          question={q}
+          index={i}
+          onAnswered={handleAnswered}
+        />
+      </div>
+      {answered &&
+        <div className="text-right">
+          <button onClick={next} className="btn-primary">
+            {i + 1 >= questions.length ? "完成阶段" : "下一题"} <ArrowRight size={14} className="inline" />
+          </button>
+        </div>
+      }
+    </div>);
+}
+
+/* ─────────────── Phase: MCQ runner (Boss only — legacy kept for backward compat) ─────────────── */
 function MCQRunner({ questions, label, onDone, onMistake, onCorrect
 
 
@@ -1017,11 +1101,25 @@ export default function JuniorGrammarLab() {
   const { id } = useParams<{id: string;}>();
   const [searchParams] = useSearchParams();
   const wantRevenge = searchParams.get("revenge") === "1";
+  // 测试模式 (?quick=1): redirect to JuniorGrammarPoint, which uses the universal
+  // GrammarQuestionCard renderer (handles all 5 question types — mcq/fill/transform/
+  // correction/translation). Lab's exam phase is MCQ-only (limit 8, NULL options
+  // render as "nan") so we'd lose 8 of the 12 gold-standard questions here.
+  const isQuick = searchParams.get("quick") === "1";
+  // ?legacy=1 lets power users opt back into the classic Lab flow.
+  const wantLegacy = searchParams.get("legacy") === "1";
   const nav = useNavigate();
+  // Redirect to the new adaptive 5-level mastery test by default. The Lab's
+  // legacy multi-phase flow is still available via ?legacy=1 for compat.
+  // ?quick=1 also lands on the mastery test (it's already test-focused).
+  useEffect(() => {
+    if (!id || wantLegacy) return;
+    nav(`/junior/grammar/${id}/mastery`, { replace: true });
+  }, [id, wantLegacy, nav]);
   const [pt, setPt] = useState<Pt | null>(null);
   const [examQs, setExamQs] = useState<ExamQ[]>([]);
   const [loading, setLoading] = useState(true);
-  const [phase, setPhase] = useState(0);
+  const [phase, setPhase] = useState(INITIAL_PHASE);
   const [state, setState] = useState<LabState>({ xp: 0, streak: 0, bestStreak: 0, phasesDone: [], achievements: [], mistakes: [] });
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [focus, setFocus] = useState(false);
@@ -1055,9 +1153,18 @@ export default function JuniorGrammarLab() {
       select("id,title,cefr,grade,mnemonic,explanation_md,teacher_script,immersion_cards,hook_line,hook_line_cn,contrast_table,reflex_cards,situation_drills,correction_tasks,boss_questions").
       eq("id", id).maybeSingle();
       if (p) setPt(p as any);
+      // Gold-standard questions only (sort_order 9000-9099). We pull ALL types
+      // (mcq / fill / transform / correction / translation) and render them
+      // through GrammarQuestionCard, which auto-selects the right UI per type.
+      // Old seed rows in sort_order 1-99 are skipped — they have NULL columns
+      // that previously rendered as "nan" inside MCQRunner.
       const { data: qs } = await supabase.from("junior_grammar_questions").
-      select("id,stem,option_a,option_b,option_c,option_d,correct_answer,explanation,question_type,difficulty").
-      eq("point_id", id).eq("question_type", "mcq").order("difficulty").limit(8);
+      select("id,stem,option_a,option_b,option_c,option_d,correct_answer,accepted_answers,explanation,question_type,distractors,natural_note,grammar_topic,use_ai_grading,sort_order").
+      eq("point_id", id).
+      gte("sort_order", 9000).
+      lte("sort_order", 9099).
+      order("sort_order").
+      limit(12);
       setExamQs(qs as any || []);
       const [{ data: allPts }, masteryRows] = await Promise.all([
         supabase
@@ -1149,7 +1256,9 @@ export default function JuniorGrammarLab() {
   const completePhase = (phaseId: number, unlocks: string[] = []) => {
     setState((s) => ({ ...s, phasesDone: Array.from(new Set([...s.phasesDone, phaseId])) }));
     grant({ addXp: XP.phase_clear, unlock: unlocks });
-    setPhase((p) => Math.min(p + 1, PHASES.length - 1));
+    // Cap on the highest phase id (8 = done), not PHASES.length - 1 — the
+    // PHASES array now has only 4 visible entries (5..8) so length-1 would be 3.
+    setPhase((p) => Math.min(p + 1, MAX_PHASE));
   };
 
   const persistBossPassed = async (firstTryCorrect: number, total: number) => {
@@ -1253,9 +1362,9 @@ export default function JuniorGrammarLab() {
 
       }
       {phase === 6 &&
-      <MCQRunner
+      <UniversalExamRunner
         label="真题练习"
-        questions={examQs.slice(0, 5)}
+        questions={examQs}
         onCorrect={() => {onCorrect();grant({ addXp: XP.exam });}}
         onMistake={onMistake}
         onDone={() => completePhase(6, ["exam_clear"])} />
@@ -1286,7 +1395,7 @@ export default function JuniorGrammarLab() {
         nextPointTitle={nextPointTitle}
         grammarHref={pt?.grade ? `/junior/grammar?grade=${pt.grade}` : "/junior/grammar"}
         onRevenge={() => setPhase(REVENGE_PHASE)}
-        onReplay={() => {setPhase(0);setState({ ...state, phasesDone: [], streak: 0, mistakes: [] });}}
+        onReplay={() => {setPhase(INITIAL_PHASE);setState({ ...state, phasesDone: [], streak: 0, mistakes: [] });}}
         onAskTutor={(m) => {
           const url = `/junior/grammar/${id}?ask=${encodeURIComponent(m.stem + " | " + m.correct)}`;
           window.location.href = url;

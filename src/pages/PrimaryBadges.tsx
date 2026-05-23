@@ -24,10 +24,10 @@ export default function PrimaryBadges() {
   return (
     <main className="mx-auto min-h-screen max-w-2xl px-5 py-6 pb-24">
       <BackLink
-        to="/lesson?grade=2"
+        to="/primary"
         className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-        
-        <ArrowLeft className="size-4" /> <T>返回 G2 课程</T>
+
+        <ArrowLeft className="size-4" /> <T>返回小学主页</T>
       </BackLink>
 
       <div className="mb-5 rounded-3xl border-2 border-amber-300 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-5 shadow-tile dark:border-amber-700 dark:from-amber-950/30 dark:via-orange-950/30 dark:to-rose-950/30">
@@ -72,10 +72,10 @@ export default function PrimaryBadges() {
 
       <div className="mt-6 text-center">
         <Link
-          to="/lesson?grade=2"
+          to="/primary"
           className="inline-block rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 px-6 py-3 text-base font-extrabold text-white shadow-tile">
           <T>继续探险 →</T>
-        
+
         </Link>
       </div>
     </main>);

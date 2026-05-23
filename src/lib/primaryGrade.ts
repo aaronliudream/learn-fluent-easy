@@ -1,19 +1,21 @@
-/** Shared grade selection for Primary (G1–G6). Written by Primary.tsx pickGrade / adventure URL. */
+/** Shared grade selection for Primary (G3–G6). Written by Primary.tsx pickGrade / adventure URL. */
 export const PRIMARY_LAST_GRADE_KEY = "primary:lastGrade";
 
-/** Default G3 — 人教 PEP 三年级起点 */
-export const PRIMARY_DEFAULT_GRADE = 3;
+/** 小学英语从三年级开始(新课标)。一/二年级已下线，遗留值会被归一到 G3。 */
+const MIN_GRADE = 3;
+const MAX_GRADE = 6;
 
 export function readPrimaryGradeFromStorage(): number {
-  if (typeof window === "undefined") return PRIMARY_DEFAULT_GRADE;
+  if (typeof window === "undefined") return MIN_GRADE;
   const raw = window.localStorage.getItem(PRIMARY_LAST_GRADE_KEY);
   const n = raw ? Number(raw) : NaN;
-  return Number.isFinite(n) && n >= 1 && n <= 6 ? n : PRIMARY_DEFAULT_GRADE;
+  if (!Number.isFinite(n)) return MIN_GRADE;
+  return Math.min(MAX_GRADE, Math.max(MIN_GRADE, n));
 }
 
 export function writePrimaryGradeToStorage(grade: number): void {
   if (typeof window === "undefined") return;
-  const g = Math.min(6, Math.max(1, Math.round(grade)));
+  const g = Math.min(MAX_GRADE, Math.max(MIN_GRADE, Math.round(grade)));
   try {
     window.localStorage.setItem(PRIMARY_LAST_GRADE_KEY, String(g));
   } catch {
@@ -21,11 +23,13 @@ export function writePrimaryGradeToStorage(grade: number): void {
   }
 }
 
-/** URL ?grade= or /:grade wins; otherwise localStorage; default 1. */
+/** URL ?grade= or /:grade wins; otherwise localStorage; default G3. */
 export function resolvePrimaryGrade(urlGrade?: string | null): number {
   if (urlGrade != null && urlGrade !== "") {
     const n = Number(urlGrade);
-    if (Number.isFinite(n) && n >= 1 && n <= 6) return n;
+    if (Number.isFinite(n)) {
+      return Math.min(MAX_GRADE, Math.max(MIN_GRADE, n));
+    }
   }
   return readPrimaryGradeFromStorage();
 }
@@ -33,7 +37,7 @@ export function resolvePrimaryGrade(urlGrade?: string | null): number {
 function clampPrimaryGrade(grade: number): number {
   const n = Math.round(grade);
   if (!Number.isFinite(n)) return readPrimaryGradeFromStorage();
-  return Math.min(6, Math.max(1, n));
+  return Math.min(MAX_GRADE, Math.max(MIN_GRADE, n));
 }
 
 export function primaryAdventurePath(grade: number): string {

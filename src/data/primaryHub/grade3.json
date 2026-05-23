@@ -53,16 +53,6 @@
                 "en": "book",
                 "cn": "书",
                 "emoji": "📚"
-              },
-              {
-                "en": "no",
-                "cn": "不",
-                "emoji": "📘"
-              },
-              {
-                "en": "your",
-                "cn": "你的",
-                "emoji": "📘"
               }
             ],
             "dialogues": [
@@ -87,78 +77,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: Hello!",
-              "titleCn": "Spark：你好！",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "📘",
-                  "en": "Let's learn about Hello!!",
-                  "cn": "一起来学「你好！」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a ruler.",
-                  "cn": "我看见尺子。",
-                  "hint": "单词 ruler"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a pencil.",
-                  "cn": "我看见铅笔。",
-                  "hint": "单词 pencil"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a eraser.",
-                  "cn": "我看见橡皮。",
-                  "hint": "单词 eraser"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a crayon.",
-                  "cn": "我看见蜡笔。",
-                  "hint": "单词 crayon"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a bag.",
-                  "cn": "我看见包。",
-                  "hint": "单词 bag"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a pen.",
-                  "cn": "我看见钢笔。",
-                  "hint": "单词 pen"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: ruler?",
-                  "opts": [
-                    "ruler",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -181,14 +104,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -196,7 +111,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -204,7 +119,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -212,7 +127,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -224,105 +139,129 @@
               {
                 "q": "「ruler」是什么意思？",
                 "opts": [
+                  "书",
                   "尺子",
-                  "铅笔",
-                  "橡皮",
-                  "蜡笔"
+                  "钢笔",
+                  "铅笔盒"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pencil」是什么意思？",
                 "opts": [
-                  "铅笔",
-                  "尺子",
                   "橡皮",
-                  "蜡笔"
+                  "蜡笔",
+                  "铅笔",
+                  "铅笔盒"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eraser」是什么意思？",
                 "opts": [
+                  "包",
                   "橡皮",
-                  "尺子",
-                  "铅笔",
-                  "蜡笔"
+                  "蜡笔",
+                  "钢笔"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「crayon」是什么意思？",
                 "opts": [
-                  "蜡笔",
-                  "尺子",
-                  "铅笔",
-                  "橡皮"
+                  "书",
+                  "钢笔",
+                  "铅笔盒",
+                  "蜡笔"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「bag」是什么意思？",
                 "opts": [
-                  "包",
+                  "书",
                   "尺子",
-                  "铅笔",
-                  "橡皮"
+                  "铅笔盒",
+                  "包"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pen」是什么意思？",
                 "opts": [
-                  "钢笔",
                   "尺子",
-                  "铅笔",
-                  "橡皮"
+                  "蜡笔",
+                  "书",
+                  "钢笔"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pencil box」是什么意思？",
                 "opts": [
+                  "书",
+                  "包",
                   "铅笔盒",
-                  "尺子",
-                  "铅笔",
-                  "橡皮"
+                  "钢笔"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「book」是什么意思？",
                 "opts": [
+                  "包",
                   "书",
                   "尺子",
-                  "铅笔",
-                  "橡皮"
+                  "钢笔"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「尺子」？",
+                "opts": [
+                  "ruler",
+                  "crayon",
+                  "eraser",
+                  "pencil"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「你好！」学过的词是？",
+                "q": "「pencil」的中文是？",
+                "opts": [
+                  "铅笔",
+                  "蜡笔",
+                  "铅笔盒",
+                  "书"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「你好！」核心词是？",
                 "opts": [
                   "ruler",
-                  "apple",
-                  "dog",
+                  "bag",
+                  "pencil",
                   "book"
                 ],
                 "answer": 0,
@@ -440,16 +379,6 @@
                 "en": "orange",
                 "cn": "橙色",
                 "emoji": "📘"
-              },
-              {
-                "en": "OK",
-                "cn": "好",
-                "emoji": "📘"
-              },
-              {
-                "en": "mum",
-                "cn": "妈妈",
-                "emoji": "👨‍👩‍👧"
               }
             ],
             "dialogues": [
@@ -474,78 +403,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: Colours",
-              "titleCn": "Spark：颜色",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "🎨",
-                  "en": "Let's learn about Colours!",
-                  "cn": "一起来学「颜色」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "🎨",
-                  "en": "I see a red.",
-                  "cn": "我看见红色。",
-                  "hint": "单词 red"
-                },
-                {
-                  "emoji": "🎨",
-                  "en": "I see a green.",
-                  "cn": "我看见绿色。",
-                  "hint": "单词 green"
-                },
-                {
-                  "emoji": "🎨",
-                  "en": "I see a yellow.",
-                  "cn": "我看见黄色。",
-                  "hint": "单词 yellow"
-                },
-                {
-                  "emoji": "🎨",
-                  "en": "I see a blue.",
-                  "cn": "我看见蓝色。",
-                  "hint": "单词 blue"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a black.",
-                  "cn": "我看见黑色。",
-                  "hint": "单词 black"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a brown.",
-                  "cn": "我看见棕色。",
-                  "hint": "单词 brown"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: red?",
-                  "opts": [
-                    "red",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -568,14 +430,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -583,7 +437,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -591,7 +445,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -599,7 +453,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -612,9 +466,9 @@
                 "q": "「red」是什么意思？",
                 "opts": [
                   "红色",
-                  "绿色",
                   "黄色",
-                  "蓝色"
+                  "绿色",
+                  "黑色"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -623,60 +477,60 @@
               {
                 "q": "「green」是什么意思？",
                 "opts": [
-                  "绿色",
-                  "红色",
                   "黄色",
+                  "绿色",
+                  "白色",
                   "蓝色"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「yellow」是什么意思？",
                 "opts": [
-                  "黄色",
                   "红色",
-                  "绿色",
+                  "白色",
+                  "黄色",
                   "蓝色"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「blue」是什么意思？",
                 "opts": [
-                  "蓝色",
                   "红色",
-                  "绿色",
+                  "蓝色",
+                  "橙色",
                   "黄色"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「black」是什么意思？",
                 "opts": [
-                  "黑色",
-                  "红色",
-                  "绿色",
-                  "黄色"
+                  "棕色",
+                  "蓝色",
+                  "黄色",
+                  "黑色"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「brown」是什么意思？",
                 "opts": [
+                  "黄色",
                   "棕色",
-                  "红色",
-                  "绿色",
-                  "黄色"
+                  "黑色",
+                  "红色"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -684,9 +538,9 @@
                 "q": "「white」是什么意思？",
                 "opts": [
                   "白色",
-                  "红色",
+                  "橙色",
                   "绿色",
-                  "黄色"
+                  "蓝色"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -695,24 +549,48 @@
               {
                 "q": "「orange」是什么意思？",
                 "opts": [
+                  "蓝色",
+                  "棕色",
                   "橙色",
-                  "红色",
-                  "绿色",
-                  "黄色"
+                  "红色"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「颜色」学过的词是？",
+                "q": "哪个是「红色」？",
                 "opts": [
+                  "brown",
+                  "black",
                   "red",
-                  "apple",
-                  "dog",
-                  "book"
+                  "yellow"
                 ],
-                "answer": 0,
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「green」的中文是？",
+                "opts": [
+                  "黄色",
+                  "黑色",
+                  "绿色",
+                  "白色"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「颜色」核心词是？",
+                "opts": [
+                  "school",
+                  "red",
+                  "white",
+                  "blue"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -827,16 +705,6 @@
                 "en": "head",
                 "cn": "头",
                 "emoji": "📘"
-              },
-              {
-                "en": "body",
-                "cn": "身体",
-                "emoji": "📘"
-              },
-              {
-                "en": "leg",
-                "cn": "腿",
-                "emoji": "📘"
               }
             ],
             "dialogues": [
@@ -861,78 +729,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: Look at me!",
-              "titleCn": "Spark：看看我",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "📘",
-                  "en": "Let's learn about Look at me!!",
-                  "cn": "一起来学「看看我」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a face.",
-                  "cn": "我看见脸。",
-                  "hint": "单词 face"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a ear.",
-                  "cn": "我看见耳朵。",
-                  "hint": "单词 ear"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a eye.",
-                  "cn": "我看见眼睛。",
-                  "hint": "单词 eye"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a nose.",
-                  "cn": "我看见鼻子。",
-                  "hint": "单词 nose"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a mouth.",
-                  "cn": "我看见嘴。",
-                  "hint": "单词 mouth"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a arm.",
-                  "cn": "我看见胳膊。",
-                  "hint": "单词 arm"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: face?",
-                  "opts": [
-                    "face",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -955,14 +756,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -970,7 +763,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -978,7 +771,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -986,7 +779,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -998,72 +791,72 @@
               {
                 "q": "「face」是什么意思？",
                 "opts": [
-                  "脸",
-                  "耳朵",
+                  "胳膊",
+                  "手",
                   "眼睛",
-                  "鼻子"
+                  "脸"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「ear」是什么意思？",
                 "opts": [
+                  "手",
+                  "头",
                   "耳朵",
-                  "脸",
-                  "眼睛",
-                  "鼻子"
+                  "眼睛"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eye」是什么意思？",
                 "opts": [
+                  "胳膊",
                   "眼睛",
                   "脸",
-                  "耳朵",
-                  "鼻子"
+                  "头"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「nose」是什么意思？",
                 "opts": [
-                  "鼻子",
-                  "脸",
-                  "耳朵",
-                  "眼睛"
+                  "胳膊",
+                  "眼睛",
+                  "嘴",
+                  "鼻子"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「mouth」是什么意思？",
                 "opts": [
-                  "嘴",
-                  "脸",
+                  "鼻子",
                   "耳朵",
-                  "眼睛"
+                  "脸",
+                  "嘴"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「arm」是什么意思？",
                 "opts": [
-                  "胳膊",
-                  "脸",
                   "耳朵",
-                  "眼睛"
+                  "胳膊",
+                  "嘴",
+                  "头"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1071,8 +864,8 @@
                 "q": "「hand」是什么意思？",
                 "opts": [
                   "手",
-                  "脸",
-                  "耳朵",
+                  "鼻子",
+                  "胳膊",
                   "眼睛"
                 ],
                 "answer": 0,
@@ -1082,24 +875,48 @@
               {
                 "q": "「head」是什么意思？",
                 "opts": [
-                  "头",
+                  "手",
                   "脸",
                   "耳朵",
-                  "眼睛"
+                  "头"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「看看我」学过的词是？",
+                "q": "哪个是「脸」？",
                 "opts": [
+                  "ear",
                   "face",
-                  "apple",
-                  "dog",
-                  "book"
+                  "nose",
+                  "head"
                 ],
-                "answer": 0,
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ear」的中文是？",
+                "opts": [
+                  "鼻子",
+                  "眼睛",
+                  "头",
+                  "耳朵"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「看看我」核心词是？",
+                "opts": [
+                  "eye",
+                  "face",
+                  "arm",
+                  "nose"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -1214,16 +1031,6 @@
                 "en": "bird",
                 "cn": "鸟",
                 "emoji": "📘"
-              },
-              {
-                "en": "tiger",
-                "cn": "老虎",
-                "emoji": "🐾"
-              },
-              {
-                "en": "panda",
-                "cn": "大熊猫",
-                "emoji": "🐾"
               }
             ],
             "dialogues": [
@@ -1248,78 +1055,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: We love animals",
-              "titleCn": "Spark：我们爱动物",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "🐾",
-                  "en": "Let's learn about We love animals!",
-                  "cn": "一起来学「我们爱动物」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "🐾",
-                  "en": "I see a duck.",
-                  "cn": "我看见鸭子。",
-                  "hint": "单词 duck"
-                },
-                {
-                  "emoji": "🐾",
-                  "en": "I see a pig.",
-                  "cn": "我看见猪。",
-                  "hint": "单词 pig"
-                },
-                {
-                  "emoji": "🐾",
-                  "en": "I see a cat.",
-                  "cn": "我看见猫。",
-                  "hint": "单词 cat"
-                },
-                {
-                  "emoji": "🐾",
-                  "en": "I see a bear.",
-                  "cn": "我看见熊。",
-                  "hint": "单词 bear"
-                },
-                {
-                  "emoji": "🐾",
-                  "en": "I see a dog.",
-                  "cn": "我看见狗。",
-                  "hint": "单词 dog"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a elephant.",
-                  "cn": "我看见大象。",
-                  "hint": "单词 elephant"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: duck?",
-                  "opts": [
-                    "duck",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -1342,14 +1082,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -1357,7 +1089,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -1365,7 +1097,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -1373,7 +1105,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -1386,9 +1118,9 @@
                 "q": "「duck」是什么意思？",
                 "opts": [
                   "鸭子",
-                  "猪",
                   "猫",
-                  "熊"
+                  "猴子",
+                  "大象"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1398,9 +1130,9 @@
                 "q": "「pig」是什么意思？",
                 "opts": [
                   "猪",
-                  "鸭子",
-                  "猫",
-                  "熊"
+                  "鸟",
+                  "猴子",
+                  "狗"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1409,12 +1141,12 @@
               {
                 "q": "「cat」是什么意思？",
                 "opts": [
-                  "猫",
                   "鸭子",
-                  "猪",
-                  "熊"
+                  "猴子",
+                  "猫",
+                  "大象"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1422,9 +1154,9 @@
                 "q": "「bear」是什么意思？",
                 "opts": [
                   "熊",
+                  "猫",
                   "鸭子",
-                  "猪",
-                  "猫"
+                  "大象"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1433,36 +1165,36 @@
               {
                 "q": "「dog」是什么意思？",
                 "opts": [
-                  "狗",
-                  "鸭子",
                   "猪",
-                  "猫"
+                  "鸟",
+                  "猫",
+                  "狗"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「elephant」是什么意思？",
                 "opts": [
+                  "猴子",
                   "大象",
-                  "鸭子",
-                  "猪",
-                  "猫"
+                  "鸟",
+                  "狗"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「monkey」是什么意思？",
                 "opts": [
+                  "熊",
                   "猴子",
-                  "鸭子",
-                  "猪",
-                  "猫"
+                  "狗",
+                  "猪"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1470,21 +1202,45 @@
                 "q": "「bird」是什么意思？",
                 "opts": [
                   "鸟",
+                  "熊",
                   "鸭子",
-                  "猪",
-                  "猫"
+                  "猪"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「我们爱动物」学过的词是？",
+                "q": "哪个是「鸭子」？",
+                "opts": [
+                  "elephant",
+                  "duck",
+                  "pig",
+                  "monkey"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「pig」的中文是？",
+                "opts": [
+                  "熊",
+                  "猪",
+                  "狗",
+                  "鸟"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「我们爱动物」核心词是？",
                 "opts": [
                   "duck",
-                  "apple",
-                  "dog",
-                  "book"
+                  "bear",
+                  "school",
+                  "cat"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1625,73 +1381,6 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: Let's eat!",
-              "titleCn": "Spark：一起吃饭吧",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "🍎",
-                  "en": "Let's learn about Let's eat!!",
-                  "cn": "一起来学「一起吃饭吧」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "🍎",
-                  "en": "I see a bread.",
-                  "cn": "我看见面包。",
-                  "hint": "单词 bread"
-                },
-                {
-                  "emoji": "🍎",
-                  "en": "I see a juice.",
-                  "cn": "我看见果汁。",
-                  "hint": "单词 juice"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a egg.",
-                  "cn": "我看见蛋。",
-                  "hint": "单词 egg"
-                },
-                {
-                  "emoji": "🍎",
-                  "en": "I see a milk.",
-                  "cn": "我看见牛奶。",
-                  "hint": "单词 milk"
-                },
-                {
-                  "emoji": "🍎",
-                  "en": "I see a water.",
-                  "cn": "我看见水。",
-                  "hint": "单词 water"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a cake.",
-                  "cn": "我看见蛋糕。",
-                  "hint": "单词 cake"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: bread?",
-                  "opts": [
-                    "bread",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
@@ -1719,14 +1408,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -1734,7 +1415,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -1742,7 +1423,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -1750,7 +1431,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -1763,9 +1444,9 @@
                 "q": "「bread」是什么意思？",
                 "opts": [
                   "面包",
-                  "果汁",
-                  "蛋",
-                  "牛奶"
+                  "米饭",
+                  "牛奶",
+                  "蛋糕"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1774,36 +1455,36 @@
               {
                 "q": "「juice」是什么意思？",
                 "opts": [
+                  "米饭",
                   "果汁",
-                  "面包",
-                  "蛋",
-                  "牛奶"
+                  "鱼肉",
+                  "水"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「egg」是什么意思？",
                 "opts": [
-                  "蛋",
-                  "面包",
                   "果汁",
-                  "牛奶"
+                  "水",
+                  "蛋糕",
+                  "蛋"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「milk」是什么意思？",
                 "opts": [
+                  "鱼肉",
+                  "蛋",
                   "牛奶",
-                  "面包",
-                  "果汁",
-                  "蛋"
+                  "米饭"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1811,9 +1492,9 @@
                 "q": "「water」是什么意思？",
                 "opts": [
                   "水",
-                  "面包",
-                  "果汁",
-                  "蛋"
+                  "牛奶",
+                  "蛋糕",
+                  "米饭"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1822,12 +1503,12 @@
               {
                 "q": "「cake」是什么意思？",
                 "opts": [
+                  "鱼肉",
                   "蛋糕",
-                  "面包",
-                  "果汁",
+                  "牛奶",
                   "蛋"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1835,9 +1516,9 @@
                 "q": "「fish」是什么意思？",
                 "opts": [
                   "鱼肉",
-                  "面包",
-                  "果汁",
-                  "蛋"
+                  "蛋糕",
+                  "蛋",
+                  "果汁"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1846,24 +1527,48 @@
               {
                 "q": "「rice」是什么意思？",
                 "opts": [
-                  "米饭",
                   "面包",
-                  "果汁",
-                  "蛋"
+                  "米饭",
+                  "蛋糕",
+                  "果汁"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「一起吃饭吧」学过的词是？",
+                "q": "哪个是「面包」？",
                 "opts": [
+                  "water",
+                  "milk",
                   "bread",
-                  "apple",
-                  "dog",
-                  "book"
+                  "juice"
                 ],
-                "answer": 0,
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「juice」的中文是？",
+                "opts": [
+                  "鱼肉",
+                  "米饭",
+                  "果汁",
+                  "牛奶"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「一起吃饭吧」核心词是？",
+                "opts": [
+                  "book",
+                  "bread",
+                  "egg",
+                  "rice"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -1978,16 +1683,6 @@
                 "en": "eight",
                 "cn": "八",
                 "emoji": "📘"
-              },
-              {
-                "en": "nine",
-                "cn": "九",
-                "emoji": "📘"
-              },
-              {
-                "en": "ten",
-                "cn": "十",
-                "emoji": "📘"
               }
             ],
             "dialogues": [
@@ -2012,78 +1707,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: Happy birthday!",
-              "titleCn": "Spark：生日快乐",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "📘",
-                  "en": "Let's learn about Happy birthday!!",
-                  "cn": "一起来学「生日快乐」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a one.",
-                  "cn": "我看见一。",
-                  "hint": "单词 one"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a two.",
-                  "cn": "我看见二。",
-                  "hint": "单词 two"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a three.",
-                  "cn": "我看见三。",
-                  "hint": "单词 three"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a four.",
-                  "cn": "我看见四。",
-                  "hint": "单词 four"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a five.",
-                  "cn": "我看见五。",
-                  "hint": "单词 five"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a six.",
-                  "cn": "我看见六。",
-                  "hint": "单词 six"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: one?",
-                  "opts": [
-                    "one",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -2106,14 +1734,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -2121,7 +1741,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -2129,7 +1749,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -2137,7 +1757,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -2149,60 +1769,60 @@
               {
                 "q": "「one」是什么意思？",
                 "opts": [
-                  "一",
-                  "二",
+                  "六",
                   "三",
-                  "四"
+                  "四",
+                  "一"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「two」是什么意思？",
                 "opts": [
+                  "五",
                   "二",
-                  "一",
                   "三",
-                  "四"
+                  "八"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「three」是什么意思？",
                 "opts": [
-                  "三",
-                  "一",
+                  "四",
                   "二",
-                  "四"
+                  "八",
+                  "三"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「four」是什么意思？",
                 "opts": [
-                  "四",
-                  "一",
-                  "二",
-                  "三"
+                  "八",
+                  "三",
+                  "五",
+                  "四"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「five」是什么意思？",
                 "opts": [
-                  "五",
                   "一",
+                  "五",
                   "二",
-                  "三"
+                  "七"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2212,7 +1832,7 @@
                   "六",
                   "一",
                   "二",
-                  "三"
+                  "五"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2221,36 +1841,60 @@
               {
                 "q": "「seven」是什么意思？",
                 "opts": [
-                  "七",
+                  "四",
+                  "六",
                   "一",
-                  "二",
-                  "三"
+                  "七"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eight」是什么意思？",
                 "opts": [
+                  "七",
+                  "六",
                   "八",
-                  "一",
-                  "二",
                   "三"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「生日快乐」学过的词是？",
+                "q": "哪个是「一」？",
                 "opts": [
-                  "one",
-                  "apple",
-                  "dog",
-                  "book"
+                  "eight",
+                  "three",
+                  "seven",
+                  "one"
                 ],
-                "answer": 0,
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「two」的中文是？",
+                "opts": [
+                  "四",
+                  "八",
+                  "六",
+                  "二"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「生日快乐」核心词是？",
+                "opts": [
+                  "apple",
+                  "four",
+                  "eight",
+                  "one"
+                ],
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2371,16 +2015,6 @@
                 "en": "he",
                 "cn": "他",
                 "emoji": "📘"
-              },
-              {
-                "en": "teacher",
-                "cn": "教师",
-                "emoji": "🏫"
-              },
-              {
-                "en": "boy",
-                "cn": "男孩",
-                "emoji": "📘"
               }
             ],
             "dialogues": [
@@ -2405,78 +2039,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: Welcome back",
-              "titleCn": "Spark：欢迎回来",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "📘",
-                  "en": "Let's learn about Welcome back!",
-                  "cn": "一起来学「欢迎回来」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a UK.",
-                  "cn": "我看见英国。",
-                  "hint": "单词 UK"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a Canada.",
-                  "cn": "我看见加拿大。",
-                  "hint": "单词 Canada"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a USA.",
-                  "cn": "我看见美国。",
-                  "hint": "单词 USA"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a China.",
-                  "cn": "我看见中国。",
-                  "hint": "单词 China"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a she.",
-                  "cn": "我看见她。",
-                  "hint": "单词 she"
-                },
-                {
-                  "emoji": "🏫",
-                  "en": "I see a student.",
-                  "cn": "我看见学生。",
-                  "hint": "单词 student"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: UK?",
-                  "opts": [
-                    "UK",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -2499,14 +2066,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -2514,7 +2073,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -2522,7 +2081,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -2530,7 +2089,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -2542,60 +2101,60 @@
               {
                 "q": "「UK」是什么意思？",
                 "opts": [
-                  "英国",
-                  "加拿大",
+                  "学生",
                   "美国",
-                  "中国"
+                  "英国",
+                  "她"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「Canada」是什么意思？",
                 "opts": [
-                  "加拿大",
                   "英国",
-                  "美国",
-                  "中国"
+                  "他",
+                  "中国",
+                  "加拿大"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「USA」是什么意思？",
                 "opts": [
-                  "美国",
-                  "英国",
+                  "她",
                   "加拿大",
-                  "中国"
+                  "美国",
+                  "英国"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「China」是什么意思？",
                 "opts": [
+                  "美国",
+                  "她",
                   "中国",
-                  "英国",
-                  "加拿大",
-                  "美国"
+                  "学生"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「she」是什么意思？",
                 "opts": [
+                  "学生",
                   "她",
-                  "英国",
-                  "加拿大",
-                  "美国"
+                  "他",
+                  "加拿大"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2603,9 +2162,9 @@
                 "q": "「student」是什么意思？",
                 "opts": [
                   "学生",
-                  "英国",
+                  "她",
                   "加拿大",
-                  "美国"
+                  "他"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2614,36 +2173,60 @@
               {
                 "q": "「pupil」是什么意思？",
                 "opts": [
-                  "学生",
                   "英国",
                   "加拿大",
-                  "美国"
+                  "学生",
+                  "中国"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「he」是什么意思？",
                 "opts": [
+                  "她",
                   "他",
                   "英国",
-                  "加拿大",
-                  "美国"
+                  "中国"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「欢迎回来」学过的词是？",
+                "q": "哪个是「英国」？",
                 "opts": [
-                  "UK",
-                  "apple",
-                  "dog",
-                  "book"
+                  "student",
+                  "he",
+                  "Canada",
+                  "UK"
                 ],
-                "answer": 0,
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Canada」的中文是？",
+                "opts": [
+                  "他",
+                  "加拿大",
+                  "她",
+                  "英国"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「欢迎回来」核心词是？",
+                "opts": [
+                  "student",
+                  "he",
+                  "UK",
+                  "pupil"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2758,16 +2341,6 @@
                 "en": "grandmother",
                 "cn": "祖母",
                 "emoji": "📘"
-              },
-              {
-                "en": "grandma",
-                "cn": "祖母",
-                "emoji": "📘"
-              },
-              {
-                "en": "grandfather",
-                "cn": "祖父",
-                "emoji": "📘"
               }
             ],
             "dialogues": [
@@ -2792,78 +2365,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: My family",
-              "titleCn": "Spark：我的家人",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "👨‍👩‍👧",
-                  "en": "Let's learn about My family!",
-                  "cn": "一起来学「我的家人」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "👨‍👩‍👧",
-                  "en": "I see a father.",
-                  "cn": "我看见父亲。",
-                  "hint": "单词 father"
-                },
-                {
-                  "emoji": "👨‍👩‍👧",
-                  "en": "I see a dad.",
-                  "cn": "我看见爸爸。",
-                  "hint": "单词 dad"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a man.",
-                  "cn": "我看见男人。",
-                  "hint": "单词 man"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a woman.",
-                  "cn": "我看见女人。",
-                  "hint": "单词 woman"
-                },
-                {
-                  "emoji": "👨‍👩‍👧",
-                  "en": "I see a mother.",
-                  "cn": "我看见母亲。",
-                  "hint": "单词 mother"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a sister.",
-                  "cn": "我看见姐。",
-                  "hint": "单词 sister"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: father?",
-                  "opts": [
-                    "father",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -2886,14 +2392,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -2901,7 +2399,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -2909,7 +2407,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -2917,7 +2415,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -2929,12 +2427,12 @@
               {
                 "q": "「father」是什么意思？",
                 "opts": [
+                  "兄",
                   "父亲",
-                  "爸爸",
                   "男人",
                   "女人"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2942,9 +2440,9 @@
                 "q": "「dad」是什么意思？",
                 "opts": [
                   "爸爸",
-                  "父亲",
+                  "女人",
                   "男人",
-                  "女人"
+                  "姐"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2953,8 +2451,56 @@
               {
                 "q": "「man」是什么意思？",
                 "opts": [
-                  "男人",
+                  "母亲",
                   "父亲",
+                  "男人",
+                  "祖母"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「woman」是什么意思？",
+                "opts": [
+                  "男人",
+                  "姐",
+                  "兄",
+                  "女人"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「mother」是什么意思？",
+                "opts": [
+                  "父亲",
+                  "姐",
+                  "母亲",
+                  "爸爸"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「sister」是什么意思？",
+                "opts": [
+                  "女人",
+                  "爸爸",
+                  "兄",
+                  "姐"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「brother」是什么意思？",
+                "opts": [
+                  "兄",
+                  "姐",
                   "爸爸",
                   "女人"
                 ],
@@ -2963,74 +2509,50 @@
                 "dim": "vocab"
               },
               {
-                "q": "「woman」是什么意思？",
-                "opts": [
-                  "女人",
-                  "父亲",
-                  "爸爸",
-                  "男人"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「mother」是什么意思？",
-                "opts": [
-                  "母亲",
-                  "父亲",
-                  "爸爸",
-                  "男人"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「sister」是什么意思？",
-                "opts": [
-                  "姐",
-                  "父亲",
-                  "爸爸",
-                  "男人"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「brother」是什么意思？",
-                "opts": [
-                  "兄",
-                  "父亲",
-                  "爸爸",
-                  "男人"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「grandmother」是什么意思？",
                 "opts": [
+                  "兄",
+                  "姐",
                   "祖母",
-                  "父亲",
-                  "爸爸",
                   "男人"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「父亲」？",
+                "opts": [
+                  "father",
+                  "man",
+                  "mother",
+                  "dad"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「我的家人」学过的词是？",
+                "q": "「dad」的中文是？",
                 "opts": [
-                  "father",
-                  "apple",
-                  "dog",
-                  "book"
+                  "爸爸",
+                  "女人",
+                  "祖母",
+                  "姐"
                 ],
                 "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「我的家人」核心词是？",
+                "opts": [
+                  "school",
+                  "brother",
+                  "father",
+                  "book"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3145,16 +2667,6 @@
                 "en": "giraffe",
                 "cn": "长颈鹿",
                 "emoji": "📘"
-              },
-              {
-                "en": "so",
-                "cn": "这么",
-                "emoji": "📘"
-              },
-              {
-                "en": "children",
-                "cn": "儿童",
-                "emoji": "📘"
               }
             ],
             "dialogues": [
@@ -3179,78 +2691,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: At the zoo",
-              "titleCn": "Spark：在动物园",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "📘",
-                  "en": "Let's learn about At the zoo!",
-                  "cn": "一起来学「在动物园」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a thin.",
-                  "cn": "我看见瘦的。",
-                  "hint": "单词 thin"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a fat.",
-                  "cn": "我看见胖的。",
-                  "hint": "单词 fat"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a tall.",
-                  "cn": "我看见高的。",
-                  "hint": "单词 tall"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a short.",
-                  "cn": "我看见矮的。",
-                  "hint": "单词 short"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a long.",
-                  "cn": "我看见长的。",
-                  "hint": "单词 long"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a small.",
-                  "cn": "我看见小的。",
-                  "hint": "单词 small"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: thin?",
-                  "opts": [
-                    "thin",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -3273,14 +2718,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -3288,7 +2725,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -3296,7 +2733,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -3304,7 +2741,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -3316,12 +2753,12 @@
               {
                 "q": "「thin」是什么意思？",
                 "opts": [
+                  "长颈鹿",
+                  "大的",
                   "瘦的",
-                  "胖的",
-                  "高的",
-                  "矮的"
+                  "长的"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3329,9 +2766,9 @@
                 "q": "「fat」是什么意思？",
                 "opts": [
                   "胖的",
-                  "瘦的",
-                  "高的",
-                  "矮的"
+                  "小的",
+                  "长颈鹿",
+                  "大的"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3340,48 +2777,48 @@
               {
                 "q": "「tall」是什么意思？",
                 "opts": [
-                  "高的",
                   "瘦的",
-                  "胖的",
-                  "矮的"
+                  "矮的",
+                  "高的",
+                  "小的"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「short」是什么意思？",
                 "opts": [
-                  "矮的",
-                  "瘦的",
+                  "长颈鹿",
                   "胖的",
-                  "高的"
+                  "矮的",
+                  "瘦的"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「long」是什么意思？",
                 "opts": [
+                  "小的",
                   "长的",
-                  "瘦的",
-                  "胖的",
-                  "高的"
+                  "大的",
+                  "胖的"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「small」是什么意思？",
                 "opts": [
+                  "大的",
                   "小的",
-                  "瘦的",
-                  "胖的",
+                  "长颈鹿",
                   "高的"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3390,8 +2827,8 @@
                 "opts": [
                   "大的",
                   "瘦的",
-                  "胖的",
-                  "高的"
+                  "高的",
+                  "长的"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3400,24 +2837,48 @@
               {
                 "q": "「giraffe」是什么意思？",
                 "opts": [
+                  "长的",
                   "长颈鹿",
-                  "瘦的",
-                  "胖的",
-                  "高的"
+                  "大的",
+                  "矮的"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「在动物园」学过的词是？",
+                "q": "哪个是「瘦的」？",
                 "opts": [
+                  "long",
+                  "thin",
+                  "tall",
+                  "big"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「fat」的中文是？",
+                "opts": [
+                  "小的",
+                  "瘦的",
+                  "胖的",
+                  "矮的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「在动物园」核心词是？",
+                "opts": [
+                  "long",
                   "thin",
                   "apple",
-                  "dog",
-                  "book"
+                  "giraffe"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3532,16 +2993,6 @@
                 "en": "car",
                 "cn": "小汽车",
                 "emoji": "🚌"
-              },
-              {
-                "en": "boat",
-                "cn": "小船",
-                "emoji": "📘"
-              },
-              {
-                "en": "map",
-                "cn": "地图",
-                "emoji": "📘"
               }
             ],
             "dialogues": [
@@ -3566,78 +3017,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: Where is my car?",
-              "titleCn": "Spark：我的小汽车在哪里",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "📘",
-                  "en": "Let's learn about Where is my car?!",
-                  "cn": "一起来学「我的小汽车在哪里」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a on.",
-                  "cn": "我看见在⋯⋯上。",
-                  "hint": "单词 on"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a in.",
-                  "cn": "我看见在⋯⋯里。",
-                  "hint": "单词 in"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a under.",
-                  "cn": "我看见在⋯⋯下面。",
-                  "hint": "单词 under"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a chair.",
-                  "cn": "我看见椅子。",
-                  "hint": "单词 chair"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a desk.",
-                  "cn": "我看见书桌。",
-                  "hint": "单词 desk"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a cap.",
-                  "cn": "我看见帽子。",
-                  "hint": "单词 cap"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: on?",
-                  "opts": [
-                    "on",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -3660,14 +3044,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -3675,7 +3051,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -3683,7 +3059,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -3691,7 +3067,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -3703,36 +3079,36 @@
               {
                 "q": "「on」是什么意思？",
                 "opts": [
-                  "在⋯⋯上",
-                  "在⋯⋯里",
                   "在⋯⋯下面",
-                  "椅子"
+                  "在⋯⋯里",
+                  "球",
+                  "在⋯⋯上"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「in」是什么意思？",
                 "opts": [
+                  "小汽车",
                   "在⋯⋯里",
-                  "在⋯⋯上",
-                  "在⋯⋯下面",
-                  "椅子"
+                  "书桌",
+                  "帽子"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「under」是什么意思？",
                 "opts": [
-                  "在⋯⋯下面",
-                  "在⋯⋯上",
+                  "书桌",
                   "在⋯⋯里",
-                  "椅子"
+                  "在⋯⋯上",
+                  "在⋯⋯下面"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3741,8 +3117,8 @@
                 "opts": [
                   "椅子",
                   "在⋯⋯上",
-                  "在⋯⋯里",
-                  "在⋯⋯下面"
+                  "书桌",
+                  "帽子"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3751,60 +3127,84 @@
               {
                 "q": "「desk」是什么意思？",
                 "opts": [
-                  "书桌",
-                  "在⋯⋯上",
                   "在⋯⋯里",
-                  "在⋯⋯下面"
+                  "椅子",
+                  "帽子",
+                  "书桌"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「cap」是什么意思？",
                 "opts": [
+                  "椅子",
                   "帽子",
-                  "在⋯⋯上",
-                  "在⋯⋯里",
-                  "在⋯⋯下面"
+                  "在⋯⋯下面",
+                  "书桌"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「ball」是什么意思？",
                 "opts": [
-                  "球",
-                  "在⋯⋯上",
-                  "在⋯⋯里",
-                  "在⋯⋯下面"
+                  "小汽车",
+                  "帽子",
+                  "书桌",
+                  "球"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「car」是什么意思？",
                 "opts": [
-                  "小汽车",
-                  "在⋯⋯上",
-                  "在⋯⋯里",
-                  "在⋯⋯下面"
+                  "帽子",
+                  "在⋯⋯下面",
+                  "球",
+                  "小汽车"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「我的小汽车在哪里」学过的词是？",
+                "q": "哪个是「在⋯⋯上」？",
                 "opts": [
-                  "on",
-                  "apple",
-                  "dog",
-                  "book"
+                  "chair",
+                  "desk",
+                  "cap",
+                  "on"
                 ],
-                "answer": 0,
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「in」的中文是？",
+                "opts": [
+                  "在⋯⋯下面",
+                  "球",
+                  "在⋯⋯里",
+                  "帽子"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「我的小汽车在哪里」核心词是？",
+                "opts": [
+                  "book",
+                  "on",
+                  "under",
+                  "dog"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3919,11 +3319,6 @@
                 "en": "buy",
                 "cn": "买",
                 "emoji": "📘"
-              },
-              {
-                "en": "fruit",
-                "cn": "水果",
-                "emoji": "🍎"
               }
             ],
             "dialogues": [
@@ -3948,78 +3343,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: Do you like pears?",
-              "titleCn": "Spark：你喜欢梨吗",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "📘",
-                  "en": "Let's learn about Do you like pears?!",
-                  "cn": "一起来学「你喜欢梨吗」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a pear.",
-                  "cn": "我看见梨。",
-                  "hint": "单词 pear"
-                },
-                {
-                  "emoji": "🍎",
-                  "en": "I see a apple.",
-                  "cn": "我看见苹果。",
-                  "hint": "单词 apple"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a orange.",
-                  "cn": "我看见橙子。",
-                  "hint": "单词 orange"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a banana.",
-                  "cn": "我看见香蕉。",
-                  "hint": "单词 banana"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a watermelon.",
-                  "cn": "我看见西瓜。",
-                  "hint": "单词 watermelon"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a strawberry.",
-                  "cn": "我看见草莓。",
-                  "hint": "单词 strawberry"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: pear?",
-                  "opts": [
-                    "pear",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "9个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -4042,14 +3370,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -4057,7 +3377,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -4065,7 +3385,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -4073,7 +3393,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -4085,48 +3405,48 @@
               {
                 "q": "「pear」是什么意思？",
                 "opts": [
-                  "梨",
-                  "苹果",
-                  "橙子",
-                  "香蕉"
+                  "香蕉",
+                  "买",
+                  "葡萄",
+                  "梨"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「apple」是什么意思？",
                 "opts": [
-                  "苹果",
+                  "买",
+                  "西瓜",
                   "梨",
-                  "橙子",
-                  "香蕉"
+                  "苹果"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「orange」是什么意思？",
                 "opts": [
-                  "橙子",
-                  "梨",
-                  "苹果",
-                  "香蕉"
+                  "葡萄",
+                  "西瓜",
+                  "香蕉",
+                  "橙子"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「banana」是什么意思？",
                 "opts": [
+                  "橙子",
+                  "草莓",
                   "香蕉",
-                  "梨",
-                  "苹果",
-                  "橙子"
+                  "苹果"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -4134,9 +3454,9 @@
                 "q": "「watermelon」是什么意思？",
                 "opts": [
                   "西瓜",
-                  "梨",
-                  "苹果",
-                  "橙子"
+                  "橙子",
+                  "葡萄",
+                  "草莓"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -4145,12 +3465,12 @@
               {
                 "q": "「strawberry」是什么意思？",
                 "opts": [
-                  "草莓",
+                  "葡萄",
                   "梨",
-                  "苹果",
-                  "橙子"
+                  "草莓",
+                  "买"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -4159,8 +3479,8 @@
                 "opts": [
                   "葡萄",
                   "梨",
-                  "苹果",
-                  "橙子"
+                  "草莓",
+                  "苹果"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -4171,20 +3491,44 @@
                 "opts": [
                   "买",
                   "梨",
-                  "苹果",
-                  "橙子"
+                  "香蕉",
+                  "草莓"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「你喜欢梨吗」学过的词是？",
+                "q": "哪个是「梨」？",
+                "opts": [
+                  "grape",
+                  "pear",
+                  "buy",
+                  "strawberry"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「apple」的中文是？",
+                "opts": [
+                  "草莓",
+                  "苹果",
+                  "梨",
+                  "西瓜"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「你喜欢梨吗」核心词是？",
                 "opts": [
                   "pear",
-                  "apple",
+                  "banana",
                   "dog",
-                  "book"
+                  "strawberry"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -4301,16 +3645,6 @@
                 "en": "eighteen",
                 "cn": "十八",
                 "emoji": "📘"
-              },
-              {
-                "en": "nineteen",
-                "cn": "十九",
-                "emoji": "📘"
-              },
-              {
-                "en": "twenty",
-                "cn": "二十",
-                "emoji": "📘"
               }
             ],
             "dialogues": [
@@ -4335,78 +3669,11 @@
                 ]
               }
             ],
-            "storybook": {
-              "title": "Spark: How many?",
-              "titleCn": "Spark：有多少",
-              "cover": "🐻",
-              "pages": [
-                {
-                  "emoji": "📘",
-                  "en": "Let's learn about How many?!",
-                  "cn": "一起来学「有多少」！",
-                  "hint": "故事开始"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a eleven.",
-                  "cn": "我看见十一。",
-                  "hint": "单词 eleven"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a twelve.",
-                  "cn": "我看见十二。",
-                  "hint": "单词 twelve"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a thirteen.",
-                  "cn": "我看见十三。",
-                  "hint": "单词 thirteen"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a fourteen.",
-                  "cn": "我看见十四。",
-                  "hint": "单词 fourteen"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a fifteen.",
-                  "cn": "我看见十五。",
-                  "hint": "单词 fifteen"
-                },
-                {
-                  "emoji": "📘",
-                  "en": "I see a sixteen.",
-                  "cn": "我看见十六。",
-                  "hint": "单词 sixteen"
-                },
-                {
-                  "emoji": "⭐",
-                  "en": "Great job! You finished the story.",
-                  "cn": "太棒了！故事读完了。",
-                  "hint": "完成"
-                }
-              ],
-              "questions": [
-                {
-                  "q": "What did we learn: eleven?",
-                  "opts": [
-                    "eleven",
-                    "apple",
-                    "dog",
-                    "book"
-                  ],
-                  "answer": 0
-                }
-              ]
-            },
             "stages": [
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "10个核心单词",
+                "subtitle": "8个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -4429,14 +3696,6 @@
               },
               {
                 "id": "s4",
-                "title": "趣味绘本",
-                "subtitle": "故事中学习",
-                "icon": "📖",
-                "type": "storybook",
-                "time": "8分钟"
-              },
-              {
-                "id": "s5",
                 "title": "学习句型",
                 "subtitle": "核心句型",
                 "icon": "💬",
@@ -4444,7 +3703,7 @@
                 "time": "5分钟"
               },
               {
-                "id": "s6",
+                "id": "s5",
                 "title": "默写挑战",
                 "subtitle": "动手拼写",
                 "icon": "✏️",
@@ -4452,7 +3711,7 @@
                 "time": "8分钟"
               },
               {
-                "id": "s7",
+                "id": "s6",
                 "title": "听力测试",
                 "subtitle": "听句选答案",
                 "icon": "🎯",
@@ -4460,7 +3719,7 @@
                 "time": "6分钟"
               },
               {
-                "id": "s8",
+                "id": "s7",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -4472,12 +3731,12 @@
               {
                 "q": "「eleven」是什么意思？",
                 "opts": [
-                  "十一",
-                  "十二",
                   "十三",
+                  "十一",
+                  "十七",
                   "十四"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -4486,8 +3745,8 @@
                 "opts": [
                   "十二",
                   "十一",
-                  "十三",
-                  "十四"
+                  "十四",
+                  "十八"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -4496,12 +3755,12 @@
               {
                 "q": "「thirteen」是什么意思？",
                 "opts": [
-                  "十三",
                   "十一",
+                  "十三",
                   "十二",
                   "十四"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -4509,9 +3768,9 @@
                 "q": "「fourteen」是什么意思？",
                 "opts": [
                   "十四",
-                  "十一",
-                  "十二",
-                  "十三"
+                  "十五",
+                  "十六",
+                  "十七"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -4520,58 +3779,82 @@
               {
                 "q": "「fifteen」是什么意思？",
                 "opts": [
+                  "十七",
+                  "十三",
                   "十五",
-                  "十一",
-                  "十二",
-                  "十三"
+                  "十二"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「sixteen」是什么意思？",
                 "opts": [
+                  "十五",
                   "十六",
-                  "十一",
-                  "十二",
-                  "十三"
+                  "十四",
+                  "十七"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「seventeen」是什么意思？",
                 "opts": [
-                  "十七",
-                  "十一",
-                  "十二",
-                  "十三"
+                  "十八",
+                  "十六",
+                  "十三",
+                  "十七"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eighteen」是什么意思？",
                 "opts": [
-                  "十八",
-                  "十一",
+                  "十三",
                   "十二",
-                  "十三"
+                  "十八",
+                  "十六"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「十一」？",
+                "opts": [
+                  "fifteen",
+                  "fourteen",
+                  "eighteen",
+                  "eleven"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「twelve」的中文是？",
+                "opts": [
+                  "十二",
+                  "十五",
+                  "十六",
+                  "十四"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「有多少」学过的词是？",
+                "q": "本单元「有多少」核心词是？",
                 "opts": [
                   "eleven",
-                  "apple",
-                  "dog",
-                  "book"
+                  "fourteen",
+                  "eighteen",
+                  "dog"
                 ],
                 "answer": 0,
                 "point": "词汇",

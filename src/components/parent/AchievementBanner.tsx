@@ -226,8 +226,8 @@ function PrimaryBlock() {
       <BottomStrip
         weeksToGoal={weeksToGoal}
         showWeak={stats.vocabUntouched > 0}
-        weakHref={`/primary/vocab/${grade}?focus=weak`}
-        primaryHref={`/primary/grade/${grade}`}
+        weakHref={`/primary/hub/${grade}`}
+        primaryHref={`/primary/hub/${grade}`}
         primaryLabel={`进入小学 G${grade} 课程`} />
       
     </>);

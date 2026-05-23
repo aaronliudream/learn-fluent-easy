@@ -50,7 +50,7 @@ export function primaryAdventurePath(grade: number): string {
   return primaryHubPath(grade);
 }
 
-/** @deprecated Hub storybook stage replaces separate reading list. */
+/** @deprecated Primary hub no longer has a separate reading route. */
 export function primaryReadingListPath(grade: number): string {
   return primaryHubPath(grade);
 }

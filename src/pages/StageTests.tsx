@@ -42,7 +42,7 @@ export default function StageTests() {
   useEffect(() => {load();}, [segment, grade]);
 
   function backUrl() {
-    if (segment === "primary") return `/primary/grade/${grade}`;
+    if (segment === "primary") return `/primary/hub/${grade}`;
     if (segment === "junior") return `/junior`;
     return `/gaokao`;
   }

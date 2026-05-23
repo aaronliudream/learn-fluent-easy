@@ -1,4 +1,4 @@
-import { primaryReadingEntryPath } from "@/lib/primaryGrade";
+import { primaryHubPath, primaryReadingEntryPath } from "@/lib/primaryGrade";
 
 // Daily Adventure — Phase 2 of the Spark world realignment.
 //
@@ -46,7 +46,7 @@ export function buildDailyAdventure(opts: {
     title: grade === 2 ? "和 Spark 学 G2 新音" : "和 Spark 学字母",
     sparkLine: "今天 Spark 想教你一个新字母,我们一起读!",
     cta: "和 Spark 读字母",
-    to: `/primary/phonics${gradeQ}`,
+    to: grade >= 3 ? primaryHubPath(grade) : `/primary`,
     estMinutes: 3,
   });
 
@@ -57,7 +57,7 @@ export function buildDailyAdventure(opts: {
     title: "和 Spark 读单词",
     sparkLine: "我想跟你读几个单词,大声读给 Spark 听!",
     cta: "和 Spark 读单词",
-    to: `/primary/vocab/${grade}`,
+    to: grade >= 3 ? primaryHubPath(grade) : `/primary`,
     estMinutes: 3,
   });
 
@@ -85,7 +85,7 @@ export function buildDailyAdventure(opts: {
               title: "和 Spark 玩节奏游戏",
               sparkLine: "今天来 45 秒单词节奏挑战!",
               cta: "开始单词节奏",
-              to: `/primary/word-rush?grade=${grade}`,
+              to: grade >= 3 ? primaryHubPath(grade) : `/primary`,
               estMinutes: 4,
             }
           : {
@@ -94,10 +94,10 @@ export function buildDailyAdventure(opts: {
               title: "节奏游戏准备中",
               sparkLine: `再学几个单词就能玩节奏啦!现在 ${sightWordsMasteredCount}/${need}`,
               cta: "去学单词",
-              to: `/primary/sight-words${gradeQ}`,
+              to: `/primary`,
               estMinutes: 4,
               placeholder: true,
-              fallbackTo: `/primary/sight-words${gradeQ}`,
+              fallbackTo: `/primary`,
               fallbackLabel: "先去学几个单词",
             }
       );
@@ -110,7 +110,7 @@ export function buildDailyAdventure(opts: {
               title: "和 Spark 玩单词游戏",
               sparkLine: "今天我们玩单词奇旅吧,只要 4 分钟!",
               cta: "开始单词奇旅",
-              to: `/primary/word-quest?grade=${grade}`,
+              to: grade >= 3 ? primaryHubPath(grade) : `/primary`,
               estMinutes: 4,
             }
           : {
@@ -119,10 +119,10 @@ export function buildDailyAdventure(opts: {
               title: "单词游戏准备中",
               sparkLine: `再学几个单词就能玩游戏啦!现在 ${sightWordsMasteredCount}/${need}`,
               cta: "去学单词",
-              to: `/primary/sight-words${gradeQ}`,
+              to: `/primary`,
               estMinutes: 4,
               placeholder: true,
-              fallbackTo: `/primary/sight-words${gradeQ}`,
+              fallbackTo: `/primary`,
               fallbackLabel: "先去学几个单词",
             }
       );
@@ -136,7 +136,7 @@ export function buildDailyAdventure(opts: {
     title: "Spark 的小发现",
     sparkLine: "学完别走~ 跟 Spark 看看今天的新鲜事吧!",
     cta: "看看新鲜事",
-    to: `/primary/culture/${grade}`,
+    to: grade >= 3 ? primaryHubPath(grade) : `/primary`,
     estMinutes: 2,
   });
 
@@ -160,7 +160,7 @@ function getThirdStepContent(
         title: "今天的一节课",
         sparkLine: "我准备好啦,我们开始今天这节课吧!",
         cta: "开始今天这节课",
-        to: `/primary/lesson/${nextLessonId}`,
+        to: grade >= 3 ? primaryHubPath(grade) : `/primary`,
         estMinutes: 8,
       }
     : null;
@@ -171,7 +171,7 @@ function getThirdStepContent(
     title: "和 Spark 演一段",
     sparkLine: "今天我们演个小故事吧,说说生活里的话!",
     cta: "去演一段",
-    to: `/primary/roleplays${gradeQ}`,
+    to: grade >= 3 ? primaryHubPath(grade) : `/primary`,
     estMinutes: 5,
   };
 
@@ -181,7 +181,7 @@ function getThirdStepContent(
     title: isG2 ? "听 G2 新对话" : "听 Spark 聊天",
     sparkLine: "今天 Spark 要和小伙伴聊天啦,你来听听!",
     cta: "和 Spark 听聊天",
-    to: `/primary/listening${gradeQ}`,
+    to: grade >= 3 ? primaryHubPath(grade) : `/primary`,
     estMinutes: 5,
   };
 
@@ -191,7 +191,7 @@ function getThirdStepContent(
     title: "和 Spark 读绘本",
     sparkLine: "今天 Spark 想和你一起读一本小绘本!",
     cta: "去读绘本",
-    to: primaryReadingEntryPath(grade),
+    to: grade >= 3 ? primaryHubPath(grade) : primaryReadingEntryPath(grade),
     estMinutes: 4,
   };
 

@@ -24,7 +24,7 @@ export type StageDef = {
   title: string;
   subtitle: string;
   icon: string;
-  type: "vocab" | "listenWord" | "match" | "storybook" | "sentence" | "write" | "listenSent" | "finalQuiz";
+  type: "vocab" | "listenWord" | "match" | "sentence" | "write" | "listenSent" | "finalQuiz";
   time: string;
 };
 
@@ -37,13 +37,6 @@ export type UnitDef = {
   available: boolean;
   vocabulary: VocabItem[];
   dialogues: Array<{ title: string; lines: Array<{ role: string; text: string; cn: string }> }>;
-  storybook?: {
-    title: string;
-    titleCn: string;
-    cover: string;
-    pages: Array<{ emoji: string; en: string; cn: string; hint: string }>;
-    questions: Array<{ q: string; opts: string[]; answer: number }>;
-  };
   stages: StageDef[];
   quizQuestions: QuizQuestion[];
   listeningQuestions: ListeningQuestion[];
@@ -109,9 +102,8 @@ export const DEFAULT_STAGES: StageDef[] = [
   { id: "s1", title: "认识单词", subtitle: "8个核心单词", icon: "📚", type: "vocab", time: "5分钟" },
   { id: "s2", title: "听音辨词", subtitle: "听力训练", icon: "🎧", type: "listenWord", time: "5分钟" },
   { id: "s3", title: "单词配对", subtitle: "巩固词义", icon: "🎮", type: "match", time: "5分钟" },
-  { id: "s4", title: "趣味绘本", subtitle: "故事中学习", icon: "📖", type: "storybook", time: "8分钟" },
-  { id: "s5", title: "学习句型", subtitle: "4个核心句型", icon: "💬", type: "sentence", time: "5分钟" },
-  { id: "s6", title: "默写挑战", subtitle: "动手拼写", icon: "✏️", type: "write", time: "8分钟" },
-  { id: "s7", title: "听力测试", subtitle: "听句选答案", icon: "🎯", type: "listenSent", time: "6分钟" },
-  { id: "s8", title: "最终通关", subtitle: "综合挑战", icon: "🏆", type: "finalQuiz", time: "10分钟" },
+  { id: "s4", title: "学习句型", subtitle: "4个核心句型", icon: "💬", type: "sentence", time: "5分钟" },
+  { id: "s5", title: "默写挑战", subtitle: "动手拼写", icon: "✏️", type: "write", time: "8分钟" },
+  { id: "s6", title: "听力测试", subtitle: "听句选答案", icon: "🎯", type: "listenSent", time: "6分钟" },
+  { id: "s7", title: "最终通关", subtitle: "综合挑战", icon: "🏆", type: "finalQuiz", time: "10分钟" },
 ];

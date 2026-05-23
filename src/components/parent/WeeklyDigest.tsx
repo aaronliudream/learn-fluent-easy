@@ -107,7 +107,7 @@ export default function WeeklyDigest() {
           <div className="text-3xl">🌱</div>
           <p className="mt-1 text-sm font-bold"><T>本周还没有学习记录</T></p>
           <p className="mt-1 text-xs text-muted-foreground"><T>陪孩子一起开始第一节课吧</T></p>
-          <Link to={`/primary/grade/${grade}`} className="mt-3 inline-flex items-center gap-1 rounded-full bg-violet-600 px-4 py-1.5 text-xs font-extrabold text-white hover:bg-violet-700">
+          <Link to={`/primary/hub/${grade}`} className="mt-3 inline-flex items-center gap-1 rounded-full bg-violet-600 px-4 py-1.5 text-xs font-extrabold text-white hover:bg-violet-700">
             <T>开始今天的学习</T> <ChevronRight className="size-3" />
           </Link>
         </div> :
@@ -163,7 +163,7 @@ export default function WeeklyDigest() {
                     </button>
               )}
                 </div>
-                <Link to={`/primary/vocab/${grade}?focus=weak`} className="mt-3 inline-flex w-full items-center justify-center gap-1 rounded-full bg-rose-600 px-3 py-1.5 text-xs font-extrabold text-white hover:bg-rose-700">
+                <Link to={`/primary/hub/${grade}`} className="mt-3 inline-flex w-full items-center justify-center gap-1 rounded-full bg-rose-600 px-3 py-1.5 text-xs font-extrabold text-white hover:bg-rose-700">
                   <T>一键补练 6 题</T> <ChevronRight className="size-3" />
                 </Link>
               </> :
@@ -203,7 +203,7 @@ export default function WeeklyDigest() {
             <p className="mt-2 text-[11px] text-muted-foreground">
               {lessonsThisWeek >= 3 ? "👍 节奏稳定，继续保持！" : "建议每周完成 3 节课，养成节奏。"}
             </p>
-            <Link to={`/primary/grade/${grade}`} className="mt-2 inline-flex items-center gap-1 text-[11px] font-extrabold text-violet-700 hover:underline dark:text-violet-300">
+            <Link to={`/primary/hub/${grade}`} className="mt-2 inline-flex items-center gap-1 text-[11px] font-extrabold text-violet-700 hover:underline dark:text-violet-300">
               <T>继续下一节</T> <ChevronRight className="size-3" />
             </Link>
           </div>

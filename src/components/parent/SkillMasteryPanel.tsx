@@ -167,7 +167,7 @@ export default function SkillMasteryPanel() {
           title="词汇 Vocabulary"
           stat={vocabStat}
           ctaLabel={vocabStat.unmastered + vocabStat.untouched > 0 ? `🎯 只练没掌握的 ${vocabStat.unmastered + vocabStat.untouched} 个 →` : "🌟 全部掌握"}
-          ctaTo={`/primary/vocab/${grade}`}
+          ctaTo={`/primary/hub/${grade}`}
           onDetail={() => {setVocabFilter("unmastered");setOpenSkill(openSkill === "vocab" ? null : "vocab");}}
           extraNote={vocabStat.total === 0 ? "本年级暂无词汇数据" : `共 ${vocabStat.total} 词`} />
         
@@ -196,7 +196,7 @@ export default function SkillMasteryPanel() {
           { label: "未练", value: `${Math.max(0, listeningStat.total - listeningStat.done)}`, color: "text-rose-600" }]
           }
           ctaLabel={listeningStat.total === 0 ? "进入小学专区 →" : "🎧 继续听力 →"}
-          ctaTo={`/primary/grade/${grade}`}
+          ctaTo={`/primary/hub/${grade}`}
           extraNote={listeningStat.total === 0 ? "本年级暂无听力课程" : ""} />
         
 
@@ -210,7 +210,7 @@ export default function SkillMasteryPanel() {
           { label: "未练", value: `${Math.max(0, writingStat.total - writingStat.done)}`, color: "text-amber-600" }]
           }
           ctaLabel={writingStat.total === 0 ? "进入小学专区 →" : "✍️ 继续写作 →"}
-          ctaTo={`/primary/grade/${grade}`}
+          ctaTo={`/primary/hub/${grade}`}
           extraNote={writingStat.total === 0 ? "本年级暂无写作任务" : ""} />
         
 
@@ -224,7 +224,7 @@ export default function SkillMasteryPanel() {
           { label: "建议", value: speakingStat.attempts < 5 ? "多练" : "保持", color: "text-emerald-600" }]
           }
           ctaLabel="🎤 开口练 →"
-          ctaTo={`/primary/grade/${grade}`}
+          ctaTo={`/primary/hub/${grade}`}
           extraNote="基于跟读评分" />
         
         </div>
@@ -303,7 +303,7 @@ export default function SkillMasteryPanel() {
 
           <div className="mt-3 flex justify-end">
             <Link
-            to={`/primary/vocab/${grade}`}
+            to={`/primary/hub/${grade}`}
             className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-sky-500 to-cyan-500 px-4 py-2 text-xs font-extrabold text-white shadow">
               <T>一键开始测验</T> 
             <ChevronRight className="size-4" />

@@ -209,7 +209,7 @@ export default function PacingSettings() {
                   {week.items.map((it) =>
               <Link
                 key={it.lesson.id + it.dateKey}
-                to={`/primary/lesson/${it.lesson.id}`}
+                to={`/primary/hub/${grade}`}
                 className="flex items-center gap-2 rounded-lg border border-border/60 bg-secondary/40 p-2 text-xs transition hover:border-violet-400 hover:bg-violet-50 dark:hover:bg-violet-950/30">
                 
                       <span className="grid size-7 place-items-center rounded-lg bg-violet-100 text-[10px] font-extrabold text-violet-700 dark:bg-violet-900/40 dark:text-violet-300">

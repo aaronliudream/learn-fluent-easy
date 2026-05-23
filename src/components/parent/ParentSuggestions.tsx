@@ -137,7 +137,7 @@ function deriveSuggestions(d: ParentSuggestionInput): Suggestion[] {
       title: "Mei 这周表现很稳 — 一起读一本绘本？",
       sub: "鼓励她挑战更高难度内容 · 预计 15 分钟",
       cta: "推荐",
-      to: "/primary/storybooks",
+      to: "/primary",
     });
   }
   if (out.length === 1) {

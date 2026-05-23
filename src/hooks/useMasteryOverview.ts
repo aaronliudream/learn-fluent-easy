@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { isPrimaryWordDue } from "@/lib/primaryMasteryStats";
-import {
-  primaryAdventurePath,
-  primaryReadingListPath,
-  readPrimaryGradeFromStorage,
-} from "@/lib/primaryGrade";
+import { primaryHubPath, readPrimaryGradeFromStorage } from "@/lib/primaryGrade";
 
 export type Stage = "primary" | "junior" | "gaokao";
 
@@ -64,11 +60,7 @@ const MODULE_META: Record<ModuleKey, { label: string; emoji: string }> = {
 function routeFor(stage: Stage, key: ModuleKey): string {
   const base = stage === "primary" ? "/primary" : stage === "junior" ? "/junior" : "/gaokao";
   if (stage === "primary") {
-    const g = readPrimaryGradeFromStorage();
-    if (key === "vocab") return `/primary/vocab/${g}`;
-    if (key === "reading") return primaryReadingListPath(g);
-    if (key === "lesson" || key === "listening" || key === "writing") return primaryAdventurePath(g);
-    return primaryAdventurePath(g);
+    return primaryHubPath(readPrimaryGradeFromStorage());
   }
   return `${base}/${key}`;
 }

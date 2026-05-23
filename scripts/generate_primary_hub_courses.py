@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import random
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -114,11 +115,10 @@ DEFAULT_STAGES = [
     {"id": "s1", "title": "认识单词", "subtitle": "核心单词", "icon": "📚", "type": "vocab", "time": "5分钟"},
     {"id": "s2", "title": "听音辨词", "subtitle": "听力训练", "icon": "🎧", "type": "listenWord", "time": "5分钟"},
     {"id": "s3", "title": "单词配对", "subtitle": "巩固词义", "icon": "🎮", "type": "match", "time": "5分钟"},
-    {"id": "s4", "title": "趣味绘本", "subtitle": "故事中学习", "icon": "📖", "type": "storybook", "time": "8分钟"},
-    {"id": "s5", "title": "学习句型", "subtitle": "核心句型", "icon": "💬", "type": "sentence", "time": "5分钟"},
-    {"id": "s6", "title": "默写挑战", "subtitle": "动手拼写", "icon": "✏️", "type": "write", "time": "8分钟"},
-    {"id": "s7", "title": "听力测试", "subtitle": "听句选答案", "icon": "🎯", "type": "listenSent", "time": "6分钟"},
-    {"id": "s8", "title": "最终通关", "subtitle": "综合挑战", "icon": "🏆", "type": "finalQuiz", "time": "10分钟"},
+    {"id": "s4", "title": "学习句型", "subtitle": "核心句型", "icon": "💬", "type": "sentence", "time": "5分钟"},
+    {"id": "s5", "title": "默写挑战", "subtitle": "动手拼写", "icon": "✏️", "type": "write", "time": "8分钟"},
+    {"id": "s6", "title": "听力测试", "subtitle": "听句选答案", "icon": "🎯", "type": "listenSent", "time": "6分钟"},
+    {"id": "s7", "title": "最终通关", "subtitle": "综合挑战", "icon": "🏆", "type": "finalQuiz", "time": "10分钟"},
 ]
 
 
@@ -153,7 +153,7 @@ def should_skip_word(en: str, gloss: str) -> bool:
     return False
 
 
-def pick_core_vocab(rows: list[dict], limit: int = 10) -> list[dict]:
+def pick_core_vocab(rows: list[dict], limit: int = 8) -> list[dict]:
     out: list[dict] = []
     seen: set[str] = set()
     for row in rows:
@@ -171,38 +171,50 @@ def pick_core_vocab(rows: list[dict], limit: int = 10) -> list[dict]:
     return out
 
 
+def _mcq(q: str, correct: str, pool: list[str], point: str = "词汇", dim: str = "vocab") -> dict:
+    distractors = [x for x in pool if x != correct]
+    random.shuffle(distractors)
+    opts = [correct]
+    for d in distractors:
+        if d not in opts and len(opts) < 4:
+            opts.append(d)
+    while len(opts) < 4:
+        opts.append(f"干扰项{len(opts)}")
+    random.shuffle(opts)
+    return {"q": q, "opts": opts, "answer": opts.index(correct), "point": point, "dim": dim}
+
+
 def make_quiz(vocab: list[dict], unit_cn: str) -> list[dict]:
+    if not vocab:
+        return []
     qs: list[dict] = []
     all_cn = [v["cn"] for v in vocab]
-    for i, v in enumerate(vocab[:8]):
-        distractors = [c for c in all_cn if c != v["cn"]]
-        opts = [v["cn"]]
-        for d in distractors[:3]:
-            if d not in opts:
-                opts.append(d)
-        while len(opts) < 4:
-            opts.append(f"选项{len(opts)}")
-        answer = 0
+    all_en = [v["en"] for v in vocab]
+    for v in vocab:
+        qs.append(_mcq(f"「{v['en']}」是什么意思？", v["cn"], all_cn))
+    if len(vocab) >= 2:
+        v0, v1 = vocab[0], vocab[1]
         qs.append(
-            {
-                "q": f"「{v['en']}」是什么意思？",
-                "opts": opts[:4],
-                "answer": answer,
-                "point": "词汇",
-                "dim": "vocab",
-            }
+            _mcq(
+                f"哪个是「{v0['cn']}」？",
+                v0["en"],
+                all_en,
+            )
         )
-    if vocab:
-        w0 = vocab[0]["en"]
         qs.append(
-            {
-                "q": f"本单元「{unit_cn}」学过的词是？",
-                "opts": [w0, "apple", "dog", "book"],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab",
-            }
+            _mcq(
+                f"「{v1['en']}」的中文是？",
+                v1["cn"],
+                all_cn,
+            )
         )
+    qs.append(
+        _mcq(
+            f"本单元「{unit_cn}」核心词是？",
+            vocab[0]["en"],
+            all_en + ["apple", "dog", "book", "school"],
+        )
+    )
     return qs[:15]
 
 
@@ -222,51 +234,6 @@ def make_listening(vocab: list[dict]) -> list[dict]:
     return out
 
 
-def make_storybook(vocab: list[dict], title: str, title_cn: str) -> dict:
-    pages = []
-    if vocab:
-        w0 = vocab[0]
-        pages.append(
-            {
-                "emoji": w0["emoji"],
-                "en": f"Let's learn about {title}!",
-                "cn": f"一起来学「{title_cn}」！",
-                "hint": "故事开始",
-            }
-        )
-    for v in vocab[:6]:
-        pages.append(
-            {
-                "emoji": v["emoji"],
-                "en": f"I see a {v['en']}.",
-                "cn": f"我看见{v['cn']}。",
-                "hint": f"单词 {v['en']}",
-            }
-        )
-    pages.append(
-        {
-            "emoji": "⭐",
-            "en": "Great job! You finished the story.",
-            "cn": "太棒了！故事读完了。",
-            "hint": "完成",
-        }
-    )
-    w0 = vocab[0] if vocab else {"en": "word", "cn": "词"}
-    return {
-        "title": f"Spark: {title}",
-        "titleCn": f"Spark：{title_cn}",
-        "cover": "🐻",
-        "pages": pages,
-        "questions": [
-            {
-                "q": f"What did we learn: {w0['en']}?",
-                "opts": [w0["en"], "apple", "dog", "book"],
-                "answer": 0,
-            }
-        ],
-    }
-
-
 def make_dialogues(vocab: list[dict], title: str) -> list[dict]:
     if len(vocab) < 2:
         return []
@@ -281,6 +248,18 @@ def make_dialogues(vocab: list[dict], title: str) -> list[dict]:
             ],
         }
     ]
+
+
+def strip_storybook(unit: dict) -> dict:
+    """Remove storybook stage/data from legacy hub units."""
+    cleaned = dict(unit)
+    cleaned.pop("storybook", None)
+    vocab = cleaned.get("vocabulary") or []
+    stages = [{**s} for s in DEFAULT_STAGES]
+    if vocab:
+        stages[0]["subtitle"] = f"{len(vocab)}个核心单词"
+    cleaned["stages"] = stages
+    return cleaned
 
 
 def unit_id(grade: int, vol: str, num: int) -> str:
@@ -306,7 +285,6 @@ def build_unit(book: str, unit_key: str, num: int, rows: list[dict], grade: int,
         "available": available,
         "vocabulary": vocab,
         "dialogues": make_dialogues(vocab, title) if available else [],
-        "storybook": make_storybook(vocab, title, cn) if available else None,
         "stages": stages,
         "quizQuestions": make_quiz(vocab, cn) if available else [],
         "listeningQuestions": make_listening(vocab) if available else [],
@@ -353,7 +331,7 @@ def main() -> None:
         for i, uk in enumerate(sorted(by_unit.keys(), key=lambda x: int(re.search(r"\d+", x).group())), start=1):
             u = build_unit(book, uk, i, by_unit[uk], grade_num, sem_id)
             if g4_u1 and u["id"] == "g4v2_u1":
-                u = g4_u1
+                u = strip_storybook(g4_u1)
             units.append(u)
         sem = grades[grade_num]["semesters"][sem_id]
         sem["units"] = units

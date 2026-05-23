@@ -577,13 +577,13 @@ export default function GrowthReport() {
           <div className="grid gap-2 md:grid-cols-3">
             <ActionCard time="今晚 10 分钟" title="陪孩子做错题小测"
             desc={`重点 ${Math.min(stats.weak.length, 5)} 个错词，用「错题复习」入口`}
-            link={`/primary/vocab/${grade}?focus=wrong`} cta="立即开始" />
+            link={`/primary/hub/${grade}`} cta="立即开始" />
             <ActionCard time="本周内" title="完成 3 节新课"
             desc={`聚焦薄弱主题：${stats.themes.find((t) => t.mastered / Math.max(1, t.total) < 0.5)?.name ?? "下一单元"}`}
-            link={`/primary/grade/${grade}`} cta="进入学习中心" />
+            link={`/primary/hub/${grade}`} cta="进入学习中心" />
             <ActionCard time="本月内" title="参加月度评估"
             desc="15 题自适应测评，生成新报告 + 成长证书"
-            link={`/primary/grade/${grade}`} cta="开始评估" />
+            link={`/primary/hub/${grade}`} cta="开始评估" />
           </div>
         </Block>
 

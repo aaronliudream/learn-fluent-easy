@@ -141,7 +141,7 @@ export default function Talk() {
         description: "为了让孩子更专注学习，每天提供 1 次高质量 AI 语音陪练。文字陪练不限次数。",
         duration: 6000
       });
-      nav("/primary/chat");
+      nav("/primary");
       return;
     }
     setOpen(true);
@@ -291,7 +291,7 @@ export default function Talk() {
 
       {authed && voiceLeft <= 0 &&
       <Link
-        to="/primary/chat"
+        to="/primary"
         className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border border-primary/30 bg-card py-3 text-sm font-bold text-primary transition hover:bg-primary/5">
         
           <MessageSquare className="size-4" />

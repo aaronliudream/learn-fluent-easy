@@ -2,11 +2,20 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
-import { loadPersist, savePersist, getUnitState } from "./storage";
+import { supabase } from "@/integrations/supabase/client";
+import {
+  cancelPrimaryHubCloudPush,
+  flushPrimaryHubCloudPush,
+  hydratePrimaryHubFromCloud,
+  schedulePrimaryHubCloudPush,
+} from "./hubCloudSync";
+import { getUnitState, loadPersist, registerPrimaryHubCloudSync, savePersist } from "./storage";
 import type { Mistake, PrimaryHubGrade, PrimaryHubPersist } from "./types";
 import { findUnit } from "./courseData";
 import { getTotalCompletedStages } from "./progress";
@@ -16,10 +25,12 @@ type Ctx = {
   grade: PrimaryHubGrade;
   state: PrimaryHubPersist;
   setState: React.Dispatch<React.SetStateAction<PrimaryHubPersist>>;
+  cloudHydrating: boolean;
   persist: () => void;
   addMistake: (m: Omit<Mistake, "id" | "date">) => void;
   completeStage: (unitId: string, stageIdx: number) => boolean;
   updateStageProgress: (unitId: string, stageIdx: number, percent: number) => void;
+  updateVocabViewed: (unitId: string, viewedIndices: number[]) => void;
 };
 
 const PrimaryHubContext = createContext<Ctx | null>(null);
@@ -32,6 +43,63 @@ export function PrimaryHubProvider({
   children: ReactNode;
 }) {
   const [state, setState] = useState<PrimaryHubPersist>(() => loadPersist(grade));
+  const [cloudHydrating, setCloudHydrating] = useState(false);
+  const userIdRef = useRef<string | null>(null);
+
+  const commit = useCallback((next: PrimaryHubPersist) => {
+    savePersist(grade, next);
+    return next;
+  }, [grade]);
+
+  useEffect(() => {
+    registerPrimaryHubCloudSync((g, s) => {
+      if (userIdRef.current && g === grade) {
+        schedulePrimaryHubCloudPush(userIdRef.current, g, s);
+      }
+    });
+    return () => registerPrimaryHubCloudSync(null);
+  }, [grade]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const hydrate = async (userId: string | null) => {
+      userIdRef.current = userId;
+      if (!userId) {
+        cancelPrimaryHubCloudPush();
+        setState(loadPersist(grade));
+        setCloudHydrating(false);
+        return;
+      }
+      setCloudHydrating(true);
+      try {
+        const merged = await hydratePrimaryHubFromCloud(userId, grade);
+        if (!cancelled) setState(merged);
+      } finally {
+        if (!cancelled) setCloudHydrating(false);
+      }
+    };
+
+    void supabase.auth.getSession().then(({ data: { session } }) => {
+      void hydrate(session?.user?.id ?? null);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === "SIGNED_OUT") {
+        void flushPrimaryHubCloudPush().finally(() => hydrate(null));
+        return;
+      }
+      if (event === "SIGNED_IN" || event === "INITIAL_SESSION") {
+        void flushPrimaryHubCloudPush().finally(() => hydrate(session?.user?.id ?? null));
+      }
+    });
+
+    return () => {
+      cancelled = true;
+      subscription.unsubscribe();
+      void flushPrimaryHubCloudPush();
+    };
+  }, [grade]);
 
   const persist = useCallback(() => {
     savePersist(grade, state);
@@ -54,11 +122,10 @@ export function PrimaryHubProvider({
             ...prev.mistakes,
           ].slice(0, 100),
         };
-        savePersist(grade, next);
-        return next;
+        return commit(next);
       });
     },
-    [grade],
+    [commit],
   );
 
   const completeStage = useCallback(
@@ -78,6 +145,7 @@ export function PrimaryHubProvider({
           const { [stageIdx]: _removed, ...rest } = us.stageProgress;
           us.stageProgress = Object.keys(rest).length > 0 ? rest : undefined;
         }
+        if (stageIdx === 0) us.vocabViewed = undefined;
         const completable = getCompletableStageIndices(unitId);
         const allCompletableDone =
           completable.length > 0 && completable.every((i) => completed.includes(i));
@@ -89,15 +157,14 @@ export function PrimaryHubProvider({
           units: { ...prev.units, [unitId]: { ...us } },
           currentUnit: unitId,
         };
-        savePersist(grade, next);
         const total = getTotalCompletedStages(next);
         const lastTest = next.lastAITest || 0;
         needAi = total - lastTest >= 4 && total > 0 && next.mistakes.length >= 2;
-        return next;
+        return commit(next);
       });
       return needAi;
     },
-    [grade],
+    [commit],
   );
 
   const updateStageProgress = useCallback(
@@ -112,16 +179,58 @@ export function PrimaryHubProvider({
           ...prev,
           units: { ...prev.units, [unitId]: { ...us } },
         };
-        savePersist(grade, next);
-        return next;
+        return commit(next);
       });
     },
-    [grade],
+    [commit],
+  );
+
+  const updateVocabViewed = useCallback(
+    (unitId: string, viewedIndices: number[]) => {
+      setState((prev) => {
+        const us = getUnitState(prev, unitId);
+        const sorted = [...new Set(viewedIndices)].sort((a, b) => a - b);
+        const prevKey = (us.vocabViewed ?? []).join(",");
+        const nextKey = sorted.join(",");
+        if (prevKey === nextKey) return prev;
+        us.vocabViewed = sorted.length ? sorted : undefined;
+        const vocabLen = findUnit(unitId)?.vocabulary.length ?? 0;
+        if (vocabLen > 0) {
+          const pct = Math.min(99, Math.round((sorted.length / vocabLen) * 100));
+          us.stageProgress = { ...(us.stageProgress ?? {}), 0: pct };
+        }
+        const next = {
+          ...prev,
+          units: { ...prev.units, [unitId]: { ...us } },
+        };
+        return commit(next);
+      });
+    },
+    [commit],
   );
 
   const value = useMemo(
-    () => ({ grade, state, setState, persist, addMistake, completeStage, updateStageProgress }),
-    [grade, state, persist, addMistake, completeStage, updateStageProgress],
+    () => ({
+      grade,
+      state,
+      setState,
+      cloudHydrating,
+      persist,
+      addMistake,
+      completeStage,
+      updateStageProgress,
+      updateVocabViewed,
+    }),
+    [
+      grade,
+      state,
+      cloudHydrating,
+      persist,
+      addMistake,
+      completeStage,
+      updateStageProgress,
+      updateVocabViewed,
+    ],
   );
 
   return <PrimaryHubContext.Provider value={value}>{children}</PrimaryHubContext.Provider>;

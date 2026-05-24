@@ -175,6 +175,8 @@ function VocabStage({
   semId,
   stageIdx,
   onProgress,
+  initialVocabViewed,
+  onVocabViewedChange,
 }: {
   vocabulary: VocabItem[];
   vocabGroups?: UnitDef["vocabGroups"];
@@ -184,14 +186,30 @@ function VocabStage({
   semId: string;
   stageIdx: number;
   onProgress?: (percent: number) => void;
+  initialVocabViewed?: number[];
+  onVocabViewedChange?: (indices: number[]) => void;
 }) {
   const phonics = getPhonicsForUnit(unitId);
   const [phonicsProgress, setPhonicsProgress] = useState(() =>
     phonics ? loadPhonicsProgress(unitId) : null,
   );
   const [activeGroup, setActiveGroup] = useState<1 | 2 | 3 | 4>(1);
-  const [viewed, setViewed] = useState<Set<number>>(() => new Set());
+  const [viewed, setViewed] = useState<Set<number>>(() => new Set(initialVocabViewed ?? []));
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
+
+  useEffect(() => {
+    if (initialVocabViewed?.length) {
+      setViewed((prev) => {
+        const merged = new Set([...prev, ...initialVocabViewed]);
+        if (merged.size === prev.size) return prev;
+        return merged;
+      });
+    }
+  }, [initialVocabViewed]);
+
+  useEffect(() => {
+    onVocabViewedChange?.([...viewed].sort((a, b) => a - b));
+  }, [viewed, onVocabViewedChange]);
 
   const groups = getVocabGroups({ vocabulary, vocabGroups });
   const activeGroupDef = groups?.find((g) => g.id === activeGroup) ?? null;
@@ -968,7 +986,8 @@ function FinalQuizStage({
 }
 
 export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplete, onBack }: Props) {
-  const { grade, state, setState, addMistake, completeStage, updateStageProgress } = usePrimaryHub();
+  const { grade, state, setState, addMistake, completeStage, updateStageProgress, updateVocabViewed } =
+    usePrimaryHub();
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
   const readWriteConfig = getReadWriteConfig(unitId, stageIdx);
@@ -1062,6 +1081,8 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             semId={semId}
             stageIdx={stageIdx}
             onProgress={reportStageProgress}
+            initialVocabViewed={us.vocabViewed}
+            onVocabViewedChange={(indices) => updateVocabViewed(unitId, indices)}
           />
         );
       case "listenWord":

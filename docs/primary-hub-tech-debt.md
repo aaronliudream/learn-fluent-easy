@@ -23,6 +23,12 @@
 
 见 [primary-hub-generate-script-risks.md](./primary-hub-generate-script-risks.md)（计划任务 8）。
 
+## Junior / Gaokao Hub 进度云端同步（待办）
+
+- **现状**（2026-05）：Primary Hub G3–G6 已接入 `primary_hub_progress` 表 + `hubCloudSync.ts`。
+- **Junior Hub** / **Gaokao Hub** 仍为 `localStorage` only（`juniorHub:{grade}` 等），登录后无跨设备同步。
+- **处理时机**：Primary Hub 云端同步在生产验证稳定后再做。
+
 ## Phonics UI（任务 4b，待办）
 
 任务 4 仅完成类型层 + `matchesRule` 字段重命名；**未**泛化 UI。

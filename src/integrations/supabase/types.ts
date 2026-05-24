@@ -5443,6 +5443,27 @@ export type Database = {
           },
         ]
       }
+      primary_hub_progress: {
+        Row: {
+          grade: number
+          state: Json
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          grade: number
+          state?: Json
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          grade?: number
+          state?: Json
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       primary_lessons: {
         Row: {
           created_at: string

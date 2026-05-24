@@ -23,10 +23,10 @@ export async function setGuestMergeDecision(
   userId: string,
   decision: GuestMergeDecision,
 ): Promise<void> {
-  const { error } = await supabase
-    .from("profiles")
-    .update({ guest_merge_decision: decision })
-    .eq("user_id", userId);
+  const { error } = await supabase.from("profiles").upsert(
+    { user_id: userId, guest_merge_decision: decision },
+    { onConflict: "user_id" },
+  );
 
-  if (error) console.warn("[primaryHub] set guest_merge_decision failed", error.message);
+  if (error) throw new Error(error.message);
 }

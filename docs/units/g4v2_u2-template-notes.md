@@ -33,3 +33,7 @@ Unit 3+ 的 `finalQuiz` 可混入 1–2 题 `point` 含 `u2:` 的题，或复制
 | readWrite | s7 | readWrite |
 | chant/song | s4 | sentence 内 tag「Let's chant」 |
 | finalQuiz | s8 | finalQuiz |
+
+## Tech Debt
+
+- **独立 chant 阶段未支持**：当前歌谣寄存在 s4 句型关 submodule B 末尾（tag `Let's chant · 歌谣`）。未来若要独立 chant 阶段，需架构任务（类似任务 5），不在 Unit 2–6 内容阶段处理。

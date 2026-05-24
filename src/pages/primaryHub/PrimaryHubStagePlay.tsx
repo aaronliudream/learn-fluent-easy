@@ -12,7 +12,9 @@ import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import ReadWriteTrainingStage from "@/components/primaryHub/ReadWriteTrainingStage";
+import SentenceLessonStage from "@/components/primaryHub/SentenceLessonStage";
 import { getReadWriteConfig } from "@/lib/primaryHub/readWriteRegistry";
+import { getSentenceLesson } from "@/lib/primaryHub/sentenceRegistry";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/primaryHub/types";
 
 type Props = {
@@ -103,6 +105,7 @@ function StageShell({
   unit,
   stars,
   onBack,
+  headerTitle,
   children,
 }: {
   stageIdx: number;
@@ -110,6 +113,7 @@ function StageShell({
   unit: UnitDef;
   stars: number;
   onBack: () => void;
+  headerTitle?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -119,7 +123,7 @@ function StageShell({
           ←
         </button>
         <div className="text-lg font-bold">
-          第 {stageIdx + 1} 关 · {stageTitle}
+          {headerTitle ?? `第 ${stageIdx + 1} 关 · ${stageTitle}`}
         </div>
       </div>
       <div className="px-4 py-4">
@@ -944,6 +948,20 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
   const readWriteConfig = getReadWriteConfig(unitId, stageIdx);
+  const sentenceLesson = getSentenceLesson(unitId, stageIdx);
+  const sentenceBackRef = useRef<(() => void) | null>(null);
+
+  const registerSentenceBack = useCallback((handler: (() => void) | null) => {
+    sentenceBackRef.current = handler;
+  }, []);
+
+  const handleShellBack = useCallback(() => {
+    if (sentenceBackRef.current) {
+      sentenceBackRef.current();
+      return;
+    }
+    onBack();
+  }, [onBack]);
 
   const us = getUnitState(state, unitId);
   const stars = state.units[unitId]?.stars ?? us.stars;
@@ -1056,7 +1074,17 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
           />
         );
       case "sentence":
-        return (
+        return sentenceLesson ? (
+          <SentenceLessonStage
+            lesson={sentenceLesson}
+            unitId={unitId}
+            stageIdx={stageIdx}
+            grade={grade}
+            onFinish={handleFinish}
+            onProgress={reportStageProgress}
+            onRegisterBack={registerSentenceBack}
+          />
+        ) : (
           <SentenceStage
             dialogues={unit.dialogues}
             onFinish={handleFinish}
@@ -1141,7 +1169,14 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
   })();
 
   return (
-    <StageShell stageIdx={stageIdx} stageTitle={stage.title} unit={unit} stars={stars} onBack={onBack}>
+    <StageShell
+      stageIdx={stageIdx}
+      stageTitle={stage.title}
+      unit={unit}
+      stars={stars}
+      onBack={handleShellBack}
+      headerTitle={sentenceLesson ? stage.title : undefined}
+    >
       {stageBody}
     </StageShell>
   );

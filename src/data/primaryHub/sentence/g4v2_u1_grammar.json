@@ -1,0 +1,94 @@
+{
+  "lessonId": "g4v2_u1_grammar",
+  "unitId": "g4v2_u1",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "Mike 把朋友带进了学校，准备介绍校园啦~",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "问路 · 找教师办公室",
+      "description": "Mike 要给 Miss White 交作业，他在找教师办公室。",
+      "color": "blue",
+      "estimatedMinutes": 3,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": {
+            "en": "Excuse me. Where's the teachers' office?",
+            "zh": "请问，教师办公室在哪里？"
+          },
+          "answer": {
+            "en": "It's on the second floor.",
+            "zh": "在二楼。"
+          },
+          "tag": "A Let's talk"
+        },
+        {
+          "id": "A2",
+          "question": {
+            "en": "Is this the teachers' office?",
+            "zh": "这是教师办公室吗？"
+          },
+          "answer": {
+            "en": "No, it isn't. The teachers' office is next to the library.",
+            "zh": "不，不是。教师办公室挨着图书馆。"
+          },
+          "tag": "A Let's talk"
+        },
+        {
+          "id": "A3",
+          "question": {
+            "en": "OK. Thanks.",
+            "zh": "好的，谢谢。"
+          },
+          "answer": null,
+          "tag": "A Let's talk"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "参观 · 介绍我的学校",
+      "description": "Mike 带朋友参观自己的学校，介绍各个场所。",
+      "color": "pink",
+      "estimatedMinutes": 3,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": {
+            "en": "Welcome to our school! This is my classroom.",
+            "zh": "欢迎来到我们学校！这是我的教室。"
+          },
+          "answer": null,
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B2",
+          "question": {
+            "en": "Do you have a library?",
+            "zh": "你们(学校)有图书馆吗？"
+          },
+          "answer": {
+            "en": "Yes, we do. It's on the second floor.",
+            "zh": "是的，有。它在二楼。"
+          },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B3",
+          "question": {
+            "en": "How many students are there in your class?",
+            "zh": "你们班有多少学生？"
+          },
+          "answer": {
+            "en": "Forty-five students.",
+            "zh": "45 个学生。"
+          },
+          "tag": "B Let's talk"
+        }
+      ]
+    }
+  ]
+}

@@ -26,3 +26,9 @@ export function hubSpeak(text: string, rate = 0.85, grade?: number) {
   const gradeHint = rate <= 0.75 ? 1 : grade;
   void speakKid(text, gradeHint != null ? { grade: gradeHint } : undefined);
 }
+
+/** Kid-voice playback with an explicit TTS speed (for unit sentence lessons). */
+export function hubSpeakAtSpeed(text: string, speed: number, grade?: number) {
+  if (typeof window === "undefined") return;
+  void speakKid(text, { grade, speed });
+}

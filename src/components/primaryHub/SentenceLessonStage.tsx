@@ -1,6 +1,9 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { hubSpeak } from "@/lib/primaryHub/speech";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
+import G4v2U1SpeakSpeedControl from "@/components/primaryHub/G4v2U1SpeakSpeedControl";
+import { useG4v2U1SpeakSpeed } from "@/hooks/useG4v2U1SpeakSpeed";
+import { hubSpeakAtSpeed } from "@/lib/primaryHub/speech";
 import { prefetchTTSBatchKid } from "@/lib/speak";
+import type { G4v2U1SpeakSpeed } from "@/lib/primaryHub/g4v2U1SpeakSpeed";
 import {
   countSubmoduleDone,
   getSentenceCompletedIds,
@@ -41,16 +44,35 @@ function PrimaryButton({
   );
 }
 
-function AudioBtn({ text, grade, label }: { text: string; grade: number; label?: string }) {
+function AudioBtn({
+  text,
+  grade,
+  speed,
+  label,
+}: {
+  text: string;
+  grade: number;
+  speed: G4v2U1SpeakSpeed;
+  label?: string;
+}) {
   return (
     <button
       type="button"
       aria-label={label ?? "播放"}
       className="grid size-8 shrink-0 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-      onClick={() => hubSpeak(text, 0.85, grade)}
+      onClick={() => hubSpeakAtSpeed(text, speed, grade)}
     >
       🔊
     </button>
+  );
+}
+
+function LessonPanel({ speed, onSpeedChange, children }: { speed: G4v2U1SpeakSpeed; onSpeedChange: (s: G4v2U1SpeakSpeed) => void; children: ReactNode }) {
+  return (
+    <div className="rounded-2xl bg-white p-4 shadow-sm">
+      <G4v2U1SpeakSpeedControl speed={speed} onChange={onSpeedChange} className="mb-3" />
+      {children}
+    </div>
   );
 }
 
@@ -59,6 +81,7 @@ function SentenceCard({
   index,
   color,
   grade,
+  speed,
   completed,
   onComplete,
 }: {
@@ -66,6 +89,7 @@ function SentenceCard({
   index: number;
   color: keyof typeof sentenceColorClass;
   grade: number;
+  speed: G4v2U1SpeakSpeed;
   completed: boolean;
   onComplete: () => void;
 }) {
@@ -89,26 +113,20 @@ function SentenceCard({
         <span className="rounded-md bg-white/60 px-1.5 py-0.5 text-[10px] font-medium opacity-80">{item.tag}</span>
       </div>
       <div className="flex items-center gap-2">
-        <AudioBtn text={item.question.en} grade={grade} label="播放英文" />
+        <AudioBtn text={item.question.en} grade={grade} speed={speed} label="播放英文" />
         <div className="flex-1 text-base font-semibold">{item.question.en}</div>
         {completed && <span className="text-sm text-[#3B6D11]">✓</span>}
       </div>
       {expanded ? (
         <div className="mt-2 border-t border-black/10 pt-2">
-          <div className="flex items-center gap-2">
-            <AudioBtn text={item.question.zh} grade={grade} label="播放中文" />
-            <div className="text-sm">中文：{item.question.zh}</div>
-          </div>
+          <div className="text-sm">中文：{item.question.zh}</div>
           {item.answer && (
             <>
               <div className="mt-2 flex items-center gap-2">
-                <AudioBtn text={item.answer.en} grade={grade} label="播放回答英文" />
+                <AudioBtn text={item.answer.en} grade={grade} speed={speed} label="播放回答英文" />
                 <div className="text-sm font-semibold">回答：{item.answer.en}</div>
               </div>
-              <div className="mt-1 flex items-center gap-2 pl-10">
-                <AudioBtn text={item.answer.zh} grade={grade} label="播放回答中文" />
-                <div className="text-sm">{item.answer.zh}</div>
-              </div>
+              <div className="mt-1 pl-10 text-sm">{item.answer.zh}</div>
             </>
           )}
         </div>
@@ -145,6 +163,7 @@ export default function SentenceLessonStage({
   const { grade: hubGrade, state, setState } = usePrimaryHub();
   const g = grade || hubGrade;
   const persistGrade = hubGrade;
+  const { speed, setSpeed } = useG4v2U1SpeakSpeed();
 
   const us = getUnitState(state, unitId);
   const completed = useMemo(() => getSentenceCompletedIds(us), [us.sentenceCompleted]);
@@ -187,14 +206,14 @@ export default function SentenceLessonStage({
     const texts: string[] = [];
     for (const mod of lesson.subModules) {
       for (const s of mod.sentences) {
-        texts.push(s.question.en, s.question.zh);
+        texts.push(s.question.en);
         if (s.answer) {
-          texts.push(s.answer.en, s.answer.zh);
+          texts.push(s.answer.en);
         }
       }
     }
-    if (texts.length) prefetchTTSBatchKid(texts, { grade: g });
-  }, [g, lesson]);
+    if (texts.length) prefetchTTSBatchKid(texts, { grade: g, speed });
+  }, [g, lesson, speed]);
 
   useEffect(() => {
     if (view === "pick") {
@@ -240,7 +259,8 @@ export default function SentenceLessonStage({
 
   if (view === "transition") {
     return (
-      <div className="rounded-2xl bg-white p-6 text-center shadow-sm">
+      <LessonPanel speed={speed} onSpeedChange={setSpeed}>
+      <div className="py-2 text-center">
         <div className="text-3xl">🎉</div>
         <div className="mt-2 text-lg font-bold">子模块 A 完成!</div>
         <p className="mt-3 text-sm text-[#888780]">{lesson.transitionMessage}</p>
@@ -256,6 +276,7 @@ export default function SentenceLessonStage({
           进入子模块 B →
         </PrimaryButton>
       </div>
+      </LessonPanel>
     );
   }
 
@@ -264,7 +285,7 @@ export default function SentenceLessonStage({
     const doneCount = countSubmoduleDone(activeModule, completed);
 
     return (
-      <div className="rounded-2xl bg-white p-4 shadow-sm">
+      <LessonPanel speed={speed} onSpeedChange={setSpeed}>
         <p className="mb-1 text-xs text-[#888780]">{activeModule.title}</p>
         <p className="mb-3 text-sm">{activeModule.description}</p>
         <div className="mb-3 flex items-center justify-between text-xs text-[#888780]">
@@ -278,6 +299,7 @@ export default function SentenceLessonStage({
             index={i}
             color={activeModule.color}
             grade={g}
+            speed={speed}
             completed={completed.has(item.id)}
             onComplete={() => onModuleSentenceComplete(activeModule, item.id)}
           />
@@ -299,7 +321,7 @@ export default function SentenceLessonStage({
   const bCount = modB ? countSubmoduleDone(modB, completed) : 0;
 
   return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm">
+    <LessonPanel speed={speed} onSpeedChange={setSpeed}>
       <div className="mb-3 text-center text-xs font-medium text-[#888780]">
         A: {aCount}/3 | B: {bCount}/3
       </div>
@@ -360,6 +382,6 @@ export default function SentenceLessonStage({
       {lessonDone && (
         <PrimaryButton onClick={onFinish}>✓ 句型全部学完！完成本关 →</PrimaryButton>
       )}
-    </div>
+    </LessonPanel>
   );
 }

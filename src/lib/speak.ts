@@ -566,19 +566,19 @@ export const getKidSpeed = (grade?: number): number => {
  */
 export const speakKid = (
   text: string,
-  opts?: { grade?: number; accent?: "UK" | "US" | "BOTH" },
+  opts?: { grade?: number; accent?: "UK" | "US" | "BOTH"; speed?: number },
 ) => speak(text, {
   voiceId: KID_VOICE_ID,
-  speed: getKidSpeed(opts?.grade),
+  speed: opts?.speed ?? getKidSpeed(opts?.grade),
   accent: opts?.accent,
 });
 
 /** Batch prefetch using the kid voice + grade-based speed. */
 export const prefetchTTSBatchKid = (
   texts: string[],
-  opts?: { grade?: number; accent?: "UK" | "US" | "BOTH" },
+  opts?: { grade?: number; accent?: "UK" | "US" | "BOTH"; speed?: number },
 ) => {
-  const speed = getKidSpeed(opts?.grade);
+  const speed = opts?.speed ?? getKidSpeed(opts?.grade);
   const accent = opts?.accent;
   const seen = new Set<string>();
   for (const t of texts) {

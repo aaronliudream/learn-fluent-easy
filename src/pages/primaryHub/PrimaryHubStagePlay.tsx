@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { findUnit } from "@/lib/primaryHub/courseData";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
-import { hubSpeak } from "@/lib/primaryHub/speech";
+import { hubSpeak, hubSpeakAtSpeed } from "@/lib/primaryHub/speech";
 import { getPhonicsForUnit } from "@/lib/primaryHub/phonicsRegistry";
 import { loadPhonicsProgress } from "@/lib/primaryHub/phonicsStorage";
 import { getPhonicsRuleText, getVocabGroups } from "@/lib/primaryHub/vocabGroupsRegistry";
@@ -12,7 +12,10 @@ import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import ReadWriteTrainingStage from "@/components/primaryHub/ReadWriteTrainingStage";
+import G4v2U1SpeakSpeedControl from "@/components/primaryHub/G4v2U1SpeakSpeedControl";
 import SentenceLessonStage from "@/components/primaryHub/SentenceLessonStage";
+import { useG4v2U1SpeakSpeed } from "@/hooks/useG4v2U1SpeakSpeed";
+import { isG4v2U1Unit } from "@/lib/primaryHub/g4v2U1SpeakSpeed";
 import { getReadWriteConfig } from "@/lib/primaryHub/readWriteRegistry";
 import { getSentenceLesson } from "@/lib/primaryHub/sentenceRegistry";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/primaryHub/types";
@@ -442,6 +445,7 @@ function ListenMcStage({
   instruction,
   questions,
   grade,
+  unitId,
   onFinish,
   onCorrect,
   onWrong,
@@ -452,6 +456,7 @@ function ListenMcStage({
   instruction: string;
   questions: Array<{ audio: string; opts: string[]; answer: number; point?: string }>;
   grade: number;
+  unitId?: string;
   onFinish: () => void;
   onCorrect: () => void;
   onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string }) => void;
@@ -463,10 +468,13 @@ function ListenMcStage({
   const [answered, setAnswered] = useState(false);
   const [picked, setPicked] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<React.ReactNode>(null);
+  const { speed, setSpeed } = useG4v2U1SpeakSpeed();
+  const isSentenceAudio = title.includes("句") || instruction.includes("句");
+  const useUnitSpeakSpeed = Boolean(unitId && isG4v2U1Unit(unitId) && isSentenceAudio);
 
   const q = questions[idx];
   const isLast = idx === questions.length - 1;
-  const isSentenceListen = title.includes("句");
+  const isSentenceListen = isSentenceAudio;
 
   useEffect(() => {
     if (!questions.length || !onProgress) return;
@@ -476,22 +484,30 @@ function ListenMcStage({
   useEffect(() => {
     prefetchTTSBatchKid(
       questions.map((item) => item.audio),
-      { grade },
+      useUnitSpeakSpeed ? { grade, speed } : { grade },
     );
-  }, [grade, questions]);
+  }, [grade, questions, speed, useUnitSpeakSpeed]);
 
   const speakPrompt = useCallback(() => {
     const text = q?.audio?.trim();
     if (!text) return;
+    if (useUnitSpeakSpeed) {
+      hubSpeakAtSpeed(text, speed, grade);
+      return;
+    }
     // Sentence prompts use the slow kid-voice path (<0.75) for clearer playback.
     hubSpeak(text, isSentenceListen ? 0.74 : 0.8, grade);
-  }, [q, grade, isSentenceListen]);
+  }, [q, grade, isSentenceListen, speed, useUnitSpeakSpeed]);
 
   const speakCorrectAnswer = useCallback(() => {
     const text = q?.opts[q.answer]?.trim();
     if (!text) return;
+    if (useUnitSpeakSpeed) {
+      hubSpeakAtSpeed(text, speed, grade);
+      return;
+    }
     hubSpeak(text, 0.7, grade);
-  }, [q, grade]);
+  }, [q, grade, speed, useUnitSpeakSpeed]);
 
   const handlePick = (optIdx: number) => {
     if (answered) return;
@@ -548,6 +564,9 @@ function ListenMcStage({
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
+      {useUnitSpeakSpeed && (
+        <G4v2U1SpeakSpeedControl speed={speed} onChange={setSpeed} className="mb-3" />
+      )}
       <div className="mb-3 flex justify-between text-sm">
         <span className="text-[#888780]">
           第 {idx + 1} / {questions.length} 题
@@ -1046,6 +1065,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             instruction="🎧 听一听，是哪个单词？"
             questions={listenWordQuestions}
             grade={grade}
+            unitId={unitId}
             onFinish={handleFinish}
             onCorrect={addStar}
             initialIdx={stepFromSavedPercent(savedStagePercent, listenWordQuestions.length)}
@@ -1110,6 +1130,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             instruction="🎧 听一听，是哪一句？"
             questions={listenSentQuestions as ListeningQuestion[]}
             grade={grade}
+            unitId={unitId}
             onFinish={handleFinish}
             onCorrect={addStar}
             initialIdx={stepFromSavedPercent(savedStagePercent, listenSentQuestions.length)}

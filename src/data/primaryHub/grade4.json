@@ -2470,10 +2470,10 @@
               {
                 "q": "45 个学生英语怎么说？",
                 "opts": [
-                  "Fifteen",
-                  "Fifty",
-                  "Forty-five",
-                  "Fourteen"
+                  "Fifteen students",
+                  "Fifty students",
+                  "Forty-five students",
+                  "Fourteen students"
                 ],
                 "answer": 2,
                 "point": "数字"

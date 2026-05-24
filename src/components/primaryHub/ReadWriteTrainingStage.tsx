@@ -8,6 +8,8 @@ type Props = {
   config: ReadWriteSimplifiedConfig;
   onFinish: () => void;
   onAwardPoints: (n: number) => void;
+  initialQIdx?: number;
+  onProgress?: (percent: number) => void;
 };
 
 const CORRECT_DELAY_MS = 1000;
@@ -32,7 +34,7 @@ function FeedbackBanner({ tone, children }: { tone: "success" | "error"; childre
 
 function PictureChoiceBody({ q }: { q: Extract<ReadWriteSimplifiedQuestion, { type: "picture_choice" }> }) {
   return (
-  <>
+    <>
       <div className="overflow-hidden rounded-2xl border border-[#EEEAE0] bg-[#FFF8F0]">
         <img
           src={q.image}
@@ -61,9 +63,15 @@ function FillChoiceBody({ q }: { q: Extract<ReadWriteSimplifiedQuestion, { type:
   );
 }
 
-export default function ReadWriteTrainingStage({ config, onFinish, onAwardPoints }: Props) {
+export default function ReadWriteTrainingStage({
+  config,
+  onFinish,
+  onAwardPoints,
+  initialQIdx = 0,
+  onProgress,
+}: Props) {
   const total = config.questions.length;
-  const [qIdx, setQIdx] = useState(0);
+  const [qIdx, setQIdx] = useState(initialQIdx);
   const [score, setScore] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<Feedback>("idle");
@@ -73,6 +81,10 @@ export default function ReadWriteTrainingStage({ config, onFinish, onAwardPoints
 
   const q = config.questions[qIdx];
   const progressPct = finished ? 100 : ((qIdx + (feedback === "correct" ? 1 : 0)) / total) * 100;
+
+  useEffect(() => {
+    onProgress?.(progressPct);
+  }, [progressPct, onProgress]);
 
   const clearTimer = useCallback(() => {
     if (timerRef.current != null) {

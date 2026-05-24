@@ -153,6 +153,11 @@ function highlightVocabWord(en: string, highlight?: string) {
   );
 }
 
+function stepFromSavedPercent(savedPercent: number, total: number): number {
+  if (total <= 0 || savedPercent <= 0) return 0;
+  return Math.min(total - 1, Math.floor((savedPercent / 100) * total));
+}
+
 function VocabStage({
   vocabulary,
   onFinish,
@@ -160,6 +165,7 @@ function VocabStage({
   unitId,
   semId,
   stageIdx,
+  onProgress,
 }: {
   vocabulary: VocabItem[];
   onFinish: () => void;
@@ -167,6 +173,7 @@ function VocabStage({
   unitId: string;
   semId: string;
   stageIdx: number;
+  onProgress?: (percent: number) => void;
 }) {
   const phonics = getPhonicsForUnit(unitId);
   const [phonicsProgress, setPhonicsProgress] = useState(() =>
@@ -232,6 +239,24 @@ function VocabStage({
   const remainingViewed = Math.max(0, requiredViewed - viewed.size);
   const phonicsDone = !phonics || phonicsProgress?.finished;
   const canFinish = allViewed && phonicsDone;
+
+  useEffect(() => {
+    if (!onProgress) return;
+    const viewPct = requiredViewed > 0 ? viewed.size / requiredViewed : 0;
+    if (!phonics) {
+      onProgress(Math.round(viewPct * 100));
+      return;
+    }
+    const phPct = phonicsProgress?.finished ? 1 : (phonicsProgress?.completedStages.length ?? 0) / 3;
+    onProgress(Math.round(viewPct * 85 + phPct * 15));
+  }, [
+    onProgress,
+    viewed.size,
+    requiredViewed,
+    phonics,
+    phonicsProgress?.finished,
+    phonicsProgress?.completedStages.length,
+  ]);
 
   const refreshPhonicsProgress = () => {
     if (phonics) setPhonicsProgress(loadPhonicsProgress(unitId));
@@ -416,6 +441,8 @@ function ListenMcStage({
   onFinish,
   onCorrect,
   onWrong,
+  initialIdx = 0,
+  onProgress,
 }: {
   title: string;
   instruction: string;
@@ -424,8 +451,10 @@ function ListenMcStage({
   onFinish: () => void;
   onCorrect: () => void;
   onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string }) => void;
+  initialIdx?: number;
+  onProgress?: (percent: number) => void;
 }) {
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState(initialIdx);
   const [correctCount, setCorrectCount] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [picked, setPicked] = useState<number | null>(null);
@@ -434,6 +463,11 @@ function ListenMcStage({
   const q = questions[idx];
   const isLast = idx === questions.length - 1;
   const isSentenceListen = title.includes("句");
+
+  useEffect(() => {
+    if (!questions.length || !onProgress) return;
+    onProgress(((idx + (answered ? 1 : 0)) / questions.length) * 100);
+  }, [idx, answered, questions.length, onProgress]);
 
   useEffect(() => {
     prefetchTTSBatchKid(
@@ -542,10 +576,12 @@ function SentenceStage({
   dialogues,
   grade,
   onFinish,
+  onProgress,
 }: {
   dialogues: UnitDef["dialogues"];
   grade: number;
   onFinish: () => void;
+  onProgress?: (percent: number) => void;
 }) {
   const [expanded, setExpanded] = useState<Set<number>>(() => new Set());
 
@@ -574,6 +610,11 @@ function SentenceStage({
   };
 
   const allExpanded = patterns.length === 0 || expanded.size === patterns.length;
+
+  useEffect(() => {
+    if (!patterns.length || !onProgress) return;
+    onProgress((expanded.size / patterns.length) * 100);
+  }, [expanded.size, patterns.length, onProgress]);
 
   useEffect(() => {
     const texts = patterns.flatMap((s) => [s.q, s.a].filter(Boolean));
@@ -646,12 +687,14 @@ function WriteStage({
   onFinish,
   onCorrect,
   onWrong,
+  onProgress,
 }: {
   vocabulary: VocabItem[];
   grade: number;
   onFinish: () => void;
   onCorrect: () => void;
   onWrong: (m: { q: string; opts: string[]; answer: number; point: string }) => void;
+  onProgress?: (percent: number) => void;
 }) {
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const [correct, setCorrect] = useState<Set<number>>(() => new Set());
@@ -735,6 +778,11 @@ function WriteStage({
 
   const done = correct.size === vocabulary.length;
 
+  useEffect(() => {
+    if (!vocabulary.length || !onProgress) return;
+    onProgress((correct.size / vocabulary.length) * 100);
+  }, [correct.size, vocabulary.length, onProgress]);
+
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
       <div className="mb-2 text-sm">✏️ 看中文输入英文</div>
@@ -806,6 +854,8 @@ function FinalQuizStage({
   onFinish,
   onCorrect,
   onWrong,
+  initialIdx = 0,
+  onProgress,
 }: {
   questions: QuizQuestion[];
   unitId: string;
@@ -813,14 +863,21 @@ function FinalQuizStage({
   onFinish: () => void;
   onCorrect: () => void;
   onWrong: (q: QuizQuestion) => void;
+  initialIdx?: number;
+  onProgress?: (percent: number) => void;
 }) {
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState(initialIdx);
   const [answered, setAnswered] = useState(false);
   const [picked, setPicked] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<React.ReactNode>(null);
 
   const q = questions[idx];
   const isLast = idx === questions.length - 1;
+
+  useEffect(() => {
+    if (!questions.length || !onProgress) return;
+    onProgress(((idx + (answered ? 1 : 0)) / questions.length) * 100);
+  }, [idx, answered, questions.length, onProgress]);
 
   const handlePick = (optIdx: number) => {
     if (answered) return;
@@ -883,13 +940,19 @@ function FinalQuizStage({
 }
 
 export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplete, onBack }: Props) {
-  const { grade, state, setState, addMistake, completeStage } = usePrimaryHub();
+  const { grade, state, setState, addMistake, completeStage, updateStageProgress } = usePrimaryHub();
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
   const readWriteConfig = getReadWriteConfig(unitId, stageIdx);
 
   const us = getUnitState(state, unitId);
   const stars = state.units[unitId]?.stars ?? us.stars;
+  const savedStagePercent = us.stageProgress?.[stageIdx] ?? 0;
+
+  const reportStageProgress = useCallback(
+    (percent: number) => updateStageProgress(unitId, stageIdx, percent),
+    [updateStageProgress, unitId, stageIdx],
+  );
 
   const addStar = useCallback(() => {
     setState((prev) => {
@@ -955,6 +1018,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             unitId={unitId}
             semId={semId}
             stageIdx={stageIdx}
+            onProgress={reportStageProgress}
           />
         );
       case "listenWord":
@@ -966,6 +1030,8 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             grade={grade}
             onFinish={handleFinish}
             onCorrect={addStar}
+            initialIdx={stepFromSavedPercent(savedStagePercent, listenWordQuestions.length)}
+            onProgress={reportStageProgress}
             onWrong={(q) =>
               addMistake({
                 q: `听音选词：${q.audio}`,
@@ -986,10 +1052,18 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             grade={grade}
             onFinish={handleFinish}
             onMatch={addStar}
+            onProgressChange={reportStageProgress}
           />
         );
       case "sentence":
-        return <SentenceStage dialogues={unit.dialogues} onFinish={handleFinish} grade={grade} />;
+        return (
+          <SentenceStage
+            dialogues={unit.dialogues}
+            onFinish={handleFinish}
+            grade={grade}
+            onProgress={reportStageProgress}
+          />
+        );
       case "write":
         return (
           <WriteStage
@@ -997,6 +1071,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             grade={grade}
             onFinish={handleFinish}
             onCorrect={addStar}
+            onProgress={reportStageProgress}
             onWrong={(m) => addMistake({ ...m, unitId, unitTitle: unit.title })}
           />
         );
@@ -1009,6 +1084,8 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             grade={grade}
             onFinish={handleFinish}
             onCorrect={addStar}
+            initialIdx={stepFromSavedPercent(savedStagePercent, listenSentQuestions.length)}
+            onProgress={reportStageProgress}
             onWrong={(q) =>
               addMistake({
                 q: `听力理解：${q.audio}`,
@@ -1028,6 +1105,8 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             config={readWriteConfig}
             onFinish={handleFinish}
             onAwardPoints={addStar}
+            initialQIdx={stepFromSavedPercent(savedStagePercent, readWriteConfig.questions.length)}
+            onProgress={reportStageProgress}
           />
         ) : (
           <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#888780]">
@@ -1042,6 +1121,8 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             unitTitle={unit.title}
             onFinish={handleFinish}
             onCorrect={addStar}
+            initialIdx={stepFromSavedPercent(savedStagePercent, finalQuizQuestions.length)}
+            onProgress={reportStageProgress}
             onWrong={(q) =>
               addMistake({
                 q: q.q,

@@ -191,15 +191,22 @@ function VocabStage({
     });
   };
 
+  const revealCard = (globalIdx: number, word: string) => {
+    markViewed(globalIdx);
+    setFlipped((prev) => {
+      if (prev.has(globalIdx)) return prev;
+      return new Set(prev).add(globalIdx);
+    });
+    hubSpeak(word, 0.85, grade);
+  };
+
   const toggleCard = (localIdx: number) => {
     const v = activeItems[localIdx];
     if (!v) return;
     const globalIdx = activeOffset + localIdx;
     const isFlipped = flipped.has(globalIdx);
-    markViewed(globalIdx);
     if (!isFlipped) {
-      setFlipped((prev) => new Set(prev).add(globalIdx));
-      hubSpeak(v.en, 0.85, grade);
+      revealCard(globalIdx, v.en);
     } else {
       setFlipped((prev) => {
         const next = new Set(prev);
@@ -210,8 +217,7 @@ function VocabStage({
   };
 
   const speakWord = (word: string, globalIdx: number) => {
-    markViewed(globalIdx);
-    hubSpeak(word, 0.85, grade);
+    revealCard(globalIdx, word);
   };
 
   useEffect(() => {
@@ -294,7 +300,7 @@ function VocabStage({
         </div>
       )}
       <div className="mb-3 text-[14px] text-[#888780]">
-        💡 点击卡片翻转看中文；点击 🔊 或单词也会计入已查看
+        💡 点击卡片、单词或 🔊 都会翻转显示中文并计入已查看
       </div>
       <div className="grid grid-cols-2 gap-2">
             {activeItems.map((v, i) => {

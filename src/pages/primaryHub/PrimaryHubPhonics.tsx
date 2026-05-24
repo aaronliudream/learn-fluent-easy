@@ -7,7 +7,9 @@ import {
   type PhonicsUnitProgress,
 } from "@/lib/primaryHub/phonicsStorage";
 import { phonicsAudioUrl, playPhonicsAudio, stopPhonicsAudio } from "@/lib/primaryHub/phonicsAudio";
+import { hubSpeak } from "@/lib/primaryHub/speech";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
+import { prefetchTTSBatchKid } from "@/lib/speak";
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 
@@ -133,7 +135,14 @@ function ListenStage({
                 done ? "border-[#97C459] bg-[#EAF3DE]" : "border-[#EEEAE0] bg-[#FFF8F0]"
               }`}
             >
-              <div className="text-3xl">{item.emoji}</div>
+              <button
+                type="button"
+                className="mx-auto block text-3xl transition hover:scale-110 active:scale-95"
+                onClick={() => play(item.word, item.audio)}
+                aria-label={`听 ${item.word} 的发音`}
+              >
+                {item.emoji}
+              </button>
               <div className="mt-2 text-[22px] font-bold leading-tight">
                 {highlightEr(item.word)}
               </div>
@@ -161,9 +170,11 @@ function ListenStage({
 
 function FindStage({
   config,
+  grade,
   onComplete,
 }: {
   config: PhonicsConfig;
+  grade: number;
   onComplete: (stars: number) => void;
 }) {
   const items = useMemo(
@@ -173,12 +184,20 @@ function FindStage({
   const [selected, setSelected] = useState<Set<string>>(() => new Set());
   const [checked, setChecked] = useState(false);
 
+  useEffect(() => {
+    prefetchTTSBatchKid(
+      items.map((item) => item.word),
+      { grade },
+    );
+  }, [grade, items]);
+
   const erWords = useMemo(
     () => new Set(items.filter((w) => w.has_er).map((w) => w.word)),
     [items],
   );
 
   const toggle = (word: string) => {
+    hubSpeak(word, 0.85, grade);
     if (checked) return;
     setSelected((prev) => {
       const next = new Set(prev);
@@ -257,10 +276,12 @@ function FindStage({
 
 function ChallengeStage({
   config,
+  grade,
   onComplete,
   embedded = false,
 }: {
   config: PhonicsConfig;
+  grade: number;
   onComplete: (stars: number) => void;
   embedded?: boolean;
 }) {
@@ -274,6 +295,7 @@ function ChallengeStage({
   const isLast = qIdx >= questions.length - 1;
 
   const handlePick = (idx: number) => {
+    hubSpeak(q.options[idx], 0.85, grade);
     if (answered && picked === q.correct) return;
     setPicked(idx);
     if (idx !== q.correct) {
@@ -431,11 +453,14 @@ export function PhonicsSection({
           <ListenStage config={config} grade={grade} onComplete={(s) => finishStage(0, s)} />
         );
       case 1:
-        return <FindStage config={config} onComplete={(s) => finishStage(1, s)} />;
+        return (
+          <FindStage config={config} grade={grade} onComplete={(s) => finishStage(1, s)} />
+        );
       case 2:
         return (
           <ChallengeStage
             config={config}
+            grade={grade}
             onComplete={(s) => finishStage(2, s)}
             embedded={embedded}
           />
@@ -531,10 +556,10 @@ export default function PrimaryHubPhonics({ config, semId, unitId, stageIdx, onB
           <ListenStage config={config} grade={grade} onComplete={(s) => finishStage(0, s)} />
         );
       case 1:
-        return <FindStage config={config} onComplete={(s) => finishStage(1, s)} />;
+        return <FindStage config={config} grade={grade} onComplete={(s) => finishStage(1, s)} />;
       case 2:
         return (
-          <ChallengeStage config={config} onComplete={(s) => finishStage(2, s)} />
+          <ChallengeStage config={config} grade={grade} onComplete={(s) => finishStage(2, s)} />
         );
       default:
         return null;

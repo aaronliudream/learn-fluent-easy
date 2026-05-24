@@ -58,6 +58,7 @@ export default function PrimaryHubUnit() {
         {unit.stages.map((stage, i) => {
           const done = us?.completedStages.includes(i) ?? false;
           const locked = !done && i > (us?.completedStages.length ?? 0);
+          const stagePercent = done ? 100 : 0;
           return (
             <button
               key={stage.id}
@@ -78,8 +79,17 @@ export default function PrimaryHubUnit() {
                 <div className="text-xs text-[#888780]">
                   {stage.subtitle} · {stage.time}
                 </div>
+                <div className="mt-2 flex items-center gap-2">
+                  <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-[#F4F0E6]">
+                    <div
+                      className={`h-full ${done ? "bg-[#6FA92A]" : "bg-gradient-to-r from-[#FF6B35] to-[#FFB627]"}`}
+                      style={{ width: `${stagePercent}%` }}
+                    />
+                  </div>
+                  <span className="text-xs font-bold tabular-nums text-[#888780]">{stagePercent}%</span>
+                </div>
               </div>
-              <span className="text-[#888780]">›</span>
+              <span className="self-start text-[#888780]">›</span>
             </button>
           );
         })}

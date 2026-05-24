@@ -2,13 +2,14 @@ import { describe, expect, it, vi } from "vitest";
 import {
   formatHubVocabDisplay,
   isOClockVocabToken,
-  OCLOCK_OPENAI_VOICE,
+  OCLOCK_STATIC_MP3,
   toHubTtsText,
 } from "./speech";
 
 vi.mock("@/lib/speak", () => ({
   speak: vi.fn(),
   speakKid: vi.fn(),
+  speakFromUrl: vi.fn(),
   prefetchTTS: vi.fn(),
   prefetchTTSBatchKid: vi.fn(),
 }));
@@ -45,16 +46,12 @@ describe("formatHubVocabDisplay", () => {
 });
 
 describe("hubSpeak", () => {
-  it("routes o'clock vocab through OpenAI shimmer", async () => {
+  it("plays bundled MP3 for o'clock vocab (not cloud TTS)", async () => {
     vi.stubGlobal("window", {});
     const { hubSpeak } = await import("./speech");
-    const { speak, speakKid } = await import("@/lib/speak");
+    const { speakFromUrl, speakKid } = await import("@/lib/speak");
     hubSpeak("o'clock", 0.85, 4);
-    expect(speak).toHaveBeenCalledWith("o'clock", {
-      voiceId: OCLOCK_OPENAI_VOICE,
-      speed: 0.85,
-      accent: "US",
-    });
+    expect(speakFromUrl).toHaveBeenCalledWith(OCLOCK_STATIC_MP3);
     expect(speakKid).not.toHaveBeenCalled();
     vi.unstubAllGlobals();
   });

@@ -2,20 +2,21 @@
  * Lightweight English playback for primary hub stages.
  *
  * Default: `speakKid` → ElevenLabs Lily → Edge → CDN.
- * Exception: vocab token `o'clock` uses OpenAI (ChatGPT TTS) — Lily often splits it
- * into two words; gpt-4o-mini-tts reads it as one word (/əˈklɒk/).
+ * Exception: vocab token `o'clock` uses a bundled MP3 (see `public/audio/hub/oclock.mp3`).
+ * Cloud TTS often splits "o'clock" into two beats; the asset was synthesized as the
+ * single token "oclock" via OpenAI alloy — sounds like one word (/əˈklɒk/). UI still shows o'clock.
  */
-import { prefetchTTS, prefetchTTSBatchKid, speak, speakKid } from "@/lib/speak";
+import { prefetchTTSBatchKid, speakFromUrl, speakKid } from "@/lib/speak";
 
-/** OpenAI voice for the lone vocab card `o'clock` (edge uses gpt-4o-mini-tts). */
-export const OCLOCK_OPENAI_VOICE = "shimmer";
+/** Bundled pronunciation for the lone vocab card `o'clock` only. */
+export const OCLOCK_STATIC_MP3 = "/audio/hub/oclock.mp3";
 
 /** Curly/smart apostrophes → ASCII U+0027 (display + TTS stay one word). */
 const CURLY_APOSTROPHE_RE = /[\u2018\u2019\u201B\u2032]/g;
 
 /**
  * Normalize only apostrophe *characters* for TTS/cache keys.
- * Does NOT remove apostrophes — o'clock must reach TTS as o'clock.
+ * Does NOT remove apostrophes — o'clock must reach TTS as o'clock for /əˈklɒk/.
  */
 export function toHubTtsText(text: string): string {
   const trimmed = text.trim();
@@ -31,21 +32,26 @@ export function isOClockVocabToken(text: string): boolean {
 
 /**
  * Screen label for tricky tokens (Windows fonts often render U+0027 as a gap → looks like "o clock").
- * TTS still uses ASCII apostrophe via {@link toHubTtsText}.
  */
 export function formatHubVocabDisplay(en: string): string {
   if (isOClockVocabToken(en)) return "o\u2019clock";
   return en;
 }
 
+function prefetchStaticMp3(path: string) {
+  if (typeof window === "undefined") return;
+  const url = path.startsWith("/") ? `${window.location.origin}${path}` : path;
+  void fetch(url, { method: "GET" }).catch(() => {});
+}
+
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {
   if (typeof window === "undefined") return;
-  const spoken = toHubTtsText(text);
   if (isOClockVocabToken(text)) {
-    void speak(spoken, { voiceId: OCLOCK_OPENAI_VOICE, speed: rate, accent: "US" });
+    void speakFromUrl(OCLOCK_STATIC_MP3);
     return;
   }
   const gradeHint = rate <= 0.75 ? 1 : grade;
+  const spoken = toHubTtsText(text);
   void speakKid(spoken, { grade: gradeHint, speed: rate });
 }
 
@@ -55,15 +61,14 @@ export function hubSpeakAtSpeed(text: string, speed: number, grade?: number) {
   void speakKid(toHubTtsText(text), { grade, speed });
 }
 
-/** Prefetch vocab audio — o'clock via OpenAI, other words via Lily. */
+/** Prefetch vocab audio — o'clock uses bundled MP3, other words via Lily. */
 export function prefetchHubVocabulary(words: string[], grade: number, speed = 0.85) {
   const kidTexts: string[] = [];
   for (const w of words) {
-    const spoken = toHubTtsText(w);
     if (isOClockVocabToken(w)) {
-      prefetchTTS(spoken, { voiceId: OCLOCK_OPENAI_VOICE, speed, accent: "US" });
+      prefetchStaticMp3(OCLOCK_STATIC_MP3);
     } else {
-      kidTexts.push(spoken);
+      kidTexts.push(toHubTtsText(w));
     }
   }
   if (kidTexts.length) prefetchTTSBatchKid(kidTexts, { grade, speed });

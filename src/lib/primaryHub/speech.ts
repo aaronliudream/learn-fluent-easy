@@ -16,11 +16,13 @@
  */
 import { speakKid } from "@/lib/speak";
 
-export function hubSpeak(text: string, rate = 0.85) {
+export function hubSpeak(text: string, rate = 0.85, grade?: number) {
   if (typeof window === "undefined") return;
   // Map the legacy `rate` parameter onto a grade hint so existing call sites
   // that asked for an extra-slow read (e.g. listening-comprehension prompts
-  // at 0.7) still sound noticeably slower.
-  const gradeHint = rate <= 0.75 ? 1 : undefined;
-  void speakKid(text, gradeHint ? { grade: gradeHint } : undefined);
+  // at 0.7) still sound noticeably slower. Otherwise honour the explicit
+  // grade passed from hub stages (URL context) so prefetch + playback share
+  // the same kid-voice speed cache key.
+  const gradeHint = rate <= 0.75 ? 1 : grade;
+  void speakKid(text, gradeHint != null ? { grade: gradeHint } : undefined);
 }

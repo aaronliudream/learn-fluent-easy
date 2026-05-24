@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { readPrimaryGradeFromStorage } from "@/lib/primaryGrade";
 import { loadSettings } from "@/lib/voice";
 
 let lastSpoken = "";
@@ -398,6 +399,41 @@ const playUrlOn = (
     }
   });
 
+// Fallback when the shared (Web-Audio-routed) element fails — e.g.
+// AudioContext suspended on mobile, or a stale CDN URL. A fresh element
+// bypasses the GainNode graph and still plays inside the user gesture.
+const playUrlDirect = (url: string, token: number): Promise<boolean> =>
+  new Promise((resolve) => {
+    if (token !== speakToken) return resolve(false);
+    try {
+      const audio = new Audio(url);
+      audio.preload = "auto";
+      audio.volume = 1;
+      audio.setAttribute("playsinline", "true");
+      currentAudio = audio;
+      audio.onended = () => resolve(true);
+      audio.onerror = () => resolve(false);
+      const p = audio.play();
+      if (p && typeof p.catch === "function") {
+        p.catch(() => resolve(false));
+      }
+    } catch {
+      resolve(false);
+    }
+  });
+
+const playUrl = async (
+  audio: HTMLAudioElement | null,
+  url: string,
+  token: number,
+): Promise<boolean> => {
+  if (audio) {
+    const routed = await playUrlOn(audio, url, token);
+    if (routed) return true;
+  }
+  return playUrlDirect(url, token);
+};
+
 // IMPORTANT: `speak()` must be called *synchronously* inside the click
 // handler. We do the audio-element creation + first `.play()` BEFORE any
 // `await`, so mobile browsers see this as a valid user-initiated playback.
@@ -418,40 +454,50 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voic
   const speed = opts?.speed ?? settings.speed;
   const accent = opts?.accent;
 
-  // 2) Cache hit → swap src right away, no network wait.
   const cacheKey = `${voiceId}|${speed}|${accent || ''}|${trimmed}`;
+
+  const finishPlayback = async (url: string): Promise<void> => {
+    if (myToken !== speakToken) return;
+    const played = await playUrl(audio, url, myToken);
+    if (played) return;
+    await speakBrowserFallback(trimmed, voiceId, speed, myToken);
+  };
+
+  const retryAfterBadUrl = async (invalidatePersist: boolean): Promise<void> => {
+    if (myToken !== speakToken) return;
+    audioCache.delete(cacheKey);
+    if (invalidatePersist) loadPersist().delete(cacheKey);
+    const url = await fetchTTS(trimmed, voiceId, speed, accent);
+    if (url) await finishPlayback(url);
+    else await speakBrowserFallback(trimmed, voiceId, speed, myToken);
+  };
+
+  // 2) Cache hit → swap src right away, no network wait.
   const cached = audioCache.get(cacheKey);
-  if (audio && cached) {
-    return playUrlOn(audio, cached, myToken).then(() => undefined);
+  if (cached) {
+    return (async () => {
+      const played = await playUrl(audio, cached, myToken);
+      if (played) return;
+      await retryAfterBadUrl(false);
+    })();
   }
 
-  // 2b) localStorage hit — survives page reloads. Promote to in-memory
-  //     cache and play immediately.
+  // 2b) localStorage hit — survives page reloads.
   const persistedUrl = loadPersist().get(cacheKey);
-  if (audio && persistedUrl) {
+  if (persistedUrl) {
     audioCache.set(cacheKey, persistedUrl);
-    return playUrlOn(audio, persistedUrl, myToken).then((played) => {
-      // If the persisted URL 404'd (e.g. bucket cleared), drop it and
-      // fall back to a fresh fetch on next tap.
-      if (!played) {
-        audioCache.delete(cacheKey);
-        loadPersist().delete(cacheKey);
-      }
-    });
+    return (async () => {
+      const played = await playUrl(audio, persistedUrl, myToken);
+      if (played) return;
+      await retryAfterBadUrl(true);
+    })();
   }
 
-  // 3) Cache miss → fetch then swap src on the same already-unlocked element.
+  // 3) Cache miss → fetch then play on the already-unlocked element.
   return (async () => {
     const url = await fetchTTS(trimmed, voiceId, speed, accent);
-    if (myToken !== speakToken) return;
-
-    if (audio && url) {
-      const played = await playUrlOn(audio, url, myToken);
-      if (played) return;
-    }
-
-    // Fallback to browser TTS so users still hear something if remote TTS fails.
-    await speakBrowserFallback(trimmed, voiceId, speed, myToken);
+    if (url) await finishPlayback(url);
+    else await speakBrowserFallback(trimmed, voiceId, speed, myToken);
   })();
 };
 
@@ -504,14 +550,7 @@ export const speakSequence = async (
 // like a kindergarten teacher rather than a news anchor.
 export const KID_VOICE_ID = "el:lily";
 
-const readGradeFromLS = (): number => {
-  try {
-    const v = Number(localStorage.getItem("primary:lastGrade") || "1");
-    return Number.isFinite(v) && v > 0 ? v : 1;
-  } catch {
-    return 1;
-  }
-};
+const readGradeFromLS = (): number => readPrimaryGradeFromStorage();
 
 export const getKidSpeed = (grade?: number): number => {
   const g = grade ?? readGradeFromLS();

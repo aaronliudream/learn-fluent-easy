@@ -1,17 +1,15 @@
 import { describe, expect, it } from "vitest";
-import { OCLOCK_TTS_TEXT, toHubTtsText } from "./speech";
+import { toHubTtsText } from "./speech";
 
 describe("toHubTtsText", () => {
-  it("hardcodes o'clock as o clock for TTS (never apostrophe)", () => {
-    expect(OCLOCK_TTS_TEXT).toBe("o clock");
-    expect(toHubTtsText("o'clock")).toBe("o clock");
-    expect(toHubTtsText("It's 7 o'clock.")).toBe("It s 7 o clock.");
+  it("preserves o'clock for TTS (one word, apostrophe intact)", () => {
+    expect(toHubTtsText("o'clock")).toBe("o'clock");
+    expect(toHubTtsText("It's 7 o'clock.")).toBe("It's 7 o'clock.");
   });
 
-  it("normalizes possessives and contractions for Unit 5+ prep", () => {
-    expect(toHubTtsText("John's")).toBe("John s");
-    expect(toHubTtsText("it's")).toBe("it s");
-    expect(toHubTtsText("What's the weather like?")).toBe("What s the weather like?");
+  it("normalizes curly apostrophes to ASCII only", () => {
+    expect(toHubTtsText("o\u2019clock")).toBe("o'clock");
+    expect(toHubTtsText("John\u2019s")).toBe("John's");
   });
 
   it("leaves normal words unchanged", () => {

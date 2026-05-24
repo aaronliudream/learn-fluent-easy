@@ -75,7 +75,7 @@ function buildCdnUrl(path: string): string {
 
 // localStorage cache of (key -> CDN URL) for known-good URLs. Survives
 // page reloads, so repeat phrases are instant across sessions.
-const PERSIST_KEY = "tts.urls.v2";
+const PERSIST_KEY = "tts.urls.v3";
 const PERSIST_MAX = 500;
 let persistMap: Map<string, string> | null = null;
 const loadPersist = (): Map<string, string> => {
@@ -350,12 +350,16 @@ const fetchTTS = async (text: string, voiceId: string, speed: number, accent?: s
         return null;
       }
     } else if (ct.startsWith("audio/")) {
-      // Defensive fallback: an older deployment of the edge function might
-      // still stream raw bytes. Wrap them in a blob URL so playback works,
-      // but this path means CDN is being bypassed — surface a console hint.
-      console.warn("[tts] edge function returned raw audio bytes — CDN bypassed. Redeploy the tts function.");
-      const blob = await res.blob();
-      url = URL.createObjectURL(blob);
+      // Cold path: edge streams MP3 bytes but exposes the CDN URL in a header.
+      // Prefer the CDN URL so playback + localStorage use the same hash as prefetch.
+      const cdnHeader = res.headers.get("x-audio-url");
+      if (cdnHeader?.startsWith("http")) {
+        url = cdnHeader;
+      } else {
+        console.warn("[tts] edge function returned raw audio bytes — CDN bypassed. Redeploy the tts function.");
+        const blob = await res.blob();
+        url = URL.createObjectURL(blob);
+      }
     } else {
       console.warn("[tts] unexpected content-type:", ct);
       return null;

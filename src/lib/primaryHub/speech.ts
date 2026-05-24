@@ -13,24 +13,17 @@
  */
 import { speakKid } from "@/lib/speak";
 
-/** Hard-coded TTS text for the vocab token o'clock (never send the apostrophe to TTS/cache). */
-export const OCLOCK_TTS_TEXT = "o clock";
+/** Curly/smart apostrophes → ASCII U+0027 (display + TTS stay one word, e.g. o'clock). */
+const CURLY_APOSTROPHE_RE = /[\u2018\u2019\u201B\u2032]/g;
 
-/** ASCII + curly apostrophes that break or silence cloud TTS when sent verbatim. */
-const APOSTROPHE_RE = /[''\u2019\u02BC\uFF07´`]/g;
-
-function normalizeOClockPhrase(spoken: string): string {
-  return spoken.replace(/\bo\s*clock\b/gi, OCLOCK_TTS_TEXT);
-}
-
-/** Normalize display text for cloud TTS (UI still shows the original string). */
+/**
+ * Normalize only apostrophe *characters* for TTS/cache keys.
+ * Does NOT remove apostrophes — o'clock must reach TTS as o'clock for /əˈklɒk/.
+ */
 export function toHubTtsText(text: string): string {
   const trimmed = text.trim();
   if (!trimmed) return trimmed;
-  const lower = trimmed.toLowerCase();
-  if (lower === "o'clock" || lower === "oclock") return OCLOCK_TTS_TEXT;
-  const spoken = trimmed.replace(APOSTROPHE_RE, " ").replace(/\s+/g, " ").trim();
-  return normalizeOClockPhrase(spoken);
+  return trimmed.replace(CURLY_APOSTROPHE_RE, "'");
 }
 
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {

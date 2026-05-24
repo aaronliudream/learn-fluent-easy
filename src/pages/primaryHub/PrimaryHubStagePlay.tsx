@@ -484,7 +484,7 @@ function ListenMcStage({
 
   useEffect(() => {
     prefetchTTSBatchKid(
-      questions.map((item) => item.audio),
+      questions.map((item) => toHubTtsText(item.audio)),
       useAdjustableSpeakSpeed ? { grade, speed } : { grade },
     );
   }, [grade, questions, speed, useAdjustableSpeakSpeed]);

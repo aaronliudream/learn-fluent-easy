@@ -13,12 +13,14 @@
  */
 import { speakKid } from "@/lib/speak";
 
-/** Normalize display text for cloud TTS (apostrophe tokens often fail silently). */
+/** ASCII + curly apostrophes that break or silence cloud TTS when sent verbatim. */
+const APOSTROPHE_RE = /[''´`]/g;
+
+/** Normalize display text for cloud TTS (UI still shows the original string). */
 export function toHubTtsText(text: string): string {
   const trimmed = text.trim();
   if (!trimmed) return trimmed;
-  if (/^o['']clock$/i.test(trimmed)) return "o clock";
-  return trimmed;
+  return trimmed.replace(APOSTROPHE_RE, " ").replace(/\s+/g, " ").trim();
 }
 
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {

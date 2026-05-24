@@ -1,15 +1,15 @@
 import {
-  G4V2_U1_SPEAK_SPEED_LEVELS,
-  type G4v2U1SpeakSpeed,
-} from "@/lib/primaryHub/g4v2U1SpeakSpeed";
+  HUB_SPEAK_SPEED_LEVELS,
+  type HubSpeakSpeed,
+} from "@/lib/primaryHub/hubSpeakSpeed";
 
 type Props = {
-  speed: G4v2U1SpeakSpeed;
-  onChange: (speed: G4v2U1SpeakSpeed) => void;
+  speed: HubSpeakSpeed;
+  onChange: (speed: HubSpeakSpeed) => void;
   className?: string;
 };
 
-export default function G4v2U1SpeakSpeedControl({ speed, onChange, className = "" }: Props) {
+export default function HubSpeakSpeedControl({ speed, onChange, className = "" }: Props) {
   return (
     <div
       className={`flex flex-wrap items-center gap-2 rounded-xl border border-[#EEEAE0] bg-[#FFF8F0] px-3 py-2 ${className}`}
@@ -17,7 +17,7 @@ export default function G4v2U1SpeakSpeedControl({ speed, onChange, className = "
       aria-label="朗读速度"
     >
       <span className="text-xs font-medium text-[#888780]">朗读速度</span>
-      {G4V2_U1_SPEAK_SPEED_LEVELS.map((level) => {
+      {HUB_SPEAK_SPEED_LEVELS.map((level) => {
         const active = speed === level.value;
         return (
           <button

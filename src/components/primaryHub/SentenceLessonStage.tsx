@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
-import G4v2U1SpeakSpeedControl from "@/components/primaryHub/G4v2U1SpeakSpeedControl";
-import { useG4v2U1SpeakSpeed } from "@/hooks/useG4v2U1SpeakSpeed";
+import HubSpeakSpeedControl from "@/components/primaryHub/HubSpeakSpeedControl";
+import { useHubSpeakSpeed } from "@/hooks/useHubSpeakSpeed";
+import type { HubSpeakSpeed } from "@/lib/primaryHub/hubSpeakSpeed";
 import { hubSpeakAtSpeed } from "@/lib/primaryHub/speech";
 import { prefetchTTSBatchKid } from "@/lib/speak";
-import type { G4v2U1SpeakSpeed } from "@/lib/primaryHub/g4v2U1SpeakSpeed";
 import {
   countSubmoduleDone,
   getSentenceCompletedIds,
@@ -52,7 +52,7 @@ function AudioBtn({
 }: {
   text: string;
   grade: number;
-  speed: G4v2U1SpeakSpeed;
+  speed: HubSpeakSpeed;
   label?: string;
 }) {
   return (
@@ -67,10 +67,10 @@ function AudioBtn({
   );
 }
 
-function LessonPanel({ speed, onSpeedChange, children }: { speed: G4v2U1SpeakSpeed; onSpeedChange: (s: G4v2U1SpeakSpeed) => void; children: ReactNode }) {
+function LessonPanel({ speed, onSpeedChange, children }: { speed: HubSpeakSpeed; onSpeedChange: (s: HubSpeakSpeed) => void; children: ReactNode }) {
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <G4v2U1SpeakSpeedControl speed={speed} onChange={onSpeedChange} className="mb-3" />
+      <HubSpeakSpeedControl speed={speed} onChange={onSpeedChange} className="mb-3" />
       {children}
     </div>
   );
@@ -89,7 +89,7 @@ function SentenceCard({
   index: number;
   color: keyof typeof sentenceColorClass;
   grade: number;
-  speed: G4v2U1SpeakSpeed;
+  speed: HubSpeakSpeed;
   completed: boolean;
   onComplete: () => void;
 }) {
@@ -163,7 +163,7 @@ export default function SentenceLessonStage({
   const { grade: hubGrade, state, setState } = usePrimaryHub();
   const g = grade || hubGrade;
   const persistGrade = hubGrade;
-  const { speed, setSpeed } = useG4v2U1SpeakSpeed();
+  const { speed, setSpeed } = useHubSpeakSpeed();
 
   const us = getUnitState(state, unitId);
   const completed = useMemo(() => getSentenceCompletedIds(us), [us.sentenceCompleted]);

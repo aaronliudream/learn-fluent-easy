@@ -75,17 +75,81 @@ function buildCdnUrl(path: string): string {
 
 // localStorage cache of (key -> CDN URL) for known-good URLs. Survives
 // page reloads, so repeat phrases are instant across sessions.
-const PERSIST_KEY = "tts.urls.v3";
+const PERSIST_KEY = "tts.urls.v4";
+const LEGACY_PERSIST_KEYS = ["tts.urls.v1", "tts.urls.v2", "tts.urls.v3"];
+/** Wrong workaround texts from earlier o'clock fixes — must never replay. */
+const BAD_OCLOCK_CACHE_SUFFIXES = ["||o clock", "||oh clock", "||oclock"];
+/** el:lily @ 0.85, text exactly `o'clock` (ElevenLabs content hash). */
+const OCLOCK_APOSTROPHE_HASH = "29278b6274ec960ca73d7f9532bad75a09ef5e5c5d";
+
+function isLegacyBadTtsKey(key: string): boolean {
+  return BAD_OCLOCK_CACHE_SUFFIXES.some((suffix) => key.endsWith(suffix));
+}
+
+function isValidOClockCacheEntry(key: string, url: string): boolean {
+  if (!key.endsWith("||o'clock")) return true;
+  return url.includes(OCLOCK_APOSTROPHE_HASH);
+}
+
+function flushPersistMap(m: Map<string, string>) {
+  try {
+    const obj: Record<string, string> = {};
+    for (const [k, v] of m.entries()) obj[k] = v;
+    localStorage.setItem(PERSIST_KEY, JSON.stringify(obj));
+  } catch { /* quota — ignore */ }
+}
+
+let persistMigrated = false;
+function migrateLegacyTtsPersist() {
+  if (persistMigrated || typeof window === "undefined") return;
+  persistMigrated = true;
+  try {
+    const merged = new Map<string, string>();
+    for (const legacyKey of LEGACY_PERSIST_KEYS) {
+      const raw = localStorage.getItem(legacyKey);
+      if (!raw) continue;
+      try {
+        const obj = JSON.parse(raw) as Record<string, string>;
+        for (const [k, v] of Object.entries(obj)) {
+          if (isLegacyBadTtsKey(k) || !isValidOClockCacheEntry(k, v)) continue;
+          merged.set(k, v);
+        }
+      } catch { /* ignore */ }
+      localStorage.removeItem(legacyKey);
+    }
+    const rawV4 = localStorage.getItem(PERSIST_KEY);
+    if (rawV4) {
+      try {
+        const obj = JSON.parse(rawV4) as Record<string, string>;
+        for (const [k, v] of Object.entries(obj)) merged.set(k, v);
+      } catch { /* ignore */ }
+    }
+    for (const k of [...merged.keys()]) {
+      const v = merged.get(k)!;
+      if (isLegacyBadTtsKey(k) || !isValidOClockCacheEntry(k, v)) {
+        merged.delete(k);
+        audioCache.delete(k);
+      }
+    }
+    persistMap = merged;
+    flushPersistMap(merged);
+  } catch { /* ignore */ }
+}
+
 const PERSIST_MAX = 500;
 let persistMap: Map<string, string> | null = null;
 const loadPersist = (): Map<string, string> => {
+  migrateLegacyTtsPersist();
   if (persistMap) return persistMap;
   persistMap = new Map();
   try {
     const raw = localStorage.getItem(PERSIST_KEY);
     if (raw) {
       const obj = JSON.parse(raw) as Record<string, string>;
-      for (const [k, v] of Object.entries(obj)) persistMap.set(k, v);
+      for (const [k, v] of Object.entries(obj)) {
+        if (isLegacyBadTtsKey(k) || !isValidOClockCacheEntry(k, v)) continue;
+        persistMap.set(k, v);
+      }
     }
   } catch { /* ignore */ }
   return persistMap;
@@ -164,7 +228,7 @@ export const prefetchTTS = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"
   if (audioCache.has(cacheKey)) return;
   // 1) localStorage hit → reuse known-good CDN URL across sessions.
   const persisted = loadPersist().get(cacheKey);
-  if (persisted) {
+  if (persisted && !isLegacyBadTtsKey(cacheKey) && isValidOClockCacheEntry(cacheKey, persisted)) {
     audioCache.set(cacheKey, persisted);
     return;
   }
@@ -474,6 +538,15 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voic
 
   const cacheKey = `${voiceId}|${speed}|${accent || ''}|${trimmed}`;
 
+  const useCachedUrl = (url: string): boolean => {
+    if (isLegacyBadTtsKey(cacheKey) || !isValidOClockCacheEntry(cacheKey, url)) {
+      audioCache.delete(cacheKey);
+      loadPersist().delete(cacheKey);
+      return false;
+    }
+    return true;
+  };
+
   const finishPlayback = async (url: string): Promise<void> => {
     if (myToken !== speakToken) return;
     const played = await playUrl(audio, url, myToken);
@@ -493,22 +566,28 @@ export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voic
   // 2) Cache hit → swap src right away, no network wait.
   const cached = audioCache.get(cacheKey);
   if (cached) {
-    return (async () => {
-      const played = await playUrl(audio, cached, myToken);
-      if (played) return;
-      await retryAfterBadUrl(false);
-    })();
+    if (useCachedUrl(cached)) {
+      return (async () => {
+        const played = await playUrl(audio, cached, myToken);
+        if (played) return;
+        await retryAfterBadUrl(false);
+      })();
+    }
+    audioCache.delete(cacheKey);
   }
 
   // 2b) localStorage hit — survives page reloads.
   const persistedUrl = loadPersist().get(cacheKey);
   if (persistedUrl) {
-    audioCache.set(cacheKey, persistedUrl);
-    return (async () => {
-      const played = await playUrl(audio, persistedUrl, myToken);
-      if (played) return;
-      await retryAfterBadUrl(true);
-    })();
+    if (useCachedUrl(persistedUrl)) {
+      audioCache.set(cacheKey, persistedUrl);
+      return (async () => {
+        const played = await playUrl(audio, persistedUrl, myToken);
+        if (played) return;
+        await retryAfterBadUrl(true);
+      })();
+    }
+    loadPersist().delete(cacheKey);
   }
 
   // 3) Cache miss → fetch then play on the already-unlocked element.
@@ -607,8 +686,11 @@ export const prefetchTTSBatchKid = (
     if (audioCache.has(cacheKey)) continue;
     const persisted = loadPersist().get(cacheKey);
     if (persisted) {
-      audioCache.set(cacheKey, persisted);
-      continue;
+      if (!isLegacyBadTtsKey(cacheKey) && isValidOClockCacheEntry(cacheKey, persisted)) {
+        audioCache.set(cacheKey, persisted);
+        continue;
+      }
+      loadPersist().delete(cacheKey);
     }
     void (async () => {
       try {

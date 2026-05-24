@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import {
+  formatHubVocabDisplay,
   isOClockVocabToken,
   OCLOCK_OPENAI_VOICE,
   toHubTtsText,
@@ -34,6 +35,12 @@ describe("isOClockVocabToken", () => {
     expect(isOClockVocabToken("o'clock")).toBe(true);
     expect(isOClockVocabToken("It's 7 o'clock.")).toBe(false);
     expect(isOClockVocabToken("breakfast")).toBe(false);
+  });
+});
+
+describe("formatHubVocabDisplay", () => {
+  it("uses typographic apostrophe on screen for o'clock", () => {
+    expect(formatHubVocabDisplay("o'clock")).toBe("o\u2019clock");
   });
 });
 

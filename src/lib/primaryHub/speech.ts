@@ -29,6 +29,15 @@ export function isOClockVocabToken(text: string): boolean {
   return t === "o'clock";
 }
 
+/**
+ * Screen label for tricky tokens (Windows fonts often render U+0027 as a gap → looks like "o clock").
+ * TTS still uses ASCII apostrophe via {@link toHubTtsText}.
+ */
+export function formatHubVocabDisplay(en: string): string {
+  if (isOClockVocabToken(en)) return "o\u2019clock";
+  return en;
+}
+
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {
   if (typeof window === "undefined") return;
   const spoken = toHubTtsText(text);

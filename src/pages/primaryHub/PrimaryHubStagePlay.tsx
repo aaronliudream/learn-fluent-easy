@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { findUnit } from "@/lib/primaryHub/courseData";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
-import { hubSpeak, hubSpeakAtSpeed, prefetchHubVocabulary, toHubTtsText } from "@/lib/primaryHub/speech";
+import { formatHubVocabDisplay, hubSpeak, hubSpeakAtSpeed, prefetchHubVocabulary, toHubTtsText } from "@/lib/primaryHub/speech";
 import { getPhonicsForUnit } from "@/lib/primaryHub/phonicsRegistry";
 import { loadPhonicsProgress } from "@/lib/primaryHub/phonicsStorage";
 import { getPhonicsRuleText, getVocabGroups } from "@/lib/primaryHub/vocabGroupsRegistry";
@@ -363,7 +363,7 @@ function VocabStage({
                       speakWord(v.en, globalIdx);
                     }}
                   >
-                    {highlightVocabWord(v.en, v.highlight)}
+                    {highlightVocabWord(formatHubVocabDisplay(v.en), v.highlight)}
                   </div>
                   {v.phonetic && (
                     <div className="mt-0.5 text-[12px] text-[#888780]">{v.phonetic}</div>
@@ -397,7 +397,7 @@ function VocabStage({
                       speakWord(v.en, globalIdx);
                     }}
                   >
-                    {highlightVocabWord(v.en, v.highlight)}
+                    {highlightVocabWord(formatHubVocabDisplay(v.en), v.highlight)}
                   </div>
                   <span
                     role="button"

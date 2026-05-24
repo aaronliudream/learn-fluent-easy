@@ -86,6 +86,8 @@ export type UnitState = {
   completedStages: number[];
   /** In-progress completion 0–99 per stage index; cleared when stage completes. */
   stageProgress?: Record<number, number>;
+  /** Vocab stage (index 0): global card indices the student has opened. */
+  vocabViewed?: number[];
   /** Sentence ids completed in modular sentence lessons (e.g. A1, B2). */
   sentenceCompleted?: string[];
   stars: number;

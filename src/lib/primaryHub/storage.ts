@@ -2,7 +2,15 @@ import type { PrimaryHubGrade, PrimaryHubPersist, UnitState } from "./types";
 import { getGradeCourse, semesterIdsForGrade } from "./courseData";
 import { migratePersistUnits } from "./stageProgressMigrate";
 
-const STORAGE_PREFIX = "primary_hub_v1_";
+export const STORAGE_PREFIX = "primary_hub_v1_";
+
+type CloudSyncFn = (grade: PrimaryHubGrade, state: PrimaryHubPersist) => void;
+let cloudSyncFn: CloudSyncFn | null = null;
+
+/** Registered by PrimaryHubProvider when mounted (debounced cloud upsert). */
+export function registerPrimaryHubCloudSync(fn: CloudSyncFn | null): void {
+  cloudSyncFn = fn;
+}
 
 function defaultCurrentForGrade(grade: PrimaryHubGrade): { unitId: string; semesterId: string } {
   const [v1, v2] = semesterIdsForGrade(grade);
@@ -64,6 +72,7 @@ export function savePersist(grade: PrimaryHubGrade, state: PrimaryHubPersist): v
         currentSemester: state.currentSemester,
       }),
     );
+    cloudSyncFn?.(grade, state);
   } catch {
     /* quota */
   }

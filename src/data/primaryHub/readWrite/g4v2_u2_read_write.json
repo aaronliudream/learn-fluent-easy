@@ -1,0 +1,75 @@
+{
+  "unitId": "g4v2_u2",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 6,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "fill_choice",
+      "sentence": "🌅 It's 7 o'clock. It's time to ____.",
+      "hint_zh": "早上 7 点，该做什么？",
+      "correctSentence": "It's 7 o'clock. It's time to get up.",
+      "options": [
+        { "text": "get up", "correct": true },
+        { "text": "go to bed", "correct": false },
+        { "text": "go home", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "🍳 It's 7:30. It's time for ____.",
+      "hint_zh": "吃完早餐前，选「餐点/课程」名词",
+      "correctSentence": "It's 7:30. It's time for breakfast.",
+      "options": [
+        { "text": "breakfast", "correct": true },
+        { "text": "get up", "correct": false },
+        { "text": "PE class", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "🏫 It's 8 o'clock. It's time to ____.",
+      "hint_zh": "上学时间到了",
+      "correctSentence": "It's 8 o'clock. It's time to go to school.",
+      "options": [
+        { "text": "go to school", "correct": true },
+        { "text": "go to bed", "correct": false },
+        { "text": "music class", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "📚 It's 9 o'clock. It's time for ____.",
+      "hint_zh": "上午第一节课常是？",
+      "correctSentence": "It's 9 o'clock. It's time for English class.",
+      "options": [
+        { "text": "English class", "correct": true },
+        { "text": "dinner", "correct": false },
+        { "text": "go home", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "🍱 It's twelve o'clock. It's time for ____.",
+      "hint_zh": "中午 12 点",
+      "correctSentence": "It's twelve o'clock. It's time for lunch.",
+      "options": [
+        { "text": "lunch", "correct": true },
+        { "text": "breakfast", "correct": false },
+        { "text": "music class", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "🛏️ It's 9 p.m. It's time to ____.",
+      "hint_zh": "晚上该休息了",
+      "correctSentence": "It's 9 p.m. It's time to go to bed.",
+      "options": [
+        { "text": "go to bed", "correct": true },
+        { "text": "get up", "correct": false },
+        { "text": "go to school", "correct": false }
+      ]
+    }
+  ]
+}

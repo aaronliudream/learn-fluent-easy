@@ -43,9 +43,15 @@ describe("vocabGroupsRegistry", () => {
     expect(groups!.map((g) => g.offset)).toEqual([0, 8, 13]);
   });
 
-  it("returns null for g4v2_u2 without vocabGroups (single-group fallback)", () => {
+  it("returns 3 groups for g4v2_u2 with counts 6+4+8", () => {
     expect(u2).not.toBeNull();
-    expect(u2?.vocabGroups).toBeUndefined();
-    expect(getVocabGroups(u2!)).toBeNull();
+    expect(u2?.vocabGroups).toHaveLength(3);
+    const groups = getVocabGroups(u2!);
+    expect(groups).not.toBeNull();
+    expect(groups).toHaveLength(3);
+    expect(groups!.map((g) => g.items.length)).toEqual([6, 4, 8]);
+    expect(groups![0].label).toBe("餐点与课程");
+    expect(groups![1].label).toBe("日常动作");
+    expect(groups![2].label).toBe("拓展听说");
   });
 });

@@ -3057,12 +3057,12 @@
               },
               {
                 "id": 210,
-                "q": "排序：time / is / it / What / ?",
+                "q": "天还没亮，Mike 想先弄清楚几点了。他对妈妈说：_____",
                 "opts": [
                   "What time is it?",
-                  "What is time it?",
-                  "Time is what it?",
-                  "Is what time it?"
+                  "It's time to get up.",
+                  "It's seven o'clock.",
+                  "It's time for breakfast."
                 ],
                 "answer": 0,
                 "point": "u2:recall_time",

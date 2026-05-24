@@ -1,16 +1,21 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi, beforeEach } from "vitest";
 import {
   formatHubVocabDisplay,
   isOClockVocabToken,
-  OCLOCK_STATIC_MP3,
   toHubTtsText,
 } from "./speech";
 
+const speakWebSpeechMock = vi.fn().mockResolvedValue(true);
+const speakKidMock = vi.fn();
+
+vi.mock("@/lib/webSpeech", () => ({
+  isWebSpeechSupported: vi.fn(() => true),
+  speakWebSpeech: (...args: unknown[]) => speakWebSpeechMock(...args),
+}));
+
 vi.mock("@/lib/speak", () => ({
-  speak: vi.fn(),
-  speakKid: vi.fn(),
-  speakFromUrl: vi.fn(),
-  prefetchTTS: vi.fn(),
+  speakKid: (...args: unknown[]) => speakKidMock(...args),
+  stopSpeaking: vi.fn(),
   prefetchTTSBatchKid: vi.fn(),
 }));
 
@@ -40,19 +45,34 @@ describe("isOClockVocabToken", () => {
 });
 
 describe("formatHubVocabDisplay", () => {
-  it("uses typographic apostrophe on screen for o'clock", () => {
-    expect(formatHubVocabDisplay("o'clock")).toBe("o\u2019clock");
+  it("returns stored English unchanged", () => {
+    expect(formatHubVocabDisplay("o'clock")).toBe("o'clock");
+    expect(formatHubVocabDisplay("now")).toBe("now");
   });
 });
 
 describe("hubSpeak", () => {
-  it("plays bundled MP3 for o'clock vocab (not cloud TTS)", async () => {
+  beforeEach(() => {
+    speakWebSpeechMock.mockClear();
+    speakKidMock.mockClear();
     vi.stubGlobal("window", {});
+  });
+
+  it("uses Web Speech with ASCII apostrophe text and hub rate", async () => {
     const { hubSpeak } = await import("./speech");
-    const { speakFromUrl, speakKid } = await import("@/lib/speak");
-    hubSpeak("o'clock", 0.85, 4);
-    expect(speakFromUrl).toHaveBeenCalledWith(OCLOCK_STATIC_MP3);
-    expect(speakKid).not.toHaveBeenCalled();
+    hubSpeak("o\u2019clock", 0.85, 4);
+    expect(speakWebSpeechMock).toHaveBeenCalledWith("o'clock", 0.85);
+    expect(speakKidMock).not.toHaveBeenCalled();
+    vi.unstubAllGlobals();
+  });
+
+  it("falls back to speakKid when Web Speech fails", async () => {
+    speakWebSpeechMock.mockResolvedValueOnce(false);
+    const { hubSpeak } = await import("./speech");
+    hubSpeak("breakfast", 0.85, 4);
+    await Promise.resolve();
+    expect(speakWebSpeechMock).toHaveBeenCalledWith("breakfast", 0.85);
+    expect(speakKidMock).toHaveBeenCalledWith("breakfast", { grade: 4, speed: 0.85 });
     vi.unstubAllGlobals();
   });
 });

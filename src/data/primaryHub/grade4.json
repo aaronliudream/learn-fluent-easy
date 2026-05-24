@@ -3604,16 +3604,16 @@
               },
               {
                 "id": 312,
-                "q": "☁️ 看不见太阳，天空灰蒙蒙。选：",
+                "q": "⏰ 快 8 点了！Mike 收拾书包。Hurry up! It's time to go to ___.",
                 "opts": [
+                  "school",
                   "cloudy",
-                  "windy",
-                  "warm",
+                  "weather",
                   "degree"
                 ],
                 "answer": 0,
-                "point": "u3:recall_vocab",
-                "dim": "vocab"
+                "point": "u2:recall_routine",
+                "dim": "sentence"
               }
             ],
             "listeningQuestions": [

@@ -1,0 +1,76 @@
+{
+  "lessonId": "g4v2_u3_grammar",
+  "unitId": "g4v2_u3",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "Mike 想出去玩，Chen Jie 和 Mark 在聊各地天气，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "问天气 · What's the weather like?",
+      "description": "Mark 问北京天气，Chen Jie 描述晴朗温暖。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "What's the weather like in Beijing?", "zh": "北京天气怎么样？" },
+          "answer": { "en": "It's sunny and warm.", "zh": "晴朗又温暖。" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Is it windy?", "zh": "风大吗？" },
+          "answer": { "en": "No, it isn't. It's cloudy.", "zh": "不大，阴天。" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "A3",
+          "question": { "en": "How about New York?", "zh": "纽约呢？" },
+          "answer": { "en": "It's rainy and cool.", "zh": "阴雨凉爽。" },
+          "tag": "B Let's talk"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "许可与提醒 · Can I / Be careful",
+      "description": "Mike 想出门，妈妈根据外面寒冷说不行。",
+      "color": "pink",
+      "estimatedMinutes": 4,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Mum, can I go outside now?", "zh": "妈妈，我现在能出去吗？" },
+          "answer": { "en": "No, you can't. It's cold outside.", "zh": "不行，外面很冷。" },
+          "tag": "A Let's talk"
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Be careful!", "zh": "小心！" },
+          "answer": null,
+          "tag": "A Let's talk"
+        },
+        {
+          "id": "B3",
+          "question": { "en": "It's 26 degrees.", "zh": "26 度。" },
+          "answer": null,
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "C1",
+          "question": { "en": "Thunder, thunder, clap clap clap!", "zh": "轰隆隆，打雷啦！（歌谣）" },
+          "answer": { "en": "Rain, rain, go away!", "zh": "雨啊雨，快走开！（歌谣）" },
+          "tag": "Let's chant · Thunder"
+        },
+        {
+          "id": "C2",
+          "question": { "en": "It's rainy and cool today.", "zh": "今天阴雨凉爽。（歌谣）" },
+          "answer": null,
+          "tag": "Let's chant · Thunder"
+        }
+      ]
+    }
+  ]
+}

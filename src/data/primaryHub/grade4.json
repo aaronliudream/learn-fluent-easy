@@ -3083,10 +3083,10 @@
               },
               {
                 "id": 212,
-                "q": "「dinner」与哪个词是一天的最后一餐？",
+                "q": "🍽️ Mike 一家晚上 6 点坐到餐桌前。妈妈说：「It's time for ___.」",
                 "opts": [
-                  "lunch",
                   "breakfast",
+                  "lunch",
                   "dinner",
                   "English class"
                 ],
@@ -3189,42 +3189,160 @@
               {
                 "en": "cold",
                 "cn": "寒冷的",
-                "emoji": "☀️"
+                "emoji": "❄️",
+                "phonetic": "/kəʊld/",
+                "page": 22,
+                "type": "core"
               },
               {
                 "en": "cool",
                 "cn": "凉的",
-                "emoji": "📘"
+                "emoji": "🌬️",
+                "phonetic": "/kuːl/",
+                "page": 22,
+                "type": "core"
               },
               {
                 "en": "warm",
                 "cn": "温暖的",
-                "emoji": "📘"
+                "emoji": "🌤️",
+                "phonetic": "/wɔːm/",
+                "page": 22,
+                "type": "core"
               },
               {
                 "en": "hot",
                 "cn": "热的",
-                "emoji": "☀️"
+                "emoji": "🌡️",
+                "phonetic": "/hɒt/",
+                "page": 22,
+                "type": "core"
               },
               {
                 "en": "sunny",
                 "cn": "阳光充足的",
-                "emoji": "📘"
+                "emoji": "☀️",
+                "phonetic": "/ˈsʌni/",
+                "page": 23,
+                "type": "core"
               },
               {
                 "en": "windy",
                 "cn": "多风的",
-                "emoji": "📘"
+                "emoji": "💨",
+                "phonetic": "/ˈwɪndi/",
+                "page": 23,
+                "type": "core"
               },
               {
                 "en": "cloudy",
                 "cn": "阴天的",
-                "emoji": "📘"
+                "emoji": "☁️",
+                "phonetic": "/ˈklaʊdi/",
+                "page": 23,
+                "type": "core"
               },
               {
                 "en": "snowy",
                 "cn": "下雪的",
-                "emoji": "📘"
+                "emoji": "🌨️",
+                "phonetic": "/ˈsnəʊi/",
+                "page": 23,
+                "type": "core"
+              },
+              {
+                "en": "rainy",
+                "cn": "阴雨的",
+                "emoji": "🌧️",
+                "phonetic": "/ˈreɪni/",
+                "page": 23,
+                "type": "core"
+              },
+              {
+                "en": "outside",
+                "cn": "在户外",
+                "emoji": "🚪",
+                "phonetic": "/ˌaʊtˈsaɪd/",
+                "page": 24,
+                "type": "extended"
+              },
+              {
+                "en": "be careful",
+                "cn": "小心",
+                "emoji": "⚠️",
+                "phonetic": "/bi ˈkeəfl/",
+                "page": 24,
+                "type": "extended"
+              },
+              {
+                "en": "weather",
+                "cn": "天气",
+                "emoji": "🌈",
+                "phonetic": "/ˈweðə(r)/",
+                "page": 24,
+                "type": "extended"
+              },
+              {
+                "en": "New York",
+                "cn": "纽约",
+                "emoji": "🗽",
+                "phonetic": "/ˌnjuː ˈjɔːk/",
+                "page": 25,
+                "type": "extended"
+              },
+              {
+                "en": "how about",
+                "cn": "……怎么样",
+                "emoji": "💬",
+                "phonetic": "/haʊ əˈbaʊt/",
+                "page": 25,
+                "type": "extended"
+              },
+              {
+                "en": "degree",
+                "cn": "度；度数",
+                "emoji": "🌡️",
+                "phonetic": "/dɪˈɡriː/",
+                "page": 25,
+                "type": "extended"
+              }
+            ],
+            "vocabGroups": [
+              {
+                "id": "temperature",
+                "name": "温度词",
+                "header": "温度词 · 4 个词",
+                "indices": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "id": "conditions",
+                "name": "天气现象",
+                "header": "天气现象 · 5 个词",
+                "indices": [
+                  4,
+                  5,
+                  6,
+                  7,
+                  8
+                ]
+              },
+              {
+                "id": "extra_listen",
+                "name": "拓展听说",
+                "header": "拓展听说 · 6 个词",
+                "indices": [
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14
+                ]
               }
             ],
             "dialogues": [
@@ -3233,13 +3351,18 @@
                 "lines": [
                   {
                     "role": "Mike",
-                    "text": "Can I go outside now?",
-                    "cn": "我现在可以出去吗？"
+                    "text": "Mum, can I go outside now?",
+                    "cn": "妈妈，我现在能出去吗？"
                   },
                   {
                     "role": "Mum",
-                    "text": "It's cold outside.",
-                    "cn": "外面很冷。"
+                    "text": "No, you can't. It's cold outside. Be careful!",
+                    "cn": "不行。外面很冷，小心！"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "OK.",
+                    "cn": "好的。"
                   }
                 ]
               },
@@ -3247,14 +3370,24 @@
                 "title": "B Let's talk",
                 "lines": [
                   {
+                    "role": "Mark",
+                    "text": "Hi, Chen Jie! What's the weather like in Beijing?",
+                    "cn": "嗨，陈杰！北京天气怎么样？"
+                  },
+                  {
                     "role": "Chen Jie",
-                    "text": "Hi, Chen Jie! This is Mark.",
-                    "cn": "嗨，陈杰！这是马克。"
+                    "text": "It's sunny and warm.",
+                    "cn": "晴朗又温暖。"
                   },
                   {
                     "role": "Mark",
-                    "text": "Hi! Have a good day!",
-                    "cn": "嗨！祝你有美好的一天！"
+                    "text": "How about New York?",
+                    "cn": "纽约呢？"
+                  },
+                  {
+                    "role": "Chen Jie",
+                    "text": "It's rainy and cool. It's 26 degrees.",
+                    "cn": "阴雨凉爽，26 度。"
                   }
                 ]
               }
@@ -3263,15 +3396,15 @@
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "8个核心单词",
+                "subtitle": "15 个词 · 温度·天气·拓展",
                 "icon": "📚",
                 "type": "vocab",
-                "time": "5分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s2",
                 "title": "听音辨词",
-                "subtitle": "听力训练",
+                "subtitle": "听一听，选单词",
                 "icon": "🎧",
                 "type": "listenWord",
                 "time": "5分钟"
@@ -3279,7 +3412,7 @@
               {
                 "id": "s3",
                 "title": "单词配对",
-                "subtitle": "巩固词义",
+                "subtitle": "词义连连看",
                 "icon": "🎮",
                 "type": "match",
                 "time": "5分钟"
@@ -3287,15 +3420,15 @@
               {
                 "id": "s4",
                 "title": "学习句型",
-                "subtitle": "核心句型",
+                "subtitle": "问天气 · 歌谣跟读",
                 "icon": "💬",
                 "type": "sentence",
-                "time": "5分钟"
+                "time": "8分钟"
               },
               {
                 "id": "s5",
                 "title": "默写挑战",
-                "subtitle": "动手拼写",
+                "subtitle": "核心词拼写",
                 "icon": "✏️",
                 "type": "write",
                 "time": "8分钟"
@@ -3303,7 +3436,7 @@
               {
                 "id": "s6",
                 "title": "听力测试",
-                "subtitle": "听句选答案",
+                "subtitle": "听对话选答案",
                 "icon": "🎯",
                 "type": "listenSent",
                 "time": "6分钟"
@@ -3311,15 +3444,15 @@
               {
                 "id": "s7",
                 "title": "读写训练",
-                "subtitle": "即将上线 · 看图写句",
+                "subtitle": "填空选词 · 天气",
                 "icon": "📝",
                 "type": "readWrite",
-                "time": "12分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s8",
                 "title": "最终通关",
-                "subtitle": "综合挑战",
+                "subtitle": "综合挑战 · 12 题",
                 "icon": "🏆",
                 "type": "finalQuiz",
                 "time": "10分钟"
@@ -3327,200 +3460,240 @@
             ],
             "quizQuestions": [
               {
-                "q": "「cold」是什么意思？",
+                "id": 301,
+                "q": "听意思选词：「寒冷的」",
                 "opts": [
-                  "凉的",
-                  "多风的",
-                  "下雪",
-                  "寒冷的"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cool」是什么意思？",
-                "opts": [
-                  "下雪",
-                  "凉的",
-                  "多云",
-                  "晴朗"
+                  "cool",
+                  "cold",
+                  "warm",
+                  "hot"
                 ],
                 "answer": 1,
-                "point": "词汇",
+                "point": "u3:recall_vocab",
                 "dim": "vocab"
               },
               {
-                "q": "「warm」是什么意思？",
-                "opts": [
-                  "寒冷",
-                  "热的",
-                  "温暖的",
-                  "多风的"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「hot」是什么意思？",
-                "opts": [
-                  "多云",
-                  "下雪",
-                  "热的",
-                  "温暖的"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「sunny」是什么意思？",
-                "opts": [
-                  "阳光充足的",
-                  "多云",
-                  "多风的",
-                  "下雪"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「windy」是什么意思？",
-                "opts": [
-                  "下雪",
-                  "多风的",
-                  "凉的",
-                  "寒冷"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cloudy」是什么意思？",
-                "opts": [
-                  "阴天的",
-                  "晴朗",
-                  "阳光充足的",
-                  "凉的"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「snowy」是什么意思？",
-                "opts": [
-                  "下雨",
-                  "凉的",
-                  "下雪的",
-                  "寒冷"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「寒冷的」？",
+                "id": 302,
+                "q": "听意思选词：「多风的」",
                 "opts": [
                   "windy",
-                  "rainy",
-                  "cold",
-                  "snowy"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cool」的中文是？",
-                "opts": [
-                  "热的",
-                  "凉的",
-                  "炎热",
-                  "多云"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「天气」核心词是？",
-                "opts": [
-                  "hot",
-                  "cold",
+                  "cloudy",
                   "snowy",
-                  "cloudy"
+                  "rainy"
                 ],
-                "answer": 1,
-                "point": "词汇",
+                "answer": 0,
+                "point": "u3:recall_vocab",
                 "dim": "vocab"
               },
               {
-                "q": "What's the weather like? 问的是？",
+                "id": 303,
+                "q": "What's the weather like? 是在问什么？",
                 "opts": [
-                  "在哪里",
-                  "天气热吗",
+                  "几点了",
                   "天气怎么样",
-                  "几点了"
+                  "能出去吗",
+                  "在哪里"
                 ],
-                "answer": 2,
-                "point": "句型",
+                "answer": 1,
+                "point": "u3:recall_pattern",
                 "dim": "sentence"
               },
               {
-                "q": "「warm」的意思是？",
+                "id": 304,
+                "q": "外面很冷，妈妈不让出门。选合适回答：",
                 "opts": [
-                  "温暖的",
-                  "寒冷的",
-                  "阳光充足的",
-                  "晴朗"
+                  "Yes, you can. It's warm.",
+                  "No, you can't. It's cold outside.",
+                  "It's sunny and hot.",
+                  "It's time for lunch."
+                ],
+                "answer": 1,
+                "point": "u3:recall_can",
+                "dim": "sentence"
+              },
+              {
+                "id": 305,
+                "q": "北京今天晴朗又温暖。选正确句子：",
+                "opts": [
+                  "It's rainy and cool.",
+                  "It's sunny and warm.",
+                  "It's snowy and cold.",
+                  "It's cloudy and hot."
+                ],
+                "answer": 1,
+                "point": "u3:recall_weather",
+                "dim": "sentence"
+              },
+              {
+                "id": 306,
+                "q": "Is it windy? 否定回答选：",
+                "opts": [
+                  "Yes, it is.",
+                  "No, it isn't.",
+                  "Yes, you can.",
+                  "No, you can't."
+                ],
+                "answer": 1,
+                "point": "u3:recall_pattern",
+                "dim": "sentence"
+              },
+              {
+                "id": 307,
+                "q": "🌧️ 天空乌云密布，正在下雨。选描述天气的词：",
+                "opts": [
+                  "sunny",
+                  "snowy",
+                  "rainy",
+                  "windy"
+                ],
+                "answer": 2,
+                "point": "u3:recall_vocab",
+                "dim": "vocab"
+              },
+              {
+                "id": 308,
+                "q": "出门玩之前，妈妈提醒你要注意安全。英文常说：",
+                "opts": [
+                  "be careful",
+                  "how about",
+                  "go home",
+                  "hurry up"
                 ],
                 "answer": 0,
-                "point": "词汇",
+                "point": "u3:recall_vocab",
+                "dim": "vocab"
+              },
+              {
+                "id": 309,
+                "q": "🕗 早上 8 点，该吃早餐了。窗外阳光明媚。天气是 ___。",
+                "opts": [
+                  "rainy",
+                  "snowy",
+                  "sunny",
+                  "windy"
+                ],
+                "answer": 2,
+                "point": "u2:recall_routine",
+                "dim": "sentence"
+              },
+              {
+                "id": 310,
+                "q": "对比两个城市：How about ___?",
+                "opts": [
+                  "New York",
+                  "breakfast",
+                  "get up",
+                  "English class"
+                ],
+                "answer": 0,
+                "point": "u3:recall_city",
+                "dim": "sentence"
+              },
+              {
+                "id": 311,
+                "q": "❄️ 冬天哈尔滨常下雪。选合适形容词：",
+                "opts": [
+                  "hot",
+                  "snowy",
+                  "sunny",
+                  "rainy"
+                ],
+                "answer": 1,
+                "point": "u3:recall_vocab",
+                "dim": "vocab"
+              },
+              {
+                "id": 312,
+                "q": "☁️ 看不见太阳，天空灰蒙蒙。选：",
+                "opts": [
+                  "cloudy",
+                  "windy",
+                  "warm",
+                  "degree"
+                ],
+                "answer": 0,
+                "point": "u3:recall_vocab",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Can I go outside now?",
+                "audio": "Mum, can I go outside now?",
                 "opts": [
-                  "Can I go outside now?",
-                  "Can I go outside now.",
-                  "cold",
-                  "cool"
+                  "Mum, can I go outside now?",
+                  "Mum, can I go inside now?",
+                  "Mum, can you go outside now?",
+                  "Mum, can I go outside then?"
                 ],
                 "answer": 0
               },
               {
-                "audio": "It's cold outside.",
+                "audio": "No, you can't. It's cold outside.",
                 "opts": [
-                  "It's cold outside.",
-                  "It's cool outside.",
-                  "It is cold outside.",
-                  "cold"
+                  "No, you can't. It's cold outside.",
+                  "No, you can. It's cold outside.",
+                  "No, you can't. It's cool outside.",
+                  "Yes, you can. It's warm outside."
                 ],
                 "answer": 0
               },
               {
-                "audio": "Hi, Chen Jie! This is Mark.",
+                "audio": "What's the weather like in Beijing?",
                 "opts": [
-                  "Hi, Chen Jie! This is Mark.",
-                  "cold",
-                  "cool",
-                  "warm"
+                  "What's the weather like in Beijing?",
+                  "What's the weather like in New York?",
+                  "What time is it in Beijing?",
+                  "Can I go outside in Beijing?"
                 ],
                 "answer": 0
               },
               {
-                "audio": "Hi! Have a good day!",
+                "audio": "It's sunny and warm.",
                 "opts": [
-                  "Hi! Have a good day!",
-                  "cold",
-                  "cool",
-                  "warm"
+                  "It's sunny and warm.",
+                  "It's rainy and cool.",
+                  "It's snowy and cold.",
+                  "It's cloudy and hot."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Is it windy?",
+                "opts": [
+                  "Is it windy?",
+                  "Is it sunny?",
+                  "Is it rainy?",
+                  "Is it snowy?"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "No, it isn't. It's cloudy.",
+                "opts": [
+                  "No, it isn't. It's cloudy.",
+                  "Yes, it is. It's cloudy.",
+                  "No, it isn't. It's sunny.",
+                  "No, you can't. It's cloudy."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "How about New York?",
+                "opts": [
+                  "How about New York?",
+                  "How about Beijing?",
+                  "What about New York?",
+                  "How is New York?"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "It's rainy and cool. It's 26 degrees.",
+                "opts": [
+                  "It's rainy and cool. It's 26 degrees.",
+                  "It's sunny and warm. It's 26 degrees.",
+                  "It's rainy and hot. It's 16 degrees.",
+                  "It's snowy and cold. It's 26 degrees."
                 ],
                 "answer": 0
               }

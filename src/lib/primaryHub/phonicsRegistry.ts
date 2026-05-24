@@ -1,20 +1,30 @@
-import { G4V2_U1_PHONICS, type G4v2U1PhonicsConfig } from "@/data/primaryHub/phonics/g4v2_u1_er";
+import { G4V2_U1_PHONICS } from "@/data/primaryHub/phonics/g4v2_u1_er";
 import {
   basename,
   extractUnitIdFromPath,
   warnRegistryDev,
 } from "./registryDiscovery";
+import {
+  isPhonicsConfig,
+  type PhonicsConfig,
+} from "./phonicsTypes";
 
-export type PhonicsConfig = G4v2U1PhonicsConfig;
+export type {
+  PhonicsChallengeItem,
+  PhonicsConfig,
+  PhonicsFindItem,
+  PhonicsListenItem,
+} from "./phonicsTypes";
 
-function isPhonicsConfig(value: unknown): value is PhonicsConfig {
-  if (!value || typeof value !== "object") return false;
-  const v = value as PhonicsConfig;
-  return (
-    typeof v.unitId === "string" &&
-    typeof v.phonics_rule === "string" &&
-    Array.isArray(v.stage_1_listen)
-  );
+export { defaultPhonicsAudioBase, isPhonicsConfig } from "./phonicsTypes";
+
+function warnInvalidPhonicsUnitId(unitId: string, filePath: string): void {
+  const fromFilename = extractUnitIdFromPath(`${unitId}_er.ts`);
+  if (fromFilename !== unitId) {
+    warnRegistryDev(
+      `phonics: unitId "${unitId}" in "${basename(filePath)}" does not match primary hub unit id pattern.`,
+    );
+  }
 }
 
 function extractPhonicsFromModule(
@@ -63,6 +73,8 @@ function loadPhonicsByUnit(): Record<string, PhonicsConfig> {
       );
     }
 
+    warnInvalidPhonicsUnitId(unitId, filePath);
+
     if (byUnit[unitId]) {
       warnRegistryDev(
         `phonics: duplicate entry for ${unitId}; "${basename(filePath)}" overrides previous file.`,
@@ -88,6 +100,8 @@ function loadPhonicsByUnit(): Record<string, PhonicsConfig> {
         `phonics: "${basename(filePath)}" uses unitId from JSON ("${raw.unitId}"). Prefer g4v2_u2_er.json naming.`,
       );
     }
+
+    warnInvalidPhonicsUnitId(unitId, filePath);
 
     if (byUnit[unitId]) {
       warnRegistryDev(
@@ -121,8 +135,8 @@ export function __getPhonicsByUnitForTest(): Record<string, PhonicsConfig> {
   return PHONICS_BY_UNIT;
 }
 
-/** @internal Ensure glob-loaded config matches legacy export (regression guard). */
-export function __assertG4v2U1PhonicsParityForTest(): boolean {
+/** @internal Ensure glob-loaded config matches canonical g4v2_u1 export. */
+export function __assertPhonicsRegistryLoadsG4v2U1(): boolean {
   const loaded = getPhonicsForUnit("g4v2_u1");
   return loaded?.phonics_rule === G4V2_U1_PHONICS.phonics_rule;
 }

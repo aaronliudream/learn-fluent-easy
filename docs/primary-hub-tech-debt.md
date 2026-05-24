@@ -21,3 +21,13 @@
 ## 生成脚本
 
 见 [primary-hub-generate-script-risks.md](./primary-hub-generate-script-risks.md)（计划任务 8）。
+
+## Phonics UI（任务 4b，待办）
+
+任务 4 仅完成类型层 + `matchesRule` 字段重命名；**未**泛化 UI。
+
+- `highlightEr` → `highlightPattern(word, rule)`
+- 子页标题文案（如「认识 er 发音」）→ 按 `config.phonics_rule` 模板化
+- 找词关说明文案同上
+- **触发时机**：Unit 2 拼读内容（如 ir 等）上线前
+- **影响范围**：`PrimaryHubPhonics.tsx`、相关 ListenStage 标题等

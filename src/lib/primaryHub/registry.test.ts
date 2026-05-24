@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  __assertG4v2U1PhonicsParityForTest,
+  __assertPhonicsRegistryLoadsG4v2U1,
   __getPhonicsByUnitForTest,
   getPhonicsForUnit,
 } from "./phonicsRegistry";
@@ -83,7 +83,7 @@ describe("phonicsRegistry auto-discovery", () => {
   });
 
   it("matches legacy exported config", () => {
-    expect(__assertG4v2U1PhonicsParityForTest()).toBe(true);
+    expect(__assertPhonicsRegistryLoadsG4v2U1()).toBe(true);
   });
 
   it("discovers exactly one phonics unit in repo", () => {

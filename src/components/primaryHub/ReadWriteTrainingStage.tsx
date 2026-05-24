@@ -174,9 +174,17 @@ function LookAndWritePhase({
         <Feedback tone="success">完全正确！+{config.pointsPerQuestion} 分</Feedback>
       )}
       {result === "punctuation" && (
-        <Feedback tone="warning">单词对了，注意大小写和标点（句号）再试试</Feedback>
+        <Feedback tone="warning">
+          单词对了，注意大小写和标点（句号）再试试
+          <span className="mt-1 block font-normal">参考答案：{q.answer}</span>
+        </Feedback>
       )}
-      {result === "wrong" && <Feedback tone="error">再想想，用上面的提示词组成完整句子</Feedback>}
+      {result === "wrong" && (
+        <Feedback tone="error">
+          再想想，用上面的提示词组成完整句子
+          <span className="mt-1 block font-normal">参考答案：{q.answer}</span>
+        </Feedback>
+      )}
       {result === "correct" && (
         <button
           type="button"
@@ -334,6 +342,16 @@ function ReadAndFillMapPhase({
       {checked && !allCorrect && (
         <>
           <Feedback tone="error">还有格子不对，再试试</Feedback>
+          <ul className="mt-2 space-y-1 rounded-lg bg-[#FFF8F0] px-3 py-2 text-xs text-[#2C2C2A]">
+            {fillable
+              .filter((s) => fills[s.id] !== s.answer)
+              .map((s) => (
+                <li key={s.id}>
+                  <span className="text-[#888780]">参考答案：</span>
+                  <span className="font-semibold text-[#3B6D11]">{s.answer}</span>
+                </li>
+              ))}
+          </ul>
           <button
             type="button"
             onClick={() => {
@@ -455,7 +473,10 @@ function WordOrderPhase({
         <Feedback tone="success">答对了！+{config.pointsPerQuestion} 分</Feedback>
       )}
       {feedback === "bad" && (
-        <Feedback tone="error">再试试，注意大小写、空格和标点</Feedback>
+        <Feedback tone="error">
+          再试试，注意大小写、空格和标点
+          <span className="mt-1 block font-normal">参考答案：{q.answer}</span>
+        </Feedback>
       )}
       {feedback === "ok" && (
         <button
@@ -572,11 +593,14 @@ function FillDialogPhase({
       )}
       {checked && !allOk && (
         <>
-          <Feedback tone="error">再想想，用上方的句型关键词（Where / next to / teachers&apos; office…）</Feedback>
-          <ul className="mt-2 space-y-1 text-xs text-[#888780]">
+          <Feedback tone="error">
+            再想想，用上方的句型关键词（Where / next to / teachers&apos; office…）
+          </Feedback>
+          <ul className="mt-2 space-y-1 rounded-lg bg-[#FFF8F0] px-3 py-2 text-xs text-[#2C2C2A]">
             {config.blanks.map((b) => (
               <li key={b.id}>
-                参考：{b.reference}
+                <span className="text-[#888780]">参考答案：</span>
+                <span className="font-semibold text-[#3B6D11]">{b.reference}</span>
               </li>
             ))}
           </ul>

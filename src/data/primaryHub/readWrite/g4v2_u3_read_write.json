@@ -1,0 +1,75 @@
+{
+  "unitId": "g4v2_u3",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 6,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "fill_choice",
+      "sentence": "❄️ It's very ___ outside. Put on your coat!",
+      "hint_zh": "很冷，要穿外套",
+      "correctSentence": "It's very cold outside. Put on your coat!",
+      "options": [
+        { "text": "cold", "correct": true },
+        { "text": "hot", "correct": false },
+        { "text": "sunny", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "☀️ What's the weather like? It's ___ and warm.",
+      "hint_zh": "晴朗温暖",
+      "correctSentence": "What's the weather like? It's sunny and warm.",
+      "options": [
+        { "text": "sunny", "correct": true },
+        { "text": "rainy", "correct": false },
+        { "text": "snowy", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "🌧️ Look! It's ___ today. Take an umbrella.",
+      "hint_zh": "下雨，带伞",
+      "correctSentence": "Look! It's rainy today. Take an umbrella.",
+      "options": [
+        { "text": "rainy", "correct": true },
+        { "text": "windy", "correct": false },
+        { "text": "cloudy", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "💨 Is it ___? — No, it isn't.",
+      "hint_zh": "问是否多风",
+      "correctSentence": "Is it windy? — No, it isn't.",
+      "options": [
+        { "text": "windy", "correct": true },
+        { "text": "warm", "correct": false },
+        { "text": "degree", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "🚪 Mum, can I go ___ now?",
+      "hint_zh": "能去户外吗",
+      "correctSentence": "Mum, can I go outside now?",
+      "options": [
+        { "text": "outside", "correct": true },
+        { "text": "weather", "correct": false },
+        { "text": "careful", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "🗽 How about ___? It's cool and rainy.",
+      "hint_zh": "问另一个城市",
+      "correctSentence": "How about New York? It's cool and rainy.",
+      "options": [
+        { "text": "New York", "correct": true },
+        { "text": "Beijing", "correct": false },
+        { "text": "London", "correct": false }
+      ]
+    }
+  ]
+}

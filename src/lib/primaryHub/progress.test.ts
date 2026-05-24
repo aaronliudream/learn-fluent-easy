@@ -10,19 +10,19 @@ describe("stage completable progress", () => {
     expect(getCompletableStageIndices("g4v2_u1")).toHaveLength(8);
   });
 
-  it("g4v2_u2 has 8 stages but 7 completable (readWrite placeholder)", () => {
+  it("g4v2_u2 has 8 completable stages (readWrite live)", () => {
     const unit = findUnit("g4v2_u2");
     expect(unit?.stages).toHaveLength(8);
-    expect(getCompletableStageIndices("g4v2_u2")).toHaveLength(7);
-    expect(isReadWriteComingSoon("g4v2_u2", 6, unit!.stages[6])).toBe(true);
+    expect(getCompletableStageIndices("g4v2_u2")).toHaveLength(8);
+    expect(isReadWriteComingSoon("g4v2_u2", 6, unit!.stages[6])).toBe(false);
   });
 
-  it("g4v2_u2 reaches 100% when all completable stages are done", () => {
+  it("g4v2_u2 reaches 100% when all 8 stages are done", () => {
     const state: PrimaryHubPersist = {
       user: { name: "t", avatar: "🐻" },
       units: {
         g4v2_u2: {
-          completedStages: [0, 1, 2, 3, 4, 5, 7],
+          completedStages: [0, 1, 2, 3, 4, 5, 6, 7],
           stars: 0,
           firstCompleteDate: null,
           reviewSchedule: [],
@@ -37,8 +37,8 @@ describe("stage completable progress", () => {
       currentSemester: "grade4_volume2",
     };
     const p = getUnitProgress(state, "g4v2_u2");
-    expect(p.completed).toBe(7);
-    expect(p.total).toBe(7);
+    expect(p.completed).toBe(8);
+    expect(p.total).toBe(8);
     expect(p.stageCount).toBe(8);
     expect(p.percent).toBe(100);
   });

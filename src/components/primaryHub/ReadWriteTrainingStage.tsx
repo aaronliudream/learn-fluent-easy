@@ -36,7 +36,7 @@ function FeedbackBanner({ tone, children }: { tone: "success" | "error"; childre
 function PictureChoiceBody({ q }: { q: Extract<ReadWriteSimplifiedQuestion, { type: "picture_choice" }> }) {
   return (
     <>
-      <ReadWritePictureVisual visual={q.visual} alt={q.imageAlt} />
+      <ReadWritePictureVisual visual={q.visual} image={q.image} alt={q.imageAlt} />
       <p className="mt-3 text-center text-[14px] font-medium text-[#2C2C2A]">
         {q.prompt_zh ?? "哪句话符合图片？"}
       </p>

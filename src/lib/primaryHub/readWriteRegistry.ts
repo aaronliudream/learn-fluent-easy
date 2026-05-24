@@ -1,4 +1,5 @@
 import type { ReadWriteSimplifiedConfig } from "@/lib/primaryHub/readWriteTypes";
+import { warnPictureChoiceQuestion } from "@/lib/primaryHub/readWriteTypes";
 import {
   basename,
   registryKey,
@@ -53,6 +54,12 @@ function loadReadWriteConfigs(): ReadWriteSimplifiedConfig[] {
         `readWrite: duplicate entry for ${unitId} stage ${stageIdx}; "${basename(filePath)}" overrides previous file.`,
       );
     }
+
+    raw.questions.forEach((question, index) => {
+      if (question.type === "picture_choice") {
+        warnPictureChoiceQuestion(question, `${basename(filePath)} q${index + 1}`);
+      }
+    });
 
     byKey.set(key, { ...raw, unitId, stageIdx });
   }

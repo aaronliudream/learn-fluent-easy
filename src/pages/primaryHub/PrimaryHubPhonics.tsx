@@ -192,7 +192,7 @@ function FindStage({
   }, [grade, items]);
 
   const erWords = useMemo(
-    () => new Set(items.filter((w) => w.has_er).map((w) => w.word)),
+    () => new Set(items.filter((w) => w.matchesRule).map((w) => w.word)),
     [items],
   );
 
@@ -244,7 +244,7 @@ function FindStage({
             key={item.word}
             type="button"
             disabled={checked}
-            className={wordClass(item.word, item.has_er)}
+            className={wordClass(item.word, item.matchesRule)}
             onClick={() => toggle(item.word)}
           >
             {highlightEr(item.word)}

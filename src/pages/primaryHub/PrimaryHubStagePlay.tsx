@@ -12,10 +12,9 @@ import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import ReadWriteTrainingStage from "@/components/primaryHub/ReadWriteTrainingStage";
-import G4v2U1SpeakSpeedControl from "@/components/primaryHub/G4v2U1SpeakSpeedControl";
+import HubSpeakSpeedControl from "@/components/primaryHub/HubSpeakSpeedControl";
 import SentenceLessonStage from "@/components/primaryHub/SentenceLessonStage";
-import { useG4v2U1SpeakSpeed } from "@/hooks/useG4v2U1SpeakSpeed";
-import { isG4v2U1Unit } from "@/lib/primaryHub/g4v2U1SpeakSpeed";
+import { useHubSpeakSpeed } from "@/hooks/useHubSpeakSpeed";
 import { getReadWriteConfig } from "@/lib/primaryHub/readWriteRegistry";
 import { getSentenceLesson } from "@/lib/primaryHub/sentenceRegistry";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/primaryHub/types";
@@ -470,9 +469,9 @@ function ListenMcStage({
   const [answered, setAnswered] = useState(false);
   const [picked, setPicked] = useState<number | null>(null);
   const [feedback, setFeedback] = useState<React.ReactNode>(null);
-  const { speed, setSpeed } = useG4v2U1SpeakSpeed();
+  const { speed, setSpeed } = useHubSpeakSpeed();
   const isSentenceAudio = title.includes("句") || instruction.includes("句");
-  const useUnitSpeakSpeed = Boolean(unitId && isG4v2U1Unit(unitId) && isSentenceAudio);
+  const useAdjustableSpeakSpeed = isSentenceAudio;
 
   const q = questions[idx];
   const isLast = idx === questions.length - 1;
@@ -486,30 +485,30 @@ function ListenMcStage({
   useEffect(() => {
     prefetchTTSBatchKid(
       questions.map((item) => item.audio),
-      useUnitSpeakSpeed ? { grade, speed } : { grade },
+      useAdjustableSpeakSpeed ? { grade, speed } : { grade },
     );
-  }, [grade, questions, speed, useUnitSpeakSpeed]);
+  }, [grade, questions, speed, useAdjustableSpeakSpeed]);
 
   const speakPrompt = useCallback(() => {
     const text = q?.audio?.trim();
     if (!text) return;
-    if (useUnitSpeakSpeed) {
+    if (useAdjustableSpeakSpeed) {
       hubSpeakAtSpeed(text, speed, grade);
       return;
     }
     // Sentence prompts use the slow kid-voice path (<0.75) for clearer playback.
     hubSpeak(text, isSentenceListen ? 0.74 : 0.8, grade);
-  }, [q, grade, isSentenceListen, speed, useUnitSpeakSpeed]);
+  }, [q, grade, isSentenceListen, speed, useAdjustableSpeakSpeed]);
 
   const speakCorrectAnswer = useCallback(() => {
     const text = q?.opts[q.answer]?.trim();
     if (!text) return;
-    if (useUnitSpeakSpeed) {
+    if (useAdjustableSpeakSpeed) {
       hubSpeakAtSpeed(text, speed, grade);
       return;
     }
     hubSpeak(text, 0.7, grade);
-  }, [q, grade, speed, useUnitSpeakSpeed]);
+  }, [q, grade, speed, useAdjustableSpeakSpeed]);
 
   const handlePick = (optIdx: number) => {
     if (answered) return;
@@ -566,8 +565,8 @@ function ListenMcStage({
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
-      {useUnitSpeakSpeed && (
-        <G4v2U1SpeakSpeedControl speed={speed} onChange={setSpeed} className="mb-3" />
+      {useAdjustableSpeakSpeed && (
+        <HubSpeakSpeedControl speed={speed} onChange={setSpeed} className="mb-3" />
       )}
       <div className="mb-3 flex justify-between text-sm">
         <span className="text-[#888780]">
@@ -1161,8 +1160,21 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             onProgress={reportStageProgress}
           />
         ) : (
-          <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#888780]">
-            读写训练内容即将上线
+          <div className="rounded-2xl bg-white p-6 text-center shadow-sm">
+            <div className="text-4xl" aria-hidden>
+              🚧
+            </div>
+            <h2 className="mt-3 text-base font-bold text-[#333]">读写训练内容准备中</h2>
+            <p className="mt-2 text-sm leading-relaxed text-[#888780]">
+              该关卡内容正在制作中，敬请期待。请先完成前面的学习环节。
+            </p>
+            <button
+              type="button"
+              onClick={onBack}
+              className="mt-5 w-full rounded-xl bg-[#FF6B35] px-4 py-3 text-sm font-semibold text-white hover:bg-[#E55A28]"
+            >
+              返回单元
+            </button>
           </div>
         );
       case "finalQuiz":

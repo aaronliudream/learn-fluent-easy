@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  __assertG4v2U1PhonicsParityForTest,
+  __assertPhonicsRegistryLoadsG4v2U1,
   __getPhonicsByUnitForTest,
   getPhonicsForUnit,
 } from "./phonicsRegistry";
@@ -22,6 +22,10 @@ describe("registryDiscovery filename parsing", () => {
     expect(extractUnitIdFromPath("g4v2_u1_grammar.json")).toBe("g4v2_u1");
     expect(extractUnitIdFromPath("g4v2_u2_read_write.json")).toBe("g4v2_u2");
     expect(extractUnitIdFromPath("g4v2_u1_er.ts")).toBe("g4v2_u1");
+  });
+
+  it("parses unit id from conventional readWrite names", () => {
+    expect(extractUnitIdFromPath("g4v2_u1_read_write.json")).toBe("g4v2_u1");
   });
 
   it("returns null for legacy readWrite filename without unit id", () => {
@@ -83,7 +87,7 @@ describe("phonicsRegistry auto-discovery", () => {
   });
 
   it("matches legacy exported config", () => {
-    expect(__assertG4v2U1PhonicsParityForTest()).toBe(true);
+    expect(__assertPhonicsRegistryLoadsG4v2U1()).toBe(true);
   });
 
   it("discovers exactly one phonics unit in repo", () => {

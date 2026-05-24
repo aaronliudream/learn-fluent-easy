@@ -1,3 +1,5 @@
+import type { PhonicsConfig } from "@/lib/primaryHub/phonicsTypes";
+
 /** 四年级下册 Unit 1 · er 自然拼读 — 拼读词 sub-page content */
 export const G4V2_U1_PHONICS = {
   unitId: "g4v2_u1",
@@ -17,16 +19,16 @@ export const G4V2_U1_PHONICS = {
     { word: "ruler", zh: "尺子", emoji: "📏", audio: "ruler.mp3" },
   ],
   stage_2_find: [
-    { word: "teacher", has_er: true },
-    { word: "farmer", has_er: true },
-    { word: "number", has_er: true },
-    { word: "mother", has_er: true },
-    { word: "winter", has_er: true },
-    { word: "cat", has_er: false },
-    { word: "book", has_er: false },
-    { word: "happy", has_er: false },
-    { word: "apple", has_er: false },
-    { word: "pen", has_er: false },
+    { word: "teacher", matchesRule: true },
+    { word: "farmer", matchesRule: true },
+    { word: "number", matchesRule: true },
+    { word: "mother", matchesRule: true },
+    { word: "winter", matchesRule: true },
+    { word: "cat", matchesRule: false },
+    { word: "book", matchesRule: false },
+    { word: "happy", matchesRule: false },
+    { word: "apple", matchesRule: false },
+    { word: "pen", matchesRule: false },
   ],
   stage_3_challenge: [
     {
@@ -58,6 +60,4 @@ export const G4V2_U1_PHONICS = {
       correct: 0,
     },
   ],
-} as const;
-
-export type G4v2U1PhonicsConfig = typeof G4V2_U1_PHONICS;
+} satisfies PhonicsConfig;

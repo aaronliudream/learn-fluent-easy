@@ -1,0 +1,60 @@
+import { describe, expect, it } from "vitest";
+import { findUnit } from "./courseData";
+import { getUnitProgress } from "./progress";
+import { getCompletableStageIndices, isReadWriteComingSoon } from "./stageCompletable";
+import { migrateUnitStateForEightStages } from "./stageProgressMigrate";
+import type { PrimaryHubPersist } from "./types";
+
+describe("stage completable progress", () => {
+  it("g4v2_u1 has 8 completable stages", () => {
+    expect(getCompletableStageIndices("g4v2_u1")).toHaveLength(8);
+  });
+
+  it("g4v2_u2 has 8 stages but 7 completable (readWrite placeholder)", () => {
+    const unit = findUnit("g4v2_u2");
+    expect(unit?.stages).toHaveLength(8);
+    expect(getCompletableStageIndices("g4v2_u2")).toHaveLength(7);
+    expect(isReadWriteComingSoon("g4v2_u2", 6, unit!.stages[6])).toBe(true);
+  });
+
+  it("g4v2_u2 reaches 100% when all completable stages are done", () => {
+    const state: PrimaryHubPersist = {
+      user: { name: "t", avatar: "🐻" },
+      units: {
+        g4v2_u2: {
+          completedStages: [0, 1, 2, 3, 4, 5, 7],
+          stars: 0,
+          firstCompleteDate: null,
+          reviewSchedule: [],
+          reviewHistory: [],
+        },
+      },
+      mistakes: [],
+      lastAITest: null,
+      aiTestCount: 0,
+      aiTestHistory: [],
+      currentUnit: "g4v2_u2",
+      currentSemester: "grade4_volume2",
+    };
+    const p = getUnitProgress(state, "g4v2_u2");
+    expect(p.completed).toBe(7);
+    expect(p.total).toBe(7);
+    expect(p.stageCount).toBe(8);
+    expect(p.percent).toBe(100);
+  });
+});
+
+describe("stageProgressMigrate", () => {
+  it("moves old finalQuiz completion from index 6 to 7", () => {
+    const migrated = migrateUnitStateForEightStages("g4v2_u2", {
+      completedStages: [0, 1, 6],
+      stars: 5,
+      firstCompleteDate: null,
+      reviewSchedule: [],
+      reviewHistory: [],
+      stageProgress: { 6: 50 },
+    });
+    expect(migrated.completedStages).toEqual([0, 1, 7]);
+    expect(migrated.stageProgress).toEqual({ 7: 50 });
+  });
+});

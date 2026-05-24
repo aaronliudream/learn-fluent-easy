@@ -87,13 +87,14 @@ export function PrimaryHubProvider({
       if (!userId) return;
       setGuestMergeBusy(true);
       try {
-        await setGuestMergeDecision(userId, choice);
+        cancelPrimaryHubCloudPush();
         const next = await applyGuestMergeChoice(
           userId,
           choice,
           localSnapshotRef.current,
           grade,
         );
+        await setGuestMergeDecision(userId, choice);
         setPrimaryHubCloudSyncBlocked(false);
         setGuestMergePending(false);
         localSnapshotRef.current = {};

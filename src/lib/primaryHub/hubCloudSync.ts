@@ -6,7 +6,7 @@ import {
   persistPayload,
   stripEmptyUnits,
 } from "./hubCloudMerge";
-import { defaultPersist, loadPersist, savePersist, clearPersist, PRIMARY_HUB_GRADES } from "./storage";
+import { defaultPersist, loadPersist, savePersist, savePersistLocalOnly, clearPersist, PRIMARY_HUB_GRADES } from "./storage";
 import { migratePersistUnits } from "./stageProgressMigrate";
 
 const SYNC_DEBOUNCE_MS = 1500;
@@ -133,6 +133,14 @@ export async function hydratePrimaryHubCloudOnly(
 
 export type GuestMergeChoice = "merged" | "reset";
 
+export async function deletePrimaryHubCloudProgress(userId: string): Promise<void> {
+  const { error } = await supabase
+    .from("primary_hub_progress")
+    .delete()
+    .eq("user_id", userId);
+  if (error) throw new Error(`[primaryHub cloud] delete failed: ${error.message}`);
+}
+
 /** Apply user choice after guest-merge prompt (all grades with local activity). */
 export async function applyGuestMergeChoice(
   userId: string,
@@ -141,8 +149,12 @@ export async function applyGuestMergeChoice(
   currentGrade: PrimaryHubGrade,
 ): Promise<PrimaryHubPersist> {
   if (choice === "reset") {
+    cancelPrimaryHubCloudPush();
+    await deletePrimaryHubCloudProgress(userId);
     for (const g of PRIMARY_HUB_GRADES) clearPersist(g);
-    return hydratePrimaryHubCloudOnly(userId, currentGrade);
+    const fresh = defaultPersist(currentGrade);
+    savePersistLocalOnly(currentGrade, fresh);
+    return fresh;
   }
 
   let currentResult = defaultPersist(currentGrade);

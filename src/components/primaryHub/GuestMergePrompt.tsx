@@ -36,7 +36,7 @@ export function GuestMergePrompt({ open, busy, onReset, onMerge }: Props) {
                 </li>
                 <li>
                   选择「<strong className="font-semibold text-foreground">从头开始</strong>
-                  」：之前的进度会清除
+                  」：清除本浏览器与账号中的 Primary Hub 进度
                 </li>
               </ul>
             </div>

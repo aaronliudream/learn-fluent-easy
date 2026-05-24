@@ -1,0 +1,62 @@
+{
+  "unitId": "g4v2_u1",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 5,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "picture_choice",
+      "image": "/primary/hub/g4v2_u1/library.svg",
+      "imageAlt": "School library",
+      "hint_zh": "看图选一句正确的描述",
+      "options": [
+        { "text": "The library is on the second floor.", "correct": true },
+        { "text": "The library is next to the playground.", "correct": false }
+      ]
+    },
+    {
+      "type": "picture_choice",
+      "image": "/primary/hub/g4v2_u1/playground.svg",
+      "imageAlt": "School playground",
+      "hint_zh": "看图选一句正确的描述",
+      "options": [
+        { "text": "That is the playground.", "correct": true },
+        { "text": "That is the teachers' office.", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "It's on the second ____.",
+      "hint_zh": "在二楼",
+      "correctSentence": "It's on the second floor.",
+      "options": [
+        { "text": "floor", "correct": true },
+        { "text": "homework", "correct": false },
+        { "text": "way", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "The teachers' office is next to the ____.",
+      "hint_zh": "挨着图书馆",
+      "correctSentence": "The teachers' office is next to the library.",
+      "options": [
+        { "text": "library", "correct": true },
+        { "text": "playground", "correct": false },
+        { "text": "tiger", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Where is the ____?",
+      "hint_zh": "我们在那里看书",
+      "correctSentence": "Where is the library?",
+      "options": [
+        { "text": "library", "correct": true },
+        { "text": "computer room", "correct": false },
+        { "text": "dinner", "correct": false }
+      ]
+    }
+  ]
+}

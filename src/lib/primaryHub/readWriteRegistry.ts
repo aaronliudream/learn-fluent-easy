@@ -1,8 +1,13 @@
-import g4v2U1Stage6 from "@/data/primaryHub/readWrite/g4v2_u1_stage6.json";
-import type { ReadWriteConfig } from "@/lib/primaryHub/readWriteTypes";
+import unit1ReadWriteSimplified from "@/data/primaryHub/readWrite/unit1_read_write_simplified.json";
+import type { ReadWriteSimplifiedConfig } from "@/lib/primaryHub/readWriteTypes";
 
-const CONFIGS: ReadWriteConfig[] = [g4v2U1Stage6 as ReadWriteConfig];
+const CONFIGS: ReadWriteSimplifiedConfig[] = [
+  unit1ReadWriteSimplified as ReadWriteSimplifiedConfig,
+];
 
-export function getReadWriteConfig(unitId: string, stageIdx: number): ReadWriteConfig | null {
+export function getReadWriteConfig(
+  unitId: string,
+  stageIdx: number,
+): ReadWriteSimplifiedConfig | null {
   return CONFIGS.find((c) => c.unitId === unitId && c.stageIdx === stageIdx) ?? null;
 }

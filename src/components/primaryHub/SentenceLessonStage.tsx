@@ -313,7 +313,7 @@ export default function SentenceLessonStage({
         ) : (
           <p className="mt-2 text-center text-xs text-[#888780]">展开并完成全部句子后继续</p>
         )}
-      </div>
+      </LessonPanel>
     );
   }
 

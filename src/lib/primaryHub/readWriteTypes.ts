@@ -3,10 +3,18 @@ export type ReadWriteChoiceOption = {
   correct: boolean;
 };
 
+export type ReadWritePictureVisual =
+  | "place_books"
+  | "place_playground"
+  | "floor_building"
+  | "room_row"
+  | "student_count";
+
 export type ReadWritePictureChoiceQuestion = {
   type: "picture_choice";
-  image: string;
+  visual: ReadWritePictureVisual;
   imageAlt: string;
+  prompt_zh?: string;
   hint_zh?: string;
   options: ReadWriteChoiceOption[];
 };

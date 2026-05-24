@@ -7,55 +7,57 @@
   "questions": [
     {
       "type": "picture_choice",
-      "image": "/primary/hub/g4v2_u1/library.svg",
-      "imageAlt": "School library",
-      "hint_zh": "看图选一句正确的描述",
+      "visual": "place_books",
+      "imageAlt": "Books on shelves — library",
+      "hint_zh": "看图标，判断这是什么地方",
+      "prompt_zh": "这是什么地方？",
       "options": [
-        { "text": "The library is on the second floor.", "correct": true },
-        { "text": "The library is next to the playground.", "correct": false }
+        { "text": "This is the library.", "correct": true },
+        { "text": "This is the playground.", "correct": false }
       ]
     },
     {
       "type": "picture_choice",
-      "image": "/primary/hub/g4v2_u1/playground.svg",
-      "imageAlt": "School playground",
-      "hint_zh": "看图选一句正确的描述",
+      "visual": "place_playground",
+      "imageAlt": "Football on a running track — playground",
+      "hint_zh": "看图标，判断那是什么地方",
+      "prompt_zh": "那是什么地方？",
       "options": [
-        { "text": "That is the playground.", "correct": true },
-        { "text": "That is the teachers' office.", "correct": false }
+        { "text": "That is the library.", "correct": false },
+        { "text": "That is the playground.", "correct": true }
       ]
     },
     {
-      "type": "fill_choice",
-      "sentence": "It's on the second ____.",
-      "hint_zh": "在二楼",
-      "correctSentence": "It's on the second floor.",
+      "type": "picture_choice",
+      "visual": "floor_building",
+      "imageAlt": "Two-floor building — library on 2F, classroom on 1F",
+      "hint_zh": "看楼层标注，判断图书馆在哪一层",
+      "prompt_zh": "图书馆在几楼？",
       "options": [
-        { "text": "floor", "correct": true },
-        { "text": "homework", "correct": false },
-        { "text": "way", "correct": false }
+        { "text": "It's on the first floor.", "correct": false },
+        { "text": "It's on the second floor.", "correct": true }
       ]
     },
     {
-      "type": "fill_choice",
-      "sentence": "The teachers' office is next to the ____.",
-      "hint_zh": "挨着图书馆",
-      "correctSentence": "The teachers' office is next to the library.",
+      "type": "picture_choice",
+      "visual": "room_row",
+      "imageAlt": "Three rooms in a row — teachers' office highlighted in the middle",
+      "hint_zh": "看房间位置，判断教师办公室在哪里",
+      "prompt_zh": "教师办公室在哪里？",
       "options": [
-        { "text": "library", "correct": true },
-        { "text": "playground", "correct": false },
-        { "text": "tiger", "correct": false }
+        { "text": "It's next to the library.", "correct": true },
+        { "text": "It's under the library.", "correct": false }
       ]
     },
     {
-      "type": "fill_choice",
-      "sentence": "Where is the ____?",
-      "hint_zh": "我们在那里看书",
-      "correctSentence": "Where is the library?",
+      "type": "picture_choice",
+      "visual": "student_count",
+      "imageAlt": "Forty students in a class",
+      "hint_zh": "看数字，判断班级人数",
+      "prompt_zh": "这个班有多少学生？",
       "options": [
-        { "text": "library", "correct": true },
-        { "text": "computer room", "correct": false },
-        { "text": "dinner", "correct": false }
+        { "text": "Fourteen students.", "correct": false },
+        { "text": "Forty students.", "correct": true }
       ]
     }
   ]

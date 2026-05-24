@@ -3,6 +3,7 @@ import type {
   ReadWriteSimplifiedConfig,
   ReadWriteSimplifiedQuestion,
 } from "@/lib/primaryHub/readWriteTypes";
+import ReadWritePictureVisual from "@/components/primaryHub/ReadWritePictureVisual";
 
 type Props = {
   config: ReadWriteSimplifiedConfig;
@@ -35,14 +36,10 @@ function FeedbackBanner({ tone, children }: { tone: "success" | "error"; childre
 function PictureChoiceBody({ q }: { q: Extract<ReadWriteSimplifiedQuestion, { type: "picture_choice" }> }) {
   return (
     <>
-      <div className="overflow-hidden rounded-2xl border border-[#EEEAE0] bg-[#FFF8F0]">
-        <img
-          src={q.image}
-          alt={q.imageAlt}
-          className="mx-auto h-auto max-h-52 w-full object-contain p-3 sm:max-h-60"
-        />
-      </div>
-      <p className="mt-3 text-center text-[14px] text-[#888780]">哪句话符合图片？</p>
+      <ReadWritePictureVisual visual={q.visual} alt={q.imageAlt} />
+      <p className="mt-3 text-center text-[14px] font-medium text-[#2C2C2A]">
+        {q.prompt_zh ?? "哪句话符合图片？"}
+      </p>
     </>
   );
 }

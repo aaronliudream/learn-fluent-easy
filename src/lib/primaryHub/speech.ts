@@ -1,7 +1,8 @@
 /**
  * Primary / Junior / Gaokao hub English playback.
  *
- * Priority: Web Speech API (browser native) → cloud TTS (`speakKid`) fallback.
+ * Default: cloud TTS (`speakKid` → Lily).
+ * Exception: lone vocab token `o'clock` → Web Speech API (browser handles apostrophe).
  * Apostrophe normalization only (U+2019 → U+0027); never strip apostrophes.
  */
 import { prefetchTTSBatchKid, speakKid, stopSpeaking } from "@/lib/speak";
@@ -31,25 +32,29 @@ export function formatHubVocabDisplay(en: string): string {
   return en;
 }
 
-function hubSpeakLegacy(text: string, rate: number, grade?: number) {
+function hubSpeakCloud(text: string, rate: number, grade?: number) {
   const gradeHint = rate <= 0.75 ? 1 : grade;
   void speakKid(text, { grade: gradeHint, speed: rate });
 }
 
-/** Hub TTS: Web Speech first, cloud/mp3 fallback when unavailable. */
+/** Hub TTS — Web Speech only for vocab `o'clock`; everything else uses cloud TTS. */
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {
   if (typeof window === "undefined") return;
   const spoken = toHubTtsText(text);
   stopSpeaking();
 
-  if (!isWebSpeechSupported()) {
-    hubSpeakLegacy(spoken, rate, grade);
+  if (isOClockVocabToken(text)) {
+    if (!isWebSpeechSupported()) {
+      hubSpeakCloud(spoken, rate, grade);
+      return;
+    }
+    void speakWebSpeech(spoken, rate).then((ok) => {
+      if (!ok) hubSpeakCloud(spoken, rate, grade);
+    });
     return;
   }
 
-  void speakWebSpeech(spoken, rate).then((ok) => {
-    if (!ok) hubSpeakLegacy(spoken, rate, grade);
-  });
+  hubSpeakCloud(spoken, rate, grade);
 }
 
 /** Kid-voice playback with explicit speed (sentence lessons + speed control). */
@@ -57,10 +62,13 @@ export function hubSpeakAtSpeed(text: string, speed: number, grade?: number) {
   hubSpeak(text, speed, grade);
 }
 
-/** Prefetch cloud TTS only when Web Speech is unavailable. */
+/** Prefetch cloud audio for all words except `o'clock` when Web Speech handles it. */
 export function prefetchHubVocabulary(words: string[], grade: number, speed = 0.85) {
-  if (isWebSpeechSupported()) return;
-  const kidTexts = words.map((w) => toHubTtsText(w)).filter(Boolean);
+  const kidTexts: string[] = [];
+  for (const w of words) {
+    if (isOClockVocabToken(w) && isWebSpeechSupported()) continue;
+    kidTexts.push(toHubTtsText(w));
+  }
   if (kidTexts.length) prefetchTTSBatchKid(kidTexts, { grade, speed });
 }
 

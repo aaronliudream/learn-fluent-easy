@@ -57,19 +57,17 @@ export default function GaokaoHubUnit() {
       <div className="space-y-2 px-4 py-4">
         {unit.stages.map((stage, i) => {
           const done = us?.completedStages.includes(i) ?? false;
-          const locked = !done && i > (us?.completedStages.length ?? 0);
           return (
             <button
               key={stage.id}
               type="button"
-              disabled={locked}
-              onClick={() => !locked && nav(`${base}/semester/${semId}/unit/${unitId}/stage/${i}`)}
+              onClick={() => nav(`${base}/semester/${semId}/unit/${unitId}/stage/${i}`)}
               className={`flex w-full items-center gap-3 rounded-2xl border bg-white p-4 text-left shadow-sm ${
-                done ? "border-[#C9E0A8]" : locked ? "opacity-50" : "border-[#FF6B35]/40"
+                done ? "border-[#C9E0A8]" : "border-[#FF6B35]/40"
               }`}
             >
               <div className="grid size-10 place-items-center rounded-xl bg-[#FFF8F0] text-sm font-bold">
-                {done ? "✓" : locked ? "🔒" : i + 1}
+                {done ? "✓" : i + 1}
               </div>
               <div className="min-w-0 flex-1">
                 <div className="font-bold">

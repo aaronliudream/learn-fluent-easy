@@ -1,0 +1,87 @@
+Grammar
+120
+VIII. 句子的类型 (Types of Sentences)
+1. 句子按其结构可分为以下几种类型：
+2. 简单句的五种基本句型（Five Kinds of Simple Sentences）
+类  别
+构  成
+例  句
+简单句
+The Simple
+Sentence
+由一个主语（或并列主
+语）和一个谓语（或并
+列谓语）构成的句子。
+I get up at six in the morning.
+My mother and I often go shopping.
+Some students walk or ride bikes to school.
+并列句
+The Compound
+Sentence
+由并列连词（and，so，
+but，or等）把两个或
+两个以上的简单句连在
+一起而构成的句子。
+She often drinks juice and she never stays up 
+late.
+Ed has a great sports collection, but he doesn’t 
+play sports.
+School starts at eight, so I get up at six thirty.
+复合句
+The Complex
+Sentence
+由一个主句和一个或一
+个以上的从句构成的句
+子。
+What do you want to be when you grow up?
+I think Screen City has the most comfortable 
+seats.
+类  别
+谓语部分 Predicate
+主语
+Subject (S)
+谓语动词
+Verb (V)
+表语
+Predicative (P)
+宾语
+Object (O)
+宾语补足语
+Object
+Complement 
+(OC)
+第1 种
+S+V
+We
+exercise.
+ (不及物动词)
+第2 种
+S+V+O
+I
+like
+(及物动词)
+bananas.
+第3 种
+S+V+P
+They
+are
+(系动词) 
+students.
+第4 种
+S+V+indirect 
+O+direct O
+She
+gave
+(及物动词)
+ 
+  me 
+  a pen.
+	 (间接   (直接
+宾语)  宾语)
+第5 种
+S+V+O+OC
+He
+made
+(及物动词)
+the boy
+laugh.

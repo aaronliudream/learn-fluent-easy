@@ -1,0 +1,79 @@
+Grammar
+154
+3. 	 转化法（Conversion）
+一个单词由一种词类转换为另一种词类，这种构词法叫转化法。单词转化后的意义
+往往与之前的意义联系密切。
+名词转化为动词 
+show  n. 展览；展示 → show  v. 表演；展出
+                
+water  n. 水 
+→ water  v. 浇水
+形容词转化为动词 
+slow  adj. 慢的 
+→ slow  v. 放慢
+动词转化为名词 
+walk  v. 散步；走 
+→ take a walk  n. 散步
+                
+look  v. 看 
+→ have a look   n. 看一下，看一看
+4. 	 缩写和简写（Abbreviation and Simplification）
+缩写和简写（也被称为截断法或缩短法）主要采取“截头”“去尾”或者“既截头
+又去尾”的方法来生成新词。例如：
+telephone → phone 
+airplane → plane 
+laboratory → lab 
+mathematics → math 
+advertisement → ad 
+examination → exam 
+influenza → flu
+后  缀
+示  例
+-or / -er     （从事某种职业的人，名词后
+缀） 
+actor, visitor, director, singer, runner, worker, 
+driver
+-ist       （人，名词后缀） 
+artist, scientist, tourist, terrorist
+-ese 
+   （民族、语言，名词后缀） 
+Chinese, Japanese
+-tion       （表示动作、状态，名词后缀） 
+invitation, attraction, population, pronunciation
+-ful       （充满，形容词后缀） 
+successful, beautiful, colorful, wonderful
+-y         （表性质，形容词后缀） 
+funny, healthy, cloudy, windy
+-ing     （形容词后缀） 
+boring, exciting, interesting, outstanding
+-ed 
+     （形容词后缀） 
+surprised, balanced, relaxed, talented
+-al 
+       （⋯⋯的，形容词后缀） 
+traditional, international, natural
+-able    （能够，形容词后缀） 
+comfortable, unforgettable
+-less 
+  （没有、无，形容词后缀） 
+homeless, helpless, careless
+-ly 
+      （副词或形容词后缀） 
+really, usually, finally, friendly
+前  缀
+示  例
+un-     （不、非，表示否定） 
+unfriendly, unpleasant, uncomfortable
+dis-     （不、非，表示否定） 
+disadvantage, dishonest, disagree
+bi- 
+     （两个、双边的） 
+bicycle
+inter-  （相互、交互、在一起） 
+interview, international, Internet
+re- 
+     （又、再、重新） 
+review, return, rewrite
+tele- 
+  （远） 
+telephone, television

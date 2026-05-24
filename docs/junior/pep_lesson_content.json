@@ -1,0 +1,633 @@
+{
+  "7A": {
+    "SU1": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Good morning! Good afternoon! Good evening! Good morning! Good afternoon! Good evening! How are you? How are you? How are you? I‛m ﬁ ne, thanks. I‛m ﬁ ne, thanks. I‛m ﬁ ne, thanks. How are you? How are you? How are you? I‛m OK. I‛m OK. I‛m OK.",
+        "passageCn": "本单元阅读材料（Good morning!）"
+      },
+      "listeningLines": [
+        "How are you?",
+        "What’s this in English?"
+      ],
+      "writing": {
+        "prompt": "Write the names of the children on page S1. Then write the names in",
+        "promptCn": "请完成本单元「Good morning!」的写作任务。",
+        "sampleWords": []
+      }
+    },
+    "SU2": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Girl 1: What’s that in English? Girl 2: It’s a ruler. Girl 1: Spell it, please. Girl 2: R-U-L-E-R.",
+        "passageCn": "本单元阅读材料（What's this in English?）"
+      },
+      "listeningLines": [
+        "What’s this in English?",
+        "What’s that in English?",
+        "What’s that?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"What's this in English?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「What's this in English?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "SU3": {
+      "dialogues": [],
+      "reading": {
+        "passage": "U in blue. A, E, I, O, U. A, E, I, O, U. A, E, I, O, U. A, E, I, O, U. A, E, I, O, U. A, E, I, O, U.",
+        "passageCn": "本单元阅读材料（What color is it?）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Find the lett ers from A to Z. Write the small lett er next to each big lett er.",
+        "promptCn": "请完成本单元「What color is it?」的写作任务。",
+        "sampleWords": []
+      }
+    },
+    "U1": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Bob: Excuse me, are you Eric? Eric: Yes, I am. Are you Mike? Bob: No, I’m not. I’m Bob. Nice to meet you. Eric: Nice to meet you, too.",
+        "passageCn": "本单元阅读材料（My name's Gina.）"
+      },
+      "listeningLines": [
+        "What’s your telephone number, Alan?",
+        "What’s your phone number, Tom?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"My name's Gina.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「My name's Gina.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U2": {
+      "dialogues": [],
+      "reading": null,
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"This is my sister.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「This is my sister.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U3": {
+      "dialogues": [],
+      "reading": null,
+      "listeningLines": [
+        "Is this your pencil?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Is this your pencil?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Is this your pencil?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U4": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Mom: Hello. Tom: Hi, Mom. Could you bring some things to school for me? Mom: OK. Tom: I need my English books ... Mom: English books? Where are your English books? Tom: Hmm, they’re on the chair ... Oh, no, they’re under the radio. Mom: OK. Tom: And I need my ruler. It’s on the bed. And my notebook. Mom: Where’s your notebook? Tom: Uh, I don’t know. Oh ... it’s under the model plane in the bookcase. And Frank’s tape. He needs it. Mom: Where’s his tape? Tom: Oh, it’s in the tape player. Mom: OK. Meet you at one at your school. Tom: Thanks, Mom!",
+        "passageCn": "本单元阅读材料（Where's my schoolbag?）"
+      },
+      "listeningLines": [
+        "Where are my books?",
+        "How about my pencil box?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Where's my schoolbag?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Where's my schoolbag?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U5": {
+      "dialogues": [],
+      "reading": {
+        "passage": "A: Do you have a baseball? B: Yes, I do. (= Yes, I have a baseball.)",
+        "passageCn": "本单元阅读材料（Do you have a soccer ball?）"
+      },
+      "listeningLines": [
+        "Do you have a soccer ball?",
+        "Do you have a baseball? B: Yes, I do. (= Yes, I have a baseball.)"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Do you have a soccer ball?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Do you have a soccer ball?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U6": {
+      "dialogues": [],
+      "reading": {
+        "passage": "1. I like fruit, but I (don’t / doesn’t) like vegetables. 2. She (like / likes) bread, but she (doesn’t / don’t) like salad. 3. He (like / likes) bananas, but he (don’t / doesn’t) like oranges. 4. We (likes / like) hamburgers, but we don’t (like / likes) chicken. 5. Th ey (likes / like) pears, but they (don’t / doesn’t) like strawberries.",
+        "passageCn": "本单元阅读材料（Do you like bananas?）"
+      },
+      "listeningLines": [
+        "Do you like salad?",
+        "Do they like pears?",
+        "Does she like tomatoes?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Do you like bananas?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Do you like bananas?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U7": {
+      "dialogues": [],
+      "reading": null,
+      "listeningLines": [
+        "How much are these socks?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"How much are these socks?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「How much are these socks?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U8": {
+      "dialogues": [],
+      "reading": {
+        "passage": "John: Hey, Sally. Can I ask you some questions? Sally: Sure, John. John: When is your birthday party? Sally: My birthday party is on October 5th. John: OK, and when is the basketball game? Sally: The basketball game? Oh, it’s on October 2nd. John: Good. And, umm, how about the school trip? Sally: The school trip is on September 26th and 27th. John: And when is the English test? Sally: Oh, that’s on Friday, September 29th. John: OK. Thank you!",
+        "passageCn": "本单元阅读材料（When is your birthday?）"
+      },
+      "listeningLines": [
+        "When is your birthday, Linda?",
+        "When is your birthday, Mary?",
+        "When is your birthday, Mike?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"When is your birthday?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「When is your birthday?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U9": {
+      "dialogues": [
+        {
+          "title": "Conversation",
+          "lines": [
+            {
+              "role": "B",
+              "text": "Be cause it’s interesting.",
+              "cn": ""
+            },
+            {
+              "role": "B",
+              "text": "Be cause it’s fun.",
+              "cn": ""
+            },
+            {
+              "role": "B",
+              "text": "Yes, I do.",
+              "cn": ""
+            },
+            {
+              "role": "B",
+              "text": "No, she doesn’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Is this your pencil? B: Yes, it is./No, it isn’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Do you have a soccer ball? B: Yes, I do./No, I don’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Does she like tomatoes? B: Yes, she does./No, she doesn’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Do you like salad? B: Yes, I really like it.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Do you have a tennis ball, Jane? B: Sorry, I don’t.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "What’s your name? B: My name’s Alan.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "What’s your favorite subject? B: My favorite subject is P.E.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Who’re they? B: They’re my grandparents.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Who’s your P.E. teacher? B: Mr. Hu.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "Where are my books? B: They’re on the sofa.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "When is your birthday, Linda? B: It’s on May 2nd.",
+              "cn": ""
+            },
+            {
+              "role": "A",
+              "text": "When is Sally’s birthday party? B: It’s on October 5th.",
+              "cn": ""
+            }
+          ]
+        }
+      ],
+      "reading": {
+        "passage": "A: What’s your name? B: My name’s Alan. A: What’s your favorite subject? B: My favorite subject is P.E. A: Who’re they? B: They’re my grandparents. A: Who’s your P.E. teacher? B: Mr. Hu. A: Where are my books? B: They’re on the sofa. A: When is your birthday, Linda? B: It’s on May 2nd. A: When is Sally’s birthday party? B: It’s on October 5th. A: When is the class? B: On Monday and Wednesday. A: Why do you like P.E.? B: Because it’s fun. A: How much is this T-shirt? B: It’s seven dollars. A: How old are you? B: I’m thirteen.",
+        "passageCn": "本单元阅读材料（My favorite subject is science.）"
+      },
+      "listeningLines": [
+        "Be cause it’s interesting.",
+        "Be cause it’s fun.",
+        "Yes, I do.",
+        "No, she doesn’t.",
+        "Is this your pencil?",
+        "How much is that white bag?",
+        "Are those your parents?",
+        "Do I like oranges?",
+        "Do you like oranges?",
+        "Does he/she like oranges?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"My favorite subject is science.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「My favorite subject is science.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    }
+  },
+  "7B": {},
+  "8A": {
+    "U1": {
+      "dialogues": [],
+      "reading": {
+        "passage": "And how were the people? Were they friendly? Lisa: Yeah, they were really friendly. My parents have some friends there, and we had dinner at their house.",
+        "passageCn": "本单元阅读材料（Where did you go on vacation?）"
+      },
+      "listeningLines": [
+        "Where did you go, Xiang Hua?",
+        "What did you do on vacation, Sally?",
+        "Where did you go on vacation, Grace?",
+        "Where did you go on vacation, Kevin?",
+        "How was the food?",
+        "How were the stores?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Where did you go on vacation?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Where did you go on vacation?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U2": {
+      "dialogues": [],
+      "reading": {
+        "passage": "I don’t want to go to bed, although it’s past midnight. (= It’s past midnight, but I",
+        "passageCn": "本单元阅读材料（How often do you exercise?）"
+      },
+      "listeningLines": [
+        "How often do you exercise?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"How often do you exercise?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「How often do you exercise?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U3": {
+      "dialogues": [],
+      "reading": {
+        "passage": "In a basketball or soccer game, it’s important for the players to play together and",
+        "passageCn": "本单元阅读材料（I'm more outgoing than my sister.）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"I'm more outgoing than my sister.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「I'm more outgoing than my sister.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U4": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Girl 1: Wasn’t that a great talent show? Girl 2: Yeah! Girl 1: Who did you think was the best act? Girl 2: Oh, I thought Eliza was the best. She’s an excellent piano player. Girl 1: Yeah, she’s great. And I thought Steve and his dog were the funniest. Girl 2: Me, too! I couldn’t stop laughing! And how about Vera? Wasn’t she creative? Girl 1: Yeah, I’d say she was the most creative act! I don’t know many people who can play the guitar upside down! Girl 2: Who did you think was the worst? Girl 1: Oh, Dennis! He was terrible! He kept dropping the balls! Girl 2: I know! Girl 1: What did you think of The Math Teachers? Girl 2: Well, they were the loudest for sure!",
+        "passageCn": "本单元阅读材料（What's the best movie theater?）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"What's the best movie theater?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「What's the best movie theater?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U5": {
+      "dialogues": [],
+      "reading": {
+        "passage": "John: What do you want to do today, Mary? Mary: I want to watch a movie. Are there any good movies showing right now? John: Hmm, let me look in the newspaper ... How about something exciting, like an action movie or a scary movie? Mary: Oh no, I think those movies are so meaningless. John: Well, most of the movies on right now are action movies or scary movies. Mary: Oh, maybe we should stay at home and watch TV then. I want to watch something relaxing, like a game show or a sitcom. John: Hmm. I don’t really like those kinds of TV shows. I think they’re boring. I like to watch talk shows. They’re more enjoyable. Mary: OK, I like talk shows, too. I think they’re wonderful. I like to find out what different people think about a subject. John: OK, great. There’s a talk show at 4:00 p.m. Let’s watch that one.",
+        "passageCn": "本单元阅读材料（Do you want to watch a game show?）"
+      },
+      "listeningLines": [
+        "Do you want to join me?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Do you want to watch a game show?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Do you want to watch a game show?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U6": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Kim: Did you make a New Year’s resolution this year, Lucy? Lucy: Yes, Kim, I did. Kim: What are you going to do? Lucy: I’m going to learn to play the piano. Kim: Cool. How are you going to do that? Lucy: I’m going to take piano lessons. How about you? Kim: Well, my New Year’s resolution is to get good grades. Lucy: How are you going to do that? Kim: I’m going to study hard and of course do my homework every day. Lucy: That sounds good! How about you, Mike? Did you make a resolution? Mike: I sure did. I’m going to make the soccer team. Lucy: How are you going to do that? Mike: I’m going to practice really hard, and this summer, I’m going to go to a soccer camp. I can play soccer every day there.",
+        "passageCn": "本单元阅读材料（I'm going to study computer science.）"
+      },
+      "listeningLines": [
+        "How are you going to do that?",
+        "Are you going to move to Beijing?",
+        "When are you going to start?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"I'm going to study computer science.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「I'm going to study computer science.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U7": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Boy 1: Do you think people will have robots in their homes in 100 years? Boy 2: Yes, I do. I saw a robot on TV, and it cleaned the kitchen. Boy 1: Well, I don’t think people will use money. Boy 2: Do you think everything will be free? Boy 1: Yeah, probably. Boy 2: I think there will be only one country. Boy 1: Only one country in the world? Will there be world peace? Boy 2: I hope so. Boy 1: I think kids won’t go to school. They’ll study at home on computers. Boy 2: Oh, I disagree. Boy 1: You do? Boy 2: Yeah, there will always be schools.",
+        "passageCn": "本单元阅读材料（Will people have robots?）"
+      },
+      "listeningLines": [
+        "How did you get to school?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Will people have robots?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Will people have robots?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U8": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Girl 2: OK. Do you have bananas? Girl 1: Yes, I do. How many bananas do we need? Girl 2: We need three bananas. Girl 1: That sounds about right. What else? Girl 2: Watermelon. Girl 1: How many watermelons? Girl 2: Oh, only one small watermelon. And we need some honey. Girl 1: How much honey do we need? Girl 2: Let’s see. Two spoons. Girl 1: Right. What else? Girl 2: Apples. Girl 1: How many apples do we need? Girl 2: Two should be enough. And yogurt. Girl 1: How much yogurt do we need? Girl 2: A cup. Now what else do we need? Oh, do you have any oranges? Girl 1: I think so. How many oranges do we need? Girl 2: Only one. This is going to taste great!",
+        "passageCn": "本单元阅读材料（How do you make a banana milk shake?）"
+      },
+      "listeningLines": [
+        "How do you make a cheese sandwich?",
+        "How much butter?",
+        "How many tomatoes?",
+        "How much cheese?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"How do you make a banana milk shake?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「How do you make a banana milk shake?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U9": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Andy: Hi, Vince? Vince: Yeah, hi, Andy! Andy: Vince, can you play tennis with me? Vince: Uh, when? Andy: Today. Vince: Uh, no, sorry, I can’t. I have to go to the doctor and study for a test today. Andy: How about tomorrow? Vince: Sorry, tomorrow I have to play soccer and I have a piano lesson. Andy: Oh. Well, what are you doing the day after tomorrow? Vince: I may have to look after my little sister. Andy: Oh, I see. Vince: I’m sorry, Andy. I’m really busy this week!",
+        "passageCn": "本单元阅读材料（Can you come to my party?）"
+      },
+      "listeningLines": [
+        "Can you come to my party?",
+        "When is it?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Can you come to my party?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Can you come to my party?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U10": {
+      "dialogues": [],
+      "reading": null,
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"If you go to the party, you'll have a great time!\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「If you go to the party, you'll have a great time!」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    }
+  },
+  "8B": {},
+  "9": {
+    "U1": {
+      "dialogues": [],
+      "reading": {
+        "passage": "3. I also learned useful sentences like “It’s a piece of cake” or “It serves you right”.",
+        "passageCn": "本单元阅读材料（How can we become good learners?）"
+      },
+      "listeningLines": [
+        "How can we become good learners?",
+        "Well, try them on and see how they look on you. Take your time. There’s no hurry."
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"How can we become good learners?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「How can we become good learners?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U2": {
+      "dialogues": [],
+      "reading": {
+        "passage": "It’s not that bad. Even little kids dress up as ghosts or black cats. They can also dress up as fun things like cartoon characters. Some parents join in the fun by dressing up, too! Wu Yu: Do parents take their children around the neighborhood to ask for candies and treats?",
+        "passageCn": "本单元阅读材料（I think that mooncakes are delicious!）"
+      },
+      "listeningLines": [
+        "What a great day!",
+        "What did you like best?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"I think that mooncakes are delicious!\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「I think that mooncakes are delicious!」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U3": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Boy 1: Excuse me, can you tell me where I can buy some medicine? Boy 2: Yes, there’s a supermarket in this shop- ping center. Boy 1: Do you know how to go there? Boy 2: Yes. Go to the second floor and then ... then turn left. Let’s see ... Then go past the bookstore. And umm ... the supermarket is between the flower store and the bookstore. You should be able to get medicine there. Boy 1: OK, great. Oh, and one more thing. Do you know when this shopping center closes tonight? Boy 2: I’m not sure, but you can ask for information over there. Boy 1: OK, thanks a lot. Boy 2: You’re welcome.",
+        "passageCn": "本单元阅读材料（Could you please tell me where the restrooms are?）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Could you please tell me where the restrooms are?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Could you please tell me where the restrooms are?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U4": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Paula: Hey, Steve! Over here! Don’t you remember me? Steve: Oh, wow! You’re Paula, aren’t you? Paula: That’s right. We were in the same science class during Grade 8. Steve: Yes, now I remember. You used to be really quiet, didn’t you? I remember you were always silent in class. Paula: Yeah. I wasn’t very outgoing. I was never brave enough to ask the teachers any questions! Steve: Well, but you were always friendly. And you got a better grade in science than I did, haha. And I remember you were really good in music class, too. Wait a minute! Did you use to play the piano? Paula: Yes, I did. But now I’m more interested in sports. I play soccer almost every day, and I’m on a swim team. But I still play the piano from time to time. Steve: Wow, you’re so active! People sure change.",
+        "passageCn": "本单元阅读材料（I used to be afraid of the dark.）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"I used to be afraid of the dark.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「I used to be afraid of the dark.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U5": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Susan: Hi, Anita. I bought three shirts for 29 dollars yesterday! Anita: Oh, really? What are they made of though? Sometimes the cheap ones are made of materials that don’t feel very good. Susan: A hundred percent cotton. They’re nice and soft, and they were made in America. Anita: Oh, OK. By the way, where did you buy those chopsticks? They’re really cool! Susan: Oh, I got them in Korea. They’re nice, aren’t they? Anita: Yeah. Chopsticks are usually made of wood. I’ve never seen steel ones before. Susan: Oh, steel chopsticks are popular in Korea. Hey, do you think this ring looks OK? Anita: Hmm ... yes, I think it’s quite pretty. Is it made of silver? Susan: Yes, and it was made in Thailand. I’ll give it to my best friend for her birthday. Anita: Oh, I’m sure she’ll love it.",
+        "passageCn": "本单元阅读材料（What are the shirts made of?）"
+      },
+      "listeningLines": [
+        "How was your vacation?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"What are the shirts made of?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「What are the shirts made of?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U6": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Boy 1: Hey, did you know that potato chips were invented by mistake? Boy 2: Really? What do you mean? Boy 1: Well, here on the bag it says that they were invented by a cook called George Crum. Boy 2: When was that? Boy 1: Oh, it was back in 1853. Boy 2: So, why was it an accident? Boy 1: Well, one day, a customer came into the restaurant where George worked. He ordered a plate of fried potatoes. When the potatoes came, he said they were cut too thick and sent them back to the kitchen. Boy 2: So what happened? Boy 1: Well, George was angry, so he cut the potatoes really, really thin, and he cooked them for a long time until they were crispy. And he put lots of salt on them so they were really salty. He thought the customer would hate them. Boy 2: And? Boy 1: And the customer loved them and asked for more. He told the other",
+        "passageCn": "本单元阅读材料（When was it invented?）"
+      },
+      "listeningLines": [
+        "What are they used for?",
+        "What a cool story!"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"When was it invented?\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「When was it invented?」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U7": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Kathy: Hi, Molly. Where’s your brother Larry? I thought he was joining us. Molly: Hi, Kathy. I’m sorry. Larry can’t join us after all. He is working late tonight. Kathy: Oh, Larry’s working late again? Molly: Yeah, he is. Kathy: I see ... I really don’t think sixteen- year-olds should be allowed to work at night. Young people need to sleep. Molly: Oh, I disagree with you. Teenage boys never get tired. Kathy: Well, maybe. But Larry shouldn’t work every night. Molly: That’s true. He needs time to do homework. Kathy: And you know, Molly ... he should really cut his hair. Molly: Oh, I don’t know. Do you think it’s too long? Kathy: Yes, I do. It doesn’t look clean. And I think he should stop wearing that silly earring. Molly: Hmm ... I disagree. I kind of like it. It looks cool! Kathy: You know another thing that worries me? Larry doesn’t seem to have many friends. Molly: Yeah, I know. I think he shouldn’t work on weekends. Kathy: That’s right. He needs to spend time with friends.",
+        "passageCn": "本单元阅读材料（Teenagers should be allowed to choose their own clothes.）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Teenagers should be allowed to choose their own clothes.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Teenagers should be allowed to choose their own clothes.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U8": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Explain Why It Is Th ere? Stonehenge, a rock circle, is not only one of Britain’s most famous historical places but also one of its greatest mysteries. Every year it receives more than 750,000 visitors. People like to go to this place especially in June as they want to see the sun rising on the longest day of the year. For many years, historians believed Stonehenge was a temple where ancient leaders tried to communicate with the gods. However, historian Paul Stoker thinks this can’t be true because Stonehenge was built so many centuries ago. “Th e leaders arrived in England much later,” he points out. Another popular idea is that Stonehenge might be a kind of calendar. Th e large stones were put together in a certain way. On midsummer’s morning, the sun shines directly into the center of the stones. Other people believe the stones have a medical purpose. Th ey think the stones can prevent illness and keep people healthy. “As you walk there, you can feel the energy from your feet move up your body,” said one visitor. No one is sure what Stonehenge was used for, but most agree that the position of the stones must be for a special purpose. Some think it might be a burial place or a place to honor ancestors. Others think it was built to celebrate a victory over an enemy. Stonehenge was built slowly over a long period of time. Most historians believe it must be almost 5,000 years old. One of the greatest mysteries is how it was built because the stones are so big and heavy. In 2001, a group of English volunteers tried to build another Stonehenge, but they couldn’t. “We don’t really know who built Stonehenge,” says Paul Stoker. “And perhaps we might never know, but we do know they must have been hard-working — and great planners!”",
+        "passageCn": "本单元阅读材料（It must belong to Carla.）"
+      },
+      "listeningLines": [
+        "Do you think you have made correct matches in 2a?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"It must belong to Carla.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「It must belong to Carla.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U9": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Last night one of my Chinese friends took me to a concert of Chinese folk music. The piece which was played on the erhu especially moved me. The music was strangely beautiful, but under the beauty I sensed a strong sadness and pain. The piece had a simple name, Erquan Yingyue (Moon Reflected on Second Spring), but it was one of the most moving pieces of music that I’ve ever heard. The erhu sounded so sad that I almost cried along with it as I listened. Later I looked up the history of Erquan Yingyue, and I began to understand the sadness in the music. The music was written by Abing, a folk musician who was born in the city of Wuxi in 1893. His mother died when he was very young. Abing’s father taught him to play many musical instruments, such as the drums, dizi and erhu, and by age 17, Abing was known for his musical ability. However, after his father died, Abing’s life grew worse. He was very poor. Not only that, he developed a serious illness and became blind. For several years, he had no home. He lived on the streets and played music to make money. Even after Abing got married and had a home again, he continued to sing and play on the streets. He performed in this way for many years. Abing’s amazing musical skills made him very popular during his lifetime. By the end of his life, he could play over 600 pieces of music. Many of these were written by Abing himself. It is a pity that only six pieces of music in total were recorded for the future world to hear, but his popularity continues to this day. Today, Abing’s Erquan Yingyue is a piece which all the great erhu masters play and praise. It has become one of China’s national treasures. Its sad beauty not only paints a picture of Abing’s own life but also makes people recall their deepest wounds from their own sad or painful experiences.",
+        "passageCn": "本单元阅读材料（I like music that I can dance to.）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"I like music that I can dance to.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「I like music that I can dance to.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U10": {
+      "dialogues": [],
+      "reading": {
+        "passage": "You’re supposed to shake hands. 1. I held out my hand and to my surprise, she kissed me on both sides of my face!",
+        "passageCn": "本单元阅读材料（You're supposed to shake hands.）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"You're supposed to shake hands.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「You're supposed to shake hands.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U11": {
+      "dialogues": [],
+      "reading": {
+        "passage": "John: Did you and Amy have fun last night, Tina? Tina: Well ... yes and no. John: Was Amy late as usual? Tina: Yes, she was, and waiting for her drove me crazy. John: Oh dear. Where did you go for dinner, then? Tina: First we went to Rockin’ Restaurant, but Amy didn’t want to stay. She said that the loud music made her nervous. John: That’s funny. Loud music always makes me want to dance. Tina: Me, too. So we went to Blue Ocean. It was quiet and the food was great. We had a good time. John: Then did you go to the concert at the high school? Tina: No. We decided to go to the movies. We saw Remember Me Forever. It was a really good movie, but it was so sad that it made us cry. John: Sad movies don’t make me cry. They just make me want to leave! Tina: You sound just like my brother!",
+        "passageCn": "本单元阅读材料（Sad movies make me cry.）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Sad movies make me cry.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Sad movies make me cry.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U12": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Have you ever played jokes on others, especially on April Fool’s Day? Have you ever been fooled by others? Tell your story to your partner. April Fool’s Day is a celebration that takes place in diﬀ erent countries around the world. It happens on April 1st every year and is a day when many people play all kinds of tricks and jokes on each other. One April Fool’s Day, a reporter in England announced that there would be no more spaghett i because the spaghett i farmers in Italy had stopped growing spaghett i. Many people ran to their local supermarkets to buy as much spaghett i as they could. By the time people realized that the story was a hoax, all of the spaghett i across the country had been sold out. In another famous trick a TV show in England reported the discovery of special water. Th ey said this water would help people lose weight and that one customer had already lost a lot of weight in just four months. By the end of the day, more than 10,000 people had phoned the TV station to fi nd out how to get this water. Many April Fool’s jokes may end up being not very funny. A famous TV star once invited his girlfriend onto his show on April Fool’s Day. He asked her to marry him. Th e lady was so happy because she really wanted to get married. However, when she said yes, he replied, “April Fool!” Th at litt le joke didn’t have a very happy ending. Th e TV star lost his girlfriend and his show was canceled. One of the world’s most famous tricks, however, happened in October rather than in April. In that month in 1938, actor Orson Welles announced on his radio program that aliens from Mars had landed on the earth. He described where they had landed and told how they were moving across the United States. Welles made it sound so real that hundreds of people believed the story, and fear spread across the whole country. By the time police oﬃ cers announced that the story was a hoax, thousands of people had left their homes.",
+        "passageCn": "本单元阅读材料（Life is full of the unexpected.）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"Life is full of the unexpected.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「Life is full of the unexpected.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U13": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Mark: I don’t think I want to go, Tony. Tony: Why not? Mark: I was there last weekend and the river was really dirty. Even the bottom of the river was full of rubbish, and there were no more fish for fishermen to catch. Tony: No way! It used to be so clean. In fact, it has always been the nicest river in this town. Mark: Not anymore. I think people are throwing litter into the river. Factories are also putting waste into the river. Tony: That’s terrible! We should write to the government. They should close down the factories. Mark: Good idea! But I think everyone in this town should help to clean up the river, too. Everyone should play a part, not just the government.",
+        "passageCn": "本单元阅读材料（We're trying to save the earth!）"
+      },
+      "listeningLines": [],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"We're trying to save the earth!\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「We're trying to save the earth!」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    },
+    "U14": {
+      "dialogues": [],
+      "reading": {
+        "passage": "Hmm ... I used to be scared of Mr. Brown in Grade 8. He was so strict! I always did my homework carefully to meet his standards. Sarah: Me, too. And I remember meeting all of you in Grade 7. And we’ve been good friends ever since, haven’t we, Frank? Frank: Yeah! I’ve enjoyed every year of junior high school.",
+        "passageCn": "本单元阅读材料（I remember meeting all of you in Grade 7.）"
+      },
+      "listeningLines": [
+        "Is he/she asked …?",
+        "Do you know when the bookstore closes today?",
+        "Can you tell me who she is?"
+      ],
+      "writing": {
+        "prompt": "Write 4-6 sentences about \"I remember meeting all of you in Grade 7.\" using words from this unit.",
+        "promptCn": "用 4-6 个句子描述本单元「I remember meeting all of you in Grade 7.」，使用本单元词汇。",
+        "sampleWords": []
+      }
+    }
+  }
+}

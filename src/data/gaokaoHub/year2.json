@@ -1,0 +1,4349 @@
+{
+  "year2": {
+    "name": "高二",
+    "semesters": {
+      "gk_required3": {
+        "name": "必修第三册",
+        "available": true,
+        "units": [
+          {
+            "id": "gk2_required3_u1",
+            "num": 1,
+            "unitKey": "U1",
+            "book": "required3",
+            "title": "Festivals and Celebrations",
+            "cn": "节日与庆典",
+            "emoji": "🎉",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "PUTONG",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "GAOZHONG",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "JIAOKESHU",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "YINGYU",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "ENGLISH",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Patrick",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Wallace",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Sarah",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Homes",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Mars",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "FESTIVALS",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "CELEBRATIONS",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss Festivals and Celebrations.",
+                    "cn": "我们来讨论Festivals and Celebrations。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned PUTONG today.",
+                    "cn": "好的，我今天学了必修第三册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And GAOZHONG is important too.",
+                    "cn": "必修第三册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "被动语态",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "被动语态",
+            "grammarCode": "pep-r3-passive-voice",
+            "grammarQuiz": [
+              {
+                "q": "______ if you study festivals carefully, you may be surprised to find that different cultures actually have a lot in common after all.\n\n（被动语态 · 教材原句）",
+                "opts": [
+                  "And",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "It is often ______ first sentence, gives the main idea. but sometimes it is found elsewhere in the paragraph. 4 In pairs, discuss the following questions. 1 What do most festivals seem to have in comm",
+                "opts": [
+                  "the",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "Be sure to use ______ correct forms.\n\n（被动语态 · 教材原句）",
+                "opts": [
+                  "the",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "Today’s festivals have a ______ of origins, including the seasons of the year, famous , important events, and religions.\n\n（被动语态 · 教材原句）",
+                "opts": [
+                  "wide",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Festivals are celebrated all around the world. They have a wide range of origins, such as the seasons of the year, religions, famous figures, and important events. Every festival has its different customs and unique charms. However, no matter how different they may seem, all over the world, the spirit of sharing joy, gratitude, love, or peace is common in all festivals. Of all the traditional festivals, the harvest festival can be found in almost every culture. This important agricultural festival takes place after all the crops have been gathered in. People celebrate to show that they are grateful for the year's supply of food. In ancient Egypt, the harvest festival was celebrated during the springtime—the Egyptian harvest season.",
+              "passageCn": "（人教版必修第三册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"Festivals are celebrated all around the world....\"",
+                  "opts": [
+                    "Festivals are celebrated all around the world.",
+                    "Unrelated.",
+                    "Not stated.",
+                    "Opposite meaning."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"They have a wide range of origins, such as the sea...\"",
+                  "opts": [
+                    "Not stated.",
+                    "Opposite meaning.",
+                    "They have a wide range of origins, such as the seasons of the year, re",
+                    "Unrelated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"Every festival has its different customs and uniqu...\"",
+                  "opts": [
+                    "Every festival has its different customs and unique charms.",
+                    "Opposite meaning.",
+                    "Not stated.",
+                    "Unrelated."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"However, no matter how different they may seem, al...\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "Not stated.",
+                    "Unrelated.",
+                    "However, no matter how different they may seem, all over the world, th"
+                  ],
+                  "answer": 3,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"必修第三册 · Reading 1\" (PEP 必修第三册).",
+              "promptCn": "根据人教版《必修第三册》课文《必修第三册 · Reading 1》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「PUTONG」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项2",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「GAOZHONG」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项2"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「JIAOKESHU」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项2"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「YINGYU」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项2",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ENGLISH」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项1",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Patrick」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项3",
+                  "选项2",
+                  "必修第三册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Wallace」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项1",
+                  "选项3",
+                  "必修第三册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Sarah」的意思是？",
+                "opts": [
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项2",
+                  "选项3"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「节日与庆典」相关词是？",
+                "opts": [
+                  "PUTONG",
+                  "Patrick",
+                  "Wallace",
+                  "Sarah"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "Every festival has its different customs and unique charms.",
+                  "They have a wide range of origins, such as the seasons of the year, reli",
+                  "However, no matter how different they may seem, all over the world, the ",
+                  "Festivals are celebrated all around the world."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "They have a wide range of origins, such as the seasons of the year, reli",
+                  "Festivals are celebrated all around the world.",
+                  "Every festival has its different customs and unique charms.",
+                  "However, no matter how different they may seem, all over the world, the "
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "Every festival has its different customs and unique charms.",
+                  "Festivals are celebrated all around the world.",
+                  "However, no matter how different they may seem, all over the world, the ",
+                  "They have a wide range of origins, such as the seasons of the year, reli"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "Festivals are celebrated all around the world.",
+                  "However, no matter how different they may seem, all over the world, the ",
+                  "Every festival has its different customs and unique charms.",
+                  "They have a wide range of origins, such as the seasons of the year, reli"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "Every festival has its different customs and unique charms.",
+                  "Festivals are celebrated all around the world.",
+                  "They have a wide range of origins, such as the seasons of the year, reli",
+                  "Of all the traditional festivals, the harvest festival can be found in a"
+                ],
+                "answer": 3
+              }
+            ]
+          },
+          {
+            "id": "gk2_required3_u2",
+            "num": 2,
+            "unitKey": "U2",
+            "book": "required3",
+            "title": "Morals and Virtues",
+            "cn": "道德与品格",
+            "emoji": "💡",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "Hair",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Make-up",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Going",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Soon",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Conversation",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Carla",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Advises",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Weather",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Outside",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "People",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Enjoying",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "List",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss Morals and Virtues.",
+                    "cn": "我们来讨论Morals and Virtues。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned Hair today.",
+                    "cn": "好的，我今天学了必修第三册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And Make-up is important too.",
+                    "cn": "必修第三册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "情态动词与道德选择",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "情态动词与道德选择",
+            "grammarCode": "pep-r3-u2-morals",
+            "grammarQuiz": [
+              {
+                "q": "______ days, festivals are becoming more , with people spending more money on gifts.\n\n（情态动词与道德选择 · 教材原句）",
+                "opts": [
+                  "These",
+                  "gifts",
+                  "life",
+                  "form"
+                ],
+                "answer": 0,
+                "point": "情态动词与道德选择",
+                "dim": "grammar"
+              },
+              {
+                "q": "Festivals ______’s wishes, beliefs, faiths, and attitudes towards life.\n\n（情态动词与道德选择 · 教材原句）",
+                "opts": [
+                  "people",
+                  "gifts",
+                  "life",
+                  "form"
+                ],
+                "answer": 0,
+                "point": "情态动词与道德选择",
+                "dim": "grammar"
+              },
+              {
+                "q": "They are to ______ time with family, and to relax and enjoy life.\n\n（情态动词与道德选择 · 教材原句）",
+                "opts": [
+                  "spend",
+                  "gifts",
+                  "life",
+                  "form"
+                ],
+                "answer": 0,
+                "point": "情态动词与道德选择",
+                "dim": "grammar"
+              },
+              {
+                "q": "Discovering Useful Structures ______ festival activities 1 Read the sentences below and discuss the functions and meanings of the italicised -ing form.\n\n（情态动词与道德选择 · 教材原句）",
+                "opts": [
+                  "Describe",
+                  "gifts",
+                  "life",
+                  "form"
+                ],
+                "answer": 0,
+                "point": "情态动词与道德选择",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festival in China's Inner Mongolia State the topic Autonomous Region for the first time this year. The festival falls (e.g., where, when, on the fourth day of the sixth month of the lunar calendar, usually and with whom lasting for three days. Naadam means \"games\" in Mongolian, you celebrated the and it is represented by three events: horse racing, wrestling, and festival, and also your main feeling). archery, which are all so exciting to watch! On the first day, I set off to the games early with my friend Burin. First Body I saw a lot of people wearing fancy Mongolian robes. Some Paragraph: were feeding their horses, some were practising archery, and others were chatting or taking photographs. Burin told me that Describe the start of the festival and Mongolians travel every year from near and far to attend the the surroundings. festival, just as their ancestors had done for centuries. After the opening ceremony and some amazing performances, the wrestling competition began.",
+              "passageCn": "（人教版必修第三册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I ...\"",
+                  "opts": [
+                    "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naad",
+                    "Not stated.",
+                    "Unrelated.",
+                    "Opposite meaning."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"The festival falls (e.g., where, when, on the four...\"",
+                  "opts": [
+                    "The festival falls (e.g., where, when, on the fourth day of the sixth ",
+                    "Opposite meaning.",
+                    "Not stated.",
+                    "Unrelated."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"Naadam means \"games\" in Mongolian, you celebrated ...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "Naadam means \"games\" in Mongolian, you celebrated the and it is repres",
+                    "Not stated.",
+                    "Opposite meaning."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"archery, which are all so exciting to watch!...\"",
+                  "opts": [
+                    "Not stated.",
+                    "Unrelated.",
+                    "archery, which are all so exciting to watch!",
+                    "Opposite meaning."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"MY AMAZING NAADAM EXPERIENCE\" (PEP 必修第三册).",
+              "promptCn": "根据人教版《必修第三册》课文《MY AMAZING NAADAM EXPERIENCE》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「Hair」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项1",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Make-up」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项1",
+                  "选项3",
+                  "必修第三册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Going」的意思是？",
+                "opts": [
+                  "选项2",
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Soon」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项3",
+                  "必修第三册 课文词汇",
+                  "选项2"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Conversation」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项3",
+                  "必修第三册 课文词汇",
+                  "选项2"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Carla」的意思是？",
+                "opts": [
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Advises」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项2",
+                  "必修第三册 课文词汇",
+                  "选项3"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Weather」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项1",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「道德与品格」相关词是？",
+                "opts": [
+                  "List",
+                  "school",
+                  "Hair",
+                  "Going"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "On the first day, I set off to the games early with my friend Burin.",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam",
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "First Body I saw a lot of people wearing fancy Mongolian robes."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "First Body I saw a lot of people wearing fancy Mongolian robes.",
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam",
+                  "On the first day, I set off to the games early with my friend Burin."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "First Body I saw a lot of people wearing fancy Mongolian robes.",
+                  "On the first day, I set off to the games early with my friend Burin.",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "First Body I saw a lot of people wearing fancy Mongolian robes.",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam",
+                  "On the first day, I set off to the games early with my friend Burin."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "On the first day, I set off to the games early with my friend Burin.",
+                  "Some Paragraph: were feeding their horses, some were practising archery,",
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam"
+                ],
+                "answer": 1
+              }
+            ]
+          },
+          {
+            "id": "gk2_required3_u3",
+            "num": 3,
+            "unitKey": "U3",
+            "book": "required3",
+            "title": "Diverse Cultures",
+            "cn": "多元文化",
+            "emoji": "🌏",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "Partner",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Differences",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Repeat",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "CELEBRATE",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Celebrated",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Around",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "World",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Wide",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Range",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Origins",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Seasons",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Year",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss Diverse Cultures.",
+                    "cn": "我们来讨论Diverse Cultures。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned Partner today.",
+                    "cn": "好的，我今天学了必修第三册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And Differences is important too.",
+                    "cn": "必修第三册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "多元文化阅读表达",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "多元文化阅读表达",
+            "grammarCode": "pep-r3-u3-diverse-cultures",
+            "grammarQuiz": [
+              {
+                "q": "______ the -ing form used as the attribute or the predicative.\n\n（多元文化阅读表达 · 教材原句）",
+                "opts": [
+                  "Underline",
+                  "predicative",
+                  "best",
+                  "Carnival"
+                ],
+                "answer": 0,
+                "point": "多元文化阅读表达",
+                "dim": "grammar"
+              },
+              {
+                "q": "Discussion: ______ festival is the best?\n\n（多元文化阅读表达 · 教材原句）",
+                "opts": [
+                  "Which",
+                  "predicative",
+                  "best",
+                  "Carnival"
+                ],
+                "answer": 0,
+                "point": "多元文化阅读表达",
+                "dim": "grammar"
+              },
+              {
+                "q": "Today 9:05 am Rio ______!\n\n（多元文化阅读表达 · 教材原句）",
+                "opts": [
+                  "Carnival",
+                  "predicative",
+                  "best",
+                  "friends"
+                ],
+                "answer": 0,
+                "point": "多元文化阅读表达",
+                "dim": "grammar"
+              },
+              {
+                "q": "I spent a really fun ______ there with my friends.\n\n（多元文化阅读表达 · 教材原句）",
+                "opts": [
+                  "day",
+                  "predicative",
+                  "best",
+                  "Carnival"
+                ],
+                "answer": 0,
+                "point": "多元文化阅读表达",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Underline the sentences about these choices. 2 What were the results of her choices? 3 What does the author want to illustrate by mentioning Dr Lin's life choices? As a five-year-old girl, Lin Qiaozhi was deeply affected by her mother's death. At age 18, instead of following the traditional path of marriage like the majority of girls, she chose to study medicine. Finding a good husband should be their final goal!\" her brother complained, thinking of the high tuition fees. She responded, \"I'd rather stay single to study all my life!\"",
+              "passageCn": "（人教版必修第三册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"Underline the sentences about these choices....\"",
+                  "opts": [
+                    "Not stated.",
+                    "Opposite meaning.",
+                    "Unrelated.",
+                    "Underline the sentences about these choices."
+                  ],
+                  "answer": 3,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"2 What were the results of her choices?...\"",
+                  "opts": [
+                    "2 What were the results of her choices?",
+                    "Not stated.",
+                    "Opposite meaning.",
+                    "Unrelated."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"3 What does the author want to illustrate by menti...\"",
+                  "opts": [
+                    "Not stated.",
+                    "3 What does the author want to illustrate by mentioning Dr Lin's life ",
+                    "Opposite meaning.",
+                    "Unrelated."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"As a five-year-old girl, Lin Qiaozhi was deeply af...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "As a five-year-old girl, Lin Qiaozhi was deeply affected by her mother",
+                    "Not stated.",
+                    "Opposite meaning."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"必修第三册 · Reading 1\" (PEP 必修第三册).",
+              "promptCn": "根据人教版《必修第三册》课文《必修第三册 · Reading 1》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「Partner」的意思是？",
+                "opts": [
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Differences」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项2",
+                  "必修第三册 课文词汇",
+                  "选项1"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Repeat」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项2",
+                  "选项3",
+                  "必修第三册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「CELEBRATE」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项2",
+                  "选项1",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Celebrated」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项3",
+                  "必修第三册 课文词汇",
+                  "选项2"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Around」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项1",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「World」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项2",
+                  "必修第三册 课文词汇",
+                  "选项3"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Wide」的意思是？",
+                "opts": [
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「多元文化」相关词是？",
+                "opts": [
+                  "Seasons",
+                  "Partner",
+                  "Year",
+                  "World"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Underline the sentences about these choices. 2 What were the results of her choi",
+                "opts": [
+                  "As a five-year-old girl, Lin Qiaozhi was deeply affected by her mother's",
+                  "Finding a good husband should be their final goal!\" her brother complain",
+                  "At age 18, instead of following the traditional path of marriage like th",
+                  "Underline the sentences about these choices. 2 What were the results of "
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Underline the sentences about these choices. 2 What were the results of her choi",
+                "opts": [
+                  "As a five-year-old girl, Lin Qiaozhi was deeply affected by her mother's",
+                  "At age 18, instead of following the traditional path of marriage like th",
+                  "Finding a good husband should be their final goal!\" her brother complain",
+                  "Underline the sentences about these choices. 2 What were the results of "
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Underline the sentences about these choices. 2 What were the results of her choi",
+                "opts": [
+                  "At age 18, instead of following the traditional path of marriage like th",
+                  "As a five-year-old girl, Lin Qiaozhi was deeply affected by her mother's",
+                  "Underline the sentences about these choices. 2 What were the results of ",
+                  "Finding a good husband should be their final goal!\" her brother complain"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Underline the sentences about these choices. 2 What were the results of her choi",
+                "opts": [
+                  "Finding a good husband should be their final goal!\" her brother complain",
+                  "Underline the sentences about these choices. 2 What were the results of ",
+                  "As a five-year-old girl, Lin Qiaozhi was deeply affected by her mother's",
+                  "At age 18, instead of following the traditional path of marriage like th"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Underline the sentences about these choices. 2 What were the results of her choi",
+                "opts": [
+                  "She responded, \"I'd rather stay single to study all my life!\"",
+                  "As a five-year-old girl, Lin Qiaozhi was deeply affected by her mother's",
+                  "At age 18, instead of following the traditional path of marriage like th",
+                  "Underline the sentences about these choices. 2 What were the results of "
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "gk2_required3_u4",
+            "num": 4,
+            "unitKey": "U4",
+            "book": "required3",
+            "title": "Space Exploration",
+            "cn": "太空探索",
+            "emoji": "🚀",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "Common",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Traditional",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Harvest",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Found",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Almost",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Culture",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Agricultural",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Takes",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Place",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Crops",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Gathered",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Grateful",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss Space Exploration.",
+                    "cn": "我们来讨论Space Exploration。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned Common today.",
+                    "cn": "好的，我今天学了必修第三册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And Traditional is important too.",
+                    "cn": "必修第三册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "被动语态",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "被动语态",
+            "grammarCode": "pep-r3-passive-voice",
+            "grammarQuiz": [
+              {
+                "q": "______ if you study festivals carefully, you may be surprised to find that different cultures actually have a lot in common after all.\n\n（被动语态 · 教材原句）",
+                "opts": [
+                  "And",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "It is often ______ first sentence, gives the main idea. but sometimes it is found elsewhere in the paragraph. 4 In pairs, discuss the following questions. 1 What do most festivals seem to have in comm",
+                "opts": [
+                  "the",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "Be sure to use ______ correct forms.\n\n（被动语态 · 教材原句）",
+                "opts": [
+                  "the",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "Today’s festivals have a ______ of origins, including the seasons of the year, famous , important events, and religions.\n\n（被动语态 · 教材原句）",
+                "opts": [
+                  "wide",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Festivals are celebrated all around the world. They have a wide range of origins, such as the seasons of the year, religions, famous figures, and important events. Every festival has its different customs and unique charms. However, no matter how different they may seem, all over the world, the spirit of sharing joy, gratitude, love, or peace is common in all festivals. Of all the traditional festivals, the harvest festival can be found in almost every culture. This important agricultural festival takes place after all the crops have been gathered in. People celebrate to show that they are grateful for the year's supply of food. In ancient Egypt, the harvest festival was celebrated during the springtime—the Egyptian harvest season.",
+              "passageCn": "（人教版必修第三册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"Festivals are celebrated all around the world....\"",
+                  "opts": [
+                    "Festivals are celebrated all around the world.",
+                    "Unrelated.",
+                    "Not stated.",
+                    "Opposite meaning."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"They have a wide range of origins, such as the sea...\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "Not stated.",
+                    "Unrelated.",
+                    "They have a wide range of origins, such as the seasons of the year, re"
+                  ],
+                  "answer": 3,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"Every festival has its different customs and uniqu...\"",
+                  "opts": [
+                    "Not stated.",
+                    "Opposite meaning.",
+                    "Unrelated.",
+                    "Every festival has its different customs and unique charms."
+                  ],
+                  "answer": 3,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"However, no matter how different they may seem, al...\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "However, no matter how different they may seem, all over the world, th",
+                    "Unrelated.",
+                    "Not stated."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"MY AMAZING NAADAM EXPERIENCE\" (PEP 必修第三册).",
+              "promptCn": "根据人教版《必修第三册》课文《MY AMAZING NAADAM EXPERIENCE》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「Common」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项2",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Traditional」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项2"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Harvest」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项3"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Found」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项1",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Almost」的意思是？",
+                "opts": [
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Culture」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项2",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Agricultural」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项2",
+                  "选项1",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Takes」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项3",
+                  "选项1",
+                  "必修第三册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「太空探索」相关词是？",
+                "opts": [
+                  "Common",
+                  "Gathered",
+                  "Place",
+                  "Found"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "Every festival has its different customs and unique charms.",
+                  "They have a wide range of origins, such as the seasons of the year, reli",
+                  "However, no matter how different they may seem, all over the world, the ",
+                  "Festivals are celebrated all around the world."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "They have a wide range of origins, such as the seasons of the year, reli",
+                  "Festivals are celebrated all around the world.",
+                  "Every festival has its different customs and unique charms.",
+                  "However, no matter how different they may seem, all over the world, the "
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "Every festival has its different customs and unique charms.",
+                  "Festivals are celebrated all around the world.",
+                  "However, no matter how different they may seem, all over the world, the ",
+                  "They have a wide range of origins, such as the seasons of the year, reli"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "Festivals are celebrated all around the world.",
+                  "However, no matter how different they may seem, all over the world, the ",
+                  "Every festival has its different customs and unique charms.",
+                  "They have a wide range of origins, such as the seasons of the year, reli"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Festivals are celebrated all around the world. They have a wide range of origins",
+                "opts": [
+                  "Every festival has its different customs and unique charms.",
+                  "Festivals are celebrated all around the world.",
+                  "They have a wide range of origins, such as the seasons of the year, reli",
+                  "Of all the traditional festivals, the harvest festival can be found in a"
+                ],
+                "answer": 3
+              }
+            ]
+          },
+          {
+            "id": "gk2_required3_u5",
+            "num": 5,
+            "unitKey": "U5",
+            "book": "required3",
+            "title": "The Value of Money",
+            "cn": "金钱的价值",
+            "emoji": "💰",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "Decorate",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Churches",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Town",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Halls",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Flowers",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Fruit",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Together",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Meal",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Mid-Autumn",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "China",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Families",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Gather",
+                "cn": "必修第三册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss The Value of Money.",
+                    "cn": "我们来讨论The Value of Money。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned Decorate today.",
+                    "cn": "好的，我今天学了必修第三册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And Churches is important too.",
+                    "cn": "必修第三册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "被动语态",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "被动语态",
+            "grammarCode": "pep-r3-passive-voice",
+            "grammarQuiz": [
+              {
+                "q": "______ if you study festivals carefully, you may be surprised to find that different cultures actually have a lot in common after all.\n\n（被动语态 · 教材原句）",
+                "opts": [
+                  "And",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "It is often ______ first sentence, gives the main idea. but sometimes it is found elsewhere in the paragraph. 4 In pairs, discuss the following questions. 1 What do most festivals seem to have in comm",
+                "opts": [
+                  "the",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "Be sure to use ______ correct forms.\n\n（被动语态 · 教材原句）",
+                "opts": [
+                  "the",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "Today’s festivals have a ______ of origins, including the seasons of the year, famous , important events, and religions.\n\n（被动语态 · 教材原句）",
+                "opts": [
+                  "wide",
+                  "all",
+                  "common",
+                  "forms"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festival in China's Inner Mongolia State the topic Autonomous Region for the first time this year. The festival falls (e.g., where, when, on the fourth day of the sixth month of the lunar calendar, usually and with whom lasting for three days. Naadam means \"games\" in Mongolian, you celebrated the and it is represented by three events: horse racing, wrestling, and festival, and also your main feeling). archery, which are all so exciting to watch! On the first day, I set off to the games early with my friend Burin. First Body I saw a lot of people wearing fancy Mongolian robes. Some Paragraph: were feeding their horses, some were practising archery, and others were chatting or taking photographs. Burin told me that Describe the start of the festival and Mongolians travel every year from near and far to attend the the surroundings. festival, just as their ancestors had done for centuries. After the opening ceremony and some amazing performances, the wrestling competition began.",
+              "passageCn": "（人教版必修第三册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I ...\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "Not stated.",
+                    "Unrelated.",
+                    "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naad"
+                  ],
+                  "answer": 3,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"The festival falls (e.g., where, when, on the four...\"",
+                  "opts": [
+                    "The festival falls (e.g., where, when, on the fourth day of the sixth ",
+                    "Unrelated.",
+                    "Opposite meaning.",
+                    "Not stated."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"Naadam means \"games\" in Mongolian, you celebrated ...\"",
+                  "opts": [
+                    "Not stated.",
+                    "Naadam means \"games\" in Mongolian, you celebrated the and it is repres",
+                    "Unrelated.",
+                    "Opposite meaning."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"archery, which are all so exciting to watch!...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "Not stated.",
+                    "archery, which are all so exciting to watch!",
+                    "Opposite meaning."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"必修第三册 · Reading 1\" (PEP 必修第三册).",
+              "promptCn": "根据人教版《必修第三册》课文《必修第三册 · Reading 1》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「Decorate」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项3",
+                  "选项1",
+                  "必修第三册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Churches」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项2",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Town」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项1",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Halls」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项1",
+                  "必修第三册 课文词汇",
+                  "选项3"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Flowers」的意思是？",
+                "opts": [
+                  "选项2",
+                  "必修第三册 课文词汇",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Fruit」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项3",
+                  "必修第三册 课文词汇",
+                  "选项1"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Together」的意思是？",
+                "opts": [
+                  "必修第三册 课文词汇",
+                  "选项2",
+                  "选项1",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Meal」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项2",
+                  "选项1",
+                  "必修第三册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「金钱的价值」相关词是？",
+                "opts": [
+                  "Town",
+                  "Decorate",
+                  "Churches",
+                  "Together"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "On the first day, I set off to the games early with my friend Burin.",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam",
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "First Body I saw a lot of people wearing fancy Mongolian robes."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "First Body I saw a lot of people wearing fancy Mongolian robes.",
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam",
+                  "On the first day, I set off to the games early with my friend Burin."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "First Body I saw a lot of people wearing fancy Mongolian robes.",
+                  "On the first day, I set off to the games early with my friend Burin.",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "First Body I saw a lot of people wearing fancy Mongolian robes.",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam",
+                  "On the first day, I set off to the games early with my friend Burin."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam Festiva",
+                "opts": [
+                  "On the first day, I set off to the games early with my friend Burin.",
+                  "Some Paragraph: were feeding their horses, some were practising archery,",
+                  "The festival falls (e.g., where, when, on the fourth day of the sixth mo",
+                  "MY AMAZING NAADAM EXPERIENCE Opening Paragraph: I experienced the Naadam"
+                ],
+                "answer": 1
+              }
+            ]
+          }
+        ]
+      },
+      "gk_elective1": {
+        "name": "选择性必修第一册",
+        "available": true,
+        "units": [
+          {
+            "id": "gk2_elective1_u1",
+            "num": 1,
+            "unitKey": "U1",
+            "book": "elective1",
+            "title": "People of Achievement",
+            "cn": "杰出人物",
+            "emoji": "🏆",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "PUTONG",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "GAOZHONG",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "JIAOKESHU",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "YINGYU",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Iinndddd",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "ENGLISH",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Artificial",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Intelligence",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "FUTURE",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Cloning",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Leading",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Reading",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss People of Achievement.",
+                    "cn": "我们来讨论People of Achievement。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned PUTONG today.",
+                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And GAOZHONG is important too.",
+                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "非谓语动词",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "非谓语动词",
+            "grammarCode": "pep-e1-nonfinite-verbs",
+            "grammarQuiz": [
+              {
+                "q": "He ______ penicillin.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "discovered",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "The ______ tells us about Alexander Fleming, who discovered penicillin. 1 We were very impressed by the old man.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "book",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "He was not ______ to acknowledge defeat. 2 Afterwards, Einstein had to flee Germany.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "willing",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "Hitler was in power ______. 3 There is nothing we can do to help Linda.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "there",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Find descriptive words 2 Which is more important for making a great discovery, talent or effort? Pay attention to the descriptive words in a passage. These will help you form a better impression 2 Scan the text and find descriptive words about of the subject described in the passage. TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This year's Nobel Prize for Physiology or Medicine has been awarded to Tu Youyou (co-winner), whose research led to the discovery of artemisinin, a crucial new treatment for malaria. Artemisinin has saved hundreds of thousands of lives, and has led to improved health for millions of people. Over 200 million people around the world get malaria each year, and about 600,000 die from it. Artemisinin has become a vital part of the treatment for malaria, and is thought to save 100,000 lives a year in Africa alone. Tu Youyou, a committed and patient scientist, was born in Ningbo, China, on 30 December 1930, and graduated from Peking University Medical School in 1955.",
+              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"Find descriptive words 2 Which is more important f...\"",
+                  "opts": [
+                    "Not stated.",
+                    "Opposite meaning.",
+                    "Find descriptive words 2 Which is more important for making a great di",
+                    "Unrelated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"Pay attention to the descriptive words in a passag...\"",
+                  "opts": [
+                    "Pay attention to the descriptive words in a passage.",
+                    "Unrelated.",
+                    "Opposite meaning.",
+                    "Not stated."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"These will help you form a better impression 2 Sca...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "Not stated.",
+                    "These will help you form a better impression 2 Scan the text and find ",
+                    "Opposite meaning."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This ...\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "Unrelated.",
+                    "Not stated.",
+                    "TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This year's Nobel Prize f"
+                  ],
+                  "answer": 3,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"TU YOUYOU AWARDED NOBEL PRIZE\" (PEP 选择性必修第一册).",
+              "promptCn": "根据人教版《选择性必修第一册》课文《TU YOUYOU AWARDED NOBEL PRIZE》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「PUTONG」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项2",
+                  "选择性必修第一册 课文词汇",
+                  "选项3"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「GAOZHONG」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选择性必修第一册 课文词汇",
+                  "选项2",
+                  "选项3"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「JIAOKESHU」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项2",
+                  "选项1",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「YINGYU」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Iinndddd」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项2",
+                  "选项1",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ENGLISH」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Artificial」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项3",
+                  "选项2",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Intelligence」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项3",
+                  "选项2",
+                  "选项1"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「杰出人物」相关词是？",
+                "opts": [
+                  "Leading",
+                  "Artificial",
+                  "ENGLISH",
+                  "PUTONG"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "Pay attention to the descriptive words in a passage.",
+                  "These will help you form a better impression 2 Scan the text and find de",
+                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "These will help you form a better impression 2 Scan the text and find de",
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "Pay attention to the descriptive words in a passage.",
+                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp",
+                  "Pay attention to the descriptive words in a passage.",
+                  "These will help you form a better impression 2 Scan the text and find de"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "Pay attention to the descriptive words in a passage.",
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "These will help you form a better impression 2 Scan the text and find de",
+                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "These will help you form a better impression 2 Scan the text and find de",
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "Over 200 million people around the world get malaria each year, and abou",
+                  "Pay attention to the descriptive words in a passage."
+                ],
+                "answer": 2
+              }
+            ]
+          },
+          {
+            "id": "gk2_elective1_u2",
+            "num": 2,
+            "unitKey": "U2",
+            "book": "elective1",
+            "title": "Looking into the Future",
+            "cn": "展望未来",
+            "emoji": "🔮",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "Discovery",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Talent",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Effort",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Attention",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Passage",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Form",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Better",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Impression",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Scan",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Text",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Subject",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Described",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss Looking into the Future.",
+                    "cn": "我们来讨论Looking into the Future。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned Discovery today.",
+                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And Talent is important too.",
+                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "跨文化交际句型",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "跨文化交际句型",
+            "grammarCode": "pep-e1-u2-bridging-cultures",
+            "grammarQuiz": [
+              {
+                "q": "He ______ born in Guangzhou, China. 6 I was asked to explain the project with the help of a flow chart.\n\n（跨文化交际句型 · 教材原句）",
+                "opts": [
+                  "was",
+                  "chart",
+                  "groups",
+                  "information"
+                ],
+                "answer": 0,
+                "point": "跨文化交际句型",
+                "dim": "grammar"
+              },
+              {
+                "q": "It was a ______ challenge for me. 3 Work in groups.\n\n（跨文化交际句型 · 教材原句）",
+                "opts": [
+                  "big",
+                  "chart",
+                  "groups",
+                  "information"
+                ],
+                "answer": 0,
+                "point": "跨文化交际句型",
+                "dim": "grammar"
+              },
+              {
+                "q": "Complete the ______ using non-restrictive relative clauses to give extra information.\n\n（跨文化交际句型 · 教材原句）",
+                "opts": [
+                  "sentences",
+                  "chart",
+                  "groups",
+                  "information"
+                ],
+                "answer": 0,
+                "point": "跨文化交际句型",
+                "dim": "grammar"
+              },
+              {
+                "q": "Then share them ______ your group members.\n\n（跨文化交际句型 · 教材原句）",
+                "opts": [
+                  "with",
+                  "chart",
+                  "groups",
+                  "information"
+                ],
+                "answer": 0,
+                "point": "跨文化交际句型",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "The types of phrases used in a passage help identify 2 What do you think a \"smart\" house can do its purpose. For example, the phrase in my opinion that other houses cannot? tells us that the passage is likely meant to persuade. And a text that uses imperatives is likely meant to instruct. A passage's content helps identify its 2 Skim the text and answer these audience. For example, a passage that gives tips questions. on looking after pets would have pet owners as its audience. 1 What is the purpose of the text? 2 Who is the intended audience of this text? SMART HOMES TO MAKE LIFE EASIER Have you ever forgotten to lock the door you leave home each morning, and then of your house? Or, have you ever forgotten go into an energy-efficient mode all by to switch off the TV or computer? You will no longer have to think kinds of things happen to us all the time, about turning switches on and off yourself. waste resources, and can sometimes Your home will also learn your",
+              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"The types of phrases used in a passage help identi...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "Opposite meaning.",
+                    "The types of phrases used in a passage help identify 2 What do you thi",
+                    "Not stated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"For example, the phrase in my opinion that other h...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "Not stated.",
+                    "For example, the phrase in my opinion that other houses cannot?",
+                    "Opposite meaning."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"tells us that the passage is likely meant to persu...\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "tells us that the passage is likely meant to persuade.",
+                    "Unrelated.",
+                    "Not stated."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"And a text that uses imperatives is likely meant t...\"",
+                  "opts": [
+                    "And a text that uses imperatives is likely meant to instruct.",
+                    "Not stated.",
+                    "Unrelated.",
+                    "Opposite meaning."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"SMART HOMES TO MAKE LIFE EASIER\" (PEP 选择性必修第一册).",
+              "promptCn": "根据人教版《选择性必修第一册》课文《SMART HOMES TO MAKE LIFE EASIER》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「Discovery」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项2",
+                  "选项1",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Talent」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项3",
+                  "选择性必修第一册 课文词汇",
+                  "选项1"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Effort」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Attention」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项2",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Passage」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项3"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Form」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项3"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Better」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项2",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Impression」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「展望未来」相关词是？",
+                "opts": [
+                  "Scan",
+                  "Discovery",
+                  "Effort",
+                  "school"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "And a text that uses imperatives is likely meant to instruct.",
+                  "A passage's content helps identify its 2 Skim the text and answer these ",
+                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "And a text that uses imperatives is likely meant to instruct.",
+                  "A passage's content helps identify its 2 Skim the text and answer these ",
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "A passage's content helps identify its 2 Skim the text and answer these ",
+                  "For example, the phrase in my opinion that other houses cannot? tells us",
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "And a text that uses imperatives is likely meant to instruct."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "And a text that uses imperatives is likely meant to instruct.",
+                  "A passage's content helps identify its 2 Skim the text and answer these ",
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "For example, the phrase in my opinion that other houses cannot? tells us",
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "And a text that uses imperatives is likely meant to instruct.",
+                  "For example, a passage that gives tips questions. on looking after pets "
+                ],
+                "answer": 3
+              }
+            ]
+          },
+          {
+            "id": "gk2_elective1_u3",
+            "num": 3,
+            "unitKey": "U3",
+            "book": "elective1",
+            "title": "Fascinating Parks",
+            "cn": "迷人的公园",
+            "emoji": "🏞️",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "Treatment",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Thought",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Save",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Africa",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Alone",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Youyou",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Committed",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Patient",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Scientist",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Born",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Ningbo",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "China",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss Fascinating Parks.",
+                    "cn": "我们来讨论Fascinating Parks。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned Treatment today.",
+                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And Thought is important too.",
+                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "科技主题语法",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "科技主题语法",
+            "grammarCode": "pep-e1-u3-science",
+            "grammarQuiz": [
+              {
+                "q": "______ Dr Wang Wang Le Anna Smith Alexander Fleming Zhong Nanshan Florence Nightingale Wu Mengchao Tu Youyou Dr Wang 3 Listen again and answer the questions below.\n\n（科技主题语法 · 教材原句）",
+                "opts": [
+                  "Name",
+                  "below",
+                  "home",
+                  "doctor"
+                ],
+                "answer": 0,
+                "point": "科技主题语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "You ______ discuss them with a partner. 1 Why did Anna meet Wang Le at her home?\n\n（科技主题语法 · 教材原句）",
+                "opts": [
+                  "can",
+                  "below",
+                  "home",
+                  "doctor"
+                ],
+                "answer": 0,
+                "point": "科技主题语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "Listen for ______ 2 Why did Dr Wang decide to become a doctor?\n\n（科技主题语法 · 教材原句）",
+                "opts": [
+                  "reasons",
+                  "below",
+                  "home",
+                  "doctor"
+                ],
+                "answer": 0,
+                "point": "科技主题语法",
+                "dim": "grammar"
+              },
+              {
+                "q": "After ______ graduated, she worked at th\n\n（科技主题语法 · 教材原句）",
+                "opts": [
+                  "she",
+                  "below",
+                  "home",
+                  "doctor"
+                ],
+                "answer": 0,
+                "point": "科技主题语法",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "A Land of Mountains and Ice Man at Peace with Nature the structure and the key\n\nA Land of Adventure A Summer Where the Sun Never Sleeps\n\nI wake up to the sound of the wind buffeting the cloth of my tent. Even though the sun is brightly\n\nshining, telling whether it is morning or night is impossible. Iʼm above the Arctic Circle, where in summer\n\nthe sun never sets. Checking my watch, I see that it is 7:30 a.m. I leave my tent and walk over to the\n\nmountain edge. Spreading out before me, branches of the Rapa River flow through the valley below. I'm\n\nin the remote far north of Sweden in Sarek National Park, a place with no roads or towns.",
+              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"A Land of Mountains and Ice Man at Peace with Natu...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "A Land of Mountains and Ice Man at Peace with Nature the structure and",
+                    "Opposite meaning.",
+                    "Not stated."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"Even though the sun is brightly\n\nshining, telling ...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "Even though the sun is brightly\n\nshining, telling whether it is mornin",
+                    "Opposite meaning.",
+                    "Not stated."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"Iʼm above the Arctic Circle, where in summer\n\nthe ...\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "Unrelated.",
+                    "Iʼm above the Arctic Circle, where in summer\n\nthe sun never sets.",
+                    "Not stated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"Checking my watch, I see that it is 7:30 a.m....\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "Unrelated.",
+                    "Checking my watch, I see that it is 7:30 a.m.",
+                    "Not stated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"TU YOUYOU AWARDED NOBEL PRIZE\" (PEP 选择性必修第一册).",
+              "promptCn": "根据人教版《选择性必修第一册》课文《TU YOUYOU AWARDED NOBEL PRIZE》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「Treatment」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Thought」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项2",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Save」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Africa」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项3",
+                  "选项1",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Alone」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项3",
+                  "选择性必修第一册 课文词汇",
+                  "选项1"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Youyou」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项1",
+                  "选择性必修第一册 课文词汇",
+                  "选项2"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Committed」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项3",
+                  "选项1",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Patient」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项2",
+                  "选项1",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「迷人的公园」相关词是？",
+                "opts": [
+                  "school",
+                  "Born",
+                  "teacher",
+                  "Treatment"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "opts": [
+                  "Checking my watch, I see that it is 7:30 a.m.",
+                  "Iʼm above the Arctic Circle, where in summer the sun never sets.",
+                  "I leave my tent and walk over to the mountain edge.",
+                  "Even though the sun is brightly shining, telling whether it is morning o"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "opts": [
+                  "Even though the sun is brightly shining, telling whether it is morning o",
+                  "Iʼm above the Arctic Circle, where in summer the sun never sets.",
+                  "Checking my watch, I see that it is 7:30 a.m.",
+                  "I leave my tent and walk over to the mountain edge."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "opts": [
+                  "I leave my tent and walk over to the mountain edge.",
+                  "Checking my watch, I see that it is 7:30 a.m.",
+                  "Even though the sun is brightly shining, telling whether it is morning o",
+                  "Iʼm above the Arctic Circle, where in summer the sun never sets."
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "opts": [
+                  "Checking my watch, I see that it is 7:30 a.m.",
+                  "Even though the sun is brightly shining, telling whether it is morning o",
+                  "Iʼm above the Arctic Circle, where in summer the sun never sets.",
+                  "I leave my tent and walk over to the mountain edge."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Even though the sun is brightly shining, telling whether it is morning or night ",
+                "opts": [
+                  "Iʼm above the Arctic Circle, where in summer the sun never sets.",
+                  "Spreading out before me, branches of the Rapa River flow through the val",
+                  "Checking my watch, I see that it is 7:30 a.m.",
+                  "Even though the sun is brightly shining, telling whether it is morning o"
+                ],
+                "answer": 1
+              }
+            ]
+          },
+          {
+            "id": "gk2_elective1_u4",
+            "num": 4,
+            "unitKey": "U4",
+            "book": "elective1",
+            "title": "Body Language",
+            "cn": "肢体语言",
+            "emoji": "🤝",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "Objective",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Discovering",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Among",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "First",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Researchers",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Chosen",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Beginning",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Went",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Hainan",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Common",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Study",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Patients",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss Body Language.",
+                    "cn": "我们来讨论Body Language。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned Objective today.",
+                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And Discovering is important too.",
+                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "非谓语动词",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "非谓语动词",
+            "grammarCode": "pep-e1-nonfinite-verbs",
+            "grammarQuiz": [
+              {
+                "q": "He ______ penicillin.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "discovered",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "The ______ tells us about Alexander Fleming, who discovered penicillin. 1 We were very impressed by the old man.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "book",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "He was not ______ to acknowledge defeat. 2 Afterwards, Einstein had to flee Germany.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "willing",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "Hitler was in power ______. 3 There is nothing we can do to help Linda.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "there",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Find descriptive words 2 Which is more important for making a great discovery, talent or effort? Pay attention to the descriptive words in a passage. These will help you form a better impression 2 Scan the text and find descriptive words about of the subject described in the passage. TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This year's Nobel Prize for Physiology or Medicine has been awarded to Tu Youyou (co-winner), whose research led to the discovery of artemisinin, a crucial new treatment for malaria. Artemisinin has saved hundreds of thousands of lives, and has led to improved health for millions of people. Over 200 million people around the world get malaria each year, and about 600,000 die from it. Artemisinin has become a vital part of the treatment for malaria, and is thought to save 100,000 lives a year in Africa alone. Tu Youyou, a committed and patient scientist, was born in Ningbo, China, on 30 December 1930, and graduated from Peking University Medical School in 1955.",
+              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"Find descriptive words 2 Which is more important f...\"",
+                  "opts": [
+                    "Not stated.",
+                    "Opposite meaning.",
+                    "Find descriptive words 2 Which is more important for making a great di",
+                    "Unrelated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"Pay attention to the descriptive words in a passag...\"",
+                  "opts": [
+                    "Not stated.",
+                    "Pay attention to the descriptive words in a passage.",
+                    "Opposite meaning.",
+                    "Unrelated."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"These will help you form a better impression 2 Sca...\"",
+                  "opts": [
+                    "These will help you form a better impression 2 Scan the text and find ",
+                    "Unrelated.",
+                    "Not stated.",
+                    "Opposite meaning."
+                  ],
+                  "answer": 0,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This ...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "TU YOUYOU AWARDED NOBEL PRIZE 6 October 2015 This year's Nobel Prize f",
+                    "Opposite meaning.",
+                    "Not stated."
+                  ],
+                  "answer": 1,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"SMART HOMES TO MAKE LIFE EASIER\" (PEP 选择性必修第一册).",
+              "promptCn": "根据人教版《选择性必修第一册》课文《SMART HOMES TO MAKE LIFE EASIER》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「Objective」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项2",
+                  "选项3"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Discovering」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项1",
+                  "选择性必修第一册 课文词汇",
+                  "选项2"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Among」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项2",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「First」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选择性必修第一册 课文词汇",
+                  "选项3",
+                  "选项1"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Researchers」的意思是？",
+                "opts": [
+                  "选择性必修第一册 课文词汇",
+                  "选项1",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Chosen」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项2",
+                  "选项1",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Beginning」的意思是？",
+                "opts": [
+                  "选项2",
+                  "选项3",
+                  "选择性必修第一册 课文词汇",
+                  "选项1"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Went」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选项3",
+                  "选项2",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「肢体语言」相关词是？",
+                "opts": [
+                  "First",
+                  "Common",
+                  "Objective",
+                  "Researchers"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "Pay attention to the descriptive words in a passage.",
+                  "These will help you form a better impression 2 Scan the text and find de",
+                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "These will help you form a better impression 2 Scan the text and find de",
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "Pay attention to the descriptive words in a passage.",
+                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                ],
+                "answer": 2
+              },
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp",
+                  "Pay attention to the descriptive words in a passage.",
+                  "These will help you form a better impression 2 Scan the text and find de"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "Pay attention to the descriptive words in a passage.",
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "These will help you form a better impression 2 Scan the text and find de",
+                  "Artemisinin has saved hundreds of thousands of lives, and has led to imp"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "Find descriptive words 2 Which is more important for making a great discovery, t",
+                "opts": [
+                  "These will help you form a better impression 2 Scan the text and find de",
+                  "Find descriptive words 2 Which is more important for making a great disc",
+                  "Over 200 million people around the world get malaria each year, and abou",
+                  "Pay attention to the descriptive words in a passage."
+                ],
+                "answer": 2
+              }
+            ]
+          },
+          {
+            "id": "gk2_elective1_u5",
+            "num": 5,
+            "unitKey": "U5",
+            "book": "elective1",
+            "title": "Working the Land",
+            "cn": "耕耘土地",
+            "emoji": "🌾",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "Tested",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Distinct",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Showed",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Promise",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Fight",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Against",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Fourth",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Century",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Suggested",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Using",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Extract",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              },
+              {
+                "en": "Sweet",
+                "cn": "选择性必修第一册 课文词汇",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Reading and Thinking",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Let's discuss Working the Land.",
+                    "cn": "我们来讨论Working the Land。"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Sure. I learned Tested today.",
+                    "cn": "好的，我今天学了选择性必修第一册 课文词汇。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "And Distinct is important too.",
+                    "cn": "选择性必修第一册 课文词汇也很重要。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "非谓语动词",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "非谓语动词",
+            "grammarCode": "pep-e1-nonfinite-verbs",
+            "grammarQuiz": [
+              {
+                "q": "He ______ penicillin.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "discovered",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "The ______ tells us about Alexander Fleming, who discovered penicillin. 1 We were very impressed by the old man.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "book",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "He was not ______ to acknowledge defeat. 2 Afterwards, Einstein had to flee Germany.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "willing",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              },
+              {
+                "q": "Hitler was in power ______. 3 There is nothing we can do to help Linda.\n\n（非谓语动词 · 教材原句）",
+                "opts": [
+                  "there",
+                  "penicillin",
+                  "man",
+                  "Germany"
+                ],
+                "answer": 0,
+                "point": "非谓语动词",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "The types of phrases used in a passage help identify 2 What do you think a \"smart\" house can do its purpose. For example, the phrase in my opinion that other houses cannot? tells us that the passage is likely meant to persuade. And a text that uses imperatives is likely meant to instruct. A passage's content helps identify its 2 Skim the text and answer these audience. For example, a passage that gives tips questions. on looking after pets would have pet owners as its audience. 1 What is the purpose of the text? 2 Who is the intended audience of this text? SMART HOMES TO MAKE LIFE EASIER Have you ever forgotten to lock the door you leave home each morning, and then of your house? Or, have you ever forgotten go into an energy-efficient mode all by to switch off the TV or computer? You will no longer have to think kinds of things happen to us all the time, about turning switches on and off yourself. waste resources, and can sometimes Your home will also learn your",
+              "passageCn": "（人教版选择性必修第一册 · 教材节选）",
+              "questions": [
+                {
+                  "q": "According to the passage: \"The types of phrases used in a passage help identi...\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "Not stated.",
+                    "The types of phrases used in a passage help identify 2 What do you thi",
+                    "Unrelated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"For example, the phrase in my opinion that other h...\"",
+                  "opts": [
+                    "Unrelated.",
+                    "Opposite meaning.",
+                    "For example, the phrase in my opinion that other houses cannot?",
+                    "Not stated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"tells us that the passage is likely meant to persu...\"",
+                  "opts": [
+                    "Not stated.",
+                    "Opposite meaning.",
+                    "tells us that the passage is likely meant to persuade.",
+                    "Unrelated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                },
+                {
+                  "q": "According to the passage: \"And a text that uses imperatives is likely meant t...\"",
+                  "opts": [
+                    "Opposite meaning.",
+                    "Not stated.",
+                    "And a text that uses imperatives is likely meant to instruct.",
+                    "Unrelated."
+                  ],
+                  "answer": 2,
+                  "point": "阅读细节",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write an 80–120 word passage based on the textbook theme \"TU YOUYOU AWARDED NOBEL PRIZE\" (PEP 选择性必修第一册).",
+              "promptCn": "根据人教版《选择性必修第一册》课文《TU YOUYOU AWARDED NOBEL PRIZE》的主题，写一篇 80–120 词的英语短文，可描述经历、观点或建议。",
+              "sampleWords": []
+            },
+            "quizQuestions": [
+              {
+                "q": "「Tested」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选择性必修第一册 课文词汇",
+                  "选项2",
+                  "选项3"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Distinct」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项2",
+                  "选项1",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Showed」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选择性必修第一册 课文词汇",
+                  "选项3",
+                  "选项2"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Promise」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选择性必修第一册 课文词汇",
+                  "选项2",
+                  "选项3"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Fight」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项1",
+                  "选项2",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Against」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选择性必修第一册 课文词汇",
+                  "选项2",
+                  "选项3"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Fourth」的意思是？",
+                "opts": [
+                  "选项3",
+                  "选项2",
+                  "选项1",
+                  "选择性必修第一册 课文词汇"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Century」的意思是？",
+                "opts": [
+                  "选项1",
+                  "选择性必修第一册 课文词汇",
+                  "选项2",
+                  "选项3"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「耕耘土地」相关词是？",
+                "opts": [
+                  "Tested",
+                  "Century",
+                  "Promise",
+                  "Fight"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "And a text that uses imperatives is likely meant to instruct.",
+                  "A passage's content helps identify its 2 Skim the text and answer these ",
+                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "And a text that uses imperatives is likely meant to instruct.",
+                  "A passage's content helps identify its 2 Skim the text and answer these ",
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "A passage's content helps identify its 2 Skim the text and answer these ",
+                  "For example, the phrase in my opinion that other houses cannot? tells us",
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "And a text that uses imperatives is likely meant to instruct."
+                ],
+                "answer": 3
+              },
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "And a text that uses imperatives is likely meant to instruct.",
+                  "A passage's content helps identify its 2 Skim the text and answer these ",
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "For example, the phrase in my opinion that other houses cannot? tells us"
+                ],
+                "answer": 1
+              },
+              {
+                "audio": "The types of phrases used in a passage help identify 2 What do you think a \"smar",
+                "opts": [
+                  "For example, the phrase in my opinion that other houses cannot? tells us",
+                  "The types of phrases used in a passage help identify 2 What do you think",
+                  "And a text that uses imperatives is likely meant to instruct.",
+                  "For example, a passage that gives tips questions. on looking after pets "
+                ],
+                "answer": 3
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

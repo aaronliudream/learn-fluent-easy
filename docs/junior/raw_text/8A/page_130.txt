@@ -1,0 +1,74 @@
+119
+Grammar
+(×) Though she was ill, but she was listening to the report carefully. (要么删去but; 
+要么删去though)
+(×) Because her parents died, so she had to make a living by herself. (要么删去
+because; 要么删去so)
+VII. 句子的成分（Parts of a Sentence）
+组成句子的各个部分叫做句子的成分，即：主语、谓语、表语、宾语、宾语补足语、
+定语和状语。主语和谓语是句子的主体部分。
+句子成分
+意  义
+例  句
+主语
+The Subject
+表示句子所说的是“什么人”或“什么事
+物”，一般由名词、代词或相当于名词的
+词或短语等充当。
+Lucy is an American girl.
+She often goes to the movies.
+谓语
+The Predicate
+说明主语“做什么”、“是什么”或者“怎
+么样”。谓语（谓语部分主要的词）用动
+词。谓语和主语在“人称”和“数”两方
+面必须一致。
+We are both quiet.
+He has a toothache.
+His parents teach math.
+表语
+The Predicative
+说明主语“是什么”或者“怎么样”，由
+名词、形容词或相当于名词或形容词的词
+或短语等充当，和系动词一起构成谓语。
+Her mother is a bank clerk.
+Are you ready?
+We were at home last night.
+It tastes great.
+宾语
+The Object
+表示动作、行为的对象，由名词、代词或
+相当于名词的词或短语等充当，和及物动
+词一起说明主语“做什么”。
+Let me tell you what he is 
+like.
+He’s playing soccer.
+Can I ask some questions?
+宾语补足语
+The Object 
+Complement
+用来补足宾语意义，一般置于宾语之后，
+由名词、形容词、不定式、动名词、分
+词、介词短语等充当。
+I found the book very 
+interesting.
+My mother wants me to 
+drink it.
+定语
+The Attribute
+用来修饰名词或代词。作定语的除形容词
+外，还有代词、数词、名词、介词短语或
+相当于形容词的词或短语等。
+Peel three bananas.
+What’s your name, please?
+She’s a good basketball player.
+状语
+The Adverbial
+用来修饰动词、形容词或副词，一般表示
+行为发生的时间、地点、目的、方式、程
+度等意义，通常由副词、介词短语或相当
+于副词的词或短语等充当。
+I like it very much.
+People are all working hard.
+Hong Kong is not very cold 
+in winter.

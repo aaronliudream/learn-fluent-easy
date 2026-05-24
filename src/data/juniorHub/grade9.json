@@ -1,0 +1,5887 @@
+{
+  "grade9": {
+    "name": "九年级",
+    "semesters": {
+      "grade9_full": {
+        "name": "全一册",
+        "available": true,
+        "units": [
+          {
+            "id": "g9full_u1",
+            "num": 1,
+            "unitKey": "U1",
+            "book": "9",
+            "title": "How can we become good learners?",
+            "cn": "怎样成为好的学习者",
+            "emoji": "📚",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "/greI@m/ Bell",
+                "cn": "亚历山大·",
+                "emoji": "📘"
+              },
+              {
+                "en": "ability",
+                "cn": "能力",
+                "emoji": "📘"
+              },
+              {
+                "en": "active",
+                "cn": "活跃的",
+                "emoji": "📘"
+              },
+              {
+                "en": "Alexander",
+                "cn": "",
+                "emoji": "📘"
+              },
+              {
+                "en": "aloud",
+                "cn": "大声地",
+                "emoji": "📘"
+              },
+              {
+                "en": "Annie",
+                "cn": "安妮",
+                "emoji": "📘"
+              },
+              {
+                "en": "atention",
+                "cn": "注意",
+                "emoji": "📘"
+              },
+              {
+                "en": "born",
+                "cn": "出生",
+                "emoji": "📘"
+              },
+              {
+                "en": "brain",
+                "cn": "大脑",
+                "emoji": "📘"
+              },
+              {
+                "en": "chemistry",
+                "cn": "化学",
+                "emoji": "📘"
+              },
+              {
+                "en": "connect",
+                "cn": "连接",
+                "emoji": "📘"
+              },
+              {
+                "en": "conversation",
+                "cn": "",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know /greI@m/ Bell?",
+                    "cn": "你知道亚历山大·吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and ability too.",
+                    "cn": "知道，还有能力。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about How can we become good learners?.",
+                    "cn": "太好了！我们来聊聊How can we become good learners?。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "一般现在时被动",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "一般现在时被动",
+            "grammarCode": null,
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：一般现在时被动。下列哪项与「/greI@m/ Bell」词义最接近？",
+                "opts": [
+                  "亚历山大·",
+                  "连接",
+                  "安妮",
+                  ""
+                ],
+                "answer": 0,
+                "point": "一般现在时被动",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「能力」",
+                "opts": [
+                  "ability",
+                  "active",
+                  "born",
+                  "/greI@m/ Bell"
+                ],
+                "answer": 0,
+                "point": "一般现在时被动",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "3. I also learned useful sentences like “It’s a piece of cake” or “It serves you right”.",
+              "passageCn": "本单元阅读材料（How can we become good learners?）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "A different topic",
+                    "Only listening",
+                    "Only grammar",
+                    "How can we become good learners?"
+                  ],
+                  "answer": 3,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Sports only",
+                    "How can we become good learners?",
+                    "Cooking",
+                    "Math class"
+                  ],
+                  "answer": 1,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「/greI@m/ Bell」 mean in Chinese?",
+                  "opts": [
+                    "亚历山大·",
+                    "注意",
+                    "出生",
+                    "大脑"
+                  ],
+                  "answer": 0,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"How can we become good learners?\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「How can we become good learners?」，使用本单元词汇。",
+              "sampleWords": [
+                "/greI@m/ Bell",
+                "ability",
+                "active",
+                "Alexander",
+                "aloud",
+                "Annie"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「/greI@m/ Bell」的意思是？",
+                "opts": [
+                  "大脑",
+                  "安妮",
+                  "",
+                  "亚历山大·"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ability」的意思是？",
+                "opts": [
+                  "注意",
+                  "亚历山大·",
+                  "出生",
+                  "能力"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「active」的意思是？",
+                "opts": [
+                  "连接",
+                  "",
+                  "注意",
+                  "活跃的"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Alexander」的意思是？",
+                "opts": [
+                  "注意",
+                  "亚历山大·",
+                  "安妮",
+                  ""
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「aloud」的意思是？",
+                "opts": [
+                  "安妮",
+                  "大声地",
+                  "",
+                  "连接"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Annie」的意思是？",
+                "opts": [
+                  "",
+                  "大脑",
+                  "安妮",
+                  "亚历山大·"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「atention」的意思是？",
+                "opts": [
+                  "活跃的",
+                  "化学",
+                  "大声地",
+                  "注意"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「born」的意思是？",
+                "opts": [
+                  "出生",
+                  "大声地",
+                  "化学",
+                  "连接"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「亚历山大·」？",
+                "opts": [
+                  "/greI@m/ Bell",
+                  "Alexander",
+                  "chemistry",
+                  "connect"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「怎样成为好的学习者」的核心词是？",
+                "opts": [
+                  "brain",
+                  "atention",
+                  "/greI@m/ Bell",
+                  "apple"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "How can we become good learners?",
+                "opts": [
+                  "How can we become good learners?",
+                  "This is /greI@m/ Bell.",
+                  "ability",
+                  "active"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Well, try them on and see how they look on you. Take your time. There’s no hurry.",
+                "opts": [
+                  "Well, try them on and see how they look on you. Take your time. There’s no hurry.",
+                  "This is /greI@m/ Bell.",
+                  "ability",
+                  "active"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u2",
+            "num": 2,
+            "unitKey": "U2",
+            "book": "9",
+            "title": "I think that mooncakes are delicious!",
+            "cn": "我觉得月饼很好吃",
+            "emoji": "🥮",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "A Christmas Carol",
+                "cn": "圣诞欢歌",
+                "emoji": "📘"
+              },
+              {
+                "en": "admire",
+                "cn": "欣赏",
+                "emoji": "📘"
+              },
+              {
+                "en": "business",
+                "cn": "生意",
+                "emoji": "📘"
+              },
+              {
+                "en": "Charles",
+                "cn": "查尔斯·",
+                "emoji": "📘"
+              },
+              {
+                "en": "Chiang Mai",
+                "cn": "清迈",
+                "emoji": "📘"
+              },
+              {
+                "en": "Christmas",
+                "cn": "圣诞节",
+                "emoji": "📘"
+              },
+              {
+                "en": "Clara",
+                "cn": "克拉拉",
+                "emoji": "📘"
+              },
+              {
+                "en": "dead",
+                "cn": "死的",
+                "emoji": "📘"
+              },
+              {
+                "en": "dessert",
+                "cn": "甜点",
+                "emoji": "📘"
+              },
+              {
+                "en": "Easter",
+                "cn": "复活节",
+                "emoji": "📘"
+              },
+              {
+                "en": "eve",
+                "cn": "前夕",
+                "emoji": "📘"
+              },
+              {
+                "en": "folk",
+                "cn": "民间的",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know A Christmas Carol?",
+                    "cn": "你知道圣诞欢歌吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and admire too.",
+                    "cn": "知道，还有欣赏。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about I think that mooncakes are delicious!.",
+                    "cn": "太好了！我们来聊聊I think that mooncakes are delicious!。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "used to 与感叹句",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "used to 与感叹句",
+            "grammarCode": null,
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：used to 与感叹句。下列哪项与「A Christmas Carol」词义最接近？",
+                "opts": [
+                  "民间的",
+                  "圣诞欢歌",
+                  "清迈",
+                  "查尔斯·"
+                ],
+                "answer": 1,
+                "point": "used to 与感叹句",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「欣赏」",
+                "opts": [
+                  "folk",
+                  "A Christmas Carol",
+                  "eve",
+                  "admire"
+                ],
+                "answer": 3,
+                "point": "used to 与感叹句",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "It’s not that bad. Even little kids dress up as ghosts or black cats. They can also dress up as fun things like cartoon characters. Some parents join in the fun by dressing up, too! Wu Yu: Do parents take their children around the neighborhood to ask for candies and treats?",
+              "passageCn": "本单元阅读材料（I think that mooncakes are delicious!）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "I think that mooncakes are delicious!",
+                    "A different topic",
+                    "Only listening",
+                    "Only grammar"
+                  ],
+                  "answer": 0,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Sports only",
+                    "I think that mooncakes are delicious!",
+                    "Math class",
+                    "Cooking"
+                  ],
+                  "answer": 1,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「A Christmas Carol」 mean in Chinese?",
+                  "opts": [
+                    "复活节",
+                    "圣诞欢歌",
+                    "清迈",
+                    "克拉拉"
+                  ],
+                  "answer": 1,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"I think that mooncakes are delicious!\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「I think that mooncakes are delicious!」，使用本单元词汇。",
+              "sampleWords": [
+                "A Christmas Carol",
+                "admire",
+                "business",
+                "Charles",
+                "Chiang Mai",
+                "Christmas"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「A Christmas Carol」的意思是？",
+                "opts": [
+                  "圣诞欢歌",
+                  "前夕",
+                  "欣赏",
+                  "查尔斯·"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「admire」的意思是？",
+                "opts": [
+                  "圣诞欢歌",
+                  "死的",
+                  "欣赏",
+                  "民间的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「business」的意思是？",
+                "opts": [
+                  "生意",
+                  "复活节",
+                  "清迈",
+                  "查尔斯·"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Charles」的意思是？",
+                "opts": [
+                  "民间的",
+                  "欣赏",
+                  "查尔斯·",
+                  "克拉拉"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Chiang Mai」的意思是？",
+                "opts": [
+                  "清迈",
+                  "前夕",
+                  "甜点",
+                  "生意"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Christmas」的意思是？",
+                "opts": [
+                  "圣诞节",
+                  "民间的",
+                  "欣赏",
+                  "圣诞欢歌"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Clara」的意思是？",
+                "opts": [
+                  "圣诞节",
+                  "克拉拉",
+                  "清迈",
+                  "甜点"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「dead」的意思是？",
+                "opts": [
+                  "克拉拉",
+                  "死的",
+                  "民间的",
+                  "查尔斯·"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「圣诞欢歌」？",
+                "opts": [
+                  "dead",
+                  "A Christmas Carol",
+                  "Christmas",
+                  "dessert"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「我觉得月饼很好吃」的核心词是？",
+                "opts": [
+                  "apple",
+                  "teacher",
+                  "business",
+                  "A Christmas Carol"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "What a great day!",
+                "opts": [
+                  "What a great day!",
+                  "This is A Christmas Carol.",
+                  "admire",
+                  "business"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "What did you like best?",
+                "opts": [
+                  "What did you like best?",
+                  "This is A Christmas Carol.",
+                  "admire",
+                  "business"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u3",
+            "num": 3,
+            "unitKey": "U3",
+            "book": "9",
+            "title": "Could you please tell me where the restrooms are?",
+            "cn": "请问洗手间在哪里",
+            "emoji": "🚻",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "address",
+                "cn": "住址",
+                "emoji": "📘"
+              },
+              {
+                "en": "bathroom",
+                "cn": "浴室",
+                "emoji": "📘"
+              },
+              {
+                "en": "beside",
+                "cn": "在",
+                "emoji": "📘"
+              },
+              {
+                "en": "bookstore",
+                "cn": "书店",
+                "emoji": "📘"
+              },
+              {
+                "en": "central",
+                "cn": "中心的",
+                "emoji": "📘"
+              },
+              {
+                "en": "clerk",
+                "cn": "职员",
+                "emoji": "📘"
+              },
+              {
+                "en": "convenient",
+                "cn": "便利的",
+                "emoji": "📘"
+              },
+              {
+                "en": "corner",
+                "cn": "拐角",
+                "emoji": "📘"
+              },
+              {
+                "en": "correct",
+                "cn": "正确的",
+                "emoji": "📘"
+              },
+              {
+                "en": "course",
+                "cn": "课程",
+                "emoji": "📘"
+              },
+              {
+                "en": "direct",
+                "cn": "直接的",
+                "emoji": "📘"
+              },
+              {
+                "en": "direction",
+                "cn": "方向",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know address?",
+                    "cn": "你知道住址吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and bathroom too.",
+                    "cn": "知道，还有浴室。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about Could you please tell me where the restrooms are?.",
+                    "cn": "太好了！我们来聊聊Could you please tell me where the restrooms are?。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "宾语从句",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "宾语从句",
+            "grammarCode": "g8.26",
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：宾语从句。下列哪项与「address」词义最接近？",
+                "opts": [
+                  "书店",
+                  "正确的",
+                  "课程",
+                  "住址"
+                ],
+                "answer": 3,
+                "point": "宾语从句",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「浴室」",
+                "opts": [
+                  "clerk",
+                  "bookstore",
+                  "beside",
+                  "bathroom"
+                ],
+                "answer": 3,
+                "point": "宾语从句",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Boy 1: Excuse me, can you tell me where I can buy some medicine? Boy 2: Yes, there’s a supermarket in this shop- ping center. Boy 1: Do you know how to go there? Boy 2: Yes. Go to the second floor and then ... then turn left. Let’s see ... Then go past the bookstore. And umm ... the supermarket is between the flower store and the bookstore. You should be able to get medicine there. Boy 1: OK, great. Oh, and one more thing. Do you know when this shopping center closes tonight? Boy 2: I’m not sure, but you can ask for information over there. Boy 1: OK, thanks a lot. Boy 2: You’re welcome.",
+              "passageCn": "本单元阅读材料（Could you please tell me where the restrooms are?）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Could you please tell me where the restrooms are?",
+                    "A different topic",
+                    "Only listening",
+                    "Only grammar"
+                  ],
+                  "answer": 0,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Could you please tell me where the restrooms are?",
+                    "Sports only",
+                    "Cooking",
+                    "Math class"
+                  ],
+                  "answer": 0,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「address」 mean in Chinese?",
+                  "opts": [
+                    "正确的",
+                    "拐角",
+                    "住址",
+                    "在"
+                  ],
+                  "answer": 2,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"Could you please tell me where the restrooms are?\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「Could you please tell me where the restrooms are?」，使用本单元词汇。",
+              "sampleWords": [
+                "address",
+                "bathroom",
+                "beside",
+                "bookstore",
+                "central",
+                "clerk"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「address」的意思是？",
+                "opts": [
+                  "在",
+                  "住址",
+                  "便利的",
+                  "课程"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bathroom」的意思是？",
+                "opts": [
+                  "书店",
+                  "浴室",
+                  "中心的",
+                  "拐角"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「beside」的意思是？",
+                "opts": [
+                  "在",
+                  "住址",
+                  "中心的",
+                  "正确的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bookstore」的意思是？",
+                "opts": [
+                  "住址",
+                  "拐角",
+                  "正确的",
+                  "书店"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「central」的意思是？",
+                "opts": [
+                  "浴室",
+                  "课程",
+                  "直接的",
+                  "中心的"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「clerk」的意思是？",
+                "opts": [
+                  "住址",
+                  "直接的",
+                  "课程",
+                  "职员"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「convenient」的意思是？",
+                "opts": [
+                  "拐角",
+                  "直接的",
+                  "便利的",
+                  "中心的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「corner」的意思是？",
+                "opts": [
+                  "课程",
+                  "中心的",
+                  "拐角",
+                  "便利的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「住址」？",
+                "opts": [
+                  "direction",
+                  "central",
+                  "bathroom",
+                  "address"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「请问洗手间在哪里」的核心词是？",
+                "opts": [
+                  "address",
+                  "beside",
+                  "bookstore",
+                  "corner"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "address",
+                "opts": [
+                  "address",
+                  "bathroom",
+                  "beside",
+                  "bookstore"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "bathroom",
+                "opts": [
+                  "bathroom",
+                  "address",
+                  "beside",
+                  "bookstore"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "beside",
+                "opts": [
+                  "beside",
+                  "address",
+                  "bathroom",
+                  "bookstore"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "bookstore",
+                "opts": [
+                  "bookstore",
+                  "address",
+                  "bathroom",
+                  "beside"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "central",
+                "opts": [
+                  "central",
+                  "address",
+                  "bathroom",
+                  "beside"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "clerk",
+                "opts": [
+                  "clerk",
+                  "address",
+                  "bathroom",
+                  "beside"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "convenient",
+                "opts": [
+                  "convenient",
+                  "address",
+                  "bathroom",
+                  "beside"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "corner",
+                "opts": [
+                  "corner",
+                  "address",
+                  "bathroom",
+                  "beside"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u4",
+            "num": 4,
+            "unitKey": "U4",
+            "book": "9",
+            "title": "I used to be afraid of the dark.",
+            "cn": "我过去怕黑",
+            "emoji": "🌙",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "absent",
+                "cn": "缺席",
+                "emoji": "📘"
+              },
+              {
+                "en": "African",
+                "cn": "非洲的",
+                "emoji": "📘"
+              },
+              {
+                "en": "Alfred",
+                "cn": "艾尔弗雷德",
+                "emoji": "📘"
+              },
+              {
+                "en": "ant",
+                "cn": "蚂蚁",
+                "emoji": "📘"
+              },
+              {
+                "en": "Asian",
+                "cn": "亚洲的",
+                "emoji": "📘"
+              },
+              {
+                "en": "background",
+                "cn": "背景",
+                "emoji": "📘"
+              },
+              {
+                "en": "Billy",
+                "cn": "比利",
+                "emoji": "📘"
+              },
+              {
+                "en": "boarding",
+                "cn": "寄宿学校",
+                "emoji": "📘"
+              },
+              {
+                "en": "British",
+                "cn": "英国的",
+                "emoji": "📘"
+              },
+              {
+                "en": "Candy",
+                "cn": "坎迪",
+                "emoji": "📘"
+              },
+              {
+                "en": "crowd",
+                "cn": "人群",
+                "emoji": "📘"
+              },
+              {
+                "en": "dare",
+                "cn": "敢于",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know absent?",
+                    "cn": "你知道缺席吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and African too.",
+                    "cn": "知道，还有非洲的。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about I used to be afraid of the dark..",
+                    "cn": "太好了！我们来聊聊I used to be afraid of the dark.。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "宾语从句（巩固）",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "宾语从句（巩固）",
+            "grammarCode": "g8.26",
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：宾语从句（巩固）。下列哪项与「absent」词义最接近？",
+                "opts": [
+                  "敢于",
+                  "比利",
+                  "缺席",
+                  "坎迪"
+                ],
+                "answer": 2,
+                "point": "宾语从句（巩固）",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「非洲的」",
+                "opts": [
+                  "crowd",
+                  "boarding",
+                  "dare",
+                  "African"
+                ],
+                "answer": 3,
+                "point": "宾语从句（巩固）",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Paula: Hey, Steve! Over here! Don’t you remember me? Steve: Oh, wow! You’re Paula, aren’t you? Paula: That’s right. We were in the same science class during Grade 8. Steve: Yes, now I remember. You used to be really quiet, didn’t you? I remember you were always silent in class. Paula: Yeah. I wasn’t very outgoing. I was never brave enough to ask the teachers any questions! Steve: Well, but you were always friendly. And you got a better grade in science than I did, haha. And I remember you were really good in music class, too. Wait a minute! Did you use to play the piano? Paula: Yes, I did. But now I’m more interested in sports. I play soccer almost every day, and I’m on a swim team. But I still play the piano from time to time. Steve: Wow, you’re so active! People sure change.",
+              "passageCn": "本单元阅读材料（I used to be afraid of the dark.）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Only grammar",
+                    "I used to be afraid of the dark.",
+                    "Only listening",
+                    "A different topic"
+                  ],
+                  "answer": 1,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Math class",
+                    "Sports only",
+                    "I used to be afraid of the dark.",
+                    "Cooking"
+                  ],
+                  "answer": 2,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「absent」 mean in Chinese?",
+                  "opts": [
+                    "敢于",
+                    "人群",
+                    "缺席",
+                    "英国的"
+                  ],
+                  "answer": 2,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"I used to be afraid of the dark.\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「I used to be afraid of the dark.」，使用本单元词汇。",
+              "sampleWords": [
+                "absent",
+                "African",
+                "Alfred",
+                "ant",
+                "Asian",
+                "background"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「absent」的意思是？",
+                "opts": [
+                  "寄宿学校",
+                  "缺席",
+                  "艾尔弗雷德",
+                  "背景"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「African」的意思是？",
+                "opts": [
+                  "非洲的",
+                  "艾尔弗雷德",
+                  "比利",
+                  "亚洲的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Alfred」的意思是？",
+                "opts": [
+                  "艾尔弗雷德",
+                  "蚂蚁",
+                  "敢于",
+                  "比利"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ant」的意思是？",
+                "opts": [
+                  "蚂蚁",
+                  "坎迪",
+                  "比利",
+                  "亚洲的"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Asian」的意思是？",
+                "opts": [
+                  "缺席",
+                  "寄宿学校",
+                  "比利",
+                  "亚洲的"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「background」的意思是？",
+                "opts": [
+                  "英国的",
+                  "比利",
+                  "寄宿学校",
+                  "背景"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Billy」的意思是？",
+                "opts": [
+                  "非洲的",
+                  "比利",
+                  "缺席",
+                  "蚂蚁"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「boarding」的意思是？",
+                "opts": [
+                  "寄宿学校",
+                  "背景",
+                  "蚂蚁",
+                  "艾尔弗雷德"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「缺席」？",
+                "opts": [
+                  "background",
+                  "crowd",
+                  "Alfred",
+                  "absent"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「我过去怕黑」的核心词是？",
+                "opts": [
+                  "school",
+                  "absent",
+                  "boarding",
+                  "dare"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "absent",
+                "opts": [
+                  "absent",
+                  "African",
+                  "Alfred",
+                  "ant"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "African",
+                "opts": [
+                  "African",
+                  "absent",
+                  "Alfred",
+                  "ant"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Alfred",
+                "opts": [
+                  "Alfred",
+                  "absent",
+                  "African",
+                  "ant"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "ant",
+                "opts": [
+                  "ant",
+                  "absent",
+                  "African",
+                  "Alfred"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Asian",
+                "opts": [
+                  "Asian",
+                  "absent",
+                  "African",
+                  "Alfred"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "background",
+                "opts": [
+                  "background",
+                  "absent",
+                  "African",
+                  "Alfred"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Billy",
+                "opts": [
+                  "Billy",
+                  "absent",
+                  "African",
+                  "Alfred"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "boarding",
+                "opts": [
+                  "boarding",
+                  "absent",
+                  "African",
+                  "Alfred"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u5",
+            "num": 5,
+            "unitKey": "U5",
+            "book": "9",
+            "title": "What are the shirts made of?",
+            "cn": "这些衬衫是什么做的",
+            "emoji": "👕",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "avoid",
+                "cn": "避免",
+                "emoji": "📘"
+              },
+              {
+                "en": "balloon",
+                "cn": "气球",
+                "emoji": "📘"
+              },
+              {
+                "en": "blouse",
+                "cn": "短上衣",
+                "emoji": "📘"
+              },
+              {
+                "en": "boss",
+                "cn": "老板",
+                "emoji": "📘"
+              },
+              {
+                "en": "brand",
+                "cn": "品牌",
+                "emoji": "📘"
+              },
+              {
+                "en": "cap",
+                "cn": "帽子",
+                "emoji": "📘"
+              },
+              {
+                "en": "celebration",
+                "cn": "庆典",
+                "emoji": "📘"
+              },
+              {
+                "en": "chopstick",
+                "cn": "筷子",
+                "emoji": "📘"
+              },
+              {
+                "en": "clay",
+                "cn": "黏土",
+                "emoji": "📘"
+              },
+              {
+                "en": "coin",
+                "cn": "硬币",
+                "emoji": "📘"
+              },
+              {
+                "en": "competitor",
+                "cn": "参赛者",
+                "emoji": "📘"
+              },
+              {
+                "en": "complete",
+                "cn": "完成",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know avoid?",
+                    "cn": "你知道避免吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and balloon too.",
+                    "cn": "知道，还有气球。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about What are the shirts made of?.",
+                    "cn": "太好了！我们来聊聊What are the shirts made of?。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "定语从句 who/that",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "定语从句 who/that",
+            "grammarCode": "g8.28",
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：定语从句 who/that。下列哪项与「avoid」词义最接近？",
+                "opts": [
+                  "避免",
+                  "完成",
+                  "老板",
+                  "品牌"
+                ],
+                "answer": 0,
+                "point": "定语从句 who/that",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「气球」",
+                "opts": [
+                  "clay",
+                  "celebration",
+                  "coin",
+                  "balloon"
+                ],
+                "answer": 3,
+                "point": "定语从句 who/that",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Susan: Hi, Anita. I bought three shirts for 29 dollars yesterday! Anita: Oh, really? What are they made of though? Sometimes the cheap ones are made of materials that don’t feel very good. Susan: A hundred percent cotton. They’re nice and soft, and they were made in America. Anita: Oh, OK. By the way, where did you buy those chopsticks? They’re really cool! Susan: Oh, I got them in Korea. They’re nice, aren’t they? Anita: Yeah. Chopsticks are usually made of wood. I’ve never seen steel ones before. Susan: Oh, steel chopsticks are popular in Korea. Hey, do you think this ring looks OK? Anita: Hmm ... yes, I think it’s quite pretty. Is it made of silver? Susan: Yes, and it was made in Thailand. I’ll give it to my best friend for her birthday. Anita: Oh, I’m sure she’ll love it.",
+              "passageCn": "本单元阅读材料（What are the shirts made of?）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Only listening",
+                    "A different topic",
+                    "What are the shirts made of?",
+                    "Only grammar"
+                  ],
+                  "answer": 2,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Sports only",
+                    "Cooking",
+                    "What are the shirts made of?",
+                    "Math class"
+                  ],
+                  "answer": 2,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「avoid」 mean in Chinese?",
+                  "opts": [
+                    "筷子",
+                    "参赛者",
+                    "避免",
+                    "硬币"
+                  ],
+                  "answer": 2,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"What are the shirts made of?\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「What are the shirts made of?」，使用本单元词汇。",
+              "sampleWords": [
+                "avoid",
+                "balloon",
+                "blouse",
+                "boss",
+                "brand",
+                "cap"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「avoid」的意思是？",
+                "opts": [
+                  "筷子",
+                  "避免",
+                  "庆典",
+                  "短上衣"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「balloon」的意思是？",
+                "opts": [
+                  "避免",
+                  "庆典",
+                  "气球",
+                  "黏土"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「blouse」的意思是？",
+                "opts": [
+                  "短上衣",
+                  "筷子",
+                  "参赛者",
+                  "气球"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「boss」的意思是？",
+                "opts": [
+                  "参赛者",
+                  "硬币",
+                  "短上衣",
+                  "老板"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「brand」的意思是？",
+                "opts": [
+                  "完成",
+                  "老板",
+                  "品牌",
+                  "庆典"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「cap」的意思是？",
+                "opts": [
+                  "黏土",
+                  "参赛者",
+                  "帽子",
+                  "避免"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「celebration」的意思是？",
+                "opts": [
+                  "气球",
+                  "参赛者",
+                  "庆典",
+                  "短上衣"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「chopstick」的意思是？",
+                "opts": [
+                  "筷子",
+                  "品牌",
+                  "庆典",
+                  "气球"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「避免」？",
+                "opts": [
+                  "avoid",
+                  "chopstick",
+                  "coin",
+                  "complete"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「这些衬衫是什么做的」的核心词是？",
+                "opts": [
+                  "avoid",
+                  "blouse",
+                  "school",
+                  "competitor"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "How was your vacation?",
+                "opts": [
+                  "How was your vacation?",
+                  "avoid",
+                  "balloon",
+                  "blouse"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u6",
+            "num": 6,
+            "unitKey": "U6",
+            "book": "9",
+            "title": "When was it invented?",
+            "cn": "它是什么时候发明的",
+            "emoji": "💡",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "accidental",
+                "cn": "意外的",
+                "emoji": "📘"
+              },
+              {
+                "en": "basket",
+                "cn": "篮",
+                "emoji": "📘"
+              },
+              {
+                "en": "bell",
+                "cn": "钟",
+                "emoji": "📘"
+              },
+              {
+                "en": "Berlin",
+                "cn": "柏林",
+                "emoji": "📘"
+              },
+              {
+                "en": "biscuit",
+                "cn": "饼干",
+                "emoji": "📘"
+              },
+              {
+                "en": "boil",
+                "cn": "煮沸",
+                "emoji": "📘"
+              },
+              {
+                "en": "Canadian",
+                "cn": "加拿大的",
+                "emoji": "📘"
+              },
+              {
+                "en": "cookie",
+                "cn": "曲奇饼",
+                "emoji": "📘"
+              },
+              {
+                "en": "crispy",
+                "cn": "脆的",
+                "emoji": "📘"
+              },
+              {
+                "en": "customer",
+                "cn": "顾客",
+                "emoji": "📘"
+              },
+              {
+                "en": "daily",
+                "cn": "每日的",
+                "emoji": "📘"
+              },
+              {
+                "en": "divide",
+                "cn": "分开",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know accidental?",
+                    "cn": "你知道意外的吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and basket too.",
+                    "cn": "知道，还有篮。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about When was it invented?.",
+                    "cn": "太好了！我们来聊聊When was it invented?。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "定语从句 which/that",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "定语从句 which/that",
+            "grammarCode": "g8.28",
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：定语从句 which/that。下列哪项与「accidental」词义最接近？",
+                "opts": [
+                  "钟",
+                  "柏林",
+                  "曲奇饼",
+                  "意外的"
+                ],
+                "answer": 3,
+                "point": "定语从句 which/that",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「篮」",
+                "opts": [
+                  "daily",
+                  "accidental",
+                  "basket",
+                  "customer"
+                ],
+                "answer": 2,
+                "point": "定语从句 which/that",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Boy 1: Hey, did you know that potato chips were invented by mistake? Boy 2: Really? What do you mean? Boy 1: Well, here on the bag it says that they were invented by a cook called George Crum. Boy 2: When was that? Boy 1: Oh, it was back in 1853. Boy 2: So, why was it an accident? Boy 1: Well, one day, a customer came into the restaurant where George worked. He ordered a plate of fried potatoes. When the potatoes came, he said they were cut too thick and sent them back to the kitchen. Boy 2: So what happened? Boy 1: Well, George was angry, so he cut the potatoes really, really thin, and he cooked them for a long time until they were crispy. And he put lots of salt on them so they were really salty. He thought the customer would hate them. Boy 2: And? Boy 1: And the customer loved them and asked for more. He told the other",
+              "passageCn": "本单元阅读材料（When was it invented?）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "A different topic",
+                    "Only listening",
+                    "Only grammar",
+                    "When was it invented?"
+                  ],
+                  "answer": 3,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Sports only",
+                    "When was it invented?",
+                    "Cooking",
+                    "Math class"
+                  ],
+                  "answer": 1,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「accidental」 mean in Chinese?",
+                  "opts": [
+                    "分开",
+                    "意外的",
+                    "饼干",
+                    "煮沸"
+                  ],
+                  "answer": 1,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"When was it invented?\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「When was it invented?」，使用本单元词汇。",
+              "sampleWords": [
+                "accidental",
+                "basket",
+                "bell",
+                "Berlin",
+                "biscuit",
+                "boil"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「accidental」的意思是？",
+                "opts": [
+                  "柏林",
+                  "篮",
+                  "钟",
+                  "意外的"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「basket」的意思是？",
+                "opts": [
+                  "每日的",
+                  "篮",
+                  "脆的",
+                  "意外的"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bell」的意思是？",
+                "opts": [
+                  "钟",
+                  "每日的",
+                  "顾客",
+                  "篮"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Berlin」的意思是？",
+                "opts": [
+                  "饼干",
+                  "柏林",
+                  "脆的",
+                  "分开"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「biscuit」的意思是？",
+                "opts": [
+                  "钟",
+                  "饼干",
+                  "篮",
+                  "曲奇饼"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「boil」的意思是？",
+                "opts": [
+                  "曲奇饼",
+                  "顾客",
+                  "分开",
+                  "煮沸"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Canadian」的意思是？",
+                "opts": [
+                  "柏林",
+                  "加拿大的",
+                  "每日的",
+                  "顾客"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「cookie」的意思是？",
+                "opts": [
+                  "柏林",
+                  "饼干",
+                  "曲奇饼",
+                  "每日的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「意外的」？",
+                "opts": [
+                  "daily",
+                  "Berlin",
+                  "accidental",
+                  "bell"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「它是什么时候发明的」的核心词是？",
+                "opts": [
+                  "apple",
+                  "boil",
+                  "accidental",
+                  "Berlin"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "What are they used for?",
+                "opts": [
+                  "What are they used for?",
+                  "accidental",
+                  "basket",
+                  "bell"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "What a cool story!",
+                "opts": [
+                  "What a cool story!",
+                  "accidental",
+                  "basket",
+                  "bell"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u7",
+            "num": 7,
+            "unitKey": "U7",
+            "book": "9",
+            "title": "Teenagers should be allowed to choose their own clothes.",
+            "cn": "青少年应被允许自己选衣服",
+            "emoji": "👔",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "awful",
+                "cn": "很坏的",
+                "emoji": "📘"
+              },
+              {
+                "en": "badly",
+                "cn": "严重地",
+                "emoji": "📘"
+              },
+              {
+                "en": "chance",
+                "cn": "机会",
+                "emoji": "📘"
+              },
+              {
+                "en": "choice",
+                "cn": "选择",
+                "emoji": "📘"
+              },
+              {
+                "en": "community",
+                "cn": "社区",
+                "emoji": "📘"
+              },
+              {
+                "en": "cry",
+                "cn": "哭",
+                "emoji": "📘"
+              },
+              {
+                "en": "earring",
+                "cn": "耳环",
+                "emoji": "📘"
+              },
+              {
+                "en": "educate",
+                "cn": "教育",
+                "emoji": "📘"
+              },
+              {
+                "en": "enter",
+                "cn": "进来",
+                "emoji": "📘"
+              },
+              {
+                "en": "field",
+                "cn": "田野",
+                "emoji": "📘"
+              },
+              {
+                "en": "flash",
+                "cn": "闪光灯",
+                "emoji": "📘"
+              },
+              {
+                "en": "hug",
+                "cn": "拥抱",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know awful?",
+                    "cn": "你知道很坏的吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and badly too.",
+                    "cn": "知道，还有严重地。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about Teenagers should be allowed to choose their own clothes..",
+                    "cn": "太好了！我们来聊聊Teenagers should be allowed to choose their own clothes.。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "被动语态",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "被动语态",
+            "grammarCode": "g8.27",
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：被动语态。下列哪项与「awful」词义最接近？",
+                "opts": [
+                  "很坏的",
+                  "哭",
+                  "田野",
+                  "拥抱"
+                ],
+                "answer": 0,
+                "point": "被动语态",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「严重地」",
+                "opts": [
+                  "enter",
+                  "flash",
+                  "badly",
+                  "earring"
+                ],
+                "answer": 2,
+                "point": "被动语态",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Kathy: Hi, Molly. Where’s your brother Larry? I thought he was joining us. Molly: Hi, Kathy. I’m sorry. Larry can’t join us after all. He is working late tonight. Kathy: Oh, Larry’s working late again? Molly: Yeah, he is. Kathy: I see ... I really don’t think sixteen- year-olds should be allowed to work at night. Young people need to sleep. Molly: Oh, I disagree with you. Teenage boys never get tired. Kathy: Well, maybe. But Larry shouldn’t work every night. Molly: That’s true. He needs time to do homework. Kathy: And you know, Molly ... he should really cut his hair. Molly: Oh, I don’t know. Do you think it’s too long? Kathy: Yes, I do. It doesn’t look clean. And I think he should stop wearing that silly earring. Molly: Hmm ... I disagree. I kind of like it. It looks cool! Kathy: You know another thing that worries me? Larry doesn’t seem to have many friends. Molly: Yeah, I know. I think he shouldn’t work on weekends. Kathy: That’s right. He needs to spend time with friends.",
+              "passageCn": "本单元阅读材料（Teenagers should be allowed to choose their own clothes.）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Only grammar",
+                    "A different topic",
+                    "Only listening",
+                    "Teenagers should be allowed to choose their own clothes."
+                  ],
+                  "answer": 3,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Math class",
+                    "Sports only",
+                    "Teenagers should be allowed to choose their own clothes.",
+                    "Cooking"
+                  ],
+                  "answer": 2,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「awful」 mean in Chinese?",
+                  "opts": [
+                    "社区",
+                    "很坏的",
+                    "机会",
+                    "拥抱"
+                  ],
+                  "answer": 1,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"Teenagers should be allowed to choose their own clothes.\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「Teenagers should be allowed to choose their own clothes.」，使用本单元词汇。",
+              "sampleWords": [
+                "awful",
+                "badly",
+                "chance",
+                "choice",
+                "community",
+                "cry"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「awful」的意思是？",
+                "opts": [
+                  "很坏的",
+                  "教育",
+                  "田野",
+                  "选择"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「badly」的意思是？",
+                "opts": [
+                  "严重地",
+                  "哭",
+                  "闪光灯",
+                  "田野"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「chance」的意思是？",
+                "opts": [
+                  "哭",
+                  "进来",
+                  "机会",
+                  "社区"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「choice」的意思是？",
+                "opts": [
+                  "严重地",
+                  "耳环",
+                  "闪光灯",
+                  "选择"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「community」的意思是？",
+                "opts": [
+                  "进来",
+                  "社区",
+                  "哭",
+                  "闪光灯"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「cry」的意思是？",
+                "opts": [
+                  "哭",
+                  "很坏的",
+                  "田野",
+                  "闪光灯"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「earring」的意思是？",
+                "opts": [
+                  "耳环",
+                  "严重地",
+                  "哭",
+                  "教育"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「educate」的意思是？",
+                "opts": [
+                  "教育",
+                  "社区",
+                  "闪光灯",
+                  "哭"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「很坏的」？",
+                "opts": [
+                  "choice",
+                  "earring",
+                  "awful",
+                  "chance"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「青少年应被允许自己选衣服」的核心词是？",
+                "opts": [
+                  "cry",
+                  "chance",
+                  "apple",
+                  "awful"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "awful",
+                "opts": [
+                  "awful",
+                  "badly",
+                  "chance",
+                  "choice"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "badly",
+                "opts": [
+                  "badly",
+                  "awful",
+                  "chance",
+                  "choice"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "chance",
+                "opts": [
+                  "chance",
+                  "awful",
+                  "badly",
+                  "choice"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "choice",
+                "opts": [
+                  "choice",
+                  "awful",
+                  "badly",
+                  "chance"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "community",
+                "opts": [
+                  "community",
+                  "awful",
+                  "badly",
+                  "chance"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "cry",
+                "opts": [
+                  "cry",
+                  "awful",
+                  "badly",
+                  "chance"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "earring",
+                "opts": [
+                  "earring",
+                  "awful",
+                  "badly",
+                  "chance"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "educate",
+                "opts": [
+                  "educate",
+                  "awful",
+                  "badly",
+                  "chance"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u8",
+            "num": 8,
+            "unitKey": "U8",
+            "book": "9",
+            "title": "It must belong to Carla.",
+            "cn": "它一定是卡拉的",
+            "emoji": "🔍",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "alien",
+                "cn": "外星人",
+                "emoji": "📘"
+              },
+              {
+                "en": "ancestor",
+                "cn": "祖宗",
+                "emoji": "📘"
+              },
+              {
+                "en": "anybody",
+                "cn": "任何人",
+                "emoji": "📘"
+              },
+              {
+                "en": "atend",
+                "cn": "出席",
+                "emoji": "📘"
+              },
+              {
+                "en": "Britain",
+                "cn": "大不列颠",
+                "emoji": "📘"
+              },
+              {
+                "en": "burial",
+                "cn": "埋葬",
+                "emoji": "📘"
+              },
+              {
+                "en": "Carla",
+                "cn": "卡拉",
+                "emoji": "📘"
+              },
+              {
+                "en": "circle",
+                "cn": "圆圈",
+                "emoji": "📘"
+              },
+              {
+                "en": "coat",
+                "cn": "外套",
+                "emoji": "📘"
+              },
+              {
+                "en": "enemy",
+                "cn": "敌人",
+                "emoji": "📘"
+              },
+              {
+                "en": "energy",
+                "cn": "力量",
+                "emoji": "📘"
+              },
+              {
+                "en": "express",
+                "cn": "表示",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know alien?",
+                    "cn": "你知道外星人吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and ancestor too.",
+                    "cn": "知道，还有祖宗。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about It must belong to Carla..",
+                    "cn": "太好了！我们来聊聊It must belong to Carla.。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "过去完成时",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "过去完成时",
+            "grammarCode": null,
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：过去完成时。下列哪项与「alien」词义最接近？",
+                "opts": [
+                  "大不列颠",
+                  "祖宗",
+                  "敌人",
+                  "外星人"
+                ],
+                "answer": 3,
+                "point": "过去完成时",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「祖宗」",
+                "opts": [
+                  "ancestor",
+                  "alien",
+                  "enemy",
+                  "atend"
+                ],
+                "answer": 0,
+                "point": "过去完成时",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Explain Why It Is Th ere? Stonehenge, a rock circle, is not only one of Britain’s most famous historical places but also one of its greatest mysteries. Every year it receives more than 750,000 visitors. People like to go to this place especially in June as they want to see the sun rising on the longest day of the year. For many years, historians believed Stonehenge was a temple where ancient leaders tried to communicate with the gods. However, historian Paul Stoker thinks this can’t be true because Stonehenge was built so many centuries ago. “Th e leaders arrived in England much later,” he points out. Another popular idea is that Stonehenge might be a kind of calendar. Th e large stones were put together in a certain way. On midsummer’s morning, the sun shines directly into the center of the stones. Other people believe the stones have a medical purpose. Th ey think the stones can prevent illness and keep people healthy. “As you walk there, you can feel the energy from your feet move up your body,” said one visitor. No one is sure what Stonehenge was used for, but most agree that the position of the stones must be for a special purpose. Some think it might be a burial place or a place to honor ancestors. Others think it was built to celebrate a victory over an enemy. Stonehenge was built slowly over a long period of time. Most historians believe it must be almost 5,000 years old. One of the greatest mysteries is how it was built because the stones are so big and heavy. In 2001, a group of English volunteers tried to build another Stonehenge, but they couldn’t. “We don’t really know who built Stonehenge,” says Paul Stoker. “And perhaps we might never know, but we do know they must have been hard-working — and great planners!”",
+              "passageCn": "本单元阅读材料（It must belong to Carla.）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Only grammar",
+                    "Only listening",
+                    "It must belong to Carla.",
+                    "A different topic"
+                  ],
+                  "answer": 2,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "It must belong to Carla.",
+                    "Cooking",
+                    "Math class",
+                    "Sports only"
+                  ],
+                  "answer": 0,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「alien」 mean in Chinese?",
+                  "opts": [
+                    "外星人",
+                    "埋葬",
+                    "大不列颠",
+                    "圆圈"
+                  ],
+                  "answer": 0,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"It must belong to Carla.\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「It must belong to Carla.」，使用本单元词汇。",
+              "sampleWords": [
+                "alien",
+                "ancestor",
+                "anybody",
+                "atend",
+                "Britain",
+                "burial"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「alien」的意思是？",
+                "opts": [
+                  "敌人",
+                  "表示",
+                  "外星人",
+                  "外套"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ancestor」的意思是？",
+                "opts": [
+                  "敌人",
+                  "外星人",
+                  "祖宗",
+                  "圆圈"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「anybody」的意思是？",
+                "opts": [
+                  "敌人",
+                  "埋葬",
+                  "卡拉",
+                  "任何人"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「atend」的意思是？",
+                "opts": [
+                  "任何人",
+                  "表示",
+                  "祖宗",
+                  "出席"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Britain」的意思是？",
+                "opts": [
+                  "祖宗",
+                  "大不列颠",
+                  "力量",
+                  "外套"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「burial」的意思是？",
+                "opts": [
+                  "祖宗",
+                  "表示",
+                  "埋葬",
+                  "出席"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Carla」的意思是？",
+                "opts": [
+                  "任何人",
+                  "祖宗",
+                  "外星人",
+                  "卡拉"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「circle」的意思是？",
+                "opts": [
+                  "圆圈",
+                  "大不列颠",
+                  "任何人",
+                  "敌人"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「外星人」？",
+                "opts": [
+                  "Britain",
+                  "enemy",
+                  "atend",
+                  "alien"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「它一定是卡拉的」的核心词是？",
+                "opts": [
+                  "alien",
+                  "express",
+                  "Carla",
+                  "teacher"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Do you think you have made correct matches in 2a?",
+                "opts": [
+                  "Do you think you have made correct matches in 2a?",
+                  "alien",
+                  "ancestor",
+                  "anybody"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u9",
+            "num": 9,
+            "unitKey": "U9",
+            "book": "9",
+            "title": "I like music that I can dance to.",
+            "cn": "我喜欢能跳舞的音乐",
+            "emoji": "🎵",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "Australian",
+                "cn": "澳大利亚的",
+                "emoji": "📘"
+              },
+              {
+                "en": "Carmen",
+                "cn": "卡门",
+                "emoji": "📘"
+              },
+              {
+                "en": "case",
+                "cn": "情况",
+                "emoji": "📘"
+              },
+              {
+                "en": "Dan",
+                "cn": "丹·",
+                "emoji": "📘"
+              },
+              {
+                "en": "dialog",
+                "cn": "对话",
+                "emoji": "📘"
+              },
+              {
+                "en": "director",
+                "cn": "导演",
+                "emoji": "📘"
+              },
+              {
+                "en": "documentary",
+                "cn": "",
+                "emoji": "📘"
+              },
+              {
+                "en": "down",
+                "cn": "悲哀",
+                "emoji": "📘"
+              },
+              {
+                "en": "drama",
+                "cn": "戏",
+                "emoji": "📘"
+              },
+              {
+                "en": "electronic",
+                "cn": "电子的",
+                "emoji": "📘"
+              },
+              {
+                "en": "ending",
+                "cn": "（故事、电影等的）；结尾；结局",
+                "emoji": "📘"
+              },
+              {
+                "en": "intelligent",
+                "cn": "有才智的",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know Australian?",
+                    "cn": "你知道澳大利亚的吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and Carmen too.",
+                    "cn": "知道，还有卡门。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about I like music that I can dance to..",
+                    "cn": "太好了！我们来聊聊I like music that I can dance to.。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "it is + adj + to do",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "it is + adj + to do",
+            "grammarCode": "g8.11",
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：it is + adj + to do。下列哪项与「Australian」词义最接近？",
+                "opts": [
+                  "",
+                  "对话",
+                  "澳大利亚的",
+                  "悲哀"
+                ],
+                "answer": 2,
+                "point": "it is + adj + to do",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「卡门」",
+                "opts": [
+                  "dialog",
+                  "Carmen",
+                  "intelligent",
+                  "Dan"
+                ],
+                "answer": 1,
+                "point": "it is + adj + to do",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Last night one of my Chinese friends took me to a concert of Chinese folk music. The piece which was played on the erhu especially moved me. The music was strangely beautiful, but under the beauty I sensed a strong sadness and pain. The piece had a simple name, Erquan Yingyue (Moon Reflected on Second Spring), but it was one of the most moving pieces of music that I’ve ever heard. The erhu sounded so sad that I almost cried along with it as I listened. Later I looked up the history of Erquan Yingyue, and I began to understand the sadness in the music. The music was written by Abing, a folk musician who was born in the city of Wuxi in 1893. His mother died when he was very young. Abing’s father taught him to play many musical instruments, such as the drums, dizi and erhu, and by age 17, Abing was known for his musical ability. However, after his father died, Abing’s life grew worse. He was very poor. Not only that, he developed a serious illness and became blind. For several years, he had no home. He lived on the streets and played music to make money. Even after Abing got married and had a home again, he continued to sing and play on the streets. He performed in this way for many years. Abing’s amazing musical skills made him very popular during his lifetime. By the end of his life, he could play over 600 pieces of music. Many of these were written by Abing himself. It is a pity that only six pieces of music in total were recorded for the future world to hear, but his popularity continues to this day. Today, Abing’s Erquan Yingyue is a piece which all the great erhu masters play and praise. It has become one of China’s national treasures. Its sad beauty not only paints a picture of Abing’s own life but also makes people recall their deepest wounds from their own sad or painful experiences.",
+              "passageCn": "本单元阅读材料（I like music that I can dance to.）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Only listening",
+                    "Only grammar",
+                    "A different topic",
+                    "I like music that I can dance to."
+                  ],
+                  "answer": 3,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Sports only",
+                    "Math class",
+                    "Cooking",
+                    "I like music that I can dance to."
+                  ],
+                  "answer": 3,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「Australian」 mean in Chinese?",
+                  "opts": [
+                    "悲哀",
+                    "澳大利亚的",
+                    "",
+                    "（故事、电影等的）；结尾；结局"
+                  ],
+                  "answer": 1,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"I like music that I can dance to.\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「I like music that I can dance to.」，使用本单元词汇。",
+              "sampleWords": [
+                "Australian",
+                "Carmen",
+                "case",
+                "Dan",
+                "dialog",
+                "director"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「Australian」的意思是？",
+                "opts": [
+                  "澳大利亚的",
+                  "情况",
+                  "对话",
+                  "悲哀"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Carmen」的意思是？",
+                "opts": [
+                  "卡门",
+                  "（故事、电影等的）；结尾；结局",
+                  "戏",
+                  "对话"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「case」的意思是？",
+                "opts": [
+                  "卡门",
+                  "电子的",
+                  "有才智的",
+                  "情况"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Dan」的意思是？",
+                "opts": [
+                  "（故事、电影等的）；结尾；结局",
+                  "丹·",
+                  "",
+                  "有才智的"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「dialog」的意思是？",
+                "opts": [
+                  "澳大利亚的",
+                  "悲哀",
+                  "丹·",
+                  "对话"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「director」的意思是？",
+                "opts": [
+                  "戏",
+                  "（故事、电影等的）；结尾；结局",
+                  "导演",
+                  "丹·"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「documentary」的意思是？",
+                "opts": [
+                  "",
+                  "戏",
+                  "澳大利亚的",
+                  "对话"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「down」的意思是？",
+                "opts": [
+                  "悲哀",
+                  "有才智的",
+                  "电子的",
+                  "卡门"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「澳大利亚的」？",
+                "opts": [
+                  "Dan",
+                  "Australian",
+                  "intelligent",
+                  "director"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「我喜欢能跳舞的音乐」的核心词是？",
+                "opts": [
+                  "documentary",
+                  "Australian",
+                  "dialog",
+                  "electronic"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Australian",
+                "opts": [
+                  "Australian",
+                  "Carmen",
+                  "case",
+                  "Dan"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Carmen",
+                "opts": [
+                  "Carmen",
+                  "Australian",
+                  "case",
+                  "Dan"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "case",
+                "opts": [
+                  "case",
+                  "Australian",
+                  "Carmen",
+                  "Dan"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Dan",
+                "opts": [
+                  "Dan",
+                  "Australian",
+                  "Carmen",
+                  "case"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "dialog",
+                "opts": [
+                  "dialog",
+                  "Australian",
+                  "Carmen",
+                  "case"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "director",
+                "opts": [
+                  "director",
+                  "Australian",
+                  "Carmen",
+                  "case"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "documentary",
+                "opts": [
+                  "documentary",
+                  "Australian",
+                  "Carmen",
+                  "case"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "down",
+                "opts": [
+                  "down",
+                  "Australian",
+                  "Carmen",
+                  "case"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u10",
+            "num": 10,
+            "unitKey": "U10",
+            "book": "9",
+            "title": "You're supposed to shake hands.",
+            "cn": "你应该握手",
+            "emoji": "🤝",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "basic",
+                "cn": "基本的",
+                "emoji": "📘"
+              },
+              {
+                "en": "behave",
+                "cn": "表现",
+                "emoji": "📘"
+              },
+              {
+                "en": "blackboard",
+                "cn": "黑板",
+                "emoji": "📘"
+              },
+              {
+                "en": "bow",
+                "cn": "鞠躬",
+                "emoji": "📘"
+              },
+              {
+                "en": "Brazil",
+                "cn": "巴西",
+                "emoji": "📘"
+              },
+              {
+                "en": "Cali",
+                "cn": "卡利",
+                "emoji": "📘"
+              },
+              {
+                "en": "capital",
+                "cn": "首都",
+                "emoji": "📘"
+              },
+              {
+                "en": "chalk",
+                "cn": "粉笔",
+                "emoji": "📘"
+              },
+              {
+                "en": "coast",
+                "cn": "海岸",
+                "emoji": "📘"
+              },
+              {
+                "en": "Colombia",
+                "cn": "哥伦比亚",
+                "emoji": "📘"
+              },
+              {
+                "en": "custom",
+                "cn": "风俗",
+                "emoji": "📘"
+              },
+              {
+                "en": "eastern",
+                "cn": "东方的",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know basic?",
+                    "cn": "你知道基本的吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and behave too.",
+                    "cn": "知道，还有表现。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about You're supposed to shake hands..",
+                    "cn": "太好了！我们来聊聊You're supposed to shake hands.。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "宾语从句与间接引语",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "宾语从句与间接引语",
+            "grammarCode": "g8.26",
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：宾语从句与间接引语。下列哪项与「basic」词义最接近？",
+                "opts": [
+                  "东方的",
+                  "基本的",
+                  "粉笔",
+                  "首都"
+                ],
+                "answer": 1,
+                "point": "宾语从句与间接引语",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「表现」",
+                "opts": [
+                  "capital",
+                  "behave",
+                  "chalk",
+                  "basic"
+                ],
+                "answer": 1,
+                "point": "宾语从句与间接引语",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "You’re supposed to shake hands. 1. I held out my hand and to my surprise, she kissed me on both sides of my face!",
+              "passageCn": "本单元阅读材料（You're supposed to shake hands.）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Only grammar",
+                    "A different topic",
+                    "Only listening",
+                    "You're supposed to shake hands."
+                  ],
+                  "answer": 3,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Cooking",
+                    "You're supposed to shake hands.",
+                    "Math class",
+                    "Sports only"
+                  ],
+                  "answer": 1,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「basic」 mean in Chinese?",
+                  "opts": [
+                    "哥伦比亚",
+                    "基本的",
+                    "风俗",
+                    "粉笔"
+                  ],
+                  "answer": 1,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"You're supposed to shake hands.\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「You're supposed to shake hands.」，使用本单元词汇。",
+              "sampleWords": [
+                "basic",
+                "behave",
+                "blackboard",
+                "bow",
+                "Brazil",
+                "Cali"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「basic」的意思是？",
+                "opts": [
+                  "首都",
+                  "东方的",
+                  "基本的",
+                  "黑板"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「behave」的意思是？",
+                "opts": [
+                  "基本的",
+                  "哥伦比亚",
+                  "表现",
+                  "卡利"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「blackboard」的意思是？",
+                "opts": [
+                  "巴西",
+                  "风俗",
+                  "黑板",
+                  "卡利"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bow」的意思是？",
+                "opts": [
+                  "哥伦比亚",
+                  "卡利",
+                  "鞠躬",
+                  "黑板"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Brazil」的意思是？",
+                "opts": [
+                  "巴西",
+                  "黑板",
+                  "鞠躬",
+                  "粉笔"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Cali」的意思是？",
+                "opts": [
+                  "卡利",
+                  "粉笔",
+                  "哥伦比亚",
+                  "鞠躬"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「capital」的意思是？",
+                "opts": [
+                  "首都",
+                  "巴西",
+                  "东方的",
+                  "黑板"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「chalk」的意思是？",
+                "opts": [
+                  "海岸",
+                  "东方的",
+                  "卡利",
+                  "粉笔"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「基本的」？",
+                "opts": [
+                  "basic",
+                  "coast",
+                  "Colombia",
+                  "chalk"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「你应该握手」的核心词是？",
+                "opts": [
+                  "bow",
+                  "basic",
+                  "capital",
+                  "apple"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "basic",
+                "opts": [
+                  "basic",
+                  "behave",
+                  "blackboard",
+                  "bow"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "behave",
+                "opts": [
+                  "behave",
+                  "basic",
+                  "blackboard",
+                  "bow"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "blackboard",
+                "opts": [
+                  "blackboard",
+                  "basic",
+                  "behave",
+                  "bow"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "bow",
+                "opts": [
+                  "bow",
+                  "basic",
+                  "behave",
+                  "blackboard"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Brazil",
+                "opts": [
+                  "Brazil",
+                  "basic",
+                  "behave",
+                  "blackboard"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Cali",
+                "opts": [
+                  "Cali",
+                  "basic",
+                  "behave",
+                  "blackboard"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "capital",
+                "opts": [
+                  "capital",
+                  "basic",
+                  "behave",
+                  "blackboard"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "chalk",
+                "opts": [
+                  "chalk",
+                  "basic",
+                  "behave",
+                  "blackboard"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u11",
+            "num": 11,
+            "unitKey": "U11",
+            "book": "9",
+            "title": "Sad movies make me cry.",
+            "cn": "悲伤的电影让我哭",
+            "emoji": "😢",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "agreement",
+                "cn": "一致",
+                "emoji": "📘"
+              },
+              {
+                "en": "banker",
+                "cn": "银行家",
+                "emoji": "📘"
+              },
+              {
+                "en": "Bert",
+                "cn": "伯特",
+                "emoji": "📘"
+              },
+              {
+                "en": "besides",
+                "cn": "而且",
+                "emoji": "📘"
+              },
+              {
+                "en": "coach",
+                "cn": "教练",
+                "emoji": "📘"
+              },
+              {
+                "en": "courage",
+                "cn": "勇敢",
+                "emoji": "📘"
+              },
+              {
+                "en": "disappoint",
+                "cn": "使失望",
+                "emoji": "📘"
+              },
+              {
+                "en": "drive",
+                "cn": "迫使",
+                "emoji": "📘"
+              },
+              {
+                "en": "examine",
+                "cn": "检查",
+                "emoji": "📘"
+              },
+              {
+                "en": "fame",
+                "cn": "名声",
+                "emoji": "📘"
+              },
+              {
+                "en": "fault",
+                "cn": "过失",
+                "emoji": "📘"
+              },
+              {
+                "en": "friendship",
+                "cn": "友谊",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know agreement?",
+                    "cn": "你知道一致吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and banker too.",
+                    "cn": "知道，还有银行家。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about Sad movies make me cry..",
+                    "cn": "太好了！我们来聊聊Sad movies make me cry.。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "情态动词表推测",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "情态动词表推测",
+            "grammarCode": null,
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：情态动词表推测。下列哪项与「agreement」词义最接近？",
+                "opts": [
+                  "迫使",
+                  "伯特",
+                  "而且",
+                  "一致"
+                ],
+                "answer": 3,
+                "point": "情态动词表推测",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「银行家」",
+                "opts": [
+                  "banker",
+                  "Bert",
+                  "coach",
+                  "courage"
+                ],
+                "answer": 0,
+                "point": "情态动词表推测",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "John: Did you and Amy have fun last night, Tina? Tina: Well ... yes and no. John: Was Amy late as usual? Tina: Yes, she was, and waiting for her drove me crazy. John: Oh dear. Where did you go for dinner, then? Tina: First we went to Rockin’ Restaurant, but Amy didn’t want to stay. She said that the loud music made her nervous. John: That’s funny. Loud music always makes me want to dance. Tina: Me, too. So we went to Blue Ocean. It was quiet and the food was great. We had a good time. John: Then did you go to the concert at the high school? Tina: No. We decided to go to the movies. We saw Remember Me Forever. It was a really good movie, but it was so sad that it made us cry. John: Sad movies don’t make me cry. They just make me want to leave! Tina: You sound just like my brother!",
+              "passageCn": "本单元阅读材料（Sad movies make me cry.）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Sad movies make me cry.",
+                    "A different topic",
+                    "Only grammar",
+                    "Only listening"
+                  ],
+                  "answer": 0,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Sad movies make me cry.",
+                    "Math class",
+                    "Cooking",
+                    "Sports only"
+                  ],
+                  "answer": 0,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「agreement」 mean in Chinese?",
+                  "opts": [
+                    "一致",
+                    "迫使",
+                    "教练",
+                    "而且"
+                  ],
+                  "answer": 0,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"Sad movies make me cry.\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「Sad movies make me cry.」，使用本单元词汇。",
+              "sampleWords": [
+                "agreement",
+                "banker",
+                "Bert",
+                "besides",
+                "coach",
+                "courage"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「agreement」的意思是？",
+                "opts": [
+                  "名声",
+                  "检查",
+                  "一致",
+                  "教练"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「banker」的意思是？",
+                "opts": [
+                  "银行家",
+                  "勇敢",
+                  "名声",
+                  "检查"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Bert」的意思是？",
+                "opts": [
+                  "伯特",
+                  "迫使",
+                  "银行家",
+                  "勇敢"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「besides」的意思是？",
+                "opts": [
+                  "使失望",
+                  "教练",
+                  "而且",
+                  "友谊"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「coach」的意思是？",
+                "opts": [
+                  "名声",
+                  "教练",
+                  "银行家",
+                  "勇敢"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「courage」的意思是？",
+                "opts": [
+                  "友谊",
+                  "勇敢",
+                  "检查",
+                  "使失望"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「disappoint」的意思是？",
+                "opts": [
+                  "友谊",
+                  "检查",
+                  "使失望",
+                  "一致"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「drive」的意思是？",
+                "opts": [
+                  "友谊",
+                  "迫使",
+                  "勇敢",
+                  "过失"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「一致」？",
+                "opts": [
+                  "agreement",
+                  "Bert",
+                  "besides",
+                  "fault"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「悲伤的电影让我哭」的核心词是？",
+                "opts": [
+                  "Bert",
+                  "agreement",
+                  "friendship",
+                  "courage"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "agreement",
+                "opts": [
+                  "agreement",
+                  "banker",
+                  "Bert",
+                  "besides"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "banker",
+                "opts": [
+                  "banker",
+                  "agreement",
+                  "Bert",
+                  "besides"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Bert",
+                "opts": [
+                  "Bert",
+                  "agreement",
+                  "banker",
+                  "besides"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "besides",
+                "opts": [
+                  "besides",
+                  "agreement",
+                  "banker",
+                  "Bert"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "coach",
+                "opts": [
+                  "coach",
+                  "agreement",
+                  "banker",
+                  "Bert"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "courage",
+                "opts": [
+                  "courage",
+                  "agreement",
+                  "banker",
+                  "Bert"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "disappoint",
+                "opts": [
+                  "disappoint",
+                  "agreement",
+                  "banker",
+                  "Bert"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "drive",
+                "opts": [
+                  "drive",
+                  "agreement",
+                  "banker",
+                  "Bert"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u12",
+            "num": 12,
+            "unitKey": "U12",
+            "book": "9",
+            "title": "Life is full of the unexpected.",
+            "cn": "生活充满意外",
+            "emoji": "✨",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "(overslept",
+                "cn": ")",
+                "emoji": "📘"
+              },
+              {
+                "en": "above",
+                "cn": "在",
+                "emoji": "📘"
+              },
+              {
+                "en": "airport",
+                "cn": "机场",
+                "emoji": "📘"
+              },
+              {
+                "en": "alive",
+                "cn": "活着",
+                "emoji": "📘"
+              },
+              {
+                "en": "announce",
+                "cn": "宣布",
+                "emoji": "📘"
+              },
+              {
+                "en": "backpack",
+                "cn": "背包",
+                "emoji": "📘"
+              },
+              {
+                "en": "bean",
+                "cn": "豆",
+                "emoji": "📘"
+              },
+              {
+                "en": "believable",
+                "cn": "可相信的",
+                "emoji": "📘"
+              },
+              {
+                "en": "block",
+                "cn": "街区",
+                "emoji": "📘"
+              },
+              {
+                "en": "burn",
+                "cn": "(",
+                "emoji": "📘"
+              },
+              {
+                "en": "burning",
+                "cn": "着火的",
+                "emoji": "📘"
+              },
+              {
+                "en": "burnt; burned",
+                "cn": ")",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know (overslept?",
+                    "cn": "你知道)吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and above too.",
+                    "cn": "知道，还有在。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about Life is full of the unexpected..",
+                    "cn": "太好了！我们来聊聊Life is full of the unexpected.。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "复习综合",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "复习综合",
+            "grammarCode": null,
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：复习综合。下列哪项与「(overslept」词义最接近？",
+                "opts": [
+                  ")",
+                  "宣布",
+                  "街区",
+                  "("
+                ],
+                "answer": 0,
+                "point": "复习综合",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「在」",
+                "opts": [
+                  "backpack",
+                  "(overslept",
+                  "believable",
+                  "above"
+                ],
+                "answer": 3,
+                "point": "复习综合",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Have you ever played jokes on others, especially on April Fool’s Day? Have you ever been fooled by others? Tell your story to your partner. April Fool’s Day is a celebration that takes place in diﬀ erent countries around the world. It happens on April 1st every year and is a day when many people play all kinds of tricks and jokes on each other. One April Fool’s Day, a reporter in England announced that there would be no more spaghett i because the spaghett i farmers in Italy had stopped growing spaghett i. Many people ran to their local supermarkets to buy as much spaghett i as they could. By the time people realized that the story was a hoax, all of the spaghett i across the country had been sold out. In another famous trick a TV show in England reported the discovery of special water. Th ey said this water would help people lose weight and that one customer had already lost a lot of weight in just four months. By the end of the day, more than 10,000 people had phoned the TV station to fi nd out how to get this water. Many April Fool’s jokes may end up being not very funny. A famous TV star once invited his girlfriend onto his show on April Fool’s Day. He asked her to marry him. Th e lady was so happy because she really wanted to get married. However, when she said yes, he replied, “April Fool!” Th at litt le joke didn’t have a very happy ending. Th e TV star lost his girlfriend and his show was canceled. One of the world’s most famous tricks, however, happened in October rather than in April. In that month in 1938, actor Orson Welles announced on his radio program that aliens from Mars had landed on the earth. He described where they had landed and told how they were moving across the United States. Welles made it sound so real that hundreds of people believed the story, and fear spread across the whole country. By the time police oﬃ cers announced that the story was a hoax, thousands of people had left their homes.",
+              "passageCn": "本单元阅读材料（Life is full of the unexpected.）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Only listening",
+                    "Only grammar",
+                    "A different topic",
+                    "Life is full of the unexpected."
+                  ],
+                  "answer": 3,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Sports only",
+                    "Math class",
+                    "Cooking",
+                    "Life is full of the unexpected."
+                  ],
+                  "answer": 3,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「(overslept」 mean in Chinese?",
+                  "opts": [
+                    "在",
+                    "街区",
+                    ")",
+                    "豆"
+                  ],
+                  "answer": 2,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"Life is full of the unexpected.\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「Life is full of the unexpected.」，使用本单元词汇。",
+              "sampleWords": [
+                "(overslept",
+                "above",
+                "airport",
+                "alive",
+                "announce",
+                "backpack"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「(overslept」的意思是？",
+                "opts": [
+                  ")",
+                  "活着",
+                  "机场",
+                  "背包"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「above」的意思是？",
+                "opts": [
+                  "在",
+                  "街区",
+                  "豆",
+                  "活着"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「airport」的意思是？",
+                "opts": [
+                  "着火的",
+                  "豆",
+                  "机场",
+                  "活着"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「alive」的意思是？",
+                "opts": [
+                  "宣布",
+                  "活着",
+                  "着火的",
+                  "("
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「announce」的意思是？",
+                "opts": [
+                  "街区",
+                  "在",
+                  "宣布",
+                  "活着"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「backpack」的意思是？",
+                "opts": [
+                  "(",
+                  "街区",
+                  "背包",
+                  "着火的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bean」的意思是？",
+                "opts": [
+                  "背包",
+                  "街区",
+                  ")",
+                  "豆"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「believable」的意思是？",
+                "opts": [
+                  "豆",
+                  ")",
+                  "可相信的",
+                  "背包"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「)」？",
+                "opts": [
+                  "bean",
+                  "backpack",
+                  "alive",
+                  "(overslept"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「生活充满意外」的核心词是？",
+                "opts": [
+                  "alive",
+                  "announce",
+                  "burnt; burned",
+                  "(overslept"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "(overslept",
+                "opts": [
+                  "(overslept",
+                  "above",
+                  "airport",
+                  "alive"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "above",
+                "opts": [
+                  "above",
+                  "(overslept",
+                  "airport",
+                  "alive"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "airport",
+                "opts": [
+                  "airport",
+                  "(overslept",
+                  "above",
+                  "alive"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "alive",
+                "opts": [
+                  "alive",
+                  "(overslept",
+                  "above",
+                  "airport"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "announce",
+                "opts": [
+                  "announce",
+                  "(overslept",
+                  "above",
+                  "airport"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "backpack",
+                "opts": [
+                  "backpack",
+                  "(overslept",
+                  "above",
+                  "airport"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "bean",
+                "opts": [
+                  "bean",
+                  "(overslept",
+                  "above",
+                  "airport"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "believable",
+                "opts": [
+                  "believable",
+                  "(overslept",
+                  "above",
+                  "airport"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u13",
+            "num": 13,
+            "unitKey": "U13",
+            "book": "9",
+            "title": "We're trying to save the earth!",
+            "cn": "我们在努力拯救地球",
+            "emoji": "🌍",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "advantage",
+                "cn": "优点",
+                "emoji": "📘"
+              },
+              {
+                "en": "aﬀord",
+                "cn": "承担得起（后",
+                "emoji": "📘"
+              },
+              {
+                "en": "bin",
+                "cn": "垃圾箱",
+                "emoji": "📘"
+              },
+              {
+                "en": "botle",
+                "cn": "瓶子",
+                "emoji": "📘"
+              },
+              {
+                "en": "botom",
+                "cn": "底部",
+                "emoji": "📘"
+              },
+              {
+                "en": "chain",
+                "cn": "链子",
+                "emoji": "📘"
+              },
+              {
+                "en": "coal",
+                "cn": "煤",
+                "emoji": "📘"
+              },
+              {
+                "en": "cost",
+                "cn": "(",
+                "emoji": "📘"
+              },
+              {
+                "en": "creativity",
+                "cn": "创造力",
+                "emoji": "📘"
+              },
+              {
+                "en": "cruel",
+                "cn": "残酷的",
+                "emoji": "📘"
+              },
+              {
+                "en": "ecosystem",
+                "cn": "生态系统",
+                "emoji": "📘"
+              },
+              {
+                "en": "fin",
+                "cn": "鳍",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know advantage?",
+                    "cn": "你知道优点吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and aﬀord too.",
+                    "cn": "知道，还有承担得起（后。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about We're trying to save the earth!.",
+                    "cn": "太好了！我们来聊聊We're trying to save the earth!。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "复习综合",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "复习综合",
+            "grammarCode": null,
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：复习综合。下列哪项与「advantage」词义最接近？",
+                "opts": [
+                  "优点",
+                  "瓶子",
+                  "煤",
+                  "("
+                ],
+                "answer": 0,
+                "point": "复习综合",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「承担得起（后」",
+                "opts": [
+                  "fin",
+                  "cruel",
+                  "aﬀord",
+                  "bin"
+                ],
+                "answer": 2,
+                "point": "复习综合",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Mark: I don’t think I want to go, Tony. Tony: Why not? Mark: I was there last weekend and the river was really dirty. Even the bottom of the river was full of rubbish, and there were no more fish for fishermen to catch. Tony: No way! It used to be so clean. In fact, it has always been the nicest river in this town. Mark: Not anymore. I think people are throwing litter into the river. Factories are also putting waste into the river. Tony: That’s terrible! We should write to the government. They should close down the factories. Mark: Good idea! But I think everyone in this town should help to clean up the river, too. Everyone should play a part, not just the government.",
+              "passageCn": "本单元阅读材料（We're trying to save the earth!）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Only grammar",
+                    "A different topic",
+                    "Only listening",
+                    "We're trying to save the earth!"
+                  ],
+                  "answer": 3,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Math class",
+                    "Cooking",
+                    "We're trying to save the earth!",
+                    "Sports only"
+                  ],
+                  "answer": 2,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「advantage」 mean in Chinese?",
+                  "opts": [
+                    "优点",
+                    "链子",
+                    "煤",
+                    "鳍"
+                  ],
+                  "answer": 0,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"We're trying to save the earth!\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「We're trying to save the earth!」，使用本单元词汇。",
+              "sampleWords": [
+                "advantage",
+                "aﬀord",
+                "bin",
+                "botle",
+                "botom",
+                "chain"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「advantage」的意思是？",
+                "opts": [
+                  "创造力",
+                  "承担得起（后",
+                  "残酷的",
+                  "优点"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「aﬀord」的意思是？",
+                "opts": [
+                  "残酷的",
+                  "生态系统",
+                  "承担得起（后",
+                  "垃圾箱"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bin」的意思是？",
+                "opts": [
+                  "优点",
+                  "承担得起（后",
+                  "垃圾箱",
+                  "鳍"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「botle」的意思是？",
+                "opts": [
+                  "垃圾箱",
+                  "瓶子",
+                  "优点",
+                  "煤"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「botom」的意思是？",
+                "opts": [
+                  "残酷的",
+                  "链子",
+                  "(",
+                  "底部"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「chain」的意思是？",
+                "opts": [
+                  "煤",
+                  "优点",
+                  "残酷的",
+                  "链子"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「coal」的意思是？",
+                "opts": [
+                  "残酷的",
+                  "底部",
+                  "鳍",
+                  "煤"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「cost」的意思是？",
+                "opts": [
+                  "残酷的",
+                  "创造力",
+                  "(",
+                  "瓶子"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「优点」？",
+                "opts": [
+                  "bin",
+                  "ecosystem",
+                  "advantage",
+                  "aﬀord"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「我们在努力拯救地球」的核心词是？",
+                "opts": [
+                  "cost",
+                  "advantage",
+                  "creativity",
+                  "bin"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "advantage",
+                "opts": [
+                  "advantage",
+                  "aﬀord",
+                  "bin",
+                  "botle"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "aﬀord",
+                "opts": [
+                  "aﬀord",
+                  "advantage",
+                  "bin",
+                  "botle"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "bin",
+                "opts": [
+                  "bin",
+                  "advantage",
+                  "aﬀord",
+                  "botle"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "botle",
+                "opts": [
+                  "botle",
+                  "advantage",
+                  "aﬀord",
+                  "bin"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "botom",
+                "opts": [
+                  "botom",
+                  "advantage",
+                  "aﬀord",
+                  "bin"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "chain",
+                "opts": [
+                  "chain",
+                  "advantage",
+                  "aﬀord",
+                  "bin"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "coal",
+                "opts": [
+                  "coal",
+                  "advantage",
+                  "aﬀord",
+                  "bin"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "cost",
+                "opts": [
+                  "cost",
+                  "advantage",
+                  "aﬀord",
+                  "bin"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          {
+            "id": "g9full_u14",
+            "num": 14,
+            "unitKey": "U14",
+            "book": "9",
+            "title": "I remember meeting all of you in Grade 7.",
+            "cn": "我记得七年级认识你们",
+            "emoji": "🎓",
+            "available": true,
+            "vocabulary": [
+              {
+                "en": "(overcame",
+                "cn": ")",
+                "emoji": "📘"
+              },
+              {
+                "en": "ahead",
+                "cn": "向前面",
+                "emoji": "📘"
+              },
+              {
+                "en": "Brian",
+                "cn": "布赖恩",
+                "emoji": "📘"
+              },
+              {
+                "en": "caring",
+                "cn": "体贴人的",
+                "emoji": "📘"
+              },
+              {
+                "en": "ceremony",
+                "cn": "典礼",
+                "emoji": "📘"
+              },
+              {
+                "en": "congratulate",
+                "cn": "祝贺",
+                "emoji": "📘"
+              },
+              {
+                "en": "degree",
+                "cn": "学位",
+                "emoji": "📘"
+              },
+              {
+                "en": "double",
+                "cn": "加倍",
+                "emoji": "📘"
+              },
+              {
+                "en": "gentleman",
+                "cn": "先生",
+                "emoji": "📘"
+              },
+              {
+                "en": "graduate",
+                "cn": "毕业",
+                "emoji": "📘"
+              },
+              {
+                "en": "graduation",
+                "cn": "毕业",
+                "emoji": "📘"
+              },
+              {
+                "en": "Griffin",
+                "cn": "格里芬",
+                "emoji": "📘"
+              }
+            ],
+            "dialogues": [
+              {
+                "title": "Section A",
+                "lines": [
+                  {
+                    "role": "A",
+                    "text": "Do you know (overcame?",
+                    "cn": "你知道)吗？"
+                  },
+                  {
+                    "role": "B",
+                    "text": "Yes, and ahead too.",
+                    "cn": "知道，还有向前面。"
+                  },
+                  {
+                    "role": "A",
+                    "text": "Great! Let's talk about I remember meeting all of you in Grade 7..",
+                    "cn": "太好了！我们来聊聊I remember meeting all of you in Grade 7.。"
+                  }
+                ]
+              }
+            ],
+            "stages": [
+              {
+                "id": "s1",
+                "title": "核心词汇",
+                "subtitle": "12个教材词汇",
+                "icon": "📚",
+                "type": "vocab",
+                "time": "8分钟"
+              },
+              {
+                "id": "s2",
+                "title": "听音辨词",
+                "subtitle": "听力辨词",
+                "icon": "🎧",
+                "type": "listenWord",
+                "time": "6分钟"
+              },
+              {
+                "id": "s3",
+                "title": "词义配对",
+                "subtitle": "巩固记忆",
+                "icon": "🎮",
+                "type": "match",
+                "time": "5分钟"
+              },
+              {
+                "id": "s4",
+                "title": "语法专项",
+                "subtitle": "中考冲刺",
+                "icon": "🧩",
+                "type": "grammar",
+                "time": "12分钟"
+              },
+              {
+                "id": "s5",
+                "title": "课文阅读",
+                "subtitle": "阅读理解",
+                "icon": "📖",
+                "type": "reading",
+                "time": "8分钟"
+              },
+              {
+                "id": "s6",
+                "title": "听力短文",
+                "subtitle": "听音答题",
+                "icon": "👂",
+                "type": "listening",
+                "time": "8分钟"
+              },
+              {
+                "id": "s7",
+                "title": "写作练习",
+                "subtitle": "本单元句型",
+                "icon": "✍️",
+                "type": "writing",
+                "time": "10分钟"
+              },
+              {
+                "id": "s8",
+                "title": "单元通关",
+                "subtitle": "综合检测",
+                "icon": "🏆",
+                "type": "finalQuiz",
+                "time": "12分钟"
+              }
+            ],
+            "grammarTitle": "中考冲刺",
+            "grammarCode": null,
+            "grammarQuiz": [
+              {
+                "q": "本单元语法重点：中考冲刺。下列哪项与「(overcame」词义最接近？",
+                "opts": [
+                  "先生",
+                  "加倍",
+                  ")",
+                  "格里芬"
+                ],
+                "answer": 2,
+                "point": "中考冲刺",
+                "dim": "grammar"
+              },
+              {
+                "q": "选择正确的英文：「向前面」",
+                "opts": [
+                  "caring",
+                  "graduation",
+                  "degree",
+                  "ahead"
+                ],
+                "answer": 3,
+                "point": "中考冲刺",
+                "dim": "grammar"
+              }
+            ],
+            "reading": {
+              "passage": "Hmm ... I used to be scared of Mr. Brown in Grade 8. He was so strict! I always did my homework carefully to meet his standards. Sarah: Me, too. And I remember meeting all of you in Grade 7. And we’ve been good friends ever since, haven’t we, Frank? Frank: Yeah! I’ve enjoyed every year of junior high school.",
+              "passageCn": "本单元阅读材料（I remember meeting all of you in Grade 7.）",
+              "questions": [
+                {
+                  "q": "According to the passage, this unit is mainly about:",
+                  "opts": [
+                    "Only grammar",
+                    "Only listening",
+                    "A different topic",
+                    "I remember meeting all of you in Grade 7."
+                  ],
+                  "answer": 3,
+                  "point": "课文理解",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What is this unit mainly about?",
+                  "opts": [
+                    "Cooking",
+                    "Math class",
+                    "Sports only",
+                    "I remember meeting all of you in Grade 7."
+                  ],
+                  "answer": 3,
+                  "point": "阅读主旨",
+                  "dim": "reading"
+                },
+                {
+                  "q": "What does 「(overcame」 mean in Chinese?",
+                  "opts": [
+                    "祝贺",
+                    "学位",
+                    "布赖恩",
+                    ")"
+                  ],
+                  "answer": 3,
+                  "point": "词汇理解",
+                  "dim": "reading"
+                }
+              ]
+            },
+            "writing": {
+              "prompt": "Write 4-6 sentences about \"I remember meeting all of you in Grade 7.\" using words from this unit.",
+              "promptCn": "用 4-6 个句子描述本单元「I remember meeting all of you in Grade 7.」，使用本单元词汇。",
+              "sampleWords": [
+                "(overcame",
+                "ahead",
+                "Brian",
+                "caring",
+                "ceremony",
+                "congratulate"
+              ]
+            },
+            "quizQuestions": [
+              {
+                "q": "「(overcame」的意思是？",
+                "opts": [
+                  "体贴人的",
+                  "格里芬",
+                  ")",
+                  "毕业"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ahead」的意思是？",
+                "opts": [
+                  "体贴人的",
+                  "向前面",
+                  "典礼",
+                  ")"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「Brian」的意思是？",
+                "opts": [
+                  "布赖恩",
+                  "先生",
+                  "体贴人的",
+                  "毕业"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「caring」的意思是？",
+                "opts": [
+                  "毕业",
+                  "体贴人的",
+                  "格里芬",
+                  "加倍"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「ceremony」的意思是？",
+                "opts": [
+                  "毕业",
+                  "典礼",
+                  "先生",
+                  "布赖恩"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「congratulate」的意思是？",
+                "opts": [
+                  "祝贺",
+                  "毕业",
+                  "格里芬",
+                  "学位"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「degree」的意思是？",
+                "opts": [
+                  "毕业",
+                  "体贴人的",
+                  "典礼",
+                  "学位"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「double」的意思是？",
+                "opts": [
+                  "加倍",
+                  "格里芬",
+                  "毕业",
+                  "祝贺"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个单词表示「)」？",
+                "opts": [
+                  "congratulate",
+                  "(overcame",
+                  "caring",
+                  "degree"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「我记得七年级认识你们」的核心词是？",
+                "opts": [
+                  "congratulate",
+                  "(overcame",
+                  "school",
+                  "double"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              }
+            ],
+            "listeningQuestions": [
+              {
+                "audio": "Is he/she asked …?",
+                "opts": [
+                  "Is he/she asked …?",
+                  "(overcame",
+                  "ahead",
+                  "Brian"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Do you know when the bookstore closes today?",
+                "opts": [
+                  "Do you know when the bookstore closes today?",
+                  "(overcame",
+                  "ahead",
+                  "Brian"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Can you tell me who she is?",
+                "opts": [
+                  "Can you tell me who she is?",
+                  "(overcame",
+                  "ahead",
+                  "Brian"
+                ],
+                "answer": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "code": "g7.01",
+    "title": "be 动词 · Verb be (am/is/are)",
+    "grade": 7,
+    "category": "tense",
+    "summary": "对应：7A 问候与自我介绍",
+    "explanation": "【结构】I am / You are / He is / She is / It is / We are / They are\n【用法】表身份、状态、位置。\n【例句】I am fine. / She is a student.\n【易错】✗ He are → ✓ He is"
+  },
+  {
+    "code": "g7.02",
+    "title": "指示代词 this/that · Demonstratives",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A SU2",
+    "explanation": "【结构】This is ... / That is ...\n【用法】this 近处，that 远处。\n【例句】This is a ruler. / What's that in English?"
+  },
+  {
+    "code": "g7.03",
+    "title": "What color · 颜色问句",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A SU3",
+    "explanation": "【结构】What color is it? — It's + 颜色.\n【例句】What color is your bag? — It's blue."
+  },
+  {
+    "code": "g7.04",
+    "title": "名词所有格 · Possessive 's",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A U2",
+    "explanation": "【结构】名词 + 's + 名词\n【例句】This is my sister's book.\n【易错】✗ my sister book → ✓ my sister's book"
+  },
+  {
+    "code": "g7.05",
+    "title": "一般疑问句 Is this...? · Yes/No Questions",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A U3",
+    "explanation": "【结构】Beach/Are + 主语 + 名词?\n【回答】Yes, it is. / No, it isn't.\n【例句】Is this your pencil?"
+  },
+  {
+    "code": "g7.06",
+    "title": "Where 问句与介词 · Where + prepositions",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A U4",
+    "explanation": "【结构】Where is ...? — It's on/in/under...\n【例句】Where's my schoolbag? — It's on the chair."
+  },
+  {
+    "code": "g7.07",
+    "title": "Do you have...? · Have questions",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A U5",
+    "explanation": "【结构】Do you have + 名词?\n【回答】Yes, I do. / No, I don't.\n【例句】Do you have a soccer ball?"
+  },
+  {
+    "code": "g7.08",
+    "title": "Do you like + countable nouns",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A U6",
+    "explanation": "【结构】Do you like + 复数/不可数?\n【例句】Do you like bananas? — Yes, I do."
+  },
+  {
+    "code": "g7.09",
+    "title": "How much 与价格 · How much",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A U7",
+    "explanation": "【结构】How much is/are ...?\n【例句】How much are these socks? — They're five dollars."
+  },
+  {
+    "code": "g7.10",
+    "title": "When 与序数词 · When + ordinals",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A U8",
+    "explanation": "【结构】When is your birthday? — It's on + 日期.\n【例句】My birthday is on May 2nd."
+  },
+  {
+    "code": "g7.11",
+    "title": "Why 与 because · Why/because",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7A U9 / 7B U5",
+    "explanation": "【结构】Why do you like ...? — Because ...\n【例句】Why do you like science? — Because it's interesting."
+  },
+  {
+    "code": "g7.12",
+    "title": "can 表能力 · Modal can",
+    "grade": 7,
+    "category": "verb",
+    "summary": "对应：7B U1",
+    "explanation": "【结构】Can + 主语 + 动词原形?\n【例句】Can you play the guitar? — Yes, I can."
+  },
+  {
+    "code": "g7.13",
+    "title": "What time · 时刻表达",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7B U2",
+    "explanation": "【结构】What time do you ...? — I ... at + 时刻.\n【例句】What time do you go to school? — At seven o'clock."
+  },
+  {
+    "code": "g7.14",
+    "title": "How 问交通方式 · How + transport",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7B U3",
+    "explanation": "【结构】How do you get to ...? — By bus/bike/on foot.\n【例句】How do you get to school? — I take the bus."
+  },
+  {
+    "code": "g7.15",
+    "title": "祈使句与 don't · Imperatives",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7B U4 / 8A U8",
+    "explanation": "【结构】动词原形开头 / Don't + 动词原形\n【例句】Don't eat in class. / Be quiet, please."
+  },
+  {
+    "code": "g7.16",
+    "title": "There be 句型 · There is/are",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7B U8",
+    "explanation": "【结构】There is + 单数 / There are + 复数\n【例句】Is there a post office near here? — Yes, there is."
+  },
+  {
+    "code": "g7.17",
+    "title": "What does he look like? · Appearance",
+    "grade": 7,
+    "category": "other",
+    "summary": "对应：7B U9",
+    "explanation": "【结构】What does ... look like? — He/She is tall/has...\n【例句】What does he look like? — He is of medium height."
+  },
+  {
+    "code": "g7.18",
+    "title": "would like 点餐 · Would like",
+    "grade": 7,
+    "category": "verb",
+    "summary": "对应：7B U10",
+    "explanation": "【结构】I'd like + 名词 / Would you like ...?\n【例句】I'd like some noodles, please."
+  },
+  {
+    "code": "g9.01",
+    "title": "一般现在时被动 · Present Passive",
+    "grade": 9,
+    "category": "tense",
+    "summary": "对应：9 U1",
+    "explanation": "【结构】am/is/are + 过去分词\n【例句】English is spoken in many countries."
+  },
+  {
+    "code": "g9.02",
+    "title": "used to 与感叹句 · used to / exclamations",
+    "grade": 9,
+    "category": "tense",
+    "summary": "对应：9 U2",
+    "explanation": "【结构】used to + 动词原形 / What + (a/an) + adj + n!\n【例句】I used to be shy. / What a beautiful day!"
+  },
+  {
+    "code": "g9.03",
+    "title": "过去完成时 · Past Perfect",
+    "grade": 9,
+    "category": "tense",
+    "summary": "对应：9 U8",
+    "explanation": "【结构】had + 过去分词\n【用法】过去的过去。\n【例句】When I got home, he had already left."
+  },
+  {
+    "code": "g9.04",
+    "title": "情态动词表推测 · Modals for deduction",
+    "grade": 9,
+    "category": "verb",
+    "summary": "对应：9 U11",
+    "explanation": "【结构】must / can't / might + 动词原形\n【例句】He must be at home. / It can't be true."
+  },
+  {
+    "code": "g9.05",
+    "title": "中考语法综合 · Review mix",
+    "grade": 9,
+    "category": "other",
+    "summary": "对应：9 U12–U14",
+    "explanation": "综合复习：时态、从句、被动、情況等中考高频考点。"
+  }
+]

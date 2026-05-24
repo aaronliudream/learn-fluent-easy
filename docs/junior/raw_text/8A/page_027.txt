@@ -1,0 +1,74 @@
+16
+UNIT 2
+4
+Take the health quiz. Compare your results with your partner’s. Who’s 
+healthier?
+1. How oft en do you eat breakfast?
+ 
+a. Never. 
+b. A few times a week. 
+c. Almost every day.
+2. How oft en do you eat fast food?
+ 
+a. Never. 
+b. A few times a week. 
+c. Almost every day.
+3. How oft en do you eat vegetables and fruit?
+ 
+a. Never. 
+b. A few times a week. 
+c. Almost every day.
+4. How oft en do you exercise?
+ 
+a. A few times a year. 
+b. A few times a month. 
+c. A few times a week.
+5. How many hours do you watch TV every week?
+ 
+a. None. 
+b. One to four. 
+c. Five or more.
+6. How many hours do you usually sleep at night?
+ 
+a. Less than six. 
+b. Six or seven. 
+c. Eight or more.
+Self Check
+2 Write fi ve sentences using the information above.
+3 Fill in the blanks in the conversation.
+A: What do Tom and Mike 
+ do on weekends?
+B: Th ey sometimes go to the museum.
+A: 
+ do they go to the shopping center?
+B: 
+ ever. Maybe about twice a month.
+A: 
+ do they watch TV?
+B: Mike never watches TV, but Tom watches TV 
+ day.
+A: Oh, I’m just like Tom. I 
+ watch TV, too.
+1
+Complete the chart with activities you do and don’t do. What 
+about your mother/father?
+always
+usually
+often
+sometimes hardly ever
+never
+I
+My mother
+or father
+9–12 points: You’re really healthy! Good for you — 
+and your health!
+4–8 points: You’re smart about your health most   
+of the time.
+0–3 points: You have to learn more about healthy 
+habits. Don’t worry — you can do it!
+1. a = 0, b = 1, c = 2
+2. a = 2, b = 1, c = 0
+3. a = 0, b = 1, c = 2
+4. a = 0, b = 1, c = 2
+5. a = 2, b = 1, c = 0
+6. a = 0, b = 1, c = 2

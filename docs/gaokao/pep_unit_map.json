@@ -1,0 +1,52 @@
+{
+  "required1": [
+    { "key": "WU", "title": "Welcome Unit", "cn": "启航 · 高中新起点", "emoji": "🌊" },
+    { "key": "U1", "title": "Teenage Life", "cn": "青少年生活", "emoji": "🎒" },
+    { "key": "U2", "title": "Travelling Around", "cn": "环球旅行", "emoji": "✈️" },
+    { "key": "U3", "title": "Sports and Fitness", "cn": "运动与健康", "emoji": "⚽" },
+    { "key": "U4", "title": "Natural Disasters", "cn": "自然灾害", "emoji": "🌋" },
+    { "key": "U5", "title": "Languages Around the World", "cn": "世界语言", "emoji": "🌍" }
+  ],
+  "required2": [
+    { "key": "U1", "title": "Cultural Heritage", "cn": "文化遗产", "emoji": "🏛️" },
+    { "key": "U2", "title": "Wildlife Protection", "cn": "野生动物保护", "emoji": "🐼" },
+    { "key": "U3", "title": "The Internet", "cn": "互联网", "emoji": "💻" },
+    { "key": "U4", "title": "History and Traditions", "cn": "历史与传统", "emoji": "📜" },
+    { "key": "U5", "title": "Music", "cn": "音乐", "emoji": "🎵" }
+  ],
+  "required3": [
+    { "key": "U1", "title": "Festivals and Celebrations", "cn": "节日与庆典", "emoji": "🎉" },
+    { "key": "U2", "title": "Morals and Virtues", "cn": "道德与品格", "emoji": "💡" },
+    { "key": "U3", "title": "Diverse Cultures", "cn": "多元文化", "emoji": "🌏" },
+    { "key": "U4", "title": "Space Exploration", "cn": "太空探索", "emoji": "🚀" },
+    { "key": "U5", "title": "The Value of Money", "cn": "金钱的价值", "emoji": "💰" }
+  ],
+  "elective1": [
+    { "key": "U1", "title": "People of Achievement", "cn": "杰出人物", "emoji": "🏆" },
+    { "key": "U2", "title": "Looking into the Future", "cn": "展望未来", "emoji": "🔮" },
+    { "key": "U3", "title": "Fascinating Parks", "cn": "迷人的公园", "emoji": "🏞️" },
+    { "key": "U4", "title": "Body Language", "cn": "肢体语言", "emoji": "🤝" },
+    { "key": "U5", "title": "Working the Land", "cn": "耕耘土地", "emoji": "🌾" }
+  ],
+  "elective2": [
+    { "key": "U1", "title": "Science and Scientists", "cn": "科学与科学家", "emoji": "🔬" },
+    { "key": "U2", "title": "Bridging Cultures", "cn": "跨文化沟通", "emoji": "🌉" },
+    { "key": "U3", "title": "Food and Culture", "cn": "饮食与文化", "emoji": "🍜" },
+    { "key": "U4", "title": "Journey Across a Vast Land", "cn": "穿越广袤大地", "emoji": "🗺️" },
+    { "key": "U5", "title": "First Aid", "cn": "急救", "emoji": "🩹" }
+  ],
+  "elective3": [
+    { "key": "U1", "title": "Art", "cn": "艺术", "emoji": "🎨" },
+    { "key": "U2", "title": "Healthy Lifestyle", "cn": "健康生活方式", "emoji": "❤️" },
+    { "key": "U3", "title": "Environmental Protection", "cn": "环境保护", "emoji": "🌿" },
+    { "key": "U4", "title": "Adversity and Courage", "cn": "逆境与勇气", "emoji": "⛰️" },
+    { "key": "U5", "title": "Poems", "cn": "诗歌", "emoji": "📜" }
+  ],
+  "elective4": [
+    { "key": "U1", "title": "Science Fiction", "cn": "科幻小说", "emoji": "🛸" },
+    { "key": "U2", "title": "Icons", "cn": "标志性人物", "emoji": "⭐" },
+    { "key": "U3", "title": "Sea Exploration", "cn": "海洋探索", "emoji": "🌊" },
+    { "key": "U4", "title": "Sharing", "cn": "分享", "emoji": "🤲" },
+    { "key": "U5", "title": "Launching Your Career", "cn": "开启职业生涯", "emoji": "🎯" }
+  ]
+}

@@ -1,0 +1,57 @@
+Grammar
+150
+I. 	 动词（Verbs）
+1. 	 被动语态（Passive Voice）
+	
+1) 主动语态和被动语态
+英语动词有两种语态，即主动语态（Active Voice）和被动语态（Passive 
+Voice）。当主语为动作的执行者时，谓语的形式为主动语态；当主语为动作的
+承受者时，谓语要用被动语态。例如：
+Many people speak English.（主动语态，句子的主语many people是动作speak
+的执行者）
+English is spoken by many people. （被动语态，句子的主语English是动作speak
+的承受者）
+Bell invented the telephone in 1876.（主动语态）
+The telephone was invented by Bell in 1876.（被动语态）
+	
+2) 被动语态的构成
+被动语态由“助动词be ＋及物动词的过去分词”构成。助动词be 有人称、数
+和时态的变化，其变化规则与be 作为连系动词时完全一样。现以动词ask为例，
+将一般现在时和一般过去时被动语态的肯定式、否定式及疑问式列表如下：
+	
+3)	 含有情态动词的被动语态
+含有情态动词的被动语态由“情态动词＋be＋及物动词的过去分词”构成。例
+如：
+	
+	
+Teenagers should be allowed to make their own decisions. 
+Grammar
+肯定式
+否定式
+疑问式
+一般现在时
+I am asked …
+He/She is asked …
+We/You/They are 
+asked …
+I am not asked …
+He/She is not asked …
+We/You/They are not 
+asked …
+Am I asked …?
+Is he/she asked …? 
+Are we/you/they 
+asked …? 
+一般过去时
+I was asked …
+He/She was asked …
+We/You/They were 
+asked …
+I was not asked …
+He/She was not asked …
+We/You/They were not 
+asked …
+Was I asked …?
+Was he/she asked …?
+Were we/you/they 
+asked …? 

@@ -1,0 +1,31 @@
+111
+Name List
+Alan /{l@n/ 艾伦（男名）  
+Alice /{lIs/ 艾丽斯（女名）  
+Anna /{n@/ 安娜（女名）  
+Bill /bIl/ 比尔（男名） 
+Bob /bQb/, /bA:b/ 鲍勃（男名） 
+Brown /braUn/ 布朗（姓）  
+Cindy /sIndi/ 辛迪（女名）  
+Dale /deIl/ 戴尔（男名）  
+David /deIvId/ 戴维（男名） 
+Eric /erIk/ 埃里克（男名） 
+Frank /fr{Nk/ 弗兰克（男名） 
+Gina /dZi:n@/ 吉娜（女名）  
+Grace /greIs/ 格雷丝（女名）  
+Green /gri:n/ 格林（姓）  
+Helen /hel@n/ 海伦（女名） 
+Jack /dZ{k/ 杰克（男名） 
+Jane /dZeIn/ 简（女名）  
+Jenny /dZeni/ 珍妮（女名）  
+John /dZQn/, /dZA:n/ 约翰（男名） 
+Kate /keIt/ 凯特（女名）  
+Linda /lInd@/ 琳达（女名）  
+Mary /me@ri/, /meri/ 玛丽（女名）  
+Mike /maIk/ 迈克（男名） 
+Miller /mIl@(r)/ 米勒（姓） 
+Paul /pO:l/ 保罗（男名）  
+Sally /s{li/ 萨莉（女名）  
+Smith /smIT/ 史密斯（姓）  
+Tom /tQm/, /tA:m/ 汤姆（男名）
+Name List

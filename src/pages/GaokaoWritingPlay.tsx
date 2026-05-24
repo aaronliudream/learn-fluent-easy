@@ -1,0 +1,226 @@
+import { T } from "@/i18n/T";
+import { useEffect, useState } from "react";
+import BackLink from "@/components/BackLink";
+import { Link, useParams } from "react-router-dom";
+import { ArrowLeft, Loader2, Sparkles } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { getWritingPromptById, type GaokaoWritingPrompt } from "@/lib/gaokaoContent";
+import { awardCoins } from "@/lib/coins";
+import { bumpPetSkill } from "@/lib/petSkills";
+import { toast } from "sonner";
+import { celebrateScore } from "@/lib/feedback";
+import { useRegisterAssistant } from "@/contexts/AIAssistantContext";
+import { recordUnifiedAttempt } from "@/hooks/useRecordAttempt";
+
+type Result = {
+  score: number;
+  overall: string;
+  mistakes: { original: string; corrected: string; explanation: string }[];
+  suggestions: string[];
+  improved: string;
+};
+
+export default function GaokaoWritingPlay() {
+  const { id } = useParams<{ id: string }>();
+  const [p, setP] = useState<GaokaoWritingPrompt | null>(null);
+  const [text, setText] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<Result | null>(null);
+
+  useRegisterAssistant(
+    p
+      ? {
+          context: "gaokao_writing",
+          ref: p.id,
+          topic: `高中写作 · ${p.topic}`,
+          mode: "free",
+          unlocked: true,
+          pageTitle: "💬 小月 · 写作答疑",
+        }
+      : null,
+  );
+
+  useEffect(() => {
+    if (!id) return;
+    setP(getWritingPromptById(id));
+  }, [id]);
+
+  const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
+
+  const submit = async () => {
+    if (!p || loading) return;
+    if (wordCount < Math.max(20, p.min_words - 20)) {
+      toast.error(`再写一些吧，至少 ${p.min_words} 词`);
+      return;
+    }
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("check-writing", {
+        body: {
+          prompt: p.prompt_en,
+          promptCn: p.prompt_cn,
+          sample: p.sample_answer ?? "",
+          text,
+          lessonTitle: p.topic,
+          targetLanguage: "Chinese",
+        },
+      });
+      if (error) throw error;
+      const r = data as Result;
+      setResult(r);
+      const reward = Math.max(5, Math.min(30, Math.round(r.score / 5)));
+      await awardCoins(reward, "gaokao_writing");
+      await bumpPetSkill("writer_pen", 1);
+      recordUnifiedAttempt({
+        stage: "senior",
+        grade: 10 + (p.year_band - 1),
+        module: "writing",
+        item_type: "essay",
+        item_id: p.id,
+        item_label: p.topic,
+        is_correct: r.score >= 60,
+        context: { score: Math.round(r.score), word_count: wordCount },
+      }).catch(() => {});
+      toast.success(`AI 已批改 · 得分 ${Math.round(r.score)} · +${reward} 星币`);
+      celebrateScore(Math.round(r.score));
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : "批改失败，请稍后再试";
+      toast.error(msg);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (!p) {
+    return (
+      <main className="grid min-h-screen place-items-center text-sm text-muted-foreground">
+        <T>加载中…</T>
+      </main>
+    );
+  }
+
+  const backHref = `/gaokao/writing?year_band=${p.year_band}`;
+
+  return (
+    <main className="mx-auto min-h-screen max-w-2xl px-5 py-6">
+      <BackLink
+        to={backHref}
+        className="mb-3 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+      >
+        <ArrowLeft className="size-4" /> <T>返回</T>
+      </BackLink>
+      <h1 className="text-grad-title text-2xl font-extrabold">{p.topic}</h1>
+      <div className="mt-3 rounded-2xl border bg-card p-4 text-sm">
+        <div className="font-bold">
+          <T>📌 题目</T>
+        </div>
+        <div className="mt-1 whitespace-pre-wrap">{p.prompt_cn}</div>
+        <div className="mt-2 whitespace-pre-wrap text-xs text-muted-foreground">{p.prompt_en}</div>
+        {p.requirements?.length > 0 && (
+          <ul className="mt-3 list-inside list-disc space-y-0.5 text-xs text-muted-foreground">
+            {p.requirements.map((r, i) => (
+              <li key={i}>{r}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {p.sample_answer && (
+        <section className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-950/20">
+          <div className="text-sm font-extrabold">
+            <T>✨ 课文范文节选</T>
+          </div>
+          {p.title_en && (
+            <div className="mt-1 text-xs italic text-amber-700 dark:text-amber-400">{p.title_en}</div>
+          )}
+          <div className="mt-2 whitespace-pre-line font-serif text-sm leading-relaxed text-amber-950 dark:text-amber-100">
+            {p.sample_answer}
+          </div>
+        </section>
+      )}
+
+      {p.high_sentences?.length > 0 && (
+        <section className="mt-4 rounded-2xl border bg-card p-4">
+          <div className="text-sm font-extrabold">
+            <T>🌟 课文句型</T>
+          </div>
+          <ol className="mt-2 space-y-2 text-sm">
+            {p.high_sentences.map((s, i) => (
+              <li key={i} className="rounded-lg bg-muted/40 p-2 leading-relaxed">
+                <span className="mr-1 font-bold text-fuchsia-600">{i + 1}.</span>
+                {s}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {p.scoring_rubric && (
+        <section className="mt-4 rounded-2xl border bg-card p-4">
+          <div className="text-sm font-extrabold">
+            <T>🎯 评分标准</T>
+          </div>
+          <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted-foreground">
+            {p.scoring_rubric}
+          </div>
+        </section>
+      )}
+
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        rows={12}
+        id="writing-area"
+        placeholder={`请用英语写作（${p.min_words}-${p.max_words} 词）…`}
+        className="mt-4 w-full rounded-2xl border-2 border-border bg-card p-4 text-sm leading-relaxed focus:border-pink-400 focus:outline-none"
+      />
+      <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">
+        <span>
+          {wordCount} <T>词 · 目标</T> {p.min_words}-{p.max_words}
+        </span>
+        <button
+          disabled={loading}
+          onClick={submit}
+          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-fuchsia-500 to-pink-600 px-5 py-2 text-sm font-extrabold text-white shadow-tile disabled:opacity-60"
+        >
+          {loading ? (
+            <>
+              <Loader2 className="size-4 animate-spin" /> <T>AI 批改中…</T>
+            </>
+          ) : (
+            <>
+              <Sparkles className="size-4" /> <T>提交 AI 批改</T>
+            </>
+          )}
+        </button>
+      </div>
+
+      {result && (
+        <section className="mt-6 space-y-4">
+          <div className="rounded-2xl bg-gradient-to-br from-fuchsia-500 to-pink-600 p-5 text-white shadow-tile">
+            <div className="text-xs uppercase tracking-wider opacity-80">
+              <T>AI 综合评分</T>
+            </div>
+            <div className="mt-1 text-4xl font-black">
+              {Math.round(result.score)}{" "}
+              <span className="text-base font-bold opacity-80">/ 100</span>
+            </div>
+            <p className="mt-2 text-sm leading-relaxed">{result.overall}</p>
+          </div>
+        </section>
+      )}
+
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-2 border-t pt-5">
+        <BackLink
+          to={backHref}
+          className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-extrabold text-primary-foreground shadow"
+        >
+          <ArrowLeft className="size-4" /> <T>返回写作题库</T>
+        </BackLink>
+        <Link to="/gaokao" className="inline-flex items-center gap-1 rounded-full border-2 px-4 py-2 text-sm font-bold hover:bg-muted">
+          <T>🏫 高中首页</T>
+        </Link>
+      </div>
+    </main>
+  );
+}

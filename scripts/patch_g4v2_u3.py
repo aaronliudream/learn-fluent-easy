@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Replace g4v2_u3 block in grade4.json from scripts/out/g4v2_u3_unit.json."""
+"""Replace g4v2_u3 block in grade4.json from scripts/content/g4v2_u3_unit.json."""
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 GRADE = ROOT / "src/data/primaryHub/grade4.json"
-UNIT = ROOT / "scripts/out/g4v2_u3_unit.json"
+UNIT = ROOT / "scripts/content/g4v2_u3_unit.json"
 
 def main() -> None:
     unit = json.loads(UNIT.read_text(encoding="utf-8"))

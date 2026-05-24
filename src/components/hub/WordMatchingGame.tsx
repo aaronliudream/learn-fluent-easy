@@ -60,6 +60,11 @@ export default function WordMatchingGame({
   const done = matchedCount === totalPairs;
   const progressPct = totalPairs > 0 ? (matchedCount / totalPairs) * 100 : 0;
 
+  const visibleCards = useMemo(
+    () => cards.filter((card) => !matchedPairs.has(card.pairId)),
+    [cards, matchedPairs],
+  );
+
   const pickCard = (card: MatchCard) => {
     if (lockInput || matchedPairs.has(card.pairId)) return;
     if (card.side === "en") hubSpeak(card.text, 0.85, grade);
@@ -118,8 +123,7 @@ export default function WordMatchingGame({
       </div>
 
       <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
-        {cards.map((card) => {
-          const isMatched = matchedPairs.has(card.pairId);
+        {visibleCards.map((card) => {
           const isPicked = picked?.key === card.key;
           const isWrong = wrongKeys.has(card.key);
           const isEn = card.side === "en";
@@ -128,15 +132,15 @@ export default function WordMatchingGame({
             <button
               key={card.key}
               type="button"
-              disabled={isMatched || lockInput}
+              disabled={lockInput}
               onClick={() => pickCard(card)}
-              className={`match-pair-card relative min-h-[72px] rounded-xl border-2 px-2 py-2.5 text-center text-sm font-semibold leading-snug transition ${
+              className={`match-pair-card relative min-h-[72px] rounded-xl border-2 px-2 py-2.5 text-center text-sm font-semibold leading-snug transition-all duration-300 ease-out ${
                 isEn
                   ? "border-[#B8D4EF] bg-[#E6F1FB] text-[#185FA5]"
                   : "border-[#F0C4D4] bg-[#FBEAF0] text-[#C41E3A]"
               } ${isPicked ? "match-pair-card--picked scale-[1.03] shadow-md" : ""} ${
-                isMatched ? "match-pair-card--matched opacity-45" : ""
-              } ${isWrong ? "match-pair-card--wrong" : ""}`}
+                isWrong ? "match-pair-card--wrong" : ""
+              }`}
             >
               <span
                 className={`absolute right-1.5 top-1 rounded px-1 py-px text-[9px] font-bold leading-none ${

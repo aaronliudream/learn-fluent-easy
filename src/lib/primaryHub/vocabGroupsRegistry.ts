@@ -33,7 +33,7 @@ export function getVocabGroups(
     },
     {
       id: 3,
-      label: "🔤 拼读词",
+      label: "拼读词",
       header: "拼读词 · 6 个词",
       items: vocabulary.slice(13, 19),
       offset: 13,

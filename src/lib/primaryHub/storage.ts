@@ -78,6 +78,20 @@ export function savePersist(grade: PrimaryHubGrade, state: PrimaryHubPersist): v
   }
 }
 
+const EMPTY_UNIT: UnitState = {
+  completedStages: [],
+  stars: 0,
+  firstCompleteDate: null,
+  reviewSchedule: [],
+  reviewHistory: [],
+};
+
+/** Read-only; does not mutate state (safe during render / progress calc). */
+export function readUnitState(state: PrimaryHubPersist, unitId: string): UnitState {
+  return state.units[unitId] ?? EMPTY_UNIT;
+}
+
+/** Ensures unit exists on state; only use inside setState before commit. */
 export function getUnitState(state: PrimaryHubPersist, unitId: string): UnitState {
   if (!state.units[unitId]) {
     state.units[unitId] = {

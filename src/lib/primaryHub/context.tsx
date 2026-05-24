@@ -64,12 +64,16 @@ export function PrimaryHubProvider({
     let cancelled = false;
 
     const hydrate = async (userId: string | null) => {
+      const prevUserId = userIdRef.current;
       userIdRef.current = userId;
       if (!userId) {
         cancelPrimaryHubCloudPush();
         setState(loadPersist(grade));
         setCloudHydrating(false);
         return;
+      }
+      if (prevUserId !== userId) {
+        setState(loadPersist(grade));
       }
       setCloudHydrating(true);
       try {

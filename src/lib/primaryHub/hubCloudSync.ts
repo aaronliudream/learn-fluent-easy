@@ -1,6 +1,11 @@
 import { supabase } from "@/integrations/supabase/client";
 import type { PrimaryHubGrade, PrimaryHubPersist } from "./types";
-import { mergePrimaryHubPersist, persistPayload } from "./hubCloudMerge";
+import {
+  hasUnitActivity,
+  mergePrimaryHubPersist,
+  persistPayload,
+  stripEmptyUnits,
+} from "./hubCloudMerge";
 import { defaultPersist, loadPersist, savePersist } from "./storage";
 import { migratePersistUnits } from "./stageProgressMigrate";
 
@@ -51,7 +56,7 @@ export async function pullPrimaryHubProgress(
 }
 
 async function pushNow(userId: string, grade: PrimaryHubGrade, state: PrimaryHubPersist): Promise<void> {
-  const payload = persistPayload(state);
+  const payload = persistPayload(stripEmptyUnits(state));
   const { error } = await supabase.from("primary_hub_progress").upsert(
     {
       user_id: userId,
@@ -119,18 +124,18 @@ export async function hydratePrimaryHubFromCloud(
   userId: string,
   grade: PrimaryHubGrade,
 ): Promise<PrimaryHubPersist> {
-  const local = loadPersist(grade);
+  const local = stripEmptyUnits(loadPersist(grade));
   const remote = await pullPrimaryHubProgress(userId, grade);
 
   if (!remote) {
     savePersist(grade, local);
-    if (Object.keys(local.units).length > 0 || local.mistakes.length > 0) {
+    if (hasUnitActivity(local.units) || local.mistakes.length > 0) {
       await pushNow(userId, grade, local);
     }
     return local;
   }
 
-  const merged = mergePrimaryHubPersist(local, remote);
+  const merged = stripEmptyUnits(mergePrimaryHubPersist(local, remote));
   savePersist(grade, merged);
   await pushNow(userId, grade, merged);
   return merged;

@@ -29,6 +29,16 @@
 - **Junior Hub** / **Gaokao Hub** 仍为 `localStorage` only（`juniorHub:{grade}` 等），登录后无跨设备同步。
 - **处理时机**：Primary Hub 云端同步在生产验证稳定后再做。
 
+## Primary Hub 云同步 hotfix（2026-05-24）
+
+- **脏数据**：自测 smoke 脚本 + 游客账号进度曾写入 production `primary_hub_progress`；已 DELETE 清理（仅 `@test.bigmoon.local` / 自测 guest）。
+- **空壳 unit 污染**：`getUnitState()` 在 render 时突变 state，浏览学期页会把 12 个空 unit 写入 localStorage 并触发 cloud upsert；已改为 `readUnitState()`（只读）+ `stripEmptyUnits()` + `hasUnitActivity()` 守门。
+- **首次 push 条件**：由 `Object.keys(units).length > 0` 改为 `hasUnitActivity()`。
+
+## Streak RPC 400（tech debt）
+
+- 新账号 console 可能出现 `get_user_streak_stats` 400 / `streak rpc error`；与 Primary Hub 进度无关，`useStreakStats` 已 catch 并置 null。
+
 ## Phonics UI（任务 4b，待办）
 
 任务 4 仅完成类型层 + `matchesRule` 字段重命名；**未**泛化 UI。

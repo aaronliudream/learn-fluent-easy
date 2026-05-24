@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { mergePrimaryHubPersist } from "./hubCloudMerge";
+import { hasUnitActivity, mergePrimaryHubPersist, stripEmptyUnits } from "./hubCloudMerge";
 import type { PrimaryHubPersist } from "./types";
 
 const base = (): PrimaryHubPersist => ({
@@ -70,5 +70,27 @@ describe("mergePrimaryHubPersist", () => {
     };
     const merged = mergePrimaryHubPersist(local, base());
     expect(merged.units.g4v2_u2.completedStages).toEqual([0]);
+  });
+
+  it("stripEmptyUnits removes shells without activity", () => {
+    const state = base();
+    state.units.g4v1_u1 = {
+      completedStages: [],
+      stars: 0,
+      firstCompleteDate: null,
+      reviewSchedule: [],
+      reviewHistory: [],
+    };
+    state.units.g4v2_u2 = {
+      completedStages: [],
+      stars: 0,
+      stageProgress: { 0: 11 },
+      firstCompleteDate: null,
+      reviewSchedule: [],
+      reviewHistory: [],
+    };
+    const stripped = stripEmptyUnits(state);
+    expect(Object.keys(stripped.units)).toEqual(["g4v2_u2"]);
+    expect(hasUnitActivity(stripped.units)).toBe(true);
   });
 });

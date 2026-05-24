@@ -13,10 +13,11 @@
 
 ## Registry 命名
 
-### `unit1_read_write_simplified.json`
+（`unit1_read_write_simplified.json` 已于任务 6 重命名为 `g4v2_u1_read_write.json`。）
 
-- **建议**：内容定稿后重命名为 `g4v2_u1_read_write.json`（符合任务 1 `registryDiscovery` 文件名规范）
-- **现状**：DEV 下 registry 会 `console.warn` 提示，功能仍可用
+## ReadWrite 插图
+
+见 [add-readwrite-question.md](./add-readwrite-question.md) — `picture_choice` 支持 `image`（新 Unit）与 `visual`（u1 内置 SVG）二选一。
 
 ## 生成脚本
 

@@ -24,6 +24,10 @@ describe("registryDiscovery filename parsing", () => {
     expect(extractUnitIdFromPath("g4v2_u1_er.ts")).toBe("g4v2_u1");
   });
 
+  it("parses unit id from conventional readWrite names", () => {
+    expect(extractUnitIdFromPath("g4v2_u1_read_write.json")).toBe("g4v2_u1");
+  });
+
   it("returns null for legacy readWrite filename without unit id", () => {
     expect(extractUnitIdFromPath("unit1_read_write_simplified.json")).toBeNull();
   });

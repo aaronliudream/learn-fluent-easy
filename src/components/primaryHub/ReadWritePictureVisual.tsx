@@ -5,12 +5,20 @@ import {
   School,
   UserRound,
 } from "lucide-react";
-import type { ReadWritePictureVisual } from "@/lib/primaryHub/readWriteTypes";
+import { useState } from "react";
+import type { ReadWritePictureVisual as ReadWritePictureVisualId } from "@/lib/primaryHub/readWriteTypes";
 
 type Props = {
-  visual: ReadWritePictureVisual;
+  visual?: ReadWritePictureVisualId;
+  image?: string;
   alt: string;
 };
+
+function warnReadWriteImageDev(message: string): void {
+  if (import.meta.env.DEV) {
+    console.warn(`[primaryHub readWrite] ${message}`);
+  }
+}
 
 function VisualFrame({ alt, children }: { alt: string; children: React.ReactNode }) {
   return (
@@ -19,6 +27,39 @@ function VisualFrame({ alt, children }: { alt: string; children: React.ReactNode
       className="overflow-hidden rounded-2xl border border-[#EEEAE0] bg-[#FFF8F0] px-4 py-6"
     >
       {children}
+    </div>
+  );
+}
+
+function IllustrationFallback({ alt }: { alt: string }) {
+  return (
+    <div className="flex min-h-[120px] flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-[#D4D0C8] bg-[#F0EFEB] px-4 py-8 text-center">
+      <span className="text-2xl" aria-hidden="true">
+        🖼️
+      </span>
+      <p className="text-sm font-medium text-[#888780]">{alt}</p>
+    </div>
+  );
+}
+
+function ExternalImageVisual({ src, alt }: { src: string; alt: string }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return <IllustrationFallback alt={alt} />;
+  }
+
+  return (
+    <div className="flex justify-center">
+      <img
+        src={src}
+        alt={alt}
+        className="max-h-48 w-full max-w-sm object-contain"
+        onError={() => {
+          warnReadWriteImageDev(`Failed to load readWrite image "${src}" (${alt}).`);
+          setFailed(true);
+        }}
+      />
     </div>
   );
 }
@@ -139,21 +180,31 @@ function StudentCountVisual() {
   );
 }
 
-export default function ReadWritePictureVisual({ visual, alt }: Props) {
-  const body = (() => {
-    switch (visual) {
-      case "place_books":
-        return <PlaceBooksVisual />;
-      case "place_playground":
-        return <PlacePlaygroundVisual />;
-      case "floor_building":
-        return <FloorBuildingVisual />;
-      case "room_row":
-        return <RoomRowVisual />;
-      case "student_count":
-        return <StudentCountVisual />;
-    }
-  })();
+function BuiltinVisualBody({ visual }: { visual: ReadWritePictureVisualId }) {
+  switch (visual) {
+    case "place_books":
+      return <PlaceBooksVisual />;
+    case "place_playground":
+      return <PlacePlaygroundVisual />;
+    case "floor_building":
+      return <FloorBuildingVisual />;
+    case "room_row":
+      return <RoomRowVisual />;
+    case "student_count":
+      return <StudentCountVisual />;
+  }
+}
+
+export default function ReadWritePictureVisual({ visual, image, alt }: Props) {
+  const imageSrc = image?.trim();
+
+  const body = imageSrc ? (
+    <ExternalImageVisual src={imageSrc} alt={alt} />
+  ) : visual ? (
+    <BuiltinVisualBody visual={visual} />
+  ) : (
+    <IllustrationFallback alt={alt} />
+  );
 
   return <VisualFrame alt={alt}>{body}</VisualFrame>;
 }

@@ -77,8 +77,10 @@ function buildCdnUrl(path: string): string {
 // page reloads, so repeat phrases are instant across sessions.
 const PERSIST_KEY = "tts.urls.v4";
 const LEGACY_PERSIST_KEYS = ["tts.urls.v1", "tts.urls.v2", "tts.urls.v3"];
-/** Wrong workaround texts from earlier o'clock fixes — must never replay. */
+/** ElevenLabs Lily — primary hub kid voice (must match `KID_VOICE_ID` below). */
+const LILY_VOICE_ID = "el:lily";
 const BAD_OCLOCK_CACHE_SUFFIXES = ["||o clock", "||oh clock", "||oclock"];
+
 /** el:lily @ 0.85, text exactly `o'clock` (ElevenLabs content hash). */
 const OCLOCK_APOSTROPHE_HASH = "29278b6274ec960ca73d7f9532bad75a09ef5e5c5d";
 
@@ -88,6 +90,8 @@ function isLegacyBadTtsKey(key: string): boolean {
 
 function isValidOClockCacheEntry(key: string, url: string): boolean {
   if (!key.endsWith("||o'clock")) return true;
+  // Only validate ElevenLabs Lily entries (legacy bad "o clock" workaround MP3s).
+  if (!key.startsWith(`${LILY_VOICE_ID}|`)) return true;
   return url.includes(OCLOCK_APOSTROPHE_HASH);
 }
 
@@ -219,10 +223,15 @@ async function probeCdn(url: string): Promise<boolean> {
 // taps "play", the MP3 is already in memory and playback starts instantly.
 // This does NOT touch any <audio> element, so it never triggers the iOS
 // "now playing" indicator (Dynamic Island heart icon) — it's pure network.
-export const prefetchTTS = (text: string, opts?: { accent?: "UK" | "US" | "BOTH" }) => {
+export const prefetchTTS = (
+  text: string,
+  opts?: { accent?: "UK" | "US" | "BOTH"; voiceId?: string; speed?: number },
+) => {
   const trimmed = (text || "").trim();
   if (!trimmed) return;
-  const { voiceId, speed } = loadSettings();
+  const settings = loadSettings();
+  const voiceId = opts?.voiceId ?? settings.voiceId;
+  const speed = opts?.speed ?? settings.speed;
   const accent = opts?.accent;
   const cacheKey = `${voiceId}|${speed}|${accent || ''}|${trimmed}`;
   if (audioCache.has(cacheKey)) return;
@@ -645,7 +654,7 @@ export const speakSequence = async (
 //   G4+     → 1.00 (natural)
 // Voice is fixed to ElevenLabs Lily — a warm, soft female voice that sounds
 // like a kindergarten teacher rather than a news anchor.
-export const KID_VOICE_ID = "el:lily";
+export const KID_VOICE_ID = LILY_VOICE_ID;
 
 const readGradeFromLS = (): number => readPrimaryGradeFromStorage();
 

@@ -3,20 +3,27 @@
  * Keep fallbacks in sync after major ingests (see docs/vocab/*_ingest_report.md).
  */
 import { supabase } from "@/integrations/supabase/client";
+import {
+  countLocalClozePassages,
+  countLocalGrammarPoints,
+  countLocalListeningExercises,
+  countLocalReadingArticles,
+  countLocalWritingPrompts,
+} from "@/lib/gaokaoContent";
+import { countGaokaoVocabPool, fetchGaokaoVocabPool, GAOKAO_VOCAB_POOL_FALLBACK } from "@/lib/gaokaoVocabPool";
 
-/** Fallback if count query fails (2921 legacy + ~652 PEP 必修, minus overlap). */
-export const GAOKAO_VOCAB_FALLBACK = 3573;
+/** Fallback if Supabase vocab pool is unreachable. */
+export const GAOKAO_VOCAB_FALLBACK = GAOKAO_VOCAB_POOL_FALLBACK;
 export const JUNIOR_VOCAB_FALLBACK = 2373;
 
 export type CorpusStage = "junior" | "senior";
 
 export async function countGaokaoVocabCorpus(): Promise<number> {
-  const { count, error } = await supabase
-    .from("gaokao_vocab")
-    .select("id", { count: "exact", head: true })
-    .eq("stage", "senior");
-  if (error || count == null) return GAOKAO_VOCAB_FALLBACK;
-  return count;
+  try {
+    return await countGaokaoVocabPool();
+  } catch {
+    return GAOKAO_VOCAB_FALLBACK;
+  }
 }
 
 export async function countJuniorVocabCorpus(): Promise<number> {
@@ -33,14 +40,18 @@ export async function countVocabCorpus(stage: CorpusStage): Promise<number> {
 
 /** Paginated fetch of all vocab row ids for scoping mastery numerators. */
 export async function fetchVocabCorpusIds(stage: CorpusStage): Promise<Set<string>> {
-  const table = stage === "junior" ? "junior_vocab" : "gaokao_vocab";
+  if (stage === "senior") {
+    const pool = await fetchGaokaoVocabPool();
+    return new Set(pool.map((v) => v.id));
+  }
   const ids = new Set<string>();
   const pageSize = 1000;
   let from = 0;
   for (;;) {
-    let q = supabase.from(table).select("id").range(from, from + pageSize - 1);
-    if (stage === "senior") q = q.eq("stage", "senior");
-    const { data, error } = await q;
+    const { data, error } = await supabase
+      .from("junior_vocab")
+      .select("id")
+      .range(from, from + pageSize - 1);
     if (error) break;
     const batch = data ?? [];
     for (const row of batch) ids.add((row as { id: string }).id);
@@ -51,19 +62,23 @@ export async function fetchVocabCorpusIds(stage: CorpusStage): Promise<Set<strin
 }
 
 export async function countGaokaoGrammarCorpus(): Promise<number> {
-  const { count, error } = await supabase
-    .from("gaokao_grammar_points")
-    .select("id", { count: "exact", head: true });
-  if (error || count == null) return 298;
-  return count;
+  return countLocalGrammarPoints();
 }
 
 export async function countGaokaoReadingCorpus(): Promise<number> {
-  const { count, error } = await supabase
-    .from("gaokao_reading_articles")
-    .select("id", { count: "exact", head: true });
-  if (error || count == null) return 65;
-  return count;
+  return countLocalReadingArticles();
+}
+
+export async function countGaokaoClozeCorpus(): Promise<number> {
+  return countLocalClozePassages();
+}
+
+export async function countGaokaoWritingCorpus(): Promise<number> {
+  return countLocalWritingPrompts();
+}
+
+export async function countGaokaoListeningCorpus(): Promise<number> {
+  return countLocalListeningExercises();
 }
 
 export async function countJuniorReadingCorpus(): Promise<number> {

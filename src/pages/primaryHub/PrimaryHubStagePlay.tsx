@@ -9,6 +9,8 @@ import { loadPhonicsProgress } from "@/lib/primaryHub/phonicsStorage";
 import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
+import ReadWriteTrainingStage from "@/components/primaryHub/ReadWriteTrainingStage";
+import { getReadWriteConfig } from "@/lib/primaryHub/readWriteRegistry";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/primaryHub/types";
 
 type Props = {
@@ -816,6 +818,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
   const { grade, state, setState, addMistake, completeStage } = usePrimaryHub();
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
+  const readWriteConfig = getReadWriteConfig(unitId, stageIdx);
 
   const us = getUnitState(state, unitId);
   const stars = state.units[unitId]?.stars ?? us.stars;
@@ -950,6 +953,18 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
               })
             }
           />
+        );
+      case "readWrite":
+        return readWriteConfig ? (
+          <ReadWriteTrainingStage
+            config={readWriteConfig}
+            onFinish={handleFinish}
+            onAwardPoints={addStar}
+          />
+        ) : (
+          <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#888780]">
+            读写训练内容即将上线
+          </div>
         );
       case "finalQuiz":
         return (

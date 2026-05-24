@@ -8,6 +8,7 @@ import {
   gaokaoGradeParams,
   type GaokaoGradeKey,
 } from "@/components/gaokao/GaokaoGradeFilter";
+import { useGaokaoClassroomSync } from "@/hooks/useGaokaoClassroomSync";
 import { useMasteryOverview } from "@/hooks/useMasteryOverview";
 
 const LS_KEY = "gaokao:gradeFilter";
@@ -42,23 +43,21 @@ const MODULES = [
   },
   {
     id: "listening",
-    key: null,
+    key: "listening" as const,
     icon: "listening" as const,
     title: "听力",
-    subtitle: "高考听力专练",
-    description: "对话理解 · 独白听力 · 高考真题模拟",
-    path: (_q: string, pathGrade: string | null) =>
-      pathGrade ? `/gaokao/g/${pathGrade}` : "/gaokao/g/1",
+    subtitle: "人教版课文听力",
+    description: "课文脚本 · TTS 朗读 · 理解题（无原版录音）",
+    path: (q: string) => `/gaokao/listening${q}`,
   },
   {
     id: "writing",
-    key: null,
+    key: "writing" as const,
     icon: "writing" as const,
     title: "写作",
-    subtitle: "高考写作训练",
-    description: "应用文 · 读后续写 · AI批改 · 范文精析",
-    path: (_q: string, pathGrade: string | null) =>
-      pathGrade ? `/gaokao/g/${pathGrade}` : "/gaokao/g/1",
+    subtitle: "人教版主题写作",
+    description: "课文主题作文 · AI 批改 · 范文精析",
+    path: (q: string) => `/gaokao/writing${q}`,
   },
   {
     id: "exam",
@@ -84,6 +83,7 @@ function readSavedGrade(): GaokaoGradeKey {
 export default function Gaokao() {
   const [grade, setGrade] = useState<GaokaoGradeKey>(() => readSavedGrade());
   const overview = useMasteryOverview("gaokao");
+  const classroom = useGaokaoClassroomSync(grade);
 
   useEffect(() => {
     localStorage.setItem(LS_KEY, grade);
@@ -101,26 +101,21 @@ export default function Gaokao() {
     map.readingCombined =
       reading || cloze ? Math.round((reading + cloze) / (reading && cloze ? 2 : 1)) : 0;
     map.exam = Math.round(((map.readingCombined ?? 0) + (map.grammar ?? 0)) / 2);
-    map.listening = 0;
-    map.writing = 0;
     return map;
   }, [overview.modules]);
 
-  const classroomPercent = useMemo(() => {
-    const parts = [
-      progressByKey.vocab ?? 0,
-      progressByKey.grammar ?? 0,
-      progressByKey.readingCombined ?? 0,
-    ];
-    return Math.round(parts.reduce((a, b) => a + b, 0) / parts.length);
-  }, [progressByKey]);
-
   const classroomSubtitle =
     grade === "all"
-      ? "教材配套学习 · 全部年级"
-      : `教材配套学习 · ${GAOKAO_GRADE_LABELS[grade]}`;
+      ? "人教版 7 册 · 按单元同步"
+      : `人教版同步 · ${GAOKAO_GRADE_LABELS[grade]}`;
 
-  const classroomTo = pathGrade ? `/gaokao/g/${pathGrade}` : "/gaokao/g/1";
+  const classroomTo =
+    grade === "g1" ? "/gaokao/hub/1" : grade === "g2" ? "/gaokao/hub/2" : grade === "g3" ? "/gaokao/hub/3" : "/gaokao/hub/1";
+
+  const classroomDescription =
+    grade === "all"
+      ? `课堂同步 · ${classroom.unitCount} 单元 · 每单元 8 关 · 已完成 ${classroom.mastered}/${classroom.total} 关`
+      : `${GAOKAO_GRADE_LABELS[grade]} · ${classroom.unitCount} 单元 · 8 关/单元 · ${classroom.mastered}/${classroom.total} 关`;
 
   return (
     <main className="min-h-screen bg-background">
@@ -135,14 +130,11 @@ export default function Gaokao() {
             if (module.key === "vocab") progress = progressByKey.vocab ?? 0;
             else if (module.key === "grammar") progress = progressByKey.grammar ?? 0;
             else if (module.key === "reading") progress = progressByKey.readingCombined ?? 0;
-            else if (module.id === "listening") progress = progressByKey.listening ?? 0;
-            else if (module.id === "writing") progress = progressByKey.writing ?? 0;
+            else if (module.key === "listening") progress = progressByKey.listening ?? 0;
+            else if (module.key === "writing") progress = progressByKey.writing ?? 0;
             else if (module.id === "exam") progress = progressByKey.exam ?? 0;
 
-            const to =
-              module.id === "listening" || module.id === "writing"
-                ? module.path(query, pathGrade)
-                : module.path(query);
+            const to = module.path(query);
 
             return (
               <GaokaoModuleCard
@@ -161,9 +153,9 @@ export default function Gaokao() {
         <GaokaoModuleCard
           title="课堂同步"
           subtitle={classroomSubtitle}
-          description="同步课本单元 · 知识点精讲 · 课后练习巩固"
+          description={classroomDescription}
           icon="classroom"
-          progress={classroomPercent}
+          progress={classroom.loading ? 0 : classroom.percent}
           to={classroomTo}
           className="mt-5 min-h-[192px]"
         />

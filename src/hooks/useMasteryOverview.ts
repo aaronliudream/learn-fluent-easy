@@ -44,7 +44,7 @@ export type StageOverview = {
 const TOTALS: Record<Stage, Record<ModuleKey, number>> = {
   primary: { vocab: 846, reading: 60, listening: 0, writing: 0, grammar: 0, cloze: 0, lesson: 35 },
   junior:  { vocab: 2373, reading: 91, listening: 209, writing: 143, grammar: 56, cloze: 0, lesson: 0 },
-  gaokao:  { vocab: 2921, reading: 65, listening: 0,   writing: 0,   grammar: 298, cloze: 16, lesson: 0 },
+  gaokao:  { vocab: 2000, reading: 21, listening: 20, writing: 14, grammar: 21, cloze: 21, lesson: 0 },
 };
 
 const MODULE_META: Record<ModuleKey, { label: string; emoji: string }> = {
@@ -85,7 +85,7 @@ const FULL_ORDER: ModuleKey[] = ["vocab", "listening", "reading", "writing", "gr
 const AVAILABLE: Record<Stage, Set<ModuleKey>> = {
   primary: new Set<ModuleKey>(["vocab", "reading", "lesson"]),
   junior:  new Set<ModuleKey>(["vocab", "reading", "listening", "writing", "grammar"]),
-  gaokao:  new Set<ModuleKey>(["vocab", "reading", "cloze", "grammar"]),
+  gaokao:  new Set<ModuleKey>(["vocab", "reading", "cloze", "grammar", "listening", "writing"]),
 };
 
 function comingSoonStat(stage: Stage, key: ModuleKey): ModuleStat {
@@ -304,7 +304,7 @@ export function useMasteryOverview(stage: Stage): StageOverview {
       // === Compose ===
       const order: ModuleKey[] = stage === "junior"
         ? ["vocab", "reading", "listening", "writing", "grammar"]
-        : ["vocab", "reading", "cloze", "grammar"];
+        : ["vocab", "reading", "cloze", "grammar", "listening", "writing"];
       const computed = order.map((k) => {
         if (k === "vocab") return vocab;
         if (k === "grammar") return grammar;

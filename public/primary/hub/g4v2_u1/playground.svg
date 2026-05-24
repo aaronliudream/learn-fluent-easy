@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" role="img" aria-label="Playground">
+  <rect width="400" height="280" fill="#EAF3DE"/>
+  <ellipse cx="200" cy="220" rx="160" ry="40" fill="#97C459" opacity="0.5"/>
+  <rect x="140" y="60" width="120" height="8" rx="4" fill="#FF6B35"/>
+  <rect x="135" y="68" width="8" height="100" fill="#FF6B35"/>
+  <rect x="257" y="68" width="8" height="100" fill="#FF6B35"/>
+  <circle cx="200" cy="200" r="36" fill="#FFB627" stroke="#FF6B35" stroke-width="4"/>
+  <text x="200" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#2C2C2A">½ Playground</text>
+</svg>

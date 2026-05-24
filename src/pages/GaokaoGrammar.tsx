@@ -2,8 +2,12 @@ import { T } from "@/i18n/T";import { useEffect, useMemo, useState } from "react
 import BackLink from "@/components/BackLink";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, ChevronRight, Sparkles, Target, Flame, BookOpen, TrendingUp, Zap } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/PageHeader";
+import {
+  listGrammarModules,
+  listGrammarCategories,
+  listGrammarPoints,
+} from "@/lib/gaokaoContent";
 import { MasteryRing } from "@/components/grammar/MasteryRing";
 import { ErrorRadar } from "@/components/grammar/ErrorRadar";
 import ModuleStageTests from "@/components/ModuleStageTests";
@@ -67,31 +71,56 @@ export default function GaokaoGrammar() {
 
   useEffect(() => {
     (async () => {
-      const [{ data: ms }, { data: cs }, { data: ps }, all] = await Promise.all([
-      supabase.from("gaokao_grammar_modules").select("*").order("sort_order"),
-      supabase.from("gaokao_grammar_categories").select("*").order("sort_order"),
-      supabase.
-      from("gaokao_grammar_points").
-      select("id, module_id, category_id, title, slug, difficulty, exam_frequency, question_count, sort_order").
-      order("sort_order"),
-      loadGrammarMasteryAll()]
+      const ms = listGrammarModules();
+      const cs = listGrammarCategories();
+      const ps = listGrammarPoints({ yearBand: gradeNum });
+      const all = await loadGrammarMasteryAll();
+      setModules(
+        ms.map((m) => ({
+          id: m.id,
+          name_cn: m.name_cn,
+          name_en: m.name_en,
+          emoji: m.emoji,
+          description_cn: m.description_cn,
+          sort_order: m.sort_order,
+        })),
       );
-      setModules((ms ?? []) as Module[]);
-      setCats((cs ?? []) as Category[]);
-      setPoints((ps ?? []) as Point[]);
+      setCats(
+        cs.map((c) => ({
+          id: c.id,
+          module_id: c.module_id,
+          name_cn: c.name_cn,
+          description_cn: null,
+          exam_frequency: c.exam_frequency,
+          difficulty: c.difficulty,
+          sort_order: c.sort_order,
+        })),
+      );
+      setPoints(
+        ps.map((p) => ({
+          id: p.id,
+          module_id: p.module_id,
+          category_id: p.category_id,
+          title: p.title,
+          slug: p.slug,
+          difficulty: p.difficulty,
+          exam_frequency: p.exam_frequency,
+          question_count: p.question_count,
+          sort_order: p.sort_order,
+        })),
+      );
       const map: Record<string, GrammarMastery> = {};
       for (const r of all) map[r.item_id] = r;
       setMastery(map);
       setLoading(false);
-      // If kp_id passed from prescription, jump straight to that point
       if (kpIdParam) {
-        const target = (ps ?? []).find((p: any) => p.id === kpIdParam) as Point | undefined;
+        const target = ps.find((p) => p.id === kpIdParam);
         if (target?.slug) {
-          window.location.assign(`/gaokao/grammar/${target.slug}/quiz`);
+          window.location.assign(`/gaokao/grammar/${target.slug}/mastery`);
         }
       }
     })();
-  }, []);
+  }, [gradeNum, kpIdParam]);
 
   // ---------- Aggregations ----------
   const modulePoints = useMemo(() => {
@@ -263,7 +292,7 @@ export default function GaokaoGrammar() {
               return (
                 <li key={p.id}>
                     <Link
-                    to={`/gaokao/grammar/${p.slug}`}
+                    to={`/gaokao/grammar/${p.slug}/mastery`}
                     className="flex items-center justify-between gap-2 rounded-lg p-1.5 text-xs hover:bg-muted/50">
                     
                       <span className="truncate">{meta.emoji} {p.title}</span>
@@ -282,7 +311,7 @@ export default function GaokaoGrammar() {
             <Sparkles className="size-3.5" /> <T>智能推荐</T>
           </div>
           {recommendNext ?
-          <Link to={`/gaokao/grammar/${recommendNext.point.slug}`} className="block group">
+          <Link to={`/gaokao/grammar/${recommendNext.point.slug}/mastery`} className="block group">
               <div className="text-xs text-muted-foreground"><T>从最薄弱模块开始</T></div>
               <div className="text-base font-bold mt-0.5 group-hover:text-primary transition">
                 {recommendNext.module.emoji} {recommendNext.point.title}
@@ -398,7 +427,7 @@ export default function GaokaoGrammar() {
                             <li key={p.id}>
                                 <div className="flex items-center gap-1 rounded-lg px-1 py-1 hover:bg-card transition">
                                   <Link
-                                  to={`/gaokao/grammar/${p.slug}`}
+                                  to={`/gaokao/grammar/${p.slug}/mastery`}
                                   className="flex flex-1 min-w-0 items-center gap-2 px-1 py-1 text-sm"
                                   title="查看讲解 + 完整学习路径">
                                   
@@ -412,11 +441,10 @@ export default function GaokaoGrammar() {
                                   </Link>
                                   {p.question_count > 0 &&
                                 <Link
-                                  to={`/gaokao/grammar/${p.slug}/quiz/0`}
+                                  to={`/gaokao/grammar/${p.slug}/mastery`}
                                   className="inline-flex items-center gap-0.5 rounded-md bg-primary/10 px-2 py-1 text-[10px] font-bold text-primary hover:bg-primary hover:text-primary-foreground transition shrink-0"
-                                  title="直接刷题">
-                                  
-                                      <Zap className="size-3" /> <T>刷题</T>
+                                  title="自适应闯关">
+                                      <Zap className="size-3" /> <T>闯关</T>
                                     </Link>
                                 }
                                 </div>

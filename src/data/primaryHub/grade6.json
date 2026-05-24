@@ -149,34 +149,34 @@
               {
                 "q": "「science」是什么意思？",
                 "opts": [
-                  "subway",
-                  "十字路口",
-                  "自行车",
-                  "科学"
+                  "科学",
+                  "公共汽车",
+                  "转弯",
+                  "轮船"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「museum」是什么意思？",
                 "opts": [
-                  "十字路口",
-                  "飞机",
                   "博物馆",
-                  "plane"
+                  "十字路口",
+                  "邮局",
+                  "医院"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「post office」是什么意思？",
                 "opts": [
-                  "car",
-                  "bike",
+                  "科学",
+                  "火车",
                   "邮局",
-                  "医院"
+                  "十字路口"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -185,9 +185,9 @@
               {
                 "q": "「bookstore」是什么意思？",
                 "opts": [
-                  "subway",
-                  "bike",
-                  "plane",
+                  "飞机",
+                  "邮局",
+                  "自行车",
                   "书店"
                 ],
                 "answer": 3,
@@ -197,20 +197,32 @@
               {
                 "q": "「cinema」是什么意思？",
                 "opts": [
-                  "书店",
-                  "地铁",
-                  "汽车",
-                  "电影院"
+                  "电影院",
+                  "科学",
+                  "飞机",
+                  "地铁"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「hospital」是什么意思？",
                 "opts": [
-                  "car",
-                  "医院",
+                  "书店",
+                  "火车",
+                  "电影院",
+                  "医院"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「crossing」是什么意思？",
+                "opts": [
+                  "轮船",
+                  "十字路口",
                   "火车",
                   "邮局"
                 ],
@@ -219,59 +231,47 @@
                 "dim": "vocab"
               },
               {
-                "q": "「crossing」是什么意思？",
-                "opts": [
-                  "十字路口",
-                  "subway",
-                  "电影院",
-                  "科学"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
                 "q": "「turn」是什么意思？",
                 "opts": [
-                  "car",
-                  "转弯",
-                  "十字路口",
-                  "train"
+                  "地铁",
+                  "火车",
+                  "科学",
+                  "转弯"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「科学」？",
                 "opts": [
-                  "turn",
                   "science",
-                  "crossing",
-                  "post office"
+                  "train",
+                  "museum",
+                  "car"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「museum」的中文是？",
                 "opts": [
-                  "汽车",
-                  "公共汽车",
                   "博物馆",
-                  "科学"
+                  "火车",
+                  "邮局",
+                  "飞机"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「怎么去那里」核心词是？",
                 "opts": [
-                  "hospital",
-                  "ship",
-                  "bike",
+                  "cinema",
+                  "plane",
+                  "subway",
                   "science"
                 ],
                 "answer": 3,
@@ -281,12 +281,12 @@
               {
                 "q": "「post office」的意思是？",
                 "opts": [
-                  "电影院",
-                  "科学",
+                  "博物馆",
                   "邮局",
-                  "医院"
+                  "火车",
+                  "轮船"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -477,93 +477,45 @@
               {
                 "q": "「on foot」是什么意思？",
                 "opts": [
-                  "轮船",
-                  "飞机",
+                  "自行车",
                   "步行",
-                  "car"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「by」是什么意思？",
-                "opts": [
                   "飞机",
-                  "乘",
-                  "ship",
-                  "car"
+                  "火车"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「bus」是什么意思？",
+                "q": "「by」是什么意思？",
                 "opts": [
-                  "公共汽车",
-                  "car",
-                  "地铁",
-                  "bike"
+                  "乘",
+                  "火车",
+                  "出租汽车",
+                  "地铁"
                 ],
                 "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「bus」是什么意思？",
+                "opts": [
+                  "自行车",
+                  "公共汽车",
+                  "火车",
+                  "轮船"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「plane」是什么意思？",
                 "opts": [
-                  "飞机",
-                  "subway",
-                  "乘",
-                  "步行"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「taxi」是什么意思？",
-                "opts": [
-                  "bus",
-                  "ship",
-                  "出租汽车",
-                  "船"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「ship」是什么意思？",
-                "opts": [
-                  "ship",
-                  "bike",
-                  "train",
-                  "船"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「subway」是什么意思？",
-                "opts": [
-                  "乘",
-                  "公共汽车",
-                  "地铁",
-                  "car"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「train」是什么意思？",
-                "opts": [
-                  "公共汽车",
-                  "ship",
                   "火车",
+                  "地铁",
+                  "飞机",
                   "出租汽车"
                 ],
                 "answer": 2,
@@ -571,23 +523,71 @@
                 "dim": "vocab"
               },
               {
-                "q": "哪个是「步行」？",
+                "q": "「taxi」是什么意思？",
                 "opts": [
-                  "on foot",
-                  "subway",
-                  "plane",
-                  "ship"
+                  "出租汽车",
+                  "船",
+                  "乘",
+                  "汽车"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「by」的中文是？",
+                "q": "「ship」是什么意思？",
+                "opts": [
+                  "步行",
+                  "公共汽车",
+                  "船",
+                  "乘"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「subway」是什么意思？",
+                "opts": [
+                  "地铁",
+                  "飞机",
+                  "乘",
+                  "公共汽车"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「train」是什么意思？",
                 "opts": [
                   "火车",
-                  "飞机",
-                  "地铁",
+                  "乘",
+                  "轮船",
+                  "自行车"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「步行」？",
+                "opts": [
+                  "car",
+                  "taxi",
+                  "bus",
+                  "on foot"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「by」的中文是？",
+                "opts": [
+                  "轮船",
+                  "船",
+                  "步行",
                   "乘"
                 ],
                 "answer": 3,
@@ -597,22 +597,22 @@
               {
                 "q": "本单元「上学的方式」核心词是？",
                 "opts": [
-                  "car",
                   "on foot",
+                  "by",
                   "train",
-                  "by"
+                  "subway"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「bus」的意思是？",
                 "opts": [
-                  "飞机",
-                  "火车",
+                  "乘",
+                  "出租汽车",
                   "公共汽车",
-                  "地铁"
+                  "汽车"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -806,11 +806,11 @@
                 "q": "「visit」是什么意思？",
                 "opts": [
                   "在今晚",
-                  "电影",
-                  "旅行",
-                  "拜访"
+                  "去上学",
+                  "拜访",
+                  "电影"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -818,105 +818,105 @@
                 "q": "「film」是什么意思？",
                 "opts": [
                   "在今晚",
-                  "看电影",
                   "电影",
-                  "拜访"
+                  "上床睡觉",
+                  "晚上"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「see a film」是什么意思？",
                 "opts": [
-                  "get up",
-                  "旅行",
+                  "早餐",
                   "看电影",
-                  "去旅行"
+                  "午餐",
+                  "电影"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「trip」是什么意思？",
                 "opts": [
+                  "起床",
+                  "上床睡觉",
                   "旅行",
-                  "超市",
-                  "go to bed",
-                  "拜访"
+                  "去上学"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「take a trip」是什么意思？",
                 "opts": [
-                  "超市",
-                  "拜访",
                   "去旅行",
-                  "go to school"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「supermarket」是什么意思？",
-                "opts": [
-                  "get up",
-                  "电影",
-                  "超市",
+                  "看电影",
+                  "去上学",
                   "旅行"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「evening」是什么意思？",
-                "opts": [
-                  "去旅行",
-                  "起床",
-                  "晚餐",
-                  "晚上"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「tonight」是什么意思？",
-                "opts": [
-                  "早餐",
-                  "旅行",
-                  "拜访",
-                  "在今晚"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「拜访」？",
-                "opts": [
-                  "visit",
-                  "supermarket",
-                  "get up",
-                  "film"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「film」的中文是？",
+                "q": "「supermarket」是什么意思？",
                 "opts": [
                   "超市",
+                  "看电影",
+                  "旅行",
+                  "去旅行"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「evening」是什么意思？",
+                "opts": [
+                  "晚餐",
+                  "旅行",
                   "晚上",
+                  "上床睡觉"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「tonight」是什么意思？",
+                "opts": [
+                  "晚上",
+                  "在今晚",
+                  "晚餐",
+                  "旅行"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「拜访」？",
+                "opts": [
+                  "supermarket",
+                  "visit",
+                  "tonight",
+                  "go to school"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「film」的中文是？",
+                "opts": [
+                  "拜访",
+                  "超市",
                   "电影",
-                  "lunch"
+                  "晚上"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -925,12 +925,12 @@
               {
                 "q": "本单元「周末计划」核心词是？",
                 "opts": [
-                  "go to school",
+                  "lunch",
+                  "breakfast",
                   "visit",
-                  "get up",
-                  "take a trip"
+                  "trip"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -938,8 +938,8 @@
                 "q": "What time is it? 的意思是？",
                 "opts": [
                   "什么时间",
-                  "几点钟了",
                   "什么时候",
+                  "几点钟了",
                   "几点了"
                 ],
                 "answer": 3,
@@ -949,12 +949,12 @@
               {
                 "q": "「see a film」的意思是？",
                 "opts": [
+                  "早餐",
                   "看电影",
-                  "晚上",
                   "旅行",
-                  "电影"
+                  "拜访"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -1145,21 +1145,21 @@
               {
                 "q": "「studies」是什么意思？",
                 "opts": [
-                  "叔叔",
-                  "姐妹",
-                  "茉莉",
-                  "学习"
+                  "远足",
+                  "想法",
+                  "学习",
+                  "业余爱好"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「puzzle」是什么意思？",
                 "opts": [
-                  "业余爱好",
-                  "远足",
-                  "uncle",
+                  "堪培拉",
+                  "茉莉",
+                  "学习",
                   "谜"
                 ],
                 "answer": 3,
@@ -1169,12 +1169,12 @@
               {
                 "q": "「hiking」是什么意思？",
                 "opts": [
+                  "母亲",
+                  "茉莉",
                   "表亲",
-                  "远足",
-                  "sister",
-                  "uncle"
+                  "远足"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1182,9 +1182,9 @@
                 "q": "「pen pal」是什么意思？",
                 "opts": [
                   "茉莉",
-                  "学习",
+                  "想法",
                   "笔友",
-                  "母亲"
+                  "堪培拉"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -1193,46 +1193,46 @@
               {
                 "q": "「hobby」是什么意思？",
                 "opts": [
-                  "业余爱好",
-                  "想法",
-                  "谜",
-                  "uncle"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「jasmine」是什么意思？",
-                "opts": [
-                  "远足",
-                  "想法",
-                  "cousin",
-                  "茉莉"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「idea」是什么意思？",
-                "opts": [
-                  "谜",
                   "父亲",
-                  "想法",
-                  "母亲"
+                  "表亲",
+                  "业余爱好",
+                  "远足"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「jasmine」是什么意思？",
+                "opts": [
+                  "母亲",
+                  "学习",
+                  "茉莉",
+                  "业余爱好"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「idea」是什么意思？",
+                "opts": [
+                  "姐妹",
+                  "学习",
+                  "叔叔",
+                  "想法"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「Canberra」是什么意思？",
                 "opts": [
-                  "茉莉",
+                  "想法",
                   "堪培拉",
                   "远足",
-                  "谜"
+                  "叔叔"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1241,46 +1241,46 @@
               {
                 "q": "哪个是「学习」？",
                 "opts": [
+                  "mother",
                   "studies",
-                  "jasmine",
-                  "pen pal",
-                  "hiking"
+                  "hiking",
+                  "pen pal"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「puzzle」的中文是？",
                 "opts": [
-                  "茉莉",
-                  "表亲",
                   "谜",
-                  "学习"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我有个笔友」核心词是？",
-                "opts": [
-                  "studies",
-                  "hiking",
-                  "sister",
-                  "Canberra"
+                  "父亲",
+                  "姐妹",
+                  "兄弟"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "本单元「我有个笔友」核心词是？",
+                "opts": [
+                  "aunt",
+                  "studies",
+                  "brother",
+                  "hiking"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「hiking」的意思是？",
                 "opts": [
-                  "想法",
+                  "叔叔",
                   "远足",
-                  "学习",
-                  "业余爱好"
+                  "茉莉",
+                  "父亲"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1473,10 +1473,10 @@
               {
                 "q": "「factory」是什么意思？",
                 "opts": [
-                  "科学家",
+                  "飞行员",
                   "工厂",
-                  "商人",
-                  "doctor"
+                  "科学家",
+                  "司机"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1485,94 +1485,94 @@
               {
                 "q": "「worker」是什么意思？",
                 "opts": [
-                  "飞行员",
-                  "工人",
-                  "农民",
-                  "厨师"
+                  "邮递员",
+                  "警察",
+                  "厨师",
+                  "工人"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「postman」是什么意思？",
                 "opts": [
-                  "工人",
+                  "农民",
+                  "商人",
                   "渔民",
-                  "邮递员",
-                  "警察"
+                  "邮递员"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「businessman」是什么意思？",
                 "opts": [
-                  "老师",
-                  "邮递员",
                   "商人",
-                  "农民"
+                  "飞行员",
+                  "司机",
+                  "老师"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「police officer」是什么意思？",
                 "opts": [
-                  "商人",
-                  "农民",
                   "警察",
-                  "farmer"
+                  "护士",
+                  "科学家",
+                  "老师"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fisherman」是什么意思？",
                 "opts": [
-                  "医生",
-                  "厨师",
-                  "渔民",
-                  "老师"
+                  "科学家",
+                  "工厂",
+                  "护士",
+                  "渔民"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「scientist」是什么意思？",
                 "opts": [
-                  "司机",
-                  "科学家",
-                  "工人",
-                  "driver"
+                  "护士",
+                  "工厂",
+                  "商人",
+                  "科学家"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pilot」是什么意思？",
                 "opts": [
-                  "医生",
                   "飞行员",
-                  "农民",
-                  "商人"
+                  "护士",
+                  "厨师",
+                  "老师"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「工厂」？",
                 "opts": [
-                  "cook",
+                  "scientist",
                   "factory",
-                  "businessman",
-                  "worker"
+                  "fisherman",
+                  "police officer"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1581,36 +1581,36 @@
               {
                 "q": "「worker」的中文是？",
                 "opts": [
-                  "厨师",
-                  "driver",
-                  "飞行员",
-                  "工人"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「他做什么工作」核心词是？",
-                "opts": [
-                  "farmer",
-                  "factory",
-                  "teacher",
-                  "postman"
+                  "商人",
+                  "工人",
+                  "警察",
+                  "厨师"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "本单元「他做什么工作」核心词是？",
+                "opts": [
+                  "scientist",
+                  "businessman",
+                  "factory",
+                  "fisherman"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「postman」的意思是？",
                 "opts": [
-                  "邮递员",
-                  "cook",
-                  "farmer",
-                  "科学家"
+                  "医生",
+                  "渔民",
+                  "农民",
+                  "邮递员"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -1801,24 +1801,24 @@
               {
                 "q": "「angry」是什么意思？",
                 "opts": [
-                  "更多的",
                   "生气的",
-                  "angry",
-                  "饿"
+                  "担心的",
+                  "害怕",
+                  "生气"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「afraid」是什么意思？",
                 "opts": [
-                  "开心",
-                  "sad",
-                  "害怕",
-                  "看病"
+                  "累",
+                  "穿",
+                  "生气的",
+                  "害怕"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1826,9 +1826,9 @@
                 "q": "「sad」是什么意思？",
                 "opts": [
                   "难过的",
-                  "饿",
-                  "穿",
-                  "tired"
+                  "生气",
+                  "生气的",
+                  "高兴的"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1837,72 +1837,72 @@
               {
                 "q": "「worried」是什么意思？",
                 "opts": [
+                  "难过的",
+                  "累",
                   "担心的",
-                  "sad",
-                  "害怕",
-                  "担心"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「happy」是什么意思？",
-                "opts": [
-                  "饿",
-                  "穿",
-                  "高兴的",
-                  "担心的"
+                  "高兴的"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「see a doctor」是什么意思？",
+                "q": "「happy」是什么意思？",
                 "opts": [
-                  "害怕",
+                  "高兴的",
                   "看病",
-                  "worried",
-                  "生气的"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「wear」是什么意思？",
-                "opts": [
-                  "worried",
-                  "更多的",
-                  "开心",
+                  "累",
                   "穿"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「more」是什么意思？",
-                "opts": [
-                  "更多的",
-                  "难过",
-                  "sad",
-                  "看病"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "哪个是「生气的」？",
+                "q": "「see a doctor」是什么意思？",
                 "opts": [
-                  "see a doctor",
-                  "happy",
-                  "afraid",
-                  "angry"
+                  "担心的",
+                  "难过的",
+                  "难过",
+                  "看病"
                 ],
                 "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「wear」是什么意思？",
+                "opts": [
+                  "高兴的",
+                  "穿",
+                  "担心",
+                  "害怕"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「more」是什么意思？",
+                "opts": [
+                  "担心",
+                  "生气的",
+                  "饿",
+                  "更多的"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「生气的」？",
+                "opts": [
+                  "tired",
+                  "more",
+                  "angry",
+                  "happy"
+                ],
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1910,9 +1910,9 @@
                 "q": "「afraid」的中文是？",
                 "opts": [
                   "害怕",
-                  "生气的",
-                  "看病",
-                  "生气"
+                  "饿",
+                  "开心",
+                  "穿"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1921,24 +1921,24 @@
               {
                 "q": "本单元「你感觉怎么样」核心词是？",
                 "opts": [
+                  "sad",
+                  "angry",
                   "more",
-                  "see a doctor",
-                  "happy",
-                  "angry"
+                  "happy"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「sad」的意思是？",
                 "opts": [
-                  "高兴的",
-                  "难过的",
-                  "tired",
-                  "hungry"
+                  "开心",
+                  "看病",
+                  "饿",
+                  "难过的"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2136,9 +2136,9 @@
                 "q": "「younger」是什么意思？",
                 "opts": [
                   "更年轻的",
-                  "更长的",
-                  "姐妹",
-                  "father"
+                  "更矮的",
+                  "母亲",
+                  "更长的"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2147,22 +2147,22 @@
               {
                 "q": "「older」是什么意思？",
                 "opts": [
-                  "brother",
-                  "更年长的",
-                  "更重的",
-                  "更瘦的"
+                  "更长的",
+                  "叔叔",
+                  "表亲",
+                  "更年长的"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「taller」是什么意思？",
                 "opts": [
-                  "更长的",
+                  "表亲",
                   "更高的",
-                  "更瘦的",
-                  "更年长的"
+                  "更大的",
+                  "兄弟"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -2171,22 +2171,22 @@
               {
                 "q": "「shorter」是什么意思？",
                 "opts": [
-                  "aunt",
-                  "母亲",
                   "更矮的",
-                  "表亲"
+                  "姐妹",
+                  "更年长的",
+                  "更瘦的"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「longer」是什么意思？",
                 "opts": [
-                  "cousin",
-                  "叔叔",
+                  "兄弟",
+                  "更大的",
                   "更长的",
-                  "brother"
+                  "阿姨"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2195,7 +2195,7 @@
               {
                 "q": "「thinner」是什么意思？",
                 "opts": [
-                  "brother",
+                  "表亲",
                   "兄弟",
                   "姐妹",
                   "更瘦的"
@@ -2207,9 +2207,9 @@
               {
                 "q": "「heavier」是什么意思？",
                 "opts": [
+                  "更矮的",
                   "更年轻的",
-                  "mother",
-                  "cousin",
+                  "更长的",
                   "更重的"
                 ],
                 "answer": 3,
@@ -2219,48 +2219,48 @@
               {
                 "q": "「bigger」是什么意思？",
                 "opts": [
-                  "更重的",
-                  "brother",
-                  "更高的",
-                  "更大的"
+                  "阿姨",
+                  "更大的",
+                  "更年长的",
+                  "更年轻的"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「更年轻的」？",
                 "opts": [
-                  "thinner",
-                  "taller",
                   "younger",
-                  "uncle"
+                  "brother",
+                  "cousin",
+                  "mother"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「older」的中文是？",
                 "opts": [
-                  "更大的",
-                  "兄弟",
                   "更年长的",
-                  "更长的"
+                  "更年轻的",
+                  "阿姨",
+                  "更重的"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「你有多高」核心词是？",
                 "opts": [
+                  "heavier",
                   "younger",
-                  "bigger",
-                  "aunt",
+                  "thinner",
                   "longer"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2268,9 +2268,9 @@
                 "q": "「taller」的意思是？",
                 "opts": [
                   "更高的",
-                  "uncle",
-                  "cousin",
-                  "更矮的"
+                  "阿姨",
+                  "更矮的",
+                  "更重的"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2463,21 +2463,21 @@
               {
                 "q": "「cleaned」是什么意思？",
                 "opts": [
-                  "打扫",
-                  "洗",
-                  "读",
-                  "睡觉"
+                  "患病",
+                  "午餐",
+                  "看",
+                  "打扫"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「stayed」是什么意思？",
                 "opts": [
-                  "打扫",
-                  "dinner",
-                  "go to bed",
+                  "早餐",
+                  "午餐",
+                  "患病",
                   "停留"
                 ],
                 "answer": 3,
@@ -2487,10 +2487,10 @@
               {
                 "q": "「washed」是什么意思？",
                 "opts": [
-                  "午餐",
+                  "晚餐",
                   "洗",
-                  "上床睡觉",
-                  "打扫"
+                  "读",
+                  "去上学"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -2499,10 +2499,10 @@
               {
                 "q": "「watched」是什么意思？",
                 "opts": [
-                  "睡觉",
-                  "打扫",
+                  "午餐",
+                  "感冒",
                   "看",
-                  "患病"
+                  "洗"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2511,22 +2511,22 @@
               {
                 "q": "「had」是什么意思？",
                 "opts": [
-                  "睡觉",
-                  "停留",
+                  "晚餐",
                   "患病",
-                  "go to bed"
+                  "午餐",
+                  "感冒"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「had a cold」是什么意思？",
                 "opts": [
-                  "早餐",
-                  "go to bed",
+                  "起床",
+                  "洗",
                   "感冒",
-                  "睡觉"
+                  "读"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2535,24 +2535,24 @@
               {
                 "q": "「slept」是什么意思？",
                 "opts": [
-                  "睡觉",
                   "停留",
                   "去上学",
-                  "午餐"
+                  "打扫",
+                  "睡觉"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「read」是什么意思？",
                 "opts": [
-                  "睡觉",
+                  "起床",
+                  "洗",
                   "读",
-                  "感冒",
-                  "晚餐"
+                  "上床睡觉"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2560,57 +2560,57 @@
                 "q": "哪个是「打扫」？",
                 "opts": [
                   "watched",
-                  "had",
-                  "go to school",
-                  "cleaned"
+                  "cleaned",
+                  "go to bed",
+                  "breakfast"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「stayed」的中文是？",
                 "opts": [
+                  "早餐",
                   "停留",
-                  "打扫",
-                  "洗",
-                  "晚餐"
+                  "上床睡觉",
+                  "睡觉"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「上个周末」核心词是？",
                 "opts": [
-                  "lunch",
-                  "stayed",
-                  "go to school",
-                  "cleaned"
+                  "read",
+                  "dinner",
+                  "cleaned",
+                  "washed"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "What time is it? 的意思是？",
                 "opts": [
-                  "什么时候",
-                  "几点钟了",
+                  "什么时间",
                   "几点了",
-                  "什么时间"
+                  "什么时候",
+                  "几点钟了"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "句型",
                 "dim": "sentence"
               },
               {
                 "q": "「washed」的意思是？",
                 "opts": [
-                  "停留",
+                  "读",
                   "洗",
-                  "感冒",
-                  "睡觉"
+                  "看",
+                  "早餐"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -2803,48 +2803,48 @@
               {
                 "q": "「went」是什么意思？",
                 "opts": [
-                  "火车",
                   "去",
+                  "飞机",
                   "野营",
-                  "吃"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「camp」是什么意思？",
-                "opts": [
-                  "野营",
-                  "骑（马",
-                  "plane",
-                  "火车"
+                  "受伤"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「camp」是什么意思？",
+                "opts": [
+                  "骑（马",
+                  "野营",
+                  "去",
+                  "受伤"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「went camping」是什么意思？",
                 "opts": [
-                  "train",
-                  "car",
                   "野营",
+                  "地铁",
+                  "吃",
                   "钓鱼"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fish」是什么意思？",
                 "opts": [
-                  "汽车",
-                  "野营",
-                  "bike",
-                  "钓鱼"
+                  "飞机",
+                  "火车",
+                  "钓鱼",
+                  "地铁"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2852,9 +2852,9 @@
                 "q": "「went fishing」是什么意思？",
                 "opts": [
                   "去钓鱼",
-                  "去",
-                  "野营",
-                  "轮船"
+                  "骑（马",
+                  "受伤",
+                  "汽车"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2863,58 +2863,58 @@
               {
                 "q": "「rode」是什么意思？",
                 "opts": [
-                  "野营",
                   "受伤",
                   "骑（马",
-                  "火车"
+                  "汽车",
+                  "去钓鱼"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「hurt」是什么意思？",
                 "opts": [
+                  "吃",
+                  "火车",
                   "受伤",
-                  "去钓鱼",
-                  "subway",
-                  "地铁"
+                  "去"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「ate」是什么意思？",
                 "opts": [
-                  "飞机",
-                  "受伤",
-                  "地铁",
-                  "吃"
+                  "钓鱼",
+                  "去",
+                  "吃",
+                  "地铁"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「去」？",
                 "opts": [
-                  "went",
                   "train",
-                  "rode",
-                  "hurt"
+                  "hurt",
+                  "bus",
+                  "went"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「camp」的中文是？",
                 "opts": [
-                  "吃",
-                  "地铁",
+                  "飞机",
+                  "去",
                   "野营",
-                  "ship"
+                  "受伤"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2923,24 +2923,24 @@
               {
                 "q": "本单元「你去哪儿了」核心词是？",
                 "opts": [
-                  "went",
+                  "went camping",
                   "plane",
-                  "car",
-                  "went camping"
+                  "hurt",
+                  "went"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「went camping」的意思是？",
                 "opts": [
-                  "野营",
-                  "去",
+                  "自行车",
+                  "飞机",
                   "钓鱼",
-                  "bus"
+                  "野营"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3131,10 +3131,10 @@
               {
                 "q": "「dining hall」是什么意思？",
                 "opts": [
-                  "brother",
-                  "骑自行车运动",
+                  "表亲",
+                  "体育馆",
                   "饭厅",
-                  "叔叔"
+                  "羽毛球运动"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -3143,130 +3143,130 @@
               {
                 "q": "「grass」是什么意思？",
                 "opts": [
-                  "以前",
-                  "滑冰",
+                  "表亲",
+                  "草坪",
                   "羽毛球运动",
-                  "草坪"
+                  "叔叔"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「gym」是什么意思？",
                 "opts": [
-                  "aunt",
+                  "草坪",
+                  "阿姨",
                   "体育馆",
-                  "uncle",
-                  "羽毛球运动"
+                  "骑自行车运动"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「ago」是什么意思？",
                 "opts": [
-                  "体育馆",
-                  "uncle",
-                  "饭厅",
-                  "以前"
+                  "滑冰",
+                  "表亲",
+                  "以前",
+                  "兄弟"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「cycling」是什么意思？",
                 "opts": [
-                  "aunt",
-                  "骑自行车运动",
-                  "饭厅",
-                  "sister"
+                  "母亲",
+                  "体育馆",
+                  "去骑自行车",
+                  "骑自行车运动"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「go cycling」是什么意思？",
                 "opts": [
+                  "滑冰",
                   "去骑自行车",
-                  "sister",
-                  "母亲",
-                  "以前"
+                  "阿姨",
+                  "父亲"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「ice-skate」是什么意思？",
                 "opts": [
-                  "羽毛球运动",
-                  "兄弟",
-                  "cousin",
-                  "滑冰"
+                  "滑冰",
+                  "以前",
+                  "母亲",
+                  "父亲"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「badminton」是什么意思？",
                 "opts": [
+                  "表亲",
+                  "滑冰",
                   "羽毛球运动",
-                  "骑自行车运动",
-                  "sister",
-                  "去骑自行车"
+                  "草坪"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「饭厅」？",
                 "opts": [
-                  "dining hall",
-                  "sister",
-                  "mother",
-                  "cycling"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「grass」的中文是？",
-                "opts": [
-                  "mother",
-                  "姐妹",
-                  "aunt",
-                  "草坪"
+                  "cousin",
+                  "uncle",
+                  "brother",
+                  "dining hall"
                 ],
                 "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「grass」的中文是？",
+                "opts": [
+                  "父亲",
+                  "草坪",
+                  "滑冰",
+                  "饭厅"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "本单元「那时和现在」核心词是？",
                 "opts": [
+                  "uncle",
                   "dining hall",
-                  "grass",
                   "ice-skate",
-                  "go cycling"
+                  "cycling"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「gym」的意思是？",
                 "opts": [
-                  "mother",
+                  "饭厅",
                   "体育馆",
-                  "aunt",
-                  "草坪"
+                  "母亲",
+                  "骑自行车运动"
                 ],
                 "answer": 1,
                 "point": "词汇",

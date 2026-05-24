@@ -84,8 +84,41 @@ def theme_for_book_unit(book: str, unit_num: int) -> str:
     return mapping.get(key, "school_item")
 
 
+THEME_POOLS_CN: dict[str, list[str]] = {
+    "school_place": THEME_POOLS["room_cn"] + ["教师办公室", "操场", "计算机房", "美术室", "音乐室"],
+    "school_item": ["书包", "书", "铅笔", "尺子", "笔记本", "故事书"],
+    "room": THEME_POOLS["room_cn"],
+    "food": ["面包", "牛奶", "鸡蛋", "米饭", "面条", "汤", "鸡肉", "牛肉"],
+    "fruit": ["苹果", "梨", "香蕉", "橙子", "西瓜"],
+    "animal": ["猫", "狗", "鸭子", "猪", "熊", "熊猫", "老虎", "猴子"],
+    "colour": ["红色", "蓝色", "绿色", "黄色", "黑色", "白色", "棕色", "橙色"],
+    "body": ["头", "眼睛", "耳朵", "鼻子", "嘴", "胳膊", "手", "腿"],
+    "family": ["父亲", "母亲", "兄弟", "姐妹", "叔叔", "阿姨", "表亲"],
+    "job": ["医生", "护士", "司机", "农民", "厨师", "老师"],
+    "weather": THEME_POOLS["weather_cn"],
+    "farm": ["西红柿", "土豆", "胡萝卜", "马", "牛", "羊", "母鸡", "山羊"],
+    "clothes": ["衬衫", "连衣裙", "裙子", "外套", "夹克", "裤子", "短裤", "帽子"],
+    "time": ["早餐", "午餐", "晚餐", "起床", "去上学", "上床睡觉"],
+    "transport": ["公共汽车", "自行车", "汽车", "飞机", "轮船", "地铁", "火车"],
+    "feeling": ["开心", "难过", "生气", "累", "饿", "担心"],
+    "season": ["春天", "夏天", "秋天", "冬天"],
+    "floor": THEME_POOLS["number_cn"],
+    "prep": ["在……上", "在……里", "在……下", "在……旁边", "在……附近"],
+    "sport": ["足球", "篮球", "游泳", "跑步", "乒乓球"],
+    "nature": ["森林", "河流", "山", "湖", "公园", "桥"],
+    "number": ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"],
+}
+
+
 def themed_distractors(theme: str, correct: str, vocab_pool: list[str], extra: list[str] | None = None) -> list[str]:
+    """English distractors only — for pick-the-English-word MCQs."""
     pool = list(dict.fromkeys(vocab_pool + THEME_POOLS.get(theme, []) + (extra or [])))
+    return [x for x in pool if x != correct]
+
+
+def themed_cn_distractors(theme: str, correct: str, vocab_pool: list[str], extra: list[str] | None = None) -> list[str]:
+    """Chinese distractors only — for pick-the-Chinese-meaning MCQs."""
+    pool = list(dict.fromkeys(vocab_pool + THEME_POOLS_CN.get(theme, []) + (extra or [])))
     return [x for x in pool if x != correct]
 
 
@@ -582,7 +615,7 @@ def make_unit_quiz_extras(book: str, unit_num: int, vocab: list[dict], unit_cn: 
 
     if len(vocab) >= 3:
         v = vocab[2]
-        pool = themed_distractors(theme, v["cn"], all_cn)
-        extras.append(_mcq(f"「{v['en']}」的意思是？", v["cn"], pool + all_cn))
+        pool = themed_cn_distractors(theme, v["cn"], all_cn)
+        extras.append(_mcq(f"「{v['en']}」的意思是？", v["cn"], pool))
 
     return extras[:4]

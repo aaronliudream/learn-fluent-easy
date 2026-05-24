@@ -7,6 +7,7 @@ import {
   Zap, Search, ChevronDown } from
 "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { listReadingArticles } from "@/lib/gaokaoContent";
 import { PageHeader } from "@/components/PageHeader";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
@@ -123,14 +124,27 @@ export default function GaokaoReading() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      let q = supabase.
-      from("gaokao_reading_articles").
-      select("id, grade_band, sub_band, title, word_count, recommended_minutes, difficulty, cefr_level, genre_label, specific_topic, topic_group, theme_context, lexile_score").
-      eq("is_published", true).
-      order("sort_order");
-      if (yearBandKey) q = q.eq("grade_band", yearBandKey);
-      const { data } = await q;
-      setArticles((data ?? []) as Article[]);
+      const pep = listReadingArticles({
+        yearBand: gradeNum ?? undefined,
+        gradeBand: yearBandKey ?? undefined,
+      });
+      setArticles(
+        pep.map((a) => ({
+          id: a.id,
+          grade_band: a.grade_band,
+          sub_band: a.sub_band,
+          title: a.title,
+          word_count: a.word_count,
+          recommended_minutes: a.recommended_minutes,
+          difficulty: a.difficulty,
+          cefr_level: a.cefr_level,
+          genre_label: a.genre_label,
+          specific_topic: a.specific_topic,
+          topic_group: a.topic_group,
+          theme_context: a.theme_context,
+          lexile_score: a.lexile_score,
+        })) as Article[],
+      );
       setLoading(false);
 
       const { data: u } = await supabase.auth.getUser();
@@ -165,7 +179,7 @@ export default function GaokaoReading() {
         }
       }
     })();
-  }, []);
+  }, [gradeNum, yearBandKey]);
 
   const grouped = useMemo(() => {
     const m = new Map<GradeBand, Article[]>();

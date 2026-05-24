@@ -1,0 +1,105 @@
+{
+  "unitId": "g4v2_u1",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 10,
+  "stage_1": {
+    "type": "look_and_write",
+    "pointsPerQuestion": 1,
+    "questions": [
+      {
+        "image": "/primary/hub/g4v2_u1/library.svg",
+        "imageAlt": "School library",
+        "hints": ["This is", "library"],
+        "answer": "This is the library.",
+        "hint_text": "This is the ___."
+      },
+      {
+        "image": "/primary/hub/g4v2_u1/playground.svg",
+        "imageAlt": "School playground",
+        "hints": ["That is", "playground"],
+        "answer": "That is the playground.",
+        "hint_text": "That is the ___."
+      }
+    ]
+  },
+  "stage_2": {
+    "type": "read_and_fill_map",
+    "pointsIfAllCorrect": 3,
+    "sentences": [
+      "The library is on the second floor.",
+      "The art room is next to the gym.",
+      "The teachers' office is next to the library.",
+      "Classroom 1 is under the teachers' office."
+    ],
+    "rows": [
+      [
+        { "id": "computer", "label": "Computer Room", "fixed": true },
+        { "id": "library", "label": "Library", "fixed": false, "answer": "Library" },
+        { "id": "teachers", "label": "Teachers' Office", "fixed": false, "answer": "Teachers' Office" },
+        { "id": "classroom2", "label": "Classroom 2", "fixed": true }
+      ],
+      [
+        { "id": "classroom1", "label": "Classroom 1", "fixed": false, "answer": "Classroom 1" },
+        { "id": "gym", "label": "Gym", "fixed": true },
+        { "id": "art", "label": "Art Room", "fixed": false, "answer": "Art Room" },
+        { "id": "music", "label": "Music Room", "fixed": true }
+      ]
+    ],
+    "pickerLabels": ["Library", "Teachers' Office", "Classroom 1", "Art Room"]
+  },
+  "stage_3": {
+    "type": "word_order",
+    "pointsPerQuestion": 1,
+    "questions": [
+      {
+        "label": "问句",
+        "words": ["Where", "is", "the", "library", "?"],
+        "answer": "Where is the library ?"
+      },
+      {
+        "label": "陈述句",
+        "words": ["It's", "on", "the", "second", "floor", "."],
+        "answer": "It's on the second floor ."
+      }
+    ]
+  },
+  "stage_4": {
+    "type": "fill_dialog",
+    "pointsIfAllCorrect": 3,
+    "patternTags": ["Where is...?", "Is it next to...?", "It's on the...", "Yes, it is."],
+    "blanks": [
+      {
+        "id": "mike1",
+        "keywords": ["where", "teachers", "office"],
+        "reference": "Where is the teachers' office?"
+      },
+      {
+        "id": "mike2",
+        "keywords": ["next", "library"],
+        "reference": "Is it next to the library?"
+      }
+    ],
+    "lines": [
+      {
+        "role": "Mike",
+        "parts": [
+          { "type": "text", "value": "Excuse me. " },
+          { "type": "blank", "blankId": "mike1" }
+        ]
+      },
+      {
+        "role": "Miss White",
+        "parts": [{ "type": "text", "value": "It's on the second floor." }]
+      },
+      {
+        "role": "Mike",
+        "parts": [{ "type": "blank", "blankId": "mike2" }]
+      },
+      {
+        "role": "Miss White",
+        "parts": [{ "type": "text", "value": "Yes, it is." }]
+      }
+    ]
+  }
+}

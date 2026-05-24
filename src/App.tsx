@@ -49,6 +49,26 @@ const China = lazy(() => import("./pages/China.tsx"));
 const Primary = lazy(() => import("./pages/Primary.tsx"));
 const PrimaryLegacyRedirect = lazy(() => import("./pages/PrimaryLegacyRedirect.tsx"));
 const PrimaryHubLayout = lazy(() => import("./pages/primaryHub/PrimaryHubLayout.tsx"));
+const JuniorHubLayout = lazy(() => import("./pages/juniorHub/JuniorHubLayout.tsx"));
+const JuniorHubHome = lazy(() => import("./pages/juniorHub/JuniorHubHome.tsx"));
+const JuniorHubCourse = lazy(() => import("./pages/juniorHub/JuniorHubCourse.tsx"));
+const JuniorHubSemester = lazy(() => import("./pages/juniorHub/JuniorHubSemester.tsx"));
+const JuniorHubUnit = lazy(() => import("./pages/juniorHub/JuniorHubUnit.tsx"));
+const JuniorHubStage = lazy(() => import("./pages/juniorHub/JuniorHubStage.tsx"));
+const JuniorHubMistakes = lazy(() => import("./pages/juniorHub/JuniorHubMistakes.tsx"));
+const JuniorHubProfile = lazy(() => import("./pages/juniorHub/JuniorHubProfile.tsx"));
+const JuniorHubAITest = lazy(() => import("./pages/juniorHub/JuniorHubAITest.tsx"));
+const JuniorHubAIHistory = lazy(() => import("./pages/juniorHub/JuniorHubAIHistory.tsx"));
+const GaokaoHubLayout = lazy(() => import("./pages/gaokaoHub/GaokaoHubLayout.tsx"));
+const GaokaoHubHome = lazy(() => import("./pages/gaokaoHub/GaokaoHubHome.tsx"));
+const GaokaoHubCourse = lazy(() => import("./pages/gaokaoHub/GaokaoHubCourse.tsx"));
+const GaokaoHubSemester = lazy(() => import("./pages/gaokaoHub/GaokaoHubSemester.tsx"));
+const GaokaoHubUnit = lazy(() => import("./pages/gaokaoHub/GaokaoHubUnit.tsx"));
+const GaokaoHubStage = lazy(() => import("./pages/gaokaoHub/GaokaoHubStage.tsx"));
+const GaokaoHubMistakes = lazy(() => import("./pages/gaokaoHub/GaokaoHubMistakes.tsx"));
+const GaokaoHubProfile = lazy(() => import("./pages/gaokaoHub/GaokaoHubProfile.tsx"));
+const GaokaoHubAITest = lazy(() => import("./pages/gaokaoHub/GaokaoHubAITest.tsx"));
+const GaokaoHubAIHistory = lazy(() => import("./pages/gaokaoHub/GaokaoHubAIHistory.tsx"));
 const PrimaryHubHome = lazy(() => import("./pages/primaryHub/PrimaryHubHome.tsx"));
 const PrimaryHubCourse = lazy(() => import("./pages/primaryHub/PrimaryHubCourse.tsx"));
 const PrimaryHubSemester = lazy(() => import("./pages/primaryHub/PrimaryHubSemester.tsx"));
@@ -83,6 +103,7 @@ const SuzhouFavorites = lazy(() => import("./pages/junior/SuzhouFavorites.tsx"))
 const GaokaoGrammar = lazy(() => import("./pages/GaokaoGrammar.tsx"));
 const GaokaoGrammarPoint = lazy(() => import("./pages/GaokaoGrammarPoint.tsx"));
 const GaokaoGrammarQuiz = lazy(() => import("./pages/GaokaoGrammarQuiz.tsx"));
+const GaokaoGrammarMastery = lazy(() => import("./pages/GaokaoGrammarMastery.tsx"));
 const SubjunctiveLab = lazy(() => import("./pages/SubjunctiveLab.tsx"));
 const GaokaoReading = lazy(() => import("./pages/GaokaoReading.tsx"));
 const GaokaoReadingPlay = lazy(() => import("./pages/GaokaoReadingPlay.tsx"));
@@ -92,6 +113,10 @@ const GaokaoVocab = lazy(() => import("./pages/GaokaoVocab.tsx"));
 const GaokaoDiagnostic = lazy(() => import("./pages/GaokaoDiagnostic.tsx"));
 const GaokaoCloze = lazy(() => import("./pages/GaokaoCloze.tsx"));
 const GaokaoClozePlay = lazy(() => import("./pages/GaokaoClozePlay.tsx"));
+const GaokaoWriting = lazy(() => import("./pages/GaokaoWriting.tsx"));
+const GaokaoWritingPlay = lazy(() => import("./pages/GaokaoWritingPlay.tsx"));
+const GaokaoListening = lazy(() => import("./pages/GaokaoListening.tsx"));
+const GaokaoListeningPlay = lazy(() => import("./pages/GaokaoListeningPlay.tsx"));
 const GaokaoMistakes = lazy(() => import("./pages/GaokaoMistakes.tsx"));
 const SavedPhrases = lazy(() => import("./pages/SavedPhrases.tsx"));
 const Review = lazy(() => import("./pages/Review.tsx"));
@@ -286,6 +311,17 @@ const App = () => (
           <Route path="/primary/*" element={<ChineseOnlyRoute><PrimaryLegacyRedirect /></ChineseOnlyRoute>} />
           <Route path="/stage-tests/:segment/:grade" element={<StageTests />} />
           <Route path="/stage-test/:segment/:grade/:testId" element={<StageTestPlay />} />
+          <Route path="/junior/hub/:grade" element={<ChineseOnlyRoute><JuniorHubLayout /></ChineseOnlyRoute>}>
+            <Route index element={<JuniorHubHome />} />
+            <Route path="course" element={<JuniorHubCourse />} />
+            <Route path="semester/:semId" element={<JuniorHubSemester />} />
+            <Route path="semester/:semId/unit/:unitId" element={<JuniorHubUnit />} />
+            <Route path="semester/:semId/unit/:unitId/stage/:stageIdx" element={<JuniorHubStage />} />
+            <Route path="mistakes" element={<JuniorHubMistakes />} />
+            <Route path="profile" element={<JuniorHubProfile />} />
+            <Route path="aitest" element={<JuniorHubAITest />} />
+            <Route path="aihistory" element={<JuniorHubAIHistory />} />
+          </Route>
           <Route path="/junior" element={<ChineseOnlyRoute><Junior /></ChineseOnlyRoute>} />
           <Route path="/junior/g/:grade" element={<ChineseOnlyRoute><JuniorGrade /></ChineseOnlyRoute>} />
           <Route path="/junior/vocab" element={<ChineseOnlyRoute><JuniorVocab /></ChineseOnlyRoute>} />
@@ -305,15 +341,27 @@ const App = () => (
           <Route path="/junior/suzhou/:examId/mode" element={<ChineseOnlyRoute><SuzhouExamModeSelect /></ChineseOnlyRoute>} />
           <Route path="/junior/suzhou/:examId" element={<ChineseOnlyRoute><SuzhouExamPlay /></ChineseOnlyRoute>} />
           <Route path="/junior/suzhou/report/:reportId" element={<ChineseOnlyRoute><SuzhouExamReportView /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/hub/:grade" element={<ChineseOnlyRoute><GaokaoHubLayout /></ChineseOnlyRoute>}>
+            <Route index element={<GaokaoHubHome />} />
+            <Route path="course" element={<GaokaoHubCourse />} />
+            <Route path="semester/:semId" element={<GaokaoHubSemester />} />
+            <Route path="semester/:semId/unit/:unitId" element={<GaokaoHubUnit />} />
+            <Route path="semester/:semId/unit/:unitId/stage/:stageIdx" element={<GaokaoHubStage />} />
+            <Route path="mistakes" element={<GaokaoHubMistakes />} />
+            <Route path="profile" element={<GaokaoHubProfile />} />
+            <Route path="aitest" element={<GaokaoHubAITest />} />
+            <Route path="aihistory" element={<GaokaoHubAIHistory />} />
+          </Route>
           <Route path="/gaokao" element={<ChineseOnlyRoute><Gaokao /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade" element={<ChineseOnlyRoute><GaokaoGrade /></ChineseOnlyRoute>} />
           <Route path="/gaokao/exam" element={<ChineseOnlyRoute><GaokaoExam /></ChineseOnlyRoute>} />
           <Route path="/gaokao/diagnostic" element={<ChineseOnlyRoute><GaokaoDiagnostic /></ChineseOnlyRoute>} />
           <Route path="/gaokao/deep-diagnosis" element={<ChineseOnlyRoute><GaokaoDeepDiagnosis /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar" element={<ChineseOnlyRoute><GaokaoGrammar /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/grammar/:slug/mastery" element={<ChineseOnlyRoute><GaokaoGrammarMastery /></ChineseOnlyRoute>} />
           <Route path="/gaokao/grammar/:slug" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/grammar/:slug/quiz" element={<ChineseOnlyRoute><GaokaoGrammarQuiz /></ChineseOnlyRoute>} />
-          <Route path="/gaokao/grammar/:slug/quiz/:index" element={<ChineseOnlyRoute><GaokaoGrammarQuiz /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/grammar/:slug/quiz" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/grammar/:slug/quiz/:index" element={<ChineseOnlyRoute><GaokaoGrammarPoint /></ChineseOnlyRoute>} />
           <Route path="/grammar-lab/subjunctive" element={<ChineseOnlyRoute><SubjunctiveLab /></ChineseOnlyRoute>} />
           <Route path="/gaokao/reading" element={<ChineseOnlyRoute><GaokaoReading /></ChineseOnlyRoute>} />
           <Route path="/gaokao/reading/knowledge" element={<ChineseOnlyRoute><GaokaoReadingKnowledge /></ChineseOnlyRoute>} />
@@ -322,6 +370,10 @@ const App = () => (
           <Route path="/gaokao/vocab" element={<ChineseOnlyRoute><GaokaoVocab /></ChineseOnlyRoute>} />
           <Route path="/gaokao/cloze" element={<ChineseOnlyRoute><GaokaoCloze /></ChineseOnlyRoute>} />
           <Route path="/gaokao/cloze/:id" element={<ChineseOnlyRoute><GaokaoClozePlay /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/writing" element={<ChineseOnlyRoute><GaokaoWriting /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/writing/:id" element={<ChineseOnlyRoute><GaokaoWritingPlay /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/listening" element={<ChineseOnlyRoute><GaokaoListening /></ChineseOnlyRoute>} />
+          <Route path="/gaokao/listening/:id" element={<ChineseOnlyRoute><GaokaoListeningPlay /></ChineseOnlyRoute>} />
           <Route path="/gaokao/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/gaokao/g/:grade/mistakes" element={<ChineseOnlyRoute><GaokaoMistakes /></ChineseOnlyRoute>} />
           <Route path="/level/:levelId" element={<Level />} />

@@ -14,33 +14,13 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from primary_pep_patterns import (  # noqa: E402
-    THEME_POOLS,
     make_unit_dialogues,
     make_unit_quiz_extras,
     similar_sentence_distractors,
     theme_for_book_unit,
+    themed_cn_distractors,
     themed_distractors,
 )
-
-THEME_POOLS_CN: dict[str, list[str]] = {
-    "school_place": THEME_POOLS["room_cn"] + ["教师办公室", "操场", "计算机房"],
-    "school_item": ["书包", "铅笔", "尺子", "笔记本", "故事书"],
-    "room": THEME_POOLS["room_cn"],
-    "food": ["面包", "牛奶", "鸡蛋", "面条", "汤", "鸡肉", "牛肉"],
-    "fruit": ["苹果", "梨", "香蕉", "橙子", "西瓜"],
-    "animal": ["猫", "狗", "鸭子", "猪", "熊", "熊猫", "老虎", "猴子"],
-    "colour": ["红色", "蓝色", "绿色", "黄色", "黑色", "白色", "棕色", "橙色"],
-    "body": ["头", "眼睛", "耳朵", "鼻子", "嘴", "胳膊", "手", "腿"],
-    "family": ["父亲", "母亲", "兄弟", "姐妹", "叔叔", "阿姨", "表亲"],
-    "job": ["医生", "护士", "司机", "农民", "厨师", "老师"],
-    "weather": THEME_POOLS["weather_cn"],
-    "farm": ["西红柿", "土豆", "胡萝卜", "马", "牛", "羊", "母鸡", "山羊"],
-    "clothes": ["衬衫", "连衣裙", "裙子", "外套", "夹克", "裤子", "短裤", "帽子"],
-    "time": ["早餐", "午餐", "晚餐", "起床", "去上学", "上床睡觉"],
-    "transport": ["公共汽车", "自行车", "汽车", "飞机", "轮船", "地铁", "火车"],
-    "feeling": ["开心", "难过", "生气", "累", "饿", "担心"],
-    "season": ["春天", "夏天", "秋天", "冬天"],
-}
 VOCAB_DIR = ROOT / "docs" / "vocab"
 OUT_DIR = ROOT / "src" / "data" / "primaryHub"
 LEGACY_G4_U1 = ROOT / "src" / "data" / "primaryHub" / "legacy_g4v2_u1.json"
@@ -222,15 +202,14 @@ def make_quiz(vocab: list[dict], unit_cn: str, book: str, unit_num: int) -> list
     qs: list[dict] = []
     all_cn = [v["cn"] for v in vocab]
     all_en = [v["en"] for v in vocab]
-    cn_pool = themed_distractors(theme, "", all_cn, THEME_POOLS_CN.get(theme, []))
     for v in vocab:
-        pool = [x for x in all_cn if x != v["cn"]] + [x for x in cn_pool if x != v["cn"]]
+        pool = themed_cn_distractors(theme, v["cn"], all_cn)
         qs.append(_mcq(f"「{v['en']}」是什么意思？", v["cn"], pool))
     if len(vocab) >= 2:
         v0, v1 = vocab[0], vocab[1]
         en_pool = themed_distractors(theme, v0["en"], all_en)
-        qs.append(_mcq(f"哪个是「{v0['cn']}」？", v0["en"], en_pool + all_en))
-        qs.append(_mcq(f"「{v1['en']}」的中文是？", v1["cn"], [x for x in all_cn if x != v1["cn"]] + cn_pool))
+        qs.append(_mcq(f"哪个是「{v0['cn']}」？", v0["en"], en_pool))
+        qs.append(_mcq(f"「{v1['en']}」的中文是？", v1["cn"], themed_cn_distractors(theme, v1["cn"], all_cn)))
     theme_en = themed_distractors(theme, vocab[0]["en"], all_en)
     qs.append(
         _mcq(

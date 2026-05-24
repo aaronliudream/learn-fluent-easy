@@ -117,12 +117,13 @@ export default function Junior() {
       ? "教材配套学习 · 初一至初三综合"
       : `教材配套学习 · ${GRADE_LABELS[grade]}`;
 
-  const classroomTo = pathGrade ? `/junior/g/${pathGrade}` : "/junior/g/1";
+  const classroomTo =
+    grade === "g7" ? "/junior/hub/7" : grade === "g8" ? "/junior/hub/8" : grade === "g9" ? "/junior/hub/9" : "/junior/hub/7";
 
   const classroomDescription =
     grade === "all"
-      ? `词汇 · 语法 · 阅读 · 听力 · 写作 · 阶段测试 · 已掌握 ${classroom.mastered}/${classroom.total} 项`
-      : `${GRADE_LABELS[grade]}课本同步 · 五模块练习 + 阶段测试 · ${classroom.mastered}/${classroom.total} 项已掌握`;
+      ? `人教版同步 · 58 单元 · 词汇/语法/阅读/听力/写作 · 已掌握 ${classroom.mastered}/${classroom.total} 项`
+      : `${GRADE_LABELS[grade]}人教版同步 · 每单元 8 关 · 10% 进度 AI 小测 · ${classroom.mastered}/${classroom.total} 项已掌握`;
 
   return (
     <main className="min-h-screen bg-background">

@@ -159,12 +159,12 @@
               {
                 "q": "「classroom」是什么意思？",
                 "opts": [
+                  "厨房",
+                  "操场",
                   "教室",
-                  "讲台",
-                  "图画",
-                  "computer room"
+                  "音乐室"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -172,9 +172,9 @@
                 "q": "「window」是什么意思？",
                 "opts": [
                   "教室",
-                  "teachers' office",
+                  "浴室",
                   "窗户",
-                  "电灯"
+                  "客厅"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -183,9 +183,9 @@
               {
                 "q": "「blackboard」是什么意思？",
                 "opts": [
-                  "图书馆",
-                  "计算机房",
-                  "library",
+                  "音乐室",
+                  "计算机",
+                  "窗户",
                   "黑板"
                 ],
                 "answer": 3,
@@ -195,10 +195,10 @@
               {
                 "q": "「light」是什么意思？",
                 "opts": [
-                  "art room",
+                  "计算机房",
                   "电灯",
-                  "教师办公室",
-                  "客厅"
+                  "卧室",
+                  "窗户"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -208,9 +208,9 @@
                 "q": "「picture」是什么意思？",
                 "opts": [
                   "图画",
-                  "教师办公室",
-                  "书房",
-                  "计算机房"
+                  "厨房",
+                  "窗户",
+                  "书房"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -219,48 +219,48 @@
               {
                 "q": "「door」是什么意思？",
                 "opts": [
-                  "黑板",
+                  "窗户",
+                  "教室",
                   "门",
-                  "操场",
-                  "电灯"
+                  "书房"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「teacher's desk」是什么意思？",
                 "opts": [
-                  "computer room",
-                  "计算机",
-                  "library",
-                  "讲台"
+                  "操场",
+                  "美术室",
+                  "讲台",
+                  "黑板"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「computer」是什么意思？",
                 "opts": [
-                  "计算机",
-                  "music room",
-                  "classroom",
-                  "教室"
+                  "浴室",
+                  "黑板",
+                  "音乐室",
+                  "计算机"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「教室」？",
                 "opts": [
-                  "picture",
                   "classroom",
-                  "blackboard",
-                  "playground"
+                  "window",
+                  "door",
+                  "art room"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -268,9 +268,9 @@
                 "q": "「window」的中文是？",
                 "opts": [
                   "窗户",
-                  "操场",
-                  "computer room",
-                  "计算机"
+                  "教室",
+                  "音乐室",
+                  "黑板"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -281,19 +281,19 @@
                 "opts": [
                   "window",
                   "computer",
-                  "playground",
-                  "classroom"
+                  "classroom",
+                  "playground"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "Where's the library? 在问什么？",
                 "opts": [
-                  "是图书馆吗",
-                  "图书馆大吗",
                   "图书馆有什么",
+                  "图书馆大吗",
+                  "是图书馆吗",
                   "图书馆在哪"
                 ],
                 "answer": 3,
@@ -303,12 +303,12 @@
               {
                 "q": "「blackboard」的意思是？",
                 "opts": [
-                  "computer room",
+                  "书房",
+                  "操场",
                   "门",
-                  "黑板",
-                  "计算机"
+                  "黑板"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -519,46 +519,46 @@
               {
                 "q": "「schoolbag」是什么意思？",
                 "opts": [
-                  "pencil",
-                  "schoolbag",
-                  "英语书",
-                  "书包"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「maths book」是什么意思？",
-                "opts": [
-                  "故事书",
-                  "数学书",
-                  "book",
-                  "storybook"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「English book」是什么意思？",
-                "opts": [
-                  "schoolbag",
-                  "糖果",
-                  "英语书",
-                  "笔记本"
+                  "书",
+                  "笔记本",
+                  "书包",
+                  "糖果"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「maths book」是什么意思？",
+                "opts": [
+                  "玩具",
+                  "书包",
+                  "数学书",
+                  "铅笔"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「English book」是什么意思？",
+                "opts": [
+                  "故事书",
+                  "英语书",
+                  "玩具",
+                  "糖果"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「Chinese book」是什么意思？",
                 "opts": [
-                  "英语书",
-                  "schoolbag",
+                  "书",
+                  "笔记本",
                   "语文书",
-                  "book"
+                  "数学书"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -567,81 +567,81 @@
               {
                 "q": "「storybook」是什么意思？",
                 "opts": [
-                  "笔记本",
-                  "schoolbag",
-                  "数学书",
-                  "故事书"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「candy」是什么意思？",
-                "opts": [
-                  "storybook",
-                  "pencil",
-                  "玩具",
-                  "糖果"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「notebook」是什么意思？",
-                "opts": [
-                  "英语书",
-                  "铅笔",
-                  "笔记本",
-                  "语文书"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「toy」是什么意思？",
-                "opts": [
-                  "storybook",
-                  "玩具",
-                  "数学书",
-                  "笔记本"
+                  "书",
+                  "故事书",
+                  "糖果",
+                  "玩具"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「candy」是什么意思？",
+                "opts": [
+                  "糖果",
+                  "英语书",
+                  "尺子",
+                  "数学书"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「notebook」是什么意思？",
+                "opts": [
+                  "笔记本",
+                  "英语书",
+                  "书包",
+                  "语文书"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「toy」是什么意思？",
+                "opts": [
+                  "玩具",
+                  "语文书",
+                  "书包",
+                  "英语书"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "哪个是「书包」？",
                 "opts": [
-                  "English book",
-                  "candy",
                   "schoolbag",
+                  "book",
+                  "Chinese book",
                   "storybook"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「maths book」的中文是？",
                 "opts": [
+                  "笔记本",
+                  "数学书",
                   "语文书",
-                  "英语书",
-                  "铅笔",
-                  "数学书"
+                  "尺子"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「我的书包」核心词是？",
                 "opts": [
-                  "maths book",
-                  "storybook",
                   "Chinese book",
+                  "pencil",
+                  "notebook",
                   "schoolbag"
                 ],
                 "answer": 3,
@@ -651,12 +651,12 @@
               {
                 "q": "「English book」的意思是？",
                 "opts": [
-                  "玩具",
-                  "语文书",
                   "英语书",
-                  "数学书"
+                  "数学书",
+                  "书包",
+                  "书"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -857,10 +857,10 @@
               {
                 "q": "「strong」是什么意思？",
                 "opts": [
-                  "安静的",
-                  "叔叔",
+                  "眼镜",
+                  "父亲",
                   "强壮的",
-                  "uncle"
+                  "表亲"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -869,22 +869,22 @@
               {
                 "q": "「friendly」是什么意思？",
                 "opts": [
-                  "sister",
-                  "uncle",
-                  "友好的",
-                  "鞋"
+                  "母亲",
+                  "叔叔",
+                  "姐妹",
+                  "友好的"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「quiet」是什么意思？",
                 "opts": [
-                  "兄弟",
                   "母亲",
+                  "表亲",
                   "安静的",
-                  "强壮的"
+                  "头发"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -893,48 +893,48 @@
               {
                 "q": "「hair」是什么意思？",
                 "opts": [
-                  "眼镜",
-                  "头发",
+                  "强壮的",
                   "或者",
-                  "aunt"
+                  "父亲",
+                  "头发"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「shoe」是什么意思？",
                 "opts": [
-                  "安静的",
+                  "友好的",
+                  "阿姨",
                   "鞋",
-                  "叔叔",
-                  "表亲"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「glasses」是什么意思？",
-                "opts": [
-                  "强壮的",
-                  "兄弟",
-                  "眼镜",
-                  "他的"
+                  "眼镜"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「his」是什么意思？",
+                "q": "「glasses」是什么意思？",
                 "opts": [
-                  "安静的",
+                  "阿姨",
                   "眼镜",
                   "姐妹",
-                  "他的"
+                  "强壮的"
                 ],
-                "answer": 3,
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「his」是什么意思？",
+                "opts": [
+                  "兄弟",
+                  "他的",
+                  "姐妹",
+                  "叔叔"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -942,35 +942,35 @@
                 "q": "「or」是什么意思？",
                 "opts": [
                   "姐妹",
-                  "或者",
                   "他的",
-                  "brother"
+                  "鞋",
+                  "或者"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「强壮的」？",
                 "opts": [
-                  "hair",
                   "strong",
-                  "glasses",
-                  "shoe"
+                  "father",
+                  "friendly",
+                  "quiet"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「friendly」的中文是？",
                 "opts": [
+                  "眼镜",
                   "表亲",
                   "友好的",
-                  "叔叔",
-                  "他的"
+                  "姐妹"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -978,23 +978,23 @@
                 "q": "本单元「我的朋友」核心词是？",
                 "opts": [
                   "quiet",
+                  "friendly",
                   "strong",
-                  "or",
                   "uncle"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「quiet」的意思是？",
                 "opts": [
-                  "安静的",
+                  "父亲",
                   "鞋",
-                  "uncle",
-                  "头发"
+                  "安静的",
+                  "表亲"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -1205,10 +1205,10 @@
               {
                 "q": "「bedroom」是什么意思？",
                 "opts": [
+                  "电话",
                   "书房",
-                  "kitchen",
                   "卧室",
-                  "图书馆"
+                  "桌子"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -1217,12 +1217,12 @@
               {
                 "q": "「living room」是什么意思？",
                 "opts": [
-                  "厨房",
-                  "客厅",
-                  "桌子",
-                  "床"
+                  "浴室",
+                  "电话",
+                  "书房",
+                  "客厅"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1230,8 +1230,8 @@
                 "q": "「study」是什么意思？",
                 "opts": [
                   "书房",
-                  "客厅",
-                  "卧室",
+                  "桌子",
+                  "图书馆",
                   "浴室"
                 ],
                 "answer": 0,
@@ -1241,22 +1241,22 @@
               {
                 "q": "「kitchen」是什么意思？",
                 "opts": [
-                  "桌子",
-                  "电话",
-                  "卧室",
-                  "厨房"
+                  "教室",
+                  "厨房",
+                  "书房",
+                  "卧室"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「bathroom」是什么意思？",
                 "opts": [
-                  "厨房",
-                  "kitchen",
+                  "书房",
+                  "图书馆",
                   "浴室",
-                  "床"
+                  "教室"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -1265,60 +1265,60 @@
               {
                 "q": "「bed」是什么意思？",
                 "opts": [
+                  "书房",
                   "床",
-                  "桌子",
-                  "电话",
-                  "卧室"
+                  "客厅",
+                  "厨房"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「phone」是什么意思？",
                 "opts": [
-                  "卧室",
-                  "study",
-                  "浴室",
-                  "电话"
+                  "厨房",
+                  "电话",
+                  "床",
+                  "书房"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「table」是什么意思？",
                 "opts": [
-                  "电话",
-                  "浴室",
-                  "厨房",
-                  "桌子"
+                  "图书馆",
+                  "桌子",
+                  "卧室",
+                  "厨房"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「卧室」？",
                 "opts": [
-                  "bedroom",
-                  "table",
+                  "study",
                   "bathroom",
-                  "kitchen"
+                  "bedroom",
+                  "bed"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「living room」的中文是？",
                 "opts": [
-                  "bathroom",
+                  "客厅",
+                  "浴室",
                   "书房",
-                  "桌子",
-                  "客厅"
+                  "床"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1327,8 +1327,8 @@
                 "opts": [
                   "phone",
                   "bedroom",
-                  "bed",
-                  "bathroom"
+                  "bathroom",
+                  "living room"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1337,12 +1337,12 @@
               {
                 "q": "「study」的意思是？",
                 "opts": [
-                  "厨房",
-                  "床",
-                  "kitchen",
-                  "书房"
+                  "客厅",
+                  "书房",
+                  "浴室",
+                  "图书馆"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -1533,9 +1533,9 @@
               {
                 "q": "「beef」是什么意思？",
                 "opts": [
-                  "beef",
+                  "牛奶",
+                  "鸡肉",
                   "鸡蛋",
-                  "餐叉",
                   "牛肉"
                 ],
                 "answer": 3,
@@ -1546,9 +1546,9 @@
                 "q": "「chicken」是什么意思？",
                 "opts": [
                   "鸡肉",
-                  "面条",
-                  "鸡蛋",
-                  "餐叉"
+                  "面包",
+                  "牛奶",
+                  "面条"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1557,21 +1557,9 @@
               {
                 "q": "「noodles」是什么意思？",
                 "opts": [
-                  "milk",
+                  "面条",
+                  "碗",
                   "餐叉",
-                  "面条",
-                  "egg"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「soup」是什么意思？",
-                "opts": [
-                  "汤",
-                  "面条",
-                  "筷子",
                   "面包"
                 ],
                 "answer": 0,
@@ -1579,12 +1567,24 @@
                 "dim": "vocab"
               },
               {
+                "q": "「soup」是什么意思？",
+                "opts": [
+                  "牛肉",
+                  "汤",
+                  "米饭",
+                  "面条"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「vegetable」是什么意思？",
                 "opts": [
                   "蔬菜",
-                  "chicken",
-                  "milk",
-                  "鸡肉"
+                  "面包",
+                  "筷子",
+                  "牛肉"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1593,48 +1593,48 @@
               {
                 "q": "「chopsticks」是什么意思？",
                 "opts": [
-                  "beef",
-                  "餐叉",
+                  "筷子",
+                  "面包",
                   "牛肉",
-                  "筷子"
+                  "米饭"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「bowl」是什么意思？",
                 "opts": [
-                  "汤",
-                  "bread",
+                  "餐叉",
                   "碗",
-                  "面条"
+                  "米饭",
+                  "面包"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fork」是什么意思？",
                 "opts": [
-                  "碗",
-                  "面条",
-                  "bread",
-                  "餐叉"
+                  "餐叉",
+                  "筷子",
+                  "牛肉",
+                  "鸡蛋"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「牛肉」？",
                 "opts": [
-                  "soup",
+                  "noodles",
+                  "vegetable",
                   "beef",
-                  "chicken",
-                  "chopsticks"
+                  "bread"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1643,8 +1643,8 @@
                 "opts": [
                   "鸡肉",
                   "蔬菜",
-                  "rice",
-                  "餐叉"
+                  "面条",
+                  "筷子"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1653,36 +1653,36 @@
               {
                 "q": "本单元「晚餐准备好了」核心词是？",
                 "opts": [
-                  "chopsticks",
-                  "fork",
                   "vegetable",
-                  "beef"
+                  "soup",
+                  "beef",
+                  "rice"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "Do you like beef? 喜欢怎么回答？",
                 "opts": [
-                  "Yes, I do.",
                   "Yes, it is.",
                   "No, I am.",
-                  "No, it isn't."
+                  "No, it isn't.",
+                  "Yes, I do."
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "句型",
                 "dim": "sentence"
               },
               {
                 "q": "「noodles」的意思是？",
                 "opts": [
-                  "汤",
-                  "beef",
+                  "鸡蛋",
                   "面条",
-                  "蔬菜"
+                  "蔬菜",
+                  "汤"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -1873,60 +1873,60 @@
               {
                 "q": "「parents」是什么意思？",
                 "opts": [
-                  "兄弟",
+                  "姐妹",
+                  "医生",
                   "父母",
-                  "母亲",
-                  "厨师"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cousin」是什么意思？",
-                "opts": [
-                  "同辈表亲",
-                  "mother",
-                  "叔叔",
-                  "父亲"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「uncle」是什么意思？",
-                "opts": [
-                  "兄弟",
-                  "舅父",
-                  "婴儿小弟弟",
-                  "father"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「aunt」是什么意思？",
-                "opts": [
-                  "阿姨",
-                  "婴儿小弟弟",
-                  "姑母",
-                  "sister"
+                  "同辈表亲"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「baby brother」是什么意思？",
+                "q": "「cousin」是什么意思？",
                 "opts": [
-                  "兄弟",
-                  "sister",
-                  "医生",
+                  "姐妹",
+                  "同辈表亲",
+                  "舅父",
+                  "表亲"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「uncle」是什么意思？",
+                "opts": [
+                  "舅父",
+                  "姑母",
+                  "阿姨",
+                  "父母"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「aunt」是什么意思？",
+                "opts": [
+                  "叔叔",
+                  "姑母",
+                  "厨师",
                   "婴儿小弟弟"
                 ],
-                "answer": 3,
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「baby brother」是什么意思？",
+                "opts": [
+                  "父母",
+                  "婴儿小弟弟",
+                  "厨师",
+                  "姐妹"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1934,9 +1934,9 @@
                 "q": "「doctor」是什么意思？",
                 "opts": [
                   "医生",
-                  "姑母",
-                  "司机",
-                  "母亲"
+                  "叔叔",
+                  "婴儿小弟弟",
+                  "表亲"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1945,34 +1945,34 @@
               {
                 "q": "「cook」是什么意思？",
                 "opts": [
-                  "cousin",
+                  "医生",
+                  "婴儿小弟弟",
                   "厨师",
-                  "兄弟",
-                  "舅父"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「driver」是什么意思？",
-                "opts": [
-                  "叔叔",
-                  "brother",
-                  "司机",
-                  "父母"
+                  "姑母"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「driver」是什么意思？",
+                "opts": [
+                  "阿姨",
+                  "司机",
+                  "医生",
+                  "姑母"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "哪个是「父母」？",
                 "opts": [
-                  "cousin",
                   "driver",
+                  "uncle",
                   "parents",
-                  "baby brother"
+                  "mother"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -1981,36 +1981,36 @@
               {
                 "q": "「cousin」的中文是？",
                 "opts": [
+                  "婴儿小弟弟",
                   "同辈表亲",
-                  "姐妹",
                   "父亲",
-                  "cousin"
+                  "医生"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「见到我的家人」核心词是？",
                 "opts": [
-                  "uncle",
+                  "father",
+                  "baby brother",
                   "parents",
-                  "doctor",
-                  "cousin"
+                  "uncle"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「uncle」的意思是？",
                 "opts": [
-                  "婴儿小弟弟",
                   "舅父",
-                  "医生",
-                  "厨师"
+                  "阿姨",
+                  "叔叔",
+                  "同辈表亲"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2226,6 +2226,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "看图写句 · 填图 · 成句",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "12分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -2606,46 +2614,46 @@
               {
                 "q": "「breakfast」是什么意思？",
                 "opts": [
-                  "体育课",
+                  "早餐",
+                  "上床睡觉",
                   "午餐",
-                  "去上学",
-                  "早餐"
+                  "去上学"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「English class」是什么意思？",
                 "opts": [
-                  "午餐",
+                  "英语课",
+                  "起床",
                   "正餐",
-                  "lunch",
-                  "英语课"
+                  "上床睡觉"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「lunch」是什么意思？",
                 "opts": [
-                  "dinner",
+                  "体育课",
+                  "上床睡觉",
                   "起床",
-                  "午餐",
-                  "正餐"
+                  "午餐"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「music class」是什么意思？",
                 "opts": [
-                  "去上学",
-                  "体育课",
+                  "上床睡觉",
+                  "午餐",
                   "音乐课",
-                  "午餐"
+                  "正餐"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2654,34 +2662,34 @@
               {
                 "q": "「PE class」是什么意思？",
                 "opts": [
+                  "起床",
+                  "上床睡觉",
                   "体育课",
-                  "午餐",
-                  "正餐",
-                  "早餐"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「dinner」是什么意思？",
-                "opts": [
-                  "早餐",
-                  "去上学",
-                  "正餐",
-                  "英语课"
+                  "正餐"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「dinner」是什么意思？",
+                "opts": [
+                  "正餐",
+                  "音乐课",
+                  "午餐",
+                  "起床"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「get up」是什么意思？",
                 "opts": [
-                  "体育课",
+                  "上床睡觉",
                   "起床",
-                  "英语课",
-                  "go to school"
+                  "去上学",
+                  "晚餐"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -2690,72 +2698,72 @@
               {
                 "q": "「go to school」是什么意思？",
                 "opts": [
+                  "上床睡觉",
+                  "午餐",
                   "去上学",
-                  "dinner",
-                  "晚餐",
-                  "音乐课"
+                  "早餐"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「早餐」？",
                 "opts": [
-                  "get up",
-                  "breakfast",
+                  "PE class",
                   "dinner",
-                  "PE class"
+                  "breakfast",
+                  "lunch"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「English class」的中文是？",
                 "opts": [
-                  "英语课",
+                  "正餐",
+                  "起床",
                   "音乐课",
-                  "午餐",
-                  "lunch"
+                  "英语课"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「几点了」核心词是？",
                 "opts": [
-                  "English class",
-                  "get up",
+                  "music class",
                   "breakfast",
-                  "go to school"
+                  "PE class",
+                  "English class"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "What time is it? 的意思是？",
                 "opts": [
-                  "什么时间",
+                  "几点了",
                   "什么时候",
-                  "几点钟了",
-                  "几点了"
+                  "什么时间",
+                  "几点钟了"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "句型",
                 "dim": "sentence"
               },
               {
                 "q": "「lunch」的意思是？",
                 "opts": [
-                  "lunch",
-                  "体育课",
-                  "午餐",
-                  "去上学"
+                  "正餐",
+                  "晚餐",
+                  "去上学",
+                  "午餐"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2946,46 +2954,46 @@
               {
                 "q": "「cold」是什么意思？",
                 "opts": [
-                  "阴天的",
-                  "寒冷的",
-                  "rainy",
-                  "热的"
+                  "凉的",
+                  "多风的",
+                  "下雪",
+                  "寒冷的"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「cool」是什么意思？",
                 "opts": [
-                  "寒冷的",
-                  "hot",
+                  "下雪",
                   "凉的",
-                  "rainy"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「warm」是什么意思？",
-                "opts": [
-                  "cold",
-                  "温暖的",
-                  "刮风",
-                  "hot"
+                  "多云",
+                  "晴朗"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「warm」是什么意思？",
+                "opts": [
+                  "寒冷",
+                  "热的",
+                  "温暖的",
+                  "多风的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「hot」是什么意思？",
                 "opts": [
-                  "多风的",
-                  "寒冷的",
+                  "多云",
+                  "下雪",
                   "热的",
-                  "阳光充足的"
+                  "温暖的"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2994,24 +3002,24 @@
               {
                 "q": "「sunny」是什么意思？",
                 "opts": [
-                  "凉的",
-                  "阴天的",
                   "阳光充足的",
-                  "下雨"
+                  "多云",
+                  "多风的",
+                  "下雪"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「windy」是什么意思？",
                 "opts": [
+                  "下雪",
                   "多风的",
-                  "温暖的",
-                  "下雪的",
-                  "凉的"
+                  "凉的",
+                  "寒冷"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3019,9 +3027,9 @@
                 "q": "「cloudy」是什么意思？",
                 "opts": [
                   "阴天的",
+                  "晴朗",
                   "阳光充足的",
-                  "温暖的",
-                  "多云"
+                  "凉的"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3030,60 +3038,60 @@
               {
                 "q": "「snowy」是什么意思？",
                 "opts": [
-                  "cool",
+                  "下雨",
+                  "凉的",
                   "下雪的",
-                  "windy",
-                  "寒冷的"
+                  "寒冷"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「寒冷的」？",
                 "opts": [
+                  "windy",
+                  "rainy",
                   "cold",
-                  "cloudy",
-                  "snowy",
-                  "sunny"
+                  "snowy"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「cool」的中文是？",
                 "opts": [
-                  "多风的",
-                  "下雪的",
+                  "热的",
                   "凉的",
-                  "下雨"
+                  "炎热",
+                  "多云"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「天气」核心词是？",
                 "opts": [
-                  "cloudy",
-                  "snowy",
+                  "hot",
                   "cold",
-                  "sunny"
+                  "snowy",
+                  "cloudy"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "What's the weather like? 问的是？",
                 "opts": [
-                  "天气热吗",
-                  "几点了",
                   "在哪里",
-                  "天气怎么样"
+                  "天气热吗",
+                  "天气怎么样",
+                  "几点了"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "句型",
                 "dim": "sentence"
               },
@@ -3092,8 +3100,8 @@
                 "opts": [
                   "温暖的",
                   "寒冷的",
-                  "多风的",
-                  "下雪的"
+                  "阳光充足的",
+                  "晴朗"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3286,46 +3294,46 @@
               {
                 "q": "「tomato」是什么意思？",
                 "opts": [
+                  "马铃薯",
+                  "马",
                   "西红柿",
-                  "sheep",
-                  "hen",
-                  "马铃薯"
+                  "山羊"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「potato」是什么意思？",
                 "opts": [
-                  "hen",
+                  "土豆",
+                  "马",
                   "马铃薯",
-                  "豆角",
-                  "母鸡"
+                  "羊"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「green beans」是什么意思？",
                 "opts": [
-                  "豆角",
-                  "西红柿",
                   "牛",
-                  "cow"
+                  "土豆",
+                  "豆角",
+                  "母牛"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「carrot」是什么意思？",
                 "opts": [
-                  "西红柿",
                   "豆角",
+                  "马",
                   "胡萝卜",
-                  "马"
+                  "山羊"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -3334,96 +3342,96 @@
               {
                 "q": "「horse」是什么意思？",
                 "opts": [
+                  "牛",
                   "马",
-                  "山羊",
-                  "土豆",
-                  "西红柿"
+                  "豆角",
+                  "马铃薯"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「cow」是什么意思？",
                 "opts": [
+                  "羊",
                   "胡萝卜",
                   "母牛",
-                  "土豆",
-                  "豆角"
+                  "马铃薯"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「sheep」是什么意思？",
                 "opts": [
+                  "豆角",
+                  "土豆",
                   "羊",
-                  "山羊",
-                  "马",
-                  "hen"
+                  "山羊"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「hen」是什么意思？",
                 "opts": [
+                  "西红柿",
+                  "牛",
                   "母鸡",
-                  "胡萝卜",
-                  "potato",
-                  "sheep"
+                  "羊"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「西红柿」？",
                 "opts": [
+                  "goat",
+                  "green beans",
                   "tomato",
-                  "horse",
-                  "cow",
-                  "green beans"
+                  "carrot"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「potato」的中文是？",
                 "opts": [
-                  "马铃薯",
-                  "羊",
-                  "豆角",
-                  "西红柿"
+                  "马",
+                  "牛",
+                  "胡萝卜",
+                  "马铃薯"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「在农场」核心词是？",
                 "opts": [
-                  "hen",
-                  "tomato",
-                  "cow",
-                  "potato"
+                  "potato",
+                  "carrot",
+                  "green beans",
+                  "tomato"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「green beans」的意思是？",
                 "opts": [
-                  "豆角",
-                  "羊",
+                  "山羊",
                   "马铃薯",
-                  "母牛"
+                  "羊",
+                  "豆角"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3614,72 +3622,72 @@
               {
                 "q": "「clothes」是什么意思？",
                 "opts": [
+                  "衣服",
+                  "帽子",
                   "连衣裙",
-                  "裤子",
-                  "毛衣",
-                  "衣服"
+                  "衬衫"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pants」是什么意思？",
                 "opts": [
-                  "帽子",
+                  "衬衫",
+                  "夹克",
                   "裤子",
-                  "衣服",
-                  "短袜"
+                  "毛衣"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「hat」是什么意思？",
                 "opts": [
-                  "帽子",
-                  "skirt",
-                  "hat",
-                  "连衣裙"
+                  "裙子",
+                  "衣服",
+                  "短裤",
+                  "帽子"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「dress」是什么意思？",
                 "opts": [
+                  "夹克",
+                  "裤子",
                   "连衣裙",
-                  "衬衫",
-                  "skirt",
-                  "裤子"
+                  "帽子"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「skirt」是什么意思？",
                 "opts": [
-                  "帽子",
-                  "女裙",
-                  "裤子",
-                  "shorts"
+                  "夹克",
+                  "衣服",
+                  "衬衫",
+                  "女裙"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「coat」是什么意思？",
                 "opts": [
+                  "毛衣",
                   "外衣",
-                  "短裤",
-                  "女裙",
-                  "短袜"
+                  "裙子",
+                  "女裙"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3687,9 +3695,9 @@
                 "q": "「sweater」是什么意思？",
                 "opts": [
                   "毛衣",
-                  "衬衫",
                   "连衣裙",
-                  "外衣"
+                  "帽子",
+                  "裙子"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3698,9 +3706,9 @@
               {
                 "q": "「sock」是什么意思？",
                 "opts": [
-                  "外衣",
                   "衣服",
-                  "裙子",
+                  "帽子",
+                  "外衣",
                   "短袜"
                 ],
                 "answer": 3,
@@ -3710,10 +3718,10 @@
               {
                 "q": "哪个是「衣服」？",
                 "opts": [
-                  "pants",
-                  "coat",
+                  "skirt",
+                  "dress",
                   "clothes",
-                  "sweater"
+                  "shirt"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -3722,21 +3730,21 @@
               {
                 "q": "「pants」的中文是？",
                 "opts": [
-                  "pants",
-                  "裤子",
-                  "连衣裙",
-                  "衣服"
+                  "外套",
+                  "帽子",
+                  "裙子",
+                  "裤子"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「我的衣服」核心词是？",
                 "opts": [
-                  "shorts",
+                  "skirt",
+                  "hat",
                   "coat",
-                  "pants",
                   "clothes"
                 ],
                 "answer": 3,
@@ -3746,24 +3754,24 @@
               {
                 "q": "Whose coat is this? 在问什么？",
                 "opts": [
-                  "什么颜色",
-                  "多少钱",
+                  "这是谁的外套",
                   "在哪里",
-                  "这是谁的外套"
+                  "多少钱",
+                  "什么颜色"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "句型",
                 "dim": "sentence"
               },
               {
                 "q": "「hat」的意思是？",
                 "opts": [
-                  "衣服",
-                  "jacket",
                   "帽子",
-                  "连衣裙"
+                  "短裤",
+                  "女裙",
+                  "短袜"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3954,70 +3962,70 @@
               {
                 "q": "「glove」是什么意思？",
                 "opts": [
-                  "短裤",
-                  "手套",
-                  "好的",
-                  "昂贵的"
+                  "太阳镜",
+                  "伞",
+                  "围巾",
+                  "手套"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「scarf」是什么意思？",
                 "opts": [
+                  "好的",
+                  "帽子",
                   "围巾",
-                  "pants",
-                  "太阳镜",
-                  "jacket"
+                  "美观的"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「umbrella」是什么意思？",
                 "opts": [
-                  "夹克",
-                  "hat",
+                  "昂贵的",
                   "伞",
-                  "dress"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「sunglasses」是什么意思？",
-                "opts": [
-                  "裤子",
-                  "太阳镜",
-                  "裙子",
-                  "连衣裙"
+                  "外套",
+                  "围巾"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「pretty」是什么意思？",
+                "q": "「sunglasses」是什么意思？",
                 "opts": [
-                  "外套",
-                  "连衣裙",
-                  "美观的",
-                  "帽子"
+                  "手套",
+                  "围巾",
+                  "太阳镜",
+                  "裤子"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「pretty」是什么意思？",
+                "opts": [
+                  "美观的",
+                  "裤子",
+                  "手套",
+                  "太阳镜"
+                ],
+                "answer": 0,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「expensive」是什么意思？",
                 "opts": [
-                  "裤子",
-                  "hat",
+                  "花钱少的",
+                  "好的",
                   "昂贵的",
-                  "短裤"
+                  "伞"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -4026,12 +4034,12 @@
               {
                 "q": "「cheap」是什么意思？",
                 "opts": [
-                  "围巾",
-                  "短裤",
+                  "连衣裙",
                   "花钱少的",
-                  "夹克"
+                  "美观的",
+                  "短裤"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -4039,9 +4047,9 @@
                 "q": "「nice」是什么意思？",
                 "opts": [
                   "好的",
-                  "连衣裙",
-                  "dress",
-                  "外套"
+                  "裤子",
+                  "昂贵的",
+                  "连衣裙"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -4050,10 +4058,10 @@
               {
                 "q": "哪个是「手套」？",
                 "opts": [
-                  "scarf",
                   "coat",
+                  "sunglasses",
                   "glove",
-                  "expensive"
+                  "shirt"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -4062,24 +4070,24 @@
               {
                 "q": "「scarf」的中文是？",
                 "opts": [
-                  "美观的",
-                  "伞",
+                  "花钱少的",
                   "围巾",
-                  "太阳镜"
+                  "美观的",
+                  "裤子"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「购物」核心词是？",
                 "opts": [
+                  "expensive",
+                  "sunglasses",
                   "umbrella",
-                  "glove",
-                  "jacket",
-                  "nice"
+                  "glove"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -4087,23 +4095,23 @@
                 "q": "Whose coat is this? 在问什么？",
                 "opts": [
                   "什么颜色",
+                  "多少钱",
                   "在哪里",
-                  "这是谁的外套",
-                  "多少钱"
+                  "这是谁的外套"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "句型",
                 "dim": "sentence"
               },
               {
                 "q": "「umbrella」的意思是？",
                 "opts": [
-                  "太阳镜",
-                  "pants",
-                  "围巾",
-                  "伞"
+                  "美观的",
+                  "伞",
+                  "裤子",
+                  "裙子"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }

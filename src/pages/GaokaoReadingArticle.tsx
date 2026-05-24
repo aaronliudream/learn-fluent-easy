@@ -3,6 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, Clock, Send, CheckCircle2, XCircle, Sparkles, BookOpen, FileText, Target, ChevronDown, ChevronUp, Eye, Gauge, Brain, HelpCircle, ThumbsUp, Zap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { getReadingArticleById } from "@/lib/gaokaoContent";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import NoCopyGuard from "@/components/NoCopyGuard";
@@ -291,15 +292,70 @@ export default function GaokaoReadingArticle() {
     if (!id) return;
     (async () => {
       setLoading(true);
+      const pep = getReadingArticleById(id);
+      if (pep) {
+        const loadedArticle: Article = {
+          id: pep.id,
+          title: pep.title,
+          body: pep.body,
+          word_count: pep.word_count,
+          recommended_minutes: pep.recommended_minutes,
+          difficulty: pep.difficulty,
+          cefr_level: pep.cefr_level,
+          genre_label: pep.genre_label,
+          sub_band: pep.sub_band,
+          specific_topic: pep.specific_topic,
+          topic_group: pep.topic_group,
+          paragraph_structure: pep.paragraph_structure,
+          writing_techniques: pep.writing_techniques,
+          core_question_types: pep.core_question_types,
+          exam_strategies: pep.exam_strategies,
+          topic_connection: pep.topic_connection,
+          useful_sentences: pep.useful_sentences,
+          argumentation_logic: pep.argumentation_logic,
+        };
+        const loadedQuestions: Question[] = pep.questions.map((q) => ({
+          id: q.id,
+          sort_order: q.sort_order,
+          stem: q.stem,
+          question_type: q.question_type,
+          question_type_cn: q.question_type_cn,
+          option_a: q.option_a,
+          option_b: q.option_b,
+          option_c: q.option_c,
+          option_d: q.option_d,
+          correct_answer: q.correct_answer,
+          explanation_a: q.explanation_a,
+          explanation_b: q.explanation_b,
+          explanation_c: q.explanation_c,
+          explanation_d: q.explanation_d,
+          general_explanation: q.general_explanation,
+          locate_paragraph: q.locate_paragraph,
+          key_sentence: q.key_sentence,
+          difficulty: q.difficulty,
+        }));
+        setArticle(loadedArticle);
+        setQuestions(loadedQuestions);
+        setVocab([]);
+        setSecondsLeft((pep.recommended_minutes ?? 8) * 60);
+        setLoading(false);
+        return;
+      }
       const [a, q, v] = await Promise.all([
-      supabase.from("gaokao_reading_articles").select("*").eq("id", id).maybeSingle(),
-      supabase.from("gaokao_reading_article_questions").select("*").eq("article_id", id).order("sort_order"),
-      supabase.from("gaokao_reading_article_vocab").select("*").eq("article_id", id).order("sort_order")]
-      );
+        supabase.from("gaokao_reading_articles").select("*").eq("id", id).maybeSingle(),
+        supabase.from("gaokao_reading_article_questions").select("*").eq("article_id", id).order("sort_order"),
+        supabase.from("gaokao_reading_article_vocab").select("*").eq("article_id", id).order("sort_order"),
+      ]);
       const loadedArticle = a.data as unknown as Article | null;
       const loadedQuestions = (q.data ?? []) as Question[];
       setArticle(loadedArticle);
-      setQuestions(loadedQuestions.length > 0 ? loadedQuestions : loadedArticle ? parseEmbeddedQuestions(loadedArticle.body, loadedArticle.id) : []);
+      setQuestions(
+        loadedQuestions.length > 0
+          ? loadedQuestions
+          : loadedArticle
+            ? parseEmbeddedQuestions(loadedArticle.body, loadedArticle.id)
+            : [],
+      );
       setVocab((v.data ?? []) as VocabItem[]);
       if (a.data) setSecondsLeft((a.data.recommended_minutes ?? 8) * 60);
       setLoading(false);

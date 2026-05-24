@@ -53,7 +53,21 @@ export default function JuniorGrade() {
         <ArrowLeft className="size-4" /> <T>返回初中专区</T>
       </BackLink>
 
-      {/* 🎮 游戏化词汇 — 最吸引学生的入口，放最前面 */}
+      <Link
+        to={`/junior/hub/${dbGrade}`}
+        className="mb-3 relative flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-600 p-5 text-white shadow-tile transition hover:-translate-y-0.5"
+      >
+        <span className="pointer-events-none absolute -right-10 -top-10 size-40 rounded-full bg-white/20 blur-2xl" />
+        <div className="relative grid size-16 shrink-0 place-items-center rounded-2xl bg-white/25 text-4xl backdrop-blur-sm">
+          📘
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <div className="text-[10px] font-bold uppercase tracking-[0.18em] opacity-90">CLASSROOM · SYNC</div>
+          <div className="text-lg font-extrabold leading-tight"><T>课堂同步 · 人教版</T></div>
+          <div className="mt-0.5 text-xs opacity-90"><T>按单元学习 · 词汇/语法/阅读/听力/写作 · 10% 进度 AI 小测</T></div>
+        </div>
+        <span className="relative rounded-full bg-white/25 px-3 py-1 text-xs font-bold backdrop-blur-sm"><T>▶ 进入</T></span>
+      </Link>
       <Link
         to={`/junior/vocab?grade=${dbGrade}`}
         className="mb-3 relative flex items-center gap-4 overflow-hidden rounded-3xl bg-gradient-to-br from-violet-500 via-indigo-500 to-blue-500 p-5 text-white shadow-tile transition hover:-translate-y-0.5 hover:shadow-[0_24px_50px_-18px_rgba(91,43,201,0.6)]">

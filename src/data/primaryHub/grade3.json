@@ -159,8 +159,8 @@
               {
                 "q": "「ruler」是什么意思？",
                 "opts": [
-                  "book",
-                  "pencil",
+                  "书包",
+                  "包",
                   "尺子",
                   "蜡笔"
                 ],
@@ -171,24 +171,24 @@
               {
                 "q": "「pencil」是什么意思？",
                 "opts": [
-                  "pencil",
+                  "铅笔",
                   "书包",
-                  "schoolbag",
-                  "铅笔"
+                  "蜡笔",
+                  "铅笔盒"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eraser」是什么意思？",
                 "opts": [
-                  "橡皮",
+                  "故事书",
+                  "包",
                   "铅笔盒",
-                  "notebook",
-                  "尺子"
+                  "橡皮"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -196,9 +196,9 @@
                 "q": "「crayon」是什么意思？",
                 "opts": [
                   "蜡笔",
-                  "书",
-                  "钢笔",
-                  "铅笔盒"
+                  "橡皮",
+                  "铅笔",
+                  "书包"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -207,9 +207,9 @@
               {
                 "q": "「bag」是什么意思？",
                 "opts": [
-                  "蜡笔",
-                  "尺子",
-                  "notebook",
+                  "书",
+                  "笔记本",
+                  "钢笔",
                   "包"
                 ],
                 "answer": 3,
@@ -219,10 +219,10 @@
               {
                 "q": "「pen」是什么意思？",
                 "opts": [
-                  "尺子",
+                  "蜡笔",
                   "钢笔",
-                  "橡皮",
-                  "书"
+                  "尺子",
+                  "包"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -231,72 +231,72 @@
               {
                 "q": "「pencil box」是什么意思？",
                 "opts": [
-                  "book",
-                  "铅笔盒",
+                  "尺子",
+                  "蜡笔",
                   "笔记本",
-                  "铅笔"
+                  "铅笔盒"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「book」是什么意思？",
                 "opts": [
-                  "尺子",
-                  "铅笔",
-                  "包",
-                  "书"
+                  "书",
+                  "蜡笔",
+                  "故事书",
+                  "笔记本"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「尺子」？",
                 "opts": [
-                  "pencil box",
-                  "pen",
+                  "book",
                   "ruler",
-                  "book"
+                  "pencil",
+                  "bag"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pencil」的中文是？",
                 "opts": [
-                  "尺子",
-                  "故事书",
-                  "书",
-                  "铅笔"
+                  "包",
+                  "铅笔",
+                  "钢笔",
+                  "故事书"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「你好！」核心词是？",
                 "opts": [
-                  "eraser",
+                  "pencil",
+                  "ruler",
                   "pen",
-                  "pencil box",
-                  "ruler"
+                  "bag"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eraser」的意思是？",
                 "opts": [
-                  "铅笔",
-                  "钢笔",
+                  "铅笔盒",
                   "橡皮",
-                  "book"
+                  "包",
+                  "书"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -528,9 +528,9 @@
                 "q": "「red」是什么意思？",
                 "opts": [
                   "白色",
-                  "黑色",
+                  "橙色",
                   "红色",
-                  "橙色"
+                  "黄色"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -539,9 +539,9 @@
               {
                 "q": "「green」是什么意思？",
                 "opts": [
-                  "红色",
+                  "黑色",
                   "蓝色",
-                  "黄色",
+                  "橙色",
                   "绿色"
                 ],
                 "answer": 3,
@@ -551,21 +551,21 @@
               {
                 "q": "「yellow」是什么意思？",
                 "opts": [
-                  "橙色",
-                  "白色",
+                  "棕色",
+                  "黄色",
                   "蓝色",
-                  "黄色"
+                  "红色"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「blue」是什么意思？",
                 "opts": [
-                  "green",
+                  "红色",
+                  "棕色",
                   "绿色",
-                  "blue",
                   "蓝色"
                 ],
                 "answer": 3,
@@ -575,70 +575,70 @@
               {
                 "q": "「black」是什么意思？",
                 "opts": [
-                  "橙色",
                   "蓝色",
-                  "黑色",
-                  "棕色"
+                  "棕色",
+                  "白色",
+                  "黑色"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「brown」是什么意思？",
                 "opts": [
-                  "blue",
-                  "green",
                   "棕色",
-                  "黄色"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「white」是什么意思？",
-                "opts": [
-                  "绿色",
-                  "white",
-                  "black",
-                  "白色"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「orange」是什么意思？",
-                "opts": [
-                  "yellow",
-                  "红色",
-                  "green",
-                  "橙色"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「红色」？",
-                "opts": [
-                  "red",
-                  "white",
-                  "green",
-                  "black"
+                  "橙色",
+                  "黑色",
+                  "蓝色"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「white」是什么意思？",
+                "opts": [
+                  "黄色",
+                  "棕色",
+                  "白色",
+                  "红色"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「orange」是什么意思？",
+                "opts": [
+                  "白色",
+                  "橙色",
+                  "黑色",
+                  "绿色"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "哪个是「红色」？",
+                "opts": [
+                  "black",
+                  "blue",
+                  "yellow",
+                  "red"
+                ],
+                "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「green」的中文是？",
                 "opts": [
-                  "蓝色",
+                  "白色",
                   "绿色",
-                  "黑色",
-                  "orange"
+                  "蓝色",
+                  "红色"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -647,24 +647,24 @@
               {
                 "q": "本单元「颜色」核心词是？",
                 "opts": [
-                  "black",
-                  "orange",
-                  "green",
-                  "red"
+                  "blue",
+                  "red",
+                  "brown",
+                  "orange"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「yellow」的意思是？",
                 "opts": [
-                  "black",
-                  "green",
-                  "白色",
-                  "黄色"
+                  "黄色",
+                  "橙色",
+                  "棕色",
+                  "蓝色"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -875,36 +875,36 @@
               {
                 "q": "「face」是什么意思？",
                 "opts": [
-                  "arm",
+                  "胳膊",
+                  "手",
                   "脸",
-                  "眼睛",
-                  "耳朵"
+                  "嘴"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「ear」是什么意思？",
                 "opts": [
+                  "鼻子",
+                  "嘴",
                   "耳朵",
-                  "脸",
-                  "arm",
                   "手"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eye」是什么意思？",
                 "opts": [
-                  "眼睛",
+                  "鼻子",
                   "手",
-                  "nose",
-                  "head"
+                  "头",
+                  "眼睛"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -912,9 +912,9 @@
                 "q": "「nose」是什么意思？",
                 "opts": [
                   "鼻子",
+                  "嘴",
                   "腿",
-                  "耳朵",
-                  "头"
+                  "脸"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -923,96 +923,96 @@
               {
                 "q": "「mouth」是什么意思？",
                 "opts": [
-                  "hand",
-                  "嘴",
-                  "leg",
-                  "手"
+                  "耳朵",
+                  "头",
+                  "胳膊",
+                  "嘴"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「arm」是什么意思？",
                 "opts": [
-                  "眼睛",
-                  "鼻子",
-                  "ear",
-                  "胳膊"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「hand」是什么意思？",
-                "opts": [
+                  "胳膊",
                   "手",
-                  "眼睛",
-                  "eye",
-                  "leg"
+                  "鼻子",
+                  "腿"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「head」是什么意思？",
+                "q": "「hand」是什么意思？",
                 "opts": [
-                  "手",
-                  "arm",
+                  "头",
                   "耳朵",
-                  "头"
+                  "鼻子",
+                  "手"
                 ],
                 "answer": 3,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "「head」是什么意思？",
+                "opts": [
+                  "胳膊",
+                  "头",
+                  "鼻子",
+                  "脸"
+                ],
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「脸」？",
                 "opts": [
-                  "ear",
-                  "head",
                   "face",
-                  "nose"
+                  "head",
+                  "leg",
+                  "arm"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「ear」的中文是？",
                 "opts": [
-                  "嘴",
-                  "hand",
-                  "耳朵",
-                  "head"
+                  "眼睛",
+                  "脸",
+                  "腿",
+                  "耳朵"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「看看我」核心词是？",
                 "opts": [
-                  "nose",
-                  "mouth",
+                  "eye",
                   "face",
-                  "ear"
+                  "mouth",
+                  "arm"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eye」的意思是？",
                 "opts": [
-                  "手",
-                  "nose",
-                  "嘴",
-                  "眼睛"
+                  "鼻子",
+                  "眼睛",
+                  "脸",
+                  "腿"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -1204,33 +1204,33 @@
                 "q": "「duck」是什么意思？",
                 "opts": [
                   "熊猫",
-                  "猪",
-                  "cat",
-                  "鸭子"
+                  "大象",
+                  "鸭子",
+                  "猪"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pig」是什么意思？",
                 "opts": [
-                  "鸟",
-                  "猪",
-                  "狗",
-                  "老虎"
+                  "猫",
+                  "鸭子",
+                  "猴子",
+                  "猪"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「cat」是什么意思？",
                 "opts": [
-                  "鸭子",
+                  "熊猫",
                   "狗",
                   "猫",
-                  "bear"
+                  "猪"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -1240,9 +1240,9 @@
                 "q": "「bear」是什么意思？",
                 "opts": [
                   "熊",
-                  "老虎",
-                  "大象",
-                  "鸟"
+                  "狗",
+                  "猴子",
+                  "猪"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1251,84 +1251,84 @@
               {
                 "q": "「dog」是什么意思？",
                 "opts": [
-                  "panda",
-                  "duck",
-                  "狗",
-                  "鸟"
+                  "老虎",
+                  "鸭子",
+                  "猴子",
+                  "狗"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「elephant」是什么意思？",
                 "opts": [
+                  "大象",
+                  "猪",
                   "熊",
-                  "pig",
-                  "鸟",
-                  "大象"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「monkey」是什么意思？",
-                "opts": [
-                  "猴子",
-                  "狗",
-                  "bear",
-                  "鸭子"
+                  "熊猫"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「monkey」是什么意思？",
+                "opts": [
+                  "狗",
+                  "猴子",
+                  "老虎",
+                  "鸭子"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「bird」是什么意思？",
                 "opts": [
-                  "老虎",
+                  "鸟",
+                  "大象",
                   "熊",
-                  "猫",
-                  "鸟"
+                  "猪"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「鸭子」？",
                 "opts": [
+                  "bear",
                   "monkey",
-                  "dog",
-                  "duck",
-                  "cat"
+                  "bird",
+                  "duck"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pig」的中文是？",
                 "opts": [
-                  "duck",
-                  "狗",
+                  "大象",
                   "猪",
-                  "熊"
+                  "熊",
+                  "熊猫"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「我们爱动物」核心词是？",
                 "opts": [
-                  "tiger",
-                  "panda",
-                  "duck",
-                  "pig"
+                  "bear",
+                  "pig",
+                  "monkey",
+                  "duck"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1336,9 +1336,9 @@
                 "q": "「cat」的意思是？",
                 "opts": [
                   "猫",
-                  "狗",
-                  "duck",
-                  "鸟"
+                  "熊",
+                  "猪",
+                  "鸭子"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -1531,12 +1531,12 @@
               {
                 "q": "「bread」是什么意思？",
                 "opts": [
-                  "noodles",
                   "面包",
-                  "蛋",
-                  "汤"
+                  "米饭",
+                  "果汁",
+                  "面条"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1544,8 +1544,8 @@
                 "q": "「juice」是什么意思？",
                 "opts": [
                   "果汁",
-                  "egg",
                   "牛肉",
+                  "鸡蛋",
                   "面包"
                 ],
                 "answer": 0,
@@ -1555,46 +1555,46 @@
               {
                 "q": "「egg」是什么意思？",
                 "opts": [
-                  "beef",
-                  "egg",
-                  "牛肉",
-                  "蛋"
+                  "蛋",
+                  "果汁",
+                  "牛奶",
+                  "鱼肉"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「milk」是什么意思？",
                 "opts": [
-                  "noodles",
                   "牛奶",
-                  "米饭",
-                  "鱼肉"
+                  "鱼肉",
+                  "面包",
+                  "牛肉"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「water」是什么意思？",
                 "opts": [
-                  "egg",
-                  "蛋",
-                  "蛋糕",
-                  "水"
+                  "果汁",
+                  "水",
+                  "米饭",
+                  "面条"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「cake」是什么意思？",
                 "opts": [
-                  "牛奶",
-                  "鱼肉",
+                  "果汁",
+                  "牛肉",
                   "蛋糕",
-                  "米饭"
+                  "鸡肉"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -1603,60 +1603,60 @@
               {
                 "q": "「fish」是什么意思？",
                 "opts": [
-                  "米饭",
-                  "鱼肉",
-                  "noodles",
-                  "蛋糕"
+                  "果汁",
+                  "鸡蛋",
+                  "蛋",
+                  "鱼肉"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「rice」是什么意思？",
                 "opts": [
+                  "鱼肉",
                   "米饭",
-                  "noodles",
-                  "牛奶",
-                  "水"
+                  "面包",
+                  "面条"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「面包」？",
                 "opts": [
+                  "milk",
+                  "soup",
                   "noodles",
-                  "cake",
-                  "bread",
-                  "rice"
+                  "bread"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「juice」的中文是？",
                 "opts": [
+                  "米饭",
+                  "牛肉",
                   "鸡蛋",
-                  "牛奶",
-                  "果汁",
-                  "鱼肉"
+                  "果汁"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「一起吃饭吧」核心词是？",
                 "opts": [
+                  "juice",
+                  "egg",
                   "bread",
-                  "fish",
-                  "beef",
-                  "egg"
+                  "soup"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1664,9 +1664,9 @@
                 "q": "Do you like bread? 喜欢怎么回答？",
                 "opts": [
                   "Yes, I do.",
-                  "No, it isn't.",
                   "No, I am.",
-                  "Yes, it is."
+                  "Yes, it is.",
+                  "No, it isn't."
                 ],
                 "answer": 0,
                 "point": "句型",
@@ -1675,12 +1675,12 @@
               {
                 "q": "「egg」的意思是？",
                 "opts": [
+                  "鸡肉",
                   "蛋",
-                  "noodles",
-                  "egg",
-                  "水"
+                  "面条",
+                  "米饭"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -1862,9 +1862,9 @@
                 "q": "「one」是什么意思？",
                 "opts": [
                   "二",
-                  "uncle",
+                  "叔叔",
                   "一",
-                  "七"
+                  "四"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -1873,82 +1873,82 @@
               {
                 "q": "「two」是什么意思？",
                 "opts": [
-                  "aunt",
-                  "五",
                   "二",
+                  "一",
+                  "母亲",
                   "三"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「three」是什么意思？",
                 "opts": [
-                  "四",
-                  "sister",
                   "三",
-                  "兄弟"
+                  "四",
+                  "母亲",
+                  "八"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「four」是什么意思？",
                 "opts": [
-                  "四",
-                  "三",
+                  "姐妹",
                   "母亲",
-                  "五"
+                  "八",
+                  "四"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「five」是什么意思？",
                 "opts": [
-                  "八",
-                  "六",
+                  "母亲",
                   "五",
-                  "mother"
+                  "兄弟",
+                  "表亲"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「six」是什么意思？",
                 "opts": [
-                  "一",
-                  "二",
+                  "叔叔",
                   "六",
-                  "八"
+                  "七",
+                  "四"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「seven」是什么意思？",
                 "opts": [
+                  "兄弟",
                   "七",
-                  "一",
-                  "uncle",
-                  "四"
+                  "四",
+                  "二"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「eight」是什么意思？",
                 "opts": [
-                  "七",
-                  "mother",
+                  "六",
+                  "母亲",
                   "八",
-                  "六"
+                  "七"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -1957,10 +1957,10 @@
               {
                 "q": "哪个是「一」？",
                 "opts": [
-                  "two",
+                  "mother",
                   "one",
-                  "father",
-                  "five"
+                  "two",
+                  "four"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -1969,36 +1969,36 @@
               {
                 "q": "「two」的中文是？",
                 "opts": [
-                  "uncle",
-                  "父亲",
                   "二",
-                  "cousin"
+                  "七",
+                  "父亲",
+                  "叔叔"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「生日快乐」核心词是？",
                 "opts": [
-                  "four",
+                  "aunt",
+                  "seven",
                   "one",
-                  "cousin",
                   "eight"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「three」的意思是？",
                 "opts": [
-                  "六",
                   "三",
-                  "八",
-                  "七"
+                  "母亲",
+                  "六",
+                  "五"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2195,24 +2195,24 @@
               {
                 "q": "「UK」是什么意思？",
                 "opts": [
-                  "她",
-                  "美国",
+                  "学生",
                   "英国",
-                  "中国"
+                  "故事书",
+                  "尺子"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「Canada」是什么意思？",
                 "opts": [
-                  "美国",
                   "加拿大",
-                  "中国",
-                  "ruler"
+                  "故事书",
+                  "学生",
+                  "尺子"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2220,8 +2220,8 @@
                 "q": "「USA」是什么意思？",
                 "opts": [
                   "书包",
-                  "英国",
-                  "storybook",
+                  "他",
+                  "故事书",
                   "美国"
                 ],
                 "answer": 3,
@@ -2231,48 +2231,48 @@
               {
                 "q": "「China」是什么意思？",
                 "opts": [
-                  "铅笔",
-                  "他",
-                  "加拿大",
-                  "中国"
+                  "故事书",
+                  "英国",
+                  "中国",
+                  "尺子"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「she」是什么意思？",
                 "opts": [
-                  "英国",
-                  "美国",
-                  "加拿大",
-                  "她"
+                  "她",
+                  "故事书",
+                  "中国",
+                  "铅笔"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「student」是什么意思？",
                 "opts": [
-                  "ruler",
-                  "尺子",
+                  "书",
                   "学生",
-                  "他"
+                  "笔记本",
+                  "英国"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「pupil」是什么意思？",
                 "opts": [
+                  "故事书",
                   "铅笔",
-                  "英国",
-                  "学生",
-                  "中国"
+                  "她",
+                  "学生"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2280,9 +2280,9 @@
                 "q": "「he」是什么意思？",
                 "opts": [
                   "他",
-                  "学生",
-                  "pencil",
-                  "中国"
+                  "书",
+                  "她",
+                  "故事书"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2291,32 +2291,8 @@
               {
                 "q": "哪个是「英国」？",
                 "opts": [
-                  "ruler",
                   "she",
-                  "storybook",
-                  "UK"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「Canada」的中文是？",
-                "opts": [
-                  "加拿大",
-                  "学生",
-                  "美国",
-                  "她"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「欢迎回来」核心词是？",
-                "opts": [
-                  "China",
-                  "notebook",
+                  "pencil",
                   "UK",
                   "student"
                 ],
@@ -2325,12 +2301,36 @@
                 "dim": "vocab"
               },
               {
+                "q": "「Canada」的中文是？",
+                "opts": [
+                  "她",
+                  "美国",
+                  "加拿大",
+                  "他"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
+                "q": "本单元「欢迎回来」核心词是？",
+                "opts": [
+                  "Canada",
+                  "UK",
+                  "student",
+                  "storybook"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「USA」的意思是？",
                 "opts": [
-                  "中国",
-                  "他",
+                  "铅笔",
+                  "故事书",
                   "美国",
-                  "book"
+                  "英国"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2523,24 +2523,24 @@
               {
                 "q": "「father」是什么意思？",
                 "opts": [
-                  "mother",
-                  "女人",
-                  "姐妹",
-                  "父亲"
+                  "兄弟",
+                  "父亲",
+                  "男人",
+                  "表亲"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「dad」是什么意思？",
                 "opts": [
-                  "阿姨",
                   "女人",
-                  "父亲",
-                  "爸爸"
+                  "爸爸",
+                  "兄弟",
+                  "姐妹"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2548,9 +2548,9 @@
                 "q": "「man」是什么意思？",
                 "opts": [
                   "男人",
-                  "母亲",
-                  "爸爸",
-                  "女人"
+                  "兄弟",
+                  "父亲",
+                  "祖母"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2561,8 +2561,8 @@
                 "opts": [
                   "女人",
                   "爸爸",
-                  "uncle",
-                  "母亲"
+                  "表亲",
+                  "姐妹"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -2571,20 +2571,20 @@
               {
                 "q": "「mother」是什么意思？",
                 "opts": [
-                  "兄",
-                  "母亲",
-                  "祖母",
-                  "sister"
+                  "叔叔",
+                  "姐妹",
+                  "兄弟",
+                  "母亲"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「sister」是什么意思？",
                 "opts": [
-                  "父亲",
-                  "uncle",
+                  "祖母",
+                  "表亲",
                   "姐",
                   "男人"
                 ],
@@ -2595,24 +2595,24 @@
               {
                 "q": "「brother」是什么意思？",
                 "opts": [
-                  "父亲",
-                  "阿姨",
-                  "姐妹",
-                  "兄"
+                  "兄",
+                  "祖母",
+                  "女人",
+                  "男人"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「grandmother」是什么意思？",
                 "opts": [
-                  "父亲",
-                  "男人",
                   "祖母",
-                  "表亲"
+                  "姐妹",
+                  "表亲",
+                  "姐"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2620,33 +2620,33 @@
                 "q": "哪个是「父亲」？",
                 "opts": [
                   "cousin",
-                  "man",
-                  "sister",
-                  "father"
+                  "dad",
+                  "father",
+                  "uncle"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「dad」的中文是？",
                 "opts": [
-                  "brother",
-                  "爸爸",
-                  "father",
-                  "兄弟"
+                  "叔叔",
+                  "兄",
+                  "表亲",
+                  "爸爸"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「我的家人」核心词是？",
                 "opts": [
-                  "uncle",
-                  "brother",
+                  "mother",
+                  "sister",
                   "father",
-                  "man"
+                  "grandmother"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2655,12 +2655,12 @@
               {
                 "q": "「man」的意思是？",
                 "opts": [
-                  "母亲",
-                  "男人",
-                  "父亲",
-                  "祖母"
+                  "祖母",
+                  "阿姨",
+                  "姐",
+                  "男人"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2851,58 +2851,58 @@
               {
                 "q": "「thin」是什么意思？",
                 "opts": [
-                  "瘦的",
-                  "狗",
-                  "胖的",
-                  "cat"
+                  "猪",
+                  "老虎",
+                  "熊",
+                  "瘦的"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fat」是什么意思？",
                 "opts": [
-                  "panda",
                   "胖的",
-                  "tiger",
-                  "猴子"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「tall」是什么意思？",
-                "opts": [
-                  "高的",
-                  "panda",
-                  "dog",
-                  "老虎"
+                  "猴子",
+                  "矮的",
+                  "长的"
                 ],
                 "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
-                "q": "「short」是什么意思？",
+                "q": "「tall」是什么意思？",
                 "opts": [
-                  "熊",
                   "矮的",
-                  "bear",
-                  "cat"
+                  "高的",
+                  "瘦的",
+                  "小的"
                 ],
                 "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "「short」是什么意思？",
+                "opts": [
+                  "狗",
+                  "胖的",
+                  "矮的",
+                  "长的"
+                ],
+                "answer": 2,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「long」是什么意思？",
                 "opts": [
-                  "胖的",
-                  "cat",
+                  "小的",
+                  "猴子",
                   "长的",
-                  "pig"
+                  "高的"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2911,10 +2911,10 @@
               {
                 "q": "「small」是什么意思？",
                 "opts": [
-                  "dog",
-                  "猴子",
+                  "熊猫",
+                  "熊",
                   "小的",
-                  "猫"
+                  "长颈鹿"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -2923,9 +2923,9 @@
               {
                 "q": "「big」是什么意思？",
                 "opts": [
-                  "长的",
-                  "高的",
-                  "胖的",
+                  "鸭子",
+                  "猫",
+                  "狗",
                   "大的"
                 ],
                 "answer": 3,
@@ -2935,60 +2935,60 @@
               {
                 "q": "「giraffe」是什么意思？",
                 "opts": [
+                  "矮的",
                   "长颈鹿",
-                  "大的",
-                  "熊猫",
+                  "猪",
                   "胖的"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「瘦的」？",
                 "opts": [
-                  "cat",
-                  "thin",
-                  "tall",
-                  "panda"
+                  "panda",
+                  "big",
+                  "duck",
+                  "thin"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fat」的中文是？",
                 "opts": [
-                  "长的",
+                  "猫",
+                  "老虎",
                   "胖的",
-                  "高的",
-                  "矮的"
+                  "大的"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「在动物园」核心词是？",
                 "opts": [
+                  "dog",
                   "thin",
-                  "tall",
-                  "long",
-                  "giraffe"
+                  "duck",
+                  "small"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「tall」的意思是？",
                 "opts": [
-                  "cat",
-                  "高的",
-                  "panda",
-                  "胖的"
+                  "熊",
+                  "小的",
+                  "狗",
+                  "高的"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3179,58 +3179,58 @@
               {
                 "q": "「on」是什么意思？",
                 "opts": [
-                  "帽子",
-                  "汽车",
-                  "小汽车",
-                  "在⋯⋯上"
+                  "飞机",
+                  "在⋯⋯里",
+                  "在⋯⋯上",
+                  "火车"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「in」是什么意思？",
                 "opts": [
-                  "subway",
-                  "火车",
-                  "bus",
-                  "在⋯⋯里"
+                  "在⋯⋯里",
+                  "在⋯⋯上",
+                  "公共汽车",
+                  "自行车"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「under」是什么意思？",
                 "opts": [
-                  "ship",
+                  "书桌",
                   "小汽车",
-                  "car",
-                  "在⋯⋯下面"
+                  "在⋯⋯下面",
+                  "轮船"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「chair」是什么意思？",
                 "opts": [
-                  "在⋯⋯里",
-                  "plane",
-                  "car",
-                  "椅子"
+                  "椅子",
+                  "在⋯⋯下面",
+                  "汽车",
+                  "公共汽车"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「desk」是什么意思？",
                 "opts": [
-                  "在⋯⋯里",
+                  "地铁",
                   "书桌",
-                  "bike",
-                  "帽子"
+                  "小汽车",
+                  "椅子"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -3240,9 +3240,9 @@
                 "q": "「cap」是什么意思？",
                 "opts": [
                   "帽子",
-                  "在⋯⋯下面",
                   "椅子",
-                  "ship"
+                  "轮船",
+                  "在⋯⋯里"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3251,72 +3251,72 @@
               {
                 "q": "「ball」是什么意思？",
                 "opts": [
-                  "bus",
                   "球",
-                  "plane",
-                  "subway"
+                  "书桌",
+                  "火车",
+                  "在⋯⋯上"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「car」是什么意思？",
                 "opts": [
-                  "bus",
-                  "帽子",
                   "小汽车",
+                  "公共汽车",
+                  "汽车",
                   "椅子"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「在⋯⋯上」？",
                 "opts": [
-                  "ball",
-                  "desk",
                   "on",
-                  "under"
+                  "plane",
+                  "bike",
+                  "subway"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「in」的中文是？",
                 "opts": [
-                  "在⋯⋯下面",
+                  "自行车",
+                  "帽子",
                   "在⋯⋯里",
-                  "汽车",
-                  "飞机"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我的小汽车在哪里」核心词是？",
-                "opts": [
-                  "car",
-                  "under",
-                  "on",
-                  "train"
+                  "球"
                 ],
                 "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
+                "q": "本单元「我的小汽车在哪里」核心词是？",
+                "opts": [
+                  "in",
+                  "on",
+                  "ball",
+                  "desk"
+                ],
+                "answer": 1,
+                "point": "词汇",
+                "dim": "vocab"
+              },
+              {
                 "q": "「under」的意思是？",
                 "opts": [
+                  "地铁",
                   "在⋯⋯下面",
-                  "帽子",
-                  "在⋯⋯里",
+                  "球",
                   "在⋯⋯上"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3507,33 +3507,33 @@
               {
                 "q": "「pear」是什么意思？",
                 "opts": [
-                  "买",
-                  "苹果",
-                  "梨",
-                  "西瓜"
+                  "橙子",
+                  "葡萄",
+                  "草莓",
+                  "梨"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「apple」是什么意思？",
                 "opts": [
-                  "苹果",
-                  "买",
-                  "葡萄",
-                  "西瓜"
+                  "草莓",
+                  "西瓜",
+                  "橙子",
+                  "苹果"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「orange」是什么意思？",
                 "opts": [
-                  "watermelon",
-                  "banana",
+                  "梨",
                   "买",
+                  "香蕉",
                   "橙子"
                 ],
                 "answer": 3,
@@ -3543,57 +3543,57 @@
               {
                 "q": "「banana」是什么意思？",
                 "opts": [
-                  "草莓",
                   "葡萄",
                   "香蕉",
-                  "买"
+                  "梨",
+                  "橙子"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「watermelon」是什么意思？",
                 "opts": [
+                  "葡萄",
                   "西瓜",
-                  "apple",
-                  "香蕉",
-                  "苹果"
+                  "橙子",
+                  "买"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「strawberry」是什么意思？",
                 "opts": [
+                  "橙子",
                   "草莓",
-                  "买",
-                  "葡萄",
-                  "pear"
+                  "香蕉",
+                  "梨"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「grape」是什么意思？",
                 "opts": [
-                  "pear",
-                  "orange",
-                  "苹果",
-                  "葡萄"
+                  "买",
+                  "梨",
+                  "葡萄",
+                  "草莓"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「buy」是什么意思？",
                 "opts": [
-                  "西瓜",
+                  "橙子",
                   "苹果",
-                  "香蕉",
+                  "西瓜",
                   "买"
                 ],
                 "answer": 3,
@@ -3603,24 +3603,24 @@
               {
                 "q": "哪个是「梨」？",
                 "opts": [
-                  "banana",
                   "pear",
-                  "watermelon",
-                  "grape"
+                  "grape",
+                  "strawberry",
+                  "watermelon"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「apple」的中文是？",
                 "opts": [
-                  "橙子",
-                  "apple",
                   "香蕉",
-                  "苹果"
+                  "草莓",
+                  "苹果",
+                  "梨"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3628,35 +3628,35 @@
                 "q": "本单元「你喜欢梨吗」核心词是？",
                 "opts": [
                   "orange",
-                  "strawberry",
                   "pear",
-                  "watermelon"
+                  "banana",
+                  "grape"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "Do you like pear? 喜欢怎么回答？",
                 "opts": [
-                  "Yes, it is.",
-                  "No, it isn't.",
                   "No, I am.",
-                  "Yes, I do."
+                  "Yes, I do.",
+                  "Yes, it is.",
+                  "No, it isn't."
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "句型",
                 "dim": "sentence"
               },
               {
                 "q": "「orange」的意思是？",
                 "opts": [
-                  "草莓",
-                  "买",
                   "橙子",
+                  "苹果",
+                  "西瓜",
                   "梨"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -3847,10 +3847,10 @@
               {
                 "q": "「eleven」是什么意思？",
                 "opts": [
-                  "十二",
+                  "八",
                   "十一",
-                  "十七",
-                  "十四"
+                  "十",
+                  "三"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -3859,10 +3859,10 @@
               {
                 "q": "「twelve」是什么意思？",
                 "opts": [
-                  "十一",
+                  "六",
                   "十二",
-                  "十三",
-                  "十四"
+                  "十七",
+                  "十三"
                 ],
                 "answer": 1,
                 "point": "词汇",
@@ -3871,34 +3871,34 @@
               {
                 "q": "「thirteen」是什么意思？",
                 "opts": [
-                  "十五",
-                  "十二",
                   "十三",
-                  "十七"
+                  "八",
+                  "一",
+                  "十二"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fourteen」是什么意思？",
                 "opts": [
-                  "十三",
-                  "十一",
                   "十四",
-                  "十五"
+                  "十八",
+                  "九",
+                  "十"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「fifteen」是什么意思？",
                 "opts": [
-                  "十八",
-                  "十一",
+                  "八",
+                  "十六",
                   "十五",
-                  "十三"
+                  "十七"
                 ],
                 "answer": 2,
                 "point": "词汇",
@@ -3907,12 +3907,12 @@
               {
                 "q": "「sixteen」是什么意思？",
                 "opts": [
-                  "十八",
-                  "十四",
+                  "六",
                   "十六",
-                  "十七"
+                  "十一",
+                  "十四"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3920,9 +3920,9 @@
                 "q": "「seventeen」是什么意思？",
                 "opts": [
                   "十七",
-                  "十二",
-                  "十四",
-                  "十一"
+                  "七",
+                  "五",
+                  "九"
                 ],
                 "answer": 0,
                 "point": "词汇",
@@ -3931,48 +3931,48 @@
               {
                 "q": "「eighteen」是什么意思？",
                 "opts": [
-                  "十二",
-                  "十四",
-                  "十五",
-                  "十八"
+                  "九",
+                  "十八",
+                  "十一",
+                  "二"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "哪个是「十一」？",
                 "opts": [
-                  "eleven",
-                  "thirteen",
                   "seventeen",
-                  "fifteen"
+                  "eleven",
+                  "fifteen",
+                  "fourteen"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「twelve」的中文是？",
                 "opts": [
+                  "十",
+                  "十八",
                   "十二",
-                  "十五",
-                  "十四",
-                  "十一"
+                  "八"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「有多少」核心词是？",
                 "opts": [
-                  "fourteen",
-                  "sixteen",
                   "eleven",
-                  "fifteen"
+                  "eighteen",
+                  "thirteen",
+                  "fourteen"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -3980,9 +3980,9 @@
                 "q": "「thirteen」的意思是？",
                 "opts": [
                   "十四",
-                  "十六",
+                  "五",
                   "十三",
-                  "十二"
+                  "十"
                 ],
                 "answer": 2,
                 "point": "词汇",

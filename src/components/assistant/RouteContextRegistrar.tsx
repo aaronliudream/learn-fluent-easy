@@ -74,6 +74,8 @@ function deriveContext(pathname: string, params: Record<string, string | undefin
   // ---------- PRIMARY ----------
   if (pathname.startsWith("/primary")) {
     if (pathname.match(/\/primary\/vocab/)) return mk("primary-vocab", `小学英语词汇${grade ? ` · 第 ${grade} 册` : ""}`, "💬 小月 · 小学词汇辅导", STARTERS_VOCAB);
+    if (pathname.match(/\/primary\/hub\/\d+\/.*\/phonics/))
+      return mk("primary-phonics", "小学单元拼读", "💬 小月 · 自然拼读辅导", STARTERS_PHONICS);
     if (pathname.match(/\/primary\/letters/)) return mk("primary-phonics", "小学自然拼读", "💬 小月 · 自然拼读辅导", STARTERS_PHONICS);
     if (pathname.match(/\/primary\/games/)) return mk("primary-games", "小学英语游戏练习", "💬 小月 · 小学游戏辅导", STARTERS_HOME);
     if (pathname.match(/\/primary\/reading/)) return mk("primary-reading", "小学英语阅读", "💬 小月 · 小学阅读辅导", STARTERS_READING);

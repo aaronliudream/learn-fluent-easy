@@ -24,7 +24,15 @@ export type StageDef = {
   title: string;
   subtitle: string;
   icon: string;
-  type: "vocab" | "listenWord" | "match" | "sentence" | "write" | "listenSent" | "finalQuiz";
+  type:
+    | "vocab"
+    | "listenWord"
+    | "match"
+    | "sentence"
+    | "write"
+    | "listenSent"
+    | "readWrite"
+    | "finalQuiz";
   time: string;
 };
 

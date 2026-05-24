@@ -4,6 +4,7 @@ import { GuestBanner } from "@/components/GuestBanner";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Clock, CheckCircle2, XCircle, Send, RotateCcw, BookMarked, ChevronUp, ChevronDown, Lightbulb, Languages, Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { getClozePassageById, isLocalPepClozePassage } from "@/lib/gaokaoContent";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { awardCoins, awardForBlock, petReact } from "@/lib/coins";
@@ -78,13 +79,20 @@ export default function GaokaoClozePlay() {
 
   useEffect(() => {
     if (!id) return;
+    const local = getClozePassageById(id);
+    if (local) {
+      const { blanks: bs, ...rest } = local;
+      setPassage(rest as Passage);
+      setBlanks(bs as Blank[]);
+      return;
+    }
     (async () => {
       const [{ data: p }, { data: bs }] = await Promise.all([
-      supabase.from("gaokao_cloze_passages").select("*").eq("id", id).maybeSingle(),
-      supabase.from("gaokao_cloze_blanks").select("*").eq("passage_id", id).order("blank_no")]
-      );
-      setPassage(p as any);
-      setBlanks((bs || []) as any);
+        supabase.from("gaokao_cloze_passages").select("*").eq("id", id).maybeSingle(),
+        supabase.from("gaokao_cloze_blanks").select("*").eq("passage_id", id).order("blank_no"),
+      ]);
+      setPassage(p as Passage);
+      setBlanks((bs || []) as Blank[]);
     })();
   }, [id]);
 
@@ -133,14 +141,33 @@ export default function GaokaoClozePlay() {
       setSubmitting(false);
       return;
     }
-    const { data, error } = await supabase.rpc("submit_cloze_session", {
-      _passage_id: id,
-      _answers: answers,
-      _duration_seconds: elapsed
-    });
+    let r: Result | null = null;
+    if (isLocalPepClozePassage(id!)) {
+      let correct = 0;
+      for (const b of blanks) {
+        if (answers[b.blank_no] === b.correct_answer) correct += 1;
+      }
+      r = {
+        session_id: "local-pep",
+        total_blanks: blanks.length,
+        correct_count: correct,
+        score_pct: blanks.length ? correct / blanks.length : 0,
+      };
+    } else {
+      const { data, error } = await supabase.rpc("submit_cloze_session", {
+        _passage_id: id,
+        _answers: answers,
+        _duration_seconds: elapsed,
+      });
+      if (error) {
+        setSubmitting(false);
+        toast.error(error.message);
+        return;
+      }
+      r = (data as Result[])[0] ?? null;
+    }
     setSubmitting(false);
-    if (error) {toast.error(error.message);return;}
-    const r = (data as any[])[0];
+    if (!r) return;
     setResult(r);
     setSubmitted(true);
     // 记录掌握度（用于解锁下一篇 + 遗忘曲线复习）

@@ -10,7 +10,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "pep:extract": "python scripts/extract_gaokao_pep.py",
+    "pep:build": "python scripts/build_gaokao_pep_content.py",
+    "pep:refresh": "python scripts/extract_gaokao_pep.py && python scripts/build_gaokao_pep_content.py"
   },
   "dependencies": {
     "@capacitor/android": "^8.3.1",

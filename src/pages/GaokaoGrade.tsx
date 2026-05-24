@@ -5,6 +5,7 @@ import { ArrowLeft, Flame } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useDashboardSummary } from "@/hooks/useDashboardSummary";
 import { DeepDiagnosisCard } from "@/components/DeepDiagnosisCard";
+import { GaokaoClassroomSyncBanner } from "@/components/gaokao/GaokaoClassroomSyncBanner";
 import {
   useDailyPrescription,
   useRegeneratePrescription,
@@ -103,7 +104,7 @@ function PracticeChips({ grade }: { grade: GradeKey }) {
     { label: grade === "1" ? "单元同步学习" : "AI 题型工坊", to: `/gaokao/grammar${yb}` },
     { label: grade === "3" ? "AI 模拟卷生成" : "期中模拟", to: `/gaokao/exam${yb}` },
     { label: "错题智能重组", to: `/gaokao/g/${grade}/mistakes` },
-    { label: grade === "3" ? "3500 词情境记忆" : "3500 词从零开始", to: `/gaokao/vocab${yb}` },
+    { label: grade === "3" ? "3500 词情境记忆" : "3500 词从零开始", to: "/gaokao/vocab" },
   ];
   return (
     <div className="mt-5">
@@ -705,6 +706,7 @@ export default function GaokaoGrade() {
   return (
     <main className="min-h-screen" style={{ background: "linear-gradient(180deg, #F8F6EF 0%, #EFECDF 100%)" }}>
       <div className="mx-auto max-w-2xl px-5 py-5">
+        <GaokaoClassroomSyncBanner yearBand={g} />
         {(loading || summaryLoading) && (
           <div className="mb-3 h-8 animate-pulse rounded bg-black/5" />
         )}

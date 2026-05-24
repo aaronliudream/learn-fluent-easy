@@ -3,6 +3,7 @@ import BackLink from "@/components/BackLink";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowLeft, BookOpenCheck, Clock, Target, ChevronRight, CheckCircle2, AlertCircle, BookMarked, Lock, ChevronDown } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { listClozePassages } from "@/lib/gaokaoContent";
 import { PageHeader } from "@/components/PageHeader";
 import StarRating from "@/components/StarRating";
 import { loadMastery, MasteryRow, statusOf, PASS_PCT, needsReview } from "@/lib/masteryProgress";
@@ -44,14 +45,20 @@ export default function GaokaoCloze() {
 
   useEffect(() => {
     (async () => {
-      let pq = supabase.
-      from("gaokao_cloze_passages").
-      select("id, passage_no, title, topic, topic_group, genre, difficulty, word_count, blank_count, recommended_minutes, source_book_label").
-      eq("is_published", true).
-      order("sort_order");
-      if (gradeNum) pq = pq.eq("year_band", gradeNum);
-      const { data: passages } = await pq;
-      setList((passages || []) as Passage[]);
+      const passages = listClozePassages(gradeNum ? { yearBand: gradeNum } : undefined).map((p) => ({
+        id: p.id,
+        passage_no: p.passage_no,
+        title: p.title,
+        topic: p.topic,
+        topic_group: p.topic_group,
+        genre: p.genre,
+        difficulty: p.difficulty,
+        word_count: p.word_count,
+        blank_count: p.blank_count,
+        recommended_minutes: p.recommended_minutes,
+        source_book_label: p.source_book_label,
+      }));
+      setList(passages as Passage[]);
 
       const { data: { user } } = await supabase.auth.getUser();
       if (user) {

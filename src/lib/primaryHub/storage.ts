@@ -4,8 +4,16 @@ import { migratePersistUnits } from "./stageProgressMigrate";
 
 export const STORAGE_PREFIX = "primary_hub_v1_";
 
+export const PRIMARY_HUB_GRADES = [3, 4, 5, 6] as const;
+
 type CloudSyncFn = (grade: PrimaryHubGrade, state: PrimaryHubPersist) => void;
 let cloudSyncFn: CloudSyncFn | null = null;
+let cloudSyncBlocked = false;
+
+/** Block cloud upsert while guest-merge prompt is pending. */
+export function setPrimaryHubCloudSyncBlocked(blocked: boolean): void {
+  cloudSyncBlocked = blocked;
+}
 
 /** Registered by PrimaryHubProvider when mounted (debounced cloud upsert). */
 export function registerPrimaryHubCloudSync(fn: CloudSyncFn | null): void {
@@ -57,7 +65,7 @@ export function loadPersist(grade: PrimaryHubGrade): PrimaryHubPersist {
   }
 }
 
-export function savePersist(grade: PrimaryHubGrade, state: PrimaryHubPersist): void {
+export function savePersistLocalOnly(grade: PrimaryHubGrade, state: PrimaryHubPersist): void {
   try {
     localStorage.setItem(
       STORAGE_PREFIX + grade,
@@ -72,10 +80,26 @@ export function savePersist(grade: PrimaryHubGrade, state: PrimaryHubPersist): v
         currentSemester: state.currentSemester,
       }),
     );
-    cloudSyncFn?.(grade, state);
   } catch {
     /* quota */
   }
+}
+
+export function savePersist(grade: PrimaryHubGrade, state: PrimaryHubPersist): void {
+  savePersistLocalOnly(grade, state);
+  if (!cloudSyncBlocked) cloudSyncFn?.(grade, state);
+}
+
+export function clearPersist(grade: PrimaryHubGrade): void {
+  try {
+    localStorage.removeItem(STORAGE_PREFIX + grade);
+  } catch {
+    /* ignore */
+  }
+}
+
+export function clearAllPrimaryHubLocal(): void {
+  for (const g of PRIMARY_HUB_GRADES) clearPersist(g);
 }
 
 const EMPTY_UNIT: UnitState = {

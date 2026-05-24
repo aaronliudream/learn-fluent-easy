@@ -6,7 +6,7 @@ import {
   persistPayload,
   stripEmptyUnits,
 } from "./hubCloudMerge";
-import { defaultPersist, loadPersist, savePersist } from "./storage";
+import { defaultPersist, loadPersist, savePersist, clearPersist, PRIMARY_HUB_GRADES } from "./storage";
 import { migratePersistUnits } from "./stageProgressMigrate";
 
 const SYNC_DEBOUNCE_MS = 1500;
@@ -118,7 +118,64 @@ export async function flushPrimaryHubCloudPush(): Promise<void> {
 }
 
 /**
+ * Pull cloud progress only — does not read or upload localStorage.
+ */
+export async function hydratePrimaryHubCloudOnly(
+  userId: string,
+  grade: PrimaryHubGrade,
+  options?: { saveLocal?: boolean },
+): Promise<PrimaryHubPersist> {
+  const remote = await pullPrimaryHubProgress(userId, grade);
+  const result = remote ?? defaultPersist(grade);
+  if (options?.saveLocal !== false) savePersist(grade, result);
+  return result;
+}
+
+export type GuestMergeChoice = "merged" | "reset";
+
+/** Apply user choice after guest-merge prompt (all grades with local activity). */
+export async function applyGuestMergeChoice(
+  userId: string,
+  choice: GuestMergeChoice,
+  localByGrade: Partial<Record<PrimaryHubGrade, PrimaryHubPersist>>,
+  currentGrade: PrimaryHubGrade,
+): Promise<PrimaryHubPersist> {
+  if (choice === "reset") {
+    for (const g of PRIMARY_HUB_GRADES) clearPersist(g);
+    return hydratePrimaryHubCloudOnly(userId, currentGrade);
+  }
+
+  let currentResult = defaultPersist(currentGrade);
+  for (const g of PRIMARY_HUB_GRADES) {
+    const local = localByGrade[g];
+    if (!local) continue;
+    const remote = await pullPrimaryHubProgress(userId, g);
+    const merged = stripEmptyUnits(
+      mergePrimaryHubPersist(local, remote ?? defaultPersist(g)),
+    );
+    savePersist(g, merged);
+    if (g === currentGrade) currentResult = merged;
+    await pushNow(userId, g, merged);
+  }
+
+  if (!localByGrade[currentGrade]) {
+    currentResult = await hydratePrimaryHubCloudOnly(userId, currentGrade);
+  }
+  return currentResult;
+}
+
+/** Provisional state while prompt is open: cloud only, no local merge/upload. */
+export async function provisionalCloudStateForGrade(
+  userId: string,
+  grade: PrimaryHubGrade,
+): Promise<PrimaryHubPersist> {
+  const remote = await pullPrimaryHubProgress(userId, grade);
+  return remote ?? defaultPersist(grade);
+}
+
+/**
  * Pull cloud progress, merge with localStorage, persist locally, push merged state.
+ * Used when guest_merge_decision is already "merged".
  */
 export async function hydratePrimaryHubFromCloud(
   userId: string,

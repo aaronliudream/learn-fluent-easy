@@ -6286,6 +6286,7 @@ export type Database = {
           display_name: string | null
           email: string | null
           gaokao_year: number | null
+          guest_merge_decision: string | null
           id: string
           is_guest: boolean
           is_minor: boolean | null
@@ -6321,6 +6322,7 @@ export type Database = {
           display_name?: string | null
           email?: string | null
           gaokao_year?: number | null
+          guest_merge_decision?: string | null
           id?: string
           is_guest?: boolean
           is_minor?: boolean | null
@@ -6356,6 +6358,7 @@ export type Database = {
           display_name?: string | null
           email?: string | null
           gaokao_year?: number | null
+          guest_merge_decision?: string | null
           id?: string
           is_guest?: boolean
           is_minor?: boolean | null

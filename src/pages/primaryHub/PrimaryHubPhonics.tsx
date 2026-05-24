@@ -11,6 +11,8 @@ import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 
+const ANSWER_FEEDBACK_MS = 2000;
+
 type Props = {
   config: PhonicsConfig;
   semId: string;
@@ -256,9 +258,11 @@ function FindStage({
 function ChallengeStage({
   config,
   onComplete,
+  embedded = false,
 }: {
   config: PhonicsConfig;
   onComplete: (stars: number) => void;
+  embedded?: boolean;
 }) {
   const questions = config.stage_3_challenge;
   const [qIdx, setQIdx] = useState(0);
@@ -277,7 +281,7 @@ function ChallengeStage({
       window.setTimeout(() => {
         setPicked(null);
         setAnswered(false);
-      }, 900);
+      }, ANSWER_FEEDBACK_MS);
       return;
     }
     setAnswered(true);
@@ -286,7 +290,7 @@ function ChallengeStage({
         setQIdx((i) => i + 1);
         setPicked(null);
         setAnswered(false);
-      }, 700);
+      }, ANSWER_FEEDBACK_MS);
     }
   };
 
@@ -309,7 +313,7 @@ function ChallengeStage({
         <p className="mt-2 text-[15px] text-[#888780]">你已掌握 er 在词尾的轻声发音</p>
         <div className="mt-2 text-3xl">⭐⭐⭐</div>
         <OrangeButton className="mt-6" onClick={() => onComplete(2)}>
-          完成 · 返回
+          {embedded ? "完成 ✓" : "完成 · 返回"}
         </OrangeButton>
       </div>
     );
@@ -365,10 +369,104 @@ function ChallengeStage({
         </>
       )}
       {answered && picked === q.correct && !isLast && (
-        <p className="feedback-box mt-3 bg-[#EAF3DE] text-[#4A7C1C]">答对了！下一题…</p>
+        <p className="feedback-box mt-3 bg-[#EAF3DE] text-[#4A7C1C]">答对了！</p>
       )}
     </div>
   );
+}
+
+export function PhonicsSection({
+  config,
+  grade,
+  unitId,
+  embedded = false,
+  onProgressUpdate,
+}: {
+  config: PhonicsConfig;
+  grade: number;
+  unitId: string;
+  embedded?: boolean;
+  onProgressUpdate?: () => void;
+}) {
+  const { setState } = usePrimaryHub();
+  const [progress, setProgress] = useState<PhonicsUnitProgress>(() => loadPhonicsProgress(unitId));
+  const [phonicsStage, setPhonicsStage] = useState(() => {
+    const done = progress.completedStages;
+    if (done.length >= 3) return 2;
+    for (let s = 0; s < 3; s++) {
+      if (!done.includes(s)) return s;
+    }
+    return 0;
+  });
+
+  const finishStage = useCallback(
+    (idx: number, stars: number) => {
+      const next = completePhonicsStage(unitId, idx, stars);
+      setProgress(next);
+      onProgressUpdate?.();
+      if (idx < 2) {
+        setPhonicsStage(idx + 1);
+        return;
+      }
+      setState((prev) => {
+        const us = getUnitState(prev, unitId);
+        const updated = {
+          ...prev,
+          units: {
+            ...prev.units,
+            [unitId]: { ...us, stars: us.stars + 3 },
+          },
+        };
+        savePersist(grade, updated);
+        return updated;
+      });
+    },
+    [grade, onProgressUpdate, setState, unitId],
+  );
+
+  const stageBody = (() => {
+    switch (phonicsStage) {
+      case 0:
+        return (
+          <ListenStage config={config} grade={grade} onComplete={(s) => finishStage(0, s)} />
+        );
+      case 1:
+        return <FindStage config={config} onComplete={(s) => finishStage(1, s)} />;
+      case 2:
+        return (
+          <ChallengeStage
+            config={config}
+            onComplete={(s) => finishStage(2, s)}
+            embedded={embedded}
+          />
+        );
+      default:
+        return null;
+    }
+  })();
+
+  if (embedded) {
+    return (
+      <div className="space-y-3">
+        <div className="flex items-center justify-between text-[14px] text-[#888780]">
+          <span className="font-semibold text-[#FF6B35]">自然拼读 · 第 {phonicsStage + 1}/3 步</span>
+          <span>⭐ {progress.sessionStars}</span>
+        </div>
+        <div className="h-1.5 overflow-hidden rounded-full bg-[#F4F0E6]">
+          <div
+            className="h-full bg-gradient-to-r from-[#FF6B35] to-[#FFB627] transition-all duration-300"
+            style={{ width: `${((phonicsStage + 1) / 3) * 100}%` }}
+          />
+        </div>
+        {stageBody}
+        {progress.finished && (
+          <p className="text-center text-sm font-semibold text-[#6FA92A]">✓ 自然拼读已完成</p>
+        )}
+      </div>
+    );
+  }
+
+  return stageBody;
 }
 
 export default function PrimaryHubPhonics({ config, semId, unitId, stageIdx, onBack }: Props) {

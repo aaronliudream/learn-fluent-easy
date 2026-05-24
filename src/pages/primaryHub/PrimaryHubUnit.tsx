@@ -1,8 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findUnit } from "@/lib/primaryHub/courseData";
-import { getPhonicsForUnit, phonicsPath } from "@/lib/primaryHub/phonicsRegistry";
-import { loadPhonicsProgress } from "@/lib/primaryHub/phonicsStorage";
 import { getUnitProgress } from "@/lib/primaryHub/progress";
 import { getUnitState } from "@/lib/primaryHub/storage";
 
@@ -13,8 +11,6 @@ export default function PrimaryHubUnit() {
   const unit = unitId ? findUnit(unitId) : null;
   const us = unitId ? getUnitState(state, unitId) : null;
   const p = unitId ? getUnitProgress(state, unitId) : { percent: 0, completed: 0, total: 0 };
-  const phonics = unitId ? getPhonicsForUnit(unitId) : null;
-  const phonicsProgress = phonics && unitId ? loadPhonicsProgress(unitId) : null;
   const base = `/primary/hub/${grade}`;
 
   if (!unit || !unitId || !semId) {
@@ -62,50 +58,29 @@ export default function PrimaryHubUnit() {
         {unit.stages.map((stage, i) => {
           const done = us?.completedStages.includes(i) ?? false;
           const locked = !done && i > (us?.completedStages.length ?? 0);
-          const showPhonicsLink = phonics && i === 0 && stage.type === "vocab";
           return (
-            <div key={stage.id} className="space-y-2">
-              <button
-                type="button"
-                disabled={locked}
-                onClick={() => !locked && nav(`${base}/semester/${semId}/unit/${unitId}/stage/${i}`)}
-                className={`flex w-full items-center gap-3 rounded-2xl border bg-white p-4 text-left shadow-sm ${
-                  done ? "border-[#C9E0A8]" : locked ? "opacity-50" : "border-[#FF6B35]/40"
-                }`}
-              >
-                <div className="grid size-10 place-items-center rounded-xl bg-[#FFF8F0] text-sm font-bold">
-                  {done ? "✓" : locked ? "🔒" : i + 1}
+            <button
+              key={stage.id}
+              type="button"
+              disabled={locked}
+              onClick={() => !locked && nav(`${base}/semester/${semId}/unit/${unitId}/stage/${i}`)}
+              className={`flex w-full items-center gap-3 rounded-2xl border bg-white p-4 text-left shadow-sm ${
+                done ? "border-[#C9E0A8]" : locked ? "opacity-50" : "border-[#FF6B35]/40"
+              }`}
+            >
+              <div className="grid size-10 place-items-center rounded-xl bg-[#FFF8F0] text-sm font-bold">
+                {done ? "✓" : locked ? "🔒" : i + 1}
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="font-bold">
+                  {stage.icon} {stage.title}
                 </div>
-                <div className="min-w-0 flex-1">
-                  <div className="font-bold">
-                    {stage.icon} {stage.title}
-                  </div>
-                  <div className="text-xs text-[#888780]">
-                    {stage.subtitle} · {stage.time}
-                  </div>
+                <div className="text-xs text-[#888780]">
+                  {stage.subtitle} · {stage.time}
                 </div>
-                <span className="text-[#888780]">›</span>
-              </button>
-              {showPhonicsLink && (
-                <button
-                  type="button"
-                  onClick={() => nav(phonicsPath(grade, semId, unitId, i))}
-                  className="flex w-full items-center gap-3 rounded-xl border-2 border-dashed border-[#FF6B35]/60 bg-[#FFF8F0] px-4 py-3 text-left"
-                >
-                  <span className="text-2xl">🔤</span>
-                  <div className="min-w-0 flex-1">
-                    <div className="text-sm font-bold text-[#FF6B35]">
-                      {phonics.title}
-                      {phonicsProgress?.finished ? (
-                        <span className="ml-2 text-xs font-semibold text-[#6FA92A]">✓ 已完成</span>
-                      ) : null}
-                    </div>
-                    <div className="text-xs text-[#888780]">water · tiger · sister… 听辨 + 挑战</div>
-                  </div>
-                  <span className="text-sm font-semibold text-[#FF6B35]">进入 ›</span>
-                </button>
-              )}
-            </div>
+              </div>
+              <span className="text-[#888780]">›</span>
+            </button>
           );
         })}
       </div>

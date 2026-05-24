@@ -4,9 +4,10 @@ import { findUnit } from "@/lib/primaryHub/courseData";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { hubSpeak } from "@/lib/primaryHub/speech";
-import { getPhonicsForUnit, phonicsPath } from "@/lib/primaryHub/phonicsRegistry";
+import { getPhonicsForUnit } from "@/lib/primaryHub/phonicsRegistry";
 import { loadPhonicsProgress } from "@/lib/primaryHub/phonicsStorage";
 import { getPhonicsRuleText, getVocabGroups } from "@/lib/primaryHub/vocabGroupsRegistry";
+import { PhonicsSection } from "@/pages/primaryHub/PrimaryHubPhonics";
 import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
@@ -167,10 +168,11 @@ function VocabStage({
   semId: string;
   stageIdx: number;
 }) {
-  const nav = useNavigate();
   const phonics = getPhonicsForUnit(unitId);
-  const phonicsProgress = phonics ? loadPhonicsProgress(unitId) : null;
-  const [activeGroup, setActiveGroup] = useState<1 | 2 | 3>(1);
+  const [phonicsProgress, setPhonicsProgress] = useState(() =>
+    phonics ? loadPhonicsProgress(unitId) : null,
+  );
+  const [activeGroup, setActiveGroup] = useState<1 | 2 | 3 | 4>(1);
   const [viewed, setViewed] = useState<Set<number>>(() => new Set());
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
 
@@ -222,6 +224,16 @@ function VocabStage({
   const requiredViewed = vocabulary.length;
   const allViewed = viewed.size >= requiredViewed;
   const remainingViewed = Math.max(0, requiredViewed - viewed.size);
+  const phonicsDone = !phonics || phonicsProgress?.finished;
+  const canFinish = allViewed && phonicsDone;
+
+  const refreshPhonicsProgress = () => {
+    if (phonics) setPhonicsProgress(loadPhonicsProgress(unitId));
+  };
+
+  const phonicsTabLabel = phonicsProgress?.finished
+    ? "✓"
+    : `${phonicsProgress?.completedStages.length ?? 0}/3`;
 
   const groupViewedCount = (group: NonNullable<typeof groups>[number]) =>
     group.items.reduce((n, _item, i) => (viewed.has(group.offset + i) ? n + 1 : n), 0);
@@ -232,13 +244,13 @@ function VocabStage({
         📖 {groups ? `认识 ${vocabulary.length} 个单词` : "认识单词"}
       </div>
       {groups && (
-        <div className="mb-3 flex gap-2">
+        <div className="mb-3 flex flex-wrap gap-2">
           {groups.map((g) => (
             <button
               key={g.id}
               type="button"
               onClick={() => setActiveGroup(g.id)}
-              className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition ${
+              className={`min-w-[calc(50%-0.25rem)] flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition ${
                 activeGroup === g.id
                   ? "bg-[#FF6B35] text-white"
                   : "bg-[#F4F0E6] text-[#888780]"
@@ -247,11 +259,34 @@ function VocabStage({
               {g.label} ({groupViewedCount(g)}/{g.items.length})
             </button>
           ))}
+          {phonics && (
+            <button
+              type="button"
+              onClick={() => setActiveGroup(4)}
+              className={`min-w-[calc(50%-0.25rem)] flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition ${
+                activeGroup === 4
+                  ? "bg-[#FF6B35] text-white"
+                  : "bg-[#F4F0E6] text-[#888780]"
+              }`}
+            >
+              🔤 自然拼读 ({phonicsTabLabel})
+            </button>
+          )}
         </div>
       )}
-      {activeGroupDef?.header && (
+      {activeGroup !== 4 && activeGroupDef?.header && (
         <div className="mb-2 text-[15px] font-semibold text-[#FF6B35]">{activeGroupDef.header}</div>
       )}
+      {activeGroup === 4 && phonics ? (
+        <PhonicsSection
+          config={phonics}
+          grade={grade}
+          unitId={unitId}
+          embedded
+          onProgressUpdate={refreshPhonicsProgress}
+        />
+      ) : (
+        <>
       {phonicsRule && (
         <div className="mb-3 rounded-lg border border-[#FF6B35]/30 bg-[#FFF8F0] px-3 py-2 text-[14px] leading-snug text-[#555]">
           <span className="font-semibold text-[#FF6B35]">🔤 er 发音：</span>
@@ -347,31 +382,21 @@ function VocabStage({
               );
             })}
           </div>
-      {activeGroup === 3 && phonics && (
-        <div className="mt-4 rounded-xl border-2 border-dashed border-[#FF6B35]/50 bg-[#FFF8F0] p-4 text-center">
-          <p className="text-[15px] font-semibold">自然拼读 · er 专项练习</p>
-          <p className="mt-1 text-[14px] text-[#888780]">听辨 + 挑战，巩固 er 发音</p>
-          {phonicsProgress?.finished && (
-            <p className="mt-2 text-xs font-semibold text-[#6FA92A]">✓ 拼读练习已完成</p>
-          )}
-          <PrimaryButton
-            className="mt-3"
-            onClick={() => nav(phonicsPath(grade, semId, unitId, stageIdx))}
-          >
-            {phonicsProgress?.finished ? "再练一次拼读 →" : "开始拼读练习 →"}
-          </PrimaryButton>
-        </div>
+        </>
       )}
       <div className="mt-3 text-center text-[14px] text-[#888780]">
         已查看：{viewed.size} / {requiredViewed}
-        {groups && !allViewed && ` · 还需 ${remainingViewed} 张，请切换「日常用词」「拼读词」标签`}
+        {groups && !allViewed && ` · 还需 ${remainingViewed} 张，请切换其他单词标签`}
+        {groups && allViewed && phonics && !phonicsDone && " · 请完成「自然拼读」标签"}
       </div>
-      <PrimaryButton disabled={!allViewed} onClick={onFinish}>
-        {allViewed
+      <PrimaryButton disabled={!canFinish} onClick={onFinish}>
+        {canFinish
           ? "✓ 进入下一关 →"
-          : remainingViewed > 0
+          : !allViewed && remainingViewed > 0
             ? `还需查看 ${remainingViewed} 张卡片（共 ${requiredViewed} 张）`
-            : "查看完所有卡片再继续"}
+            : phonics && !phonicsDone
+              ? "请先完成「自然拼读」三个步骤"
+              : "查看完所有卡片再继续"}
       </PrimaryButton>
     </div>
   );

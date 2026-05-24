@@ -12,7 +12,7 @@ export const G4V2_U1_PHONICS = {
     { word: "water", zh: "水", emoji: "💧", audio: "water.mp3" },
     { word: "tiger", zh: "老虎", emoji: "🐯", audio: "tiger.mp3" },
     { word: "sister", zh: "姐妹", emoji: "👧", audio: "sister.mp3" },
-    { word: "dinner", zh: "晚餐", emoji: "🍽️", audio: "dinner.mp3" },
+    { word: "dinner", zh: "晚饭", emoji: "🍽️", audio: "dinner.mp3" },
     { word: "computer", zh: "电脑", emoji: "💻", audio: "computer.mp3" },
     { word: "ruler", zh: "尺子", emoji: "📏", audio: "ruler.mp3" },
   ],

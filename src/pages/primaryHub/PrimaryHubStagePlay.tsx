@@ -6,6 +6,7 @@ import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { hubSpeak } from "@/lib/primaryHub/speech";
 import { getPhonicsForUnit, phonicsPath } from "@/lib/primaryHub/phonicsRegistry";
 import { loadPhonicsProgress } from "@/lib/primaryHub/phonicsStorage";
+import { getPhonicsRuleText, getVocabGroups } from "@/lib/primaryHub/vocabGroupsRegistry";
 import { prefetchTTSBatchKid } from "@/lib/speak";
 import { useMcKeyboard } from "@/hooks/useMcKeyboard";
 import WordMatchingGame from "@/components/hub/WordMatchingGame";
@@ -137,6 +138,20 @@ function StageShell({
   );
 }
 
+function highlightVocabWord(en: string, highlight?: string) {
+  if (!highlight) return <span>{en}</span>;
+  const lower = en.toLowerCase();
+  const idx = lower.lastIndexOf(highlight.toLowerCase());
+  if (idx < 0) return <span>{en}</span>;
+  return (
+    <>
+      {en.slice(0, idx)}
+      <span className="font-bold text-[#E0623F]">{en.slice(idx, idx + highlight.length)}</span>
+      {en.slice(idx + highlight.length)}
+    </>
+  );
+}
+
 function VocabStage({
   vocabulary,
   onFinish,
@@ -159,19 +174,11 @@ function VocabStage({
   const [viewed, setViewed] = useState<Set<number>>(() => new Set());
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
 
-  const groups = phonics
-    ? [
-        { id: 1 as const, label: "核心词 ①", items: vocabulary.slice(0, 4) },
-        { id: 2 as const, label: "核心词 ②", items: vocabulary.slice(4) },
-        { id: 3 as const, label: "拼读词", items: [] as VocabItem[] },
-      ]
-    : null;
-  const activeItems = groups
-    ? activeGroup === 3
-      ? []
-      : groups.find((g) => g.id === activeGroup)?.items ?? vocabulary
-    : vocabulary;
-  const activeOffset = groups && activeGroup === 2 ? 4 : 0;
+  const groups = getVocabGroups(unitId, vocabulary);
+  const activeGroupDef = groups?.find((g) => g.id === activeGroup) ?? null;
+  const activeItems = activeGroupDef?.items ?? vocabulary;
+  const activeOffset = activeGroupDef?.offset ?? 0;
+  const phonicsRule = activeGroupDef?.showPhonicsRule ? getPhonicsRuleText(phonics) : null;
 
   const toggleCard = (localIdx: number) => {
     const v = activeItems[localIdx];
@@ -200,12 +207,14 @@ function VocabStage({
     );
   }, [grade, vocabulary]);
 
-  const requiredViewed = groups ? 8 : vocabulary.length;
+  const requiredViewed = vocabulary.length;
   const allViewed = viewed.size >= requiredViewed;
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <div className="mb-2 text-sm">📖 认识单词</div>
+      <div className="mb-2 text-base font-semibold">
+        📖 {groups ? `认识 ${vocabulary.length} 个单词` : "认识单词"}
+      </div>
       {groups && (
         <div className="mb-3 flex gap-2">
           {groups.map((g) => (
@@ -219,38 +228,28 @@ function VocabStage({
                   : "bg-[#F4F0E6] text-[#888780]"
               }`}
             >
-              {g.label}
+              {g.label} ({g.items.length})
             </button>
           ))}
         </div>
       )}
-      {activeGroup === 3 && phonics ? (
-        <div className="rounded-xl border-2 border-dashed border-[#FF6B35]/50 bg-[#FFF8F0] p-4 text-center">
-          <div className="text-3xl">🔤</div>
-          <p className="mt-2 text-[15px] font-semibold">自然拼读 · er 词尾</p>
-          <p className="mt-1 text-[14px] text-[#888780]">
-            water, tiger, sister… 6 个拼读词 + 听辨 + 挑战
-          </p>
-          {phonicsProgress?.finished && (
-            <p className="mt-2 text-xs font-semibold text-[#6FA92A]">✓ 拼读练习已完成</p>
-          )}
-          <PrimaryButton
-            className="mt-3"
-            onClick={() => nav(phonicsPath(grade, semId, unitId, stageIdx))}
-          >
-            {phonicsProgress?.finished ? "再练一次拼读 →" : "开始拼读练习 →"}
-          </PrimaryButton>
+      {activeGroupDef?.header && (
+        <div className="mb-2 text-[15px] font-semibold text-[#FF6B35]">{activeGroupDef.header}</div>
+      )}
+      {phonicsRule && (
+        <div className="mb-3 rounded-lg border border-[#FF6B35]/30 bg-[#FFF8F0] px-3 py-2 text-[14px] leading-snug text-[#555]">
+          <span className="font-semibold text-[#FF6B35]">🔤 er 发音：</span>
+          {phonicsRule}
         </div>
-      ) : (
-        <>
-          <div className="mb-3 text-xs text-[#888780]">💡 点击卡片看中文，点击 🔊 听发音</div>
-          <div className="grid grid-cols-2 gap-2">
+      )}
+      <div className="mb-3 text-[14px] text-[#888780]">💡 点击卡片看中文，点击 🔊 听发音</div>
+      <div className="grid grid-cols-2 gap-2">
             {activeItems.map((v, i) => {
               const globalIdx = activeOffset + i;
               const isFlipped = flipped.has(globalIdx);
               return (
             <div
-              key={v.en}
+              key={`${v.en}-${globalIdx}`}
               role="button"
               tabIndex={0}
               onClick={() => toggleCard(i)}
@@ -265,14 +264,17 @@ function VocabStage({
                 <>
                   <div className="text-2xl">{v.emoji}</div>
                   <div
-                    className="mt-1 text-sm font-semibold"
+                    className="mt-1 text-[20px] font-semibold leading-tight"
                     onClick={(e) => {
                       e.stopPropagation();
                       speakWord(v.en);
                     }}
                   >
-                    {v.en}
+                    {highlightVocabWord(v.en, v.highlight)}
                   </div>
+                  {v.phonetic && (
+                    <div className="mt-0.5 text-[12px] text-[#888780]">{v.phonetic}</div>
+                  )}
                   <span
                     role="button"
                     tabIndex={0}
@@ -294,15 +296,15 @@ function VocabStage({
               ) : (
                 <>
                   <div className="text-2xl">{v.emoji}</div>
-                  <div className="mt-1 text-sm font-bold text-[#FF6B35]">{v.cn}</div>
+                  <div className="mt-1 text-[20px] font-bold text-[#FF6B35]">{v.cn}</div>
                   <div
-                    className="mt-1 text-xs text-[#888780]"
+                    className="mt-1 text-[14px] text-[#888780]"
                     onClick={(e) => {
                       e.stopPropagation();
                       speakWord(v.en);
                     }}
                   >
-                    {v.en}
+                    {highlightVocabWord(v.en, v.highlight)}
                   </div>
                   <span
                     role="button"
@@ -327,14 +329,27 @@ function VocabStage({
               );
             })}
           </div>
-        </>
+      {activeGroup === 3 && phonics && (
+        <div className="mt-4 rounded-xl border-2 border-dashed border-[#FF6B35]/50 bg-[#FFF8F0] p-4 text-center">
+          <p className="text-[15px] font-semibold">自然拼读 · er 专项练习</p>
+          <p className="mt-1 text-[14px] text-[#888780]">听辨 + 挑战，巩固 er 发音</p>
+          {phonicsProgress?.finished && (
+            <p className="mt-2 text-xs font-semibold text-[#6FA92A]">✓ 拼读练习已完成</p>
+          )}
+          <PrimaryButton
+            className="mt-3"
+            onClick={() => nav(phonicsPath(grade, semId, unitId, stageIdx))}
+          >
+            {phonicsProgress?.finished ? "再练一次拼读 →" : "开始拼读练习 →"}
+          </PrimaryButton>
+        </div>
       )}
-      <div className="mt-3 text-center text-sm text-[#888780]">
+      <div className="mt-3 text-center text-[14px] text-[#888780]">
         已查看：{viewed.size} / {requiredViewed}
-        {groups && activeGroup !== 3 && " · 切换分组继续学习"}
+        {groups && !allViewed && " · 切换分组继续学习"}
       </div>
       <PrimaryButton disabled={!allViewed} onClick={onFinish}>
-        {allViewed ? "✓ 进入下一关 →" : "查看完所有核心词卡片再继续"}
+        {allViewed ? "✓ 进入下一关 →" : "查看完所有卡片再继续"}
       </PrimaryButton>
     </div>
   );

@@ -9,42 +9,179 @@
     {
       "en": "first floor",
       "cn": "一楼",
-      "emoji": "1️⃣"
+      "emoji": "🏢",
+      "phonetic": "/fɜːst flɔː(r)/",
+      "icon": "building",
+      "page": 5,
+      "type": "core"
     },
     {
       "en": "second floor",
       "cn": "二楼",
-      "emoji": "2️⃣"
+      "emoji": "🏢",
+      "phonetic": "/ˈsekənd flɔː(r)/",
+      "icon": "building",
+      "page": 5,
+      "type": "core"
     },
     {
       "en": "teachers' office",
       "cn": "教师办公室",
-      "emoji": "👨‍🏫"
+      "emoji": "💼",
+      "phonetic": "/ˈtiːtʃəz ˈɒfɪs/",
+      "icon": "briefcase",
+      "page": 5,
+      "type": "core"
     },
     {
       "en": "library",
       "cn": "图书馆",
-      "emoji": "📚"
+      "emoji": "📚",
+      "phonetic": "/ˈlaɪbrəri/",
+      "icon": "books",
+      "page": 5,
+      "type": "core"
     },
     {
       "en": "playground",
       "cn": "操场",
-      "emoji": "⚽"
+      "emoji": "⚽",
+      "phonetic": "/ˈpleɪɡraʊnd/",
+      "icon": "ball-football",
+      "page": 8,
+      "type": "core"
     },
     {
       "en": "computer room",
       "cn": "计算机房",
-      "emoji": "💻"
+      "emoji": "💻",
+      "phonetic": "/kəmˈpjuːtə(r) ruːm/",
+      "icon": "device-desktop",
+      "page": 8,
+      "type": "core"
     },
     {
       "en": "art room",
       "cn": "美术教室",
-      "emoji": "🎨"
+      "emoji": "🎨",
+      "phonetic": "/ɑːt ruːm/",
+      "icon": "palette",
+      "page": 8,
+      "type": "core"
     },
     {
       "en": "music room",
       "cn": "音乐教室",
-      "emoji": "🎵"
+      "emoji": "🎵",
+      "phonetic": "/ˈmjuːzɪk ruːm/",
+      "icon": "music",
+      "page": 8,
+      "type": "core"
+    },
+    {
+      "en": "next to",
+      "cn": "挨着；紧邻",
+      "emoji": "➡️",
+      "phonetic": "/nekst tu/",
+      "icon": "arrow-right",
+      "page": 4,
+      "type": "extended"
+    },
+    {
+      "en": "homework",
+      "cn": "作业",
+      "emoji": "📓",
+      "phonetic": "/ˈhəʊmwɜːk/",
+      "icon": "notebook",
+      "page": 4,
+      "type": "extended"
+    },
+    {
+      "en": "class",
+      "cn": "班级",
+      "emoji": "👥",
+      "phonetic": "/klɑːs/",
+      "icon": "users",
+      "page": 7,
+      "type": "extended"
+    },
+    {
+      "en": "forty",
+      "cn": "四十",
+      "emoji": "🔢",
+      "phonetic": "/ˈfɔːti/",
+      "icon": "numbers",
+      "page": 7,
+      "type": "extended"
+    },
+    {
+      "en": "way",
+      "cn": "方向；路",
+      "emoji": "🧭",
+      "phonetic": "/weɪ/",
+      "icon": "direction-sign",
+      "page": 7,
+      "type": "extended"
+    },
+    {
+      "en": "water",
+      "cn": "水",
+      "emoji": "💧",
+      "phonetic": "/ˈwɔːtə(r)/",
+      "icon": "glass",
+      "highlight": "er",
+      "page": 6,
+      "type": "phonics"
+    },
+    {
+      "en": "tiger",
+      "cn": "老虎",
+      "emoji": "🐯",
+      "phonetic": "/ˈtaɪɡə(r)/",
+      "icon": "cat",
+      "highlight": "er",
+      "page": 6,
+      "type": "phonics"
+    },
+    {
+      "en": "sister",
+      "cn": "姐妹",
+      "emoji": "👧",
+      "phonetic": "/ˈsɪstə(r)/",
+      "icon": "user",
+      "highlight": "er",
+      "page": 6,
+      "type": "phonics"
+    },
+    {
+      "en": "dinner",
+      "cn": "晚饭",
+      "emoji": "🍽️",
+      "phonetic": "/ˈdɪnə(r)/",
+      "icon": "bowl",
+      "highlight": "er",
+      "page": 6,
+      "type": "phonics"
+    },
+    {
+      "en": "computer",
+      "cn": "电脑",
+      "emoji": "💻",
+      "phonetic": "/kəmˈpjuːtə(r)/",
+      "icon": "device-desktop",
+      "highlight": "er",
+      "page": 6,
+      "type": "phonics"
+    },
+    {
+      "en": "ruler",
+      "cn": "尺子",
+      "emoji": "📏",
+      "phonetic": "/ˈruːlə(r)/",
+      "icon": "ruler",
+      "highlight": "er",
+      "page": 6,
+      "type": "phonics"
     }
   ],
   "dialogues": [
@@ -113,10 +250,10 @@
     {
       "id": "s1",
       "title": "认识单词",
-      "subtitle": "8个核心单词",
+      "subtitle": "19个单词",
       "icon": "📚",
       "type": "vocab",
-      "time": "5分钟"
+      "time": "12分钟"
     },
     {
       "id": "s2",

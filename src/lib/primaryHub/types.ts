@@ -1,6 +1,15 @@
 export type PrimaryHubGrade = 3 | 4 | 5 | 6;
 
-export type VocabItem = { en: string; cn: string; emoji: string };
+export type VocabItem = {
+  en: string;
+  cn: string;
+  emoji: string;
+  phonetic?: string;
+  icon?: string;
+  highlight?: string;
+  page?: number;
+  type?: "core" | "extended" | "phonics";
+};
 
 export type QuizQuestion = {
   q: string;

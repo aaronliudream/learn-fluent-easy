@@ -11,7 +11,15 @@
  * The `rate` argument sets TTS speed (default 0.85 for primary hub). Calls
  * with rate ≤ 0.75 also map grade hint to 1 for extra-slow kid voice.
  */
-import { speakKid } from "@/lib/speak";
+import { speakFromUrl, speakKid } from "@/lib/speak";
+
+/** Bundled Lily voice clip — bypasses CDN/localStorage for a word that often caches badly. */
+const OCLOCK_STATIC_MP3 = "/audio/hub/oclock.mp3";
+
+function isOClockVocabToken(text: string): boolean {
+  const t = text.trim().toLowerCase();
+  return t === "o'clock" || t === "oclock" || t === "oh clock" || t === "o clock";
+}
 
 /** ASCII + curly apostrophes that break or silence cloud TTS when sent verbatim. */
 const APOSTROPHE_RE = /[''\u2019\u02BC\uFF07´`]/g;
@@ -33,6 +41,10 @@ export function toHubTtsText(text: string): string {
 
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {
   if (typeof window === "undefined") return;
+  if (isOClockVocabToken(text)) {
+    void speakFromUrl(OCLOCK_STATIC_MP3);
+    return;
+  }
   const gradeHint = rate <= 0.75 ? 1 : grade;
   const spoken = toHubTtsText(text);
   void speakKid(spoken, { grade: gradeHint, speed: rate });

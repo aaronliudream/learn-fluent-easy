@@ -75,7 +75,7 @@ function buildCdnUrl(path: string): string {
 
 // localStorage cache of (key -> CDN URL) for known-good URLs. Survives
 // page reloads, so repeat phrases are instant across sessions.
-const PERSIST_KEY = "tts.urls.v1";
+const PERSIST_KEY = "tts.urls.v2";
 const PERSIST_MAX = 500;
 let persistMap: Map<string, string> | null = null;
 const loadPersist = (): Map<string, string> => {
@@ -438,6 +438,20 @@ const playUrl = async (
 // handler. We do the audio-element creation + first `.play()` BEFORE any
 // `await`, so mobile browsers see this as a valid user-initiated playback.
 // The async work continues afterwards and just updates the src.
+/** Play a known-good MP3 URL (same mobile unlock path as `speak`). */
+export const speakFromUrl = (url: string): Promise<void> => {
+  if (typeof window === "undefined" || !url) return Promise.resolve();
+  const resolved = url.startsWith("/") ? `${window.location.origin}${url}` : url;
+  stopCurrent();
+  const audio = unlockAudioSync();
+  const myToken = speakToken;
+  return (async () => {
+    const played = await playUrl(audio, resolved, myToken);
+    if (played) return;
+    await playUrlDirect(resolved, myToken);
+  })();
+};
+
 export const speak = (text: string, opts?: { accent?: "UK" | "US" | "BOTH"; voiceId?: string; speed?: number }): Promise<void> => {
   if (!text) return Promise.resolve();
   const trimmed = text.trim();

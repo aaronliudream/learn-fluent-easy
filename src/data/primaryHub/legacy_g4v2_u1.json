@@ -184,6 +184,27 @@
       "type": "phonics"
     }
   ],
+  "vocabGroups": [
+    {
+      "id": "places",
+      "name": "学校场所",
+      "header": "学校场所 · 8 个词",
+      "match": { "type": "core" }
+    },
+    {
+      "id": "daily",
+      "name": "日常用词",
+      "header": "日常用词 · 5 个词",
+      "match": { "type": "extended" }
+    },
+    {
+      "id": "phonics",
+      "name": "拼读词",
+      "header": "拼读词 · 6 个词",
+      "match": { "type": "phonics" },
+      "showPhonicsRule": true
+    }
+  ],
   "dialogues": [
     {
       "title": "A Let's talk",

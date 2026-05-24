@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { hubSpeak } from "@/lib/primaryHub/speech";
 
 export type WordMatchVocab = { en: string; cn: string; emoji?: string };
@@ -25,6 +25,7 @@ export type WordMatchingGameProps = {
   grade?: number;
   onMatch?: () => void;
   onFinish: () => void;
+  onProgressChange?: (percent: number) => void;
   finishLabel?: string;
   finishDisabledLabel?: string;
 };
@@ -34,6 +35,7 @@ export default function WordMatchingGame({
   grade,
   onMatch,
   onFinish,
+  onProgressChange,
   finishLabel = "✓ 太棒了！进入下一关 →",
   finishDisabledLabel = "完成所有配对再继续",
 }: WordMatchingGameProps) {
@@ -59,6 +61,10 @@ export default function WordMatchingGame({
   const remaining = totalPairs - matchedCount;
   const done = matchedCount === totalPairs;
   const progressPct = totalPairs > 0 ? (matchedCount / totalPairs) * 100 : 0;
+
+  useEffect(() => {
+    onProgressChange?.(progressPct);
+  }, [progressPct, onProgressChange]);
 
   const visibleCards = useMemo(
     () => cards.filter((card) => !matchedPairs.has(card.pairId)),

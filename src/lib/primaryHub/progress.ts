@@ -1,6 +1,12 @@
 import { findSemester, findUnit, getGradeCourse } from "./courseData";
 import { getUnitState } from "./storage";
-import type { PrimaryHubGrade, PrimaryHubPersist } from "./types";
+import type { PrimaryHubGrade, PrimaryHubPersist, UnitState } from "./types";
+export function getStagePercent(us: UnitState, stageIdx: number): number {
+  if (us.completedStages.includes(stageIdx)) return 100;
+  const saved = us.stageProgress?.[stageIdx];
+  if (saved == null) return 0;
+  return Math.min(99, Math.max(0, Math.round(saved)));
+}
 
 export function getUnitProgress(state: PrimaryHubPersist, unitId: string) {
   const unit = findUnit(unitId);
@@ -8,7 +14,9 @@ export function getUnitProgress(state: PrimaryHubPersist, unitId: string) {
   const us = getUnitState(state, unitId);
   const total = unit.stages.length;
   const completed = us.completedStages.length;
-  return { percent: Math.round((completed / total) * 100), completed, total };
+  let sum = 0;
+  for (let i = 0; i < total; i++) sum += getStagePercent(us, i);
+  return { percent: Math.round(sum / total), completed, total };
 }
 
 export function getSemesterProgress(state: PrimaryHubPersist, semesterId: string) {
@@ -19,14 +27,20 @@ export function getSemesterProgress(state: PrimaryHubPersist, semesterId: string
   let totalStages = 0;
   let completedStages = 0;
   let completedUnits = 0;
+  let percentSum = 0;
+  let trackedUnits = 0;
   sem.units.forEach((u) => {
     const p = getUnitProgress(state, u.id);
     totalStages += p.total;
     completedStages += p.completed;
     if (p.total > 0 && p.completed === p.total) completedUnits++;
+    if (u.available && p.total > 0) {
+      percentSum += p.percent;
+      trackedUnits++;
+    }
   });
   return {
-    percent: totalStages > 0 ? Math.round((completedStages / totalStages) * 100) : 0,
+    percent: trackedUnits > 0 ? Math.round(percentSum / trackedUnits) : 0,
     completedUnits,
     totalUnits: sem.units.filter((u) => u.available).length,
     totalStages,
@@ -38,15 +52,21 @@ export function getGradeProgress(state: PrimaryHubPersist, grade: PrimaryHubGrad
   const course = getGradeCourse(grade);
   let totalStages = 0;
   let completedStages = 0;
+  let percentSum = 0;
+  let trackedUnits = 0;
   Object.values(course.semesters).forEach((sem) => {
     sem.units.forEach((u) => {
       const p = getUnitProgress(state, u.id);
       totalStages += p.total;
       completedStages += p.completed;
+      if (u.available && p.total > 0) {
+        percentSum += p.percent;
+        trackedUnits++;
+      }
     });
   });
   return {
-    percent: totalStages > 0 ? Math.round((completedStages / totalStages) * 100) : 0,
+    percent: trackedUnits > 0 ? Math.round(percentSum / trackedUnits) : 0,
     totalStages,
     completedStages,
   };

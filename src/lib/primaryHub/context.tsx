@@ -18,6 +18,7 @@ type Ctx = {
   persist: () => void;
   addMistake: (m: Omit<Mistake, "id" | "date">) => void;
   completeStage: (unitId: string, stageIdx: number) => boolean;
+  updateStageProgress: (unitId: string, stageIdx: number, percent: number) => void;
 };
 
 const PrimaryHubContext = createContext<Ctx | null>(null);
@@ -72,6 +73,10 @@ export function PrimaryHubProvider({
           us.completedStages = completed;
           us.stars += 5;
         }
+        if (us.stageProgress && stageIdx in us.stageProgress) {
+          const { [stageIdx]: _removed, ...rest } = us.stageProgress;
+          us.stageProgress = Object.keys(rest).length > 0 ? rest : undefined;
+        }
         if (completed.length === unit.stages.length && !us.firstCompleteDate) {
           us.firstCompleteDate = new Date().toISOString().slice(0, 10);
         }
@@ -91,9 +96,28 @@ export function PrimaryHubProvider({
     [grade],
   );
 
+  const updateStageProgress = useCallback(
+    (unitId: string, stageIdx: number, percent: number) => {
+      const clamped = Math.min(99, Math.max(0, Math.round(percent)));
+      setState((prev) => {
+        const us = getUnitState(prev, unitId);
+        if (us.completedStages.includes(stageIdx)) return prev;
+        if ((us.stageProgress?.[stageIdx] ?? 0) === clamped) return prev;
+        us.stageProgress = { ...(us.stageProgress ?? {}), [stageIdx]: clamped };
+        const next = {
+          ...prev,
+          units: { ...prev.units, [unitId]: { ...us } },
+        };
+        savePersist(grade, next);
+        return next;
+      });
+    },
+    [grade],
+  );
+
   const value = useMemo(
-    () => ({ grade, state, setState, persist, addMistake, completeStage }),
-    [grade, state, persist, addMistake, completeStage],
+    () => ({ grade, state, setState, persist, addMistake, completeStage, updateStageProgress }),
+    [grade, state, persist, addMistake, completeStage, updateStageProgress],
   );
 
   return <PrimaryHubContext.Provider value={value}>{children}</PrimaryHubContext.Provider>;

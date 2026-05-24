@@ -72,6 +72,8 @@ export type GradeCourseDef = {
 
 export type UnitState = {
   completedStages: number[];
+  /** In-progress completion 0–99 per stage index; cleared when stage completes. */
+  stageProgress?: Record<number, number>;
   stars: number;
   firstCompleteDate: string | null;
   reviewSchedule: unknown[];

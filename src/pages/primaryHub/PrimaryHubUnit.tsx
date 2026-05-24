@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findUnit } from "@/lib/primaryHub/courseData";
-import { getUnitProgress } from "@/lib/primaryHub/progress";
+import { getUnitProgress, getStagePercent } from "@/lib/primaryHub/progress";
 import { getUnitState } from "@/lib/primaryHub/storage";
 
 export default function PrimaryHubUnit() {
@@ -58,6 +58,8 @@ export default function PrimaryHubUnit() {
         {unit.stages.map((stage, i) => {
           const done = us?.completedStages.includes(i) ?? false;
           const locked = !done && i > (us?.completedStages.length ?? 0);
+          const stagePercent = us ? getStagePercent(us, i) : 0;
+          const inProgress = !done && stagePercent > 0;
           return (
             <button
               key={stage.id}
@@ -65,7 +67,7 @@ export default function PrimaryHubUnit() {
               disabled={locked}
               onClick={() => !locked && nav(`${base}/semester/${semId}/unit/${unitId}/stage/${i}`)}
               className={`flex w-full items-center gap-3 rounded-2xl border bg-white p-4 text-left shadow-sm ${
-                done ? "border-[#C9E0A8]" : locked ? "opacity-50" : "border-[#FF6B35]/40"
+                done ? "border-[#C9E0A8]" : locked ? "opacity-50" : inProgress ? "border-[#FFB627]/60" : "border-[#FF6B35]/40"
               }`}
             >
               <div className="grid size-10 place-items-center rounded-xl bg-[#FFF8F0] text-sm font-bold">
@@ -78,8 +80,17 @@ export default function PrimaryHubUnit() {
                 <div className="text-xs text-[#888780]">
                   {stage.subtitle} · {stage.time}
                 </div>
+                <div className="mt-2 flex items-center gap-2">
+                  <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-[#F4F0E6]">
+                    <div
+                      className={`h-full ${done ? "bg-[#6FA92A]" : "bg-gradient-to-r from-[#FF6B35] to-[#FFB627]"}`}
+                      style={{ width: `${stagePercent}%` }}
+                    />
+                  </div>
+                  <span className="text-xs font-bold tabular-nums text-[#888780]">{stagePercent}%</span>
+                </div>
               </div>
-              <span className="text-[#888780]">›</span>
+              <span className="self-start text-[#888780]">›</span>
             </button>
           );
         })}

@@ -24,8 +24,7 @@
 
 ## 已知未做（Step 2 跟进）
 
-- Guest 合并改为**弹框让用户选择**（不再自动 merge + upload）
-- `profiles.guest_merge_decision` 决策持久化
+- ~~Guest 合并改为**弹框让用户选择**~~ → **Done in 0829e414** (`profiles.guest_merge_decision` + `GuestMergePrompt`)
 
 ## 不在范围
 

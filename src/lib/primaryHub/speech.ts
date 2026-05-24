@@ -8,27 +8,28 @@
  * mainland China (Chrome there often has no English voices installed), and
  * completely bypassed the CDN we set up.
  *
- * The `rate` argument is kept for backward compatibility with existing call
- * sites, but is effectively ignored — `speakKid` picks an age-appropriate
- * speed based on the learner's grade (stored in localStorage by the grade
- * picker). Calls passing rate ≤ 0.75 are interpreted as "extra slow" and
- * mapped to a grade-1 speed.
+ * The `rate` argument sets TTS speed (default 0.85 for primary hub). Calls
+ * with rate ≤ 0.75 also map grade hint to 1 for extra-slow kid voice.
  */
 import { speakKid } from "@/lib/speak";
 
+/** Normalize display text for cloud TTS (apostrophe tokens often fail silently). */
+export function toHubTtsText(text: string): string {
+  const trimmed = text.trim();
+  if (!trimmed) return trimmed;
+  if (/^o['']clock$/i.test(trimmed)) return "o clock";
+  return trimmed;
+}
+
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {
   if (typeof window === "undefined") return;
-  // Map the legacy `rate` parameter onto a grade hint so existing call sites
-  // that asked for an extra-slow read (e.g. listening-comprehension prompts
-  // at 0.7) still sound noticeably slower. Otherwise honour the explicit
-  // grade passed from hub stages (URL context) so prefetch + playback share
-  // the same kid-voice speed cache key.
   const gradeHint = rate <= 0.75 ? 1 : grade;
-  void speakKid(text, gradeHint != null ? { grade: gradeHint } : undefined);
+  const spoken = toHubTtsText(text);
+  void speakKid(spoken, { grade: gradeHint, speed: rate });
 }
 
 /** Kid-voice playback with an explicit TTS speed (for unit sentence lessons). */
 export function hubSpeakAtSpeed(text: string, speed: number, grade?: number) {
   if (typeof window === "undefined") return;
-  void speakKid(text, { grade, speed });
+  void speakKid(toHubTtsText(text), { grade, speed });
 }

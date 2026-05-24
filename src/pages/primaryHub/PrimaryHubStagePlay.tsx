@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { findUnit } from "@/lib/primaryHub/courseData";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
-import { hubSpeak, hubSpeakAtSpeed } from "@/lib/primaryHub/speech";
+import { hubSpeak, hubSpeakAtSpeed, toHubTtsText } from "@/lib/primaryHub/speech";
 import { getPhonicsForUnit } from "@/lib/primaryHub/phonicsRegistry";
 import { loadPhonicsProgress } from "@/lib/primaryHub/phonicsStorage";
 import { getPhonicsRuleText, getVocabGroups } from "@/lib/primaryHub/vocabGroupsRegistry";
@@ -237,8 +237,8 @@ function VocabStage({
 
   useEffect(() => {
     prefetchTTSBatchKid(
-      vocabulary.map((v) => v.en),
-      { grade },
+      vocabulary.map((v) => toHubTtsText(v.en)),
+      { grade, speed: 0.85 },
     );
   }, [grade, vocabulary]);
 
@@ -729,8 +729,8 @@ function WriteStage({
 
   useEffect(() => {
     prefetchTTSBatchKid(
-      vocabulary.map((v) => v.en),
-      { grade },
+      vocabulary.map((v) => toHubTtsText(v.en)),
+      { grade, speed: 0.85 },
     );
   }, [grade, vocabulary]);
 

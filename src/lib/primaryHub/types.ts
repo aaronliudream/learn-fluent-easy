@@ -1,5 +1,7 @@
 export type PrimaryHubGrade = 3 | 4 | 5 | 6;
 
+export type VocabWordType = "core" | "extended" | "phonics";
+
 export type VocabItem = {
   en: string;
   cn: string;
@@ -8,7 +10,16 @@ export type VocabItem = {
   icon?: string;
   highlight?: string;
   page?: number;
-  type?: "core" | "extended" | "phonics";
+  type?: VocabWordType;
+};
+
+export type VocabGroupConfig = {
+  id: string;
+  name: string;
+  header?: string;
+  match?: { type: VocabWordType };
+  indices?: number[];
+  showPhonicsRule?: boolean;
 };
 
 export type QuizQuestion = {
@@ -53,6 +64,7 @@ export type UnitDef = {
   emoji: string;
   available: boolean;
   vocabulary: VocabItem[];
+  vocabGroups?: VocabGroupConfig[];
   dialogues: Array<{ title: string; lines: Array<{ role: string; text: string; cn: string }> }>;
   stages: StageDef[];
   quizQuestions: QuizQuestion[];

@@ -167,6 +167,7 @@ function stepFromSavedPercent(savedPercent: number, total: number): number {
 
 function VocabStage({
   vocabulary,
+  vocabGroups,
   onFinish,
   grade,
   unitId,
@@ -175,6 +176,7 @@ function VocabStage({
   onProgress,
 }: {
   vocabulary: VocabItem[];
+  vocabGroups?: UnitDef["vocabGroups"];
   onFinish: () => void;
   grade: number;
   unitId: string;
@@ -190,7 +192,7 @@ function VocabStage({
   const [viewed, setViewed] = useState<Set<number>>(() => new Set());
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
 
-  const groups = getVocabGroups(unitId, vocabulary);
+  const groups = getVocabGroups({ vocabulary, vocabGroups });
   const activeGroupDef = groups?.find((g) => g.id === activeGroup) ?? null;
   const activeItems = activeGroupDef?.items ?? vocabulary;
   const activeOffset = activeGroupDef?.offset ?? 0;
@@ -1050,6 +1052,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
         return (
           <VocabStage
             vocabulary={unit.vocabulary}
+            vocabGroups={unit.vocabGroups}
             onFinish={handleFinish}
             grade={grade}
             unitId={unitId}

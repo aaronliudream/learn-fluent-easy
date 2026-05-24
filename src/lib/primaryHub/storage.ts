@@ -1,5 +1,6 @@
 import type { PrimaryHubGrade, PrimaryHubPersist, UnitState } from "./types";
 import { getGradeCourse, semesterIdsForGrade } from "./courseData";
+import { migratePersistUnits } from "./stageProgressMigrate";
 
 const STORAGE_PREFIX = "primary_hub_v1_";
 
@@ -34,7 +35,7 @@ export function loadPersist(grade: PrimaryHubGrade): PrimaryHubPersist {
     const raw = localStorage.getItem(STORAGE_PREFIX + grade);
     if (!raw) return base;
     const data = JSON.parse(raw) as Partial<PrimaryHubPersist>;
-    return {
+    const merged: PrimaryHubPersist = {
       ...base,
       ...data,
       user: { ...base.user, ...data.user },
@@ -42,6 +43,7 @@ export function loadPersist(grade: PrimaryHubGrade): PrimaryHubPersist {
       mistakes: data.mistakes ?? base.mistakes,
       aiTestHistory: data.aiTestHistory ?? base.aiTestHistory,
     };
+    return migratePersistUnits(merged);
   } catch {
     return base;
   }

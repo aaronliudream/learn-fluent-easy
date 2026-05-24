@@ -2255,19 +2255,25 @@
                 "id": "places",
                 "name": "学校场所",
                 "header": "学校场所 · 8 个词",
-                "match": { "type": "core" }
+                "match": {
+                  "type": "core"
+                }
               },
               {
                 "id": "daily",
                 "name": "日常用词",
                 "header": "日常用词 · 5 个词",
-                "match": { "type": "extended" }
+                "match": {
+                  "type": "extended"
+                }
               },
               {
                 "id": "phonics",
                 "name": "拼读词",
                 "header": "拼读词 · 6 个词",
-                "match": { "type": "phonics" },
+                "match": {
+                  "type": "phonics"
+                },
                 "showPhonicsRule": true
               }
             ],
@@ -2761,6 +2767,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "即将上线 · 看图写句",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "12分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -3101,6 +3115,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "即将上线 · 看图写句",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "12分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -3441,6 +3463,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "即将上线 · 看图写句",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "12分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -3769,6 +3799,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "即将上线 · 看图写句",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "12分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -4109,6 +4147,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "即将上线 · 看图写句",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "12分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",

@@ -10,6 +10,7 @@ import { loadPersist, savePersist, getUnitState } from "./storage";
 import type { Mistake, PrimaryHubGrade, PrimaryHubPersist } from "./types";
 import { findUnit } from "./courseData";
 import { getTotalCompletedStages } from "./progress";
+import { getCompletableStageIndices } from "./stageCompletable";
 
 type Ctx = {
   grade: PrimaryHubGrade;
@@ -77,7 +78,10 @@ export function PrimaryHubProvider({
           const { [stageIdx]: _removed, ...rest } = us.stageProgress;
           us.stageProgress = Object.keys(rest).length > 0 ? rest : undefined;
         }
-        if (completed.length === unit.stages.length && !us.firstCompleteDate) {
+        const completable = getCompletableStageIndices(unitId);
+        const allCompletableDone =
+          completable.length > 0 && completable.every((i) => completed.includes(i));
+        if (allCompletableDone && !us.firstCompleteDate) {
           us.firstCompleteDate = new Date().toISOString().slice(0, 10);
         }
         const next = {

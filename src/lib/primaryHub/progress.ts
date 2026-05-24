@@ -1,4 +1,5 @@
 import { findSemester, findUnit, getGradeCourse } from "./courseData";
+import { getCompletableStageIndices } from "./stageCompletable";
 import { getUnitState } from "./storage";
 import type { PrimaryHubGrade, PrimaryHubPersist, UnitState } from "./types";
 export function getStagePercent(us: UnitState, stageIdx: number): number {
@@ -10,13 +11,25 @@ export function getStagePercent(us: UnitState, stageIdx: number): number {
 
 export function getUnitProgress(state: PrimaryHubPersist, unitId: string) {
   const unit = findUnit(unitId);
-  if (!unit || !unit.stages.length) return { percent: 0, completed: 0, total: 0 };
+  if (!unit || !unit.stages.length) {
+    return { percent: 0, completed: 0, total: 0, stageCount: 0 };
+  }
+  const completable = getCompletableStageIndices(unitId);
+  const stageCount = unit.stages.length;
   const us = getUnitState(state, unitId);
-  const total = unit.stages.length;
-  const completed = us.completedStages.length;
+  const total = completable.length;
+  if (total === 0) {
+    return { percent: 0, completed: 0, total: 0, stageCount };
+  }
+  const completed = completable.filter((i) => us.completedStages.includes(i)).length;
   let sum = 0;
-  for (let i = 0; i < total; i++) sum += getStagePercent(us, i);
-  return { percent: Math.round(sum / total), completed, total };
+  for (const i of completable) sum += getStagePercent(us, i);
+  return {
+    percent: Math.round(sum / total),
+    completed,
+    total,
+    stageCount,
+  };
 }
 
 export function getSemesterProgress(state: PrimaryHubPersist, semesterId: string) {

@@ -129,7 +129,15 @@ DEFAULT_STAGES = [
     {"id": "s4", "title": "学习句型", "subtitle": "核心句型", "icon": "💬", "type": "sentence", "time": "5分钟"},
     {"id": "s5", "title": "默写挑战", "subtitle": "动手拼写", "icon": "✏️", "type": "write", "time": "8分钟"},
     {"id": "s6", "title": "听力测试", "subtitle": "听句选答案", "icon": "🎯", "type": "listenSent", "time": "6分钟"},
-    {"id": "s7", "title": "最终通关", "subtitle": "综合挑战", "icon": "🏆", "type": "finalQuiz", "time": "10分钟"},
+    {
+        "id": "s7",
+        "title": "读写训练",
+        "subtitle": "即将上线 · 看图写句",
+        "icon": "📝",
+        "type": "readWrite",
+        "time": "12分钟",
+    },
+    {"id": "s8", "title": "最终通关", "subtitle": "综合挑战", "icon": "🏆", "type": "finalQuiz", "time": "10分钟"},
 ]
 
 

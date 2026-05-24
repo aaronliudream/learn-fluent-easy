@@ -1160,8 +1160,21 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             onProgress={reportStageProgress}
           />
         ) : (
-          <div className="rounded-2xl bg-white p-4 text-center text-sm text-[#888780]">
-            读写训练内容即将上线
+          <div className="rounded-2xl bg-white p-6 text-center shadow-sm">
+            <div className="text-4xl" aria-hidden>
+              🚧
+            </div>
+            <h2 className="mt-3 text-base font-bold text-[#333]">读写训练内容准备中</h2>
+            <p className="mt-2 text-sm leading-relaxed text-[#888780]">
+              该关卡内容正在制作中，敬请期待。请先完成前面的学习环节。
+            </p>
+            <button
+              type="button"
+              onClick={onBack}
+              className="mt-5 w-full rounded-xl bg-[#FF6B35] px-4 py-3 text-sm font-semibold text-white hover:bg-[#E55A28]"
+            >
+              返回单元
+            </button>
           </div>
         );
       case "finalQuiz":

@@ -1,8 +1,9 @@
 import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 import { PrimaryHubProvider } from "@/lib/primaryHub/context";
 import "@/lib/primaryHub/styles";
-import { resolvePrimaryGrade } from "@/lib/primaryGrade";
+import { resolvePrimaryGrade, writePrimaryGradeToStorage } from "@/lib/primaryGrade";
 import type { PrimaryHubGrade } from "@/lib/primaryHub/types";
+import { useEffect } from "react";
 
 function BottomNav({ grade }: { grade: PrimaryHubGrade }) {
   const loc = useLocation();
@@ -42,6 +43,10 @@ function BottomNav({ grade }: { grade: PrimaryHubGrade }) {
 export default function PrimaryHubLayout() {
   const { grade: g } = useParams<{ grade: string }>();
   const grade = resolvePrimaryGrade(g) as PrimaryHubGrade;
+
+  useEffect(() => {
+    writePrimaryGradeToStorage(grade);
+  }, [grade]);
 
   return (
     <PrimaryHubProvider grade={grade}>

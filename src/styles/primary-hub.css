@@ -44,6 +44,33 @@
   background: #fff0eb;
 }
 
+.match-pair-card--picked {
+  border-color: #378add !important;
+  box-shadow: 0 0 0 2px rgba(55, 138, 221, 0.25);
+}
+
+.match-pair-card--matched {
+  pointer-events: none;
+}
+
+.match-pair-card--wrong {
+  border-color: #e0623f !important;
+  animation: matchPairShake 0.45s ease;
+}
+
+@keyframes matchPairShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
 .feedback-box {
   padding: 10px 12px;
   border-radius: 10px;

@@ -54,6 +54,7 @@ const PrimaryHubCourse = lazy(() => import("./pages/primaryHub/PrimaryHubCourse.
 const PrimaryHubSemester = lazy(() => import("./pages/primaryHub/PrimaryHubSemester.tsx"));
 const PrimaryHubUnit = lazy(() => import("./pages/primaryHub/PrimaryHubUnit.tsx"));
 const PrimaryHubStage = lazy(() => import("./pages/primaryHub/PrimaryHubStage.tsx"));
+const PrimaryHubPhonicsRoute = lazy(() => import("./pages/primaryHub/PrimaryHubPhonicsRoute.tsx"));
 const PrimaryHubMistakes = lazy(() => import("./pages/primaryHub/PrimaryHubMistakes.tsx"));
 const PrimaryHubProfile = lazy(() => import("./pages/primaryHub/PrimaryHubProfile.tsx"));
 const PrimaryHubAITest = lazy(() => import("./pages/primaryHub/PrimaryHubAITest.tsx"));
@@ -272,6 +273,10 @@ const App = () => (
             <Route path="semester/:semId" element={<PrimaryHubSemester />} />
             <Route path="semester/:semId/unit/:unitId" element={<PrimaryHubUnit />} />
             <Route path="semester/:semId/unit/:unitId/stage/:stageIdx" element={<PrimaryHubStage />} />
+            <Route
+              path="semester/:semId/unit/:unitId/stage/:stageIdx/phonics"
+              element={<PrimaryHubPhonicsRoute />}
+            />
             <Route path="mistakes" element={<PrimaryHubMistakes />} />
             <Route path="profile" element={<PrimaryHubProfile />} />
             <Route path="aitest" element={<PrimaryHubAITest />} />

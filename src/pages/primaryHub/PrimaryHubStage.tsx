@@ -23,6 +23,7 @@ export default function PrimaryHubStage() {
   return (
     <PrimaryHubStagePlay
       unitId={unitId}
+      semId={semId}
       stageIdx={stageIdx}
       onBack={() => nav(`${base}/semester/${semId}/unit/${unitId}`)}
       onComplete={(needAiTest) => {

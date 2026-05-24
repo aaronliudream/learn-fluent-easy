@@ -1,13 +1,19 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { findUnit } from "@/lib/primaryHub/courseData";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
 import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { hubSpeak } from "@/lib/primaryHub/speech";
+import { getPhonicsForUnit, phonicsPath } from "@/lib/primaryHub/phonicsRegistry";
+import { loadPhonicsProgress } from "@/lib/primaryHub/phonicsStorage";
 import { prefetchTTSBatchKid } from "@/lib/speak";
+import { useMcKeyboard } from "@/hooks/useMcKeyboard";
+import WordMatchingGame from "@/components/hub/WordMatchingGame";
 import type { ListeningQuestion, QuizQuestion, UnitDef, VocabItem } from "@/lib/primaryHub/types";
 
 type Props = {
   unitId: string;
+  semId: string;
   stageIdx: number;
   onComplete: (needAiTest: boolean) => void;
   onBack: () => void;
@@ -132,39 +138,115 @@ function StageShell({
 function VocabStage({
   vocabulary,
   onFinish,
+  grade,
+  unitId,
+  semId,
+  stageIdx,
 }: {
   vocabulary: VocabItem[];
   onFinish: () => void;
+  grade: number;
+  unitId: string;
+  semId: string;
+  stageIdx: number;
 }) {
+  const nav = useNavigate();
+  const phonics = getPhonicsForUnit(unitId);
+  const phonicsProgress = phonics ? loadPhonicsProgress(unitId) : null;
+  const [activeGroup, setActiveGroup] = useState<1 | 2 | 3>(1);
   const [viewed, setViewed] = useState<Set<number>>(() => new Set());
   const [flipped, setFlipped] = useState<Set<number>>(() => new Set());
 
-  const toggleCard = (i: number) => {
-    const v = vocabulary[i];
-    const isFlipped = flipped.has(i);
+  const groups = phonics
+    ? [
+        { id: 1 as const, label: "核心词 ①", items: vocabulary.slice(0, 4) },
+        { id: 2 as const, label: "核心词 ②", items: vocabulary.slice(4) },
+        { id: 3 as const, label: "拼读词", items: [] as VocabItem[] },
+      ]
+    : null;
+  const activeItems = groups
+    ? activeGroup === 3
+      ? []
+      : groups.find((g) => g.id === activeGroup)?.items ?? vocabulary
+    : vocabulary;
+  const activeOffset = groups && activeGroup === 2 ? 4 : 0;
+
+  const toggleCard = (localIdx: number) => {
+    const v = activeItems[localIdx];
+    if (!v) return;
+    const globalIdx = activeOffset + localIdx;
+    const isFlipped = flipped.has(globalIdx);
     if (!isFlipped) {
-      setFlipped((prev) => new Set(prev).add(i));
-      setViewed((prev) => new Set(prev).add(i));
-      hubSpeak(v.en);
+      setFlipped((prev) => new Set(prev).add(globalIdx));
+      setViewed((prev) => new Set(prev).add(globalIdx));
+      hubSpeak(v.en, 0.85, grade);
     } else {
       setFlipped((prev) => {
         const next = new Set(prev);
-        next.delete(i);
+        next.delete(globalIdx);
         return next;
       });
     }
   };
 
-  const allViewed = viewed.size === vocabulary.length;
+  const speakWord = (word: string) => hubSpeak(word, 0.85, grade);
+
+  useEffect(() => {
+    prefetchTTSBatchKid(
+      vocabulary.map((v) => v.en),
+      { grade },
+    );
+  }, [grade, vocabulary]);
+
+  const requiredViewed = groups ? 8 : vocabulary.length;
+  const allViewed = viewed.size >= requiredViewed;
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <div className="mb-2 text-sm">📖 认识 {vocabulary.length} 个核心单词</div>
-      <div className="mb-3 text-xs text-[#888780]">💡 点击卡片看中文，点击 🔊 听发音</div>
-      <div className="grid grid-cols-2 gap-2">
-        {vocabulary.map((v, i) => {
-          const isFlipped = flipped.has(i);
-          return (
+      <div className="mb-2 text-sm">📖 认识单词</div>
+      {groups && (
+        <div className="mb-3 flex gap-2">
+          {groups.map((g) => (
+            <button
+              key={g.id}
+              type="button"
+              onClick={() => setActiveGroup(g.id)}
+              className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition ${
+                activeGroup === g.id
+                  ? "bg-[#FF6B35] text-white"
+                  : "bg-[#F4F0E6] text-[#888780]"
+              }`}
+            >
+              {g.label}
+            </button>
+          ))}
+        </div>
+      )}
+      {activeGroup === 3 && phonics ? (
+        <div className="rounded-xl border-2 border-dashed border-[#FF6B35]/50 bg-[#FFF8F0] p-4 text-center">
+          <div className="text-3xl">🔤</div>
+          <p className="mt-2 text-[15px] font-semibold">自然拼读 · er 词尾</p>
+          <p className="mt-1 text-[14px] text-[#888780]">
+            water, tiger, sister… 6 个拼读词 + 听辨 + 挑战
+          </p>
+          {phonicsProgress?.finished && (
+            <p className="mt-2 text-xs font-semibold text-[#6FA92A]">✓ 拼读练习已完成</p>
+          )}
+          <PrimaryButton
+            className="mt-3"
+            onClick={() => nav(phonicsPath(grade, semId, unitId, stageIdx))}
+          >
+            {phonicsProgress?.finished ? "再练一次拼读 →" : "开始拼读练习 →"}
+          </PrimaryButton>
+        </div>
+      ) : (
+        <>
+          <div className="mb-3 text-xs text-[#888780]">💡 点击卡片看中文，点击 🔊 听发音</div>
+          <div className="grid grid-cols-2 gap-2">
+            {activeItems.map((v, i) => {
+              const globalIdx = activeOffset + i;
+              const isFlipped = flipped.has(globalIdx);
+              return (
             <div
               key={v.en}
               role="button"
@@ -180,19 +262,27 @@ function VocabStage({
               {!isFlipped ? (
                 <>
                   <div className="text-2xl">{v.emoji}</div>
-                  <div className="mt-1 text-sm font-semibold">{v.en}</div>
+                  <div
+                    className="mt-1 text-sm font-semibold"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      speakWord(v.en);
+                    }}
+                  >
+                    {v.en}
+                  </div>
                   <span
                     role="button"
                     tabIndex={0}
                     className="mt-2 inline-block rounded-full bg-[#378ADD] px-2 py-0.5 text-xs text-white"
                     onClick={(e) => {
                       e.stopPropagation();
-                      hubSpeak(v.en);
+                      speakWord(v.en);
                     }}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
                         e.stopPropagation();
-                        hubSpeak(v.en);
+                        speakWord(v.en);
                       }
                     }}
                   >
@@ -203,19 +293,27 @@ function VocabStage({
                 <>
                   <div className="text-2xl">{v.emoji}</div>
                   <div className="mt-1 text-sm font-bold text-[#FF6B35]">{v.cn}</div>
-                  <div className="mt-1 text-xs text-[#888780]">{v.en}</div>
+                  <div
+                    className="mt-1 text-xs text-[#888780]"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      speakWord(v.en);
+                    }}
+                  >
+                    {v.en}
+                  </div>
                   <span
                     role="button"
                     tabIndex={0}
                     className="mt-2 inline-block rounded-full bg-[#378ADD] px-2 py-0.5 text-xs text-white"
                     onClick={(e) => {
                       e.stopPropagation();
-                      hubSpeak(v.en);
+                      speakWord(v.en);
                     }}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
                         e.stopPropagation();
-                        hubSpeak(v.en);
+                        speakWord(v.en);
                       }
                     }}
                   >
@@ -224,14 +322,17 @@ function VocabStage({
                 </>
               )}
             </div>
-          );
-        })}
-      </div>
+              );
+            })}
+          </div>
+        </>
+      )}
       <div className="mt-3 text-center text-sm text-[#888780]">
-        已查看：{viewed.size} / {vocabulary.length}
+        已查看：{viewed.size} / {requiredViewed}
+        {groups && activeGroup !== 3 && " · 切换分组继续学习"}
       </div>
       <PrimaryButton disabled={!allViewed} onClick={onFinish}>
-        {allViewed ? "✓ 进入下一关 →" : "查看完所有卡片再继续"}
+        {allViewed ? "✓ 进入下一关 →" : "查看完所有核心词卡片再继续"}
       </PrimaryButton>
     </div>
   );
@@ -241,6 +342,7 @@ function ListenMcStage({
   title,
   instruction,
   questions,
+  grade,
   onFinish,
   onCorrect,
   onWrong,
@@ -248,6 +350,7 @@ function ListenMcStage({
   title: string;
   instruction: string;
   questions: Array<{ audio: string; opts: string[]; answer: number; point?: string }>;
+  grade: number;
   onFinish: () => void;
   onCorrect: () => void;
   onWrong: (q: { audio: string; opts: string[]; answer: number; point?: string }) => void;
@@ -260,6 +363,27 @@ function ListenMcStage({
 
   const q = questions[idx];
   const isLast = idx === questions.length - 1;
+  const isSentenceListen = title.includes("句");
+
+  useEffect(() => {
+    prefetchTTSBatchKid(
+      questions.map((item) => item.audio),
+      { grade },
+    );
+  }, [grade, questions]);
+
+  const speakPrompt = useCallback(() => {
+    const text = q?.audio?.trim();
+    if (!text) return;
+    // Sentence prompts use the slow kid-voice path (<0.75) for clearer playback.
+    hubSpeak(text, isSentenceListen ? 0.74 : 0.8, grade);
+  }, [q, grade, isSentenceListen]);
+
+  const speakCorrectAnswer = useCallback(() => {
+    const text = q?.opts[q.answer]?.trim();
+    if (!text) return;
+    hubSpeak(text, 0.7, grade);
+  }, [q, grade]);
 
   const handlePick = (optIdx: number) => {
     if (answered) return;
@@ -275,15 +399,13 @@ function ListenMcStage({
       setFeedback(
         <div className="feedback-box warning">
           💡 正确答案：<strong>{q.opts[q.answer]}</strong>
-          {!title.includes("句") && (
-            <button
-              type="button"
-              className="ml-2 rounded-lg bg-[#378ADD] px-2.5 py-1 text-xs text-white"
-              onClick={() => hubSpeak(q.opts[q.answer], 0.7)}
-            >
-              🔊 慢速
-            </button>
-          )}
+          <button
+            type="button"
+            className="ml-2 rounded-lg bg-[#378ADD] px-2.5 py-1 text-xs text-white"
+            onClick={speakCorrectAnswer}
+          >
+            🔊 慢速
+          </button>
         </div>,
       );
     }
@@ -300,6 +422,22 @@ function ListenMcStage({
     setFeedback(null);
   };
 
+  useMcKeyboard({
+    optionCount: q?.opts.length ?? 0,
+    answered,
+    onPick: handlePick,
+    onNext: next,
+    enabled: !!q,
+  });
+
+  if (!q) {
+    return (
+      <div className="rounded-2xl bg-white p-4 text-center shadow-sm">
+        <div className="text-sm text-[#888780]">暂无听力题目</div>
+      </div>
+    );
+  }
+
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
       <div className="mb-3 flex justify-between text-sm">
@@ -313,7 +451,7 @@ function ListenMcStage({
         <button
           type="button"
           className="mx-auto grid size-16 place-items-center rounded-full bg-[#378ADD] text-2xl text-white shadow-md"
-          onClick={() => hubSpeak(q.audio, 0.8)}
+          onClick={speakPrompt}
         >
           🔊
         </button>
@@ -330,109 +468,13 @@ function ListenMcStage({
   );
 }
 
-function MatchStage({
-  vocabulary,
-  onFinish,
-  onMatch,
-}: {
-  vocabulary: VocabItem[];
-  onFinish: () => void;
-  onMatch: () => void;
-}) {
-  const enItems = useMemo(() => shuffleArray([...vocabulary]), [vocabulary]);
-  const cnItems = useMemo(() => shuffleArray([...vocabulary]), [vocabulary]);
-  const [matched, setMatched] = useState<Set<string>>(() => new Set());
-  const [selected, setSelected] = useState<{ side: "en" | "cn"; value: string } | null>(null);
-  const [wrongKey, setWrongKey] = useState<string | null>(null);
-
-  const tryMatch = (side: "en" | "cn", value: string) => {
-    if (matched.has(value)) return;
-    if (side === "en") hubSpeak(value);
-
-    if (!selected) {
-      setSelected({ side, value });
-      return;
-    }
-
-    if (selected.side === side) {
-      setSelected({ side, value });
-      return;
-    }
-
-    if (selected.value === value) {
-      setMatched((prev) => new Set(prev).add(value));
-      onMatch();
-      setSelected(null);
-    } else {
-      const wrongId = `${side}-${value}`;
-      setWrongKey(wrongId);
-      setSelected(null);
-      window.setTimeout(() => setWrongKey(null), 600);
-    }
-  };
-
-  const done = matched.size === vocabulary.length;
-
-  return (
-    <div className="rounded-2xl bg-white p-4 shadow-sm">
-      <div className="mb-3 text-sm">🎮 点击英文（自动朗读）和中文进行配对</div>
-      <div className="grid grid-cols-2 gap-2.5">
-        <div className="flex flex-col gap-2">
-          {enItems.map((v) => {
-            const isMatched = matched.has(v.en);
-            const isSelected = selected?.side === "en" && selected.value === v.en;
-            const isWrong = wrongKey === `en-${v.en}`;
-            return (
-              <button
-                key={`en-${v.en}`}
-                type="button"
-                disabled={isMatched}
-                onClick={() => tryMatch("en", v.en)}
-                className={`match-btn rounded-xl border-2 border-[#EEEAE0] bg-white px-3 py-2.5 text-left text-sm font-medium transition ${
-                  isSelected ? "selected" : ""
-                } ${isMatched ? "matched" : ""} ${isWrong ? "wrong" : ""}`}
-              >
-                {v.emoji} {v.en}
-              </button>
-            );
-          })}
-        </div>
-        <div className="flex flex-col gap-2">
-          {cnItems.map((v) => {
-            const isMatched = matched.has(v.en);
-            const isSelected = selected?.side === "cn" && selected.value === v.en;
-            const isWrong = wrongKey === `cn-${v.en}`;
-            return (
-              <button
-                key={`cn-${v.en}`}
-                type="button"
-                disabled={isMatched}
-                onClick={() => tryMatch("cn", v.en)}
-                className={`match-btn rounded-xl border-2 border-[#EEEAE0] bg-white px-3 py-2.5 text-left text-sm font-medium transition ${
-                  isSelected ? "selected" : ""
-                } ${isMatched ? "matched" : ""} ${isWrong ? "wrong" : ""}`}
-              >
-                {v.cn}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-      <div className="mt-3 rounded-xl bg-[#FFF8F0] p-2.5 text-center text-sm">
-        🎯 已配对：<strong>{matched.size}</strong> / {vocabulary.length}
-      </div>
-      <PrimaryButton disabled={!done} onClick={onFinish}>
-        {done ? "✓ 太棒了！进入下一关 →" : "完成所有配对再继续"}
-      </PrimaryButton>
-    </div>
-  );
-}
-
 function SentenceStage({
   dialogues,
+  grade,
   onFinish,
 }: {
   dialogues: UnitDef["dialogues"];
+  grade: number;
   onFinish: () => void;
 }) {
   const [expanded, setExpanded] = useState<Set<number>>(() => new Set());
@@ -463,6 +505,11 @@ function SentenceStage({
 
   const allExpanded = patterns.length === 0 || expanded.size === patterns.length;
 
+  useEffect(() => {
+    const texts = patterns.flatMap((s) => [s.q, s.a].filter(Boolean));
+    if (texts.length) prefetchTTSBatchKid(texts, { grade });
+  }, [grade, patterns]);
+
   if (patterns.length === 0) {
     return (
       <div className="rounded-2xl bg-white p-4 text-center shadow-sm">
@@ -484,7 +531,7 @@ function SentenceStage({
             <button
               type="button"
               className="grid size-8 shrink-0 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-              onClick={() => hubSpeak(s.q)}
+              onClick={() => hubSpeak(s.q, 0.85, grade)}
             >
               🔊
             </button>
@@ -499,7 +546,7 @@ function SentenceStage({
                     <button
                       type="button"
                       className="grid size-8 shrink-0 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-                      onClick={() => hubSpeak(s.a)}
+                      onClick={() => hubSpeak(s.a, 0.85, grade)}
                     >
                       🔊
                     </button>
@@ -525,19 +572,48 @@ function SentenceStage({
 
 function WriteStage({
   vocabulary,
+  grade,
   onFinish,
   onCorrect,
   onWrong,
 }: {
   vocabulary: VocabItem[];
+  grade: number;
   onFinish: () => void;
   onCorrect: () => void;
   onWrong: (m: { q: string; opts: string[]; answer: number; point: string }) => void;
 }) {
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const [correct, setCorrect] = useState<Set<number>>(() => new Set());
   const [values, setValues] = useState<Record<number, string>>({});
   const [feedbacks, setFeedbacks] = useState<Record<number, React.ReactNode>>({});
   const [disabled, setDisabled] = useState<Set<number>>(() => new Set());
+  const [retrying, setRetrying] = useState<Set<number>>(() => new Set());
+
+  useEffect(() => {
+    prefetchTTSBatchKid(
+      vocabulary.map((v) => v.en),
+      { grade },
+    );
+  }, [grade, vocabulary]);
+
+  useEffect(() => {
+    if (vocabulary.length > 0) {
+      requestAnimationFrame(() => inputRefs.current[0]?.focus());
+    }
+  }, [vocabulary.length]);
+
+  const focusNextUnanswered = useCallback(
+    (afterIndex: number, answered: Set<number>) => {
+      for (let j = afterIndex + 1; j < vocabulary.length; j++) {
+        if (!answered.has(j)) {
+          requestAnimationFrame(() => inputRefs.current[j]?.focus());
+          return;
+        }
+      }
+    },
+    [vocabulary.length],
+  );
 
   const check = (i: number, answer: string) => {
     if (disabled.has(i)) return;
@@ -553,29 +629,37 @@ function WriteStage({
         [i]: <span className="font-semibold text-[#3B6D11]">✅ 完全正确！</span>,
       }));
       setDisabled((prev) => new Set(prev).add(i));
-      setCorrect((prev) => new Set(prev).add(i));
+      setRetrying((prev) => {
+        const next = new Set(prev);
+        next.delete(i);
+        return next;
+      });
+      setCorrect((prev) => {
+        const next = new Set(prev).add(i);
+        focusNextUnanswered(i, next);
+        return next;
+      });
       onCorrect();
-      hubSpeak(answer);
+      hubSpeak(answer, 0.85, grade);
     } else {
       setFeedbacks((prev) => ({
         ...prev,
         [i]: (
           <span className="text-[#A32D2D]">
-            ❌ 正确答案：<strong>{answer}</strong>
+            ❌ 正确答案：<strong>{answer}</strong> — 请重新输入
           </span>
         ),
       }));
+      setValues((prev) => ({ ...prev, [i]: "" }));
+      setRetrying((prev) => new Set(prev).add(i));
       onWrong({
         q: `默写：${vocabulary[i].cn}`,
         opts: [answer],
         answer: 0,
         point: "单词拼写",
       });
-      hubSpeak(answer, 0.7);
-      window.setTimeout(() => {
-        setValues((prev) => ({ ...prev, [i]: "" }));
-        setFeedbacks((prev) => ({ ...prev, [i]: null }));
-      }, 2500);
+      hubSpeak(answer, 0.7, grade);
+      requestAnimationFrame(() => inputRefs.current[i]?.focus());
     }
   };
 
@@ -593,26 +677,34 @@ function WriteStage({
             <button
               type="button"
               className="grid size-7 place-items-center rounded-full bg-[#378ADD] text-xs text-white"
-              onClick={() => hubSpeak(v.en, 0.7)}
+              onClick={() => hubSpeak(v.en, 0.7, grade)}
             >
               🔊
             </button>
           </div>
           <div className="flex gap-2">
             <input
+              ref={(el) => {
+                inputRefs.current[i] = el;
+              }}
               type="text"
               value={values[i] ?? ""}
               disabled={disabled.has(i)}
-              placeholder="输入英文..."
+              placeholder={retrying.has(i) ? "请重新输入正确拼写..." : "输入英文..."}
               autoComplete="off"
               className={`flex-1 rounded-xl border-2 px-3 py-2 text-sm outline-none ${
                 disabled.has(i)
                   ? "border-[#97C459] bg-[#EAF3DE]"
-                  : "border-[#EEEAE0] bg-white focus:border-[#FF6B35]"
+                  : retrying.has(i)
+                    ? "border-[#E24B4A] bg-[#FFF5F5] focus:border-[#E24B4A]"
+                    : "border-[#EEEAE0] bg-white focus:border-[#FF6B35]"
               }`}
               onChange={(e) => setValues((prev) => ({ ...prev, [i]: e.target.value }))}
               onKeyDown={(e) => {
-                if (e.key === "Enter") check(i, v.en);
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  check(i, v.en);
+                }
               }}
             />
             <button
@@ -689,6 +781,13 @@ function FinalQuizStage({
     setFeedback(null);
   };
 
+  useMcKeyboard({
+    optionCount: q.opts.length,
+    answered,
+    onPick: handlePick,
+    onNext: next,
+  });
+
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
       <div className="mb-3 flex justify-between text-sm">
@@ -713,7 +812,7 @@ function FinalQuizStage({
   );
 }
 
-export default function PrimaryHubStagePlay({ unitId, stageIdx, onComplete, onBack }: Props) {
+export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplete, onBack }: Props) {
   const { grade, state, setState, addMistake, completeStage } = usePrimaryHub();
   const unit = findUnit(unitId);
   const stage = unit?.stages[stageIdx];
@@ -772,48 +871,28 @@ export default function PrimaryHubStagePlay({ unitId, stageIdx, onComplete, onBa
     return shuffleArray([...unit.quizQuestions]).slice(0, 10);
   }, [unit]);
 
-  // Prefetch every English audio clip this unit will ever need, in the
-  // background, as soon as the unit loads. Storage is content-addressed and
-  // shared across all users, so on a warm bucket this is just a string of
-  // ~50ms HEAD requests against the CDN; on a cold bucket the Edge Function
-  // synthesizes once and parks the MP3 in Storage for everyone forever.
-  // Result: taps on 🔊 buttons play instantly with no perceived latency.
-  useEffect(() => {
-    if (!unit) return;
-    const texts: string[] = [];
-    // Vocabulary words — used in VocabStage, MatchStage, WriteStage.
-    for (const v of unit.vocabulary) texts.push(v.en);
-    // Listening-comprehension prompts.
-    for (const q of unit.listeningQuestions) {
-      if (q.audio) texts.push(q.audio);
-    }
-    // Dialogue lines used in SentenceStage (only the first 4 patterns are shown).
-    for (const dialogue of unit.dialogues) {
-      const lines = dialogue.lines;
-      for (let i = 0; i < lines.length && i < 8; i++) {
-        const text = lines[i]?.text;
-        if (text) texts.push(text);
-      }
-    }
-    // Final-quiz question stems that get spoken aloud.
-    for (const q of unit.quizQuestions) {
-      if (q.audio) texts.push(q.audio);
-    }
-    prefetchTTSBatchKid(texts);
-  }, [unit]);
-
   if (!unit || !stage) return null;
 
   const stageBody = (() => {
     switch (stage.type) {
       case "vocab":
-        return <VocabStage vocabulary={unit.vocabulary} onFinish={handleFinish} />;
+        return (
+          <VocabStage
+            vocabulary={unit.vocabulary}
+            onFinish={handleFinish}
+            grade={grade}
+            unitId={unitId}
+            semId={semId}
+            stageIdx={stageIdx}
+          />
+        );
       case "listenWord":
         return (
           <ListenMcStage
             title="听音辨词"
             instruction="🎧 听一听，是哪个单词？"
             questions={listenWordQuestions}
+            grade={grade}
             onFinish={handleFinish}
             onCorrect={addStar}
             onWrong={(q) =>
@@ -830,13 +909,21 @@ export default function PrimaryHubStagePlay({ unitId, stageIdx, onComplete, onBa
           />
         );
       case "match":
-        return <MatchStage vocabulary={unit.vocabulary} onFinish={handleFinish} onMatch={addStar} />;
+        return (
+          <WordMatchingGame
+            vocabulary={unit.vocabulary}
+            grade={grade}
+            onFinish={handleFinish}
+            onMatch={addStar}
+          />
+        );
       case "sentence":
-        return <SentenceStage dialogues={unit.dialogues} onFinish={handleFinish} />;
+        return <SentenceStage dialogues={unit.dialogues} onFinish={handleFinish} grade={grade} />;
       case "write":
         return (
           <WriteStage
             vocabulary={unit.vocabulary}
+            grade={grade}
             onFinish={handleFinish}
             onCorrect={addStar}
             onWrong={(m) => addMistake({ ...m, unitId, unitTitle: unit.title })}
@@ -848,6 +935,7 @@ export default function PrimaryHubStagePlay({ unitId, stageIdx, onComplete, onBa
             title="听力测试"
             instruction="🎧 听一听，是哪一句？"
             questions={listenSentQuestions as ListeningQuestion[]}
+            grade={grade}
             onFinish={handleFinish}
             onCorrect={addStar}
             onWrong={(q) =>

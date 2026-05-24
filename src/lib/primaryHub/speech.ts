@@ -14,13 +14,21 @@
 import { speakKid } from "@/lib/speak";
 
 /** ASCII + curly apostrophes that break or silence cloud TTS when sent verbatim. */
-const APOSTROPHE_RE = /[''´`]/g;
+const APOSTROPHE_RE = /[''\u2019\u02BC\uFF07´`]/g;
+
+/** Cloud TTS reads lone "o" as the letter; "oh clock" matches how kids say o'clock. */
+function normalizeOClockPhrase(spoken: string): string {
+  return spoken.replace(/\bo\s*clock\b/gi, "oh clock");
+}
 
 /** Normalize display text for cloud TTS (UI still shows the original string). */
 export function toHubTtsText(text: string): string {
   const trimmed = text.trim();
   if (!trimmed) return trimmed;
-  return trimmed.replace(APOSTROPHE_RE, " ").replace(/\s+/g, " ").trim();
+  const lower = trimmed.toLowerCase();
+  if (lower === "o'clock" || lower === "oclock") return "oh clock";
+  const spoken = trimmed.replace(APOSTROPHE_RE, " ").replace(/\s+/g, " ").trim();
+  return normalizeOClockPhrase(spoken);
 }
 
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {

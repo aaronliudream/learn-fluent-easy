@@ -2,8 +2,9 @@ import { describe, expect, it } from "vitest";
 import { toHubTtsText } from "./speech";
 
 describe("toHubTtsText", () => {
-  it("speaks o'clock as o clock for TTS", () => {
-    expect(toHubTtsText("o'clock")).toBe("o clock");
+  it("speaks o'clock as oh clock for TTS (not letter O)", () => {
+    expect(toHubTtsText("o'clock")).toBe("oh clock");
+    expect(toHubTtsText("It's 7 o'clock.")).toBe("It s 7 oh clock.");
   });
 
   it("normalizes possessives and contractions for Unit 5+ prep", () => {

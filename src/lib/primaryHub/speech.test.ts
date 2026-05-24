@@ -1,15 +1,11 @@
-import { describe, expect, it, vi } from "vitest";
-import { hubSpeak, toHubTtsText } from "./speech";
-
-vi.mock("@/lib/speak", () => ({
-  speakKid: vi.fn(),
-  speakFromUrl: vi.fn(),
-}));
+import { describe, expect, it } from "vitest";
+import { OCLOCK_TTS_TEXT, toHubTtsText } from "./speech";
 
 describe("toHubTtsText", () => {
-  it("speaks o'clock as oh clock for TTS (not letter O)", () => {
-    expect(toHubTtsText("o'clock")).toBe("oh clock");
-    expect(toHubTtsText("It's 7 o'clock.")).toBe("It s 7 oh clock.");
+  it("hardcodes o'clock as o clock for TTS (never apostrophe)", () => {
+    expect(OCLOCK_TTS_TEXT).toBe("o clock");
+    expect(toHubTtsText("o'clock")).toBe("o clock");
+    expect(toHubTtsText("It's 7 o'clock.")).toBe("It s 7 o clock.");
   });
 
   it("normalizes possessives and contractions for Unit 5+ prep", () => {
@@ -21,16 +17,5 @@ describe("toHubTtsText", () => {
   it("leaves normal words unchanged", () => {
     expect(toHubTtsText("breakfast")).toBe("breakfast");
     expect(toHubTtsText("English class")).toBe("English class");
-  });
-});
-
-describe("hubSpeak", () => {
-  it("uses bundled MP3 for o'clock vocab token", async () => {
-    vi.stubGlobal("window", {});
-    const { speakFromUrl, speakKid } = await import("@/lib/speak");
-    hubSpeak("o'clock", 0.85, 4);
-    expect(speakFromUrl).toHaveBeenCalledWith("/audio/hub/oclock.mp3");
-    expect(speakKid).not.toHaveBeenCalled();
-    vi.unstubAllGlobals();
   });
 });

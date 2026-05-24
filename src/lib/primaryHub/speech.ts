@@ -11,22 +11,16 @@
  * The `rate` argument sets TTS speed (default 0.85 for primary hub). Calls
  * with rate ≤ 0.75 also map grade hint to 1 for extra-slow kid voice.
  */
-import { speakFromUrl, speakKid } from "@/lib/speak";
+import { speakKid } from "@/lib/speak";
 
-/** Bundled Lily voice clip — bypasses CDN/localStorage for a word that often caches badly. */
-const OCLOCK_STATIC_MP3 = "/audio/hub/oclock.mp3";
-
-function isOClockVocabToken(text: string): boolean {
-  const t = text.trim().toLowerCase();
-  return t === "o'clock" || t === "oclock" || t === "oh clock" || t === "o clock";
-}
+/** Hard-coded TTS text for the vocab token o'clock (never send the apostrophe to TTS/cache). */
+export const OCLOCK_TTS_TEXT = "o clock";
 
 /** ASCII + curly apostrophes that break or silence cloud TTS when sent verbatim. */
 const APOSTROPHE_RE = /[''\u2019\u02BC\uFF07´`]/g;
 
-/** Cloud TTS reads lone "o" as the letter; "oh clock" matches how kids say o'clock. */
 function normalizeOClockPhrase(spoken: string): string {
-  return spoken.replace(/\bo\s*clock\b/gi, "oh clock");
+  return spoken.replace(/\bo\s*clock\b/gi, OCLOCK_TTS_TEXT);
 }
 
 /** Normalize display text for cloud TTS (UI still shows the original string). */
@@ -34,17 +28,13 @@ export function toHubTtsText(text: string): string {
   const trimmed = text.trim();
   if (!trimmed) return trimmed;
   const lower = trimmed.toLowerCase();
-  if (lower === "o'clock" || lower === "oclock") return "oh clock";
+  if (lower === "o'clock" || lower === "oclock") return OCLOCK_TTS_TEXT;
   const spoken = trimmed.replace(APOSTROPHE_RE, " ").replace(/\s+/g, " ").trim();
   return normalizeOClockPhrase(spoken);
 }
 
 export function hubSpeak(text: string, rate = 0.85, grade?: number) {
   if (typeof window === "undefined") return;
-  if (isOClockVocabToken(text)) {
-    void speakFromUrl(OCLOCK_STATIC_MP3);
-    return;
-  }
   const gradeHint = rate <= 0.75 ? 1 : grade;
   const spoken = toHubTtsText(text);
   void speakKid(spoken, { grade: gradeHint, speed: rate });

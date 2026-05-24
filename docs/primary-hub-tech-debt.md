@@ -17,7 +17,7 @@
 
 ## ReadWrite 插图
 
-见 [add-readwrite-question.md](./add-readwrite-question.md) — `picture_choice` 支持 `image`（新 Unit）与 `visual`（u1 内置 SVG）二选一。
+见 [add-readwrite-question.md](./add-readwrite-question.md) — `picture_choice` 三路径：`visual`（主路径）/ `image`（escape hatch）/ `fill_choice`（无图）；与 [add-new-unit.md](./add-new-unit.md) §4.3 一致。
 
 ## 生成脚本
 
@@ -32,3 +32,9 @@
 - 找词关说明文案同上
 - **触发时机**：Unit 2 拼读内容（如 ir 等）上线前
 - **影响范围**：`PrimaryHubPhonics.tsx`、相关 ListenStage 标题等
+
+## ReadWrite visual key 可配置化（任务 9，暂编号 / 未排期）
+
+- **现状**：`ReadWritePictureVisual.tsx` 内置 5 个 `visual` key（u1 专用 SVG）。新 Unit 无法在不改 TS 的情况下新增 key，导致 u2–u6 实际常走 `image` 或 `fill_choice`，而非 `visual` 主路径。
+- **触发条件**：Unit 2–6 上线后，如果发现 `image` 路径过重（资源体积、加载时延）或视觉风格分散（emoji 风 vs 写实图混杂），则启动本任务，让 `visual` key 也走 JSON 配置。
+- **状态**：暂不排期；等 Unit 2–6 真实数据驱动设计。

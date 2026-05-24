@@ -25,9 +25,20 @@ Registry 会从文件名解析 `unitId`；`stageIdx` 可写在 JSON 内（如 `"
 }
 ```
 
-## picture_choice 插图：两种模式
+## picture_choice 插图：三路径选择（visual / image / 无图）
 
-### 模式 1 — 外部图片（新 Unit 推荐）
+本项目遵循「**主路径 + escape hatch**」模式（与 `docs/add-new-unit.md` §4.3 一致）：
+
+| 路径 | 字段 | 何时用 |
+|------|------|--------|
+| **主路径** | `visual` | 优先：可用轻量图示表达，不依赖精确场景细节 |
+| **Escape hatch** | `image` | 仅当题目强依赖精确插图（如钟表盘、楼层图、地图） |
+| **无图** | `fill_choice` | 纯句子填空，不需要插图 |
+
+> 注意：当前 `ReadWritePictureVisual.tsx` 仅内置 **5 个 u1 专用** `visual` key（`place_books` 等），新 Unit 暂时无法在**零 TS 改动**前提下新增 `visual` key。  
+> 因此新 Unit 的实际选择通常是：能不配图就用 `fill_choice`；需要配图则用 `image`。
+
+### 路径 1 — `image`（escape hatch）
 
 ```json
 {
@@ -47,7 +58,7 @@ Registry 会从文件名解析 `unitId`；`stageIdx` 可写在 JSON 内（如 `"
 - 路径 helper（可选）：`defaultReadWriteImagePath("g4v2_u2", "clock_8am.svg")` → `/primary/hub/g4v2_u2/clock_8am.svg`
 - 加载失败：显示带 `imageAlt` 的灰色占位框；DEV 下 console 警告
 
-### 模式 2 — 内置 SVG visual（仅 Unit 1 遗留）
+### 路径 2 — `visual`（u1 遗留内置 SVG）
 
 ```json
 {
@@ -59,7 +70,7 @@ Registry 会从文件名解析 `unitId`；`stageIdx` 可写在 JSON 内（如 `"
 }
 ```
 
-内置 key：`place_books` | `place_playground` | `floor_building` | `room_row` | `student_count`
+内置 key（仅 u1 遗留）：`place_books` | `place_playground` | `floor_building` | `room_row` | `student_count`
 
 ### 二选一规则
 

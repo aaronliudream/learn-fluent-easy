@@ -65,14 +65,27 @@ function mergeMistakes(a: Mistake[], b: Mistake[]): Mistake[] {
     .slice(0, 100);
 }
 
-function hasUnitActivity(units: Record<string, UnitState>): boolean {
-  return Object.values(units).some(
-    (u) =>
-      u.completedStages.length > 0 ||
-      (u.stageProgress && Object.keys(u.stageProgress).length > 0) ||
-      (u.vocabViewed && u.vocabViewed.length > 0) ||
-      u.stars > 0,
+export function unitHasActivity(u: UnitState): boolean {
+  return (
+    u.completedStages.length > 0 ||
+    (u.stageProgress != null && Object.keys(u.stageProgress).length > 0) ||
+    (u.vocabViewed != null && u.vocabViewed.length > 0) ||
+    (u.sentenceCompleted != null && u.sentenceCompleted.length > 0) ||
+    u.stars > 0
   );
+}
+
+export function hasUnitActivity(units: Record<string, UnitState>): boolean {
+  return Object.values(units).some(unitHasActivity);
+}
+
+/** Remove empty unit shells before cloud upsert (getUnitState side-effect pollution). */
+export function stripEmptyUnits(state: PrimaryHubPersist): PrimaryHubPersist {
+  const units: Record<string, UnitState> = {};
+  for (const [id, u] of Object.entries(state.units)) {
+    if (unitHasActivity(u)) units[id] = u;
+  }
+  return { ...state, units };
 }
 
 const emptyUnit = (): UnitState => ({

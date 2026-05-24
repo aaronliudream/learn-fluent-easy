@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findUnit } from "@/lib/primaryHub/courseData";
-import { getUnitState } from "@/lib/primaryHub/storage";
+import { readUnitState } from "@/lib/primaryHub/storage";
 import PrimaryHubStagePlay from "./PrimaryHubStagePlay";
 
 export default function PrimaryHubStage() {
@@ -27,7 +27,7 @@ export default function PrimaryHubStage() {
       stageIdx={stageIdx}
       onBack={() => nav(`${base}/semester/${semId}/unit/${unitId}`)}
       onComplete={(needAiTest) => {
-        const us = getUnitState(state, unitId);
+        const us = readUnitState(state, unitId);
         const stage = unit.stages[stageIdx];
         nav(`${base}/semester/${semId}/unit/${unitId}`, {
           state: { justCompleted: stageIdx, needAiTest, stageTitle: stage?.title },

@@ -3,14 +3,14 @@ import { usePrimaryHub } from "@/lib/primaryHub/context";
 import { findUnit } from "@/lib/primaryHub/courseData";
 import { getUnitProgress, getStagePercent } from "@/lib/primaryHub/progress";
 import { isReadWriteComingSoon } from "@/lib/primaryHub/stageCompletable";
-import { getUnitState } from "@/lib/primaryHub/storage";
+import { readUnitState } from "@/lib/primaryHub/storage";
 
 export default function PrimaryHubUnit() {
   const { semId, unitId } = useParams<{ semId: string; unitId: string }>();
   const { grade, state } = usePrimaryHub();
   const nav = useNavigate();
   const unit = unitId ? findUnit(unitId) : null;
-  const us = unitId ? getUnitState(state, unitId) : null;
+  const us = unitId ? readUnitState(state, unitId) : null;
   const p = unitId
     ? getUnitProgress(state, unitId)
     : { percent: 0, completed: 0, total: 0, stageCount: 0 };

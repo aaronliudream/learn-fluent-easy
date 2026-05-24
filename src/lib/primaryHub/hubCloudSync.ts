@@ -1,7 +1,12 @@
 import { supabase } from "@/integrations/supabase/client";
 import type { PrimaryHubGrade, PrimaryHubPersist } from "./types";
-import { mergePrimaryHubPersist, persistPayload } from "./hubCloudMerge";
-import { defaultPersist, loadPersist, savePersist } from "./storage";
+import {
+  hasUnitActivity,
+  mergePrimaryHubPersist,
+  persistPayload,
+  stripEmptyUnits,
+} from "./hubCloudMerge";
+import { defaultPersist, loadPersist, savePersist, savePersistLocalOnly, clearPersist, PRIMARY_HUB_GRADES } from "./storage";
 import { migratePersistUnits } from "./stageProgressMigrate";
 
 const SYNC_DEBOUNCE_MS = 1500;
@@ -51,7 +56,7 @@ export async function pullPrimaryHubProgress(
 }
 
 async function pushNow(userId: string, grade: PrimaryHubGrade, state: PrimaryHubPersist): Promise<void> {
-  const payload = persistPayload(state);
+  const payload = persistPayload(stripEmptyUnits(state));
   const { error } = await supabase.from("primary_hub_progress").upsert(
     {
       user_id: userId,
@@ -113,24 +118,93 @@ export async function flushPrimaryHubCloudPush(): Promise<void> {
 }
 
 /**
+ * Pull cloud progress only — does not read or upload localStorage.
+ */
+export async function hydratePrimaryHubCloudOnly(
+  userId: string,
+  grade: PrimaryHubGrade,
+  options?: { saveLocal?: boolean },
+): Promise<PrimaryHubPersist> {
+  const remote = await pullPrimaryHubProgress(userId, grade);
+  const result = remote ?? defaultPersist(grade);
+  if (options?.saveLocal !== false) savePersist(grade, result);
+  return result;
+}
+
+export type GuestMergeChoice = "merged" | "reset";
+
+export async function deletePrimaryHubCloudProgress(userId: string): Promise<void> {
+  const { error } = await supabase
+    .from("primary_hub_progress")
+    .delete()
+    .eq("user_id", userId);
+  if (error) throw new Error(`[primaryHub cloud] delete failed: ${error.message}`);
+}
+
+/** Apply user choice after guest-merge prompt (all grades with local activity). */
+export async function applyGuestMergeChoice(
+  userId: string,
+  choice: GuestMergeChoice,
+  localByGrade: Partial<Record<PrimaryHubGrade, PrimaryHubPersist>>,
+  currentGrade: PrimaryHubGrade,
+): Promise<PrimaryHubPersist> {
+  if (choice === "reset") {
+    cancelPrimaryHubCloudPush();
+    await deletePrimaryHubCloudProgress(userId);
+    for (const g of PRIMARY_HUB_GRADES) clearPersist(g);
+    const fresh = defaultPersist(currentGrade);
+    savePersistLocalOnly(currentGrade, fresh);
+    return fresh;
+  }
+
+  let currentResult = defaultPersist(currentGrade);
+  for (const g of PRIMARY_HUB_GRADES) {
+    const local = localByGrade[g];
+    if (!local) continue;
+    const remote = await pullPrimaryHubProgress(userId, g);
+    const merged = stripEmptyUnits(
+      mergePrimaryHubPersist(local, remote ?? defaultPersist(g)),
+    );
+    savePersist(g, merged);
+    if (g === currentGrade) currentResult = merged;
+    await pushNow(userId, g, merged);
+  }
+
+  if (!localByGrade[currentGrade]) {
+    currentResult = await hydratePrimaryHubCloudOnly(userId, currentGrade);
+  }
+  return currentResult;
+}
+
+/** Provisional state while prompt is open: cloud only, no local merge/upload. */
+export async function provisionalCloudStateForGrade(
+  userId: string,
+  grade: PrimaryHubGrade,
+): Promise<PrimaryHubPersist> {
+  const remote = await pullPrimaryHubProgress(userId, grade);
+  return remote ?? defaultPersist(grade);
+}
+
+/**
  * Pull cloud progress, merge with localStorage, persist locally, push merged state.
+ * Used when guest_merge_decision is already "merged".
  */
 export async function hydratePrimaryHubFromCloud(
   userId: string,
   grade: PrimaryHubGrade,
 ): Promise<PrimaryHubPersist> {
-  const local = loadPersist(grade);
+  const local = stripEmptyUnits(loadPersist(grade));
   const remote = await pullPrimaryHubProgress(userId, grade);
 
   if (!remote) {
     savePersist(grade, local);
-    if (Object.keys(local.units).length > 0 || local.mistakes.length > 0) {
+    if (hasUnitActivity(local.units) || local.mistakes.length > 0) {
       await pushNow(userId, grade, local);
     }
     return local;
   }
 
-  const merged = mergePrimaryHubPersist(local, remote);
+  const merged = stripEmptyUnits(mergePrimaryHubPersist(local, remote));
   savePersist(grade, merged);
   await pushNow(userId, grade, merged);
   return merged;

@@ -9,13 +9,30 @@ import {
   type ReactNode,
 } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { GuestMergePrompt } from "@/components/primaryHub/GuestMergePrompt";
 import {
+  fetchGuestMergeDecision,
+  setGuestMergeDecision,
+  type GuestMergeDecision,
+} from "./guestMergeDecision";
+import { hasAnyLocalPrimaryHubProgress, snapshotLocalProgressByGrade } from "./guestMergeLocal";
+import {
+  applyGuestMergeChoice,
   cancelPrimaryHubCloudPush,
   flushPrimaryHubCloudPush,
+  hydratePrimaryHubCloudOnly,
   hydratePrimaryHubFromCloud,
+  provisionalCloudStateForGrade,
   schedulePrimaryHubCloudPush,
 } from "./hubCloudSync";
-import { getUnitState, loadPersist, registerPrimaryHubCloudSync, savePersist } from "./storage";
+import {
+  getUnitState,
+  loadPersist,
+  registerPrimaryHubCloudSync,
+  savePersist,
+  savePersistLocalOnly,
+  setPrimaryHubCloudSyncBlocked,
+} from "./storage";
 import type { Mistake, PrimaryHubGrade, PrimaryHubPersist } from "./types";
 import { findUnit } from "./courseData";
 import { getTotalCompletedStages } from "./progress";
@@ -26,6 +43,7 @@ type Ctx = {
   state: PrimaryHubPersist;
   setState: React.Dispatch<React.SetStateAction<PrimaryHubPersist>>;
   cloudHydrating: boolean;
+  guestMergePending: boolean;
   persist: () => void;
   addMistake: (m: Omit<Mistake, "id" | "date">) => void;
   completeStage: (unitId: string, stageIdx: number) => boolean;
@@ -44,7 +62,10 @@ export function PrimaryHubProvider({
 }) {
   const [state, setState] = useState<PrimaryHubPersist>(() => loadPersist(grade));
   const [cloudHydrating, setCloudHydrating] = useState(false);
+  const [guestMergePending, setGuestMergePending] = useState(false);
+  const [guestMergeBusy, setGuestMergeBusy] = useState(false);
   const userIdRef = useRef<string | null>(null);
+  const localSnapshotRef = useRef<Partial<Record<PrimaryHubGrade, PrimaryHubPersist>>>({});
 
   const commit = useCallback((next: PrimaryHubPersist) => {
     savePersist(grade, next);
@@ -60,21 +81,90 @@ export function PrimaryHubProvider({
     return () => registerPrimaryHubCloudSync(null);
   }, [grade]);
 
+  const resolveGuestMerge = useCallback(
+    async (choice: GuestMergeDecision) => {
+      const userId = userIdRef.current;
+      if (!userId) return;
+      setGuestMergeBusy(true);
+      try {
+        cancelPrimaryHubCloudPush();
+        const next = await applyGuestMergeChoice(
+          userId,
+          choice,
+          localSnapshotRef.current,
+          grade,
+        );
+        await setGuestMergeDecision(userId, choice);
+        setPrimaryHubCloudSyncBlocked(false);
+        setGuestMergePending(false);
+        localSnapshotRef.current = {};
+        setState(next);
+      } finally {
+        setGuestMergeBusy(false);
+      }
+    },
+    [grade],
+  );
+
   useEffect(() => {
     let cancelled = false;
 
     const hydrate = async (userId: string | null) => {
+      const prevUserId = userIdRef.current;
       userIdRef.current = userId;
+
       if (!userId) {
         cancelPrimaryHubCloudPush();
+        setPrimaryHubCloudSyncBlocked(false);
+        setGuestMergePending(false);
+        localSnapshotRef.current = {};
         setState(loadPersist(grade));
         setCloudHydrating(false);
         return;
       }
+
+      if (prevUserId !== userId) {
+        setState(loadPersist(grade));
+      }
+
       setCloudHydrating(true);
       try {
-        const merged = await hydratePrimaryHubFromCloud(userId, grade);
-        if (!cancelled) setState(merged);
+        const decision = await fetchGuestMergeDecision(userId);
+        if (cancelled) return;
+
+        if (decision === "merged") {
+          setPrimaryHubCloudSyncBlocked(false);
+          setGuestMergePending(false);
+          const merged = await hydratePrimaryHubFromCloud(userId, grade);
+          if (!cancelled) setState(merged);
+          return;
+        }
+
+        if (decision === "reset") {
+          setPrimaryHubCloudSyncBlocked(false);
+          setGuestMergePending(false);
+          const cloudOnly = await hydratePrimaryHubCloudOnly(userId, grade);
+          if (!cancelled) setState(cloudOnly);
+          return;
+        }
+
+        if (hasAnyLocalPrimaryHubProgress()) {
+          localSnapshotRef.current = snapshotLocalProgressByGrade();
+          setPrimaryHubCloudSyncBlocked(true);
+          cancelPrimaryHubCloudPush();
+          const provisional = await provisionalCloudStateForGrade(userId, grade);
+          savePersistLocalOnly(grade, provisional);
+          if (!cancelled) {
+            setState(provisional);
+            setGuestMergePending(true);
+          }
+          return;
+        }
+
+        setPrimaryHubCloudSyncBlocked(false);
+        setGuestMergePending(false);
+        const cloudOnly = await hydratePrimaryHubCloudOnly(userId, grade);
+        if (!cancelled) setState(cloudOnly);
       } finally {
         if (!cancelled) setCloudHydrating(false);
       }
@@ -215,6 +305,7 @@ export function PrimaryHubProvider({
       state,
       setState,
       cloudHydrating,
+      guestMergePending,
       persist,
       addMistake,
       completeStage,
@@ -225,6 +316,7 @@ export function PrimaryHubProvider({
       grade,
       state,
       cloudHydrating,
+      guestMergePending,
       persist,
       addMistake,
       completeStage,
@@ -233,7 +325,25 @@ export function PrimaryHubProvider({
     ],
   );
 
-  return <PrimaryHubContext.Provider value={value}>{children}</PrimaryHubContext.Provider>;
+  const hubBlocked = cloudHydrating || guestMergePending;
+
+  return (
+    <PrimaryHubContext.Provider value={value}>
+      <GuestMergePrompt
+        open={guestMergePending}
+        busy={guestMergeBusy}
+        onReset={() => void resolveGuestMerge("reset")}
+        onMerge={() => void resolveGuestMerge("merged")}
+      />
+      {hubBlocked ? (
+        <div className="grid min-h-[50vh] place-items-center p-8 text-sm text-[#888780]">
+          {guestMergePending ? "请选择如何处理本浏览器中的学习记录…" : "Loading…"}
+        </div>
+      ) : (
+        children
+      )}
+    </PrimaryHubContext.Provider>
+  );
 }
 
 export function usePrimaryHub() {

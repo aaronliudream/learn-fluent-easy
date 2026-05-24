@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { findUnit } from "@/lib/primaryHub/courseData";
 import { shuffleArray, usePrimaryHub } from "@/lib/primaryHub/context";
-import { getUnitState, savePersist } from "@/lib/primaryHub/storage";
+import { getUnitState, readUnitState, savePersist } from "@/lib/primaryHub/storage";
 import { hubSpeak, hubSpeakAtSpeed, isOClockVocabToken, prefetchHubVocabulary, toHubTtsText } from "@/lib/primaryHub/speech";
 import { OClockVocabLabel } from "@/lib/primaryHub/OClockVocabLabel";
 import { getPhonicsForUnit } from "@/lib/primaryHub/phonicsRegistry";
@@ -1006,7 +1006,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
     onBack();
   }, [onBack]);
 
-  const us = getUnitState(state, unitId);
+  const us = readUnitState(state, unitId);
   const stars = state.units[unitId]?.stars ?? us.stars;
   const savedStagePercent = us.stageProgress?.[stageIdx] ?? 0;
 

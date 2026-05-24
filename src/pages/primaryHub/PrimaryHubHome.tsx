@@ -8,7 +8,7 @@ import {
   getUnitProgress,
 } from "@/lib/primaryHub/progress";
 import { findUnit, getGradeCourse, semesterIdsForGrade } from "@/lib/primaryHub/courseData";
-import { getUnitState } from "@/lib/primaryHub/storage";
+import { readUnitState } from "@/lib/primaryHub/storage";
 import { AITestCard } from "@/components/primaryHub/AITestCard";
 
 export default function PrimaryHubHome() {
@@ -21,7 +21,7 @@ export default function PrimaryHubHome() {
   const semV2 = getSemesterProgress(state, v2Id);
 
   const currentUnit = findUnit(state.currentUnit);
-  const us = currentUnit ? getUnitState(state, currentUnit.id) : null;
+  const us = currentUnit ? readUnitState(state, currentUnit.id) : null;
   const nextStageIdx = us?.completedStages.length ?? 0;
   const nextStage = currentUnit?.stages[nextStageIdx];
   const unitP = currentUnit ? getUnitProgress(state, currentUnit.id) : { percent: 0 };

@@ -3083,10 +3083,10 @@
               },
               {
                 "id": 212,
-                "q": "「dinner」与哪个词是一天的最后一餐？",
+                "q": "🍽️ Mike 一家晚上 6 点坐到餐桌前。妈妈说：「It's time for ___.」",
                 "opts": [
-                  "lunch",
                   "breakfast",
+                  "lunch",
                   "dinner",
                   "English class"
                 ],

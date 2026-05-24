@@ -180,14 +180,23 @@ function VocabStage({
   const activeOffset = activeGroupDef?.offset ?? 0;
   const phonicsRule = activeGroupDef?.showPhonicsRule ? getPhonicsRuleText(phonics) : null;
 
+  const markViewed = (globalIdx: number) => {
+    setViewed((prev) => {
+      if (prev.has(globalIdx)) return prev;
+      const next = new Set(prev);
+      next.add(globalIdx);
+      return next;
+    });
+  };
+
   const toggleCard = (localIdx: number) => {
     const v = activeItems[localIdx];
     if (!v) return;
     const globalIdx = activeOffset + localIdx;
     const isFlipped = flipped.has(globalIdx);
+    markViewed(globalIdx);
     if (!isFlipped) {
       setFlipped((prev) => new Set(prev).add(globalIdx));
-      setViewed((prev) => new Set(prev).add(globalIdx));
       hubSpeak(v.en, 0.85, grade);
     } else {
       setFlipped((prev) => {
@@ -198,7 +207,10 @@ function VocabStage({
     }
   };
 
-  const speakWord = (word: string) => hubSpeak(word, 0.85, grade);
+  const speakWord = (word: string, globalIdx: number) => {
+    markViewed(globalIdx);
+    hubSpeak(word, 0.85, grade);
+  };
 
   useEffect(() => {
     prefetchTTSBatchKid(
@@ -209,6 +221,10 @@ function VocabStage({
 
   const requiredViewed = vocabulary.length;
   const allViewed = viewed.size >= requiredViewed;
+  const remainingViewed = Math.max(0, requiredViewed - viewed.size);
+
+  const groupViewedCount = (group: NonNullable<typeof groups>[number]) =>
+    group.items.reduce((n, _item, i) => (viewed.has(group.offset + i) ? n + 1 : n), 0);
 
   return (
     <div className="rounded-2xl bg-white p-4 shadow-sm">
@@ -228,7 +244,7 @@ function VocabStage({
                   : "bg-[#F4F0E6] text-[#888780]"
               }`}
             >
-              {g.label} ({g.items.length})
+              {g.label} ({groupViewedCount(g)}/{g.items.length})
             </button>
           ))}
         </div>
@@ -242,7 +258,9 @@ function VocabStage({
           {phonicsRule}
         </div>
       )}
-      <div className="mb-3 text-[14px] text-[#888780]">💡 点击卡片看中文，点击 🔊 听发音</div>
+      <div className="mb-3 text-[14px] text-[#888780]">
+        💡 点击卡片翻转看中文；点击 🔊 或单词也会计入已查看
+      </div>
       <div className="grid grid-cols-2 gap-2">
             {activeItems.map((v, i) => {
               const globalIdx = activeOffset + i;
@@ -267,7 +285,7 @@ function VocabStage({
                     className="mt-1 text-[20px] font-semibold leading-tight"
                     onClick={(e) => {
                       e.stopPropagation();
-                      speakWord(v.en);
+                      speakWord(v.en, globalIdx);
                     }}
                   >
                     {highlightVocabWord(v.en, v.highlight)}
@@ -281,12 +299,12 @@ function VocabStage({
                     className="mt-2 inline-block rounded-full bg-[#378ADD] px-2 py-0.5 text-xs text-white"
                     onClick={(e) => {
                       e.stopPropagation();
-                      speakWord(v.en);
+                      speakWord(v.en, globalIdx);
                     }}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
                         e.stopPropagation();
-                        speakWord(v.en);
+                        speakWord(v.en, globalIdx);
                       }
                     }}
                   >
@@ -301,7 +319,7 @@ function VocabStage({
                     className="mt-1 text-[14px] text-[#888780]"
                     onClick={(e) => {
                       e.stopPropagation();
-                      speakWord(v.en);
+                      speakWord(v.en, globalIdx);
                     }}
                   >
                     {highlightVocabWord(v.en, v.highlight)}
@@ -312,12 +330,12 @@ function VocabStage({
                     className="mt-2 inline-block rounded-full bg-[#378ADD] px-2 py-0.5 text-xs text-white"
                     onClick={(e) => {
                       e.stopPropagation();
-                      speakWord(v.en);
+                      speakWord(v.en, globalIdx);
                     }}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
                         e.stopPropagation();
-                        speakWord(v.en);
+                        speakWord(v.en, globalIdx);
                       }
                     }}
                   >
@@ -346,10 +364,14 @@ function VocabStage({
       )}
       <div className="mt-3 text-center text-[14px] text-[#888780]">
         已查看：{viewed.size} / {requiredViewed}
-        {groups && !allViewed && " · 切换分组继续学习"}
+        {groups && !allViewed && ` · 还需 ${remainingViewed} 张，请切换「日常用词」「拼读词」标签`}
       </div>
       <PrimaryButton disabled={!allViewed} onClick={onFinish}>
-        {allViewed ? "✓ 进入下一关 →" : "查看完所有卡片再继续"}
+        {allViewed
+          ? "✓ 进入下一关 →"
+          : remainingViewed > 0
+            ? `还需查看 ${remainingViewed} 张卡片（共 ${requiredViewed} 张）`
+            : "查看完所有卡片再继续"}
       </PrimaryButton>
     </div>
   );

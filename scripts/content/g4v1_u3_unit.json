@@ -1,0 +1,69 @@
+{
+  "id": "g4v1_u3",
+  "num": 3,
+  "title": "My friends",
+  "cn": "我的朋友",
+  "emoji": "👫",
+  "available": true,
+  "published": true,
+  "vocabulary": [
+    { "en": "strong", "cn": "强壮的", "emoji": "💪" },
+    { "en": "friendly", "cn": "友好的", "emoji": "😊" },
+    { "en": "quiet", "cn": "安静的", "emoji": "🤫" },
+    { "en": "hair", "cn": "头发", "emoji": "💇" },
+    { "en": "shoe", "cn": "鞋", "emoji": "👟" },
+    { "en": "glasses", "cn": "眼镜", "emoji": "👓" },
+    { "en": "his", "cn": "他的", "emoji": "👦" },
+    { "en": "her", "cn": "她的", "emoji": "👧" }
+  ],
+  "vocabGroups": [
+    { "id": "personality_p25", "name": "性格", "header": "性格 · 3 个词", "indices": [0, 1, 2] },
+    { "id": "appearance_p28", "name": "外貌与随身", "header": "外貌与随身 · 3 个词", "indices": [3, 4, 5] },
+    { "id": "possessive_p24", "name": "他的 / 她的", "header": "物主代词 · 2 个词", "indices": [6, 7] }
+  ],
+  "dialogues": [
+    {
+      "title": "A Let's talk",
+      "lines": [
+        { "role": "Amy", "text": "I have a friend.", "cn": "我有一个朋友。" },
+        { "role": "Wu Binbin", "text": "A boy or girl?", "cn": "男孩还是女孩？" },
+        { "role": "Amy", "text": "A boy. He's tall and strong.", "cn": "男孩。他又高又壮。" },
+        { "role": "Wu Binbin", "text": "Who is he?", "cn": "他是谁？" }
+      ]
+    },
+    {
+      "title": "B Let's talk",
+      "lines": [
+        { "role": "Amy", "text": "He has glasses and his shoes are blue.", "cn": "他戴眼镜，鞋子是蓝色的。" },
+        { "role": "Sarah", "text": "His name is Zhang Peng.", "cn": "他叫张鹏。" }
+      ]
+    }
+  ],
+  "stages": [
+    { "id": "s1", "title": "认识单词", "subtitle": "8个核心单词", "icon": "📚", "type": "vocab", "time": "5分钟" },
+    { "id": "s2", "title": "听音辨词", "subtitle": "听力训练", "icon": "🎧", "type": "listenWord", "time": "5分钟" },
+    { "id": "s3", "title": "单词配对", "subtitle": "巩固词义", "icon": "🎮", "type": "match", "time": "5分钟" },
+    { "id": "s4", "title": "学习句型", "subtitle": "核心句型", "icon": "💬", "type": "sentence", "time": "5分钟" },
+    { "id": "s5", "title": "默写挑战", "subtitle": "动手拼写", "icon": "✏️", "type": "write", "time": "8分钟" },
+    { "id": "s6", "title": "听力测试", "subtitle": "听句选答案", "icon": "🎯", "type": "listenSent", "time": "6分钟" },
+    { "id": "s7", "title": "读写训练", "subtitle": "读句填词", "icon": "📝", "type": "readWrite", "time": "8分钟" },
+    { "id": "s8", "title": "最终通关", "subtitle": "综合挑战", "icon": "🏆", "type": "finalQuiz", "time": "10分钟" }
+  ],
+  "quizQuestions": [
+    { "id": 301, "q": "看中文选词：「安静的」", "opts": ["friendly", "quiet", "strong", "cute"], "answer": 1, "point": "u3:recall_personality", "dim": "vocab" },
+    { "id": 302, "q": "看中文选词：「眼镜」", "opts": ["hair", "glasses", "shoes", "hat"], "answer": 1, "point": "u3:recall_appearance", "dim": "vocab" },
+    { "id": 303, "q": "看中文选词：「强壮的」", "opts": ["strong", "quiet", "friendly", "short"], "answer": 0, "point": "u3:recall_personality", "dim": "vocab" },
+    { "id": 304, "q": "同学想打听 Zhang Peng 的名字，下面哪句问得对？", "opts": ["What's his name?", "What's her name?", "What's your name?", "Who is he?"], "answer": 0, "point": "u3:recall_possessive", "dim": "sentence" },
+    { "id": 305, "q": "Zhang Peng 戴的眼镜是蓝色的。下面哪句在说他？", "opts": ["His glasses are blue.", "Her glasses are blue.", "His glasses are brown.", "His shoes are blue."], "answer": 0, "point": "u3:recall_possessive", "dim": "sentence" },
+    { "id": 307, "q": "课本里 Kate 的头发垂到肩膀以下。下面哪句在描述 Kate？", "opts": ["She has long hair.", "She has short hair.", "He has long hair.", "She has a hat."], "answer": 0, "point": "u3:recall_appearance", "dim": "sentence" },
+    { "id": 308, "q": "体育课上，这个男孩能轻松搬起最重的箱子。下面哪句最适合形容他？", "opts": ["He's tall and strong.", "He's short and thin.", "He's quiet and friendly.", "She's tall and strong."], "answer": 0, "point": "u3:recall_personality", "dim": "sentence" },
+    { "id": 309, "q": "Amy 的朋友每天放学后，把老师用粉笔写的字擦干净——他擦的是教室前面那样东西。它是哪个？", "opts": ["blackboard", "window", "picture", "door"], "answer": 0, "point": "u1:recall_classroom_item", "dim": "vocab" },
+    { "id": 310, "q": "Wu Binbin 把课本一股脑塞进去、背在肩膀上，那样东西是绿色的。下面哪句在说他？", "opts": ["He has a green bag.", "He has a green book.", "He has green glasses.", "He has a green hat."], "answer": 0, "point": "u2:recall_have", "dim": "sentence" },
+    { "id": 311, "q": "课本里有个男孩，他的鞋和泥土一个颜色。下面哪句对？", "opts": ["His shoes are brown.", "His shoes are blue.", "His shoes are white.", "His shoes are orange."], "answer": 0, "point": "u2:recall_color", "dim": "sentence" }
+  ],
+  "listeningQuestions": [
+    { "audio": "His name is Zhang Peng.", "opts": ["His name is Zhang Peng.", "Her name is Zhang Peng.", "What's his name?", "His name is Mike."], "answer": 0 },
+    { "audio": "She has long hair.", "opts": ["She has long hair.", "She has short hair.", "He has long hair.", "She has long shoes."], "answer": 0 },
+    { "audio": "His glasses are blue.", "opts": ["His glasses are blue.", "Her glasses are blue.", "His glasses are brown.", "His shoes are blue."], "answer": 0 }
+  ]
+}

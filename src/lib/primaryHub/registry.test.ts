@@ -160,9 +160,16 @@ describe("readWriteRegistry auto-discovery", () => {
     expect(config?.questions[0].type).toBe("fill_choice");
   });
 
+  it("loads g4v1_u3 fill_choice readWrite at stage 6", () => {
+    const config = getReadWriteConfig("g4v1_u3", 6);
+    expect(config).not.toBeNull();
+    expect(config?.questions).toHaveLength(6);
+    expect(config?.questions[0].type).toBe("fill_choice");
+  });
+
   it("ignores legacy multi-stage g4v2_u1_stage6.json", () => {
     const configs = __getReadWriteConfigsForTest();
-    expect(configs).toHaveLength(8);
+    expect(configs).toHaveLength(9);
     expect(configs.every((c) => c.questions?.length)).toBe(true);
   });
 });

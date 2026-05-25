@@ -1,0 +1,75 @@
+{
+  "unitId": "g4v1_u3",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 6,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "fill_choice",
+      "sentence": "James has a green bag. What is ___ name?",
+      "hint_zh": "问名字",
+      "correctSentence": "James has a green bag. What is his name?",
+      "options": [
+        { "text": "his", "correct": true },
+        { "text": "her", "correct": false },
+        { "text": "its", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Ann has a blue hat. What is ___ name?",
+      "hint_zh": "问名字",
+      "correctSentence": "Ann has a blue hat. What is her name?",
+      "options": [
+        { "text": "her", "correct": true },
+        { "text": "his", "correct": false },
+        { "text": "your", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Kate has ___ hair.",
+      "hint_zh": "长头发",
+      "correctSentence": "Kate has long hair.",
+      "options": [
+        { "text": "long", "correct": true },
+        { "text": "short", "correct": false },
+        { "text": "brown", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Kate likes new ___ very much. She wears them every day.",
+      "hint_zh": "新鞋子",
+      "correctSentence": "Kate likes new shoes very much. She wears them every day.",
+      "options": [
+        { "text": "shoes", "correct": true },
+        { "text": "hair", "correct": false },
+        { "text": "hats", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Ann is ___. She helps everyone and smiles a lot.",
+      "hint_zh": "友好的",
+      "correctSentence": "Ann is friendly. She helps everyone and smiles a lot.",
+      "options": [
+        { "text": "friendly", "correct": true },
+        { "text": "quiet", "correct": false },
+        { "text": "cute", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Ben can't see clearly, so he has ___.",
+      "hint_zh": "戴眼镜",
+      "correctSentence": "Ben can't see clearly, so he has glasses.",
+      "options": [
+        { "text": "glasses", "correct": true },
+        { "text": "hair", "correct": false },
+        { "text": "a hat", "correct": false }
+      ]
+    }
+  ]
+}

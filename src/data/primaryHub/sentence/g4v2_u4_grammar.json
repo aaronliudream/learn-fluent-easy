@@ -1,0 +1,76 @@
+{
+  "lessonId": "g4v2_u4_grammar",
+  "unitId": "g4v2_u4",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "Mike 和 Sarah 在农场看蔬菜和动物，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "近处 · What are these?",
+      "description": "Mike 指着近处蔬菜问 Sarah，确认是不是胡萝卜、西红柿。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Look at these! Are these carrots?", "zh": "看这些！是胡萝卜吗？" },
+          "answer": { "en": "No.", "zh": "不是。" },
+          "tag": "A Let's talk"
+        },
+        {
+          "id": "A2",
+          "question": { "en": "What are these?", "zh": "这些是什么？" },
+          "answer": { "en": "They're tomatoes.", "zh": "是西红柿。" },
+          "tag": "A Let's talk"
+        },
+        {
+          "id": "A3",
+          "question": { "en": "Try some! They're good.", "zh": "尝一个，很好吃。" },
+          "answer": { "en": "Thanks. Yum.", "zh": "谢谢，真好吃。" },
+          "tag": "A Let's talk"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "远处与数量 · those / How many",
+      "description": "Sarah 问远处的动物，再数一数有多少匹马。",
+      "color": "pink",
+      "estimatedMinutes": 4,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "What are those?", "zh": "那些是什么？" },
+          "answer": { "en": "Are they horses?", "zh": "它们是马吗？" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B2",
+          "question": { "en": "No, they aren't. They're ducks.", "zh": "不是，是鸭子。" },
+          "answer": null,
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B3",
+          "question": { "en": "How many horses do you have?", "zh": "你有多少匹马？" },
+          "answer": { "en": "Seventeen.", "zh": "十七匹。" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "C1",
+          "question": { "en": "I like tomatoes. I like potatoes.", "zh": "我喜欢西红柿、土豆。（歌谣）" },
+          "answer": { "en": "Carrots I will try.", "zh": "胡萝卜我也要尝。（歌谣）" },
+          "tag": "Let's chant · Vegetables"
+        },
+        {
+          "id": "C2",
+          "question": { "en": "But onions make me cry.", "zh": "洋葱让我流泪。（歌谣）" },
+          "answer": null,
+          "tag": "Let's chant · Vegetables"
+        }
+      ]
+    }
+  ]
+}

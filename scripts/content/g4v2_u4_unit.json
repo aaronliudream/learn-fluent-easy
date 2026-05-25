@@ -1,0 +1,274 @@
+{
+  "id": "g4v2_u4",
+  "num": 4,
+  "title": "At the farm",
+  "cn": "在农场",
+  "emoji": "🐮",
+  "available": true,
+  "vocabulary": [
+    { "en": "tomato", "cn": "西红柿", "emoji": "🍅", "phonetic": "/təˈmɑːtəʊ/", "page": 39, "type": "core" },
+    { "en": "potato", "cn": "马铃薯；土豆", "emoji": "🥔", "phonetic": "/pəˈteɪtəʊ/", "page": 39, "type": "core" },
+    { "en": "green beans", "cn": "豆角；四季豆", "emoji": "🫛", "phonetic": "/ɡriːn biːnz/", "page": 39, "type": "core" },
+    { "en": "carrot", "cn": "胡萝卜", "emoji": "🥕", "phonetic": "/ˈkærət/", "page": 39, "type": "core" },
+    { "en": "horse", "cn": "马", "emoji": "🐴", "phonetic": "/hɔːs/", "page": 42, "type": "core" },
+    { "en": "cow", "cn": "母牛；奶牛", "emoji": "🐄", "phonetic": "/kaʊ/", "page": 42, "type": "core" },
+    { "en": "sheep", "cn": "羊；绵羊", "emoji": "🐑", "phonetic": "/ʃiːp/", "page": 42, "type": "core" },
+    { "en": "hen", "cn": "母鸡", "emoji": "🐔", "phonetic": "/hen/", "page": 42, "type": "core" },
+    { "en": "these", "cn": "这些", "emoji": "👆", "phonetic": "/ðiːz/", "page": 38, "type": "extended" },
+    { "en": "yum", "cn": "（味道非常好）", "emoji": "😋", "phonetic": "/jʌm/", "page": 38, "type": "extended" },
+    { "en": "animal", "cn": "兽；动物", "emoji": "🐾", "phonetic": "/ˈænɪml/", "page": 41, "type": "extended" },
+    { "en": "those", "cn": "那些", "emoji": "👉", "phonetic": "/ðəʊz/", "page": 41, "type": "extended" },
+    { "en": "garden", "cn": "花园；菜园", "emoji": "🌱", "phonetic": "/ˈɡɑːdn/", "page": 43, "type": "extended" },
+    { "en": "farm", "cn": "农场", "emoji": "🚜", "phonetic": "/fɑːm/", "page": 43, "type": "extended" },
+    { "en": "goat", "cn": "山羊", "emoji": "🐐", "phonetic": "/ɡəʊt/", "page": 43, "type": "extended" },
+    { "en": "eat", "cn": "吃", "emoji": "🍽️", "phonetic": "/iːt/", "page": 43, "type": "extended" }
+  ],
+  "vocabGroups": [
+    {
+      "id": "vegetables",
+      "name": "蔬菜",
+      "header": "蔬菜 · 4 个词",
+      "indices": [0, 1, 2, 3]
+    },
+    {
+      "id": "farm_animals",
+      "name": "农场动物",
+      "header": "农场动物 · 4 个词",
+      "indices": [4, 5, 6, 7]
+    },
+    {
+      "id": "extra_listen",
+      "name": "拓展听说",
+      "header": "拓展听说 · 8 个词",
+      "indices": [8, 9, 10, 11, 12, 13, 14, 15]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "A Let's talk",
+      "lines": [
+        { "role": "Mike", "text": "Look at these! Are these carrots?", "cn": "看这些！这些是胡萝卜吗？" },
+        { "role": "Sarah", "text": "No.", "cn": "不是。" },
+        { "role": "Mike", "text": "What are these?", "cn": "这些是什么？" },
+        { "role": "Sarah", "text": "They're tomatoes.", "cn": "是西红柿。" },
+        { "role": "Mike", "text": "Try some! They're good.", "cn": "尝一个！很好吃。" },
+        { "role": "Sarah", "text": "Thanks. Yum.", "cn": "谢谢。真好吃。" }
+      ]
+    },
+    {
+      "title": "B Let's talk",
+      "lines": [
+        { "role": "Mike", "text": "Wow! You have a lot of animals! What are those?", "cn": "哇！你有很多动物！那些是什么？" },
+        { "role": "Sarah", "text": "Are they horses?", "cn": "它们是马吗？" },
+        { "role": "Mike", "text": "No, they aren't. They're ducks.", "cn": "不是，是鸭子。" },
+        { "role": "Sarah", "text": "How many horses do you have?", "cn": "你有多少匹马？" },
+        { "role": "Mike", "text": "Seventeen.", "cn": "十七匹。" }
+      ]
+    }
+  ],
+  "stages": [
+    { "id": "s1", "title": "认识单词", "subtitle": "16 个词 · 蔬菜·动物·拓展", "icon": "📚", "type": "vocab", "time": "10分钟" },
+    { "id": "s2", "title": "听音辨词", "subtitle": "听一听，选单词", "icon": "🎧", "type": "listenWord", "time": "5分钟" },
+    { "id": "s3", "title": "单词配对", "subtitle": "词义连连看", "icon": "🎮", "type": "match", "time": "5分钟" },
+    { "id": "s4", "title": "学习句型", "subtitle": "these/those · 歌谣跟读", "icon": "💬", "type": "sentence", "time": "8分钟" },
+    { "id": "s5", "title": "默写挑战", "subtitle": "核心词拼写", "icon": "✏️", "type": "write", "time": "8分钟" },
+    { "id": "s6", "title": "听力测试", "subtitle": "听对话选答案", "icon": "🎯", "type": "listenSent", "time": "6分钟" },
+    { "id": "s7", "title": "读写训练", "subtitle": "填空选词 · 农场", "icon": "📝", "type": "readWrite", "time": "10分钟" },
+    { "id": "s8", "title": "最终通关", "subtitle": "综合挑战 · 12 题", "icon": "🏆", "type": "finalQuiz", "time": "10分钟" }
+  ],
+  "quizQuestions": [
+    {
+      "id": 401,
+      "q": "听意思选词：「西红柿」",
+      "opts": ["potato", "tomato", "carrot", "green beans"],
+      "answer": 1,
+      "point": "u4:recall_vocab",
+      "dim": "vocab"
+    },
+    {
+      "id": 402,
+      "q": "听意思选词：「绵羊」",
+      "opts": ["goat", "sheep", "hen", "horse"],
+      "answer": 1,
+      "point": "u4:recall_vocab",
+      "dim": "vocab"
+    },
+    {
+      "id": 403,
+      "q": "Mike 指着近处的蔬菜问：「What are these?」他在问什么？",
+      "opts": ["这些是什么", "那些是什么", "有多少匹马", "天气怎么样"],
+      "answer": 0,
+      "point": "u4:recall_these",
+      "dim": "sentence"
+    },
+    {
+      "id": 404,
+      "q": "🍅 Mike 问 Sarah：「What are these?」Sarah 看到红色圆蔬菜，她会回答：",
+      "opts": [
+        "They're tomatoes.",
+        "They're horses.",
+        "No, you can't.",
+        "It's sunny and warm."
+      ],
+      "answer": 0,
+      "point": "u4:recall_these",
+      "dim": "sentence"
+    },
+    {
+      "id": 405,
+      "q": "🥕 Sarah 指着近处橙色长条蔬菜问 Mike：「Are these carrots?」Mike 确认后应说：",
+      "opts": [
+        "Yes, they are.",
+        "No, they aren't. They're tomatoes.",
+        "They're ducks.",
+        "Seventeen."
+      ],
+      "answer": 0,
+      "point": "u4:recall_these",
+      "dim": "sentence"
+    },
+    {
+      "id": 406,
+      "q": "🐴 Mike 望着**远处**的马群问 Sarah：「Are they horses?」Sarah 看到的确是马，她回答：",
+      "opts": [
+        "Yes, they are.",
+        "No, they aren't. They're ducks.",
+        "They're tomatoes.",
+        "It's time for lunch."
+      ],
+      "answer": 0,
+      "point": "u4:recall_those",
+      "dim": "sentence"
+    },
+    {
+      "id": 407,
+      "q": "Sarah 问 Mike：「How many horses do you have?」Mike 数一数后回答：",
+      "opts": ["Seventeen.", "Seven o'clock.", "They're sheep.", "Yes, they are."],
+      "answer": 0,
+      "point": "u4:recall_many",
+      "dim": "sentence"
+    },
+    {
+      "id": 408,
+      "q": "🌱 菜园里种着胡萝卜和土豆。英文常说 This is the vegetable ___。",
+      "opts": ["garden", "farm", "yum", "those"],
+      "answer": 0,
+      "point": "u4:recall_vocab",
+      "dim": "vocab"
+    },
+    {
+      "id": 409,
+      "q": "🌅 参观农场那天早上 7 点，妈妈对小明说：「It's time to ___。」",
+      "opts": ["get up", "go to bed", "go to school", "eat tomatoes"],
+      "answer": 0,
+      "point": "u2:recall_routine",
+      "dim": "sentence"
+    },
+    {
+      "id": 410,
+      "q": "☀️ 出发前查天气：北京今天晴朗又温暖。选正确句子：",
+      "opts": [
+        "It's sunny and warm.",
+        "It's rainy and cool.",
+        "They're tomatoes.",
+        "No, you can't."
+      ],
+      "answer": 0,
+      "point": "u3:recall_weather",
+      "dim": "sentence"
+    },
+    {
+      "id": 411,
+      "q": "🐐 农场里那些不是绵羊，是山羊。选合适单词：",
+      "opts": ["goats", "horses", "breakfast", "cloudy"],
+      "answer": 0,
+      "point": "u4:recall_vocab",
+      "dim": "vocab"
+    },
+    {
+      "id": 412,
+      "q": "⏰ 参观结束要回学校。妈妈对 Mike 说：「Hurry up! It's time to go to ___。」",
+      "opts": ["school", "farm", "potato", "degree"],
+      "answer": 0,
+      "point": "u2:recall_routine",
+      "dim": "sentence"
+    }
+  ],
+  "listeningQuestions": [
+    {
+      "audio": "Look at these! Are these carrots?",
+      "opts": [
+        "Look at these! Are these carrots?",
+        "Look at those! Are those carrots?",
+        "Look at these! Are these tomatoes?",
+        "Look at these! What are those?"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "What are these?",
+      "opts": [
+        "What are these?",
+        "What are those?",
+        "How many horses?",
+        "Are these carrots?"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "They're tomatoes.",
+      "opts": [
+        "They're tomatoes.",
+        "They're potatoes.",
+        "They're horses.",
+        "They're carrots."
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Yes, they are.",
+      "opts": [
+        "Yes, they are.",
+        "No, they aren't.",
+        "Yes, you can.",
+        "No, it isn't."
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "What are those?",
+      "opts": [
+        "What are those?",
+        "What are these?",
+        "Are they horses?",
+        "How many horses do you have?"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "No, they aren't. They're ducks.",
+      "opts": [
+        "No, they aren't. They're ducks.",
+        "Yes, they are. They're ducks.",
+        "No, they aren't. They're horses.",
+        "No, you can't. It's cold outside."
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "How many horses do you have?",
+      "opts": [
+        "How many horses do you have?",
+        "How many cows do you have?",
+        "What are those?",
+        "Are they horses?"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Seventeen.",
+      "opts": ["Seventeen.", "Seven.", "Seventy.", "Sixteen."],
+      "answer": 0
+    }
+  ]
+}

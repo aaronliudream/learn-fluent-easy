@@ -79,7 +79,7 @@
   "quizQuestions": [
     {
       "id": 401,
-      "q": "听意思选词：「西红柿」",
+      "q": "看中文选词：「西红柿」",
       "opts": ["potato", "tomato", "carrot", "green beans"],
       "answer": 1,
       "point": "u4:recall_vocab",
@@ -87,7 +87,7 @@
     },
     {
       "id": 402,
-      "q": "听意思选词：「绵羊」",
+      "q": "看中文选词：「绵羊」",
       "opts": ["goat", "sheep", "hen", "horse"],
       "answer": 1,
       "point": "u4:recall_vocab",
@@ -166,7 +166,7 @@
     },
     {
       "id": 410,
-      "q": "☀️ Chen Jie 在电话里描述北京天气。选她最可能说的句子：",
+      "q": "Chen Jie 在北京。窗外阳光明媚，她穿着短袖。她会怎么描述天气？",
       "opts": [
         "It's sunny and warm.",
         "It's rainy and cool.",

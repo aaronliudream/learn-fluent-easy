@@ -356,7 +356,7 @@
     },
     {
       "id": 209,
-      "q": "听意思选词：「回家」",
+      "q": "看中文选词：「回家」",
       "opts": ["go home", "go to bed", "get up", "breakfast"],
       "answer": 0,
       "point": "u2:recall_vocab",

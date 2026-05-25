@@ -10,6 +10,16 @@ Unit 2 Let's spell：**ir / ur** — girl, bird, nurse, hamburger, dirt, birth, 
 
 全 Hub 默认 **0.85**（`hubSpeakSpeed.ts`），句型关顶部可调。本 Unit 无单独 JSON 字段。
 
+## 题干文案（finalQuiz · 无音频选择题）
+
+| 场景 | 标准题干 | 说明 |
+|------|----------|------|
+| **看中文选英文** | `看中文选词：「{中文释义}」` | finalQuiz / 无 `audio` 字段；**禁止**写「听意思选词」 |
+| **真听音选词** | s2 `listenWord` | UI 为「🎧 听一听，是哪个单词？」+ 🔊 播英文 TTS |
+| **真听音选句** | s6 `listenSent` | UI 为「🎧 听一听，是哪一句？」+ 🔊 播 `listeningQuestions[].audio` |
+
+`FinalQuizStage` 只渲染 `q` 文字，**不会**播放题干音频。
+
 ## 出题铁律（finalQuiz · Unit 2–6 必守）
 
 1. **题干不得含正确答案的英文原词**（释义题用中文描述，不用「「tomato」的意思是？」式自指）

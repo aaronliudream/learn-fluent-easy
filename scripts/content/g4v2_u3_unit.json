@@ -74,7 +74,7 @@
   "quizQuestions": [
     {
       "id": 301,
-      "q": "听意思选词：「寒冷的」",
+      "q": "看中文选词：「寒冷的」",
       "opts": ["cool", "cold", "warm", "hot"],
       "answer": 1,
       "point": "u3:recall_vocab",
@@ -82,7 +82,7 @@
     },
     {
       "id": 302,
-      "q": "听意思选词：「多风的」",
+      "q": "看中文选词：「多风的」",
       "opts": ["windy", "cloudy", "snowy", "rainy"],
       "answer": 0,
       "point": "u3:recall_vocab",
@@ -111,7 +111,7 @@
     },
     {
       "id": 305,
-      "q": "北京今天晴朗又温暖。选正确句子：",
+      "q": "中文：北京今天晴朗又温暖。选对应英文句子：",
       "opts": [
         "It's rainy and cool.",
         "It's sunny and warm.",

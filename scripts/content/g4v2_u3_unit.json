@@ -90,7 +90,7 @@
     },
     {
       "id": 303,
-      "q": "What's the weather like? 是在问什么？",
+      "q": "天气预报里，What's the weather like? 这句话在问什么？",
       "opts": ["几点了", "天气怎么样", "能出去吗", "在哪里"],
       "answer": 1,
       "point": "u3:recall_pattern",
@@ -140,7 +140,7 @@
     },
     {
       "id": 308,
-      "q": "出门玩之前，妈妈提醒你要注意安全。英文常说：",
+      "q": "出门玩之前，妈妈提醒你要注意安全。这时她可能会说：",
       "opts": ["be careful", "how about", "go home", "hurry up"],
       "answer": 0,
       "point": "u3:recall_vocab",

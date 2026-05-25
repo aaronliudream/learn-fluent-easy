@@ -51,8 +51,8 @@
     },
     {
       "type": "fill_choice",
-      "sentence": "The price tag says 89 dollars. Mum says: Sorry, Sarah. It's too ___.",
-      "hint_zh": "89 美元，妈妈觉得太贵",
+      "sentence": "The price tag says 89 yuan. Mum says: Sorry, Sarah. It's too ___.",
+      "hint_zh": "标价八十九元，妈妈觉得太贵",
       "correctSentence": "Sorry, Sarah. It's too expensive.",
       "options": [
         { "text": "expensive", "correct": true },

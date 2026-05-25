@@ -61,7 +61,7 @@
         {
           "id": "B4",
           "question": { "en": "Yes. How much is this skirt?", "zh": "这条短裙多少钱？" },
-          "answer": { "en": "It's $89.", "zh": "89 美元。" },
+          "answer": { "en": "It's eighty-nine yuan.", "zh": "八十九元。" },
           "tag": "B Let's talk"
         },
         {

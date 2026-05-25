@@ -34,6 +34,11 @@ Unit 2 Let's spell：**ir / ur** — girl, bird, nurse, hamburger, dirt, birth, 
    - 反例：「麦克唐纳先生的 ___」选项 farm / garden 都成立。
    - 正例：「Cows, hens and sheep live here. Mr MacDonald's ___」→ 有动物只能是 farm。
 
+7. **中文题干须自然，场景须一致**（finalQuiz / readWrite / 句型关中文同理）：
+   - 中文须符合母语者习惯，**禁止**按英文句式逐字硬译（如把 how are 译成「……今天怎么样？」指价格/贵贱）。
+   - 涉及**货币、地点、角色**时，须符合 PEP 课本设定（四下人物在中国场景：价钱用 **元 / yuan**，勿混用美元场景除非课文明确）。
+   - 自检：读题干出声，是否像小学语文老师会写的提示？
+
 ## 跨 Unit 复现钩子（finalQuiz）
 
 `quizQuestions[].point` 使用前缀，供 Unit 3–6 选题脚本或人工挑题：

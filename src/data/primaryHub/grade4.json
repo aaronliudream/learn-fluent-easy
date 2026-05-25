@@ -2966,7 +2966,7 @@
               },
               {
                 "id": 203,
-                "q": "What time is it? 的意思是？",
+                "q": "看钟问时间时，What time is it? 这句话在问什么？",
                 "opts": [
                   "几点了",
                   "几点钟去上学",
@@ -3487,7 +3487,7 @@
               },
               {
                 "id": 303,
-                "q": "What's the weather like? 是在问什么？",
+                "q": "天气预报里，What's the weather like? 这句话在问什么？",
                 "opts": [
                   "几点了",
                   "天气怎么样",
@@ -3552,7 +3552,7 @@
               },
               {
                 "id": 308,
-                "q": "出门玩之前，妈妈提醒你要注意安全。英文常说：",
+                "q": "出门玩之前，妈妈提醒你要注意安全。这时她可能会说：",
                 "opts": [
                   "be careful",
                   "how about",
@@ -4919,7 +4919,7 @@
               },
               {
                 "en": "dollar",
-                "cn": "元（美元等）",
+                "cn": "美元（识读词；课文购物场景用元）",
                 "emoji": "💲",
                 "phonetic": "/ˈdɒlə(r)/",
                 "page": 61,
@@ -5162,7 +5162,7 @@
               },
               {
                 "id": 604,
-                "q": "John 在鞋店要 6 号鞋。店员让他试穿后摇头说太小了。John 明白问题，会说：",
+                "q": "John 在鞋店要 6 号鞋。试穿后店员摇头说太小了。John 知道是尺码问题，会说：",
                 "opts": [
                   "They're too small.",
                   "They're just right!",
@@ -5188,7 +5188,7 @@
               },
               {
                 "id": 606,
-                "q": "Sarah 看中一条短裙，标价牌写着 89 美元。妈妈看了一眼价格，对 Sarah 说：",
+                "q": "Sarah 看中一条短裙，标价牌写着 89 元。妈妈看了一眼价格，对 Sarah 说：",
                 "opts": [
                   "Sorry, Sarah. It's too expensive.",
                   "I'll take it!",
@@ -5201,7 +5201,7 @@
               },
               {
                 "id": 607,
-                "q": "商场海报写着：Today all sunglasses and gloves are five yuan! 问：太阳镜和手套今天怎么样？",
+                "q": "商场海报写着：太阳镜和手套今天只要五元。这两样东西今天贵不贵？",
                 "opts": [
                   "They are very cheap.",
                   "They are too expensive.",
@@ -5214,7 +5214,7 @@
               },
               {
                 "id": 608,
-                "q": "Sarah 拿着一条短裙问店员价钱，她该问：",
+                "q": "Sarah 拿着一条短裙，想问店员这条裙子多少钱。她该问：",
                 "opts": [
                   "How much is this skirt?",
                   "How much are those big shoes?",
@@ -5303,7 +5303,7 @@
                 "audio": "It's eighty-five yuan.",
                 "opts": [
                   "It's eighty-five yuan.",
-                  "It's $89.",
+                  "It's eighty-nine yuan.",
                   "They are very cheap.",
                   "They're too big."
                 ],

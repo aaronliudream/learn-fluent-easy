@@ -4,6 +4,7 @@ import type {
   ReadWriteSimplifiedQuestion,
 } from "@/lib/primaryHub/readWriteTypes";
 import ReadWritePictureVisual from "@/components/primaryHub/ReadWritePictureVisual";
+import { buildFillChoiceGlueParts } from "@/lib/primaryHub/fillChoiceDisplay";
 import { splitFillChoiceSentence } from "@/lib/primaryHub/fillChoiceSentence";
 
 type Props = {
@@ -45,16 +46,36 @@ function PictureChoiceBody({ q }: { q: Extract<ReadWriteSimplifiedQuestion, { ty
   );
 }
 
+function FillChoiceBlankSpan({ token }: { token: string }) {
+  const minCh = Math.max(token.length, 3);
+  return (
+    <span
+      className="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]"
+      style={{ minWidth: `${minCh}ch` }}
+    >
+      {token}
+    </span>
+  );
+}
+
 function FillChoiceBody({ q }: { q: Extract<ReadWriteSimplifiedQuestion, { type: "fill_choice" }> }) {
   const { before, after, token } = splitFillChoiceSentence(q.sentence);
+  const { outerBefore, glueBefore, glueAfter, outerAfter } = buildFillChoiceGlueParts(
+    before,
+    after,
+    token,
+    { wordsBefore: 1, wordsAfter: 2 },
+  );
   return (
     <div className="rounded-2xl border border-[#EEEAE0] bg-[#FFF8F0] px-4 py-6 text-center">
-      <p className="text-[22px] font-bold leading-snug text-[#2C2C2A]">
-        {before}
-        <span className="mx-1 inline-block min-w-[80px] border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]">
-          {token}
+      <p className="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">
+        {outerBefore}
+        <span className="whitespace-nowrap">
+          {glueBefore}
+          <FillChoiceBlankSpan token={token} />
+          {glueAfter}
         </span>
-        {after}
+        {outerAfter}
       </p>
       <p className="mt-2 text-[14px] text-[#888780]">选一个词填入空格</p>
     </div>

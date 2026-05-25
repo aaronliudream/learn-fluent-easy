@@ -76,12 +76,15 @@ describe("sentenceRegistry auto-discovery", () => {
     expect(lesson?.subModules).toHaveLength(2);
   });
 
-  it("does not register unrelated units", () => {
-    expect(getSentenceLesson("g4v2_u6", 3)).toBeNull();
+  it("loads g4v2_u6 grammar lesson at stage 3", () => {
+    const lesson = getSentenceLesson("g4v2_u6", 3);
+    expect(lesson).not.toBeNull();
+    expect(lesson?.lessonId).toBe("g4v2_u6_grammar");
+    expect(lesson?.subModules).toHaveLength(2);
   });
 
-  it("discovers sentence lessons for u1–u5", () => {
-    expect(__getSentenceLessonsForTest()).toHaveLength(5);
+  it("discovers sentence lessons for u1–u6", () => {
+    expect(__getSentenceLessonsForTest()).toHaveLength(6);
   });
 });
 
@@ -122,14 +125,17 @@ describe("readWriteRegistry auto-discovery", () => {
     expect(config?.questions[0].type).toBe("fill_choice");
   });
 
-  it("ignores legacy multi-stage g4v2_u1_stage6.json", () => {
-    const configs = __getReadWriteConfigsForTest();
-    expect(configs).toHaveLength(5);
-    expect(configs.every((c) => c.questions?.length)).toBe(true);
+  it("loads g4v2_u6 fill_choice readWrite at stage 6", () => {
+    const config = getReadWriteConfig("g4v2_u6", 6);
+    expect(config).not.toBeNull();
+    expect(config?.questions).toHaveLength(6);
+    expect(config?.questions[0].type).toBe("fill_choice");
   });
 
-  it("does not register unrelated units", () => {
-    expect(getReadWriteConfig("g4v2_u6", 6)).toBeNull();
+  it("ignores legacy multi-stage g4v2_u1_stage6.json", () => {
+    const configs = __getReadWriteConfigsForTest();
+    expect(configs).toHaveLength(6);
+    expect(configs.every((c) => c.questions?.length)).toBe(true);
   });
 });
 

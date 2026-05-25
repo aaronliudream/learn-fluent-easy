@@ -4799,43 +4799,197 @@
             "vocabulary": [
               {
                 "en": "glove",
-                "cn": "手套",
-                "emoji": "📘"
+                "cn": "（分手指的）手套",
+                "emoji": "🧤",
+                "phonetic": "/ɡlʌv/",
+                "page": 59,
+                "type": "core"
               },
               {
                 "en": "scarf",
-                "cn": "围巾",
-                "emoji": "📘"
+                "cn": "围巾；披巾",
+                "emoji": "🧣",
+                "phonetic": "/skɑːf/",
+                "page": 59,
+                "type": "core"
               },
               {
                 "en": "umbrella",
-                "cn": "伞",
-                "emoji": "📘"
+                "cn": "伞；雨伞",
+                "emoji": "☂️",
+                "phonetic": "/ʌmˈbrelə/",
+                "page": 59,
+                "type": "core"
               },
               {
                 "en": "sunglasses",
                 "cn": "太阳镜",
-                "emoji": "📘"
+                "emoji": "🕶️",
+                "phonetic": "/ˈsʌnɡlɑːsɪz/",
+                "page": 59,
+                "type": "core"
               },
               {
                 "en": "pretty",
-                "cn": "美观的",
-                "emoji": "📘"
+                "cn": "美观的；精致的",
+                "emoji": "✨",
+                "phonetic": "/ˈprɪti/",
+                "page": 62,
+                "type": "core"
               },
               {
                 "en": "expensive",
-                "cn": "昂贵的",
-                "emoji": "📘"
+                "cn": "昂贵的；花钱多的",
+                "emoji": "💎",
+                "phonetic": "/ɪkˈspensɪv/",
+                "page": 62,
+                "type": "core"
               },
               {
                 "en": "cheap",
-                "cn": "花钱少的",
-                "emoji": "📘"
+                "cn": "花钱少的；便宜的",
+                "emoji": "🏷️",
+                "phonetic": "/tʃiːp/",
+                "page": 62,
+                "type": "core"
               },
               {
                 "en": "nice",
                 "cn": "好的",
-                "emoji": "📘"
+                "emoji": "👍",
+                "phonetic": "/naɪs/",
+                "page": 62,
+                "type": "core"
+              },
+              {
+                "en": "try on",
+                "cn": "试穿",
+                "emoji": "👗",
+                "phonetic": "/traɪ ɒn/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "size",
+                "cn": "尺码；号",
+                "emoji": "📏",
+                "phonetic": "/saɪz/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "of course",
+                "cn": "当然",
+                "emoji": "✅",
+                "phonetic": "/əv kɔːs/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "too",
+                "cn": "太；过于",
+                "emoji": "⚠️",
+                "phonetic": "/tuː/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "just",
+                "cn": "正好；恰好",
+                "emoji": "👌",
+                "phonetic": "/dʒʌst/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "how much",
+                "cn": "多少钱",
+                "emoji": "💵",
+                "phonetic": "/haʊ mʌtʃ/",
+                "page": 61,
+                "type": "extended"
+              },
+              {
+                "en": "eighty",
+                "cn": "八十",
+                "emoji": "8️⃣",
+                "phonetic": "/ˈeɪti/",
+                "page": 61,
+                "type": "extended"
+              },
+              {
+                "en": "dollar",
+                "cn": "元（美元等）",
+                "emoji": "💲",
+                "phonetic": "/ˈdɒlə(r)/",
+                "page": 61,
+                "type": "extended"
+              },
+              {
+                "en": "sale",
+                "cn": "特价销售；大减价",
+                "emoji": "🛒",
+                "phonetic": "/seɪl/",
+                "page": 63,
+                "type": "extended"
+              },
+              {
+                "en": "more",
+                "cn": "更多的",
+                "emoji": "➕",
+                "phonetic": "/mɔː(r)/",
+                "page": 63,
+                "type": "extended"
+              },
+              {
+                "en": "us",
+                "cn": "我们",
+                "emoji": "👥",
+                "phonetic": "/ʌs/",
+                "page": 63,
+                "type": "extended"
+              }
+            ],
+            "vocabGroups": [
+              {
+                "id": "accessories",
+                "name": "配饰",
+                "header": "配饰 · 4 个词",
+                "indices": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "id": "shopping_words",
+                "name": "购物评价",
+                "header": "购物评价 · 4 个词",
+                "indices": [
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              },
+              {
+                "id": "extra_listen",
+                "name": "拓展词",
+                "header": "拓展词 · 11 个词",
+                "indices": [
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18
+                ]
               }
             ],
             "dialogues": [
@@ -4849,8 +5003,23 @@
                   },
                   {
                     "role": "Sarah",
-                    "text": "Yes. Can I try this dress on?",
-                    "cn": "是的。我可以试穿这条连衣裙吗？"
+                    "text": "Yes. This dress is pretty. How much is it?",
+                    "cn": "是的。这条连衣裙很漂亮。多少钱？"
+                  },
+                  {
+                    "role": "Saleswoman",
+                    "text": "It's eighty-five yuan.",
+                    "cn": "八十五元。"
+                  },
+                  {
+                    "role": "Sarah",
+                    "text": "Can I try it on?",
+                    "cn": "我可以试穿吗？"
+                  },
+                  {
+                    "role": "Saleswoman",
+                    "text": "Sure.",
+                    "cn": "当然。"
                   }
                 ]
               },
@@ -4858,14 +5027,29 @@
                 "title": "B Let's talk",
                 "lines": [
                   {
-                    "role": "Sarah",
-                    "text": "How much is this skirt?",
-                    "cn": "这条短裙多少钱？"
+                    "role": "Saleswoman",
+                    "text": "Can I help you?",
+                    "cn": "我能帮你吗？"
+                  },
+                  {
+                    "role": "John",
+                    "text": "Yes. These shoes are nice. Can I try them on? Size 6, please.",
+                    "cn": "是的。这双鞋很好看。我能试穿吗？请给我 6 号。"
                   },
                   {
                     "role": "Saleswoman",
-                    "text": "It's $89.",
-                    "cn": "89美元。"
+                    "text": "No. They're too small.",
+                    "cn": "不行，太小了。"
+                  },
+                  {
+                    "role": "John",
+                    "text": "Hmm. OK. Let's try size 7.",
+                    "cn": "嗯，好吧。试试 7 号。"
+                  },
+                  {
+                    "role": "Saleswoman",
+                    "text": "They're just right!",
+                    "cn": "正好合适！"
                   }
                 ]
               }
@@ -4874,15 +5058,15 @@
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "8个核心单词",
+                "subtitle": "19 个词 · 配饰·评价·拓展",
                 "icon": "📚",
                 "type": "vocab",
-                "time": "5分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s2",
                 "title": "听音辨词",
-                "subtitle": "听力训练",
+                "subtitle": "听一听，选单词",
                 "icon": "🎧",
                 "type": "listenWord",
                 "time": "5分钟"
@@ -4890,7 +5074,7 @@
               {
                 "id": "s3",
                 "title": "单词配对",
-                "subtitle": "巩固词义",
+                "subtitle": "词义连连看",
                 "icon": "🎮",
                 "type": "match",
                 "time": "5分钟"
@@ -4898,15 +5082,15 @@
               {
                 "id": "s4",
                 "title": "学习句型",
-                "subtitle": "核心句型",
+                "subtitle": "购物·尺码 · 歌谣跟读",
                 "icon": "💬",
                 "type": "sentence",
-                "time": "5分钟"
+                "time": "8分钟"
               },
               {
                 "id": "s5",
                 "title": "默写挑战",
-                "subtitle": "动手拼写",
+                "subtitle": "核心词拼写",
                 "icon": "✏️",
                 "type": "write",
                 "time": "8分钟"
@@ -4914,7 +5098,7 @@
               {
                 "id": "s6",
                 "title": "听力测试",
-                "subtitle": "听句选答案",
+                "subtitle": "听对话选答案",
                 "icon": "🎯",
                 "type": "listenSent",
                 "time": "6分钟"
@@ -4922,15 +5106,15 @@
               {
                 "id": "s7",
                 "title": "读写训练",
-                "subtitle": "即将上线 · 看图写句",
+                "subtitle": "填空选词 · 购物",
                 "icon": "📝",
                 "type": "readWrite",
-                "time": "12分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s8",
                 "title": "最终通关",
-                "subtitle": "综合挑战",
+                "subtitle": "综合挑战 · 12 题",
                 "icon": "🏆",
                 "type": "finalQuiz",
                 "time": "10分钟"
@@ -4938,160 +5122,160 @@
             ],
             "quizQuestions": [
               {
-                "q": "「glove」是什么意思？",
+                "id": 601,
+                "q": "看中文选词：「围巾」",
                 "opts": [
-                  "太阳镜",
-                  "伞",
-                  "围巾",
-                  "手套"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「scarf」是什么意思？",
-                "opts": [
-                  "好的",
-                  "帽子",
-                  "围巾",
-                  "美观的"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「umbrella」是什么意思？",
-                "opts": [
-                  "昂贵的",
-                  "伞",
-                  "外套",
-                  "围巾"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「sunglasses」是什么意思？",
-                "opts": [
-                  "手套",
-                  "围巾",
-                  "太阳镜",
-                  "裤子"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「pretty」是什么意思？",
-                "opts": [
-                  "美观的",
-                  "裤子",
-                  "手套",
-                  "太阳镜"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「expensive」是什么意思？",
-                "opts": [
-                  "花钱少的",
-                  "好的",
-                  "昂贵的",
-                  "伞"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cheap」是什么意思？",
-                "opts": [
-                  "连衣裙",
-                  "花钱少的",
-                  "美观的",
-                  "短裤"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「nice」是什么意思？",
-                "opts": [
-                  "好的",
-                  "裤子",
-                  "昂贵的",
-                  "连衣裙"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「手套」？",
-                "opts": [
-                  "coat",
-                  "sunglasses",
                   "glove",
-                  "shirt"
+                  "umbrella",
+                  "scarf",
+                  "sunglasses"
                 ],
                 "answer": 2,
-                "point": "词汇",
+                "point": "u6:vocab_scarf",
                 "dim": "vocab"
               },
               {
-                "q": "「scarf」的中文是？",
+                "id": 602,
+                "q": "看中文选词：「昂贵的」",
                 "opts": [
-                  "花钱少的",
-                  "围巾",
-                  "美观的",
-                  "裤子"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「购物」核心词是？",
-                "opts": [
-                  "expensive",
-                  "sunglasses",
-                  "umbrella",
-                  "glove"
+                  "cheap",
+                  "nice",
+                  "pretty",
+                  "expensive"
                 ],
                 "answer": 3,
-                "point": "词汇",
+                "point": "u6:vocab_expensive",
                 "dim": "vocab"
               },
               {
-                "q": "Whose coat is this? 在问什么？",
+                "id": 603,
+                "q": "店员问 Sarah：「Can I help you?」Sarah 想试穿店里一条漂亮的红色连衣裙。Sarah 回答：",
                 "opts": [
-                  "什么颜色",
-                  "多少钱",
-                  "在哪里",
-                  "这是谁的外套"
+                  "Yes. This dress is pretty. Can I try it on?",
+                  "Sorry, they're not for sale.",
+                  "They're too big.",
+                  "It's time to go home."
                 ],
-                "answer": 3,
-                "point": "句型",
+                "answer": 0,
+                "point": "u6:can_i_help",
                 "dim": "sentence"
               },
               {
-                "q": "「umbrella」的意思是？",
+                "id": 604,
+                "q": "John 在鞋店要 6 号鞋。店员让他试穿后摇头说太小了。John 明白问题，会说：",
                 "opts": [
-                  "美观的",
-                  "伞",
-                  "裤子",
-                  "裙子"
+                  "They're too small.",
+                  "They're just right!",
+                  "Of course. Here you are.",
+                  "How much is this skirt?"
                 ],
-                "answer": 1,
-                "point": "词汇",
+                "answer": 0,
+                "point": "u6:too_small",
+                "dim": "sentence"
+              },
+              {
+                "id": 605,
+                "q": "John 换上 7 号鞋，店员笑着说合脚了。店员说：",
+                "opts": [
+                  "They're just right!",
+                  "They're too big.",
+                  "No. They're too small.",
+                  "They're not for sale."
+                ],
+                "answer": 0,
+                "point": "u6:just_right",
+                "dim": "sentence"
+              },
+              {
+                "id": 606,
+                "q": "Sarah 看中一条短裙，标价牌写着 89 美元。妈妈看了一眼价格，对 Sarah 说：",
+                "opts": [
+                  "Sorry, Sarah. It's too expensive.",
+                  "I'll take it!",
+                  "They are very cheap.",
+                  "Yes. Can I try these on?"
+                ],
+                "answer": 0,
+                "point": "u6:too_expensive",
+                "dim": "sentence"
+              },
+              {
+                "id": 607,
+                "q": "商场海报写着：Today all sunglasses and gloves are five yuan! 问：太阳镜和手套今天怎么样？",
+                "opts": [
+                  "They are very cheap.",
+                  "They are too expensive.",
+                  "They are not for sale.",
+                  "They are too small."
+                ],
+                "answer": 0,
+                "point": "u6:sale_cheap",
+                "dim": "sentence"
+              },
+              {
+                "id": 608,
+                "q": "Sarah 拿着一条短裙问店员价钱，她该问：",
+                "opts": [
+                  "How much is this skirt?",
+                  "How much are those big shoes?",
+                  "Whose coat is this?",
+                  "What time is it?"
+                ],
+                "answer": 0,
+                "point": "u6:how_much",
+                "dim": "sentence"
+              },
+              {
+                "id": 609,
+                "q": "Sarah 逛完街，家里时钟指向晚上 7:30。妈妈对 Sarah 说：「It's time for ___。」",
+                "opts": [
+                  "dinner",
+                  "breakfast",
+                  "school",
+                  "farm"
+                ],
+                "answer": 0,
+                "point": "u2:recall_routine",
+                "dim": "sentence"
+              },
+              {
+                "id": 610,
+                "q": "外面雷声大作、雨点打在窗户上。妈妈让 Chen Jie 去商场前带上能挡雨的 ___。",
+                "opts": [
+                  "umbrella",
+                  "sunglasses",
+                  "glove",
+                  "tomato"
+                ],
+                "answer": 0,
+                "point": "u3:recall_weather",
                 "dim": "vocab"
+              },
+              {
+                "id": 611,
+                "q": "超市蔬菜区，Mike 指着近处圆圆的、红红的蔬菜问 Sarah：「What are these?」Sarah 会回答：",
+                "opts": [
+                  "They're tomatoes.",
+                  "They're gloves.",
+                  "It's rainy and cool.",
+                  "They're just right!"
+                ],
+                "answer": 0,
+                "point": "u4:recall_vocab",
+                "dim": "sentence"
+              },
+              {
+                "id": 612,
+                "q": "失物处有一双绿鞋，鞋舌贴着 Chen Jie。Mike 自己的鞋也是绿的，但这双不是他的。Amy 问 Mike：「Are these yours?」Mike 说：",
+                "opts": [
+                  "No, they aren't. They're Chen Jie's.",
+                  "Yes, they are.",
+                  "It's mine.",
+                  "Can I help you?"
+                ],
+                "answer": 0,
+                "point": "u5:recall_yours",
+                "dim": "sentence"
               }
             ],
             "listeningQuestions": [
@@ -5099,39 +5283,79 @@
                 "audio": "Can I help you?",
                 "opts": [
                   "Can I help you?",
-                  "Can I help you.",
-                  "glove",
-                  "scarf"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Yes. Can I try this dress on?",
-                "opts": [
-                  "Yes. Can I try this dress on?",
-                  "Yes. Can I try this dress on.",
-                  "glove",
-                  "scarf"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "How much is this skirt?",
-                "opts": [
+                  "Can I try them on?",
                   "How much is this skirt?",
-                  "How much is this skirt.",
-                  "glove",
-                  "scarf"
+                  "They're too small."
                 ],
                 "answer": 0
               },
               {
-                "audio": "It's $89.",
+                "audio": "Yes. This dress is pretty. How much is it?",
                 "opts": [
+                  "Yes. This dress is pretty. How much is it?",
+                  "Yes. These shoes are nice. Can I try them on?",
+                  "Sorry, Sarah. It's too expensive.",
+                  "They're just right!"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "It's eighty-five yuan.",
+                "opts": [
+                  "It's eighty-five yuan.",
                   "It's $89.",
-                  "It is $89.",
-                  "glove",
-                  "scarf"
+                  "They are very cheap.",
+                  "They're too big."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Yes. These shoes are nice. Can I try them on? Size 6, please.",
+                "opts": [
+                  "Yes. These shoes are nice. Can I try them on? Size 6, please.",
+                  "Yes. This dress is pretty. Can I try it on?",
+                  "No. They're too small.",
+                  "How much are those big shoes?"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "No. They're too small.",
+                "opts": [
+                  "No. They're too small.",
+                  "They're too big.",
+                  "They're just right!",
+                  "Of course. Here you are."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "They're just right!",
+                "opts": [
+                  "They're just right!",
+                  "They're too small.",
+                  "They're too big.",
+                  "Sorry, they're not for sale."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Sorry, Sarah. It's too expensive.",
+                "opts": [
+                  "Sorry, Sarah. It's too expensive.",
+                  "I'll take it!",
+                  "It's very pretty.",
+                  "They are very cheap."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Today all sunglasses and gloves are five yuan! They are very cheap.",
+                "opts": [
+                  "Today all sunglasses and gloves are five yuan! They are very cheap.",
+                  "How much is this skirt?",
+                  "Put on your shirt.",
+                  "It's time to go home."
                 ],
                 "answer": 0
               }

@@ -1,0 +1,88 @@
+{
+  "lessonId": "g4v2_u6_grammar",
+  "unitId": "g4v2_u6",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "Sarah 和 John 在商店挑衣服鞋子，一起来练购物句型吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "帮忙与试穿 · Can I help you?",
+      "description": "Sarah 在服装店看连衣裙，问价钱并试穿。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Can I help you?", "zh": "我能帮你吗？" },
+          "answer": { "en": "Yes. This dress is pretty. How much is it?", "zh": "是的。这条连衣裙很漂亮。多少钱？" },
+          "tag": "A Let's talk"
+        },
+        {
+          "id": "A2",
+          "question": { "en": "It's eighty-five yuan.", "zh": "八十五元。" },
+          "answer": { "en": "Can I try it on?", "zh": "我可以试穿吗？" },
+          "tag": "A Let's talk"
+        },
+        {
+          "id": "A3",
+          "question": { "en": "Sure.", "zh": "当然。" },
+          "answer": null,
+          "tag": "A Let's talk"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "尺码与价钱 · too / How much",
+      "description": "John 试鞋换尺码，Sarah 和妈妈讨论围巾和裙子的价格。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Yes. These shoes are nice. Can I try them on? Size 6, please.", "zh": "这双鞋很好看。我能试穿 6 号吗？" },
+          "answer": { "en": "No. They're too small.", "zh": "不行，太小了。" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Hmm. OK. Let's try size 7.", "zh": "嗯，试试 7 号。" },
+          "answer": { "en": "They're just right!", "zh": "正好合适！" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B3",
+          "question": { "en": "That scarf is pretty. How much is it?", "zh": "那条围巾很漂亮。多少钱？" },
+          "answer": { "en": "It's 10 yuan.", "zh": "十元。" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Yes. How much is this skirt?", "zh": "这条短裙多少钱？" },
+          "answer": { "en": "It's $89.", "zh": "89 美元。" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B5",
+          "question": { "en": "Sorry, Sarah. It's too expensive.", "zh": "对不起，太贵了。" },
+          "answer": null,
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "C1",
+          "question": { "en": "Today all sunglasses and gloves are five yuan!", "zh": "今天太阳镜和手套只要五元！（歌谣）" },
+          "answer": { "en": "They are very cheap.", "zh": "非常便宜。（歌谣）" },
+          "tag": "Let's chant · 歌谣"
+        },
+        {
+          "id": "C2",
+          "question": { "en": "We have many nice scarves, too — red, yellow, brown and more!", "zh": "还有许多好看的围巾——红的、黄的、棕的，还有更多！（歌谣）" },
+          "answer": { "en": "Come and see us today!", "zh": "今天来看看吧！（歌谣）" },
+          "tag": "Let's chant · 歌谣"
+        }
+      ]
+    }
+  ]
+}

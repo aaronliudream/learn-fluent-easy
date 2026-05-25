@@ -9,13 +9,12 @@ describe("isUnitPublished", () => {
     expect(isUnitListed(u2!)).toBe(true);
   });
 
-  it("hides g4v2_u4–u6 on main until content launch", () => {
+  it("lists g4v2_u4–u6 after cross-unit launch", () => {
     for (const id of ["g4v2_u4", "g4v2_u5", "g4v2_u6"] as const) {
       const unit = findUnit(id);
       expect(unit).not.toBeNull();
-      expect(unit!.published).toBe(false);
-      expect(isUnitPublished(unit!)).toBe(false);
-      expect(isUnitListed(unit!)).toBe(false);
+      expect(isUnitPublished(unit!)).toBe(true);
+      expect(isUnitListed(unit!)).toBe(true);
     }
   });
 });

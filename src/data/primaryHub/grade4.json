@@ -4919,7 +4919,7 @@
               },
               {
                 "en": "dollar",
-                "cn": "美元（识读词；课文购物场景用元）",
+                "cn": "美元（元；美元）",
                 "emoji": "💲",
                 "phonetic": "/ˈdɒlə(r)/",
                 "page": 61,
@@ -5188,7 +5188,7 @@
               },
               {
                 "id": 606,
-                "q": "Sarah 看中一条短裙，标价牌写着 89 元。妈妈看了一眼价格，对 Sarah 说：",
+                "q": "B Let's talk 服装店：Sarah 看中一条短裙，标价牌写着 89 美元。妈妈看了一眼价格，对 Sarah 说：",
                 "opts": [
                   "Sorry, Sarah. It's too expensive.",
                   "I'll take it!",
@@ -5214,7 +5214,7 @@
               },
               {
                 "id": 608,
-                "q": "Sarah 拿着一条短裙，想问店员这条裙子多少钱。她该问：",
+                "q": "B Let's talk 服装店：Sarah 拿着一条短裙，想问这条裙子多少钱。她该问：",
                 "opts": [
                   "How much is this skirt?",
                   "How much are those big shoes?",
@@ -5303,7 +5303,7 @@
                 "audio": "It's eighty-five yuan.",
                 "opts": [
                   "It's eighty-five yuan.",
-                  "It's eighty-nine yuan.",
+                  "It's eighty-nine dollars.",
                   "They are very cheap.",
                   "They're too big."
                 ],

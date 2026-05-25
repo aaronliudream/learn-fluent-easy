@@ -98,12 +98,12 @@
     },
     {
       "id": 304,
-      "q": "外面很冷，妈妈不让出门。选合适回答：",
+      "q": "❄️ 外面很冷。小明问妈妈：「Can I go outside now?」妈妈会怎么回答？",
       "opts": [
         "Yes, you can. It's warm.",
         "No, you can't. It's cold outside.",
         "It's sunny and hot.",
-        "It's time for lunch."
+        "OK, let's go outside."
       ],
       "answer": 1,
       "point": "u3:recall_can",

@@ -1,4 +1,5 @@
 import type { ReadWriteSimplifiedConfig } from "@/lib/primaryHub/readWriteTypes";
+import { warnFillChoiceQuestion } from "@/lib/primaryHub/fillChoiceSentence";
 import { warnPictureChoiceQuestion } from "@/lib/primaryHub/readWriteTypes";
 import {
   basename,
@@ -56,8 +57,12 @@ function loadReadWriteConfigs(): ReadWriteSimplifiedConfig[] {
     }
 
     raw.questions.forEach((question, index) => {
+      const ctx = `${basename(filePath)} q${index + 1}`;
       if (question.type === "picture_choice") {
-        warnPictureChoiceQuestion(question, `${basename(filePath)} q${index + 1}`);
+        warnPictureChoiceQuestion(question, ctx);
+      }
+      if (question.type === "fill_choice") {
+        warnFillChoiceQuestion(question.sentence, ctx);
       }
     });
 

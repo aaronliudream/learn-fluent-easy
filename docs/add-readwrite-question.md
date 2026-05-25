@@ -83,6 +83,15 @@ Registry 会从文件名解析 `unitId`；`stageIdx` 可写在 JSON 内（如 `"
 
 ## fill_choice 题型
 
+### 空格占位符（`sentence` 字段）
+
+| 规则 | 说明 |
+|------|------|
+| **规范写法** | `____`（4 个下划线），与 `FillChoiceBody` 文档示例一致 |
+| **兼容写法** | `___`（3 个下划线）及更长连续下划线；组件用 `_{3,}` 贪婪匹配，**整段只算一个空** |
+| **禁止** | 一题里多处空白（DEV 会 warn，只渲染第一处） |
+| **校验** | 注册表加载时 `validateFillChoiceSentence` / `warnFillChoiceQuestion`（DEV） |
+
 ```json
 {
   "type": "fill_choice",

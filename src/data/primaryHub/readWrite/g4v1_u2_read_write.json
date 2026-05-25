@@ -1,0 +1,75 @@
+{
+  "unitId": "g4v1_u2",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 6,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "fill_choice",
+      "sentence": "Amy shows her new bag. She says: I have a new ___.",
+      "hint_zh": "新书包",
+      "correctSentence": "I have a new schoolbag.",
+      "options": [
+        { "text": "schoolbag", "correct": true },
+        { "text": "classroom", "correct": false },
+        { "text": "window", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Wu Binbin asks: What's in your ___?",
+      "hint_zh": "问书包里有什么",
+      "correctSentence": "What's in your schoolbag?",
+      "options": [
+        { "text": "schoolbag", "correct": true },
+        { "text": "classroom", "correct": false },
+        { "text": "blackboard", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Tom is at the lost and found. He says: I ___ my schoolbag.",
+      "hint_zh": "我丢了书包",
+      "correctSentence": "I lost my schoolbag.",
+      "options": [
+        { "text": "lost", "correct": true },
+        { "text": "help", "correct": false },
+        { "text": "clean", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "The staff asks about colour. Tom says: It's blue and ___.",
+      "hint_zh": "蓝白色书包",
+      "correctSentence": "It's blue and white.",
+      "options": [
+        { "text": "white", "correct": true },
+        { "text": "orange", "correct": false },
+        { "text": "near", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Mike's English book slipped. It's ___ the desk.",
+      "hint_zh": "在课桌下面",
+      "correctSentence": "It's under the desk.",
+      "options": [
+        { "text": "under", "correct": true },
+        { "text": "on", "correct": false },
+        { "text": "near", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "The staff finds the bag. She says: ___ it is!",
+      "hint_zh": "给你（找到了）",
+      "correctSentence": "Here it is!",
+      "options": [
+        { "text": "Here", "correct": true },
+        { "text": "Where", "correct": false },
+        { "text": "What", "correct": false }
+      ]
+    }
+  ]
+}

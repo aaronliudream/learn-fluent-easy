@@ -4,6 +4,7 @@ import type {
   ReadWriteSimplifiedQuestion,
 } from "@/lib/primaryHub/readWriteTypes";
 import ReadWritePictureVisual from "@/components/primaryHub/ReadWritePictureVisual";
+import { splitFillChoiceSentence } from "@/lib/primaryHub/fillChoiceSentence";
 
 type Props = {
   config: ReadWriteSimplifiedConfig;
@@ -45,15 +46,15 @@ function PictureChoiceBody({ q }: { q: Extract<ReadWriteSimplifiedQuestion, { ty
 }
 
 function FillChoiceBody({ q }: { q: Extract<ReadWriteSimplifiedQuestion, { type: "fill_choice" }> }) {
-  const parts = q.sentence.split("____");
+  const { before, after, token } = splitFillChoiceSentence(q.sentence);
   return (
     <div className="rounded-2xl border border-[#EEEAE0] bg-[#FFF8F0] px-4 py-6 text-center">
       <p className="text-[22px] font-bold leading-snug text-[#2C2C2A]">
-        {parts[0]}
+        {before}
         <span className="mx-1 inline-block min-w-[80px] border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]">
-          ____
+          {token}
         </span>
-        {parts[1] ?? ""}
+        {after}
       </p>
       <p className="mt-2 text-[14px] text-[#888780]">选一个词填入空格</p>
     </div>

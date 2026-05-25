@@ -113,7 +113,7 @@
     },
     {
       "id": 206,
-      "q": "失物招领处，工作人员问 Tom：「What colour is it?」Tom 回忆起书包的样子——蓝色书包上印着一只白色熊猫。他会回答：",
+      "q": "失物招领处，工作人员问 Tom：「What colour is it?」Tom 回忆起书包——是蓝色的，上面有一颗白色的星星。他会回答：",
       "opts": [
         "It's blue and white.",
         "It's orange.",
@@ -152,7 +152,7 @@
     },
     {
       "id": 210,
-      "q": "写失物启事时，Tom 要说明教室里还少了一件物品。看中文选词：「电灯」",
+      "q": "打扫教室时，老师让 Sarah 关掉天花板上的设备。看中文选词：「电灯」",
       "opts": ["light", "schoolbag", "maths book", "candy"],
       "answer": 0,
       "point": "u1:recall_classroom_item",

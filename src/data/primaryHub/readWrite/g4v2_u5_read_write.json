@@ -1,0 +1,75 @@
+{
+  "unitId": "g4v2_u5",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 6,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "fill_choice",
+      "sentence": "Amy finds green shoes on the floor. The name tag says Chen Jie. Amy asks Mike: Are these ___?",
+      "hint_zh": "问「这些是你的吗」",
+      "correctSentence": "Are these yours?",
+      "options": [
+        { "text": "yours", "correct": true },
+        { "text": "mine", "correct": false },
+        { "text": "whose", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Sarah picks up a coat. The tag inside says Sarah. Mike asks: Whose coat is this? Sarah says: It's ___.",
+      "hint_zh": "大衣标签写着 Sarah，回答「是我的」",
+      "correctSentence": "Whose coat is this? It's mine.",
+      "options": [
+        { "text": "mine", "correct": true },
+        { "text": "yours", "correct": false },
+        { "text": "Mike's", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Before school Mum says you still need a white top. ___ your shirt.",
+      "hint_zh": "上学前穿上衬衫",
+      "correctSentence": "Put on your shirt.",
+      "options": [
+        { "text": "Put on", "correct": true },
+        { "text": "Take off", "correct": false },
+        { "text": "Hang up", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "After washing, the wet ___ goes on the hanger, not in the drawer.",
+      "hint_zh": "洗完后挂起来的是连衣裙",
+      "correctSentence": "Hang up your dress.",
+      "options": [
+        { "text": "dress", "correct": true },
+        { "text": "hat", "correct": false },
+        { "text": "sock", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "We leave for the airport tomorrow. Mum tells Amy to ___ my clothes into the suitcase.",
+      "hint_zh": "旅行前把衣服装进箱子",
+      "correctSentence": "Pack my clothes.",
+      "options": [
+        { "text": "Pack", "correct": true },
+        { "text": "Wait", "correct": false },
+        { "text": "Wash", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Mike's pants are green. Amy sees green pants with a Dad label. Whose pants are these? They're your father's, not ___.",
+      "hint_zh": "裤腰写着 Dad，不是 Mike 的",
+      "correctSentence": "They're your father's, not Mike's.",
+      "options": [
+        { "text": "Mike's", "correct": true },
+        { "text": "mine", "correct": false },
+        { "text": "yours", "correct": false }
+      ]
+    }
+  ]
+}

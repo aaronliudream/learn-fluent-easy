@@ -74,7 +74,7 @@
   "quizQuestions": [
     {
       "id": 301,
-      "q": "听意思选词：「寒冷的」",
+      "q": "看中文选词：「寒冷的」",
       "opts": ["cool", "cold", "warm", "hot"],
       "answer": 1,
       "point": "u3:recall_vocab",
@@ -82,7 +82,7 @@
     },
     {
       "id": 302,
-      "q": "听意思选词：「多风的」",
+      "q": "看中文选词：「多风的」",
       "opts": ["windy", "cloudy", "snowy", "rainy"],
       "answer": 0,
       "point": "u3:recall_vocab",
@@ -90,7 +90,7 @@
     },
     {
       "id": 303,
-      "q": "What's the weather like? 是在问什么？",
+      "q": "天气预报里，What's the weather like? 这句话在问什么？",
       "opts": ["几点了", "天气怎么样", "能出去吗", "在哪里"],
       "answer": 1,
       "point": "u3:recall_pattern",
@@ -98,12 +98,12 @@
     },
     {
       "id": 304,
-      "q": "外面很冷，妈妈不让出门。选合适回答：",
+      "q": "❄️ 外面很冷。小明问妈妈：「Can I go outside now?」妈妈会怎么回答？",
       "opts": [
         "Yes, you can. It's warm.",
         "No, you can't. It's cold outside.",
         "It's sunny and hot.",
-        "It's time for lunch."
+        "OK, let's go outside."
       ],
       "answer": 1,
       "point": "u3:recall_can",
@@ -111,7 +111,7 @@
     },
     {
       "id": 305,
-      "q": "北京今天晴朗又温暖。选正确句子：",
+      "q": "中文：北京今天晴朗又温暖。选对应英文句子：",
       "opts": [
         "It's rainy and cool.",
         "It's sunny and warm.",
@@ -140,7 +140,7 @@
     },
     {
       "id": 308,
-      "q": "出门玩之前，妈妈提醒你要注意安全。英文常说：",
+      "q": "出门玩之前，妈妈提醒你要注意安全。这时她可能会说：",
       "opts": ["be careful", "how about", "go home", "hurry up"],
       "answer": 0,
       "point": "u3:recall_vocab",

@@ -298,7 +298,7 @@
     },
     {
       "id": 203,
-      "q": "What time is it? 的意思是？",
+      "q": "看钟问时间时，What time is it? 这句话在问什么？",
       "opts": ["几点了", "几点钟去上学", "什么时候吃饭", "现在几点钟了呀"],
       "answer": 0,
       "point": "u2:recall_time",
@@ -356,7 +356,7 @@
     },
     {
       "id": 209,
-      "q": "听意思选词：「回家」",
+      "q": "看中文选词：「回家」",
       "opts": ["go home", "go to bed", "get up", "breakfast"],
       "answer": 0,
       "point": "u2:recall_vocab",

@@ -1,0 +1,75 @@
+{
+  "unitId": "g4v2_u6",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 6,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "fill_choice",
+      "sentence": "Sarah walks into the shop. The saleswoman smiles: ___ you?",
+      "hint_zh": "店员招呼「我能帮你吗」",
+      "correctSentence": "Can I help you?",
+      "options": [
+        { "text": "Can I help", "correct": true },
+        { "text": "How much is", "correct": false },
+        { "text": "Whose coat", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "John tries size 6 shoes. The saleswoman shakes her head: No. They're too ___.",
+      "hint_zh": "6 号鞋太小",
+      "correctSentence": "No. They're too small.",
+      "options": [
+        { "text": "small", "correct": true },
+        { "text": "pretty", "correct": false },
+        { "text": "rainy", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "John tries size 7. The saleswoman smiles: They're ___ right!",
+      "hint_zh": "7 号正好合适",
+      "correctSentence": "They're just right!",
+      "options": [
+        { "text": "just", "correct": true },
+        { "text": "too", "correct": false },
+        { "text": "more", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Sarah holds a skirt. She asks the price: ___ is this skirt?",
+      "hint_zh": "问这条短裙多少钱",
+      "correctSentence": "How much is this skirt?",
+      "options": [
+        { "text": "How much", "correct": true },
+        { "text": "What time", "correct": false },
+        { "text": "Are these", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "B Let's talk: The skirt tag says $89. Mum says: Sorry, Sarah. It's too ___.",
+      "hint_zh": "B 部分专卖店：短裙标价 89 美元，妈妈觉得太贵",
+      "correctSentence": "Sorry, Sarah. It's too expensive.",
+      "options": [
+        { "text": "expensive", "correct": true },
+        { "text": "cheap", "correct": false },
+        { "text": "sunny", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "The poster says sunglasses and gloves are only five yuan today. They are very ___.",
+      "hint_zh": "特价五元，很便宜",
+      "correctSentence": "They are very cheap.",
+      "options": [
+        { "text": "cheap", "correct": true },
+        { "text": "expensive", "correct": false },
+        { "text": "small", "correct": false }
+      ]
+    }
+  ]
+}

@@ -62,13 +62,13 @@
     },
     {
       "type": "fill_choice",
-      "sentence": "🗽 How about ___? It's cool and rainy.",
-      "hint_zh": "问另一个城市",
-      "correctSentence": "How about New York? It's cool and rainy.",
+      "sentence": "🗽 Chen Jie 说完北京天气，又问：How about ___?",
+      "hint_zh": "课本对话里接着问纽约",
+      "correctSentence": "How about New York?",
       "options": [
         { "text": "New York", "correct": true },
         { "text": "Beijing", "correct": false },
-        { "text": "London", "correct": false }
+        { "text": "breakfast", "correct": false }
       ]
     }
   ]

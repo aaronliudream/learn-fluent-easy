@@ -2966,7 +2966,7 @@
               },
               {
                 "id": 203,
-                "q": "What time is it? 的意思是？",
+                "q": "看钟问时间时，What time is it? 这句话在问什么？",
                 "opts": [
                   "几点了",
                   "几点钟去上学",
@@ -3044,7 +3044,7 @@
               },
               {
                 "id": 209,
-                "q": "听意思选词：「回家」",
+                "q": "看中文选词：「回家」",
                 "opts": [
                   "go home",
                   "go to bed",
@@ -3083,10 +3083,10 @@
               },
               {
                 "id": 212,
-                "q": "🍽️ Mike 一家晚上 6 点坐到餐桌前。妈妈说：「It's time for ___.」",
+                "q": "「dinner」与哪个词是一天的最后一餐？",
                 "opts": [
-                  "breakfast",
                   "lunch",
+                  "breakfast",
                   "dinner",
                   "English class"
                 ],
@@ -3461,7 +3461,7 @@
             "quizQuestions": [
               {
                 "id": 301,
-                "q": "听意思选词：「寒冷的」",
+                "q": "看中文选词：「寒冷的」",
                 "opts": [
                   "cool",
                   "cold",
@@ -3474,7 +3474,7 @@
               },
               {
                 "id": 302,
-                "q": "听意思选词：「多风的」",
+                "q": "看中文选词：「多风的」",
                 "opts": [
                   "windy",
                   "cloudy",
@@ -3487,7 +3487,7 @@
               },
               {
                 "id": 303,
-                "q": "What's the weather like? 是在问什么？",
+                "q": "天气预报里，What's the weather like? 这句话在问什么？",
                 "opts": [
                   "几点了",
                   "天气怎么样",
@@ -3500,12 +3500,12 @@
               },
               {
                 "id": 304,
-                "q": "外面很冷，妈妈不让出门。选合适回答：",
+                "q": "❄️ 外面很冷。小明问妈妈：「Can I go outside now?」妈妈会怎么回答？",
                 "opts": [
                   "Yes, you can. It's warm.",
                   "No, you can't. It's cold outside.",
                   "It's sunny and hot.",
-                  "It's time for lunch."
+                  "OK, let's go outside."
                 ],
                 "answer": 1,
                 "point": "u3:recall_can",
@@ -3513,7 +3513,7 @@
               },
               {
                 "id": 305,
-                "q": "北京今天晴朗又温暖。选正确句子：",
+                "q": "中文：北京今天晴朗又温暖。选对应英文句子：",
                 "opts": [
                   "It's rainy and cool.",
                   "It's sunny and warm.",
@@ -3552,7 +3552,7 @@
               },
               {
                 "id": 308,
-                "q": "出门玩之前，妈妈提醒你要注意安全。英文常说：",
+                "q": "出门玩之前，妈妈提醒你要注意安全。这时她可能会说：",
                 "opts": [
                   "be careful",
                   "how about",
@@ -3711,48 +3711,185 @@
               {
                 "en": "tomato",
                 "cn": "西红柿",
-                "emoji": "📘"
+                "emoji": "🍅",
+                "phonetic": "/təˈmɑːtəʊ/",
+                "page": 39,
+                "type": "core"
               },
               {
                 "en": "potato",
-                "cn": "马铃薯",
-                "emoji": "📘"
+                "cn": "马铃薯；土豆",
+                "emoji": "🥔",
+                "phonetic": "/pəˈteɪtəʊ/",
+                "page": 39,
+                "type": "core"
               },
               {
                 "en": "green beans",
-                "cn": "豆角",
-                "emoji": "🎨"
+                "cn": "豆角；四季豆",
+                "emoji": "🫛",
+                "phonetic": "/ɡriːn biːnz/",
+                "page": 39,
+                "type": "core"
               },
               {
                 "en": "carrot",
                 "cn": "胡萝卜",
-                "emoji": "📘"
+                "emoji": "🥕",
+                "phonetic": "/ˈkærət/",
+                "page": 39,
+                "type": "core"
               },
               {
                 "en": "horse",
                 "cn": "马",
-                "emoji": "🐮"
+                "emoji": "🐴",
+                "phonetic": "/hɔːs/",
+                "page": 42,
+                "type": "core"
               },
               {
                 "en": "cow",
-                "cn": "母牛",
-                "emoji": "🐮"
+                "cn": "母牛；奶牛",
+                "emoji": "🐄",
+                "phonetic": "/kaʊ/",
+                "page": 42,
+                "type": "core"
               },
               {
                 "en": "sheep",
-                "cn": "羊",
-                "emoji": "🐮"
+                "cn": "羊；绵羊",
+                "emoji": "🐑",
+                "phonetic": "/ʃiːp/",
+                "page": 42,
+                "type": "core"
               },
               {
                 "en": "hen",
                 "cn": "母鸡",
-                "emoji": "📘"
+                "emoji": "🐔",
+                "phonetic": "/hen/",
+                "page": 42,
+                "type": "core"
+              },
+              {
+                "en": "these",
+                "cn": "这些",
+                "emoji": "👆",
+                "phonetic": "/ðiːz/",
+                "page": 38,
+                "type": "extended"
+              },
+              {
+                "en": "yum",
+                "cn": "（味道非常好）",
+                "emoji": "😋",
+                "phonetic": "/jʌm/",
+                "page": 38,
+                "type": "extended"
+              },
+              {
+                "en": "animal",
+                "cn": "兽；动物",
+                "emoji": "🐾",
+                "phonetic": "/ˈænɪml/",
+                "page": 41,
+                "type": "extended"
+              },
+              {
+                "en": "those",
+                "cn": "那些",
+                "emoji": "👉",
+                "phonetic": "/ðəʊz/",
+                "page": 41,
+                "type": "extended"
+              },
+              {
+                "en": "garden",
+                "cn": "花园；菜园",
+                "emoji": "🌱",
+                "phonetic": "/ˈɡɑːdn/",
+                "page": 43,
+                "type": "extended"
+              },
+              {
+                "en": "farm",
+                "cn": "农场",
+                "emoji": "🚜",
+                "phonetic": "/fɑːm/",
+                "page": 43,
+                "type": "extended"
+              },
+              {
+                "en": "goat",
+                "cn": "山羊",
+                "emoji": "🐐",
+                "phonetic": "/ɡəʊt/",
+                "page": 43,
+                "type": "extended"
+              },
+              {
+                "en": "eat",
+                "cn": "吃",
+                "emoji": "🍽️",
+                "phonetic": "/iːt/",
+                "page": 43,
+                "type": "extended"
+              }
+            ],
+            "vocabGroups": [
+              {
+                "id": "vegetables",
+                "name": "蔬菜",
+                "header": "蔬菜 · 4 个词",
+                "indices": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "id": "farm_animals",
+                "name": "农场动物",
+                "header": "农场动物 · 4 个词",
+                "indices": [
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              },
+              {
+                "id": "extra_listen",
+                "name": "拓展词",
+                "header": "拓展词 · 8 个词",
+                "indices": [
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15
+                ]
               }
             ],
             "dialogues": [
               {
                 "title": "A Let's talk",
                 "lines": [
+                  {
+                    "role": "Mike",
+                    "text": "Look at these! Are these carrots?",
+                    "cn": "看这些！这些是胡萝卜吗？"
+                  },
+                  {
+                    "role": "Sarah",
+                    "text": "No.",
+                    "cn": "不是。"
+                  },
                   {
                     "role": "Mike",
                     "text": "What are these?",
@@ -3762,6 +3899,16 @@
                     "role": "Sarah",
                     "text": "They're tomatoes.",
                     "cn": "是西红柿。"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "Try some! They're good.",
+                    "cn": "尝一个！很好吃。"
+                  },
+                  {
+                    "role": "Sarah",
+                    "text": "Thanks. Yum.",
+                    "cn": "谢谢。真好吃。"
                   }
                 ]
               },
@@ -3770,13 +3917,28 @@
                 "lines": [
                   {
                     "role": "Mike",
-                    "text": "Are these carrots?",
-                    "cn": "这些是胡萝卜吗？"
+                    "text": "Wow! You have a lot of animals! What are those?",
+                    "cn": "哇！你有很多动物！那些是什么？"
                   },
                   {
                     "role": "Sarah",
-                    "text": "Yes, they are.",
-                    "cn": "是的，它们是。"
+                    "text": "Are they horses?",
+                    "cn": "它们是马吗？"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "No, they aren't. They're ducks.",
+                    "cn": "不是，是鸭子。"
+                  },
+                  {
+                    "role": "Sarah",
+                    "text": "How many horses do you have?",
+                    "cn": "你有多少匹马？"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "Seventeen.",
+                    "cn": "十七匹。"
                   }
                 ]
               }
@@ -3785,15 +3947,15 @@
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "8个核心单词",
+                "subtitle": "16 个词 · 蔬菜·动物·拓展",
                 "icon": "📚",
                 "type": "vocab",
-                "time": "5分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s2",
                 "title": "听音辨词",
-                "subtitle": "听力训练",
+                "subtitle": "听一听，选单词",
                 "icon": "🎧",
                 "type": "listenWord",
                 "time": "5分钟"
@@ -3801,7 +3963,7 @@
               {
                 "id": "s3",
                 "title": "单词配对",
-                "subtitle": "巩固词义",
+                "subtitle": "词义连连看",
                 "icon": "🎮",
                 "type": "match",
                 "time": "5分钟"
@@ -3809,15 +3971,15 @@
               {
                 "id": "s4",
                 "title": "学习句型",
-                "subtitle": "核心句型",
+                "subtitle": "these/those · 歌谣跟读",
                 "icon": "💬",
                 "type": "sentence",
-                "time": "5分钟"
+                "time": "8分钟"
               },
               {
                 "id": "s5",
                 "title": "默写挑战",
-                "subtitle": "动手拼写",
+                "subtitle": "核心词拼写",
                 "icon": "✏️",
                 "type": "write",
                 "time": "8分钟"
@@ -3825,7 +3987,7 @@
               {
                 "id": "s6",
                 "title": "听力测试",
-                "subtitle": "听句选答案",
+                "subtitle": "听对话选答案",
                 "icon": "🎯",
                 "type": "listenSent",
                 "time": "6分钟"
@@ -3833,15 +3995,15 @@
               {
                 "id": "s7",
                 "title": "读写训练",
-                "subtitle": "即将上线 · 看图写句",
+                "subtitle": "填空选词 · 农场",
                 "icon": "📝",
                 "type": "readWrite",
-                "time": "12分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s8",
                 "title": "最终通关",
-                "subtitle": "综合挑战",
+                "subtitle": "综合挑战 · 12 题",
                 "icon": "🏆",
                 "type": "finalQuiz",
                 "time": "10分钟"
@@ -3849,158 +4011,180 @@
             ],
             "quizQuestions": [
               {
-                "q": "「tomato」是什么意思？",
-                "opts": [
-                  "马铃薯",
-                  "马",
-                  "西红柿",
-                  "山羊"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「potato」是什么意思？",
-                "opts": [
-                  "土豆",
-                  "马",
-                  "马铃薯",
-                  "羊"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「green beans」是什么意思？",
-                "opts": [
-                  "牛",
-                  "土豆",
-                  "豆角",
-                  "母牛"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「carrot」是什么意思？",
-                "opts": [
-                  "豆角",
-                  "马",
-                  "胡萝卜",
-                  "山羊"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「horse」是什么意思？",
-                "opts": [
-                  "牛",
-                  "马",
-                  "豆角",
-                  "马铃薯"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cow」是什么意思？",
-                "opts": [
-                  "羊",
-                  "胡萝卜",
-                  "母牛",
-                  "马铃薯"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「sheep」是什么意思？",
-                "opts": [
-                  "豆角",
-                  "土豆",
-                  "羊",
-                  "山羊"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「hen」是什么意思？",
-                "opts": [
-                  "西红柿",
-                  "牛",
-                  "母鸡",
-                  "羊"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「西红柿」？",
-                "opts": [
-                  "goat",
-                  "green beans",
-                  "tomato",
-                  "carrot"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「potato」的中文是？",
-                "opts": [
-                  "马",
-                  "牛",
-                  "胡萝卜",
-                  "马铃薯"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「在农场」核心词是？",
+                "id": 401,
+                "q": "看中文选词：「西红柿」",
                 "opts": [
                   "potato",
+                  "tomato",
                   "carrot",
-                  "green beans",
-                  "tomato"
+                  "green beans"
                 ],
-                "answer": 3,
-                "point": "词汇",
+                "answer": 1,
+                "point": "u4:recall_vocab",
                 "dim": "vocab"
               },
               {
-                "q": "「green beans」的意思是？",
+                "id": 402,
+                "q": "看中文选词：「绵羊」",
                 "opts": [
-                  "山羊",
-                  "马铃薯",
-                  "羊",
-                  "豆角"
+                  "goat",
+                  "sheep",
+                  "hen",
+                  "horse"
                 ],
-                "answer": 3,
-                "point": "词汇",
+                "answer": 1,
+                "point": "u4:recall_vocab",
                 "dim": "vocab"
+              },
+              {
+                "id": 403,
+                "q": "Mike 指着近处的蔬菜问：「What are these?」他在问什么？",
+                "opts": [
+                  "这些是什么",
+                  "那些是什么",
+                  "有多少匹马",
+                  "天气怎么样"
+                ],
+                "answer": 0,
+                "point": "u4:recall_these",
+                "dim": "sentence"
+              },
+              {
+                "id": 404,
+                "q": "🍅 Mike 指着近处问 Sarah：「What are these?」Sarah 看到圆圆的、红红的蔬菜，她会回答：",
+                "opts": [
+                  "They're tomatoes.",
+                  "They're carrots.",
+                  "They're potatoes.",
+                  "They're green beans."
+                ],
+                "answer": 0,
+                "point": "u4:recall_these",
+                "dim": "sentence"
+              },
+              {
+                "id": 405,
+                "q": "🥕 Mike 指着近处橙色长条蔬菜问 Sarah：「Are these carrots?」Sarah 摇头，她会先说：",
+                "opts": [
+                  "No.",
+                  "Yes, they are.",
+                  "They're tomatoes.",
+                  "What are these?"
+                ],
+                "answer": 0,
+                "point": "u4:recall_these",
+                "dim": "sentence"
+              },
+              {
+                "id": 406,
+                "q": "🦆 Sarah 望着远处一群动物问 Mike：「Are they horses?」Mike 看到其实是鸭子，他会回答：",
+                "opts": [
+                  "No, they aren't. They're ducks.",
+                  "Yes, they are.",
+                  "They're tomatoes.",
+                  "Seventeen."
+                ],
+                "answer": 0,
+                "point": "u4:recall_those",
+                "dim": "sentence"
+              },
+              {
+                "id": 407,
+                "q": "Sarah 问 Mike：「How many horses do you have?」Mike 数一数后回答：",
+                "opts": [
+                  "Seventeen.",
+                  "Seven o'clock.",
+                  "They're sheep.",
+                  "Yes, they are."
+                ],
+                "answer": 0,
+                "point": "u4:recall_many",
+                "dim": "sentence"
+              },
+              {
+                "id": 408,
+                "q": "🌱 麦克唐纳先生带同学参观，指着种蔬菜的地方说：This is the vegetable ___。",
+                "opts": [
+                  "garden",
+                  "farm",
+                  "animal",
+                  "those"
+                ],
+                "answer": 0,
+                "point": "u4:recall_vocab",
+                "dim": "vocab"
+              },
+              {
+                "id": 409,
+                "q": "🌅 参观农场那天早上 7 点，妈妈对小明说：「It's time to ___。」",
+                "opts": [
+                  "get up",
+                  "go to bed",
+                  "go to school",
+                  "go home"
+                ],
+                "answer": 0,
+                "point": "u2:recall_routine",
+                "dim": "sentence"
+              },
+              {
+                "id": 410,
+                "q": "Chen Jie 在北京。窗外阳光明媚，她穿着短袖。她会怎么描述天气？",
+                "opts": [
+                  "It's sunny and warm.",
+                  "It's rainy and cool.",
+                  "It's windy and cloudy.",
+                  "It's snowy and cold."
+                ],
+                "answer": 0,
+                "point": "u3:recall_weather",
+                "dim": "sentence"
+              },
+              {
+                "id": 411,
+                "q": "🐐 远处那些动物是山羊，不是绵羊。完整句子：They are ___。",
+                "opts": [
+                  "goats",
+                  "sheep",
+                  "horses",
+                  "hens"
+                ],
+                "answer": 0,
+                "point": "u4:recall_vocab",
+                "dim": "vocab"
+              },
+              {
+                "id": 412,
+                "q": "⏰ 参观结束要回学校。妈妈对 Mike 说：「Hurry up! It's time to go to ___。」",
+                "opts": [
+                  "school",
+                  "go home",
+                  "farm",
+                  "garden"
+                ],
+                "answer": 0,
+                "point": "u2:recall_routine",
+                "dim": "sentence"
               }
             ],
             "listeningQuestions": [
               {
+                "audio": "Look at these! Are these carrots?",
+                "opts": [
+                  "Look at these! Are these carrots?",
+                  "Look at those! Are those carrots?",
+                  "Look at these! Are these tomatoes?",
+                  "Look at these! What are those?"
+                ],
+                "answer": 0
+              },
+              {
                 "audio": "What are these?",
                 "opts": [
                   "What are these?",
-                  "What are these.",
-                  "tomato",
-                  "potato"
+                  "What are those?",
+                  "How many horses?",
+                  "Are these carrots?"
                 ],
                 "answer": 0
               },
@@ -4009,18 +4193,8 @@
                 "opts": [
                   "They're tomatoes.",
                   "They're potatoes.",
-                  "tomato",
-                  "potato"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Are these carrots?",
-                "opts": [
-                  "Are these carrots?",
-                  "Are these horses?",
-                  "Are these carrots.",
-                  "tomato"
+                  "They're horses.",
+                  "They're carrots."
                 ],
                 "answer": 0
               },
@@ -4028,9 +4202,49 @@
                 "audio": "Yes, they are.",
                 "opts": [
                   "Yes, they are.",
-                  "tomato",
-                  "potato",
-                  "It's green beans."
+                  "No, they aren't.",
+                  "Yes, you can.",
+                  "No, it isn't."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "What are those?",
+                "opts": [
+                  "What are those?",
+                  "What are these?",
+                  "Are they horses?",
+                  "How many horses do you have?"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "No, they aren't. They're ducks.",
+                "opts": [
+                  "No, they aren't. They're ducks.",
+                  "Yes, they are. They're ducks.",
+                  "No, they aren't. They're horses.",
+                  "No, you can't. It's cold outside."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "How many horses do you have?",
+                "opts": [
+                  "How many horses do you have?",
+                  "How many cows do you have?",
+                  "What are those?",
+                  "Are they horses?"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Seventeen.",
+                "opts": [
+                  "Seventeen.",
+                  "Seven.",
+                  "Seventy.",
+                  "Sixteen."
                 ],
                 "answer": 0
               }
@@ -4047,43 +4261,170 @@
             "vocabulary": [
               {
                 "en": "clothes",
-                "cn": "衣服",
-                "emoji": "👕"
+                "cn": "衣服；服装",
+                "emoji": "👔",
+                "phonetic": "/kləʊðz/",
+                "page": 49,
+                "type": "core"
               },
               {
                 "en": "pants",
                 "cn": "裤子",
-                "emoji": "📘"
+                "emoji": "👖",
+                "phonetic": "/pænts/",
+                "page": 49,
+                "type": "core"
               },
               {
                 "en": "hat",
-                "cn": "帽子",
-                "emoji": "👕"
+                "cn": "（常指带檐的）帽子",
+                "emoji": "🧢",
+                "phonetic": "/hæt/",
+                "page": 49,
+                "type": "core"
               },
               {
                 "en": "dress",
                 "cn": "连衣裙",
-                "emoji": "👕"
+                "emoji": "👗",
+                "phonetic": "/dres/",
+                "page": 49,
+                "type": "core"
               },
               {
                 "en": "skirt",
                 "cn": "女裙",
-                "emoji": "📘"
+                "emoji": "👚",
+                "phonetic": "/skɜːt/",
+                "page": 49,
+                "type": "core"
               },
               {
                 "en": "coat",
-                "cn": "外衣",
-                "emoji": "📘"
+                "cn": "外衣；大衣",
+                "emoji": "🧥",
+                "phonetic": "/kəʊt/",
+                "page": 52,
+                "type": "core"
               },
               {
                 "en": "sweater",
                 "cn": "毛衣",
-                "emoji": "📘"
+                "emoji": "🧶",
+                "phonetic": "/ˈswetə(r)/",
+                "page": 52,
+                "type": "core"
               },
               {
                 "en": "sock",
                 "cn": "短袜",
-                "emoji": "📘"
+                "emoji": "🧦",
+                "phonetic": "/sɒk/",
+                "page": 52,
+                "type": "core"
+              },
+              {
+                "en": "shorts",
+                "cn": "短裤",
+                "emoji": "🩳",
+                "phonetic": "/ʃɔːts/",
+                "page": 52,
+                "type": "core"
+              },
+              {
+                "en": "jacket",
+                "cn": "夹克衫",
+                "emoji": "🦺",
+                "phonetic": "/ˈdʒækɪt/",
+                "page": 52,
+                "type": "core"
+              },
+              {
+                "en": "shirt",
+                "cn": "（尤指男士）衬衫",
+                "emoji": "👕",
+                "phonetic": "/ʃɜːt/",
+                "page": 52,
+                "type": "core"
+              },
+              {
+                "en": "yours",
+                "cn": "你的；你们的",
+                "emoji": "🫵",
+                "phonetic": "/jɔːz/",
+                "page": 48,
+                "type": "extended"
+              },
+              {
+                "en": "whose",
+                "cn": "谁的",
+                "emoji": "❓",
+                "phonetic": "/huːz/",
+                "page": 51,
+                "type": "extended"
+              },
+              {
+                "en": "mine",
+                "cn": "我的",
+                "emoji": "🙋",
+                "phonetic": "/maɪn/",
+                "page": 51,
+                "type": "extended"
+              },
+              {
+                "en": "pack",
+                "cn": "收拾（行李）",
+                "emoji": "🧳",
+                "phonetic": "/pæk/",
+                "page": 53,
+                "type": "extended"
+              },
+              {
+                "en": "wait",
+                "cn": "等待",
+                "emoji": "⏳",
+                "phonetic": "/weɪt/",
+                "page": 53,
+                "type": "extended"
+              }
+            ],
+            "vocabGroups": [
+              {
+                "id": "everyday",
+                "name": "日常衣物",
+                "header": "日常衣物 · 5 个词",
+                "indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              {
+                "id": "outerwear",
+                "name": "外套与上衣",
+                "header": "外套与上衣 · 6 个词",
+                "indices": [
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10
+                ]
+              },
+              {
+                "id": "extra_listen",
+                "name": "拓展词",
+                "header": "拓展词 · 5 个词",
+                "indices": [
+                  11,
+                  12,
+                  13,
+                  14,
+                  15
+                ]
               }
             ],
             "dialogues": [
@@ -4091,14 +4432,24 @@
                 "title": "A Let's talk",
                 "lines": [
                   {
-                    "role": "Sarah",
-                    "text": "I like this green shirt.",
-                    "cn": "我喜欢这件绿色的衬衫。"
+                    "role": "Amy",
+                    "text": "Are these yours, Mike?",
+                    "cn": "迈克，这些是你的吗？"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "No, they aren't. My shoes are green. They're Chen Jie's.",
+                    "cn": "不是。我的鞋是绿色的。这些是陈杰的。"
                   },
                   {
                     "role": "Amy",
-                    "text": "Me too. And I like those pants.",
-                    "cn": "我也是。我还喜欢那条裤子。"
+                    "text": "Is this John's?",
+                    "cn": "这是约翰的吗？"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "No, it isn't. It's Mike's.",
+                    "cn": "不是。是迈克的。"
                   }
                 ]
               },
@@ -4106,14 +4457,29 @@
                 "title": "B Let's talk",
                 "lines": [
                   {
-                    "role": "Saleswoman",
-                    "text": "Can I help you?",
-                    "cn": "我能帮你吗？"
+                    "role": "Mike",
+                    "text": "Sarah, can you help me, please?",
+                    "cn": "萨拉，你能帮帮我吗？"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "Whose coat is this?",
+                    "cn": "这是谁的大衣？"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "It's mine.",
+                    "cn": "是我的。"
                   },
                   {
                     "role": "Sarah",
-                    "text": "Yes. Can I try these on?",
-                    "cn": "是的。我可以试穿这些吗？"
+                    "text": "And those? Whose pants are those?",
+                    "cn": "那些呢？那条裤子是谁的？"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "They're Mike's.",
+                    "cn": "是迈克的。"
                   }
                 ]
               }
@@ -4122,15 +4488,15 @@
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "8个核心单词",
+                "subtitle": "16 个词 · 衣物·拓展",
                 "icon": "📚",
                 "type": "vocab",
-                "time": "5分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s2",
                 "title": "听音辨词",
-                "subtitle": "听力训练",
+                "subtitle": "听一听，选单词",
                 "icon": "🎧",
                 "type": "listenWord",
                 "time": "5分钟"
@@ -4138,7 +4504,7 @@
               {
                 "id": "s3",
                 "title": "单词配对",
-                "subtitle": "巩固词义",
+                "subtitle": "词义连连看",
                 "icon": "🎮",
                 "type": "match",
                 "time": "5分钟"
@@ -4146,15 +4512,15 @@
               {
                 "id": "s4",
                 "title": "学习句型",
-                "subtitle": "核心句型",
+                "subtitle": "yours/whose · 歌谣跟读",
                 "icon": "💬",
                 "type": "sentence",
-                "time": "5分钟"
+                "time": "8分钟"
               },
               {
                 "id": "s5",
                 "title": "默写挑战",
-                "subtitle": "动手拼写",
+                "subtitle": "核心词拼写",
                 "icon": "✏️",
                 "type": "write",
                 "time": "8分钟"
@@ -4162,7 +4528,7 @@
               {
                 "id": "s6",
                 "title": "听力测试",
-                "subtitle": "听句选答案",
+                "subtitle": "听对话选答案",
                 "icon": "🎯",
                 "type": "listenSent",
                 "time": "6分钟"
@@ -4170,15 +4536,15 @@
               {
                 "id": "s7",
                 "title": "读写训练",
-                "subtitle": "即将上线 · 看图写句",
+                "subtitle": "填空选词 · 衣物",
                 "icon": "📝",
                 "type": "readWrite",
-                "time": "12分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s8",
                 "title": "最终通关",
-                "subtitle": "综合挑战",
+                "subtitle": "综合挑战 · 12 题",
                 "icon": "🏆",
                 "type": "finalQuiz",
                 "time": "10分钟"
@@ -4186,200 +4552,240 @@
             ],
             "quizQuestions": [
               {
-                "q": "「clothes」是什么意思？",
+                "id": 501,
+                "q": "看中文选词：「夹克衫」",
                 "opts": [
-                  "衣服",
-                  "帽子",
-                  "连衣裙",
-                  "衬衫"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「pants」是什么意思？",
-                "opts": [
-                  "衬衫",
-                  "夹克",
-                  "裤子",
-                  "毛衣"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「hat」是什么意思？",
-                "opts": [
-                  "裙子",
-                  "衣服",
-                  "短裤",
-                  "帽子"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「dress」是什么意思？",
-                "opts": [
-                  "夹克",
-                  "裤子",
-                  "连衣裙",
-                  "帽子"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「skirt」是什么意思？",
-                "opts": [
-                  "夹克",
-                  "衣服",
-                  "衬衫",
-                  "女裙"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「coat」是什么意思？",
-                "opts": [
-                  "毛衣",
-                  "外衣",
-                  "裙子",
-                  "女裙"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「sweater」是什么意思？",
-                "opts": [
-                  "毛衣",
-                  "连衣裙",
-                  "帽子",
-                  "裙子"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「sock」是什么意思？",
-                "opts": [
-                  "衣服",
-                  "帽子",
-                  "外衣",
-                  "短袜"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「衣服」？",
-                "opts": [
-                  "skirt",
-                  "dress",
-                  "clothes",
-                  "shirt"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「pants」的中文是？",
-                "opts": [
-                  "外套",
-                  "帽子",
-                  "裙子",
-                  "裤子"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我的衣服」核心词是？",
-                "opts": [
-                  "skirt",
-                  "hat",
+                  "shirt",
+                  "sweater",
                   "coat",
-                  "clothes"
+                  "jacket"
                 ],
                 "answer": 3,
-                "point": "词汇",
+                "point": "u5:vocab_jacket",
                 "dim": "vocab"
               },
               {
-                "q": "Whose coat is this? 在问什么？",
+                "id": 502,
+                "q": "看中文选词：「短裤」",
                 "opts": [
-                  "这是谁的外套",
-                  "在哪里",
-                  "多少钱",
-                  "什么颜色"
+                  "pants",
+                  "dress",
+                  "skirt",
+                  "shorts"
+                ],
+                "answer": 3,
+                "point": "u5:vocab_shorts",
+                "dim": "vocab"
+              },
+              {
+                "id": 503,
+                "q": "Amy 指着地上一条红色连衣裙问 Chen Jie：「Are these yours?」连衣裙不是 Chen Jie 的。Chen Jie 会回答：",
+                "opts": [
+                  "No, they aren't.",
+                  "Yes, they are.",
+                  "It's mine.",
+                  "Whose coat is this?"
                 ],
                 "answer": 0,
-                "point": "句型",
+                "point": "u5:are_these_yours",
                 "dim": "sentence"
               },
               {
-                "q": "「hat」的意思是？",
+                "id": 504,
+                "q": "Chen Jie 在失物处捡到一顶蓝色帽子，问 Mike：「Whose hat is this?」Mike 看见帽子里写着 Mike，Mike 回答：",
                 "opts": [
-                  "帽子",
-                  "短裤",
-                  "女裙",
-                  "短袜"
+                  "It's mine.",
+                  "They're yours.",
+                  "No, they aren't.",
+                  "Are these yours?"
                 ],
                 "answer": 0,
-                "point": "词汇",
+                "point": "u5:whose_hat",
+                "dim": "sentence"
+              },
+              {
+                "id": 505,
+                "q": "Sarah 在教室发现一双绿鞋子，鞋舌贴着「Chen Jie」。Sarah 问 Chen Jie：「Are these yours?」Chen Jie 的鞋就是绿色的。Chen Jie 说：",
+                "opts": [
+                  "Yes, they are.",
+                  "No, they aren't. They're John's.",
+                  "No, it isn't. It's Mike's.",
+                  "Whose pants are those?"
+                ],
+                "answer": 0,
+                "point": "u5:are_these_yours",
+                "dim": "sentence"
+              },
+              {
+                "id": 506,
+                "q": "Mike 拿着一条灰色长裤问 Sarah：「Whose pants are these?」Sarah 看见裤腰写着 Dad。Sarah 回答：",
+                "opts": [
+                  "They're your father's.",
+                  "It's mine.",
+                  "They're Mike's.",
+                  "No, they aren't."
+                ],
+                "answer": 0,
+                "point": "u5:whose_pants",
+                "dim": "sentence"
+              },
+              {
+                "id": 507,
+                "q": "明天要坐飞机去旅行，妈妈让 Amy 把衣服装进箱子。妈妈说：「___ my clothes.」",
+                "opts": [
+                  "Pack",
+                  "Wait",
+                  "Hang up",
+                  "Take off"
+                ],
+                "answer": 0,
+                "point": "u5:pack_clothes",
+                "dim": "sentence"
+              },
+              {
+                "id": 508,
+                "q": "上学前妈妈指着衣柜里的白衬衫说：还没穿上呢，快穿上。妈妈说：「___ your shirt.」",
+                "opts": [
+                  "Put on",
+                  "Take off",
+                  "Hang up",
+                  "Put away"
+                ],
+                "answer": 0,
+                "point": "u5:put_on",
+                "dim": "sentence"
+              },
+              {
+                "id": 509,
+                "q": "Sarah 在商场挑了一下午衣服，广播里说：「It's 4 o'clock.」妈妈对 Sarah 说：「It's time to ___。」",
+                "opts": [
+                  "go home",
+                  "get up",
+                  "go to school",
+                  "go to bed"
+                ],
+                "answer": 0,
+                "point": "u2:recall_routine",
+                "dim": "sentence"
+              },
+              {
+                "id": 510,
+                "q": "Chen Jie 正要穿短裤去公园，突然打雷下大雨。妈妈冲出门喊别忘了雨伞。外面是 ___ 的天气。",
+                "opts": [
+                  "It's rainy and cool.",
+                  "It's sunny and warm.",
+                  "They're tomatoes.",
+                  "Put on your hat."
+                ],
+                "answer": 0,
+                "point": "u3:recall_weather",
+                "dim": "sentence"
+              },
+              {
+                "id": 511,
+                "q": "参观麦克唐纳农场时，Sarah 喂过绵羊，讲解员说羊毛可以织暖和的上衣。回家天冷，Sarah 说要穿 ___。",
+                "opts": [
+                  "sweater",
+                  "tomato",
+                  "pants",
+                  "horse"
+                ],
+                "answer": 0,
+                "point": "u4:recall_vocab",
                 "dim": "vocab"
+              },
+              {
+                "id": 512,
+                "q": "Mike 的电子表显示 6:00。Sarah 想问妈妈现在几点，她该问哪一句？",
+                "opts": [
+                  "What time is it?",
+                  "Whose coat is this?",
+                  "Are these yours?",
+                  "It's time for breakfast."
+                ],
+                "answer": 0,
+                "point": "u2:recall_time",
+                "dim": "sentence"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "I like this green shirt.",
+                "audio": "I like that green skirt. Me too. And I like those pants.",
                 "opts": [
-                  "I like this green shirt.",
-                  "clothes",
-                  "pants",
-                  "hat"
+                  "I like that green skirt. Me too. And I like those pants.",
+                  "I like that green shirt. Me too. And I like those pants.",
+                  "I like that green skirt. Me too. And I like those hats.",
+                  "Whose coat is this? It's mine."
                 ],
                 "answer": 0
               },
               {
-                "audio": "Me too. And I like those pants.",
+                "audio": "Are these yours, Mike?",
                 "opts": [
-                  "Me too. And I like those pants.",
-                  "Me too. And I like those hat.",
-                  "clothes",
-                  "pants"
+                  "Are these yours, Mike?",
+                  "Is this yours, Mike?",
+                  "Whose coat is this?",
+                  "Are these John's?"
                 ],
                 "answer": 0
               },
               {
-                "audio": "Can I help you?",
+                "audio": "No, they aren't. My shoes are green. They're Chen Jie's.",
                 "opts": [
-                  "Can I help you?",
-                  "Can I help you.",
-                  "clothes",
-                  "pants"
+                  "No, they aren't. My shoes are green. They're Chen Jie's.",
+                  "Yes, they are. My shoes are green.",
+                  "No, it isn't. It's Mike's.",
+                  "They're Mike's."
                 ],
                 "answer": 0
               },
               {
-                "audio": "Yes. Can I try these on?",
+                "audio": "Whose coat is this?",
                 "opts": [
-                  "Yes. Can I try these on?",
-                  "Yes. Can I try these on.",
-                  "clothes",
-                  "pants"
+                  "Whose coat is this?",
+                  "Whose hat is this?",
+                  "Are these yours?",
+                  "Is this John's?"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "It's mine.",
+                "opts": [
+                  "It's mine.",
+                  "They're yours.",
+                  "No, they aren't.",
+                  "Yes, they are."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Whose pants are those? They're Mike's.",
+                "opts": [
+                  "Whose pants are those? They're Mike's.",
+                  "Whose pants are these? They're Mike's.",
+                  "Whose coat is this? It's mine.",
+                  "Are these yours? No, they aren't."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Put on your shirt.",
+                "opts": [
+                  "Put on your shirt.",
+                  "Take off your hat.",
+                  "Hang up your dress.",
+                  "Pack my clothes."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "I want to wear my blue pants.",
+                "opts": [
+                  "I want to wear my blue pants.",
+                  "I want to wear my yellow dress.",
+                  "What colour are they? White.",
+                  "Mum, where are my new socks?"
                 ],
                 "answer": 0
               }
@@ -4396,43 +4802,197 @@
             "vocabulary": [
               {
                 "en": "glove",
-                "cn": "手套",
-                "emoji": "📘"
+                "cn": "（分手指的）手套",
+                "emoji": "🧤",
+                "phonetic": "/ɡlʌv/",
+                "page": 59,
+                "type": "core"
               },
               {
                 "en": "scarf",
-                "cn": "围巾",
-                "emoji": "📘"
+                "cn": "围巾；披巾",
+                "emoji": "🧣",
+                "phonetic": "/skɑːf/",
+                "page": 59,
+                "type": "core"
               },
               {
                 "en": "umbrella",
-                "cn": "伞",
-                "emoji": "📘"
+                "cn": "伞；雨伞",
+                "emoji": "☂️",
+                "phonetic": "/ʌmˈbrelə/",
+                "page": 59,
+                "type": "core"
               },
               {
                 "en": "sunglasses",
                 "cn": "太阳镜",
-                "emoji": "📘"
+                "emoji": "🕶️",
+                "phonetic": "/ˈsʌnɡlɑːsɪz/",
+                "page": 59,
+                "type": "core"
               },
               {
                 "en": "pretty",
-                "cn": "美观的",
-                "emoji": "📘"
+                "cn": "美观的；精致的",
+                "emoji": "✨",
+                "phonetic": "/ˈprɪti/",
+                "page": 62,
+                "type": "core"
               },
               {
                 "en": "expensive",
-                "cn": "昂贵的",
-                "emoji": "📘"
+                "cn": "昂贵的；花钱多的",
+                "emoji": "💎",
+                "phonetic": "/ɪkˈspensɪv/",
+                "page": 62,
+                "type": "core"
               },
               {
                 "en": "cheap",
-                "cn": "花钱少的",
-                "emoji": "📘"
+                "cn": "花钱少的；便宜的",
+                "emoji": "🏷️",
+                "phonetic": "/tʃiːp/",
+                "page": 62,
+                "type": "core"
               },
               {
                 "en": "nice",
                 "cn": "好的",
-                "emoji": "📘"
+                "emoji": "👍",
+                "phonetic": "/naɪs/",
+                "page": 62,
+                "type": "core"
+              },
+              {
+                "en": "try on",
+                "cn": "试穿",
+                "emoji": "👗",
+                "phonetic": "/traɪ ɒn/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "size",
+                "cn": "尺码；号",
+                "emoji": "📏",
+                "phonetic": "/saɪz/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "of course",
+                "cn": "当然",
+                "emoji": "✅",
+                "phonetic": "/əv kɔːs/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "too",
+                "cn": "太；过于",
+                "emoji": "⚠️",
+                "phonetic": "/tuː/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "just",
+                "cn": "正好；恰好",
+                "emoji": "👌",
+                "phonetic": "/dʒʌst/",
+                "page": 58,
+                "type": "extended"
+              },
+              {
+                "en": "how much",
+                "cn": "多少钱",
+                "emoji": "💵",
+                "phonetic": "/haʊ mʌtʃ/",
+                "page": 61,
+                "type": "extended"
+              },
+              {
+                "en": "eighty",
+                "cn": "八十",
+                "emoji": "8️⃣",
+                "phonetic": "/ˈeɪti/",
+                "page": 61,
+                "type": "extended"
+              },
+              {
+                "en": "dollar",
+                "cn": "美元（元；美元）",
+                "emoji": "💲",
+                "phonetic": "/ˈdɒlə(r)/",
+                "page": 61,
+                "type": "extended"
+              },
+              {
+                "en": "sale",
+                "cn": "特价销售；大减价",
+                "emoji": "🛒",
+                "phonetic": "/seɪl/",
+                "page": 63,
+                "type": "extended"
+              },
+              {
+                "en": "more",
+                "cn": "更多的",
+                "emoji": "➕",
+                "phonetic": "/mɔː(r)/",
+                "page": 63,
+                "type": "extended"
+              },
+              {
+                "en": "us",
+                "cn": "我们",
+                "emoji": "👥",
+                "phonetic": "/ʌs/",
+                "page": 63,
+                "type": "extended"
+              }
+            ],
+            "vocabGroups": [
+              {
+                "id": "accessories",
+                "name": "配饰",
+                "header": "配饰 · 4 个词",
+                "indices": [
+                  0,
+                  1,
+                  2,
+                  3
+                ]
+              },
+              {
+                "id": "shopping_words",
+                "name": "购物评价",
+                "header": "购物评价 · 4 个词",
+                "indices": [
+                  4,
+                  5,
+                  6,
+                  7
+                ]
+              },
+              {
+                "id": "extra_listen",
+                "name": "拓展词",
+                "header": "拓展词 · 11 个词",
+                "indices": [
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18
+                ]
               }
             ],
             "dialogues": [
@@ -4446,8 +5006,23 @@
                   },
                   {
                     "role": "Sarah",
-                    "text": "Yes. Can I try this dress on?",
-                    "cn": "是的。我可以试穿这条连衣裙吗？"
+                    "text": "Yes. This dress is pretty. How much is it?",
+                    "cn": "是的。这条连衣裙很漂亮。多少钱？"
+                  },
+                  {
+                    "role": "Saleswoman",
+                    "text": "It's eighty-five yuan.",
+                    "cn": "八十五元。"
+                  },
+                  {
+                    "role": "Sarah",
+                    "text": "Can I try it on?",
+                    "cn": "我可以试穿吗？"
+                  },
+                  {
+                    "role": "Saleswoman",
+                    "text": "Sure.",
+                    "cn": "当然。"
                   }
                 ]
               },
@@ -4455,14 +5030,29 @@
                 "title": "B Let's talk",
                 "lines": [
                   {
-                    "role": "Sarah",
-                    "text": "How much is this skirt?",
-                    "cn": "这条短裙多少钱？"
+                    "role": "Saleswoman",
+                    "text": "Can I help you?",
+                    "cn": "我能帮你吗？"
+                  },
+                  {
+                    "role": "John",
+                    "text": "Yes. These shoes are nice. Can I try them on? Size 6, please.",
+                    "cn": "是的。这双鞋很好看。我能试穿吗？请给我 6 号。"
                   },
                   {
                     "role": "Saleswoman",
-                    "text": "It's $89.",
-                    "cn": "89美元。"
+                    "text": "No. They're too small.",
+                    "cn": "不行，太小了。"
+                  },
+                  {
+                    "role": "John",
+                    "text": "Hmm. OK. Let's try size 7.",
+                    "cn": "嗯，好吧。试试 7 号。"
+                  },
+                  {
+                    "role": "Saleswoman",
+                    "text": "They're just right!",
+                    "cn": "正好合适！"
                   }
                 ]
               }
@@ -4471,15 +5061,15 @@
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "8个核心单词",
+                "subtitle": "19 个词 · 配饰·评价·拓展",
                 "icon": "📚",
                 "type": "vocab",
-                "time": "5分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s2",
                 "title": "听音辨词",
-                "subtitle": "听力训练",
+                "subtitle": "听一听，选单词",
                 "icon": "🎧",
                 "type": "listenWord",
                 "time": "5分钟"
@@ -4487,7 +5077,7 @@
               {
                 "id": "s3",
                 "title": "单词配对",
-                "subtitle": "巩固词义",
+                "subtitle": "词义连连看",
                 "icon": "🎮",
                 "type": "match",
                 "time": "5分钟"
@@ -4495,15 +5085,15 @@
               {
                 "id": "s4",
                 "title": "学习句型",
-                "subtitle": "核心句型",
+                "subtitle": "购物·尺码 · 歌谣跟读",
                 "icon": "💬",
                 "type": "sentence",
-                "time": "5分钟"
+                "time": "8分钟"
               },
               {
                 "id": "s5",
                 "title": "默写挑战",
-                "subtitle": "动手拼写",
+                "subtitle": "核心词拼写",
                 "icon": "✏️",
                 "type": "write",
                 "time": "8分钟"
@@ -4511,7 +5101,7 @@
               {
                 "id": "s6",
                 "title": "听力测试",
-                "subtitle": "听句选答案",
+                "subtitle": "听对话选答案",
                 "icon": "🎯",
                 "type": "listenSent",
                 "time": "6分钟"
@@ -4519,15 +5109,15 @@
               {
                 "id": "s7",
                 "title": "读写训练",
-                "subtitle": "即将上线 · 看图写句",
+                "subtitle": "填空选词 · 购物",
                 "icon": "📝",
                 "type": "readWrite",
-                "time": "12分钟"
+                "time": "10分钟"
               },
               {
                 "id": "s8",
                 "title": "最终通关",
-                "subtitle": "综合挑战",
+                "subtitle": "综合挑战 · 12 题",
                 "icon": "🏆",
                 "type": "finalQuiz",
                 "time": "10分钟"
@@ -4535,160 +5125,160 @@
             ],
             "quizQuestions": [
               {
-                "q": "「glove」是什么意思？",
+                "id": 601,
+                "q": "看中文选词：「围巾」",
                 "opts": [
-                  "太阳镜",
-                  "伞",
-                  "围巾",
-                  "手套"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「scarf」是什么意思？",
-                "opts": [
-                  "好的",
-                  "帽子",
-                  "围巾",
-                  "美观的"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「umbrella」是什么意思？",
-                "opts": [
-                  "昂贵的",
-                  "伞",
-                  "外套",
-                  "围巾"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「sunglasses」是什么意思？",
-                "opts": [
-                  "手套",
-                  "围巾",
-                  "太阳镜",
-                  "裤子"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「pretty」是什么意思？",
-                "opts": [
-                  "美观的",
-                  "裤子",
-                  "手套",
-                  "太阳镜"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「expensive」是什么意思？",
-                "opts": [
-                  "花钱少的",
-                  "好的",
-                  "昂贵的",
-                  "伞"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cheap」是什么意思？",
-                "opts": [
-                  "连衣裙",
-                  "花钱少的",
-                  "美观的",
-                  "短裤"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「nice」是什么意思？",
-                "opts": [
-                  "好的",
-                  "裤子",
-                  "昂贵的",
-                  "连衣裙"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「手套」？",
-                "opts": [
-                  "coat",
-                  "sunglasses",
                   "glove",
-                  "shirt"
+                  "umbrella",
+                  "scarf",
+                  "sunglasses"
                 ],
                 "answer": 2,
-                "point": "词汇",
+                "point": "u6:vocab_scarf",
                 "dim": "vocab"
               },
               {
-                "q": "「scarf」的中文是？",
+                "id": 602,
+                "q": "看中文选词：「昂贵的」",
                 "opts": [
-                  "花钱少的",
-                  "围巾",
-                  "美观的",
-                  "裤子"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「购物」核心词是？",
-                "opts": [
-                  "expensive",
-                  "sunglasses",
-                  "umbrella",
-                  "glove"
+                  "cheap",
+                  "nice",
+                  "pretty",
+                  "expensive"
                 ],
                 "answer": 3,
-                "point": "词汇",
+                "point": "u6:vocab_expensive",
                 "dim": "vocab"
               },
               {
-                "q": "Whose coat is this? 在问什么？",
+                "id": 603,
+                "q": "店员问 Sarah：「Can I help you?」Sarah 想试穿店里一条漂亮的红色连衣裙。Sarah 回答：",
                 "opts": [
-                  "什么颜色",
-                  "多少钱",
-                  "在哪里",
-                  "这是谁的外套"
+                  "Yes. This dress is pretty. Can I try it on?",
+                  "Sorry, they're not for sale.",
+                  "They're too big.",
+                  "It's time to go home."
                 ],
-                "answer": 3,
-                "point": "句型",
+                "answer": 0,
+                "point": "u6:can_i_help",
                 "dim": "sentence"
               },
               {
-                "q": "「umbrella」的意思是？",
+                "id": 604,
+                "q": "John 在鞋店要 6 号鞋。试穿后店员摇头说太小了。John 知道是尺码问题，会说：",
                 "opts": [
-                  "美观的",
-                  "伞",
-                  "裤子",
-                  "裙子"
+                  "They're too small.",
+                  "They're just right!",
+                  "Of course. Here you are.",
+                  "How much is this skirt?"
                 ],
-                "answer": 1,
-                "point": "词汇",
+                "answer": 0,
+                "point": "u6:too_small",
+                "dim": "sentence"
+              },
+              {
+                "id": 605,
+                "q": "John 换上 7 号鞋，店员笑着说合脚了。店员说：",
+                "opts": [
+                  "They're just right!",
+                  "They're too big.",
+                  "No. They're too small.",
+                  "They're not for sale."
+                ],
+                "answer": 0,
+                "point": "u6:just_right",
+                "dim": "sentence"
+              },
+              {
+                "id": 606,
+                "q": "B Let's talk 服装店：Sarah 看中一条短裙，标价牌写着 89 美元。妈妈看了一眼价格，对 Sarah 说：",
+                "opts": [
+                  "Sorry, Sarah. It's too expensive.",
+                  "I'll take it!",
+                  "They are very cheap.",
+                  "Yes. Can I try these on?"
+                ],
+                "answer": 0,
+                "point": "u6:too_expensive",
+                "dim": "sentence"
+              },
+              {
+                "id": 607,
+                "q": "商场海报写着：太阳镜和手套今天只要五元。这两样东西今天贵不贵？",
+                "opts": [
+                  "They are very cheap.",
+                  "They are too expensive.",
+                  "They are not for sale.",
+                  "They are too small."
+                ],
+                "answer": 0,
+                "point": "u6:sale_cheap",
+                "dim": "sentence"
+              },
+              {
+                "id": 608,
+                "q": "B Let's talk 服装店：Sarah 拿着一条短裙，想问这条裙子多少钱。她该问：",
+                "opts": [
+                  "How much is this skirt?",
+                  "How much are those big shoes?",
+                  "Whose coat is this?",
+                  "What time is it?"
+                ],
+                "answer": 0,
+                "point": "u6:how_much",
+                "dim": "sentence"
+              },
+              {
+                "id": 609,
+                "q": "Sarah 逛完街，家里时钟指向晚上 7:30。妈妈对 Sarah 说：「It's time for ___。」",
+                "opts": [
+                  "dinner",
+                  "breakfast",
+                  "school",
+                  "farm"
+                ],
+                "answer": 0,
+                "point": "u2:recall_routine",
+                "dim": "sentence"
+              },
+              {
+                "id": 610,
+                "q": "外面雷声大作、雨点打在窗户上。妈妈让 Chen Jie 去商场前带上能挡雨的 ___。",
+                "opts": [
+                  "umbrella",
+                  "sunglasses",
+                  "glove",
+                  "tomato"
+                ],
+                "answer": 0,
+                "point": "u3:recall_weather",
                 "dim": "vocab"
+              },
+              {
+                "id": 611,
+                "q": "超市蔬菜区，Mike 指着近处圆圆的、红红的蔬菜问 Sarah：「What are these?」Sarah 会回答：",
+                "opts": [
+                  "They're tomatoes.",
+                  "They're gloves.",
+                  "It's rainy and cool.",
+                  "They're just right!"
+                ],
+                "answer": 0,
+                "point": "u4:recall_vocab",
+                "dim": "sentence"
+              },
+              {
+                "id": 612,
+                "q": "失物处有一双绿鞋，鞋舌贴着 Chen Jie。Mike 自己的鞋也是绿的，但这双不是他的。Amy 问 Mike：「Are these yours?」Mike 说：",
+                "opts": [
+                  "No, they aren't. They're Chen Jie's.",
+                  "Yes, they are.",
+                  "It's mine.",
+                  "Can I help you?"
+                ],
+                "answer": 0,
+                "point": "u5:recall_yours",
+                "dim": "sentence"
               }
             ],
             "listeningQuestions": [
@@ -4696,39 +5286,79 @@
                 "audio": "Can I help you?",
                 "opts": [
                   "Can I help you?",
-                  "Can I help you.",
-                  "glove",
-                  "scarf"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Yes. Can I try this dress on?",
-                "opts": [
-                  "Yes. Can I try this dress on?",
-                  "Yes. Can I try this dress on.",
-                  "glove",
-                  "scarf"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "How much is this skirt?",
-                "opts": [
+                  "Can I try them on?",
                   "How much is this skirt?",
-                  "How much is this skirt.",
-                  "glove",
-                  "scarf"
+                  "They're too small."
                 ],
                 "answer": 0
               },
               {
-                "audio": "It's $89.",
+                "audio": "Yes. This dress is pretty. How much is it?",
                 "opts": [
-                  "It's $89.",
-                  "It is $89.",
-                  "glove",
-                  "scarf"
+                  "Yes. This dress is pretty. How much is it?",
+                  "Yes. These shoes are nice. Can I try them on?",
+                  "Sorry, Sarah. It's too expensive.",
+                  "They're just right!"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "It's eighty-five yuan.",
+                "opts": [
+                  "It's eighty-five yuan.",
+                  "It's eighty-nine dollars.",
+                  "They are very cheap.",
+                  "They're too big."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Yes. These shoes are nice. Can I try them on? Size 6, please.",
+                "opts": [
+                  "Yes. These shoes are nice. Can I try them on? Size 6, please.",
+                  "Yes. This dress is pretty. Can I try it on?",
+                  "No. They're too small.",
+                  "How much are those big shoes?"
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "No. They're too small.",
+                "opts": [
+                  "No. They're too small.",
+                  "They're too big.",
+                  "They're just right!",
+                  "Of course. Here you are."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "They're just right!",
+                "opts": [
+                  "They're just right!",
+                  "They're too small.",
+                  "They're too big.",
+                  "Sorry, they're not for sale."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Sorry, Sarah. It's too expensive.",
+                "opts": [
+                  "Sorry, Sarah. It's too expensive.",
+                  "I'll take it!",
+                  "It's very pretty.",
+                  "They are very cheap."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "Today all sunglasses and gloves are five yuan! They are very cheap.",
+                "opts": [
+                  "Today all sunglasses and gloves are five yuan! They are very cheap.",
+                  "How much is this skirt?",
+                  "Put on your shirt.",
+                  "It's time to go home."
                 ],
                 "answer": 0
               }

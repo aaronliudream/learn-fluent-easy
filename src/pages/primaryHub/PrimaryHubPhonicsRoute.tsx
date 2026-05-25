@@ -1,4 +1,5 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { findUnit, isUnitPublished } from "@/lib/primaryHub/courseData";
 import { getPhonicsForUnit } from "@/lib/primaryHub/phonicsRegistry";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
 import PrimaryHubPhonics from "./PrimaryHubPhonics";
@@ -12,8 +13,13 @@ export default function PrimaryHubPhonicsRoute() {
   const { grade } = usePrimaryHub();
   const nav = useNavigate();
   const stageIdx = Number(stageIdxStr);
+  const unit = unitId ? findUnit(unitId) : null;
   const config = unitId ? getPhonicsForUnit(unitId) : null;
   const base = `/primary/hub/${grade}`;
+
+  if (unit && !isUnitPublished(unit)) {
+    return <Navigate to={`${base}/semester/${semId ?? "grade4_volume2"}`} replace />;
+  }
 
   if (!unitId || !semId || !Number.isFinite(stageIdx) || !config) {
     return (

@@ -1,5 +1,5 @@
 import type { PrimaryHubGrade, PrimaryHubPersist, UnitState } from "./types";
-import { getGradeCourse, semesterIdsForGrade } from "./courseData";
+import { getGradeCourse, isUnitListed, semesterIdsForGrade } from "./courseData";
 import { migratePersistUnits } from "./stageProgressMigrate";
 
 export const STORAGE_PREFIX = "primary_hub_v1_";
@@ -25,7 +25,7 @@ function defaultCurrentForGrade(grade: PrimaryHubGrade): { unitId: string; semes
   const course = getGradeCourse(grade);
   for (const semId of [v1, v2]) {
     const sem = course.semesters[semId];
-    const unit = sem?.units.find((u) => u.available && u.vocabulary.length > 0);
+    const unit = sem?.units.find((u) => isUnitListed(u) && u.vocabulary.length > 0);
     if (unit) return { unitId: unit.id, semesterId: semId };
   }
   return { unitId: "", semesterId: v1 };

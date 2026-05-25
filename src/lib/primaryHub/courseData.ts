@@ -38,6 +38,15 @@ export function findUnit(unitId: string): UnitDef | null {
   return null;
 }
 
+/** Omitted or true = visible in Primary Hub UI and routes. */
+export function isUnitPublished(unit: UnitDef): boolean {
+  return unit.published !== false;
+}
+
+export function isUnitListed(unit: UnitDef): boolean {
+  return unit.available && isUnitPublished(unit);
+}
+
 export function getGradeCourse(grade: PrimaryHubGrade): GradeCourseDef {
   return PRIMARY_HUB_COURSES[gradeKey(grade)];
 }

@@ -1,6 +1,6 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
-import { findUnit } from "@/lib/primaryHub/courseData";
+import { findUnit, isUnitPublished } from "@/lib/primaryHub/courseData";
 import { getUnitProgress, getStagePercent } from "@/lib/primaryHub/progress";
 import { isReadWriteComingSoon } from "@/lib/primaryHub/stageCompletable";
 import { readUnitState } from "@/lib/primaryHub/storage";
@@ -18,6 +18,10 @@ export default function PrimaryHubUnit() {
 
   if (!unit || !unitId || !semId) {
     return <div className="p-6 text-center">单元未找到</div>;
+  }
+
+  if (!isUnitPublished(unit)) {
+    return <Navigate to={`${base}/semester/${semId}`} replace />;
   }
 
   return (

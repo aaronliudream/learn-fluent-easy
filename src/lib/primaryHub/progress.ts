@@ -1,4 +1,4 @@
-import { findSemester, findUnit, getGradeCourse } from "./courseData";
+import { findSemester, findUnit, getGradeCourse, isUnitListed } from "./courseData";
 import { getCompletableStageIndices } from "./stageCompletable";
 import { readUnitState } from "./storage";
 import type { PrimaryHubGrade, PrimaryHubPersist, UnitState } from "./types";
@@ -46,8 +46,8 @@ export function getSemesterProgress(state: PrimaryHubPersist, semesterId: string
     const p = getUnitProgress(state, u.id);
     totalStages += p.total;
     completedStages += p.completed;
-    if (p.total > 0 && p.completed === p.total) completedUnits++;
-    if (u.available && p.total > 0) {
+    if (isUnitListed(u) && p.total > 0 && p.completed === p.total) completedUnits++;
+    if (isUnitListed(u) && p.total > 0) {
       percentSum += p.percent;
       trackedUnits++;
     }
@@ -55,7 +55,7 @@ export function getSemesterProgress(state: PrimaryHubPersist, semesterId: string
   return {
     percent: trackedUnits > 0 ? Math.round(percentSum / trackedUnits) : 0,
     completedUnits,
-    totalUnits: sem.units.filter((u) => u.available).length,
+    totalUnits: sem.units.filter((u) => isUnitListed(u)).length,
     totalStages,
     completedStages,
   };
@@ -72,7 +72,7 @@ export function getGradeProgress(state: PrimaryHubPersist, grade: PrimaryHubGrad
       const p = getUnitProgress(state, u.id);
       totalStages += p.total;
       completedStages += p.completed;
-      if (u.available && p.total > 0) {
+      if (isUnitListed(u) && p.total > 0) {
         percentSum += p.percent;
         trackedUnits++;
       }

@@ -63,6 +63,8 @@ export type UnitDef = {
   cn: string;
   emoji: string;
   available: boolean;
+  /** When false, unit is hidden from lists and direct URLs (default: published). */
+  published?: boolean;
   vocabulary: VocabItem[];
   vocabGroups?: VocabGroupConfig[];
   dialogues: Array<{ title: string; lines: Array<{ role: string; text: string; cn: string }> }>;

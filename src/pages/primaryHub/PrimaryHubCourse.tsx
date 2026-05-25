@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
-import { getGradeCourse, semesterIdsForGrade } from "@/lib/primaryHub/courseData";
+import { getGradeCourse, isUnitListed, semesterIdsForGrade } from "@/lib/primaryHub/courseData";
 import { getSemesterProgress } from "@/lib/primaryHub/progress";
 
 export default function PrimaryHubCourse() {
@@ -38,7 +38,7 @@ export default function PrimaryHubCourse() {
                     {sem.name}
                   </div>
                   <div className="text-xs text-[#888780]">
-                    {locked ? "即将开放" : `${sem.units.filter((u) => u.available).length} 个单元 · ${sp.completedUnits} 已完成`}
+                    {locked ? "即将开放" : `${sem.units.filter((u) => isUnitListed(u)).length} 个单元 · ${sp.completedUnits} 已完成`}
                   </div>
                 </div>
               </div>

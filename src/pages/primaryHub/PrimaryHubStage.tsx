@@ -1,6 +1,6 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
-import { findUnit } from "@/lib/primaryHub/courseData";
+import { findUnit, isUnitPublished } from "@/lib/primaryHub/courseData";
 import { readUnitState } from "@/lib/primaryHub/storage";
 import PrimaryHubStagePlay from "./PrimaryHubStagePlay";
 
@@ -16,8 +16,12 @@ export default function PrimaryHubStage() {
   const unit = unitId ? findUnit(unitId) : null;
   const base = `/primary/hub/${grade}`;
 
-  if (!unitId || !semId || !Number.isFinite(stageIdx) || !unit) {
+  if (!unitId || !semId || !Number.isFinite(stageIdx)) {
     return <div className="p-6 text-center">关卡未找到</div>;
+  }
+
+  if (!unit || !isUnitPublished(unit)) {
+    return <Navigate to={`${base}/semester/${semId}`} replace />;
   }
 
   return (

@@ -465,6 +465,7 @@ npm run dev
 | **readWrite 插图** | `picture_choice` 须有 `visual` 或 `image` 至少其一（优先 `visual`，见 §4.3） |
 | **phonics** | **4b 完成前不建议**为新 Unit 添加 phonics（§4.4） |
 | **验证** | §6 全部 checklist 通过后再交付 |
+| **出题铁律** | finalQuiz / readWrite 等须满足 [g4v2_u2-template-notes.md](./units/g4v2_u2-template-notes.md) 铁律 **1–7**（含中文自然度、PEP 场景货币一致） |
 
 ### 8.2 可自主决策（内容放权）
 

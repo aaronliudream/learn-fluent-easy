@@ -1,0 +1,19 @@
+﻿
+ RUN  v3.2.4 C:/Projects/learn-fluent-easy
+
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > splitFillChoiceSentence > splits g4v1_u2 Q6 sentence with three underscores 2ms
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > splitFillChoiceSentence > splits g4v2_u2 time sentence with four underscores 1ms
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > splitFillChoiceSentence > treats 5+ underscores as a single blank (greedy) 0ms
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > splitFillChoiceSentence > falls back when no placeholder 0ms
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > splitFillChoiceSentence > uses only the first blank when multiple placeholders 0ms
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > warnFillChoiceQuestion > warns when no placeholder 3ms
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > warnFillChoiceQuestion > warns when multiple placeholders 0ms
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > warnFillChoiceQuestion > does not warn for a single blank 0ms
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > validateFillChoiceSentence > accepts g4v1_u2 Q6 and g4v2_u2 time sentence 1ms
+ Γ£ô src/lib/primaryHub/fillChoiceSentence.test.ts > validateFillChoiceSentence > rejects missing and multiple blanks 1ms
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  21:42:45
+   Duration  6.36s (transform 88ms, setup 418ms, collect 113ms, tests 10ms, environment 2.99s, prepare 512ms)
+

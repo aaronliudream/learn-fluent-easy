@@ -1,0 +1,23 @@
+
+================ CAPTURE RESULTS ================
+
+--- g4v1_u1-q3 --- ok=true
+  expected: John can't find his book. It's ___ the window.
+  displayed: John can't find his book. It's ___ the window.
+  file: docs/screenshots/readwrite-wrap-fix/after-g4v1_u1-q3-390px.png
+  DOM:
+<p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">John can't find his book. <span class="whitespace-nowrap">It's <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> the window.</span></p>
+
+--- g4v1_u2-q6 --- ok=true
+  expected: The staff finds the bag. She says: ___ it is!
+  displayed: The staff finds the bag. She says: ___ it is!
+  file: docs/screenshots/readwrite-wrap-fix/after-g4v1_u2-q6-390px.png
+  DOM:
+<p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">The staff finds the bag. <span class="whitespace-nowrap">She says: <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> it is!</span></p>
+
+--- g4v2_u5-q6 --- ok=true
+  expected: Mike's pants are green. Amy sees green pants with a Dad label. Whose pants are these? They're your father's, not ___.
+  displayed: Mike's pants are green. Amy sees green pants with a Dad label. Whose pants are these? They're your father's, not ___.
+  file: docs/screenshots/readwrite-wrap-fix/after-g4v2_u5-q6-390px.png
+  DOM:
+<p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">Mike's pants are green. Amy sees green pants with a Dad label. Whose pants are these? They're your father's, <span class="whitespace-nowrap">not <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> .</span></p>

@@ -103,12 +103,12 @@
     },
     {
       "id": 404,
-      "q": "🍅 Mike 问 Sarah：「What are these?」Sarah 看到红色圆蔬菜，她会回答：",
+      "q": "🍅 Mike 指着近处问 Sarah：「What are these?」Sarah 看到圆圆的、红红的蔬菜，她会回答：",
       "opts": [
         "They're tomatoes.",
-        "They're horses.",
-        "No, you can't.",
-        "It's sunny and warm."
+        "They're carrots.",
+        "They're potatoes.",
+        "They're green beans."
       ],
       "answer": 0,
       "point": "u4:recall_these",
@@ -116,12 +116,12 @@
     },
     {
       "id": 405,
-      "q": "🥕 Sarah 指着近处橙色长条蔬菜问 Mike：「Are these carrots?」Mike 确认后应说：",
+      "q": "🥕 Mike 指着近处橙色长条蔬菜问 Sarah：「Are these carrots?」Sarah 摇头，她会先说：",
       "opts": [
+        "No.",
         "Yes, they are.",
-        "No, they aren't. They're tomatoes.",
-        "They're ducks.",
-        "Seventeen."
+        "They're tomatoes.",
+        "What are these?"
       ],
       "answer": 0,
       "point": "u4:recall_these",
@@ -129,12 +129,12 @@
     },
     {
       "id": 406,
-      "q": "🐴 Mike 望着**远处**的马群问 Sarah：「Are they horses?」Sarah 看到的确是马，她回答：",
+      "q": "🦆 Sarah 望着远处一群动物问 Mike：「Are they horses?」Mike 看到其实是鸭子，他会回答：",
       "opts": [
-        "Yes, they are.",
         "No, they aren't. They're ducks.",
+        "Yes, they are.",
         "They're tomatoes.",
-        "It's time for lunch."
+        "Seventeen."
       ],
       "answer": 0,
       "point": "u4:recall_those",
@@ -150,8 +150,8 @@
     },
     {
       "id": 408,
-      "q": "🌱 菜园里种着胡萝卜和土豆。英文常说 This is the vegetable ___。",
-      "opts": ["garden", "farm", "yum", "those"],
+      "q": "🌱 麦克唐纳先生带同学参观，指着种蔬菜的地方说：This is the vegetable ___。",
+      "opts": ["garden", "farm", "animal", "those"],
       "answer": 0,
       "point": "u4:recall_vocab",
       "dim": "vocab"
@@ -159,19 +159,19 @@
     {
       "id": 409,
       "q": "🌅 参观农场那天早上 7 点，妈妈对小明说：「It's time to ___。」",
-      "opts": ["get up", "go to bed", "go to school", "eat tomatoes"],
+      "opts": ["get up", "go to bed", "go to school", "go home"],
       "answer": 0,
       "point": "u2:recall_routine",
       "dim": "sentence"
     },
     {
       "id": 410,
-      "q": "☀️ 出发前查天气：北京今天晴朗又温暖。选正确句子：",
+      "q": "☀️ Chen Jie 在电话里描述北京天气。选她最可能说的句子：",
       "opts": [
         "It's sunny and warm.",
         "It's rainy and cool.",
-        "They're tomatoes.",
-        "No, you can't."
+        "It's windy and cloudy.",
+        "It's snowy and cold."
       ],
       "answer": 0,
       "point": "u3:recall_weather",
@@ -179,8 +179,8 @@
     },
     {
       "id": 411,
-      "q": "🐐 农场里那些不是绵羊，是山羊。选合适单词：",
-      "opts": ["goats", "horses", "breakfast", "cloudy"],
+      "q": "🐐 远处那些动物是山羊，不是绵羊。完整句子：They are ___。",
+      "opts": ["goats", "sheep", "horses", "hens"],
       "answer": 0,
       "point": "u4:recall_vocab",
       "dim": "vocab"
@@ -188,7 +188,7 @@
     {
       "id": 412,
       "q": "⏰ 参观结束要回学校。妈妈对 Mike 说：「Hurry up! It's time to go to ___。」",
-      "opts": ["school", "farm", "potato", "degree"],
+      "opts": ["school", "go home", "farm", "garden"],
       "answer": 0,
       "point": "u2:recall_routine",
       "dim": "sentence"

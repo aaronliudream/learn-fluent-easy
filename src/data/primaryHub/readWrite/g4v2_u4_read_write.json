@@ -7,13 +7,13 @@
   "questions": [
     {
       "type": "fill_choice",
-      "sentence": "🍅 Look at these! What are ___?",
-      "hint_zh": "近处「这些」是什么",
-      "correctSentence": "Look at these! What are these?",
+      "sentence": "👆 Mike points at the red round veggies. What are ___?",
+      "hint_zh": "指着近处红色的蔬菜问「这些是什么」",
+      "correctSentence": "What are these?",
       "options": [
         { "text": "these", "correct": true },
         { "text": "those", "correct": false },
-        { "text": "farm", "correct": false }
+        { "text": "horses", "correct": false }
       ]
     },
     {
@@ -51,13 +51,13 @@
     },
     {
       "type": "fill_choice",
-      "sentence": "🚜 Hi! This is Mr MacDonald's ___ .",
-      "hint_zh": "麦克唐纳先生的地方",
-      "correctSentence": "Hi! This is Mr MacDonald's farm.",
+      "sentence": "🐄 Hi! This is Mr MacDonald's ___. Cows, hens and sheep live here.",
+      "hint_zh": "有牛、母鸡、绵羊的是农场",
+      "correctSentence": "Hi! This is Mr MacDonald's farm. Cows, hens and sheep live here.",
       "options": [
         { "text": "farm", "correct": true },
         { "text": "garden", "correct": false },
-        { "text": "weather", "correct": false }
+        { "text": "those", "correct": false }
       ]
     },
     {

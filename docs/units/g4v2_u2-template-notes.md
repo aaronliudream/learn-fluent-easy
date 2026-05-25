@@ -30,6 +30,10 @@ Unit 2 Let's spell：**ir / ur** — girl, bird, nurse, hamburger, dirt, birth, 
    - 反例：「外面很冷，妈妈不让出门。选合适回答」——妈妈已表态，选项又是妈妈口吻，角色颠倒。
    - 正例：「小明问妈妈：Can I go outside now? 妈妈会怎么回答？」
 
+6. **情境/填空题须有可推理线索**（readWrite `fill_choice`、finalQuiz 同理）：题干必须给出能排除干扰项的信息，不能让学生只靠背课文原句或猜。
+   - 反例：「麦克唐纳先生的 ___」选项 farm / garden 都成立。
+   - 正例：「Cows, hens and sheep live here. Mr MacDonald's ___」→ 有动物只能是 farm。
+
 ## 跨 Unit 复现钩子（finalQuiz）
 
 `quizQuestions[].point` 使用前缀，供 Unit 3–6 选题脚本或人工挑题：

@@ -1,0 +1,270 @@
+{
+  "id": "g4v1_u2",
+  "num": 2,
+  "title": "My schoolbag",
+  "cn": "我的书包",
+  "emoji": "🎒",
+  "available": true,
+  "published": true,
+  "vocabulary": [
+    { "en": "schoolbag", "cn": "书包", "emoji": "🎒", "phonetic": "/ˈskuːlbæɡ/", "page": 15, "type": "core" },
+    { "en": "maths book", "cn": "数学书", "emoji": "📐", "phonetic": "/mæθs bʊk/", "page": 15, "type": "core" },
+    { "en": "English book", "cn": "英语书", "emoji": "📕", "phonetic": "/ˈɪŋɡlɪʃ bʊk/", "page": 15, "type": "core" },
+    { "en": "Chinese book", "cn": "语文书", "emoji": "📗", "phonetic": "/ˌtʃaɪˈniːz bʊk/", "page": 15, "type": "core" },
+    { "en": "storybook", "cn": "故事书", "emoji": "📚", "phonetic": "/ˈstɔːribʊk/", "page": 15, "type": "core" },
+    { "en": "notebook", "cn": "笔记本", "emoji": "📓", "phonetic": "/ˈnəʊtbʊk/", "page": 18, "type": "core" },
+    { "en": "candy", "cn": "糖果", "emoji": "🍬", "phonetic": "/ˈkændi/", "page": 18, "type": "core" },
+    { "en": "toy", "cn": "玩具", "emoji": "🧸", "phonetic": "/tɔɪ/", "page": 18, "type": "core" },
+    { "en": "key", "cn": "钥匙", "emoji": "🔑", "phonetic": "/kiː/", "page": 18, "type": "core" },
+    { "en": "wow", "cn": "哇；呀", "emoji": "😮", "phonetic": "/waʊ/", "page": 14, "type": "extended" },
+    { "en": "lost", "cn": "丢失", "emoji": "😢", "phonetic": "/lɒst/", "page": 17, "type": "extended" },
+    { "en": "so much", "cn": "非常地", "emoji": "😲", "phonetic": "/səʊ mʌtʃ/", "page": 17, "type": "extended" },
+    { "en": "cute", "cn": "可爱的", "emoji": "🥰", "phonetic": "/kjuːt/", "page": 19, "type": "extended" }
+  ],
+  "vocabGroups": [
+    {
+      "id": "books_p15",
+      "name": "书包与课本",
+      "header": "书包与课本 · 5 个词",
+      "indices": [0, 1, 2, 3, 4]
+    },
+    {
+      "id": "things_p18",
+      "name": "书包里的其他",
+      "header": "书包里的其他 · 4 个词",
+      "indices": [5, 6, 7, 8]
+    },
+    {
+      "id": "extra_listen",
+      "name": "拓展词",
+      "header": "拓展词 · 4 个词",
+      "indices": [9, 10, 11, 12]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "A Let's talk",
+      "lines": [
+        { "role": "Amy", "text": "I have a new schoolbag.", "cn": "我有一个新书包。" },
+        { "role": "Wu Binbin", "text": "Really? What's in your schoolbag?", "cn": "真的吗？你的书包里有什么？" },
+        { "role": "Amy", "text": "An English book, a maths book and three storybooks.", "cn": "一本英语书、一本数学书和三本故事书。" },
+        { "role": "Wu Binbin", "text": "Wow! It's a panda!", "cn": "哇！是熊猫（书包）！" }
+      ]
+    },
+    {
+      "title": "B Let's talk",
+      "lines": [
+        { "role": "Tom", "text": "Excuse me. I lost my schoolbag.", "cn": "打扰一下，我丢了书包。" },
+        { "role": "Staff", "text": "What colour is it?", "cn": "它是什么颜色的？" },
+        { "role": "Tom", "text": "It's blue and white.", "cn": "蓝白色的。" },
+        { "role": "Staff", "text": "What's in it?", "cn": "里面有什么？" },
+        { "role": "Tom", "text": "An English book, two toys and a key.", "cn": "一本英语书、两个玩具和一把钥匙。" },
+        { "role": "Staff", "text": "Here it is!", "cn": "给你！" }
+      ]
+    }
+  ],
+  "stages": [
+    { "id": "s1", "title": "认识单词", "subtitle": "13 个词 · 课本·物品·拓展", "icon": "📚", "type": "vocab", "time": "10分钟" },
+    { "id": "s2", "title": "听音辨词", "subtitle": "听一听，选单词", "icon": "🎧", "type": "listenWord", "time": "5分钟" },
+    { "id": "s3", "title": "单词配对", "subtitle": "词义连连看", "icon": "🎮", "type": "match", "time": "5分钟" },
+    { "id": "s4", "title": "学习句型", "subtitle": "书包·失物招领 · 歌谣跟读", "icon": "💬", "type": "sentence", "time": "8分钟" },
+    { "id": "s5", "title": "默写挑战", "subtitle": "核心词拼写", "icon": "✏️", "type": "write", "time": "8分钟" },
+    { "id": "s6", "title": "听力测试", "subtitle": "听对话选答案", "icon": "🎯", "type": "listenSent", "time": "6分钟" },
+    { "id": "s7", "title": "读写训练", "subtitle": "填空选词 · 书包", "icon": "📝", "type": "readWrite", "time": "10分钟" },
+    { "id": "s8", "title": "最终通关", "subtitle": "综合挑战 · 10 题", "icon": "🏆", "type": "finalQuiz", "time": "10分钟" }
+  ],
+  "quizQuestions": [
+    {
+      "id": 201,
+      "q": "看中文选词：「数学书」",
+      "opts": ["English book", "maths book", "Chinese book", "storybook"],
+      "answer": 1,
+      "point": "u2:recall_schoolthing",
+      "dim": "vocab"
+    },
+    {
+      "id": 202,
+      "q": "看中文选词：「糖果」",
+      "opts": ["notebook", "candy", "toy", "key"],
+      "answer": 1,
+      "point": "u2:recall_schoolthing",
+      "dim": "vocab"
+    },
+    {
+      "id": 203,
+      "q": "看中文选词：「故事书」",
+      "opts": ["maths book", "storybook", "schoolbag", "notebook"],
+      "answer": 1,
+      "point": "u2:recall_schoolthing",
+      "dim": "vocab"
+    },
+    {
+      "id": 205,
+      "q": "放学路上，Tom 发现书包不见了。他跑到失物招领处，会对工作人员先说：",
+      "opts": [
+        "I lost my schoolbag.",
+        "What's in your schoolbag?",
+        "Here it is!",
+        "I have a maths book."
+      ],
+      "answer": 0,
+      "point": "u2:recall_schoolthing",
+      "dim": "sentence"
+    },
+    {
+      "id": 206,
+      "q": "失物招领处，工作人员问 Tom：「What colour is it?」Tom 回忆起书包的样子——蓝色书包上印着一只白色熊猫。他会回答：",
+      "opts": [
+        "It's blue and white.",
+        "It's orange.",
+        "The door is orange.",
+        "It's near the window."
+      ],
+      "answer": 0,
+      "point": "u2:recall_color",
+      "dim": "sentence"
+    },
+    {
+      "id": 207,
+      "q": "Zhang Peng 打开空书包，要往里面放一本英语书。他一边放一边说：",
+      "opts": [
+        "I have an English book.",
+        "What's in your schoolbag?",
+        "I lost my schoolbag.",
+        "What colour is it?"
+      ],
+      "answer": 0,
+      "point": "u2:recall_have",
+      "dim": "sentence"
+    },
+    {
+      "id": 208,
+      "q": "Amy 打开书包给同学看，里面有一只黑白毛绒玩偶。Amy 惊喜地说了两句，开头是：",
+      "opts": [
+        "Wow! It's a panda!",
+        "I lost my schoolbag.",
+        "Let's clean the classroom!",
+        "It's blue and white."
+      ],
+      "answer": 0,
+      "point": "u2:recall_have",
+      "dim": "sentence"
+    },
+    {
+      "id": 210,
+      "q": "写失物启事时，Tom 要说明教室里还少了一件物品。看中文选词：「电灯」",
+      "opts": ["light", "schoolbag", "maths book", "candy"],
+      "answer": 0,
+      "point": "u1:recall_classroom_item",
+      "dim": "vocab"
+    },
+    {
+      "id": 211,
+      "q": "Sarah 想用英语介绍自己卧室的门——那扇门是橙色的。她会说：",
+      "opts": [
+        "The door is orange.",
+        "The wall is orange.",
+        "The fan is green.",
+        "It's blue and white."
+      ],
+      "answer": 0,
+      "point": "u1:recall_color",
+      "dim": "sentence"
+    },
+    {
+      "id": 212,
+      "q": "Mike 整理书包，英语书滑到课桌底下。Sarah 问：「Where is your English book?」Mike 看见后说：",
+      "opts": [
+        "It's under the desk.",
+        "It's near the window.",
+        "It's on the light.",
+        "What's in your schoolbag?"
+      ],
+      "answer": 0,
+      "point": "u1:recall_position",
+      "dim": "sentence"
+    }
+  ],
+  "listeningQuestions": [
+    {
+      "audio": "I have a new schoolbag.",
+      "opts": [
+        "I have a new schoolbag.",
+        "What's in your schoolbag?",
+        "I lost my schoolbag.",
+        "Here it is!"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "What's in your schoolbag?",
+      "opts": [
+        "What's in your schoolbag?",
+        "What colour is it?",
+        "I have a new schoolbag.",
+        "Wow! It's a panda!"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Wow! It's a panda!",
+      "opts": [
+        "Wow! It's a panda!",
+        "I have an English book.",
+        "It's blue and white.",
+        "Here it is!"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Excuse me. I lost my schoolbag.",
+      "opts": [
+        "Excuse me. I lost my schoolbag.",
+        "What colour is it?",
+        "What's in it?",
+        "Here it is!"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "What colour is it?",
+      "opts": [
+        "What colour is it?",
+        "What's in it?",
+        "I lost my schoolbag.",
+        "It's blue and white."
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "It's blue and white.",
+      "opts": [
+        "It's blue and white.",
+        "It's orange.",
+        "The door is orange.",
+        "Wow! It's a panda!"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "What's in it?",
+      "opts": [
+        "What's in it?",
+        "What's in your schoolbag?",
+        "Here it is!",
+        "I lost my schoolbag."
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Oh no! My bag is heavy!",
+      "opts": [
+        "Oh no! My bag is heavy!",
+        "What do you have in your schoolbag?",
+        "Let me help you.",
+        "I have a new schoolbag."
+      ],
+      "answer": 0
+    }
+  ]
+}

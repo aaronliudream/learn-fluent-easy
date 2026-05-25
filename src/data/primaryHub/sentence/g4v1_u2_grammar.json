@@ -1,0 +1,70 @@
+{
+  "lessonId": "g4v1_u2_grammar",
+  "unitId": "g4v1_u2",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "Amy 和 Wu Binbin 看新书包，Tom 去失物招领，一起来练吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "书包里有什么 · What's in your schoolbag?",
+      "description": "Amy 介绍新书包，Wu Binbin 问里面有什么，看见熊猫书包。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "I have a new schoolbag.", "zh": "我有一个新书包。" },
+          "answer": { "en": "Really? What's in your schoolbag?", "zh": "真的吗？你的书包里有什么？" },
+          "tag": "A Let's talk"
+        },
+        {
+          "id": "A2",
+          "question": { "en": "An English book, a maths book and three storybooks.", "zh": "一本英语书、一本数学书和三本故事书。" },
+          "answer": { "en": "Wow! It's a panda!", "zh": "哇！是熊猫（书包）！" },
+          "tag": "A Let's talk"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "失物招领 · lost / colour / What's in it",
+      "description": "Tom 丢了书包，说明颜色和内容，工作人员归还书包。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Excuse me. I lost my schoolbag.", "zh": "打扰一下，我丢了书包。" },
+          "answer": { "en": "What colour is it?", "zh": "它是什么颜色的？" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B2",
+          "question": { "en": "It's blue and white.", "zh": "蓝白色的。" },
+          "answer": { "en": "What's in it?", "zh": "里面有什么？" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "B3",
+          "question": { "en": "An English book, two toys and a key.", "zh": "一本英语书、两个玩具和一把钥匙。" },
+          "answer": { "en": "Here it is!", "zh": "给你！" },
+          "tag": "B Let's talk"
+        },
+        {
+          "id": "C1",
+          "question": { "en": "Oh no! My bag is heavy!", "zh": "哦不！我的包好重！（歌谣）" },
+          "answer": { "en": "Oh no! My bag is heavy!", "zh": "哦不！我的包好重！（歌谣）" },
+          "tag": "Let's chant · 歌谣"
+        },
+        {
+          "id": "C2",
+          "question": { "en": "What do you have in your schoolbag?", "zh": "你的书包里有什么？（歌谣）" },
+          "answer": null,
+          "tag": "Let's chant · 歌谣"
+        }
+      ]
+    }
+  ]
+}

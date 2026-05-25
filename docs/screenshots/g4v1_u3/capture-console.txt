@@ -1,0 +1,20 @@
+
+================ U3 CAPTURE RESULTS ================
+
+--- rw-q1-his --- ok=true
+  expected: James has a green bag. What is ___ name?
+  displayed: James has a green bag. What is ___ name?
+  file: docs/screenshots/g4v1_u3/after-g4v1_u3-rw-q1-his-390px.png
+  DOM:
+<p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">James has a green bag. What <span class="whitespace-nowrap">is <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> name?</span></p>
+
+--- rw-q2-her --- ok=true
+  expected: Ann has a blue hat. What is ___ name?
+  displayed: Ann has a blue hat. What is ___ name?
+  file: docs/screenshots/g4v1_u3/after-g4v1_u3-rw-q2-her-390px.png
+  DOM:
+<p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">Ann has a blue hat. What <span class="whitespace-nowrap">is <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> name?</span></p>
+
+--- finalquiz-301 --- ok=true
+  finalQuiz: {"target":"看中文选词：「安静的」","prompt":"看中文选词：「安静的」","counter":"第 4 / 10 题","opts":["Afriendly","Bquiet","Cstrong","Dcute"],"steppedPast":["课本里 Kate 的头发垂到肩膀以下。下面哪句在描述 Kate？","课本里有个男孩，他的鞋和泥土一个颜色。下面哪句对？","体育课上，这个男孩能轻松搬起最重的箱子。下面哪句最适合形容他？"]}
+  file: docs/screenshots/g4v1_u3/after-g4v1_u3-finalquiz-301-390px.png

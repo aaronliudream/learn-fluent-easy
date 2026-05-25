@@ -1026,46 +1026,78 @@
             "cn": "我的朋友",
             "emoji": "👫",
             "available": true,
+            "published": true,
             "vocabulary": [
               {
                 "en": "strong",
                 "cn": "强壮的",
-                "emoji": "📘"
+                "emoji": "💪"
               },
               {
                 "en": "friendly",
                 "cn": "友好的",
-                "emoji": "📘"
+                "emoji": "😊"
               },
               {
                 "en": "quiet",
                 "cn": "安静的",
-                "emoji": "📘"
+                "emoji": "🤫"
               },
               {
                 "en": "hair",
                 "cn": "头发",
-                "emoji": "📘"
+                "emoji": "💇"
               },
               {
                 "en": "shoe",
                 "cn": "鞋",
-                "emoji": "👕"
+                "emoji": "👟"
               },
               {
                 "en": "glasses",
                 "cn": "眼镜",
-                "emoji": "📘"
+                "emoji": "👓"
               },
               {
                 "en": "his",
                 "cn": "他的",
-                "emoji": "📘"
+                "emoji": "👦"
               },
               {
-                "en": "or",
-                "cn": "或者",
-                "emoji": "📘"
+                "en": "her",
+                "cn": "她的",
+                "emoji": "👧"
+              }
+            ],
+            "vocabGroups": [
+              {
+                "id": "personality_p25",
+                "name": "性格",
+                "header": "性格 · 3 个词",
+                "indices": [
+                  0,
+                  1,
+                  2
+                ]
+              },
+              {
+                "id": "appearance_p28",
+                "name": "外貌与随身",
+                "header": "外貌与随身 · 3 个词",
+                "indices": [
+                  3,
+                  4,
+                  5
+                ]
+              },
+              {
+                "id": "possessive_p24",
+                "name": "他的 / 她的",
+                "header": "物主代词 · 2 个词",
+                "indices": [
+                  6,
+                  7
+                ]
               }
             ],
             "dialogues": [
@@ -1161,6 +1193,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "读句填词",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "8分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -1170,208 +1210,164 @@
             ],
             "quizQuestions": [
               {
-                "q": "「strong」是什么意思？",
+                "id": 301,
+                "q": "看中文选词：「安静的」",
                 "opts": [
-                  "眼镜",
-                  "父亲",
-                  "强壮的",
-                  "表亲"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「friendly」是什么意思？",
-                "opts": [
-                  "母亲",
-                  "叔叔",
-                  "姐妹",
-                  "友好的"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「quiet」是什么意思？",
-                "opts": [
-                  "母亲",
-                  "表亲",
-                  "安静的",
-                  "头发"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「hair」是什么意思？",
-                "opts": [
-                  "强壮的",
-                  "或者",
-                  "父亲",
-                  "头发"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「shoe」是什么意思？",
-                "opts": [
-                  "友好的",
-                  "阿姨",
-                  "鞋",
-                  "眼镜"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「glasses」是什么意思？",
-                "opts": [
-                  "阿姨",
-                  "眼镜",
-                  "姐妹",
-                  "强壮的"
+                  "friendly",
+                  "quiet",
+                  "strong",
+                  "cute"
                 ],
                 "answer": 1,
-                "point": "词汇",
+                "point": "u3:recall_personality",
                 "dim": "vocab"
               },
               {
-                "q": "「his」是什么意思？",
+                "id": 302,
+                "q": "看中文选词：「眼镜」",
                 "opts": [
-                  "兄弟",
-                  "他的",
-                  "姐妹",
-                  "叔叔"
+                  "hair",
+                  "glasses",
+                  "shoes",
+                  "hat"
                 ],
                 "answer": 1,
-                "point": "词汇",
+                "point": "u3:recall_appearance",
                 "dim": "vocab"
               },
               {
-                "q": "「or」是什么意思？",
-                "opts": [
-                  "姐妹",
-                  "他的",
-                  "鞋",
-                  "或者"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「强壮的」？",
+                "id": 303,
+                "q": "看中文选词：「强壮的」",
                 "opts": [
                   "strong",
-                  "father",
-                  "friendly",
-                  "quiet"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「friendly」的中文是？",
-                "opts": [
-                  "眼镜",
-                  "表亲",
-                  "友好的",
-                  "姐妹"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「我的朋友」核心词是？",
-                "opts": [
                   "quiet",
                   "friendly",
-                  "strong",
-                  "uncle"
+                  "short"
                 ],
-                "answer": 2,
-                "point": "词汇",
+                "answer": 0,
+                "point": "u3:recall_personality",
                 "dim": "vocab"
               },
               {
-                "q": "「quiet」的意思是？",
+                "id": 304,
+                "q": "同学想打听 Zhang Peng 的名字，下面哪句问得对？",
                 "opts": [
-                  "父亲",
-                  "鞋",
-                  "安静的",
-                  "表亲"
+                  "What's his name?",
+                  "What's her name?",
+                  "What's your name?",
+                  "Who is he?"
                 ],
-                "answer": 2,
-                "point": "词汇",
+                "answer": 0,
+                "point": "u3:recall_possessive",
+                "dim": "sentence"
+              },
+              {
+                "id": 305,
+                "q": "Zhang Peng 戴的眼镜是蓝色的。下面哪句在说他？",
+                "opts": [
+                  "His glasses are blue.",
+                  "Her glasses are blue.",
+                  "His glasses are brown.",
+                  "His shoes are blue."
+                ],
+                "answer": 0,
+                "point": "u3:recall_possessive",
+                "dim": "sentence"
+              },
+              {
+                "id": 307,
+                "q": "课本里 Kate 的头发垂到肩膀以下。下面哪句在描述 Kate？",
+                "opts": [
+                  "She has long hair.",
+                  "She has short hair.",
+                  "He has long hair.",
+                  "She has a hat."
+                ],
+                "answer": 0,
+                "point": "u3:recall_appearance",
+                "dim": "sentence"
+              },
+              {
+                "id": 308,
+                "q": "体育课上，这个男孩能轻松搬起最重的箱子。下面哪句最适合形容他？",
+                "opts": [
+                  "He's tall and strong.",
+                  "He's short and thin.",
+                  "He's quiet and friendly.",
+                  "She's tall and strong."
+                ],
+                "answer": 0,
+                "point": "u3:recall_personality",
+                "dim": "sentence"
+              },
+              {
+                "id": 309,
+                "q": "Amy 的朋友每天放学后，把老师用粉笔写的字擦干净——他擦的是教室前面那样东西。它是哪个？",
+                "opts": [
+                  "blackboard",
+                  "window",
+                  "picture",
+                  "door"
+                ],
+                "answer": 0,
+                "point": "u1:recall_classroom_item",
                 "dim": "vocab"
+              },
+              {
+                "id": 310,
+                "q": "Wu Binbin 把课本一股脑塞进去、背在肩膀上，那样东西是绿色的。下面哪句在说他？",
+                "opts": [
+                  "He has a green bag.",
+                  "He has a green book.",
+                  "He has green glasses.",
+                  "He has a green hat."
+                ],
+                "answer": 0,
+                "point": "u2:recall_have",
+                "dim": "sentence"
+              },
+              {
+                "id": 311,
+                "q": "课本里有个男孩，他的鞋和泥土一个颜色。下面哪句对？",
+                "opts": [
+                  "His shoes are brown.",
+                  "His shoes are blue.",
+                  "His shoes are white.",
+                  "His shoes are orange."
+                ],
+                "answer": 0,
+                "point": "u2:recall_color",
+                "dim": "sentence"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "I have a friend.",
-                "opts": [
-                  "I have a friend.",
-                  "strong",
-                  "friendly",
-                  "quiet"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "A boy or girl?",
-                "opts": [
-                  "A boy or girl?",
-                  "A boy strong girl?",
-                  "A boy or girl.",
-                  "strong"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "A boy. He's tall and strong.",
-                "opts": [
-                  "A boy. He's tall and strong.",
-                  "A boy. He's tall and friendly.",
-                  "strong",
-                  "friendly"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Who is he?",
-                "opts": [
-                  "Who is he?",
-                  "Who is he.",
-                  "strong",
-                  "friendly"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "He has glasses and his shoes are blue.",
-                "opts": [
-                  "He has glasses and his shoes are blue.",
-                  "He has glasses and his glassess are blue.",
-                  "He has his and his shoes are blue.",
-                  "He has glasses and or shoes are blue."
-                ],
-                "answer": 0
-              },
-              {
                 "audio": "His name is Zhang Peng.",
                 "opts": [
                   "His name is Zhang Peng.",
-                  "strong",
-                  "friendly",
-                  "quiet"
+                  "Her name is Zhang Peng.",
+                  "What's his name?",
+                  "His name is Mike."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "She has long hair.",
+                "opts": [
+                  "She has long hair.",
+                  "She has short hair.",
+                  "He has long hair.",
+                  "She has long shoes."
+                ],
+                "answer": 0
+              },
+              {
+                "audio": "His glasses are blue.",
+                "opts": [
+                  "His glasses are blue.",
+                  "Her glasses are blue.",
+                  "His glasses are brown.",
+                  "His shoes are blue."
                 ],
                 "answer": 0
               }

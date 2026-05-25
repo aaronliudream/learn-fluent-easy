@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { usePrimaryHub } from "@/lib/primaryHub/context";
-import { findSemester, getGradeCourse } from "@/lib/primaryHub/courseData";
+import { findSemester, getGradeCourse, isUnitListed } from "@/lib/primaryHub/courseData";
 import { getSemesterProgress, getUnitProgress } from "@/lib/primaryHub/progress";
 import { savePersist } from "@/lib/primaryHub/storage";
 
@@ -48,7 +48,7 @@ export default function PrimaryHubSemester() {
         </div>
       </div>
       <div className="space-y-3 px-4 py-4">
-        {sem.units.map((unit) => {
+        {sem.units.filter(isUnitListed).map((unit) => {
           const p = getUnitProgress(state, unit.id);
           const isCurrent = unit.id === state.currentUnit && unit.available;
           const isDone = p.total > 0 && p.completed === p.total;
@@ -58,7 +58,7 @@ export default function PrimaryHubSemester() {
               type="button"
               disabled={!unit.available}
               onClick={() => {
-                if (!unit.available) return;
+                if (!isUnitListed(unit)) return;
                 setState((prev) => {
                   const next = { ...prev, currentUnit: unit.id, currentSemester: semId };
                   savePersist(grade, next);

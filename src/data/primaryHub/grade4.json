@@ -3706,6 +3706,7 @@
             "cn": "在农场",
             "emoji": "🐮",
             "available": true,
+            "published": false,
             "vocabulary": [
               {
                 "en": "tomato",
@@ -4042,6 +4043,7 @@
             "cn": "我的衣服",
             "emoji": "👕",
             "available": true,
+            "published": false,
             "vocabulary": [
               {
                 "en": "clothes",
@@ -4390,6 +4392,7 @@
             "cn": "购物",
             "emoji": "🛍️",
             "available": true,
+            "published": false,
             "vocabulary": [
               {
                 "en": "glove",

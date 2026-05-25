@@ -151,7 +151,8 @@
 | `id` | ✅ | 如 `g4v2_u2` |
 | `num` | ✅ | 单元序号 1–6 |
 | `title` / `cn` / `emoji` | ✅ | 英/中标题与 emoji |
-| `available` | ✅ | `true` 才可在 UI 点击进入 |
+| `available` | ✅ | `true` 表示单元已就绪（与历史「🔒」逻辑兼容） |
+| `published` | ⬜ | 默认 `true`；`false` 时 Primary Hub **不展示**且直链会跳回学期列表（用于 main 上隐藏未完成单元） |
 | `vocabulary` | ✅ | 词表数组，至少 1 词 |
 | `dialogues` | ✅ | 对话数组（句型降级模式也依赖） |
 | `stages` | ✅ | **8 条**，顺序与 §3.1 一致 |

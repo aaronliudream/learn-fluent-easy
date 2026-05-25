@@ -7,7 +7,7 @@ import {
   getTotalStars,
   getUnitProgress,
 } from "@/lib/primaryHub/progress";
-import { findUnit, getGradeCourse, semesterIdsForGrade } from "@/lib/primaryHub/courseData";
+import { findUnit, getGradeCourse, isUnitListed, semesterIdsForGrade } from "@/lib/primaryHub/courseData";
 import { readUnitState } from "@/lib/primaryHub/storage";
 import { AITestCard } from "@/components/primaryHub/AITestCard";
 
@@ -62,7 +62,7 @@ export default function PrimaryHubHome() {
       <div className="px-4 pt-4">
         <AITestCard />
 
-        {nextStage && currentUnit?.available && (
+        {nextStage && currentUnit && isUnitListed(currentUnit) && (
           <section className="mb-4">
             <div className="mb-2 px-1 text-base font-semibold">📍 继续学习</div>
             <button

@@ -48,6 +48,13 @@ describe("sentenceRegistry auto-discovery", () => {
     expect(lesson?.subModules[1].lockedUntil).toBe("A");
   });
 
+  it("loads g4v1_u1 grammar lesson at stage 3", () => {
+    const lesson = getSentenceLesson("g4v1_u1", 3);
+    expect(lesson).not.toBeNull();
+    expect(lesson?.lessonId).toBe("g4v1_u1_grammar");
+    expect(lesson?.subModules).toHaveLength(2);
+  });
+
   it("loads g4v2_u2 grammar lesson at stage 3", () => {
     const lesson = getSentenceLesson("g4v2_u2", 3);
     expect(lesson).not.toBeNull();
@@ -83,8 +90,8 @@ describe("sentenceRegistry auto-discovery", () => {
     expect(lesson?.subModules).toHaveLength(2);
   });
 
-  it("discovers sentence lessons for u1–u6", () => {
-    expect(__getSentenceLessonsForTest()).toHaveLength(6);
+  it("discovers sentence lessons for g4v1_u1 and g4v2 u1–u6", () => {
+    expect(__getSentenceLessonsForTest()).toHaveLength(7);
   });
 });
 
@@ -132,9 +139,16 @@ describe("readWriteRegistry auto-discovery", () => {
     expect(config?.questions[0].type).toBe("fill_choice");
   });
 
+  it("loads g4v1_u1 fill_choice readWrite at stage 6", () => {
+    const config = getReadWriteConfig("g4v1_u1", 6);
+    expect(config).not.toBeNull();
+    expect(config?.questions).toHaveLength(6);
+    expect(config?.questions[0].type).toBe("fill_choice");
+  });
+
   it("ignores legacy multi-stage g4v2_u1_stage6.json", () => {
     const configs = __getReadWriteConfigsForTest();
-    expect(configs).toHaveLength(6);
+    expect(configs).toHaveLength(7);
     expect(configs.every((c) => c.questions?.length)).toBe(true);
   });
 });

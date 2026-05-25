@@ -1,0 +1,273 @@
+{
+  "id": "g4v1_u1",
+  "num": 1,
+  "title": "My classroom",
+  "cn": "我的教室",
+  "emoji": "🏫",
+  "available": true,
+  "published": true,
+  "vocabulary": [
+    { "en": "classroom", "cn": "教室", "emoji": "🏫", "phonetic": "/ˈklɑːsruːm/", "page": 5, "type": "core" },
+    { "en": "window", "cn": "窗户", "emoji": "🪟", "phonetic": "/ˈwɪndəʊ/", "page": 5, "type": "core" },
+    { "en": "blackboard", "cn": "黑板", "emoji": "⬛", "phonetic": "/ˈblækbɔːd/", "page": 5, "type": "core" },
+    { "en": "light", "cn": "电灯", "emoji": "💡", "phonetic": "/laɪt/", "page": 5, "type": "core" },
+    { "en": "picture", "cn": "图画", "emoji": "🖼️", "phonetic": "/ˈpɪktʃə(r)/", "page": 5, "type": "core" },
+    { "en": "door", "cn": "门", "emoji": "🚪", "phonetic": "/dɔː(r)/", "page": 5, "type": "core" },
+    { "en": "teacher's desk", "cn": "讲台", "emoji": "🧑‍🏫", "phonetic": "/ˈtiːtʃəz desk/", "page": 8, "type": "core" },
+    { "en": "computer", "cn": "计算机", "emoji": "💻", "phonetic": "/kəmˈpjuːtə(r)/", "page": 8, "type": "core" },
+    { "en": "fan", "cn": "风扇", "emoji": "🌀", "phonetic": "/fæn/", "page": 8, "type": "core" },
+    { "en": "wall", "cn": "墙壁", "emoji": "🧱", "phonetic": "/wɔːl/", "page": 8, "type": "core" },
+    { "en": "floor", "cn": "地板", "emoji": "🟫", "phonetic": "/flɔː(r)/", "page": 8, "type": "core" },
+    { "en": "really", "cn": "真的", "emoji": "😮", "phonetic": "/ˈrɪəli/", "page": 4, "type": "extended" },
+    { "en": "near", "cn": "在……旁边", "emoji": "📍", "phonetic": "/nɪə(r)/", "page": 4, "type": "extended" },
+    { "en": "TV", "cn": "电视", "emoji": "📺", "phonetic": "/ˌtiː ˈviː/", "page": 5, "type": "extended" },
+    { "en": "clean", "cn": "打扫", "emoji": "🧹", "phonetic": "/kliːn/", "page": 7, "type": "extended" },
+    { "en": "help", "cn": "帮助", "emoji": "🤝", "phonetic": "/help/", "page": 7, "type": "extended" }
+  ],
+  "vocabGroups": [
+    {
+      "id": "furniture_p5",
+      "name": "教室陈设",
+      "header": "教室陈设 · 6 个词",
+      "indices": [0, 1, 2, 3, 4, 5]
+    },
+    {
+      "id": "furniture_p8",
+      "name": "教室设施",
+      "header": "教室设施 · 5 个词",
+      "indices": [6, 7, 8, 9, 10]
+    },
+    {
+      "id": "extra_listen",
+      "name": "拓展词",
+      "header": "拓展词 · 5 个词",
+      "indices": [11, 12, 13, 14, 15]
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "A Let's talk",
+      "lines": [
+        { "role": "Mike", "text": "We have a new classroom.", "cn": "我们有一间新教室。" },
+        { "role": "Sarah", "text": "Really? What's in the classroom?", "cn": "真的吗？教室里有什么？" },
+        { "role": "Mike", "text": "Let's go and see!", "cn": "我们去看看吧！" },
+        { "role": "Sarah", "text": "It's so big!", "cn": "它好大啊！" },
+        { "role": "Mike", "text": "The door is orange. The desks are green.", "cn": "门是橙色的。书桌是绿色的。" }
+      ]
+    },
+    {
+      "title": "B Let's talk",
+      "lines": [
+        { "role": "Sarah", "text": "Let's clean the classroom!", "cn": "我们来打扫教室吧！" },
+        { "role": "Mike", "text": "Let me clean the windows.", "cn": "我来擦窗户。" },
+        { "role": "John", "text": "Let me clean the teacher's desk.", "cn": "我来擦讲台。" },
+        { "role": "Sarah", "text": "Let me help you.", "cn": "我来帮你。" },
+        { "role": "John", "text": "Thank you.", "cn": "谢谢。" }
+      ]
+    }
+  ],
+  "stages": [
+    { "id": "s1", "title": "认识单词", "subtitle": "16 个词 · 陈设·设施·拓展", "icon": "📚", "type": "vocab", "time": "10分钟" },
+    { "id": "s2", "title": "听音辨词", "subtitle": "听一听，选单词", "icon": "🎧", "type": "listenWord", "time": "5分钟" },
+    { "id": "s3", "title": "单词配对", "subtitle": "词义连连看", "icon": "🎮", "type": "match", "time": "5分钟" },
+    { "id": "s4", "title": "学习句型", "subtitle": "新教室·打扫 · 歌谣跟读", "icon": "💬", "type": "sentence", "time": "8分钟" },
+    { "id": "s5", "title": "默写挑战", "subtitle": "核心词拼写", "icon": "✏️", "type": "write", "time": "8分钟" },
+    { "id": "s6", "title": "听力测试", "subtitle": "听对话选答案", "icon": "🎯", "type": "listenSent", "time": "6分钟" },
+    { "id": "s7", "title": "读写训练", "subtitle": "填空选词 · 教室", "icon": "📝", "type": "readWrite", "time": "10分钟" },
+    { "id": "s8", "title": "最终通关", "subtitle": "综合挑战 · 10 题", "icon": "🏆", "type": "finalQuiz", "time": "10分钟" }
+  ],
+  "quizQuestions": [
+    {
+      "id": 101,
+      "q": "看中文选词：「黑板」",
+      "opts": ["window", "door", "blackboard", "picture"],
+      "answer": 2,
+      "point": "u1:recall_classroom_item",
+      "dim": "vocab"
+    },
+    {
+      "id": 102,
+      "q": "看中文选词：「风扇」",
+      "opts": ["computer", "fan", "light", "wall"],
+      "answer": 1,
+      "point": "u1:recall_classroom_item",
+      "dim": "vocab"
+    },
+    {
+      "id": 103,
+      "q": "看中文选词：「讲台」",
+      "opts": ["teacher's desk", "computer", "blackboard", "floor"],
+      "answer": 0,
+      "point": "u1:recall_classroom_item",
+      "dim": "vocab"
+    },
+    {
+      "id": 105,
+      "q": "Mike 对 Sarah 说：「我们有一间新教室。」Sarah 很想知道里面有什么，她会问：",
+      "opts": [
+        "What's in the classroom?",
+        "Where is it?",
+        "Let's clean the classroom!",
+        "It's near the window."
+      ],
+      "answer": 0,
+      "point": "u1:recall_room_item",
+      "dim": "sentence"
+    },
+    {
+      "id": 106,
+      "q": "下课后，Sarah 说：「我们来打扫教室吧！」她拿起抹布，走到窗户前。她会说：",
+      "opts": [
+        "Let me clean the windows.",
+        "Let me help you.",
+        "Where is it?",
+        "It's on the light."
+      ],
+      "answer": 0,
+      "point": "u1:recall_room_item",
+      "dim": "sentence"
+    },
+    {
+      "id": 107,
+      "q": "John 一个人搬讲台，搬得脸都红了。Sarah 走过去，会说：",
+      "opts": [
+        "Let me help you.",
+        "Let's clean the classroom!",
+        "Where is it?",
+        "Really? What's in the classroom?"
+      ],
+      "answer": 0,
+      "point": "u1:recall_room_item",
+      "dim": "sentence"
+    },
+    {
+      "id": 108,
+      "q": "Sarah 找不到英语书。John 看见书在窗户旁边。John 对 Sarah 说：",
+      "opts": [
+        "It's near the window.",
+        "It's on the light.",
+        "It's under the desk.",
+        "What's in the classroom?"
+      ],
+      "answer": 0,
+      "point": "u1:recall_position",
+      "dim": "sentence"
+    },
+    {
+      "id": 109,
+      "q": "Story time：蜜蜂飞进新教室，停在电灯上方。Zoom 问：Where is it? 同学回答：",
+      "opts": [
+        "It's on the light.",
+        "It's on the fan.",
+        "It's near the window.",
+        "It's under the teacher's desk."
+      ],
+      "answer": 0,
+      "point": "u1:recall_position",
+      "dim": "sentence"
+    },
+    {
+      "id": 110,
+      "q": "参观新教室时，Mike 指着一扇橙色的门对大家介绍。选描述这扇门的句子：",
+      "opts": [
+        "The door is orange.",
+        "The floor is orange.",
+        "The wall is orange.",
+        "The fan is green."
+      ],
+      "answer": 0,
+      "point": "u1:recall_color",
+      "dim": "sentence"
+    },
+    {
+      "id": 111,
+      "q": "看中文选词：「地板」",
+      "opts": ["wall", "floor", "fan", "window"],
+      "answer": 1,
+      "point": "u1:recall_classroom_item",
+      "dim": "vocab"
+    }
+  ],
+  "listeningQuestions": [
+    {
+      "audio": "We have a new classroom.",
+      "opts": [
+        "We have a new classroom.",
+        "We have a new window.",
+        "What's in the classroom?",
+        "Let's clean the classroom!"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Really? What's in the classroom?",
+      "opts": [
+        "Really? What's in the classroom?",
+        "Where is it?",
+        "Let's go and see!",
+        "It's near the window."
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Let's go and see!",
+      "opts": [
+        "Let's go and see!",
+        "Let's clean the classroom!",
+        "Where is it?",
+        "It's so big!"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Where is it?",
+      "opts": [
+        "Where is it?",
+        "What's in the classroom?",
+        "It's near the window.",
+        "Let me help you."
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "It's near the window.",
+      "opts": [
+        "It's near the window.",
+        "It's on the light.",
+        "It's under the desk.",
+        "It's on the fan."
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Let's clean the classroom!",
+      "opts": [
+        "Let's clean the classroom!",
+        "Let me clean the windows.",
+        "Let me help you.",
+        "We have a new classroom."
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Let me clean the windows.",
+      "opts": [
+        "Let me clean the windows.",
+        "Let me help you.",
+        "Let's clean the classroom!",
+        "Where is it?"
+      ],
+      "answer": 0
+    },
+    {
+      "audio": "Let me help you.",
+      "opts": [
+        "Let me help you.",
+        "Let's clean the classroom!",
+        "It's near the window.",
+        "Thank you."
+      ],
+      "answer": 0
+    }
+  ]
+}

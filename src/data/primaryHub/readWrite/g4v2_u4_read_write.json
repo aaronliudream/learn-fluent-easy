@@ -22,8 +22,8 @@
       "hint_zh": "橙色长条蔬菜",
       "correctSentence": "They're carrots.",
       "options": [
-        { "text": "carrots", "correct": true },
         { "text": "horses", "correct": false },
+        { "text": "carrots", "correct": true },
         { "text": "cloudy", "correct": false }
       ]
     },
@@ -44,8 +44,8 @@
       "hint_zh": "近处一群绵羊",
       "correctSentence": "These are sheep.",
       "options": [
-        { "text": "sheep", "correct": true },
         { "text": "goat", "correct": false },
+        { "text": "sheep", "correct": true },
         { "text": "degree", "correct": false }
       ]
     },
@@ -55,9 +55,9 @@
       "hint_zh": "有牛、母鸡、绵羊的是农场",
       "correctSentence": "Hi! This is Mr MacDonald's farm. Cows, hens and sheep live here.",
       "options": [
-        { "text": "farm", "correct": true },
         { "text": "garden", "correct": false },
-        { "text": "those", "correct": false }
+        { "text": "those", "correct": false },
+        { "text": "farm", "correct": true }
       ]
     },
     {
@@ -66,9 +66,9 @@
       "hint_zh": "那些是山羊",
       "correctSentence": "Are those sheep? No, they are goats.",
       "options": [
-        { "text": "goats", "correct": true },
         { "text": "hens", "correct": false },
-        { "text": "sunny", "correct": false }
+        { "text": "sunny", "correct": false },
+        { "text": "goats", "correct": true }
       ]
     }
   ]

@@ -11,9 +11,9 @@
       "hint_zh": "问「这些是你的吗」",
       "correctSentence": "Are these yours?",
       "options": [
-        { "text": "yours", "correct": true },
         { "text": "mine", "correct": false },
-        { "text": "whose", "correct": false }
+        { "text": "whose", "correct": false },
+        { "text": "yours", "correct": true }
       ]
     },
     {
@@ -33,9 +33,9 @@
       "hint_zh": "上学前穿上衬衫",
       "correctSentence": "Put on your shirt.",
       "options": [
-        { "text": "Put on", "correct": true },
         { "text": "Take off", "correct": false },
-        { "text": "Hang up", "correct": false }
+        { "text": "Hang up", "correct": false },
+        { "text": "Put on", "correct": true }
       ]
     },
     {
@@ -44,8 +44,8 @@
       "hint_zh": "洗完后挂起来的是连衣裙",
       "correctSentence": "Hang up your dress.",
       "options": [
-        { "text": "dress", "correct": true },
         { "text": "hat", "correct": false },
+        { "text": "dress", "correct": true },
         { "text": "sock", "correct": false }
       ]
     },
@@ -55,8 +55,8 @@
       "hint_zh": "旅行前把衣服装进箱子",
       "correctSentence": "Pack my clothes.",
       "options": [
-        { "text": "Pack", "correct": true },
         { "text": "Wait", "correct": false },
+        { "text": "Pack", "correct": true },
         { "text": "Wash", "correct": false }
       ]
     },

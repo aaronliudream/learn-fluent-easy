@@ -1,0 +1,23 @@
+file | A | B | C | total | maxShare
+--- BEFORE ---
+g4v1_u1_read_write.json | 6 | 0 | 0 | 6 | 100%
+g4v1_u2_read_write.json | 6 | 0 | 0 | 6 | 100%
+g4v1_u3_read_write.json | 6 | 0 | 0 | 6 | 100%
+g4v1_u4_read_write.json | 6 | 0 | 0 | 6 | 100%
+g4v2_u2_read_write.json | 6 | 0 | 0 | 6 | 100%
+g4v2_u3_read_write.json | 6 | 0 | 0 | 6 | 100%
+g4v2_u4_read_write.json | 6 | 0 | 0 | 6 | 100%
+g4v2_u5_read_write.json | 6 | 0 | 0 | 6 | 100%
+g4v2_u6_read_write.json | 6 | 0 | 0 | 6 | 100%
+--- AFTER ---
+g4v1_u1_read_write.json | 2 | 2 | 2 | 6 | 33%
+g4v1_u2_read_write.json | 2 | 2 | 2 | 6 | 33%
+g4v1_u3_read_write.json | 2 | 2 | 2 | 6 | 33%
+g4v1_u4_read_write.json | 2 | 2 | 2 | 6 | 33%
+g4v2_u2_read_write.json | 2 | 2 | 2 | 6 | 33%
+g4v2_u3_read_write.json | 2 | 2 | 2 | 6 | 33%
+g4v2_u4_read_write.json | 2 | 2 | 2 | 6 | 33%
+g4v2_u5_read_write.json | 2 | 2 | 2 | 6 | 33%
+g4v2_u6_read_write.json | 2 | 2 | 2 | 6 | 33%
+
+rebalanced 9 fill_choice files

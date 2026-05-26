@@ -11,8 +11,8 @@
       "hint_zh": "客厅",
       "correctSentence": "The sofa is in the living room.",
       "options": [
-        { "text": "living room", "correct": true },
         { "text": "kitchen", "correct": false },
+        { "text": "living room", "correct": true },
         { "text": "study", "correct": false }
       ]
     },
@@ -22,8 +22,8 @@
       "hint_zh": "在……里面",
       "correctSentence": "The cat is in the kitchen.",
       "options": [
-        { "text": "in", "correct": true },
         { "text": "on", "correct": false },
+        { "text": "in", "correct": true },
         { "text": "under", "correct": false }
       ]
     },
@@ -33,9 +33,9 @@
       "hint_zh": "在……上面",
       "correctSentence": "The keys are on the fridge.",
       "options": [
-        { "text": "on", "correct": true },
         { "text": "in", "correct": false },
-        { "text": "near", "correct": false }
+        { "text": "near", "correct": false },
+        { "text": "on", "correct": true }
       ]
     },
     {
@@ -44,9 +44,9 @@
       "hint_zh": "单数 be 动词",
       "correctSentence": "Where is the cat? It's under the bed.",
       "options": [
-        { "text": "is", "correct": true },
         { "text": "are", "correct": false },
-        { "text": "am", "correct": false }
+        { "text": "am", "correct": false },
+        { "text": "is", "correct": true }
       ]
     },
     {

@@ -22,8 +22,8 @@
       "hint_zh": "6 号鞋太小",
       "correctSentence": "No. They're too small.",
       "options": [
-        { "text": "small", "correct": true },
         { "text": "pretty", "correct": false },
+        { "text": "small", "correct": true },
         { "text": "rainy", "correct": false }
       ]
     },
@@ -33,9 +33,9 @@
       "hint_zh": "7 号正好合适",
       "correctSentence": "They're just right!",
       "options": [
-        { "text": "just", "correct": true },
         { "text": "too", "correct": false },
-        { "text": "more", "correct": false }
+        { "text": "more", "correct": false },
+        { "text": "just", "correct": true }
       ]
     },
     {
@@ -44,9 +44,9 @@
       "hint_zh": "问这条短裙多少钱",
       "correctSentence": "How much is this skirt?",
       "options": [
-        { "text": "How much", "correct": true },
         { "text": "What time", "correct": false },
-        { "text": "Are these", "correct": false }
+        { "text": "Are these", "correct": false },
+        { "text": "How much", "correct": true }
       ]
     },
     {
@@ -66,8 +66,8 @@
       "hint_zh": "特价五元，很便宜",
       "correctSentence": "They are very cheap.",
       "options": [
-        { "text": "cheap", "correct": true },
         { "text": "expensive", "correct": false },
+        { "text": "cheap", "correct": true },
         { "text": "small", "correct": false }
       ]
     }

@@ -1,0 +1,192 @@
+{
+  "lessonId": "g4v1_u6_grammar",
+  "unitId": "g4v1_u6",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "Mike 给大家介绍自己的家人，还有他们各自的工作，一起来练 Is this your…? / What's your…'s job? 吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "家人 · How many / Is this your…?",
+      "description": "Mike 介绍家里有几口人、照片上都是谁。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "How many people are there in your family?", "zh": "你家有几口人？" },
+          "answer": { "en": "My family has six people.", "zh": "我家有六口人。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Sarah 问「你家有几口人？」，Mike 该怎么回答？",
+            "options": [
+              { "text": "I'm six years old.", "correct": false },
+              { "text": "Yes, I do.", "correct": false },
+              { "text": "My family has six people.", "correct": true }
+            ],
+            "explanationZh": "How many people...? 问人数，用 My family has + 数字 + people 回答。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Is this your uncle?", "zh": "这是你叔叔吗？" },
+          "answer": { "en": "Yes, it is. He's a football player.", "zh": "是的，他是位足球运动员。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Sarah 指着照片问「这是你叔叔吗？」，确实是，Mike 该怎么回答？",
+            "options": [
+              { "text": "Yes, it is. He's a football player.", "correct": true },
+              { "text": "No, I'm not.", "correct": false },
+              { "text": "She's my aunt.", "correct": false }
+            ],
+            "explanationZh": "Is this...? 的肯定回答用 Yes, it is.，再补充介绍他。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "Who are they?", "zh": "他们是谁？" },
+          "answer": { "en": "They're my parents.", "zh": "他们是我的父母。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「他们是我的父母」选词填空。",
+            "sentenceTemplate": "They're my ___.",
+            "options": [
+              { "text": "cousin", "correct": false },
+              { "text": "parents", "correct": true },
+              { "text": "uncle", "correct": false }
+            ],
+            "explanationZh": "父母（爸爸和妈妈）是 parents；cousin 是表亲、uncle 是叔叔。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Is this your cousin?", "zh": "这是你表亲吗？" },
+          "answer": { "en": "Yes, it is.", "zh": "是的。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「这是你表亲吗？」用英语怎么说？",
+            "options": [
+              { "text": "This your cousin is?", "correct": false },
+              { "text": "Is this your cousin?", "correct": true },
+              { "text": "Your cousin this is?", "correct": false }
+            ],
+            "explanationZh": "一般疑问句把 be 动词 Is 提到句首：Is this your cousin?"
+          }
+        },
+        {
+          "id": "A5",
+          "question": { "en": "This is my baby brother.", "zh": "这是我的小弟弟。" },
+          "answer": { "en": "He's one year old.", "zh": "他一岁了。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "向别人介绍你的小弟弟。",
+            "promptZh": "「这是我的小弟弟」用英语怎么说？",
+            "options": [
+              { "text": "This is my baby brother.", "correct": true },
+              { "text": "My baby brother this is.", "correct": false },
+              { "text": "Baby brother is this my.", "correct": false }
+            ],
+            "explanationZh": "介绍某人用「This is my + 称谓」：This is my baby brother。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "职业 · What's your…'s job?",
+      "description": "Mike 一一介绍家人的工作。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "What's your aunt's job?", "zh": "你姑姑做什么工作？" },
+          "answer": { "en": "She's a nurse.", "zh": "她是位护士。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Sarah 问「你姑姑做什么工作？」，Mike 该怎么回答？",
+            "options": [
+              { "text": "She's a nurse.", "correct": true },
+              { "text": "Yes, she is.", "correct": false },
+              { "text": "She's my aunt.", "correct": false }
+            ],
+            "explanationZh": "问 What's...'s job? 用 He's/She's a + 职业 回答；nurse 是护士。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "What's your father's job?", "zh": "你爸爸做什么工作？" },
+          "answer": { "en": "He's a doctor.", "zh": "他是位医生。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「他是位医生」选词填空。",
+            "sentenceTemplate": "He's a ___.",
+            "options": [
+              { "text": "cook", "correct": false },
+              { "text": "doctor", "correct": true },
+              { "text": "driver", "correct": false }
+            ],
+            "explanationZh": "医生是 doctor；cook 是厨师、driver 是司机，别选错职业。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "What's your mother's job?", "zh": "你妈妈做什么工作？" },
+          "answer": { "en": "She's a cook.", "zh": "她是位厨师。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「你妈妈做什么工作？」用英语怎么说？",
+            "options": [
+              { "text": "Your mother's job what's?", "correct": false },
+              { "text": "What your mother's job is?", "correct": false },
+              { "text": "What's your mother's job?", "correct": true }
+            ],
+            "explanationZh": "问职业用 What's your + 人 + 's job?，疑问词 What 放最前面。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "What's your uncle's job?", "zh": "你叔叔做什么工作？" },
+          "answer": { "en": "He's a driver.", "zh": "他是位司机。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "介绍你叔叔的工作。",
+            "promptZh": "「他是位司机」用英语怎么说？",
+            "options": [
+              { "text": "A driver he's.", "correct": false },
+              { "text": "He's a driver.", "correct": true },
+              { "text": "Driver he's a.", "correct": false }
+            ],
+            "explanationZh": "说职业用「主语 + is a + 职业」：He's a driver。"
+          }
+        },
+        {
+          "id": "B5",
+          "question": { "en": "What's your cousin's job?", "zh": "你表亲做什么工作？" },
+          "answer": { "en": "He's a farmer.", "zh": "他是位农民。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「你表亲做什么工作？」用英语怎么说？",
+            "options": [
+              { "text": "Your cousin's job what's?", "correct": false },
+              { "text": "What your cousin's job?", "correct": false },
+              { "text": "What's your cousin's job?", "correct": true }
+            ],
+            "explanationZh": "问职业固定句型 What's your + 人 + 's job?；别漏掉 's。"
+          }
+        }
+      ]
+    }
+  ]
+}

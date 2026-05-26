@@ -318,10 +318,10 @@
                 "opts": [
                   "window",
                   "door",
-                  "blackboard",
-                  "picture"
+                  "picture",
+                  "blackboard"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "u1:recall_classroom_item",
                 "dim": "vocab"
               },
@@ -329,12 +329,12 @@
                 "id": 102,
                 "q": "看中文选词：「风扇」",
                 "opts": [
-                  "computer",
                   "fan",
+                  "computer",
                   "light",
                   "wall"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u1:recall_classroom_item",
                 "dim": "vocab"
               },
@@ -342,12 +342,12 @@
                 "id": 103,
                 "q": "看中文选词：「讲台」",
                 "opts": [
-                  "teacher's desk",
                   "computer",
+                  "teacher's desk",
                   "blackboard",
                   "floor"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u1:recall_classroom_item",
                 "dim": "vocab"
               },
@@ -355,12 +355,12 @@
                 "id": 105,
                 "q": "Mike 对 Sarah 说：「我们有一间新教室。」Sarah 很想知道里面有什么，她会问：",
                 "opts": [
-                  "What's in the classroom?",
                   "Where is it?",
                   "Let's clean the classroom!",
+                  "What's in the classroom?",
                   "It's near the window."
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u1:recall_room_item",
                 "dim": "sentence"
               },
@@ -394,12 +394,12 @@
                 "id": 108,
                 "q": "Sarah 找不到英语书。John 看见书在窗户旁边。John 对 Sarah 说：",
                 "opts": [
-                  "It's near the window.",
                   "It's on the light.",
+                  "It's near the window.",
                   "It's under the desk.",
                   "What's in the classroom?"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -407,12 +407,12 @@
                 "id": 109,
                 "q": "Story time：蜜蜂飞进新教室，停在电灯上方。Zoom 问：Where is it? 同学回答：",
                 "opts": [
-                  "It's on the light.",
                   "It's on the fan.",
                   "It's near the window.",
-                  "It's under the teacher's desk."
+                  "It's under the teacher's desk.",
+                  "It's on the light."
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -420,12 +420,12 @@
                 "id": 110,
                 "q": "参观新教室时，Mike 指着一扇橙色的门对大家介绍。选描述这扇门的句子：",
                 "opts": [
-                  "The door is orange.",
                   "The floor is orange.",
+                  "The door is orange.",
                   "The wall is orange.",
                   "The fan is green."
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u1:recall_color",
                 "dim": "sentence"
               },
@@ -434,11 +434,11 @@
                 "q": "看中文选词：「地板」",
                 "opts": [
                   "wall",
-                  "floor",
                   "fan",
+                  "floor",
                   "window"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "u1:recall_classroom_item",
                 "dim": "vocab"
               }
@@ -823,11 +823,11 @@
                 "q": "看中文选词：「糖果」",
                 "opts": [
                   "notebook",
-                  "candy",
                   "toy",
+                  "candy",
                   "key"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "u2:recall_schoolthing",
                 "dim": "vocab"
               },
@@ -874,12 +874,12 @@
                 "id": 207,
                 "q": "Zhang Peng 打开空书包，要往里面放一本英语书。他一边放一边说：",
                 "opts": [
-                  "I have an English book.",
                   "What's in your schoolbag?",
                   "I lost my schoolbag.",
-                  "What colour is it?"
+                  "What colour is it?",
+                  "I have an English book."
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u2:recall_have",
                 "dim": "sentence"
               },
@@ -887,12 +887,12 @@
                 "id": 208,
                 "q": "Amy 打开书包给同学看，里面有一只黑白毛绒玩偶。Amy 惊喜地说了两句，开头是：",
                 "opts": [
-                  "Wow! It's a panda!",
                   "I lost my schoolbag.",
                   "Let's clean the classroom!",
-                  "It's blue and white."
+                  "It's blue and white.",
+                  "Wow! It's a panda!"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u2:recall_have",
                 "dim": "sentence"
               },
@@ -900,12 +900,12 @@
                 "id": 210,
                 "q": "打扫教室时，老师让 Sarah 关掉天花板上的设备。看中文选词：「电灯」",
                 "opts": [
-                  "light",
                   "schoolbag",
                   "maths book",
+                  "light",
                   "candy"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u1:recall_classroom_item",
                 "dim": "vocab"
               },
@@ -926,12 +926,12 @@
                 "id": 212,
                 "q": "Mike 整理书包，英语书滑到课桌底下。Sarah 问：「Where is your English book?」Mike 看见后说：",
                 "opts": [
-                  "It's under the desk.",
                   "It's near the window.",
+                  "It's under the desk.",
                   "It's on the light.",
                   "What's in your schoolbag?"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               }
@@ -1214,11 +1214,11 @@
                 "q": "看中文选词：「安静的」",
                 "opts": [
                   "friendly",
-                  "quiet",
                   "strong",
-                  "cute"
+                  "cute",
+                  "quiet"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "u3:recall_personality",
                 "dim": "vocab"
               },
@@ -1252,12 +1252,12 @@
                 "id": 304,
                 "q": "同学想打听 Zhang Peng 的名字，下面哪句问得对？",
                 "opts": [
-                  "What's his name?",
                   "What's her name?",
                   "What's your name?",
+                  "What's his name?",
                   "Who is he?"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u3:recall_possessive",
                 "dim": "sentence"
               },
@@ -1265,12 +1265,12 @@
                 "id": 305,
                 "q": "Zhang Peng 戴的眼镜是蓝色的。下面哪句在说他？",
                 "opts": [
-                  "His glasses are blue.",
                   "Her glasses are blue.",
+                  "His glasses are blue.",
                   "His glasses are brown.",
                   "His shoes are blue."
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u3:recall_possessive",
                 "dim": "sentence"
               },
@@ -1278,12 +1278,12 @@
                 "id": 307,
                 "q": "课本里 Kate 的头发垂到肩膀以下。下面哪句在描述 Kate？",
                 "opts": [
-                  "She has long hair.",
                   "She has short hair.",
+                  "She has long hair.",
                   "He has long hair.",
                   "She has a hat."
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u3:recall_appearance",
                 "dim": "sentence"
               },
@@ -1291,12 +1291,12 @@
                 "id": 308,
                 "q": "体育课上，这个男孩能轻松搬起最重的箱子。下面哪句最适合形容他？",
                 "opts": [
-                  "He's tall and strong.",
                   "He's short and thin.",
                   "He's quiet and friendly.",
+                  "He's tall and strong.",
                   "She's tall and strong."
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u3:recall_personality",
                 "dim": "sentence"
               },
@@ -1330,12 +1330,12 @@
                 "id": 311,
                 "q": "课本里有个男孩，他的鞋和泥土一个颜色。下面哪句对？",
                 "opts": [
-                  "His shoes are brown.",
                   "His shoes are blue.",
                   "His shoes are white.",
-                  "His shoes are orange."
+                  "His shoes are orange.",
+                  "His shoes are brown."
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u2:recall_color",
                 "dim": "sentence"
               }
@@ -1582,12 +1582,12 @@
                 "id": 401,
                 "q": "看图选介词：猫在盒子「里面」。",
                 "opts": [
-                  "in",
                   "on",
                   "under",
-                  "near"
+                  "near",
+                  "in"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u1:recall_position",
                 "dim": "vocab"
               },
@@ -1595,12 +1595,12 @@
                 "id": 402,
                 "q": "看中文选词：「厨房」",
                 "opts": [
-                  "kitchen",
                   "bedroom",
                   "bathroom",
+                  "kitchen",
                   "study"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u4:recall_room",
                 "dim": "vocab"
               },
@@ -1608,12 +1608,12 @@
                 "id": 403,
                 "q": "看中文选词：「冰箱」",
                 "opts": [
-                  "fridge",
                   "sofa",
+                  "fridge",
                   "table",
                   "phone"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u4:recall_furniture",
                 "dim": "vocab"
               },
@@ -1621,12 +1621,12 @@
                 "id": 404,
                 "q": "妈妈问 Sarah 在不在客厅，Sarah 其实在厨房。下面哪句是正确回答？",
                 "opts": [
-                  "No, she isn't.",
                   "Yes, she is.",
                   "No, he isn't.",
+                  "No, she isn't.",
                   "Yes, she does."
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -1634,12 +1634,12 @@
                 "id": 405,
                 "q": "钥匙在冰箱上，不在桌子上。问「Are they on the table?」该怎么答？",
                 "opts": [
-                  "No, they aren't.",
                   "Yes, they are.",
                   "No, it isn't.",
-                  "Yes, they do."
+                  "Yes, they do.",
+                  "No, they aren't."
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -1673,12 +1673,12 @@
                 "id": 409,
                 "q": "看图读句判断：图中沙发摆在客厅里。下面哪句和图一致？",
                 "opts": [
-                  "The sofa is in the living room.",
                   "The sofa is in the kitchen.",
+                  "The sofa is in the living room.",
                   "The bed is in the living room.",
                   "The sofa is in the bathroom."
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u4:recall_room",
                 "dim": "sentence"
               },
@@ -1699,12 +1699,12 @@
                 "id": 411,
                 "q": "Story time 改编：那个安静的小熊找不到眼镜，最后在床上找到了。下面哪句在说它？",
                 "opts": [
-                  "The quiet bear's glasses are on the bed.",
                   "The quiet bear's glasses are on the fridge.",
+                  "The quiet bear's glasses are on the bed.",
                   "The strong bear's glasses are on the bed.",
                   "The quiet bear's glasses are in the study."
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u3:recall_personality",
                 "dim": "sentence"
               }
@@ -1885,36 +1885,36 @@
               {
                 "q": "「beef」是什么意思？",
                 "opts": [
+                  "牛肉",
                   "牛奶",
                   "鸡肉",
-                  "鸡蛋",
-                  "牛肉"
+                  "鸡蛋"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「chicken」是什么意思？",
                 "opts": [
-                  "鸡肉",
                   "面包",
+                  "鸡肉",
                   "牛奶",
                   "面条"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「noodles」是什么意思？",
                 "opts": [
-                  "面条",
                   "碗",
+                  "面条",
                   "餐叉",
                   "面包"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1922,47 +1922,47 @@
                 "q": "「soup」是什么意思？",
                 "opts": [
                   "牛肉",
-                  "汤",
                   "米饭",
-                  "面条"
+                  "面条",
+                  "汤"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「vegetable」是什么意思？",
                 "opts": [
-                  "蔬菜",
                   "面包",
                   "筷子",
-                  "牛肉"
+                  "牛肉",
+                  "蔬菜"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「chopsticks」是什么意思？",
                 "opts": [
-                  "筷子",
                   "面包",
                   "牛肉",
+                  "筷子",
                   "米饭"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「bowl」是什么意思？",
                 "opts": [
-                  "餐叉",
                   "碗",
+                  "餐叉",
                   "米饭",
                   "面包"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -1983,10 +1983,10 @@
                 "opts": [
                   "noodles",
                   "vegetable",
-                  "beef",
-                  "bread"
+                  "bread",
+                  "beef"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2006,11 +2006,11 @@
                 "q": "本单元「晚餐准备好了」核心词是？",
                 "opts": [
                   "vegetable",
-                  "soup",
                   "beef",
+                  "soup",
                   "rice"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2019,10 +2019,10 @@
                 "opts": [
                   "Yes, it is.",
                   "No, I am.",
-                  "No, it isn't.",
-                  "Yes, I do."
+                  "Yes, I do.",
+                  "No, it isn't."
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "句型",
                 "dim": "sentence"
               },
@@ -2030,11 +2030,11 @@
                 "q": "「noodles」的意思是？",
                 "opts": [
                   "鸡蛋",
-                  "面条",
                   "蔬菜",
+                  "面条",
                   "汤"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2249,24 +2249,24 @@
               {
                 "q": "「uncle」是什么意思？",
                 "opts": [
-                  "舅父",
                   "姑母",
                   "阿姨",
+                  "舅父",
                   "父母"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「aunt」是什么意思？",
                 "opts": [
-                  "叔叔",
                   "姑母",
+                  "叔叔",
                   "厨师",
                   "婴儿小弟弟"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2274,23 +2274,23 @@
                 "q": "「baby brother」是什么意思？",
                 "opts": [
                   "父母",
-                  "婴儿小弟弟",
                   "厨师",
-                  "姐妹"
+                  "姐妹",
+                  "婴儿小弟弟"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「doctor」是什么意思？",
                 "opts": [
-                  "医生",
                   "叔叔",
                   "婴儿小弟弟",
-                  "表亲"
+                  "表亲",
+                  "医生"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2298,11 +2298,11 @@
                 "q": "「cook」是什么意思？",
                 "opts": [
                   "医生",
-                  "婴儿小弟弟",
                   "厨师",
+                  "婴儿小弟弟",
                   "姑母"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2310,11 +2310,11 @@
                 "q": "「driver」是什么意思？",
                 "opts": [
                   "阿姨",
-                  "司机",
                   "医生",
-                  "姑母"
+                  "姑母",
+                  "司机"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "词汇",
                 "dim": "vocab"
               },
@@ -2333,36 +2333,36 @@
               {
                 "q": "「cousin」的中文是？",
                 "opts": [
-                  "婴儿小弟弟",
                   "同辈表亲",
+                  "婴儿小弟弟",
                   "父亲",
                   "医生"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "本单元「见到我的家人」核心词是？",
                 "opts": [
+                  "parents",
                   "father",
                   "baby brother",
-                  "parents",
                   "uncle"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "词汇",
                 "dim": "vocab"
               },
               {
                 "q": "「uncle」的意思是？",
                 "opts": [
-                  "舅父",
                   "阿姨",
+                  "舅父",
                   "叔叔",
                   "同辈表亲"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "词汇",
                 "dim": "vocab"
               }
@@ -2761,34 +2761,34 @@
               {
                 "q": "library 是什么意思？",
                 "opts": [
-                  "操场",
                   "图书馆",
+                  "操场",
                   "教室",
                   "办公室"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "词汇"
               },
               {
                 "q": "second floor 的意思是？",
                 "opts": [
                   "一楼",
-                  "二楼",
                   "三楼",
+                  "二楼",
                   "楼梯"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇"
               },
               {
                 "q": "\"在……旁边\" 用哪个词组？",
                 "opts": [
                   "on",
-                  "in",
                   "next to",
+                  "in",
                   "under"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "介词"
               },
               {
@@ -2796,43 +2796,43 @@
                 "opts": [
                   "美术教室",
                   "音乐教室",
-                  "计算机房",
-                  "图书馆"
+                  "图书馆",
+                  "计算机房"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "词汇"
               },
               {
                 "q": "Where's the library? 在问什么？",
                 "opts": [
                   "图书馆有什么",
-                  "图书馆在哪",
                   "图书馆大吗",
+                  "图书馆在哪",
                   "是图书馆吗"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "句型"
               },
               {
                 "q": "teachers' office 的意思？",
                 "opts": [
                   "学生宿舍",
-                  "教师办公室",
                   "校长室",
+                  "教师办公室",
                   "会议室"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇"
               },
               {
                 "q": "\"它在二楼\" 怎么说？",
                 "opts": [
-                  "It on second floor.",
                   "It's on the second floor.",
+                  "It on second floor.",
                   "It in second floor.",
                   "It at second floor."
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "句型"
               },
               {
@@ -2849,23 +2849,23 @@
               {
                 "q": "45 个学生英语怎么说？",
                 "opts": [
+                  "Forty-five students",
                   "Fifteen students",
                   "Fifty students",
-                  "Forty-five students",
                   "Fourteen students"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "数字"
               },
               {
                 "q": "下列哪个 er 发音不同？",
                 "opts": [
+                  "here",
                   "sister",
                   "water",
-                  "here",
                   "computer"
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "语音"
               },
               {
@@ -2882,12 +2882,12 @@
               {
                 "q": "playground 是什么？",
                 "opts": [
-                  "操场",
                   "花园",
                   "公园",
-                  "游乐场"
+                  "游乐场",
+                  "操场"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "词汇"
               },
               {
@@ -2895,10 +2895,10 @@
                 "opts": [
                   "Where library is the?",
                   "Is where the library?",
-                  "Where is the library?",
-                  "Library where is the?"
+                  "Library where is the?",
+                  "Where is the library?"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "句型"
               },
               {
@@ -2916,11 +2916,11 @@
                 "q": "music room 是什么？",
                 "opts": [
                   "音乐厅",
-                  "音乐教室",
                   "剧院",
+                  "音乐教室",
                   "广播室"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "词汇"
               }
             ],
@@ -3294,12 +3294,12 @@
                 "id": 201,
                 "q": "「breakfast」是什么意思？",
                 "opts": [
-                  "早餐",
                   "午餐",
                   "起床",
-                  "英语课"
+                  "英语课",
+                  "早餐"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u2:recall_vocab",
                 "dim": "vocab"
               },
@@ -3307,12 +3307,12 @@
                 "id": 202,
                 "q": "「go to school」是什么意思？",
                 "opts": [
-                  "回家",
                   "去上学",
+                  "回家",
                   "睡觉",
                   "晚餐"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u2:recall_vocab",
                 "dim": "vocab"
               },
@@ -3320,12 +3320,12 @@
                 "id": 203,
                 "q": "看钟问时间时，What time is it? 这句话在问什么？",
                 "opts": [
-                  "几点了",
                   "几点钟去上学",
+                  "几点了",
                   "什么时候吃饭",
                   "现在几点钟了呀"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u2:recall_time",
                 "dim": "sentence"
               },
@@ -3333,12 +3333,12 @@
                 "id": 204,
                 "q": "It's 7 o'clock. It's time to ___.",
                 "opts": [
-                  "get up",
                   "go to bed",
                   "lunch",
+                  "get up",
                   "music class"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u2:recall_routine",
                 "dim": "sentence"
               },
@@ -3346,12 +3346,12 @@
                 "id": 205,
                 "q": "中午 12 点，该说什么？",
                 "opts": [
-                  "It's time for lunch.",
                   "It's time for breakfast.",
+                  "It's time for lunch.",
                   "It's time to go to bed.",
                   "It's time for PE class."
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u2:recall_routine",
                 "dim": "sentence"
               },
@@ -3372,12 +3372,12 @@
                 "id": 207,
                 "q": "It's 9 o'clock. It's time for ___.",
                 "opts": [
-                  "English class",
                   "go home",
+                  "English class",
                   "get up",
                   "dinner"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u2:recall_routine",
                 "dim": "sentence"
               },
@@ -3398,12 +3398,12 @@
                 "id": 209,
                 "q": "看中文选词：「回家」",
                 "opts": [
-                  "go home",
                   "go to bed",
                   "get up",
+                  "go home",
                   "breakfast"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u2:recall_vocab",
                 "dim": "vocab"
               },
@@ -3424,12 +3424,12 @@
                 "id": 211,
                 "q": "It's three o'clock. It's time for ___.",
                 "opts": [
-                  "PE class",
                   "breakfast",
                   "go to bed",
-                  "get up"
+                  "get up",
+                  "PE class"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u2:recall_routine",
                 "dim": "sentence"
               },
@@ -3439,10 +3439,10 @@
                 "opts": [
                   "lunch",
                   "breakfast",
-                  "dinner",
-                  "English class"
+                  "English class",
+                  "dinner"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "u2:recall_vocab",
                 "dim": "vocab"
               }
@@ -3815,12 +3815,12 @@
                 "id": 301,
                 "q": "看中文选词：「寒冷的」",
                 "opts": [
-                  "cool",
                   "cold",
+                  "cool",
                   "warm",
                   "hot"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u3:recall_vocab",
                 "dim": "vocab"
               },
@@ -3828,12 +3828,12 @@
                 "id": 302,
                 "q": "看中文选词：「多风的」",
                 "opts": [
-                  "windy",
                   "cloudy",
                   "snowy",
+                  "windy",
                   "rainy"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u3:recall_vocab",
                 "dim": "vocab"
               },
@@ -3854,12 +3854,12 @@
                 "id": 304,
                 "q": "❄️ 外面很冷。小明问妈妈：「Can I go outside now?」妈妈会怎么回答？",
                 "opts": [
-                  "Yes, you can. It's warm.",
                   "No, you can't. It's cold outside.",
+                  "Yes, you can. It's warm.",
                   "It's sunny and hot.",
                   "OK, let's go outside."
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u3:recall_can",
                 "dim": "sentence"
               },
@@ -3895,10 +3895,10 @@
                 "opts": [
                   "sunny",
                   "snowy",
-                  "rainy",
-                  "windy"
+                  "windy",
+                  "rainy"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "u3:recall_vocab",
                 "dim": "vocab"
               },
@@ -3921,10 +3921,10 @@
                 "opts": [
                   "rainy",
                   "snowy",
-                  "sunny",
-                  "windy"
+                  "windy",
+                  "sunny"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "u2:recall_routine",
                 "dim": "sentence"
               },
@@ -3932,12 +3932,12 @@
                 "id": 310,
                 "q": "对比两个城市：How about ___?",
                 "opts": [
-                  "New York",
                   "breakfast",
                   "get up",
-                  "English class"
+                  "English class",
+                  "New York"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u3:recall_city",
                 "dim": "sentence"
               },
@@ -3946,11 +3946,11 @@
                 "q": "❄️ 冬天哈尔滨常下雪。选合适形容词：",
                 "opts": [
                   "hot",
-                  "snowy",
                   "sunny",
+                  "snowy",
                   "rainy"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "u3:recall_vocab",
                 "dim": "vocab"
               },
@@ -3958,12 +3958,12 @@
                 "id": 312,
                 "q": "⏰ 快 8 点了！Mike 收拾书包。Hurry up! It's time to go to ___.",
                 "opts": [
-                  "school",
                   "cloudy",
                   "weather",
+                  "school",
                   "degree"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u2:recall_routine",
                 "dim": "sentence"
               }
@@ -4380,11 +4380,11 @@
                 "q": "看中文选词：「绵羊」",
                 "opts": [
                   "goat",
-                  "sheep",
                   "hen",
-                  "horse"
+                  "horse",
+                  "sheep"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "u4:recall_vocab",
                 "dim": "vocab"
               },
@@ -4418,12 +4418,12 @@
                 "id": 405,
                 "q": "🥕 Mike 指着近处橙色长条蔬菜问 Sarah：「Are these carrots?」Sarah 摇头，她会先说：",
                 "opts": [
-                  "No.",
                   "Yes, they are.",
                   "They're tomatoes.",
+                  "No.",
                   "What are these?"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u4:recall_these",
                 "dim": "sentence"
               },
@@ -4431,12 +4431,12 @@
                 "id": 406,
                 "q": "🦆 Sarah 望着远处一群动物问 Mike：「Are they horses?」Mike 看到其实是鸭子，他会回答：",
                 "opts": [
-                  "No, they aren't. They're ducks.",
                   "Yes, they are.",
+                  "No, they aren't. They're ducks.",
                   "They're tomatoes.",
                   "Seventeen."
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u4:recall_those",
                 "dim": "sentence"
               },
@@ -4444,12 +4444,12 @@
                 "id": 407,
                 "q": "Sarah 问 Mike：「How many horses do you have?」Mike 数一数后回答：",
                 "opts": [
-                  "Seventeen.",
                   "Seven o'clock.",
+                  "Seventeen.",
                   "They're sheep.",
                   "Yes, they are."
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u4:recall_many",
                 "dim": "sentence"
               },
@@ -4457,12 +4457,12 @@
                 "id": 408,
                 "q": "🌱 麦克唐纳先生带同学参观，指着种蔬菜的地方说：This is the vegetable ___。",
                 "opts": [
-                  "garden",
                   "farm",
                   "animal",
-                  "those"
+                  "those",
+                  "garden"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u4:recall_vocab",
                 "dim": "vocab"
               },
@@ -4470,12 +4470,12 @@
                 "id": 409,
                 "q": "🌅 参观农场那天早上 7 点，妈妈对小明说：「It's time to ___。」",
                 "opts": [
-                  "get up",
                   "go to bed",
                   "go to school",
-                  "go home"
+                  "go home",
+                  "get up"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u2:recall_routine",
                 "dim": "sentence"
               },
@@ -4483,12 +4483,12 @@
                 "id": 410,
                 "q": "Chen Jie 在北京。窗外阳光明媚，她穿着短袖。她会怎么描述天气？",
                 "opts": [
-                  "It's sunny and warm.",
                   "It's rainy and cool.",
                   "It's windy and cloudy.",
+                  "It's sunny and warm.",
                   "It's snowy and cold."
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u3:recall_weather",
                 "dim": "sentence"
               },
@@ -4496,12 +4496,12 @@
                 "id": 411,
                 "q": "🐐 远处那些动物是山羊，不是绵羊。完整句子：They are ___。",
                 "opts": [
-                  "goats",
                   "sheep",
                   "horses",
+                  "goats",
                   "hens"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u4:recall_vocab",
                 "dim": "vocab"
               },
@@ -4907,12 +4907,12 @@
                 "id": 501,
                 "q": "看中文选词：「夹克衫」",
                 "opts": [
+                  "jacket",
                   "shirt",
                   "sweater",
-                  "coat",
-                  "jacket"
+                  "coat"
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "u5:vocab_jacket",
                 "dim": "vocab"
               },
@@ -4921,11 +4921,11 @@
                 "q": "看中文选词：「短裤」",
                 "opts": [
                   "pants",
+                  "shorts",
                   "dress",
-                  "skirt",
-                  "shorts"
+                  "skirt"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "u5:vocab_shorts",
                 "dim": "vocab"
               },
@@ -4933,12 +4933,12 @@
                 "id": 503,
                 "q": "Amy 指着地上一条红色连衣裙问 Chen Jie：「Are these yours?」连衣裙不是 Chen Jie 的。Chen Jie 会回答：",
                 "opts": [
-                  "No, they aren't.",
                   "Yes, they are.",
                   "It's mine.",
+                  "No, they aren't.",
                   "Whose coat is this?"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u5:are_these_yours",
                 "dim": "sentence"
               },
@@ -4946,12 +4946,12 @@
                 "id": 504,
                 "q": "Chen Jie 在失物处捡到一顶蓝色帽子，问 Mike：「Whose hat is this?」Mike 看见帽子里写着 Mike，Mike 回答：",
                 "opts": [
-                  "It's mine.",
                   "They're yours.",
                   "No, they aren't.",
+                  "It's mine.",
                   "Are these yours?"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u5:whose_hat",
                 "dim": "sentence"
               },
@@ -4959,12 +4959,12 @@
                 "id": 505,
                 "q": "Sarah 在教室发现一双绿鞋子，鞋舌贴着「Chen Jie」。Sarah 问 Chen Jie：「Are these yours?」Chen Jie 的鞋就是绿色的。Chen Jie 说：",
                 "opts": [
-                  "Yes, they are.",
                   "No, they aren't. They're John's.",
+                  "Yes, they are.",
                   "No, it isn't. It's Mike's.",
                   "Whose pants are those?"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u5:are_these_yours",
                 "dim": "sentence"
               },
@@ -4972,12 +4972,12 @@
                 "id": 506,
                 "q": "Mike 拿着一条灰色长裤问 Sarah：「Whose pants are these?」Sarah 看见裤腰写着 Dad。Sarah 回答：",
                 "opts": [
-                  "They're your father's.",
                   "It's mine.",
+                  "They're your father's.",
                   "They're Mike's.",
                   "No, they aren't."
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u5:whose_pants",
                 "dim": "sentence"
               },
@@ -4985,12 +4985,12 @@
                 "id": 507,
                 "q": "明天要坐飞机去旅行，妈妈让 Amy 把衣服装进箱子。妈妈说：「___ my clothes.」",
                 "opts": [
-                  "Pack",
                   "Wait",
                   "Hang up",
-                  "Take off"
+                  "Take off",
+                  "Pack"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u5:pack_clothes",
                 "dim": "sentence"
               },
@@ -5024,12 +5024,12 @@
                 "id": 510,
                 "q": "Chen Jie 正要穿短裤去公园，突然打雷下大雨。妈妈冲出门喊别忘了雨伞。外面是 ___ 的天气。",
                 "opts": [
-                  "It's rainy and cool.",
                   "It's sunny and warm.",
                   "They're tomatoes.",
-                  "Put on your hat."
+                  "Put on your hat.",
+                  "It's rainy and cool."
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u3:recall_weather",
                 "dim": "sentence"
               },
@@ -5037,12 +5037,12 @@
                 "id": 511,
                 "q": "参观麦克唐纳农场时，Sarah 喂过绵羊，讲解员说羊毛可以织暖和的上衣。回家天冷，Sarah 说要穿 ___。",
                 "opts": [
-                  "sweater",
                   "tomato",
                   "pants",
-                  "horse"
+                  "horse",
+                  "sweater"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u4:recall_vocab",
                 "dim": "vocab"
               },
@@ -5050,12 +5050,12 @@
                 "id": 512,
                 "q": "Mike 的电子表显示 6:00。Sarah 想问妈妈现在几点，她该问哪一句？",
                 "opts": [
-                  "What time is it?",
                   "Whose coat is this?",
                   "Are these yours?",
+                  "What time is it?",
                   "It's time for breakfast."
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u2:recall_time",
                 "dim": "sentence"
               }
@@ -5481,11 +5481,11 @@
                 "q": "看中文选词：「围巾」",
                 "opts": [
                   "glove",
-                  "umbrella",
                   "scarf",
+                  "umbrella",
                   "sunglasses"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "u6:vocab_scarf",
                 "dim": "vocab"
               },
@@ -5495,10 +5495,10 @@
                 "opts": [
                   "cheap",
                   "nice",
-                  "pretty",
-                  "expensive"
+                  "expensive",
+                  "pretty"
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "u6:vocab_expensive",
                 "dim": "vocab"
               },
@@ -5519,12 +5519,12 @@
                 "id": 604,
                 "q": "John 在鞋店要 6 号鞋。试穿后店员摇头说太小了。John 知道是尺码问题，会说：",
                 "opts": [
-                  "They're too small.",
                   "They're just right!",
+                  "They're too small.",
                   "Of course. Here you are.",
                   "How much is this skirt?"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u6:too_small",
                 "dim": "sentence"
               },
@@ -5532,12 +5532,12 @@
                 "id": 605,
                 "q": "John 换上 7 号鞋，店员笑着说合脚了。店员说：",
                 "opts": [
-                  "They're just right!",
                   "They're too big.",
                   "No. They're too small.",
-                  "They're not for sale."
+                  "They're not for sale.",
+                  "They're just right!"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u6:just_right",
                 "dim": "sentence"
               },
@@ -5545,12 +5545,12 @@
                 "id": 606,
                 "q": "B Let's talk 服装店：Sarah 看中一条短裙，标价牌写着 89 美元。妈妈看了一眼价格，对 Sarah 说：",
                 "opts": [
-                  "Sorry, Sarah. It's too expensive.",
                   "I'll take it!",
                   "They are very cheap.",
+                  "Sorry, Sarah. It's too expensive.",
                   "Yes. Can I try these on?"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u6:too_expensive",
                 "dim": "sentence"
               },
@@ -5558,12 +5558,12 @@
                 "id": 607,
                 "q": "商场海报写着：太阳镜和手套今天只要五元。这两样东西今天贵不贵？",
                 "opts": [
-                  "They are very cheap.",
                   "They are too expensive.",
                   "They are not for sale.",
-                  "They are too small."
+                  "They are too small.",
+                  "They are very cheap."
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u6:sale_cheap",
                 "dim": "sentence"
               },
@@ -5571,12 +5571,12 @@
                 "id": 608,
                 "q": "B Let's talk 服装店：Sarah 拿着一条短裙，想问这条裙子多少钱。她该问：",
                 "opts": [
-                  "How much is this skirt?",
                   "How much are those big shoes?",
+                  "How much is this skirt?",
                   "Whose coat is this?",
                   "What time is it?"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u6:how_much",
                 "dim": "sentence"
               },
@@ -5597,12 +5597,12 @@
                 "id": 610,
                 "q": "外面雷声大作、雨点打在窗户上。妈妈让 Chen Jie 去商场前带上能挡雨的 ___。",
                 "opts": [
-                  "umbrella",
                   "sunglasses",
                   "glove",
-                  "tomato"
+                  "tomato",
+                  "umbrella"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u3:recall_weather",
                 "dim": "vocab"
               },
@@ -5610,12 +5610,12 @@
                 "id": 611,
                 "q": "超市蔬菜区，Mike 指着近处圆圆的、红红的蔬菜问 Sarah：「What are these?」Sarah 会回答：",
                 "opts": [
-                  "They're tomatoes.",
                   "They're gloves.",
                   "It's rainy and cool.",
+                  "They're tomatoes.",
                   "They're just right!"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u4:recall_vocab",
                 "dim": "sentence"
               },

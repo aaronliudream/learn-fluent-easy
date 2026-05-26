@@ -1,0 +1,13 @@
+shot pick_view.png
+shot a1_question.png
+shot a1_wrong_first.png
+shot a1_correct.png
+shot a4_structure.png
+shot b3_skip_chant.png
+shot a_module_starred.png
+starred badge present=true
+a4 re-shot
+b3 re-shot
+starred=false aDone=false
+b3 ok
+starred=true

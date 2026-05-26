@@ -1130,6 +1130,9 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
             onFinish={handleFinish}
             onProgress={reportStageProgress}
             onRegisterBack={registerSentenceBack}
+            onAwardPoints={(n) => {
+              for (let i = 0; i < n; i++) addStar();
+            }}
           />
         ) : (
           <SentenceStage

@@ -92,6 +92,8 @@ export type UnitState = {
   vocabViewed?: number[];
   /** Sentence ids completed in modular sentence lessons (e.g. A1, B2). */
   sentenceCompleted?: string[];
+  /** Sentence ids answered correctly on the first try in Stage-3 training (for 满星 badge). */
+  sentenceFirstCorrect?: string[];
   stars: number;
   firstCompleteDate: string | null;
   reviewSchedule: unknown[];

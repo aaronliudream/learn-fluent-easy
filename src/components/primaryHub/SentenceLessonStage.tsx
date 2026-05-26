@@ -139,6 +139,165 @@ function SentenceCard({
   );
 }
 
+function StarBurst({ n }: { n: number }) {
+  const color = n >= 10 ? "text-[#FF6B35]" : n > 0 ? "text-[#6FA92A]" : "text-[#888780]";
+  return <span className={`inline-block animate-bounce text-lg font-extrabold ${color}`}>+{n} ⭐</span>;
+}
+
+/** What the 🔊 button reads for a training drill (fill_word reads the completed sentence). */
+function trainingAudioText(item: SentenceItem): string {
+  const t = item.training;
+  if (!t) return item.question.en;
+  const correct = (t.options ?? []).find((o) => o.correct)?.text ?? item.question.en;
+  switch (t.type) {
+    case "fill_word":
+      return (t.sentenceTemplate ?? "___").replace("___", correct);
+    case "sentence_choice":
+    case "structure_transfer":
+      return correct;
+    default:
+      return item.question.en;
+  }
+}
+
+/** Training-mode card (3-choice drill). Marks the sentence complete on a correct answer
+ * or after the answer is revealed (2nd wrong). Awards +10 first-try / +5 retry / +0 revealed
+ * via onAwardPoints; reports first-try correct via onFirstCorrect (for the 满星 badge). */
+function TrainingCard({
+  item,
+  index,
+  color,
+  grade,
+  speed,
+  completed,
+  onComplete,
+  onAwardPoints,
+  onFirstCorrect,
+}: {
+  item: SentenceItem;
+  index: number;
+  color: keyof typeof sentenceColorClass;
+  grade: number;
+  speed: HubSpeakSpeed;
+  completed: boolean;
+  onComplete: () => void;
+  onAwardPoints?: (n: number) => void;
+  onFirstCorrect?: () => void;
+}) {
+  const t = item.training!;
+  const options = t.options ?? [];
+  const [phase, setPhase] = useState<"ready" | "wrong1" | "correct" | "revealed">(
+    completed ? "revealed" : "ready",
+  );
+  const [picked, setPicked] = useState<number | null>(null);
+  const [awarded, setAwarded] = useState<number | null>(completed ? null : null);
+  const resolved = phase === "correct" || phase === "revealed";
+  const audioText = trainingAudioText(item);
+
+  const pick = (i: number) => {
+    if (resolved) return;
+    setPicked(i);
+    if (options[i]?.correct) {
+      if (phase === "ready") {
+        setAwarded(10);
+        onAwardPoints?.(10);
+        onFirstCorrect?.();
+      } else {
+        setAwarded(5);
+        onAwardPoints?.(5);
+      }
+      setPhase("correct");
+      onComplete();
+    } else if (phase === "ready") {
+      setPhase("wrong1");
+    } else {
+      setAwarded(0);
+      setPhase("revealed");
+    }
+  };
+
+  const optionClass = (i: number) => {
+    const base = "w-full rounded-xl border-2 px-3 py-2.5 text-left text-sm font-medium transition disabled:cursor-default ";
+    if (!resolved) {
+      if (phase === "wrong1" && picked === i) return base + "border-[#E24B4A] bg-[#FFF0EB] text-[#A32D2D]";
+      return base + "border-[#EEEAE0] bg-white hover:border-[#FF6B35]/50";
+    }
+    if (options[i]?.correct) return base + "border-[#6FA92A] bg-[#EAF3DE] text-[#3B6D11]";
+    if (picked === i) return base + "border-[#E24B4A] bg-[#FFF0EB] text-[#A32D2D]";
+    return base + "border-[#EEEAE0] bg-white opacity-50";
+  };
+
+  const before = t.sentenceTemplate?.split("___")[0] ?? "";
+  const after = t.sentenceTemplate?.split("___")[1] ?? "";
+
+  return (
+    <div className={`mb-3 rounded-xl p-3 ${sentenceColorClass[color]}`}>
+      <div className="mb-1.5 flex items-center justify-between gap-2">
+        <span className="text-xs font-semibold">句 {index + 1}</span>
+        <span className="rounded-md bg-white/60 px-1.5 py-0.5 text-[10px] font-medium opacity-80">{item.tag}</span>
+      </div>
+
+      {t.scenarioZh && (
+        <div className="mb-2 rounded-lg bg-white/60 px-2.5 py-1.5 text-xs text-[#555]">🎬 {t.scenarioZh}</div>
+      )}
+      {t.promptZh && <div className="mb-2 text-sm font-bold text-[#2C2C2A]">{t.promptZh}</div>}
+
+      {t.type === "fill_word" && t.sentenceTemplate && (
+        <div className="mb-2 text-base font-semibold">
+          {before}
+          <span className="mx-1 inline-block min-w-[2.5ch] border-b-2 border-dashed border-[#FF6B35] text-center text-[#FF6B35]">
+            {resolved ? options.find((o) => o.correct)?.text : "＿＿"}
+          </span>
+          {after}
+        </div>
+      )}
+
+      <div className="mb-2 flex items-center gap-2">
+        <AudioBtn text={audioText} grade={grade} speed={speed} label="播放" />
+        <span className="text-xs text-[#888780]">点 🔊 听一听</span>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        {options.map((o, i) => (
+          <button key={`${item.id}-${i}`} type="button" disabled={resolved} className={optionClass(i)} onClick={() => pick(i)}>
+            {o.text}
+          </button>
+        ))}
+      </div>
+
+      {phase === "wrong1" && <div className="mt-2 text-sm font-semibold text-[#E24B4A]">💡 再试一次？</div>}
+
+      {resolved && (
+        <div className="mt-3 border-t border-black/10 pt-2">
+          <div className="flex items-center gap-2">
+            <AudioBtn text={item.question.en} grade={grade} speed={speed} label="播放英文" />
+            <div className="flex-1 text-base font-semibold">{item.question.en}</div>
+            {awarded !== null && <StarBurst n={awarded} />}
+          </div>
+          <div className="mt-1 text-sm">{item.question.zh}</div>
+          {item.answer && (
+            <div className="mt-2 flex items-center gap-2">
+              <AudioBtn text={item.answer.en} grade={grade} speed={speed} label="播放回答" />
+              <div className="text-sm">
+                <span className="font-semibold">回答：{item.answer.en}</span>
+                <span className="ml-1 text-[#888780]">{item.answer.zh}</span>
+              </div>
+            </div>
+          )}
+          {t.explanationZh && (
+            <div className="mt-2 rounded-lg bg-white/60 px-2.5 py-1.5 text-xs text-[#555]">📘 {t.explanationZh}</div>
+          )}
+          {phase === "revealed" && !completed && (
+            <button type="button" className="mt-2 text-xs font-semibold text-[#FF6B35]" onClick={onComplete}>
+              继续 →
+            </button>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 type View = "pick" | "module" | "transition";
 
 type Props = {
@@ -149,6 +308,7 @@ type Props = {
   onFinish: () => void;
   onProgress?: (percent: number) => void;
   onRegisterBack: (handler: (() => void) | null) => void;
+  onAwardPoints?: (n: number) => void;
 };
 
 export default function SentenceLessonStage({
@@ -159,6 +319,7 @@ export default function SentenceLessonStage({
   onFinish,
   onProgress,
   onRegisterBack,
+  onAwardPoints,
 }: Props) {
   const { grade: hubGrade, state, setState } = usePrimaryHub();
   const g = grade || hubGrade;
@@ -167,9 +328,21 @@ export default function SentenceLessonStage({
 
   const us = getUnitState(state, unitId);
   const completed = useMemo(() => getSentenceCompletedIds(us), [us.sentenceCompleted]);
+  const firstCorrect = useMemo(() => new Set(us.sentenceFirstCorrect ?? []), [us.sentenceFirstCorrect]);
 
   const modA = lesson.subModules[0];
   const modB = lesson.subModules[1];
+
+  /** True when every training (non skip_chant) sentence of a module was first-try correct. */
+  const moduleStarred = useCallback(
+    (mod: SentenceSubModule) => {
+      const ids = mod.sentences
+        .filter((s) => s.training && s.training.type !== "skip_chant")
+        .map((s) => s.id);
+      return ids.length > 0 && ids.every((id) => firstCorrect.has(id));
+    },
+    [firstCorrect],
+  );
 
   const [view, setView] = useState<View>("pick");
   const [activeModule, setActiveModule] = useState<SentenceSubModule | null>(null);
@@ -193,6 +366,22 @@ export default function SentenceLessonStage({
       });
     },
     [lesson, persistGrade, setState, stageIdx, unitId],
+  );
+
+  const markFirstCorrect = useCallback(
+    (sentenceId: string) => {
+      setState((prev) => {
+        const unitState = getUnitState(prev, unitId);
+        const ids = new Set(unitState.sentenceFirstCorrect ?? []);
+        if (ids.has(sentenceId)) return prev;
+        ids.add(sentenceId);
+        unitState.sentenceFirstCorrect = [...ids];
+        const next = { ...prev, units: { ...prev.units, [unitId]: { ...unitState } } };
+        savePersist(persistGrade, next);
+        return next;
+      });
+    },
+    [persistGrade, setState, unitId],
   );
 
   const lessonDone = isSentenceLessonComplete(lesson, completed);
@@ -292,18 +481,38 @@ export default function SentenceLessonStage({
           <span>进度 {doneCount}/{activeModule.sentences.length}</span>
           {modDone && <span className="font-semibold text-[#3B6D11]">✓ 本子模块已完成</span>}
         </div>
-        {activeModule.sentences.map((item, i) => (
-          <SentenceCard
-            key={item.id}
-            item={item}
-            index={i}
-            color={activeModule.color}
-            grade={g}
-            speed={speed}
-            completed={completed.has(item.id)}
-            onComplete={() => onModuleSentenceComplete(activeModule, item.id)}
-          />
-        ))}
+        {activeModule.sentences.map((item, i) =>
+          item.training && item.training.type !== "skip_chant" ? (
+            <TrainingCard
+              key={item.id}
+              item={item}
+              index={i}
+              color={activeModule.color}
+              grade={g}
+              speed={speed}
+              completed={completed.has(item.id)}
+              onComplete={() => onModuleSentenceComplete(activeModule, item.id)}
+              onAwardPoints={onAwardPoints}
+              onFirstCorrect={() => markFirstCorrect(item.id)}
+            />
+          ) : (
+            <SentenceCard
+              key={item.id}
+              item={item}
+              index={i}
+              color={activeModule.color}
+              grade={g}
+              speed={speed}
+              completed={completed.has(item.id)}
+              onComplete={() => onModuleSentenceComplete(activeModule, item.id)}
+            />
+          ),
+        )}
+        {modDone && moduleStarred(activeModule) && (
+          <div className="mb-2 rounded-xl bg-[#FFF8E6] px-3 py-2 text-center text-sm font-bold text-[#B8860B]">
+            🎉🌟 满星通关！全部首次答对！
+          </div>
+        )}
         {modDone && activeModule.id === "B" && lessonDone ? (
           <PrimaryButton onClick={onFinish}>✓ 句型学完！返回单元 →</PrimaryButton>
         ) : modDone ? (
@@ -353,6 +562,11 @@ export default function SentenceLessonStage({
                   <span>子模块 {mod.id}</span>
                   {!unlocked && <span className="text-sm">🔒</span>}
                   {done && <span className="text-sm text-[#3B6D11]">✓</span>}
+                  {moduleStarred(mod) && (
+                    <span className="rounded-full bg-[#FFF3C4] px-1.5 text-xs font-bold text-[#B8860B]" title="满星">
+                      🌟 满星
+                    </span>
+                  )}
                 </div>
                 <div className="text-sm text-[#888780]">{mod.title}</div>
                 <div className="mt-1 text-xs text-[#888780]">

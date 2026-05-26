@@ -1,0 +1,3 @@
+[u4] counter="第 1 / 13 题" ok=true
+[u4 shuffle] first-question across 3 reloads=["钥匙放在冰箱「上面」。问「Where are t","看中文选词：「冰箱」","钥匙放在冰箱「上面」。问「Where are t"] varied=true
+[u6] counter="第 1 / 10 题" ok=true

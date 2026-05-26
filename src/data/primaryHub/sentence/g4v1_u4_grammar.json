@@ -1,0 +1,176 @@
+{
+  "lessonId": "g4v1_u4_grammar",
+  "unitId": "g4v1_u4",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "Sarah 在家里找猫、找钥匙，一起来练 in / on / under 吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "找人找猫 · Where's…? in 房间",
+      "description": "Sarah 一家在各个房间找猫、找人，用 Where's…? 提问。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Where's the cat?", "zh": "猫在哪里？" },
+          "answer": { "en": "It's in the kitchen.", "zh": "它在厨房里。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "妈妈问「猫在哪里？」，Sarah 该怎么回答？",
+            "options": [
+              { "text": "I have a cat.", "correct": false },
+              { "text": "Yes, she is.", "correct": false },
+              { "text": "It's in the kitchen.", "correct": true }
+            ],
+            "explanationZh": "问 Where's...? 要用地点回答，in the kitchen 表示「在厨房里」。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Is she in the living room?", "zh": "她在客厅里吗？" },
+          "answer": { "en": "No, she isn't.", "zh": "不，她不在。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「她在客厅里吗？」用英语怎么说？",
+            "options": [
+              { "text": "Is she in the living room?", "correct": true },
+              { "text": "She in the living room is?", "correct": false },
+              { "text": "In the living room is she?", "correct": false }
+            ],
+            "explanationZh": "一般疑问句把 be 动词 Is 提到句首：Is she in...?"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "Where's the dog?", "zh": "狗在哪里？" },
+          "answer": { "en": "It's in the bedroom.", "zh": "它在卧室里。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "狗在卧室「里」，选介词填空。",
+            "sentenceTemplate": "It's ___ the bedroom.",
+            "options": [
+              { "text": "on", "correct": false },
+              { "text": "in", "correct": true },
+              { "text": "under", "correct": false }
+            ],
+            "explanationZh": "在房间「里面」用 in；on 是在上面，under 是在下面。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Is he in the study?", "zh": "他在书房吗？" },
+          "answer": { "en": "Yes, he is.", "zh": "是的，他在。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Sarah 问「他在书房吗？」，他确实在，该怎么回答？",
+            "options": [
+              { "text": "No, he isn't.", "correct": false },
+              { "text": "He's a dog.", "correct": false },
+              { "text": "Yes, he is.", "correct": true }
+            ],
+            "explanationZh": "Is he...? 的肯定回答用 Yes, he is。"
+          }
+        },
+        {
+          "id": "A5",
+          "question": { "en": "Where's Mum?", "zh": "妈妈在哪里？" },
+          "answer": { "en": "She's in the bathroom.", "zh": "她在浴室。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "告诉别人妈妈在哪个房间。",
+            "promptZh": "「她在浴室」用英语怎么说？",
+            "options": [
+              { "text": "She's in the bathroom.", "correct": true },
+              { "text": "In the bathroom she's.", "correct": false },
+              { "text": "Bathroom she's in the.", "correct": false }
+            ],
+            "explanationZh": "说某人在某处用「主语 + is in + 地点」：She's in the bathroom。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "找东西 · Where are…? on / under 家具",
+      "description": "Sarah 在家具上下找钥匙、电话，用 on / under 描述位置。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Where are the keys?", "zh": "钥匙在哪里？" },
+          "answer": { "en": "They're on the fridge.", "zh": "它们在冰箱上。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Sarah 问「钥匙在哪里？」，妈妈该怎么回答？",
+            "options": [
+              { "text": "They're keys.", "correct": false },
+              { "text": "They're on the fridge.", "correct": true },
+              { "text": "Yes, they are.", "correct": false }
+            ],
+            "explanationZh": "问 Where are...? 用「They're + 地点」回答；on the fridge 在冰箱上。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Are they on the table?", "zh": "它们在桌子上吗？" },
+          "answer": { "en": "No, they aren't.", "zh": "不，它们不在。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「它们在桌子上吗？」用英语怎么说？",
+            "options": [
+              { "text": "They on the table are?", "correct": false },
+              { "text": "On the table they are?", "correct": false },
+              { "text": "Are they on the table?", "correct": true }
+            ],
+            "explanationZh": "复数一般疑问句把 Are 提到句首：Are they on...?"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Where's the phone?", "zh": "电话在哪里？" },
+          "answer": { "en": "It's on the sofa.", "zh": "在沙发上。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "电话在沙发「上」，选介词填空。",
+            "sentenceTemplate": "It's ___ the sofa.",
+            "options": [
+              { "text": "on", "correct": true },
+              { "text": "in", "correct": false },
+              { "text": "under", "correct": false }
+            ],
+            "explanationZh": "在家具「上面」用 on；in 是里面，under 是下面。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Is the cat under the bed?", "zh": "猫在床下吗？" },
+          "answer": { "en": "Yes, it is.", "zh": "是的。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "想确认猫是不是藏在床下面。",
+            "promptZh": "「猫在床下吗？」用英语怎么说？",
+            "options": [
+              { "text": "Under the bed the cat is?", "correct": false },
+              { "text": "Is the cat under the bed?", "correct": true },
+              { "text": "The cat is under the bed?", "correct": false }
+            ],
+            "explanationZh": "问「在……下面吗」用 Is + 主语 + under...？under 表示在下面。"
+          }
+        }
+      ]
+    }
+  ]
+}

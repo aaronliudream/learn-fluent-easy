@@ -1,0 +1,10 @@
+[g4v1_u1 rw] 第 7 / 11 题 sentence="Open the ___ ." hint="💡 打开门" ok=true
+[g4v1_u1 rw-dom] <p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">Open <span class="whitespace-nowrap">the <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> .</span></p>
+[g4v1_u2 rw] 第 7 / 10 题 sentence="Put your Chinese book ___ your desk." hint="💡 把语文书放进书桌里" ok=true
+[g4v1_u2 rw-dom] <p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">Put your Chinese <span class="whitespace-nowrap">book <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> your desk.</span></p>
+[g4v1_u4 rw] 第 7 / 11 题 sentence="I want to watch TV. Go to the ___ ." hint="💡 去客厅看电视" ok=true
+[g4v1_u4 rw-dom] <p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">I want to watch TV. Go to <span class="whitespace-nowrap">the <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> .</span></p>
+[g4v1_u5 rw] 第 7 / 11 题 sentence="Pass me the ___ ." hint="💡 递给我碗" ok=true
+[g4v1_u5 rw-dom] <p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">Pass me <span class="whitespace-nowrap">the <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> .</span></p>
+[g4v1_u4 fq] 第 3 / 12 题 point="u4:recall_room_activity" prompt="Go to the kitchen. Have a ___ ." opts=["Asnack","Bnap","Cshower","Dbook"] ok=true
+[g4v1_u4 fq-steppedPast] ["看中文选词：「冰箱」","猫躲在床「下面」。问「Where's the cat?」，下面哪句对？"]

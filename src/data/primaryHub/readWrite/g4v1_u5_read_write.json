@@ -2,7 +2,7 @@
   "unitId": "g4v1_u5",
   "stageIdx": 6,
   "title": "读写训练",
-  "totalPoints": 6,
+  "totalPoints": 11,
   "pointsPerQuestion": 1,
   "questions": [
     {
@@ -12,8 +12,8 @@
       "correctSentence": "I'd like some beef.",
       "options": [
         { "text": "fork", "correct": false },
-        { "text": "beef", "correct": true },
-        { "text": "bowl", "correct": false }
+        { "text": "bowl", "correct": false },
+        { "text": "beef", "correct": true }
       ]
     },
     {
@@ -23,8 +23,8 @@
       "correctSentence": "The noodles are ten yuan.",
       "options": [
         { "text": "please", "correct": false },
-        { "text": "ready", "correct": false },
-        { "text": "yuan", "correct": true }
+        { "text": "yuan", "correct": true },
+        { "text": "ready", "correct": false }
       ]
     },
     {
@@ -33,9 +33,9 @@
       "hint_zh": "想要（would you …）",
       "correctSentence": "What would you like? I'd like some chicken.",
       "options": [
+        { "text": "like", "correct": true },
         { "text": "want", "correct": false },
-        { "text": "eat", "correct": false },
-        { "text": "like", "correct": true }
+        { "text": "eat", "correct": false }
       ]
     },
     {
@@ -44,9 +44,9 @@
       "hint_zh": "好的（礼貌答应）",
       "correctSentence": "Would you like some soup? Yes, please.",
       "options": [
-        { "text": "Yes", "correct": true },
         { "text": "No", "correct": false },
-        { "text": "Not", "correct": false }
+        { "text": "Not", "correct": false },
+        { "text": "Yes", "correct": true }
       ]
     },
     {
@@ -66,10 +66,70 @@
       "hint_zh": "勺子",
       "correctSentence": "We drink soup with a spoon.",
       "options": [
+        { "text": "fork", "correct": false },
+        { "text": "knife", "correct": false },
+        { "text": "spoon", "correct": true }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Pass me the ___ .",
+      "hint_zh": "递给我碗",
+      "correctSentence": "Pass me the bowl.",
+      "options": [
+        { "text": "bowl", "correct": true },
+        { "text": "spoon", "correct": false },
+        { "text": "fork", "correct": false }
+      ],
+      "point": "u5:recall_utensil_action"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "___ me the knife.",
+      "hint_zh": "递给我刀",
+      "correctSentence": "Pass me the knife.",
+      "options": [
+        { "text": "Pass", "correct": true },
+        { "text": "Use", "correct": false },
+        { "text": "Cut", "correct": false }
+      ],
+      "point": "u5:recall_utensil_action"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Cut the ___ .",
+      "hint_zh": "切蔬菜",
+      "correctSentence": "Cut the vegetables.",
+      "options": [
+        { "text": "knife", "correct": false },
+        { "text": "vegetables", "correct": true },
+        { "text": "bowl", "correct": false }
+      ],
+      "point": "u5:recall_utensil_action"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Use the ___ . (吃汤面用)",
+      "hint_zh": "用勺子",
+      "correctSentence": "Use the spoon.",
+      "options": [
         { "text": "spoon", "correct": true },
         { "text": "fork", "correct": false },
         { "text": "knife", "correct": false }
-      ]
+      ],
+      "point": "u5:recall_utensil_action"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "___ the fork.",
+      "hint_zh": "用叉子",
+      "correctSentence": "Use the fork.",
+      "options": [
+        { "text": "Pass", "correct": false },
+        { "text": "Use", "correct": true },
+        { "text": "Cut", "correct": false }
+      ],
+      "point": "u5:recall_utensil_action"
     }
   ]
 }

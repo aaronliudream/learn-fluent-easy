@@ -2,7 +2,7 @@
   "unitId": "g4v1_u4",
   "stageIdx": 6,
   "title": "读写训练",
-  "totalPoints": 6,
+  "totalPoints": 11,
   "pointsPerQuestion": 1,
   "questions": [
     {
@@ -11,8 +11,8 @@
       "hint_zh": "客厅",
       "correctSentence": "The sofa is in the living room.",
       "options": [
-        { "text": "kitchen", "correct": false },
         { "text": "living room", "correct": true },
+        { "text": "kitchen", "correct": false },
         { "text": "study", "correct": false }
       ]
     },
@@ -23,8 +23,8 @@
       "correctSentence": "The cat is in the kitchen.",
       "options": [
         { "text": "on", "correct": false },
-        { "text": "in", "correct": true },
-        { "text": "under", "correct": false }
+        { "text": "under", "correct": false },
+        { "text": "in", "correct": true }
       ]
     },
     {
@@ -33,9 +33,9 @@
       "hint_zh": "在……上面",
       "correctSentence": "The keys are on the fridge.",
       "options": [
+        { "text": "on", "correct": true },
         { "text": "in", "correct": false },
-        { "text": "near", "correct": false },
-        { "text": "on", "correct": true }
+        { "text": "near", "correct": false }
       ]
     },
     {
@@ -55,9 +55,9 @@
       "hint_zh": "否定回答",
       "correctSentence": "Are they on the table? No, they aren't.",
       "options": [
-        { "text": "aren't", "correct": true },
         { "text": "isn't", "correct": false },
-        { "text": "don't", "correct": false }
+        { "text": "don't", "correct": false },
+        { "text": "aren't", "correct": true }
       ]
     },
     {
@@ -70,6 +70,66 @@
         { "text": "under", "correct": false },
         { "text": "in", "correct": false }
       ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "I want to watch TV. Go to the ___ .",
+      "hint_zh": "去客厅看电视",
+      "correctSentence": "Go to the living room.",
+      "options": [
+        { "text": "living room", "correct": true },
+        { "text": "study", "correct": false },
+        { "text": "bathroom", "correct": false }
+      ],
+      "point": "u4:recall_room_activity"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Go to the study. ___ a book.",
+      "hint_zh": "去书房看书",
+      "correctSentence": "Go to the study. Read a book.",
+      "options": [
+        { "text": "Watch", "correct": false },
+        { "text": "Read", "correct": true },
+        { "text": "Have", "correct": false }
+      ],
+      "point": "u4:recall_room_activity"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "I'm hungry. Go to the ___ . Have a snack.",
+      "hint_zh": "去厨房吃点心",
+      "correctSentence": "Go to the kitchen. Have a snack.",
+      "options": [
+        { "text": "bedroom", "correct": false },
+        { "text": "kitchen", "correct": true },
+        { "text": "study", "correct": false }
+      ],
+      "point": "u4:recall_room_activity"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "I'm sleepy. Go to the bedroom. Have a ___ .",
+      "hint_zh": "去卧室睡一觉",
+      "correctSentence": "Go to the bedroom. Have a nap.",
+      "options": [
+        { "text": "snack", "correct": false },
+        { "text": "nap", "correct": true },
+        { "text": "shower", "correct": false }
+      ],
+      "point": "u4:recall_room_activity"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Go to the bathroom. ___ a shower.",
+      "hint_zh": "去浴室洗个澡",
+      "correctSentence": "Go to the bathroom. Take a shower.",
+      "options": [
+        { "text": "Have", "correct": false },
+        { "text": "Take", "correct": true },
+        { "text": "Read", "correct": false }
+      ],
+      "point": "u4:recall_room_activity"
     }
   ]
 }

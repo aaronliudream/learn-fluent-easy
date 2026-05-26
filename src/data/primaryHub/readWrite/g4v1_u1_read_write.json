@@ -2,7 +2,7 @@
   "unitId": "g4v1_u1",
   "stageIdx": 6,
   "title": "读写训练",
-  "totalPoints": 6,
+  "totalPoints": 11,
   "pointsPerQuestion": 1,
   "questions": [
     {
@@ -11,8 +11,8 @@
       "hint_zh": "新教室",
       "correctSentence": "We have a new classroom.",
       "options": [
-        { "text": "classroom", "correct": true },
         { "text": "window", "correct": false },
+        { "text": "classroom", "correct": true },
         { "text": "schoolbag", "correct": false }
       ]
     },
@@ -23,8 +23,8 @@
       "correctSentence": "What's in the classroom?",
       "options": [
         { "text": "blackboard", "correct": false },
-        { "text": "classroom", "correct": true },
-        { "text": "picture", "correct": false }
+        { "text": "picture", "correct": false },
+        { "text": "classroom", "correct": true }
       ]
     },
     {
@@ -33,9 +33,9 @@
       "hint_zh": "书在窗户旁边",
       "correctSentence": "It's near the window.",
       "options": [
-        { "text": "near", "correct": true },
         { "text": "on", "correct": false },
-        { "text": "under", "correct": false }
+        { "text": "under", "correct": false },
+        { "text": "near", "correct": true }
       ]
     },
     {
@@ -44,8 +44,8 @@
       "hint_zh": "蜜蜂在电灯上方",
       "correctSentence": "The bee is on the light.",
       "options": [
-        { "text": "under", "correct": false },
         { "text": "on", "correct": true },
+        { "text": "under", "correct": false },
         { "text": "in", "correct": false }
       ]
     },
@@ -66,10 +66,70 @@
       "hint_zh": "我来帮你",
       "correctSentence": "Let me help you.",
       "options": [
+        { "text": "help", "correct": true },
         { "text": "clean", "correct": false },
-        { "text": "near", "correct": false },
-        { "text": "help", "correct": true }
+        { "text": "near", "correct": false }
       ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Open the ___ .",
+      "hint_zh": "打开门",
+      "correctSentence": "Open the door.",
+      "options": [
+        { "text": "door", "correct": true },
+        { "text": "light", "correct": false },
+        { "text": "window", "correct": false }
+      ],
+      "point": "u1:recall_classroom_action"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "___ on the light.",
+      "hint_zh": "开灯",
+      "correctSentence": "Turn on the light.",
+      "options": [
+        { "text": "Open", "correct": false },
+        { "text": "Turn", "correct": true },
+        { "text": "Clean", "correct": false }
+      ],
+      "point": "u1:recall_classroom_action"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Close the ___ .",
+      "hint_zh": "关上窗户",
+      "correctSentence": "Close the window.",
+      "options": [
+        { "text": "window", "correct": true },
+        { "text": "blackboard", "correct": false },
+        { "text": "picture", "correct": false }
+      ],
+      "point": "u1:recall_classroom_action"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Put up the ___ .",
+      "hint_zh": "挂上图画",
+      "correctSentence": "Put up the picture.",
+      "options": [
+        { "text": "door", "correct": false },
+        { "text": "picture", "correct": true },
+        { "text": "light", "correct": false }
+      ],
+      "point": "u1:recall_classroom_action"
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "___ the blackboard.",
+      "hint_zh": "擦黑板",
+      "correctSentence": "Clean the blackboard.",
+      "options": [
+        { "text": "Open", "correct": false },
+        { "text": "Clean", "correct": true },
+        { "text": "Close", "correct": false }
+      ],
+      "point": "u1:recall_classroom_action"
     }
   ]
 }

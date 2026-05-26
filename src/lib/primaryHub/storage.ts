@@ -4,6 +4,46 @@ import { migratePersistUnits } from "./stageProgressMigrate";
 
 export const STORAGE_PREFIX = "primary_hub_v1_";
 
+/** One-time reset of g4v1_u1 Stage 3 progress when it switched to training mode.
+ * Old `sentenceCompleted` ids meant "read aloud", which would let kids skip the new
+ * drills. Guarded by a localStorage flag; persists the reset immediately so it survives
+ * a reload even if the app never re-saves. Stars are NOT cleared. Grade 4 only. */
+export const STAGE3_V2_MIGRATION_KEY = "primary_hub_v1_stage3_v2_migrated";
+
+function migrateStage3V2(grade: PrimaryHubGrade, persist: PrimaryHubPersist): PrimaryHubPersist {
+  if (grade !== 4) return persist;
+  try {
+    if (localStorage.getItem(STAGE3_V2_MIGRATION_KEY)) return persist;
+    const u1 = persist.units["g4v1_u1"];
+    let changed = false;
+    if (u1) {
+      if (u1.sentenceCompleted?.length) {
+        u1.sentenceCompleted = [];
+        changed = true;
+      }
+      if (u1.sentenceFirstCorrect?.length) {
+        u1.sentenceFirstCorrect = [];
+        changed = true;
+      }
+      if (u1.completedStages?.includes(3)) {
+        u1.completedStages = u1.completedStages.filter((i) => i !== 3);
+        changed = true;
+      }
+      if (u1.stageProgress && 3 in u1.stageProgress) {
+        u1.stageProgress = { ...u1.stageProgress, 3: 0 };
+        changed = true;
+      }
+    }
+    if (changed) {
+      localStorage.setItem(STORAGE_PREFIX + grade, JSON.stringify(persist));
+    }
+    localStorage.setItem(STAGE3_V2_MIGRATION_KEY, "1");
+  } catch {
+    // ignore storage errors; migration is best-effort
+  }
+  return persist;
+}
+
 export const PRIMARY_HUB_GRADES = [3, 4, 5, 6] as const;
 
 type CloudSyncFn = (grade: PrimaryHubGrade, state: PrimaryHubPersist) => void;
@@ -59,7 +99,7 @@ export function loadPersist(grade: PrimaryHubGrade): PrimaryHubPersist {
       mistakes: data.mistakes ?? base.mistakes,
       aiTestHistory: data.aiTestHistory ?? base.aiTestHistory,
     };
-    return migratePersistUnits(merged);
+    return migrateStage3V2(grade, migratePersistUnits(merged));
   } catch {
     return base;
   }

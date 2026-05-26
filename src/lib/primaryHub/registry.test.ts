@@ -62,6 +62,26 @@ describe("sentenceRegistry auto-discovery", () => {
     expect(lesson?.subModules).toHaveLength(2);
   });
 
+  it("g4v1_u1 stage 3 has training drills on all A-module sentences", () => {
+    const lesson = getSentenceLesson("g4v1_u1", 3);
+    const a = lesson!.subModules[0];
+    expect(a.sentences).toHaveLength(4);
+    for (const s of a.sentences) {
+      expect(s.training).toBeDefined();
+      expect(s.training!.type).not.toBe("skip_chant");
+      expect(s.training!.options).toHaveLength(3);
+      expect(s.training!.options!.filter((o) => o.correct)).toHaveLength(1);
+    }
+  });
+
+  it("g4v1_u1 stage 3 keeps B3 and C1 as skip_chant read-aloud", () => {
+    const lesson = getSentenceLesson("g4v1_u1", 3);
+    const b = lesson!.subModules[1];
+    expect(b.sentences).toHaveLength(4);
+    const skips = b.sentences.filter((s) => s.training?.type === "skip_chant");
+    expect(skips.map((s) => s.id).sort()).toEqual(["B3", "C1"]);
+  });
+
   it("loads g4v2_u2 grammar lesson at stage 3", () => {
     const lesson = getSentenceLesson("g4v2_u2", 3);
     expect(lesson).not.toBeNull();

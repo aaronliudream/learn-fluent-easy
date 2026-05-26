@@ -16,25 +16,67 @@
           "id": "A1",
           "question": { "en": "We have a new classroom.", "zh": "我们有一间新教室。" },
           "answer": { "en": "Really? What's in the classroom?", "zh": "真的吗？教室里有什么？" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Mike 应该怎么回应 Sarah？",
+            "options": [
+              { "text": "Really? What's in the classroom?", "correct": true },
+              { "text": "I like apples.", "correct": false },
+              { "text": "My dog is cute.", "correct": false }
+            ],
+            "explanationZh": "听到「我们有一间新教室」，自然反应是好奇里面有什么，所以用 What's in...? 提问。"
+          }
         },
         {
           "id": "A2",
           "question": { "en": "Let's go and see!", "zh": "我们去看看吧！" },
           "answer": { "en": "It's so big!", "zh": "它好大啊！" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我们去看看吧！」选一个动词填进去：Let's ___ and see!",
+            "sentenceTemplate": "Let's ___ and see!",
+            "options": [
+              { "text": "go", "correct": true },
+              { "text": "come", "correct": false },
+              { "text": "run", "correct": false }
+            ],
+            "explanationZh": "Let's go and see 是固定搭配，表示「我们去看看」，go 是从这里到那里。"
+          }
         },
         {
           "id": "A3",
           "question": { "en": "Where is it?", "zh": "它在哪里？" },
           "answer": { "en": "It's near the window.", "zh": "在窗户旁边。" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "用英语问「它在哪里？」",
+            "options": [
+              { "text": "Where is it?", "correct": true },
+              { "text": "Is where it?", "correct": false },
+              { "text": "It is where?", "correct": false }
+            ],
+            "explanationZh": "英语提问「在哪里」的语序是 Where + is + 主语，Where 放最前面。"
+          }
         },
         {
           "id": "A4",
           "question": { "en": "The door is orange.", "zh": "门是橙色的。" },
           "answer": { "en": "The desks are green.", "zh": "书桌是绿色的。" },
-          "tag": "A Let's learn"
+          "tag": "A Let's learn",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "Sarah 想告诉 Mike 教室里各种东西的颜色。",
+            "promptZh": "「门是橙色的」用英语怎么说？",
+            "options": [
+              { "text": "The door is orange.", "correct": true },
+              { "text": "Orange is the door.", "correct": false },
+              { "text": "Door orange is.", "correct": false }
+            ],
+            "explanationZh": "英语描述「某物是某色」的语序是「主语 + is + 颜色」。课本还教我们 The desks are green（书桌是绿色的）。"
+          }
         }
       ]
     },
@@ -50,19 +92,43 @@
           "id": "B1",
           "question": { "en": "Let's clean the classroom!", "zh": "我们来打扫教室吧！" },
           "answer": { "en": "Let me clean the windows.", "zh": "我来擦窗户。" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Sarah 听到「我们来打扫教室吧！」，她想擦窗户，该怎么说？",
+            "options": [
+              { "text": "Let me clean the windows.", "correct": true },
+              { "text": "I have a new bag.", "correct": false },
+              { "text": "Open the door, please.", "correct": false }
+            ],
+            "explanationZh": "「Let me + 动词」表示「让我来做某事」，主动分工时常用。"
+          }
         },
         {
           "id": "B2",
           "question": { "en": "Let me clean the teacher's desk.", "zh": "我来擦讲台。" },
           "answer": { "en": "Let me help you.", "zh": "我来帮你。" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "听到同学说「我来擦讲台」，你想帮他，该怎么说？",
+            "options": [
+              { "text": "Let me help you.", "correct": true },
+              { "text": "Goodbye, see you.", "correct": false },
+              { "text": "I don't know.", "correct": false }
+            ],
+            "explanationZh": "Let me help you 是主动帮忙的常用表达，在同学协作时很自然。"
+          }
         },
         {
           "id": "B3",
           "question": { "en": "Thank you.", "zh": "谢谢。" },
           "answer": null,
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "rote_phrase"
+          }
         },
         {
           "id": "C1",
@@ -74,7 +140,11 @@
             "en": "Pictures and windows, and a yellow door!",
             "zh": "图画、窗户，还有一扇黄色的门！（歌谣）"
           },
-          "tag": "Let's chant · 歌谣"
+          "tag": "Let's chant · 歌谣",
+          "training": {
+            "type": "skip_chant",
+            "skipReason": "chant_song"
+          }
         }
       ]
     }

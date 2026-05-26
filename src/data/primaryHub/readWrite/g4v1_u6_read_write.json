@@ -1,0 +1,75 @@
+{
+  "unitId": "g4v1_u6",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 6,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "fill_choice",
+      "sentence": "My mum and dad are my ___.",
+      "hint_zh": "父母",
+      "correctSentence": "My mum and dad are my parents.",
+      "options": [
+        { "text": "cousin", "correct": false },
+        { "text": "parents", "correct": true },
+        { "text": "uncle", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Is this your uncle? Yes, he is. He's a football ___.",
+      "hint_zh": "运动员",
+      "correctSentence": "Is this your uncle? Yes, he is. He's a football player.",
+      "options": [
+        { "text": "doctor", "correct": false },
+        { "text": "player", "correct": true },
+        { "text": "driver", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "What's your aunt's ___? She's a nurse.",
+      "hint_zh": "工作 / 职业",
+      "correctSentence": "What's your aunt's job? She's a nurse.",
+      "options": [
+        { "text": "job", "correct": true },
+        { "text": "name", "correct": false },
+        { "text": "home", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "My father works in a hospital. He's a ___.",
+      "hint_zh": "医生",
+      "correctSentence": "My father works in a hospital. He's a doctor.",
+      "options": [
+        { "text": "farmer", "correct": false },
+        { "text": "cook", "correct": false },
+        { "text": "doctor", "correct": true }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "My uncle drives a bus. He's a ___.",
+      "hint_zh": "司机",
+      "correctSentence": "My uncle drives a bus. He's a driver.",
+      "options": [
+        { "text": "cook", "correct": false },
+        { "text": "nurse", "correct": false },
+        { "text": "driver", "correct": true }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "How many people are ___ in your family? Four.",
+      "hint_zh": "there（固定句型 are there）",
+      "correctSentence": "How many people are there in your family? Four.",
+      "options": [
+        { "text": "there", "correct": true },
+        { "text": "they", "correct": false },
+        { "text": "their", "correct": false }
+      ]
+    }
+  ]
+}

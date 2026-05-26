@@ -1,0 +1,5 @@
+[vocab] header="认识 10 个单词" tabs=["家人 (0/5)","职业 (0/5)"] phonetics=["/ˈpeərənts/","/ˈkʌzn/","/ˈʌŋkl/","/ɑːnt/","/ˈbeɪbi ˈbrʌðə(r)/"] ok=true
+[readWrite] 第 3 / 6 题 sentence="What's your aunt's ___ ? She's a nurse." hint="💡 工作 / 职业" ok=true
+[readWrite-dom] <p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">What's your <span class="whitespace-nowrap">aunt's <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> ? She's</span> a nurse.</p>
+[finalQuiz] counter=第 8 / 10 题 point="u6:recall_family_job" prompt="—How many people are there in your family? —____." opts=["AI'm fine","BYes, it is","CShe's a nurse","DFive"] ok=true
+[finalQuiz-steppedPast] ["My mum and dad are my ____.","—Can I have some juice, ____? —Sure, here you are.","My ____ works on a farm. He grows vegetables.","—What's your father's job? —He's a ____. He works in a hospital.","—What's her job? —She's a ____. She helps sick people.","My ____ is my father's sister.","—Is this your ____? —Yes, he's my mother's brother."]

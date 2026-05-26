@@ -2124,50 +2124,97 @@
           {
             "id": "g4v1_u6",
             "num": 6,
-            "title": "Meet my family",
-            "cn": "见到我的家人",
+            "title": "Meet my family!",
+            "cn": "认识我的家人",
             "emoji": "👪",
             "available": true,
+            "published": true,
             "vocabulary": [
               {
                 "en": "parents",
                 "cn": "父母",
-                "emoji": "📘"
+                "emoji": "👪",
+                "phonetic": "/ˈpeərənts/"
               },
               {
                 "en": "cousin",
-                "cn": "同辈表亲",
-                "emoji": "📘"
+                "cn": "表(堂)亲",
+                "emoji": "🧑",
+                "phonetic": "/ˈkʌzn/"
               },
               {
                 "en": "uncle",
-                "cn": "舅父",
-                "emoji": "📘"
+                "cn": "叔叔；舅舅",
+                "emoji": "👨",
+                "phonetic": "/ˈʌŋkl/"
               },
               {
                 "en": "aunt",
-                "cn": "姑母",
-                "emoji": "📘"
+                "cn": "阿姨；姑姑",
+                "emoji": "👩",
+                "phonetic": "/ɑːnt/"
               },
               {
                 "en": "baby brother",
-                "cn": "婴儿小弟弟",
-                "emoji": "📘"
+                "cn": "小弟弟",
+                "emoji": "👶",
+                "phonetic": "/ˈbeɪbi ˈbrʌðə(r)/"
               },
               {
                 "en": "doctor",
                 "cn": "医生",
-                "emoji": "📘"
+                "emoji": "👨‍⚕️",
+                "phonetic": "/ˈdɒktə(r)/"
               },
               {
                 "en": "cook",
                 "cn": "厨师",
-                "emoji": "📘"
+                "emoji": "👨‍🍳",
+                "phonetic": "/kʊk/"
               },
               {
                 "en": "driver",
                 "cn": "司机",
-                "emoji": "📘"
+                "emoji": "🚕",
+                "phonetic": "/ˈdraɪvə(r)/"
+              },
+              {
+                "en": "farmer",
+                "cn": "农民",
+                "emoji": "👨‍🌾",
+                "phonetic": "/ˈfɑːmə(r)/"
+              },
+              {
+                "en": "nurse",
+                "cn": "护士",
+                "emoji": "👩‍⚕️",
+                "phonetic": "/nɜːs/"
+              }
+            ],
+            "vocabGroups": [
+              {
+                "id": "family_p59",
+                "name": "家人",
+                "header": "家人 · 5 个词",
+                "indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              {
+                "id": "job_p62",
+                "name": "职业",
+                "header": "职业 · 5 个词",
+                "indices": [
+                  5,
+                  6,
+                  7,
+                  8,
+                  9
+                ]
               }
             ],
             "dialogues": [
@@ -2176,13 +2223,13 @@
                 "lines": [
                   {
                     "role": "Sarah",
-                    "text": "How many people are there in your family, John?",
-                    "cn": "约翰，你家有几口人？"
+                    "text": "How many people are there in your family?",
+                    "cn": "你家有几口人？"
                   },
                   {
-                    "role": "John",
-                    "text": "Three.",
-                    "cn": "三口。"
+                    "role": "Mike",
+                    "text": "My family has six people.",
+                    "cn": "我家有六口人。"
                   }
                 ]
               },
@@ -2195,9 +2242,19 @@
                     "cn": "这是你叔叔吗？"
                   },
                   {
-                    "role": "John",
-                    "text": "No, it isn't. He's a football player.",
-                    "cn": "不，不是。他是足球运动员。"
+                    "role": "Mike",
+                    "text": "Yes, it is. He's a football player.",
+                    "cn": "是的，他是位足球运动员。"
+                  },
+                  {
+                    "role": "Sarah",
+                    "text": "What's your aunt's job?",
+                    "cn": "你姑姑做什么工作？"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "She's a nurse.",
+                    "cn": "她是位护士。"
                   }
                 ]
               }
@@ -2206,7 +2263,7 @@
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "8个核心单词",
+                "subtitle": "10个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -2253,6 +2310,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "读句填词",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "8分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -2262,168 +2327,144 @@
             ],
             "quizQuestions": [
               {
-                "q": "「parents」是什么意思？",
+                "id": 601,
+                "q": "—How many people are there in your family? —____.",
                 "opts": [
-                  "姐妹",
-                  "医生",
-                  "父母",
-                  "同辈表亲"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cousin」是什么意思？",
-                "opts": [
-                  "姐妹",
-                  "同辈表亲",
-                  "舅父",
-                  "表亲"
+                  "I'm fine",
+                  "Five",
+                  "Yes, it is",
+                  "She's a nurse"
                 ],
                 "answer": 1,
-                "point": "词汇",
+                "point": "u6:recall_family_job",
+                "dim": "sentence"
+              },
+              {
+                "id": 602,
+                "q": "—Is this your ____? —Yes, he's my mother's brother.",
+                "opts": [
+                  "aunt",
+                  "uncle",
+                  "cousin",
+                  "sister"
+                ],
+                "answer": 1,
+                "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
               {
-                "q": "「uncle」是什么意思？",
+                "id": 603,
+                "q": "—What's your father's job? —He's a ____. He works in a hospital.",
                 "opts": [
-                  "姑母",
-                  "阿姨",
-                  "舅父",
-                  "父母"
+                  "farmer",
+                  "cook",
+                  "doctor",
+                  "driver"
                 ],
                 "answer": 2,
-                "point": "词汇",
+                "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
               {
-                "q": "「aunt」是什么意思？",
+                "id": 604,
+                "q": "My mum and dad are my ____.",
                 "opts": [
-                  "姑母",
-                  "叔叔",
-                  "厨师",
-                  "婴儿小弟弟"
+                  "parents",
+                  "cousins",
+                  "aunts",
+                  "uncles"
                 ],
                 "answer": 0,
-                "point": "词汇",
+                "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
               {
-                "q": "「baby brother」是什么意思？",
+                "id": 605,
+                "q": "—What's her job? —She's a ____. She helps sick people.",
                 "opts": [
-                  "父母",
-                  "厨师",
-                  "姐妹",
-                  "婴儿小弟弟"
+                  "nurse",
+                  "farmer",
+                  "cook",
+                  "driver"
                 ],
-                "answer": 3,
-                "point": "词汇",
+                "answer": 0,
+                "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
               {
-                "q": "「doctor」是什么意思？",
+                "id": 607,
+                "q": "My ____ drives a taxi every day.",
                 "opts": [
-                  "叔叔",
-                  "婴儿小弟弟",
-                  "表亲",
-                  "医生"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cook」是什么意思？",
-                "opts": [
-                  "医生",
-                  "厨师",
-                  "婴儿小弟弟",
-                  "姑母"
+                  "doctor",
+                  "driver",
+                  "farmer",
+                  "cook"
                 ],
                 "answer": 1,
-                "point": "词汇",
+                "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
               {
-                "q": "「driver」是什么意思？",
+                "id": 608,
+                "q": "—Can I have some juice, ____? —Sure, here you are.",
                 "opts": [
-                  "阿姨",
-                  "医生",
-                  "姑母",
-                  "司机"
+                  "please",
+                  "thanks",
+                  "sorry",
+                  "hello"
                 ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "u5:recall_polite_request",
+                "dim": "sentence"
               },
               {
-                "q": "哪个是「父母」？",
+                "id": 609,
+                "q": "My friend Amy is ____ and friendly. Everyone likes her.",
                 "opts": [
-                  "driver",
+                  "quiet",
+                  "heavy",
+                  "ready",
+                  "hungry"
+                ],
+                "answer": 0,
+                "point": "u3:recall_personality",
+                "dim": "sentence"
+              },
+              {
+                "id": 610,
+                "q": "My ____ is my father's sister.",
+                "opts": [
                   "uncle",
-                  "parents",
+                  "aunt",
+                  "cousin",
                   "mother"
                 ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「cousin」的中文是？",
-                "opts": [
-                  "同辈表亲",
-                  "婴儿小弟弟",
-                  "父亲",
-                  "医生"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「见到我的家人」核心词是？",
-                "opts": [
-                  "parents",
-                  "father",
-                  "baby brother",
-                  "uncle"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「uncle」的意思是？",
-                "opts": [
-                  "阿姨",
-                  "舅父",
-                  "叔叔",
-                  "同辈表亲"
-                ],
                 "answer": 1,
-                "point": "词汇",
+                "point": "u6:recall_family_job",
+                "dim": "vocab"
+              },
+              {
+                "id": 611,
+                "q": "My ____ works on a farm. He grows vegetables.",
+                "opts": [
+                  "doctor",
+                  "nurse",
+                  "farmer",
+                  "cook"
+                ],
+                "answer": 2,
+                "point": "u6:recall_family_job",
                 "dim": "vocab"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "How many people are there in your family, John?",
+                "audio": "My family has six people.",
                 "opts": [
-                  "How many people are there in your family, John?",
-                  "How many people are there in your family, John.",
-                  "parents",
-                  "cousin"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Three.",
-                "opts": [
-                  "Three.",
-                  "parents",
-                  "cousin",
-                  "uncle"
+                  "My family has six people.",
+                  "My family has seven people.",
+                  "My family has six cousins.",
+                  "There are six rooms."
                 ],
                 "answer": 0
               },
@@ -2432,18 +2473,18 @@
                 "opts": [
                   "Is this your uncle?",
                   "Is this your aunt?",
-                  "Is this your uncle.",
-                  "parents"
+                  "Is he your uncle?",
+                  "Is this your cousin?"
                 ],
                 "answer": 0
               },
               {
-                "audio": "No, it isn't. He's a football player.",
+                "audio": "She's a nurse.",
                 "opts": [
-                  "No, it isn't. He's a football player.",
-                  "parents",
-                  "cousin",
-                  "uncle"
+                  "She's a nurse.",
+                  "She's a doctor.",
+                  "He's a nurse.",
+                  "She's a cook."
                 ],
                 "answer": 0
               }

@@ -1,0 +1,159 @@
+{
+  "lessonId": "g4v1_u5_grammar",
+  "unitId": "g4v1_u5",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "晚饭做好了，Sarah 和 Mike 一边点餐一边递餐具，一起来练 I'd like / Pass me… 吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "点餐 · What would you like? / Would you like…",
+      "description": "晚餐桌上，大家说想吃什么、礼貌应答。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "Dinner's ready. Help yourself.", "zh": "晚饭好了，请自便。" },
+          "answer": { "en": "Thank you. I'd like some beef and noodles.", "zh": "谢谢。我想要些牛肉和面条。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "妈妈说「晚饭好了，请自便」，Sarah 该怎么回应？",
+            "options": [
+              { "text": "I have a dog.", "correct": false },
+              { "text": "Yes, she is.", "correct": false },
+              { "text": "Thank you. I'd like some beef and noodles.", "correct": true }
+            ],
+            "explanationZh": "听到「请自便」，先道谢再说想吃什么：Thank you. I'd like some...。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "Would you like some soup?", "zh": "你想喝点汤吗？" },
+          "answer": { "en": "Yes, please.", "zh": "好的，谢谢。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「你想喝点汤吗？」用英语怎么说？",
+            "options": [
+              { "text": "Would you like some soup?", "correct": true },
+              { "text": "You would like some soup?", "correct": false },
+              { "text": "Like you would some soup?", "correct": false }
+            ],
+            "explanationZh": "礼貌询问用 Would you like some...?，把 Would 放在句首。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "What would you like?", "zh": "你想要什么？" },
+          "answer": { "en": "I'd like some chicken and vegetables.", "zh": "我想要些鸡肉和蔬菜。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "John 问「你想要什么？」，Mike 该怎么回答？",
+            "options": [
+              { "text": "I'm fine, thank you.", "correct": false },
+              { "text": "I'd like some chicken and vegetables.", "correct": true },
+              { "text": "Yes, please.", "correct": false }
+            ],
+            "explanationZh": "What would you like? 要说想要什么：I'd like some + 食物。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "Would you like some chicken?", "zh": "你想吃点鸡肉吗？" },
+          "answer": { "en": "No, thanks.", "zh": "不，谢谢。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "别人请你吃鸡肉，你想委婉拒绝。",
+            "promptZh": "「不，谢谢」用英语怎么说？",
+            "options": [
+              { "text": "No, thanks.", "correct": true },
+              { "text": "Thanks, no.", "correct": false },
+              { "text": "No, you're welcome.", "correct": false }
+            ],
+            "explanationZh": "委婉拒绝用 No, thanks.；thanks 放在 No 后面。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "餐具 · Pass me the…",
+      "description": "吃饭时礼貌地请别人把餐具递过来。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "Pass me the knife and fork, please.", "zh": "请把刀和叉递给我。" },
+          "answer": { "en": "Here you are.", "zh": "给你。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Mike 说「Pass me the knife and fork, please.」，John 该怎么回应？",
+            "options": [
+              { "text": "I don't have them.", "correct": false },
+              { "text": "Here you are.", "correct": true },
+              { "text": "No, thanks.", "correct": false }
+            ],
+            "explanationZh": "别人请你递东西，递过去时说 Here you are.（给你）。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "Pass me the bowl, please.", "zh": "请把碗递给我。" },
+          "answer": { "en": "Here you are.", "zh": "给你。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "请把「碗」递给我，选词填空。",
+            "sentenceTemplate": "Pass me the ___, please.",
+            "options": [
+              { "text": "bowl", "correct": true },
+              { "text": "fork", "correct": false },
+              { "text": "spoon", "correct": false }
+            ],
+            "explanationZh": "碗是 bowl；fork 是叉、spoon 是勺，别选错餐具。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "Pass me the chopsticks, please.", "zh": "请把筷子递给我。" },
+          "answer": { "en": "OK.", "zh": "好的。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「请把筷子递给我」用英语怎么说？",
+            "options": [
+              { "text": "The chopsticks pass me, please.", "correct": false },
+              { "text": "Me pass the chopsticks, please.", "correct": false },
+              { "text": "Pass me the chopsticks, please.", "correct": true }
+            ],
+            "explanationZh": "祈使句「把…递给我」用 Pass me the + 物品, please。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "Pass me a spoon, please.", "zh": "请把勺子递给我。" },
+          "answer": { "en": "Here you are.", "zh": "给你。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "喝汤时想请人把勺子递过来。",
+            "promptZh": "「请把勺子递给我」用英语怎么说？",
+            "options": [
+              { "text": "A spoon pass me, please.", "correct": false },
+              { "text": "Pass me a spoon, please.", "correct": true },
+              { "text": "Me a spoon pass, please.", "correct": false }
+            ],
+            "explanationZh": "递东西用 Pass me + 物品, please；spoon 是勺。"
+          }
+        }
+      ]
+    }
+  ]
+}

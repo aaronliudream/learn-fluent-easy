@@ -23,6 +23,9 @@ export const STAGE3_V2_PR1_UNITS = [
   "g4v2_u5",
   "g4v2_u6",
 ];
+/** PR-2 (Tier 2 rollout) reset flag — the 4 units that newly gained a grammar.json. */
+export const STAGE3_V2_PR2_MIGRATION_KEY = "primary_hub_v1_stage3_v2_pr2_migrated";
+export const STAGE3_V2_PR2_UNITS = ["g4v1_u3", "g4v1_u4", "g4v1_u5", "g4v1_u6"];
 
 /** Reset Stage 3 (index 3) progress for the given units; returns true if anything changed.
  * Stars are NOT cleared. */
@@ -71,6 +74,13 @@ function migrateStage3V2(grade: PrimaryHubGrade, persist: PrimaryHubPersist): Pr
         localStorage.setItem(STORAGE_PREFIX + grade, JSON.stringify(persist));
       }
       localStorage.setItem(STAGE3_V2_PR1_MIGRATION_KEY, "1");
+    }
+    // Wave 2 — PR-2 rollout (4 new units: g4v1_u3..u6).
+    if (!localStorage.getItem(STAGE3_V2_PR2_MIGRATION_KEY)) {
+      if (resetStage3ForUnits(persist, STAGE3_V2_PR2_UNITS)) {
+        localStorage.setItem(STORAGE_PREFIX + grade, JSON.stringify(persist));
+      }
+      localStorage.setItem(STAGE3_V2_PR2_MIGRATION_KEY, "1");
     }
   } catch {
     // ignore storage errors; migration is best-effort

@@ -1,0 +1,4 @@
+g4v1_u3: openedA=true
+g4v1_u4: openedA=true
+g4v1_u5: openedA=true
+g4v1_u6: openedA=true

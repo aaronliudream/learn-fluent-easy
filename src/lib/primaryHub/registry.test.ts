@@ -152,8 +152,52 @@ describe("sentenceRegistry auto-discovery", () => {
     expect(lesson?.subModules).toHaveLength(2);
   });
 
-  it("discovers sentence lessons for g4v1 u1–u2 and g4v2 u1–u6", () => {
-    expect(__getSentenceLessonsForTest()).toHaveLength(8);
+  // PR-2 Tier 2 training rollout: 4 newly-authored grammar.json (g4v1_u3..u6), no chants.
+  const tier2ExpectedSkips: Record<string, number> = {
+    g4v1_u3: 0,
+    g4v1_u4: 0,
+    g4v1_u5: 0,
+    g4v1_u6: 0,
+  };
+  for (const [unitId, expectedSkips] of Object.entries(tier2ExpectedSkips)) {
+    it(`loads ${unitId} grammar lesson at stage 3`, () => {
+      const lesson = getSentenceLesson(unitId, 3);
+      expect(lesson).not.toBeNull();
+      expect(lesson?.lessonId).toBe(`${unitId}_grammar`);
+    });
+
+    it(`${unitId} stage 3: has 2 submodules A then locked B`, () => {
+      const lesson = getSentenceLesson(unitId, 3);
+      expect(lesson?.subModules).toHaveLength(2);
+      expect(lesson?.subModules[0].id).toBe("A");
+      expect(lesson?.subModules[1].id).toBe("B");
+      expect(lesson?.subModules[1].lockedUntil).toBe("A");
+    });
+
+    it(`${unitId} stage 3: every non-skip sentence is a well-formed 3-choice drill`, () => {
+      const lesson = getSentenceLesson(unitId, 3);
+      const drills = lesson!.subModules
+        .flatMap((m) => m.sentences)
+        .filter((s) => s.training && s.training.type !== "skip_chant");
+      expect(drills.length).toBeGreaterThan(0);
+      for (const s of drills) {
+        expect(s.training!.options).toHaveLength(3);
+        expect(s.training!.options!.filter((o) => o.correct)).toHaveLength(1);
+        expect(typeof s.training!.explanationZh).toBe("string");
+      }
+    });
+
+    it(`${unitId} stage 3: has ${expectedSkips} skip_chant sentence(s)`, () => {
+      const lesson = getSentenceLesson(unitId, 3);
+      const skips = lesson!.subModules
+        .flatMap((m) => m.sentences)
+        .filter((s) => s.training?.type === "skip_chant");
+      expect(skips).toHaveLength(expectedSkips);
+    });
+  }
+
+  it("discovers sentence lessons for g4v1 u1–u6 and g4v2 u1–u6", () => {
+    expect(__getSentenceLessonsForTest()).toHaveLength(12);
   });
 });
 

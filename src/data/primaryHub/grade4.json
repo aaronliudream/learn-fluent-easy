@@ -2487,11 +2487,11 @@
                 "q": "—How many people are there in your family? —____.",
                 "opts": [
                   "I'm fine",
-                  "Five",
                   "Yes, it is",
-                  "She's a nurse"
+                  "She's a nurse",
+                  "Five"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "u6:recall_family_job",
                 "dim": "sentence"
               },
@@ -2499,12 +2499,12 @@
                 "id": 602,
                 "q": "—Is this your ____? —Yes, he's my mother's brother.",
                 "opts": [
-                  "aunt",
                   "uncle",
+                  "aunt",
                   "cousin",
                   "sister"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
@@ -2525,12 +2525,12 @@
                 "id": 604,
                 "q": "My mum and dad are my ____.",
                 "opts": [
-                  "parents",
                   "cousins",
                   "aunts",
-                  "uncles"
+                  "uncles",
+                  "parents"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
@@ -2538,12 +2538,12 @@
                 "id": 605,
                 "q": "—What's her job? —She's a ____. She helps sick people.",
                 "opts": [
-                  "nurse",
                   "farmer",
+                  "nurse",
                   "cook",
                   "driver"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
@@ -2564,12 +2564,12 @@
                 "id": 608,
                 "q": "—Can I have some juice, ____? —Sure, here you are.",
                 "opts": [
-                  "please",
                   "thanks",
                   "sorry",
+                  "please",
                   "hello"
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u5:recall_polite_request",
                 "dim": "sentence"
               },
@@ -2590,12 +2590,12 @@
                 "id": 610,
                 "q": "My ____ is my father's sister.",
                 "opts": [
-                  "uncle",
                   "aunt",
+                  "uncle",
                   "cousin",
                   "mother"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u6:recall_family_job",
                 "dim": "vocab"
               },
@@ -2604,11 +2604,11 @@
                 "q": "My ____ works on a farm. He grows vegetables.",
                 "opts": [
                   "doctor",
-                  "nurse",
                   "farmer",
+                  "nurse",
                   "cook"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "u6:recall_family_job",
                 "dim": "vocab"
               }

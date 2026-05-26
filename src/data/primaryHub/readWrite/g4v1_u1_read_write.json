@@ -22,8 +22,8 @@
       "hint_zh": "问教室里有什么",
       "correctSentence": "What's in the classroom?",
       "options": [
-        { "text": "classroom", "correct": true },
         { "text": "blackboard", "correct": false },
+        { "text": "classroom", "correct": true },
         { "text": "picture", "correct": false }
       ]
     },
@@ -44,8 +44,8 @@
       "hint_zh": "蜜蜂在电灯上方",
       "correctSentence": "The bee is on the light.",
       "options": [
-        { "text": "on", "correct": true },
         { "text": "under", "correct": false },
+        { "text": "on", "correct": true },
         { "text": "in", "correct": false }
       ]
     },
@@ -55,9 +55,9 @@
       "hint_zh": "打扫教室",
       "correctSentence": "Let's clean the classroom!",
       "options": [
-        { "text": "clean", "correct": true },
         { "text": "help", "correct": false },
-        { "text": "really", "correct": false }
+        { "text": "really", "correct": false },
+        { "text": "clean", "correct": true }
       ]
     },
     {
@@ -66,9 +66,9 @@
       "hint_zh": "我来帮你",
       "correctSentence": "Let me help you.",
       "options": [
-        { "text": "help", "correct": true },
         { "text": "clean", "correct": false },
-        { "text": "near", "correct": false }
+        { "text": "near", "correct": false },
+        { "text": "help", "correct": true }
       ]
     }
   ]

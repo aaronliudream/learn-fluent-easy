@@ -11,8 +11,8 @@
       "hint_zh": "问名字",
       "correctSentence": "James has a green bag. What is his name?",
       "options": [
-        { "text": "his", "correct": true },
         { "text": "her", "correct": false },
+        { "text": "his", "correct": true },
         { "text": "its", "correct": false }
       ]
     },
@@ -22,9 +22,9 @@
       "hint_zh": "问名字",
       "correctSentence": "Ann has a blue hat. What is her name?",
       "options": [
-        { "text": "her", "correct": true },
         { "text": "his", "correct": false },
-        { "text": "your", "correct": false }
+        { "text": "your", "correct": false },
+        { "text": "her", "correct": true }
       ]
     },
     {
@@ -33,8 +33,8 @@
       "hint_zh": "长头发",
       "correctSentence": "Kate has long hair.",
       "options": [
-        { "text": "long", "correct": true },
         { "text": "short", "correct": false },
+        { "text": "long", "correct": true },
         { "text": "brown", "correct": false }
       ]
     },
@@ -55,9 +55,9 @@
       "hint_zh": "友好的",
       "correctSentence": "Ann is friendly. She helps everyone and smiles a lot.",
       "options": [
-        { "text": "friendly", "correct": true },
         { "text": "quiet", "correct": false },
-        { "text": "cute", "correct": false }
+        { "text": "cute", "correct": false },
+        { "text": "friendly", "correct": true }
       ]
     },
     {

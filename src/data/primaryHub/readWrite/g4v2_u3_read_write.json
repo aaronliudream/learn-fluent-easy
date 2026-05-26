@@ -11,9 +11,9 @@
       "hint_zh": "很冷，要穿外套",
       "correctSentence": "It's very cold outside. Put on your coat!",
       "options": [
-        { "text": "cold", "correct": true },
         { "text": "hot", "correct": false },
-        { "text": "sunny", "correct": false }
+        { "text": "sunny", "correct": false },
+        { "text": "cold", "correct": true }
       ]
     },
     {
@@ -22,8 +22,8 @@
       "hint_zh": "晴朗温暖",
       "correctSentence": "What's the weather like? It's sunny and warm.",
       "options": [
-        { "text": "sunny", "correct": true },
         { "text": "rainy", "correct": false },
+        { "text": "sunny", "correct": true },
         { "text": "snowy", "correct": false }
       ]
     },
@@ -44,9 +44,9 @@
       "hint_zh": "问是否多风",
       "correctSentence": "Is it windy? — No, it isn't.",
       "options": [
-        { "text": "windy", "correct": true },
         { "text": "warm", "correct": false },
-        { "text": "degree", "correct": false }
+        { "text": "degree", "correct": false },
+        { "text": "windy", "correct": true }
       ]
     },
     {
@@ -66,8 +66,8 @@
       "hint_zh": "课本对话里接着问纽约",
       "correctSentence": "How about New York?",
       "options": [
-        { "text": "New York", "correct": true },
         { "text": "Beijing", "correct": false },
+        { "text": "New York", "correct": true },
         { "text": "breakfast", "correct": false }
       ]
     }

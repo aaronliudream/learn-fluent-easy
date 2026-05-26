@@ -11,9 +11,9 @@
       "hint_zh": "新书包",
       "correctSentence": "I have a new schoolbag.",
       "options": [
-        { "text": "schoolbag", "correct": true },
         { "text": "classroom", "correct": false },
-        { "text": "window", "correct": false }
+        { "text": "window", "correct": false },
+        { "text": "schoolbag", "correct": true }
       ]
     },
     {
@@ -33,9 +33,9 @@
       "hint_zh": "我丢了书包",
       "correctSentence": "I lost my schoolbag.",
       "options": [
-        { "text": "lost", "correct": true },
         { "text": "help", "correct": false },
-        { "text": "clean", "correct": false }
+        { "text": "clean", "correct": false },
+        { "text": "lost", "correct": true }
       ]
     },
     {
@@ -55,8 +55,8 @@
       "hint_zh": "在课桌下面",
       "correctSentence": "It's under the desk.",
       "options": [
-        { "text": "under", "correct": true },
         { "text": "on", "correct": false },
+        { "text": "under", "correct": true },
         { "text": "near", "correct": false }
       ]
     },
@@ -66,8 +66,8 @@
       "hint_zh": "给你（找到了）",
       "correctSentence": "Here it is!",
       "options": [
-        { "text": "Here", "correct": true },
         { "text": "Where", "correct": false },
+        { "text": "Here", "correct": true },
         { "text": "What", "correct": false }
       ]
     }

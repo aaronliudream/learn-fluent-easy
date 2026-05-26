@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { VocabItem } from "@/lib/primaryHub/types";
-import { hubSpeak } from "@/lib/primaryHub/speech";
+import { toHubTtsText } from "@/lib/primaryHub/speech";
+import { speakKid, stopSpeaking, prefetchTTSBatchKid } from "@/lib/speak";
+import { isWebSpeechSupported, speakWebSpeech } from "@/lib/webSpeech";
 import {
   type GradeKey,
   getGradeConfig,
@@ -33,6 +35,8 @@ type SlotStatus = "empty" | "typed" | "correct" | "hint" | "wrong";
 const PRAISE = ["✨ Nice!", "✔ Good!", "⭐ Great!", "💫 Sweet!"];
 const MAX_SHIELDS = 2;
 const TREASURE_RATE = 0.28;
+/** Space and hyphen auto-fill (occupy a slot, no typing needed). Apostrophe is typed. */
+const isAutoChar = (c: string) => c === " " || c === "-";
 
 let praiseIdx = 0;
 
@@ -117,14 +121,14 @@ export default function SpellingStage({
   const total = queue.length;
   const [qi, setQi] = useState(0);
   const current = queue[qi];
-  const target = current?.word.en ?? "";
+  const target = (current?.word.en ?? "").replace(/’/g, "'"); // normalize curly → straight apostrophe
 
   // ---- Per-question letter-slot state ----
   const [values, setValues] = useState<string[]>([]);
   const [statuses, setStatuses] = useState<SlotStatus[]>([]);
   const initSlots = useCallback((word: string) => {
-    const vals = word.split("").map((c) => (c === " " ? " " : ""));
-    const sts: SlotStatus[] = word.split("").map((c) => (c === " " ? "correct" : "empty"));
+    const vals = word.split("").map((c) => (isAutoChar(c) ? c : ""));
+    const sts: SlotStatus[] = word.split("").map((c) => (isAutoChar(c) ? "correct" : "empty"));
     setValues(vals);
     setStatuses(sts);
   }, []);
@@ -143,6 +147,7 @@ export default function SpellingStage({
   const [shake, setShake] = useState(false);
   const [flash, setFlash] = useState(false);
   const [speaking, setSpeaking] = useState(false);
+  const [toast, setToast] = useState<string | null>(null);
   const timers = useRef<number[]>([]);
 
   const after = (ms: number, fn: () => void) => {
@@ -175,17 +180,47 @@ export default function SpellingStage({
     [gradeKey, useRex],
   );
 
-  // ---- Speech: auto-play on new question (250ms), manual replay, loading guard ----
+  // ---- Speech: ElevenLabs (kid voice, content-addressed cache → no repeat cost),
+  // with Web Speech fallback + toast on failure so a TTS error never blocks the kid. ----
   const playWord = useCallback(
     (word: string) => {
       if (!word) return;
+      stopSpeaking();
       setSpeaking(true);
-      hubSpeak(word, cfg.speechRate, grade); // hubSpeak has a content-addressed audio cache → no repeat ElevenLabs cost
-      after(800, () => setSpeaking(false));
+      const spoken = toHubTtsText(word);
+      let settled = false;
+      const done = () => {
+        if (!settled) {
+          settled = true;
+          setSpeaking(false);
+        }
+      };
+      speakKid(spoken, { grade, speed: cfg.speechRate })
+        .then(done)
+        .catch((err) => {
+          console.error("[spelling] ElevenLabs speak failed, falling back:", err);
+          if (isWebSpeechSupported()) {
+            void speakWebSpeech(spoken, cfg.speechRate);
+          } else {
+            setToast("发音加载失败，请稍后再试");
+            after(2200, () => setToast(null));
+          }
+          done();
+        });
+      after(2500, done); // safety: never leave the 🔊 button stuck in loading
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [cfg.speechRate, grade],
   );
+
+  // Warm the ElevenLabs cache for this unit's words on entry (avoids first-play lag/fail).
+  useEffect(() => {
+    prefetchTTSBatchKid(
+      vocabulary.map((v) => v.en),
+      { grade, speed: cfg.speechRate },
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (!current) return;
@@ -205,7 +240,8 @@ export default function SpellingStage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [qi, total]);
 
-  const letterIdx = (i: number) => target[i] !== " ";
+  // A slot needs typing (letter or apostrophe); space/hyphen are auto-filled.
+  const letterIdx = (i: number) => !isAutoChar(target[i]);
   const cursor = values.findIndex((v, i) => letterIdx(i) && v === "");
 
   const recordWrongPool = useCallback(
@@ -246,8 +282,10 @@ export default function SpellingStage({
 
   const handleType = (raw: string) => {
     if (phase !== "typing") return;
-    const ch = raw.slice(-1).toLowerCase();
-    if (!/[a-z]/.test(ch)) return;
+    let ch = raw.slice(-1);
+    if (ch === "’") ch = "'"; // curly → straight
+    if (/[a-zA-Z]/.test(ch)) ch = ch.toLowerCase();
+    if (!/[a-z']/.test(ch)) return; // letters + apostrophe only
     const c = cursor;
     if (c < 0) return;
     setValues((prev) => {
@@ -436,7 +474,7 @@ export default function SpellingStage({
 
   // Responsive slot sizing: fit on one line down to 22px; wrap only when >12 letters won't fit.
   const cells = target.length;
-  const lettersOnly = target.replace(/ /g, "").length;
+  const lettersOnly = target.replace(/[^a-zA-Z]/g, "").length;
   const rawW = Math.floor((330 - 6 * Math.max(0, cells - 1)) / Math.max(1, cells));
   const slotW = Math.max(22, Math.min(32, rawW));
   const slotH = Math.max(30, Math.min(40, slotW + 8));
@@ -521,10 +559,19 @@ export default function SpellingStage({
             className="mt-4 flex items-end justify-center gap-1.5"
             style={{ flexWrap: wrapSlots ? "wrap" : "nowrap" }}
           >
-            {target.split("").map((ch, i) =>
-              ch === " " ? (
-                <span key={i} style={{ width: Math.round(slotW * 0.4) }} />
-              ) : (
+            {target.split("").map((ch, i) => {
+              if (ch === " ") return <span key={i} style={{ width: Math.round(slotW * 0.4) }} />;
+              if (ch === "-")
+                return (
+                  <span
+                    key={i}
+                    className="grid place-items-center font-bold text-[#888780]"
+                    style={{ width: Math.round(slotW * 0.55), height: slotH, fontSize: slotFont }}
+                  >
+                    –
+                  </span>
+                );
+              return (
                 <span
                   key={i}
                   style={{ width: slotW, height: slotH, fontSize: slotFont }}
@@ -538,8 +585,8 @@ export default function SpellingStage({
                     />
                   )}
                 </span>
-              ),
-            )}
+              );
+            })}
           </div>
 
           {/* feedback popup */}
@@ -557,6 +604,12 @@ export default function SpellingStage({
               style={{ animation: "spell-pop 1s forwards" }}
             >
               {popup.text}
+            </div>
+          )}
+
+          {toast && (
+            <div className="pointer-events-none absolute bottom-2 left-1/2 z-40 -translate-x-1/2 whitespace-nowrap rounded-lg bg-[#2C2C2A]/85 px-3 py-1.5 text-xs text-white">
+              🔇 {toast}
             </div>
           )}
 

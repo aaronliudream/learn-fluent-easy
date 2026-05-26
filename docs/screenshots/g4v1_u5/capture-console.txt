@@ -1,0 +1,5 @@
+[vocab] header="认识 10 个单词" tabs=["食物 (0/5)","餐具 (0/5)"] phonetics=["/biːf/","/ˈtʃɪkɪn/","/ˈnuːdlz/","/suːp/","/ˈvedʒtəbl/"] ok=true
+[readWrite] 第 3 / 6 题 sentence="What would you ___ ? I'd like some chicken." hint="💡 想要（would you …）" ok=true
+[readWrite-dom] <p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">What would <span class="whitespace-nowrap">you <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> ? I'd</span> like some chicken.</p>
+[finalQuiz] counter=第 4 / 10 题 point="u5:recall_polite_request" prompt="吃饭时你想请同桌把叉子递过来，下面哪句最合适？" opts=["APass me the fork, please.","BWhere's the fork?","CThe fork is mine.","DI have a fork."] ok=true
+[finalQuiz-steppedPast] ["妈妈端上饭菜问「What would you like?」下面哪句应答最合适？","看中文选词：「蔬菜」（菜单上常写复数）","别人问「Would you like some soup?」你不想喝。下面哪句回答最礼貌？"]

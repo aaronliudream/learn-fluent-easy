@@ -1749,46 +1749,93 @@
             "cn": "晚餐准备好了",
             "emoji": "🍽️",
             "available": true,
+            "published": true,
             "vocabulary": [
               {
                 "en": "beef",
                 "cn": "牛肉",
-                "emoji": "📘"
+                "emoji": "🥩",
+                "phonetic": "/biːf/"
               },
               {
                 "en": "chicken",
                 "cn": "鸡肉",
-                "emoji": "📘"
+                "emoji": "🍗",
+                "phonetic": "/ˈtʃɪkɪn/"
               },
               {
                 "en": "noodles",
                 "cn": "面条",
-                "emoji": "📘"
+                "emoji": "🍜",
+                "phonetic": "/ˈnuːdlz/"
               },
               {
                 "en": "soup",
                 "cn": "汤",
-                "emoji": "📘"
+                "emoji": "🍲",
+                "phonetic": "/suːp/"
               },
               {
                 "en": "vegetable",
                 "cn": "蔬菜",
-                "emoji": "📘"
+                "emoji": "🥦",
+                "phonetic": "/ˈvedʒtəbl/"
               },
               {
                 "en": "chopsticks",
                 "cn": "筷子",
-                "emoji": "📘"
+                "emoji": "🥢",
+                "phonetic": "/ˈtʃɒpstɪks/"
               },
               {
                 "en": "bowl",
                 "cn": "碗",
-                "emoji": "📘"
+                "emoji": "🥣",
+                "phonetic": "/bəʊl/"
               },
               {
                 "en": "fork",
                 "cn": "餐叉",
-                "emoji": "📘"
+                "emoji": "🍴",
+                "phonetic": "/fɔːk/"
+              },
+              {
+                "en": "knife",
+                "cn": "刀",
+                "emoji": "🔪",
+                "phonetic": "/naɪf/"
+              },
+              {
+                "en": "spoon",
+                "cn": "勺",
+                "emoji": "🥄",
+                "phonetic": "/spuːn/"
+              }
+            ],
+            "vocabGroups": [
+              {
+                "id": "food_p49",
+                "name": "食物",
+                "header": "食物 · 5 个词",
+                "indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              {
+                "id": "tableware_p52",
+                "name": "餐具",
+                "header": "餐具 · 5 个词",
+                "indices": [
+                  5,
+                  6,
+                  7,
+                  8,
+                  9
+                ]
               }
             ],
             "dialogues": [
@@ -1797,13 +1844,23 @@
                 "lines": [
                   {
                     "role": "Mum",
-                    "text": "What would you like?",
-                    "cn": "你想吃什么？"
+                    "text": "Dinner's ready. Help yourself.",
+                    "cn": "晚饭好了，请自便。"
                   },
                   {
                     "role": "Sarah",
-                    "text": "I'd like some soup, please.",
-                    "cn": "请给我一些汤。"
+                    "text": "Thank you. I'd like some beef and noodles.",
+                    "cn": "谢谢。我想要些牛肉和面条。"
+                  },
+                  {
+                    "role": "Mum",
+                    "text": "Would you like some soup?",
+                    "cn": "你想喝点汤吗？"
+                  },
+                  {
+                    "role": "Sarah",
+                    "text": "Yes, please.",
+                    "cn": "好的，谢谢。"
                   }
                 ]
               },
@@ -1811,14 +1868,24 @@
                 "title": "B Let's talk",
                 "lines": [
                   {
-                    "role": "Mum",
-                    "text": "Would you like some beef?",
-                    "cn": "你想吃一些牛肉吗？"
+                    "role": "John",
+                    "text": "What would you like?",
+                    "cn": "你想要什么？"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "I'd like some chicken and vegetables.",
+                    "cn": "我想要些鸡肉和蔬菜。"
                   },
                   {
                     "role": "John",
-                    "text": "Yes, please.",
-                    "cn": "好的，请给我。"
+                    "text": "Pass me the knife and fork, please.",
+                    "cn": "请把刀和叉递给我。"
+                  },
+                  {
+                    "role": "Mike",
+                    "text": "Here you are.",
+                    "cn": "给你。"
                   }
                 ]
               }
@@ -1827,7 +1894,7 @@
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "8个核心单词",
+                "subtitle": "10个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -1874,6 +1941,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "读句填词",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "8分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -1883,200 +1958,164 @@
             ],
             "quizQuestions": [
               {
-                "q": "「beef」是什么意思？",
+                "id": 501,
+                "q": "看中文选词：「牛肉」",
                 "opts": [
-                  "牛肉",
-                  "牛奶",
-                  "鸡肉",
-                  "鸡蛋"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「chicken」是什么意思？",
-                "opts": [
-                  "面包",
-                  "鸡肉",
-                  "牛奶",
-                  "面条"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「noodles」是什么意思？",
-                "opts": [
-                  "碗",
-                  "面条",
-                  "餐叉",
-                  "面包"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「soup」是什么意思？",
-                "opts": [
-                  "牛肉",
-                  "米饭",
-                  "面条",
-                  "汤"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「vegetable」是什么意思？",
-                "opts": [
-                  "面包",
-                  "筷子",
-                  "牛肉",
-                  "蔬菜"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「chopsticks」是什么意思？",
-                "opts": [
-                  "面包",
-                  "牛肉",
-                  "筷子",
-                  "米饭"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「bowl」是什么意思？",
-                "opts": [
-                  "碗",
-                  "餐叉",
-                  "米饭",
-                  "面包"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「fork」是什么意思？",
-                "opts": [
-                  "餐叉",
-                  "筷子",
-                  "牛肉",
-                  "鸡蛋"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「牛肉」？",
-                "opts": [
-                  "noodles",
-                  "vegetable",
-                  "bread",
-                  "beef"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「chicken」的中文是？",
-                "opts": [
-                  "鸡肉",
-                  "蔬菜",
-                  "面条",
-                  "筷子"
-                ],
-                "answer": 0,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "本单元「晚餐准备好了」核心词是？",
-                "opts": [
-                  "vegetable",
+                  "chicken",
                   "beef",
                   "soup",
-                  "rice"
+                  "fork"
                 ],
                 "answer": 1,
-                "point": "词汇",
+                "point": "u5:vocab",
                 "dim": "vocab"
               },
               {
-                "q": "Do you like beef? 喜欢怎么回答？",
+                "id": 502,
+                "q": "看中文选词：「鸡肉」",
                 "opts": [
-                  "Yes, it is.",
-                  "No, I am.",
-                  "Yes, I do.",
-                  "No, it isn't."
+                  "beef",
+                  "noodles",
+                  "bowl",
+                  "chicken"
+                ],
+                "answer": 3,
+                "point": "u5:vocab",
+                "dim": "vocab"
+              },
+              {
+                "id": 503,
+                "q": "看中文选词：「面条」",
+                "opts": [
+                  "noodles",
+                  "soup",
+                  "vegetable",
+                  "spoon"
+                ],
+                "answer": 0,
+                "point": "u5:vocab",
+                "dim": "vocab"
+              },
+              {
+                "id": 504,
+                "q": "看中文选词：「汤」",
+                "opts": [
+                  "noodles",
+                  "beef",
+                  "soup",
+                  "knife"
                 ],
                 "answer": 2,
-                "point": "句型",
+                "point": "u5:vocab",
+                "dim": "vocab"
+              },
+              {
+                "id": 505,
+                "q": "看中文选词：「蔬菜」（菜单上常写复数）",
+                "opts": [
+                  "vegetables",
+                  "chicken",
+                  "chopsticks",
+                  "soup"
+                ],
+                "answer": 0,
+                "point": "u5:vocab",
+                "dim": "vocab"
+              },
+              {
+                "id": 507,
+                "q": "妈妈端上饭菜问「What would you like?」下面哪句应答最合适？",
+                "opts": [
+                  "Here you are.",
+                  "I'd like some beef and noodles.",
+                  "You're welcome.",
+                  "It's on the table."
+                ],
+                "answer": 1,
+                "point": "u5:recall_polite_request",
                 "dim": "sentence"
               },
               {
-                "q": "「noodles」的意思是？",
+                "id": 508,
+                "q": "别人问「Would you like some soup?」你不想喝。下面哪句回答最礼貌？",
                 "opts": [
-                  "鸡蛋",
-                  "蔬菜",
-                  "面条",
-                  "汤"
+                  "No, I'm not.",
+                  "Yes, I do.",
+                  "It isn't.",
+                  "No, thanks."
+                ],
+                "answer": 3,
+                "point": "u5:recall_polite_request",
+                "dim": "sentence"
+              },
+              {
+                "id": 509,
+                "q": "吃饭时你想请同桌把叉子递过来，下面哪句最合适？",
+                "opts": [
+                  "Pass me the fork, please.",
+                  "Where's the fork?",
+                  "The fork is mine.",
+                  "I have a fork."
+                ],
+                "answer": 0,
+                "point": "u5:recall_polite_request",
+                "dim": "sentence"
+              },
+              {
+                "id": 510,
+                "q": "汤碗放在桌子上。问「Where's the bowl?」下面哪句对？",
+                "opts": [
+                  "It's under the table.",
+                  "It's on the table.",
+                  "It's in the soup.",
+                  "They're on the table."
+                ],
+                "answer": 1,
+                "point": "u1:recall_position",
+                "dim": "sentence"
+              },
+              {
+                "id": 511,
+                "q": "饭桌边那个又高又壮的男孩在帮大家盛汤。下面哪句在描述他？",
+                "opts": [
+                  "He's short and thin.",
+                  "She's tall and strong.",
+                  "He's tall and strong.",
+                  "He's quiet and friendly."
                 ],
                 "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
+                "point": "u3:recall_personality",
+                "dim": "sentence"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "What would you like?",
+                "audio": "I'd like some beef and noodles.",
                 "opts": [
-                  "What would you like?",
-                  "What would you like.",
-                  "beef",
-                  "chicken"
+                  "I'd like some beef and noodles.",
+                  "I'd like some chicken and rice.",
+                  "I'd like some soup and bread.",
+                  "I'd like some fish and noodles."
                 ],
                 "answer": 0
               },
               {
-                "audio": "I'd like some soup, please.",
+                "audio": "Would you like some soup?",
                 "opts": [
-                  "I'd like some soup, please.",
-                  "I'd like some vegetable, please.",
-                  "beef",
-                  "chicken"
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "Would you like some beef?",
-                "opts": [
+                  "Would you like some soup?",
                   "Would you like some beef?",
-                  "Would you like some chicken?",
-                  "Would you like some beef.",
-                  "beef"
+                  "Do you like soup?",
+                  "Would you like a spoon?"
                 ],
                 "answer": 0
               },
               {
-                "audio": "Yes, please.",
+                "audio": "Pass me the knife and fork, please.",
                 "opts": [
-                  "Yes, please.",
-                  "beef",
-                  "chicken",
-                  "noodles"
+                  "Pass me the knife and fork, please.",
+                  "Pass me the bowl and spoon, please.",
+                  "Pass me the chopsticks, please.",
+                  "Give me the knife and fork."
                 ],
                 "answer": 0
               }

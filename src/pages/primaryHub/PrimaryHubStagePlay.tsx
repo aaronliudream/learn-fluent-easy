@@ -1063,7 +1063,7 @@ export default function PrimaryHubStagePlay({ unitId, semId, stageIdx, onComplet
 
   const finalQuizQuestions = useMemo(() => {
     if (!unit) return [];
-    return shuffleArray([...unit.quizQuestions]).slice(0, 12);
+    return shuffleArray([...unit.quizQuestions]);
   }, [unit]);
 
   if (!unit || !stage) return null;

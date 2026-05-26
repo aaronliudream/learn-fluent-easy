@@ -1,0 +1,72 @@
+{
+  "id": "g4v1_u5",
+  "num": 5,
+  "title": "Dinner's ready",
+  "cn": "晚餐准备好了",
+  "emoji": "🍽️",
+  "available": true,
+  "published": true,
+  "vocabulary": [
+    { "en": "beef", "cn": "牛肉", "emoji": "🥩", "phonetic": "/biːf/" },
+    { "en": "chicken", "cn": "鸡肉", "emoji": "🍗", "phonetic": "/ˈtʃɪkɪn/" },
+    { "en": "noodles", "cn": "面条", "emoji": "🍜", "phonetic": "/ˈnuːdlz/" },
+    { "en": "soup", "cn": "汤", "emoji": "🍲", "phonetic": "/suːp/" },
+    { "en": "vegetable", "cn": "蔬菜", "emoji": "🥦", "phonetic": "/ˈvedʒtəbl/" },
+    { "en": "chopsticks", "cn": "筷子", "emoji": "🥢", "phonetic": "/ˈtʃɒpstɪks/" },
+    { "en": "bowl", "cn": "碗", "emoji": "🥣", "phonetic": "/bəʊl/" },
+    { "en": "fork", "cn": "餐叉", "emoji": "🍴", "phonetic": "/fɔːk/" },
+    { "en": "knife", "cn": "刀", "emoji": "🔪", "phonetic": "/naɪf/" },
+    { "en": "spoon", "cn": "勺", "emoji": "🥄", "phonetic": "/spuːn/" }
+  ],
+  "vocabGroups": [
+    { "id": "food_p49", "name": "食物", "header": "食物 · 5 个词", "indices": [0, 1, 2, 3, 4] },
+    { "id": "tableware_p52", "name": "餐具", "header": "餐具 · 5 个词", "indices": [5, 6, 7, 8, 9] }
+  ],
+  "dialogues": [
+    {
+      "title": "A Let's talk",
+      "lines": [
+        { "role": "Mum", "text": "Dinner's ready. Help yourself.", "cn": "晚饭好了，请自便。" },
+        { "role": "Sarah", "text": "Thank you. I'd like some beef and noodles.", "cn": "谢谢。我想要些牛肉和面条。" },
+        { "role": "Mum", "text": "Would you like some soup?", "cn": "你想喝点汤吗？" },
+        { "role": "Sarah", "text": "Yes, please.", "cn": "好的，谢谢。" }
+      ]
+    },
+    {
+      "title": "B Let's talk",
+      "lines": [
+        { "role": "John", "text": "What would you like?", "cn": "你想要什么？" },
+        { "role": "Mike", "text": "I'd like some chicken and vegetables.", "cn": "我想要些鸡肉和蔬菜。" },
+        { "role": "John", "text": "Pass me the knife and fork, please.", "cn": "请把刀和叉递给我。" },
+        { "role": "Mike", "text": "Here you are.", "cn": "给你。" }
+      ]
+    }
+  ],
+  "stages": [
+    { "id": "s1", "title": "认识单词", "subtitle": "10个核心单词", "icon": "📚", "type": "vocab", "time": "5分钟" },
+    { "id": "s2", "title": "听音辨词", "subtitle": "听力训练", "icon": "🎧", "type": "listenWord", "time": "5分钟" },
+    { "id": "s3", "title": "单词配对", "subtitle": "巩固词义", "icon": "🎮", "type": "match", "time": "5分钟" },
+    { "id": "s4", "title": "学习句型", "subtitle": "核心句型", "icon": "💬", "type": "sentence", "time": "5分钟" },
+    { "id": "s5", "title": "默写挑战", "subtitle": "动手拼写", "icon": "✏️", "type": "write", "time": "8分钟" },
+    { "id": "s6", "title": "听力测试", "subtitle": "听句选答案", "icon": "🎯", "type": "listenSent", "time": "6分钟" },
+    { "id": "s7", "title": "读写训练", "subtitle": "读句填词", "icon": "📝", "type": "readWrite", "time": "8分钟" },
+    { "id": "s8", "title": "最终通关", "subtitle": "综合挑战", "icon": "🏆", "type": "finalQuiz", "time": "10分钟" }
+  ],
+  "quizQuestions": [
+    { "id": 501, "q": "看中文选词：「牛肉」", "opts": ["beef", "chicken", "soup", "fork"], "answer": 0, "point": "u5:vocab", "dim": "vocab" },
+    { "id": 502, "q": "看中文选词：「鸡肉」", "opts": ["chicken", "beef", "noodles", "bowl"], "answer": 0, "point": "u5:vocab", "dim": "vocab" },
+    { "id": 503, "q": "看中文选词：「面条」", "opts": ["noodles", "soup", "vegetable", "spoon"], "answer": 0, "point": "u5:vocab", "dim": "vocab" },
+    { "id": 504, "q": "看中文选词：「汤」", "opts": ["soup", "noodles", "beef", "knife"], "answer": 0, "point": "u5:vocab", "dim": "vocab" },
+    { "id": 505, "q": "看中文选词：「蔬菜」（菜单上常写复数）", "opts": ["vegetables", "chicken", "chopsticks", "soup"], "answer": 0, "point": "u5:vocab", "dim": "vocab" },
+    { "id": 507, "q": "妈妈端上饭菜问「What would you like?」下面哪句应答最合适？", "opts": ["I'd like some beef and noodles.", "Here you are.", "You're welcome.", "It's on the table."], "answer": 0, "point": "u5:recall_polite_request", "dim": "sentence" },
+    { "id": 508, "q": "别人问「Would you like some soup?」你不想喝。下面哪句回答最礼貌？", "opts": ["No, thanks.", "No, I'm not.", "Yes, I do.", "It isn't."], "answer": 0, "point": "u5:recall_polite_request", "dim": "sentence" },
+    { "id": 509, "q": "吃饭时你想请同桌把叉子递过来，下面哪句最合适？", "opts": ["Pass me the fork, please.", "Where's the fork?", "The fork is mine.", "I have a fork."], "answer": 0, "point": "u5:recall_polite_request", "dim": "sentence" },
+    { "id": 510, "q": "汤碗放在桌子上。问「Where's the bowl?」下面哪句对？", "opts": ["It's on the table.", "It's under the table.", "It's in the soup.", "They're on the table."], "answer": 0, "point": "u1:recall_position", "dim": "sentence" },
+    { "id": 511, "q": "饭桌边那个又高又壮的男孩在帮大家盛汤。下面哪句在描述他？", "opts": ["He's tall and strong.", "He's short and thin.", "She's tall and strong.", "He's quiet and friendly."], "answer": 0, "point": "u3:recall_personality", "dim": "sentence" }
+  ],
+  "listeningQuestions": [
+    { "audio": "I'd like some beef and noodles.", "opts": ["I'd like some beef and noodles.", "I'd like some chicken and rice.", "I'd like some soup and bread.", "I'd like some fish and noodles."], "answer": 0 },
+    { "audio": "Would you like some soup?", "opts": ["Would you like some soup?", "Would you like some beef?", "Do you like soup?", "Would you like a spoon?"], "answer": 0 },
+    { "audio": "Pass me the knife and fork, please.", "opts": ["Pass me the knife and fork, please.", "Pass me the bowl and spoon, please.", "Pass me the chopsticks, please.", "Give me the knife and fork."], "answer": 0 }
+  ]
+}

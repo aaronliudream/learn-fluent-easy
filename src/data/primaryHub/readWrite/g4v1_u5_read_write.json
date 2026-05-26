@@ -1,0 +1,75 @@
+{
+  "unitId": "g4v1_u5",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 6,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "fill_choice",
+      "sentence": "I'd like some ___.",
+      "hint_zh": "牛肉",
+      "correctSentence": "I'd like some beef.",
+      "options": [
+        { "text": "fork", "correct": false },
+        { "text": "beef", "correct": true },
+        { "text": "bowl", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "The noodles are ten ___.",
+      "hint_zh": "元（人民币）",
+      "correctSentence": "The noodles are ten yuan.",
+      "options": [
+        { "text": "please", "correct": false },
+        { "text": "ready", "correct": false },
+        { "text": "yuan", "correct": true }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "What would you ___? I'd like some chicken.",
+      "hint_zh": "想要（would you …）",
+      "correctSentence": "What would you like? I'd like some chicken.",
+      "options": [
+        { "text": "want", "correct": false },
+        { "text": "eat", "correct": false },
+        { "text": "like", "correct": true }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Would you like some soup? ___, please.",
+      "hint_zh": "好的（礼貌答应）",
+      "correctSentence": "Would you like some soup? Yes, please.",
+      "options": [
+        { "text": "Yes", "correct": true },
+        { "text": "No", "correct": false },
+        { "text": "Not", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "We eat noodles with ___.",
+      "hint_zh": "筷子",
+      "correctSentence": "We eat noodles with chopsticks.",
+      "options": [
+        { "text": "a knife", "correct": false },
+        { "text": "chopsticks", "correct": true },
+        { "text": "a spoon", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "We drink soup with a ___.",
+      "hint_zh": "勺子",
+      "correctSentence": "We drink soup with a spoon.",
+      "options": [
+        { "text": "spoon", "correct": true },
+        { "text": "fork", "correct": false },
+        { "text": "knife", "correct": false }
+      ]
+    }
+  ]
+}

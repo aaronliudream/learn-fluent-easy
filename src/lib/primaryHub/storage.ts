@@ -9,35 +9,69 @@ export const STORAGE_PREFIX = "primary_hub_v1_";
  * drills. Guarded by a localStorage flag; persists the reset immediately so it survives
  * a reload even if the app never re-saves. Stars are NOT cleared. Grade 4 only. */
 export const STAGE3_V2_MIGRATION_KEY = "primary_hub_v1_stage3_v2_migrated";
+/** PR-1 (Tier 1 rollout) reset flag — independent of the U1 flag so users who already
+ * ran the U1 migration also get their newly-training-ified units reset. */
+export const STAGE3_V2_PR1_MIGRATION_KEY = "primary_hub_v1_stage3_v2_pr1_migrated";
+/** Units that switched Stage 3 to training mode in PR-1 (includes u1; re-clearing is harmless). */
+export const STAGE3_V2_PR1_UNITS = [
+  "g4v1_u1",
+  "g4v1_u2",
+  "g4v2_u1",
+  "g4v2_u2",
+  "g4v2_u3",
+  "g4v2_u4",
+  "g4v2_u5",
+  "g4v2_u6",
+];
 
+/** Reset Stage 3 (index 3) progress for the given units; returns true if anything changed.
+ * Stars are NOT cleared. */
+function resetStage3ForUnits(persist: PrimaryHubPersist, unitIds: string[]): boolean {
+  let changed = false;
+  for (const uid of unitIds) {
+    const u = persist.units[uid];
+    if (!u) continue;
+    if (u.sentenceCompleted?.length) {
+      u.sentenceCompleted = [];
+      changed = true;
+    }
+    if (u.sentenceFirstCorrect?.length) {
+      u.sentenceFirstCorrect = [];
+      changed = true;
+    }
+    if (u.completedStages?.includes(3)) {
+      u.completedStages = u.completedStages.filter((i) => i !== 3);
+      changed = true;
+    }
+    if (u.stageProgress && 3 in u.stageProgress) {
+      u.stageProgress = { ...u.stageProgress, 3: 0 };
+      changed = true;
+    }
+  }
+  return changed;
+}
+
+/** One-time reset of Stage 3 progress for units that switched to training mode.
+ * Old `sentenceCompleted` ids meant "read aloud", which would let kids skip the new drills.
+ * Each wave is guarded by its own localStorage flag; the reset is persisted immediately so
+ * it survives a reload even if the app never re-saves. Grade 4 only. */
 function migrateStage3V2(grade: PrimaryHubGrade, persist: PrimaryHubPersist): PrimaryHubPersist {
   if (grade !== 4) return persist;
   try {
-    if (localStorage.getItem(STAGE3_V2_MIGRATION_KEY)) return persist;
-    const u1 = persist.units["g4v1_u1"];
-    let changed = false;
-    if (u1) {
-      if (u1.sentenceCompleted?.length) {
-        u1.sentenceCompleted = [];
-        changed = true;
+    // Wave 0 — U1 only (PR #58).
+    if (!localStorage.getItem(STAGE3_V2_MIGRATION_KEY)) {
+      if (resetStage3ForUnits(persist, ["g4v1_u1"])) {
+        localStorage.setItem(STORAGE_PREFIX + grade, JSON.stringify(persist));
       }
-      if (u1.sentenceFirstCorrect?.length) {
-        u1.sentenceFirstCorrect = [];
-        changed = true;
-      }
-      if (u1.completedStages?.includes(3)) {
-        u1.completedStages = u1.completedStages.filter((i) => i !== 3);
-        changed = true;
-      }
-      if (u1.stageProgress && 3 in u1.stageProgress) {
-        u1.stageProgress = { ...u1.stageProgress, 3: 0 };
-        changed = true;
-      }
+      localStorage.setItem(STAGE3_V2_MIGRATION_KEY, "1");
     }
-    if (changed) {
-      localStorage.setItem(STORAGE_PREFIX + grade, JSON.stringify(persist));
+    // Wave 1 — Tier 1 rollout (u1 + 7 units; re-clearing u1 is harmless).
+    if (!localStorage.getItem(STAGE3_V2_PR1_MIGRATION_KEY)) {
+      if (resetStage3ForUnits(persist, STAGE3_V2_PR1_UNITS)) {
+        localStorage.setItem(STORAGE_PREFIX + grade, JSON.stringify(persist));
+      }
+      localStorage.setItem(STAGE3_V2_PR1_MIGRATION_KEY, "1");
     }
-    localStorage.setItem(STAGE3_V2_MIGRATION_KEY, "1");
   } catch {
     // ignore storage errors; migration is best-effort
   }

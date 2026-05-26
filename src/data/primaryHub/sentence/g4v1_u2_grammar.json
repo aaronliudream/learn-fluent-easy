@@ -16,13 +16,34 @@
           "id": "A1",
           "question": { "en": "I have a new schoolbag.", "zh": "我有一个新书包。" },
           "answer": { "en": "Really? What's in your schoolbag?", "zh": "真的吗？你的书包里有什么？" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Amy 说「我有个新书包」，Wu Binbin 该怎么回应？",
+            "options": [
+              { "text": "Really? What's in your schoolbag?", "correct": true },
+              { "text": "Thanks. Goodbye.", "correct": false },
+              { "text": "I'm a cat too.", "correct": false }
+            ],
+            "explanationZh": "听到「我有个新书包」，自然反应是好奇里面有什么，所以用 What's in...? 提问。"
+          }
         },
         {
           "id": "A2",
           "question": { "en": "An English book, a maths book and three storybooks.", "zh": "一本英语书、一本数学书和三本故事书。" },
           "answer": { "en": "Wow! It's a panda!", "zh": "哇！是熊猫（书包）！" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "书包里还有三本「故事书」，选词填空。",
+            "sentenceTemplate": "An English book, a maths book and three ___.",
+            "options": [
+              { "text": "books", "correct": false },
+              { "text": "dogs", "correct": false },
+              { "text": "storybooks", "correct": true }
+            ],
+            "explanationZh": "storybook 是「故事书」；三本是复数，要用 storybooks。"
+          }
         }
       ]
     },
@@ -38,31 +59,64 @@
           "id": "B1",
           "question": { "en": "Excuse me. I lost my schoolbag.", "zh": "打扰一下，我丢了书包。" },
           "answer": { "en": "What colour is it?", "zh": "它是什么颜色的？" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Tom 说「我丢了书包」，失物招领的工作人员该先问什么？",
+            "options": [
+              { "text": "Do you want some water?", "correct": false },
+              { "text": "What colour is it?", "correct": true },
+              { "text": "What's your name?", "correct": false }
+            ],
+            "explanationZh": "找书包要先问特征，最常问颜色：What colour is it?"
+          }
         },
         {
           "id": "B2",
           "question": { "en": "It's blue and white.", "zh": "蓝白色的。" },
           "answer": { "en": "What's in it?", "zh": "里面有什么？" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「它是蓝白色的」用英语怎么说？",
+            "options": [
+              { "text": "It's blue and white.", "correct": true },
+              { "text": "Blue and white it is.", "correct": false },
+              { "text": "Is blue and white.", "correct": false }
+            ],
+            "explanationZh": "描述颜色用「It's + 颜色」，主语 + is 放在最前面。"
+          }
         },
         {
           "id": "B3",
           "question": { "en": "An English book, two toys and a key.", "zh": "一本英语书、两个玩具和一把钥匙。" },
           "answer": { "en": "Here it is!", "zh": "给你！" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "工作人员想知道书包里装了什么。",
+            "promptZh": "「里面有什么？」用英语怎么说？",
+            "options": [
+              { "text": "What it in is?", "correct": false },
+              { "text": "Is what in it?", "correct": false },
+              { "text": "What's in it?", "correct": true }
+            ],
+            "explanationZh": "问「里面有什么」用 What's in it?，疑问词 What 放最前面。"
+          }
         },
         {
           "id": "C1",
           "question": { "en": "Oh no! My bag is heavy!", "zh": "哦不！我的包好重！（歌谣）" },
           "answer": { "en": "Oh no! My bag is heavy!", "zh": "哦不！我的包好重！（歌谣）" },
-          "tag": "Let's chant · 歌谣"
+          "tag": "Let's chant · 歌谣",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         },
         {
           "id": "C2",
           "question": { "en": "What do you have in your schoolbag?", "zh": "你的书包里有什么？（歌谣）" },
           "answer": null,
-          "tag": "Let's chant · 歌谣"
+          "tag": "Let's chant · 歌谣",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         }
       ]
     }

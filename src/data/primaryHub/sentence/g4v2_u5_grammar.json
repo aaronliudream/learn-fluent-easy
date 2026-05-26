@@ -16,19 +16,50 @@
           "id": "A1",
           "question": { "en": "Are these yours, Mike?", "zh": "迈克，这些是你的吗？" },
           "answer": { "en": "No, they aren't. My shoes are green. They're Chen Jie's.", "zh": "不是。我的鞋是绿色的。这些是陈杰的。" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Amy 问「Are these yours, Mike?」，这些其实不是 Mike 的，他该怎么回答？",
+            "options": [
+              { "text": "Yes, they're mine.", "correct": false },
+              { "text": "No, they aren't. My shoes are green. They're Chen Jie's.", "correct": true },
+              { "text": "I don't know.", "correct": false }
+            ],
+            "explanationZh": "不是自己的用 No, they aren't.，再说明是谁的。"
+          }
         },
         {
           "id": "A2",
           "question": { "en": "Is this John's?", "zh": "这是约翰的吗？" },
           "answer": { "en": "No, it isn't. It's Mike's.", "zh": "不是。是迈克的。" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "确认地上的东西是不是约翰的。",
+            "promptZh": "「这是约翰的吗？」用英语怎么说？",
+            "options": [
+              { "text": "Is this John's?", "correct": true },
+              { "text": "John's this is?", "correct": false },
+              { "text": "Is John's this?", "correct": false }
+            ],
+            "explanationZh": "问「是某人的吗」用 Is this + 人名's？John's = 约翰的。"
+          }
         },
         {
           "id": "A3",
           "question": { "en": "I like that green skirt. Me too. And I like those pants.", "zh": "我喜欢那条绿裙子。我也是，还喜欢那条裤子。" },
           "answer": null,
-          "tag": "A Let's learn"
+          "tag": "A Let's learn",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Amy 说「I like that green skirt.」，Mike 也喜欢，该怎么说？",
+            "options": [
+              { "text": "I hate it.", "correct": false },
+              { "text": "Goodbye.", "correct": false },
+              { "text": "Me too. And I like those pants.", "correct": true }
+            ],
+            "explanationZh": "表示「我也是」用 Me too。"
+          }
         }
       ]
     },
@@ -44,37 +75,71 @@
           "id": "B1",
           "question": { "en": "Sarah, can you help me, please?", "zh": "萨拉，你能帮帮我吗？" },
           "answer": { "en": "OK.", "zh": "好的。" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Mike 请 Sarah 帮忙，Sarah 愿意，该怎么说？",
+            "options": [
+              { "text": "No, I won't.", "correct": false },
+              { "text": "OK.", "correct": true },
+              { "text": "I'm tired.", "correct": false }
+            ],
+            "explanationZh": "答应别人请求用 OK。"
+          }
         },
         {
           "id": "B2",
           "question": { "en": "Whose coat is this?", "zh": "这是谁的大衣？" },
           "answer": { "en": "It's mine.", "zh": "是我的。" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「这是谁的大衣？」用英语怎么说？",
+            "options": [
+              { "text": "Coat whose this is?", "correct": false },
+              { "text": "Whose coat is this?", "correct": true },
+              { "text": "Is this whose coat?", "correct": false }
+            ],
+            "explanationZh": "问「谁的」用 Whose + 名词：Whose coat is this?"
+          }
         },
         {
           "id": "B3",
           "question": { "en": "And those? Whose pants are those?", "zh": "那些呢？那条裤子是谁的？" },
           "answer": { "en": "They're Mike's.", "zh": "是迈克的。" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「那是迈克的」选词填空。",
+            "sentenceTemplate": "They're ___.",
+            "options": [
+              { "text": "mine", "correct": false },
+              { "text": "hers", "correct": false },
+              { "text": "Mike's", "correct": true }
+            ],
+            "explanationZh": "表示「某人的」在名字后加 's：Mike's = 迈克的。"
+          }
         },
         {
           "id": "C1",
           "question": { "en": "Hang up your dress.", "zh": "把你的连衣裙挂起来。（歌谣）" },
           "answer": { "en": "Take off your hat.", "zh": "摘下你的帽子。（歌谣）" },
-          "tag": "Let's chant · 歌谣"
+          "tag": "Let's chant · 歌谣",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         },
         {
           "id": "C2",
           "question": { "en": "Put on your shirt.", "zh": "穿上你的衬衫。（歌谣）" },
           "answer": { "en": "Wash your skirt.", "zh": "洗你的裙子。（歌谣）" },
-          "tag": "Let's chant · 歌谣"
+          "tag": "Let's chant · 歌谣",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         },
         {
           "id": "C3",
           "question": { "en": "Put away your pants.", "zh": "把你的裤子收好。（歌谣）" },
           "answer": null,
-          "tag": "Let's chant · 歌谣"
+          "tag": "Let's chant · 歌谣",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         }
       ]
     }

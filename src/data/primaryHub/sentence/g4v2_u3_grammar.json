@@ -16,19 +16,49 @@
           "id": "A1",
           "question": { "en": "What's the weather like in Beijing?", "zh": "北京天气怎么样？" },
           "answer": { "en": "It's sunny and warm.", "zh": "晴朗又温暖。" },
-          "tag": "B Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Mark 问「北京天气怎么样？」，Chen Jie 该怎么回答？",
+            "options": [
+              { "text": "I have a cat.", "correct": false },
+              { "text": "Goodbye!", "correct": false },
+              { "text": "It's sunny and warm.", "correct": true }
+            ],
+            "explanationZh": "问天气 What's the weather like? 用「It's + 天气词」回答。"
+          }
         },
         {
           "id": "A2",
           "question": { "en": "Is it windy?", "zh": "风大吗？" },
           "answer": { "en": "No, it isn't. It's cloudy.", "zh": "不大，阴天。" },
-          "tag": "B Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Mark 问「Is it windy?」，Chen Jie 想说「不，是阴天」，该怎么说？",
+            "options": [
+              { "text": "No, it isn't. It's cloudy.", "correct": true },
+              { "text": "Yes, it is.", "correct": false },
+              { "text": "It's sunny.", "correct": false }
+            ],
+            "explanationZh": "否定回答 Is it...? 用 No, it isn't.，再补充 It's cloudy。"
+          }
         },
         {
           "id": "A3",
           "question": { "en": "How about New York?", "zh": "纽约呢？" },
           "answer": { "en": "It's rainy and cool.", "zh": "阴雨凉爽。" },
-          "tag": "B Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「纽约呢？」用英语怎么说？",
+            "options": [
+              { "text": "How New York about?", "correct": false },
+              { "text": "About how New York?", "correct": false },
+              { "text": "How about New York?", "correct": true }
+            ],
+            "explanationZh": "反问对方情况用 How about + 名词？"
+          }
         }
       ]
     },
@@ -44,31 +74,65 @@
           "id": "B1",
           "question": { "en": "Mum, can I go outside now?", "zh": "妈妈，我现在能出去吗？" },
           "answer": { "en": "No, you can't. It's cold outside.", "zh": "不行，外面很冷。" },
-          "tag": "A Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Mike 问能不能出去玩，外面很冷，妈妈该怎么说？",
+            "options": [
+              { "text": "Yes, you can.", "correct": false },
+              { "text": "No, you can't. It's cold outside.", "correct": true },
+              { "text": "I love you.", "correct": false }
+            ],
+            "explanationZh": "不允许用 No, you can't.，再说明原因 It's cold outside。"
+          }
         },
         {
           "id": "B2",
           "question": { "en": "Be careful!", "zh": "小心！" },
           "answer": null,
-          "tag": "A Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "提醒别人「小心」，选词填空。",
+            "sentenceTemplate": "Be ___!",
+            "options": [
+              { "text": "careless", "correct": false },
+              { "text": "happy", "correct": false },
+              { "text": "careful", "correct": true }
+            ],
+            "explanationZh": "Be careful! 意思是「小心」；careful 是「小心的」，careless 正相反。"
+          }
         },
         {
           "id": "B3",
           "question": { "en": "It's 26 degrees.", "zh": "26 度。" },
           "answer": null,
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "告诉对方现在的气温。",
+            "promptZh": "「26 度」用英语怎么说？",
+            "options": [
+              { "text": "Degrees 26 it's.", "correct": false },
+              { "text": "It's 26 degrees.", "correct": true },
+              { "text": "26 it's degrees.", "correct": false }
+            ],
+            "explanationZh": "说气温用「It's + 数字 + degrees」。"
+          }
         },
         {
           "id": "C1",
           "question": { "en": "Thunder, thunder, clap clap clap!", "zh": "轰隆隆，打雷啦！（歌谣）" },
           "answer": { "en": "Rain, rain, go away!", "zh": "雨啊雨，快走开！（歌谣）" },
-          "tag": "Let's chant · Thunder"
+          "tag": "Let's chant · Thunder",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         },
         {
           "id": "C2",
           "question": { "en": "It's rainy and cool today.", "zh": "今天阴雨凉爽。（歌谣）" },
           "answer": null,
-          "tag": "Let's chant · Thunder"
+          "tag": "Let's chant · Thunder",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         }
       ]
     }

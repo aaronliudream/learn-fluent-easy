@@ -16,19 +16,50 @@
           "id": "A1",
           "question": { "en": "Can I help you?", "zh": "我能帮你吗？" },
           "answer": { "en": "Yes. This dress is pretty. How much is it?", "zh": "是的。这条连衣裙很漂亮。多少钱？" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "店员问「Can I help you?」，Sarah 看中连衣裙想问价，该怎么说？",
+            "options": [
+              { "text": "Yes. This dress is pretty. How much is it?", "correct": true },
+              { "text": "I don't know.", "correct": false },
+              { "text": "Goodbye.", "correct": false }
+            ],
+            "explanationZh": "想问价先用 How much is it?（多少钱）。"
+          }
         },
         {
           "id": "A2",
           "question": { "en": "It's eighty-five yuan.", "zh": "八十五元。" },
           "answer": { "en": "Can I try it on?", "zh": "我可以试穿吗？" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「八十五元」选词填空。",
+            "sentenceTemplate": "It's eighty-five ___.",
+            "options": [
+              { "text": "dollars", "correct": false },
+              { "text": "yuan", "correct": true },
+              { "text": "minutes", "correct": false }
+            ],
+            "explanationZh": "中国货币用 yuan（元），不是 dollars。"
+          }
         },
         {
           "id": "A3",
           "question": { "en": "Sure.", "zh": "当然。" },
           "answer": null,
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「我可以试穿吗？」用英语怎么说？",
+            "options": [
+              { "text": "Can I try it on?", "correct": true },
+              { "text": "Try I can it on?", "correct": false },
+              { "text": "Can on I try it?", "correct": false }
+            ],
+            "explanationZh": "请求许可用 Can I + 动词？try it on = 试穿。"
+          }
         }
       ]
     },
@@ -44,43 +75,97 @@
           "id": "B1",
           "question": { "en": "Yes. These shoes are nice. Can I try them on? Size 6, please.", "zh": "这双鞋很好看。我能试穿 6 号吗？" },
           "answer": { "en": "No. They're too small.", "zh": "不行，太小了。" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "John 想试 6 号鞋，但鞋太小，店员该怎么说？",
+            "options": [
+              { "text": "Yes. They're nice.", "correct": false },
+              { "text": "No. They're too small.", "correct": true },
+              { "text": "I have a hat.", "correct": false }
+            ],
+            "explanationZh": "太小用 too small；too 表示「太……了」。"
+          }
         },
         {
           "id": "B2",
           "question": { "en": "Hmm. OK. Let's try size 7.", "zh": "嗯，试试 7 号。" },
           "answer": { "en": "They're just right!", "zh": "正好合适！" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "换了 7 号鞋，正好合脚，John 该怎么说？",
+            "options": [
+              { "text": "They're too small.", "correct": false },
+              { "text": "They're just right!", "correct": true },
+              { "text": "I don't like.", "correct": false }
+            ],
+            "explanationZh": "尺码正合适用 just right。"
+          }
         },
         {
           "id": "B3",
           "question": { "en": "That scarf is pretty. How much is it?", "zh": "那条围巾很漂亮。多少钱？" },
           "answer": { "en": "It's 10 yuan.", "zh": "十元。" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "看中一条围巾，想问价钱。",
+            "promptZh": "「那条围巾很漂亮，多少钱？」用英语怎么说？",
+            "options": [
+              { "text": "That scarf is pretty. How much is it?", "correct": true },
+              { "text": "Pretty scarf it's.", "correct": false },
+              { "text": "Much how scarf that is?", "correct": false }
+            ],
+            "explanationZh": "问价钱用 How much is it?"
+          }
         },
         {
           "id": "B4",
           "question": { "en": "Yes. How much is this skirt?", "zh": "这条短裙多少钱？" },
-          "answer": { "en": "It's eighty-nine dollars.", "zh": "八十九美元。" },
-          "tag": "B Let's talk"
+          "answer": { "en": "It's eighty-nine yuan.", "zh": "八十九元。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「八十九元」选词填空。",
+            "sentenceTemplate": "It's eighty-nine ___.",
+            "options": [
+              { "text": "dollars", "correct": false },
+              { "text": "minutes", "correct": false },
+              { "text": "yuan", "correct": true }
+            ],
+            "explanationZh": "价格用 yuan（元）。"
+          }
         },
         {
           "id": "B5",
           "question": { "en": "Sorry, Sarah. It's too expensive.", "zh": "对不起，太贵了。" },
           "answer": null,
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Sarah 想买这条短裙，但妈妈觉得太贵，妈妈该怎么说？",
+            "options": [
+              { "text": "Yes, let's buy.", "correct": false },
+              { "text": "I love it.", "correct": false },
+              { "text": "Sorry, Sarah. It's too expensive.", "correct": true }
+            ],
+            "explanationZh": "太贵了用 too expensive。"
+          }
         },
         {
           "id": "C1",
           "question": { "en": "Today all sunglasses and gloves are five yuan!", "zh": "今天太阳镜和手套只要五元！（歌谣）" },
           "answer": { "en": "They are very cheap.", "zh": "非常便宜。（歌谣）" },
-          "tag": "Let's chant · 歌谣"
+          "tag": "Let's chant · 歌谣",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         },
         {
           "id": "C2",
           "question": { "en": "We have many nice scarves, too — red, yellow, brown and more!", "zh": "还有许多好看的围巾——红的、黄的、棕的，还有更多！（歌谣）" },
           "answer": { "en": "Come and see us today!", "zh": "今天来看看吧！（歌谣）" },
-          "tag": "Let's chant · 歌谣"
+          "tag": "Let's chant · 歌谣",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         }
       ]
     }

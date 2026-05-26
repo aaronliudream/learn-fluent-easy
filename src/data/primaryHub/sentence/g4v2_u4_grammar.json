@@ -16,19 +16,49 @@
           "id": "A1",
           "question": { "en": "Look at these! Are these carrots?", "zh": "看这些！是胡萝卜吗？" },
           "answer": { "en": "No.", "zh": "不是。" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Mike 问「Are these carrots?」，其实不是胡萝卜，该怎么回答？",
+            "options": [
+              { "text": "Yes, they are.", "correct": false },
+              { "text": "I'm a cat.", "correct": false },
+              { "text": "No.", "correct": true }
+            ],
+            "explanationZh": "不是就用 No. 简短否定 Are these...? 的提问。"
+          }
         },
         {
           "id": "A2",
           "question": { "en": "What are these?", "zh": "这些是什么？" },
           "answer": { "en": "They're tomatoes.", "zh": "是西红柿。" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「这些是什么？」用英语怎么说？",
+            "options": [
+              { "text": "What are these?", "correct": true },
+              { "text": "These what are?", "correct": false },
+              { "text": "Are what these?", "correct": false }
+            ],
+            "explanationZh": "问近处复数「这些是什么」用 What are these?"
+          }
         },
         {
           "id": "A3",
           "question": { "en": "Try some! They're good.", "zh": "尝一个，很好吃。" },
           "answer": { "en": "Thanks. Yum.", "zh": "谢谢，真好吃。" },
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Mike 说「Try some! They're good.」，Sarah 该怎么回应？",
+            "options": [
+              { "text": "Goodbye.", "correct": false },
+              { "text": "Thanks. Yum.", "correct": true },
+              { "text": "I don't like.", "correct": false }
+            ],
+            "explanationZh": "别人请你尝东西，礼貌回应 Thanks. Yum.（谢谢，真好吃）。"
+          }
         }
       ]
     },
@@ -44,31 +74,65 @@
           "id": "B1",
           "question": { "en": "What are those?", "zh": "那些是什么？" },
           "answer": { "en": "Are they horses?", "zh": "它们是马吗？" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "Sarah 指着远处的动物发问。",
+            "promptZh": "指着远处问「那些是什么？」用英语怎么说？",
+            "options": [
+              { "text": "Those what are?", "correct": false },
+              { "text": "What are those?", "correct": true },
+              { "text": "Are those what?", "correct": false }
+            ],
+            "explanationZh": "问远处的复数用 those：What are those?"
+          }
         },
         {
           "id": "B2",
           "question": { "en": "No, they aren't. They're ducks.", "zh": "不是，是鸭子。" },
           "answer": null,
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Sarah 问「Are they horses?」，其实是鸭子，该怎么回答？",
+            "options": [
+              { "text": "No, they aren't. They're ducks.", "correct": true },
+              { "text": "Yes, they are horses.", "correct": false },
+              { "text": "I don't know.", "correct": false }
+            ],
+            "explanationZh": "否定用 No, they aren't.，再说明 They're ducks。"
+          }
         },
         {
           "id": "B3",
           "question": { "en": "How many horses do you have?", "zh": "你有多少匹马？" },
           "answer": { "en": "Seventeen.", "zh": "十七匹。" },
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「你有多少匹马？」选词填空。",
+            "sentenceTemplate": "How ___ horses do you have?",
+            "options": [
+              { "text": "what", "correct": false },
+              { "text": "when", "correct": false },
+              { "text": "many", "correct": true }
+            ],
+            "explanationZh": "问数量用 How many + 复数名词。"
+          }
         },
         {
           "id": "C1",
           "question": { "en": "I like tomatoes. I like potatoes.", "zh": "我喜欢西红柿、土豆。（歌谣）" },
           "answer": { "en": "Carrots I will try.", "zh": "胡萝卜我也要尝。（歌谣）" },
-          "tag": "Let's chant · Vegetables"
+          "tag": "Let's chant · Vegetables",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         },
         {
           "id": "C2",
           "question": { "en": "But onions make me cry.", "zh": "洋葱让我流泪。（歌谣）" },
           "answer": null,
-          "tag": "Let's chant · Vegetables"
+          "tag": "Let's chant · Vegetables",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         }
       ]
     }

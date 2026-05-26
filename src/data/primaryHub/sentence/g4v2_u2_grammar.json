@@ -14,36 +14,52 @@
       "sentences": [
         {
           "id": "A1",
-          "question": {
-            "en": "What time is it?",
-            "zh": "几点了？"
-          },
-          "answer": {
-            "en": "It's 7 o'clock.",
-            "zh": "7 点了。"
-          },
-          "tag": "A Let's talk"
+          "question": { "en": "What time is it?", "zh": "几点了？" },
+          "answer": { "en": "It's 7 o'clock.", "zh": "7 点了。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「几点了？」用英语怎么说？",
+            "options": [
+              { "text": "What time is it?", "correct": true },
+              { "text": "Is what time?", "correct": false },
+              { "text": "Time is what it?", "correct": false }
+            ],
+            "explanationZh": "问时间用 What time is it?，疑问词放最前面。"
+          }
         },
         {
           "id": "A2",
-          "question": {
-            "en": "What time is it now?",
-            "zh": "现在几点？"
-          },
-          "answer": {
-            "en": "It's 8 o'clock.",
-            "zh": "8 点了。"
-          },
-          "tag": "A Let's talk"
+          "question": { "en": "What time is it now?", "zh": "现在几点？" },
+          "answer": { "en": "It's 8 o'clock.", "zh": "8 点了。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「8 点整」选词填空。",
+            "sentenceTemplate": "It's 8 ___.",
+            "options": [
+              { "text": "hours", "correct": false },
+              { "text": "o'clock", "correct": true },
+              { "text": "clocks", "correct": false }
+            ],
+            "explanationZh": "报整点用 o'clock：It's 8 o'clock."
+          }
         },
         {
           "id": "A3",
-          "question": {
-            "en": "It's time for breakfast.",
-            "zh": "该吃早餐了。"
-          },
+          "question": { "en": "It's time for breakfast.", "zh": "该吃早餐了。" },
           "answer": null,
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "「It's time for breakfast.」是什么意思？",
+            "options": [
+              { "text": "该睡觉了", "correct": false },
+              { "text": "我饿了", "correct": false },
+              { "text": "该吃早餐了", "correct": true }
+            ],
+            "explanationZh": "It's time for + 名词，表示「该做某事了」；breakfast 是早餐。"
+          }
         }
       ]
     },
@@ -57,54 +73,67 @@
       "sentences": [
         {
           "id": "B1",
-          "question": {
-            "en": "It's 9 o'clock. It's time for English class.",
-            "zh": "9 点了，该上英语课了。"
-          },
+          "question": { "en": "It's 9 o'clock. It's time for English class.", "zh": "9 点了，该上英语课了。" },
           "answer": null,
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "上课铃快响了，提醒大家。",
+            "promptZh": "「9 点了，该上英语课了」用英语怎么说？",
+            "options": [
+              { "text": "English class it's time for.", "correct": false },
+              { "text": "It's 9 o'clock. It's time for English class.", "correct": true },
+              { "text": "For English time class it's.", "correct": false }
+            ],
+            "explanationZh": "It's time for + 名词，表示「该上某节课了」。"
+          }
         },
         {
           "id": "B2",
-          "question": {
-            "en": "It's 4 o'clock. It's time to go home.",
-            "zh": "4 点了，该回家了。"
-          },
-          "answer": {
-            "en": "OK. Let's go!",
-            "zh": "好的，走吧！"
-          },
-          "tag": "B Let's talk"
+          "question": { "en": "It's 4 o'clock. It's time to go home.", "zh": "4 点了，该回家了。" },
+          "answer": { "en": "OK. Let's go!", "zh": "好的，走吧！" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "老师说「It's 4 o'clock. It's time to go home.」，学生该怎么回应？",
+            "options": [
+              { "text": "I don't know.", "correct": false },
+              { "text": "OK. Let's go!", "correct": true },
+              { "text": "I have a pen.", "correct": false }
+            ],
+            "explanationZh": "该回家了，回应「好的，走吧」：OK. Let's go!"
+          }
         },
         {
           "id": "B3",
-          "question": {
-            "en": "It's 9 p.m. It's time to go to bed.",
-            "zh": "晚上 9 点了，该睡觉了。"
-          },
+          "question": { "en": "It's 9 p.m. It's time to go to bed.", "zh": "晚上 9 点了，该睡觉了。" },
           "answer": null,
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「该上床睡觉了」选词填空。",
+            "sentenceTemplate": "It's 9 p.m. It's time to ___ to bed.",
+            "options": [
+              { "text": "come", "correct": false },
+              { "text": "run", "correct": false },
+              { "text": "go", "correct": true }
+            ],
+            "explanationZh": "go to bed 是固定搭配，意思是「上床睡觉」。"
+          }
         },
         {
           "id": "C1",
-          "question": {
-            "en": "It's twelve o'clock. It's time for lunch.",
-            "zh": "12 点了，该吃午餐了。"
-          },
-          "answer": {
-            "en": "It's three o'clock. It's time for PE class.",
-            "zh": "3 点了，该上体育课了。"
-          },
-          "tag": "Let's chant · 歌谣"
+          "question": { "en": "It's twelve o'clock. It's time for lunch.", "zh": "12 点了，该吃午餐了。" },
+          "answer": { "en": "It's three o'clock. It's time for PE class.", "zh": "3 点了，该上体育课了。" },
+          "tag": "Let's chant · 歌谣",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         },
         {
           "id": "C2",
-          "question": {
-            "en": "It's six o'clock. It's time for dinner.",
-            "zh": "6 点了，该吃晚餐了。"
-          },
+          "question": { "en": "It's six o'clock. It's time for dinner.", "zh": "6 点了，该吃晚餐了。" },
           "answer": null,
-          "tag": "Let's chant · 歌谣"
+          "tag": "Let's chant · 歌谣",
+          "training": { "type": "skip_chant", "skipReason": "chant_song" }
         }
       ]
     }

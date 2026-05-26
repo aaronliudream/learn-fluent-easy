@@ -82,6 +82,41 @@ describe("sentenceRegistry auto-discovery", () => {
     expect(skips.map((s) => s.id).sort()).toEqual(["B3", "C1"]);
   });
 
+  // PR-1 Tier 1 training rollout: every sentence carries training; non-skip drills are
+  // well-formed (3 options, exactly 1 correct, with an explanation); skip_chant count matches.
+  const tier1ExpectedSkips: Record<string, number> = {
+    g4v1_u2: 2,
+    g4v2_u1: 0,
+    g4v2_u2: 2,
+    g4v2_u3: 2,
+    g4v2_u4: 2,
+    g4v2_u5: 3,
+    g4v2_u6: 2,
+  };
+  for (const [unitId, expectedSkips] of Object.entries(tier1ExpectedSkips)) {
+    it(`${unitId} stage 3: every non-skip sentence is a well-formed 3-choice drill`, () => {
+      const lesson = getSentenceLesson(unitId, 3);
+      expect(lesson).not.toBeNull();
+      const drills = lesson!.subModules
+        .flatMap((m) => m.sentences)
+        .filter((s) => s.training && s.training.type !== "skip_chant");
+      expect(drills.length).toBeGreaterThan(0);
+      for (const s of drills) {
+        expect(s.training!.options).toHaveLength(3);
+        expect(s.training!.options!.filter((o) => o.correct)).toHaveLength(1);
+        expect(typeof s.training!.explanationZh).toBe("string");
+      }
+    });
+
+    it(`${unitId} stage 3: has ${expectedSkips} skip_chant sentence(s)`, () => {
+      const lesson = getSentenceLesson(unitId, 3);
+      const skips = lesson!.subModules
+        .flatMap((m) => m.sentences)
+        .filter((s) => s.training?.type === "skip_chant");
+      expect(skips).toHaveLength(expectedSkips);
+    });
+  }
+
   it("loads g4v2_u2 grammar lesson at stage 3", () => {
     const lesson = getSentenceLesson("g4v2_u2", 3);
     expect(lesson).not.toBeNull();

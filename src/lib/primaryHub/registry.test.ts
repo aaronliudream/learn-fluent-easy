@@ -149,14 +149,14 @@ describe("readWriteRegistry auto-discovery", () => {
   it("loads g4v1_u1 fill_choice readWrite at stage 6", () => {
     const config = getReadWriteConfig("g4v1_u1", 6);
     expect(config).not.toBeNull();
-    expect(config?.questions).toHaveLength(6);
+    expect(config?.questions).toHaveLength(11);
     expect(config?.questions[0].type).toBe("fill_choice");
   });
 
   it("loads g4v1_u2 fill_choice readWrite at stage 6", () => {
     const config = getReadWriteConfig("g4v1_u2", 6);
     expect(config).not.toBeNull();
-    expect(config?.questions).toHaveLength(6);
+    expect(config?.questions).toHaveLength(10);
     expect(config?.questions[0].type).toBe("fill_choice");
   });
 
@@ -170,14 +170,14 @@ describe("readWriteRegistry auto-discovery", () => {
   it("loads g4v1_u4 fill_choice readWrite at stage 6", () => {
     const config = getReadWriteConfig("g4v1_u4", 6);
     expect(config).not.toBeNull();
-    expect(config?.questions).toHaveLength(6);
+    expect(config?.questions).toHaveLength(11);
     expect(config?.questions[0].type).toBe("fill_choice");
   });
 
   it("loads g4v1_u5 fill_choice readWrite at stage 6", () => {
     const config = getReadWriteConfig("g4v1_u5", 6);
     expect(config).not.toBeNull();
-    expect(config?.questions).toHaveLength(6);
+    expect(config?.questions).toHaveLength(11);
     expect(config?.questions[0].type).toBe("fill_choice");
   });
 

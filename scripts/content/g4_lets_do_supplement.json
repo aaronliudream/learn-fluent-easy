@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "purpose": "四上 Let's do 段落补全(U1/U2/U4/U5)",
+    "scope": "本 PR 仅 U1/U2/U4/U5;U3 是 Let's chant、U6 是 Let's count/Draw and say,均无 Let's do 段落,不在范围内",
+    "落地方式": "并进 readWrite Tab(每 unit append 新题) + finalQuiz 各 unit 加 3 题(扩原区间)",
+    "中文口径": "口语化简版,沿用 U6 PR 定调"
+  },
+  "新锚定义": {
+    "u1:recall_classroom_action": "U1 教室祈使动作(open/close/turn on/put up/clean)",
+    "u2:recall_putobject_position": "U2 把物品放在某方位(Put X in/on/under/near Y)",
+    "u4:recall_room_activity": "U4 房间+对应活动(go to + room + activity)",
+    "u5:recall_utensil_action": "U5 餐具操作(pass me / use the / cut the)"
+  },
+
+  "u1": {
+    "letsDo来源": "课本 p.5",
+    "letsDo短语": [
+      { "en": "Open the door.", "cn": "打开门" },
+      { "en": "Turn on the light.", "cn": "开灯" },
+      { "en": "Close the window.", "cn": "关上窗户" },
+      { "en": "Put up the picture.", "cn": "挂上图画" },
+      { "en": "Clean the blackboard.", "cn": "擦黑板" }
+    ],
+    "readWrite追加题": [
+      {
+        "type": "fill_choice",
+        "sentence": "Open the ___ .",
+        "hint_zh": "打开门",
+        "correctSentence": "Open the door.",
+        "options": [
+          { "text": "door", "correct": true },
+          { "text": "light", "correct": false },
+          { "text": "window", "correct": false }
+        ],
+        "point": "u1:recall_classroom_action"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "___ on the light.",
+        "hint_zh": "开灯",
+        "correctSentence": "Turn on the light.",
+        "options": [
+          { "text": "Open", "correct": false },
+          { "text": "Turn", "correct": true },
+          { "text": "Clean", "correct": false }
+        ],
+        "point": "u1:recall_classroom_action"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "Close the ___ .",
+        "hint_zh": "关上窗户",
+        "correctSentence": "Close the window.",
+        "options": [
+          { "text": "blackboard", "correct": false },
+          { "text": "picture", "correct": false },
+          { "text": "window", "correct": true }
+        ],
+        "point": "u1:recall_classroom_action"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "Put up the ___ .",
+        "hint_zh": "挂上图画",
+        "correctSentence": "Put up the picture.",
+        "options": [
+          { "text": "picture", "correct": true },
+          { "text": "door", "correct": false },
+          { "text": "light", "correct": false }
+        ],
+        "point": "u1:recall_classroom_action"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "___ the blackboard.",
+        "hint_zh": "擦黑板",
+        "correctSentence": "Clean the blackboard.",
+        "options": [
+          { "text": "Open", "correct": false },
+          { "text": "Close", "correct": false },
+          { "text": "Clean", "correct": true }
+        ],
+        "point": "u1:recall_classroom_action"
+      }
+    ],
+    "finalQuiz追加题": [
+      {
+        "id_hint": "112(扩原区间 101-111 跳 106)",
+        "dim": "sentence",
+        "q": "—Mum, it's dark in here.\n—Then ___ the light, dear.",
+        "opts": ["turn on", "put up", "clean", "close"],
+        "answer_text": "turn on",
+        "point": "u1:recall_classroom_action",
+        "题型": "补全祈使句"
+      },
+      {
+        "id_hint": "113",
+        "dim": "sentence",
+        "q": "The blackboard is dirty. What should we do?\n→ ___ .",
+        "opts": ["Clean the blackboard", "Open the door", "Close the window", "Put up the picture"],
+        "answer_text": "Clean the blackboard",
+        "point": "u1:recall_classroom_action",
+        "题型": "动作配场景"
+      },
+      {
+        "id_hint": "114",
+        "dim": "sentence",
+        "q": "It's cold. Please ___ the window.",
+        "opts": ["open", "close", "clean", "turn on"],
+        "answer_text": "close",
+        "point": "u1:recall_classroom_action",
+        "题型": "动词补全"
+      }
+    ]
+  },
+
+  "u2": {
+    "letsDo来源": "课本 p.15",
+    "letsDo短语": [
+      { "en": "Put your Chinese book in your desk.", "cn": "把语文书放进书桌里" },
+      { "en": "Put your pencil box on your English book.", "cn": "把铅笔盒放在英语书上" },
+      { "en": "Put your maths book under your schoolbag.", "cn": "把数学书放在书包下面" },
+      { "en": "Put your eraser near your pencil box.", "cn": "把橡皮放在铅笔盒旁边" }
+    ],
+    "readWrite追加题": [
+      {
+        "type": "fill_choice",
+        "sentence": "Put your Chinese book ___ your desk.",
+        "hint_zh": "把语文书放进书桌里",
+        "correctSentence": "Put your Chinese book in your desk.",
+        "options": [
+          { "text": "in", "correct": true },
+          { "text": "on", "correct": false },
+          { "text": "under", "correct": false }
+        ],
+        "point": "u2:recall_putobject_position"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "Put your pencil box ___ your English book.",
+        "hint_zh": "把铅笔盒放在英语书上",
+        "correctSentence": "Put your pencil box on your English book.",
+        "options": [
+          { "text": "in", "correct": false },
+          { "text": "on", "correct": true },
+          { "text": "near", "correct": false }
+        ],
+        "point": "u2:recall_putobject_position"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "Put your maths book ___ your schoolbag.",
+        "hint_zh": "把数学书放在书包下面",
+        "correctSentence": "Put your maths book under your schoolbag.",
+        "options": [
+          { "text": "on", "correct": false },
+          { "text": "near", "correct": false },
+          { "text": "under", "correct": true }
+        ],
+        "point": "u2:recall_putobject_position"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "Put your ___ near your pencil box.",
+        "hint_zh": "把橡皮放在铅笔盒旁边",
+        "correctSentence": "Put your eraser near your pencil box.",
+        "options": [
+          { "text": "eraser", "correct": true },
+          { "text": "schoolbag", "correct": false },
+          { "text": "desk", "correct": false }
+        ],
+        "point": "u2:recall_putobject_position"
+      }
+    ],
+    "finalQuiz追加题": [
+      {
+        "id_hint": "212(扩原区间 201-211 跳 206)",
+        "dim": "sentence",
+        "q": "—Where should I put my eraser?\n—Put it ___ your pencil box.",
+        "opts": ["near", "in", "on", "under"],
+        "answer_text": "near",
+        "point": "u2:recall_putobject_position",
+        "题型": "方位介词补全"
+      },
+      {
+        "id_hint": "213",
+        "dim": "sentence",
+        "q": "My maths book is heavy. Please put it ___ my schoolbag.",
+        "opts": ["under", "on", "in", "near"],
+        "answer_text": "under",
+        "point": "u2:recall_putobject_position",
+        "题型": "方位介词补全"
+      },
+      {
+        "id_hint": "214",
+        "dim": "sentence",
+        "q": "Put your ___ in your desk. (语文课要用的书)",
+        "opts": ["Chinese book", "schoolbag", "eraser", "pencil box"],
+        "answer_text": "Chinese book",
+        "point": "u2:recall_putobject_position",
+        "题型": "宾语补全"
+      }
+    ]
+  },
+
+  "u4": {
+    "letsDo来源": "课本 p.39",
+    "letsDo短语": [
+      { "en": "Go to the living room. Watch TV.", "cn": "去客厅看电视" },
+      { "en": "Go to the study. Read a book.", "cn": "去书房看书" },
+      { "en": "Go to the kitchen. Have a snack.", "cn": "去厨房吃点心" },
+      { "en": "Go to the bedroom. Have a nap.", "cn": "去卧室睡一觉" },
+      { "en": "Go to the bathroom. Take a shower.", "cn": "去浴室洗个澡" }
+    ],
+    "readWrite追加题": [
+      {
+        "type": "fill_choice",
+        "sentence": "I want to watch TV. Go to the ___ .",
+        "hint_zh": "去客厅看电视",
+        "correctSentence": "Go to the living room.",
+        "options": [
+          { "text": "living room", "correct": true },
+          { "text": "study", "correct": false },
+          { "text": "bathroom", "correct": false }
+        ],
+        "point": "u4:recall_room_activity"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "Go to the study. ___ a book.",
+        "hint_zh": "去书房看书",
+        "correctSentence": "Go to the study. Read a book.",
+        "options": [
+          { "text": "Read", "correct": true },
+          { "text": "Watch", "correct": false },
+          { "text": "Have", "correct": false }
+        ],
+        "point": "u4:recall_room_activity"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "I'm hungry. Go to the ___ . Have a snack.",
+        "hint_zh": "去厨房吃点心",
+        "correctSentence": "Go to the kitchen. Have a snack.",
+        "options": [
+          { "text": "bedroom", "correct": false },
+          { "text": "kitchen", "correct": true },
+          { "text": "study", "correct": false }
+        ],
+        "point": "u4:recall_room_activity"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "I'm sleepy. Go to the bedroom. Have a ___ .",
+        "hint_zh": "去卧室睡一觉",
+        "correctSentence": "Go to the bedroom. Have a nap.",
+        "options": [
+          { "text": "snack", "correct": false },
+          { "text": "shower", "correct": false },
+          { "text": "nap", "correct": true }
+        ],
+        "point": "u4:recall_room_activity"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "Go to the bathroom. ___ a shower.",
+        "hint_zh": "去浴室洗个澡",
+        "correctSentence": "Go to the bathroom. Take a shower.",
+        "options": [
+          { "text": "Take", "correct": true },
+          { "text": "Have", "correct": false },
+          { "text": "Read", "correct": false }
+        ],
+        "point": "u4:recall_room_activity"
+      }
+    ],
+    "finalQuiz追加题": [
+      {
+        "id_hint": "412(扩原区间 401-411 跳 406)",
+        "dim": "sentence",
+        "q": "—I want to read a book.\n—Go to the ___ .",
+        "opts": ["study", "kitchen", "bathroom", "living room"],
+        "answer_text": "study",
+        "point": "u4:recall_room_activity",
+        "题型": "房间配活动(看图选短语类)"
+      },
+      {
+        "id_hint": "413",
+        "dim": "sentence",
+        "q": "Go to the kitchen. Have a ___ .",
+        "opts": ["nap", "shower", "snack", "book"],
+        "answer_text": "snack",
+        "point": "u4:recall_room_activity",
+        "题型": "动作配场所"
+      },
+      {
+        "id_hint": "414",
+        "dim": "sentence",
+        "q": "—I'm so tired and dirty.\n—Go to the bathroom and ___ a shower.",
+        "opts": ["take", "have", "read", "watch"],
+        "answer_text": "take",
+        "point": "u4:recall_room_activity",
+        "题型": "补全祈使句"
+      }
+    ]
+  },
+
+  "u5": {
+    "letsDo来源": "课本 p.52(Make a salad)",
+    "letsDo短语": [
+      { "en": "Pass me the bowl.", "cn": "递给我碗" },
+      { "en": "Pass me the knife.", "cn": "递给我刀" },
+      { "en": "Cut the vegetables.", "cn": "切蔬菜" },
+      { "en": "Use the spoon.", "cn": "用勺子" },
+      { "en": "Use the fork.", "cn": "用叉子" }
+    ],
+    "letsDo收尾": "Now let's try it!(p.52 收尾句,不出题)",
+    "readWrite追加题": [
+      {
+        "type": "fill_choice",
+        "sentence": "Pass me the ___ .",
+        "hint_zh": "递给我碗",
+        "correctSentence": "Pass me the bowl.",
+        "options": [
+          { "text": "bowl", "correct": true },
+          { "text": "spoon", "correct": false },
+          { "text": "fork", "correct": false }
+        ],
+        "point": "u5:recall_utensil_action"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "___ me the knife.",
+        "hint_zh": "递给我刀",
+        "correctSentence": "Pass me the knife.",
+        "options": [
+          { "text": "Pass", "correct": true },
+          { "text": "Use", "correct": false },
+          { "text": "Cut", "correct": false }
+        ],
+        "point": "u5:recall_utensil_action"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "Cut the ___ .",
+        "hint_zh": "切蔬菜",
+        "correctSentence": "Cut the vegetables.",
+        "options": [
+          { "text": "knife", "correct": false },
+          { "text": "vegetables", "correct": true },
+          { "text": "bowl", "correct": false }
+        ],
+        "point": "u5:recall_utensil_action"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "Use the ___ . (吃汤面用)",
+        "hint_zh": "用勺子",
+        "correctSentence": "Use the spoon.",
+        "options": [
+          { "text": "fork", "correct": false },
+          { "text": "knife", "correct": false },
+          { "text": "spoon", "correct": true }
+        ],
+        "point": "u5:recall_utensil_action"
+      },
+      {
+        "type": "fill_choice",
+        "sentence": "___ the fork.",
+        "hint_zh": "用叉子",
+        "correctSentence": "Use the fork.",
+        "options": [
+          { "text": "Use", "correct": true },
+          { "text": "Pass", "correct": false },
+          { "text": "Cut", "correct": false }
+        ],
+        "point": "u5:recall_utensil_action"
+      }
+    ],
+    "finalQuiz追加题": [
+      {
+        "id_hint": "512(扩原区间 501-511 跳 506)",
+        "dim": "sentence",
+        "q": "—Can you ___ me the bowl, please?\n—Sure, here you are.",
+        "opts": ["pass", "use", "cut", "have"],
+        "answer_text": "pass",
+        "point": "u5:recall_utensil_action",
+        "题型": "动词补全"
+      },
+      {
+        "id_hint": "513",
+        "dim": "sentence",
+        "q": "I want to cut some vegetables. Please pass me the ___ .",
+        "opts": ["knife", "spoon", "fork", "bowl"],
+        "answer_text": "knife",
+        "point": "u5:recall_utensil_action",
+        "题型": "餐具配动作"
+      },
+      {
+        "id_hint": "514",
+        "dim": "sentence",
+        "q": "—How do I eat noodle soup?\n—___ the spoon and chopsticks.",
+        "opts": ["Use", "Pass", "Cut", "Have"],
+        "answer_text": "Use",
+        "point": "u5:recall_utensil_action",
+        "题型": "补全祈使句"
+      }
+    ]
+  }
+}

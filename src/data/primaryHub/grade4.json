@@ -355,12 +355,12 @@
                 "id": 105,
                 "q": "Mike 对 Sarah 说：「我们有一间新教室。」Sarah 很想知道里面有什么，她会问：",
                 "opts": [
+                  "What's in the classroom?",
                   "Where is it?",
                   "Let's clean the classroom!",
-                  "What's in the classroom?",
                   "It's near the window."
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "u1:recall_room_item",
                 "dim": "sentence"
               },
@@ -368,12 +368,12 @@
                 "id": 106,
                 "q": "下课后，Sarah 说：「我们来打扫教室吧！」她拿起抹布，走到窗户前。她会说：",
                 "opts": [
-                  "Let me clean the windows.",
                   "Let me help you.",
                   "Where is it?",
+                  "Let me clean the windows.",
                   "It's on the light."
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u1:recall_room_item",
                 "dim": "sentence"
               },
@@ -395,11 +395,11 @@
                 "q": "Sarah 找不到英语书。John 看见书在窗户旁边。John 对 Sarah 说：",
                 "opts": [
                   "It's on the light.",
-                  "It's near the window.",
                   "It's under the desk.",
+                  "It's near the window.",
                   "What's in the classroom?"
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -407,12 +407,12 @@
                 "id": 109,
                 "q": "Story time：蜜蜂飞进新教室，停在电灯上方。Zoom 问：Where is it? 同学回答：",
                 "opts": [
+                  "It's on the light.",
                   "It's on the fan.",
                   "It's near the window.",
-                  "It's under the teacher's desk.",
-                  "It's on the light."
+                  "It's under the teacher's desk."
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -421,11 +421,11 @@
                 "q": "参观新教室时，Mike 指着一扇橙色的门对大家介绍。选描述这扇门的句子：",
                 "opts": [
                   "The floor is orange.",
-                  "The door is orange.",
                   "The wall is orange.",
-                  "The fan is green."
+                  "The fan is green.",
+                  "The door is orange."
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "u1:recall_color",
                 "dim": "sentence"
               },
@@ -434,13 +434,52 @@
                 "q": "看中文选词：「地板」",
                 "opts": [
                   "wall",
-                  "fan",
                   "floor",
+                  "fan",
                   "window"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "u1:recall_classroom_item",
                 "dim": "vocab"
+              },
+              {
+                "id": 112,
+                "q": "—Mum, it's dark in here.\n—Then ___ the light, dear.",
+                "opts": [
+                  "put up",
+                  "turn on",
+                  "clean",
+                  "close"
+                ],
+                "answer": 1,
+                "point": "u1:recall_classroom_action",
+                "dim": "sentence"
+              },
+              {
+                "id": 113,
+                "q": "The blackboard is dirty. What should we do?\n→ ___ .",
+                "opts": [
+                  "Open the door",
+                  "Close the window",
+                  "Clean the blackboard",
+                  "Put up the picture"
+                ],
+                "answer": 2,
+                "point": "u1:recall_classroom_action",
+                "dim": "sentence"
+              },
+              {
+                "id": 114,
+                "q": "It's cold. Please ___ the window.",
+                "opts": [
+                  "open",
+                  "clean",
+                  "turn on",
+                  "close"
+                ],
+                "answer": 3,
+                "point": "u1:recall_classroom_action",
+                "dim": "sentence"
               }
             ],
             "listeningQuestions": [
@@ -810,11 +849,11 @@
                 "q": "看中文选词：「数学书」",
                 "opts": [
                   "English book",
-                  "maths book",
                   "Chinese book",
-                  "storybook"
+                  "storybook",
+                  "maths book"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "u2:recall_schoolthing",
                 "dim": "vocab"
               },
@@ -824,10 +863,10 @@
                 "opts": [
                   "notebook",
                   "toy",
-                  "candy",
-                  "key"
+                  "key",
+                  "candy"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "u2:recall_schoolthing",
                 "dim": "vocab"
               },
@@ -889,10 +928,10 @@
                 "opts": [
                   "I lost my schoolbag.",
                   "Let's clean the classroom!",
-                  "It's blue and white.",
-                  "Wow! It's a panda!"
+                  "Wow! It's a panda!",
+                  "It's blue and white."
                 ],
-                "answer": 3,
+                "answer": 2,
                 "point": "u2:recall_have",
                 "dim": "sentence"
               },
@@ -901,11 +940,11 @@
                 "q": "打扫教室时，老师让 Sarah 关掉天花板上的设备。看中文选词：「电灯」",
                 "opts": [
                   "schoolbag",
-                  "maths book",
                   "light",
+                  "maths book",
                   "candy"
                 ],
-                "answer": 2,
+                "answer": 1,
                 "point": "u1:recall_classroom_item",
                 "dim": "vocab"
               },
@@ -913,12 +952,12 @@
                 "id": 211,
                 "q": "Sarah 想用英语介绍自己卧室的门——那扇门是橙色的。她会说：",
                 "opts": [
-                  "The door is orange.",
                   "The wall is orange.",
                   "The fan is green.",
+                  "The door is orange.",
                   "It's blue and white."
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u1:recall_color",
                 "dim": "sentence"
               },
@@ -926,13 +965,52 @@
                 "id": 212,
                 "q": "Mike 整理书包，英语书滑到课桌底下。Sarah 问：「Where is your English book?」Mike 看见后说：",
                 "opts": [
-                  "It's near the window.",
                   "It's under the desk.",
+                  "It's near the window.",
                   "It's on the light.",
                   "What's in your schoolbag?"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u1:recall_position",
+                "dim": "sentence"
+              },
+              {
+                "id": 213,
+                "q": "—Where should I put my eraser?\n—Put it ___ your pencil box.",
+                "opts": [
+                  "in",
+                  "near",
+                  "on",
+                  "under"
+                ],
+                "answer": 1,
+                "point": "u2:recall_putobject_position",
+                "dim": "sentence"
+              },
+              {
+                "id": 214,
+                "q": "My maths book is heavy. Please put it ___ my schoolbag.",
+                "opts": [
+                  "on",
+                  "in",
+                  "under",
+                  "near"
+                ],
+                "answer": 2,
+                "point": "u2:recall_putobject_position",
+                "dim": "sentence"
+              },
+              {
+                "id": 215,
+                "q": "Put your ___ in your desk. (语文课要用的书)",
+                "opts": [
+                  "Chinese book",
+                  "schoolbag",
+                  "eraser",
+                  "pencil box"
+                ],
+                "answer": 0,
+                "point": "u2:recall_putobject_position",
                 "dim": "sentence"
               }
             ],
@@ -1609,11 +1687,11 @@
                 "q": "看中文选词：「冰箱」",
                 "opts": [
                   "sofa",
-                  "fridge",
                   "table",
-                  "phone"
+                  "phone",
+                  "fridge"
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "u4:recall_furniture",
                 "dim": "vocab"
               },
@@ -1621,12 +1699,12 @@
                 "id": 404,
                 "q": "妈妈问 Sarah 在不在客厅，Sarah 其实在厨房。下面哪句是正确回答？",
                 "opts": [
+                  "No, she isn't.",
                   "Yes, she is.",
                   "No, he isn't.",
-                  "No, she isn't.",
                   "Yes, she does."
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -1635,11 +1713,11 @@
                 "q": "钥匙在冰箱上，不在桌子上。问「Are they on the table?」该怎么答？",
                 "opts": [
                   "Yes, they are.",
+                  "No, they aren't.",
                   "No, it isn't.",
-                  "Yes, they do.",
-                  "No, they aren't."
+                  "Yes, they do."
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -1647,12 +1725,12 @@
                 "id": 407,
                 "q": "猫躲在床「下面」。问「Where's the cat?」，下面哪句对？",
                 "opts": [
-                  "It's under the bed.",
                   "It's on the bed.",
                   "It's in the bed.",
+                  "It's under the bed.",
                   "It's near the bed."
                 ],
-                "answer": 0,
+                "answer": 2,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -1660,12 +1738,12 @@
                 "id": 408,
                 "q": "钥匙放在冰箱「上面」。问「Where are the keys?」，下面哪句对？",
                 "opts": [
-                  "They're on the fridge.",
                   "They're in the fridge.",
                   "They're under the fridge.",
-                  "It's on the fridge."
+                  "It's on the fridge.",
+                  "They're on the fridge."
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -1674,11 +1752,11 @@
                 "q": "看图读句判断：图中沙发摆在客厅里。下面哪句和图一致？",
                 "opts": [
                   "The sofa is in the kitchen.",
-                  "The sofa is in the living room.",
                   "The bed is in the living room.",
+                  "The sofa is in the living room.",
                   "The sofa is in the bathroom."
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "u4:recall_room",
                 "dim": "sentence"
               },
@@ -1706,6 +1784,45 @@
                 ],
                 "answer": 1,
                 "point": "u3:recall_personality",
+                "dim": "sentence"
+              },
+              {
+                "id": 412,
+                "q": "—I want to read a book.\n—Go to the ___ .",
+                "opts": [
+                  "study",
+                  "kitchen",
+                  "bathroom",
+                  "living room"
+                ],
+                "answer": 0,
+                "point": "u4:recall_room_activity",
+                "dim": "sentence"
+              },
+              {
+                "id": 413,
+                "q": "Go to the kitchen. Have a ___ .",
+                "opts": [
+                  "snack",
+                  "nap",
+                  "shower",
+                  "book"
+                ],
+                "answer": 0,
+                "point": "u4:recall_room_activity",
+                "dim": "sentence"
+              },
+              {
+                "id": 414,
+                "q": "—I'm so tired and dirty.\n—Go to the bathroom and ___ a shower.",
+                "opts": [
+                  "have",
+                  "take",
+                  "read",
+                  "watch"
+                ],
+                "answer": 1,
+                "point": "u4:recall_room_activity",
                 "dim": "sentence"
               }
             ],
@@ -1961,12 +2078,12 @@
                 "id": 501,
                 "q": "看中文选词：「牛肉」",
                 "opts": [
-                  "chicken",
                   "beef",
+                  "chicken",
                   "soup",
                   "fork"
                 ],
-                "answer": 1,
+                "answer": 0,
                 "point": "u5:vocab",
                 "dim": "vocab"
               },
@@ -1975,11 +2092,11 @@
                 "q": "看中文选词：「鸡肉」",
                 "opts": [
                   "beef",
+                  "chicken",
                   "noodles",
-                  "bowl",
-                  "chicken"
+                  "bowl"
                 ],
-                "answer": 3,
+                "answer": 1,
                 "point": "u5:vocab",
                 "dim": "vocab"
               },
@@ -1987,12 +2104,12 @@
                 "id": 503,
                 "q": "看中文选词：「面条」",
                 "opts": [
-                  "noodles",
                   "soup",
+                  "noodles",
                   "vegetable",
                   "spoon"
                 ],
-                "answer": 0,
+                "answer": 1,
                 "point": "u5:vocab",
                 "dim": "vocab"
               },
@@ -2002,10 +2119,10 @@
                 "opts": [
                   "noodles",
                   "beef",
-                  "soup",
-                  "knife"
+                  "knife",
+                  "soup"
                 ],
-                "answer": 2,
+                "answer": 3,
                 "point": "u5:vocab",
                 "dim": "vocab"
               },
@@ -2013,12 +2130,12 @@
                 "id": 505,
                 "q": "看中文选词：「蔬菜」（菜单上常写复数）",
                 "opts": [
-                  "vegetables",
                   "chicken",
                   "chopsticks",
-                  "soup"
+                  "soup",
+                  "vegetables"
                 ],
-                "answer": 0,
+                "answer": 3,
                 "point": "u5:vocab",
                 "dim": "vocab"
               },
@@ -2027,11 +2144,11 @@
                 "q": "妈妈端上饭菜问「What would you like?」下面哪句应答最合适？",
                 "opts": [
                   "Here you are.",
-                  "I'd like some beef and noodles.",
                   "You're welcome.",
+                  "I'd like some beef and noodles.",
                   "It's on the table."
                 ],
-                "answer": 1,
+                "answer": 2,
                 "point": "u5:recall_polite_request",
                 "dim": "sentence"
               },
@@ -2039,12 +2156,12 @@
                 "id": 508,
                 "q": "别人问「Would you like some soup?」你不想喝。下面哪句回答最礼貌？",
                 "opts": [
+                  "No, thanks.",
                   "No, I'm not.",
                   "Yes, I do.",
-                  "It isn't.",
-                  "No, thanks."
+                  "It isn't."
                 ],
-                "answer": 3,
+                "answer": 0,
                 "point": "u5:recall_polite_request",
                 "dim": "sentence"
               },
@@ -2066,11 +2183,11 @@
                 "q": "汤碗放在桌子上。问「Where's the bowl?」下面哪句对？",
                 "opts": [
                   "It's under the table.",
-                  "It's on the table.",
                   "It's in the soup.",
-                  "They're on the table."
+                  "They're on the table.",
+                  "It's on the table."
                 ],
-                "answer": 1,
+                "answer": 3,
                 "point": "u1:recall_position",
                 "dim": "sentence"
               },
@@ -2078,13 +2195,52 @@
                 "id": 511,
                 "q": "饭桌边那个又高又壮的男孩在帮大家盛汤。下面哪句在描述他？",
                 "opts": [
+                  "He's tall and strong.",
                   "He's short and thin.",
                   "She's tall and strong.",
-                  "He's tall and strong.",
                   "He's quiet and friendly."
                 ],
-                "answer": 2,
+                "answer": 0,
                 "point": "u3:recall_personality",
+                "dim": "sentence"
+              },
+              {
+                "id": 512,
+                "q": "—Can you ___ me the bowl, please?\n—Sure, here you are.",
+                "opts": [
+                  "use",
+                  "pass",
+                  "cut",
+                  "have"
+                ],
+                "answer": 1,
+                "point": "u5:recall_utensil_action",
+                "dim": "sentence"
+              },
+              {
+                "id": 513,
+                "q": "I want to cut some vegetables. Please pass me the ___ .",
+                "opts": [
+                  "spoon",
+                  "fork",
+                  "knife",
+                  "bowl"
+                ],
+                "answer": 2,
+                "point": "u5:recall_utensil_action",
+                "dim": "sentence"
+              },
+              {
+                "id": 514,
+                "q": "—How do I eat noodle soup?\n—___ the spoon and chopsticks.",
+                "opts": [
+                  "Pass",
+                  "Cut",
+                  "Use",
+                  "Have"
+                ],
+                "answer": 2,
+                "point": "u5:recall_utensil_action",
                 "dim": "sentence"
               }
             ],

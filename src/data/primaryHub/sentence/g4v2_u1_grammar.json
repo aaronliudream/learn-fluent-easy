@@ -14,36 +14,51 @@
       "sentences": [
         {
           "id": "A1",
-          "question": {
-            "en": "Excuse me. Where's the teachers' office?",
-            "zh": "请问，教师办公室在哪里？"
-          },
-          "answer": {
-            "en": "It's on the second floor.",
-            "zh": "在二楼。"
-          },
-          "tag": "A Let's talk"
+          "question": { "en": "Excuse me. Where's the teachers' office?", "zh": "请问，教师办公室在哪里？" },
+          "answer": { "en": "It's on the second floor.", "zh": "在二楼。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Mike 问「教师办公室在哪里？」，对方该怎么回答？",
+            "options": [
+              { "text": "What's your name?", "correct": false },
+              { "text": "It's on the second floor.", "correct": true },
+              { "text": "Thanks. I like apples.", "correct": false }
+            ],
+            "explanationZh": "问 Where's...? 要用地点回答，on the second floor 表示「在二楼」。"
+          }
         },
         {
           "id": "A2",
-          "question": {
-            "en": "Is this the teachers' office?",
-            "zh": "这是教师办公室吗？"
-          },
-          "answer": {
-            "en": "No, it isn't. The teachers' office is next to the library.",
-            "zh": "不，不是。教师办公室挨着图书馆。"
-          },
-          "tag": "A Let's talk"
+          "question": { "en": "Is this the teachers' office?", "zh": "这是教师办公室吗？" },
+          "answer": { "en": "No, it isn't. The teachers' office is next to the library.", "zh": "不，不是。教师办公室挨着图书馆。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「这是教师办公室吗？」用英语怎么说？",
+            "options": [
+              { "text": "Office teachers' is this?", "correct": false },
+              { "text": "Is this the teachers' office?", "correct": true },
+              { "text": "Office is this teachers'?", "correct": false }
+            ],
+            "explanationZh": "一般疑问句把 be 动词 Is 提到句首：Is this...?"
+          }
         },
         {
           "id": "A3",
-          "question": {
-            "en": "OK. Thanks.",
-            "zh": "好的，谢谢。"
-          },
+          "question": { "en": "OK. Thanks.", "zh": "好的，谢谢。" },
           "answer": null,
-          "tag": "A Let's talk"
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "「OK. Thanks.」最适合用在什么场景？",
+            "options": [
+              { "text": "别人帮你指了路", "correct": true },
+              { "text": "别人骂了你", "correct": false },
+              { "text": "你正在睡觉", "correct": false }
+            ],
+            "explanationZh": "OK. Thanks. 是「好的，谢谢」，用在别人帮了你之后。"
+          }
         }
       ]
     },
@@ -57,36 +72,53 @@
       "sentences": [
         {
           "id": "B1",
-          "question": {
-            "en": "Welcome to our school! This is my classroom.",
-            "zh": "欢迎来到我们学校！这是我的教室。"
-          },
+          "question": { "en": "Welcome to our school! This is my classroom.", "zh": "欢迎来到我们学校！这是我的教室。" },
           "answer": null,
-          "tag": "B Let's talk"
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "Mike 带朋友进校门，先热情打招呼。",
+            "promptZh": "「欢迎来到我们学校！」用英语怎么说？",
+            "options": [
+              { "text": "School welcome our to!", "correct": false },
+              { "text": "Welcome to our school!", "correct": true },
+              { "text": "To welcome school our!", "correct": false }
+            ],
+            "explanationZh": "Welcome to + 地点，表示「欢迎来到某地」。"
+          }
         },
         {
           "id": "B2",
-          "question": {
-            "en": "Do you have a library?",
-            "zh": "你们(学校)有图书馆吗？"
-          },
-          "answer": {
-            "en": "Yes, we do. It's on the second floor.",
-            "zh": "是的，有。它在二楼。"
-          },
-          "tag": "B Let's talk"
+          "question": { "en": "Do you have a library?", "zh": "你们(学校)有图书馆吗？" },
+          "answer": { "en": "Yes, we do. It's on the second floor.", "zh": "是的，有。它在二楼。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "别人问「你们有图书馆吗？」，你想确认有，该怎么说？",
+            "options": [
+              { "text": "No, we don't.", "correct": false },
+              { "text": "I have a cat.", "correct": false },
+              { "text": "Yes, we do. It's on the second floor.", "correct": true }
+            ],
+            "explanationZh": "Do you have...? 用 Yes, we do. 肯定回答。"
+          }
         },
         {
           "id": "B3",
-          "question": {
-            "en": "How many students are there in your class?",
-            "zh": "你们班有多少学生？"
-          },
-          "answer": {
-            "en": "Forty-five students.",
-            "zh": "45 个学生。"
-          },
-          "tag": "B Let's talk"
+          "question": { "en": "How many students are there in your class?", "zh": "你们班有多少学生？" },
+          "answer": { "en": "Forty-five students.", "zh": "45 个学生。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「你们班有多少学生？」选词填空。",
+            "sentenceTemplate": "How ___ students are there in your class?",
+            "options": [
+              { "text": "what", "correct": false },
+              { "text": "when", "correct": false },
+              { "text": "many", "correct": true }
+            ],
+            "explanationZh": "问数量用 How many + 复数名词。"
+          }
         }
       ]
     }

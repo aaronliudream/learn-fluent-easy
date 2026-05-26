@@ -1,0 +1,5 @@
+[vocab] header="←第 1 关 · 认识单词进度⭐ 0📖 认识 10 个单词房间 (0/5)家具与物品 (0/5)房间 · 5 个词💡 点击卡片、单词或 🔊 都会翻转显示中文并计入已查看🛌bedroom🔊🛋️living room🔊📖study🔊🍳kitchen🔊🛁bathroom🔊已查看：0 / 10 · 还需 10 张，请切换其他单词标签还需查看 10 张卡片（共 10 张）🏠首页📚学习📝错题本👤我的首页课程练习错题我把 Big Moon 装到主屏幕像 App 一样打开，离线也能学，连胜不会断。一键安装💡 不懂？点我问小月！小月 · AI 助手登录" tabs=["房间 (0/5)","家具与物品 (0/5)"] ok=true
+[readWrite] 第 6 / 6 题 sentence="My glasses are ___ the table." hint="💡 在……上面" ok=true
+[readWrite-dom] <p class="text-left text-[22px] font-bold leading-snug text-[#2C2C2A] sm:text-center">My glasses <span class="whitespace-nowrap">are <span class="mx-0.5 inline border-b-2 border-dashed border-[#FF6B35] text-[#FF6B35]" style="min-width: 3ch;">___</span> the table.</span></p>
+[finalQuiz] counter=第 6 / 10 题 point="u1:recall_position" prompt="钥匙放在冰箱「上面」。问「Where are the keys?」，下面哪句对？" opts=["AThey're on the fridge.","BThey're in the fridge.","CThey're under the fridge.","DIt's on the fridge."] ok=true
+[finalQuiz-steppedPast] ["Story time 改编：那个安静的小熊找不到眼镜，最后在床上找到了。下面哪句在说它？","看中文选词：「厨房」","完成对话：Sarah 说「I have a friend.」妈妈接着会问什么？","看图读句判断：图中沙发摆在客厅里。下面哪句和图一致？","看图选介词：猫在盒子「里面」。"]

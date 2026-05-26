@@ -1,0 +1,72 @@
+{
+  "id": "g4v1_u4",
+  "num": 4,
+  "title": "My home",
+  "cn": "我的家",
+  "emoji": "🏠",
+  "available": true,
+  "published": true,
+  "vocabulary": [
+    { "en": "bedroom", "cn": "卧室", "emoji": "🛌" },
+    { "en": "living room", "cn": "客厅", "emoji": "🛋️" },
+    { "en": "study", "cn": "书房", "emoji": "📖" },
+    { "en": "kitchen", "cn": "厨房", "emoji": "🍳" },
+    { "en": "bathroom", "cn": "浴室", "emoji": "🛁" },
+    { "en": "bed", "cn": "床", "emoji": "🛏️" },
+    { "en": "phone", "cn": "电话", "emoji": "📞" },
+    { "en": "table", "cn": "桌子", "emoji": "🪑" },
+    { "en": "sofa", "cn": "长沙发", "emoji": "💺" },
+    { "en": "fridge", "cn": "冰箱", "emoji": "🧊" }
+  ],
+  "vocabGroups": [
+    { "id": "rooms_p38", "name": "房间", "header": "房间 · 5 个词", "indices": [0, 1, 2, 3, 4] },
+    { "id": "furniture_p41", "name": "家具与物品", "header": "家具与物品 · 5 个词", "indices": [5, 6, 7, 8, 9] }
+  ],
+  "dialogues": [
+    {
+      "title": "A Let's talk",
+      "lines": [
+        { "role": "Mum", "text": "Where's the cat?", "cn": "猫在哪里？" },
+        { "role": "Sarah", "text": "It's in the kitchen.", "cn": "它在厨房里。" },
+        { "role": "Mum", "text": "Is she in the living room?", "cn": "她在客厅里吗？" },
+        { "role": "Sarah", "text": "No, she isn't.", "cn": "不，她不在。" }
+      ]
+    },
+    {
+      "title": "B Let's talk",
+      "lines": [
+        { "role": "Sarah", "text": "Where are the keys?", "cn": "钥匙在哪里？" },
+        { "role": "Mum", "text": "They're on the fridge.", "cn": "它们在冰箱上。" },
+        { "role": "Sarah", "text": "Are they on the table?", "cn": "它们在桌子上吗？" },
+        { "role": "Mum", "text": "No, they aren't.", "cn": "不，它们不在。" }
+      ]
+    }
+  ],
+  "stages": [
+    { "id": "s1", "title": "认识单词", "subtitle": "10个核心单词", "icon": "📚", "type": "vocab", "time": "5分钟" },
+    { "id": "s2", "title": "听音辨词", "subtitle": "听力训练", "icon": "🎧", "type": "listenWord", "time": "5分钟" },
+    { "id": "s3", "title": "单词配对", "subtitle": "巩固词义", "icon": "🎮", "type": "match", "time": "5分钟" },
+    { "id": "s4", "title": "学习句型", "subtitle": "核心句型", "icon": "💬", "type": "sentence", "time": "5分钟" },
+    { "id": "s5", "title": "默写挑战", "subtitle": "动手拼写", "icon": "✏️", "type": "write", "time": "8分钟" },
+    { "id": "s6", "title": "听力测试", "subtitle": "听句选答案", "icon": "🎯", "type": "listenSent", "time": "6分钟" },
+    { "id": "s7", "title": "读写训练", "subtitle": "读句填词", "icon": "📝", "type": "readWrite", "time": "8分钟" },
+    { "id": "s8", "title": "最终通关", "subtitle": "综合挑战", "icon": "🏆", "type": "finalQuiz", "time": "10分钟" }
+  ],
+  "quizQuestions": [
+    { "id": 401, "q": "看图选介词：猫在盒子「里面」。", "opts": ["in", "on", "under", "near"], "answer": 0, "point": "u1:recall_position", "dim": "vocab" },
+    { "id": 402, "q": "看中文选词：「厨房」", "opts": ["kitchen", "bedroom", "bathroom", "study"], "answer": 0, "point": "u4:recall_room", "dim": "vocab" },
+    { "id": 403, "q": "看中文选词：「冰箱」", "opts": ["fridge", "sofa", "table", "phone"], "answer": 0, "point": "u4:recall_furniture", "dim": "vocab" },
+    { "id": 404, "q": "妈妈问 Sarah 在不在客厅，Sarah 其实在厨房。下面哪句是正确回答？", "opts": ["No, she isn't.", "Yes, she is.", "No, he isn't.", "Yes, she does."], "answer": 0, "point": "u1:recall_position", "dim": "sentence" },
+    { "id": 405, "q": "钥匙在冰箱上，不在桌子上。问「Are they on the table?」该怎么答？", "opts": ["No, they aren't.", "Yes, they are.", "No, it isn't.", "Yes, they do."], "answer": 0, "point": "u1:recall_position", "dim": "sentence" },
+    { "id": 407, "q": "猫躲在床「下面」。问「Where's the cat?」，下面哪句对？", "opts": ["It's under the bed.", "It's on the bed.", "It's in the bed.", "It's near the bed."], "answer": 0, "point": "u1:recall_position", "dim": "sentence" },
+    { "id": 408, "q": "钥匙放在冰箱「上面」。问「Where are the keys?」，下面哪句对？", "opts": ["They're on the fridge.", "They're in the fridge.", "They're under the fridge.", "It's on the fridge."], "answer": 0, "point": "u1:recall_position", "dim": "sentence" },
+    { "id": 409, "q": "看图读句判断：图中沙发摆在客厅里。下面哪句和图一致？", "opts": ["The sofa is in the living room.", "The sofa is in the kitchen.", "The bed is in the living room.", "The sofa is in the bathroom."], "answer": 0, "point": "u4:recall_room", "dim": "sentence" },
+    { "id": 410, "q": "完成对话：Sarah 说「I have a friend.」妈妈接着会问什么？", "opts": ["A boy or girl?", "Where are you?", "What colour is it?", "How old are you?"], "answer": 0, "point": "u2:recall_have", "dim": "sentence" },
+    { "id": 411, "q": "Story time 改编：那个安静的小熊找不到眼镜，最后在床上找到了。下面哪句在说它？", "opts": ["The quiet bear's glasses are on the bed.", "The quiet bear's glasses are on the fridge.", "The strong bear's glasses are on the bed.", "The quiet bear's glasses are in the study."], "answer": 0, "point": "u3:recall_personality", "dim": "sentence" }
+  ],
+  "listeningQuestions": [
+    { "audio": "It's in the kitchen.", "opts": ["It's in the kitchen.", "It's in the bedroom.", "It's on the kitchen.", "She's in the kitchen."], "answer": 0 },
+    { "audio": "The keys are on the fridge.", "opts": ["The keys are on the fridge.", "The keys are in the fridge.", "The keys are on the table.", "The keys are under the fridge."], "answer": 0 },
+    { "audio": "Is she in the living room?", "opts": ["Is she in the living room?", "Is he in the living room?", "Is she in the bathroom?", "Is she on the living room?"], "answer": 0 }
+  ]
+}

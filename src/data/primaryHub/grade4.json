@@ -1380,46 +1380,83 @@
             "cn": "我的家",
             "emoji": "🏠",
             "available": true,
+            "published": true,
             "vocabulary": [
               {
                 "en": "bedroom",
                 "cn": "卧室",
-                "emoji": "📘"
+                "emoji": "🛌"
               },
               {
                 "en": "living room",
                 "cn": "客厅",
-                "emoji": "🏠"
+                "emoji": "🛋️"
               },
               {
                 "en": "study",
                 "cn": "书房",
-                "emoji": "📘"
+                "emoji": "📖"
               },
               {
                 "en": "kitchen",
                 "cn": "厨房",
-                "emoji": "📘"
+                "emoji": "🍳"
               },
               {
                 "en": "bathroom",
                 "cn": "浴室",
-                "emoji": "📘"
+                "emoji": "🛁"
               },
               {
                 "en": "bed",
                 "cn": "床",
-                "emoji": "🏠"
+                "emoji": "🛏️"
               },
               {
                 "en": "phone",
                 "cn": "电话",
-                "emoji": "📘"
+                "emoji": "📞"
               },
               {
                 "en": "table",
                 "cn": "桌子",
-                "emoji": "📘"
+                "emoji": "🪑"
+              },
+              {
+                "en": "sofa",
+                "cn": "长沙发",
+                "emoji": "💺"
+              },
+              {
+                "en": "fridge",
+                "cn": "冰箱",
+                "emoji": "🧊"
+              }
+            ],
+            "vocabGroups": [
+              {
+                "id": "rooms_p38",
+                "name": "房间",
+                "header": "房间 · 5 个词",
+                "indices": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              },
+              {
+                "id": "furniture_p41",
+                "name": "家具与物品",
+                "header": "家具与物品 · 5 个词",
+                "indices": [
+                  5,
+                  6,
+                  7,
+                  8,
+                  9
+                ]
               }
             ],
             "dialogues": [
@@ -1427,14 +1464,24 @@
                 "title": "A Let's talk",
                 "lines": [
                   {
+                    "role": "Mum",
+                    "text": "Where's the cat?",
+                    "cn": "猫在哪里？"
+                  },
+                  {
                     "role": "Sarah",
-                    "text": "Mum, I have a friend.",
-                    "cn": "妈妈，我有一个朋友。"
+                    "text": "It's in the kitchen.",
+                    "cn": "它在厨房里。"
                   },
                   {
                     "role": "Mum",
-                    "text": "A boy or girl?",
-                    "cn": "男孩还是女孩？"
+                    "text": "Is she in the living room?",
+                    "cn": "她在客厅里吗？"
+                  },
+                  {
+                    "role": "Sarah",
+                    "text": "No, she isn't.",
+                    "cn": "不，她不在。"
                   }
                 ]
               },
@@ -1443,13 +1490,23 @@
                 "lines": [
                   {
                     "role": "Sarah",
-                    "text": "Is she in the bedroom?",
-                    "cn": "她在卧室里吗？"
+                    "text": "Where are the keys?",
+                    "cn": "钥匙在哪里？"
                   },
                   {
                     "role": "Mum",
-                    "text": "No, she isn't. She's in the kitchen.",
-                    "cn": "不，她不在。她在厨房里。"
+                    "text": "They're on the fridge.",
+                    "cn": "它们在冰箱上。"
+                  },
+                  {
+                    "role": "Sarah",
+                    "text": "Are they on the table?",
+                    "cn": "它们在桌子上吗？"
+                  },
+                  {
+                    "role": "Mum",
+                    "text": "No, they aren't.",
+                    "cn": "不，它们不在。"
                   }
                 ]
               }
@@ -1458,7 +1515,7 @@
               {
                 "id": "s1",
                 "title": "认识单词",
-                "subtitle": "8个核心单词",
+                "subtitle": "10个核心单词",
                 "icon": "📚",
                 "type": "vocab",
                 "time": "5分钟"
@@ -1505,6 +1562,14 @@
               },
               {
                 "id": "s7",
+                "title": "读写训练",
+                "subtitle": "读句填词",
+                "icon": "📝",
+                "type": "readWrite",
+                "time": "8分钟"
+              },
+              {
+                "id": "s8",
                 "title": "最终通关",
                 "subtitle": "综合挑战",
                 "icon": "🏆",
@@ -1514,188 +1579,164 @@
             ],
             "quizQuestions": [
               {
-                "q": "「bedroom」是什么意思？",
+                "id": 401,
+                "q": "看图选介词：猫在盒子「里面」。",
                 "opts": [
-                  "电话",
-                  "书房",
-                  "卧室",
-                  "桌子"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「living room」是什么意思？",
-                "opts": [
-                  "浴室",
-                  "电话",
-                  "书房",
-                  "客厅"
-                ],
-                "answer": 3,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「study」是什么意思？",
-                "opts": [
-                  "书房",
-                  "桌子",
-                  "图书馆",
-                  "浴室"
+                  "in",
+                  "on",
+                  "under",
+                  "near"
                 ],
                 "answer": 0,
-                "point": "词汇",
+                "point": "u1:recall_position",
                 "dim": "vocab"
               },
               {
-                "q": "「kitchen」是什么意思？",
+                "id": 402,
+                "q": "看中文选词：「厨房」",
                 "opts": [
-                  "教室",
-                  "厨房",
-                  "书房",
-                  "卧室"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「bathroom」是什么意思？",
-                "opts": [
-                  "书房",
-                  "图书馆",
-                  "浴室",
-                  "教室"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「bed」是什么意思？",
-                "opts": [
-                  "书房",
-                  "床",
-                  "客厅",
-                  "厨房"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「phone」是什么意思？",
-                "opts": [
-                  "厨房",
-                  "电话",
-                  "床",
-                  "书房"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「table」是什么意思？",
-                "opts": [
-                  "图书馆",
-                  "桌子",
-                  "卧室",
-                  "厨房"
-                ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "哪个是「卧室」？",
-                "opts": [
-                  "study",
-                  "bathroom",
+                  "kitchen",
                   "bedroom",
-                  "bed"
-                ],
-                "answer": 2,
-                "point": "词汇",
-                "dim": "vocab"
-              },
-              {
-                "q": "「living room」的中文是？",
-                "opts": [
-                  "客厅",
-                  "浴室",
-                  "书房",
-                  "床"
+                  "bathroom",
+                  "study"
                 ],
                 "answer": 0,
-                "point": "词汇",
+                "point": "u4:recall_room",
                 "dim": "vocab"
               },
               {
-                "q": "本单元「我的家」核心词是？",
+                "id": 403,
+                "q": "看中文选词：「冰箱」",
                 "opts": [
-                  "phone",
-                  "bedroom",
-                  "bathroom",
-                  "living room"
+                  "fridge",
+                  "sofa",
+                  "table",
+                  "phone"
                 ],
-                "answer": 1,
-                "point": "词汇",
+                "answer": 0,
+                "point": "u4:recall_furniture",
                 "dim": "vocab"
               },
               {
-                "q": "「study」的意思是？",
+                "id": 404,
+                "q": "妈妈问 Sarah 在不在客厅，Sarah 其实在厨房。下面哪句是正确回答？",
                 "opts": [
-                  "客厅",
-                  "书房",
-                  "浴室",
-                  "图书馆"
+                  "No, she isn't.",
+                  "Yes, she is.",
+                  "No, he isn't.",
+                  "Yes, she does."
                 ],
-                "answer": 1,
-                "point": "词汇",
-                "dim": "vocab"
+                "answer": 0,
+                "point": "u1:recall_position",
+                "dim": "sentence"
+              },
+              {
+                "id": 405,
+                "q": "钥匙在冰箱上，不在桌子上。问「Are they on the table?」该怎么答？",
+                "opts": [
+                  "No, they aren't.",
+                  "Yes, they are.",
+                  "No, it isn't.",
+                  "Yes, they do."
+                ],
+                "answer": 0,
+                "point": "u1:recall_position",
+                "dim": "sentence"
+              },
+              {
+                "id": 407,
+                "q": "猫躲在床「下面」。问「Where's the cat?」，下面哪句对？",
+                "opts": [
+                  "It's under the bed.",
+                  "It's on the bed.",
+                  "It's in the bed.",
+                  "It's near the bed."
+                ],
+                "answer": 0,
+                "point": "u1:recall_position",
+                "dim": "sentence"
+              },
+              {
+                "id": 408,
+                "q": "钥匙放在冰箱「上面」。问「Where are the keys?」，下面哪句对？",
+                "opts": [
+                  "They're on the fridge.",
+                  "They're in the fridge.",
+                  "They're under the fridge.",
+                  "It's on the fridge."
+                ],
+                "answer": 0,
+                "point": "u1:recall_position",
+                "dim": "sentence"
+              },
+              {
+                "id": 409,
+                "q": "看图读句判断：图中沙发摆在客厅里。下面哪句和图一致？",
+                "opts": [
+                  "The sofa is in the living room.",
+                  "The sofa is in the kitchen.",
+                  "The bed is in the living room.",
+                  "The sofa is in the bathroom."
+                ],
+                "answer": 0,
+                "point": "u4:recall_room",
+                "dim": "sentence"
+              },
+              {
+                "id": 410,
+                "q": "完成对话：Sarah 说「I have a friend.」妈妈接着会问什么？",
+                "opts": [
+                  "A boy or girl?",
+                  "Where are you?",
+                  "What colour is it?",
+                  "How old are you?"
+                ],
+                "answer": 0,
+                "point": "u2:recall_have",
+                "dim": "sentence"
+              },
+              {
+                "id": 411,
+                "q": "Story time 改编：那个安静的小熊找不到眼镜，最后在床上找到了。下面哪句在说它？",
+                "opts": [
+                  "The quiet bear's glasses are on the bed.",
+                  "The quiet bear's glasses are on the fridge.",
+                  "The strong bear's glasses are on the bed.",
+                  "The quiet bear's glasses are in the study."
+                ],
+                "answer": 0,
+                "point": "u3:recall_personality",
+                "dim": "sentence"
               }
             ],
             "listeningQuestions": [
               {
-                "audio": "Mum, I have a friend.",
+                "audio": "It's in the kitchen.",
                 "opts": [
-                  "Mum, I have a friend.",
-                  "bedroom",
-                  "It's living room.",
-                  "study"
+                  "It's in the kitchen.",
+                  "It's in the bedroom.",
+                  "It's on the kitchen.",
+                  "She's in the kitchen."
                 ],
                 "answer": 0
               },
               {
-                "audio": "A boy or girl?",
+                "audio": "The keys are on the fridge.",
                 "opts": [
-                  "A boy or girl?",
-                  "A boy or girl.",
-                  "bedroom",
-                  "It's living room."
+                  "The keys are on the fridge.",
+                  "The keys are in the fridge.",
+                  "The keys are on the table.",
+                  "The keys are under the fridge."
                 ],
                 "answer": 0
               },
               {
-                "audio": "Is she in the bedroom?",
+                "audio": "Is she in the living room?",
                 "opts": [
-                  "Is she in the bedroom?",
                   "Is she in the living room?",
-                  "Is she in the phoneroom?",
-                  "Is she in the bedroom."
-                ],
-                "answer": 0
-              },
-              {
-                "audio": "No, she isn't. She's in the kitchen.",
-                "opts": [
-                  "No, she isn't. She's in the kitchen.",
-                  "No, she isn't. She's in the bathroom.",
-                  "bedroom",
-                  "It's living room."
+                  "Is he in the living room?",
+                  "Is she in the bathroom?",
+                  "Is she on the living room?"
                 ],
                 "answer": 0
               }

@@ -1,0 +1,75 @@
+{
+  "unitId": "g4v1_u4",
+  "stageIdx": 6,
+  "title": "读写训练",
+  "totalPoints": 6,
+  "pointsPerQuestion": 1,
+  "questions": [
+    {
+      "type": "fill_choice",
+      "sentence": "The sofa is in the ___.",
+      "hint_zh": "客厅",
+      "correctSentence": "The sofa is in the living room.",
+      "options": [
+        { "text": "living room", "correct": true },
+        { "text": "kitchen", "correct": false },
+        { "text": "study", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "The cat is ___ the kitchen.",
+      "hint_zh": "在……里面",
+      "correctSentence": "The cat is in the kitchen.",
+      "options": [
+        { "text": "in", "correct": true },
+        { "text": "on", "correct": false },
+        { "text": "under", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "The keys are ___ the fridge.",
+      "hint_zh": "在……上面",
+      "correctSentence": "The keys are on the fridge.",
+      "options": [
+        { "text": "on", "correct": true },
+        { "text": "in", "correct": false },
+        { "text": "near", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Where ___ the cat? It's under the bed.",
+      "hint_zh": "单数 be 动词",
+      "correctSentence": "Where is the cat? It's under the bed.",
+      "options": [
+        { "text": "is", "correct": true },
+        { "text": "are", "correct": false },
+        { "text": "am", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "Are they on the table? No, they ___.",
+      "hint_zh": "否定回答",
+      "correctSentence": "Are they on the table? No, they aren't.",
+      "options": [
+        { "text": "aren't", "correct": true },
+        { "text": "isn't", "correct": false },
+        { "text": "don't", "correct": false }
+      ]
+    },
+    {
+      "type": "fill_choice",
+      "sentence": "My glasses are ___ the table.",
+      "hint_zh": "在……上面",
+      "correctSentence": "My glasses are on the table.",
+      "options": [
+        { "text": "on", "correct": true },
+        { "text": "under", "correct": false },
+        { "text": "in", "correct": false }
+      ]
+    }
+  ]
+}

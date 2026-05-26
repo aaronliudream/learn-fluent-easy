@@ -1,0 +1,159 @@
+{
+  "lessonId": "g4v1_u3_grammar",
+  "unitId": "g4v1_u3",
+  "stageIdx": 3,
+  "title": "学习句型",
+  "transitionMessage": "Amy 发现了一个新朋友，再一起聊聊他的样子，一起来练口语吧～",
+  "subModules": [
+    {
+      "id": "A",
+      "title": "发现朋友 · A boy or girl?",
+      "description": "Amy 说她有个朋友，大家好奇是谁、什么样、性格如何。",
+      "color": "blue",
+      "estimatedMinutes": 4,
+      "sentences": [
+        {
+          "id": "A1",
+          "question": { "en": "I have a friend.", "zh": "我有一个朋友。" },
+          "answer": { "en": "A boy or girl?", "zh": "男孩还是女孩？" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "Amy 说「我有一个朋友」，对方该怎么回应？",
+            "options": [
+              { "text": "Thanks. Goodbye.", "correct": false },
+              { "text": "I have a cat too.", "correct": false },
+              { "text": "A boy or girl?", "correct": true }
+            ],
+            "explanationZh": "听到「我有个朋友」，自然要问是男孩还是女孩，用 A boy or girl? 回应。"
+          }
+        },
+        {
+          "id": "A2",
+          "question": { "en": "A boy. He's tall and strong.", "zh": "男孩。他又高又壮。" },
+          "answer": { "en": "Who is he?", "zh": "他是谁？" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "听完朋友的样子，想知道他到底是谁。",
+            "promptZh": "「他是谁？」用英语怎么说？",
+            "options": [
+              { "text": "He who is?", "correct": false },
+              { "text": "Who is he?", "correct": true },
+              { "text": "Is who he?", "correct": false }
+            ],
+            "explanationZh": "问「他是谁」用 Who is he?，疑问词 Who 放最前面，再接 be 动词 is。"
+          }
+        },
+        {
+          "id": "A3",
+          "question": { "en": "Is he friendly?", "zh": "他友好吗？" },
+          "answer": { "en": "Yes, he is.", "zh": "是的，他很友好。" },
+          "tag": "A Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「他友好吗？」用英语怎么说？",
+            "options": [
+              { "text": "Is he friendly?", "correct": true },
+              { "text": "He friendly is?", "correct": false },
+              { "text": "Friendly he is?", "correct": false }
+            ],
+            "explanationZh": "问「他友好吗」用一般疑问句 Is he + 形容词？be 动词 Is 提到句首。"
+          }
+        },
+        {
+          "id": "A4",
+          "question": { "en": "My friend is quiet, but she's friendly.", "zh": "我朋友很安静，但很友好。" },
+          "answer": null,
+          "tag": "A Let's talk",
+          "training": {
+            "type": "fill_word",
+            "promptZh": "「我朋友很安静，但很友好」选词填空。",
+            "sentenceTemplate": "My friend is quiet, but she's ___.",
+            "options": [
+              { "text": "quiet", "correct": false },
+              { "text": "tall", "correct": false },
+              { "text": "friendly", "correct": true }
+            ],
+            "explanationZh": "友好用 friendly；but 表示转折，前后是安静和友好两种性格。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "描述朋友 · his / her 外貌",
+      "description": "用 his / her 介绍朋友的眼镜、头发和名字。",
+      "color": "pink",
+      "estimatedMinutes": 5,
+      "lockedUntil": "A",
+      "sentences": [
+        {
+          "id": "B1",
+          "question": { "en": "He has glasses and his shoes are blue.", "zh": "他戴眼镜，鞋子是蓝色的。" },
+          "answer": { "en": "His name is Zhang Peng.", "zh": "他叫张鹏。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "有人问「他叫什么名字？」，Sarah 该怎么说？",
+            "options": [
+              { "text": "He's tall.", "correct": false },
+              { "text": "His name is Zhang Peng.", "correct": true },
+              { "text": "I don't know him.", "correct": false }
+            ],
+            "explanationZh": "介绍他人名字用 His name is...；his 表示「他的」。"
+          }
+        },
+        {
+          "id": "B2",
+          "question": { "en": "She has long hair.", "zh": "她留着长发。" },
+          "answer": null,
+          "tag": "B Let's talk",
+          "training": {
+            "type": "sentence_choice",
+            "promptZh": "「她留着长发」用英语怎么说？",
+            "options": [
+              { "text": "She long hair has.", "correct": false },
+              { "text": "Long hair she has.", "correct": false },
+              { "text": "She has long hair.", "correct": true }
+            ],
+            "explanationZh": "描述「她有长头发」用 She has long hair.，主语 + has + 宾语语序。"
+          }
+        },
+        {
+          "id": "B3",
+          "question": { "en": "His glasses are blue.", "zh": "他的眼镜是蓝色的。" },
+          "answer": null,
+          "tag": "B Let's talk",
+          "training": {
+            "type": "structure_transfer",
+            "scenarioZh": "描述他眼镜的颜色。",
+            "promptZh": "「他的眼镜是蓝色的」用英语怎么说？",
+            "options": [
+              { "text": "Blue his glasses are.", "correct": false },
+              { "text": "His glasses are blue.", "correct": true },
+              { "text": "He glasses blue is.", "correct": false }
+            ],
+            "explanationZh": "描述「他的眼镜是蓝色」用 His glasses are blue.，主语 + are + 颜色。"
+          }
+        },
+        {
+          "id": "B4",
+          "question": { "en": "What's his name?", "zh": "他叫什么名字？" },
+          "answer": { "en": "His name is Zhang Peng.", "zh": "他叫张鹏。" },
+          "tag": "B Let's talk",
+          "training": {
+            "type": "listening_response",
+            "promptZh": "你想知道他朋友叫什么，该问什么？",
+            "options": [
+              { "text": "Who he is?", "correct": false },
+              { "text": "What's he?", "correct": false },
+              { "text": "What's his name?", "correct": true }
+            ],
+            "explanationZh": "问别人名字用 What's his name?，疑问词 What 放最前面。"
+          }
+        }
+      ]
+    }
+  ]
+}

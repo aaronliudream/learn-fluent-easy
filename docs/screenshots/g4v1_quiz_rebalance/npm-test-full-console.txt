@@ -1,0 +1,613 @@
+
+> vite_react_shadcn_ts@0.0.0 test
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90mC:/Projects/learn-fluent-easy[39m
+
+ [32m✓[39m src/lib/primaryHub/speech.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/lib/primaryHub/readWritePictureChoice.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/lib/primaryHub/fillChoiceSentence.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m src/lib/primaryHub/vocabGroups.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+[90mstderr[2m | src/lib/primaryHub/registry.test.ts
+[22m[39m[primaryHub registry] readWrite: skipped "g4v2_u1_stage6.json" — not a ReadWriteSimplifiedConfig (expected "questions" array; legacy multi-stage files are ignored).
+
+ [32m✓[39m src/lib/primaryHub/registry.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2m<T> runtime translation across languages[2m > [22m[2mtranslates Chinese helper text for English
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at Probe (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:133:22)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2m<T> runtime translation across languages[2m > [22m[2mreturns source text untouched for Chinese
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at Probe (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:133:22)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2m<T> runtime translation across languages[2m > [22m[2mtranslates idiom meaning into Arabic
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at Probe (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:133:22)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2m<T> runtime translation across languages[2m > [22m[2mtranslates idiom meaning into Japanese
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at Probe (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:133:22)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2m<T> runtime translation across languages[2m > [22m[2mtranslates idiom meaning into German
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at Probe (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:133:22)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2m<T> runtime translation across languages[2m > [22m[2mtranslates idiom meaning into Korean
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at Probe (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:133:22)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+ [32m✓[39m src/components/primaryHub/ReadWritePictureVisual.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[32m 268[2mms[22m[39m
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2m<T> runtime translation across languages[2m > [22m[2mtranslates idiom meaning into French
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at Probe (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:133:22)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2m<T> runtime translation across languages[2m > [22m[2mtranslates idiom meaning into Italian
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at Probe (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:133:22)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2mQuiz options localization pathway[2m > [22m[2men2cn option (Chinese meaning) gets translated for German users
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at OptionRow (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:242:26)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+[90mstderr[2m | src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m[2mQuiz options localization pathway[2m > [22m[2mcn2en option (English phrase) is NOT translated for German users
+[22m[39mError: Uncaught [TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')]
+    at reportException (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\helpers\runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:353:9)
+    at invokeEventListeners (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\events\EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (C:\Projects\learn-fluent-easy\node_modules\jsdom\lib\jsdom\living\generated\EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4213:16)
+    at invokeGuardedCallback (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:4277:31)
+    at reportUncaughtErrorInDEV (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:22877:5)
+    at captureCommitPhaseError (C:\Projects\learn-fluent-easy\node_modules\react-dom\cjs\react-dom.development.js:27165:5) TypeError: Cannot read properties of undefined (reading 'onAuthStateChange')
+    at [90mC:\Projects\learn-fluent-easy\[39msrc\i18n\I18nProvider.tsx:783:54
+    at commitHookEffectListMount [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:23189:26[90m)[39m
+    at commitPassiveMountOnFiber [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24970:11[90m)[39m
+    at commitPassiveMountEffects_complete [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24930:9[90m)[39m
+    at commitPassiveMountEffects_begin [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24917:7[90m)[39m
+    at commitPassiveMountEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:24905:3[90m)[39m
+    at flushPassiveEffectsImpl [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27078:3[90m)[39m
+    at flushPassiveEffects [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:27023:14[90m)[39m
+    at [90mC:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact-dom[24m\cjs\react-dom.development.js:26808:9
+    at flushActQueue [90m(C:\Projects\learn-fluent-easy\[39mnode_modules\[4mreact[24m\cjs\react.development.js:2667:24[90m)[39m
+The above error occurred in the <I18nProvider> component:
+
+    at I18nProvider (C:\Projects\learn-fluent-easy\src\i18n\I18nProvider.tsx:579:25)
+    at OptionRow (C:\Projects\learn-fluent-easy\src\i18n\__tests__\slangLocalization.test.tsx:242:26)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+ [31m❯[39m src/i18n/__tests__/slangLocalization.test.tsx [2m([22m[2m19 tests[22m[2m | [22m[31m10 failed[39m[2m)[22m[32m 205[2mms[22m[39m
+   [32m✓[39m Slang page i18n source guards[2m > [22mSlang.tsx: browse meaning_cn wrapped[32m 3[2mms[22m[39m
+   [32m✓[39m Slang page i18n source guards[2m > [22mSlang.tsx: browse example_cn wrapped[32m 0[2mms[22m[39m
+   [32m✓[39m Slang page i18n source guards[2m > [22mSlang.tsx: quiz cn2en prompt wrapped[32m 0[2mms[22m[39m
+   [32m✓[39m Slang page i18n source guards[2m > [22mSlang.tsx: fill/cn2en context wrapped[32m 0[2mms[22m[39m
+   [32m✓[39m Slang page i18n source guards[2m > [22mSlang.tsx: en2cn options translated[32m 0[2mms[22m[39m
+   [32m✓[39m Slang page i18n source guards[2m > [22mSlang.tsx: reveal idiom meaning_cn wrapped[32m 0[2mms[22m[39m
+   [32m✓[39m Slang page i18n source guards[2m > [22mSlang.tsx: reveal idiom example_cn wrapped[32m 0[2mms[22m[39m
+   [32m✓[39m Slang page i18n source guards[2m > [22mSlang.tsx: result list meaning_cn wrapped[32m 0[2mms[22m[39m
+   [32m✓[39m Slang page i18n source guards[2m > [22mdoes not render raw {it.meaning_cn} outside a <T>[32m 0[2mms[22m[39m
+[31m   [31m×[31m <T> runtime translation across languages[2m > [22mtranslates Chinese helper text for English[39m[32m 63[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[31m   [31m×[31m <T> runtime translation across languages[2m > [22mreturns source text untouched for Chinese[39m[32m 8[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[31m   [31m×[31m <T> runtime translation across languages[2m > [22mtranslates idiom meaning into Arabic[39m[32m 58[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[31m   [31m×[31m <T> runtime translation across languages[2m > [22mtranslates idiom meaning into Japanese[39m[32m 14[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[31m   [31m×[31m <T> runtime translation across languages[2m > [22mtranslates idiom meaning into German[39m[32m 10[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[31m   [31m×[31m <T> runtime translation across languages[2m > [22mtranslates idiom meaning into Korean[39m[32m 6[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[31m   [31m×[31m <T> runtime translation across languages[2m > [22mtranslates idiom meaning into French[39m[32m 15[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[31m   [31m×[31m <T> runtime translation across languages[2m > [22mtranslates idiom meaning into Italian[39m[32m 8[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[31m   [31m×[31m Quiz options localization pathway[2m > [22men2cn option (Chinese meaning) gets translated for German users[39m[32m 8[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[31m   [31m×[31m Quiz options localization pathway[2m > [22mcn2en option (English phrase) is NOT translated for German users[39m[32m 7[2mms[22m[39m
+[31m     → Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+ [32m✓[39m src/lib/primaryHub/courseData.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m src/lib/primaryHub/hubSpeakSpeed.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/lib/primaryHub/hubCloudMerge.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m src/lib/primaryHub/fillChoiceDisplay.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+[90mstderr[2m | src/lib/primaryHub/progress.test.ts
+[22m[39m[primaryHub registry] readWrite: skipped "g4v2_u1_stage6.json" — not a ReadWriteSimplifiedConfig (expected "questions" array; legacy multi-stage files are ignored).
+
+ [32m✓[39m src/lib/primaryHub/progress.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/lib/primaryHub/phonicsTypes.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m src/test/example.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m src/lib/webSpeech.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 10 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m<T> runtime translation across languages[2m > [22mtranslates Chinese helper text for English
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m<T> runtime translation across languages[2m > [22mreturns source text untouched for Chinese
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m<T> runtime translation across languages[2m > [22mtranslates idiom meaning into Arabic
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m<T> runtime translation across languages[2m > [22mtranslates idiom meaning into Japanese
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m<T> runtime translation across languages[2m > [22mtranslates idiom meaning into German
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m<T> runtime translation across languages[2m > [22mtranslates idiom meaning into Korean
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m<T> runtime translation across languages[2m > [22mtranslates idiom meaning into French
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22m<T> runtime translation across languages[2m > [22mtranslates idiom meaning into Italian
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22mQuiz options localization pathway[2m > [22men2cn option (Chinese meaning) gets translated for German users
+[41m[1m FAIL [22m[49m src/i18n/__tests__/slangLocalization.test.tsx[2m > [22mQuiz options localization pathway[2m > [22mcn2en option (English phrase) is NOT translated for German users
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'onAuthStateChange')[39m
+[36m [2m❯[22m src/i18n/I18nProvider.tsx:[2m783:54[22m[39m
+    [90m781| [39m    }[33m;[39m
+    [90m782| [39m    [35mvoid[39m [34msyncProfileLanguage[39m()[33m;[39m
+    [90m783| [39m    const { data: { subscription } } = supabase.auth.onAuthStateChange…
+    [90m   | [39m                                                     [31m^[39m
+    [90m784| [39m      [35mvoid[39m [34msyncProfileLanguage[39m()[33m;[39m
+    [90m785| [39m    })[33m;[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+[90m [2m❯[22m flushActQueue node_modules/react/cjs/react.development.js:[2m2667:24[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/10]⎯[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[39m[1m[41m Unhandled Errors [49m[22m[31m⎯⎯⎯⎯⎯⎯[39m
+[31m[1m
+Vitest caught 10 unhandled errors during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.[22m[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+
+[31m⎯⎯⎯⎯[39m[1m[41m Unhandled Rejection [49m[22m[31m⎯⎯⎯⎯⎯[39m
+[31m[1mTypeError[22m: Cannot read properties of undefined (reading 'getSession')[39m
+[36m [2m❯[22m syncProfileLanguage src/i18n/I18nProvider.tsx:[2m753:57[22m[39m
+    [90m751| [39m    [35mlet[39m cancelled [33m=[39m [35mfalse[39m[33m;[39m
+    [90m752| [39m    [35mconst[39m syncProfileLanguage [33m=[39m [35masync[39m () [33m=>[39m {
+    [90m753| [39m      [35mconst[39m { data[33m:[39m { session } } [33m=[39m [35mawait[39m supabase[33m.[39mauth[33m.[39m[34mgetSession[39m()[33m;[39m
+    [90m   | [39m                                                        [31m^[39m
+    [90m754| [39m      [35mconst[39m uid [33m=[39m session[33m?.[39muser[33m?.[39mid[33m;[39m
+    [90m755| [39m      [35mif[39m ([33m![39muid [33m||[39m cancelled) [35mreturn[39m[33m;[39m
+[90m [2m❯[22m src/i18n/I18nProvider.tsx:[2m782:10[22m[39m
+[90m [2m❯[22m commitHookEffectListMount node_modules/react-dom/cjs/react-dom.development.js:[2m23189:26[22m[39m
+[90m [2m❯[22m commitPassiveMountOnFiber node_modules/react-dom/cjs/react-dom.development.js:[2m24970:11[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_complete node_modules/react-dom/cjs/react-dom.development.js:[2m24930:9[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects_begin node_modules/react-dom/cjs/react-dom.development.js:[2m24917:7[22m[39m
+[90m [2m❯[22m commitPassiveMountEffects node_modules/react-dom/cjs/react-dom.development.js:[2m24905:3[22m[39m
+[90m [2m❯[22m flushPassiveEffectsImpl node_modules/react-dom/cjs/react-dom.development.js:[2m27078:3[22m[39m
+[90m [2m❯[22m flushPassiveEffects node_modules/react-dom/cjs/react-dom.development.js:[2m27023:14[22m[39m
+[90m [2m❯[22m node_modules/react-dom/cjs/react-dom.development.js:[2m26808:9[22m[39m
+
+[31mThis error originated in "[1msrc/i18n/__tests__/slangLocalization.test.tsx[22m" test file. It doesn't mean the error was thrown inside the file itself, but while it was running.[39m
+[31m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m14 passed[39m[22m[90m (15)[39m
+[2m      Tests [22m [1m[31m10 failed[39m[22m[2m | [22m[1m[32m101 passed[39m[22m[90m (111)[39m
+[2m     Errors [22m [1m[31m10 errors[39m[22m
+[2m   Start at [22m 19:41:39
+[2m   Duration [22m 13.74s[2m (transform 1.42s, setup 7.50s, collect 6.17s, tests 585ms, environment 59.03s, prepare 5.53s)[22m
+
